@@ -12,4 +12,5 @@ group :test do
   gem 'minitest-spec-rails', '4.7.6'
   gem 'mocha', '1.0.0', require: false
   gem 'webmock', '1.17.4', require: false
+  gem 'cucumber-rails', "1.4.0", require: false
 end
