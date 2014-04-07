@@ -1,7 +1,6 @@
-require 'gds_api/helpers'
+require 'gds_api/content_api'
 
 class ApplicationController < ActionController::Base
-  include GdsApi::Helpers
   include Slimmer::Headers
 
   protect_from_forgery with: :exception
@@ -34,5 +33,12 @@ class ApplicationController < ActionController::Base
     end
   rescue StandardError # Triggered by trying to parameterize malformed UTF-8
     cacheable_404
+  end
+
+  def content_api
+    @content_api ||= GdsApi::ContentApi.new(
+      Plek.current.find('contentapi'),
+      { web_urls_relative_to: Plek.current.website_root }
+    )
   end
 end
