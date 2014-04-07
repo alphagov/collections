@@ -7,6 +7,20 @@ gem 'uglifier', '2.5.0'
 
 gem 'unicorn', '4.8.2'
 
+if ENV['SLIMMER_DEV']
+  gem 'slimmer', :path => '../slimmer'
+else
+  gem 'slimmer', '3.28.0'
+end
+
+if ENV['API_DEV']
+  gem 'gds-api-adapters', :path => '../gds-api-adapters'
+else
+  gem 'gds-api-adapters', '10.6.1'
+end
+
+gem 'plek', '1.7.0'
+
 group :test do
   gem 'capybara-webkit', '1.1.1'
   gem 'minitest-spec-rails', '4.7.6'
