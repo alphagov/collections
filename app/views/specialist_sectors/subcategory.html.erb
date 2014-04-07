@@ -1,13 +1,13 @@
 <% content_for :title do %><%= @sector.title %>: <%= @subcategory.title %> - GOV.UK<% end %>
 
-<main id="content" role="main" class="group category-page">
+<main id="content" role="main" class="group specialist-sector-browse">
   <header class="page-header group">
     <div class="full-width">
       <h1><span><%= @sector.title %></span> <%= @subcategory.title %></h1>
     </div>
   </header>
 
-  <div class="browse-container full-width specialist-sector-browse">
+  <div class="browse-container full-width">
     <% if @subcategory.details.description.present? %>
       <div class="category-description">
         <p><%= @subcategory.details.description %></p>
