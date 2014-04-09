@@ -1,0 +1,33 @@
+<% content_for :title do %><%= @sector.title %>: <%= @subcategory.title %> - GOV.UK<% end %>
+
+<main id="content" role="main" class="group specialist-sector-browse">
+  <header class="page-header group">
+    <div class="full-width">
+      <h1><span><%= @sector.title %></span> <%= @subcategory.title %></h1>
+    </div>
+  </header>
+
+  <div class="browse-container full-width">
+    <% if @subcategory.details.description.present? %>
+      <div class="category-description">
+        <p><%= @subcategory.details.description %></p>
+      </div>
+    <% end %>
+
+    <% @groups.each do |group| %>
+      <nav class="index-list <%= group.name.parameterize %>">
+        <h1><%= group.name %></h1>
+        <ul>
+          <% group.items.each do |content| %>
+            <li>
+              <h2><a href="<%= content.web_url %>"><%= specialist_sector_item_title(content.title, @sector) %></a></h2>
+            </li>
+          <% end %>
+        </ul>
+      </nav>
+    <% end %>
+  </div>
+
+  <div id="report-a-problem"></div>
+</main>
+<% content_for :body_classes do %>full-width<% end %>
