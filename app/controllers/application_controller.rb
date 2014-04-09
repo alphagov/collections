@@ -12,6 +12,7 @@ class ApplicationController < ActionController::Base
   def error_503(e); error(503, e); end
 
   def error(status_code, exception = nil)
+    Airbrake.notify_or_ignore(exception) if exception
     render status: status_code, text: "#{status_code} error"
   end
 
