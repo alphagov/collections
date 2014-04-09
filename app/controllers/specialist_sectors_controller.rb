@@ -17,13 +17,13 @@ class SpecialistSectorsController < ApplicationController
   end
 
   def subcategory
-    @tag_id = "#{params[:sector]}/#{params[:subcategory]}"
+    tag_id = "#{params[:sector]}/#{params[:subcategory]}"
 
-    @subcategory = content_api.tag(@tag_id, TAG_TYPE)
+    @subcategory = content_api.tag(tag_id, TAG_TYPE)
     return error_404 unless @subcategory.present?
 
     @sector = @subcategory.parent
-    @groups = content_api.with_tag(@tag_id, TAG_TYPE, group_by: "format").grouped_results
+    @groups = content_api.with_tag(tag_id, TAG_TYPE, group_by: "format").grouped_results
 
     set_slimmer_dummy_artefact(section_name: @sector.title, section_link: "/#{params[:sector]}")
     set_slimmer_headers(format: "specialist-sector")
