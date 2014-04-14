@@ -8,6 +8,7 @@ gem 'govuk_frontend_toolkit', '0.47.0'
 
 gem 'unicorn', '4.8.2'
 gem 'airbrake', '3.1.15'
+gem 'logstasher', '0.5.0'
 
 if ENV['SLIMMER_DEV']
   gem 'slimmer', :path => '../slimmer'
