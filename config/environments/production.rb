@@ -61,7 +61,7 @@ Collections::Application.configure do
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
   # config.assets.precompile += %w( search.js )
 
-  config.assets.prefix = "collections"
+  config.assets.prefix = "/collections"
   config.action_controller.asset_host = ENV['GOVUK_ASSET_HOST']
 
   # Ignore bad email addresses and do not raise email delivery errors.
