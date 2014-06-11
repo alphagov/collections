@@ -49,4 +49,8 @@ class ApplicationController < ActionController::Base
       { web_urls_relative_to: Plek.current.website_root }
     )
   end
+
+  def detailed_guidance_content_api
+    @detailed_guidance_content_api ||= GdsApi::ContentApi.new("#{Plek.current.find('whitehall-admin')}/api/specialist")
+  end
 end

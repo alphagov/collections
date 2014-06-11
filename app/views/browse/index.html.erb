@@ -1,0 +1,11 @@
+<% content_for :page_class, "browse" %>
+
+<div class="browse-panes root">
+  <div id="root" class="pane">
+    <ul>
+      <% root_sections.each do |result| %>
+        <li><%= link_to result.title, result.web_url %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

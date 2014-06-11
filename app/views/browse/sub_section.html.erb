@@ -1,0 +1,52 @@
+<% content_for :page_class, "browse" %>
+
+<div class="browse-panes subsection">
+  <div id="subsection" class="pane with-sort">
+    <div class="pane-inner">
+      <h1><%= sub_section_tag.title %></h1>
+      <p class="sort-order">A-Z</p>
+      <ul>
+        <% sub_section_artefacts.each do |sub_section_artefact| %>
+          <li>
+            <%= link_to sub_section_artefact.title, sub_section_artefact.web_url %>
+          </li>
+        <% end %>
+      </ul>
+
+      <% if detailed_guide_categories.any? %>
+        <h2>Detailed guidance</h2>
+        <ul class="detailed-guidance">
+          <% detailed_guide_categories.each do |detailed_guide_category| %>
+            <li>
+              <%= link_to detailed_guide_category.title, detailed_guide_category.content_with_tag.web_url %>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+
+  <div id="section" class="pane">
+    <div class="pane-inner">
+      <h1><%= section_tag.title %></h1>
+      <ul>
+        <% section_tags.each do |section_tag| %>
+          <li<%= ' class="active"'.html_safe if sub_section_tag.slug == section_tag.slug %>>
+            <%= link_to section_tag.title, section_tag.web_url %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <div id="root" class="pane">
+    <h2 class="visuallyhidden">All Sections</h2>
+    <ul>
+      <% root_sections.each do |root_section| %>
+        <li<%= ' class="active"'.html_safe if section_tag.slug == root_section.slug %>>
+          <%= link_to root_section.title, root_section.web_url %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

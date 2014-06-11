@@ -1,0 +1,142 @@
+main.browse {
+  .browse-panes {
+    @extend %contain-floats;
+    @include inner-block;
+
+    &.section {
+      #root {
+        @include media(tablet){
+          float: right;
+          width: 25%;
+        }
+      }
+      #section {
+        @include media(tablet){
+          float: right;
+          width: 35%;
+          margin-right: 40%;
+        }
+      }
+    }
+
+    &.subsection {
+      #root, #section {
+        @include media(tablet){
+          float: right;
+          width: 25%;
+        }
+
+        color: $secondary-text-colour;
+        a {
+          color: $secondary-text-colour;
+        }
+      }
+      #section {
+        @include media(tablet){
+          background: $white;
+          margin-left: -13%;
+          position: relative;
+          z-index: 2;
+        }
+      }
+      #subsection {
+        @include media(tablet){
+          float: right;
+          width: 50%;
+          margin-right: 13%;
+        }
+      }
+    }
+
+    .pane-inner {
+      border-left: 1px solid $border-colour;
+      min-height: 700px;
+    }
+
+    h1, h2 {
+      @include bold-27;
+      margin-bottom: 15px;
+    }
+
+
+
+    #root, #section {
+      h1, h2 {
+        padding-left: 15px;
+      }
+      ul {
+        li {
+          list-style: none;
+          position: relative;
+
+          &.active a {
+            background: $link-colour;
+            color: $white;
+          }
+
+          a {
+            position: relative;
+            display: block;
+            @include core-16;
+            padding: 12px 30px 8px 15px;
+            text-decoration: none;
+
+            &:after {
+              position: absolute;
+              top: 50%;
+              margin-top: -8px;
+              right: 10px;
+              float: right;
+              content:"\203A";
+            }
+          }
+        }
+      }
+    }
+    #section.with-sort {
+      .pane-inner {
+        padding-left: 70px;
+      }
+      .sort-order {
+        @include bold-27;
+        float: left;
+        width: 55px;
+        margin-left: -70px;
+        padding: 15px 0 15px 15px;
+        text-align: center;
+      }
+    }
+    #subsection {
+      .pane-inner {
+        padding-left: 100px;
+      }
+      h1 {
+        padding-left: 0;
+      }
+      .sort-order {
+        @include bold-36;
+        float: left;
+        width: 70px;
+        margin-left: -100px;
+        padding: 15px;
+        text-align: center;
+      }
+      ul {
+        padding: 0;
+        list-style: none;
+
+        li {
+          padding: 0;
+          margin: 0;
+
+          a {
+            @include bold-19;
+            display: block;
+            text-decoration: none;
+            padding: 10px 30px 10px 0;
+          }
+        }
+      }
+    }
+  }
+}
