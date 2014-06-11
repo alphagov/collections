@@ -9,7 +9,9 @@
 
 <body>
   <div id="wrapper">
-    <%= yield %>
+    <main id="content" role="main" class="<%= yield :page_class %>">
+      <%= yield %>
+    </main>
   </div>
 </body>
 </html>

@@ -5,7 +5,14 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
 
+  before_filter :set_expiry
+  before_filter :set_slimmer_template
+
   private
+
+  def set_slimmer_template
+    set_slimmer_headers(template: 'header_footer_only')
+  end
 
   def error_404; error 404; end
   def error_410; error 410; end
