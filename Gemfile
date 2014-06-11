@@ -31,3 +31,5 @@ group :test do
   gem 'webmock', '1.17.4', require: false
   gem 'cucumber-rails', "1.4.0", require: false
 end
+
+gem 'byebug', group: [:development, :test]
