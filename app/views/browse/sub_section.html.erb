@@ -1,3 +1,4 @@
+<% content_for :title, "#{sub_section_tag.title} - GOV.UK" %>
 <% content_for :page_class, "browse" %>
 
 <div class="browse-panes subsection">
@@ -14,14 +15,16 @@
       </ul>
 
       <% if detailed_guide_categories.any? %>
-        <h2>Detailed guidance</h2>
-        <ul class="detailed-guidance">
-          <% detailed_guide_categories.each do |detailed_guide_category| %>
-            <li>
-              <%= link_to detailed_guide_category.title, detailed_guide_category.content_with_tag.web_url %>
-            </li>
-          <% end %>
-        </ul>
+        <div class="detailed-guidance">
+          <h2>Detailed guidance</h2>
+          <ul>
+            <% detailed_guide_categories.each do |detailed_guide_category| %>
+              <li>
+                <%= link_to detailed_guide_category.title, detailed_guide_category.content_with_tag.web_url %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
       <% end %>
     </div>
   </div>
@@ -40,7 +43,7 @@
   </div>
 
   <div id="root" class="pane">
-    <h2 class="visuallyhidden">All Sections</h2>
+    <h2 class="visuallyhidden">All categories</h2>
     <ul>
       <% root_sections.each do |root_section| %>
         <li<%= ' class="active"'.html_safe if section_tag.slug == root_section.slug %>>

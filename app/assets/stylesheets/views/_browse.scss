@@ -49,8 +49,12 @@ main.browse {
     }
 
     .pane-inner {
-      border-left: 1px solid $border-colour;
-      min-height: 700px;
+      padding-bottom: $gutter;
+
+      @include media(tablet){
+        border-left: 1px solid $border-colour;
+        min-height: 700px;
+      }
     }
 
     h1, h2 {
@@ -108,7 +112,11 @@ main.browse {
     }
     #subsection {
       .pane-inner {
-        padding-left: 100px;
+        padding-left: 65px;
+
+        @include media(tablet){
+          padding-left: 100px;
+        }
       }
       h1 {
         padding-left: 0;
@@ -116,10 +124,16 @@ main.browse {
       .sort-order {
         @include bold-36;
         float: left;
-        width: 70px;
-        margin-left: -100px;
-        padding: 15px;
         text-align: center;
+        width: 50px;
+        margin-left: -65px;
+        padding: 15px 0;
+
+        @include media(tablet){
+          width: 70px;
+          margin-left: -100px;
+          padding: 15px;
+        }
       }
       ul {
         padding: 0;
@@ -136,6 +150,9 @@ main.browse {
             padding: 10px 30px 10px 0;
           }
         }
+      }
+      .detailed-guidance {
+        margin-top: $gutter;
       }
     }
   }
