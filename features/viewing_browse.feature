@@ -15,4 +15,3 @@ Feature: Viewing browse
     And there is no detailed guidance category tagged to the subsection
     When I browse to the subsection
     Then I see the artefact listed
-

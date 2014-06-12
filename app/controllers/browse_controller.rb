@@ -1,5 +1,4 @@
 class BrowseController < ApplicationController
-
   rescue_from GdsApi::HTTPNotFound, with: lambda {
     statsd.increment("browse.not_found")
     error_404
