@@ -8,7 +8,8 @@ class BrowseController < ApplicationController
   before_filter(:only => [:sub_section]) { validate_slug_param(:sub_section) }
 
   def index
-    set_slimmer_artefact_headers
+    options = {title: "browse", section_name: "Browse", section_link: "/browse"}
+    set_slimmer_artefact_headers(options)
   end
 
   def section
