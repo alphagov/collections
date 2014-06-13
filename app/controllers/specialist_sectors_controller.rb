@@ -4,7 +4,6 @@ class SpecialistSectorsController < ApplicationController
 
   before_filter(:only => [:sector, :subcategory]) { validate_slug_param(:sector) }
   before_filter(:only => [:subcategory]) { validate_slug_param(:subcategory) }
-  before_filter :set_expiry
   before_filter :set_beta_header
 
   def sector

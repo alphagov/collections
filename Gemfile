@@ -4,7 +4,7 @@ gem 'rails', '4.0.4'
 
 gem 'sass-rails', '4.0.2'
 gem 'uglifier', '2.5.0'
-gem 'govuk_frontend_toolkit', '0.47.0'
+gem 'govuk_frontend_toolkit', '1.2.0'
 
 gem 'unicorn', '4.8.2'
 gem 'airbrake', '3.1.15'
@@ -13,7 +13,7 @@ gem 'logstasher', '0.5.0'
 if ENV['SLIMMER_DEV']
   gem 'slimmer', :path => '../slimmer'
 else
-  gem 'slimmer', '3.28.0'
+  gem 'slimmer', '4.1.0'
 end
 
 if ENV['API_DEV']
@@ -31,3 +31,5 @@ group :test do
   gem 'webmock', '1.17.4', require: false
   gem 'cucumber-rails', "1.4.0", require: false
 end
+
+gem 'byebug', group: [:development, :test]

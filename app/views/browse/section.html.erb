@@ -1,0 +1,29 @@
+<% content_for :title, "#{section_tag.title} - GOV.UK" %>
+<% content_for :page_class, "browse" %>
+
+<div class="browse-panes section">
+  <div id="section" class="pane with-sort">
+    <div class="pane-inner">
+      <h1><%= section_tag.title %></h1>
+      <p class="sort-order">A-Z</p>
+      <ul>
+        <% section_tags.each do |section_tag| %>
+          <li>
+            <%= link_to section_tag.title, section_tag.web_url %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <div id="root" class="pane">
+    <h2 class="visuallyhidden">All categories</h2>
+    <ul>
+      <% root_sections.each do |root_section| %>
+        <li<%= ' class="active"'.html_safe if section_tag.slug == root_section.slug %>>
+          <%= link_to root_section.title, root_section.web_url %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

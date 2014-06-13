@@ -70,11 +70,10 @@
     overflow: auto;
 
     h1 {
-      font-size: 1.25em;
+      @include bold-24;
 
       @include media(desktop) {
         float: left;
-        font-size: 1.5em;
       }
     }
 

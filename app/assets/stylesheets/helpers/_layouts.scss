@@ -1,0 +1,14 @@
+#wrapper {
+  @include outer-block;
+  border-bottom: 10px solid $govuk-blue;
+
+  .report-a-problem-toggle {
+    @include core-16;
+    @include inner-block;
+    margin-bottom: $gutter;
+
+    a {
+      color: $secondary-text-colour;
+    }
+  }
+}

@@ -5,7 +5,14 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
 
+  before_filter :set_expiry
+  before_filter :set_slimmer_template
+
   private
+
+  def set_slimmer_template
+    set_slimmer_headers(template: 'header_footer_only')
+  end
 
   def error_404; error 404; end
   def error_410; error 410; end
@@ -41,5 +48,9 @@ class ApplicationController < ActionController::Base
       Plek.current.find('contentapi'),
       { web_urls_relative_to: Plek.current.website_root }
     )
+  end
+
+  def detailed_guidance_content_api
+    @detailed_guidance_content_api ||= GdsApi::ContentApi.new("#{Plek.current.find('whitehall-admin')}/api/specialist")
   end
 end
