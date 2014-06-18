@@ -21,7 +21,7 @@
         this._cache[slug] = data;
       }
     },
-    showSection: function(data){
+    showSection: function(title, data){
       if(this.state !== 'section'){
         // animate to the right position and update the data
         this.$el.removeClass('subsection').addClass('section');
@@ -29,13 +29,13 @@
         this.state = 'section';
       }
       // update the data
-      var html = $.map(data.results, function(el){ return '<a href="'+el.web_url+'">'+el.title+'</a>'; }).join(' ');
-      this.$el.find('#section').html(html);
+      this.$el.find('#section').addClass('with-sort').mustache('browse/_section', { title: title, options: data.results});
     },
-    showSubsection: function(data){
+    showSubsection: function(title, data){
       if(this.state !== 'subsection'){
         // animate to the right position and update the data
         this.$el.removeClass('section').addClass('subsection');
+        this.$el.find('#section').removeClass('with-sort');
         this.state = 'subsection';
         if(this.$el.find('#subsection').length === 0){
           this.$el.prepend('<div id="subsection" class="pane" />');
@@ -44,8 +44,7 @@
         }
       }
       // update the data
-      var html = $.map(data.results, function(el){ return '<a href="'+el.web_url+'">'+el.title+'</a>'; }).join(' ');
-      this.$el.find('#subsection').html(html);
+      this.$el.find('#subsection').mustache('browse/_section', { title: title, options: data.results});
     },
     // getSection: returns a promise which will contain the data
     // Returns data from the cache if it is their of puts the data in the cache
@@ -78,14 +77,15 @@
         e.preventDefault();
 
         var slug = e.target.pathname.replace('/browse/', '');
+        var title = $(e.target).text();
 
         var dataPromise = this.getSectionData(slug);
 
         dataPromise.done($.proxy(function(data){
           if(slug.indexOf('/') > -1){
-            this.showSubsection(data);
+            this.showSubsection(title, data);
           } else {
-            this.showSection(data);
+            this.showSection(title, data);
           }
         }, this));
       }

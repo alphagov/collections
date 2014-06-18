@@ -68,6 +68,9 @@ main.browse {
       h1, h2 {
         padding-left: 15px;
       }
+      .sort-order {
+        display: none;
+      }
       ul {
         li {
           list-style: none;
@@ -104,6 +107,7 @@ main.browse {
       .sort-order {
         @include bold-27;
         float: left;
+        display: block;
         width: 55px;
         margin-left: -70px;
         padding: 15px 0 15px 15px;
