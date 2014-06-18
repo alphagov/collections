@@ -7,6 +7,15 @@
     if(options.$el.length === 0) return;
 
     this.$el = options.$el;
+    this.$section = this.$el.find('#section');
+    this.$subsection = this.$el.find('#subsection');
+
+    if(this.$subsection.length === 0){
+      this.$subsection = '<div id="subsection" class="pane" />';
+      this.$el.prepend($subsection);
+    } else {
+      this.$subsection.show();
+    }
 
     this.state = this.$el.data('state');
     this._cache = {};
@@ -25,26 +34,22 @@
       if(this.state !== 'section'){
         // animate to the right position and update the data
         this.$el.removeClass('subsection').addClass('section');
-        this.$el.find('#subsection').hide();
+        this.$subsection.hide();
         this.state = 'section';
       }
       // update the data
-      this.$el.find('#section').addClass('with-sort').mustache('browse/_section', { title: title, options: data.results});
+      this.$section.addClass('with-sort').mustache('browse/_section', { title: title, options: data.results});
     },
     showSubsection: function(title, data){
       if(this.state !== 'subsection'){
         // animate to the right position and update the data
         this.$el.removeClass('section').addClass('subsection');
-        this.$el.find('#section').removeClass('with-sort');
+        this.$section.removeClass('with-sort');
         this.state = 'subsection';
-        if(this.$el.find('#subsection').length === 0){
-          this.$el.prepend('<div id="subsection" class="pane" />');
-        } else {
-          this.$el.find('#subsection').show();
-        }
+        this.$subsection.show();
       }
       // update the data
-      this.$el.find('#subsection').mustache('browse/_section', { title: title, options: data.results});
+      this.$subsection.mustache('browse/_section', { title: title, options: data.results});
     },
     // getSection: returns a promise which will contain the data
     // Returns data from the cache if it is their of puts the data in the cache
