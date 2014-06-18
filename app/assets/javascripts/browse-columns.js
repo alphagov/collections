@@ -72,20 +72,27 @@
         }, this));
       }
     },
+    highlightSection: function(section, slug){
+      this.$el.find('#'+section+' .active').removeClass('active')
+      this.$el.find('a[href="'+slug+'"]').parent().addClass('active');
+    },
     navigate: function(e){
       if(e.target.pathname.match(/^\/browse/)){
         e.preventDefault();
 
+        var $target = $(e.target);
         var slug = e.target.pathname.replace('/browse/', '');
-        var title = $(e.target).text();
+        var title = $target.text();
 
         var dataPromise = this.getSectionData(slug);
 
         dataPromise.done($.proxy(function(data){
           if(slug.indexOf('/') > -1){
             this.showSubsection(title, data);
+            this.highlightSection('section', $target.attr('href'));
           } else {
             this.showSection(title, data);
+            this.highlightSection('root', $target.attr('href'));
           }
         }, this));
       }
