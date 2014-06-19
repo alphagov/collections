@@ -7,6 +7,7 @@
     if(options.$el.length === 0) return;
 
     this.$el = options.$el;
+    this.$root = this.$el.find('#root');
     this.$section = this.$el.find('#section');
     this.$subsection = this.$el.find('#subsection');
 
@@ -31,25 +32,57 @@
       }
     },
     showSection: function(title, data){
+      this.$section.mustache('browse/_section', { title: title, options: data.results});
       if(this.state !== 'section'){
         // animate to the right position and update the data
-        this.$el.removeClass('subsection').addClass('section');
         this.$subsection.hide();
-        this.state = 'section';
+        this.$section.css('margin-right', '63%');
+        this.$section.find('.pane-inner').animate({
+          paddingLeft: '96px'
+        }, 200);
+        this.$section.animate({
+          width: '35%',
+          marginLeft: '0%',
+          marginRight: '40%'
+        }, 200, $.proxy(function(){
+          this.state = 'section';
+
+          this.$el.removeClass('subsection').addClass('section');
+          this.$section.attr('style', '');
+          this.$section.find('.pane-inner').attr('style', '');
+          this.$section.addClass('with-sort');
+        }, this));
       }
       // update the data
-      this.$section.addClass('with-sort').mustache('browse/_section', { title: title, options: data.results});
     },
     showSubsection: function(title, data){
+      this.$subsection.mustache('browse/_section', { title: title, options: data.results});
+
       if(this.state !== 'subsection'){
         // animate to the right position and update the data
-        this.$el.removeClass('section').addClass('subsection');
-        this.$section.removeClass('with-sort');
-        this.state = 'subsection';
-        this.$subsection.show();
+        this.$section.find('.sort-order').hide();
+        this.$section.find('.pane-inner').animate({
+          paddingLeft: '0'
+        }, 200);
+        this.$section.animate({
+          width: '25%',
+          marginLeft: '-13%',
+          marginRight: '63%'
+        }, 200, $.proxy(function(){
+          this.state = 'section';
+
+          this.$el.removeClass('section').addClass('subsection');
+          this.$subsection.show();
+          this.$section.removeClass('with-sort');
+          this.state = 'subsection';
+
+          this.$section.find('.sort-order').attr('style', '');
+          this.$section.attr('style', '');
+          this.$section.find('.pane-inner').attr('style', '');
+        }, this));
+
       }
       // update the data
-      this.$subsection.mustache('browse/_section', { title: title, options: data.results});
     },
     // getSection: returns a promise which will contain the data
     // Returns data from the cache if it is their of puts the data in the cache

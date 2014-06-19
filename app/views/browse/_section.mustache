@@ -1,0 +1,20 @@
+<div class="pane-inner">
+  <h1>{{ title }}</h1>
+  <p class="sort-order">A-Z</p>
+  <ul>
+    {{#options}}
+      <li><a href="{{web_url}}">{{title}}</a></li>
+    {{/options}}
+  </ul>
+
+  {{#detailed_guide_categories_any?}}
+    <div class="detailed-guidance">
+      <h2>Detailed guidance</h2>
+      <ul>
+        {{#detailed_guide_categories}}
+          <li><a href="{{content_with_tag.web_url}}">{{title}}</a></li>
+        {{/detailed_guide_categories}}
+      </ul>
+    </div>
+  {{/detailed_guide_categories_any?}}
+</div>

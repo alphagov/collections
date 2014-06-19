@@ -33,10 +33,7 @@ main.browse {
       }
       #section {
         @include media(tablet){
-          background: $white;
           margin-left: -13%;
-          position: relative;
-          z-index: 2;
         }
       }
       #subsection {
@@ -65,6 +62,7 @@ main.browse {
 
 
     #root, #section {
+
       h1, h2 {
         padding-left: 15px;
       }
@@ -100,18 +98,24 @@ main.browse {
         }
       }
     }
-    #section.with-sort {
-      .pane-inner {
-        padding-left: 70px;
-      }
-      .sort-order {
-        @include bold-27;
-        float: left;
-        display: block;
-        width: 55px;
-        margin-left: -70px;
-        padding: 15px 0 15px 15px;
-        text-align: center;
+    #section {
+      z-index: 2;
+      background: $white;
+      position: relative;
+
+      &.with-sort {
+        .pane-inner {
+          padding-left: 96px;
+        }
+        .sort-order {
+          @include bold-27;
+          float: left;
+          display: block;
+          width: 55px;
+          margin-left: -70px;
+          padding: 15px 0 15px 15px;
+          text-align: center;
+        }
       }
     }
     #subsection {
