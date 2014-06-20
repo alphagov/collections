@@ -10,6 +10,7 @@
     this.$root = this.$el.find('#root');
     this.$section = this.$el.find('#section');
     this.$subsection = this.$el.find('#subsection');
+    this.animateSpeed = 200;
 
     if(this.$subsection.length === 0){
       this.$subsection = $('<div id="subsection" class="pane" />').hide();
@@ -48,18 +49,19 @@
     showSection: function(title, data){
       this.setTitle(title);
       this.$section.mustache('browse/_section', { title: title, options: data.results});
+
       if(this.state !== 'section'){
         // animate to the right position and update the data
         this.$subsection.hide();
         this.$section.css('margin-right', '63%');
         this.$section.find('.pane-inner').animate({
           paddingLeft: '96px'
-        }, 200);
+        }, this.animateSpeed);
         this.$section.animate({
           width: '35%',
           marginLeft: '0%',
           marginRight: '40%'
-        }, 200, $.proxy(function(){
+        }, this.animateSpeed, $.proxy(function(){
           this.state = 'section';
 
           this.$el.removeClass('subsection').addClass('section');
@@ -79,12 +81,12 @@
         this.$section.find('.sort-order').hide();
         this.$section.find('.pane-inner').animate({
           paddingLeft: '0'
-        }, 200);
+        }, this.animateSpeed);
         this.$section.animate({
           width: '25%',
           marginLeft: '-13%',
           marginRight: '63%'
-        }, 200, $.proxy(function(){
+        }, this.animateSpeed, $.proxy(function(){
           this.state = 'section';
 
           this.$el.removeClass('section').addClass('subsection');
@@ -147,6 +149,14 @@
       }
       return out;
     },
+    scrollToBrowse: function(){
+      var $body = $('body'),
+          elTop = this.$el.offset().top;
+
+      if( $body.scrollTop() > elTop ){
+        $('body').animate({scrollTop: elTop}, this.animateSpeed);
+      }
+    },
     navigate: function(e){
       if(e.target.pathname.match(/^\/browse/)){
         e.preventDefault();
@@ -161,6 +171,8 @@
         dataPromise.done($.proxy(function(data){
           state.data = data;
           history.pushState(state, '', e.target.pathname);
+
+          this.scrollToBrowse();
 
           if(state.slug.indexOf('/') > -1){
             this.showSubsection(state.title, data);
