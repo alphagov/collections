@@ -22,8 +22,22 @@
     this._cache = {};
 
     this.$el.on('click', 'a', $.proxy(this.navigate, this));
+
+    $(window).on('popstate', $.proxy(this.popState, this));
   }
   BrowseColumns.prototype = {
+    popState: function(e){
+      var state = e.originalEvent.state;
+
+      if(state.subsection){
+        this.showSubsection(state.title, state.data);
+        this.highlightSection('section', state.path);
+        this.highlightSection('root', '/browse/' + state.section);
+      } else {
+        this.showSection(state.title, state.data);
+        this.highlightSection('root', state.path);
+      }
+    },
     sectionCache: function(slug, data){
       if(typeof data === 'undefined'){
         return this._cache[slug];
@@ -112,25 +126,43 @@
     },
     highlightSection: function(section, slug){
       this.$el.find('#'+section+' .active').removeClass('active')
-      this.$el.find('a[href="'+slug+'"]').parent().addClass('active');
+      this.$el.find('a[href$="'+slug+'"]').parent().addClass('active');
+    },
+    parsePathname: function(pathname){
+      var out = {
+        path: pathname,
+        slug: pathname.replace('/browse/', '')
+      };
+
+      if(out.slug.indexOf('/') > -1){
+        out.section = out.slug.split('/')[0];
+        out.subsection = out.slug.split('/')[1];
+      } else {
+        out.section = out.slug;
+      }
+      return out;
     },
     navigate: function(e){
       if(e.target.pathname.match(/^\/browse/)){
         e.preventDefault();
 
         var $target = $(e.target);
-        var slug = e.target.pathname.replace('/browse/', '');
-        var title = $target.text();
+        var state = this.parsePathname(e.target.pathname);
 
-        var dataPromise = this.getSectionData(slug);
+        state.title = $target.text();
+
+        var dataPromise = this.getSectionData(state.slug);
 
         dataPromise.done($.proxy(function(data){
-          if(slug.indexOf('/') > -1){
-            this.showSubsection(title, data);
-            this.highlightSection('section', $target.attr('href'));
+          state.data = data;
+          history.pushState(state, '', e.target.pathname);
+
+          if(state.slug.indexOf('/') > -1){
+            this.showSubsection(state.title, data);
+            this.highlightSection('section', state.path);
           } else {
-            this.showSection(title, data);
-            this.highlightSection('root', $target.attr('href'));
+            this.showSection(state.title, data);
+            this.highlightSection('root', state.path);
           }
         }, this));
       }
