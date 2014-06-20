@@ -12,8 +12,8 @@
     this.$subsection = this.$el.find('#subsection');
 
     if(this.$subsection.length === 0){
-      this.$subsection = '<div id="subsection" class="pane" />';
-      this.$el.prepend($subsection);
+      this.$subsection = $('<div id="subsection" class="pane" />').hide();
+      this.$el.prepend(this.$subsection);
     } else {
       this.$subsection.show();
     }
@@ -46,6 +46,7 @@
       }
     },
     showSection: function(title, data){
+      this.setTitle(title);
       this.$section.mustache('browse/_section', { title: title, options: data.results});
       if(this.state !== 'section'){
         // animate to the right position and update the data
@@ -70,6 +71,7 @@
       // update the data
     },
     showSubsection: function(title, data){
+      this.setTitle(title);
       this.$subsection.mustache('browse/_section', { title: title, options: data.results});
 
       if(this.state !== 'subsection'){
@@ -97,6 +99,9 @@
 
       }
       // update the data
+    },
+    setTitle: function(title){
+      $('title').text(title);
     },
     // getSection: returns a promise which will contain the data
     // Returns data from the cache if it is their of puts the data in the cache
