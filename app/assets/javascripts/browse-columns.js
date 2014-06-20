@@ -163,8 +163,11 @@
 
         var $target = $(e.target);
         var state = this.parsePathname(e.target.pathname);
-
         state.title = $target.text();
+
+        if(state.path === window.location.pathname){
+          return;
+        }
 
         var dataPromise = this.getSectionData(state.slug);
 

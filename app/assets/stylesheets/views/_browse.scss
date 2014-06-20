@@ -77,6 +77,10 @@ main.browse {
           &.active a {
             background: $link-colour;
             color: $white;
+
+            &:hover {
+              background: $link-colour;
+            }
           }
 
           a {
@@ -85,6 +89,10 @@ main.browse {
             @include core-16;
             padding: 12px 30px 8px 15px;
             text-decoration: none;
+
+            &:hover {
+              background: $panel-colour;
+            }
 
             &:after {
               position: absolute;
