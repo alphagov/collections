@@ -73,35 +73,35 @@ main.browse {
         li {
           list-style: none;
           position: relative;
+        }
 
-          &.active a {
-            background: $link-colour;
-            color: $white;
+        a {
+          position: relative;
+          display: block;
+          @include core-16;
+          padding: 12px 30px 8px 15px;
+          text-decoration: none;
 
-            &:hover {
-              background: $link-colour;
-            }
+          &:hover {
+            background: $panel-colour;
           }
 
-          a {
-            position: relative;
-            display: block;
-            @include core-16;
-            padding: 12px 30px 8px 15px;
-            text-decoration: none;
+          &:after {
+            position: absolute;
+            top: 50%;
+            margin-top: -8px;
+            right: 10px;
+            float: right;
+            content:"\203A";
+          }
+        }
 
-            &:hover {
-              background: $panel-colour;
-            }
+        li.active a {
+          background: $link-colour;
+          color: $white;
 
-            &:after {
-              position: absolute;
-              top: 50%;
-              margin-top: -8px;
-              right: 10px;
-              float: right;
-              content:"\203A";
-            }
+          &:hover {
+            background: $link-colour;
           }
         }
       }
