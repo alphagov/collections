@@ -48,6 +48,7 @@
     },
     showSection: function(title, data){
       this.setTitle(title);
+      data.results.sort(function(a, b){ return a.title.localeCompare(b.title); });
       this.$section.mustache('browse/_section', { title: title, options: data.results});
 
       if(this.state !== 'section'){
