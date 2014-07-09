@@ -5,6 +5,7 @@
 
   function BrowseColumns(options){
     if(options.$el.length === 0) return;
+    if(!GOVUK.support.history()) return;
 
     this.$el = options.$el;
     this.$root = this.$el.find('#root');
