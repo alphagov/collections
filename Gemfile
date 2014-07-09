@@ -33,4 +33,7 @@ group :test do
   gem 'cucumber-rails', "1.4.0", require: false
 end
 
-gem 'byebug', group: [:development, :test]
+group :development, :test do
+  gem 'byebug'
+  gem 'jasmine-rails'
+end
