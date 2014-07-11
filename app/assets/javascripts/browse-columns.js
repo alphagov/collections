@@ -40,11 +40,11 @@
         this.highlightSection('root', state.path);
       }
     },
-    sectionCache: function(slug, data){
+    sectionCache: function(prefix, slug, data){
       if(typeof data === 'undefined'){
-        return this._cache[slug];
+        return this._cache[prefix + slug];
       } else {
-        this._cache[slug] = data;
+        this._cache[prefix + slug] = data;
       }
     },
     showSection: function(state){
@@ -114,7 +114,7 @@
     },
 
     getDetailedGuideData: function(slug, dataPromise){
-      var data = this.sectionCache(slug);
+      var data = this.sectionCache('detailed', slug);
       var url = "/api/specialist/tags.json?type=section&parent_id=";
 
       var out = new $.Deferred()
@@ -124,7 +124,7 @@
         $.ajax({
           url: url + slug
         }).done($.proxy(function(data){
-          this.sectionCache(slug, data);
+          this.sectionCache('detailed', slug, data);
           out.resolve(data);
         }, this)).fail($.proxy(function(jqXHR, textStatus, errorThrown){
           console.log(arguments);
@@ -138,7 +138,7 @@
     // Returns data from the cache if it is their of puts the data in the cache
     // if it is not.
     getSectionData: function(slug){
-      var data = this.sectionCache(slug),
+      var data = this.sectionCache('section', slug),
           sectionUrl = "/api/tags.json?type=section&parent_id=",
           subsectionUrl = "/api/with_tag.json?section=",
           out = new $.Deferred(),
@@ -156,7 +156,7 @@
         $.ajax({
           url: url + slug
         }).done($.proxy(function(data){
-          this.sectionCache(slug, data);
+          this.sectionCache('secton', slug, data);
           out.resolve(data);
         }, this));
       }

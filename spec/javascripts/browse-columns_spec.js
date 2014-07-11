@@ -2,11 +2,11 @@ describe('browse-columns.js', function() {
   it("should cache objects", function() {
     var bc = new GOVUK.BrowseColumns({ $el: $('<div>') });
 
-    expect(bc.sectionCache('object-name')).toBe(undefined);
+    expect(bc.sectionCache('prefix', 'object-name')).toBe(undefined);
 
-    bc.sectionCache('object-name', 'cache-thing');
+    bc.sectionCache('prefix', 'object-name', 'cache-thing');
 
-    expect(bc.sectionCache('object-name')).toBe('cache-thing');
+    expect(bc.sectionCache('prefix', 'object-name')).toBe('cache-thing');
   });
 
   it("should set page title", function() {
@@ -39,7 +39,7 @@ describe('browse-columns.js', function() {
     spyOn(jQuery, 'Deferred').and.returnValue(promiseObj);
 
     var bc = new GOVUK.BrowseColumns({ $el: $('<div>') });
-    bc.sectionCache('section', 'data');
+    bc.sectionCache('section', 'section', 'data');
 
     var responseObj = bc.getSectionData('section');
 
@@ -73,7 +73,7 @@ describe('browse-columns.js', function() {
     spyOn(jQuery, 'Deferred').and.returnValue(promiseObj);
 
     var bc = new GOVUK.BrowseColumns({ $el: $('<div>') });
-    bc.sectionCache('section/subsection', 'data');
+    bc.sectionCache('section', 'section/subsection', 'data');
 
     var responseObj = bc.getSectionData('section/subsection');
 
