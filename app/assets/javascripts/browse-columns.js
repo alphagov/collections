@@ -127,7 +127,6 @@
           this.sectionCache('detailed', slug, data);
           out.resolve(data);
         }, this)).fail($.proxy(function(jqXHR, textStatus, errorThrown){
-          console.log(arguments);
           out.resolve({});
         }, this));
       }
