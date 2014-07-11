@@ -189,7 +189,7 @@
       }
     },
     navigate: function(e){
-      if(e.target.pathname.match(/^\/browse/)){
+      if(e.target.pathname.match(/^\/browse\/[^\/]+(\/[^\/]+)?$/)){
         e.preventDefault();
 
         var $target = $(e.target);
