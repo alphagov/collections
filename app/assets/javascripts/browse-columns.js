@@ -79,7 +79,7 @@
       this.$subsection.mustache('browse/_section', {
         title: state.title,
         options: state.sectionData.results,
-        "detailed_guide_categories_any?": state.detailedGuideData.results,
+        "detailed_guide_categories_any?": !!state.detailedGuideData.results,
         detailed_guide_categories: state.detailedGuideData.results
       });
 
