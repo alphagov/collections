@@ -10,7 +10,7 @@ class SpecialistSectorBrowsingTest < ActionDispatch::IntegrationTest
     ]
 
     content_api_has_tag("specialist_sector", { slug: "oil-and-gas", title: "Oil and gas", description: "Guidance for the oil and gas industry" })
-    content_api_has_child_tags("specialist_sector", "oil-and-gas", subcategories)
+    content_api_has_sorted_child_tags("specialist_sector", "oil-and-gas", "alphabetical", subcategories)
 
     visit "/oil-and-gas"
     assert page.has_title?("Oil and gas - GOV.UK")
