@@ -32,11 +32,11 @@
       var state = e.originalEvent.state;
 
       if(state.subsection){
-        this.showSubsection(state.title, state.data);
+        this.showSubsection(state);
         this.highlightSection('section', state.path);
         this.highlightSection('root', '/browse/' + state.section);
       } else {
-        this.showSection(state.title, state.data);
+        this.showSection(state);
         this.highlightSection('root', state.path);
       }
     },
@@ -47,10 +47,10 @@
         this._cache[slug] = data;
       }
     },
-    showSection: function(title, data){
-      this.setTitle(title);
-      data.results.sort(function(a, b){ return a.title.localeCompare(b.title); });
-      this.$section.mustache('browse/_section', { title: title, options: data.results});
+    showSection: function(state){
+      this.setTitle(state.title);
+      state.sectionData.results.sort(function(a, b){ return a.title.localeCompare(b.title); });
+      this.$section.mustache('browse/_section', { title: state.title, options: state.sectionData.results});
 
       if(this.state !== 'section'){
         // animate to the right position and update the data
@@ -74,9 +74,14 @@
       }
       // update the data
     },
-    showSubsection: function(title, data){
-      this.setTitle(title);
-      this.$subsection.mustache('browse/_section', { title: title, options: data.results});
+    showSubsection: function(state){
+      this.setTitle(state.title);
+      this.$subsection.mustache('browse/_section', {
+        title: state.title,
+        options: state.sectionData.results,
+        "detailed_guide_categories_any?": state.detailedGuideData.results,
+        detailed_guide_categories: state.detailedGuideData.results
+      });
 
       if(this.state !== 'subsection'){
         // animate to the right position and update the data
@@ -107,6 +112,28 @@
     setTitle: function(title){
       $('title').text(title);
     },
+
+    getDetailedGuideData: function(slug, dataPromise){
+      var data = this.sectionCache(slug);
+      var url = "/api/specialist/tags.json?type=section&parent_id=";
+
+      var out = new $.Deferred()
+      if(typeof data !== 'undefined'){
+        out.resolve(data);
+      } else {
+        $.ajax({
+          url: url + slug
+        }).done($.proxy(function(data){
+          this.sectionCache(slug, data);
+          out.resolve(data);
+        }, this)).fail($.proxy(function(jqXHR, textStatus, errorThrown){
+          console.log(arguments);
+          out.resolve({});
+        }, this));
+      }
+      return out;
+    },
+
     // getSection: returns a promise which will contain the data
     // Returns data from the cache if it is their of puts the data in the cache
     // if it is not.
@@ -114,6 +141,7 @@
       var data = this.sectionCache(slug),
           sectionUrl = "/api/tags.json?type=section&parent_id=",
           subsectionUrl = "/api/with_tag.json?section=",
+          out = new $.Deferred(),
           url;
 
       if(slug.indexOf('/') > -1){
@@ -123,15 +151,16 @@
       }
 
       if(typeof data !== 'undefined'){
-        var out = new $.Deferred()
-        return out.resolve(data);
+        out.resolve(data);
       } else {
-        return $.ajax({
+        $.ajax({
           url: url + slug
         }).done($.proxy(function(data){
           this.sectionCache(slug, data);
+          out.resolve(data);
         }, this));
       }
+      return out;
     },
     highlightSection: function(section, slug){
       this.$el.find('#'+section+' .active').removeClass('active')
@@ -171,19 +200,25 @@
           return;
         }
 
-        var dataPromise = this.getSectionData(state.slug);
+        var donePromise = this.getSectionData(state.slug);
+        if(state.subsection){
+          var sectionPromise = donePromise;
+          var detailedGuidePromise = this.getDetailedGuideData(state.slug);
+          donePromise = $.when(sectionPromise, detailedGuidePromise);
+        }
 
-        dataPromise.done($.proxy(function(data){
-          state.data = data;
+        donePromise.done($.proxy(function(sectionData, detailedGuideData){
+          state.sectionData = sectionData;
+          state.detailedGuideData = detailedGuideData;
           history.pushState(state, '', e.target.pathname);
 
           this.scrollToBrowse();
 
           if(state.slug.indexOf('/') > -1){
-            this.showSubsection(state.title, data);
+            this.showSubsection(state);
             this.highlightSection('section', state.path);
           } else {
-            this.showSection(state.title, data);
+            this.showSection(state);
             this.highlightSection('root', state.path);
           }
         }, this));
