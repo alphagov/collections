@@ -13,6 +13,12 @@
     this.$subsection = this.$el.find('#subsection');
     this.animateSpeed = 200;
 
+    if(this.$section.length === 0){
+      this.$section = $('<div id="section" class="pane with-sort" />');
+      this.$el.prepend(this.$section);
+      this.$el.addClass('section');
+    }
+
     if(this.$subsection.length === 0){
       this.$subsection = $('<div id="subsection" class="pane" />').hide();
       this.$el.prepend(this.$subsection);
@@ -21,6 +27,9 @@
     }
 
     this.state = this.$el.data('state');
+    if(typeof this.state === 'undefined'){
+      this.state = 'root';
+    }
     this._cache = {};
 
     this.$el.on('click', 'a', $.proxy(this.navigate, this));
@@ -31,7 +40,9 @@
     popState: function(e){
       var state = e.originalEvent.state;
 
-      if(state.subsection){
+      if(!state){
+        this.showRoot();
+      } else if(state.subsection){
         this.showSubsection(state);
         this.highlightSection('section', state.path);
         this.highlightSection('root', '/browse/' + state.section);
