@@ -32,6 +32,8 @@
     }
     this._cache = {};
 
+    this.mobile = this.isMobile();
+
     this.$el.on('click', 'a', $.proxy(this.navigate, this));
 
     $(window).on('popstate', $.proxy(this.popState, this));
@@ -51,6 +53,9 @@
         this.highlightSection('root', state.path);
       }
     },
+    isMobile: function(){
+      return $(window).width() < 640;
+    },
     sectionCache: function(prefix, slug, data){
       if(typeof data === 'undefined'){
         return this._cache[prefix + slug];
@@ -58,32 +63,41 @@
         this._cache[prefix + slug] = data;
       }
     },
+    showRoot: function(){
+      this.$section.html('');
+      this.state = 'root';
+    },
     showSection: function(state){
       this.setTitle(state.title);
       state.sectionData.results.sort(function(a, b){ return a.title.localeCompare(b.title); });
       this.$section.mustache('browse/_section', { title: state.title, options: state.sectionData.results});
 
-      if(this.state !== 'section'){
+      function afterAnimate(){
+        this.state = 'section';
+
+        this.$el.removeClass('subsection').addClass('section');
+        this.$section.attr('style', '');
+        this.$section.find('.pane-inner').attr('style', '');
+        this.$section.addClass('with-sort');
+      }
+
+      if(this.state === 'subsection'){
         // animate to the right position and update the data
         this.$subsection.hide();
-        this.$section.css('margin-right', '63%');
-        this.$section.find('.pane-inner').animate({
-          paddingLeft: '96px'
-        }, this.animateSpeed);
-        this.$section.animate({
-          width: '35%',
-          marginLeft: '0%',
-          marginRight: '40%'
-        }, this.animateSpeed, $.proxy(function(){
-          this.state = 'section';
-
-          this.$el.removeClass('subsection').addClass('section');
-          this.$section.attr('style', '');
-          this.$section.find('.pane-inner').attr('style', '');
-          this.$section.addClass('with-sort');
-        }, this));
+        if(!this.mobile){
+          this.$section.css('margin-right', '63%');
+          this.$section.find('.pane-inner').animate({
+            paddingLeft: '96px'
+          }, this.animateSpeed);
+          this.$section.animate({
+            width: '35%',
+            marginLeft: '0%',
+            marginRight: '40%'
+          }, this.animateSpeed, $.proxy(afterAnimate, this));
+        } else {
+          afterAnimate();
+        }
       }
-      // update the data
     },
     showSubsection: function(state){
       this.setTitle(state.title);
