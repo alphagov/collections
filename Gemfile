@@ -5,6 +5,7 @@ gem 'rails', '4.0.4'
 gem 'sass-rails', '4.0.2'
 gem 'uglifier', '2.5.0'
 gem 'govuk_frontend_toolkit', '1.2.0'
+gem 'shared_mustache', '0.1.2'
 
 gem 'unicorn', '4.8.2'
 gem 'airbrake', '3.1.15'
@@ -32,4 +33,7 @@ group :test do
   gem 'cucumber-rails', "1.4.0", require: false
 end
 
-gem 'byebug', group: [:development, :test]
+group :development, :test do
+  gem 'byebug'
+  gem 'jasmine-rails'
+end

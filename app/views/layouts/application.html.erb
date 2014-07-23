@@ -12,6 +12,7 @@
     <main id="content" role="main" class="<%= yield :page_class %>">
       <%= yield %>
     </main>
+    <%= render_mustache_templates if Rails.env.development? %>
   </div>
 </body>
 </html>

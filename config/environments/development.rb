@@ -23,4 +23,8 @@ Collections::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  if ENV['GOVUK_ASSET_ROOT'].present?
+    config.asset_host = ENV['GOVUK_ASSET_ROOT']
+  end
 end

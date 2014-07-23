@@ -1,5 +1,6 @@
 Collections::Application.routes.draw do
 
+  mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
   get "/browse.json" => redirect("/api/tags.json?type=section&root_sections=true")
   get "/browse" => "browse#index", to: "browse#index"
   get "/browse/:section.json" => redirect("/api/tags.json?type=section&parent_id=%{section}")
