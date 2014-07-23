@@ -158,29 +158,29 @@
       return out;
     },
 
-    // getSection: returns a promise which will contain the data
-    // Returns data from the cache if it is their of puts the data in the cache
+    // getSectionData: returns a promise which will contain the data
+    // Returns data from the cache if it is there or puts the data in the cache
     // if it is not.
-    getSectionData: function(slug){
-      var data = this.sectionCache('section', slug),
+    getSectionData: function(state){
+      var cacheForSlug = this.sectionCache('section', state.slug),
           sectionUrl = "/api/tags.json?type=section&parent_id=",
           subsectionUrl = "/api/with_tag.json?section=",
           out = new $.Deferred(),
           url;
 
-      if(slug.indexOf('/') > -1){
+      if(state.subsection){
         url = subsectionUrl;
       } else {
         url = sectionUrl;
       }
 
-      if(typeof data !== 'undefined'){
-        out.resolve(data);
+      if(typeof cacheForSlug !== 'undefined'){
+        out.resolve(cacheForSlug);
       } else {
         $.ajax({
-          url: url + slug
+          url: url + state.slug
         }).done($.proxy(function(data){
-          this.sectionCache('secton', slug, data);
+          this.sectionCache('secton', state.slug, data);
           out.resolve(data);
         }, this));
       }
@@ -224,7 +224,7 @@
           return;
         }
 
-        var donePromise = this.getSectionData(state.slug);
+        var donePromise = this.getSectionData(state);
         if(state.subsection){
           var sectionPromise = donePromise;
           var detailedGuidePromise = this.getDetailedGuideData(state.slug);
@@ -238,7 +238,7 @@
 
           this.scrollToBrowse();
 
-          if(state.slug.indexOf('/') > -1){
+          if(state.subsection){
             this.showSubsection(state);
             this.highlightSection('section', state.path);
           } else {
