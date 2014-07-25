@@ -41,14 +41,15 @@
   BrowseColumns.prototype = {
     popState: function(e){
       var state = e.originalEvent.state;
+      var pathState = this.parsePathname(window.location.pathname);
 
-      if(!state){
+      if(!state && pathState.slug == ''){
         this.showRoot();
-      } else if(state.subsection){
+      } else if(state && state.subsection){
         this.showSubsection(state);
         this.highlightSection('section', state.path);
         this.highlightSection('root', '/browse/' + state.section);
-      } else {
+      } else if(state){
         this.showSection(state);
         this.highlightSection('root', state.path);
       }
