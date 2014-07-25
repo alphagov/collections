@@ -1,6 +1,9 @@
 #wrapper {
-  @include outer-block;
   border-bottom: 10px solid $govuk-blue;
+
+  #content {
+    @include outer-block;
+  }
 
   .report-a-problem-toggle {
     @include core-16;

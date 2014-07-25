@@ -2,6 +2,7 @@ main.browse {
   .browse-panes {
     @extend %contain-floats;
     @include inner-block;
+    padding-bottom: 30px;
 
     &.section {
       #root {
