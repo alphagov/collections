@@ -6,7 +6,10 @@ main.browse {
 
     &.section {
       #root {
+        display: none; // hide on mobile
+
         @include media(tablet){
+          display: block;
           float: right;
           width: 25%;
         }
@@ -22,7 +25,10 @@ main.browse {
 
     &.subsection {
       #root, #section {
+        display: none; // hide on mobile
+
         @include media(tablet){
+          display: block;
           float: right;
           width: 25%;
         }
