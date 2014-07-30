@@ -122,8 +122,8 @@ main.browse {
             @include bold-27;
             float: left;
             display: block;
-            width: 55px;
-            margin-left: -70px;
+            width: 75px;
+            margin-left: -90px;
             padding: 15px 0 15px 15px;
             text-align: center;
           }
@@ -142,17 +142,17 @@ main.browse {
         padding-left: 0;
       }
       .sort-order {
-        @include bold-36;
+        @include bold-27;
         float: left;
         text-align: center;
-        width: 50px;
-        margin-left: -65px;
+        width: 75px;
+        margin-left: -95px;
         padding: 15px 0;
 
         @include media(tablet){
-          width: 70px;
+          width: 75px;
           margin-left: -100px;
-          padding: 15px;
+          padding: 15px 0 15px 15px;
         }
       }
       ul {
