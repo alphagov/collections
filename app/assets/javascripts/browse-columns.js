@@ -26,9 +26,9 @@
       this.$subsection.show();
     }
 
-    this.state = this.$el.data('state');
-    if(typeof this.state === 'undefined'){
-      this.state = 'root';
+    this.displayState = this.$el.data('state');
+    if(typeof this.displayState === 'undefined'){
+      this.displayState = 'root';
     }
     this._cache = {};
 
@@ -66,7 +66,7 @@
     },
     showRoot: function(){
       this.$section.html('');
-      this.state = 'root';
+      this.displayState = 'root';
     },
     showSection: function(state){
       this.setTitle(state.title);
@@ -74,7 +74,7 @@
       this.$section.mustache('browse/_section', { title: state.title, options: state.sectionData.results});
 
       function afterAnimate(){
-        this.state = 'section';
+        this.displayState = 'section';
 
         this.$el.removeClass('subsection').addClass('section');
         this.$section.attr('style', '');
@@ -82,7 +82,7 @@
         this.$section.addClass('with-sort');
       }
 
-      if(this.state === 'subsection'){
+      if(this.displayState === 'subsection'){
         // animate to the right position and update the data
         this.$subsection.hide();
         if(!this.mobile){
@@ -109,7 +109,7 @@
         detailed_guide_categories: state.detailedGuideData.results
       });
 
-      if(this.state !== 'subsection'){
+      if(this.displayState !== 'subsection'){
         // animate to the right position and update the data
         this.$section.find('.sort-order').hide();
         this.$section.find('.pane-inner').animate({
@@ -120,12 +120,12 @@
           marginLeft: '-13%',
           marginRight: '63%'
         }, this.animateSpeed, $.proxy(function(){
-          this.state = 'section';
+          this.displayState = 'section';
 
           this.$el.removeClass('section').addClass('subsection');
           this.$subsection.show();
           this.$section.removeClass('with-sort');
-          this.state = 'subsection';
+          this.displayState = 'subsection';
 
           this.$section.find('.sort-order').attr('style', '');
           this.$section.attr('style', '');
