@@ -6,6 +6,7 @@
   function BrowseColumns(options){
     if(options.$el.length === 0) return;
     if(!GOVUK.support.history()) return;
+    if($(window).width() < 640) return; // don't ajax navigation on mobile
 
     this.$el = options.$el;
     this.$root = this.$el.find('#root');
