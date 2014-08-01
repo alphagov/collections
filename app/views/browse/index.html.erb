@@ -1,7 +1,7 @@
 <% content_for :title, "All categories - GOV.UK" %>
 <% content_for :page_class, "browse" %>
 
-<div class="browse-panes root">
+<div class="browse-panes root" aria-live="polite" tabindex="-1">
   <div id="root" class="pane">
     <ul>
       <% root_sections.each do |result| %>

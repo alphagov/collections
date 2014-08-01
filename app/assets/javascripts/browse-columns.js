@@ -15,13 +15,13 @@
     this.animateSpeed = 200;
 
     if(this.$section.length === 0){
-      this.$section = $('<div id="section" class="pane with-sort" />');
+      this.$section = $('<div id="section" class="pane with-sort" tabindex="-1" />');
       this.$el.prepend(this.$section);
       this.$el.addClass('section');
     }
 
     if(this.$subsection.length === 0){
-      this.$subsection = $('<div id="subsection" class="pane" />').hide();
+      this.$subsection = $('<div id="subsection" class="pane" tabindex="-1" />').hide();
       this.$el.prepend(this.$subsection);
     } else {
       this.$subsection.show();
@@ -85,6 +85,7 @@
     showRoot: function(){
       this.$section.html('');
       this.displayState = 'root';
+      this.$root.focus();
     },
     showSection: function(state){
       state.title = this.getTitle(state.slug);
@@ -93,6 +94,7 @@
       this.setTitle(state.title);
       this.$section.mustache('browse/_section', { title: state.title, options: state.sectionData.results});
       this.highlightSection('root', state.path);
+      this.$section.focus();
 
       function afterAnimate(){
         this.displayState = 'section';
@@ -133,6 +135,7 @@
       });
       this.highlightSection('section', state.path);
       this.highlightSection('root', '/browse/' + state.section);
+      this.$subsection.focus();
 
       if(this.displayState !== 'subsection'){
         // animate to the right position and update the data
@@ -149,6 +152,7 @@
 
           this.$el.removeClass('section').addClass('subsection');
           this.$subsection.show();
+          this.$subsection.focus();
           this.$section.removeClass('with-sort');
           this.displayState = 'subsection';
 
