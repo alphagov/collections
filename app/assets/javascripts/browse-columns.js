@@ -27,11 +27,13 @@
       this.$subsection.show();
     }
 
-    this.state = this.$el.data('state');
-    if(typeof this.state === 'undefined'){
-      this.state = 'root';
+    this.displayState = this.$el.data('state');
+    if(typeof this.displayState === 'undefined'){
+      this.displayState = 'root';
     }
     this._cache = {};
+
+    this.lastState = this.parsePathname(window.location.pathname);
 
     this.mobile = this.isMobile();
 
@@ -44,16 +46,30 @@
   BrowseColumns.prototype = {
     popState: function(e){
       var state = e.originalEvent.state;
+      if(!state){ // state will be null if there was no state set
+        state = this.parsePathname(window.location.pathname);
+      }
 
-      if(!state){
+      if(state.slug == ''){
         this.showRoot();
       } else if(state.subsection){
-        this.showSubsection(state);
-        this.highlightSection('section', state.path);
-        this.highlightSection('root', '/browse/' + state.section);
+        this.restoreSubsection(state);
       } else {
-        this.showSection(state);
-        this.highlightSection('root', state.path);
+        this.loadSectionFromState(state, true);
+      }
+    },
+    restoreSubsection: function(state){
+      // are we displaying the correct section for the subsection?
+      if(this.lastState.section != state.section){
+        // load the section then load the subsection after
+        var sectionPathname = window.location.pathname.split('/').slice(0,-1).join('/');
+        var sectionState = this.parsePathname(sectionPathname);
+        var sectionPromise = this.loadSectionFromState(sectionState, true);
+        sectionPromise.done($.proxy(function(){
+          this.loadSectionFromState(state, true);
+        }, this));
+      } else {
+        this.loadSectionFromState(state, true);
       }
     },
     isMobile: function(){
@@ -68,15 +84,18 @@
     },
     showRoot: function(){
       this.$section.html('');
-      this.state = 'root';
+      this.displayState = 'root';
     },
     showSection: function(state){
-      this.setTitle(state.title);
+      state.title = this.getTitle(state.slug);
       state.sectionData.results.sort(function(a, b){ return a.title.localeCompare(b.title); });
+
+      this.setTitle(state.title);
       this.$section.mustache('browse/_section', { title: state.title, options: state.sectionData.results});
+      this.highlightSection('root', state.path);
 
       function afterAnimate(){
-        this.state = 'section';
+        this.displayState = 'section';
 
         this.$el.removeClass('subsection').addClass('section');
         this.$section.attr('style', '');
@@ -84,7 +103,7 @@
         this.$section.addClass('with-sort');
       }
 
-      if(this.state === 'subsection'){
+      if(this.displayState === 'subsection'){
         // animate to the right position and update the data
         this.$subsection.hide();
         if(!this.mobile){
@@ -103,6 +122,8 @@
       }
     },
     showSubsection: function(state){
+      state.title = this.getTitle(state.slug);
+
       this.setTitle(state.title);
       this.$subsection.mustache('browse/_section', {
         title: state.title,
@@ -110,8 +131,10 @@
         "detailed_guide_categories_any?": !!state.detailedGuideData.results,
         detailed_guide_categories: state.detailedGuideData.results
       });
+      this.highlightSection('section', state.path);
+      this.highlightSection('root', '/browse/' + state.section);
 
-      if(this.state !== 'subsection'){
+      if(this.displayState !== 'subsection'){
         // animate to the right position and update the data
         this.$section.find('.sort-order').hide();
         this.$section.find('.pane-inner').animate({
@@ -122,12 +145,12 @@
           marginLeft: '-13%',
           marginRight: '63%'
         }, this.animateSpeed, $.proxy(function(){
-          this.state = 'section';
+          this.displayState = 'section';
 
           this.$el.removeClass('section').addClass('subsection');
           this.$subsection.show();
           this.$section.removeClass('with-sort');
-          this.state = 'subsection';
+          this.displayState = 'subsection';
 
           this.$section.find('.sort-order').attr('style', '');
           this.$section.attr('style', '');
@@ -137,22 +160,27 @@
       }
       // update the data
     },
+    getTitle: function(slug){
+      return this.$el.find('a[href$="/browse/'+slug+'"]:first').text();
+    },
     setTitle: function(title){
       $('title').text(title);
     },
 
-    getDetailedGuideData: function(slug, dataPromise){
-      var data = this.sectionCache('detailed', slug);
+    getDetailedGuideData: function(state){
+      var data = this.sectionCache('detailed', state.slug);
       var url = "/api/specialist/tags.json?type=section&parent_id=";
 
       var out = new $.Deferred()
-      if(typeof data !== 'undefined'){
+      if(typeof state.detailedGuideData !== 'undefined'){
+        out.resolve(state.detailedGuideData);
+      }else if(typeof data !== 'undefined'){
         out.resolve(data);
       } else {
         $.ajax({
-          url: url + slug
+          url: url + state.slug
         }).done($.proxy(function(data){
-          this.sectionCache('detailed', slug, data);
+          this.sectionCache('detailed', state.slug, data);
           out.resolve(data);
         }, this)).fail($.proxy(function(jqXHR, textStatus, errorThrown){
           out.resolve({});
@@ -177,7 +205,9 @@
         url = sectionUrl;
       }
 
-      if(typeof cacheForSlug !== 'undefined'){
+      if(typeof state.sectionData !== 'undefined'){
+        out.resolve(state.sectionData);
+      } else if(typeof cacheForSlug !== 'undefined'){
         out.resolve(cacheForSlug);
       } else {
         $.ajax({
@@ -196,7 +226,7 @@
     parsePathname: function(pathname){
       var out = {
         path: pathname,
-        slug: pathname.replace('/browse/', '')
+        slug: pathname.replace(/\/browse\/?/, '')
       };
 
       if(out.slug.indexOf('/') > -1){
@@ -215,6 +245,33 @@
         $('body').animate({scrollTop: elTop}, this.animateSpeed);
       }
     },
+    loadSectionFromState: function(state, poppingState){
+      var donePromise = this.getSectionData(state);
+      if(state.subsection){
+        var sectionPromise = donePromise;
+        var detailedGuidePromise = this.getDetailedGuideData(state.slug);
+        donePromise = $.when(sectionPromise, detailedGuidePromise);
+      }
+
+      donePromise.done($.proxy(function(sectionData, detailedGuideData){
+        state.sectionData = sectionData;
+        state.detailedGuideData = detailedGuideData;
+        if(typeof poppingState === 'undefined'){
+          history.pushState(state, '', state.path);
+        }
+
+        this.scrollToBrowse();
+
+        if(state.subsection){
+          this.showSubsection(state);
+        } else {
+          this.showSection(state);
+        }
+        this.lastState = state;
+      }, this));
+
+      return donePromise;
+    },
     navigate: function(e){
       if(e.target.pathname.match(/^\/browse\/[^\/]+(\/[^\/]+)?$/)){
         e.preventDefault();
@@ -227,28 +284,7 @@
           return;
         }
 
-        var donePromise = this.getSectionData(state);
-        if(state.subsection){
-          var sectionPromise = donePromise;
-          var detailedGuidePromise = this.getDetailedGuideData(state.slug);
-          donePromise = $.when(sectionPromise, detailedGuidePromise);
-        }
-
-        donePromise.done($.proxy(function(sectionData, detailedGuideData){
-          state.sectionData = sectionData;
-          state.detailedGuideData = detailedGuideData;
-          history.pushState(state, '', e.target.pathname);
-
-          this.scrollToBrowse();
-
-          if(state.subsection){
-            this.showSubsection(state);
-            this.highlightSection('section', state.path);
-          } else {
-            this.showSection(state);
-            this.highlightSection('root', state.path);
-          }
-        }, this));
+        this.loadSectionFromState(state);
       }
     },
     removeBreadcrumbs: function(){
