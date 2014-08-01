@@ -45,18 +45,22 @@
   }
   BrowseColumns.prototype = {
     popState: function(e){
-      var state = e.originalEvent.state;
+      var state = e.originalEvent.state,
+          loadPromise;
       if(!state){ // state will be null if there was no state set
         state = this.parsePathname(window.location.pathname);
       }
 
       if(state.slug == ''){
-        this.showRoot();
+        loadPromise = this.showRoot();
       } else if(state.subsection){
-        this.restoreSubsection(state);
+        loadPromise = this.restoreSubsection(state);
       } else {
-        this.loadSectionFromState(state, true);
+        loadPromise = this.loadSectionFromState(state, true);
       }
+      loadPromise.done(function(){
+        this.trackPageview(state);
+      }.bind(this));
     },
     restoreSubsection: function(state){
       // are we displaying the correct section for the subsection?
@@ -65,11 +69,12 @@
         var sectionPathname = window.location.pathname.split('/').slice(0,-1).join('/');
         var sectionState = this.parsePathname(sectionPathname);
         var sectionPromise = this.loadSectionFromState(sectionState, true);
-        sectionPromise.done($.proxy(function(){
-          this.loadSectionFromState(state, true);
+        sectionPromise.pipe($.proxy(function(){
+          return this.loadSectionFromState(state, true);
         }, this));
+        return sectionPromise;
       } else {
-        this.loadSectionFromState(state, true);
+        return this.loadSectionFromState(state, true);
       }
     },
     isMobile: function(){
@@ -86,6 +91,9 @@
       this.$section.html('');
       this.displayState = 'root';
       this.$root.focus();
+
+      var out = new $.Deferred()
+      return out.resolve();
     },
     showSection: function(state){
       state.title = this.getTitle(state.slug);
@@ -260,16 +268,17 @@
       donePromise.done($.proxy(function(sectionData, detailedGuideData){
         state.sectionData = sectionData;
         state.detailedGuideData = detailedGuideData;
-        if(typeof poppingState === 'undefined'){
-          history.pushState(state, '', state.path);
-        }
-
         this.scrollToBrowse();
 
         if(state.subsection){
           this.showSubsection(state);
         } else {
           this.showSection(state);
+        }
+
+        if(typeof poppingState === 'undefined'){
+          history.pushState(state, '', state.path);
+          this.trackPageview(state);
         }
         this.lastState = state;
       }, this));
@@ -298,6 +307,17 @@
 
       $breadcrumbs.addClass('js-browse-desktop');
       $breadcrumbs.find('li').slice(1).addClass('visuallyhidden');
+    },
+    trackPageview: function(){
+      if(_gaq){
+        var sectionTitle = this.$section.find('h1').text();
+        if(sectionTitle){
+          _gaq.push(["_setCustomVar",1,"Section",sectionTitle.toLowerCase(),3]);
+        } else {
+          _gaq.push(["_setCustomVar",1,"Section","browse",3]);
+        }
+        _gaq.push(["_trackPageview"]);
+      }
     }
   };
 
