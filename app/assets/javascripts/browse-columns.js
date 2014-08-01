@@ -37,6 +37,8 @@
 
     this.$el.on('click', 'a', $.proxy(this.navigate, this));
 
+    this.removeBreadcrumbs();
+
     $(window).on('popstate', $.proxy(this.popState, this));
   }
   BrowseColumns.prototype = {
@@ -248,6 +250,14 @@
           }
         }, this));
       }
+    },
+    removeBreadcrumbs: function(){
+      // Untill we get something to update the breadcrumbs when we navigate
+      // arround remove the breadcrumbs other than the one to the homepage
+      var $breadcrumbs = $("#global-breadcrumb");
+
+      $breadcrumbs.addClass('js-browse-desktop');
+      $breadcrumbs.find('li').slice(1).addClass('visuallyhidden');
     }
   };
 
