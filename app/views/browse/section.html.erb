@@ -1,8 +1,8 @@
 <% content_for :title, "#{section_tag.title} - GOV.UK" %>
 <% content_for :page_class, "browse" %>
 
-<div class="browse-panes section" data-state="section">
-  <div id="section" class="pane with-sort">
+<div class="browse-panes section" data-state="section" aria-live="polite">
+  <div id="section" class="pane with-sort" tabindex="-1">
     <div class="pane-inner">
       <h1><%= section_tag.title %></h1>
       <p class="sort-order">A to Z</p>
@@ -16,7 +16,7 @@
     </div>
   </div>
 
-  <div id="root" class="pane">
+  <div id="root" class="pane" tabindex="-1">
     <h2 class="visuallyhidden">All categories</h2>
     <ul>
       <% root_sections.each do |root_section| %>
