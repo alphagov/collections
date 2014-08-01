@@ -86,6 +86,10 @@ describe('browse-columns.js', function() {
   it("should parse a pathname", function() {
     var paths = [
       {
+        path: '/browse',
+        output: { section: '', path: '/browse/tax', slug: '' }
+      },
+      {
         path: '/browse/tax',
         output: { section: 'tax', path: '/browse/tax', slug: 'tax' }
       },

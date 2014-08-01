@@ -43,34 +43,30 @@
   BrowseColumns.prototype = {
     popState: function(e){
       var state = e.originalEvent.state;
-      var pathState = this.parsePathname(window.location.pathname);
+      if(!state){ // state will be null if there was no state set
+        state = this.parsePathname(window.location.pathname);
+      }
 
-      if(pathState.slug == ''){
+      if(state.slug == ''){
         this.showRoot();
-      } else if(pathState.subsection){
-        // are we displaying the correct section for the subsection?
-        if(this.lastState.section != pathState.section){
-          // load the section then load the subsection after
-          var sectionPathname = window.location.pathname.split('/').slice(0,-1).join('/');
-          var sectionState = this.parsePathname(sectionPathname);
-          var sectionPromise = this.loadSectionFromState(sectionState);
-          sectionPromise.done($.proxy(function(){
-            this.loadSectionFromState(pathState);
-          }, this));
-        } else {
-          if(state.sectionData){
-            this.showSubsection(state);
-          } else {
-            this.loadSectionFromState(pathState);
-          }
-        }
+      } else if(state.subsection){
+        this.restoreSubsection(state);
       } else {
-        this.showSection(state);
-        if(state.sectionData){
-          this.showSection(state);
-        } else {
-          this.loadSectionFromState(pathState);
-        }
+        this.loadSectionFromState(state, true);
+      }
+    },
+    restoreSubsection: function(state){
+      // are we displaying the correct section for the subsection?
+      if(this.lastState.section != state.section){
+        // load the section then load the subsection after
+        var sectionPathname = window.location.pathname.split('/').slice(0,-1).join('/');
+        var sectionState = this.parsePathname(sectionPathname);
+        var sectionPromise = this.loadSectionFromState(sectionState, true);
+        sectionPromise.done($.proxy(function(){
+          this.loadSectionFromState(state, true);
+        }, this));
+      } else {
+        this.loadSectionFromState(state, true);
       }
     },
     isMobile: function(){
@@ -168,18 +164,20 @@
       $('title').text(title);
     },
 
-    getDetailedGuideData: function(slug, dataPromise){
-      var data = this.sectionCache('detailed', slug);
+    getDetailedGuideData: function(state){
+      var data = this.sectionCache('detailed', state.slug);
       var url = "/api/specialist/tags.json?type=section&parent_id=";
 
       var out = new $.Deferred()
-      if(typeof data !== 'undefined'){
+      if(typeof state.detailedGuideData !== 'undefined'){
+        out.resolve(state.detailedGuideData);
+      }else if(typeof data !== 'undefined'){
         out.resolve(data);
       } else {
         $.ajax({
-          url: url + slug
+          url: url + state.slug
         }).done($.proxy(function(data){
-          this.sectionCache('detailed', slug, data);
+          this.sectionCache('detailed', state.slug, data);
           out.resolve(data);
         }, this)).fail($.proxy(function(jqXHR, textStatus, errorThrown){
           out.resolve({});
@@ -204,7 +202,9 @@
         url = sectionUrl;
       }
 
-      if(typeof cacheForSlug !== 'undefined'){
+      if(typeof state.sectionData !== 'undefined'){
+        out.resolve(state.sectionData);
+      } else if(typeof cacheForSlug !== 'undefined'){
         out.resolve(cacheForSlug);
       } else {
         $.ajax({
@@ -223,7 +223,7 @@
     parsePathname: function(pathname){
       var out = {
         path: pathname,
-        slug: pathname.replace('/browse/', '')
+        slug: pathname.replace(/\/browse\/?/, '')
       };
 
       if(out.slug.indexOf('/') > -1){
@@ -242,7 +242,7 @@
         $('body').animate({scrollTop: elTop}, this.animateSpeed);
       }
     },
-    loadSectionFromState: function(state){
+    loadSectionFromState: function(state, poppingState){
       var donePromise = this.getSectionData(state);
       if(state.subsection){
         var sectionPromise = donePromise;
@@ -253,7 +253,9 @@
       donePromise.done($.proxy(function(sectionData, detailedGuideData){
         state.sectionData = sectionData;
         state.detailedGuideData = detailedGuideData;
-        history.pushState(state, '', state.path);
+        if(typeof poppingState === 'undefined'){
+          history.pushState(state, '', state.path);
+        }
 
         this.scrollToBrowse();
 
