@@ -38,7 +38,7 @@ class SpecialistSectorBrowsingTest < ActionDispatch::IntegrationTest
     end
   end
 
-  it "render an specialist sector sub-category and its artefacts" do
+  it "render a specialist sector sub-category and its artefacts" do
     artefacts = %w{
         wealth-in-the-oil-and-gas-sector
         guidance-on-wellington-boot-regulations
@@ -48,6 +48,16 @@ class SpecialistSectorBrowsingTest < ActionDispatch::IntegrationTest
     content_api_has_tag("specialist_sector", { slug: "oil-and-gas/wells", title: "Wells", description: "Wells, wells, wells." }, "oil-and-gas")
     content_api_has_artefacts_with_a_tag("specialist_sector", "oil-and-gas/wells", artefacts)
 
+    Collections::Application.config.search_client.stubs(:unified_search).with(
+      count: "0",
+      filter_specialist_sectors: ["oil-and-gas/wells"],
+      facet_organisations: "1000",
+    ).returns(
+      rummager_has_specialist_sector_organisations(
+        "oil-and-gas/wells",
+      )
+    )
+
     visit "/oil-and-gas/wells"
 
     assert page.has_title?("Oil and gas: Wells - GOV.UK")
@@ -55,6 +65,10 @@ class SpecialistSectorBrowsingTest < ActionDispatch::IntegrationTest
     within "header.page-header" do
       assert page.has_content?("Oil and gas")
       assert page.has_content?("Wells")
+    end
+
+    within "header.page-header" do
+      assert page.has_content?("Department of Energy & Climate Change")
     end
 
     within ".index-list" do

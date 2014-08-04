@@ -49,6 +49,16 @@ describe SpecialistSectorsController do
 
       content_api_has_tag("specialist_sector", { slug: "oil-and-gas/wells", title: "Wells", description: "Things to do with wells" }, "oil-and-gas")
       content_api_has_artefacts_with_a_tag("specialist_sector", "oil-and-gas/wells", artefacts)
+
+      Collections::Application.config.search_client.stubs(:unified_search).with(
+        count: "0",
+        filter_specialist_sectors: ["oil-and-gas/wells"],
+        facet_organisations: "1000",
+      ).returns(
+        rummager_has_specialist_sector_organisations(
+          "oil-and-gas/wells",
+        )
+      )
     end
 
     it "requests the tag from the Content API and assign it" do
@@ -82,6 +92,16 @@ describe SpecialistSectorsController do
       get :subcategory, sector: "oil-and-gas", subcategory: "wells"
 
       assert_equal "max-age=1800, public",  response.headers["Cache-Control"]
+    end
+
+    it "links to the organisations" do
+      get :subcategory, sector: "oil-and-gas", subcategory: "wells"
+
+      organisations = assigns(:organisations)
+      assert_equal '<a class="organisation-link" ' \
+                   'href="/government/organisations/department-of-energy-climate-change">' \
+                   'Department of Energy &amp; Climate Change</a>', \
+                   organisations.array_of_links.first
     end
   end
 

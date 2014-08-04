@@ -4,6 +4,17 @@
 <header class="page-header group">
   <div class="full-width">
     <h1><span><%= @sector.title %></span> <%= @subcategory.title %></h1>
+
+    <aside class="meta metadata-list">
+      <div class="inner-heading">
+        <dl class="js-track-metadata-links" data-trackposition="top">
+          <% if @organisations.any? %>
+            <dt><%= t('document.headings.from') %>:</dt>
+            <dd class="js-hide-extra-metadata"><%= @organisations.array_of_links.to_sentence.html_safe %></dd>
+          <% end %>
+        </dl>
+      </div>
+    </aside>
   </div>
 </header>
 
