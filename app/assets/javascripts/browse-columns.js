@@ -104,7 +104,11 @@
       state.sectionData.results.sort(function(a, b){ return a.title.localeCompare(b.title); });
 
       this.setTitle(state.title);
-      this.$section.mustache('browse/_section', { title: state.title, options: state.sectionData.results});
+      this.$section.mustache('browse/_section', {
+        title: state.title,
+        options: state.sectionData.results,
+        showDescription: true
+      });
       this.highlightSection('root', state.path);
       this.$section.focus();
       this.removeLoading();
@@ -144,7 +148,8 @@
         title: state.title,
         options: state.sectionData.results,
         "detailed_guide_categories_any?": !!state.detailedGuideData.results,
-        detailed_guide_categories: state.detailedGuideData.results
+        detailed_guide_categories: state.detailedGuideData.results,
+        showDescription: false
       });
       this.highlightSection('section', state.path);
       this.highlightSection('root', '/browse/' + state.section);
@@ -179,7 +184,13 @@
       // update the data
     },
     getTitle: function(slug){
-      return this.$el.find('a[href$="/browse/'+slug+'"]:first').text();
+      var $link = this.$el.find('a[href$="/browse/'+slug+'"]:first'),
+          $heading = $link.find('h3');
+      if($heading.length > 0){
+        return $heading.text();
+      } else {
+        return $link.text();
+      }
     },
     setTitle: function(title){
       $('title').text(title);
@@ -299,11 +310,11 @@
       return donePromise;
     },
     navigate: function(e){
-      if(e.target.pathname.match(/^\/browse\/[^\/]+(\/[^\/]+)?$/)){
+      if(e.currentTarget.pathname.match(/^\/browse\/[^\/]+(\/[^\/]+)?$/)){
         e.preventDefault();
 
-        var $target = $(e.target);
-        var state = this.parsePathname(e.target.pathname);
+        var $target = $(e.currentTarget);
+        var state = this.parsePathname(e.currentTarget.pathname);
         state.title = $target.text();
 
         if(state.path === window.location.pathname){

@@ -3,7 +3,15 @@
   <p class="sort-order">A to Z</p>
   <ul>
     {{#options}}
-      <li><a href="{{web_url}}">{{title}}</a></li>
+      <li><a href="{{web_url}}">
+        {{#showDescription}}
+          <h3>{{title}}</h3>
+          <p>{{details.description}}</p>
+        {{/showDescription}}
+        {{^showDescription}}
+          {{title}}
+        {{/showDescription}}
+      </a></li>
     {{/options}}
   </ul>
 
