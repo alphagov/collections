@@ -72,6 +72,7 @@ main.browse {
 
 
     #root, #section {
+      outline: none;
       min-height: 20px;
 
       h1, h2 {
@@ -140,6 +141,8 @@ main.browse {
       }
     }
     #subsection {
+      outline: none;
+
       .pane-inner {
         padding-left: 65px;
 
