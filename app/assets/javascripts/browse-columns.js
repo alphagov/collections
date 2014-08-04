@@ -51,6 +51,10 @@
         state = this.parsePathname(window.location.pathname);
       }
 
+      if(this.lastState.slug === state.slug){
+        return; // nothing has changed
+      }
+
       if(state.slug == ''){
         loadPromise = this.showRoot();
       } else if(state.subsection){
@@ -261,7 +265,7 @@
       var donePromise = this.getSectionData(state);
       if(state.subsection){
         var sectionPromise = donePromise;
-        var detailedGuidePromise = this.getDetailedGuideData(state.slug);
+        var detailedGuidePromise = this.getDetailedGuideData(state);
         donePromise = $.when(sectionPromise, detailedGuidePromise);
       }
 
