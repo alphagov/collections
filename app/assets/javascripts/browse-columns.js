@@ -103,6 +103,7 @@
       this.$section.mustache('browse/_section', { title: state.title, options: state.sectionData.results});
       this.highlightSection('root', state.path);
       this.$section.focus();
+      this.removeLoading();
 
       function afterAnimate(){
         this.displayState = 'section';
@@ -144,6 +145,7 @@
       this.highlightSection('section', state.path);
       this.highlightSection('root', '/browse/' + state.section);
       this.$subsection.focus();
+      this.removeLoading();
 
       if(this.displayState !== 'subsection'){
         // animate to the right position and update the data
@@ -178,7 +180,14 @@
     setTitle: function(title){
       $('title').text(title);
     },
-
+    addLoading: function($el){
+      this.$el.attr('aria-busy', 'true');
+      $el.addClass('loading');
+    },
+    removeLoading: function(){
+      this.$el.attr('aria-busy', 'false');
+      this.$el.find('a.loading').removeClass('loading');
+    },
     getDetailedGuideData: function(state){
       var data = this.sectionCache('detailed', state.slug);
       var url = "/api/specialist/tags.json?type=section&parent_id=";
@@ -297,6 +306,7 @@
           return;
         }
 
+        this.addLoading($target);
         this.loadSectionFromState(state);
       }
     },

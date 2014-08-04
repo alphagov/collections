@@ -105,6 +105,15 @@ main.browse {
             float: right;
             content:"\203A";
           }
+
+          &.loading {
+            cursor: default;
+            background: transparent image-url("loading.gif") 95% 50% no-repeat;
+
+            &:after {
+              content: "";
+            }
+          }
         }
 
         li.active a {
