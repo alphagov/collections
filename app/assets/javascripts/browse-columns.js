@@ -12,6 +12,7 @@
     this.$root = this.$el.find('#root');
     this.$section = this.$el.find('#section');
     this.$subsection = this.$el.find('#subsection');
+    this.$breadcrumbs = $('#global-breadcrumb ol');
     this.animateSpeed = 200;
 
     if(this.$section.length === 0){
@@ -38,8 +39,6 @@
     this.mobile = this.isMobile();
 
     this.$el.on('click', 'a', $.proxy(this.navigate, this));
-
-    this.removeBreadcrumbs();
 
     $(window).on('popstate', $.proxy(this.popState, this));
   }
@@ -108,6 +107,7 @@
       this.highlightSection('root', state.path);
       this.$section.focus();
       this.removeLoading();
+      this.updateBreadcrumbs(state);
 
       function afterAnimate(){
         this.displayState = 'section';
@@ -150,6 +150,7 @@
       this.highlightSection('root', '/browse/' + state.section);
       this.$subsection.focus();
       this.removeLoading();
+      this.updateBreadcrumbs(state);
 
       if(this.displayState !== 'subsection'){
         // animate to the right position and update the data
@@ -314,13 +315,23 @@
         this.loadSectionFromState(state);
       }
     },
-    removeBreadcrumbs: function(){
-      // Untill we get something to update the breadcrumbs when we navigate
-      // arround remove the breadcrumbs other than the one to the homepage
-      var $breadcrumbs = $("#global-breadcrumb");
+    updateBreadcrumbs: function(state){
+      var $breadcrumbItems = this.$breadcrumbs.find('li');
+      if(state.subsection){
+        var sectionSlug = state.subsection.split('/')[0];
+        var sectionTitle = this.$section.find('h1').text();
 
-      $breadcrumbs.addClass('js-browse-desktop');
-      $breadcrumbs.find('li').slice(1).addClass('visuallyhidden');
+        if($breadcrumbItems.length === 1){
+          var $sectionBreadcrumb = $('<li />');
+          this.$breadcrumbs.append($sectionBreadcrumb);
+        } else {
+          var $sectionBreadcrumb = $breadcrumbItems.slice(1);
+        }
+
+        $sectionBreadcrumb.html('<strong><a href="/browse/'+sectionSlug+'">'+sectionTitle+'</a></strong>');
+      } else {
+        this.$breadcrumbs.find('li').slice(1).remove();
+      }
     },
     trackPageview: function(){
       if(_gaq){
