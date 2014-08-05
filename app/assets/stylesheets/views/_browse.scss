@@ -60,7 +60,10 @@ main.browse {
 
       @include media(tablet){
         border-left: 1px solid $border-colour;
-        min-height: 700px;
+        min-height: 950px;
+      }
+      @include media(desktop){
+        min-height:700px;
       }
     }
 
@@ -123,7 +126,7 @@ main.browse {
       background: $white;
       position: relative;
 
-      @include media(tablet){
+      @include media(desktop){
         &.with-sort {
           .pane-inner {
             padding-left: 96px;
