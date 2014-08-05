@@ -34,7 +34,7 @@ main.browse {
         }
 
         color: $secondary-text-colour;
-        a {
+        a, p {
           color: $secondary-text-colour;
         }
       }
@@ -115,6 +115,15 @@ main.browse {
               content: "";
             }
           }
+
+          h3 {
+            font-weight: bold;
+          }
+
+          p {
+            color: $text-colour;
+            @include core-14;
+          }
         }
 
         li.active a {
@@ -123,6 +132,9 @@ main.browse {
 
           &:hover {
             background: $link-colour;
+          }
+          p {
+            color: $white;
           }
         }
       }

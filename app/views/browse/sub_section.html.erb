@@ -35,7 +35,10 @@
       <ul>
         <% section_tags.each do |section_tag| %>
           <li<%= ' class="active"'.html_safe if sub_section_tag.slug == section_tag.slug %>>
-            <%= link_to section_tag.title, section_tag.web_url %>
+            <%= link_to section_tag.web_url do %>
+              <h3><%= section_tag.title %></h3>
+              <p><%= section_tag.details.description %></p>
+            <% end %>
           </li>
         <% end %>
       </ul>
