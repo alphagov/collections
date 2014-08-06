@@ -107,6 +107,29 @@ describe('browse-columns.js', function() {
     }
   });
 
+  it("should update breadcrumbs", function(){
+    var context;
 
+    // section to section
+    context = { $breadcrumbs: $('<ol><li>one</li></ol>') };
+    GOVUK.BrowseColumns.prototype.updateBreadcrumbs.call(context, {});
+    expect(context.$breadcrumbs.find('li').length).toEqual(1);
 
+    // subsection to section
+    context = { $breadcrumbs: $('<ol><li>one</li><li>two</li></ol>') };
+    GOVUK.BrowseColumns.prototype.updateBreadcrumbs.call(context, {});
+    expect(context.$breadcrumbs.find('li').length).toEqual(1);
+
+    // subsection to subsection
+    context = { $breadcrumbs: $('<ol><li>one</li><li>two</li></ol>'), $section: $('<div><h1>text</h1></div>') };
+    GOVUK.BrowseColumns.prototype.updateBreadcrumbs.call(context, { subsection: "first/second", section: 'first' });
+    expect(context.$breadcrumbs.find('li').length).toEqual(2);
+    expect(context.$breadcrumbs.find('li a').attr('href')).toEqual('/browse/first');
+
+    // section to subsection
+    context = { $breadcrumbs: $('<ol><li>one</li></ol>'), $section: $('<div><h1>text</h1></div>') };
+    GOVUK.BrowseColumns.prototype.updateBreadcrumbs.call(context, { subsection: "first/second", section: 'first' });
+    expect(context.$breadcrumbs.find('li').length).toEqual(2);
+    expect(context.$breadcrumbs.find('li a').attr('href')).toEqual('/browse/first');
+  });
 });
