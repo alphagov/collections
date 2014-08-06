@@ -31,7 +31,7 @@ namespace :router do
     ]
 
     routes.each do |path, destination|
-      @router_api.add_redirect_route(path, 'prefix', destination)
+      @router_api.add_redirect_route(path, 'exact', destination)
     end
     @router_api.commit_routes
   end
