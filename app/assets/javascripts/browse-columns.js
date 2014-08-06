@@ -329,7 +329,7 @@
     updateBreadcrumbs: function(state){
       var $breadcrumbItems = this.$breadcrumbs.find('li');
       if(state.subsection){
-        var sectionSlug = state.subsection.split('/')[0];
+        var sectionSlug = state.section;
         var sectionTitle = this.$section.find('h1').text();
 
         if($breadcrumbItems.length === 1){
