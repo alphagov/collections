@@ -3,7 +3,8 @@ require 'gds_api/test_helpers/content_api'
 module BrowseTestHelpers
   include GdsApi::TestHelpers::ContentApi
 
-  def stub_browse_sections(section: nil, sub_section: nil, artefact: nil)
+  def stub_browse_sections(section: nil, sub_section: nil, artefact: nil,
+                           organisations: [])
     sub_section_slug = [section, sub_section].join('/')
     content_api_has_tag("section", section)
     content_api_has_tag("section", sub_section_slug)
