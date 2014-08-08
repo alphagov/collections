@@ -36,8 +36,6 @@
 
     this.lastState = this.parsePathname(window.location.pathname);
 
-    this.mobile = this.isMobile();
-
     this.$el.on('click', 'a', $.proxy(this.navigate, this));
 
     $(window).on('popstate', $.proxy(this.popState, this));
@@ -80,9 +78,6 @@
         return this.loadSectionFromState(state, true);
       }
     },
-    isMobile: function(){
-      return $(window).width() < 640;
-    },
     sectionCache: function(prefix, slug, data){
       if(typeof data === 'undefined'){
         return this._cache[prefix + slug];
@@ -115,9 +110,7 @@
 
       if(this.displayState === 'subsection'){
         // animate to the right position and update the data
-        if(!this.mobile){
-          this.animateSubsectionToSectionDesktop();
-        }
+        this.animateSubsectionToSectionDesktop();
       } else if(this.displayState === 'root'){
         this.animateRootToSectionDesktop();
       }
