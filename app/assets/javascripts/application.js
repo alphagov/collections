@@ -1,3 +1,6 @@
 //= require shared_mustache
 //= require templates
-//= require_tree .
+//= require vendor/polyfills/bind
+//
+//= require support
+//= require browse-columns

@@ -36,9 +36,9 @@
 
     this.lastState = this.parsePathname(window.location.pathname);
 
-    this.$el.on('click', 'a', $.proxy(this.navigate, this));
+    this.$el.on('click', 'a', this.navigate.bind(this));
 
-    $(window).on('popstate', $.proxy(this.popState, this));
+    $(window).on('popstate', this.popState.bind(this));
   }
   BrowseColumns.prototype = {
     popState: function(e){
@@ -70,9 +70,9 @@
         var sectionPathname = window.location.pathname.split('/').slice(0,-1).join('/');
         var sectionState = this.parsePathname(sectionPathname);
         var sectionPromise = this.loadSectionFromState(sectionState, true);
-        sectionPromise.pipe($.proxy(function(){
+        sectionPromise.pipe(function(){
           return this.loadSectionFromState(state, true);
-        }, this));
+        }.bind(this));
         return sectionPromise;
       } else {
         return this.loadSectionFromState(state, true);
@@ -135,7 +135,7 @@
         width: '35%',
         marginLeft: '0%',
         marginRight: '40%'
-      }, this.animateSpeed, $.proxy(afterAnimate, this));
+      }, this.animateSpeed, afterAnimate.bind(this));
     },
     animateRootToSectionDesktop: function(){
       this.displayState = 'section';
@@ -171,7 +171,7 @@
         width: '25%',
         marginLeft: '-13%',
         marginRight: '63%'
-      }, this.animateSpeed, $.proxy(function(){
+      }, this.animateSpeed, function(){
         this.$el.removeClass('section').addClass('subsection');
         this.$subsection.show();
         this.$subsection.focus();
@@ -181,7 +181,7 @@
         this.$section.find('.sort-order').attr('style', '');
         this.$section.attr('style', '');
         this.$section.find('.pane-inner').attr('style', '');
-      }, this));
+      }.bind(this));
     },
     getTitle: function(slug){
       var $link = this.$el.find('a[href$="/browse/'+slug+'"]:first'),
@@ -215,12 +215,12 @@
       } else {
         $.ajax({
           url: url + state.slug
-        }).done($.proxy(function(data){
+        }).done(function(data){
           this.sectionCache('detailed', state.slug, data);
           out.resolve(data);
-        }, this)).fail($.proxy(function(jqXHR, textStatus, errorThrown){
+        }.bind(this)).fail(function(jqXHR, textStatus, errorThrown){
           out.resolve({});
-        }, this));
+        }.bind(this));
       }
       return out;
     },
@@ -248,10 +248,10 @@
       } else {
         $.ajax({
           url: url + state.slug
-        }).done($.proxy(function(data){
+        }).done(function(data){
           this.sectionCache('secton', state.slug, data);
           out.resolve(data);
-        }, this));
+        }.bind(this));
       }
       return out;
     },
@@ -289,7 +289,7 @@
         donePromise = $.when(sectionPromise, detailedGuidePromise);
       }
 
-      donePromise.done($.proxy(function(sectionData, detailedGuideData){
+      donePromise.done(function(sectionData, detailedGuideData){
         state.sectionData = sectionData;
         state.detailedGuideData = detailedGuideData;
         this.scrollToBrowse();
@@ -305,7 +305,7 @@
           this.trackPageview(state);
         }
         this.lastState = state;
-      }, this));
+      }.bind(this));
 
       return donePromise;
     },
@@ -355,7 +355,6 @@
       }
     }
   };
-
 
   GOVUK.BrowseColumns = BrowseColumns;
 
