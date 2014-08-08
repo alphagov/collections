@@ -33,6 +33,35 @@
         color: inherit;
         margin: 0;
       }
+
+      .metadata {
+        position: relative;
+        @include core-14;
+        @extend %contain-floats;
+        padding-bottom: $gutter;
+
+        @include media(tablet){
+          float: left;
+          width: $two-thirds;
+        }
+
+        dt {
+          float: left;
+          clear: left;
+          width: auto;
+          min-width: 60px;
+          @include media(tablet){
+            padding-right: $gutter-one-third;
+          }
+        }
+        dd {
+          float: left;
+          width: 57%;
+          @include media(desktop){
+            width: 80%;
+          }
+        }
+      }
     }
   }
 
