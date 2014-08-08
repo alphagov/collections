@@ -123,9 +123,11 @@
         this.$section.attr('style', '');
         this.$section.find('.pane-inner').attr('style', '');
         this.$section.addClass('with-sort');
+        this.$root.attr('style', '');
       }
 
       // animate to the right position and update the data
+      this.$root.css({ position: 'absolute', width: this.$root.width() });
       this.$subsection.hide();
       this.$section.css('margin-right', '63%');
       this.$section.find('.pane-inner').animate({
@@ -163,6 +165,7 @@
     },
     animateSectionToSubsectionDesktop: function(){
       // animate to the right position and update the data
+      this.$root.css({ position: 'absolute', width: this.$root.width() });
       this.$section.find('.sort-order').hide();
       this.$section.find('.pane-inner').animate({
         paddingLeft: '0'
@@ -181,6 +184,7 @@
         this.$section.find('.sort-order').attr('style', '');
         this.$section.attr('style', '');
         this.$section.find('.pane-inner').attr('style', '');
+        this.$root.attr('style', '');
       }.bind(this));
     },
     getTitle: function(slug){

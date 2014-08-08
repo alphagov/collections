@@ -3,6 +3,7 @@ main.browse {
     @extend %contain-floats;
     @include inner-block;
     padding-bottom: 30px;
+    position: relative;
 
     &.section {
       #root {
