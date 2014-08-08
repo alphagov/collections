@@ -113,6 +113,16 @@
       this.removeLoading();
       this.updateBreadcrumbs(state);
 
+      if(this.displayState === 'subsection'){
+        // animate to the right position and update the data
+        if(!this.mobile){
+          this.animateSubsectionToSectionDesktop();
+        }
+      } else if(this.displayState === 'root'){
+        this.animateRootToSectionDesktop();
+      }
+    },
+    animateSubsectionToSectionDesktop: function(){
       function afterAnimate(){
         this.displayState = 'section';
 
@@ -122,23 +132,21 @@
         this.$section.addClass('with-sort');
       }
 
-      if(this.displayState === 'subsection'){
-        // animate to the right position and update the data
-        this.$subsection.hide();
-        if(!this.mobile){
-          this.$section.css('margin-right', '63%');
-          this.$section.find('.pane-inner').animate({
-            paddingLeft: '96px'
-          }, this.animateSpeed);
-          this.$section.animate({
-            width: '35%',
-            marginLeft: '0%',
-            marginRight: '40%'
-          }, this.animateSpeed, $.proxy(afterAnimate, this));
-        } else {
-          afterAnimate();
-        }
-      }
+      // animate to the right position and update the data
+      this.$subsection.hide();
+      this.$section.css('margin-right', '63%');
+      this.$section.find('.pane-inner').animate({
+        paddingLeft: '96px'
+      }, this.animateSpeed);
+      this.$section.animate({
+        width: '35%',
+        marginLeft: '0%',
+        marginRight: '40%'
+      }, this.animateSpeed, $.proxy(afterAnimate, this));
+    },
+    animateRootToSectionDesktop: function(){
+      this.displayState = 'section';
+      this.$el.removeClass('subsection').addClass('section');
     },
     showSubsection: function(state){
       state.title = this.getTitle(state.slug);
@@ -156,33 +164,31 @@
       this.$subsection.focus();
       this.removeLoading();
       this.updateBreadcrumbs(state);
-
       if(this.displayState !== 'subsection'){
-        // animate to the right position and update the data
-        this.$section.find('.sort-order').hide();
-        this.$section.find('.pane-inner').animate({
-          paddingLeft: '0'
-        }, this.animateSpeed);
-        this.$section.animate({
-          width: '25%',
-          marginLeft: '-13%',
-          marginRight: '63%'
-        }, this.animateSpeed, $.proxy(function(){
-          this.displayState = 'section';
-
-          this.$el.removeClass('section').addClass('subsection');
-          this.$subsection.show();
-          this.$subsection.focus();
-          this.$section.removeClass('with-sort');
-          this.displayState = 'subsection';
-
-          this.$section.find('.sort-order').attr('style', '');
-          this.$section.attr('style', '');
-          this.$section.find('.pane-inner').attr('style', '');
-        }, this));
-
+        this.animateSectionToSubsectionDesktop();
       }
-      // update the data
+    },
+    animateSectionToSubsectionDesktop: function(){
+      // animate to the right position and update the data
+      this.$section.find('.sort-order').hide();
+      this.$section.find('.pane-inner').animate({
+        paddingLeft: '0'
+      }, this.animateSpeed);
+      this.$section.animate({
+        width: '25%',
+        marginLeft: '-13%',
+        marginRight: '63%'
+      }, this.animateSpeed, $.proxy(function(){
+        this.$el.removeClass('section').addClass('subsection');
+        this.$subsection.show();
+        this.$subsection.focus();
+        this.$section.removeClass('with-sort');
+        this.displayState = 'subsection';
+
+        this.$section.find('.sort-order').attr('style', '');
+        this.$section.attr('style', '');
+        this.$section.find('.pane-inner').attr('style', '');
+      }, this));
     },
     getTitle: function(slug){
       var $link = this.$el.find('a[href$="/browse/'+slug+'"]:first'),
