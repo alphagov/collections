@@ -16,13 +16,13 @@
     this.animateSpeed = 200;
 
     if(this.$section.length === 0){
-      this.$section = $('<div id="section" class="pane with-sort" tabindex="-1" />');
+      this.$section = $('<div id="section" class="pane with-sort" />');
       this.$el.prepend(this.$section);
       this.$el.addClass('section');
     }
 
     if(this.$subsection.length === 0){
-      this.$subsection = $('<div id="subsection" class="pane" tabindex="-1" />').hide();
+      this.$subsection = $('<div id="subsection" class="pane" />').hide();
       this.$el.prepend(this.$subsection);
     } else {
       this.$subsection.show();
@@ -88,7 +88,7 @@
     showRoot: function(){
       this.$section.html('');
       this.displayState = 'root';
-      this.$root.focus();
+      this.$root.find('h1').focus();
 
       var out = new $.Deferred()
       return out.resolve();
@@ -104,18 +104,25 @@
         showDescription: true
       });
       this.highlightSection('root', state.path);
-      this.$section.focus();
       this.removeLoading();
       this.updateBreadcrumbs(state);
 
+      var animationDone;
       if(this.displayState === 'subsection'){
         // animate to the right position and update the data
-        this.animateSubsectionToSectionDesktop();
+        animationDone = this.animateSubsectionToSectionDesktop();
       } else if(this.displayState === 'root'){
-        this.animateRootToSectionDesktop();
+        animationDone = this.animateRootToSectionDesktop();
+      } else {
+        animationDone = new $.Deferred();
+        animationDone.resolve();
       }
+      animationDone.done(function(){
+        this.$section.find('h1').focus();
+      }.bind(this));
     },
     animateSubsectionToSectionDesktop: function(){
+      var out = new $.Deferred()
       function afterAnimate(){
         this.displayState = 'section';
 
@@ -124,6 +131,7 @@
         this.$section.find('.pane-inner').attr('style', '');
         this.$section.addClass('with-sort');
         this.$root.attr('style', '');
+        out.resolve();
       }
 
       // animate to the right position and update the data
@@ -138,10 +146,14 @@
         marginLeft: '0%',
         marginRight: '40%'
       }, this.animateSpeed, afterAnimate.bind(this));
+      return out;
     },
     animateRootToSectionDesktop: function(){
+      var out = new $.Deferred()
       this.displayState = 'section';
       this.$el.removeClass('subsection').addClass('section');
+
+      return out.resolve();
     },
     showSubsection: function(state){
       state.title = this.getTitle(state.slug);
@@ -156,14 +168,22 @@
       });
       this.highlightSection('section', state.path);
       this.highlightSection('root', '/browse/' + state.section);
-      this.$subsection.focus();
       this.removeLoading();
       this.updateBreadcrumbs(state);
+
+      var animationDone;
       if(this.displayState !== 'subsection'){
-        this.animateSectionToSubsectionDesktop();
+        animationDone = this.animateSectionToSubsectionDesktop();
+      } else {
+        animationDone = new $.Deferred();
+        animationDone.resolve();
       }
+      animationDone.done(function(){
+        this.$subsection.find('h1').focus();
+      }.bind(this));
     },
     animateSectionToSubsectionDesktop: function(){
+      var out = new $.Deferred()
       // animate to the right position and update the data
       this.$root.css({ position: 'absolute', width: this.$root.width() });
       this.$section.find('.sort-order').hide();
@@ -177,7 +197,6 @@
       }, this.animateSpeed, function(){
         this.$el.removeClass('section').addClass('subsection');
         this.$subsection.show();
-        this.$subsection.focus();
         this.$section.removeClass('with-sort');
         this.displayState = 'subsection';
 
@@ -185,7 +204,9 @@
         this.$section.attr('style', '');
         this.$section.find('.pane-inner').attr('style', '');
         this.$root.attr('style', '');
+        out.resolve();
       }.bind(this));
+      return out;
     },
     getTitle: function(slug){
       var $link = this.$el.find('a[href$="/browse/'+slug+'"]:first'),

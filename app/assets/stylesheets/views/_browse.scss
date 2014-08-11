@@ -69,6 +69,7 @@ main.browse {
       @include bold-27;
       margin-bottom: $gutter-one-third;
       margin-top: $gutter-one-third;
+      outline: none;
 
       @include media(tablet){
         margin-top: 0;
@@ -79,7 +80,6 @@ main.browse {
 
 
     #root, #section {
-      outline: none;
       min-height: 20px;
 
       h1, h2 {
@@ -175,8 +175,6 @@ main.browse {
       }
     }
     #subsection {
-      outline: none;
-
       .pane-inner {
         @include media(tablet){
           padding-left: 100px;
