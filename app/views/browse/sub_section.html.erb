@@ -1,10 +1,10 @@
 <% content_for :title, "#{sub_section_tag.title} - GOV.UK" %>
 <% content_for :page_class, "browse" %>
 
-<div class="browse-panes subsection" data-state="subsection" aria-live="polite">
-  <div id="subsection" class="pane with-sort" tabindex="-1">
+<div class="browse-panes subsection" data-state="subsection">
+  <div id="subsection" class="pane with-sort">
     <div class="pane-inner">
-      <h1><%= sub_section_tag.title %></h1>
+      <h1 tabindex="-1"><%= sub_section_tag.title %></h1>
       <p class="sort-order">A to Z</p>
       <ul>
         <% sub_section_artefacts.each do |sub_section_artefact| %>
@@ -29,9 +29,9 @@
     </div>
   </div>
 
-  <div id="section" class="pane" tabindex="-1">
+  <div id="section" class="pane">
     <div class="pane-inner">
-      <h1><%= section_tag.title %></h1>
+      <h1 tabindex="-1"><%= section_tag.title %></h1>
       <ul>
         <% section_tags.each do |section_tag| %>
           <li<%= ' class="active"'.html_safe if sub_section_tag.slug == section_tag.slug %>>
@@ -45,8 +45,8 @@
     </div>
   </div>
 
-  <div id="root" class="pane" tabindex="-1">
-    <h2 class="visuallyhidden">All categories</h2>
+  <div id="root" class="pane">
+    <h1 class="visuallyhidden" tabindex="-1">All categories</h1>
     <ul>
       <% root_sections.each do |root_section| %>
         <li<%= ' class="active"'.html_safe if section_tag.slug == root_section.slug %>>

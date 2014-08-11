@@ -1,8 +1,9 @@
 <% content_for :title, "All categories - GOV.UK" %>
 <% content_for :page_class, "browse" %>
 
-<div class="browse-panes root" aria-live="polite">
-  <div id="root" class="pane" tabindex="-1">
+<div class="browse-panes root">
+  <div id="root" class="pane">
+    <h1 class="visuallyhidden" tabindex="-1">All categories</h1>
     <ul>
       <% root_sections.each do |result| %>
         <li><%= link_to result.title, result.web_url %></li>
