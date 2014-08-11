@@ -36,11 +36,9 @@
 
     this.lastState = this.parsePathname(window.location.pathname);
 
-    this.mobile = this.isMobile();
+    this.$el.on('click', 'a', this.navigate.bind(this));
 
-    this.$el.on('click', 'a', $.proxy(this.navigate, this));
-
-    $(window).on('popstate', $.proxy(this.popState, this));
+    $(window).on('popstate', this.popState.bind(this));
   }
   BrowseColumns.prototype = {
     popState: function(e){
@@ -72,16 +70,13 @@
         var sectionPathname = window.location.pathname.split('/').slice(0,-1).join('/');
         var sectionState = this.parsePathname(sectionPathname);
         var sectionPromise = this.loadSectionFromState(sectionState, true);
-        sectionPromise.pipe($.proxy(function(){
+        sectionPromise.pipe(function(){
           return this.loadSectionFromState(state, true);
-        }, this));
+        }.bind(this));
         return sectionPromise;
       } else {
         return this.loadSectionFromState(state, true);
       }
-    },
-    isMobile: function(){
-      return $(window).width() < 640;
     },
     sectionCache: function(prefix, slug, data){
       if(typeof data === 'undefined'){
@@ -113,6 +108,14 @@
       this.removeLoading();
       this.updateBreadcrumbs(state);
 
+      if(this.displayState === 'subsection'){
+        // animate to the right position and update the data
+        this.animateSubsectionToSectionDesktop();
+      } else if(this.displayState === 'root'){
+        this.animateRootToSectionDesktop();
+      }
+    },
+    animateSubsectionToSectionDesktop: function(){
       function afterAnimate(){
         this.displayState = 'section';
 
@@ -122,23 +125,21 @@
         this.$section.addClass('with-sort');
       }
 
-      if(this.displayState === 'subsection'){
-        // animate to the right position and update the data
-        this.$subsection.hide();
-        if(!this.mobile){
-          this.$section.css('margin-right', '63%');
-          this.$section.find('.pane-inner').animate({
-            paddingLeft: '96px'
-          }, this.animateSpeed);
-          this.$section.animate({
-            width: '35%',
-            marginLeft: '0%',
-            marginRight: '40%'
-          }, this.animateSpeed, $.proxy(afterAnimate, this));
-        } else {
-          afterAnimate();
-        }
-      }
+      // animate to the right position and update the data
+      this.$subsection.hide();
+      this.$section.css('margin-right', '63%');
+      this.$section.find('.pane-inner').animate({
+        paddingLeft: '96px'
+      }, this.animateSpeed);
+      this.$section.animate({
+        width: '35%',
+        marginLeft: '0%',
+        marginRight: '40%'
+      }, this.animateSpeed, afterAnimate.bind(this));
+    },
+    animateRootToSectionDesktop: function(){
+      this.displayState = 'section';
+      this.$el.removeClass('subsection').addClass('section');
     },
     showSubsection: function(state){
       state.title = this.getTitle(state.slug);
@@ -156,33 +157,31 @@
       this.$subsection.focus();
       this.removeLoading();
       this.updateBreadcrumbs(state);
-
       if(this.displayState !== 'subsection'){
-        // animate to the right position and update the data
-        this.$section.find('.sort-order').hide();
-        this.$section.find('.pane-inner').animate({
-          paddingLeft: '0'
-        }, this.animateSpeed);
-        this.$section.animate({
-          width: '25%',
-          marginLeft: '-13%',
-          marginRight: '63%'
-        }, this.animateSpeed, $.proxy(function(){
-          this.displayState = 'section';
-
-          this.$el.removeClass('section').addClass('subsection');
-          this.$subsection.show();
-          this.$subsection.focus();
-          this.$section.removeClass('with-sort');
-          this.displayState = 'subsection';
-
-          this.$section.find('.sort-order').attr('style', '');
-          this.$section.attr('style', '');
-          this.$section.find('.pane-inner').attr('style', '');
-        }, this));
-
+        this.animateSectionToSubsectionDesktop();
       }
-      // update the data
+    },
+    animateSectionToSubsectionDesktop: function(){
+      // animate to the right position and update the data
+      this.$section.find('.sort-order').hide();
+      this.$section.find('.pane-inner').animate({
+        paddingLeft: '0'
+      }, this.animateSpeed);
+      this.$section.animate({
+        width: '25%',
+        marginLeft: '-13%',
+        marginRight: '63%'
+      }, this.animateSpeed, function(){
+        this.$el.removeClass('section').addClass('subsection');
+        this.$subsection.show();
+        this.$subsection.focus();
+        this.$section.removeClass('with-sort');
+        this.displayState = 'subsection';
+
+        this.$section.find('.sort-order').attr('style', '');
+        this.$section.attr('style', '');
+        this.$section.find('.pane-inner').attr('style', '');
+      }.bind(this));
     },
     getTitle: function(slug){
       var $link = this.$el.find('a[href$="/browse/'+slug+'"]:first'),
@@ -216,12 +215,12 @@
       } else {
         $.ajax({
           url: url + state.slug
-        }).done($.proxy(function(data){
+        }).done(function(data){
           this.sectionCache('detailed', state.slug, data);
           out.resolve(data);
-        }, this)).fail($.proxy(function(jqXHR, textStatus, errorThrown){
+        }.bind(this)).fail(function(jqXHR, textStatus, errorThrown){
           out.resolve({});
-        }, this));
+        }.bind(this));
       }
       return out;
     },
@@ -249,10 +248,10 @@
       } else {
         $.ajax({
           url: url + state.slug
-        }).done($.proxy(function(data){
+        }).done(function(data){
           this.sectionCache('secton', state.slug, data);
           out.resolve(data);
-        }, this));
+        }.bind(this));
       }
       return out;
     },
@@ -290,7 +289,7 @@
         donePromise = $.when(sectionPromise, detailedGuidePromise);
       }
 
-      donePromise.done($.proxy(function(sectionData, detailedGuideData){
+      donePromise.done(function(sectionData, detailedGuideData){
         state.sectionData = sectionData;
         state.detailedGuideData = detailedGuideData;
         this.scrollToBrowse();
@@ -306,7 +305,7 @@
           this.trackPageview(state);
         }
         this.lastState = state;
-      }, this));
+      }.bind(this));
 
       return donePromise;
     },
@@ -356,7 +355,6 @@
       }
     }
   };
-
 
   GOVUK.BrowseColumns = BrowseColumns;
 

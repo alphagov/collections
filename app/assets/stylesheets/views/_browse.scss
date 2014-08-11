@@ -66,7 +66,13 @@ main.browse {
 
     h1, h2 {
       @include bold-27;
-      margin-bottom: 15px;
+      margin-bottom: $gutter-one-third;
+      margin-top: $gutter-one-third;
+
+      @include media(tablet){
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
     }
 
 
@@ -76,7 +82,9 @@ main.browse {
       min-height: 20px;
 
       h1, h2 {
-        padding-left: 15px;
+        @include media(tablet){
+          padding-left: 15px;
+        }
       }
       .sort-order {
         display: none;
@@ -91,8 +99,12 @@ main.browse {
           position: relative;
           display: block;
           @include core-16;
-          padding: 12px 30px 8px 15px;
           text-decoration: none;
+          padding: 12px 0 8px;
+
+          @include media(tablet){
+            padding: 12px 30px 8px 15px;
+          }
 
           &:hover {
             background: $panel-colour;
@@ -165,8 +177,6 @@ main.browse {
       outline: none;
 
       .pane-inner {
-        padding-left: 65px;
-
         @include media(tablet){
           padding-left: 100px;
         }
@@ -175,14 +185,12 @@ main.browse {
         padding-left: 0;
       }
       .sort-order {
-        @include bold-27;
-        float: left;
-        text-align: center;
-        width: 75px;
-        margin-left: -95px;
-        padding: 15px 0;
-
+        display: none;
         @include media(tablet){
+          display: block;
+          @include bold-27;
+          float: left;
+          text-align: center;
           width: 75px;
           margin-left: -100px;
           padding: 15px 0 15px 15px;
