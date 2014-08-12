@@ -61,6 +61,7 @@
       }
       loadPromise.done(function(){
         this.trackPageview(state);
+        this.updateReportAProblem();
       }.bind(this));
     },
     restoreSubsection: function(state){
@@ -328,6 +329,7 @@
         if(typeof poppingState === 'undefined'){
           history.pushState(state, '', state.path);
           this.trackPageview(state);
+          this.updateReportAProblem();
         }
         this.lastState = state;
       }.bind(this));
@@ -378,6 +380,9 @@
         }
         _gaq.push(["_trackPageview"]);
       }
+    },
+    updateReportAProblem: function(){
+      $('input#url').val(window.location);
     }
   };
 
