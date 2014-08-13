@@ -8,7 +8,7 @@ Collections::Application.routes.draw do
   get "/browse/:section/:sub_section.json" => redirect("/api/with_tag.json?tag=%{section}%%2F%{sub_section}")
   get "/browse/:section/:sub_section", as: "sub_section", to: "browse#sub_section"
 
-  get "/:sector", to: "specialist_sectors#sector"
+  get "/:sector", to: "specialist_sectors#show"
   get "/:sector/:subcategory", to: "specialist_sectors#subcategory"
 
 end

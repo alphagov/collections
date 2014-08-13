@@ -2,11 +2,11 @@ class SpecialistSectorsController < ApplicationController
 
   TAG_TYPE = "specialist_sector"
 
-  before_filter(:only => [:sector, :subcategory]) { validate_slug_param(:sector) }
+  before_filter(:only => [:show, :subcategory]) { validate_slug_param(:sector) }
   before_filter(:only => [:subcategory]) { validate_slug_param(:subcategory) }
   before_filter :set_beta_header
 
-  def sector
+  def show
     @sector = content_api.tag(params[:sector], TAG_TYPE)
     return error_404 unless @sector.present?
 

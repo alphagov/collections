@@ -13,21 +13,21 @@ describe SpecialistSectorsController do
     end
 
     it "requests a tag from the Content API and assign it" do
-      get :sector, sector: "oil-and-gas"
+      get :show, sector: "oil-and-gas"
 
       assert_equal "Oil and Gas", assigns(:sector).title
       assert_equal "Guidance for the oil and gas industry", assigns(:sector).details.description
     end
 
     it "sets the correct slimmer headers" do
-      get :sector, sector: "oil-and-gas"
+      get :show, sector: "oil-and-gas"
 
       assert_equal "specialist-sector", response.headers["X-Slimmer-Format"]
       assert_equal "after:.page-header", response.headers["X-Slimmer-Beta-Label"]
     end
 
     it "sets expiry headers for 30 minutes" do
-      get :sector, sector: "oil-and-gas"
+      get :show, sector: "oil-and-gas"
 
       assert_equal "max-age=1800, public",  response.headers["Cache-Control"]
     end
@@ -35,7 +35,7 @@ describe SpecialistSectorsController do
 
   it "returns a 404 status for GET sector with an invalid sector tag" do
     api_returns_404_for("/tags/specialist_sector/oil-and-gas.json")
-    get :sector, sector: "oil-and-gas"
+    get :show, sector: "oil-and-gas"
 
     assert_equal 404, response.status
   end
@@ -114,7 +114,7 @@ describe SpecialistSectorsController do
 
   describe "invalid slugs" do
     it "returns a cacheable 404 without calling content_api if the sector slug is invalid" do
-      get :sector, sector: "this & that"
+      get :show, sector: "this & that"
 
       assert_equal "404", response.code
       assert_equal "max-age=600, public",  response.headers["Cache-Control"]
