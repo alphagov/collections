@@ -1,21 +1,26 @@
 class SubcategoriesController < ApplicationController
-  before_filter(:only => [:show]) { validate_slug_param(:sector) }
-  before_filter(:only => [:show]) { validate_slug_param(:subcategory) }
+  before_filter { validate_slug_param(:sector) }
+  before_filter { validate_slug_param(:subcategory) }
   before_filter :set_beta_header
 
-  TAG_TYPE = "specialist_sector"
-
   def show
-    @subcategory = content_api.tag(tag_id, TAG_TYPE)
+    @subcategory = Subcategory.new(content_api, tag_id).build
+
     return error_404 unless @subcategory.present?
 
-    @sector = @subcategory.parent
-    @results = content_api.with_tag(tag_id, TAG_TYPE).map { |artefact| SpecialistSectorPresenter.new(artefact, @sector) }
+    @results = SpecialistSectorPresenter.build_from_subcategory_content(
+      @subcategory.related_content,
+      @subcategory.parent
+    )
+
     @results.sort_by!(&:title)
 
     @organisations = sub_sector_organisations(tag_id)
 
-    set_slimmer_dummy_artefact(section_name: @sector.title, section_link: "/#{params[:sector]}")
+    set_slimmer_dummy_artefact(
+      section_name: @subcategory.parent_sector_title,
+      section_link: "/#{params[:sector]}",
+    )
     set_slimmer_headers(format: "specialist-sector")
   end
 

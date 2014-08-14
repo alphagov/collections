@@ -26,7 +26,7 @@ describe SubcategoriesController do
       get :show, sector: "oil-and-gas", subcategory: "wells"
 
       assert_equal "Wells", assigns(:subcategory).title
-      assert_equal "Things to do with wells", assigns(:subcategory).details.description
+      assert_equal "Things to do with wells", assigns(:subcategory).description
     end
 
     it "requests and assign the artefacts for the tag from the Content API" do

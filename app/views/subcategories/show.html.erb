@@ -1,9 +1,9 @@
-<% content_for :title do %><%= @sector.title %>: <%= @subcategory.title %> - GOV.UK<% end %>
+<% content_for :title do %><%= @subcategory.parent_sector_title %>: <%= @subcategory.title %> - GOV.UK<% end %>
 <% content_for :page_class, "specialist-sector-browse" %>
 
 <header class="page-header group">
   <div class="full-width">
-    <h1><span><%= @sector.title %></span> <%= @subcategory.title %></h1>
+    <h1><span><%= @subcategory.parent_sector_title %></span> <%= @subcategory.title %></h1>
 
     <% if @organisations.any? %>
       <aside class="metadata">
@@ -17,9 +17,9 @@
 </header>
 
 <div class="browse-container full-width">
-  <% if @subcategory.details.description.present? %>
+  <% if @subcategory.description.present? %>
     <div class="category-description">
-      <p><%= @subcategory.details.description %></p>
+      <p><%= @subcategory.description %></p>
     </div>
   <% end %>
 
