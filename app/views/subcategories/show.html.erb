@@ -1,0 +1,36 @@
+<% content_for :title do %><%= @sector.title %>: <%= @subcategory.title %> - GOV.UK<% end %>
+<% content_for :page_class, "specialist-sector-browse" %>
+
+<header class="page-header group">
+  <div class="full-width">
+    <h1><span><%= @sector.title %></span> <%= @subcategory.title %></h1>
+
+    <% if @organisations.any? %>
+      <aside class="metadata">
+        <dl>
+          <dt>From:</dt>
+          <dd><%= @organisations.array_of_links.to_sentence.html_safe %></dd>
+        </dl>
+      </aside>
+    <% end %>
+  </div>
+</header>
+
+<div class="browse-container full-width">
+  <% if @subcategory.details.description.present? %>
+    <div class="category-description">
+      <p><%= @subcategory.details.description %></p>
+    </div>
+  <% end %>
+
+  <nav class="index-list">
+    <h1>A to Z</h1>
+    <ul>
+      <% @results.each do |content| %>
+        <li>
+        <h2><a href="<%= content.web_url %>"><%= content.title %></a></h2>
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+</div>

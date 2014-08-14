@@ -9,6 +9,5 @@ Collections::Application.routes.draw do
   get "/browse/:section/:sub_section", as: "sub_section", to: "browse#sub_section"
 
   get "/:sector", to: "specialist_sectors#show"
-  get "/:sector/:subcategory", to: "specialist_sectors#subcategory"
-
+  get "/:sector/:subcategory", to: "subcategories#show"
 end

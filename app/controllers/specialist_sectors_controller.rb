@@ -2,8 +2,7 @@ class SpecialistSectorsController < ApplicationController
 
   TAG_TYPE = "specialist_sector"
 
-  before_filter(:only => [:show, :subcategory]) { validate_slug_param(:sector) }
-  before_filter(:only => [:subcategory]) { validate_slug_param(:subcategory) }
+  before_filter(:only => [:show]) { validate_slug_param(:sector) }
   before_filter :set_beta_header
 
   def show
@@ -15,35 +14,9 @@ class SpecialistSectorsController < ApplicationController
     set_slimmer_headers(format: "specialist-sector")
   end
 
-  def subcategory
-    tag_id = "#{params[:sector]}/#{params[:subcategory]}"
-
-    @subcategory = content_api.tag(tag_id, TAG_TYPE)
-    return error_404 unless @subcategory.present?
-
-    @sector = @subcategory.parent
-    @results = content_api.with_tag(tag_id, TAG_TYPE).map { |artefact| SpecialistSectorPresenter.new(artefact, @sector) }
-    @results.sort_by!(&:title)
-
-    @organisations = sub_sector_organisations(tag_id)
-
-    set_slimmer_dummy_artefact(section_name: @sector.title, section_link: "/#{params[:sector]}")
-    set_slimmer_headers(format: "specialist-sector")
-  end
-
 private
 
   def set_beta_header
     response.header[Slimmer::Headers::BETA_LABEL] = "after:.page-header"
-  end
-
-  def sub_sector_organisations(tag_id)
-    OrganisationsFacetPresenter.new(
-      Collections::Application.config.search_client.unified_search(
-        count: "0",
-        filter_specialist_sectors: [tag_id],
-        facet_organisations: "1000",
-      )["facets"]["organisations"]
-    )
   end
 end
