@@ -16,7 +16,7 @@ describe SpecialistSectorsController do
       get :show, sector: "oil-and-gas"
 
       assert_equal "Oil and Gas", assigns(:sector).title
-      assert_equal "Guidance for the oil and gas industry", assigns(:sector).details.description
+      assert_equal "Guidance for the oil and gas industry", assigns(:sector).description
     end
 
     it "sets the correct slimmer headers" do

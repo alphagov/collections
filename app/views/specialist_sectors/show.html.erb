@@ -8,16 +8,16 @@
 </header>
 
 <div class="browse-container full-width specialist-sector-browse">
-  <% if @sector.details.description.present? %>
+  <% if @sector.description.present? %>
     <div class="category-description">
-      <p><%= @sector.details.description %></p>
+      <p><%= @sector.description %></p>
     </div>
   <% end %>
 
   <nav class="topics">
     <h1>Topics</h1>
     <ul>
-      <% @child_tags.each do |category|%>
+      <% @sector.child_tags.each do |category|%>
         <li>
           <h2><a href="<%= category.content_with_tag.web_url %>"><%= category.title %></a></h2>
         </li>
