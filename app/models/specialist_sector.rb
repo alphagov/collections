@@ -30,7 +30,7 @@ class SpecialistSector
 
 private
 
-  TAG_TYPE = %{specialist_sector}.freeze
+  TAG_TYPE = "specialist_sector".freeze
 
   attr_reader :content_api_client, :sector_tag
 

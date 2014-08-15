@@ -37,7 +37,7 @@ class Subcategory
 
 private
 
-  TAG_TYPE = %{specialist_sector}.freeze
+  TAG_TYPE = "specialist_sector".freeze
 
   attr_reader :content_api_client, :tag_id
 
