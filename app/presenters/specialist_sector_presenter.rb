@@ -3,6 +3,10 @@ class SpecialistSectorPresenter
 
   delegate :web_url, to: :artefact
 
+  def self.build_from_subcategory_content(content, parent_sector)
+    content.map { |artefact| new(artefact, parent_sector) }
+  end
+
   def initialize(artefact, sector)
     @artefact = artefact
     @sector = sector
