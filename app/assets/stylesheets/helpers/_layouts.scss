@@ -2,6 +2,7 @@
   border-bottom: 10px solid $govuk-blue;
 
   #content {
+    display: block;
     @include outer-block;
   }
 
