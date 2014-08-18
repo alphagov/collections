@@ -6,14 +6,9 @@ class SpecialistSector
   end
 
   def build
-    content_api_lookup
     if valid?
       self
     end
-  end
-
-  def valid?
-    content_api_lookup.present?
   end
 
   def child_tags
@@ -34,8 +29,12 @@ private
 
   attr_reader :content_api_client, :sector_tag
 
+  def valid?
+    content_api_lookup.present?
+  end
+
   def content_api_lookup
-    content_api_client.tag(sector_tag, TAG_TYPE)
+    @_api_response ||= content_api_client.tag(sector_tag, TAG_TYPE)
   end
 
   def details
