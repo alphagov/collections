@@ -41,7 +41,7 @@ private
   end
 
   def content_api_lookup
-    @_api_response ||= content_api_client.tag(tag_id, TAG_TYPE)
+    @_content_api_lookup ||= content_api_client.tag(tag_id, TAG_TYPE)
   end
 
   def details
