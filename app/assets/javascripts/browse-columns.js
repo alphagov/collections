@@ -13,7 +13,7 @@
     this.$section = this.$el.find('#section');
     this.$subsection = this.$el.find('#subsection');
     this.$breadcrumbs = $('#global-breadcrumb ol');
-    this.animateSpeed = 200;
+    this.animateSpeed = 330;
 
     if(this.$section.length === 0){
       this.$section = $('<div id="section" class="pane with-sort" />');
@@ -85,6 +85,9 @@
         this._cache[prefix + slug] = data;
       }
     },
+    isDesktop: function(){
+      return $(window).width() > 768;
+    },
     showRoot: function(){
       this.$section.html('');
       this.displayState = 'root';
@@ -138,14 +141,24 @@
       this.$root.css({ position: 'absolute', width: this.$root.width() });
       this.$subsection.hide();
       this.$section.css('margin-right', '63%');
-      this.$section.find('.pane-inner').animate({
-        paddingLeft: '96px'
-      }, this.animateSpeed);
-      this.$section.animate({
-        width: '35%',
-        marginLeft: '0%',
-        marginRight: '40%'
-      }, this.animateSpeed, afterAnimate.bind(this));
+      if(this.isDesktop()){
+        this.$section.find('.pane-inner').animate({
+          paddingLeft: '96px'
+        }, this.animateSpeed);
+
+        var sectionProperties = {
+          width: '35%',
+          marginLeft: '0%',
+          marginRight: '40%'
+        };
+      } else {
+        var sectionProperties = {
+          width: '30%',
+          marginLeft: '0%',
+          marginRight: '45%'
+        };
+      }
+      this.$section.animate(sectionProperties, this.animateSpeed, afterAnimate.bind(this));
       return out;
     },
     animateRootToSectionDesktop: function(){
@@ -190,11 +203,20 @@
       this.$section.find('.pane-inner').animate({
         paddingLeft: '0'
       }, this.animateSpeed);
-      this.$section.animate({
-        width: '25%',
-        marginLeft: '-13%',
-        marginRight: '63%'
-      }, this.animateSpeed, function(){
+      if(this.isDesktop()){
+        var sectionProperties = {
+          width: '25%',
+          marginLeft: '-13%',
+          marginRight: '63%'
+        };
+      } else {
+        var sectionProperties = {
+          width: '30%',
+          marginLeft: '-18%',
+          marginRight: '63%'
+        };
+      }
+      this.$section.animate(sectionProperties, this.animateSpeed, function(){
         this.$el.removeClass('section').addClass('subsection');
         this.$subsection.show();
         this.$section.removeClass('with-sort');
