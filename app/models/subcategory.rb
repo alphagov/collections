@@ -5,14 +5,9 @@ class Subcategory
   end
 
   def build
-    content_api_lookup
     if valid?
       self
     end
-  end
-
-  def valid?
-    content_api_lookup.present?
   end
 
   def description
@@ -41,8 +36,12 @@ private
 
   attr_reader :content_api_client, :tag_id
 
+  def valid?
+    content_api_lookup.present?
+  end
+
   def content_api_lookup
-    content_api_client.tag(tag_id, TAG_TYPE)
+    @_content_api_lookup ||= content_api_client.tag(tag_id, TAG_TYPE)
   end
 
   def details
