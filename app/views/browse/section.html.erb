@@ -5,7 +5,7 @@
   <div id="section" class="pane with-sort">
     <div class="pane-inner">
       <h1 tabindex="-1"><%= section_tag.title %></h1>
-      <p class="sort-order">A to Z</p>
+      <p class="sort-order">A&#8202;to&#8202;Z</p> <!-- &#8202 = hairspace -->
       <ul>
         <% section_tags.each do |section_tag| %>
           <li>
