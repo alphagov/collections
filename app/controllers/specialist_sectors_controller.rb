@@ -12,6 +12,10 @@ class SpecialistSectorsController < ApplicationController
 
 private
 
+  def content_api
+    Collections.services(:content_api)
+  end
+
   def set_beta_header
     response.header[Slimmer::Headers::BETA_LABEL] = "after:.page-header"
   end
