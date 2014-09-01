@@ -27,5 +27,5 @@ Collections.services(:detailed_guidance_content_api, GdsApi::ContentApi.new(
   "#{Plek.current.find('whitehall-admin')}/api/specialist"
 ))
 
-require 'gds_api/content_store'
-Collections.services(:content_store, GdsApi::ContentStore.new(Plek.new.find('content-store')))
+require 'gds_api/collections_api'
+Collections.services(:collections_api, GdsApi::CollectionsApi.new(Plek.new.find('collections-api')))
