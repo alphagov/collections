@@ -36,32 +36,32 @@ private
   end
 
   def section_tag
-    @section ||= content_api.tag(section_slug)
+    @section ||= Collections.services(:content_api).tag(section_slug)
   end
   helper_method :section_tag
 
   def section_tags
-    @section_tags ||= content_api.sub_sections(section_slug).results.sort_by { |category| category.title }
+    @section_tags ||= Collections.services(:content_api).sub_sections(section_slug).results.sort_by { |category| category.title }
   end
   helper_method :section_tags
 
   def sub_section_tag
-    @sub_section ||= content_api.tag(sub_section_slug)
+    @sub_section ||= Collections.services(:content_api).tag(sub_section_slug)
   end
   helper_method :sub_section_tag
 
   def sub_section_artefacts
-    @sub_section_artefacts ||= content_api.with_tag(sub_section_slug).results.sort_by { |category| category.title }
+    @sub_section_artefacts ||= Collections.services(:content_api).with_tag(sub_section_slug).results.sort_by { |category| category.title }
   end
   helper_method :sub_section_artefacts
 
   def root_sections
-    @root_sections ||= content_api.root_sections.results.sort_by { |category| category.title }
+    @root_sections ||= Collections.services(:content_api).root_sections.results.sort_by { |category| category.title }
   end
   helper_method :root_sections
 
   def detailed_guide_categories
-    @detailed_categories ||= detailed_guidance_content_api.sub_sections(sub_section_slug).results.sort_by { |category| category.title }
+    @detailed_categories ||= Collections.services(:detailed_guidance_content_api).sub_sections(sub_section_slug).results.sort_by { |category| category.title }
   rescue GdsApi::HTTPNotFound, GdsApi::HTTPGone
     @detailed_categories ||= []
   end

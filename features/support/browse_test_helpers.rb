@@ -19,9 +19,9 @@ module BrowseTestHelpers
       content_with_tag: OpenStruct.new(web_url: 'http://example.com/browse/detailed-guidance')
     })
     mock_api = stub('guidance_api')
+    Collections.services(:detailed_guidance_content_api, mock_api)
     results = stub("results", results: [detailed_guidance])
     mock_api.stubs(:sub_sections).returns(results)
-    BrowseController.any_instance.stubs(:detailed_guidance_content_api).returns(mock_api)
   end
 
   def stub_404_detailed_guidance_response

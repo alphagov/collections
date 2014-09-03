@@ -39,14 +39,10 @@ class SpecialistSectorBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   it "render a specialist sector sub-category and its artefacts" do
-    artefacts = %w{
-        wealth-in-the-oil-and-gas-sector
-        guidance-on-wellington-boot-regulations
-        a-history-of-george-orwell
-    }
 
-    content_api_has_tag("specialist_sector", { slug: "oil-and-gas/wells", title: "Wells", description: "Wells, wells, wells." }, "oil-and-gas")
-    content_api_has_artefacts_with_a_tag("specialist_sector", "oil-and-gas/wells", artefacts)
+    stubbed_response = collections_api_has_curated_lists_for("/oil-and-gas/wells")
+    stubbed_response_body = JSON.parse(stubbed_response.response.body)
+    example_stubbed_artefact = stubbed_response_body['details']['groups'][0]
 
     Collections::Application.config.search_client.stubs(:unified_search).with(
       count: "0",
@@ -60,19 +56,15 @@ class SpecialistSectorBrowsingTest < ActionDispatch::IntegrationTest
 
     visit "/oil-and-gas/wells"
 
-    assert page.has_title?("Oil and gas: Wells - GOV.UK")
+    assert page.has_title?("Oil and gas: #{stubbed_response_body['title']} - GOV.UK")
 
     within "header.page-header" do
       assert page.has_content?("Oil and gas")
-      assert page.has_content?("Wells")
-    end
-
-    within "header.page-header" do
-      assert page.has_content?("Department of Energy & Climate Change")
+      assert page.has_content?(stubbed_response_body['title'])
     end
 
     within ".index-list" do
-      assert page.has_selector?("li", text: "Wealth in the oil and gas sector")
+      assert page.has_selector?("li", text: "#{example_stubbed_artefact['contents'][0]['title']}")
     end
   end
 end

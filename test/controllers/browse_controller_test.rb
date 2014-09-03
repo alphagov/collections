@@ -1,15 +1,6 @@
-require_relative "../test_helper"
+require "test_helper"
 
 describe BrowseController do
-  before do
-    # Stub out the website_root to make sure we are providing a
-    # consistent root for the site URL, regardless of environment.
-    #
-    # The website root is hard-coded in the test helpers, so it gets hard-coded
-    # here too.
-    Plek.any_instance.stubs(:website_root).returns("http://www.test.gov.uk")
-  end
-
   describe "GET index" do
     it "list all categories" do
       content_api_has_root_sections(["crime-and-justice"])
@@ -83,9 +74,9 @@ describe BrowseController do
   describe "GET sub_section" do
     before do
       mock_api = stub('guidance_api')
+      Collections.services(:detailed_guidance_content_api, mock_api)
       @results = stub("results", results: [])
       mock_api.stubs(:sub_sections).returns(@results)
-      BrowseController.any_instance.stubs(:detailed_guidance_content_api).returns(mock_api)
 
       content_api_has_tag("section", "crime-and-justice")
       content_api_has_tag("section", "crime-and-justice/judges")

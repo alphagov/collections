@@ -4,18 +4,16 @@ class SubcategoriesController < ApplicationController
   before_filter :set_beta_header
 
   def show
-    @subcategory = Subcategory.new(content_api, tag_id).build
+    @subcategory = Subcategory.find(slug)
 
     return error_404 unless @subcategory.present?
 
-    @results = SpecialistSectorPresenter.build_from_subcategory_content(
-      @subcategory.related_content,
-      @subcategory.parent
-    )
+    @groups = SpecialistSectorPresenter.build_from_subcategory_content(
+      @subcategory.content,
+      @subcategory.parent_sector
+    ).sort_by(&:title)
 
-    @results.sort_by!(&:title)
-
-    @organisations = sub_sector_organisations(tag_id)
+    @organisations = sub_sector_organisations(slug)
 
     set_slimmer_dummy_artefact(
       section_name: @subcategory.parent_sector_title,
@@ -30,15 +28,15 @@ private
     response.header[Slimmer::Headers::BETA_LABEL] = "after:.page-header"
   end
 
-  def tag_id
+  def slug
     "#{params[:sector]}/#{params[:subcategory]}"
   end
 
-  def sub_sector_organisations(tag_id)
+  def sub_sector_organisations(slug)
     OrganisationsFacetPresenter.new(
       Collections::Application.config.search_client.unified_search(
         count: "0",
-        filter_specialist_sectors: [tag_id],
+        filter_specialist_sectors: [slug],
         facet_organisations: "1000",
       )["facets"]["organisations"]
     )

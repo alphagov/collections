@@ -3,13 +3,7 @@ require 'test_helper'
 describe SubcategoriesController do
   describe "GET subcategory with a valid sector tag and subcategory" do
     setup do
-      artefacts = %w{
-         guidance-about-wells
-         something-else-about-wells
-      }
-
-      content_api_has_tag("specialist_sector", { slug: "oil-and-gas/wells", title: "Wells", description: "Things to do with wells" }, "oil-and-gas")
-      content_api_has_artefacts_with_a_tag("specialist_sector", "oil-and-gas/wells", artefacts)
+      collections_api_has_curated_lists_for("/oil-and-gas/wells")
 
       Collections::Application.config.search_client.stubs(:unified_search).with(
         count: "0",
@@ -25,15 +19,15 @@ describe SubcategoriesController do
     it "requests the tag from the Content API and assign it" do
       get :show, sector: "oil-and-gas", subcategory: "wells"
 
-      assert_equal "Wells", assigns(:subcategory).title
-      assert_equal "Things to do with wells", assigns(:subcategory).description
+      assert_equal "Example title", assigns(:subcategory).title
+      assert_equal "example description", assigns(:subcategory).description
     end
 
     it "requests and assign the artefacts for the tag from the Content API" do
       get :show, sector: "oil-and-gas", subcategory: "wells"
 
-      result = assigns(:results).first
-      assert_equal "Guidance about wells", result.title
+      artefact = assigns(:groups).first.artefact
+      assert_equal "Oil rigs", artefact.name
     end
 
     it "sets the correct slimmer headers" do
@@ -66,7 +60,7 @@ describe SubcategoriesController do
     end
 
     it "returns a 404 status for GET subcategory with an invalid subcategory tag" do
-      api_returns_404_for("/tags/specialist_sector/oil-and-gas%2Fcoal.json")
+      collections_api_has_no_curated_lists_for("/oil-and-gas/coal")
       get :show, sector: "oil-and-gas", subcategory: "coal"
 
       assert_equal 404, response.status

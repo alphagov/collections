@@ -1,3 +1,4 @@
+ENV["GOVUK_WEBSITE_ROOT"] = "http://www.test.gov.uk"
 ENV["RAILS_ENV"] ||= "test"
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
@@ -9,10 +10,12 @@ WebMock.disable_net_connect!
 Dir[Rails.root.join('test/support/*.rb')].each { |f| require f }
 
 require 'gds_api/test_helpers/content_api'
+require 'gds_api/test_helpers/collections_api'
 require 'gds_api/test_helpers/rummager'
 
 class ActiveSupport::TestCase
   include GdsApi::TestHelpers::ContentApi
+  include GdsApi::TestHelpers::CollectionsApi
   include GdsApi::TestHelpers::Rummager
 
   after do
