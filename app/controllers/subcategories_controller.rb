@@ -8,12 +8,10 @@ class SubcategoriesController < ApplicationController
 
     return error_404 unless @subcategory.present?
 
-    @results = SpecialistSectorPresenter.build_from_subcategory_content(
+    @groups = SpecialistSectorPresenter.build_from_subcategory_content(
       @subcategory.content,
       @subcategory.parent_sector
-    )
-
-    @results.sort_by!(&:title)
+    ).sort_by(&:title)
 
     @organisations = sub_sector_organisations(slug)
 

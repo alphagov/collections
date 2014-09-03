@@ -26,7 +26,7 @@ describe SubcategoriesController do
     it "requests and assign the artefacts for the tag from the Content API" do
       get :show, sector: "oil-and-gas", subcategory: "wells"
 
-      artefact = assigns(:results).first.artefact
+      artefact = assigns(:groups).first.artefact
       assert_equal "Oil rigs", artefact.name
     end
 
