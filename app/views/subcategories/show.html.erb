@@ -24,13 +24,15 @@
   <% end %>
 
   <nav class="index-list">
-    <h1>A to Z</h1>
+  <% @results.each do |result| -%>
+    <h1><%= result.artefact.name %></h1>
     <ul>
-      <% @results.each do |content| %>
-        <li>
+    <% result.artefact.contents.each do |content| -%>
+      <li>
         <h2><a href="<%= content.web_url %>"><%= content.title %></a></h2>
-        </li>
-      <% end %>
+      </li>
+    <% end -%>
     </ul>
+  <% end -%>
   </nav>
 </div>
