@@ -63,8 +63,6 @@ class SpecialistSectorBrowsingTest < ActionDispatch::IntegrationTest
       assert page.has_content?(stubbed_response_body['title'])
     end
 
-    within ".index-list" do
-      assert page.has_selector?("li", text: "#{example_stubbed_artefact['contents'][0]['title']}")
-    end
+    assert page.has_content?(example_stubbed_artefact['contents'][0]['title'])
   end
 end

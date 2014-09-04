@@ -101,7 +101,6 @@
   }
 
   nav {
-    border-top: 1px solid $border-colour;
     padding-top: 1em;
     padding-bottom: 1em;
     overflow: auto;
@@ -139,6 +138,8 @@
   }
 
   .beta-label {
+    padding-bottom: 10px;
+    border-bottom: 1px solid $border-colour;
     margin: 10px 30px;
 
     @include media(mobile) {

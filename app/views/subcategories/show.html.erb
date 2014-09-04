@@ -23,16 +23,16 @@
     </div>
   <% end %>
 
-  <nav class="index-list">
   <% @groups.each do |group| -%>
-    <h1><%= group.artefact.name %></h1>
-    <ul>
-    <% group.artefact.contents.each do |group_item| -%>
-      <li>
-        <h2><a href="<%= group_item.web_url %>"><%= group_item.title %></a></h2>
-      </li>
-    <% end -%>
-    </ul>
+    <nav class="index-list" aria-labelledby="<%= group.artefact.name.parameterize %>">
+      <h1 id="<%= group.artefact.name.parameterize %>"><%= group.artefact.name %></h1>
+      <ul>
+      <% group.artefact.contents.each do |group_item| -%>
+        <li>
+          <h2><a href="<%= group_item.web_url %>"><%= group_item.title %></a></h2>
+        </li>
+      <% end -%>
+      </ul>
+    </nav>
   <% end -%>
-  </nav>
 </div>
