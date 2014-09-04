@@ -38,8 +38,7 @@ class SpecialistSectorBrowsingTest < ActionDispatch::IntegrationTest
     end
   end
 
-  it "render a specialist sector sub-category and its artefacts" do
-
+  it "renders a specialist sector sub-category and its artefacts" do
     stubbed_response = collections_api_has_curated_lists_for("/oil-and-gas/wells")
     stubbed_response_body = JSON.parse(stubbed_response.response.body)
     example_stubbed_artefact = stubbed_response_body['details']['groups'][0]
@@ -63,8 +62,6 @@ class SpecialistSectorBrowsingTest < ActionDispatch::IntegrationTest
       assert page.has_content?(stubbed_response_body['title'])
     end
 
-    within ".index-list" do
-      assert page.has_selector?("li", text: "#{example_stubbed_artefact['contents'][0]['title']}")
-    end
+    assert page.has_content?(example_stubbed_artefact['contents'][0]['title'])
   end
 end

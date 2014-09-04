@@ -101,7 +101,6 @@
   }
 
   nav {
-    border-top: 1px solid $border-colour;
     padding-top: 1em;
     padding-bottom: 1em;
     overflow: auto;
@@ -112,10 +111,6 @@
       @include media(desktop) {
         float: left;
       }
-    }
-
-    h2:first-of-type {
-      margin-top: 5px;
     }
 
     ul {
@@ -135,10 +130,16 @@
           margin-bottom: 0;
         }
       }
+
+      li a {
+        @include bold-19;
+      }
     }
   }
 
   .beta-label {
+    padding-bottom: 10px;
+    border-bottom: 1px solid $border-colour;
     margin: 10px 30px;
 
     @include media(mobile) {

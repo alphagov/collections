@@ -19,7 +19,7 @@
     <ul>
       <% @sector.child_tags.each do |category|%>
         <li>
-          <h2><a href="<%= category.content_with_tag.web_url %>"><%= category.title %></a></h2>
+          <a href="<%= category.content_with_tag.web_url %>"><%= category.title %></a>
         </li>
       <% end %>
     </ul>
