@@ -113,10 +113,6 @@
       }
     }
 
-    h2:first-of-type {
-      margin-top: 5px;
-    }
-
     ul {
       display: block;
       margin: 0;
@@ -133,6 +129,10 @@
         &:last-of-type {
           margin-bottom: 0;
         }
+      }
+
+      li a {
+        @include bold-19;
       }
     }
   }
