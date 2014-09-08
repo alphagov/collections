@@ -108,8 +108,11 @@
     h1 {
       @include bold-24;
 
+      margin-bottom: $gutter-one-third;
+
       @include media(desktop) {
         float: left;
+        max-width: 12.5em;
       }
     }
 
