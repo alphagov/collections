@@ -136,6 +136,7 @@
 
       li a {
         @include bold-19;
+        text-decoration: none;
       }
     }
   }
