@@ -33,6 +33,10 @@ class Subcategory
     curated_content.title
   end
 
+  def combined_title
+    "#{parent_sector_title}: #{title}"
+  end
+
 private
 
   attr_reader :curated_content

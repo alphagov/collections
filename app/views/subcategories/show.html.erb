@@ -1,4 +1,4 @@
-<% content_for :title do %><%= @subcategory.parent_sector_title %>: <%= @subcategory.title %> - GOV.UK<% end %>
+<% content_for :title, "#{@subcategory.combined_title} - GOV.UK" %>
 <% content_for :page_class, "specialist-sector-browse" %>
 
 <header class="page-header group">
