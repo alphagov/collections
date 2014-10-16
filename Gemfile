@@ -31,6 +31,7 @@ group :test do
   gem 'mocha', '1.0.0', require: false
   gem 'webmock', '1.17.4', require: false
   gem 'cucumber-rails', "1.4.0", require: false
+  gem 'launchy'
 end
 
 group :development, :test do

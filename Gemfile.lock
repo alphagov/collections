@@ -84,6 +84,8 @@ GEM
       sprockets-rails
     json (1.8.1)
     kgio (2.9.2)
+    launchy (2.4.2)
+      addressable (~> 2.3)
     link_header (0.0.8)
     logstash-event (1.1.5)
     logstasher (0.5.0)
@@ -189,6 +191,7 @@ DEPENDENCIES
   gds-api-adapters (= 14.4.2)
   govuk_frontend_toolkit (= 1.5.0)
   jasmine-rails
+  launchy
   logstasher (= 0.5.0)
   minitest-spec-rails (= 4.7.6)
   mocha (= 1.0.0)
