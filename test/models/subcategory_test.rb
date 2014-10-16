@@ -80,3 +80,14 @@ describe Subcategory, "#combined_title" do
     assert_equal expected_combined_title, subcategory.combined_title
   end
 end
+
+describe Subcategory, "#slug" do
+  it "returns the slug for the subcategory" do
+    slug = "oil-and-gas/wells"
+    collections_api_has_curated_lists_for("/#{slug}")
+
+    subcategory = Subcategory.find(slug)
+
+    assert_equal slug, subcategory.slug
+  end
+end

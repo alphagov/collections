@@ -3,15 +3,18 @@ class Subcategory
     collections_api = Collections.services(:collections_api)
 
     if collections_api_response = collections_api.curated_lists_for("/#{slug}")
-      new(collections_api_response)
+      new(slug, collections_api_response)
     else
       nil
     end
   end
 
-  def initialize(curated_content)
+  def initialize(slug, curated_content)
+    @slug = slug
     @curated_content = curated_content
   end
+
+  attr_reader :slug
 
   def content
     details.groups
