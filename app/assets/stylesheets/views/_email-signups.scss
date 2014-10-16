@@ -1,0 +1,17 @@
+#wrapper #content.email-signup-new {
+  @extend %site-width-container;
+
+  h1 {
+    @include heading-48;
+    font-weight: bold;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  button {
+    @include button;
+    margin-bottom: 20px;
+  }
+}
