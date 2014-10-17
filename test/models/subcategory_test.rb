@@ -67,3 +67,27 @@ describe Subcategory, "#parent_sector_title" do
     assert_equal stubbed_response_body['parent']['title'], subcategory.parent_sector_title
   end
 end
+
+describe Subcategory, "#combined_title" do
+  it "combined the parent and child titles for added context" do
+    slug = "oil-and-gas/wells"
+    stubbed_response = collections_api_has_curated_lists_for("/#{slug}")
+    stubbed_response_body = JSON.parse(stubbed_response.response.body)
+
+    subcategory = Subcategory.find(slug)
+
+    expected_combined_title = "#{stubbed_response_body['parent']['title']}: #{stubbed_response_body['title']}"
+    assert_equal expected_combined_title, subcategory.combined_title
+  end
+end
+
+describe Subcategory, "#slug" do
+  it "returns the slug for the subcategory" do
+    slug = "oil-and-gas/wells"
+    collections_api_has_curated_lists_for("/#{slug}")
+
+    subcategory = Subcategory.find(slug)
+
+    assert_equal slug, subcategory.slug
+  end
+end

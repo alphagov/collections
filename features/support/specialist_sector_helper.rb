@@ -35,8 +35,12 @@ module SpecialistSectorHelper
     )
   end
 
-  def visit_specialist_sector_topic
-    visit "/oil-and-gas/fields-and-wells"
+  def visit_specialist_sector_topic(topic = "/oil-and-gas/fields-and-wells")
+    visit topic
+  end
+
+  def visit_topic_page(topic)
+    visit_specialist_sector_topic("/#{topic}")
   end
 
   def assert_presence_of_specialist_sector_content

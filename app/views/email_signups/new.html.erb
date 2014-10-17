@@ -1,0 +1,19 @@
+<% content_for :title, "Email alert subscription for #{subtopic.combined_title} - GOV.UK" %>
+<% content_for :page_class, "email-signup-new" %>
+
+<header>
+  <h1>Email alert subscription</h1>
+</header>
+
+<section>
+  <% if email_signup.valid? %>
+    <%= form_for email_signup, html: { class: "signup-form" } do |form| %>
+      <p>You're signing up to e-mail alerts for the <strong><%= subtopic.combined_title %></strong> topic.</p>
+
+      <%= button_tag 'Create subscription' %>
+    <% end %>
+
+  <% else %>
+    <p>Sorry, we could not find a valid sub-topic to subscribe to.</p>
+  <% end %>
+</section>

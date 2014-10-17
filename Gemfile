@@ -4,7 +4,7 @@ gem 'rails', '4.0.4'
 
 gem 'sass-rails', '4.0.2'
 gem 'uglifier', '2.5.0'
-gem 'govuk_frontend_toolkit', '1.5.0'
+gem 'govuk_frontend_toolkit', '1.7.0'
 gem 'shared_mustache', '0.1.2'
 
 gem 'unicorn', '4.8.2'
@@ -20,7 +20,7 @@ end
 if ENV['API_DEV']
   gem 'gds-api-adapters', :path => '../gds-api-adapters'
 else
-  gem 'gds-api-adapters', '14.4.2'
+  gem 'gds-api-adapters', '15.0.0'
 end
 
 gem 'plek', '1.7.0'
@@ -31,6 +31,7 @@ group :test do
   gem 'mocha', '1.0.0', require: false
   gem 'webmock', '1.17.4', require: false
   gem 'cucumber-rails', "1.4.0", require: false
+  gem 'launchy'
 end
 
 group :development, :test do

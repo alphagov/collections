@@ -10,4 +10,6 @@ Collections::Application.routes.draw do
 
   get "/:sector", to: "specialist_sectors#show"
   get "/:sector/:subcategory", to: "subcategories#show"
+
+  resources :email_signups, path: "/:subtopic/email-signups", only: [:new, :create], subtopic: %r{[^/]+/[^/]+}
 end
