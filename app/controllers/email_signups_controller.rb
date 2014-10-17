@@ -1,4 +1,6 @@
 class EmailSignupsController < ApplicationController
+  protect_from_forgery except: [:create]
+
   def new
     return error_404 unless subtopic.present?
   end
