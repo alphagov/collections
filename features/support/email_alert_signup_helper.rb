@@ -1,3 +1,5 @@
+require 'ostruct'
+
 module EmailAlertSignupHelper
   def check_for_description_about(topic:, subtopic:)
     assert page.has_content?("e-mail alerts for the #{topic}: #{subtopic} topic")
@@ -12,7 +14,7 @@ module EmailAlertSignupHelper
           "topic" => [slug]
         }
       )
-      .returns("subscription_url" => "/#{slug}")
+      .returns(OpenStruct.new("subscriber_list" => OpenStruct.new("subscription_url" => "/#{slug}")))
   end
 
   def subscribe_to_email_alerts

@@ -15,7 +15,7 @@ class EmailSignup
 
   def save
     if valid?
-      @subscription_url = find_or_create_subscription.fetch("subscription_url")
+      @subscription_url = find_or_create_subscription.subscriber_list.subscription_url
       true
     end
   end
