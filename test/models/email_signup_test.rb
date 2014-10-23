@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'ostruct'
 
 describe EmailSignup do
   setup do
@@ -11,7 +12,7 @@ describe EmailSignup do
     @email_alert_api = mock
     Collections.services(:email_alert_api, @email_alert_api)
 
-    @email_alert_api.stubs(:find_or_create_subscriber_list).returns("subscription_url" => "http://govdelivery_signup_url")
+    @email_alert_api.stubs(:find_or_create_subscriber_list).returns(OpenStruct.new("subscriber_list" => OpenStruct.new("subscription_url" => "http://govdelivery_signup_url")))
   end
 
   it "is invalid with no subtopic" do
@@ -27,7 +28,7 @@ describe EmailSignup do
         "tags" => {
           "topic" => ["oil-and-gas/wells"]
         }
-      ).returns("subscription_url" => "http://govdelivery_signup_url")
+      ).returns(OpenStruct.new("subscriber_list" => OpenStruct.new("subscription_url" => "http://govdelivery_signup_url")))
 
       assert email_signup.save
     end
