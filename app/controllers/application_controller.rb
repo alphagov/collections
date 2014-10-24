@@ -37,7 +37,7 @@ class ApplicationController < ActionController::Base
   end
 
   def can_handle_format?(format)
-    return true if format == Mime::HTML
+    return true if format == Mime::HTML || format == Mime::ALL
     format && self.class.acceptable_formats.fetch(params[:action].to_sym, []).include?(format.to_sym)
   end
 
