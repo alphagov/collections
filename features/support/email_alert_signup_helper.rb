@@ -11,7 +11,7 @@ module EmailAlertSignupHelper
       .with(
         "title" => "#{topic}: #{subtopic}",
         "tags" => {
-          "topic" => [slug]
+          "topics" => [slug]
         }
       )
       .returns(OpenStruct.new("subscriber_list" => OpenStruct.new("subscription_url" => "/#{slug}")))

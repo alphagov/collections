@@ -26,7 +26,7 @@ describe EmailSignup do
       @email_alert_api.expects(:find_or_create_subscriber_list).with(
         "title" => "Oil and gas: Wells",
         "tags" => {
-          "topic" => ["oil-and-gas/wells"]
+          "topics" => ["oil-and-gas/wells"]
         }
       ).returns(OpenStruct.new("subscriber_list" => OpenStruct.new("subscription_url" => "http://govdelivery_signup_url")))
 
