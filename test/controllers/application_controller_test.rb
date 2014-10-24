@@ -35,8 +35,8 @@ describe ConcreteTestController do
     end
   end
 
-  it "allows HTML requests by default" do
-    mime_types = ["text/html", "application/xhtml+xml"]
+  it "allows HTML or wildcard requests by default" do
+    mime_types = ["text/html", "application/xhtml+xml", "*/*"]
 
     with_test_routing do
       mime_types.each do |type|
