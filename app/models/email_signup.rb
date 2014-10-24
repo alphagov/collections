@@ -41,7 +41,7 @@ private
     {
       title: subtopic.combined_title,
       tags: {
-        topic: [subtopic.slug]
+        topics: [subtopic.slug]
       }
     }.deep_stringify_keys
   end
