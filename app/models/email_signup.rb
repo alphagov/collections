@@ -1,9 +1,7 @@
 require 'active_model'
 
 class EmailSignup
-  include ActiveModel::Conversion
-  extend ActiveModel::Naming
-  include ActiveModel::Validations
+  include ActiveModel::Model
 
   validates_presence_of :subtopic
 
@@ -23,14 +21,6 @@ class EmailSignup
   def find_or_create_subscription
     Collections.services(:email_alert_api)
       .find_or_create_subscriber_list(subscription_params)
-  end
-
-  def valid?
-    super && subtopic.present?
-  end
-
-  def persisted?
-    false
   end
 
 private
