@@ -7,7 +7,7 @@ describe EmailSignup do
     @subtopic.stubs(slug: "oil-and-gas/wells")
     @subtopic.stubs(combined_title: "Oil and gas: Wells")
 
-    collections_api_has_curated_lists_for("/#{@subtopic.slug}")
+    collections_api_has_content_for("/#{@subtopic.slug}")
 
     @email_alert_api = mock
     Collections.services(:email_alert_api, @email_alert_api)

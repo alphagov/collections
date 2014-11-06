@@ -2,30 +2,34 @@ class Subcategory
   def self.find(slug)
     collections_api = Collections.services(:collections_api)
 
-    if collections_api_response = collections_api.curated_lists_for("/#{slug}")
+    if (collections_api_response = collections_api.topic("/#{slug}"))
       new(slug, collections_api_response)
     else
       nil
     end
   end
 
-  def initialize(slug, curated_content)
+  def initialize(slug, data)
     @slug = slug
-    @curated_content = curated_content
+    @data = data
   end
 
   attr_reader :slug
 
-  def content
+  def groups
     details.groups
   end
 
+  def changed_documents
+    details.documents
+  end
+
   def description
-    curated_content.description
+    data.description
   end
 
   def parent_sector
-    curated_content.parent
+    data.parent
   end
 
   def parent_sector_title
@@ -33,7 +37,7 @@ class Subcategory
   end
 
   def title
-    curated_content.title
+    data.title
   end
 
   def combined_title
@@ -42,9 +46,9 @@ class Subcategory
 
 private
 
-  attr_reader :curated_content
+  attr_reader :data
 
   def details
-    curated_content.details
+    data.details
   end
 end

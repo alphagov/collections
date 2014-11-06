@@ -1,0 +1,27 @@
+<% content_for :title, "#{subcategory.combined_title} - GOV.UK" %>
+<% content_for :page_class, "specialist-sector-browse" %>
+
+<header class="page-header group">
+  <div class="full-width">
+    <h1><span><%= subcategory.parent_sector_title %></span> <%= subcategory.title %></h1>
+
+    <% if organisations.any? %>
+      <aside class="metadata">
+        <dl>
+          <dt>From:</dt>
+          <dd><%= organisations.array_of_links.to_sentence.html_safe %></dd>
+        </dl>
+      </aside>
+    <% end %>
+  </div>
+</header>
+
+<div class="browse-container full-width">
+  <% if subcategory.description.present? %>
+    <div class="category-description">
+      <p><%= subcategory.description %></p>
+    </div>
+  <% end %>
+
+  <%= yield %>
+</div>
