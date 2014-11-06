@@ -3,8 +3,8 @@ require "test_helper"
 describe EmailSignupsController do
   setup do
     @subtopic_slug = "oil-and-gas/wells"
-    collections_api_has_curated_lists_for("/#{@subtopic_slug}")
-    collections_api_has_no_curated_lists_for("/invalid/subtopic")
+    collections_api_has_content_for("/#{@subtopic_slug}")
+    collections_api_has_no_content_for("/invalid/subtopic")
 
     @email_signup = EmailSignup.new(nil)
     @email_signup.stubs(:save)

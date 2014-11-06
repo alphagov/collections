@@ -3,7 +3,7 @@ require 'test_helper'
 describe SubcategoriesController do
   describe "GET subcategory with a valid sector tag and subcategory" do
     setup do
-      collections_api_has_curated_lists_for("/oil-and-gas/wells")
+      collections_api_has_content_for("/oil-and-gas/wells")
 
       Collections::Application.config.search_client.stubs(:unified_search).with(
         count: "0",
@@ -60,7 +60,7 @@ describe SubcategoriesController do
     end
 
     it "returns a 404 status for GET subcategory with an invalid subcategory tag" do
-      collections_api_has_no_curated_lists_for("/oil-and-gas/coal")
+      collections_api_has_no_content_for("/oil-and-gas/coal")
       get :show, sector: "oil-and-gas", subcategory: "coal"
 
       assert_equal 404, response.status

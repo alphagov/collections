@@ -2,30 +2,46 @@ class SubcategoriesController < ApplicationController
   before_filter { validate_slug_param(:sector) }
   before_filter { validate_slug_param(:subcategory) }
   before_filter :set_beta_header
+  before_filter :send_404_if_not_found
+  before_filter :set_slimmer
 
   def show
-    @subcategory = Subcategory.find(slug)
-
-    return error_404 unless @subcategory.present?
-
     @groups = SpecialistSectorPresenter.build_from_subcategory_content(
-      @subcategory.content,
-      @subcategory.parent_sector
+      subcategory.groups,
+      subcategory.parent_sector
     ).sort_by(&:title)
+  end
 
-    @organisations = sub_sector_organisations(slug)
+  def latest_changes
 
-    set_slimmer_dummy_artefact(
-      section_name: @subcategory.parent_sector_title,
-      section_link: "/#{params[:sector]}",
-    )
-    set_slimmer_headers(format: "specialist-sector")
   end
 
 private
 
+  def subcategory
+    @subcategory ||= Subcategory.find(slug)
+  end
+  helper_method :subcategory
+
+  def organisations
+    @organisations ||= sub_sector_organisations(slug)
+  end
+  helper_method :organisations
+
   def set_beta_header
     response.header[Slimmer::Headers::BETA_LABEL] = "after:.page-header"
+  end
+
+  def send_404_if_not_found
+    error_404 unless subcategory.present?
+  end
+
+  def set_slimmer
+    set_slimmer_dummy_artefact(
+      section_name: subcategory.parent_sector_title,
+      section_link: "/#{params[:sector]}",
+    )
+    set_slimmer_headers(format: "specialist-sector")
   end
 
   def slug

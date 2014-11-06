@@ -4,7 +4,7 @@ module CuratedListsHelper
   include GdsApi::TestHelpers::CollectionsApi
 
   def stub_curated_lists_for(base_path)
-    collections_api_has_curated_lists_for(base_path)
+    collections_api_has_content_for(base_path)
   end
 
   def assert_page_has_curated_lists
