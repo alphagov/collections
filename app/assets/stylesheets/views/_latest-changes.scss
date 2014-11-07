@@ -1,0 +1,28 @@
+.changed-documents {
+  list-style: none;
+  padding-top: 10px;
+
+  a {
+    text-decoration: none;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .updated-at {
+    margin-bottom: 10px;
+  }
+  .updated-at:last-child {
+    margin-bottom: 0;
+  }
+
+  li {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bfc1c3;
+    margin: 10px 0;
+  }
+  li:last-child {
+    border-bottom: 0;
+  }
+}

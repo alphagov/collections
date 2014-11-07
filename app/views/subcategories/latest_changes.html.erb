@@ -1,10 +1,10 @@
 <%= render layout: "subcategory", locals: {subcategory: subcategory, organisations: organisations} do %>
-  <ul>
+  <ul class="changed-documents">
     <% subcategory.changed_documents.each do |document| -%>
       <li>
         <h3><a href="<%= document.link %>"><%= document.title %></a></h3>
-        <p>
-          Updated <%= Time.parse(document.public_updated_at).strftime("%-d %B %Y") %>
+        <p class="updated-at">
+          <%= Time.parse(document.public_updated_at).strftime("%-d %B %Y") %>
         </p>
         <% if document.latest_change_note %>
           <p>
