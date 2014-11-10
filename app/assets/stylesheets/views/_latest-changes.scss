@@ -6,8 +6,13 @@
     text-decoration: none;
   }
 
-  p {
+  p,
+  time {
     font-size: 14px;
+  }
+
+  time {
+    display: block;
   }
 
   .updated-at {
