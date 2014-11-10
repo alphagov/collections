@@ -6,8 +6,13 @@
     text-decoration: none;
   }
 
-  p {
-    font-size: 14px;
+  p,
+  time {
+    @include core-14;
+  }
+
+  time {
+    display: block;
   }
 
   .updated-at {
@@ -19,7 +24,7 @@
 
   li {
     padding-bottom: 10px;
-    border-bottom: 1px solid #bfc1c3;
+    border-bottom: 1px solid $border-colour;
     margin: 10px 0;
   }
   li:last-child {
