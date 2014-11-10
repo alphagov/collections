@@ -8,7 +8,7 @@
 
   p,
   time {
-    font-size: 14px;
+    @include core-14;
   }
 
   time {
@@ -24,7 +24,7 @@
 
   li {
     padding-bottom: 10px;
-    border-bottom: 1px solid #bfc1c3;
+    border-bottom: 1px solid $border-colour;
     margin: 10px 0;
   }
   li:last-child {
