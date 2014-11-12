@@ -1,8 +1,8 @@
 class Subcategory
-  def self.find(slug)
+  def self.find(slug, api_options = {})
     collections_api = Collections.services(:collections_api)
 
-    if (collections_api_response = collections_api.topic("/#{slug}"))
+    if (collections_api_response = collections_api.topic("/#{slug}", filtered_api_options(api_options)))
       new(slug, collections_api_response)
     else
       nil
@@ -50,5 +50,9 @@ private
 
   def details
     data.details
+  end
+
+  def self.filtered_api_options(options)
+    options.slice(:start, :count).reject {|_,v| v.blank? }
   end
 end

@@ -20,6 +20,20 @@ describe Subcategory, ".find" do
 
     assert_equal nil, subcategory
   end
+
+  it 'passes the "start" and "count" arguments to the API request' do
+    mock_collections_api = stub("CollectionsApi")
+    mock_response = stub("Response", title: 'Foo')
+    Collections.services(:collections_api, mock_collections_api)
+
+    mock_collections_api.expects(:topic)
+                        .with('/foo', has_entries(start: 10, count: 30))
+                        .returns(mock_response)
+
+    subcategory = Subcategory.find('foo', start: 10, count: 30)
+
+    assert_equal 'Foo', subcategory.title
+  end
 end
 
 describe Subcategory, "#groups" do
