@@ -44,6 +44,14 @@ class Subcategory
     "#{parent_sector_title}: #{title}"
   end
 
+  def documents_total
+    details.documents_total
+  end
+
+  def documents_start
+    details.documents_start
+  end
+
 private
 
   attr_reader :data
