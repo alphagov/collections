@@ -1,9 +1,8 @@
-<% content_for :title, "#{subcategory.combined_title} - GOV.UK" %>
 <% content_for :page_class, "specialist-sector-browse" %>
 
 <header class="page-header group">
   <div class="full-width">
-    <h1><span><%= subcategory.parent_sector_title %></span> <%= subcategory.title %></h1>
+    <h1><%= yield :page_title %></h1>
 
     <% if organisations.any? %>
       <aside class="metadata">

@@ -1,3 +1,8 @@
+<% content_for :title, "#{subcategory.combined_title} - GOV.UK" %>
+<% content_for :page_title do %>
+  <span><%= subcategory.parent_sector_title %></span> <%= subcategory.title %>
+<% end %>
+
 <%= render layout: "subcategory", locals: {subcategory: subcategory, organisations: organisations} do %>
   <% @groups.each do |group| -%>
     <nav class="index-list" aria-labelledby="<%= group.artefact.name.parameterize %>">
