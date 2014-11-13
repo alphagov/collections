@@ -1,3 +1,8 @@
+<% content_for :title, "#{subcategory.title}: Latest documents - GOV.UK" %>
+<% content_for :page_title do %>
+  <span><%= subcategory.title %></span> Latest documents
+<% end %>
+
 <%= render layout: "subcategory", locals: {subcategory: subcategory, organisations: organisations} do %>
   <ul class="changed-documents">
     <% subcategory.changed_documents.each do |document| -%>
