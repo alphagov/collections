@@ -19,7 +19,7 @@ class SubcategoriesController < ApplicationController
 private
 
   def subcategory
-    @subcategory ||= Subcategory.find(slug)
+    @subcategory ||= Subcategory.find(slug, pagination_params)
   end
   helper_method :subcategory
 
@@ -56,5 +56,16 @@ private
         facet_organisations: "1000",
       )["facets"]["organisations"]
     )
+  end
+
+  def pagination_params
+    params_to_use = params.slice(:start, :count).symbolize_keys
+
+    # primitive sanitisation of the pagination parameters to ensure they're
+    # integers
+    params_to_use.inject({}) {|hash, (key, value)|
+      hash[key] = value.to_i if value.present?
+      hash
+    }
   end
 end

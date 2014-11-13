@@ -76,4 +76,47 @@ describe SubcategoriesController do
       assert_not_requested(:get, %r{\A#{GdsApi::TestHelpers::ContentApi::CONTENT_API_ENDPOINT}})
     end
   end
+
+  describe 'GET latest_changes' do
+    let(:stub_subcategory) {
+      stub('Subcategory',
+        slug: 'intellectual-property/copyright',
+        title: 'Copyright',
+        description: 'Managing copyright, exceptions, notices',
+        parent_sector: stub('ParentSector'),
+        parent_sector_title: 'Intellectual property',
+        changed_documents: [],
+        combined_title: 'Intellectual property: Copyright',
+      )
+    }
+
+    before do
+      # we already test the organisation facet behaviour in the 'GET subcategory'
+      # block above, so let's stub it out here completely to keep these tests simpler
+      @controller.stubs(:sub_sector_organisations).returns([])
+    end
+
+    it 'finds the requested subcategory' do
+      Subcategory.expects(:find)
+                    .with('intellectual-property/copyright', {})
+                    .returns(stub_subcategory)
+
+      get :latest_changes, sector: 'intellectual-property', subcategory: 'copyright'
+
+      assigns(:subcategory).must_equal stub_subcategory
+    end
+
+    it 'uses pagination parameters to find the subcategory' do
+      Subcategory.expects(:find)
+                    .with('intellectual-property/copyright', has_entries(start: 10, count: 20))
+                    .returns(stub_subcategory)
+
+      get :latest_changes, sector: 'intellectual-property',
+                           subcategory: 'copyright',
+                           start: '10',
+                           count: '20'
+
+      assigns(:subcategory).must_equal stub_subcategory
+    end
+  end
 end
