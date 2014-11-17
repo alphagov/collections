@@ -87,6 +87,8 @@ describe SubcategoriesController do
         parent_sector_title: 'Intellectual property',
         changed_documents: [],
         combined_title: 'Intellectual property: Copyright',
+        documents_start: 0,
+        documents_total: 50,
       )
     }
 

@@ -28,6 +28,14 @@ private
   end
   helper_method :organisations
 
+  def changed_documents_pagination
+    @changed_documents_pagination ||= ChangedDocumentsPaginationPresenter.new(
+      subcategory,
+      per_page: pagination_params[:count]
+    )
+  end
+  helper_method :changed_documents_pagination
+
   def set_beta_header
     response.header[Slimmer::Headers::BETA_LABEL] = "after:.page-header"
   end
