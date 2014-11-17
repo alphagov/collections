@@ -1,6 +1,8 @@
 .specialist-sector-browse {
 
   header.page-header {
+    position: relative;
+
     div {
       padding: 20px 30px;
       margin: 0;
@@ -60,6 +62,30 @@
           @include media(desktop){
             width: 80%;
           }
+        }
+      }
+    }
+
+    .latest-subscribe {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      @include core-14;
+
+      span {
+        padding-right: 10px;
+      }
+
+      a.email {
+        @include bold-14;
+        padding-left: 28px;
+        text-decoration: none;
+
+        background: image-url('mail-icon.png') 0 40% no-repeat;
+        @include device-pixel-ratio() {
+          background-image: image-url('mail-icon-x2.png');
+          background-size: 20px 14px;
         }
       }
     }
