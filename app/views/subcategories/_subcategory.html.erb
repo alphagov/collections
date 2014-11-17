@@ -13,7 +13,9 @@
       </aside>
     <% end %>
 
+    <% if Collections.email_signup_link_enabled? %>
       <%= render partial: 'latest_subscribe' %>
+    <% end %>
   </div>
 </header>
 
