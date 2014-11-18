@@ -32,7 +32,7 @@ class SubcategoriesController < ApplicationController
 private
 
   def subcategory
-    @subcategory ||= Subcategory.find(slug)
+    @subcategory ||= Subcategory.find(slug, pagination_params)
   end
   helper_method :subcategory
 
@@ -40,6 +40,14 @@ private
     @organisations ||= sub_sector_organisations(slug)
   end
   helper_method :organisations
+
+  def changed_documents_pagination
+    @changed_documents_pagination ||= ChangedDocumentsPaginationPresenter.new(
+      subcategory,
+      per_page: pagination_params[:count]
+    )
+  end
+  helper_method :changed_documents_pagination
 
   def set_beta_header
     response.header[Slimmer::Headers::BETA_LABEL] = "after:.page-header"
@@ -65,5 +73,16 @@ private
         facet_organisations: "1000",
       )["facets"]["organisations"]
     )
+  end
+
+  def pagination_params
+    params_to_use = params.slice(:start, :count).symbolize_keys
+
+    # primitive sanitisation of the pagination parameters to ensure they're
+    # integers
+    params_to_use.inject({}) {|hash, (key, value)|
+      hash[key] = value.to_i if value.present?
+      hash
+    }
   end
 end

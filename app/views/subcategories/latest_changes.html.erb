@@ -19,4 +19,30 @@
       </li>
     <% end -%>
   </ul>
+
+  <ul class="previous-next-navigation">
+    <% if changed_documents_pagination.previous_page? %>
+      <li class="previous">
+        <%= link_to changed_documents_pagination.previous_page_path do %>
+          Previous <span class="visuallyhidden">page</span>
+          <span class="page-numbers">
+            <%= changed_documents_pagination.previous_page_number %> of
+            <%= changed_documents_pagination.total_pages %>
+          </span>
+        <% end %>
+      </li>
+    <% end %>
+
+    <% if changed_documents_pagination.next_page? %>
+      <li class="next">
+        <%= link_to changed_documents_pagination.next_page_path do %>
+          Next <span class="visuallyhidden">page</span>
+          <span class="page-numbers">
+            <%= changed_documents_pagination.next_page_number %> of
+            <%= changed_documents_pagination.total_pages %>
+          </span>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
 <% end %>

@@ -1,5 +1,11 @@
 require "test_helper"
 
+def build_mock_collections_api
+  stub('CollectionsApi').tap {|api|
+    Collections.services(:collections_api, api)
+  }
+end
+
 describe Subcategory, ".find" do
   it "finds the curated content for the given slug in the collections api" do
     slug = "oil-and-gas/wells"
@@ -19,6 +25,20 @@ describe Subcategory, ".find" do
     subcategory = Subcategory.find(slug)
 
     assert_equal nil, subcategory
+  end
+
+  it 'passes the "start" and "count" arguments to the API request' do
+    mock_collections_api = stub("CollectionsApi")
+    mock_response = stub("Response", title: 'Foo')
+    Collections.services(:collections_api, mock_collections_api)
+
+    mock_collections_api.expects(:topic)
+                        .with('/foo', has_entries(start: 10, count: 30))
+                        .returns(mock_response)
+
+    subcategory = Subcategory.find('foo', start: 10, count: 30)
+
+    assert_equal 'Foo', subcategory.title
   end
 end
 
@@ -103,5 +123,31 @@ describe Subcategory, "#slug" do
     subcategory = Subcategory.find(slug)
 
     assert_equal slug, subcategory.slug
+  end
+end
+
+describe Subcategory, '#documents_total' do
+  it 'returns the total number of documents for the subcategory' do
+    mock_collections_api = build_mock_collections_api
+    mock_response = stub("Response", details: stub('Details', documents_total: 2560))
+
+    mock_collections_api.expects(:topic).with('/foo', {}).returns(mock_response)
+
+    subcategory = Subcategory.find('foo')
+
+    assert_equal 2560, subcategory.documents_total
+  end
+end
+
+describe Subcategory, '#documents_start' do
+  it 'returns the starting offset for the recent documents in the subcategory' do
+    mock_collections_api = build_mock_collections_api
+    mock_response = stub('Response', details: stub('Details', documents_start: 42))
+
+    mock_collections_api.expects(:topic).with('/foo', {}).returns(mock_response)
+
+    subcategory = Subcategory.find('foo')
+
+    assert_equal 42, subcategory.documents_start
   end
 end

@@ -62,7 +62,7 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.0.2)
-    gds-api-adapters (16.0.0)
+    gds-api-adapters (16.2.0)
       link_header
       lrucache (~> 0.1.1)
       null_logger
@@ -188,7 +188,7 @@ DEPENDENCIES
   byebug
   capybara-webkit (= 1.1.1)
   cucumber-rails (= 1.4.0)
-  gds-api-adapters (= 16.0.0)
+  gds-api-adapters (= 16.2.0)
   govuk_frontend_toolkit (= 1.7.0)
   jasmine-rails
   launchy
