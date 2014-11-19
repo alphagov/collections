@@ -1,9 +1,7 @@
 .specialist-sector-browse {
 
   header.page-header {
-    position: relative;
-
-    div {
+    .full-width {
       padding: 20px 30px;
       margin: 0;
 
@@ -13,7 +11,6 @@
 
       h1 {
         @include bold-48;
-        width: 75%;
         padding: 20px 0;
 
         @include media(mobile) {
@@ -64,28 +61,52 @@
           }
         }
       }
-    }
 
-    .latest-subscribe {
-      position: absolute;
-      right: 0;
-      top: 0;
-
-      @include core-14;
-
-      span {
-        padding-right: 10px;
+      .heading {
+        @include media(tablet){
+          float: left;
+          width: $two-thirds;
+        }
       }
 
-      a.email {
-        @include bold-14;
-        padding-left: 28px;
-        text-decoration: none;
+      .latest-subscribe {
+        @include media(tablet){
+          float: right;
+          width: $one-third;
+        }
 
-        background: image-url('mail-icon.png') 0 40% no-repeat;
-        @include device-pixel-ratio() {
-          background-image: image-url('mail-icon-x2.png');
-          background-size: 20px 14px;
+        @include core-14;
+
+        ul {
+          @include media(tablet){
+            // align with the left edge of the search box
+            margin-left: 18px;
+          }
+
+          li {
+            display: block;
+
+            &.primary {
+              border-bottom: 1px solid $border-colour;
+              padding-bottom: 10px;
+              margin-bottom: 14px;
+            }
+
+            &.email a {
+              background: image-url('mail-icon.png') 0 40% no-repeat;
+              padding-left: 28px;
+
+              @include device-pixel-ratio() {
+                background-image: image-url('mail-icon-x2.png');
+                background-size: 20px 14px;
+              }
+            }
+          }
+        }
+
+        a {
+          @include bold-16;
+          text-decoration: none;
         }
       }
     }

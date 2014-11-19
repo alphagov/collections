@@ -2,20 +2,23 @@
 
 <header class="page-header group">
   <div class="full-width">
-    <h1><%= yield :page_title %></h1>
+    <div class="heading">
+      <h1><%= yield :page_title %></h1>
 
-    <% if organisations.any? %>
-      <aside class="metadata">
-        <dl>
-          <dt>From:</dt>
-          <dd><%= organisations.array_of_links.to_sentence.html_safe %></dd>
-        </dl>
-      </aside>
-    <% end %>
-
-    <% if Collections.email_signup_link_enabled? %>
-      <%= render partial: 'latest_subscribe' %>
-    <% end %>
+      <% if organisations.any? %>
+        <aside class="metadata">
+          <dl>
+            <dt>From:</dt>
+            <dd><%= organisations.array_of_links.to_sentence.html_safe %></dd>
+          </dl>
+        </aside>
+      <% end %>
+    </div>
+    <div class="latest-subscribe">
+      <% if Collections.email_signup_link_enabled? %>
+        <%= render partial: 'latest_subscribe' %>
+      <% end %>
+    </div>
   </div>
 </header>
 
