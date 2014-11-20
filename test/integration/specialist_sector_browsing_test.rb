@@ -69,6 +69,20 @@ class SpecialistSectorBrowsingTest < ActionDispatch::IntegrationTest
     assert page.has_content?(example_stubbed_artefact['contents'][0]['title'])
   end
 
+  it 'does not display a link to itself on the latest feed' do
+    base_path = 'oil-and-gas/wells'
+
+    stub_specialist_sector_organisations(base_path)
+    collections_api_has_content_for("/#{base_path}")
+
+    visit "/#{base_path}/latest"
+
+    within "header.page-header" do
+      assert page.has_link?('Subscribe to email alerts', href: email_signup_path(base_path))
+      assert page.has_no_link?('See latest changes')
+    end
+  end
+
   it 'renders pagination for the latest changes' do
     base_path = '/oil-and-gas/wells'
 

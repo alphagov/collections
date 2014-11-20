@@ -22,7 +22,9 @@
             Subscribe to email alerts
             <% end %>
           </li>
-          <li><%= link_to 'See latest changes to this content', latest_changes_path(sector: params[:sector], subcategory: params[:subcategory]) %></li>
+          <% if local_assigns[:link_to_latest_feed] %>
+            <li><%= link_to 'See latest changes to this content', latest_changes_path(sector: params[:sector], subcategory: params[:subcategory]) %></li>
+          <% end %>
         </ul>
       <% end %>
     </div>

@@ -3,7 +3,7 @@
   <span><%= subcategory.parent_sector_title %></span> <%= subcategory.title %>
 <% end %>
 
-<%= render layout: "subcategory", locals: {subcategory: subcategory, organisations: organisations} do %>
+<%= render layout: "subcategory", locals: {subcategory: subcategory, organisations: organisations, link_to_latest_feed: true} do %>
   <% @groups.each do |group| -%>
     <nav class="index-list" aria-labelledby="<%= group.artefact.name.parameterize %>">
       <h1 id="<%= group.artefact.name.parameterize %>"><%= group.artefact.name %></h1>
