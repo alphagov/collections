@@ -36,6 +36,14 @@ class Subcategory
     parent_sector.title
   end
 
+  def parent_slug
+    split_slug[0]
+  end
+
+  def child_slug
+    split_slug[1]
+  end
+
   def title
     data.title
   end
@@ -58,6 +66,10 @@ private
 
   def details
     data.details
+  end
+
+  def split_slug
+    slug.split('/')
   end
 
   def self.filtered_api_options(options)
