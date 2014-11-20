@@ -13,7 +13,7 @@ module LatestChangesHelper
 
   def assert_page_has_date_ordered_latest_changes
     collections_api_example_documents.each_with_index do |document, index|
-      within("li:nth-of-type(#{index+1})") do
+      within(".browse-container li:nth-of-type(#{index+1})") do
         assert page.has_selector?("h3 a[href='#{document[:link]}']", text: document[:title])
         assert page.has_content?(document[:latest_change_note]) if document[:latest_change_note]
       end

@@ -1,0 +1,8 @@
+<ul>
+  <li class="email primary">
+    <%= link_to email_signup_path(subtopic: subcategory.slug) do %>
+      Subscribe to email alerts
+    <% end %>
+  </li>
+  <li><%= link_to 'See latest changes to this content', latest_changes_path(sector: params[:sector], subcategory: params[:subcategory]) %></li>
+</ul>
