@@ -8,9 +8,13 @@
     <% subcategory.changed_documents.each do |document| -%>
       <li>
         <h3><a href="<%= document.link %>"><%= document.title %></a></h3>
-        <time class="updated-at" datetime="<%= document.public_updated_at %>">
-          <%= Time.parse(document.public_updated_at).strftime("%-d %B %Y") %>
-        </time>
+
+        <% if document.public_updated_at %>
+          <time class="updated-at" datetime="<%= document.public_updated_at %>">
+            <%= Time.parse(document.public_updated_at).strftime("%-d %B %Y") %>
+          </time>
+        <% end %>
+
         <% if document.latest_change_note %>
           <p>
             <%= document.latest_change_note %>

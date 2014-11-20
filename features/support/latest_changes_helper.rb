@@ -16,6 +16,7 @@ module LatestChangesHelper
       within(".browse-container li:nth-of-type(#{index+1})") do
         assert page.has_selector?("h3 a[href='#{document[:link]}']", text: document[:title])
         assert page.has_content?(document[:latest_change_note]) if document[:latest_change_note]
+        assert page.has_selector?("time") if document[:public_updated_at]
       end
     end
   end
