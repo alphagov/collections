@@ -16,7 +16,16 @@
     </div>
     <div class="latest-subscribe">
       <% if Collections.email_signup_link_enabled? %>
-        <%= render partial: 'latest_subscribe' %>
+        <ul>
+          <li class="email primary">
+            <%= link_to email_signup_path(subtopic: subcategory.slug) do %>
+            Subscribe to email alerts
+            <% end %>
+          </li>
+          <% if local_assigns[:link_to_latest_feed] %>
+            <li><%= link_to 'See latest changes to this content', latest_changes_path(sector: params[:sector], subcategory: params[:subcategory]) %></li>
+          <% end %>
+        </ul>
       <% end %>
     </div>
   </div>
