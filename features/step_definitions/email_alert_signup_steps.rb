@@ -12,10 +12,6 @@ When(/^I access the email signup page via the topic$/) do
   visit email_signup_path(subtopic: "oil-and-gas/fields-and-wells")
 end
 
-Then(/^I should see a description of what I'm signing up to$/) do
-  check_for_description_about(topic: "Oil and gas", subtopic: "Example title")
-end
-
 When(/^I sign up to the email alerts$/) do
   subscribe_to_email_alerts
 end

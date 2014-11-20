@@ -1,17 +1,40 @@
 #wrapper #content.email-signup-new {
   @extend %site-width-container;
 
+  margin-top: 30px;
+
   h1 {
     @include heading-48;
     font-weight: bold;
+
+    @include media(tablet){
+      width: $two-thirds;
+    }
+
+    span {
+      @include core-27($line-height: 1);
+      display: block;
+      margin-bottom: 0.25em;
+      color: $secondary-text-colour;
+    }
   }
 
-  p {
-    margin-bottom: 20px;
+  section {
+    margin-bottom: 30px;
+
+    p {
+      @include core-19;
+      margin: 30px 0;
+    }
   }
 
   button {
     @include button;
-    margin-bottom: 20px;
+    @include bold-24;
+    margin: 20px 0;
+  }
+
+  .report-a-problem-toggle {
+    padding: 0;
   }
 }
