@@ -1,10 +1,6 @@
 require 'ostruct'
 
 module EmailAlertSignupHelper
-  def check_for_description_about(topic:, subtopic:)
-    assert page.has_content?("e-mail alerts for the #{topic}: #{subtopic} topic")
-  end
-
   def expect_registration_to(slug:, topic:, subtopic:)
     Collections.services(:email_alert_api)
       .expects(:find_or_create_subscriber_list)

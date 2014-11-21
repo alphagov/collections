@@ -151,3 +151,25 @@ describe Subcategory, '#documents_start' do
     assert_equal 42, subcategory.documents_start
   end
 end
+
+describe Subcategory, '#parent_slug' do
+  it 'returns the parent portion of the slug for the subcategory' do
+    slug = 'oil-and-gas/fields-and-wells'
+    collections_api_has_content_for("/#{slug}")
+
+    subcategory = Subcategory.find(slug)
+
+    assert_equal 'oil-and-gas', subcategory.parent_slug
+  end
+end
+
+describe Subcategory, '#child_slug' do
+  it 'returns the child portion of the slug for the subcategory' do
+    slug = 'oil-and-gas/fields-and-wells'
+    collections_api_has_content_for("/#{slug}")
+
+    subcategory = Subcategory.find(slug)
+
+    assert_equal 'fields-and-wells', subcategory.child_slug
+  end
+end
