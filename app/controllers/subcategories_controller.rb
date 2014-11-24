@@ -1,7 +1,6 @@
 class SubcategoriesController < ApplicationController
   before_filter { validate_slug_param(:sector) }
   before_filter { validate_slug_param(:subcategory) }
-  before_filter :set_beta_header
   before_filter :send_404_if_not_found
   before_filter :set_slimmer_format
 
@@ -18,6 +17,7 @@ class SubcategoriesController < ApplicationController
   end
 
   def latest_changes
+    set_beta_header
     set_slimmer_dummy_artefact(
       section_name: subcategory.title,
       section_link: subcategory_path(params.slice(:sector, :subcategory)),

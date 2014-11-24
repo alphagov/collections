@@ -40,7 +40,6 @@ describe SubcategoriesController do
       assert_equal "Oil and gas", primary_tag["title"] # lowercase due to the humanisation of slug in test helpers
 
       assert_equal "specialist-sector", response.headers["X-Slimmer-Format"]
-      assert_equal "after:.page-header", response.headers["X-Slimmer-Beta-Label"]
     end
 
     it "sets expiry headers for 30 minutes" do
@@ -96,6 +95,7 @@ describe SubcategoriesController do
       # we already test the organisation facet behaviour in the 'GET subcategory'
       # block above, so let's stub it out here completely to keep these tests simpler
       @controller.stubs(:sub_sector_organisations).returns([])
+      Subcategory.stubs(:find).returns(stub_subcategory)
     end
 
     it 'finds the requested subcategory' do
@@ -119,6 +119,12 @@ describe SubcategoriesController do
                            count: '20'
 
       assigns(:subcategory).must_equal stub_subcategory
+    end
+
+    it "sets the beta slimmer header" do
+      get :latest_changes, sector: 'intellectual-property', subcategory: 'copyright'
+
+      assert_equal "after:.page-header", response.headers["X-Slimmer-Beta-Label"]
     end
   end
 end
