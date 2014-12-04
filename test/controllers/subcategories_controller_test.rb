@@ -120,11 +120,5 @@ describe SubcategoriesController do
 
       assigns(:subcategory).must_equal stub_subcategory
     end
-
-    it "sets the beta slimmer header" do
-      get :latest_changes, sector: 'intellectual-property', subcategory: 'copyright'
-
-      assert_equal "after:.page-header", response.headers["X-Slimmer-Beta-Label"]
-    end
   end
 end

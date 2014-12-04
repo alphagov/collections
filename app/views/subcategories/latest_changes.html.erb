@@ -3,7 +3,7 @@
   <span><%= subcategory.title %></span> Latest documents
 <% end %>
 
-<%= render layout: "subcategory", locals: {subcategory: subcategory, organisations: organisations, link_to_latest_feed: false} do %>
+<%= render layout: "subcategory", locals: {subcategory: subcategory, organisations: organisations, link_to_latest_feed: false, beta_label: true} do %>
   <ul class="changed-documents">
     <% subcategory.changed_documents.each do |document| -%>
       <li>

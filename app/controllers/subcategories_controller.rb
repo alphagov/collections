@@ -17,7 +17,6 @@ class SubcategoriesController < ApplicationController
   end
 
   def latest_changes
-    set_beta_header
     set_slimmer_dummy_artefact(
       section_name: subcategory.title,
       section_link: subcategory_path(params.slice(:sector, :subcategory)),
@@ -48,10 +47,6 @@ private
     )
   end
   helper_method :changed_documents_pagination
-
-  def set_beta_header
-    response.header[Slimmer::Headers::BETA_LABEL] = "after:.page-header"
-  end
 
   def send_404_if_not_found
     error_404 unless subcategory.present?
