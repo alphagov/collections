@@ -23,7 +23,6 @@ describe SpecialistSectorsController do
       get :show, sector: "oil-and-gas"
 
       assert_equal "specialist-sector", response.headers["X-Slimmer-Format"]
-      assert_equal "after:.page-header", response.headers["X-Slimmer-Beta-Label"]
     end
 
     it "sets expiry headers for 30 minutes" do

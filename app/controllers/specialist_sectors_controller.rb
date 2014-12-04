@@ -1,6 +1,5 @@
 class SpecialistSectorsController < ApplicationController
   before_filter { validate_slug_param(:sector) }
-  before_filter :set_beta_header
 
   def show
     @sector = SpecialistSector.new(content_api, sector_tag).build
@@ -14,10 +13,6 @@ private
 
   def content_api
     Collections.services(:content_api)
-  end
-
-  def set_beta_header
-    response.header[Slimmer::Headers::BETA_LABEL] = "after:.page-header"
   end
 
   def sector_tag

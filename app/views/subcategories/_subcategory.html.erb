@@ -29,6 +29,13 @@
   </div>
 </header>
 
+<% if local_assigns[:beta_label] %>
+  <%= render partial: 'govuk_component/beta_label',
+             locals: {
+               message: "This part of #{link_to('GOV.UK', '/')} is new and being improved - #{link_to('find out what this means','/help/beta')}"
+             } %>
+<% end %>
+
 <div class="browse-container full-width">
   <% if subcategory.description.present? %>
     <div class="category-description">
