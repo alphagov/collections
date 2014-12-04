@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   include Slimmer::Headers
+  include Slimmer::SharedTemplates
 
   protect_from_forgery with: :exception
 
