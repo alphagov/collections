@@ -11,9 +11,9 @@ it will become the location for all browse pages, faceted lists, and search.
 
 - **Curated list**: a group of content tagged to a subtopic that has been
   curated into a named list.
-- **Subtopic**: a group of related content associated to a topic.
-- **Specialist sector (currently topic)**: a group of content associated to a
-  specialised sector/topic.
+- **Topic**: a named group of sub-topics. (A deprecated name for this is "specialist sector".)
+- **Sub-topic**: a group of content within a topic. (A deprecated name for this is
+"specialist sub-sector".)
 
 ## Technical documentation
 
@@ -25,7 +25,7 @@ retrieved from external sources.
 ### Dependencies
 
 - [alphagov/govuk_content_api](https://github.com/alphagov/govuk_content_api) -
-  provides Specialist sector and subcategory content.
+  provides topic and browse page content.
 - [alphagov/whitehall](https://github.com/alphagov/whitehall) -
   provides Detailed guidance content.
 - [alphagov/collections-api](https://github.com/alphagov/collections-api) -
