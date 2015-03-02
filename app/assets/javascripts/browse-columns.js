@@ -391,14 +391,11 @@
       }
     },
     trackPageview: function(){
-      if(_gaq){
-        var sectionTitle = this.$section.find('h1').text();
-        if(sectionTitle){
-          _gaq.push(["_setCustomVar",1,"Section",sectionTitle.toLowerCase(),3]);
-        } else {
-          _gaq.push(["_setCustomVar",1,"Section","browse",3]);
-        }
-        _gaq.push(["_trackPageview"]);
+      var sectionTitle = this.$section.find('h1').text();
+      sectionTitle = sectionTitle ? sectionTitle.toLowerCase() : 'browse';
+      if (GOVUK.analytics && GOVUK.analytics.trackPageview && GOVUK.analytics.setSectionDimension) {
+        GOVUK.analytics.setSectionDimension(sectionTitle);
+        GOVUK.analytics.trackPageview();
       }
     }
   };
