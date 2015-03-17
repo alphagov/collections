@@ -14,7 +14,6 @@
   <div id="wrapper">
     <main id="content" role="main" class="<%= yield :page_class %>">
       <%= yield %>
-      <div id="report-a-problem"></div>
     </main>
     <%= render_mustache_templates if Rails.env.development? %>
   </div>
