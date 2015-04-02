@@ -50,7 +50,7 @@ describe Subcategory, "#groups" do
 
     subcategory = Subcategory.find(slug)
 
-    assert_equal stubbed_response_body['details']['groups'][0]['title'], subcategory.groups.first.title
+    assert_equal stubbed_response_body['details']['groups'][0]['name'], subcategory.groups.first.name
   end
 end
 
