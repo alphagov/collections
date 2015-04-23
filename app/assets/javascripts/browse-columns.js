@@ -296,7 +296,8 @@
         $.ajax({
           url: url + state.slug
         }).done(function(data){
-          this.sectionCache('secton', state.slug, data);
+          this.sectionCache('section', state.slug, data);
+
           out.resolve(data);
         }.bind(this));
       }
