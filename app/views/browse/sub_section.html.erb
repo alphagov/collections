@@ -3,30 +3,13 @@
 
 <div class="browse-panes subsection" data-state="subsection">
   <div id="subsection" class="pane with-sort">
-    <div class="pane-inner">
-      <h1 tabindex="-1"><%= sub_section_tag.title %></h1>
-      <p class="sort-order">A&#8202;to&#8202;Z</p> <!-- &#8202 = hairspace -->
-      <ul>
-        <% sub_section_artefacts.each do |sub_section_artefact| %>
-          <li>
-            <%= link_to sub_section_artefact.title, sub_section_artefact.web_url %>
-          </li>
-        <% end %>
-      </ul>
-
-      <% if detailed_guide_categories.any? %>
-        <div class="detailed-guidance">
-          <h2>Detailed guidance</h2>
-          <ul>
-            <% detailed_guide_categories.each do |detailed_guide_category| %>
-              <li>
-                <%= link_to detailed_guide_category.title, detailed_guide_category.content_with_tag.web_url %>
-              </li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
-    </div>
+    <%= render_mustache('browse/section',
+      title: sub_section_tag.title,
+      options: sub_section_artefacts,
+      detailed_guide_categories_any?: detailed_guide_categories.any?,
+      detailed_guide_categories: detailed_guide_categories,
+      showDescription: false
+      ) %>
   </div>
 
   <div id="section" class="pane">
