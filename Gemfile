@@ -25,8 +25,6 @@ end
 
 gem 'plek', '1.7.0'
 
-gem 'govuk-content-schema-test-helpers', '~> 1.1.0'
-
 group :test do
   gem 'capybara-webkit', '1.1.1'
   gem 'minitest-spec-rails', '4.7.6'
@@ -34,6 +32,8 @@ group :test do
   gem 'webmock', '1.17.4', require: false
   gem 'cucumber-rails', "1.4.0", require: false
   gem 'launchy'
+
+  gem 'govuk-content-schema-test-helpers', '~> 1.1.0'
 end
 
 group :development, :test do
