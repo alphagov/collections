@@ -1,7 +1,9 @@
 require 'gds_api/test_helpers/content_api'
+require 'gds_api/test_helpers/content_store'
 
 module BrowseTestHelpers
   include GdsApi::TestHelpers::ContentApi
+  include GdsApi::TestHelpers::ContentStore
 
   def stub_browse_sections(section: nil, sub_section: nil, artefact: nil,
                            organisations: [])
@@ -22,10 +24,14 @@ module BrowseTestHelpers
     Collections.services(:detailed_guidance_content_api, mock_api)
     results = stub("results", results: [detailed_guidance])
     mock_api.stubs(:sub_sections).returns(results)
+
+    content_store_has_item '/browse/crime-and-justice/judges', { links: {} }
   end
 
   def stub_404_detailed_guidance_response
     stub_request(:get, "#{Plek.current.find('whitehall-admin')}/api/specialist/tags.json?parent_id=crime-and-justice/judges&type=section").to_raise(GdsApi::HTTPNotFound)
+
+    content_store_has_item '/browse/crime-and-justice/judges', { links: {} }
   end
 
   def browse_to_sub_section(section: nil, sub_section: nil)

@@ -171,12 +171,17 @@
     showSubsection: function(state){
       state.title = this.getTitle(state.slug);
 
+      var relatedTopics = state.relatedTopicsData.links && state.relatedTopicsData.links.related_topics
+      if (!relatedTopics || relatedTopics.length == 0) {
+        relatedTopics = state.detailedGuideData.results;
+      }
+
       this.setTitle(state.title);
       this.$subsection.mustache('browse/_section', {
         title: state.title,
         options: state.sectionData.results,
-        "detailed_guide_categories_any?": !!state.detailedGuideData.results,
-        detailed_guide_categories: state.detailedGuideData.results,
+        "detailed_guide_categories_any?": !!relatedTopics,
+        detailed_guide_categories: relatedTopics,
         showDescription: false
       });
       this.highlightSection('section', state.path);
@@ -250,6 +255,8 @@
       this.$el.attr('aria-busy', 'false');
       this.$el.find('a.loading').removeClass('loading');
     },
+
+    // FIXME: Once the content has been migrated to content store, remove whitehall code.
     getDetailedGuideData: function(state){
       var data = this.sectionCache('detailed', state.slug);
       var url = "/api/specialist/tags.json?type=section&parent_id=";
@@ -262,8 +269,36 @@
       } else {
         $.ajax({
           url: url + state.slug
-        }).done(function(data){
+        }).done(function(data) {
+          // web_url isn't provided in the response for the content item,
+          // but we need it to behave the same as the response from content-store.
+          for (var i = 0; i < data.results.length; ++i) {
+            data.results[i]['web_url'] = data.results[i]['content_with_tag']['web_url']
+          }
+
           this.sectionCache('detailed', state.slug, data);
+          out.resolve(data);
+        }.bind(this)).fail(function(jqXHR, textStatus, errorThrown){
+          out.resolve({});
+        }.bind(this));
+      }
+      return out;
+    },
+
+    getRelatedTopicsData: function(state){
+      var data = this.sectionCache('related', state.slug);
+      var url = "/api/content" + state.path;
+
+      var out = new $.Deferred()
+      if(typeof state.detailedGuideData !== 'undefined'){
+        out.resolve(state.detailedGuideData);
+      } else if(typeof data !== 'undefined') {
+        out.resolve(data);
+      } else {
+        $.ajax({
+          url: url
+        }).done(function(data){
+          this.sectionCache('related', state.slug, data);
           out.resolve(data);
         }.bind(this)).fail(function(jqXHR, textStatus, errorThrown){
           out.resolve({});
@@ -334,12 +369,14 @@
       if(state.subsection){
         var sectionPromise = donePromise;
         var detailedGuidePromise = this.getDetailedGuideData(state);
-        donePromise = $.when(sectionPromise, detailedGuidePromise);
+        var relatedTopicsPromise = this.getRelatedTopicsData(state);
+        donePromise = $.when(sectionPromise, detailedGuidePromise, relatedTopicsPromise);
       }
 
-      donePromise.done(function(sectionData, detailedGuideData){
+      donePromise.done(function(sectionData, detailedGuideData, relatedTopicsData){
         state.sectionData = sectionData;
         state.detailedGuideData = detailedGuideData;
+        state.relatedTopicsData = relatedTopicsData;
         this.scrollToBrowse();
 
         if(state.subsection){

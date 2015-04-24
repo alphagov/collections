@@ -21,6 +21,11 @@ class BrowseController < ApplicationController
   def sub_section
     return error_404 unless sub_section_tag
 
+    @related_topics = RelatedTopicList.new(
+      Collections.services(:content_store),
+      Collections.services(:detailed_guidance_content_api)
+    ).related_topics_for(request.fullpath)
+
     options = {title: "browse", section_name: section_tag.title, section_link: section_tag.web_url}
     set_slimmer_artefact_headers(options)
   end
@@ -59,13 +64,6 @@ private
     @root_sections ||= Collections.services(:content_api).root_sections.results.sort_by { |category| category.title }
   end
   helper_method :root_sections
-
-  def detailed_guide_categories
-    @detailed_categories ||= Collections.services(:detailed_guidance_content_api).sub_sections(sub_section_slug).results.sort_by { |category| category.title }
-  rescue GdsApi::HTTPNotFound, GdsApi::HTTPGone
-    @detailed_categories ||= []
-  end
-  helper_method :detailed_guide_categories
 
   def validate_slug_param(param_name = :slug)
     if params[param_name].parameterize != params[param_name]

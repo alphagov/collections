@@ -25,6 +25,8 @@ end
 
 gem 'plek', '1.7.0'
 
+gem 'govuk-content-schema-test-helpers', '~> 1.1.0'
+
 group :test do
   gem 'capybara-webkit', '1.1.1'
   gem 'minitest-spec-rails', '4.7.6'
