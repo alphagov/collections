@@ -30,8 +30,12 @@ function error_handler {
 trap "error_handler ${LINENO}" ERR
 github_status "$REPO_NAME" pending "is running on Jenkins"
 
+# Clone govuk-content-schemas depedency for contract tests
+rm -rf tmp/govuk-content-schemas
+git clone git@github.com:alphagov/govuk-content-schemas.git tmp/govuk-content-schemas
+
 bundle install --path "${HOME}/bundles/${JOB_NAME}" --deployment
-RAILS_ENV=test bundle exec rake
+GOVUK_CONTENT_SCHEMAS_PATH=tmp/govuk-content-schemas RAILS_ENV=test bundle exec rake
 bundle exec rake assets:precompile
 
 export EXIT_STATUS=$?
