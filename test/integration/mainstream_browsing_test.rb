@@ -21,11 +21,8 @@ class MainstreamBrowsingTest < ActionDispatch::IntegrationTest
     content_api_has_tag("section", sub_section_slug)
     content_api_has_root_tags("section", [section])
     content_api_has_child_tags("section", section, [sub_section_slug])
+    content_api_has_artefacts_with_a_tag("section", sub_section_slug, [])
 
-    stub_request(:get, "http://contentapi.dev.gov.uk/with_tag.json?tag=#{sub_section_slug}").
-      to_return(body: JSON.dump(results: []))
-
-    stub_request(:get, "http://whitehall-admin.dev.gov.uk/api/specialist/tags.json?parent_id=#{sub_section_slug}&type=section").
-      to_return(body: JSON.dump(results: []))
+    RelatedTopicList.any_instance.stubs(:legacy_fallback_to_whitehall).returns([])
   end
 end
