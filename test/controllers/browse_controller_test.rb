@@ -73,10 +73,7 @@ describe BrowseController do
 
   describe "GET sub_section" do
     before do
-      mock_api = stub('guidance_api')
-      Collections.services(:detailed_guidance_content_api, mock_api)
-      @results = stub("results", results: [])
-      mock_api.stubs(:sub_sections).returns(@results)
+      RelatedTopicList.any_instance.stubs(:related_topics_for).returns([])
 
       content_api_has_tag("section", "crime-and-justice")
       content_api_has_tag("section", "crime-and-justice/judges")
@@ -92,18 +89,15 @@ describe BrowseController do
       assert_select "a", "Judge dredd"
     end
 
-    it "list detailed guidance categories in the sub section" do
-      detailed_guidance = OpenStruct.new({
-        title: 'Detailed guidance',
-        content_with_tag: OpenStruct.new(web_url: 'http://example.com/browse/detailed-guidance')
-      })
-
-      @results.stubs(:results).returns([detailed_guidance])
+    it "lists related topics in the subsection" do
+      RelatedTopicList.any_instance.stubs(:related_topics_for).returns(
+        [OpenStruct.new(title: 'A Related Topic', web_url: 'https://www.gov.uk/benefits/related')]
+      )
 
       get :sub_section, section: "crime-and-justice", sub_section: "judges"
 
       assert_select '.detailed-guidance' do
-        assert_select "li a[href='http://example.com/browse/detailed-guidance']", text: 'Detailed guidance'
+        assert_select "li a[href='https://www.gov.uk/benefits/related']", text: 'A Related Topic'
       end
     end
 

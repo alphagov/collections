@@ -32,3 +32,6 @@ Collections.services(:collections_api, GdsApi::CollectionsApi.new(Plek.new.find(
 
 require 'gds_api/email_alert_api'
 Collections.services(:email_alert_api, GdsApi::EmailAlertApi.new(Plek.new.find('email-alert-api')))
+
+require 'gds_api/content_store'
+Collections.services(:content_store, GdsApi::ContentStore.new(Plek.new.find('content-store')))

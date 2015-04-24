@@ -15,5 +15,4 @@ class ActiveSupport::TestCase
   after do
     Collections.services(:collections_api, @existing_services[:collections_api])
   end
-
 end
