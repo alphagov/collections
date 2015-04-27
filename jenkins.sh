@@ -3,7 +3,7 @@ set -x
 export DISPLAY=:99
 export GOVUK_APP_DOMAIN=test.gov.uk
 export GOVUK_ASSET_ROOT=http://static.test.gov.uk
-export REPO_NAME="alphagov/collections"
+export REPO_NAME=${REPO_NAME:="alphagov/collections"}
 env
 
 function github_status {
