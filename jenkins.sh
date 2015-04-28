@@ -4,13 +4,14 @@ export DISPLAY=:99
 export GOVUK_APP_DOMAIN=test.gov.uk
 export GOVUK_ASSET_ROOT=http://static.test.gov.uk
 export REPO_NAME=${REPO_NAME:="alphagov/collections"}
+export CONTEXT_MESSAGE=${CONTEXT_MESSAGE:="default"}
 env
 
 function github_status {
   REPO_NAME="$1"
   STATUS="$2"
   MESSAGE="$3"
-  gh-status "$REPO_NAME" "$GIT_COMMIT" "$STATUS" -d "Build #${BUILD_NUMBER} ${MESSAGE}" -u "$BUILD_URL" >/dev/null
+  gh-status "$REPO_NAME" "$GIT_COMMIT" "$STATUS" -d "Build #${BUILD_NUMBER} ${MESSAGE}" -u "$BUILD_URL" -c "$CONTEXT_MESSAGE" >/dev/null
 }
 
 function error_handler {
