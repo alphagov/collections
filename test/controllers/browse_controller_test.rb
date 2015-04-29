@@ -5,7 +5,7 @@ describe BrowseController do
     it "list all categories" do
       content_api_has_root_sections(["crime-and-justice"])
       get :index
-      assert_select "a[href=/browse/crime-and-justice]", "Crime and justice"
+      assert_select "a[href='/browse/crime-and-justice']", "Crime and justice"
     end
 
     it "set slimmer format of browse" do
@@ -35,7 +35,7 @@ describe BrowseController do
       get :section, section: "crime-and-justice"
 
       assert_select "h1", "Crime and justice"
-      assert_select "a[href=/browse/alpha]"
+      assert_select "a[href='/browse/alpha']"
     end
 
     it "404 if the section does not exist" do

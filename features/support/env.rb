@@ -5,5 +5,6 @@
 # files.
 
 require 'cucumber/rails'
+require 'mocha/mini_test'
 
 ActionController::Base.allow_rescue = false
