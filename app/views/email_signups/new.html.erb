@@ -10,7 +10,7 @@
 
 <section>
   <% if email_signup.valid? %>
-    <%= form_for email_signup, html: { class: "signup-form" } do |form| %>
+    <%= form_for email_signup, url: email_signup_path(params), html: { class: "signup-form" } do |form| %>
       <p>You'll get an email each time content is published or updated in this topic.</p>
 
       <%= button_tag 'Create subscription' %>

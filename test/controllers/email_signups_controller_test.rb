@@ -2,8 +2,10 @@ require "test_helper"
 
 describe EmailSignupsController do
   setup do
-    @subtopic_slug = "oil-and-gas/wells"
-    collections_api_has_content_for("/#{@subtopic_slug}")
+    @valid_subtopic_params = { sector: 'oil-and-gas', subcategory: 'wells' }
+    collections_api_has_content_for("/oil-and-gas/wells")
+
+    @invalid_subtopic_params = { sector: 'invalid', subcategory: 'subtopic' }
     collections_api_has_no_content_for("/invalid/subtopic")
 
     @email_signup = EmailSignup.new(nil)
@@ -15,7 +17,7 @@ describe EmailSignupsController do
 
   describe 'GET :new with a valid subtopic' do
     it 'displays the subscription form' do
-      get :new, subtopic: @subtopic_slug
+      get :new, @valid_subtopic_params
 
       assert_response :success
       assert_select ".signup-form"
@@ -24,7 +26,7 @@ describe EmailSignupsController do
 
   describe 'GET :new with an invalid subtopic' do
     it 'shows an error message' do
-      get :new, subtopic: 'invalid/subtopic'
+      get :new, @invalid_subtopic_params
 
       assert_response :not_found
     end
@@ -39,11 +41,11 @@ describe EmailSignupsController do
     it 'registers the signup' do
       @email_signup.expects(:save).returns(true)
 
-      post :create, subtopic: @subtopic_slug
+      post :create, @valid_subtopic_params
     end
 
     it 'redirects to the govdelivery URL' do
-      post :create, subtopic: @subtopic_slug
+      post :create, @valid_subtopic_params
 
       assert_response :redirect
       assert_redirected_to 'http://govdelivery_signup_url'
@@ -54,11 +56,11 @@ describe EmailSignupsController do
     it "doesn't register the subscription" do
       @email_signup.expects(:save).never
 
-      post :create, subtopic: 'invalid/subtopic'
+      post :create, @invalid_subtopic_params
     end
 
     it "404s" do
-      post :create, subtopic: 'invalid/subtopic'
+      post :create, @invalid_subtopic_params
 
       assert_response :not_found
     end
