@@ -11,7 +11,6 @@ Collections::Application.routes.draw do
   get "/:sector/:subcategory/latest", as: "latest_changes", to: "subcategories#latest_changes"
   get "/:sector/:subcategory", as: "subcategory", to: "subcategories#show"
   get "/:sector", to: "specialist_sectors#show"
-
-  resources :email_signups, path: "/:subtopic/email-signups", only: [:create], subtopic: %r{[^/]+/[^/]+}
-  get "/:subtopic/email-signup", as: "email_signup", to: "email_signups#new", subtopic: %r{[^/]+/[^/]+}
+  get "/:sector/:subcategory/email-signup", to: "email_signups#new", as: "email_signup"
+  post "/:sector/:subcategory/email-signup", to: "email_signups#create"
 end

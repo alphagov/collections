@@ -9,7 +9,7 @@ When(/^I access the email signup page via the topic$/) do
   # visit_latest_page("oil-and-gas/fields-and-wells")
   # follow_email_signup_link
 
-  visit email_signup_path(subtopic: "oil-and-gas/fields-and-wells")
+  visit email_signup_path(sector: "oil-and-gas", subcategory: "fields-and-wells")
 end
 
 When(/^I sign up to the email alerts$/) do

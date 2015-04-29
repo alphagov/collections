@@ -63,7 +63,7 @@ class SpecialistSectorBrowsingTest < ActionDispatch::IntegrationTest
       assert page.has_content?("Oil and gas")
       assert page.has_content?(stubbed_response_body['title'])
 
-      assert page.has_link?('Subscribe to email alerts', href: email_signup_path('oil-and-gas/wells'))
+      assert page.has_link?('Subscribe to email alerts', href: email_signup_path('oil-and-gas', 'wells'))
     end
 
     assert page.has_content?(example_stubbed_artefact['contents'][0]['title'])
@@ -78,7 +78,7 @@ class SpecialistSectorBrowsingTest < ActionDispatch::IntegrationTest
     visit "/#{base_path}/latest"
 
     within "header.page-header" do
-      assert page.has_link?('Subscribe to email alerts', href: email_signup_path(base_path))
+      assert page.has_link?('Subscribe to email alerts', href: email_signup_path('oil-and-gas', 'wells'))
       assert page.has_no_link?('See latest changes')
     end
   end
