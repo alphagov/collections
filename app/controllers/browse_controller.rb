@@ -24,7 +24,7 @@ class BrowseController < ApplicationController
     @related_topics = RelatedTopicList.new(
       Collections.services(:content_store),
       Collections.services(:detailed_guidance_content_api)
-    ).related_topics_for(request.fullpath)
+    ).related_topics_for(request.path)
 
     options = {title: "browse", section_name: section_tag.title, section_link: section_tag.web_url}
     set_slimmer_artefact_headers(options)
@@ -64,12 +64,6 @@ private
     @root_sections ||= Collections.services(:content_api).root_sections.results.sort_by { |category| category.title }
   end
   helper_method :root_sections
-
-  def validate_slug_param(param_name = :slug)
-    if params[param_name].parameterize != params[param_name]
-      cacheable_404
-    end
-  end
 
   def set_slimmer_artefact_headers(dummy_artefact={})
     set_slimmer_headers(format: 'browse')
