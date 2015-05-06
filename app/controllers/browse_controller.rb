@@ -65,12 +65,6 @@ private
   end
   helper_method :root_sections
 
-  def validate_slug_param(param_name = :slug)
-    if params[param_name].parameterize != params[param_name]
-      cacheable_404
-    end
-  end
-
   def set_slimmer_artefact_headers(dummy_artefact={})
     set_slimmer_headers(format: 'browse')
     set_slimmer_dummy_artefact(dummy_artefact) unless dummy_artefact.empty?
