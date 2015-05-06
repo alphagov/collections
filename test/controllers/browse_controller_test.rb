@@ -90,7 +90,7 @@ describe BrowseController do
     end
 
     it "lists related topics in the subsection" do
-      RelatedTopicList.any_instance.stubs(:related_topics_for).returns(
+      RelatedTopicList.any_instance.expects(:related_topics_for).with("/browse/crime-and-justice/judges").returns(
         [OpenStruct.new(title: 'A Related Topic', web_url: 'https://www.gov.uk/benefits/related')]
       )
 
@@ -99,6 +99,19 @@ describe BrowseController do
       assert_select '.detailed-guidance' do
         assert_select "li a[href='https://www.gov.uk/benefits/related']", text: 'A Related Topic'
       end
+    end
+
+    it "ignores query parameters when requesting related topics" do
+      RelatedTopicList.any_instance.expects(:related_topics_for).with("/browse/crime-and-justice/judges").returns(
+        [OpenStruct.new(title: 'A Related Topic', web_url: 'https://www.gov.uk/benefits/related')]
+      )
+
+      get :sub_section, section: "crime-and-justice", sub_section: "judges", :foo => "bar"
+
+      assert_select '.detailed-guidance' do
+        assert_select "li a[href='https://www.gov.uk/benefits/related']", text: 'A Related Topic'
+      end
+
     end
 
     it "404 if the section does not exist" do

@@ -24,7 +24,7 @@ class BrowseController < ApplicationController
     @related_topics = RelatedTopicList.new(
       Collections.services(:content_store),
       Collections.services(:detailed_guidance_content_api)
-    ).related_topics_for(request.fullpath)
+    ).related_topics_for(request.path)
 
     options = {title: "browse", section_name: section_tag.title, section_link: section_tag.web_url}
     set_slimmer_artefact_headers(options)
