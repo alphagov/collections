@@ -8,9 +8,10 @@ Collections::Application.routes.draw do
   get "/browse/:section/:sub_section.json" => redirect("/api/with_tag.json?tag=%{section}%%2F%{sub_section}")
   get "/browse/:section/:sub_section", as: "sub_section", to: "browse#sub_section"
 
-  get "/:sector/:subcategory/latest", as: "latest_changes", to: "subcategories#latest_changes"
-  get "/:sector/:subcategory", as: "subcategory", to: "subcategories#show"
+  get "/:sector/:subcategory/latest", as: "latest_changes", to: "subtopics#latest_changes"
+  get "/:sector/:subcategory", as: "subcategory", to: "subtopics#show"
   get "/:sector", to: "topics#show"
+
   get "/:sector/:subcategory/email-signup", to: "email_signups#new", as: "email_signup"
   post "/:sector/:subcategory/email-signup", to: "email_signups#create"
 end

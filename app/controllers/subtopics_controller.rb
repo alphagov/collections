@@ -1,4 +1,4 @@
-class SubcategoriesController < ApplicationController
+class SubtopicsController < ApplicationController
   before_filter { validate_slug_param(:sector) }
   before_filter { validate_slug_param(:subcategory) }
   before_filter :send_404_if_not_found
