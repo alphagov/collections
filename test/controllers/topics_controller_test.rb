@@ -2,7 +2,7 @@ require_relative '../test_helper'
 
 describe TopicsController do
 
-  describe "GET sector with a valid sector tag" do
+  describe "GET topic with a valid topic slug" do
     before do
       subtopics = [
         { slug: "oil-and-gas/wells", title: "Wells" },
@@ -32,7 +32,7 @@ describe TopicsController do
     end
   end
 
-  it "returns a 404 status for GET sector with an invalid sector tag" do
+  it "returns a 404 status for GET topic with an invalid sector tag" do
     api_returns_404_for("/tags/specialist_sector/oil-and-gas.json")
     get :show, topic_slug: "oil-and-gas"
 

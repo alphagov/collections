@@ -25,7 +25,7 @@ describe Topic, '#build' do
 end
 
 describe Topic, '#child_tags' do
-  it 'retrieves related content from the content api based on the sector tag' do
+  it 'retrieves related content from the content api based on the topic slug' do
     content_api_client = mock()
     topic_slug = mock()
     response = mock()

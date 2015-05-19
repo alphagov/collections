@@ -35,18 +35,13 @@ module TopicHelper
     )
   end
 
-  def visit_specialist_sector_topic(topic = "/oil-and-gas/fields-and-wells")
+  # FIXME: Remove this indirection
+  def visit_topic(topic = "/oil-and-gas/fields-and-wells")
     visit topic
   end
 
   def visit_topic_page(topic)
-    visit_specialist_sector_topic("/#{topic}")
-  end
-
-  def assert_presence_of_specialist_sector_content
-    @content.each do |slug|
-      assert page.has_selector?("a[href='http://frontend.test.gov.uk/#{slug}']")
-    end
+    visit_topic("/#{topic}")
   end
 
   def assert_presence_of_organisations

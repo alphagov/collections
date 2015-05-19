@@ -1,7 +1,7 @@
 require 'test_helper'
 
 describe SubtopicsController do
-  describe "GET subcategory with a valid topic and subtopic slug" do
+  describe "GET subtopic with a valid topic and subtopic slug" do
     setup do
       collections_api_has_content_for("/oil-and-gas/wells")
 
@@ -19,8 +19,8 @@ describe SubtopicsController do
     it "requests the tag from the Content API and assign it" do
       get :show, topic_slug: "oil-and-gas", subtopic_slug: "wells"
 
-      assert_equal "Example title", assigns(:subcategory).title
-      assert_equal "example description", assigns(:subcategory).description
+      assert_equal "Example title", assigns(:subtopic).title
+      assert_equal "example description", assigns(:subtopic).description
     end
 
     it "requests and assign the artefacts for the tag from the Content API" do
@@ -58,7 +58,7 @@ describe SubtopicsController do
         organisations.array_of_links.first
     end
 
-    it "returns a 404 status for GET subcategory with an invalid subcategory tag" do
+    it "returns a 404 status for GET subtopic with an invalid subtopic tag" do
       collections_api_has_no_content_for("/oil-and-gas/coal")
       get :show, topic_slug: "oil-and-gas", subtopic_slug: "coal"
 
@@ -67,7 +67,7 @@ describe SubtopicsController do
   end
 
   describe "invalid slugs" do
-    it "returns a cacheable 404 without calling content_api if the sector subcategory slug is invalid" do
+    it "returns a cacheable 404 without calling content_api if the subtopic slug is invalid" do
       get :show, topic_slug: "oil-and-gas", subtopic_slug: "this & that"
 
       assert_equal "404", response.code
@@ -77,7 +77,7 @@ describe SubtopicsController do
   end
 
   describe 'GET latest_changes' do
-    let(:stub_subcategory) {
+    let(:stub_subtopic) {
       stub('Subtopic',
         slug: 'intellectual-property/copyright',
         title: 'Copyright',
@@ -92,33 +92,33 @@ describe SubtopicsController do
     }
 
     before do
-      # we already test the organisation facet behaviour in the 'GET subcategory'
+      # we already test the organisation facet behaviour in the 'GET subtopic'
       # block above, so let's stub it out here completely to keep these tests simpler
-      @controller.stubs(:sub_sector_organisations).returns([])
-      Subtopic.stubs(:find).returns(stub_subcategory)
+      @controller.stubs(:subtopic_organisations).returns([])
+      Subtopic.stubs(:find).returns(stub_subtopic)
     end
 
-    it 'finds the requested subcategory' do
+    it 'finds the requested subtopic' do
       Subtopic.expects(:find)
                     .with('intellectual-property/copyright', {})
-                    .returns(stub_subcategory)
+                    .returns(stub_subtopic)
 
       get :latest_changes, topic_slug: 'intellectual-property', subtopic_slug: 'copyright'
 
-      assigns(:subcategory).must_equal stub_subcategory
+      assigns(:subtopic).must_equal stub_subtopic
     end
 
-    it 'uses pagination parameters to find the subcategory' do
+    it 'uses pagination parameters to find the subtopic' do
       Subtopic.expects(:find)
                     .with('intellectual-property/copyright', has_entries(start: 10, count: 20))
-                    .returns(stub_subcategory)
+                    .returns(stub_subtopic)
 
       get :latest_changes, topic_slug: 'intellectual-property',
                            subtopic_slug: 'copyright',
                            start: '10',
                            count: '20'
 
-      assigns(:subcategory).must_equal stub_subcategory
+      assigns(:subtopic).must_equal stub_subtopic
     end
   end
 end

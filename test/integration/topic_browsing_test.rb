@@ -2,7 +2,7 @@ require 'integration_test_helper'
 
 class TopicBrowsingTest < ActionDispatch::IntegrationTest
 
-  def stub_specialist_sector_organisations(slug)
+  def stub_topic_organisations(slug)
     Collections::Application.config.search_client.stubs(:unified_search).with(
       count: "0",
       filter_specialist_sectors: [slug],
@@ -53,7 +53,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
     stubbed_response_body = JSON.parse(stubbed_response.response.body)
     example_stubbed_artefact = stubbed_response_body['details']['groups'][0]
 
-    stub_specialist_sector_organisations('oil-and-gas/wells')
+    stub_topic_organisations('oil-and-gas/wells')
 
     visit "/oil-and-gas/wells"
 
@@ -72,7 +72,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
   it 'does not display a link to itself on the latest feed' do
     base_path = 'oil-and-gas/wells'
 
-    stub_specialist_sector_organisations(base_path)
+    stub_topic_organisations(base_path)
     collections_api_has_content_for("/#{base_path}")
 
     visit "/#{base_path}/latest"
@@ -87,7 +87,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
     base_path = '/oil-and-gas/wells'
 
     # stub the request for a list of associated organisations
-    stub_specialist_sector_organisations('oil-and-gas/wells')
+    stub_topic_organisations('oil-and-gas/wells')
 
     # stubs the request for the first page of results
     collections_api_has_content_for(base_path,
