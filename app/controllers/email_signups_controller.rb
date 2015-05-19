@@ -6,7 +6,7 @@ class EmailSignupsController < ApplicationController
 
     set_slimmer_dummy_artefact(
       section_name: subtopic.title,
-      section_link: subtopic_path(topic_slug: subtopic.parent_slug, subcategory: subtopic.child_slug),
+      section_link: subtopic_path(topic_slug: subtopic.parent_slug, subtopic_slug: subtopic.child_slug),
       parent: {
         section_name: subtopic.parent_topic_title,
         section_link: "/#{subtopic.parent_slug}",
@@ -27,7 +27,7 @@ class EmailSignupsController < ApplicationController
 private
 
   def subtopic
-    @subtopic ||= Subtopic.find("#{params[:topic_slug]}/#{params[:subcategory]}")
+    @subtopic ||= Subtopic.find("#{params[:topic_slug]}/#{params[:subtopic_slug]}")
   end
   helper_method :subtopic
 

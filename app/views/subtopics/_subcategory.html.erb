@@ -17,12 +17,12 @@
     <div class="latest-subscribe">
       <ul>
         <li class="email primary">
-          <%= link_to email_signup_path(topic_slug: params[:topic_slug], subcategory: params[:subcategory]) do %>
+          <%= link_to email_signup_path(topic_slug: params[:topic_slug], subtopic_slug: params[:subtopic_slug]) do %>
           Subscribe to email alerts
           <% end %>
         </li>
         <% if local_assigns[:link_to_latest_feed] %>
-          <li><%= link_to 'See latest changes to this content', latest_changes_path(topic_slug: params[:topic_slug], subcategory: params[:subcategory]) %></li>
+          <li><%= link_to 'See latest changes to this content', latest_changes_path(topic_slug: params[:topic_slug], subtopic_slug: params[:subtopic_slug]) %></li>
         <% end %>
       </ul>
     </div>

@@ -1,6 +1,6 @@
 class SubtopicsController < ApplicationController
   before_filter { validate_slug_param(:topic_slug) }
-  before_filter { validate_slug_param(:subcategory) }
+  before_filter { validate_slug_param(:subtopic_slug) }
   before_filter :send_404_if_not_found
   before_filter :set_slimmer_format
 
@@ -19,7 +19,7 @@ class SubtopicsController < ApplicationController
   def latest_changes
     set_slimmer_dummy_artefact(
       section_name: subcategory.title,
-      section_link: subtopic_path(params.slice(:topic_slug, :subcategory)),
+      section_link: subtopic_path(params.slice(:topic_slug, :subtopic_slug)),
       parent: {
         section_name: subcategory.parent_topic_title,
         section_link: "/#{params[:topic_slug]}",
@@ -57,7 +57,7 @@ private
   end
 
   def slug
-    "#{params[:topic_slug]}/#{params[:subcategory]}"
+    "#{params[:topic_slug]}/#{params[:subtopic_slug]}"
   end
 
   def sub_sector_organisations(slug)
