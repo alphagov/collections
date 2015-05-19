@@ -9,7 +9,7 @@ Collections::Application.routes.draw do
   get "/browse/:section/:sub_section", as: "sub_section", to: "browse#sub_section"
 
   get "/:sector/:subcategory/latest", as: "latest_changes", to: "subtopics#latest_changes"
-  get "/:sector/:subcategory", as: "subcategory", to: "subtopics#show"
+  get "/:sector/:subcategory", as: :subtopic, to: "subtopics#show"
   get "/:sector", to: "topics#show"
 
   get "/:sector/:subcategory/email-signup", to: "email_signups#new", as: "email_signup"

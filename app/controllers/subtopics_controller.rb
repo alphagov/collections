@@ -19,7 +19,7 @@ class SubtopicsController < ApplicationController
   def latest_changes
     set_slimmer_dummy_artefact(
       section_name: subcategory.title,
-      section_link: subcategory_path(params.slice(:sector, :subcategory)),
+      section_link: subtopic_path(params.slice(:sector, :subcategory)),
       parent: {
         section_name: subcategory.parent_topic_title,
         section_link: "/#{params[:sector]}",
