@@ -3,7 +3,7 @@ require 'test_helper'
 describe ChangedDocumentsPaginationPresenter do
 
   def build_presenter_for_subcategory(start: nil, total: nil, per_page: nil, slug: nil)
-    subcategory = stub('Subcategory',
+    subcategory = stub('Subtopic',
       slug: slug,
       documents_start: start,
       documents_total: total,

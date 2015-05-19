@@ -27,7 +27,7 @@ class EmailSignupsController < ApplicationController
 private
 
   def subtopic
-    @subtopic ||= Subcategory.find("#{params[:sector]}/#{params[:subcategory]}")
+    @subtopic ||= Subtopic.find("#{params[:sector]}/#{params[:subcategory]}")
   end
   helper_method :subtopic
 

@@ -1,4 +1,4 @@
-class Subcategory
+class Subtopic
   def self.find(slug, api_options = {})
     collections_api = Collections.services(:collections_api)
 

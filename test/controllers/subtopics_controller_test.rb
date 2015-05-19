@@ -78,7 +78,7 @@ describe SubtopicsController do
 
   describe 'GET latest_changes' do
     let(:stub_subcategory) {
-      stub('Subcategory',
+      stub('Subtopic',
         slug: 'intellectual-property/copyright',
         title: 'Copyright',
         description: 'Managing copyright, exceptions, notices',
@@ -95,11 +95,11 @@ describe SubtopicsController do
       # we already test the organisation facet behaviour in the 'GET subcategory'
       # block above, so let's stub it out here completely to keep these tests simpler
       @controller.stubs(:sub_sector_organisations).returns([])
-      Subcategory.stubs(:find).returns(stub_subcategory)
+      Subtopic.stubs(:find).returns(stub_subcategory)
     end
 
     it 'finds the requested subcategory' do
-      Subcategory.expects(:find)
+      Subtopic.expects(:find)
                     .with('intellectual-property/copyright', {})
                     .returns(stub_subcategory)
 
@@ -109,7 +109,7 @@ describe SubtopicsController do
     end
 
     it 'uses pagination parameters to find the subcategory' do
-      Subcategory.expects(:find)
+      Subtopic.expects(:find)
                     .with('intellectual-property/copyright', has_entries(start: 10, count: 20))
                     .returns(stub_subcategory)
 

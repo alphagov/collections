@@ -31,7 +31,7 @@ class SubtopicsController < ApplicationController
 private
 
   def subcategory
-    @subcategory ||= Subcategory.find(slug, pagination_params)
+    @subcategory ||= Subtopic.find(slug, pagination_params)
   end
   helper_method :subcategory
 
