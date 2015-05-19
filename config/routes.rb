@@ -13,7 +13,4 @@ Collections::Application.routes.draw do
   get "/:sector", to: "specialist_sectors#show"
   get "/:sector/:subcategory/email-signup", to: "email_signups#new", as: "email_signup"
   post "/:sector/:subcategory/email-signup", to: "email_signups#create"
-
-  # FIXME: This route is deprecated.
-  post "/:sector/:subcategory/email-signups", to: "email_signups#create"
 end
