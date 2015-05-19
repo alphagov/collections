@@ -12,15 +12,15 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
     )
   end
 
-  it "renders a topic tag page and list its sub-categories" do
-    subcategories = [
+  it "renders a topic tag page and list its subtopics" do
+    subtopics = [
       { slug: "oil-and-gas/wells", title: "Wells", description: "Wells, wells, wells." },
       { slug: "oil-and-gas/fields", title: "Fields", description: "Fields, fields, fields." },
       { slug: "oil-and-gas/offshore", title: "Offshore", description: "Information about offshore oil and gas." },
     ]
 
     content_api_has_tag("specialist_sector", { slug: "oil-and-gas", title: "Oil and gas", description: "Guidance for the oil and gas industry" })
-    content_api_has_sorted_child_tags("specialist_sector", "oil-and-gas", "alphabetical", subcategories)
+    content_api_has_sorted_child_tags("specialist_sector", "oil-and-gas", "alphabetical", subtopics)
 
     visit "/oil-and-gas"
     assert page.has_title?("Oil and gas - GOV.UK")

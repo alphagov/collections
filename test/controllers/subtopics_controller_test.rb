@@ -1,7 +1,7 @@
 require 'test_helper'
 
 describe SubtopicsController do
-  describe "GET subcategory with a valid sector tag and subcategory" do
+  describe "GET subcategory with a valid topic and subtopic slug" do
     setup do
       collections_api_has_content_for("/oil-and-gas/wells")
 

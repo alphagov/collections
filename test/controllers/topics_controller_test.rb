@@ -4,12 +4,12 @@ describe TopicsController do
 
   describe "GET sector with a valid sector tag" do
     before do
-      subcategories = [
+      subtopics = [
         { slug: "oil-and-gas/wells", title: "Wells" },
       ]
 
       content_api_has_tag("specialist_sector", { slug: "oil-and-gas", title: "Oil and Gas", description: "Guidance for the oil and gas industry" })
-      content_api_has_sorted_child_tags("specialist_sector", "oil-and-gas", "alphabetical", subcategories)
+      content_api_has_sorted_child_tags("specialist_sector", "oil-and-gas", "alphabetical", subtopics)
     end
 
     it "requests a tag from the Content API and assign it" do

@@ -107,15 +107,14 @@ private
   end
 
   def parent_slug
-    split_subcategory_slug.first
+    split_subtopic_slug.first
   end
 
   def child_slug
-    split_subcategory_slug.last
+    split_subtopic_slug.last
   end
 
-  def split_subcategory_slug
+  def split_subtopic_slug
     subcategory.slug.split('/')
   end
-
 end

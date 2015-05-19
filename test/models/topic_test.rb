@@ -8,9 +8,9 @@ describe Topic, '#build' do
 
     content_api_client.expects(:tag).with(topic_slug, "specialist_sector").
       returns(response)
-    specialist_sector = Topic.new(content_api_client, topic_slug).build
+    topic = Topic.new(content_api_client, topic_slug).build
 
-    assert_instance_of Topic, specialist_sector
+    assert_instance_of Topic, topic
   end
 
   it 'returns nil if no information is found' do
@@ -18,9 +18,9 @@ describe Topic, '#build' do
     topic_slug = mock()
 
     content_api_client.expects(:tag).with(topic_slug, "specialist_sector")
-    specialist_sector = Topic.new(content_api_client, topic_slug).build
+    topic = Topic.new(content_api_client, topic_slug).build
 
-    assert_equal specialist_sector, nil
+    assert_equal topic, nil
   end
 end
 
@@ -33,7 +33,7 @@ describe Topic, '#child_tags' do
 
     content_api_client.expects(:tag).with(topic_slug, "specialist_sector").
       returns(response)
-    specialist_sector = Topic.new(content_api_client, topic_slug).build
+    topic = Topic.new(content_api_client, topic_slug).build
 
     content_api_client.expects(:child_tags).with(
       "specialist_sector",
@@ -41,7 +41,7 @@ describe Topic, '#child_tags' do
       sort: "alphabetical").
       returns(child_tags)
 
-    assert_equal child_tags, specialist_sector.child_tags
+    assert_equal child_tags, topic.child_tags
   end
 end
 
@@ -54,9 +54,9 @@ describe Topic, '#title' do
 
     content_api_client.expects(:tag).with(topic_slug, "specialist_sector").
       returns(response)
-    specialist_sector = Topic.new(content_api_client, topic_slug).build
+    topic = Topic.new(content_api_client, topic_slug).build
 
-    assert_equal 'Example Title', specialist_sector.title
+    assert_equal 'Example Title', topic.title
   end
 end
 
@@ -71,8 +71,8 @@ describe Topic, '#description' do
 
     content_api_client.expects(:tag).with(topic_slug, "specialist_sector").
       returns(response)
-    specialist_sector = Topic.new(content_api_client, topic_slug).build
+    topic = Topic.new(content_api_client, topic_slug).build
 
-    assert_equal 'Example description', specialist_sector.description
+    assert_equal 'Example description', topic.description
   end
 end
