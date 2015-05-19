@@ -1,6 +1,6 @@
 require_relative '../test_helper'
 
-describe SpecialistSectorsController do
+describe TopicsController do
 
   describe "GET sector with a valid sector tag" do
     before do

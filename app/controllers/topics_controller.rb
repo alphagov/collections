@@ -1,4 +1,4 @@
-class SpecialistSectorsController < ApplicationController
+class TopicsController < ApplicationController
   before_filter { validate_slug_param(:sector) }
 
   def show

@@ -10,7 +10,7 @@ Collections::Application.routes.draw do
 
   get "/:sector/:subcategory/latest", as: "latest_changes", to: "subcategories#latest_changes"
   get "/:sector/:subcategory", as: "subcategory", to: "subcategories#show"
-  get "/:sector", to: "specialist_sectors#show"
+  get "/:sector", to: "topics#show"
   get "/:sector/:subcategory/email-signup", to: "email_signups#new", as: "email_signup"
   post "/:sector/:subcategory/email-signup", to: "email_signups#create"
 end
