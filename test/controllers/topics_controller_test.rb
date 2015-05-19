@@ -15,8 +15,8 @@ describe TopicsController do
     it "requests a tag from the Content API and assign it" do
       get :show, sector: "oil-and-gas"
 
-      assert_equal "Oil and Gas", assigns(:sector).title
-      assert_equal "Guidance for the oil and gas industry", assigns(:sector).description
+      assert_equal "Oil and Gas", assigns(:topic).title
+      assert_equal "Guidance for the oil and gas industry", assigns(:topic).description
     end
 
     it "sets the correct slimmer headers" do

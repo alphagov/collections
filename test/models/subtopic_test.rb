@@ -111,7 +111,7 @@ describe Subtopic, "#title" do
 end
 
 describe Subtopic, "#parent_topic_title" do
-  it "returns the parent sector for the subcategory" do
+  it "returns the topic for the subtopic" do
     slug = "oil-and-gas/wells"
     stubbed_response = collections_api_has_content_for("/#{slug}")
     stubbed_response_body = JSON.parse(stubbed_response.response.body)
