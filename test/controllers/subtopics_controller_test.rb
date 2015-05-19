@@ -17,21 +17,21 @@ describe SubtopicsController do
     end
 
     it "requests the tag from the Content API and assign it" do
-      get :show, sector: "oil-and-gas", subcategory: "wells"
+      get :show, topic_slug: "oil-and-gas", subcategory: "wells"
 
       assert_equal "Example title", assigns(:subcategory).title
       assert_equal "example description", assigns(:subcategory).description
     end
 
     it "requests and assign the artefacts for the tag from the Content API" do
-      get :show, sector: "oil-and-gas", subcategory: "wells"
+      get :show, topic_slug: "oil-and-gas", subcategory: "wells"
 
       artefact = assigns(:groups).first.artefact
       assert_equal "Oil rigs", artefact.name
     end
 
     it "sets the correct slimmer headers" do
-      get :show, sector: "oil-and-gas", subcategory: "wells"
+      get :show, topic_slug: "oil-and-gas", subcategory: "wells"
 
       artefact = JSON.parse(response.headers["X-Slimmer-Artefact"])
       primary_tag = artefact["tags"][0]
@@ -43,13 +43,13 @@ describe SubtopicsController do
     end
 
     it "sets expiry headers for 30 minutes" do
-      get :show, sector: "oil-and-gas", subcategory: "wells"
+      get :show, topic_slug: "oil-and-gas", subcategory: "wells"
 
       assert_equal "max-age=1800, public",  response.headers["Cache-Control"]
     end
 
     it "links to the organisations" do
-      get :show, sector: "oil-and-gas", subcategory: "wells"
+      get :show, topic_slug: "oil-and-gas", subcategory: "wells"
 
       organisations = assigns(:organisations)
       assert_equal '<a class="organisation-link" ' \
@@ -60,7 +60,7 @@ describe SubtopicsController do
 
     it "returns a 404 status for GET subcategory with an invalid subcategory tag" do
       collections_api_has_no_content_for("/oil-and-gas/coal")
-      get :show, sector: "oil-and-gas", subcategory: "coal"
+      get :show, topic_slug: "oil-and-gas", subcategory: "coal"
 
       assert_equal 404, response.status
     end
@@ -68,7 +68,7 @@ describe SubtopicsController do
 
   describe "invalid slugs" do
     it "returns a cacheable 404 without calling content_api if the sector subcategory slug is invalid" do
-      get :show, sector: "oil-and-gas", subcategory: "this & that"
+      get :show, topic_slug: "oil-and-gas", subcategory: "this & that"
 
       assert_equal "404", response.code
       assert_equal "max-age=600, public", response.headers["Cache-Control"]
@@ -103,7 +103,7 @@ describe SubtopicsController do
                     .with('intellectual-property/copyright', {})
                     .returns(stub_subcategory)
 
-      get :latest_changes, sector: 'intellectual-property', subcategory: 'copyright'
+      get :latest_changes, topic_slug: 'intellectual-property', subcategory: 'copyright'
 
       assigns(:subcategory).must_equal stub_subcategory
     end
@@ -113,7 +113,7 @@ describe SubtopicsController do
                     .with('intellectual-property/copyright', has_entries(start: 10, count: 20))
                     .returns(stub_subcategory)
 
-      get :latest_changes, sector: 'intellectual-property',
+      get :latest_changes, topic_slug: 'intellectual-property',
                            subcategory: 'copyright',
                            start: '10',
                            count: '20'

@@ -2,10 +2,10 @@ require "test_helper"
 
 describe EmailSignupsController do
   setup do
-    @valid_subtopic_params = { sector: 'oil-and-gas', subcategory: 'wells' }
+    @valid_subtopic_params = { topic_slug: 'oil-and-gas', subcategory: 'wells' }
     collections_api_has_content_for("/oil-and-gas/wells")
 
-    @invalid_subtopic_params = { sector: 'invalid', subcategory: 'subtopic' }
+    @invalid_subtopic_params = { topic_slug: 'invalid', subcategory: 'subtopic' }
     collections_api_has_no_content_for("/invalid/subtopic")
 
     @email_signup = EmailSignup.new(nil)

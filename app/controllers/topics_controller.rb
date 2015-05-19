@@ -1,5 +1,5 @@
 class TopicsController < ApplicationController
-  before_filter { validate_slug_param(:sector) }
+  before_filter { validate_slug_param(:topic_slug) }
 
   def show
     @topic = Topic.new(content_api, topic_slug).build
@@ -16,6 +16,6 @@ private
   end
 
   def topic_slug
-    params[:sector]
+    params[:topic_slug]
   end
 end
