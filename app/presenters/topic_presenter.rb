@@ -1,4 +1,4 @@
-class SpecialistSectorPresenter
+class TopicPresenter
   attr_reader :artefact, :sector
 
   delegate :web_url, to: :artefact

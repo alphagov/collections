@@ -5,7 +5,7 @@ class SubtopicsController < ApplicationController
   before_filter :set_slimmer_format
 
   def show
-    @groups = SpecialistSectorPresenter.build_from_subcategory_content(
+    @groups = TopicPresenter.build_from_subcategory_content(
       subcategory.groups,
       subcategory.parent_sector
     ).sort_by(&:title)
