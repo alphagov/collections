@@ -110,7 +110,7 @@ describe Subtopic, "#title" do
   end
 end
 
-describe Subtopic, "#parent_sector_title" do
+describe Subtopic, "#parent_topic_title" do
   it "returns the parent sector for the subcategory" do
     slug = "oil-and-gas/wells"
     stubbed_response = collections_api_has_content_for("/#{slug}")
@@ -118,7 +118,7 @@ describe Subtopic, "#parent_sector_title" do
 
     subcategory = Subtopic.find(slug)
 
-    assert_equal stubbed_response_body['parent']['title'], subcategory.parent_sector_title
+    assert_equal stubbed_response_body['parent']['title'], subcategory.parent_topic_title
   end
 end
 

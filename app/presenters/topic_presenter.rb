@@ -3,8 +3,8 @@ class TopicPresenter
 
   delegate :web_url, to: :artefact
 
-  def self.build_from_subcategory_content(content, parent_sector)
-    content.map { |artefact| new(artefact, parent_sector) }
+  def self.build_from_subcategory_content(content, parent_topic)
+    content.map { |artefact| new(artefact, parent_topic) }
   end
 
   def initialize(artefact, sector)

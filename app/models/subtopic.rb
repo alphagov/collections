@@ -44,12 +44,12 @@ class Subtopic
     data.description
   end
 
-  def parent_sector
+  def parent_topic
     data.parent
   end
 
-  def parent_sector_title
-    parent_sector.title
+  def parent_topic_title
+    parent_topic.title
   end
 
   def parent_slug
@@ -65,7 +65,7 @@ class Subtopic
   end
 
   def combined_title
-    "#{parent_sector_title}: #{title}"
+    "#{parent_topic_title}: #{title}"
   end
 
   def documents_total

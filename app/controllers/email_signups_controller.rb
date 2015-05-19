@@ -8,7 +8,7 @@ class EmailSignupsController < ApplicationController
       section_name: subtopic.title,
       section_link: subcategory_path(sector: subtopic.parent_slug, subcategory: subtopic.child_slug),
       parent: {
-        section_name: subtopic.parent_sector_title,
+        section_name: subtopic.parent_topic_title,
         section_link: "/#{subtopic.parent_slug}",
       }
     )
