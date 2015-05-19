@@ -1,7 +1,7 @@
 require 'gds_api/test_helpers/content_api'
 require 'gds_api/test_helpers/rummager'
 
-module SpecialistSectorHelper
+module TopicHelper
   include GdsApi::TestHelpers::ContentApi
   include GdsApi::TestHelpers::Rummager
 
@@ -56,4 +56,4 @@ module SpecialistSectorHelper
   end
 end
 
-World(SpecialistSectorHelper)
+World(TopicHelper)

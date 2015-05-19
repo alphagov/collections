@@ -2,7 +2,7 @@ class TopicsController < ApplicationController
   before_filter { validate_slug_param(:sector) }
 
   def show
-    @sector = SpecialistSector.new(content_api, sector_tag).build
+    @sector = Topic.new(content_api, sector_tag).build
 
     return error_404 unless @sector.present?
 

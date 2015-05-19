@@ -1,4 +1,4 @@
-class SpecialistSector
+class Topic
 
   def initialize(content_api_client, sector_tag)
     @content_api_client = content_api_client

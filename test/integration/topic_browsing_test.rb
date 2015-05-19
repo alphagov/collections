@@ -1,6 +1,6 @@
 require 'integration_test_helper'
 
-class SpecialistSectorBrowsingTest < ActionDispatch::IntegrationTest
+class TopicBrowsingTest < ActionDispatch::IntegrationTest
 
   def stub_specialist_sector_organisations(slug)
     Collections::Application.config.search_client.stubs(:unified_search).with(
