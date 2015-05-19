@@ -2,7 +2,7 @@ class TopicsController < ApplicationController
   before_filter { validate_slug_param(:sector) }
 
   def show
-    @topic = Topic.new(content_api, sector_tag).build
+    @topic = Topic.new(content_api, topic_slug).build
 
     return error_404 unless @topic.present?
 
@@ -15,7 +15,7 @@ private
     Collections.services(:content_api)
   end
 
-  def sector_tag
+  def topic_slug
     params[:sector]
   end
 end

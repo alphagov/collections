@@ -1,6 +1,6 @@
 Given(/^there is latest content for a subtopic$/) do
   stub_latest_changes_for("/oil-and-gas/fields-and-wells")
-  stub_specialist_sector_tag_lookups
+  stub_topic_lookups
 end
 
 When(/^I view the latest changes page for that subtopic$/) do

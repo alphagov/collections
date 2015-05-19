@@ -5,7 +5,7 @@ module TopicHelper
   include GdsApi::TestHelpers::ContentApi
   include GdsApi::TestHelpers::Rummager
 
-  def stub_specialist_sector_tag_lookups
+  def stub_topic_lookups
     @content = %w{
       what-is-oil
       apply-for-an-oil-licence

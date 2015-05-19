@@ -1,5 +1,5 @@
 Given /^there are documents in a subtopic$/ do
-  stub_specialist_sector_tag_lookups
+  stub_topic_lookups
   stub_curated_lists_for("/oil-and-gas/fields-and-wells")
 end
 
