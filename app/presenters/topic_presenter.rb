@@ -13,7 +13,7 @@ class TopicPresenter
   end
 
   # This strips away the initial part of an item title if it contains the
-  # title of the current specialist sector to remove any duplication. The
+  # title of the current topic to remove any duplication. The
   # leading character of the remainder of the title is then upcased.
   #
   # eg. "Oil and gas: wells" -> "Wells"

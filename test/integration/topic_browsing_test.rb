@@ -12,7 +12,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
     )
   end
 
-  it "renders a specialist sector tag page and list its sub-categories" do
+  it "renders a topic tag page and list its sub-categories" do
     subcategories = [
       { slug: "oil-and-gas/wells", title: "Wells", description: "Wells, wells, wells." },
       { slug: "oil-and-gas/fields", title: "Fields", description: "Fields, fields, fields." },
@@ -48,7 +48,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
     end
   end
 
-  it "renders a specialist sector sub-category and its artefacts" do
+  it "renders a subtopic and its artefacts" do
     stubbed_response = collections_api_has_content_for("/oil-and-gas/wells")
     stubbed_response_body = JSON.parse(stubbed_response.response.body)
     example_stubbed_artefact = stubbed_response_body['details']['groups'][0]
