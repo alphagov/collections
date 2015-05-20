@@ -35,15 +35,6 @@ module TopicHelper
     )
   end
 
-  # FIXME: Remove this indirection
-  def visit_topic(topic = "/oil-and-gas/fields-and-wells")
-    visit topic
-  end
-
-  def visit_topic_page(topic)
-    visit_topic("/#{topic}")
-  end
-
   def assert_presence_of_organisations
     @organisations.each do |slug|
       assert page.has_selector?("a[href='/#{slug}'][class='organisation-link']")
