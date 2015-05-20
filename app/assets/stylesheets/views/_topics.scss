@@ -168,10 +168,6 @@
       margin: 0;
       padding: 0;
 
-      @include media(desktop){
-        margin-left: 20.5em;
-      }
-
       li {
         margin-bottom: 10px;
         list-style: none;
@@ -184,6 +180,12 @@
       li a {
         @include bold-19;
         text-decoration: none;
+      }
+    }
+
+    &.with-title ul {
+      @include media(desktop){
+        margin-left: 20.5em;
       }
     }
   }
