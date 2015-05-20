@@ -5,7 +5,7 @@
 
 <%= render layout: "subtopic", locals: {subtopic: subtopic, organisations: organisations, link_to_latest_feed: true, beta_label: false} do %>
   <% @groups.each do |group| -%>
-    <nav class="index-list" aria-labelledby="<%= group.artefact.name.parameterize %>">
+    <nav class="index-list with-title" aria-labelledby="<%= group.artefact.name.parameterize %>">
       <h1 id="<%= group.artefact.name.parameterize %>"><%= group.artefact.name %></h1>
       <ul>
       <% group.artefact.contents.each do |group_item| -%>
