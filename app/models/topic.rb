@@ -1,8 +1,7 @@
-class SpecialistSector
-
-  def initialize(content_api_client, sector_tag)
+class Topic
+  def initialize(content_api_client, topic_slug)
     @content_api_client = content_api_client
-    @sector_tag = sector_tag
+    @topic_slug = topic_slug
   end
 
   def build
@@ -27,14 +26,14 @@ private
 
   TAG_TYPE = "specialist_sector".freeze
 
-  attr_reader :content_api_client, :sector_tag
+  attr_reader :content_api_client, :topic_slug
 
   def valid?
     content_api_lookup.present?
   end
 
   def content_api_lookup
-    @_content_api_lookup ||= content_api_client.tag(sector_tag, TAG_TYPE)
+    @_content_api_lookup ||= content_api_client.tag(topic_slug, TAG_TYPE)
   end
 
   def details
@@ -42,6 +41,6 @@ private
   end
 
   def child_tags_lookup
-    content_api_client.child_tags(TAG_TYPE, sector_tag, sort: "alphabetical")
+    content_api_client.child_tags(TAG_TYPE, topic_slug, sort: "alphabetical")
   end
 end

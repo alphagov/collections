@@ -1,28 +1,28 @@
-class SubcategoriesController < ApplicationController
-  before_filter { validate_slug_param(:sector) }
-  before_filter { validate_slug_param(:subcategory) }
+class SubtopicsController < ApplicationController
+  before_filter { validate_slug_param(:topic_slug) }
+  before_filter { validate_slug_param(:subtopic_slug) }
   before_filter :send_404_if_not_found
   before_filter :set_slimmer_format
 
   def show
-    @groups = SpecialistSectorPresenter.build_from_subcategory_content(
-      subcategory.groups,
-      subcategory.parent_sector
+    @groups = TopicPresenter.build_from_subtopic_content(
+      subtopic.groups,
+      subtopic.parent_topic
     ).sort_by(&:title)
 
     set_slimmer_dummy_artefact(
-      section_name: subcategory.parent_sector_title,
-      section_link: "/#{params[:sector]}"
+      section_name: subtopic.parent_topic_title,
+      section_link: "/#{params[:topic_slug]}"
     )
   end
 
   def latest_changes
     set_slimmer_dummy_artefact(
-      section_name: subcategory.title,
-      section_link: subcategory_path(params.slice(:sector, :subcategory)),
+      section_name: subtopic.title,
+      section_link: subtopic_path(params.slice(:topic_slug, :subtopic_slug)),
       parent: {
-        section_name: subcategory.parent_sector_title,
-        section_link: "/#{params[:sector]}",
+        section_name: subtopic.parent_topic_title,
+        section_link: "/#{params[:topic_slug]}",
       }
     )
 
@@ -30,26 +30,26 @@ class SubcategoriesController < ApplicationController
 
 private
 
-  def subcategory
-    @subcategory ||= Subcategory.find(slug, pagination_params)
+  def subtopic
+    @subtopic ||= Subtopic.find(slug, pagination_params)
   end
-  helper_method :subcategory
+  helper_method :subtopic
 
   def organisations
-    @organisations ||= sub_sector_organisations(slug)
+    @organisations ||= subtopic_organisations(slug)
   end
   helper_method :organisations
 
   def changed_documents_pagination
     @changed_documents_pagination ||= ChangedDocumentsPaginationPresenter.new(
-      subcategory,
+      subtopic,
       per_page: pagination_params[:count]
     )
   end
   helper_method :changed_documents_pagination
 
   def send_404_if_not_found
-    error_404 unless subcategory.present?
+    error_404 unless subtopic.present?
   end
 
   def set_slimmer_format
@@ -57,10 +57,10 @@ private
   end
 
   def slug
-    "#{params[:sector]}/#{params[:subcategory]}"
+    "#{params[:topic_slug]}/#{params[:subtopic_slug]}"
   end
 
-  def sub_sector_organisations(slug)
+  def subtopic_organisations(slug)
     OrganisationsFacetPresenter.new(
       Collections::Application.config.search_client.unified_search(
         count: "0",

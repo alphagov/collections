@@ -1,11 +1,11 @@
 require 'gds_api/test_helpers/content_api'
 require 'gds_api/test_helpers/rummager'
 
-module SpecialistSectorHelper
+module TopicHelper
   include GdsApi::TestHelpers::ContentApi
   include GdsApi::TestHelpers::Rummager
 
-  def stub_specialist_sector_tag_lookups
+  def stub_topic_lookups
     @content = %w{
       what-is-oil
       apply-for-an-oil-licence
@@ -35,18 +35,13 @@ module SpecialistSectorHelper
     )
   end
 
-  def visit_specialist_sector_topic(topic = "/oil-and-gas/fields-and-wells")
+  # FIXME: Remove this indirection
+  def visit_topic(topic = "/oil-and-gas/fields-and-wells")
     visit topic
   end
 
   def visit_topic_page(topic)
-    visit_specialist_sector_topic("/#{topic}")
-  end
-
-  def assert_presence_of_specialist_sector_content
-    @content.each do |slug|
-      assert page.has_selector?("a[href='http://frontend.test.gov.uk/#{slug}']")
-    end
+    visit_topic("/#{topic}")
   end
 
   def assert_presence_of_organisations
@@ -56,4 +51,4 @@ module SpecialistSectorHelper
   end
 end
 
-World(SpecialistSectorHelper)
+World(TopicHelper)

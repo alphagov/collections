@@ -1,7 +1,7 @@
 require 'test_helper'
 
-describe SubcategoriesController do
-  describe "GET subcategory with a valid sector tag and subcategory" do
+describe SubtopicsController do
+  describe "GET subtopic with a valid topic and subtopic slug" do
     setup do
       collections_api_has_content_for("/oil-and-gas/wells")
 
@@ -17,21 +17,21 @@ describe SubcategoriesController do
     end
 
     it "requests the tag from the Content API and assign it" do
-      get :show, sector: "oil-and-gas", subcategory: "wells"
+      get :show, topic_slug: "oil-and-gas", subtopic_slug: "wells"
 
-      assert_equal "Example title", assigns(:subcategory).title
-      assert_equal "example description", assigns(:subcategory).description
+      assert_equal "Example title", assigns(:subtopic).title
+      assert_equal "example description", assigns(:subtopic).description
     end
 
     it "requests and assign the artefacts for the tag from the Content API" do
-      get :show, sector: "oil-and-gas", subcategory: "wells"
+      get :show, topic_slug: "oil-and-gas", subtopic_slug: "wells"
 
       artefact = assigns(:groups).first.artefact
       assert_equal "Oil rigs", artefact.name
     end
 
     it "sets the correct slimmer headers" do
-      get :show, sector: "oil-and-gas", subcategory: "wells"
+      get :show, topic_slug: "oil-and-gas", subtopic_slug: "wells"
 
       artefact = JSON.parse(response.headers["X-Slimmer-Artefact"])
       primary_tag = artefact["tags"][0]
@@ -43,13 +43,13 @@ describe SubcategoriesController do
     end
 
     it "sets expiry headers for 30 minutes" do
-      get :show, sector: "oil-and-gas", subcategory: "wells"
+      get :show, topic_slug: "oil-and-gas", subtopic_slug: "wells"
 
       assert_equal "max-age=1800, public",  response.headers["Cache-Control"]
     end
 
     it "links to the organisations" do
-      get :show, sector: "oil-and-gas", subcategory: "wells"
+      get :show, topic_slug: "oil-and-gas", subtopic_slug: "wells"
 
       organisations = assigns(:organisations)
       assert_equal '<a class="organisation-link" ' \
@@ -58,17 +58,17 @@ describe SubcategoriesController do
         organisations.array_of_links.first
     end
 
-    it "returns a 404 status for GET subcategory with an invalid subcategory tag" do
+    it "returns a 404 status for GET subtopic with an invalid subtopic tag" do
       collections_api_has_no_content_for("/oil-and-gas/coal")
-      get :show, sector: "oil-and-gas", subcategory: "coal"
+      get :show, topic_slug: "oil-and-gas", subtopic_slug: "coal"
 
       assert_equal 404, response.status
     end
   end
 
   describe "invalid slugs" do
-    it "returns a cacheable 404 without calling content_api if the sector subcategory slug is invalid" do
-      get :show, sector: "oil-and-gas", subcategory: "this & that"
+    it "returns a cacheable 404 without calling content_api if the subtopic slug is invalid" do
+      get :show, topic_slug: "oil-and-gas", subtopic_slug: "this & that"
 
       assert_equal "404", response.code
       assert_equal "max-age=600, public", response.headers["Cache-Control"]
@@ -77,13 +77,13 @@ describe SubcategoriesController do
   end
 
   describe 'GET latest_changes' do
-    let(:stub_subcategory) {
-      stub('Subcategory',
+    let(:stub_subtopic) {
+      stub('Subtopic',
         slug: 'intellectual-property/copyright',
         title: 'Copyright',
         description: 'Managing copyright, exceptions, notices',
-        parent_sector: stub('ParentSector'),
-        parent_sector_title: 'Intellectual property',
+        parent_topic: stub('ParentSector'),
+        parent_topic_title: 'Intellectual property',
         changed_documents: [],
         combined_title: 'Intellectual property: Copyright',
         documents_start: 0,
@@ -92,33 +92,33 @@ describe SubcategoriesController do
     }
 
     before do
-      # we already test the organisation facet behaviour in the 'GET subcategory'
+      # we already test the organisation facet behaviour in the 'GET subtopic'
       # block above, so let's stub it out here completely to keep these tests simpler
-      @controller.stubs(:sub_sector_organisations).returns([])
-      Subcategory.stubs(:find).returns(stub_subcategory)
+      @controller.stubs(:subtopic_organisations).returns([])
+      Subtopic.stubs(:find).returns(stub_subtopic)
     end
 
-    it 'finds the requested subcategory' do
-      Subcategory.expects(:find)
+    it 'finds the requested subtopic' do
+      Subtopic.expects(:find)
                     .with('intellectual-property/copyright', {})
-                    .returns(stub_subcategory)
+                    .returns(stub_subtopic)
 
-      get :latest_changes, sector: 'intellectual-property', subcategory: 'copyright'
+      get :latest_changes, topic_slug: 'intellectual-property', subtopic_slug: 'copyright'
 
-      assigns(:subcategory).must_equal stub_subcategory
+      assigns(:subtopic).must_equal stub_subtopic
     end
 
-    it 'uses pagination parameters to find the subcategory' do
-      Subcategory.expects(:find)
+    it 'uses pagination parameters to find the subtopic' do
+      Subtopic.expects(:find)
                     .with('intellectual-property/copyright', has_entries(start: 10, count: 20))
-                    .returns(stub_subcategory)
+                    .returns(stub_subtopic)
 
-      get :latest_changes, sector: 'intellectual-property',
-                           subcategory: 'copyright',
+      get :latest_changes, topic_slug: 'intellectual-property',
+                           subtopic_slug: 'copyright',
                            start: '10',
                            count: '20'
 
-      assigns(:subcategory).must_equal stub_subcategory
+      assigns(:subtopic).must_equal stub_subtopic
     end
   end
 end

@@ -1,11 +1,11 @@
-<% content_for :title, "#{subcategory.title}: Latest documents - GOV.UK" %>
+<% content_for :title, "#{subtopic.title}: Latest documents - GOV.UK" %>
 <% content_for :page_title do %>
-  <span><%= subcategory.title %></span> Latest documents
+  <span><%= subtopic.title %></span> Latest documents
 <% end %>
 
-<%= render layout: "subcategory", locals: {subcategory: subcategory, organisations: organisations, link_to_latest_feed: false, beta_label: true} do %>
+<%= render layout: "subtopic", locals: {subtopic: subtopic, organisations: organisations, link_to_latest_feed: false, beta_label: true} do %>
   <ul class="changed-documents">
-    <% subcategory.changed_documents.each do |document| -%>
+    <% subtopic.changed_documents.each do |document| -%>
       <li>
         <h3><a href="<%= document.link %>"><%= document.title %></a></h3>
 

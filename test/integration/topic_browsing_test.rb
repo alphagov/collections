@@ -1,8 +1,8 @@
 require 'integration_test_helper'
 
-class SpecialistSectorBrowsingTest < ActionDispatch::IntegrationTest
+class TopicBrowsingTest < ActionDispatch::IntegrationTest
 
-  def stub_specialist_sector_organisations(slug)
+  def stub_topic_organisations(slug)
     Collections::Application.config.search_client.stubs(:unified_search).with(
       count: "0",
       filter_specialist_sectors: [slug],
@@ -12,15 +12,15 @@ class SpecialistSectorBrowsingTest < ActionDispatch::IntegrationTest
     )
   end
 
-  it "renders a specialist sector tag page and list its sub-categories" do
-    subcategories = [
+  it "renders a topic tag page and list its subtopics" do
+    subtopics = [
       { slug: "oil-and-gas/wells", title: "Wells", description: "Wells, wells, wells." },
       { slug: "oil-and-gas/fields", title: "Fields", description: "Fields, fields, fields." },
       { slug: "oil-and-gas/offshore", title: "Offshore", description: "Information about offshore oil and gas." },
     ]
 
     content_api_has_tag("specialist_sector", { slug: "oil-and-gas", title: "Oil and gas", description: "Guidance for the oil and gas industry" })
-    content_api_has_sorted_child_tags("specialist_sector", "oil-and-gas", "alphabetical", subcategories)
+    content_api_has_sorted_child_tags("specialist_sector", "oil-and-gas", "alphabetical", subtopics)
 
     visit "/oil-and-gas"
     assert page.has_title?("Oil and gas - GOV.UK")
@@ -48,12 +48,12 @@ class SpecialistSectorBrowsingTest < ActionDispatch::IntegrationTest
     end
   end
 
-  it "renders a specialist sector sub-category and its artefacts" do
+  it "renders a subtopic and its artefacts" do
     stubbed_response = collections_api_has_content_for("/oil-and-gas/wells")
     stubbed_response_body = JSON.parse(stubbed_response.response.body)
     example_stubbed_artefact = stubbed_response_body['details']['groups'][0]
 
-    stub_specialist_sector_organisations('oil-and-gas/wells')
+    stub_topic_organisations('oil-and-gas/wells')
 
     visit "/oil-and-gas/wells"
 
@@ -63,7 +63,7 @@ class SpecialistSectorBrowsingTest < ActionDispatch::IntegrationTest
       assert page.has_content?("Oil and gas")
       assert page.has_content?(stubbed_response_body['title'])
 
-      assert page.has_link?('Subscribe to email alerts', href: email_signup_path(sector: 'oil-and-gas', subcategory: 'wells'))
+      assert page.has_link?('Subscribe to email alerts', href: email_signup_path(topic_slug: 'oil-and-gas', subtopic_slug: 'wells'))
     end
 
     assert page.has_content?(example_stubbed_artefact['contents'][0]['title'])
@@ -72,13 +72,13 @@ class SpecialistSectorBrowsingTest < ActionDispatch::IntegrationTest
   it 'does not display a link to itself on the latest feed' do
     base_path = 'oil-and-gas/wells'
 
-    stub_specialist_sector_organisations(base_path)
+    stub_topic_organisations(base_path)
     collections_api_has_content_for("/#{base_path}")
 
     visit "/#{base_path}/latest"
 
     within "header.page-header" do
-      assert page.has_link?('Subscribe to email alerts', href: email_signup_path(sector: 'oil-and-gas', subcategory: 'wells'))
+      assert page.has_link?('Subscribe to email alerts', href: email_signup_path(topic_slug: 'oil-and-gas', subtopic_slug: 'wells'))
       assert page.has_no_link?('See latest changes')
     end
   end
@@ -87,7 +87,7 @@ class SpecialistSectorBrowsingTest < ActionDispatch::IntegrationTest
     base_path = '/oil-and-gas/wells'
 
     # stub the request for a list of associated organisations
-    stub_specialist_sector_organisations('oil-and-gas/wells')
+    stub_topic_organisations('oil-and-gas/wells')
 
     # stubs the request for the first page of results
     collections_api_has_content_for(base_path,

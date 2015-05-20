@@ -5,8 +5,8 @@ class ChangedDocumentsPaginationPresenter
 
   class NegativeCountValue < StandardError; end
 
-  def initialize(subcategory, per_page: nil)
-    @subcategory = subcategory
+  def initialize(subtopic, per_page: nil)
+    @subtopic = subtopic
     @per_page = per_page
 
     validate_per_page
@@ -78,7 +78,7 @@ class ChangedDocumentsPaginationPresenter
   end
 
 private
-  attr_reader :subcategory
+  attr_reader :subtopic
 
   def per_page
     if @per_page.present? && @per_page > 0
@@ -99,23 +99,22 @@ private
   end
 
   def current_start
-    subcategory.documents_start
+    subtopic.documents_start
   end
 
   def total
-    subcategory.documents_total
+    subtopic.documents_total
   end
 
   def parent_slug
-    split_subcategory_slug.first
+    split_subtopic_slug.first
   end
 
   def child_slug
-    split_subcategory_slug.last
+    split_subtopic_slug.last
   end
 
-  def split_subcategory_slug
-    subcategory.slug.split('/')
+  def split_subtopic_slug
+    subtopic.slug.split('/')
   end
-
 end

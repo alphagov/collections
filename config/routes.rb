@@ -8,12 +8,10 @@ Collections::Application.routes.draw do
   get "/browse/:section/:sub_section.json" => redirect("/api/with_tag.json?tag=%{section}%%2F%{sub_section}")
   get "/browse/:section/:sub_section", as: "sub_section", to: "browse#sub_section"
 
-  get "/:sector/:subcategory/latest", as: "latest_changes", to: "subcategories#latest_changes"
-  get "/:sector/:subcategory", as: "subcategory", to: "subcategories#show"
-  get "/:sector", to: "specialist_sectors#show"
-  get "/:sector/:subcategory/email-signup", to: "email_signups#new", as: "email_signup"
-  post "/:sector/:subcategory/email-signup", to: "email_signups#create"
+  get "/:topic_slug/:subtopic_slug/latest", as: "latest_changes", to: "subtopics#latest_changes"
+  get "/:topic_slug/:subtopic_slug", as: :subtopic, to: "subtopics#show"
+  get "/:topic_slug", to: "topics#show"
 
-  # FIXME: This route is deprecated.
-  post "/:sector/:subcategory/email-signups", to: "email_signups#create"
+  get "/:topic_slug/:subtopic_slug/email-signup", to: "email_signups#new", as: "email_signup"
+  post "/:topic_slug/:subtopic_slug/email-signup", to: "email_signups#create"
 end
