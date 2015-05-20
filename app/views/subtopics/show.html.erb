@@ -1,6 +1,7 @@
 <% content_for :title, "#{subtopic.combined_title} - GOV.UK" %>
 <% content_for :page_title do %>
-  <span><%= subtopic.parent_topic_title %></span> <%= subtopic.title %>
+  <%= link_to subtopic.parent_topic_title, topic_path(subtopic.parent_slug) %>
+  <%= subtopic.title %>
 <% end %>
 
 <%= render layout: "subtopic", locals: {subtopic: subtopic, organisations: organisations, link_to_latest_feed: true, beta_label: false} do %>
