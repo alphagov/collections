@@ -1,6 +1,10 @@
 <% content_for :title do %><%= @topic.title %> - GOV.UK<% end %>
 <% content_for :page_class, "topics-page" %>
 
+<div class="header-context">
+  <%# This empty div makes the breadcrumbs dissapear. %>
+</div>
+
 <header class="page-header group">
   <div class="full-width">
     <h1><%= @topic.title %></h1>
