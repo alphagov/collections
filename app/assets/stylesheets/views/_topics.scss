@@ -18,12 +18,17 @@
           padding: 0 0 15px;
         }
 
-        span {
+        a {
           @include core-27($line-height: 1);
           display: block;
           margin-bottom: 0.25em;
           text-shadow: none;
           color: $secondary-text-colour;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
 
