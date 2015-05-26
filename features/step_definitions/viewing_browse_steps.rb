@@ -25,3 +25,19 @@ end
 Then(/^I see the detailed guidance category listed$/) do
   assert_can_see_linked_item('Detailed guidance')
 end
+
+When(/^I visit the main browse page$/) do
+  visit browse_path
+end
+
+When(/^I click on the section$/) do
+  click_link 'Crime and justice'
+end
+
+Then(/^I see the list of subsections$/) do
+  assert page.has_selector?('a', text: 'Judges'), 'Subsection link should be visible'
+end
+
+When(/^I click on the subsection$/) do
+  click_link 'Judges'
+end
