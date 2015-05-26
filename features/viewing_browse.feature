@@ -3,7 +3,18 @@ Feature: Viewing browse
   I want to be able to browse content by sections
   So that I can quickly the content I need
 
-  Scenario: Browse to a subsection page
+  @javascript
+  Scenario: Browse to a subsection page with Javascript
+    Given there is an artefact tagged to a subsection
+    And there is a detailed guidance category tagged to a subsection
+    When I visit the main browse page
+    And I click on the section
+    Then I see the list of subsections
+    When I click on the subsection
+    Then I see the artefact listed
+    And I see the detailed guidance category listed
+
+  Scenario: Browse to a subsection page without Javascript
     Given there is an artefact tagged to a subsection
     And there is a detailed guidance category tagged to a subsection
     When I visit the main browse page

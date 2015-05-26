@@ -6,5 +6,8 @@
 
 require 'cucumber/rails'
 require 'mocha/mini_test'
+require 'slimmer/test'
 
 ActionController::Base.allow_rescue = false
+
+Capybara.javascript_driver = :webkit
