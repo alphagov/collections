@@ -1,0 +1,6 @@
+<%= render_mustache('browse/section',
+  title: sub_section_tag.title,
+  options: sub_section_artefacts,
+  detailed_guide_categories_any?: @related_topics.any?,
+  detailed_guide_categories: @related_topics
+  ) %>

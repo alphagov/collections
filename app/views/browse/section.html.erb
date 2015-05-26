@@ -3,20 +3,7 @@
 
 <div class="browse-panes section" data-state="section">
   <div id="section" class="pane with-sort">
-    <div class="pane-inner">
-      <h1 tabindex="-1"><%= section_tag.title %></h1>
-      <p class="sort-order">A&#8202;to&#8202;Z</p> <!-- &#8202 = hairspace -->
-      <ul>
-        <% section_tags.each do |section_tag| %>
-          <li>
-            <%= link_to section_tag.web_url do %>
-              <h3><%= section_tag.title %></h3>
-              <p><%= section_tag.details.description %></p>
-            <% end %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
+    <%= render 'section' %>
   </div>
 
   <div id="root" class="pane">
