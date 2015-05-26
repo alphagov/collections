@@ -6,14 +6,5 @@
     <%= render 'section' %>
   </div>
 
-  <div id="root" class="pane">
-    <h1 class="visuallyhidden" tabindex="-1">All categories</h1>
-    <ul>
-      <% root_sections.each do |root_section| %>
-        <li<%= ' class="active"'.html_safe if section_tag.slug == root_section.slug %>>
-          <%= link_to root_section.title, root_section.web_url %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
+  <%= render 'root_sections' %>
 </div>
