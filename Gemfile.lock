@@ -125,7 +125,6 @@ GEM
       metaclass (~> 0.0.1)
     multi_json (1.11.0)
     multi_test (0.1.2)
-    mustache (0.99.8)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     null_logger (0.0.1)
@@ -174,9 +173,6 @@ GEM
       sass (~> 3.2.0)
       sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0.0)
-    shared_mustache (0.1.2)
-      execjs (>= 1.2.4)
-      mustache (~> 0.99.4)
     slimmer (8.1.0)
       activesupport
       json
@@ -231,7 +227,6 @@ DEPENDENCIES
   plek (= 1.7.0)
   rails (= 4.2.1)
   sass-rails (= 4.0.2)
-  shared_mustache (= 0.1.2)
   slimmer (= 8.1.0)
   uglifier (= 2.5.0)
   unicorn (= 4.8.2)

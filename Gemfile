@@ -5,7 +5,6 @@ gem 'rails', '4.2.1'
 gem 'sass-rails', '4.0.2'
 gem 'uglifier', '2.5.0'
 gem 'govuk_frontend_toolkit', '1.7.0'
-gem 'shared_mustache', '0.1.2'
 
 gem 'unicorn', '4.8.2'
 gem 'airbrake', '3.1.15'

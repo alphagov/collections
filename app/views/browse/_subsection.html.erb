@@ -1,6 +1,20 @@
-<%= render_mustache('browse/section',
-  title: sub_section_tag.title,
-  options: sub_section_artefacts,
-  detailed_guide_categories_any?: @related_topics.any?,
-  detailed_guide_categories: @related_topics
-  ) %>
+<div class="pane-inner">
+  <h1 tabindex="-1"><%= sub_section_tag.title %></h1>
+  <p class="sort-order">A&#8202;to&#8202;Z</p> <!-- &#8202 = hairspace -->
+  <ul>
+    <% sub_section_artefacts.each do |artefact| %>
+      <li><%= link_to artefact.title, artefact.web_url %></li>
+    <% end %>
+  </ul>
+
+  <% if @related_topics.any? %>
+    <div class="detailed-guidance">
+      <h2>Detailed guidance</h2>
+      <ul>
+        <% @related_topics.each do |related_topic| %>
+          <li><%= link_to related_topic.title, related_topic.web_url %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>
