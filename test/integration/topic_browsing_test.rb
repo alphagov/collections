@@ -25,6 +25,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
 
   it "renders a topic tag page and list its subtopics" do
     set_up_valid_topic_page
+    content_store_has_item('/oil-and-gas', content_schema_example(:topic, :topic))
 
     visit "/oil-and-gas"
     assert page.has_title?("Oil and gas - GOV.UK")
@@ -52,6 +53,17 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
     end
   end
 
+  it "renders a beta topic" do
+    set_up_valid_topic_page
+
+    content_store_has_item('/oil-and-gas',
+      content_schema_example(:topic, :topic).merge(details: { beta: true }))
+
+    visit "/oil-and-gas"
+
+    assert page.has_content?("This page is in beta"), "has beta-label"
+  end
+
   it "renders a subtopic and its artefacts" do
     stubbed_response = collections_api_has_content_for("/oil-and-gas/wells")
     stubbed_response_body = JSON.parse(stubbed_response.response.body)
@@ -71,6 +83,18 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
     end
 
     assert page.has_content?(example_stubbed_artefact['contents'][0]['title'])
+  end
+
+  it "renders a beta subtopic" do
+    stub_topic_organisations('oil-and-gas/wells')
+
+    url = Plek.current.find('collections-api') + "/specialist-sectors/oil-and-gas/wells"
+    body = { parent: { title: "Oil and gas" }, details: { groups: [], beta: true } }
+    stub_request(:get, url).to_return(status: 200, body: body.to_json)
+
+    visit "/oil-and-gas/wells"
+
+    assert page.has_content?("This page is in beta"), "has beta-label"
   end
 
   it 'does not display a link to itself on the latest feed' do

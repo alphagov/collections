@@ -11,6 +11,10 @@
   </div>
 </header>
 
+<% if @topic.beta? %>
+  <%= render 'shared/topic_beta', topic: @topic %>
+<% end %>
+
 <div class="browse-container full-width topics-page">
   <% if @topic.description.present? %>
     <div class="category-description">
