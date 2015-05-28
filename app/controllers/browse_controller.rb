@@ -7,6 +7,9 @@ class BrowseController < ApplicationController
   before_filter(:only => [:section, :sub_section]) { validate_slug_param(:section) }
   before_filter(:only => [:sub_section]) { validate_slug_param(:sub_section) }
 
+  enable_request_formats section: [:json]
+  enable_request_formats sub_section: [:json]
+
   def index
     options = {title: "browse", section_name: "Browse", section_link: "/browse"}
     set_slimmer_artefact_headers(options)
@@ -16,6 +19,13 @@ class BrowseController < ApplicationController
     return error_404 unless section_tag
 
     set_slimmer_artefact_headers
+
+    respond_to do |f|
+      f.html
+      f.json do
+        render json: { html: render_partial('_section') }
+      end
+    end
   end
 
   def sub_section
@@ -24,10 +34,17 @@ class BrowseController < ApplicationController
     @related_topics = RelatedTopicList.new(
       Collections.services(:content_store),
       Collections.services(:detailed_guidance_content_api)
-    ).related_topics_for(request.path)
+    ).related_topics_for(request.path.gsub('.json', ''))
 
     options = {title: "browse", section_name: section_tag.title, section_link: section_tag.web_url}
     set_slimmer_artefact_headers(options)
+
+    respond_to do |f|
+      f.html
+      f.json do
+        render json: { html: render_partial('_subsection') }
+      end
+    end
   end
 
 private
@@ -68,5 +85,9 @@ private
   def set_slimmer_artefact_headers(dummy_artefact={})
     set_slimmer_headers(format: 'browse')
     set_slimmer_dummy_artefact(dummy_artefact) unless dummy_artefact.empty?
+  end
+
+  def render_partial(partial_name)
+    render_to_string(partial_name, formats: 'html', layout: false)
   end
 end

@@ -1,0 +1,14 @@
+<div class="pane-inner">
+  <h1 tabindex="-1"><%= section_tag.title %></h1>
+  <p class="sort-order">A&#8202;to&#8202;Z</p> <!-- &#8202 = hairspace -->
+  <ul>
+    <% section_tags.each do |section_tag| %>
+      <li class='<%= browsing_in_section?(section_tag) ? 'active' : nil %>'>
+        <%= link_to section_tag.web_url do %>
+          <h3><%= section_tag.title %></h3>
+          <p><%= section_tag.details.description %></p>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
