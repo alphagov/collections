@@ -12,7 +12,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
     )
   end
 
-  it "renders a topic tag page and list its subtopics" do
+  def set_up_valid_topic_page
     subtopics = [
       { slug: "oil-and-gas/wells", title: "Wells", description: "Wells, wells, wells." },
       { slug: "oil-and-gas/fields", title: "Fields", description: "Fields, fields, fields." },
@@ -21,6 +21,10 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
 
     content_api_has_tag("specialist_sector", { slug: "oil-and-gas", title: "Oil and gas", description: "Guidance for the oil and gas industry" })
     content_api_has_sorted_child_tags("specialist_sector", "oil-and-gas", "alphabetical", subtopics)
+  end
+
+  it "renders a topic tag page and list its subtopics" do
+    set_up_valid_topic_page
 
     visit "/oil-and-gas"
     assert page.has_title?("Oil and gas - GOV.UK")
