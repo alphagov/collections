@@ -14,6 +14,10 @@ class Topic
     child_tags_lookup
   end
 
+  def beta?
+    topic_content_from_content_store.details.beta
+  end
+
   def description
     details.description
   end
@@ -42,5 +46,9 @@ private
 
   def child_tags_lookup
     content_api_client.child_tags(TAG_TYPE, topic_slug, sort: "alphabetical")
+  end
+
+  def topic_content_from_content_store
+    @_from_cs ||= Collections.services(:content_store).content_item("/" + topic_slug)
   end
 end

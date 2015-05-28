@@ -1,5 +1,12 @@
 .topics-page {
 
+  // Topic beta labels have a lot of text. Limiting the width of the label
+  // prevents the lines to wrap under the label.
+  .topic-beta-label .govuk-beta-label span {
+    width: 75%;
+    vertical-align: top;
+  }
+
   header.page-header {
     .full-width {
       padding: 20px 30px;
