@@ -72,6 +72,10 @@ class Subtopic
     details.documents_total
   end
 
+  def beta?
+    details.beta
+  end
+
   def documents_start
     details.documents_start
   end

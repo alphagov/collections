@@ -1,6 +1,7 @@
 require_relative '../test_helper'
 
 describe TopicsController do
+  include ContentSchemaHelpers
 
   describe "GET topic with a valid topic slug" do
     before do
@@ -10,6 +11,7 @@ describe TopicsController do
 
       content_api_has_tag("specialist_sector", { slug: "oil-and-gas", title: "Oil and Gas", description: "Guidance for the oil and gas industry" })
       content_api_has_sorted_child_tags("specialist_sector", "oil-and-gas", "alphabetical", subtopics)
+      content_store_has_item('/oil-and-gas', content_schema_example(:topic, :topic))
     end
 
     it "requests a tag from the Content API and assign it" do

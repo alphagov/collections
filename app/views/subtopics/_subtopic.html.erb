@@ -14,6 +14,7 @@
         </aside>
       <% end %>
     </div>
+
     <div class="latest-subscribe">
       <ul>
         <li class="email primary">
@@ -34,6 +35,10 @@
              locals: {
                message: "This part of #{link_to('GOV.UK', '/')} is new and being improved - #{link_to('find out what this means','/help/beta')}"
              } %>
+<% end %>
+
+<% if subtopic.beta? %>
+  <%= render 'shared/topic_beta', topic: subtopic %>
 <% end %>
 
 <div class="browse-container full-width">
