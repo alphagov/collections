@@ -45,4 +45,4 @@ Use `bundle exec rake` to run the full test suite
 
 ## License
 
-[MIT License](LICENCE)
+[MIT License](LICENCE.txt)
