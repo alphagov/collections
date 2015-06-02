@@ -42,7 +42,7 @@ class BrowseController < ApplicationController
     respond_to do |f|
       f.html
       f.json do
-        render json: { html: render_partial('_subsection') }
+        render json: { html: render_partial('_sub_section') }
       end
     end
   end
