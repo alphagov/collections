@@ -1,4 +1,8 @@
 class Subtopic
+  delegate :description, :title, :details, to: :data
+  delegate :documents_total, :documents_start, :beta, to: :details
+  alias :beta? :beta
+
   def self.find(slug, api_options = {})
     collections_api = Collections.services(:collections_api)
 
@@ -40,10 +44,6 @@ class Subtopic
     details.documents
   end
 
-  def description
-    data.description
-  end
-
   def parent_topic
     data.parent
   end
@@ -60,29 +60,13 @@ class Subtopic
     split_slug[1]
   end
 
-  def title
-    data.title
-  end
-
   def combined_title
     "#{parent_topic_title}: #{title}"
-  end
-
-  def documents_total
-    details.documents_total
-  end
-
-  def documents_start
-    details.documents_start
   end
 
 private
 
   attr_reader :data
-
-  def details
-    data.details
-  end
 
   def split_slug
     slug.split('/')
