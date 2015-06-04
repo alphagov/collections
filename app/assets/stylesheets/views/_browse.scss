@@ -189,13 +189,22 @@ main.browse {
       }
     }
     #subsection {
-      .pane-inner {
-        @include media(tablet){
+      @include media(tablet) {
+        .pane-inner.a-to-z {
           padding-left: 100px;
+        }
+
+        .pane-inner.curated-list {
+          padding-left: 30px;
         }
       }
       h1 {
         padding-left: 0;
+      }
+
+      .list-header {
+        @include bold-19;
+        margin: 30px 0 0 0;
       }
       .sort-order {
         display: none;

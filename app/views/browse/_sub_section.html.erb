@@ -1,0 +1,28 @@
+<div class="pane-inner <%= @sub_section.curated_links? ? 'curated-list' : 'a-to-z' %>">
+  <h1 tabindex="-1"><%= @sub_section.title %></h1>
+
+  <% @sub_section.lists.each do |list| %>
+    <% if @sub_section.curated_links? %>
+      <h2 class='list-header'><%= raw list.name %></h2>
+    <% else %>
+      <p class="sort-order"><%= raw list.name %></p>
+    <% end %>
+
+    <ul>
+      <% list.links.each do |link| %>
+        <li><%= link_to link.title, link.web_url %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <% if @related_topics.any? %>
+    <div class="detailed-guidance">
+      <h2>Detailed guidance</h2>
+      <ul>
+        <% @related_topics.each do |related_topic| %>
+          <li><%= link_to related_topic.title, related_topic.web_url %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>

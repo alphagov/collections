@@ -1,9 +1,9 @@
-<% content_for :title, "#{sub_section_tag.title} - GOV.UK" %>
+<% content_for :title, "#{@sub_section.title} - GOV.UK" %>
 <% content_for :page_class, "browse" %>
 
 <div class="browse-panes subsection" data-state="subsection">
   <div id="subsection" class="pane with-sort">
-    <%= render 'subsection' %>
+    <%= render 'sub_section' %>
   </div>
 
   <div id="section" class="pane">

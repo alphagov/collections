@@ -29,7 +29,9 @@ class BrowseController < ApplicationController
   end
 
   def sub_section
-    return error_404 unless sub_section_tag
+    @sub_section = SubSection.new(sub_section_slug)
+
+    return error_404 unless @sub_section.exists?
 
     @related_topics = RelatedTopicList.new(
       Collections.services(:content_store),
@@ -42,7 +44,7 @@ class BrowseController < ApplicationController
     respond_to do |f|
       f.html
       f.json do
-        render json: { html: render_partial('_subsection') }
+        render json: { html: render_partial('_sub_section') }
       end
     end
   end
@@ -66,16 +68,6 @@ private
     @section_tags ||= Collections.services(:content_api).sub_sections(section_slug).results.sort_by { |category| category.title }
   end
   helper_method :section_tags
-
-  def sub_section_tag
-    @sub_section ||= Collections.services(:content_api).tag(sub_section_slug)
-  end
-  helper_method :sub_section_tag
-
-  def sub_section_artefacts
-    @sub_section_artefacts ||= Collections.services(:content_api).with_tag(sub_section_slug).results.sort_by { |category| category.title }
-  end
-  helper_method :sub_section_artefacts
 
   def root_sections
     @root_sections ||= Collections.services(:content_api).root_sections.results.sort_by { |category| category.title }
