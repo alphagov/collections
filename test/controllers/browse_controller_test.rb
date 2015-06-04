@@ -74,6 +74,7 @@ describe BrowseController do
   describe "GET sub_section" do
     before do
       RelatedTopicList.any_instance.stubs(:related_topics_for).returns([])
+      SubSection.any_instance.stubs(:curated_links?).returns(false)
 
       content_api_has_tag("section", "crime-and-justice")
       content_api_has_tag("section", "crime-and-justice/judges")

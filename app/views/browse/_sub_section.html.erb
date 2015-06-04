@@ -1,11 +1,19 @@
-<div class="pane-inner">
-  <h1 tabindex="-1"><%= sub_section_tag.title %></h1>
-  <p class="sort-order">A&#8202;to&#8202;Z</p> <!-- &#8202 = hairspace -->
-  <ul>
-    <% sub_section_artefacts.each do |artefact| %>
-      <li><%= link_to artefact.title, artefact.web_url %></li>
+<div class="pane-inner <%= @sub_section.curated_links? ? 'curated-list' : 'a-to-z' %>">
+  <h1 tabindex="-1"><%= @sub_section.title %></h1>
+
+  <% @sub_section.lists.each do |list| %>
+    <% if @sub_section.curated_links? %>
+      <h2 class='list-header'><%= raw list.name %></h2>
+    <% else %>
+      <p class="sort-order"><%= raw list.name %></p>
     <% end %>
-  </ul>
+
+    <ul>
+      <% list.links.each do |link| %>
+        <li><%= link_to link.title, link.web_url %></li>
+      <% end %>
+    </ul>
+  <% end %>
 
   <% if @related_topics.any? %>
     <div class="detailed-guidance">
