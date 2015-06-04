@@ -1,4 +1,6 @@
 ENV["GOVUK_WEBSITE_ROOT"] = "http://www.test.gov.uk"
+ENV["GOVUK_APP_DOMAIN"] = "test.gov.uk"
+ENV["GOVUK_ASSET_ROOT"] = "http://static.test.gov.uk"
 ENV["RAILS_ENV"] ||= "test"
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
