@@ -1,11 +1,18 @@
-# Collections
+# Collections Frontend
 
-Collections contains specialist browse functionality for GOV.UK. In the future,
-it will become the location for all browse pages, faceted lists, and search.
+Collections serves the GOV.UK browse and topic pages.
+
+![Browse page](docs/browse-page.jpg)
+![Topic page](docs/topic-page.jpg)
+![Subtopic page](docs/subtopic-page.jpg)
+
+(As of June 2015)
 
 ## Live examples
 
- - [gov.uk/browse](https://www.gov.uk/browse)
+- Browse page: [gov.uk/browse](https://www.gov.uk/browse)
+- Topic page: [gov.uk/oil-and-gas](https://www.gov.uk/oil-and-gas)
+- Subtopic page: [gov.uk/oil-and-gas/fields-and-wells](https://www.gov.uk/oil-and-gas/fields-and-wells)
 
 ## Nomenclature
 
