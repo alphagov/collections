@@ -13,7 +13,7 @@ gem 'logstasher', '0.5.0'
 if ENV['SLIMMER_DEV']
   gem 'slimmer', :path => '../slimmer'
 else
-  gem 'slimmer', '8.2.0'
+  gem 'slimmer', '8.2.1'
 end
 
 if ENV['API_DEV']
