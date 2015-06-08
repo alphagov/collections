@@ -44,6 +44,15 @@ describe SubSection do
       refute sub_section.curated_links?
     end
 
+    it "returns false when there is an empty list of gurated groups" do
+      content_store_has_item '/browse/crime-and-justice/judges', { details: { groups: [] } }
+      content_api_has_artefacts_with_a_tag "section", "crime-and-justice/judges", ["judge-dredd"]
+
+      sub_section = SubSection.new('crime-and-justice/judges')
+
+      refute sub_section.curated_links?
+    end
+
     it "returns true when there are grouped links in the content store" do
       content_store_has_item '/browse/crime-and-justice/judges', { details: { groups: [ { name: "Movie Judges", contents: ['https://contentapi.test.gov.uk/judge-dredd.json'] }]} }
       content_api_has_artefacts_with_a_tag "section", "crime-and-justice/judges", ["judge-dredd"]

@@ -16,7 +16,7 @@ class SubSection
   end
 
   def curated_links?
-    subsection_from_content_store.details && subsection_from_content_store.details.groups
+    groups.any?
   end
 
   def exists?
@@ -25,8 +25,12 @@ class SubSection
 
 private
 
+  def groups
+    (subsection_from_content_store.details && subsection_from_content_store.details.groups) || []
+  end
+
   def curated_lists
-    subsection_from_content_store.details.groups.map do |group|
+    groups.map do |group|
       links = group.contents.map do |url|
         tagged_items_from_content_api.find { |artefact| artefact.id == url }
       end
