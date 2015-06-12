@@ -1,9 +1,11 @@
 require 'gds_api/test_helpers/content_api'
 require 'gds_api/test_helpers/content_store'
+require 'gds_api/test_helpers/collections_api'
 
 module BrowseTestHelpers
   include GdsApi::TestHelpers::ContentApi
   include GdsApi::TestHelpers::ContentStore
+  include GdsApi::TestHelpers::CollectionsApi
 
   def stub_browse_sections(section: nil, sub_section: nil, artefact: nil,
                            organisations: [])

@@ -1,6 +1,6 @@
 Given /^there are documents in a subtopic$/ do
   stub_topic_lookups
-  stub_curated_lists_for("/oil-and-gas/fields-and-wells")
+  collections_api_has_content_for("/oil-and-gas/fields-and-wells")
 end
 
 When /^I view the browse page for that subtopic$/ do
@@ -8,5 +8,7 @@ When /^I view the browse page for that subtopic$/ do
 end
 
 Then /^I see a list of organisations associated with content in the subtopic$/ do
-  assert_presence_of_organisations
+  @organisations.each do |slug|
+    assert page.has_selector?("a[href='/#{slug}'][class='organisation-link']")
+  end
 end

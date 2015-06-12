@@ -1,21 +1,23 @@
 Given(/^a topic$/) do
   stub_topic_lookups
-  stub_curated_lists_for("/oil-and-gas/fields-and-wells")
+  collections_api_has_content_for("/oil-and-gas/fields-and-wells")
 end
 
 When(/^I access the email signup page via the topic$/) do
-  ## Since we don't have a latest page yet,
-  ## this behaviour is being simulated by going direct to the signup page.
-  # visit_latest_page("oil-and-gas/fields-and-wells")
-  # follow_email_signup_link
-
   visit email_signup_path(topic_slug: "oil-and-gas", subtopic_slug: "fields-and-wells")
 end
 
 When(/^I sign up to the email alerts$/) do
-  subscribe_to_email_alerts
+  click_on "Create subscription"
 end
 
 Then(/^my subscription should be registered$/) do
-  expect_registration_to(slug: "oil-and-gas/fields-and-wells", topic: "Oil and gas", subtopic: "Example title")
+  Collections.services(:email_alert_api)
+    .expects(:find_or_create_subscriber_list)
+    .with(
+      "title" => "Oil and gas: Example title",
+      "tags" => {
+        "topics" => ["oil-and-gas/fields-and-wells"]
+      }
+    ).returns(OpenStruct.new("subscriber_list" => OpenStruct.new("subscription_url" => "/oil-and-gas/fields-and-wells")))
 end
