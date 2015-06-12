@@ -41,6 +41,7 @@ git clone git@github.com:alphagov/govuk-content-schemas.git tmp/govuk-content-sc
 bundle install --path "${HOME}/bundles/${JOB_NAME}" --deployment
 GOVUK_CONTENT_SCHEMAS_PATH=tmp/govuk-content-schemas RAILS_ENV=test bundle exec rake
 bundle exec rake assets:precompile
+bundle exec rake spec:javascript
 
 export EXIT_STATUS=$?
 

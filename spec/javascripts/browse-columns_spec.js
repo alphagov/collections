@@ -1,4 +1,11 @@
 describe('browse-columns.js', function() {
+
+  beforeEach(function () {
+    // The window size needs to be wider than 500 pixels, otherwise the
+    // ajax-browsing will be disabled.
+    setWindowSize(1024)
+  })
+
   it("should cache objects", function() {
     var bc = new GOVUK.BrowseColumns({ $el: $('<div>') });
 
@@ -16,17 +23,17 @@ describe('browse-columns.js', function() {
   });
 
   it("should get section data and cache it", function() {
-    var promiseObj = jasmine.createSpyObj('promiseObj', ['done', 'error']);
+    var promiseObj = jasmine.createSpyObj('promiseObj', ['done', 'error', 'resolve']);
     spyOn(jQuery, 'ajax').and.returnValue(promiseObj);
     spyOn(jQuery, 'Deferred').and.returnValue(promiseObj);
 
     var bc = new GOVUK.BrowseColumns({ $el: $('<div>') });
     spyOn(bc, 'sectionCache');
 
-    var responseObj = bc.getSectionData('section');
+    var responseObj = bc.getSectionData({ slug: 'section' });
 
     expect(jQuery.ajax).toHaveBeenCalledWith({
-      url: '/api/tags.json?type=section&parent_id=section'
+      url: '/browse/section.json'
     });
     expect(promiseObj.done).toHaveBeenCalled();
     promiseObj.done.calls.mostRecent().args[0]('response data')
@@ -41,7 +48,7 @@ describe('browse-columns.js', function() {
     var bc = new GOVUK.BrowseColumns({ $el: $('<div>') });
     bc.sectionCache('section', 'section', 'data');
 
-    var responseObj = bc.getSectionData('section');
+    var responseObj = bc.getSectionData({ slug: 'section' });
 
     expect(jQuery.ajax.calls.any()).toBe(false);
 
@@ -50,17 +57,17 @@ describe('browse-columns.js', function() {
   });
 
   it("should get subsection data and cache it", function() {
-    var promiseObj = jasmine.createSpyObj('promiseObj', ['done', 'error']);
+    var promiseObj = jasmine.createSpyObj('promiseObj', ['done', 'error', 'resolve']);
     spyOn(jQuery, 'ajax').and.returnValue(promiseObj);
     spyOn(jQuery, 'Deferred').and.returnValue(promiseObj);
 
     var bc = new GOVUK.BrowseColumns({ $el: $('<div>') });
     spyOn(bc, 'sectionCache');
 
-    var responseObj = bc.getSectionData('section/subsection');
+    var responseObj = bc.getSectionData({ subsection: true, slug: 'section/subsection' });
 
     expect(jQuery.ajax).toHaveBeenCalledWith({
-      url: '/api/with_tag.json?section=section/subsection'
+      url: '/browse/section/subsection.json'
     });
     expect(promiseObj.done).toHaveBeenCalled();
     promiseObj.done.calls.mostRecent().args[0]('response data')
@@ -75,7 +82,7 @@ describe('browse-columns.js', function() {
     var bc = new GOVUK.BrowseColumns({ $el: $('<div>') });
     bc.sectionCache('section', 'section/subsection', 'data');
 
-    var responseObj = bc.getSectionData('section/subsection');
+    var responseObj = bc.getSectionData({ slug: 'section/subsection' });
 
     expect(jQuery.ajax.calls.any()).toBe(false);
 
@@ -87,7 +94,7 @@ describe('browse-columns.js', function() {
     var paths = [
       {
         path: '/browse',
-        output: { section: '', path: '/browse/tax', slug: '' }
+        output: { section: '', path: '/browse', slug: '' }
       },
       {
         path: '/browse/tax',
@@ -132,4 +139,17 @@ describe('browse-columns.js', function() {
     expect(context.$breadcrumbs.find('li').length).toEqual(2);
     expect(context.$breadcrumbs.find('li a').attr('href')).toEqual('/browse/first');
   });
+
+  // http://stackoverflow.com/questions/9821166/error-accessing-jquerywindow-height-in-jasmine-while-running-tests-in-maven
+  function setWindowSize(size) {
+    $.prototype.width = function() {
+      var original = $.prototype.width;
+
+      if (this[0] === window) {
+        return size;
+      } else {
+        return original.apply(this, arguments);
+      }
+    }
+  }
 });
