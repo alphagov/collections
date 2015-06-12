@@ -16,10 +16,14 @@ class MainstreamBrowsingTest < ActionDispatch::IntegrationTest
 
   def stub_other_requests(content_item)
     _, _, section, sub_section = content_item['base_path'].split('/')
+
+    content_api_has_root_tags("section", ['foo', 'bar', section].compact)
+
+    return if content_item['base_path'] == '/browse'
+
     sub_section_slug = [section, sub_section].join('/')
     content_api_has_tag("section", section)
     content_api_has_tag("section", sub_section_slug)
-    content_api_has_root_tags("section", [section])
     content_api_has_child_tags("section", section, [sub_section_slug])
     content_api_has_artefacts_with_a_tag("section", sub_section_slug, [])
 
