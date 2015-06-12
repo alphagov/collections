@@ -34,12 +34,6 @@ module TopicHelper
       )
     )
   end
-
-  def assert_presence_of_organisations
-    @organisations.each do |slug|
-      assert page.has_selector?("a[href='/#{slug}'][class='organisation-link']")
-    end
-  end
 end
 
 World(TopicHelper)

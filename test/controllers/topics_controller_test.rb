@@ -14,13 +14,6 @@ describe TopicsController do
       content_store_has_item('/oil-and-gas', content_schema_example(:topic, :topic))
     end
 
-    it "requests a tag from the Content API and assign it" do
-      get :show, topic_slug: "oil-and-gas"
-
-      assert_equal "Oil and Gas", assigns(:topic).title
-      assert_equal "Guidance for the oil and gas industry", assigns(:topic).description
-    end
-
     it "sets the correct slimmer headers" do
       get :show, topic_slug: "oil-and-gas"
 

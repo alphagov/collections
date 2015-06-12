@@ -35,6 +35,11 @@ group :test do
   gem 'govuk-content-schema-test-helpers', '~> 1.1.0'
 end
 
+group :test do
+  gem 'simplecov', '~> 0.10.0'
+  gem 'simplecov-rcov', '~> 0.2.3'
+end
+
 group :development, :test do
   gem 'byebug'
   gem 'jasmine-rails'

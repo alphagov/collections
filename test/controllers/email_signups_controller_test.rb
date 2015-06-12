@@ -20,7 +20,6 @@ describe EmailSignupsController do
       get :new, @valid_subtopic_params
 
       assert_response :success
-      assert_select ".signup-form"
     end
   end
 
