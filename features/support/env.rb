@@ -11,9 +11,5 @@ require 'slimmer/test'
 
 ActionController::Base.allow_rescue = false
 
-Capybara.javascript_driver = :webkit
-
-Before('@javascript') do
-  # Block javascript from loading external URLs like Google Analytics.
-  page.driver.block_unknown_urls
-end
+require 'capybara/poltergeist'
+Capybara.javascript_driver = :poltergeist

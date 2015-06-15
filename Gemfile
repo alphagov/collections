@@ -25,7 +25,9 @@ end
 gem 'plek', '~> 1.10.0'
 
 group :test do
-  gem 'capybara-webkit', '~> 1.5.2'
+  gem 'capybara', '~> 2.4.1'
+  gem 'poltergeist', '~> 1.6.0'
+
   gem 'minitest-spec-rails', '~> 5.2.0'
   gem 'mocha', '~> 1.1.0', require: false
   gem 'webmock', '~> 1.21.0', require: false
