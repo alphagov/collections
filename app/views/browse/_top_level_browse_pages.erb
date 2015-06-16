@@ -1,0 +1,10 @@
+<div id="root" class="pane">
+  <h1 class="visuallyhidden" tabindex="-1">All categories</h1>
+  <ul>
+    <% top_level_browse_pages.each do |page| %>
+      <li class="<%= browsing_in_top_level_page?(page) ? 'active' : '' %>">
+        <%= link_to page.title, page.web_url %>
+      </li>
+    <% end %>
+  </ul>
+</div>

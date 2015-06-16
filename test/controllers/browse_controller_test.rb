@@ -28,13 +28,13 @@ describe BrowseController do
       api_returns_404_for("/tags/banana.json")
       api_returns_404_for("/tags.json?parent_id=banana&type=section")
 
-      get :section, section: "banana"
+      get :top_level_browse_page, top_level_slug: "banana"
 
       assert_response 404
     end
 
     it "return a cacheable 404 without calling content_api if the section slug is invalid" do
-      get :section, section: "this & that"
+      get :top_level_browse_page, top_level_slug: "this & that"
 
       assert_equal "404", response.code
       assert_equal "max-age=600, public",  response.headers["Cache-Control"]
@@ -45,7 +45,7 @@ describe BrowseController do
       content_api_has_section("crime-and-justice")
       content_api_has_subsections("crime-and-justice", ["alpha"])
 
-      get :section, section: "crime-and-justice"
+      get :top_level_browse_page, top_level_slug: "crime-and-justice"
 
       assert_equal "browse",  response.headers["X-Slimmer-Format"]
     end
@@ -54,7 +54,7 @@ describe BrowseController do
       content_api_has_section("crime-and-justice")
       content_api_has_subsections("crime-and-justice", ["alpha"])
 
-      get :section, section: "crime-and-justice"
+      get :top_level_browse_page, top_level_slug: "crime-and-justice"
 
       assert_equal "max-age=1800, public",  response.headers["Cache-Control"]
     end
@@ -63,7 +63,7 @@ describe BrowseController do
   describe "GET sub_section" do
     before do
       RelatedTopicList.any_instance.stubs(:related_topics_for).returns([])
-      SubSection.any_instance.stubs(:curated_links?).returns(false)
+      BrowsePageContentItem.any_instance.stubs(:curated_links?).returns(false)
 
       content_api_has_tag("section", "crime-and-justice")
       content_api_has_tag("section", "crime-and-justice/judges")
@@ -77,20 +77,20 @@ describe BrowseController do
         [OpenStruct.new(title: 'A Related Topic', web_url: 'https://www.gov.uk/benefits/related')]
       )
 
-      get :sub_section, section: "crime-and-justice", sub_section: "judges", :foo => "bar"
+      get :second_level_browse_page, top_level_slug: "crime-and-justice", second_level_slug: "judges", :foo => "bar"
     end
 
     it "404 if the section does not exist" do
       api_returns_404_for("/tags/crime-and-justice%2Ffrume.json")
       api_returns_404_for("/tags/crime-and-justice.json")
 
-      get :sub_section, section: "crime-and-justice", sub_section: "frume"
+      get :second_level_browse_page, top_level_slug: "crime-and-justice", second_level_slug: "frume"
 
       assert_response 404
     end
 
     it "return a cacheable 404 without calling content_api if the section slug is invalid" do
-      get :sub_section, section: "this & that", sub_section: "foo"
+      get :second_level_browse_page, top_level_slug: "this & that", second_level_slug: "foo"
 
       assert_equal "404", response.code
       assert_equal "max-age=600, public",  response.headers["Cache-Control"]
@@ -100,13 +100,13 @@ describe BrowseController do
     it "404 if the sub section does not exist" do
       api_returns_404_for("/tags/crime-and-justice%2Ffrume.json")
 
-      get :sub_section, section: "crime-and-justice", sub_section: "frume"
+      get :second_level_browse_page, top_level_slug: "crime-and-justice", second_level_slug: "frume"
 
       assert_response 404
     end
 
     it "return a cacheable 404 without calling content_api if the sub section slug is invalid" do
-      get :sub_section, section: "foo", sub_section: "this & that"
+      get :second_level_browse_page, top_level_slug: "foo", second_level_slug: "this & that"
 
       assert_equal "404", response.code
       assert_equal "max-age=600, public",  response.headers["Cache-Control"]
@@ -114,13 +114,13 @@ describe BrowseController do
     end
 
     it "set slimmer format of browse" do
-      get :sub_section, section: "crime-and-justice", sub_section: "judges"
+      get :second_level_browse_page, top_level_slug: "crime-and-justice", second_level_slug: "judges"
 
       assert_equal "browse",  response.headers["X-Slimmer-Format"]
     end
 
     it "set correct expiry headers" do
-      get :sub_section, section: "crime-and-justice", sub_section: "judges"
+      get :second_level_browse_page, top_level_slug: "crime-and-justice", second_level_slug: "judges"
 
       assert_equal "max-age=1800, public",  response.headers["Cache-Control"]
     end

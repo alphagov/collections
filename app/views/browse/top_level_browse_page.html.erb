@@ -1,0 +1,13 @@
+<% content_for :title, "#{@page.title} - GOV.UK" %>
+<% content_for :page_class, "browse" %>
+
+<div class="browse-panes section" data-state="section">
+  <div id="section" class="pane with-sort">
+    <%= render 'second_level_browse_pages',
+          title: @page.title,
+          second_level_browse_pages: @page.second_level_browse_pages %>
+  </div>
+
+  <%= render 'top_level_browse_pages',
+        top_level_browse_pages: @page.top_level_browse_pages %>
+</div>

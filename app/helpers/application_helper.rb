@@ -1,15 +1,15 @@
 module ApplicationHelper
-  def browsing_in_root_section?(root_section)
-    params[:section].present? && params[:section] == root_section.slug
+  def browsing_in_top_level_page?(top_level_page)
+    params[:top_level_slug].present? && params[:top_level_slug] == top_level_page.slug
   end
 
-  def browsing_in_section?(section)
-    params[:sub_section].present? && full_slug == section.slug
+  def browsing_in_second_level_page?(section)
+    params[:second_level_slug].present? && full_slug == section.slug
   end
 
 private
 
   def full_slug
-    [params[:section], params[:sub_section]].join('/')
+    [params[:top_level_slug], params[:second_level_slug]].join('/')
   end
 end

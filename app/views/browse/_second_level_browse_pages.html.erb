@@ -1,0 +1,14 @@
+<div class="pane-inner">
+  <h1 tabindex="-1"><%= title %></h1>
+  <p class="sort-order">A&#8202;to&#8202;Z</p> <!-- &#8202 = hairspace -->
+  <ul>
+    <% second_level_browse_pages.each do |browse_page| %>
+      <li class='<%= browsing_in_second_level_page?(browse_page) ? 'active' : nil %>'>
+        <%= link_to browse_page.web_url do %>
+          <h3><%= browse_page.title %></h3>
+          <p><%= browse_page.details.description %></p>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>

@@ -30,18 +30,6 @@ module BrowseTestHelpers
     content_store_has_item '/browse/crime-and-justice/judges', { links: {} }
   end
 
-  def stub_404_detailed_guidance_response
-    stub_request(:get, "#{Plek.current.find('whitehall-admin')}/api/specialist/tags.json?parent_id=crime-and-justice/judges&type=section").to_raise(GdsApi::HTTPNotFound)
-
-    content_store_has_item '/browse/crime-and-justice/judges', { links: {} }
-  end
-
-  def browse_to_sub_section(section: nil, sub_section: nil)
-    visit browse_path
-    click_link section
-    click_link sub_section
-  end
-
   def assert_can_see_linked_item(name)
     assert page.has_selector?('a', text: name)
   end
