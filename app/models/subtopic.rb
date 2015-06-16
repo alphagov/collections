@@ -21,23 +21,7 @@ class Subtopic
   attr_reader :slug
 
   def groups
-    # FIXME: remove this temporary hack when we have a way to add
-    # manuals (and other content-store content) to a subtopic
-    if @slug == "farming-food-grants-payments/rural-grants-payments"
-      groups = details.groups.map do |group|
-        if group.name == "Rural development"
-          group.contents.unshift(
-            OpenStruct.new({
-              :title => "Countryside Stewardship",
-              :web_url => "#{Plek.new.website_root}/guidance/countryside-stewardship",
-            })
-          )
-        end
-        group
-      end
-    else
-      details.groups
-    end
+    details.groups
   end
 
   def changed_documents

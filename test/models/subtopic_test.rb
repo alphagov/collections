@@ -52,26 +52,6 @@ describe Subtopic, "#groups" do
 
     assert_equal stubbed_response_body['details']['groups'][0]['name'], subtopic.groups.first.name
   end
-
-  describe "hacking specific manual into /farming-food-grants-payments/rural-grants-payments" do
-    it "inserts an extra item into the 'Rural development' group" do
-      slug = "farming-food-grants-payments/rural-grants-payments"
-
-      data = File.open(Rails.root.join('test', 'fixtures', 'rural_grants_and_payments.json'))
-
-      url = GdsApi::TestHelpers::CollectionsApi::COLLECTIONS_API_ENDPOINT + "/specialist-sectors/#{slug}"
-      stub_request(:get, url).to_return(status: 200, body: data)
-
-
-      subtopic = Subtopic.find(slug)
-
-      rural_group = subtopic.groups.find {|group| group.name == "Rural development" }
-      refute_nil rural_group
-
-      assert_equal "Countryside Stewardship", rural_group.contents.first.title
-      assert_equal "#{Plek.new.website_root}/guidance/countryside-stewardship", rural_group.contents.first.web_url
-    end
-  end
 end
 
 describe Subtopic, "#changed_documents" do
