@@ -1,10 +1,10 @@
-class SubSection
-  attr_reader :sub_section_slug
+class BrowsePageContentItem
+  attr_reader :slug
 
   delegate :title, to: :tag_from_content_api
 
-  def initialize(sub_section_slug)
-    @sub_section_slug = sub_section_slug
+  def initialize(slug)
+    @slug = slug
   end
 
   def lists
@@ -19,14 +19,10 @@ class SubSection
     groups.any?
   end
 
-  def exists?
-    tag_from_content_api.present?
-  end
-
 private
 
   def groups
-    (subsection_from_content_store.details && subsection_from_content_store.details.groups) || []
+    (item_from_content_store.details && item_from_content_store.details.groups) || []
   end
 
   def curated_lists
@@ -54,20 +50,20 @@ private
   # Returns an array containing OpenStructs with keys :title, :web_url.
   def tagged_items_from_content_api
     @tagged_items_from_content_api ||= begin
-      content_api.with_tag(sub_section_slug).results.sort_by(&:title)
+      content_api.with_tag(slug).results.sort_by(&:title)
     end
   end
 
   # Returns an OpenStruct with the content blob.
-  def subsection_from_content_store
-    @subsection_from_content_store ||= begin
+  def item_from_content_store
+    @item_from_content_store ||= begin
       content_store = Collections.services(:content_store)
-      content_store.content_item('/browse/' + sub_section_slug)
+      content_store.content_item('/browse/' + slug)
     end
   end
 
   def tag_from_content_api
-    @tag_from_content_api ||= content_api.tag(sub_section_slug)
+    @tag_from_content_api ||= content_api.tag(slug) || raise(GdsApi::HTTPNotFound, 404)
   end
 
   def content_api

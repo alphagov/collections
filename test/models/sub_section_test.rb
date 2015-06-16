@@ -1,6 +1,6 @@
 require "test_helper"
 
-describe SubSection do
+describe BrowsePageContentItem do
   describe '#lists' do
     before do
       content_api_has_section "crime-and-justice"
@@ -11,7 +11,7 @@ describe SubSection do
       content_store_has_item '/browse/crime-and-justice/judges', { details: { } }
       content_api_has_artefacts_with_a_tag "section", "crime-and-justice/judges", ["judge-dredd"]
 
-      lists = SubSection.new('crime-and-justice/judges').lists
+      lists = BrowsePageContentItem.new('crime-and-justice/judges').lists
 
       assert_equal 1, lists.size
       assert_equal 'A&#8202;to&#8202;Z', lists.first.name
@@ -26,7 +26,7 @@ describe SubSection do
       content_store_has_item '/browse/crime-and-justice/judges', content_item
       content_api_has_artefacts_with_a_tag "section", "crime-and-justice/judges", ["judge-dredd"]
 
-      lists = SubSection.new('crime-and-justice/judges').lists
+      lists = BrowsePageContentItem.new('crime-and-justice/judges').lists
 
       assert_equal 1, lists.size
       assert_equal 'Movie Judges', lists.first.name
@@ -39,7 +39,7 @@ describe SubSection do
       content_store_has_item '/browse/crime-and-justice/judges', { details: { } }
       content_api_has_artefacts_with_a_tag "section", "crime-and-justice/judges", ["judge-dredd"]
 
-      sub_section = SubSection.new('crime-and-justice/judges')
+      sub_section = BrowsePageContentItem.new('crime-and-justice/judges')
 
       refute sub_section.curated_links?
     end
@@ -48,7 +48,7 @@ describe SubSection do
       content_store_has_item '/browse/crime-and-justice/judges', { details: { groups: [] } }
       content_api_has_artefacts_with_a_tag "section", "crime-and-justice/judges", ["judge-dredd"]
 
-      sub_section = SubSection.new('crime-and-justice/judges')
+      sub_section = BrowsePageContentItem.new('crime-and-justice/judges')
 
       refute sub_section.curated_links?
     end
@@ -57,27 +57,9 @@ describe SubSection do
       content_store_has_item '/browse/crime-and-justice/judges', { details: { groups: [ { name: "Movie Judges", contents: ['https://contentapi.test.gov.uk/judge-dredd.json'] }]} }
       content_api_has_artefacts_with_a_tag "section", "crime-and-justice/judges", ["judge-dredd"]
 
-      sub_section = SubSection.new('crime-and-justice/judges')
+      sub_section = BrowsePageContentItem.new('crime-and-justice/judges')
 
       assert sub_section.curated_links?
-    end
-  end
-
-  describe '#exists?' do
-    it "returns true if there is a artefact" do
-      content_api_has_tag("section", "crime-and-justice/judges")
-
-      sub_section = SubSection.new('crime-and-justice/judges')
-
-      assert sub_section.exists?
-    end
-
-    it "returns false if there is no artefact" do
-      api_returns_404_for("/tags/crime-and-justice%2Fno-such-section.json")
-
-      sub_section = SubSection.new('crime-and-justice/no-such-section')
-
-      refute sub_section.exists?
     end
   end
 end

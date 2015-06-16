@@ -16,11 +16,19 @@ Collections serves the GOV.UK browse and topic pages.
 
 ## Nomenclature
 
+### Topics
+
 - **Curated list**: a group of content tagged to a subtopic that has been
   curated into a named list.
 - **Topic**: a named group of sub-topics. (A deprecated name for this is "specialist sector".)
 - **Sub-topic**: a group of content within a topic. (A deprecated name for this is
 "specialist sub-sector".)
+
+### Browse pages
+
+- **Root browse page**: [gov.uk/browse](https://www.gov.uk/browse)
+- **Top level browse page**: [gov.uk/browse/benefits](https://www.gov.uk/browse/benefits)
+- **Second level browse page**: [gov.uk/browse/benefits/entitlement](https://www.gov.uk/browse/benefits/entitlement)
 
 ## Technical documentation
 

@@ -1,31 +1,33 @@
 Feature: Viewing browse
   As a user
-  I want to be able to browse content by sections
+  I want to be able to browse content
   So that I can quickly the content I need
 
   @javascript
-  Scenario: Browse to a subsection page with Javascript
-    Given there is an artefact tagged to a subsection
-    And there is a detailed guidance category tagged to a subsection
+  Scenario: Browse to a browse page page with Javascript
+    Given there is a browse page set up with links
+    And the page also has detailed guidance links
     When I visit the main browse page
-    And I click on the section
-    Then I see the list of subsections
-    When I click on the subsection
-    Then I see the artefact listed
-    And I see the detailed guidance category listed
+    And I click on a top level browse page
+    Then I see the list of second level browse pages
+    When I click on a second level browse page
+    Then I see the links tagged to the browse page
+    And I should see the detailed guidance links
 
-  Scenario: Browse to a subsection page without Javascript
-    Given there is an artefact tagged to a subsection
-    And there is a detailed guidance category tagged to a subsection
+  Scenario: Browse to a browse page page without Javascript
+    Given there is a browse page set up with links
+    And the page also has detailed guidance links
     When I visit the main browse page
-    And I click on the section
-    Then I see the list of subsections
-    When I click on the subsection
-    Then I see the artefact listed
-    And I see the detailed guidance category listed
+    And I click on a top level browse page
+    Then I see the list of second level browse pages
+    When I click on a second level browse page
+    Then I see the links tagged to the browse page
+    And I should see the detailed guidance links
 
-  Scenario: Browse to sub section without detailed guidance
-    Given there is an artefact tagged to a subsection
-    And there is no detailed guidance category tagged to the subsection
-    When I browse to the subsection
-    Then I see the artefact listed
+  Scenario: Browse to browse page that has no detailed guidance
+    Given there is a browse page set up with links
+    And there is no detailed guidance category tagged to the page
+    When I visit the main browse page
+    And I click on a top level browse page
+    When I click on a second level browse page
+    Then I see the links tagged to the browse page

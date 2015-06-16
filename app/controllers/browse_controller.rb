@@ -1,85 +1,55 @@
 class BrowseController < ApplicationController
-  rescue_from GdsApi::HTTPNotFound, with: lambda {
-    statsd.increment("browse.not_found")
-    error_404
-  }
+  rescue_from GdsApi::HTTPNotFound, with: :error_404
 
-  before_filter(:only => [:section, :sub_section]) { validate_slug_param(:section) }
-  before_filter(:only => [:sub_section]) { validate_slug_param(:sub_section) }
+  before_filter(:only => [:top_level_browse_page, :second_level_browse_page]) { validate_slug_param(:top_level_slug) }
+  before_filter(:only => [:second_level_browse_page]) { validate_slug_param(:second_level_slug) }
 
-  enable_request_formats section: [:json]
-  enable_request_formats sub_section: [:json]
+  enable_request_formats top_level_browse_page: [:json]
+  enable_request_formats second_level_browse_page: [:json]
 
   def index
-    options = {title: "browse", section_name: "Browse", section_link: "/browse"}
-    set_slimmer_artefact_headers(options)
+    @page = IndexBrowsePage.new
+    set_slimmer_artefact_headers(@page.slimmer_breadcrumb_options)
   end
 
-  def section
-    return error_404 unless section_tag
-
-    set_slimmer_artefact_headers
+  def top_level_browse_page
+    @page = TopLevelBrowsePage.new(params[:top_level_slug])
+    set_slimmer_artefact_headers(@page.slimmer_breadcrumb_options)
 
     respond_to do |f|
       f.html
       f.json do
-        render json: { html: render_partial('_section') }
+        render json: { html: second_level_browse_pages_partial(@page) }
       end
     end
   end
 
-  def sub_section
-    @sub_section = SubSection.new(sub_section_slug)
-
-    return error_404 unless @sub_section.exists?
-
-    @related_topics = RelatedTopicList.new(
-      Collections.services(:content_store),
-      Collections.services(:detailed_guidance_content_api)
-    ).related_topics_for(request.path.gsub('.json', ''))
-
-    options = {title: "browse", section_name: section_tag.title, section_link: section_tag.web_url}
-    set_slimmer_artefact_headers(options)
+  def second_level_browse_page
+    @page = SecondLevelBrowsePage.new(params[:top_level_slug], params[:second_level_slug])
+    set_slimmer_artefact_headers(@page.slimmer_breadcrumb_options)
 
     respond_to do |f|
       f.html
       f.json do
-        render json: { html: render_partial('_sub_section') }
+        render json: { html: render_partial('_links') }
       end
     end
   end
 
 private
 
-  def section_slug
-    params[:section]
+  def second_level_browse_pages_partial(page)
+    render_partial('_second_level_browse_pages',
+        title: page.title,
+        second_level_browse_pages: page.second_level_browse_pages)
   end
-
-  def sub_section_slug
-    [section_slug, params[:sub_section]].join('/')
-  end
-
-  def section_tag
-    @section ||= Collections.services(:content_api).tag(section_slug)
-  end
-  helper_method :section_tag
-
-  def section_tags
-    @section_tags ||= Collections.services(:content_api).sub_sections(section_slug).results.sort_by { |category| category.title }
-  end
-  helper_method :section_tags
-
-  def root_sections
-    @root_sections ||= Collections.services(:content_api).root_sections.results.sort_by { |category| category.title }
-  end
-  helper_method :root_sections
 
   def set_slimmer_artefact_headers(dummy_artefact={})
     set_slimmer_headers(format: 'browse')
     set_slimmer_dummy_artefact(dummy_artefact) unless dummy_artefact.empty?
   end
 
-  def render_partial(partial_name)
-    render_to_string(partial_name, formats: 'html', layout: false)
+  def render_partial(partial_name, locals = {})
+    render_to_string(partial_name, formats: 'html', layout: false, locals: locals)
   end
 end
