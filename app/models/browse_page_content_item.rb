@@ -1,10 +1,11 @@
 class BrowsePageContentItem
-  attr_reader :slug
+  attr_reader :slug, :item_from_content_store
 
   delegate :title, to: :tag_from_content_api
 
-  def initialize(slug)
+  def initialize(slug, item_from_content_store)
     @slug = slug
+    @item_from_content_store = item_from_content_store
   end
 
   def lists
@@ -51,14 +52,6 @@ private
   def tagged_items_from_content_api
     @tagged_items_from_content_api ||= begin
       content_api.with_tag(slug).results.sort_by(&:title)
-    end
-  end
-
-  # Returns an OpenStruct with the content blob.
-  def item_from_content_store
-    @item_from_content_store ||= begin
-      content_store = Collections.services(:content_store)
-      content_store.content_item('/browse/' + slug)
     end
   end
 

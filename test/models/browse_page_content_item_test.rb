@@ -11,7 +11,7 @@ describe BrowsePageContentItem do
       content_store_has_item '/browse/crime-and-justice/judges', { details: { } }
       content_api_has_artefacts_with_a_tag "section", "crime-and-justice/judges", ["judge-dredd"]
 
-      lists = BrowsePageContentItem.new('crime-and-justice/judges').lists
+      lists = BrowsePageContentItem.new('crime-and-justice/judges', stub(:details)).lists
 
       assert_equal 1, lists.size
       assert_equal 'A&#8202;to&#8202;Z', lists.first.name
@@ -25,8 +25,9 @@ describe BrowsePageContentItem do
       }
       content_store_has_item '/browse/crime-and-justice/judges', content_item
       content_api_has_artefacts_with_a_tag "section", "crime-and-justice/judges", ["judge-dredd"]
+      content_store_item = Collections.services(:content_store).content_item!('/browse/crime-and-justice/judges')
 
-      lists = BrowsePageContentItem.new('crime-and-justice/judges').lists
+      lists = BrowsePageContentItem.new('crime-and-justice/judges', content_store_item).lists
 
       assert_equal 1, lists.size
       assert_equal 'Movie Judges', lists.first.name
@@ -39,7 +40,7 @@ describe BrowsePageContentItem do
       content_store_has_item '/browse/crime-and-justice/judges', { details: { } }
       content_api_has_artefacts_with_a_tag "section", "crime-and-justice/judges", ["judge-dredd"]
 
-      sub_section = BrowsePageContentItem.new('crime-and-justice/judges')
+      sub_section = BrowsePageContentItem.new('crime-and-justice/judges', stub(:details))
 
       refute sub_section.curated_links?
     end
@@ -48,7 +49,7 @@ describe BrowsePageContentItem do
       content_store_has_item '/browse/crime-and-justice/judges', { details: { groups: [] } }
       content_api_has_artefacts_with_a_tag "section", "crime-and-justice/judges", ["judge-dredd"]
 
-      sub_section = BrowsePageContentItem.new('crime-and-justice/judges')
+      sub_section = BrowsePageContentItem.new('crime-and-justice/judges', stub(:details))
 
       refute sub_section.curated_links?
     end
@@ -56,8 +57,9 @@ describe BrowsePageContentItem do
     it "returns true when there are grouped links in the content store" do
       content_store_has_item '/browse/crime-and-justice/judges', { details: { groups: [ { name: "Movie Judges", contents: ['https://contentapi.test.gov.uk/judge-dredd.json'] }]} }
       content_api_has_artefacts_with_a_tag "section", "crime-and-justice/judges", ["judge-dredd"]
+      content_store_item = Collections.services(:content_store).content_item!('/browse/crime-and-justice/judges')
 
-      sub_section = BrowsePageContentItem.new('crime-and-justice/judges')
+      sub_section = BrowsePageContentItem.new('crime-and-justice/judges', content_store_item)
 
       assert sub_section.curated_links?
     end
