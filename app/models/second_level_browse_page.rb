@@ -10,8 +10,8 @@ class SecondLevelBrowsePage
   def slimmer_breadcrumb_options
     {
       title: "browse",
-      section_name: parent_top_level_browse_page.title,
-      section_link: parent_top_level_browse_page.web_url
+      section_name: active_top_level_browse_page.title,
+      section_link: active_top_level_browse_page.web_url
     }
   end
 
@@ -26,7 +26,7 @@ class SecondLevelBrowsePage
     ).related_topics_for("/browse/#{top_level_slug}/#{second_level_slug}")
   end
 
-  def parent_top_level_browse_page
+  def active_top_level_browse_page
     Collections.services(:content_api).tag(top_level_slug) || raise(GdsApi::HTTPNotFound, 404)
   end
 
