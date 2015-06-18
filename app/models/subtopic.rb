@@ -43,7 +43,7 @@ class Subtopic
   end
 
   def groups
-    []
+    Groups.new(base_path[1..-1], @content_item_data["details"]["groups"])
   end
 
 private

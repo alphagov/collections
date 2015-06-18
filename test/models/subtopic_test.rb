@@ -68,4 +68,19 @@ describe Subtopic do
       end
     end
   end
+
+  describe "groups" do
+    it "should pass the contentapi slug of the topic when constructing groups" do
+      Subtopic::Groups.expects(:new).with("business-tax/paye", anything()).returns(:a_groups_instance)
+
+      assert_equal :a_groups_instance, @subtopic.groups
+    end
+
+    it "should pass the groups data when constructing" do
+      Subtopic::Groups.expects(:new).with(anything(), :some_data).returns(:a_groups_instance)
+      @api_data["details"]["groups"] = :some_data
+
+      assert_equal :a_groups_instance, @subtopic.groups
+    end
+  end
 end
