@@ -1,5 +1,4 @@
 Given(/^there is curated content for a subtopic$/) do
-  collections_api_has_content_for("/oil-and-gas/fields-and-wells")
   stub_topic_lookups
 end
 

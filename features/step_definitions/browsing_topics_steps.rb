@@ -1,6 +1,5 @@
 Given /^there are documents in a subtopic$/ do
   stub_topic_lookups
-  collections_api_has_content_for("/oil-and-gas/fields-and-wells")
 end
 
 When /^I view the browse page for that subtopic$/ do
