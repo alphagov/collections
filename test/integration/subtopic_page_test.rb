@@ -113,4 +113,13 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
     assert page.has_link?("North sea shipping lanes", :href => "/north-sea-shipping-lanes")
     assert page.has_link?("Undersea piping restrictions", :href => "/undersea-piping-restrictions")
   end
+
+  it "renders a beta subtopic" do
+    content_store_has_item("/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore", details: {beta: true}))
+    stub_topic_organisations('oil-and-gas/offshore')
+
+    visit "/oil-and-gas/offshore"
+
+    assert page.has_content?("This page is in beta"), "has beta-label"
+  end
 end
