@@ -1,19 +1,19 @@
 class SubtopicsController < ApplicationController
   before_filter { validate_slug_param(:topic_slug) }
   before_filter { validate_slug_param(:subtopic_slug) }
-  before_filter :send_404_if_not_found
   before_filter :set_slimmer_format
 
-  def show
-    @groups = TopicPresenter.build_from_subtopic_content(
-      subtopic.groups,
-      subtopic.parent_topic
-    ).sort_by(&:title)
+  rescue_from GdsApi::HTTPNotFound, :with => :error_404
 
-    set_slimmer_dummy_artefact(
-      section_name: subtopic.parent_topic_title,
-      section_link: "/#{params[:topic_slug]}"
-    )
+  def show
+    @subtopic = Subtopic.find("/#{slug}")
+
+    if @subtopic.parent
+      set_slimmer_dummy_artefact(
+        section_name: @subtopic.parent.title,
+        section_link: @subtopic.parent.base_path
+      )
+    end
   end
 
   def latest_changes

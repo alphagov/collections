@@ -3,7 +3,18 @@ require 'test_helper'
 describe SubtopicsController do
   describe "GET subtopic with a valid topic and subtopic slug" do
     setup do
-      collections_api_has_content_for("/oil-and-gas/wells")
+      content_store_has_item(
+        "/oil-and-gas/wells",
+        content_item_for_base_path("/oil-and-gas/wells").merge({
+          "links" => {
+            "parent" => [{
+              "title" => "Oil and Gas",
+              "base_path" => "/oil-and-gas",
+            }],
+          },
+        }),
+      )
+      content_api_has_artefacts_with_a_tag('specialist_sector', 'oil-and-gas/wells', [])
 
       Collections::Application.config.search_client.stubs(:unified_search).with(
         count: "0",
@@ -22,7 +33,7 @@ describe SubtopicsController do
       artefact = JSON.parse(response.headers["X-Slimmer-Artefact"])
       primary_tag = artefact["tags"][0]
       assert_equal "/oil-and-gas", primary_tag["content_with_tag"]["web_url"]
-      assert_equal "Oil and gas", primary_tag["title"] # lowercase due to the humanisation of slug in test helpers
+      assert_equal "Oil and Gas", primary_tag["title"]
       assert_equal "specialist-sector", response.headers["X-Slimmer-Format"]
     end
 
@@ -33,7 +44,7 @@ describe SubtopicsController do
     end
 
     it "returns a 404 status for GET subtopic with an invalid subtopic tag" do
-      collections_api_has_no_content_for("/oil-and-gas/coal")
+      content_store_does_not_have_item("/oil-and-gas/coal")
 
       get :show, topic_slug: "oil-and-gas", subtopic_slug: "coal"
 
@@ -47,7 +58,7 @@ describe SubtopicsController do
 
       assert_equal "404", response.code
       assert_equal "max-age=600, public", response.headers["Cache-Control"]
-      assert_not_requested(:get, %r{\A#{GdsApi::TestHelpers::ContentApi::CONTENT_API_ENDPOINT}})
+      assert_not_requested(:get, %r{\A#{GdsApi::TestHelpers::ContentStore::CONTENT_STORE_ENDPOINT}})
     end
   end
 end

@@ -1,17 +1,19 @@
-<% content_for :title, "#{subtopic.combined_title} - GOV.UK" %>
+<% content_for :title, "#{@subtopic.combined_title} - GOV.UK" %>
 <% content_for :page_title do %>
-  <%= link_to subtopic.parent_topic_title, topic_path(subtopic.parent_slug) %>
-  <%= subtopic.title %>
+  <%- if @subtopic.parent -%>
+    <%= link_to @subtopic.parent.title, @subtopic.parent.base_path %>
+  <%- end -%>
+  <%= @subtopic.title %>
 <% end %>
 
-<%= render layout: "subtopic", locals: {subtopic: subtopic, organisations: organisations, link_to_latest_feed: true, beta_label: false} do %>
-  <% @groups.each do |group| -%>
-    <nav class="index-list with-title" aria-labelledby="<%= group.artefact.name.parameterize %>">
-      <h1 id="<%= group.artefact.name.parameterize %>"><%= group.artefact.name %></h1>
+<%= render layout: "subtopic", locals: {subtopic: @subtopic, organisations: organisations, link_to_latest_feed: true, beta_label: false} do %>
+  <% @subtopic.groups.each do |group| -%>
+    <nav class="index-list with-title" aria-labelledby="<%= group.title.parameterize %>">
+      <h1 id="<%= group.title.parameterize %>"><%= group.title %></h1>
       <ul>
-      <% group.artefact.contents.each do |group_item| -%>
+      <% group.contents.each do |group_item| -%>
         <li>
-          <a href="<%= group_item.web_url %>"><%= group_item.title %></a>
+          <a href="<%= group_item.base_path %>"><%= group_item.title %></a>
         </li>
       <% end -%>
       </ul>
