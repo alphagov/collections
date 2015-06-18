@@ -22,11 +22,11 @@ function error_handler {
   else
     echo "Error on or near line ${parent_lineno}; exiting with status ${code}"
   fi
-  github_status "$REPO_NAME" failure "failed on Jenkins"
+  github_status "$REPO_NAME" error "errored on Jenkins"
   exit "${code}"
 }
 
-trap "error_handler ${LINENO}" ERR
+trap 'error_handler ${LINENO}' ERR
 github_status "$REPO_NAME" pending "is running on Jenkins"
 
 # Clone govuk-content-schemas depedency for contract tests
