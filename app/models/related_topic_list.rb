@@ -1,7 +1,7 @@
 # FIXME: Once the content has been migrated to content store, remove whitehall code.
 class RelatedTopicList
-  def initialize(content_store, whitehall)
-    @content_store = content_store
+  def initialize(content_item, whitehall)
+    @content_item = content_item
     @whitehall = whitehall
   end
 
@@ -12,7 +12,7 @@ class RelatedTopicList
   private
 
   def fetch_results_for_path(path)
-    results = @content_store.content_item(path).try(:links).try(:related_topics).to_a
+    results = @content_item.try(:links).try(:related_topics).to_a
 
     if results.any?
       results
@@ -24,7 +24,7 @@ class RelatedTopicList
   end
 
   def legacy_fallback_to_whitehall(path)
-    response = @whitehall.sub_sections(path.gsub('/browse/', ''))
+    response = @whitehall.sub_sections(path)
 
     response.results.map do |detailed_guide_category|
       OpenStruct.new(
