@@ -37,7 +37,7 @@ rm -rf tmp/govuk-content-schemas
 git clone git@github.com:alphagov/govuk-content-schemas.git tmp/govuk-content-schemas
 (
   cd tmp/govuk-content-schemas
-  git checkout $SCHEMA_GIT_COMMIT
+  git checkout ${SCHEMA_GIT_COMMIT:-"master"}
 )
 
 bundle install --path "${HOME}/bundles/${JOB_NAME}" --deployment
