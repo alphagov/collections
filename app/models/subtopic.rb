@@ -27,7 +27,9 @@ class Subtopic
   end
 
   def parent
-    if @content_item_data["links"].has_key?("parent") && @content_item_data["links"]["parent"].any?
+    if @content_item_data.has_key?("links") &&
+        @content_item_data["links"].has_key?("parent") &&
+        @content_item_data["links"]["parent"].any?
       OpenStruct.new(@content_item_data["links"]["parent"].first)
     else
       nil

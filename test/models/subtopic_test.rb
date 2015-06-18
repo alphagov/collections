@@ -66,6 +66,11 @@ describe Subtopic do
       it "returns the subtopic title in combined_title" do
         assert_equal "PAYE", @subtopic.combined_title
       end
+
+      it "handles the links hash missing completely" do
+        @api_data.delete("links")
+        assert_nil @subtopic.parent
+      end
     end
   end
 
