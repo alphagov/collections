@@ -29,6 +29,9 @@ function error_handler {
 trap 'error_handler ${LINENO}' ERR
 github_status "$REPO_NAME" pending "is running on Jenkins"
 
+# Cleanup anything left from previous test runs
+git clean -fdx
+
 # Clone govuk-content-schemas depedency for contract tests
 rm -rf tmp/govuk-content-schemas
 git clone git@github.com:alphagov/govuk-content-schemas.git tmp/govuk-content-schemas
