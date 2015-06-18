@@ -1,60 +1,52 @@
+require 'ostruct'
+
 class Subtopic
-  delegate :description, :title, :details, to: :data
-  delegate :documents_total, :documents_start, :beta, to: :details
-  alias :beta? :beta
 
-  def self.find(slug, api_options = {})
-    collections_api = Collections.services(:collections_api)
+  def self.find(base_path, pagination_options = {})
+    api_response = Collections.services(:content_store).content_item!(base_path)
+    new(api_response.to_hash, pagination_options)
+  end
 
-    if (collections_api_response = collections_api.topic("/#{slug}", filtered_api_options(api_options)))
-      new(slug, collections_api_response)
+  def initialize(content_item_data, pagination_options = {})
+    @content_item_data = content_item_data
+    @pagination_options = pagination_options
+  end
+
+  [
+    :base_path,
+    :title,
+    :description,
+  ].each do |field|
+    define_method field do
+      @content_item_data[field.to_s]
+    end
+  end
+
+  def beta?
+    !! @content_item_data["details"]["beta"]
+  end
+
+  def parent
+    if @content_item_data["links"].has_key?("parent") && @content_item_data["links"]["parent"].any?
+      OpenStruct.new(@content_item_data["links"]["parent"].first)
     else
       nil
     end
   end
 
-  def initialize(slug, data)
-    @slug = slug
-    @data = data
+  def combined_title
+    if parent
+      "#{parent.title}: #{title}"
+    else
+      title
+    end
   end
-
-  attr_reader :slug
 
   def groups
-    details.groups
-  end
-
-  def changed_documents
-    details.documents
-  end
-
-  def parent_topic
-    data.parent
-  end
-
-  def parent_topic_title
-    parent_topic.title
-  end
-
-  def parent_slug
-    split_slug[0]
-  end
-
-  def child_slug
-    split_slug[1]
-  end
-
-  def combined_title
-    "#{parent_topic_title}: #{title}"
+    []
   end
 
 private
-
-  attr_reader :data
-
-  def split_slug
-    slug.split('/')
-  end
 
   def self.filtered_api_options(options)
     options.slice(:start, :count).reject {|_,v| v.blank? }
