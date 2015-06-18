@@ -3,6 +3,27 @@ require 'integration_test_helper'
 class SubtopicPageTest < ActionDispatch::IntegrationTest
   include RummagerHelpers
 
+  def oil_and_gas_subtopic_item(subtopic_slug, params = {})
+    base = {
+      base_path: "/oil-and-gas/#{subtopic_slug}",
+      title: subtopic_slug.humanize,
+      description: "Offshore drilling and exploration",
+      format: "topic",
+      public_updated_at: 10.days.ago.iso8601,
+      details: {
+        groups: [],
+      },
+      links: {
+        "parent" => [
+          "title" => "Oil and Gas",
+          "base_path" => "/oil-and-gas",
+        ]
+      },
+    }
+    base[:details].merge!(params.delete(:details)) if params.has_key?(:details)
+    base.merge(params)
+  end
+
   setup do
     content_api_has_tag("specialist_sector", "oil-and-gas")
     content_api_has_tag("specialist_sector", "oil-and-gas/offshore", "oil-and-gas")
@@ -17,114 +38,79 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
     )
   end
 
-  describe "for a curated subtopic" do
-    setup do
-      content_store_has_item("/oil-and-gas/offshore", {
-        base_path: "/oil-and-gas/offshore",
-        title: "Offshore",
-        description: "Offshore drilling and exploration",
-        format: "topic",
-        public_updated_at: 10.days.ago.iso8601,
-        details: {
-          groups: [
-            {
-              name: "Oil rigs",
-              contents: [
-                "#{Plek.current.find("contentapi")}/oil-rig-staffing.json",
-                "#{Plek.current.find("contentapi")}/oil-rig-safety-requirements.json",
-              ],
-            },
-            {
-              name: "Piping",
-              contents: [
-                "#{Plek.current.find("contentapi")}/undersea-piping-restrictions.json",
-              ],
-            },
-          ]
+  it "renders a curated subtopic" do
+    # Given a curated subtopic exists
+    content_store_has_item("/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore", details: {
+      groups: [
+        {
+          name: "Oil rigs",
+          contents: [
+            "#{Plek.current.find("contentapi")}/oil-rig-staffing.json",
+            "#{Plek.current.find("contentapi")}/oil-rig-safety-requirements.json",
+          ],
         },
-        links: {
-          "parent" => [
-            "title"=>"Oil and Gas",
-            "base_path"=>"/oil-and-gas",
-          ]
+        {
+          name: "Piping",
+          contents: [
+            "#{Plek.current.find("contentapi")}/undersea-piping-restrictions.json",
+          ],
         },
-      })
+      ]
+    }))
 
-      stub_topic_organisations('oil-and-gas/offshore')
-    end
+    stub_topic_organisations('oil-and-gas/offshore')
 
-    it "displays the subtopic page" do
-      # When I visit the subtopic page
-      visit "/oil-and-gas/offshore"
+    # When I visit the subtopic page
+    visit "/oil-and-gas/offshore"
 
-      # Then I should see the subtopic metadata
-      within '.page-header' do
-        within 'h1' do
-          assert page.has_content?("Oil and Gas")
-          assert page.has_content?("Offshore")
-        end
-
-        within '.metadata' do
-          # The orgs are fixed in the rummager test helpers
-          assert page.has_link?("Department of Energy & Climate Change")
-          assert page.has_link?("Foreign & Commonwealth Office")
-        end
+    # Then I should see the subtopic metadata
+    within '.page-header' do
+      within 'h1' do
+        assert page.has_content?("Oil and Gas")
+        assert page.has_content?("Offshore")
       end
 
-      # And I should see the curated content for the subtopic
-      assert page.has_link?("Oil rig staffing", :href => "/oil-rig-staffing")
-      assert page.has_link?("Oil rig safety requirements", :href => "/oil-rig-safety-requirements")
-      assert page.has_link?("Undersea piping restrictions", :href => "/undersea-piping-restrictions")
-
-      refute page.has_link?("North sea shipping lanes")
+      within '.metadata' do
+        # The orgs are fixed in the rummager test helpers
+        assert page.has_link?("Department of Energy & Climate Change")
+        assert page.has_link?("Foreign & Commonwealth Office")
+      end
     end
+
+    # And I should see the curated content for the subtopic
+    assert page.has_link?("Oil rig staffing", :href => "/oil-rig-staffing")
+    assert page.has_link?("Oil rig safety requirements", :href => "/oil-rig-safety-requirements")
+    assert page.has_link?("Undersea piping restrictions", :href => "/undersea-piping-restrictions")
+
+    refute page.has_link?("North sea shipping lanes")
   end
 
+  it "renders a non-curated subtopic" do
+    # Given a non-curated subtopic exists
+    content_store_has_item("/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore"))
+    stub_topic_organisations('oil-and-gas/offshore')
 
-  describe "for a non-curated subtopic" do
-    setup do
-      content_store_has_item("/oil-and-gas/offshore", {
-        base_path: "/oil-and-gas/offshore",
-        title: "Offshore",
-        description: "Offshore drilling and exploration",
-        format: "topic",
-        public_updated_at: 10.days.ago.iso8601,
-        details: {
-          groups: [],
-        },
-        links: {
-          "parent" => [
-            "title"=>"Oil and Gas",
-            "base_path"=>"/oil-and-gas",
-          ]
-        },
-      })
-      stub_topic_organisations('oil-and-gas/offshore')
-    end
+    # When I visit the subtopic page
+    visit "/oil-and-gas/offshore"
 
-    it "displays the subtopic page" do
-      # When I visit the subtopic page
-      visit "/oil-and-gas/offshore"
-
-      # Then I should see the subtopic metadata
-      within '.page-header' do
-        within 'h1' do
-          assert page.has_content?("Oil and Gas")
-          assert page.has_content?("Offshore")
-        end
-
-        within '.metadata' do
-          # The orgs are fixed in the rummager test helpers
-          assert page.has_link?("Department of Energy & Climate Change")
-          assert page.has_link?("Foreign & Commonwealth Office")
-        end
+    # Then I should see the subtopic metadata
+    within '.page-header' do
+      within 'h1' do
+        assert page.has_content?("Oil and Gas")
+        assert page.has_content?("Offshore")
       end
 
-      # And I should see all content for the subtopic
-      assert page.has_link?("Oil rig staffing", :href => "/oil-rig-staffing")
-      assert page.has_link?("Oil rig safety requirements", :href => "/oil-rig-safety-requirements")
-      assert page.has_link?("North sea shipping lanes", :href => "/north-sea-shipping-lanes")
-      assert page.has_link?("Undersea piping restrictions", :href => "/undersea-piping-restrictions")
+      within '.metadata' do
+        # The orgs are fixed in the rummager test helpers
+        assert page.has_link?("Department of Energy & Climate Change")
+        assert page.has_link?("Foreign & Commonwealth Office")
+      end
     end
+
+    # And I should see all content for the subtopic
+    assert page.has_link?("Oil rig staffing", :href => "/oil-rig-staffing")
+    assert page.has_link?("Oil rig safety requirements", :href => "/oil-rig-safety-requirements")
+    assert page.has_link?("North sea shipping lanes", :href => "/north-sea-shipping-lanes")
+    assert page.has_link?("Undersea piping restrictions", :href => "/undersea-piping-restrictions")
   end
 end
