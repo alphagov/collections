@@ -6,6 +6,10 @@ Collections::Application.routes.draw do
   get "/browse/:top_level_slug", to: "browse#top_level_browse_page"
   get "/browse/:top_level_slug/:second_level_slug", to: "browse#second_level_browse_page"
 
+  # Note that this app only receives requests for routes registered with the
+  # content-store (by collections-publisher) - whenever the routes below
+  # change, also change the routes claimed by collections-publisher.
+
   get "/:topic_slug/:subtopic_slug/latest", as: "latest_changes", to: "subtopics#latest_changes"
   get "/:topic_slug/:subtopic_slug", as: :subtopic, to: "subtopics#show"
   get "/:topic_slug", to: "topics#show", as: :topic
