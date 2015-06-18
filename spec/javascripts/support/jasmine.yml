@@ -28,3 +28,6 @@ spec_files:
 # (spec runner and asset cache)
 # defaults to tmp/jasmine
 tmp_dir: "tmp/jasmine"
+
+# Prevent auto-downloads of phantomjs.
+use_phantom_gem: false
