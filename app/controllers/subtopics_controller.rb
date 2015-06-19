@@ -17,7 +17,8 @@ class SubtopicsController < ApplicationController
   end
 
   def latest_changes
-    @subtopic = Subtopic.find("/#{slug}")
+    @subtopic = Subtopic.find("/#{slug}", pagination_params)
+    @pagination_presenter = ChangedDocumentsPaginationPresenter.new(@subtopic.changed_documents, view_context)
 
     slimmer_artefact = {
       section_name: @subtopic.title,
