@@ -24,6 +24,40 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
     base.merge(params)
   end
 
+  def rummager_latest_document_for_slug(slug, updated_at = 1.hour.ago)
+    {
+      "latest_change_note" => "This has changed",
+      "public_timestamp" => updated_at.iso8601,
+      "title" => "#{slug.titleize}",
+      "link" => "/government/publications/#{slug}",
+      "index" => "government",
+      "_id" => "/government/publications/#{slug}",
+      "document_type" => "edition"
+    }
+  end
+
+  def rummager_has_latest_documents_for_subtopic(subtopic_slug, document_slugs, page_size = 50)
+    results = document_slugs.map.with_index do |slug, i|
+      rummager_latest_document_for_slug(slug, (i + 1).hours.ago)
+    end
+
+    results.each_slice(page_size).with_index do |results_page, page|
+      start = page * page_size
+      Collections::Application.config.search_client.stubs(:unified_search).with(
+        hash_including(
+          start: start.to_s,
+          count: page_size.to_s,
+          filter_specialist_sectors: [subtopic_slug],
+          order: "-public_timestamp",
+        )
+      ).returns({
+        "results" => results_page,
+        "start" => start,
+        "total" => results.size,
+      })
+    end
+  end
+
   setup do
     content_api_has_tag("specialist_sector", "oil-and-gas")
     content_api_has_tag("specialist_sector", "oil-and-gas/offshore", "oil-and-gas")
@@ -121,5 +155,76 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
     visit "/oil-and-gas/offshore"
 
     assert page.has_content?("This page is in beta"), "has beta-label"
+  end
+
+  describe "latest page for a subtopic" do
+    setup do
+      content_store_has_item("/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore"))
+      stub_topic_organisations('oil-and-gas/offshore')
+    end
+
+    it "displays the latest page" do
+      # Given there is latest content for a subtopic
+      rummager_has_latest_documents_for_subtopic("oil-and-gas/offshore", [
+        "oil-and-gas-uk-field-data",
+        "oil-and-gas-wells",
+        "oil-and-gas-fields-and-field-development",
+        "oil-and-gas-geoscientific-data"
+      ])
+
+      # When I view the latest page for a subtopic
+      visit "/oil-and-gas/offshore"
+      click_on "See latest changes to this content"
+
+      # Then I should see the subtopic metadata
+      within '.page-header' do
+        within 'h1' do
+          assert page.has_content?("Offshore Latest Documents")
+        end
+
+        within '.metadata' do
+          # The orgs are fixed in the rummager test helpers
+          assert page.has_link?("Department of Energy & Climate Change")
+          assert page.has_link?("Foreign & Commonwealth Office")
+        end
+      end
+
+      # And I should see the latest documents for the subtopic in date order
+      titles = page.all(".changed-documents li h3").map(&:text)
+      expected_titles = [
+        "Oil And Gas Uk Field Data",
+        "Oil And Gas Wells",
+        "Oil And Gas Fields And Field Development",
+        "Oil And Gas Geoscientific Data",
+      ]
+      assert_equal expected_titles, titles
+    end
+
+    it "paginates the results" do
+      # Given there is latest content for a subtopic
+      rummager_has_latest_documents_for_subtopic("oil-and-gas/offshore", (1..55).map {|n| "document-#{n}" })
+
+      # When I view the latest page for a subtopic
+      visit "/oil-and-gas/offshore"
+      click_on "See latest changes to this content"
+
+      # Then I should see the first 50 documents
+      within '.changed-documents' do
+        assert page.has_content?("Document 1")
+        assert page.has_content?("Document 50")
+        refute page.has_content?("Document 51")
+      end
+
+      # When I go to the next page
+      click_on "Next page"
+
+      # Then I should see the remaining documents
+      within '.changed-documents' do
+        assert page.has_content?("Document 51")
+        assert page.has_content?("Document 55")
+        refute page.has_content?("Document 1")
+        refute page.has_content?("Document 50")
+      end
+    end
   end
 end
