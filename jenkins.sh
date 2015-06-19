@@ -22,32 +22,35 @@ function error_handler {
   else
     echo "Error on or near line ${parent_lineno}; exiting with status ${code}"
   fi
-  github_status "$REPO_NAME" failure "failed on Jenkins"
+  github_status "$REPO_NAME" error "errored on Jenkins"
   exit "${code}"
 }
 
-trap "error_handler ${LINENO}" ERR
+trap 'error_handler ${LINENO}' ERR
 github_status "$REPO_NAME" pending "is running on Jenkins"
+
+# Cleanup anything left from previous test runs
+git clean -fdx
 
 # Clone govuk-content-schemas depedency for contract tests
 rm -rf tmp/govuk-content-schemas
 git clone git@github.com:alphagov/govuk-content-schemas.git tmp/govuk-content-schemas
 (
   cd tmp/govuk-content-schemas
-  git checkout $SCHEMA_GIT_COMMIT
+  git checkout ${SCHEMA_GIT_COMMIT:-"master"}
 )
+export GOVUK_CONTENT_SCHEMAS_PATH=tmp/govuk-content-schemas
 
 bundle install --path "${HOME}/bundles/${JOB_NAME}" --deployment
-GOVUK_CONTENT_SCHEMAS_PATH=tmp/govuk-content-schemas RAILS_ENV=test bundle exec rake
-bundle exec rake assets:precompile
-bundle exec rake spec:javascript
 
-export EXIT_STATUS=$?
+export RAILS_ENV=test
+TEST_TASKS="default spec:javascript assets:precompile"
 
-if [ "$EXIT_STATUS" == "0" ]; then
-  github_status "$REPO_NAME" success "succeeded on Jenkins"
-else
-  github_status "$REPO_NAME" failure "failed on Jenkins"
-fi
+for task in $TEST_TASKS; do
+  if ! bundle exec rake $task; then
+    github_status "$REPO_NAME" failure "failed on Jenkins"
+    exit 1
+  fi
+done
 
-exit $EXIT_STATUS
+github_status "$REPO_NAME" success "succeeded on Jenkins"
