@@ -42,11 +42,11 @@ retrieved from external sources.
 - [alphagov/govuk_content_api](https://github.com/alphagov/govuk_content_api) -
   provides topic and browse page content.
 - [alphagov/content-store](https://github.com/alphagov/content-store) -
-  provides content.
+  provides subtopics and their curated lists.
 - [alphagov/whitehall](https://github.com/alphagov/whitehall) -
   provides Detailed guidance content.
-- [alphagov/collections-api](https://github.com/alphagov/collections-api) -
-  provides Curated lists and Latest changes content.
+- [alphagov/rummager](https://github.com/alphagov/rummager) -
+  provides Latest changes content.
 - [alphagov/email-alert-api](https://github.com/alphagov/email-alert-api) -
   provides support for subscribing to notifications from a topic.
 
