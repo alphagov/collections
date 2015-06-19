@@ -17,15 +17,19 @@ class SubtopicsController < ApplicationController
   end
 
   def latest_changes
-    set_slimmer_dummy_artefact(
-      section_name: subtopic.title,
-      section_link: subtopic_path(params.slice(:topic_slug, :subtopic_slug)),
-      parent: {
-        section_name: subtopic.parent_topic_title,
-        section_link: "/#{params[:topic_slug]}",
-      }
-    )
+    @subtopic = Subtopic.find("/#{slug}")
 
+    slimmer_artefact = {
+      section_name: @subtopic.title,
+      section_link: @subtopic.base_path,
+    }
+    if @subtopic.parent
+      slimmer_artefact[:parent] = {
+        section_name: @subtopic.parent.title,
+        section_link: @subtopic.parent.base_path,
+      }
+    end
+    set_slimmer_dummy_artefact(slimmer_artefact)
   end
 
 private
