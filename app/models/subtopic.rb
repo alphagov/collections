@@ -45,10 +45,18 @@ class Subtopic
   end
 
   def groups
-    Groups.new(base_path[1..-1], @content_item_data["details"]["groups"])
+    Groups.new(slug, @content_item_data["details"]["groups"])
+  end
+
+  def changed_documents
+    ChangedDocuments.new(slug, @pagination_options)
   end
 
 private
+
+  def slug
+    base_path[1..-1]
+  end
 
   def self.filtered_api_options(options)
     options.slice(:start, :count).reject {|_,v| v.blank? }

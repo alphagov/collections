@@ -24,40 +24,6 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
     base.merge(params)
   end
 
-  def rummager_latest_document_for_slug(slug, updated_at = 1.hour.ago)
-    {
-      "latest_change_note" => "This has changed",
-      "public_timestamp" => updated_at.iso8601,
-      "title" => "#{slug.titleize}",
-      "link" => "/government/publications/#{slug}",
-      "index" => "government",
-      "_id" => "/government/publications/#{slug}",
-      "document_type" => "edition"
-    }
-  end
-
-  def rummager_has_latest_documents_for_subtopic(subtopic_slug, document_slugs, page_size = 50)
-    results = document_slugs.map.with_index do |slug, i|
-      rummager_latest_document_for_slug(slug, (i + 1).hours.ago)
-    end
-
-    results.each_slice(page_size).with_index do |results_page, page|
-      start = page * page_size
-      Collections::Application.config.search_client.stubs(:unified_search).with(
-        hash_including(
-          start: start.to_s,
-          count: page_size.to_s,
-          filter_specialist_sectors: [subtopic_slug],
-          order: "-public_timestamp",
-        )
-      ).returns({
-        "results" => results_page,
-        "start" => start,
-        "total" => results.size,
-      })
-    end
-  end
-
   setup do
     content_api_has_tag("specialist_sector", "oil-and-gas")
     content_api_has_tag("specialist_sector", "oil-and-gas/offshore", "oil-and-gas")

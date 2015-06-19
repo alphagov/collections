@@ -88,4 +88,20 @@ describe Subtopic do
       assert_equal :a_groups_instance, @subtopic.groups
     end
   end
+
+  describe "changed_documents" do
+    setup do
+      @subtopic = Subtopic.new(@api_data, {:foo => "bar"})
+    end
+
+    it "should pass the contentapi slug of the topic when constructing changed_documents" do
+      Subtopic::ChangedDocuments.expects(:new).with("business-tax/paye", anything()).returns(:an_instance)
+      assert_equal :an_instance, @subtopic.changed_documents
+    end
+
+    it "should pass the pagination options when constructing changed_documents" do
+      Subtopic::ChangedDocuments.expects(:new).with(anything(), :foo => "bar").returns(:an_instance)
+      assert_equal :an_instance, @subtopic.changed_documents
+    end
+  end
 end
