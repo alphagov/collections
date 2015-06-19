@@ -1,8 +1,8 @@
 
 class Subtopic::ChangedDocuments
 
-  DEFAULT_RESULTS_PER_PAGE = 50
-  MAX_RESULTS_PER_PAGE = 100
+  DEFAULT_PAGE_SIZE = 50
+  MAX_PAGE_SIZE = 100
 
   Document = Struct.new(:title, :base_path, :public_updated_at, :change_note)
 
@@ -17,6 +17,18 @@ class Subtopic::ChangedDocuments
     end
   end
   include Enumerable
+
+  def total
+    search_result["total"]
+  end
+
+  def start
+    search_result["start"]
+  end
+
+  def page_size
+    count_param
+  end
 
   private
 
@@ -52,7 +64,7 @@ class Subtopic::ChangedDocuments
 
   def count_param
     count = @pagination_options[:count].to_i
-    return MAX_RESULTS_PER_PAGE if count > MAX_RESULTS_PER_PAGE
-    count > 0 ? count : DEFAULT_RESULTS_PER_PAGE
+    return MAX_PAGE_SIZE if count > MAX_PAGE_SIZE
+    count > 0 ? count : DEFAULT_PAGE_SIZE
   end
 end
