@@ -1,22 +1,23 @@
 class EmailSignupsController < ApplicationController
   protect_from_forgery except: [:create]
 
-  def new
-    return error_404 unless subtopic.present?
+  rescue_from GdsApi::HTTPNotFound, :with => :error_404
 
-    set_slimmer_dummy_artefact(
+  def new
+    slimmer_artefact = {
       section_name: subtopic.title,
-      section_link: subtopic_path(topic_slug: subtopic.parent_slug, subtopic_slug: subtopic.child_slug),
-      parent: {
-        section_name: subtopic.parent_topic_title,
-        section_link: "/#{subtopic.parent_slug}",
+      section_link: subtopic.base_path,
+    }
+    if subtopic.parent
+      slimmer_artefact[:parent] = {
+        section_name: subtopic.parent.title,
+        section_link: subtopic.parent.base_path,
       }
-    )
+    end
+    set_slimmer_dummy_artefact(slimmer_artefact)
   end
 
   def create
-    return error_404 unless subtopic.present?
-
     if email_signup.save
       redirect_to email_signup.subscription_url
     else
@@ -27,7 +28,7 @@ class EmailSignupsController < ApplicationController
 private
 
   def subtopic
-    @subtopic ||= Subtopic.find("#{params[:topic_slug]}/#{params[:subtopic_slug]}")
+    @subtopic ||= Subtopic.find("/#{params[:topic_slug]}/#{params[:subtopic_slug]}")
   end
   helper_method :subtopic
 

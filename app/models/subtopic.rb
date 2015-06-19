@@ -52,11 +52,11 @@ class Subtopic
     ChangedDocuments.new(slug, @pagination_options)
   end
 
-private
-
   def slug
     base_path[1..-1]
   end
+
+private
 
   def self.filtered_api_options(options)
     options.slice(:start, :count).reject {|_,v| v.blank? }
