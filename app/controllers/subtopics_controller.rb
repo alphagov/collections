@@ -35,27 +35,10 @@ class SubtopicsController < ApplicationController
 
 private
 
-  def subtopic
-    @subtopic ||= Subtopic.find(slug, pagination_params)
-  end
-  helper_method :subtopic
-
   def organisations
     @organisations ||= subtopic_organisations(slug)
   end
   helper_method :organisations
-
-  def changed_documents_pagination
-    @changed_documents_pagination ||= ChangedDocumentsPaginationPresenter.new(
-      subtopic,
-      per_page: pagination_params[:count]
-    )
-  end
-  helper_method :changed_documents_pagination
-
-  def send_404_if_not_found
-    error_404 unless subtopic.present?
-  end
 
   def set_slimmer_format
     set_slimmer_headers(format: "specialist-sector")
