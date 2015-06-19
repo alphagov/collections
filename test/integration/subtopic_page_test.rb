@@ -191,6 +191,16 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
         refute page.has_content?("Document 1")
         refute page.has_content?("Document 50")
       end
+
+      # When I go back to the first page
+      click_on "Previous page"
+
+      # Then I should see the first 50 documents again
+      within '.changed-documents' do
+        assert page.has_content?("Document 1")
+        assert page.has_content?("Document 50")
+        refute page.has_content?("Document 51")
+      end
     end
   end
 end
