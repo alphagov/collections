@@ -3,7 +3,7 @@ require "test_helper"
 describe Subtopic do
   setup do
     @api_data = {
-      "base_path" => "/business-tax/paye",
+      "base_path" => "/topic/business-tax/paye",
       "title" => "PAYE",
       "description" => "Pay As You Earn",
       "details" => {
@@ -11,7 +11,7 @@ describe Subtopic do
       "links" => {
         "parent" => [{
           "title"=>"Business tax",
-          "base_path"=>"/business-tax",
+          "base_path"=>"/topic/business-tax",
           "description"=>"All about tax for businesses",
         }],
       },
@@ -21,7 +21,7 @@ describe Subtopic do
 
   describe "basic properties" do
     it "returns the subtopic base_path" do
-      assert_equal "/business-tax/paye", @subtopic.base_path
+      assert_equal "/topic/business-tax/paye", @subtopic.base_path
     end
 
     it "returns the subtopic title" do
@@ -46,7 +46,7 @@ describe Subtopic do
     end
 
     it "returns the parent base_path" do
-      assert_equal "/business-tax", @subtopic.parent.base_path
+      assert_equal "/topic/business-tax", @subtopic.parent.base_path
     end
 
     it "returns the combined_title" do
@@ -71,6 +71,18 @@ describe Subtopic do
         @api_data.delete("links")
         assert_nil @subtopic.parent
       end
+    end
+  end
+
+  describe "slug" do
+    it "returns the slug for a topic at the root of the namespace" do
+      @api_data["base_path"] = "/business-tax/paye"
+      assert_equal "business-tax/paye", @subtopic.slug
+    end
+
+    it "returns the slug for a topic under the /topic namespace" do
+      @api_data["base_path"] = "/topic/business-tax/paye"
+      assert_equal "business-tax/paye", @subtopic.slug
     end
   end
 

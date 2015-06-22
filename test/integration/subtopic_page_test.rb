@@ -5,7 +5,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
   def oil_and_gas_subtopic_item(subtopic_slug, params = {})
     base = {
-      base_path: "/oil-and-gas/#{subtopic_slug}",
+      base_path: "/topic/oil-and-gas/#{subtopic_slug}",
       title: subtopic_slug.humanize,
       description: "Offshore drilling and exploration",
       format: "topic",
@@ -16,7 +16,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
       links: {
         "parent" => [
           "title" => "Oil and Gas",
-          "base_path" => "/oil-and-gas",
+          "base_path" => "/topic/oil-and-gas",
         ]
       },
     }
@@ -40,7 +40,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
   it "renders a curated subtopic" do
     # Given a curated subtopic exists
-    content_store_has_item("/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore", details: {
+    content_store_has_item("/topic/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore", details: {
       groups: [
         {
           name: "Oil rigs",
@@ -61,7 +61,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
     stub_topic_organisations('oil-and-gas/offshore')
 
     # When I visit the subtopic page
-    visit "/oil-and-gas/offshore"
+    visit "/topic/oil-and-gas/offshore"
 
     # Then I should see the subtopic metadata
     within '.page-header' do
@@ -87,11 +87,11 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
   it "renders a non-curated subtopic" do
     # Given a non-curated subtopic exists
-    content_store_has_item("/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore"))
+    content_store_has_item("/topic/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore"))
     stub_topic_organisations('oil-and-gas/offshore')
 
     # When I visit the subtopic page
-    visit "/oil-and-gas/offshore"
+    visit "/topic/oil-and-gas/offshore"
 
     # Then I should see the subtopic metadata
     within '.page-header' do
@@ -115,17 +115,17 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
   end
 
   it "renders a beta subtopic" do
-    content_store_has_item("/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore", details: {beta: true}))
+    content_store_has_item("/topic/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore", details: {beta: true}))
     stub_topic_organisations('oil-and-gas/offshore')
 
-    visit "/oil-and-gas/offshore"
+    visit "/topic/oil-and-gas/offshore"
 
     assert page.has_content?("This page is in beta"), "has beta-label"
   end
 
   describe "latest page for a subtopic" do
     setup do
-      content_store_has_item("/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore"))
+      content_store_has_item("/topic/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore"))
       stub_topic_organisations('oil-and-gas/offshore')
     end
 
@@ -139,7 +139,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
       ])
 
       # When I view the latest page for a subtopic
-      visit "/oil-and-gas/offshore"
+      visit "/topic/oil-and-gas/offshore"
       click_on "See latest changes to this content"
 
       # Then I should see the subtopic metadata
@@ -171,7 +171,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
       rummager_has_latest_documents_for_subtopic("oil-and-gas/offshore", (1..55).map {|n| "document-#{n}" })
 
       # When I view the latest page for a subtopic
-      visit "/oil-and-gas/offshore"
+      visit "/topic/oil-and-gas/offshore"
       click_on "See latest changes to this content"
 
       # Then I should see the first 50 documents

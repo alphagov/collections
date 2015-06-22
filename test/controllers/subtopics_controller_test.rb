@@ -4,7 +4,7 @@ describe SubtopicsController do
   describe "GET subtopic with a valid topic and subtopic slug" do
     setup do
       content_store_has_item(
-        "/oil-and-gas/wells",
+        "/topic/oil-and-gas/wells",
         content_item_for_base_path("/oil-and-gas/wells").merge({
           "links" => {
             "parent" => [{
@@ -44,7 +44,7 @@ describe SubtopicsController do
     end
 
     it "returns a 404 status for GET subtopic with an invalid subtopic tag" do
-      content_store_does_not_have_item("/oil-and-gas/coal")
+      content_store_does_not_have_item("/topic/oil-and-gas/coal")
 
       get :show, topic_slug: "oil-and-gas", subtopic_slug: "coal"
 
