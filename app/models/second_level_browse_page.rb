@@ -1,7 +1,8 @@
 class SecondLevelBrowsePage
   attr_reader :top_level_slug, :second_level_slug
 
-  delegate :title, :curated_links?, :lists, to: :browse_page_content_item
+  delegate :curated_links?, :lists, to: :browse_page_content_item
+  delegate :title, to: :content_store_item
 
   def initialize(top_level_slug, second_level_slug)
     @top_level_slug = top_level_slug
@@ -14,13 +15,6 @@ class SecondLevelBrowsePage
       section_name: active_top_level_browse_page.title,
       section_link: active_top_level_browse_page.web_url
     }
-  end
-
-  def browse_page_content_item
-    @browse_page_content_item ||= BrowsePageContentItem.new(
-      "#{top_level_slug}/#{second_level_slug}",
-      content_store_item
-    )
   end
 
   def related_topics
@@ -47,6 +41,13 @@ private
   def content_store_item
     @content_store_item ||= Collections.services(:content_store).content_item!(
       "/browse/#{top_level_slug}/#{second_level_slug}"
+    )
+  end
+  
+  def browse_page_content_item
+    @browse_page_content_item ||= BrowsePageContentItem.new(
+      "#{top_level_slug}/#{second_level_slug}",
+      content_store_item
     )
   end
 end

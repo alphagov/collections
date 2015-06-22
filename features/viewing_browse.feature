@@ -11,6 +11,7 @@ Feature: Viewing browse
     And I click on a top level browse page
     Then I see the list of second level browse pages
     When I click on a second level browse page
+    Then I should see the second level browse page
     Then I see the links tagged to the browse page
     And I should see the detailed guidance links
 
@@ -21,6 +22,7 @@ Feature: Viewing browse
     And I click on a top level browse page
     Then I see the list of second level browse pages
     When I click on a second level browse page
+    Then I should see the second level browse page
     Then I see the links tagged to the browse page
     And I should see the detailed guidance links
 

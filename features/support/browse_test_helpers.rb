@@ -15,6 +15,9 @@ module BrowseTestHelpers
     content_api_has_root_tags("section", [section])
     content_api_has_child_tags("section", section, [sub_section_slug])
     content_api_has_artefacts_with_a_tag("section", sub_section_slug, [artefact])
+
+    content_item = { title: 'Judges', links: {} }
+    content_store_has_item '/browse/crime-and-justice/judges', content_item
   end
 
   def stub_detailed_guidance
@@ -26,8 +29,6 @@ module BrowseTestHelpers
     Collections.services(:detailed_guidance_content_api, mock_api)
     results = stub("results", results: [detailed_guidance])
     mock_api.stubs(:sub_sections).returns(results)
-
-    content_store_has_item '/browse/crime-and-justice/judges', { links: {} }
   end
 
   def assert_can_see_linked_item(name)

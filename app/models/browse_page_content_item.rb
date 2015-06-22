@@ -1,8 +1,6 @@
 class BrowsePageContentItem
   attr_reader :slug, :item_from_content_store
 
-  delegate :title, to: :tag_from_content_api
-
   def initialize(slug, item_from_content_store)
     @slug = slug
     @item_from_content_store = item_from_content_store
@@ -53,10 +51,6 @@ private
     @tagged_items_from_content_api ||= begin
       content_api.with_tag(slug).results.sort_by(&:title)
     end
-  end
-
-  def tag_from_content_api
-    @tag_from_content_api ||= content_api.tag(slug) || raise(GdsApi::HTTPNotFound, 404)
   end
 
   def content_api
