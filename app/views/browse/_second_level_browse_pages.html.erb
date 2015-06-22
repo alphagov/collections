@@ -4,9 +4,9 @@
   <ul>
     <% second_level_browse_pages.each do |browse_page| %>
       <li class='<%= browsing_in_second_level_page?(browse_page) ? 'active' : nil %>'>
-        <%= link_to browse_page.web_url do %>
+        <%= link_to browse_page.base_path do %>
           <h3><%= browse_page.title %></h3>
-          <p><%= browse_page.details.description %></p>
+          <p><%= browse_page.description %></p>
         <% end %>
       </li>
     <% end %>

@@ -3,15 +3,15 @@ require "test_helper"
 describe BrowseController do
   describe "GET index" do
     it "set slimmer format of browse" do
-      content_api_has_root_sections(["crime-and-justice"])
+      IndexBrowsePage.stubs(:new).returns(stubbed_page_object)
 
       get :index
 
-      assert_equal "browse",  response.headers["X-Slimmer-Format"]
+      assert_equal "browse", response.headers["X-Slimmer-Format"]
     end
 
     it "set correct expiry headers" do
-      content_api_has_root_sections(["crime-and-justice"])
+      IndexBrowsePage.stubs(:new).returns(stubbed_page_object)
 
       get :index
 
@@ -20,13 +20,8 @@ describe BrowseController do
   end
 
   describe "GET top_level_browse_page" do
-    before do
-      content_api_has_root_sections(["crime-and-justice"])
-    end
-
     it "404 if the section does not exist" do
-      api_returns_404_for("/tags/banana.json")
-      api_returns_404_for("/tags.json?parent_id=banana&type=section")
+      TopLevelBrowsePage.stubs(:new).with("banana").raises(GdsApi::HTTPNotFound.new(404))
 
       get :top_level_browse_page, top_level_slug: "banana"
 
@@ -42,8 +37,7 @@ describe BrowseController do
     end
 
     it "set slimmer format of browse" do
-      content_api_has_section("crime-and-justice")
-      content_api_has_subsections("crime-and-justice", ["alpha"])
+      TopLevelBrowsePage.stubs(:new).returns(stubbed_page_object)
 
       get :top_level_browse_page, top_level_slug: "crime-and-justice"
 
@@ -51,8 +45,7 @@ describe BrowseController do
     end
 
     it "set correct expiry headers" do
-      content_api_has_section("crime-and-justice")
-      content_api_has_subsections("crime-and-justice", ["alpha"])
+      TopLevelBrowsePage.stubs(:new).returns(stubbed_page_object)
 
       get :top_level_browse_page, top_level_slug: "crime-and-justice"
 
@@ -62,8 +55,7 @@ describe BrowseController do
 
   describe "GET second_level_browse_page" do
     it "404 if the section does not exist" do
-      api_returns_404_for("/tags/crime-and-justice%2Ffrume.json")
-      api_returns_404_for("/tags/crime-and-justice.json")
+      SecondLevelBrowsePage.stubs(:new).with("crime-and-justice", "frume").raises(GdsApi::HTTPNotFound.new(404))
 
       get :second_level_browse_page, top_level_slug: "crime-and-justice", second_level_slug: "frume"
 
@@ -93,20 +85,20 @@ describe BrowseController do
 
       assert_equal "max-age=1800, public",  response.headers["Cache-Control"]
     end
+  end
 
-    def stubbed_page_object
-      page = stubs('page')
-      page.stubs(
-        slimmer_breadcrumb_options: [],
-        title: 'Title',
-        curated_links?: false,
-        lists: [],
-        related_topics: [],
-        active_top_level_browse_page: OpenStruct.new(title: 'aosudgad'),
-        second_level_browse_pages: [],
-        top_level_browse_pages: []
-      )
-      page
-    end
+  def stubbed_page_object
+    page = stubs('page')
+    page.stubs(
+      slimmer_breadcrumb_options: [],
+      title: 'Title',
+      curated_links?: false,
+      lists: [],
+      related_topics: [],
+      active_top_level_browse_page: OpenStruct.new(title: 'aosudgad'),
+      second_level_browse_pages: [],
+      top_level_browse_pages: []
+    )
+    page
   end
 end

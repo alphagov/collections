@@ -1,7 +1,7 @@
 class TopLevelBrowsePage
   attr_reader :slug
 
-  delegate :title, to: :item_in_content_api
+  delegate :title, to: :content_store_item
 
   def initialize(slug)
     @slug = slug
@@ -12,16 +12,18 @@ class TopLevelBrowsePage
   end
 
   def second_level_browse_pages
-    Collections.services(:content_api).sub_sections(slug).results.sort_by(&:title)
+    content_store_item.links.second_level_browse_pages
   end
 
   def top_level_browse_pages
-    Collections.services(:content_api).root_sections.results.sort_by(&:title)
+    content_store_item.links.top_level_browse_pages
   end
 
 private
 
-  def item_in_content_api
-    @source ||= Collections.services(:content_api).tag(slug) || raise(GdsApi::HTTPNotFound, 404)
+  def content_store_item
+    @content_store_item ||= begin
+      Collections.services(:content_store).content_item!("/browse/#{slug}")
+    end
   end
 end
