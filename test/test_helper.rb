@@ -5,6 +5,7 @@ if ENV["USE_SIMPLECOV"]
   SimpleCov.start 'rails'
 end
 
+# Duplicated in features/support/env.rb
 ENV["GOVUK_WEBSITE_ROOT"] = "http://www.test.gov.uk"
 ENV["GOVUK_APP_DOMAIN"] = "test.gov.uk"
 ENV["GOVUK_ASSET_ROOT"] = "http://static.test.gov.uk"
