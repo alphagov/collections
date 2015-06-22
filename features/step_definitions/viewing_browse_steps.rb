@@ -38,3 +38,7 @@ end
 When(/^I click on a second level browse page$/) do
   click_link 'Judges'
 end
+
+Then(/^I should see the second level browse page$/) do
+  assert page.has_selector?('h1', text: 'Judges')
+end
