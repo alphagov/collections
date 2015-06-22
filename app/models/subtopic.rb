@@ -53,7 +53,7 @@ class Subtopic
   end
 
   def slug
-    base_path[1..-1]
+    base_path.split('/')[-2..-1].join('/')
   end
 
 private

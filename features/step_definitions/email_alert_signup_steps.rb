@@ -3,7 +3,7 @@ Given(/^a topic$/) do
 end
 
 When(/^I access the email signup page via the topic$/) do
-  visit email_signup_path(topic_slug: "oil-and-gas", subtopic_slug: "fields-and-wells")
+  visit "/oil-and-gas/fields-and-wells/email-signup"
 end
 
 When(/^I sign up to the email alerts$/) do
