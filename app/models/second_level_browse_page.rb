@@ -17,13 +17,6 @@ class SecondLevelBrowsePage
     }
   end
 
-  def browse_page_content_item
-    @browse_page_content_item ||= BrowsePageContentItem.new(
-      "#{top_level_slug}/#{second_level_slug}",
-      content_store_item
-    )
-  end
-
   def related_topics
     RelatedTopicList.new(
       content_store_item,
@@ -48,6 +41,13 @@ private
   def content_store_item
     @content_store_item ||= Collections.services(:content_store).content_item!(
       "/browse/#{top_level_slug}/#{second_level_slug}"
+    )
+  end
+  
+  def browse_page_content_item
+    @browse_page_content_item ||= BrowsePageContentItem.new(
+      "#{top_level_slug}/#{second_level_slug}",
+      content_store_item
     )
   end
 end
