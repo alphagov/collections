@@ -1,56 +1,44 @@
 class SubtopicsController < ApplicationController
   before_filter { validate_slug_param(:topic_slug) }
   before_filter { validate_slug_param(:subtopic_slug) }
-  before_filter :send_404_if_not_found
   before_filter :set_slimmer_format
 
-  def show
-    @groups = TopicPresenter.build_from_subtopic_content(
-      subtopic.groups,
-      subtopic.parent_topic
-    ).sort_by(&:title)
+  rescue_from GdsApi::HTTPNotFound, :with => :error_404
 
-    set_slimmer_dummy_artefact(
-      section_name: subtopic.parent_topic_title,
-      section_link: "/#{params[:topic_slug]}"
-    )
+  def show
+    @subtopic = Subtopic.find("/#{slug}")
+
+    if @subtopic.parent
+      set_slimmer_dummy_artefact(
+        section_name: @subtopic.parent.title,
+        section_link: @subtopic.parent.base_path
+      )
+    end
   end
 
   def latest_changes
-    set_slimmer_dummy_artefact(
-      section_name: subtopic.title,
-      section_link: subtopic_path(params.slice(:topic_slug, :subtopic_slug)),
-      parent: {
-        section_name: subtopic.parent_topic_title,
-        section_link: "/#{params[:topic_slug]}",
-      }
-    )
+    @subtopic = Subtopic.find("/#{slug}", pagination_params)
+    @pagination_presenter = ChangedDocumentsPaginationPresenter.new(@subtopic.changed_documents, view_context)
 
+    slimmer_artefact = {
+      section_name: @subtopic.title,
+      section_link: @subtopic.base_path,
+    }
+    if @subtopic.parent
+      slimmer_artefact[:parent] = {
+        section_name: @subtopic.parent.title,
+        section_link: @subtopic.parent.base_path,
+      }
+    end
+    set_slimmer_dummy_artefact(slimmer_artefact)
   end
 
 private
-
-  def subtopic
-    @subtopic ||= Subtopic.find(slug, pagination_params)
-  end
-  helper_method :subtopic
 
   def organisations
     @organisations ||= subtopic_organisations(slug)
   end
   helper_method :organisations
-
-  def changed_documents_pagination
-    @changed_documents_pagination ||= ChangedDocumentsPaginationPresenter.new(
-      subtopic,
-      per_page: pagination_params[:count]
-    )
-  end
-  helper_method :changed_documents_pagination
-
-  def send_404_if_not_found
-    error_404 unless subtopic.present?
-  end
 
   def set_slimmer_format
     set_slimmer_headers(format: "specialist-sector")

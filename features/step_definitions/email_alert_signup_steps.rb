@@ -1,6 +1,5 @@
 Given(/^a topic$/) do
   stub_topic_lookups
-  collections_api_has_content_for("/oil-and-gas/fields-and-wells")
 end
 
 When(/^I access the email signup page via the topic$/) do
@@ -15,7 +14,7 @@ Then(/^my subscription should be registered$/) do
   Collections.services(:email_alert_api)
     .expects(:find_or_create_subscriber_list)
     .with(
-      "title" => "Oil and gas: Example title",
+      "title" => "Oil and Gas: Fields and Wells",
       "tags" => {
         "topics" => ["oil-and-gas/fields-and-wells"]
       }

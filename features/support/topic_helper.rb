@@ -24,6 +24,36 @@ module TopicHelper
     content_api_has_tag("specialist_sector","oil-and-gas/fields-and-wells","oil-and-gas")
     content_api_has_artefacts_with_a_tag("specialist_sector", "oil-and-gas/fields-and-wells", @content)
 
+    content_store_has_item("/oil-and-gas/fields-and-wells", {
+      base_path: "/oil-and-gas/fields-and-wells",
+      title: "Fields and Wells",
+      format: "topic",
+      public_updated_at: 10.days.ago.iso8601,
+      details: {
+        groups: [
+          {
+            name: "Oil rigs",
+            contents: [
+              "http://example.com/api/what-is-oil.json",
+              "http://example.com/api/apply-for-an-oil-licence.json",
+            ]
+          },
+          {
+            name: "Piping",
+            contents: [
+              "http://example.com/api/well-application-form.json",
+            ]
+          },
+        ],
+      },
+      links: {
+        "parent" => [
+          "title" => "Oil and Gas",
+          "base_path" => "/oil-and-gas",
+        ]
+      },
+    })
+
     Collections::Application.config.search_client.stubs(:unified_search).with(
       count: "0",
       filter_specialist_sectors: ["oil-and-gas/fields-and-wells"],

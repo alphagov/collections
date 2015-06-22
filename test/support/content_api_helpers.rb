@@ -8,4 +8,8 @@ class ActiveSupport::TestCase
     url = "#{Plek.current.find("contentapi")}#{path}"
     stub_request(:get, url).to_return(:status => 404, :body => body.to_json, :headers => {})
   end
+
+  def contentapi_url_for_slug(slug)
+    "#{Plek.new.find('contentapi')}/#{slug}.json"
+  end
 end
