@@ -3,7 +3,7 @@ Given(/^a topic$/) do
 end
 
 When(/^I access the email signup page via the topic$/) do
-  visit "/oil-and-gas/fields-and-wells/email-signup"
+  visit "/topic/oil-and-gas/fields-and-wells/email-signup"
 end
 
 When(/^I sign up to the email alerts$/) do
@@ -18,5 +18,9 @@ Then(/^my subscription should be registered$/) do
       "tags" => {
         "topics" => ["oil-and-gas/fields-and-wells"]
       }
-    ).returns(OpenStruct.new("subscriber_list" => OpenStruct.new("subscription_url" => "/oil-and-gas/fields-and-wells")))
+    ).returns(OpenStruct.new("subscriber_list" =>
+      # This redirects to govdelivery in real life, but redirect to /topic/oil-and-gas/fields-and-wells
+      # here to make the tests work.
+      OpenStruct.new("subscription_url" => "/topic/oil-and-gas/fields-and-wells")
+    ))
 end
