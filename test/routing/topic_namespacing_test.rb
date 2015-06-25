@@ -6,23 +6,10 @@ class TopicRoutingTest < ActionDispatch::IntegrationTest
       controller: 'topics',
       action: 'show',
       topic_slug: 'foo-topic',
-    }, '/foo-topic')
-
-    assert_recognizes({
-      controller: 'topics',
-      action: 'show',
-      topic_slug: 'foo-topic',
     }, '/topic/foo-topic')
   end
 
   it "routes to the subtopic show page" do
-    assert_recognizes({
-      controller: 'subtopics',
-      action: 'show',
-      topic_slug: 'foo-topic',
-      subtopic_slug: 'bar-topic',
-    }, '/foo-topic/bar-topic')
-
     assert_recognizes({
       controller: 'subtopics',
       action: 'show',
@@ -37,24 +24,10 @@ class TopicRoutingTest < ActionDispatch::IntegrationTest
       action: 'latest_changes',
       topic_slug: 'foo-topic',
       subtopic_slug: 'bar-topic',
-    }, '/foo-topic/bar-topic/latest')
-
-    assert_recognizes({
-      controller: 'subtopics',
-      action: 'latest_changes',
-      topic_slug: 'foo-topic',
-      subtopic_slug: 'bar-topic',
     }, '/topic/foo-topic/bar-topic/latest')
   end
 
   it "routes to the subtopic email signup page" do
-    assert_recognizes({
-      controller: 'email_signups',
-      action: 'new',
-      topic_slug: 'foo-topic',
-      subtopic_slug: 'bar-topic',
-    }, '/foo-topic/bar-topic/email-signup')
-
     assert_recognizes({
       controller: 'email_signups',
       action: 'new',

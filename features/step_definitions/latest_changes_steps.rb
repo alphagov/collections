@@ -35,7 +35,7 @@ Given(/^there is latest content for a subtopic$/) do
 end
 
 When(/^I view the latest changes page for that subtopic$/) do
-  visit "/oil-and-gas/fields-and-wells/latest"
+  visit "/topic/oil-and-gas/fields-and-wells/latest"
 end
 
 Then(/^I see a date\-ordered list of content with change notes$/) do
