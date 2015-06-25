@@ -16,7 +16,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
 
   it "renders a topic tag page and list its subtopics" do
     set_up_valid_topic_page
-    content_store_has_item('/oil-and-gas', content_schema_example(:topic, :topic))
+    content_store_has_item('/topic/oil-and-gas', content_schema_example(:topic, :topic))
 
     visit "/oil-and-gas"
     assert page.has_title?("Oil and gas - GOV.UK")
@@ -47,7 +47,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
   it "renders a beta topic" do
     set_up_valid_topic_page
 
-    content_store_has_item('/oil-and-gas',
+    content_store_has_item('/topic/oil-and-gas',
       content_schema_example(:topic, :topic).merge(details: { beta: true }))
 
     visit "/oil-and-gas"

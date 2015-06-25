@@ -50,7 +50,7 @@ private
 
   def topic_content_from_content_store
     @topic_content_from_content_store ||= begin
-      Collections.services(:content_store).content_item("/" + topic_slug)
+      Collections.services(:content_store).content_item!("/topic/" + topic_slug)
     end
   end
 end
