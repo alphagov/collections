@@ -34,10 +34,11 @@ class Subtopic::ChangedDocuments
 
   def documents
     @_documents ||= search_result["results"].map do |result|
+      timestamp = result["public_timestamp"].present? ? Time.parse(result["public_timestamp"]) : nil
       Document.new(
         result["title"],
         result["link"],
-        Time.parse(result["public_timestamp"]),
+        timestamp,
         result["latest_change_note"],
       )
     end
