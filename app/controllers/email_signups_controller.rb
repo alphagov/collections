@@ -28,7 +28,7 @@ class EmailSignupsController < ApplicationController
 private
 
   def subtopic
-    @subtopic ||= Subtopic.find("/#{params[:topic_slug]}/#{params[:subtopic_slug]}")
+    @subtopic ||= Subtopic.find("/topic/#{params[:topic_slug]}/#{params[:subtopic_slug]}")
   end
   helper_method :subtopic
 
