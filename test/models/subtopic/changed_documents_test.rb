@@ -163,4 +163,24 @@ describe Subtopic::ChangedDocuments do
       assert_equal expected_titles, @documents.map(&:title)
     end
   end
+
+  describe "handling missing fields in the search results" do
+    it "handles documents that don't contain the public_timestamp field" do
+      result = rummager_latest_document_for_slug('pay-psa')
+      result.delete("public_timestamp")
+
+      Collections::Application.config.search_client.stubs(:unified_search).with(
+        has_entries(filter_specialist_sectors: ['business-tax/paye'])
+      ).returns({
+        "results" => [result],
+        "start" => 0,
+        "total" => 1,
+      })
+
+      documents = Subtopic::ChangedDocuments.new("business-tax/paye")
+      assert_equal 1, documents.to_a.size
+      assert_equal 'Pay Psa', documents.first.title
+      assert_nil documents.first.public_updated_at
+    end
+  end
 end
