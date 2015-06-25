@@ -18,7 +18,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
     set_up_valid_topic_page
     content_store_has_item('/topic/oil-and-gas', content_schema_example(:topic, :topic))
 
-    visit "/oil-and-gas"
+    visit "/topic/oil-and-gas"
     assert page.has_title?("Oil and gas - GOV.UK")
 
     within "header.page-header" do
@@ -50,7 +50,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
     content_store_has_item('/topic/oil-and-gas',
       content_schema_example(:topic, :topic).merge(details: { beta: true }))
 
-    visit "/oil-and-gas"
+    visit "/topic/oil-and-gas"
 
     assert page.has_content?("This page is in beta"), "has beta-label"
   end
