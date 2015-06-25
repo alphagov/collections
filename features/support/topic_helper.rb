@@ -24,8 +24,8 @@ module TopicHelper
     content_api_has_tag("specialist_sector","oil-and-gas/fields-and-wells","oil-and-gas")
     content_api_has_artefacts_with_a_tag("specialist_sector", "oil-and-gas/fields-and-wells", @content)
 
-    content_store_has_item("/oil-and-gas/fields-and-wells", {
-      base_path: "/oil-and-gas/fields-and-wells",
+    content_store_has_item("/topic/oil-and-gas/fields-and-wells", {
+      base_path: "/topic/oil-and-gas/fields-and-wells",
       title: "Fields and Wells",
       format: "topic",
       public_updated_at: 10.days.ago.iso8601,

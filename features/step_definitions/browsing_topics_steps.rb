@@ -3,7 +3,7 @@ Given /^there are documents in a subtopic$/ do
 end
 
 When /^I view the browse page for that subtopic$/ do
-  visit "/oil-and-gas/fields-and-wells"
+  visit "/topic/oil-and-gas/fields-and-wells"
 end
 
 Then /^I see a list of organisations associated with content in the subtopic$/ do
