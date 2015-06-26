@@ -36,6 +36,17 @@ class Subtopic
     end
   end
 
+  def children
+    if @content_item_data.has_key?("links") &&
+        @content_item_data["links"].has_key?("children")
+      @content_item_data["links"]["children"].map { |child|
+        OpenStruct.new(child)
+      }
+    else
+      []
+    end
+  end
+
   def combined_title
     if parent
       "#{parent.title}: #{title}"

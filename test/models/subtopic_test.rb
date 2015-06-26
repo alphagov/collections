@@ -74,6 +74,33 @@ describe Subtopic do
     end
   end
 
+  describe "children" do
+    it "returns the title and base_path for all children" do
+      @api_data["links"]["children"] = [
+        {
+          "title"=>"Foo",
+          "base_path"=>"/topic/business-tax/foo",
+        },
+        {
+          "title"=>"Bar",
+          "base_path"=>"/topic/business-tax/bar",
+        },
+      ]
+
+      assert_equal 'Foo', @subtopic.children[0].title
+      assert_equal '/topic/business-tax/bar', @subtopic.children[1].base_path
+    end
+
+    it "returns empty array with no children" do
+      assert_equal [], @subtopic.children
+    end
+
+    it "returns empty array when the links field is missing" do
+      @api_data.delete("links")
+      assert_equal [], @subtopic.children
+    end
+  end
+
   describe "slug" do
     it "returns the slug for a topic at the root of the namespace" do
       @api_data["base_path"] = "/business-tax/paye"

@@ -1,22 +1,39 @@
 require 'integration_test_helper'
 
 class TopicBrowsingTest < ActionDispatch::IntegrationTest
-  include RummagerHelpers
 
-  def set_up_valid_topic_page
-    subtopics = [
-      { slug: "oil-and-gas/wells", title: "Wells", description: "Wells, wells, wells." },
-      { slug: "oil-and-gas/fields", title: "Fields", description: "Fields, fields, fields." },
-      { slug: "oil-and-gas/offshore", title: "Offshore", description: "Information about offshore oil and gas." },
-    ]
-
-    content_api_has_tag("specialist_sector", { slug: "oil-and-gas", title: "Oil and gas", description: "Guidance for the oil and gas industry" })
-    content_api_has_sorted_child_tags("specialist_sector", "oil-and-gas", "alphabetical", subtopics)
+  def oil_and_gas_topic_item(params = {})
+    base = {
+      base_path: "/topic/oil-and-gas",
+      title: "Oil and gas",
+      description: "Guidance for the oil and gas industry",
+      format: "topic",
+      public_updated_at: 10.days.ago.iso8601,
+      details: {},
+      links: {},
+    }
+    base.merge(params)
   end
 
   it "renders a topic tag page and list its subtopics" do
-    set_up_valid_topic_page
-    content_store_has_item('/topic/oil-and-gas', content_schema_example(:topic, :topic))
+    content_store_has_item("/topic/oil-and-gas", oil_and_gas_topic_item.merge({
+      :links => {
+        "children" => [
+          {
+            "title" => "Wells",
+            "base_path" => "/topic/oil-and-gas/wells",
+          },
+          {
+            "title" => "Fields",
+            "base_path" => "/topic/oil-and-gas/fields",
+          },
+          {
+            "title" => "Offshore",
+            "base_path" => "/topic/oil-and-gas/offshore",
+          },
+        ],
+      }
+    }))
 
     visit "/topic/oil-and-gas"
     assert page.has_title?("Oil and gas - GOV.UK")
@@ -45,10 +62,11 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   it "renders a beta topic" do
-    set_up_valid_topic_page
-
-    content_store_has_item('/topic/oil-and-gas',
-      content_schema_example(:topic, :topic).merge(details: { beta: true }))
+    content_store_has_item("/topic/oil-and-gas", oil_and_gas_topic_item.merge({
+      :details => {
+        "beta" => true,
+      }
+    }))
 
     visit "/topic/oil-and-gas"
 
