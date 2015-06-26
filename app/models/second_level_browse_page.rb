@@ -40,10 +40,9 @@ class SecondLevelBrowsePage
 private
 
   def content_store_item
-    @content_store_item ||= begin
-      content_path = "/browse/#{top_level_slug}/#{second_level_slug}"
-      Collections.services(:content_store).content_item!(content_path)
-    end
+    @content_store_item ||= ContentItem.find!(
+      "/browse/#{top_level_slug}/#{second_level_slug}"
+    )
   end
 
   def browse_page_content_item

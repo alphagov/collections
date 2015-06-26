@@ -3,7 +3,7 @@ require 'ostruct'
 class Subtopic
 
   def self.find(base_path, pagination_options = {})
-    api_response = Collections.services(:content_store).content_item!(base_path)
+    api_response = ContentItem.find!(base_path)
     new(api_response.to_hash, pagination_options)
   end
 

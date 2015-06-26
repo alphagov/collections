@@ -14,8 +14,6 @@ class IndexBrowsePage
 private
 
   def content_store_item
-    @content_store_item ||= begin
-      Collections.services(:content_store).content_item!('/browse')
-    end
+    @content_store_item ||= ContentItem.find!('/browse')
   end
 end

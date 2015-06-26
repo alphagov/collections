@@ -23,7 +23,7 @@ private
 
   def content_store_item
     @content_store_item ||= begin
-      Collections.services(:content_store).content_item!("/browse/#{slug}")
+      ContentItem.find!("/browse/#{slug}")
     end
   end
 end
