@@ -6,7 +6,7 @@ class SubtopicsController < ApplicationController
   rescue_from GdsApi::HTTPNotFound, :with => :error_404
 
   def show
-    @subtopic = Subtopic.find(request.path)
+    @subtopic = Topic.find(request.path)
 
     if @subtopic.parent
       set_slimmer_dummy_artefact(
@@ -18,7 +18,7 @@ class SubtopicsController < ApplicationController
 
   def latest_changes
     subtopic_base_path = request.path.sub(%r{/latest\z}, '')
-    @subtopic = Subtopic.find(subtopic_base_path, pagination_params)
+    @subtopic = Topic.find(subtopic_base_path, pagination_params)
     @pagination_presenter = ChangedDocumentsPaginationPresenter.new(@subtopic.changed_documents, view_context)
 
     slimmer_artefact = {

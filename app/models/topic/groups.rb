@@ -1,5 +1,5 @@
 
-class Subtopic::Groups
+class Topic::Groups
 
   FORMATS_TO_EXCLUDE = %w(
     fatality_notice

@@ -4,7 +4,7 @@ class TopicsController < ApplicationController
   rescue_from GdsApi::HTTPNotFound, :with => :error_404
 
   def show
-    @topic = Subtopic.find(request.path)
+    @topic = Topic.find(request.path)
 
     set_slimmer_headers(format: "specialist-sector")
   end

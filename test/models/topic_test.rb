@@ -1,6 +1,6 @@
 require "test_helper"
 
-describe Subtopic do
+describe Topic do
   setup do
     @api_data = {
       "base_path" => "/topic/business-tax/paye",
@@ -16,41 +16,41 @@ describe Subtopic do
         }],
       },
     }
-    @subtopic = Subtopic.new(@api_data)
+    @topic = Topic.new(@api_data)
   end
 
   describe "basic properties" do
-    it "returns the subtopic base_path" do
-      assert_equal "/topic/business-tax/paye", @subtopic.base_path
+    it "returns the topic base_path" do
+      assert_equal "/topic/business-tax/paye", @topic.base_path
     end
 
-    it "returns the subtopic title" do
-      assert_equal "PAYE", @subtopic.title
+    it "returns the topic title" do
+      assert_equal "PAYE", @topic.title
     end
 
-    it "returns the subtopic description" do
-      assert_equal "Pay As You Earn", @subtopic.description
+    it "returns the topic description" do
+      assert_equal "Pay As You Earn", @topic.description
     end
 
-    it "returns the subtopic's beta status" do
-      assert_equal false, @subtopic.beta?
+    it "returns the topic's beta status" do
+      assert_equal false, @topic.beta?
 
       @api_data["details"]["beta"] = true
-      assert_equal true, @subtopic.beta?
+      assert_equal true, @topic.beta?
     end
   end
 
   describe "parent" do
     it "returns the parent title" do
-      assert_equal "Business tax", @subtopic.parent.title
+      assert_equal "Business tax", @topic.parent.title
     end
 
     it "returns the parent base_path" do
-      assert_equal "/topic/business-tax", @subtopic.parent.base_path
+      assert_equal "/topic/business-tax", @topic.parent.base_path
     end
 
     it "returns the combined_title" do
-      assert_equal "Business tax: PAYE", @subtopic.combined_title
+      assert_equal "Business tax: PAYE", @topic.combined_title
     end
 
     describe "when parent details are missing" do
@@ -60,16 +60,16 @@ describe Subtopic do
       end
 
       it "returns nil for parent" do
-        assert_nil @subtopic.parent
+        assert_nil @topic.parent
       end
 
-      it "returns the subtopic title in combined_title" do
-        assert_equal "PAYE", @subtopic.combined_title
+      it "returns the topic title in combined_title" do
+        assert_equal "PAYE", @topic.combined_title
       end
 
       it "handles the links hash missing completely" do
         @api_data.delete("links")
-        assert_nil @subtopic.parent
+        assert_nil @topic.parent
       end
     end
   end
@@ -87,60 +87,60 @@ describe Subtopic do
         },
       ]
 
-      assert_equal 'Foo', @subtopic.children[0].title
-      assert_equal '/topic/business-tax/bar', @subtopic.children[1].base_path
+      assert_equal 'Foo', @topic.children[0].title
+      assert_equal '/topic/business-tax/bar', @topic.children[1].base_path
     end
 
     it "returns empty array with no children" do
-      assert_equal [], @subtopic.children
+      assert_equal [], @topic.children
     end
 
     it "returns empty array when the links field is missing" do
       @api_data.delete("links")
-      assert_equal [], @subtopic.children
+      assert_equal [], @topic.children
     end
   end
 
   describe "slug" do
     it "returns the slug for a topic at the root of the namespace" do
       @api_data["base_path"] = "/business-tax/paye"
-      assert_equal "business-tax/paye", @subtopic.slug
+      assert_equal "business-tax/paye", @topic.slug
     end
 
     it "returns the slug for a topic under the /topic namespace" do
       @api_data["base_path"] = "/topic/business-tax/paye"
-      assert_equal "business-tax/paye", @subtopic.slug
+      assert_equal "business-tax/paye", @topic.slug
     end
   end
 
   describe "groups" do
     it "should pass the contentapi slug of the topic when constructing groups" do
-      Subtopic::Groups.expects(:new).with("business-tax/paye", anything()).returns(:a_groups_instance)
+      Topic::Groups.expects(:new).with("business-tax/paye", anything()).returns(:a_groups_instance)
 
-      assert_equal :a_groups_instance, @subtopic.groups
+      assert_equal :a_groups_instance, @topic.groups
     end
 
     it "should pass the groups data when constructing" do
-      Subtopic::Groups.expects(:new).with(anything(), :some_data).returns(:a_groups_instance)
+      Topic::Groups.expects(:new).with(anything(), :some_data).returns(:a_groups_instance)
       @api_data["details"]["groups"] = :some_data
 
-      assert_equal :a_groups_instance, @subtopic.groups
+      assert_equal :a_groups_instance, @topic.groups
     end
   end
 
   describe "changed_documents" do
     setup do
-      @subtopic = Subtopic.new(@api_data, {:foo => "bar"})
+      @topic = Topic.new(@api_data, {:foo => "bar"})
     end
 
     it "should pass the contentapi slug of the topic when constructing changed_documents" do
-      Subtopic::ChangedDocuments.expects(:new).with("business-tax/paye", anything()).returns(:an_instance)
-      assert_equal :an_instance, @subtopic.changed_documents
+      Topic::ChangedDocuments.expects(:new).with("business-tax/paye", anything()).returns(:an_instance)
+      assert_equal :an_instance, @topic.changed_documents
     end
 
     it "should pass the pagination options when constructing changed_documents" do
-      Subtopic::ChangedDocuments.expects(:new).with(anything(), :foo => "bar").returns(:an_instance)
-      assert_equal :an_instance, @subtopic.changed_documents
+      Topic::ChangedDocuments.expects(:new).with(anything(), :foo => "bar").returns(:an_instance)
+      assert_equal :an_instance, @topic.changed_documents
     end
   end
 end

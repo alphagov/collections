@@ -1,6 +1,6 @@
 require "test_helper"
 
-describe Subtopic::Groups do
+describe Topic::Groups do
 
   describe "for a curated subtopic" do
     setup do
@@ -29,7 +29,7 @@ describe Subtopic::Groups do
           'payroll-annual-reporting',
         ]
       )
-      @groups = Subtopic::Groups.new('business-tax/paye', @group_data)
+      @groups = Topic::Groups.new('business-tax/paye', @group_data)
     end
 
     it "returns the groups in the curated order" do
@@ -65,7 +65,7 @@ describe Subtopic::Groups do
           'payroll-annual-reporting',
         ]
       )
-      @groups = Subtopic::Groups.new('business-tax/paye', [])
+      @groups = Topic::Groups.new('business-tax/paye', [])
     end
 
     it "constructs a single A-Z group" do
@@ -90,7 +90,7 @@ describe Subtopic::Groups do
     end
 
     it "handles nil data the same as empty array" do
-      @groups = Subtopic::Groups.new('business-tax/paye', nil)
+      @groups = Topic::Groups.new('business-tax/paye', nil)
       assert_equal 1, @groups.to_a.size
       assert_equal "A to Z", @groups.first.title
     end
@@ -98,14 +98,14 @@ describe Subtopic::Groups do
 
   describe "filtering out some formats" do
     setup do
-      @groups = Subtopic::Groups.new('business-tax/paye', [])
+      @groups = Topic::Groups.new('business-tax/paye', [])
     end
 
     it "filters out some formats" do
       content_api_has_artefacts_with_a_tag(
         'specialist_sector', 'business-tax/paye',
         [ 'pay-paye-tax', 'pay-psa'],
-        artefact: { format: Subtopic::Groups::FORMATS_TO_EXCLUDE.to_a.first }
+        artefact: { format: Topic::Groups::FORMATS_TO_EXCLUDE.to_a.first }
       )
       assert_equal 0, @groups.first.contents.size
     end

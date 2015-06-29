@@ -1,6 +1,6 @@
 require 'ostruct'
 
-class Subtopic
+class Topic
 
   def self.find(base_path, pagination_options = {})
     api_response = ContentItem.find!(base_path)

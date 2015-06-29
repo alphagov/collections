@@ -7,7 +7,7 @@ describe ChangedDocumentsPaginationPresenter do
   end
 
   def build_presenter_for_subtopic(total: 100, start: 0, page_size: 50, view_context: mock_view_context)
-    changed_documents = stub('Subtopic::ChangedDocuments',
+    changed_documents = stub('Topic::ChangedDocuments',
       total: total,
       page_size: page_size,
       start: start,

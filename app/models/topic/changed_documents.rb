@@ -1,5 +1,5 @@
 
-class Subtopic::ChangedDocuments
+class Topic::ChangedDocuments
 
   DEFAULT_PAGE_SIZE = 50
   MAX_PAGE_SIZE = 100
