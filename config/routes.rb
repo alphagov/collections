@@ -12,7 +12,7 @@ Collections::Application.routes.draw do
 
   get "/topic/:topic_slug/:subtopic_slug/latest", to: "subtopics#latest_changes", as: :latest_changes
   get "/topic/:topic_slug/:subtopic_slug", to: "subtopics#show", as: :subtopic
-  get "/topic/:topic_slug", to: "topics#show", as: :topic
+  get "/topic/:topic_slug", to: "topics#topic", as: :topic
   get "/topic/:topic_slug/:subtopic_slug/email-signup", to: "email_signups#new", as: :email_signup
   post "/topic/:topic_slug/:subtopic_slug/email-signup", to: "email_signups#create"
 end
