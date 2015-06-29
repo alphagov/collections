@@ -10,8 +10,8 @@ Collections::Application.routes.draw do
   get "/browse/:top_level_slug", to: "browse#top_level_browse_page"
   get "/browse/:top_level_slug/:second_level_slug", to: "browse#second_level_browse_page"
 
-  get "/topic/:topic_slug/:subtopic_slug/latest", to: "subtopics#latest_changes", as: :latest_changes
-  get "/topic/:topic_slug/:subtopic_slug", to: "subtopics#show", as: :subtopic
+  get "/topic/:topic_slug/:subtopic_slug/latest", to: "topics#latest_changes", as: :latest_changes
+  get "/topic/:topic_slug/:subtopic_slug", to: "topics#subtopic", as: :subtopic
   get "/topic/:topic_slug", to: "topics#topic", as: :topic
   get "/topic/:topic_slug/:subtopic_slug/email-signup", to: "email_signups#new", as: :email_signup
   post "/topic/:topic_slug/:subtopic_slug/email-signup", to: "email_signups#create"
