@@ -1,9 +1,36 @@
 Given(/^there is a browse page set up with links$/) do
-  stub_browse_sections(
-    section: 'crime-and-justice',
-    sub_section: 'judges',
-    artefact: 'judge-dredd'
-  )
+
+  top_level_browse_pages = [{ title: 'Crime and justice', base_path: '/browse/crime-and-justice' }]
+  second_level_browse_pages = [{ title: 'Judges', base_path: '/browse/crime-and-justice/judges' }]
+
+  content_store_has_item '/browse', { links: {
+    top_level_browse_pages: top_level_browse_pages
+    }
+  }
+
+  content_store_has_item('/browse/crime-and-justice', {
+    base_path: '/browse/crime-and-justice',
+    links: {
+      top_level_browse_pages: top_level_browse_pages,
+      second_level_browse_pages: second_level_browse_pages,
+    }
+  })
+
+  content_store_has_item '/browse/crime-and-justice/judges', {
+    title: 'Judges',
+    base_path: '/browse/crime-and-justice/judges',
+    links: {
+      top_level_browse_pages: top_level_browse_pages,
+      second_level_browse_pages: second_level_browse_pages,
+      active_top_level_browse_page: [{ title: 'Crime and justice', base_path: '/browse/crime-and-justice' }]
+    }
+  }
+
+  stub_request(:get, "https://contentapi.test.gov.uk/tags/crime-and-justice%2Fjudges.json").
+    to_return(:status => 200, :body => "{}", :headers => {})
+
+  stub_request(:get, "https://contentapi.test.gov.uk/with_tag.json?tag=crime-and-justice/judges").
+    to_return(:status => 200, :body => JSON.dump(results: [{title: 'Judge dredd', web_url: 'http://gov.uk/judge'}]))
 end
 
 Given(/^the page also has detailed guidance links$/) do
@@ -12,7 +39,6 @@ end
 
 Given(/^there is no detailed guidance category tagged to the page$/) do
   stub_request(:get, "#{Plek.current.find('whitehall-admin')}/api/specialist/tags.json?parent_id=crime-and-justice/judges&type=section").to_raise(GdsApi::HTTPNotFound)
-  content_store_has_item '/browse/crime-and-justice/judges', { links: {} }
 end
 
 Then(/^I see the links tagged to the browse page/) do

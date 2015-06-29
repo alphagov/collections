@@ -25,25 +25,26 @@ class SecondLevelBrowsePage
   end
 
   def active_top_level_browse_page
-    Collections.services(:content_api).tag(top_level_slug) || raise(GdsApi::HTTPNotFound, 404)
+    # Note that 'active_top_level_browse_page' will always have just one element.
+    content_store_item.links.active_top_level_browse_page.first
   end
 
   def second_level_browse_pages
-    Collections.services(:content_api).sub_sections(top_level_slug).results.sort_by(&:title)
+    content_store_item.links.second_level_browse_pages
   end
 
   def top_level_browse_pages
-    Collections.services(:content_api).root_sections.results.sort_by(&:title)
+    content_store_item.links.top_level_browse_pages
   end
 
 private
 
   def content_store_item
-    @content_store_item ||= Collections.services(:content_store).content_item!(
+    @content_store_item ||= ContentItem.find!(
       "/browse/#{top_level_slug}/#{second_level_slug}"
     )
   end
-  
+
   def browse_page_content_item
     @browse_page_content_item ||= BrowsePageContentItem.new(
       "#{top_level_slug}/#{second_level_slug}",

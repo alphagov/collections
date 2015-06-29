@@ -2,13 +2,7 @@ require "test_helper"
 
 describe BrowsePageContentItem do
   describe '#lists' do
-    before do
-      content_api_has_section "crime-and-justice"
-      content_api_has_subsections "crime-and-justice", ["judges"]
-    end
-
     it "returns an A-Z list when there is no curation" do
-      content_store_has_item '/browse/crime-and-justice/judges', { details: { } }
       content_api_has_artefacts_with_a_tag "section", "crime-and-justice/judges", ["judge-dredd"]
 
       lists = BrowsePageContentItem.new('crime-and-justice/judges', stub(:details)).lists
@@ -25,7 +19,7 @@ describe BrowsePageContentItem do
       }
       content_store_has_item '/browse/crime-and-justice/judges', content_item
       content_api_has_artefacts_with_a_tag "section", "crime-and-justice/judges", ["judge-dredd"]
-      content_store_item = Collections.services(:content_store).content_item!('/browse/crime-and-justice/judges')
+      content_store_item = ContentItem.find!('/browse/crime-and-justice/judges')
 
       lists = BrowsePageContentItem.new('crime-and-justice/judges', content_store_item).lists
 
@@ -37,10 +31,9 @@ describe BrowsePageContentItem do
 
   describe '#curated_links?' do
     it "returns false when there is no curation" do
-      content_store_has_item '/browse/crime-and-justice/judges', { details: { } }
-      content_api_has_artefacts_with_a_tag "section", "crime-and-justice/judges", ["judge-dredd"]
+      content_item = stub(:details)
 
-      sub_section = BrowsePageContentItem.new('crime-and-justice/judges', stub(:details))
+      sub_section = BrowsePageContentItem.new('crime-and-justice/judges', content_item)
 
       refute sub_section.curated_links?
     end
@@ -57,7 +50,7 @@ describe BrowsePageContentItem do
     it "returns true when there are grouped links in the content store" do
       content_store_has_item '/browse/crime-and-justice/judges', { details: { groups: [ { name: "Movie Judges", contents: ['https://contentapi.test.gov.uk/judge-dredd.json'] }]} }
       content_api_has_artefacts_with_a_tag "section", "crime-and-justice/judges", ["judge-dredd"]
-      content_store_item = Collections.services(:content_store).content_item!('/browse/crime-and-justice/judges')
+      content_store_item = ContentItem.find!('/browse/crime-and-justice/judges')
 
       sub_section = BrowsePageContentItem.new('crime-and-justice/judges', content_store_item)
 

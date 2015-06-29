@@ -3,7 +3,7 @@
   <ul>
     <% top_level_browse_pages.each do |page| %>
       <li class="<%= browsing_in_top_level_page?(page) ? 'active' : '' %>">
-        <%= link_to page.title, page.web_url %>
+        <%= link_to page.title, page.base_path %>
       </li>
     <% end %>
   </ul>

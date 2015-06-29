@@ -5,19 +5,6 @@ module BrowseTestHelpers
   include GdsApi::TestHelpers::ContentApi
   include GdsApi::TestHelpers::ContentStore
 
-  def stub_browse_sections(section: nil, sub_section: nil, artefact: nil,
-                           organisations: [])
-    sub_section_slug = [section, sub_section].join('/')
-    content_api_has_tag("section", section)
-    content_api_has_tag("section", sub_section_slug)
-    content_api_has_root_tags("section", [section])
-    content_api_has_child_tags("section", section, [sub_section_slug])
-    content_api_has_artefacts_with_a_tag("section", sub_section_slug, [artefact])
-
-    content_item = { title: 'Judges', links: {} }
-    content_store_has_item '/browse/crime-and-justice/judges', content_item
-  end
-
   def stub_detailed_guidance
     detailed_guidance = OpenStruct.new({
       title: 'Detailed guidance',
