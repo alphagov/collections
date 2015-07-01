@@ -12,7 +12,7 @@
 </header>
 
 <% if @topic.beta? %>
-  <%= render 'shared/topic_beta', topic: @topic %>
+  <%= render 'topic_beta', topic: @topic %>
 <% end %>
 
 <div class="browse-container full-width topics-page">
@@ -24,9 +24,9 @@
 
   <nav class="topics">
     <ul>
-      <% @topic.child_tags.each do |category|%>
+      <% @topic.children.each do |subtopic|%>
         <li>
-          <a href="<%= category.content_with_tag.web_url %>"><%= category.title %></a>
+          <a href="<%= subtopic.base_path %>"><%= subtopic.title %></a>
         </li>
       <% end %>
     </ul>

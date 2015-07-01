@@ -1,56 +1,79 @@
 class Topic
-  def initialize(content_api_client, topic_slug)
-    @content_api_client = content_api_client
-    @topic_slug = topic_slug
-  end
 
-  def build
-    if valid?
-      self
+  LinkedTopic = Struct.new(:title, :base_path) do
+    def self.build(attributes)
+      new(attributes["title"], attributes["base_path"])
     end
   end
 
-  def child_tags
-    child_tags_lookup
+  def self.find(base_path, pagination_options = {})
+    api_response = ContentItem.find!(base_path)
+    new(api_response.to_hash, pagination_options)
+  end
+
+  def initialize(content_item_data, pagination_options = {})
+    @content_item_data = content_item_data
+    @pagination_options = pagination_options
+  end
+
+  [
+    :base_path,
+    :title,
+    :description,
+  ].each do |field|
+    define_method field do
+      @content_item_data[field.to_s]
+    end
   end
 
   def beta?
-    topic_content_from_content_store.details.beta
+    !! @content_item_data["details"]["beta"]
   end
 
-  def description
-    details.description
+  def parent
+    if @content_item_data.has_key?("links") &&
+        @content_item_data["links"].has_key?("parent") &&
+        @content_item_data["links"]["parent"].any?
+      LinkedTopic.build(@content_item_data["links"]["parent"].first)
+    else
+      nil
+    end
   end
 
-  def title
-    content_api_lookup.title
+  def children
+    if @content_item_data.has_key?("links") &&
+        @content_item_data["links"].has_key?("children")
+      @content_item_data["links"]["children"].map { |child|
+        LinkedTopic.build(child)
+      }
+    else
+      []
+    end
+  end
+
+  def combined_title
+    if parent
+      "#{parent.title}: #{title}"
+    else
+      title
+    end
+  end
+
+  def groups
+    Groups.new(slug, @content_item_data["details"]["groups"])
+  end
+
+  def changed_documents
+    ChangedDocuments.new(slug, @pagination_options)
+  end
+
+  def slug
+    base_path.split('/')[-2..-1].join('/')
   end
 
 private
 
-  TAG_TYPE = "specialist_sector".freeze
-
-  attr_reader :content_api_client, :topic_slug
-
-  def valid?
-    content_api_lookup.present?
-  end
-
-  def content_api_lookup
-    @_content_api_lookup ||= content_api_client.tag(topic_slug, TAG_TYPE)
-  end
-
-  def details
-    content_api_lookup.details
-  end
-
-  def child_tags_lookup
-    content_api_client.child_tags(TAG_TYPE, topic_slug, sort: "alphabetical")
-  end
-
-  def topic_content_from_content_store
-    @topic_content_from_content_store ||= begin
-      ContentItem.find!("/topic/" + topic_slug)
-    end
+  def self.filtered_api_options(options)
+    options.slice(:start, :count).reject {|_,v| v.blank? }
   end
 end

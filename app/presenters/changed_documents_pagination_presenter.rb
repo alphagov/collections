@@ -52,6 +52,6 @@ private
   end
 
   def custom_page_size?
-    @changed_documents.page_size != Subtopic::ChangedDocuments::DEFAULT_PAGE_SIZE
+    @changed_documents.page_size != Topic::ChangedDocuments::DEFAULT_PAGE_SIZE
   end
 end

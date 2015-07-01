@@ -1,6 +1,6 @@
 require "test_helper"
 
-describe Subtopic::ChangedDocuments do
+describe Topic::ChangedDocuments do
   include RummagerHelpers
 
   def expect_search_params(params)
@@ -13,7 +13,7 @@ describe Subtopic::ChangedDocuments do
     setup do
       @subtopic_slug = 'business-tax/paye'
       @pagination_options = {}
-      @documents = Subtopic::ChangedDocuments.new(@subtopic_slug, @pagination_options)
+      @documents = Topic::ChangedDocuments.new(@subtopic_slug, @pagination_options)
     end
 
     it "filters for the given subtopic" do
@@ -109,11 +109,11 @@ describe Subtopic::ChangedDocuments do
         'Employee Tax Codes',
         'Payroll Annual Reporting',
       ]
-      assert_equal expected_titles, Subtopic::ChangedDocuments.new(@subtopic_slug).map(&:title)
+      assert_equal expected_titles, Topic::ChangedDocuments.new(@subtopic_slug).map(&:title)
     end
 
     it "provides the title, base_path and change_note for each document" do
-      documents = Subtopic::ChangedDocuments.new(@subtopic_slug).to_a
+      documents = Topic::ChangedDocuments.new(@subtopic_slug).to_a
 
       # Actual values come from rummager helpers.
       assert_equal "/government/publications/pay-psa", documents[2].base_path
@@ -122,7 +122,7 @@ describe Subtopic::ChangedDocuments do
     end
 
     it "provides the public_updated_at for each document" do
-      documents = Subtopic::ChangedDocuments.new(@subtopic_slug).to_a
+      documents = Topic::ChangedDocuments.new(@subtopic_slug).to_a
 
       assert documents[0].public_updated_at.is_a?(Time)
 
@@ -142,7 +142,7 @@ describe Subtopic::ChangedDocuments do
         'payroll-annual-reporting',
       ], :page_size => 3)
       @pagination_options = {:count => 3}
-      @documents = Subtopic::ChangedDocuments.new(@subtopic_slug, @pagination_options)
+      @documents = Topic::ChangedDocuments.new(@subtopic_slug, @pagination_options)
     end
 
     it "returns the first page of results" do
@@ -177,7 +177,7 @@ describe Subtopic::ChangedDocuments do
         "total" => 1,
       })
 
-      documents = Subtopic::ChangedDocuments.new("business-tax/paye")
+      documents = Topic::ChangedDocuments.new("business-tax/paye")
       assert_equal 1, documents.to_a.size
       assert_equal 'Pay Psa', documents.first.title
       assert_nil documents.first.public_updated_at
