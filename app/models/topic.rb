@@ -59,8 +59,8 @@ class Topic
     end
   end
 
-  def groups
-    Groups.new(slug, @content_item_data["details"]["groups"])
+  def lists
+    ListSet.new("specialist_sector", slug, @content_item_data["details"]["groups"])
   end
 
   def changed_documents

@@ -7,13 +7,13 @@
 <% end %>
 
 <%= render layout: "subtopic", locals: {subtopic: @subtopic, organisations: organisations, link_to_latest_feed: true, beta_label: false} do %>
-  <% @subtopic.groups.each do |group| -%>
-    <nav class="index-list with-title" aria-labelledby="<%= group.title.parameterize %>">
-      <h1 id="<%= group.title.parameterize %>"><%= group.title %></h1>
+  <% @subtopic.lists.each do |list| -%>
+    <nav class="index-list with-title" aria-labelledby="<%= list.title.parameterize %>">
+      <h1 id="<%= list.title.parameterize %>"><%= list.title %></h1>
       <ul>
-      <% group.contents.each do |group_item| -%>
+      <% list.contents.each do |list_item| -%>
         <li>
-          <a href="<%= group_item.base_path %>"><%= group_item.title %></a>
+          <a href="<%= list_item.base_path %>"><%= list_item.title %></a>
         </li>
       <% end -%>
       </ul>

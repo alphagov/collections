@@ -1,6 +1,6 @@
 require "test_helper"
 
-describe Topic::Groups do
+describe ListSet do
 
   describe "for a curated subtopic" do
     setup do
@@ -29,15 +29,15 @@ describe Topic::Groups do
           'payroll-annual-reporting',
         ]
       )
-      @groups = Topic::Groups.new('business-tax/paye', @group_data)
+      @list_set = ListSet.new('specialist_sector', 'business-tax/paye', @group_data)
     end
 
     it "returns the groups in the curated order" do
-      assert_equal ["Paying HMRC", "Annual PAYE and payroll tasks"], @groups.map(&:title)
+      assert_equal ["Paying HMRC", "Annual PAYE and payroll tasks"], @list_set.map(&:title)
     end
 
     it "provides the title and base_path for group items" do
-      groups = @groups.to_a
+      groups = @list_set.to_a
 
       assert_equal "Employee tax codes", groups[1].contents.to_a[2].title
       assert_equal "/pay-psa", groups[0].contents.to_a[1].base_path
@@ -46,7 +46,7 @@ describe Topic::Groups do
     it "skips items no longer tagged to this subtopic" do
       @group_data[0]["contents"] << contentapi_url_for_slug('pay-bear-tax')
 
-      groups = @groups.to_a
+      groups = @list_set.to_a
       assert_equal 3, groups[0].contents.size
       refute groups[0]["contents"].map(&:base_path).include?("/pay-bear-tax")
     end
@@ -63,10 +63,10 @@ describe Topic::Groups do
         "contents" => [],
       }
 
-      assert_equal 2, @groups.count
-      group_titles = @groups.map(&:title)
-      refute group_titles.include?("Group with untagged items")
-      refute group_titles.include?("Empty group")
+      assert_equal 2, @list_set.count
+      list_titles = @list_set.map(&:title)
+      refute list_titles.include?("Group with untagged items")
+      refute list_titles.include?("Empty group")
     end
   end
 
@@ -83,12 +83,12 @@ describe Topic::Groups do
           'payroll-annual-reporting',
         ]
       )
-      @groups = Topic::Groups.new('business-tax/paye', [])
+      @list_set = ListSet.new('specialist_sector', 'business-tax/paye', [])
     end
 
     it "constructs a single A-Z group" do
-      assert_equal 1, @groups.to_a.size
-      assert_equal "A to Z", @groups.first.title
+      assert_equal 1, @list_set.to_a.size
+      assert_equal "A to Z", @list_set.first.title
     end
 
     it "includes content tagged to the topic in alphabetical order" do
@@ -100,32 +100,32 @@ describe Topic::Groups do
         'Pay psa',
         'Payroll annual reporting',
       ]
-      assert_equal expected_titles, @groups.first.contents.map(&:title)
+      assert_equal expected_titles, @list_set.first.contents.map(&:title)
     end
 
     it "includes the base_path for all items" do
-      assert_equal "/pay-paye-tax", @groups.first.contents.to_a[3].base_path
+      assert_equal "/pay-paye-tax", @list_set.first.contents.to_a[3].base_path
     end
 
     it "handles nil data the same as empty array" do
-      @groups = Topic::Groups.new('business-tax/paye', nil)
-      assert_equal 1, @groups.to_a.size
-      assert_equal "A to Z", @groups.first.title
+      @list_set = ListSet.new('specialist_sector', 'business-tax/paye', nil)
+      assert_equal 1, @list_set.to_a.size
+      assert_equal "A to Z", @list_set.first.title
     end
   end
 
   describe "filtering out some formats" do
     setup do
-      @groups = Topic::Groups.new('business-tax/paye', [])
+      @list_set = ListSet.new('specialist_sector', 'business-tax/paye', [])
     end
 
     it "filters out some formats" do
       content_api_has_artefacts_with_a_tag(
         'specialist_sector', 'business-tax/paye',
         [ 'pay-paye-tax', 'pay-psa'],
-        artefact: { format: Topic::Groups::FORMATS_TO_EXCLUDE.to_a.first }
+        artefact: { format: ListSet::FORMATS_TO_EXCLUDE.to_a.first }
       )
-      assert_equal 0, @groups.first.contents.size
+      assert_equal 0, @list_set.first.contents.size
     end
   end
 end
