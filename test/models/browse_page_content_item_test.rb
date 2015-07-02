@@ -8,7 +8,7 @@ describe BrowsePageContentItem do
       lists = BrowsePageContentItem.new('crime-and-justice/judges', stub(:details)).lists
 
       assert_equal 1, lists.size
-      assert_equal 'A&#8202;to&#8202;Z', lists.first.name
+      assert_equal 'A to Z', lists.first.name
       assert_equal 'Judge dredd', lists.first.links.first.title
     end
 

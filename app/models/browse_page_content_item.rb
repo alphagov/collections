@@ -41,7 +41,7 @@ private
 
   def fallback_list_of_uncurated_links
     [OpenStruct.new(
-      name: 'A&#8202;to&#8202;Z', # &#8202 = hairspace
+      name: 'A to Z',
       links: tagged_items_from_content_api
     )]
   end
