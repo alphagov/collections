@@ -29,7 +29,7 @@ Given(/^there is a browse page set up with links$/) do
   stub_request(:get, "https://contentapi.test.gov.uk/tags/crime-and-justice%2Fjudges.json").
     to_return(:status => 200, :body => "{}", :headers => {})
 
-  stub_request(:get, "https://contentapi.test.gov.uk/with_tag.json?tag=crime-and-justice/judges").
+  stub_request(:get, "https://contentapi.test.gov.uk/with_tag.json?section=crime-and-justice/judges").
     to_return(:status => 200, :body => JSON.dump(results: [{title: 'Judge dredd', web_url: 'http://gov.uk/judge'}]))
 end
 

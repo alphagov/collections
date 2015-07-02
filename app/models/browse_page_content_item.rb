@@ -49,7 +49,7 @@ private
   # Returns an array containing OpenStructs with keys :title, :web_url.
   def tagged_items_from_content_api
     @tagged_items_from_content_api ||= begin
-      content_api.with_tag(slug).results.sort_by(&:title)
+      content_api.with_tag(slug, "section").results.sort_by(&:title)
     end
   end
 
