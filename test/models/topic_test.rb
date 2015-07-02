@@ -102,14 +102,14 @@ describe Topic do
   end
 
   describe "slug" do
-    it "returns the slug for a topic at the root of the namespace" do
-      @api_data["base_path"] = "/business-tax/paye"
+    it "returns the slug for a subtopic" do
+      @api_data["base_path"] = "/topic/business-tax/paye"
       assert_equal "business-tax/paye", @topic.slug
     end
 
-    it "returns the slug for a topic under the /topic namespace" do
-      @api_data["base_path"] = "/topic/business-tax/paye"
-      assert_equal "business-tax/paye", @topic.slug
+    it "returns the slug for a top-level topic" do
+      @api_data["base_path"] = "/topic/business-tax"
+      assert_equal "business-tax", @topic.slug
     end
   end
 

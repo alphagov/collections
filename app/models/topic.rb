@@ -68,7 +68,7 @@ class Topic
   end
 
   def slug
-    base_path.split('/')[-2..-1].join('/')
+    base_path.sub(%r{\A/topic/}, '')
   end
 
 private
