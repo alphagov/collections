@@ -1,16 +1,16 @@
-<div class="pane-inner <%= @page.curated_links? ? 'curated-list' : 'a-to-z' %>">
+<div class="pane-inner <%= @page.lists.curated? ? 'curated-list' : 'a-to-z' %>">
   <h1 tabindex="-1"><%= @page.title %></h1>
 
   <% @page.lists.each do |list| %>
-    <% if @page.curated_links? %>
-      <h2 class='list-header'><%= list.name %></h2>
+    <% if @page.lists.curated? %>
+      <h2 class='list-header'><%= list.title %></h2>
     <% else %>
-      <p class="sort-order"><%= hairspace list.name %></p>
+      <p class="sort-order"><%= hairspace list.title %></p>
     <% end %>
 
     <ul>
-      <% list.links.each do |link| %>
-        <li><%= link_to link.title, link.web_url %></li>
+      <% list.contents.each do |list_item| %>
+        <li><%= link_to list_item.title, list_item.base_path %></li>
       <% end %>
     </ul>
   <% end %>

@@ -92,8 +92,7 @@ describe BrowseController do
     page.stubs(
       slimmer_breadcrumb_options: [],
       title: 'Title',
-      curated_links?: false,
-      lists: [],
+      lists: stub(:curated? => false, :each => nil),
       related_topics: [],
       active_top_level_browse_page: OpenStruct.new(title: 'aosudgad'),
       second_level_browse_pages: [],

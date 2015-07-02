@@ -27,6 +27,10 @@ class ListSet
   end
   include Enumerable
 
+  def curated?
+    @group_data.any?
+  end
+
   private
 
   def lists
@@ -34,7 +38,7 @@ class ListSet
   end
 
   def build_lists
-    if @group_data.any?
+    if curated?
       build_curated_lists
     else
       build_a_to_z_list
