@@ -41,18 +41,16 @@ class Topic::Groups
   end
 
   def build_curated_groups
-    @group_data.map do |group|
-      List.new(
-        group["name"],
-        group["contents"].each_with_object([]) do |api_url, results|
-          if item = find_content_item(api_url)
-            results << ListItem.new(
-              item["title"],
-              URI.parse(item["web_url"]).path,
-            )
-          end
-        end,
-      )
+    @group_data.each_with_object([]) do |group, results|
+      contents = group["contents"].each_with_object([]) do |api_url, results|
+        if item = find_content_item(api_url)
+          results << ListItem.new(
+            item["title"],
+            URI.parse(item["web_url"]).path,
+          )
+        end
+      end
+      results << List.new(group["name"], contents) if contents.any?
     end
   end
 

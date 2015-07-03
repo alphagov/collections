@@ -34,14 +34,14 @@ module TopicHelper
           {
             name: "Oil rigs",
             contents: [
-              "http://example.com/api/what-is-oil.json",
-              "http://example.com/api/apply-for-an-oil-licence.json",
+              "http://example.com/what-is-oil.json",
+              "http://example.com/apply-for-an-oil-licence.json",
             ]
           },
           {
             name: "Piping",
             contents: [
-              "http://example.com/api/well-application-form.json",
+              "http://example.com/well-application-form.json",
             ]
           },
         ],
