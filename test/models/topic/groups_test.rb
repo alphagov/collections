@@ -50,6 +50,24 @@ describe Topic::Groups do
       assert_equal 3, groups[0].contents.size
       refute groups[0]["contents"].map(&:base_path).include?("/pay-bear-tax")
     end
+
+    it "omits groups with no active items in them" do
+      @group_data << {
+        "name" => "Group with untagged items",
+        "contents" => [
+          contentapi_url_for_slug('pay-bear-tax'),
+        ],
+      }
+      @group_data << {
+        "name" => "Empty group",
+        "contents" => [],
+      }
+
+      assert_equal 2, @groups.count
+      group_titles = @groups.map(&:title)
+      refute group_titles.include?("Group with untagged items")
+      refute group_titles.include?("Empty group")
+    end
   end
 
   describe "for a non-curated topic" do
