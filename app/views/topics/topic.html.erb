@@ -1,4 +1,5 @@
 <% content_for :title do %><%= @topic.title %> - GOV.UK<% end %>
+<%= render 'shared/tag_meta', tag: @topic %>
 <% content_for :page_class, "topics-page" %>
 
 <div class="header-context">

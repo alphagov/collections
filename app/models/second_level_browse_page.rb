@@ -1,7 +1,7 @@
 class SecondLevelBrowsePage
   attr_reader :top_level_slug, :second_level_slug
 
-  delegate :title, to: :content_store_item
+  delegate :title, :description, to: :content_store_item
 
   def initialize(top_level_slug, second_level_slug)
     @top_level_slug = top_level_slug
@@ -40,6 +40,10 @@ class SecondLevelBrowsePage
     @lists ||= ListSet.new("section", "#{top_level_slug}/#{second_level_slug}", groups)
   end
 
+  def base_path
+    "/browse/#{top_level_slug}/#{second_level_slug}"
+  end
+
 private
 
   def groups
@@ -47,8 +51,6 @@ private
   end
 
   def content_store_item
-    @content_store_item ||= ContentItem.find!(
-      "/browse/#{top_level_slug}/#{second_level_slug}"
-    )
+    @content_store_item ||= ContentItem.find!(base_path)
   end
 end

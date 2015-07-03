@@ -1,7 +1,7 @@
 class TopLevelBrowsePage
   attr_reader :slug
 
-  delegate :title, to: :content_store_item
+  delegate :title, :description, to: :content_store_item
 
   def initialize(slug)
     @slug = slug
@@ -19,11 +19,13 @@ class TopLevelBrowsePage
     content_store_item.links.top_level_browse_pages
   end
 
+  def base_path
+    "/browse/#{slug}"
+  end
+
 private
 
   def content_store_item
-    @content_store_item ||= begin
-      ContentItem.find!("/browse/#{slug}")
-    end
+    @content_store_item ||= ContentItem.find!(base_path)
   end
 end
