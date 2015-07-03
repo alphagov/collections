@@ -1,5 +1,5 @@
 
-class Topic::Groups
+class ListSet
 
   FORMATS_TO_EXCLUDE = %w(
     fatality_notice
@@ -14,33 +14,38 @@ class Topic::Groups
   List = Struct.new(:title, :contents)
   ListItem = Struct.new(:title, :base_path)
 
-  def initialize(subtopic_slug, group_data)
-    @subtopic_slug = subtopic_slug
+  def initialize(tag_type, tag_slug, group_data)
+    @tag_type = tag_type
+    @tag_slug = tag_slug
     @group_data = group_data || []
   end
 
   def each
-    groups.each do |g|
-      yield g
+    lists.each do |l|
+      yield l
     end
   end
   include Enumerable
 
-  private
-
-  def groups
-    @_groups ||= build_groups
+  def curated?
+    @group_data.any?
   end
 
-  def build_groups
-    if @group_data.any?
-      build_curated_groups
+  private
+
+  def lists
+    @_lists ||= build_lists
+  end
+
+  def build_lists
+    if curated?
+      build_curated_lists
     else
-      build_a_to_z_group
+      build_a_to_z_list
     end
   end
 
-  def build_curated_groups
+  def build_curated_lists
     @group_data.each_with_object([]) do |group, results|
       contents = group["contents"].each_with_object([]) do |api_url, results|
         if item = find_content_item(api_url)
@@ -54,7 +59,7 @@ class Topic::Groups
     end
   end
 
-  def build_a_to_z_group
+  def build_a_to_z_list
     [
       List.new(
         'A to Z',
@@ -82,6 +87,6 @@ class Topic::Groups
   end
 
   def content_tagged_to_topic
-    @_content_tagged_to_topic ||= Collections.services(:content_api).with_tag(@subtopic_slug, "specialist_sector")["results"]
+    @_content_tagged_to_topic ||= Collections.services(:content_api).with_tag(@tag_slug, @tag_type)["results"]
   end
 end

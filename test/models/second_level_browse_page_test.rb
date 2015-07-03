@@ -10,4 +10,25 @@ describe SecondLevelBrowsePage do
       assert_equal page.title, 'Foo Bar'
     end
   end
+
+  describe '#lists' do
+    setup do
+      @stub_content_item = stub(:details => stub(:groups => :some_data))
+      ContentItem.stubs(:find!).returns(@stub_content_item)
+    end
+
+    it "constructs a ListSet with the tag type and slug" do
+      ListSet.expects(:new).with("section", "crime-and-justice/judges", anything()).returns(:a_lists_instance)
+
+      page = SecondLevelBrowsePage.new('crime-and-justice', 'judges')
+      assert_equal :a_lists_instance, page.lists
+    end
+
+    it "passes the groups data when constructing" do
+      ListSet.expects(:new).with(anything(), anything(), :some_data).returns(:a_lists_instance)
+
+      page = SecondLevelBrowsePage.new('crime-and-justice', 'judges')
+      assert_equal :a_lists_instance, page.lists
+    end
+  end
 end

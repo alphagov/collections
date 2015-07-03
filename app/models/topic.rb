@@ -59,8 +59,8 @@ class Topic
     end
   end
 
-  def groups
-    Groups.new(slug, @content_item_data["details"]["groups"])
+  def lists
+    ListSet.new("specialist_sector", slug, @content_item_data["details"]["groups"])
   end
 
   def changed_documents
@@ -68,7 +68,7 @@ class Topic
   end
 
   def slug
-    base_path.split('/')[-2..-1].join('/')
+    base_path.sub(%r{\A/topic/}, '')
   end
 
 private

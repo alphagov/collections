@@ -1,7 +1,6 @@
 class SecondLevelBrowsePage
   attr_reader :top_level_slug, :second_level_slug
 
-  delegate :curated_links?, :lists, to: :browse_page_content_item
   delegate :title, to: :content_store_item
 
   def initialize(top_level_slug, second_level_slug)
@@ -37,18 +36,19 @@ class SecondLevelBrowsePage
     content_store_item.links.top_level_browse_pages
   end
 
+  def lists
+    @lists ||= ListSet.new("section", "#{top_level_slug}/#{second_level_slug}", groups)
+  end
+
 private
+
+  def groups
+    (content_store_item.details && content_store_item.details.groups) || []
+  end
 
   def content_store_item
     @content_store_item ||= ContentItem.find!(
       "/browse/#{top_level_slug}/#{second_level_slug}"
-    )
-  end
-
-  def browse_page_content_item
-    @browse_page_content_item ||= BrowsePageContentItem.new(
-      "#{top_level_slug}/#{second_level_slug}",
-      content_store_item
     )
   end
 end

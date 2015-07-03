@@ -45,7 +45,7 @@ describe TopicsController do
       setup do
         content_store_has_item(
           "/topic/oil-and-gas/wells",
-          content_item_for_base_path("/oil-and-gas/wells").merge({
+          content_item_for_base_path("/topic/oil-and-gas/wells").merge({
             "links" => {
               "parent" => [{
                 "title" => "Oil and Gas",
