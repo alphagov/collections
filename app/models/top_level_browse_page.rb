@@ -1,7 +1,7 @@
 class TopLevelBrowsePage
   attr_reader :slug
 
-  delegate :title, to: :content_store_item
+  delegate :title, :description, to: :content_store_item
 
   def initialize(slug)
     @slug = slug

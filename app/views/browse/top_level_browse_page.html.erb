@@ -1,4 +1,5 @@
 <% content_for :title, "#{@page.title} - GOV.UK" %>
+<%= render 'shared/tag_meta', tag: @page %>
 <% content_for :page_class, "browse" %>
 
 <div class="browse-panes section" data-state="section">

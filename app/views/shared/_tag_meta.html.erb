@@ -1,0 +1,5 @@
+<% content_for :extra_headers do %>
+  <%- if tag.description.present? -%>
+    <meta name="description" content="<%= tag.description %>">
+  <%- end -%>
+<% end %>

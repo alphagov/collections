@@ -1,4 +1,5 @@
 <% content_for :title, "#{@subtopic.combined_title} - GOV.UK" %>
+<%= render 'shared/tag_meta', tag: @subtopic %>
 <% content_for :page_title do %>
   <%- if @subtopic.parent -%>
     <%= link_to @subtopic.parent.title, @subtopic.parent.base_path %>

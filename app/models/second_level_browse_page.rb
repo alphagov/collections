@@ -1,7 +1,7 @@
 class SecondLevelBrowsePage
   attr_reader :top_level_slug, :second_level_slug
 
-  delegate :title, to: :content_store_item
+  delegate :title, :description, to: :content_store_item
 
   def initialize(top_level_slug, second_level_slug)
     @top_level_slug = top_level_slug
