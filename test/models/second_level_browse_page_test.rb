@@ -39,4 +39,8 @@ describe SecondLevelBrowsePage do
       assert_equal :a_lists_instance, page.lists
     end
   end
+
+  it 'returns the base_path for the page' do
+    assert_equal '/browse/foo/bar', SecondLevelBrowsePage.new('foo', 'bar').base_path
+  end
 end

@@ -18,4 +18,8 @@ describe TopLevelBrowsePage do
       assert_equal 'Descriptive text', page.description
     end
   end
+
+  it 'returns the base_path for the page' do
+    assert_equal '/browse/foo', TopLevelBrowsePage.new('foo').base_path
+  end
 end

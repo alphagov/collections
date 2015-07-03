@@ -40,6 +40,10 @@ class SecondLevelBrowsePage
     @lists ||= ListSet.new("section", "#{top_level_slug}/#{second_level_slug}", groups)
   end
 
+  def base_path
+    "/browse/#{top_level_slug}/#{second_level_slug}"
+  end
+
 private
 
   def groups
@@ -47,8 +51,6 @@ private
   end
 
   def content_store_item
-    @content_store_item ||= ContentItem.find!(
-      "/browse/#{top_level_slug}/#{second_level_slug}"
-    )
+    @content_store_item ||= ContentItem.find!(base_path)
   end
 end

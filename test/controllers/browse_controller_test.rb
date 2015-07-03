@@ -91,6 +91,7 @@ describe BrowseController do
     page = stubs('page')
     page.stubs(
       slimmer_breadcrumb_options: [],
+      base_path: "/crime-and-justice",
       title: 'Title',
       description: 'All about title',
       lists: stub(:curated? => false, :each => nil),

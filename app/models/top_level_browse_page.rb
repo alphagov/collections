@@ -19,11 +19,13 @@ class TopLevelBrowsePage
     content_store_item.links.top_level_browse_pages
   end
 
+  def base_path
+    "/browse/#{slug}"
+  end
+
 private
 
   def content_store_item
-    @content_store_item ||= begin
-      ContentItem.find!("/browse/#{slug}")
-    end
+    @content_store_item ||= ContentItem.find!(base_path)
   end
 end
