@@ -20,7 +20,7 @@
       <h2>Detailed guidance</h2>
       <ul>
         <% @page.related_topics.each do |related_topic| %>
-          <li><%= link_to related_topic.title, related_topic.web_url %></li>
+          <li><%= link_to related_topic.title, related_topic.base_path %></li>
         <% end %>
       </ul>
     </div>
