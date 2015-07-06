@@ -28,14 +28,6 @@ describe BrowseController do
       assert_response 404
     end
 
-    it "return a cacheable 404 without calling content_api if the section slug is invalid" do
-      get :top_level_browse_page, top_level_slug: "this & that"
-
-      assert_equal "404", response.code
-      assert_equal "max-age=600, public",  response.headers["Cache-Control"]
-      assert_not_requested(:get, %r{\A#{GdsApi::TestHelpers::ContentApi::CONTENT_API_ENDPOINT}})
-    end
-
     it "set slimmer format of browse" do
       TopLevelBrowsePage.stubs(:new).returns(stubbed_page_object)
 
@@ -60,14 +52,6 @@ describe BrowseController do
       get :second_level_browse_page, top_level_slug: "crime-and-justice", second_level_slug: "frume"
 
       assert_response 404
-    end
-
-    it "return a cacheable 404 without calling content_api if the section slug is invalid" do
-      get :second_level_browse_page, top_level_slug: "this & that", second_level_slug: "foo"
-
-      assert_equal "404", response.code
-      assert_equal "max-age=600, public",  response.headers["Cache-Control"]
-      assert_not_requested(:get, %r{\A#{GdsApi::TestHelpers::ContentApi::CONTENT_API_ENDPOINT}})
     end
 
     it "set slimmer format of browse" do

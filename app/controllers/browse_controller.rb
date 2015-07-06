@@ -1,9 +1,6 @@
 class BrowseController < ApplicationController
   rescue_from GdsApi::HTTPNotFound, with: :error_404
 
-  before_filter(:only => [:top_level_browse_page, :second_level_browse_page]) { validate_slug_param(:top_level_slug) }
-  before_filter(:only => [:second_level_browse_page]) { validate_slug_param(:second_level_slug) }
-
   enable_request_formats top_level_browse_page: [:json]
   enable_request_formats second_level_browse_page: [:json]
 

@@ -28,16 +28,6 @@ describe TopicsController do
 
       assert_equal 404, response.status
     end
-
-    describe "invalid slugs" do
-      it "returns a cacheable 404 without calling content-store if the sector slug is invalid" do
-        get :topic, topic_slug: "this & that"
-
-        assert_equal "404", response.code
-        assert_equal "max-age=600, public",  response.headers["Cache-Control"]
-        assert_not_requested(:get, %r{\A#{GdsApi::TestHelpers::ContentStore::CONTENT_STORE_ENDPOINT}})
-      end
-    end
   end
 
   describe "GET subtopic" do
@@ -90,16 +80,6 @@ describe TopicsController do
       get :subtopic, topic_slug: "oil-and-gas", subtopic_slug: "coal"
 
       assert_equal 404, response.status
-    end
-
-    describe "invalid slugs" do
-      it "returns a cacheable 404 without calling content-store if the subtopic slug is invalid" do
-        get :subtopic, topic_slug: "oil-and-gas", subtopic_slug: "this & that"
-
-        assert_equal "404", response.code
-        assert_equal "max-age=600, public", response.headers["Cache-Control"]
-        assert_not_requested(:get, %r{\A#{GdsApi::TestHelpers::ContentStore::CONTENT_STORE_ENDPOINT}})
-      end
     end
   end
 end

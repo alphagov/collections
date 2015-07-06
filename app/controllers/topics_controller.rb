@@ -1,6 +1,4 @@
 class TopicsController < ApplicationController
-  before_filter { validate_slug_param(:topic_slug) }
-  before_filter(:except => [:topic]) { validate_slug_param(:subtopic_slug) }
   before_filter :set_slimmer_format
 
   rescue_from GdsApi::HTTPNotFound, :with => :error_404
