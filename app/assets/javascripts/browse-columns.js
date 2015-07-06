@@ -349,12 +349,12 @@
         this.$breadcrumbs.find('li').slice(1).remove();
       }
     },
-    trackPageview: function(){
+    trackPageview: function(state){
       var sectionTitle = this.$section.find('h1').text();
       sectionTitle = sectionTitle ? sectionTitle.toLowerCase() : 'browse';
       if (GOVUK.analytics && GOVUK.analytics.trackPageview && GOVUK.analytics.setSectionDimension) {
         GOVUK.analytics.setSectionDimension(sectionTitle);
-        GOVUK.analytics.trackPageview();
+        GOVUK.analytics.trackPageview(state.path);
       }
     }
   };
