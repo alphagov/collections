@@ -1,11 +1,4 @@
 class Topic
-
-  LinkedTopic = Struct.new(:title, :base_path) do
-    def self.build(attributes)
-      new(attributes["title"], attributes["base_path"])
-    end
-  end
-
   def self.find(base_path, pagination_options = {})
     api_response = ContentItem.find!(base_path)
     new(api_response.to_hash, pagination_options)
@@ -34,7 +27,7 @@ class Topic
     if @content_item_data.has_key?("links") &&
         @content_item_data["links"].has_key?("parent") &&
         @content_item_data["links"]["parent"].any?
-      LinkedTopic.build(@content_item_data["links"]["parent"].first)
+      LinkedContentItem.build(@content_item_data["links"]["parent"].first)
     else
       nil
     end
@@ -44,7 +37,7 @@ class Topic
     if @content_item_data.has_key?("links") &&
         @content_item_data["links"].has_key?("children")
       @content_item_data["links"]["children"].map { |child|
-        LinkedTopic.build(child)
+        LinkedContentItem.build(child)
       }
     else
       []

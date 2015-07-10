@@ -5,13 +5,17 @@ class BrowseController < ApplicationController
   enable_request_formats second_level_browse_page: [:json]
 
   def index
-    @page = IndexBrowsePage.new
-    set_slimmer_artefact_headers(@page.slimmer_breadcrumb_options)
+    @page = MainstreamBrowsePage.find("/browse")
+    set_slimmer_artefact_headers({
+      title: "browse",
+      section_name: @page.title,
+      section_link: @page.base_path,
+    })
   end
 
   def top_level_browse_page
-    @page = TopLevelBrowsePage.new(params[:top_level_slug])
-    set_slimmer_artefact_headers(@page.slimmer_breadcrumb_options)
+    @page = MainstreamBrowsePage.find("/browse/#{params[:top_level_slug]}")
+    set_slimmer_artefact_headers
 
     respond_to do |f|
       f.html
@@ -22,8 +26,12 @@ class BrowseController < ApplicationController
   end
 
   def second_level_browse_page
-    @page = SecondLevelBrowsePage.new(params[:top_level_slug], params[:second_level_slug])
-    set_slimmer_artefact_headers(@page.slimmer_breadcrumb_options)
+    @page = MainstreamBrowsePage.find("/browse/#{params[:top_level_slug]}/#{params[:second_level_slug]}")
+    set_slimmer_artefact_headers({
+      title: "browse",
+      section_name: @page.active_top_level_browse_page.title,
+      section_link: @page.active_top_level_browse_page.base_path,
+    })
 
     respond_to do |f|
       f.html
