@@ -8,7 +8,7 @@ gem 'govuk_frontend_toolkit', '~> 4.0.1'
 
 gem 'unicorn', '~> 4.9.0'
 gem 'airbrake', '~> 4.2.1'
-gem 'logstasher', '~> 0.6.5'
+gem 'logstasher', '0.6.2' # 0.6.5+ changes the JSON schema used for events
 
 if ENV['SLIMMER_DEV']
   gem 'slimmer', :path => '../slimmer'
