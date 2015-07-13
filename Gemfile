@@ -22,7 +22,7 @@ else
   gem 'gds-api-adapters', '~> 20.1.2'
 end
 
-gem 'plek', '~> 1.10.0'
+gem 'plek', '~> 1.11.0'
 
 group :test do
   gem 'capybara', '~> 2.4.1'
