@@ -57,6 +57,8 @@ private
         item.content_with_tag.web_url,
       )
     end.sort_by(&:title)
+  rescue GdsApi::HTTPNotFound # Whitehall returns 404, not empty array with no categories.
+    return []
   end
 
   def linked_items(field)
