@@ -86,6 +86,7 @@ describe BrowseController do
       active_top_level_browse_page: OpenStruct.new(title: 'aosudgad'),
       second_level_browse_pages: [],
       top_level_browse_pages: [],
+      second_level_pages_curated?: false,
     )
   end
 end

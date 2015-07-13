@@ -45,8 +45,10 @@ private
 
   def second_level_browse_pages_partial(page)
     render_partial('_second_level_browse_pages',
-        title: page.title,
-        second_level_browse_pages: page.second_level_browse_pages)
+      title: page.title,
+      second_level_browse_pages: page.second_level_browse_pages,
+      curated_order: page.second_level_pages_curated?,
+    )
   end
 
   def set_slimmer_artefact_headers(dummy_artefact={})
