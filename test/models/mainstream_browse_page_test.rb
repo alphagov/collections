@@ -156,6 +156,13 @@ describe MainstreamBrowsePage do
 
         assert_equal ['Alpha', 'Bravo', 'Charlie'], @page.related_topics.map(&:title)
       end
+
+      it "returns empty array when whitehall has no categories" do
+        # Yes, whitehall returns a 404, not empty array when there are no categories...
+        @mock_whitehall.stubs(:sub_sections).raises(GdsApi::HTTPNotFound.new("Not Found"))
+
+        assert_equal [], @page.related_topics
+      end
     end
   end
 
