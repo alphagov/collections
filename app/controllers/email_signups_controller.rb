@@ -1,7 +1,7 @@
 class EmailSignupsController < ApplicationController
   protect_from_forgery except: [:create]
 
-  rescue_from GdsApi::HTTPNotFound, :with => :error_404
+  rescue_from ContentItem::NotFound, :with => :error_404
 
   def new
     slimmer_artefact = {

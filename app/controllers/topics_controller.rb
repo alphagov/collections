@@ -1,7 +1,7 @@
 class TopicsController < ApplicationController
   before_filter :set_slimmer_format
 
-  rescue_from GdsApi::HTTPNotFound, :with => :error_404
+  rescue_from ContentItem::NotFound, :with => :error_404
 
   def topic
     @topic = Topic.find(request.path)
