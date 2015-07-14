@@ -1,5 +1,4 @@
-Given(/^there is a browse page set up with links$/) do
-
+Given(/^there is an? (\w+) browse page set up with links$/) do |second_level_ordering|
   top_level_browse_pages = [{ title: 'Crime and justice', base_path: '/browse/crime-and-justice' }]
   second_level_browse_pages = [{ title: 'Judges', base_path: '/browse/crime-and-justice/judges' }]
 
@@ -13,7 +12,10 @@ Given(/^there is a browse page set up with links$/) do
     links: {
       top_level_browse_pages: top_level_browse_pages,
       second_level_browse_pages: second_level_browse_pages,
-    }
+    },
+    details: {
+      second_level_ordering: second_level_ordering,
+    },
   })
 
   content_store_has_item '/browse/crime-and-justice/judges', {
@@ -67,4 +69,12 @@ end
 
 Then(/^I should see the second level browse page$/) do
   assert page.has_selector?('h1', text: 'Judges')
+end
+
+Then(/^the A to Z label should be present$/) do
+  assert page.has_content?('A to Z')
+end
+
+Then(/^the A to Z label should be not present$/) do
+  assert page.has_no_content?('A to Z')
 end
