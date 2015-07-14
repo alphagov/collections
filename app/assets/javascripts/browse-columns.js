@@ -137,7 +137,11 @@
       this.$subsection.hide();
       this.$section.css('margin-right', '63%');
       if(this.isDesktop()){
-        this.$section.find('.pane-inner').animate({
+        this.$section.find('.pane-inner.curated').animate({
+          paddingLeft: '30px'
+        }, this.animateSpeed);
+
+        this.$section.find('.pane-inner.alphabetical').animate({
           paddingLeft: '96px'
         }, this.animateSpeed);
 
