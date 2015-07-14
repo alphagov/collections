@@ -17,6 +17,10 @@ module Collections
   class ServiceNotRegisteredException < Exception; end
 end
 
+if Rails.env.development?
+  GdsApi::Base.default_options = { disable_cache: true }
+end
+
 require 'gds_api/content_api'
 Collections.services(:content_api, GdsApi::ContentApi.new(
   Plek.current.find('contentapi'),
