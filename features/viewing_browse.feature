@@ -4,8 +4,8 @@ Feature: Viewing browse
   So that I can quickly the content I need
 
   @javascript
-  Scenario: Browse to a browse page page with Javascript
-    Given there is a browse page set up with links
+  Scenario: Browse to a browse page with Javascript
+    Given there is an alphabetical browse page set up with links
     And the page also has detailed guidance links
     When I visit the main browse page
     And I click on a top level browse page
@@ -15,8 +15,8 @@ Feature: Viewing browse
     Then I see the links tagged to the browse page
     And I should see the detailed guidance links
 
-  Scenario: Browse to a browse page page without Javascript
-    Given there is a browse page set up with links
+  Scenario: Browse to a browse page without Javascript
+    Given there is an alphabetical browse page set up with links
     And the page also has detailed guidance links
     When I visit the main browse page
     And I click on a top level browse page
@@ -27,9 +27,21 @@ Feature: Viewing browse
     And I should see the detailed guidance links
 
   Scenario: Browse to browse page that has no detailed guidance
-    Given there is a browse page set up with links
+    Given there is an alphabetical browse page set up with links
     And there is no detailed guidance category tagged to the page
     When I visit the main browse page
     And I click on a top level browse page
     When I click on a second level browse page
     Then I see the links tagged to the browse page
+
+  Scenario Outline: Browse to browse page and look for the A to Z label
+    Given there is a <child ordering> browse page set up with links
+    When I visit the main browse page
+    And I click on a top level browse page
+    Then the A to Z label should be <label presence>
+
+    Examples:
+      | child ordering | label presence |
+      |   alphabetical |        present |
+      |        curated |    not present |
+

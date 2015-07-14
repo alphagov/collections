@@ -1,6 +1,8 @@
-<div class="pane-inner">
+<div class="<%= curated_order ? "pane-inner" : "pane-inner alphabetical" %>">
   <h1 tabindex="-1"><%= title %></h1>
-  <p class="sort-order"><%= hairspace 'A to Z' %></p>
+  <% unless curated_order %>
+    <p class="sort-order"><%= hairspace 'A to Z' %></p>
+  <% end %>
   <ul>
     <% second_level_browse_pages.each do |browse_page| %>
       <li class='<%= browsing_in_second_level_page?(browse_page) ? 'active' : nil %>'>

@@ -31,6 +31,10 @@ class MainstreamBrowsePage
     linked_items("second_level_browse_pages")
   end
 
+  def second_level_pages_curated?
+    @content_item_data["details"] && @content_item_data["details"]["second_level_ordering"] == "curated"
+  end
+
   def lists
     @lists ||= ListSet.new("section", slug, groups)
   end
