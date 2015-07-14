@@ -38,6 +38,8 @@ group :test do
 end
 
 group :development, :test do
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'byebug', '~> 5.0.0'
   gem 'jasmine-rails', '~> 0.10.8'
 end
