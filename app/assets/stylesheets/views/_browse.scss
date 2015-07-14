@@ -175,6 +175,9 @@ main.browse {
       @include media(desktop){
         &.with-sort {
           .pane-inner {
+            padding-left: $gutter;
+          }
+          .pane-inner.alphabetical {
             padding-left: 96px;
           }
           .sort-order {

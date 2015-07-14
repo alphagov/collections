@@ -1,4 +1,4 @@
-<div class="pane-inner">
+<div class="<%= curated_order ? "pane-inner" : "pane-inner alphabetical" %>">
   <h1 tabindex="-1"><%= title %></h1>
   <% unless curated_order %>
     <p class="sort-order"><%= hairspace 'A to Z' %></p>
