@@ -40,7 +40,7 @@ class MainstreamBrowsePage
   end
 
   def related_topics
-    @related_topics ||= build_related_topics
+    linked_items("related_topics")
   end
 
   def slug
@@ -48,22 +48,6 @@ class MainstreamBrowsePage
   end
 
 private
-
-  # FIXME: this can be replaced with a simple call to linked_items once we no
-  # longer need to support whitehall detailed guide categories
-  def build_related_topics
-    topics = linked_items("related_topics")
-    return topics if topics.any?
-
-    Collections.services(:detailed_guidance_content_api).sub_sections(slug).results.map do |item|
-      LinkedContentItem.new(
-        item.title,
-        item.content_with_tag.web_url,
-      )
-    end.sort_by(&:title)
-  rescue GdsApi::HTTPNotFound # Whitehall returns 404, not empty array with no categories.
-    return []
-  end
 
   def linked_items(field)
     if @content_item_data.has_key?("links") &&

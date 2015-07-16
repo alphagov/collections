@@ -131,61 +131,13 @@ describe MainstreamBrowsePage do
       assert_equal 'All about foo', @page.related_topics[0].description
     end
 
-    # FIXME: replace the describe below with these 2 tests when we no longer
-    # need to support detailed guide categories from whitehall
-    #it "returns empty array with no items" do
-      #assert_equal [], @page.related_topics
-    #end
+    it "returns empty array with no items" do
+      assert_equal [], @page.related_topics
+    end
 
-    #it "returns empty array when the links field is missing" do
-      #@api_data.delete("links")
-      #assert_equal [], @page.related_topics
-    #end
-
-    describe "when there are no related_topics" do
-      before do
-        @original_whitehall = Collections.services(:detailed_guidance_content_api)
-        @mock_whitehall = stub("whitehall")
-        Collections.services(:detailed_guidance_content_api, @mock_whitehall)
-      end
-      after do
-        Collections.services(:detailed_guidance_content_api, @original_whitehall)
-      end
-
-      it "returns guidance categories from whitehall" do
-        @mock_whitehall.stubs(:sub_sections).returns(stubbed_whitehall_response(
-          [{
-            "title" => "From Whitehall",
-            "content_with_tag" => {
-              "web_url" => "/foo/bar/baz",
-            },
-          }]
-        ))
-
-        topics = @page.related_topics
-        assert_equal 1, topics.size
-        assert_equal "From Whitehall", topics.first.title
-        assert_equal "/foo/bar/baz", topics.first.base_path
-      end
-
-      it "sorts the whitehall categories by title" do
-        @mock_whitehall.stubs(:sub_sections).returns(stubbed_whitehall_response(
-          [
-            {"title" => "Bravo", "content_with_tag" => {"web_url" => "/foo"}},
-            {"title" => "Alpha", "content_with_tag" => {"web_url" => "/foo"}},
-            {"title" => "Charlie", "content_with_tag" => {"web_url" => "/foo"}},
-          ]
-        ))
-
-        assert_equal ['Alpha', 'Bravo', 'Charlie'], @page.related_topics.map(&:title)
-      end
-
-      it "returns empty array when whitehall has no categories" do
-        # Yes, whitehall returns a 404, not empty array when there are no categories...
-        @mock_whitehall.stubs(:sub_sections).raises(GdsApi::HTTPNotFound.new("Not Found"))
-
-        assert_equal [], @page.related_topics
-      end
+    it "returns empty array when the links field is missing" do
+      @api_data.delete("links")
+      assert_equal [], @page.related_topics
     end
   end
 
@@ -221,9 +173,5 @@ describe MainstreamBrowsePage do
 
       assert_equal :a_lists_instance, @page.lists
     end
-  end
-
-  def stubbed_whitehall_response(results)
-    build_ostruct_recursively(results: results)
   end
 end

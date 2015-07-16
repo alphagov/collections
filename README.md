@@ -43,8 +43,6 @@ retrieved from external sources.
   provides topic and browse page content.
 - [alphagov/content-store](https://github.com/alphagov/content-store) -
   provides subtopics and their curated lists.
-- [alphagov/whitehall](https://github.com/alphagov/whitehall) -
-  provides Detailed guidance content.
 - [alphagov/rummager](https://github.com/alphagov/rummager) -
   provides Latest changes content.
 - [alphagov/email-alert-api](https://github.com/alphagov/email-alert-api) -
