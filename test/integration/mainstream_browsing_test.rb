@@ -10,9 +10,6 @@ class MainstreamBrowsingTest < ActionDispatch::IntegrationTest
       slugs = content_item['base_path'].gsub('/browse/', '')
       stub_request(:get, "https://contentapi.test.gov.uk/with_tag.json?section=#{slugs}").
         to_return(body: JSON.dump(results: []))
-
-      stub_request(:get, "https://whitehall-admin.test.gov.uk/api/specialist/tags.json?parent_id=#{slugs}&type=section").
-        to_return(body: JSON.dump(results: []))
     end
 
     content_schema_examples_for(:mainstream_browse_page).each do |content_item|

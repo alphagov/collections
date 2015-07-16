@@ -24,7 +24,8 @@ Given(/^there is an? (\w+) browse page set up with links$/) do |second_level_ord
     links: {
       top_level_browse_pages: top_level_browse_pages,
       second_level_browse_pages: second_level_browse_pages,
-      active_top_level_browse_page: [{ title: 'Crime and justice', base_path: '/browse/crime-and-justice' }]
+      active_top_level_browse_page: [{ title: 'Crime and justice', base_path: '/browse/crime-and-justice' }],
+      related_topics: [{ title: 'A linked topic', base_path: '/browse/linked-topic' }]
     }
   }
 
@@ -35,20 +36,8 @@ Given(/^there is an? (\w+) browse page set up with links$/) do |second_level_ord
     to_return(:status => 200, :body => JSON.dump(results: [{title: 'Judge dredd', web_url: 'http://gov.uk/judge'}]))
 end
 
-Given(/^the page also has detailed guidance links$/) do
-  stub_detailed_guidance
-end
-
-Given(/^there is no detailed guidance category tagged to the page$/) do
-  stub_request(:get, "#{Plek.current.find('whitehall-admin')}/api/specialist/tags.json?parent_id=crime-and-justice/judges&type=section").to_raise(GdsApi::HTTPNotFound)
-end
-
 Then(/^I see the links tagged to the browse page/) do
   assert_can_see_linked_item('Judge dredd')
-end
-
-Then(/^I should see the detailed guidance links$/) do
-  assert_can_see_linked_item('Detailed guidance')
 end
 
 When(/^I visit the main browse page$/) do
@@ -77,4 +66,12 @@ end
 
 Then(/^the A to Z label should be not present$/) do
   assert page.has_no_content?('A to Z')
+end
+
+When(/^I visit that browse page$/) do
+  visit '/browse/crime-and-justice/judges'
+end
+
+Then(/^I should see the topics linked under Detailed guidance$/) do
+  assert page.has_content?('A linked topic')
 end

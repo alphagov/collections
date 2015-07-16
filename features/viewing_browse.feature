@@ -6,32 +6,20 @@ Feature: Viewing browse
   @javascript
   Scenario: Browse to a browse page with Javascript
     Given there is an alphabetical browse page set up with links
-    And the page also has detailed guidance links
     When I visit the main browse page
     And I click on a top level browse page
     Then I see the list of second level browse pages
     When I click on a second level browse page
     Then I should see the second level browse page
     Then I see the links tagged to the browse page
-    And I should see the detailed guidance links
 
   Scenario: Browse to a browse page without Javascript
     Given there is an alphabetical browse page set up with links
-    And the page also has detailed guidance links
     When I visit the main browse page
     And I click on a top level browse page
     Then I see the list of second level browse pages
     When I click on a second level browse page
     Then I should see the second level browse page
-    Then I see the links tagged to the browse page
-    And I should see the detailed guidance links
-
-  Scenario: Browse to browse page that has no detailed guidance
-    Given there is an alphabetical browse page set up with links
-    And there is no detailed guidance category tagged to the page
-    When I visit the main browse page
-    And I click on a top level browse page
-    When I click on a second level browse page
     Then I see the links tagged to the browse page
 
   Scenario Outline: Browse to browse page and look for the A to Z label
@@ -45,3 +33,7 @@ Feature: Viewing browse
       |   alphabetical |        present |
       |        curated |    not present |
 
+  Scenario: Browse to browse page that has "Detailed guidance"
+    Given there is an alphabetical browse page set up with links
+    When I visit that browse page
+    Then I should see the topics linked under Detailed guidance
