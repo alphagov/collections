@@ -15,6 +15,28 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
     base.merge(params)
   end
 
+  it "is possible to visit the topic index page" do
+    content_store_has_item("/topic", {
+      base_path: "/topic",
+      title: "Topics",
+      format: "topic",
+      public_updated_at: 10.days.ago.iso8601,
+      details: {},
+      links: {
+        children: [
+          {
+            title: "Oil and Gas",
+            base_path: "/topic/oil-and-gas",
+          },
+        ],
+      }
+    })
+
+    visit "/topic"
+
+    assert page.has_content?("Oil and Gas")
+  end
+
   it "renders a topic tag page and list its subtopics" do
     content_store_has_item("/topic/oil-and-gas", oil_and_gas_topic_item.merge({
       :links => {
