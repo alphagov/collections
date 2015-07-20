@@ -160,7 +160,7 @@ describe Topic::ChangedDocuments do
 
   describe "handling missing fields in the search results" do
     it "handles documents that don't contain the public_timestamp field" do
-      result = rummager_latest_document_for_slug('pay-psa')
+      result = rummager_document_for_slug('pay-psa')
       result.delete("public_timestamp")
 
       Collections::Application.config.search_client.stubs(:unified_search).with(

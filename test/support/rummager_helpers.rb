@@ -9,7 +9,7 @@ module RummagerHelpers
     )
   end
 
-  def rummager_latest_document_for_slug(slug, updated_at = 1.hour.ago)
+  def rummager_document_for_slug(slug, updated_at = 1.hour.ago)
     {
       "latest_change_note" => "This has changed",
       "public_timestamp" => updated_at.iso8601,
@@ -23,7 +23,7 @@ module RummagerHelpers
 
   def rummager_has_latest_documents_for_subtopic(subtopic_slug, document_slugs, page_size: 50)
     results = document_slugs.map.with_index do |slug, i|
-      rummager_latest_document_for_slug(slug, (i + 1).hours.ago)
+      rummager_document_for_slug(slug, (i + 1).hours.ago)
     end
 
     results.each_slice(page_size).with_index do |results_page, page|
