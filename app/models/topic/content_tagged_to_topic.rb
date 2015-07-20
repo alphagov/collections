@@ -16,6 +16,8 @@ class Topic::ContentTaggedToTopic
         result["title"],
         result["link"],
         timestamp,
+        nil,
+        result["format"],
       )
     end
   end
@@ -49,7 +51,7 @@ class Topic::ContentTaggedToTopic
       start: start_param,
       count: count_param,
       filter_specialist_sectors: [@topic_slug],
-      fields: %w(title link public_timestamp),
+      fields: %w(title link public_timestamp format),
     }
   end
 

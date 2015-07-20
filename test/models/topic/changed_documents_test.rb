@@ -16,7 +16,7 @@ describe Topic::ChangedDocuments do
     end
 
     it "requests the necessary fields" do
-      expect_search_params(:fields => %w(title link latest_change_note public_timestamp))
+      expect_search_params(:fields => %w(title link latest_change_note public_timestamp format))
       @documents.send(:search_result)
     end
   end

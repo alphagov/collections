@@ -11,6 +11,7 @@ module RummagerHelpers
 
   def rummager_document_for_slug(slug, updated_at = 1.hour.ago)
     {
+      "format" => "guide",
       "latest_change_note" => "This has changed",
       "public_timestamp" => updated_at.iso8601,
       "title" => "#{slug.titleize}",

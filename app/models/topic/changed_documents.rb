@@ -11,6 +11,7 @@ class Topic::ChangedDocuments < Topic::ContentTaggedToTopic
         result["link"],
         timestamp,
         result["latest_change_note"],
+        result["format"]
       )
     end
   end
@@ -18,7 +19,7 @@ class Topic::ChangedDocuments < Topic::ContentTaggedToTopic
   def search_params
     super.merge({
       order: "-public_timestamp",
-      fields: %w(title link latest_change_note public_timestamp),
+      fields: %w(title link latest_change_note public_timestamp format),
     })
   end
 end

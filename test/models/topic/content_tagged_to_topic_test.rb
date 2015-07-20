@@ -16,7 +16,7 @@ describe Topic::ContentTaggedToTopic do
     end
 
     it "requests the necessary fields" do
-      expect_search_params(:fields => %w(title link public_timestamp))
+      expect_search_params(:fields => %w(title link public_timestamp format))
       @documents.send(:search_result)
     end
 
