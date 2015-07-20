@@ -15,9 +15,9 @@ module RummagerHelpers
       "latest_change_note" => "This has changed",
       "public_timestamp" => updated_at.iso8601,
       "title" => "#{slug.titleize}",
-      "link" => "/government/publications/#{slug}",
-      "index" => "government",
-      "_id" => "/government/publications/#{slug}",
+      "link" => "/#{slug}",
+      "index" => "/",
+      "_id" => "/#{slug}",
       "document_type" => "edition"
     }
   end

@@ -48,7 +48,7 @@ describe Topic::ChangedDocuments do
       documents = Topic::ChangedDocuments.new(@subtopic_slug).to_a
 
       # Actual values come from rummager helpers.
-      assert_equal "/government/publications/pay-psa", documents[2].base_path
+      assert_equal "/pay-psa", documents[2].base_path
       assert_equal "Employee Tax Codes", documents[3].title
       assert_equal "This has changed", documents[4].change_note
     end
