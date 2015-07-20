@@ -3,12 +3,6 @@ require "test_helper"
 describe Topic::ChangedDocuments do
   include RummagerHelpers
 
-  def expect_search_params(params)
-    GdsApi::Rummager.any_instance.expects(:unified_search)
-      .with(has_entries(params))
-      .returns(:some_results)
-  end
-
   describe "constructing the query params" do
     setup do
       @subtopic_slug = 'business-tax/paye'

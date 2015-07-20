@@ -42,4 +42,10 @@ module RummagerHelpers
       })
     end
   end
+
+  def expect_search_params(params)
+    GdsApi::Rummager.any_instance.expects(:unified_search)
+      .with(has_entries(params))
+      .returns(:some_results)
+  end
 end
