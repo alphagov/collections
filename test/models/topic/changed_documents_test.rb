@@ -35,11 +35,11 @@ describe Topic::ChangedDocuments do
 
     it "returns the latest documents for the subtopic" do
       expected_titles = [
-        'Pay Paye Penalty',
-        'Pay Paye Tax',
-        'Pay Psa',
-        'Employee Tax Codes',
-        'Payroll Annual Reporting',
+        'Pay paye penalty',
+        'Pay paye tax',
+        'Pay psa',
+        'Employee tax codes',
+        'Payroll annual reporting',
       ]
       assert_equal expected_titles, Topic::ChangedDocuments.new(@subtopic_slug).map(&:title)
     end
@@ -49,7 +49,7 @@ describe Topic::ChangedDocuments do
 
       # Actual values come from rummager helpers.
       assert_equal "/pay-psa", documents[2].base_path
-      assert_equal "Employee Tax Codes", documents[3].title
+      assert_equal "Employee tax codes", documents[3].title
       assert_equal "This has changed", documents[4].change_note
     end
 
@@ -79,9 +79,9 @@ describe Topic::ChangedDocuments do
 
     it "returns the first page of results" do
       expected_titles = [
-        'Pay Paye Penalty',
-        'Pay Paye Tax',
-        'Pay Psa',
+        'Pay paye penalty',
+        'Pay paye tax',
+        'Pay psa',
       ]
       assert_equal expected_titles, @documents.map(&:title)
     end
@@ -89,8 +89,8 @@ describe Topic::ChangedDocuments do
     it "returns the requested page of results" do
       @pagination_options[:start] = 3
       expected_titles = [
-        'Employee Tax Codes',
-        'Payroll Annual Reporting',
+        'Employee tax codes',
+        'Payroll annual reporting',
       ]
       assert_equal expected_titles, @documents.map(&:title)
     end
@@ -111,7 +111,7 @@ describe Topic::ChangedDocuments do
 
       documents = Topic::ChangedDocuments.new("business-tax/paye")
       assert_equal 1, documents.to_a.size
-      assert_equal 'Pay Psa', documents.first.title
+      assert_equal 'Pay psa', documents.first.title
       assert_nil documents.first.public_updated_at
     end
   end

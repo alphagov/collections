@@ -158,10 +158,10 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
       # And I should see the latest documents for the subtopic in date order
       titles = page.all(".changed-documents li h3").map(&:text)
       expected_titles = [
-        "Oil And Gas Uk Field Data",
-        "Oil And Gas Wells",
-        "Oil And Gas Fields And Field Development",
-        "Oil And Gas Geoscientific Data",
+        'Oil and gas uk field data',
+        'Oil and gas wells',
+        'Oil and gas fields and field development',
+        'Oil and gas geoscientific data'
       ]
       assert_equal expected_titles, titles
     end

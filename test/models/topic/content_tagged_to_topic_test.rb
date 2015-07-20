@@ -91,11 +91,11 @@ describe Topic::ContentTaggedToTopic do
 
     it "returns the documents for the subtopic" do
       expected_titles = [
-        'Pay Paye Penalty',
-        'Pay Paye Tax',
-        'Pay Psa',
-        'Employee Tax Codes',
-        'Payroll Annual Reporting',
+        'Pay paye penalty',
+        'Pay paye tax',
+        'Pay psa',
+        'Employee tax codes',
+        'Payroll annual reporting',
       ]
       assert_equal expected_titles, Topic::ContentTaggedToTopic.new(@subtopic_slug).map(&:title)
     end
@@ -105,7 +105,7 @@ describe Topic::ContentTaggedToTopic do
 
       # Actual values come from rummager helpers.
       assert_equal "/pay-psa", documents[2].base_path
-      assert_equal "Employee Tax Codes", documents[3].title
+      assert_equal "Employee tax codes", documents[3].title
     end
 
     it "provides the public_updated_at for each document" do
@@ -134,9 +134,9 @@ describe Topic::ContentTaggedToTopic do
 
     it "returns the first page of results" do
       expected_titles = [
-        'Pay Paye Penalty',
-        'Pay Paye Tax',
-        'Pay Psa',
+        'Pay paye penalty',
+        'Pay paye tax',
+        'Pay psa'
       ]
       assert_equal expected_titles, @documents.map(&:title)
     end
@@ -144,8 +144,8 @@ describe Topic::ContentTaggedToTopic do
     it "returns the requested page of results" do
       @pagination_options[:start] = 3
       expected_titles = [
-        'Employee Tax Codes',
-        'Payroll Annual Reporting',
+        'Employee tax codes',
+        'Payroll annual reporting'
       ]
       assert_equal expected_titles, @documents.map(&:title)
     end
@@ -166,7 +166,7 @@ describe Topic::ContentTaggedToTopic do
 
       documents = Topic::ContentTaggedToTopic.new("business-tax/paye")
       assert_equal 1, documents.to_a.size
-      assert_equal 'Pay Psa', documents.first.title
+      assert_equal 'Pay psa', documents.first.title
       assert_nil documents.first.public_updated_at
     end
   end

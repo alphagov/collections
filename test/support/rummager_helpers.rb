@@ -14,7 +14,7 @@ module RummagerHelpers
       "format" => "guide",
       "latest_change_note" => "This has changed",
       "public_timestamp" => updated_at.iso8601,
-      "title" => "#{slug.titleize}",
+      "title" => "#{slug.titleize.humanize}",
       "link" => "/#{slug}",
       "index" => "/",
       "_id" => "/#{slug}",
