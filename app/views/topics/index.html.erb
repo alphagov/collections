@@ -13,16 +13,14 @@
 </header>
 
 <% if @topic.beta? %>
-  <%= render 'topic_beta', topic: @topic %>
+  <%= render 'govuk_component/beta_label',
+    message: %{
+      This page is in beta. It doesn’t cover the full range of content available on GOV.UK -
+      more will be added over the next few months. You can also
+      #{link_to("search GOV.UK", "/search")} to find the information you need.} %>
 <% end %>
 
 <div class="browse-container full-width topics-page">
-  <% if @topic.description.present? %>
-    <div class="category-description">
-      <p><%= @topic.description %></p>
-    </div>
-  <% end %>
-
   <nav class="topics">
     <ul>
       <% @topic.children.each do |subtopic|%>

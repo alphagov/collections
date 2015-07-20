@@ -63,10 +63,4 @@ class Topic
   def slug
     base_path.sub(%r{\A/topic/}, '')
   end
-
-private
-
-  def self.filtered_api_options(options)
-    options.slice(:start, :count).reject {|_,v| v.blank? }
-  end
 end

@@ -3,6 +3,10 @@ class TopicsController < ApplicationController
 
   rescue_from ContentItem::NotFound, :with => :error_404
 
+  def index
+    @topic = Topic.find(request.path)
+  end
+
   def topic
     @topic = Topic.find(request.path)
   end

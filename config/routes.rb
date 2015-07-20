@@ -10,6 +10,7 @@ Collections::Application.routes.draw do
   get "/browse/:top_level_slug", to: "browse#top_level_browse_page"
   get "/browse/:top_level_slug/:second_level_slug", to: "browse#second_level_browse_page"
 
+  get "/topic", to: "topics#index", as: :topics
   get "/topic/:topic_slug/:subtopic_slug/latest", to: "topics#latest_changes", as: :latest_changes
   get "/topic/:topic_slug/:subtopic_slug", to: "topics#subtopic", as: :subtopic
   get "/topic/:topic_slug", to: "topics#topic", as: :topic
