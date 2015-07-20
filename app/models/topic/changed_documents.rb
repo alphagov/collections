@@ -4,8 +4,6 @@ class Topic::ChangedDocuments
   DEFAULT_PAGE_SIZE = 50
   MAX_PAGE_SIZE = 100
 
-  Document = Struct.new(:title, :base_path, :public_updated_at, :change_note)
-
   def initialize(subtopic_slug, pagination_options = {})
     @subtopic_slug = subtopic_slug
     @pagination_options = pagination_options
@@ -35,7 +33,7 @@ class Topic::ChangedDocuments
   def documents
     @_documents ||= search_result["results"].map do |result|
       timestamp = result["public_timestamp"].present? ? Time.parse(result["public_timestamp"]) : nil
-      Document.new(
+      Topic::Document.new(
         result["title"],
         result["link"],
         timestamp,
