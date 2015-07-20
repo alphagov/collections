@@ -10,11 +10,6 @@ describe Topic::ChangedDocuments do
       @documents = Topic::ChangedDocuments.new(@subtopic_slug, @pagination_options)
     end
 
-    it "filters for the given subtopic" do
-      expect_search_params(:filter_specialist_sectors => [@subtopic_slug])
-      @documents.send(:search_result)
-    end
-
     it "sorts by public_timestamp, newest first" do
       expect_search_params(:order => "-public_timestamp")
       @documents.send(:search_result)
@@ -23,63 +18,6 @@ describe Topic::ChangedDocuments do
     it "requests the necessary fields" do
       expect_search_params(:fields => %w(title link latest_change_note public_timestamp))
       @documents.send(:search_result)
-    end
-
-    describe "page start value" do
-      it "starts at 0 by default" do
-        expect_search_params(:start => 0)
-        @documents.send(:search_result)
-      end
-
-      it "uses the given start value" do
-        @pagination_options[:start] = "12"
-        expect_search_params(:start => 12)
-        @documents.send(:search_result)
-      end
-
-      it "starts at 0 when given garbage" do
-        @pagination_options[:start] = "foo"
-        expect_search_params(:start => 0)
-        @documents.send(:search_result)
-      end
-
-      it "starts at 0 when given negative value" do
-        @pagination_options[:start] = "-1"
-        expect_search_params(:start => 0)
-        @documents.send(:search_result)
-      end
-    end
-
-    describe "page size" do
-
-      it "uses a page size of 50 by default" do
-        expect_search_params(:count => 50)
-        @documents.send(:search_result)
-      end
-
-      it "uses the given page size" do
-        @pagination_options[:count] = "42"
-        expect_search_params(:count => 42)
-        @documents.send(:search_result)
-      end
-
-      it "caps the page size at 100" do
-        @pagination_options[:count] = "142"
-        expect_search_params(:count => 100)
-        @documents.send(:search_result)
-      end
-
-      it "uses the default page size when given garbage" do
-        @pagination_options[:count] = "foo"
-        expect_search_params(:count => 50)
-        @documents.send(:search_result)
-      end
-
-      it "uses the default page size when given a negative value" do
-        @pagination_options[:count] = "-1"
-        expect_search_params(:count => 50)
-        @documents.send(:search_result)
-      end
     end
   end
 
