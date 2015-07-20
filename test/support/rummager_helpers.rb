@@ -9,9 +9,9 @@ module RummagerHelpers
     )
   end
 
-  def rummager_document_for_slug(slug, updated_at = 1.hour.ago)
+  def rummager_document_for_slug(slug, updated_at = 1.hour.ago, format = "guide")
     {
-      "format" => "guide",
+      "format" => "#{format}",
       "latest_change_note" => "This has changed",
       "public_timestamp" => updated_at.iso8601,
       "title" => "#{slug.titleize.humanize}",
@@ -44,9 +44,9 @@ module RummagerHelpers
     end
   end
 
-  def rummager_has_documents_for_subtopic(subtopic_slug, document_slugs, page_size: 50)
+  def rummager_has_documents_for_subtopic(subtopic_slug, document_slugs, format = "guide", page_size: 50)
     results = document_slugs.map.with_index do |slug, i|
-      rummager_document_for_slug(slug, (i + 1).hours.ago)
+      rummager_document_for_slug(slug, (i + 1).hours.ago, format)
     end
 
     results.each_slice(page_size).with_index do |results_page, page|
