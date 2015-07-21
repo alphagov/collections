@@ -1,5 +1,5 @@
-
 class ListSet
+  include Enumerable
 
   FORMATS_TO_EXCLUDE = %w(
     fatality_notice
@@ -10,8 +10,6 @@ class ListSet
     statement
     world_location_news_article
   ).to_set
-
-  ListItem = Struct.new(:title, :base_path)
 
   def initialize(tag_type, tag_slug, group_data)
     @tag_type = tag_type
@@ -24,7 +22,6 @@ class ListSet
       yield l
     end
   end
-  include Enumerable
 
   def curated?
     @group_data.any?
@@ -33,59 +30,16 @@ class ListSet
   private
 
   def lists
-    @_lists ||= build_lists
-  end
-
-  def build_lists
-    if curated?
-      build_curated_lists
+    # TODO: Remove Content API as a dependency
+    #
+    # The intention is to remove the Content API as a dependency
+    # on the Collections application altogether. All uses
+    # of the Content API are now within the ListSet::Section class
+    # below.
+    @_lists ||= if @tag_type == "specialist_sector"
+      ListSet::Specialist.new(@tag_slug, @group_data)
     else
-      build_a_to_z_list
+      ListSet::Section.new(@tag_type, @tag_slug, @group_data)
     end
-  end
-
-  def build_curated_lists
-    @group_data.each_with_object([]) do |group, results|
-      contents = group["contents"].each_with_object([]) do |api_url, results|
-        if item = find_content_item(api_url)
-          results << ListItem.new(
-            item["title"],
-            URI.parse(item["web_url"]).path,
-          )
-        end
-      end
-      results << ListSet::List.new(group["name"], contents) if contents.any?
-    end
-  end
-
-  def build_a_to_z_list
-    [
-      ListSet::List.new(
-        'A to Z',
-        filtered_content_tagged_to_topic.map do |item|
-          ListItem.new(
-            item["title"],
-            URI.parse(item["web_url"]).path,
-          )
-        end.sort_by(&:title)
-      )
-    ]
-  end
-
-  def find_content_item(api_url)
-    api_path = URI.parse(api_url).path
-    content_tagged_to_topic.find do |content|
-      URI.parse(content["id"]).path == api_path
-    end
-  end
-
-  def filtered_content_tagged_to_topic
-    content_tagged_to_topic.select do |item|
-      ! FORMATS_TO_EXCLUDE.include?(item["format"])
-    end
-  end
-
-  def content_tagged_to_topic
-    @_content_tagged_to_topic ||= Collections.services(:content_api).with_tag(@tag_slug, @tag_type)["results"]
   end
 end

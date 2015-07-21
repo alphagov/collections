@@ -46,7 +46,7 @@ describe TopicsController do
           }),
         )
 
-        ListSet::Specialist.stubs(:new).returns(
+        ListSet.stubs(:new).returns(
           [ListSet::List.new("test", [])]
         )
 
