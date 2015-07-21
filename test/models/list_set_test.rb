@@ -9,8 +9,8 @@ describe ListSet do
     assert_equal [], ListSet.new("", "", []).to_a
   end
 
-  it "uses ListSet::Specialist for specialist_sector content" do
-    ListSet::Specialist.expects(:new)
+  it "uses ListSet::FromRummager for specialist_sector content" do
+    ListSet::FromRummager.expects(:new)
       .with(anything(), anything())
       .returns([])
 

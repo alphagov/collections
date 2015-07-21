@@ -1,6 +1,6 @@
 require "test_helper"
 
-describe ListSet::Specialist do
+describe ListSet::FromRummager do
   include RummagerHelpers
 
   describe "for a curated subtopic" do
@@ -36,7 +36,7 @@ describe ListSet::Specialist do
         ]
       )
 
-      @list_set = ListSet::Specialist.new("business-tax/paye", @group_data)
+      @list_set = ListSet::FromRummager.new("business-tax/paye", @group_data)
     end
 
     it "returns the groups in the curated order" do
@@ -90,7 +90,7 @@ describe ListSet::Specialist do
           "payroll-annual-reporting",
         ]
       )
-      @list_set = ListSet::Specialist.new("business-tax/paye", [])
+      @list_set = ListSet::FromRummager.new("business-tax/paye", [])
     end
 
     it "constructs a single A-Z group" do
@@ -115,7 +115,7 @@ describe ListSet::Specialist do
     end
 
     it "handles nil data the same as empty array" do
-      @list_set = ListSet::Specialist.new("business-tax/paye", nil)
+      @list_set = ListSet::FromRummager.new("business-tax/paye", nil)
       assert_equal 1, @list_set.to_a.size
       assert_equal "A to Z", @list_set.first.title
     end

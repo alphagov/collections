@@ -1,4 +1,4 @@
-class ListSet::Specialist
+class ListSet::FromRummager
   include Enumerable
 
   def initialize(slug, groups)
