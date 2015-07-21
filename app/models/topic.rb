@@ -53,7 +53,7 @@ class Topic
   end
 
   def lists
-    ListSet.new("specialist_sector", slug, @content_item_data["details"]["groups"])
+    ListSet::Specialist.new(slug, @content_item_data["details"]["groups"])
   end
 
   def changed_documents

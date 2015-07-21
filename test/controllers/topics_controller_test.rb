@@ -2,6 +2,7 @@ require_relative '../test_helper'
 
 describe TopicsController do
   include ContentSchemaHelpers
+  include RummagerHelpers
 
   describe "GET topic" do
     describe "with a valid topic slug" do
@@ -44,7 +45,10 @@ describe TopicsController do
             },
           }),
         )
-        content_api_has_artefacts_with_a_tag('specialist_sector', 'oil-and-gas/wells', [])
+
+        ListSet::Specialist.stubs(:new).returns(
+          [ListSet::Specialist::List.new("test", [])]
+        )
 
         Collections::Application.config.search_client.stubs(:unified_search).with(
           count: "0",

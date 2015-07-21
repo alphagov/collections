@@ -27,8 +27,8 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
   setup do
     content_api_has_tag("specialist_sector", "oil-and-gas")
     content_api_has_tag("specialist_sector", "oil-and-gas/offshore", "oil-and-gas")
-    content_api_has_artefacts_with_a_tag(
-      'specialist_sector', 'oil-and-gas/offshore',
+    rummager_has_documents_for_subtopic(
+      'oil-and-gas/offshore',
       [
         'oil-rig-safety-requirements',
         'oil-rig-staffing',

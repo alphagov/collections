@@ -115,13 +115,13 @@ describe Topic do
 
   describe "lists" do
     it "should pass the contentapi slug of the topic when constructing groups" do
-      ListSet.expects(:new).with("specialist_sector", "business-tax/paye", anything()).returns(:a_lists_instance)
+      ListSet::Specialist.expects(:new).with("business-tax/paye", anything()).returns(:a_lists_instance)
 
       assert_equal :a_lists_instance, @topic.lists
     end
 
     it "should pass the groups data when constructing" do
-      ListSet.expects(:new).with(anything(), anything(), :some_data).returns(:a_lists_instance)
+      ListSet::Specialist.expects(:new).with(anything(), :some_data).returns(:a_lists_instance)
       @api_data["details"]["groups"] = :some_data
 
       assert_equal :a_lists_instance, @topic.lists
