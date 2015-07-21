@@ -1,8 +1,8 @@
 require "test_helper"
 
 describe ListSet do
-  it "uses ListSet::Section by default for lists" do
-    ListSet::Section.expects(:new)
+  it "uses ListSet::FromContentAPI by default for lists" do
+    ListSet::FromContentAPI.expects(:new)
       .with(anything(), anything(), anything())
       .returns([])
 

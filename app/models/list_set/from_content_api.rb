@@ -1,4 +1,4 @@
-class ListSet::Section
+class ListSet::FromContentAPI
   include Enumerable
 
   ListItem = Struct.new(:title, :base_path)
