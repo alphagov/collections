@@ -1,8 +1,6 @@
 class ListSet::Specialist
   include Enumerable
 
-  List = Struct.new(:title, :contents)
-
   def initialize(slug, groups)
     @slug = slug
     @groups = groups || []
@@ -25,7 +23,7 @@ class ListSet::Specialist
   end
 
   def a_to_z_list
-    [List.new(
+    [ListSet::List.new(
       "A to Z",
       content_tagged_to_topic.reject do |content|
         ListSet::FORMATS_TO_EXCLUDE.include? content.format
@@ -41,7 +39,7 @@ class ListSet::Specialist
         end
       end.compact
 
-      List.new(group["name"], contents) if contents.any?
+      ListSet::List.new(group["name"], contents) if contents.any?
     end.compact
   end
 

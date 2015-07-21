@@ -47,7 +47,7 @@ describe TopicsController do
         )
 
         ListSet::Specialist.stubs(:new).returns(
-          [ListSet::Specialist::List.new("test", [])]
+          [ListSet::List.new("test", [])]
         )
 
         Collections::Application.config.search_client.stubs(:unified_search).with(

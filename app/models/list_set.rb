@@ -11,7 +11,6 @@ class ListSet
     world_location_news_article
   ).to_set
 
-  List = Struct.new(:title, :contents)
   ListItem = Struct.new(:title, :base_path)
 
   def initialize(tag_type, tag_slug, group_data)
@@ -55,13 +54,13 @@ class ListSet
           )
         end
       end
-      results << List.new(group["name"], contents) if contents.any?
+      results << ListSet::List.new(group["name"], contents) if contents.any?
     end
   end
 
   def build_a_to_z_list
     [
-      List.new(
+      ListSet::List.new(
         'A to Z',
         filtered_content_tagged_to_topic.map do |item|
           ListItem.new(
