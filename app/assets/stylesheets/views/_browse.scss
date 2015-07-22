@@ -1,3 +1,5 @@
+$gutter-one-sixth: $gutter/6;
+
 main.browse {
   .browse-panes {
     @extend %contain-floats;
@@ -212,6 +214,13 @@ main.browse {
         @include bold-19;
         margin: $gutter 0 0 0;
       }
+
+      .curated-list {
+        .list-header {
+          margin: $gutter 0 $gutter-one-sixth 0;
+        }
+      }
+
       .sort-order {
         display: none;
         @include media(tablet){
@@ -223,6 +232,7 @@ main.browse {
           padding: 11px 0 $gutter-half $gutter-half;
         }
       }
+
       ul {
         padding: 0;
         list-style: none;
@@ -239,6 +249,17 @@ main.browse {
           }
         }
       }
+
+      .curated-list {
+        ul {
+          li {
+            a {
+              padding: $gutter-one-sixth $gutter $gutter-one-sixth 0;
+            }
+          }
+        }
+      }
+
       .detailed-guidance {
         margin-top: $gutter;
       }
