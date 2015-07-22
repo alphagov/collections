@@ -193,14 +193,17 @@ main.browse {
     }
     #subsection {
       @include media(tablet) {
-        .pane-inner.a-to-z {
-          padding-left: 100px;
-        }
+        .pane-inner {
+          &.a-to-z {
+            padding-left: 100px;
+          }
 
-        .pane-inner.curated-list {
-          padding-left: $gutter;
+          &.curated-list {
+            padding-left: $gutter;
+          }
         }
       }
+
       h1 {
         padding-left: 0;
       }
