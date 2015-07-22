@@ -1,12 +1,14 @@
+$gutter-one-sixth: $gutter/6;
+
 main.browse {
   .browse-panes {
     @extend %contain-floats;
     @include inner-block;
-    padding-bottom: 30px;
+    padding-bottom: $gutter;
     position: relative;
 
     @include media(tablet){
-      padding-top: 30px;
+      padding-top: $gutter;
     }
 
     &.section {
@@ -86,7 +88,7 @@ main.browse {
 
       @include media(tablet){
         margin-top: 0;
-        margin-bottom: 15px;
+        margin-bottom: $gutter-half;
       }
     }
 
@@ -97,7 +99,7 @@ main.browse {
 
       h1, h2 {
         @include media(tablet){
-          padding-left: 15px;
+          padding-left: $gutter-half;
         }
       }
       .sort-order {
@@ -117,7 +119,7 @@ main.browse {
           padding: 12px 25px 8px 0;
 
           @include media(tablet){
-            padding: 12px 30px 8px 15px;
+            padding: 12px $gutter 8px $gutter-half;
             @include core-16;
           }
 
@@ -130,7 +132,7 @@ main.browse {
             position: absolute;
             top: 50%;
             margin-top: -8px;
-            right: 10px;
+            right: $gutter-one-third;
             float: right;
             content:"\203A";
           }
@@ -186,29 +188,39 @@ main.browse {
             display: block;
             width: 75px;
             margin-left: -90px;
-            padding: 11px 0 15px 15px;
+            padding: 11px 0 $gutter-half $gutter-half;
           }
         }
       }
     }
     #subsection {
       @include media(tablet) {
-        .pane-inner.a-to-z {
-          padding-left: 100px;
-        }
+        .pane-inner {
+          &.a-to-z {
+            padding-left: 100px;
+          }
 
-        .pane-inner.curated-list {
-          padding-left: 30px;
+          &.curated-list {
+            padding-left: $gutter;
+          }
         }
       }
+
       h1 {
         padding-left: 0;
       }
 
       .list-header {
         @include bold-19;
-        margin: 30px 0 0 0;
+        margin: $gutter 0 0 0;
       }
+
+      .curated-list {
+        .list-header {
+          margin: $gutter 0 $gutter-one-sixth 0;
+        }
+      }
+
       .sort-order {
         display: none;
         @include media(tablet){
@@ -217,9 +229,10 @@ main.browse {
           float: left;
           width: 75px;
           margin-left: -100px;
-          padding: 11px 0 15px 15px;
+          padding: 11px 0 $gutter-half $gutter-half;
         }
       }
+
       ul {
         padding: 0;
         list-style: none;
@@ -232,10 +245,21 @@ main.browse {
             @include bold-19;
             display: block;
             text-decoration: none;
-            padding: 10px 30px 10px 0;
+            padding: $gutter-one-third $gutter $gutter-one-third 0;
           }
         }
       }
+
+      .curated-list {
+        ul {
+          li {
+            a {
+              padding: $gutter-one-sixth $gutter $gutter-one-sixth 0;
+            }
+          }
+        }
+      }
+
       .detailed-guidance {
         margin-top: $gutter;
       }
