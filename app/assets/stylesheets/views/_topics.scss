@@ -135,21 +135,6 @@
     @include ie-lte(8) {
       padding: 0 3.5% 30px;
     }
-
-    .category-description {
-      margin-bottom: 45px;
-      width: 65.5%;
-
-      @include media(mobile) {
-        margin-bottom: 15px;
-        width: auto;
-      }
-
-      p {
-        @include core-24;
-        margin: 0;
-      }
-    }
   }
 
   nav {

@@ -64,10 +64,6 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
       assert page.has_content?("Oil and gas")
     end
 
-    within ".category-description" do
-      assert page.has_content?("Guidance for the oil and gas industry")
-    end
-
     within ".topics ul" do
       within "li:nth-child(1)" do
         assert page.has_link?("Wells")

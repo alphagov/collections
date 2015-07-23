@@ -17,12 +17,6 @@
 <% end %>
 
 <div class="browse-container full-width topics-page">
-  <% if @topic.description.present? %>
-    <div class="category-description">
-      <p><%= @topic.description %></p>
-    </div>
-  <% end %>
-
   <nav class="topics">
     <ul>
       <% @topic.children.each do |subtopic|%>
