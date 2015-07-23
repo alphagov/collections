@@ -33,9 +33,10 @@ class ListSet::FromRummager
 
   def curated_list
     @groups.map do |group|
-      contents = group["contents"].map do |api_url|
+      contents = group["contents"].map do |api_url_or_base_path|
+        base_path = URI.parse(api_url_or_base_path).path.chomp('.json')
         content_tagged_to_topic.find do |content|
-          content.base_path + ".json" == URI.parse(api_url).path
+          content.base_path == base_path
         end
       end.compact
 

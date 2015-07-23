@@ -36,8 +36,8 @@ class ListSet::FromContentAPI
 
   def build_curated_lists
     @group_data.map do |group|
-      contents = group["contents"].map do |api_url|
-        find_content_item(api_url)
+      contents = group["contents"].map do |api_url_or_base_path|
+        find_content_item(api_url_or_base_path)
       end.compact.map do |item|
         ListItem.new(
           item["title"],
@@ -63,10 +63,10 @@ class ListSet::FromContentAPI
     ]
   end
 
-  def find_content_item(api_url)
-    api_path = URI.parse(api_url).path
+  def find_content_item(api_url_or_base_path)
+    base_path = URI.parse(api_url_or_base_path).path.chomp(".json")
     content_tagged_to_topic.find do |content|
-      URI.parse(content["id"]).path == api_path
+      URI.parse(content["web_url"]).path == base_path
     end
   end
 
