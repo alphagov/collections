@@ -34,7 +34,8 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
         'oil-rig-staffing',
         'north-sea-shipping-lanes',
         'undersea-piping-restrictions'
-      ]
+      ],
+      page_size: Topic::ContentTaggedToTopic::PAGE_SIZE_TO_GET_EVERYTHING
     )
   end
 

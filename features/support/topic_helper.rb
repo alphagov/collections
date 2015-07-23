@@ -24,7 +24,8 @@ module TopicHelper
         well-application-form
         well-report-2014
         oil-extraction-count-2013
-      }
+      },
+      page_size: Topic::ContentTaggedToTopic::PAGE_SIZE_TO_GET_EVERYTHING
     )
 
     content_store_has_item("/topic/oil-and-gas/fields-and-wells", {

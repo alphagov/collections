@@ -19,62 +19,6 @@ describe Topic::ContentTaggedToTopic do
       expect_search_params(:fields => %w(title link public_timestamp format))
       @documents.send(:search_result)
     end
-
-    describe "page start value" do
-      it "starts at 0 by default" do
-        expect_search_params(:start => 0)
-        @documents.send(:search_result)
-      end
-
-      it "uses the given start value" do
-        @pagination_options[:start] = "12"
-        expect_search_params(:start => 12)
-        @documents.send(:search_result)
-      end
-
-      it "starts at 0 when given garbage" do
-        @pagination_options[:start] = "foo"
-        expect_search_params(:start => 0)
-        @documents.send(:search_result)
-      end
-
-      it "starts at 0 when given negative value" do
-        @pagination_options[:start] = "-1"
-        expect_search_params(:start => 0)
-        @documents.send(:search_result)
-      end
-    end
-
-    describe "page size" do
-      it "uses a page size of 50 by default" do
-        expect_search_params(:count => 50)
-        @documents.send(:search_result)
-      end
-
-      it "uses the given page size" do
-        @pagination_options[:count] = "42"
-        expect_search_params(:count => 42)
-        @documents.send(:search_result)
-      end
-
-      it "caps the page size at 100" do
-        @pagination_options[:count] = "142"
-        expect_search_params(:count => 100)
-        @documents.send(:search_result)
-      end
-
-      it "uses the default page size when given garbage" do
-        @pagination_options[:count] = "foo"
-        expect_search_params(:count => 50)
-        @documents.send(:search_result)
-      end
-
-      it "uses the default page size when given a negative value" do
-        @pagination_options[:count] = "-1"
-        expect_search_params(:count => 50)
-        @documents.send(:search_result)
-      end
-    end
   end
 
   describe "with a single page of results available" do
@@ -86,7 +30,7 @@ describe Topic::ContentTaggedToTopic do
         'pay-psa',
         'employee-tax-codes',
         'payroll-annual-reporting',
-      ])
+      ], page_size: Topic::ContentTaggedToTopic::PAGE_SIZE_TO_GET_EVERYTHING)
     end
 
     it "returns the documents for the subtopic" do
@@ -115,39 +59,6 @@ describe Topic::ContentTaggedToTopic do
 
       # Document timestamp value set in rummager helpers
       assert_in_epsilon 1.hour.ago.to_i, documents[0].public_updated_at.to_i, 5
-    end
-  end
-
-  describe "with multiple pages of results available" do
-    setup do
-      @subtopic_slug = 'business-tax/paye'
-      rummager_has_documents_for_subtopic(@subtopic_slug, [
-        'pay-paye-penalty',
-        'pay-paye-tax',
-        'pay-psa',
-        'employee-tax-codes',
-        'payroll-annual-reporting',
-      ], :page_size => 3)
-      @pagination_options = {:count => 3}
-      @documents = Topic::ContentTaggedToTopic.new(@subtopic_slug, @pagination_options)
-    end
-
-    it "returns the first page of results" do
-      expected_titles = [
-        'Pay paye penalty',
-        'Pay paye tax',
-        'Pay psa'
-      ]
-      assert_equal expected_titles, @documents.map(&:title)
-    end
-
-    it "returns the requested page of results" do
-      @pagination_options[:start] = 3
-      expected_titles = [
-        'Employee tax codes',
-        'Payroll annual reporting'
-      ]
-      assert_equal expected_titles, @documents.map(&:title)
     end
   end
 

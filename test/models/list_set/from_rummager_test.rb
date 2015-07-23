@@ -33,7 +33,8 @@ describe ListSet::FromRummager do
           "pay-paye-tax",
           "pay-psa",
           "payroll-annual-reporting",
-        ]
+        ],
+        page_size: Topic::ContentTaggedToTopic::PAGE_SIZE_TO_GET_EVERYTHING
       )
 
       @list_set = ListSet::FromRummager.new("business-tax/paye", @group_data)
@@ -88,7 +89,8 @@ describe ListSet::FromRummager do
           "pay-psa",
           "employee-tax-codes",
           "payroll-annual-reporting",
-        ]
+        ],
+        page_size: Topic::ContentTaggedToTopic::PAGE_SIZE_TO_GET_EVERYTHING
       )
       @list_set = ListSet::FromRummager.new("business-tax/paye", [])
     end

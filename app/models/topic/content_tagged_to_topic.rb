@@ -1,6 +1,5 @@
 class Topic::ContentTaggedToTopic
-  DEFAULT_PAGE_SIZE = 50
-  MAX_PAGE_SIZE = 100
+  PAGE_SIZE_TO_GET_EVERYTHING = 10_000
 
   include Enumerable
 
@@ -36,10 +35,6 @@ class Topic::ContentTaggedToTopic
     search_result["start"]
   end
 
-  def page_size
-    count_param
-  end
-
   private
 
   def search_result
@@ -48,21 +43,10 @@ class Topic::ContentTaggedToTopic
 
   def search_params
     {
-      start: start_param,
-      count: count_param,
+      start: 0,
+      count: PAGE_SIZE_TO_GET_EVERYTHING,
       filter_specialist_sectors: [@topic_slug],
       fields: %w(title link public_timestamp format),
     }
-  end
-
-  def start_param
-    start = @pagination_options[:start].to_i
-    start >= 0 ? start : 0
-  end
-
-  def count_param
-    count = @pagination_options[:count].to_i
-    return MAX_PAGE_SIZE if count > MAX_PAGE_SIZE
-    count > 0 ? count : DEFAULT_PAGE_SIZE
   end
 end
