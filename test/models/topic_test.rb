@@ -114,7 +114,7 @@ describe Topic do
   end
 
   describe "lists" do
-    it "should pass the contentapi slug of the topic when constructing groups" do
+    it "should pass the slug of the topic when constructing groups" do
       ListSet.expects(:new).with("specialist_sector", "business-tax/paye", anything()).returns(:a_lists_instance)
 
       assert_equal :a_lists_instance, @topic.lists
