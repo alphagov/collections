@@ -6,7 +6,7 @@ src_dir: "app/assets/javascripts"
 # list of file expressions to include as source files
 # relative path from src_dir
 src_files:
- - "../../../spec/javascripts/helpers/jquery-1.7.2.js"
+ - "../../../spec/javascripts/helpers/jquery-1.11.3.js"
  - "application.js"
 
 # path to parent directory of spec_files
