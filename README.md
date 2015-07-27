@@ -39,8 +39,6 @@ retrieved from external sources.
 
 ### Dependencies
 
-- [alphagov/govuk_content_api](https://github.com/alphagov/govuk_content_api) -
-  provides topic and browse page content.
 - [alphagov/content-store](https://github.com/alphagov/content-store) -
   provides subtopics and their curated lists.
 - [alphagov/rummager](https://github.com/alphagov/rummager) -
