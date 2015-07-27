@@ -33,7 +33,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
         'north-sea-shipping-lanes',
         'undersea-piping-restrictions'
       ],
-      page_size: Topic::ContentTaggedToTopic::PAGE_SIZE_TO_GET_EVERYTHING
+      page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
     )
   end
 
