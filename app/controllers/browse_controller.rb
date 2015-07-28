@@ -1,5 +1,5 @@
 class BrowseController < ApplicationController
-  rescue_from ContentItem::NotFound, with: :error_404
+  rescue_from GdsApi::ContentStore::ItemNotFound, with: :error_404
 
   enable_request_formats top_level_browse_page: [:json]
   enable_request_formats second_level_browse_page: [:json]
