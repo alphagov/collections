@@ -9,17 +9,17 @@ describe ListSet do
         {
           "name" => "Paying HMRC",
           "contents" => [
-            contentapi_url_for_slug("pay-paye-tax"),
-            contentapi_url_for_slug("pay-psa"),
-            contentapi_url_for_slug("pay-paye-penalty"),
+           '/pay-paye-tax',
+           '/pay-psa',
+           '/pay-paye-penalty',
           ]
         },
         {
           "name" => "Annual PAYE and payroll tasks",
           "contents" => [
-            contentapi_url_for_slug("payroll-annual-reporting"),
-            contentapi_url_for_slug("get-paye-forms-p45-p60"),
-            contentapi_url_for_slug("employee-tax-codes"),
+           '/payroll-annual-reporting',
+           '/get-paye-forms-p45-p60',
+           '/employee-tax-codes',
           ]
         },
       ]
@@ -75,31 +75,6 @@ describe ListSet do
       list_titles = @list_set.map(&:title)
       refute list_titles.include?("Group with untagged items")
       refute list_titles.include?("Empty group")
-    end
-
-    describe "handling base_paths in content-store curated lists data" do
-      setup do
-        @group_data[0]["contents"] = [
-           '/pay-paye-tax',
-           '/pay-psa',
-           '/pay-paye-penalty',
-        ]
-        @group_data[1]["contents"] = [
-           '/payroll-annual-reporting',
-           '/get-paye-forms-p45-p60',
-           '/employee-tax-codes',
-        ]
-      end
-
-      it "matches up the content items correctly" do
-        groups = @list_set.to_a
-
-        assert_equal 2, groups.size
-        assert_equal 3, groups[0].contents.size
-        assert_equal 3, groups[1].contents.size
-        assert_equal "Employee tax codes", groups[1].contents.to_a[2].title
-        assert_equal "/pay-psa", groups[0].contents.to_a[1].base_path
-      end
     end
   end
 

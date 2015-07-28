@@ -40,8 +40,7 @@ class ListSet
 
   def curated_list
     @group_data.map do |group|
-      contents = group["contents"].map do |api_url_or_base_path|
-        base_path = URI.parse(api_url_or_base_path).path.chomp('.json')
+      contents = group["contents"].map do |base_path|
         content_tagged_to_tag.find do |content|
           content.base_path == base_path
         end
