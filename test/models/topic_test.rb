@@ -133,7 +133,7 @@ describe Topic do
       @topic = Topic.new(@api_data, {:foo => "bar"})
     end
 
-    it "passes the contentapi slug of the topic when constructing changed_documents" do
+    it "passes the slug of the topic when constructing changed_documents" do
       Topic::ChangedDocuments.expects(:new).with("specialist_sector", "business-tax/paye", anything()).returns(:an_instance)
       assert_equal :an_instance, @topic.changed_documents
     end

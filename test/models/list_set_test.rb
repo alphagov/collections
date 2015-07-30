@@ -52,7 +52,7 @@ describe ListSet do
     end
 
     it "skips items no longer tagged to this subtopic" do
-      @group_data[0]["contents"] << contentapi_url_for_slug("pay-bear-tax")
+      @group_data[0]["contents"] << "/pay-bear-tax"
 
       groups = @list_set.to_a
       assert_equal 3, groups[0].contents.size
@@ -63,7 +63,7 @@ describe ListSet do
       @group_data << {
         "name" => "Group with untagged items",
         "contents" => [
-          contentapi_url_for_slug("pay-bear-tax"),
+          "/pay-bear-tax",
         ],
       }
       @group_data << {
