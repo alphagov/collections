@@ -32,10 +32,8 @@ Collections serves the GOV.UK browse and topic pages.
 
 ## Technical documentation
 
-This is a public facing Ruby on Rails application that retrieves browse content from APIs
-and presents it.
-There is no underlying persistence layer and all content is
-retrieved from external sources.
+This is a public facing Ruby on Rails application that retrieves browse content from APIs and presents it.
+There is no underlying persistence layer and all content is retrieved from external sources.
 
 ### Dependencies
 
