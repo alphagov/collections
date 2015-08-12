@@ -4,11 +4,8 @@ class ListSet
 
   FORMATS_TO_EXCLUDE = %w(
     fatality_notice
-    government_response
-    news_story
-    press_release
+    news_article
     speech
-    statement
     world_location_news_article
   ).to_set
 
