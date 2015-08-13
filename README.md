@@ -32,19 +32,20 @@ Collections serves the GOV.UK browse and topic pages.
 
 ## Technical documentation
 
-This is a public facing Ruby on Rails application that retrieves browse content from APIs
-and presents it.
-There is no underlying persistence layer and all content is
-retrieved from external sources.
+This is a public facing Ruby on Rails application that retrieves browse content from APIs and presents it.
+There is no underlying persistence layer and all content is retrieved from external sources.
 
 ### Dependencies
 
-- [alphagov/content-store](https://github.com/alphagov/content-store) -
-  provides subtopics and their curated lists.
-- [alphagov/rummager](https://github.com/alphagov/rummager) -
-  provides Latest changes content.
-- [alphagov/email-alert-api](https://github.com/alphagov/email-alert-api) -
-  provides support for subscribing to notifications from a topic.
+- [content-store](https://github.com/alphagov/content-store), provides:
+    - Mainstream browse pages (Root, Top and Second level browse pages)
+    - Topics
+    - Subtopics and their curated lists
+- [rummager](https://github.com/alphagov/rummager), provides:
+    - latest changes for Topics
+    - content tagged to a particular Topic or Mainstream browse page
+- [email-alert-api](https://github.com/alphagov/email-alert-api), provides:
+    - support for subscribing to notifications from a topic
 
 ### Running the application
 
