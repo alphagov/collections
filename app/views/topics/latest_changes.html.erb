@@ -1,6 +1,6 @@
-<% content_for :title, "#{@subtopic.title}: Latest documents - GOV.UK" %>
+<% content_for :title, "#{@subtopic.title}: latest documents - GOV.UK" %>
 <% content_for :page_title do %>
-  <span><%= @subtopic.title %></span> Latest documents
+  <span><%= @subtopic.title %></span> latest documents
 <% end %>
 
 <%= render layout: "subtopic", locals: {subtopic: @subtopic, organisations: organisations, link_to_latest_feed: false, beta_label: true} do %>

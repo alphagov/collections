@@ -144,7 +144,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
       # Then I should see the subtopic metadata
       within '.page-header' do
         within 'h1' do
-          assert page.has_content?("Offshore Latest documents")
+          assert page.has_content?("Offshore latest documents")
         end
 
         within '.metadata' do
