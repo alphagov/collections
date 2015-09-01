@@ -11,7 +11,7 @@ class MainstreamBrowsingTest < ActionDispatch::IntegrationTest
 
       slug = content_item['base_path'].gsub('/browse/', '')
 
-      rummager_has_documents_for_browse_page(
+      rummager_has_documents_for_subtopic(
         slug,
         [
           "employee-tax-codes",
@@ -21,7 +21,7 @@ class MainstreamBrowsingTest < ActionDispatch::IntegrationTest
           "pay-psa",
           "payroll-annual-reporting",
         ],
-        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
+        page_size: Topic::ContentTaggedToTopic::PAGE_SIZE_TO_GET_EVERYTHING
       )
     end
 

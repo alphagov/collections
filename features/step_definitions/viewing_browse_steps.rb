@@ -29,12 +29,12 @@ Given(/^there is an? (\w+) browse page set up with links$/) do |second_level_ord
     }
   }
 
-  rummager_has_documents_for_browse_page(
+  rummager_has_documents_for_subtopic(
     "crime-and-justice/judges",
     [
       "judge-dredd",
     ],
-    page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
+    page_size: Topic::ContentTaggedToTopic::PAGE_SIZE_TO_GET_EVERYTHING
   )
 end
 

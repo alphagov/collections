@@ -1,6 +1,5 @@
 class ListSet
   include Enumerable
-  delegate :each, to: :lists
 
   FORMATS_TO_EXCLUDE = %w(
     fatality_notice
@@ -9,10 +8,16 @@ class ListSet
     world_location_news_article
   ).to_set
 
-  def initialize(tag_type, tag_slug, group_data = nil)
+  def initialize(tag_type, tag_slug, group_data)
     @tag_type = tag_type
     @tag_slug = tag_slug
     @group_data = group_data || []
+  end
+
+  def each
+    lists.each do |l|
+      yield l
+    end
   end
 
   def curated?
@@ -32,7 +37,7 @@ class ListSet
   def a_to_z_list
     [ListSet::List.new(
       "A to Z",
-      content_tagged_to_tag.reject do |content|
+      content_tagged_to_topic.reject do |content|
         ListSet::FORMATS_TO_EXCLUDE.include? content.format
       end.sort_by(&:title)
     )]
@@ -42,7 +47,7 @@ class ListSet
     @group_data.map do |group|
       contents = group["contents"].map do |api_url_or_base_path|
         base_path = URI.parse(api_url_or_base_path).path.chomp('.json')
-        content_tagged_to_tag.find do |content|
+        content_tagged_to_topic.find do |content|
           content.base_path == base_path
         end
       end.compact
@@ -51,20 +56,7 @@ class ListSet
     end.compact
   end
 
-  def content_tagged_to_tag
-    @content_tagged_to_tag ||= RummagerSearch.new({
-      :start => 0,
-      :count => RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
-      filter_name => [@tag_slug],
-      :fields => %w(title link format),
-    })
-  end
-
-  def filter_name
-    if @tag_type == 'section'
-      :filter_mainstream_browse_pages
-    else
-      :filter_specialist_sectors
-    end
+  def content_tagged_to_topic
+    Topic::ContentTaggedToTopic.new(@tag_type, @tag_slug)
   end
 end
