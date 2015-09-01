@@ -7,7 +7,7 @@ describe Topic::ContentTaggedToTopic do
     setup do
       @subtopic_slug = 'business-tax/paye'
       @pagination_options = {}
-      @documents = Topic::ContentTaggedToTopic.new("specialist_sector", @subtopic_slug, @pagination_options)
+      @documents = Topic::ContentTaggedToTopic.new(@subtopic_slug, @pagination_options)
     end
 
     it "filters for the given subtopic" do
@@ -41,11 +41,11 @@ describe Topic::ContentTaggedToTopic do
         'Employee tax codes',
         'Payroll annual reporting',
       ]
-      assert_equal expected_titles, Topic::ContentTaggedToTopic.new("specialist_sector", @subtopic_slug).map(&:title)
+      assert_equal expected_titles, Topic::ContentTaggedToTopic.new(@subtopic_slug).map(&:title)
     end
 
     it "provides the title, base_path for each document" do
-      documents = Topic::ContentTaggedToTopic.new("specialist_sector", @subtopic_slug).to_a
+      documents = Topic::ContentTaggedToTopic.new(@subtopic_slug).to_a
 
       # Actual values come from rummager helpers.
       assert_equal "/pay-psa", documents[2].base_path
@@ -53,7 +53,7 @@ describe Topic::ContentTaggedToTopic do
     end
 
     it "provides the public_updated_at for each document" do
-      documents = Topic::ContentTaggedToTopic.new("specialist_sector", @subtopic_slug).to_a
+      documents = Topic::ContentTaggedToTopic.new(@subtopic_slug).to_a
 
       assert documents[0].public_updated_at.is_a?(Time)
 
@@ -75,7 +75,7 @@ describe Topic::ContentTaggedToTopic do
         "total" => 1,
       })
 
-      documents = Topic::ContentTaggedToTopic.new("specialist_sector", "business-tax/paye")
+      documents = Topic::ContentTaggedToTopic.new("business-tax/paye")
       assert_equal 1, documents.to_a.size
       assert_equal 'Pay psa', documents.first.title
       assert_nil documents.first.public_updated_at

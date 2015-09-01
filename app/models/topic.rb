@@ -57,7 +57,7 @@ class Topic
   end
 
   def changed_documents
-    ChangedDocuments.new("specialist_sector", slug, @pagination_options)
+    ChangedDocuments.new(slug, @pagination_options)
   end
 
   def slug

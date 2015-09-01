@@ -29,17 +29,15 @@ Given(/^there is an? (\w+) browse page set up with links$/) do |second_level_ord
     }
   }
 
-  rummager_has_documents_for_subtopic(
-    "crime-and-justice/judges",
-    [
-      "judge-dredd",
-    ],
-    page_size: Topic::ContentTaggedToTopic::PAGE_SIZE_TO_GET_EVERYTHING
-  )
+  stub_request(:get, "https://contentapi.test.gov.uk/tags/crime-and-justice%2Fjudges.json").
+    to_return(:status => 200, :body => "{}", :headers => {})
+
+  stub_request(:get, "https://contentapi.test.gov.uk/with_tag.json?section=crime-and-justice/judges").
+    to_return(:status => 200, :body => JSON.dump(results: [{title: 'Judge dredd', web_url: 'http://gov.uk/judge'}]))
 end
 
 Then(/^I see the links tagged to the browse page/) do
-  assert page.has_selector?('a', text: "Judge dredd")
+  assert_can_see_linked_item('Judge dredd')
 end
 
 When(/^I visit the main browse page$/) do

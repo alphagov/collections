@@ -3,7 +3,7 @@ class Topic::ContentTaggedToTopic
 
   include Enumerable
 
-  def initialize(topic_type, topic_slug, pagination_options = {})
+  def initialize(topic_slug, pagination_options = {})
     @topic_slug = topic_slug
     @pagination_options = pagination_options
   end
@@ -45,16 +45,8 @@ class Topic::ContentTaggedToTopic
     {
       start: 0,
       count: PAGE_SIZE_TO_GET_EVERYTHING,
-      filter_name => [@topic_slug],
+      filter_specialist_sectors: [@topic_slug],
       fields: %w(title link public_timestamp format),
     }
-  end
-
-  def filter_name
-    if @topic_type == 'section'
-      :filter_mainstream_browse_pages
-    else
-      :filter_specialist_sectors
-    end
   end
 end

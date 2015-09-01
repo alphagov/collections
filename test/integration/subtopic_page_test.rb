@@ -25,6 +25,8 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
   end
 
   setup do
+    content_api_has_tag("specialist_sector", "oil-and-gas")
+    content_api_has_tag("specialist_sector", "oil-and-gas/offshore", "oil-and-gas")
     rummager_has_documents_for_subtopic(
       'oil-and-gas/offshore',
       [

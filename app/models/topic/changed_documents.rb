@@ -2,6 +2,10 @@ class Topic::ChangedDocuments < Topic::ContentTaggedToTopic
   DEFAULT_PAGE_SIZE = 50
   MAX_PAGE_SIZE = 100
 
+  def initialize(subtopic_slug, pagination_options = {})
+    super(subtopic_slug, pagination_options)
+  end
+
   def documents
     @_documents ||= search_result["results"].map do |result|
       timestamp = result["public_timestamp"].present? ? Time.parse(result["public_timestamp"]) : nil

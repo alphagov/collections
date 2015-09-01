@@ -27,36 +27,16 @@ class ListSet
   private
 
   def lists
-    if @group_data.any?
-      curated_list
+    # TODO: Remove Content API as a dependency
+    #
+    # The intention is to remove the Content API as a dependency
+    # on the Collections application altogether. All uses
+    # of the Content API are now within the ListSet::FromContentAPI
+    # class below.
+    @_lists ||= if @tag_type == "specialist_sector"
+      ListSet::FromRummager.new(@tag_slug, @group_data)
     else
-      a_to_z_list
+      ListSet::FromContentAPI.new(@tag_type, @tag_slug, @group_data)
     end
-  end
-
-  def a_to_z_list
-    [ListSet::List.new(
-      "A to Z",
-      content_tagged_to_topic.reject do |content|
-        ListSet::FORMATS_TO_EXCLUDE.include? content.format
-      end.sort_by(&:title)
-    )]
-  end
-
-  def curated_list
-    @group_data.map do |group|
-      contents = group["contents"].map do |api_url_or_base_path|
-        base_path = URI.parse(api_url_or_base_path).path.chomp('.json')
-        content_tagged_to_topic.find do |content|
-          content.base_path == base_path
-        end
-      end.compact
-
-      ListSet::List.new(group["name"], contents) if contents.any?
-    end.compact
-  end
-
-  def content_tagged_to_topic
-    Topic::ContentTaggedToTopic.new(@tag_type, @tag_slug)
   end
 end
