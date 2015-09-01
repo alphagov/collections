@@ -1,8 +1,10 @@
+require 'gds_api/test_helpers/content_api'
 require 'gds_api/test_helpers/rummager'
 
 require_relative '../../test/support/rummager_helpers'
 
 module TopicHelper
+  include GdsApi::TestHelpers::ContentApi
   include GdsApi::TestHelpers::Rummager
   include RummagerHelpers
 
@@ -23,7 +25,7 @@ module TopicHelper
         well-report-2014
         oil-extraction-count-2013
       },
-      page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
+      page_size: Topic::ContentTaggedToTopic::PAGE_SIZE_TO_GET_EVERYTHING
     )
 
     content_store_has_item("/topic/oil-and-gas/fields-and-wells", {

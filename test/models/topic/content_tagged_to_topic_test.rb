@@ -1,22 +1,22 @@
 require "test_helper"
 
-describe Topic::ChangedDocuments do
+describe Topic::ContentTaggedToTopic do
   include RummagerHelpers
 
   describe "constructing the query params" do
     setup do
       @subtopic_slug = 'business-tax/paye'
       @pagination_options = {}
-      @documents = Topic::ChangedDocuments.new(@subtopic_slug, @pagination_options)
+      @documents = Topic::ContentTaggedToTopic.new(@subtopic_slug, @pagination_options)
     end
 
-    it "sorts by public_timestamp, newest first" do
-      expect_search_params(:order => "-public_timestamp")
+    it "filters for the given subtopic" do
+      expect_search_params(:filter_specialist_sectors => [@subtopic_slug])
       @documents.send(:search_result)
     end
 
     it "requests the necessary fields" do
-      expect_search_params(:fields => %w(title link latest_change_note public_timestamp format))
+      expect_search_params(:fields => %w(title link public_timestamp format))
       @documents.send(:search_result)
     end
   end
@@ -24,16 +24,16 @@ describe Topic::ChangedDocuments do
   describe "with a single page of results available" do
     setup do
       @subtopic_slug = 'business-tax/paye'
-      rummager_has_latest_documents_for_subtopic(@subtopic_slug, [
+      rummager_has_documents_for_subtopic(@subtopic_slug, [
         'pay-paye-penalty',
         'pay-paye-tax',
         'pay-psa',
         'employee-tax-codes',
         'payroll-annual-reporting',
-      ])
+      ], page_size: Topic::ContentTaggedToTopic::PAGE_SIZE_TO_GET_EVERYTHING)
     end
 
-    it "returns the latest documents for the subtopic" do
+    it "returns the documents for the subtopic" do
       expected_titles = [
         'Pay paye penalty',
         'Pay paye tax',
@@ -41,58 +41,24 @@ describe Topic::ChangedDocuments do
         'Employee tax codes',
         'Payroll annual reporting',
       ]
-      assert_equal expected_titles, Topic::ChangedDocuments.new(@subtopic_slug).map(&:title)
+      assert_equal expected_titles, Topic::ContentTaggedToTopic.new(@subtopic_slug).map(&:title)
     end
 
-    it "provides the title, base_path and change_note for each document" do
-      documents = Topic::ChangedDocuments.new(@subtopic_slug).to_a
+    it "provides the title, base_path for each document" do
+      documents = Topic::ContentTaggedToTopic.new(@subtopic_slug).to_a
 
       # Actual values come from rummager helpers.
       assert_equal "/pay-psa", documents[2].base_path
       assert_equal "Employee tax codes", documents[3].title
-      assert_equal "This has changed", documents[4].change_note
     end
 
     it "provides the public_updated_at for each document" do
-      documents = Topic::ChangedDocuments.new(@subtopic_slug).to_a
+      documents = Topic::ContentTaggedToTopic.new(@subtopic_slug).to_a
 
       assert documents[0].public_updated_at.is_a?(Time)
 
       # Document timestamp value set in rummager helpers
       assert_in_epsilon 1.hour.ago.to_i, documents[0].public_updated_at.to_i, 5
-    end
-  end
-
-  describe "with multiple pages of results available" do
-    setup do
-      @subtopic_slug = 'business-tax/paye'
-      rummager_has_latest_documents_for_subtopic(@subtopic_slug, [
-        'pay-paye-penalty',
-        'pay-paye-tax',
-        'pay-psa',
-        'employee-tax-codes',
-        'payroll-annual-reporting',
-      ], :page_size => 3)
-      @pagination_options = {:count => 3}
-      @documents = Topic::ChangedDocuments.new(@subtopic_slug, @pagination_options)
-    end
-
-    it "returns the first page of results" do
-      expected_titles = [
-        'Pay paye penalty',
-        'Pay paye tax',
-        'Pay psa',
-      ]
-      assert_equal expected_titles, @documents.map(&:title)
-    end
-
-    it "returns the requested page of results" do
-      @pagination_options[:start] = 3
-      expected_titles = [
-        'Employee tax codes',
-        'Payroll annual reporting',
-      ]
-      assert_equal expected_titles, @documents.map(&:title)
     end
   end
 
@@ -109,7 +75,7 @@ describe Topic::ChangedDocuments do
         "total" => 1,
       })
 
-      documents = Topic::ChangedDocuments.new("business-tax/paye")
+      documents = Topic::ContentTaggedToTopic.new("business-tax/paye")
       assert_equal 1, documents.to_a.size
       assert_equal 'Pay psa', documents.first.title
       assert_nil documents.first.public_updated_at

@@ -25,6 +25,8 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
   end
 
   setup do
+    content_api_has_tag("specialist_sector", "oil-and-gas")
+    content_api_has_tag("specialist_sector", "oil-and-gas/offshore", "oil-and-gas")
     rummager_has_documents_for_subtopic(
       'oil-and-gas/offshore',
       [
@@ -33,7 +35,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
         'north-sea-shipping-lanes',
         'undersea-piping-restrictions'
       ],
-      page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
+      page_size: Topic::ContentTaggedToTopic::PAGE_SIZE_TO_GET_EVERYTHING
     )
   end
 
