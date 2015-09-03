@@ -34,7 +34,7 @@ describe ListSet do
           "pay-psa",
           "payroll-annual-reporting",
         ],
-        page_size: Topic::ContentTaggedToTopic::PAGE_SIZE_TO_GET_EVERYTHING
+        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
       )
 
       @list_set = ListSet.new("specialist_sector", "business-tax/paye", @group_data)
@@ -115,7 +115,7 @@ describe ListSet do
           "employee-tax-codes",
           "payroll-annual-reporting",
         ],
-        page_size: Topic::ContentTaggedToTopic::PAGE_SIZE_TO_GET_EVERYTHING
+        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
       )
       @list_set = ListSet.new("specialist_sector", "business-tax/paye", [])
     end
@@ -145,6 +145,59 @@ describe ListSet do
       @list_set = ListSet.new("specialist_sector", "business-tax/paye", nil)
       assert_equal 1, @list_set.to_a.size
       assert_equal "A to Z", @list_set.first.title
+    end
+  end
+
+  describe "fetching content tagged to this tag" do
+    setup do
+      @subtopic_slug = 'business-tax/paye'
+      rummager_has_documents_for_subtopic(@subtopic_slug, [
+        'pay-paye-penalty',
+        'pay-paye-tax',
+        'pay-psa',
+        'employee-tax-codes',
+        'payroll-annual-reporting',
+      ], page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING)
+    end
+
+    it "returns the content for the tag" do
+      expected_titles = [
+        'Pay paye penalty',
+        'Pay paye tax',
+        'Pay psa',
+        'Employee tax codes',
+        'Payroll annual reporting',
+      ]
+
+      assert_equal expected_titles.sort, ListSet.new("specialist_sector", @subtopic_slug).first.contents.map(&:title).sort
+    end
+
+    it "provides the title, base_path for each document" do
+      documents = ListSet.new("specialist_sector", @subtopic_slug).first.contents
+
+      assert_equal "/pay-paye-tax", documents[2].base_path
+      assert_equal "Pay paye tax", documents[2].title
+    end
+  end
+
+  describe "handling missing fields in the search results" do
+    it "handles documents that don't contain the public_timestamp field" do
+      result = rummager_document_for_slug('pay-psa')
+      result.delete("public_timestamp")
+
+      Collections::Application.config.search_client.stubs(:unified_search).with(
+        has_entries(filter_specialist_sectors: ['business-tax/paye'])
+      ).returns({
+        "results" => [result],
+        "start" => 0,
+        "total" => 1,
+      })
+
+      documents = ListSet.new("specialist_sector", "business-tax/paye").first.contents
+
+      assert_equal 1, documents.to_a.size
+      assert_equal 'Pay psa', documents.first.title
+      assert_nil documents.first.public_updated_at
     end
   end
 end

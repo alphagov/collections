@@ -3,24 +3,6 @@ require "test_helper"
 describe Topic::ChangedDocuments do
   include RummagerHelpers
 
-  describe "constructing the query params" do
-    setup do
-      @subtopic_slug = 'business-tax/paye'
-      @pagination_options = {}
-      @documents = Topic::ChangedDocuments.new("specialist_sector", @subtopic_slug, @pagination_options)
-    end
-
-    it "sorts by public_timestamp, newest first" do
-      expect_search_params(:order => "-public_timestamp")
-      @documents.send(:search_result)
-    end
-
-    it "requests the necessary fields" do
-      expect_search_params(:fields => %w(title link latest_change_note public_timestamp format))
-      @documents.send(:search_result)
-    end
-  end
-
   describe "with a single page of results available" do
     setup do
       @subtopic_slug = 'business-tax/paye'
@@ -41,6 +23,7 @@ describe Topic::ChangedDocuments do
         'Employee tax codes',
         'Payroll annual reporting',
       ]
+
       assert_equal expected_titles, Topic::ChangedDocuments.new("specialist_sector", @subtopic_slug).map(&:title)
     end
 
@@ -110,6 +93,7 @@ describe Topic::ChangedDocuments do
       })
 
       documents = Topic::ChangedDocuments.new("specialist_sector", "business-tax/paye")
+
       assert_equal 1, documents.to_a.size
       assert_equal 'Pay psa', documents.first.title
       assert_nil documents.first.public_updated_at
