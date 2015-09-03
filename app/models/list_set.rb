@@ -1,5 +1,6 @@
 class ListSet
   include Enumerable
+  delegate :each, to: :lists
 
   FORMATS_TO_EXCLUDE = %w(
     fatality_notice
@@ -8,16 +9,10 @@ class ListSet
     world_location_news_article
   ).to_set
 
-  def initialize(tag_type, tag_slug, group_data)
+  def initialize(tag_type, tag_slug, group_data = nil)
     @tag_type = tag_type
     @tag_slug = tag_slug
     @group_data = group_data || []
-  end
-
-  def each
-    lists.each do |l|
-      yield l
-    end
   end
 
   def curated?
@@ -27,16 +22,49 @@ class ListSet
   private
 
   def lists
-    # TODO: Remove Content API as a dependency
-    #
-    # The intention is to remove the Content API as a dependency
-    # on the Collections application altogether. All uses
-    # of the Content API are now within the ListSet::FromContentAPI
-    # class below.
-    @_lists ||= if @tag_type == "specialist_sector"
-      ListSet::FromRummager.new(@tag_slug, @group_data)
+    if @group_data.any?
+      curated_list
     else
-      ListSet::FromContentAPI.new(@tag_type, @tag_slug, @group_data)
+      a_to_z_list
+    end
+  end
+
+  def a_to_z_list
+    [ListSet::List.new(
+      "A to Z",
+      content_tagged_to_tag.reject do |content|
+        ListSet::FORMATS_TO_EXCLUDE.include? content.format
+      end.sort_by(&:title)
+    )]
+  end
+
+  def curated_list
+    @group_data.map do |group|
+      contents = group["contents"].map do |api_url_or_base_path|
+        base_path = URI.parse(api_url_or_base_path).path.chomp('.json')
+        content_tagged_to_tag.find do |content|
+          content.base_path == base_path
+        end
+      end.compact
+
+      ListSet::List.new(group["name"], contents) if contents.any?
+    end.compact
+  end
+
+  def content_tagged_to_tag
+    @content_tagged_to_tag ||= RummagerSearch.new({
+      :start => 0,
+      :count => RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+      filter_name => [@tag_slug],
+      :fields => %w(title link format),
+    })
+  end
+
+  def filter_name
+    if @tag_type == 'section'
+      :filter_mainstream_browse_pages
+    else
+      :filter_specialist_sectors
     end
   end
 end

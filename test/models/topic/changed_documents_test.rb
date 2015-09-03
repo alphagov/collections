@@ -3,24 +3,6 @@ require "test_helper"
 describe Topic::ChangedDocuments do
   include RummagerHelpers
 
-  describe "constructing the query params" do
-    setup do
-      @subtopic_slug = 'business-tax/paye'
-      @pagination_options = {}
-      @documents = Topic::ChangedDocuments.new(@subtopic_slug, @pagination_options)
-    end
-
-    it "sorts by public_timestamp, newest first" do
-      expect_search_params(:order => "-public_timestamp")
-      @documents.send(:search_result)
-    end
-
-    it "requests the necessary fields" do
-      expect_search_params(:fields => %w(title link latest_change_note public_timestamp format))
-      @documents.send(:search_result)
-    end
-  end
-
   describe "with a single page of results available" do
     setup do
       @subtopic_slug = 'business-tax/paye'
@@ -41,11 +23,12 @@ describe Topic::ChangedDocuments do
         'Employee tax codes',
         'Payroll annual reporting',
       ]
-      assert_equal expected_titles, Topic::ChangedDocuments.new(@subtopic_slug).map(&:title)
+
+      assert_equal expected_titles, Topic::ChangedDocuments.new("specialist_sector", @subtopic_slug).map(&:title)
     end
 
     it "provides the title, base_path and change_note for each document" do
-      documents = Topic::ChangedDocuments.new(@subtopic_slug).to_a
+      documents = Topic::ChangedDocuments.new("specialist_sector", @subtopic_slug).to_a
 
       # Actual values come from rummager helpers.
       assert_equal "/pay-psa", documents[2].base_path
@@ -54,7 +37,7 @@ describe Topic::ChangedDocuments do
     end
 
     it "provides the public_updated_at for each document" do
-      documents = Topic::ChangedDocuments.new(@subtopic_slug).to_a
+      documents = Topic::ChangedDocuments.new("specialist_sector", @subtopic_slug).to_a
 
       assert documents[0].public_updated_at.is_a?(Time)
 
@@ -74,7 +57,7 @@ describe Topic::ChangedDocuments do
         'payroll-annual-reporting',
       ], :page_size => 3)
       @pagination_options = {:count => 3}
-      @documents = Topic::ChangedDocuments.new(@subtopic_slug, @pagination_options)
+      @documents = Topic::ChangedDocuments.new("specialist_sector", @subtopic_slug, @pagination_options)
     end
 
     it "returns the first page of results" do
@@ -109,7 +92,8 @@ describe Topic::ChangedDocuments do
         "total" => 1,
       })
 
-      documents = Topic::ChangedDocuments.new("business-tax/paye")
+      documents = Topic::ChangedDocuments.new("specialist_sector", "business-tax/paye")
+
       assert_equal 1, documents.to_a.size
       assert_equal 'Pay psa', documents.first.title
       assert_nil documents.first.public_updated_at
