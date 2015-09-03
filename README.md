@@ -37,8 +37,6 @@ There is no underlying persistence layer and all content is retrieved from exter
 
 ### Dependencies
 
-- [alphagov/govuk_content_api](https://github.com/alphagov/govuk_content_api), provides:
-    - Topic and browse page content.
 - [content-store](https://github.com/alphagov/content-store), provides:
     - Mainstream browse pages (Root, Top and Second level browse pages)
     - Topics

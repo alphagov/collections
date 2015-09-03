@@ -1,10 +1,8 @@
-require 'gds_api/test_helpers/content_api'
 require 'gds_api/test_helpers/rummager'
 
 require_relative '../../test/support/rummager_helpers'
 
 module TopicHelper
-  include GdsApi::TestHelpers::ContentApi
   include GdsApi::TestHelpers::Rummager
   include RummagerHelpers
 

@@ -21,12 +21,6 @@ if Rails.env.development?
   GdsApi::Base.default_options = { disable_cache: true }
 end
 
-require 'gds_api/content_api'
-Collections.services(:content_api, GdsApi::ContentApi.new(
-  Plek.current.find('contentapi'),
-  { web_urls_relative_to: Plek.current.website_root }
-))
-
 require 'gds_api/email_alert_api'
 Collections.services(:email_alert_api, GdsApi::EmailAlertApi.new(Plek.new.find('email-alert-api')))
 
