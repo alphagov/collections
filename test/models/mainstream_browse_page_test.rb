@@ -154,7 +154,7 @@ describe MainstreamBrowsePage do
   end
 
   describe "lists" do
-    it "should pass the contentapi slug of the browse page when constructing groups" do
+    it "should pass the slug of the browse page when constructing groups" do
       ListSet.expects(:new).with("section", "benefits/child", anything()).returns(:a_lists_instance)
 
       assert_equal :a_lists_instance, @page.lists

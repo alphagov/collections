@@ -44,14 +44,14 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
         {
           name: "Oil rigs",
           contents: [
-            "#{Plek.current.find("contentapi")}/oil-rig-staffing.json",
-            "#{Plek.current.find("contentapi")}/oil-rig-safety-requirements.json",
+            "/oil-rig-staffing",
+            "/oil-rig-safety-requirements",
           ],
         },
         {
           name: "Piping",
           contents: [
-            "#{Plek.current.find("contentapi")}/undersea-piping-restrictions.json",
+            "/undersea-piping-restrictions",
           ],
         },
       ]
