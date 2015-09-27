@@ -6,8 +6,9 @@ class ApplicationController < ActionController::Base
 
   before_filter :set_expiry
   before_filter :set_slimmer_template
-
   before_filter :restrict_request_formats
+
+  rescue_from GdsApi::ContentStore::ItemNotFound, with: :error_404
 
   # Allows additional request formats to be enabled.
   #

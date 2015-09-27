@@ -1,8 +1,6 @@
 class EmailSignupsController < ApplicationController
   protect_from_forgery except: [:create]
 
-  rescue_from GdsApi::ContentStore::ItemNotFound, :with => :error_404
-
   def new
     slimmer_artefact = {
       section_name: subtopic.title,
