@@ -50,7 +50,7 @@ describe TopicsController do
           [ListSet::List.new("test", [])]
         )
 
-        Collections::Application.config.search_client.stubs(:unified_search).with(
+        Services.rummager.stubs(:unified_search).with(
           count: "0",
           filter_specialist_sectors: ["oil-and-gas/wells"],
           facet_organisations: "1000",

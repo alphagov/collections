@@ -160,7 +160,7 @@ describe ListSet do
       result = rummager_document_for_slug('pay-psa')
       result.delete("public_timestamp")
 
-      Collections::Application.config.search_client.stubs(:unified_search).with(
+      Services.rummager.stubs(:unified_search).with(
         has_entries(filter_specialist_sectors: ['business-tax/paye'])
       ).returns({
         "results" => [result],

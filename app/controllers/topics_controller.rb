@@ -55,7 +55,7 @@ private
 
   def subtopic_organisations(slug)
     OrganisationsFacetPresenter.new(
-      Collections::Application.config.search_client.unified_search(
+      Services.rummager.unified_search(
         count: "0",
         filter_specialist_sectors: [slug],
         facet_organisations: "1000",
