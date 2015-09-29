@@ -20,7 +20,7 @@ Given(/^there is latest content for a subtopic$/) do
       "document_type" => "edition"
     }
   end
-  Collections::Application.config.search_client.stubs(:unified_search).with(
+  Services.rummager.stubs(:unified_search).with(
     has_entries(
       start: 0,
       count: 50,

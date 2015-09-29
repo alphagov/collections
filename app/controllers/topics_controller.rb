@@ -1,8 +1,6 @@
 class TopicsController < ApplicationController
   before_filter :set_slimmer_format
 
-  rescue_from GdsApi::ContentStore::ItemNotFound, :with => :error_404
-
   def index
     @topic = Topic.find(request.path)
   end
@@ -57,7 +55,7 @@ private
 
   def subtopic_organisations(slug)
     OrganisationsFacetPresenter.new(
-      Collections::Application.config.search_client.unified_search(
+      Services.rummager.unified_search(
         count: "0",
         filter_specialist_sectors: [slug],
         facet_organisations: "1000",

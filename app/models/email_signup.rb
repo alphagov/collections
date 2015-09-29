@@ -19,8 +19,7 @@ class EmailSignup
   end
 
   def find_or_create_subscription
-    Collections.services(:email_alert_api)
-      .find_or_create_subscriber_list(subscription_params)
+    Services.email_alert_api.find_or_create_subscriber_list(subscription_params)
   end
 
 private

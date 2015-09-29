@@ -1,6 +1,6 @@
 module RummagerHelpers
   def stub_topic_organisations(slug)
-    Collections::Application.config.search_client.stubs(:unified_search).with(
+    Services.rummager.stubs(:unified_search).with(
       count: "0",
       filter_specialist_sectors: [slug],
       facet_organisations: "1000",
@@ -29,7 +29,7 @@ module RummagerHelpers
 
     results.each_slice(page_size).with_index do |results_page, page|
       start = page * page_size
-      Collections::Application.config.search_client.stubs(:unified_search).with(
+      Services.rummager.stubs(:unified_search).with(
         has_entries(
           start: start,
           count: page_size,
@@ -51,7 +51,7 @@ module RummagerHelpers
 
     results.each_slice(page_size).with_index do |results_page, page|
       start = page * page_size
-      Collections::Application.config.search_client.stubs(:unified_search).with(
+      Services.rummager.stubs(:unified_search).with(
         has_entries(
           start: start,
           count: page_size,
@@ -72,7 +72,7 @@ module RummagerHelpers
 
     results.each_slice(page_size).with_index do |results_page, page|
       start = page * page_size
-      Collections::Application.config.search_client.stubs(:unified_search).with(
+      Services.rummager.stubs(:unified_search).with(
         has_entries(
           start: start,
           count: page_size,

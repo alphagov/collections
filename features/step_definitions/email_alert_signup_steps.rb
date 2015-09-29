@@ -11,7 +11,7 @@ When(/^I sign up to the email alerts$/) do
 end
 
 Then(/^my subscription should be registered$/) do
-  Collections.services(:email_alert_api)
+  Services.email_alert_api
     .expects(:find_or_create_subscriber_list)
     .with(
       "title" => "Oil and Gas: Fields and Wells",

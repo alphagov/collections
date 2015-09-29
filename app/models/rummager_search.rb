@@ -32,7 +32,7 @@ class RummagerSearch
 private
 
   def search_result
-    @_search_result ||= Rails.application.config.search_client.unified_search(@search_params)
+    @_search_result ||= Services.rummager.unified_search(@search_params)
   end
 
   Document = Struct.new(:title, :base_path, :public_updated_at, :change_note, :format)
