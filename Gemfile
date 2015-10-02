@@ -4,10 +4,10 @@ gem 'rails', '4.2.4'
 
 gem 'sass-rails', '~> 5.0.3'
 gem 'uglifier', '~> 2.7.1'
-gem 'govuk_frontend_toolkit', '~> 4.0.1'
+gem 'govuk_frontend_toolkit', '~> 4.3.0'
 
 gem 'unicorn', '~> 4.9.0'
-gem 'airbrake', '~> 4.2.1'
+gem 'airbrake', '~> 4.3.1'
 gem 'logstasher', '0.6.2' # 0.6.5+ changes the JSON schema used for events
 
 if ENV['SLIMMER_DEV']
@@ -19,16 +19,16 @@ end
 if ENV['API_DEV']
   gem 'gds-api-adapters', :path => '../gds-api-adapters'
 else
-  gem 'gds-api-adapters', '~> 22.0.0'
+  gem 'gds-api-adapters', '~> 24.4.0'
 end
 
 gem 'plek', '~> 1.11.0'
 
 group :test do
-  gem 'capybara', '~> 2.4.1'
-  gem 'poltergeist', '~> 1.6.0'
+  gem 'capybara', '~> 2.5.0'
+  gem 'poltergeist', '~> 1.7.0'
 
-  gem 'minitest-spec-rails', '~> 5.2.0'
+  gem 'minitest-spec-rails', '~> 5.3.0'
   gem 'mocha', '~> 1.1.0', require: false
   gem 'webmock', '~> 1.21.0', require: false
   gem 'cucumber-rails', '~> 1.4.2', require: false
@@ -40,6 +40,6 @@ end
 group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'byebug', '~> 5.0.0'
-  gem 'jasmine-rails', '~> 0.10.8'
+  gem 'byebug'
+  gem 'jasmine-rails', '~> 0.12.1'
 end
