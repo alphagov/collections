@@ -1,11 +1,13 @@
 class ApplicationController < ActionController::Base
   include Slimmer::Headers
+  include Slimmer::Template
   include Slimmer::SharedTemplates
+
+  slimmer_template 'header_footer_only'
 
   protect_from_forgery with: :exception
 
   before_filter :set_expiry
-  before_filter :set_slimmer_template
   before_filter :restrict_request_formats
 
   rescue_from GdsApi::ContentStore::ItemNotFound, with: :error_404
@@ -41,10 +43,6 @@ class ApplicationController < ActionController::Base
   def can_handle_format?(format)
     return true if format == Mime::HTML || format == Mime::ALL
     format && self.class.acceptable_formats.fetch(params[:action].to_sym, []).include?(format.to_sym)
-  end
-
-  def set_slimmer_template
-    set_slimmer_headers(template: 'header_footer_only')
   end
 
   def error_404; error 404; end
