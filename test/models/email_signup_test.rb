@@ -4,10 +4,14 @@ require 'ostruct'
 describe EmailSignup do
   setup do
     @subtopic = mock
-    @subtopic.stubs(slug: "oil-and-gas/wells")
+    @subtopic.stubs(slug: "oil-and-gas/wells", content_id: "uuid-888")
     @subtopic.stubs(combined_title: "Oil and gas: Wells")
 
-    Services.email_alert_api.stubs(:find_or_create_subscriber_list).returns(OpenStruct.new("subscriber_list" => OpenStruct.new("subscription_url" => "http://govdelivery_signup_url")))
+    Services.email_alert_api.stubs(:find_or_create_subscriber_list).returns(
+      OpenStruct.new(
+        subscriber_list: OpenStruct.new(subscription_url: "http://govdelivery_signup_url")
+      )
+    )
   end
 
   it "is invalid with no subtopic" do
@@ -22,8 +26,13 @@ describe EmailSignup do
         "title" => "Oil and gas: Wells",
         "tags" => {
           "topics" => ["oil-and-gas/wells"]
-        }
-      ).returns(OpenStruct.new("subscriber_list" => OpenStruct.new("subscription_url" => "http://govdelivery_signup_url")))
+        },
+        "links" => {
+          "topics" => ["uuid-888"]
+        },
+      ).returns(OpenStruct.new(
+        subscriber_list: OpenStruct.new(subscription_url: "http://govdelivery_signup_url"))
+      )
 
       assert email_signup.save
     end
