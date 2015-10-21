@@ -4,6 +4,7 @@ describe Topic do
   setup do
     @api_data = {
       "base_path" => "/topic/business-tax/paye",
+      "content_id" => "uuid-23",
       "title" => "PAYE",
       "description" => "Pay As You Earn",
       "details" => {
@@ -26,6 +27,10 @@ describe Topic do
 
     it "returns the topic title" do
       assert_equal "PAYE", @topic.title
+    end
+
+    it "returns the topic content ID" do
+      assert_equal "uuid-23", @topic.content_id
     end
 
     it "returns the topic description" do

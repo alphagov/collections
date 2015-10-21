@@ -13,6 +13,7 @@ class Topic
     :base_path,
     :title,
     :description,
+    :content_id,
   ].each do |field|
     define_method field do
       @content_item_data[field.to_s]
