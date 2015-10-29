@@ -2,12 +2,19 @@ class ListSet
   include Enumerable
   delegate :each, to: :lists
 
-  FORMATS_TO_EXCLUDE = %w(
+  BROWSE_FORMATS_TO_EXCLUDE = %w(
     fatality_notice
     news_article
     speech
     world_location_news_article
     travel-advice
+  ).to_set
+
+  TOPIC_FORMATS_TO_EXCLUDE = %w(
+    fatality_notice
+    news_article
+    speech
+    world_location_news_article
   ).to_set
 
   def initialize(tag_type, tag_slug, group_data = nil)
@@ -34,7 +41,7 @@ class ListSet
     [ListSet::List.new(
       "A to Z",
       content_tagged_to_tag.reject do |content|
-        ListSet::FORMATS_TO_EXCLUDE.include? content.format
+        excluded_formats.include? content.format
       end.sort_by(&:title)
     )]
   end
@@ -65,6 +72,14 @@ class ListSet
       :filter_mainstream_browse_pages
     else
       :filter_specialist_sectors
+    end
+  end
+
+  def excluded_formats
+    if @tag_type == 'section'
+      BROWSE_FORMATS_TO_EXCLUDE
+    else
+      TOPIC_FORMATS_TO_EXCLUDE
     end
   end
 end
