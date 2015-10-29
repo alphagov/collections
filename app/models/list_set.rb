@@ -7,6 +7,7 @@ class ListSet
     news_article
     speech
     world_location_news_article
+    travel-advice
   ).to_set
 
   def initialize(tag_type, tag_slug, group_data = nil)
