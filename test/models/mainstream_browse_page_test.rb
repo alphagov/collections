@@ -126,9 +126,22 @@ describe MainstreamBrowsePage do
         },
       ]
 
-      assert_equal 'Foo', @page.related_topics[0].title
-      assert_equal '/browse/bar', @page.related_topics[1].base_path
-      assert_equal 'All about foo', @page.related_topics[0].description
+      assert_equal 'Foo', @page.related_topics[1].title
+      assert_equal '/browse/bar', @page.related_topics[0].base_path
+      assert_equal 'All about foo', @page.related_topics[1].description
+    end
+
+    it "returns related topics alphabetised" do
+      @api_data["links"]["related_topics"] = [
+        {
+          "title"=>"Foo",
+        },
+        {
+          "title"=>"Bar",
+        },
+      ]
+
+      assert_equal ['Bar', 'Foo'], @page.related_topics.map(&:title)
     end
 
     it "returns empty array with no items" do

@@ -40,7 +40,7 @@ class MainstreamBrowsePage
   end
 
   def related_topics
-    linked_items("related_topics")
+    linked_items("related_topics").sort_by(&:title)
   end
 
   def slug
