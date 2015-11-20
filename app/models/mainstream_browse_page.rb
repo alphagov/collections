@@ -1,22 +1,14 @@
 class MainstreamBrowsePage
+  attr_reader :content_item
+  delegate :base_path, :title, :description, :linked_items, :details, to: :content_item
 
   def self.find(base_path)
-    api_response = ContentItem.find!(base_path)
-    new(api_response.to_hash)
+    content_item = ContentItem.find!(base_path)
+    new(content_item)
   end
 
-  def initialize(content_item_data)
-    @content_item_data = content_item_data
-  end
-
-  [
-    :base_path,
-    :title,
-    :description,
-  ].each do |field|
-    define_method field do
-      @content_item_data[field.to_s]
-    end
+  def initialize(content_item)
+    @content_item = content_item
   end
 
   def top_level_browse_pages
@@ -32,11 +24,11 @@ class MainstreamBrowsePage
   end
 
   def second_level_pages_curated?
-    @content_item_data["details"] && @content_item_data["details"]["second_level_ordering"] == "curated"
+    details["second_level_ordering"] == "curated"
   end
 
   def lists
-    @lists ||= ListSet.new("section", slug, groups)
+    @lists ||= ListSet.new("section", slug, details["groups"])
   end
 
   def related_topics
@@ -45,22 +37,5 @@ class MainstreamBrowsePage
 
   def slug
     base_path.sub(%r{\A/browse/}, '')
-  end
-
-private
-
-  def linked_items(field)
-    if @content_item_data.has_key?("links") &&
-        @content_item_data["links"].has_key?(field)
-      @content_item_data["links"][field].map { |item_details|
-        LinkedContentItem.build(item_details)
-      }.sort_by(&:title)
-    else
-      []
-    end
-  end
-
-  def groups
-    @content_item_data["details"] && @content_item_data["details"]["groups"]
   end
 end
