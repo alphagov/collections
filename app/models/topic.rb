@@ -39,7 +39,7 @@ class Topic
         @content_item_data["links"].has_key?("children")
       @content_item_data["links"]["children"].map { |child|
         LinkedContentItem.build(child)
-      }
+      }.sort_by(&:title)
     else
       []
     end
