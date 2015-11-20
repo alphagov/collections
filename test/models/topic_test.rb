@@ -92,8 +92,8 @@ describe Topic do
         },
       ]
 
-      assert_equal 'Foo', @topic.children[0].title
-      assert_equal '/topic/business-tax/bar', @topic.children[1].base_path
+      assert_equal 'Bar', @topic.children[0].title
+      assert_equal 'Foo', @topic.children[1].title
     end
 
     it "returns empty array with no children" do

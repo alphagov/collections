@@ -40,7 +40,7 @@ class MainstreamBrowsePage
   end
 
   def related_topics
-    linked_items("related_topics").sort_by(&:title)
+    linked_items("related_topics")
   end
 
   def slug
@@ -54,7 +54,7 @@ private
         @content_item_data["links"].has_key?(field)
       @content_item_data["links"][field].map { |item_details|
         LinkedContentItem.build(item_details)
-      }
+      }.sort_by(&:title)
     else
       []
     end

@@ -72,9 +72,13 @@ describe MainstreamBrowsePage do
 
         items = @page.public_send(link_type)
 
-        assert_equal 'Foo', items[0].title
-        assert_equal '/browse/bar', items[1].base_path
-        assert_equal 'All about foo', items[0].description
+        assert_equal 'Bar', items[0].title
+        assert_equal 'All about bar', items[0].description
+        assert_equal '/browse/bar', items[0].base_path
+
+        assert_equal 'Foo', items[1].title
+        assert_equal 'All about foo', items[1].description
+        assert_equal '/browse/foo', items[1].base_path
       end
 
       it "returns empty array with no items" do

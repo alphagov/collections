@@ -66,15 +66,15 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
 
     within ".topics ul" do
       within "li:nth-child(1)" do
-        assert page.has_link?("Wells")
-      end
-
-      within "li:nth-child(2)" do
         assert page.has_link?("Fields")
       end
 
-      within "li:nth-child(3)" do
+      within "li:nth-child(2)" do
         assert page.has_link?("Offshore")
+      end
+
+      within "li:nth-child(3)" do
+        assert page.has_link?("Wells")
       end
     end
   end
