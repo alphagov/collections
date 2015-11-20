@@ -17,7 +17,7 @@ describe Topic do
         }],
       },
     }
-    @topic = Topic.new(@api_data)
+    @topic = Topic.new(ContentItem.new(@api_data))
   end
 
   describe "basic properties" do
@@ -38,10 +38,10 @@ describe Topic do
     end
 
     it "returns the topic's beta status" do
-      assert_equal false, @topic.beta?
+      refute @topic.beta?
 
       @api_data["details"]["beta"] = true
-      assert_equal true, @topic.beta?
+      assert @topic.beta?
     end
   end
 
@@ -135,7 +135,7 @@ describe Topic do
 
   describe "changed_documents" do
     setup do
-      @topic = Topic.new(@api_data, {:foo => "bar"})
+      @topic = Topic.new(ContentItem.new(@api_data), {:foo => "bar"})
     end
 
     it "passes the slug of the topic when constructing changed_documents" do

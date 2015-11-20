@@ -11,7 +11,7 @@ describe MainstreamBrowsePage do
       "links" => {
       },
     }
-    @page = MainstreamBrowsePage.new(@api_data)
+    @page = MainstreamBrowsePage.new(ContentItem.new(@api_data))
   end
 
   describe "basic properties" do

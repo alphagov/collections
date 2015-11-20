@@ -1,48 +1,28 @@
 class Topic
+  attr_reader :content_item
+  delegate :base_path, :title, :description, :content_id, :linked_items, :details,
+    to: :content_item
+
   def self.find(base_path, pagination_options = {})
-    api_response = ContentItem.find!(base_path)
-    new(api_response.to_hash, pagination_options)
+    content_item = ContentItem.find!(base_path)
+    new(content_item, pagination_options)
   end
 
-  def initialize(content_item_data, pagination_options = {})
-    @content_item_data = content_item_data
+  def initialize(content_item, pagination_options = {})
+    @content_item = content_item
     @pagination_options = pagination_options
   end
 
-  [
-    :base_path,
-    :title,
-    :description,
-    :content_id,
-  ].each do |field|
-    define_method field do
-      @content_item_data[field.to_s]
-    end
-  end
-
   def beta?
-    !! @content_item_data["details"]["beta"]
+    details["beta"]
   end
 
   def parent
-    if @content_item_data.has_key?("links") &&
-        @content_item_data["links"].has_key?("parent") &&
-        @content_item_data["links"]["parent"].any?
-      LinkedContentItem.build(@content_item_data["links"]["parent"].first)
-    else
-      nil
-    end
+    linked_items("parent").first
   end
 
   def children
-    if @content_item_data.has_key?("links") &&
-        @content_item_data["links"].has_key?("children")
-      @content_item_data["links"]["children"].map { |child|
-        LinkedContentItem.build(child)
-      }.sort_by(&:title)
-    else
-      []
-    end
+    linked_items("children")
   end
 
   def combined_title
@@ -54,7 +34,7 @@ class Topic
   end
 
   def lists
-    ListSet.new("specialist_sector", slug, @content_item_data["details"]["groups"])
+    ListSet.new("specialist_sector", slug, details["groups"])
   end
 
   def changed_documents
