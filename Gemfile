@@ -13,7 +13,7 @@ gem 'logstasher', '0.6.2' # 0.6.5+ changes the JSON schema used for events
 if ENV['SLIMMER_DEV']
   gem 'slimmer', :path => '../slimmer'
 else
-  gem 'slimmer', '9.0.0'
+  gem 'slimmer', '9.0.1'
 end
 
 if ENV['API_DEV']
@@ -40,6 +40,6 @@ end
 group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'byebug'
+  gem 'pry-byebug'
   gem 'jasmine-rails', '~> 0.12.1'
 end
