@@ -14,6 +14,10 @@ class ContentItem
     end
   end
 
+  def beta?
+    @content_item_data["phase"] == "beta" 
+  end
+
   def details
     @content_item_data["details"] || {}
   end
