@@ -80,11 +80,9 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   it "renders a beta topic" do
-    content_store_has_item("/topic/oil-and-gas", oil_and_gas_topic_item.merge({
-      :details => {
-        "beta" => true,
-      }
-    }))
+    content_store_has_item("/topic/oil-and-gas", oil_and_gas_topic_item.merge(
+      "phase" => "beta"
+    ))
 
     visit "/topic/oil-and-gas"
 

@@ -40,7 +40,7 @@ describe Topic do
     it "returns the topic's beta status" do
       refute @topic.beta?
 
-      @api_data["details"]["beta"] = true
+      @api_data["phase"] = "beta"
       assert @topic.beta?
     end
   end

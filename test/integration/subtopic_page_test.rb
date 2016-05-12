@@ -114,7 +114,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
   end
 
   it "renders a beta subtopic" do
-    content_store_has_item("/topic/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore", details: {beta: true}))
+    content_store_has_item("/topic/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore", { "phase" => "beta" }))
     stub_topic_organisations('oil-and-gas/offshore')
 
     visit "/topic/oil-and-gas/offshore"
