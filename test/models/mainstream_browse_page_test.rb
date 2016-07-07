@@ -49,6 +49,47 @@ describe MainstreamBrowsePage do
         refute @page.second_level_pages_curated?
       end
     end
+
+    describe "#second_level_browse_pages" do
+      before do
+        @second_level_browse_page_1 = {
+          "content_id" => "1",
+          "title" => "Foo",
+          "description" => "All about foo",
+          "base_path" => "/browse/foo",
+        }
+        @second_level_browse_page_2 = {
+          "content_id" => "2",
+          "title" => "Bar",
+          "description" => "All about bar",
+          "base_path" => "/browse/bar",
+        }
+        @api_data["details"]["ordered_second_level_browse_pages"] = [
+          "1",
+          "2",
+        ]
+        @api_data["links"]["second_level_browse_pages"] = [
+          @second_level_browse_page_2,
+          @second_level_browse_page_1,
+        ]
+      end
+
+      it "returns a curated set of links when second_level_ordering == curated" do
+        @api_data["details"]["second_level_ordering"] = "curated"
+        assert_equal [
+          @second_level_browse_page_1["content_id"],
+          @second_level_browse_page_2["content_id"],
+        ], @page.second_level_browse_pages.map(&:content_id)
+      end
+
+      it "returns an alphabetically ordered set of links when second_level_ordering == alphabetical" do
+        @api_data["details"]["second_level_ordering"] = "alphabetical"
+        assert_equal [
+          @second_level_browse_page_2["content_id"],
+          @second_level_browse_page_1["content_id"],
+        ], @page.second_level_browse_pages.map(&:content_id)
+      end
+    end
   end
 
   [

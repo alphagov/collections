@@ -7,31 +7,32 @@ Feature: Viewing browse
   Scenario: Browse to a browse page with Javascript
     Given there is an alphabetical browse page set up with links
     When I visit the main browse page
-    And I click on a top level browse page
+    Then I see the list of top level browse pages alphabetically ordered
+    When I click on a top level browse page
     Then I see the list of second level browse pages
     When I click on a second level browse page
     Then I should see the second level browse page
     Then I see the links tagged to the browse page
+    Then the A to Z label should be present
 
   Scenario: Browse to a browse page without Javascript
     Given there is an alphabetical browse page set up with links
     When I visit the main browse page
-    And I click on a top level browse page
+    Then I see the list of top level browse pages alphabetically ordered
+    When I click on a top level browse page
     Then I see the list of second level browse pages
     When I click on a second level browse page
     Then I should see the second level browse page
     Then I see the links tagged to the browse page
+    Then the A to Z label should be present
 
-  Scenario Outline: Browse to browse page and look for the A to Z label
-    Given there is a <child ordering> browse page set up with links
+  Scenario: Browse to a browse page without Javascript
+    Given that there are curated second level browse pages
     When I visit the main browse page
-    And I click on a top level browse page
-    Then the A to Z label should be <label presence>
-
-    Examples:
-      | child ordering | label presence |
-      |   alphabetical |        present |
-      |        curated |    not present |
+    Then I see the list of top level browse pages alphabetically ordered
+    When I click on a top level browse page
+    Then I see the curated list of second level browse pages
+    Then the A to Z label should not be present
 
   Scenario: Browse to browse page that has "Detailed guidance"
     Given there is an alphabetical browse page set up with links
