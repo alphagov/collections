@@ -20,7 +20,15 @@ class MainstreamBrowsePage
   end
 
   def second_level_browse_pages
-    linked_items("second_level_browse_pages")
+    links = linked_items("second_level_browse_pages")
+
+    if second_level_pages_curated?
+      links.sort_by do |link|
+        details["ordered_second_level_browse_pages"].index(link.content_id)
+      end
+    else
+      links
+    end
   end
 
   def second_level_pages_curated?
