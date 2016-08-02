@@ -1,7 +1,10 @@
-# This file is overwritten on deploy
-#
-Airbrake.configure do |config|
-  # Adding "production" to the development environments causes Airbrake not
-  # to attempt to send notifications.
-  config.development_environments << "production"
+if ENV['ERRBIT_API_KEY'].present?
+  errbit_uri = Plek.find_uri('errbit')
+
+  Airbrake.configure do |config|
+    config.api_key = ENV['ERRBIT_API_KEY']
+    config.host = errbit_uri.host
+    config.secure = errbit_uri.scheme == 'https'
+    config.environment_name = ENV['ERRBIT_ENVIRONMENT_NAME']
+  end
 end
