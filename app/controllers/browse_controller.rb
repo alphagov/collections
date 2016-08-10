@@ -4,11 +4,7 @@ class BrowseController < ApplicationController
 
   def index
     @page = MainstreamBrowsePage.find("/browse")
-    set_slimmer_artefact_headers({
-      title: "browse",
-      section_name: @page.title,
-      section_link: @page.base_path,
-    })
+    set_slimmer_artefact_headers
   end
 
   def top_level_browse_page
