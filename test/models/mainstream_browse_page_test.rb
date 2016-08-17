@@ -133,6 +133,26 @@ describe MainstreamBrowsePage do
     end
   end
 
+  it "filters items without title" do
+    @api_data["links"]["second_level_browse_pages"] = [
+      {
+        "description" => "All about foo",
+        "base_path"=>"/browse/foo",
+      },
+      {
+        "title"=>"Bar",
+        "description" => "All about bar",
+        "base_path"=>"/browse/bar",
+      },
+    ]
+
+    items = @page.second_level_browse_pages
+
+    assert_equal 'Bar', items[0].title
+    assert_equal 'All about bar', items[0].description
+    assert_equal '/browse/bar', items[0].base_path
+  end
+
   describe "active_top_level_browse_page" do
     it "returns the title, base_path and description for the linked item" do
       @api_data["links"]["active_top_level_browse_page"] = [{
