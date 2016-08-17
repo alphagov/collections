@@ -27,6 +27,6 @@ class ContentItem
 
     @content_item_data["links"][field].to_a.map { |item_hash|
       self.class.new(item_hash)
-    }.sort_by(&:title)
+    }.select(&:title).sort_by(&:title)
   end
 end
