@@ -42,4 +42,5 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'pry-byebug'
   gem 'jasmine-rails', '~> 0.12.1'
+  gem 'govuk-lint'
 end
