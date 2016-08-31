@@ -1,6 +1,6 @@
 module RummagerHelpers
   def stub_topic_organisations(slug)
-    Services.rummager.stubs(:unified_search).with(
+    Services.rummager.stubs(:search).with(
       count: "0",
       filter_specialist_sectors: [slug],
       facet_organisations: "1000",
@@ -29,7 +29,7 @@ module RummagerHelpers
 
     results.each_slice(page_size).with_index do |results_page, page|
       start = page * page_size
-      Services.rummager.stubs(:unified_search).with(
+      Services.rummager.stubs(:search).with(
         has_entries(
           start: start,
           count: page_size,
@@ -51,7 +51,7 @@ module RummagerHelpers
 
     results.each_slice(page_size).with_index do |results_page, page|
       start = page * page_size
-      Services.rummager.stubs(:unified_search).with(
+      Services.rummager.stubs(:search).with(
         has_entries(
           start: start,
           count: page_size,
@@ -72,7 +72,7 @@ module RummagerHelpers
 
     results.each_slice(page_size).with_index do |results_page, page|
       start = page * page_size
-      Services.rummager.stubs(:unified_search).with(
+      Services.rummager.stubs(:search).with(
         has_entries(
           start: start,
           count: page_size,
@@ -87,7 +87,7 @@ module RummagerHelpers
   end
 
   def expect_search_params(params)
-    GdsApi::Rummager.any_instance.expects(:unified_search)
+    GdsApi::Rummager.any_instance.expects(:search)
       .with(has_entries(params))
       .returns(:some_results)
   end
