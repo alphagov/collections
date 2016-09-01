@@ -28,13 +28,10 @@ private
 
   def subscription_params
     {
-      title: subtopic.combined_title,
-      tags: {
-        topics: [subtopic.slug]
-      },
-      links: {
-        topics: [subtopic.content_id]
+      'title' => subtopic.combined_title,
+      'links' => {
+        'topics' => [subtopic.content_id]
       }
-    }.deep_stringify_keys
+    }
   end
 end
