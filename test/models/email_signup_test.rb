@@ -24,9 +24,6 @@ describe EmailSignup do
 
       Services.email_alert_api.expects(:find_or_create_subscriber_list).with(
         "title" => "Oil and gas: Wells",
-        "tags" => {
-          "topics" => ["oil-and-gas/wells"]
-        },
         "links" => {
           "topics" => ["uuid-888"]
         },
