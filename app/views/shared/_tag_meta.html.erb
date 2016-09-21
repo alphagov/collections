@@ -1,5 +1,7 @@
 <% content_for :extra_headers do %>
-  <%- if tag.description.present? -%>
+  <%- if defined?(description) -%>
+    <meta name="description" content="<%= description %>">
+  <%- elsif tag.description.present? -%>
     <meta name="description" content="<%= tag.description %>">
   <%- end -%>
   <link rel="alternate" type="application/json" href="/api/content<%= tag.base_path %>">
