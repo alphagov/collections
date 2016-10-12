@@ -30,11 +30,11 @@ class Topic
   end
 
   def lists
-    ListSet.new("specialist_sector", slug, details["groups"])
+    ListSet.new("specialist_sector", content_item.content_id, details["groups"])
   end
 
   def changed_documents
-    ChangedDocuments.new("specialist_sector", slug, @pagination_options)
+    ChangedDocuments.new(content_item.content_id, @pagination_options)
   end
 
   def slug

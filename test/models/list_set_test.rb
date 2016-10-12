@@ -25,7 +25,7 @@ describe ListSet do
       ]
 
       rummager_has_documents_for_subtopic(
-        "business-tax/paye",
+        "paye-content-id",
         [
           "employee-tax-codes",
           "get-paye-forms-p45-p60",
@@ -37,7 +37,7 @@ describe ListSet do
         page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
       )
 
-      @list_set = ListSet.new("specialist_sector", "business-tax/paye", @group_data)
+      @list_set = ListSet.new("specialist_sector", "paye-content-id", @group_data)
     end
 
     it "returns the groups in the curated order" do
@@ -81,7 +81,7 @@ describe ListSet do
   describe "for a non-curated topic" do
     setup do
       rummager_has_documents_for_subtopic(
-        "business-tax/paye",
+        "paye-content-id",
         [
           "get-paye-forms-p45-p60",
           "pay-paye-penalty",
@@ -92,7 +92,7 @@ describe ListSet do
         ],
         page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
       )
-      @list_set = ListSet.new("specialist_sector", "business-tax/paye", [])
+      @list_set = ListSet.new("specialist_sector", "paye-content-id", [])
     end
 
     it "constructs a single A-Z group" do
@@ -117,7 +117,7 @@ describe ListSet do
     end
 
     it "handles nil data the same as empty array" do
-      @list_set = ListSet.new("specialist_sector", "business-tax/paye", nil)
+      @list_set = ListSet.new("specialist_sector", "paye-content-id", nil)
       assert_equal 1, @list_set.to_a.size
       assert_equal "A to Z", @list_set.first.title
     end
@@ -125,8 +125,8 @@ describe ListSet do
 
   describe "fetching content tagged to this tag" do
     setup do
-      @subtopic_slug = 'business-tax/paye'
-      rummager_has_documents_for_subtopic(@subtopic_slug, [
+      @subtopic_content_id = 'paye-content-id'
+      rummager_has_documents_for_subtopic(@subtopic_content_id, [
         'pay-paye-penalty',
         'pay-paye-tax',
         'pay-psa',
@@ -144,11 +144,11 @@ describe ListSet do
         'Payroll annual reporting',
       ]
 
-      assert_equal expected_titles.sort, ListSet.new("specialist_sector", @subtopic_slug).first.contents.map(&:title).sort
+      assert_equal expected_titles.sort, ListSet.new("specialist_sector", @subtopic_content_id).first.contents.map(&:title).sort
     end
 
     it "provides the title, base_path for each document" do
-      documents = ListSet.new("specialist_sector", @subtopic_slug).first.contents
+      documents = ListSet.new("specialist_sector", @subtopic_content_id).first.contents
 
       assert_equal "/pay-paye-tax", documents[2].base_path
       assert_equal "Pay paye tax", documents[2].title
@@ -161,14 +161,14 @@ describe ListSet do
       result.delete("public_timestamp")
 
       Services.rummager.stubs(:search).with(
-        has_entries(filter_specialist_sectors: ['business-tax/paye'])
+        has_entries(filter_topic_content_ids: ['paye-content-id'])
       ).returns({
         "results" => [result],
         "start" => 0,
         "total" => 1,
       })
 
-      documents = ListSet.new("specialist_sector", "business-tax/paye").first.contents
+      documents = ListSet.new("specialist_sector", "paye-content-id").first.contents
 
       assert_equal 1, documents.to_a.size
       assert_equal 'Pay psa', documents.first.title

@@ -1,8 +1,8 @@
 module RummagerHelpers
-  def stub_topic_organisations(slug)
+  def stub_topic_organisations(slug, content_id)
     Services.rummager.stubs(:search).with(
       count: "0",
-      filter_specialist_sectors: [slug],
+      filter_topic_content_ids: [content_id],
       facet_organisations: "1000",
     ).returns(
       rummager_has_specialist_sector_organisations(slug)
@@ -22,7 +22,7 @@ module RummagerHelpers
     }
   end
 
-  def rummager_has_latest_documents_for_subtopic(subtopic_slug, document_slugs, page_size: 50)
+  def rummager_has_latest_documents_for_subtopic(subtopic_content_id, document_slugs, page_size: 50)
     results = document_slugs.map.with_index do |slug, i|
       rummager_document_for_slug(slug, (i + 1).hours.ago)
     end
@@ -33,7 +33,7 @@ module RummagerHelpers
         has_entries(
           start: start,
           count: page_size,
-          filter_specialist_sectors: [subtopic_slug],
+          filter_topic_content_ids: [subtopic_content_id],
           order: "-public_timestamp",
         )
       ).returns({
@@ -44,7 +44,7 @@ module RummagerHelpers
     end
   end
 
-  def rummager_has_documents_for_subtopic(subtopic_slug, document_slugs, format = "guide", page_size: 50)
+  def rummager_has_documents_for_subtopic(subtopic_content_id, document_slugs, format = "guide", page_size: 50)
     results = document_slugs.map.with_index do |slug, i|
       rummager_document_for_slug(slug, (i + 1).hours.ago, format)
     end
@@ -55,7 +55,7 @@ module RummagerHelpers
         has_entries(
           start: start,
           count: page_size,
-          filter_specialist_sectors: [subtopic_slug],
+          filter_topic_content_ids: [subtopic_content_id],
         )
       ).returns({
         "results" => results_page,

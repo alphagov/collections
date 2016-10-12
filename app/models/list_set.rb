@@ -17,9 +17,9 @@ class ListSet
     world_location_news_article
   ).to_set
 
-  def initialize(tag_type, tag_slug, group_data = nil)
+  def initialize(tag_type, tag_content_id, group_data = nil)
     @tag_type = tag_type
-    @tag_slug = tag_slug
+    @tag_content_id = tag_content_id
     @group_data = group_data || []
   end
 
@@ -62,16 +62,17 @@ class ListSet
     @content_tagged_to_tag ||= RummagerSearch.new({
       :start => 0,
       :count => RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
-      filter_name => [@tag_slug],
+      filter_name => [@tag_content_id],
       :fields => %w(title link format),
     })
   end
 
   def filter_name
     if @tag_type == 'section'
+      # TODO: is this used?
       :filter_mainstream_browse_pages
     else
-      :filter_specialist_sectors
+      :filter_topic_content_ids
     end
   end
 

@@ -7,7 +7,14 @@
   <%= @subtopic.title %>
 <% end %>
 
-<%= render layout: "subtopic", locals: {subtopic: @subtopic, organisations: organisations, link_to_latest_feed: true, beta_label: false} do %>
+<%= render(
+  layout: "subtopic",
+  locals: {
+    subtopic: @subtopic,
+    organisations: organisations(@subtopic.content_id),
+    link_to_latest_feed: true,
+    beta_label: false
+  }) do %>
   <% @subtopic.lists.each do |list| -%>
     <nav class="index-list with-title" aria-labelledby="<%= list.title.parameterize %>">
       <h1 id="<%= list.title.parameterize %>"><%= list.title %></h1>

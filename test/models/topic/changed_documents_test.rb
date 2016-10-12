@@ -5,8 +5,8 @@ describe Topic::ChangedDocuments do
 
   describe "with a single page of results available" do
     setup do
-      @subtopic_slug = 'business-tax/paye'
-      rummager_has_latest_documents_for_subtopic(@subtopic_slug, [
+      @subtopic_content_id = 'paye-content-id'
+      rummager_has_latest_documents_for_subtopic(@subtopic_content_id, [
         'pay-paye-penalty',
         'pay-paye-tax',
         'pay-psa',
@@ -24,11 +24,11 @@ describe Topic::ChangedDocuments do
         'Payroll annual reporting',
       ]
 
-      assert_equal expected_titles, Topic::ChangedDocuments.new("specialist_sector", @subtopic_slug).map(&:title)
+      assert_equal expected_titles, Topic::ChangedDocuments.new(@subtopic_content_id).map(&:title)
     end
 
     it "provides the title, base_path and change_note for each document" do
-      documents = Topic::ChangedDocuments.new("specialist_sector", @subtopic_slug).to_a
+      documents = Topic::ChangedDocuments.new(@subtopic_content_id).to_a
 
       # Actual values come from rummager helpers.
       assert_equal "/pay-psa", documents[2].base_path
@@ -37,7 +37,7 @@ describe Topic::ChangedDocuments do
     end
 
     it "provides the public_updated_at for each document" do
-      documents = Topic::ChangedDocuments.new("specialist_sector", @subtopic_slug).to_a
+      documents = Topic::ChangedDocuments.new(@subtopic_content_id).to_a
 
       assert documents[0].public_updated_at.is_a?(Time)
 
@@ -48,8 +48,8 @@ describe Topic::ChangedDocuments do
 
   describe "with multiple pages of results available" do
     setup do
-      @subtopic_slug = 'business-tax/paye'
-      rummager_has_latest_documents_for_subtopic(@subtopic_slug, [
+      @subtopic_content_id = 'paye-content-id'
+      rummager_has_latest_documents_for_subtopic(@subtopic_content_id, [
         'pay-paye-penalty',
         'pay-paye-tax',
         'pay-psa',
@@ -57,7 +57,7 @@ describe Topic::ChangedDocuments do
         'payroll-annual-reporting',
       ], :page_size => 3)
       @pagination_options = {:count => 3}
-      @documents = Topic::ChangedDocuments.new("specialist_sector", @subtopic_slug, @pagination_options)
+      @documents = Topic::ChangedDocuments.new(@subtopic_content_id, @pagination_options)
     end
 
     it "returns the first page of results" do
@@ -85,14 +85,14 @@ describe Topic::ChangedDocuments do
       result.delete("public_timestamp")
 
       Services.rummager.stubs(:search).with(
-        has_entries(filter_specialist_sectors: ['business-tax/paye'])
+        has_entries(filter_topic_content_ids: ['paye-content-id'])
       ).returns({
         "results" => [result],
         "start" => 0,
         "total" => 1,
       })
 
-      documents = Topic::ChangedDocuments.new("specialist_sector", "business-tax/paye")
+      documents = Topic::ChangedDocuments.new("paye-content-id")
 
       assert_equal 1, documents.to_a.size
       assert_equal 'Pay psa', documents.first.title
