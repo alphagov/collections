@@ -65,7 +65,7 @@ module RummagerHelpers
     end
   end
 
-  def rummager_has_documents_for_browse_page(browse_page_slug, document_slugs, format = "guide", page_size: 50)
+  def rummager_has_documents_for_browse_page(browse_page_content_id, document_slugs, format = "guide", page_size: 50)
     results = document_slugs.map.with_index do |slug, i|
       rummager_document_for_slug(slug, (i + 1).hours.ago, format)
     end
@@ -76,7 +76,7 @@ module RummagerHelpers
         has_entries(
           start: start,
           count: page_size,
-          filter_mainstream_browse_pages: [browse_page_slug],
+          filter_mainstream_browse_page_content_ids: [browse_page_content_id],
         )
       ).returns({
         "results" => results_page,

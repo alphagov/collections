@@ -69,8 +69,7 @@ class ListSet
 
   def filter_name
     if @tag_type == 'section'
-      # TODO: is this used?
-      :filter_mainstream_browse_pages
+      :filter_mainstream_browse_page_content_ids
     else
       :filter_topic_content_ids
     end

@@ -178,12 +178,12 @@ describe ListSet do
 
   describe "filtering uncurated lists" do
     before do
-      @list_set = ListSet.new("section", "browse/abroad/living-abroad")
+      @list_set = ListSet.new("section", "content-id-for-living-abroad")
     end
 
     it "shouldn't display a document if its format is excluded" do
       rummager_has_documents_for_browse_page(
-        'browse/abroad/living-abroad',
+        'content-id-for-living-abroad',
         ['baz'],
         ListSet::BROWSE_FORMATS_TO_EXCLUDE.to_a.last,
         page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
@@ -194,7 +194,7 @@ describe ListSet do
 
     it "should display a document if its format isn't excluded" do
       rummager_has_documents_for_browse_page(
-        'browse/abroad/living-abroad',
+        'content-id-for-living-abroad',
         ['baz'],
         'some-format-not-excluded',
         page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
