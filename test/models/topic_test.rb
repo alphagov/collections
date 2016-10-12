@@ -17,7 +17,8 @@ describe Topic do
         }],
       },
     }
-    @topic = Topic.new(ContentItem.new(@api_data))
+    @content_item = ContentItem.new(@api_data)
+    @topic = Topic.new(@content_item)
   end
 
   describe "basic properties" do
@@ -120,13 +121,13 @@ describe Topic do
 
   describe "lists" do
     it "passes the slug of the topic when constructing groups" do
-      ListSet.expects(:new).with("specialist_sector", "business-tax/paye", anything()).returns(:a_lists_instance)
+      ListSet.expects(:new).with("specialist_sector", @content_item.content_id, anything).returns(:a_lists_instance)
 
       assert_equal :a_lists_instance, @topic.lists
     end
 
     it "passes the groups data when constructing" do
-      ListSet.expects(:new).with(anything(), anything(), :some_data).returns(:a_lists_instance)
+      ListSet.expects(:new).with(anything, anything, :some_data).returns(:a_lists_instance)
       @api_data["details"]["groups"] = :some_data
 
       assert_equal :a_lists_instance, @topic.lists
@@ -135,16 +136,20 @@ describe Topic do
 
   describe "changed_documents" do
     setup do
-      @topic = Topic.new(ContentItem.new(@api_data), {:foo => "bar"})
+      @content_item = ContentItem.new(@api_data)
+      @topic = Topic.new(@content_item, foo: "bar")
     end
 
-    it "passes the slug of the topic when constructing changed_documents" do
-      Topic::ChangedDocuments.expects(:new).with("specialist_sector", "business-tax/paye", anything()).returns(:an_instance)
+    it "passes the content id of the topic when constructing changed_documents" do
+      Topic::ChangedDocuments
+        .expects(:new)
+        .with(@content_item.content_id, anything)
+        .returns(:an_instance)
       assert_equal :an_instance, @topic.changed_documents
     end
 
     it "passes the pagination options when constructing changed_documents" do
-      Topic::ChangedDocuments.expects(:new).with("specialist_sector", anything(), :foo => "bar").returns(:an_instance)
+      Topic::ChangedDocuments.expects(:new).with(anything, foo: "bar").returns(:an_instance)
       assert_equal :an_instance, @topic.changed_documents
     end
   end

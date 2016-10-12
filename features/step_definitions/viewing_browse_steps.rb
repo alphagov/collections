@@ -1,12 +1,19 @@
 Given(/^there is an alphabetical browse page set up with links$/) do
-  second_level_browse_pages = [{ title: 'Judges', base_path: '/browse/crime-and-justice/judges' }]
+  second_level_browse_pages = [{
+    content_id: 'judges-content-id',
+    title: 'Judges',
+    base_path: '/browse/crime-and-justice/judges'
+  }]
 
   add_browse_pages
-  add_first_level_browse_pages(child_pages: second_level_browse_pages, order_type: "alphabetical")
+  add_first_level_browse_pages(
+    child_pages: second_level_browse_pages,
+    order_type: "alphabetical"
+  )
   add_second_level_browse_pages(second_level_browse_pages)
 
   rummager_has_documents_for_browse_page(
-    "crime-and-justice/judges",
+    "judges-content-id",
     [
       "judge-dredd",
     ],
@@ -17,11 +24,13 @@ end
 Given(/^that there are curated second level browse pages$/) do
   second_level_browse_pages = [
     {
+      content_id: 'judges-content-id',
       title: 'Judges',
       base_path: '/browse/crime-and-justice/judges',
       content_id: "2",
     },
     {
+      content_id: 'courts-content-id',
       title: 'Courts',
       base_path: '/browse/crime-and-justice/courts',
       content_id: "1",
@@ -29,7 +38,10 @@ Given(/^that there are curated second level browse pages$/) do
   ]
 
   add_browse_pages
-  add_first_level_browse_pages(child_pages: second_level_browse_pages, order_type: "curated")
+  add_first_level_browse_pages(
+    child_pages: second_level_browse_pages,
+    order_type: "curated"
+  )
   add_second_level_browse_pages(second_level_browse_pages)
 end
 
@@ -85,8 +97,16 @@ end
 
 def top_level_browse_pages
   [
-    { title: 'Crime and justice', base_path: '/browse/crime-and-justice' },
-    { title: 'Benefits', base_path: '/browse/benefits' },
+    {
+      content_id: 'content-id-for-crime-and-justice',
+      title: 'Crime and justice',
+      base_path: '/browse/crime-and-justice'
+    },
+    {
+      content_id: 'content-id-for-benefits',
+      title: 'Benefits',
+      base_path: '/browse/benefits'
+    },
   ]
 end
 
@@ -112,12 +132,17 @@ end
 
 def add_second_level_browse_pages(second_level_browse_pages)
   content_store_has_item '/browse/crime-and-justice/judges', {
+    content_id: 'judges-content-id',
     title: 'Judges',
     base_path: '/browse/crime-and-justice/judges',
     links: {
       top_level_browse_pages: top_level_browse_pages,
       second_level_browse_pages: second_level_browse_pages,
-      active_top_level_browse_page: [{ title: 'Crime and justice', base_path: '/browse/crime-and-justice' }],
+      active_top_level_browse_page: [{
+        content_id: 'content-id-for-crime-and-justice',
+        title: 'Crime and justice',
+        base_path: '/browse/crime-and-justice'
+      }],
       related_topics: [{ title: 'A linked topic', base_path: '/browse/linked-topic' }]
     }
   }

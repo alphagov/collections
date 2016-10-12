@@ -5,6 +5,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
   def oil_and_gas_subtopic_item(subtopic_slug, params = {})
     base = {
+      content_id: "content-id-for-#{subtopic_slug}",
       base_path: "/topic/oil-and-gas/#{subtopic_slug}",
       title: subtopic_slug.humanize,
       description: "Offshore drilling and exploration",
@@ -26,7 +27,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
   setup do
     rummager_has_documents_for_subtopic(
-      'oil-and-gas/offshore',
+      'content-id-for-offshore',
       [
         'oil-rig-safety-requirements',
         'oil-rig-staffing',
@@ -57,7 +58,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
       ]
     }))
 
-    stub_topic_organisations('oil-and-gas/offshore')
+    stub_topic_organisations('oil-and-gas/offshore', 'content-id-for-offshore')
 
     # When I visit the subtopic page
     visit "/topic/oil-and-gas/offshore"
@@ -87,7 +88,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
   it "renders a non-curated subtopic" do
     # Given a non-curated subtopic exists
     content_store_has_item("/topic/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore"))
-    stub_topic_organisations('oil-and-gas/offshore')
+    stub_topic_organisations('oil-and-gas/offshore', 'content-id-for-offshore')
 
     # When I visit the subtopic page
     visit "/topic/oil-and-gas/offshore"
@@ -115,7 +116,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
   it "renders a beta subtopic" do
     content_store_has_item("/topic/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore", { "phase" => "beta" }))
-    stub_topic_organisations('oil-and-gas/offshore')
+    stub_topic_organisations('oil-and-gas/offshore', 'content-id-for-offshore')
 
     visit "/topic/oil-and-gas/offshore"
 
@@ -125,12 +126,12 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
   describe "latest page for a subtopic" do
     setup do
       content_store_has_item("/topic/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore"))
-      stub_topic_organisations('oil-and-gas/offshore')
+      stub_topic_organisations('oil-and-gas/offshore', 'content-id-for-offshore')
     end
 
     it "displays the latest page" do
       # Given there is latest content for a subtopic
-      rummager_has_latest_documents_for_subtopic("oil-and-gas/offshore", [
+      rummager_has_latest_documents_for_subtopic("content-id-for-offshore", [
         "oil-and-gas-uk-field-data",
         "oil-and-gas-wells",
         "oil-and-gas-fields-and-field-development",
@@ -167,7 +168,10 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
     it "paginates the results" do
       # Given there is latest content for a subtopic
-      rummager_has_latest_documents_for_subtopic("oil-and-gas/offshore", (1..55).map {|n| "document-#{n}" })
+      rummager_has_latest_documents_for_subtopic(
+        "content-id-for-offshore",
+        (1..55).map { |n| "document-#{n}" }
+      )
 
       # When I view the latest page for a subtopic
       visit "/topic/oil-and-gas/offshore"

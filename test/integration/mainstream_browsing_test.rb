@@ -9,10 +9,8 @@ class MainstreamBrowsingTest < ActionDispatch::IntegrationTest
     content_schema_examples_for(:mainstream_browse_page).each do |content_item|
       content_store_has_item(content_item['base_path'], content_item)
 
-      slug = content_item['base_path'].gsub('/browse/', '')
-
       rummager_has_documents_for_browse_page(
-        slug,
+        content_item['content_id'],
         [
           "employee-tax-codes",
           "get-paye-forms-p45-p60",

@@ -1,0 +1,2947 @@
+Using middleware GdsApi::GovukHeaderSniffer to sniff for GOVUK-Request-Id header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for GOVUK-Original-Url header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for X-GOVUK-Authenticated-User header
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-05 14:40:17 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/lib/rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.7.1/lib/rails/templates/rails/welcome/index.html.erb (1.5ms)
+Completed 200 OK in 10ms (Views: 9.9ms)
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? false
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? false
+
+NoMethodError - undefined method `to_html' for nil:NilClass
+Did you mean?  to_h
+               to_yaml:
+  slimmer (9.1.0) lib/slimmer/processors/body_inserter.rb:9:in `filter'
+  slimmer (9.1.0) lib/slimmer/skin.rb:90:in `block in process'
+  slimmer (9.1.0) lib/slimmer/skin.rb:86:in `process'
+  slimmer (9.1.0) lib/slimmer/skin.rb:133:in `success'
+  slimmer (9.1.0) lib/slimmer/app.rb:94:in `rewrite_response'
+  slimmer (9.1.0) lib/slimmer/app.rb:45:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  airbrake (4.3.8) lib/airbrake/rails/middleware.rb:13:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.1) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:16:in `_call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:12:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/43620f4b53da97f8/variables" for ::1 at 2016-10-05 14:40:25 +0000
+Using middleware GdsApi::GovukHeaderSniffer to sniff for GOVUK-Request-Id header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for GOVUK-Original-Url header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for X-GOVUK-Authenticated-User header
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-05 14:41:46 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/lib/rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.7.1/lib/rails/templates/rails/welcome/index.html.erb (1.5ms)
+Completed 200 OK in 70ms (Views: 69.8ms)
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? false
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? false
+
+NoMethodError - undefined method `to_html' for nil:NilClass
+Did you mean?  to_h
+               to_yaml:
+  slimmer (9.1.0) lib/slimmer/processors/body_inserter.rb:9:in `filter'
+  slimmer (9.1.0) lib/slimmer/skin.rb:90:in `block in process'
+  slimmer (9.1.0) lib/slimmer/skin.rb:86:in `process'
+  slimmer (9.1.0) lib/slimmer/skin.rb:133:in `success'
+  slimmer (9.1.0) lib/slimmer/app.rb:94:in `rewrite_response'
+  slimmer (9.1.0) lib/slimmer/app.rb:45:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  airbrake (4.3.8) lib/airbrake/rails/middleware.rb:13:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.1) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:16:in `_call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:12:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/259dfbdb28c62eb9/variables" for ::1 at 2016-10-05 14:41:48 +0000
+
+
+Started POST "/__better_errors/259dfbdb28c62eb9/eval" for ::1 at 2016-10-05 14:41:54 +0000
+
+
+Started POST "/__better_errors/259dfbdb28c62eb9/eval" for 127.0.0.1 at 2016-10-05 14:42:06 +0000
+
+
+Started POST "/__better_errors/259dfbdb28c62eb9/eval" for ::1 at 2016-10-05 14:42:16 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-05 14:44:02 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/lib/rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.7.1/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 1ms (Views: 0.7ms)
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? false
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? false
+
+NoMethodError - undefined method `to_html' for nil:NilClass
+Did you mean?  to_h
+               to_yaml:
+  slimmer (9.1.0) lib/slimmer/processors/body_inserter.rb:9:in `filter'
+  slimmer (9.1.0) lib/slimmer/skin.rb:90:in `block in process'
+  slimmer (9.1.0) lib/slimmer/skin.rb:86:in `process'
+  slimmer (9.1.0) lib/slimmer/skin.rb:133:in `success'
+  slimmer (9.1.0) lib/slimmer/app.rb:94:in `rewrite_response'
+  slimmer (9.1.0) lib/slimmer/app.rb:45:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  airbrake (4.3.8) lib/airbrake/rails/middleware.rb:13:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.1) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:16:in `_call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:12:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/1c0ea89006b26919/variables" for ::1 at 2016-10-05 14:44:03 +0000
+Using middleware GdsApi::GovukHeaderSniffer to sniff for GOVUK-Request-Id header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for GOVUK-Original-Url header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for X-GOVUK-Authenticated-User header
+
+
+Started GET "/browse/benefits/entitlement" for 127.0.0.1 at 2016-10-05 14:48:07 +0000
+Processing by BrowseController#second_level_browse_page as HTML
+  Parameters: {"top_level_slug"=>"benefits", "second_level_slug"=>"entitlement"}
+  Rendered shared/_tag_meta.html.erb (1.3ms)
+  Rendered browse/_links.html.erb (307.5ms)
+  Rendered browse/_second_level_browse_pages.html.erb (1.3ms)
+  Rendered browse/_top_level_browse_pages.erb (1.0ms)
+  Rendered browse/second_level_browse_page.html.erb within layouts/application (373.1ms)
+WARNING: The @mixin outer-block is depricated and should be updated to new grid helpers
+         on line 108 of /usr/lib/rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/govuk_frontend_toolkit-4.3.0/app/assets/stylesheets/_grid_layout.scss, in `outer-block'
+         from line 6 of /var/govuk/collections/app/assets/stylesheets/helpers/_layouts.scss
+         from line 10 of /var/govuk/collections/app/assets/stylesheets/application.scss
+         from line 6 of /var/govuk/collections/app/assets/stylesheets/application-ie6.scss
+
+
+WARNING: The @mixin inner-block is depricated and should be updated to use new grid helpers
+         on line 121 of /usr/lib/rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/govuk_frontend_toolkit-4.3.0/app/assets/stylesheets/_grid_layout.scss, in `inner-block'
+         from line 6 of /var/govuk/collections/app/assets/stylesheets/views/_browse.scss
+         from line 13 of /var/govuk/collections/app/assets/stylesheets/application.scss
+         from line 6 of /var/govuk/collections/app/assets/stylesheets/application-ie6.scss
+
+
+WARNING: The @mixin outer-block is depricated and should be updated to new grid helpers
+         on line 108 of /usr/lib/rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/govuk_frontend_toolkit-4.3.0/app/assets/stylesheets/_grid_layout.scss, in `outer-block'
+         from line 6 of /var/govuk/collections/app/assets/stylesheets/helpers/_layouts.scss
+         from line 10 of /var/govuk/collections/app/assets/stylesheets/application.scss
+         from line 6 of /var/govuk/collections/app/assets/stylesheets/application-ie7.scss
+
+
+WARNING: The @mixin inner-block is depricated and should be updated to use new grid helpers
+         on line 121 of /usr/lib/rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/govuk_frontend_toolkit-4.3.0/app/assets/stylesheets/_grid_layout.scss, in `inner-block'
+         from line 6 of /var/govuk/collections/app/assets/stylesheets/views/_browse.scss
+         from line 13 of /var/govuk/collections/app/assets/stylesheets/application.scss
+         from line 6 of /var/govuk/collections/app/assets/stylesheets/application-ie7.scss
+
+
+WARNING: The @mixin outer-block is depricated and should be updated to new grid helpers
+         on line 108 of /usr/lib/rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/govuk_frontend_toolkit-4.3.0/app/assets/stylesheets/_grid_layout.scss, in `outer-block'
+         from line 6 of /var/govuk/collections/app/assets/stylesheets/helpers/_layouts.scss
+         from line 10 of /var/govuk/collections/app/assets/stylesheets/application.scss
+         from line 6 of /var/govuk/collections/app/assets/stylesheets/application-ie8.scss
+
+
+WARNING: The @mixin inner-block is depricated and should be updated to use new grid helpers
+         on line 121 of /usr/lib/rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/govuk_frontend_toolkit-4.3.0/app/assets/stylesheets/_grid_layout.scss, in `inner-block'
+         from line 6 of /var/govuk/collections/app/assets/stylesheets/views/_browse.scss
+         from line 13 of /var/govuk/collections/app/assets/stylesheets/application.scss
+         from line 6 of /var/govuk/collections/app/assets/stylesheets/application-ie8.scss
+
+
+WARNING: The @mixin outer-block is depricated and should be updated to new grid helpers
+         on line 108 of /usr/lib/rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/govuk_frontend_toolkit-4.3.0/app/assets/stylesheets/_grid_layout.scss, in `outer-block'
+         from line 6 of /var/govuk/collections/app/assets/stylesheets/helpers/_layouts.scss
+         from line 10 of /var/govuk/collections/app/assets/stylesheets/application.scss
+
+
+WARNING: The @mixin inner-block is depricated and should be updated to use new grid helpers
+         on line 121 of /usr/lib/rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/govuk_frontend_toolkit-4.3.0/app/assets/stylesheets/_grid_layout.scss, in `inner-block'
+         from line 6 of /var/govuk/collections/app/assets/stylesheets/views/_browse.scss
+         from line 13 of /var/govuk/collections/app/assets/stylesheets/application.scss
+
+
+Completed 200 OK in 3832ms (Views: 3527.9ms)
+
+
+Started GET "/collections/application.self-77756e50fb5f45827c5086e09206f1e2abc24ae726fd10ebf630d96b21cfa565.css?body=1" for ::1 at 2016-10-05 14:48:12 +0000
+
+
+Started GET "/collections/vendor/polyfills/bind.self-298670bd147f2c023e76026ca559ffdee4ed8fee93b2a7260bfa164252662073.js?body=1" for 127.0.0.1 at 2016-10-05 14:48:13 +0000
+
+
+Started GET "/collections/support.self-816722bf9bc92c79514a7b71c5697b5cbf8170f319914f14855cfca826ab2624.js?body=1" for ::1 at 2016-10-05 14:48:13 +0000
+
+
+Started GET "/collections/browse-columns.self-e50c4fc0d16e97fcfa596cd49bd537b2eeabd5dc4bb43fb0bfa28f8132ecee95.js?body=1" for 127.0.0.1 at 2016-10-05 14:48:13 +0000
+
+
+Started GET "/collections/application.self-c748f39b3b25ac57a0a24ff04ec7406ef3f943467973d43a55b0f153ef0fc2b7.js?body=1" for ::1 at 2016-10-05 14:48:13 +0000
+
+
+Started GET "/browse/benefits/entitlement" for 127.0.0.1 at 2016-10-05 14:48:42 +0000
+Processing by BrowseController#second_level_browse_page as HTML
+  Parameters: {"top_level_slug"=>"benefits", "second_level_slug"=>"entitlement"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered browse/_links.html.erb (34.2ms)
+  Rendered browse/_second_level_browse_pages.html.erb (0.3ms)
+  Rendered browse/_top_level_browse_pages.erb (0.3ms)
+  Rendered browse/second_level_browse_page.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 128ms (Views: 84.1ms)
+
+
+Started GET "/browse/benefits" for 127.0.0.1 at 2016-10-05 14:51:20 +0000
+Processing by BrowseController#top_level_browse_page as HTML
+  Parameters: {"top_level_slug"=>"benefits"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered browse/_second_level_browse_pages.html.erb (0.4ms)
+  Rendered browse/_top_level_browse_pages.erb (0.3ms)
+  Rendered browse/top_level_browse_page.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 85ms (Views: 54.3ms)
+
+
+Started GET "/topic/animal-welfare/pets" for 127.0.0.1 at 2016-10-05 15:26:03 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"animal-welfare", "subtopic_slug"=>"pets"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered govuk_component/beta_label (0.5ms)
+  Rendered topics/_topic_beta.html.erb (68.6ms)
+  Rendered topics/_subtopic.html.erb (191.0ms)
+  Rendered topics/subtopic.html.erb within layouts/application (543.8ms)
+Completed 200 OK in 675ms (Views: 616.9ms)
+
+
+Started GET "/collections/mail-icon-x2-875fea8b0999065a033d6d6f952eb6cb8f43507629d6ea4f7992dcc4eaed2cb9.png" for ::1 at 2016-10-05 15:26:05 +0000
+
+
+Started GET "/topic/animal-welfare/pets" for 127.0.0.1 at 2016-10-05 15:50:19 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"animal-welfare", "subtopic_slug"=>"pets"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered govuk_component/beta_label (0.7ms)
+  Rendered topics/_topic_beta.html.erb (85.2ms)
+  Rendered topics/_subtopic.html.erb (111.6ms)
+  Rendered topics/subtopic.html.erb within layouts/application (259.4ms)
+Completed 200 OK in 333ms (Views: 311.4ms)
+
+
+Started GET "/topic/animal-welfare/pets" for ::1 at 2016-10-05 15:59:50 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"animal-welfare", "subtopic_slug"=>"pets"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered topics/subtopic.html.erb within layouts/application (141.9ms)
+Completed 500 Internal Server Error in 176ms
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? false
+
+RuntimeError - :
+  app/controllers/topics_controller.rb:62:in `subtopic_organisations'
+  app/controllers/topics_controller.rb:44:in `organisations'
+  actionpack (4.2.7.1) lib/abstract_controller/helpers.rb:67:in `organisations'
+  app/views/topics/subtopic.html.erb:10:in `_app_views_topics_subtopic_html_erb__2328664498991548073_70049130756760'
+  actionview (4.2.7.1) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.7.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.7.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.7.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.7.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.7.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.7.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  slimmer (9.1.0) lib/slimmer/app.rb:39:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  airbrake (4.3.8) lib/airbrake/rails/middleware.rb:13:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.1) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:16:in `_call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:12:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started GET "/topic/animal-welfare/pets" for 127.0.0.1 at 2016-10-05 15:59:55 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"animal-welfare", "subtopic_slug"=>"pets"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered topics/subtopic.html.erb within layouts/application (28.9ms)
+Completed 500 Internal Server Error in 48ms
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? false
+
+RuntimeError - :
+  app/controllers/topics_controller.rb:62:in `subtopic_organisations'
+  app/controllers/topics_controller.rb:44:in `organisations'
+  actionpack (4.2.7.1) lib/abstract_controller/helpers.rb:67:in `organisations'
+  app/views/topics/subtopic.html.erb:10:in `_app_views_topics_subtopic_html_erb__2328664498991548073_70049130756760'
+  actionview (4.2.7.1) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.7.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.7.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.7.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.7.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.7.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.7.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  slimmer (9.1.0) lib/slimmer/app.rb:39:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  airbrake (4.3.8) lib/airbrake/rails/middleware.rb:13:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.1) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:16:in `_call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:12:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started GET "/topic/animal-welfare/pets" for 127.0.0.1 at 2016-10-05 16:02:34 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"animal-welfare", "subtopic_slug"=>"pets"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered topics/subtopic.html.erb within layouts/application (26.7ms)
+Completed 500 Internal Server Error in 70ms
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? false
+
+RuntimeError - :
+  app/controllers/topics_controller.rb:62:in `subtopic_organisations'
+  app/controllers/topics_controller.rb:44:in `organisations'
+  actionpack (4.2.7.1) lib/abstract_controller/helpers.rb:67:in `organisations'
+  app/views/topics/subtopic.html.erb:10:in `_app_views_topics_subtopic_html_erb__2328664498991548073_70049130756760'
+  actionview (4.2.7.1) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.7.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.7.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.7.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.7.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.7.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.7.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  slimmer (9.1.0) lib/slimmer/app.rb:39:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  airbrake (4.3.8) lib/airbrake/rails/middleware.rb:13:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.1) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:16:in `_call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:12:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+Using middleware GdsApi::GovukHeaderSniffer to sniff for GOVUK-Request-Id header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for GOVUK-Original-Url header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for X-GOVUK-Authenticated-User header
+
+
+Started GET "/topic/animal-welfare/pets" for ::1 at 2016-10-05 16:05:05 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"animal-welfare", "subtopic_slug"=>"pets"}
+  Rendered shared/_tag_meta.html.erb (0.5ms)
+  Rendered topics/subtopic.html.erb within layouts/application (224.1ms)
+Completed 500 Internal Server Error in 359ms
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? false
+
+RuntimeError - :
+  app/controllers/topics_controller.rb:62:in `subtopic_organisations'
+  app/controllers/topics_controller.rb:44:in `organisations'
+  actionpack (4.2.7.1) lib/abstract_controller/helpers.rb:67:in `organisations'
+  app/views/topics/subtopic.html.erb:10:in `_app_views_topics_subtopic_html_erb___1300373950999546964_69912323254460'
+  actionview (4.2.7.1) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.7.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.7.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.7.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.7.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.7.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.7.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  slimmer (9.1.0) lib/slimmer/app.rb:39:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  airbrake (4.3.8) lib/airbrake/rails/middleware.rb:13:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.1) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:16:in `_call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:12:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+Using middleware GdsApi::GovukHeaderSniffer to sniff for GOVUK-Request-Id header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for GOVUK-Original-Url header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for X-GOVUK-Authenticated-User header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for GOVUK-Request-Id header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for GOVUK-Original-Url header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for X-GOVUK-Authenticated-User header
+
+
+Started GET "/topic/animal-welfare/pets" for 127.0.0.1 at 2016-10-06 08:42:03 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"animal-welfare", "subtopic_slug"=>"pets"}
+  Rendered shared/_tag_meta.html.erb (1.0ms)
+  Rendered govuk_component/beta_label (0.5ms)
+  Rendered topics/_topic_beta.html.erb (165.3ms)
+  Rendered topics/_subtopic.html.erb (286.8ms)
+  Rendered topics/subtopic.html.erb within layouts/application (602.3ms)
+Completed 200 OK in 1491ms (Views: 1364.9ms)
+Using middleware GdsApi::GovukHeaderSniffer to sniff for GOVUK-Request-Id header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for GOVUK-Original-Url header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for X-GOVUK-Authenticated-User header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for GOVUK-Request-Id header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for GOVUK-Original-Url header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for X-GOVUK-Authenticated-User header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for GOVUK-Request-Id header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for GOVUK-Original-Url header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for X-GOVUK-Authenticated-User header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for GOVUK-Request-Id header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for GOVUK-Original-Url header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for X-GOVUK-Authenticated-User header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for GOVUK-Request-Id header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for GOVUK-Original-Url header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for X-GOVUK-Authenticated-User header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for GOVUK-Request-Id header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for GOVUK-Original-Url header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for X-GOVUK-Authenticated-User header
+
+
+Started GET "/topic/oil-and-gas" for ::1 at 2016-10-12 10:58:31 +0000
+Processing by TopicsController#topic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas"}
+  Rendered shared/_tag_meta.html.erb (0.6ms)
+  Rendered topics/topic.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 955ms (Views: 912.2ms)
+
+
+Started GET "/topic/oil-and-gas" for 127.0.0.1 at 2016-10-12 10:59:07 +0000
+Processing by TopicsController#topic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered topics/topic.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 114ms (Views: 77.0ms)
+
+
+Started GET "/collections/application.self-77756e50fb5f45827c5086e09206f1e2abc24ae726fd10ebf630d96b21cfa565.css?body=1" for ::1 at 2016-10-12 10:59:07 +0000
+
+
+Started GET "/collections/vendor/polyfills/bind.self-298670bd147f2c023e76026ca559ffdee4ed8fee93b2a7260bfa164252662073.js?body=1" for 127.0.0.1 at 2016-10-12 10:59:08 +0000
+
+
+Started GET "/collections/support.self-816722bf9bc92c79514a7b71c5697b5cbf8170f319914f14855cfca826ab2624.js?body=1" for ::1 at 2016-10-12 10:59:08 +0000
+
+
+Started GET "/collections/application.self-c748f39b3b25ac57a0a24ff04ec7406ef3f943467973d43a55b0f153ef0fc2b7.js?body=1" for ::1 at 2016-10-12 10:59:08 +0000
+
+
+Started GET "/collections/browse-columns.self-e50c4fc0d16e97fcfa596cd49bd537b2eeabd5dc4bb43fb0bfa28f8132ecee95.js?body=1" for 127.0.0.1 at 2016-10-12 10:59:08 +0000
+
+
+Started GET "/topic/oil-and-gas" for 127.0.0.1 at 2016-10-12 10:59:24 +0000
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? false
+
+RuntimeError - :
+  app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  activesupport (4.2.7.1) lib/active_support/dependencies.rb:457:in `block in load_file'
+  activesupport (4.2.7.1) lib/active_support/dependencies.rb:647:in `new_constants_in'
+  activesupport (4.2.7.1) lib/active_support/dependencies.rb:456:in `load_file'
+  activesupport (4.2.7.1) lib/active_support/dependencies.rb:354:in `require_or_load'
+  activesupport (4.2.7.1) lib/active_support/dependencies.rb:494:in `load_missing_constant'
+  activesupport (4.2.7.1) lib/active_support/dependencies.rb:184:in `const_missing'
+  app/controllers/topics_controller.rb:1:in `<top (required)>'
+  activesupport (4.2.7.1) lib/active_support/dependencies.rb:457:in `block in load_file'
+  activesupport (4.2.7.1) lib/active_support/dependencies.rb:647:in `new_constants_in'
+  activesupport (4.2.7.1) lib/active_support/dependencies.rb:456:in `load_file'
+  activesupport (4.2.7.1) lib/active_support/dependencies.rb:354:in `require_or_load'
+  activesupport (4.2.7.1) lib/active_support/dependencies.rb:494:in `load_missing_constant'
+  activesupport (4.2.7.1) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.2.7.1) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.7.1) lib/active_support/inflector/methods.rb:259:in `constantize'
+  activesupport (4.2.7.1) lib/active_support/dependencies.rb:566:in `get'
+  activesupport (4.2.7.1) lib/active_support/dependencies.rb:597:in `constantize'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  slimmer (9.1.0) lib/slimmer/app.rb:39:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  airbrake (4.3.8) lib/airbrake/rails/middleware.rb:13:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.1) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:16:in `_call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:12:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started GET "/topic/oil-and-gas" for ::1 at 2016-10-12 10:59:31 +0000
+Processing by TopicsController#topic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered topics/topic.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 68ms (Views: 44.1ms)
+
+
+Started GET "/collections/application.self-77756e50fb5f45827c5086e09206f1e2abc24ae726fd10ebf630d96b21cfa565.css?body=1" for 127.0.0.1 at 2016-10-12 10:59:31 +0000
+
+
+Started GET "/collections/vendor/polyfills/bind.self-298670bd147f2c023e76026ca559ffdee4ed8fee93b2a7260bfa164252662073.js?body=1" for ::1 at 2016-10-12 10:59:32 +0000
+
+
+Started GET "/collections/support.self-816722bf9bc92c79514a7b71c5697b5cbf8170f319914f14855cfca826ab2624.js?body=1" for 127.0.0.1 at 2016-10-12 10:59:32 +0000
+
+
+Started GET "/collections/browse-columns.self-e50c4fc0d16e97fcfa596cd49bd537b2eeabd5dc4bb43fb0bfa28f8132ecee95.js?body=1" for ::1 at 2016-10-12 10:59:32 +0000
+
+
+Started GET "/collections/application.self-c748f39b3b25ac57a0a24ff04ec7406ef3f943467973d43a55b0f153ef0fc2b7.js?body=1" for 127.0.0.1 at 2016-10-12 10:59:32 +0000
+
+
+Started GET "/topic/oil-and-gas" for ::1 at 2016-10-12 10:59:40 +0000
+Processing by TopicsController#topic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas"}
+Completed 500 Internal Server Error in 1ms
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? false
+
+RuntimeError - :
+  app/controllers/topics_controller.rb:9:in `topic'
+  actionpack (4.2.7.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  slimmer (9.1.0) lib/slimmer/app.rb:39:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  airbrake (4.3.8) lib/airbrake/rails/middleware.rb:13:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.1) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:16:in `_call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:12:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started GET "/topic/oil-and-gas" for 127.0.0.1 at 2016-10-12 10:59:46 +0000
+Processing by TopicsController#topic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered topics/topic.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 72ms (Views: 45.2ms)
+
+
+Started GET "/collections/application.self-77756e50fb5f45827c5086e09206f1e2abc24ae726fd10ebf630d96b21cfa565.css?body=1" for ::1 at 2016-10-12 10:59:46 +0000
+
+
+Started GET "/collections/vendor/polyfills/bind.self-298670bd147f2c023e76026ca559ffdee4ed8fee93b2a7260bfa164252662073.js?body=1" for 127.0.0.1 at 2016-10-12 10:59:47 +0000
+
+
+Started GET "/collections/support.self-816722bf9bc92c79514a7b71c5697b5cbf8170f319914f14855cfca826ab2624.js?body=1" for ::1 at 2016-10-12 10:59:47 +0000
+
+
+Started GET "/collections/browse-columns.self-e50c4fc0d16e97fcfa596cd49bd537b2eeabd5dc4bb43fb0bfa28f8132ecee95.js?body=1" for 127.0.0.1 at 2016-10-12 10:59:47 +0000
+
+
+Started GET "/collections/application.self-c748f39b3b25ac57a0a24ff04ec7406ef3f943467973d43a55b0f153ef0fc2b7.js?body=1" for ::1 at 2016-10-12 10:59:47 +0000
+
+
+Started GET "/topic/oil-and-gas" for 127.0.0.1 at 2016-10-12 10:59:59 +0000
+Processing by TopicsController#topic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas"}
+Completed 500 Internal Server Error in 1ms
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? false
+
+RuntimeError - /topic/oil-and-gas:
+  app/controllers/topics_controller.rb:9:in `topic'
+  actionpack (4.2.7.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  slimmer (9.1.0) lib/slimmer/app.rb:39:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  airbrake (4.3.8) lib/airbrake/rails/middleware.rb:13:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.1) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:16:in `_call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:12:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started GET "/topic/oil-and-gas" for ::1 at 2016-10-12 11:00:03 +0000
+Processing by TopicsController#topic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered topics/topic.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 63ms (Views: 41.5ms)
+
+
+Started GET "/collections/application.self-77756e50fb5f45827c5086e09206f1e2abc24ae726fd10ebf630d96b21cfa565.css?body=1" for 127.0.0.1 at 2016-10-12 11:00:03 +0000
+
+
+Started GET "/collections/vendor/polyfills/bind.self-298670bd147f2c023e76026ca559ffdee4ed8fee93b2a7260bfa164252662073.js?body=1" for ::1 at 2016-10-12 11:00:04 +0000
+
+
+Started GET "/collections/support.self-816722bf9bc92c79514a7b71c5697b5cbf8170f319914f14855cfca826ab2624.js?body=1" for 127.0.0.1 at 2016-10-12 11:00:04 +0000
+
+
+Started GET "/collections/application.self-c748f39b3b25ac57a0a24ff04ec7406ef3f943467973d43a55b0f153ef0fc2b7.js?body=1" for 127.0.0.1 at 2016-10-12 11:00:04 +0000
+
+
+Started GET "/collections/browse-columns.self-e50c4fc0d16e97fcfa596cd49bd537b2eeabd5dc4bb43fb0bfa28f8132ecee95.js?body=1" for ::1 at 2016-10-12 11:00:04 +0000
+
+
+Started GET "/topic/oil-and-gas" for ::1 at 2016-10-12 11:00:22 +0000
+Processing by TopicsController#topic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered topics/topic.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 76ms (Views: 53.5ms)
+
+
+Started GET "/collections/application.self-77756e50fb5f45827c5086e09206f1e2abc24ae726fd10ebf630d96b21cfa565.css?body=1" for 127.0.0.1 at 2016-10-12 11:00:22 +0000
+
+
+Started GET "/collections/vendor/polyfills/bind.self-298670bd147f2c023e76026ca559ffdee4ed8fee93b2a7260bfa164252662073.js?body=1" for ::1 at 2016-10-12 11:00:23 +0000
+
+
+Started GET "/collections/browse-columns.self-e50c4fc0d16e97fcfa596cd49bd537b2eeabd5dc4bb43fb0bfa28f8132ecee95.js?body=1" for ::1 at 2016-10-12 11:00:23 +0000
+
+
+Started GET "/collections/support.self-816722bf9bc92c79514a7b71c5697b5cbf8170f319914f14855cfca826ab2624.js?body=1" for 127.0.0.1 at 2016-10-12 11:00:23 +0000
+
+
+Started GET "/collections/application.self-c748f39b3b25ac57a0a24ff04ec7406ef3f943467973d43a55b0f153ef0fc2b7.js?body=1" for 127.0.0.1 at 2016-10-12 11:00:23 +0000
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage" for ::1 at 2016-10-12 11:00:24 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered topics/subtopic.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 28ms
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? false
+
+RuntimeError - :
+  app/controllers/topics_controller.rb:44:in `organisations'
+  actionpack (4.2.7.1) lib/abstract_controller/helpers.rb:67:in `organisations'
+  app/views/topics/subtopic.html.erb:10:in `_app_views_topics_subtopic_html_erb___1815281385968397311_69870028728960'
+  actionview (4.2.7.1) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.7.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.7.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.7.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.7.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.7.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.7.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  slimmer (9.1.0) lib/slimmer/app.rb:39:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  airbrake (4.3.8) lib/airbrake/rails/middleware.rb:13:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.1) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:16:in `_call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:12:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage" for 127.0.0.1 at 2016-10-12 11:00:28 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered topics/_subtopic.html.erb (158.0ms)
+  Rendered topics/subtopic.html.erb within layouts/application (450.0ms)
+Completed 200 OK in 508ms (Views: 489.5ms)
+
+
+Started GET "/collections/application.self-77756e50fb5f45827c5086e09206f1e2abc24ae726fd10ebf630d96b21cfa565.css?body=1" for ::1 at 2016-10-12 11:00:29 +0000
+
+
+Started GET "/collections/vendor/polyfills/bind.self-298670bd147f2c023e76026ca559ffdee4ed8fee93b2a7260bfa164252662073.js?body=1" for 127.0.0.1 at 2016-10-12 11:00:30 +0000
+
+
+Started GET "/collections/support.self-816722bf9bc92c79514a7b71c5697b5cbf8170f319914f14855cfca826ab2624.js?body=1" for ::1 at 2016-10-12 11:00:30 +0000
+
+
+Started GET "/collections/browse-columns.self-e50c4fc0d16e97fcfa596cd49bd537b2eeabd5dc4bb43fb0bfa28f8132ecee95.js?body=1" for 127.0.0.1 at 2016-10-12 11:00:30 +0000
+
+
+Started GET "/collections/mail-icon-x2-875fea8b0999065a033d6d6f952eb6cb8f43507629d6ea4f7992dcc4eaed2cb9.png" for 127.0.0.1 at 2016-10-12 11:00:30 +0000
+
+
+Started GET "/collections/application.self-c748f39b3b25ac57a0a24ff04ec7406ef3f943467973d43a55b0f153ef0fc2b7.js?body=1" for ::1 at 2016-10-12 11:00:30 +0000
+Using middleware GdsApi::GovukHeaderSniffer to sniff for GOVUK-Request-Id header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for GOVUK-Original-Url header
+Using middleware GdsApi::GovukHeaderSniffer to sniff for X-GOVUK-Authenticated-User header
+
+
+Started GET "/topic/oil-and-gas" for ::1 at 2016-10-12 11:02:43 +0000
+Processing by TopicsController#topic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas"}
+  Rendered shared/_tag_meta.html.erb (0.5ms)
+  Rendered topics/topic.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 821ms (Views: 679.2ms)
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage" for 127.0.0.1 at 2016-10-12 11:03:25 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered shared/_tag_meta.html.erb (0.2ms)
+  Rendered topics/_subtopic.html.erb (91.0ms)
+  Rendered topics/subtopic.html.erb within layouts/application (190.8ms)
+Completed 200 OK in 267ms (Views: 236.4ms)
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage" for ::1 at 2016-10-12 11:04:39 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered shared/_tag_meta.html.erb (0.2ms)
+  Rendered topics/_subtopic.html.erb (25.2ms)
+  Rendered topics/subtopic.html.erb within layouts/application (392.6ms)
+Completed 500 Internal Server Error in 425ms
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? false
+
+ArgumentError - arguments passed to url_for can't be handled. Please require routes or provide your own implementation:
+  actionview (4.2.7.1) lib/action_view/helpers/url_helper.rb:38:in `url_for'
+  actionview (4.2.7.1) lib/action_view/helpers/url_helper.rb:181:in `link_to'
+  app/presenters/organisations_facet_presenter.rb:18:in `block in array_of_links'
+  app/presenters/organisations_facet_presenter.rb:17:in `array_of_links'
+  app/views/topics/_subtopic.html.erb:12:in `_app_views_topics__subtopic_html_erb__1955802814931018488_70024724681660'
+  actionview (4.2.7.1) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/partial_renderer.rb:339:in `render_partial'
+  actionview (4.2.7.1) lib/action_view/renderer/partial_renderer.rb:310:in `block in render'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/partial_renderer.rb:309:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:51:in `render_partial'
+  actionview (4.2.7.1) lib/action_view/helpers/rendering_helper.rb:30:in `render'
+  app/views/topics/subtopic.html.erb:10:in `_app_views_topics_subtopic_html_erb__891979542085070237_70024724971120'
+  actionview (4.2.7.1) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.7.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.7.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.7.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.7.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.7.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.7.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  slimmer (9.1.0) lib/slimmer/app.rb:39:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  airbrake (4.3.8) lib/airbrake/rails/middleware.rb:13:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.1) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:16:in `_call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:12:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage" for 127.0.0.1 at 2016-10-12 11:04:52 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered topics/subtopic.html.erb within layouts/application (11.6ms)
+Completed 500 Internal Server Error in 37ms
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? false
+
+GdsApi::HTTPUnprocessableEntity - URL: http://search.dev.gov.uk/search.json?count=0&filter_topics[]=oil-and-gas%2Fcarbon-capture-and-storage&facet_organisations=1000
+Response body:
+{"error":"\"topics\" is not a valid filter field"}
+
+Request body:
+:
+  gds-api-adapters (34.1.0) lib/gds_api/json_client.rb:195:in `rescue in do_json_request'
+  gds-api-adapters (34.1.0) lib/gds_api/json_client.rb:186:in `do_json_request'
+  gds-api-adapters (34.1.0) lib/gds_api/json_client.rb:126:in `get_json!'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/forwardable.rb:184:in `get_json!'
+  gds-api-adapters (34.1.0) lib/gds_api/rummager.rb:25:in `search'
+  app/controllers/topics_controller.rb:58:in `subtopic_organisations'
+  app/controllers/topics_controller.rb:44:in `organisations'
+  actionpack (4.2.7.1) lib/abstract_controller/helpers.rb:67:in `organisations'
+  app/views/topics/subtopic.html.erb:10:in `_app_views_topics_subtopic_html_erb__891979542085070237_70024724971120'
+  actionview (4.2.7.1) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.7.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.7.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.7.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.7.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.7.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.7.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  slimmer (9.1.0) lib/slimmer/app.rb:39:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  airbrake (4.3.8) lib/airbrake/rails/middleware.rb:13:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.1) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:16:in `_call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:12:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage" for ::1 at 2016-10-12 11:05:14 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered topics/_subtopic.html.erb (23.2ms)
+  Rendered topics/subtopic.html.erb within layouts/application (43.5ms)
+Completed 200 OK in 116ms (Views: 91.8ms)
+
+
+Started GET "/collections/application.self-77756e50fb5f45827c5086e09206f1e2abc24ae726fd10ebf630d96b21cfa565.css?body=1" for 127.0.0.1 at 2016-10-12 11:05:14 +0000
+
+
+Started GET "/collections/vendor/polyfills/bind.self-298670bd147f2c023e76026ca559ffdee4ed8fee93b2a7260bfa164252662073.js?body=1" for ::1 at 2016-10-12 11:05:15 +0000
+
+
+Started GET "/collections/support.self-816722bf9bc92c79514a7b71c5697b5cbf8170f319914f14855cfca826ab2624.js?body=1" for 127.0.0.1 at 2016-10-12 11:05:15 +0000
+
+
+Started GET "/collections/mail-icon-x2-875fea8b0999065a033d6d6f952eb6cb8f43507629d6ea4f7992dcc4eaed2cb9.png" for ::1 at 2016-10-12 11:05:15 +0000
+
+
+Started GET "/collections/browse-columns.self-e50c4fc0d16e97fcfa596cd49bd537b2eeabd5dc4bb43fb0bfa28f8132ecee95.js?body=1" for ::1 at 2016-10-12 11:05:15 +0000
+
+
+Started GET "/collections/application.self-c748f39b3b25ac57a0a24ff04ec7406ef3f943467973d43a55b0f153ef0fc2b7.js?body=1" for 127.0.0.1 at 2016-10-12 11:05:15 +0000
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage" for 127.0.0.1 at 2016-10-12 11:05:33 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered topics/subtopic.html.erb within layouts/application (93.2ms)
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 138ms (Views: 2.0ms)
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage" for ::1 at 2016-10-12 11:05:54 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered topics/subtopic.html.erb within layouts/application (46.1ms)
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 90ms (Views: 0.3ms)
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage" for 127.0.0.1 at 2016-10-12 11:06:04 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered shared/_tag_meta.html.erb (0.2ms)
+  Rendered topics/_subtopic.html.erb (7.7ms)
+  Rendered topics/subtopic.html.erb within layouts/application (316.2ms)
+Completed 500 Internal Server Error in 338ms
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? false
+
+ArgumentError - arguments passed to url_for can't be handled. Please require routes or provide your own implementation:
+  actionview (4.2.7.1) lib/action_view/helpers/url_helper.rb:38:in `url_for'
+  actionview (4.2.7.1) lib/action_view/helpers/url_helper.rb:181:in `link_to'
+  app/presenters/organisations_facet_presenter.rb:18:in `block in array_of_links'
+  app/presenters/organisations_facet_presenter.rb:17:in `array_of_links'
+  app/views/topics/_subtopic.html.erb:12:in `_app_views_topics__subtopic_html_erb__1955802814931018488_70024724681660'
+  actionview (4.2.7.1) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/partial_renderer.rb:339:in `render_partial'
+  actionview (4.2.7.1) lib/action_view/renderer/partial_renderer.rb:310:in `block in render'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/partial_renderer.rb:309:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:51:in `render_partial'
+  actionview (4.2.7.1) lib/action_view/helpers/rendering_helper.rb:30:in `render'
+  app/views/topics/subtopic.html.erb:10:in `_app_views_topics_subtopic_html_erb__891979542085070237_70024724971120'
+  actionview (4.2.7.1) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.7.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.7.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.7.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.7.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.7.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.7.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  slimmer (9.1.0) lib/slimmer/app.rb:39:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  airbrake (4.3.8) lib/airbrake/rails/middleware.rb:13:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.1) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:16:in `_call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:12:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage" for ::1 at 2016-10-12 11:06:14 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered topics/_subtopic.html.erb (25.8ms)
+  Rendered topics/subtopic.html.erb within layouts/application (46.7ms)
+Completed 200 OK in 125ms (Views: 105.4ms)
+
+
+Started GET "/collections/application.self-77756e50fb5f45827c5086e09206f1e2abc24ae726fd10ebf630d96b21cfa565.css?body=1" for 127.0.0.1 at 2016-10-12 11:06:14 +0000
+
+
+Started GET "/collections/vendor/polyfills/bind.self-298670bd147f2c023e76026ca559ffdee4ed8fee93b2a7260bfa164252662073.js?body=1" for ::1 at 2016-10-12 11:06:15 +0000
+
+
+Started GET "/collections/support.self-816722bf9bc92c79514a7b71c5697b5cbf8170f319914f14855cfca826ab2624.js?body=1" for 127.0.0.1 at 2016-10-12 11:06:15 +0000
+
+
+Started GET "/collections/browse-columns.self-e50c4fc0d16e97fcfa596cd49bd537b2eeabd5dc4bb43fb0bfa28f8132ecee95.js?body=1" for ::1 at 2016-10-12 11:06:15 +0000
+
+
+Started GET "/collections/application.self-c748f39b3b25ac57a0a24ff04ec7406ef3f943467973d43a55b0f153ef0fc2b7.js?body=1" for 127.0.0.1 at 2016-10-12 11:06:15 +0000
+
+
+Started GET "/collections/mail-icon-x2-875fea8b0999065a033d6d6f952eb6cb8f43507629d6ea4f7992dcc4eaed2cb9.png" for ::1 at 2016-10-12 11:06:15 +0000
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage" for 127.0.0.1 at 2016-10-12 11:07:05 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered shared/_tag_meta.html.erb (0.2ms)
+  Rendered topics/_subtopic.html.erb (28.9ms)
+  Rendered topics/subtopic.html.erb within layouts/application (59.1ms)
+Completed 200 OK in 190ms (Views: 119.6ms)
+
+
+Started GET "/collections/application.self-77756e50fb5f45827c5086e09206f1e2abc24ae726fd10ebf630d96b21cfa565.css?body=1" for ::1 at 2016-10-12 11:07:05 +0000
+
+
+Started GET "/collections/vendor/polyfills/bind.self-298670bd147f2c023e76026ca559ffdee4ed8fee93b2a7260bfa164252662073.js?body=1" for 127.0.0.1 at 2016-10-12 11:07:06 +0000
+
+
+Started GET "/collections/support.self-816722bf9bc92c79514a7b71c5697b5cbf8170f319914f14855cfca826ab2624.js?body=1" for ::1 at 2016-10-12 11:07:06 +0000
+
+
+Started GET "/collections/browse-columns.self-e50c4fc0d16e97fcfa596cd49bd537b2eeabd5dc4bb43fb0bfa28f8132ecee95.js?body=1" for 127.0.0.1 at 2016-10-12 11:07:06 +0000
+
+
+Started GET "/collections/mail-icon-x2-875fea8b0999065a033d6d6f952eb6cb8f43507629d6ea4f7992dcc4eaed2cb9.png" for 127.0.0.1 at 2016-10-12 11:07:06 +0000
+
+
+Started GET "/collections/application.self-c748f39b3b25ac57a0a24ff04ec7406ef3f943467973d43a55b0f153ef0fc2b7.js?body=1" for ::1 at 2016-10-12 11:07:06 +0000
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage" for ::1 at 2016-10-12 11:07:22 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered topics/_subtopic.html.erb (33.6ms)
+  Rendered topics/subtopic.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 152ms (Views: 131.0ms)
+
+
+Started GET "/collections/application.self-77756e50fb5f45827c5086e09206f1e2abc24ae726fd10ebf630d96b21cfa565.css?body=1" for 127.0.0.1 at 2016-10-12 11:07:23 +0000
+
+
+Started GET "/collections/vendor/polyfills/bind.self-298670bd147f2c023e76026ca559ffdee4ed8fee93b2a7260bfa164252662073.js?body=1" for ::1 at 2016-10-12 11:07:23 +0000
+
+
+Started GET "/collections/support.self-816722bf9bc92c79514a7b71c5697b5cbf8170f319914f14855cfca826ab2624.js?body=1" for 127.0.0.1 at 2016-10-12 11:07:23 +0000
+
+
+Started GET "/collections/browse-columns.self-e50c4fc0d16e97fcfa596cd49bd537b2eeabd5dc4bb43fb0bfa28f8132ecee95.js?body=1" for ::1 at 2016-10-12 11:07:23 +0000
+
+
+Started GET "/collections/application.self-c748f39b3b25ac57a0a24ff04ec7406ef3f943467973d43a55b0f153ef0fc2b7.js?body=1" for 127.0.0.1 at 2016-10-12 11:07:23 +0000
+
+
+Started GET "/collections/mail-icon-x2-875fea8b0999065a033d6d6f952eb6cb8f43507629d6ea4f7992dcc4eaed2cb9.png" for ::1 at 2016-10-12 11:07:23 +0000
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage" for 127.0.0.1 at 2016-10-12 11:07:39 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered shared/_tag_meta.html.erb (0.3ms)
+  Rendered topics/subtopic.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 74ms
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? false
+
+RuntimeError - oil-and-gas/carbon-capture-and-storage:
+  app/controllers/topics_controller.rb:57:in `subtopic_organisations'
+  app/controllers/topics_controller.rb:44:in `organisations'
+  actionpack (4.2.7.1) lib/abstract_controller/helpers.rb:67:in `organisations'
+  app/views/topics/subtopic.html.erb:10:in `_app_views_topics_subtopic_html_erb__891979542085070237_70024724971120'
+  actionview (4.2.7.1) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.7.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.7.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.7.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.7.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.7.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.7.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  slimmer (9.1.0) lib/slimmer/app.rb:39:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  airbrake (4.3.8) lib/airbrake/rails/middleware.rb:13:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.1) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:16:in `_call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:12:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage" for ::1 at 2016-10-12 12:17:20 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered shared/_tag_meta.html.erb (0.8ms)
+  Rendered topics/_subtopic.html.erb (193.6ms)
+  Rendered topics/subtopic.html.erb within layouts/application (1097.2ms)
+Completed 200 OK in 3059ms (Views: 1480.8ms)
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage" for 127.0.0.1 at 2016-10-12 12:17:41 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered shared/_tag_meta.html.erb (0.2ms)
+  Rendered topics/_subtopic.html.erb (75.9ms)
+  Rendered topics/subtopic.html.erb within layouts/application (160.9ms)
+Completed 200 OK in 474ms (Views: 315.7ms)
+
+
+Started GET "/collections/application.self-77756e50fb5f45827c5086e09206f1e2abc24ae726fd10ebf630d96b21cfa565.css?body=1" for ::1 at 2016-10-12 12:17:44 +0000
+
+
+Started GET "/collections/vendor/polyfills/bind.self-298670bd147f2c023e76026ca559ffdee4ed8fee93b2a7260bfa164252662073.js?body=1" for 127.0.0.1 at 2016-10-12 12:17:44 +0000
+
+
+Started GET "/collections/support.self-816722bf9bc92c79514a7b71c5697b5cbf8170f319914f14855cfca826ab2624.js?body=1" for ::1 at 2016-10-12 12:17:44 +0000
+
+
+Started GET "/collections/browse-columns.self-e50c4fc0d16e97fcfa596cd49bd537b2eeabd5dc4bb43fb0bfa28f8132ecee95.js?body=1" for 127.0.0.1 at 2016-10-12 12:17:44 +0000
+
+
+Started GET "/collections/application.self-c748f39b3b25ac57a0a24ff04ec7406ef3f943467973d43a55b0f153ef0fc2b7.js?body=1" for ::1 at 2016-10-12 12:17:44 +0000
+
+
+Started GET "/collections/mail-icon-x2-875fea8b0999065a033d6d6f952eb6cb8f43507629d6ea4f7992dcc4eaed2cb9.png" for 127.0.0.1 at 2016-10-12 12:17:44 +0000
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage" for ::1 at 2016-10-12 12:18:28 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered shared/_tag_meta.html.erb (0.8ms)
+  Rendered topics/_subtopic.html.erb (36.1ms)
+  Rendered topics/subtopic.html.erb within layouts/application (92.8ms)
+Completed 200 OK in 367ms (Views: 242.8ms)
+
+
+Started GET "/collections/application.self-77756e50fb5f45827c5086e09206f1e2abc24ae726fd10ebf630d96b21cfa565.css?body=1" for 127.0.0.1 at 2016-10-12 12:18:29 +0000
+
+
+Started GET "/collections/vendor/polyfills/bind.self-298670bd147f2c023e76026ca559ffdee4ed8fee93b2a7260bfa164252662073.js?body=1" for ::1 at 2016-10-12 12:18:30 +0000
+
+
+Started GET "/collections/browse-columns.self-e50c4fc0d16e97fcfa596cd49bd537b2eeabd5dc4bb43fb0bfa28f8132ecee95.js?body=1" for ::1 at 2016-10-12 12:18:30 +0000
+
+
+Started GET "/collections/support.self-816722bf9bc92c79514a7b71c5697b5cbf8170f319914f14855cfca826ab2624.js?body=1" for 127.0.0.1 at 2016-10-12 12:18:30 +0000
+
+
+Started GET "/collections/application.self-c748f39b3b25ac57a0a24ff04ec7406ef3f943467973d43a55b0f153ef0fc2b7.js?body=1" for 127.0.0.1 at 2016-10-12 12:18:30 +0000
+
+
+Started GET "/collections/mail-icon-x2-875fea8b0999065a033d6d6f952eb6cb8f43507629d6ea4f7992dcc4eaed2cb9.png" for ::1 at 2016-10-12 12:18:30 +0000
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage" for ::1 at 2016-10-12 12:19:01 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered topics/_subtopic.html.erb (34.1ms)
+  Rendered topics/subtopic.html.erb within layouts/application (88.3ms)
+Completed 200 OK in 275ms (Views: 151.9ms)
+
+
+Started GET "/collections/application.self-77756e50fb5f45827c5086e09206f1e2abc24ae726fd10ebf630d96b21cfa565.css?body=1" for 127.0.0.1 at 2016-10-12 12:19:02 +0000
+
+
+Started GET "/collections/vendor/polyfills/bind.self-298670bd147f2c023e76026ca559ffdee4ed8fee93b2a7260bfa164252662073.js?body=1" for ::1 at 2016-10-12 12:19:03 +0000
+
+
+Started GET "/collections/browse-columns.self-e50c4fc0d16e97fcfa596cd49bd537b2eeabd5dc4bb43fb0bfa28f8132ecee95.js?body=1" for ::1 at 2016-10-12 12:19:03 +0000
+
+
+Started GET "/collections/support.self-816722bf9bc92c79514a7b71c5697b5cbf8170f319914f14855cfca826ab2624.js?body=1" for 127.0.0.1 at 2016-10-12 12:19:03 +0000
+
+
+Started GET "/collections/application.self-c748f39b3b25ac57a0a24ff04ec7406ef3f943467973d43a55b0f153ef0fc2b7.js?body=1" for 127.0.0.1 at 2016-10-12 12:19:03 +0000
+
+
+Started GET "/collections/mail-icon-x2-875fea8b0999065a033d6d6f952eb6cb8f43507629d6ea4f7992dcc4eaed2cb9.png" for ::1 at 2016-10-12 12:19:03 +0000
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage" for 127.0.0.1 at 2016-10-12 12:19:11 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered topics/_subtopic.html.erb (42.3ms)
+  Rendered topics/subtopic.html.erb within layouts/application (107.4ms)
+Completed 200 OK in 376ms (Views: 173.9ms)
+
+
+Started GET "/collections/application.self-77756e50fb5f45827c5086e09206f1e2abc24ae726fd10ebf630d96b21cfa565.css?body=1" for ::1 at 2016-10-12 12:19:12 +0000
+
+
+Started GET "/collections/vendor/polyfills/bind.self-298670bd147f2c023e76026ca559ffdee4ed8fee93b2a7260bfa164252662073.js?body=1" for ::1 at 2016-10-12 12:19:13 +0000
+
+
+Started GET "/collections/support.self-816722bf9bc92c79514a7b71c5697b5cbf8170f319914f14855cfca826ab2624.js?body=1" for 127.0.0.1 at 2016-10-12 12:19:13 +0000
+
+
+Started GET "/collections/application.self-c748f39b3b25ac57a0a24ff04ec7406ef3f943467973d43a55b0f153ef0fc2b7.js?body=1" for 127.0.0.1 at 2016-10-12 12:19:13 +0000
+
+
+Started GET "/collections/browse-columns.self-e50c4fc0d16e97fcfa596cd49bd537b2eeabd5dc4bb43fb0bfa28f8132ecee95.js?body=1" for ::1 at 2016-10-12 12:19:13 +0000
+
+
+Started GET "/collections/mail-icon-x2-875fea8b0999065a033d6d6f952eb6cb8f43507629d6ea4f7992dcc4eaed2cb9.png" for ::1 at 2016-10-12 12:19:13 +0000
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage" for 127.0.0.1 at 2016-10-12 12:20:10 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered topics/_subtopic.html.erb (53.0ms)
+  Rendered topics/subtopic.html.erb within layouts/application (102.3ms)
+Completed 200 OK in 322ms (Views: 169.7ms)
+
+
+Started GET "/collections/application.self-77756e50fb5f45827c5086e09206f1e2abc24ae726fd10ebf630d96b21cfa565.css?body=1" for 127.0.0.1 at 2016-10-12 12:20:12 +0000
+
+
+Started GET "/collections/vendor/polyfills/bind.self-298670bd147f2c023e76026ca559ffdee4ed8fee93b2a7260bfa164252662073.js?body=1" for ::1 at 2016-10-12 12:20:12 +0000
+
+
+Started GET "/collections/support.self-816722bf9bc92c79514a7b71c5697b5cbf8170f319914f14855cfca826ab2624.js?body=1" for 127.0.0.1 at 2016-10-12 12:20:12 +0000
+
+
+Started GET "/collections/application.self-c748f39b3b25ac57a0a24ff04ec7406ef3f943467973d43a55b0f153ef0fc2b7.js?body=1" for 127.0.0.1 at 2016-10-12 12:20:12 +0000
+
+
+Started GET "/collections/browse-columns.self-e50c4fc0d16e97fcfa596cd49bd537b2eeabd5dc4bb43fb0bfa28f8132ecee95.js?body=1" for ::1 at 2016-10-12 12:20:13 +0000
+
+
+Started GET "/collections/mail-icon-x2-875fea8b0999065a033d6d6f952eb6cb8f43507629d6ea4f7992dcc4eaed2cb9.png" for ::1 at 2016-10-12 12:20:13 +0000
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage" for ::1 at 2016-10-12 13:49:26 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered shared/_tag_meta.html.erb (0.6ms)
+  Rendered topics/_subtopic.html.erb (132.8ms)
+  Rendered topics/subtopic.html.erb within layouts/application (306.9ms)
+Completed 200 OK in 746ms (Views: 457.2ms)
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage/latest" for 127.0.0.1 at 2016-10-12 13:49:38 +0000
+Processing by TopicsController#latest_changes as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered govuk_component/beta_label (1.1ms)
+  Rendered topics/_subtopic.html.erb (465.6ms)
+  Rendered topics/latest_changes.html.erb within layouts/application (626.7ms)
+Completed 200 OK in 923ms (Views: 750.3ms)
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage/latest" for 127.0.0.1 at 2016-10-12 13:50:21 +0000
+Processing by TopicsController#latest_changes as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered govuk_component/beta_label (1.2ms)
+  Rendered topics/_subtopic.html.erb (828.3ms)
+  Rendered topics/latest_changes.html.erb within layouts/application (949.7ms)
+Completed 200 OK in 1088ms (Views: 1017.1ms)
+
+
+Started GET "/collections/application.self-77756e50fb5f45827c5086e09206f1e2abc24ae726fd10ebf630d96b21cfa565.css?body=1" for ::1 at 2016-10-12 13:50:23 +0000
+
+
+Started GET "/collections/vendor/polyfills/bind.self-298670bd147f2c023e76026ca559ffdee4ed8fee93b2a7260bfa164252662073.js?body=1" for ::1 at 2016-10-12 13:50:26 +0000
+
+
+Started GET "/collections/support.self-816722bf9bc92c79514a7b71c5697b5cbf8170f319914f14855cfca826ab2624.js?body=1" for 127.0.0.1 at 2016-10-12 13:50:26 +0000
+
+
+Started GET "/collections/browse-columns.self-e50c4fc0d16e97fcfa596cd49bd537b2eeabd5dc4bb43fb0bfa28f8132ecee95.js?body=1" for ::1 at 2016-10-12 13:50:26 +0000
+
+
+Started GET "/collections/application.self-c748f39b3b25ac57a0a24ff04ec7406ef3f943467973d43a55b0f153ef0fc2b7.js?body=1" for 127.0.0.1 at 2016-10-12 13:50:26 +0000
+
+
+Started GET "/collections/mail-icon-x2-875fea8b0999065a033d6d6f952eb6cb8f43507629d6ea4f7992dcc4eaed2cb9.png" for ::1 at 2016-10-12 13:50:26 +0000
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage/latest" for 127.0.0.1 at 2016-10-12 13:51:59 +0000
+Processing by TopicsController#latest_changes as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered govuk_component/beta_label (2.1ms)
+  Rendered topics/_subtopic.html.erb (272.4ms)
+  Rendered topics/latest_changes.html.erb within layouts/application (408.0ms)
+Completed 200 OK in 647ms (Views: 532.7ms)
+
+
+Started GET "/collections/application.self-77756e50fb5f45827c5086e09206f1e2abc24ae726fd10ebf630d96b21cfa565.css?body=1" for ::1 at 2016-10-12 13:52:00 +0000
+
+
+Started GET "/collections/vendor/polyfills/bind.self-298670bd147f2c023e76026ca559ffdee4ed8fee93b2a7260bfa164252662073.js?body=1" for 127.0.0.1 at 2016-10-12 13:52:01 +0000
+
+
+Started GET "/collections/support.self-816722bf9bc92c79514a7b71c5697b5cbf8170f319914f14855cfca826ab2624.js?body=1" for ::1 at 2016-10-12 13:52:01 +0000
+
+
+Started GET "/collections/browse-columns.self-e50c4fc0d16e97fcfa596cd49bd537b2eeabd5dc4bb43fb0bfa28f8132ecee95.js?body=1" for 127.0.0.1 at 2016-10-12 13:52:01 +0000
+
+
+Started GET "/collections/mail-icon-x2-875fea8b0999065a033d6d6f952eb6cb8f43507629d6ea4f7992dcc4eaed2cb9.png" for 127.0.0.1 at 2016-10-12 13:52:01 +0000
+
+
+Started GET "/collections/application.self-c748f39b3b25ac57a0a24ff04ec7406ef3f943467973d43a55b0f153ef0fc2b7.js?body=1" for ::1 at 2016-10-12 13:52:01 +0000
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage/latest" for ::1 at 2016-10-12 13:52:25 +0000
+Processing by TopicsController#latest_changes as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered govuk_component/beta_label (0.5ms)
+  Rendered topics/_subtopic.html.erb (44.7ms)
+  Rendered topics/latest_changes.html.erb within layouts/application (107.9ms)
+Completed 500 Internal Server Error in 236ms
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? false
+
+RuntimeError - 6d75ce8d-140f-4a64-90f1-dba35beebea2:
+  app/models/topic/changed_documents.rb:29:in `rummager_search'
+  app/models/topic/changed_documents.rb:4:in `documents'
+  app/models/topic/changed_documents.rb:5:in `each'
+  app/views/topics/latest_changes.html.erb:15:in `block in _app_views_topics_latest_changes_html_erb___2357904633291186085_70024739670760'
+  actionview (4.2.7.1) lib/action_view/helpers/capture_helper.rb:38:in `block in capture'
+  actionview (4.2.7.1) lib/action_view/helpers/capture_helper.rb:202:in `with_output_buffer'
+  actionview (4.2.7.1) lib/action_view/helpers/capture_helper.rb:38:in `capture'
+  actionview (4.2.7.1) lib/action_view/helpers/rendering_helper.rb:91:in `_layout_for'
+  actionview (4.2.7.1) lib/action_view/renderer/partial_renderer.rb:340:in `block in render_partial'
+  app/views/topics/_subtopic.html.erb:45:in `_app_views_topics__subtopic_html_erb__1955802814931018488_70024511729240'
+  actionview (4.2.7.1) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/partial_renderer.rb:339:in `render_partial'
+  actionview (4.2.7.1) lib/action_view/renderer/partial_renderer.rb:310:in `block in render'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/partial_renderer.rb:309:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:51:in `render_partial'
+  actionview (4.2.7.1) lib/action_view/helpers/rendering_helper.rb:30:in `render'
+  app/views/topics/latest_changes.html.erb:6:in `_app_views_topics_latest_changes_html_erb___2357904633291186085_70024739670760'
+  actionview (4.2.7.1) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.7.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.7.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.7.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.7.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.7.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.7.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.7.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  slimmer (9.1.0) lib/slimmer/app.rb:39:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  airbrake (4.3.8) lib/airbrake/rails/middleware.rb:13:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.1) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:16:in `_call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:12:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage/latest" for 127.0.0.1 at 2016-10-12 14:55:33 +0000
+Processing by TopicsController#latest_changes as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered govuk_component/beta_label (9.0ms)
+  Rendered topics/_subtopic.html.erb (2091.2ms)
+  Rendered topics/latest_changes.html.erb within layouts/application (3455.4ms)
+Completed 200 OK in 3961ms (Views: 3714.7ms)
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage" for ::1 at 2016-10-12 14:55:45 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered shared/_tag_meta.html.erb (0.6ms)
+  Rendered topics/_subtopic.html.erb (245.1ms)
+  Rendered topics/subtopic.html.erb within layouts/application (342.7ms)
+Completed 200 OK in 824ms (Views: 733.1ms)
+
+
+Started GET "/collections/application.self-77756e50fb5f45827c5086e09206f1e2abc24ae726fd10ebf630d96b21cfa565.css?body=1" for 127.0.0.1 at 2016-10-12 14:55:46 +0000
+
+
+Started GET "/collections/vendor/polyfills/bind.self-298670bd147f2c023e76026ca559ffdee4ed8fee93b2a7260bfa164252662073.js?body=1" for 127.0.0.1 at 2016-10-12 14:55:47 +0000
+
+
+Started GET "/collections/support.self-816722bf9bc92c79514a7b71c5697b5cbf8170f319914f14855cfca826ab2624.js?body=1" for ::1 at 2016-10-12 14:55:47 +0000
+
+
+Started GET "/collections/browse-columns.self-e50c4fc0d16e97fcfa596cd49bd537b2eeabd5dc4bb43fb0bfa28f8132ecee95.js?body=1" for 127.0.0.1 at 2016-10-12 14:55:47 +0000
+
+
+Started GET "/collections/mail-icon-x2-875fea8b0999065a033d6d6f952eb6cb8f43507629d6ea4f7992dcc4eaed2cb9.png" for 127.0.0.1 at 2016-10-12 14:55:47 +0000
+
+
+Started GET "/collections/application.self-c748f39b3b25ac57a0a24ff04ec7406ef3f943467973d43a55b0f153ef0fc2b7.js?body=1" for ::1 at 2016-10-12 14:55:48 +0000
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage" for ::1 at 2016-10-12 14:55:53 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered shared/_tag_meta.html.erb (0.5ms)
+  Rendered topics/_subtopic.html.erb (32.0ms)
+  Rendered topics/subtopic.html.erb within layouts/application (74.1ms)
+Completed 200 OK in 192ms (Views: 134.7ms)
+
+
+Started GET "/collections/application.self-77756e50fb5f45827c5086e09206f1e2abc24ae726fd10ebf630d96b21cfa565.css?body=1" for 127.0.0.1 at 2016-10-12 14:55:54 +0000
+
+
+Started GET "/collections/vendor/polyfills/bind.self-298670bd147f2c023e76026ca559ffdee4ed8fee93b2a7260bfa164252662073.js?body=1" for ::1 at 2016-10-12 14:55:55 +0000
+
+
+Started GET "/collections/support.self-816722bf9bc92c79514a7b71c5697b5cbf8170f319914f14855cfca826ab2624.js?body=1" for 127.0.0.1 at 2016-10-12 14:55:55 +0000
+
+
+Started GET "/collections/browse-columns.self-e50c4fc0d16e97fcfa596cd49bd537b2eeabd5dc4bb43fb0bfa28f8132ecee95.js?body=1" for ::1 at 2016-10-12 14:55:55 +0000
+
+
+Started GET "/collections/mail-icon-x2-875fea8b0999065a033d6d6f952eb6cb8f43507629d6ea4f7992dcc4eaed2cb9.png" for ::1 at 2016-10-12 14:55:55 +0000
+
+
+Started GET "/collections/application.self-c748f39b3b25ac57a0a24ff04ec7406ef3f943467973d43a55b0f153ef0fc2b7.js?body=1" for 127.0.0.1 at 2016-10-12 14:55:55 +0000
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage" for 127.0.0.1 at 2016-10-12 14:58:58 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered topics/_subtopic.html.erb (28.8ms)
+  Rendered topics/subtopic.html.erb within layouts/application (55.4ms)
+Completed 200 OK in 228ms (Views: 175.4ms)
+
+
+Started GET "/browse/benefits" for ::1 at 2016-10-12 15:48:23 +0000
+Processing by BrowseController#top_level_browse_page as HTML
+  Parameters: {"top_level_slug"=>"benefits"}
+  Rendered shared/_tag_meta.html.erb (1.3ms)
+  Rendered browse/_second_level_browse_pages.html.erb (11.3ms)
+  Rendered browse/_top_level_browse_pages.erb (12.5ms)
+  Rendered browse/top_level_browse_page.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 241ms (Views: 172.3ms)
+
+
+Started GET "/browse/benefits/entitlement.json" for 127.0.0.1 at 2016-10-12 15:48:36 +0000
+Processing by BrowseController#second_level_browse_page as JSON
+  Parameters: {"top_level_slug"=>"benefits", "second_level_slug"=>"entitlement"}
+  Rendered browse/_links.html.erb (25.2ms)
+Completed 500 Internal Server Error in 126ms
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? false
+
+NameError - undefined local variable or method `binging' for #<ListSet:0x007f5fcf73a038>
+Did you mean?  binding:
+  app/models/list_set.rb:69:in `content_tagged_to_tag'
+  app/models/list_set.rb:43:in `a_to_z_list'
+  app/models/list_set.rb:36:in `lists'
+  app/models/list_set.rb:3:in `each'
+  app/views/browse/_links.html.erb:4:in `_app_views_browse__links_html_erb__3411874465983265593_70024739842820'
+  actionview (4.2.7.1) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.7.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.7.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.7.1) lib/abstract_controller/rendering.rb:43:in `render_to_string'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:21:in `render_to_string'
+  app/controllers/browse_controller.rb:54:in `render_partial'
+  app/controllers/browse_controller.rb:33:in `block (2 levels) in second_level_browse_page'
+  actionpack (4.2.7.1) lib/action_controller/metal/mime_responds.rb:217:in `respond_to'
+  app/controllers/browse_controller.rb:30:in `second_level_browse_page'
+  actionpack (4.2.7.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  slimmer (9.1.0) lib/slimmer/app.rb:39:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  airbrake (4.3.8) lib/airbrake/rails/middleware.rb:13:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.1) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:16:in `_call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:12:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started GET "/collections/loading-a61f7620847c981f789bbee7328c664c1d55ebcd395a38431a1fa7c40aec9766.gif" for ::1 at 2016-10-12 15:48:36 +0000
+
+
+Started GET "/browse/benefits/entitlement.json" for 127.0.0.1 at 2016-10-12 15:49:07 +0000
+Processing by BrowseController#second_level_browse_page as JSON
+  Parameters: {"top_level_slug"=>"benefits", "second_level_slug"=>"entitlement"}
+  Rendered browse/_links.html.erb (3.0ms)
+Completed 500 Internal Server Error in 76ms
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? false
+
+NameError - undefined local variable or method `binging' for #<ListSet:0x007f5fcdfccfe0>
+Did you mean?  binding:
+  app/models/list_set.rb:69:in `content_tagged_to_tag'
+  app/models/list_set.rb:43:in `a_to_z_list'
+  app/models/list_set.rb:36:in `lists'
+  app/models/list_set.rb:3:in `each'
+  app/views/browse/_links.html.erb:4:in `_app_views_browse__links_html_erb__3411874465983265593_70024739842820'
+  actionview (4.2.7.1) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.7.1) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.7.1) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.7.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.7.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.7.1) lib/abstract_controller/rendering.rb:43:in `render_to_string'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:21:in `render_to_string'
+  app/controllers/browse_controller.rb:54:in `render_partial'
+  app/controllers/browse_controller.rb:33:in `block (2 levels) in second_level_browse_page'
+  actionpack (4.2.7.1) lib/action_controller/metal/mime_responds.rb:217:in `respond_to'
+  app/controllers/browse_controller.rb:30:in `second_level_browse_page'
+  actionpack (4.2.7.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  gds-api-adapters (34.1.0) lib/gds_api/middleware/govuk_header_sniffer.rb:12:in `call'
+  slimmer (9.1.0) lib/slimmer/app.rb:39:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  airbrake (4.3.8) lib/airbrake/rails/middleware.rb:13:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.1) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:16:in `_call'
+  airbrake (4.3.8) lib/airbrake/user_informer.rb:12:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/rbenv/versions/2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started GET "/browse/benefits" for ::1 at 2016-10-12 15:49:50 +0000
+Processing by BrowseController#top_level_browse_page as HTML
+  Parameters: {"top_level_slug"=>"benefits"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered browse/_second_level_browse_pages.html.erb (0.8ms)
+  Rendered browse/_top_level_browse_pages.erb (0.3ms)
+  Rendered browse/top_level_browse_page.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 125ms (Views: 53.9ms)
+
+
+Started GET "/collections/application.self-77756e50fb5f45827c5086e09206f1e2abc24ae726fd10ebf630d96b21cfa565.css?body=1" for 127.0.0.1 at 2016-10-12 15:49:51 +0000
+
+
+Started GET "/collections/vendor/polyfills/bind.self-298670bd147f2c023e76026ca559ffdee4ed8fee93b2a7260bfa164252662073.js?body=1" for ::1 at 2016-10-12 15:49:52 +0000
+
+
+Started GET "/collections/support.self-816722bf9bc92c79514a7b71c5697b5cbf8170f319914f14855cfca826ab2624.js?body=1" for 127.0.0.1 at 2016-10-12 15:49:52 +0000
+
+
+Started GET "/collections/browse-columns.self-e50c4fc0d16e97fcfa596cd49bd537b2eeabd5dc4bb43fb0bfa28f8132ecee95.js?body=1" for ::1 at 2016-10-12 15:49:52 +0000
+
+
+Started GET "/collections/application.self-c748f39b3b25ac57a0a24ff04ec7406ef3f943467973d43a55b0f153ef0fc2b7.js?body=1" for 127.0.0.1 at 2016-10-12 15:49:52 +0000
+
+
+Started GET "/browse/benefits/entitlement.json" for ::1 at 2016-10-12 15:49:53 +0000
+Processing by BrowseController#second_level_browse_page as JSON
+  Parameters: {"top_level_slug"=>"benefits", "second_level_slug"=>"entitlement"}
+  Rendered browse/_links.html.erb (174.1ms)
+Completed 200 OK in 319ms (Views: 1.3ms)
+
+
+Started GET "/browse/benefits/entitlement" for 127.0.0.1 at 2016-10-12 16:20:39 +0000
+Processing by BrowseController#second_level_browse_page as HTML
+  Parameters: {"top_level_slug"=>"benefits", "second_level_slug"=>"entitlement"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered browse/_links.html.erb (145.6ms)
+  Rendered browse/_second_level_browse_pages.html.erb (0.4ms)
+  Rendered browse/_top_level_browse_pages.erb (0.3ms)
+  Rendered browse/second_level_browse_page.html.erb within layouts/application (151.6ms)
+Completed 200 OK in 284ms (Views: 190.8ms)
+
+
+Started GET "/browse/benefits/entitlement" for ::1 at 2016-10-12 16:30:53 +0000
+Processing by BrowseController#second_level_browse_page as HTML
+  Parameters: {"top_level_slug"=>"benefits", "second_level_slug"=>"entitlement"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered browse/_links.html.erb (199.9ms)
+  Rendered browse/_second_level_browse_pages.html.erb (0.3ms)
+  Rendered browse/_top_level_browse_pages.erb (0.3ms)
+  Rendered browse/second_level_browse_page.html.erb within layouts/application (203.6ms)
+Completed 200 OK in 353ms (Views: 239.2ms)
+
+
+Started GET "/browse/births-deaths-marriages.json" for 127.0.0.1 at 2016-10-12 16:30:57 +0000
+Processing by BrowseController#top_level_browse_page as JSON
+  Parameters: {"top_level_slug"=>"births-deaths-marriages"}
+  Rendered browse/_second_level_browse_pages.html.erb (1.2ms)
+Completed 200 OK in 26ms (Views: 0.2ms)
+
+
+Started GET "/browse/benefits.json" for ::1 at 2016-10-12 16:30:59 +0000
+Processing by BrowseController#top_level_browse_page as JSON
+  Parameters: {"top_level_slug"=>"benefits"}
+  Rendered browse/_second_level_browse_pages.html.erb (0.4ms)
+Completed 200 OK in 26ms (Views: 0.3ms)
+
+
+Started GET "/browse/benefits/families.json" for 127.0.0.1 at 2016-10-12 16:31:00 +0000
+Processing by BrowseController#second_level_browse_page as JSON
+  Parameters: {"top_level_slug"=>"benefits", "second_level_slug"=>"families"}
+  Rendered browse/_links.html.erb (42.3ms)
+Completed 200 OK in 87ms (Views: 0.3ms)
+
+
+Started GET "/browse/benefits/entitlement.json" for ::1 at 2016-10-12 16:31:01 +0000
+Processing by BrowseController#second_level_browse_page as JSON
+  Parameters: {"top_level_slug"=>"benefits", "second_level_slug"=>"entitlement"}
+  Rendered browse/_links.html.erb (35.9ms)
+Completed 200 OK in 84ms (Views: 0.4ms)
+
+
+Started GET "/browse/births-deaths-marriages.json" for 127.0.0.1 at 2016-10-12 16:31:17 +0000
+Processing by BrowseController#top_level_browse_page as JSON
+  Parameters: {"top_level_slug"=>"births-deaths-marriages"}
+  Rendered browse/_second_level_browse_pages.html.erb (0.3ms)
+Completed 200 OK in 28ms (Views: 0.2ms)
+
+
+Started GET "/browse/benefits.json" for ::1 at 2016-10-12 16:31:17 +0000
+Processing by BrowseController#top_level_browse_page as JSON
+  Parameters: {"top_level_slug"=>"benefits"}
+  Rendered browse/_second_level_browse_pages.html.erb (0.3ms)
+Completed 200 OK in 30ms (Views: 0.3ms)
+
+
+Started GET "/browse/benefits/entitlement.json" for 127.0.0.1 at 2016-10-12 16:31:18 +0000
+Processing by BrowseController#second_level_browse_page as JSON
+  Parameters: {"top_level_slug"=>"benefits", "second_level_slug"=>"entitlement"}
+  Rendered browse/_links.html.erb (38.3ms)
+Completed 200 OK in 101ms (Views: 0.4ms)
+
+
+Started GET "/browse/benefits/families.json" for ::1 at 2016-10-12 16:31:36 +0000
+Processing by BrowseController#second_level_browse_page as JSON
+  Parameters: {"top_level_slug"=>"benefits", "second_level_slug"=>"families"}
+  Rendered browse/_links.html.erb (27.0ms)
+Completed 200 OK in 52ms (Views: 0.3ms)
+
+
+Started GET "/browse/benefits/disability.json" for 127.0.0.1 at 2016-10-12 16:31:42 +0000
+Processing by BrowseController#second_level_browse_page as JSON
+  Parameters: {"top_level_slug"=>"benefits", "second_level_slug"=>"disability"}
+  Rendered browse/_links.html.erb (53.2ms)
+Completed 200 OK in 89ms (Views: 0.4ms)
+
+
+Started GET "/browse/benefits/families.json" for ::1 at 2016-10-12 16:31:54 +0000
+Processing by BrowseController#second_level_browse_page as JSON
+  Parameters: {"top_level_slug"=>"benefits", "second_level_slug"=>"families"}
+  Rendered browse/_links.html.erb (44.4ms)
+Completed 200 OK in 74ms (Views: 0.9ms)
+
+
+Started GET "/browse/benefits/entitlement.json" for 127.0.0.1 at 2016-10-12 16:31:55 +0000
+Processing by BrowseController#second_level_browse_page as JSON
+  Parameters: {"top_level_slug"=>"benefits", "second_level_slug"=>"entitlement"}
+  Rendered browse/_links.html.erb (242.3ms)
+Completed 200 OK in 273ms (Views: 0.4ms)
+
+
+Started GET "/browse/benefits/disability.json" for ::1 at 2016-10-12 16:32:03 +0000
+Processing by BrowseController#second_level_browse_page as JSON
+  Parameters: {"top_level_slug"=>"benefits", "second_level_slug"=>"disability"}
+  Rendered browse/_links.html.erb (174.0ms)
+Completed 200 OK in 217ms (Views: 0.8ms)
+
+
+Started GET "/topic/oil-and-gas/carbon-capture-and-storage" for 127.0.0.1 at 2016-10-12 16:32:14 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"oil-and-gas", "subtopic_slug"=>"carbon-capture-and-storage"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered topics/_subtopic.html.erb (60.0ms)
+  Rendered topics/subtopic.html.erb within layouts/application (281.0ms)
+Completed 200 OK in 376ms (Views: 357.2ms)
+
+
+Started GET "/topic/benefits-credits" for ::1 at 2016-10-12 16:32:49 +0000
+Processing by TopicsController#topic as HTML
+  Parameters: {"topic_slug"=>"benefits-credits"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered govuk_component/beta_label (0.8ms)
+  Rendered topics/_topic_beta.html.erb (23.7ms)
+  Rendered topics/topic.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 77ms (Views: 61.7ms)
+
+
+Started GET "/topic/benefits-credits/child-benefit" for 127.0.0.1 at 2016-10-12 16:32:52 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"benefits-credits", "subtopic_slug"=>"child-benefit"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered topics/_subtopic.html.erb (64.9ms)
+  Rendered topics/subtopic.html.erb within layouts/application (129.5ms)
+Completed 200 OK in 192ms (Views: 161.7ms)
+
+
+Started GET "/topic/benefits-credits/child-benefit" for ::1 at 2016-10-12 16:33:08 +0000
+Processing by TopicsController#subtopic as HTML
+  Parameters: {"topic_slug"=>"benefits-credits", "subtopic_slug"=>"child-benefit"}
+  Rendered shared/_tag_meta.html.erb (0.1ms)
+  Rendered topics/_subtopic.html.erb (77.7ms)
+  Rendered topics/subtopic.html.erb within layouts/application (137.0ms)
+Completed 200 OK in 260ms (Views: 180.5ms)

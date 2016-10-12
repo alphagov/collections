@@ -36,7 +36,7 @@ class MainstreamBrowsePage
   end
 
   def lists
-    @lists ||= ListSet.new("section", slug, details["groups"])
+    @lists ||= ListSet.new("section", @content_item.content_id, details["groups"])
   end
 
   def related_topics

@@ -37,6 +37,7 @@ describe TopicsController do
         content_store_has_item(
           "/topic/oil-and-gas/wells",
           content_item_for_base_path("/topic/oil-and-gas/wells").merge({
+            "content_id" => 'content-id-for-wells',
             "links" => {
               "parent" => [{
                 "title" => "Oil and Gas",
@@ -52,7 +53,7 @@ describe TopicsController do
 
         Services.rummager.stubs(:search).with(
           count: "0",
-          filter_specialist_sectors: ["oil-and-gas/wells"],
+          filter_topic_content_ids: ["content-id-for-wells"],
           facet_organisations: "1000",
         ).returns(
           rummager_has_specialist_sector_organisations(

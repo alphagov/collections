@@ -13,7 +13,7 @@ module TopicHelper
     }
 
     rummager_has_documents_for_subtopic(
-      "oil-and-gas/fields-and-wells",
+      'content-id-for-fields-and-wells',
       %w{
         what-is-oil
         apply-for-an-oil-licence
@@ -27,6 +27,7 @@ module TopicHelper
     )
 
     content_store_has_item("/topic/oil-and-gas/fields-and-wells", {
+      content_id: 'content-id-for-fields-and-wells',
       base_path: "/topic/oil-and-gas/fields-and-wells",
       title: "Fields and Wells",
       format: "topic",
@@ -56,7 +57,10 @@ module TopicHelper
       },
     })
 
-    stub_topic_organisations("oil-and-gas/fields-and-wells")
+    stub_topic_organisations(
+      'oil-and-gas/fields-and-wells',
+      'content-id-for-fields-and-wells'
+    )
   end
 end
 

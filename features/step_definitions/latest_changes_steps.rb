@@ -24,7 +24,7 @@ Given(/^there is latest content for a subtopic$/) do
     has_entries(
       start: 0,
       count: 50,
-      filter_specialist_sectors: ['oil-and-gas/fields-and-wells'],
+      filter_topic_content_ids: ['content-id-for-fields-and-wells'],
       order: "-public_timestamp",
     )
   ).returns({

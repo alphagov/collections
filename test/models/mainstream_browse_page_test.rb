@@ -11,7 +11,8 @@ describe MainstreamBrowsePage do
       "links" => {
       },
     }
-    @page = MainstreamBrowsePage.new(ContentItem.new(@api_data))
+    @content_item = ContentItem.new(@api_data)
+    @page = MainstreamBrowsePage.new(@content_item)
   end
 
   describe "basic properties" do
@@ -232,8 +233,8 @@ describe MainstreamBrowsePage do
   end
 
   describe "lists" do
-    it "should pass the slug of the browse page when constructing groups" do
-      ListSet.expects(:new).with("section", "benefits/child", anything()).returns(:a_lists_instance)
+    it "should pass the content id of the browse page when constructing groups" do
+      ListSet.expects(:new).with("section", @content_item.content_id, anything).returns(:a_lists_instance)
 
       assert_equal :a_lists_instance, @page.lists
     end
@@ -246,7 +247,7 @@ describe MainstreamBrowsePage do
     end
 
     it "should pass in nil if the data is missing" do
-      ListSet.expects(:new).with(anything(), anything(), nil).returns(:a_lists_instance)
+      ListSet.expects(:new).with(anything, anything, nil).returns(:a_lists_instance)
       @api_data.delete("details")
 
       assert_equal :a_lists_instance, @page.lists

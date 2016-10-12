@@ -40,8 +40,8 @@ class TopicsController < ApplicationController
 
 private
 
-  def organisations
-    @organisations ||= subtopic_organisations(slug)
+  def organisations(subtopic_content_id)
+    @organisations ||= subtopic_organisations(subtopic_content_id)
   end
   helper_method :organisations
 
@@ -53,11 +53,11 @@ private
     "#{params[:topic_slug]}/#{params[:subtopic_slug]}"
   end
 
-  def subtopic_organisations(slug)
+  def subtopic_organisations(subtopic_content_id)
     OrganisationsFacetPresenter.new(
       Services.rummager.search(
         count: "0",
-        filter_specialist_sectors: [slug],
+        filter_topic_content_ids: [subtopic_content_id],
         facet_organisations: "1000",
       )["facets"]["organisations"]
     )
