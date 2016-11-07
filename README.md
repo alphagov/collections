@@ -5,6 +5,7 @@ Collections serves the GOV.UK browse and topic pages.
 ![Browse page](docs/browse-page.jpg)
 ![Topic page](docs/topic-page.jpg)
 ![Subtopic page](docs/subtopic-page.jpg)
+![Services and information page](docs/services-and-information-page.jpg)
 
 (As of June 2015)
 
@@ -13,6 +14,7 @@ Collections serves the GOV.UK browse and topic pages.
 - Browse page: [gov.uk/browse](https://www.gov.uk/browse)
 - Topic page: [gov.uk/oil-and-gas](https://www.gov.uk/oil-and-gas)
 - Subtopic page: [gov.uk/oil-and-gas/fields-and-wells](https://www.gov.uk/oil-and-gas/fields-and-wells)
+- Services and information page: [gov.uk/government/organisations/hm-revenue-customs/services-information](https://www.gov.uk/government/organisations/hm-revenue-customs/services-information)
 
 ## Nomenclature
 
@@ -43,7 +45,7 @@ There is no underlying persistence layer and all content is retrieved from exter
     - Subtopics and their curated lists
 - [rummager](https://github.com/alphagov/rummager), provides:
     - latest changes for Topics
-    - content tagged to a particular Topic or Mainstream browse page
+    - content tagged to a particular Topic, Mainstream browse page or Organisation
 - [email-alert-api](https://github.com/alphagov/email-alert-api), provides:
     - support for subscribing to notifications from a topic
 

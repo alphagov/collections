@@ -1,0 +1,17 @@
+<% @grouped_links.each do |group| -%>
+  <nav class="index-list with-title" aria-labelledby="<%= group["title"].parameterize %>">
+    <h1 id="<%= group["title"].parameterize %>"><%= group["title"] %></h1>
+    <ul>
+    <% group["examples"].each do |group_link| -%>
+      <li>
+        <a href="<%= group_link["link"] %>"><%= group_link["title"] %></a>
+      </li>
+    <% end -%>
+    <% if group["more_documents"] %>
+      <li>
+        <a href="<%= group["subsector_link"] %>" class="other">See more</a>
+      </li>
+    <% end %>
+    </ul>
+  </nav>
+<% end -%>

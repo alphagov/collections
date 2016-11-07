@@ -1,0 +1,17 @@
+<% content_for :title, "Services and information - #{@organisation['title']} - GOV.UK" %>
+<% content_for :page_class, "topics-page" %>
+
+<header class="page-header group">
+  <div class="full-width">
+    <div class="heading">
+      <h1>
+        <%= link_to @organisation["title"], @organisation["base_path"] %>
+        Services and information
+      </h1>
+    </div>
+  </div>
+</header>
+
+<div class="browse-container full-width">
+  <%= render partial: 'grouped_links', grouped_links: @grouped_links %>
+</div>
