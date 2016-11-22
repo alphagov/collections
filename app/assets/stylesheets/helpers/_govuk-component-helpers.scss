@@ -1,0 +1,6 @@
+// GOV.UK components expect to live in a world with a global reset. This CSS
+// might be pushed up to static at some point.
+.govuk-breadcrumbs {
+  max-width: 960px;
+  margin: 0 auto;
+}

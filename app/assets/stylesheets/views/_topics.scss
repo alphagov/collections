@@ -171,6 +171,10 @@
         @include bold-19;
         text-decoration: none;
       }
+
+      li a.other {
+        text-decoration: underline;
+      }
     }
 
     &.with-title ul {
