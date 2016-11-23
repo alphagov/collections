@@ -25,5 +25,7 @@ class ServicesAndInformationBrowsingTest < ActionDispatch::IntegrationTest
     within "nav.index-list:nth-child(2) h1" do
       assert page.has_content?("Waste")
     end
+
+    assert page.has_selector?(shared_component_selector('breadcrumbs'))
   end
 end

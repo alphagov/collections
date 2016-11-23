@@ -1,41 +1,44 @@
 class TopicsController < ApplicationController
-  before_filter :set_slimmer_format
-
   def index
     @topic = Topic.find(request.path)
+    setup_content_item_and_navigation_helpers(@topic)
   end
 
   def topic
     @topic = Topic.find(request.path)
+    setup_content_item_and_navigation_helpers(@topic)
   end
 
   def subtopic
     @subtopic = Topic.find(request.path)
-
-    if @subtopic.parent
-      set_slimmer_dummy_artefact(
-        section_name: @subtopic.parent.title,
-        section_link: @subtopic.parent.base_path
-      )
-    end
+    @meta_section = @subtopic.parent.title.downcase
+    setup_content_item_and_navigation_helpers(@subtopic)
   end
 
   def latest_changes
     subtopic_base_path = request.path.sub(%r{/latest\z}, '')
     @subtopic = Topic.find(subtopic_base_path, pagination_params)
-    @pagination_presenter = ChangedDocumentsPaginationPresenter.new(@subtopic.changed_documents, view_context)
-
-    slimmer_artefact = {
-      section_name: @subtopic.title,
-      section_link: @subtopic.base_path,
+    @meta_section = @subtopic.parent.title.downcase
+    # Breadcrumbs for this page are hardcoded because it doesn't have a
+    # content item with parents.
+    @hardcoded_breadcrumbs = {
+      breadcrumbs: [
+        {
+          title: "Home",
+          url: "/",
+        },
+        {
+          title: @subtopic.parent.title,
+          url: @subtopic.parent.base_path,
+        },
+        {
+          title: @subtopic.title,
+          url: @subtopic.base_path,
+        },
+      ]
     }
-    if @subtopic.parent
-      slimmer_artefact[:parent] = {
-        section_name: @subtopic.parent.title,
-        section_link: @subtopic.parent.base_path,
-      }
-    end
-    set_slimmer_dummy_artefact(slimmer_artefact)
+    @pagination_presenter = ChangedDocumentsPaginationPresenter.new(@subtopic.changed_documents, view_context)
+    setup_content_item_and_navigation_helpers(@subtopic)
   end
 
 private
@@ -44,10 +47,6 @@ private
     @organisations ||= subtopic_organisations(subtopic_content_id)
   end
   helper_method :organisations
-
-  def set_slimmer_format
-    set_slimmer_headers(format: "specialist-sector")
-  end
 
   def slug
     "#{params[:topic_slug]}/#{params[:subtopic_slug]}"

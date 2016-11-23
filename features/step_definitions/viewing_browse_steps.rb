@@ -1,4 +1,6 @@
 Given(/^there is an alphabetical browse page set up with links$/) do
+  stub_browse_lookups
+
   second_level_browse_pages = [{
     content_id: 'judges-content-id',
     title: 'Judges',
@@ -22,6 +24,8 @@ Given(/^there is an alphabetical browse page set up with links$/) do
 end
 
 Given(/^that there are curated second level browse pages$/) do
+  stub_browse_lookups
+
   second_level_browse_pages = [
     {
       content_id: 'judges-content-id',

@@ -2,17 +2,26 @@ class EmailSignupsController < ApplicationController
   protect_from_forgery except: [:create]
 
   def new
-    slimmer_artefact = {
-      section_name: subtopic.title,
-      section_link: subtopic.base_path,
+    @meta_section = subtopic.parent.title.downcase
+    # Breadcrumbs for this page are hardcoded because it doesn't have a
+    # content item with parents.
+    @hardcoded_breadcrumbs = {
+      breadcrumbs: [
+        {
+          title: "Home",
+          url: "/",
+        },
+        {
+          title: subtopic.parent.title,
+          url: subtopic.parent.base_path,
+        },
+        {
+          title: subtopic.title,
+          url: subtopic.base_path,
+        },
+      ]
     }
-    if subtopic.parent
-      slimmer_artefact[:parent] = {
-        section_name: subtopic.parent.title,
-        section_link: subtopic.parent.base_path,
-      }
-    end
-    set_slimmer_dummy_artefact(slimmer_artefact)
+    setup_content_item_and_navigation_helpers(subtopic)
   end
 
   def create

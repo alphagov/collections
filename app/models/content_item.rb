@@ -29,4 +29,8 @@ class ContentItem
       self.class.new(item_hash)
     }.select(&:title).sort_by(&:title)
   end
+
+  def to_hash
+    @content_item_data
+  end
 end
