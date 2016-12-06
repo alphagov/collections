@@ -1,6 +1,10 @@
 if defined?(JasmineRails)
+  require 'slimmer/headers'
+
   module JasmineRails
     class ApplicationController < ActionController::Base
+      include Slimmer::Headers
+
       before_filter :skip_slimmer
 
       def skip_slimmer

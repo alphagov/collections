@@ -26,6 +26,7 @@ class MainstreamBrowsingTest < ActionDispatch::IntegrationTest
     content_schema_examples_for(:mainstream_browse_page).each do |content_item|
       get content_item['base_path']
       assert_response 200
+      assert page.has_selector?(shared_component_selector('breadcrumbs'))
     end
   end
 end

@@ -1,4 +1,4 @@
-require_relative '../test_helper'
+require "test_helper"
 
 describe TopicsController do
   include ContentSchemaHelpers
@@ -8,12 +8,6 @@ describe TopicsController do
     describe "with a valid topic slug" do
       before do
         content_store_has_item('/topic/oil-and-gas', content_schema_example(:topic, :topic))
-      end
-
-      it "sets the correct slimmer headers" do
-        get :topic, topic_slug: "oil-and-gas"
-
-        assert_equal "specialist-sector", response.headers["X-Slimmer-Format"]
       end
 
       it "sets expiry headers for 30 minutes" do
@@ -60,16 +54,6 @@ describe TopicsController do
             "oil-and-gas/wells",
           )
          )
-      end
-
-      it "sets the correct slimmer headers" do
-        get :subtopic, topic_slug: "oil-and-gas", subtopic_slug: "wells"
-
-        artefact = JSON.parse(response.headers["X-Slimmer-Artefact"])
-        primary_tag = artefact["tags"][0]
-        assert_equal "/oil-and-gas", primary_tag["content_with_tag"]["web_url"]
-        assert_equal "Oil and Gas", primary_tag["title"]
-        assert_equal "specialist-sector", response.headers["X-Slimmer-Format"]
       end
 
       it "sets expiry headers for 30 minutes" do

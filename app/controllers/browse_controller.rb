@@ -4,12 +4,12 @@ class BrowseController < ApplicationController
 
   def index
     @page = MainstreamBrowsePage.find("/browse")
-    set_slimmer_artefact_headers
+    setup_content_item_and_navigation_helpers(@page)
   end
 
   def top_level_browse_page
     @page = MainstreamBrowsePage.find("/browse/#{params[:top_level_slug]}")
-    set_slimmer_artefact_headers
+    setup_content_item_and_navigation_helpers(@page)
 
     respond_to do |f|
       f.html
@@ -21,11 +21,8 @@ class BrowseController < ApplicationController
 
   def second_level_browse_page
     @page = MainstreamBrowsePage.find("/browse/#{params[:top_level_slug]}/#{params[:second_level_slug]}")
-    set_slimmer_artefact_headers({
-      title: "browse",
-      section_name: @page.active_top_level_browse_page.title,
-      section_link: @page.active_top_level_browse_page.base_path,
-    })
+    @meta_section = @page.active_top_level_browse_page.title.downcase
+    setup_content_item_and_navigation_helpers(@page)
 
     respond_to do |f|
       f.html
@@ -43,11 +40,6 @@ private
       second_level_browse_pages: page.second_level_browse_pages,
       curated_order: page.second_level_pages_curated?,
     )
-  end
-
-  def set_slimmer_artefact_headers(dummy_artefact={})
-    set_slimmer_headers(format: 'browse')
-    set_slimmer_dummy_artefact(dummy_artefact) unless dummy_artefact.empty?
   end
 
   def render_partial(partial_name, locals = {})

@@ -2,9 +2,14 @@
 <%= render 'shared/tag_meta', tag: @topic %>
 <% content_for :page_class, "topics-page" %>
 
-<div class="header-context">
-  <%# This empty div makes the breadcrumbs disappear. %>
-</div>
+<% content_for :extra_headers do %>
+  <%= render partial: 'govuk_component/analytics_meta_tags', locals: { content_item: @content_item } %>
+<% end %>
+
+<% content_for :breadcrumbs do %>
+  <%= render partial: 'govuk_component/breadcrumbs', locals: @navigation_helpers.breadcrumbs %>
+  <div class="header-context"><!-- Deliberately empty. This will prevent Static from adding a placeholder breadcrumb. --></div>
+<% end %>
 
 <header class="page-header group">
   <div class="full-width">

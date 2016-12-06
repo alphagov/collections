@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
-  include Slimmer::Headers
   include Slimmer::Template
-  include Slimmer::SharedTemplates
+  include Slimmer::GovukComponents
 
   slimmer_template 'header_footer_only'
 
@@ -58,5 +57,10 @@ class ApplicationController < ActionController::Base
     unless Rails.env.development?
       expires_in(duration, :public => true)
     end
+  end
+
+  def setup_content_item_and_navigation_helpers(page)
+    @content_item = page.content_item.to_hash
+    @navigation_helpers = GovukNavigationHelpers::NavigationHelper.new(@content_item)
   end
 end

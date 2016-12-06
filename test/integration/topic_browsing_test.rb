@@ -35,6 +35,8 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
     visit "/topic"
 
     assert page.has_content?("Oil and Gas")
+
+    assert page.has_selector?(shared_component_selector('breadcrumbs'))
   end
 
   it "renders a topic tag page and list its subtopics" do

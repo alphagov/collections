@@ -21,15 +21,21 @@ WebMock.disable_net_connect!
 Dir[Rails.root.join('test/support/*.rb')].each { |f| require f }
 
 require 'gds_api/test_helpers/content_store'
+require 'slimmer/test_helpers/govuk_components'
 require 'gds_api/test_helpers/rummager'
 
 class ActiveSupport::TestCase
   include GdsApi::TestHelpers::ContentStore
+  include Slimmer::TestHelpers::GovukComponents
   include GdsApi::TestHelpers::Rummager
 
   GovukContentSchemaTestHelpers.configure do |config|
     config.schema_type = 'frontend'
     config.project_root = Rails.root
+  end
+
+  before do
+    stub_shared_component_locales
   end
 
   after do

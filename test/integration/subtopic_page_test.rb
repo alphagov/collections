@@ -25,7 +25,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
     base.merge(params)
   end
 
-  setup do
+  before do
     rummager_has_documents_for_subtopic(
       'content-id-for-offshore',
       [
@@ -83,6 +83,8 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
     assert page.has_link?("Undersea piping restrictions", :href => "/undersea-piping-restrictions")
 
     refute page.has_link?("North sea shipping lanes")
+
+    assert page.has_selector?(shared_component_selector('breadcrumbs'))
   end
 
   it "renders a non-curated subtopic" do
@@ -112,6 +114,8 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
     assert page.has_link?("Oil rig safety requirements", :href => "/oil-rig-safety-requirements")
     assert page.has_link?("North sea shipping lanes", :href => "/north-sea-shipping-lanes")
     assert page.has_link?("Undersea piping restrictions", :href => "/undersea-piping-restrictions")
+
+    assert page.has_selector?(shared_component_selector('breadcrumbs'))
   end
 
   it "renders a beta subtopic" do

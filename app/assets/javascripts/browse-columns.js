@@ -12,7 +12,7 @@
     this.$root = this.$el.find('#root');
     this.$section = this.$el.find('#section');
     this.$subsection = this.$el.find('#subsection');
-    this.$breadcrumbs = $('#global-breadcrumb ol');
+    this.$breadcrumbs = $('.govuk-breadcrumbs ol');
     this.animateSpeed = 330;
 
     if(this.$section.length === 0){
