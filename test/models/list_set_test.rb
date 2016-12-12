@@ -162,11 +162,9 @@ describe ListSet do
 
       Services.rummager.stubs(:search).with(
         has_entries(filter_topic_content_ids: ['paye-content-id'])
-      ).returns({
-        "results" => [result],
+      ).returns("results" => [result],
         "start" => 0,
-        "total" => 1,
-      })
+        "total" => 1)
 
       documents = ListSet.new("specialist_sector", "paye-content-id").first.contents
 

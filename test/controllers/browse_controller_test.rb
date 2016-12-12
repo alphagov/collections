@@ -15,7 +15,7 @@ describe BrowseController do
     it "set correct expiry headers" do
       get :index
 
-      assert_equal "max-age=1800, public",  response.headers["Cache-Control"]
+      assert_equal "max-age=1800, public", response.headers["Cache-Control"]
     end
   end
 
@@ -34,7 +34,7 @@ describe BrowseController do
       it "set correct expiry headers" do
         get :top_level_browse_page, top_level_slug: "benefits"
 
-        assert_equal "max-age=1800, public",  response.headers["Cache-Control"]
+        assert_equal "max-age=1800, public", response.headers["Cache-Control"]
       end
     end
 
@@ -76,7 +76,7 @@ describe BrowseController do
       it "set correct expiry headers" do
         get :second_level_browse_page, top_level_slug: "benefits", second_level_slug: "entitlement"
 
-        assert_equal "max-age=1800, public",  response.headers["Cache-Control"]
+        assert_equal "max-age=1800, public", response.headers["Cache-Control"]
       end
     end
 

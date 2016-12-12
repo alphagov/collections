@@ -3,7 +3,7 @@ require "test_helper"
 class ConcreteTestController < ApplicationController
   enable_request_formats json: :json, js_or_atom: [:js, :atom]
   protect_from_forgery except: :js_or_atom
-    
+
   def test
     render text: 'ok'
   end

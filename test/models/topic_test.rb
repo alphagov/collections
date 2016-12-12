@@ -11,9 +11,9 @@ describe Topic do
       },
       "links" => {
         "parent" => [{
-          "title"=>"Business tax",
-          "base_path"=>"/topic/business-tax",
-          "description"=>"All about tax for businesses",
+          "title" => "Business tax",
+          "base_path" => "/topic/business-tax",
+          "description" => "All about tax for businesses",
         }],
       },
     }
@@ -84,12 +84,12 @@ describe Topic do
     it "returns the title and base_path for all children" do
       @api_data["links"]["children"] = [
         {
-          "title"=>"Foo",
-          "base_path"=>"/topic/business-tax/foo",
+          "title" => "Foo",
+          "base_path" => "/topic/business-tax/foo",
         },
         {
-          "title"=>"Bar",
-          "base_path"=>"/topic/business-tax/bar",
+          "title" => "Bar",
+          "base_path" => "/topic/business-tax/bar",
         },
       ]
 

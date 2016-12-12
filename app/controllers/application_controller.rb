@@ -31,7 +31,7 @@ class ApplicationController < ActionController::Base
     @acceptable_formats ||= {}
   end
 
-  private
+private
 
   def restrict_request_formats
     unless can_handle_format?(request.format)
@@ -45,7 +45,9 @@ class ApplicationController < ActionController::Base
   end
 
   def error_404; error 404; end
+
   def error_410; error 410; end
+
   def error_503(e); error(503, e); end
 
   def error(status_code, exception = nil)
@@ -55,7 +57,7 @@ class ApplicationController < ActionController::Base
 
   def set_expiry(duration = 30.minutes)
     unless Rails.env.development?
-      expires_in(duration, :public => true)
+      expires_in(duration, public: true)
     end
   end
 

@@ -1,9 +1,8 @@
 require 'test_helper'
 
 describe ChangedDocumentsPaginationPresenter do
-
   def mock_view_context
-    stub("View context", :latest_changes_path => "/somewhere")
+    stub("View context", latest_changes_path: "/somewhere")
   end
 
   def build_presenter_for_subtopic(total: 100, start: 0, page_size: 50, view_context: mock_view_context)
@@ -95,7 +94,7 @@ describe ChangedDocumentsPaginationPresenter do
     it 'returns a path to the next page' do
       presenter = build_presenter_for_subtopic(view_context: @view_context)
 
-      @view_context.expects(:latest_changes_path).with(:start => 50)
+      @view_context.expects(:latest_changes_path).with(start: 50)
         .returns("/a/path")
       assert_equal '/a/path', presenter.next_page_path
     end
@@ -104,7 +103,7 @@ describe ChangedDocumentsPaginationPresenter do
       presenter = build_presenter_for_subtopic(view_context: @view_context,
         page_size: 20)
 
-      @view_context.expects(:latest_changes_path).with(:count => 20, :start => 20)
+      @view_context.expects(:latest_changes_path).with(count: 20, start: 20)
         .returns("/a/path")
       assert_equal '/a/path', presenter.next_page_path
     end
@@ -119,7 +118,7 @@ describe ChangedDocumentsPaginationPresenter do
       presenter = build_presenter_for_subtopic(view_context: @view_context,
         start: 100, total: 150)
 
-      @view_context.expects(:latest_changes_path).with(:start => 50)
+      @view_context.expects(:latest_changes_path).with(start: 50)
         .returns("/a/path")
       assert_equal '/a/path', presenter.previous_page_path
     end
@@ -128,7 +127,7 @@ describe ChangedDocumentsPaginationPresenter do
       presenter = build_presenter_for_subtopic(view_context: @view_context,
         page_size: 20, start: 40)
 
-      @view_context.expects(:latest_changes_path).with(:count => 20, :start => 20)
+      @view_context.expects(:latest_changes_path).with(count: 20, start: 20)
         .returns("/a/path")
       assert_equal '/a/path', presenter.previous_page_path
     end

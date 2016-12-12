@@ -28,7 +28,7 @@ describe EmailSignup do
           "topics" => ["uuid-888"]
         },
       ).returns(OpenStruct.new(
-        subscriber_list: OpenStruct.new(subscription_url: "http://govdelivery_signup_url"))
+                  subscriber_list: OpenStruct.new(subscription_url: "http://govdelivery_signup_url"))
       )
 
       assert email_signup.save

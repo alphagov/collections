@@ -31,13 +31,11 @@ Given(/^that there are curated second level browse pages$/) do
       content_id: 'judges-content-id',
       title: 'Judges',
       base_path: '/browse/crime-and-justice/judges',
-      content_id: "2",
     },
     {
       content_id: 'courts-content-id',
       title: 'Courts',
       base_path: '/browse/crime-and-justice/courts',
-      content_id: "1",
     }
   ]
 
@@ -115,14 +113,13 @@ def top_level_browse_pages
 end
 
 def add_browse_pages
-  content_store_has_item '/browse', { links: {
+  content_store_has_item '/browse', links: {
     top_level_browse_pages: top_level_browse_pages
-  }}
+  }
 end
 
-def add_first_level_browse_pages(child_pages: second_level_browse_pages, order_type: order_type)
-  content_store_has_item('/browse/crime-and-justice', {
-    base_path: '/browse/crime-and-justice',
+def add_first_level_browse_pages(child_pages:, order_type:)
+  content_store_has_item('/browse/crime-and-justice', base_path: '/browse/crime-and-justice',
     links: {
       top_level_browse_pages: top_level_browse_pages,
       second_level_browse_pages: child_pages,
@@ -130,13 +127,11 @@ def add_first_level_browse_pages(child_pages: second_level_browse_pages, order_t
     details: {
       second_level_ordering: order_type,
       ordered_second_level_browse_pages: child_pages.map { |page| page[:content_id] }
-    },
-  })
+    })
 end
 
 def add_second_level_browse_pages(second_level_browse_pages)
-  content_store_has_item '/browse/crime-and-justice/judges', {
-    content_id: 'judges-content-id',
+  content_store_has_item '/browse/crime-and-justice/judges', content_id: 'judges-content-id',
     title: 'Judges',
     base_path: '/browse/crime-and-justice/judges',
     links: {
@@ -149,5 +144,4 @@ def add_second_level_browse_pages(second_level_browse_pages)
       }],
       related_topics: [{ title: 'A linked topic', base_path: '/browse/linked-topic' }]
     }
-  }
 end

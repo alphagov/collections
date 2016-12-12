@@ -78,9 +78,9 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
     end
 
     # And I should see the curated content for the subtopic
-    assert page.has_link?("Oil rig staffing", :href => "/oil-rig-staffing")
-    assert page.has_link?("Oil rig safety requirements", :href => "/oil-rig-safety-requirements")
-    assert page.has_link?("Undersea piping restrictions", :href => "/undersea-piping-restrictions")
+    assert page.has_link?("Oil rig staffing", href: "/oil-rig-staffing")
+    assert page.has_link?("Oil rig safety requirements", href: "/oil-rig-safety-requirements")
+    assert page.has_link?("Undersea piping restrictions", href: "/undersea-piping-restrictions")
 
     refute page.has_link?("North sea shipping lanes")
 
@@ -110,16 +110,16 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
     end
 
     # And I should see all content for the subtopic
-    assert page.has_link?("Oil rig staffing", :href => "/oil-rig-staffing")
-    assert page.has_link?("Oil rig safety requirements", :href => "/oil-rig-safety-requirements")
-    assert page.has_link?("North sea shipping lanes", :href => "/north-sea-shipping-lanes")
-    assert page.has_link?("Undersea piping restrictions", :href => "/undersea-piping-restrictions")
+    assert page.has_link?("Oil rig staffing", href: "/oil-rig-staffing")
+    assert page.has_link?("Oil rig safety requirements", href: "/oil-rig-safety-requirements")
+    assert page.has_link?("North sea shipping lanes", href: "/north-sea-shipping-lanes")
+    assert page.has_link?("Undersea piping restrictions", href: "/undersea-piping-restrictions")
 
     assert page.has_selector?(shared_component_selector('breadcrumbs'))
   end
 
   it "renders a beta subtopic" do
-    content_store_has_item("/topic/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore", { "phase" => "beta" }))
+    content_store_has_item("/topic/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore", "phase" => "beta"))
     stub_topic_organisations('oil-and-gas/offshore', 'content-id-for-offshore')
 
     visit "/topic/oil-and-gas/offshore"
