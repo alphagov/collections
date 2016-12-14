@@ -12,8 +12,8 @@ Given(/^there is latest content for a subtopic$/) do
   ).map.with_index do |slug, i|
     {
       "latest_change_note" => "This has changed",
-      "public_timestamp" => (i+1).hours.ago.iso8601,
-      "title" => "#{slug.titleize}",
+      "public_timestamp" => (i + 1).hours.ago.iso8601,
+      "title" => slug.titleize.to_s,
       "link" => "/government/publications/#{slug}",
       "index" => "government",
       "_id" => "/government/publications/#{slug}",
@@ -27,11 +27,9 @@ Given(/^there is latest content for a subtopic$/) do
       filter_topic_content_ids: ['content-id-for-fields-and-wells'],
       order: "-public_timestamp",
     )
-  ).returns({
-    "results" => @stubbed_rummager_documents,
+  ).returns("results" => @stubbed_rummager_documents,
     "start" => 0,
-    "total" => @stubbed_rummager_documents.size,
-  })
+    "total" => @stubbed_rummager_documents.size)
 end
 
 When(/^I view the latest changes page for that subtopic$/) do
@@ -40,8 +38,8 @@ end
 
 Then(/^I see a date\-ordered list of content with change notes$/) do
   @stubbed_rummager_documents.each_with_index do |document, index|
-    within(".browse-container li:nth-of-type(#{index+1})") do
-      assert page.has_selector?("h3 a[href='#{document["link"]}']", text: document["title"])
+    within(".browse-container li:nth-of-type(#{index + 1})") do
+      assert page.has_selector?("h3 a[href='#{document['link']}']", text: document["title"])
       assert page.has_content?(document["latest_change_note"]) if document["latest_change_note"]
       assert page.has_selector?("time") if document["public_updated_at"]
     end

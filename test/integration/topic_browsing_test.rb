@@ -1,7 +1,6 @@
 require 'integration_test_helper'
 
 class TopicBrowsingTest < ActionDispatch::IntegrationTest
-
   def oil_and_gas_topic_item(params = {})
     base = {
       base_path: "/topic/oil-and-gas",
@@ -16,7 +15,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   it "is possible to visit the topic index page" do
-    content_store_has_item("/topic", {
+    content_store_has_item("/topic",
       base_path: "/topic",
       title: "Topics",
       format: "topic",
@@ -29,8 +28,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
             base_path: "/topic/oil-and-gas",
           },
         ],
-      }
-    })
+      })
 
     visit "/topic"
 
@@ -40,8 +38,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   it "renders a topic tag page and list its subtopics" do
-    content_store_has_item("/topic/oil-and-gas", oil_and_gas_topic_item.merge({
-      :links => {
+    content_store_has_item("/topic/oil-and-gas", oil_and_gas_topic_item.merge(links: {
         "children" => [
           {
             "title" => "Wells",
@@ -56,8 +53,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
             "base_path" => "/topic/oil-and-gas/offshore",
           },
         ],
-      }
-    }))
+      }))
 
     visit "/topic/oil-and-gas"
     assert page.has_title?("Oil and gas - GOV.UK")
@@ -82,9 +78,10 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   it "renders a beta topic" do
-    content_store_has_item("/topic/oil-and-gas", oil_and_gas_topic_item.merge(
-      "phase" => "beta"
-    ))
+    content_store_has_item(
+      "/topic/oil-and-gas",
+      oil_and_gas_topic_item.merge("phase" => "beta")
+    )
 
     visit "/topic/oil-and-gas"
 

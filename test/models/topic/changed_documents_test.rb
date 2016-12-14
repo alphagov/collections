@@ -55,8 +55,8 @@ describe Topic::ChangedDocuments do
         'pay-psa',
         'employee-tax-codes',
         'payroll-annual-reporting',
-      ], :page_size => 3)
-      @pagination_options = {:count => 3}
+      ], page_size: 3)
+      @pagination_options = { count: 3 }
       @documents = Topic::ChangedDocuments.new(@subtopic_content_id, @pagination_options)
     end
 
@@ -86,11 +86,9 @@ describe Topic::ChangedDocuments do
 
       Services.rummager.stubs(:search).with(
         has_entries(filter_topic_content_ids: ['paye-content-id'])
-      ).returns({
-        "results" => [result],
+      ).returns("results" => [result],
         "start" => 0,
-        "total" => 1,
-      })
+        "total" => 1)
 
       documents = Topic::ChangedDocuments.new("paye-content-id")
 

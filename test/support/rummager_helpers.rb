@@ -21,10 +21,10 @@ module RummagerHelpers
 
   def rummager_document_for_slug(slug, updated_at = 1.hour.ago, format = "guide")
     {
-      "format" => "#{format}",
+      "format" => format.to_s,
       "latest_change_note" => "This has changed",
       "public_timestamp" => updated_at.iso8601,
-      "title" => "#{slug.titleize.humanize}",
+      "title" => slug.titleize.humanize.to_s,
       "link" => "/#{slug}",
       "index" => "/",
       "_id" => "/#{slug}",
@@ -46,11 +46,9 @@ module RummagerHelpers
           filter_topic_content_ids: [subtopic_content_id],
           order: "-public_timestamp",
         )
-      ).returns({
-        "results" => results_page,
+      ).returns("results" => results_page,
         "start" => start,
-        "total" => results.size,
-      })
+        "total" => results.size)
     end
   end
 
@@ -67,11 +65,9 @@ module RummagerHelpers
           count: page_size,
           filter_topic_content_ids: [subtopic_content_id],
         )
-      ).returns({
-        "results" => results_page,
+      ).returns("results" => results_page,
         "start" => start,
-        "total" => results.size,
-      })
+        "total" => results.size)
     end
   end
 
@@ -88,11 +84,9 @@ module RummagerHelpers
           count: page_size,
           filter_mainstream_browse_page_content_ids: [browse_page_content_id],
         )
-      ).returns({
-        "results" => results_page,
+      ).returns("results" => results_page,
         "start" => start,
-        "total" => results.size,
-      })
+        "total" => results.size)
     end
   end
 

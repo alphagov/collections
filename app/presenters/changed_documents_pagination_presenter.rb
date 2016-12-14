@@ -1,5 +1,4 @@
 class ChangedDocumentsPaginationPresenter
-
   def initialize(changed_documents, view_context)
     @changed_documents = changed_documents
     @view_context = view_context
@@ -11,7 +10,7 @@ class ChangedDocumentsPaginationPresenter
 
   def current_page_number
     # Add 1 because page numbers are 1-indexed
-    ( @changed_documents.start.to_f / @changed_documents.page_size.to_f ).ceil + 1
+    (@changed_documents.start.to_f / @changed_documents.page_size.to_f).ceil + 1
   end
 
   def next_page?

@@ -29,7 +29,6 @@ describe MainstreamBrowsePage do
     end
 
     describe "#second_level_pages_curated?" do
-
       it "is true when second_level_ordering == curated" do
         @api_data["details"]["second_level_ordering"] = "curated"
         assert @page.second_level_pages_curated?
@@ -65,10 +64,7 @@ describe MainstreamBrowsePage do
           "description" => "All about bar",
           "base_path" => "/browse/bar",
         }
-        @api_data["details"]["ordered_second_level_browse_pages"] = [
-          "1",
-          "2",
-        ]
+        @api_data["details"]["ordered_second_level_browse_pages"] = %w(1 2)
         @api_data["links"]["second_level_browse_pages"] = [
           @second_level_browse_page_2,
           @second_level_browse_page_1,
@@ -93,22 +89,21 @@ describe MainstreamBrowsePage do
     end
   end
 
-  [
-    "top_level_browse_pages",
-    "second_level_browse_pages",
-  ].each do |link_type|
+  %w(
+top_level_browse_pages
+second_level_browse_pages).each do |link_type|
     describe link_type do
       it "returns the title, base_path and description for all linked items" do
         @api_data["links"][link_type] = [
           {
-            "title"=>"Foo",
+            "title" => "Foo",
             "description" => "All about foo",
-            "base_path"=>"/browse/foo",
+            "base_path" => "/browse/foo",
           },
           {
-            "title"=>"Bar",
+            "title" => "Bar",
             "description" => "All about bar",
-            "base_path"=>"/browse/bar",
+            "base_path" => "/browse/bar",
           },
         ]
 
@@ -138,12 +133,12 @@ describe MainstreamBrowsePage do
     @api_data["links"]["second_level_browse_pages"] = [
       {
         "description" => "All about foo",
-        "base_path"=>"/browse/foo",
+        "base_path" => "/browse/foo",
       },
       {
-        "title"=>"Bar",
+        "title" => "Bar",
         "description" => "All about bar",
-        "base_path"=>"/browse/bar",
+        "base_path" => "/browse/bar",
       },
     ]
 
@@ -157,9 +152,9 @@ describe MainstreamBrowsePage do
   describe "active_top_level_browse_page" do
     it "returns the title, base_path and description for the linked item" do
       @api_data["links"]["active_top_level_browse_page"] = [{
-        "title"=>"Foo",
+        "title" => "Foo",
         "description" => "All about foo",
-        "base_path"=>"/browse/foo",
+        "base_path" => "/browse/foo",
       }]
 
       assert_equal 'Foo', @page.active_top_level_browse_page.title
@@ -181,14 +176,14 @@ describe MainstreamBrowsePage do
     it "returns the title, base_path and description for all related topics" do
       @api_data["links"]["related_topics"] = [
         {
-          "title"=>"Foo",
+          "title" => "Foo",
           "description" => "All about foo",
-          "base_path"=>"/browse/foo",
+          "base_path" => "/browse/foo",
         },
         {
-          "title"=>"Bar",
+          "title" => "Bar",
           "description" => "All about bar",
-          "base_path"=>"/browse/bar",
+          "base_path" => "/browse/bar",
         },
       ]
 
@@ -200,14 +195,14 @@ describe MainstreamBrowsePage do
     it "returns related topics alphabetised" do
       @api_data["links"]["related_topics"] = [
         {
-          "title"=>"Foo",
+          "title" => "Foo",
         },
         {
-          "title"=>"Bar",
+          "title" => "Bar",
         },
       ]
 
-      assert_equal ['Bar', 'Foo'], @page.related_topics.map(&:title)
+      assert_equal %w(Bar Foo), @page.related_topics.map(&:title)
     end
 
     it "returns empty array with no items" do
@@ -240,7 +235,7 @@ describe MainstreamBrowsePage do
     end
 
     it "should pass the groups data when constructing" do
-      ListSet.expects(:new).with(anything(), anything(), :some_data).returns(:a_lists_instance)
+      ListSet.expects(:new).with(anything, anything, :some_data).returns(:a_lists_instance)
       @api_data["details"]["groups"] = :some_data
 
       assert_equal :a_lists_instance, @page.lists

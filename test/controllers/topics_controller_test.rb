@@ -13,7 +13,7 @@ describe TopicsController do
       it "sets expiry headers for 30 minutes" do
         get :topic, topic_slug: "oil-and-gas"
 
-        assert_equal "max-age=1800, public",  response.headers["Cache-Control"]
+        assert_equal "max-age=1800, public", response.headers["Cache-Control"]
       end
     end
 
@@ -30,15 +30,14 @@ describe TopicsController do
       setup do
         content_store_has_item(
           "/topic/oil-and-gas/wells",
-          content_item_for_base_path("/topic/oil-and-gas/wells").merge({
+          content_item_for_base_path("/topic/oil-and-gas/wells").merge(
             "content_id" => 'content-id-for-wells',
             "links" => {
               "parent" => [{
                 "title" => "Oil and Gas",
                 "base_path" => "/oil-and-gas",
               }],
-            },
-          }),
+            }),
         )
 
         ListSet.stubs(:new).returns(
@@ -59,7 +58,7 @@ describe TopicsController do
       it "sets expiry headers for 30 minutes" do
         get :subtopic, topic_slug: "oil-and-gas", subtopic_slug: "wells"
 
-        assert_equal "max-age=1800, public",  response.headers["Cache-Control"]
+        assert_equal "max-age=1800, public", response.headers["Cache-Control"]
       end
     end
 

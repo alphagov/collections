@@ -12,13 +12,13 @@ gem 'logstasher', '0.6.2' # 0.6.5+ changes the JSON schema used for events
 gem 'govuk_navigation_helpers', '~> 2.0'
 
 if ENV['SLIMMER_DEV']
-  gem 'slimmer', :path => '../slimmer'
+  gem 'slimmer', path: '../slimmer'
 else
   gem 'slimmer', '10.0.0'
 end
 
 if ENV['API_DEV']
-  gem 'gds-api-adapters', :path => '../gds-api-adapters'
+  gem 'gds-api-adapters', path: '../gds-api-adapters'
 else
   gem 'gds-api-adapters', '~> 34.1.0'
 end

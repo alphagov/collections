@@ -27,7 +27,7 @@ class ListSet
     @group_data.any?
   end
 
-  private
+private
 
   def lists
     if @group_data.any?
@@ -40,31 +40,30 @@ class ListSet
   def a_to_z_list
     [ListSet::List.new(
       "A to Z",
-      content_tagged_to_tag.reject do |content|
-        excluded_formats.include? content.format
-      end.sort_by(&:title)
+      content_tagged_to_tag
+        .reject { |content| excluded_formats.include? content.format }
+        .sort_by(&:title)
     )]
   end
 
   def curated_list
-    @group_data.map do |group|
+    curated_data = @group_data.map do |group|
       contents = group["contents"].map do |base_path|
-        content_tagged_to_tag.find do |content|
-          content.base_path == base_path
-        end
-      end.compact
+        content_tagged_to_tag.find { |content| content.base_path == base_path }
+      end
 
-      ListSet::List.new(group["name"], contents) if contents.any?
-    end.compact
+      ListSet::List.new(group["name"], contents.compact) if contents.any?
+    end
+
+    curated_data.compact
   end
 
   def content_tagged_to_tag
-    @content_tagged_to_tag ||= RummagerSearch.new({
+    @content_tagged_to_tag ||= RummagerSearch.new(
       :start => 0,
       :count => RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       filter_name => [@tag_content_id],
-      :fields => %w(title link format),
-    })
+      :fields => %w(title link format))
   end
 
   def filter_name
