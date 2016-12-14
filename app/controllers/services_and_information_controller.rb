@@ -5,6 +5,8 @@ class ServicesAndInformationController < ApplicationController
     links_grouper = ServicesAndInformationLinksGrouper.new(params[:organisation_id])
     @navigation_helpers = GovukNavigationHelpers::NavigationHelper.new(@content_item)
     @organisation = @content_item.dig("links", "parent", 0)
-    @grouped_links = links_grouper.parsed_grouped_links
+    @grouped_links = links_grouper.parsed_grouped_links.reject do |group|
+      group["title"].nil?
+    end
   end
 end
