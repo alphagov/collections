@@ -1,7 +1,7 @@
 #wrapper #content.email-signup-new {
   @extend %site-width-container;
 
-  @include media(tablet){
+  @include media(tablet) {
     margin-top: 30px;
   }
 
@@ -9,7 +9,7 @@
     @include heading-48;
     font-weight: bold;
 
-    @include media(tablet){
+    @include media(tablet) {
       width: $two-thirds;
     }
 
@@ -28,7 +28,7 @@
       @include core-19;
       margin: 15px 0 10px;
 
-      @include media(tablet){
+      @include media(tablet) {
         margin: 30px 0;
       }
     }

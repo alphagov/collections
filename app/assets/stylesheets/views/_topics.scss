@@ -1,6 +1,8 @@
+$white: #fff;
+
 .topics-page {
 
-  header.page-header {
+  .page-header {
     .full-width {
       padding: 20px 30px;
       margin: 0;
@@ -44,7 +46,7 @@
         @extend %contain-floats;
         padding-bottom: $gutter;
 
-        @include media(tablet){
+        @include media(tablet) {
           float: left;
           width: $two-thirds;
         }
@@ -54,28 +56,31 @@
           clear: left;
           width: auto;
           min-width: 60px;
-          @include media(tablet){
+
+          @include media(tablet) {
             padding-right: $gutter-one-third;
           }
         }
+
         dd {
           float: left;
           width: 57%;
-          @include media(desktop){
+
+          @include media(desktop) {
             width: 80%;
           }
         }
       }
 
       .heading {
-        @include media(tablet){
+        @include media(tablet) {
           float: left;
           width: $two-thirds;
         }
       }
 
       .latest-subscribe {
-        @include media(tablet){
+        @include media(tablet) {
           float: right;
           width: $one-third;
         }
@@ -83,7 +88,7 @@
         @include core-14;
 
         ul {
-          @include media(tablet){
+          @include media(tablet) {
             // align with the left edge of the search box
             margin-left: 18px;
           }
@@ -118,11 +123,12 @@
   }
 
   .browse-container {
-    background-color: #fff;
+    background-color: $white;
     min-height: 500px;
     padding: 0 30px 45px 30px;
 
-    h2, h3 {
+    h2,
+    h3 {
       @include bold-19;
       margin-bottom: 0;
     }
@@ -172,13 +178,13 @@
         text-decoration: none;
       }
 
-      li a.other {
+      li .other {
         text-decoration: underline;
       }
     }
 
     &.with-title ul {
-      @include media(desktop){
+      @include media(desktop) {
         margin-left: 20.5em;
       }
     }
