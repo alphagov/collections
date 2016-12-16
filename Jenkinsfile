@@ -51,6 +51,10 @@ node {
       govuk.rubyLinter()
     }
 
+    stage("sasslinter") {
+      govuk.sassLinter()
+    }
+
     stage("Precompile assets") {
       govuk.precompileAssets()
     }
