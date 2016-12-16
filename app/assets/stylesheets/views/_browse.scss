@@ -102,8 +102,6 @@ $gutter-one-sixth: $gutter / 6;
       }
     }
 
-
-
     .root-pane,
     .section-pane {
       min-height: 20px;
@@ -119,68 +117,66 @@ $gutter-one-sixth: $gutter / 6;
         display: none;
       }
 
-      ul {
-        li {
-          list-style: none;
-          position: relative;
+      ul li {
+        list-style: none;
+        position: relative;
+      }
+
+      ul a {
+        position: relative;
+        display: block;
+        @include core-19;
+        text-decoration: none;
+        padding: 12px 25px 8px 0;
+
+        @include media(tablet) {
+          padding: 12px $gutter 8px $gutter-half;
+          @include core-16;
         }
 
-        a {
-          position: relative;
-          display: block;
-          @include core-19;
-          text-decoration: none;
-          padding: 12px 25px 8px 0;
+        &:hover {
+          background: $panel-colour;
+          color: $link-colour;
+        }
 
-          @include media(tablet) {
-            padding: 12px $gutter 8px $gutter-half;
-            @include core-16;
-          }
+        &:after {
+          position: absolute;
+          top: 50%;
+          margin-top: -8px;
+          right: $gutter-one-third;
+          float: right;
+          content: "\203A";
+        }
 
-          &:hover {
-            background: $panel-colour;
-            color: $link-colour;
-          }
+        &.loading {
+          cursor: default;
+          background: transparent image-url("loading.gif") 95% 50% no-repeat;
 
           &:after {
-            position: absolute;
-            top: 50%;
-            margin-top: -8px;
-            right: $gutter-one-third;
-            float: right;
-            content: "\203A";
-          }
-
-          &.loading {
-            cursor: default;
-            background: transparent image-url("loading.gif") 95% 50% no-repeat;
-
-            &:after {
-              content: "";
-            }
-          }
-
-          h3 {
-            font-weight: bold;
-          }
-
-          p {
-            color: $text-colour;
-            @include core-14;
+            content: "";
           }
         }
 
-        .active a {
+        h3 {
+          font-weight: bold;
+        }
+
+        p {
+          color: $text-colour;
+          @include core-14;
+        }
+      }
+
+      ul .active a {
+        background: $link-colour;
+        color: $white;
+
+        &:hover {
           background: $link-colour;
+        }
+
+        p {
           color: $white;
-
-          &:hover {
-            background: $link-colour;
-          }
-
-          p {
-            color: $white;
-          }
         }
       }
     }
@@ -256,27 +252,23 @@ $gutter-one-sixth: $gutter / 6;
       ul {
         padding: 0;
         list-style: none;
+      }
 
-        li {
-          padding: 0;
-          margin: 0;
+      ul li {
+        padding: 0;
+        margin: 0;
+      }
 
-          a {
-            @include bold-19;
-            display: block;
-            text-decoration: none;
-            padding: $gutter-one-third $gutter $gutter-one-third 0;
-          }
-        }
+      ul li a {
+        @include bold-19;
+        display: block;
+        text-decoration: none;
+        padding: $gutter-one-third $gutter $gutter-one-third 0;
       }
 
       .curated-list {
-        ul {
-          li {
-            a {
-              padding: $gutter-one-sixth $gutter $gutter-one-sixth 0;
-            }
-          }
+        ul li a {
+          padding: $gutter-one-sixth $gutter $gutter-one-sixth 0;
         }
       }
 
