@@ -1,4 +1,4 @@
-$gutter-one-sixth: $gutter/6;
+$gutter-one-sixth: $gutter / 6;
 
 main.browse {
   .browse-panes {
@@ -7,7 +7,7 @@ main.browse {
     padding-bottom: $gutter;
     position: relative;
 
-    @include media(tablet){
+    @include media(tablet) {
       padding-top: $gutter;
     }
 
@@ -15,19 +15,21 @@ main.browse {
       #root {
         display: none; // hide on mobile
 
-        @include media(tablet){
+        @include media(tablet) {
           display: block;
           float: right;
           width: 25%;
         }
       }
+
       #section {
-        @include media(tablet){
+        @include media(tablet) {
           float: right;
           width: 30%;
           margin-right: 45%;
         }
-        @include media(desktop){
+
+        @include media(desktop) {
           width: 35%;
           margin-right: 40%;
         }
@@ -35,32 +37,38 @@ main.browse {
     }
 
     &.subsection {
-      #root, #section {
+      #root,
+      #section {
         display: none; // hide on mobile
 
-        @include media(tablet){
+        @include media(tablet) {
           display: block;
           float: right;
           width: 25%;
         }
 
         color: $secondary-text-colour;
-        a, p {
+
+        a,
+        p {
           color: $secondary-text-colour;
         }
       }
+
       #section {
-        @include media(tablet){
+        @include media(tablet) {
           margin-left: -18%;
           width: 30%;
         }
-        @include media(desktop){
+
+        @include media(desktop) {
           margin-left: -13%;
           width: 25%;
         }
       }
+
       #subsection {
-        @include media(tablet){
+        @include media(tablet) {
           float: right;
           width: 50%;
           margin-right: 13%;
@@ -71,22 +79,24 @@ main.browse {
     .pane-inner {
       padding-bottom: $gutter;
 
-      @include media(tablet){
+      @include media(tablet) {
         border-left: 1px solid $border-colour;
         min-height: 950px;
       }
-      @include media(desktop){
-        min-height:700px;
+
+      @include media(desktop) {
+        min-height: 700px;
       }
     }
 
-    h1, h2 {
+    h1,
+    h2 {
       @include bold-27;
       margin-bottom: $gutter-one-third;
       margin-top: $gutter-one-third;
       outline: none;
 
-      @include media(tablet){
+      @include media(tablet) {
         margin-top: 0;
         margin-bottom: $gutter-half;
       }
@@ -94,17 +104,21 @@ main.browse {
 
 
 
-    #root, #section {
+    #root,
+    #section {
       min-height: 20px;
 
-      h1, h2 {
-        @include media(tablet){
+      h1,
+      h2 {
+        @include media(tablet) {
           padding-left: $gutter-half;
         }
       }
+
       .sort-order {
         display: none;
       }
+
       ul {
         li {
           list-style: none;
@@ -118,7 +132,7 @@ main.browse {
           text-decoration: none;
           padding: 12px 25px 8px 0;
 
-          @include media(tablet){
+          @include media(tablet) {
             padding: 12px $gutter 8px $gutter-half;
             @include core-16;
           }
@@ -134,7 +148,7 @@ main.browse {
             margin-top: -8px;
             right: $gutter-one-third;
             float: right;
-            content:"\203A";
+            content: "\203A";
           }
 
           &.loading {
@@ -163,25 +177,29 @@ main.browse {
           &:hover {
             background: $link-colour;
           }
+
           p {
             color: $white;
           }
         }
       }
     }
+
     #section {
       z-index: 2;
       background: $white;
       position: relative;
 
-      @include media(desktop){
+      @include media(desktop) {
         &.with-sort {
           .pane-inner {
             padding-left: $gutter;
           }
+
           .pane-inner.alphabetical {
             padding-left: 96px;
           }
+
           .sort-order {
             @include bold-27;
             float: left;
@@ -193,6 +211,7 @@ main.browse {
         }
       }
     }
+
     #subsection {
       @include media(tablet) {
         .pane-inner {
@@ -223,7 +242,8 @@ main.browse {
 
       .sort-order {
         display: none;
-        @include media(tablet){
+
+        @include media(tablet) {
           display: block;
           @include bold-27;
           float: left;

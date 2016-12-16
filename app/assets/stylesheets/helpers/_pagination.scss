@@ -1,7 +1,7 @@
 .previous-next-navigation {
   position: relative;
   overflow: hidden;
-  margin-top: $gutter*2;
+  margin-top: $gutter * 2;
   width: $full-width;
   padding-left: 0;
 
@@ -18,8 +18,9 @@
       text-align: right;
 
       a {
-        padding: $gutter-half $gutter+5px $gutter-half 0;
+        padding: $gutter-half $gutter + 5px $gutter-half 0;
       }
+
       a:before {
         background: transparent image-url("arrow-sprite-2B8CC4.png") no-repeat -102px -11px;
         margin: -4px -32px 0 0;
@@ -30,10 +31,12 @@
         content: " ";
       }
     }
+
     &.previous {
       a {
-          padding: $gutter-half 0 $gutter-half $gutter+5px;
+        padding: $gutter-half 0 $gutter-half $gutter + 5px;
       }
+
       a:before {
         background: transparent image-url("arrow-sprite-2B8CC4.png") no-repeat -20px -11px;
         margin: -4px 0 0 -32px;
@@ -54,13 +57,16 @@
         @include core-14;
         padding: 6px 0;
       }
+
       &:focus .page-numbers,
       &:hover .page-numbers {
         text-decoration: underline;
       }
+
       &:hover {
         background: $grey-4;
       }
+
       &:active {
         background: $grey-3;
       }
