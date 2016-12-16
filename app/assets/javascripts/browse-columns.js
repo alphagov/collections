@@ -22,7 +22,7 @@
     }
 
     if(this.$subsection.length === 0){
-      this.$subsection = $('<div id="subsection" class="pane" />').hide();
+      this.$subsection = $('<div id="subsection" class="subsection-pane pane" />').hide();
       this.$el.prepend(this.$subsection);
     } else {
       this.$subsection.show();

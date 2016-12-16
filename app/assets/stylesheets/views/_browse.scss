@@ -67,7 +67,7 @@ $gutter-one-sixth: $gutter / 6;
         }
       }
 
-      #subsection {
+      .subsection-pane {
         @include media(tablet) {
           float: right;
           width: 50%;
@@ -212,7 +212,7 @@ $gutter-one-sixth: $gutter / 6;
       }
     }
 
-    #subsection {
+    .subsection-pane {
       @include media(tablet) {
         .pane-inner {
           &.a-to-z {
