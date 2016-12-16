@@ -1,7 +1,7 @@
 .wrapper {
   border-bottom: 10px solid $govuk-blue;
 
-  #content {
+  .content {
     display: block;
     @include outer-block;
   }
