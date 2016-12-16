@@ -1,4 +1,4 @@
-#wrapper #content.email-signup-new {
+.wrapper #content.email-signup-new {
   @extend %site-width-container;
 
   @include media(tablet) {
