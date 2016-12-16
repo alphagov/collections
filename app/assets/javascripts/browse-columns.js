@@ -16,7 +16,7 @@
     this.animateSpeed = 330;
 
     if(this.$section.length === 0){
-      this.$section = $('<div id="section" class="pane with-sort" />');
+      this.$section = $('<div id="section" class="section-pane pane with-sort" />');
       this.$el.prepend(this.$section);
       this.$el.addClass('section');
     }

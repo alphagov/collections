@@ -22,7 +22,7 @@ $gutter-one-sixth: $gutter / 6;
         }
       }
 
-      #section {
+      .section-pane {
         @include media(tablet) {
           float: right;
           width: 30%;
@@ -38,7 +38,7 @@ $gutter-one-sixth: $gutter / 6;
 
     &.subsection {
       .root-pane,
-      #section {
+      .section-pane {
         display: none; // hide on mobile
 
         @include media(tablet) {
@@ -55,7 +55,7 @@ $gutter-one-sixth: $gutter / 6;
         }
       }
 
-      #section {
+      .section-pane {
         @include media(tablet) {
           margin-left: -18%;
           width: 30%;
@@ -105,7 +105,7 @@ $gutter-one-sixth: $gutter / 6;
 
 
     .root-pane,
-    #section {
+    .section-pane {
       min-height: 20px;
 
       h1,
@@ -185,7 +185,7 @@ $gutter-one-sixth: $gutter / 6;
       }
     }
 
-    #section {
+    .section-pane {
       z-index: 2;
       background: $white;
       position: relative;
