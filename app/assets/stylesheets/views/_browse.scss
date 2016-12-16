@@ -12,7 +12,7 @@ main.browse {
     }
 
     &.section {
-      #root {
+      .root-pane {
         display: none; // hide on mobile
 
         @include media(tablet) {
@@ -37,7 +37,7 @@ main.browse {
     }
 
     &.subsection {
-      #root,
+      .root-pane,
       #section {
         display: none; // hide on mobile
 
@@ -104,7 +104,7 @@ main.browse {
 
 
 
-    #root,
+    .root-pane,
     #section {
       min-height: 20px;
 
