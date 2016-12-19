@@ -13,12 +13,12 @@
 <% end %>
 
 <div class="browse-panes subsection" data-state="subsection">
-  <div id="subsection" class="pane with-sort">
+  <div id="subsection" class="subsection-pane pane with-sort">
     <%= render 'links' %>
   </div>
 
 
-  <div id="section" class="pane">
+  <div id="section" class="section-pane pane">
     <%= render 'second_level_browse_pages',
       title: @page.active_top_level_browse_page.title,
       second_level_browse_pages: @page.second_level_browse_pages,

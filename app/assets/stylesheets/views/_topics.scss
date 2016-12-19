@@ -90,25 +90,25 @@
             // align with the left edge of the search box
             margin-left: 18px;
           }
+        }
 
-          li {
-            display: block;
+        ul li {
+          display: block;
+        }
 
-            &.primary {
-              border-bottom: 1px solid $border-colour;
-              padding-bottom: 10px;
-              margin-bottom: 14px;
-            }
+        .primary {
+          border-bottom: 1px solid $border-colour;
+          padding-bottom: 10px;
+          margin-bottom: 14px;
+        }
 
-            &.email a {
-              background: image-url('mail-icon.png') 0 40% no-repeat;
-              padding-left: 28px;
+        .email a {
+          background: image-url('mail-icon.png') 0 40% no-repeat;
+          padding-left: 28px;
 
-              @include device-pixel-ratio() {
-                background-image: image-url('mail-icon-x2.png');
-                background-size: 20px 14px;
-              }
-            }
+          @include device-pixel-ratio() {
+            background-image: image-url('mail-icon-x2.png');
+            background-size: 20px 14px;
           }
         }
 

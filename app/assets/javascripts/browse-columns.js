@@ -16,13 +16,13 @@
     this.animateSpeed = 330;
 
     if(this.$section.length === 0){
-      this.$section = $('<div id="section" class="pane with-sort" />');
+      this.$section = $('<div id="section" class="section-pane pane with-sort" />');
       this.$el.prepend(this.$section);
       this.$el.addClass('section');
     }
 
     if(this.$subsection.length === 0){
-      this.$subsection = $('<div id="subsection" class="pane" />').hide();
+      this.$subsection = $('<div id="subsection" class="subsection-pane pane" />').hide();
       this.$el.prepend(this.$subsection);
     } else {
       this.$subsection.show();

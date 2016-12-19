@@ -12,9 +12,9 @@
 </head>
 
 <body>
-  <div id="wrapper">
+  <div class="wrapper" id="wrapper">
     <%= yield :breadcrumbs %>
-    <main id="content" role="main" class="<%= yield :page_class %>">
+    <main id="content" role="main" class="content <%= yield :page_class %>">
       <%= yield %>
     </main>
   </div>
