@@ -60,8 +60,13 @@ node {
     }
 
     stage("Run tests") {
+      govuk.setEnvar("USE_SIMPLECOV", "1")
       govuk.runRakeTask("default")
       govuk.runRakeTask("spec:javascript")
+    }
+
+    stage("Publish reports") {
+      step([$class: 'RcovPublisher', reportDir: "coverage/rcov"])
     }
 
     stage("Push release tag") {
