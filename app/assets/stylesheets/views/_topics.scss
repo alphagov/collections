@@ -2,7 +2,7 @@
 
   .page-header {
     .full-width {
-      padding: 20px 30px;
+      padding: 20px 0;
       margin: 0;
 
       @include media(mobile) {
@@ -123,7 +123,7 @@
   .browse-container {
     background-color: $page-colour;
     min-height: 500px;
-    padding: 0 30px 45px 30px;
+    padding: 0 0 45px 0;
 
     h2,
     h3 {
@@ -191,7 +191,7 @@
   .govuk-beta-label {
     padding-bottom: 10px;
     border-bottom: 1px solid $border-colour;
-    margin: 10px 30px;
+    margin: 10px 0;
 
     @include media(mobile) {
       margin: 5px 15px;

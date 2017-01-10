@@ -2,8 +2,6 @@ class ApplicationController < ActionController::Base
   include Slimmer::Template
   include Slimmer::GovukComponents
 
-  slimmer_template 'header_footer_only'
-
   protect_from_forgery with: :exception
 
   before_filter :set_expiry

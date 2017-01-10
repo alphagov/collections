@@ -8,7 +8,12 @@
 
 <% content_for :breadcrumbs do %>
   <%= render partial: 'govuk_component/breadcrumbs', locals: @navigation_helpers.breadcrumbs %>
-  <div class="header-context"><!-- Deliberately empty. This will prevent Static from adding a placeholder breadcrumb. --></div>
+  <div class="header-context">
+    <!--
+      Deliberately empty. This will prevent Static from adding a placeholder
+      breadcrumb.
+    -->
+  </div>
 <% end %>
 
 <header class="page-header group">
