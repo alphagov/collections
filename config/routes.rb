@@ -18,4 +18,6 @@ Collections::Application.routes.draw do
   post "/topic/:topic_slug/:subtopic_slug/email-signup", to: "email_signups#create"
 
   get "/government/organisations/:organisation_id/services-information", to: "services_and_information#index", as: :services_and_information
+
+  get '/alpha-taxonomy/:taxon_base_path', to: 'taxons#show'
 end

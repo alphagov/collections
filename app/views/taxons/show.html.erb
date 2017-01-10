@@ -1,0 +1,52 @@
+<div class="grid-row">
+  <div class="page-header">
+    <h1>
+      <% if parent_taxon.present? %>
+        <span class="sub-heading">
+          <%= link_to parent_taxon.title, parent_taxon.base_path %>
+        </span>
+      <% end %>
+      <%= taxon.title %>
+    </h1>
+
+    <p><%= taxon.description %></p>
+  </div>
+</div>
+
+<div class="grid-row">
+  <div class="full-width-column">
+    <nav role="navigation" class="child-topics-list">
+      <h2>In this section</h2>
+      <ul>
+        <% child_taxons.each do |child_taxon| %>
+          <li>
+            <h3>
+              <%= link_to child_taxon.title, child_taxon.base_path %>
+            </h3>
+            <p><%= child_taxon.description %></p>
+            <p>
+              <%= link_to "View #{child_taxon.title} content", child_taxon.base_path %>
+            </p>
+          </li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="parent-topic-contents">
+    <div class="topic-content">
+      <h2><%= taxon.title %> guidance</h2>
+
+      <ul>
+        <% tagged_content.each do |content_item| %>
+          <li>
+            <h3>
+              <%= link_to content_item.title, Plek.new.website_root + content_item.base_path %>
+            </h3>
+            <p><%= content_item.description %></p>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
