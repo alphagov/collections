@@ -14,9 +14,7 @@ class TaxonsController < ApplicationController
 private
 
   def new_navigaton_enabled?
-    Rails.env.test? ||
-      Rails.env.development? ||
-      ENV['ENABLE_NEW_NAVIGATION'] == 'yes'
+    ENV['ENABLE_NEW_NAVIGATION'] == 'yes'
   end
 
   def redirect_to_www

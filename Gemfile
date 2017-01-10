@@ -45,3 +45,5 @@ group :development, :test do
   gem 'jasmine-rails', '~> 0.12.1'
   gem 'govuk-lint'
 end
+
+gem 'dotenv-rails', groups: [:development, :test]
