@@ -7,7 +7,7 @@ class TaxonsController < ApplicationController
       parent_taxon: taxon.parent_taxon,
       child_taxons: taxon.child_taxons,
       navigation_helpers: navigation_helpers,
-      tagged_content: search.documents
+      tagged_content: TaggedContent.fetch(taxon.content_id)
     }
   end
 
@@ -19,15 +19,6 @@ private
 
   def redirect_to_www
     redirect_to Plek.find('www')
-  end
-
-  def search
-    RummagerSearch.new(
-      filter_taxons: [taxon.content_id],
-      start: 0,
-      count: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
-      fields: %w(title link)
-    )
   end
 
   def taxon
