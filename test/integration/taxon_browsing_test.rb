@@ -2,32 +2,7 @@ require 'integration_test_helper'
 
 class TaxonBrowsingTest < ActionDispatch::IntegrationTest
   include RummagerHelpers
-
-  def education_taxon(params = {})
-    base = {
-      content_id: 'student-finance-content-id',
-      title: 'Student finance',
-      description: 'Student finance content',
-      links: {
-        'parent_taxon' => [
-          'title' => 'Education and learning',
-          'base_path' => '/alpha-taxonomy/education'
-        ],
-        'child_taxons' => [
-          {
-            'title' => 'Student sponsorship',
-            'description' => 'Description of student sponsorship',
-            'base_path' => '/alpha-taxonomy/student-sponsorship'
-          },
-          {
-            'title' => 'Student loans',
-            'description' => 'Description of student loans',
-            'base_path' => '/alpha-taxonomy/student-loans'
-          }
-        ]
-      }
-    }.merge(params)
-  end
+  include TaxonHelpers
 
   def search_results
     [
@@ -46,7 +21,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
 
   before do
     @base_path = '/alpha-taxonomy/student-finance'
-    content_store_has_item(@base_path, education_taxon(base_path: @base_path))
+    content_store_has_item(@base_path, education_content_item(base_path: @base_path))
     @taxon = Taxon.find(@base_path)
     stub_content_for_taxon(@taxon.content_id, search_results)
   end
