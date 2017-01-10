@@ -13,6 +13,7 @@ class RummagerSearch
       timestamp = result["public_timestamp"].present? ? Time.parse(result["public_timestamp"]) : nil
       Document.new(
         result["title"],
+        result["description"],
         result["link"],
         timestamp,
         result["latest_change_note"],
@@ -35,5 +36,12 @@ private
     @_search_result ||= Services.rummager.search(@search_params)
   end
 
-  Document = Struct.new(:title, :base_path, :public_updated_at, :change_note, :format)
+  Document = Struct.new(
+    :title,
+    :description,
+    :base_path,
+    :public_updated_at,
+    :change_note,
+    :format
+  )
 end
