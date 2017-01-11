@@ -3,7 +3,6 @@ $gutter-one-sixth: $gutter / 6;
 .browse {
   .browse-panes {
     @extend %contain-floats;
-    @include inner-block;
     padding-bottom: $gutter;
     position: relative;
 

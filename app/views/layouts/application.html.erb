@@ -14,9 +14,11 @@
 <body>
   <div class="wrapper" id="wrapper">
     <%= yield :breadcrumbs %>
-    <main id="content" role="main" class="content <%= yield :page_class %>">
-      <%= yield %>
-    </main>
+    <div class="grid-row">
+      <main id="content" role="main" class="content <%= yield :page_class %>">
+        <%= yield %>
+      </main>
+    </div>
   </div>
 </body>
 </html>

@@ -1,8 +1,8 @@
 .wrapper {
-  border-bottom: 10px solid $govuk-blue;
-
   .content {
+    @extend %contain-floats;
+
     display: block;
-    @include outer-block;
+    padding: 0 15px;
   }
 }
