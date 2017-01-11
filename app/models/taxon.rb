@@ -21,7 +21,7 @@ class Taxon
   def parent_taxon
     return nil unless parent?
 
-    self.class.new(linked_items('parent_taxon').first)
+    self.class.new(linked_items('parent_taxons').first)
   end
 
   def child_taxons
@@ -35,7 +35,7 @@ class Taxon
 private
 
   def parent?
-    linked_items('parent_taxon').present?
+    linked_items('parent_taxons').present?
   end
 
   def children?

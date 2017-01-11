@@ -6,10 +6,12 @@ module TaxonHelpers
       'description' => 'Student finance content',
       'base_path' => '/student-finance',
       'links' => {
-        'parent_taxon' => [
-          'title' => 'Education and learning',
-          'description' => 'Education and learning description',
-          'base_path' => '/alpha-taxonomy/education'
+        'parent_taxons' => [
+          {
+            'title' => 'Education and learning',
+            'description' => 'Education and learning description',
+            'base_path' => '/alpha-taxonomy/education'
+          }
         ],
         'child_taxons' => [
           {
