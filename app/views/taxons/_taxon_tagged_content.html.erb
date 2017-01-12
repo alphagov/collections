@@ -1,0 +1,20 @@
+<div class="grid-row">
+  <div class="full-width-column">
+    <div class="parent-topic-contents">
+      <div class="topic-content">
+        <h2><%= taxon.title %> guidance</h2>
+
+        <ul>
+          <% tagged_content.each do |content_item| %>
+            <li>
+              <h3>
+                <%= link_to content_item.title, Plek.new.website_root + content_item.base_path %>
+              </h3>
+              <p><%= content_item.description %></p>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
