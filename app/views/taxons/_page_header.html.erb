@@ -2,11 +2,13 @@
   <div class="column-two-thirds">
     <div class="page-header">
       <h1>
-        <% if parent_taxon.present? %>
-          <span class="sub-heading">
+        <span class="sub-heading">
+          <% if parent_taxon.present? %>
             <%= link_to parent_taxon.title, parent_taxon.base_path %>
+          <% else %>
+            <%= link_to 'Home', Plek.find('www') %>
+          <% end %>
           </span>
-        <% end %>
         <%= taxon.title %>
       </h1>
 
