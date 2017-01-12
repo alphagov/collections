@@ -1,0 +1,56 @@
+.taxon-page {
+
+  h1 {
+    box-sizing: border-box;
+    display: block;
+    min-height: 30vh;
+    padding-top: 12.5vh;
+    font-size: 48px;
+    line-height: 50px;
+    font-weight: bold;
+
+    +p {
+      font-size: 24px;
+      line-height: 30px;
+      padding-bottom: 30px;
+    }
+  }
+
+  .page-header {
+    min-height: 45vh;
+    margin-bottom: 0;
+
+    div {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    h1 {
+      position: relative;
+      padding-top: 55px;
+    }
+
+    .sub-heading {
+      font-weight: normal;
+      font-size: 24px;
+
+      display: block;
+
+      a {
+        color: $secondary-text-colour;
+        text-decoration: none;
+
+        &:before {
+          content: " ";
+          background-image: image-url("back.svg");
+          background-repeat: no-repeat;
+          background-size: auto 18px;
+          background-position: left bottom;
+          display: inline-block;
+          width: 20px;
+          height: 1em;
+        }
+      }
+    }
+  }
+}
