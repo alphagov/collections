@@ -1,5 +1,9 @@
 .taxon-page {
 
+  @function em($px, $base: 19) {
+    @return ($px / $base) + em;
+  }
+
   h1 {
     box-sizing: border-box;
     display: block;
@@ -30,6 +34,18 @@
     font-weight: bold;
 
     padding-bottom: $gutter-one-third;
+  }
+
+  p {
+    @include core-19;
+    -webkit-font-smoothing: antialiased;
+    margin-top: em(5, 16);
+    margin-bottom: em(20, 16);
+
+    @include media(tablet) {
+      margin-top: em(5);
+      margin-bottom: em(20);
+    }
   }
 
   .page-header {
@@ -66,10 +82,6 @@
   }
 
   .child-topics-list {
-    p {
-      @include core-19;
-      -webkit-font-smoothing: antialiased;
-    }
     ul {
       list-style-type: none;
       @extend %grid-row;
@@ -82,6 +94,21 @@
 
       li:nth-child(3n+1) {
         clear: left;
+      }
+    }
+  }
+
+  .parent-topic-contents {
+    .topic-content {
+      padding-bottom: $gutter;
+
+      ul {
+        list-style-type: none;
+        padding-bottom: $gutter-one-third;
+
+        h3 {
+          padding-bottom: 0;
+        }
       }
     }
   }
