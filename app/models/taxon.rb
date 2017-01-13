@@ -14,8 +14,15 @@ class Taxon
   end
 
   def has_grandchildren?
-    # TODO: implement
-    true
+    return false unless children?
+
+    # The Publishing API doesn't expand child taxons, which means
+    # we can't use the child_taxons method for each of the child
+    # taxons of this taxon. We have to do an API call to know if
+    # the children also have children.
+    child_taxons.any? do |child_taxon|
+      Taxon.find(child_taxon.base_path).children?
+    end
   end
 
   # TODO: needs to be guidance content only
@@ -41,8 +48,6 @@ class Taxon
       self.class.new(child_taxon)
     end
   end
-
-private
 
   def parent?
     linked_items('parent_taxons').present?
