@@ -5,9 +5,17 @@
   parent_taxon: parent_taxon
 } %>
 
-<%= render partial: 'child_taxons', locals: { child_taxons: child_taxons } %>
+<% if taxon.has_grandchildren? %>
+  <%= render partial: 'child_taxons_grid', locals: { child_taxons: child_taxons } %>
 
-<%= render partial: 'taxon_tagged_content', locals: {
-  taxon: taxon,
-  tagged_content: tagged_content
-} %>
+  <%= render partial: 'taxon_tagged_content', locals: {
+    taxon: taxon,
+    tagged_content: tagged_content
+  } %>
+<% else %>
+  <%= render partial: 'child_taxons_list', locals: {
+    taxon: taxon,
+    child_taxons: child_taxons,
+    tagged_content: tagged_content
+  } %>
+<% end %>

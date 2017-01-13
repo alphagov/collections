@@ -13,6 +13,16 @@ class Taxon
     @content_item = content_item
   end
 
+  def has_grandchildren?
+    # TODO: implement
+    true
+  end
+
+  # TODO: needs to be guidance content only
+  def tagged_content
+    @tagged_content ||= TaggedContent.fetch(content_id)
+  end
+
   def self.find(base_path)
     content_item = ContentItem.find!(base_path)
     new(content_item)

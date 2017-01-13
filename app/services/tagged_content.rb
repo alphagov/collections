@@ -10,6 +10,7 @@ class TaggedContent
   end
 
   def fetch
+    # TODO: this should return only guidance content, sorted alphabetically
     RummagerSearch.new(
       filter_taxons: [content_id],
       start: 0,

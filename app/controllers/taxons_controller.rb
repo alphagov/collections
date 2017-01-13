@@ -7,7 +7,7 @@ class TaxonsController < ApplicationController
       parent_taxon: taxon.parent_taxon,
       child_taxons: taxon.child_taxons,
       navigation_helpers: navigation_helpers,
-      tagged_content: TaggedContent.fetch(taxon.content_id)
+      tagged_content: taxon.tagged_content
     }
   end
 

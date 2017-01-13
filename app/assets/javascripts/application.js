@@ -2,3 +2,4 @@
 //
 //= require support
 //= require browse-columns
+//= require modules/accordion-with-descriptions

@@ -1,0 +1,9 @@
+<ul class="subsection__list">
+  <% tagged_content.each do |content_item| %>
+    <li class="subsection__list-item">
+      <%= link_to content_item.title, content_item.base_path %>
+
+      <p><%= content_item.description || "Lorem ipsum dolor sit amet, consectetur adipiscing elit." %></p>
+    </li>
+  <% end %>
+</ul>
