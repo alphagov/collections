@@ -1,8 +1,10 @@
 require 'integration_test_helper'
+require 'slimmer/test_helpers/govuk_components'
 
 class TaxonBrowsingTest < ActionDispatch::IntegrationTest
   include RummagerHelpers
   include TaxonHelpers
+  include Slimmer::TestHelpers::GovukComponents
 
   def search_results
     [
@@ -47,13 +49,14 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
 
     it 'is possible to visit a taxon show page' do
       get @base_path
+
       assert_equal 200, status
     end
 
     it 'is possible to see breadcrumbs' do
       visit @base_path
 
-      assert page.has_content?('Home')
+      assert_not_nil shared_component_selector('breadcrumbs')
     end
 
     it 'is possible to see a link to the parent taxon' do
@@ -113,13 +116,14 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
 
     it 'is possible to visit a taxon show page' do
       get @base_path
+
       assert_equal 200, status
     end
 
     it 'is possible to see breadcrumbs' do
       visit @base_path
 
-      assert page.has_content?('Home')
+      assert_not_nil shared_component_selector('breadcrumbs')
     end
 
     it 'is possible to see a link to the parent taxon' do
