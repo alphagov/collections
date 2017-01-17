@@ -4,7 +4,7 @@ module RummagerHelpers
       filter_taxons: [content_id],
       start: 0,
       count: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
-      fields: %w(title link)
+      fields: %w(title description link)
     ).returns(
       "results" => results,
       "start" => 0,
