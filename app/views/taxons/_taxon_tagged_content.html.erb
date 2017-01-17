@@ -11,7 +11,7 @@
               <h3>
                 <%= link_to content_item.title, Plek.new.website_root + content_item.base_path %>
               </h3>
-              <p><%= content_item.description || "Lorem ipsum dolor sit amet, consectetur adipiscing elit." %></p>
+              <p><%= content_item.description %></p>
             </li>
           <% end %>
         </ul>
