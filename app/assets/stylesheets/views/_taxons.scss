@@ -1,5 +1,6 @@
 .taxon-page {
 
+  // Where has this come from?  Alex's code or somewhere else?  Search for this in case.  Don't think this should be being used though,
   @function em($px, $base: 19) {
     @return ($px / $base) + em;
   }
@@ -7,23 +8,18 @@
   h1 {
     box-sizing: border-box;
     display: block;
-    min-height: 30vh;
-    padding-top: 12.5vh;
-    font-size: 48px;
-    line-height: 50px;
-    font-weight: bold;
+    padding-top: 90px;
+    @include bold-48;
 
     +p {
-      font-size: 24px;
-      line-height: 30px;
+      @include core-24;
+      padding-top: 10px;
       padding-bottom: 30px;
     }
   }
 
   h2 {
-    font-size: 24px;
-    line-height: 30px;
-    font-weight: bold;
+    @include bold-24;
 
     margin-top: $gutter * 1.5;
     margin-bottom: $gutter;
@@ -35,15 +31,12 @@
   }
 
   h3 {
-    font-size: 19px;
-    font-weight: bold;
-
+    @include bold-19;
     padding-bottom: $gutter-one-third;
   }
 
   p {
     @include core-19;
-    -webkit-font-smoothing: antialiased;
     margin-top: em(5, 16);
     margin-bottom: em(20, 16);
 
@@ -65,6 +58,7 @@
     .sub-heading {
       font-weight: normal;
       font-size: 24px;
+      padding-bottom: 10px;
 
       display: block;
 
