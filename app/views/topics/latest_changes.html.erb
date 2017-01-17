@@ -19,7 +19,6 @@
     subtopic: @subtopic,
     organisations: organisations(@subtopic.content_id),
     link_to_latest_feed: false,
-    beta_label: true
   }) do %>
   <ul class="changed-documents">
     <% @subtopic.changed_documents.each do |document| -%>

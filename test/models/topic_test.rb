@@ -37,13 +37,6 @@ describe Topic do
     it "returns the topic description" do
       assert_equal "Pay As You Earn", @topic.description
     end
-
-    it "returns the topic's beta status" do
-      refute @topic.beta?
-
-      @api_data["phase"] = "beta"
-      assert @topic.beta?
-    end
   end
 
   describe "parent" do

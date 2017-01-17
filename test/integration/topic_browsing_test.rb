@@ -76,15 +76,4 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
       end
     end
   end
-
-  it "renders a beta topic" do
-    content_store_has_item(
-      "/topic/oil-and-gas",
-      oil_and_gas_topic_item.merge("phase" => "beta")
-    )
-
-    visit "/topic/oil-and-gas"
-
-    assert page.has_content?("This page is in beta"), "has beta-label"
-  end
 end
