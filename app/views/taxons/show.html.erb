@@ -11,20 +11,21 @@
 
 <%= render partial: 'page_header', locals: {
   taxon: taxon,
-  parent_taxon: parent_taxon
+  parent_taxon: taxon.parent_taxon
 } %>
 
 <% if taxon.has_grandchildren? %>
-  <%= render partial: 'child_taxons_grid', locals: { child_taxons: child_taxons } %>
+  <%= render partial: 'child_taxons_grid',
+    locals: { child_taxons: taxon.child_taxons } %>
 
   <%= render partial: 'taxon_tagged_content', locals: {
     taxon: taxon,
-    tagged_content: tagged_content
+    tagged_content: taxon.tagged_content
   } %>
 <% else %>
   <%= render partial: 'child_taxons_list', locals: {
     taxon: taxon,
-    child_taxons: child_taxons,
-    tagged_content: tagged_content
+    child_taxons: taxon.child_taxons,
+    tagged_content: taxon.tagged_content
   } %>
 <% end %>

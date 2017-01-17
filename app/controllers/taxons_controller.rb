@@ -4,10 +4,7 @@ class TaxonsController < ApplicationController
   def show
     render :show, locals: {
       taxon: taxon,
-      parent_taxon: taxon.parent_taxon,
-      child_taxons: taxon.child_taxons,
-      navigation_helpers: navigation_helpers,
-      tagged_content: taxon.tagged_content
+      navigation_helpers: navigation_helpers
     }
   end
 
