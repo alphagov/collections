@@ -118,15 +118,6 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
     assert page.has_selector?(shared_component_selector('breadcrumbs'))
   end
 
-  it "renders a beta subtopic" do
-    content_store_has_item("/topic/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore", "phase" => "beta"))
-    stub_topic_organisations('oil-and-gas/offshore', 'content-id-for-offshore')
-
-    visit "/topic/oil-and-gas/offshore"
-
-    assert page.has_content?("This page is in beta"), "has beta-label"
-  end
-
   describe "latest page for a subtopic" do
     setup do
       content_store_has_item("/topic/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore"))

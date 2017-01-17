@@ -160,15 +160,4 @@
       }
     }
   }
-
-  .govuk-beta-label {
-    padding-bottom: 10px;
-    border-bottom: 1px solid $border-colour;
-    margin: 10px 0;
-
-    @include media(mobile) {
-      margin: 5px 0;
-    }
-  }
-
 }
