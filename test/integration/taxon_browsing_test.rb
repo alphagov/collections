@@ -21,144 +21,116 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     ]
   end
 
-  describe 'Browsing taxon with grandchildren' do
-    before do
-      @base_path = '/alpha-taxonomy/funding_and_finance_for_students'
-      funding_and_finance_for_students = funding_and_finance_for_students(base_path: @base_path)
+  it 'is possible to browse a taxon page that has grandchildren' do
+    given_there_is_a_taxon_with_grandchildren
+    when_i_visit_the_taxon_page
+    then_i_can_see_the_breadcrumbs
+    and_i_can_see_a_link_to_the_parent_taxon
+    and_i_can_see_the_title_and_description
+    and_i_can_see_links_to_the_child_taxons_in_a_grid
+    and_i_can_see_tagged_content_to_the_taxon
+  end
 
-      content_store_has_item(@base_path, funding_and_finance_for_students)
-      content_store_has_item(
-        student_finance_taxon['base_path'],
-        student_finance_taxon
-      )
-      content_store_has_item(
-        student_sponsorship_taxon['base_path'],
-        student_sponsorship_taxon
-      )
-      content_store_has_item(
-        student_loans_taxon['base_path'],
-        student_loans_taxon
-      )
+  it 'is possible to browse a taxon page that does not have grandchildren' do
+    given_there_is_a_taxon_without_grandchildren
+    when_i_visit_the_taxon_page
+    then_i_can_see_the_breadcrumbs
+    and_i_can_see_a_link_to_the_parent_taxon
+    and_i_can_see_the_title_and_description
+    and_i_can_see_links_to_the_child_taxons_in_an_accordion
+    and_i_can_see_tagged_content_to_the_taxon
+  end
 
-      @taxon = Taxon.find(@base_path)
-      stub_content_for_taxon(@taxon.content_id, search_results)
-      stub_content_for_taxon(student_finance_taxon['content_id'], search_results)
-      stub_content_for_taxon(student_sponsorship_taxon['content_id'], search_results)
-      stub_content_for_taxon(student_loans_taxon['content_id'], search_results)
-    end
+  def given_there_is_a_taxon_with_grandchildren
+    @base_path = '/alpha-taxonomy/funding_and_finance_for_students'
+    funding_and_finance_for_students = funding_and_finance_for_students(base_path: @base_path)
 
-    it 'is possible to visit a taxon show page' do
-      get @base_path
+    @parent = funding_and_finance_for_students['links']['parent_taxons'].first
+    @child_taxons = funding_and_finance_for_students['links']['child_taxons']
 
-      assert_equal 200, status
-    end
+    content_store_has_item(@base_path, funding_and_finance_for_students)
+    content_store_has_item(
+      student_finance_taxon['base_path'],
+      student_finance_taxon
+    )
+    content_store_has_item(
+      student_sponsorship_taxon['base_path'],
+      student_sponsorship_taxon
+    )
+    content_store_has_item(
+      student_loans_taxon['base_path'],
+      student_loans_taxon
+    )
 
-    it 'is possible to see breadcrumbs' do
-      visit @base_path
+    @taxon = Taxon.find(@base_path)
+    stub_content_for_taxon(@taxon.content_id, search_results)
+    stub_content_for_taxon(student_finance_taxon['content_id'], search_results)
+    stub_content_for_taxon(student_sponsorship_taxon['content_id'], search_results)
+    stub_content_for_taxon(student_loans_taxon['content_id'], search_results)
+  end
 
-      assert_not_nil shared_component_selector('breadcrumbs')
-    end
+  def given_there_is_a_taxon_without_grandchildren
+    @base_path = '/alpha-taxonomy/student-finance'
+    student_finance = student_finance_taxon(base_path: @base_path)
 
-    it 'is possible to see a link to the parent taxon' do
-      visit @base_path
+    @parent = student_finance['links']['parent_taxons'].first
+    @child_taxons = student_finance['links']['child_taxons']
 
-      assert page.has_link?(
-        'Education and learning',
-        '/alpha-taxonomy/education'
-      )
-    end
+    content_store_has_item(@base_path, student_finance)
+    content_store_has_item(
+      student_sponsorship_taxon['base_path'],
+      student_sponsorship_taxon
+    )
+    content_store_has_item(
+      student_loans_taxon['base_path'],
+      student_loans_taxon
+    )
 
-    it 'is possible to see the taxon title and description' do
-      visit @base_path
+    @taxon = Taxon.find(@base_path)
+    stub_content_for_taxon(@taxon.content_id, search_results)
+    stub_content_for_taxon(student_sponsorship_taxon['content_id'], search_results)
+    stub_content_for_taxon(student_loans_taxon['content_id'], search_results)
+  end
 
-      assert page.has_content?(@taxon.title)
-      assert page.has_content?(@taxon.description)
-    end
+  def when_i_visit_the_taxon_page
+    visit @base_path
+  end
 
-    it 'is possible to see links to the child taxons in a grid' do
-      visit @base_path
+  def then_i_can_see_the_breadcrumbs
+    assert_not_nil shared_component_selector('breadcrumbs')
+  end
 
-      assert page.has_selector?('nav.child-topics-list')
-      assert page.has_link?("Student finance", "/alpha-taxonomy/student-finance")
-      assert page.has_content?("Student finance content")
-    end
+  def and_i_can_see_a_link_to_the_parent_taxon
+    assert page.has_link?(@parent['title'], @parent['description'])
+  end
 
-    it 'is possible to see content tagged to the taxon' do
-      visit @base_path
+  def and_i_can_see_the_title_and_description
+    assert page.has_content?(@taxon.title)
+    assert page.has_content?(@taxon.description)
+  end
 
-      assert page.has_link?("Content item 1", "/content-item-1")
-      assert page.has_content?("Description of content item 1")
-      assert page.has_link?("Content item 2", "/content-item-2")
-      assert page.has_content?("Description of content item 2")
+  def and_i_can_see_links_to_the_child_taxons_in_a_grid
+    assert page.has_selector?('nav.child-topics-list')
+
+    @child_taxons.each do |child_taxon|
+      assert page.has_link?(child_taxon['title'], child_taxon['base_path'])
+      assert page.has_content?(child_taxon['description'])
     end
   end
 
-  describe 'Browsing taxon without grandchildren' do
-    before do
-      @base_path = '/alpha-taxonomy/student-finance'
-      student_finance = student_finance_taxon(base_path: @base_path)
+  def and_i_can_see_links_to_the_child_taxons_in_an_accordion
+    assert page.has_selector?('.child-topic-contents')
 
-      content_store_has_item(@base_path, student_finance)
-      content_store_has_item(
-        student_sponsorship_taxon['base_path'],
-        student_sponsorship_taxon
-      )
-      content_store_has_item(
-        student_loans_taxon['base_path'],
-        student_loans_taxon
-      )
-
-      @taxon = Taxon.find(@base_path)
-      stub_content_for_taxon(@taxon.content_id, search_results)
-      stub_content_for_taxon(student_sponsorship_taxon['content_id'], search_results)
-      stub_content_for_taxon(student_loans_taxon['content_id'], search_results)
+    @child_taxons.each do |child_taxon|
+      assert page.has_content?(child_taxon['title'])
+      assert page.has_content?(child_taxon['description'])
     end
+  end
 
-    it 'is possible to visit a taxon show page' do
-      get @base_path
-
-      assert_equal 200, status
-    end
-
-    it 'is possible to see breadcrumbs' do
-      visit @base_path
-
-      assert_not_nil shared_component_selector('breadcrumbs')
-    end
-
-    it 'is possible to see a link to the parent taxon' do
-      visit @base_path
-
-      assert page.has_link?(
-        'Funding and finance for students',
-        '/alpha-taxonomy/funding-and-finance-for-students'
-      )
-    end
-
-    it 'is possible to see the taxon title and description' do
-      visit @base_path
-
-      assert page.has_content?(@taxon.title)
-      assert page.has_content?(@taxon.description)
-    end
-
-    it 'is possible to see links to the child taxons in a accordion' do
-      visit @base_path
-
-      assert page.has_selector?('.child-topic-contents')
-      assert page.has_content?("Student sponsorship")
-      assert page.has_content?("Description of student sponsorship")
-      assert page.has_content?("Student loans")
-      assert page.has_content?("Description of student loans")
-    end
-
-    it 'is possible to see content tagged to the taxon' do
-      visit @base_path
-
-      assert page.has_link?("Content item 1", "/content-item-1")
-      assert page.has_content?("Description of content item 1")
-      assert page.has_link?("Content item 2", "/content-item-2")
-      assert page.has_content?("Description of content item 2")
+  def and_i_can_see_tagged_content_to_the_taxon
+    search_results.each do |search_result|
+      assert page.has_link?(search_result['title'], search_result['link'])
+      assert page.has_content?(search_result['description'])
     end
   end
 end
