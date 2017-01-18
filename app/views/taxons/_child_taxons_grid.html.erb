@@ -1,0 +1,13 @@
+<nav role="navigation" class="child-topics-list">
+  <h2>In this section</h2>
+  <ul>
+    <% child_taxons.each do |child_taxon| %>
+      <li>
+        <h3>
+          <%= link_to child_taxon.title, child_taxon.base_path %>
+        </h3>
+        <p><%= child_taxon.description %></p>
+      </li>
+    <% end %>
+  </ul>
+</nav>

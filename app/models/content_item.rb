@@ -1,4 +1,6 @@
 class ContentItem
+  attr_reader :content_item_data
+
   def self.find!(base_path)
     response = Services.content_store.content_item!(base_path)
     new(response.to_hash)
