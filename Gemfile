@@ -34,6 +34,7 @@ group :test do
   gem 'webmock', '~> 1.21.0', require: false
   gem 'cucumber-rails', '~> 1.4.2', require: false
   gem 'govuk-content-schema-test-helpers', '~> 1.3.0'
+  gem 'govuk_schemas', '~> 2.1'
   gem 'simplecov', '~> 0.10.0'
   gem 'simplecov-rcov', '~> 0.2.3'
 end

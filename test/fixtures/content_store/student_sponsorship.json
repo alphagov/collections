@@ -1,0 +1,19 @@
+{
+  "content_id": "36dd87da-4973-5490-ab00-72025b1da501",
+  "title": "Student sponsorship",
+  "description": "Description of student sponsorship",
+  "base_path": "\/alpha-taxonomy\/student-sponsorship",
+  "locale": "en",
+  "links": {
+    "parent_taxons": [
+      {
+        "content_id": "36dd87da-4973-5490-ab00-72025b1da504",
+        "locale": "en",
+        "title": "Student finance",
+        "description": "Student finance content",
+        "base_path": "\/alpha-taxonomy\/student-finance"
+      }
+    ]
+  }
+}
+

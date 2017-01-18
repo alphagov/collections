@@ -6,21 +6,6 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
   include TaxonHelpers
   include Slimmer::TestHelpers::GovukComponents
 
-  def search_results
-    [
-      {
-        'title' => 'Content item 1',
-        'description' => 'Description of content item 1',
-        'link' => 'content-item-1'
-      },
-      {
-        'title' => 'Content item 2',
-        'description' => 'Description of content item 2',
-        'link' => 'content-item-2'
-      },
-    ]
-  end
-
   it 'is possible to browse a taxon page that has grandchildren' do
     given_there_is_a_taxon_with_grandchildren
     when_i_visit_the_taxon_page
@@ -41,14 +26,37 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_tagged_content_to_the_taxon
   end
 
+private
+
+  def search_results
+    [
+      {
+        'title' => 'Content item 1',
+        'description' => 'Description of content item 1',
+        'link' => 'content-item-1'
+      },
+      {
+        'title' => 'Content item 2',
+        'description' => 'Description of content item 2',
+        'link' => 'content-item-2'
+      },
+    ]
+  end
+
   def given_there_is_a_taxon_with_grandchildren
     @base_path = '/alpha-taxonomy/funding_and_finance_for_students'
-    funding_and_finance_for_students = funding_and_finance_for_students(base_path: @base_path)
+    funding_and_finance_for_students_taxon =
+      funding_and_finance_for_students_taxon(base_path: @base_path)
 
-    @parent = funding_and_finance_for_students['links']['parent_taxons'].first
-    @child_taxons = funding_and_finance_for_students['links']['child_taxons']
+    @parent =
+      funding_and_finance_for_students_taxon['links']['parent_taxons'].first
+    assert_not_nil @parent
 
-    content_store_has_item(@base_path, funding_and_finance_for_students)
+    @child_taxons =
+      funding_and_finance_for_students_taxon['links']['child_taxons']
+    assert @child_taxons.length > 0
+
+    content_store_has_item(@base_path, funding_and_finance_for_students_taxon)
     content_store_has_item(
       student_finance_taxon['base_path'],
       student_finance_taxon
@@ -74,7 +82,10 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     student_finance = student_finance_taxon(base_path: @base_path)
 
     @parent = student_finance['links']['parent_taxons'].first
+    assert_not_nil @parent
+
     @child_taxons = student_finance['links']['child_taxons']
+    assert @child_taxons.length > 0
 
     content_store_has_item(@base_path, student_finance)
     content_store_has_item(

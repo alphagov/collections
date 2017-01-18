@@ -9,28 +9,31 @@ describe Taxon do
   end
 
   it 'has a title' do
-    assert_equal @taxon.title, 'Student finance'
+    assert_equal @taxon.title, student_finance_taxon['title']
   end
 
   it 'has a description' do
-    assert_equal @taxon.description, 'Student finance content'
+    assert_equal @taxon.description, student_finance_taxon['description']
   end
 
   it 'has a content id' do
-    assert_equal @taxon.content_id, 'student-finance-content-id'
+    assert_equal @taxon.content_id, student_finance_taxon['content_id']
   end
 
   it 'has a base path' do
-    assert_equal @taxon.base_path, '/alpha-taxonomy/student-finance'
+    assert_equal @taxon.base_path, student_finance_taxon['base_path']
   end
 
   it 'has parent taxon' do
     parent = @taxon.parent_taxon
 
     assert_instance_of Taxon, parent
-    assert_equal parent.title, 'Funding and finance for students'
-    assert_equal parent.description, 'Description for funding and finance for students'
-    assert_equal parent.base_path, '/alpha-taxonomy/funding-and-finance-for-students'
+    assert_equal parent.title,
+      student_finance_taxon['links']['parent_taxons'].first['title']
+    assert_equal parent.description,
+      student_finance_taxon['links']['parent_taxons'].first['description']
+    assert_equal parent.base_path,
+      student_finance_taxon['links']['parent_taxons'].first['base_path']
   end
 
   it 'has two taxon children' do
