@@ -114,30 +114,20 @@ describe('browse-columns.js', function() {
     }
   });
 
-  it("should update breadcrumbs", function(){
+  it("should update breadcrumbs from cache", function(){
     var context;
 
-    // section to section
-    context = { $breadcrumbs: $('<ol><li>one</li></ol>') };
-    GOVUK.BrowseColumns.prototype.updateBreadcrumbs.call(context, {});
-    expect(context.$breadcrumbs.find('li').length).toEqual(1);
+    context = {
+      $breadcrumbs: $('<div class="govuk-breadcrumbs"><ol><li>one</li></ol></div>')
+    };
 
-    // subsection to section
-    context = { $breadcrumbs: $('<ol><li>one</li><li>two</li></ol>') };
-    GOVUK.BrowseColumns.prototype.updateBreadcrumbs.call(context, {});
-    expect(context.$breadcrumbs.find('li').length).toEqual(1);
-
-    // subsection to subsection
-    context = { $breadcrumbs: $('<ol><li>one</li><li>two</li></ol>'), $section: $('<div><h1>text</h1></div>') };
-    GOVUK.BrowseColumns.prototype.updateBreadcrumbs.call(context, { subsection: "first/second", section: 'first' });
+    var cached_data = {
+      sectionData: {
+        breadcrumbs: '<div class="govuk-breadcrumbs"><ol><li>one</li><li>two</li></ol></div>'
+      }
+    }
+    GOVUK.BrowseColumns.prototype.updateBreadcrumbs.call(context, cached_data);
     expect(context.$breadcrumbs.find('li').length).toEqual(2);
-    expect(context.$breadcrumbs.find('li a').attr('href')).toEqual('/browse/first');
-
-    // section to subsection
-    context = { $breadcrumbs: $('<ol><li>one</li></ol>'), $section: $('<div><h1>text</h1></div>') };
-    GOVUK.BrowseColumns.prototype.updateBreadcrumbs.call(context, { subsection: "first/second", section: 'first' });
-    expect(context.$breadcrumbs.find('li').length).toEqual(2);
-    expect(context.$breadcrumbs.find('li a').attr('href')).toEqual('/browse/first');
   });
 
   // http://stackoverflow.com/questions/9821166/error-accessing-jquerywindow-height-in-jasmine-while-running-tests-in-maven
