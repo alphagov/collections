@@ -14,7 +14,10 @@ class BrowseController < ApplicationController
     respond_to do |f|
       f.html
       f.json do
-        render json: { html: second_level_browse_pages_partial(@page) }
+        render json: {
+          breadcrumbs: render_partial('_breadcrumbs'),
+          html: second_level_browse_pages_partial(@page)
+        }
       end
     end
   end
@@ -27,7 +30,10 @@ class BrowseController < ApplicationController
     respond_to do |f|
       f.html
       f.json do
-        render json: { html: render_partial('_links') }
+        render json: {
+          breadcrumbs: render_partial('_breadcrumbs'),
+          html: render_partial('_links')
+        }
       end
     end
   end

@@ -12,7 +12,7 @@
     this.$root = this.$el.find('#root');
     this.$section = this.$el.find('#section');
     this.$subsection = this.$el.find('#subsection');
-    this.$breadcrumbs = $('.govuk-breadcrumbs ol');
+    this.$breadcrumbs = $('.govuk-breadcrumbs');
     this.animateSpeed = 330;
 
     if(this.$section.length === 0){
@@ -335,23 +335,9 @@
         this.loadSectionFromState(state);
       }
     },
-    updateBreadcrumbs: function(state){
-      var $breadcrumbItems = this.$breadcrumbs.find('li');
-      if(state.subsection){
-        var sectionSlug = state.section;
-        var sectionTitle = this.$section.find('h1').text();
-
-        if($breadcrumbItems.length === 1){
-          var $sectionBreadcrumb = $('<li />');
-          this.$breadcrumbs.append($sectionBreadcrumb);
-        } else {
-          var $sectionBreadcrumb = $breadcrumbItems.slice(1);
-        }
-
-        $sectionBreadcrumb.html('<a href="/browse/'+sectionSlug+'">'+sectionTitle+'</a>');
-      } else {
-        this.$breadcrumbs.find('li').slice(1).remove();
-      }
+    updateBreadcrumbs: function(state) {
+      var $newBreadcrumbs = $(state.sectionData.breadcrumbs);
+      this.$breadcrumbs.html($newBreadcrumbs.html());
     },
     trackPageview: function(state){
       var sectionTitle = this.$section.find('h1').text();
