@@ -34,20 +34,14 @@
     @include bold-19;
     padding-bottom: $gutter-one-third;
   }
-
+  //this needs work for different break points
   p {
     @include core-19;
-    margin-top: em(5, 16);
-    margin-bottom: em(20, 16);
-
-    @include media(tablet) {
-      margin-top: em(5);
-      margin-bottom: em(20);
-    }
+    margin-top: 2px;
+    margin-bottom: 6px;
   }
 
   .page-header {
-    min-height: 45vh;
     margin-bottom: 0;
 
     div {
