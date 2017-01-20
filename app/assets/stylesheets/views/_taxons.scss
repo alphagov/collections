@@ -1,10 +1,5 @@
 .taxon-page {
 
-  // Where has this come from?  Alex's code or somewhere else?  Search for this in case.  Don't think this should be being used though,
-  @function em($px, $base: 19) {
-    @return ($px / $base) + em;
-  }
-
   h1 {
     box-sizing: border-box;
     display: block;
@@ -41,35 +36,24 @@
     margin-bottom: 6px;
   }
 
-  .page-header {
-    margin-bottom: 0;
+//Should this sub-heading be marked up as a span, and then displayed as a block?  Doesn't seem like it should be.
+  .sub-heading {
+    @include core-24;
+    display: block;
 
-    div {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
+    a {
+      color: $secondary-text-colour;
+      text-decoration: none;
 
-    .sub-heading {
-      font-weight: normal;
-      font-size: 24px;
-      padding-bottom: 10px;
-
-      display: block;
-
-      a {
-        color: $secondary-text-colour;
-        text-decoration: none;
-
-        &:before {
-          content: " ";
-          background-image: image-url("back.svg");
-          background-repeat: no-repeat;
-          background-size: auto 18px;
-          background-position: left bottom;
-          display: inline-block;
-          width: 20px;
-          height: 1em;
-        }
+      &:before {
+        content: " ";
+        background-image: image-url("back.svg");
+        background-repeat: no-repeat;
+        background-size: auto 18px;
+        background-position: left bottom;
+        display: inline-block;
+        width: 20px;
+        height: 1em;
       }
     }
   }
