@@ -15,7 +15,7 @@ class BrowseController < ApplicationController
       f.html
       f.json do
         render json: {
-          breadcrumbs: render_partial('_breadcrumbs'),
+          breadcrumbs: breadcrumb_content,
           html: second_level_browse_pages_partial(@page)
         }
       end
@@ -31,7 +31,7 @@ class BrowseController < ApplicationController
       f.html
       f.json do
         render json: {
-          breadcrumbs: render_partial('_breadcrumbs'),
+          breadcrumbs: breadcrumb_content,
           html: render_partial('_links')
         }
       end
@@ -39,6 +39,13 @@ class BrowseController < ApplicationController
   end
 
 private
+
+  def breadcrumb_content
+    render_partial(
+      '_breadcrumbs',
+      navigation_helpers: @navigation_helpers
+    )
+  end
 
   def second_level_browse_pages_partial(page)
     render_partial('_second_level_browse_pages',
