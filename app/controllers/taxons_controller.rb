@@ -19,10 +19,7 @@ private
   end
 
   def taxon
-    @taxon ||= begin
-      taxon_base_path = params[:taxon_base_path]
-      Taxon.find('/alpha-taxonomy/' + taxon_base_path)
-    end
+    @taxon ||= Taxon.find(request.path)
   end
 
   def navigation_helpers
