@@ -2,7 +2,7 @@
   "content_id": "36dd87da-4973-5490-ab00-72025b1da500",
   "title": "Student finance",
   "description": "Student finance content",
-  "base_path": "\/alpha-taxonomy\/student-finance",
+  "base_path": "\/education-training-and-skills\/student-finance",
   "links": {
     "parent_taxons": [
       {
@@ -10,7 +10,7 @@
         "locale": "en",
         "title": "Funding and finance for students",
         "description": "Description for funding and finance for students",
-        "base_path": "\/alpha-taxonomy\/funding-and-finance-for-students"
+        "base_path": "\/education-training-and-skills\/funding-and-finance-for-students"
       }
     ],
     "child_taxons": [
@@ -18,7 +18,7 @@
         "content_id": "36dd87da-4973-5490-ab00-72025b1da501",
         "title": "Student sponsorship",
         "description": "Description of student sponsorship",
-        "base_path": "\/alpha-taxonomy\/student-sponsorship",
+        "base_path": "\/education-training-and-skills\/student-sponsorship",
         "locale": "en",
         "links": {
           "parent_taxons": [
@@ -27,7 +27,7 @@
               "locale": "en",
               "title": "Student finance",
               "description": "Student finance content",
-              "base_path": "\/alpha-taxonomy\/student-finance"
+              "base_path": "\/education-training-and-skills\/student-finance"
             }
           ]
         }
@@ -36,7 +36,7 @@
         "content_id": "36dd87da-4973-5490-ab00-72025b1da502",
         "title": "Student loans",
         "description": "Description of student loans",
-        "base_path": "\/alpha-taxonomy\/student-loans",
+        "base_path": "\/education-training-and-skills\/student-loans",
         "locale": "en",
         "links": {
           "parent_taxons": [
@@ -45,7 +45,7 @@
               "locale": "en",
               "title": "Student finance",
               "description": "Student finance content",
-              "base_path": "\/alpha-taxonomy\/student-finance"
+              "base_path": "\/education-training-and-skills\/student-finance"
             }
           ]
         }
