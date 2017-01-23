@@ -2,7 +2,7 @@
   "content_id": "36dd87da-4973-5490-ab00-72025b1da501",
   "title": "Student sponsorship",
   "description": "Description of student sponsorship",
-  "base_path": "\/alpha-taxonomy\/student-sponsorship",
+  "base_path": "\/education-training-and-skills\/student-sponsorship",
   "locale": "en",
   "links": {
     "parent_taxons": [
@@ -11,7 +11,7 @@
         "locale": "en",
         "title": "Student finance",
         "description": "Student finance content",
-        "base_path": "\/alpha-taxonomy\/student-finance"
+        "base_path": "\/education-training-and-skills\/student-finance"
       }
     ]
   }

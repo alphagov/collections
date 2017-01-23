@@ -19,5 +19,5 @@ Collections::Application.routes.draw do
 
   get "/government/organisations/:organisation_id/services-information", to: "services_and_information#index", as: :services_and_information
 
-  get '/alpha-taxonomy/:taxon_base_path', to: 'taxons#show'
+  get '*taxon_base_path', to: 'taxons#show'
 end

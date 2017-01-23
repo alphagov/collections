@@ -1,5 +1,5 @@
 class TaxonsController < ApplicationController
-  before_action :redirect_to_www, unless: :new_navigaton_enabled?
+  before_action :return_404, unless: :new_navigaton_enabled?
 
   def show
     render :show, locals: {
@@ -14,15 +14,12 @@ private
     ENV['ENABLE_NEW_NAVIGATION'] == 'yes'
   end
 
-  def redirect_to_www
-    redirect_to Plek.find('www')
+  def return_404
+    head :not_found
   end
 
   def taxon
-    @taxon ||= begin
-      taxon_base_path = params[:taxon_base_path]
-      Taxon.find('/alpha-taxonomy/' + taxon_base_path)
-    end
+    @taxon ||= Taxon.find(request.path)
   end
 
   def navigation_helpers
