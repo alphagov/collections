@@ -1,6 +1,29 @@
 class RummagerSearch
   PAGE_SIZE_TO_GET_EVERYTHING = 1000
 
+  GUIDANCE_DOCUMENT_TYPES = %w[
+    answer
+    contact
+    detailed_guide
+    form
+    guidance
+    guide
+    licence
+    local_transaction
+    manual
+    map
+    notice
+    place
+    programme
+    promotional
+    regulation
+    simple_smart_answer
+    smart_answer
+    statutory_guidance
+    transaction
+    travel_advice
+  ].freeze
+
   include Enumerable
   delegate :each, to: :documents
 

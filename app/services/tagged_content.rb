@@ -10,12 +10,13 @@ class TaggedContent
   end
 
   def fetch
-    # TODO: this should return only guidance content, sorted alphabetically
     RummagerSearch.new(
       filter_taxons: [content_id],
       start: 0,
       count: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
-      fields: %w(title description link)
+      fields: %w(title description link),
+      filter_content_store_document_type: RummagerSearch::GUIDANCE_DOCUMENT_TYPES,
+      order: 'title',
     ).documents
   end
 end
