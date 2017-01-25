@@ -38,6 +38,7 @@
   .sub-heading {
     @include core-24;
     margin-bottom: 0;
+
     a {
       color: $secondary-text-colour;
       text-decoration: none;
@@ -56,6 +57,8 @@
   }
 
   .page-header {
+    margin-top: $gutter * 3;
+
     h1 {
       padding-top: 0;
     }
@@ -82,13 +85,16 @@
   .parent-topic-contents {
     .topic-content {
       padding-bottom: $gutter;
+
       ul {
         list-style-type: none;
         padding-bottom: $gutter-one-third;
       }
+
       h3 {
-          padding-bottom: 0;
+        padding-bottom: 0;
       }
+
     }
   }
 
@@ -97,9 +103,11 @@
       ul {
         list-style-type: none;
       }
+
       li {
-          margin-bottom: $gutter-one-third;
+        margin-bottom: $gutter-one-third;
       }
+
       h3 {
         padding-bottom: 0;
       }
@@ -134,7 +142,9 @@
     }
   }
 
-/*  Most of this is taken from the service manual and at some point needs to be separated out into a component.  We are currently holding off on this until it is tested more within the current navigation changes */
+//  Most of this is taken from the service manual and at some point needs to be separated
+// out into a component.  We are currently holding off on this until it is tested more
+// within the current navigation changes.
 
    // When JavaScript is enabled, create accordion
   .js-accordion-with-descriptions {
