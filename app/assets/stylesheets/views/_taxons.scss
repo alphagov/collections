@@ -114,6 +114,11 @@
       margin-bottom: $gutter * 1.5;
     }
 
+    &__title {
+      @include bold-24;
+      margin-bottom: 5px;
+    }
+
     &__description {
       @include core-19;
       margin-bottom: $gutter-one-quarter;
@@ -127,10 +132,6 @@
       @include core-19;
       padding-left: 0;
       list-style-type: none;
-    }
-
-    &__list-item {
-      margin-bottom: 0.5em;
     }
 
     &__list-item a {
