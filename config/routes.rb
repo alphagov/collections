@@ -8,7 +8,7 @@ Collections::Application.routes.draw do
   get "/browse.json" => redirect("/api/content/browse")
   get "/browse", to: "browse#index"
   get "/browse/:top_level_slug", to: "top_level_browse_page#show"
-  get "/browse/:top_level_slug/:second_level_slug", to: "browse#second_level_browse_page"
+  get "/browse/:top_level_slug/:second_level_slug", to: "second_level_browse_page#show"
 
   get "/topic", to: "topics#index", as: :topics
   get "/topic/:topic_slug/:subtopic_slug/latest", to: "topics#latest_changes", as: :latest_changes

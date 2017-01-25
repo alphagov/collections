@@ -1,8 +1,6 @@
 require "test_helper"
 
 describe BrowseController do
-  include RummagerHelpers
-
   describe "GET index" do
     before do
       content_store_has_item("/browse",
@@ -19,48 +17,6 @@ describe BrowseController do
     end
   end
 
-  describe "GET second_level_browse_page" do
-    describe "for a valid browse page" do
-      before do
-        content_store_has_item("/browse/benefits/entitlement",
-          content_id: 'entitlement-content-id',
-          title: 'Entitlement',
-          base_path: '/browse/benefits/entitlement',
-          links: {
-            top_level_browse_pages: top_level_browse_pages,
-            second_level_browse_pages: second_level_browse_pages,
-            active_top_level_browse_page: [{
-              content_id: 'content-id-for-benefits',
-              title: 'Benefits',
-              base_path: '/browse/benefits'
-            }],
-            related_topics: [{ title: 'A linked topic', base_path: '/browse/linked-topic' }]
-          }
-        )
-
-        rummager_has_documents_for_browse_page(
-          "entitlement-content-id",
-          ["entitlement"],
-          page_size: 1000
-        )
-      end
-
-      it "set correct expiry headers" do
-        get :second_level_browse_page, top_level_slug: "benefits", second_level_slug: "entitlement"
-
-        assert_equal "max-age=1800, public", response.headers["Cache-Control"]
-      end
-    end
-
-    it "404 if the section does not exist" do
-      content_store_does_not_have_item("/browse/crime-and-justice/frume")
-
-      get :second_level_browse_page, top_level_slug: "crime-and-justice", second_level_slug: "frume"
-
-      assert_response 404
-    end
-  end
-
   def top_level_browse_pages
     [
       {
@@ -74,13 +30,5 @@ describe BrowseController do
         base_path: '/browse/benefits'
       },
     ]
-  end
-
-  def second_level_browse_pages
-    [{
-      content_id: 'entitlement-content-id',
-      title: 'Entitlement',
-      base_path: '/browse/benefits/entitlement'
-    }]
   end
 end
