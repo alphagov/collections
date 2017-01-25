@@ -15,7 +15,9 @@ Collections::Application.routes.draw do
     get ":subtopic_slug", on: :member, to: "subtopics#show"
   end
 
-  get "/topic/:topic_slug/:subtopic_slug/latest", to: "topics#latest_changes", as: :latest_changes
+  get "/topic/:topic_slug/:subtopic_slug/latest",
+    to: "latest_changes#index", as: :latest_changes
+
   get "/topic/:topic_slug/:subtopic_slug/email-signup", to: "email_signups#new", as: :email_signup
   post "/topic/:topic_slug/:subtopic_slug/email-signup", to: "email_signups#create"
 
