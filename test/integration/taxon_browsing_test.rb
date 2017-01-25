@@ -7,6 +7,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
   include Slimmer::TestHelpers::GovukComponents
 
   it 'is possible to browse a taxon page that has grandchildren' do
+    given_new_navigation_is_enabled
     given_there_is_a_taxon_with_grandchildren
     when_i_visit_the_taxon_page
     then_i_can_see_there_is_a_page_title
@@ -18,6 +19,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   it 'is possible to browse a taxon page that does not have grandchildren' do
+    given_new_navigation_is_enabled
     given_there_is_a_taxon_without_grandchildren
     when_i_visit_the_taxon_page
     then_i_can_see_there_is_a_page_title
@@ -43,6 +45,10 @@ private
         'link' => 'content-item-2'
       },
     ]
+  end
+
+  def given_new_navigation_is_enabled
+    ENV['ENABLE_NEW_NAVIGATION'] = 'yes'
   end
 
   def given_there_is_a_taxon_with_grandchildren
