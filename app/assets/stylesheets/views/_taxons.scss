@@ -15,7 +15,6 @@
 
   h2 {
     @include bold-24;
-
     margin-top: $gutter * 1.5;
     margin-bottom: $gutter;
 
@@ -115,11 +114,6 @@
       margin-bottom: $gutter * 1.5;
     }
 
-    &__title {
-      @include bold-24;
-      margin-bottom: 5px;
-    }
-
     &__description {
       @include core-19;
       margin-bottom: $gutter-one-quarter;
@@ -144,9 +138,11 @@
     }
   }
 
-///////////////////////////////////////////////////////////////////////////////////
+/*  Most of this is taken from the service manual and at some point needs to be separated out into a component.  We are currently holding off on this until it is tested more within the current navigation changes */
+
    // When JavaScript is enabled, create accordion
   .js-accordion-with-descriptions {
+    padding-bottom: $gutter * 2;
 
     // Wrapper for 'open all / close all' button
     .subsection-controls {
@@ -273,7 +269,4 @@
     }
   }
 
-  .js-accordion-with-descriptions {
-    padding-bottom: $gutter * 2;
-  }
 }
