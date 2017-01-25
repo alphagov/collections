@@ -18,10 +18,15 @@ Collections::Application.routes.draw do
   get "/topic/:topic_slug/:subtopic_slug/latest",
     to: "latest_changes#index", as: :latest_changes
 
-  get "/topic/:topic_slug/:subtopic_slug/email-signup", to: "email_signups#new", as: :email_signup
-  post "/topic/:topic_slug/:subtopic_slug/email-signup", to: "email_signups#create"
+  get "/topic/:topic_slug/:subtopic_slug/email-signup",
+    to: "email_signups#new",
+    as: :email_signup
+  post "/topic/:topic_slug/:subtopic_slug/email-signup",
+    to: "email_signups#create"
 
-  get "/government/organisations/:organisation_id/services-information", to: "services_and_information#index", as: :services_and_information
+  get "/government/organisations/:organisation_id/services-information",
+    to: "services_and_information#index",
+    as: :services_and_information
 
   get '*taxon_base_path', to: 'taxons#show'
 end

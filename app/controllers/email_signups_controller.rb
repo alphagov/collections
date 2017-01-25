@@ -2,10 +2,33 @@ class EmailSignupsController < ApplicationController
   protect_from_forgery except: [:create]
 
   def new
-    @meta_section = subtopic.parent.title.downcase
-    # Breadcrumbs for this page are hardcoded because it doesn't have a
-    # content item with parents.
-    @hardcoded_breadcrumbs = {
+    setup_navigation_helpers(subtopic)
+
+    render :new, locals: {
+      subtopic: subtopic,
+      hardcoded_breadcrumbs: hardcoded_breadcrumbs,
+      meta_section: meta_section
+    }
+  end
+
+  def create
+    if email_signup.save
+      redirect_to email_signup.subscription_url
+    else
+      render :new, locals: {
+        subtopic: subtopic,
+        hardcoded_breadcrumbs: hardcoded_breadcrumbs,
+        meta_section: meta_section
+      }
+    end
+  end
+
+private
+
+  # Breadcrumbs for this page are hardcoded because it doesn't have a
+  # content item with parents.
+  def hardcoded_breadcrumbs
+    {
       breadcrumbs: [
         {
           title: "Home",
@@ -21,21 +44,16 @@ class EmailSignupsController < ApplicationController
         },
       ]
     }
-    setup_content_item_and_navigation_helpers(subtopic)
   end
 
-  def create
-    if email_signup.save
-      redirect_to email_signup.subscription_url
-    else
-      render action: 'new'
-    end
+  def meta_section
+    subtopic.parent.title.downcase
   end
-
-private
 
   def subtopic
-    @subtopic ||= Topic.find("/topic/#{params[:topic_slug]}/#{params[:subtopic_slug]}")
+    @subtopic ||= Topic.find(
+      "/topic/#{params[:topic_slug]}/#{params[:subtopic_slug]}"
+    )
   end
   helper_method :subtopic
 

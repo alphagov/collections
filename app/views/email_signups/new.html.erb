@@ -3,12 +3,12 @@
 <% content_for :page_class, "email-signup-new" %>
 
 <% content_for :extra_headers do %>
-  <meta name="govuk:section" content="<%= @meta_section %>">
+  <meta name="govuk:section" content="<%= meta_section %>">
 <% end %>
 
 <% content_for :breadcrumbs do %>
   <%= render partial: 'govuk_component/breadcrumbs',
-    locals: @hardcoded_breadcrumbs %>
+    locals: hardcoded_breadcrumbs %>
 <% end %>
 
 <header>
