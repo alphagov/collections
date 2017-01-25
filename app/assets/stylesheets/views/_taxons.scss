@@ -114,11 +114,6 @@
       margin-bottom: $gutter * 1.5;
     }
 
-    &__title {
-      @include bold-24;
-      margin-bottom: 5px;
-    }
-
     &__description {
       @include core-19;
       margin-bottom: $gutter-one-quarter;
