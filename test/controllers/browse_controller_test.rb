@@ -19,34 +19,6 @@ describe BrowseController do
     end
   end
 
-  describe "GET top_level_browse_page" do
-    describe "for a valid browse page" do
-      before do
-        content_store_has_item("/browse/benefits",
-          base_path: '/browse/benefits',
-          links: {
-            top_level_browse_pages: top_level_browse_pages,
-            second_level_browse_pages: second_level_browse_pages,
-          }
-        )
-      end
-
-      it "set correct expiry headers" do
-        get :top_level_browse_page, top_level_slug: "benefits"
-
-        assert_equal "max-age=1800, public", response.headers["Cache-Control"]
-      end
-    end
-
-    it "404 if the browse page does not exist" do
-      content_store_does_not_have_item("/browse/banana")
-
-      get :top_level_browse_page, top_level_slug: "banana"
-
-      assert_response 404
-    end
-  end
-
   describe "GET second_level_browse_page" do
     describe "for a valid browse page" do
       before do
