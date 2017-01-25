@@ -1,9 +1,10 @@
-<% content_for :title do %><%= @topic.title %> - GOV.UK<% end %>
-<%= render 'shared/tag_meta', tag: @topic %>
+<% content_for :title do %><%= topic.title %> - GOV.UK<% end %>
+<%= render 'shared/tag_meta', tag: topic %>
 <% content_for :page_class, "topics-page" %>
 
 <% content_for :extra_headers do %>
-  <%= render partial: 'govuk_component/analytics_meta_tags', locals: { content_item: @content_item } %>
+  <%= render partial: 'govuk_component/analytics_meta_tags',
+    locals: { content_item: topic.to_hash } %>
 <% end %>
 
 <% content_for :breadcrumbs do %>
@@ -13,14 +14,14 @@
 
 <header class="page-header group">
   <div class="full-width">
-    <h1><%= @topic.title %></h1>
+    <h1><%= topic.title %></h1>
   </div>
 </header>
 
 <div class="browse-container full-width topics-page">
   <nav class="topics">
     <ul>
-      <% @topic.children.each do |subtopic|%>
+      <% topic.children.each do |subtopic|%>
         <li>
           <a href="<%= subtopic.base_path %>"><%= subtopic.title %></a>
         </li>
