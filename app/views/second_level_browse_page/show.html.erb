@@ -1,10 +1,11 @@
-<% content_for :title, "#{@page.title} - GOV.UK" %>
-<%= render 'shared/tag_meta', tag: @page %>
+<% content_for :title, "#{content_item.title} - GOV.UK" %>
+<%= render 'shared/tag_meta', tag: content_item %>
 <% content_for :page_class, "browse" %>
 
 <% content_for :extra_headers do %>
-  <%= render partial: 'govuk_component/analytics_meta_tags', locals: { content_item: @content_item } %>
-  <meta name="govuk:section" content="<%= @meta_section %>">
+  <%= render partial: 'govuk_component/analytics_meta_tags',
+    locals: { content_item: content_item.to_hash } %>
+  <meta name="govuk:section" content="<%= meta_section %>">
 <% end %>
 
 <% content_for :breadcrumbs do %>
@@ -13,17 +14,17 @@
 
 <div class="browse-panes subsection" data-state="subsection">
   <div id="subsection" class="subsection-pane pane with-sort">
-    <%= render 'links' %>
+    <%= render 'links', content_item: content_item %>
   </div>
 
 
   <div id="section" class="section-pane pane">
     <%= render 'second_level_browse_pages',
-      title: @page.active_top_level_browse_page.title,
-      second_level_browse_pages: @page.second_level_browse_pages,
-      curated_order: @page.second_level_pages_curated? %>
+      title: content_item.active_top_level_browse_page.title,
+      second_level_browse_pages: content_item.second_level_browse_pages,
+      curated_order: content_item.second_level_pages_curated? %>
   </div>
 
   <%= render 'browse/top_level_browse_pages',
-    top_level_browse_pages: @page.top_level_browse_pages %>
+    top_level_browse_pages: content_item.top_level_browse_pages %>
 </div>

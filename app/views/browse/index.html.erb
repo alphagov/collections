@@ -3,7 +3,7 @@
 
 <% content_for :extra_headers do %>
   <%= render partial: 'govuk_component/analytics_meta_tags',
-    locals: { content_item: @content_item } %>
+    locals: { content_item: content_item.to_hash } %>
 <% end %>
 
 <% content_for :breadcrumbs do %>
@@ -12,5 +12,5 @@
 
 <div class="browse-panes root">
   <%= render 'top_level_browse_pages',
-    top_level_browse_pages: @page.top_level_browse_pages %>
+    top_level_browse_pages: content_item.top_level_browse_pages %>
 </div>

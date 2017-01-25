@@ -64,6 +64,11 @@ private
     @navigation_helpers = GovukNavigationHelpers::NavigationHelper.new(@content_item)
   end
 
+  def setup_navigation_helpers(content_item)
+    @navigation_helpers =
+      GovukNavigationHelpers::NavigationHelper.new(content_item.to_hash)
+  end
+
   def breadcrumb_content
     render_partial(
       '_breadcrumbs',
