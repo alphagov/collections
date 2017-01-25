@@ -6,8 +6,7 @@ Collections::Application.routes.draw do
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
 
   get "/browse.json" => redirect("/api/content/browse")
-  resources :browse, only: [:index]
-  get "/browse/:top_level_slug", to: "top_level_browse_page#show"
+  resources :browse, only: [:index, :show], param: :top_level_slug
   get "/browse/:top_level_slug/:second_level_slug", to: "second_level_browse_page#show"
 
   get "/topic", to: "topics#index", as: :topics
