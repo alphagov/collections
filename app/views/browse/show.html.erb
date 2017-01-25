@@ -7,10 +7,6 @@
     locals: { content_item: content_item.to_hash } %>
 <% end %>
 
-<% content_for :breadcrumbs do %>
-  <%= render 'breadcrumbs', navigation_helpers: @navigation_helpers %>
-<% end %>
-
 <div class="browse-panes section" data-state="section">
   <div id="section" class="section-pane pane with-sort">
     <%= render 'second_level_browse_page/second_level_browse_pages',

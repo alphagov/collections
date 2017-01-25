@@ -8,10 +8,6 @@
   <meta name="govuk:section" content="<%= meta_section %>">
 <% end %>
 
-<% content_for :breadcrumbs do %>
-  <%= render 'breadcrumbs', navigation_helpers: @navigation_helpers %>
-<% end %>
-
 <div class="browse-panes subsection" data-state="subsection">
   <div id="subsection" class="subsection-pane pane with-sort">
     <%= render 'links', content_item: content_item %>

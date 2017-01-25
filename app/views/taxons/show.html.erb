@@ -1,11 +1,6 @@
 <% content_for :title, taxon.title %>
 <% content_for :page_class, "taxon-page" %>
 
-<% content_for :breadcrumbs do %>
-  <%= render partial: 'govuk_component/breadcrumbs',
-    locals: @navigation_helpers.taxon_breadcrumbs %>
-<% end %>
-
 <%= render partial: 'page_header', locals: {
   taxon: taxon,
   parent_taxon: taxon.parent_taxon

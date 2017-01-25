@@ -6,11 +6,6 @@
     locals: { content_item: content_item.to_hash } %>
 <% end %>
 
-<% content_for :breadcrumbs do %>
-  <%= render partial: 'govuk_component/breadcrumbs',
-    locals: @navigation_helpers.breadcrumbs %>
-<% end %>
-
 <header class="page-header group">
   <div class="full-width">
     <div class="heading">

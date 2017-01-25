@@ -13,11 +13,6 @@
   <meta name="govuk:section" content="<%= meta_section %>">
 <% end %>
 
-<% content_for :breadcrumbs do %>
-  <%= render partial: 'govuk_component/breadcrumbs',
-    locals: @navigation_helpers.breadcrumbs %>
-<% end %>
-
 <%= render(
   layout: "subtopic",
   locals: {

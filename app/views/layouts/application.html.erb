@@ -13,7 +13,11 @@
 
 <body>
   <div class="wrapper" id="wrapper">
-    <%= yield :breadcrumbs %>
+    <% if content_for?(:breadcrumbs) %>
+      <%= yield :breadcrumbs %>
+    <% else %>
+      <%= render 'breadcrumbs', navigation_helpers: @navigation_helpers %>
+    <% end %>
 
     <main id="content" role="main" class="content <%= yield :page_class %>">
       <%= yield %>

@@ -6,10 +6,6 @@
     locals: { content_item: content_item.to_hash } %>
 <% end %>
 
-<% content_for :breadcrumbs do %>
-  <%= render 'breadcrumbs', navigation_helpers: @navigation_helpers %>
-<% end %>
-
 <div class="browse-panes root">
   <%= render 'top_level_browse_pages',
     top_level_browse_pages: content_item.top_level_browse_pages %>
