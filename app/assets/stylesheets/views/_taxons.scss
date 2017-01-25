@@ -36,11 +36,9 @@
     margin-bottom: 6px;
   }
 
-//Should this sub-heading be marked up as a span, and then displayed as a block?  Doesn't seem like it should be.
   .sub-heading {
     @include core-24;
-    display: block;
-
+    margin-bottom: 0;
     a {
       color: $secondary-text-colour;
       text-decoration: none;
@@ -58,9 +56,16 @@
     }
   }
 
+  .page-header {
+    h1 {
+      padding-top: 0;
+    }
+  }
+
   .child-topics-list {
     ul {
       list-style-type: none;
+      //should this be extended?
       @extend %grid-row;
 
       li {
