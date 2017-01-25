@@ -1,11 +1,6 @@
 <% content_for :title, "Services and information - #{organisation['title']} - GOV.UK" %>
 <% content_for :page_class, "topics-page" %>
 
-<% content_for :extra_headers do %>
-  <%= render partial: 'govuk_component/analytics_meta_tags',
-    locals: { content_item: service_and_information.content_item.to_hash } %>
-<% end %>
-
 <header class="page-header group">
   <div class="full-width">
     <div class="heading">

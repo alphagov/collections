@@ -1,11 +1,6 @@
 <% content_for :title, "All categories - GOV.UK" %>
 <% content_for :page_class, "browse" %>
 
-<% content_for :extra_headers do %>
-  <%= render partial: 'govuk_component/analytics_meta_tags',
-    locals: { content_item: page.to_hash } %>
-<% end %>
-
 <div class="browse-panes root">
   <%= render 'top_level_browse_pages',
     top_level_browse_pages: page.top_level_browse_pages %>

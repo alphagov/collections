@@ -2,7 +2,7 @@
 <%= render 'shared/tag_meta', tag: subtopic, description: "Subscribe to get an email each time content is published or updated in the '#{subtopic.combined_title}' topic." %>
 <% content_for :page_class, "email-signup-new" %>
 
-<% content_for :extra_headers do %>
+<% content_for :meta_section do %>
   <meta name="govuk:section" content="<%= meta_section %>">
 <% end %>
 

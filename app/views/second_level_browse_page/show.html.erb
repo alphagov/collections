@@ -2,9 +2,7 @@
 <%= render 'shared/tag_meta', tag: page %>
 <% content_for :page_class, "browse" %>
 
-<% content_for :extra_headers do %>
-  <%= render partial: 'govuk_component/analytics_meta_tags',
-    locals: { content_item: page.to_hash } %>
+<% content_for :meta_section do %>
   <meta name="govuk:section" content="<%= meta_section %>">
 <% end %>
 
