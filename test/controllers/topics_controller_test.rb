@@ -11,7 +11,7 @@ describe TopicsController do
       end
 
       it "sets expiry headers for 30 minutes" do
-        get :topic, topic_slug: "oil-and-gas"
+        get :show, topic_slug: "oil-and-gas"
 
         assert_equal "max-age=1800, public", response.headers["Cache-Control"]
       end
@@ -19,7 +19,7 @@ describe TopicsController do
 
     it "returns a 404 status for GET topic with an invalid sector tag" do
       content_store_does_not_have_item("/topic/oil-and-gas")
-      get :topic, topic_slug: "oil-and-gas"
+      get :show, topic_slug: "oil-and-gas"
 
       assert_equal 404, response.status
     end

@@ -4,7 +4,7 @@ class TopicsController < ApplicationController
     setup_content_item_and_navigation_helpers(@topic)
   end
 
-  def topic
+  def show
     @topic = Topic.find(request.path)
     setup_content_item_and_navigation_helpers(@topic)
   end
