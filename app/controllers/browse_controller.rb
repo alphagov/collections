@@ -3,7 +3,7 @@ class BrowseController < ApplicationController
 
   def index
     page = MainstreamBrowsePage.find("/browse")
-    setup_navigation_helpers(page)
+    setup_content_item_and_navigation_helpers(page)
 
     render :index, locals: { page: page }
   end
@@ -11,7 +11,7 @@ class BrowseController < ApplicationController
   def show
     page =
       MainstreamBrowsePage.find("/browse/#{params[:top_level_slug]}")
-    setup_navigation_helpers(page)
+    setup_content_item_and_navigation_helpers(page)
 
     respond_to do |f|
       f.html do

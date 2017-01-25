@@ -2,7 +2,7 @@ class SecondLevelBrowsePageController < ApplicationController
   enable_request_formats show: [:json]
 
   def show
-    setup_navigation_helpers(page)
+    setup_content_item_and_navigation_helpers(page)
 
     respond_to do |f|
       f.html do

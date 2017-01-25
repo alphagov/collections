@@ -2,7 +2,7 @@ class EmailSignupsController < ApplicationController
   protect_from_forgery except: [:create]
 
   def new
-    setup_navigation_helpers(subtopic)
+    setup_content_item_and_navigation_helpers(subtopic)
 
     render :new, locals: {
       subtopic: subtopic,

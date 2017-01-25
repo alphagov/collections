@@ -3,7 +3,7 @@
 
 <% content_for :extra_headers do %>
   <%= render partial: 'govuk_component/analytics_meta_tags',
-    locals: { content_item: content_item.to_hash } %>
+    locals: { content_item: service_and_information.content_item.to_hash } %>
 <% end %>
 
 <header class="page-header group">

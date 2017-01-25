@@ -1,7 +1,7 @@
 class SubtopicsController < ApplicationController
   def show
     subtopic = Topic.find(request.path)
-    setup_navigation_helpers(subtopic)
+    setup_content_item_and_navigation_helpers(subtopic)
 
     render :show, locals: {
       subtopic: subtopic,

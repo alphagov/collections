@@ -2,7 +2,7 @@ class TaxonsController < ApplicationController
   before_action :return_404, unless: :new_navigaton_enabled?
 
   def show
-    setup_navigation_helpers(taxon)
+    setup_content_item_and_navigation_helpers(taxon)
 
     render :show, locals: { taxon: taxon }
   end

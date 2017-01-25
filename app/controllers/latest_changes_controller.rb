@@ -1,6 +1,6 @@
 class LatestChangesController < SubtopicsController
   def index
-    setup_navigation_helpers(subtopic)
+    setup_content_item_and_navigation_helpers(subtopic)
 
     render :index, locals: {
       subtopic: subtopic,
