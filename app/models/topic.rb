@@ -1,6 +1,15 @@
 class Topic
   attr_reader :content_item
-  delegate :base_path, :title, :description, :content_id, :linked_items, :details, to: :content_item
+  delegate(
+    :base_path,
+    :title,
+    :description,
+    :content_id,
+    :linked_items,
+    :details,
+    :to_hash,
+    to: :content_item
+  )
 
   def self.find(base_path, pagination_options = {})
     content_item = ContentItem.find!(base_path)

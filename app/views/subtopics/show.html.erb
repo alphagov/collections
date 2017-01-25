@@ -1,15 +1,16 @@
-<% content_for :title, "#{@subtopic.combined_title} - GOV.UK" %>
-<%= render 'shared/tag_meta', tag: @subtopic %>
+<% content_for :title, "#{subtopic.combined_title} - GOV.UK" %>
+<%= render 'shared/tag_meta', tag: subtopic %>
 <% content_for :page_title do %>
-  <%- if @subtopic.parent -%>
-    <%= link_to @subtopic.parent.title, @subtopic.parent.base_path %>
+  <%- if subtopic.parent -%>
+    <%= link_to subtopic.parent.title, subtopic.parent.base_path %>
   <%- end -%>
-  <%= @subtopic.title %>
+  <%= subtopic.title %>
 <% end %>
 
 <% content_for :extra_headers do %>
-  <%= render partial: 'govuk_component/analytics_meta_tags', locals: { content_item: @content_item } %>
-  <meta name="govuk:section" content="<%= @meta_section %>">
+  <%= render partial: 'govuk_component/analytics_meta_tags',
+    locals: { content_item: subtopic.to_hash } %>
+  <meta name="govuk:section" content="<%= meta_section %>">
 <% end %>
 
 <% content_for :breadcrumbs do %>
@@ -20,11 +21,11 @@
 <%= render(
   layout: "subtopic",
   locals: {
-    subtopic: @subtopic,
-    organisations: organisations(@subtopic.content_id),
+    subtopic: subtopic,
+    organisations: organisations(subtopic.content_id),
     link_to_latest_feed: true,
   }) do %>
-  <% @subtopic.lists.each do |list| -%>
+  <% subtopic.lists.each do |list| -%>
     <nav class="index-list with-title" aria-labelledby="<%= list.title.parameterize %>">
       <h1 id="<%= list.title.parameterize %>"><%= list.title %></h1>
       <ul>

@@ -11,9 +11,11 @@ Collections::Application.routes.draw do
     get ':second_level_slug', on: :member, to: "second_level_browse_page#show"
   end
 
-  resources :topics, only: [:index, :show], path: :topic, param: :topic_slug
+  resources :topics, only: [:index, :show], path: :topic, param: :topic_slug do
+    get ":subtopic_slug", on: :member, to: "subtopics#show"
+  end
+
   get "/topic/:topic_slug/:subtopic_slug/latest", to: "topics#latest_changes", as: :latest_changes
-  get "/topic/:topic_slug/:subtopic_slug", to: "topics#subtopic", as: :subtopic
   get "/topic/:topic_slug/:subtopic_slug/email-signup", to: "email_signups#new", as: :email_signup
   post "/topic/:topic_slug/:subtopic_slug/email-signup", to: "email_signups#create"
 

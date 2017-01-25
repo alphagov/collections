@@ -9,12 +9,6 @@ class TopicsController < ApplicationController
     setup_content_item_and_navigation_helpers(@topic)
   end
 
-  def subtopic
-    @subtopic = Topic.find(request.path)
-    @meta_section = @subtopic.parent.title.downcase
-    setup_content_item_and_navigation_helpers(@subtopic)
-  end
-
   def latest_changes
     subtopic_base_path = request.path.sub(%r{/latest\z}, '')
     @subtopic = Topic.find(subtopic_base_path, pagination_params)
@@ -47,10 +41,6 @@ private
     @organisations ||= subtopic_organisations(subtopic_content_id)
   end
   helper_method :organisations
-
-  def slug
-    "#{params[:topic_slug]}/#{params[:subtopic_slug]}"
-  end
 
   def subtopic_organisations(subtopic_content_id)
     OrganisationsFacetPresenter.new(
