@@ -2,25 +2,25 @@ class BrowseController < ApplicationController
   enable_request_formats show: [:json]
 
   def index
-    content_item = MainstreamBrowsePage.find("/browse")
-    setup_navigation_helpers(content_item)
+    page = MainstreamBrowsePage.find("/browse")
+    setup_navigation_helpers(page)
 
-    render :index, locals: { content_item: content_item }
+    render :index, locals: { page: page }
   end
 
   def show
-    content_item =
+    page =
       MainstreamBrowsePage.find("/browse/#{params[:top_level_slug]}")
-    setup_navigation_helpers(content_item)
+    setup_navigation_helpers(page)
 
     respond_to do |f|
       f.html do
-        render :show, locals: { content_item: content_item }
+        render :show, locals: { page: page }
       end
       f.json do
         render json: {
           breadcrumbs: breadcrumb_content,
-          html: second_level_browse_pages_partial(content_item)
+          html: second_level_browse_pages_partial(page)
         }
       end
     end
@@ -28,11 +28,11 @@ class BrowseController < ApplicationController
 
 private
 
-  def second_level_browse_pages_partial(content_item)
+  def second_level_browse_pages_partial(page)
     render_partial('second_level_browse_page/_second_level_browse_pages',
-      title: content_item.title,
-      second_level_browse_pages: content_item.second_level_browse_pages,
-      curated_order: content_item.second_level_pages_curated?,
+      title: page.title,
+      second_level_browse_pages: page.second_level_browse_pages,
+      curated_order: page.second_level_pages_curated?,
     )
   end
 end

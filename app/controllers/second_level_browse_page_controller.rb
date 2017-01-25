@@ -2,19 +2,19 @@ class SecondLevelBrowsePageController < ApplicationController
   enable_request_formats show: [:json]
 
   def show
-    setup_navigation_helpers(content_item)
+    setup_navigation_helpers(page)
 
     respond_to do |f|
       f.html do
         render :show, locals: {
-          content_item: content_item,
+          page: page,
           meta_section: meta_section
         }
       end
       f.json do
         render json: {
           breadcrumbs: breadcrumb_content,
-          html: render_partial('_links', content_item: content_item)
+          html: render_partial('_links', page: page)
         }
       end
     end
@@ -23,10 +23,10 @@ class SecondLevelBrowsePageController < ApplicationController
 private
 
   def meta_section
-    content_item.active_top_level_browse_page.title.downcase
+    page.active_top_level_browse_page.title.downcase
   end
 
-  def content_item
+  def page
     MainstreamBrowsePage.find(
       "/browse/#{params[:top_level_slug]}/#{params[:second_level_slug]}"
     )

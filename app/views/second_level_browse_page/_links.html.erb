@@ -1,8 +1,8 @@
-<div class="pane-inner <%= content_item.lists.curated? ? 'curated-list' : 'a-to-z' %>">
-  <h1 tabindex="-1"><%= content_item.title %></h1>
+<div class="pane-inner <%= page.lists.curated? ? 'curated-list' : 'a-to-z' %>">
+  <h1 tabindex="-1"><%= page.title %></h1>
 
-  <% content_item.lists.each do |list| %>
-    <% if content_item.lists.curated? %>
+  <% page.lists.each do |list| %>
+    <% if page.lists.curated? %>
       <h2 class='list-header'><%= list.title %></h2>
     <% else %>
       <p class="sort-order"><%= hairspace list.title %></p>
@@ -15,11 +15,11 @@
     </ul>
   <% end %>
 
-  <% if content_item.related_topics.any? %>
+  <% if page.related_topics.any? %>
     <div class="detailed-guidance">
       <h2>Detailed guidance</h2>
       <ul>
-        <% content_item.related_topics.each do |related_topic| %>
+        <% page.related_topics.each do |related_topic| %>
           <li><%= link_to related_topic.title, related_topic.base_path %></li>
         <% end %>
       </ul>
