@@ -18,24 +18,11 @@ class TopLevelBrowsePageController < ApplicationController
 
 private
 
-  # TODO: move this to app controller
-  def breadcrumb_content
-    render_partial(
-      '_breadcrumbs',
-      navigation_helpers: @navigation_helpers
-    )
-  end
-
   def second_level_browse_pages_partial(page)
     render_partial('second_level_browse_page/_second_level_browse_pages',
       title: page.title,
       second_level_browse_pages: page.second_level_browse_pages,
       curated_order: page.second_level_pages_curated?,
     )
-  end
-
-  # move this to app controller
-  def render_partial(partial_name, locals = {})
-    render_to_string(partial_name, formats: 'html', layout: false, locals: locals)
   end
 end

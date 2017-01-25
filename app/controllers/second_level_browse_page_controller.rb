@@ -16,17 +16,4 @@ class SecondLevelBrowsePageController < ApplicationController
       end
     end
   end
-
-private
-
-  def breadcrumb_content
-    render_partial(
-      '_breadcrumbs',
-      navigation_helpers: @navigation_helpers
-    )
-  end
-
-  def render_partial(partial_name, locals = {})
-    render_to_string(partial_name, formats: 'html', layout: false, locals: locals)
-  end
 end
