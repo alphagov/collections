@@ -3,7 +3,7 @@
 
 <% content_for :breadcrumbs do %>
   <%= render partial: 'govuk_component/breadcrumbs',
-    locals: navigation_helpers.taxon_breadcrumbs %>
+    locals: @navigation_helpers.taxon_breadcrumbs %>
 <% end %>
 
 <%= render partial: 'page_header', locals: {
