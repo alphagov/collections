@@ -1,0 +1,33 @@
+<% content_for :title, "#{subtopic.combined_title} - GOV.UK" %>
+<%= render 'shared/tag_meta', tag: subtopic %>
+<% content_for :page_title do %>
+  <%- if subtopic.parent -%>
+    <%= link_to subtopic.parent.title, subtopic.parent.base_path %>
+  <%- end -%>
+  <%= subtopic.title %>
+<% end %>
+
+<% content_for :meta_section do %>
+  <meta name="govuk:section" content="<%= meta_section %>">
+<% end %>
+
+<%= render(
+  layout: "subtopic",
+  locals: {
+    subtopic: subtopic,
+    organisations: organisations(subtopic.content_id),
+    link_to_latest_feed: true,
+  }) do %>
+  <% subtopic.lists.each do |list| -%>
+    <nav class="index-list with-title" aria-labelledby="<%= list.title.parameterize %>">
+      <h1 id="<%= list.title.parameterize %>"><%= list.title %></h1>
+      <ul>
+      <% list.contents.each do |list_item| -%>
+        <li>
+          <a href="<%= list_item.base_path %>"><%= list_item.title %></a>
+        </li>
+      <% end -%>
+      </ul>
+    </nav>
+  <% end -%>
+<% end %>

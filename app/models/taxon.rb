@@ -6,6 +6,7 @@ class Taxon
     :title,
     :description,
     :linked_items,
+    :to_hash,
     to: :content_item
   )
 

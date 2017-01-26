@@ -1,27 +1,26 @@
-<% content_for :title, "#{@subtopic.title}: latest documents - GOV.UK" %>
+<% content_for :title, "#{subtopic.title}: latest documents - GOV.UK" %>
 <% content_for :page_title do %>
-  <span><%= @subtopic.title %></span>: latest documents
+  <span><%= subtopic.title %></span>: latest documents
 <% end %>
 
-<% content_for :extra_headers do %>
-  <%= render partial: 'govuk_component/analytics_meta_tags', locals: { content_item: @content_item } %>
-  <meta name="govuk:section" content="<%= @meta_section %>">
+<% content_for :meta_section do %>
+  <meta name="govuk:section" content="<%= meta_section %>">
 <% end %>
 
 <% content_for :breadcrumbs do %>
   <%= render partial: 'govuk_component/breadcrumbs',
-    locals: @hardcoded_breadcrumbs %>
+    locals: hardcoded_breadcrumbs %>
 <% end %>
 
 <%= render(
-  layout: "subtopic",
+  layout: "subtopics/subtopic",
   locals: {
-    subtopic: @subtopic,
-    organisations: organisations(@subtopic.content_id),
+    subtopic: subtopic,
+    organisations: organisations(subtopic.content_id),
     link_to_latest_feed: false,
   }) do %>
   <ul class="changed-documents">
-    <% @subtopic.changed_documents.each do |document| -%>
+    <% subtopic.changed_documents.each do |document| -%>
       <li>
         <h3><a href="<%= document.base_path %>"><%= document.title %></a></h3>
 
@@ -41,25 +40,25 @@
   </ul>
 
   <ul class="previous-next-navigation">
-    <% if @pagination_presenter.previous_page? %>
+    <% if pagination_presenter.previous_page? %>
       <li class="previous">
-        <%= link_to @pagination_presenter.previous_page_path do %>
+        <%= link_to pagination_presenter.previous_page_path do %>
           Previous <span class="visuallyhidden">page</span>
           <span class="page-numbers">
-            <%= @pagination_presenter.previous_page_number %> of
-            <%= @pagination_presenter.total_pages %>
+            <%= pagination_presenter.previous_page_number %> of
+            <%= pagination_presenter.total_pages %>
           </span>
         <% end %>
       </li>
     <% end %>
 
-    <% if @pagination_presenter.next_page? %>
+    <% if pagination_presenter.next_page? %>
       <li class="next">
-        <%= link_to @pagination_presenter.next_page_path do %>
+        <%= link_to pagination_presenter.next_page_path do %>
           Next <span class="visuallyhidden">page</span>
           <span class="page-numbers">
-            <%= @pagination_presenter.next_page_number %> of
-            <%= @pagination_presenter.total_pages %>
+            <%= pagination_presenter.next_page_number %> of
+            <%= pagination_presenter.total_pages %>
           </span>
         <% end %>
       </li>

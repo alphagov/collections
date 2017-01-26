@@ -1,6 +1,14 @@
 class MainstreamBrowsePage
   attr_reader :content_item
-  delegate :base_path, :title, :description, :linked_items, :details, to: :content_item
+  delegate(
+    :base_path,
+    :title,
+    :description,
+    :linked_items,
+    :details,
+    :to_hash,
+    to: :content_item
+  )
 
   def self.find(base_path)
     content_item = ContentItem.find!(base_path)

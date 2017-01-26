@@ -1,38 +1,26 @@
 class BrowseController < ApplicationController
-  enable_request_formats top_level_browse_page: [:json]
-  enable_request_formats second_level_browse_page: [:json]
+  enable_request_formats show: [:json]
 
   def index
-    @page = MainstreamBrowsePage.find("/browse")
-    setup_content_item_and_navigation_helpers(@page)
+    page = MainstreamBrowsePage.find("/browse")
+    setup_content_item_and_navigation_helpers(page)
+
+    render :index, locals: { page: page }
   end
 
-  def top_level_browse_page
-    @page = MainstreamBrowsePage.find("/browse/#{params[:top_level_slug]}")
-    setup_content_item_and_navigation_helpers(@page)
+  def show
+    page =
+      MainstreamBrowsePage.find("/browse/#{params[:top_level_slug]}")
+    setup_content_item_and_navigation_helpers(page)
 
     respond_to do |f|
-      f.html
-      f.json do
-        render json: {
-          breadcrumbs: breadcrumb_content,
-          html: second_level_browse_pages_partial(@page)
-        }
+      f.html do
+        render :show, locals: { page: page }
       end
-    end
-  end
-
-  def second_level_browse_page
-    @page = MainstreamBrowsePage.find("/browse/#{params[:top_level_slug]}/#{params[:second_level_slug]}")
-    @meta_section = @page.active_top_level_browse_page.title.downcase
-    setup_content_item_and_navigation_helpers(@page)
-
-    respond_to do |f|
-      f.html
       f.json do
         render json: {
           breadcrumbs: breadcrumb_content,
-          html: render_partial('_links')
+          html: second_level_browse_pages_partial(page)
         }
       end
     end
@@ -40,22 +28,11 @@ class BrowseController < ApplicationController
 
 private
 
-  def breadcrumb_content
-    render_partial(
-      '_breadcrumbs',
-      navigation_helpers: @navigation_helpers
-    )
-  end
-
   def second_level_browse_pages_partial(page)
-    render_partial('_second_level_browse_pages',
+    render_partial('second_level_browse_page/_second_level_browse_pages',
       title: page.title,
       second_level_browse_pages: page.second_level_browse_pages,
       curated_order: page.second_level_pages_curated?,
     )
-  end
-
-  def render_partial(partial_name, locals = {})
-    render_to_string(partial_name, formats: 'html', layout: false, locals: locals)
   end
 end

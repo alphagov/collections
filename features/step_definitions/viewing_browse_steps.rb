@@ -52,7 +52,7 @@ Then(/^I see the links tagged to the browse page/) do
 end
 
 When(/^I visit the main browse page$/) do
-  visit browse_path
+  visit browse_index_path
 end
 
 Then(/^I see the list of top level browse pages alphabetically ordered$/) do

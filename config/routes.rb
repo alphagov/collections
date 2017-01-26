@@ -6,18 +6,27 @@ Collections::Application.routes.draw do
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
 
   get "/browse.json" => redirect("/api/content/browse")
-  get "/browse", to: "browse#index"
-  get "/browse/:top_level_slug", to: "browse#top_level_browse_page"
-  get "/browse/:top_level_slug/:second_level_slug", to: "browse#second_level_browse_page"
 
-  get "/topic", to: "topics#index", as: :topics
-  get "/topic/:topic_slug/:subtopic_slug/latest", to: "topics#latest_changes", as: :latest_changes
-  get "/topic/:topic_slug/:subtopic_slug", to: "topics#subtopic", as: :subtopic
-  get "/topic/:topic_slug", to: "topics#topic", as: :topic
-  get "/topic/:topic_slug/:subtopic_slug/email-signup", to: "email_signups#new", as: :email_signup
-  post "/topic/:topic_slug/:subtopic_slug/email-signup", to: "email_signups#create"
+  resources :browse, only: [:index, :show], param: :top_level_slug do
+    get ':second_level_slug', on: :member, to: "second_level_browse_page#show"
+  end
 
-  get "/government/organisations/:organisation_id/services-information", to: "services_and_information#index", as: :services_and_information
+  resources :topics, only: [:index, :show], path: :topic, param: :topic_slug do
+    get ":subtopic_slug", on: :member, to: "subtopics#show"
+  end
+
+  get "/topic/:topic_slug/:subtopic_slug/latest",
+    to: "latest_changes#index", as: :latest_changes
+
+  get "/topic/:topic_slug/:subtopic_slug/email-signup",
+    to: "email_signups#new",
+    as: :email_signup
+  post "/topic/:topic_slug/:subtopic_slug/email-signup",
+    to: "email_signups#create"
+
+  get "/government/organisations/:organisation_id/services-information",
+    to: "services_and_information#index",
+    as: :services_and_information
 
   get '*taxon_base_path', to: 'taxons#show'
 end

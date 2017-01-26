@@ -1,20 +1,11 @@
-<% content_for :title, "Services and information - #{@organisation['title']} - GOV.UK" %>
+<% content_for :title, "Services and information - #{organisation['title']} - GOV.UK" %>
 <% content_for :page_class, "topics-page" %>
-
-<% content_for :extra_headers do %>
-  <%= render partial: 'govuk_component/analytics_meta_tags', locals: { content_item: @content_item } %>
-<% end %>
-
-<% content_for :breadcrumbs do %>
-  <%= render partial: 'govuk_component/breadcrumbs',
-    locals: @navigation_helpers.breadcrumbs %>
-<% end %>
 
 <header class="page-header group">
   <div class="full-width">
     <div class="heading">
       <h1>
-        <%= link_to @organisation["title"], @organisation["base_path"] %>
+        <%= link_to organisation["title"], organisation["base_path"] %>
         Services and information
       </h1>
     </div>
@@ -22,5 +13,5 @@
 </header>
 
 <div class="browse-container full-width">
-  <%= render partial: 'grouped_links', grouped_links: @grouped_links %>
+  <%= render partial: 'grouped_links', locals: { grouped_links: grouped_links } %>
 </div>
