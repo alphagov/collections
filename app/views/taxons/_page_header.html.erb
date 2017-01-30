@@ -1,17 +1,16 @@
 <div class="grid-row">
   <div class="column-two-thirds">
     <div class="page-header">
+      <span  role=”link” tabindex=”0″ class="sub-heading">
+        <% if parent_taxon.present? %>
+          <%= link_to parent_taxon.title, parent_taxon.base_path %>
+        <% else %>
+          <%= link_to 'Home', Plek.find('www') %>
+        <% end %>
+      </span>
       <h1>
-        <span class="sub-heading">
-          <% if parent_taxon.present? %>
-            <%= link_to parent_taxon.title, parent_taxon.base_path %>
-          <% else %>
-            <%= link_to 'Home', Plek.find('www') %>
-          <% end %>
-          </span>
         <%= taxon.title %>
       </h1>
-
       <p><%= taxon.description %></p>
     </div>
   </div>
