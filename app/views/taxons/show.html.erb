@@ -6,6 +6,11 @@
   parent_taxon: taxon.parent_taxon
 } %>
 
+<% content_for :breadcrumbs do %>
+  <%= render partial: 'govuk_component/breadcrumbs',
+    locals: @navigation_helpers.taxon_breadcrumbs %>
+<% end %>
+
 <% if taxon.has_grandchildren? %>
   <%= render partial: 'child_taxons_grid',
     locals: { child_taxons: taxon.child_taxons } %>
