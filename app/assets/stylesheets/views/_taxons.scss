@@ -1,30 +1,20 @@
 .taxon-page {
 
-  @function em($px, $base: 19) {
-    @return ($px / $base) + em;
-  }
-
   h1 {
     box-sizing: border-box;
     display: block;
-    min-height: 30vh;
-    padding-top: 12.5vh;
-    font-size: 48px;
-    line-height: 50px;
-    font-weight: bold;
+    padding-top: 90px;
+    @include bold-48;
 
     +p {
-      font-size: 24px;
-      line-height: 30px;
+      @include core-24;
+      padding-top: 10px;
       padding-bottom: 30px;
     }
   }
 
   h2 {
-    font-size: 24px;
-    line-height: 30px;
-    font-weight: bold;
-
+    @include bold-24;
     margin-top: $gutter * 1.5;
     margin-bottom: $gutter;
 
@@ -35,54 +25,42 @@
   }
 
   h3 {
-    font-size: 19px;
-    font-weight: bold;
-
+    @include bold-19;
     padding-bottom: $gutter-one-third;
   }
 
   p {
     @include core-19;
-    -webkit-font-smoothing: antialiased;
-    margin-top: em(5, 16);
-    margin-bottom: em(20, 16);
+    margin-top: 2px;
+    margin-bottom: 6px;
+  }
 
-    @include media(tablet) {
-      margin-top: em(5);
-      margin-bottom: em(20);
+  .sub-heading {
+    @include core-24;
+    margin-bottom: 0;
+
+    a {
+      color: $secondary-text-colour;
+      text-decoration: none;
+
+      &:before {
+        content: " ";
+        background-image: image-url("back.svg");
+        background-repeat: no-repeat;
+        background-size: auto 18px;
+        background-position: left bottom;
+        display: inline-block;
+        width: 20px;
+        height: 1em;
+      }
     }
   }
 
   .page-header {
-    min-height: 45vh;
-    margin-bottom: 0;
+    margin-top: $gutter * 3;
 
-    div {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-
-    .sub-heading {
-      font-weight: normal;
-      font-size: 24px;
-
-      display: block;
-
-      a {
-        color: $secondary-text-colour;
-        text-decoration: none;
-
-        &:before {
-          content: " ";
-          background-image: image-url("back.svg");
-          background-repeat: no-repeat;
-          background-size: auto 18px;
-          background-position: left bottom;
-          display: inline-block;
-          width: 20px;
-          height: 1em;
-        }
-      }
+    h1 {
+      padding-top: 0;
     }
   }
 
@@ -110,11 +88,12 @@
       ul {
         list-style-type: none;
         padding-bottom: $gutter-one-third;
-
-        h3 {
-          padding-bottom: 0;
-        }
       }
+
+      h3 {
+        padding-bottom: 0;
+      }
+
     }
   }
 
@@ -122,15 +101,14 @@
     .topic-content {
       ul {
         list-style-type: none;
+      }
 
-        li {
-          margin-bottom: $gutter-one-third;
+      li {
+        margin-bottom: $gutter-one-third;
+      }
 
-          // scss-lint:disable NestingDepth
-          h3 {
-            padding-bottom: 0;
-          }
-        }
+      h3 {
+        padding-bottom: 0;
       }
     }
   }
@@ -141,11 +119,6 @@
 
     @include media(tablet) {
       margin-bottom: $gutter * 1.5;
-    }
-
-    &__title {
-      @include bold-24;
-      margin-bottom: 5px;
     }
 
     &__description {
@@ -163,18 +136,18 @@
       list-style-type: none;
     }
 
-    &__list-item {
-      margin-bottom: 0.5em;
-    }
-
     &__list-item a {
       text-decoration: none;
     }
   }
 
+// Most of this is taken from the service manual and at some point needs to be separated
+// out into a component.  We are currently holding off on this until it is tested more
+// within the current navigation changes.
 
    // When JavaScript is enabled, create accordion
   .js-accordion-with-descriptions {
+    padding-bottom: $gutter * 2;
 
     // Wrapper for 'open all / close all' button
     .subsection-controls {
@@ -301,7 +274,4 @@
     }
   }
 
-  .js-accordion-with-descriptions {
-    padding-bottom: $gutter * 2;
-  }
 }
