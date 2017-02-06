@@ -6,6 +6,7 @@ Collections serves the GOV.UK browse and topic pages.
 ![Topic page](docs/topic-page.jpg)
 ![Subtopic page](docs/subtopic-page.jpg)
 ![Services and information page](docs/services-and-information-page.jpg)
+![Taxonomy page](docs/taxonomy-page.jpg)
 
 (As of June 2015)
 
@@ -15,6 +16,8 @@ Collections serves the GOV.UK browse and topic pages.
 - Topic page: [gov.uk/oil-and-gas](https://www.gov.uk/oil-and-gas)
 - Subtopic page: [gov.uk/oil-and-gas/fields-and-wells](https://www.gov.uk/oil-and-gas/fields-and-wells)
 - Services and information page: [gov.uk/government/organisations/hm-revenue-customs/services-information](https://www.gov.uk/government/organisations/hm-revenue-customs/services-information)
+- Taxonomy page (currently only on integration):
+  [gov.uk/education](https://www-origin.integration.publishing.service.gov.uk/education)
 
 ## Nomenclature
 
@@ -31,6 +34,17 @@ Collections serves the GOV.UK browse and topic pages.
 - **Root browse page**: [gov.uk/browse](https://www.gov.uk/browse)
 - **Top level browse page**: [gov.uk/browse/benefits](https://www.gov.uk/browse/benefits)
 - **Second level browse page**: [gov.uk/browse/benefits/entitlement](https://www.gov.uk/browse/benefits/entitlement)
+
+### Taxonomy
+
+- **Taxon with grandchildren**: a content item of type taxon that has
+  `child_taxons` links. Some or all of those child taxons also have
+  `child_taxons` links, which means we display a grid of child taxons -
+  [gov.uk/education](https://www-origin.integration.publishing.service.gov.uk/education)
+- **Taxon without grandchildren**: a content item of type taxon that has
+  `child_taxons` links. None of those child taxons' links have `child_taxons`,
+  in which case we display an accordion view:
+  [gov.uk/education/school-governance](https://www-origin.integration.publishing.service.gov.uk/education/school-governance)
 
 ## Technical documentation
 
