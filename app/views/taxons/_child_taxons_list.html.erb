@@ -6,12 +6,12 @@
         <div class="subsection-wrapper">
           <% ([taxon] + child_taxons).each_with_index do |taxon_for_list, index| %>
             <div class="subsection">
-              <div class="subsection__header">
-                <h2 class="subsection__title"><%= taxon_for_list.title %></h2>
-                <p class="subsection__description"><%= taxon_for_list.description %></p>
+              <div class="subsection-header">
+                <h2 class="subsection-title"><%= taxon_for_list.title %></h2>
+                <p class="subsection-description"><%= taxon_for_list.description %></p>
               </div>
 
-              <div class="subsection__content" id="subsection_content_<%= index %>">
+              <div class="subsection-content" id="subsection_content_<%= index %>">
                 <%= render partial: 'tagged_content_list', locals: {
                   tagged_content: taxon_for_list.tagged_content
                 } %>
