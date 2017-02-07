@@ -74,10 +74,10 @@
         padding-bottom: $gutter;
         min-height: (5 * $gutter);
       }
+    }
 
-      li:nth-child(3n+1) {
-        clear: left;
-      }
+    .leftmost-row-cell-clear-float {
+      clear: left;
     }
   }
 
