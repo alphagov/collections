@@ -33,6 +33,7 @@ group :test do
   gem 'minitest-spec-rails', '~> 5.3.0'
   gem 'mocha', '~> 1.1.0', require: false
   gem 'webmock', '~> 1.21.0', require: false
+  gem 'climate_control', '~> 0.1.0', require: false
   gem 'cucumber-rails', '~> 1.4.2', require: false
   gem 'govuk-content-schema-test-helpers', '~> 1.3.0'
   gem 'govuk_schemas', '~> 2.1'
