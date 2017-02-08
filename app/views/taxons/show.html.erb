@@ -1,5 +1,8 @@
 <% content_for :title, taxon.title %>
 <% content_for :page_class, "taxon-page" %>
+<% content_for :meta_tags do %>
+  <%= ab_variant.analytics_meta_tag.html_safe %>
+<% end %>
 
 <%= render partial: 'page_header', locals: {
   taxon: taxon,
