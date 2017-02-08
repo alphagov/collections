@@ -1,5 +1,10 @@
 <% content_for :title, "Services and information - #{organisation['title']} - GOV.UK" %>
 <% content_for :page_class, "topics-page" %>
+<% content_for :meta_tags do %>
+  <% if is_ab_test_active %>
+    <meta name="govuk:ab-test" content="EducationNavigation:A">
+  <% end %>
+<% end %>
 
 <header class="page-header group">
   <div class="full-width">

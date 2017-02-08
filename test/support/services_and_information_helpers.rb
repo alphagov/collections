@@ -1,8 +1,20 @@
 module ServicesAndInformationHelpers
   def stub_services_and_information_content_item
-    content_store_has_item("/government/organisations/hm-revenue-customs/services-information",
-      base_path: "/government/organisations/hm-revenue-customs/services-information",
-      title: "Services and information - HM Revenue & Customs",
+    stub_content_item(
+      "/government/organisations/hm-revenue-customs/services-information",
+      "HM Revenue & Customs")
+  end
+
+  def stub_education_services_and_information_content_item
+    stub_content_item(
+      "/government/organisations/department-for-education/services-information",
+      "Department for Education")
+  end
+
+  def stub_content_item(base_path, organisation_title)
+    content_store_has_item(base_path,
+      base_path: base_path,
+      title: "S&I page title",
       description: "",
       document_type: "services_and_information",
       public_updated_at: 10.days.ago.iso8601,
@@ -10,9 +22,9 @@ module ServicesAndInformationHelpers
       links: {
         parent: [
           {
-            analytics_identifier: "D25",
-            base_path: "/government/organisations/hm-revenue-customs",
-            title: "HM Revenue & Customs",
+            analytics_identifier: "org_analytics_id",
+            base_path: "/organisation/base/path",
+            title: organisation_title,
           },
         ],
       },
