@@ -7,6 +7,7 @@
 } %>
 
 <% content_for :breadcrumbs do %>
+  <%= render partial: 'govuk_component/beta_label' %>
   <%= render partial: 'govuk_component/breadcrumbs',
     locals: @navigation_helpers.taxon_breadcrumbs %>
 <% end %>
