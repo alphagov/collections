@@ -1,0 +1,17 @@
+default: &default
+  second_level_browse_pages:
+    education:
+      find-course: education/further-and-higher-education-skills-and-vocational-training
+      school-admissions-transport: education/running-and-managing-a-school
+      school-life: education
+      student-finance: education/funding-and-finance-for-students
+      universities-higher-education: education/further-and-higher-education-skills-and-vocational-training
+
+production:
+  <<: *default
+
+development:
+  <<: *default
+
+test:
+  <<: *default
