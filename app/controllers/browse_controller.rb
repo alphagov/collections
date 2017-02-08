@@ -5,7 +5,9 @@ class BrowseController < ApplicationController
     page = MainstreamBrowsePage.find("/browse")
     setup_content_item_and_navigation_helpers(page)
 
-    render :index, locals: { page: page }
+    ab_variant = GovukAbTesting::AbTest.new("EducationNavigation").requested_variant(request)
+
+    render :index, locals: { page: page, ab_variant: ab_variant }
   end
 
   def show
@@ -16,12 +18,12 @@ class BrowseController < ApplicationController
     respond_to do |f|
       f.html do
         is_page_under_ab_test = false
-        ab_test_variant = GovukAbTesting::AbTest.new("EducationNavigation").requested_variant(request)
+        ab_variant = GovukAbTesting::AbTest.new("EducationNavigation").requested_variant(request)
 
         if new_navigation_enabled? && params[:top_level_slug] == "education"
-          ab_test_variant.configure_response(response)
+          ab_variant.configure_response(response)
 
-          if ab_test_variant.variant_b?
+          if ab_variant.variant_b?
             return redirect_to controller: "taxons",
               action: "show",
               taxon_base_path: "education"
@@ -33,7 +35,7 @@ class BrowseController < ApplicationController
         render :show, locals: {
           page: page,
           is_page_under_ab_test: is_page_under_ab_test,
-          ab_test_variant: ab_test_variant,
+          ab_variant: ab_variant,
          }
       end
       f.json do

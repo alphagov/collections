@@ -6,9 +6,11 @@ class SecondLevelBrowsePageController < ApplicationController
 
     respond_to do |f|
       f.html do
+        ab_variant = GovukAbTesting::AbTest.new("EducationNavigation").requested_variant(request)
         render :show, locals: {
           page: page,
-          meta_section: meta_section
+          meta_section: meta_section,
+          ab_variant: ab_variant
         }
       end
       f.json do

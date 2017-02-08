@@ -321,9 +321,16 @@
     },
     navigate: function(e){
       if(e.currentTarget.pathname.match(/^\/browse\/[^\/]+(\/[^\/]+)?$/)){
-        e.preventDefault();
 
         var $target = $(e.currentTarget);
+
+        if ($target.hasClass('ab-test-redirect')) {
+          // Allow browser to follow link, which will redirect to the correct page
+          return;
+        }
+
+        e.preventDefault();
+
         var state = this.parsePathname(e.currentTarget.pathname);
         state.title = $target.text();
 
