@@ -3,8 +3,6 @@
   h1 {
     box-sizing: border-box;
     display: block;
-    padding-top: 90px;
-    @include bold-48;
 
     +p {
       @include core-24;
