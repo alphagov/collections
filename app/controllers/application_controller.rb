@@ -29,6 +29,10 @@ class ApplicationController < ActionController::Base
     @acceptable_formats ||= {}
   end
 
+  def new_navigation_enabled?
+    ENV['ENABLE_NEW_NAVIGATION'] == 'yes'
+  end
+
 private
 
   def restrict_request_formats
