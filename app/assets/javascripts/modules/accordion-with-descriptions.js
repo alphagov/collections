@@ -49,7 +49,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       }
 
       function addOpenCloseAllButton() {
-        $element.prepend( '<div class="subsection-controls js-subsection-controls"><button aria-expanded="false">Open all</button></div>' );
+        $element.prepend( '<div class="subsection-controls js-subsection-controls"><button aria-expanded="false">Expand all</button></div>' );
       }
 
       function addButtonsToSubsections() {
@@ -148,12 +148,12 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
           var action = '';
 
           // update button text
-          if ($openOrCloseAllButton.text() == "Open all") {
+          if ($openOrCloseAllButton.text() == "Expand all") {
             $openOrCloseAllButton.text("Close all");
             $openOrCloseAllButton.attr("aria-expanded", "true");
             action = 'open';
           } else {
-            $openOrCloseAllButton.text("Open all");
+            $openOrCloseAllButton.text("Expand all");
             $openOrCloseAllButton.attr("aria-expanded", "false");
             action = 'close';
           }
@@ -201,7 +201,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
         if (openSubsections === totalSubsections) {
           $openOrCloseAllButton.text('Close all');
         } else {
-          $openOrCloseAllButton.text('Open all');
+          $openOrCloseAllButton.text('Expand all');
         }
       }
 
