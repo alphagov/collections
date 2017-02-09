@@ -16,8 +16,7 @@
     margin-top: $gutter * 1.5;
     margin-bottom: $gutter;
 
-    // scss-lint:disable SelectorFormat
-    &.subsection__title {
+    &.subsection-title {
       margin: 0;
     }
   }
@@ -119,7 +118,7 @@
       margin-bottom: $gutter * 1.5;
     }
 
-    &__description {
+    .subsection-description {
       @include core-19;
       margin-bottom: $gutter-one-quarter;
 
@@ -128,20 +127,20 @@
       }
     }
 
-    &__list {
+    .subsection-list {
       @include core-19;
       padding-left: 0;
       list-style-type: none;
     }
 
-    &__list-item a {
+    .subsection-list-item a {
       text-decoration: none;
     }
   }
 
-// Most of this is taken from the service manual and at some point needs to be separated
-// out into a component.  We are currently holding off on this until it is tested more
-// within the current navigation changes.
+// Most of this is taken from the service manual and at some point needs to be
+// separated out into a component.  We are currently holding off on this until
+// it is tested more within the current navigation changes.
 
    // When JavaScript is enabled, create accordion
   .js-accordion-with-descriptions {
@@ -169,107 +168,100 @@
       border-bottom: 1px solid $border-colour;
     }
 
+    .subsection-title {
+      button {
+        color: $govuk-blue;
+        cursor: pointer;
+
+        @include bold-24;
+        background: none;
+        border: 0;
+        padding-left: 0;
+        text-align: left;
+      }
+
+      margin-bottom: 0;
+      margin-right: $gutter-half;
+
+      @include media(tablet) {
+        margin-right: $gutter;
+      }
+    }
+
+    .subsection-header {
+      position: relative;
+      padding-top: 14px;
+      padding-bottom: 12px;
+      border-top: 1px solid $border-colour;
+
+      // Change the background of the header on hover
+      &:hover {
+        cursor: pointer;
+        background: $highlight-colour;
+      }
+    }
+
+    .subsection-description {
+      margin-bottom: 0;
+      margin-right: $gutter-half;
+
+      @include media(tablet) {
+        margin-bottom: 0;
+        margin-right: $gutter;
+      }
+    }
+
+    .subsection-icon {
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      @include media (tablet) {
+        right: 15px;
+      }
+
+      height: 16px;
+      width: 16px;
+      margin-top: -8px;
+
+      // PNG fallback for SVG
+      background-image: image-url('icons-plus-minus.png');
+      // SVG sprite
+      background: image-url("icons-plus-minus.svg"), linear-gradient(transparent, transparent);
+      background-repeat: no-repeat;
+      background-position: 0 -16px;
+    }
+
+    .subsection-is-open {
+      .subsection-icon {
+        background-position: 0 0;
+      }
+
+      .subsection-content {
+        @include media(tablet) {
+          padding-top: 10px;
+          padding-bottom: $gutter;
+        }
+      }
+    }
+
+    .subsection-content {
+      padding-top: 5px;
+      padding-bottom: $gutter-half;
+    }
+
     .subsection {
       margin-bottom: 0;
 
       @include media(tablet) {
         margin-bottom: 0;
       }
-
-      &__header {
-        position: relative;
-        padding-top: 14px;
-        padding-bottom: 12px;
-        border-top: 1px solid $border-colour;
-
-        // Change the background of the header on hover
-        &:hover {
-          cursor: pointer;
-          background: $highlight-colour;
-        }
-      }
-
-      &__title {
-        button {
-          color: $govuk-blue;
-          cursor: pointer;
-
-          @include bold-24;
-          background: none;
-          border: 0;
-          padding-left: 0;
-          text-align: left;
-        }
-
-        margin-bottom: 0;
-        margin-right: $gutter-half;
-
-        @include media(tablet) {
-          margin-right: $gutter;
-        }
-      }
-
-      &__description {
-        margin-bottom: 0;
-        margin-right: $gutter-half;
-
-        @include media(tablet) {
-          margin-bottom: 0;
-          margin-right: $gutter;
-        }
-      }
-
-      &__icon {
-        position: absolute;
-        top: 50%;
-        right: 0;
-
-        @include media (tablet) {
-          right: 15px;
-        }
-
-        height: 16px;
-        width: 16px;
-        margin-top: -8px;
-
-        // PNG fallback for SVG
-        background-image: image-url('icons-plus-minus.png');
-        // SVG sprite
-        background: image-url("icons-plus-minus.svg"), linear-gradient(transparent, transparent);
-        background-repeat: no-repeat;
-        background-position: 0 -16px;
-      }
-
-      &--is-open {
-        // scss-lint:disable SelectorFormat
-        .subsection__icon {
-          background-position: 0 0;
-        }
-      }
-
-      &__content {
-        padding-top: 5px;
-        padding-bottom: $gutter-half;
-      }
-
-      &--is-open {
-        // scss-lint:disable SelectorFormat
-        .subsection__content {
-          @include media(tablet) {
-            padding-top: 10px;
-            padding-bottom: $gutter;
-          }
-        }
-      }
-
     }
   }
 
-  // scss-lint:disable SelectorFormat
-  .subsection__list-item {
+  .subsection-list-item {
     a {
       font-weight: bold;
     }
   }
-
 }

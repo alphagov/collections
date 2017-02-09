@@ -13,9 +13,9 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       // Prevent FOUC, remove class hiding content
       $element.removeClass('js-hidden');
 
-      var $subsectionButton = $element.find('.subsection__button');
-      var $subsectionHeader = $element.find('.subsection__header');
-      var totalSubsections = $element.find('.subsection__content').length;
+      var $subsectionButton = $element.find('.subsection-button');
+      var $subsectionHeader = $element.find('.subsection-header');
+      var totalSubsections = $element.find('.subsection-content').length;
 
       var $openOrCloseAllButton;
       var GOVUKServiceManualTopic = serviceManualTopicPrefix();
@@ -53,16 +53,16 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       }
 
       function addButtonsToSubsections() {
-        var $subsectionTitle = $element.find('.subsection__title');
+        var $subsectionTitle = $element.find('.subsection-title');
 
         // Wrap each title in a button, with aria controls matching the ID of the subsection
         $subsectionTitle.each(function(index) {
-          $(this).wrapInner( '<button class="subsection__button" aria-expanded="false" aria-controls="subsection_content_' + index +'"></a>' );
+          $(this).wrapInner( '<button class="subsection-button" aria-expanded="false" aria-controls="subsection_content_' + index +'"></a>' );
         });
       }
 
       function addIconsToSubsections() {
-        $subsectionHeader.append( '<span class="subsection__icon"></span>' );
+        $subsectionHeader.append( '<span class="subsection-icon"></span>' );
       }
 
       function addAriaControlsAttrForOpenCloseAllButton() {
@@ -79,13 +79,13 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       }
 
       function closeOpenSections() {
-        var $subsectionContent = $element.find('.subsection__content');
+        var $subsectionContent = $element.find('.subsection-content');
         closeSection($subsectionContent);
       }
 
       function checkSessionStorage() {
 
-        var $subsectionContent = $element.find('.subsection__content');
+        var $subsectionContent = $element.find('.subsection-content');
 
         $subsectionContent.each(function(index) {
           var subsectionContentId = $(this).attr('id');
@@ -98,11 +98,11 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       }
 
       function setSessionStorage() {
-        var isOpenSubsections = $('.subsection--is-open').length;
+        var isOpenSubsections = $('.subsection-is-open').length;
         if (isOpenSubsections) {
-          var $openSubsections = $('.subsection--is-open');
+          var $openSubsections = $('.subsection-is-open');
           $openSubsections.each(function(index) {
-            var subsectionOpenContentId = $(this).find('.subsection__content').attr('id');
+            var subsectionOpenContentId = $(this).find('.subsection-content').attr('id');
             sessionStorage.setItem( GOVUKServiceManualTopic+subsectionOpenContentId , 'Opened');
           });
         }
@@ -113,7 +113,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
         if (isClosedSubsections) {
           var $closedSubsections = $('.subsection');
           $closedSubsections.each(function(index) {
-            var subsectionClosedContentId = $(this).find('.subsection__content').attr('id');
+            var subsectionClosedContentId = $(this).find('.subsection-content').attr('id');
             sessionStorage.removeItem( GOVUKServiceManualTopic+subsectionClosedContentId , subsectionClosedContentId);
           });
         }
@@ -124,7 +124,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
         $subsectionHeader.on('click', function(e) {
           toggleSection($(this).next());
           toggleIcon($(this));
-          toggleState($(this).find('.subsection__button'));
+          toggleState($(this).find('.subsection-button'));
           setOpenCloseAllText();
           setSessionStorage();
           removeSessionStorage();
@@ -191,12 +191,12 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       function openStoredSections($section) {
         toggleSection($section);
         toggleIcon($section);
-        toggleState($section.parent().find('.subsection__button'));
+        toggleState($section.parent().find('.subsection-button'));
         setOpenCloseAllText();
       }
 
       function setOpenCloseAllText() {
-        var openSubsections = $('.subsection--is-open').length;
+        var openSubsections = $('.subsection-is-open').length;
         // Find out if the number of is-opens == total number of sections
         if (openSubsections === totalSubsections) {
           $openOrCloseAllButton.text('Close all');
@@ -214,12 +214,12 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       }
 
       function toggleIcon($node) {
-        if ($($node).parent().hasClass('subsection--is-open')) {
-          $node.parent().removeClass('subsection--is-open');
+        if ($($node).parent().hasClass('subsection-is-open')) {
+          $node.parent().removeClass('subsection-is-open');
           $node.parent().addClass('subsection');
         } else {
           $node.parent().removeClass('subsection');
-          $node.parent().addClass('subsection--is-open');
+          $node.parent().addClass('subsection-is-open');
         }
       }
 
@@ -241,11 +241,11 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
       function showOpenIcon($node) {
         $node.parent().removeClass('subsection');
-        $node.parent().addClass('subsection--is-open');
+        $node.parent().addClass('subsection-is-open');
       }
 
       function showCloseIcon($node) {
-        $node.parent().removeClass('subsection--is-open');
+        $node.parent().removeClass('subsection-is-open');
         $node.parent().addClass('subsection');
       }
 
