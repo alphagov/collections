@@ -9,4 +9,8 @@ class ActiveSupport::TestCase
       value
     end
   end
+
+  def with_new_navigation_enabled(&block)
+    ClimateControl.modify(ENABLE_NEW_NAVIGATION: 'yes', &block)
+  end
 end
