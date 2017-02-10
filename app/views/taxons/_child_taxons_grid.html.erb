@@ -2,7 +2,7 @@
   <h2>In this section</h2>
   <ul>
     <% child_taxons.each_with_index do |child_taxon, index| %>
-      <li class="<%= 'leftmost-row-cell' if index % 3 == 0%>">
+      <li class="<%= 'leftmost-row-cell-clear-float' if index % 3 == 0 %>">
         <h3>
           <%= link_to child_taxon.title, child_taxon.base_path %>
         </h3>
