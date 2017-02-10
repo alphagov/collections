@@ -2,8 +2,10 @@
   <div class="column-two-thirds">
     <div class="parent-topic-contents">
       <div class="topic-content">
-        <h2><%= taxon.title %> guidance</h2>
-        <p><%= taxon.description %></p>
+        <% if taxon.child_taxons.present? %>
+          <h2><%= taxon.title %> guidance</h2>
+          <p><%= taxon.description %></p>
+        <% end %>
 
         <ul>
           <% tagged_content.each do |content_item| %>
