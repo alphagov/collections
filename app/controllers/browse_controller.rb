@@ -15,7 +15,29 @@ class BrowseController < ApplicationController
 
     respond_to do |f|
       f.html do
-        render :show, locals: { page: page }
+        is_page_under_ab_test = false
+
+        dimension = Rails.application.config.navigation_ab_test_dimension
+        ab_test = GovukAbTesting::AbTest.new("EducationNavigation", dimension: dimension)
+        ab_test_variant = ab_test.requested_variant(request)
+
+        if new_navigation_enabled? && params[:top_level_slug] == "education"
+          ab_test_variant.configure_response(response)
+
+          if ab_test_variant.variant_b?
+            return redirect_to controller: "taxons",
+              action: "show",
+              taxon_base_path: "education"
+          end
+
+          is_page_under_ab_test = true
+        end
+
+        render :show, locals: {
+          page: page,
+          is_page_under_ab_test: is_page_under_ab_test,
+          ab_test_variant: ab_test_variant,
+         }
       end
       f.json do
         render json: {

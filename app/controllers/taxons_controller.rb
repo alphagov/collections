@@ -1,5 +1,5 @@
 class TaxonsController < ApplicationController
-  before_action :return_404, unless: :new_navigaton_enabled?
+  before_action :return_404, unless: :new_navigation_enabled?
 
   def show
     setup_content_item_and_navigation_helpers(taxon)
@@ -8,10 +8,6 @@ class TaxonsController < ApplicationController
   end
 
 private
-
-  def new_navigaton_enabled?
-    ENV['ENABLE_NEW_NAVIGATION'] == 'yes'
-  end
 
   def return_404
     head :not_found

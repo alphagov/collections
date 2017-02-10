@@ -11,6 +11,7 @@ gem 'airbrake', '~> 4.3.1'
 gem 'appsignal', '~> 2.0'
 gem 'logstasher', '0.6.2' # 0.6.5+ changes the JSON schema used for events
 gem 'govuk_navigation_helpers', '~> 2.1'
+gem 'govuk_ab_testing', '0.1.4' # Specify the minor version because API is unstable
 
 if ENV['SLIMMER_DEV']
   gem 'slimmer', path: '../slimmer'
