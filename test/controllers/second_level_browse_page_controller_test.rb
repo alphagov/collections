@@ -1,5 +1,4 @@
 require "test_helper"
-require "climate_control"
 
 describe SecondLevelBrowsePageController do
   include RummagerHelpers
