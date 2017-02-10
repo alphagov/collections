@@ -1,25 +1,28 @@
-<div class="grid-row child-topic-contents">
-  <div class="column-two-thirds">
-    <div class="topic-content">
+<% if child_taxons.present? %>
+  <div class="grid-row child-topic-contents">
+    <div class="column-two-thirds">
+      <div class="topic-content">
 
-      <div data-module="accordion-with-descriptions">
-        <div class="subsection-wrapper">
-          <% ([taxon] + child_taxons).each_with_index do |taxon_for_list, index| %>
-            <div class="subsection">
-              <div class="subsection-header">
-                <h2 class="subsection-title"><%= taxon_for_list.title %></h2>
-                <p class="subsection-description"><%= taxon_for_list.description %></p>
-              </div>
+        <div data-module="accordion-with-descriptions">
+          <div class="subsection-wrapper">
+            <% child_taxons.each_with_index do |taxon_for_list, index| %>
+              <div class="subsection">
+                <div class="subsection-header">
+                  <h2 class="subsection-title"><%= taxon_for_list.title %></h2>
+                  <p class="subsection-description"><%= taxon_for_list.description %></p>
+                </div>
 
-              <div class="subsection-content" id="subsection_content_<%= index %>">
-                <%= render partial: 'tagged_content_list', locals: {
-                  tagged_content: taxon_for_list.tagged_content
-                } %>
+                <div class="subsection-content" id="subsection_content_<%= index %>">
+                  <%= render partial: 'tagged_content_list', locals: {
+                    tagged_content: taxon_for_list.tagged_content
+                  } %>
+                </div>
               </div>
-            </div>
-          <% end %>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+<% end %>
+

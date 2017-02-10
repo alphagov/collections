@@ -14,11 +14,6 @@
 <% if taxon.has_grandchildren? %>
   <%= render partial: 'child_taxons_grid',
     locals: { child_taxons: taxon.child_taxons } %>
-
-  <%= render partial: 'taxon_tagged_content', locals: {
-    taxon: taxon,
-    tagged_content: taxon.tagged_content
-  } %>
 <% else %>
   <%= render partial: 'child_taxons_list', locals: {
     taxon: taxon,
@@ -26,3 +21,8 @@
     tagged_content: taxon.tagged_content
   } %>
 <% end %>
+
+<%= render partial: 'taxon_tagged_content', locals: {
+  taxon: taxon,
+  tagged_content: taxon.tagged_content
+} %>
