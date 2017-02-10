@@ -5,16 +5,16 @@
 
         <div data-module="accordion-with-descriptions">
           <div class="subsection-wrapper">
-            <% child_taxons.each_with_index do |taxon_for_list, index| %>
+            <% child_taxons.each_with_index do |taxon, index| %>
               <div class="subsection">
                 <div class="subsection-header">
-                  <h2 class="subsection-title"><%= taxon_for_list.title %></h2>
-                  <p class="subsection-description"><%= taxon_for_list.description %></p>
+                  <h2 class="subsection-title"><%= taxon.title %></h2>
+                  <p class="subsection-description"><%= taxon.description %></p>
                 </div>
 
                 <div class="subsection-content" id="subsection_content_<%= index %>">
-                  <%= render partial: 'tagged_content_list', locals: {
-                    tagged_content: taxon_for_list.tagged_content
+                  <%= render partial: 'content_list_for_child_taxon', locals: {
+                    tagged_content: taxon.tagged_content
                   } %>
                 </div>
               </div>
