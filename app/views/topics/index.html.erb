@@ -1,5 +1,8 @@
 <% content_for :title do %><%= topic.title %> - GOV.UK<% end %>
 <%= render 'shared/tag_meta', tag: topic %>
+<% if is_page_under_ab_test %>
+  <%= ab_variant.analytics_meta_tag.html_safe %>
+<% end %>
 <% content_for :page_class, "topics-page" %>
 
 <header class="page-header group">

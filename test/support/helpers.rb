@@ -1,3 +1,5 @@
+require "climate_control"
+
 class ActiveSupport::TestCase
   def build_ostruct_recursively(value)
     case value
