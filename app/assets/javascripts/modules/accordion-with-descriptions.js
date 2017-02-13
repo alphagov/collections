@@ -1,3 +1,7 @@
+// Most of this is taken from the service manual and at some point needs to be
+// separated out into a component.  We are currently holding off on this until
+// it is tested more within the current navigation changes.
+
 window.GOVUK.Modules = window.GOVUK.Modules || {};
 
 (function (Modules) {
@@ -13,43 +17,42 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       // Prevent FOUC, remove class hiding content
       $element.removeClass('js-hidden');
 
-      var $subsectionButton = $element.find('.subsection-button');
-      var $subsectionHeader = $element.find('.subsection-header');
+      var $subsectionHeaders = $element.find('.subsection-header');
       var totalSubsections = $element.find('.subsection-content').length;
 
       var $openOrCloseAllButton;
-      var GOVUKServiceManualTopic = serviceManualTopicPrefix();
+      var sessionStorePrefix = getSessionStorePrefix();
 
       addOpenCloseAllButton();
       addButtonsToSubsections();
       addIconsToSubsections();
       addAriaControlsAttrForOpenCloseAllButton();
 
-      closeOpenSections();
+      closeAllSections();
       checkSessionStorage();
+      openLinkedSection();
 
       bindToggleForSubsections();
       bindToggleOpenCloseAllButton();
 
-      function getserviceManualTopic() {
-        return $('h1').text();
+      function getTaxonName() {
+        return $element.find('h1').text();
       }
 
       function replaceSpacesWithUnderscores(str) {
         return str.replace(/\s+/g,"_");
       }
 
-
-      function serviceManualTopicPrefix() {
-        var topic = getserviceManualTopic();
+      function getSessionStorePrefix() {
+        var topic = getTaxonName();
         topic = replaceSpacesWithUnderscores(topic);
         topic = topic.toLowerCase();
 
-        return "GOVUK_service_manual_" + topic + "_";
+        return "GOVUK_navigation_for_taxon_" + topic + "_";
       }
 
       function addOpenCloseAllButton() {
-        $element.prepend( '<div class="subsection-controls js-subsection-controls"><button aria-expanded="false">Expand all</button></div>' );
+        $element.prepend( '<div class="subsection-controls js-subsection-controls"><button aria-expanded="false">Open all</button></div>' );
       }
 
       function addButtonsToSubsections() {
@@ -57,12 +60,12 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
         // Wrap each title in a button, with aria controls matching the ID of the subsection
         $subsectionTitle.each(function(index) {
-          $(this).wrapInner( '<button class="subsection-button" aria-expanded="false" aria-controls="subsection_content_' + index +'"></a>' );
+          $(this).wrapInner( '<button class="subsection-button js-subsection-button" aria-expanded="false" aria-controls="subsection_content_' + index +'"></button>' );
         });
       }
 
       function addIconsToSubsections() {
-        $subsectionHeader.append( '<span class="subsection-icon"></span>' );
+        $subsectionHeaders.append( '<span class="subsection-icon"></span>' );
       }
 
       function addAriaControlsAttrForOpenCloseAllButton() {
@@ -78,9 +81,31 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
         $openOrCloseAllButton.attr('aria-controls', ariaControlsValue);
       }
 
-      function closeOpenSections() {
-        var $subsectionContent = $element.find('.subsection-content');
-        closeSection($subsectionContent);
+      function closeAllSections() {
+        $.each($element.find('.js-subsection'), function () {
+          var subsectionView = new SubsectionView($(this));
+          subsectionView.close();
+        });
+      }
+
+      function openLinkedSection() {
+        var anchor = getActiveAnchor(),
+            $subsection;
+
+        if (!anchor.length) {
+          return;
+        }
+
+        $subsection = $element.find(anchor).parents('.js-subsection');
+
+        if ($subsection.length) {
+          var subsectionView = new SubsectionView($subsection);
+          subsectionView.open();
+        }
+      }
+
+      function getActiveAnchor() {
+        return GOVUK.getCurrentLocation().hash;
       }
 
       function checkSessionStorage() {
@@ -89,8 +114,8 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
         $subsectionContent.each(function(index) {
           var subsectionContentId = $(this).attr('id');
-          if(sessionStorage.getItem(GOVUKServiceManualTopic+subsectionContentId)){
-            openStoredSections($("#"+subsectionContentId));
+          if(sessionStorage.getItem(sessionStorePrefix+subsectionContentId)){
+            openStoredSections($element.find("#"+subsectionContentId));
           }
         });
 
@@ -98,46 +123,41 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       }
 
       function setSessionStorage() {
-        var isOpenSubsections = $('.subsection-is-open').length;
+        var isOpenSubsections = $element.find('.subsection-is-open').length;
         if (isOpenSubsections) {
-          var $openSubsections = $('.subsection-is-open');
+          var $openSubsections = $element.find('.subsection-is-open');
           $openSubsections.each(function(index) {
             var subsectionOpenContentId = $(this).find('.subsection-content').attr('id');
-            sessionStorage.setItem( GOVUKServiceManualTopic+subsectionOpenContentId , 'Opened');
+            sessionStorage.setItem( sessionStorePrefix+subsectionOpenContentId , 'Opened');
           });
         }
       }
 
       function removeSessionStorage() {
-        var isClosedSubsections = $('.subsection').length;
+        var isClosedSubsections = $element.find('.subsection').length;
         if (isClosedSubsections) {
-          var $closedSubsections = $('.subsection');
+          var $closedSubsections = $element.find('.subsection');
           $closedSubsections.each(function(index) {
             var subsectionClosedContentId = $(this).find('.subsection-content').attr('id');
-            sessionStorage.removeItem( GOVUKServiceManualTopic+subsectionClosedContentId , subsectionClosedContentId);
+            sessionStorage.removeItem( sessionStorePrefix+subsectionClosedContentId , subsectionClosedContentId);
           });
         }
       }
 
       function bindToggleForSubsections() {
-        // Add toggle functionality individual sections
-        $subsectionHeader.on('click', function(e) {
-          toggleSection($(this).next());
-          toggleIcon($(this));
-          toggleState($(this).find('.subsection-button'));
-          setOpenCloseAllText();
-          setSessionStorage();
-          removeSessionStorage();
-          return false;
-        });
+        $element.find('.subsection-header').on('click', function(event) {
+          var $subsectionHeader = $(this);
+          var $subsection = $subsectionHeader.parent('.js-subsection');
+          var subsectionView = new SubsectionView($subsection);
 
-        $subsectionButton.on('click', function(e) {
-          toggleSection($(this).parent().parent().next());
-          toggleIcon($(this).parent().parent());
-          toggleState($(this));
+          subsectionView.toggle();
           setOpenCloseAllText();
           setSessionStorage();
           removeSessionStorage();
+
+          var subsectionToggleClick = new SubsectionToggleClick(subsectionView, event);
+          subsectionToggleClick.track();
+
           return false;
         });
       }
@@ -148,33 +168,39 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
           var action = '';
 
           // update button text
-          if ($openOrCloseAllButton.text() == "Expand all") {
+          if ($openOrCloseAllButton.text() == "Open all") {
             $openOrCloseAllButton.text("Close all");
             $openOrCloseAllButton.attr("aria-expanded", "true");
             action = 'open';
+
+            track('pageElementInteraction', 'accordionAllOpened', {
+              label: 'Open All'
+            });
           } else {
-            $openOrCloseAllButton.text("Expand all");
+            $openOrCloseAllButton.text("Open all");
             $openOrCloseAllButton.attr("aria-expanded", "false");
             action = 'close';
+
+            track('pageElementInteraction', 'accordionAllClosed', {
+              label: 'Close All'
+            });
           }
 
-          // Set aria-expanded for each button
-          $subsectionButton.each(function( index ) {
-            if (action == 'open') {
-              setExpandedState($(this), "true");
-            } else {
-              setExpandedState($(this), "false");
-            }
-          });
+          $element.find('.js-subsection').each(function() {
+            var $subsection = $(this);
+            var $button = $subsection.find('.js-subsection-button');
+            var $subsectionContent = $subsection.find('.js-subsection-content');
 
-          // show/hide content
-          $subsectionHeader.each(function( index ) {
             if (action == 'open') {
-              openSection($(this).next());
-              showOpenIcon($(this));
+              $button.attr("aria-expanded", "true");
+              $subsectionContent.removeClass('js-hidden');
+              $subsection.removeClass('subsection');
+              $subsection.addClass('subsection-is-open');
             } else {
-              closeSection($(this).next());
-              showCloseIcon($(this));
+              $button.attr("aria-expanded", "false");
+              $subsectionContent.addClass('js-hidden');
+              $subsection.addClass('subsection');
+              $subsection.removeClass('subsection-is-open');
             }
           });
 
@@ -188,71 +214,121 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
         });
       }
 
-      function openStoredSections($section) {
-        toggleSection($section);
-        toggleIcon($section);
-        toggleState($section.parent().find('.subsection-button'));
+      function openStoredSections($sectionContent) {
+        var $subsection = $sectionContent.parent('.js-subsection');
+        var subsectionView = new SubsectionView($subsection);
+        subsectionView.open();
+
         setOpenCloseAllText();
       }
 
       function setOpenCloseAllText() {
-        var openSubsections = $('.subsection-is-open').length;
+        var openSubsections = $element.find('.subsection-is-open').length;
         // Find out if the number of is-opens == total number of sections
         if (openSubsections === totalSubsections) {
           $openOrCloseAllButton.text('Close all');
         } else {
-          $openOrCloseAllButton.text('Expand all');
+          $openOrCloseAllButton.text('Open all');
         }
       }
 
-      function toggleSection($node) {
-        if ($($node).hasClass('js-hidden')) {
-          openSection($node);
+      function isSubsectionClosed($subsection) {
+        var $subsectionContent = $subsection.find('.js-subsection-content');
+
+        return $subsectionContent.hasClass('js-hidden');
+      }
+
+    }
+
+    function SubsectionView ($subsectionElement) {
+      var that = this;
+
+      // The 'Content' is the container of links to guides
+      this.$subsectionContent = $subsectionElement.find('.js-subsection-content');
+      // The 'Button' is a button element that is wrapped around the title for
+      // accessibility reasons
+      this.$subsectionButton = $subsectionElement.find('.js-subsection-button');
+
+      this.title = that.$subsectionButton.text();
+
+      this.toggle = function () {
+        if (that.isClosed()) {
+          that.open();
         } else {
-          closeSection($node);
+          that.close();
         }
       }
 
-      function toggleIcon($node) {
-        if ($($node).parent().hasClass('subsection-is-open')) {
-          $node.parent().removeClass('subsection-is-open');
-          $node.parent().addClass('subsection');
+      this.open = function () {
+        // Show the subsection content
+        that.$subsectionContent.removeClass('js-hidden');
+        // Swap the plus and minus sign
+        $subsectionElement.removeClass('subsection');
+        $subsectionElement.addClass('subsection-is-open');
+        // Tell impaired users that the section is open
+        that.$subsectionButton.attr("aria-expanded", "true");
+      }
+
+      this.close = function () {
+        // Hide the subsection content
+        that.$subsectionContent.addClass('js-hidden');
+        // Swap the plus and minus sign
+        $subsectionElement.removeClass('subsection-is-open');
+        $subsectionElement.addClass('subsection');
+        // Tell impaired users that the section is closed
+        that.$subsectionButton.attr("aria-expanded", "false");
+      }
+
+      this.isClosed = function () {
+        return that.$subsectionContent.hasClass('js-hidden');
+      }
+    }
+
+    // A contructor for an object that represents a click event on a subsection which
+    // handles the complexity of sending different tracking labels to Google Analytics
+    // depending on which part of the subsection the user clicked.
+    function SubsectionToggleClick (subsectionView, event) {
+      var that = this;
+
+      this.$target = $(event.target);
+
+      this.track = function () {
+        track('pageElementInteraction', that._trackingAction(), { label: that._trackingLabel() });
+      }
+
+      this._trackingAction = function () {
+        return (subsectionView.isClosed() ? 'accordionClosed' : 'accordionOpened');
+      }
+
+      this._trackingLabel = function () {
+        if (that._clickedOnIcon()) {
+          return subsectionView.title + ' - ' + that._iconType() + ' Click';
+        } else if (that._clickedOnHeading()) {
+          return subsectionView.title + ' - Heading Click';
         } else {
-          $node.parent().removeClass('subsection');
-          $node.parent().addClass('subsection-is-open');
+          return subsectionView.title + ' - Click Elsewhere';
         }
       }
 
-      function toggleState($node) {
-        if ($($node).attr('aria-expanded') == "true") {
-          $node.attr("aria-expanded", "false");
-        } else {
-          $node.attr("aria-expanded", "true");
-        }
+      this._clickedOnIcon = function () {
+        return that.$target.hasClass('subsection-icon');
       }
 
-      function openSection($node) {
-        $node.removeClass('js-hidden');
+      this._clickedOnHeading = function () {
+        return that.$target.hasClass('js-subsection-button');
       }
 
-      function closeSection($node) {
-        $node.addClass('js-hidden');
+      this._iconType = function () {
+        return (subsectionView.isClosed() ? 'Minus' : 'Plus');
       }
+    }
 
-      function showOpenIcon($node) {
-        $node.parent().removeClass('subsection');
-        $node.parent().addClass('subsection-is-open');
+    // A helper that sends an custom event request to Google Analytics if
+    // the GOVUK module is setup
+    function track(category, action, options) {
+      if (GOVUK.analytics && GOVUK.analytics.trackEvent) {
+        GOVUK.analytics.trackEvent(category, action, options);
       }
-
-      function showCloseIcon($node) {
-        $node.parent().removeClass('subsection-is-open');
-        $node.parent().addClass('subsection');
-      }
-
-      function setExpandedState($node, state) {
-        $node.attr("aria-expanded", state);
-      }
-
     }
   };
 })(window.GOVUK.Modules);

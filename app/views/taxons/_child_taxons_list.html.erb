@@ -6,13 +6,13 @@
         <div data-module="accordion-with-descriptions">
           <div class="subsection-wrapper">
             <% child_taxons.each_with_index do |taxon, index| %>
-              <div class="subsection">
+              <div class="subsection js-subsection">
                 <div class="subsection-header">
                   <h2 class="subsection-title"><%= taxon.title %></h2>
                   <p class="subsection-description"><%= taxon.description %></p>
                 </div>
 
-                <div class="subsection-content" id="subsection_content_<%= index %>">
+                <div class="subsection-content js-subsection-content" id="subsection_content_<%= index %>">
                   <%= render partial: 'content_list_for_child_taxon', locals: {
                     tagged_content: taxon.tagged_content
                   } %>
@@ -25,4 +25,3 @@
     </div>
   </div>
 <% end %>
-
