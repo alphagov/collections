@@ -19,29 +19,7 @@ class BrowseController < ApplicationController
 
     respond_to do |f|
       f.html do
-        is_page_under_ab_test = false
-
-        dimension = Rails.application.config.navigation_ab_test_dimension
-        ab_test = GovukAbTesting::AbTest.new("EducationNavigation", dimension: dimension)
-        ab_variant = ab_test.requested_variant(request)
-
-        if new_navigation_enabled? && params[:top_level_slug] == "education"
-          ab_variant.configure_response(response)
-
-          if ab_variant.variant_b?
-            return redirect_to controller: "taxons",
-              action: "show",
-              taxon_base_path: "education"
-          end
-
-          is_page_under_ab_test = true
-        end
-
-        render :show, locals: {
-          page: page,
-          is_page_under_ab_test: is_page_under_ab_test,
-          ab_variant: ab_variant,
-         }
+        show_html(page)
       end
       f.json do
         render json: {
@@ -53,6 +31,30 @@ class BrowseController < ApplicationController
   end
 
 private
+
+  def show_html(page)
+    taxon_resolver = TaxonRedirectResolver.new(
+      request,
+      is_page_in_ab_test: lambda { params[:top_level_slug] == "education" },
+      map_to_taxon: lambda { "education" }
+    )
+
+    if taxon_resolver.page_ab_tested?
+      taxon_resolver.ab_variant.configure_response(response)
+    end
+
+    if taxon_resolver.taxon_base_path
+      redirect_to controller: "taxons",
+        action: "show",
+        taxon_base_path: taxon_resolver.taxon_base_path
+    else
+      render :show, locals: {
+        page: page,
+        is_page_under_ab_test: taxon_resolver.page_ab_tested?,
+        ab_variant: taxon_resolver.ab_variant,
+      }
+    end
+  end
 
   def second_level_browse_pages_partial(page)
     render_partial('second_level_browse_page/_second_level_browse_pages',
