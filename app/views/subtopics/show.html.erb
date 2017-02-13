@@ -1,5 +1,8 @@
 <% content_for :title, "#{subtopic.combined_title} - GOV.UK" %>
 <%= render 'shared/tag_meta', tag: subtopic %>
+<% if is_page_under_ab_test %>
+  <%= ab_variant.analytics_meta_tag.html_safe %>
+<% end %>
 <% content_for :page_title do %>
   <%- if subtopic.parent -%>
     <%= link_to subtopic.parent.title, subtopic.parent.base_path %>
