@@ -1,6 +1,6 @@
 <nav role="navigation" class="child-topics-list">
   <h2>In this section</h2>
-  <ul>
+  <ol>
     <% child_taxons.each_with_index do |child_taxon, index| %>
       <li class="<%= 'leftmost-row-cell-clear-float' if index % 3 == 0 %>">
         <h3>
@@ -9,5 +9,5 @@
         <p><%= child_taxon.description %></p>
       </li>
     <% end %>
-  </ul>
+  </ol>
 </nav>

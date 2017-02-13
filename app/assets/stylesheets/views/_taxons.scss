@@ -62,7 +62,7 @@
   }
 
   .child-topics-list {
-    ul {
+    ol {
       list-style-type: none;
       @extend %grid-row;
 
@@ -82,7 +82,7 @@
     .topic-content {
       padding-bottom: $gutter;
 
-      ul {
+      ol {
         list-style-type: none;
         padding-bottom: $gutter-one-third;
       }
@@ -96,7 +96,7 @@
 
   .child-topic-contents {
     .topic-content {
-      ul {
+      ol {
         list-style-type: none;
       }
 
