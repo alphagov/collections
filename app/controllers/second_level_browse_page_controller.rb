@@ -57,8 +57,4 @@ private
       "/browse/#{params[:top_level_slug]}/#{params[:second_level_slug]}"
     )
   end
-
-  def redirects
-    Rails.application.config_for(:navigation_redirects)["second_level_browse_pages"]
-  end
 end
