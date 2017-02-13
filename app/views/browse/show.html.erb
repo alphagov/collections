@@ -2,7 +2,7 @@
 <%= render 'shared/tag_meta', tag: page %>
 <% content_for :meta_tags do %>
   <% if is_page_under_ab_test %>
-    <%= ab_test_variant.analytics_meta_tag.html_safe %>
+    <%= ab_variant.analytics_meta_tag.html_safe %>
   <% end %>
 <% end %>
 <% content_for :page_class, "browse" %>
@@ -16,5 +16,6 @@
   </div>
 
   <%= render 'browse/top_level_browse_pages',
-        top_level_browse_pages: page.top_level_browse_pages %>
+        top_level_browse_pages: page.top_level_browse_pages,
+        ab_variant: ab_variant %>
 </div>

@@ -3,7 +3,12 @@
   <ul>
     <% top_level_browse_pages.each do |page| %>
       <li class="<%= browsing_in_top_level_page?(page) ? 'active' : '' %>">
-        <%= link_to page.title, page.base_path %>
+        <% link_class = if ab_variant.variant_b? && page.base_path == "/browse/education"
+          "ab-test-redirect"
+        else
+          ""
+        end %>
+        <%= link_to page.title, page.base_path, class: link_class %>
       </li>
     <% end %>
   </ul>
