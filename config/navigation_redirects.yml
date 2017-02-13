@@ -6,6 +6,10 @@ default: &default
       school-life: education
       student-finance: education/funding-and-finance-for-students
       universities-higher-education: education/further-and-higher-education-skills-and-vocational-training
+  topics:
+    schools-colleges-childrens-services: education
+    further-education-skills: education/further-and-higher-education-skills-and-vocational-training
+    higher-education: education/further-and-higher-education-skills-and-vocational-training
 
 production:
   <<: *default

@@ -1,6 +1,5 @@
 require 'integration_test_helper'
 require 'slimmer/test_helpers/govuk_components'
-require "climate_control"
 
 class TaxonBrowsingTest < ActionDispatch::IntegrationTest
   include RummagerHelpers
