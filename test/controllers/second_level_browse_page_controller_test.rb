@@ -63,7 +63,7 @@ describe SecondLevelBrowsePageController do
             get :show, top_level_slug: "education", second_level_slug: "student-finance"
 
             assert_response 200
-            assert_unaffected_by_ab_test
+            assert_response_not_modified_for_ab_test
           end
         end
       end
@@ -139,7 +139,7 @@ describe SecondLevelBrowsePageController do
               get :show, top_level_slug: "benefits", second_level_slug: "entitlement"
 
               assert_response 200
-              assert_unaffected_by_ab_test
+              assert_response_not_modified_for_ab_test
             end
           end
 
@@ -151,7 +151,7 @@ describe SecondLevelBrowsePageController do
             end
 
             assert_response 200
-            assert_unaffected_by_ab_test
+            assert_response_not_modified_for_ab_test
           end
         end
       end

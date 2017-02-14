@@ -49,7 +49,7 @@ describe ServicesAndInformationController do
             get :index, organisation_id: "department-for-education"
 
             assert_response 200
-            assert_unaffected_by_ab_test
+            assert_response_not_modified_for_ab_test
           end
         end
       end
@@ -67,7 +67,7 @@ describe ServicesAndInformationController do
             end
 
             assert_response 200
-            assert_unaffected_by_ab_test
+            assert_response_not_modified_for_ab_test
           end
         end
 

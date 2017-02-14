@@ -41,7 +41,7 @@ describe SubtopicsController do
             get :show, topic_slug: "further-education-skills", subtopic_slug: "apprenticeships"
 
             assert_response 200
-            assert_unaffected_by_ab_test
+            assert_response_not_modified_for_ab_test
           end
         end
       end
@@ -81,7 +81,7 @@ describe SubtopicsController do
             end
 
             assert_response 200
-            assert_unaffected_by_ab_test
+            assert_response_not_modified_for_ab_test
           end
         end
       end
