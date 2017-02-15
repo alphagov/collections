@@ -125,7 +125,7 @@
   .js-accordion-with-descriptions {
     padding-bottom: $gutter * 2;
 
-    // Wrapper for 'open all / close all' button
+    // Wrapper for 'expand all / close all' button
     .subsection-controls {
       @extend %contain-floats;
 

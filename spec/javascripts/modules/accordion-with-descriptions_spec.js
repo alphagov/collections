@@ -63,7 +63,7 @@ describe('An accordion with descriptions module', function () {
     var $openCloseAllButton = $element.find('.js-subsection-controls button');
 
     expect($openCloseAllButton).toExist();
-    expect($openCloseAllButton).toHaveText("Open all");
+    expect($openCloseAllButton).toHaveText("Expand all");
     // It has an aria-expanded false attribute as all subsections are closed
     expect($openCloseAllButton).toHaveAttr("aria-expanded", "false");
     // It has an aria-controls attribute that includes all the subsection_content IDs
@@ -106,7 +106,7 @@ describe('An accordion with descriptions module', function () {
     expect($subsectionHeader).toContainElement('.subsection-icon');
   });
 
-  describe('Clicking the "Open all" button', function () {
+  describe('Clicking the "Expand all" button', function () {
 
     it('adds a .subsection-is-open class to each subsection to hide the icon', function () {
       accordion.start($element);
