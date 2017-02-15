@@ -1,5 +1,6 @@
 require 'integration_test_helper'
 require 'slimmer/test_helpers/govuk_components'
+require "climate_control"
 
 class TaxonBrowsingTest < ActionDispatch::IntegrationTest
   include RummagerHelpers
@@ -46,7 +47,7 @@ private
   end
 
   def given_new_navigation_is_enabled
-    ENV['ENABLE_NEW_NAVIGATION'] = 'yes'
+    @enable_new_navigation = true
   end
 
   def given_there_is_a_taxon_with_grandchildren
@@ -110,7 +111,11 @@ private
   end
 
   def when_i_visit_the_taxon_page
-    visit @base_path
+    new_nav_environment_variable = @enable_new_navigation ? 'yes' : nil
+
+    ClimateControl.modify(ENABLE_NEW_NAVIGATION: new_nav_environment_variable) do
+      visit @base_path
+    end
   end
 
   def then_i_can_see_there_is_a_page_title
