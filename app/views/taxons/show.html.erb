@@ -1,10 +1,7 @@
 <% content_for :title, taxon.title %>
 <% content_for :page_class, "taxon-page" %>
 
-<%= render partial: 'page_header', locals: {
-  taxon: taxon,
-  parent_taxon: taxon.parent_taxon
-} %>
+<%= render partial: 'page_header', locals: { taxon: taxon } %>
 
 <% content_for :breadcrumbs do %>
   <%= render partial: 'govuk_component/beta_label' %>

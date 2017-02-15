@@ -24,18 +24,6 @@ describe Taxon do
     assert_equal @taxon.base_path, student_finance_taxon['base_path']
   end
 
-  it 'has parent taxon' do
-    parent = @taxon.parent_taxon
-
-    assert_instance_of Taxon, parent
-    assert_equal parent.title,
-      student_finance_taxon['links']['parent_taxons'].first['title']
-    assert_equal parent.description,
-      student_finance_taxon['links']['parent_taxons'].first['description']
-    assert_equal parent.base_path,
-      student_finance_taxon['links']['parent_taxons'].first['base_path']
-  end
-
   it 'has two taxon children' do
     assert_equal @taxon.child_taxons.length, 2
 

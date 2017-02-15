@@ -12,7 +12,6 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     when_i_visit_the_taxon_page
     then_i_can_see_there_is_a_page_title
     then_i_can_see_the_breadcrumbs
-    and_i_can_see_a_link_to_the_parent_taxon
     and_i_can_see_the_title_and_description
     and_i_can_see_links_to_the_child_taxons_in_a_grid
     and_i_can_see_tagged_content_to_the_taxon
@@ -24,7 +23,6 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     when_i_visit_the_taxon_page
     then_i_can_see_there_is_a_page_title
     then_i_can_see_the_breadcrumbs
-    and_i_can_see_a_link_to_the_parent_taxon
     and_i_can_see_the_title_and_description
     and_i_can_see_links_to_the_child_taxons_in_an_accordion
     and_i_can_see_tagged_content_to_the_taxon
@@ -125,10 +123,6 @@ private
 
   def then_i_can_see_the_breadcrumbs
     assert_not_nil shared_component_selector('breadcrumbs')
-  end
-
-  def and_i_can_see_a_link_to_the_parent_taxon
-    assert page.has_link?(@parent['title'], @parent['description'])
   end
 
   def and_i_can_see_the_title_and_description
