@@ -9,6 +9,17 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
   Modules.AccordionWithDescriptions = function() {
 
+    var bulkActions = {
+      openAll: {
+        buttonText: "Expand all",
+        eventLabel: "Open All"
+      },
+      closeAll: {
+        buttonText: "Close all",
+        eventLabel: "Close All"
+      }
+    }
+
     this.start = function($element) {
 
       // Indicate that js has worked
@@ -52,7 +63,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       }
 
       function addOpenCloseAllButton() {
-        $element.prepend( '<div class="subsection-controls js-subsection-controls"><button aria-expanded="false">Open all</button></div>' );
+        $element.prepend( '<div class="subsection-controls js-subsection-controls"><button aria-expanded="false">' + bulkActions.openAll.buttonText + '</button></div>' );
       }
 
       function addButtonsToSubsections() {
@@ -168,21 +179,21 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
           var action = '';
 
           // update button text
-          if ($openOrCloseAllButton.text() == "Open all") {
-            $openOrCloseAllButton.text("Close all");
+          if ($openOrCloseAllButton.text() == bulkActions.openAll.buttonText) {
+            $openOrCloseAllButton.text(bulkActions.closeAll.buttonText);
             $openOrCloseAllButton.attr("aria-expanded", "true");
             action = 'open';
 
             track('pageElementInteraction', 'accordionAllOpened', {
-              label: 'Open All'
+              label: bulkActions.openAll.eventLabel
             });
           } else {
-            $openOrCloseAllButton.text("Open all");
+            $openOrCloseAllButton.text(bulkActions.openAll.buttonText);
             $openOrCloseAllButton.attr("aria-expanded", "false");
             action = 'close';
 
             track('pageElementInteraction', 'accordionAllClosed', {
-              label: 'Close All'
+              label: bulkActions.closeAll.eventLabel
             });
           }
 
@@ -226,9 +237,9 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
         var openSubsections = $element.find('.subsection-is-open').length;
         // Find out if the number of is-opens == total number of sections
         if (openSubsections === totalSubsections) {
-          $openOrCloseAllButton.text('Close all');
+          $openOrCloseAllButton.text(bulkActions.closeAll.buttonText);
         } else {
-          $openOrCloseAllButton.text('Open all');
+          $openOrCloseAllButton.text(bulkActions.openAll.buttonText);
         }
       }
 
