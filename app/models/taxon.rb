@@ -36,12 +36,6 @@ class Taxon
     new(content_item)
   end
 
-  def parent_taxon
-    return nil unless parent?
-
-    self.class.new(linked_items('parent_taxons').first)
-  end
-
   def child_taxons
     return [] unless children?
 

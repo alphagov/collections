@@ -32,27 +32,6 @@
     margin-bottom: 6px;
   }
 
-  .sub-heading {
-    @include core-24;
-    margin-bottom: 0;
-
-    a {
-      color: $secondary-text-colour;
-      text-decoration: none;
-
-      &:before {
-        content: " ";
-        background-image: image-url("back.svg");
-        background-repeat: no-repeat;
-        background-size: auto 18px;
-        background-position: left bottom;
-        display: inline-block;
-        width: 20px;
-        height: 1em;
-      }
-    }
-  }
-
   .page-header {
     margin-top: $gutter * 3;
 
