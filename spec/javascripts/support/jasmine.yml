@@ -7,6 +7,7 @@ src_dir: "app/assets/javascripts"
 # relative path from src_dir
 src_files:
  - "../../../spec/javascripts/helpers/jquery-1.12.4.js"
+ - "../../../spec/javascripts/vendor/jasmine-jquery.js"
  - "application.js"
 
 # path to parent directory of spec_files
