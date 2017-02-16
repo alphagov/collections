@@ -6,8 +6,6 @@
 
     +p {
       @include core-24;
-      padding-top: 10px;
-      padding-bottom: 30px;
     }
   }
 
@@ -23,7 +21,9 @@
 
   h3 {
     @include bold-19;
-    padding-bottom: $gutter-one-third;
+    @include media (tablet) {
+      padding-bottom: $gutter-one-third;
+    }
   }
 
   p {
@@ -48,7 +48,18 @@
       li {
         @include grid-column(1 / 3);
         padding-bottom: $gutter;
-        min-height: (5 * $gutter);
+
+        @include media (tablet) {
+          min-height: (5 * $gutter);
+        }
+      }
+    }
+
+    p {
+      margin: 5px 0 20px 0;
+
+      &:last-child {
+        margin-bottom: 0;
       }
     }
 
