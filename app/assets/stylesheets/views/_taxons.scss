@@ -28,8 +28,13 @@
 
   p {
     @include core-19;
-    margin-top: 2px;
-    margin-bottom: 6px;
+    margin-top: #{(5 / 16)}em;
+    margin-bottom: #{(20 / 16)}em;
+
+    @include media(tablet) {
+      margin-top: #{(5 / 19)}em;
+      margin-bottom: #{(20 / 19)}em;
+    }
   }
 
   .page-header {
