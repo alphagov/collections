@@ -11,6 +11,7 @@ gem 'airbrake', '~> 4.3.1'
 gem 'appsignal', '~> 2.0'
 gem 'logstasher', '0.6.2' # 0.6.5+ changes the JSON schema used for events
 gem 'govuk_navigation_helpers', '~> 2.1'
+gem 'govuk_ab_testing', '0.1.5' # Specify the minor version because API is unstable
 
 if ENV['SLIMMER_DEV']
   gem 'slimmer', path: '../slimmer'
@@ -33,6 +34,7 @@ group :test do
   gem 'minitest-spec-rails', '~> 5.3.0'
   gem 'mocha', '~> 1.1.0', require: false
   gem 'webmock', '~> 1.21.0', require: false
+  gem 'climate_control', '~> 0.1.0', require: false
   gem 'cucumber-rails', '~> 1.4.2', require: false
   gem 'govuk-content-schema-test-helpers', '~> 1.3.0'
   gem 'govuk_schemas', '~> 2.1'

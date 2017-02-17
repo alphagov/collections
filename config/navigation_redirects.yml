@@ -1,0 +1,45 @@
+default: &default
+  second_level_browse_pages:
+    education:
+      find-course: education/further-and-higher-education-skills-and-vocational-training
+      school-admissions-transport: education/running-and-managing-a-school
+      school-life: education
+      student-finance: education/funding-and-finance-for-students
+      universities-higher-education: education/further-and-higher-education-skills-and-vocational-training
+  topics:
+    schools-colleges-childrens-services: education
+    further-education-skills: education/further-and-higher-education-skills-and-vocational-training
+    higher-education: education/further-and-higher-education-skills-and-vocational-training
+  subtopics:
+    schools-colleges-childrens-services:
+      curriculum-qualifications: education/school-curriculum
+      data-collection-statistical-returns: education/data-collection-for-pupil-data-and-school-censuses
+      exams-testing-assessment: education/school-curriculum
+      inspections: education/school-inspections-and-performance
+      opening-academy-free-school: education/setting-up-or-changing-the-status-of-a-school
+      running-school-college: education/running-and-managing-a-school
+      school-behaviour-attendance: education/pupil-wellbeing-behaviour-and-attendance
+      school-careers-employment: education/teaching-and-leadership
+      school-college-funding-finance: education/school-and-academy-funding-and-provision
+      special-educational-needs-disabilities: education/pupils-and-students-with-special-educational-needs-and-disability-send
+    further-education-skills:
+      administration: education/running-a-further-or-higher-education-institution
+      apprenticeships: education/apprenticeships-traineeships-and-internships
+      learning-records-service: education/learning-records-service-lrs
+      vocational-qualifications: education/apprenticeships-traineeships-and-internships
+    higher-education:
+      administration: education/running-a-further-or-higher-education-institution
+      scholarships-for-overseas-students: education/financial-help-for-international-students-in-the-uk
+
+
+
+
+
+production:
+  <<: *default
+
+development:
+  <<: *default
+
+test:
+  <<: *default

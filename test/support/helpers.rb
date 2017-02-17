@@ -1,3 +1,5 @@
+require "climate_control"
+
 class ActiveSupport::TestCase
   def build_ostruct_recursively(value)
     case value
@@ -8,5 +10,9 @@ class ActiveSupport::TestCase
     else
       value
     end
+  end
+
+  def with_new_navigation_enabled(&block)
+    ClimateControl.modify(ENABLE_NEW_NAVIGATION: 'yes', &block)
   end
 end
