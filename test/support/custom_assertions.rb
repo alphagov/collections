@@ -4,10 +4,13 @@ module MiniTest::Assertions
   # includes the sub-hash given. Useful when testing partial arguments/params to
   # methods.
   def assert_includes_subhash(expected_sub_hash, hash)
-    assert_equal(
-      expected_sub_hash.values,
-      hash.slice(*expected_sub_hash.keys).values
-    )
+    expected_sub_hash.each do |key, value|
+      assert_equal(
+        value,
+        hash[key],
+        "Expected #{hash} to include #{key}=#{value}"
+      )
+    end
   end
 end
 
