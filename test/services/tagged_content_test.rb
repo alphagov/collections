@@ -3,12 +3,18 @@ require './test/support/custom_assertions.rb'
 
 describe TaggedContent do
   describe '#fetch' do
-    it 'returns the documents from search' do
-      search_results = mock(documents: ['doc1'])
+    it 'returns the results from search' do
+      search_results = {
+        'results' => [{
+          'title' => 'Doc 1'
+        }]
+      }
 
-      RummagerSearch.stubs(:new).returns(search_results)
+      Services.rummager.stubs(:search).returns(search_results)
 
-      assert(tagged_content.fetch, ['doc1'])
+      results = tagged_content.fetch
+      assert_equal(results.count, 1)
+      assert_equal(results.first.title, 'Doc 1')
     end
 
     it 'starts from the first page' do
@@ -47,14 +53,28 @@ describe TaggedContent do
 private
 
   def assert_includes_params(expected_params)
-    search_results = mock(documents: %w(doc1 doc2))
+    search_results = {
+      'results' => [
+        {
+          'title' => 'Doc 1'
+        },
+        {
+          'title' => 'Doc 2'
+        }
+      ]
+    }
 
-    RummagerSearch.
-      stubs(:new).
+    Services.
+      rummager.
+      stubs(:search).
       with { |params| params.including?(expected_params) }.
       returns(search_results)
 
-    assert_equal(tagged_content.fetch, %w(doc1 doc2))
+    results = tagged_content.fetch
+    assert_equal(results.count, 2)
+
+    assert_equal(results.first.title, 'Doc 1')
+    assert_equal(results.last.title, 'Doc 2')
   end
 
   def taxon_content_id
