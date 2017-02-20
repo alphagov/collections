@@ -5,6 +5,7 @@ class RummagerSearch
     answer
     contact
     detailed_guide
+    document_collection
     form
     guidance
     guide
