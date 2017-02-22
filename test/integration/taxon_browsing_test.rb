@@ -14,6 +14,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     then_i_can_see_the_breadcrumbs
     and_i_can_see_the_title_and_description
     and_i_can_see_links_to_the_child_taxons_in_a_grid
+    and_the_grid_has_tracking_attributes
     and_i_can_see_tagged_content_to_the_taxon
   end
 
@@ -141,6 +142,31 @@ private
       assert page.has_link?(child_taxon['title'], child_taxon['base_path'])
       assert page.has_content?(child_taxon['description'])
     end
+  end
+
+  def and_the_grid_has_tracking_attributes
+    tracked_links = page.all(:css, "a[data-track-category='navGridLinkClicked']")
+    tracked_links.size.must_equal @child_taxons.size
+
+    tracked_links.each_with_index do |link, index|
+      link[:'data-track-action'].must_equal "#{index + 1}"
+      link[:'data-track-label'].must_equal @child_taxons[index]['base_path']
+      link[:'data-track-value'].must_equal "#{@child_taxons.size}"
+      link[:'data-track-dimension'].must_equal @child_taxons[index]['title']
+      link[:'data-track-dimension-index'].must_equal '29'
+      link[:'data-module'].must_equal 'track-click'
+    end
+
+    # Test an example free from logic
+    assert page.has_css?(
+      "a[data-track-category='navGridLinkClicked']" +
+      "[data-track-action='1']" +
+      "[data-track-label='/education-training-and-skills/student-finance']" +
+      "[data-track-value='1']" +
+      "[data-track-dimension='Student finance']" +
+      "[data-track-dimension-index='29']" +
+      "[data-module='track-click']"
+    )
   end
 
   def and_i_can_see_links_to_the_child_taxons_in_an_accordion
