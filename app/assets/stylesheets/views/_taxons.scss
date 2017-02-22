@@ -87,8 +87,18 @@
         padding-bottom: $gutter-one-third;
       }
 
+      a {
+        display: block;
+        text-decoration: none;
+      }
+
       h3 {
         padding-bottom: 0;
+        text-decoration: underline;
+      }
+
+      p {
+        color: $text-colour;
       }
 
     }

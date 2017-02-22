@@ -10,10 +10,12 @@
         <ol>
           <% tagged_content.each do |content_item| %>
             <li>
-              <h3>
-                <%= link_to content_item.title, Plek.new.website_root + content_item.base_path %>
-              </h3>
-              <p><%= content_item.description %></p>
+              <%= link_to Plek.new.website_root + content_item.base_path do %>
+                <h3>
+                  <%= content_item.title %>
+                </h3>
+                <p><%= content_item.description %></p>
+              <% end %>
             </li>
           <% end %>
         </ol>
