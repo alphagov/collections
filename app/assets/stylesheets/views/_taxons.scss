@@ -144,8 +144,13 @@
       list-style-type: none;
     }
 
-    .subsection-list-item a {
+    a {
       text-decoration: none;
+      display: block;
+    }
+
+    p {
+      color: $text-colour;
     }
   }
 
