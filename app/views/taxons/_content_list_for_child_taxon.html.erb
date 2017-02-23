@@ -1,9 +1,13 @@
 <ol class="subsection-list">
   <% tagged_content.each do |content_item| %>
     <li class="subsection-list-item">
-      <%= link_to content_item.title, content_item.base_path %>
+      <%= link_to content_item.base_path do %>
+        <h3>
+          <%= content_item.title %>
+        </h3>
 
-      <p><%= content_item.description %></p>
+        <p><%= content_item.description %></p>
+      <% end %>
     </li>
   <% end %>
 </ol>

@@ -3,10 +3,12 @@
   <ol>
     <% child_taxons.each_with_index do |child_taxon, index| %>
       <li class="<%= 'leftmost-row-cell-clear-float' if index % 3 == 0 %>">
-        <h3>
-          <%= link_to child_taxon.title, child_taxon.base_path %>
-        </h3>
-        <p><%= child_taxon.description %></p>
+        <%= link_to child_taxon.base_path do %>
+          <h3>
+            <%= child_taxon.title %>
+          </h3>
+          <p><%= child_taxon.description %></p>
+        <% end %>
       </li>
     <% end %>
   </ol>
