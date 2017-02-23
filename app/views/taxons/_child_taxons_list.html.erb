@@ -14,7 +14,8 @@
 
                 <div class="subsection-content js-subsection-content" id="subsection_content_<%= index %>">
                   <%= render partial: 'content_list_for_child_taxon', locals: {
-                    tagged_content: taxon.tagged_content
+                    section_index: index,
+                    tagged_content: taxon.tagged_content,
                   } %>
                 </div>
               </div>

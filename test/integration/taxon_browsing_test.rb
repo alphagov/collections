@@ -26,6 +26,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     then_i_can_see_the_breadcrumbs
     and_i_can_see_the_title_and_description
     and_i_can_see_links_to_the_child_taxons_in_an_accordion
+    and_the_accordion_has_tracking_attributes
     and_i_can_see_tagged_content_to_the_taxon
     and_the_content_tagged_to_the_taxon_has_tracking_attributes
   end
@@ -152,6 +153,34 @@ private
       assert page.has_content?(child_taxon['title'])
       assert page.has_content?(child_taxon['description'])
     end
+  end
+
+  def and_the_accordion_has_tracking_attributes
+    tracked_links = page.all(:css, "a[data-track-category='navAccordionLinkClicked']")
+    tracked_links.size.must_equal @child_taxons.size * search_results.size
+
+    tracked_links.each_with_index do |link, index|
+      section_number = (index / search_results.size).floor + 1
+      item_number = index % search_results.size + 1
+
+      link[:'data-track-action'].must_equal "#{section_number}.#{item_number}"
+      link[:'data-track-label'].must_equal "#{search_results[item_number - 1]['link']}"
+      link[:'data-track-value'].must_equal "#{search_results.size}"
+      link[:'data-track-dimension'].must_equal "#{search_results[item_number - 1]['title']}"
+      link[:'data-track-dimension-index'].must_equal '29'
+      link[:'data-module'].must_equal 'track-click'
+    end
+
+    # Test an example free from logic
+    assert page.has_css?(
+      "a[data-track-category='navAccordionLinkClicked']" +
+      "[data-track-action='2.2']" +
+      "[data-track-label='content-item-2']" +
+      "[data-track-value='2']" +
+      "[data-track-dimension='Content item 2']" +
+      "[data-track-dimension-index='29']" +
+      "[data-module='track-click']"
+    )
   end
 
   def and_i_can_see_tagged_content_to_the_taxon
