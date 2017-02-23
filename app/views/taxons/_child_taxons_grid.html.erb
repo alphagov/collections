@@ -3,7 +3,18 @@
   <ol>
     <% child_taxons.each_with_index do |child_taxon, index| %>
       <li class="<%= 'leftmost-row-cell-clear-float' if index % 3 == 0 %>">
-        <%= link_to child_taxon.base_path do %>
+        <%= link_to(
+          child_taxon.base_path,
+          data: {
+            track_category: 'navGridLinkClicked',
+            track_action: index + 1,
+            track_value: child_taxons.size,
+            track_label: child_taxon.base_path,
+            track_dimension: child_taxon.title,
+            track_dimension_index: 29,
+            module: 'track-click',
+          }
+        ) do %>
           <h3>
             <%= child_taxon.title %>
           </h3>
