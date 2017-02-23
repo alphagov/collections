@@ -15,6 +15,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_the_title_and_description
     and_i_can_see_links_to_the_child_taxons_in_a_grid
     and_i_can_see_tagged_content_to_the_taxon
+    and_the_content_tagged_to_the_taxon_has_tracking_attributes
   end
 
   it 'is possible to browse a taxon page that does not have grandchildren' do
@@ -26,6 +27,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_the_title_and_description
     and_i_can_see_links_to_the_child_taxons_in_an_accordion
     and_i_can_see_tagged_content_to_the_taxon
+    and_the_content_tagged_to_the_taxon_has_tracking_attributes
   end
 
 private
@@ -157,5 +159,30 @@ private
       assert page.has_link?(search_result['title'], search_result['link'])
       assert page.has_content?(search_result['description'])
     end
+  end
+
+  def and_the_content_tagged_to_the_taxon_has_tracking_attributes
+    tracked_links = page.all(:css, "a[data-track-category='navLeafLinkClicked']")
+    tracked_links.size.must_equal search_results.size
+
+    tracked_links.each_with_index do |link, index|
+      link[:'data-track-action'].must_equal "#{index + 1}"
+      link[:'data-track-label'].must_equal search_results[index]['link']
+      link[:'data-track-value'].must_equal "#{search_results.size}"
+      link[:'data-track-dimension'].must_equal search_results[index]['title']
+      link[:'data-track-dimension-index'].must_equal '29'
+      link[:'data-module'].must_equal 'track-click'
+    end
+
+    # Test an example free from logic
+    assert page.has_css?(
+      "a[data-track-category='navLeafLinkClicked']" +
+      "[data-track-action='2']" +
+      "[data-track-label='content-item-2']" +
+      "[data-track-value='2']" +
+      "[data-track-dimension='Content item 2']" +
+      "[data-track-dimension-index='29']" +
+      "[data-module='track-click']"
+    )
   end
 end
