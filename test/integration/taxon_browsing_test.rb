@@ -17,6 +17,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_the_grid_has_tracking_attributes
     and_i_can_see_tagged_content_to_the_taxon
     and_the_content_tagged_to_the_taxon_has_tracking_attributes
+    and_the_page_is_tracked_as_a_grid
   end
 
   it 'is possible to browse a taxon page that does not have grandchildren' do
@@ -30,6 +31,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_the_accordion_has_tracking_attributes
     and_i_can_see_tagged_content_to_the_taxon
     and_the_content_tagged_to_the_taxon_has_tracking_attributes
+    and_the_page_is_tracked_as_an_accordion
   end
 
   it 'is possible to browse a taxon page that does not have child taxons' do
@@ -41,6 +43,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_the_title_and_description
     and_i_can_see_tagged_content_to_the_taxon
     and_the_content_tagged_to_the_taxon_has_tracking_attributes
+    and_the_page_is_tracked_as_a_leaf_node_taxon
   end
 
 private
@@ -265,5 +268,21 @@ private
       "[data-track-dimension-index='29']" +
       "[data-module='track-click']"
     )
+  end
+
+  def and_the_page_is_tracked_as_a_grid
+    assert_navigation_page_type_tracking("grid")
+  end
+
+  def and_the_page_is_tracked_as_an_accordion
+    assert_navigation_page_type_tracking("accordion")
+  end
+
+  def and_the_page_is_tracked_as_a_leaf_node_taxon
+    assert_navigation_page_type_tracking("leaf")
+  end
+
+  def assert_navigation_page_type_tracking(expected_page_type)
+    assert page.has_selector?("meta[name='govuk:navigation-page-type'][content='#{expected_page_type}']", visible: false)
   end
 end
