@@ -32,6 +32,17 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_the_content_tagged_to_the_taxon_has_tracking_attributes
   end
 
+  it 'is possible to browse a taxon page that does not have child taxons' do
+    given_new_navigation_is_enabled
+    given_there_is_a_taxon_without_child_taxons
+    when_i_visit_the_taxon_page
+    then_i_can_see_there_is_a_page_title
+    then_i_can_see_the_breadcrumbs
+    and_i_can_see_the_title_and_description
+    and_i_can_see_tagged_content_to_the_taxon
+    and_the_content_tagged_to_the_taxon_has_tracking_attributes
+  end
+
 private
 
   def search_results
@@ -54,7 +65,7 @@ private
   end
 
   def given_there_is_a_taxon_with_grandchildren
-    @base_path = '/alpha-taxonomy/funding_and_finance_for_students'
+    @base_path = '/education/funding_and_finance_for_students'
     funding_and_finance_for_students_taxon =
       funding_and_finance_for_students_taxon(base_path: @base_path)
 
@@ -88,7 +99,7 @@ private
   end
 
   def given_there_is_a_taxon_without_grandchildren
-    @base_path = '/alpha-taxonomy/student-finance'
+    @base_path = '/education/student-finance'
     student_finance = student_finance_taxon(base_path: @base_path)
 
     @parent = student_finance['links']['parent_taxons'].first
@@ -111,6 +122,21 @@ private
     stub_content_for_taxon(@taxon.content_id, search_results)
     stub_content_for_taxon(student_sponsorship_taxon['content_id'], search_results)
     stub_content_for_taxon(student_loans_taxon['content_id'], search_results)
+  end
+
+  def given_there_is_a_taxon_without_child_taxons
+    @base_path = '/education/running-a-further-or-higher-education-institution'
+    running_an_institution = running_an_education_institution_taxon(base_path: @base_path)
+
+    @parent = running_an_institution['links']['parent_taxons'].first
+    assert_not_nil @parent
+
+    assert_nil running_an_institution['links']['child_taxons']
+
+    content_store_has_item(@base_path, running_an_institution)
+
+    @taxon = Taxon.find(@base_path)
+    stub_content_for_taxon(@taxon.content_id, search_results)
   end
 
   def when_i_visit_the_taxon_page

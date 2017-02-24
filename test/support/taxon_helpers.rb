@@ -9,6 +9,11 @@ module TaxonHelpers
     fetch_and_validate_taxon(:student_finance, params)
   end
 
+  # This taxon does not have any child taxons
+  def running_an_education_institution_taxon(params = {})
+    fetch_and_validate_taxon(:running_education_institution, params)
+  end
+
   def student_sponsorship_taxon(params = {})
     fetch_and_validate_taxon(:student_sponsorship, params)
   end
