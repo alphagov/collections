@@ -12,7 +12,7 @@
     locals: @navigation_helpers.taxon_breadcrumbs %>
 <% end %>
 
-<% if taxon.has_grandchildren? %>
+<% if taxon.grandchildren? %>
   <%= render partial: 'child_taxons_grid',
     locals: { child_taxons: taxon.child_taxons } %>
 <% else %>

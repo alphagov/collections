@@ -14,18 +14,6 @@ class Taxon
     @content_item = content_item
   end
 
-  def has_grandchildren?
-    return false unless children?
-
-    # The Publishing API doesn't expand child taxons, which means
-    # we can't use the child_taxons method for each of the child
-    # taxons of this taxon. We have to do an API call to know if
-    # the children also have children.
-    child_taxons.any? do |child_taxon|
-      Taxon.find(child_taxon.base_path).children?
-    end
-  end
-
   # TODO: needs to be guidance content only
   def tagged_content
     @tagged_content ||= TaggedContent.fetch(content_id)
@@ -50,5 +38,17 @@ class Taxon
 
   def children?
     linked_items('child_taxons').present?
+  end
+
+  def grandchildren?
+    return false unless children?
+
+    # The Publishing API doesn't expand child taxons, which means
+    # we can't use the child_taxons method for each of the child
+    # taxons of this taxon. We have to do an API call to know if
+    # the children also have children.
+    child_taxons.any? do |child_taxon|
+      Taxon.find(child_taxon.base_path).children?
+    end
   end
 end
