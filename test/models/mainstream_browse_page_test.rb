@@ -2,6 +2,12 @@ require "test_helper"
 
 describe MainstreamBrowsePage do
   setup do
+    @mainstream_browse_content = [
+      {
+        "title" => "Some browse page",
+        "base_path" => "/some-browse-page"
+      }
+    ]
     @api_data = {
       "base_path" => "/browse/benefits/child",
       "title" => "Child Benefit",
@@ -9,6 +15,7 @@ describe MainstreamBrowsePage do
       "details" => {
       },
       "links" => {
+        "mainstream_browse_content" => @mainstream_browse_content
       },
     }
     @content_item = ContentItem.new(@api_data)
@@ -228,21 +235,27 @@ second_level_browse_pages).each do |link_type|
   end
 
   describe "lists" do
-    it "should pass the content id of the browse page when constructing groups" do
-      ListSet.expects(:new).with("section", @content_item.content_id, anything).returns(:a_lists_instance)
+    it "should create the content lists using mainstream browse content links" do
+      ListSet.expects(:new)
+        .with { |links| links.map(&:to_hash) == @mainstream_browse_content }
+        .returns(:a_lists_instance)
 
       assert_equal :a_lists_instance, @page.lists
     end
 
     it "should pass the groups data when constructing" do
-      ListSet.expects(:new).with(anything, anything, :some_data).returns(:a_lists_instance)
-      @api_data["details"]["groups"] = :some_data
+      ListSet.expects(:new)
+        .with(anything, :group_data, MainstreamBrowsePage::DOCUMENT_TYPES_TO_EXCLUDE)
+        .returns(:a_lists_instance)
+      @api_data["details"]["groups"] = :group_data
 
       assert_equal :a_lists_instance, @page.lists
     end
 
-    it "should pass in nil if the data is missing" do
-      ListSet.expects(:new).with(anything, anything, nil).returns(:a_lists_instance)
+    it "should pass in nil if the group data is missing" do
+      ListSet.expects(:new)
+        .with(anything, nil, MainstreamBrowsePage::DOCUMENT_TYPES_TO_EXCLUDE)
+        .returns(:a_lists_instance)
       @api_data.delete("details")
 
       assert_equal :a_lists_instance, @page.lists
