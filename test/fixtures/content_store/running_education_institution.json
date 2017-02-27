@@ -1,0 +1,28 @@
+{
+  "base_path": "/education/running-a-further-or-higher-education-institution",
+  "content_id": "27c5c52b-3b36-4119-b461-976197d929bf",
+  "title": "Running a further or higher education institution",
+  "links": {
+    "parent_taxons": [
+      {
+        "base_path": "/education/further-and-higher-education-skills-and-vocational-training",
+        "content_id": "dd767840-363e-43ad-8835-c9ab516633de",
+        "description": "Funding for further education providers, apprenticeships, inspections and performance.",
+        "locale": "en",
+        "title": "Further and higher education, skills and vocational training",
+        "links": {
+          "parent_taxons": [
+            {
+              "base_path": "/education",
+              "content_id": "c58fdadd-7743-46d6-9629-90bb3ccc4ef0",
+              "description": "Early years learning, schools and academies, further and higher education, skills and vocational training, student funding.",
+              "locale": "en",
+              "title": "Education, training and skills",
+              "links": {}
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

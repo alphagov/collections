@@ -37,13 +37,13 @@ describe Taxon do
     taxon = stub(children?: true)
     Taxon.stubs(:find).returns(taxon)
 
-    assert @taxon.has_grandchildren?
+    assert @taxon.grandchildren?
   end
 
   it 'does not have grandchildren' do
     taxon = stub(children?: false)
     Taxon.stubs(:find).returns(taxon)
 
-    assert not(@taxon.has_grandchildren?)
+    assert not(@taxon.grandchildren?)
   end
 end
