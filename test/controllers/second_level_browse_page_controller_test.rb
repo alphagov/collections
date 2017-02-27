@@ -1,7 +1,6 @@
 require "test_helper"
 
 describe SecondLevelBrowsePageController do
-  include RummagerHelpers
   include GovukAbTesting::MinitestHelpers
 
   describe "GET second_level_browse_page" do
@@ -22,12 +21,6 @@ describe SecondLevelBrowsePageController do
             related_topics: [{ title: 'A linked topic', base_path: '/browse/linked-topic' }]
           }
         )
-
-        rummager_has_documents_for_browse_page(
-          "entitlement-content-id",
-          ["entitlement"],
-          page_size: 1000
-        )
       end
 
       it "set correct expiry headers" do
@@ -46,12 +39,6 @@ describe SecondLevelBrowsePageController do
               title: 'Education and learning',
             }],
           }
-        )
-
-        rummager_has_documents_for_browse_page(
-          "student-finance-content-id",
-          ["student-finance"],
-          page_size: 1000
         )
       end
 
@@ -101,12 +88,6 @@ describe SecondLevelBrowsePageController do
             }
           )
 
-          rummager_has_documents_for_browse_page(
-            "school-life-content-id",
-            ["school-life"],
-            page_size: 1000
-          )
-
           with_new_navigation_enabled do
             with_variant EducationNavigation: "B", assert_meta_tag: false do
               get :show, top_level_slug: "education", second_level_slug: "school-life"
@@ -126,12 +107,6 @@ describe SecondLevelBrowsePageController do
                   title: 'Benefits',
                 }],
               }
-            )
-
-            rummager_has_documents_for_browse_page(
-              "entitlement-content-id",
-              ["entitlement"],
-              page_size: 1000
             )
 
             with_new_navigation_enabled do
