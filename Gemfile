@@ -16,7 +16,7 @@ gem 'govuk_ab_testing', '0.1.5' # Specify the minor version because API is unsta
 if ENV['SLIMMER_DEV']
   gem 'slimmer', path: '../slimmer'
 else
-  gem 'slimmer', '~> 10.1.1'
+  gem 'slimmer', '~> 10.1.3'
 end
 
 if ENV['API_DEV']
