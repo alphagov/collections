@@ -14,7 +14,7 @@ class TaggedContent
       start: 0,
       count: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       fields: %w(title description link),
-      filter_content_store_document_type: RummagerSearch::GUIDANCE_DOCUMENT_TYPES,
+      filter_content_store_document_type: GovukNavigationHelpers::Guidance::DOCUMENT_TYPES,
       filter_taxons: [content_id],
       filter_document_collections: '_MISSING',
       order: 'title',

@@ -38,7 +38,7 @@ describe TaggedContent do
     end
 
     it 'filters out non-guidance content' do
-      guidance_document_types = RummagerSearch::GUIDANCE_DOCUMENT_TYPES
+      guidance_document_types = GovukNavigationHelpers::Guidance::DOCUMENT_TYPES
 
       assert_includes_params(
         filter_content_store_document_type: guidance_document_types

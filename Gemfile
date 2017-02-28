@@ -10,7 +10,7 @@ gem 'unicorn', '~> 4.9.0'
 gem 'airbrake', '~> 4.3.1'
 gem 'appsignal', '~> 2.0'
 gem 'logstasher', '0.6.2' # 0.6.5+ changes the JSON schema used for events
-gem 'govuk_navigation_helpers', '~> 2.1'
+gem 'govuk_navigation_helpers', '~> 2.4.1'
 gem 'govuk_ab_testing', '0.1.5' # Specify the minor version because API is unstable
 
 if ENV['SLIMMER_DEV']
@@ -22,7 +22,7 @@ end
 if ENV['API_DEV']
   gem 'gds-api-adapters', path: '../gds-api-adapters'
 else
-  gem 'gds-api-adapters', '~> 34.1.0'
+  gem 'gds-api-adapters', '~> 40.1'
 end
 
 gem 'plek', '~> 1.11.0'
