@@ -32,6 +32,13 @@
     margin-bottom: $gutter-two-thirds;
   }
 
+  a {
+    margin: -3px;
+    padding: 3px;
+    outline-color: transparent;
+    display: block;
+  }
+
   .page-header {
     margin-top: $gutter * 3;
 
@@ -55,18 +62,8 @@
       }
     }
 
-    a {
-      display: block;
-      text-decoration: none;
-    }
-
-    h3 {
-      text-decoration: underline;
-    }
-
     p {
       margin: 5px 0 20px 0;
-      color: $text-colour;
 
       &:last-child {
         margin-bottom: 0;
@@ -87,18 +84,8 @@
         padding-bottom: $gutter-one-third;
       }
 
-      a {
-        display: block;
-        text-decoration: none;
-      }
-
       h3 {
         padding-bottom: 0;
-        text-decoration: underline;
-      }
-
-      p {
-        color: $text-colour;
       }
 
     }
@@ -144,13 +131,8 @@
       list-style-type: none;
     }
 
-    a {
+    .subsection-list-item a {
       text-decoration: none;
-      display: block;
-    }
-
-    p {
-      color: $text-colour;
     }
   }
 
