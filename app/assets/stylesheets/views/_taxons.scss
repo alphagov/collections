@@ -32,6 +32,13 @@
     margin-bottom: $gutter-two-thirds;
   }
 
+  a {
+    margin: -3px;
+    padding: 3px;
+    outline-color: transparent;
+    display: block;
+  }
+
   .page-header {
     margin-top: $gutter * 3;
 
