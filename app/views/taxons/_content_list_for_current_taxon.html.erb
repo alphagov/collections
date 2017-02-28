@@ -10,23 +10,22 @@
         <ol>
           <% tagged_content.each_with_index do |content_item, index| %>
             <li>
-              <%= link_to(
-                Plek.new.website_root + content_item.base_path,
-                data: {
-                  track_category: 'navLeafLinkClicked',
-                  track_action: index + 1,
-                  track_value: tagged_content.size,
-                  track_label: content_item.base_path,
-                  track_dimension: content_item.title,
-                  track_dimension_index: 29,
-                  module: 'track-click',
-                }
-              ) do %>
-                <h3>
-                  <%= content_item.title %>
-                </h3>
-                <p><%= content_item.description %></p>
-              <% end %>
+              <h3>
+                <%= link_to(
+                  content_item.title,
+                  Plek.new.website_root + content_item.base_path,
+                  data: {
+                    track_category: 'navLeafLinkClicked',
+                    track_action: index + 1,
+                    track_value: tagged_content.size,
+                    track_label: content_item.base_path,
+                    track_dimension: content_item.title,
+                    track_dimension_index: 29,
+                    module: 'track-click',
+                  }
+                ) %>
+              </h3>
+              <p><%= content_item.description %></p>
             </li>
           <% end %>
         </ol>
