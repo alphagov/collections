@@ -9,7 +9,7 @@ describe TaxonsController do
   describe "GET show" do
 
     before do
-      content_store_has_item("/education", content_id: "education-content-id")
+      content_store_has_item("/education", content_id: "education-content-id", title: "Education")
       stub_content_for_taxon("education-content-id", [])
     end
 
