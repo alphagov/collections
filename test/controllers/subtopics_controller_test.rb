@@ -1,8 +1,8 @@
 require "test_helper"
 
 describe SubtopicsController do
-
   include GovukAbTesting::MinitestHelpers
+  include NavigationAbTestHelpers
 
   describe "GET subtopic" do
     describe "with a valid topic and subtopic slug" do
@@ -14,6 +14,12 @@ describe SubtopicsController do
         get :show, topic_slug: "oil-and-gas", subtopic_slug: "wells"
 
         assert_equal "max-age=1800, public", response.headers["Cache-Control"]
+      end
+
+      it "tracks the page as a 'finding' page type" do
+        get :show, topic_slug: "oil-and-gas", subtopic_slug: "wells"
+
+        assert_user_journey_stage_tracked_as_finding_page
       end
     end
 

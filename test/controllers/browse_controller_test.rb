@@ -1,8 +1,8 @@
 require "test_helper"
 
 describe BrowseController do
-
   include GovukAbTesting::MinitestHelpers
+  include NavigationAbTestHelpers
 
   describe "GET index" do
     before do
@@ -17,6 +17,12 @@ describe BrowseController do
       get :index
 
       assert_equal "max-age=1800, public", response.headers["Cache-Control"]
+    end
+
+    it "tracks the page as a 'finding' page type" do
+      get :index
+
+      assert_user_journey_stage_tracked_as_finding_page
     end
   end
 
@@ -36,6 +42,12 @@ describe BrowseController do
         get :show, top_level_slug: "benefits"
 
         assert_equal "max-age=1800, public", response.headers["Cache-Control"]
+      end
+
+      it "tracks the page as a 'finding' page type" do
+        get :show, top_level_slug: "benefits"
+
+        assert_user_journey_stage_tracked_as_finding_page
       end
     end
 

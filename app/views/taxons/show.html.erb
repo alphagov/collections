@@ -2,6 +2,7 @@
 <% content_for :page_class, "taxon-page" %>
 <% content_for :meta_tags do %>
   <%= ab_variant.analytics_meta_tag.html_safe %>
+  <%= render 'shared/tag_meta_nav_ab_tracking' %>
   <meta name="govuk:navigation-page-type" content="<%=taxon_page_rendering_type(taxon)%>" />
 <% end %>
 

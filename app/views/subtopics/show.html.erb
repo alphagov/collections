@@ -1,5 +1,6 @@
 <% content_for :title, "#{subtopic.combined_title} - GOV.UK" %>
 <%= render 'shared/tag_meta', tag: subtopic %>
+<%= render 'shared/tag_meta_nav_ab_tracking' %>
 <% if is_page_under_ab_test %>
   <%= ab_variant.analytics_meta_tag.html_safe %>
 <% end %>

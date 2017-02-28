@@ -3,6 +3,7 @@ require "test_helper"
 describe TopicsController do
   include ContentSchemaHelpers
   include RummagerHelpers
+  include NavigationAbTestHelpers
 
   include GovukAbTesting::MinitestHelpers
 
@@ -16,6 +17,12 @@ describe TopicsController do
         get :show, topic_slug: "oil-and-gas"
 
         assert_equal "max-age=1800, public", response.headers["Cache-Control"]
+      end
+
+      it "tracks the page as a 'finding' page type" do
+        get :show, topic_slug: "oil-and-gas"
+
+        assert_user_journey_stage_tracked_as_finding_page
       end
     end
 

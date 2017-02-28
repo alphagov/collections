@@ -1,5 +1,8 @@
 <% content_for :title, "All categories - GOV.UK" %>
 <% content_for :page_class, "browse" %>
+<% content_for :meta_tags do %>
+  <%= render 'shared/tag_meta_nav_ab_tracking' %>
+<% end %>
 
 <div class="browse-panes root">
   <%= render 'top_level_browse_pages',
