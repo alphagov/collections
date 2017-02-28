@@ -41,7 +41,7 @@ describe ServicesAndInformationController do
         stub_services_and_information_links("department-for-education")
       end
 
-      describe "new navigation is not enabled" do
+      describe "with the feature flag off" do
         ["A", "B"].each do |variant|
           it "returns the original version of the page for variant #{variant}" do
             setup_ab_variant("EducationNavigation", variant)
@@ -54,41 +54,37 @@ describe ServicesAndInformationController do
         end
       end
 
-      describe "new navigation is enabled" do
+      describe "with the feature flag on" do
         ["A", "B"].each do |variant|
           it "does not redirect non-education organisations in the #{variant} variant" do
-            stub_services_and_information_content_item
-            stub_services_and_information_links("hm-revenue-customs")
+            ClimateControl.modify(ENABLE_NEW_NAVIGATION: 'yes') do
+              stub_services_and_information_content_item
+              stub_services_and_information_links("hm-revenue-customs")
 
-            setup_ab_variant("EducationNavigation", variant)
+              setup_ab_variant("EducationNavigation", variant)
 
-            with_new_navigation_enabled do
               get :index, organisation_id: "hm-revenue-customs"
-            end
 
-            assert_response 200
-            assert_response_not_modified_for_ab_test
+              assert_response 200
+              assert_response_not_modified_for_ab_test
+            end
           end
         end
 
         it "shows the original page in the A variant" do
-          with_new_navigation_enabled do
-            with_variant EducationNavigation: "A" do
-              get :index, organisation_id: "department-for-education"
+          with_A_variant do
+            get :index, organisation_id: "department-for-education"
 
-              assert_response 200
-            end
+            assert_response 200
           end
         end
 
         it "redirects B variant of education" do
-          with_new_navigation_enabled do
-            with_variant EducationNavigation: "B", assert_meta_tag: false do
-              get :index, organisation_id: "department-for-education"
+          with_B_variant assert_meta_tag: false do
+            get :index, organisation_id: "department-for-education"
 
-              assert_response 302
-              assert_redirected_to controller: "taxons", action: "show", taxon_base_path: "education"
-            end
+            assert_response 302
+            assert_redirected_to controller: "taxons", action: "show", taxon_base_path: "education"
           end
         end
       end

@@ -45,8 +45,8 @@ describe BrowseController do
         content_store_has_item("/browse/benefits", base_path: '/browse/benefits')
       end
 
-      describe "with the new navigation not enabled" do
-        ["A", "B"].each do |variant|
+      describe 'with the feature flag off' do
+        %w(A B).each do |variant|
           it "returns the original version of the page for variant #{variant}" do
             setup_ab_variant("EducationNavigation", variant)
 
@@ -58,33 +58,24 @@ describe BrowseController do
         end
       end
 
-      describe "with the new navigation enabled" do
-        it "returns the original version of the page as the A variant" do
-          with_new_navigation_enabled do
-            with_variant EducationNavigation: "A" do
-              get :show, top_level_slug: "education"
+      describe "with the feature flag on" do
+        it "redirects for variant B" do
+          with_B_variant assert_meta_tag: false do
+            get :show, top_level_slug: "education"
 
-              assert_response 200
-            end
+            assert_redirected_to(
+              controller: "taxons",
+              action: "show",
+              taxon_base_path: "education"
+            )
           end
         end
 
-        it "redirects to the taxonomy navigation as the B variant" do
-          with_new_navigation_enabled do
-            with_variant EducationNavigation: "B", assert_meta_tag: false do
-              get :show, top_level_slug: "education"
-
-              assert_response 302
-              assert_redirected_to controller: "taxons", action: "show", taxon_base_path: "education"
-            end
-          end
-        end
-
-        ["A", "B"].each do |variant|
+        %w(A B).each do |variant|
           it "does not change a page outside the A/B test when the #{variant} variant is requested" do
             setup_ab_variant("EducationNavigation", variant)
 
-            with_new_navigation_enabled do
+            ClimateControl.modify(ENABLE_NEW_NAVIGATION: 'yes') do
               get :show, top_level_slug: "benefits"
             end
 
@@ -95,12 +86,20 @@ describe BrowseController do
           it "does not redirect education when the #{variant} variant is requested in JSON format" do
             setup_ab_variant("EducationNavigation", variant)
 
-            with_new_navigation_enabled do
+            ClimateControl.modify(ENABLE_NEW_NAVIGATION: 'yes') do
               get :show, format: :json, top_level_slug: "education"
             end
 
             assert_response 200
             assert_response_not_modified_for_ab_test
+          end
+        end
+
+        it "returns the original version of the page for variant A" do
+          with_A_variant do
+            get :show, top_level_slug: "education"
+
+            assert_response 200
           end
         end
       end

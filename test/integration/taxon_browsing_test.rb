@@ -5,9 +5,23 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
   include RummagerHelpers
   include TaxonHelpers
   include Slimmer::TestHelpers::GovukComponents
+  include GovukAbTesting::MinitestHelpers
+
+  before do
+    @existing_framework = GovukAbTesting.configuration.acceptance_test_framework
+
+    GovukAbTesting.configure do |config|
+      config.acceptance_test_framework = :capybara
+    end
+  end
+
+  after do
+    GovukAbTesting.configure do |config|
+      config.acceptance_test_framework = @existing_framework
+    end
+  end
 
   it 'is possible to browse a taxon page that has grandchildren' do
-    given_new_navigation_is_enabled
     given_there_is_a_taxon_with_grandchildren
     when_i_visit_the_taxon_page
     then_i_can_see_there_is_a_page_title
@@ -21,7 +35,6 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   it 'is possible to browse a taxon page that does not have grandchildren' do
-    given_new_navigation_is_enabled
     given_there_is_a_taxon_without_grandchildren
     when_i_visit_the_taxon_page
     then_i_can_see_there_is_a_page_title
@@ -35,7 +48,6 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   it 'is possible to browse a taxon page that does not have child taxons' do
-    given_new_navigation_is_enabled
     given_there_is_a_taxon_without_child_taxons
     when_i_visit_the_taxon_page
     then_i_can_see_there_is_a_page_title
@@ -61,10 +73,6 @@ private
         'link' => 'content-item-2'
       },
     ]
-  end
-
-  def given_new_navigation_is_enabled
-    @enable_new_navigation = true
   end
 
   def given_there_is_a_taxon_with_grandchildren
@@ -143,9 +151,7 @@ private
   end
 
   def when_i_visit_the_taxon_page
-    new_nav_environment_variable = @enable_new_navigation ? 'yes' : nil
-
-    ClimateControl.modify(ENABLE_NEW_NAVIGATION: new_nav_environment_variable) do
+    with_B_variant do
       visit @base_path
     end
   end

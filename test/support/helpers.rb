@@ -12,7 +12,29 @@ class ActiveSupport::TestCase
     end
   end
 
-  def with_new_navigation_enabled(&block)
-    ClimateControl.modify(ENABLE_NEW_NAVIGATION: 'yes', &block)
+  # rubocop:disable Style/MethodName
+  def with_A_variant(options = {})
+    variant_options =
+      { EducationNavigation: 'A' }
+      .merge(options)
+
+    ClimateControl.modify(ENABLE_NEW_NAVIGATION: 'yes') do
+      with_variant variant_options do
+        yield
+      end
+    end
   end
+
+  def with_B_variant(options = {})
+    variant_options =
+      { EducationNavigation: 'B' }
+      .merge(options)
+
+    ClimateControl.modify(ENABLE_NEW_NAVIGATION: 'yes') do
+      with_variant variant_options do
+        yield
+      end
+    end
+  end
+  # rubocop:enable Style/MethodName
 end

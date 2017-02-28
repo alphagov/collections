@@ -7,7 +7,7 @@ class BrowseController < ApplicationController
 
     dimension = Rails.application.config.navigation_ab_test_dimension
     ab_test = GovukAbTesting::AbTest.new("EducationNavigation", dimension: dimension)
-    ab_variant = ab_test.requested_variant(request)
+    ab_variant = ab_test.requested_variant(request.headers)
 
     render :index, locals: { page: page, ab_variant: ab_variant }
   end

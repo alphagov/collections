@@ -55,7 +55,7 @@ describe SecondLevelBrowsePageController do
         )
       end
 
-      describe "with the new navigation not enabled" do
+      describe "with the feature flag off" do
         %w(A, B).each do |variant|
           it "returns the original version of the page for variant #{variant}" do
             setup_ab_variant("EducationNavigation", variant)
@@ -68,26 +68,22 @@ describe SecondLevelBrowsePageController do
         end
       end
 
-      describe "with the new navigation enabled" do
+      describe "with the feature flag on" do
         it "returns the original version of education pages as the A variant" do
-          with_new_navigation_enabled do
-            with_variant EducationNavigation: "A" do
-              get :show, top_level_slug: "education", second_level_slug: "student-finance"
+          with_A_variant do
+            get :show, top_level_slug: "education", second_level_slug: "student-finance"
 
-              assert_response 200
-            end
+            assert_response 200
           end
         end
 
         it "redirects to the taxonomy navigation as the B variant" do
-          with_new_navigation_enabled do
-            with_variant EducationNavigation: "B", assert_meta_tag: false do
-              get :show, top_level_slug: "education", second_level_slug: "student-finance"
+          with_B_variant assert_meta_tag: false do
+            get :show, top_level_slug: "education", second_level_slug: "student-finance"
 
-              assert_response 302
-              assert_redirected_to controller: "taxons", action: "show",
-                taxon_base_path: "education/funding-and-finance-for-students"
-            end
+            assert_response 302
+            assert_redirected_to controller: "taxons", action: "show",
+              taxon_base_path: "education/funding-and-finance-for-students"
           end
         end
 
@@ -107,13 +103,11 @@ describe SecondLevelBrowsePageController do
             page_size: 1000
           )
 
-          with_new_navigation_enabled do
-            with_variant EducationNavigation: "B", assert_meta_tag: false do
-              get :show, top_level_slug: "education", second_level_slug: "school-life"
+          with_B_variant assert_meta_tag: false do
+            get :show, top_level_slug: "education", second_level_slug: "school-life"
 
-              assert_response 302
-              assert_redirected_to controller: "taxons", action: "show", taxon_base_path: "education"
-            end
+            assert_response 302
+            assert_redirected_to controller: "taxons", action: "show", taxon_base_path: "education"
           end
         end
 
@@ -134,21 +128,17 @@ describe SecondLevelBrowsePageController do
               page_size: 1000
             )
 
-            with_new_navigation_enabled do
-              setup_ab_variant("EducationNavigation", variant)
-              get :show, top_level_slug: "benefits", second_level_slug: "entitlement"
+            setup_ab_variant("EducationNavigation", variant)
+            get :show, top_level_slug: "benefits", second_level_slug: "entitlement"
 
-              assert_response 200
-              assert_response_not_modified_for_ab_test
-            end
+            assert_response 200
+            assert_response_not_modified_for_ab_test
           end
 
           it "does not redirect education when the #{variant} variant is requested in JSON format" do
             setup_ab_variant("EducationNavigation", variant)
 
-            with_new_navigation_enabled do
-              get :show, top_level_slug: "education", second_level_slug: "student-finance", format: :json
-            end
+            get :show, top_level_slug: "education", second_level_slug: "student-finance", format: :json
 
             assert_response 200
             assert_response_not_modified_for_ab_test
