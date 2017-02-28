@@ -1,3 +1,5 @@
+<% is_grid ||= false %>
+
 <div class="grid-row">
   <div class="column-two-thirds">
     <div class="parent-topic-contents">
@@ -15,7 +17,7 @@
                   content_item.title,
                   Plek.new.website_root + content_item.base_path,
                   data: {
-                    track_category: 'navLeafLinkClicked',
+                    track_category: is_grid ? 'navGridLeafLinkClicked' : 'navLeafLinkClicked',
                     track_action: index + 1,
                     track_value: tagged_content.size,
                     track_label: content_item.base_path,
