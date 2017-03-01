@@ -1,5 +1,17 @@
-Given(/^a topic$/) do
+Given(/^a topic subscription is expected$/) do
   stub_topic_lookups
+
+  Services.email_alert_api
+    .expects(:find_or_create_subscriber_list)
+    .with(
+      "title" => "Oil and Gas: Fields and Wells",
+      "links" => {
+        "topics" => ['content-id-for-fields-and-wells']
+      }
+    ).returns({"subscriber_list" =>
+       # This redirects to govdelivery in real life, but force redirection to a fake path to verify redirect success
+       {"subscription_url" => "/email_success"}
+    })
 end
 
 When(/^I access the email signup page via the topic$/) do
@@ -11,16 +23,5 @@ When(/^I sign up to the email alerts$/) do
 end
 
 Then(/^my subscription should be registered$/) do
-  Services.email_alert_api
-    .expects(:find_or_create_subscriber_list)
-    .with(
-      "title" => "Oil and Gas: Fields and Wells",
-      "tags" => {
-        "topics" => ["oil-and-gas/fields-and-wells"]
-      }
-    ).returns(OpenStruct.new("subscriber_list" =>
-      # This redirects to govdelivery in real life, but redirect to /topic/oil-and-gas/fields-and-wells
-      # here to make the tests work.
-      OpenStruct.new("subscription_url" => "/topic/oil-and-gas/fields-and-wells")
-    ))
+  assert page.current_path == "/email_success"
 end
