@@ -7,11 +7,14 @@ describe EmailSignup do
     @subtopic.stubs(slug: "oil-and-gas/wells", content_id: "uuid-888")
     @subtopic.stubs(combined_title: "Oil and gas: Wells")
 
-    Services.email_alert_api.stubs(:find_or_create_subscriber_list).returns(
-      OpenStruct.new(
-        subscriber_list: OpenStruct.new(subscription_url: "http://govdelivery_signup_url")
+    @request = stub_request(:get, "https://email-alert-api.test.gov.uk/subscriber-lists?links%5Btopics%5D%5B0%5D=uuid-888").
+      to_return(
+        body: {
+          subscriber_list: {
+            subscription_url: "http://govdelivery_signup_url"
+          },
+        }.to_json
       )
-    )
   end
 
   it "is invalid with no subtopic" do
@@ -21,17 +24,8 @@ describe EmailSignup do
   describe "#save" do
     it "creates the topic in GovDelivery using the subtopic slug and combined title" do
       email_signup = EmailSignup.new(@subtopic)
-
-      Services.email_alert_api.expects(:find_or_create_subscriber_list).with(
-        "title" => "Oil and gas: Wells",
-        "links" => {
-          "topics" => ["uuid-888"]
-        },
-      ).returns(OpenStruct.new(
-                  subscriber_list: OpenStruct.new(subscription_url: "http://govdelivery_signup_url"))
-      )
-
       assert email_signup.save
+      assert_requested @request
     end
 
     it "does not create a subscription if the subtopic is missing" do
