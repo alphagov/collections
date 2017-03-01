@@ -1,5 +1,5 @@
 Given(/^there is latest content for a subtopic$/) do
-  topic_content_id = stub_topic_lookups
+  stub_topic_lookups
 
   @stubbed_rummager_documents = %w(
     what-is-oil
@@ -24,7 +24,7 @@ Given(/^there is latest content for a subtopic$/) do
     has_entries(
       start: 0,
       count: 50,
-      filter_topic_content_ids: [topic_content_id],
+      filter_topic_content_ids: ['content-id-for-fields-and-wells'],
       order: "-public_timestamp",
     )
   ).returns("results" => @stubbed_rummager_documents,

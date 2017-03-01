@@ -14,9 +14,26 @@ module TopicHelper
       government/organisations/air-accidents-investigation-branch
     }
 
-    content_item = {
+    rummager_has_documents_for_subtopic(
+      'content-id-for-fields-and-wells',
+      %w{
+        what-is-oil
+        apply-for-an-oil-licence
+        environmental-policy
+        onshore-exploration-and-production
+        well-application-form
+        well-report-2014
+        oil-extraction-count-2013
+      },
+      page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
+    )
+
+    content_store_has_item("/topic/oil-and-gas/fields-and-wells",
+      content_id: 'content-id-for-fields-and-wells',
       base_path: "/topic/oil-and-gas/fields-and-wells",
+      title: "Fields and Wells",
       format: "topic",
+      public_updated_at: 10.days.ago.iso8601,
       details: {
         groups: [
           {
@@ -35,45 +52,18 @@ module TopicHelper
         ],
       },
       links: {
-        parent: [
-          content_link("Oil and Gas", "/oil-and-gas")
-        ],
-        topic_content: [
-          content_link("What is oil", "/what-is-oil"),
-          content_link("Apply for an oil licence", "/apply-for-an-oil-licence"),
-          content_link("Environmental policy", "/environmental-policy"),
-          content_link("Onshore exploration and production", "/onshore-exploration-and-production"),
-          content_link("Well application form", "/well-application-form"),
-          content_link("Well report 2014", "/well-report-2014"),
-          content_link("Oil extraction count 2013", "/oil-extraction-count-2013"),
+        "parent" => [
+          "title" => "Oil and Gas",
+          "base_path" => "/oil-and-gas",
         ]
-      }
-    }
-
-    topic = GovukSchemas::RandomExample
-      .for_schema(frontend_schema: 'topic')
-      .merge_and_validate(content_item)
-    content_store_has_item("/topic/oil-and-gas/fields-and-wells", topic)
+      })
 
     stub_topic_organisations(
       'oil-and-gas/fields-and-wells',
-      topic["content_id"]
+      'content-id-for-fields-and-wells'
     )
 
     stub_shared_component_locales
-
-    topic["content_id"]
-  end
-
-private
-
-  def content_link(title, base_path)
-    {
-      title: title,
-      base_path: base_path,
-      locale: "en",
-      content_id: SecureRandom::uuid
-    }
   end
 end
 

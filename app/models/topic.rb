@@ -11,13 +11,6 @@ class Topic
     to: :content_item
   )
 
-  DOCUMENT_TYPES_TO_EXCLUDE = %w(
-    fatality_notice
-    news_article
-    speech
-    world_location_news_article
-  ).to_set
-
   def self.find(base_path, pagination_options = {})
     content_item = ContentItem.find!(base_path)
     new(content_item, pagination_options)
@@ -45,10 +38,7 @@ class Topic
   end
 
   def lists
-    ListSet.new(
-      @content_item.linked_items("topic_content"),
-      details["groups"],
-      DOCUMENT_TYPES_TO_EXCLUDE)
+    ListSet.new("specialist_sector", content_item.content_id, details["groups"])
   end
 
   def changed_documents

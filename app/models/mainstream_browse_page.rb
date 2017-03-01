@@ -10,14 +10,6 @@ class MainstreamBrowsePage
     to: :content_item
   )
 
-  DOCUMENT_TYPES_TO_EXCLUDE = %w(
-    fatality_notice
-    news_article
-    speech
-    world_location_news_article
-    travel_advice
-  ).to_set
-
   def self.find(base_path)
     content_item = ContentItem.find!(base_path)
     new(content_item)
@@ -52,10 +44,7 @@ class MainstreamBrowsePage
   end
 
   def lists
-    @lists ||= ListSet.new(
-      @content_item.linked_items("mainstream_browse_content"),
-      details["groups"],
-      DOCUMENT_TYPES_TO_EXCLUDE)
+    @lists ||= ListSet.new("section", @content_item.content_id, details["groups"])
   end
 
   def related_topics
