@@ -15,19 +15,27 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
         groups: [],
       },
       links: {
-        parent: [
-          { title: "Oil and Gas", base_path: "/topic/oil-and-gas" }
-        ],
-        topic_content: [
-          { title: "Oil rig safety requirements", base_path: "/oil-rig-safety-requirements" },
-          { title: "Oil rig staffing", base_path: "/oil-rig-staffing" },
-          { title: "North sea shipping lanes", base_path: "/north-sea-shipping-lanes" },
-          { title: "Undersea piping restrictions", base_path: "/undersea-piping-restrictions" },
+        "parent" => [
+          "title" => "Oil and Gas",
+          "base_path" => "/topic/oil-and-gas",
         ]
       },
     }
     base[:details].merge!(params.delete(:details)) if params.has_key?(:details)
     base.merge(params)
+  end
+
+  before do
+    rummager_has_documents_for_subtopic(
+      'content-id-for-offshore',
+      [
+        'oil-rig-safety-requirements',
+        'oil-rig-staffing',
+        'north-sea-shipping-lanes',
+        'undersea-piping-restrictions'
+      ],
+      page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
+    )
   end
 
   it "renders a curated subtopic" do

@@ -1,6 +1,8 @@
 require "test_helper"
 
 describe ListSet do
+  include RummagerHelpers
+
   describe "for a curated subtopic" do
     setup do
       @group_data = [
@@ -22,16 +24,20 @@ describe ListSet do
         },
       ]
 
-      topic_links = [
-        ContentItem.new("title" => "Employee tax codes", "base_path" => "/employee-tax-codes"),
-        ContentItem.new("title" => "Get PAYE forms P45 P60", "base_path" => "/get-paye-forms-p45-p60"),
-        ContentItem.new("title" => "Pay PAYE penalty", "base_path" => "/pay-paye-penalty"),
-        ContentItem.new("title" => "Pay PAYE tax", "base_path" => "/pay-paye-tax"),
-        ContentItem.new("title" => "Pay PSA", "base_path" => "/pay-psa"),
-        ContentItem.new("title" => "Payroll annlual reporting", "base_path" => "/payroll-annual-reporting"),
-      ]
+      rummager_has_documents_for_subtopic(
+        "paye-content-id",
+        [
+          "employee-tax-codes",
+          "get-paye-forms-p45-p60",
+          "pay-paye-penalty",
+          "pay-paye-tax",
+          "pay-psa",
+          "payroll-annual-reporting",
+        ],
+        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
+      )
 
-      @list_set = ListSet.new(topic_links, @group_data)
+      @list_set = ListSet.new("specialist_sector", "paye-content-id", @group_data)
     end
 
     it "returns the groups in the curated order" do
@@ -70,122 +76,131 @@ describe ListSet do
       refute list_titles.include?("Group with untagged items")
       refute list_titles.include?("Empty group")
     end
-
-    it "returns no groups if there is no linked content" do
-      list_set = ListSet.new(nil, @group_data)
-
-      assert_equal 0, list_set.count
-    end
   end
 
   describe "for a non-curated topic" do
+    setup do
+      rummager_has_documents_for_subtopic(
+        "paye-content-id",
+        [
+          "get-paye-forms-p45-p60",
+          "pay-paye-penalty",
+          "pay-paye-tax",
+          "pay-psa",
+          "employee-tax-codes",
+          "payroll-annual-reporting",
+        ],
+        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
+      )
+      @list_set = ListSet.new("specialist_sector", "paye-content-id", [])
+    end
+
     it "constructs a single A-Z group" do
-      list_set = ListSet.new([], [])
-
-      assert_equal 1, list_set.to_a.size
-      assert_equal "A to Z", list_set.first.title
-    end
-
-    it "constructs a single A-Z group if group array is nil" do
-      list_set = ListSet.new([], nil)
-
-      assert_equal 1, list_set.to_a.size
-      assert_equal "A to Z", list_set.first.title
-    end
-
-    it "returns an empty A-Z group is no linked content" do
-      list_set = ListSet.new(nil, [])
-
-      assert_equal 1, list_set.to_a.size
-      assert_equal "A to Z", list_set.first.title
-      assert_equal 0, list_set.first.contents.size
+      assert_equal 1, @list_set.to_a.size
+      assert_equal "A to Z", @list_set.first.title
     end
 
     it "includes content tagged to the topic in alphabetical order" do
-      topic_links = [
-        ContentItem.new("title" => "Pay PAYE tax"),
-        ContentItem.new("title" => "Get PAYE forms P45 P60"),
-        ContentItem.new("title" => "Pay PAYE penalty"),
-        ContentItem.new("title" => "Employee tax codes"),
-      ]
-      list_set = ListSet.new(topic_links, [])
-
       expected_titles = [
         "Employee tax codes",
-        "Get PAYE forms P45 P60",
-        "Pay PAYE penalty",
-        "Pay PAYE tax",
+        "Get paye forms p45 p60",
+        "Pay paye penalty",
+        "Pay paye tax",
+        "Pay psa",
+        "Payroll annual reporting"
       ]
-      assert_equal expected_titles, list_set.first.contents.map(&:title)
+      assert_equal expected_titles, @list_set.first.contents.map(&:title)
     end
 
-    it "includes the base_path" do
-      topic_links = [
-        ContentItem.new("base_path" => "/some/base/path"),
+    it "includes the base_path for all items" do
+      assert_equal "/pay-paye-tax", @list_set.first.contents.to_a[3].base_path
+    end
+
+    it "handles nil data the same as empty array" do
+      @list_set = ListSet.new("specialist_sector", "paye-content-id", nil)
+      assert_equal 1, @list_set.to_a.size
+      assert_equal "A to Z", @list_set.first.title
+    end
+  end
+
+  describe "fetching content tagged to this tag" do
+    setup do
+      @subtopic_content_id = 'paye-content-id'
+      rummager_has_documents_for_subtopic(@subtopic_content_id, [
+        'pay-paye-penalty',
+        'pay-paye-tax',
+        'pay-psa',
+        'employee-tax-codes',
+        'payroll-annual-reporting',
+      ], page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING)
+    end
+
+    it "returns the content for the tag" do
+      expected_titles = [
+        'Pay paye penalty',
+        'Pay paye tax',
+        'Pay psa',
+        'Employee tax codes',
+        'Payroll annual reporting',
       ]
 
-      list_set = ListSet.new(topic_links, [])
+      assert_equal expected_titles.sort, ListSet.new("specialist_sector", @subtopic_content_id).first.contents.map(&:title).sort
+    end
 
-      assert_equal "/some/base/path", list_set.first.contents.first.base_path
+    it "provides the title, base_path for each document" do
+      documents = ListSet.new("specialist_sector", @subtopic_content_id).first.contents
+
+      assert_equal "/pay-paye-tax", documents[2].base_path
+      assert_equal "Pay paye tax", documents[2].title
+    end
+  end
+
+  describe "handling missing fields in the search results" do
+    it "handles documents that don't contain the public_timestamp field" do
+      result = rummager_document_for_slug('pay-psa')
+      result.delete("public_timestamp")
+
+      Services.rummager.stubs(:search).with(
+        has_entries(filter_topic_content_ids: ['paye-content-id'])
+      ).returns("results" => [result],
+        "start" => 0,
+        "total" => 1)
+
+      documents = ListSet.new("specialist_sector", "paye-content-id").first.contents
+
+      assert_equal 1, documents.to_a.size
+      assert_equal 'Pay psa', documents.first.title
+      assert_nil documents.first.public_updated_at
     end
   end
 
   describe "filtering uncurated lists" do
+    before do
+      @list_set = ListSet.new("section", "content-id-for-living-abroad")
+    end
+
     it "shouldn't display a document if its format is excluded" do
-      topic_links = [
-        ContentItem.new(
-          "title" => "Living abroad",
-          "base_path" => "/living-abroad",
-          "document_type" => "some-excluded-doc-type")
-      ]
-      excluded_document_types = ["some-excluded-doc-type"]
+      rummager_has_documents_for_browse_page(
+        'content-id-for-living-abroad',
+        ['baz'],
+        ListSet::BROWSE_FORMATS_TO_EXCLUDE.to_a.last,
+        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
+      )
 
-      list_set = ListSet.new(topic_links, [], excluded_document_types)
-
-      assert_equal 0, list_set.first.contents.length
+      assert_equal 0, @list_set.first.contents.length
     end
 
     it "should display a document if its format isn't excluded" do
-      topic_links = [
-        ContentItem.new(
-          "title" => "Living abroad",
-          "base_path" => "/living-abroad",
-          "document_type" => "some-doc-type-not-excluded")
-      ]
-      excluded_document_types = []
+      rummager_has_documents_for_browse_page(
+        'content-id-for-living-abroad',
+        ['baz'],
+        'some-format-not-excluded',
+        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
+      )
 
-      list_set = ListSet.new(topic_links, [], excluded_document_types)
-
-      results = list_set.first.contents
+      results = @list_set.first.contents
       assert_equal 1, results.length
-      assert_equal 'Living abroad', results.first.title
-    end
-  end
-
-  describe "determining whether content is curated" do
-    it "should identify content with groups as curated" do
-      group_data = [
-        {
-          "name" => "Paying HMRC",
-          "contents" => ['/pay-paye-tax']
-        },
-      ]
-
-      list_set = ListSet.new([], group_data)
-
-      assert list_set.curated?
-    end
-
-    it "should identify content with no groups as not curated" do
-      list_set = ListSet.new([], [])
-
-      assert_not list_set.curated?
-    end
-
-    it "should identify content with missing group data as not curated" do
-      list_set = ListSet.new([], nil)
-
-      assert_not list_set.curated?
+      assert_equal 'Baz', results.first.title
     end
   end
 end
