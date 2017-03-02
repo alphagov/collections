@@ -110,11 +110,6 @@
   .subsection,
   .subsection-is-open {
     width: 100%;
-    margin-bottom: $gutter;
-
-    @include media(tablet) {
-      margin-bottom: $gutter * 1.5;
-    }
 
     .subsection-description {
       @include core-19;
