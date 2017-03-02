@@ -5,6 +5,7 @@ describe ServicesAndInformationController do
   include RummagerHelpers
   include ServicesAndInformationHelpers
   include GovukAbTesting::MinitestHelpers
+  include NavigationAbTestHelpers
 
   describe "with a valid organisation slug" do
     it "sets expiry headers for 30 minutes" do
@@ -18,6 +19,15 @@ describe ServicesAndInformationController do
   end
 
   describe "GET services and information page" do
+    it "tracks the page as a 'finding' page type" do
+      stub_services_and_information_content_item
+      stub_services_and_information_links("hm-revenue-customs")
+
+      get :index, organisation_id: "hm-revenue-customs"
+
+      assert_user_journey_stage_tracked_as_finding_page
+    end
+
     it "returns a 404 status for GET services and information with an invalid organisation id" do
       content_store_does_not_have_item("/government/organisations/hm-revenue-customs/services-information")
 

@@ -31,6 +31,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_the_grid_has_tracking_attributes
     and_i_can_see_tagged_content_to_the_taxon
     and_the_content_tagged_to_the_taxon_has_tracking_attributes
+    and_the_page_is_tracked_as_a_navigation_page
     and_the_page_is_tracked_as_a_grid
   end
 
@@ -44,6 +45,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_the_accordion_has_tracking_attributes
     and_i_can_see_tagged_content_to_the_taxon
     and_the_content_tagged_to_the_taxon_has_tracking_attributes
+    and_the_page_is_tracked_as_a_navigation_page
     and_the_page_is_tracked_as_an_accordion
   end
 
@@ -55,6 +57,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_the_title_and_description
     and_i_can_see_tagged_content_to_the_taxon
     and_the_content_tagged_to_the_taxon_has_tracking_attributes
+    and_the_page_is_tracked_as_a_navigation_page
     and_the_page_is_tracked_as_a_leaf_node_taxon
   end
 
@@ -290,5 +293,9 @@ private
 
   def assert_navigation_page_type_tracking(expected_page_type)
     assert page.has_selector?("meta[name='govuk:navigation-page-type'][content='#{expected_page_type}']", visible: false)
+  end
+
+  def and_the_page_is_tracked_as_a_navigation_page
+    assert page.has_selector?("meta[name='govuk:user-journey-stage'][content='finding']", visible: false)
   end
 end

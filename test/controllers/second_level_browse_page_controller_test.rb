@@ -3,6 +3,7 @@ require "test_helper"
 describe SecondLevelBrowsePageController do
   include RummagerHelpers
   include GovukAbTesting::MinitestHelpers
+  include NavigationAbTestHelpers
 
   describe "GET second_level_browse_page" do
     describe "for a valid browse page" do
@@ -34,6 +35,12 @@ describe SecondLevelBrowsePageController do
         get :show, top_level_slug: "benefits", second_level_slug: "entitlement"
 
         assert_equal "max-age=1800, public", response.headers["Cache-Control"]
+      end
+
+      it "tracks the page as a 'finding' page type" do
+        get :show, top_level_slug: "benefits", second_level_slug: "entitlement"
+
+        assert_user_journey_stage_tracked_as_finding_page
       end
     end
 

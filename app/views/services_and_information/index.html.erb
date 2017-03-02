@@ -1,6 +1,7 @@
 <% content_for :title, "Services and information - #{organisation['title']} - GOV.UK" %>
 <% content_for :page_class, "topics-page" %>
 <% content_for :meta_tags do %>
+  <%= render 'shared/tag_meta_nav_ab_tracking' %>
   <% if is_page_under_ab_test %>
     <%= ab_variant.analytics_meta_tag.html_safe %>
   <% end %>
