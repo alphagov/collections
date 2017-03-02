@@ -170,7 +170,7 @@
       }
 
       margin-bottom: 0;
-      margin-right: $gutter;
+      margin-right: $gutter * 1.5;
     }
 
     .subsection-header {
@@ -188,7 +188,7 @@
 
     .subsection-description {
       margin-bottom: 0;
-      margin-right: $gutter;
+      margin-right: $gutter * 1.5;
     }
 
     .subsection-icon {
