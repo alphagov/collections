@@ -57,6 +57,7 @@
         padding-bottom: $gutter;
 
         @include media (tablet) {
+          padding-bottom: $gutter * 1.5;
           min-height: (5 * $gutter);
         }
       }
