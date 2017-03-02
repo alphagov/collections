@@ -16,15 +16,22 @@
 <% if taxon.grandchildren? %>
   <%= render partial: 'child_taxons_grid',
     locals: { child_taxons: taxon.child_taxons } %>
-<% else %>
-  <%= render partial: 'child_taxons_list', locals: {
-    taxon: taxon,
-    child_taxons: taxon.child_taxons,
-    tagged_content: taxon.tagged_content
-  } %>
-<% end %>
 
-<%= render partial: 'content_list_for_current_taxon', locals: {
+  <%= render partial: 'content_list_for_current_taxon', locals: {
   taxon: taxon,
   tagged_content: taxon.tagged_content,
-} %>
+  } %>
+<% else %>
+  <% if taxon.children? %>
+    <%= render partial: 'child_taxons_list', locals: {
+      taxon: taxon,
+      child_taxons: taxon.child_taxons,
+      tagged_content: taxon.tagged_content
+    } %>
+  <% else %>
+    <%= render partial: 'content_list_for_current_taxon', locals: {
+      taxon: taxon,
+      tagged_content: taxon.tagged_content,
+    } %>
+  <% end %>
+<% end %>

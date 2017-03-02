@@ -5,6 +5,22 @@
 
         <div data-module="accordion-with-descriptions">
           <div class="subsection-wrapper">
+
+            <% if taxon.tagged_content.count > 0 %>
+              <div class="subsection js-subsection">
+                <div class="subsection-header">
+                  <h2 class="subsection-title">Overview</h2>
+                </div>
+
+                <div class="subsection-content js-subsection-content" id="subsection_content_0">
+                  <%= render partial: 'content_list_for_child_taxon', locals: {
+                    section_index: 0,
+                    tagged_content: taxon.tagged_content,
+                  } %>
+                </div>
+              </div>
+            <% end %>
+
             <% child_taxons.each_with_index do |taxon, index| %>
               <div class="subsection js-subsection">
                 <div class="subsection-header">
@@ -12,9 +28,9 @@
                   <p class="subsection-description"><%= taxon.description %></p>
                 </div>
 
-                <div class="subsection-content js-subsection-content" id="subsection_content_<%= index %>">
+                <div class="subsection-content js-subsection-content" id="subsection_content_<%= index + 1 %>">
                   <%= render partial: 'content_list_for_child_taxon', locals: {
-                    section_index: index,
+                    section_index: index + 1,
                     tagged_content: taxon.tagged_content,
                   } %>
                 </div>

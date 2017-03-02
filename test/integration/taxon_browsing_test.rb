@@ -40,11 +40,18 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     then_i_can_see_there_is_a_page_title
     then_i_can_see_the_breadcrumbs
     and_i_can_see_the_title_and_description
+    and_i_can_see_the_overview_section_in_the_accordion
     and_i_can_see_links_to_the_child_taxons_in_an_accordion
     and_the_accordion_has_tracking_attributes
     and_i_can_see_tagged_content_to_the_taxon
-    and_the_content_tagged_to_the_taxon_has_tracking_attributes
     and_the_page_is_tracked_as_an_accordion
+  end
+
+  it 'does not show the overview section when there is no content tagged' do
+    given_there_is_a_taxon_without_grandchildren
+    and_the_taxon_has_no_tagged_content
+    when_i_visit_the_taxon_page
+    then_there_is_no_overview_section_in_the_accordion
   end
 
   it 'is possible to browse a taxon page that does not have child taxons' do
@@ -135,6 +142,10 @@ private
     stub_content_for_taxon(student_loans_taxon['content_id'], search_results)
   end
 
+  def and_the_taxon_has_no_tagged_content
+    stub_content_for_taxon(@taxon.content_id, [])
+  end
+
   def given_there_is_a_taxon_without_child_taxons
     @base_path = '/education/running-a-further-or-higher-education-institution'
     running_an_institution = running_an_education_institution_taxon(base_path: @base_path)
@@ -216,9 +227,30 @@ private
     end
   end
 
+  def and_i_can_see_the_overview_section_in_the_accordion
+    subsection = first('.subsection')
+
+    assert subsection.has_selector?('.subsection-title', text: /overview/i)
+    assert subsection.has_selector?(
+      '.subsection-content .subsection-list-item a',
+      count: 2
+    )
+  end
+
+  def then_there_is_no_overview_section_in_the_accordion
+    subsection = first('.subsection')
+
+    assert_equal(
+      false,
+      subsection.has_selector?('.subsection-title', text: /overview/i)
+    )
+  end
+
   def and_the_accordion_has_tracking_attributes
     tracked_links = page.all(:css, "a[data-track-category='navAccordionLinkClicked']")
-    tracked_links.size.must_equal @child_taxons.size * search_results.size
+    tracked_links.size.must_equal(
+      (@child_taxons.size * search_results.size) + ([@taxon].size * search_results.size)
+    )
 
     tracked_links.each_with_index do |link, index|
       section_number = (index / search_results.size).floor + 1
