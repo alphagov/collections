@@ -4,12 +4,6 @@ class TaxonsController < ApplicationController
   def show
     setup_content_item_and_navigation_helpers(taxon)
 
-    dimension = Rails.application.config.navigation_ab_test_dimension
-    ab_test = GovukAbTesting::AbTest.new("EducationNavigation", dimension: dimension)
-    ab_variant = ab_test.requested_variant(request)
-
-    ab_variant.configure_response(response)
-
     # Show the taxon page regardless of which variant is requested, because
     # there is no straighforward mapping of taxons back to original navigation
     # pages.
@@ -17,6 +11,25 @@ class TaxonsController < ApplicationController
   end
 
 private
+
+  def dimension
+    Rails.application.config.navigation_ab_test_dimension
+  end
+
+  def ab_variant
+    @ab_variant ||= begin
+      ab_test =
+        GovukAbTesting::AbTest.new("EducationNavigation", dimension: dimension)
+      variant = ab_test.requested_variant(request.headers)
+      variant.configure_response(response)
+
+      variant
+    end
+  end
+
+  def new_navigation_enabled?
+    ab_variant.variant_b? && ENV['ENABLE_NEW_NAVIGATION'] == 'yes'
+  end
 
   def return_404
     head :not_found

@@ -4,7 +4,7 @@ class TaxonRedirectResolver
   def initialize(request, is_page_in_ab_test:, map_to_taxon:)
     dimension = Rails.application.config.navigation_ab_test_dimension
     ab_test = GovukAbTesting::AbTest.new("EducationNavigation", dimension: dimension)
-    @ab_variant = ab_test.requested_variant(request)
+    @ab_variant = ab_test.requested_variant(request.headers)
 
     @is_page_in_ab_test = is_page_in_ab_test
     @map_to_taxon = map_to_taxon
