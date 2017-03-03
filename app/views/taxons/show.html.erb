@@ -25,9 +25,7 @@
 <% else %>
   <% if taxon.children? %>
     <%= render partial: 'child_taxons_list', locals: {
-      taxon: taxon,
-      child_taxons: taxon.child_taxons,
-      tagged_content: taxon.tagged_content
+      accordion_content: taxon_overview_and_child_taxons(taxon),
     } %>
   <% else %>
     <%= render partial: 'content_list_for_current_taxon', locals: {

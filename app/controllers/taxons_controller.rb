@@ -1,6 +1,8 @@
 class TaxonsController < ApplicationController
   before_action :return_404, unless: :new_navigation_enabled?
 
+  helper_method :taxon_overview_and_child_taxons
+
   def show
     setup_content_item_and_navigation_helpers(taxon)
 
@@ -37,5 +39,21 @@ private
 
   def taxon
     @taxon ||= Taxon.find(request.path)
+  end
+
+  def taxon_overview_and_child_taxons(taxon)
+    accordion_items = taxon.child_taxons
+    return [] if taxon.child_taxons.empty?
+
+    if taxon.tagged_content.count > 0
+      accordion_items.unshift(
+        taxon.merge(
+          'title' => 'Overview',
+          'description' => '',
+        )
+      )
+    end
+
+    accordion_items
   end
 end

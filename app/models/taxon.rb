@@ -50,4 +50,8 @@ class Taxon
       Taxon.find(child_taxon.base_path).children?
     end
   end
+
+  def merge(to_merge)
+    Taxon.new(content_item.merge(to_merge))
+  end
 end
