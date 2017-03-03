@@ -171,6 +171,11 @@
       }
 
       margin-bottom: 0;
+    }
+
+    .subsection-title-link {
+      text-decoration: none;
+      display: inline-block;
       margin-right: $gutter * 1.5;
     }
 

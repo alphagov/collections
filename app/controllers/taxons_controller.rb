@@ -50,6 +50,7 @@ private
         taxon.merge(
           'title' => 'Overview',
           'description' => '',
+          'base_path' => 'overview',
         )
       )
     end
