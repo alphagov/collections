@@ -111,11 +111,6 @@
   .subsection,
   .subsection-is-open {
     width: 100%;
-    margin-bottom: $gutter;
-
-    @include media(tablet) {
-      margin-bottom: $gutter * 1.5;
-    }
 
     .subsection-description {
       @include core-19;
@@ -131,10 +126,6 @@
       padding-left: 0;
       list-style-type: none;
     }
-
-    .subsection-list-item a {
-      text-decoration: none;
-    }
   }
 
 // Most of this is taken from the service manual and at some point needs to be
@@ -143,7 +134,7 @@
 
    // When JavaScript is enabled, create accordion
   .js-accordion-with-descriptions {
-    padding-bottom: $gutter * 2;
+    padding-bottom: $gutter;
 
     // Wrapper for 'expand all / close all' button
     .subsection-controls {
@@ -180,7 +171,7 @@
       }
 
       margin-bottom: 0;
-      margin-right: $gutter;
+      margin-right: $gutter * 1.5;
     }
 
     .subsection-header {
@@ -198,7 +189,7 @@
 
     .subsection-description {
       margin-bottom: 0;
-      margin-right: $gutter;
+      margin-right: $gutter * 1.5;
     }
 
     .subsection-icon {
