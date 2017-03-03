@@ -8,5 +8,680 @@
     "base_path": "/government/collections/ofsted-inspections-of-maintained-schools",
     "surface_collection": true,
     "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/further-education-commissioner-intervention-reports",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/fe-choices-information-for-providers",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/send-pathfinders",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/ofsted-inspections-of-residential-holiday-schemes-for-disabled-children",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/functional-skills-qualifications-requirements",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/sfa-financial-management-helping-colleges-to-account-for-funding",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/sfa-financial-assurance-demonstrating-appropriate-use-of-funds",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/success-rates-2012-to-2013",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/qualifications-approved-for-public-funding",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/olass-funding-rules-and-guidance",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/register-of-apprenticeship-training-providers",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/sfa-european-social-fund",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/sfa-national-success-rates-tables",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/register-of-apprentice-assessment-organisations",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/apprenticeship-changes",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/business-administration-and-law-apprenticeships",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/health-public-services-and-care-apprenticeships",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/apprenticeships-resources-for-teachers-and-advisers",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/school-leadership-teams-useful-information",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/school-direct-marketing-resource-bank",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/schools-financial-efficiency-case-studies",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/teaching-schools-and-system-leadership-how-you-can-get-involved",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/key-stage-1-assessments-data-collection",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/opening-a-free-school",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/school-capacity-survey",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/new-a-level-and-as-level-qualifications-requirements-and-guidance",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/national-curriculum-assessments-early-years-foundation-stage",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/key-stage-1-teacher-assessment",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/phonics-screening-check-administration",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/key-stage-2-ks2-testing-review",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/key-stage-2-teacher-assessment",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/academies-financial-notices-to-improve",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/performance-tables-technical-and-vocational-qualifications",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/school-performance-tables-about-the-data",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsteds-inspections-of-non-association-independent-schools",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/ofsted-inspections-of-further-education-and-skills-providers",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-inspection-of-residential-provision-in-further-education-colleges",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/esol-qualifications-requirements",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/key-skills-qualifications-requirements",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/entry-level-qualifications-requirements",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/teaching-excellence-framework",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/individualised-learner-record-ilr",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/funding-allocations-and-performance-management-for-providers",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/further-education-and-sixth-form-college-governors",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/further-education-area-reviews-guidance-for-providers",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/sfa-register-of-training-organisations",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/adult-literacy-and-numeracy-qualifications-requirements",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/sfa-national-careers-service",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/community-learning-government-funding",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/sfa-funding-rules-2016-to-2017",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/sfa-24-advanced-learning-loans",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/sfa-capital-funding-for-fe-colleges-and-training-organisations",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/further-education-and-skills-official-statistics",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/agriculture-horticulture-and-animal-care-apprenticeships",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/apprenticeship-vacancies",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/education-and-training-apprenticeships",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/arts-media-and-publishing-apprenticeships",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/engineering-and-manufacturing-technologies-apprenticeships",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/construction-planning-and-the-built-environment-apprenticeships",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/information-and-communication-technology-ict-apprenticeships",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/apprenticeship-grant-for-employers-of-16-to-24-year-olds",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/apprenticeship-standards",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/secondary-school-teachers-useful-information",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/school-direct-information-for-schools",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/teachers-standards",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/professional-development-for-school-leaders",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/qualified-teacher-status-qts",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/alternative-provision-census",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/health-and-safety-in-schools",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-inspections-of-local-authority-childrens-services",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/section-251-materials",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/academies-funding-payments-and-compliance",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statutory-guidance-schools",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/departmental-advice-schools",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/education-funding-agency-contractors-framework",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/early-years-census",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/school-census",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/early-years-foundation-stage-profile-return",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/academy-sponsorship",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/school-organisation",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/opening-a-utc",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/convert-to-an-academy-documents-for-schools",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/mandatory-and-useful-timelines-information-for-schools",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/school-capital-expenditure-and-funding",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/advanced-extension-awards-requirements",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/other-general-qualifications-requirements",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/national-curriculum",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/national-curriculum-assessments-test-frameworks",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/national-curriculum-assessments-practice-materials",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/phonics-choosing-a-programme",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/phonics-screening-check-research",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/language-learning",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/reform-of-gcse-qualifications-by-ofqual",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/national-reference-test-information",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/gcses-9-to-1-requirements-and-guidance",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/gcses-a-to-g-requirements-and-guidance",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/gce-as-and-a-level-subject-content",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/letters-to-academies-about-poor-performance",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/ofsted-inspections-of-local-authority-arrangements-for-supporting-school-improvement",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-inspections-of-boarding-and-residential-provision-in-schools",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/fe-choices-national-reporting-employer-satisfaction-survey",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/schools-block-funding-formulae-documents",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/raising-the-participation-age",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/principal-learning-and-project-qualifications-requirements-and-guidance",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/technical-and-further-education-bill",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/sfa-funding-rates",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/fe-data-library",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/lrs-batch-toolkit-for-aos-and-lrbs",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/sfa-subcontracting-using-funding-to-offer-education-and-training",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/funding-education-for-16-to-19-year-olds",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/leisure-travel-and-tourism-apprenticeships",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/retail-and-commercial-enterprise-apprenticeships",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/sfa-higher-and-degree-apprenticeships",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/traineeships-programme",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/teachers-pension-scheme",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/primary-school-teachers-useful-information",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/teacher-misconduct",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/ofsteds-inspections-of-initial-teacher-education-providers",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/alternative-provision-academies",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/statistics-exclusions",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/parental-responsibility-measures",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/schools-financial-health-and-efficiency",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/buying-for-schools",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/how-to-access-school-to-school-support",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/school-building-design-and-maintenance",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/school-workforce-census",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/phonics-screening-check-data-collection",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/priority-school-building-programme-psbp",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/a-level-and-as-level-qualifications-requirements",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/level-1-and-2-certificates-requirements",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/regulatory-actions-and-interventions-by-ofqual",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/national-curriculum-assessments-key-stage-1-tests",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/national-curriculum-assessments-key-stage-2-tests",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/awarding-of-gcses-as-and-a-levels-information-for-summer-2015",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/reform-of-as-and-a-level-qualifications-by-ofqual",
+    "surface_collection": true,
+    "surface_content": false
   }
 ]
