@@ -1,5 +1,3 @@
-require "climate_control"
-
 class ActiveSupport::TestCase
   def build_ostruct_recursively(value)
     case value
@@ -18,10 +16,8 @@ class ActiveSupport::TestCase
       { EducationNavigation: 'A' }
       .merge(options)
 
-    ClimateControl.modify(ENABLE_NEW_NAVIGATION: 'yes') do
-      with_variant variant_options do
-        yield
-      end
+    with_variant variant_options do
+      yield
     end
   end
 
@@ -30,10 +26,8 @@ class ActiveSupport::TestCase
       { EducationNavigation: 'B' }
       .merge(options)
 
-    ClimateControl.modify(ENABLE_NEW_NAVIGATION: 'yes') do
-      with_variant variant_options do
-        yield
-      end
+    with_variant variant_options do
+      yield
     end
   end
   # rubocop:enable Style/MethodName

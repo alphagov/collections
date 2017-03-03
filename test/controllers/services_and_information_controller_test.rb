@@ -1,5 +1,4 @@
 require_relative '../test_helper'
-require "climate_control"
 
 describe ServicesAndInformationController do
   include RummagerHelpers
@@ -41,51 +40,34 @@ describe ServicesAndInformationController do
         stub_services_and_information_links("department-for-education")
       end
 
-      describe "with the feature flag off" do
-        ["A", "B"].each do |variant|
-          it "returns the original version of the page for variant #{variant}" do
-            setup_ab_variant("EducationNavigation", variant)
+      ["A", "B"].each do |variant|
+        it "does not redirect non-education organisations in the #{variant} variant" do
+          stub_services_and_information_content_item
+          stub_services_and_information_links("hm-revenue-customs")
 
-            get :index, organisation_id: "department-for-education"
+          setup_ab_variant("EducationNavigation", variant)
 
-            assert_response 200
-            assert_response_not_modified_for_ab_test
-          end
+          get :index, organisation_id: "hm-revenue-customs"
+
+          assert_response 200
+          assert_response_not_modified_for_ab_test
         end
       end
 
-      describe "with the feature flag on" do
-        ["A", "B"].each do |variant|
-          it "does not redirect non-education organisations in the #{variant} variant" do
-            ClimateControl.modify(ENABLE_NEW_NAVIGATION: 'yes') do
-              stub_services_and_information_content_item
-              stub_services_and_information_links("hm-revenue-customs")
+      it "shows the original page in the A variant" do
+        with_A_variant do
+          get :index, organisation_id: "department-for-education"
 
-              setup_ab_variant("EducationNavigation", variant)
-
-              get :index, organisation_id: "hm-revenue-customs"
-
-              assert_response 200
-              assert_response_not_modified_for_ab_test
-            end
-          end
+          assert_response 200
         end
+      end
 
-        it "shows the original page in the A variant" do
-          with_A_variant do
-            get :index, organisation_id: "department-for-education"
+      it "redirects B variant of education" do
+        with_B_variant assert_meta_tag: false do
+          get :index, organisation_id: "department-for-education"
 
-            assert_response 200
-          end
-        end
-
-        it "redirects B variant of education" do
-          with_B_variant assert_meta_tag: false do
-            get :index, organisation_id: "department-for-education"
-
-            assert_response 302
-            assert_redirected_to controller: "taxons", action: "show", taxon_base_path: "education"
-          end
+          assert_response 302
+          assert_redirected_to controller: "taxons", action: "show", taxon_base_path: "education"
         end
       end
     end
