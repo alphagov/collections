@@ -20,6 +20,7 @@
   <%= render partial: 'content_list_for_current_taxon', locals: {
   taxon: taxon,
   tagged_content: taxon.tagged_content,
+  is_grid: true,
   } %>
 <% else %>
   <% if taxon.children? %>

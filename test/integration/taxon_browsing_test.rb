@@ -30,7 +30,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_links_to_the_child_taxons_in_a_grid
     and_the_grid_has_tracking_attributes
     and_i_can_see_tagged_content_to_the_taxon
-    and_the_content_tagged_to_the_taxon_has_tracking_attributes
+    and_the_content_tagged_to_the_grandfather_taxon_has_tracking_attributes
     and_the_page_is_tracked_as_a_grid
   end
 
@@ -61,7 +61,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     then_i_can_see_the_breadcrumbs
     and_i_can_see_the_title_and_description
     and_i_can_see_tagged_content_to_the_taxon
-    and_the_content_tagged_to_the_taxon_has_tracking_attributes
+    and_the_content_tagged_to_the_leaf_taxon_has_tracking_attributes
     and_the_page_is_tracked_as_a_leaf_node_taxon
   end
 
@@ -283,29 +283,12 @@ private
     end
   end
 
-  def and_the_content_tagged_to_the_taxon_has_tracking_attributes
-    tracked_links = page.all(:css, "a[data-track-category='navLeafLinkClicked']")
-    tracked_links.size.must_equal search_results.size
+  def and_the_content_tagged_to_the_grandfather_taxon_has_tracking_attributes
+    assert_leaf_tracking_attributes_present('navGridLeafLinkClicked')
+  end
 
-    tracked_links.each_with_index do |link, index|
-      link[:'data-track-action'].must_equal "#{index + 1}"
-      link[:'data-track-label'].must_equal search_results[index]['link']
-      link[:'data-track-value'].must_equal "#{search_results.size}"
-      link[:'data-track-dimension'].must_equal search_results[index]['title']
-      link[:'data-track-dimension-index'].must_equal '29'
-      link[:'data-module'].must_equal 'track-click'
-    end
-
-    # Test an example free from logic
-    assert page.has_css?(
-      "a[data-track-category='navLeafLinkClicked']" +
-      "[data-track-action='2']" +
-      "[data-track-label='content-item-2']" +
-      "[data-track-value='2']" +
-      "[data-track-dimension='Content item 2']" +
-      "[data-track-dimension-index='29']" +
-      "[data-module='track-click']"
-    )
+  def and_the_content_tagged_to_the_leaf_taxon_has_tracking_attributes
+    assert_leaf_tracking_attributes_present('navLeafLinkClicked')
   end
 
   def and_the_page_is_tracked_as_a_grid
@@ -322,5 +305,30 @@ private
 
   def assert_navigation_page_type_tracking(expected_page_type)
     assert page.has_selector?("meta[name='govuk:navigation-page-type'][content='#{expected_page_type}']", visible: false)
+  end
+
+  def assert_leaf_tracking_attributes_present(tracking_category)
+    tracked_links = page.all(:css, "a[data-track-category='#{tracking_category}']")
+    tracked_links.size.must_equal search_results.size
+
+    tracked_links.each_with_index do |link, index|
+      link[:'data-track-action'].must_equal "#{index + 1}"
+      link[:'data-track-label'].must_equal search_results[index]['link']
+      link[:'data-track-value'].must_equal "#{search_results.size}"
+      link[:'data-track-dimension'].must_equal search_results[index]['title']
+      link[:'data-track-dimension-index'].must_equal '29'
+      link[:'data-module'].must_equal 'track-click'
+    end
+
+    # Test an example free from logic
+    assert page.has_css?(
+      "a[data-track-category='#{tracking_category}']" +
+      "[data-track-action='2']" +
+      "[data-track-label='content-item-2']" +
+      "[data-track-value='2']" +
+      "[data-track-dimension='Content item 2']" +
+      "[data-track-dimension-index='29']" +
+      "[data-module='track-click']"
+    )
   end
 end
