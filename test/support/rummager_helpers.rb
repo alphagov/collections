@@ -3,7 +3,7 @@ module RummagerHelpers
     Services.rummager.stubs(:search).with(
       start: 0,
       count: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
-      fields: %w(title description link),
+      fields: %w(title description link document_collections content_store_document_type),
       filter_content_store_document_type: GovukNavigationHelpers::Guidance::DOCUMENT_TYPES,
       filter_taxons: [content_id],
       order: 'title',

@@ -26,7 +26,9 @@ describe TaggedContent do
     end
 
     it 'requests a limited number of fields' do
-      assert_includes_params(fields: %w(title description link))
+      assert_includes_params(
+        fields: %w(title description link document_collections content_store_document_type)
+      )
     end
 
     it 'orders the results by title' do
