@@ -6,8 +6,8 @@
   },
   {
     "base_path": "/government/collections/ofsted-inspections-of-maintained-schools",
-    "surface_collection": true,
-    "surface_content": false
+    "surface_collection": false,
+    "surface_content": true
   },
   {
     "base_path": "/government/collections/further-education-commissioner-intervention-reports",

@@ -69,7 +69,7 @@ describe TaggedContent do
       search_results = {
         'results' => [{
           'content_store_document_type' => 'document_collection',
-          'link' => '/government/collections/ofsted-inspections-of-maintained-schools'
+          'link' => '/government/collections/send-pathfinders'
         }]
       }
 
@@ -85,7 +85,7 @@ describe TaggedContent do
       result = results.first
       assert_equal(
         result.base_path,
-        '/government/collections/ofsted-inspections-of-maintained-schools',
+        '/government/collections/send-pathfinders',
         'It should match the document collection\'s base path'
       )
     end
@@ -125,7 +125,7 @@ describe TaggedContent do
           'content_store_document_type' => 'guide',
           'title' => 'Content in document collection',
           'document_collections' => [{
-            'link' => '/government/collections/ofsted-inspections-of-maintained-schools'
+            'link' => '/government/collections/send-pathfinders'
           }]
         }]
       }

@@ -44,7 +44,7 @@ describe FilterTaggedContent do
     it 'should include a collection that should be surfaced' do
       document = Document.new(
         content_store_document_type: 'document_collection',
-        base_path: '/government/collections/ofsted-inspections-of-maintained-schools'
+        base_path: '/government/collections/send-pathfinders'
       )
 
       assert(
@@ -74,7 +74,7 @@ describe FilterTaggedContent do
         content_store_document_type: 'guide',
         title: 'Content in document collection',
         document_collections: [{
-          'link' => '/government/collections/ofsted-inspections-of-maintained-schools'
+          'link' => '/government/collections/send-pathfinders'
         }]
       )
 
