@@ -32,7 +32,6 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       var totalSubsections = $element.find('.subsection-content').length;
 
       var $openOrCloseAllButton;
-      var sessionStorePrefix = getSessionStorePrefix();
 
       addOpenCloseAllButton();
       addButtonsToSubsections();
@@ -40,27 +39,10 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       addAriaControlsAttrForOpenCloseAllButton();
 
       closeAllSections();
-      checkSessionStorage();
       openLinkedSection();
 
       bindToggleForSubsections();
       bindToggleOpenCloseAllButton();
-
-      function getTaxonName() {
-        return $element.find('h1').text();
-      }
-
-      function replaceSpacesWithUnderscores(str) {
-        return str.replace(/\s+/g,"_");
-      }
-
-      function getSessionStorePrefix() {
-        var topic = getTaxonName();
-        topic = replaceSpacesWithUnderscores(topic);
-        topic = topic.toLowerCase();
-
-        return "GOVUK_navigation_for_taxon_" + topic + "_";
-      }
 
       function addOpenCloseAllButton() {
         $element.prepend( '<div class="subsection-controls js-subsection-controls"><button aria-expanded="false">' + bulkActions.openAll.buttonText + '</button></div>' );
@@ -119,42 +101,6 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
         return GOVUK.getCurrentLocation().hash;
       }
 
-      function checkSessionStorage() {
-
-        var $subsectionContent = $element.find('.subsection-content');
-
-        $subsectionContent.each(function(index) {
-          var subsectionContentId = $(this).attr('id');
-          if(sessionStorage.getItem(sessionStorePrefix+subsectionContentId)){
-            openStoredSections($element.find("#"+subsectionContentId));
-          }
-        });
-
-        setOpenCloseAllText();
-      }
-
-      function setSessionStorage() {
-        var isOpenSubsections = $element.find('.subsection-is-open').length;
-        if (isOpenSubsections) {
-          var $openSubsections = $element.find('.subsection-is-open');
-          $openSubsections.each(function(index) {
-            var subsectionOpenContentId = $(this).find('.subsection-content').attr('id');
-            sessionStorage.setItem( sessionStorePrefix+subsectionOpenContentId , 'Opened');
-          });
-        }
-      }
-
-      function removeSessionStorage() {
-        var isClosedSubsections = $element.find('.subsection').length;
-        if (isClosedSubsections) {
-          var $closedSubsections = $element.find('.subsection');
-          $closedSubsections.each(function(index) {
-            var subsectionClosedContentId = $(this).find('.subsection-content').attr('id');
-            sessionStorage.removeItem( sessionStorePrefix+subsectionClosedContentId , subsectionClosedContentId);
-          });
-        }
-      }
-
       function bindToggleForSubsections() {
         $element.find('.subsection-header').on('click', function(event) {
           var $subsectionHeader = $(this);
@@ -163,8 +109,6 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
           subsectionView.toggle();
           setOpenCloseAllText();
-          setSessionStorage();
-          removeSessionStorage();
 
           var subsectionToggleClick = new SubsectionToggleClick(subsectionView, event);
           subsectionToggleClick.track();
@@ -215,22 +159,8 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
             }
           });
 
-          // Add any open sections to Session Storage
-          setSessionStorage();
-
-          // Remove any closed sections from Session Storage
-          removeSessionStorage();
-
           return false;
         });
-      }
-
-      function openStoredSections($sectionContent) {
-        var $subsection = $sectionContent.parent('.js-subsection');
-        var subsectionView = new SubsectionView($subsection);
-        subsectionView.open();
-
-        setOpenCloseAllText();
       }
 
       function setOpenCloseAllText() {
@@ -241,12 +171,6 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
         } else {
           $openOrCloseAllButton.text(bulkActions.openAll.buttonText);
         }
-      }
-
-      function isSubsectionClosed($subsection) {
-        var $subsectionContent = $subsection.find('.js-subsection-content');
-
-        return $subsectionContent.hasClass('js-hidden');
       }
 
     }

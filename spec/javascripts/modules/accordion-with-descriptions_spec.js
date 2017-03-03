@@ -42,7 +42,6 @@ describe('An accordion with descriptions module', function () {
 
   afterEach(function() {
     $(document).off();
-    sessionStorage.clear();
   });
 
   it("has a class of js-accordion-with-descriptions to indicate the js has loaded", function () {
@@ -186,20 +185,6 @@ describe('An accordion with descriptions module', function () {
       expect($subsectionButton).toHaveAttr('aria-expanded','true');
     });
 
-    it("has its state saved in session storage", function () {
-      accordion.start($element);
-
-      var $subsectionButton = $element.find('.subsection-title button');
-      $subsectionButton.click();
-
-      var $openSubsections = $element.find('.subsection-is-open');
-      var subsectionOpenContentId = $openSubsections.find('.subsection-content').attr('id');
-
-      var expectedSessionStorePrefix = "GOVUK_navigation_for_taxon__";
-      var storedItem = sessionStorage.getItem(expectedSessionStorePrefix+subsectionOpenContentId);
-      expect(storedItem).toEqual('Opened');
-    });
-
     it("triggers a google analytics custom event when clicking on the title", function () {
       GOVUK.analytics = {trackEvent: function() {}};
       spyOn(GOVUK.analytics, 'trackEvent');
@@ -264,22 +249,6 @@ describe('An accordion with descriptions module', function () {
       expect($subsectionButton).toHaveAttr('aria-expanded','true');
       $subsectionButton.click();
       expect($subsectionButton).toHaveAttr('aria-expanded','false');
-    });
-
-    it("has its state removed in session storage", function () {
-      accordion.start($element);
-
-      var $subsection = $element.find('.subsection');
-      var $subsectionButton = $subsection.find('.subsection-title button');
-
-      // Open and close the subsection
-      $subsectionButton.click();
-      $subsectionButton.click();
-
-      var subsectionContentId = $subsection.find('.subsection-content').attr('id');
-      var expectedSessionStorePrefix = "GOVUK_navigation_for_taxon__";
-      var storedItem = sessionStorage.getItem(expectedSessionStorePrefix+subsectionContentId);
-      expect(storedItem).toBeNull();
     });
 
     it("triggers a google analytics custom event when clicking on the title", function () {
