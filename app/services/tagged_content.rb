@@ -16,7 +16,6 @@ class TaggedContent
       fields: %w(title description link),
       filter_content_store_document_type: GovukNavigationHelpers::Guidance::DOCUMENT_TYPES,
       filter_taxons: [content_id],
-      filter_document_collections: '_MISSING',
       order: 'title',
     ).documents
   end

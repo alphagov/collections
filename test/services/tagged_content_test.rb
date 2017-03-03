@@ -44,10 +44,6 @@ describe TaggedContent do
         filter_content_store_document_type: guidance_document_types
       )
     end
-
-    it 'filters out content that belongs to a document collection' do
-      assert_includes_params(filter_document_collections: '_MISSING')
-    end
   end
 
 private
