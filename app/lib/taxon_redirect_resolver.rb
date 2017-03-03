@@ -11,7 +11,7 @@ class TaxonRedirectResolver
   end
 
   def page_ab_tested?
-    ENV['ENABLE_NEW_NAVIGATION'] == 'yes' && @is_page_in_ab_test.call
+    @is_page_in_ab_test.call
   end
 
   def taxon_base_path

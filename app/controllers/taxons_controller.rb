@@ -28,7 +28,7 @@ private
   end
 
   def new_navigation_enabled?
-    ab_variant.variant_b? && ENV['ENABLE_NEW_NAVIGATION'] == 'yes'
+    ab_variant.variant_b?
   end
 
   def return_404

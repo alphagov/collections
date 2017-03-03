@@ -55,94 +55,79 @@ describe SecondLevelBrowsePageController do
         )
       end
 
-      describe "with the feature flag off" do
-        %w(A, B).each do |variant|
-          it "returns the original version of the page for variant #{variant}" do
-            setup_ab_variant("EducationNavigation", variant)
+      it "returns the original version of education pages as the A variant" do
+        with_A_variant do
+          get :show, top_level_slug: "education", second_level_slug: "student-finance"
 
-            get :show, top_level_slug: "education", second_level_slug: "student-finance"
-
-            assert_response 200
-            assert_response_not_modified_for_ab_test
-          end
+          assert_response 200
         end
       end
 
-      describe "with the feature flag on" do
-        it "returns the original version of education pages as the A variant" do
-          with_A_variant do
-            get :show, top_level_slug: "education", second_level_slug: "student-finance"
+      it "redirects to the taxonomy navigation as the B variant" do
+        with_B_variant assert_meta_tag: false do
+          get :show, top_level_slug: "education", second_level_slug: "student-finance"
 
-            assert_response 200
-          end
+          assert_response 302
+          assert_redirected_to controller: "taxons", action: "show",
+            taxon_base_path: "education/funding-and-finance-for-students"
         end
+      end
 
-        it "redirects to the taxonomy navigation as the B variant" do
-          with_B_variant assert_meta_tag: false do
-            get :show, top_level_slug: "education", second_level_slug: "student-finance"
+      it "redirects page with no specific taxon to the top-level education taxon" do
+        content_store_has_item("/browse/education/school-life",
+          content_id: 'school-life-content-id',
+          links: {
+            active_top_level_browse_page: [{
+              title: 'Education and learning',
+            }],
+          }
+        )
 
-            assert_response 302
-            assert_redirected_to controller: "taxons", action: "show",
-              taxon_base_path: "education/funding-and-finance-for-students"
-          end
+        rummager_has_documents_for_browse_page(
+          "school-life-content-id",
+          ["school-life"],
+          page_size: 1000
+        )
+
+        with_B_variant assert_meta_tag: false do
+          get :show, top_level_slug: "education", second_level_slug: "school-life"
+
+          assert_response 302
+          assert_redirected_to controller: "taxons", action: "show", taxon_base_path: "education"
         end
+      end
 
-        it "redirects page with no specific taxon to the top-level education taxon" do
-          content_store_has_item("/browse/education/school-life",
-            content_id: 'school-life-content-id',
+      %w(A, B).each do |variant|
+        it "does not redirect pages outside of education in the #{variant} variant" do
+          content_store_has_item("/browse/benefits/entitlement",
+            content_id: 'entitlement-content-id',
             links: {
               active_top_level_browse_page: [{
-                title: 'Education and learning',
+                title: 'Benefits',
               }],
             }
           )
 
           rummager_has_documents_for_browse_page(
-            "school-life-content-id",
-            ["school-life"],
+            "entitlement-content-id",
+            ["entitlement"],
             page_size: 1000
           )
 
-          with_B_variant assert_meta_tag: false do
-            get :show, top_level_slug: "education", second_level_slug: "school-life"
+          setup_ab_variant("EducationNavigation", variant)
+          get :show, top_level_slug: "benefits", second_level_slug: "entitlement"
 
-            assert_response 302
-            assert_redirected_to controller: "taxons", action: "show", taxon_base_path: "education"
-          end
+          assert_response 200
+          assert_response_not_modified_for_ab_test
         end
 
-        %w(A, B).each do |variant|
-          it "does not redirect pages outside of education in the #{variant} variant" do
-            content_store_has_item("/browse/benefits/entitlement",
-              content_id: 'entitlement-content-id',
-              links: {
-                active_top_level_browse_page: [{
-                  title: 'Benefits',
-                }],
-              }
-            )
+        it "does not redirect education when the #{variant} variant is requested in JSON format" do
+          setup_ab_variant("EducationNavigation", variant)
 
-            rummager_has_documents_for_browse_page(
-              "entitlement-content-id",
-              ["entitlement"],
-              page_size: 1000
-            )
+          get :show, top_level_slug: "education", second_level_slug: "student-finance", format: :json
 
-            setup_ab_variant("EducationNavigation", variant)
-            get :show, top_level_slug: "benefits", second_level_slug: "entitlement"
-
-            assert_response 200
-            assert_response_not_modified_for_ab_test
-          end
-
-          it "does not redirect education when the #{variant} variant is requested in JSON format" do
-            setup_ab_variant("EducationNavigation", variant)
-
-            get :show, top_level_slug: "education", second_level_slug: "student-finance", format: :json
-
-            assert_response 200
-            assert_response_not_modified_for_ab_test
-          end
+          assert_response 200
+          assert_response_not_modified_for_ab_test
         end
       end
     end
