@@ -2,6 +2,25 @@ require 'test_helper'
 require './test/support/custom_assertions.rb'
 
 describe TaggedContent do
+  setup do
+    DocumentCollectionFetcher
+      .stubs(:guidance)
+      .returns(
+        [
+          {
+            "base_path" => "/government/collections/national-curriculum-assessments-information-for-parents",
+            "surface_collection" => false,
+            "surface_content" => true
+          },
+          {
+            "base_path" => "/government/collections/send-pathfinders",
+            "surface_collection" => true,
+            "surface_content" => false
+          },
+        ]
+      )
+  end
+
   describe '#fetch' do
     it 'shows document collections not known' do
       search_results = {

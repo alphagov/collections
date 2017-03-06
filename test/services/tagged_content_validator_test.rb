@@ -1,6 +1,25 @@
 require 'test_helper'
 
 describe TaggedContentValidator do
+  setup do
+    DocumentCollectionFetcher
+      .stubs(:guidance)
+      .returns(
+        [
+          {
+            "base_path" => "/government/collections/national-curriculum-assessments-information-for-parents",
+            "surface_collection" => false,
+            "surface_content" => true
+          },
+          {
+            "base_path" => "/government/collections/send-pathfinders",
+            "surface_collection" => true,
+            "surface_content" => false
+          },
+        ]
+      )
+  end
+
   describe '#valid?' do
     it 'is valid for an unknown document collection' do
       document = Document.new(

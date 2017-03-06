@@ -50,13 +50,6 @@ private
   end
 
   def guidance_document_collections
-    @guidance_document_collections ||= JSON.parse(
-      File.read(
-        Rails.root.join(
-          "config",
-          "guidance_document_collections.json"
-        )
-      )
-    )
+    @guidance_document_collections ||= DocumentCollectionFetcher.guidance
   end
 end
