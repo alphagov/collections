@@ -24,7 +24,7 @@ private
   end
 
   def valid_document_collections
-    guidance_document_collections.reduce([]) do |list, document_collection|
+    guidance_document_collections.reduce(Set.new) do |list, document_collection|
       if document_collection['surface_collection']
         list << document_collection['base_path']
       end
@@ -40,7 +40,7 @@ private
   end
 
   def valid_content_items_in_document_collections
-    guidance_document_collections.reduce([]) do |list, document_collection|
+    guidance_document_collections.reduce(Set.new) do |list, document_collection|
       if document_collection['surface_content']
         list << document_collection['base_path']
       end
