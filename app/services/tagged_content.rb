@@ -12,13 +12,13 @@ class TaggedContent
   def fetch
     search_response
       .documents
-      .select { |document| filter_tagged_content.valid?(document) }
+      .select { |document| tagged_content_validator.valid?(document) }
   end
 
 private
 
-  def filter_tagged_content
-    @filter_tagged_content ||= FilterTaggedContent.new
+  def tagged_content_validator
+    @tagged_content_validator ||= TaggedContentValidator.new
   end
 
   def search_response

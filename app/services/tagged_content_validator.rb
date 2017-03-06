@@ -1,4 +1,4 @@
-class FilterTaggedContent
+class TaggedContentValidator
   def valid?(document)
     return valid_document_collection?(document) if document.document_collection?
 

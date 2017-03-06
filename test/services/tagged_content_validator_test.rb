@@ -1,6 +1,6 @@
 require 'test_helper'
 
-describe FilterTaggedContent do
+describe TaggedContentValidator do
   describe '#valid?' do
     it 'is valid for an unknown document collection' do
       document = Document.new(
@@ -9,7 +9,7 @@ describe FilterTaggedContent do
       )
 
       assert(
-        FilterTaggedContent.new.valid?(document),
+        TaggedContentValidator.new.valid?(document),
         "It should display document collections we have no record of"
       )
     end
@@ -24,7 +24,7 @@ describe FilterTaggedContent do
       )
 
       refute(
-        FilterTaggedContent.new.valid?(document),
+        TaggedContentValidator.new.valid?(document),
         "It should not show content items tagged to unknown document collections"
       )
     end
@@ -36,7 +36,7 @@ describe FilterTaggedContent do
       )
 
       refute(
-        FilterTaggedContent.new.valid?(document),
+        TaggedContentValidator.new.valid?(document),
         'It should not show a document collection that should not be surfaced'
       )
     end
@@ -48,7 +48,7 @@ describe FilterTaggedContent do
       )
 
       assert(
-        FilterTaggedContent.new.valid?(document),
+        TaggedContentValidator.new.valid?(document),
         'It should be valid for document collections that should be surfaced'
       )
     end
@@ -64,7 +64,7 @@ describe FilterTaggedContent do
       )
 
       assert(
-        FilterTaggedContent.new.valid?(document),
+        TaggedContentValidator.new.valid?(document),
         'It should be valid for content tagged to a collection that should be surfaced'
       )
     end
@@ -79,7 +79,7 @@ describe FilterTaggedContent do
       )
 
       refute(
-        FilterTaggedContent.new.valid?(document),
+        TaggedContentValidator.new.valid?(document),
         'It should not be valid for content items tagged to a collection in the results'
       )
     end
