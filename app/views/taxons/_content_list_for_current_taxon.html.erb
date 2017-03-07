@@ -12,7 +12,7 @@
         <ol>
           <% tagged_content.each_with_index do |content_item, index| %>
             <li>
-              <h3>
+              <h2>
                 <%= link_to(
                   content_item.title,
                   Plek.new.website_root + content_item.base_path,
@@ -27,7 +27,7 @@
                     module: 'track-click',
                   }
                 ) %>
-              </h3>
+              </h2>
               <p><%= content_item.description %></p>
             </li>
           <% end %>
