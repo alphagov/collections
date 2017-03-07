@@ -683,5 +683,1535 @@
     "base_path": "/government/collections/reform-of-as-and-a-level-qualifications-by-ofqual",
     "surface_collection": true,
     "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/statistics-gcses-key-stage-4",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-performance-tables",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/outcome-letters-from-ofsted-inspections-of-multi-academy-trusts",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-further-education-and-skills-survey-reports",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/sfa-annual-reports-and-accounts",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-higher-education-graduate-employment-and-earnings",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/sfa-learner-support-financial-help-for-learners",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/performance-tables-technical-and-vocational-qualifications",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/apprenticeships-equality-and-diversity",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/maintained-schools-and-academies-inspections-and-outcomes-official-statistics",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-annual-report-201314",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-annual-report-201213",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-freedom-of-information-request-datasets",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/managing-behaviour-and-bullying-in-schools-case-studies",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-annual-report-201415",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-annual-reports",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-annual-report-201516",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/alternative-provision-free-school-funding-agreements",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-child-death-reviews",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/academies-financial-management-and-governance-reviews",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-further-education-and-skills-survey-reports",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/academy-trust-accounting-officer-letters-from-efa",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/performance-tables-technical-and-vocational-qualifications",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/education-funding-agency-efa-regional-framework",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-inspections-of-further-education-and-skills-providers",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/free-school-applications",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-memorandums-of-understanding",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-local-authority-school-finance-data",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-key-stage-3",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-14-to-19-diploma",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-school-workforce",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-memorandums-of-understanding",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/performance-tables-technical-and-vocational-qualifications",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-annual-report-201314",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/school-inspection-update-newsletter",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-annual-report-201213",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-freedom-of-information-request-datasets",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-annual-report-201415",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/hmcis-monthly-commentaries",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/further-education-commissioner-intervention-reports",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/letters-to-la-maintained-schools-about-poor-pupil-performance",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-annual-reports",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-annual-report-201516",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/international-comparisons-of-education",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-key-stage-2",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/academies-investigation-reports",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-attainment-at-19-years",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/fe-choices-information-for-providers",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/independent-schools-inspections-and-outcomes",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-education-and-training",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-destinations",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/sixth-form-college-commissioner-summary-reports-and-letters",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/further-education-and-skills-inspection-outcomes",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-special-educational-needs-sen",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/lldd-financial-support-for-learners",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/private-tuition",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/sfa-equality-and-diversity",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/sfa-funding-rates",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/sfa-register-of-training-organisations",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/funding-allocations-and-performance-management-for-providers",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/olass-funding-rules-and-guidance",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/widening-participation-in-higher-education",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/further-education-and-skills-statistical-first-release-sfr",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/raising-the-participation-age",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/register-of-apprenticeship-training-providers",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/national-college-for-teaching-and-leadership-nctl-business-plans",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/research-and-development-network-school-based-research-on-pedagogy",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/community-learning-government-funding",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/initial-teacher-education-inspections-and-outcomes",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/taylor-review",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/hmcis-monthly-commentaries",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-social-care-annual-report-201314",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-social-care-survey-reports",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/initial-teacher-education-inspections-and-outcomes",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/academies-finance-and-assurance-steering-group",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/david-h-hargreaves-thinkpieces-on-the-self-improving-school-system",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/efa-e-bulletin",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-early-years-foundation-stage-profile",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-neighbourhood-absence-and-attainment",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/raising-the-participation-age",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/schools-financial-efficiency-case-studies",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/schools-financial-health-and-efficiency",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/schools-financial-efficiency-case-studies",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/schools-financial-health-and-efficiency",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/letters-from-ofqual-to-awarding-organisations",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/eppse-3-to-14-years",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-key-stage-1",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/schools-financial-efficiency-case-studies",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/schools-financial-health-and-efficiency",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/alternative-provision-census",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/maintained-schools-and-academies-inspections-and-outcomes-official-statistics",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-neighbourhood-absence-and-attainment",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/sixth-form-colleges-financial-notices-to-improve",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-education-and-training",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/alternative-provision-academies",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/further-education-and-skills-statistical-first-release-sfr",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-examples-of-good-practice-in-further-education-and-skills",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/david-h-hargreaves-thinkpieces-on-the-self-improving-school-system",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/teaching-schools-and-system-leadership-how-you-can-get-involved",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/how-to-access-school-to-school-support",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/schools-financial-health-and-efficiency",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/hmcis-monthly-commentaries",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-destinations",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/skills-funding-agency-update",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/schools-block-funding-formulae-documents",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/implementation-and-impact-of-diplomas",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/funding-education-for-16-to-19-year-olds",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/academy-sponsorship",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/academies-funding-payments-and-compliance",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/schools-block-funding-formulae-documents",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/schools-block-funding-formulae-documents",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/functional-skills-qualifications-requirements",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/esol-qualifications-requirements",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/principal-learning-and-project-qualifications-requirements-and-guidance",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/key-skills-qualifications-requirements",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/adult-literacy-and-numeracy-qualifications-requirements",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/school-teachers-review-body-strb-reports",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/national-curriculum",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/eppse-3-to-14-years",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/hmcis-monthly-commentaries",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/hmcis-monthly-commentaries",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-key-stage-1",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-children-in-need",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/key-stage-1-assessments-data-collection",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/sta-assessment-updates",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/national-curriculum-assessments-information-for-parents",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/national-curriculum-assessments-practice-materials",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/phonics-screening-check-data-collection",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/sta-assessment-updates",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/national-curriculum",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/eppse-3-to-14-years",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/hmcis-monthly-commentaries",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/hmcis-monthly-commentaries",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/national-curriculum-assessments-test-frameworks",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/national-curriculum-assessments-key-stage-1-tests",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/national-curriculum-assessments-practice-materials",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/sta-assessment-updates",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/national-curriculum-assessments-information-for-parents",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/eppse-3-to-14-years",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/free-school-applications-assessing-the-need-for-school-places",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-key-stage-3",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-education-and-training",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/level-1-and-2-certificates-requirements",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/sta-assessment-updates",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/raising-the-participation-age",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-14-to-19-diploma",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-education-and-training",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/a-level-and-as-level-qualifications-requirements",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/advanced-extension-awards-requirements",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-attainment-at-19-years",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-destinations",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-examples-of-good-practice-in-early-years",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-examples-of-good-practice-in-schools",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-gcses-key-stage-4",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-performance-tables",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/outcome-letters-from-ofsted-inspections-of-multi-academy-trusts",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-further-education-and-skills-survey-reports",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/sfa-annual-reports-and-accounts",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-higher-education-graduate-employment-and-earnings",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/sfa-learner-support-financial-help-for-learners",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/performance-tables-technical-and-vocational-qualifications",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/apprenticeships-equality-and-diversity",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/maintained-schools-and-academies-inspections-and-outcomes-official-statistics",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-annual-report-201314",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-annual-report-201213",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-freedom-of-information-request-datasets",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/managing-behaviour-and-bullying-in-schools-case-studies",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-annual-report-201415",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-annual-reports",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-annual-report-201516",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/alternative-provision-free-school-funding-agreements",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-child-death-reviews",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/academies-financial-management-and-governance-reviews",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-further-education-and-skills-survey-reports",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/academy-trust-accounting-officer-letters-from-efa",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/performance-tables-technical-and-vocational-qualifications",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/education-funding-agency-efa-regional-framework",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-inspections-of-further-education-and-skills-providers",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/free-school-applications",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-memorandums-of-understanding",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-local-authority-school-finance-data",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-key-stage-3",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-14-to-19-diploma",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-school-workforce",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-memorandums-of-understanding",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/performance-tables-technical-and-vocational-qualifications",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-annual-report-201314",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/school-inspection-update-newsletter",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-annual-report-201213",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-freedom-of-information-request-datasets",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-annual-report-201415",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/hmcis-monthly-commentaries",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/further-education-commissioner-intervention-reports",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/letters-to-la-maintained-schools-about-poor-pupil-performance",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-annual-reports",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-annual-report-201516",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/international-comparisons-of-education",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-key-stage-2",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/academies-investigation-reports",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-attainment-at-19-years",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/fe-choices-information-for-providers",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/independent-schools-inspections-and-outcomes",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-education-and-training",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-destinations",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/sixth-form-college-commissioner-summary-reports-and-letters",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/further-education-and-skills-inspection-outcomes",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-special-educational-needs-sen",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/lldd-financial-support-for-learners",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/private-tuition",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/sfa-equality-and-diversity",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/sfa-funding-rates",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/sfa-register-of-training-organisations",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/funding-allocations-and-performance-management-for-providers",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/olass-funding-rules-and-guidance",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/widening-participation-in-higher-education",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/further-education-and-skills-statistical-first-release-sfr",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/raising-the-participation-age",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/register-of-apprenticeship-training-providers",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/national-college-for-teaching-and-leadership-nctl-business-plans",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/research-and-development-network-school-based-research-on-pedagogy",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/community-learning-government-funding",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/initial-teacher-education-inspections-and-outcomes",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/taylor-review",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/hmcis-monthly-commentaries",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-social-care-annual-report-201314",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-social-care-survey-reports",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/initial-teacher-education-inspections-and-outcomes",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/academies-finance-and-assurance-steering-group",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/david-h-hargreaves-thinkpieces-on-the-self-improving-school-system",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/efa-e-bulletin",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-early-years-foundation-stage-profile",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-neighbourhood-absence-and-attainment",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/raising-the-participation-age",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/schools-financial-efficiency-case-studies",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/schools-financial-health-and-efficiency",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/schools-financial-efficiency-case-studies",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/schools-financial-health-and-efficiency",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/letters-from-ofqual-to-awarding-organisations",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/eppse-3-to-14-years",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-key-stage-1",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/schools-financial-efficiency-case-studies",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/schools-financial-health-and-efficiency",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/alternative-provision-census",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/maintained-schools-and-academies-inspections-and-outcomes-official-statistics",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-neighbourhood-absence-and-attainment",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/sixth-form-colleges-financial-notices-to-improve",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-education-and-training",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/alternative-provision-academies",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/further-education-and-skills-statistical-first-release-sfr",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-examples-of-good-practice-in-further-education-and-skills",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/david-h-hargreaves-thinkpieces-on-the-self-improving-school-system",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/teaching-schools-and-system-leadership-how-you-can-get-involved",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/how-to-access-school-to-school-support",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/schools-financial-health-and-efficiency",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/hmcis-monthly-commentaries",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-destinations",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/skills-funding-agency-update",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/schools-block-funding-formulae-documents",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/implementation-and-impact-of-diplomas",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/funding-education-for-16-to-19-year-olds",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/academy-sponsorship",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/academies-funding-payments-and-compliance",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/schools-block-funding-formulae-documents",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/schools-block-funding-formulae-documents",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/functional-skills-qualifications-requirements",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/esol-qualifications-requirements",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/principal-learning-and-project-qualifications-requirements-and-guidance",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/key-skills-qualifications-requirements",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/adult-literacy-and-numeracy-qualifications-requirements",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/school-teachers-review-body-strb-reports",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/national-curriculum",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/eppse-3-to-14-years",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/hmcis-monthly-commentaries",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/hmcis-monthly-commentaries",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-key-stage-1",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-children-in-need",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/key-stage-1-assessments-data-collection",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/sta-assessment-updates",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/national-curriculum-assessments-information-for-parents",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/national-curriculum-assessments-practice-materials",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/phonics-screening-check-data-collection",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/sta-assessment-updates",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/national-curriculum",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/eppse-3-to-14-years",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/hmcis-monthly-commentaries",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/hmcis-monthly-commentaries",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/national-curriculum-assessments-test-frameworks",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/national-curriculum-assessments-key-stage-1-tests",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/national-curriculum-assessments-practice-materials",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/sta-assessment-updates",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/national-curriculum-assessments-information-for-parents",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/eppse-3-to-14-years",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/free-school-applications-assessing-the-need-for-school-places",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-key-stage-3",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-education-and-training",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/level-1-and-2-certificates-requirements",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/sta-assessment-updates",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/raising-the-participation-age",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-14-to-19-diploma",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-education-and-training",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/a-level-and-as-level-qualifications-requirements",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/advanced-extension-awards-requirements",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-attainment-at-19-years",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-destinations",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-examples-of-good-practice-in-early-years",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-examples-of-good-practice-in-schools",
+    "surface_collection": false,
+    "surface_content": true
   }
 ]
