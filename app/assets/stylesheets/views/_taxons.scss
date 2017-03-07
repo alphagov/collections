@@ -10,19 +10,15 @@
   }
 
   h2 {
-    @include bold-24;
-    margin-top: $gutter * 1.5;
-    margin-bottom: $gutter;
-
-    &.subsection-title {
-      margin: 0;
-    }
-  }
-
-  h3 {
     @include bold-19;
     @include media (tablet) {
       padding-bottom: $gutter-one-third;
+    }
+
+    &.subsection-title {
+      @include bold-24;
+      margin: 0;
+      padding: 0;
     }
   }
 
@@ -85,7 +81,7 @@
         padding-bottom: $gutter-one-third;
       }
 
-      h3 {
+      h2 {
         padding-bottom: 0;
       }
 
@@ -100,10 +96,6 @@
 
       li {
         margin-bottom: $gutter-one-third;
-      }
-
-      h3 {
-        padding-bottom: 0;
       }
     }
   }
