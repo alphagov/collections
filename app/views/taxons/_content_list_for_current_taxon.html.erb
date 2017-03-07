@@ -1,38 +1,40 @@
 <% is_grid ||= false %>
 
-<div class="grid-row">
-  <div class="column-two-thirds">
-    <div class="parent-topic-contents">
-      <div class="topic-content">
-        <% if taxon.child_taxons.present? %>
-          <h2><%= taxon.title %> guidance</h2>
-          <p><%= taxon.description %></p>
-        <% end %>
-
-        <ol>
-          <% tagged_content.each_with_index do |content_item, index| %>
-            <li>
-              <h2>
-                <%= link_to(
-                  content_item.title,
-                  Plek.new.website_root + content_item.base_path,
-                  data: {
-                    track_category: is_grid ? 'navGridLeafLinkClicked' : 'navLeafLinkClicked',
-                    track_action: index + 1,
-                    track_label: content_item.base_path,
-                    track_options: {
-                      dimension28: tagged_content.size.to_s,
-                      dimension29: content_item.title,
-                    },
-                    module: 'track-click',
-                  }
-                ) %>
-              </h2>
-              <p><%= content_item.description %></p>
-            </li>
+<% if tagged_content.any? || !is_grid %>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <div class="parent-topic-contents">
+        <div class="topic-content">
+          <% if taxon.child_taxons.present? %>
+            <h2><%= taxon.title %> guidance</h2>
+            <p><%= taxon.description %></p>
           <% end %>
-        </ol>
+
+          <ol>
+            <% tagged_content.each_with_index do |content_item, index| %>
+              <li>
+                <h2>
+                  <%= link_to(
+                    content_item.title,
+                    Plek.new.website_root + content_item.base_path,
+                    data: {
+                      track_category: is_grid ? 'navGridLeafLinkClicked' : 'navLeafLinkClicked',
+                      track_action: index + 1,
+                      track_label: content_item.base_path,
+                      track_options: {
+                          dimension28: tagged_content.size.to_s,
+                          dimension29: content_item.title,
+                      },
+                      module: 'track-click',
+                    }
+                    ) %>
+                </h2>
+                <p><%= content_item.description %></p>
+              </li>
+            <% end %>
+          </ol>
+        </div>
       </div>
     </div>
   </div>
-</div>
+<% end %>
