@@ -1,4 +1,4 @@
-<% if child_taxons.present? %>
+<% if accordion_content.present? %>
   <div class="grid-row child-topic-contents">
     <div class="column-two-thirds">
       <div class="topic-content">
@@ -6,36 +6,24 @@
         <div data-module="accordion-with-descriptions">
           <div class="subsection-wrapper">
 
-            <% if taxon.tagged_content.count > 0 %>
-              <div class="subsection js-subsection">
-                <div class="subsection-header">
-                  <h2 class="subsection-title">Overview</h2>
-                </div>
-
-                <div class="subsection-content js-subsection-content" id="subsection_content_0">
-                  <%= render partial: 'content_list_for_child_taxon', locals: {
-                    section_index: 0,
-                    tagged_content: taxon.tagged_content,
-                  } %>
-                </div>
-              </div>
-            <% end %>
-
-            <% child_taxons.each_with_index do |taxon, index| %>
-              <div class="subsection js-subsection">
-                <div class="subsection-header">
-                  <h2 class="subsection-title"><%= taxon.title %></h2>
-                  <p class="subsection-description"><%= taxon.description %></p>
+            <% accordion_content.each_with_index do |taxon, index| %>
+              <div class="subsection js-subsection" id="<%= taxon.base_path %>">
+                <div class="subsection-header js-subsection-header">
+                  <h2 class="subsection-title js-subsection-title"><%= taxon.title %></h2>
+                  <% if taxon.description.present? %>
+                    <p class="subsection-description"><%= taxon.description %></p>
+                  <% end %>
                 </div>
 
                 <div class="subsection-content js-subsection-content" id="subsection_content_<%= index + 1 %>">
                   <%= render partial: 'content_list_for_child_taxon', locals: {
-                    section_index: index + 1,
-                    tagged_content: taxon.tagged_content,
+                      section_index: index,
+                      tagged_content: taxon.tagged_content,
                   } %>
                 </div>
               </div>
             <% end %>
+
           </div>
         </div>
       </div>

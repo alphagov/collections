@@ -7,7 +7,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 (function (Modules) {
   "use strict";
 
-  Modules.AccordionWithDescriptions = function() {
+  Modules.AccordionWithDescriptions = function () {
 
     var bulkActions = {
       openAll: {
@@ -18,9 +18,9 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
         buttonText: "Close all",
         eventLabel: "Close All"
       }
-    }
+    };
 
-    this.start = function($element) {
+    this.start = function ($element) {
 
       // Indicate that js has worked
       $element.addClass('js-accordion-with-descriptions');
@@ -28,86 +28,63 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       // Prevent FOUC, remove class hiding content
       $element.removeClass('js-hidden');
 
+      var $subsections = $element.find('.js-subsection');
       var $subsectionHeaders = $element.find('.subsection-header');
       var totalSubsections = $element.find('.subsection-content').length;
 
       var $openOrCloseAllButton;
-      var sessionStorePrefix = getSessionStorePrefix();
 
+      wrapHeadersInLinks();
       addOpenCloseAllButton();
-      addButtonsToSubsections();
       addIconsToSubsections();
       addAriaControlsAttrForOpenCloseAllButton();
 
       closeAllSections();
-      checkSessionStorage();
       openLinkedSection();
 
       bindToggleForSubsections();
       bindToggleOpenCloseAllButton();
 
-      function getTaxonName() {
-        return $element.find('h1').text();
-      }
-
-      function replaceSpacesWithUnderscores(str) {
-        return str.replace(/\s+/g,"_");
-      }
-
-      function getSessionStorePrefix() {
-        var topic = getTaxonName();
-        topic = replaceSpacesWithUnderscores(topic);
-        topic = topic.toLowerCase();
-
-        return "GOVUK_navigation_for_taxon_" + topic + "_";
-      }
-
       function addOpenCloseAllButton() {
-        $element.prepend( '<div class="subsection-controls js-subsection-controls"><button aria-expanded="false">' + bulkActions.openAll.buttonText + '</button></div>' );
-      }
-
-      function addButtonsToSubsections() {
-        var $subsectionTitle = $element.find('.subsection-title');
-
-        // Wrap each title in a button, with aria controls matching the ID of the subsection
-        $subsectionTitle.each(function(index) {
-          $(this).wrapInner( '<button class="subsection-button js-subsection-button" aria-expanded="false" aria-controls="subsection_content_' + index +'"></button>' );
-        });
+        $element.prepend('<div class="subsection-controls js-subsection-controls"><button aria-expanded="false">' + bulkActions.openAll.buttonText + '</button></div>');
       }
 
       function addIconsToSubsections() {
-        $subsectionHeaders.append( '<span class="subsection-icon"></span>' );
+        $subsectionHeaders.append('<span class="subsection-icon"></span>');
       }
 
       function addAriaControlsAttrForOpenCloseAllButton() {
-        // For each of the sections, create a string with all the subsection content IDs
         var ariaControlsValue = "";
         for (var i = 0; i < totalSubsections; i++) {
-          ariaControlsValue += "subsection_content_"+i+" ";
+          ariaControlsValue += "subsection_content_" + i + " ";
         }
 
         $openOrCloseAllButton = $element.find('.js-subsection-controls button');
-
-        // Set the aria controls for the open/close all button value for all content items
         $openOrCloseAllButton.attr('aria-controls', ariaControlsValue);
       }
 
       function closeAllSections() {
-        $.each($element.find('.js-subsection'), function () {
+        setAllSectionsOpenState(false);
+      }
+
+      function setAllSectionsOpenState(isOpen) {
+        $.each($subsections, function () {
           var subsectionView = new SubsectionView($(this));
-          subsectionView.close();
+          subsectionView.preventHashUpdate();
+          subsectionView.setIsOpen(isOpen);
         });
       }
 
       function openLinkedSection() {
         var anchor = getActiveAnchor(),
-            $subsection;
+          $subsection;
 
         if (!anchor.length) {
           return;
         }
 
-        $subsection = $element.find(anchor).parents('.js-subsection');
+        anchor = '#' + escapeSelector(anchor.substr(1));
+        $subsection = $element.find(anchor);
 
         if ($subsection.length) {
           var subsectionView = new SubsectionView($subsection);
@@ -119,118 +96,64 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
         return GOVUK.getCurrentLocation().hash;
       }
 
-      function checkSessionStorage() {
+      function wrapHeadersInLinks() {
+        $.each($subsections, function () {
+          var $subsection = $(this);
+          var id = $subsection.attr('id');
+          var $title = $subsection.find('.js-subsection-title');
+          var contentId = $subsection.find('.js-subsection-content').first().attr('id');
 
-        var $subsectionContent = $element.find('.subsection-content');
-
-        $subsectionContent.each(function(index) {
-          var subsectionContentId = $(this).attr('id');
-          if(sessionStorage.getItem(sessionStorePrefix+subsectionContentId)){
-            openStoredSections($element.find("#"+subsectionContentId));
-          }
+          $title.wrap(
+            '<a ' +
+            'class="subsection-title-link js-subsection-title-link" ' +
+            'href="#' + id + '" ' +
+            'aria-controls="' + contentId + '"></a>'
+          )
         });
-
-        setOpenCloseAllText();
-      }
-
-      function setSessionStorage() {
-        var isOpenSubsections = $element.find('.subsection-is-open').length;
-        if (isOpenSubsections) {
-          var $openSubsections = $element.find('.subsection-is-open');
-          $openSubsections.each(function(index) {
-            var subsectionOpenContentId = $(this).find('.subsection-content').attr('id');
-            sessionStorage.setItem( sessionStorePrefix+subsectionOpenContentId , 'Opened');
-          });
-        }
-      }
-
-      function removeSessionStorage() {
-        var isClosedSubsections = $element.find('.subsection').length;
-        if (isClosedSubsections) {
-          var $closedSubsections = $element.find('.subsection');
-          $closedSubsections.each(function(index) {
-            var subsectionClosedContentId = $(this).find('.subsection-content').attr('id');
-            sessionStorage.removeItem( sessionStorePrefix+subsectionClosedContentId , subsectionClosedContentId);
-          });
-        }
       }
 
       function bindToggleForSubsections() {
-        $element.find('.subsection-header').on('click', function(event) {
-          var $subsectionHeader = $(this);
-          var $subsection = $subsectionHeader.parent('.js-subsection');
-          var subsectionView = new SubsectionView($subsection);
+        $element.find('.js-subsection-header').click(function (event) {
+          event.preventDefault();
 
+          var subsectionView = new SubsectionView($(this).closest('.js-subsection'));
           subsectionView.toggle();
+
+          var toggleClick = new SubsectionToggleClick(subsectionView, event);
+          toggleClick.track();
+
           setOpenCloseAllText();
-          setSessionStorage();
-          removeSessionStorage();
-
-          var subsectionToggleClick = new SubsectionToggleClick(subsectionView, event);
-          subsectionToggleClick.track();
-
-          return false;
         });
       }
 
       function bindToggleOpenCloseAllButton() {
         $openOrCloseAllButton = $element.find('.js-subsection-controls button');
-        $openOrCloseAllButton.on('click', function(e) {
-          var action = '';
+        $openOrCloseAllButton.on('click', function () {
+          var shouldOpenAll;
 
-          // update button text
           if ($openOrCloseAllButton.text() == bulkActions.openAll.buttonText) {
             $openOrCloseAllButton.text(bulkActions.closeAll.buttonText);
-            $openOrCloseAllButton.attr("aria-expanded", "true");
-            action = 'open';
+            shouldOpenAll = true;
 
             track('pageElementInteraction', 'accordionAllOpened', {
               label: bulkActions.openAll.eventLabel
             });
           } else {
             $openOrCloseAllButton.text(bulkActions.openAll.buttonText);
-            $openOrCloseAllButton.attr("aria-expanded", "false");
-            action = 'close';
+            shouldOpenAll = false;
 
             track('pageElementInteraction', 'accordionAllClosed', {
               label: bulkActions.closeAll.eventLabel
             });
           }
 
-          $element.find('.js-subsection').each(function() {
-            var $subsection = $(this);
-            var $button = $subsection.find('.js-subsection-button');
-            var $subsectionContent = $subsection.find('.js-subsection-content');
-
-            if (action == 'open') {
-              $button.attr("aria-expanded", "true");
-              $subsectionContent.removeClass('js-hidden');
-              $subsection.removeClass('subsection');
-              $subsection.addClass('subsection-is-open');
-            } else {
-              $button.attr("aria-expanded", "false");
-              $subsectionContent.addClass('js-hidden');
-              $subsection.addClass('subsection');
-              $subsection.removeClass('subsection-is-open');
-            }
-          });
-
-          // Add any open sections to Session Storage
-          setSessionStorage();
-
-          // Remove any closed sections from Session Storage
-          removeSessionStorage();
+          setAllSectionsOpenState(shouldOpenAll);
+          $openOrCloseAllButton.attr('aria-expanded', shouldOpenAll);
+          setOpenCloseAllText();
+          setHash(null);
 
           return false;
         });
-      }
-
-      function openStoredSections($sectionContent) {
-        var $subsection = $sectionContent.parent('.js-subsection');
-        var subsectionView = new SubsectionView($subsection);
-        subsectionView.open();
-
-        setOpenCloseAllText();
       }
 
       function setOpenCloseAllText() {
@@ -243,93 +166,115 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
         }
       }
 
-      function isSubsectionClosed($subsection) {
-        var $subsectionContent = $subsection.find('.js-subsection-content');
+      // Ideally we'd use jQuery.escapeSelector, but this is only available from v3
+      // See https://github.com/jquery/jquery/blob/2d4f53416e5f74fa98e0c1d66b6f3c285a12f0ce/src/selector-native.js#L46
+      function escapeSelector(s) {
+        var cssMatcher = /([\x00-\x1f\x7f]|^-?\d)|^-$|[^\x80-\uFFFF\w-]/g;
+        return s.replace(cssMatcher, "\\$&");
+      }
+    };
 
-        return $subsectionContent.hasClass('js-hidden');
+    function SubsectionView($subsectionElement) {
+      var $subsectionContent = $subsectionElement.find('.js-subsection-content');
+      var $titleLink = $subsectionElement.find('.js-subsection-title-link');
+      var shouldUpdateHash = true;
+
+      this.title = $subsectionElement.find('.js-subsection-title').text();
+
+      this.open = open;
+      this.close = close;
+      this.toggle = toggle;
+      this.setIsOpen = setIsOpen;
+      this.isOpen = isOpen;
+      this.isClosed = isClosed;
+      this.preventHashUpdate = preventHashUpdate;
+
+      function open() {
+        setIsOpen(true);
       }
 
-    }
+      function close() {
+        setIsOpen(false);
+      }
 
-    function SubsectionView ($subsectionElement) {
-      var that = this;
+      function toggle() {
+        setIsOpen(isClosed());
+      }
 
-      // The 'Content' is the container of links to guides
-      this.$subsectionContent = $subsectionElement.find('.js-subsection-content');
-      // The 'Button' is a button element that is wrapped around the title for
-      // accessibility reasons
-      this.$subsectionButton = $subsectionElement.find('.js-subsection-button');
+      function setIsOpen(isOpen) {
+        $subsectionContent.toggleClass('js-hidden', !isOpen);
+        $subsectionElement.toggleClass('subsection-is-open', isOpen);
+        $titleLink.attr("aria-expanded", isOpen);
 
-      this.title = that.$subsectionButton.text();
-
-      this.toggle = function () {
-        if (that.isClosed()) {
-          that.open();
-        } else {
-          that.close();
+        if (shouldUpdateHash) {
+          updateHash($subsectionElement);
         }
       }
 
-      this.open = function () {
-        // Show the subsection content
-        that.$subsectionContent.removeClass('js-hidden');
-        // Swap the plus and minus sign
-        $subsectionElement.removeClass('subsection');
-        $subsectionElement.addClass('subsection-is-open');
-        // Tell impaired users that the section is open
-        that.$subsectionButton.attr("aria-expanded", "true");
+      function isOpen() {
+        return !isClosed();
       }
 
-      this.close = function () {
-        // Hide the subsection content
-        that.$subsectionContent.addClass('js-hidden');
-        // Swap the plus and minus sign
-        $subsectionElement.removeClass('subsection-is-open');
-        $subsectionElement.addClass('subsection');
-        // Tell impaired users that the section is closed
-        that.$subsectionButton.attr("aria-expanded", "false");
+      function isClosed() {
+        return $subsectionContent.hasClass('js-hidden');
       }
 
-      this.isClosed = function () {
-        return that.$subsectionContent.hasClass('js-hidden');
+      function preventHashUpdate() {
+        shouldUpdateHash = false;
       }
     }
 
-    // A contructor for an object that represents a click event on a subsection which
-    // handles the complexity of sending different tracking labels to Google Analytics
-    // depending on which part of the subsection the user clicked.
-    function SubsectionToggleClick (subsectionView, event) {
-      var that = this;
-
-      this.$target = $(event.target);
-
-      this.track = function () {
-        track('pageElementInteraction', that._trackingAction(), { label: that._trackingLabel() });
+    function updateHash($subsectionElement) {
+      if (!GOVUK.support.history()) {
+        return;
       }
 
-      this._trackingAction = function () {
+      var subsectionView = new SubsectionView($subsectionElement);
+      var hash = subsectionView.isOpen() && '#' + $subsectionElement.attr('id');
+      setHash(hash)
+    }
+
+    // Sets the hash for the page. If a falsy value is provided, the hash is cleared.
+    function setHash(hash) {
+      var newLocation = hash || GOVUK.getCurrentLocation().pathname;
+      history.replaceState({}, '', newLocation);
+    }
+
+    // A constructor for an object that represents a click event on a subsection which
+    // handles the complexity of sending different tracking labels to Google Analytics
+    // depending on which part of the subsection the user clicked.
+    function SubsectionToggleClick(subsectionView, event) {
+      var $target = $(event.target);
+
+      this.track = trackClick;
+
+      function trackClick() {
+        track('pageElementInteraction', trackingAction(), {label: trackingLabel()});
+      }
+
+      function trackingAction() {
         return (subsectionView.isClosed() ? 'accordionClosed' : 'accordionOpened');
       }
 
-      this._trackingLabel = function () {
-        if (that._clickedOnIcon()) {
-          return subsectionView.title + ' - ' + that._iconType() + ' Click';
-        } else if (that._clickedOnHeading()) {
+      function trackingLabel() {
+        if (clickedOnIcon()) {
+          return subsectionView.title + ' - ' + iconType() + ' Click';
+        } else if (clickedOnHeading()) {
           return subsectionView.title + ' - Heading Click';
         } else {
           return subsectionView.title + ' - Click Elsewhere';
         }
       }
 
-      this._clickedOnIcon = function () {
-        return that.$target.hasClass('subsection-icon');
+      function clickedOnIcon() {
+        return $target.hasClass('subsection-icon');
       }
 
-      this._clickedOnHeading = function () {
-        return that.$target.hasClass('js-subsection-button');
+      function clickedOnHeading() {
+        return $target.hasClass('js-subsection-title-link');
       }
 
-      this._iconType = function () {
+      function iconType() {
         return (subsectionView.isClosed() ? 'Minus' : 'Plus');
       }
     }

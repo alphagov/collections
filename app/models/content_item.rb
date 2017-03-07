@@ -31,4 +31,8 @@ class ContentItem
   def to_hash
     @content_item_data
   end
+
+  def merge(to_merge)
+    ContentItem.new(content_item_data.merge(to_merge))
+  end
 end
