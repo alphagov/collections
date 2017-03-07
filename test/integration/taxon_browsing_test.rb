@@ -198,11 +198,14 @@ private
     tracked_links.size.must_equal @child_taxons.size
 
     tracked_links.each_with_index do |link, index|
+      expected_tracking_options = {
+        dimension28: @child_taxons.size.to_s,
+        dimension29: @child_taxons[index]['title']
+      }
+
       link[:'data-track-action'].must_equal "#{index + 1}"
       link[:'data-track-label'].must_equal @child_taxons[index]['base_path']
-      link[:'data-track-value'].must_equal "#{@child_taxons.size}"
-      link[:'data-track-dimension'].must_equal @child_taxons[index]['title']
-      link[:'data-track-dimension-index'].must_equal '29'
+      link[:'data-track-options'].must_equal expected_tracking_options.to_json
       link[:'data-module'].must_equal 'track-click'
     end
 
@@ -211,9 +214,7 @@ private
       "a[data-track-category='navGridLinkClicked']" +
       "[data-track-action='1']" +
       "[data-track-label='/education-training-and-skills/student-finance']" +
-      "[data-track-value='1']" +
-      "[data-track-dimension='Student finance']" +
-      "[data-track-dimension-index='29']" +
+      "[data-track-options='{\"dimension28\":\"1\",\"dimension29\":\"Student finance\"}']" +
       "[data-module='track-click']"
     )
   end
@@ -256,11 +257,14 @@ private
       section_number = (index / search_results.size).floor + 1
       item_number = index % search_results.size + 1
 
+      expected_tracking_options = {
+        dimension28: search_results.size.to_s,
+        dimension29: search_results[item_number - 1]['title']
+      }
+
       link[:'data-track-action'].must_equal "#{section_number}.#{item_number}"
       link[:'data-track-label'].must_equal "#{search_results[item_number - 1]['link']}"
-      link[:'data-track-value'].must_equal "#{search_results.size}"
-      link[:'data-track-dimension'].must_equal "#{search_results[item_number - 1]['title']}"
-      link[:'data-track-dimension-index'].must_equal '29'
+      link[:'data-track-options'].must_equal expected_tracking_options.to_json
       link[:'data-module'].must_equal 'track-click'
     end
 
@@ -269,9 +273,7 @@ private
       "a[data-track-category='navAccordionLinkClicked']" +
       "[data-track-action='2.2']" +
       "[data-track-label='content-item-2']" +
-      "[data-track-value='2']" +
-      "[data-track-dimension='Content item 2']" +
-      "[data-track-dimension-index='29']" +
+      "[data-track-options='{\"dimension28\":\"2\",\"dimension29\":\"Content item 2\"}']" +
       "[data-module='track-click']"
     )
   end
@@ -312,11 +314,14 @@ private
     tracked_links.size.must_equal search_results.size
 
     tracked_links.each_with_index do |link, index|
+      expected_tracking_options = {
+          dimension28: search_results.size.to_s,
+          dimension29: search_results[index]['title'],
+      }
+
       link[:'data-track-action'].must_equal "#{index + 1}"
       link[:'data-track-label'].must_equal search_results[index]['link']
-      link[:'data-track-value'].must_equal "#{search_results.size}"
-      link[:'data-track-dimension'].must_equal search_results[index]['title']
-      link[:'data-track-dimension-index'].must_equal '29'
+      link[:'data-track-options'].must_equal expected_tracking_options.to_json
       link[:'data-module'].must_equal 'track-click'
     end
 
@@ -325,9 +330,7 @@ private
       "a[data-track-category='#{tracking_category}']" +
       "[data-track-action='2']" +
       "[data-track-label='content-item-2']" +
-      "[data-track-value='2']" +
-      "[data-track-dimension='Content item 2']" +
-      "[data-track-dimension-index='29']" +
+      "[data-track-options='{\"dimension28\":\"2\",\"dimension29\":\"Content item 2\"}']" +
       "[data-module='track-click']"
     )
   end

@@ -10,10 +10,11 @@
             data: {
               track_category: 'navGridLinkClicked',
               track_action: index + 1,
-              track_value: child_taxons.size,
               track_label: child_taxon.base_path,
-              track_dimension: child_taxon.title,
-              track_dimension_index: 29,
+              track_options: {
+                dimension28: child_taxons.size.to_s,
+                dimension29: child_taxon.title,
+              },
               module: 'track-click',
             }
           )%>

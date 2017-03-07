@@ -19,10 +19,11 @@
                   data: {
                     track_category: is_grid ? 'navGridLeafLinkClicked' : 'navLeafLinkClicked',
                     track_action: index + 1,
-                    track_value: tagged_content.size,
                     track_label: content_item.base_path,
-                    track_dimension: content_item.title,
-                    track_dimension_index: 29,
+                    track_options: {
+                      dimension28: tagged_content.size.to_s,
+                      dimension29: content_item.title,
+                    },
                     module: 'track-click',
                   }
                 ) %>
