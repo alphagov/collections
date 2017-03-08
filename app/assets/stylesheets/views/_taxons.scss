@@ -46,6 +46,7 @@
   .child-topics-list {
     ol {
       list-style-type: none;
+      padding-bottom: $gutter-half;
       @extend %grid-row;
 
       li {
