@@ -1,4 +1,4 @@
-<% content_for :title do %><%= topic.title %> - GOV.UK<% end %>
+<% content_for :title, topic.title %>
 <%= render 'shared/tag_meta', tag: topic %>
 <% if is_page_under_ab_test %>
   <%= ab_variant.analytics_meta_tag.html_safe %>
