@@ -1048,5 +1048,25 @@
     "base_path": "/government/collections/official-statistics-releases",
     "surface_collection": false,
     "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-pupil-absence",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-pupil-projections",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-school-and-pupil-numbers",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/further-education",
+    "surface_collection": false,
+    "surface_content": true
   }
 ]
