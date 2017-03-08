@@ -1,4 +1,4 @@
-<% content_for :title, "#{page.title} - GOV.UK" %>
+<% content_for :title, page.title %>
 <%= render 'shared/tag_meta', tag: page %>
 <% content_for :meta_tags do %>
   <% if is_page_under_ab_test %>
