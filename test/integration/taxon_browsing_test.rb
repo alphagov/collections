@@ -40,18 +40,18 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     then_i_can_see_there_is_a_page_title
     then_i_can_see_the_breadcrumbs
     and_i_can_see_the_title_and_description
-    and_i_can_see_the_overview_section_in_the_accordion
+    and_i_can_see_the_general_information_section_in_the_accordion
     and_i_can_see_links_to_the_child_taxons_in_an_accordion
     and_the_accordion_has_tracking_attributes
     and_i_can_see_tagged_content_to_the_taxon
     and_the_page_is_tracked_as_an_accordion
   end
 
-  it 'does not show the overview section when there is no content tagged' do
+  it 'does not show the general information section when there is no content tagged' do
     given_there_is_a_taxon_without_grandchildren
     and_the_taxon_has_no_tagged_content
     when_i_visit_the_taxon_page
-    then_there_is_no_overview_section_in_the_accordion
+    then_there_is_no_general_information_section_in_the_accordion
   end
 
   it 'is possible to browse a taxon page that does not have child taxons' do
@@ -228,22 +228,22 @@ private
     end
   end
 
-  def and_i_can_see_the_overview_section_in_the_accordion
+  def and_i_can_see_the_general_information_section_in_the_accordion
     subsection = first('.subsection')
 
-    assert subsection.has_selector?('.subsection-title', text: /overview/i)
+    assert subsection.has_selector?('.subsection-title', text: /general information and guidance/i)
     assert subsection.has_selector?(
       '.subsection-content .subsection-list-item a',
       count: 2
     )
   end
 
-  def then_there_is_no_overview_section_in_the_accordion
+  def then_there_is_no_general_information_section_in_the_accordion
     subsection = first('.subsection')
 
     assert_equal(
       false,
-      subsection.has_selector?('.subsection-title', text: /overview/i)
+      subsection.has_selector?('.subsection-title', text: /general information and guidance/i)
     )
   end
 

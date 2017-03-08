@@ -45,12 +45,14 @@ private
     accordion_items = taxon.child_taxons
     return [] if taxon.child_taxons.empty?
 
+    current_taxon_title = 'General information and guidance'
+
     if taxon.tagged_content.count > 0
       accordion_items.unshift(
         taxon.merge(
-          'title' => 'Overview',
+          'title' => current_taxon_title,
           'description' => '',
-          'base_path' => 'overview',
+          'base_path' => current_taxon_title.downcase.tr(' ', '-'),
         )
       )
     end
