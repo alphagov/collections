@@ -571,8 +571,8 @@
   },
   {
     "base_path": "/government/collections/statistics-exclusions",
-    "surface_collection": true,
-    "surface_content": false
+    "surface_collection": false,
+    "surface_content": true
   },
   {
     "base_path": "/government/collections/parental-responsibility-measures",
