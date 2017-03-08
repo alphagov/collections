@@ -1873,5 +1873,25 @@
     "base_path": "/government/collections/ofsted-examples-of-good-practice-in-schools",
     "surface_collection": false,
     "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/higher-education-and-research-bill",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-on-higher-education-initial-participation-rates",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/statistics-neet",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/official-statistics-releases",
+    "surface_collection": false,
+    "surface_content": true
   }
 ]
