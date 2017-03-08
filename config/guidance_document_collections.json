@@ -10,11 +10,6 @@
     "surface_content": true
   },
   {
-    "base_path": "/government/collections/further-education-commissioner-intervention-reports",
-    "surface_collection": true,
-    "surface_content": false
-  },
-  {
     "base_path": "/government/collections/fe-choices-information-for-providers",
     "surface_collection": true,
     "surface_content": false
@@ -876,11 +871,6 @@
   },
   {
     "base_path": "/government/collections/hmcis-monthly-commentaries",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/further-education-commissioner-intervention-reports",
     "surface_collection": false,
     "surface_content": true
   },
