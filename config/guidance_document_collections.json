@@ -25,11 +25,6 @@
     "surface_content": false
   },
   {
-    "base_path": "/government/collections/functional-skills-qualifications-requirements",
-    "surface_collection": true,
-    "surface_content": false
-  },
-  {
     "base_path": "/government/collections/sfa-financial-management-helping-colleges-to-account-for-funding",
     "surface_collection": true,
     "surface_content": false
@@ -51,8 +46,8 @@
   },
   {
     "base_path": "/government/collections/olass-funding-rules-and-guidance",
-    "surface_collection": true,
-    "surface_content": false
+    "surface_collection": false,
+    "surface_content": true
   },
   {
     "base_path": "/government/collections/register-of-apprenticeship-training-providers",
@@ -101,16 +96,6 @@
   },
   {
     "base_path": "/government/collections/school-direct-marketing-resource-bank",
-    "surface_collection": true,
-    "surface_content": false
-  },
-  {
-    "base_path": "/government/collections/schools-financial-efficiency-case-studies",
-    "surface_collection": true,
-    "surface_content": false
-  },
-  {
-    "base_path": "/government/collections/teaching-schools-and-system-leadership-how-you-can-get-involved",
     "surface_collection": true,
     "surface_content": false
   },
@@ -395,11 +380,6 @@
     "surface_content": false
   },
   {
-    "base_path": "/government/collections/academy-sponsorship",
-    "surface_collection": true,
-    "surface_content": false
-  },
-  {
     "base_path": "/government/collections/school-organisation",
     "surface_collection": false,
     "surface_content": true
@@ -443,11 +423,6 @@
     "base_path": "/government/collections/national-curriculum-assessments-test-frameworks",
     "surface_collection": false,
     "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/national-curriculum-assessments-practice-materials",
-    "surface_collection": true,
-    "surface_content": false
   },
   {
     "base_path": "/government/collections/phonics-choosing-a-programme",
@@ -526,8 +501,8 @@
   },
   {
     "base_path": "/government/collections/technical-and-further-education-bill",
-    "surface_collection": true,
-    "surface_content": false
+    "surface_collection": false,
+    "surface_content": true
   },
   {
     "base_path": "/government/collections/sfa-funding-rates",
@@ -546,11 +521,6 @@
   },
   {
     "base_path": "/government/collections/sfa-subcontracting-using-funding-to-offer-education-and-training",
-    "surface_collection": true,
-    "surface_content": false
-  },
-  {
-    "base_path": "/government/collections/funding-education-for-16-to-19-year-olds",
     "surface_collection": true,
     "surface_content": false
   },
@@ -610,17 +580,7 @@
     "surface_content": false
   },
   {
-    "base_path": "/government/collections/schools-financial-health-and-efficiency",
-    "surface_collection": true,
-    "surface_content": false
-  },
-  {
     "base_path": "/government/collections/buying-for-schools",
-    "surface_collection": true,
-    "surface_content": false
-  },
-  {
-    "base_path": "/government/collections/how-to-access-school-to-school-support",
     "surface_collection": true,
     "surface_content": false
   },
@@ -656,11 +616,6 @@
   },
   {
     "base_path": "/government/collections/regulatory-actions-and-interventions-by-ofqual",
-    "surface_collection": true,
-    "surface_content": false
-  },
-  {
-    "base_path": "/government/collections/national-curriculum-assessments-key-stage-1-tests",
     "surface_collection": true,
     "surface_content": false
   },
@@ -711,11 +666,6 @@
   },
   {
     "base_path": "/government/collections/sfa-learner-support-financial-help-for-learners",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/performance-tables-technical-and-vocational-qualifications",
     "surface_collection": false,
     "surface_content": true
   },
@@ -790,11 +740,6 @@
     "surface_content": true
   },
   {
-    "base_path": "/government/collections/performance-tables-technical-and-vocational-qualifications",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
     "base_path": "/government/collections/education-funding-agency-efa-regional-framework",
     "surface_collection": false,
     "surface_content": true
@@ -836,11 +781,6 @@
   },
   {
     "base_path": "/government/collections/ofsted-memorandums-of-understanding",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/performance-tables-technical-and-vocational-qualifications",
     "surface_collection": false,
     "surface_content": true
   },
@@ -910,11 +850,6 @@
     "surface_content": true
   },
   {
-    "base_path": "/government/collections/fe-choices-information-for-providers",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
     "base_path": "/government/collections/independent-schools-inspections-and-outcomes",
     "surface_collection": false,
     "surface_content": true
@@ -960,26 +895,6 @@
     "surface_content": true
   },
   {
-    "base_path": "/government/collections/sfa-funding-rates",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/sfa-register-of-training-organisations",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/funding-allocations-and-performance-management-for-providers",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/olass-funding-rules-and-guidance",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
     "base_path": "/government/collections/widening-participation-in-higher-education",
     "surface_collection": false,
     "surface_content": true
@@ -991,11 +906,6 @@
   },
   {
     "base_path": "/government/collections/raising-the-participation-age",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/register-of-apprenticeship-training-providers",
     "surface_collection": false,
     "surface_content": true
   },
@@ -1075,21 +985,6 @@
     "surface_content": true
   },
   {
-    "base_path": "/government/collections/schools-financial-efficiency-case-studies",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/schools-financial-health-and-efficiency",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/schools-financial-efficiency-case-studies",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
     "base_path": "/government/collections/schools-financial-health-and-efficiency",
     "surface_collection": false,
     "surface_content": true
@@ -1110,21 +1005,6 @@
     "surface_content": true
   },
   {
-    "base_path": "/government/collections/schools-financial-efficiency-case-studies",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/schools-financial-health-and-efficiency",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/alternative-provision-census",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
     "base_path": "/government/collections/maintained-schools-and-academies-inspections-and-outcomes-official-statistics",
     "surface_collection": false,
     "surface_content": true
@@ -1141,11 +1021,6 @@
   },
   {
     "base_path": "/government/collections/statistics-education-and-training",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/alternative-provision-academies",
     "surface_collection": false,
     "surface_content": true
   },
@@ -1175,11 +1050,6 @@
     "surface_content": true
   },
   {
-    "base_path": "/government/collections/schools-financial-health-and-efficiency",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
     "base_path": "/government/collections/hmcis-monthly-commentaries",
     "surface_collection": false,
     "surface_content": true
@@ -1191,11 +1061,6 @@
   },
   {
     "base_path": "/government/collections/skills-funding-agency-update",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/schools-block-funding-formulae-documents",
     "surface_collection": false,
     "surface_content": true
   },
@@ -1220,27 +1085,7 @@
     "surface_content": true
   },
   {
-    "base_path": "/government/collections/schools-block-funding-formulae-documents",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/schools-block-funding-formulae-documents",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/functional-skills-qualifications-requirements",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
     "base_path": "/government/collections/esol-qualifications-requirements",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/principal-learning-and-project-qualifications-requirements-and-guidance",
     "surface_collection": false,
     "surface_content": true
   },
@@ -1290,27 +1135,12 @@
     "surface_content": true
   },
   {
-    "base_path": "/government/collections/key-stage-1-assessments-data-collection",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
     "base_path": "/government/collections/sta-assessment-updates",
     "surface_collection": false,
     "surface_content": true
   },
   {
     "base_path": "/government/collections/national-curriculum-assessments-information-for-parents",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/national-curriculum-assessments-practice-materials",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/phonics-screening-check-data-collection",
     "surface_collection": false,
     "surface_content": true
   },
@@ -1346,11 +1176,6 @@
   },
   {
     "base_path": "/government/collections/national-curriculum-assessments-key-stage-1-tests",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/national-curriculum-assessments-practice-materials",
     "surface_collection": false,
     "surface_content": true
   },
@@ -1406,11 +1231,6 @@
   },
   {
     "base_path": "/government/collections/statistics-education-and-training",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/a-level-and-as-level-qualifications-requirements",
     "surface_collection": false,
     "surface_content": true
   },
@@ -1475,11 +1295,6 @@
     "surface_content": true
   },
   {
-    "base_path": "/government/collections/performance-tables-technical-and-vocational-qualifications",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
     "base_path": "/government/collections/apprenticeships-equality-and-diversity",
     "surface_collection": false,
     "surface_content": true
@@ -1550,11 +1365,6 @@
     "surface_content": true
   },
   {
-    "base_path": "/government/collections/performance-tables-technical-and-vocational-qualifications",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
     "base_path": "/government/collections/education-funding-agency-efa-regional-framework",
     "surface_collection": false,
     "surface_content": true
@@ -1600,11 +1410,6 @@
     "surface_content": true
   },
   {
-    "base_path": "/government/collections/performance-tables-technical-and-vocational-qualifications",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
     "base_path": "/government/collections/ofsted-annual-report-201314",
     "surface_collection": false,
     "surface_content": true
@@ -1636,8 +1441,8 @@
   },
   {
     "base_path": "/government/collections/further-education-commissioner-intervention-reports",
-    "surface_collection": false,
-    "surface_content": true
+    "surface_collection": true,
+    "surface_content": false
   },
   {
     "base_path": "/government/collections/letters-to-la-maintained-schools-about-poor-pupil-performance",
@@ -1671,11 +1476,6 @@
   },
   {
     "base_path": "/government/collections/statistics-attainment-at-19-years",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/fe-choices-information-for-providers",
     "surface_collection": false,
     "surface_content": true
   },
@@ -1725,26 +1525,6 @@
     "surface_content": true
   },
   {
-    "base_path": "/government/collections/sfa-funding-rates",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/sfa-register-of-training-organisations",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/funding-allocations-and-performance-management-for-providers",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/olass-funding-rules-and-guidance",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
     "base_path": "/government/collections/widening-participation-in-higher-education",
     "surface_collection": false,
     "surface_content": true
@@ -1756,11 +1536,6 @@
   },
   {
     "base_path": "/government/collections/raising-the-participation-age",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/register-of-apprenticeship-training-providers",
     "surface_collection": false,
     "surface_content": true
   },
@@ -1845,21 +1620,6 @@
     "surface_content": true
   },
   {
-    "base_path": "/government/collections/schools-financial-health-and-efficiency",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/schools-financial-efficiency-case-studies",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/schools-financial-health-and-efficiency",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
     "base_path": "/government/collections/letters-from-ofqual-to-awarding-organisations",
     "surface_collection": false,
     "surface_content": true
@@ -1871,21 +1631,6 @@
   },
   {
     "base_path": "/government/collections/statistics-key-stage-1",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/schools-financial-efficiency-case-studies",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/schools-financial-health-and-efficiency",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/alternative-provision-census",
     "surface_collection": false,
     "surface_content": true
   },
@@ -1910,11 +1655,6 @@
     "surface_content": true
   },
   {
-    "base_path": "/government/collections/alternative-provision-academies",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
     "base_path": "/government/collections/further-education-and-skills-statistical-first-release-sfr",
     "surface_collection": false,
     "surface_content": true
@@ -1926,21 +1666,6 @@
   },
   {
     "base_path": "/government/collections/david-h-hargreaves-thinkpieces-on-the-self-improving-school-system",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/teaching-schools-and-system-leadership-how-you-can-get-involved",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/how-to-access-school-to-school-support",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/schools-financial-health-and-efficiency",
     "surface_collection": false,
     "surface_content": true
   },
@@ -1960,37 +1685,12 @@
     "surface_content": true
   },
   {
-    "base_path": "/government/collections/schools-block-funding-formulae-documents",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
     "base_path": "/government/collections/implementation-and-impact-of-diplomas",
     "surface_collection": false,
     "surface_content": true
   },
   {
-    "base_path": "/government/collections/funding-education-for-16-to-19-year-olds",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/academy-sponsorship",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
     "base_path": "/government/collections/academies-funding-payments-and-compliance",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/schools-block-funding-formulae-documents",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/schools-block-funding-formulae-documents",
     "surface_collection": false,
     "surface_content": true
   },
@@ -2001,11 +1701,6 @@
   },
   {
     "base_path": "/government/collections/esol-qualifications-requirements",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/principal-learning-and-project-qualifications-requirements-and-guidance",
     "surface_collection": false,
     "surface_content": true
   },
@@ -2055,27 +1750,12 @@
     "surface_content": true
   },
   {
-    "base_path": "/government/collections/key-stage-1-assessments-data-collection",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
     "base_path": "/government/collections/sta-assessment-updates",
     "surface_collection": false,
     "surface_content": true
   },
   {
     "base_path": "/government/collections/national-curriculum-assessments-information-for-parents",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/national-curriculum-assessments-practice-materials",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/phonics-screening-check-data-collection",
     "surface_collection": false,
     "surface_content": true
   },
@@ -2106,11 +1786,6 @@
   },
   {
     "base_path": "/government/collections/national-curriculum-assessments-test-frameworks",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/national-curriculum-assessments-key-stage-1-tests",
     "surface_collection": false,
     "surface_content": true
   },
@@ -2171,11 +1846,6 @@
   },
   {
     "base_path": "/government/collections/statistics-education-and-training",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/a-level-and-as-level-qualifications-requirements",
     "surface_collection": false,
     "surface_content": true
   },
