@@ -551,8 +551,8 @@
   },
   {
     "base_path": "/government/collections/primary-school-teachers-useful-information",
-    "surface_collection": true,
-    "surface_content": false
+    "surface_collection": false,
+    "surface_content": true
   },
   {
     "base_path": "/government/collections/teacher-misconduct",
