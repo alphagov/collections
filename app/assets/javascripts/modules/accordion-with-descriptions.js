@@ -225,10 +225,6 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     }
 
     function updateHash($subsectionElement) {
-      if (!GOVUK.support.history()) {
-        return;
-      }
-
       var subsectionView = new SubsectionView($subsectionElement);
       var hash = subsectionView.isOpen() && '#' + $subsectionElement.attr('id');
       setHash(hash)
@@ -236,6 +232,10 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
     // Sets the hash for the page. If a falsy value is provided, the hash is cleared.
     function setHash(hash) {
+      if (!GOVUK.support.history()) {
+        return;
+      }
+
       var newLocation = hash || GOVUK.getCurrentLocation().pathname;
       history.replaceState({}, '', newLocation);
     }
