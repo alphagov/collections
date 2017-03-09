@@ -18,12 +18,12 @@ describe TaxonsController do
       assert_response 200
     end
 
-    it "returns 404 if the new navigation is disabled for variant 'A'" do
-      with_A_variant assert_meta_tag: false do
+    it "returns 200 if the new navigation is enabled in variant 'A'" do
+      with_A_variant do
         get :show, taxon_base_path: "education"
       end
 
-      assert_response 404
+      assert_response 200
     end
   end
 end

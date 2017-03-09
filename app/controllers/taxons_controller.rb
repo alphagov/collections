@@ -1,6 +1,4 @@
 class TaxonsController < ApplicationController
-  before_action :return_404, unless: :new_navigation_enabled?
-
   helper_method :taxon_overview_and_child_taxons
 
   def show
@@ -27,14 +25,6 @@ private
 
       variant
     end
-  end
-
-  def new_navigation_enabled?
-    ab_variant.variant_b?
-  end
-
-  def return_404
-    head :not_found
   end
 
   def taxon
