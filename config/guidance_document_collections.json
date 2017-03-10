@@ -121,8 +121,8 @@
   },
   {
     "base_path": "/government/collections/national-curriculum-assessments-early-years-foundation-stage",
-    "surface_collection": true,
-    "surface_content": false
+    "surface_collection": false,
+    "surface_content": true
   },
   {
     "base_path": "/government/collections/key-stage-1-teacher-assessment",
