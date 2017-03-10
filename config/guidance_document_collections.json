@@ -1073,5 +1073,15 @@
     "base_path": "/government/collections/further-education-fe-letters-to-chairs-of-fe-and-sixth-form-colleges",
     "surface_collection": false,
     "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-examples-of-good-practice-in-post-16-science-and-mathematics-teaching",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-examples-of-good-practice-in-art-teaching",
+    "surface_collection": false,
+    "surface_content": true
   }
 ]
