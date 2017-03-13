@@ -25,7 +25,10 @@
     )
   %>
   <%= render partial: 'govuk_component/breadcrumbs',
-    locals: @navigation_helpers.taxon_breadcrumbs %>
+    locals: {
+      breadcrumbs: @navigation_helpers.taxon_breadcrumbs[:breadcrumbs],
+      collapse_on_mobile: true
+    } %>
 <% end %>
 
 <% if taxon.grandchildren? %>
