@@ -194,11 +194,9 @@ describe TaggedContent do
       assert_includes_params(filter_taxons: [taxon_content_id])
     end
 
-    it 'filters out non-guidance content' do
-      guidance_document_types = GovukNavigationHelpers::Guidance::DOCUMENT_TYPES
-
+    it 'filters guidance content only' do
       assert_includes_params(
-        filter_content_store_document_type: guidance_document_types
+        filter_navigation_document_supertype: 'guidance'
       )
     end
   end
