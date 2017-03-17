@@ -29,6 +29,14 @@ class ApplicationController < ActionController::Base
     @acceptable_formats ||= {}
   end
 
+  def education_ab_test
+    @education_ab_test ||= begin
+      ab_test_request = EducationNavigationAbTestRequest.new(request)
+      ab_test_request.set_response_vary_header(response)
+      ab_test_request
+    end
+  end
+
 private
 
   def restrict_request_formats
