@@ -30,5 +30,9 @@ module Collections
 
     # Google Analytics dimension assigned to the education navigation A/B test
     config.navigation_ab_test_dimension = 41
+
+
+    # Google Analytics dimension assigned to the benchmarking A/B test
+    config.benchmarking_ab_test_dimension = 49
   end
 end
