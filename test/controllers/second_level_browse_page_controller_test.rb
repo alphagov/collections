@@ -118,7 +118,7 @@ describe SecondLevelBrowsePageController do
           get :show, top_level_slug: "benefits", second_level_slug: "entitlement"
 
           assert_response 200
-          assert_response_not_modified_for_ab_test
+          assert_response_not_modified_for_ab_test("EducationNavigation")
         end
 
         it "does not redirect education when the #{variant} variant is requested in JSON format" do
@@ -127,7 +127,7 @@ describe SecondLevelBrowsePageController do
           get :show, top_level_slug: "education", second_level_slug: "student-finance", format: :json
 
           assert_response 200
-          assert_response_not_modified_for_ab_test
+          assert_response_not_modified_for_ab_test("EducationNavigation")
         end
       end
     end

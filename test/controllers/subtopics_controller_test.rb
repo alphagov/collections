@@ -61,7 +61,7 @@ describe SubtopicsController do
           get :show, topic_slug: "oil-and-gas", subtopic_slug: "wells"
 
           assert_response 200
-          assert_response_not_modified_for_ab_test
+          assert_response_not_modified_for_ab_test("EducationNavigation")
         end
       end
     end

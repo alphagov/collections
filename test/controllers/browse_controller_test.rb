@@ -64,7 +64,7 @@ describe BrowseController do
           get :show, top_level_slug: "benefits"
 
           assert_response 200
-          assert_response_not_modified_for_ab_test
+          assert_response_not_modified_for_ab_test("EducationNavigation")
         end
 
         it "does not redirect education when the #{variant} variant is requested in JSON format" do
@@ -73,7 +73,7 @@ describe BrowseController do
           get :show, format: :json, top_level_slug: "education"
 
           assert_response 200
-          assert_response_not_modified_for_ab_test
+          assert_response_not_modified_for_ab_test("EducationNavigation")
         end
       end
 

@@ -5,11 +5,10 @@ class BrowseController < ApplicationController
     page = MainstreamBrowsePage.find("/browse")
     setup_content_item_and_navigation_helpers(page)
 
-    dimension = Rails.application.config.navigation_ab_test_dimension
-    ab_test = GovukAbTesting::AbTest.new("EducationNavigation", dimension: dimension)
-    ab_variant = ab_test.requested_variant(request.headers)
-
-    render :index, locals: { page: page, ab_variant: ab_variant }
+    render :index, locals: {
+      page: page,
+      ab_variant: education_ab_test.requested_variant
+    }
   end
 
   def show

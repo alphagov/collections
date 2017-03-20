@@ -50,7 +50,7 @@ describe ServicesAndInformationController do
           get :index, organisation_id: "hm-revenue-customs"
 
           assert_response 200
-          assert_response_not_modified_for_ab_test
+          assert_response_not_modified_for_ab_test("EducationNavigation")
         end
       end
 
