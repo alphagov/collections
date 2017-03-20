@@ -32,11 +32,7 @@ class ApplicationController < ActionController::Base
   def benchmarking_ab_test
     @benchmarking_ab_test ||= begin
       benchmarking_test = BenchmarkingAbTestRequest.new(request)
-
-      if benchmarking_test.in_benchmarking?
-        benchmarking_test.set_response_vary_header(response)
-      end
-
+      benchmarking_test.set_response_vary_header(response)
       benchmarking_test
     end
   end

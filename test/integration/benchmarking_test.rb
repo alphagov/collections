@@ -34,6 +34,7 @@ class BenchmarkingTest < ActionDispatch::IntegrationTest
     and_there_is_a_taxon
     when_i_visit_the_taxon_page
     then_there_is_no_mouseflow_tag_on_the_page
+    and_the_page_has_been_cached_by_variant
   end
 
   def when_i_am_on_the_new_benchmarking_test
