@@ -34,6 +34,8 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
       var $openOrCloseAllButton;
 
+      var accordionTracker = new AccordionTracker(totalSubsections);
+
       wrapHeadersInLinks();
       addOpenCloseAllButton();
       addIconsToSubsections();
@@ -42,8 +44,8 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       closeAllSections();
       openLinkedSection();
 
-      bindToggleForSubsections();
-      bindToggleOpenCloseAllButton();
+      bindToggleForSubsections(accordionTracker);
+      bindToggleOpenCloseAllButton(accordionTracker);
 
       function addOpenCloseAllButton() {
         $element.prepend('<div class="subsection-controls js-subsection-controls"><button aria-expanded="false">' + bulkActions.openAll.buttonText + '</button></div>');
@@ -112,21 +114,21 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
         });
       }
 
-      function bindToggleForSubsections() {
+      function bindToggleForSubsections(accordionTracker) {
         $element.find('.js-subsection-header').click(function (event) {
           event.preventDefault();
 
           var subsectionView = new SubsectionView($(this).closest('.js-subsection'));
           subsectionView.toggle();
 
-          var toggleClick = new SubsectionToggleClick(subsectionView, event);
+          var toggleClick = new SubsectionToggleClick(subsectionView, accordionTracker, event);
           toggleClick.track();
 
           setOpenCloseAllText();
         });
       }
 
-      function bindToggleOpenCloseAllButton() {
+      function bindToggleOpenCloseAllButton(accordionTracker) {
         $openOrCloseAllButton = $element.find('.js-subsection-controls button');
         $openOrCloseAllButton.on('click', function () {
           var shouldOpenAll;
@@ -135,14 +137,14 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
             $openOrCloseAllButton.text(bulkActions.closeAll.buttonText);
             shouldOpenAll = true;
 
-            track('pageElementInteraction', 'accordionAllOpened', {
+            accordionTracker.track('pageElementInteraction', 'accordionAllOpened', {
               label: bulkActions.openAll.eventLabel
             });
           } else {
             $openOrCloseAllButton.text(bulkActions.openAll.buttonText);
             shouldOpenAll = false;
 
-            track('pageElementInteraction', 'accordionAllClosed', {
+            accordionTracker.track('pageElementInteraction', 'accordionAllClosed', {
               label: bulkActions.closeAll.eventLabel
             });
           }
@@ -243,13 +245,13 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     // A constructor for an object that represents a click event on a subsection which
     // handles the complexity of sending different tracking labels to Google Analytics
     // depending on which part of the subsection the user clicked.
-    function SubsectionToggleClick(subsectionView, event) {
+    function SubsectionToggleClick(subsectionView, accordionTracker, event) {
       var $target = $(event.target);
 
       this.track = trackClick;
 
       function trackClick() {
-        track('pageElementInteraction', trackingAction(), {label: trackingLabel()});
+        accordionTracker.track('pageElementInteraction', trackingAction(), {label: trackingLabel()});
       }
 
       function trackingAction() {
@@ -281,9 +283,12 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
     // A helper that sends an custom event request to Google Analytics if
     // the GOVUK module is setup
-    function track(category, action, options) {
-      if (GOVUK.analytics && GOVUK.analytics.trackEvent) {
-        GOVUK.analytics.trackEvent(category, action, options);
+    function AccordionTracker(totalSubsections) {
+      this.track = function(category, action, options) {
+        if (GOVUK.analytics && GOVUK.analytics.trackEvent) {
+          options["dimension28"] = totalSubsections;
+          GOVUK.analytics.trackEvent(category, action, options);
+        }
       }
     }
   };
