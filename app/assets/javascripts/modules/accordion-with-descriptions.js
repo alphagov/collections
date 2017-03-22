@@ -116,7 +116,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
       function bindToggleForSubsections(accordionTracker) {
         $element.find('.js-subsection-header').click(function (event) {
-          event.preventDefault();
+          preventLinkFollowingForCurrentTab(event);
 
           var subsectionView = new SubsectionView($(this).closest('.js-subsection'));
           subsectionView.toggle();
@@ -126,6 +126,16 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
           setOpenCloseAllText();
         });
+      }
+
+      function preventLinkFollowingForCurrentTab(event) {
+        // If the user is holding the ⌘ or Ctrl key, they're trying
+        // to open the link in a new window, so let the click happen
+        if (event.metaKey || event.ctrlKey) {
+          return;
+        }
+
+        event.preventDefault();
       }
 
       function bindToggleOpenCloseAllButton(accordionTracker) {
