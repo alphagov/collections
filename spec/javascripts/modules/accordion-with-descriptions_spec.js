@@ -81,8 +81,8 @@ describe('An accordion with descriptions module', function () {
   });
 
   it("ensures all subsection content is hidden", function () {
-    $.each($element.find('.subsection-content'), function (index, content) {
-      expect(content).toHaveClass('js-hidden');
+    $element.find('.subsection').each(function (index, $subsection) {
+      expect($subsection).not.toHaveClass('subsection-is-open');
     });
   });
 
@@ -107,10 +107,6 @@ describe('An accordion with descriptions module', function () {
 
     it('adds an aria-expanded attribute to each subsection link', function () {
       expect($element.find('.js-subsection-title-link[aria-expanded="true"]').length).toEqual(2);
-    });
-
-    it('removes the .js-hidden class from each subsection content to hide the list of links', function () {
-      expect($element.find('.js-subsection-content.js-hidden').length).toEqual(0);
     });
 
     it('changes the Open/Close all button text to "Close all"', function () {
@@ -146,11 +142,11 @@ describe('An accordion with descriptions module', function () {
   describe('Opening a section', function () {
 
     // When a section is open (testing: toggleSection, openSection)
-    it("does not have a class of js-hidden", function () {
+    it("has a class of subsection-is-open", function () {
       var $subsectionLink = $element.find('.subsection-header a:first');
-      var $subsectionContent = $element.find('.subsection-content:first');
+      var $subsection = $element.find('.subsection');
       $subsectionLink.click();
-      expect($subsectionContent).not.toHaveClass("js-hidden");
+      expect($subsection).toHaveClass("subsection-is-open");
     });
 
     // When a section is open (testing: toggleState, setExpandedState)
@@ -212,13 +208,13 @@ describe('An accordion with descriptions module', function () {
   describe('Closing a section', function () {
 
     // When a section is closed (testing: toggleSection, closeSection)
-    it("has a class of js-hidden", function () {
+    it("removes the subsection-is-open class", function () {
       var $subsectionLink = $element.find('.subsection-header a:first');
-      var $subsectionContent = $element.find('.subsection-content:first');
+      var $subsection = $element.find('.subsection');
       $subsectionLink.click();
-      expect($subsectionContent).not.toHaveClass("js-hidden");
+      expect($subsection).toHaveClass("subsection-is-open");
       $subsectionLink.click();
-      expect($subsectionContent).toHaveClass("js-hidden");
+      expect($subsection).not.toHaveClass("subsection-is-open");
     });
 
     // When a section is closed (testing: toggleState, setExpandedState)
@@ -294,13 +290,13 @@ describe('An accordion with descriptions module', function () {
     });
 
     it("opens the linked to topic section", function () {
-      var $subsectionContent = $element.find('#topic-section-one').find('.subsection-content');
-      expect($subsectionContent).not.toHaveClass('js-hidden');
+      var $subsection = $element.find('#topic-section-one');
+      expect($subsection).toHaveClass('subsection-is-open');
     });
 
     it("leaves other sections closed", function () {
-      var $subsectionContent = $element.find('#topic-section-two').find('.subsection-content');
-      expect($subsectionContent).toHaveClass('js-hidden');
+      var $subsection = $element.find('#topic-section-two');
+      expect($subsection).not.toHaveClass('subsection-is-open');
     });
   });
 
