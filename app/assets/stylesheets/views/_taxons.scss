@@ -243,4 +243,14 @@
       font-weight: bold;
     }
   }
+
+  .subsection-content {
+    display: none;
+  }
+
+  .subsection-is-open {
+    .subsection-content {
+      display: block;
+    }
+  }
 }

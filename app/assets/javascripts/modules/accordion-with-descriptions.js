@@ -22,6 +22,8 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
     this.start = function ($element) {
 
+      $(window).unload(storeScrollPosition);
+
       // Indicate that js has worked
       $element.addClass('js-accordion-with-descriptions');
 
@@ -46,6 +48,24 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
       bindToggleForSubsections(accordionTracker);
       bindToggleOpenCloseAllButton(accordionTracker);
+
+      // When navigating back in browser history to the accordion, the browser will try to be "clever" and return
+      // the user to their previous scroll position. However, since we collapse all but the currently-anchored
+      // subsection, the content length changes and the user is returned to the wrong position (often the footer).
+      // In order to correct this behaviour, as the user leaves the page, we anticipate the correct height we wish the
+      // user to return to by forcibly scrolling them to that height, which becomes the height the browser will return
+      // them to.
+      // If we can't find an element to return them to, then reset the scroll to the top of the page. This handles
+      // the case where the user has expanded all sections, so they are not returned to a particular section, but
+      // still could have scrolled a long way down the page.
+      function storeScrollPosition() {
+        closeAllSections();
+        var $subsection = getSubsectionForAnchor();
+
+        document.body.scrollTop = $subsection && $subsection.length
+          ? $subsection.offset().top
+          : 0;
+      }
 
       function addOpenCloseAllButton() {
         $element.prepend('<div class="subsection-controls js-subsection-controls"><button aria-expanded="false">' + bulkActions.openAll.buttonText + '</button></div>');
@@ -78,20 +98,20 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       }
 
       function openLinkedSection() {
-        var anchor = getActiveAnchor(),
-          $subsection;
+        var $subsection = getSubsectionForAnchor();
 
-        if (!anchor.length) {
-          return;
-        }
-
-        anchor = '#' + escapeSelector(anchor.substr(1));
-        $subsection = $element.find(anchor);
-
-        if ($subsection.length) {
+        if ($subsection && $subsection.length) {
           var subsectionView = new SubsectionView($subsection);
           subsectionView.open();
         }
+      }
+
+      function getSubsectionForAnchor() {
+        var anchor = getActiveAnchor();
+
+        return anchor.length
+          ? $element.find('#' + escapeSelector(anchor.substr(1)))
+          : null;
       }
 
       function getActiveAnchor() {
@@ -116,7 +136,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
       function bindToggleForSubsections(accordionTracker) {
         $element.find('.js-subsection-header').click(function (event) {
-          event.preventDefault();
+          preventLinkFollowingForCurrentTab(event);
 
           var subsectionView = new SubsectionView($(this).closest('.js-subsection'));
           subsectionView.toggle();
@@ -126,6 +146,16 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
           setOpenCloseAllText();
         });
+      }
+
+      function preventLinkFollowingForCurrentTab(event) {
+        // If the user is holding the ⌘ or Ctrl key, they're trying
+        // to open the link in a new window, so let the click happen
+        if (event.metaKey || event.ctrlKey) {
+          return;
+        }
+
+        event.preventDefault();
       }
 
       function bindToggleOpenCloseAllButton(accordionTracker) {
@@ -177,7 +207,6 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     };
 
     function SubsectionView($subsectionElement) {
-      var $subsectionContent = $subsectionElement.find('.js-subsection-content');
       var $titleLink = $subsectionElement.find('.js-subsection-title-link');
       var shouldUpdateHash = true;
 
@@ -204,7 +233,6 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       }
 
       function setIsOpen(isOpen) {
-        $subsectionContent.toggleClass('js-hidden', !isOpen);
         $subsectionElement.toggleClass('subsection-is-open', isOpen);
         $titleLink.attr("aria-expanded", isOpen);
 
@@ -214,11 +242,11 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       }
 
       function isOpen() {
-        return !isClosed();
+        return $subsectionElement.hasClass('subsection-is-open');
       }
 
       function isClosed() {
-        return $subsectionContent.hasClass('js-hidden');
+        return !isOpen();
       }
 
       function preventHashUpdate() {
