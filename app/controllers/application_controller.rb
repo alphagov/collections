@@ -29,20 +29,6 @@ class ApplicationController < ActionController::Base
     @acceptable_formats ||= {}
   end
 
-  def benchmarking_ab_test
-    @benchmarking_ab_test ||= begin
-      benchmarking_test = BenchmarkingAbTestRequest.new(request)
-      benchmarking_test.set_response_vary_header(response)
-      benchmarking_test
-    end
-  end
-  helper_method :benchmarking_ab_test
-
-  def should_track_mouse_movements?
-    benchmarking_ab_test.in_benchmarking?
-  end
-  helper_method :should_track_mouse_movements?
-
   def education_ab_test
     @education_ab_test ||= begin
       ab_test_request = EducationNavigationAbTestRequest.new(request)

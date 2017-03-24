@@ -11,8 +11,6 @@
   <%= yield :meta_tags %>
   <%= yield :meta_section %>
 
-  <%= benchmarking_ab_test.requested_variant.analytics_meta_tag.html_safe %>
-
   <%= render partial: 'govuk_component/analytics_meta_tags',
     locals: { content_item: @content_item } %>
 </head>
@@ -29,9 +27,5 @@
       <%= yield %>
     </main>
   </div>
-
-  <% if should_track_mouse_movements? %>
-    <%= javascript_include_tag 'mouseflow' %>
-  <% end %>
 </body>
 </html>
