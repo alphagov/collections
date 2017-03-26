@@ -1,7 +1,6 @@
 <div class='subscriptions'>
-  <%=
-    link_to 'Get email alerts for this topic',
-      "/email-signup/?topic=#{taxon.base_path}",
-      class: 'email-alerts'
-  %>
+  <a href="/email-signup/?topic=<%= taxon.base_path %>" class='email-alerts'>
+    Get email alerts for this topic
+    <span class='visuallyhidden'><%= taxon.title %></span>
+  </a>
 </div>
