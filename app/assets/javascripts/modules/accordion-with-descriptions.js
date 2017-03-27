@@ -208,6 +208,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
     function SubsectionView($subsectionElement) {
       var $titleLink = $subsectionElement.find('.js-subsection-title-link');
+      var $subsectionContent = $subsectionElement.find('.js-subsection-content');
       var shouldUpdateHash = true;
 
       this.title = $subsectionElement.find('.js-subsection-title').text();
@@ -234,6 +235,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
       function setIsOpen(isOpen) {
         $subsectionElement.toggleClass('subsection-is-open', isOpen);
+        $subsectionContent.toggleClass('js-hidden', !isOpen);
         $titleLink.attr("aria-expanded", isOpen);
 
         if (shouldUpdateHash) {
