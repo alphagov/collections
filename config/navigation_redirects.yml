@@ -29,7 +29,7 @@ default: &default
       vocational-qualifications: education/apprenticeships-traineeships-and-internships
     higher-education:
       administration: education/running-a-further-or-higher-education-institution
-      scholarships-for-overseas-students: education/financial-help-for-international-students-in-the-uk
+      scholarships-for-overseas-students: education/funding-and-finance-for-students#/education/student-grants-bursaries-scholarships
 
 
 
