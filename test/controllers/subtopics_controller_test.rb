@@ -52,6 +52,20 @@ describe SubtopicsController do
         end
       end
 
+      it "redirects to the taxonomy navigation as the B variant preserving the fragment" do
+        with_B_variant assert_meta_tag: false do
+          get :show, topic_slug: "higher-education", subtopic_slug: "scholarships-for-overseas-students"
+
+          assert_response 302
+          assert_redirected_to(
+            controller: "taxons",
+            action: "show",
+            taxon_base_path: "education/funding-and-finance-for-students",
+            anchor: "/education/student-grants-bursaries-scholarships"
+          )
+        end
+      end
+
       ["A", "B"].each do |variant|
         it "does not change a page outside the A/B test when the #{variant} variant is requested" do
           stub_services_for_subtopic("content-id-for-wells", "oil-and-gas", "wells")

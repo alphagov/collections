@@ -18,9 +18,12 @@ class TopicsController < ApplicationController
     end
 
     if taxon_resolver.taxon_base_path
-      redirect_to controller: "taxons",
+      redirect_to(
+        controller: "taxons",
         action: "show",
-        taxon_base_path: taxon_resolver.taxon_base_path
+        taxon_base_path: taxon_resolver.taxon_base_path,
+        anchor: taxon_resolver.fragment
+      )
     else
       topic = Topic.find(request.path)
       setup_content_item_and_navigation_helpers(topic)
