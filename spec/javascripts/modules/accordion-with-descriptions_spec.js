@@ -116,7 +116,7 @@ describe('An accordion with descriptions module', function () {
     it("triggers a google analytics custom event", function () {
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith('pageElementInteraction', 'accordionAllOpened', {
         label: 'Open All',
-        dimension28: expectedAccordionSectionCount
+        dimension28: expectedAccordionSectionCount.toString()
       });
     });
   });
@@ -134,7 +134,7 @@ describe('An accordion with descriptions module', function () {
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith('pageElementInteraction', 'accordionAllClosed', {
         label: 'Close All',
-        dimension28: expectedAccordionSectionCount
+        dimension28: expectedAccordionSectionCount.toString()
       });
     });
   });
@@ -168,7 +168,7 @@ describe('An accordion with descriptions module', function () {
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith('pageElementInteraction', 'accordionOpened', {
         label: 'Topic Section One - Heading Click',
-        dimension28: expectedAccordionSectionCount
+        dimension28: expectedAccordionSectionCount.toString()
       });
     });
 
@@ -184,7 +184,7 @@ describe('An accordion with descriptions module', function () {
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith('pageElementInteraction', 'accordionOpened', {
         label: 'Topic Section One - Plus Click',
-        dimension28: expectedAccordionSectionCount
+        dimension28: expectedAccordionSectionCount.toString()
       });
     });
 
@@ -200,7 +200,7 @@ describe('An accordion with descriptions module', function () {
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith('pageElementInteraction', 'accordionOpened', {
         label: 'Topic Section One - Click Elsewhere',
-        dimension28: expectedAccordionSectionCount
+        dimension28: expectedAccordionSectionCount.toString()
       });
     });
   });
@@ -239,7 +239,7 @@ describe('An accordion with descriptions module', function () {
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith('pageElementInteraction', 'accordionClosed', {
         label: 'Topic Section One - Heading Click',
-        dimension28: expectedAccordionSectionCount
+        dimension28: expectedAccordionSectionCount.toString()
       });
     });
 
@@ -256,7 +256,7 @@ describe('An accordion with descriptions module', function () {
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith('pageElementInteraction', 'accordionClosed', {
         label: 'Topic Section One - Minus Click',
-        dimension28: expectedAccordionSectionCount
+        dimension28: expectedAccordionSectionCount.toString()
       });
     });
 
@@ -274,7 +274,7 @@ describe('An accordion with descriptions module', function () {
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith('pageElementInteraction', 'accordionClosed', {
         label: 'Topic Section One - Click Elsewhere',
-        dimension28: expectedAccordionSectionCount
+        dimension28: expectedAccordionSectionCount.toString()
       });
     });
   });

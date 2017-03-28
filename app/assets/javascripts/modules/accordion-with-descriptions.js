@@ -316,7 +316,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     function AccordionTracker(totalSubsections) {
       this.track = function(category, action, options) {
         if (GOVUK.analytics && GOVUK.analytics.trackEvent) {
-          options["dimension28"] = totalSubsections;
+          options["dimension28"] = totalSubsections.toString();
           GOVUK.analytics.trackEvent(category, action, options);
         }
       }
