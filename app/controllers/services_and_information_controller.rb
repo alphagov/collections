@@ -13,9 +13,12 @@ class ServicesAndInformationController < ApplicationController
     end
 
     if taxon_resolver.taxon_base_path
-      redirect_to controller: "taxons",
+      redirect_to(
+        controller: "taxons",
         action: "show",
-        taxon_base_path: taxon_resolver.taxon_base_path
+        taxon_base_path: taxon_resolver.taxon_base_path,
+        anchor: taxon_resolver.fragment
+      )
     else
       render :index, locals: {
         service_and_information: service_and_information,

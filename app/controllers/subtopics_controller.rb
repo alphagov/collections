@@ -1,6 +1,5 @@
 class SubtopicsController < ApplicationController
   def show
-
     taxon_resolver = TaxonRedirectResolver.new(
       request,
       is_page_in_ab_test: lambda {
@@ -15,9 +14,12 @@ class SubtopicsController < ApplicationController
     end
 
     if taxon_resolver.taxon_base_path
-      redirect_to controller: "taxons",
+      redirect_to(
+        controller: "taxons",
         action: "show",
-        taxon_base_path: taxon_resolver.taxon_base_path
+        taxon_base_path: taxon_resolver.taxon_base_path,
+        anchor: taxon_resolver.fragment
+      )
     else
       subtopic = Topic.find(request.path)
       setup_content_item_and_navigation_helpers(subtopic)
