@@ -5,7 +5,7 @@
         <%= taxon.title %>
       </h1>
       <p><%= taxon.description %></p>
-      <%= render partial: 'email_alerts' %>
+      <%= render partial: 'email_alerts', locals: { taxon: taxon } %>
     </div>
   </div>
 </div>
