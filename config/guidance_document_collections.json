@@ -1083,5 +1083,90 @@
     "base_path": "/government/collections/ofsted-examples-of-good-practice-in-art-teaching",
     "surface_collection": false,
     "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/child-poverty-training-materials",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/childhood-neglect-training-resources",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/children-in-need-census",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/children-looked-after-return",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/childrens-social-care-registration-forms",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/early-years-business-sustainability",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/early-years-census",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/early-years-childcare-registering-with-ofsted",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/early-years-foundation-stage-profile-return",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/guidance-for-foster-carers",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/improvement-notices",
+    "surface_collection": true,
+    "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/munro-review",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/national-minimum-standards",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsteds-compliance-investigation-and-enforcement-handbooks",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsteds-inspection-of-early-years-providers",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/open-as-a-childrens-social-care-provider-do-you-need-to-register",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/parental-responsibility-measures-attendance-census",
+    "surface_collection": true,
+    "surface_content": false
   }
 ]
