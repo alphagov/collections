@@ -41,6 +41,7 @@
 
 .subscriptions {
   @include bold-19;
+  margin-bottom: 30px;
 
   a {
     display: inline-block;
