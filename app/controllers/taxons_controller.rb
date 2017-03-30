@@ -31,6 +31,7 @@ private
           'title' => current_taxon_title,
           'description' => '',
           'base_path' => current_taxon_title.downcase.tr(' ', '-'),
+          'has_tagged_content?' => true,
         )
       )
     end

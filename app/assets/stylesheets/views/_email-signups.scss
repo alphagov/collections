@@ -38,3 +38,29 @@
     margin: 20px 0;
   }
 }
+
+.subscriptions {
+  @include bold-19;
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    margin: 3px;
+    padding-left: 28px;
+    background-repeat: no-repeat;
+    background-position: 0 20%;
+
+    @include media(tablet) {
+      background-position: 0 35%;
+    }
+  }
+
+  .email-alerts {
+    background-image: image-url("mail-icon.png");
+
+    @include device-pixel-ratio() {
+      background-image: image-url("mail-icon-x2.png");
+      background-size: 20px 14px;
+    }
+  }
+}

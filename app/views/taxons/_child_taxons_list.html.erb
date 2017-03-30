@@ -16,6 +16,9 @@
                 </div>
 
                 <div class="subsection-content js-subsection-content" id="subsection_content_<%= index + 1 %>">
+                  <% unless taxon.to_hash['has_tagged_content?'] %>
+                    <%= render partial: 'email_alerts', locals: { taxon: taxon } %>
+                  <% end %>
                   <%= render partial: 'content_list_for_child_taxon', locals: {
                       section_index: index,
                       tagged_content: taxon.tagged_content,
