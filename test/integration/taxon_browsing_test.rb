@@ -25,6 +25,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     given_there_is_a_taxon_with_grandchildren
     when_i_visit_the_taxon_page
     then_i_can_see_there_is_a_page_title
+    then_i_can_see_the_meta_description
     then_i_can_see_the_breadcrumbs
     and_i_can_see_the_title_and_description
     and_i_can_see_links_to_the_child_taxons_in_a_grid
@@ -38,6 +39,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     given_there_is_a_taxon_without_grandchildren
     when_i_visit_the_taxon_page
     then_i_can_see_there_is_a_page_title
+    then_i_can_see_the_meta_description
     then_i_can_see_the_breadcrumbs
     and_i_can_see_the_title_and_description
     and_i_can_see_the_general_information_section_in_the_accordion
@@ -58,6 +60,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     given_there_is_a_taxon_without_child_taxons
     when_i_visit_the_taxon_page
     then_i_can_see_there_is_a_page_title
+    then_i_can_see_the_meta_description
     then_i_can_see_the_breadcrumbs
     and_i_can_see_the_title_and_description
     and_i_can_see_tagged_content_to_the_taxon
@@ -165,6 +168,16 @@ private
     with_B_variant do
       visit @base_path
     end
+  end
+
+  def then_i_can_see_the_meta_description
+    content = page.find('meta[name="description"]', visible: false)['content']
+
+    assert_equal(
+      @taxon.description,
+      content,
+      "The content of the meta description should be the taxon description"
+    )
   end
 
   def then_i_can_see_there_is_a_page_title

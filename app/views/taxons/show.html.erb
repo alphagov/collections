@@ -1,6 +1,7 @@
 <% content_for :title, taxon.title %>
 <% content_for :page_class, "taxon-page" %>
 <% content_for :meta_tags do %>
+  <meta name="description" content="<%= taxon.description %>">
   <%= ab_variant.analytics_meta_tag.html_safe %>
   <meta name="govuk:navigation-page-type" content="<%=taxon_page_rendering_type(taxon)%>" />
 <% end %>
