@@ -7,7 +7,7 @@
           <div class="subsection-wrapper">
 
             <% accordion_content.each_with_index do |taxon, index| %>
-              <div class="subsection js-subsection" id="<%= taxon.base_path %>">
+              <div class="subsection js-subsection" id="<%= taxon.base_path %>" data-track-count="accordionSection">
                 <div class="subsection-header js-subsection-header">
                   <h2 class="subsection-title js-subsection-title"><%= taxon.title %></h2>
                   <% if taxon.description.present? %>
