@@ -4,8 +4,8 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
 
-  before_filter :set_expiry
-  before_filter :restrict_request_formats
+  before_action :set_expiry
+  before_action :restrict_request_formats
 
   rescue_from GdsApi::ContentStore::ItemNotFound, with: :error_404
 
@@ -46,7 +46,7 @@ private
   end
 
   def can_handle_format?(format)
-    return true if format == Mime::HTML || format == Mime::ALL
+    return true if format == Mime[:html] || format == Mime::ALL
     format && self.class.acceptable_formats.fetch(params[:action].to_sym, []).include?(format.to_sym)
   end
 
@@ -58,7 +58,7 @@ private
 
   def error(status_code, exception = nil)
     Airbrake.notify_or_ignore(exception) if exception
-    render status: status_code, text: "#{status_code} error"
+    render status: status_code, plain: "#{status_code} error"
   end
 
   def set_expiry(duration = 30.minutes)

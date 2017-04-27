@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.7.1'
+gem 'rails', '5.0.2'
 
 gem 'sass-rails', '~> 5.0.3'
 gem 'uglifier', '~> 2.7.1'
 gem 'govuk_frontend_toolkit', '~> 4.3.0'
 
 gem 'unicorn', '~> 4.9.0'
-gem 'airbrake', '~> 4.3.1'
+gem 'airbrake', '~> 5.0.0'
 gem 'logstasher', '0.6.2' # 0.6.5+ changes the JSON schema used for events
 gem 'govuk_navigation_helpers', '~> 5.1'
 gem 'govuk_ab_testing', '~> 2.0'
@@ -28,7 +28,7 @@ end
 gem 'plek', '~> 1.11.0'
 
 group :test do
-  gem 'capybara', '~> 2.5.0'
+  gem 'capybara', '~> 2.14.0'
   gem 'poltergeist', '~> 1.7.0'
 
   gem 'minitest-spec-rails', '~> 5.3.0'
@@ -45,6 +45,6 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'pry-byebug'
-  gem 'jasmine-rails', '~> 0.12.1'
+  gem 'jasmine-rails', '~> 0.14.1'
   gem 'govuk-lint'
 end

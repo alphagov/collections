@@ -45,7 +45,7 @@ describe ConcreteTestController do
         get :test
 
         assert_equal 200, response.status, "mime type #{type} should be acceptable"
-        assert_equal Mime::HTML, response.content_type
+        assert_equal Mime[:html], response.content_type
       end
     end
   end
@@ -64,7 +64,7 @@ describe ConcreteTestController do
     with_test_routing do
       get :json
       assert_response :success
-      assert_equal Mime::HTML, response.content_type
+      assert_equal Mime[:html], response.content_type
       assert_equal 'html', response.body
 
       get :json, format: :json
@@ -81,7 +81,7 @@ describe ConcreteTestController do
     with_test_routing do
       get :js_or_atom
       assert_response :success
-      assert_equal Mime::HTML, response.content_type
+      assert_equal Mime[:html], response.content_type
       assert_equal 'html', response.body
 
       get :js_or_atom, format: :js
