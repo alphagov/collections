@@ -53,13 +53,9 @@ private
   end
 
   def pagination_params
-    params_to_use = params.slice(:start, :count).symbolize_keys
-
-    # primitive sanitisation of the pagination parameters to ensure they're
-    # integers
-    params_to_use.inject({}) {|hash, (key, value)|
-      hash[key] = value.to_i if value.present?
-      hash
-    }
+    params_to_use = {}
+    params_to_use[:start] = params[:start].to_i if params[:start].present?
+    params_to_use[:count] = params[:count].to_i if params[:count].present?
+    params_to_use
   end
 end

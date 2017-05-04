@@ -1,10 +1,10 @@
-if ENV['ERRBIT_API_KEY'].present?
-  errbit_uri = Plek.find_uri('errbit')
+require 'securerandom'
 
+if ENV['ERRBIT_API_KEY'].present?
   Airbrake.configure do |config|
-    config.api_key = ENV['ERRBIT_API_KEY']
-    config.host = errbit_uri.host
-    config.secure = errbit_uri.scheme == 'https'
-    config.environment_name = ENV['ERRBIT_ENVIRONMENT_NAME']
+    config.project_key = ENV['ERRBIT_API_KEY']
+    config.project_id = 1000000000000 # We are not using this on our current errbit
+    config.host = Plek.find_uri('errbit').host
+    config.environment = ENV['ERRBIT_ENVIRONMENT_NAME']
   end
 end

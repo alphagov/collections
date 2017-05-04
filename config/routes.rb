@@ -1,4 +1,4 @@
-Collections::Application.routes.draw do
+Rails.application.routes.draw do
   # Note that this app only receives requests for routes registered with the
   # content-store (by collections-publisher) - whenever the routes below
   # change, also change the routes claimed by collections-publisher.
