@@ -303,7 +303,8 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       }
 
       function clickedOnHeading() {
-        return $target.hasClass('js-subsection-title-link');
+        return !!$target.parents('.js-subsection-title-link')
+          || $target.hasClass('js-subsetion-title-link');
       }
 
       function iconType() {
