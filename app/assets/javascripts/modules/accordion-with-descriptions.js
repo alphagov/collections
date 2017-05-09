@@ -212,6 +212,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       var shouldUpdateHash = true;
 
       this.title = $subsectionElement.find('.js-subsection-title').text();
+      this.href = $titleLink.attr('href');
       this.element = $subsectionElement;
 
       this.open = open;
@@ -221,6 +222,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       this.isOpen = isOpen;
       this.isClosed = isClosed;
       this.preventHashUpdate = preventHashUpdate;
+      this.numberOfContentItems = numberOfContentItems;
 
       function open() {
         setIsOpen(true);
@@ -255,6 +257,10 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       function preventHashUpdate() {
         shouldUpdateHash = false;
       }
+
+      function numberOfContentItems() {
+        return $subsectionContent.find('li').length;
+      }
     }
 
     function updateHash($subsectionElement) {
@@ -278,6 +284,18 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
       function trackClick() {
         accordionTracker.track('pageElementInteraction', trackingAction(), {label: trackingLabel()});
+        
+        if (GOVUK.analytics && GOVUK.analytics.trackEvent) {
+          GOVUK.analytics.trackEvent(
+            'navAccordionLinkClicked',
+            String(subsectionIndex()),
+            {
+              label: subsectionView.href,
+              dimension28: String(subsectionView.numberOfContentItems()),
+              dimension29: subsectionView.title
+            }
+          )
+        }
       }
 
       function trackingLabel() {
