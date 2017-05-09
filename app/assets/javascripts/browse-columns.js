@@ -59,7 +59,7 @@
       } else {
         loadPromise = this.loadSectionFromState(state, true);
       }
-      loadPromise.done(function(){
+      loadPromise.then(function(){
         this.trackPageview(state);
       }.bind(this));
     },
@@ -69,11 +69,10 @@
         // load the section then load the subsection after
         var sectionPathname = window.location.pathname.split('/').slice(0,-1).join('/');
         var sectionState = this.parsePathname(sectionPathname);
-        var sectionPromise = this.loadSectionFromState(sectionState, true);
-        sectionPromise.pipe(function(){
-          return this.loadSectionFromState(state, true);
-        }.bind(this));
-        return sectionPromise;
+        return this.loadSectionFromState(sectionState, true)
+          .then(function(){
+            return this.loadSectionFromState(state, true);
+          }.bind(this));
       } else {
         return this.loadSectionFromState(state, true);
       }
@@ -115,7 +114,7 @@
         animationDone = new $.Deferred();
         animationDone.resolve();
       }
-      animationDone.done(function(){
+      return animationDone.then(function(){
         this.$section.find('h1').focus();
       }.bind(this));
     },
@@ -184,12 +183,12 @@
         animationDone = new $.Deferred();
         animationDone.resolve();
       }
-      animationDone.done(function(){
+      return animationDone.then(function(){
         this.$subsection.find('h1').focus();
       }.bind(this));
     },
     animateSectionToSubsectionDesktop: function(){
-      var out = new $.Deferred()
+      var out = new $.Deferred();
       // animate to the right position and update the data
       this.$root.css({ position: 'absolute', width: this.$root.width() });
       this.$section.find('.sort-order').hide();
@@ -259,7 +258,7 @@
       } else {
         $.ajax({
           url: url
-        }).done(function(data){
+        }).then(function(data){
           this.sectionCache('section', state.slug, data);
 
           out.resolve(data);
@@ -300,24 +299,25 @@
         donePromise = $.when(sectionPromise);
       }
 
-      donePromise.done(function(sectionData){
-        state.sectionData = sectionData;
-        this.scrollToBrowse();
+      return donePromise
+        .then(function(sectionData){
+          state.sectionData = sectionData;
+          this.scrollToBrowse();
 
-        if(state.subsection){
-          this.showSubsection(state);
-        } else {
-          this.showSection(state);
-        }
+          this.lastState = state;
 
-        if(typeof poppingState === 'undefined'){
-          history.pushState(state, '', state.path);
-          this.trackPageview(state);
-        }
-        this.lastState = state;
-      }.bind(this));
-
-      return donePromise;
+          if(state.subsection){
+            return this.showSubsection(state);
+          } else {
+            return this.showSection(state);
+          }
+        }.bind(this))
+        .then(function() {
+          if(typeof poppingState === 'undefined'){
+            history.pushState(state, '', state.path);
+            this.trackPageview(state);
+          }
+        }.bind(this));
     },
     navigate: function(e){
       if(e.currentTarget.pathname.match(/^\/browse\/[^\/]+(\/[^\/]+)?$/)){
