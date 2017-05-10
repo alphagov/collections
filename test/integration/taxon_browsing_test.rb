@@ -201,7 +201,7 @@ private
     assert page.has_selector?('nav.child-topics-list')
 
     @child_taxons.each do |child_taxon|
-      assert page.has_link?(child_taxon['title'], child_taxon['base_path'])
+      assert page.has_link?(child_taxon['title'], href: child_taxon['base_path'])
       assert page.has_content?(child_taxon['description'])
     end
   end
@@ -293,7 +293,7 @@ private
 
   def and_i_can_see_tagged_content_to_the_taxon
     search_results.each do |search_result|
-      assert page.has_link?(search_result['title'], search_result['link'])
+      assert page.has_link?(search_result['title'], href: /^.*#{search_result['link']}$/)
       assert page.has_content?(search_result['description'])
     end
   end
