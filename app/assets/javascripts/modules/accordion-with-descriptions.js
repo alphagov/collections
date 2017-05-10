@@ -141,7 +141,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
           var subsectionView = new SubsectionView($(this).closest('.js-subsection'));
           subsectionView.toggle();
 
-          var toggleClick = new SubsectionToggleClick(subsectionView, accordionTracker, event);
+          var toggleClick = new SubsectionToggleClick(subsectionView, $subsections, accordionTracker);
           toggleClick.track();
 
           setOpenCloseAllText();
@@ -212,6 +212,8 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       var shouldUpdateHash = true;
 
       this.title = $subsectionElement.find('.js-subsection-title').text();
+      this.href = $titleLink.attr('href');
+      this.element = $subsectionElement;
 
       this.open = open;
       this.close = close;
@@ -220,6 +222,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       this.isOpen = isOpen;
       this.isClosed = isClosed;
       this.preventHashUpdate = preventHashUpdate;
+      this.numberOfContentItems = numberOfContentItems;
 
       function open() {
         setIsOpen(true);
@@ -254,6 +257,10 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       function preventHashUpdate() {
         shouldUpdateHash = false;
       }
+
+      function numberOfContentItems() {
+        return $subsectionContent.find('li').length;
+      }
     }
 
     function updateHash($subsectionElement) {
@@ -272,43 +279,35 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       history.replaceState({}, '', newLocation);
     }
 
-    // A constructor for an object that represents a click event on a subsection which
-    // handles the complexity of sending different tracking labels to Google Analytics
-    // depending on which part of the subsection the user clicked.
-    function SubsectionToggleClick(subsectionView, accordionTracker, event) {
-      var $target = $(event.target);
-
+    function SubsectionToggleClick(subsectionView, $subsections, accordionTracker) {
       this.track = trackClick;
 
       function trackClick() {
         accordionTracker.track('pageElementInteraction', trackingAction(), {label: trackingLabel()});
+        
+        if (GOVUK.analytics && GOVUK.analytics.trackEvent) {
+          GOVUK.analytics.trackEvent(
+            'navAccordionLinkClicked',
+            String(subsectionIndex()),
+            {
+              label: subsectionView.href,
+              dimension28: String(subsectionView.numberOfContentItems()),
+              dimension29: subsectionView.title
+            }
+          )
+        }
+      }
+
+      function trackingLabel() {
+        return subsectionIndex() + '. ' + subsectionView.title;
+      }
+
+      function subsectionIndex() {
+        return $subsections.index(subsectionView.element) + 1;
       }
 
       function trackingAction() {
         return (subsectionView.isClosed() ? 'accordionClosed' : 'accordionOpened');
-      }
-
-      function trackingLabel() {
-        if (clickedOnIcon()) {
-          return subsectionView.title + ' - ' + iconType() + ' Click';
-        } else if (clickedOnHeading()) {
-          return subsectionView.title + ' - Heading Click';
-        } else {
-          return subsectionView.title + ' - Click Elsewhere';
-        }
-      }
-
-      function clickedOnIcon() {
-        return $target.hasClass('subsection-icon');
-      }
-
-      function clickedOnHeading() {
-        return !!$target.parents('.js-subsection-title-link').length
-          || $target.hasClass('js-subsetion-title-link');
-      }
-
-      function iconType() {
-        return (subsectionView.isClosed() ? 'Minus' : 'Plus');
       }
     }
 
