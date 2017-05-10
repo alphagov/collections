@@ -31,7 +31,13 @@ describe SecondLevelBrowsePageController do
       end
 
       it "set correct expiry headers" do
-        get :show, top_level_slug: "benefits", second_level_slug: "entitlement"
+        get(
+          :show,
+          params: {
+            top_level_slug: "benefits",
+            second_level_slug: "entitlement"
+          }
+        )
 
         assert_equal "max-age=1800, public", response.headers["Cache-Control"]
       end
@@ -57,7 +63,13 @@ describe SecondLevelBrowsePageController do
 
       it "returns the original version of education pages as the A variant" do
         with_A_variant do
-          get :show, top_level_slug: "education", second_level_slug: "student-finance"
+          get(
+            :show,
+            params: {
+              top_level_slug: "education",
+              second_level_slug: "student-finance"
+            }
+          )
 
           assert_response 200
         end
@@ -65,7 +77,13 @@ describe SecondLevelBrowsePageController do
 
       it "redirects to the taxonomy navigation as the B variant" do
         with_B_variant assert_meta_tag: false do
-          get :show, top_level_slug: "education", second_level_slug: "student-finance"
+          get(
+            :show,
+            params: {
+              top_level_slug: "education",
+              second_level_slug: "student-finance"
+            }
+          )
 
           assert_response 302
           assert_redirected_to controller: "taxons", action: "show",
@@ -90,7 +108,13 @@ describe SecondLevelBrowsePageController do
         )
 
         with_B_variant assert_meta_tag: false do
-          get :show, top_level_slug: "education", second_level_slug: "school-life"
+          get(
+            :show,
+            params: {
+              top_level_slug: "education",
+              second_level_slug: "school-life"
+            }
+          )
 
           assert_response 302
           assert_redirected_to controller: "taxons", action: "show", taxon_base_path: "education"
@@ -115,7 +139,13 @@ describe SecondLevelBrowsePageController do
           )
 
           setup_ab_variant("EducationNavigation", variant)
-          get :show, top_level_slug: "benefits", second_level_slug: "entitlement"
+          get(
+            :show,
+            params: {
+              top_level_slug: "benefits",
+              second_level_slug: "entitlement"
+            }
+          )
 
           assert_response 200
           assert_response_not_modified_for_ab_test("EducationNavigation")
@@ -124,7 +154,14 @@ describe SecondLevelBrowsePageController do
         it "does not redirect education when the #{variant} variant is requested in JSON format" do
           setup_ab_variant("EducationNavigation", variant)
 
-          get :show, top_level_slug: "education", second_level_slug: "student-finance", format: :json
+          get(
+            :show,
+            params: {
+              top_level_slug: "education",
+              second_level_slug: "student-finance",
+              format: :json
+            }
+          )
 
           assert_response 200
           assert_response_not_modified_for_ab_test("EducationNavigation")
@@ -135,7 +172,13 @@ describe SecondLevelBrowsePageController do
     it "404 if the section does not exist" do
       content_store_does_not_have_item("/browse/crime-and-justice/frume")
 
-      get :show, top_level_slug: "crime-and-justice", second_level_slug: "frume"
+      get(
+        :show,
+        params: {
+          top_level_slug: "crime-and-justice",
+          second_level_slug: "frume"
+        }
+      )
 
       assert_response 404
     end

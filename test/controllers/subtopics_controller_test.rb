@@ -11,7 +11,7 @@ describe SubtopicsController do
       end
 
       it "sets expiry headers for 30 minutes" do
-        get :show, topic_slug: "oil-and-gas", subtopic_slug: "wells"
+        get :show, params: { topic_slug: "oil-and-gas", subtopic_slug: "wells" }
 
         assert_equal "max-age=1800, public", response.headers["Cache-Control"]
       end
@@ -20,7 +20,7 @@ describe SubtopicsController do
     it "returns a 404 status for GET subtopic with an invalid subtopic tag" do
       content_store_does_not_have_item("/topic/oil-and-gas/coal")
 
-      get :show, topic_slug: "oil-and-gas", subtopic_slug: "coal"
+      get :show, params: { topic_slug: "oil-and-gas", subtopic_slug: "coal" }
 
       assert_equal 404, response.status
     end
@@ -35,7 +35,13 @@ describe SubtopicsController do
 
       it "returns the original version of the page as the A variant" do
         with_A_variant do
-          get :show, topic_slug: "further-education-skills", subtopic_slug: "apprenticeships"
+          get(
+            :show,
+            params: {
+              topic_slug: "further-education-skills",
+              subtopic_slug: "apprenticeships"
+            }
+          )
 
           assert_response 200
         end
@@ -43,7 +49,13 @@ describe SubtopicsController do
 
       it "redirects to the taxonomy navigation as the B variant" do
         with_B_variant assert_meta_tag: false do
-          get :show, topic_slug: "further-education-skills", subtopic_slug: "apprenticeships"
+          get(
+            :show,
+            params: {
+              topic_slug: "further-education-skills",
+              subtopic_slug: "apprenticeships"
+            }
+          )
 
           assert_response 302
           assert_redirected_to controller: "taxons",
@@ -54,7 +66,13 @@ describe SubtopicsController do
 
       it "redirects to the taxonomy navigation as the B variant preserving the fragment" do
         with_B_variant assert_meta_tag: false do
-          get :show, topic_slug: "higher-education", subtopic_slug: "scholarships-for-overseas-students"
+          get(
+            :show,
+            params: {
+              topic_slug: "higher-education",
+              subtopic_slug: "scholarships-for-overseas-students"
+            }
+          )
 
           assert_response 302
           assert_redirected_to(
@@ -72,7 +90,10 @@ describe SubtopicsController do
 
           setup_ab_variant("EducationNavigation", variant)
 
-          get :show, topic_slug: "oil-and-gas", subtopic_slug: "wells"
+          get(
+            :show,
+            params: { topic_slug: "oil-and-gas", subtopic_slug: "wells" }
+          )
 
           assert_response 200
           assert_response_not_modified_for_ab_test("EducationNavigation")
