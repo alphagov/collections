@@ -5,21 +5,21 @@ class ConcreteTestController < ApplicationController
   protect_from_forgery except: :js_or_atom
 
   def test
-    render text: 'ok'
+    render html: 'ok'
   end
 
   def json
     respond_to do |format|
-      format.html { render text: 'html' }
-      format.json { render text: '{}' }
+      format.html { render body: 'html' }
+      format.json { render body: '{}' }
     end
   end
 
   def js_or_atom
     respond_to do |format|
-      format.html  { render text: 'html' }
-      format.js    { render text: 'javascript' }
-      format.atom  { render text: 'atom' }
+      format.html  { render body: 'html' }
+      format.js    { render body: 'javascript' }
+      format.atom  { render body: 'atom' }
     end
   end
 end
@@ -45,7 +45,7 @@ describe ConcreteTestController do
         get :test
 
         assert_equal 200, response.status, "mime type #{type} should be acceptable"
-        assert_equal Mime[:html], response.content_type
+        assert_equal Mime[:html].to_s, response.content_type
       end
     end
   end

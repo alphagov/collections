@@ -41,7 +41,7 @@ private
 
   def restrict_request_formats
     unless can_handle_format?(request.format)
-      render status: :not_acceptable, text: "Request format #{request.format} not handled."
+      render status: :not_acceptable, plain: "Request format #{request.format} not handled."
     end
   end
 
