@@ -33,6 +33,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_tagged_content_to_the_taxon
     and_the_content_tagged_to_the_grandfather_taxon_has_tracking_attributes
     and_the_page_is_tracked_as_a_grid
+    and_i_can_see_an_email_signup_link
   end
 
   it 'is possible to browse a taxon page that does not have grandchildren' do
@@ -47,6 +48,8 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_the_accordion_has_tracking_attributes
     and_i_can_see_tagged_content_to_the_taxon
     and_the_page_is_tracked_as_an_accordion
+    and_i_can_see_an_email_signup_link
+    and_all_sections_apart_from_general_information_have_an_email_signup_link
   end
 
   it 'does not show the general information section when there is no content tagged' do
@@ -66,6 +69,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_tagged_content_to_the_taxon
     and_the_content_tagged_to_the_leaf_taxon_has_tracking_attributes
     and_the_page_is_tracked_as_a_leaf_node_taxon
+    and_i_can_see_an_email_signup_link
   end
 
 private
@@ -316,6 +320,30 @@ private
 
   def and_the_page_is_tracked_as_a_leaf_node_taxon
     assert_navigation_page_type_tracking("leaf")
+  end
+
+  def and_i_can_see_an_email_signup_link
+    govuk_title = page.find('.govuk-title')
+
+    assert govuk_title.has_link?(
+      'Get email alerts for this topic',
+      href: "/email-signup/?topic=#{current_path}"
+    )
+  end
+
+  def and_all_sections_apart_from_general_information_have_an_email_signup_link
+    general_information, *subsections = page.all('.subsection').to_a
+
+    refute general_information.has_link?(
+      'Get email alerts for this topic'
+    )
+
+    subsections.each do |subsection|
+      assert subsection.has_link?(
+        'Get email alerts for this topic',
+        href: "/email-signup/?topic=#{subsection[:id]}"
+      )
+    end
   end
 
   def assert_navigation_page_type_tracking(expected_page_type)
