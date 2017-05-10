@@ -69,7 +69,7 @@ describe ConcreteTestController do
 
       get :json, format: :json
       assert_response :success
-      assert_equal Mime::JSON, response.content_type
+      assert_equal Mime[:json], response.content_type
       assert_equal '{}', response.body
 
       get :json, format: :atom
@@ -86,12 +86,12 @@ describe ConcreteTestController do
 
       get :js_or_atom, format: :js
       assert_response :success
-      assert_equal Mime::JS, response.content_type
+      assert_equal Mime[:js], response.content_type
       assert_equal 'javascript', response.body
 
       get :js_or_atom, format: :atom
       assert_response :success
-      assert_equal Mime::ATOM, response.content_type
+      assert_equal Mime[:atom], response.content_type
       assert_equal 'atom', response.body
 
       get :js_or_atom, format: :json
