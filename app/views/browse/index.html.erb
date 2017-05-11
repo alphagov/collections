@@ -1,7 +1,7 @@
 <% content_for :title, "All categories" %>
 <% content_for :page_class, "browse" %>
 
-<div class="browse-panes root">
+<div class="browse-panes root" data-module="track-click">
   <%= render 'top_level_browse_pages',
     top_level_browse_pages: page.top_level_browse_pages,
     ab_variant: ab_variant %>

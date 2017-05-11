@@ -4,9 +4,20 @@
     <p class="sort-order"><%= hairspace 'A to Z' %></p>
   <% end %>
   <ul>
-    <% second_level_browse_pages.each do |browse_page| %>
+    <% second_level_browse_pages.each_with_index do |browse_page, index| %>
       <li class='<%= browsing_in_second_level_page?(browse_page) ? 'active' : nil %>'>
-        <%= link_to browse_page.base_path do %>
+        <%= link_to(
+          browse_page.base_path,
+          data: {
+            track_category: 'secondLevelBrowseLinkClicked',
+            track_action: "#{index + 1}",
+            track_label: browse_page.base_path,
+            track_options: {
+              dimension28: second_level_browse_pages.count.to_s,
+              dimension29: browse_page.title,
+            },
+          },
+        ) do %>
           <h3><%= browse_page.title %></h3>
           <p><%= browse_page.description %></p>
         <% end %>
