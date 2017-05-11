@@ -1,7 +1,7 @@
 <div class="pane-inner <%= page.lists.curated? ? 'curated-list' : 'a-to-z' %>">
   <h1 tabindex="-1"><%= page.title %></h1>
 
-  <% page.lists.each do |list| %>
+  <% page.lists.each_with_index do |list, section_index| %>
     <% if page.lists.curated? %>
       <h2 class='list-header'><%= list.title %></h2>
     <% else %>
@@ -9,8 +9,22 @@
     <% end %>
 
     <ul>
-      <% list.contents.each do |list_item| %>
-        <li><%= link_to list_item.title, list_item.base_path %></li>
+      <% list.contents.each_with_index do |list_item, index| %>
+        <li>
+          <%= link_to(
+            list_item.title,
+            list_item.base_path,
+            data: {
+              track_category: 'thirdLevelBrowseLinkClicked',
+              track_action: "#{section_index + 1}.#{index + 1}",
+              track_label: list_item.base_path,
+              track_options: {
+                dimension28: list.contents.count.to_s,
+                dimension29: list_item.title,
+              },
+            },
+          ) %>
+        </li>
       <% end %>
     </ul>
   <% end %>
@@ -19,8 +33,22 @@
     <div class="detailed-guidance">
       <h2>Detailed guidance</h2>
       <ul>
-        <% page.related_topics.each do |related_topic| %>
-          <li><%= link_to related_topic.title, related_topic.base_path %></li>
+        <% page.related_topics.each_with_index do |related_topic, index| %>
+          <li>
+            <%= link_to(
+              related_topic.title,
+              related_topic.base_path,
+              data: {
+                track_category: 'thirdLevelBrowseLinkClicked',
+                track_action: "#{page.lists.count + 1}.#{index + 1}",
+                track_label: related_topic.base_path,
+                track_options: {
+                  dimension28: page.related_topics.count.to_s,
+                  dimension29: related_topic.title,
+                },
+              },
+            ) %>
+          </li>
         <% end %>
       </ul>
     </div>
