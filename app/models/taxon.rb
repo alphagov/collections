@@ -1,5 +1,7 @@
 class Taxon
   attr_reader :content_item
+  attr_accessor :can_subscribe, :tagged_content
+
   delegate(
     :content_id,
     :base_path,
@@ -53,5 +55,11 @@ class Taxon
 
   def merge(to_merge)
     Taxon.new(content_item.merge(to_merge))
+  end
+
+  def can_subscribe?
+    return @can_subscribe if defined?(@can_subscribe)
+
+    true
   end
 end

@@ -16,7 +16,7 @@
                 </div>
 
                 <div class="subsection-content js-subsection-content" id="subsection_content_<%= index + 1 %>">
-                  <% unless taxon.to_hash['has_tagged_content?'] %>
+                  <% if taxon.can_subscribe? %>
                     <%= render partial: 'email_alerts', locals: { taxon: taxon } %>
                   <% end %>
                   <%= render partial: 'content_list_for_child_taxon', locals: {

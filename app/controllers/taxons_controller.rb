@@ -26,13 +26,18 @@ private
     current_taxon_title = 'General information and guidance'
 
     if taxon.tagged_content.count > 0
-      accordion_items.unshift(
-        taxon.merge(
+      general_information = Taxon.new(
+        ContentItem.new(
+          'content_id' => taxon.content_id,
           'title' => current_taxon_title,
-          'description' => '',
           'base_path' => current_taxon_title.downcase.tr(' ', '-'),
-          'has_tagged_content?' => true,
+          'description' => ''
         )
+      )
+      general_information.can_subscribe = false
+
+      accordion_items.unshift(
+        general_information
       )
     end
 
