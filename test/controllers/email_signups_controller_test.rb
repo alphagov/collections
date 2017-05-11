@@ -25,7 +25,7 @@ describe EmailSignupsController do
 
   describe 'GET :new with a valid subtopic' do
     it 'displays the subscription form' do
-      get :new, @valid_subtopic_params
+      get :new, params: @valid_subtopic_params
 
       assert_response :success
     end
@@ -33,7 +33,7 @@ describe EmailSignupsController do
 
   describe 'GET :new with an invalid subtopic' do
     it 'shows an error message' do
-      get :new, @invalid_subtopic_params
+      get :new, params: @invalid_subtopic_params
 
       assert_response :not_found
     end
@@ -48,11 +48,11 @@ describe EmailSignupsController do
     it 'registers the signup' do
       @email_signup.expects(:save).returns(true)
 
-      post :create, @valid_subtopic_params
+      post :create, params: @valid_subtopic_params
     end
 
     it 'redirects to the govdelivery URL' do
-      post :create, @valid_subtopic_params
+      post :create, params: @valid_subtopic_params
 
       assert_response :redirect
       assert_redirected_to 'http://govdelivery_signup_url'
@@ -63,11 +63,11 @@ describe EmailSignupsController do
     it "doesn't register the subscription" do
       @email_signup.expects(:save).never
 
-      post :create, @invalid_subtopic_params
+      post :create, params: @invalid_subtopic_params
     end
 
     it "404s" do
-      post :create, @invalid_subtopic_params
+      post :create, params: @invalid_subtopic_params
 
       assert_response :not_found
     end

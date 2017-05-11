@@ -12,7 +12,7 @@ describe TaxonsController do
 
     it "returns 200 if the new navigation is enabled in variant 'B'" do
       with_B_variant do
-        get :show, taxon_base_path: "education"
+        get :show, params: { taxon_base_path: "education" }
       end
 
       assert_response 200
@@ -20,7 +20,7 @@ describe TaxonsController do
 
     it "returns 200 if the new navigation is enabled in variant 'A'" do
       with_A_variant do
-        get :show, taxon_base_path: "education"
+        get :show, params: { taxon_base_path: "education" }
       end
 
       assert_response 200
