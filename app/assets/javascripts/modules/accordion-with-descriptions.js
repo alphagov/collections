@@ -284,9 +284,9 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
       function trackClick() {
         accordionTracker.track('pageElementInteraction', trackingAction(), {label: trackingLabel()});
-        
-        if (GOVUK.analytics && GOVUK.analytics.trackEvent) {
-          GOVUK.analytics.trackEvent(
+
+        if (!subsectionView.isClosed()) {
+          accordionTracker.track(
             'navAccordionLinkClicked',
             String(subsectionIndex()),
             {
@@ -316,6 +316,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     function AccordionTracker(totalSubsections) {
       this.track = function(category, action, options) {
         if (GOVUK.analytics && GOVUK.analytics.trackEvent) {
+          options = options || {};
           options["dimension28"] = totalSubsections.toString();
           GOVUK.analytics.trackEvent(category, action, options);
         }
