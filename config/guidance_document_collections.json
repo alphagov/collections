@@ -50,11 +50,6 @@
     "surface_content": true
   },
   {
-    "base_path": "/government/collections/register-of-apprenticeship-training-providers",
-    "surface_collection": true,
-    "surface_content": false
-  },
-  {
     "base_path": "/government/collections/sfa-european-social-fund",
     "surface_collection": false,
     "surface_content": true
@@ -228,11 +223,6 @@
     "base_path": "/government/collections/sfa-national-careers-service",
     "surface_collection": true,
     "surface_content": false
-  },
-  {
-    "base_path": "/government/collections/community-learning-government-funding",
-    "surface_collection": false,
-    "surface_content": true
   },
   {
     "base_path": "/government/collections/sfa-funding-rules-2016-to-2017",
@@ -665,11 +655,6 @@
     "surface_content": true
   },
   {
-    "base_path": "/government/collections/sfa-learner-support-financial-help-for-learners",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
     "base_path": "/government/collections/apprenticeships-equality-and-diversity",
     "surface_collection": false,
     "surface_content": true
@@ -831,11 +816,6 @@
   },
   {
     "base_path": "/government/collections/statistics-special-educational-needs-sen",
-    "surface_collection": false,
-    "surface_content": true
-  },
-  {
-    "base_path": "/government/collections/lldd-financial-support-for-learners",
     "surface_collection": false,
     "surface_content": true
   },
