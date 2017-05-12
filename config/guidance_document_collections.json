@@ -1006,8 +1006,8 @@
   },
   {
     "base_path": "/government/collections/national-curriculum-assessments-practice-materials",
-    "surface_collection": false,
-    "surface_content": true
+    "surface_collection": true,
+    "surface_content": false
   },
   {
     "base_path": "/government/collections/higher-education-and-research-bill",
