@@ -1148,5 +1148,30 @@
     "base_path": "/government/collections/parental-responsibility-measures-attendance-census",
     "surface_collection": true,
     "surface_content": false
+  },
+  {
+    "base_path": "/government/collections/ofsted-examples-of-good-practice-in-mathematics-teaching",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofquals-reliability-research",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/pilot-of-the-linked-pair-of-gcses-in-mathematics",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/ofsted-examples-of-good-practice-in-personal-social-and-health-education",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/pe-and-sport-survey",
+    "surface_collection": false,
+    "surface_content": true
   }
 ]
