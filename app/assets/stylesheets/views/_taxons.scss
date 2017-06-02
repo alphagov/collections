@@ -58,6 +58,10 @@
           min-height: (5 * $gutter);
         }
       }
+
+      li:nth-child(3n+1) {
+        clear: left;
+      }
     }
 
     p {
@@ -66,10 +70,6 @@
       &:last-child {
         margin-bottom: 0;
       }
-    }
-
-    .leftmost-row-cell-clear-float {
-      clear: left;
     }
   }
 
