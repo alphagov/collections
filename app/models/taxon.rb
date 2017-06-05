@@ -20,6 +20,12 @@ class Taxon
     @tagged_content ||= TaggedContent.fetch(content_id)
   end
 
+  def most_popular_content
+    @most_popular_content ||= MostPopularContent.fetch(
+      content_id: content_id,
+    )
+  end
+
   def self.find(base_path)
     content_item = ContentItem.find!(base_path)
     new(content_item)
