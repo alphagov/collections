@@ -173,60 +173,46 @@ describe TaggedContent do
     end
 
     it 'starts from the first page' do
-      assert_includes_params(start: 0)
+      assert_includes_params(start: 0) do
+        tagged_content.fetch
+      end
     end
 
     it 'requests all results' do
-      assert_includes_params(count: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING)
+      assert_includes_params(count: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING) do
+        tagged_content.fetch
+      end
     end
 
     it 'requests a limited number of fields' do
-      assert_includes_params(
-        fields: %w(title description link document_collections content_store_document_type)
-      )
+      expected_fields =
+        %w(title description link document_collections content_store_document_type)
+
+      assert_includes_params(fields: expected_fields) do
+        tagged_content.fetch
+      end
     end
 
     it 'orders the results by title' do
-      assert_includes_params(order: 'title')
+      assert_includes_params(order: 'title') do
+        tagged_content.fetch
+      end
     end
 
     it 'filters the results by taxon' do
-      assert_includes_params(filter_taxons: [taxon_content_id])
+      assert_includes_params(filter_taxons: [taxon_content_id]) do
+        tagged_content.fetch
+      end
     end
 
     it 'filters guidance content only' do
-      assert_includes_params(
-        filter_navigation_document_supertype: 'guidance'
-      )
+      assert_includes_params(filter_navigation_document_supertype: 'guidance') do
+        tagged_content.fetch
+      end
     end
   end
 
 private
-
-  def assert_includes_params(expected_params)
-    search_results = {
-      'results' => [
-        {
-          'title' => 'Doc 1'
-        },
-        {
-          'title' => 'Doc 2'
-        }
-      ]
-    }
-
-    Services.
-      rummager.
-      stubs(:search).
-      with { |params| params.including?(expected_params) }.
-      returns(search_results)
-
-    results = tagged_content.fetch
-    assert_equal(results.count, 2)
-
-    assert_equal(results.first.title, 'Doc 1')
-    assert_equal(results.last.title, 'Doc 2')
-  end
 
   def taxon_content_id
     'c3c860fc-a271-4114-b512-1c48c0f82564'

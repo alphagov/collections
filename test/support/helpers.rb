@@ -31,4 +31,30 @@ class ActiveSupport::TestCase
     end
   end
   # rubocop:enable Style/MethodName
+
+  def assert_includes_params(expected_params)
+    search_results = {
+      'results' => [
+        {
+          'title' => 'Doc 1'
+        },
+        {
+          'title' => 'Doc 2'
+        }
+      ]
+    }
+
+    Services.
+      rummager.
+      stubs(:search).
+      with { |params| params.including?(expected_params) }.
+      returns(search_results)
+
+    results = yield
+
+    assert_equal(results.count, 2)
+
+    assert_equal(results.first.title, 'Doc 1')
+    assert_equal(results.last.title, 'Doc 2')
+  end
 end
