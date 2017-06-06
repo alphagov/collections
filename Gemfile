@@ -7,7 +7,7 @@ gem 'uglifier', '~> 2.7.1'
 gem 'govuk_frontend_toolkit', '~> 4.3.0'
 
 gem 'unicorn', '~> 4.9.0'
-gem 'airbrake', '~> 5.0.0'
+gem 'airbrake', '~> 5.5'
 gem 'logstasher', '0.6.2' # 0.6.5+ changes the JSON schema used for events
 gem 'govuk_navigation_helpers', '~> 5.1'
 gem 'govuk_ab_testing', '~> 2.0'

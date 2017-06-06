@@ -40,8 +40,8 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     addressable (2.3.8)
-    airbrake (5.0.5)
-      airbrake-ruby (~> 1.0)
+    airbrake (5.8.1)
+      airbrake-ruby (~> 1.8)
     airbrake-ruby (1.8.0)
     arel (7.1.4)
     ast (2.3.0)
@@ -82,7 +82,7 @@ GEM
       nokogiri (~> 1.5)
       railties (>= 3, < 5.1)
     cucumber-wire (0.0.1)
-    debug_inspector (0.0.2)
+    debug_inspector (0.0.3)
     diff-lcs (1.2.5)
     docile (1.1.5)
     domain_name (0.5.20170223)
@@ -279,7 +279,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  airbrake (~> 5.0.0)
+  airbrake (~> 5.5)
   better_errors
   binding_of_caller
   capybara (~> 2.14.0)
@@ -309,4 +309,4 @@ DEPENDENCIES
   webmock (~> 1.21.0)
 
 BUNDLED WITH
-   1.14.5
+   1.14.6
