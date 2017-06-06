@@ -9,7 +9,7 @@ gem 'govuk_frontend_toolkit', '~> 4.3.0'
 gem 'unicorn', '~> 4.9.0'
 gem 'airbrake', '~> 5.0.0'
 gem 'logstasher', '0.6.2' # 0.6.5+ changes the JSON schema used for events
-gem 'govuk_navigation_helpers', '~> 5.1'
+gem 'govuk_navigation_helpers', '6.3.0'
 gem 'govuk_ab_testing', '~> 2.0'
 gem 'statsd-ruby', '1.3.0', require: 'statsd'
 
@@ -22,7 +22,7 @@ end
 if ENV['API_DEV']
   gem 'gds-api-adapters', path: '../gds-api-adapters'
 else
-  gem 'gds-api-adapters', '~> 41.0'
+  gem 'gds-api-adapters', '~> 46.0'
 end
 
 gem 'plek', '~> 1.11.0'
