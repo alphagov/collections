@@ -10,7 +10,7 @@ gem 'unicorn', '~> 4.9.0'
 gem 'airbrake', '~> 5.5'
 gem 'logstasher', '0.6.2' # 0.6.5+ changes the JSON schema used for events
 gem 'govuk_navigation_helpers', '~> 5.1'
-gem 'govuk_ab_testing', '~> 2.0'
+gem 'govuk_ab_testing', '~> 2.3'
 gem 'statsd-ruby', '1.3.0', require: 'statsd'
 
 if ENV['SLIMMER_DEV']

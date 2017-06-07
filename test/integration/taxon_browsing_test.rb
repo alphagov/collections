@@ -16,12 +16,18 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   after do
+    assert_page_tracked_in_ab_test("NavigationTest", @blue_box_variant, '61')
+    assert_response_is_cached_by_variant("NavigationTest")
+
+    Capybara.reset_sessions!
+
     GovukAbTesting.configure do |config|
       config.acceptance_test_framework = @existing_framework
     end
   end
 
   it 'is possible to browse a taxon page that has grandchildren' do
+    given_i_am_in_the_a_variant_of_the_blue_box_ab_test
     given_there_is_a_taxon_with_grandchildren
     when_i_visit_the_taxon_page
     then_i_can_see_there_is_a_page_title
@@ -37,6 +43,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   it 'is possible to browse a taxon page that does not have grandchildren' do
+    given_i_am_in_the_a_variant_of_the_blue_box_ab_test
     given_there_is_a_taxon_without_grandchildren
     when_i_visit_the_taxon_page
     then_i_can_see_there_is_a_page_title
@@ -53,6 +60,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   it 'does not show the general information section when there is no content tagged' do
+    given_i_am_in_the_a_variant_of_the_blue_box_ab_test
     given_there_is_a_taxon_without_grandchildren
     and_the_taxon_has_no_tagged_content
     when_i_visit_the_taxon_page
@@ -60,6 +68,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   it 'is possible to browse a taxon page that does not have child taxons' do
+    given_i_am_in_the_a_variant_of_the_blue_box_ab_test
     given_there_is_a_taxon_without_child_taxons
     when_i_visit_the_taxon_page
     then_i_can_see_there_is_a_page_title
@@ -72,21 +81,77 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_an_email_signup_link
   end
 
+  it 'shows the blue box on an accordion page in the B variant' do
+    given_i_am_in_the_b_variant_of_the_blue_box_ab_test
+    given_there_is_a_taxon_without_grandchildren
+    and_there_are_popular_items_for_the_taxon
+    when_i_visit_the_taxon_page
+    then_i_can_see_the_blue_box_with_its_details
+    and_the_blue_box_links_have_tracking_attributes
+  end
+
+  it 'shows the blue box in a leaf page when there are more than 15 links in the B variant' do
+    given_i_am_in_the_b_variant_of_the_blue_box_ab_test
+    given_there_is_a_taxon_without_child_taxons
+    and_there_are_popular_items_for_the_taxon
+    when_i_visit_the_taxon_page
+    then_i_can_see_the_blue_box_with_its_details
+    and_the_blue_box_links_have_tracking_attributes
+  end
+
+  it 'does not appear in a leaf page when there are less that 15 links' do
+    given_i_am_in_the_b_variant_of_the_blue_box_ab_test
+    given_there_is_a_taxon_without_child_taxons
+    and_that_taxon_has_few_content_items_tagged_to_it
+    and_there_are_popular_items_for_the_taxon
+    when_i_visit_the_taxon_page
+    then_i_cannot_see_the_blue_box_section
+  end
+
+  it 'does not appear in the A variant of the Blue Box A/B test' do
+    given_i_am_in_the_a_variant_of_the_blue_box_ab_test
+    given_there_is_a_taxon_without_grandchildren
+    and_there_are_popular_items_for_the_taxon
+    when_i_visit_the_taxon_page
+    then_i_cannot_see_the_blue_box_section
+  end
+
 private
 
-  def search_results
-    [
-      {
-        'title' => 'Content item 1',
-        'description' => 'Description of content item 1',
-        'link' => 'content-item-1'
-      },
-      {
-        'title' => 'Content item 2',
-        'description' => 'Description of content item 2',
-        'link' => 'content-item-2'
-      },
-    ]
+  def given_i_am_in_the_b_variant_of_the_blue_box_ab_test
+    setup_ab_variant("NavigationTest", "B")
+    @blue_box_variant = "B"
+  end
+
+  def given_i_am_in_the_a_variant_of_the_blue_box_ab_test
+    setup_ab_variant("NavigationTest", "A")
+    @blue_box_variant = "A"
+  end
+
+  def then_i_can_see_the_blue_box_with_its_details
+    blue_box = page.find('.high-volume')
+
+    assert_equal(
+      5,
+      blue_box.all('a').count,
+      'There should be 5 links in the blue box'
+    )
+
+    popular_items.each do |popular_item|
+      assert blue_box.has_selector?('a', text: popular_item['title'])
+    end
+  end
+
+  def then_i_cannot_see_the_blue_box_section
+    refute page.has_selector?('.high-volume')
+  end
+
+  def search_results(count = 15)
+    generate_search_results(count)
+  end
+
+  def popular_items
+    generate_search_results(5)
   end
 
   def given_there_is_a_taxon_with_grandchildren
@@ -121,6 +186,15 @@ private
     stub_content_for_taxon(student_finance_taxon['content_id'], search_results)
     stub_content_for_taxon(student_sponsorship_taxon['content_id'], search_results)
     stub_content_for_taxon(student_loans_taxon['content_id'], search_results)
+  end
+
+  def and_there_are_popular_items_for_the_taxon
+    raise "You need to setup a taxon before using this method" if @taxon.nil?
+
+    stub_most_popular_content_for_taxon(
+      @taxon.content_id,
+      popular_items
+    )
   end
 
   def given_there_is_a_taxon_without_grandchildren
@@ -168,9 +242,19 @@ private
     stub_content_for_taxon(@taxon.content_id, search_results)
   end
 
+  def and_that_taxon_has_few_content_items_tagged_to_it
+    raise "You need to setup a taxon before using this method" if @taxon.nil?
+
+    stub_content_for_taxon(@taxon.content_id, search_results(2))
+  end
+
   def when_i_visit_the_taxon_page
     with_B_variant do
       visit @base_path
+
+      if (400..599).cover?(page.status_code)
+        raise "Application error (#{page.status_code}): \n#{page.body}"
+      end
     end
   end
 
@@ -251,7 +335,7 @@ private
     assert subsection.has_selector?('.subsection-title', text: /general information and guidance/i)
     assert subsection.has_selector?(
       '.subsection-content .subsection-list-item a',
-      count: 2
+      count: search_results.count
     )
   end
 
@@ -289,8 +373,8 @@ private
     assert page.has_css?(
       "a[data-track-category='navAccordionLinkClicked']" +
       "[data-track-action='2.2']" +
-      "[data-track-label='content-item-2']" +
-      "[data-track-options='{\"dimension28\":\"2\",\"dimension29\":\"Content item 2\"}']" +
+      "[data-track-label='/content-item-2']" +
+      "[data-track-options='{\"dimension28\":\"#{search_results.count}\",\"dimension29\":\"Content item 2\"}']" +
       "[data-module='track-click']"
     )
   end
@@ -303,11 +387,24 @@ private
   end
 
   def and_the_content_tagged_to_the_grandfather_taxon_has_tracking_attributes
-    assert_leaf_tracking_attributes_present('navGridLeafLinkClicked')
+    assert_leaf_tracking_attributes_present(
+      'navGridLeafLinkClicked',
+      search_results
+    )
+  end
+
+  def and_the_blue_box_links_have_tracking_attributes
+    assert_leaf_tracking_attributes_present(
+      'navBlueBoxLinkClicked',
+      popular_items
+    )
   end
 
   def and_the_content_tagged_to_the_leaf_taxon_has_tracking_attributes
-    assert_leaf_tracking_attributes_present('navLeafLinkClicked')
+    assert_leaf_tracking_attributes_present(
+      'navLeafLinkClicked',
+      search_results
+    )
   end
 
   def and_the_page_is_tracked_as_a_grid
@@ -350,18 +447,18 @@ private
     assert page.has_selector?("meta[name='govuk:navigation-page-type'][content='#{expected_page_type}']", visible: false)
   end
 
-  def assert_leaf_tracking_attributes_present(tracking_category)
+  def assert_leaf_tracking_attributes_present(tracking_category, results)
     tracked_links = page.all(:css, "a[data-track-category='#{tracking_category}']")
-    tracked_links.size.must_equal search_results.size
+    tracked_links.size.must_equal(results.size)
 
     tracked_links.each_with_index do |link, index|
       expected_tracking_options = {
-          dimension28: search_results.size.to_s,
-          dimension29: search_results[index]['title'],
+          dimension28: results.size.to_s,
+          dimension29: results[index]['title'],
       }
 
       link[:'data-track-action'].must_equal "#{index + 1}"
-      link[:'data-track-label'].must_equal search_results[index]['link']
+      link[:'data-track-label'].must_equal results[index]['link']
       link[:'data-track-options'].must_equal expected_tracking_options.to_json
       link[:'data-module'].must_equal 'track-click'
     end
@@ -370,8 +467,8 @@ private
     assert page.has_css?(
       "a[data-track-category='#{tracking_category}']" +
       "[data-track-action='2']" +
-      "[data-track-label='content-item-2']" +
-      "[data-track-options='{\"dimension28\":\"2\",\"dimension29\":\"Content item 2\"}']" +
+      "[data-track-label='/content-item-2']" +
+      "[data-track-options='{\"dimension28\":\"#{results.size}\",\"dimension29\":\"Content item 2\"}']" +
       "[data-module='track-click']"
     )
   end

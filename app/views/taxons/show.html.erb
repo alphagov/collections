@@ -2,7 +2,9 @@
 <% content_for :page_class, "taxon-page" %>
 <% content_for :meta_tags do %>
   <meta name="description" content="<%= taxon.description %>">
-  <%= ab_variant.analytics_meta_tag.html_safe %>
+  <%= education_ab_test.analytics_meta_tag.html_safe %>
+  <%= blue_box_ab_test.analytics_meta_tag.html_safe %>
+
   <meta name="govuk:navigation-page-type" content="<%=taxon_page_rendering_type(taxon)%>" />
 <% end %>
 
@@ -43,10 +45,27 @@
   } %>
 <% else %>
   <% if taxon.children? %>
+    <% if blue_box_ab_test.should_present? %>
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <%= render partial: 'high-volume', locals: { taxon: taxon } %>
+        </div>
+      </div>
+    <% end %>
+
     <%= render partial: 'accordion', locals: {
       accordion_content: taxon_overview_and_child_taxons(taxon),
     } %>
   <% else %>
+
+    <% if blue_box_ab_test.should_present? %>
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <%= render partial: 'high-volume', locals: { taxon: taxon } %>
+        </div>
+      </div>
+    <% end %>
+
     <%= render partial: 'tagged_content_list', locals: {
       taxon: taxon,
       tagged_content: taxon.tagged_content,

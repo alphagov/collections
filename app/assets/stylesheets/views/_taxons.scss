@@ -242,4 +242,20 @@
       font-weight: bold;
     }
   }
+
+  .high-volume {
+    color: $white;
+    background-color: $govuk-blue;
+    padding: $gutter;
+    margin-bottom: $gutter;
+
+    ol {
+      list-style-type: none;
+    }
+
+    a {
+      @include core-19;
+      color: $white;
+    }
+  }
 }
