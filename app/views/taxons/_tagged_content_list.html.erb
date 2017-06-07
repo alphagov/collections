@@ -1,17 +1,17 @@
 <% is_grid ||= false %>
 
-<% if tagged_content.any? || !is_grid %>
+<% if presented_taxon.tagged_content.any? || !is_grid %>
   <div class="grid-row">
     <div class="column-two-thirds">
       <div class="parent-topic-contents">
         <div class="topic-content">
-          <% if taxon.child_taxons.present? %>
-            <h2><%= taxon.title %> guidance</h2>
-            <p><%= taxon.description %></p>
+          <% if presented_taxon.child_taxons.present? %>
+            <h2><%= presented_taxon.title %> guidance</h2>
+            <p><%= presented_taxon.description %></p>
           <% end %>
 
           <ol>
-            <% tagged_content.each_with_index do |content_item, index| %>
+            <% presented_taxon.tagged_content.each_with_index do |content_item, index| %>
               <li>
                 <h2>
                   <%= link_to(
@@ -22,7 +22,7 @@
                       track_action: index + 1,
                       track_label: content_item.base_path,
                       track_options: {
-                          dimension28: tagged_content.size.to_s,
+                          dimension28: presented_taxon.tagged_content.size.to_s,
                           dimension29: content_item.title,
                       },
                       module: 'track-click',

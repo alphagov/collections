@@ -1,7 +1,7 @@
 <div class="high-volume">
   <h2>Most viewed in this topic</h2>
   <ol>
-    <% taxon.most_popular_content.each_with_index do |content_item, index| %>
+    <% presented_taxon.most_popular_content.each_with_index do |content_item, index| %>
       <li>
       <%=
         link_to(
@@ -12,7 +12,7 @@
             track_action: "#{index + 1}",
             track_label: content_item.base_path,
             track_options: {
-              dimension28: taxon.most_popular_content.size.to_s,
+              dimension28: presented_taxon.most_popular_content.size.to_s,
               dimension29: content_item.title,
             },
             module: 'track-click',

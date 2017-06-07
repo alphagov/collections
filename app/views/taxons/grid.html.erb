@@ -1,6 +1,17 @@
+<%=
+  render(
+    partial: 'common',
+    locals: {
+      presented_taxon: presented_taxon,
+      education_ab_test: education_ab_test,
+      blue_box_ab_test: blue_box_ab_test
+    }
+  )
+%>
+
 <nav role="navigation" class="child-topics-list">
   <ol>
-    <% child_taxons.each_with_index do |child_taxon, index| %>
+    <% presented_taxon.child_taxons.each_with_index do |child_taxon, index| %>
       <li class="<%= 'leftmost-row-cell-clear-float' if index % 3 == 0 %>">
         <h2>
           <%= link_to(
@@ -11,7 +22,7 @@
               track_action: index + 1,
               track_label: child_taxon.base_path,
               track_options: {
-                dimension28: child_taxons.size.to_s,
+                dimension28: presented_taxon.child_taxons.size.to_s,
                 dimension29: child_taxon.title,
               },
               module: 'track-click',
@@ -23,3 +34,8 @@
     <% end %>
   </ol>
 </nav>
+
+<%= render partial: 'tagged_content_list', locals: {
+  presented_taxon: presented_taxon,
+  is_grid: true,
+} %>

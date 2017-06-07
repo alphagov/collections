@@ -1,0 +1,22 @@
+<%=
+  render(
+    partial: 'common',
+    locals: {
+      presented_taxon: presented_taxon,
+      education_ab_test: education_ab_test,
+      blue_box_ab_test: blue_box_ab_test
+    }
+  )
+%>
+
+<% if blue_box_ab_test.should_present? %>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <%= render partial: 'high-volume', locals: { presented_taxon: presented_taxon } %>
+    </div>
+  </div>
+<% end %>
+
+<%= render partial: 'tagged_content_list', locals: {
+  presented_taxon: presented_taxon,
+} %>
