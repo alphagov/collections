@@ -119,13 +119,13 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
 private
 
   def given_i_am_in_the_b_variant_of_the_blue_box_ab_test
-    setup_ab_variant("NavigationTest", "B")
-    @blue_box_variant = "B"
+    setup_ab_variant("NavigationTest", "ShowBlueBox")
+    @blue_box_variant = "ShowBlueBox"
   end
 
   def given_i_am_in_the_a_variant_of_the_blue_box_ab_test
-    setup_ab_variant("NavigationTest", "A")
-    @blue_box_variant = "A"
+    setup_ab_variant("NavigationTest", "NoBlueBox")
+    @blue_box_variant = "NoBlueBox"
   end
 
   def then_i_can_see_the_blue_box_with_its_details

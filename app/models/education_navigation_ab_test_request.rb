@@ -13,7 +13,7 @@ class EducationNavigationAbTestRequest
   end
 
   def should_present_new_navigation?
-    requested_variant.variant_b?
+    requested_variant.variant?('B')
   end
 
   def set_response_vary_header(response)

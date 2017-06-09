@@ -7,7 +7,12 @@ class BlueBoxAbTestRequest
 
   def initialize(request, presented_taxon)
     @presented_taxon = presented_taxon
-    @ab_test = GovukAbTesting::AbTest.new("NavigationTest", dimension: '61')
+    @ab_test = GovukAbTesting::AbTest.new(
+      "NavigationTest",
+      dimension: '61',
+      allowed_variants: %w(NoBlueBox ShowBlueBox),
+      control_variant: 'NoBlueBox'
+    )
     @requested_variant = @ab_test.requested_variant(request.headers)
   end
 
@@ -17,7 +22,7 @@ class BlueBoxAbTestRequest
   end
 
   def should_present?
-    ab_test_applies? && requested_variant.variant_b?
+    ab_test_applies? && requested_variant.variant?('ShowBlueBox')
   end
 
   def set_response_vary_header(response)
