@@ -46,4 +46,11 @@ describe Taxon do
 
     assert not(@taxon.grandchildren?)
   end
+
+  it 'knows about its most popular content items' do
+    results = [:result_1, :result_2]
+    MostPopularContent.stubs(:fetch).returns(results)
+
+    assert_equal(results, @taxon.most_popular_content)
+  end
 end

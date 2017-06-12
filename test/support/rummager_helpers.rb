@@ -14,6 +14,27 @@ module RummagerHelpers
     )
   end
 
+  def stub_most_popular_content_for_taxon(content_id, results)
+    Services.rummager.stubs(:search).with(
+      start: 0,
+      count: 5,
+      fields: %w(title link),
+      filter_navigation_document_supertype: 'guidance',
+      filter_part_of_taxonomy_tree: content_id,
+      order: '-popularity',
+    ).returns(
+      "results" => results,
+      "start" => 0,
+      "total" => results.size,
+    )
+  end
+
+  def generate_search_results(count)
+    (1..count).map do |number|
+      rummager_document_for_slug("content-item-#{number}")
+    end
+  end
+
   def stub_topic_organisations(slug, content_id)
     Services.rummager.stubs(:search).with(
       count: "0",
