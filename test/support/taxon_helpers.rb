@@ -22,6 +22,10 @@ module TaxonHelpers
     fetch_and_validate_taxon(:student_loans, params)
   end
 
+  def world_usa_taxon(params = {})
+    fetch_and_validate_taxon(:world_usa, params)
+  end
+
 private
 
   def fetch_and_validate_taxon(basename, params = {})
