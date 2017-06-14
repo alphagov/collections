@@ -64,4 +64,30 @@
       background-size: 20px 14px;
     }
   }
+
+  .feed {
+    background: image-url('feed-icon-black.png') 0 40% no-repeat;
+    padding: 0 $gutter-one-third 0 $gutter-two-thirds;
+  }
+
+  .feed-panel {
+    display: none;
+    margin-top: $gutter-half;
+    padding: $gutter-one-third $gutter-half;
+    background: $panel-colour;
+
+    h3 {
+      @include core-14;
+      border-bottom: 1px solid $border-colour;
+      margin-bottom: $gutter-one-third;
+      padding-bottom: $gutter-one-sixth;
+    }
+
+    input {
+      width: $full-width;
+      text-indent: $gutter-one-sixth;
+      padding: $gutter-one-sixth 0;
+      box-sizing: border-box;
+    }
+  }
 }
