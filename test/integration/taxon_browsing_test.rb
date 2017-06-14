@@ -81,6 +81,17 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_an_email_signup_link
   end
 
+  it 'includes content tagged to the associated_taxons' do
+    given_i_am_in_the_a_variant_of_the_blue_box_ab_test
+    given_there_is_a_taxon_with_associated_taxons
+    when_i_visit_the_taxon_page
+    then_i_can_see_there_is_a_page_title
+    then_i_can_see_the_meta_description
+    then_i_can_see_the_breadcrumbs
+    and_i_can_see_the_title_and_description
+    and_i_can_see_content_tagged_to_the_taxon_and_the_associate
+  end
+
   it 'shows the blue box on an accordion page in the B variant' do
     given_i_am_in_the_b_variant_of_the_blue_box_ab_test
     given_there_is_a_taxon_without_grandchildren
@@ -242,6 +253,35 @@ private
     stub_content_for_taxon(@taxon.content_id, search_results)
   end
 
+  def given_there_is_a_taxon_with_associated_taxons
+    @base_path = '/world/usa/travelling-to-the-usa-taxon'
+    taxon_with_associates = travelling_to_the_usa_taxon(base_path: @base_path)
+    associates = taxon_with_associates['links']['associated_taxons']
+    assert_not_nil associates
+
+    associate_base_path = associates.first['base_path']
+    associate_content_id = associates.first['content_id']
+
+    content_store_has_item(@base_path, taxon_with_associates)
+    content_store_has_item(associate_base_path, associates.first)
+    @taxon = Taxon.find(@base_path)
+    @associated_taxon = Taxon.find(associate_base_path)
+
+    taxon_content = ["/taxon-slug-1", "/taxon-slug-2"].map do |slug|
+      rummager_document_for_slug(slug)
+    end
+
+    associate_content = [
+      "/associated-taxon-slug-3",
+      "/associated-taxon-slug-4"
+    ].map do |slug|
+      rummager_document_for_slug(slug)
+    end
+
+    stub_content_for_taxon(@taxon.content_id, taxon_content)
+    stub_content_for_taxon(associate_content_id, associate_content)
+  end
+
   def and_that_taxon_has_few_content_items_tagged_to_it
     raise "You need to setup a taxon before using this method" if @taxon.nil?
 
@@ -383,6 +423,24 @@ private
     search_results.each do |search_result|
       assert page.has_link?(search_result['title'], href: /^.*#{search_result['link']}$/)
       assert page.has_content?(search_result['description'])
+    end
+  end
+
+  def and_i_can_see_content_tagged_to_the_taxon_and_the_associate
+    expected_content = [
+      "/taxon-slug-1",
+      "/taxon-slug-2",
+      "/associated-taxon-slug-3",
+      "/associated-taxon-slug-4"
+    ].map do |slug|
+      rummager_document_for_slug(slug)
+    end
+
+    expected_content.each do |content_item|
+      assert page.has_link?(content_item['title'], href: /^.*#{content_item['link']}$/),
+        "expected page to have link with #{content_item['title']}"
+      assert page.has_content?(content_item['description']),
+        "expected page to have content #{content_item['description']}"
     end
   end
 
