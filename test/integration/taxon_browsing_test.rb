@@ -36,7 +36,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_the_title_and_description
     and_i_can_see_links_to_the_child_taxons_in_a_grid
     and_the_grid_has_tracking_attributes
-    and_i_can_see_tagged_content_to_the_taxon
+    and_i_can_see_content_tagged_to_the_taxon
     and_the_content_tagged_to_the_grandfather_taxon_has_tracking_attributes
     and_the_page_is_tracked_as_a_grid
     and_i_can_see_an_email_signup_link
@@ -53,7 +53,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_the_general_information_section_in_the_accordion
     and_i_can_see_links_to_the_child_taxons_in_an_accordion
     and_the_accordion_has_tracking_attributes
-    and_i_can_see_tagged_content_to_the_taxon
+    and_i_can_see_content_tagged_to_the_taxon
     and_the_page_is_tracked_as_an_accordion
     and_i_can_see_an_email_signup_link
     and_all_sections_apart_from_general_information_have_an_email_signup_link
@@ -75,7 +75,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     then_i_can_see_the_meta_description
     then_i_can_see_the_breadcrumbs
     and_i_can_see_the_title_and_description
-    and_i_can_see_tagged_content_to_the_taxon
+    and_i_can_see_content_tagged_to_the_taxon
     and_the_content_tagged_to_the_leaf_taxon_has_tracking_attributes
     and_the_page_is_tracked_as_a_leaf_node_taxon
     and_i_can_see_an_email_signup_link
@@ -379,7 +379,7 @@ private
     )
   end
 
-  def and_i_can_see_tagged_content_to_the_taxon
+  def and_i_can_see_content_tagged_to_the_taxon
     search_results.each do |search_result|
       assert page.has_link?(search_result['title'], href: /^.*#{search_result['link']}$/)
       assert page.has_content?(search_result['description'])
