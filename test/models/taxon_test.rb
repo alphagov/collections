@@ -67,12 +67,8 @@ describe Taxon do
       associated_taxon_content_id = "36dd87da-4973-5490-ab00-72025b1da506"
 
       TaggedContent.expects(:fetch)
-        .with(own_content_id)
-        .returns(["own content"])
-
-      TaggedContent.expects(:fetch)
-        .with(associated_taxon_content_id)
-        .returns(["associated content"])
+        .with([own_content_id, associated_taxon_content_id])
+        .returns(["own content", "associated content"])
 
       assert_equal ["own content", "associated content"],
         @taxon.tagged_content

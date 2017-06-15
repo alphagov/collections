@@ -79,8 +79,6 @@ private
 
   def fetch_tagged_content
     taxon_content_ids = [content_id] + associated_taxons.map(&:content_id)
-    taxon_content_ids.inject([]) do |content, taxon_content_id|
-      content + TaggedContent.fetch(taxon_content_id)
-    end
+    TaggedContent.fetch(taxon_content_ids)
   end
 end

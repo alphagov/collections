@@ -1,11 +1,11 @@
 module RummagerHelpers
-  def stub_content_for_taxon(content_id, results)
+  def stub_content_for_taxon(content_ids, results)
     Services.rummager.stubs(:search).with(
       start: 0,
       count: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       fields: %w(title description link document_collections content_store_document_type),
       filter_navigation_document_supertype: 'guidance',
-      filter_taxons: [content_id],
+      filter_taxons: Array(content_ids),
       order: 'title',
     ).returns(
       "results" => results,

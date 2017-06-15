@@ -1,12 +1,12 @@
 class TaggedContent
-  attr_reader :content_id
+  attr_reader :content_ids
 
-  def initialize(content_id)
-    @content_id = content_id
+  def initialize(content_ids)
+    @content_ids = Array(content_ids)
   end
 
-  def self.fetch(content_id)
-    new(content_id).fetch
+  def self.fetch(content_ids)
+    new(content_ids).fetch
   end
 
   def fetch
@@ -27,7 +27,7 @@ private
       count: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       fields: %w(title description link document_collections content_store_document_type),
       filter_navigation_document_supertype: 'guidance',
-      filter_taxons: [content_id],
+      filter_taxons: content_ids,
       order: 'title',
     )
   end

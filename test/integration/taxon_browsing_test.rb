@@ -267,19 +267,7 @@ private
     @taxon = Taxon.find(@base_path)
     @associated_taxon = Taxon.find(associate_base_path)
 
-    taxon_content = ["/taxon-slug-1", "/taxon-slug-2"].map do |slug|
-      rummager_document_for_slug(slug)
-    end
-
-    associate_content = [
-      "/associated-taxon-slug-3",
-      "/associated-taxon-slug-4"
-    ].map do |slug|
-      rummager_document_for_slug(slug)
-    end
-
-    stub_content_for_taxon(@taxon.content_id, taxon_content)
-    stub_content_for_taxon(associate_content_id, associate_content)
+    stub_content_for_taxon([@taxon.content_id, associate_content_id], search_results)
   end
 
   def and_that_taxon_has_few_content_items_tagged_to_it
@@ -426,23 +414,8 @@ private
     end
   end
 
-  def and_i_can_see_content_tagged_to_the_taxon_and_the_associate
-    expected_content = [
-      "/taxon-slug-1",
-      "/taxon-slug-2",
-      "/associated-taxon-slug-3",
-      "/associated-taxon-slug-4"
-    ].map do |slug|
-      rummager_document_for_slug(slug)
-    end
-
-    expected_content.each do |content_item|
-      assert page.has_link?(content_item['title'], href: /^.*#{content_item['link']}$/),
-        "expected page to have link with #{content_item['title']}"
-      assert page.has_content?(content_item['description']),
-        "expected page to have content #{content_item['description']}"
-    end
-  end
+  alias_method :and_i_can_see_content_tagged_to_the_taxon_and_the_associate,
+    :and_i_can_see_content_tagged_to_the_taxon
 
   def and_the_content_tagged_to_the_grandfather_taxon_has_tracking_attributes
     assert_leaf_tracking_attributes_present(
