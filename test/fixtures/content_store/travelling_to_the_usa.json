@@ -1,0 +1,27 @@
+{
+  "content_id": "36dd87da-4973-5490-ab00-72025b1da501",
+  "title": "Travelling to the USA",
+  "description": "Includes travel advice and how to get married abroad.",
+  "base_path": "\/world\/usa\/travelling-to-the-usa",
+  "locale": "en",
+  "links": {
+    "parent_taxons": [
+      {
+        "content_id": "36dd87da-4973-5490-ab00-72025b1da500",
+        "locale": "en",
+        "title": "USA",
+        "description": "USA worldwide taxon",
+        "base_path": "\/world\/usa"
+      }
+    ],
+    "associated_taxons": [
+      {
+        "content_id": "36dd87da-4973-5490-ab00-72025b1da506",
+        "locale": "en",
+        "title": "Travelling Abroad",
+        "description": "General advice for travelling abroad",
+        "base_path": "\/world\/travelling-abroad"
+      }
+    ]
+  }
+}

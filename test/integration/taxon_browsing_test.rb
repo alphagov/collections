@@ -36,7 +36,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_the_title_and_description
     and_i_can_see_links_to_the_child_taxons_in_a_grid
     and_the_grid_has_tracking_attributes
-    and_i_can_see_tagged_content_to_the_taxon
+    and_i_can_see_content_tagged_to_the_taxon
     and_the_content_tagged_to_the_grandfather_taxon_has_tracking_attributes
     and_the_page_is_tracked_as_a_grid
     and_i_can_see_an_email_signup_link
@@ -53,7 +53,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_the_general_information_section_in_the_accordion
     and_i_can_see_links_to_the_child_taxons_in_an_accordion
     and_the_accordion_has_tracking_attributes
-    and_i_can_see_tagged_content_to_the_taxon
+    and_i_can_see_content_tagged_to_the_taxon
     and_the_page_is_tracked_as_an_accordion
     and_i_can_see_an_email_signup_link
     and_all_sections_apart_from_general_information_have_an_email_signup_link
@@ -75,10 +75,21 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     then_i_can_see_the_meta_description
     then_i_can_see_the_breadcrumbs
     and_i_can_see_the_title_and_description
-    and_i_can_see_tagged_content_to_the_taxon
+    and_i_can_see_content_tagged_to_the_taxon
     and_the_content_tagged_to_the_leaf_taxon_has_tracking_attributes
     and_the_page_is_tracked_as_a_leaf_node_taxon
     and_i_can_see_an_email_signup_link
+  end
+
+  it 'includes content tagged to the associated_taxons' do
+    given_i_am_in_the_a_variant_of_the_blue_box_ab_test
+    given_there_is_a_taxon_with_associated_taxons
+    when_i_visit_the_taxon_page
+    then_i_can_see_there_is_a_page_title
+    then_i_can_see_the_meta_description
+    then_i_can_see_the_breadcrumbs
+    and_i_can_see_the_title_and_description
+    and_i_can_see_content_tagged_to_the_taxon_and_the_associate
   end
 
   it 'shows the blue box on an accordion page in the B variant' do
@@ -242,6 +253,23 @@ private
     stub_content_for_taxon(@taxon.content_id, search_results)
   end
 
+  def given_there_is_a_taxon_with_associated_taxons
+    @base_path = '/world/usa/travelling-to-the-usa-taxon'
+    taxon_with_associates = travelling_to_the_usa_taxon(base_path: @base_path)
+    associates = taxon_with_associates['links']['associated_taxons']
+    assert_not_nil associates
+
+    associate_base_path = associates.first['base_path']
+    associate_content_id = associates.first['content_id']
+
+    content_store_has_item(@base_path, taxon_with_associates)
+    content_store_has_item(associate_base_path, associates.first)
+    @taxon = Taxon.find(@base_path)
+    @associated_taxon = Taxon.find(associate_base_path)
+
+    stub_content_for_taxon([@taxon.content_id, associate_content_id], search_results)
+  end
+
   def and_that_taxon_has_few_content_items_tagged_to_it
     raise "You need to setup a taxon before using this method" if @taxon.nil?
 
@@ -379,12 +407,15 @@ private
     )
   end
 
-  def and_i_can_see_tagged_content_to_the_taxon
+  def and_i_can_see_content_tagged_to_the_taxon
     search_results.each do |search_result|
       assert page.has_link?(search_result['title'], href: /^.*#{search_result['link']}$/)
       assert page.has_content?(search_result['description'])
     end
   end
+
+  alias_method :and_i_can_see_content_tagged_to_the_taxon_and_the_associate,
+    :and_i_can_see_content_tagged_to_the_taxon
 
   def and_the_content_tagged_to_the_grandfather_taxon_has_tracking_attributes
     assert_leaf_tracking_attributes_present(

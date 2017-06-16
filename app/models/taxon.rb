@@ -17,7 +17,7 @@ class Taxon
   end
 
   def tagged_content
-    @tagged_content ||= TaggedContent.fetch(content_id)
+    @tagged_content ||= fetch_tagged_content
   end
 
   def most_popular_content
@@ -59,6 +59,12 @@ class Taxon
     end
   end
 
+  def associated_taxons
+    linked_items('associated_taxons').map do |associated_taxon|
+      self.class.new(associated_taxon)
+    end
+  end
+
   def merge(to_merge)
     Taxon.new(content_item.merge(to_merge))
   end
@@ -67,5 +73,12 @@ class Taxon
     return @can_subscribe if defined?(@can_subscribe)
 
     true
+  end
+
+private
+
+  def fetch_tagged_content
+    taxon_content_ids = [content_id] + associated_taxons.map(&:content_id)
+    TaggedContent.fetch(taxon_content_ids)
   end
 end

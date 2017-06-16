@@ -45,6 +45,11 @@ Collections serves the GOV.UK browse and topic pages.
   `child_taxons` links. None of those child taxons' links have `child_taxons`,
   in which case we display an accordion view:
   [gov.uk/education/school-governance](https://www-origin.integration.publishing.service.gov.uk/education/school-governance)
+- **Taxon with associated taxons**: a content item of type taxon that has
+  `associated_taxons` links. In this case the tagged content of the taxon will
+  include content that is directly tagged to it and also content that has been
+  tagged to any of the associated taxons.
+  
 
 ## Technical documentation
 
