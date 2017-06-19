@@ -79,6 +79,14 @@ private
 
   def fetch_tagged_content
     taxon_content_ids = [content_id] + associated_taxons.map(&:content_id)
-    TaggedContent.fetch(taxon_content_ids)
+    TaggedContent.fetch(taxon_content_ids, filter_by_document_supertype: navigation_document_supertype)
+  end
+
+  def navigation_document_supertype
+    'guidance' unless world_related?
+  end
+
+  def world_related?
+    base_path.starts_with?("/world")
   end
 end

@@ -205,7 +205,7 @@ describe TaggedContent do
       end
     end
 
-    it 'filters guidance content only' do
+    it 'filters content by the requested filter_by_document_supertype only' do
       assert_includes_params(filter_navigation_document_supertype: 'guidance') do
         tagged_content.fetch
       end
@@ -213,7 +213,7 @@ describe TaggedContent do
 
     it 'allows multiple content_ids' do
       assert_includes_params(filter_taxons: ["test-content-id-one", "test-content-id-two"]) do
-        TaggedContent.fetch(["test-content-id-one", "test-content-id-two"])
+        TaggedContent.fetch(["test-content-id-one", "test-content-id-two"], filter_by_document_supertype: 'guidance')
       end
     end
   end
@@ -225,6 +225,6 @@ private
   end
 
   def tagged_content
-    @tagged_content ||= TaggedContent.new(taxon_content_id)
+    @tagged_content ||= TaggedContent.new(taxon_content_id, filter_by_document_supertype: 'guidance')
   end
 end

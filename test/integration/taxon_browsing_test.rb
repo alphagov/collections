@@ -267,7 +267,7 @@ private
     @taxon = Taxon.find(@base_path)
     @associated_taxon = Taxon.find(associate_base_path)
 
-    stub_content_for_taxon([@taxon.content_id, associate_content_id], search_results)
+    stub_content_for_taxon([@taxon.content_id, associate_content_id], search_results, filter_navigation_document_supertype: nil)
   end
 
   def and_that_taxon_has_few_content_items_tagged_to_it

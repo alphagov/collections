@@ -73,6 +73,10 @@ one to create an atom link and one to create an email link.
 Once email subscriptions for World Locations have been completely ported to use
 Email Alert Api, this functionality can be removed.
 
+### Content for taxon pages
+
+Content for taxon pages is returned by a search in Rummager based on content_ids. By default this content is filtered by `filter_navigation_document_supertype: 'guidance'`. However for content tagged to the `/world` taxon, this restriction is lifted so that _all_ content is returned from Rummager.
+
 ### Dependencies
 
 - [content-store](https://github.com/alphagov/content-store), provides:
