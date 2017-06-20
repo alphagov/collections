@@ -21,9 +21,7 @@ class Taxon
   end
 
   def most_popular_content
-    @most_popular_content ||= MostPopularContent.fetch(
-      content_id: content_id,
-    )
+    @most_popular_content ||= fetch_most_popular_content
   end
 
   def self.find(base_path)
@@ -80,6 +78,10 @@ private
   def fetch_tagged_content
     taxon_content_ids = [content_id] + associated_taxons.map(&:content_id)
     TaggedContent.fetch(taxon_content_ids, filter_by_document_supertype: navigation_document_supertype)
+  end
+
+  def fetch_most_popular_content
+    MostPopularContent.fetch(content_id: content_id, filter_by_document_supertype: navigation_document_supertype)
   end
 
   def navigation_document_supertype
