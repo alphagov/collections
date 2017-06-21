@@ -381,8 +381,8 @@
   },
   {
     "base_path": "/government/collections/convert-to-an-academy-documents-for-schools",
-    "surface_collection": true,
-    "surface_content": false
+    "surface_collection": false,
+    "surface_content": true
   },
   {
     "base_path": "/government/collections/mandatory-and-useful-timelines-information-for-schools",
