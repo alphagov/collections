@@ -14,7 +14,7 @@ class WorldLocationTaxonTest < ActionDispatch::IntegrationTest
     content_store_has_item(@base_path, world_usa)
 
     @taxon = Taxon.find(@base_path)
-    stub_content_for_taxon(@taxon.content_id, search_results)
+    stub_content_for_taxon(@taxon.content_id, search_results, filter_navigation_document_supertype: nil)
 
     visit @base_path
     govuk_feeds = page.find('.feeds')
@@ -38,7 +38,7 @@ class WorldLocationTaxonTest < ActionDispatch::IntegrationTest
     content_store_has_item(@base_path, student_finance)
 
     @taxon = Taxon.find(@base_path)
-    stub_content_for_taxon(@taxon.content_id, search_results)
+    stub_content_for_taxon(@taxon.content_id, search_results, filter_navigation_document_supertype: nil)
 
     visit @base_path
 

@@ -1,12 +1,13 @@
 class TaggedContent
-  attr_reader :content_ids
+  attr_reader :content_ids, :filter_by_document_supertype
 
-  def initialize(content_ids)
+  def initialize(content_ids, filter_by_document_supertype:)
     @content_ids = Array(content_ids)
+    @filter_by_document_supertype = filter_by_document_supertype
   end
 
-  def self.fetch(content_ids)
-    new(content_ids).fetch
+  def self.fetch(content_ids, filter_by_document_supertype:)
+    new(content_ids, filter_by_document_supertype: filter_by_document_supertype).fetch
   end
 
   def fetch
@@ -22,13 +23,15 @@ private
   end
 
   def search_response
-    RummagerSearch.new(
+    params = {
       start: 0,
       count: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       fields: %w(title description link document_collections content_store_document_type),
-      filter_navigation_document_supertype: 'guidance',
       filter_taxons: content_ids,
       order: 'title',
-    )
+    }
+    params[:filter_navigation_document_supertype] = filter_by_document_supertype if filter_by_document_supertype.present?
+
+    RummagerSearch.new(params)
   end
 end

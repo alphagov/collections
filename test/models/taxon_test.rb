@@ -3,7 +3,7 @@ require 'test_helper'
 describe Taxon do
   include TaxonHelpers
 
-  context "with associate_taxons" do
+  context "without associate_taxons" do
     setup do
       content_item = ContentItem.new(student_finance_taxon)
       @taxon = Taxon.new(content_item)
@@ -54,6 +54,51 @@ describe Taxon do
 
       assert_equal(results, @taxon.most_popular_content)
     end
+
+    it 'knows about its most popular content items' do
+      results = [:result_1, :result_2]
+      MostPopularContent.stubs(:fetch).returns(results)
+
+      assert_equal(results, @taxon.most_popular_content)
+    end
+
+    it "requests popular content of document supertype 'guidance' by default" do
+      results = [:result_1, :result_2]
+      MostPopularContent.stubs(:fetch)
+        .with(content_id: @taxon.content_id, filter_by_document_supertype: 'guidance')
+        .returns(results)
+
+      assert_equal(results, @taxon.most_popular_content)
+    end
+
+    it "does not request popular content of document supertype 'guidance' for world related content" do
+      @taxon.stubs(base_path: "/world/brazil")
+
+      results = [:result_1, :result_2]
+      MostPopularContent.stubs(:fetch)
+        .with(content_id: @taxon.content_id, filter_by_document_supertype: nil)
+        .returns(results)
+
+      assert_equal(results, @taxon.most_popular_content)
+    end
+
+    it 'requests for guidance document supertype by default' do
+      TaggedContent.expects(:fetch)
+        .with([@taxon.content_id], filter_by_document_supertype: 'guidance')
+        .returns(["guidance_content"])
+
+      assert_equal ["guidance_content"], @taxon.tagged_content
+    end
+
+    it 'does not request guidance document supertype for world related content' do
+      @taxon.stubs(base_path: "/world/brazil")
+
+      TaggedContent.expects(:fetch)
+        .with([@taxon.content_id], filter_by_document_supertype: nil)
+        .returns(["brazil_content"])
+
+      assert_equal ["brazil_content"], @taxon.tagged_content
+    end
   end
 
   context "with associated_taxons" do
@@ -67,7 +112,7 @@ describe Taxon do
       associated_taxon_content_id = "36dd87da-4973-5490-ab00-72025b1da506"
 
       TaggedContent.expects(:fetch)
-        .with([own_content_id, associated_taxon_content_id])
+        .with([own_content_id, associated_taxon_content_id], filter_by_document_supertype: nil)
         .returns(["own content", "associated content"])
 
       assert_equal ["own content", "associated content"],

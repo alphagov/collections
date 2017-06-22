@@ -4,7 +4,8 @@ require './test/support/custom_assertions.rb'
 describe MostPopularContent do
   def most_popular_content
     @most_popular_content ||= MostPopularContent.new(
-      content_id: taxon_content_id
+      content_id: taxon_content_id,
+      filter_by_document_supertype: 'guidance'
     )
   end
 
@@ -59,7 +60,7 @@ describe MostPopularContent do
       end
     end
 
-    it 'filters guidance content only' do
+    it 'filters content by the requested filter_by_document_supertype only' do
       assert_includes_params(filter_navigation_document_supertype: 'guidance') do
         most_popular_content.fetch
       end
