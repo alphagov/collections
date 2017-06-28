@@ -77,7 +77,11 @@ private
 
   def fetch_tagged_content
     taxon_content_ids = [content_id] + associated_taxons.map(&:content_id)
-    TaggedContent.fetch(taxon_content_ids, filter_by_document_supertype: navigation_document_supertype)
+    TaggedContent.fetch(
+      taxon_content_ids,
+      filter_by_document_supertype: navigation_document_supertype,
+      validate: validate_tagged_content?
+    )
   end
 
   def fetch_most_popular_content
@@ -86,6 +90,12 @@ private
 
   def navigation_document_supertype
     'guidance' unless world_related?
+  end
+
+  def validate_tagged_content?
+    return false if world_related?
+
+    true
   end
 
   def world_related?
