@@ -17,7 +17,7 @@ class EmailHelperTest < ActionView::TestCase
       return OpenStruct.new(fullpath: "/world/blefuscu")
     end
 
-    expected_atom_url = Plek.new.website_root + "/government/world/blefuscu.atom"
+    expected_atom_url = Plek.new.website_root + "/world/blefuscu.atom"
 
     assert_equal expected_atom_url, whitehall_atom_url
   end
@@ -27,7 +27,7 @@ class EmailHelperTest < ActionView::TestCase
       return OpenStruct.new(fullpath: "/world/blefuscu")
     end
 
-    atom_url = Plek.new.website_root + "/government/world/blefuscu.atom"
+    atom_url = Plek.new.website_root + "/world/blefuscu.atom"
     expected_url = Plek.new.website_root +
       URI.encode("/government/email-signup/new?email_signup[feed]=#{atom_url}")
 

@@ -16,7 +16,6 @@ module EmailHelper
 private
 
   WHITEHALL_EMAIL_SIGNUP_PATH = "/government/email-signup/new?email_signup[feed]=".freeze
-  GOVERNMENT_PATH = "/government".freeze
 
   def root
     Plek.new.website_root
@@ -27,6 +26,6 @@ private
   end
 
   def equivalent_whitehall_url
-    root + GOVERNMENT_PATH + request.fullpath
+    root + request.fullpath
   end
 end
