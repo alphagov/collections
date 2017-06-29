@@ -73,6 +73,10 @@ class Taxon
     true
   end
 
+  def world_related?
+    base_path.starts_with?("/world")
+  end
+
 private
 
   def fetch_tagged_content
@@ -96,9 +100,5 @@ private
     return false if world_related?
 
     true
-  end
-
-  def world_related?
-    base_path.starts_with?("/world")
   end
 end

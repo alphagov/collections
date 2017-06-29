@@ -41,7 +41,7 @@ class TaxonPresenter
 
   def accordion_content
     return [] unless renders_as_accordion?
-    accordion_items = taxon.child_taxons.map { |taxon| TaxonPresenter.new(taxon) }
+    accordion_items = ordered_child_taxons.map { |taxon| TaxonPresenter.new(taxon) }
 
     general_information_title = 'General information and guidance'
 
@@ -62,5 +62,11 @@ class TaxonPresenter
     end
 
     accordion_items
+  end
+
+private
+
+  def ordered_child_taxons
+    taxon.world_related? ? WorldTaxonomySorter.call(taxon.child_taxons) : taxon.child_taxons
   end
 end

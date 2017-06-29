@@ -35,4 +35,18 @@ describe TaxonPresenter do
       )
     end
   end
+
+  describe '#accordion_content' do
+    it "calls the WorldTaxonomySorter class to sort accordion content for world related taxons" do
+      taxon = mock
+      taxon.stubs(grandchildren?: false,
+                  children?: true,
+                  world_related?: true,
+                  child_taxons: %w(a b c),
+                  tagged_content: [])
+
+      WorldTaxonomySorter.expects(:call).returns(%w(c b a))
+      TaxonPresenter.new(taxon).accordion_content
+    end
+  end
 end
