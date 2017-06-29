@@ -15,6 +15,11 @@ Rails.application.routes.draw do
     get ":subtopic_slug", on: :member, to: "subtopics#show"
   end
 
+  #TODO this redirect causes the request to be routed to Whitehall where
+  #the country A-Z currently lives. This needs to be removed when the world index
+  #page is rendered here
+  get '/world/all', to: redirect('/world')
+
   get "/topic/:topic_slug/:subtopic_slug/latest",
     to: "latest_changes#index", as: :latest_changes
 
