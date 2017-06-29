@@ -1173,5 +1173,15 @@
     "base_path": "/government/collections/pe-and-sport-survey",
     "surface_collection": false,
     "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/better-communication-research-programme",
+    "surface_collection": false,
+    "surface_content": true
+  },
+  {
+    "base_path": "/government/collections/maladministration-reports",
+    "surface_collection": false,
+    "surface_content": true
   }
 ]
