@@ -4,9 +4,12 @@ class MainstreamBrowsingTest < ActionDispatch::IntegrationTest
   include RummagerHelpers
 
   test "that we can handle all examples" do
+    # Shuffle the examples to ensure tests don't become order dependent
+    schemas = GovukSchemas::Example.find_all("mainstream_browse_page").shuffle
+
     # Add all examples to the content store and rummager to allow pages to
     # request their parents and links.
-    content_schema_examples_for(:mainstream_browse_page).each do |content_item|
+    schemas.each do |content_item|
       content_store_has_item(content_item['base_path'], content_item)
 
       rummager_has_documents_for_browse_page(
@@ -23,7 +26,7 @@ class MainstreamBrowsingTest < ActionDispatch::IntegrationTest
       )
     end
 
-    content_schema_examples_for(:mainstream_browse_page).each do |content_item|
+    schemas.each do |content_item|
       visit content_item['base_path']
 
       assert_equal 200, page.status_code
