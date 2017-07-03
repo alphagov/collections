@@ -1,7 +1,6 @@
 require "test_helper"
 
 describe TopicsController do
-  include ContentSchemaHelpers
   include RummagerHelpers
 
   include GovukAbTesting::MinitestHelpers
@@ -9,7 +8,7 @@ describe TopicsController do
   describe "GET topic" do
     describe "with a valid topic slug" do
       before do
-        content_store_has_item('/topic/oil-and-gas', content_schema_example(:topic, :topic))
+        content_store_has_item('/topic/oil-and-gas', topic_example)
       end
 
       it "sets expiry headers for 30 minutes" do
@@ -30,7 +29,7 @@ describe TopicsController do
   describe "during the education navigation A/B test" do
 
     before do
-      content_store_has_item('/topic/further-education-skills', content_schema_example(:topic, :topic))
+      content_store_has_item('/topic/further-education-skills', topic_example)
     end
 
     it "returns the original version of the page as the A variant" do
@@ -53,7 +52,7 @@ describe TopicsController do
 
     ["A", "B"].each do |variant|
       it "does not change a page outside the A/B test when the #{variant} variant is requested" do
-        content_store_has_item('/topic/oil-and-gas', content_schema_example(:topic, :topic))
+        content_store_has_item('/topic/oil-and-gas', topic_example)
         setup_ab_variant("EducationNavigation", variant)
 
         get :show, params: { topic_slug: "oil-and-gas" }
@@ -62,5 +61,9 @@ describe TopicsController do
         assert_response_not_modified_for_ab_test("EducationNavigation")
       end
     end
+  end
+
+  def topic_example
+    GovukSchemas::Example.find('topic', example_name: 'topic')
   end
 end

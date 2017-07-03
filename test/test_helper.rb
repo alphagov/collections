@@ -36,11 +36,6 @@ class ActiveSupport::TestCase
   include Slimmer::TestHelpers::GovukComponents
   include GdsApi::TestHelpers::Rummager
 
-  GovukContentSchemaTestHelpers.configure do |config|
-    config.schema_type = 'frontend'
-    config.project_root = Rails.root
-  end
-
   before do
     stub_shared_component_locales
   end
