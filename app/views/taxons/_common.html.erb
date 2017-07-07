@@ -3,7 +3,6 @@
 <% content_for :meta_tags do %>
   <meta name="description" content="<%= presented_taxon.description %>">
   <%= education_ab_test.analytics_meta_tag.html_safe %>
-  <%= blue_box_ab_test.analytics_meta_tag.html_safe %>
 
   <meta name="govuk:navigation-page-type" content="<%= presented_taxon.rendering_type %>" />
 <% end %>

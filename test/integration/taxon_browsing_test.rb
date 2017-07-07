@@ -16,9 +16,6 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   after do
-    assert_page_tracked_in_ab_test("NavigationTest", @blue_box_variant, '61')
-    assert_response_is_cached_by_variant("NavigationTest")
-
     Capybara.reset_sessions!
 
     GovukAbTesting.configure do |config|
@@ -27,7 +24,6 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   it 'is possible to browse a taxon page that has grandchildren' do
-    given_i_am_in_the_a_variant_of_the_blue_box_ab_test
     given_there_is_a_taxon_with_grandchildren
     when_i_visit_the_taxon_page
     then_i_can_see_there_is_a_page_title
@@ -43,8 +39,8 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   it 'is possible to browse a taxon page that does not have grandchildren' do
-    given_i_am_in_the_a_variant_of_the_blue_box_ab_test
     given_there_is_a_taxon_without_grandchildren
+    and_there_are_popular_items_for_the_taxon
     when_i_visit_the_taxon_page
     then_i_can_see_there_is_a_page_title
     then_i_can_see_the_meta_description
@@ -60,15 +56,14 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   it 'does not show the general information section when there is no content tagged' do
-    given_i_am_in_the_a_variant_of_the_blue_box_ab_test
     given_there_is_a_taxon_without_grandchildren
     and_the_taxon_has_no_tagged_content
+    and_there_are_popular_items_for_the_taxon
     when_i_visit_the_taxon_page
     then_there_is_no_general_information_section_in_the_accordion
   end
 
   it 'is possible to browse a taxon page that does not have child taxons' do
-    given_i_am_in_the_a_variant_of_the_blue_box_ab_test
     given_there_is_a_taxon_without_child_taxons
     when_i_visit_the_taxon_page
     then_i_can_see_there_is_a_page_title
@@ -82,7 +77,6 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   it 'includes content tagged to the associated_taxons' do
-    given_i_am_in_the_a_variant_of_the_blue_box_ab_test
     given_there_is_a_taxon_with_associated_taxons
     when_i_visit_the_taxon_page
     then_i_can_see_there_is_a_page_title
@@ -92,8 +86,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_content_tagged_to_the_taxon_and_the_associate
   end
 
-  it 'shows the blue box on an accordion page in the B variant' do
-    given_i_am_in_the_b_variant_of_the_blue_box_ab_test
+  it 'shows the blue box on all an accordion pages' do
     given_there_is_a_taxon_without_grandchildren
     and_there_are_popular_items_for_the_taxon
     when_i_visit_the_taxon_page
@@ -101,43 +94,14 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_the_blue_box_links_have_tracking_attributes
   end
 
-  it 'shows the blue box in a leaf page when there are more than 15 links in the B variant' do
-    given_i_am_in_the_b_variant_of_the_blue_box_ab_test
+  it 'does not show the blue box in a leaf page' do
     given_there_is_a_taxon_without_child_taxons
-    and_there_are_popular_items_for_the_taxon
-    when_i_visit_the_taxon_page
-    then_i_can_see_the_blue_box_with_its_details
-    and_the_blue_box_links_have_tracking_attributes
-  end
-
-  it 'does not appear in a leaf page when there are less that 15 links' do
-    given_i_am_in_the_b_variant_of_the_blue_box_ab_test
-    given_there_is_a_taxon_without_child_taxons
-    and_that_taxon_has_few_content_items_tagged_to_it
-    and_there_are_popular_items_for_the_taxon
-    when_i_visit_the_taxon_page
-    then_i_cannot_see_the_blue_box_section
-  end
-
-  it 'does not appear in the A variant of the Blue Box A/B test' do
-    given_i_am_in_the_a_variant_of_the_blue_box_ab_test
-    given_there_is_a_taxon_without_grandchildren
     and_there_are_popular_items_for_the_taxon
     when_i_visit_the_taxon_page
     then_i_cannot_see_the_blue_box_section
   end
 
 private
-
-  def given_i_am_in_the_b_variant_of_the_blue_box_ab_test
-    setup_ab_variant("NavigationTest", "ShowBlueBox")
-    @blue_box_variant = "ShowBlueBox"
-  end
-
-  def given_i_am_in_the_a_variant_of_the_blue_box_ab_test
-    setup_ab_variant("NavigationTest", "NoBlueBox")
-    @blue_box_variant = "NoBlueBox"
-  end
 
   def then_i_can_see_the_blue_box_with_its_details
     blue_box = page.find('.high-volume')
@@ -268,12 +232,6 @@ private
     @associated_taxon = Taxon.find(associate_base_path)
 
     stub_content_for_taxon([@taxon.content_id, associate_content_id], search_results, filter_navigation_document_supertype: nil)
-  end
-
-  def and_that_taxon_has_few_content_items_tagged_to_it
-    raise "You need to setup a taxon before using this method" if @taxon.nil?
-
-    stub_content_for_taxon(@taxon.content_id, search_results(2))
   end
 
   def when_i_visit_the_taxon_page
