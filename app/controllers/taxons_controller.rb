@@ -17,20 +17,11 @@ class TaxonsController < ApplicationController
     # pages.
     render taxon_template, locals: {
       presented_taxon: presented_taxon,
-      blue_box_ab_test: blue_box_ab_test,
       education_ab_test: education_ab_test
     }
   end
 
 private
-
-  def blue_box_ab_test
-    @blue_box_ab_test ||= begin
-      blue_box_ab_test = BlueBoxAbTestRequest.new(request, presented_taxon)
-      blue_box_ab_test.set_response_vary_header(response)
-      blue_box_ab_test
-    end
-  end
 
   def taxon
     @taxon ||= Taxon.find(request.path)
