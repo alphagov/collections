@@ -236,7 +236,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
     )
 
     assert_equal(
-      'subtopicContentItemLinkClicked',
+      'navSubtopicContentItemLinkClicked',
       oil_rig_safety_requirements['data-track-category'],
       'Expected a tracking category to be set in the data attributes'
     )
@@ -274,7 +274,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
     )
 
     assert_equal(
-      'subtopicContentItemLinkClicked',
+      'navSubtopicContentItemLinkClicked',
       undersea_piping_restrictions['data-track-category'],
       'Expected a tracking category to be set in the data attributes'
     )

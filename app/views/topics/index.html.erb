@@ -21,7 +21,7 @@
               subtopic.title,
               subtopic.base_path,
               data: {
-                track_category: topic.base_path == '/topic' ? 'topicLinkClicked' : 'subtopicLinkClicked',
+                track_category: topic.base_path == '/topic' ? 'navTopicLinkClicked' : 'navSubtopicLinkClicked',
                 track_action: "#{index + 1}",
                 track_label: subtopic.base_path,
                 track_options: {

@@ -100,7 +100,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
     topic_link = page.find('a', text: 'Oil and Gas')
 
     assert_equal(
-      'topicLinkClicked',
+      'navTopicLinkClicked',
       topic_link['data-track-category'],
       'Expected a tracking category to be set in the data attributes'
     )
@@ -152,7 +152,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
         subtopic_link = page.find('a', text: 'Wells')
 
         assert_equal(
-          'subtopicLinkClicked',
+          'navSubtopicLinkClicked',
           subtopic_link['data-track-category'],
           'Expected a tracking category to be set in the data attributes'
         )
