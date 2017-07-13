@@ -21,13 +21,27 @@
     organisations: organisations(subtopic.content_id),
     link_to_latest_feed: true,
   }) do %>
-  <% subtopic.lists.each do |list| -%>
+  <% subtopic.lists.each_with_index do |list, list_index| -%>
     <nav class="index-list with-title" aria-labelledby="<%= list.title.parameterize %>">
       <h1 id="<%= list.title.parameterize %>"><%= list.title %></h1>
       <ul>
-      <% list.contents.each do |list_item| -%>
+      <% list.contents.each_with_index do |list_item, list_item_index| -%>
         <li>
-          <a href="<%= list_item.base_path %>"><%= list_item.title %></a>
+          <%=
+            link_to(
+              list_item.title,
+              list_item.base_path,
+              data: {
+                track_category: 'subtopicContentItemLinkClicked',
+                track_action: "#{list_index + 1}.#{list_item_index + 1}",
+                track_label: list_item.base_path,
+                track_options: {
+                  dimension28: list.contents.count.to_s,
+                  dimension29: list_item.title,
+                },
+              }
+            )
+          %>
         </li>
       <% end -%>
       </ul>
