@@ -11,12 +11,26 @@
   </div>
 </header>
 
-<div class="browse-container full-width topics-page">
+<div class="browse-container full-width topics-page" data-module="track-click">
   <nav class="topics">
     <ul>
-      <% topic.children.each do |subtopic|%>
+      <% topic.children.each_with_index do |subtopic, index|%>
         <li>
-          <a href="<%= subtopic.base_path %>"><%= subtopic.title %></a>
+          <%=
+            link_to(
+              subtopic.title,
+              subtopic.base_path,
+              data: {
+                track_category: 'topicLinkClicked',
+                track_action: "#{index + 1}",
+                track_label: subtopic.base_path,
+                track_options: {
+                  dimension28: topic.children.count.to_s,
+                  dimension29: subtopic.title,
+                },
+              }
+            )
+          %>
         </li>
       <% end %>
     </ul>

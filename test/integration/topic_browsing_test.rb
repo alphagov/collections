@@ -76,4 +76,60 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
       end
     end
   end
+
+  it 'tracks click events on topic pages' do
+    content_store_has_item("/topic",
+      base_path: "/topic",
+      title: "Topics",
+      format: "topic",
+      public_updated_at: 10.days.ago.iso8601,
+      details: {},
+      links: {
+        children: [
+          {
+            title: "Oil and Gas",
+            base_path: "/topic/oil-and-gas",
+          },
+        ],
+      })
+
+    visit "/topic"
+
+    assert page.has_selector?('.topics-page[data-module="track-click"]')
+
+    topic_link = page.find('a', text: 'Oil and Gas')
+
+    assert_equal(
+      'topicLinkClicked',
+      topic_link['data-track-category'],
+      'Expected a tracking category to be set in the data attributes'
+    )
+
+    assert_equal(
+      '1',
+      topic_link['data-track-action'],
+      'Expected the link position to be set in the data attributes'
+    )
+
+    assert_equal(
+      '/topic/oil-and-gas',
+      topic_link['data-track-label'],
+      'Expected the topic base path to be set in the data attributes'
+    )
+
+    assert topic_link['data-track-options'].present?
+
+    data_options = JSON.parse(topic_link['data-track-options'])
+    assert_equal(
+      '1',
+      data_options['dimension28'],
+      'Expected the total number of topics to be present in the tracking options'
+    )
+
+    assert_equal(
+      'Oil and Gas',
+      data_options['dimension29'],
+      'Expected the topic title to be present in the tracking options'
+    )
+  end
 end
