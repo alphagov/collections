@@ -28,4 +28,84 @@ class ServicesAndInformationBrowsingTest < ActionDispatch::IntegrationTest
 
     assert page.has_selector?(shared_component_selector('breadcrumbs'))
   end
+
+  it 'includes tracking attributes on all links' do
+    visit "/government/organisations/hm-revenue-customs/services-information"
+
+    assert page.has_selector?('.browse-container[data-module="track-click"]')
+
+    within "nav.index-list:nth-child(1) ul" do
+      content_item_link = page.first('li a')
+
+      assert_equal(
+        'navServicesInformationLinkClicked',
+        content_item_link['data-track-category'],
+        'Expected a tracking category to be set in the data attributes'
+      )
+
+      assert_equal(
+        '1.1',
+        content_item_link['data-track-action'],
+        'Expected the link position to be set in the data attributes'
+      )
+
+      assert_equal(
+        content_item_link[:href],
+        content_item_link['data-track-label'],
+        'Expected the content item base path to be set in the data attributes'
+      )
+
+      assert content_item_link['data-track-options'].present?
+
+      data_options = JSON.parse(content_item_link['data-track-options'])
+      assert_equal(
+        page.all('li a').count.to_s,
+        data_options['dimension28'],
+        'Expected the total number of content items within the section to be present in the tracking options'
+      )
+
+      assert_equal(
+        content_item_link.text,
+        data_options['dimension29'],
+        'Expected the content item title to be present in the tracking options'
+      )
+    end
+
+    within "nav.index-list:nth-child(2) ul" do
+      content_item_link = page.first('li a')
+
+      assert_equal(
+        'navServicesInformationLinkClicked',
+        content_item_link['data-track-category'],
+        'Expected a tracking category to be set in the data attributes'
+      )
+
+      assert_equal(
+        '2.1',
+        content_item_link['data-track-action'],
+        'Expected the link position to be set in the data attributes'
+      )
+
+      assert_equal(
+        content_item_link[:href],
+        content_item_link['data-track-label'],
+        'Expected the content item base path to be set in the data attributes'
+      )
+
+      assert content_item_link['data-track-options'].present?
+
+      data_options = JSON.parse(content_item_link['data-track-options'])
+      assert_equal(
+        page.all('li a').count.to_s,
+        data_options['dimension28'],
+        'Expected the total number of content items within the section to be present in the tracking options'
+      )
+
+      assert_equal(
+        content_item_link.text,
+        data_options['dimension29'],
+        'Expected the content item title to be present in the tracking options'
+      )
+    end
+  end
 end
