@@ -45,7 +45,7 @@ private
       ServicesAndInformationLinksGrouper.new(params[:organisation_id])
 
     links_grouper.parsed_grouped_links.reject do |group|
-      group["title"].nil?
+      group.title.nil?
     end
   end
 end
