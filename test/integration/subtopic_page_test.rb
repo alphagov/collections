@@ -201,4 +201,109 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
       end
     end
   end
+
+  it "adds tracking attributes to links within sections" do
+    # Given a curated subtopic exists
+    content_store_has_item(
+      "/topic/oil-and-gas/offshore",
+      oil_and_gas_subtopic_item("offshore", details: {
+        groups: [
+          {
+            name: "Oil rigs",
+            contents: [
+              "/oil-rig-safety-requirements",
+            ],
+          },
+          {
+            name: "Piping",
+            contents: [
+              "/undersea-piping-restrictions",
+            ],
+          },
+        ]
+      })
+    )
+
+    stub_topic_organisations('oil-and-gas/offshore', 'content-id-for-offshore')
+
+    visit "/topic/oil-and-gas/offshore"
+
+    assert page.has_selector?('.browse-container[data-module="track-click"]')
+
+    oil_rig_safety_requirements = page.find(
+      'a',
+      text: 'Oil rig safety requirements',
+    )
+
+    assert_equal(
+      'navSubtopicContentItemLinkClicked',
+      oil_rig_safety_requirements['data-track-category'],
+      'Expected a tracking category to be set in the data attributes'
+    )
+
+    assert_equal(
+      '1.1',
+      oil_rig_safety_requirements['data-track-action'],
+      'Expected the link position to be set in the data attributes'
+    )
+
+    assert_equal(
+      '/oil-rig-safety-requirements',
+      oil_rig_safety_requirements['data-track-label'],
+      'Expected the content item base path to be set in the data attributes'
+    )
+
+    assert oil_rig_safety_requirements['data-track-options'].present?
+
+    data_options = JSON.parse(oil_rig_safety_requirements['data-track-options'])
+    assert_equal(
+      '1',
+      data_options['dimension28'],
+      'Expected the total number of content items within the section to be present in the tracking options'
+    )
+
+    assert_equal(
+      'Oil rig safety requirements',
+      data_options['dimension29'],
+      'Expected the subtopic title to be present in the tracking options'
+    )
+
+    undersea_piping_restrictions = page.find(
+      'a',
+      text: 'Undersea piping restrictions',
+    )
+
+    assert_equal(
+      'navSubtopicContentItemLinkClicked',
+      undersea_piping_restrictions['data-track-category'],
+      'Expected a tracking category to be set in the data attributes'
+    )
+
+    assert_equal(
+      '2.1',
+      undersea_piping_restrictions['data-track-action'],
+      'Expected the link position to be set in the data attributes'
+    )
+
+    assert_equal(
+      '/undersea-piping-restrictions',
+      undersea_piping_restrictions['data-track-label'],
+      'Expected the content item base path to be set in the data attributes'
+    )
+
+    assert undersea_piping_restrictions['data-track-options'].present?
+
+    data_options = JSON.parse(undersea_piping_restrictions['data-track-options'])
+    assert_equal(
+      '1',
+      data_options['dimension28'],
+      'Expected the total number of content items within the section to be present in the tracking options'
+    )
+
+    assert_equal(
+      'Undersea piping restrictions',
+      data_options['dimension29'],
+      'Expected the subtopic title to be present in the tracking options'
+    )
+  end
 end
