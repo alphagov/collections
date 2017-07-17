@@ -1,17 +1,27 @@
-<% grouped_links.each do |group| -%>
-  <nav class="index-list with-title" aria-labelledby="<%= group["title"].parameterize %>">
-    <h1 id="<%= group["title"].parameterize %>"><%= group["title"] %></h1>
+<% grouped_links.each_with_index do |group, group_index| -%>
+  <nav class="index-list with-title" aria-labelledby="<%= group.title.parameterize %>">
+    <h1 id="<%= group.title.parameterize %>"><%= group.title %></h1>
     <ul>
-    <% group["examples"].each do |group_link| -%>
+    <% group.examples.each_with_index do |group_link, group_link_index| -%>
       <li>
-        <a href="<%= group_link["link"] %>"><%= group_link["title"] %></a>
+        <%=
+            link_to(
+              group_link.title,
+              group_link.link,
+              data: {
+                track_category: 'navServicesInformationLinkClicked',
+                track_action: "#{group_index + 1}.#{group_link_index + 1}",
+                track_label: group_link.link,
+                track_options: {
+                  dimension28: group.examples.count.to_s,
+                  dimension29: group_link.title,
+                },
+              },
+              class: group_link.class
+            )
+          %>
       </li>
     <% end -%>
-    <% if group["more_documents"] %>
-      <li>
-        <a href="<%= group["subsector_link"] %>" class="other">See more</a>
-      </li>
-    <% end %>
     </ul>
   </nav>
 <% end -%>
