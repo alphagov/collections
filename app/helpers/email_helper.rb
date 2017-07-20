@@ -1,8 +1,6 @@
 module EmailHelper
-  WHITEHALL_BOUND_BASE_PATH = "/world".freeze
-
-  def render_whitehall_email_links?(base_path)
-    base_path.starts_with?(WHITEHALL_BOUND_BASE_PATH) if base_path
+  def render_whitehall_email_links?(presented_taxon)
+    presented_taxon.world_related? && presented_taxon.renders_as_accordion?
   end
 
   def whitehall_atom_url

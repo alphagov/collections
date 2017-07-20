@@ -1,5 +1,5 @@
 <div class='subscriptions'>
-  <% if render_whitehall_email_links?(presented_taxon.base_path) %>
+  <% if render_whitehall_email_links?(presented_taxon) %>
     <div class="feeds">
       <%= link_to(whitehall_email_url, class:'email-alerts') do %>
         Get email alerts for this topic

@@ -26,6 +26,10 @@ module TaxonHelpers
     fetch_and_validate_taxon(:world_usa, params)
   end
 
+  def world_usa_news_events_taxon(params = {})
+    fetch_and_validate_taxon(:world_usa_news_events, params)
+  end
+
   # This taxon has an associated_taxon
   def travelling_to_the_usa_taxon(params = {})
     fetch_and_validate_taxon(:travelling_to_the_usa, params)
