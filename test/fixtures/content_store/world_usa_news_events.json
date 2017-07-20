@@ -1,0 +1,21 @@
+{
+  "content_id": "92d9d12e-1548-4587-8f13-6d5e102e5c1f",
+  "title": "News and events",
+  "description": "Find out about the UK government's diplomatic, security and development work in USA.",
+  "base_path": "\/world\/news-and-events-usa",
+  "locale": "en",
+  "links": {
+    "parent_taxons": [
+      {
+        "content_id": "5e9f2825-7706-11e4-a3cb-005056011aef",
+        "locale": "en",
+        "title": "USA",
+        "description": "United States of America",
+        "base_path": "\/world\/usa"
+      }
+    ],
+    "child_taxons": [
+      // child taxons are not expanded in the content store
+    ]
+  }
+}

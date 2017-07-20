@@ -14,6 +14,7 @@ class TaxonPresenter
     :child_taxons,
     :most_popular_content,
     :can_subscribe?,
+    :world_related?,
     to: :taxon
   )
 

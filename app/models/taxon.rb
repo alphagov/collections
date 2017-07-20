@@ -69,6 +69,7 @@ class Taxon
 
   def can_subscribe?
     return @can_subscribe if defined?(@can_subscribe)
+    return false if world_related?
 
     true
   end

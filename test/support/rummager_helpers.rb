@@ -18,15 +18,19 @@ module RummagerHelpers
       )
   end
 
-  def stub_most_popular_content_for_taxon(content_id, results)
-    Services.rummager.stubs(:search).with(
+  def stub_most_popular_content_for_taxon(content_id, results, filter_navigation_document_supertype: 'guidance')
+    params = {
       start: 0,
       count: 5,
       fields: %w(title link),
-      filter_navigation_document_supertype: 'guidance',
       filter_part_of_taxonomy_tree: content_id,
       order: '-popularity',
-    ).returns(
+    }
+    params[:filter_navigation_document_supertype] = filter_navigation_document_supertype if filter_navigation_document_supertype.present?
+
+    Services.rummager.stubs(:search)
+    .with(params)
+    .returns(
       "results" => results,
       "start" => 0,
       "total" => results.size,

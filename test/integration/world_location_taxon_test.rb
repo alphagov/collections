@@ -8,13 +8,21 @@ class WorldLocationTaxonTest < ActionDispatch::IntegrationTest
 
   it 'contains both the atom and email signup url if we are browsing a world location' do
     @base_path = '/world/usa'
+    @child_taxon_base_path = '/world/news-and-events-usa'
 
     world_usa = world_usa_taxon(base_path: @base_path)
+    world_usa_news_events = world_usa_news_events_taxon(base_path: @child_taxon_base_path)
 
     content_store_has_item(@base_path, world_usa)
+    content_store_has_item(@child_taxon_base_path, world_usa_news_events)
 
     @taxon = Taxon.find(@base_path)
+    stub_content_for_taxon(@taxon.content_id, search_results) # For the "general information" taxon
     stub_content_for_taxon(@taxon.content_id, search_results, filter_navigation_document_supertype: nil)
+    stub_most_popular_content_for_taxon(@taxon.content_id, search_results, filter_navigation_document_supertype: nil)
+
+    @child_taxon = Taxon.find(@child_taxon_base_path)
+    stub_content_for_taxon(@child_taxon.content_id, search_results, filter_navigation_document_supertype: nil)
 
     visit @base_path
     govuk_feeds = page.find('.feeds')
@@ -29,6 +37,22 @@ class WorldLocationTaxonTest < ActionDispatch::IntegrationTest
     assert govuk_feeds.has_link?(
       href: expected_atom_url
     )
+  end
+
+  it 'does not contain the feed selector if we are browsing a world location leaf page' do
+    @base_path = '/world/usa'
+
+    world_usa = world_usa_taxon(base_path: @base_path)
+    world_usa.delete("links")
+
+    content_store_has_item(@base_path, world_usa)
+
+    @taxon = Taxon.find(@base_path)
+    stub_content_for_taxon(@taxon.content_id, search_results, filter_navigation_document_supertype: nil)
+
+    visit @base_path
+
+    assert page.has_no_selector?('.feeds')
   end
 
   it 'does not contain the feed selector if we are not browsing a world location' do
