@@ -43,9 +43,13 @@ describe BrowseController do
       before do
         content_store_has_item("/browse/education", base_path: '/browse/education')
         content_store_has_item("/browse/benefits", base_path: '/browse/benefits')
+        content_store_has_item(
+          "/browse/childcare-parenting",
+          base_path: '/browse/childcare-parenting'
+        )
       end
 
-      it "redirects for variant B" do
+      it "redirects /browse/education for variant B" do
         with_B_variant assert_meta_tag: false do
           get :show, params: { top_level_slug: "education" }
 
@@ -53,6 +57,18 @@ describe BrowseController do
             controller: "taxons",
             action: "show",
             taxon_base_path: "education"
+          )
+        end
+      end
+
+      it "redirects /browse/childcare-parenting for variant B" do
+        with_B_variant assert_meta_tag: false do
+          get :show, params: { top_level_slug: "childcare-parenting" }
+
+          assert_redirected_to(
+            controller: "taxons",
+            action: "show",
+            taxon_base_path: "childcare-parenting"
           )
         end
       end

@@ -43,7 +43,56 @@ describe SecondLevelBrowsePageController do
       end
     end
 
-    describe "during the education navigation A/B test" do
+    describe "during the education navigation A/B test for childcare and parenting content" do
+      before do
+        content_store_has_item("/browse/childcare-parenting/childcare",
+          content_id: 'childcare-content-id',
+          links: {
+            active_top_level_browse_page: [{
+              title: 'Childcare and parenting',
+            }],
+          }
+        )
+
+        rummager_has_documents_for_browse_page(
+          "childcare-content-id",
+          ["childcare"],
+          page_size: 1000
+        )
+      end
+
+      it "returns the original version of childcare pages as the A variant" do
+        with_A_variant do
+          get(
+            :show,
+            params: {
+              top_level_slug: "childcare-parenting",
+              second_level_slug: "childcare"
+            }
+          )
+
+          assert_response 200
+        end
+      end
+
+      it "redirects to the taxonomy navigation as the B variant" do
+        with_B_variant assert_meta_tag: false do
+          get(
+            :show,
+            params: {
+              top_level_slug: "childcare-parenting",
+              second_level_slug: "childcare"
+            }
+          )
+
+          assert_response 302
+          assert_redirected_to controller: "taxons", action: "show",
+            taxon_base_path: "childcare-parenting/finding-childcare"
+        end
+      end
+    end
+
+    describe "during the education navigation A/B test for education content" do
       before do
         content_store_has_item("/browse/education/student-finance",
           content_id: 'student-finance-content-id',

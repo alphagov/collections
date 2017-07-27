@@ -1,4 +1,7 @@
 default: &default
+  top_level_browse_pages:
+    education: education
+    childcare-parenting: childcare-parenting
   second_level_browse_pages:
     education:
       find-course: education/further-and-higher-education-skills-and-vocational-training
@@ -6,6 +9,13 @@ default: &default
       school-life: education
       student-finance: education/funding-and-finance-for-students
       universities-higher-education: education/further-and-higher-education-skills-and-vocational-training
+    childcare-parenting:
+      pregnancy-birth: childcare-parenting/pregnancy-and-birth
+      fostering-adoption-surrogacy: childcare-parenting/adoption-fostering-and-surrogacy
+      financial-help-children: childcare-parenting/financial-help-if-you-have-children
+      childcare: childcare-parenting/finding-childcare
+      schools-education: education/starting-and-attending-school
+      divorce-separation-legal: childcare-parenting/divorce-separation-and-legal-issues
   topics:
     schools-colleges-childrens-services: education
     further-education-skills: education/further-and-higher-education-skills-and-vocational-training
@@ -22,6 +32,11 @@ default: &default
       school-careers-employment: education/teaching-and-leadership
       school-college-funding-finance: education/school-and-academy-funding-and-provision
       special-educational-needs-disabilities: education/pupils-and-students-with-special-educational-needs-and-disability-send
+      adoption-fostering: childcare-parenting/adoption-fostering-and-surrogacy
+      early-years: childcare-parenting/childcare-and-early-years
+      looked-after-children: childcare-parenting/safeguarding-and-social-care-for-children
+      safeguarding-children: childcare-parenting/safeguarding-and-social-care-for-children
+      support-for-children-young-people: childcare-parenting/childrens-health-and-welfare
     further-education-skills:
       administration: education/running-a-further-or-higher-education-institution
       apprenticeships: education/apprenticeships-traineeships-and-internships

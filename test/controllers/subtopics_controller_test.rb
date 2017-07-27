@@ -25,7 +25,47 @@ describe SubtopicsController do
       assert_equal 404, response.status
     end
 
-    describe "during the education navigation A/B test" do
+    describe "during the education navigation A/B test for childcare and parenting" do
+      before do
+        stub_services_for_subtopic(
+          "content-id-for-adoption-fostering",
+          "schools-colleges-childrens-services",
+          "adoption-fostering")
+      end
+
+      it "returns the original version of the page as the A variant" do
+        with_A_variant do
+          get(
+            :show,
+            params: {
+              topic_slug: "schools-colleges-childrens-services",
+              subtopic_slug: "adoption-fostering"
+            }
+          )
+
+          assert_response 200
+        end
+      end
+
+      it "redirects to the taxonomy navigation as the B variant" do
+        with_B_variant assert_meta_tag: false do
+          get(
+            :show,
+            params: {
+              topic_slug: "schools-colleges-childrens-services",
+              subtopic_slug: "adoption-fostering"
+            }
+          )
+
+          assert_response 302
+          assert_redirected_to controller: "taxons",
+            action: "show",
+            taxon_base_path: "childcare-parenting/adoption-fostering-and-surrogacy"
+        end
+      end
+    end
+
+    describe "during the education navigation A/B test for education content" do
       before do
         stub_services_for_subtopic(
           "content-id-for-apprenticeships",
