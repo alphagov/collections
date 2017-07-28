@@ -31,7 +31,9 @@ class MainstreamBrowsePage
     links = linked_items("second_level_browse_pages")
 
     if second_level_pages_curated?
-      links.sort_by do |link|
+      valid_links = links.reject { |link| link.content_id.nil? }
+
+      valid_links.sort_by do |link|
         details["ordered_second_level_browse_pages"].index(link.content_id)
       end
     else

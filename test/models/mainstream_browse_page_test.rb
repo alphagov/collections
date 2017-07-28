@@ -86,6 +86,32 @@ describe MainstreamBrowsePage do
           @second_level_browse_page_1["content_id"],
         ], @page.second_level_browse_pages.map(&:content_id)
       end
+
+
+      context "an invalid second_level_browse_page link" do
+        before do
+          @invalid_browse_page = {
+            "title" => "Invalid",
+            "description" => "I don't have a content id",
+            "base_path" => "/browse/invalid",
+          }
+
+          @api_data["details"]["second_level_ordering"] = "curated"
+          @api_data["details"]["ordered_second_level_browse_pages"] = %w(1 2)
+          @api_data["links"]["second_level_browse_pages"] = [
+            @second_level_browse_page_2,
+            @invalid_browse_page,
+            @second_level_browse_page_1,
+          ]
+        end
+
+        it "excludes invalid links from curated second level pages" do
+          assert_equal [
+            @second_level_browse_page_1["content_id"],
+            @second_level_browse_page_2["content_id"],
+          ], @page.second_level_browse_pages.map(&:content_id)
+        end
+      end
     end
   end
 
