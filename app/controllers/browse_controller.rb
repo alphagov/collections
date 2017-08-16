@@ -34,8 +34,8 @@ private
   def show_html(page)
     taxon_resolver = TaxonRedirectResolver.new(
       request,
-      is_page_in_ab_test: lambda { params[:top_level_slug] == "education" },
-      map_to_taxon: lambda { "education" }
+      is_page_in_ab_test: lambda { top_level_redirect.present? },
+      map_to_taxon: lambda { top_level_redirect }
     )
 
     if taxon_resolver.page_ab_tested?
@@ -58,11 +58,19 @@ private
     end
   end
 
+  def top_level_redirect
+    redirects[params[:top_level_slug]]
+  end
+
   def second_level_browse_pages_partial(page)
     render_partial('second_level_browse_page/_second_level_browse_pages',
       title: page.title,
       second_level_browse_pages: page.second_level_browse_pages,
       curated_order: page.second_level_pages_curated?,
     )
+  end
+
+  def redirects
+    Rails.application.config_for(:navigation_redirects)["top_level_browse_pages"]
   end
 end

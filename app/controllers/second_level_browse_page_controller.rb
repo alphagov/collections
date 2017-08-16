@@ -22,8 +22,10 @@ private
   def show_html
     taxon_resolver = TaxonRedirectResolver.new(
       request,
-      is_page_in_ab_test: lambda { params[:top_level_slug] == "education" },
-      map_to_taxon: lambda { redirects["education"][params[:second_level_slug]] }
+      is_page_in_ab_test: lambda {
+        top_level_redirect.present? && second_level_redirect.present?
+      },
+      map_to_taxon: lambda { second_level_redirect }
     )
 
     if taxon_resolver.page_ab_tested?
@@ -45,6 +47,14 @@ private
         ab_variant: taxon_resolver.ab_variant,
       }
     end
+  end
+
+  def top_level_redirect
+    redirects[params[:top_level_slug]]
+  end
+
+  def second_level_redirect
+    redirects.dig(params[:top_level_slug], params[:second_level_slug])
   end
 
   def redirects
