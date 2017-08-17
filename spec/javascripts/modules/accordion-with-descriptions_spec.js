@@ -167,7 +167,7 @@ describe('An accordion with descriptions module', function () {
       $subsectionLink.click();
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith('pageElementInteraction', 'accordionOpened', {
-        label: 'Topic Section One - Heading Click',
+        label: '1. Topic Section One',
         dimension28: expectedAccordionSectionCount.toString()
       });
     });
@@ -183,7 +183,7 @@ describe('An accordion with descriptions module', function () {
       $subsectionIcon.click();
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith('pageElementInteraction', 'accordionOpened', {
-        label: 'Topic Section One - Plus Click',
+        label: '1. Topic Section One',
         dimension28: expectedAccordionSectionCount.toString()
       });
     });
@@ -199,7 +199,7 @@ describe('An accordion with descriptions module', function () {
       $subsectionHeader.click();
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith('pageElementInteraction', 'accordionOpened', {
-        label: 'Topic Section One - Click Elsewhere',
+        label: '1. Topic Section One',
         dimension28: expectedAccordionSectionCount.toString()
       });
     });
@@ -238,7 +238,7 @@ describe('An accordion with descriptions module', function () {
       $subsectionLink.click();
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith('pageElementInteraction', 'accordionClosed', {
-        label: 'Topic Section One - Heading Click',
+        label: '1. Topic Section One',
         dimension28: expectedAccordionSectionCount.toString()
       });
     });
@@ -255,7 +255,7 @@ describe('An accordion with descriptions module', function () {
       $subsectionIcon.click();
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith('pageElementInteraction', 'accordionClosed', {
-        label: 'Topic Section One - Minus Click',
+        label: '1. Topic Section One',
         dimension28: expectedAccordionSectionCount.toString()
       });
     });
@@ -273,7 +273,7 @@ describe('An accordion with descriptions module', function () {
       $subsectionHeader.click();
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith('pageElementInteraction', 'accordionClosed', {
-        label: 'Topic Section One - Click Elsewhere',
+        label: '1. Topic Section One',
         dimension28: expectedAccordionSectionCount.toString()
       });
     });
