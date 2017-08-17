@@ -23,7 +23,7 @@ describe('browse-columns.js', function() {
   });
 
   it("should get section data and cache it", function() {
-    var promiseObj = jasmine.createSpyObj('promiseObj', ['done', 'error', 'resolve']);
+    var promiseObj = jasmine.createSpyObj('promiseObj', ['then', 'error', 'resolve']);
     spyOn(jQuery, 'ajax').and.returnValue(promiseObj);
     spyOn(jQuery, 'Deferred').and.returnValue(promiseObj);
 
@@ -35,13 +35,13 @@ describe('browse-columns.js', function() {
     expect(jQuery.ajax).toHaveBeenCalledWith({
       url: '/browse/section.json'
     });
-    expect(promiseObj.done).toHaveBeenCalled();
-    promiseObj.done.calls.mostRecent().args[0]('response data')
+    expect(promiseObj.then).toHaveBeenCalled();
+    promiseObj.then.calls.mostRecent().args[0]('response data')
     expect(bc.sectionCache).toHaveBeenCalled();
   });
 
   it("should use the section data from the cache if it has it", function() {
-    var promiseObj = jasmine.createSpyObj('promiseObj', ['done', 'resolve']);
+    var promiseObj = jasmine.createSpyObj('promiseObj', ['then', 'resolve']);
     spyOn(jQuery, 'ajax').and.returnValue(promiseObj);
     spyOn(jQuery, 'Deferred').and.returnValue(promiseObj);
 
@@ -57,7 +57,7 @@ describe('browse-columns.js', function() {
   });
 
   it("should get subsection data and cache it", function() {
-    var promiseObj = jasmine.createSpyObj('promiseObj', ['done', 'error', 'resolve']);
+    var promiseObj = jasmine.createSpyObj('promiseObj', ['then', 'error', 'resolve']);
     spyOn(jQuery, 'ajax').and.returnValue(promiseObj);
     spyOn(jQuery, 'Deferred').and.returnValue(promiseObj);
 
@@ -69,13 +69,13 @@ describe('browse-columns.js', function() {
     expect(jQuery.ajax).toHaveBeenCalledWith({
       url: '/browse/section/subsection.json'
     });
-    expect(promiseObj.done).toHaveBeenCalled();
-    promiseObj.done.calls.mostRecent().args[0]('response data')
+    expect(promiseObj.then).toHaveBeenCalled();
+    promiseObj.then.calls.mostRecent().args[0]('response data')
     expect(bc.sectionCache).toHaveBeenCalled();
   });
 
   it("should use the subsection data from the cache if it has it", function() {
-    var promiseObj = jasmine.createSpyObj('promiseObj', ['done', 'resolve']);
+    var promiseObj = jasmine.createSpyObj('promiseObj', ['then', 'resolve']);
     spyOn(jQuery, 'ajax').and.returnValue(promiseObj);
     spyOn(jQuery, 'Deferred').and.returnValue(promiseObj);
 
