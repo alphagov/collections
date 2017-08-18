@@ -35,6 +35,7 @@ describe('An accordion with descriptions module', function () {
       </div>\
     </div>';
   var expectedAccordionSectionCount = 2;
+  var expectedAccordionContentCount = 1;
 
   beforeEach(function () {
     accordion = new GOVUK.Modules.AccordionWithDescriptions();
@@ -168,7 +169,7 @@ describe('An accordion with descriptions module', function () {
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith('pageElementInteraction', 'accordionOpened', {
         label: '1. Topic Section One',
-        dimension28: expectedAccordionSectionCount.toString()
+        dimension28: expectedAccordionContentCount.toString()
       });
     });
 
@@ -184,7 +185,7 @@ describe('An accordion with descriptions module', function () {
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith('pageElementInteraction', 'accordionOpened', {
         label: '1. Topic Section One',
-        dimension28: expectedAccordionSectionCount.toString()
+        dimension28: expectedAccordionContentCount.toString()
       });
     });
 
@@ -200,7 +201,7 @@ describe('An accordion with descriptions module', function () {
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith('pageElementInteraction', 'accordionOpened', {
         label: '1. Topic Section One',
-        dimension28: expectedAccordionSectionCount.toString()
+        dimension28: expectedAccordionContentCount.toString()
       });
     });
   });
@@ -239,7 +240,7 @@ describe('An accordion with descriptions module', function () {
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith('pageElementInteraction', 'accordionClosed', {
         label: '1. Topic Section One',
-        dimension28: expectedAccordionSectionCount.toString()
+        dimension28: expectedAccordionContentCount.toString()
       });
     });
 
@@ -256,7 +257,7 @@ describe('An accordion with descriptions module', function () {
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith('pageElementInteraction', 'accordionClosed', {
         label: '1. Topic Section One',
-        dimension28: expectedAccordionSectionCount.toString()
+        dimension28: expectedAccordionContentCount.toString()
       });
     });
 
@@ -274,7 +275,7 @@ describe('An accordion with descriptions module', function () {
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith('pageElementInteraction', 'accordionClosed', {
         label: '1. Topic Section One',
-        dimension28: expectedAccordionSectionCount.toString()
+        dimension28: expectedAccordionContentCount.toString()
       });
     });
   });
