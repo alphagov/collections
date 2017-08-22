@@ -33,7 +33,6 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_links_to_the_child_taxons_in_a_grid
     and_the_grid_has_tracking_attributes
     and_i_can_see_content_tagged_to_the_taxon
-    and_the_content_tagged_to_the_grandfather_taxon_has_tracking_attributes
     and_the_page_is_tracked_as_a_grid
     and_i_can_see_an_email_signup_link
   end
@@ -281,27 +280,15 @@ private
   end
 
   def and_the_grid_has_tracking_attributes
-    tracked_links = page.all(:css, "a[data-track-category='navGridLinkClicked']")
-    tracked_links.size.must_equal @child_taxons.size
-
-    tracked_links.each_with_index do |link, index|
-      expected_tracking_options = {
-        dimension28: @child_taxons.size.to_s,
-        dimension29: @child_taxons[index]['title']
-      }
-
-      link[:'data-track-action'].must_equal "#{index + 1}"
-      link[:'data-track-label'].must_equal @child_taxons[index]['base_path']
-      link[:'data-track-options'].must_equal expected_tracking_options.to_json
-      link[:'data-module'].must_equal 'track-click'
-    end
+    tracked_links = page.all(:css, "a[data-track-category='navGridContentClicked']")
+    tracked_links.size.must_equal(@child_taxons.size + @taxon.tagged_content.size)
 
     # Test an example free from logic
     assert page.has_css?(
-      "a[data-track-category='navGridLinkClicked']" +
+      "a[data-track-category='navGridContentClicked']" +
       "[data-track-action='1']" +
       "[data-track-label='/education-training-and-skills/student-finance']" +
-      "[data-track-options='{\"dimension28\":\"1\",\"dimension29\":\"Student finance\"}']" +
+      "[data-track-options='{\"dimension26\":\"2\",\"dimension27\":\"16\",\"dimension28\":\"1\",\"dimension29\":\"Student finance\"}']" +
       "[data-module='track-click']"
     )
   end
@@ -374,13 +361,6 @@ private
 
   alias_method :and_i_can_see_content_tagged_to_the_taxon_and_the_associate,
     :and_i_can_see_content_tagged_to_the_taxon
-
-  def and_the_content_tagged_to_the_grandfather_taxon_has_tracking_attributes
-    assert_leaf_tracking_attributes_present(
-      'navGridLeafLinkClicked',
-      search_results
-    )
-  end
 
   def and_the_blue_box_links_have_tracking_attributes
     assert_leaf_tracking_attributes_present(

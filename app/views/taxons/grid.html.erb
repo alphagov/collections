@@ -16,16 +16,7 @@
           <%= link_to(
             child_taxon.title,
             child_taxon.base_path,
-            data: {
-              track_category: 'navGridLinkClicked',
-              track_action: index + 1,
-              track_label: child_taxon.base_path,
-              track_options: {
-                dimension28: presented_taxon.child_taxons.size.to_s,
-                dimension29: child_taxon.title,
-              },
-              module: 'track-click',
-            }
+            data: presented_taxon.options_for_child_taxon(index: index)
           )%>
         </h2>
         <p><%= child_taxon.description %></p>
