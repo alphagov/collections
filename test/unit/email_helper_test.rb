@@ -28,9 +28,7 @@ class EmailHelperTest < ActionView::TestCase
   end
 
   test "should return a valid whitehall .atom url in the form /government/{url}.atom" do
-    define_singleton_method(:request) do
-      return OpenStruct.new(fullpath: "/world/blefuscu")
-    end
+    self.stubs(:request).returns(ActionDispatch::TestRequest.create("PATH_INFO" => '/world/blefuscu'))
 
     expected_atom_url = Plek.new.website_root + "/world/blefuscu.atom"
 
@@ -38,9 +36,7 @@ class EmailHelperTest < ActionView::TestCase
   end
 
   test "should return a valid whitehall email signup link" do
-    define_singleton_method(:request) do
-      return OpenStruct.new(fullpath: "/world/blefuscu")
-    end
+    self.stubs(:request).returns(ActionDispatch::TestRequest.create("PATH_INFO" => '/world/blefuscu'))
 
     atom_url = Plek.new.website_root + "/world/blefuscu.atom"
     expected_url = Plek.new.website_root +
