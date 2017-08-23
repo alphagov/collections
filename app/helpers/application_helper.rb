@@ -10,4 +10,8 @@ module ApplicationHelper
   def hairspace(string)
     string.gsub(/\s/, "\u200A") # \u200A = unicode hairspace
   end
+
+  def current_path_without_query_string
+    request.original_fullpath.split("?", 2).first
+  end
 end
