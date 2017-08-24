@@ -17,17 +17,9 @@
                   <%= link_to(
                     content_item.title,
                     Plek.new.website_root + content_item.base_path,
-                    data: {
-                      track_category: is_grid ? 'navGridLeafLinkClicked' : 'navLeafLinkClicked',
-                      track_action: index + 1,
-                      track_label: content_item.base_path,
-                      track_options: {
-                          dimension28: presented_taxon.tagged_content.size.to_s,
-                          dimension29: content_item.title,
-                      },
-                      module: 'track-click',
-                    }
-                    ) %>
+                    data: is_grid ? presented_taxon.options_for_tagged_content(index: index) :
+                              presented_taxon.options_for_leaf_content(index: index)
+                  ) %>
                 </h2>
                 <p><%= content_item.description %></p>
               </li>
