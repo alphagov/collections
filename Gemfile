@@ -7,20 +7,16 @@ gem 'uglifier', '~> 2.7.1'
 gem 'govuk_frontend_toolkit', '~> 4.3.0'
 
 gem 'unicorn', '~> 4.9.0'
-# We use Errbit for tracking exceptions, which needs the airbrake gem. Config
-# for Errbit is in alphagov-deployment.
-# https://docs.publishing.service.gov.uk/manual/upgrade-rails.html#airbrake
-gem 'airbrake', github: 'alphagov/airbrake', branch: 'silence-dep-warnings-for-rails-5'
+gem 'govuk_app_config', '~> 0.2'
 
 gem 'logstasher', '0.6.2' # 0.6.5+ changes the JSON schema used for events
 gem 'govuk_navigation_helpers', '6.3.0'
 gem 'govuk_ab_testing', '~> 2.4'
-gem 'statsd-ruby', '1.3.0', require: 'statsd'
 
 if ENV['SLIMMER_DEV']
   gem 'slimmer', path: '../slimmer'
 else
-  gem 'slimmer', '~> 10.1.3'
+  gem 'slimmer', '~> 11.0.1'
 end
 
 if ENV['API_DEV']

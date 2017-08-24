@@ -57,7 +57,7 @@ private
   def error_503(e); error(503, e); end
 
   def error(status_code, exception = nil)
-    Airbrake.notify_or_ignore(exception) if exception
+    GovukError.notify(exception) if exception
     render status: status_code, plain: "#{status_code} error"
   end
 
