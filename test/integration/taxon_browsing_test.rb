@@ -409,9 +409,9 @@ private
   end
 
   def and_i_can_see_an_email_signup_link
-    govuk_title = page.find('.govuk-title')
+    taxon_title = page.find('.taxon-title')
 
-    assert govuk_title.has_link?(
+    assert taxon_title.has_link?(
       'Get email alerts for this topic',
       href: "/email-signup/?topic=#{current_path}"
     )

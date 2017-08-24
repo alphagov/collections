@@ -1,5 +1,28 @@
 .taxon-page {
 
+  .taxon-title {
+    margin-top: $gutter-half;
+    margin-bottom: $gutter-half;
+
+    @include media(tablet) {
+      margin-top: $gutter * 1.5;
+      margin-bottom: $gutter * 1.5;
+    }
+
+    .context {
+      @include core-24;
+      color: $secondary-text-colour;
+    }
+
+    h1 {
+      @include bold-48;
+    }
+
+    &.length-long h1 {
+      @include bold-36;
+    }
+  }
+
   h1 {
     box-sizing: border-box;
     display: block;
