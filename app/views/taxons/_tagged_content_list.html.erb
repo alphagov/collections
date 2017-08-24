@@ -16,7 +16,7 @@
                 <h2>
                   <%= link_to(
                     content_item.title,
-                    Plek.new.website_root + content_item.base_path,
+                    content_item.base_path,
                     data: is_grid ? presented_taxon.options_for_tagged_content(index: index) :
                               presented_taxon.options_for_leaf_content(index: index)
                   ) %>
