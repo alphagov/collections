@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/alphagov/gds-api-adapters.git
-  revision: 3c151bdcf9ea5c584e78b4d6cf2de9338d3aadf5
+  revision: 00fe624b76762c0cd0d587ac3fbcd5c4fd1632ce
   branch: group-sentry-errors
   specs:
-    gds-api-adapters (47.8.0)
+    gds-api-adapters (47.9.0)
       link_header
       lrucache (~> 0.1.1)
       null_logger
