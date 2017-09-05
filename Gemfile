@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'gds-api-adapters', github: 'alphagov/gds-api-adapters', branch: 'group-sentry-errors'
+gem 'gds-api-adapters', '~> 47.9'
 gem 'govuk_ab_testing', '~> 2.4'
 gem 'govuk_app_config', '~> 0.2'
 gem 'govuk_frontend_toolkit', '~> 4.3.0'
