@@ -284,30 +284,30 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
-  capybara (~> 2.14.0)
-  cucumber-rails (~> 1.4.2)
+  capybara
+  cucumber-rails
   gds-api-adapters (~> 47.9)
   govuk-lint
   govuk_ab_testing (~> 2.4)
   govuk_app_config (~> 0.2)
   govuk_frontend_toolkit (~> 4.3.0)
   govuk_navigation_helpers (= 6.3.0)
-  govuk_schemas (~> 2.1)
-  jasmine-rails (~> 0.14.1)
+  govuk_schemas
+  jasmine-rails
   logstasher (= 0.6.2)
-  minitest-spec-rails (~> 5.3.0)
-  mocha (~> 1.1.0)
+  minitest-spec-rails
+  mocha
   plek (~> 1.11.0)
-  poltergeist (~> 1.7.0)
+  poltergeist
   pry-byebug
   rails (= 5.0.5)
   sass-rails (~> 5.0.3)
-  simplecov (~> 0.10.0)
-  simplecov-rcov (~> 0.2.3)
+  simplecov
+  simplecov-rcov
   slimmer (~> 11.0.1)
   uglifier (~> 2.7.1)
   unicorn (~> 4.9.0)
-  webmock (~> 1.21.0)
+  webmock
 
 BUNDLED WITH
    1.15.1

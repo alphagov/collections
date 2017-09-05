@@ -14,21 +14,21 @@ gem 'uglifier', '~> 2.7.1'
 gem 'unicorn', '~> 4.9.0'
 
 group :test do
-  gem 'capybara', '~> 2.14.0'
-  gem 'cucumber-rails', '~> 1.4.2', require: false
-  gem 'govuk_schemas', '~> 2.1'
-  gem 'minitest-spec-rails', '~> 5.3.0'
-  gem 'mocha', '~> 1.1.0', require: false
-  gem 'poltergeist', '~> 1.7.0'
-  gem 'simplecov', '~> 0.10.0'
-  gem 'simplecov-rcov', '~> 0.2.3'
-  gem 'webmock', '~> 1.21.0', require: false
+  gem 'capybara'
+  gem 'cucumber-rails', require: false
+  gem 'govuk_schemas'
+  gem 'minitest-spec-rails'
+  gem 'mocha', require: false
+  gem 'poltergeist'
+  gem 'simplecov'
+  gem 'simplecov-rcov'
+  gem 'webmock', require: false
 end
 
 group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'govuk-lint'
-  gem 'jasmine-rails', '~> 0.14.1'
+  gem 'jasmine-rails'
   gem 'pry-byebug'
 end
