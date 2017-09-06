@@ -21,7 +21,7 @@ private
 
   def show_html
     taxon_resolver = TaxonRedirectResolver.new(
-      request,
+      ab_variant,
       is_page_in_ab_test: lambda {
         top_level_redirect.present? && second_level_redirect.present?
       },
@@ -29,7 +29,7 @@ private
     )
 
     if taxon_resolver.page_ab_tested?
-      taxon_resolver.ab_variant.configure_response(response)
+      ab_variant.configure_response(response)
     end
 
     if taxon_resolver.taxon_base_path
@@ -44,7 +44,7 @@ private
         page: page,
         meta_section: meta_section,
         is_page_under_ab_test: taxon_resolver.page_ab_tested?,
-        ab_variant: taxon_resolver.ab_variant,
+        ab_variant: ab_variant,
       }
     end
   end

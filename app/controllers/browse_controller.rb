@@ -33,13 +33,13 @@ private
 
   def show_html(page)
     taxon_resolver = TaxonRedirectResolver.new(
-      request,
+      ab_variant,
       is_page_in_ab_test: lambda { top_level_redirect.present? },
       map_to_taxon: lambda { top_level_redirect }
     )
 
     if taxon_resolver.page_ab_tested?
-      taxon_resolver.ab_variant.configure_response(response)
+      ab_variant.configure_response(response)
     end
 
     if taxon_resolver.taxon_base_path
@@ -53,7 +53,7 @@ private
       render :show, locals: {
         page: page,
         is_page_under_ab_test: taxon_resolver.page_ab_tested?,
-        ab_variant: taxon_resolver.ab_variant,
+        ab_variant: ab_variant,
       }
     end
   end

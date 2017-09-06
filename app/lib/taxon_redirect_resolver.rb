@@ -1,11 +1,7 @@
 class TaxonRedirectResolver
-  attr_reader :ab_variant, :taxon_base_path, :fragment
+  attr_reader :taxon_base_path, :fragment
 
-  def initialize(request, is_page_in_ab_test:, map_to_taxon:)
-    dimension = Rails.application.config.navigation_ab_test_dimension
-    ab_test = GovukAbTesting::AbTest.new("EducationNavigation", dimension: dimension)
-    @ab_variant = ab_test.requested_variant(request.headers)
-
+  def initialize(ab_variant, is_page_in_ab_test:, map_to_taxon:)
     @is_page_in_ab_test = is_page_in_ab_test
     @map_to_taxon = map_to_taxon
 

@@ -1,7 +1,7 @@
 class SubtopicsController < ApplicationController
   def show
     taxon_resolver = TaxonRedirectResolver.new(
-      request,
+      ab_variant,
       is_page_in_ab_test: lambda {
         !redirects[params[:topic_slug]].nil? &&
           !redirects[params[:topic_slug]][params[:subtopic_slug]].nil?
@@ -10,7 +10,7 @@ class SubtopicsController < ApplicationController
     )
 
     if taxon_resolver.page_ab_tested?
-      taxon_resolver.ab_variant.configure_response(response)
+      ab_variant.configure_response(response)
     end
 
     if taxon_resolver.taxon_base_path
@@ -27,7 +27,7 @@ class SubtopicsController < ApplicationController
       render :show, locals: {
         subtopic: subtopic,
         meta_section: subtopic.parent.title.downcase,
-        ab_variant: taxon_resolver.ab_variant,
+        ab_variant: ab_variant,
         is_page_under_ab_test: taxon_resolver.page_ab_tested?,
       }
     end

@@ -8,13 +8,13 @@ class TopicsController < ApplicationController
 
   def show
     taxon_resolver = TaxonRedirectResolver.new(
-      request,
+      ab_variant,
       is_page_in_ab_test: lambda { !redirects[params[:topic_slug]].nil? },
       map_to_taxon: lambda { redirects[params[:topic_slug]] }
     )
 
     if taxon_resolver.page_ab_tested?
-      taxon_resolver.ab_variant.configure_response(response)
+      ab_variant.configure_response(response)
     end
 
     if taxon_resolver.taxon_base_path
@@ -30,7 +30,7 @@ class TopicsController < ApplicationController
 
       render :index, locals: {
         topic: topic,
-        ab_variant: taxon_resolver.ab_variant,
+        ab_variant: ab_variant,
         is_page_under_ab_test: taxon_resolver.page_ab_tested?,
       }
     end
