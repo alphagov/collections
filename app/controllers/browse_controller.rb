@@ -38,9 +38,7 @@ private
       map_to_taxon: top_level_redirect
     )
 
-    if page_in_ab_test?
-      ab_variant.configure_response(response)
-    end
+    configure_ab_response if page_in_ab_test?
 
     if taxon_resolver.taxon_base_path
       redirect_to(

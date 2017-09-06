@@ -43,6 +43,10 @@ class ApplicationController < ActionController::Base
     ab_test.requested_variant(request.headers)
   end
 
+  def configure_ab_response
+    ab_variant.configure_response(response)
+  end
+
 private
 
   def restrict_request_formats

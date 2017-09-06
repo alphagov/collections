@@ -1,4 +1,6 @@
 class TopicsController < ApplicationController
+  before_action :configure_ab_response, if: :page_in_ab_test?, only: [:show]
+
   def index
     topic = Topic.find(request.path)
     setup_content_item_and_navigation_helpers(topic)
@@ -12,10 +14,6 @@ class TopicsController < ApplicationController
       page_is_in_ab_test: page_in_ab_test?,
       map_to_taxon: top_level_redirect
     )
-
-    if page_in_ab_test?
-      ab_variant.configure_response(response)
-    end
 
     if taxon_resolver.taxon_base_path
       redirect_to(

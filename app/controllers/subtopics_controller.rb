@@ -1,14 +1,12 @@
 class SubtopicsController < ApplicationController
+  before_action :configure_ab_response, if: :page_in_ab_test?
+
   def show
     taxon_resolver = TaxonRedirectResolver.new(
       ab_variant,
       page_is_in_ab_test: page_in_ab_test?,
       map_to_taxon: second_level_redirect
     )
-
-    if page_in_ab_test?
-      ab_variant.configure_response(response)
-    end
 
     if taxon_resolver.taxon_base_path
       redirect_to(
