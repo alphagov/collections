@@ -35,7 +35,7 @@ private
     taxon_resolver = TaxonRedirectResolver.new(
       ab_variant,
       page_is_in_ab_test: page_in_ab_test?,
-      map_to_taxon: lambda { top_level_redirect }
+      map_to_taxon: top_level_redirect
     )
 
     if page_in_ab_test?

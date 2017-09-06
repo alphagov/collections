@@ -10,7 +10,7 @@ class TopicsController < ApplicationController
     taxon_resolver = TaxonRedirectResolver.new(
       ab_variant,
       page_is_in_ab_test: page_in_ab_test?,
-      map_to_taxon: lambda { redirects[params[:topic_slug]] }
+      map_to_taxon: top_level_redirect
     )
 
     if page_in_ab_test?

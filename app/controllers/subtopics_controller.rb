@@ -3,7 +3,7 @@ class SubtopicsController < ApplicationController
     taxon_resolver = TaxonRedirectResolver.new(
       ab_variant,
       page_is_in_ab_test: page_in_ab_test?,
-      map_to_taxon: lambda { redirects[params[:topic_slug]][params[:subtopic_slug]] }
+      map_to_taxon: second_level_redirect
     )
 
     if page_in_ab_test?
@@ -41,7 +41,7 @@ private
   end
 
   def second_level_redirect
-    redirects[params[:topic_slug]][params[:subtopic_slug]]
+    redirects.dig(params[:topic_slug], params[:subtopic_slug])
   end
 
   def organisations(subtopic_content_id)
