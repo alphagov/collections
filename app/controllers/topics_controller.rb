@@ -15,7 +15,7 @@ class TopicsController < ApplicationController
       map_to_taxon: top_level_redirect
     )
 
-    if taxon_resolver.taxon_base_path
+    if taxon_resolver.redirect?
       redirect_to(
         controller: "taxons",
         action: "show",

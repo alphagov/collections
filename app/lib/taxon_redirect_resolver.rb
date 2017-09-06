@@ -6,4 +6,8 @@ class TaxonRedirectResolver
       @taxon_base_path, @fragment = map_to_taxon.split('#')
     end
   end
+
+  def redirect?
+    taxon_base_path.present?
+  end
 end

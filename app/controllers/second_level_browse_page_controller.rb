@@ -28,7 +28,7 @@ private
 
     configure_ab_response if page_in_ab_test?
 
-    if taxon_resolver.taxon_base_path
+    if taxon_resolver.redirect?
       redirect_to(
         controller: "taxons",
         action: "show",
