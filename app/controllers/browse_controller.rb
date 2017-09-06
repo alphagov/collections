@@ -32,13 +32,13 @@ class BrowseController < ApplicationController
 private
 
   def show_html(page)
+    configure_ab_response if page_in_ab_test?
+
     taxon_resolver = TaxonRedirectResolver.new(
       ab_variant,
       page_is_in_ab_test: page_in_ab_test?,
       map_to_taxon: top_level_redirect
     )
-
-    configure_ab_response if page_in_ab_test?
 
     if taxon_resolver.redirect?
       redirect_to(
