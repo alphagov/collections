@@ -52,8 +52,13 @@ private
         page: page,
         is_page_under_ab_test: page_in_ab_test?,
         ab_variant: ab_variant,
+        legacy_navigation_analytics_identifier: legacy_navigation_analytics_identifier
       }
     end
+  end
+
+  def legacy_navigation_analytics_identifier
+    params[:top_level_slug] if top_level_redirect.present?
   end
 
   def page_in_ab_test?
