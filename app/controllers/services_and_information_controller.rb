@@ -4,11 +4,11 @@ class ServicesAndInformationController < ApplicationController
 
     taxon_resolver = TaxonRedirectResolver.new(
       ab_variant,
-      is_page_in_ab_test: lambda { params[:organisation_id] == "department-for-education" },
+      page_is_in_ab_test: page_in_ab_test?,
       map_to_taxon: lambda { "education" }
     )
 
-    if taxon_resolver.page_ab_tested?
+    if page_in_ab_test?
       ab_variant.configure_response(response)
     end
 
@@ -24,13 +24,17 @@ class ServicesAndInformationController < ApplicationController
         service_and_information: service_and_information,
         organisation: service_and_information.organisation,
         grouped_links: grouped_links,
-        is_page_under_ab_test: taxon_resolver.page_ab_tested?,
+        is_page_under_ab_test: page_in_ab_test?,
         ab_variant: ab_variant,
       }
     end
   end
 
 private
+
+  def page_in_ab_test?
+    params[:organisation_id] == "department-for-education"
+  end
 
   def base_path
     "/government/organisations/#{params[:organisation_id]}/services-information"
