@@ -1,4 +1,6 @@
 class TopicsController < ApplicationController
+  before_action :configure_ab_response, if: :page_in_ab_test?, only: [:show]
+
   def index
     topic = Topic.find(request.path)
     setup_content_item_and_navigation_helpers(topic)
@@ -8,16 +10,12 @@ class TopicsController < ApplicationController
 
   def show
     taxon_resolver = TaxonRedirectResolver.new(
-      request,
-      is_page_in_ab_test: lambda { !redirects[params[:topic_slug]].nil? },
-      map_to_taxon: lambda { redirects[params[:topic_slug]] }
+      ab_variant,
+      page_is_in_ab_test: page_in_ab_test?,
+      map_to_taxon: top_level_redirect
     )
 
-    if taxon_resolver.page_ab_tested?
-      taxon_resolver.ab_variant.configure_response(response)
-    end
-
-    if taxon_resolver.taxon_base_path
+    if taxon_resolver.redirect?
       redirect_to(
         controller: "taxons",
         action: "show",
@@ -30,10 +28,20 @@ class TopicsController < ApplicationController
 
       render :index, locals: {
         topic: topic,
-        ab_variant: taxon_resolver.ab_variant,
-        is_page_under_ab_test: taxon_resolver.page_ab_tested?,
+        ab_variant: ab_variant,
+        is_page_under_ab_test: page_in_ab_test?,
       }
     end
+  end
+
+private
+
+  def page_in_ab_test?
+    top_level_redirect.present?
+  end
+
+  def top_level_redirect
+    redirects[params[:topic_slug]]
   end
 
   def redirects

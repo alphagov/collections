@@ -20,19 +20,15 @@ class SecondLevelBrowsePageController < ApplicationController
 private
 
   def show_html
+    configure_ab_response if page_in_ab_test?
+
     taxon_resolver = TaxonRedirectResolver.new(
-      request,
-      is_page_in_ab_test: lambda {
-        top_level_redirect.present? && second_level_redirect.present?
-      },
-      map_to_taxon: lambda { second_level_redirect }
+      ab_variant,
+      page_is_in_ab_test: page_in_ab_test?,
+      map_to_taxon: second_level_redirect
     )
 
-    if taxon_resolver.page_ab_tested?
-      taxon_resolver.ab_variant.configure_response(response)
-    end
-
-    if taxon_resolver.taxon_base_path
+    if taxon_resolver.redirect?
       redirect_to(
         controller: "taxons",
         action: "show",
@@ -43,10 +39,19 @@ private
       render :show, locals: {
         page: page,
         meta_section: meta_section,
-        is_page_under_ab_test: taxon_resolver.page_ab_tested?,
-        ab_variant: taxon_resolver.ab_variant,
+        is_page_under_ab_test: page_in_ab_test?,
+        ab_variant: ab_variant,
+        legacy_navigation_analytics_identifier: legacy_navigation_analytics_identifier
       }
     end
+  end
+
+  def legacy_navigation_analytics_identifier
+    params[:top_level_slug] if top_level_redirect.present?
+  end
+
+  def page_in_ab_test?
+    top_level_redirect.present? && second_level_redirect.present?
   end
 
   def top_level_redirect

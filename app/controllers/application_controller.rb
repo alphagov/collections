@@ -37,6 +37,16 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def ab_variant
+    dimension = Rails.application.config.navigation_ab_test_dimension
+    ab_test = GovukAbTesting::AbTest.new("EducationNavigation", dimension: dimension)
+    ab_test.requested_variant(request.headers)
+  end
+
+  def configure_ab_response
+    ab_variant.configure_response(response)
+  end
+
 private
 
   def restrict_request_formats
