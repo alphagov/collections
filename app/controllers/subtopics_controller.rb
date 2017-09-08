@@ -24,11 +24,16 @@ class SubtopicsController < ApplicationController
         meta_section: subtopic.parent.title.downcase,
         ab_variant: ab_variant,
         is_page_under_ab_test: page_in_ab_test?,
+        legacy_navigation_analytics_identifier: legacy_navigation_analytics_identifier
       }
     end
   end
 
 private
+
+  def legacy_navigation_analytics_identifier
+    second_level_redirect.split('/').first if page_in_ab_test?
+  end
 
   def page_in_ab_test?
     top_level_redirect.present? && second_level_redirect.present?
