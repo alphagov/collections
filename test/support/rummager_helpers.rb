@@ -144,6 +144,24 @@ module RummagerHelpers
     end
   end
 
+  def rummager_has_documents_for_second_level_browse_page(browse_page_content_id, document_slugs, format = "guide", page_size: 1000)
+    results = document_slugs.map.with_index do |slug, i|
+      rummager_document_for_slug(slug, (i + 1).hours.ago, format)
+    end
+
+    results.each_slice(page_size).with_index do |results_page, page|
+      start = page * page_size
+      Services.rummager.stubs(:search).with(
+        start: start,
+        count: page_size,
+        filter_mainstream_browse_page_content_ids: [browse_page_content_id],
+        fields: %w(title link format),
+      ).returns("results" => results_page,
+        "start" => start,
+        "total" => results.size)
+    end
+  end
+
   def expect_search_params(params)
     GdsApi::Rummager.any_instance.expects(:search)
       .with(has_entries(params))
