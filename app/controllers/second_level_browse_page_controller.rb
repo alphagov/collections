@@ -47,7 +47,7 @@ private
   end
 
   def legacy_navigation_analytics_identifier
-    params[:top_level_slug] if top_level_redirect.present?
+    second_level_redirect.split('/').first if page_in_ab_test?
   end
 
   def page_in_ab_test?
