@@ -351,6 +351,13 @@
       sectionTitle = sectionTitle ? sectionTitle.toLowerCase() : 'browse';
 
       var legacySectionIdentifier = state.sectionData['legacy_navigation_analytics_identifier'];
+      var navigationPageType = 'none';
+
+      if(this.displayState == 'section') {
+        navigationPageType = 'First Level Browse';
+      } else if(this.displayState == 'subsection') {
+        navigationPageType = 'Second Level Browse';
+      }
 
       if (GOVUK.analytics && GOVUK.analytics.trackPageview) {
         GOVUK.analytics.trackPageview(
@@ -358,7 +365,8 @@
           null,
           {
             dimension1: sectionTitle,
-            dimension30: legacySectionIdentifier
+            dimension30: legacySectionIdentifier,
+            dimension32: navigationPageType
           }
         );
       }

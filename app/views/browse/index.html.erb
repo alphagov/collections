@@ -1,5 +1,8 @@
 <% content_for :title, "All categories" %>
 <% content_for :page_class, "browse" %>
+<% content_for :meta_tags do %>
+  <meta name='govuk:navigation-page-type' content='Browse Index'>
+<% end %>
 
 <div class="browse-panes root" data-module="track-click">
   <%= render 'top_level_browse_pages',
