@@ -5,6 +5,7 @@
     <%= ab_variant.analytics_meta_tag.html_safe %>
     <%= legacy_navigation_meta_tag(legacy_navigation_analytics_identifier).html_safe %>
   <% end %>
+  <meta name='govuk:navigation-page-type' content='<%= navigation_page_type %>'>
 <% end %>
 <% content_for :page_class, "topics-page" %>
 
