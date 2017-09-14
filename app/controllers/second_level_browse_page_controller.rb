@@ -11,7 +11,8 @@ class SecondLevelBrowsePageController < ApplicationController
       f.json do
         render json: {
           breadcrumbs: breadcrumb_content,
-          html: render_partial('_links', page: page)
+          html: render_partial('_links', page: page),
+          legacy_navigation_analytics_identifier: legacy_navigation_analytics_identifier || 'none'
         }
       end
     end

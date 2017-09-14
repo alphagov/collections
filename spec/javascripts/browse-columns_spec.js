@@ -130,6 +130,29 @@ describe('browse-columns.js', function() {
     expect(context.$breadcrumbs.find('li').length).toEqual(2);
   });
 
+  it("should track a page view", function() {
+    GOVUK.analytics = jasmine.createSpyObj('analytics', ['trackPageview']);
+
+    var state = {
+      path: 'foo',
+      sectionData: {
+        legacy_navigation_analytics_identifier: 'legacy-section-identifier'
+      }
+    };
+
+    var bc = new GOVUK.BrowseColumns({ $el: $('<div>') });
+    bc.trackPageview(state);
+
+    expect(GOVUK.analytics.trackPageview).toHaveBeenCalledWith(
+      'foo',
+      null,
+      {
+        dimension1: 'browse',
+        dimension30: 'legacy-section-identifier'
+      }
+    );
+  });
+
   // http://stackoverflow.com/questions/9821166/error-accessing-jquerywindow-height-in-jasmine-while-running-tests-in-maven
   function setWindowSize(size) {
     $.prototype.width = function() {

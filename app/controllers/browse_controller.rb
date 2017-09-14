@@ -23,7 +23,8 @@ class BrowseController < ApplicationController
       f.json do
         render json: {
           breadcrumbs: breadcrumb_content,
-          html: second_level_browse_pages_partial(page)
+          html: second_level_browse_pages_partial(page),
+          legacy_navigation_analytics_identifier: legacy_navigation_analytics_identifier || 'none'
         }
       end
     end
