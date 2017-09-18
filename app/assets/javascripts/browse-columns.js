@@ -350,12 +350,15 @@
       var sectionTitle = this.$section.find('h1').text();
       sectionTitle = sectionTitle ? sectionTitle.toLowerCase() : 'browse';
 
+      var legacySectionIdentifier = state.sectionData['legacy_navigation_analytics_identifier'];
+
       if (GOVUK.analytics && GOVUK.analytics.trackPageview) {
         GOVUK.analytics.trackPageview(
           state.path,
           null,
           {
-            dimension1: sectionTitle
+            dimension1: sectionTitle,
+            dimension30: legacySectionIdentifier
           }
         );
       }
