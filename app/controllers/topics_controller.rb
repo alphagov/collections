@@ -5,7 +5,11 @@ class TopicsController < ApplicationController
     topic = Topic.find(request.path)
     setup_content_item_and_navigation_helpers(topic)
 
-    render :index, locals: { topic: topic, is_page_under_ab_test: false }
+    render :index, locals: {
+      topic: topic,
+      is_page_under_ab_test: false,
+      navigation_page_type: 'Topic Index'
+    }
   end
 
   def show
@@ -30,7 +34,8 @@ class TopicsController < ApplicationController
         topic: topic,
         ab_variant: ab_variant,
         is_page_under_ab_test: page_in_ab_test?,
-        legacy_navigation_analytics_identifier: legacy_navigation_analytics_identifier
+        legacy_navigation_analytics_identifier: legacy_navigation_analytics_identifier,
+        navigation_page_type: 'First Level Topic'
       }
     end
   end

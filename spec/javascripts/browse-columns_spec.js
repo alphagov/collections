@@ -148,7 +148,8 @@ describe('browse-columns.js', function() {
       null,
       {
         dimension1: 'browse',
-        dimension30: 'legacy-section-identifier'
+        dimension30: 'legacy-section-identifier',
+        dimension32: 'none'
       }
     );
   });
