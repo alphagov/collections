@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'gds-api-adapters', '~> 47.9'
 gem 'govuk_ab_testing', '~> 2.4'
-gem 'govuk_app_config', '~> 0.2'
+gem 'govuk_app_config', '~> 0.3'
 gem 'govuk_frontend_toolkit', '~> 4.3.0'
 gem 'govuk_navigation_helpers', '6.3.0'
 gem 'logstasher', '0.6.2' # 0.6.5+ changes the JSON schema used for events
