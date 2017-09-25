@@ -180,7 +180,9 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
       end
 
       # When I go to the next page
-      click_on "Next page"
+      within_static_component('previous_and_next_navigation') do |component_args|
+        visit component_args["next_page"]["url"]
+      end
 
       # Then I should see the remaining documents
       within '.changed-documents' do
@@ -191,7 +193,9 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
       end
 
       # When I go back to the first page
-      click_on "Previous page"
+      within_static_component('previous_and_next_navigation') do |component_args|
+        visit component_args["previous_page"]["url"]
+      end
 
       # Then I should see the first 50 documents again
       within '.changed-documents' do

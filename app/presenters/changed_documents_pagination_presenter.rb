@@ -4,6 +4,28 @@ class ChangedDocumentsPaginationPresenter
     @view_context = view_context
   end
 
+  def previous_and_next_navigation
+    component_params = {}
+
+    if previous_page?
+      component_params[:previous_page] = {
+        url: previous_page_path,
+        title: "Previous",
+        label: "#{previous_page_number} of #{total_pages}"
+      }
+    end
+
+    if next_page?
+      component_params[:next_page] = {
+        url: next_page_path,
+        title: "Next",
+        label: "#{next_page_number} of #{total_pages}"
+      }
+    end
+
+    component_params
+  end
+
   def total_pages
     (@changed_documents.total.to_f / @changed_documents.page_size.to_f).ceil
   end

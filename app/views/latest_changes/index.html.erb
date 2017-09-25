@@ -39,29 +39,5 @@
     <% end -%>
   </ul>
 
-  <ul class="previous-next-navigation">
-    <% if pagination_presenter.previous_page? %>
-      <li class="previous">
-        <%= link_to pagination_presenter.previous_page_path do %>
-          Previous <span class="visuallyhidden">page</span>
-          <span class="page-numbers">
-            <%= pagination_presenter.previous_page_number %> of
-            <%= pagination_presenter.total_pages %>
-          </span>
-        <% end %>
-      </li>
-    <% end %>
-
-    <% if pagination_presenter.next_page? %>
-      <li class="next">
-        <%= link_to pagination_presenter.next_page_path do %>
-          Next <span class="visuallyhidden">page</span>
-          <span class="page-numbers">
-            <%= pagination_presenter.next_page_number %> of
-            <%= pagination_presenter.total_pages %>
-          </span>
-        <% end %>
-      </li>
-    <% end %>
-  </ul>
+  <%= render "govuk_component/previous_and_next_navigation", pagination_presenter.previous_and_next_navigation %>
 <% end %>
