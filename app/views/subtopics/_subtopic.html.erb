@@ -7,12 +7,7 @@
         <h1><%= yield :page_title %></h1>
 
         <% if organisations.any? %>
-          <aside class="metadata">
-            <dl>
-              <dt>From:</dt>
-              <dd><%= organisations.array_of_links.to_sentence.html_safe %></dd>
-            </dl>
-          </aside>
+          <%= render "govuk_component/metadata", from: organisations.array_of_links %>
         <% end %>
       </div>
     </div>

@@ -8,6 +8,6 @@ end
 
 Then(/^I see a list of organisations associated with content in the subtopic$/) do
   @organisations.each do |slug|
-    assert page.has_selector?("a[href='/#{slug}'][class='organisation-link']")
+    assert page.has_text?(slug)
   end
 end
