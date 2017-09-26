@@ -31,24 +31,7 @@
         <h1 id="<%= list.title.parameterize %>"><%= list.title %></h1>
       </div>
       <div class="column-two-thirds">
-        <%
-          topic_list_items = list.contents.each_with_index.map do |list_item, list_item_index|
-                              {
-                                text: list_item.title,
-                                path: list_item.base_path,
-                                data_attributes: {
-                                  track_category: 'navSubtopicContentItemLinkClicked',
-                                  track_action: "#{list_index + 1}.#{list_item_index + 1}",
-                                  track_label: list_item.base_path,
-                                  track_options: {
-                                    dimension28: list.contents.count.to_s,
-                                    dimension29: list_item.title,
-                                  },
-                                }
-                              }
-                            end
-        %>
-        <%= render 'components/topic-list', items: topic_list_items %>
+        <%= render 'components/topic-list', topic_list_params(list.contents, list_index: list_index, category: 'navSubtopicContentItemLinkClicked') %>
       </div>
     </nav>
   <% end -%>

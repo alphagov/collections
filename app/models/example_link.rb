@@ -8,4 +8,8 @@ class ExampleLink
     :link,
     :class
   )
+
+  def base_path
+    link
+  end
 end
