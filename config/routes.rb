@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # change, also change the routes claimed by collections-publisher.
 
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
+  mount GovukPublishingComponents::Engine, at: "/component-guide" if defined?(GovukPublishingComponents)
 
   get "/browse.json" => redirect("/api/content/browse")
 

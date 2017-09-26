@@ -1,0 +1,51 @@
+name: Topic list
+description: A list of topics
+shared_accessibility_criteria:
+  - link
+examples:
+  default:
+    data:
+      items:
+      - text: 'Environmental taxes, reliefs and schemes for businesses'
+        path: '/green-taxes-and-reliefs'
+      - text: 'Aggregates Levy: register or change your details'
+        path: '/guidance/aggregates-levy-register-or-change-your-details'
+      - text: 'Pay environmental taxes'
+        path: '/guidance/pay-environmental-taxes'
+  see_more:
+    description: |
+      A list may be truncated with an underlined "See more" link at the end
+    data:
+      items:
+      - text: 'Environmental taxes, reliefs and schemes for businesses'
+        path: '/green-taxes-and-reliefs'
+      - text: 'Aggregates Levy: register or change your details'
+        path: '/guidance/aggregates-levy-register-or-change-your-details'
+      - text: 'Pay environmental taxes'
+        path: '/guidance/pay-environmental-taxes'
+      see_more_link:
+        text: 'See more'
+        path: '/more'
+  with_data_attributes:
+    description: |
+      Arbitrary data attributes can be included with each link, usually for analytics tracking.
+    data:
+      items:
+      - text: 'Environmental taxes, reliefs and schemes for businesses'
+        path: '/green-taxes-and-reliefs'
+        data_attributes:
+          track_category: 'navSubtopicContentItemLinkClicked'
+          track_action: 1.1
+          track_label: '/green-taxes-and-reliefs'
+          track_options:
+            dimension28: 2
+            dimension29: 'Environmental taxes, reliefs and schemes for businesses'
+      - text: 'Aggregates Levy: register or change your details'
+        path: '/guidance/aggregates-levy-register-or-change-your-details'
+        data_attributes:
+          track_category: 'navSubtopicContentItemLinkClicked'
+          track_action: 1.2
+          track_label: '/guidance/aggregates-levy-register-or-change-your-details'
+          track_options:
+            dimension28: 2
+            dimension29: 'Aggregates Levy: register or change your details'

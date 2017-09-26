@@ -26,29 +26,13 @@
     link_to_latest_feed: true,
   }) do %>
   <% subtopic.lists.each_with_index do |list, list_index| -%>
-    <nav class="index-list with-title" aria-labelledby="<%= list.title.parameterize %>">
-      <h1 id="<%= list.title.parameterize %>"><%= list.title %></h1>
-      <ul>
-      <% list.contents.each_with_index do |list_item, list_item_index| -%>
-        <li>
-          <%=
-            link_to(
-              list_item.title,
-              list_item.base_path,
-              data: {
-                track_category: 'navSubtopicContentItemLinkClicked',
-                track_action: "#{list_index + 1}.#{list_item_index + 1}",
-                track_label: list_item.base_path,
-                track_options: {
-                  dimension28: list.contents.count.to_s,
-                  dimension29: list_item.title,
-                },
-              }
-            )
-          %>
-        </li>
-      <% end -%>
-      </ul>
+    <nav class="grid-row" aria-labelledby="<%= list.title.parameterize %>">
+      <div class="column-third">
+        <h1 id="<%= list.title.parameterize %>"><%= list.title %></h1>
+      </div>
+      <div class="column-two-thirds">
+        <%= render 'components/topic-list', topic_list_params(list.contents, list_index: list_index, category: 'navSubtopicContentItemLinkClicked') %>
+      </div>
     </nav>
   <% end -%>
 <% end %>

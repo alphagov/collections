@@ -15,7 +15,7 @@ class OrganisationsFacetPresenter
 
   def array_of_links
     @organisations.map { |title, link|
-      link_to title, link, class: 'organisation-link'
+      link_to title, link
     }
   end
 end

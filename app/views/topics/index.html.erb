@@ -17,26 +17,7 @@
 
 <div class="browse-container full-width topics-page" data-module="track-click">
   <nav class="topics">
-    <ul>
-      <% topic.children.each_with_index do |subtopic, index|%>
-        <li>
-          <%=
-            link_to(
-              subtopic.title,
-              subtopic.base_path,
-              data: {
-                track_category: topic.base_path == '/topic' ? 'navTopicLinkClicked' : 'navSubtopicLinkClicked',
-                track_action: "#{index + 1}",
-                track_label: subtopic.base_path,
-                track_options: {
-                  dimension28: topic.children.count.to_s,
-                  dimension29: subtopic.title,
-                },
-              }
-            )
-          %>
-        </li>
-      <% end %>
-    </ul>
+    <% tracking_category = topic.base_path == '/topic' ? 'navTopicLinkClicked' : 'navSubtopicLinkClicked' %>
+    <%= render 'components/topic-list', topic_list_params(topic.children, category: tracking_category) %>
   </nav>
 </div>

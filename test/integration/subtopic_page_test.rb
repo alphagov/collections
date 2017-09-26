@@ -70,10 +70,10 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
         assert page.has_content?("Offshore")
       end
 
-      within '.metadata' do
+      within_static_component('metadata') do
         # The orgs are fixed in the rummager test helpers
-        assert page.has_link?("Department of Energy & Climate Change")
-        assert page.has_link?("Foreign & Commonwealth Office")
+        assert page.has_text?("Department of Energy &amp; Climate Change")
+        assert page.has_text?("Foreign &amp; Commonwealth Office")
       end
     end
 
@@ -102,10 +102,9 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
         assert page.has_content?("Offshore")
       end
 
-      within '.metadata' do
-        # The orgs are fixed in the rummager test helpers
-        assert page.has_link?("Department of Energy & Climate Change")
-        assert page.has_link?("Foreign & Commonwealth Office")
+      within_static_component('metadata') do
+        assert page.has_text?("Department of Energy &amp; Climate Change")
+        assert page.has_text?("Foreign &amp; Commonwealth Office")
       end
     end
 
@@ -143,10 +142,10 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
           assert page.has_content?("Offshore: latest documents")
         end
 
-        within '.metadata' do
+        within_static_component('metadata') do
           # The orgs are fixed in the rummager test helpers
-          assert page.has_link?("Department of Energy & Climate Change")
-          assert page.has_link?("Foreign & Commonwealth Office")
+          assert page.has_text?("Department of Energy &amp; Climate Change")
+          assert page.has_text?("Foreign &amp; Commonwealth Office")
         end
       end
 
@@ -180,7 +179,9 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
       end
 
       # When I go to the next page
-      click_on "Next page"
+      within_static_component('previous_and_next_navigation') do |component_args|
+        visit component_args["next_page"]["url"]
+      end
 
       # Then I should see the remaining documents
       within '.changed-documents' do
@@ -191,7 +192,9 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
       end
 
       # When I go back to the first page
-      click_on "Previous page"
+      within_static_component('previous_and_next_navigation') do |component_args|
+        visit component_args["previous_page"]["url"]
+      end
 
       # Then I should see the first 50 documents again
       within '.changed-documents' do

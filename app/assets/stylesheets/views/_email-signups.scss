@@ -3,22 +3,6 @@
     margin-top: 30px;
   }
 
-  h1 {
-    @include heading-48;
-    font-weight: bold;
-
-    @include media(tablet) {
-      width: $two-thirds;
-    }
-
-    span {
-      @include core-27($line-height: 1);
-      display: block;
-      margin-bottom: 0.25em;
-      color: $secondary-text-colour;
-    }
-  }
-
   section {
     margin-bottom: 30px;
 

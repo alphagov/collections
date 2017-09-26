@@ -18,11 +18,11 @@ class ServicesAndInformationBrowsingTest < ActionDispatch::IntegrationTest
       assert page.has_content?("Services and information")
     end
 
-    within "nav.index-list:nth-child(1) h1" do
+    within "nav.grid-row:nth-child(1) h1" do
       assert page.has_content?("Environmental permits")
     end
 
-    within "nav.index-list:nth-child(2) h1" do
+    within "nav.grid-row:nth-child(2) h1" do
       assert page.has_content?("Waste")
     end
 
@@ -34,7 +34,7 @@ class ServicesAndInformationBrowsingTest < ActionDispatch::IntegrationTest
 
     assert page.has_selector?('.browse-container[data-module="track-click"]')
 
-    within "nav.index-list:nth-child(1) ul" do
+    within "nav.grid-row:first-child .app-c-topic-list" do
       content_item_link = page.first('li a')
 
       assert_equal(
@@ -71,7 +71,7 @@ class ServicesAndInformationBrowsingTest < ActionDispatch::IntegrationTest
       )
     end
 
-    within "nav.index-list:nth-child(2) ul" do
+    within "nav.grid-row:nth-child(2) .app-c-topic-list" do
       content_item_link = page.first('li a')
 
       assert_equal(
