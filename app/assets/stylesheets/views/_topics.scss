@@ -106,35 +106,5 @@
         max-width: 12.5em;
       }
     }
-
-    ul {
-      display: block;
-      margin: 0;
-      padding: 0;
-
-      li {
-        margin-bottom: 10px;
-        list-style: none;
-
-        &:last-of-type {
-          margin-bottom: 0;
-        }
-      }
-
-      li a {
-        @include bold-19;
-        text-decoration: none;
-      }
-
-      li .other {
-        text-decoration: underline;
-      }
-    }
-
-    &.with-title ul {
-      @include media(desktop) {
-        margin-left: 20.5em;
-      }
-    }
   }
 }

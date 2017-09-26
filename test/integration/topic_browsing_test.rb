@@ -62,7 +62,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
       assert page.has_content?("Oil and gas")
     end
 
-    within ".topics ul" do
+    within ".app-c-topic-list" do
       within "li:nth-child(1)" do
         assert page.has_link?("Fields")
       end
@@ -147,7 +147,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
 
     assert page.has_selector?('.topics-page[data-module="track-click"]')
 
-    within ".topics ul" do
+    within ".app-c-topic-list" do
       within "li:nth-child(1)" do
         subtopic_link = page.find('a', text: 'Wells')
 

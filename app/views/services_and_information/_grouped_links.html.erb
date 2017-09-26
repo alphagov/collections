@@ -1,27 +1,44 @@
 <% grouped_links.each_with_index do |group, group_index| -%>
-  <nav class="index-list with-title" aria-labelledby="<%= group.title.parameterize %>">
-    <h1 id="<%= group.title.parameterize %>"><%= group.title %></h1>
-    <ul>
-    <% group.examples.each_with_index do |group_link, group_link_index| -%>
-      <li>
-        <%=
-            link_to(
-              group_link.title,
-              group_link.link,
-              data: {
-                track_category: 'navServicesInformationLinkClicked',
-                track_action: "#{group_index + 1}.#{group_link_index + 1}",
-                track_label: group_link.link,
-                track_options: {
-                  dimension28: group.examples.count.to_s,
-                  dimension29: group_link.title,
-                },
-              },
-              class: group_link.class
-            )
-          %>
-      </li>
-    <% end -%>
-    </ul>
+  <nav class="grid-row" aria-labelledby="<%= group.title.parameterize %>">
+    <div class="column-third">
+      <h1 id="<%= group.title.parameterize %>"><%= group.title %></h1>
+    </div>
+    <div class="column-two-thirds">
+      <%
+        topic_list_params = {}
+        list_item_count = group.examples.count
+
+        if group.see_more_link
+          list_item_count = list_item_count + 1
+          topic_list_params[:see_more_link] = group.see_more_link
+          topic_list_params[:see_more_link][:data_attributes] = {
+                                                                  track_category: 'navServicesInformationLinkClicked',
+                                                                  track_action: "#{group_index + 1}.#{group.examples.length + 1}",
+                                                                  track_label: group.see_more_link[:path],
+                                                                  track_options: {
+                                                                    dimension28: list_item_count.to_s,
+                                                                    dimension29: group.see_more_link[:text],
+                                                                  },
+                                                                }
+        end
+
+        topic_list_params[:items] = group.examples.each_with_index.map do |list_item, list_item_index|
+                            {
+                              text: list_item.title,
+                              path: list_item.link,
+                              data_attributes: {
+                                track_category: 'navServicesInformationLinkClicked',
+                                track_action: "#{group_index + 1}.#{list_item_index + 1}",
+                                track_label: list_item.link,
+                                track_options: {
+                                  dimension28: list_item_count.to_s,
+                                  dimension29: list_item.title,
+                                },
+                              }
+                            }
+                          end
+      %>
+      <%= render 'components/topic-list', topic_list_params %>
+    </div>
   </nav>
 <% end -%>

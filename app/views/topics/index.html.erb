@@ -15,28 +15,26 @@
   </div>
 </header>
 
+<%
+  topic_list_items = topic.children.each_with_index.map do |list_item, list_item_index|
+                      {
+                        text: list_item.title,
+                        path: list_item.base_path,
+                        data_attributes: {
+                          track_category: topic.base_path == '/topic' ? 'navTopicLinkClicked' : 'navSubtopicLinkClicked',
+                          track_action: "#{list_item_index + 1}",
+                          track_label: list_item.base_path,
+                          track_options: {
+                            dimension28: topic.children.count.to_s,
+                            dimension29: list_item.title,
+                          },
+                        }
+                      }
+                    end
+%>
+
 <div class="browse-container full-width topics-page" data-module="track-click">
   <nav class="topics">
-    <ul>
-      <% topic.children.each_with_index do |subtopic, index|%>
-        <li>
-          <%=
-            link_to(
-              subtopic.title,
-              subtopic.base_path,
-              data: {
-                track_category: topic.base_path == '/topic' ? 'navTopicLinkClicked' : 'navSubtopicLinkClicked',
-                track_action: "#{index + 1}",
-                track_label: subtopic.base_path,
-                track_options: {
-                  dimension28: topic.children.count.to_s,
-                  dimension29: subtopic.title,
-                },
-              }
-            )
-          %>
-        </li>
-      <% end %>
-    </ul>
+    <%= render 'components/topic-list', items: topic_list_items %>
   </nav>
 </div>

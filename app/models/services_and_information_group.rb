@@ -12,16 +12,16 @@ class ServicesAndInformationGroup
   def examples
     @examples ||= begin
       example_list = group.dig("value", "example_info", "examples") || []
-
-      if more_documents?
-        example_list << {
-          'link' => subsector_link,
-          'title' => 'See more',
-          'class' => 'other'
-        }
-      end
-
       example_list.map { |example| ExampleLink.new(example) }
+    end
+  end
+
+  def see_more_link
+    if more_documents?
+      {
+        path: subsector_link,
+        text: 'See more',
+      }
     end
   end
 
