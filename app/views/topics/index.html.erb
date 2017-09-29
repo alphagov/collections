@@ -10,9 +10,7 @@
 <% content_for :page_class, "topics-page" %>
 
 <header class="page-header group">
-  <div class="full-width">
-    <h1><%= topic.title %></h1>
-  </div>
+  <%= render "govuk_component/title", title: topic.title %>
 </header>
 
 <div class="browse-container full-width topics-page" data-module="track-click">
