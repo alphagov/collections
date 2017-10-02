@@ -3,16 +3,13 @@
 <header class="page-header group">
   <div class="grid-row">
     <div class="column-two-thirds">
-      <div class="heading">
-        <h1><%= yield :page_title %></h1>
-
-        <% if organisations.any? %>
-          <%= render "govuk_component/metadata", from: organisations.array_of_links %>
-        <% end %>
-      </div>
+      <%= yield :page_title %>
+      <% if organisations.any? %>
+        <%= render "govuk_component/metadata", from: organisations.array_of_links %>
+      <% end %>
     </div>
 
-    <div class="column-one-third">
+    <div class="column-one-third add-title-margin">
       <div class="latest-subscribe">
         <ul>
           <li class="email primary">

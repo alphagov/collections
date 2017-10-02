@@ -1,32 +1,6 @@
 .topics-page {
 
   .page-header {
-    padding: $gutter-half 0;
-    margin: 0;
-
-    h1 {
-      @include bold-48;
-      padding: 20px 0;
-
-      @include media(mobile) {
-        width: auto;
-        padding: 0 0 $gutter-half;
-      }
-
-      a {
-        @include core-27($line-height: 1);
-        display: block;
-        margin-bottom: 0.25em;
-        text-shadow: none;
-        color: $secondary-text-colour;
-        text-decoration: none;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-
     h2 {
       @include core-24;
       color: inherit;

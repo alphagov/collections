@@ -8,10 +8,16 @@
   <meta name='govuk:navigation-page-type' content='Second Level Topic'>
 <% end %>
 <% content_for :page_title do %>
-  <%- if subtopic.parent -%>
-    <%= link_to subtopic.parent.title, subtopic.parent.base_path %>
-  <%- end -%>
-  <%= subtopic.title %>
+  <%
+    title_params = { title: subtopic.title }
+    if subtopic.parent
+      title_params[:context] = {
+        text: subtopic.parent.title,
+        href: subtopic.parent.base_path
+      }
+    end
+  %>
+  <%= render "govuk_component/title", title_params %>
 <% end %>
 
 <% content_for :meta_section do %>

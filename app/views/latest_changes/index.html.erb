@@ -1,6 +1,9 @@
 <% content_for :title, "#{subtopic.title}: latest documents" %>
 <% content_for :page_title do %>
-  <span><%= subtopic.title %></span>: latest documents
+  <%= render "govuk_component/title", {
+        title: "Latest documents",
+        context: { text: subtopic.title, href: subtopic.base_path }
+      } %>
 <% end %>
 
 <% content_for :meta_section do %>

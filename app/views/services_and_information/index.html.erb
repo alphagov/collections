@@ -7,14 +7,10 @@
 <% end %>
 
 <header class="page-header group">
-  <div class="full-width">
-    <div class="heading">
-      <h1>
-        <%= link_to organisation["title"], organisation["base_path"] %>
-        Services and information
-      </h1>
-    </div>
-  </div>
+  <%= render "govuk_component/title", {
+        title: "Services and information",
+        context: { text: organisation["title"], href: organisation["base_path"] }
+      } %>
 </header>
 
 <div class="browse-container full-width" data-module="track-click">

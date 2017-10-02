@@ -65,9 +65,10 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
     # Then I should see the subtopic metadata
     within '.page-header' do
-      within 'h1' do
-        assert page.has_content?("Oil and Gas")
-        assert page.has_content?("Offshore")
+      within_static_component 'title' do |component_args|
+        assert_equal component_args[:title], "Offshore"
+        assert_equal component_args[:context][:text], "Oil and Gas"
+        assert_equal component_args[:context][:href], "/topic/oil-and-gas"
       end
 
       within_static_component('metadata') do
@@ -97,9 +98,10 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
     # Then I should see the subtopic metadata
     within '.page-header' do
-      within 'h1' do
-        assert page.has_content?("Oil and Gas")
-        assert page.has_content?("Offshore")
+      within_static_component 'title' do |component_args|
+        assert_equal component_args[:title], "Offshore"
+        assert_equal component_args[:context][:text], "Oil and Gas"
+        assert_equal component_args[:context][:href], "/topic/oil-and-gas"
       end
 
       within_static_component('metadata') do
@@ -138,8 +140,10 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
       # Then I should see the subtopic metadata
       within '.page-header' do
-        within 'h1' do
-          assert page.has_content?("Offshore: latest documents")
+        within_static_component 'title' do |component_args|
+          assert_equal component_args[:title], "Latest documents"
+          assert_equal component_args[:context][:text], "Offshore"
+          assert_equal component_args[:context][:href], "/topic/oil-and-gas/offshore"
         end
 
         within_static_component('metadata') do
