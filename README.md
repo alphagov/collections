@@ -1,6 +1,6 @@
 # Collections Frontend
 
-Collections serves the GOV.UK browse and topic pages.
+Collections serves the GOV.UK navigation pages, 
 
 ![Browse page](docs/browse-page.jpg)
 ![Topic page](docs/topic-page.jpg)
@@ -16,8 +16,7 @@ Collections serves the GOV.UK browse and topic pages.
 - Topic page: [gov.uk/oil-and-gas](https://www.gov.uk/oil-and-gas)
 - Subtopic page: [gov.uk/oil-and-gas/fields-and-wells](https://www.gov.uk/oil-and-gas/fields-and-wells)
 - Services and information page: [gov.uk/government/organisations/hm-revenue-customs/services-information](https://www.gov.uk/government/organisations/hm-revenue-customs/services-information)
-- Taxonomy page (currently only on integration):
-  [gov.uk/education](https://www-origin.integration.publishing.service.gov.uk/education)
+- Taxonomy page: [gov.uk/education](https://www.gov.uk/education)
 
 ## Nomenclature
 
