@@ -44,4 +44,13 @@ class EmailHelperTest < ActionView::TestCase
 
     assert_equal expected_url, whitehall_email_url
   end
+
+  test "should return a valid subtopic email alert signup link" do
+    topic_slug = "parent-topic"
+    subtopic_slug = "child-topic"
+    expected_url = Plek.new.website_root +
+      URI.encode("/topic/parent-topic/child-topic/email-signup")
+
+    assert_equal expected_url, subtopic_email_alert_signup_url(topic_slug: topic_slug, subtopic_slug: subtopic_slug)
+  end
 end

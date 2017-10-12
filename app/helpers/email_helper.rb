@@ -11,6 +11,10 @@ module EmailHelper
     whitehall_base_email_sign_up_url + whitehall_atom_url
   end
 
+  def subtopic_email_alert_signup_url(topic_slug:, subtopic_slug:)
+    "#{root}/topic/#{topic_slug}/#{subtopic_slug}/email-signup"
+  end
+
 private
 
   WHITEHALL_EMAIL_SIGNUP_PATH = "/government/email-signup/new?email_signup[feed]=".freeze
