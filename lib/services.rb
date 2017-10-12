@@ -1,12 +1,7 @@
-require 'gds_api/email_alert_api'
 require 'gds_api/content_store'
 require 'gds_api/rummager'
 
 module Services
-  def self.email_alert_api
-    @email_alert_api ||= GdsApi::EmailAlertApi.new(Plek.new.find('email-alert-api'))
-  end
-
   def self.content_store
     @content_store ||= GdsApi::ContentStore.new(Plek.new.find('content-store'))
   end

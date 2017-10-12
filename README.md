@@ -1,6 +1,6 @@
 # Collections Frontend
 
-Collections serves the GOV.UK navigation pages, 
+Collections serves the GOV.UK navigation pages,
 
 ![Browse page](docs/browse-page.jpg)
 ![Topic page](docs/topic-page.jpg)
@@ -48,7 +48,7 @@ Collections serves the GOV.UK navigation pages,
   `associated_taxons` links. In this case the tagged content of the taxon will
   include content that is directly tagged to it and also content that has been
   tagged to any of the associated taxons.
-  
+
 
 ## Technical documentation
 
@@ -85,8 +85,6 @@ Content for taxon pages is returned by a search in Rummager based on content_ids
 - [rummager](https://github.com/alphagov/rummager), provides:
     - latest changes for Topics
     - content tagged to a particular Topic, Mainstream browse page or Organisation
-- [email-alert-api](https://github.com/alphagov/email-alert-api), provides:
-    - support for subscribing to notifications from a topic
 
 ### Running the application
 
