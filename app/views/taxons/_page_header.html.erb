@@ -6,7 +6,7 @@
       margin_bottom: 0
     } %>
 
-    <p class="taxon-description"><%= presented_taxon.description %></p>
+    <%= render 'govuk_component/lead_paragraph', text: presented_taxon.description %>
     <%= render partial: 'email_alerts', locals: { presented_taxon: presented_taxon } %>
   </div>
 </div>
