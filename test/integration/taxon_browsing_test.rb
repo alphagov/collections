@@ -303,21 +303,21 @@ private
   end
 
   def and_i_can_see_the_general_information_section_in_the_accordion
-    subsection = first('.subsection')
+    subsection = first('.app-c-accordion__section')
 
-    assert subsection.has_selector?('.subsection-title', text: /general information and guidance/i)
+    assert subsection.has_selector?('.app-c-accordion__title', text: /general information and guidance/i)
     assert subsection.has_selector?(
-      '.subsection-content .subsection-list-item a',
+      '.app-c-accordion__panel .subsection-list-item a',
       count: search_results.count
     )
   end
 
   def then_there_is_no_general_information_section_in_the_accordion
-    subsection = first('.subsection')
+    subsection = first('.app-c-accordion__section')
 
     assert_equal(
       false,
-      subsection.has_selector?('.subsection-title', text: /general information and guidance/i)
+      subsection.has_selector?('.app-c-accordion__title', text: /general information and guidance/i)
     )
   end
 
@@ -396,7 +396,7 @@ private
   end
 
   def and_all_sections_apart_from_general_information_have_an_email_signup_link
-    general_information, *subsections = page.all('.subsection').to_a
+    general_information, *subsections = page.all('.app-c-accordion__section').to_a
 
     refute general_information.has_link?(
       'Get email alerts for this topic'
