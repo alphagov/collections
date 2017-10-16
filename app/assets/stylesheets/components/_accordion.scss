@@ -1,0 +1,105 @@
+.app-c-accordion {
+  &.app-c-accordion--active {
+    margin-bottom: $gutter;
+    border-bottom: 1px solid $border-colour;
+  }
+}
+
+.app-c-accordion__header {
+  position: relative;
+  padding-top: 14px;
+  padding-bottom: 12px;
+
+  .app-c-accordion--active & {
+    border-top: 1px solid $border-colour;
+    cursor: pointer;
+
+    &:hover {
+      background: $grey-3;
+    }
+  }
+}
+
+.app-c-accordion__icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  height: 16px;
+  width: 16px;
+  margin-top: -8px;
+  background-image: image-url('icons-plus-minus.png'); // PNG fallback for SVG
+  background: image-url("icons-plus-minus.svg"), linear-gradient(transparent, transparent); // SVG sprite
+  background-repeat: no-repeat;
+  background-position: 0 -16px;
+
+  @include media (tablet) {
+    right: 15px;
+  }
+
+  .section-is-open & {
+    background-position: 0 0;
+  }
+}
+
+.app-c-accordion__title {
+  @include bold-24;
+}
+
+// removes extra dotted outline from buttons in Firefox
+// on focus (standard yellow outline unaffected)
+@mixin firefox-remove-second-button-outline {
+  &::-moz-focus-inner {
+    border: 0;
+  }
+}
+
+.app-c-accordion__description {
+  @include core-19;
+
+  margin-top: 5px;
+  margin-bottom: 0;
+  margin-right: $gutter * 1.5;
+}
+
+.app-c-accordion__panel {
+  padding-top: 5px;
+  padding-bottom: $gutter-half;
+
+  .section-is-open & {
+    @include media(tablet) {
+      padding-top: 10px;
+      padding-bottom: $gutter;
+    }
+  }
+}
+
+.app-c-accordion__button {
+  @include firefox-remove-second-button-outline;
+
+  color: $link-colour;
+  cursor: pointer;
+  background: none;
+  border: 0;
+
+  &--title {
+    @include bold-24;
+
+    display: inline-block;
+    margin-right: $gutter * 1.5;
+    padding: 0;
+    text-align: left;
+  }
+
+  &--controls {
+    @include core-16;
+
+    float: right;
+    position: relative;
+    z-index: 1; // this and relative position stops focus outline underlap with border of accordion
+    padding: 0.5em 0;
+  }
+}
+
+.app-c-accordion__controls {
+  @extend %contain-floats;
+}
