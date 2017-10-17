@@ -102,6 +102,17 @@ class TaxonPresenter
     }
   end
 
+  def options_for_accordion_content(index:, section_index:)
+    {
+      module: 'track-click',
+      track_category: 'navAccordionLinkClicked',
+      track_action: "#{section_index + 1}.#{index + 1}",
+      track_label: tagged_content[index].base_path,
+      track_options: { dimension28: tagged_content.size.to_s,
+                       dimension29: tagged_content[index].title }
+    }
+  end
+
 private
 
   def ordered_child_taxons

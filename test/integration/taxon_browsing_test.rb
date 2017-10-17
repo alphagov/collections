@@ -306,10 +306,7 @@ private
     subsection = first('.app-c-accordion__section')
 
     assert subsection.has_selector?('.app-c-accordion__title', text: /general information and guidance/i)
-    assert subsection.has_selector?(
-      '.app-c-accordion__panel .subsection-list-item a',
-      count: search_results.count
-    )
+    assert subsection.has_selector?('.app-c-accordion__panel .app-c-taxon-list__link', count: search_results.count)
   end
 
   def then_there_is_no_general_information_section_in_the_accordion
