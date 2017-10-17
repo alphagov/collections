@@ -124,7 +124,7 @@ GEM
       sass (>= 3.2.0)
     govuk_navigation_helpers (6.3.0)
       gds-api-adapters (>= 43.0)
-    govuk_publishing_components (1.10.0)
+    govuk_publishing_components (1.11.0)
       govspeak (>= 5.0.3)
       govuk_frontend_toolkit
       rails (>= 5.0.0.1)
@@ -328,7 +328,7 @@ DEPENDENCIES
   govuk_app_config (~> 0.3)
   govuk_frontend_toolkit (~> 4.3.0)
   govuk_navigation_helpers (= 6.3.0)
-  govuk_publishing_components (~> 1.10.0)
+  govuk_publishing_components (~> 1.11.0)
   govuk_schemas
   jasmine-rails
   logstasher (= 0.6.2)
@@ -345,6 +345,9 @@ DEPENDENCIES
   uglifier (~> 2.7.1)
   unicorn (~> 4.9.0)
   webmock
+
+RUBY VERSION
+   ruby 2.3.1p112
 
 BUNDLED WITH
    1.15.1

@@ -1,17 +1,15 @@
-// Most of this is taken from the service manual and at some point needs to be
-// separated out into a component.  We are currently holding off on this until
-// it is tested more within the current navigation changes.
+// Most of this is taken from the service manual
 
 window.GOVUK.Modules = window.GOVUK.Modules || {};
 
 (function (Modules) {
   "use strict";
 
-  Modules.AccordionWithDescriptions = function () {
+  Modules.Accordion = function () {
 
     var bulkActions = {
       openAll: {
-        buttonText: "Expand all",
+        buttonText: "Open all",
         eventLabel: "Open All"
       },
       closeAll: {
@@ -25,20 +23,20 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       $(window).unload(storeScrollPosition);
 
       // Indicate that js has worked
-      $element.addClass('js-accordion-with-descriptions');
+      $element.addClass('app-c-accordion--active');
 
       // Prevent FOUC, remove class hiding content
       $element.removeClass('js-hidden');
 
-      var $subsections = $element.find('.js-subsection');
-      var $subsectionHeaders = $element.find('.subsection-header');
-      var totalSubsections = $element.find('.subsection-content').length;
+      var $subsections = $element.find('.js-section');
+      var $subsectionHeaders = $element.find('.js-toggle-panel');
+      var totalSubsections = $element.find('.js-panel').length;
 
       var $openOrCloseAllButton;
 
       var accordionTracker = new AccordionTracker(totalSubsections);
 
-      wrapHeadersInLinks();
+      addButtonstoSections();
       addOpenCloseAllButton();
       addIconsToSubsections();
       addAriaControlsAttrForOpenCloseAllButton();
@@ -68,20 +66,21 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       }
 
       function addOpenCloseAllButton() {
-        $element.prepend('<div class="subsection-controls js-subsection-controls"><button aria-expanded="false">' + bulkActions.openAll.buttonText + '</button></div>');
+        $element.prepend('<div class="app-c-accordion__controls"><button aria-expanded="false" class="app-c-accordion__button app-c-accordion__button--controls js-section-controls-button">' + bulkActions.openAll.buttonText + '</button></div>');
       }
 
       function addIconsToSubsections() {
-        $subsectionHeaders.append('<span class="subsection-icon"></span>');
+        $subsectionHeaders.append('<span class="app-c-accordion__icon"></span>');
       }
 
       function addAriaControlsAttrForOpenCloseAllButton() {
         var ariaControlsValue = "";
+        var $subsectionPanels = $element.find('.js-panel')
         for (var i = 0; i < totalSubsections; i++) {
-          ariaControlsValue += "subsection_content_" + i + " ";
+          ariaControlsValue += $subsectionPanels[i].id + " "
         }
 
-        $openOrCloseAllButton = $element.find('.js-subsection-controls button');
+        $openOrCloseAllButton = $element.find('.js-section-controls-button');
         $openOrCloseAllButton.attr('aria-controls', ariaControlsValue);
       }
 
@@ -118,27 +117,25 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
         return GOVUK.getCurrentLocation().hash;
       }
 
-      function wrapHeadersInLinks() {
+      function addButtonstoSections() {
         $.each($subsections, function () {
-          var $subsection = $(this);
-          var id = $subsection.attr('id');
-          var $title = $subsection.find('.js-subsection-title');
-          var contentId = $subsection.find('.js-subsection-content').first().attr('id');
+          var $section = $(this);
+          var $title = $section.find('.js-section-title');
+          var contentId = $section.find('.js-panel').first().attr('id');
 
-          $title.wrap(
-            '<a ' +
-            'class="subsection-title-link js-subsection-title-link" ' +
-            'href="#' + id + '" ' +
-            'aria-controls="' + contentId + '"></a>'
-          )
+          $title.wrapInner(
+            '<button ' +
+            'class="app-c-accordion__button app-c-accordion__button--title js-section-title-button" ' +
+            'aria-expanded="false" aria-controls="' + contentId + '">' +
+            '</button>' );
         });
       }
 
       function bindToggleForSubsections(accordionTracker) {
-        $element.find('.js-subsection-header').click(function (event) {
+        $element.find('.js-toggle-panel').click(function (event) {
           preventLinkFollowingForCurrentTab(event);
 
-          var subsectionView = new SubsectionView($(this).closest('.js-subsection'));
+          var subsectionView = new SubsectionView($(this).closest('.js-section'));
           subsectionView.toggle();
 
           var toggleClick = new SubsectionToggleClick(subsectionView, $subsections, accordionTracker);
@@ -159,7 +156,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       }
 
       function bindToggleOpenCloseAllButton(accordionTracker) {
-        $openOrCloseAllButton = $element.find('.js-subsection-controls button');
+        $openOrCloseAllButton = $element.find('.js-section-controls-button');
         $openOrCloseAllButton.on('click', function () {
           var shouldOpenAll;
 
@@ -189,7 +186,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       }
 
       function setOpenCloseAllText() {
-        var openSubsections = $element.find('.subsection-is-open').length;
+        var openSubsections = $element.find('.section-is-open').length;
         // Find out if the number of is-opens == total number of sections
         if (openSubsections === totalSubsections) {
           $openOrCloseAllButton.text(bulkActions.closeAll.buttonText);
@@ -207,11 +204,11 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     };
 
     function SubsectionView($subsectionElement) {
-      var $titleLink = $subsectionElement.find('.js-subsection-title-link');
-      var $subsectionContent = $subsectionElement.find('.js-subsection-content');
+      var $titleLink = $subsectionElement.find('.js-section-title-button');
+      var $subsectionContent = $subsectionElement.find('.js-panel');
       var shouldUpdateHash = true;
 
-      this.title = $subsectionElement.find('.js-subsection-title').text();
+      this.title = $subsectionElement.find('.js-section-title').text();
       this.href = $titleLink.attr('href');
       this.element = $subsectionElement;
 
@@ -237,7 +234,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       }
 
       function setIsOpen(isOpen) {
-        $subsectionElement.toggleClass('subsection-is-open', isOpen);
+        $subsectionElement.toggleClass('section-is-open', isOpen);
         $subsectionContent.toggleClass('js-hidden', !isOpen);
         $titleLink.attr("aria-expanded", isOpen);
 
@@ -247,7 +244,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       }
 
       function isOpen() {
-        return $subsectionElement.hasClass('subsection-is-open');
+        return $subsectionElement.hasClass('section-is-open');
       }
 
       function isClosed() {
@@ -312,7 +309,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       }
     }
 
-    // A helper that sends an custom event request to Google Analytics if
+    // A helper that sends a custom event request to Google Analytics if
     // the GOVUK module is setup
     function AccordionTracker(totalSubsections) {
       this.track = function(category, action, options) {

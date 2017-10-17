@@ -1,3 +1,4 @@
+<% content_for :page_class, "taxon-page taxon-page--accordion" %>
 <%=
   render(
     partial: 'common',
@@ -18,33 +19,31 @@
   <div class="grid-row child-topic-contents">
     <div class="column-two-thirds">
       <div class="topic-content">
-
-        <div data-module="accordion-with-descriptions" class="js-hidden">
-          <div class="subsection-wrapper">
-
-            <% presented_taxon.accordion_content.each_with_index do |taxon, index| %>
-              <div class="subsection js-subsection" id="<%= taxon.base_path %>" data-track-count="accordionSection">
-                <div class="subsection-header js-subsection-header">
-                  <h2 class="subsection-title js-subsection-title"><%= taxon.title %></h2>
-                  <% if taxon.description.present? %>
-                    <p class="subsection-description"><%= taxon.description %></p>
-                  <% end %>
-                </div>
-
-                <div class="subsection-content js-subsection-content" id="subsection_content_<%= index + 1 %>">
-                  <% if taxon.can_subscribe? %>
-                    <%= render partial: 'email_alerts', locals: { presented_taxon: taxon } %>
-                  <% end %>
-                  <%= render partial: 'content_list_for_child_taxon', locals: {
-                      section_index: index,
-                      tagged_content: taxon.tagged_content,
-                  } %>
-                </div>
-              </div>
+        <%
+          accordion_contents = []
+        %>
+        <% presented_taxon.accordion_content.each_with_index do |taxon, index| %>
+          <% contents = capture do %>
+            <% if taxon.can_subscribe? %>
+              <%= render partial: 'email_alerts', locals: { presented_taxon: taxon } %>
             <% end %>
+            <%= render partial: 'content_list_for_child_taxon', locals: {
+              section_index: index,
+              tagged_content: taxon.tagged_content,
+            } %>
+          <% end %>
 
-          </div>
-        </div>
+          <%
+            accordion_contents << {
+              title: taxon.title,
+              description: taxon.description,
+              id: taxon.base_path,
+              panel: contents
+            }
+          %>
+        <% end %>
+
+        <%= render 'components/accordion', sections: accordion_contents %>
       </div>
     </div>
   </div>
