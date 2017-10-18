@@ -26,15 +26,6 @@
   }
 }
 
-.taxon-page {
-  .taxon-description {
-    @include core-24;
-
-    margin-top: $gutter-one-third / 2;
-    margin-bottom: $gutter-two-thirds;
-  }
-}
-
 .taxon-page--grid {
   .child-topics-list {
     ol {
