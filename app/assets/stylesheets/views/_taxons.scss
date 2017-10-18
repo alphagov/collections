@@ -28,6 +28,8 @@
 
 .taxon-page--grid {
   .child-topics-list {
+    @include taxon-element-styles;
+
     ol {
       list-style-type: none;
       padding-bottom: $gutter-half;
@@ -60,9 +62,9 @@
 
 .taxon-page--leaf,
 .taxon-page--grid {
-  @include taxon-element-styles;
-
   .parent-topic-contents {
+    @include taxon-element-styles;
+
     .topic-content {
       padding-bottom: $gutter;
 
