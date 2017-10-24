@@ -3,15 +3,9 @@
   <ul>
     <% top_level_browse_pages.each_with_index do |page, index| %>
       <li class="<%= browsing_in_top_level_page?(page) ? 'active' : '' %>">
-        <% link_class = if ab_variant.variant?('B') && page.base_path == "/browse/education"
-          "ab-test-redirect"
-        else
-          ""
-        end %>
         <%= link_to(
           page.title,
           page.base_path,
-          class: link_class,
           data: {
             track_category: 'firstLevelBrowseLinkClicked',
             track_action: "#{index + 1}",

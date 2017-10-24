@@ -30,8 +30,5 @@ module Collections
 
     # Custom directories with classes and modules you want to be autoloadable.
     config.autoload_paths += %W(#{config.root}/lib)
-
-    # Google Analytics dimension assigned to the education navigation A/B test
-    config.navigation_ab_test_dimension = 41
   end
 end

@@ -25,11 +25,6 @@ require 'slimmer/test_helpers/govuk_components'
 require 'gds_api/test_helpers/rummager'
 
 # Most tests use ActiveSupport TestCase behaviour, so we configure this here.
-# For integration tests that use capybara, we configure GovukAbTesting
-# accordingly before/after the tests.
-GovukAbTesting.configure do |config|
-  config.acceptance_test_framework = :active_support
-end
 
 class ActiveSupport::TestCase
   include GdsApi::TestHelpers::ContentStore

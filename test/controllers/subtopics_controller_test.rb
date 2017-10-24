@@ -2,8 +2,6 @@ require "test_helper"
 
 describe SubtopicsController do
 
-  include GovukAbTesting::MinitestHelpers
-
   describe "GET subtopic" do
     describe "with a valid topic and subtopic slug" do
       setup do
@@ -25,121 +23,6 @@ describe SubtopicsController do
       assert_equal 404, response.status
     end
 
-    describe "during the education navigation A/B test for childcare and parenting" do
-      before do
-        stub_services_for_subtopic(
-          "content-id-for-adoption-fostering",
-          "schools-colleges-childrens-services",
-          "adoption-fostering")
-      end
-
-      it "returns the original version of the page as the A variant" do
-        with_A_variant do
-          get(
-            :show,
-            params: {
-              topic_slug: "schools-colleges-childrens-services",
-              subtopic_slug: "adoption-fostering"
-            }
-          )
-
-          assert_response 200
-        end
-      end
-
-      it "redirects to the taxonomy navigation as the B variant" do
-        with_B_variant assert_meta_tag: false do
-          get(
-            :show,
-            params: {
-              topic_slug: "schools-colleges-childrens-services",
-              subtopic_slug: "adoption-fostering"
-            }
-          )
-
-          assert_response 302
-          assert_redirected_to controller: "taxons",
-            action: "show",
-            taxon_base_path: "childcare-parenting/adoption-fostering-and-surrogacy"
-        end
-      end
-    end
-
-    describe "during the education navigation A/B test for education content" do
-      before do
-        stub_services_for_subtopic(
-          "content-id-for-apprenticeships",
-          "further-education-skills",
-          "apprenticeships")
-      end
-
-      it "returns the original version of the page as the A variant" do
-        with_A_variant do
-          get(
-            :show,
-            params: {
-              topic_slug: "further-education-skills",
-              subtopic_slug: "apprenticeships"
-            }
-          )
-
-          assert_response 200
-        end
-      end
-
-      it "redirects to the taxonomy navigation as the B variant" do
-        with_B_variant assert_meta_tag: false do
-          get(
-            :show,
-            params: {
-              topic_slug: "further-education-skills",
-              subtopic_slug: "apprenticeships"
-            }
-          )
-
-          assert_response 302
-          assert_redirected_to controller: "taxons",
-            action: "show",
-            taxon_base_path: "education/apprenticeships-traineeships-and-internships"
-        end
-      end
-
-      it "redirects to the taxonomy navigation as the B variant preserving the fragment" do
-        with_B_variant assert_meta_tag: false do
-          get(
-            :show,
-            params: {
-              topic_slug: "higher-education",
-              subtopic_slug: "scholarships-for-overseas-students"
-            }
-          )
-
-          assert_response 302
-          assert_redirected_to(
-            controller: "taxons",
-            action: "show",
-            taxon_base_path: "education/funding-and-finance-for-students",
-            anchor: "/education/student-grants-bursaries-scholarships"
-          )
-        end
-      end
-
-      ["A", "B"].each do |variant|
-        it "does not change a page outside the A/B test when the #{variant} variant is requested" do
-          stub_services_for_subtopic("content-id-for-wells", "oil-and-gas", "wells")
-
-          setup_ab_variant("EducationNavigation", variant)
-
-          get(
-            :show,
-            params: { topic_slug: "oil-and-gas", subtopic_slug: "wells" }
-          )
-
-          assert_response 200
-          assert_response_not_modified_for_ab_test("EducationNavigation")
-        end
-      end
-    end
   end
 
   def stub_services_for_subtopic(content_id, parent_path, path)

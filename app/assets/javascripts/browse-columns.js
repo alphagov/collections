@@ -323,12 +323,6 @@
       if(e.currentTarget.pathname.match(/^\/browse\/[^\/]+(\/[^\/]+)?$/)){
 
         var $target = $(e.currentTarget);
-
-        if ($target.hasClass('ab-test-redirect')) {
-          // Allow browser to follow link, which will redirect to the correct page
-          return;
-        }
-
         e.preventDefault();
 
         var state = this.parsePathname(e.currentTarget.pathname);
@@ -349,8 +343,6 @@
     trackPageview: function(state){
       var sectionTitle = this.$section.find('h1').text();
       sectionTitle = sectionTitle ? sectionTitle.toLowerCase() : 'browse';
-
-      var legacySectionIdentifier = state.sectionData['legacy_navigation_analytics_identifier'];
       var navigationPageType = 'none';
 
       if(this.displayState == 'section') {
@@ -365,7 +357,6 @@
           null,
           {
             dimension1: sectionTitle,
-            dimension30: legacySectionIdentifier,
             dimension32: navigationPageType
           }
         );

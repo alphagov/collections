@@ -2,8 +2,6 @@ require "test_helper"
 
 describe BrowseController do
 
-  include GovukAbTesting::MinitestHelpers
-
   describe "GET index" do
     before do
       content_store_has_item("/browse",
@@ -36,69 +34,6 @@ describe BrowseController do
         get :show, params: { top_level_slug: "benefits" }
 
         assert_equal "max-age=1800, public", response.headers["Cache-Control"]
-      end
-    end
-
-    describe "during the education navigation A/B test" do
-      before do
-        content_store_has_item("/browse/education", base_path: '/browse/education')
-        content_store_has_item("/browse/benefits", base_path: '/browse/benefits')
-        content_store_has_item(
-          "/browse/childcare-parenting",
-          base_path: '/browse/childcare-parenting'
-        )
-      end
-
-      it "redirects /browse/education for variant B" do
-        with_B_variant assert_meta_tag: false do
-          get :show, params: { top_level_slug: "education" }
-
-          assert_redirected_to(
-            controller: "taxons",
-            action: "show",
-            taxon_base_path: "education"
-          )
-        end
-      end
-
-      it "redirects /browse/childcare-parenting for variant B" do
-        with_B_variant assert_meta_tag: false do
-          get :show, params: { top_level_slug: "childcare-parenting" }
-
-          assert_redirected_to(
-            controller: "taxons",
-            action: "show",
-            taxon_base_path: "childcare-parenting"
-          )
-        end
-      end
-
-      %w(A B).each do |variant|
-        it "does not change a page outside the A/B test when the #{variant} variant is requested" do
-          setup_ab_variant("EducationNavigation", variant)
-
-          get :show, params: { top_level_slug: "benefits" }
-
-          assert_response 200
-          assert_response_not_modified_for_ab_test("EducationNavigation")
-        end
-
-        it "does not redirect education when the #{variant} variant is requested in JSON format" do
-          setup_ab_variant("EducationNavigation", variant)
-
-          get :show, params: { format: :json, top_level_slug: "education" }
-
-          assert_response 200
-          assert_response_not_modified_for_ab_test("EducationNavigation")
-        end
-      end
-
-      it "returns the original version of the page for variant A" do
-        with_A_variant do
-          get :show, params: { top_level_slug: "education" }
-
-          assert_response 200
-        end
       end
     end
 

@@ -5,23 +5,6 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
   include RummagerHelpers
   include TaxonHelpers
   include Slimmer::TestHelpers::GovukComponents
-  include GovukAbTesting::MinitestHelpers
-
-  before do
-    @existing_framework = GovukAbTesting.configuration.acceptance_test_framework
-
-    GovukAbTesting.configure do |config|
-      config.acceptance_test_framework = :capybara
-    end
-  end
-
-  after do
-    Capybara.reset_sessions!
-
-    GovukAbTesting.configure do |config|
-      config.acceptance_test_framework = @existing_framework
-    end
-  end
 
   it 'is possible to browse a taxon page that has grandchildren' do
     given_there_is_a_taxon_with_grandchildren
@@ -234,13 +217,10 @@ private
   end
 
   def when_i_visit_the_taxon_page
-    with_B_variant do
       visit @base_path
-
       if (400..599).cover?(page.status_code)
         raise "Application error (#{page.status_code}): \n#{page.body}"
       end
-    end
   end
 
   def then_i_can_see_the_meta_description
