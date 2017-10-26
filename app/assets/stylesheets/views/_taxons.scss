@@ -62,22 +62,8 @@
 
 .taxon-page--leaf,
 .taxon-page--grid {
-  .parent-topic-contents {
+  .topic-header {
     @include taxon-element-styles;
-
-    .topic-content {
-      padding-bottom: $gutter;
-
-      ol {
-        list-style-type: none;
-        padding-bottom: $gutter-one-third;
-      }
-
-      h2 {
-        padding-bottom: 0;
-      }
-
-    }
   }
 }
 
@@ -113,20 +99,6 @@
       &:focus {
         color: $black; // fix accessibility issue with these white links
       }
-    }
-  }
-
-  .subsection-list {
-    @include core-19;
-    @include taxon-element-styles;
-
-    padding-left: 0;
-    list-style-type: none;
-  }
-
-  .subsection-list-item {
-    a {
-      font-weight: bold;
     }
   }
 }

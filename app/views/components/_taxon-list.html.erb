@@ -1,0 +1,26 @@
+<%
+  heading_level ||= 'h2'
+  items ||= []
+%>
+<% if items.any? %>
+  <ol class="app-c-taxon-list">
+    <% items.each_with_index do |item, index| %>
+      <li class="app-c-taxon-list__item">
+        <% if item[:description] %><<%= heading_level %> class="app-c-taxon-list__heading"><% end %>
+        <%=
+          link_to(
+            item[:text],
+            item[:path],
+            data: item[:data_attributes],
+            class: "app-c-taxon-list__link"
+          )
+        %>
+        <% if item[:description] %></<%= heading_level %>>
+          <p class="app-c-taxon-list__description">
+            <%= item[:description] %>
+          </p>
+        <% end %>
+      </li>
+    <% end %>
+  </ol>
+<% end %>

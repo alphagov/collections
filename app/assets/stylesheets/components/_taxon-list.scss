@@ -1,0 +1,13 @@
+.app-c-taxon-list__item {
+  @include core-19;
+  list-style: none;
+  margin-bottom: $gutter-two-thirds;
+}
+
+.app-c-taxon-list__heading {
+  margin-bottom: $gutter-one-third / 2;
+}
+
+.app-c-taxon-list__link {
+  font-weight: bold;
+}

@@ -27,12 +27,12 @@
             <% if taxon.can_subscribe? %>
               <%= render partial: 'email_alerts', locals: { presented_taxon: taxon } %>
             <% end %>
-            <%= render partial: 'content_list_for_child_taxon', locals: {
-              section_index: index,
-              tagged_content: taxon.tagged_content,
-            } %>
-          <% end %>
 
+            <%= render 'components/taxon-list', {
+                heading_level: 'h3',
+                items: taxon_list_params(taxon, data_options_type: :options_for_accordion_content, section_index: index)
+             } %>
+          <% end %>
           <%
             accordion_contents << {
               title: taxon.title,

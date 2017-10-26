@@ -1,0 +1,79 @@
+name: Taxon list
+description: A list of taxons
+body: |
+  A taxon is defined as a single node in the new taxonomy structure or, more simply, a topic or category that content can be tagged to.
+
+  This component can be used to surface a list of links to related content within the taxonomy.
+
+  This component is used as part of the Education AB test. An example is [Funding and Finances for Students](/education/funding-and-finance-for-students#/education/student-grants-bursaries-scholarships)
+accessibility_criteria: |
+  Taxon list items must:
+
+  - not use headings when there is no description
+  - use the correct heading level for the page when a description is provided
+shared_accessibility_criteria:
+  - link
+examples:
+  default:
+    data:
+      items:
+      - text: Adult Dependants' Grant
+        path: /adult-dependants-grant
+        description: Adult Dependants' Grant for full-time students who financially support an adult - funding, how to apply, eligibility
+      - text: Care to Learn
+        path: /care-to-learn
+        description: Care to Learn helps pay for childcare while you're studying - how to apply, money you get, courses that qualify, eligibility
+      - text: Childcare Grant
+        path: /childcare-grant
+        description: Childcare Grants for full-time students in higher education - grants, CCG1, CCG2 forms, how to apply, eligibility
+  with_custom_heading_level:
+    description: |
+      Sometimes the component will be included beneath an h1, at other times beneath an h2. Allow the heading level to be customised.
+    data:
+      heading_level: 'h3'
+      items:
+      - text: Adult Dependants' Grant
+        path: /adult-dependants-grant
+        description: Adult Dependants' Grant for full-time students who financially support an adult - funding, how to apply, eligibility
+      - text: Care to Learn
+        path: /care-to-learn
+        description: Care to Learn helps pay for childcare while you're studying - how to apply, money you get, courses that qualify, eligibility
+      - text: Childcare Grant
+        path: /childcare-grant
+        description: Childcare Grants for full-time students in higher education - grants, CCG1, CCG2 forms, how to apply, eligibility
+  without_descriptions:
+    description: |
+      Descriptions can be omitted although this isn’t currently used. When omitted the link is not wrapped in a heading.
+    data:
+      items:
+      - text: Adult Dependants' Grant
+        path: /adult-dependants-grant
+      - text: Care to Learn
+        path: /care-to-learn
+      - text: Childcare Grant
+        path: /childcare-grant
+  with_data_attributes:
+    description: |
+      Arbitrary data attributes can be included with each link, usually for analytics tracking.
+    data:
+      items:
+      - text: Adult Dependants' Grant
+        path: /adult-dependants-grant
+        description: Adult Dependants' Grant for full-time students who financially support an adult - funding, how to apply, eligibility
+        data_attributes:
+          track_category: 'navSubtopicContentItemLinkClicked'
+          track_action: 1.1
+          track_label: '/green-taxes-and-reliefs'
+          track_options:
+            dimension28: 2
+            dimension29: 'Environmental taxes, reliefs and schemes for businesses'
+      - text: Care to Learn
+        path: /care-to-learn
+        description: Care to Learn helps pay for childcare while you're studying - how to apply, money you get, courses that qualify, eligibility
+        data_attributes:
+          track_category: 'navSubtopicContentItemLinkClicked'
+          track_action: 1.2
+          track_label: '/guidance/aggregates-levy-register-or-change-your-details'
+          track_options:
+            dimension28: 2
+            dimension29: 'Aggregates Levy: register or change your details'
