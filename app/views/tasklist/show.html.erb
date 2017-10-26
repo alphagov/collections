@@ -1,0 +1,22 @@
+<% content_for :title, "Learn to drive a car: step by step" %>
+
+<% content_for :breadcrumbs do %>
+  <%= render 'govuk_component/beta_label' %>
+  <%= render 'govuk_component/breadcrumbs', tasklist[:links] %>
+<% end %>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/title',
+        title: tasklist[:title],
+        average_title_length: 'long' %>
+
+    <%= render 'govuk_component/lead_paragraph',
+        text: tasklist[:description] %>
+  </div>
+</div>
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render "govuk_component/task_list", tasklist[:tasklist] %>
+  </div>
+</div>
