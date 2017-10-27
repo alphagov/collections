@@ -6,8 +6,7 @@ class BrowseController < ApplicationController
     setup_content_item_and_navigation_helpers(page)
 
     render :index, locals: {
-      page: page,
-      ab_variant: education_ab_test.requested_variant
+      page: page
     }
   end
 
@@ -23,8 +22,7 @@ class BrowseController < ApplicationController
       f.json do
         render json: {
           breadcrumbs: breadcrumb_content,
-          html: second_level_browse_pages_partial(page),
-          legacy_navigation_analytics_identifier: legacy_navigation_analytics_identifier || 'none'
+          html: second_level_browse_pages_partial(page)
         }
       end
     end
@@ -33,41 +31,10 @@ class BrowseController < ApplicationController
 private
 
   def show_html(page)
-    configure_ab_response if page_in_ab_test?
+    render :show, locals: {
+      page: page,
+    }
 
-    taxon_resolver = TaxonRedirectResolver.new(
-      ab_variant,
-      page_is_in_ab_test: page_in_ab_test?,
-      map_to_taxon: top_level_redirect
-    )
-
-    if taxon_resolver.redirect?
-      redirect_to(
-        controller: "taxons",
-        action: "show",
-        taxon_base_path: taxon_resolver.taxon_base_path,
-        anchor: taxon_resolver.fragment
-      )
-    else
-      render :show, locals: {
-        page: page,
-        is_page_under_ab_test: page_in_ab_test?,
-        ab_variant: ab_variant,
-        legacy_navigation_analytics_identifier: legacy_navigation_analytics_identifier
-      }
-    end
-  end
-
-  def legacy_navigation_analytics_identifier
-    top_level_redirect.split('/').first if page_in_ab_test?
-  end
-
-  def page_in_ab_test?
-    top_level_redirect.present?
-  end
-
-  def top_level_redirect
-    redirects[params[:top_level_slug]]
   end
 
   def second_level_browse_pages_partial(page)
@@ -76,9 +43,5 @@ private
       second_level_browse_pages: page.second_level_browse_pages,
       curated_order: page.second_level_pages_curated?,
     )
-  end
-
-  def redirects
-    Rails.application.config_for(:navigation_redirects)["top_level_browse_pages"]
   end
 end

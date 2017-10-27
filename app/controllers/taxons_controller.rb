@@ -16,8 +16,7 @@ class TaxonsController < ApplicationController
     # there is no straighforward mapping of taxons back to original navigation
     # pages.
     render taxon_template, locals: {
-      presented_taxon: presented_taxon,
-      education_ab_test: education_ab_test
+      presented_taxon: presented_taxon
     }
   end
 

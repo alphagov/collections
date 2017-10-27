@@ -134,10 +134,7 @@ describe('browse-columns.js', function() {
     GOVUK.analytics = jasmine.createSpyObj('analytics', ['trackPageview']);
 
     var state = {
-      path: 'foo',
-      sectionData: {
-        legacy_navigation_analytics_identifier: 'legacy-section-identifier'
-      }
+      path: 'foo'
     };
 
     var bc = new GOVUK.BrowseColumns({ $el: $('<div>') });
@@ -148,7 +145,6 @@ describe('browse-columns.js', function() {
       null,
       {
         dimension1: 'browse',
-        dimension30: 'legacy-section-identifier',
         dimension32: 'none'
       }
     );

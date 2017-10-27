@@ -1,10 +1,6 @@
 <% content_for :title, page.title %>
 <%= render 'shared/tag_meta', tag: page %>
 <% content_for :meta_tags do %>
-  <% if is_page_under_ab_test %>
-    <%= ab_variant.analytics_meta_tag.html_safe %>
-    <%= legacy_navigation_meta_tag(legacy_navigation_analytics_identifier).html_safe %>
-  <% end %>
   <meta name='govuk:navigation-page-type' content='Second Level Browse'>
 <% end %>
 <% content_for :page_class, "browse" %>
@@ -26,7 +22,5 @@
       curated_order: page.second_level_pages_curated? %>
   </div>
 
-  <%= render 'browse/top_level_browse_pages',
-    top_level_browse_pages: page.top_level_browse_pages,
-    ab_variant: ab_variant %>
+  <%= render 'browse/top_level_browse_pages', top_level_browse_pages: page.top_level_browse_pages %>
 </div>

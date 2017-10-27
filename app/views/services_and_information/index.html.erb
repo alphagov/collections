@@ -1,10 +1,5 @@
 <% content_for :title, "Services and information - #{organisation['title']}" %>
 <% content_for :page_class, "topics-page" %>
-<% content_for :meta_tags do %>
-  <% if is_page_under_ab_test %>
-    <%= ab_variant.analytics_meta_tag.html_safe %>
-  <% end %>
-<% end %>
 
 <header class="page-header group">
   <%= render "govuk_component/title", {

@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 ruby File.read(".ruby-version").strip
 
 gem 'gds-api-adapters', '~> 47.9'
-gem 'govuk_ab_testing', '~> 2.4'
 gem 'govuk_app_config', '~> 0.3'
 gem 'govuk_frontend_toolkit', '~> 4.3.0'
 gem 'govuk_navigation_helpers', '6.3.0'

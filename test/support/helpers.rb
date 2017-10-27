@@ -10,28 +10,6 @@ class ActiveSupport::TestCase
     end
   end
 
-  # rubocop:disable Style/MethodName
-  def with_A_variant(options = {})
-    variant_options =
-      { EducationNavigation: 'A' }
-      .merge(options)
-
-    with_variant variant_options do
-      yield
-    end
-  end
-
-  def with_B_variant(options = {})
-    variant_options =
-      { EducationNavigation: 'B' }
-      .merge(options)
-
-    with_variant variant_options do
-      yield
-    end
-  end
-  # rubocop:enable Style/MethodName
-
   def assert_includes_params(expected_params)
     search_results = {
       'results' => [
