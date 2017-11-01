@@ -9,7 +9,8 @@
   <div class="column-two-thirds">
     <%= render 'govuk_component/title',
         title: tasklist[:title],
-        average_title_length: 'long' %>
+        average_title_length: 'long',
+        margin_bottom: 0 %>
 
     <%= render 'govuk_component/lead_paragraph',
         text: tasklist[:description] %>
