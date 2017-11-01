@@ -8,7 +8,7 @@ describe('An accordion module', function () {
       <div class="app-c-accordion__section js-section" id="topic-section-one">\
         <div class="app-c-accordion__header js-toggle-panel">\
           <h2 class="app-c-accordion__title js-section-title">Topic Section One</h2>\
-          <p class="app-c-accordion__description">Subsection description in here</p>\
+          <p class="app-c-accordion__description">Section description in here</p>\
         </div>\
         <div class="app-c-accordion__panel js-panel" id="section_panel_10_0">\
           <ul>\
@@ -21,7 +21,7 @@ describe('An accordion module', function () {
       <div class="app-c-accordion__section js-section" id="topic-section-two">\
         <div class="app-c-accordion__header js-toggle-panel">\
           <h2 class="app-c-accordion__title js-section-title">Topic Section Two</h2>\
-          <p class="app-c-accordion__description">Subsection description in here</p>\
+          <p class="app-c-accordion__description">Section description in here</p>\
         </div>\
         <div class="app-c-accordion__panel js-panel" id="section_panel_11_1">\
           <ul>\
@@ -59,15 +59,15 @@ describe('An accordion module', function () {
 
     expect($openCloseAllButton).toExist();
     expect($openCloseAllButton).toHaveText("Open all");
-    // It has an aria-expanded false attribute as all subsections are closed
+    // It has an aria-expanded false attribute as all sections are closed
     expect($openCloseAllButton).toHaveAttr("aria-expanded", "false");
-    // It has an aria-controls attribute that includes all the subsection_content IDs
+    // It has an aria-controls attribute that includes all the section_content IDs
     expect($openCloseAllButton).toHaveAttr('aria-controls', 'section_panel_10_0 section_panel_11_1 ');
   });
 
   it("has no sections which have an open state", function () {
-    var openSubsections = $element.find('.section-is-open').length;
-    expect(openSubsections).toEqual(0);
+    var openSections = $element.find('.section-is-open').length;
+    expect(openSections).toEqual(0);
   });
 
   it("inserts a button into each section to show/hide content", function () {
@@ -79,15 +79,15 @@ describe('An accordion module', function () {
     expect($titleButton[1]).toHaveAttr('aria-controls', 'section_panel_11_1');
   });
 
-  it("ensures all subsection content is hidden", function () {
-    $element.find('.app-c-accordion__section').each(function (index, $subsection) {
-      expect($subsection).not.toHaveClass('section-is-open');
+  it("ensures all section content is hidden", function () {
+    $element.find('.app-c-accordion__section').each(function (index, $section) {
+      expect($section).not.toHaveClass('section-is-open');
     });
   });
 
-  it("adds an open/close icon to each subsection", function () {
-    var $subsectionHeader = $element.find('.app-c-accordion__header');
-    expect($subsectionHeader).toContainElement('.app-c-accordion__icon');
+  it("adds an open/close icon to each section", function () {
+    var $sectionHeader = $element.find('.app-c-accordion__header');
+    expect($sectionHeader).toContainElement('.app-c-accordion__icon');
   });
 
   describe('Clicking the "Expand all" button', function () {
@@ -100,7 +100,7 @@ describe('An accordion module', function () {
       clickOpenCloseAll();
     });
 
-    it('adds a .subsection-is-open class to each subsection to hide the icon', function () {
+    it('adds a .section-is-open class to each section to hide the icon', function () {
       expect($element.find('.section-is-open').length).toEqual(2);
     });
 
@@ -142,17 +142,17 @@ describe('An accordion module', function () {
 
     // When a section is open (testing: toggleSection, openSection)
     it("has a class of section-is-open", function () {
-      var $subsectionLink = $element.find('.app-c-accordion__header .app-c-accordion__button--title');
-      var $subsection = $element.find('.app-c-accordion__section');
-      $subsectionLink.click();
-      expect($subsection).toHaveClass("section-is-open");
+      var $sectionLink = $element.find('.app-c-accordion__header .app-c-accordion__button--title');
+      var $section = $element.find('.app-c-accordion__section');
+      $sectionLink.click();
+      expect($section).toHaveClass("section-is-open");
     });
 
     // When a section is open (testing: toggleState, setExpandedState)
     it("has a an aria-expanded attribute and the value is true", function () {
-      var $subsectionLink = $element.find('.app-c-accordion__header .app-c-accordion__button--title');
-      $subsectionLink.click();
-      expect($subsectionLink).toHaveAttr('aria-expanded', 'true');
+      var $sectionLink = $element.find('.app-c-accordion__header .app-c-accordion__button--title');
+      $sectionLink.click();
+      expect($sectionLink).toHaveAttr('aria-expanded', 'true');
     });
 
     it("triggers a google analytics custom event when clicking on the title", function () {
@@ -162,8 +162,8 @@ describe('An accordion module', function () {
       };
       spyOn(GOVUK.analytics, 'trackEvent');
 
-      var $subsectionLink = $element.find('.app-c-accordion__header .app-c-accordion__button--title');
-      $subsectionLink.click();
+      var $sectionLink = $element.find('.app-c-accordion__header .app-c-accordion__button--title');
+      $sectionLink.click();
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith('pageElementInteraction', 'accordionOpened', {
         label: '1. Topic Section One',
@@ -178,8 +178,8 @@ describe('An accordion module', function () {
       };
       spyOn(GOVUK.analytics, 'trackEvent');
 
-      var $subsectionIcon = $element.find('.app-c-accordion__icon');
-      $subsectionIcon.click();
+      var $sectionIcon = $element.find('.app-c-accordion__icon');
+      $sectionIcon.click();
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith('pageElementInteraction', 'accordionOpened', {
         label: '1. Topic Section One',
@@ -194,8 +194,8 @@ describe('An accordion module', function () {
       };
       spyOn(GOVUK.analytics, 'trackEvent');
 
-      var $subsectionHeader = $element.find('.app-c-accordion__header');
-      $subsectionHeader.click();
+      var $sectionHeader = $element.find('.app-c-accordion__header');
+      $sectionHeader.click();
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith('pageElementInteraction', 'accordionOpened', {
         label: '1. Topic Section One',
@@ -208,21 +208,21 @@ describe('An accordion module', function () {
 
     // When a section is closed (testing: toggleSection, closeSection)
     it("removes the section-is-open class", function () {
-      var $subsectionLink = $element.find('.app-c-accordion__header .app-c-accordion__button--title');
-      var $subsection = $element.find('.app-c-accordion__section');
-      $subsectionLink.click();
-      expect($subsection).toHaveClass("section-is-open");
-      $subsectionLink.click();
-      expect($subsection).not.toHaveClass("section-is-open");
+      var $sectionLink = $element.find('.app-c-accordion__header .app-c-accordion__button--title');
+      var $section = $element.find('.app-c-accordion__section');
+      $sectionLink.click();
+      expect($section).toHaveClass("section-is-open");
+      $sectionLink.click();
+      expect($section).not.toHaveClass("section-is-open");
     });
 
     // When a section is closed (testing: toggleState, setExpandedState)
     it("has a an aria-expanded attribute and the value is false", function () {
-      var $subsectionLink = $element.find('.app-c-accordion__header .app-c-accordion__button--title');
-      $subsectionLink.click();
-      expect($subsectionLink).toHaveAttr('aria-expanded', 'true');
-      $subsectionLink.click();
-      expect($subsectionLink).toHaveAttr('aria-expanded', 'false');
+      var $sectionLink = $element.find('.app-c-accordion__header .app-c-accordion__button--title');
+      $sectionLink.click();
+      expect($sectionLink).toHaveAttr('aria-expanded', 'true');
+      $sectionLink.click();
+      expect($sectionLink).toHaveAttr('aria-expanded', 'false');
     });
 
     it("triggers a google analytics custom event when clicking on the title", function () {
@@ -232,9 +232,9 @@ describe('An accordion module', function () {
       };
       spyOn(GOVUK.analytics, 'trackEvent');
 
-      var $subsectionLink = $element.find('.app-c-accordion__header .app-c-accordion__button--title');
-      $subsectionLink.click();
-      $subsectionLink.click();
+      var $sectionLink = $element.find('.app-c-accordion__header .app-c-accordion__button--title');
+      $sectionLink.click();
+      $sectionLink.click();
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith('pageElementInteraction', 'accordionClosed', {
         label: '1. Topic Section One',
@@ -249,9 +249,9 @@ describe('An accordion module', function () {
       };
       spyOn(GOVUK.analytics, 'trackEvent');
 
-      var $subsectionIcon = $element.find('.app-c-accordion__icon');
-      $subsectionIcon.click();
-      $subsectionIcon.click();
+      var $sectionIcon = $element.find('.app-c-accordion__icon');
+      $sectionIcon.click();
+      $sectionIcon.click();
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith('pageElementInteraction', 'accordionClosed', {
         label: '1. Topic Section One',
@@ -267,9 +267,9 @@ describe('An accordion module', function () {
       spyOn(GOVUK.analytics, 'trackEvent');
 
       accordion.start($element);
-      var $subsectionHeader = $element.find('.app-c-accordion__header');
-      $subsectionHeader.click();
-      $subsectionHeader.click();
+      var $sectionHeader = $element.find('.app-c-accordion__header');
+      $sectionHeader.click();
+      $sectionHeader.click();
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith('pageElementInteraction', 'accordionClosed', {
         label: '1. Topic Section One',
@@ -289,13 +289,13 @@ describe('An accordion module', function () {
     });
 
     it("opens the linked to topic section", function () {
-      var $subsection = $element.find('#topic-section-one');
-      expect($subsection).toHaveClass('section-is-open');
+      var $section = $element.find('#topic-section-one');
+      expect($section).toHaveClass('section-is-open');
     });
 
     it("leaves other sections closed", function () {
-      var $subsection = $element.find('#topic-section-two');
-      expect($subsection).not.toHaveClass('section-is-open');
+      var $section = $element.find('#topic-section-two');
+      expect($section).not.toHaveClass('section-is-open');
     });
   });
 

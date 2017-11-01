@@ -28,7 +28,7 @@
   width: 16px;
   margin-top: -8px;
   background-image: image-url('icons-plus-minus.png'); // PNG fallback for SVG
-  background: image-url("icons-plus-minus.svg"), linear-gradient(transparent, transparent); // SVG sprite
+  background: image-url("icons-plus-minus.svg"), linear-gradient(transparent, transparent); // http://pauginer.com/post/36614680636/invisible-gradient-technique
   background-repeat: no-repeat;
   background-position: 0 -16px;
 
@@ -102,4 +102,34 @@
 
 .app-c-accordion__controls {
   @extend %contain-floats;
+}
+
+.app-c-accordion--controls-on-left {
+  &.app-c-accordion--active {
+    .app-c-accordion__icon {
+      left: $gutter-half;
+      right: auto;
+    }
+
+    .app-c-accordion__title,
+    .app-c-accordion__description {
+      padding-left: $gutter + $gutter-half;
+    }
+
+    .app-c-accordion__description {
+      padding-right: 0;
+    }
+
+    .app-c-accordion__panel {
+      padding-left: $gutter + $gutter-half;
+    }
+
+    .app-c-accordion__button--title {
+      margin-right: 0;
+    }
+
+    .app-c-accordion__button--controls {
+      float: left;
+    }
+  }
 }

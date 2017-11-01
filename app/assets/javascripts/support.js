@@ -1,3 +1,4 @@
+// used by accordion component
 if(typeof window.GOVUK === 'undefined'){ window.GOVUK = {}; }
 if(typeof window.GOVUK.support === 'undefined'){ window.GOVUK.support = {}; }
 

@@ -1,3 +1,4 @@
+// used by accordion component
 (function(root) {
   "use strict";
   root.GOVUK = root.GOVUK || {};

@@ -131,3 +131,22 @@ examples:
           panel: 'Second accordion panel'
         }
       ]
+  accordion_controls_on_the_left:
+    description: Put the plus/minus icon on the left of the accordion. More accessible for users using zoom.
+    data:
+      controls_on_left: true
+      sections: [
+        {
+          title: 'Buy a house',
+          panel: 'First accordion panel and the content that goes inside it to show what that content looks like when it is long enough to wrap to a second line.'
+        },
+        {
+          title: 'Build a house and the complicated building regulations relating to such a huge task',
+          description: 'Make sure that you are fully aware of the legislation involved in building a house and how you must comply with it',
+          panel: 'Second accordion panel and the content that goes inside it to show what that content looks like when it is long enough to wrap to a second line.'
+        },
+        {
+          title: 'Buy to let',
+          panel: 'Third accordion panel and the content that goes inside it to show what that content looks like when it is long enough to wrap to a second line.'
+        }
+      ]
