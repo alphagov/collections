@@ -34,5 +34,7 @@ Rails.application.routes.draw do
     to: "services_and_information#index",
     as: :services_and_information
 
+  get '/learn-to-drive-a-car', to: 'tasklist#show'
+
   get '*taxon_base_path', to: 'taxons#show'
 end

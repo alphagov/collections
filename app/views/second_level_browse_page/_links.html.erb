@@ -9,6 +9,22 @@
     <% end %>
 
     <ul>
+      <% if task_list_ab_test.show_tasklist_link?(list.title, params) %>
+        <li>
+          <%= link_to(
+            "Learn to drive a car: step by step",
+            learn_to_drive_a_car_path,
+            data: {
+              track_category: 'thirdLevelBrowseLinkClicked',
+              track_action: "#{section_index + 1}.0",
+              track_label: learn_to_drive_a_car_path,
+              track_options: {
+                dimension29: "Learn to drive a car: step by step"
+              }
+            }
+          ) %>
+        </li>
+      <% end %>
       <% list.contents.each_with_index do |list_item, index| %>
         <li>
           <%= link_to(

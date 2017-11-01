@@ -1,6 +1,10 @@
 <% content_for :title, page.title %>
 <%= render 'shared/tag_meta', tag: page %>
 <% content_for :meta_tags do %>
+  <% if page_is_under_task_list_ab_test %>
+    <%= task_list_ab_variant.analytics_meta_tag.html_safe %>
+  <% end %>
+
   <meta name='govuk:navigation-page-type' content='Second Level Browse'>
 <% end %>
 <% content_for :page_class, "browse" %>
@@ -11,9 +15,8 @@
 
 <div class="browse-panes subsection" data-state="subsection" data-module="track-click">
   <div id="subsection" class="subsection-pane pane with-sort">
-    <%= render 'links', page: page %>
+    <%= render 'links', page: page, task_list_ab_test: task_list_ab_test %>
   </div>
-
 
   <div id="section" class="section-pane pane">
     <%= render 'second_level_browse_pages',
