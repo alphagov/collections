@@ -8,7 +8,7 @@ class TaskListAbTestRequest
     @request = request
     dimension = Rails.application.config.task_list_ab_test_dimension
 
-    @ab_test = GovukAbTesting::AbTest.new("TaskListSidebar", dimension: dimension)
+    @ab_test = GovukAbTesting::AbTest.new("TaskListBrowse", dimension: dimension)
     @requested_variant = @ab_test.requested_variant(request.headers)
   end
 

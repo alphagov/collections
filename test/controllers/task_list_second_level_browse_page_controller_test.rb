@@ -49,7 +49,7 @@ describe SecondLevelBrowsePageController do
 
     describe "when in A variant" do
       it "should not display a link to the 'learn to drive' tasklist link" do
-        with_variant TaskListSidebar: 'A' do
+        with_variant TaskListBrowse: 'A' do
           get(
             :show,
             params: {
@@ -66,7 +66,7 @@ describe SecondLevelBrowsePageController do
 
     describe "when in B variant" do
       it "should display a link to the 'learn to drive' tasklist link" do
-        with_variant TaskListSidebar: 'B' do
+        with_variant TaskListBrowse: 'B' do
           get(
             :show,
             params: {

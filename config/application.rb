@@ -32,6 +32,6 @@ module Collections
     config.autoload_paths += %W(#{config.root}/lib)
 
     # Google Analytics dimension assigned to the Tasklist A/B test
-    config.task_list_ab_test_dimension = 66
+    config.task_list_ab_test_dimension = 43
   end
 end

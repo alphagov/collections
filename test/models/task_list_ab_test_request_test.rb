@@ -9,11 +9,11 @@ describe TaskListAbTestRequest do
 
   describe "setup A/B testing" do
     it "should setup the test name" do
-      assert_equal @ab_test.ab_test_name, "TaskListSidebar"
+      assert_equal @ab_test.ab_test_name, "TaskListBrowse"
     end
 
     it 'should setup the dimension' do
-      assert_equal @ab_test.dimension, 66
+      assert_equal @ab_test.dimension, 43
     end
 
     it 'should setup allowed_variants' do
