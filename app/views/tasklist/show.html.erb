@@ -1,5 +1,9 @@
 <% content_for :title, "Learn to drive a car: step by step" %>
 
+<% content_for :meta_tags do %>
+  <meta name="description" content="Learn to drive a car in the UK - get a provisional licence, take driving lessons, prepare for your theory test, book your practical test.">
+<% end %>
+
 <% content_for :breadcrumbs do %>
   <%= render 'govuk_component/beta_label' %>
   <%= render 'govuk_component/breadcrumbs', tasklist[:links] %>
