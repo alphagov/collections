@@ -18,7 +18,12 @@ class TaskListAbTestRequest
   end
 
   def page_is_under_test?
-    ["/browse/driving/learning-to-drive", "/browse/driving/driving-licences"].include? @request.path
+    [
+      "/browse/driving/learning-to-drive",
+      "/browse/driving/learning-to-drive.json",
+      "/browse/driving/driving-licences",
+      "/browse/driving/driving-licences.json",
+    ].include? @request.path
   end
 
   def set_response_vary_header(response)
