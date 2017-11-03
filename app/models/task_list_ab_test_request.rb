@@ -12,11 +12,13 @@ class TaskListAbTestRequest
     @requested_variant = @ab_test.requested_variant(request.headers)
   end
 
-  def show_tasklist_link?(list_title, params)
+  def show_tasklist_link?(list_title)
     requested_variant.variant?('B') &&
-      list_title == 'Popular services' &&
-      (@request.path == '/browse/driving/learning-to-drive' ||
-        params[:second_level_slug] == 'learning-to-drive')
+      list_title == 'Popular services' && page_is_under_test?
+  end
+
+  def page_is_under_test?
+    ["/browse/driving/learning-to-drive", "/browse/driving/driving-licences"].include? @request.path
   end
 
   def set_response_vary_header(response)
