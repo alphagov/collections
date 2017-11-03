@@ -8,6 +8,7 @@ describe SecondLevelBrowsePageController do
     before do
       setup_content_for('learning-to-drive')
       setup_content_for('driving-licences')
+      setup_content_for('vegetable-sales')
     end
 
     describe "when in A variant" do
@@ -43,6 +44,25 @@ describe SecondLevelBrowsePageController do
 
             assert_response 200
             assert_includes @response.body, 'Learn to drive a car: step by step'
+          end
+        end
+      end
+    end
+
+    describe "with irrelevant pages" do
+      %w(A B).each do |variant|
+        it "should not display a link to learning to drive in variant #{variant}" do
+          with_variant TaskListBrowse: variant, assert_meta_tag: false do
+            get(
+              :show,
+              params: {
+                top_level_slug: "driving",
+                second_level_slug: "vegetable-sales"
+              }
+            )
+
+            assert_response 200
+            refute_includes @response.body, 'Learn to drive a car: step by step'
           end
         end
       end
