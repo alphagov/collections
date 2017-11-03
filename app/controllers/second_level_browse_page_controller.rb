@@ -27,17 +27,12 @@ private
       meta_section: meta_section,
       task_list_ab_test: task_list_ab_test,
       task_list_ab_variant: task_list_ab_variant,
-      page_is_under_task_list_ab_test: page_is_under_task_list_ab_test?
+      page_is_under_task_list_ab_test: task_list_ab_test.page_is_under_test?
     }
   end
 
   def meta_section
     page.active_top_level_browse_page.title.downcase
-  end
-
-  def page_is_under_task_list_ab_test?
-    params[:top_level_slug] == 'driving' &&
-      params[:second_level_slug] == 'learning-to-drive'
   end
 
   def page
