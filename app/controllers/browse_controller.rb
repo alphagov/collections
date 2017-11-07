@@ -2,6 +2,8 @@ class BrowseController < ApplicationController
   enable_request_formats show: [:json]
 
   def index
+    Rails.logger.info "Hello I'm a log"
+
     page = MainstreamBrowsePage.find("/browse")
     setup_content_item_and_navigation_helpers(page)
 
