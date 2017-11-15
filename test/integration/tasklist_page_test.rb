@@ -29,7 +29,7 @@ class TasklistPageTest < ActionDispatch::IntegrationTest
     assert page.has_css?(shared_component_selector('task_list'))
 
     within_static_component('task_list') do |tasklist_args|
-      assert_equal 6, tasklist_args[:steps].count
+      assert_equal 6, tasklist_args[:groups].count
 
       assert_equal [], tasklist_step_keys(tasklist_args) - %w(title panel panel_descriptions panel_links)
 
@@ -38,10 +38,10 @@ class TasklistPageTest < ActionDispatch::IntegrationTest
   end
 
   def tasklist_step_keys(tasklist_args)
-    tasklist_args[:steps].flatten.flat_map(&:keys).uniq
+    tasklist_args[:groups].flatten.flat_map(&:keys).uniq
   end
 
   def tasklist_panel_links_keys(tasklist_args)
-    tasklist_args[:steps].flatten.flat_map { |step| step["panel_links"] }.flat_map(&:keys).uniq
+    tasklist_args[:groups].flatten.flat_map { |step| step["panel_links"] }.flat_map(&:keys).uniq
   end
 end

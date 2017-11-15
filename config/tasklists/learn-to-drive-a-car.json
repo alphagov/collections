@@ -10,7 +10,7 @@
     ]
   },
   "tasklist": {
-    "steps": [
+    "groups": [
       [
         {
           "title": "Check you're allowed to drive",
