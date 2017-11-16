@@ -11,4 +11,6 @@ node {
       govuk.runRakeTask("spec:javascript")
     }
   })
+  govuk.setEnvar("PUBLISHING_E2E_TESTS_COMMAND", "test-collections-publisher")
+  govuk.buildProject(publishingE2ETests: true)
 }
