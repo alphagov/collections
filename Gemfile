@@ -19,7 +19,7 @@ gem 'unicorn', '~> 4.9.0'
 group :test do
   gem 'capybara'
   gem 'cucumber-rails', require: false
-  gem 'govuk_schemas'
+  gem 'govuk_schemas', '~> 2.3.0'
   gem 'minitest-spec-rails'
   gem 'mocha', require: false
   gem 'poltergeist'
