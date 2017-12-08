@@ -8,7 +8,7 @@ gem 'govuk_app_config', '~> 0.3'
 gem 'govuk_frontend_toolkit', '~> 4.3.0'
 gem 'govuk_navigation_helpers', '6.3.0'
 gem 'govuk_publishing_components', '~> 1.11.0', require: false
-gem 'logstasher', '0.6.2' # 0.6.5+ changes the JSON schema used for events
+gem 'logstasher', '1.2.2' # 0.6.5+ changes the JSON schema used for events
 gem 'plek', '~> 1.11.0'
 gem 'rails', '5.0.5'
 gem 'sass-rails', '~> 5.0.3'
