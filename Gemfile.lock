@@ -198,7 +198,7 @@ GEM
       ast (~> 2.3)
     phantomjs (2.1.1.0)
     plek (1.11.0)
-    poltergeist (1.16.0)
+    poltergeist (1.17.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
       websocket-driver (>= 0.2.0)
