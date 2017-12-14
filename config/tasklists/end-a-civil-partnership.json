@@ -31,7 +31,7 @@
             },
             {
               "type": "list",
-              "links": [
+              "contents": [
                 {
                   "href": "https://www.relate.org.uk/relationship-help/help-separation-and-divorce",
                   "text": "Get advice from Relate"
@@ -43,7 +43,7 @@
                 {
                   "href": "http://www.counselling-directory.org.uk/adv-search.html",
                   "text": "Find a counsellor",
-                  "cost": "£35 to £60 per session"
+                  "context": "£35 to £60 per session"
                 },
                 {
                   "href": "https://www.samaritans.org/how-we-can-help-you/contact-us",
@@ -65,7 +65,7 @@
             {
               "type": "list",
               "style": "required",
-              "links": [
+              "contents": [
                 {
                   "href": "/end-civil-partnership",
                   "text": "Check your civil partnership meets the criteria"
@@ -87,7 +87,7 @@
             {
               "type": "list",
               "style": "required",
-              "links": [
+              "contents": [
                 {
                   "href": "/looking-after-children-divorce",
                   "text": "Make arrangements for your children"
@@ -105,7 +105,7 @@
             {
               "type": "list",
               "style": "choice",
-              "links": [
+              "contents": [
                 {
                   "href": "/benefits-calculators",
                   "text": "benefits you're eligible for"
@@ -142,7 +142,7 @@
             {
               "type": "list",
               "style": "required",
-              "links": [
+              "contents": [
                 {
                   "href": "/end-civil-partnership/file-application",
                   "text": "How to start the process to end your civil partnership"
@@ -158,7 +158,7 @@
                 {
                   "href": "/end-civil-partnership/file-application",
                   "text": "Pay the court fee",
-                  "cost": "£550"
+                  "context": "£550"
                 },
                 {
                   "href": "/get-help-with-court-fees",
@@ -181,7 +181,7 @@
             {
               "type": "list",
               "style": "required",
-              "links": [
+              "contents": [
                 {
                   "href": "/find-a-legal-adviser",
                   "text": "Get legal advice"
@@ -194,16 +194,16 @@
             },
             {
               "type": "list",
-              "links": [
+              "contents": [
                 {
                   "href": "/divorce-missing-husband-wife",
                   "text": "Find your civil partner's address",
-                  "cost": "£0 to £100"
+                  "context": "£0 to £100"
                 },
                 {
                   "href": "http://hmctsformfinder.justice.gov.uk/HMCTS/GetForm.do?court_forms_id=1112",
                   "text": "Apply to skip the dissolution order if you can’t find their address",
-                  "cost": "£50"
+                  "context": "£50"
                 },
                 {
                   "href": "/divorce/if-your-husband-or-wife-lacks-mental-capacity",
@@ -212,7 +212,7 @@
                 {
                   "href": "/divorce-missing-husband-wife",
                   "text": "End the civil partnership because you think your partner is dead",
-                  "cost": "£365"
+                  "context": "£365"
                 }
               ]
             }
@@ -230,7 +230,7 @@
             {
               "type": "list",
               "style": "required",
-              "links": [
+              "contents": [
                 {
                   "href": "/end-civil-partnership/apply-for-a-conditional-order",
                   "text": "Why you need a conditional order"
@@ -248,7 +248,7 @@
             {
               "type": "list",
               "style": "choice",
-              "links": [
+              "contents": [
                 {
                   "href": "http://hmctsformfinder.justice.gov.uk/HMCTS/GetForm.do?court_forms_id=144",
                   "text": "unreasonable behaviour"
@@ -293,7 +293,7 @@
             {
               "type": "list",
               "style": "required",
-              "links": [
+              "contents": [
                 {
                   "href": "/end-civil-partnership/apply-for-a-final-order",
                   "text": "Why you need a final order"
