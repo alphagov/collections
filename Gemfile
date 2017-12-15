@@ -13,7 +13,7 @@ gem 'plek', '~> 1.11.0'
 gem 'rails', '5.1.4'
 gem 'sass-rails', '~> 5.0.3'
 gem 'slimmer', '~> 11.1.0'
-gem 'uglifier', '~> 4.0.2'
+gem 'uglifier', '~> 2.7.1'
 gem 'unicorn', '~> 4.9.0'
 
 group :test do
