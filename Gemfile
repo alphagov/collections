@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby File.read(".ruby-version").strip
 
-gem 'gds-api-adapters', '~> 50.5'
+gem 'gds-api-adapters', '~> 50.6'
 gem 'govuk_ab_testing', '~> 2.4.1'
 gem 'govuk_app_config', '~> 0.3'
 gem 'govuk_frontend_toolkit', '~> 7.2.0'
