@@ -7,4 +7,13 @@ class TasklistController < ApplicationController
       tasklist: TasklistContent.learn_to_drive_config
     }
   end
+
+  def show_end_a_civil_partnership
+    content_item = ContentItem.find!("/end-a-civil-partnership")
+
+    render :show, locals: {
+      content_item: content_item,
+      tasklist: TasklistContent.end_a_civil_partnership_config
+    }
+  end
 end
