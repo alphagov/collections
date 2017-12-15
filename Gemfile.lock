@@ -98,7 +98,7 @@ GEM
     faraday (0.13.1)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
-    gds-api-adapters (50.5.0)
+    gds-api-adapters (50.6.0)
       link_header
       lrucache (~> 0.1.1)
       null_logger
@@ -129,7 +129,7 @@ GEM
     govuk_frontend_toolkit (7.2.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
-    govuk_navigation_helpers (6.3.0)
+    govuk_navigation_helpers (7.3.0)
       gds-api-adapters (>= 43.0)
     govuk_publishing_components (2.0.0)
       govspeak (>= 5.0.3)
@@ -340,7 +340,7 @@ DEPENDENCIES
   govuk_ab_testing (~> 2.4.1)
   govuk_app_config (~> 0.3)
   govuk_frontend_toolkit (~> 7.2.0)
-  govuk_navigation_helpers (= 6.3.0)
+  govuk_navigation_helpers (= 7.3.0)
   govuk_publishing_components (~> 2.0.0)
   govuk_schemas (~> 2.3.0)
   jasmine-rails
