@@ -7,4 +7,8 @@ class TasklistController < ApplicationController
       tasklist: TasklistContent.learn_to_drive_config
     }
   end
+
+  def show_end_a_civil_partnership
+    render :show, locals: { tasklist: TasklistContent.end_a_civil_partnership_config }
+  end
 end

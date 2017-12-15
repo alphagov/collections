@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get "/learn-to-drive-a-car", to: 'tasklist#show'
 
+  get "/end-a-civil-partnership", to: 'tasklist#show_end_a_civil_partnership'
+
   get "/browse.json" => redirect("/api/content/browse")
 
   resources :browse, only: [:index, :show], param: :top_level_slug do
