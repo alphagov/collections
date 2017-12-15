@@ -1,7 +1,7 @@
-<% content_for :title, "Learn to drive a car: step by step" %>
+<% content_for :title, content_item.title %>
 
 <% content_for :meta_tags do %>
-  <meta name="description" content="Learn to drive a car in the UK - get a provisional licence, take driving lessons, prepare for your theory test, book your practical test.">
+  <meta name="description" content="<%= content_item.description %>">
 <% end %>
 
 <% content_for :breadcrumbs do %>
@@ -16,12 +16,11 @@
         average_title_length: 'long',
         margin_bottom: 0 %>
 
-    <%= render 'govuk_component/lead_paragraph',
-        text: tasklist[:description] %>
+    <div class="govuk-govspeak"><%= raw(tasklist[:description]) %></div>
   </div>
 </div>
 <div class="grid-row">
   <div class="column-two-thirds">
-    <%= render "govuk_component/task_list", tasklist[:tasklist] %>
+    <%= render "components/task_list", tasklist[:tasklist] %>
   </div>
 </div>

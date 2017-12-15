@@ -1,9 +1,15 @@
 require 'integration_test_helper'
 
 class TasklistPageTest < ActionDispatch::IntegrationTest
-  it "renders the learn to drive page" do
-    visit "/learn-to-drive-a-car"
 
+  before do
+    path = '/learn-to-drive-a-car'
+    content_store_has_item(path, schema: 'generic')
+
+    visit path
+  end
+
+  it "renders the breadcrumbs in learn to drive page" do
     assert page.has_css?(shared_component_selector('breadcrumbs'))
 
     within_static_component 'breadcrumbs' do |breadcrumb_arg|
@@ -13,35 +19,43 @@ class TasklistPageTest < ActionDispatch::IntegrationTest
         { "title" => "Learning to drive", "url" => "/browse/driving/learning-to-drive" }
       ], breadcrumb_arg[:breadcrumbs]
     end
+  end
 
+  it "renders the title in learn to drive page" do
     assert page.has_css?(shared_component_selector('title'))
 
     within_static_component 'title' do |component_args|
       assert_equal "Learn to drive a car: step by step", component_args[:title]
     end
+  end
 
-    assert page.has_css?(shared_component_selector('lead_paragraph'))
+  it "renders the tasklist in learn to drive page" do
+    assert page.has_css?(tasklist_component)
 
-    within_static_component 'lead_paragraph' do |paragraph_args|
-      assert_equal "Check what you need to do to learn to drive.", paragraph_args[:text]
-    end
+    within(tasklist_component) do
+      group_titles = [
+         "Check you're allowed to drive",
+         "Get a provisional driving licence",
+         "Driving lessons and practice",
+         "Book and manage your theory test",
+         "Book and manage your driving test",
+         "When you pass"
+      ]
 
-    assert page.has_css?(shared_component_selector('task_list'))
+      group_titles.each_with_index do |group_title, index|
+        step = index + 1
+        fourth_title = group_titles[5]
 
-    within_static_component('task_list') do |tasklist_args|
-      assert_equal 6, tasklist_args[:groups].count
-
-      assert_equal [], tasklist_step_keys(tasklist_args) - %w(title panel panel_descriptions panel_links)
-
-      assert_equal [], tasklist_panel_links_keys(tasklist_args) - %w(href text), []
+        if group_title == fourth_title
+          assert_match(group_title, page.text)
+        else
+          assert_match("Step #{step} #{group_title}", page.text)
+        end
+      end
     end
   end
 
-  def tasklist_step_keys(tasklist_args)
-    tasklist_args[:groups].flatten.flat_map(&:keys).uniq
-  end
-
-  def tasklist_panel_links_keys(tasklist_args)
-    tasklist_args[:groups].flatten.flat_map { |step| step["panel_links"] }.flat_map(&:keys).uniq
+  def tasklist_component
+    "[data-module='gemtasklist']"
   end
 end
