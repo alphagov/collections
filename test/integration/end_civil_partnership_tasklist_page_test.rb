@@ -34,11 +34,11 @@ class EndCivilPartnershipTasklistPageTest < ActionDispatch::IntegrationTest
     within(tasklist_component) do
       group_titles = [
         "Get support and advice",
-        "Check you can end a civil partnership",
+        "Check if you can end your civil partnership",
         "Make arrangements for your children, money and property",
         "File an application",
         "Send the court more details about ending your civil partnership",
-        "Finalise your divorce"
+        "Apply for a final order"
       ]
 
       group_titles.each_with_index do |group_title, index|
