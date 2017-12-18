@@ -34,7 +34,7 @@ class GetADivorceTasklistPageTest < ActionDispatch::IntegrationTest
     within(tasklist_component) do
       group_titles = [
         "Get support and advice",
-        "Check you can get a divorce",
+        "Check if you can get divorced",
         "Make arrangements for your children, money and property",
         "File for divorce",
         "Send the court more details about your divorce",
