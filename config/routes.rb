@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   mount GovukPublishingComponents::Engine, at: "/component-guide" if defined?(GovukPublishingComponents)
 
   get "/learn-to-drive-a-car", to: 'tasklist#show'
+  get "/get-a-divorce", to: 'tasklist#show_get_a_divorce'
 
   get "/end-a-civil-partnership", to: 'tasklist#show_end_a_civil_partnership'
 
