@@ -1,7 +1,6 @@
 require 'integration_test_helper'
 
 class TasklistPageTest < ActionDispatch::IntegrationTest
-
   before do
     path = '/learn-to-drive-a-car'
     content_store_has_item(path, schema: 'generic')

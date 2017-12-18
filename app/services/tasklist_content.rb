@@ -7,6 +7,10 @@ class TasklistContent
     @end_a_civil_partnership_config ||= find_file("end-a-civil-partnership")
   end
 
+  def self.get_a_divorce_config
+    @get_a_divorce_config ||= find_file("get-a-divorce")
+  end
+
   def self.find_file(filename)
     JSON.parse(
       File.read(
