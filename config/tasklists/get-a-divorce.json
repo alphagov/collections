@@ -197,11 +197,6 @@
                   "context": "£0 to £100"
                 },
                 {
-                  "href": "http://hmctsformfinder.justice.gov.uk/HMCTS/GetForm.do?court_forms_id=1112",
-                  "text": "Apply to skip the divorce petition if you can’t find their address",
-                  "context": "£50"
-                },
-                {
                   "href": "/divorce/if-your-husband-or-wife-lacks-mental-capacity",
                   "text": "Get help if your husband or wife can’t make decisions for themselves"
                 },
