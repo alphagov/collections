@@ -11,21 +11,31 @@
     <ul>
       <% if task_list_ab_test.show_tasklist_link?(list.title) %>
         <li>
-          <%= link_to(
+          <%= tasklist_link_for(
             "Learn to drive a car: step by step",
             learn_to_drive_a_car_path,
-            data: {
-              track_category: 'thirdLevelBrowseLinkClicked',
-              track_action: "#{section_index + 1}.0",
-              track_label: learn_to_drive_a_car_path,
-              track_options: {
-                dimension29: "Learn to drive a car: step by step"
-              }
-            }
-          ) %>
+            section_index
+            ) %>
+        </li>
+      <% elsif task_list_ab_test.show_divorce_related_tasklists?(list.title) %>
+        <li>
+          <%= tasklist_link_for(
+            "Get a divorce: step by step",
+            get_a_divorce_path,
+            section_index
+            ) %>
+        </li>
+        <li>
+          <%= tasklist_link_for(
+            "End a civil partnership: step by step",
+            end_a_civil_partnership_path,
+            section_index
+            ) %>
         </li>
       <% end %>
+
       <% list.contents.each_with_index do |list_item, index| %>
+        <% next if task_list_ab_test.hide_list_item_link?(list_item) %>
         <li>
           <%= link_to(
             list_item.title,

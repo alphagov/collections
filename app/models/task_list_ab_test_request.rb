@@ -17,12 +17,26 @@ class TaskListAbTestRequest
       list_title == 'Popular services' && page_is_under_test?
   end
 
+  def show_divorce_related_tasklists?(list_title)
+    requested_variant.variant?('B') &&
+      list_title == 'Getting separated or divorced' && page_is_under_test?
+  end
+
+  def hide_list_item_link?(list_item)
+    base_path = '/separation-divorce'
+
+    list_item.base_path == base_path &&
+      requested_variant.variant?('B')
+  end
+
   def page_is_under_test?
     [
       "/browse/driving/learning-to-drive",
       "/browse/driving/learning-to-drive.json",
       "/browse/driving/driving-licences",
       "/browse/driving/driving-licences.json",
+      "/browse/births-deaths-marriages/marriage-divorce",
+      "/browse/births-deaths-marriages/marriage-divorce.json",
     ].include? @request.path
   end
 
