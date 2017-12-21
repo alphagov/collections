@@ -13,6 +13,7 @@
 
   <%= render partial: 'govuk_component/analytics_meta_tags',
     locals: { content_item: @content_item } %>
+  <%= stylesheet_link_tag "print.css", :media => "print", integrity: true, crossorigin: 'anonymous' %>
 </head>
 
 <body>
