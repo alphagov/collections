@@ -1,5 +1,6 @@
 $gutter-one-sixth: $gutter / 6;
 
+// scss-lint:disable NestingDepth
 .browse {
   .browse-panes {
     @extend %contain-floats;
@@ -277,3 +278,4 @@ $gutter-one-sixth: $gutter / 6;
     }
   }
 }
+// scss-lint:enable NestingDepth
