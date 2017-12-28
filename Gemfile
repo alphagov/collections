@@ -14,7 +14,7 @@ gem 'rails', '5.1.4'
 gem 'sass-rails', '~> 5.0.3'
 gem 'slimmer', '~> 11.1.0'
 gem 'uglifier', '~> 2.7.1'
-gem 'unicorn', '~> 4.9.0'
+gem 'unicorn', '~> 5.4.0'
 
 group :test do
   gem 'capybara'
