@@ -78,7 +78,7 @@
           "contents": [
             {
               "type": "paragraph",
-              "text": "You should try to agree how you'll deal with your children, money and property before you apply to end your civil partnership."
+              "text": "You should try to agree the arrangements for looking after your children and work out any money or property issues before you apply to end your civil partnership."
             },
             {
               "type": "list",
@@ -168,11 +168,11 @@
             },
             {
               "type": "paragraph",
-              "text": "Your civil partner will receive a copy of the dissolution application. You'll be told when they respond and what you'll need to do next."
+              "text": "Your husband or wife will receive a copy of the dissolution application. When they respond, you'll be told what you need to do next."
             },
             {
               "type": "paragraph",
-              "text": "You might need to get legal advice if your civil partner disagrees with your application."
+              "text": "You might need to get legal advice if they disagree with the application."
             },
             {
               "type": "list",
@@ -185,6 +185,10 @@
               ]
             },
             {
+              "type": "paragraph",
+              "text": "If they don't respond, you'll need to prove that they've received the application. For example, by using a bailiff to deliver it to them."
+            },
+            {
               "type": "substep",
               "optional": true
             },
@@ -194,7 +198,7 @@
                 {
                   "href": "/divorce-missing-husband-wife",
                   "text": "Find your civil partner's address",
-                  "context": "£0 to £100"
+                  "context": "£0 to £150"
                 },
                 {
                   "href": "/end-civil-partnership/if-your-partner-lacks-mental-capacity",
@@ -216,7 +220,7 @@
           "contents": [
             {
               "type": "paragraph",
-              "text": "If the court agrees with your dissolution application, you can apply for a document called a 'conditional order'. You can give more information about why the civil partnership has broken down."
+              "text": "The court will tell you if you can continue with your dissolution application. You'll need to apply for a document called a 'conditional order'. You can give more information about why the civil partnership has broken down."
             },
             {
               "type": "list",
@@ -275,7 +279,7 @@
           "contents": [
             {
               "type": "paragraph",
-              "text": "Once you, your civil partner and the court all agree, you can apply for a document called a 'final order' to end your civil partnership. You can do this 6 weeks to 12 months after you receive the conditional order."
+              "text": "Once you, your civil partner and the court all agree, you can apply for a document called a 'final order' to end your civil partnership. You can do this 6 weeks after you receive the conditional order."
             },
             {
               "type": "paragraph",

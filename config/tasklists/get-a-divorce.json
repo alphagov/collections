@@ -78,7 +78,7 @@
           "contents": [
             {
               "type": "paragraph",
-              "text": "You should try to agree how you'll deal with your children, money and property before you start your divorce."
+              "text": "You should try to agree the arrangements for looking after your children and work out any money or property issues before you start your divorce."
             },
             {
               "type": "list",
@@ -145,7 +145,7 @@
                 },
                 {
                   "href": "/divorce/grounds-for-divorce",
-                  "text": "Check the list of reasons why you can get a divorce"
+                  "text": "Check the reasons you can get a divorce (the 'grounds for divorce')"
                 },
                 {
                   "href": "http://hmctsformfinder.justice.gov.uk/HMCTS/GetForm.do?court_forms_id=1115",
@@ -168,11 +168,11 @@
             },
             {
               "type": "paragraph",
-              "text": "Your husband or wife will receive a copy of the divorce petition. You'll be told when they respond and what you'll need to do next."
+              "text": "Your husband or wife will receive a copy of the divorce petition. When they respond, you'll be told what you need to do next."
             },
             {
               "type": "paragraph",
-              "text": "You might need to get legal advice if your husband or wife disagrees with your divorce petition."
+              "text": "You might need to get legal advice if they disagree with the petition."
             },
             {
               "type": "list",
@@ -185,6 +185,10 @@
               ]
             },
             {
+              "type": "paragraph",
+              "text": "If they don't respond, you'll need to prove that they've received the petition. For example, by using a bailiff to deliver it to them."
+            },
+            {
               "type": "substep",
               "optional": true
             },
@@ -194,7 +198,7 @@
                 {
                   "href": "/divorce-missing-husband-wife",
                   "text": "Find your husband or wife’s address",
-                  "context": "£0 to £100"
+                  "context": "£0 to £150"
                 },
                 {
                   "href": "/divorce/if-your-husband-or-wife-lacks-mental-capacity",
@@ -216,7 +220,7 @@
           "contents": [
             {
               "type": "paragraph",
-              "text": "If the court agrees with your divorce petition, you can apply for a document called a 'decree nisi'. You can give more information about why the marriage has broken down."
+              "text": "The court will tell you if you can continue with your divorce petition. You'll need to apply for a document called a 'decree nisi'. You can give more information about why the marriage has broken down."
             },
             {
               "type": "list",
@@ -275,7 +279,7 @@
           "contents": [
             {
               "type": "paragraph",
-              "text": "Once you, your husband or wife, and the court all agree, you can apply for the final document to end your marriage. This is called a 'decree absolute'. You can do this 6 weeks to 12 months after you receive the decree nisi."
+              "text": "Once you, your husband or wife, and the court all agree, you can apply for the final document to end your marriage. This is called a 'decree absolute'. You can do this 6 weeks after you receive the decree nisi."
             },
             {
               "type": "paragraph",
