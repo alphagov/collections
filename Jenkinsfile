@@ -2,7 +2,7 @@
 
 node {
   def govuk = load '/var/lib/jenkins/groovy_scripts/govuk_jenkinslib.groovy'
-  govuk.setEnvar("PUBLISHING_E2E_TESTS_COMMAND", "test-collections-publisher")
+  govuk.setEnvar("PUBLISHING_E2E_TESTS_COMMAND", "test-collections")
   govuk.buildProject(
     overrideTestTask: {
       stage("Run tests") {
