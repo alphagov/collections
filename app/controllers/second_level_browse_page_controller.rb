@@ -1,5 +1,4 @@
 class SecondLevelBrowsePageController < ApplicationController
-  include TaskListAbTestingConcern
 
   enable_request_formats show: [:json]
 
@@ -13,7 +12,7 @@ class SecondLevelBrowsePageController < ApplicationController
       f.json do
         render json: {
           breadcrumbs: breadcrumb_content,
-          html: render_partial('_links', page: page, task_list_ab_test: task_list_ab_test)
+          html: render_partial('_links', page: page)
         }
       end
     end
@@ -24,10 +23,7 @@ private
   def show_html
     render :show, locals: {
       page: page,
-      meta_section: meta_section,
-      task_list_ab_test: task_list_ab_test,
-      task_list_ab_variant: task_list_ab_variant,
-      page_is_under_task_list_ab_test: task_list_ab_test.page_is_under_test?
+      meta_section: meta_section
     }
   end
 
