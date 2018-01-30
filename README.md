@@ -1,6 +1,6 @@
 # Collections Frontend
 
-Collections serves the GOV.UK navigation pages, 
+Collections serves the GOV.UK navigation pages,
 
 ![Browse page](docs/browse-page.jpg)
 ![Topic page](docs/topic-page.jpg)
@@ -48,7 +48,7 @@ Collections serves the GOV.UK navigation pages,
   `associated_taxons` links. In this case the tagged content of the taxon will
   include content that is directly tagged to it and also content that has been
   tagged to any of the associated taxons.
-  
+
 
 ## Technical documentation
 
@@ -90,7 +90,25 @@ Content for taxon pages is returned by a search in Rummager based on content_ids
 
 ### Running the application
 
-`bundle exec rails server`
+```
+./startup.sh
+```
+
+The app should start on http://localhost:3070 or
+http://collections.dev.gov.uk on GOV.UK development machines.
+
+```
+./startup.sh --live
+```
+
+This will run the app and point it at the production GOV.UK `content-store` and `static` instances.
+
+```
+./startup.sh --dummy
+```
+
+This will run the app and point it at the [dummy content store](https://govuk-content-store-examples.herokuapp.com/), which serves the content schema examples and random content.
+
 
 ### Running the test suite
 
@@ -98,7 +116,7 @@ Use `bundle exec rake` to run the test suite, excluding JavaScript
 
 #### Javascript tests
 
-Use `bundle exec rake spec:javascript` to run Jasmine tests  
+Use `bundle exec rake spec:javascript` to run Jasmine tests
 Alternatively, visit [`collections.dev.gov.uk/specs`](http://collections.dev.gov.uk/specs)
 for a live debugger in your browser
 
