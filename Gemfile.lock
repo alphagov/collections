@@ -200,7 +200,7 @@ GEM
     parser (2.4.0.2)
       ast (~> 2.3)
     phantomjs (2.1.1.0)
-    plek (2.0.0)
+    plek (2.1.0)
     poltergeist (1.16.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
@@ -350,7 +350,7 @@ DEPENDENCIES
   logstasher (= 0.6.2)
   minitest-spec-rails
   mocha
-  plek (~> 2.0.0)
+  plek (~> 2.1.0)
   poltergeist
   pry-byebug
   rails (= 5.1.4)
