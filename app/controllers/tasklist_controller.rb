@@ -1,28 +1,20 @@
 class TasklistController < ApplicationController
   def show
-    content_item = ContentItem.find!("/learn-to-drive-a-car")
+    content_item = ContentItem.find!(base_path)
 
     render :show, locals: {
       content_item: content_item,
-      tasklist: TasklistContent.learn_to_drive_config
+      tasklist: TasklistContent.find_file(slug)
     }
   end
 
-  def show_end_a_civil_partnership
-    content_item = ContentItem.find!("/end-a-civil-partnership")
+private
 
-    render :show, locals: {
-      content_item: content_item,
-      tasklist: TasklistContent.end_a_civil_partnership_config
-    }
+  def base_path
+    request.path
   end
 
-  def show_get_a_divorce
-    content_item = ContentItem.find!("/get-a-divorce")
-
-    render :show, locals: {
-      content_item: content_item,
-      tasklist: TasklistContent.get_a_divorce_config
-    }
+  def slug
+    base_path[1..-1]
   end
 end

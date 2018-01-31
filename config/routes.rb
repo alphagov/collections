@@ -7,17 +7,16 @@ Rails.application.routes.draw do
   mount GovukPublishingComponents::Engine, at: "/component-guide" if defined?(GovukPublishingComponents)
 
   get "/learn-to-drive-a-car", to: 'tasklist#show'
-  get "/get-a-divorce", to: 'tasklist#show_get_a_divorce'
-
-  get "/end-a-civil-partnership", to: 'tasklist#show_end_a_civil_partnership'
+  get "/get-a-divorce", to: 'tasklist#show'
+  get "/end-a-civil-partnership", to: 'tasklist#show'
 
   get "/browse.json" => redirect("/api/content/browse")
 
-  resources :browse, only: [:index, :show], param: :top_level_slug do
+  resources :browse, only: %i(index show), param: :top_level_slug do
     get ':second_level_slug', on: :member, to: "second_level_browse_page#show"
   end
 
-  resources :topics, only: [:index, :show], path: :topic, param: :topic_slug do
+  resources :topics, only: %i(index show), path: :topic, param: :topic_slug do
     get ":subtopic_slug", on: :member, to: "subtopics#show"
   end
 
