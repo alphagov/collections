@@ -5,4 +5,4 @@
 //= require modules/current-location
 //= require modules/feeds.js
 //= require components/accordion
-//= require components/task-list
+//= require govuk_publishing_components/components/task-list
