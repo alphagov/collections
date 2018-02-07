@@ -29,32 +29,12 @@ class StepNavPageTest < ActionDispatch::IntegrationTest
   end
 
   it "renders the step navigation in learn to drive page" do
-    assert page.has_css?(step_nav_component)
-
-    within(step_nav_component) do
-      step_nav_titles = [
-         "Check you're allowed to drive",
-         "Get a provisional driving licence",
-         "Driving lessons and practice",
-         "Book and manage your theory test",
-         "Book and manage your driving test",
-         "When you pass"
-      ]
-
-      step_nav_titles.each_with_index do |step_title, index|
-        step = index + 1
-        fourth_title = step_nav_titles[5]
-
-        if step_title == fourth_title
-          assert_match(step_title, page.text)
-        else
-          assert_match("Step #{step} #{step_title}", page.text)
-        end
-      end
-    end
+    assert page.has_selector?(".gem-c-step-nav")
+    assert page.has_selector?(".gem-c-step-nav__title", text: "Check you're allowed to drive")
+    assert page.has_selector?(".gem-c-step-nav__step", count: 7)
   end
 
-  def step_nav_component
-    "[data-module='gemstepnav']"
+  it "hides step content by default" do
+    assert page.has_selector?(".gem-c-step-nav__panel", count: 7, visible: false)
   end
 end
