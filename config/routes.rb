@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
   mount GovukPublishingComponents::Engine, at: "/component-guide" if defined?(GovukPublishingComponents)
 
-  get "/learn-to-drive-a-car", to: 'tasklist#show'
+  get "/learn-to-drive-a-car", to: 'step_nav#show'
 
   get "/browse.json" => redirect("/api/content/browse")
 

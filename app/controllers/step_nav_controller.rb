@@ -1,10 +1,10 @@
-class TasklistController < ApplicationController
+class StepNavController < ApplicationController
   def show
     content_item = ContentItem.find!(base_path)
 
     render :show, locals: {
       content_item: content_item,
-      tasklist: TasklistContent.find_file(slug)
+      step_nav: StepNavContent.find_file(slug)
     }
   end
 

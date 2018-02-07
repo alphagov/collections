@@ -1,6 +1,6 @@
 require 'integration_test_helper'
 
-class TasklistPageTest < ActionDispatch::IntegrationTest
+class StepNavPageTest < ActionDispatch::IntegrationTest
   before do
     path = '/learn-to-drive-a-car'
     content_store_has_item(path, schema: 'generic')
@@ -28,11 +28,11 @@ class TasklistPageTest < ActionDispatch::IntegrationTest
     end
   end
 
-  it "renders the tasklist in learn to drive page" do
-    assert page.has_css?(tasklist_component)
+  it "renders the step navigation in learn to drive page" do
+    assert page.has_css?(step_nav_component)
 
-    within(tasklist_component) do
-      group_titles = [
+    within(step_nav_component) do
+      step_nav_titles = [
          "Check you're allowed to drive",
          "Get a provisional driving licence",
          "Driving lessons and practice",
@@ -41,20 +41,20 @@ class TasklistPageTest < ActionDispatch::IntegrationTest
          "When you pass"
       ]
 
-      group_titles.each_with_index do |group_title, index|
+      step_nav_titles.each_with_index do |step_title, index|
         step = index + 1
-        fourth_title = group_titles[5]
+        fourth_title = step_nav_titles[5]
 
-        if group_title == fourth_title
-          assert_match(group_title, page.text)
+        if step_title == fourth_title
+          assert_match(step_title, page.text)
         else
-          assert_match("Step #{step} #{group_title}", page.text)
+          assert_match("Step #{step} #{step_title}", page.text)
         end
       end
     end
   end
 
-  def tasklist_component
-    "[data-module='gemtasklist']"
+  def step_nav_component
+    "[data-module='gemstepnav']"
   end
 end

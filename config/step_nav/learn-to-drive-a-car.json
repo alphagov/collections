@@ -9,7 +9,7 @@
       { "title": "Learning to drive", "url": "/browse/driving/learning-to-drive"}
     ]
   },
-  "tasklist": {
+  "step_nav": {
     "steps": [
       {
         "title": "Check you're allowed to drive",
