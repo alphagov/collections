@@ -1,6 +1,6 @@
 require 'integration_test_helper'
 
-class TasklistPageTest < ActionDispatch::IntegrationTest
+class StepNavPageTest < ActionDispatch::IntegrationTest
   before do
     path = '/learn-to-drive-a-car'
     content_store_has_item(path, schema: 'generic')
@@ -28,33 +28,13 @@ class TasklistPageTest < ActionDispatch::IntegrationTest
     end
   end
 
-  it "renders the tasklist in learn to drive page" do
-    assert page.has_css?(tasklist_component)
-
-    within(tasklist_component) do
-      group_titles = [
-         "Check you're allowed to drive",
-         "Get a provisional driving licence",
-         "Driving lessons and practice",
-         "Book and manage your theory test",
-         "Book and manage your driving test",
-         "When you pass"
-      ]
-
-      group_titles.each_with_index do |group_title, index|
-        step = index + 1
-        fourth_title = group_titles[5]
-
-        if group_title == fourth_title
-          assert_match(group_title, page.text)
-        else
-          assert_match("Step #{step} #{group_title}", page.text)
-        end
-      end
-    end
+  it "renders the step navigation in learn to drive page" do
+    assert page.has_selector?(".gem-c-step-nav")
+    assert page.has_selector?(".gem-c-step-nav__title", text: "Check you're allowed to drive")
+    assert page.has_selector?(".gem-c-step-nav__step", count: 7)
   end
 
-  def tasklist_component
-    "[data-module='gemtasklist']"
+  it "hides step content by default" do
+    assert page.has_selector?(".gem-c-step-nav__panel", count: 7, visible: false)
   end
 end
