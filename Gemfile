@@ -7,11 +7,11 @@ gem 'govuk_ab_testing', '~> 2.4.1'
 gem 'govuk_app_config', '~> 1.3.0'
 gem 'govuk_frontend_toolkit', '~> 7.2.0'
 gem 'govuk_navigation_helpers', '9.0.0'
-gem 'govuk_publishing_components', '~> 5.0.0'
+gem 'govuk_publishing_components', '~> 5.1.1'
 gem 'plek', '~> 2.1.1'
 gem 'rails', '5.1.4'
 gem 'sass-rails', '~> 5.0.3'
-gem 'slimmer', '~> 11.1.0'
+gem 'slimmer', '~> 12.0.0'
 gem 'uglifier', '~> 4.1.5'
 
 group :test do
