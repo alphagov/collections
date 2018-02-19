@@ -83,6 +83,13 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     then_i_cannot_see_the_blue_box_section
   end
 
+  it 'hides page from search engine when taxon is not live' do
+    given_there_is_a_taxon_with_grandchildren
+    and_the_taxon_is_not_live
+    when_i_visit_the_taxon_page
+    then_page_has_meta_robots
+  end
+
 private
 
   def then_i_can_see_the_blue_box_with_its_details
@@ -152,6 +159,13 @@ private
       @taxon.content_id,
       popular_items
     )
+  end
+
+  def and_the_taxon_is_not_live
+    taxon_in_beta =
+      funding_and_finance_for_students_taxon(base_path: @base_path, phase: 'beta')
+
+    content_store_has_item(@base_path, taxon_in_beta)
   end
 
   def given_there_is_a_taxon_without_grandchildren
@@ -230,6 +244,16 @@ private
       @taxon.description,
       content,
       "The content of the meta description should be the taxon description"
+    )
+  end
+
+  def then_page_has_meta_robots
+    content = page.find('meta[name="robots"]', visible: false)['content']
+
+    assert_equal(
+      "noindex, nofollow",
+      content,
+      "The content of the robots meta tag should be 'noindex, nofollow'"
     )
   end
 
