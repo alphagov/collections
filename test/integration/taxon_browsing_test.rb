@@ -83,11 +83,12 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     then_i_cannot_see_the_blue_box_section
   end
 
-  it 'hides page from search engine when taxon is not live' do
+  it 'sets up a non-live taxon page' do
     given_there_is_a_taxon_with_grandchildren
     and_the_taxon_is_not_live
     when_i_visit_the_taxon_page
     then_page_has_meta_robots
+    and_i_cannot_see_an_email_signup_link
   end
 
 private
@@ -391,6 +392,13 @@ private
 
   def and_i_can_see_an_email_signup_link
     assert page.has_link?(
+      'Get email alerts for this topic',
+      href: "/email-signup/?topic=#{current_path}"
+    )
+  end
+
+  def and_i_cannot_see_an_email_signup_link
+    assert page.has_no_link?(
       'Get email alerts for this topic',
       href: "/email-signup/?topic=#{current_path}"
     )
