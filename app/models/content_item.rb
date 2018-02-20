@@ -35,4 +35,8 @@ class ContentItem
   def merge(to_merge)
     ContentItem.new(content_item_data.merge(to_merge))
   end
+
+  def phase
+    @content_item_data["phase"]
+  end
 end

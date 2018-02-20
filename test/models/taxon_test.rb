@@ -25,6 +25,14 @@ describe Taxon do
       assert_equal @taxon.base_path, student_finance_taxon['base_path']
     end
 
+    it 'has a phase' do
+      assert_equal @taxon.phase, student_finance_taxon['phase']
+    end
+
+    it 'checks if content is live' do
+      assert(@taxon.live_taxon?)
+    end
+
     it 'has two taxon children' do
       assert_equal @taxon.child_taxons.length, 2
 

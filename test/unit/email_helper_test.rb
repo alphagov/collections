@@ -3,7 +3,8 @@ class EmailHelperTest < ActionView::TestCase
   test "should return true if we are browsing a world location" do
     presented_taxon = stub(
       world_related?: true,
-      renders_as_accordion?: true
+      renders_as_accordion?: true,
+      live_taxon?: true
     )
 
     assert render_whitehall_email_links?(presented_taxon)
@@ -12,7 +13,8 @@ class EmailHelperTest < ActionView::TestCase
   test "should return false if we are browsing a world location leaf page" do
     presented_taxon = stub(
       world_related?: true,
-      renders_as_accordion?: false
+      renders_as_accordion?: false,
+      live_taxon?: true
     )
 
     refute render_whitehall_email_links?(presented_taxon)
@@ -21,10 +23,28 @@ class EmailHelperTest < ActionView::TestCase
   test "should return false if we are browsing any other taxon" do
     presented_taxon = stub(
       world_related?: false,
-      renders_as_accordion?: true
+      renders_as_accordion?: true,
+      live_taxon?: true
     )
 
     refute render_whitehall_email_links?(presented_taxon)
+  end
+
+
+  test "should return true if we are browsing a taxon that is live" do
+    presented_taxon = stub(
+      live_taxon?: true
+    )
+
+    assert taxon_is_live?(presented_taxon)
+  end
+
+  test "should return false if we are browsing a taxon that is not live" do
+    presented_taxon = stub(
+      live_taxon?: false
+    )
+
+    refute taxon_is_live?(presented_taxon)
   end
 
   test "should return a valid whitehall .atom url in the form /government/{url}.atom" do

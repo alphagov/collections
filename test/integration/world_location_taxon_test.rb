@@ -10,7 +10,7 @@ class WorldLocationTaxonTest < ActionDispatch::IntegrationTest
     @base_path = '/world/usa'
     @child_taxon_base_path = '/world/news-and-events-usa'
 
-    world_usa = world_usa_taxon(base_path: @base_path)
+    world_usa = world_usa_taxon(base_path: @base_path, phase: 'live')
     world_usa_news_events = world_usa_news_events_taxon(base_path: @child_taxon_base_path)
 
     content_store_has_item(@base_path, world_usa)

@@ -3,6 +3,7 @@
   "title": "Student finance",
   "description": "Student finance content",
   "base_path": "\/education-training-and-skills\/student-finance",
+  "phase": "live",
   "links": {
     "parent_taxons": [
       {
@@ -20,6 +21,7 @@
         "description": "Description of student sponsorship",
         "base_path": "\/education-training-and-skills\/student-sponsorship",
         "locale": "en",
+        "phase": "live",
         "links": {
           "parent_taxons": [
             {
@@ -38,6 +40,7 @@
         "description": "Description of student loans",
         "base_path": "\/education-training-and-skills\/student-loans",
         "locale": "en",
+        "phase": "live",
         "links": {
           "parent_taxons": [
             {
