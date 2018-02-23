@@ -14,11 +14,6 @@ module TaxonHelpers
     fetch_and_validate_taxon(:running_education_institution, params)
   end
 
-  # This taxon is in beta phase and does not have grandchildren
-  def student_finance_draft_taxon(params = {})
-    fetch_and_validate_taxon(:student_finance_draft, params)
-  end
-
   def student_sponsorship_taxon(params = {})
     fetch_and_validate_taxon(:student_sponsorship, params)
   end
