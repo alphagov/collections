@@ -378,13 +378,6 @@ private
     )
   end
 
-  def and_i_cannot_see_an_email_signup_link
-    assert page.has_no_link?(
-      'Get email alerts for this topic',
-      href: "/email-signup/?topic=#{current_path}"
-    )
-  end
-
   def and_all_sections_apart_from_general_information_have_an_email_signup_link
     general_information, *subsections = page.all('.app-c-accordion__section').to_a
 
