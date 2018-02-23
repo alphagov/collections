@@ -162,7 +162,7 @@ private
     assert_not_nil @parent
 
     @child_taxons = student_finance['links']['child_taxons']
-    assert @child_taxons.length.positive?
+    assert @child_taxons.length > 0
 
     content_store_has_item(@base_path, student_finance)
     content_store_has_item(
@@ -178,12 +178,6 @@ private
     stub_content_for_taxon(@taxon.content_id, search_results)
     stub_content_for_taxon(student_sponsorship_taxon['content_id'], search_results)
     stub_content_for_taxon(student_loans_taxon['content_id'], search_results)
-  end
-
-  def and_the_taxon_without_grandchildren_is_not_live
-    taxon_in_beta = student_finance_draft_taxon(base_path: @base_path, phase: 'beta')
-
-    content_store_has_item(@base_path, taxon_in_beta)
   end
 
   def and_the_taxon_has_no_tagged_content
@@ -223,10 +217,10 @@ private
   end
 
   def when_i_visit_the_taxon_page
-    visit @base_path
-    if (400..599).cover?(page.status_code)
-      raise "Application error (#{page.status_code}): \n#{page.body}"
-    end
+      visit @base_path
+      if (400..599).cover?(page.status_code)
+        raise "Application error (#{page.status_code}): \n#{page.body}"
+      end
   end
 
   def then_i_can_see_the_meta_description
