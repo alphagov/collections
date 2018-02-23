@@ -83,25 +83,6 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     then_i_cannot_see_the_blue_box_section
   end
 
-  it 'sets up a non-live taxon page' do
-    given_there_is_a_taxon_with_grandchildren
-    and_the_taxon_is_not_live
-    when_i_visit_the_taxon_page
-    then_page_has_meta_robots
-    and_i_cannot_see_an_email_signup_link
-  end
-
-  it 'sets up a non-live taxon with no grandchildren' do
-    given_there_is_a_taxon_without_grandchildren
-    and_the_taxon_without_grandchildren_is_not_live
-    and_there_are_popular_items_for_the_taxon
-    when_i_visit_the_taxon_page
-    then_i_can_see_there_is_a_page_title
-    and_i_can_see_the_general_information_section_in_the_accordion
-    and_i_can_see_links_to_the_child_taxons_in_an_accordion
-    and_i_cannot_see_an_email_signup_link
-  end
-
 private
 
   def then_i_can_see_the_blue_box_with_its_details
@@ -171,13 +152,6 @@ private
       @taxon.content_id,
       popular_items
     )
-  end
-
-  def and_the_taxon_is_not_live
-    taxon_in_beta =
-      funding_and_finance_for_students_taxon(base_path: @base_path, phase: 'beta')
-
-    content_store_has_item(@base_path, taxon_in_beta)
   end
 
   def given_there_is_a_taxon_without_grandchildren
@@ -262,16 +236,6 @@ private
       @taxon.description,
       content,
       "The content of the meta description should be the taxon description"
-    )
-  end
-
-  def then_page_has_meta_robots
-    content = page.find('meta[name="robots"]', visible: false)['content']
-
-    assert_equal(
-      "noindex, nofollow",
-      content,
-      "The content of the robots meta tag should be 'noindex, nofollow'"
     )
   end
 
