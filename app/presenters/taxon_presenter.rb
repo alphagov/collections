@@ -12,7 +12,6 @@ class TaxonPresenter
     :tagged_content,
     :grandchildren?,
     :child_taxons,
-    :live_taxon?,
     :most_popular_content,
     :can_subscribe?,
     :world_related?,
