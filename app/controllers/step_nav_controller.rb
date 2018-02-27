@@ -1,10 +1,13 @@
 class StepNavController < ApplicationController
   def show
-    content_item = ContentItem.find!(base_path)
+    setup_content_item_and_navigation_helpers(step_nav)
+
+    step_nav_content = StepNavContent.from_content_item(step_nav)
 
     render :show, locals: {
-      content_item: content_item,
-      step_nav: StepNavContent.find_file(slug)
+      content_item: step_nav,
+      navigation_helpers: @navigation_helpers,
+      step_nav: step_nav_content
     }
   end
 
@@ -16,5 +19,9 @@ private
 
   def slug
     base_path[1..-1]
+  end
+
+  def step_nav
+    StepNav.find!(base_path)
   end
 end
