@@ -4,22 +4,18 @@
   <meta name="description" content="<%= content_item.description %>">
 <% end %>
 
-<% content_for :breadcrumbs do %>
-  <%= render 'govuk_component/breadcrumbs', step_nav[:links] %>
-<% end %>
-
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_component/title',
-        title: step_nav[:title],
+        title: content_item.title,
         average_title_length: 'long',
         margin_bottom: 0 %>
 
-    <div class="govuk-govspeak"><%= raw(step_nav[:description]) %></div>
+    <div class="govuk-govspeak"><%= raw(content_item.introduction) %></div>
   </div>
 </div>
 <div class="grid-row">
   <div class="column-two-thirds">
-    <%= render "govuk_publishing_components/components/step_by_step_nav", step_nav[:step_nav] %>
+    <%= render "govuk_publishing_components/components/step_by_step_nav", step_nav %>
   </div>
 </div>
