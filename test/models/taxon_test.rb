@@ -29,6 +29,16 @@ describe Taxon do
       assert_equal @taxon.phase, student_finance_taxon['phase']
     end
 
+    it 'errors if phase is not found' do
+      student_finance_taxon_without_phase = student_finance_taxon
+      student_finance_taxon_without_phase.delete('phase')
+
+      content_item = ContentItem.new(student_finance_taxon_without_phase)
+      @taxon_without_phase = Taxon.new(content_item)
+
+      assert_raises(RuntimeError) { @taxon_without_phase.phase }
+    end
+
     it 'checks if content is live' do
       assert(@taxon.live_taxon?)
     end

@@ -37,6 +37,8 @@ class ContentItem
   end
 
   def phase
-    @content_item_data["phase"]
+    @content_item_data.fetch("phase")
+  rescue KeyError => e
+    raise "Error searching content item: #{e}"
   end
 end
