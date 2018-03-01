@@ -1,8 +1,7 @@
 #!/usr/bin/env groovy
 
-library("govuk@add-brakeman")
-
 node {
+  library("govuk@add-brakeman")
   govuk.setEnvar("PUBLISHING_E2E_TESTS_COMMAND", "test-collections")
 
   govuk.buildProject(
