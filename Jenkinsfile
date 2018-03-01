@@ -1,8 +1,9 @@
 #!/usr/bin/env groovy
 
 node {
-  def govuk = load '/var/lib/jenkins/groovy_scripts/govuk_jenkinslib.groovy'
+  library("govuk@add-brakeman")
   govuk.setEnvar("PUBLISHING_E2E_TESTS_COMMAND", "test-collections")
+
   govuk.buildProject(
     overrideTestTask: {
       stage("Run tests") {
