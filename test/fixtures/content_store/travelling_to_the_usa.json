@@ -3,6 +3,7 @@
   "title": "Travelling to the USA",
   "description": "Includes travel advice and how to get married abroad.",
   "base_path": "\/world\/usa\/travelling-to-the-usa",
+  "phase": "live",
   "locale": "en",
   "links": {
     "parent_taxons": [

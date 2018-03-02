@@ -9,6 +9,7 @@ class Taxon
     :description,
     :linked_items,
     :to_hash,
+    :phase,
     to: :content_item
   )
 
@@ -76,6 +77,10 @@ class Taxon
 
   def world_related?
     base_path.starts_with?("/world")
+  end
+
+  def live_taxon?
+    phase == "live"
   end
 
 private

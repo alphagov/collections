@@ -35,4 +35,10 @@ class ContentItem
   def merge(to_merge)
     ContentItem.new(content_item_data.merge(to_merge))
   end
+
+  def phase
+    @content_item_data.fetch("phase")
+  rescue KeyError => e
+    raise "Error searching content item: #{e}"
+  end
 end
