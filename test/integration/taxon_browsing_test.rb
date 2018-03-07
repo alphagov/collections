@@ -356,7 +356,7 @@ private
       }
 
       link[:'data-track-action'].must_equal "#{section_number}.#{item_number}"
-      link[:'data-track-label'].must_equal "#{search_results[item_number - 1]['link']}"
+      link[:'data-track-label'].must_equal (search_results[item_number - 1]['link']).to_s
       link[:'data-track-options'].must_equal expected_tracking_options.to_json
       link[:'data-module'].must_equal 'track-click'
     end
@@ -450,7 +450,7 @@ private
           dimension29: results[index]['title'],
       }
 
-      link[:'data-track-action'].must_equal "#{index + 1}"
+      link[:'data-track-action'].must_equal (index + 1).to_s
       link[:'data-track-label'].must_equal results[index]['link']
       link[:'data-track-options'].must_equal expected_tracking_options.to_json
       link[:'data-module'].must_equal 'track-click'

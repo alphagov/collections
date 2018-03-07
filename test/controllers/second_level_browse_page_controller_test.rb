@@ -19,8 +19,7 @@ describe SecondLevelBrowsePageController do
               base_path: '/browse/benefits'
             }],
             related_topics: [{ title: 'A linked topic', base_path: '/browse/linked-topic' }]
-          }
-        )
+          })
 
         rummager_has_documents_for_browse_page(
           "entitlement-content-id",

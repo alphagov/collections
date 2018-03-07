@@ -67,21 +67,21 @@ describe Taxon do
     end
 
     it 'knows about its most popular content items' do
-      results = [:result_1, :result_2]
+      results = %i[result_1 result_2]
       MostPopularContent.stubs(:fetch).returns(results)
 
       assert_equal(results, @taxon.most_popular_content)
     end
 
     it 'knows about its most popular content items' do
-      results = [:result_1, :result_2]
+      results = %i[result_1 result_2]
       MostPopularContent.stubs(:fetch).returns(results)
 
       assert_equal(results, @taxon.most_popular_content)
     end
 
     it "requests popular content of document supertype 'guidance' by default" do
-      results = [:result_1, :result_2]
+      results = %i[result_1 result_2]
       MostPopularContent.stubs(:fetch)
         .with(content_id: @taxon.content_id, filter_by_document_supertype: 'guidance')
         .returns(results)
@@ -92,7 +92,7 @@ describe Taxon do
     it "does not request popular content of document supertype 'guidance' for world related content" do
       @taxon.stubs(base_path: "/world/brazil")
 
-      results = [:result_1, :result_2]
+      results = %i[result_1 result_2]
       MostPopularContent.stubs(:fetch)
         .with(content_id: @taxon.content_id, filter_by_document_supertype: nil)
         .returns(results)

@@ -63,7 +63,8 @@ private
       :start => 0,
       :count => RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       filter_name => [@tag_content_id],
-      :fields => %w(title link format))
+      :fields => %w(title link format)
+)
   end
 
   def filter_name

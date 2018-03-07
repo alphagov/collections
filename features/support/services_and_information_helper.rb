@@ -29,8 +29,7 @@ module ServicesAndInformationHelpers
           "title" => "HM Revenue & Customs",
           "base_path" => "/government/organisations/hm-revenue-customs",
         ]
-      },
-    )
+      },)
 
     stub_shared_component_locales
   end
