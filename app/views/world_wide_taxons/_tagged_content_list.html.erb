@@ -1,0 +1,19 @@
+<% if presented_taxon.tagged_content.any? %>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <% if presented_taxon.child_taxons.present? %>
+        <div class="topic-header">
+          <h2><%= presented_taxon.title %> guidance</h2>
+          <p><%= presented_taxon.description %></p>
+        </div>
+      <% end %>
+
+      <% data_options_type = is_grid ? :options_for_tagged_content : :options_for_leaf_content %>
+      <% heading_level = heading_level ? heading_level : false %>
+      <%= render 'components/taxon-list', {
+          heading_level: heading_level,
+          items: taxon_list_params(presented_taxon, data_options_type: data_options_type)
+      } %>
+    </div>
+  </div>
+<% end %>

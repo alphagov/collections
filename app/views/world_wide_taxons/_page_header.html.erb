@@ -1,0 +1,11 @@
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render "govuk_component/title", {
+      title: presented_taxon.title,
+      average_title_length: 'long'
+    } %>
+
+    <%= render 'govuk_component/lead_paragraph', text: presented_taxon.description %>
+    <%= render partial: 'email_alerts', locals: { presented_taxon: presented_taxon } %>
+  </div>
+</div>

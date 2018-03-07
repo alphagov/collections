@@ -1,6 +1,6 @@
-class Taxon
+class WorldWideTaxon
   attr_reader :content_item
-  attr_accessor :can_subscribe, :tagged_content
+  attr_accessor :can_subscribe
 
   delegate(
     :content_id,
@@ -46,18 +46,6 @@ class Taxon
     linked_items('child_taxons').present?
   end
 
-  def grandchildren?
-    return false unless children?
-
-    # The Publishing API doesn't expand child taxons, which means
-    # we can't use the child_taxons method for each of the child
-    # taxons of this taxon. We have to do an API call to know if
-    # the children also have children.
-    child_taxons.any? do |child_taxon|
-      Taxon.find(child_taxon.base_path).children?
-    end
-  end
-
   def associated_taxons
     linked_items('associated_taxons').map do |associated_taxon|
       self.class.new(associated_taxon)
@@ -65,13 +53,13 @@ class Taxon
   end
 
   def merge(to_merge)
-    Taxon.new(content_item.merge(to_merge))
+    WorldWideTaxon.new(content_item.merge(to_merge))
   end
 
   def can_subscribe?
+    # Is @can_subscribe ever used on world wide pages?
     return @can_subscribe if defined?(@can_subscribe)
-
-    true
+    false
   end
 
   def live_taxon?
@@ -80,18 +68,19 @@ class Taxon
 
 private
 
-  GUIDANCE = 'guidance'.freeze
-
   def fetch_tagged_content
     taxon_content_ids = [content_id] + associated_taxons.map(&:content_id)
     TaggedContent.fetch(
       taxon_content_ids,
-      filter_by_document_supertype: GUIDANCE,
-      validate: true
+      filter_by_document_supertype: nil,
+      validate: false
     )
   end
 
   def fetch_most_popular_content
-    MostPopularContent.fetch(content_id: content_id, filter_by_document_supertype: GUIDANCE)
+    MostPopularContent.fetch(
+      content_id: content_id,
+      filter_by_document_supertype: nil,
+    )
   end
 end
