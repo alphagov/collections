@@ -8,11 +8,10 @@
         </div>
       <% end %>
 
-      <% data_options_type = is_grid ? :options_for_tagged_content : :options_for_leaf_content %>
       <% heading_level = heading_level ? heading_level : false %>
       <%= render 'components/taxon-list', {
           heading_level: heading_level,
-          items: taxon_list_params(presented_taxon, data_options_type: data_options_type)
+          items: taxon_list_params(presented_taxon, data_options_type: :options_for_leaf_content)
       } %>
     </div>
   </div>

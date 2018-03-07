@@ -48,8 +48,8 @@ private
     )
     content_item = JSON.parse(json)
 
-    GovukSchemas::RandomExample
-      .for_schema(frontend_schema: 'taxon')
-      .merge_and_validate(content_item.merge(params))
+    GovukSchemas::RandomExample.for_schema(frontend_schema: 'taxon') do |payload|
+      payload.merge(content_item.merge(params))
+    end
   end
 end
