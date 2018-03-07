@@ -8,10 +8,9 @@ Given(/^a topic subscription is expected$/) do
       "links" => {
         "topics" => ['content-id-for-fields-and-wells']
       }
-    ).returns({"subscriber_list" =>
+    ).returns("subscriber_list" =>
        # This redirects to govdelivery in real life, but force redirection to a fake path to verify redirect success
-       {"subscription_url" => "/email_success"}
-    })
+       { "subscription_url" => "/email_success" })
 end
 
 When(/^I access the email signup page via the topic$/) do

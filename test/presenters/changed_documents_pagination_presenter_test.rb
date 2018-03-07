@@ -9,8 +9,7 @@ describe ChangedDocumentsPaginationPresenter do
     changed_documents = stub('Topic::ChangedDocuments',
       total: total,
       page_size: page_size,
-      start: start,
-    )
+      start: start,)
     ChangedDocumentsPaginationPresenter.new(changed_documents, view_context)
   end
 

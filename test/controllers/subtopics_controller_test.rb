@@ -1,7 +1,6 @@
 require "test_helper"
 
 describe SubtopicsController do
-
   describe "GET subtopic" do
     describe "with a valid topic and subtopic slug" do
       setup do
@@ -22,7 +21,6 @@ describe SubtopicsController do
 
       assert_equal 404, response.status
     end
-
   end
 
   def stub_services_for_subtopic(content_id, parent_path, path)
@@ -35,7 +33,8 @@ describe SubtopicsController do
             "title" => "Parent Topic Title",
             "base_path" => "/#{parent_path}",
           }],
-        }),
+        }
+),
     )
 
     ListSet.stubs(:new).returns(
@@ -47,6 +46,7 @@ describe SubtopicsController do
       filter_topic_content_ids: [content_id],
       facet_organisations: "1000",
     ).returns(
-      rummager_has_specialist_sector_organisations("#{parent_path}/#{path}"))
+      rummager_has_specialist_sector_organisations("#{parent_path}/#{path}")
+)
   end
 end

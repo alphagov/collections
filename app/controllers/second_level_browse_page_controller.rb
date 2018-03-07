@@ -1,5 +1,4 @@
 class SecondLevelBrowsePageController < ApplicationController
-
   enable_request_formats show: [:json]
 
   def show

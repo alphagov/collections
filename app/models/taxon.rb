@@ -1,6 +1,6 @@
 class Taxon
   attr_reader :content_item
-  attr_accessor :can_subscribe, :tagged_content
+  attr_accessor :can_subscribe
 
   delegate(
     :content_id,
