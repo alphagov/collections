@@ -82,6 +82,15 @@ describe Taxon do
 
       assert_equal(results, @taxon.guidance_and_regulation_content)
     end
+
+    it "requests services content" do
+      results = [:result_1, :result_2]
+
+      MostPopularContent.stubs(:fetch)
+        .with(content_id: @taxon.content_id, filter_content_purpose_supergroup: 'services')
+        .returns(results)
+
+      assert_equal(results, @taxon.services_content)
     end
 
     it 'requests for guidance document supertype by default' do
