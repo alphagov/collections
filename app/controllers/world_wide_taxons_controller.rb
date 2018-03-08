@@ -2,13 +2,7 @@ class WorldWideTaxonsController < ApplicationController
   def show
     setup_content_item_and_navigation_helpers(taxon)
 
-    taxon_template =
-      case presented_taxon.rendering_type
-      when WorldWideTaxonPresenter::ACCORDION
-        :accordion
-      else
-        :leaf
-      end
+    taxon_template = presented_taxon.rendering_type
 
     render taxon_template, locals: {
       presented_taxon: presented_taxon
