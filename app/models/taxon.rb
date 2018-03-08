@@ -80,18 +80,16 @@ class Taxon
 
 private
 
-  GUIDANCE = 'guidance'.freeze
-
   def fetch_tagged_content
     taxon_content_ids = [content_id] + associated_taxons.map(&:content_id)
     TaggedContent.fetch(
       taxon_content_ids,
-      filter_by_document_supertype: GUIDANCE,
+      filter_by_document_supertype: 'guidance',
       validate: true
     )
   end
 
   def fetch_most_popular_content
-    MostPopularContent.fetch(content_id: content_id, filter_by_document_supertype: GUIDANCE)
+    MostPopularContent.fetch(content_id: content_id, filter_content_purpose_supergroup: 'guidance_and_regulation')
   end
 end
