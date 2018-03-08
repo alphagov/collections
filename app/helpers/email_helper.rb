@@ -1,8 +1,4 @@
 module EmailHelper
-  def render_whitehall_email_links?(presented_taxon)
-    presented_taxon.world_related? && presented_taxon.renders_as_accordion?
-  end
-
   def whitehall_atom_url
     equivalent_whitehall_url + ".atom"
   end

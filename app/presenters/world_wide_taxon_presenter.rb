@@ -1,5 +1,4 @@
-class TaxonPresenter
-  GRID = :grid
+class WorldWideTaxonPresenter
   ACCORDION = :accordion
   LEAF = :leaf
 
@@ -10,7 +9,6 @@ class TaxonPresenter
     :description,
     :base_path,
     :tagged_content,
-    :grandchildren?,
     :child_taxons,
     :live_taxon?,
     :most_popular_content,
@@ -23,8 +21,6 @@ class TaxonPresenter
   end
 
   def rendering_type
-    return GRID if taxon.grandchildren?
-
     taxon.children? ? ACCORDION : LEAF
   end
 
@@ -32,33 +28,25 @@ class TaxonPresenter
     rendering_type == ACCORDION
   end
 
-  def renders_as_leaf?
-    rendering_type == LEAF
-  end
-
-  def renders_as_grid?
-    rendering_type == GRID
-  end
+  GENERAL_INFORMATION_TITLE = 'General information and guidance'.freeze
 
   def accordion_content
     return [] unless renders_as_accordion?
-    accordion_items = taxon.child_taxons.map { |taxon| TaxonPresenter.new(taxon) }
+    accordion_items = ordered_child_taxons.map { |taxon| WorldWideTaxonPresenter.new(taxon) }
 
-    general_information_title = 'General information and guidance'
-
-    if tagged_content.count > 0
-      general_information = Taxon.new(
+    if tagged_content.any?
+      general_information = WorldWideTaxon.new(
         ContentItem.new(
           'content_id' => taxon.content_id,
-          'title' => general_information_title,
-          'base_path' => general_information_title.downcase.tr(' ', '-'),
+          'title' => GENERAL_INFORMATION_TITLE,
+          'base_path' => GENERAL_INFORMATION_TITLE.downcase.tr(' ', '-'),
           'description' => ''
         )
       )
       general_information.can_subscribe = false
 
       accordion_items.unshift(
-        TaxonPresenter.new(general_information)
+        WorldWideTaxonPresenter.new(general_information)
       )
     end
 
@@ -111,5 +99,11 @@ class TaxonPresenter
       track_options: { dimension28: tagged_content.size.to_s,
                        dimension29: tagged_content[index].title }
     }
+  end
+
+private
+
+  def ordered_child_taxons
+    WorldTaxonomySorter.call(taxon.child_taxons)
   end
 end

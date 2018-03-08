@@ -1,0 +1,23 @@
+<% if taxon_is_live?(presented_taxon) %>
+  <div class='subscriptions'>
+    <% if presented_taxon.renders_as_accordion? %>
+      <div class="feeds">
+        <%= link_to(whitehall_email_url, class:'email-alerts') do %>
+          Get email alerts for this topic
+          <span class="visuallyhidden"><%= presented_taxon.title %></span>
+        <% end %>
+
+        <%= link_to "Feed", whitehall_atom_url, class: "feed js-feed" %>
+        <div class="feed-panel js-feed-panel">
+          <h3>Copy and paste this URL in to your feed reader</h3>
+          <input value="<%= whitehall_atom_url %>">
+        </div>
+      </div>
+    <% else %>
+      <a href="/email-signup/?topic=<%= presented_taxon.base_path %>" class='email-alerts'>
+        Get email alerts for this topic
+        <span class='visuallyhidden'><%= presented_taxon.title %></span>
+      </a>
+    <% end %>
+  </div>
+<% end %>

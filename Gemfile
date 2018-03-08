@@ -17,7 +17,7 @@ gem 'uglifier', '~> 4.1.6'
 group :test do
   gem 'capybara'
   gem 'cucumber-rails', require: false
-  gem 'govuk_schemas', '~> 2.3.0'
+  gem 'govuk_schemas', '~> 3.1.0'
   gem 'govuk-content-schema-test-helpers'
   gem 'minitest-spec-rails'
   gem 'mocha', require: false

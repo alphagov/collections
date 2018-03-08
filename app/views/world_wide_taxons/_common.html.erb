@@ -1,0 +1,35 @@
+<% content_for :title, presented_taxon.title %>
+<% content_for :meta_tags do %>
+  <% if !presented_taxon.live_taxon? %>
+    <% # prevent search engines from indexing this page %>
+    <meta name="robots" content="noindex, nofollow">
+  <% end %>
+  <meta name="description" content="<%= presented_taxon.description %>">
+  <meta name="govuk:navigation-page-type" content="<%= presented_taxon.rendering_type %>" />
+<% end %>
+
+<%= render partial: 'page_header', locals: { presented_taxon: presented_taxon } %>
+
+<% content_for :breadcrumbs do %>
+  <%=
+    render(
+      partial: 'govuk_component/beta_label',
+      locals: {
+        message: <<-MESSAGE
+        This is a test version of the layout of this page.
+        <a id=taxonomy-survey
+           href='https://www.smartsurvey.co.uk/s/betasurvey2017?c=#{current_path_without_query_string}'
+           target='_blank'
+           rel='noopener noreferrer'>
+          Take the survey to help us improve it
+        </a>
+        MESSAGE
+      }
+    )
+  %>
+  <%= render partial: 'govuk_component/breadcrumbs',
+    locals: {
+      breadcrumbs: @navigation_helpers.taxon_breadcrumbs[:breadcrumbs],
+      collapse_on_mobile: true
+    } %>
+<% end %>

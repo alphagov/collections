@@ -1,0 +1,13 @@
+<% content_for :page_class, "taxon-page taxon-page--leaf" %>
+<%=
+  render(
+    partial: 'common',
+    locals: {
+      presented_taxon: presented_taxon
+    }
+  )
+%>
+
+<%= render partial: 'tagged_content_list', locals: {
+  presented_taxon: presented_taxon,
+} %>

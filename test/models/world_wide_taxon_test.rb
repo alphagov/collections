@@ -1,12 +1,12 @@
 require 'test_helper'
 
-describe Taxon do
+describe WorldWideTaxon do
   include TaxonHelpers
 
   context "without associate_taxons" do
     setup do
       content_item = ContentItem.new(student_finance_taxon)
-      @taxon = Taxon.new(content_item)
+      @taxon = WorldWideTaxon.new(content_item)
     end
 
     it 'has a title' do
@@ -34,7 +34,7 @@ describe Taxon do
       student_finance_taxon_without_phase.delete('phase')
 
       content_item = ContentItem.new(student_finance_taxon_without_phase)
-      @taxon_without_phase = Taxon.new(content_item)
+      @taxon_without_phase = WorldWideTaxon.new(content_item)
 
       assert_raises(RuntimeError) { @taxon_without_phase.phase }
     end
@@ -47,54 +47,34 @@ describe Taxon do
       assert_equal @taxon.child_taxons.length, 2
 
       @taxon.child_taxons.each do |child|
-        assert_instance_of Taxon, child
         assert_includes ['Student sponsorship', 'Student loans'], child.title
       end
     end
 
-    it 'has grandchildren' do
-      taxon = stub(children?: true)
-      Taxon.stubs(:find).returns(taxon)
-
-      assert @taxon.grandchildren?
-    end
-
-    it 'does not have grandchildren' do
-      taxon = stub(children?: false)
-      Taxon.stubs(:find).returns(taxon)
-
-      assert not(@taxon.grandchildren?)
-    end
-
     it 'knows about its most popular content items' do
-      results = [:result_1, :result_2]
+      results = %i[result_1 result_2]
       MostPopularContent.stubs(:fetch).returns(results)
 
       assert_equal(results, @taxon.most_popular_content)
     end
+  end
 
-    it 'knows about its most popular content items' do
-      results = [:result_1, :result_2]
-      MostPopularContent.stubs(:fetch).returns(results)
-
-      assert_equal(results, @taxon.most_popular_content)
+  context "with associated_taxons" do
+    setup do
+      content_item = ContentItem.new(travelling_to_the_usa_taxon)
+      @taxon = WorldWideTaxon.new(content_item)
     end
 
-    it "requests popular content of document supertype 'guidance' by default" do
-      results = [:result_1, :result_2]
-      MostPopularContent.stubs(:fetch)
-        .with(content_id: @taxon.content_id, filter_by_document_supertype: 'guidance')
-        .returns(results)
+    it "retrieves content tagged to itself and associated_taxons" do
+      own_content_id = @taxon.content_id
+      associated_taxon_content_id = "36dd87da-4973-5490-ab00-72025b1da506"
 
-      assert_equal(results, @taxon.most_popular_content)
-    end
-
-    it 'requests for guidance document supertype by default' do
       TaggedContent.expects(:fetch)
-        .with([@taxon.content_id], filter_by_document_supertype: 'guidance', validate: true)
-        .returns(["guidance_content"])
+        .with([own_content_id, associated_taxon_content_id], filter_by_document_supertype: nil, validate: false)
+        .returns(["own content", "associated content"])
 
-      assert_equal ["guidance_content"], @taxon.tagged_content
+      assert_equal ["own content", "associated content"],
+        @taxon.tagged_content
     end
   end
 end
