@@ -21,6 +21,9 @@ class Taxon
     @tagged_content ||= fetch_tagged_content
   end
 
+  def services_content
+    @services_content ||= fetch_most_popular_content('services')
+  end
 
   def guidance_and_regulation_content
     @guidance_and_regulation_content ||= fetch_most_popular_content('guidance_and_regulation')
