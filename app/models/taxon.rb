@@ -21,6 +21,11 @@ class Taxon
     @tagged_content ||= fetch_tagged_content
   end
 
+
+  def guidance_and_regulation_content
+    @guidance_and_regulation_content ||= fetch_most_popular_content('guidance_and_regulation')
+  end
+
   def most_popular_content
     @most_popular_content ||= fetch_most_popular_content
   end
@@ -89,7 +94,7 @@ private
     )
   end
 
-  def fetch_most_popular_content
-    MostPopularContent.fetch(content_id: content_id, filter_content_purpose_supergroup: 'guidance_and_regulation')
+  def fetch_most_popular_content(content_purpose_supergroup = 'guidance_and_regulation')
+    MostPopularContent.fetch(content_id: content_id, filter_content_purpose_supergroup: content_purpose_supergroup)
   end
 end

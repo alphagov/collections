@@ -73,13 +73,15 @@ describe Taxon do
       assert_equal(results, @taxon.most_popular_content)
     end
 
-    it "requests popular content of document supertype 'guidance' by default" do
+    it "requests guidance_and_regulation content" do
       results = [:result_1, :result_2]
+
       MostPopularContent.stubs(:fetch)
         .with(content_id: @taxon.content_id, filter_content_purpose_supergroup: 'guidance_and_regulation')
         .returns(results)
 
-      assert_equal(results, @taxon.most_popular_content)
+      assert_equal(results, @taxon.guidance_and_regulation_content)
+    end
     end
 
     it 'requests for guidance document supertype by default' do
