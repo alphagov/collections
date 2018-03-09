@@ -50,13 +50,6 @@ describe WorldWideTaxon do
         assert_includes ['Student sponsorship', 'Student loans'], child.title
       end
     end
-
-    it 'knows about its most popular content items' do
-      results = %i[result_1 result_2]
-      MostPopularContent.stubs(:fetch).returns(results)
-
-      assert_equal(results, @taxon.most_popular_content)
-    end
   end
 
   context "with associated_taxons" do
