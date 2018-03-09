@@ -13,6 +13,8 @@ class TaxonPresenter
     :grandchildren?,
     :child_taxons,
     :live_taxon?,
+    :guidance_and_regulation_content,
+    :services_content,
     :most_popular_content,
     :can_subscribe?,
     to: :taxon

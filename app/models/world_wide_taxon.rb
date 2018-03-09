@@ -80,7 +80,7 @@ private
   def fetch_most_popular_content
     MostPopularContent.fetch(
       content_id: content_id,
-      filter_by_document_supertype: nil,
+      filter_content_purpose_supergroup: nil,
     )
   end
 end
