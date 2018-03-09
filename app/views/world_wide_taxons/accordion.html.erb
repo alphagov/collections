@@ -8,12 +8,6 @@
   )
 %>
 
-<div class="grid-row">
-  <div class="column-two-thirds">
-    <%= render partial: 'high-volume', locals: { presented_taxon: presented_taxon } %>
-  </div>
-</div>
-
 <% if presented_taxon.accordion_content.present? %>
   <div class="grid-row child-topic-contents">
     <div class="column-two-thirds">
