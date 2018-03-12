@@ -14,7 +14,6 @@ class MostPopularContent
   def fetch
     search_response
       .documents
-      .sort_by(&:title)
   end
 
 private

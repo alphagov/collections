@@ -14,7 +14,7 @@ describe MostPopularContent do
   end
 
   describe '#fetch' do
-    it 'returns the results from search, sorted by title' do
+    it 'returns the results from search' do
       search_results = {
         'results' => [
           { 'title' => 'Doc 1' },
@@ -26,8 +26,6 @@ describe MostPopularContent do
 
       results = most_popular_content.fetch
       assert_equal(results.count, 2)
-      assert_equal(results.first.title, 'A Doc 2')
-      assert_equal(results.last.title, 'Doc 1')
     end
 
     it 'starts from the first page' do
