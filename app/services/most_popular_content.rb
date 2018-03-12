@@ -24,7 +24,7 @@ private
       start: 0,
       count: number_of_links,
       fields: %w(title link),
-      filter_part_of_taxonomy_tree: content_id,
+      filter_taxons: Array(content_id),
       order: '-popularity',
     }
     params[:filter_content_purpose_supergroup] = filter_content_purpose_supergroup if filter_content_purpose_supergroup.present?
