@@ -1,11 +1,22 @@
-<div class="grid-row">
-  <div class="column-two-thirds">
+<%= render "govuk_publishing_components/components/inverse_header", { full_width: true } do %>
+  <div class="full-page-width-wrapper">
+    <%= render partial: 'govuk_component/breadcrumbs',
+      locals: {
+        breadcrumbs: @navigation_helpers.taxon_breadcrumbs[:breadcrumbs],
+        collapse_on_mobile: true,
+        inverse: true
+      }
+    %>
+
     <%= render "govuk_component/title", {
       title: presented_taxon.title,
-      average_title_length: 'long'
+      average_title_length: 'long',
+      inverse: true
     } %>
 
-    <%= render 'govuk_component/lead_paragraph', text: presented_taxon.description %>
-    <%= render partial: 'email_alerts', locals: { presented_taxon: presented_taxon } %>
+    <%= render 'govuk_component/lead_paragraph', {
+        text: presented_taxon.description,
+        inverse: true
+    } %>
   </div>
-</div>
+<% end %>
