@@ -41,7 +41,14 @@ describe MostPopularContent do
     end
 
     it 'requests a limited number of fields' do
-      assert_includes_params(fields: %w(title link)) do
+      fields = %w(title
+                  link
+                  description
+                  content_store_document_type
+                  public_timestamp
+                  organisations)
+
+      assert_includes_params(fields: fields) do
         most_popular_content.fetch
       end
     end
