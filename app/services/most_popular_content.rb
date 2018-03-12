@@ -19,10 +19,16 @@ class MostPopularContent
 private
 
   def search_response
+    search_fields = %w(title
+                       link
+                       description
+                       content_store_document_type
+                       public_timestamp
+                       organisations)
     params = {
       start: 0,
       count: number_of_links,
-      fields: %w(title link),
+      fields: search_fields,
       filter_taxons: Array(content_id),
       order: '-popularity',
     }
