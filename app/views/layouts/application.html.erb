@@ -16,12 +16,14 @@
   <%= stylesheet_link_tag "print.css", :media => "print", integrity: true, crossorigin: 'anonymous' %>
 </head>
 
-<body>
+<body <% if content_for(:is_taxon_page) %>class="full-width"<% end %>>
   <div class="wrapper" id="wrapper">
-    <% if content_for?(:breadcrumbs) %>
-      <%= yield :breadcrumbs %>
-    <% else %>
-      <%= render 'breadcrumbs', navigation_helpers: @navigation_helpers %>
+    <% unless content_for(:is_taxon_page) %>
+      <% if content_for?(:breadcrumbs) %>
+        <%= yield :breadcrumbs %>
+      <% else %>
+        <%= render 'breadcrumbs', navigation_helpers: @navigation_helpers %>
+      <% end %>
     <% end %>
 
     <main id="content" role="main" class="content <%= yield :page_class %>">
