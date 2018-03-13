@@ -23,8 +23,8 @@ class TaxonPresenter
     @taxon = taxon
   end
 
-  def document_list_grouping
-    guidance_and_regulation_content.each_with_index.map do |link, link_index|
+  def guidance_and_regulation_list
+    guidance_and_regulation_content.each.map do |link|
       {
         link: {
           text: link.title,
@@ -32,10 +32,14 @@ class TaxonPresenter
         },
         metadata: {
           public_updated_at: link.public_updated_at,
-          document_type: link.content_store_document_type
+          document_type: link.content_store_document_type.humanize
         },
       }
     end
+  end
+
+  def show_guidance_section?
+    guidance_and_regulation_content.count.positive?
   end
 
 
