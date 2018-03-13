@@ -5,11 +5,22 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
 
   it 'renders a taxon page for a live taxon' do
     given_there_is_a_taxon_with_children
+    and_the_taxon_is_live
+    and_the_taxon_has_tagged_content
     when_i_visit_that_taxon
     then_i_can_see_the_title_section
     and_i_can_see_the_email_signup_link
     and_i_can_see_the_guidance_and_regulation_section
     and_i_can_see_the_sub_topics_grid
+  end
+
+  it 'renders a taxon page for a draft taxon' do
+    given_there_is_a_taxon_with_children
+    and_the_taxon_is_not_live
+    and_the_taxon_has_tagged_content
+    when_i_visit_that_taxon
+    then_page_has_meta_robots
+    and_i_cannot_see_an_email_signup_link
   end
 
 private
@@ -40,9 +51,19 @@ private
     @content_item = content_item_without_children(base_path, content_id)
 
     @content_item["links"]["child_taxons"] = [child_one, child_two]
+  end
 
+  def and_the_taxon_is_live
+    @content_item["phase"] = "live"
     content_store_has_item(base_path, @content_item)
+  end
 
+  def and_the_taxon_is_not_live
+    @content_item["phase"] = "beta"
+    content_store_has_item(base_path, @content_item)
+  end
+
+  def and_the_taxon_has_tagged_content
     # We still need to stub tagged content because it is used by the sub-topic grid
     stub_content_for_taxon(content_id, tagged_content)
     stub_most_popular_content_for_taxon(content_id, tagged_content, filter_content_purpose_supergroup: 'guidance_and_regulation')
@@ -63,6 +84,12 @@ private
       href: "/email-signup/?topic=#{current_path}"
     )
   end
+
+  def and_i_cannot_see_an_email_signup_link
+    refute page.has_link?(
+      'Get email alerts for this topic',
+      href: "/email-signup/?topic=#{current_path}"
+    )
   end
 
   def and_i_can_see_the_guidance_and_regulation_section
@@ -81,6 +108,16 @@ private
     child_taxons.each do |child_taxon|
       assert page.has_link?(child_taxon['title'], href: child_taxon['base_path'])
     end
+  end
+
+  def then_page_has_meta_robots
+    content = page.find('meta[name="robots"]', visible: false)['content']
+
+    assert_equal(
+      "noindex, nofollow",
+      content,
+      "The content of the robots meta tag should be 'noindex, nofollow'"
+    )
   end
 
   def base_path
