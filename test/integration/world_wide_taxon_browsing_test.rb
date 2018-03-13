@@ -16,7 +16,6 @@ class WorldWideTaxonBrowsingTest < ActionDispatch::IntegrationTest
     when_i_visit_that_taxon
     then_i_see_the_taxon_page
     and_i_can_see_the_email_signup_link
-    and_i_can_see_the_most_popular_content
     and_i_can_see_links_to_the_child_taxons_in_an_accordion
     and_the_page_is_tracked_as_an_accordion
   end
@@ -58,7 +57,6 @@ class WorldWideTaxonBrowsingTest < ActionDispatch::IntegrationTest
     content_store_has_item(base_path, @content_item)
 
     stub_rummager_tagged_content_request(content_id)
-    stub_rummager_most_popular_content_request(content_id, popular_content)
     stub_rummager_tagged_content_request(child_one_content_id)
     stub_rummager_tagged_content_request(child_two_content_id)
   end
@@ -74,20 +72,6 @@ class WorldWideTaxonBrowsingTest < ActionDispatch::IntegrationTest
 
   def and_i_can_see_the_content_tagged_to_the_taxon
     tagged_content.each do |content|
-      assert page.has_link?(content["title"])
-    end
-  end
-
-  def and_i_can_see_the_most_popular_content
-    blue_box = page.find('.high-volume')
-
-    assert_equal(
-      5,
-      blue_box.all('a').count,
-      'There should be 5 links in the blue box'
-    )
-
-    popular_content.each do |content|
       assert page.has_link?(content["title"])
     end
   end
@@ -122,11 +106,6 @@ private
       to_return(body: { results: search_result }.to_json)
   end
 
-  def stub_rummager_most_popular_content_request(content_id, search_result = [])
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=5&fields%5B%5D=link&fields%5B%5D=title&filter_part_of_taxonomy_tree=#{content_id}&order=-popularity&start=0").
-    to_return(body: { results: search_result }.to_json)
-  end
-
   def content_item_without_children(base_path, content_id)
     GovukSchemas::RandomExample.for_schema(frontend_schema: "taxon") do |item|
       item.merge(
@@ -145,16 +124,6 @@ private
 
   def content_id
     "36dd87da-4973-5490-ab00-72025b1da600"
-  end
-
-  def popular_content
-    [
-      { title: "Hey hello" },
-      { title: "How are you" },
-      { title: "Number three" },
-      { title: "Number four" },
-      { title: "Number five" },
-    ]
   end
 
   def tagged_content

@@ -14,7 +14,7 @@ describe MostPopularContent do
   end
 
   describe '#fetch' do
-    it 'returns the results from search, sorted by title' do
+    it 'returns the results from search' do
       search_results = {
         'results' => [
           { 'title' => 'Doc 1' },
@@ -26,8 +26,6 @@ describe MostPopularContent do
 
       results = most_popular_content.fetch
       assert_equal(results.count, 2)
-      assert_equal(results.first.title, 'A Doc 2')
-      assert_equal(results.last.title, 'Doc 1')
     end
 
     it 'starts from the first page' do
@@ -43,7 +41,14 @@ describe MostPopularContent do
     end
 
     it 'requests a limited number of fields' do
-      assert_includes_params(fields: %w(title link)) do
+      fields = %w(title
+                  link
+                  description
+                  content_store_document_type
+                  public_timestamp
+                  organisations)
+
+      assert_includes_params(fields: fields) do
         most_popular_content.fetch
       end
     end
@@ -54,8 +59,8 @@ describe MostPopularContent do
       end
     end
 
-    it 'scopes the results to the taxonomy tree under the given taxon' do
-      assert_includes_params(filter_part_of_taxonomy_tree: taxon_content_id) do
+    it 'scopes the results to the current taxon' do
+      assert_includes_params(filter_taxons: Array(taxon_content_id)) do
         most_popular_content.fetch
       end
     end

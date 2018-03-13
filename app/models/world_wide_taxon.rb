@@ -21,10 +21,6 @@ class WorldWideTaxon
     @tagged_content ||= fetch_tagged_content
   end
 
-  def most_popular_content
-    @most_popular_content ||= fetch_most_popular_content
-  end
-
   def self.find(base_path)
     content_item = ContentItem.find!(base_path)
     new(content_item)
@@ -74,13 +70,6 @@ private
       taxon_content_ids,
       filter_by_document_supertype: nil,
       validate: false
-    )
-  end
-
-  def fetch_most_popular_content
-    MostPopularContent.fetch(
-      content_id: content_id,
-      filter_content_purpose_supergroup: nil,
     )
   end
 end

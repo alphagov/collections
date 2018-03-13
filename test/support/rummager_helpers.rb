@@ -19,11 +19,18 @@ module RummagerHelpers
   end
 
   def stub_most_popular_content_for_taxon(content_id, results, filter_content_purpose_supergroup: 'guidance_and_regulation')
+    fields = %w(title
+                link
+                description
+                content_store_document_type
+                public_timestamp
+                organisations)
+
     params = {
       start: 0,
       count: 5,
-      fields: %w(title link),
-      filter_part_of_taxonomy_tree: content_id,
+      fields: fields,
+      filter_taxons: Array(content_id),
       order: '-popularity',
     }
     params[:filter_content_purpose_supergroup] = filter_content_purpose_supergroup if filter_content_purpose_supergroup.present?

@@ -14,17 +14,22 @@ class MostPopularContent
   def fetch
     search_response
       .documents
-      .sort_by(&:title)
   end
 
 private
 
   def search_response
+    search_fields = %w(title
+                       link
+                       description
+                       content_store_document_type
+                       public_timestamp
+                       organisations)
     params = {
       start: 0,
       count: number_of_links,
-      fields: %w(title link),
-      filter_part_of_taxonomy_tree: content_id,
+      fields: search_fields,
+      filter_taxons: Array(content_id),
       order: '-popularity',
     }
     params[:filter_content_purpose_supergroup] = filter_content_purpose_supergroup if filter_content_purpose_supergroup.present?
