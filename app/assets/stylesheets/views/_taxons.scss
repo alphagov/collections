@@ -1,3 +1,18 @@
+.taxon-page__section-divider {
+  margin-left: $gutter-half;
+  margin-bottom: $gutter-two-thirds;
+  border: 1px solid $govuk-blue;
+}
+
+.taxon-page__section-heading {
+  @include bold-27;
+}
+
+.taxon-page__section-description {
+  @include core-19;
+  margin-top: $gutter-one-third;
+}
+
 // this is a stop-gap solution, using this mixin introduces
 // some duplication but it is necessary until this area has
 // been fully converted to use components
@@ -28,6 +43,7 @@
 
 .taxon-page--grid {
   .child-topics-list {
+    margin-top: $gutter * 2;
     @include taxon-element-styles;
 
     ol {

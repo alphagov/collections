@@ -9,9 +9,14 @@
 %>
 
 <% if presented_taxon.show_guidance_section? %>
-  <h2>Guidance and Regulation</h2>
-  <p>Potential descriptive text for the guidance and regulation section, if needed</p>
-  <%= render 'govuk_publishing_components/components/document_list', items: presented_taxon.guidance_and_regulation_list %>
+  <div class="grid-row">
+    <hr class="taxon-page__section-divider" />
+    <div class="column-two-thirds">
+      <h2 class="taxon-page__section-heading">Guidance and Regulation</h2>
+      <p class="taxon-page__section-description">Potential descriptive text for the guidance and regulation section, if needed</p>
+      <%= render 'govuk_publishing_components/components/document_list', items: presented_taxon.guidance_and_regulation_list %>
+    </div>
+  </div>
 <% end %>
 
 
