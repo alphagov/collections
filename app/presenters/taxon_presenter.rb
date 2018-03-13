@@ -19,10 +19,25 @@ class TaxonPresenter
     :can_subscribe?,
     to: :taxon
   )
-
   def initialize(taxon)
     @taxon = taxon
   end
+
+  def document_list_grouping
+    guidance_and_regulation_content.each_with_index.map do |link, link_index|
+      {
+        link: {
+          text: link.title,
+          path: link.base_path
+        },
+        metadata: {
+          public_updated_at: link.public_updated_at,
+          document_type: link.content_store_document_type
+        },
+      }
+    end
+  end
+
 
   def rendering_type
     return GRID if taxon.grandchildren?

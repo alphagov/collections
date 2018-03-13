@@ -14,6 +14,8 @@
   </div>
 </div>
 
+<%= render 'govuk_publishing_components/components/document_list', items: presented_taxon.document_list_grouping %>
+
 <% if presented_taxon.accordion_content.present? %>
   <div class="grid-row child-topic-contents">
     <div class="column-two-thirds">
