@@ -8,15 +8,19 @@
       }
     %>
 
-    <%= render "govuk_component/title", {
-      title: presented_taxon.title,
-      average_title_length: 'long',
-      inverse: true
-    } %>
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <%= render "govuk_component/title", {
+          title: presented_taxon.title,
+          average_title_length: 'long',
+          inverse: true
+        } %>
 
-    <%= render 'govuk_component/lead_paragraph', {
-        text: presented_taxon.description,
-        inverse: true
-    } %>
+        <%= render 'govuk_component/lead_paragraph', {
+            text: presented_taxon.description,
+            inverse: true
+        } %>
+      </div>
+    </div>
   </div>
 <% end %>
