@@ -24,6 +24,25 @@ class TaxonPresenter
     @taxon = taxon
   end
 
+  def guidance_and_regulation_list
+    guidance_and_regulation_content.each.map do |link|
+      {
+        link: {
+          text: link.title,
+          path: link.base_path
+        },
+        metadata: {
+          public_updated_at: link.public_updated_at,
+          document_type: link.content_store_document_type.humanize
+        },
+      }
+    end
+  end
+
+  def guidance_and_regulation_section_title
+    'guidance_and_regulation'.humanize
+  end
+
   def rendering_type
     return GRID if taxon.grandchildren?
 
