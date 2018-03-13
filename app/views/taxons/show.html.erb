@@ -8,23 +8,36 @@
   )
 %>
 
-<h2><%= presented_taxon.guidance_and_regulation_section_title %></h2>
-<%= render 'govuk_publishing_components/components/document_list', items: presented_taxon.guidance_and_regulation_list %>
+<div class="full-page-width-wrapper">
+  <% if presented_taxon.show_guidance_section? %>
+  <div class="taxon-page__section-group">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <h2 class="taxon-page__section-heading"><%= presented_taxon.guidance_and_regulation_section_title %></h2>
+        <%= render 'govuk_publishing_components/components/document_list',
+              items: presented_taxon.guidance_and_regulation_list,
+              margin_top: true
+         %>
+      </div>
+    </div>
+  </div>
+  <% end %>
 
 
-<nav role="navigation" class="child-topics-list">
-  <ol>
-    <% presented_taxon.child_taxons.each_with_index do |child_taxon, index| %>
-      <li class="<%= 'leftmost-row-cell-clear-float' if index % 3 == 0 %>">
-        <h2>
-          <%= link_to(
-            child_taxon.title,
-            child_taxon.base_path,
-            data: presented_taxon.options_for_child_taxon(index: index)
-          )%>
-        </h2>
-        <p><%= child_taxon.description %></p>
-      </li>
-    <% end %>
-  </ol>
-</nav>
+  <nav role="navigation" class="child-topics-list">
+    <ol>
+      <% presented_taxon.child_taxons.each_with_index do |child_taxon, index| %>
+        <li class="<%= 'leftmost-row-cell-clear-float' if index % 3 == 0 %>">
+          <h2>
+            <%= link_to(
+              child_taxon.title,
+              child_taxon.base_path,
+              data: presented_taxon.options_for_child_taxon(index: index)
+            )%>
+          </h2>
+          <p><%= child_taxon.description %></p>
+        </li>
+      <% end %>
+    </ol>
+  </nav>
+</div>
