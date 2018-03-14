@@ -43,6 +43,11 @@ class TaxonPresenter
     'guidance_and_regulation'.humanize
   end
 
+  def show_guidance_section?
+    guidance_and_regulation_content.count.positive?
+  end
+
+
   def rendering_type
     return GRID if taxon.grandchildren?
 
