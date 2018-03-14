@@ -52,27 +52,6 @@ describe Taxon do
       end
     end
 
-    it 'has grandchildren' do
-      taxon = stub(children?: true)
-      Taxon.stubs(:find).returns(taxon)
-
-      assert @taxon.grandchildren?
-    end
-
-    it 'does not have grandchildren' do
-      taxon = stub(children?: false)
-      Taxon.stubs(:find).returns(taxon)
-
-      assert not(@taxon.grandchildren?)
-    end
-
-    it 'knows about its most popular content items' do
-      results = [:result_1, :result_2]
-      MostPopularContent.stubs(:fetch).returns(results)
-
-      assert_equal(results, @taxon.most_popular_content)
-    end
-
     it "requests guidance_and_regulation content" do
       results = [:result_1, :result_2]
 

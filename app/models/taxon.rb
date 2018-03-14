@@ -1,6 +1,5 @@
 class Taxon
   attr_reader :content_item
-  attr_accessor :can_subscribe, :tagged_content
 
   delegate(
     :content_id,
@@ -29,10 +28,6 @@ class Taxon
     @guidance_and_regulation_content ||= fetch_most_popular_content('guidance_and_regulation')
   end
 
-  def most_popular_content
-    @most_popular_content ||= fetch_most_popular_content
-  end
-
   def self.find(base_path)
     content_item = ContentItem.find!(base_path)
     new(content_item)
@@ -46,24 +41,8 @@ class Taxon
     end
   end
 
-  def parent?
-    linked_items('parent_taxons').present?
-  end
-
   def children?
     linked_items('child_taxons').present?
-  end
-
-  def grandchildren?
-    return false unless children?
-
-    # The Publishing API doesn't expand child taxons, which means
-    # we can't use the child_taxons method for each of the child
-    # taxons of this taxon. We have to do an API call to know if
-    # the children also have children.
-    child_taxons.any? do |child_taxon|
-      Taxon.find(child_taxon.base_path).children?
-    end
   end
 
   def associated_taxons
@@ -74,12 +53,6 @@ class Taxon
 
   def merge(to_merge)
     Taxon.new(content_item.merge(to_merge))
-  end
-
-  def can_subscribe?
-    return @can_subscribe if defined?(@can_subscribe)
-
-    true
   end
 
   def live_taxon?
