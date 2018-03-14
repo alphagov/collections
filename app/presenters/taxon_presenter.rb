@@ -40,6 +40,10 @@ class TaxonPresenter
     guidance_and_regulation_content.count.positive?
   end
 
+  def show_subtopic_grid?
+    child_taxons.count.positive?
+  end
+
   def options_for_child_taxon(index:)
     {
       module: 'track-click',

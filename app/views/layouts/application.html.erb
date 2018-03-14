@@ -29,7 +29,14 @@
     <main id="content" role="main" class="content <%= yield :page_class %>">
       <%= yield %>
     </main>
-    <%= render 'govuk_publishing_components/components/feedback' %>
+
+    <% if content_for(:is_taxon_with_subtopics) %>
+      <div class="taxon-feedback-wrapper">
+        <%= render 'govuk_publishing_components/components/feedback', margin_top: 0 %>
+      </div>
+    <% else %>
+      <%= render 'govuk_publishing_components/components/feedback' %>
+    <% end %>
   </div>
 </body>
 </html>
