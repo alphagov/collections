@@ -21,6 +21,14 @@ class Taxon
     @tagged_content ||= fetch_tagged_content
   end
 
+  def services_content
+    @services_content ||= fetch_most_popular_content('services')
+  end
+
+  def guidance_and_regulation_content
+    @guidance_and_regulation_content ||= fetch_most_popular_content('guidance_and_regulation')
+  end
+
   def most_popular_content
     @most_popular_content ||= fetch_most_popular_content
   end
@@ -80,18 +88,16 @@ class Taxon
 
 private
 
-  GUIDANCE = 'guidance'.freeze
-
   def fetch_tagged_content
     taxon_content_ids = [content_id] + associated_taxons.map(&:content_id)
     TaggedContent.fetch(
       taxon_content_ids,
-      filter_by_document_supertype: GUIDANCE,
+      filter_by_document_supertype: 'guidance',
       validate: true
     )
   end
 
-  def fetch_most_popular_content
-    MostPopularContent.fetch(content_id: content_id, filter_by_document_supertype: GUIDANCE)
+  def fetch_most_popular_content(content_purpose_supergroup = 'guidance_and_regulation')
+    MostPopularContent.fetch(content_id: content_id, filter_content_purpose_supergroup: content_purpose_supergroup)
   end
 end

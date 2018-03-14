@@ -19,7 +19,7 @@ class WorldLocationTaxonTest < ActionDispatch::IntegrationTest
     @taxon = WorldWideTaxon.find(@base_path)
     stub_content_for_taxon(@taxon.content_id, search_results) # For the "general information" taxon
     stub_content_for_taxon(@taxon.content_id, search_results, filter_navigation_document_supertype: nil)
-    stub_most_popular_content_for_taxon(@taxon.content_id, search_results, filter_navigation_document_supertype: nil)
+    stub_most_popular_content_for_taxon(@taxon.content_id, search_results, filter_content_purpose_supergroup: nil)
 
     @child_taxon = WorldWideTaxon.find(@child_taxon_base_path)
     stub_content_for_taxon(@child_taxon.content_id, search_results, filter_navigation_document_supertype: nil)
