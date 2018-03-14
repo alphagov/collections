@@ -216,6 +216,14 @@ describe TaxonPresenter do
   end
 
   describe 'guidance_and_regulation_section' do
+    it 'checks whether guidance section should be shown' do
+      taxon = mock
+      taxon.stubs(:guidance_and_regulation_content).returns([])
+      taxon_presenter = TaxonPresenter.new(taxon)
+
+      refute taxon_presenter.show_guidance_section?
+    end
+
     it 'formats guidance and regulation content for document list' do
       guidance_content = [
         Document.new(
