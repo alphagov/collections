@@ -41,49 +41,44 @@
   }
 }
 
-.taxon-page--grid {
-  .child-topics-list {
-    margin-top: $gutter * 2;
-    @include taxon-element-styles;
+.taxon-page__grid {
+  margin-top: $gutter * 2;
+  @include taxon-element-styles;
 
-    ol {
-      list-style-type: none;
-      padding-bottom: $gutter-half;
-      @extend %grid-row;
+  ol {
+    list-style-type: none;
+    padding-bottom: $gutter-half;
+    @extend %grid-row;
 
-      li {
-        @include grid-column(1 / 3);
-        padding-bottom: $gutter;
+    li {
+      @include grid-column(1 / 3);
+      padding-bottom: $gutter;
 
-        @include media (tablet) {
-          padding-bottom: $gutter * 1.5;
-          min-height: (5 * $gutter);
-        }
+      @include media (tablet) {
+        padding-bottom: $gutter * 1.5;
+        min-height: (5 * $gutter);
       }
     }
+  }
 
-    p {
-      margin: 5px 0 20px 0;
+  p {
+    margin: 5px 0 20px 0;
 
-      &:last-child {
-        margin-bottom: 0;
-      }
+    &:last-child {
+      margin-bottom: 0;
     }
+  }
 
-    .leftmost-row-cell-clear-float {
-      clear: left;
-    }
+  .leftmost-row-cell-clear-float {
+    clear: left;
   }
 }
 
-.taxon-page--leaf,
-.taxon-page--grid {
-  .topic-header {
-    @include taxon-element-styles;
-  }
+.world-taxon-page--leaf .topic-header {
+  @include taxon-element-styles;
 }
 
-.taxon-page--accordion {
+.world-taxon-page--accordion {
   .child-topic-contents {
     .topic-content {
       ol {
@@ -92,28 +87,6 @@
 
       li {
         margin-bottom: $gutter-one-third;
-      }
-    }
-  }
-
-  .high-volume {
-    @include taxon-element-styles;
-
-    color: $white;
-    background-color: $govuk-blue;
-    padding: $gutter;
-    margin-bottom: $gutter;
-
-    ol {
-      list-style-type: none;
-    }
-
-    a {
-      @include core-19;
-      color: $white;
-
-      &:focus {
-        color: $black; // fix accessibility issue with these white links
       }
     }
   }
