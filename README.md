@@ -35,15 +35,13 @@ Collections serves the GOV.UK navigation pages,
 - **Second level browse page**: [gov.uk/browse/benefits/entitlement](https://www.gov.uk/browse/benefits/entitlement)
 
 ### Taxonomy
+The taxonomy is surfaced on taxon pages, which group together tagged content for that level of the taxonomy into supergroups on the page, e.g: Guidance and Regulation for Funding and finance for students [gov.uk/education/funding-and-finance-for-students](https://www-origin.integration.publishing.service.gov.uk/education/funding-and-finance-for-students). Each taxon page also shows a grid of sub-topics at the next level of the taxonomy.
 
-- **Taxon with grandchildren**: a content item of type taxon that has
-  `child_taxons` links. Some or all of those child taxons also have
-  `child_taxons` links, which means we display a grid of child taxons -
-  [gov.uk/education](https://www-origin.integration.publishing.service.gov.uk/education)
+The world taxonomy is surfaced slightly differently:
 - **Taxon without grandchildren**: a content item of type taxon that has
   `child_taxons` links. None of those child taxons' links have `child_taxons`,
   in which case we display an accordion view:
-  [gov.uk/education/school-governance](https://www-origin.integration.publishing.service.gov.uk/education/school-governance)
+  [gov.uk/world/afghanistan](https://www-origin.integration.publishing.service.gov.uk/world/afghanistan)
 - **Taxon with associated taxons**: a content item of type taxon that has
   `associated_taxons` links. In this case the tagged content of the taxon will
   include content that is directly tagged to it and also content that has been
