@@ -1,4 +1,3 @@
-<% content_for :page_class, "taxon-page taxon-page--grid" %>
 <%=
   render(
     partial: 'common',
@@ -24,20 +23,19 @@
   <% end %>
 
 
-  <nav role="navigation" class="child-topics-list">
-    <ol>
-      <% presented_taxon.child_taxons.each_with_index do |child_taxon, index| %>
-        <li class="<%= 'leftmost-row-cell-clear-float' if index % 3 == 0 %>">
-          <h2>
-            <%= link_to(
-              child_taxon.title,
-              child_taxon.base_path,
-              data: presented_taxon.options_for_child_taxon(index: index)
-            )%>
-          </h2>
-          <p><%= child_taxon.description %></p>
-        </li>
-      <% end %>
-    </ol>
-  </nav>
-</div>
+<nav role="navigation" class="taxon-page__grid">
+  <ol>
+    <% presented_taxon.child_taxons.each_with_index do |child_taxon, index| %>
+      <li class="<%= 'leftmost-row-cell-clear-float' if index % 3 == 0 %>">
+        <h2>
+          <%= link_to(
+            child_taxon.title,
+            child_taxon.base_path,
+            data: presented_taxon.options_for_child_taxon(index: index)
+          )%>
+        </h2>
+        <p><%= child_taxon.description %></p>
+      </li>
+    <% end %>
+  </ol>
+</nav>
