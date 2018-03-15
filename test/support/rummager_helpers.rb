@@ -89,7 +89,8 @@ module RummagerHelpers
       "link" => "/#{slug}",
       "index" => "/",
       "_id" => "/#{slug}",
-      "document_type" => "edition"
+      "document_type" => "edition",
+      "content_store_document_type" => "guidance"
     }
   end
 

@@ -214,4 +214,45 @@ describe TaxonPresenter do
       end
     end
   end
+
+  describe 'guidance_and_regulation_section' do
+    it 'checks whether guidance section should be shown' do
+      taxon = mock
+      taxon.stubs(:guidance_and_regulation_content).returns([])
+      taxon_presenter = TaxonPresenter.new(taxon)
+
+      refute taxon_presenter.show_guidance_section?
+    end
+
+    it 'formats guidance and regulation content for document list' do
+      guidance_content = [
+        Document.new(
+          title: "16 to 19 funding: advanced maths premium",
+          description: "The advanced maths premium is funding for additional students",
+          public_updated_at: "2018-02-28T08:01:00.000+00:00",
+          base_path: "/guidance/16-to-19-funding-advanced-maths-premium",
+          content_store_document_type: "detailed_guide"
+        )
+      ]
+
+      expected = [
+        {
+          link: {
+            text: "16 to 19 funding: advanced maths premium",
+            path: "/guidance/16-to-19-funding-advanced-maths-premium"
+          },
+          metadata: {
+            public_updated_at: "2018-02-28T08:01:00.000+00:00",
+            document_type: "Detailed guide"
+          },
+        }
+      ]
+
+      taxon = mock
+      taxon.stubs(:guidance_and_regulation_content).returns(guidance_content)
+      taxon_presenter = TaxonPresenter.new(taxon)
+
+      assert_equal expected, taxon_presenter.guidance_and_regulation_list
+    end
+  end
 end
