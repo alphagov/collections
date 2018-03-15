@@ -101,7 +101,7 @@ private
   end
 
   def and_i_can_see_the_sub_topics_grid
-    assert page.has_selector?('nav.child-topics-list')
+    assert page.has_selector?('nav.taxon-page__grid')
 
     child_taxons = @content_item["links"]["child_taxons"]
 
