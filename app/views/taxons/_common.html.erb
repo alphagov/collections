@@ -11,6 +11,14 @@
 
 <%= render partial: 'page_header', locals: { presented_taxon: presented_taxon } %>
 
-<div class="full-page-width-wrapper">
-  <%= render partial: 'email_alerts', locals: { presented_taxon: presented_taxon } %>
-</div>
+<% if taxon_is_live?(presented_taxon) %>
+  <div class="taxon-page__email-link-wrapper">
+    <div class="full-page-width-wrapper">
+        <%= render "components/email-link", {
+          text: "Sign up for updates to this topic page",
+          href: "/email-signup/?topic=#{presented_taxon.base_path}"
+        } %>
+    </div>
+  </div>
+<% end %>
+
