@@ -80,14 +80,14 @@ private
 
   def and_i_can_see_the_email_signup_link
     assert page.has_link?(
-      'Get email alerts for this topic',
+      'Sign up for updates to this topic page',
       href: "/email-signup/?topic=#{current_path}"
     )
   end
 
   def and_i_cannot_see_an_email_signup_link
     refute page.has_link?(
-      'Get email alerts for this topic',
+      'Sign up for updates to this topic page',
       href: "/email-signup/?topic=#{current_path}"
     )
   end

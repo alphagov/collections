@@ -2,6 +2,14 @@
   @include bold-27;
 }
 
+.taxon-page__email-link-wrapper {
+  background-color: $grey-4;
+  margin-top: -$gutter;
+  margin-bottom: $gutter;
+  border-bottom: 1px solid $border-colour;
+  padding: $gutter;
+}
+
 .taxon-page__section-description {
   @include core-19;
   margin-top: $gutter-one-third;
