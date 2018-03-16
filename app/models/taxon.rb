@@ -20,12 +20,13 @@ class Taxon
     @tagged_content ||= fetch_tagged_content
   end
 
-  def services_content
-    @services_content ||= fetch_most_popular_content('services')
-  end
-
-  def guidance_and_regulation_content
-    @guidance_and_regulation_content ||= fetch_most_popular_content('guidance_and_regulation')
+  def section_content(supergroup)
+    case supergroup
+    when "guidance_and_regulation"
+      guidance_and_regulation_content
+    when "services"
+      services_content
+    end
   end
 
   def self.find(base_path)
@@ -72,5 +73,13 @@ private
 
   def fetch_most_popular_content(content_purpose_supergroup = 'guidance_and_regulation')
     MostPopularContent.fetch(content_id: content_id, filter_content_purpose_supergroup: content_purpose_supergroup)
+  end
+
+  def services_content
+    @services_content ||= fetch_most_popular_content('services')
+  end
+
+  def guidance_and_regulation_content
+    @guidance_and_regulation_content ||= fetch_most_popular_content('guidance_and_regulation')
   end
 end
