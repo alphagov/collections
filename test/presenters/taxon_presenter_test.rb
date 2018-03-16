@@ -115,4 +115,14 @@ describe TaxonPresenter do
       assert_equal expected, taxon_presenter.guidance_and_regulation_list
     end
   end
+
+  describe 'topic_grid_section' do
+    it 'checks whether topic grid section should be shown' do
+      taxon = mock
+      taxon.stubs(:child_taxons).returns([])
+      taxon_presenter = TaxonPresenter.new(taxon)
+
+      refute taxon_presenter.show_subtopic_grid?
+    end
+  end
 end

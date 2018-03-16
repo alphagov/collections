@@ -1,5 +1,13 @@
+.taxon-feedback-wrapper {
+  background-color: $grey-4;
+}
+
 .taxon-page__section-heading {
   @include bold-27;
+}
+
+.taxon-page__grid-heading {
+  margin-bottom: 15px;
 }
 
 .taxon-page__email-link-wrapper {
@@ -55,6 +63,8 @@
 }
 
 .taxon-page__grid {
+  background-color: $grey-4;
+  padding-top: $gutter;
   margin-top: $gutter * 2;
   @include taxon-element-styles;
 
