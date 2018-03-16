@@ -17,27 +17,43 @@ class TaxonPresenter
     @taxon = taxon
   end
 
-  def guidance_and_regulation_list
-    guidance_and_regulation_content.each.map do |link|
+  def sections
+    supergroups = %w(guidance_and_regulation)
+
+    supergroups.map do |supergroup|
+      {
+        show_section: show_section?(supergroup),
+        title: section_title(supergroup),
+        documents: section_document_list(supergroup)
+      }
+    end
+  end
+
+  def section_title(supergroup)
+    supergroup.humanize
+  end
+
+  def section_document_list(supergroup)
+    section_content(supergroup).each.map do |document|
       {
         link: {
-          text: link.title,
-          path: link.base_path
+          text: document.title,
+          path: document.base_path
         },
         metadata: {
-          public_updated_at: link.public_updated_at,
-          document_type: link.content_store_document_type.humanize
+          public_updated_at: document.public_updated_at,
+          document_type: document.content_store_document_type.humanize
         },
       }
     end
   end
 
-  def guidance_and_regulation_section_title
-    'guidance_and_regulation'.humanize
+  def show_section?(supergroup)
+    section_content(supergroup).count.positive?
   end
 
-  def show_guidance_section?
-    guidance_and_regulation_content.count.positive?
+  def section_content(supergroup)
+    method(supergroup + "_content").call
   end
 
   def show_subtopic_grid?
