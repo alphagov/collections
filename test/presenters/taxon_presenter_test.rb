@@ -81,6 +81,7 @@ describe TaxonPresenter do
 
       taxon = mock
       taxon.stubs(:guidance_and_regulation_content).returns([])
+      taxon.stubs(:services_content).returns([])
       taxon_presenter = TaxonPresenter.new(taxon)
 
       taxon_presenter.sections.each do |section|
@@ -93,6 +94,7 @@ describe TaxonPresenter do
     it 'checks whether guidance section should be shown' do
       taxon = mock
       taxon.stubs(:guidance_and_regulation_content).returns([])
+      taxon.stubs(:services_content).returns([])
       taxon_presenter = TaxonPresenter.new(taxon)
 
       refute taxon_presenter.show_section?("guidance_and_regulation")
@@ -124,6 +126,7 @@ describe TaxonPresenter do
 
       taxon = mock
       taxon.stubs(:guidance_and_regulation_content).returns(guidance_content)
+      taxon.stubs(:services_content).returns([])
       taxon_presenter = TaxonPresenter.new(taxon)
 
       assert_equal expected, taxon_presenter.section_document_list("guidance_and_regulation")

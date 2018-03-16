@@ -11,6 +11,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     then_i_can_see_the_title_section
     and_i_can_see_the_email_signup_link
     and_i_can_see_the_guidance_and_regulation_section
+    and_i_can_see_the_services_section
     and_i_can_see_the_sub_topics_grid
   end
 
@@ -67,6 +68,7 @@ private
     # We still need to stub tagged content because it is used by the sub-topic grid
     stub_content_for_taxon(content_id, tagged_content)
     stub_most_popular_content_for_taxon(content_id, tagged_content, filter_content_purpose_supergroup: 'guidance_and_regulation')
+    stub_most_popular_content_for_taxon(content_id, tagged_content, filter_content_purpose_supergroup: 'services')
   end
 
   def when_i_visit_that_taxon
@@ -94,6 +96,14 @@ private
 
   def and_i_can_see_the_guidance_and_regulation_section
     assert page.has_content?('Guidance and regulation')
+
+    tagged_content.each do |item|
+      assert page.has_link?(item["title"], href: item["link"])
+    end
+  end
+
+  def and_i_can_see_the_services_section
+    assert page.has_content?('Services')
 
     tagged_content.each do |item|
       assert page.has_link?(item["title"], href: item["link"])
