@@ -1,4 +1,5 @@
 require 'integration_test_helper'
+require 'cgi/util'
 
 class TaxonBrowsingTest < ActionDispatch::IntegrationTest
   include RummagerHelpers
@@ -98,6 +99,17 @@ private
     tagged_content.each do |item|
       assert page.has_link?(item["title"], href: item["link"])
     end
+
+    query_string = CGI::escape(
+      "?taxons=#{@content_item['base_path']}&content_purpose_supergroup=guidance_and_regulation"
+    )
+
+    expected_link = {
+      text: "See all guidance and regulation",
+      url: "/search/advanced#{query_string}"
+    }
+
+    assert page.has_link?(expected_link[:text], href: expected_link[:url])
   end
 
   def and_i_can_see_the_sub_topics_grid

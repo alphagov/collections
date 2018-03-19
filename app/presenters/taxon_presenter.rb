@@ -1,3 +1,5 @@
+require 'cgi/util'
+
 class TaxonPresenter
   attr_reader :taxon
   delegate(
@@ -24,7 +26,8 @@ class TaxonPresenter
       {
         show_section: show_section?(supergroup),
         title: section_title(supergroup),
-        documents: section_document_list(supergroup)
+        documents: section_document_list(supergroup),
+        link: section_finder_link(supergroup)
       }
     end
   end
@@ -54,6 +57,20 @@ class TaxonPresenter
 
   def section_content(supergroup)
     method(supergroup + "_content").call
+  end
+
+  def section_finder_link(supergroup)
+    text = supergroup.humanize.downcase
+    query_string = section_query_string(supergroup)
+
+    {
+      text: "See all #{text}",
+      url: "/search/advanced#{query_string}"
+    }
+  end
+
+  def section_query_string(supergroup)
+    CGI::escape("?taxons=#{base_path}&content_purpose_supergroup=#{supergroup}")
   end
 
   def show_subtopic_grid?

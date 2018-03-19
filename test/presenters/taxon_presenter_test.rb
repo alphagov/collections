@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'cgi/util'
 
 include RummagerHelpers
 include TaxonHelpers
@@ -77,10 +78,11 @@ describe TaxonPresenter do
 
   describe 'supergroup_sections' do
     it 'returns a list of supergroup details' do
-      section_keys = %i(show_section title documents)
+      section_keys = %i(show_section title documents link)
 
       taxon = mock
       taxon.stubs(:guidance_and_regulation_content).returns([])
+      taxon.stubs(:base_path)
       taxon_presenter = TaxonPresenter.new(taxon)
 
       taxon_presenter.sections.each do |section|
@@ -127,6 +129,22 @@ describe TaxonPresenter do
       taxon_presenter = TaxonPresenter.new(taxon)
 
       assert_equal expected, taxon_presenter.section_document_list("guidance_and_regulation")
+    end
+
+    it 'formats the link to the guidance and regulation finder page' do
+      taxon = mock
+      taxon.stubs(:guidance_and_regulation_content).returns([])
+      taxon.stubs(:base_path).returns("/foo")
+      taxon_presenter = TaxonPresenter.new(taxon)
+
+      expected_query_string = CGI::escape("?taxons=#{taxon.base_path}&content_purpose_supergroup=guidance_and_regulation")
+
+      expected_link_details = {
+        text: "See all guidance and regulation",
+        url: "/search/advanced#{expected_query_string}"
+      }
+
+      assert_equal expected_link_details, taxon_presenter.section_finder_link("guidance_and_regulation")
     end
   end
 
