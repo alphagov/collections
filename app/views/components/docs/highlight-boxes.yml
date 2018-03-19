@@ -1,0 +1,22 @@
+name: Highlight Boxes
+description: Puts a list of items into boxes
+shared_accessibility_criteria:
+  - link
+examples:
+  default:
+    data:
+      items:
+      - text: 'Environmental taxes, reliefs and schemes for businesses'
+        path: '/green-taxes-and-reliefs'
+      - text: 'Aggregates Levy: register or change your details'
+        path: '/guidance/aggregates-levy-register-or-change-your-details'
+        description: 'This is a long description. This is a long description. This is a long description. This is a long description.This is a long description. This is a long description. This is a long description. This is a long description.This is a long description. This is a long description. This is a long description. This is a long description.This is a long description. This is a long description. This is a long description. This is a long description. This is a long description. This is a long description. '
+      - text: 'Pay environmental taxes'
+        path: '/guidance/pay-environmental-taxes'
+        description: 'This is a short description'
+      - text: 'Pay environmental taxes'
+        path: '/guidance/pay-environmental-taxes'
+        description: 'This is another short description'
+      - text: 'Another box'
+        path: '/guidance/pay-environmental-taxes'
+        description: 'This is yet another short description'
