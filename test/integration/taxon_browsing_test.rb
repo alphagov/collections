@@ -100,6 +100,13 @@ private
     tagged_content.each do |item|
       assert page.has_link?(item["title"], href: item["link"])
     end
+
+    expected_link = {
+      text: "See all guidance and regulation",
+      url: "/search/advanced?" + finder_query_string("guidance_and_regulation")
+    }
+
+    assert page.has_link?(expected_link[:text], href: expected_link[:url])
   end
 
   def and_i_can_see_the_services_section
@@ -108,6 +115,13 @@ private
     tagged_content.each do |item|
       assert page.has_link?(item["title"], href: item["link"])
     end
+
+    expected_link = {
+      text: "See all services",
+      url: "/search/advanced?" + finder_query_string('services')
+    }
+
+    assert page.has_link?(expected_link[:text], href: expected_link[:url])
   end
 
   def and_i_can_see_the_sub_topics_grid
@@ -152,5 +166,12 @@ private
 
   def tagged_content
     generate_search_results(5)
+  end
+
+  def finder_query_string(supergroup)
+    {
+      taxons: @content_item['base_path'],
+      content_purpose_supergroup: supergroup
+    }.to_query
   end
 end

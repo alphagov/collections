@@ -79,10 +79,11 @@ describe TaxonPresenter do
     it 'returns a list of supergroup details' do
       taxon = mock
       taxon.stubs(:section_content).returns([])
+      taxon.stubs(:base_path)
       taxon_presenter = TaxonPresenter.new(taxon)
 
       taxon_presenter.sections.each do |section|
-        assert_equal(section.keys.sort, %i(documents show_section title))
+        assert_equal(%i(show_section title documents see_more_link), section.keys)
       end
     end
   end
@@ -125,6 +126,20 @@ describe TaxonPresenter do
       taxon_presenter = TaxonPresenter.new(taxon)
 
       assert_equal expected, taxon_presenter.section_document_list("guidance_and_regulation")
+    end
+
+    it 'formats the link to the guidance and regulation finder page' do
+      taxon = mock
+      taxon.stubs(:guidance_and_regulation_content).returns([])
+      taxon.stubs(:base_path).returns("/foo")
+      taxon_presenter = TaxonPresenter.new(taxon)
+
+      expected_link_details = {
+        text: "See all guidance and regulation",
+        url: "/search/advanced?content_purpose_supergroup=guidance_and_regulation&taxons=%2Ffoo"
+      }
+
+      assert_equal expected_link_details, taxon_presenter.section_finder_link("guidance_and_regulation")
     end
   end
 

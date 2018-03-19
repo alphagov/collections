@@ -23,7 +23,8 @@ class TaxonPresenter
       {
         show_section: show_section?(supergroup),
         title: section_title(supergroup),
-        documents: section_document_list(supergroup)
+        documents: section_document_list(supergroup),
+        see_more_link: section_finder_link(supergroup)
       }
     end
   end
@@ -49,6 +50,20 @@ class TaxonPresenter
 
   def show_section?(supergroup)
     section_content(supergroup).any?
+  end
+
+  def section_finder_link(supergroup)
+    link_text = supergroup.humanize.downcase
+
+    query_string = {
+      taxons: base_path,
+      content_purpose_supergroup: supergroup
+    }.to_query
+
+    {
+      text: "See all #{link_text}",
+      url: "/search/advanced?#{query_string}"
+    }
   end
 
   def show_subtopic_grid?
