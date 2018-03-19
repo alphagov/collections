@@ -26,6 +26,8 @@ class Taxon
       guidance_and_regulation_content
     when "services"
       services_content
+    when "news_and_communications"
+      news_and_communications_content
     end
   end
 
@@ -81,5 +83,13 @@ private
 
   def guidance_and_regulation_content
     @guidance_and_regulation_content ||= fetch_most_popular_content('guidance_and_regulation')
+  end
+
+  def fetch_most_recent_content(content_purpose_supergroup = 'news_and_communications')
+    MostRecentContent.fetch(content_id: content_id, filter_content_purpose_supergroup: content_purpose_supergroup)
+  end
+
+  def news_and_communications_content
+    @news_and_communications_content ||= fetch_most_recent_content('news_and_communications')
   end
 end
