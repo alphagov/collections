@@ -10,6 +10,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     when_i_visit_that_taxon
     then_i_can_see_the_title_section
     and_i_can_see_the_email_signup_link
+    and_i_can_see_the_services_section
     and_i_can_see_the_guidance_and_regulation_section
     and_i_can_see_the_sub_topics_grid
   end
