@@ -17,7 +17,7 @@ class TaxonPresenter
   end
 
   def sections
-    supergroups = %w(guidance_and_regulation)
+    supergroups = %w(services guidance_and_regulation)
 
     supergroups.map do |supergroup|
       {
