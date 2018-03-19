@@ -10,18 +10,24 @@
 %>
 
 <div class="full-page-width-wrapper">
-  <% if presented_taxon.show_guidance_section? %>
-  <div class="taxon-page__section-group">
-    <div class="grid-row">
-      <div class="column-two-thirds">
-        <h2 class="taxon-page__section-heading"><%= presented_taxon.guidance_and_regulation_section_title %></h2>
-        <%= render 'govuk_publishing_components/components/document_list',
-              items: presented_taxon.guidance_and_regulation_list,
-              margin_top: true
+  <% presented_taxon.sections.each do |section| %>
+    <% if section[:show_section] %>
+    <div class="taxon-page__section-group">
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <h2 class="taxon-page__section-heading"><%= section[:title] %></h2>
+          <%= render 'govuk_publishing_components/components/document_list',
+            items: section[:documents],
+            margin_top: true
          %>
+         <%= link_to(
+           section[:link][:text],
+           section[:link][:url]
+         )%>
+        </div>
       </div>
     </div>
-  </div>
+    <% end %>
   <% end %>
 </div>
 
