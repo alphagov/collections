@@ -59,7 +59,7 @@ describe Taxon do
         .with(content_id: @taxon.content_id, filter_content_purpose_supergroup: 'guidance_and_regulation')
         .returns(results)
 
-      assert_equal(results, @taxon.guidance_and_regulation_content)
+      assert_equal(results, @taxon.section_content("guidance_and_regulation"))
     end
 
     it "requests services content" do
@@ -69,7 +69,7 @@ describe Taxon do
         .with(content_id: @taxon.content_id, filter_content_purpose_supergroup: 'services')
         .returns(results)
 
-      assert_equal(results, @taxon.services_content)
+      assert_equal(results, @taxon.section_content("services"))
     end
 
     it 'requests for guidance document supertype by default' do

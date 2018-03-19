@@ -75,13 +75,25 @@ describe TaxonPresenter do
     end
   end
 
+  describe 'supergroup_sections' do
+    it 'returns a list of supergroup details' do
+      taxon = mock
+      taxon.stubs(:section_content).returns([])
+      taxon_presenter = TaxonPresenter.new(taxon)
+
+      taxon_presenter.sections.each do |section|
+        assert_equal(section.keys.sort, %i(documents show_section title))
+      end
+    end
+  end
+
   describe 'guidance_and_regulation_section' do
     it 'checks whether guidance section should be shown' do
       taxon = mock
-      taxon.stubs(:guidance_and_regulation_content).returns([])
+      taxon.stubs(:section_content).returns([])
       taxon_presenter = TaxonPresenter.new(taxon)
 
-      refute taxon_presenter.show_guidance_section?
+      refute taxon_presenter.show_section?("guidance_and_regulation")
     end
 
     it 'formats guidance and regulation content for document list' do
@@ -109,10 +121,10 @@ describe TaxonPresenter do
       ]
 
       taxon = mock
-      taxon.stubs(:guidance_and_regulation_content).returns(guidance_content)
+      taxon.stubs(:section_content).returns(guidance_content)
       taxon_presenter = TaxonPresenter.new(taxon)
 
-      assert_equal expected, taxon_presenter.guidance_and_regulation_list
+      assert_equal expected, taxon_presenter.section_document_list("guidance_and_regulation")
     end
   end
 
