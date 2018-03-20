@@ -12,14 +12,18 @@ class TaxonPresenter
     to: :taxon
   )
 
+  # These should remain in order as the sequence of sections displayed on the
+  # page is important.
+  SUPERGROUPS = %w(services
+                   guidance_and_regulation
+                   news_and_communications).freeze
+
   def initialize(taxon)
     @taxon = taxon
   end
 
   def sections
-    supergroups = %w(services guidance_and_regulation)
-
-    supergroups.map do |supergroup|
+    SUPERGROUPS.map do |supergroup|
       {
         show_section: show_section?(supergroup),
         title: section_title(supergroup),
