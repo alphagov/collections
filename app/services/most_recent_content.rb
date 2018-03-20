@@ -7,6 +7,10 @@ class MostRecentContent
     @number_of_links = number_of_links
   end
 
+  def self.fetch(content_id:, filter_content_purpose_supergroup:)
+    new(content_id: content_id, filter_content_purpose_supergroup: filter_content_purpose_supergroup).fetch
+  end
+
   def fetch
     search_response.documents
   end
