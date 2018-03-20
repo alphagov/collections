@@ -30,6 +30,8 @@ class Taxon
       news_and_communications_content
     when "policy_and_engagement"
       policy_and_engagement_content
+    when "transparency"
+      transparency_content
     end
   end
 
@@ -97,5 +99,9 @@ private
 
   def policy_and_engagement_content
     @policy_and_engagement_content ||= fetch_most_recent_content('policy_and_engagement')
+  end
+
+  def transparency_content
+    @transparency_content ||= fetch_most_recent_content('transparency')
   end
 end
