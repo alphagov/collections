@@ -52,41 +52,24 @@ describe Taxon do
       end
     end
 
-    it 'has grandchildren' do
-      taxon = stub(children?: true)
-      Taxon.stubs(:find).returns(taxon)
-
-      assert @taxon.grandchildren?
-    end
-
-    it 'does not have grandchildren' do
-      taxon = stub(children?: false)
-      Taxon.stubs(:find).returns(taxon)
-
-      assert not(@taxon.grandchildren?)
-    end
-
-    it 'knows about its most popular content items' do
+    it "requests guidance_and_regulation content" do
       results = [:result_1, :result_2]
-      MostPopularContent.stubs(:fetch).returns(results)
 
-      assert_equal(results, @taxon.most_popular_content)
-    end
-
-    it 'knows about its most popular content items' do
-      results = [:result_1, :result_2]
-      MostPopularContent.stubs(:fetch).returns(results)
-
-      assert_equal(results, @taxon.most_popular_content)
-    end
-
-    it "requests popular content of document supertype 'guidance' by default" do
-      results = [:result_1, :result_2]
       MostPopularContent.stubs(:fetch)
-        .with(content_id: @taxon.content_id, filter_by_document_supertype: 'guidance')
+        .with(content_id: @taxon.content_id, filter_content_purpose_supergroup: 'guidance_and_regulation')
         .returns(results)
 
-      assert_equal(results, @taxon.most_popular_content)
+      assert_equal(results, @taxon.section_content("guidance_and_regulation"))
+    end
+
+    it "requests services content" do
+      results = [:result_1, :result_2]
+
+      MostPopularContent.stubs(:fetch)
+        .with(content_id: @taxon.content_id, filter_content_purpose_supergroup: 'services')
+        .returns(results)
+
+      assert_equal(results, @taxon.section_content("services"))
     end
 
     it 'requests for guidance document supertype by default' do
@@ -95,6 +78,32 @@ describe Taxon do
         .returns(["guidance_content"])
 
       assert_equal ["guidance_content"], @taxon.tagged_content
+    end
+
+    it "requests news_and_communications content" do
+      results = %i(result_1 result_2 result_3 result_4 result_5)
+
+      MostRecentContent.stubs(:fetch)
+        .with(
+          content_id: @taxon.content_id,
+          filter_content_purpose_supergroup: "news_and_communications",
+        )
+        .returns(results)
+
+      assert_equal(results, @taxon.section_content("news_and_communications"))
+    end
+
+    it "requests policy_and_engagement content" do
+      results = %i(result_1 result_2 result_3 result_4 result_5)
+
+      MostRecentContent.stubs(:fetch)
+        .with(
+          content_id: @taxon.content_id,
+          filter_content_purpose_supergroup: "policy_and_engagement",
+        )
+        .returns(results)
+
+      assert_equal(results, @taxon.section_content("policy_and_engagement"))
     end
   end
 end

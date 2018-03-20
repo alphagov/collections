@@ -1,4 +1,4 @@
-class MostPopularContent
+class MostRecentContent
   attr_reader :content_id, :filter_content_purpose_supergroup, :number_of_links
 
   def initialize(content_id:, filter_content_purpose_supergroup:, number_of_links: 5)
@@ -12,8 +12,7 @@ class MostPopularContent
   end
 
   def fetch
-    search_response
-      .documents
+    search_response.documents
   end
 
 private
@@ -21,7 +20,6 @@ private
   def search_response
     search_fields = %w(title
                        link
-                       description
                        content_store_document_type
                        public_timestamp
                        organisations)
@@ -29,8 +27,8 @@ private
       start: 0,
       count: number_of_links,
       fields: search_fields,
-      filter_taxons: Array(content_id),
-      order: '-popularity',
+      filter_taxons: [content_id],
+      order: '-public_timestamp',
     }
     params[:filter_content_purpose_supergroup] = filter_content_purpose_supergroup if filter_content_purpose_supergroup.present?
 
