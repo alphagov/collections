@@ -16,7 +16,8 @@ class TaxonPresenter
   # page is important.
   SUPERGROUPS = %w(services
                    guidance_and_regulation
-                   news_and_communications).freeze
+                   news_and_communications
+                   transparency).freeze
 
   def initialize(taxon)
     @taxon = taxon
