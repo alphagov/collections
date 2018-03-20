@@ -12,14 +12,16 @@ class TaxonPresenter
     to: :taxon
   )
 
+  SUPERGROUPS = %w(guidance_and_regulation
+                   news_and_communications
+                   services).freeze
+
   def initialize(taxon)
     @taxon = taxon
   end
 
   def sections
-    supergroups = %w(services guidance_and_regulation)
-
-    supergroups.map do |supergroup|
+    SUPERGROUPS.map do |supergroup|
       {
         show_section: show_section?(supergroup),
         title: section_title(supergroup),
