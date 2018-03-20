@@ -4,6 +4,8 @@ describe Taxon do
   include TaxonHelpers
 
   context "without associate_taxons" do
+    let stubbed_content_results = %i(result_1 result_2 result_3 result_4 result_5)
+
     setup do
       content_item = ContentItem.new(student_finance_taxon)
       @taxon = Taxon.new(content_item)
@@ -53,23 +55,19 @@ describe Taxon do
     end
 
     it "requests guidance_and_regulation content" do
-      results = [:result_1, :result_2]
-
       MostPopularContent.stubs(:fetch)
         .with(content_id: @taxon.content_id, filter_content_purpose_supergroup: 'guidance_and_regulation')
-        .returns(results)
+        .returns(stubbed_content_results)
 
-      assert_equal(results, @taxon.section_content("guidance_and_regulation"))
+      assert_equal(stubbed_content_results, @taxon.section_content("guidance_and_regulation"))
     end
 
     it "requests services content" do
-      results = [:result_1, :result_2]
-
       MostPopularContent.stubs(:fetch)
         .with(content_id: @taxon.content_id, filter_content_purpose_supergroup: 'services')
-        .returns(results)
+        .returns(stubbed_content_results)
 
-      assert_equal(results, @taxon.section_content("services"))
+      assert_equal(stubbed_content_results, @taxon.section_content("services"))
     end
 
     it 'requests for guidance document supertype by default' do
@@ -81,42 +79,36 @@ describe Taxon do
     end
 
     it "requests news_and_communications content" do
-      results = %i(result_1 result_2 result_3 result_4 result_5)
-
       MostRecentContent.stubs(:fetch)
         .with(
           content_id: @taxon.content_id,
           filter_content_purpose_supergroup: "news_and_communications",
         )
-        .returns(results)
+        .returns(stubbed_content_results)
 
-      assert_equal(results, @taxon.section_content("news_and_communications"))
+      assert_equal(stubbed_content_results, @taxon.section_content("news_and_communications"))
     end
 
     it "requests policy_and_engagement content" do
-      results = %i(result_1 result_2 result_3 result_4 result_5)
-
       MostRecentContent.stubs(:fetch)
         .with(
           content_id: @taxon.content_id,
           filter_content_purpose_supergroup: "policy_and_engagement",
         )
-        .returns(results)
+        .returns(stubbed_content_results)
 
-      assert_equal(results, @taxon.section_content("policy_and_engagement"))
+      assert_equal(stubbed_content_results, @taxon.section_content("policy_and_engagement"))
     end
 
     it "requests transparency content" do
-      results = %i(result_1 result_2 result_3 result_4 result_5)
-
       MostRecentContent.stubs(:fetch)
         .with(
           content_id: @taxon.content_id,
           filter_content_purpose_supergroup: "transparency",
         )
-        .returns(results)
+        .returns(stubbed_content_results)
 
-      assert_equal(results, @taxon.section_content("transparency"))
+      assert_equal(stubbed_content_results, @taxon.section_content("transparency"))
     end
   end
 end
