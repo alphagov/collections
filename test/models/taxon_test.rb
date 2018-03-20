@@ -79,5 +79,18 @@ describe Taxon do
 
       assert_equal ["guidance_content"], @taxon.tagged_content
     end
+
+    it "requests news_and_communications content" do
+      results = %i(result_1 result_2 result_3 result_4 result_5)
+
+      MostRecentContent.stubs(:fetch)
+        .with(
+          content_id: @taxon.content_id,
+          filter_content_purpose_supergroup: "news_and_communications",
+        )
+        .returns(results)
+
+      assert_equal(results, @taxon.section_content("news_and_communications"))
+    end
   end
 end
