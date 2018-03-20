@@ -92,5 +92,18 @@ describe Taxon do
 
       assert_equal(results, @taxon.section_content("news_and_communications"))
     end
+
+    it "requests policy_and_engagement content" do
+      results = %i(result_1 result_2 result_3 result_4 result_5)
+
+      MostRecentContent.stubs(:fetch)
+        .with(
+          content_id: @taxon.content_id,
+          filter_content_purpose_supergroup: "policy_and_engagement",
+        )
+        .returns(results)
+
+      assert_equal(results, @taxon.section_content("policy_and_engagement"))
+    end
   end
 end
