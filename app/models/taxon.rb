@@ -28,6 +28,8 @@ class Taxon
       services_content
     when "news_and_communications"
       news_and_communications_content
+    when "policy_and_engagement"
+      policy_and_engagement_content
     end
   end
 
@@ -91,5 +93,9 @@ private
 
   def news_and_communications_content
     @news_and_communications_content ||= fetch_most_recent_content('news_and_communications')
+  end
+
+  def policy_and_engagement_content
+    @policy_and_engagement_content ||= fetch_most_recent_content('policy_and_engagement')
   end
 end
