@@ -44,6 +44,31 @@ module RummagerHelpers
     )
   end
 
+  def stub_most_recent_content_for_taxon(content_id, results, filter_content_purpose_supergroup: 'news_and_communication')
+    fields = %w(title
+                link
+                content_store_document_type
+                public_timestamp
+                organisations)
+
+    params = {
+      start: 0,
+      count: 5,
+      fields: fields,
+      filter_taxons: [content_id],
+      order: '-public_timestamp',
+    }
+    params[:filter_content_purpose_supergroup] = filter_content_purpose_supergroup if filter_content_purpose_supergroup.present?
+
+    Services.rummager.stubs(:search)
+    .with(params)
+    .returns(
+      "results" => results,
+      "start" => 0,
+      "total" => results.size,
+    )
+  end
+
   def generate_search_results(count)
     (1..count).map do |number|
       rummager_document_for_slug("content-item-#{number}")
