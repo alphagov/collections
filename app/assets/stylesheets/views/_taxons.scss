@@ -25,13 +25,14 @@
 
 .taxon-page__section-group {
   border-top: 2px solid $govuk-blue;
-  margin-top: $gutter;
-  padding-top: $gutter;
+  margin-top: $gutter * 2;
+  padding-top: $gutter-half;
 }
 
 .taxon-page__section-group:first-child {
   border-top: none;
   padding-top: 0;
+  margin-top: 0;
 }
 
 // this is a stop-gap solution, using this mixin introduces
