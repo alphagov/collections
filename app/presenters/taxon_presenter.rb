@@ -17,6 +17,7 @@ class TaxonPresenter
   SUPERGROUPS = %w(services
                    guidance_and_regulation
                    news_and_communications
+                   policy_and_engagement
                    transparency).freeze
 
   def initialize(taxon)
