@@ -95,6 +95,12 @@ module RummagerHelpers
     end
   end
 
+  def generate_search_results_for_services(count)
+    (1..count).map do |number|
+      rummager_document_for_services("content-item-#{number}")
+    end
+  end
+
   def stub_topic_organisations(slug, content_id)
     Services.rummager.stubs(:search).with(
       count: "0",
@@ -136,6 +142,21 @@ module RummagerHelpers
       "_id" => "/#{slug}",
       "document_type" => "edition",
       "content_store_document_type" => "guidance"
+    }
+  end
+
+  def rummager_document_for_services(slug, updated_at = 1.hour.ago)
+    {
+      "format" => "local_transaction",
+      "latest_change_note" => "This has changed",
+      "public_timestamp" => updated_at.iso8601,
+      "title" => slug.titleize.humanize.to_s,
+      "link" => "/#{slug}",
+      "index" => "/",
+      "_id" => "/#{slug}",
+      "document_type" => "edition",
+      "content_store_document_type" => "local_transaction",
+      "description" => "A description about #{slug.titleize.humanize.to_s}"
     }
   end
 

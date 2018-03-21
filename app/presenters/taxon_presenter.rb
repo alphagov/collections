@@ -42,16 +42,20 @@ class TaxonPresenter
 
   def section_document_list(supergroup)
     section_content(supergroup).each.map do |document|
-      {
+      data = {
         link: {
           text: document.title,
-          path: document.base_path
+          path: document.base_path,
         },
         metadata: {
           public_updated_at: document.public_updated_at,
           document_type: document.content_store_document_type.humanize
         },
       }
+
+      data[:link][:description] = document.description if supergroup == "services"
+      data.delete(:metadata) if supergroup == "services"
+      data
     end
   end
 

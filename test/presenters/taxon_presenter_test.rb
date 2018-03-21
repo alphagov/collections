@@ -143,6 +143,36 @@ describe TaxonPresenter do
     end
   end
 
+  describe 'services_section' do
+    it 'formats services content for document list' do
+      services_content = [
+        Document.new(
+          title: 'Register as a schools financial health checks supplier',
+          description: 'Register to be added to the directory of schools financial health checks suppliers.',
+          public_updated_at: '2018-02-28T08:01:00.000+00:00',
+          base_path: '/publications/schools-financial-health-checks-supplier-registration-form',
+          content_store_document_type: 'form'
+        )
+      ]
+
+      expected = [
+        {
+          link: {
+            text: 'Register as a schools financial health checks supplier',
+            path: '/publications/schools-financial-health-checks-supplier-registration-form',
+            description: 'Register to be added to the directory of schools financial health checks suppliers.',
+          }
+        }
+      ]
+
+      taxon = mock
+      taxon.stubs(:section_content).returns(services_content)
+      taxon_presenter = TaxonPresenter.new(taxon)
+
+      assert_equal expected, taxon_presenter.section_document_list("services")
+    end
+  end
+
   describe 'topic_grid_section' do
     it 'checks whether topic grid section should be shown' do
       taxon = mock
