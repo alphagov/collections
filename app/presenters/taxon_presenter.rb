@@ -53,8 +53,11 @@ class TaxonPresenter
         },
       }
 
-      data[:link][:description] = document.description if supergroup == "services"
+      if supergroup == "services" || document.content_store_document_type == "guide"
+        data[:link][:description] = document.description
+      end
       data.delete(:metadata) if supergroup == "services"
+      data[:metadata].delete(:public_updated_at) if document.content_store_document_type == "guide"
       data
     end
   end
