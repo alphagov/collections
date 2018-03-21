@@ -32,6 +32,20 @@ class RummagerSearch
     search_result["start"]
   end
 
+  def organisations
+    @_organisations ||= search_result.dig('aggregates', 'organisations', 'options').map do |option|
+      organisation = option['value']
+      Organisation.new(
+        title: organisation['title'],
+        content_id: organisation['content_id'],
+        link: organisation['link'],
+        slug: organisation['slug'],
+        organisation_state: organisation['organisation_state'],
+        document_count: option['documents']
+      )
+    end
+  end
+
 private
 
   def search_result
