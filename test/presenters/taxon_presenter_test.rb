@@ -97,7 +97,7 @@ describe TaxonPresenter do
       refute taxon_presenter.show_section?("guidance_and_regulation")
     end
 
-    it 'formats guidance and regulation content for document list' do
+    it 'formats guidance and regulation content except guides for document list' do
       guidance_content = [
         Document.new(
           title: "16 to 19 funding: advanced maths premium",
@@ -123,6 +123,37 @@ describe TaxonPresenter do
 
       taxon = mock
       taxon.stubs(:section_content).returns(guidance_content)
+      taxon_presenter = TaxonPresenter.new(taxon)
+
+      assert_equal expected, taxon_presenter.section_document_list("guidance_and_regulation")
+    end
+
+    it 'formats guides content for document list' do
+      guide_content = [
+        Document.new(
+          title: "If your child is taken into care",
+          description: "What happens when a child is taken into care - who is responsible for what, care proceedings, care orders, going to court and the role of Cafcass",
+          public_updated_at: "2018-02-28T08:01:00.000+00:00",
+          base_path: "/if-your-child-is-taken-into-care",
+          content_store_document_type: "guide"
+        )
+      ]
+
+      expected = [
+        {
+          link: {
+            text: "If your child is taken into care",
+            path: "/if-your-child-is-taken-into-care",
+            description: "What happens when a child is taken into care - who is responsible for what, care proceedings, care orders, going to court and the role of Cafcass",
+          },
+          metadata: {
+            document_type: "Guide"
+          },
+        }
+      ]
+
+      taxon = mock
+      taxon.stubs(:section_content).returns(guide_content)
       taxon_presenter = TaxonPresenter.new(taxon)
 
       assert_equal expected, taxon_presenter.section_document_list("guidance_and_regulation")
