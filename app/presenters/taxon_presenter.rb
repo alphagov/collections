@@ -62,8 +62,8 @@ class TaxonPresenter
     link_text = supergroup.humanize.downcase
 
     query_string = {
-      taxons: base_path,
-      content_purpose_supergroup: supergroup
+      topic: base_path,
+      group: supergroup
     }.to_query
 
     {
