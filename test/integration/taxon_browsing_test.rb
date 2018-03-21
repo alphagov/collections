@@ -221,8 +221,8 @@ private
 
   def finder_query_string(supergroup)
     {
-      taxons: @content_item['base_path'],
-      content_purpose_supergroup: supergroup
+      topic: @content_item['base_path'],
+      group: supergroup
     }.to_query
   end
 end

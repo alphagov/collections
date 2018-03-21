@@ -136,7 +136,7 @@ describe TaxonPresenter do
 
       expected_link_details = {
         text: "See all guidance and regulation",
-        url: "/search/advanced?content_purpose_supergroup=guidance_and_regulation&taxons=%2Ffoo"
+        url: "/search/advanced?group=guidance_and_regulation&topic=%2Ffoo"
       }
 
       assert_equal expected_link_details, taxon_presenter.section_finder_link("guidance_and_regulation")
