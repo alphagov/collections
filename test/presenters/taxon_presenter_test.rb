@@ -204,6 +204,102 @@ describe TaxonPresenter do
     end
   end
 
+  describe 'policy_and_engagement_section' do
+    it 'formats policy and engagement content for document list' do
+      policy_and_engagement_content = [
+        Document.new(
+          title: 'Review of Children in Need',
+          public_updated_at: '2018-02-28T08:01:00.000+00:00',
+          base_path: '/government/publications/review-of-children-in-need',
+          content_store_document_type: 'policy_paper'
+        )
+      ]
+
+      expected = [
+        {
+          link: {
+            text: 'Review of Children in Need',
+            path: '/government/publications/review-of-children-in-need'
+          },
+          metadata: {
+            public_updated_at: '2018-02-28T08:01:00.000+00:00',
+            document_type: 'Policy paper'
+          },
+        }
+      ]
+
+      taxon = mock
+      taxon.stubs(:section_content).returns(policy_and_engagement_content)
+      taxon_presenter = TaxonPresenter.new(taxon)
+
+      assert_equal expected, taxon_presenter.section_document_list('policy_and_engagement')
+    end
+  end
+
+  describe 'news_and_communications_section' do
+    it 'formats news and communications content for document list' do
+      news_and_communications_content = [
+        Document.new(
+          title: 'Education Secretary tours the Midlands and North of England',
+          public_updated_at: '2018-02-28T08:01:00.000+00:00',
+          base_path: '/government/news/education-secretary-tours-the-midlands-and-north-of-england',
+          content_store_document_type: 'news_story'
+        )
+      ]
+
+      expected = [
+        {
+          link: {
+            text: 'Education Secretary tours the Midlands and North of England',
+            path: '/government/news/education-secretary-tours-the-midlands-and-north-of-england'
+          },
+          metadata: {
+            public_updated_at: '2018-02-28T08:01:00.000+00:00',
+            document_type: 'News story'
+          },
+        }
+      ]
+
+      taxon = mock
+      taxon.stubs(:section_content).returns(news_and_communications_content)
+      taxon_presenter = TaxonPresenter.new(taxon)
+
+      assert_equal expected, taxon_presenter.section_document_list('news_and_communications')
+    end
+  end
+
+  describe 'transparency_section' do
+    it 'formats transparency content for document list' do
+      transparency_content = [
+        Document.new(
+          title: 'Race Disparity Audit',
+          public_updated_at: '2018-02-28T08:01:00.000+00:00',
+          base_path: '/government/publications/race-disparity-audit',
+          content_store_document_type: 'research'
+        )
+      ]
+
+      expected = [
+        {
+          link: {
+            text: 'Race Disparity Audit',
+            path: '/government/publications/race-disparity-audit'
+          },
+          metadata: {
+            public_updated_at: '2018-02-28T08:01:00.000+00:00',
+            document_type: 'Research'
+          },
+        }
+      ]
+
+      taxon = mock
+      taxon.stubs(:section_content).returns(transparency_content)
+      taxon_presenter = TaxonPresenter.new(taxon)
+
+      assert_equal expected, taxon_presenter.section_document_list('transparency')
+    end
+  end
+
   describe 'topic_grid_section' do
     it 'checks whether topic grid section should be shown' do
       taxon = mock

@@ -89,21 +89,22 @@ module RummagerHelpers
     )
   end
 
-  def generate_search_results(count)
+  def generate_search_results(count, supergroup="default")
     (1..count).map do |number|
-      rummager_document_for_slug("content-item-#{number}")
-    end
-  end
-
-  def generate_search_results_for_services(count)
-    (1..count).map do |number|
-      rummager_document_for_services("content-item-#{number}")
-    end
-  end
-
-  def generate_search_results_for_guides(count)
-    (1..count).map do |number|
-      rummager_document_for_guides("content-item-#{number}")
+      case supergroup
+      when "services"
+        rummager_document_for_services("content-item-#{number}")
+      when "guides"
+        rummager_document_for_guides("content-item-#{number}")
+      when "news_and_communications"
+        rummager_document_for_news_and_communications("content-item-#{number}")
+      when "policy_and_engagement"
+        rummager_document_for_policy_and_engagement("content-item-#{number}")
+      when "transparency"
+        rummager_document_for_transparency("content-item-#{number}")
+      else
+        rummager_document_for_slug("content-item-#{number}")
+      end
     end
   end
 
@@ -162,7 +163,7 @@ module RummagerHelpers
       "_id" => "/#{slug}",
       "document_type" => "edition",
       "content_store_document_type" => "local_transaction",
-      "description" => "A description about #{slug.titleize.humanize.to_s}"
+      "description" => "A description about #{slug.titleize.humanize}"
     }
   end
 
@@ -177,7 +178,49 @@ module RummagerHelpers
       "_id" => "/#{slug}",
       "document_type" => "edition",
       "content_store_document_type" => "guide",
-      "description" => "A description about #{slug.titleize.humanize.to_s}"
+      "description" => "A description about #{slug.titleize.humanize}"
+    }
+  end
+
+  def rummager_document_for_news_and_communications(slug, updated_at = 1.hour.ago)
+    {
+      "format" => "news_story",
+      "latest_change_note" => "This has changed",
+      "public_timestamp" => updated_at.iso8601,
+      "title" => slug.titleize.humanize.to_s,
+      "link" => "/#{slug}",
+      "index" => "/",
+      "_id" => "/#{slug}",
+      "document_type" => "edition",
+      "content_store_document_type" => "news_story",
+    }
+  end
+
+  def rummager_document_for_policy_and_engagement(slug, updated_at = 1.hour.ago)
+    {
+      "format" => "publication",
+      "latest_change_note" => "This has changed",
+      "public_timestamp" => updated_at.iso8601,
+      "title" => slug.titleize.humanize.to_s,
+      "link" => "/#{slug}",
+      "index" => "/",
+      "_id" => "/#{slug}",
+      "document_type" => "edition",
+      "content_store_document_type" => "policy_paper",
+    }
+  end
+
+  def rummager_document_for_transparency(slug, updated_at = 1.hour.ago)
+    {
+      "format" => "publication",
+      "latest_change_note" => "This has changed",
+      "public_timestamp" => updated_at.iso8601,
+      "title" => slug.titleize.humanize.to_s,
+      "link" => "/#{slug}",
+      "index" => "/",
+      "_id" => "/#{slug}",
+      "document_type" => "edition",
+      "content_store_document_type" => "research",
     }
   end
 

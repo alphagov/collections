@@ -71,12 +71,12 @@ private
   def and_the_taxon_has_tagged_content
     # We still need to stub tagged content because it is used by the sub-topic grid
     stub_content_for_taxon(content_id, tagged_content)
-    stub_most_popular_content_for_taxon(content_id, tagged_content, filter_content_purpose_supergroup: 'guidance_and_regulation')
+    stub_most_popular_content_for_taxon(content_id, tagged_content_for_guidance_and_regulation, filter_content_purpose_supergroup: 'guidance_and_regulation')
     stub_most_popular_content_for_taxon(content_id, tagged_content_for_guides, filter_content_purpose_supergroup: 'guidance_and_regulation')
     stub_most_popular_content_for_taxon(content_id, tagged_content_for_services, filter_content_purpose_supergroup: 'services')
-    stub_most_recent_content_for_taxon(content_id, tagged_content, filter_content_purpose_supergroup: 'news_and_communications')
-    stub_most_recent_content_for_taxon(content_id, tagged_content, filter_content_purpose_supergroup: 'policy_and_engagement')
-    stub_most_recent_content_for_taxon(content_id, tagged_content, filter_content_purpose_supergroup: 'transparency')
+    stub_most_recent_content_for_taxon(content_id, tagged_content_for_news_and_communications, filter_content_purpose_supergroup: 'news_and_communications')
+    stub_most_recent_content_for_taxon(content_id, tagged_content_for_policy_and_engagement, filter_content_purpose_supergroup: 'policy_and_engagement')
+    stub_most_recent_content_for_taxon(content_id, tagged_content_for_transparency, filter_content_purpose_supergroup: 'transparency')
     stub_organisations_for_taxon(content_id, tagged_organisations)
   end
 
@@ -106,10 +106,14 @@ private
   def and_i_can_see_the_guidance_and_regulation_section
     assert page.has_content?('Guidance and regulation')
 
-    tagged_content.each do |item|
+    tagged_content_for_guidance_and_regulation.each do |item|
       assert page.has_link?(item["title"], href: item["link"])
+      assert page.has_content?(item["public_updated_at"])
+      assert page.has_content?(item["content_store_document_type"].humanize)
     end
+
     tagged_content_for_guides.each do |item|
+      assert page.has_link?(item["title"], href: item["link"])
       assert page.has_content?(item["description"])
       assert page.has_content?(item["content_store_document_type"].humanize)
     end
@@ -134,14 +138,15 @@ private
       url: "/search/advanced?" + finder_query_string('services')
     }
     assert page.has_link?(expected_link[:text], href: expected_link[:url])
-    assert page.has_content?("A description")
   end
 
   def and_i_can_see_the_news_and_communications_section
     assert page.has_content?("News and communications")
 
-    tagged_content.each do |item|
+    tagged_content_for_news_and_communications.each do |item|
       assert page.has_link?(item["title"], href: item["link"])
+      assert page.has_content?(item["content_store_document_type"].humanize)
+      assert page.has_content?(item["public_updated_at"])
     end
 
     expected_link = {
@@ -155,8 +160,10 @@ private
   def and_i_can_see_the_policy_and_engagement_section
     assert page.has_content?("Policy and engagement")
 
-    tagged_content.each do |item|
+    tagged_content_for_policy_and_engagement.each do |item|
       assert page.has_link?(item["title"], href: item["link"])
+      assert page.has_content?(item["content_store_document_type"].humanize)
+      assert page.has_content?(item["public_updated_at"])
     end
 
     expected_link = {
@@ -170,8 +177,10 @@ private
   def and_i_can_see_the_transparency_section
     assert page.has_content?("Transparency")
 
-    tagged_content.each do |item|
+    tagged_content_for_transparency.each do |item|
       assert page.has_link?(item["title"], href: item["link"])
+      assert page.has_content?(item["content_store_document_type"].humanize)
+      assert page.has_content?(item["public_updated_at"])
     end
 
     expected_link = {
@@ -254,11 +263,27 @@ private
   end
 
   def tagged_content_for_services
-    @tagged_content_for_services ||= generate_search_results_for_services(5)
+    @tagged_content_for_services ||= generate_search_results(5, "services")
   end
 
   def tagged_content_for_guides
-    @tagged_content_for_guides ||= generate_search_results_for_guides(5)
+    @tagged_content_for_guides ||= generate_search_results(5, "guides")
+  end
+
+  def tagged_content_for_guidance_and_regulation
+    @tagged_content_for_guidance_and_regulation ||= generate_search_results(5)
+  end
+
+  def tagged_content_for_news_and_communications
+    @tagged_content_for_news_and_communications ||= generate_search_results(5, "news_and_communications")
+  end
+
+  def tagged_content_for_policy_and_engagement
+    @tagged_content_for_policy_and_engagement ||= generate_search_results(5, "policy_and_engagement")
+  end
+
+  def tagged_content_for_transparency
+    @tagged_content_for_transparency ||= generate_search_results(5, "transparency")
   end
 
   def finder_query_string(supergroup)
