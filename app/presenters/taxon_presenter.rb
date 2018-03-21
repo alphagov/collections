@@ -9,6 +9,7 @@ class TaxonPresenter
     :child_taxons,
     :live_taxon?,
     :section_content,
+    :organisations,
     to: :taxon
   )
 
@@ -87,5 +88,20 @@ class TaxonPresenter
                        dimension28: child_taxons.size.to_s,
                        dimension29: child_taxons[index].title }
     }
+  end
+
+  def taxon_organisations
+    organisations.map do |organisation|
+      {
+        link: {
+          text: organisation.title,
+          path: organisation.link
+        }
+      }
+    end
+  end
+
+  def show_organisations?
+    organisations.any?
   end
 end
