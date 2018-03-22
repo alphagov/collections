@@ -93,15 +93,19 @@ module RummagerHelpers
     (1..count).map do |number|
       case supergroup
       when "services"
-        rummager_document_for_services("content-item-#{number}")
-      when "guides"
-        rummager_document_for_guides("content-item-#{number}")
+        rummager_document_for_supergroup_section("content-item-#{number}", "local_transaction")
+      when "guidance_and_regulation"
+        if number <= 2
+          rummager_document_for_supergroup_section("content-item-#{number}", "guide")
+        else
+          rummager_document_for_supergroup_section("content-item-#{number}", "guidance")
+        end
       when "news_and_communications"
-        rummager_document_for_news_and_communications("content-item-#{number}")
+        rummager_document_for_supergroup_section("content-item-#{number}", "news_story")
       when "policy_and_engagement"
-        rummager_document_for_policy_and_engagement("content-item-#{number}")
+        rummager_document_for_supergroup_section("content-item-#{number}", "policy_paper")
       when "transparency"
-        rummager_document_for_transparency("content-item-#{number}")
+        rummager_document_for_supergroup_section("content-item-#{number}", "research")
       else
         rummager_document_for_slug("content-item-#{number}")
       end
@@ -149,84 +153,18 @@ module RummagerHelpers
       "_id" => "/#{slug}",
       "document_type" => "edition",
       "content_store_document_type" => "guidance",
-      "organisations" => [{ "title" => "Organisation Title" }]
+      "organisations" => [{ "title" => "Tagged Organisation Title" }]
     }
   end
 
-  def rummager_document_for_services(slug, updated_at = 1.hour.ago)
+  def rummager_document_for_supergroup_section(slug, content_store_document_type)
     {
-      "format" => "local_transaction",
-      "latest_change_note" => "This has changed",
-      "public_timestamp" => updated_at.iso8601,
-      "title" => slug.titleize.humanize.to_s,
-      "link" => "/#{slug}",
-      "index" => "/",
-      "_id" => "/#{slug}",
-      "document_type" => "edition",
-      "content_store_document_type" => "local_transaction",
-      "description" => "A description about #{slug.titleize.humanize}",
-      "organisations" => [{ "title" => "Organisation Title" }]
-    }
-  end
-
-  def rummager_document_for_guides(slug, updated_at = 1.hour.ago)
-    {
-      "format" => "guide",
-      "latest_change_note" => "This has changed",
-      "public_timestamp" => updated_at.iso8601,
-      "title" => slug.titleize.humanize.to_s,
-      "link" => "/#{slug}",
-      "index" => "/",
-      "_id" => "/#{slug}",
-      "document_type" => "edition",
-      "content_store_document_type" => "guide",
-      "description" => "A description about #{slug.titleize.humanize}",
-      "organisations" => [{ "title" => "Organisation Title" }]
-    }
-  end
-
-  def rummager_document_for_news_and_communications(slug, updated_at = 1.hour.ago)
-    {
-      "format" => "news_story",
-      "latest_change_note" => "This has changed",
-      "public_timestamp" => updated_at.iso8601,
-      "title" => slug.titleize.humanize.to_s,
-      "link" => "/#{slug}",
-      "index" => "/",
-      "_id" => "/#{slug}",
-      "document_type" => "edition",
-      "content_store_document_type" => "news_story",
-      "organisations" => [{ "title" => "Organisation Title" }]
-    }
-  end
-
-  def rummager_document_for_policy_and_engagement(slug, updated_at = 1.hour.ago)
-    {
-      "format" => "publication",
-      "latest_change_note" => "This has changed",
-      "public_timestamp" => updated_at.iso8601,
-      "title" => slug.titleize.humanize.to_s,
-      "link" => "/#{slug}",
-      "index" => "/",
-      "_id" => "/#{slug}",
-      "document_type" => "edition",
-      "content_store_document_type" => "policy_paper",
-      "organisations" => [{ "title" => "Organisation Title" }]
-    }
-  end
-
-  def rummager_document_for_transparency(slug, updated_at = 1.hour.ago)
-    {
-      "format" => "publication",
-      "latest_change_note" => "This has changed",
-      "public_timestamp" => updated_at.iso8601,
-      "title" => slug.titleize.humanize.to_s,
-      "link" => "/#{slug}",
-      "index" => "/",
-      "_id" => "/#{slug}",
-      "document_type" => "edition",
-      "content_store_document_type" => "research",
-      "organisations" => [{ "title" => "Organisation Title" }]
+      'title' => slug.titleize.humanize.to_s,
+      'link' => "/#{slug}",
+      'description' => 'A discription about tagged content',
+      'content_store_document_type' => content_store_document_type,
+      'public_timestamp' => 1.hour.ago.iso8601,
+      'organisations' => [{ 'title' => "#{content_store_document_type.humanize} Organisation Title" }]
     }
   end
 
