@@ -97,7 +97,10 @@ describe TaxonPresenter do
       refute taxon_presenter.show_section?("guidance_and_regulation")
     end
 
-    it 'formats guidance and regulation content except guides for document list' do
+    # There are different metadata display rules for guides and all other document types grouped
+    # in the guidance_and_regulation super group.
+    # The following 2 tests test these different rules.
+    it 'formats guidance and regulation content for document list' do
       guidance_content = [
         Document.new(
           title: "16 to 19 funding: advanced maths premium",
