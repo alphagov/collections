@@ -66,6 +66,10 @@ class Taxon
     phase == "live"
   end
 
+  def organisations
+    @organisations ||= TaggedOrganisations.fetch(content_id)
+  end
+
 private
 
   def fetch_tagged_content

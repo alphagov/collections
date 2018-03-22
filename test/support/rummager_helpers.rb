@@ -69,6 +69,26 @@ module RummagerHelpers
     )
   end
 
+  def stub_organisations_for_taxon(content_id, organisations)
+    params = {
+      count: 0,
+      aggregate_organisations: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+      filter_taxons: [content_id]
+    }
+
+    Services.rummager
+    .stubs(:search)
+    .with(params)
+    .returns(
+      'results' => [],
+      'aggregates' => {
+        'organisations' => {
+          'options' => organisations
+        }
+      }
+    )
+  end
+
   def generate_search_results(count)
     (1..count).map do |number|
       rummager_document_for_slug("content-item-#{number}")

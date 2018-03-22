@@ -15,6 +15,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_the_news_and_communications_section
     and_i_can_see_the_policy_and_engagement_section
     and_i_can_see_the_transparency_section
+    and_i_can_see_the_organisations_list
     and_i_can_see_the_sub_topics_grid
   end
 
@@ -75,6 +76,7 @@ private
     stub_most_recent_content_for_taxon(content_id, tagged_content, filter_content_purpose_supergroup: 'news_and_communications')
     stub_most_recent_content_for_taxon(content_id, tagged_content, filter_content_purpose_supergroup: 'policy_and_engagement')
     stub_most_recent_content_for_taxon(content_id, tagged_content, filter_content_purpose_supergroup: 'transparency')
+    stub_organisations_for_taxon(content_id, tagged_organisations)
   end
 
   def when_i_visit_that_taxon
@@ -175,6 +177,14 @@ private
     assert page.has_link?(expected_link[:text], href: expected_link[:url])
   end
 
+  def and_i_can_see_the_organisations_list
+    assert page.has_content?('Organisations')
+
+    tagged_organisations.each do |item|
+      assert page.has_link?(item['value']['title'], href: item['value']['link'])
+    end
+  end
+
   def and_i_can_see_the_sub_topics_grid
     assert page.has_selector?('nav.taxon-page__grid')
 
@@ -217,6 +227,25 @@ private
 
   def tagged_content
     generate_search_results(5)
+  end
+
+  def tagged_organisations
+    [
+      {
+        'value' => {
+          'title' => 'Department for Education',
+          'link' => '/government/organisations/department-for-education',
+          'organisation_state' => 'live'
+        }
+      },
+      {
+        'value' => {
+          'title' => 'Ofsted',
+          'link' => '/government/organisations/ofsted',
+          'organisation_state' => 'live'
+        }
+      }
+    ]
   end
 
   def finder_query_string(supergroup)
