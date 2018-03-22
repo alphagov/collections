@@ -11,6 +11,7 @@ class RummagerSearch
   def documents
     @_documents ||= search_result["results"].map do |result|
       timestamp = result["public_timestamp"].present? ? Time.parse(result["public_timestamp"]) : nil
+      organisations = tagged_content_organisations(result)
       Document.new(
         title: result["title"],
         description: result["description"],
@@ -19,9 +20,17 @@ class RummagerSearch
         change_note: result["latest_change_note"],
         format: result["format"],
         document_collections: result["document_collections"],
-        content_store_document_type: result['content_store_document_type']
+        content_store_document_type: result['content_store_document_type'],
+        organisations: organisations
       )
     end
+  end
+
+  def tagged_content_organisations(result)
+    return nil if result['organisations'].blank?
+
+    organisations = result['organisations'].map { |org| org['title'] }
+    organisations.to_sentence
   end
 
   def total

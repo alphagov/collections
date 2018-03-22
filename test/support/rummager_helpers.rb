@@ -89,7 +89,7 @@ module RummagerHelpers
     )
   end
 
-  def generate_search_results(count, supergroup="default")
+  def generate_search_results(count, supergroup = "default")
     (1..count).map do |number|
       case supergroup
       when "services"
@@ -148,7 +148,8 @@ module RummagerHelpers
       "index" => "/",
       "_id" => "/#{slug}",
       "document_type" => "edition",
-      "content_store_document_type" => "guidance"
+      "content_store_document_type" => "guidance",
+      "organisations" => [{ "title" => "Organisation Title" }]
     }
   end
 
@@ -163,7 +164,8 @@ module RummagerHelpers
       "_id" => "/#{slug}",
       "document_type" => "edition",
       "content_store_document_type" => "local_transaction",
-      "description" => "A description about #{slug.titleize.humanize}"
+      "description" => "A description about #{slug.titleize.humanize}",
+      "organisations" => [{ "title" => "Organisation Title" }]
     }
   end
 
@@ -178,7 +180,8 @@ module RummagerHelpers
       "_id" => "/#{slug}",
       "document_type" => "edition",
       "content_store_document_type" => "guide",
-      "description" => "A description about #{slug.titleize.humanize}"
+      "description" => "A description about #{slug.titleize.humanize}",
+      "organisations" => [{ "title" => "Organisation Title" }]
     }
   end
 
@@ -193,6 +196,7 @@ module RummagerHelpers
       "_id" => "/#{slug}",
       "document_type" => "edition",
       "content_store_document_type" => "news_story",
+      "organisations" => [{ "title" => "Organisation Title" }]
     }
   end
 
@@ -207,6 +211,7 @@ module RummagerHelpers
       "_id" => "/#{slug}",
       "document_type" => "edition",
       "content_store_document_type" => "policy_paper",
+      "organisations" => [{ "title" => "Organisation Title" }]
     }
   end
 
@@ -221,6 +226,7 @@ module RummagerHelpers
       "_id" => "/#{slug}",
       "document_type" => "edition",
       "content_store_document_type" => "research",
+      "organisations" => [{ "title" => "Organisation Title" }]
     }
   end
 

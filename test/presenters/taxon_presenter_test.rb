@@ -104,7 +104,8 @@ describe TaxonPresenter do
           description: "The advanced maths premium is funding for additional students",
           public_updated_at: "2018-02-28T08:01:00.000+00:00",
           base_path: "/guidance/16-to-19-funding-advanced-maths-premium",
-          content_store_document_type: "detailed_guide"
+          content_store_document_type: "detailed_guide",
+          organisations: 'Department for Education and Ofsted'
         )
       ]
 
@@ -116,6 +117,7 @@ describe TaxonPresenter do
           },
           metadata: {
             public_updated_at: "2018-02-28T08:01:00.000+00:00",
+            organisations: 'Department for Education and Ofsted',
             document_type: "Detailed guide"
           },
         }
@@ -135,7 +137,8 @@ describe TaxonPresenter do
           description: "What happens when a child is taken into care - who is responsible for what, care proceedings, care orders, going to court and the role of Cafcass",
           public_updated_at: "2018-02-28T08:01:00.000+00:00",
           base_path: "/if-your-child-is-taken-into-care",
-          content_store_document_type: "guide"
+          content_store_document_type: "guide",
+          organisations: 'Department for Education'
         )
       ]
 
@@ -182,7 +185,8 @@ describe TaxonPresenter do
           description: 'Register to be added to the directory of schools financial health checks suppliers.',
           public_updated_at: '2018-02-28T08:01:00.000+00:00',
           base_path: '/publications/schools-financial-health-checks-supplier-registration-form',
-          content_store_document_type: 'form'
+          content_store_document_type: 'form',
+          organisations: 'Department for Education and Ofsted'
         )
       ]
 
@@ -211,7 +215,8 @@ describe TaxonPresenter do
           title: 'Review of Children in Need',
           public_updated_at: '2018-02-28T08:01:00.000+00:00',
           base_path: '/government/publications/review-of-children-in-need',
-          content_store_document_type: 'policy_paper'
+          content_store_document_type: 'policy_paper',
+          organisations: 'Department for Education'
         )
       ]
 
@@ -223,6 +228,7 @@ describe TaxonPresenter do
           },
           metadata: {
             public_updated_at: '2018-02-28T08:01:00.000+00:00',
+            organisations: 'Department for Education',
             document_type: 'Policy paper'
           },
         }
@@ -243,7 +249,8 @@ describe TaxonPresenter do
           title: 'Education Secretary tours the Midlands and North of England',
           public_updated_at: '2018-02-28T08:01:00.000+00:00',
           base_path: '/government/news/education-secretary-tours-the-midlands-and-north-of-england',
-          content_store_document_type: 'news_story'
+          content_store_document_type: 'news_story',
+          organisations: 'Department for Education and Ofsted'
         )
       ]
 
@@ -255,6 +262,7 @@ describe TaxonPresenter do
           },
           metadata: {
             public_updated_at: '2018-02-28T08:01:00.000+00:00',
+            organisations: 'Department for Education and Ofsted',
             document_type: 'News story'
           },
         }
@@ -275,7 +283,8 @@ describe TaxonPresenter do
           title: 'Race Disparity Audit',
           public_updated_at: '2018-02-28T08:01:00.000+00:00',
           base_path: '/government/publications/race-disparity-audit',
-          content_store_document_type: 'research'
+          content_store_document_type: 'research',
+          organisations: 'Department for Education'
         )
       ]
 
@@ -287,6 +296,7 @@ describe TaxonPresenter do
           },
           metadata: {
             public_updated_at: '2018-02-28T08:01:00.000+00:00',
+            organisations: 'Department for Education',
             document_type: 'Research'
           },
         }

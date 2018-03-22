@@ -110,6 +110,7 @@ private
       assert page.has_link?(item["title"], href: item["link"])
       assert page.has_content?(item["public_updated_at"])
       assert page.has_content?(item["content_store_document_type"].humanize)
+      assert page.has_content?(expected_organisations(item))
     end
 
     tagged_content_for_guides.each do |item|
@@ -147,6 +148,7 @@ private
       assert page.has_link?(item["title"], href: item["link"])
       assert page.has_content?(item["content_store_document_type"].humanize)
       assert page.has_content?(item["public_updated_at"])
+      assert page.has_content?(expected_organisations(item))
     end
 
     expected_link = {
@@ -164,6 +166,7 @@ private
       assert page.has_link?(item["title"], href: item["link"])
       assert page.has_content?(item["content_store_document_type"].humanize)
       assert page.has_content?(item["public_updated_at"])
+      assert page.has_content?(expected_organisations(item))
     end
 
     expected_link = {
@@ -181,6 +184,7 @@ private
       assert page.has_link?(item["title"], href: item["link"])
       assert page.has_content?(item["content_store_document_type"].humanize)
       assert page.has_content?(item["public_updated_at"])
+      assert page.has_content?(expected_organisations(item))
     end
 
     expected_link = {
@@ -291,5 +295,11 @@ private
       topic: @content_item['base_path'],
       group: supergroup
     }.to_query
+  end
+
+  def expected_organisations(content)
+    content['organisations']
+      .map { |org| org['title'] }
+      .to_sentence
   end
 end

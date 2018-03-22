@@ -11,7 +11,8 @@ class Document
     :change_note,
     :format,
     :document_collections,
-    :content_store_document_type
+    :content_store_document_type,
+    :organisations
   )
 
   def document_collection?
