@@ -49,6 +49,7 @@ class TaxonPresenter
         },
         metadata: {
           public_updated_at: document.public_updated_at,
+          organisations: document.organisations,
           document_type: document.content_store_document_type.humanize
         },
       }
@@ -57,7 +58,7 @@ class TaxonPresenter
         data[:link][:description] = document.description
       end
       data.delete(:metadata) if supergroup == "services"
-      data[:metadata].delete(:public_updated_at) if document.content_store_document_type == "guide"
+      data[:metadata].except!(:public_updated_at, :organisations) if document.content_store_document_type == "guide"
       data
     end
   end
