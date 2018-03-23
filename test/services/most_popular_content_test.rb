@@ -2,6 +2,8 @@ require 'test_helper'
 require './test/support/custom_assertions.rb'
 
 describe MostPopularContent do
+  include RummagerFields
+
   def most_popular_content
     @most_popular_content ||= MostPopularContent.new(
       content_id: taxon_content_id,
@@ -41,12 +43,7 @@ describe MostPopularContent do
     end
 
     it 'requests a limited number of fields' do
-      fields = %w(title
-                  link
-                  description
-                  content_store_document_type
-                  public_timestamp
-                  organisations)
+      fields = RummagerFields::TAXON_SEARCH_FIELDS
 
       assert_includes_params(fields: fields) do
         most_popular_content.fetch

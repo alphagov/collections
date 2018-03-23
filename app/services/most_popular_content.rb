@@ -1,4 +1,6 @@
 class MostPopularContent
+  include RummagerFields
+
   attr_reader :content_id, :filter_content_purpose_supergroup, :number_of_links
 
   def initialize(content_id:, filter_content_purpose_supergroup:, number_of_links: 5)
@@ -19,16 +21,10 @@ class MostPopularContent
 private
 
   def search_response
-    search_fields = %w(title
-                       link
-                       description
-                       content_store_document_type
-                       public_timestamp
-                       organisations)
     params = {
       start: 0,
       count: number_of_links,
-      fields: search_fields,
+      fields: RummagerFields::TAXON_SEARCH_FIELDS,
       filter_taxons: Array(content_id),
       order: '-popularity',
     }
