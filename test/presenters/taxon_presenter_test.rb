@@ -97,6 +97,9 @@ describe TaxonPresenter do
       refute taxon_presenter.show_section?("guidance_and_regulation")
     end
 
+    # There are different metadata display rules for guides and all other document types grouped
+    # in the guidance_and_regulation super group.
+    # The following 2 tests test these different rules.
     it 'formats guidance and regulation content for document list' do
       guidance_content = [
         Document.new(
@@ -104,7 +107,8 @@ describe TaxonPresenter do
           description: "The advanced maths premium is funding for additional students",
           public_updated_at: "2018-02-28T08:01:00.000+00:00",
           base_path: "/guidance/16-to-19-funding-advanced-maths-premium",
-          content_store_document_type: "detailed_guide"
+          content_store_document_type: "detailed_guide",
+          organisations: 'Department for Education and Ofsted'
         )
       ]
 
@@ -116,6 +120,7 @@ describe TaxonPresenter do
           },
           metadata: {
             public_updated_at: "2018-02-28T08:01:00.000+00:00",
+            organisations: 'Department for Education and Ofsted',
             document_type: "Detailed guide"
           },
         }
@@ -123,6 +128,38 @@ describe TaxonPresenter do
 
       taxon = mock
       taxon.stubs(:section_content).returns(guidance_content)
+      taxon_presenter = TaxonPresenter.new(taxon)
+
+      assert_equal expected, taxon_presenter.section_document_list("guidance_and_regulation")
+    end
+
+    it 'formats guides content for document list' do
+      guide_content = [
+        Document.new(
+          title: "If your child is taken into care",
+          description: "What happens when a child is taken into care - who is responsible for what, care proceedings, care orders, going to court and the role of Cafcass",
+          public_updated_at: "2018-02-28T08:01:00.000+00:00",
+          base_path: "/if-your-child-is-taken-into-care",
+          content_store_document_type: "guide",
+          organisations: 'Department for Education'
+        )
+      ]
+
+      expected = [
+        {
+          link: {
+            text: "If your child is taken into care",
+            path: "/if-your-child-is-taken-into-care",
+            description: "What happens when a child is taken into care - who is responsible for what, care proceedings, care orders, going to court and the role of Cafcass",
+          },
+          metadata: {
+            document_type: "Guide"
+          },
+        }
+      ]
+
+      taxon = mock
+      taxon.stubs(:section_content).returns(guide_content)
       taxon_presenter = TaxonPresenter.new(taxon)
 
       assert_equal expected, taxon_presenter.section_document_list("guidance_and_regulation")
@@ -140,6 +177,139 @@ describe TaxonPresenter do
       }
 
       assert_equal expected_link_details, taxon_presenter.section_finder_link("guidance_and_regulation")
+    end
+  end
+
+  describe 'services_section' do
+    it 'formats services content for document list' do
+      services_content = [
+        Document.new(
+          title: 'Register as a schools financial health checks supplier',
+          description: 'Register to be added to the directory of schools financial health checks suppliers.',
+          public_updated_at: '2018-02-28T08:01:00.000+00:00',
+          base_path: '/publications/schools-financial-health-checks-supplier-registration-form',
+          content_store_document_type: 'form',
+          organisations: 'Department for Education and Ofsted'
+        )
+      ]
+
+      expected = [
+        {
+          link: {
+            text: 'Register as a schools financial health checks supplier',
+            path: '/publications/schools-financial-health-checks-supplier-registration-form',
+            description: 'Register to be added to the directory of schools financial health checks suppliers.',
+          }
+        }
+      ]
+
+      taxon = mock
+      taxon.stubs(:section_content).returns(services_content)
+      taxon_presenter = TaxonPresenter.new(taxon)
+
+      assert_equal expected, taxon_presenter.section_document_list("services")
+    end
+  end
+
+  describe 'policy_and_engagement_section' do
+    it 'formats policy and engagement content for document list' do
+      policy_and_engagement_content = [
+        Document.new(
+          title: 'Review of Children in Need',
+          public_updated_at: '2018-02-28T08:01:00.000+00:00',
+          base_path: '/government/publications/review-of-children-in-need',
+          content_store_document_type: 'policy_paper',
+          organisations: 'Department for Education'
+        )
+      ]
+
+      expected = [
+        {
+          link: {
+            text: 'Review of Children in Need',
+            path: '/government/publications/review-of-children-in-need'
+          },
+          metadata: {
+            public_updated_at: '2018-02-28T08:01:00.000+00:00',
+            organisations: 'Department for Education',
+            document_type: 'Policy paper'
+          },
+        }
+      ]
+
+      taxon = mock
+      taxon.stubs(:section_content).returns(policy_and_engagement_content)
+      taxon_presenter = TaxonPresenter.new(taxon)
+
+      assert_equal expected, taxon_presenter.section_document_list('policy_and_engagement')
+    end
+  end
+
+  describe 'news_and_communications_section' do
+    it 'formats news and communications content for document list' do
+      news_and_communications_content = [
+        Document.new(
+          title: 'Education Secretary tours the Midlands and North of England',
+          public_updated_at: '2018-02-28T08:01:00.000+00:00',
+          base_path: '/government/news/education-secretary-tours-the-midlands-and-north-of-england',
+          content_store_document_type: 'news_story',
+          organisations: 'Department for Education and Ofsted'
+        )
+      ]
+
+      expected = [
+        {
+          link: {
+            text: 'Education Secretary tours the Midlands and North of England',
+            path: '/government/news/education-secretary-tours-the-midlands-and-north-of-england'
+          },
+          metadata: {
+            public_updated_at: '2018-02-28T08:01:00.000+00:00',
+            organisations: 'Department for Education and Ofsted',
+            document_type: 'News story'
+          },
+        }
+      ]
+
+      taxon = mock
+      taxon.stubs(:section_content).returns(news_and_communications_content)
+      taxon_presenter = TaxonPresenter.new(taxon)
+
+      assert_equal expected, taxon_presenter.section_document_list('news_and_communications')
+    end
+  end
+
+  describe 'transparency_section' do
+    it 'formats transparency content for document list' do
+      transparency_content = [
+        Document.new(
+          title: 'Race Disparity Audit',
+          public_updated_at: '2018-02-28T08:01:00.000+00:00',
+          base_path: '/government/publications/race-disparity-audit',
+          content_store_document_type: 'research',
+          organisations: 'Department for Education'
+        )
+      ]
+
+      expected = [
+        {
+          link: {
+            text: 'Race Disparity Audit',
+            path: '/government/publications/race-disparity-audit'
+          },
+          metadata: {
+            public_updated_at: '2018-02-28T08:01:00.000+00:00',
+            organisations: 'Department for Education',
+            document_type: 'Research'
+          },
+        }
+      ]
+
+      taxon = mock
+      taxon.stubs(:section_content).returns(transparency_content)
+      taxon_presenter = TaxonPresenter.new(taxon)
+
+      assert_equal expected, taxon_presenter.section_document_list('transparency')
     end
   end
 

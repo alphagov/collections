@@ -89,9 +89,26 @@ module RummagerHelpers
     )
   end
 
-  def generate_search_results(count)
+  def generate_search_results(count, supergroup = "default")
     (1..count).map do |number|
-      rummager_document_for_slug("content-item-#{number}")
+      case supergroup
+      when "services"
+        rummager_document_for_supergroup_section("content-item-#{number}", "local_transaction")
+      when "guidance_and_regulation"
+        if number <= 2
+          rummager_document_for_supergroup_section("content-item-#{number}", "guide")
+        else
+          rummager_document_for_supergroup_section("content-item-#{number}", "guidance")
+        end
+      when "news_and_communications"
+        rummager_document_for_supergroup_section("content-item-#{number}", "news_story")
+      when "policy_and_engagement"
+        rummager_document_for_supergroup_section("content-item-#{number}", "policy_paper")
+      when "transparency"
+        rummager_document_for_supergroup_section("content-item-#{number}", "research")
+      else
+        rummager_document_for_slug("content-item-#{number}")
+      end
     end
   end
 
@@ -135,7 +152,19 @@ module RummagerHelpers
       "index" => "/",
       "_id" => "/#{slug}",
       "document_type" => "edition",
-      "content_store_document_type" => "guidance"
+      "content_store_document_type" => "guidance",
+      "organisations" => [{ "title" => "Tagged Organisation Title" }]
+    }
+  end
+
+  def rummager_document_for_supergroup_section(slug, content_store_document_type)
+    {
+      'title' => slug.titleize.humanize.to_s,
+      'link' => "/#{slug}",
+      'description' => 'A discription about tagged content',
+      'content_store_document_type' => content_store_document_type,
+      'public_timestamp' => 1.hour.ago.iso8601,
+      'organisations' => [{ 'title' => "#{content_store_document_type.humanize} Organisation Title" }]
     }
   end
 

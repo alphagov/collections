@@ -42,17 +42,36 @@ class TaxonPresenter
 
   def section_document_list(supergroup)
     section_content(supergroup).each.map do |document|
-      {
+      data = {
         link: {
           text: document.title,
           path: document.base_path
         },
         metadata: {
           public_updated_at: document.public_updated_at,
+          organisations: document.organisations,
           document_type: document.content_store_document_type.humanize
-        },
+        }
       }
+
+      data[:link][:description] = document.description if add_description?(supergroup, document)
+      data.delete(:metadata) if services?(supergroup)
+      data[:metadata].except!(:public_updated_at, :organisations) if guide?(document)
+
+      data
     end
+  end
+
+  def add_description?(supergroup, document)
+    services?(supergroup) || guide?(document)
+  end
+
+  def services?(supergroup)
+    supergroup == 'services'
+  end
+
+  def guide?(document)
+    document.content_store_document_type == 'guide'
   end
 
   def show_section?(supergroup)
