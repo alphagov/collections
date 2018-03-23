@@ -1,6 +1,8 @@
 require "test_helper"
 
 describe MostRecentContent do
+  include RummagerFields
+
   def most_recent_content
     @most_recent_content ||= MostRecentContent.new(
       content_id: taxon_content_id,
@@ -44,11 +46,7 @@ describe MostRecentContent do
   end
 
   it "requests a limited number of fields" do
-    fields = %w(title
-                link
-                content_store_document_type
-                public_timestamp
-                organisations)
+    fields = RummagerFields::TAXON_SEARCH_FIELDS
 
     assert_includes_params(fields: fields) do
       most_recent_content.fetch

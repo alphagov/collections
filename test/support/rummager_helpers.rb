@@ -1,4 +1,6 @@
 module RummagerHelpers
+  include RummagerFields
+
   def stub_content_for_taxon(content_ids, results, filter_navigation_document_supertype: 'guidance')
     params = {
       start: 0,
@@ -45,11 +47,7 @@ module RummagerHelpers
   end
 
   def stub_most_recent_content_for_taxon(content_id, results, filter_content_purpose_supergroup: 'news_and_communication')
-    fields = %w(title
-                link
-                content_store_document_type
-                public_timestamp
-                organisations)
+    fields = RummagerFields::TAXON_SEARCH_FIELDS
 
     params = {
       start: 0,
