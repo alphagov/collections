@@ -11,7 +11,7 @@ gem 'plek', '~> 2.1.1'
 gem 'rails', '5.1.5'
 gem 'sass-rails', '~> 5.0.3'
 gem 'slimmer', '~> 12.0.0'
-gem 'uglifier', '~> 4.1.6'
+gem 'uglifier', '~> 4.1.8'
 
 group :test do
   gem 'capybara'
