@@ -6,118 +6,51 @@ include TaxonHelpers
 describe SupergroupSections::Sections do
   let(:taxon_id) { '12345' }
   let(:base_path) { '/base/path' }
-  let(:sections) { SupergroupSections::Sections.new(taxon_id, base_path) }
-  let(:policy_supergroup) { PolicyAndEngagement.new }
-  let(:services_supergroup) { Service.new }
-  let(:guidance_and_regulation_supergroup) { GuidanceAndRegulations.new }
-  let(:news_and_communications_supergroup) { NewsAndCommunications.new }
-  let(:transparency_supergroup) { Transparency.new }
+  let(:supergroup_sections) { SupergroupSections::Sections.new(taxon_id, base_path) }
 
-  describe '#section_document_list' do
-    # There are3 different metadata display rules for supergroups.
-    # The following 3 tests test these different rules.
-    it 'returns a list for a supergroup' do
-      stub_tagged_content_search(policy_supergroup, 'policy_paper')
+  describe '#sections' do
+    before(:all) do
+      Supergroups::PolicyAndEngagement.any_instance.stubs(:tagged_content).with(taxon_id).returns(section_tagged_content_list('case_study'))
+      Supergroups::Services.any_instance.stubs(:tagged_content).with(taxon_id).returns(section_tagged_content_list('form'))
+      Supergroups::GuidanceAndRegulation.any_instance.stubs(:tagged_content).with(taxon_id).returns(section_tagged_content_list('guide'))
+      Supergroups::NewsAndCommunications.any_instance.stubs(:tagged_content).with(taxon_id).returns([])
+      Supergroups::Transparency.any_instance.stubs(:tagged_content).with(taxon_id).returns([])
+      @sections = supergroup_sections.sections
+    end
 
-      expected = [
-        {
-          link: {
-            text: 'Tagged Content Title',
-            path: '/government/tagged/content'
-          },
-          metadata: {
-            public_updated_at: '2018-02-28T08:01:00.000+00:00',
-            organisations: 'Tagged Content Organisation',
-            document_type: 'Policy paper'
-          }
-        }
+    it 'returns a list of sections with tagged content' do
+      assert 5, @sections.length
+    end
+
+    it 'returns a list of supergroup details' do
+      @sections.each do |section|
+        assert_equal(%i(title documents see_more_link show_section), section.keys)
+      end
+    end
+
+    it 'each section has a title' do
+      expected_titles = [
+        'Services',
+        'Guidance and regulation',
+        'News and communications',
+        'Policy and engagement',
+        'Transparency'
       ]
 
-      assert_equal expected, sections.section_document_list(policy_supergroup)
+      section_titles = @sections.map { |section| section[:title] }
+
+      section_titles.map do |title|
+        assert_includes expected_titles, title
+      end
+      assert expected_titles, section_titles
     end
 
-    it 'returns document list for services supergroup' do
-      stub_tagged_content_search(services_supergroup, 'form')
+    it 'knows if each sections should be shown or not' do
+      shown_sections = @sections.select { |section| section[:show_section] == true }
+      not_show_sections = @sections.select { |section| section[:show_section] == false }
 
-      expected = [
-        {
-          link: {
-            text: 'Tagged Content Title',
-            path: '/government/tagged/content',
-            description: 'Description of tagged content'
-          }
-        }
-      ]
-
-      assert_equal expected, sections.section_document_list(services_supergroup)
+      assert 3, shown_sections.length
+      assert 2, not_show_sections.length
     end
-
-    it 'returns document list for guides' do
-      stub_tagged_content_search(guidance_and_regulation_supergroup, 'guide')
-
-      expected = [
-        {
-          link: {
-            text: 'Tagged Content Title',
-            path: '/government/tagged/content',
-            description: 'Description of tagged content',
-          },
-          metadata: {
-            document_type: 'Guide'
-          }
-        }
-      ]
-
-      assert_equal expected, sections.section_document_list(guidance_and_regulation_supergroup)
-    end
-  end
-
-  describe '#section_finder_link' do
-    it 'returns info for link to finder page' do
-      expected = {
-        text: 'See all guidance and regulation',
-        url: '/search/advanced?group=guidance_and_regulation&topic=%2Fbase%2Fpath'
-      }
-
-      assert_equal expected, sections.section_finder_link(guidance_and_regulation_supergroup.name)
-    end
-  end
-
-  describe '#show_section?' do
-    it 'returns true when section has tagged content' do
-      policy_supergroup
-        .stubs(:content)
-        .returns(tagged_content('policy_paper'))
-
-      assert sections.show_section?(policy_supergroup)
-    end
-
-    it 'returns false when section has no tagged content' do
-      policy_supergroup
-        .stubs(:content)
-        .returns([])
-
-      refute sections.show_section?(policy_supergroup)
-    end
-  end
-
-  def stub_tagged_content_search(supergroup, doc_type)
-    supergroup
-      .stubs(:tagged_content)
-      .with(taxon_id)
-      .returns(tagged_content(doc_type))
-  end
-
-  def tagged_content(doc_type)
-    [
-      Document.new(
-        title: 'Tagged Content Title',
-        description: 'Description of tagged content',
-        public_updated_at: '2018-02-28T08:01:00.000+00:00',
-        base_path: '/government/tagged/content',
-        content_store_document_type: doc_type,
-        organisations: 'Tagged Content Organisation'
-      )
-    ]
   end
 end
