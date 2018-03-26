@@ -1,0 +1,10 @@
+.app-c-email-link {
+  @include bold-19;
+}
+
+.app-c-email-link__icon {
+  position: relative;
+  float: left;
+  margin-right: .5em;
+  top: 2px;
+}

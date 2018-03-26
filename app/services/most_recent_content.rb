@@ -1,4 +1,4 @@
-class MostPopularContent
+class MostRecentContent
   include RummagerFields
 
   attr_reader :content_id, :filter_content_purpose_supergroup, :number_of_links
@@ -14,8 +14,7 @@ class MostPopularContent
   end
 
   def fetch
-    search_response
-      .documents
+    search_response.documents
   end
 
 private
@@ -25,8 +24,8 @@ private
       start: 0,
       count: number_of_links,
       fields: RummagerFields::TAXON_SEARCH_FIELDS,
-      filter_taxons: Array(content_id),
-      order: '-popularity',
+      filter_taxons: [content_id],
+      order: '-public_timestamp',
     }
     params[:filter_content_purpose_supergroup] = filter_content_purpose_supergroup if filter_content_purpose_supergroup.present?
 

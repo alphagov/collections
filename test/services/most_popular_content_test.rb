@@ -2,10 +2,12 @@ require 'test_helper'
 require './test/support/custom_assertions.rb'
 
 describe MostPopularContent do
+  include RummagerFields
+
   def most_popular_content
     @most_popular_content ||= MostPopularContent.new(
       content_id: taxon_content_id,
-      filter_by_document_supertype: 'guidance'
+      filter_content_purpose_supergroup: 'guidance_and_regulation'
     )
   end
 
@@ -14,7 +16,7 @@ describe MostPopularContent do
   end
 
   describe '#fetch' do
-    it 'returns the results from search, sorted by title' do
+    it 'returns the results from search' do
       search_results = {
         'results' => [
           { 'title' => 'Doc 1' },
@@ -26,8 +28,6 @@ describe MostPopularContent do
 
       results = most_popular_content.fetch
       assert_equal(results.count, 2)
-      assert_equal(results.first.title, 'A Doc 2')
-      assert_equal(results.last.title, 'Doc 1')
     end
 
     it 'starts from the first page' do
@@ -43,7 +43,9 @@ describe MostPopularContent do
     end
 
     it 'requests a limited number of fields' do
-      assert_includes_params(fields: %w(title link)) do
+      fields = RummagerFields::TAXON_SEARCH_FIELDS
+
+      assert_includes_params(fields: fields) do
         most_popular_content.fetch
       end
     end
@@ -54,14 +56,14 @@ describe MostPopularContent do
       end
     end
 
-    it 'scopes the results to the taxonomy tree under the given taxon' do
-      assert_includes_params(filter_part_of_taxonomy_tree: taxon_content_id) do
+    it 'scopes the results to the current taxon' do
+      assert_includes_params(filter_taxons: Array(taxon_content_id)) do
         most_popular_content.fetch
       end
     end
 
-    it 'filters content by the requested filter_by_document_supertype only' do
-      assert_includes_params(filter_navigation_document_supertype: 'guidance') do
+    it 'filters content by the requested filter_content_purpose_supergroup only' do
+      assert_includes_params(filter_content_purpose_supergroup: 'guidance_and_regulation') do
         most_popular_content.fetch
       end
     end

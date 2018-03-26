@@ -1,6 +1,5 @@
 class Taxon
   attr_reader :content_item
-  attr_accessor :can_subscribe, :tagged_content
 
   delegate(
     :content_id,
@@ -21,8 +20,19 @@ class Taxon
     @tagged_content ||= fetch_tagged_content
   end
 
-  def most_popular_content
-    @most_popular_content ||= fetch_most_popular_content
+  def section_content(supergroup)
+    case supergroup
+    when "guidance_and_regulation"
+      guidance_and_regulation_content
+    when "services"
+      services_content
+    when "news_and_communications"
+      news_and_communications_content
+    when "policy_and_engagement"
+      policy_and_engagement_content
+    when "transparency"
+      transparency_content
+    end
   end
 
   def self.find(base_path)
@@ -38,24 +48,8 @@ class Taxon
     end
   end
 
-  def parent?
-    linked_items('parent_taxons').present?
-  end
-
   def children?
     linked_items('child_taxons').present?
-  end
-
-  def grandchildren?
-    return false unless children?
-
-    # The Publishing API doesn't expand child taxons, which means
-    # we can't use the child_taxons method for each of the child
-    # taxons of this taxon. We have to do an API call to know if
-    # the children also have children.
-    child_taxons.any? do |child_taxon|
-      Taxon.find(child_taxon.base_path).children?
-    end
   end
 
   def associated_taxons
@@ -68,30 +62,50 @@ class Taxon
     Taxon.new(content_item.merge(to_merge))
   end
 
-  def can_subscribe?
-    return @can_subscribe if defined?(@can_subscribe)
-
-    true
-  end
-
   def live_taxon?
     phase == "live"
   end
 
-private
+  def organisations
+    @organisations ||= TaggedOrganisations.fetch(content_id)
+  end
 
-  GUIDANCE = 'guidance'.freeze
+private
 
   def fetch_tagged_content
     taxon_content_ids = [content_id] + associated_taxons.map(&:content_id)
     TaggedContent.fetch(
       taxon_content_ids,
-      filter_by_document_supertype: GUIDANCE,
+      filter_by_document_supertype: 'guidance',
       validate: true
     )
   end
 
-  def fetch_most_popular_content
-    MostPopularContent.fetch(content_id: content_id, filter_by_document_supertype: GUIDANCE)
+  def fetch_most_popular_content(content_purpose_supergroup = 'guidance_and_regulation')
+    MostPopularContent.fetch(content_id: content_id, filter_content_purpose_supergroup: content_purpose_supergroup)
+  end
+
+  def services_content
+    @services_content ||= fetch_most_popular_content('services')
+  end
+
+  def guidance_and_regulation_content
+    @guidance_and_regulation_content ||= fetch_most_popular_content('guidance_and_regulation')
+  end
+
+  def fetch_most_recent_content(content_purpose_supergroup = 'news_and_communications')
+    MostRecentContent.fetch(content_id: content_id, filter_content_purpose_supergroup: content_purpose_supergroup)
+  end
+
+  def news_and_communications_content
+    @news_and_communications_content ||= fetch_most_recent_content('news_and_communications')
+  end
+
+  def policy_and_engagement_content
+    @policy_and_engagement_content ||= fetch_most_recent_content('policy_and_engagement')
+  end
+
+  def transparency_content
+    @transparency_content ||= fetch_most_recent_content('transparency')
   end
 end
