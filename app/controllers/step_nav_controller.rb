@@ -6,7 +6,6 @@ class StepNavController < ApplicationController
 
     render :show, locals: {
       content_item: step_nav,
-      navigation_helpers: @navigation_helpers,
       step_nav: step_nav.content
     }
   end
