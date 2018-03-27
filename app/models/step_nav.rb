@@ -19,7 +19,7 @@ class StepNav
     details["step_by_step_nav"]["introduction"]
   end
 
-  def content
+  def payload_for_component
     details["step_by_step_nav"].deep_symbolize_keys
   end
 
