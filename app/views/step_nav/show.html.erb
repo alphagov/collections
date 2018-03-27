@@ -1,6 +1,7 @@
 <% content_for :title, content_item.title %>
 
 <% content_for :meta_tags do %>
+  <meta name="govuk:content-id" content="<%= content_item.content_id %>">
   <meta name="description" content="<%= content_item.description %>">
 <% end %>
 
