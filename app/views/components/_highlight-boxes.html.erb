@@ -1,0 +1,31 @@
+<%
+  items ||= []
+  column_width ||= "third"
+  inverse ||= false
+  subtle_boxes ||= false
+  inverse_class = inverse ? "app-c-highlight-boxes--inverse" : ""
+  subtle_box_class = subtle_boxes ? "app-c-highlight-boxes--subtle" : ""
+%>
+<% if items.any? %>
+  <ol class="app-c-highlight-boxes <%= subtle_box_class %> <%= inverse_class %>">
+    <% items.each_with_index do |item, index| %>
+      <li class="app-c-highlight-boxes__item app-c-highlight-boxes__item--<%= column_width %>">
+        <div class="app-c-highlight-boxes__box">
+        <%=
+          link_to(
+            item[:text],
+            item[:path],
+            data: item[:data_attributes],
+            class: "app-c-highlight-boxes__link"
+          )
+        %>
+        <% if item[:description] %>
+          <p class="app-c-highlight-boxes__description">
+            <%= item[:description] %>
+          </p>
+        <% end %>
+      </div>
+      </li>
+    <% end %>
+  </ol>
+<% end %>
