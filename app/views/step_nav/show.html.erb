@@ -1,22 +1,22 @@
-<% content_for :title, content_item.title %>
+<% content_for :title, step_by_step.title %>
 
 <% content_for :meta_tags do %>
-  <meta name="govuk:content-id" content="<%= content_item.content_id %>">
-  <meta name="description" content="<%= content_item.description %>">
+  <meta name="govuk:content-id" content="<%= step_by_step.content_id %>">
+  <meta name="description" content="<%= step_by_step.description %>">
 <% end %>
 
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_component/title',
-        title: content_item.title,
+        title: step_by_step.title,
         average_title_length: 'long',
         margin_bottom: 0 %>
 
-    <div class="govuk-govspeak"><%= raw(content_item.introduction) %></div>
+    <div class="govuk-govspeak"><%= raw(step_by_step.introduction) %></div>
   </div>
 </div>
 <div class="grid-row">
   <div class="column-two-thirds">
-    <%= render "govuk_publishing_components/components/step_by_step_nav", content_item.payload_for_component %>
+    <%= render "govuk_publishing_components/components/step_by_step_nav", step_by_step.payload_for_component %>
   </div>
 </div>

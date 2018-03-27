@@ -1,11 +1,11 @@
 class StepNavController < ApplicationController
   def show
-    step_nav = StepNav.find!(request.path)
+    step_by_step = StepNav.find!(request.path)
 
-    setup_content_item_and_navigation_helpers(step_nav)
+    setup_content_item_and_navigation_helpers(step_by_step)
 
     render :show, locals: {
-      content_item: step_nav,
+      step_by_step: step_by_step,
     }
   end
 end
