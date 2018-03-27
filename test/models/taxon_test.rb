@@ -54,61 +54,12 @@ describe Taxon do
       end
     end
 
-    it "requests guidance_and_regulation content" do
-      MostPopularContent.stubs(:fetch)
-        .with(content_id: @taxon.content_id, filter_content_purpose_supergroup: 'guidance_and_regulation')
-        .returns(stubbed_content_results)
-
-      assert_equal(stubbed_content_results, @taxon.section_content("guidance_and_regulation"))
-    end
-
-    it "requests services content" do
-      MostPopularContent.stubs(:fetch)
-        .with(content_id: @taxon.content_id, filter_content_purpose_supergroup: 'services')
-        .returns(stubbed_content_results)
-
-      assert_equal(stubbed_content_results, @taxon.section_content("services"))
-    end
-
     it 'requests for guidance document supertype by default' do
       TaggedContent.expects(:fetch)
         .with([@taxon.content_id], filter_by_document_supertype: 'guidance', validate: true)
         .returns(["guidance_content"])
 
       assert_equal ["guidance_content"], @taxon.tagged_content
-    end
-
-    it "requests news_and_communications content" do
-      MostRecentContent.stubs(:fetch)
-        .with(
-          content_id: @taxon.content_id,
-          filter_content_purpose_supergroup: "news_and_communications",
-        )
-        .returns(stubbed_content_results)
-
-      assert_equal(stubbed_content_results, @taxon.section_content("news_and_communications"))
-    end
-
-    it "requests policy_and_engagement content" do
-      MostRecentContent.stubs(:fetch)
-        .with(
-          content_id: @taxon.content_id,
-          filter_content_purpose_supergroup: "policy_and_engagement",
-        )
-        .returns(stubbed_content_results)
-
-      assert_equal(stubbed_content_results, @taxon.section_content("policy_and_engagement"))
-    end
-
-    it "requests transparency content" do
-      MostRecentContent.stubs(:fetch)
-        .with(
-          content_id: @taxon.content_id,
-          filter_content_purpose_supergroup: "transparency",
-        )
-        .returns(stubbed_content_results)
-
-      assert_equal(stubbed_content_results, @taxon.section_content("transparency"))
     end
   end
 end
