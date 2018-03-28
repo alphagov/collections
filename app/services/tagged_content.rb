@@ -1,27 +1,20 @@
 class TaggedContent
   attr_reader :content_ids, :filter_by_document_supertype, :validate
 
-  def initialize(content_ids, filter_by_document_supertype:, validate:)
+  def initialize(content_ids, filter_by_document_supertype:)
     @content_ids = Array(content_ids)
     @filter_by_document_supertype = filter_by_document_supertype
-    @validate = validate
   end
 
-  def self.fetch(content_ids, filter_by_document_supertype:, validate:)
-    new(content_ids, filter_by_document_supertype: filter_by_document_supertype, validate: validate).fetch
+  def self.fetch(content_ids, filter_by_document_supertype:)
+    new(content_ids, filter_by_document_supertype: filter_by_document_supertype).fetch
   end
 
   def fetch
-    documents = search_response.documents
-    documents = documents.select { |document| tagged_content_validator.valid?(document) } if validate
-    documents
+    search_response.documents
   end
 
 private
-
-  def tagged_content_validator
-    @tagged_content_validator ||= TaggedContentValidator.new
-  end
 
   def search_response
     params = {

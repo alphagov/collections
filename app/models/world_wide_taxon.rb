@@ -69,7 +69,6 @@ private
     TaggedContent.fetch(
       taxon_content_ids,
       filter_by_document_supertype: nil,
-      validate: false
     )
   end
 end
