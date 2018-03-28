@@ -64,19 +64,6 @@ class WorldWideTaxonPresenter
     }
   end
 
-  def options_for_child_taxon(index:)
-    {
-      module: 'track-click',
-      track_category: 'navGridContentClicked',
-      track_action: (index + 1).to_s,
-      track_label: child_taxons[index].base_path,
-      track_options: { dimension26: tagged_content.any? ? '2' : '1',
-                       dimension27: (child_taxons.length + tagged_content.length).to_s,
-                       dimension28: child_taxons.size.to_s,
-                       dimension29: child_taxons[index].title }
-    }
-  end
-
   def options_for_tagged_content(index:)
     {
       module: 'track-click',
