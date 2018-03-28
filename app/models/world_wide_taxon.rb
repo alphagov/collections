@@ -1,6 +1,5 @@
 class WorldWideTaxon
   attr_reader :content_item
-  attr_accessor :can_subscribe
 
   delegate(
     :content_id,
@@ -50,12 +49,6 @@ class WorldWideTaxon
 
   def merge(to_merge)
     WorldWideTaxon.new(content_item.merge(to_merge))
-  end
-
-  def can_subscribe?
-    # Is @can_subscribe ever used on world wide pages?
-    return @can_subscribe if defined?(@can_subscribe)
-    false
   end
 
   def live_taxon?

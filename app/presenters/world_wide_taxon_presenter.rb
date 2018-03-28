@@ -11,7 +11,6 @@ class WorldWideTaxonPresenter
     :tagged_content,
     :child_taxons,
     :live_taxon?,
-    :can_subscribe?,
     to: :taxon
   )
 
@@ -42,7 +41,6 @@ class WorldWideTaxonPresenter
           'description' => ''
         )
       )
-      general_information.can_subscribe = false
 
       accordion_items.unshift(
         WorldWideTaxonPresenter.new(general_information)
