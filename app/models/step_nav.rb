@@ -19,6 +19,10 @@ class StepNav
     details["step_by_step_nav"]["introduction"]
   end
 
+  def payload_for_component
+    details["step_by_step_nav"].deep_symbolize_keys
+  end
+
   def self.find!(base_path)
     content_item = ContentItem.find!(base_path)
     new(content_item)
