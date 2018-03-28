@@ -1,7 +1,7 @@
 module RummagerHelpers
   include RummagerFields
 
-  def stub_content_for_taxon(content_ids, results, filter_navigation_document_supertype: 'guidance')
+  def stub_content_for_taxon(content_ids, results)
     params = {
       start: 0,
       count: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
@@ -9,7 +9,24 @@ module RummagerHelpers
       filter_taxons: Array(content_ids),
       order: 'title',
     }
-    params[:filter_navigation_document_supertype] = filter_navigation_document_supertype if filter_navigation_document_supertype.present?
+
+    Services.rummager.stubs(:search)
+      .with(params)
+      .returns(
+        "results" => results,
+        "start" => 0,
+        "total" => results.size,
+      )
+
+    # TODO: remove me once Taxon is no longer using TaggedContent in tests
+    params = {
+      start: 0,
+      count: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+      fields: %w(title description link document_collections content_store_document_type),
+      filter_taxons: Array(content_ids),
+      order: 'title',
+      filter_navigation_document_supertype: 'guidance',
+    }
 
     Services.rummager.stubs(:search)
       .with(params)
