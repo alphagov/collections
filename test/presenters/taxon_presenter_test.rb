@@ -35,43 +35,6 @@ describe TaxonPresenter do
           assert_equal(child_taxon.base_path, subject[:track_label])
         end
       end
-
-      describe 'dimensions' do
-        subject { taxon_presenter.options_for_child_taxon(index: 0)[:track_options] }
-
-        describe 'dimension 26 - 1 or 2 (depend if there is leaf grid section or not)' do
-          it 'is 2 because there is a leaf grid section' do
-            stub_content_for_taxon([taxon.content_id], generate_search_results(15))
-            assert_equal('2', subject[:dimension26])
-          end
-
-          it 'is 1 because there is no leaf grid section' do
-            stub_content_for_taxon([taxon.content_id], generate_search_results(0))
-            assert_equal('1', subject[:dimension26])
-          end
-        end
-
-        describe 'dimension 27 - total number of links on page (incl main and leaf section)' do
-          it 'contains the title of tagged content item' do
-            stub_content_for_taxon([taxon.content_id], generate_search_results(15))
-            assert_equal('16', subject[:dimension27])
-          end
-        end
-
-        describe 'dimension 28 - number of child taxons' do
-          it 'contains the number of child taxons' do
-            stub_content_for_taxon([taxon.content_id], generate_search_results(15))
-            assert_equal('1', subject[:dimension28])
-          end
-        end
-
-        describe 'dimension 29 - title of the child taxon' do
-          it 'contains the title of tagged content item' do
-            stub_content_for_taxon([taxon.content_id], generate_search_results(15))
-            assert_equal(child_taxon.title, subject[:dimension29])
-          end
-        end
-      end
     end
   end
 
