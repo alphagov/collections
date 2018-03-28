@@ -66,9 +66,6 @@ private
 
   def fetch_tagged_content
     taxon_content_ids = [content_id] + associated_taxons.map(&:content_id)
-    TaggedContent.fetch(
-      taxon_content_ids,
-      filter_by_document_supertype: nil,
-    )
+    TaggedContent.fetch(taxon_content_ids)
   end
 end

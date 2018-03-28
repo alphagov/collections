@@ -17,24 +17,6 @@ module RummagerHelpers
         "start" => 0,
         "total" => results.size,
       )
-
-    # TODO: remove me once Taxon is no longer using TaggedContent in tests
-    params = {
-      start: 0,
-      count: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
-      fields: %w(title description link document_collections content_store_document_type),
-      filter_taxons: Array(content_ids),
-      order: 'title',
-      filter_navigation_document_supertype: 'guidance',
-    }
-
-    Services.rummager.stubs(:search)
-      .with(params)
-      .returns(
-        "results" => results,
-        "start" => 0,
-        "total" => results.size,
-      )
   end
 
   def stub_most_popular_content_for_taxon(content_id, results, filter_content_purpose_supergroup: 'guidance_and_regulation')
