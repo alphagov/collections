@@ -31,7 +31,7 @@ describe WorldWideTaxonPresenter do
   describe 'options' do
     let(:content_hash) { funding_and_finance_for_students_taxon }
     let(:content_item) { ContentItem.new(content_hash) }
-    let(:taxon) { Taxon.new(ContentItem.new(content_hash)) }
+    let(:taxon) { WorldWideTaxon.new(ContentItem.new(content_hash)) }
     let(:child_taxon) { taxon.child_taxons.first }
     let(:world_wide_taxon_presenter) { WorldWideTaxonPresenter.new(taxon) }
 
