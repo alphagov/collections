@@ -31,7 +31,7 @@ describe TaggedContent do
 
     it 'requests a limited number of fields' do
       expected_fields =
-        %w(title description link document_collections content_store_document_type)
+        %w(title description link content_store_document_type)
 
       assert_includes_params(fields: expected_fields) do
         tagged_content.fetch
