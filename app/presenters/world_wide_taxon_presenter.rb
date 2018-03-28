@@ -11,7 +11,6 @@ class WorldWideTaxonPresenter
     :tagged_content,
     :child_taxons,
     :live_taxon?,
-    :most_popular_content,
     :can_subscribe?,
     to: :taxon
   )
