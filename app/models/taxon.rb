@@ -16,10 +16,6 @@ class Taxon
     @content_item = content_item
   end
 
-  def tagged_content
-    @tagged_content ||= fetch_tagged_content
-  end
-
   def self.find(base_path)
     content_item = ContentItem.find!(base_path)
     new(content_item)
@@ -37,12 +33,6 @@ class Taxon
     linked_items('child_taxons').present?
   end
 
-  def associated_taxons
-    linked_items('associated_taxons').map do |associated_taxon|
-      self.class.new(associated_taxon)
-    end
-  end
-
   def merge(to_merge)
     Taxon.new(content_item.merge(to_merge))
   end
@@ -53,16 +43,5 @@ class Taxon
 
   def organisations
     @organisations ||= TaggedOrganisations.fetch(content_id)
-  end
-
-private
-
-  def fetch_tagged_content
-    taxon_content_ids = [content_id] + associated_taxons.map(&:content_id)
-    TaggedContent.fetch(
-      taxon_content_ids,
-      filter_by_document_supertype: 'guidance',
-      validate: true
-    )
   end
 end

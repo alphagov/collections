@@ -5,7 +5,6 @@ class TaxonPresenter
     :title,
     :description,
     :base_path,
-    :tagged_content,
     :child_taxons,
     :live_taxon?,
     :section_content,

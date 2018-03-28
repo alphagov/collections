@@ -53,13 +53,5 @@ describe Taxon do
         assert_includes ['Student sponsorship', 'Student loans'], child.title
       end
     end
-
-    it 'requests for guidance document supertype by default' do
-      TaggedContent.expects(:fetch)
-        .with([@taxon.content_id], filter_by_document_supertype: 'guidance', validate: true)
-        .returns(["guidance_content"])
-
-      assert_equal ["guidance_content"], @taxon.tagged_content
-    end
   end
 end
