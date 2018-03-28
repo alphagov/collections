@@ -20,21 +20,6 @@ class Taxon
     @tagged_content ||= fetch_tagged_content
   end
 
-  def section_content(supergroup)
-    case supergroup
-    when "guidance_and_regulation"
-      guidance_and_regulation_content
-    when "services"
-      services_content
-    when "news_and_communications"
-      news_and_communications_content
-    when "policy_and_engagement"
-      policy_and_engagement_content
-    when "transparency"
-      transparency_content
-    end
-  end
-
   def self.find(base_path)
     content_item = ContentItem.find!(base_path)
     new(content_item)
@@ -79,33 +64,5 @@ private
       filter_by_document_supertype: 'guidance',
       validate: true
     )
-  end
-
-  def fetch_most_popular_content(content_purpose_supergroup = 'guidance_and_regulation')
-    MostPopularContent.fetch(content_id: content_id, filter_content_purpose_supergroup: content_purpose_supergroup)
-  end
-
-  def services_content
-    @services_content ||= fetch_most_popular_content('services')
-  end
-
-  def guidance_and_regulation_content
-    @guidance_and_regulation_content ||= fetch_most_popular_content('guidance_and_regulation')
-  end
-
-  def fetch_most_recent_content(content_purpose_supergroup = 'news_and_communications')
-    MostRecentContent.fetch(content_id: content_id, filter_content_purpose_supergroup: content_purpose_supergroup)
-  end
-
-  def news_and_communications_content
-    @news_and_communications_content ||= fetch_most_recent_content('news_and_communications')
-  end
-
-  def policy_and_engagement_content
-    @policy_and_engagement_content ||= fetch_most_recent_content('policy_and_engagement')
-  end
-
-  def transparency_content
-    @transparency_content ||= fetch_most_recent_content('transparency')
   end
 end
