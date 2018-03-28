@@ -19,7 +19,6 @@ class RummagerSearch
         public_updated_at: timestamp,
         change_note: result["latest_change_note"],
         format: result["format"],
-        document_collections: result["document_collections"],
         content_store_document_type: result['content_store_document_type'],
         organisations: organisations
       )
