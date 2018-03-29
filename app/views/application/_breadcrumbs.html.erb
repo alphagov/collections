@@ -1,2 +1,1 @@
-<%= render partial: 'govuk_component/breadcrumbs',
-  locals: navigation_helpers.breadcrumbs %>
+<%= render 'govuk_component/breadcrumbs', breadcrumbs: Breadcrumbs.new(@content_item).breadcrumbs %>

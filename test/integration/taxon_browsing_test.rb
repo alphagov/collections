@@ -85,7 +85,10 @@ private
 
   def then_i_can_see_the_title_section
     assert page.has_selector?('title', text: "Taxon title", visible: false)
-    assert_not_nil shared_component_selector('breadcrumbs')
+
+    within_static_component 'breadcrumbs' do |payload|
+      assert_equal payload["breadcrumbs"], [{ "title" => "Home", "url" => "/", "is_page_parent" => true }]
+    end
   end
 
   def and_i_can_see_the_email_signup_link
