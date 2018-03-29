@@ -9,7 +9,7 @@ Given(/^a topic subscription is expected$/) do
         "topics" => ['content-id-for-fields-and-wells']
       }
     ).returns({"subscriber_list" =>
-       # This redirects to govdelivery in real life, but force redirection to a fake path to verify redirect success
+       # This redirects to email-alert-api in real life, but force redirection to a fake path to verify redirect success
        {"subscription_url" => "/email_success"}
     })
 end
