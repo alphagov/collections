@@ -11,7 +11,7 @@ describe EmailSignup do
       to_return(
         body: {
           subscriber_list: {
-            subscription_url: "http://govdelivery_signup_url"
+            subscription_url: "http://email_alert_api_signup_url"
           },
         }.to_json
       )
@@ -22,7 +22,7 @@ describe EmailSignup do
   end
 
   describe "#save" do
-    it "creates the topic in GovDelivery using the subtopic slug and combined title" do
+    it "creates the topic in email-alert-api using the subtopic slug and combined title" do
       email_signup = EmailSignup.new(@subtopic)
       assert email_signup.save
       assert_requested @request
@@ -40,7 +40,7 @@ describe EmailSignup do
       email_signup = EmailSignup.new(@subtopic)
       email_signup.save
 
-      assert_equal "http://govdelivery_signup_url", email_signup.subscription_url
+      assert_equal "http://email_alert_api_signup_url", email_signup.subscription_url
     end
   end
 end

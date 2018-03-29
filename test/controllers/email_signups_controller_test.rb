@@ -42,7 +42,7 @@ describe EmailSignupsController do
   describe 'POST :create with a valid email signup' do
     setup do
       @email_signup.stubs(:save).returns(true)
-      @email_signup.expects(:subscription_url).returns('http://govdelivery_signup_url')
+      @email_signup.expects(:subscription_url).returns('http://email_alert_api_signup_url')
     end
 
     it 'registers the signup' do
@@ -51,11 +51,11 @@ describe EmailSignupsController do
       post :create, params: @valid_subtopic_params
     end
 
-    it 'redirects to the govdelivery URL' do
+    it 'redirects to the email-alert-api URL' do
       post :create, params: @valid_subtopic_params
 
       assert_response :redirect
-      assert_redirected_to 'http://govdelivery_signup_url'
+      assert_redirected_to 'http://email_alert_api_signup_url'
     end
   end
 
