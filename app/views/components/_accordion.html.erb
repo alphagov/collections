@@ -1,8 +1,9 @@
 <%
   sections ||= false
+  controls_on_left ||= false
 %>
 <% if sections %>
-  <div data-module="accordion" class="app-c-accordion js-hidden">
+  <div data-module="accordion" class="app-c-accordion js-hidden <%= "app-c-accordion--controls-on-left" if controls_on_left %>">
     <% sections.each_with_index do |section, index| %>
       <%
         id = section[:id] || section[:title].downcase.tr(" ","-")

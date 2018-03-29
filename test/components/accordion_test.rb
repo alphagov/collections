@@ -29,11 +29,11 @@ class AccordionTest < ComponentTestCase
     render_component(sections: simple_accordion)
     assert_select ".app-c-accordion"
 
-    assert_select section1, id: "general-information-and-guidance"
+    assert_select section1 + "#general-information-and-guidance"
     assert_select section1 + " .app-c-accordion__title", text: "General information and guidance"
     assert_select section1 + " .app-c-accordion__panel", text: "1st panel contents"
 
-    assert_select section2, id: "alternative-provision-censuses"
+    assert_select section2 + "#alternative-provision-censuses"
     assert_select section2 + " .app-c-accordion__title", text: "Alternative provision censuses"
     assert_select section2 + " .app-c-accordion__panel", text: "2nd panel contents"
   end
@@ -54,7 +54,13 @@ class AccordionTest < ComponentTestCase
 
     render_component(sections: ids_accordion)
 
-    assert_select section1, id: "first-section-id"
-    assert_select section2, id: "alternative-provision-censuses"
+    assert_select section1 + "#first-section-id"
+    assert_select section2 + "#alternative-provision-censuses"
+  end
+
+  test "renders an accordion with plus minus icons on the left" do
+    render_component(sections: simple_accordion, controls_on_left: true)
+
+    assert_select ".app-c-accordion.app-c-accordion--controls-on-left"
   end
 end
