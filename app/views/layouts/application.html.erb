@@ -22,7 +22,7 @@
       <% if content_for?(:breadcrumbs) %>
         <%= yield :breadcrumbs %>
       <% else %>
-        <%= render 'breadcrumbs', navigation_helpers: @navigation_helpers %>
+        <%= render 'breadcrumbs' %>
       <% end %>
     <% end %>
 

@@ -85,7 +85,12 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
     refute page.has_link?("North sea shipping lanes")
 
-    assert page.has_selector?(shared_component_selector('breadcrumbs'))
+    within_static_component 'breadcrumbs' do |payload|
+      assert_equal(
+        [{ "title" => "Home", "url" => "/" }, { "title" => "Oil and Gas", "url" => "/topic/oil-and-gas" }],
+        payload["breadcrumbs"]
+      )
+    end
   end
 
   it "renders a non-curated subtopic" do
