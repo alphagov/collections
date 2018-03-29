@@ -6,9 +6,10 @@ Collections serves the GOV.UK navigation pages,
 ![Topic page](docs/topic-page.jpg)
 ![Subtopic page](docs/subtopic-page.jpg)
 ![Services and information page](docs/services-and-information-page.jpg)
-![Taxonomy page](docs/taxonomy-page.jpg)
+![Taxonomy page](docs/taxonomy-page.png)
+![Worldwide taxonomy page](docs/world-taxonomy-page.png)
 
-(As of June 2015)
+(As of March 2018)
 
 ## Live examples
 
@@ -17,6 +18,7 @@ Collections serves the GOV.UK navigation pages,
 - Subtopic page: [gov.uk/oil-and-gas/fields-and-wells](https://www.gov.uk/oil-and-gas/fields-and-wells)
 - Services and information page: [gov.uk/government/organisations/hm-revenue-customs/services-information](https://www.gov.uk/government/organisations/hm-revenue-customs/services-information)
 - Taxonomy page: [gov.uk/education](https://www.gov.uk/education)
+- Worldwide taxonomy page: [gov.uk/world/japan](https://www.gov.uk/world/japan)
 
 ## Nomenclature
 
@@ -35,13 +37,19 @@ Collections serves the GOV.UK navigation pages,
 - **Second level browse page**: [gov.uk/browse/benefits/entitlement](https://www.gov.uk/browse/benefits/entitlement)
 
 ### Taxonomy
-The taxonomy is surfaced on taxon pages, which group together tagged content for that level of the taxonomy into supergroups on the page, e.g: Guidance and Regulation for Funding and finance for students [gov.uk/education/funding-and-finance-for-students](https://www-origin.integration.publishing.service.gov.uk/education/funding-and-finance-for-students). Each taxon page also shows a grid of sub-topics at the next level of the taxonomy.
+The taxonomy is surfaced on taxon pages, which group together tagged content for that level of the taxonomy into [supergroups](https://docs.publishing.service.gov.uk/document-types/content_purpose_supergroup.html) on the page, e.g: Guidance and Regulation for Funding and finance for students [gov.uk/education/funding-and-finance-for-students](https://www.gov.uk/education/funding-and-finance-for-students). Each taxon page also shows a grid of sub-topics at the next level of the taxonomy.
 
-The world taxonomy is surfaced slightly differently:
-- **Taxon without grandchildren**: a content item of type taxon that has
+### Worldwide taxonomy
+The worldwide taxonomy is rendered on different types of pages depending on whether the taxon has any children.
+
+For example:
+- **Taxon with children**: a content item of type taxon that has
   `child_taxons` links. None of those child taxons' links have `child_taxons`,
   in which case we display an accordion view:
-  [gov.uk/world/afghanistan](https://www-origin.integration.publishing.service.gov.uk/world/afghanistan)
+  [gov.uk/world/afghanistan](https://www.gov.uk/world/afghanistan)
+- **Taxon without children**: a content item of type taxon that doesn't have
+  `child_taxons` links. In this case we display an leaf view:
+  [gov.uk/world/living-in-afghanistan](https://www.gov.uk/world/living-in-afghanistan)
 - **Taxon with associated taxons**: a content item of type taxon that has
   `associated_taxons` links. In this case the tagged content of the taxon will
   include content that is directly tagged to it and also content that has been
@@ -72,7 +80,7 @@ Email Alert Api, this functionality can be removed.
 
 ### Content for taxon pages
 
-Content for taxon pages is returned by a search in Rummager based on content_ids.
+Content for taxon pages is returned by a search in Rummager based on content_ids for world taxonomy pages and content_ids and [supergroups](https://docs.publishing.service.gov.uk/document-types/content_purpose_supergroup.html) for all other taxonomy pages.
 
 ### Dependencies
 
