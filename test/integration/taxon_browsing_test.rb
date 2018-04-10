@@ -28,7 +28,31 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_cannot_see_an_email_signup_link
   end
 
+  it 'does not show anything but a taxon' do
+    given_there_is_a_thing_that_is_not_a_taxon
+    when_i_visit_that_thing
+    then_there_should_be_an_error
+  end
+
 private
+
+  def given_there_is_a_thing_that_is_not_a_taxon
+    thing = {
+      "base_path" => '/not-a-taxon',
+      "content_id" => "36dd87da-4973-5490-ab00-72025b1da602",
+      "document_type" => "not_a_taxon",
+    }
+
+    content_store_has_item('/not-a-taxon', thing)
+  end
+
+  def when_i_visit_that_thing
+    visit '/not-a-taxon'
+  end
+
+  def then_there_should_be_an_error
+    assert_equal 500, page.status_code
+  end
 
   def given_there_is_a_taxon_with_children
     child_one_base_path = "#{base_path}/child-1"
