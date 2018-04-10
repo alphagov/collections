@@ -18,6 +18,11 @@ class Taxon
 
   def self.find(base_path)
     content_item = ContentItem.find!(base_path)
+
+    unless content_item.document_type == "taxon"
+      raise "Tried to render a taxon page for content item that is not a taxon"
+    end
+
     new(content_item)
   end
 
