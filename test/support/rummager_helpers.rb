@@ -26,7 +26,7 @@ module RummagerHelpers
       start: 0,
       count: 5,
       fields: fields,
-      filter_taxons: Array(content_id),
+      filter_part_of_taxonomy_tree: Array(content_id),
       order: '-popularity',
     }
     params[:filter_content_purpose_supergroup] = filter_content_purpose_supergroup if filter_content_purpose_supergroup.present?
@@ -47,7 +47,7 @@ module RummagerHelpers
       start: 0,
       count: 5,
       fields: fields,
-      filter_taxons: [content_id],
+      filter_part_of_taxonomy_tree: [content_id],
       order: '-public_timestamp',
     }
     params[:filter_content_purpose_supergroup] = filter_content_purpose_supergroup if filter_content_purpose_supergroup.present?

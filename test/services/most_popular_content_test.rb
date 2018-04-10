@@ -57,7 +57,7 @@ describe MostPopularContent do
     end
 
     it 'scopes the results to the current taxon' do
-      assert_includes_params(filter_taxons: Array(taxon_content_id)) do
+      assert_includes_params(filter_part_of_taxonomy_tree: Array(taxon_content_id)) do
         most_popular_content.fetch
       end
     end
