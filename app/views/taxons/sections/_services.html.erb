@@ -1,0 +1,14 @@
+<%= render 'components/highlight-boxes',
+  items: section[:documents].shift(3),
+  inverse: true
+%>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'govuk_publishing_components/components/document_list',
+      items: section[:documents],
+      margin_top: true,
+      margin_bottom: true
+    %>
+  </div>
+</div>

@@ -1,6 +1,7 @@
 .app-c-highlight-boxes {
   display: flex;
   flex-wrap: wrap;
+  margin-top: $gutter-half;
 }
 
 .app-c-highlight-boxes__item-wrapper {
@@ -13,7 +14,7 @@
   box-sizing: border-box;
 
   @include media(mobile) {
-    width: 50%;
+    width: 100%;
   }
 }
 

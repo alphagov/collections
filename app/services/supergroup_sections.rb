@@ -27,6 +27,7 @@ module SupergroupSections
         {
           title: supergroup.title,
           documents: supergroup.document_list(taxon_id),
+          partial_template: supergroup.partial_template,
           see_more_link: supergroup.finder_link(base_path),
           show_section: supergroup.show_section?(taxon_id)
         }
