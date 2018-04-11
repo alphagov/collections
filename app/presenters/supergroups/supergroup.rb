@@ -28,6 +28,10 @@ module Supergroups
       tagged_content(taxon_id).any?
     end
 
+    def partial_template
+      "taxons/sections/#{name}"
+    end
+
     def tagged_content(_taxon_id)
       raise NotImplementedError.new
     end

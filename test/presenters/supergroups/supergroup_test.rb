@@ -25,4 +25,10 @@ describe Supergroups::Supergroup do
       assert expected_details, supergroup.finder_link(base_path)
     end
   end
+
+  describe '#partial_template' do
+    it 'returns the path to the section view' do
+      assert 'taxons/sections/supergroup_name', supergroup.partial_template
+    end
+  end
 end
