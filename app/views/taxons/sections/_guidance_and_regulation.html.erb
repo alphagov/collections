@@ -1,3 +1,7 @@
+<%= render 'components/highlight-boxes',
+  items: section[:documents].shift(3)
+%>
+
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_publishing_components/components/document_list',
