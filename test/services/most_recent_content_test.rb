@@ -60,7 +60,7 @@ describe MostRecentContent do
   end
 
   it "scopes the results to the current taxon" do
-    assert_includes_params(filter_taxons: [taxon_content_id]) do
+    assert_includes_params(filter_part_of_taxonomy_tree: [taxon_content_id]) do
       most_recent_content.fetch
     end
   end

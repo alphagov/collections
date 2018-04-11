@@ -24,7 +24,7 @@ private
       start: 0,
       count: number_of_links,
       fields: RummagerFields::TAXON_SEARCH_FIELDS,
-      filter_taxons: [content_id],
+      filter_part_of_taxonomy_tree: [content_id],
       order: '-public_timestamp',
     }
     params[:filter_content_purpose_supergroup] = filter_content_purpose_supergroup if filter_content_purpose_supergroup.present?
