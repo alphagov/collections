@@ -2,19 +2,24 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: $gutter-half;
+
+  @include media(tablet) {
+    margin-right: -25px;
+  }
 }
 
 .app-c-highlight-boxes__item-wrapper {
   @include core-19;
   list-style-type: none;
-  padding: 5px 25px $gutter-two-thirds 0;
-  width: 33%;
+  padding: 5px 10px 25px 0;
+  width: 100%;
   min-height: 150px;
-  min-width: 280px;
+  min-width: 250px;
   @include box-sizing(border-box);
 
-  @include media(mobile) {
-    width: 100%;
+  @include media(tablet) {
+    width: 33%;
+    padding: 5px 25px 25px 0;
   }
 }
 
