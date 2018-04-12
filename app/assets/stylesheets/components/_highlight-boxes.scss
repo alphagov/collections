@@ -8,13 +8,13 @@
   @include core-19;
   list-style-type: none;
   padding: 5px 25px $gutter-two-thirds 0;
-  width: 33%;
+  width: 100%;
   min-height: 150px;
-  min-width: 280px;
+  min-width: 250px;
   @include box-sizing(border-box);
 
-  @include media(mobile) {
-    width: 100%;
+  @include media(tablet) {
+    width: 33%;
   }
 }
 
