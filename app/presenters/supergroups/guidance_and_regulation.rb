@@ -34,7 +34,9 @@ module Supergroups
     end
 
     def guide?(document)
-      document.content_store_document_type == 'guide'
+      # Although answers and guides are 2 different document types, they are conceptually the same so
+      # we should treat them the same
+      document.content_store_document_type == 'guide' || document.content_store_document_type == 'answer'
     end
   end
 end
