@@ -10,7 +10,7 @@
   padding: 5px 25px $gutter-two-thirds 0;
   width: 33%;
   min-height: 150px;
-  min-width: 280px;
+  min-width: 150px;
   @include box-sizing(border-box);
 
   @include media(mobile) {
