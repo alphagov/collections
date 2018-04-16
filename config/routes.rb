@@ -41,6 +41,9 @@ Rails.application.routes.draw do
   get '/organisations', to: 'organisations#index'
   get '/organisations/*slug', to: 'organisations#show'
 
+  get '/topical-events', to: 'topical_events#index'
+  get '/topical-events/*slug', to: 'topical_events#show'
+
   get '/world/*taxon_base_path', to: 'world_wide_taxons#show'
   get '*taxon_base_path', to: 'taxons#show'
 end

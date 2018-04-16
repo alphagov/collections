@@ -1,0 +1,4 @@
+<ul>
+<% @topical_events.each do |org| %>
+  <li><%= link_to org["title"], org["link"].gsub("government/", "") %>
+<% end %>

@@ -8,8 +8,8 @@
             url: "/"
           },
           {
-            title: "Organisations",
-            url: "/organisations"
+            title: "Topical events",
+            url: "/topical-events"
           }
       ],
         collapse_on_mobile: true,
@@ -20,13 +20,13 @@
     <div class="grid-row">
       <div class="column-two-thirds">
         <%= render "govuk_component/title", {
-          title: presented_organisation.title,
+          title: topical_event.title,
           average_title_length: 'long',
           inverse: true
         } %>
 
         <%= render 'govuk_component/lead_paragraph', {
-            text: presented_organisation.description,
+            text: topical_event.description,
             inverse: true
         } %>
       </div>

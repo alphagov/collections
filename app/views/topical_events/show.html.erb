@@ -1,0 +1,57 @@
+<% content_for :page_class, "taxon-page taxon-page--grid" %>
+
+<%=
+  render(
+    partial: 'common',
+    locals: {
+      topical_event: topical_event
+    }
+  )
+%>
+
+<div class="full-page-width-wrapper">
+  <% topical_event.sections.each do |section| %>
+    <% if section[:show_section] %>
+    <div class="taxon-page__section-group">
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <h2 class="taxon-page__section-heading"><%= section[:title] %></h2>
+        </div>
+      </div>
+      <%= render(
+        partial: section[:partial_template],
+        locals: { section: section }
+      )
+     %>
+     <%= link_to(
+       section[:see_more_link][:text],
+       section[:see_more_link][:url]
+     )%>
+    </div>
+    <% end %>
+  <% end %>
+
+  <%# render(partial: 'organisations', locals: { topical_event: topical_event }) %>
+</div>
+
+<% if content_for(:is_taxon_with_subtopics) %>
+  <nav role="navigation" class="taxon-page__grid">
+    <div class="full-page-width-wrapper">
+      <h2 class="taxon-page__section-heading taxon-page__grid-heading">Explore these sub-topics</h2>
+      <ol>
+        <% topical_event.child_taxons.each_with_index do |child_taxon, index| %>
+          <li class="<%= 'leftmost-row-cell-clear-float' if index % 3 == 0 %>">
+            <h2>
+              <%= link_to(
+                child_taxon.title,
+                child_taxon.base_path,
+                data: topical_event.options_for_child_taxon(index: index)
+              )%>
+            </h2>
+            <p><%= child_taxon.description %></p>
+          </li>
+        <% end %>
+      </ol>
+    </div>
+  </nav>
+<% end %>
