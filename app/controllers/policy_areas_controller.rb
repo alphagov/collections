@@ -24,7 +24,6 @@ private
       :title,
       :description,
       :base_path,
-      :organisations,
       to: :content_item
     )
 
@@ -35,6 +34,26 @@ private
     def sections
       slug = content_item.base_path.split('/').last
       SuperGroupsForPolicyAreas.supergroup_sections(slug)
+    end
+
+    def organisations
+      Services.rummager.search(
+        count: 0,
+        aggregate_organisations: 1000,
+        filter_policy_areas: content_item.base_path.split('/').last,
+      ).dig('aggregates', 'organisations', 'options')
+    end
+
+    def taxon_organisations
+      organisations.map do |organisation|
+        puts organisation.inspect
+        {
+          link: {
+            text: organisation["value"]["title"],
+            path: organisation["value"]["link"]
+          }
+        }
+      end
     end
   end
 

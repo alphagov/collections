@@ -44,8 +44,4 @@ class TaxonPresenter
       }
     end
   end
-
-  def show_organisations?
-    organisations.any?
-  end
 end

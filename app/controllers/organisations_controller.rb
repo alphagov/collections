@@ -24,7 +24,6 @@ private
       :title,
       :description,
       :base_path,
-      :organisations,
       to: :content_item
     )
 
