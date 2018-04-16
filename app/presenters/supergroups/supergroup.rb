@@ -1,9 +1,10 @@
 module Supergroups
   class Supergroup
-    attr_reader :name
+    attr_reader :name, :scope
 
-    def initialize(name)
+    def initialize(name, scope)
       @name = name
+      @scope = scope
     end
 
     def title
@@ -24,8 +25,8 @@ module Supergroups
       }
     end
 
-    def show_section?(taxon_id)
-      tagged_content(taxon_id).any?
+    def show_section?
+      tagged_content.any?
     end
 
     def partial_template
@@ -36,8 +37,8 @@ module Supergroups
       raise NotImplementedError.new
     end
 
-    def document_list(taxon_id)
-      tagged_content(taxon_id).each.map do |document|
+    def document_list
+      tagged_content.each.map do |document|
         data = {
           link: {
             text: document.title,

@@ -2,16 +2,16 @@ module Supergroups
   class GuidanceAndRegulation < Supergroup
     attr_reader :content
 
-    def initialize
-      super('guidance_and_regulation')
+    def initialize(scope = {})
+      super('guidance_and_regulation', scope)
     end
 
-    def tagged_content(taxon_id)
-      @content = MostPopularContent.fetch(content_id: taxon_id, filter_content_purpose_supergroup: @name)
+    def tagged_content
+      @content = MostPopularContent.fetch(scope.merge(filter_content_purpose_supergroup: @name))
     end
 
-    def document_list(taxon_id)
-      tagged_content(taxon_id).each.map do |document|
+    def document_list
+      tagged_content.each.map do |document|
         data = {
           link: {
             text: document.title,
