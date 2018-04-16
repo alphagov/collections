@@ -1,0 +1,17 @@
+<% content_for :is_taxon_page, true %>
+<% content_for :title, presented_organisation.title %>
+<% content_for :meta_tags do %>
+  <meta name="description" content="<%= presented_organisation.description %>">
+  <meta name="govuk:navigation-page-type" content="Taxon Page" />
+<% end %>
+
+<%= render partial: 'page_header', locals: { presented_organisation: presented_organisation } %>
+
+<div class="taxon-page__email-link-wrapper">
+  <div class="full-page-width-wrapper">
+      <%= render "components/email-link", {
+        text: "Sign up for updates to this topic page",
+        href: "/email-signup/?topic=#{presented_organisation.base_path}"
+      } %>
+  </div>
+</div>

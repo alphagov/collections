@@ -38,6 +38,8 @@ Rails.application.routes.draw do
     get "/:slug", to: 'step_nav#show'
   end
 
+  get '/organisations/*slug', to: 'organisations#show'
+
   get '/world/*taxon_base_path', to: 'world_wide_taxons#show'
   get '*taxon_base_path', to: 'taxons#show'
 end
