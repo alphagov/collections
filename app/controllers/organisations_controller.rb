@@ -1,4 +1,9 @@
 class OrganisationsController < ApplicationController
+  def index
+    @content_item = {}
+    @orgs = Services.rummager.search(count: 1000, filter_format: 'organisation')['results']
+  end
+
   def show
     render 'show', locals: {
       presented_organisation: presented_organisation
