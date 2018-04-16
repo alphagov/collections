@@ -4,13 +4,13 @@
   render(
     partial: 'common',
     locals: {
-      policy_area: policy_area
+      topical_event: topical_event
     }
   )
 %>
 
 <div class="full-page-width-wrapper">
-  <% policy_area.sections.each do |section| %>
+  <% topical_event.sections.each do |section| %>
     <% if section[:show_section] %>
     <div class="taxon-page__section-group">
       <div class="grid-row">
@@ -31,7 +31,7 @@
     <% end %>
   <% end %>
 
-  <%# render(partial: 'organisations', locals: { policy_area: policy_area }) %>
+  <%# render(partial: 'organisations', locals: { topical_event: topical_event }) %>
 </div>
 
 <% if content_for(:is_taxon_with_subtopics) %>
@@ -39,13 +39,13 @@
     <div class="full-page-width-wrapper">
       <h2 class="taxon-page__section-heading taxon-page__grid-heading">Explore these sub-topics</h2>
       <ol>
-        <% policy_area.child_taxons.each_with_index do |child_taxon, index| %>
+        <% topical_event.child_taxons.each_with_index do |child_taxon, index| %>
           <li class="<%= 'leftmost-row-cell-clear-float' if index % 3 == 0 %>">
             <h2>
               <%= link_to(
                 child_taxon.title,
                 child_taxon.base_path,
-                data: policy_area.options_for_child_taxon(index: index)
+                data: topical_event.options_for_child_taxon(index: index)
               )%>
             </h2>
             <p><%= child_taxon.description %></p>

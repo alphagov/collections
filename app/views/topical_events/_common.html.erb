@@ -1,17 +1,17 @@
 <% content_for :is_taxon_page, true %>
-<% content_for :title, policy_area.title %>
+<% content_for :title, topical_event.title %>
 <% content_for :meta_tags do %>
-  <meta name="description" content="<%= policy_area.description %>">
+  <meta name="description" content="<%= topical_event.description %>">
   <meta name="govuk:navigation-page-type" content="Taxon Page" />
 <% end %>
 
-<%= render partial: 'page_header', locals: { policy_area: policy_area } %>
+<%= render partial: 'page_header', locals: { topical_event: topical_event } %>
 
 <div class="taxon-page__email-link-wrapper">
   <div class="full-page-width-wrapper">
       <%= render "components/email-link", {
         text: "Sign up for updates to this topic page",
-        href: "/email-signup/?topic=#{policy_area.base_path}"
+        href: "/email-signup/?topic=#{topical_event.base_path}"
       } %>
   </div>
 </div>
