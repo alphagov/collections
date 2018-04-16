@@ -2,29 +2,32 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: $gutter-half;
+
+  @include media(tablet) {
+    margin-right: -25px;
+  }
 }
 
 .app-c-highlight-boxes__item-wrapper {
   @include core-19;
-  list-style-type: none;
-  padding: 5px 25px $gutter-two-thirds 0;
-  width: 33%;
-  min-height: 150px;
-  min-width: 280px;
   @include box-sizing(border-box);
+  list-style-type: none;
+  padding: 5px 10px 25px 0;
+  width: 100%;
+  min-width: 250px;
 
-  @include media(mobile) {
-    width: 100%;
+  @include media(tablet) {
+    width: 33%;
+    padding: 5px 25px 25px 0;
   }
 }
 
 .app-c-highlight-boxes__item {
+  @include box-sizing(border-box);
   border: 1px solid $grey-2;
   padding: $gutter-half * 1.5;
-  width: 100%;
   height: 100%;
   box-shadow: 7px 7px 0 $white, 8px 8px 0 $grey-2;
-  @include box-sizing(border-box);
 }
 
 .app-c-highlight-boxes--inverse {
