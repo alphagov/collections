@@ -19,7 +19,7 @@ group :test do
   gem 'govuk_schemas', '~> 3.1.0'
   gem 'govuk-content-schema-test-helpers'
   gem 'minitest-spec-rails'
-  gem 'mocha', require: false
+  gem 'mocha'
   gem 'poltergeist'
   gem 'simplecov'
   gem 'simplecov-rcov'
