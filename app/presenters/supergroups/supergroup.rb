@@ -53,5 +53,9 @@ module Supergroups
         data
       end
     end
+
+    def promoted_content_count(*)
+      3
+    end
   end
 end

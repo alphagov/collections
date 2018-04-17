@@ -24,7 +24,7 @@ describe SupergroupSections::Sections do
 
     it 'returns a list of supergroup details' do
       @sections.each do |section|
-        assert_equal(%i(title documents partial_template see_more_link show_section), section.keys)
+        assert_equal(%i(title documents partial_template promoted_content_count see_more_link show_section), section.keys)
       end
     end
 
