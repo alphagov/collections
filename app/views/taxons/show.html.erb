@@ -38,9 +38,9 @@
   <nav role="navigation" class="taxon-page__grid">
     <div class="full-page-width-wrapper">
       <h2 class="taxon-page__section-heading taxon-page__grid-heading">Explore these sub-topics</h2>
-      <ol>
+      <ol class="taxon-page__grid-wrapper">
         <% presented_taxon.child_taxons.each_with_index do |child_taxon, index| %>
-          <li class="<%= 'leftmost-row-cell-clear-float' if index % 3 == 0 %>">
+          <li class="taxon-page__grid-item">
             <h2>
               <%= link_to(
                 child_taxon.title,
@@ -48,7 +48,7 @@
                 data: presented_taxon.options_for_child_taxon(index: index)
               )%>
             </h2>
-            <p><%= child_taxon.description %></p>
+            <p class="taxon-page__grid-item-description"><%= child_taxon.description %></p>
           </li>
         <% end %>
       </ol>
