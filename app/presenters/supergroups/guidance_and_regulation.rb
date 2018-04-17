@@ -38,5 +38,9 @@ module Supergroups
       # we should treat them the same
       document.content_store_document_type == 'guide' || document.content_store_document_type == 'answer'
     end
+
+    def special_format_count(*)
+      3
+    end
   end
 end
