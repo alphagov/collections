@@ -101,5 +101,35 @@ describe Supergroups::PolicyAndEngagement do
 
       assert_equal expected, policy_and_engagement_supergroup.document_list(taxon_id)
     end
+
+    it 'only show applies special formatting to consultations' do
+      tagged_content = []
+      tagged_content.push(*section_tagged_content_list('case_study'))
+      tagged_content.push(*section_tagged_content_list('case_study'))
+      tagged_content.push(*section_tagged_content_list('case_study'))
+      tagged_content.push(*section_tagged_content_list('consultation_outcome'))
+      tagged_content.push(*section_tagged_content_list('closed_consultation'))
+
+      MostRecentContent.any_instance
+        .stubs(:fetch)
+        .returns(tagged_content)
+
+      assert_equal 2, policy_and_engagement_supergroup.special_format_count(taxon_id)
+    end
+
+    it 'only show applies special formatting to the first three consultations' do
+      tagged_content = []
+      tagged_content.push(*section_tagged_content_list('consultation_outcome'))
+      tagged_content.push(*section_tagged_content_list('closed_consultation'))
+      tagged_content.push(*section_tagged_content_list('open_consultation'))
+      tagged_content.push(*section_tagged_content_list('consultation_outcome'))
+      tagged_content.push(*section_tagged_content_list('closed_consultation'))
+
+      MostRecentContent.any_instance
+        .stubs(:fetch)
+        .returns(tagged_content)
+
+      assert_equal 3, policy_and_engagement_supergroup.special_format_count(taxon_id)
+    end
   end
 end

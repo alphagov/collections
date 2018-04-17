@@ -53,5 +53,9 @@ module Supergroups
         data
       end
     end
+
+    def special_format_count(*)
+      0
+    end
   end
 end

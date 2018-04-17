@@ -1,1 +1,5 @@
+<%= render 'components/highlight-boxes',
+  items: section[:documents].shift(section[:special_format_count])
+%>
+
 <%= render partial: 'document_list_with_grid', locals: { documents: section[:documents] } %>
