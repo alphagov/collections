@@ -21,6 +21,10 @@ module Supergroups
           }
         }
 
+        if consultation?(document.content_store_document_type)
+          data[:metadata][:closing_date] = consultation_closing_date(document.base_path)
+        end
+
         data
       end
     end
@@ -45,6 +49,12 @@ module Supergroups
       return 3 if consultation_count > 3
 
       consultation_count
+    end
+
+    def consultation_closing_date(base_path)
+      @consultation = ::Services.content_store.content_item(base_path)
+      date = Date.parse(@consultation["details"]["closing_date"])
+      date.strftime("%d %B %Y")
     end
   end
 end
