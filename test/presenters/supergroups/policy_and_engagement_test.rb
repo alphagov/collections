@@ -16,7 +16,8 @@ describe Supergroups::PolicyAndEngagement do
         {
           link: {
             text: 'Tagged Content Title',
-            path: '/government/tagged/content'
+            path: '/government/tagged/content',
+            featured: true
           },
           metadata: {
             public_updated_at: '2018-02-28T08:01:00.000+00:00',
@@ -45,7 +46,8 @@ describe Supergroups::PolicyAndEngagement do
         {
           link: {
             text: 'Tagged Content Title',
-            path: '/government/tagged/content'
+            path: '/government/tagged/content',
+            featured: true
           },
           metadata: {
             public_updated_at: '2018-02-28T08:01:00.000+00:00',
@@ -56,7 +58,8 @@ describe Supergroups::PolicyAndEngagement do
         {
           link: {
             text: 'Tagged Content Title',
-            path: '/government/tagged/content'
+            path: '/government/tagged/content',
+            featured: true
           },
           metadata: {
             public_updated_at: '2018-02-28T08:01:00.000+00:00',
@@ -67,7 +70,8 @@ describe Supergroups::PolicyAndEngagement do
         {
           link: {
             text: 'Tagged Content Title',
-            path: '/government/tagged/content'
+            path: '/government/tagged/content',
+            featured: true
           },
           metadata: {
             public_updated_at: '2018-02-28T08:01:00.000+00:00',
@@ -78,7 +82,8 @@ describe Supergroups::PolicyAndEngagement do
         {
           link: {
             text: 'Tagged Content Title',
-            path: '/government/tagged/content'
+            path: '/government/tagged/content',
+            featured: true
           },
           metadata: {
             public_updated_at: '2018-02-28T08:01:00.000+00:00',
@@ -89,7 +94,8 @@ describe Supergroups::PolicyAndEngagement do
         {
           link: {
             text: 'Tagged Content Title',
-            path: '/government/tagged/content'
+            path: '/government/tagged/content',
+            featured: true
           },
           metadata: {
             public_updated_at: '2018-02-28T08:01:00.000+00:00',

@@ -6,6 +6,25 @@ module Supergroups
       super('policy_and_engagement')
     end
 
+    def document_list(taxon_id)
+      tagged_content(taxon_id).each.map do |document|
+        data = {
+          link: {
+            text: document.title,
+            path: document.base_path,
+            featured: true
+          },
+          metadata: {
+            public_updated_at: document.public_updated_at,
+            organisations: document.organisations,
+            document_type: document.content_store_document_type.humanize
+          }
+        }
+
+        data
+      end
+    end
+
     def tagged_content(taxon_id)
       @content = MostRecentContent.fetch(content_id: taxon_id, filter_content_purpose_supergroup: @name)
 
