@@ -32,4 +32,5 @@ group :development, :test do
   gem 'govuk-lint'
   gem 'jasmine-rails'
   gem 'pry-byebug'
+  gem 'timecop'
 end
