@@ -12,22 +12,7 @@ describe Supergroups::PolicyAndEngagement do
         .stubs(:fetch)
         .returns(section_tagged_content_list('case_study'))
 
-      expected = [
-        {
-          link: {
-            text: 'Tagged Content Title',
-            path: '/government/tagged/content',
-            featured: true
-          },
-          metadata: {
-            public_updated_at: '2018-02-28T08:01:00.000+00:00',
-            organisations: 'Tagged Content Organisation',
-            document_type: 'Case study'
-          }
-        }
-      ]
-
-      assert_equal expected, policy_and_engagement_supergroup.document_list(taxon_id)
+      assert_equal expected_result('case_study'), policy_and_engagement_supergroup.document_list(taxon_id)
     end
 
     describe 'consultations' do
@@ -43,139 +28,115 @@ describe Supergroups::PolicyAndEngagement do
       end
 
       it 'prioritises consultations over other content' do
-        tagged_content = []
-        tagged_content.push(*section_tagged_content_list('consultation_outcome'))
-        tagged_content.push(*section_tagged_content_list('case_study'))
-        tagged_content.push(*section_tagged_content_list('open_consultation'))
-        tagged_content.push(*section_tagged_content_list('case_study'))
-        tagged_content.push(*section_tagged_content_list('closed_consultation'))
+        tagged_document_list = %w(
+          consultation_outcome
+          case_study
+          open_consultation
+          case_study
+          closed_consultation
+        )
+
+        expected_order = %w(
+          consultation_outcome
+          open_consultation
+          closed_consultation
+          case_study
+          case_study
+        )
 
         MostRecentContent.any_instance
           .stubs(:fetch)
-          .returns(tagged_content)
+          .returns(tagged_content(tagged_document_list))
 
-        expected = [
-          {
-            link: {
-              text: 'Tagged Content Title',
-              path: '/government/tagged/content',
-              featured: true
-            },
-            metadata: {
-              public_updated_at: '2018-02-28T08:01:00.000+00:00',
-              organisations: 'Tagged Content Organisation',
-              document_type: 'Consultation outcome',
-              closing_date: '10 July 2018'
-            }
-          },
-          {
-            link: {
-              text: 'Tagged Content Title',
-              path: '/government/tagged/content',
-              featured: true
-            },
-            metadata: {
-              public_updated_at: '2018-02-28T08:01:00.000+00:00',
-              organisations: 'Tagged Content Organisation',
-              document_type: 'Open consultation',
-              closing_date: '10 July 2018'
-            }
-          },
-          {
-            link: {
-              text: 'Tagged Content Title',
-              path: '/government/tagged/content',
-              featured: true
-            },
-            metadata: {
-              public_updated_at: '2018-02-28T08:01:00.000+00:00',
-              organisations: 'Tagged Content Organisation',
-              document_type: 'Closed consultation',
-              closing_date: '10 July 2018'
-            }
-          },
-          {
-            link: {
-              text: 'Tagged Content Title',
-              path: '/government/tagged/content',
-              featured: true
-            },
-            metadata: {
-              public_updated_at: '2018-02-28T08:01:00.000+00:00',
-              organisations: 'Tagged Content Organisation',
-              document_type: 'Case study'
-            }
-          },
-          {
-            link: {
-              text: 'Tagged Content Title',
-              path: '/government/tagged/content',
-              featured: true
-            },
-            metadata: {
-              public_updated_at: '2018-02-28T08:01:00.000+00:00',
-              organisations: 'Tagged Content Organisation',
-              document_type: 'Case study'
-            }
-          }
-        ]
-
-        assert_equal expected, policy_and_engagement_supergroup.document_list(taxon_id)
+        assert_equal expected_results(expected_order), policy_and_engagement_supergroup.document_list(taxon_id)
       end
 
-      it 'only show applies special formatting to consultations' do
-        tagged_content = []
-        tagged_content.push(*section_tagged_content_list('case_study'))
-        tagged_content.push(*section_tagged_content_list('case_study'))
-        tagged_content.push(*section_tagged_content_list('case_study'))
-        tagged_content.push(*section_tagged_content_list('consultation_outcome'))
-        tagged_content.push(*section_tagged_content_list('closed_consultation'))
+      describe '#special_format_count' do
+        it 'only show applies special formatting to consultations' do
+          tagged_document_list = %w(
+            case_study
+            case_study
+            case_study
+            consultation_outcome
+            closed_consultation
+          )
 
-        MostRecentContent.any_instance
-          .stubs(:fetch)
-          .returns(tagged_content)
+          MostRecentContent.any_instance
+            .stubs(:fetch)
+            .returns(tagged_content(tagged_document_list))
 
-        assert_equal 2, policy_and_engagement_supergroup.special_format_count(taxon_id)
+          assert_equal 2, policy_and_engagement_supergroup.special_format_count(taxon_id)
+        end
+
+        it 'only show applies special formatting to the first three consultations' do
+          tagged_document_list = %w(
+            consultation_outcome
+            closed_consultation
+            open_consultation
+            consultation_outcome
+            closed_consultation
+          )
+
+          MostRecentContent.any_instance
+            .stubs(:fetch)
+            .returns(tagged_content(tagged_document_list))
+
+          assert_equal 3, policy_and_engagement_supergroup.special_format_count(taxon_id)
+        end
       end
 
-      it 'only show applies special formatting to the first three consultations' do
-        tagged_content = []
-        tagged_content.push(*section_tagged_content_list('consultation_outcome'))
-        tagged_content.push(*section_tagged_content_list('closed_consultation'))
-        tagged_content.push(*section_tagged_content_list('open_consultation'))
-        tagged_content.push(*section_tagged_content_list('consultation_outcome'))
-        tagged_content.push(*section_tagged_content_list('closed_consultation'))
+      describe '#consultation_closing_date' do
+        it 'gets the closing date of consultations' do
+          MostRecentContent.any_instance
+            .stubs(:fetch)
+            .returns(section_tagged_content_list('open_consultation'))
 
-        MostRecentContent.any_instance
-          .stubs(:fetch)
-          .returns(tagged_content)
-
-        assert_equal 3, policy_and_engagement_supergroup.special_format_count(taxon_id)
-      end
-
-      it 'gets the closing date of consultations' do
-        MostRecentContent.any_instance
-          .stubs(:fetch)
-          .returns(section_tagged_content_list('open_consultation'))
-
-        expected = [
-          {
-            link: {
-              text: 'Tagged Content Title',
-              path: '/government/tagged/content',
-              featured: true
-            },
-            metadata: {
-              public_updated_at: '2018-02-28T08:01:00.000+00:00',
-              organisations: 'Tagged Content Organisation',
-              document_type: 'Open consultation',
-              closing_date: '10 July 2018'
-            }
-          }
-        ]
-
-        assert_equal expected, policy_and_engagement_supergroup.document_list(taxon_id)
+          assert_equal expected_result('open_consultation'), policy_and_engagement_supergroup.document_list(taxon_id)
+        end
       end
     end
+  end
+
+  def tagged_content(document_types)
+    content_list = []
+    document_types.each do |document_type|
+      content_list.push(*section_tagged_content_list(document_type))
+    end
+    content_list
+  end
+
+  def expected_results(document_types)
+    results = []
+    document_types.each do |document_type|
+      results.push(*expected_result(document_type))
+    end
+    results
+  end
+
+  def expected_result(document_type)
+    result = {
+      link: {
+        text: 'Tagged Content Title',
+        path: '/government/tagged/content',
+        featured: true
+      },
+      metadata: {
+        public_updated_at: '2018-02-28T08:01:00.000+00:00',
+        organisations: 'Tagged Content Organisation',
+        document_type: document_type.humanize,
+      }
+    }
+
+    if consultation?(document_type)
+      result[:metadata][:closing_date] = '10 July 2018'
+    end
+
+    [result]
+  end
+
+  def consultation?(document_type)
+    document_type == 'open_consultation' ||
+      document_type == 'consultation_outcome' ||
+      document_type == 'closed_consultation'
   end
 end
