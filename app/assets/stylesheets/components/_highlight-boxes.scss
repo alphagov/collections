@@ -12,13 +12,17 @@
   @include core-19;
   @include box-sizing(border-box);
   list-style-type: none;
-  padding: 5px 10px 25px 0;
+  padding: ($gutter / 6) $gutter-one-third ($gutter-half + $gutter-one-third) 0;
   width: 100%;
-  min-width: 250px;
 
   @include media(tablet) {
-    width: 33%;
-    padding: 5px 25px 25px 0;
+    width: 50%;
+    padding: ($gutter / 6) ($gutter-half + $gutter-one-third) ($gutter-half + $gutter-one-third) 0;
+  }
+
+  @include media(desktop) {
+    width: (1 / 3) * 100%;
+    padding: ($gutter / 6) ($gutter-half + $gutter-one-third) ($gutter-half + $gutter-one-third) 0;
   }
 }
 
