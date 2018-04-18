@@ -35,39 +35,17 @@
   margin-top: 0;
 }
 
-// this is a stop-gap solution, using this mixin introduces
-// some duplication but it is necessary until this area has
-// been fully converted to use components
-@mixin taxon-element-styles {
-  h2 {
+.taxon-page__grid {
+  background-color: $grey-4;
+  padding-top: $gutter;
+  margin-top: $gutter * 2;
+
+  .taxon-page__grid-heading {
     @include bold-19;
     @include media (tablet) {
       padding-bottom: $gutter-one-third;
     }
   }
-
-  p {
-    @include core-19;
-    margin-top: $gutter-one-third / 2;
-    margin-bottom: $gutter-two-thirds;
-  }
-
-  // this is to make links easier to use for touch users
-  // but the work was never completed and there's no supporting user research
-  // so it should be removed soon
-  a {
-    margin: -3px;
-    padding: 3px;
-    outline-color: transparent;
-    display: block;
-  }
-}
-
-.taxon-page__grid {
-  background-color: $grey-4;
-  padding-top: $gutter;
-  margin-top: $gutter * 2;
-  @include taxon-element-styles;
 
   .taxon-page__grid-wrapper {
     list-style-type: none;
@@ -93,28 +71,13 @@
   }
 
   .taxon-page__grid-item-description {
-    margin: 5px 0 20px 0;
+    @include core-19;
+    margin-top: $gutter-one-third / 2;
+    margin-bottom: $gutter-two-thirds;
+
 
     &:last-child {
       margin-bottom: 0;
-    }
-  }
-}
-
-.world-taxon-page--leaf .topic-header {
-  @include taxon-element-styles;
-}
-
-.world-taxon-page--accordion {
-  .child-topic-contents {
-    .topic-content {
-      ol {
-        list-style-type: none;
-      }
-
-      li {
-        margin-bottom: $gutter-one-third;
-      }
     }
   }
 }

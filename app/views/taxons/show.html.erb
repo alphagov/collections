@@ -41,7 +41,7 @@
       <ol class="taxon-page__grid-wrapper">
         <% presented_taxon.child_taxons.each_with_index do |child_taxon, index| %>
           <li class="taxon-page__grid-item">
-            <h2>
+            <h2 class="taxon-page__grid-heading">
               <%= link_to(
                 child_taxon.title,
                 child_taxon.base_path,
