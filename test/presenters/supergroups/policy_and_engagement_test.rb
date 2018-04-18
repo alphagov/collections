@@ -20,7 +20,7 @@ describe Supergroups::PolicyAndEngagement do
         content = content_item_for_base_path('/government/tagged/content').merge(
           "details": {
             "body": "",
-            "closing_date": "2018-07-10T23:45:00.000+00:00"
+            "closing_date": "2017-07-10T23:45:00.000+00:00"
           }
         )
 
@@ -86,12 +86,57 @@ describe Supergroups::PolicyAndEngagement do
       end
 
       describe '#consultation_closing_date' do
-        it 'gets the closing date of consultations' do
+        it 'gets the closing date of past consultations' do
           MostRecentContent.any_instance
             .stubs(:fetch)
             .returns(section_tagged_content_list('open_consultation'))
 
           assert_equal expected_result('open_consultation'), policy_and_engagement_supergroup.document_list(taxon_id)
+        end
+
+        it 'gets the closing date of future consultations' do
+          rummager_result = [
+            Document.new(
+              title: 'Tagged Content Title',
+              description: 'Description of tagged content',
+              public_updated_at: '2018-02-28T08:01:00.000+00:00',
+              base_path: '/government/tagged/content-1',
+              content_store_document_type: 'open_consultation',
+              organisations: 'Tagged Content Organisation'
+            )
+          ]
+
+          MostRecentContent.any_instance
+            .stubs(:fetch)
+            .returns(rummager_result)
+
+          content = content_item_for_base_path('/government/tagged/content-1').merge(
+            "details": {
+              "body": "",
+              "closing_date": "2018-07-10T23:45:00.000+00:00"
+            }
+          )
+
+          content_store_has_item('/government/tagged/content-1', content)
+
+          expected = [
+            {
+              link: {
+                text: 'Tagged Content Title',
+                path: '/government/tagged/content-1'
+              },
+              metadata: {
+                public_updated_at: '2018-02-28T08:01:00.000+00:00',
+                organisations: 'Tagged Content Organisation',
+                document_type: 'Open consultation',
+                closing_date: 'Closing date 10 July 2018'
+              }
+            }
+          ]
+
+          Timecop.freeze("2018-04-18") do
+            assert_equal expected, policy_and_engagement_supergroup.document_list(taxon_id)
+          end
         end
       end
     end
@@ -127,7 +172,7 @@ describe Supergroups::PolicyAndEngagement do
     }
 
     if consultation?(document_type)
-      result[:metadata][:closing_date] = '10 July 2018'
+      result[:metadata][:closing_date] = 'Date closed 10 July 2017'
     end
 
     [result]

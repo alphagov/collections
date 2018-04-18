@@ -53,7 +53,12 @@ module Supergroups
     def consultation_closing_date(base_path)
       @consultation = ::Services.content_store.content_item(base_path)
       date = Date.parse(@consultation["details"]["closing_date"])
-      date.strftime("%d %B %Y")
+
+      if date < Time.zone.today
+        return date.strftime("Date closed %d %B %Y")
+      end
+
+      date.strftime("Closing date %d %B %Y")
     end
   end
 end
