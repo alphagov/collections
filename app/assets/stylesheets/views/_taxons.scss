@@ -35,6 +35,23 @@
   margin-top: 0;
 }
 
+.taxon-page__featured-item {
+  .taxon-page__featured-link {
+    @include bold-27;
+    display: block;
+    margin: $gutter-half 0 $gutter-one-third 0;
+  }
+
+  .taxon-page__featured-metadata-wrapper {
+    @include core-16;
+
+    .taxon-page__featured-metadata {
+      display: inline-block;
+      margin-right: $gutter-two-thirds;
+    }
+  }
+}
+
 .taxon-page__grid {
   background-color: $grey-4;
   padding-top: $gutter;
