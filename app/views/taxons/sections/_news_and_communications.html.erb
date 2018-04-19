@@ -6,6 +6,7 @@
 
 <div class="grid-row">
   <div class="taxon-page__featured-item column-one-third ">
+    <img class="taxon-page__featured-image" src="<%= featured_item[:image][:url] %>" alt="<%= featured_item[:image][:alt] %>">
     <a class="taxon-page__featured-link" href="<%= featured_item[:link][:path] %>"><%= featured_item[:link][:text] %></a>
     <div class="taxon-page__featured-metadata-wrapper">
       <% featured_item[:metadata].each do |metadata_key, metadata_value| %>

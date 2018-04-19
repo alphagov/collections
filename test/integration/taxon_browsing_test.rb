@@ -77,6 +77,8 @@ private
     content_store_has_item(child_one_base_path, child_one)
     content_store_has_item(child_two_base_path, child_two)
 
+    content_store_has_item('/content-item-1', content_item_for_base_path('/content-item-1'))
+
     @content_item = content_item_without_children(base_path, content_id)
 
     @content_item["links"]["child_taxons"] = [child_one, child_two]
@@ -163,6 +165,7 @@ private
 
   def and_i_can_see_the_news_and_communications_section
     assert page.has_content?("News and communications")
+    assert page.has_selector?('.taxon-page__featured-item')
 
     tagged_content_for_news_and_communications.each do |item|
       all_other_sections_list_item_test(item)

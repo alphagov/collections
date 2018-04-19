@@ -36,6 +36,11 @@
 }
 
 .taxon-page__featured-item {
+  .taxon-page__featured-image {
+    margin-top: 20px;
+    width: 100%;
+  }
+
   .taxon-page__featured-link {
     @include bold-27;
     display: block;

@@ -62,12 +62,12 @@ private
       {
         'title' => 'Content item 1',
         'description' => 'Description of content item 1',
-        'link' => 'content-item-1'
+        'link' => 'world-content-item-1'
       },
       {
         'title' => 'Content item 2',
         'description' => 'Description of content item 2',
-        'link' => 'content-item-2'
+        'link' => 'world-content-item-2'
       },
     ]
   end
