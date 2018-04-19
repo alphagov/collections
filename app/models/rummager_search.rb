@@ -49,12 +49,19 @@ class RummagerSearch
         link: organisation['link'],
         slug: organisation['slug'],
         organisation_state: organisation['organisation_state'],
+        logo_formatted_title: get_formatted_title(organisation['logo_formatted_title']),
+        brand: organisation['organisation_brand'],
+        crest: organisation['organisation_crest'],
         document_count: option['documents']
       )
     end
   end
 
 private
+
+  def get_formatted_title(title)
+    title ? title.sub("\r\n", "<br/>") : nil
+  end
 
   def search_result
     @_search_result ||= Services.rummager.search(@search_params)
