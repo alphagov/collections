@@ -14,4 +14,24 @@ describe Organisation do
     )
     refute(organisation.live?)
   end
+
+  describe '#has_logo?' do
+    it 'returns true if logo attributes are present' do
+      organisation = Organisation.new(
+        logo_formatted_title: "some\ntitle",
+        brand: 'ministry-of-blah',
+        crest: 'single-identity'
+      )
+      assert(organisation.has_logo?)
+    end
+
+    it 'returns false if the crest is missing' do
+      organisation = Organisation.new(
+        logo_formatted_title: "some\ntitle",
+        brand: 'ministry-of-blah',
+        crest: ''
+      )
+      refute(organisation.has_logo?)
+    end
+  end
 end
