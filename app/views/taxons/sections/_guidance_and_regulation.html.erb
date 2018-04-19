@@ -2,4 +2,4 @@
   items: section[:documents].shift(section[:promoted_content_count])
 %>
 
-<%= render partial: 'document_list_with_grid', locals: { documents: section[:documents] } %>
+<%= render partial: 'document_list_with_grid', locals: { documents: section[:documents], see_more_link: section[:see_more_link] } %>
