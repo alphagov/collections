@@ -1,0 +1,35 @@
+<%= render "govuk_publishing_components/components/inverse_header", { full_width: true, padding_top: false } do %>
+  <div class="full-page-width-wrapper">
+    <%= render partial: 'govuk_component/breadcrumbs',
+      locals: {
+        breadcrumbs: [
+          {
+            title: "Home",
+            url: "/"
+          },
+          {
+            title: "Topical events",
+            url: "/topical-events"
+          }
+      ],
+        collapse_on_mobile: true,
+        inverse: true
+      }
+    %>
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <%= render "govuk_component/title", {
+          title: topical_event.title,
+          average_title_length: 'long',
+          inverse: true
+        } %>
+
+        <%= render 'govuk_component/lead_paragraph', {
+            text: topical_event.description,
+            inverse: true
+        } %>
+      </div>
+    </div>
+  </div>
+<% end %>

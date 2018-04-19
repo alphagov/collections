@@ -1,0 +1,35 @@
+<%= render "govuk_publishing_components/components/inverse_header", { full_width: true, padding_top: false } do %>
+  <div class="full-page-width-wrapper">
+    <%= render partial: 'govuk_component/breadcrumbs',
+      locals: {
+        breadcrumbs: [
+          {
+            title: "Home",
+            url: "/"
+          },
+          {
+            title: "Policy areas",
+            url: "/policy-areas"
+          }
+      ],
+        collapse_on_mobile: true,
+        inverse: true
+      }
+    %>
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <%= render "govuk_component/title", {
+          title: policy_area.title,
+          average_title_length: 'long',
+          inverse: true
+        } %>
+
+        <%= render 'govuk_component/lead_paragraph', {
+            text: policy_area.description,
+            inverse: true
+        } %>
+      </div>
+    </div>
+  </div>
+<% end %>

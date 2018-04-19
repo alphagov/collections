@@ -1,16 +1,16 @@
 <% content_for :page_class, "taxon-page taxon-page--grid" %>
-<% content_for :is_taxon_with_subtopics, presented_taxon.show_subtopic_grid? %>
+
 <%=
   render(
     partial: 'common',
     locals: {
-      presented_taxon: presented_taxon
+      topical_event: topical_event
     }
   )
 %>
 
 <div class="full-page-width-wrapper">
-  <% presented_taxon.sections.each do |section| %>
+  <% topical_event.sections.each do |section| %>
     <% if section[:show_section] %>
     <div class="taxon-page__section-group">
       <div class="grid-row">
@@ -31,24 +31,24 @@
     <% end %>
   <% end %>
 
-  <%= render(partial: 'organisations', locals: { presenter: presented_taxon }) %>
+  <%= render(partial: 'taxons/organisations', locals: { presenter: topical_event }) %>
 </div>
 
 <% if content_for(:is_taxon_with_subtopics) %>
   <nav role="navigation" class="taxon-page__grid">
     <div class="full-page-width-wrapper">
       <h2 class="taxon-page__section-heading taxon-page__grid-heading">Explore these sub-topics</h2>
-      <ol class="taxon-page__grid-wrapper">
-        <% presented_taxon.child_taxons.each_with_index do |child_taxon, index| %>
-          <li class="taxon-page__grid-item">
-            <h2 class="taxon-page__grid-heading">
+      <ol>
+        <% topical_event.child_taxons.each_with_index do |child_taxon, index| %>
+          <li class="<%= 'leftmost-row-cell-clear-float' if index % 3 == 0 %>">
+            <h2>
               <%= link_to(
                 child_taxon.title,
                 child_taxon.base_path,
-                data: presented_taxon.options_for_child_taxon(index: index)
+                data: topical_event.options_for_child_taxon(index: index)
               )%>
             </h2>
-            <p class="taxon-page__grid-item-description"><%= child_taxon.description %></p>
+            <p><%= child_taxon.description %></p>
           </li>
         <% end %>
       </ol>
