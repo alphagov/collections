@@ -15,6 +15,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_the_news_and_communications_section
     and_i_can_see_the_policy_and_engagement_section
     and_i_can_see_the_transparency_section
+    and_i_can_see_the_organisation_logos
     and_i_can_see_the_organisations_list
     and_i_can_see_the_sub_topics_grid
   end
@@ -34,7 +35,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     then_there_should_be_an_error
   end
 
-private
+  private
 
   def given_there_is_a_thing_that_is_not_a_taxon
     thing = {
@@ -229,9 +230,12 @@ private
   def and_i_can_see_the_organisations_list
     assert page.has_content?('Organisations')
 
-    tagged_organisations.each do |item|
-      assert page.has_link?(item['value']['title'], href: item['value']['link'])
-    end
+    assert page.has_link?(no_logo_org['value']['title'], href: no_logo_org['value']['link'])
+    refute page.has_link?(org_with_logo['value']['title'])
+  end
+
+  def and_i_can_see_the_organisation_logos
+    assert page.has_selector?('test-govuk-component[data-template=govuk_component-organisation_logo]')
   end
 
   def and_i_can_see_the_sub_topics_grid
@@ -280,21 +284,32 @@ private
 
   def tagged_organisations
     [
-      {
-        'value' => {
-          'title' => 'Department for Education',
-          'link' => '/government/organisations/department-for-education',
-          'organisation_state' => 'live'
-        }
-      },
-      {
-        'value' => {
-          'title' => 'Ofsted',
-          'link' => '/government/organisations/ofsted',
-          'organisation_state' => 'live'
-        }
-      }
+      no_logo_org,
+      org_with_logo
     ]
+  end
+
+  def no_logo_org
+    {
+      'value' => {
+        'title' => 'Department for Education',
+        'link' => '/government/organisations/department-for-education',
+        'organisation_state' => 'live'
+      }
+    }
+  end
+
+  def org_with_logo
+    {
+      'value' => {
+        'title' => 'Ofsted',
+        'link' => '/government/organisations/ofsted',
+        'organisation_state' => 'live',
+        'organisation_brand' => 'org-brand',
+        'organisation_crest' => 'single-identity',
+        'logo_formatted_title' => "Department\nfor\nEducation"
+      }
+    }
   end
 
   def tagged_content_for_services

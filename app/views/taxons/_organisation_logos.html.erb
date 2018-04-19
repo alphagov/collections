@@ -1,0 +1,19 @@
+<% if presented_taxon.show_organisation_logos? %>
+  <div class="taxon-page__section-group">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <h2 class="taxon-page__section-heading">Organisations</h2>
+        <% presented_taxon.organisations_with_logo.each do |organisation|%>
+          <%= render "govuk_component/organisation_logo", {
+              organisation: {
+                  name: organisation.logo_formatted_title,
+                  url: organisation.link,
+                  brand: organisation.brand,
+                  crest: organisation.crest
+              }
+          } %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>

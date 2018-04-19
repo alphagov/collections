@@ -1,10 +1,10 @@
-<% if presented_taxon.show_organisations? %>
+<% if presented_taxon.show_organisation_list? %>
   <div class="taxon-page__section-group">
     <div class="grid-row">
       <div class="column-two-thirds">
         <h2 class="taxon-page__section-heading">Organisations</h2>
         <%= render 'govuk_publishing_components/components/document_list',
-          items: presented_taxon.taxon_organisations,
+          items: presented_taxon.taxon_organisations_without_logo,
           margin_top: true,
           margin_bottom: false
       %>
