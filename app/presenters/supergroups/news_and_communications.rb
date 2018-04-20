@@ -36,9 +36,14 @@ module Supergroups
     end
 
     def news_item_photo(base_path)
+      default_news_image = {
+        "url": "/government/assets/placeholder.jpg",
+        "alt_text": ""
+      }.with_indifferent_access
+
       news_item = ::Services.content_store.content_item(base_path)
 
-      news_item["details"]["image"]
+      news_item["details"]["image"] || default_news_image
     end
 
     def promoted_content_count(*)

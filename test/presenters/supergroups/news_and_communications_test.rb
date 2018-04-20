@@ -3,6 +3,7 @@ require 'test_helper'
 include RummagerHelpers, SupergroupHelpers
 
 describe Supergroups::NewsAndCommunications do
+  DEFAULT_WHITEHALL_IMAGE_URL = "/government/assets/placeholder.jpg".freeze
   let(:taxon_id) { '12345' }
   let(:news_and_communications_supergroup) { Supergroups::NewsAndCommunications.new }
 
@@ -60,6 +61,37 @@ describe Supergroups::NewsAndCommunications do
           refute content_item.key?(:image)
         end
       end
+    end
+
+    it 'returns the default whitehall image if no image is present' do
+      content = content_item_for_base_path('/government/tagged/content').merge(
+        "details": {}
+      )
+
+      content_store_has_item('/government/tagged/content', content)
+
+      MostRecentContent.any_instance
+      .stubs(:fetch)
+      .returns(section_tagged_content_list('news_story'))
+
+      assert_equal DEFAULT_WHITEHALL_IMAGE_URL, news_and_communications_supergroup.document_list(taxon_id).first[:image][:url]
+    end
+
+    it 'uses empty alt text if using the default whitehall image' do
+      # The default whitehall image does not give more context/information to the user about the news item they are viewing.
+      # We therefore want to hide the image from screenreaders by setting alt_text to a blank value
+
+      content = content_item_for_base_path('/government/tagged/content').merge(
+        "details": {}
+      )
+
+      content_store_has_item('/government/tagged/content', content)
+
+      MostRecentContent.any_instance
+      .stubs(:fetch)
+      .returns(section_tagged_content_list('news_story'))
+
+      assert_equal "", news_and_communications_supergroup.document_list(taxon_id).first[:image][:alt]
     end
   end
 end
