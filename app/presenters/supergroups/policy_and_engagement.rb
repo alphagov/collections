@@ -31,7 +31,7 @@ module Supergroups
     def tagged_content(taxon_id)
       @content = MostRecentContent.fetch(content_id: taxon_id, filter_content_purpose_supergroup: @name)
 
-      @content.select { |content_item| consultation?(content_item.content_store_document_type) } | @content
+      reorder_tagged_documents_to_prioritise_consultations
     end
 
     def consultation?(document_type)
@@ -59,6 +59,18 @@ module Supergroups
       end
 
       date.strftime("Closing date %d %B %Y")
+    end
+
+  private
+
+    def reorder_tagged_documents_to_prioritise_consultations
+      consultations = @content.select do |content_item|
+        consultation?(content_item.content_store_document_type)
+      end
+
+      other_document_types = @content - consultations
+
+      consultations + other_document_types
     end
   end
 end
