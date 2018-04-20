@@ -35,7 +35,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     then_there_should_be_an_error
   end
 
-  private
+private
 
   def given_there_is_a_thing_that_is_not_a_taxon
     thing = {
@@ -109,6 +109,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   def then_i_can_see_the_title_section
+    save_and_open_page
     assert page.has_selector?('title', text: "Taxon title", visible: false)
 
     within_static_component 'breadcrumbs' do |payload|

@@ -12,7 +12,8 @@ class Organisation
     :document_count,
     :logo_formatted_title,
     :brand,
-    :crest
+    :crest,
+    :logo_url
   )
 
   def live?
@@ -20,10 +21,14 @@ class Organisation
   end
 
   def has_logo?
-    ![
+    [
       logo_formatted_title,
       brand,
       crest
-    ].any?{|v|v.blank?}
+    ].none?{|v|v.blank?}
+  end
+
+  def custom_logo?
+    crest == 'custom'
   end
 end

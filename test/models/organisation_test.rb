@@ -22,7 +22,7 @@ describe Organisation do
       crest: 'single-identity'
     )
     assert(organisation.has_logo?)
-    end
+  end
 
   it 'returns false for has_logo? if logo_formatted_title is missing' do
     organisation = Organisation.new(
@@ -49,5 +49,19 @@ describe Organisation do
       crest: ''
     )
     refute(organisation.has_logo?)
+  end
+
+  it 'returns true for custom_logo if crest is "custom"' do
+    organisation = Organisation.new(
+      crest: 'custom'
+    )
+    assert(organisation.custom_logo?)
+    end
+
+  it 'returns false for custom_logo if crest is not "custom"' do
+    organisation = Organisation.new(
+      crest: 'somethingelse'
+    )
+    refute(organisation.custom_logo?)
   end
 end

@@ -45,7 +45,6 @@ class TaxonPresenter
     end
   end
 
-
   def organisations_with_logo
     organisations.select(&:has_logo?)
   end
@@ -59,8 +58,8 @@ class TaxonPresenter
   end
 
 private
+
   def organisations_without_logo
     organisations.reject(&:has_logo?)
   end
-
 end
