@@ -1,11 +1,11 @@
 <%
   featured_item = section[:documents].shift(section[:promoted_content_count]).first
-  no_more_news_items = section[:documents].empty?
-  featured_item_layout_class = "taxon-page__featured-item--single" if no_more_news_items
+  documents = section[:documents].any?
+  featured_item_layout_class = "taxon-page__featured-item--single" if !documents
 %>
 
 <div class="grid-row">
-  <div class="taxon-page__featured-item column-one-third ">
+  <div class="taxon-page__featured-item column-one-third <%= featured_item_layout_class %>">
     <img class="taxon-page__featured-image" src="<%= featured_item[:image][:url] %>" alt="<%= featured_item[:image][:alt] %>">
     <div class="taxon-page__featured-text">
       <a class="taxon-page__featured-link" href="<%= featured_item[:link][:path] %>"><%= featured_item[:link][:text] %></a>
@@ -23,16 +23,15 @@
     </div>
   </div>
 
-  <div class="column-two-thirds">
+  <div class="<%= documents ? "column-two-thirds" : "taxon-page__featured-see-more" %>">
     <%= render 'govuk_publishing_components/components/document_list',
       items: section[:documents],
       margin_top: true,
       margin_bottom: true
     %>
-
     <%= link_to(
-       section[:see_more_link][:text],
-       section[:see_more_link][:url]
-     )%>
+      section[:see_more_link][:text],
+      section[:see_more_link][:url]
+    )%>
   </div>
 </div>

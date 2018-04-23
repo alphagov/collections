@@ -39,6 +39,10 @@
   @extend %contain-floats;
   margin-top: $gutter-two-thirds;
 
+  &--single {
+    min-width: 330px;
+  }
+
   .taxon-page__featured-image {
     @include box-sizing(border-box);
     width: (1 / 3) * 100%;
@@ -76,6 +80,13 @@
       margin-right: $gutter-two-thirds;
     }
   }
+}
+
+.taxon-page__featured-see-more {
+  display: block;
+  padding-top: $gutter-two-thirds;
+  padding-left: $gutter-half;
+  clear: both;
 }
 
 .taxon-page__grid {
