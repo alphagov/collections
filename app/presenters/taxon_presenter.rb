@@ -34,8 +34,10 @@ class TaxonPresenter
     }
   end
 
-  def taxon_organisations
-    organisations.map do |organisation|
+  def organisation_list
+    orgs = organisations - organisations_with_logos
+
+    orgs.map do |organisation|
       {
         link: {
           text: organisation.title,
@@ -43,6 +45,22 @@ class TaxonPresenter
         }
       }
     end
+  end
+
+  def organisation_list_with_logos
+    organisations_with_logos.map do |org|
+      {
+
+          name: org.logo_formatted_title,
+          url: org.link,
+          brand: org.brand,
+          crest: org.crest,
+      }
+    end
+  end
+
+  def organisations_with_logos
+    organisations.select(&:has_logo?)
   end
 
   def show_organisations?

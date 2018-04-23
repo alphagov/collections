@@ -15,7 +15,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_the_news_and_communications_section
     and_i_can_see_the_policy_and_engagement_section
     and_i_can_see_the_transparency_section
-    and_i_can_see_the_organisations_list
+    and_i_can_see_the_organisations_section
     and_i_can_see_the_sub_topics_grid
   end
 
@@ -229,12 +229,14 @@ private
     assert page.has_content?(expected_organisations(item))
   end
 
-  def and_i_can_see_the_organisations_list
+  def and_i_can_see_the_organisations_section
     assert page.has_content?('Organisations')
 
-    tagged_organisations.each do |item|
-      assert page.has_link?(item['value']['title'], href: item['value']['link'])
-    end
+    assert page.has_selector?('test-govuk-component[data-template=govuk_component-organisation_logo]',
+      text: tagged_organisation_with_logo['value']['link'])
+
+    assert page.has_link?(tagged_organisation['value']['title'],
+      href: tagged_organisation['value']['link'])
   end
 
   def and_i_can_see_the_sub_topics_grid
@@ -283,21 +285,32 @@ private
 
   def tagged_organisations
     [
-      {
-        'value' => {
-          'title' => 'Department for Education',
-          'link' => '/government/organisations/department-for-education',
-          'organisation_state' => 'live'
-        }
-      },
-      {
-        'value' => {
-          'title' => 'Ofsted',
-          'link' => '/government/organisations/ofsted',
-          'organisation_state' => 'live'
-        }
-      }
+      tagged_organisation,
+      tagged_organisation_with_logo
     ]
+  end
+
+  def tagged_organisation
+    {
+      'value' => {
+        'title' => 'Organisation without logo',
+        'link' => '/government/organisations/organisation-without-logo',
+        'organisation_state' => 'live'
+      }
+    }
+  end
+
+  def tagged_organisation_with_logo
+    {
+      'value' => {
+        'title' => 'Organisation with logo',
+        'link' => '/government/organisations/organisation-with-logo',
+        'organisation_state' => 'live',
+        'organisation_brand' => 'org-brand',
+        'organisation_crest' => 'single-identity',
+        'logo_formatted_title' => "organisation-with-logo"
+      }
+    }
   end
 
   def tagged_content_for_services
