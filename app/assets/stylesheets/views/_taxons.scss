@@ -36,19 +36,40 @@
 }
 
 .taxon-page__featured-item {
+  @extend %contain-floats;
+  margin-top: $gutter-two-thirds;
+
   .taxon-page__featured-image {
-    margin-top: 20px;
-    width: 100%;
+    @include box-sizing(border-box);
+    width: (1 / 3) * 100%;
+    float: left;
+    margin-bottom: $gutter-one-third;
+    padding-right: $gutter-half;
+
+    @include media(tablet) {
+      float: none;
+      margin-bottom: $gutter-one-third;
+      padding-right: 0;
+      width: 100%;
+    }
+  }
+
+  .taxon-page__featured-text {
+    display: inline-block;
+    width: (2 / 3) * 100%;
+
+    @include media(tablet) {
+      width: 100%;
+    }
   }
 
   .taxon-page__featured-link {
-    @include bold-27;
-    display: block;
-    margin: $gutter-half 0 $gutter-one-third 0;
+    @include bold-19;
   }
 
   .taxon-page__featured-metadata-wrapper {
     @include core-16;
+    margin-top: $gutter-one-third / 2;
 
     .taxon-page__featured-metadata {
       display: inline-block;
