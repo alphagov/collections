@@ -320,7 +320,7 @@ GEM
     timecop (0.9.1)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    uglifier (4.1.9)
+    uglifier (4.1.10)
       execjs (>= 0.3.0, < 3)
     unf (0.1.4)
       unf_ext
@@ -367,7 +367,7 @@ DEPENDENCIES
   simplecov-rcov
   slimmer (~> 12.1.0)
   timecop
-  uglifier (~> 4.1.9)
+  uglifier (~> 4.1.10)
   webmock
 
 RUBY VERSION
