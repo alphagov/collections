@@ -1,0 +1,10 @@
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <% organisations.each do |organisation| %>
+      <%= render 'govuk_component/organisation_logo', {
+          organisation: organisation
+        }
+      %>
+    <% end %>
+  </div>
+</div>

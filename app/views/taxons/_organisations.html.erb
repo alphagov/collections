@@ -8,6 +8,6 @@
 
     <%= render partial: 'organisations_with_logos', locals: { organisations: presented_taxon.organisation_list_with_logos } %>
 
-    <%= render partial: 'document_list_with_grid', locals: { documents: presented_taxon.taxon_organisations } %>
+    <%= render partial: 'document_list_with_grid', locals: { documents: presented_taxon.organisation_list } %>
   </div>
 <% end %>
