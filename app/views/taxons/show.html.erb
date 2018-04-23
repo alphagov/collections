@@ -27,7 +27,7 @@
     <% end %>
   <% end %>
 
-  <%= render(partial: 'organisations', locals: { presented_taxon: presented_taxon }) %>
+  <%= render partial: 'organisations', locals: { presented_taxon: presented_taxon } %>
 </div>
 
 <% if content_for(:is_taxon_with_subtopics) %>

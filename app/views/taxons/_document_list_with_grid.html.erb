@@ -7,10 +7,12 @@
         margin_bottom: true
       %>
 
-      <%= link_to(
-        see_more_link[:text],
-        see_more_link[:url]
-      )%>
+      <% if local_assigns[:see_more_link] %>
+        <%= link_to(
+          see_more_link[:text],
+          see_more_link[:url]
+        )%>
+      <% end %>
     </div>
   </div>
 <% end %>
