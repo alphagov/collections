@@ -21,14 +21,10 @@ class Organisation
   end
 
   def has_logo?
-    [
-      logo_formatted_title,
-      brand,
-      crest
-    ].none?(&:blank?)
+    crest.present? && crest != 'no-identity'
   end
 
   def custom_logo?
-    crest == 'custom'
+    crest == 'custom' && logo_url.present?
   end
 end

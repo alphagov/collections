@@ -54,12 +54,10 @@ class TaxonPresenter
           name: org.logo_formatted_title,
           url: org.link,
           brand: org.brand,
-          crest: org.crest
+          crest: org.crest,
       }
 
-      if org.logo_url
-        data[:crest] = nil
-
+      if org.custom_logo?
         image = {
           url: org.logo_url,
           alt_text: org.title

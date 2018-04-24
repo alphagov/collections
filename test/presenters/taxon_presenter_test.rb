@@ -106,7 +106,7 @@ describe TaxonPresenter do
           name: 'Department\nfor\nEducation',
           url: '/government/organisations/department-for-education',
           brand: 'department-for-education',
-          crest: nil,
+          crest: 'custom',
           image: {
             url: '/logo-url.png',
             alt_text: 'Department for Education'
@@ -162,7 +162,7 @@ describe TaxonPresenter do
         organisation_state: 'live',
         logo_formatted_title: 'Department\nfor\nEducation',
         brand: 'department-for-education',
-        crest: 'single-identity',
+        crest: 'custom',
         logo_url: '/logo-url.png',
         document_count: 89
       )
