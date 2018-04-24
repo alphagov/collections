@@ -56,7 +56,7 @@ describe Organisation do
       crest: 'custom'
     )
     assert(organisation.custom_logo?)
-    end
+  end
 
   it 'returns false for custom_logo if crest is not "custom"' do
     organisation = Organisation.new(
