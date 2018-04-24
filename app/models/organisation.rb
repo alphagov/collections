@@ -12,7 +12,8 @@ class Organisation
     :document_count,
     :logo_formatted_title,
     :brand,
-    :crest
+    :crest,
+    :logo_url
   )
 
   def live?
@@ -21,5 +22,9 @@ class Organisation
 
   def has_logo?
     crest.present? && crest != 'no-identity'
+  end
+
+  def custom_logo?
+    crest == 'custom' && logo_url.present?
   end
 end
