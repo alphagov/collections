@@ -21,7 +21,7 @@ class Organisation
   end
 
   def has_logo?
-    crest.present? && crest != 'no-identity'
+    crest.present? && crest != 'no-identity' && !custom_logo?
   end
 
   def custom_logo?
