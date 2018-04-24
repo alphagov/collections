@@ -95,6 +95,27 @@ describe TaxonPresenter do
 
       assert_equal expected, taxon_presenter.organisation_list_with_logos
     end
+
+    it 'returns a list of organisations with custom logos' do
+      TaggedOrganisations.any_instance
+        .stubs(:fetch)
+        .returns(tagged_custom_organisation)
+
+      expected = [
+        {
+          name: 'Department\nfor\nEducation',
+          url: '/government/organisations/department-for-education',
+          brand: 'department-for-education',
+          crest: 'custom',
+          image: {
+            url: '/logo-url.png',
+            alt_text: 'Department for Education'
+          }
+        }
+      ]
+
+      assert_equal expected, taxon_presenter.organisation_list_with_logos
+    end
   end
 
   def tagged_organisation
@@ -108,6 +129,7 @@ describe TaxonPresenter do
         logo_formatted_title: nil,
         brand: nil,
         crest: nil,
+        logo_url: nil,
         document_count: 89
       )
     ]
@@ -124,6 +146,24 @@ describe TaxonPresenter do
         logo_formatted_title: 'Department\nfor\nEducation',
         brand: 'department-for-education',
         crest: 'single-identity',
+        logo_url: nil,
+        document_count: 89
+      )
+    ]
+  end
+
+  def tagged_custom_organisation
+    [
+      Organisation.new(
+        title: 'Department for Education',
+        content_id: 'ebd15ade-73b2-4eaf-b1c3-43034a42eb37',
+        link: '/government/organisations/department-for-education',
+        slug: 'department-for-education',
+        organisation_state: 'live',
+        logo_formatted_title: 'Department\nfor\nEducation',
+        brand: 'department-for-education',
+        crest: 'custom',
+        logo_url: '/logo-url.png',
         document_count: 89
       )
     ]

@@ -49,13 +49,23 @@ class TaxonPresenter
 
   def organisation_list_with_logos
     organisations_with_logos.map do |org|
-      {
+      data = {
 
           name: org.logo_formatted_title,
           url: org.link,
           brand: org.brand,
           crest: org.crest,
       }
+
+      if org.custom_logo?
+        image = {
+          url: org.logo_url,
+          alt_text: org.title
+        }
+        data[:image] = image
+      end
+
+      data
     end
   end
 
