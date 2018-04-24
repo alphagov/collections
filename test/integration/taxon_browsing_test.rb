@@ -15,8 +15,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_the_news_and_communications_section
     and_i_can_see_the_policy_and_engagement_section
     and_i_can_see_the_transparency_section
-    and_i_can_see_the_organisation_logos
-    and_i_can_see_the_organisations_list
+    and_i_can_see_the_organisations_section
     and_i_can_see_the_sub_topics_grid
   end
 
@@ -227,15 +226,14 @@ private
     assert page.has_content?(expected_organisations(item))
   end
 
-  def and_i_can_see_the_organisations_list
+  def and_i_can_see_the_organisations_section
     assert page.has_content?('Organisations')
 
-    assert page.has_link?(no_logo_org['value']['title'], href: no_logo_org['value']['link'])
-    refute page.has_link?(org_with_logo['value']['title'])
-  end
+    assert page.has_selector?('test-govuk-component[data-template=govuk_component-organisation_logo]',
+      text: tagged_organisation_with_logo['value']['link'])
 
-  def and_i_can_see_the_organisation_logos
-    assert page.has_selector?('test-govuk-component[data-template=govuk_component-organisation_logo]')
+    assert page.has_link?(tagged_organisation['value']['title'],
+      href: tagged_organisation['value']['link'])
   end
 
   def and_i_can_see_the_sub_topics_grid
@@ -284,30 +282,30 @@ private
 
   def tagged_organisations
     [
-      no_logo_org,
-      org_with_logo
+      tagged_organisation,
+      tagged_organisation_with_logo
     ]
   end
 
-  def no_logo_org
+  def tagged_organisation
     {
       'value' => {
-        'title' => 'Department for Education',
-        'link' => '/government/organisations/department-for-education',
+        'title' => 'Organisation without logo',
+        'link' => '/government/organisations/organisation-without-logo',
         'organisation_state' => 'live'
       }
     }
   end
 
-  def org_with_logo
+  def tagged_organisation_with_logo
     {
       'value' => {
-        'title' => 'Ofsted',
-        'link' => '/government/organisations/ofsted',
+        'title' => 'Organisation with logo',
+        'link' => '/government/organisations/organisation-with-logo',
         'organisation_state' => 'live',
         'organisation_brand' => 'org-brand',
         'organisation_crest' => 'single-identity',
-        'logo_formatted_title' => "Department\nfor\nEducation"
+        'logo_formatted_title' => "organisation-with-logo"
       }
     }
   end
