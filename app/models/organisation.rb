@@ -25,7 +25,7 @@ class Organisation
       logo_formatted_title,
       brand,
       crest
-    ].none?{|v|v.blank?}
+    ].none?(&:blank?)
   end
 
   def custom_logo?
