@@ -33,5 +33,38 @@ describe Organisation do
       )
       refute(organisation.has_logo?)
     end
+
+    it 'returns false if the it is a custom logo' do
+      organisation = Organisation.new(
+        crest: 'custom',
+        logo_url: '/logo.png'
+      )
+      refute(organisation.has_logo?)
+    end
+  end
+
+  describe '#custom_logo?' do
+    it 'returns true if the crest is "custom"' do
+      organisation = Organisation.new(
+        crest: 'custom',
+        logo_url: '/logo.png'
+      )
+      assert(organisation.custom_logo?)
+    end
+
+    it 'returns false if the crest is not "custom"' do
+      organisation = Organisation.new(
+        crest: 'somethingelse',
+        logo_url: '/logo.png'
+      )
+      refute(organisation.custom_logo?)
+    end
+
+    it 'returns false if the logo url is missing' do
+      organisation = Organisation.new(
+        crest: 'somethingelse'
+      )
+      refute(organisation.custom_logo?)
+    end
   end
 end
