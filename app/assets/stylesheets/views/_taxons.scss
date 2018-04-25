@@ -137,13 +137,10 @@
 }
 
 .taxon-page__organisations {
-  padding: $gutter-half;
-}
+  list-style-type: none;
+  padding: $gutter-two-thirds 0 0 $gutter-half;
 
-.taxon-page__organisation {
-  display: inline-block;
-  width: 200px;
-  vertical-align: top;
-  margin-bottom: 10px;
-  margin-right: 20px;
+  .taxon-page__organisation {
+    margin-bottom: $gutter-two-thirds;
+  }
 }
