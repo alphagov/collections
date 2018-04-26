@@ -135,3 +135,12 @@
     }
   }
 }
+
+.taxon-page__organisations {
+  list-style-type: none;
+  padding: $gutter-two-thirds 0 0 $gutter-half;
+
+  .taxon-page__organisation {
+    margin-bottom: $gutter-two-thirds;
+  }
+}

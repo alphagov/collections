@@ -49,13 +49,16 @@ class RummagerSearch
         link: organisation['link'],
         slug: organisation['slug'],
         organisation_state: organisation['organisation_state'],
+        logo_formatted_title: organisation['logo_formatted_title'],
+        brand: organisation['organisation_brand'],
+        crest: organisation['organisation_crest'],
+        logo_url: organisation['logo_url'],
         document_count: option['documents']
       )
     end
   end
 
 private
-
   def search_result
     @_search_result ||= Services.rummager.search(@search_params)
   end

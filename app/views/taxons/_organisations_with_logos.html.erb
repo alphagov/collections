@@ -1,0 +1,12 @@
+<div class="grid-row">
+  <ol class="taxon-page__organisations">
+    <% organisations.each do |organisation| %>
+      <li class="taxon-page__organisation">
+        <%= render 'govuk_component/organisation_logo', {
+            organisation: organisation
+          }
+        %>
+      </li>
+    <% end %>
+  </ol>
+</div>

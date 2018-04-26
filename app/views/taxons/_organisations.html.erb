@@ -3,12 +3,11 @@
     <div class="grid-row">
       <div class="column-two-thirds">
         <h2 class="taxon-page__section-heading">Organisations</h2>
-        <%= render 'govuk_publishing_components/components/document_list',
-          items: presented_taxon.taxon_organisations,
-          margin_top: true,
-          margin_bottom: false
-      %>
       </div>
     </div>
+
+    <%= render partial: 'organisations_with_logos', locals: { organisations: presented_taxon.organisation_list_with_logos } %>
+
+    <%= render partial: 'document_list_with_grid', locals: { documents: presented_taxon.organisation_list } %>
   </div>
 <% end %>
