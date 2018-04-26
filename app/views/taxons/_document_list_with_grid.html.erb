@@ -1,9 +1,16 @@
-<div class="grid-row">
-  <div class="column-two-thirds">
-    <%= render 'govuk_publishing_components/components/document_list',
-      items: documents,
-      margin_top: true,
-      margin_bottom: true
-    %>
+<% if documents.any? %>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <%= render 'govuk_publishing_components/components/document_list',
+        items: documents,
+        margin_top: true,
+        margin_bottom: true
+      %>
+
+      <%= link_to(
+        see_more_link[:text],
+        see_more_link[:url]
+      )%>
+    </div>
   </div>
-</div>
+<% end %>
