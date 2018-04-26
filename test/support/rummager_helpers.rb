@@ -65,7 +65,7 @@ module RummagerHelpers
     params = {
       count: 0,
       aggregate_organisations: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
-      filter_taxons: [content_id]
+      filter_part_of_taxonomy_tree: [content_id]
     }
 
     Services.rummager
