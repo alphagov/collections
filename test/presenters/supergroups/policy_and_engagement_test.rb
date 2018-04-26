@@ -1,8 +1,9 @@
 require 'test_helper'
 
-include RummagerHelpers, SupergroupHelpers
-
 describe Supergroups::PolicyAndEngagement do
+  include RummagerHelpers
+  include SupergroupHelpers
+
   let(:taxon_id) { '12345' }
   let(:policy_and_engagement_supergroup) { Supergroups::PolicyAndEngagement.new }
 
