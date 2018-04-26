@@ -1,8 +1,9 @@
 require 'test_helper'
 
-include RummagerHelpers, SupergroupHelpers
-
 describe Supergroups::NewsAndCommunications do
+  include RummagerHelpers
+  include SupergroupHelpers
+
   DEFAULT_WHITEHALL_IMAGE_URL = "/government/assets/placeholder.jpg".freeze
   let(:taxon_id) { '12345' }
   let(:news_and_communications_supergroup) { Supergroups::NewsAndCommunications.new }

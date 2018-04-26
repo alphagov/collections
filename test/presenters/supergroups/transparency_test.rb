@@ -1,8 +1,8 @@
 require 'test_helper'
 
-include RummagerHelpers
-
 describe Supergroups::Transparency do
+  include RummagerHelpers
+
   let(:taxon_id) { '12345' }
   let(:transparency_supergroup) { Supergroups::Transparency.new }
 

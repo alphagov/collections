@@ -1,8 +1,8 @@
 require 'test_helper'
 
-include RummagerHelpers
-
 describe Supergroups::Supergroup do
+  include RummagerHelpers
+
   let(:taxon_id) { '12345' }
   let(:supergroup_name) { 'supergroup_name' }
   let(:supergroup) { Supergroups::Supergroup.new(supergroup_name) }
