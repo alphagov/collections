@@ -37,7 +37,7 @@ module Supergroups
 
     def news_item_photo(base_path)
       default_news_image = {
-        "url": "/government/assets/placeholder.jpg",
+        "url": "https://assets.publishing.service.gov.uk/government/assets/placeholder.jpg",
         "alt_text": ""
       }.with_indifferent_access
 
