@@ -1,0 +1,14 @@
+<div class="grid-row taxon-page__organisations">
+  <ol class="column-two-thirds">
+    <% organisations_with_logos.each do |promoted_organisation| %>
+      <li class="taxon-page__organisation">
+        <%= render 'govuk_component/organisation_logo', {
+            organisation: promoted_organisation
+          }
+        %>
+      </li>
+    <% end %>
+  </ol>
+</div>
+
+<%= render partial: 'document_list_with_grid', locals: { documents: organisations_without_logos } %>

@@ -1,13 +1,30 @@
 <% if presented_taxon.show_organisations? %>
-  <div class="taxon-page__section-group">
+  <div class="taxon-page__section-group" data-module="toggle">
     <div class="grid-row">
       <div class="column-two-thirds">
         <h2 class="taxon-page__section-heading">Organisations</h2>
       </div>
     </div>
 
-    <%= render partial: 'organisations_with_logos', locals: { organisations: presented_taxon.organisation_list_with_logos } %>
+    <%= render partial: 'organisation_logos_and_list', locals: {
+      organisations_with_logos: presented_taxon.promoted_organisation_list[:promoted_with_logos],
+      organisations_without_logos: presented_taxon.promoted_organisation_list[:promoted_without_logos]
+    } %>
 
-    <%= render partial: 'document_list_with_grid', locals: { documents: presented_taxon.organisation_list } %>
+    <% if presented_taxon.show_more_organisations? %>
+      <a href="#"
+      data-controls="more-organisations"
+      data-expanded="false"
+      data-toggled-text="Show fewer organisations">Show more organisations</a>
+
+      <div id="more-organisations" class="js-hidden">
+        <%= render partial: 'organisation_logos_and_list', locals: {
+          organisations_with_logos: presented_taxon.show_more_organisation_list[:organisations_with_logos],
+          organisations_without_logos: presented_taxon.show_more_organisation_list[:organisations_without_logos]
+        } %>
+      </div>
+    <% end %>
+
   </div>
 <% end %>
+
