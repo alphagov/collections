@@ -1,0 +1,33 @@
+<% content_for :title, "Departments, agencies and public bodies - GOV.UK" %>
+
+<%= render "govuk_publishing_components/components/heading", {
+    text: "Departments, agencies and public bodies - GOV.UK"
+} %>
+
+<%= render partial: 'organisations',
+           locals: { organisations: @organisations.number_10,
+                     organisation_type: "Executive offices" } %>
+
+<%= render partial: 'organisations',
+           locals: { organisations: @organisations.ministerial_departments,
+                     organisation_type: "Ministerial departments" } %>
+
+<%= render partial: 'organisations',
+           locals: { organisations: @organisations.non_ministerial_departments,
+                     organisation_type: "Non ministerial departments" } %>
+
+<%= render partial: 'organisations',
+           locals: { organisations: @organisations.ordered_agencies_and_other_public_bodies,
+                     organisation_type: "Agencies and other public bodies" } %>
+
+<%= render partial: 'organisations',
+           locals: { organisations: @organisations.ordered_high_profile_groups,
+                     organisation_type: "High profile groups" } %>
+
+<%= render partial: 'organisations',
+           locals: { organisations: @organisations.ordered_public_corporations,
+                     organisation_type: "Public corporations" } %>
+
+<%= render partial: 'organisations',
+           locals: { organisations: @organisations.ordered_devolved_administrations,
+                     organisation_type: "Devolved administrations" } %>

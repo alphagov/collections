@@ -1,0 +1,39 @@
+<div class="grid-row">
+  <div class="column-one-third">
+    <% unless @organisations.number_10?(organisation_type) %>
+      <%= render "govuk_publishing_components/components/heading", {
+          text: organisation_type,
+          heading_level: 2
+      } %>
+      <div class="department-count">
+        <%= organisations.count %>
+      </div>
+    <% end %>
+  </div>
+  <div class="column-two-thirds">
+    <div class="organisation">
+      <% organisations.each do |org| %>
+        <%= render "govuk_publishing_components/components/heading", {
+            text: org["title"],
+            heading_level: 3
+        } %>
+        <p class="organisation-description">
+          <% unless @organisations.number_10?(organisation_type) || child_organisations_count(org) == 0 %>
+            <%= "Works with #{ child_organisations_count(org)} agencies and public bodies" %>
+            <%= link_to "View more", "#", class: "organisation-view-more" %>
+          <% end %>
+        </p>
+        <div class="organisation-work-with-details">
+          <div class="organisation-department-categories">
+            <% org["works_with"].each do |category_type, departments| %>
+              <%= render 'organisation_department_category',
+                         category_type: category_type,
+                         departments: departments %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <hr>
+  </div>
+</div>
