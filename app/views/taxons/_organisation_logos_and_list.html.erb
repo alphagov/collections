@@ -11,4 +11,13 @@
   </ol>
 </div>
 
-<%= render partial: 'document_list_with_grid', locals: { documents: organisations_without_logos } %>
+<% if organisations_without_logos.any? %>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <%= render 'govuk_publishing_components/components/document_list',
+        items: organisations_without_logos,
+        margin_bottom: true
+      %>
+    </div>
+  </div>
+<% end %>

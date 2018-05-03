@@ -4,6 +4,7 @@
 
 .taxon-page__section-heading {
   @include bold-27;
+  margin-bottom: $gutter-half;
 }
 
 .taxon-page__grid-heading {
