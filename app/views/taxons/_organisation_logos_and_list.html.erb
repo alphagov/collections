@@ -1,5 +1,5 @@
-<div class="grid-row taxon-page__organisations">
-  <ol class="column-two-thirds">
+<div class="taxon-page__organisations">
+  <ol>
     <% organisations_with_logos.each do |promoted_organisation| %>
       <li class="taxon-page__organisation">
         <%= render 'govuk_component/organisation_logo', {
@@ -12,12 +12,10 @@
 </div>
 
 <% if organisations_without_logos.any? %>
-  <div class="grid-row">
-    <div class="column-two-thirds">
-      <%= render 'govuk_publishing_components/components/document_list',
-        items: organisations_without_logos,
-        margin_bottom: true
-      %>
-    </div>
+  <div>
+    <%= render 'govuk_publishing_components/components/document_list',
+      items: organisations_without_logos,
+      margin_bottom: true
+    %>
   </div>
 <% end %>

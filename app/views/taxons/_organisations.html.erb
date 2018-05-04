@@ -3,27 +3,27 @@
     <div class="grid-row">
       <div class="column-two-thirds">
         <h2 class="taxon-page__section-heading">Organisations</h2>
+
+
+        <%= render partial: 'organisation_logos_and_list', locals: {
+          organisations_with_logos: presented_organisations.promoted_organisation_list[:promoted_with_logos],
+          organisations_without_logos: presented_organisations.promoted_organisation_list[:promoted_without_logos]
+        } %>
+
+        <% if presented_organisations.show_more_organisations? %>
+            <a href="#"
+            data-controls="more-organisations"
+            data-expanded="false"
+            data-toggled-text="Show fewer organisations">Show more organisations</a>
+
+          <div id="more-organisations" class="js-hidden">
+            <%= render partial: 'organisation_logos_and_list', locals: {
+              organisations_with_logos: presented_organisations.show_more_organisation_list[:organisations_with_logos],
+              organisations_without_logos: presented_organisations.show_more_organisation_list[:organisations_without_logos]
+            } %>
+          </div>
+        <% end %>
       </div>
     </div>
-
-    <%= render partial: 'organisation_logos_and_list', locals: {
-      organisations_with_logos: presented_organisations.promoted_organisation_list[:promoted_with_logos],
-      organisations_without_logos: presented_organisations.promoted_organisation_list[:promoted_without_logos]
-    } %>
-
-    <% if presented_organisations.show_more_organisations? %>
-      <a href="#"
-      data-controls="more-organisations"
-      data-expanded="false"
-      data-toggled-text="Show fewer organisations">Show more organisations</a>
-
-      <div id="more-organisations" class="js-hidden">
-        <%= render partial: 'organisation_logos_and_list', locals: {
-          organisations_with_logos: presented_organisations.show_more_organisation_list[:organisations_with_logos],
-          organisations_without_logos: presented_organisations.show_more_organisation_list[:organisations_without_logos]
-        } %>
-      </div>
-    <% end %>
-
   </div>
 <% end %>
