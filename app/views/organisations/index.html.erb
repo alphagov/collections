@@ -1,3 +1,34 @@
 <% content_for :title, "Departments, agencies and public bodies - GOV.UK" %>
 
 <h1>Departments, agencies and public bodies - GOV.UK</h1>
+<br>
+<h2>Ministerial departments</h2>
+<%= @content.select { |item| item[:department_type] == "Ministerial" }.count %>
+<ul>
+  <% @content.each do |item| %>
+    <% if item[:department_type] == "Ministerial" %>
+    <li class="app-c-taxon-list__item"><%= link_to item[:title], item[:base_path] %></li>
+    <% end %>
+    <% if item[:agencies].length > 1 && item[:department_type] == "Ministerial" %>
+      <%= "Works with #{item[:agencies].length} agencies and public bodies" %>
+      <h3>View all</h3>
+      <%= item[:agencies].join(', ') %>
+    <% end %>
+  <% end %>
+</ul>
+
+<h2>Non Ministerial departments</h2>
+<%= @content.select { |item| item[:department_type] == "Non Ministerial" }.count %>
+<ul>
+  <% @content.each do |item| %>
+    <% if item[:department_type] == "Non Ministerial" %>
+      <li class="app-c-taxon-list__item"><%= link_to item[:title], item[:base_path] %></li>
+    <% end %>
+    <% if item[:agencies].length > 1 && item[:department_type] == "Non Ministerial" %>
+      <%= "Works with #{item[:agencies].length} agencies and public bodies" %>
+      <h3>View all</h3>
+      <%= item[:agencies].join(', ') %>
+    <% end %>
+  <% end %>
+</ul>
+
