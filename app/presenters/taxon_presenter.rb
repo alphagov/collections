@@ -20,6 +20,10 @@ class TaxonPresenter
     SupergroupSections.supergroup_sections(taxon.content_id, taxon.base_path)
   end
 
+  def organisations_section
+    @taxon_organisations ||= TaxonOrganisationsPresenter.new(organisations)
+  end
+
   def show_subtopic_grid?
     child_taxons.count.positive?
   end
@@ -32,20 +36,5 @@ class TaxonPresenter
       track_label: child_taxons[index].base_path,
       track_options: {},
     }
-  end
-
-  def taxon_organisations
-    organisations.map do |organisation|
-      {
-        link: {
-          text: organisation.title,
-          path: organisation.link
-        }
-      }
-    end
-  end
-
-  def show_organisations?
-    organisations.any?
   end
 end

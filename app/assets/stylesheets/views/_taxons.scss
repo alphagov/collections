@@ -4,6 +4,7 @@
 
 .taxon-page__section-heading {
   @include bold-27;
+  margin-bottom: $gutter-half;
 }
 
 .taxon-page__grid-heading {
@@ -89,6 +90,15 @@
   clear: both;
 }
 
+.taxon-page__show-more-toggle {
+  display: none;
+
+  .js-enabled & {
+    display: block;
+    margin-bottom: $gutter-two-thirds;
+  }
+}
+
 .taxon-page__grid {
   background-color: $grey-4;
   padding-top: $gutter;
@@ -133,5 +143,15 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+}
+
+.taxon-page__organisations {
+  list-style-type: none;
+
+  .taxon-page__organisation {
+    margin-bottom: $gutter-two-thirds;
+    border-bottom: 1px solid $border-colour;
+    padding-bottom: $gutter-half;
   }
 }
