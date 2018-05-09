@@ -16,7 +16,12 @@ describe Supergroups::GuidanceAndRegulation do
         {
           link: {
             text: 'Tagged Content Title',
-            path: '/government/tagged/content'
+            path: '/government/tagged/content',
+            data_attributes: {
+              track_category: "guidanceAndRegulationDocumentListClicked",
+              track_action: 1,
+              track_label: '/government/tagged/content'
+            }
           },
           metadata: {
             public_updated_at: '2018-02-28T08:01:00.000+00:00',
@@ -40,6 +45,11 @@ describe Supergroups::GuidanceAndRegulation do
             text: 'Tagged Content Title',
             path: '/government/tagged/content',
             description: 'Description of tagged content',
+            data_attributes: {
+              track_category: "guidanceAndRegulationDocumentListClicked",
+              track_action: 1,
+              track_label: '/government/tagged/content'
+            }
           },
           metadata: {
             document_type: 'Guide'
