@@ -57,5 +57,9 @@ module Supergroups
     def promoted_content_count(*)
       3
     end
+
+    def data_module_label
+      name.camelize(:lower)
+    end
   end
 end
