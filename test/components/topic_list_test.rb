@@ -5,6 +5,23 @@ class TopicListTest < ComponentTestCase
     "topic-list"
   end
 
+  def simple_item
+    [
+      {
+        path: '/path',
+        text: 'Text'
+      }
+    ]
+  end
+
+  def see_more_link
+    {
+      path: '/more',
+      text: 'More',
+      data_attributes: { test: 'test' }
+    }
+  end
+
   test "renders nothing without a list of items" do
     assert_empty render_component({})
   end
@@ -29,39 +46,19 @@ class TopicListTest < ComponentTestCase
   end
 
   test "renders a see more link" do
-    see_more_link = {
-                      path: '/more',
-                      text: 'More',
-                      data_attributes: { test: 'test' }
-                    }
-
-    items = [
-              {
-                path: '/path',
-                text: 'Text'
-              }
-            ]
-
-    render_component(items: items, see_more_link: see_more_link)
+    render_component(items: simple_item, see_more_link: see_more_link)
     assert_select ".app-c-topic-list__item a[href='/more'][data-test='test']", text: 'More'
   end
 
   test "adds branding correctly" do
-    see_more_link = {
-                      path: '/more',
-                      text: 'More',
-                      data_attributes: { test: 'test' }
-                    }
-
-    items = [
-              {
-                path: '/path',
-                text: 'Text'
-              }
-            ]
-    render_component(items: items, see_more_link: see_more_link, brand: 'attorney-generals-office')
+    render_component(items: simple_item, see_more_link: see_more_link, brand: 'attorney-generals-office')
     assert_select ".app-c-topic-list.brand--attorney-generals-office"
     assert_select ".app-c-topic-list .app-c-topic-list__link.brand__color"
     assert_select ".brand__color", text: "More"
+  end
+
+  test "renders small version" do
+    render_component(items: simple_item, small: true)
+    assert_select ".app-c-topic-list.app-c-topic-list--small"
   end
 end

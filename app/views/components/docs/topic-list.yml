@@ -63,3 +63,15 @@ examples:
       see_more_link:
         text: 'See more'
         path: '/more'
+  small_version:
+    description: A version of the component with a smaller font size and reduced vertical spacing.
+    data:
+      small: true
+      items:
+      - text: 'Environmental taxes, reliefs and schemes for businesses'
+        path: '/green-taxes-and-reliefs'
+      - text: 'Aggregates Levy: register or change your details'
+        path: '/guidance/aggregates-levy-register-or-change-your-details'
+      see_more_link:
+        text: 'See more and more and more'
+        path: '/more'

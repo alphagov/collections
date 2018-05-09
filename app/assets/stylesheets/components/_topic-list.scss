@@ -4,10 +4,20 @@
   margin-bottom: $gutter-one-third;
 }
 
-.app-c-topic-list__link {
+.app-c-topic-list__link--no-underline {
   text-decoration: none;
 
   &:hover {
     text-decoration: underline;
+  }
+}
+
+.app-c-topic-list--small {
+  .app-c-topic-list__item {
+    margin-bottom: $gutter-one-third / 2;
+  }
+
+  .app-c-topic-list__link {
+    @include bold-16;
   }
 }
