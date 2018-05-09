@@ -49,3 +49,17 @@ examples:
           track_options:
             dimension28: 2
             dimension29: 'Aggregates Levy: register or change your details'
+  with_branding:
+    description: Organisation [colour branding](https://github.com/alphagov/govuk_publishing_components/blob/master/docs/component_branding.md) can be added to the component as shown.
+    data:
+      brand: 'department-for-environment-food-rural-affairs'
+      items:
+      - text: 'Environmental taxes, reliefs and schemes for businesses'
+        path: '/green-taxes-and-reliefs'
+      - text: 'Aggregates Levy: register or change your details'
+        path: '/guidance/aggregates-levy-register-or-change-your-details'
+      - text: 'Pay environmental taxes'
+        path: '/guidance/pay-environmental-taxes'
+      see_more_link:
+        text: 'See more'
+        path: '/more'

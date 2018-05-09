@@ -42,8 +42,26 @@ class TopicListTest < ComponentTestCase
               }
             ]
 
-
     render_component(items: items, see_more_link: see_more_link)
     assert_select ".app-c-topic-list__item a[href='/more'][data-test='test']", text: 'More'
+  end
+
+  test "adds branding correctly" do
+    see_more_link = {
+                      path: '/more',
+                      text: 'More',
+                      data_attributes: { test: 'test' }
+                    }
+
+    items = [
+              {
+                path: '/path',
+                text: 'Text'
+              }
+            ]
+    render_component(items: items, see_more_link: see_more_link, brand: 'attorney-generals-office')
+    assert_select ".app-c-topic-list.brand--attorney-generals-office"
+    assert_select ".app-c-topic-list .app-c-topic-list__link.brand__color"
+    assert_select ".brand__color", text: "More"
   end
 end
