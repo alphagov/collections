@@ -23,8 +23,18 @@ describe SupergroupSections::Sections do
     end
 
     it 'returns a list of supergroup details' do
+      section_details = %i(
+        title
+        promoted_content
+        documents
+        partial_template
+        promoted_content_count
+        see_more_link
+        show_section
+      )
+
       @sections.each do |section|
-        assert_equal(%i(title documents partial_template promoted_content_count see_more_link show_section), section.keys)
+        assert_equal(section_details, section.keys)
       end
     end
 

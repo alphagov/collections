@@ -26,6 +26,7 @@ module SupergroupSections
       SupergroupSections::SUPERGROUPS.map do |supergroup|
         {
           title: supergroup.title,
+          promoted_content: supergroup.promoted_content(taxon_id),
           documents: supergroup.document_list(taxon_id),
           partial_template: supergroup.partial_template,
           promoted_content_count: supergroup.promoted_content_count(taxon_id),

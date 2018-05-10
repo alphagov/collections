@@ -55,6 +55,10 @@ module Supergroups
       end
     end
 
+    def promoted_content(*)
+      []
+    end
+
     def promoted_content_count(*)
       3
     end
