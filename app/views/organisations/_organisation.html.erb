@@ -1,0 +1,24 @@
+<div class="organisation">
+  <h3 class="organisation-title">
+    <%= organisation["title"] %>
+  </h3>
+  <p class="organisation-description">
+    <%=  "Works with #{@organisations.organisation_department_count(organisation)} agencies and public bodies" %>
+    <%= link_to "View more", "#", class: "organisation-view-more" %>
+  </p>
+  <div class="organisation-work-with-details">
+    <%= link_to "#{organisation["title"]} homepage", organisation["href"] %>
+    <div class="organisation-department-categories">
+      <% organisation["works_with"].each do |category_id, departments| %>
+        <%= render 'organisation_department_category',
+                   category_id: category_id,
+                   departments: departments %>
+      <% end %>
+    </div>
+  </div>
+
+</div>
+
+<hr>
+
+
