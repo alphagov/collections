@@ -11,29 +11,25 @@ module Supergroups
     end
 
     def document_list(taxon_id)
-      tagged_content(taxon_id).each_with_index.map do |document, index|
-        data = {
-          link: {
-            text: document.title,
-            path: document.base_path,
-            data_attributes: data_attributes(document.base_path, index)
-          },
-          metadata: {
-            public_updated_at: document.public_updated_at,
-            organisations: document.organisations,
-            document_type: document.content_store_document_type.humanize
-          }
+      items = tagged_content(taxon_id).drop(promoted_content_count)
+
+      format_document_data(items)
+    end
+
+    def promoted_content(taxon_id)
+      items = tagged_content(taxon_id).shift(promoted_content_count)
+
+      documents = format_document_data(items, "FeaturedLinkClicked")
+
+      documents.map do |document|
+        document_image = news_item_photo(document[:link][:path])
+        document[:image] = {
+          url: document_image["url"],
+          alt: document_image["alt_text"]
         }
-
-        if index < promoted_content_count
-          document_image = news_item_photo(document.base_path)
-          data[:image] = {}
-          data[:image][:url] = document_image["url"]
-          data[:image][:alt] = document_image["alt_text"]
-        end
-
-        data
       end
+
+      documents
     end
 
     def news_item_photo(base_path)
@@ -49,6 +45,31 @@ module Supergroups
 
     def promoted_content_count(*)
       1
+    end
+
+  private
+
+    def format_document_data(documents, data_category = "")
+      documents.each_with_index.map do |document, index|
+        data = {
+          link: {
+            text: document.title,
+            path: document.base_path,
+            data_attributes: data_attributes(document.base_path, index)
+          },
+          metadata: {
+            public_updated_at: document.public_updated_at,
+            organisations: document.organisations,
+            document_type: document.content_store_document_type.humanize
+          }
+        }
+
+        if data_category.present?
+          data[:link][:data_attributes][:track_category] = data_module_label + data_category
+        end
+
+        data
+      end
     end
   end
 end
