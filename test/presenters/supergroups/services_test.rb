@@ -17,7 +17,12 @@ describe Supergroups::Services do
           link: {
             text: 'Tagged Content Title',
             path: '/government/tagged/content',
-            description: 'Description of tagged content'
+            description: 'Description of tagged content',
+            data_attributes: {
+              track_category: "servicesDocumentListClicked",
+              track_action: 1,
+              track_label: '/government/tagged/content'
+            }
           }
         }
       ]
