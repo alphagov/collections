@@ -23,7 +23,7 @@
     </div>
   </div>
 
-  <div class="<%= documents ? "column-two-thirds" : "taxon-page__featured-see-more" %>">
+  <div class="<%= documents ? "column-two-thirds" : "taxon-page__featured-see-more" %>" <%= "data-module=track-click" if track_click?(section[:documents]) %>>
     <%= render 'govuk_publishing_components/components/document_list',
       items: section[:documents],
       margin_top: true,
