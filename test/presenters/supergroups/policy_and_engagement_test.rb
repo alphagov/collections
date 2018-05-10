@@ -124,7 +124,12 @@ describe Supergroups::PolicyAndEngagement do
             {
               link: {
                 text: 'Tagged Content Title',
-                path: '/government/tagged/content-1'
+                path: '/government/tagged/content-1',
+                data_attributes: {
+                  track_category: "policyAndEngagementDocumentListClicked",
+                  track_action: 1,
+                  track_label: '/government/tagged/content-1'
+                }
               },
               metadata: {
                 public_updated_at: '2018-02-28T08:01:00.000+00:00',
@@ -141,5 +146,46 @@ describe Supergroups::PolicyAndEngagement do
         end
       end
     end
+  end
+
+private
+
+  def expected_results(document_types)
+    results = []
+    document_types.each_with_index do |document_type, index|
+      results.push(*expected_result(document_type, index))
+    end
+    results
+  end
+
+  def expected_result(document_type, index = 0)
+    result = {
+      link: {
+        text: 'Tagged Content Title',
+        path: '/government/tagged/content',
+        data_attributes: {
+          track_category: "policyAndEngagementDocumentListClicked",
+          track_action: index + 1,
+          track_label: '/government/tagged/content'
+        }
+      },
+      metadata: {
+        public_updated_at: '2018-02-28T08:01:00.000+00:00',
+        organisations: 'Tagged Content Organisation',
+        document_type: document_type.humanize,
+      }
+    }
+
+    if consultation?(document_type)
+      result[:metadata][:closing_date] = 'Date closed 10 July 2017'
+    end
+
+    [result]
+  end
+
+  def consultation?(document_type)
+    document_type == 'open_consultation' ||
+      document_type == 'consultation_outcome' ||
+      document_type == 'closed_consultation'
   end
 end
