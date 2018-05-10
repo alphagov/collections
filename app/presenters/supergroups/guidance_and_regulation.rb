@@ -39,15 +39,5 @@ module Supergroups
       # we should treat them the same
       document.content_store_document_type == 'guide' || document.content_store_document_type == 'answer'
     end
-
-  private
-
-    def data_attributes(base_path, index)
-      {
-        track_category: data_module_label + "DocumentListClicked",
-        track_action: index + 1,
-        track_label: base_path
-      }
-    end
   end
 end
