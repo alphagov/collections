@@ -171,4 +171,57 @@ class HighlightBoxesTest < ComponentTestCase
 
     assert_select ".app-c-highlight-boxes__title.app-c-highlight-boxes__title--featured"
   end
+
+  test "adds data tracking attributes when data_attributes provided" do
+    render_component(
+      items: [
+        {
+          link: {
+            text: 'Become an apprentice',
+            path: '/become-an-apprentice',
+            description: "How to become an apprentice",
+            data_attributes: {
+              track_category: "servicesHighlightBoxClicked",
+              track_action: 1,
+              track_label: "/becoming-an-apprentice"
+            }
+          },
+          metadata: {
+            public_updated_at: Time.zone.parse("2016-06-27 14:50:33 +0000"),
+            organisations: 'Department of Education',
+            document_type: 'Guide'
+          }
+        },
+        {
+          link: {
+            text: 'Student finance',
+            path: '/student-finance',
+            description: "Student finance",
+            data_attributes: {
+              track_category: "servicesHighlightBoxClicked",
+              track_action: 2,
+              track_label: "/student-finance",
+              track_options: {
+                dimension28: 2,
+                dimension29: "Student Finance"
+              }
+            }
+          },
+          metadata: {
+            public_updated_at: Time.zone.parse("1994-11-21 14:50:33 +0000"),
+            organisations: 'Department of Education',
+            document_type: 'Detailed Guide'
+          }
+        }
+      ]
+    )
+
+    assert_select ".app-c-highlight-boxes__title[data-track-category='servicesHighlightBoxClicked']"
+    assert_select ".app-c-highlight-boxes__title[data-track-action='1']"
+    assert_select ".app-c-highlight-boxes__title[data-track-label='/becoming-an-apprentice']"
+
+    assert_select ".app-c-highlight-boxes__title[data-track-action='2']"
+    assert_select ".app-c-highlight-boxes__title[data-track-label='/student-finance']"
+    assert_select ".app-c-highlight-boxes__title[data-track-options='{\"dimension28\":2,\"dimension29\":\"Student Finance\"}']"
+  end
 end

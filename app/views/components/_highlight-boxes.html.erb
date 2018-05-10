@@ -4,16 +4,17 @@
   inverse_class = "app-c-highlight-boxes--inverse" if inverse
 %>
 <% if items.any? %>
-  <ol class="app-c-highlight-boxes">
+  <ol class="app-c-highlight-boxes" <%= "data-module=track-click" if data_tracking?(local_assigns[:items]) %>>
     <% items.each do |content_item| %>
       <li class="app-c-highlight-boxes__item-wrapper">
         <div class="app-c-highlight-boxes__item <%= inverse_class %>">
-          <a
-            class="app-c-highlight-boxes__title <%= "app-c-highlight-boxes__title--featured" if content_item[:link][:featured] %>"
-            href="<%= content_item[:link].fetch(:path) %>"
-          >
-            <%= content_item[:link].fetch(:text)  %>
-          </a>
+          <%= link_to(
+            content_item[:link].fetch(:text),
+            content_item[:link].fetch(:path),
+            class: "app-c-highlight-boxes__title #{"app-c-highlight-boxes__title--featured" if content_item[:link][:featured]}",
+            data: content_item[:link][:data_attributes]
+            )
+          %>
 
           <% if content_item[:link][:description] %>
             <p class="app-c-highlight-boxes__description"><%= content_item[:link][:description] %></p>
