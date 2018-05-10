@@ -35,7 +35,12 @@ describe TaxonOrganisationsPresenter do
         {
           link: {
             text: 'Department for Education',
-            path: '/government/organisations/department-for-education'
+            path: '/government/organisations/department-for-education',
+            data_attributes: {
+              track_category: "organisationsDocumentListClicked",
+              track_action: 1,
+              track_label: '/government/organisations/department-for-education'
+            }
           }
         }
       ]
@@ -79,7 +84,12 @@ describe TaxonOrganisationsPresenter do
         {
           link: {
             text: "Department for Education",
-            path: "/government/organisations/department-for-education"
+            path: "/government/organisations/department-for-education",
+            data_attributes: {
+              track_category: "organisationsDocumentListClicked",
+              track_action: 1,
+              track_label: '/government/organisations/department-for-education'
+            }
           }
         }
       ]
@@ -123,11 +133,16 @@ describe TaxonOrganisationsPresenter do
 
       promoted_without_logos = []
 
-      5.times do
+      5.times do |index|
         promoted_without_logos.push(
           link: {
             text: "Department for Education",
-            path: "/government/organisations/department-for-education"
+            path: "/government/organisations/department-for-education",
+            data_attributes: {
+              track_category: "organisationsDocumentListClicked",
+              track_action: index + 1,
+              track_label: '/government/organisations/department-for-education'
+            }
           }
         )
       end
@@ -162,7 +177,12 @@ describe TaxonOrganisationsPresenter do
         {
           link: {
             text: "Department for Education",
-            path: "/government/organisations/department-for-education"
+            path: "/government/organisations/department-for-education",
+            data_attributes: {
+              track_category: "organisationsDocumentListClicked",
+              track_action: 4,
+              track_label: '/government/organisations/department-for-education'
+            }
           }
         }
       ]
@@ -212,7 +232,12 @@ describe TaxonOrganisationsPresenter do
         {
           link: {
             text: 'Department for Education',
-            path: '/government/organisations/department-for-education'
+            path: '/government/organisations/department-for-education',
+            data_attributes: {
+              track_category: "organisationsDocumentListClicked",
+              track_action: 6,
+              track_label: '/government/organisations/department-for-education'
+            }
           }
         }
       ]
