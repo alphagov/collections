@@ -11,7 +11,21 @@ module Supergroups
     end
 
     def document_list(taxon_id)
-      tagged_content(taxon_id).each_with_index.map do |document, index|
+      items = tagged_content(taxon_id).drop(promoted_content_count)
+
+      format_document_data(items)
+    end
+
+    def promoted_content(taxon_id)
+      items = tagged_content(taxon_id).shift(promoted_content_count)
+
+      format_document_data(items, "HighlightBoxClicked")
+    end
+
+  private
+
+    def format_document_data(documents, data_category = "")
+      documents.each_with_index.map do |document, index|
         data = {
           link: {
             text: document.title,
@@ -20,6 +34,10 @@ module Supergroups
             data_attributes: data_attributes(document.base_path, index)
           }
         }
+
+        if data_category.present?
+          data[:link][:data_attributes][:track_category] = data_module_label + data_category
+        end
 
         data
       end
