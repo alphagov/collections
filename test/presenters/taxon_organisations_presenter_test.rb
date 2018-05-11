@@ -63,7 +63,12 @@ describe TaxonOrganisationsPresenter do
           name: 'Department\nfor\nEducation',
           url: '/government/organisations/department-for-education',
           brand: 'department-for-education',
-          crest: 'single-identity'
+          crest: 'single-identity',
+          data_attributes: {
+            track_category: "organisationsDocumentListClicked",
+            track_action: 1,
+            track_label: '/government/organisations/department-for-education'
+          }
         }
       ]
 
@@ -109,12 +114,17 @@ describe TaxonOrganisationsPresenter do
 
       promoted_with_logos = []
 
-      5.times do
+      5.times do |index|
         promoted_with_logos.push(
           name: 'Department\nfor\nEducation',
           url: '/government/organisations/department-for-education',
           brand: 'department-for-education',
-          crest: 'single-identity'
+          crest: 'single-identity',
+          data_attributes: {
+            track_category: "organisationsDocumentListClicked",
+            track_action: index + 1,
+            track_label: '/government/organisations/department-for-education'
+          }
         )
       end
 
@@ -164,12 +174,17 @@ describe TaxonOrganisationsPresenter do
 
       promoted_with_logos = []
 
-      3.times do
+      3.times do |index|
         promoted_with_logos.push(
           name: 'Department\nfor\nEducation',
           url: '/government/organisations/department-for-education',
           brand: 'department-for-education',
-          crest: 'single-identity'
+          crest: 'single-identity',
+          data_attributes: {
+            track_category: "organisationsDocumentListClicked",
+            track_action: index + 1,
+            track_label: '/government/organisations/department-for-education'
+          }
         )
       end
 
@@ -209,7 +224,12 @@ describe TaxonOrganisationsPresenter do
           name: 'Department\nfor\nEducation',
           url: '/government/organisations/department-for-education',
           brand: 'department-for-education',
-          crest: 'single-identity'
+          crest: 'single-identity',
+          data_attributes: {
+            track_category: "organisationsDocumentListClicked",
+            track_action: 6,
+            track_label: '/government/organisations/department-for-education'
+          }
         }
       ]
 
