@@ -30,16 +30,6 @@ module Supergroups
         document_type == 'closed_consultation'
     end
 
-    def promoted_content_count(taxon_id)
-      consultation_count = tagged_content(taxon_id).count do |content_item|
-        consultation?(content_item.content_store_document_type)
-      end
-
-      return 3 if consultation_count > 3
-
-      consultation_count
-    end
-
     def consultation_closing_date(base_path)
       @consultation = ::Services.content_store.content_item(base_path)
       date = Date.parse(@consultation["details"]["closing_date"])
@@ -52,6 +42,16 @@ module Supergroups
     end
 
   private
+
+    def promoted_content_count(taxon_id)
+      consultation_count = tagged_content(taxon_id).count do |content_item|
+        consultation?(content_item.content_store_document_type)
+      end
+
+      return 3 if consultation_count > 3
+
+      consultation_count
+    end
 
     def reorder_tagged_documents_to_prioritise_consultations
       consultations = @content.select do |content_item|

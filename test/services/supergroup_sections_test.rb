@@ -28,7 +28,6 @@ describe SupergroupSections::Sections do
         promoted_content
         documents
         partial_template
-        promoted_content_count
         see_more_link
         show_section
       )

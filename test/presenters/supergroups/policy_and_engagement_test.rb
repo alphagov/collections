@@ -50,7 +50,7 @@ describe Supergroups::PolicyAndEngagement do
       end
 
       describe '#special_format_count' do
-        it 'only include consultations in promoted_content_count' do
+        it 'only include consultations in promoted_content' do
           tagged_document_list = %w(
             case_study
             case_study
@@ -63,10 +63,10 @@ describe Supergroups::PolicyAndEngagement do
             .stubs(:fetch)
             .returns(tagged_content(tagged_document_list))
 
-          assert_equal 2, policy_and_engagement_supergroup.promoted_content_count(taxon_id)
+          assert_equal 2, policy_and_engagement_supergroup.promoted_content(taxon_id).count
         end
 
-        it 'only include first three consultations in promoted_content_count' do
+        it 'only include first three consultations in promoted_content' do
           tagged_document_list = %w(
             consultation_outcome
             closed_consultation
@@ -79,7 +79,7 @@ describe Supergroups::PolicyAndEngagement do
             .stubs(:fetch)
             .returns(tagged_content(tagged_document_list))
 
-          assert_equal 3, policy_and_engagement_supergroup.promoted_content_count(taxon_id)
+          assert_equal 3, policy_and_engagement_supergroup.promoted_content(taxon_id).count
         end
       end
 

@@ -59,10 +59,6 @@ module Supergroups
       []
     end
 
-    def promoted_content_count(*)
-      3
-    end
-
     def data_module_label
       name.camelize(:lower)
     end
@@ -75,6 +71,10 @@ module Supergroups
         track_action: index + 1,
         track_label: base_path
       }
+    end
+
+    def promoted_content_count(*)
+      3
     end
   end
 end

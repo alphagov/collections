@@ -43,11 +43,11 @@ module Supergroups
       news_item["details"]["image"] || default_news_image
     end
 
+  private
+
     def promoted_content_count(*)
       1
     end
-
-  private
 
     def format_document_data(documents, data_category = "")
       documents.each_with_index.map do |document, index|
