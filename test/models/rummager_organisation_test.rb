@@ -1,15 +1,15 @@
 require 'test_helper'
 
-describe Organisation do
+describe RummagerOrganisation do
   it 'returns the state of an organisation' do
-    organisation = Organisation.new(
+    organisation = RummagerOrganisation.new(
       organisation_state: 'live'
     )
     assert(organisation.live?)
   end
 
   it 'returns false if the state of an organisation is not live' do
-    organisation = Organisation.new(
+    organisation = RummagerOrganisation.new(
       organisation_state: 'closed'
     )
     refute(organisation.live?)
@@ -17,7 +17,7 @@ describe Organisation do
 
   describe '#has_logo?' do
     it 'returns true if logo attributes are present' do
-      organisation = Organisation.new(
+      organisation = RummagerOrganisation.new(
         logo_formatted_title: "some\ntitle",
         brand: 'ministry-of-blah',
         crest: 'single-identity'
@@ -26,7 +26,7 @@ describe Organisation do
     end
 
     it 'returns false if the crest is missing' do
-      organisation = Organisation.new(
+      organisation = RummagerOrganisation.new(
         logo_formatted_title: "some\ntitle",
         brand: 'ministry-of-blah',
         crest: ''
@@ -35,7 +35,7 @@ describe Organisation do
     end
 
     it 'returns false if the it is a custom logo' do
-      organisation = Organisation.new(
+      organisation = RummagerOrganisation.new(
         crest: 'custom',
         logo_url: '/logo.png'
       )
@@ -45,7 +45,7 @@ describe Organisation do
 
   describe '#custom_logo?' do
     it 'returns true if the crest is "custom"' do
-      organisation = Organisation.new(
+      organisation = RummagerOrganisation.new(
         crest: 'custom',
         logo_url: '/logo.png'
       )
@@ -53,7 +53,7 @@ describe Organisation do
     end
 
     it 'returns false if the crest is not "custom"' do
-      organisation = Organisation.new(
+      organisation = RummagerOrganisation.new(
         crest: 'somethingelse',
         logo_url: '/logo.png'
       )
@@ -61,7 +61,7 @@ describe Organisation do
     end
 
     it 'returns false if the logo url is missing' do
-      organisation = Organisation.new(
+      organisation = RummagerOrganisation.new(
         crest: 'somethingelse'
       )
       refute(organisation.custom_logo?)

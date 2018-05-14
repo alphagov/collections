@@ -1,6 +1,6 @@
 require 'active_model'
 
-class Organisation
+class RummagerOrganisation
   include ActiveModel::Model
 
   attr_accessor(

@@ -230,7 +230,7 @@ private
 
   def tagged_organisation
     [
-      Organisation.new(
+      RummagerOrganisation.new(
         title: 'Department for Education',
         content_id: 'ebd15ade-73b2-4eaf-b1c3-43034a42eb37',
         link: '/government/organisations/department-for-education',
@@ -247,7 +247,7 @@ private
 
   def tagged_organisation_with_logo
     [
-      Organisation.new(
+      RummagerOrganisation.new(
         title: 'Department for Education',
         content_id: 'ebd15ade-73b2-4eaf-b1c3-43034a42eb37',
         link: '/government/organisations/department-for-education',
@@ -264,7 +264,7 @@ private
 
   def tagged_custom_organisation
     [
-      Organisation.new(
+      RummagerOrganisation.new(
         title: 'Department for Education',
         content_id: 'ebd15ade-73b2-4eaf-b1c3-43034a42eb37',
         link: '/government/organisations/department-for-education',
@@ -284,7 +284,7 @@ private
 
     number_of_organisations.times do
       organisations.push(
-        Organisation.new(
+        RummagerOrganisation.new(
           title: 'Department for Education',
           content_id: 'ebd15ade-73b2-4eaf-b1c3-43034a42eb37',
           link: '/government/organisations/department-for-education',
