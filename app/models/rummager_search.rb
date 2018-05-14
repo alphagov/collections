@@ -43,7 +43,7 @@ class RummagerSearch
   def organisations
     @_organisations ||= search_result.dig('aggregates', 'organisations', 'options').map do |option|
       organisation = option['value']
-      Organisation.new(
+      RummagerOrganisation.new(
         title: organisation['title'],
         content_id: organisation['content_id'],
         link: organisation['link'],
