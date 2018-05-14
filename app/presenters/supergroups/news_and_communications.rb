@@ -50,7 +50,7 @@ module Supergroups
     end
 
     def format_document_data(documents, data_category = "")
-      documents.each_with_index.map do |document, index|
+      documents.each.with_index(1).map do |document, index|
         data = {
           link: {
             text: document.title,

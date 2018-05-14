@@ -37,7 +37,7 @@ module Supergroups
     end
 
     def document_list(taxon_id)
-      tagged_content(taxon_id).each_with_index.map do |document, index|
+      tagged_content(taxon_id).each.with_index(1).map do |document, index|
         data = {
           link: {
             text: document.title,
@@ -68,7 +68,7 @@ module Supergroups
     def data_attributes(base_path, index)
       {
         track_category: data_module_label + "DocumentListClicked",
-        track_action: index + 1,
+        track_action: index,
         track_label: base_path
       }
     end
