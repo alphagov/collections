@@ -37,22 +37,7 @@ module Supergroups
     end
 
     def document_list(taxon_id)
-      tagged_content(taxon_id).each.with_index(1).map do |document, index|
-        data = {
-          link: {
-            text: document.title,
-            path: document.base_path,
-            data_attributes: data_attributes(document.base_path, index)
-          },
-          metadata: {
-            public_updated_at: document.public_updated_at,
-            organisations: document.organisations,
-            document_type: document.content_store_document_type.humanize
-          }
-        }
-
-        data
-      end
+      format_document_data(tagged_content(taxon_id))
     end
 
     def promoted_content(*)
@@ -75,6 +60,29 @@ module Supergroups
 
     def promoted_content_count(*)
       3
+    end
+
+    def format_document_data(documents, data_category = "")
+      documents.each.with_index(1).map do |document, index|
+        data = {
+          link: {
+            text: document.title,
+            path: document.base_path,
+            data_attributes: data_attributes(document.base_path, index)
+          },
+          metadata: {
+            public_updated_at: document.public_updated_at,
+            organisations: document.organisations,
+            document_type: document.content_store_document_type.humanize
+          }
+        }
+
+        if data_category.present?
+          data[:link][:data_attributes][:track_category] = data_module_label + data_category
+        end
+
+        data
+      end
     end
   end
 end
