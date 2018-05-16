@@ -118,12 +118,12 @@ describe('browse-columns.js', function() {
     var context;
 
     context = {
-      $breadcrumbs: $('<div class="govuk-breadcrumbs"><ol><li>one</li></ol></div>')
+      $breadcrumbs: $('<div class="gem-c-breadcrumbs"><ol><li>one</li></ol></div>')
     };
 
     var cached_data = {
       sectionData: {
-        breadcrumbs: '<div class="govuk-breadcrumbs"><ol><li>one</li><li>two</li></ol></div>'
+        breadcrumbs: '<div class="gem-c-breadcrumbs"><script type="application/ld+json">{"something":"other"}</script><ol><li>one</li><li>two</li></ol></div>'
       }
     }
     GOVUK.BrowseColumns.prototype.updateBreadcrumbs.call(context, cached_data);

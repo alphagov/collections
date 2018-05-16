@@ -12,7 +12,7 @@
     this.$root = this.$el.find('#root');
     this.$section = this.$el.find('#section');
     this.$subsection = this.$el.find('#subsection');
-    this.$breadcrumbs = $('.govuk-breadcrumbs');
+    this.$breadcrumbs = $('.gem-c-breadcrumbs');
     this.animateSpeed = 330;
 
     if(this.$section.length === 0){
@@ -337,7 +337,10 @@
       }
     },
     updateBreadcrumbs: function(state) {
-      var $newBreadcrumbs = $(state.sectionData.breadcrumbs);
+      // Calling `.last()` is necessary because the breadcrumbs component has 2
+      // elements, the breadcrumbs and the schema.org data.
+      // https://govuk-publishing-components.herokuapp.com/component-guide/breadcrumbs
+      var $newBreadcrumbs = $(state.sectionData.breadcrumbs).last();
       this.$breadcrumbs.html($newBreadcrumbs.html());
     },
     trackPageview: function(state){
