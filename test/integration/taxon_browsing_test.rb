@@ -112,8 +112,8 @@ private
   def then_i_can_see_the_title_section
     assert page.has_selector?('title', text: "Taxon title", visible: false)
 
-    within_static_component 'breadcrumbs' do |payload|
-      assert_equal payload["breadcrumbs"], [{ "title" => "Home", "url" => "/", "is_page_parent" => true }]
+    within '.gem-c-breadcrumbs' do
+      assert page.has_link?('Home', href: '/')
     end
   end
 

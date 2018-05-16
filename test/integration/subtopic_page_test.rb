@@ -85,11 +85,9 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
     refute page.has_link?("North sea shipping lanes")
 
-    within_static_component 'breadcrumbs' do |payload|
-      assert_equal(
-        [{ "title" => "Home", "url" => "/" }, { "title" => "Oil and Gas", "url" => "/topic/oil-and-gas" }],
-        payload["breadcrumbs"]
-      )
+    within '.gem-c-breadcrumbs' do
+      assert page.has_link?("Home", href: "/")
+      assert page.has_link?("Oil and Gas", href: "/topic/oil-and-gas")
     end
   end
 
@@ -121,7 +119,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
     assert page.has_link?("North sea shipping lanes", href: "/north-sea-shipping-lanes")
     assert page.has_link?("Undersea piping restrictions", href: "/undersea-piping-restrictions")
 
-    assert page.has_selector?(shared_component_selector('breadcrumbs'))
+    assert page.has_css?('.gem-c-breadcrumbs')
   end
 
   describe "latest page for a subtopic" do
