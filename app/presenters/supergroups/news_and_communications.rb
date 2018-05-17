@@ -10,29 +10,20 @@ module Supergroups
       @content = MostRecentContent.fetch(content_id: taxon_id, filter_content_purpose_supergroup: @name)
     end
 
-    def document_list(taxon_id)
-      tagged_content(taxon_id).each_with_index.map do |document, index|
-        data = {
-          link: {
-            text: document.title,
-            path: document.base_path
-          },
-          metadata: {
-            public_updated_at: document.public_updated_at,
-            organisations: document.organisations,
-            document_type: document.content_store_document_type.humanize
-          }
+    def promoted_content(taxon_id)
+      items = tagged_content(taxon_id).shift(promoted_content_count)
+
+      documents = format_document_data(items, "FeaturedLinkClicked")
+
+      documents.map do |document|
+        document_image = news_item_photo(document[:link][:path])
+        document[:image] = {
+          url: document_image["url"],
+          alt: document_image["alt_text"]
         }
-
-        if index < promoted_content_count
-          document_image = news_item_photo(document.base_path)
-          data[:image] = {}
-          data[:image][:url] = document_image["url"]
-          data[:image][:alt] = document_image["alt_text"]
-        end
-
-        data
       end
+
+      documents
     end
 
     def news_item_photo(base_path)
@@ -45,6 +36,8 @@ module Supergroups
 
       news_item["details"]["image"] || default_news_image
     end
+
+  private
 
     def promoted_content_count(*)
       1

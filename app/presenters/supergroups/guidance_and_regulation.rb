@@ -10,12 +10,27 @@ module Supergroups
       @content = MostPopularContent.fetch(content_id: taxon_id, filter_content_purpose_supergroup: @name)
     end
 
-    def document_list(taxon_id)
-      tagged_content(taxon_id).each.map do |document|
+    def promoted_content(taxon_id)
+      items = tagged_content(taxon_id).shift(promoted_content_count)
+
+      format_document_data(items, "HighlightBoxClicked")
+    end
+
+  private
+
+    def guide?(document)
+      # Although answers and guides are 2 different document types, they are conceptually the same so
+      # we should treat them the same
+      document.content_store_document_type == 'guide' || document.content_store_document_type == 'answer'
+    end
+
+    def format_document_data(documents, data_category = "")
+      documents.each.with_index(1).map do |document, index|
         data = {
           link: {
             text: document.title,
-            path: document.base_path
+            path: document.base_path,
+            data_attributes: data_attributes(document.base_path, index)
           },
           metadata: {
             document_type: document.content_store_document_type.humanize
@@ -29,14 +44,12 @@ module Supergroups
           data[:metadata][:organisations] = document.organisations
         end
 
+        if data_category.present?
+          data[:link][:data_attributes][:track_category] = data_module_label + data_category
+        end
+
         data
       end
-    end
-
-    def guide?(document)
-      # Although answers and guides are 2 different document types, they are conceptually the same so
-      # we should treat them the same
-      document.content_store_document_type == 'guide' || document.content_store_document_type == 'answer'
     end
   end
 end

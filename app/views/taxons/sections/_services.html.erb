@@ -1,5 +1,5 @@
 <%= render 'components/highlight-boxes',
-  items: section[:documents].shift(section[:promoted_content_count]),
+  items: section[:promoted_content],
   inverse: true
 %>
 <%= render partial: 'document_list_with_grid', locals: { documents: section[:documents], see_more_link: section[:see_more_link] } %>

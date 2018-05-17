@@ -39,13 +39,14 @@ private
   end
 
   def organisation_list_with_logos
-    organisations_with_logos.map do |org|
+    organisations_with_logos.map.with_index do |org, index|
       {
 
           name: org.logo_formatted_title,
           url: org.link,
           brand: org.brand,
           crest: org.crest,
+          data_attributes: data_attributes(org.link, index + 1)
       }
     end
   end
@@ -53,13 +54,24 @@ private
   def organisation_list_without_logos
     organisations_without_logos = organisations - organisations_with_logos
 
-    organisations_without_logos.map do |organisation|
+    tracking_number = organisations_with_logos.count
+
+    organisations_without_logos.map.with_index(1) do |organisation, index|
       {
         link: {
           text: organisation.title,
-          path: organisation.link
+          path: organisation.link,
+          data_attributes: data_attributes(organisation.link, tracking_number + index)
         }
       }
     end
+  end
+
+  def data_attributes(base_path, index)
+    {
+      track_category: "organisationsDocumentListClicked",
+      track_action: index,
+      track_label: base_path
+    }
   end
 end

@@ -31,4 +31,10 @@ describe Supergroups::Supergroup do
       assert 'taxons/sections/supergroup_name', supergroup.partial_template
     end
   end
+
+  describe '#data_module_label' do
+    it 'returns the data tracking attribute name used by Google Analytics' do
+      assert 'supergroupName', supergroup.data_module_label
+    end
+  end
 end

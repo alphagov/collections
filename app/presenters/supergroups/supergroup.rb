@@ -37,11 +37,40 @@ module Supergroups
     end
 
     def document_list(taxon_id)
-      tagged_content(taxon_id).each.map do |document|
+      items = tagged_content(taxon_id).drop(promoted_content_count)
+
+      format_document_data(items)
+    end
+
+    def promoted_content(*)
+      []
+    end
+
+    def data_module_label
+      name.camelize(:lower)
+    end
+
+  private
+
+    def data_attributes(base_path, index)
+      {
+        track_category: data_module_label + "DocumentListClicked",
+        track_action: index,
+        track_label: base_path
+      }
+    end
+
+    def promoted_content_count(*)
+      3
+    end
+
+    def format_document_data(documents, data_category = "")
+      documents.each.with_index(1).map do |document, index|
         data = {
           link: {
             text: document.title,
-            path: document.base_path
+            path: document.base_path,
+            data_attributes: data_attributes(document.base_path, index)
           },
           metadata: {
             public_updated_at: document.public_updated_at,
@@ -50,12 +79,12 @@ module Supergroups
           }
         }
 
+        if data_category.present?
+          data[:link][:data_attributes][:track_category] = data_module_label + data_category
+        end
+
         data
       end
-    end
-
-    def promoted_content_count(*)
-      3
     end
   end
 end
