@@ -34,6 +34,8 @@ Rails.application.routes.draw do
     to: "services_and_information#index",
     as: :services_and_information
 
+  get "/government/organisations", to: "organisations#index"
+
   constraints DocumentTypeRoutingConstraint.new('step_by_step_nav') do
     get "/:slug", to: 'step_nav#show'
   end
