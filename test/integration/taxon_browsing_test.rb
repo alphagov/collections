@@ -314,23 +314,23 @@ private
   end
 
   def tagged_content_for_services
-    @tagged_content_for_services ||= generate_search_results(5, "services")
+    @tagged_content_for_services ||= generate_search_results(2, "services")
   end
 
   def tagged_content_for_guidance_and_regulation
-    @tagged_content_for_guidance_and_regulation ||= generate_search_results(5, 'guidance_and_regulation')
+    @tagged_content_for_guidance_and_regulation ||= generate_search_results(2, 'guidance_and_regulation')
   end
 
   def tagged_content_for_news_and_communications
-    @tagged_content_for_news_and_communications ||= generate_search_results(5, "news_and_communications")
+    @tagged_content_for_news_and_communications ||= generate_search_results(2, "news_and_communications")
   end
 
   def tagged_content_for_policy_and_engagement
-    @tagged_content_for_policy_and_engagement ||= generate_search_results(5, "policy_and_engagement")
+    @tagged_content_for_policy_and_engagement ||= generate_search_results(2, "policy_and_engagement")
   end
 
   def tagged_content_for_transparency
-    @tagged_content_for_transparency ||= generate_search_results(5, "transparency")
+    @tagged_content_for_transparency ||= generate_search_results(2, "transparency")
   end
 
   def finder_query_string(supergroup)
