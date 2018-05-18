@@ -1,18 +1,16 @@
-<% if documents.any? %>
-  <div class="grid-row">
-    <div class="column-two-thirds" <%= "data-module=track-click" if track_click?(documents) %>>
-      <%= render 'govuk_publishing_components/components/document_list',
-        items: documents,
-        margin_top: true,
-        margin_bottom: true
-      %>
+<div class="grid-row">
+  <div class="column-two-thirds" <%= "data-module=track-click" if track_click?(documents) %>>
+    <%= render 'govuk_publishing_components/components/document_list',
+      items: documents,
+      margin_top: true,
+      margin_bottom: true
+    %>
 
-      <% if local_assigns[:see_more_link] %>
-        <%= link_to(
-          see_more_link[:text],
-          see_more_link[:url]
-        )%>
-      <% end %>
-    </div>
+    <% if local_assigns[:see_more_link] %>
+      <%= link_to(
+        see_more_link[:text],
+        see_more_link[:url]
+      )%>
+    <% end %>
   </div>
-<% end %>
+</div>
