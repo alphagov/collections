@@ -1,3 +1,41 @@
-<div>
-  <%= organisation.title %>
+<div class="organisation-logo">
+  <%= organisation.logo["formatted_title"] %>
 </div>
+
+<%= render 'featured_links',
+           featured_links: organisation.ordered_featured_links %>
+
+<%= render 'featured_documents',
+           featured_documents: organisation.ordered_featured_documents %>
+
+<hr>
+Latest
+<hr>
+
+<%= render "govuk_publishing_components/components/subscription-links", {
+    email_signup_link: "#{params[:organisation_name]}/email-signup",
+    feed_link: "#{params[:organisation_name]}.atom" } %>
+
+<%= render 'organisation_description',
+           organisation: organisation %>
+
+<div class="organisation-documents">
+  <%= render "govuk_publishing_components/components/heading", {
+      text: "Documents",
+      heading_level: 2
+  } %>
+</div>
+
+<%= render partial: 'ministers_and_management',
+           locals: { ministers: organisation.ordered_ministers,
+                     board_members: organisation.board_members } %>
+
+<%= render partial: 'contact',
+           locals: {
+               organisation: organisation,
+               contact: organisation.ordered_contacts } %>
+
+<%= render partial: 'corporate_information',
+           locals: {
+               organisation: organisation,
+               corporate_info: organisation.ordered_corporate_information_pages } %>

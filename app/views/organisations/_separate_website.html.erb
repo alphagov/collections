@@ -1,0 +1,25 @@
+<%= render "govuk_publishing_components/components/heading", {
+    text: organisation.title,
+    heading_level: 2
+} %>
+
+<div class="separate-website-label">
+  <%= "#{organisation.title} has a" %> <%= link_to "separate website", "#" %>
+</div>
+
+<div class="organisation-body">
+  <%= organisation.body %>
+</div>
+
+<div class="parent-organisations">
+  <% if organisation.ordered_parent_organisations.presence %>
+    <%= "#{organisation.title} works with the" %>
+    <%= link_to organisation.ordered_parent_organisations[0]["title"],
+                organisation.ordered_parent_organisations[0]["base_path"] %>
+  <% end %>
+</div>
+
+<%= render "govuk_publishing_components/components/heading", {
+    text: "Documents",
+    heading_level: 2
+} %>
