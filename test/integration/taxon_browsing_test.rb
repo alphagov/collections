@@ -253,9 +253,9 @@ private
     content = page.find('meta[name="robots"]', visible: false)['content']
 
     assert_equal(
-      "noindex, nofollow",
+      "noindex",
       content,
-      "The content of the robots meta tag should be 'noindex, nofollow'"
+      "The content of the robots meta tag should be 'noindex'"
     )
   end
 

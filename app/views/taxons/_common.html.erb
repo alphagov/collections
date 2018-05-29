@@ -1,10 +1,7 @@
 <% content_for :is_taxon_page, true %>
 <% content_for :title, presented_taxon.title %>
 <% content_for :meta_tags do %>
-  <% if !presented_taxon.live_taxon? %>
-    <% # prevent search engines from indexing this page %>
-    <meta name="robots" content="noindex, nofollow">
-  <% end %>
+  <meta name="robots" content="noindex">
   <meta name="description" content="<%= presented_taxon.description %>">
   <meta name="govuk:navigation-page-type" content="Taxon Page" />
 <% end %>
@@ -21,4 +18,3 @@
     </div>
   </div>
 <% end %>
-
