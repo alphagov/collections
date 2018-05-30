@@ -1,5 +1,9 @@
 <% content_for :title, step_by_step.title %>
 
+<script type="application/ld+json">
+  <%= raw step_by_step.structured_data.to_json %>
+</script>
+
 <% content_for :meta_tags do %>
   <meta name="description" content="<%= step_by_step.description %>">
 <% end %>
