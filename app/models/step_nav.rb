@@ -27,4 +27,48 @@ class StepNav
     content_item = ContentItem.find!(base_path)
     new(content_item)
   end
+
+  def structured_data
+    step_items = details["step_by_step_nav"]["steps"].map do |step|
+      contents = step["contents"].map do |content|
+        if content["type"] == "paragraph"
+          content["text"]
+        elsif content["type"] == "list"
+          content["contents"].map do |c|
+            next unless c["href"]
+
+            {
+              "@type": "WebPage",
+              "@id": url_for_base_path_or_absolute_url(c["href"]),
+              "name": c["text"],
+            }
+          end
+        end
+      end
+
+      {
+        "@type": "HowToStep",
+        "name": step["title"],
+        "itemListElement": contents.flatten.compact,
+      }
+    end
+
+    {
+      "@context": "http://schema.org",
+      "@type": "HowTo",
+      "name": "Learn to drive a car: step by step",
+      "steps": {
+        "@type": "ItemList",
+        "itemListElement": step_items,
+      }
+    }
+  end
+
+  def url_for_base_path_or_absolute_url(href)
+    if href.starts_with?("http")
+      href
+    else
+      Plek.new.website_root + href
+    end
+  end
 end
