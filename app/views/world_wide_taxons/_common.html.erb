@@ -11,22 +11,19 @@
 <%= render partial: 'page_header', locals: { presented_taxon: presented_taxon } %>
 
 <% content_for :breadcrumbs do %>
-  <%=
-    render(
-      partial: 'govuk_component/beta_label',
-      locals: {
-        message: <<-MESSAGE
-        This is a test version of the layout of this page.
-        <a id=taxonomy-survey
-           href='https://www.smartsurvey.co.uk/s/betasurvey2017?c=#{current_path_without_query_string}'
-           target='_blank'
-           rel='noopener noreferrer'>
-          Take the survey to help us improve it
-        </a>
-        MESSAGE
-      }
-    )
-  %>
+  <% beta_banner_message = capture do %>
+    <%= "This is a test version of the layout of this page." %>
+    <a id=taxonomy-survey
+        href='https://www.smartsurvey.co.uk/s/betasurvey2017?c=#{current_path_without_query_string}'
+        target='_blank'
+        rel='noopener noreferrer'>
+      Take the survey to help us improve it
+    </a>
+  <% end %>
+  <%= render "govuk_publishing_components/components/phase_banner", {
+    phase: "beta",
+    message: beta_banner_message
+  } %>
   <%= render 'govuk_publishing_components/components/breadcrumbs',
     breadcrumbs: GovukPublishingComponents::AppHelpers::TaxonBreadcrumbs.new(@content_item).breadcrumbs,
     collapse_on_mobile: true
