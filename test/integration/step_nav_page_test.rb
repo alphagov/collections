@@ -20,11 +20,8 @@ class StepNavPageTest < ActionDispatch::IntegrationTest
   end
 
   it "renders the title" do
-    assert page.has_css?(shared_component_selector('title'))
-
-    within_static_component 'title' do |component_args|
-      assert_equal "Learn to drive a car: step by step", component_args[:title]
-    end
+    assert page.has_css?('.gem-c-title')
+    assert page.has_css?('.gem-c-title__text', text: "Learn to drive a car: step by step")
   end
 
   it "renders the step by step navigation component" do

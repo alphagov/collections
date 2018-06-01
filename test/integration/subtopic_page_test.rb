@@ -65,10 +65,9 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
     # Then I should see the subtopic metadata
     within '.page-header' do
-      within_static_component 'title' do |component_args|
-        assert_equal component_args[:title], "Offshore"
-        assert_equal component_args[:context][:text], "Oil and Gas"
-        assert_equal component_args[:context][:href], "/topic/oil-and-gas"
+      within '.gem-c-title' do
+        assert page.has_css?(".gem-c-title__text", text: "Offshore")
+        assert page.has_css?(".gem-c-title__context-link[href='/topic/oil-and-gas']", text: "Oil and Gas")
       end
 
       within_static_component('metadata') do
@@ -101,10 +100,9 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
     # Then I should see the subtopic metadata
     within '.page-header' do
-      within_static_component 'title' do |component_args|
-        assert_equal component_args[:title], "Offshore"
-        assert_equal component_args[:context][:text], "Oil and Gas"
-        assert_equal component_args[:context][:href], "/topic/oil-and-gas"
+      within '.gem-c-title' do
+        assert page.has_css?(".gem-c-title__text", text: "Offshore")
+        assert page.has_css?(".gem-c-title__context-link[href='/topic/oil-and-gas']", text: "Oil and Gas")
       end
 
       within_static_component('metadata') do
@@ -143,10 +141,9 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
       # Then I should see the subtopic metadata
       within '.page-header' do
-        within_static_component 'title' do |component_args|
-          assert_equal component_args[:title], "Latest documents"
-          assert_equal component_args[:context][:text], "Offshore"
-          assert_equal component_args[:context][:href], "/topic/oil-and-gas/offshore"
+        within '.gem-c-title' do
+          assert page.has_css?(".gem-c-title__text", text: "Latest documents")
+          assert page.has_css?(".gem-c-title__context-link[href='/topic/oil-and-gas/offshore']", text: "Offshore")
         end
 
         within_static_component('metadata') do
@@ -186,9 +183,9 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
       end
 
       # When I go to the next page
-      within_static_component('previous_and_next_navigation') do |component_args|
-        visit component_args["next_page"]["url"]
-      end
+      assert page.has_css?('.gem-c-pagination__link')
+      next_href = page.find('.gem-c-pagination__link[rel=\'next\']')['href']
+      visit next_href
 
       # Then I should see the remaining documents
       within '.changed-documents' do
@@ -199,9 +196,9 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
       end
 
       # When I go back to the first page
-      within_static_component('previous_and_next_navigation') do |component_args|
-        visit component_args["previous_page"]["url"]
-      end
+      assert page.has_css?('.gem-c-pagination__link')
+      prev_href = page.find('.gem-c-pagination__link[rel=\'prev\']')['href']
+      visit prev_href
 
       # Then I should see the first 50 documents again
       within '.changed-documents' do

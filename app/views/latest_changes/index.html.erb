@@ -1,6 +1,6 @@
 <% content_for :title, "#{subtopic.title}: latest documents" %>
 <% content_for :page_title do %>
-  <%= render "govuk_component/title", {
+  <%= render "govuk_publishing_components/components/title", {
         title: "Latest documents",
         context: { text: subtopic.title, href: subtopic.base_path }
       } %>
@@ -41,5 +41,5 @@
     <% end -%>
   </ul>
 
-  <%= render "govuk_component/previous_and_next_navigation", pagination_presenter.previous_and_next_navigation %>
+  <%= render "govuk_publishing_components/components/previous_and_next_navigation", pagination_presenter.previous_and_next_navigation %>
 <% end %>
