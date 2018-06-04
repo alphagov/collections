@@ -1,0 +1,27 @@
+<% ministerial_departments.each do |organisation_type, organisation_list| %>
+  <div class="grid-row organisations__section">
+    <div class="column-one-third">
+      <% unless organisation_type.eql?(:number_10) %>
+        <%= render "govuk_publishing_components/components/heading", {
+            text: organisation_type.to_s.humanize,
+            heading_level: 2
+        } %>
+        <div class="department-count">
+          <%= organisation_list.count %>
+        </div>
+      <% end %>
+    </div>
+    <div class="column-two-thirds">
+      <% organisation_list.each do |organisation| %>
+        <%= render "govuk_component/organisation_logo", {
+          organisation: {
+            name: organisation["logo"]["formatted_title"],
+            url: organisation["href"],
+            brand: organisation["brand"],
+            crest: organisation["logo"]["crest"]
+          }
+        } %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
