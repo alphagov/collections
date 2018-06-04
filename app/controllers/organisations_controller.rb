@@ -1,6 +1,7 @@
 class OrganisationsController < ApplicationController
   def index
     @organisations = ContentStoreOrganisations.find!("/government/organisations")
+    @presented_organisations = presented_organisations
     setup_content_item_and_navigation_helpers(@organisations)
   end
 
@@ -28,5 +29,9 @@ private
   def show_organisation_partial(organisation)
     render_partial('organisation/_show_organisation',
                    organisation: organisation)
+  end
+
+  def presented_organisations
+    @presented_organisations ||= OrganisationsPresenter.new(@organisations)
   end
 end
