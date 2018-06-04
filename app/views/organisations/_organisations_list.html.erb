@@ -9,23 +9,28 @@
                 heading_level: 2
             } %>
             <div class="department-count">
-              <%= organisation_list.count %>
+              <p class="visuallyhidden">There are <%= organisation_list.count %> <%= organisation_type.to_s.humanize %></p>
+              <span aria-hidden="true"><%= organisation_list.count %></span>
             </div>
           <% end %>
         </div>
 
-        <div class="column-two-thirds">
+        <div class="column-two-thirds <%= "organisations__list-without-number" if organisation_type.eql?(:number_10) %>">
           <% if department_type.eql?(:ministerial_departments) %>
+            <ul>
             <% organisation_list.each do |organisation| %>
-              <%= render "govuk_component/organisation_logo", {
-                organisation: {
-                  name: organisation["logo"]["formatted_title"],
-                  url: organisation["href"],
-                  brand: organisation["brand"],
-                  crest: organisation["logo"]["crest"]
-                }
-              } %>
+              <li class="organisations__logo-wrapper">
+                <%= render "govuk_component/organisation_logo", {
+                  organisation: {
+                    name: organisation["logo"]["formatted_title"],
+                    url: organisation["href"],
+                    brand: organisation["brand"],
+                    crest: organisation["logo"]["crest"]
+                  }
+                } %>
+              </li>
             <% end %>
+            </ul>
           <% else %>
             <%= render "govuk_publishing_components/components/document_list", items: organisation_list %>
           <% end %>

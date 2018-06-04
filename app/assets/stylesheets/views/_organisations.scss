@@ -1,0 +1,22 @@
+.organisations {
+  .organisations__section {
+    margin-bottom: $gutter * 2;
+
+    .department-count {
+      @include bold-80;
+    }
+
+    .organisations__logo-wrapper {
+      list-style-type: none;
+      padding-bottom: $gutter-two-thirds;
+      margin-bottom: $gutter-two-thirds;
+      border-bottom: 1px solid $grey-2;
+    }
+
+    .organisations__list-without-number {
+      @include media(tablet) {
+        float: right;
+      }
+    }
+  }
+}
