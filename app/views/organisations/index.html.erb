@@ -11,6 +11,9 @@
 <div class="organisations">
     <%= render partial: 'organisations_list',
             locals: {
-                ministerial_departments: @presented_organisations.ministerial_departments
+               organisations_list: [
+                    ministerial_departments: @presented_organisations.ministerial_departments,
+                    non_ministerial_departments: @presented_organisations.non_ministerial_departments
+                ]
             } %>
 </div>

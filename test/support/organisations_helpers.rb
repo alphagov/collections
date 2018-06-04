@@ -28,4 +28,66 @@ module OrganisationsHelpers
       }
     }.with_indifferent_access
   end
+
+  def non_ministerial_departments_hash
+    {
+      "title": "Departments, agencies and public bodies",
+      details: {
+        ordered_executive_offices: [],
+        ordered_ministerial_departments: [],
+        ordered_non_ministerial_departments: [
+          {
+            title: "The Charity Commission",
+            href: "/government/organisations/charity-commission",
+            brand: "department-for-business-innovation-skills",
+          }
+        ],
+        ordered_agencies_and_other_public_bodies: [
+          {
+            title: "Academy for Social Justice Commissioning",
+            href: "/government/organisations/academy-for-social-justice-commissioning",
+            brand: "ministry-of-justice",
+          }
+        ],
+        ordered_high_profile_groups: [
+          {
+            title: "Bona Vacantia",
+            href: "/government/organisations/bona-vacantia",
+            brand: "attorney-generals-office",
+          }
+        ],
+        ordered_public_corporations: [
+          {
+            title: "BBC",
+            href: "/government/organisations/bbc",
+            brand: "department-for-culture-media-sport",
+          }
+        ],
+        ordered_devolved_administrations: [
+          {
+            title: "Northern Ireland Executive ",
+            href: "/government/organisations/northern-ireland-executive",
+            brand: nil
+          }
+        ]
+      }
+    }.with_indifferent_access
+  end
+
+  def some_non_ministerial_departments_hash
+    {
+      "title": "Departments, agencies and public bodies",
+      details: {
+        ordered_executive_offices: [],
+        ordered_ministerial_departments: [],
+        ordered_non_ministerial_departments: [
+          {
+            title: "The Charity Commission",
+            href: "/government/organisations/charity-commission",
+            brand: "department-for-business-innovation-skills",
+          }
+        ]
+      }
+    }.with_indifferent_access
+  end
 end
