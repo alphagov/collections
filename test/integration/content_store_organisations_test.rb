@@ -40,8 +40,9 @@ class ContentStoreOrganisationsTest < ActionDispatch::IntegrationTest
   end
 
   it "renders non-ministerial organisation without crest" do
-    assert page.has_css?('.gem-c-document-list__item-title a[href="/government/organisations/arts-and-humanities-research-council"]', text: 'Arts and Humanities Research Council')
-    assert page.has_css?('.gem-c-document-list__item-title a', text: 'Arts and Humanities Research Council')
+    assert page.has_css?('.gem-c-document-list__item-title[href="/government/organisations/arts-and-humanities-research-council"]', text: 'Arts and Humanities Research Council')
+    assert page.has_css?('.gem-c-document-list__item-title', text: 'Arts and Humanities Research Council')
+    assert page.has_css?('.gem-c-document-list__item-context', text: 'separate website')
   end
 
   # Commenting this out until this functionality has been added

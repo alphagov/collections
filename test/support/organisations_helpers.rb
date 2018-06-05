@@ -40,6 +40,7 @@ module OrganisationsHelpers
             title: "The Charity Commission",
             href: "/government/organisations/charity-commission",
             brand: "department-for-business-innovation-skills",
+            separate_website: true
           }
         ],
         ordered_agencies_and_other_public_bodies: [

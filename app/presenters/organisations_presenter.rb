@@ -32,7 +32,8 @@ private
         data = {
           link: {
             text: organisation["title"],
-            path: organisation["href"]
+            path: organisation["href"],
+            context: (I18n.t("organisations.separate_website") if organisation["separate_website"])
           }
         }
 

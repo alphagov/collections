@@ -50,7 +50,8 @@ describe OrganisationsPresenter do
       expected = [{
         link: {
           text: "The Charity Commission",
-          path: "/government/organisations/charity-commission"
+          path: "/government/organisations/charity-commission",
+          context: "separate website"
         }
       }]
 
@@ -62,6 +63,7 @@ describe OrganisationsPresenter do
         link: {
           text: "Academy for Social Justice Commissioning",
           path: "/government/organisations/academy-for-social-justice-commissioning",
+          context: nil
         }
       }]
 
@@ -73,6 +75,7 @@ describe OrganisationsPresenter do
         link: {
           text: "Bona Vacantia",
           path: "/government/organisations/bona-vacantia",
+          context: nil
         }
       }]
 
@@ -84,6 +87,7 @@ describe OrganisationsPresenter do
         link: {
           text: "BBC",
           path: "/government/organisations/bbc",
+          context: nil
         }
       }]
 
@@ -95,6 +99,7 @@ describe OrganisationsPresenter do
         link: {
           text: "Northern Ireland Executive ",
           path: "/government/organisations/northern-ireland-executive",
+          context: nil
         }
       }]
 
@@ -115,6 +120,7 @@ describe OrganisationsPresenter do
           link: {
             text: "The Charity Commission",
             path: "/government/organisations/charity-commission",
+            context: nil
           }
         }],
         agencies_and_other_public_bodies: [],
