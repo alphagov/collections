@@ -28,6 +28,9 @@
                     crest: organisation["logo"]["crest"]
                   }
                 } %>
+                <% if @presented_organisations.works_with(organisation) %>
+                  <p class="organisation__works-with"><%= @presented_organisations.works_with(organisation) %></p>
+                <% end %>
               </li>
             <% end %>
             </ul>
