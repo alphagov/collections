@@ -1,6 +1,3 @@
 <% content_for :title, organisation.title %>
 
-<div id="section" class="section-pane pane">
-  <%= render 'show_organisation',
-             organisation: organisation %>
-</div>
+<%= show_organisation(organisation) %>

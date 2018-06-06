@@ -1,0 +1,31 @@
+<div class="organisation-ministers">
+  <%= render "govuk_publishing_components/components/heading", {
+      text: "Our ministers",
+      heading_level: 2
+  } %>
+  <% ministers.each do |minister| %>
+    <%= image_tag minister["image"]["url"], alt: minister["image"]["alt_text"],height: 200, width: 250 %>
+    <p>
+      <%= minister["name_prefix"] %>
+      <%= link_to minister["name"], minister["href"] %>
+      <%= link_to minister["role"], minister["role_href"] %>
+    </p>
+  <% end %>
+</div>
+
+<div class="organisation-management">
+  <%= render "govuk_publishing_components/components/heading", {
+      text: "Our management",
+      heading_level: 2
+  } %>
+  <% board_members.each do |board_member| %>
+    <%= image_tag(board_member["image"]["url"],
+                  alt: board_member["image"]["alt_text"],
+                  height: 200,
+                  width: 250) if board_member["image"].present? %>
+    <p>
+      <%= link_to board_member["name"], board_member["href"] %>
+      <%= board_member["role"] %>
+    </p>
+  <% end %>
+</div>

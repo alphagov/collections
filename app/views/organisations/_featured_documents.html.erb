@@ -1,0 +1,21 @@
+<div class="organisation-featured-documents">
+  <% featured_documents.each do |document| %>
+    <%= link_to image_tag(document["image"]["url"], alt: document["image"]["alt_text"],
+                          height: 300, width: 400),
+                document["href"]%>
+    <%= render "govuk_publishing_components/components/document_list", {
+        items: [
+            {
+                link: {
+                    text: document["title"],
+                    path: document["href"],
+                },
+                metadata: {
+                    public_updated_at: Time.iso8601(document["public_updated_at"]),
+                    document_type: document["document_type"]
+                }
+            }
+        ]
+    } %>
+  <% end %>
+</div>

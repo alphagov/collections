@@ -1,0 +1,11 @@
+<div class="organisation-corporate-info">
+  <%= render "govuk_publishing_components/components/heading", {
+      text: "Corporate Information",
+      heading_level: 4
+  } %>
+  <% corporate_info.each do |info| %>
+    <p>
+      <%= link_to info["title"], info["href"] %>
+    </p>
+  <% end %>
+</div>
