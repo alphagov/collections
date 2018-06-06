@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+  organisations:
+    separate_website: "separate website"
+
