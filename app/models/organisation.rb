@@ -18,17 +18,51 @@ class Organisation
     @content_item.content_item_data["title"]
   end
 
+  def organisation_type
+    details["organisation_type"]
+  end
+
+  def organisation_featuring_priority
+    details["organisation_featuring_priority"]
+  end
+
+  def brand
+    details["brand"]
+  end
+
   def logo
     details["logo"]
+  end
+
+  def crest
+    logo["crest"]
+  end
+
+  def formatted_title
+    logo["formatted_title"]
+  end
+
+  def organisation_image_url
+    logo["image"]["url"] if logo["image"].present?
+  end
+
+  def organisation_image_alt_text
+    logo["image"]["alt_text"] if logo["image"].present?
+  end
+
+  def ordered_featured_links
+    details["ordered_featured_links"]
+  end
+
+  def translations
+    content_item.content_item_data["links"]["available_translations"]
   end
 
   def base_path
     @content_item.content_item_data["base_path"]
   end
 
-  def ordered_featured_links
-    details["ordered_featured_links"]
-  end
+  # methods below are not in use yet, this comment to be removed once confirmed
 
   def body
     details["body"]
@@ -44,10 +78,6 @@ class Organisation
 
   def social_media_links
     details["social_media_links"]
-  end
-
-  def organisation_type
-    details["organisation_type"].tr("_", " ")
   end
 
   def ordered_ministers
