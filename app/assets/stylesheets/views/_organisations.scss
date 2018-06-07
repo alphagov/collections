@@ -1,36 +1,66 @@
 .organisations {
   .organisations-list__section {
     margin-bottom: $gutter * 2;
+  }
 
-    .department-count {
-      @include bold-80;
+  .department-count {
+    @include bold-80;
+  }
+
+  .organisations-list__item {
+    list-style-type: none;
+    padding-bottom: $gutter-half;
+    margin-bottom: $gutter-half;
+    border-bottom: 1px solid $grey-2;
+  }
+
+  .organisation-list__item-title {
+    @include core-19;
+    margin-right: $gutter-one-third;
+  }
+
+  .organisation-list__item-context {
+    color: $grey-1;
+    white-space: nowrap;
+  }
+
+  .organisation-list__item-works-with {
+    @include core-16;
+    display: block;
+    margin-top: $gutter-half;
+    margin-right: $gutter-two-thirds;
+
+    @include media(tablet) {
+      display: inline-block;
     }
+  }
 
-    .organisations-list__item {
-      list-style-type: none;
-      margin-bottom: $gutter-two-thirds;
-      border-bottom: 1px solid $grey-2;
+  .organisation-list__works-with-toggle {
+    @include core-16;
+  }
 
-      .organisation-list__item-title {
-        @include core-19;
-        margin-right: $gutter-one-third;
-      }
+  .organisation-list__works-with {
+    background-color: $panel-colour;
+    margin-top: $gutter-one-third;
+    padding: $gutter-one-third;
+  }
 
-      .organisation-list__item-context {
-        color: $grey-1;
-      }
+  .organisation-list__works-with-title {
+    font-size: 16px;
+    font-weight: bold;
+  }
 
-      .organisation-list__item-works-with {
-        @include core-16;
-        margin-top: $gutter-one-third;
-        margin-bottom: $gutter-one-third;
-      }
-    }
+  .organisation-list__works-with-list {
+    margin-bottom: $gutter-half;
+  }
 
-    .organisations-list__without-number {
-      @include media(tablet) {
-        float: right;
-      }
+  .organisation-list__works-with-list-item {
+    padding-bottom: 5px;
+  }
+
+  .organisations-list__without-number {
+    @include media(tablet) {
+      float: right;
     }
   }
 }

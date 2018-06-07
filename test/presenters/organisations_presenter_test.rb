@@ -106,7 +106,7 @@ describe Organisations::IndexPresenter do
     end
 
     it 'returns nil when organisation does not work with others' do
-      assert_nil @organisations_presenter.works_with({})
+      assert_nil @organisations_presenter.works_with_statement({})
     end
 
     it 'returns string when organisation works with one other' do
@@ -121,7 +121,7 @@ describe Organisations::IndexPresenter do
         }
       }.with_indifferent_access
 
-      assert_equal "Works with 1 public body", @organisations_presenter.works_with(test_org)
+      assert_equal "Works with 1 public body", @organisations_presenter.works_with_statement(test_org)
     end
 
     it 'returns string when organisation works with multiple others' do
@@ -142,7 +142,7 @@ describe Organisations::IndexPresenter do
         }
       }.with_indifferent_access
 
-      assert_equal "Works with 2 agencies and public bodies", @organisations_presenter.works_with(test_org)
+      assert_equal "Works with 2 agencies and public bodies", @organisations_presenter.works_with_statement(test_org)
     end
   end
 end

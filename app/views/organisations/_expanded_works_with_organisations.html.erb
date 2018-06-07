@@ -1,0 +1,17 @@
+<a href="#" class="organisation-list__works-with-toggle" data-controls="toggle_<%= current_organisation.parameterize %>" data-expanded="false" data-toggled-text="<%= t('view_less') %>">
+  <%= t('view_all') %>
+</a>
+
+<div class="organisation-list__works-with js-hidden" id="toggle_<%= current_organisation.parameterize %>">
+  <% works_with_organisations.each do |type, work_with_organisations| %>
+    <p class="organisation-list__works-with-title"><%=  t('organisations.type.' + type) %></p>
+    <ul class="organisation-list__works-with-list">
+      <% work_with_organisations.each do |work_with_organisation| %>
+        <li class="organisation-list__works-with-list-item">
+          <%= link_to(work_with_organisation["title"], work_with_organisation["href"]) %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
+

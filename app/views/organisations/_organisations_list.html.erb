@@ -1,7 +1,8 @@
 <% all_organisations.each do |organisation_type, organisations| %>
   <div class="grid-row organisations-list__section">
+
     <div class="column-one-third">
-      <% unless organisation_type.eql?(:number_10) %>
+      <% unless @presented_organisations.executive_office?(organisation_type) %>
         <%= render "govuk_publishing_components/components/heading", {
           text: organisation_type.to_s.humanize,
           heading_level: 2
@@ -12,31 +13,42 @@
         </div>
       <% end %>
     </div>
-    <div class="column-two-thirds <%= " organisations-list__without-number" if organisation_type.eql?(:number_10) %>">
-      <ul>
+
+    <div class="column-two-thirds <%= "organisations-list__without-number" if @presented_organisations.executive_office?(organisation_type) %>">
+      <ol>
         <% organisations.each do |organisation| %>
           <li class="organisations-list__item" >
-              <% if organisation_type.eql?(:number_10) || organisation_type.eql?(:ministerial_departments) %>
-                <%= render "govuk_component/organisation_logo", {
-                  organisation: {
-                    name: organisation["logo"]["formatted_title"],
-                    url: organisation["href"],
-                    brand: organisation["brand"],
-                    crest: organisation["logo"]["crest"]
-                  }
-                } %>
-              <% else %>
-                <a class="organisation-list__item-title" href="<%= organisation["href"] %>"><%= organisation["title"] %></a>
+            <% if @presented_organisations.ministerial_organisation?(organisation_type) %>
+              <%= render "govuk_component/organisation_logo", {
+                organisation: {
+                  name: organisation["logo"]["formatted_title"],
+                  url: organisation["href"],
+                  brand: organisation["brand"],
+                  crest: organisation["logo"]["crest"]
+                }
+              } %>
+            <% else %>
+              <%= link_to(organisation["title"], organisation["href"], class: "organisation-list__item-title") %>
 
-                <% if organisation["separate_website"] %>
-                  <span class="organisation-list__item-context">separate website</span>
-                <% end %>
+              <% if organisation["separate_website"] %>
+                <span class="organisation-list__item-context"><%= t('organisations.separate_website') %></span>
               <% end %>
+            <% end %>
 
-              <p class="organisation-list__item-works-with"><%= @presented_organisations.works_with(organisation) %></p>
+            <% if @presented_organisations.works_with_statement(organisation) %>
+              <div data-module="gem-toggle">
+                <p class="organisation-list__item-works-with"><%= @presented_organisations.works_with_statement(organisation) %></p>
+                <%= render partial: 'expanded_works_with_organisations',
+                  locals: {
+                    works_with_organisations: organisation["works_with"],
+                    current_organisation: organisation["title"]
+                  } %>
+              </div>
+            <% end %>
           </li>
         <% end %>
-      </ul>
+      </ol>
     </div>
+
   </div>
 <% end %>
