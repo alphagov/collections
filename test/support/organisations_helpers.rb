@@ -79,8 +79,6 @@ module OrganisationsHelpers
     {
       "title": "Departments, agencies and public bodies",
       details: {
-        ordered_executive_offices: [],
-        ordered_ministerial_departments: [],
         ordered_non_ministerial_departments: [
           {
             title: "The Charity Commission",

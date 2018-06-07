@@ -10,10 +10,7 @@
 
 <div class="organisations">
   <%= render partial: 'organisations_list', locals: {
-    organisations_list: [
-      ministerial_departments: @presented_organisations.ministerial_departments,
-      non_ministerial_departments: @presented_organisations.non_ministerial_departments
-    ]
+    all_organisations: @presented_organisations.all_organisations
   } %>
 </div>
 

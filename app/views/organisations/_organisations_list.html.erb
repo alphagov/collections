@@ -1,25 +1,22 @@
-<% organisations_list.each do |departments| %>
-  <% departments.each do |department_type, organisations| %>
-    <% organisations.each do |organisation_type, organisation_list| %>
-      <div class="grid-row organisations__section">
-        <div class="column-one-third">
-          <% unless organisation_type.eql?(:number_10) %>
-            <%= render "govuk_publishing_components/components/heading", {
-                text: organisation_type.to_s.humanize,
-                heading_level: 2
-            } %>
-            <div class="department-count">
-              <p class="visuallyhidden">There are <%= organisation_list.count %> <%= organisation_type.to_s.humanize %></p>
-              <span aria-hidden="true"><%= organisation_list.count %></span>
-            </div>
-          <% end %>
+<% all_organisations.each do |organisation_type, organisations| %>
+  <div class="grid-row organisations-list__section">
+    <div class="column-one-third">
+      <% unless organisation_type.eql?(:number_10) %>
+        <%= render "govuk_publishing_components/components/heading", {
+          text: organisation_type.to_s.humanize,
+          heading_level: 2
+        } %>
+        <div class="department-count">
+          <p class="visuallyhidden">There are <%= organisations.count %> <%= organisation_type.to_s.humanize %></p>
+          <span aria-hidden="true"><%= organisations.count %></span>
         </div>
-
-        <div class="column-two-thirds <%= "organisations__list-without-number" if organisation_type.eql?(:number_10) %>">
-          <% if department_type.eql?(:ministerial_departments) %>
-            <ul>
-            <% organisation_list.each do |organisation| %>
-              <li class="organisations__logo-wrapper">
+      <% end %>
+    </div>
+    <div class="column-two-thirds <%= " organisations-list__without-number" if organisation_type.eql?(:number_10) %>">
+      <ul>
+        <% organisations.each do |organisation| %>
+          <li class="organisations-list__item" >
+              <% if organisation_type.eql?(:number_10) || organisation_type.eql?(:ministerial_departments) %>
                 <%= render "govuk_component/organisation_logo", {
                   organisation: {
                     name: organisation["logo"]["formatted_title"],
@@ -28,18 +25,18 @@
                     crest: organisation["logo"]["crest"]
                   }
                 } %>
-                <% if @presented_organisations.works_with(organisation) %>
-                  <p class="organisation__works-with"><%= @presented_organisations.works_with(organisation) %></p>
-                <% end %>
-              </li>
-            <% end %>
-            </ul>
-          <% else %>
-            <%= render "govuk_publishing_components/components/document_list", items: organisation_list %>
-          <% end %>
-        </div>
+              <% else %>
+                <a class="organisation-list__item-title" href="<%= organisation["href"] %>"><%= organisation["title"] %></a>
 
-      </div>
-    <% end %>
-  <% end %>
+                <% if organisation["separate_website"] %>
+                  <span class="organisation-list__item-context">separate website</span>
+                <% end %>
+              <% end %>
+
+              <p class="organisation-list__item-works-with"><%= @presented_organisations.works_with(organisation) %></p>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
 <% end %>

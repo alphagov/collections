@@ -1,24 +1,33 @@
 .organisations {
-  .organisations__section {
+  .organisations-list__section {
     margin-bottom: $gutter * 2;
 
     .department-count {
       @include bold-80;
     }
 
-    .organisations__logo-wrapper {
+    .organisations-list__item {
       list-style-type: none;
-      padding-bottom: $gutter-two-thirds;
       margin-bottom: $gutter-two-thirds;
       border-bottom: 1px solid $grey-2;
 
-      .organisation__works-with {
+      .organisation-list__item-title {
+        @include core-19;
+        margin-right: $gutter-one-third;
+      }
+
+      .organisation-list__item-context {
+        color: $grey-1;
+      }
+
+      .organisation-list__item-works-with {
         @include core-16;
-        margin-top: $gutter-half;
+        margin-top: $gutter-one-third;
+        margin-bottom: $gutter-one-third;
       }
     }
 
-    .organisations__list-without-number {
+    .organisations-list__without-number {
       @include media(tablet) {
         float: right;
       }
