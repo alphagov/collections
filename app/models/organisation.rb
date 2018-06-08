@@ -26,6 +26,10 @@ class Organisation
     @content_item.content_item_data["base_path"]
   end
 
+  def web_url
+    Plek.current.website_root + base_path
+  end
+
   def ordered_featured_links
     details["ordered_featured_links"]
   end

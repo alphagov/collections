@@ -36,6 +36,12 @@ Rails.application.routes.draw do
 
   get "/government/organisations", to: "organisations#index"
 
+  get '/government/organisations/:organisation_name(.:locale).:format',
+    constraints: {
+      format: /atom/,
+      locale: /\w{2}(-[\d\w]{2,3})?/,
+    }, to: "feeds#organisation"
+
   get "/government/organisations/:organisation_name", to: "organisations#show"
 
   constraints DocumentTypeRoutingConstraint.new('step_by_step_nav') do
