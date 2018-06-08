@@ -45,12 +45,9 @@ class ContentStoreOrganisationsTest < ActionDispatch::IntegrationTest
     assert page.has_css?('.gem-c-document-list__item-context', text: 'separate website')
   end
 
-  # Commenting this out until this functionality has been added
-  # Will be added as part of: https://trello.com/c/DUFbZjjM/166-add-works-with-info-to-organisation-list-page
-
-#   it "displays child organisations count" do
-#     assert page.has_content?("Works with 4 agencies and public bodies")
-#   end
+  it "displays child organisations count" do
+    assert page.has_content?("Works with 4 agencies and public bodies")
+  end
 
 private
 

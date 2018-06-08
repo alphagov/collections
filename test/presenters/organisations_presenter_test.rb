@@ -1,6 +1,6 @@
 require 'test_helper'
 
-describe OrganisationsPresenter do
+describe Organisations::IndexPresenter do
   include RummagerHelpers
   include OrganisationsHelpers
 
@@ -8,7 +8,7 @@ describe OrganisationsPresenter do
     before :each do
       content_item = ContentItem.new(ministerial_departments_hash)
       content_store_organisations = ContentStoreOrganisations.new(content_item)
-      @organisations_presenter = OrganisationsPresenter.new(content_store_organisations)
+      @organisations_presenter = Organisations::IndexPresenter.new(content_store_organisations)
     end
 
     it 'returns title for organisations page' do
@@ -43,7 +43,7 @@ describe OrganisationsPresenter do
     before :each do
       content_item = ContentItem.new(non_ministerial_departments_hash)
       content_store_organisations = ContentStoreOrganisations.new(content_item)
-      @organisations_presenter = OrganisationsPresenter.new(content_store_organisations)
+      @organisations_presenter = Organisations::IndexPresenter.new(content_store_organisations)
     end
 
     it 'formats data for document list component' do
@@ -51,7 +51,8 @@ describe OrganisationsPresenter do
         link: {
           text: "The Charity Commission",
           path: "/government/organisations/charity-commission",
-          context: "separate website"
+          context: "separate website",
+          description: nil
         }
       }]
 
@@ -63,7 +64,8 @@ describe OrganisationsPresenter do
         link: {
           text: "Academy for Social Justice Commissioning",
           path: "/government/organisations/academy-for-social-justice-commissioning",
-          context: nil
+          context: nil,
+          description: nil
         }
       }]
 
@@ -75,7 +77,8 @@ describe OrganisationsPresenter do
         link: {
           text: "Bona Vacantia",
           path: "/government/organisations/bona-vacantia",
-          context: nil
+          context: nil,
+          description: nil
         }
       }]
 
@@ -87,7 +90,8 @@ describe OrganisationsPresenter do
         link: {
           text: "BBC",
           path: "/government/organisations/bbc",
-          context: nil
+          context: nil,
+          description: nil
         }
       }]
 
@@ -99,7 +103,8 @@ describe OrganisationsPresenter do
         link: {
           text: "Northern Ireland Executive ",
           path: "/government/organisations/northern-ireland-executive",
-          context: nil
+          context: nil,
+          description: nil
         }
       }]
 
@@ -111,7 +116,7 @@ describe OrganisationsPresenter do
     before :each do
       content_item = ContentItem.new(some_non_ministerial_departments_hash)
       content_store_organisations = ContentStoreOrganisations.new(content_item)
-      @organisations_presenter = OrganisationsPresenter.new(content_store_organisations)
+      @organisations_presenter = Organisations::IndexPresenter.new(content_store_organisations)
     end
 
     it 'returns empty arrays where there are no organisations' do
@@ -120,7 +125,8 @@ describe OrganisationsPresenter do
           link: {
             text: "The Charity Commission",
             path: "/government/organisations/charity-commission",
-            context: nil
+            context: nil,
+            description: nil
           }
         }],
         agencies_and_other_public_bodies: [],
@@ -130,6 +136,54 @@ describe OrganisationsPresenter do
       }
 
       assert_equal expected, @organisations_presenter.non_ministerial_departments
+    end
+  end
+
+  describe '#works_with' do
+    before :each do
+      content_item = ContentItem.new(some_non_ministerial_departments_hash)
+      content_store_organisations = ContentStoreOrganisations.new(content_item)
+      @organisations_presenter = Organisations::IndexPresenter.new(content_store_organisations)
+    end
+
+    it 'returns nil when organisation does not work with others' do
+      assert_nil @organisations_presenter.works_with({})
+    end
+
+    it 'returns string when organisation works with one other' do
+      test_org = {
+        works_with: {
+          non_ministerial_department: [
+            {
+              title: "Crown Prosecution Service",
+              path: "/government/organisations/crown-prosecution-service"
+            }
+          ]
+        }
+      }.with_indifferent_access
+
+      assert_equal "Works with 1 public body", @organisations_presenter.works_with(test_org)
+    end
+
+    it 'returns string when organisation works with multiple others' do
+      test_org = {
+        works_with: {
+          non_ministerial_department: [
+            {
+              title: "Crown Prosecution Service",
+              path: "/government/organisations/crown-prosecution-service"
+            }
+          ],
+          other: [
+            {
+              title: "HM Crown Prosecution Service Inspectorate",
+              path: "/government/organisations/hm-crown-prosecution-service-inspectorate"
+            }
+          ]
+        }
+      }.with_indifferent_access
+
+      assert_equal "Works with 2 agencies and public bodies", @organisations_presenter.works_with(test_org)
     end
   end
 end

@@ -32,6 +32,6 @@ private
   end
 
   def presented_organisations
-    @presented_organisations ||= OrganisationsPresenter.new(@organisations)
+    @presented_organisations ||= Organisations::IndexPresenter.new(@organisations)
   end
 end

@@ -11,6 +11,11 @@
       padding-bottom: $gutter-two-thirds;
       margin-bottom: $gutter-two-thirds;
       border-bottom: 1px solid $grey-2;
+
+      .organisation__works-with {
+        @include core-16;
+        margin-top: $gutter-half;
+      }
     }
 
     .organisations__list-without-number {
