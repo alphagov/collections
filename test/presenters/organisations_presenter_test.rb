@@ -145,4 +145,43 @@ describe Organisations::IndexPresenter do
       assert_equal "Works with 2 agencies and public bodies", @organisations_presenter.works_with_statement(test_org)
     end
   end
+
+  describe 'organisation type' do
+    before :each do
+      content_item = ContentItem.new(ministerial_departments_hash)
+      content_store_organisations = ContentStoreOrganisations.new(content_item)
+      @organisations_presenter = Organisations::IndexPresenter.new(content_store_organisations)
+    end
+
+    it 'executive_office? returns true if organisation is number_10' do
+      test_organisation_type = :number_10
+      assert @organisations_presenter.executive_office?(test_organisation_type)
+    end
+
+    it 'executive_office? returns false if organisation is not number_10' do
+      test_organisation_type_ministerial = :ministerial_departments
+      test_organisation_type_non_ministerial = :public_corporations
+
+      refute @organisations_presenter.executive_office?(test_organisation_type_ministerial)
+      refute @organisations_presenter.executive_office?(test_organisation_type_non_ministerial)
+    end
+
+    it 'ministerial_organisation? returns true if organisation is number_10' do
+      test_organisation_type = :number_10
+
+      assert @organisations_presenter.ministerial_organisation?(test_organisation_type)
+    end
+
+    it 'ministerial_organisation? returns true if organisation is ministerial department' do
+      test_organisation_type = :ministerial_departments
+
+      assert @organisations_presenter.ministerial_organisation?(test_organisation_type)
+    end
+
+    it 'ministerial_organisation? returns false if organisation is non ministerial department' do
+      test_organisation_type = :agencies_and_other_public_bodies
+
+      refute @organisations_presenter.ministerial_organisation?(test_organisation_type)
+    end
+  end
 end

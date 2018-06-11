@@ -40,12 +40,29 @@ class ContentStoreOrganisationsTest < ActionDispatch::IntegrationTest
   end
 
   it "renders non-ministerial organisation without crest" do
-    assert page.has_css?('.organisation-list__item-title[href="/government/organisations/arts-and-humanities-research-council"]', text: 'Arts and Humanities Research Council')
+    assert page.has_css?('a.organisation-list__item-title[href="/government/organisations/arts-and-humanities-research-council"]', text: 'Arts and Humanities Research Council')
     assert page.has_css?('.organisation-list__item-context', text: 'separate website')
   end
 
   it "displays child organisations count" do
     assert page.has_content?("Works with 4 agencies and public bodies")
+  end
+
+  it "renders a view all link with toggle attributes" do
+    assert page.has_css?("a[data-controls='toggle_attorney-general-s-office']", text: "view all")
+    assert page.has_css?("a[data-controls='toggle_attorney-general-s-office'][data-expanded='false']")
+  end
+
+  it "renders a list of organisations that an organisation works with" do
+    assert page.has_css?(".organisation-list__works-with#toggle_attorney-general-s-office")
+    assert page.has_css?("#toggle_attorney-general-s-office .organisation-list__works-with-title", text: "Non-ministerial department")
+    assert page.has_css?("#toggle_attorney-general-s-office .organisation-list__works-with-title", text: "Other")
+
+    assert page.has_css?("#toggle_attorney-general-s-office a[href='/government/organisations/crown-prosecution-service']", text: "Crown Prosecution Service")
+    assert page.has_css?("#toggle_attorney-general-s-office a[href='/government/organisations/government-legal-department']", text: "Government Legal Department")
+    assert page.has_css?("#toggle_attorney-general-s-office a[href='/government/organisations/serious-fraud-office']", text: "Serious Fraud Office")
+
+    assert page.has_css?("#toggle_attorney-general-s-office a[href='/government/organisations/hm-crown-prosecution-service-inspectorate']", text: "HM Crown Prosecution Service Inspectorate")
   end
 
 private
@@ -98,7 +115,15 @@ private
         {
           title: "Competition and Markets Authority",
           href: "/government/organisations/competition-and-markets-authority",
-          separate_website: true
+          separate_website: true,
+          works_with: {
+            non_ministerial_department: [
+              {
+                title: "Crown Prosecution Service",
+                href: "/government/organisations/crown-prosecution-service"
+              }
+            ]
+          }
         }
       ],
       ordered_executive_offices: [],
