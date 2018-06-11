@@ -25,3 +25,20 @@
     }
   }
 }
+
+.organisations__margin-bottom {
+  margin-bottom: $gutter-half;
+
+  @include media(tablet) {
+    margin-bottom: $gutter;
+  }
+}
+
+.no10-banner {
+  @include core-19;
+  padding-top: 140px;
+  background-image: image-url('prime-ministers-office-header.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  text-align: center;
+}

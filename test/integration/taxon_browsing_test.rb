@@ -232,8 +232,8 @@ private
   def and_i_can_see_the_organisations_section
     assert page.has_content?('Organisations')
 
-    assert page.has_selector?('test-govuk-component[data-template=govuk_component-organisation_logo]',
-      text: tagged_organisation_with_logo['value']['link'])
+    tagged_org_with_logo = tagged_organisation_with_logo['value']['link']
+    assert page.has_css?(".gem-c-organisation-logo a[href='#{tagged_org_with_logo}']")
 
     assert page.has_link?(tagged_organisation['value']['title'],
       href: tagged_organisation['value']['link'])

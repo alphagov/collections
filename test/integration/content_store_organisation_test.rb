@@ -75,16 +75,6 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     assert_equal page.current_path, @content_item[:base_path]
   end
 
-  it "displays ministers" do
-    visit "/government/organisations/prime-ministers-office-10-downing-street"
-    assert page.has_selector?(".organisation-ministers", text: "Theresa May MP")
-  end
-
-  it "displays child organisations count" do
-    visit "/government/organisations/prime-ministers-office-10-downing-street"
-    assert page.has_selector?(".child-organisation-count", text: "2")
-  end
-
   it "does not display child organisations count" do
     content_item_without_child_orgs = {
         title: "Prime Minister's Office, 10 Downing Street",
@@ -120,47 +110,5 @@ class OrganisationTest < ActionDispatch::IntegrationTest
   it "does not display featured policies" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
     assert page.has_no_css?(".organisation-policies")
-  end
-
-  it "displays featured policies" do
-    content_item_with_empty_featured_policies = {
-        title: "Prime Minister's Office, 10 Downing Street",
-        base_path: "/government/organisations/prime-ministers-office-10-downing-street",
-        links: {
-            ordered_contacts: [],
-            ordered_parent_organisations: [],
-            ordered_featured_policies: [
-                {
-                    title: "Counter-terrorism",
-                    base_path: "/government/policies/counter-terrorism"
-                },
-                {
-                    title: "Central government efficiency",
-                    base_path: "/government/policies/central-government-efficiency"
-                }
-            ]
-        },
-        details: {
-            body: "",
-            logo: {
-                formatted_title: "Prime Minister&#39;s Office, 10 Downing Street",
-                crest: "eo"
-            },
-            foi_exempt: false,
-            ordered_corporate_information_pages: [],
-            ordered_featured_links: [],
-            ordered_featured_documents: [],
-            ordered_ministers: [],
-            ordered_board_members: [],
-            organisation_govuk_status: {
-                status: "live",
-            },
-            organisation_type: "executive_office",
-            social_media_links: []
-        }
-    }
-    content_store_has_item('/government/organisations/prime-ministers-office-10-downing-street', content_item_with_empty_featured_policies)
-    visit "/government/organisations/prime-ministers-office-10-downing-street"
-    assert page.has_css?(".organisation-policies")
   end
 end

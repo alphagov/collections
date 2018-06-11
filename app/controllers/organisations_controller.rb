@@ -9,6 +9,8 @@ class OrganisationsController < ApplicationController
     @organisation = Organisation.find!("/government/organisations/#{params[:organisation_name]}")
     setup_content_item_and_navigation_helpers(@organisation)
 
+    @header = Organisations::HeaderPresenter.new(@organisation)
+
     respond_to do |f|
       f.html do
         render :show, locals: {

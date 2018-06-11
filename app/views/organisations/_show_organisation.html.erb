@@ -1,9 +1,33 @@
-<div class="organisation-logo">
-  <%= organisation.logo["formatted_title"] %>
-</div>
+<% content_for :breadcrumbs do %>
+  <div class="organisations__margin-bottom">
+    <% if @header.is_no_10? %>
+      <h1 class="no10-banner organisations__margin-bottom"><%= @header.org.title %></h1>
+    <% else %>
+      <h1 class="visually-hidden"><%= @header.org.title %></h1>
+    <% end %>
+  </div>
+<% end %>
 
-<%= render 'featured_links',
-           featured_links: organisation.ordered_featured_links %>
+<% unless @header.is_no_10? %>
+  <div class="grid-row">
+    <div class="<%= @header.logo_wrapper_class %> organisations__margin-bottom">
+      <%= render "govuk_publishing_components/components/organisation_logo", {
+        organisation: @header.organisation_logo
+      } %>
+    </div>
+
+    <div class="<%= @header.link_wrapper_class %> organisations__margin-bottom">
+      <%= render "govuk_publishing_components/components/translation-nav", @header.translation_links %>
+      <%= render "components/topic-list", @header.ordered_featured_links %>
+    </div>
+  </div>
+<% end %>
+
+<% if false %>
+  <%
+    # the code below is currently disabled as it will break following changes to accommodate the code
+    # above, however it is still needed for reference. It will be updated and removed later
+  %>
 
 <%= render 'featured_documents',
            featured_documents: organisation.ordered_featured_documents %>
@@ -39,3 +63,5 @@ Latest
            locals: {
                organisation: organisation,
                corporate_info: organisation.ordered_corporate_information_pages } %>
+
+<% end %>
