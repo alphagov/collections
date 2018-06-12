@@ -29,6 +29,18 @@ class OrganisationHeaderTest < ActionDispatch::IntegrationTest
             public_updated_at: "2018-05-10T00:00:01.000+01:00",
             document_type: "Press release"
           },
+        ],
+        social_media_links: [
+          {
+            service_type: "twitter",
+            title: "Twitter - @10DowningStreet",
+            href: "https://twitter.com/@10DowningStreet"
+          },
+          {
+            service_type: "facebook",
+            title: "Facebook",
+            href: "https://www.facebook.com/10downingstreet"
+          },
         ]
       },
       links: {
@@ -68,6 +80,13 @@ class OrganisationHeaderTest < ActionDispatch::IntegrationTest
             summary: "Lisa Osofsky appointed new Director of the Serious Fraud Office ",
             public_updated_at: "2018-06-04T11:30:03.000+01:00",
             document_type: "Press release"
+          }
+        ],
+        social_media_links: [
+          {
+            service_type: "twitter",
+            title: "Twitter - @attorneygeneral",
+            href: "https://twitter.com/@attorneygeneral"
           }
         ]
       },
@@ -116,6 +135,18 @@ class OrganisationHeaderTest < ActionDispatch::IntegrationTest
             public_updated_at: "2018-06-06T10:56:00.000+01:00",
             document_type: "News story"
           }
+        ],
+        social_media_links: [
+          {
+            service_type: "twitter",
+            title: "Twitter",
+            href: "https://twitter.com/chtycommission"
+          },
+          {
+            service_type: "youtube",
+            title: "YouTube",
+            href: "http://www.youtube.com/TheCharityCommission"
+          },
         ]
       },
       links: {
@@ -162,6 +193,18 @@ class OrganisationHeaderTest < ActionDispatch::IntegrationTest
             public_updated_at: "2018-06-08T23:23:11.000+01:00",
             document_type: "Press release"
           },
+        ],
+        social_media_links: [
+          {
+            service_type: "twitter",
+            title: "Twitter",
+            href: "https://twitter.com/UKGovWales"
+          },
+          {
+            service_type: "twitter",
+            title: "Trydar",
+            href: "https://twitter.com/LlywDUCymru"
+          }
         ]
       },
       links: {
@@ -178,10 +221,32 @@ class OrganisationHeaderTest < ActionDispatch::IntegrationTest
       }
     }
 
+    @content_item_blank = {
+      title: "An empty content item to test everything checks before trying to render things",
+      base_path: "/government/organisations/an-empty-thing",
+      details: {
+        body: "",
+        brand: "",
+        logo: {
+        },
+        organisation_govuk_status: {
+          status: "",
+        },
+      },
+      links: {
+      }
+    }
+
     content_store_has_item("/government/organisations/prime-ministers-office-10-downing-street", @content_item_no10)
     content_store_has_item("/government/organisations/attorney-generals-office", @content_item_attorney_general)
     content_store_has_item("/government/organisations/charity-commission", @content_item_charity_commission)
     content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales", @content_item_wales_office)
+    content_store_has_item("/government/organisations/an-empty-thing", @content_item_blank)
+  end
+
+  it "doesn't fail if the content item is missing any data" do
+    visit "/government/organisations/an-empty-thing"
+    assert page.has_css?(".content")
   end
 
   it "shows the no10 banner element only on no10's page" do
