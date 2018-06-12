@@ -10,6 +10,7 @@ class OrganisationsController < ApplicationController
     setup_content_item_and_navigation_helpers(@organisation)
 
     @header = Organisations::HeaderPresenter.new(@organisation)
+    @separate_website = Organisations::SeparateWebsitePresenter.new(@organisation)
 
     respond_to do |f|
       f.html do

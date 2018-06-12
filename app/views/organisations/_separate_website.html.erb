@@ -1,3 +1,9 @@
+<% content_for :breadcrumbs do %>
+  <div class="organisations__margin-bottom">
+    <h1 class="visually-hidden"><%= @header.org.title %></h1>
+  </div>
+<% end %>
+
 <div class="grid-row">
   <div class="column-one-third organisations__margin-bottom">
     <%= render "govuk_publishing_components/components/organisation_logo", {
@@ -15,6 +21,15 @@
     <%= render "govuk_publishing_components/components/govspeak", {
     } do %>
       <p><%= organisation.body %></p>
+
+      <%# unless @separate_website.closed? || @separate_website.court_or_hmcts_tribunal? %>
+        <% if @organisation.ordered_parent_organisations.any? || @separate_website.supporting_bodies.any? %>
+          <p class="parent_organisations">
+            <%= @separate_website.organisation_display_name_including_parental_and_child_relationships %>
+          </p>
+        <% end %>
+        <p><%#= link_to @separate_website.url, @separate_website.url, class: 'url-link' %></p>
+      <%# end %>
 
       <% if organisation.ordered_parent_organisations.presence %>
         <%= "#{organisation.title} works with the" %>

@@ -62,6 +62,10 @@ class Organisation
     @content_item.content_item_data["base_path"]
   end
 
+  def ordered_parent_organisations
+    @content_item.content_item_data["links"]["ordered_parent_organisations"]
+  end
+
   # methods below are not in use yet, this comment to be removed once confirmed
 
   def body
