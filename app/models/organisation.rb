@@ -18,6 +18,10 @@ class Organisation
     @content_item.content_item_data["title"]
   end
 
+  def acronym
+    details["acronym"]
+  end
+
   def organisation_type
     details["organisation_type"]
   end
@@ -83,6 +87,10 @@ class Organisation
     details["ordered_ministers"]
   end
 
+  def social_media_links
+    details["social_media_links"]
+  end
+
   # methods below are not in use yet, this comment to be removed once confirmed
 
   def body
@@ -91,10 +99,6 @@ class Organisation
 
   def child_organisation_count
     links["ordered_child_organisations"].count
-  end
-
-  def social_media_links
-    details["social_media_links"]
   end
 
   def board_members
