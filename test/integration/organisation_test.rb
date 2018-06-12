@@ -17,6 +17,19 @@ class OrganisationHeaderTest < ActionDispatch::IntegrationTest
             },
             organisation_type: "executive_office",
             organisation_featuring_priority: "news",
+            ordered_featured_documents: [
+                {
+                    title: "Government calls on technology firms to help tackle the UK’s biggest challenges",
+                    href: "/government/news/government-calls-on-technology-firms-to-help-tackle-the-uks-biggest-challenges",
+                    image: {
+                        url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/62609/Dowden.jpg",
+                        alt_text: "Cabinet Office Minister Oliver Dowden"
+                    },
+                    summary: "The government is launching competitions for tech firms to develop solutions to tackle the major social challenges of our modern age.",
+                    public_updated_at: "2018-05-10T00:00:01.000+01:00",
+                    document_type: "Press release"
+                },
+            ]
         },
         links: {
           available_translations: []
@@ -43,6 +56,19 @@ class OrganisationHeaderTest < ActionDispatch::IntegrationTest
                 title: "Attorney General's guidance to the legal profession",
                 href: "https://www.gov.uk/browse/justice/courts-sentencing-tribunals/attorney-general-guidance-to-the-legal-profession"
               }
+            ],
+            ordered_featured_documents: [
+                {
+                    title: "New head of the Serious Fraud Office announced",
+                    href: "/government/news/new-head-of-the-serious-fraud-office-announced",
+                    image: {
+                        url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/63252/Jeremy_Wright_FOR_WEBSITE.jpg",
+                        alt_text: "Attorney General Jeremy Wright QC MP"
+                    },
+                    summary: "Lisa Osofsky appointed new Director of the Serious Fraud Office ",
+                    public_updated_at: "2018-06-04T11:30:03.000+01:00",
+                    document_type: "Press release"
+                }
             ]
         },
         links: {
@@ -77,6 +103,19 @@ class OrganisationHeaderTest < ActionDispatch::IntegrationTest
                 title: "Online services and contact forms",
                 href: "https://www.gov.uk/government/organisations/charity-commission/about/about-our-services"
               },
+            ],
+            ordered_featured_documents: [
+                {
+                    title: "Charity annual return 2018",
+                    href: "/government/news/charity-annual-return-2018",
+                    image: {
+                        url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/63313/AR18_prepare_v1.1.png",
+                        alt_text: "Annual return service 2018"
+                    },
+                    summary: "How you can prepare for the 2018 annual return service, which will be available this summer. ",
+                    public_updated_at: "2018-06-06T10:56:00.000+01:00",
+                    document_type: "News story"
+                }
             ]
         },
         links: {
@@ -110,6 +149,19 @@ class OrganisationHeaderTest < ActionDispatch::IntegrationTest
                 title: "Online services and contact forms",
                 href: "https://www.gov.uk/government/organisations/charity-commission/about/about-our-services"
               },
+            ],
+            ordered_featured_documents: [
+                {
+                    title: "Welsh Secretary hails outstanding individuals in the Queen's Birthday Honours list",
+                    href: "/government/news/welsh-secretary-hails-outstanding-individuals-in-the-queens-birthday-honours-list",
+                    image: {
+                        url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/63372/GOV.UK_honours_web.jpg",
+                        alt_text: "Queen's Birthday Honours"
+                    },
+                    summary: "Alun Cairns: \"I'm proud to see people from all walks of Welsh life honoured today\".",
+                    public_updated_at: "2018-06-08T23:23:11.000+01:00",
+                    document_type: "Press release"
+                },
             ]
         },
         links: {
@@ -175,5 +227,13 @@ class OrganisationHeaderTest < ActionDispatch::IntegrationTest
 
     visit "/government/organisations/office-of-the-secretary-of-state-for-wales"
     assert page.has_css?(".gem-c-translation-nav")
+  end
+
+  it "shows a large news item only on news organisations" do
+    visit "/government/organisations/attorney-generals-office"
+    assert page.has_css?(".gem-c-image-card.gem-c-image-card--large")
+
+    visit "/government/organisations/charity-commission"
+    refute page.has_css?(".gem-c-image-card.gem-c-image-card--large")
   end
 end
