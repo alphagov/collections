@@ -40,7 +40,7 @@ module Organisations
       end
 
       {
-        small: small_header_links?,
+        small: org.is_news_organisation?,
         brand: org.brand,
         items: links,
         see_more_link: see_more_link
@@ -48,12 +48,12 @@ module Organisations
     end
 
     def logo_wrapper_class
-      return "column-two-thirds" if small_header_links?
+      return "column-two-thirds" if org.is_news_organisation?
       "column-one-third"
     end
 
     def link_wrapper_class
-      return "column-one-third" if small_header_links?
+      return "column-one-third" if org.is_news_organisation?
       "column-two-thirds"
     end
 
@@ -79,18 +79,10 @@ module Organisations
       end
     end
 
-    def is_no_10?
-      true if org.organisation_type == "executive_office"
-    end
-
   private
 
     def slug
       org.base_path.gsub("/government/organisations/", "")
-    end
-
-    def small_header_links?
-      true if org.organisation_featuring_priority == "news"
     end
 
     def has_services_and_information_link?

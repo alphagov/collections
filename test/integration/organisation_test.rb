@@ -3,179 +3,179 @@ require 'integration_test_helper'
 class OrganisationHeaderTest < ActionDispatch::IntegrationTest
   before do
     @content_item_no10 = {
-        title: "Prime Minister's Office, 10 Downing Street",
-        base_path: "/government/organisations/prime-ministers-office-10-downing-street",
-        details: {
-            body: "10 Downing Street is the official residence and the office of the British Prime Minister.",
-            brand: "cabinet-office",
-            logo: {
-                formatted_title: "Prime Minister&#39;s Office, 10 Downing Street",
-                crest: "eo"
-            },
-            organisation_govuk_status: {
-                status: "live",
-            },
-            organisation_type: "executive_office",
-            organisation_featuring_priority: "news",
-            ordered_featured_documents: [
-                {
-                    title: "Government calls on technology firms to help tackle the UK’s biggest challenges",
-                    href: "/government/news/government-calls-on-technology-firms-to-help-tackle-the-uks-biggest-challenges",
-                    image: {
-                        url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/62609/Dowden.jpg",
-                        alt_text: "Cabinet Office Minister Oliver Dowden"
-                    },
-                    summary: "The government is launching competitions for tech firms to develop solutions to tackle the major social challenges of our modern age.",
-                    public_updated_at: "2018-05-10T00:00:01.000+01:00",
-                    document_type: "Press release"
-                },
-            ]
+      title: "Prime Minister's Office, 10 Downing Street",
+      base_path: "/government/organisations/prime-ministers-office-10-downing-street",
+      details: {
+        body: "10 Downing Street is the official residence and the office of the British Prime Minister.",
+        brand: "cabinet-office",
+        logo: {
+          formatted_title: "Prime Minister&#39;s Office, 10 Downing Street",
+          crest: "eo"
         },
-        links: {
-          available_translations: []
-        }
+        organisation_govuk_status: {
+          status: "live",
+        },
+        organisation_type: "executive_office",
+        organisation_featuring_priority: "news",
+        ordered_featured_documents: [
+          {
+            title: "Government calls on technology firms to help tackle the UK’s biggest challenges",
+            href: "/government/news/government-calls-on-technology-firms-to-help-tackle-the-uks-biggest-challenges",
+            image: {
+              url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/62609/Dowden.jpg",
+              alt_text: "Cabinet Office Minister Oliver Dowden"
+            },
+            summary: "The government is launching competitions for tech firms to develop solutions to tackle the major social challenges of our modern age.",
+            public_updated_at: "2018-05-10T00:00:01.000+01:00",
+            document_type: "Press release"
+          },
+        ]
+      },
+      links: {
+        available_translations: []
+      }
     }
 
     @content_item_attorney_general = {
-        title: "Attorney General's Office",
-        base_path: "/government/organisations/attorney-generals-office",
-        details: {
-            body: "The Attorney General's Office (AGO) provides legal advice and support to the Attorney General and the Solicitor General (the Law Officers) who give legal advice to government. The AGO helps the Law Officers perform other duties in the public interest, such as looking at sentences which may be too low.\r\n\r\n",
-            brand: "attorney-generals-office",
-            logo: {
-                formatted_title: "Attorney <br/>General&#39;s <br/>Office",
-                crest: "single-identity"
-            },
-            organisation_govuk_status: {
-                status: "live",
-            },
-            organisation_type: "ministerial_department",
-            organisation_featuring_priority: "news",
-            ordered_featured_links: [
-              {
-                title: "Attorney General's guidance to the legal profession",
-                href: "https://www.gov.uk/browse/justice/courts-sentencing-tribunals/attorney-general-guidance-to-the-legal-profession"
-              }
-            ],
-            ordered_featured_documents: [
-                {
-                    title: "New head of the Serious Fraud Office announced",
-                    href: "/government/news/new-head-of-the-serious-fraud-office-announced",
-                    image: {
-                        url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/63252/Jeremy_Wright_FOR_WEBSITE.jpg",
-                        alt_text: "Attorney General Jeremy Wright QC MP"
-                    },
-                    summary: "Lisa Osofsky appointed new Director of the Serious Fraud Office ",
-                    public_updated_at: "2018-06-04T11:30:03.000+01:00",
-                    document_type: "Press release"
-                }
-            ]
+      title: "Attorney General's Office",
+      base_path: "/government/organisations/attorney-generals-office",
+      details: {
+        body: "The Attorney General's Office (AGO) provides legal advice and support to the Attorney General and the Solicitor General (the Law Officers) who give legal advice to government. The AGO helps the Law Officers perform other duties in the public interest, such as looking at sentences which may be too low.\r\n\r\n",
+        brand: "attorney-generals-office",
+        logo: {
+          formatted_title: "Attorney <br/>General&#39;s <br/>Office",
+          crest: "single-identity"
         },
-        links: {
-          available_translations: []
-        }
+        organisation_govuk_status: {
+          status: "live",
+        },
+        organisation_type: "ministerial_department",
+        organisation_featuring_priority: "news",
+        ordered_featured_links: [
+          {
+            title: "Attorney General's guidance to the legal profession",
+            href: "https://www.gov.uk/browse/justice/courts-sentencing-tribunals/attorney-general-guidance-to-the-legal-profession"
+          }
+        ],
+        ordered_featured_documents: [
+          {
+            title: "New head of the Serious Fraud Office announced",
+            href: "/government/news/new-head-of-the-serious-fraud-office-announced",
+            image: {
+              url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/63252/Jeremy_Wright_FOR_WEBSITE.jpg",
+              alt_text: "Attorney General Jeremy Wright QC MP"
+            },
+            summary: "Lisa Osofsky appointed new Director of the Serious Fraud Office ",
+            public_updated_at: "2018-06-04T11:30:03.000+01:00",
+            document_type: "Press release"
+          }
+        ]
+      },
+      links: {
+        available_translations: []
+      }
     }
 
     @content_item_charity_commission = {
-        title: "The Charity Commission",
-        base_path: "/government/organisations/charity-commission",
-        details: {
-            body: "We register and regulate charities in England and Wales, to ensure that the public can support charities with confidence.\r\n",
-            brand: "department-for-business-innovation-skills",
-            logo: {
-                formatted_title: "Charity Commission",
-                image: {
-                  url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/organisation/logo/98/Home_page.jpg",
-                  alt_text: "The Charity Commission"
-                }
-            },
-            organisation_govuk_status: {
-                status: "live",
-            },
-            organisation_type: "non_ministerial_department",
-            organisation_featuring_priority: "service",
-            ordered_featured_links: [
-              {
-                title: "Find a charity",
-                href: "http://apps.charitycommission.gov.uk/showcharity/registerofcharities/RegisterHomePage.aspx"
-              },
-              {
-                title: "Online services and contact forms",
-                href: "https://www.gov.uk/government/organisations/charity-commission/about/about-our-services"
-              },
-            ],
-            ordered_featured_documents: [
-                {
-                    title: "Charity annual return 2018",
-                    href: "/government/news/charity-annual-return-2018",
-                    image: {
-                        url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/63313/AR18_prepare_v1.1.png",
-                        alt_text: "Annual return service 2018"
-                    },
-                    summary: "How you can prepare for the 2018 annual return service, which will be available this summer. ",
-                    public_updated_at: "2018-06-06T10:56:00.000+01:00",
-                    document_type: "News story"
-                }
-            ]
+      title: "The Charity Commission",
+      base_path: "/government/organisations/charity-commission",
+      details: {
+        body: "We register and regulate charities in England and Wales, to ensure that the public can support charities with confidence.\r\n",
+        brand: "department-for-business-innovation-skills",
+        logo: {
+          formatted_title: "Charity Commission",
+          image: {
+            url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/organisation/logo/98/Home_page.jpg",
+            alt_text: "The Charity Commission"
+          }
         },
-        links: {
-          available_translations: []
-        }
+        organisation_govuk_status: {
+          status: "live",
+        },
+        organisation_type: "non_ministerial_department",
+        organisation_featuring_priority: "service",
+        ordered_featured_links: [
+          {
+            title: "Find a charity",
+            href: "http://apps.charitycommission.gov.uk/showcharity/registerofcharities/RegisterHomePage.aspx"
+          },
+          {
+            title: "Online services and contact forms",
+            href: "https://www.gov.uk/government/organisations/charity-commission/about/about-our-services"
+          },
+        ],
+        ordered_featured_documents: [
+          {
+            title: "Charity annual return 2018",
+            href: "/government/news/charity-annual-return-2018",
+            image: {
+              url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/63313/AR18_prepare_v1.1.png",
+              alt_text: "Annual return service 2018"
+            },
+            summary: "How you can prepare for the 2018 annual return service, which will be available this summer. ",
+            public_updated_at: "2018-06-06T10:56:00.000+01:00",
+            document_type: "News story"
+          }
+        ]
+      },
+      links: {
+        available_translations: []
+      }
     }
 
     @content_item_wales_office = {
-        title: "The Charity Commission",
-        base_path: "/government/organisations/charity-commission",
-        details: {
-            body: "We register and regulate charities in England and Wales, to ensure that the public can support charities with confidence.\r\n",
-            brand: "department-for-business-innovation-skills",
-            logo: {
-                formatted_title: "Charity Commission",
-                image: {
-                  url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/organisation/logo/98/Home_page.jpg",
-                  alt_text: "The Charity Commission"
-                }
-            },
-            organisation_govuk_status: {
-                status: "live",
-            },
-            organisation_type: "non_ministerial_department",
-            ordered_featured_links: [
-              {
-                title: "Find a charity",
-                href: "http://apps.charitycommission.gov.uk/showcharity/registerofcharities/RegisterHomePage.aspx"
-              },
-              {
-                title: "Online services and contact forms",
-                href: "https://www.gov.uk/government/organisations/charity-commission/about/about-our-services"
-              },
-            ],
-            ordered_featured_documents: [
-                {
-                    title: "Welsh Secretary hails outstanding individuals in the Queen's Birthday Honours list",
-                    href: "/government/news/welsh-secretary-hails-outstanding-individuals-in-the-queens-birthday-honours-list",
-                    image: {
-                        url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/63372/GOV.UK_honours_web.jpg",
-                        alt_text: "Queen's Birthday Honours"
-                    },
-                    summary: "Alun Cairns: \"I'm proud to see people from all walks of Welsh life honoured today\".",
-                    public_updated_at: "2018-06-08T23:23:11.000+01:00",
-                    document_type: "Press release"
-                },
-            ]
+      title: "The Charity Commission",
+      base_path: "/government/organisations/charity-commission",
+      details: {
+        body: "We register and regulate charities in England and Wales, to ensure that the public can support charities with confidence.\r\n",
+        brand: "department-for-business-innovation-skills",
+        logo: {
+          formatted_title: "Charity Commission",
+          image: {
+            url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/organisation/logo/98/Home_page.jpg",
+            alt_text: "The Charity Commission"
+          }
         },
-        links: {
-          available_translations: [
-            {
-                "base_path": "/government/organisations/office-of-the-secretary-of-state-for-wales.cy",
-                "locale": "cy",
+        organisation_govuk_status: {
+          status: "live",
+        },
+        organisation_type: "non_ministerial_department",
+        ordered_featured_links: [
+          {
+            title: "Find a charity",
+            href: "http://apps.charitycommission.gov.uk/showcharity/registerofcharities/RegisterHomePage.aspx"
+          },
+          {
+            title: "Online services and contact forms",
+            href: "https://www.gov.uk/government/organisations/charity-commission/about/about-our-services"
+          },
+        ],
+        ordered_featured_documents: [
+          {
+            title: "Welsh Secretary hails outstanding individuals in the Queen's Birthday Honours list",
+            href: "/government/news/welsh-secretary-hails-outstanding-individuals-in-the-queens-birthday-honours-list",
+            image: {
+              url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/63372/GOV.UK_honours_web.jpg",
+              alt_text: "Queen's Birthday Honours"
             },
-            {
-                "base_path": "/government/organisations/office-of-the-secretary-of-state-for-wales",
-                "locale": "en",
-            }
+            summary: "Alun Cairns: \"I'm proud to see people from all walks of Welsh life honoured today\".",
+            public_updated_at: "2018-06-08T23:23:11.000+01:00",
+            document_type: "Press release"
+          },
         ]
-        }
+      },
+      links: {
+        available_translations: [
+          {
+            "base_path": "/government/organisations/office-of-the-secretary-of-state-for-wales.cy",
+            "locale": "cy",
+          },
+          {
+            "base_path": "/government/organisations/office-of-the-secretary-of-state-for-wales",
+            "locale": "en",
+          }
+        ]
+      }
     }
 
     content_store_has_item("/government/organisations/prime-ministers-office-10-downing-street", @content_item_no10)
