@@ -50,6 +50,10 @@ class Organisation
     logo["image"]["alt_text"] if logo["image"].present?
   end
 
+  def web_url
+    Plek.current.website_root + base_path
+  end
+
   def ordered_featured_links
     details["ordered_featured_links"]
   end
