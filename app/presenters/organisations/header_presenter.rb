@@ -27,7 +27,7 @@ module Organisations
 
       if has_services_and_information_link?
         see_more_link = {
-          text: "All #{org.title} services and information", # TODO: need to use acronym where available
+          text: "All #{org.acronym} services and information",
           path: "/government/organisations/#{slug}/services-information"
         }
       end
