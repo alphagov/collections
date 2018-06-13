@@ -9,6 +9,7 @@ class OrganisationsController < ApplicationController
     @organisation = Organisation.find!("/government/organisations/#{params[:organisation_name]}#{locale}")
     setup_content_item_and_navigation_helpers(@organisation)
 
+    @show = Organisations::ShowPresenter.new(@organisation)
     @header = Organisations::HeaderPresenter.new(@organisation)
     @featured_news = Organisations::FeaturedNewsPresenter.new(@organisation)
 
