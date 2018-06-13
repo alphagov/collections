@@ -36,7 +36,12 @@
   }
 
   .organisation-list__works-with-toggle {
-    @include core-16;
+    display: none;
+
+    .js-enabled & {
+      @include core-16;
+      display: inline;
+    }
   }
 
   .organisation-list__works-with {
