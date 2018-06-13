@@ -6,7 +6,7 @@ class OrganisationsController < ApplicationController
   end
 
   def show
-    @organisation = Organisation.find!("/government/organisations/#{params[:organisation_name]}")
+    @organisation = Organisation.find!("/government/organisations/#{params[:organisation_name]}#{locale}")
     setup_content_item_and_navigation_helpers(@organisation)
 
     @header = Organisations::HeaderPresenter.new(@organisation)
@@ -36,5 +36,9 @@ private
 
   def presented_organisations
     @presented_organisations ||= Organisations::IndexPresenter.new(@organisations)
+  end
+
+  def locale
+    ".#{params[:locale]}" if params[:locale]
   end
 end

@@ -25,24 +25,21 @@ Rails.application.routes.draw do
     to: "latest_changes#index", as: :latest_changes
 
   get "/topic/:topic_slug/:subtopic_slug/email-signup",
-    to: "email_signups#new",
-    as: :email_signup
+    to: "email_signups#new", as: :email_signup
   post "/topic/:topic_slug/:subtopic_slug/email-signup",
     to: "email_signups#create"
 
-  get "/government/organisations/:organisation_id/services-information",
-    to: "services_and_information#index",
-    as: :services_and_information
-
   get "/government/organisations", to: "organisations#index"
-
   get '/government/organisations/:organisation_name(.:locale).:format',
     constraints: {
       format: /atom/,
       locale: /\w{2}(-[\d\w]{2,3})?/,
     }, to: "feeds#organisation"
-
-  get "/government/organisations/:organisation_name", to: "organisations#show"
+  get "/government/organisations/:organisation_name(.:locale)",
+    to: "organisations#show"
+  get "/government/organisations/:organisation_id/services-information",
+    to: "services_and_information#index",
+    as: :services_and_information
 
   constraints DocumentTypeRoutingConstraint.new('step_by_step_nav') do
     get "/:slug", to: 'step_nav#show'
