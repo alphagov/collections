@@ -19,7 +19,7 @@
         <% organisations.each do |organisation| %>
           <li class="organisations-list__item" >
             <% if @presented_organisations.ministerial_organisation?(organisation_type) %>
-              <%= render "govuk_component/organisation_logo", {
+              <%= render "govuk_publishing_components/components/organisation_logo", {
                 organisation: {
                   name: organisation["logo"]["formatted_title"],
                   url: organisation["href"],

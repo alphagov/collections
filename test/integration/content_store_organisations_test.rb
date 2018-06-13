@@ -32,11 +32,7 @@ class ContentStoreOrganisationsTest < ActionDispatch::IntegrationTest
   end
 
   it "renders ministerial organisation with crest" do
-    assert page.has_css?('test-govuk-component[data-template="govuk_component-organisation_logo"]')
-    assert page.has_content?("Attorney General's Office")
-    assert page.has_content?("/government/organisations/attorney-generals-office")
-    assert page.has_content?("attorney-generals-office")
-    assert page.has_content?("single-identity")
+    assert page.has_css?('.gem-c-organisation-logo')
   end
 
   it "renders non-ministerial organisation without crest" do
