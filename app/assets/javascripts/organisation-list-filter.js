@@ -6,6 +6,9 @@
 
   window.GOVUK.filter = {
     init: function() {
+      // Form should only appear if the JS is working
+      $('[data-filter="form"]').addClass('filter-organisations-list__form--active');
+
       // We don't want the form to submit/refresh the page on enter key
       $('[data-filter="form"]').on('submit', function() { return false; })
 

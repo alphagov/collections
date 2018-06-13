@@ -79,11 +79,6 @@
 .filter-organisations-list__form {
   display: none;
 
-  .js-enabled & {
-    display: block;
-    margin-bottom: $gutter * 1.5;
-  }
-
   .filter-organisations-list__label {
     @include bold-36;
     margin-right: $gutter-one-third;
@@ -98,6 +93,11 @@
     border: 1px solid $grey-2;
     margin: 0 5px 5px 0;
   }
+}
+
+.filter-organisations-list__form--active {
+  display: block;
+  margin-bottom: $gutter * 1.5;
 }
 
 .organisations__margin-bottom {
