@@ -29,7 +29,7 @@ module Organisations
         news_stories << {
           href: news["href"],
           image_src: news["image"]["url"],
-          image_alt: news["image"]["alt"],
+          image_alt: news["image"]["alt_text"],
           context: "#{human_date}#{divider}#{document_type}",
           heading_text: news["title"],
           description: news["summary"],

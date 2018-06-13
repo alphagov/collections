@@ -27,7 +27,7 @@
   <div class="grid-row">
     <div class="column-two-thirds">
       <%= render "govuk_publishing_components/components/heading", {
-        text: "What #{@organisation.title} is doing",
+        text: "What #{@show.prefixed_title} is doing",
         padding: true,
         margin_bottom: 4
       } %>
@@ -48,6 +48,28 @@
     </div>
   <% end %>
 </div>
+
+<% if @organisation.ordered_featured_documents.length %>
+  <%= render "govuk_publishing_components/components/heading", {
+    text: "Latest from #{@show.prefixed_title}",
+    brand: @organisation.brand,
+    padding: true,
+    border_top: 5,
+    margin_bottom: 2
+  } %>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <%= render "govuk_publishing_components/components/document_list", @show.latest %>
+
+      <p class="organisations__margin-bottom brand--<%= @organisation.brand %>">
+        <a href="/" class="brand__color">See all</a>
+      </p>
+
+      <%= render "govuk_publishing_components/components/subscription-links", @show.subscription_links %>
+    </div>
+  </div>
+<% end %>
 
 <% if @people.ministers.any? && !@organisation.is_no_10? %>
   <div class="organisations__section organisations__brand-border-top brand--<%= @organisation.brand %> brand__border-color">
@@ -78,10 +100,6 @@
     # the code below is currently disabled as it will break following changes to accommodate the code
     # above, however it is still needed for reference. It will be updated and removed later
   %>
-
-<%= render "govuk_publishing_components/components/subscription-links", {
-    email_signup_link: "#{params[:organisation_name]}/email-signup",
-    feed_link: "#{params[:organisation_name]}.atom" } %>
 
 <%= render 'organisation_description',
            organisation: organisation %>
