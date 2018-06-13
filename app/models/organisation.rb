@@ -27,7 +27,12 @@ class Organisation
   end
 
   def brand
+    return "prime-ministers-office-10-downing-street" if is_no_10?
     details["brand"]
+  end
+
+  def is_no_10?
+    details["organisation_type"] == "executive_office"
   end
 
   def logo
@@ -66,14 +71,18 @@ class Organisation
     @content_item.content_item_data["base_path"]
   end
 
+  def ordered_featured_documents
+    details["ordered_featured_documents"]
+  end
+
+  def is_news_organisation?
+    details["organisation_featuring_priority"] == "news"
+  end
+
   # methods below are not in use yet, this comment to be removed once confirmed
 
   def body
     details["body"]
-  end
-
-  def ordered_featured_documents
-    details["ordered_featured_documents"]
   end
 
   def child_organisation_count

@@ -1,6 +1,6 @@
 <% content_for :breadcrumbs do %>
   <div class="organisations__margin-bottom">
-    <% if @header.is_no_10? %>
+    <% if @organisation.is_no_10? %>
       <h1 class="no10-banner organisations__margin-bottom"><%= @header.org.title %></h1>
     <% else %>
       <h1 class="visually-hidden"><%= @header.org.title %></h1>
@@ -8,7 +8,7 @@
   </div>
 <% end %>
 
-<% unless @header.is_no_10? %>
+<% unless @organisation.is_no_10? %>
   <div class="grid-row">
     <div class="<%= @header.logo_wrapper_class %> organisations__margin-bottom">
       <%= render "govuk_publishing_components/components/organisation_logo", {
@@ -23,18 +23,37 @@
   </div>
 <% end %>
 
+<div class="organisations__brand-border-top brand--<%= @organisation.brand %> brand__border-color">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: "What #{@organisation.title} is doing",
+        padding: true,
+        margin_bottom: 4
+      } %>
+    </div>
+  </div>
+
+  <% if @organisation.is_news_organisation? %>
+    <%= render "govuk_publishing_components/components/image_card", @featured_news.first_featured_news %>
+  <% end %>
+
+  <% @featured_news.remaining_featured_news.in_groups_of(3, false) do |news| %>
+    <div class="grid-row">
+      <% news.each do |news_item| %>
+        <div class="column-one-third">
+          <%= render "govuk_publishing_components/components/image_card", news_item %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
 <% if false %>
   <%
     # the code below is currently disabled as it will break following changes to accommodate the code
     # above, however it is still needed for reference. It will be updated and removed later
   %>
-
-<%= render 'featured_documents',
-           featured_documents: organisation.ordered_featured_documents %>
-
-<hr>
-Latest
-<hr>
 
 <%= render "govuk_publishing_components/components/subscription-links", {
     email_signup_link: "#{params[:organisation_name]}/email-signup",
