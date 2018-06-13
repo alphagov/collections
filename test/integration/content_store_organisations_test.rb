@@ -18,17 +18,23 @@ class ContentStoreOrganisationsTest < ActionDispatch::IntegrationTest
     assert page.has_css?('.gem-c-title__text', text: "Departments, agencies and public bodies")
   end
 
+  it "renders organisation filter" do
+    assert page.has_css?('.filter-organisations-list__form')
+    assert page.has_css?('.filter-organisations-list__label', text: "What's the latestfrom")
+    assert page.has_css?('.filter-organisations-list__input')
+  end
+
   it "renders an organisation_type heading" do
     assert page.has_css?('.gem-c-heading', text: 'Ministerial departments')
   end
 
   it "renders organisation count" do
-    assert page.has_css?('.department-count span', text: '1')
+    assert page.has_css?('.organisations__department-count-wrapper span', text: '1')
   end
 
   it "renders an accessible version of organisation count" do
-    assert page.has_css?('.department-count span[aria-hidden="true"]')
-    assert page.has_css?('.department-count p.visuallyhidden', text: 'There are 2 Non ministerial departments')
+    assert page.has_css?('.organisations__department-count-wrapper span[aria-hidden="true"]')
+    assert page.has_css?('.organisations__department-count-wrapper p.visuallyhidden', text: 'There are 2 Non ministerial departments')
   end
 
   it "renders ministerial organisation with crest" do

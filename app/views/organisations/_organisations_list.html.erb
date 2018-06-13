@@ -1,23 +1,23 @@
 <% all_organisations.each do |organisation_type, organisations| %>
-  <div class="grid-row organisations-list__section">
+  <div class="grid-row organisations-list__section" data-filter="block">
 
-    <div class="column-one-third">
+    <div class="column-one-third" data-filter="count">
       <% unless @presented_organisations.executive_office?(organisation_type) %>
         <%= render "govuk_publishing_components/components/heading", {
           text: organisation_type.to_s.humanize,
           heading_level: 2
         } %>
-        <div class="department-count">
-          <p class="visuallyhidden">There are <%= organisations.count %> <%= organisation_type.to_s.humanize %></p>
-          <span aria-hidden="true"><%= organisations.count %></span>
+        <div class="organisations__department-count-wrapper">
+          <p class="visuallyhidden">There are <span class="js-accessible-department-count"><%= organisations.count %></span> <%= organisation_type.to_s.humanize %></p>
+          <span class="js-department-count" aria-hidden="true"><%= organisations.count %></span>
         </div>
       <% end %>
     </div>
 
     <div class="column-two-thirds <%= "organisations-list__without-number" if @presented_organisations.executive_office?(organisation_type) %>">
-      <ol>
+      <ol data-filter="list">
         <% organisations.each do |organisation| %>
-          <li class="organisations-list__item" >
+          <li class="organisations-list__item" data-filter="item">
             <% if @presented_organisations.ministerial_organisation?(organisation_type) %>
               <%= render "govuk_publishing_components/components/organisation_logo", {
                 organisation: {
