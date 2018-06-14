@@ -46,7 +46,7 @@
     <div class="grid-row">
       <div class="column-two-thirds">
         <%= render "govuk_publishing_components/components/heading", {
-          text: "Latest from #{@show.prefixed_title}",
+          text: t('organisations.latest_from') + @show.prefixed_title,
           padding: true,
           margin_bottom: 2
         } %>
@@ -58,7 +58,7 @@
         <%= render "govuk_publishing_components/components/document_list", @show.latest_documents %>
 
         <p class="organisations__margin-bottom brand--<%= @organisation.brand %>">
-          <a href="<%= "/government/latest?departments[]=#{@organisation.slug}" %>" class="brand__color">See all</a>
+          <a href="<%= "/government/latest?departments[]=#{@organisation.slug}" %>" class="brand__color"><%= t('organisations.see_all') %></a>
         </p>
 
         <%= render "govuk_publishing_components/components/subscription-links", @show.subscription_links %>
@@ -71,7 +71,7 @@
   <div class="grid-row">
     <div class="column-two-thirds">
       <%= render "govuk_publishing_components/components/heading", {
-        text: "What #{@what_we_do.what_we_do_title} does",
+        text: t('organisations.what') + @what_we_do.what_we_do_title + t('organisations.does'),
         padding: true,
         margin_bottom: 2
       } %>
@@ -84,14 +84,14 @@
         } do %>
           <p><%= @organisation.body %></p>
           <p>TODO: add the rest</p>
-          <p><a href="<%= @organisation.base_path %>/about">Read more about what we do</a></p>
+          <p><a href="<%= @organisation.base_path %>/about"><%= t('organisations.read_more') %></a></p>
       <% end %>
     </div>
 
     <% if @what_we_do.has_share_links? %>
       <div class="column-one-third">
         <%= render "govuk_publishing_components/components/heading", {
-          text: "Follow us",
+          text: t('organisations.follow_us'),
           margin_bottom: 2,
           heading_level: 3,
           font_size: 19
@@ -101,26 +101,3 @@
     <% end %>
   </div>
 </div>
-
-<% if false %>
-  <%
-    # the code below is currently disabled as it will break following changes to accommodate the code
-    # above, however it is still needed for reference. It will be updated and removed later
-  %>
-
-
-<%= render partial: 'ministers_and_management',
-           locals: { ministers: organisation.ordered_ministers,
-                     board_members: organisation.board_members } %>
-
-<%= render partial: 'contact',
-           locals: {
-               organisation: organisation,
-               contact: organisation.ordered_contacts } %>
-
-<%= render partial: 'corporate_information',
-           locals: {
-               organisation: organisation,
-               corporate_info: organisation.ordered_corporate_information_pages } %>
-
-<% end %>
