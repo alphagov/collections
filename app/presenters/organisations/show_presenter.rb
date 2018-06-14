@@ -49,6 +49,35 @@ module Organisations
       }
     end
 
+    def has_featured_policies?
+      true if org.ordered_featured_policies && org.ordered_featured_policies.length.positive?
+    end
+
+    def featured_policies
+      policies = []
+
+      org.ordered_featured_policies.each do |policy|
+        policies << {
+          link: {
+            text: policy["title"],
+            path: policy["base_path"]
+          }
+        }
+      end
+
+      policies << {
+        link: {
+          text: "See all our policies",
+          path: "/government/policies?organisations[]=#{org.slug}"
+        }
+      }
+
+      {
+        items: policies,
+        brand: org.brand
+      }
+    end
+
   private
 
     def needs_definite_article?(phrase)
