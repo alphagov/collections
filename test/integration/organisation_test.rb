@@ -223,7 +223,7 @@ class OrganisationHeaderTest < ActionDispatch::IntegrationTest
 
     @content_item_blank = {
       title: "An empty content item to test everything checks before trying to render things",
-      base_path: "/government/organisations/an-empty-thing",
+      base_path: "/government/organisations/civil-service-resourcing",
       details: {
         body: "",
         brand: "",
@@ -241,11 +241,11 @@ class OrganisationHeaderTest < ActionDispatch::IntegrationTest
     content_store_has_item("/government/organisations/attorney-generals-office", @content_item_attorney_general)
     content_store_has_item("/government/organisations/charity-commission", @content_item_charity_commission)
     content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales", @content_item_wales_office)
-    content_store_has_item("/government/organisations/an-empty-thing", @content_item_blank)
+    content_store_has_item("/government/organisations/civil-service-resourcing", @content_item_blank)
   end
 
   it "doesn't fail if the content item is missing any data" do
-    visit "/government/organisations/an-empty-thing"
+    visit "/government/organisations/civil-service-resourcing"
     assert page.has_css?(".content")
   end
 
@@ -269,6 +269,9 @@ class OrganisationHeaderTest < ActionDispatch::IntegrationTest
 
     visit "/government/organisations/charity-commission"
     refute page.has_css?(".no10-banner")
+
+    visit "/government/organisations/civil-service-resourcing"
+    refute page.has_css?(".no10-banner")
   end
 
   it "renders the logo and logo brand correctly" do
@@ -280,6 +283,9 @@ class OrganisationHeaderTest < ActionDispatch::IntegrationTest
 
     visit "/government/organisations/charity-commission"
     assert page.has_css?(".gem-c-organisation-logo.brand--department-for-business-innovation-skills img[alt='The Charity Commission']")
+
+    visit "/government/organisations/civil-service-resourcing"
+    refute page.has_css?(".gem-c-organisation-logo")
   end
 
   it "shows featured links correctly if present" do
@@ -292,6 +298,9 @@ class OrganisationHeaderTest < ActionDispatch::IntegrationTest
     visit "/government/organisations/charity-commission"
     assert page.has_css?(".app-c-topic-list")
     refute page.has_css?(".app-c-topic-list.app-c-topic-list--small")
+
+    visit "/government/organisations/civil-service-resourcing"
+    refute page.has_css?(".app-c-topic-list")
   end
 
   it "shows the translation nav if required" do
@@ -303,6 +312,9 @@ class OrganisationHeaderTest < ActionDispatch::IntegrationTest
 
     visit "/government/organisations/office-of-the-secretary-of-state-for-wales"
     assert page.has_css?(".gem-c-translation-nav")
+
+    visit "/government/organisations/civil-service-resourcing"
+    refute page.has_css?(".gem-c-translation-nav")
   end
 
   it "shows a large news item only on news organisations" do
@@ -310,6 +322,25 @@ class OrganisationHeaderTest < ActionDispatch::IntegrationTest
     assert page.has_css?(".gem-c-image-card.gem-c-image-card--large")
 
     visit "/government/organisations/charity-commission"
+    assert page.has_css?(".gem-c-image-card")
     refute page.has_css?(".gem-c-image-card.gem-c-image-card--large")
+
+    visit "/government/organisations/civil-service-resourcing"
+    refute page.has_css?(".gem-c-image-card")
+  end
+
+  it "shows the latest articles when it should" do
+    # TODO: can't write this test until the right content is being rendered in this section
+  end
+
+  it "shows the 'what we do' section when it should" do
+    visit "/government/organisations/prime-ministers-office-10-downing-street"
+    assert page.has_content?(/10 Downing Street is the official residence and the office of the British Prime Minister/i)
+
+    visit "/government/organisations/attorney-generals-office"
+    assert page.has_content?(/provides legal advice and support to the Attorney General/i)
+
+    visit "/government/organisations/civil-service-resourcing"
+    refute page.has_css?(".gem-c-govspeak.govuk-govspeak")
   end
 end
