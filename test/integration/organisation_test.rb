@@ -1,6 +1,6 @@
 require 'integration_test_helper'
 
-class OrganisationHeaderTest < ActionDispatch::IntegrationTest
+class OrganisationTest < ActionDispatch::IntegrationTest
   before do
     @content_item_no10 = {
       title: "Prime Minister's Office, 10 Downing Street",
