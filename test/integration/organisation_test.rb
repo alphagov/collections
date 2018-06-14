@@ -184,6 +184,17 @@ class OrganisationHeaderTest < ActionDispatch::IntegrationTest
     content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales", @content_item_wales_office)
   end
 
+  it "sets the page title" do
+    visit "/government/organisations/prime-ministers-office-10-downing-street"
+    assert page.has_title?("Prime Minister's Office, 10 Downing Street - GOV.UK")
+
+    visit "/government/organisations/attorney-generals-office"
+    assert page.has_title?("Attorney General's Office - GOV.UK")
+
+    visit "/government/organisations/charity-commission"
+    assert page.has_title?("Charity Commission - GOV.UK")
+  end
+
   it "shows the no10 banner element only on no10's page" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
     assert page.has_css?(".no10-banner", text: "Prime Minister's Office, 10 Downing Street")
