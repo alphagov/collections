@@ -47,6 +47,34 @@
       <% end %>
     </div>
   <% end %>
+
+<%= render "govuk_publishing_components/components/heading", {
+  text: "What #{@what_we_do.what_we_do_title} does",
+  brand: @organisation.brand,
+  padding: true,
+  border_top: 5,
+  margin_bottom: 2
+} %>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render "govuk_publishing_components/components/govspeak", {
+      } do %>
+        <p><%= @organisation.body %></p>
+        <p>TODO: add the rest</p>
+        <p><a href="<%= @organisation.base_path %>/about">Read more about what we do</a></p>
+    <% end %>
+  </div>
+
+  <div class="column-one-third">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: "Follow us",
+      margin_bottom: 2,
+      heading_level: 3,
+      font_size: 19
+    } %>
+    <%= render "govuk_publishing_components/components/share_links", @what_we_do.share_links %>
+  </div>
 </div>
 
 <% if false %>
