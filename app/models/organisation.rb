@@ -63,6 +63,10 @@ class Organisation
     Plek.current.website_root + base_path
   end
 
+  def slug
+    base_path.gsub("/government/organisations/", "")
+  end
+
   def ordered_featured_links
     details["ordered_featured_links"]
   end
