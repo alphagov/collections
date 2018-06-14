@@ -29,7 +29,20 @@ class OrganisationHeaderTest < ActionDispatch::IntegrationTest
             public_updated_at: "2018-05-10T00:00:01.000+01:00",
             document_type: "Press release"
           },
-        ]
+        ],
+        ordered_ministers: [
+          {
+            name_prefix: "The Rt Hon",
+            name: "Theresa May MP",
+            role: "Prime Minister",
+            href: "/government/people/theresa-may",
+            role_href: "/government/ministers/prime-minister",
+            image: {
+              url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/6/PM_portrait_960x640.jpg",
+              alt_text: "Theresa May MP"
+            }
+          }
+        ],
       },
       links: {
         available_translations: []
@@ -69,7 +82,26 @@ class OrganisationHeaderTest < ActionDispatch::IntegrationTest
             public_updated_at: "2018-06-04T11:30:03.000+01:00",
             document_type: "Press release"
           }
-        ]
+        ],
+        ordered_ministers: [
+          {
+            name_prefix: "The Rt Hon",
+            name: "Theresa May MP",
+            role: "Prime Minister",
+            href: "/government/people/theresa-may",
+            role_href: "/government/ministers/prime-minister",
+            image: {
+              url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/6/PM_portrait_960x640.jpg",
+              alt_text: "Theresa May MP"
+            }
+          },
+          {
+            name: "Stuart Andrew MP",
+            role: "Parliamentary Under Secretary of State",
+            href: "/government/people/stuart-andrew",
+            role_href: "/government/ministers/parliamentary-under-secretary-of-state--94"
+          }
+        ],
       },
       links: {
         available_translations: []
@@ -246,5 +278,23 @@ class OrganisationHeaderTest < ActionDispatch::IntegrationTest
 
     visit "/government/organisations/charity-commission"
     refute page.has_css?(".gem-c-image-card.gem-c-image-card--large")
+  end
+
+  it "shows the ministers for an organisation" do
+    visit "/government/organisations/attorney-generals-office"
+    assert page.has_css?(".gem-c-heading", text: "Our ministers")
+    assert page.has_css?('.gem-c-image-card .gem-c-image-card__title-link', text: 'Theresa May MP')
+    assert page.has_css?('.gem-c-image-card .gem-c-image-card__title-link', text: 'Stuart Andrew MP')
+  end
+
+  it 'does not show the ministers section for no.10' do
+    visit "/government/organisations/prime-ministers-office-10-downing-street"
+    refute page.has_css?('.gem-c-heading', text: 'Our ministers')
+    refute page.has_css?('.gem-c-image-card .gem-c-image-card__title-link', text: 'Theresa May MP')
+  end
+
+  it 'does not display ministers for organisations without minister data' do
+    visit "/government/organisations/charity-commission"
+    refute page.has_css?('.gem-c-heading', text: 'Our ministers')
   end
 end

@@ -24,6 +24,7 @@ en:
   view_all: "view all"
   view_less: "view less"
   organisations:
+    our_ministers: "Our ministers"
     separate_website: "separate website"
     type:
       adhoc_advisory_group: "Ad-hoc advisory group"

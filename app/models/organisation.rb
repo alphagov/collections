@@ -79,6 +79,10 @@ class Organisation
     details["organisation_featuring_priority"] == "news"
   end
 
+  def ordered_ministers
+    details["ordered_ministers"]
+  end
+
   # methods below are not in use yet, this comment to be removed once confirmed
 
   def body
@@ -91,10 +95,6 @@ class Organisation
 
   def social_media_links
     details["social_media_links"]
-  end
-
-  def ordered_ministers
-    details["ordered_ministers"]
   end
 
   def board_members
