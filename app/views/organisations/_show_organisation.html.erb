@@ -79,12 +79,16 @@
   </div>
 
   <div class="grid-row">
-    <div class="column-two-thirds">
+    <div class="column-two-thirds brand--<%= @organisation.brand %>">
       <%= render "govuk_publishing_components/components/govspeak", {
         } do %>
           <p><%= @organisation.body %></p>
           <p>TODO: add the rest</p>
-          <p><a href="<%= @organisation.base_path %>/about"><%= t('organisations.read_more') %></a></p>
+          <p>
+            <a href="<%= @organisation.base_path %>/about" class="brand__color">
+              <%= t('organisations.read_more') %>
+            </a>
+          </p>
       <% end %>
     </div>
 
