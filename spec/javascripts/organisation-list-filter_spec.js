@@ -26,10 +26,10 @@ describe('organisation-list-filter.js', function() {
       </div>\
       <ol data-filter="list">\
         <li data-filter="item" class="org-logo-1">\
-          <div class="logo-container">Cabinet Office</div>\
+          <div class="gem-c-organisation-logo__name">Cabinet Office</div>\
         </li>\
         <li data-filter="item" class="org-logo-2">\
-          <div class="logo-container">Cabinet Office</div>\
+          <div class="gem-c-organisation-logo__name">Cabinet Office</div>\
         </li>\
       </ol>\
     </div>\

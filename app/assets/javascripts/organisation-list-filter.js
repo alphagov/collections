@@ -41,8 +41,8 @@
 
       organisation.removeClass('js-hidden');
 
-      if (organisation.find('.logo-container').length > 0) {
-        organisationText = organisation.find('.logo-container').text();
+      if (organisation.find('.gem-c-organisation-logo__name').length > 0) {
+        organisationText = organisation.find('.gem-c-organisation-logo__name').text();
       }
       else {
         organisationText = organisation.find('.organisation-list__item-title').text();
