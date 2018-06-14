@@ -11,8 +11,12 @@ module Organisations
       (prefix + org.title)
     end
 
-    def latest
-      stories = []
+    def has_latest_documents?
+      org.ordered_featured_documents.length.positive?
+    end
+
+    def latest_documents
+      documents = []
 
       org.ordered_featured_documents.each do |story|
         metadata = {}
@@ -22,7 +26,7 @@ module Organisations
           metadata[:public_updated_at] = Date.parse(story["public_updated_at"])
         end
 
-        stories << {
+        documents << {
           link: {
             text: story["title"],
             path: story["href"]
@@ -32,15 +36,15 @@ module Organisations
       end
 
       {
-        items: stories,
+        items: documents,
         brand: org.brand
       }
     end
 
     def subscription_links
       {
-        email_signup_link: "TODO",
-        feed_link_box_value: "TODO",
+        email_signup_link: "/government/email-signup/new?email_signup[feed]=#{org.web_url}.atom",
+        feed_link_box_value: "#{org.web_url}.atom",
         brand: org.brand
       }
     end

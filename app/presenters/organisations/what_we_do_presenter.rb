@@ -6,6 +6,10 @@ module Organisations
       @org = organisation
     end
 
+    def has_share_links?
+      org.social_media_links.length.positive?
+    end
+
     def share_links
       links = []
 

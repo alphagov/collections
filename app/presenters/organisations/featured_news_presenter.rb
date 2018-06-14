@@ -6,6 +6,10 @@ module Organisations
       @org = organisation
     end
 
+    def has_featured_news?
+      org.ordered_featured_documents.length.positive?
+    end
+
     def first_featured_news
       main_story = featured_news([org.ordered_featured_documents.first])[0]
       main_story[:large] = true
