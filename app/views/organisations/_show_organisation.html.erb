@@ -82,8 +82,7 @@
     <div class="column-two-thirds brand--<%= @organisation.brand %>">
       <%= render "govuk_publishing_components/components/govspeak", {
         } do %>
-          <p><%= @organisation.body %></p>
-          <p>TODO: add the rest</p>
+          <p><%= @organisation.body.html_safe %></p>
           <p>
             <a href="<%= @organisation.base_path %>/about" class="brand__color">
               <%= t('organisations.read_more') %>
