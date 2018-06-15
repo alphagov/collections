@@ -342,14 +342,11 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     refute page.has_css?(".app-c-topic-list")
 
     visit "/government/organisations/attorney-generals-office"
-    assert page.has_css?(".app-c-topic-list.app-c-topic-list--small")
+    assert page.has_css?(".app-c-topic-list.app-c-topic-list--small .app-c-topic-list__link", text: "Attorney General's guidance to the legal profession")
 
     visit "/government/organisations/charity-commission"
-    assert page.has_css?(".app-c-topic-list")
+    assert page.has_css?(".app-c-topic-list .app-c-topic-list__link", text: "Find a charity")
     refute page.has_css?(".app-c-topic-list.app-c-topic-list--small")
-
-    visit "/government/organisations/civil-service-resourcing"
-    refute page.has_css?(".app-c-topic-list")
   end
 
   it "shows the translation nav if required" do
@@ -379,15 +376,12 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     # TODO: can't write this test until the right content is being rendered in this section
   end
 
-  it "shows the 'what we do' section when it should" do
+  it "shows the 'what we do' section" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
     assert page.has_content?(/10 Downing Street is the official residence and the office of the British Prime Minister/i)
 
     visit "/government/organisations/attorney-generals-office"
     assert page.has_content?(/provides legal advice and support to the Attorney General/i)
-
-    visit "/government/organisations/civil-service-resourcing"
-    refute page.has_css?(".gem-c-govspeak.govuk-govspeak")
   end
 
   it "shows 'our policies' when it should" do
@@ -396,6 +390,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
     visit "/government/organisations/charity-commission"
     assert page.has_content?(/Our policies/i)
+    assert page.has_css?(".gem-c-document-list__item-title", text: "Waste and recycling")
   end
 
   it "shows the ministers for an organisation" do
