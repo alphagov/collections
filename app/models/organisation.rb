@@ -22,6 +22,10 @@ class Organisation
     details["acronym"]
   end
 
+  def content_id
+    details["content_id"]
+  end
+
   def organisation_type
     details["organisation_type"]
   end
@@ -68,6 +72,7 @@ class Organisation
   end
 
   def slug
+    # TODO: will not work for courts & tribunals
     base_path.gsub("/government/organisations/", "")
   end
 

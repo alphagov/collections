@@ -53,6 +53,12 @@
       </div>
     </div>
 
+      <% Services.rummager.search(count: 3, order: "-public_timestamp", filter_organisations: @organisation.slug, fields: %w[title link content_store_document_type public_timestamp])["results"].each do |item| %>
+        <%= item["title"] %><br/>
+      <% end %>
+
+
+
     <div class="grid-row">
       <div class="column-two-thirds">
         <%= render "govuk_publishing_components/components/document_list", @show.latest_documents %>
@@ -120,3 +126,74 @@
     </div>
   </div>
 <% end %>
+
+
+<div class="organisations__brand-border-top brand--<%= @organisation.brand %> brand__border-color organisations__margin-bottom">
+  <%= render "govuk_publishing_components/components/heading", {
+    text: t('organisations.documents'),
+    margin_bottom: 2,
+    padding: true
+  } %>
+
+  <div class="grid-row organisations__margin-bottom">
+    <div class="column-half">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: t('organisations.our_announcements'),
+        margin_bottom: 2
+      } %>
+
+
+      <% Services.rummager.search(count: 2, order: "-public_timestamp", filter_organisations: @organisation.slug, filter_email_document_supertype: "announcements", fields: %w[title link content_store_document_type public_timestamp])["results"].each do |item| %>
+        <%= item["title"] %><br/>
+      <% end %>
+
+      <a href="" class="brand__color">See all our</a>
+    </div>
+
+    <div class="column-half">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: t('organisations.our_consultations'),
+        margin_bottom: 2
+      } %>
+
+
+      <% Services.rummager.search(count: 2, order: "-public_timestamp", filter_organisations: @organisation.slug, filter_government_document_supertype: "consultations", fields: %w[title link content_store_document_type public_timestamp])["results"].each do |item| %>
+        <%= item["title"] %><br/>
+      <% end %>
+
+
+      <a href="">See all our</a>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-half">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: t('organisations.our_publications'),
+        margin_bottom: 2
+      } %>
+
+      <% Services.rummager.search(count: 2, order: "-public_timestamp", filter_organisations: @organisation.slug, filter_email_document_supertype: "publications", fields: %w[title link content_store_document_type public_timestamp])["results"].each do |item| %>
+        <%= item["title"] %><br/>
+      <% end %>
+
+
+      <a href="">See all our</a>
+    </div>
+
+    <div class="column-half">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: t('organisations.our_statistics'),
+        margin_bottom: 2
+      } %>
+
+
+
+      <% Services.rummager.search(count: 2, order: "-public_timestamp", filter_organisations: @organisation.slug, filter_government_document_supertype: "statistics", fields: %w[title link content_store_document_type public_timestamp])["results"].each do |item| %>
+        <%= item["title"] %><br/>
+      <% end %>
+
+      <a href="">See all our</a>
+    </div>
+  </div>
+</div>

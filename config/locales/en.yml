@@ -43,6 +43,11 @@ en:
     read_more: "Read more about what we do"
     follow_us: "Follow us"
     our_policies: "Our policies"
+    documents: "Documents"
+    our_announcements: "Our announcements"
+    our_consultations: "Our consultations"
+    our_publications: "Our publications"
+    our_statistics: "Our statistics"
   language_names:
     en: English
     cy: Cymraeg
