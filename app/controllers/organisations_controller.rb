@@ -11,6 +11,7 @@ class OrganisationsController < ApplicationController
 
     @header = Organisations::HeaderPresenter.new(@organisation)
     @featured_news = Organisations::FeaturedNewsPresenter.new(@organisation)
+    @people = Organisations::PeoplePresenter.new(@organisation)
 
     respond_to do |f|
       f.html do

@@ -49,6 +49,30 @@
   <% end %>
 </div>
 
+<% if @people.ministers.any? && !@organisation.is_no_10? %>
+  <div class="organisations__section organisations__brand-border-top brand--<%= @organisation.brand %> brand__border-color">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <%= render "govuk_publishing_components/components/heading", {
+          text: I18n.t('organisations.our_ministers'),
+          padding: true,
+          margin_bottom: 2
+        } %>
+      </div>
+    </div>
+
+    <% @people.ministers.in_groups_of(4, false) do |ministers| %>
+      <div class="grid-row">
+        <% ministers.each do |minister| %>
+          <div class="column-quarter">
+            <%= render "govuk_publishing_components/components/image_card", minister %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div >
+<% end %>
+
 <% if false %>
   <%
     # the code below is currently disabled as it will break following changes to accommodate the code
@@ -68,10 +92,6 @@
       heading_level: 2
   } %>
 </div>
-
-<%= render partial: 'ministers_and_management',
-           locals: { ministers: organisation.ordered_ministers,
-                     board_members: organisation.board_members } %>
 
 <%= render partial: 'contact',
            locals: {
