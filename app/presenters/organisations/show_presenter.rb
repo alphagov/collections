@@ -1,6 +1,6 @@
 module Organisations
   class ShowPresenter
-    attr_reader :org
+    attr_reader :org, :latest
 
     def initialize(organisation)
       @org = organisation
@@ -12,24 +12,25 @@ module Organisations
     end
 
     def has_latest_documents?
-      org.ordered_featured_documents.length.positive?
+      @latest = latest_documents
+      @latest.length.positive?
     end
 
     def latest_documents
       documents = []
 
-      org.ordered_featured_documents.each do |story|
+      Services.rummager.search(count: 3, order: "-public_timestamp", filter_organisations: org.slug, fields: %w[title link content_store_document_type public_timestamp])["results"].each do |item|
         metadata = {}
-        metadata[:document_type] = story["document_type"]
+        metadata[:document_type] = item["content_store_document_type"].capitalize.tr("_", " ")
 
-        if story["public_updated_at"]
-          metadata[:public_updated_at] = Date.parse(story["public_updated_at"])
+        if item["public_timestamp"]
+          metadata[:public_updated_at] = Date.parse(item["public_timestamp"])
         end
 
         documents << {
           link: {
-            text: story["title"],
-            path: story["href"]
+            text: item["title"],
+            path: item["link"]
           },
           metadata: metadata
         }

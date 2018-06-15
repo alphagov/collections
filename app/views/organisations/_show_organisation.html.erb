@@ -61,7 +61,7 @@
 
     <div class="grid-row">
       <div class="column-two-thirds">
-        <%= render "govuk_publishing_components/components/document_list", @show.latest_documents %>
+        <%= render "govuk_publishing_components/components/document_list", @show.latest %>
 
         <p class="organisations__margin-bottom brand--<%= @organisation.brand %>">
           <a href="<%= "/government/latest?departments[]=#{@organisation.slug}" %>" class="brand__color"><%= t('organisations.see_all') %></a>
