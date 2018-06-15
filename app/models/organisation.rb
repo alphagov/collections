@@ -94,6 +94,11 @@ class Organisation
   def all_people
     {
       ministers: details["ordered_ministers"],
+      military_personnel: details["ordered_military_personnel"],
+      board_members: details["ordered_board_members"],
+      traffic_commissioners: details["ordered_traffic_commissioners"],
+      special_representatives: details["ordered_special_representatives"],
+      chief_professional_officers: details["ordered_chief_professional_officers"]
     }
   end
 
@@ -123,10 +128,6 @@ private
 
   def child_organisation_count
     links["ordered_child_organisations"].count
-  end
-
-  def board_members
-    details["ordered_board_members"]
   end
 
   def ordered_contacts
