@@ -91,16 +91,32 @@ class Organisation
     details["organisation_featuring_priority"] == "news"
   end
 
-  def ordered_ministers
-    details["ordered_ministers"]
+  def all_people
+    {
+      ministers: details["ordered_ministers"],
+    }
+  end
+
+  def ordered_featured_policies
+    links["ordered_featured_policies"]
   end
 
   def social_media_links
     details["social_media_links"]
   end
 
-  def ordered_featured_policies
-    links["ordered_featured_policies"]
+  def ordered_parent_organisations
+    links["ordered_parent_organisations"]
+  end
+
+private
+
+  def links
+    @content_item.content_item_data["links"]
+  end
+
+  def details
+    @content_item.content_item_data["details"]
   end
 
   # methods below are not in use yet, this comment to be removed once confirmed
@@ -119,19 +135,5 @@ class Organisation
 
   def ordered_corporate_information_pages
     details["ordered_corporate_information_pages"]
-  end
-
-  def ordered_parent_organisations
-    links["ordered_parent_organisations"]
-  end
-
-private
-
-  def links
-    @content_item.content_item_data["links"]
-  end
-
-  def details
-    @content_item.content_item_data["details"]
   end
 end
