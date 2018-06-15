@@ -17,10 +17,10 @@ module Organisations
         number_10: @organisations.number_10,
         ministerial_departments: @organisations.ministerial_departments,
         non_ministerial_departments: @organisations.non_ministerial_departments,
-        agencies_and_other_public_bodies: @organisations.ordered_agencies_and_other_public_bodies,
-        high_profile_groups: @organisations.ordered_high_profile_groups,
-        public_corporations: @organisations.ordered_public_corporations,
-        devolved_administrations: @organisations.ordered_devolved_administrations
+        agencies_and_other_public_bodies: @organisations.agencies_and_other_public_bodies,
+        high_profile_groups: @organisations.high_profile_groups,
+        public_corporations: @organisations.public_corporations,
+        devolved_administrations: @organisations.devolved_administrations
       }
     end
 

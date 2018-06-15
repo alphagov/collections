@@ -47,19 +47,19 @@ class ContentStoreOrganisations
     details["ordered_non_ministerial_departments"]
   end
 
-  def ordered_agencies_and_other_public_bodies
+  def agencies_and_other_public_bodies
     details["ordered_agencies_and_other_public_bodies"]
   end
 
-  def ordered_high_profile_groups
+  def high_profile_groups
     details["ordered_high_profile_groups"]
   end
 
-  def ordered_public_corporations
+  def public_corporations
     details["ordered_public_corporations"]
   end
 
-  def ordered_devolved_administrations
+  def devolved_administrations
     details["ordered_devolved_administrations"]
   end
 
