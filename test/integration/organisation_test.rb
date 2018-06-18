@@ -298,6 +298,12 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     content_store_has_item("/government/organisations/charity-commission", @content_item_charity_commission)
     content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales", @content_item_wales_office)
     content_store_has_item("/government/organisations/civil-service-resourcing", @content_item_blank)
+
+    stub_rummager_latest_content_requests("prime-ministers-office-10-downing-street")
+    stub_rummager_latest_content_requests("attorney-generals-office")
+    stub_rummager_latest_content_requests("charity-commission")
+    stub_rummager_latest_content_requests("office-of-the-secretary-of-state-for-wales")
+    stub_rummager_latest_content_requests("civil-service-resourcing")
   end
 
   it "doesn't fail if the content item is missing any data" do
@@ -441,5 +447,40 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     refute page.has_css?(".gem-c-heading", text: "Chief professional officers")
     refute page.has_css?(".gem-c-heading", text: "Special representatives")
     refute page.has_css?(".gem-c-heading", text: "Traffic commissioners")
+  end
+
+private
+
+  def stub_rummager_latest_content_requests(organisation_slug)
+    stub_rummager_latest_documents_request(organisation_slug)
+    stub_rummager_latest_announcements_request(organisation_slug)
+    stub_rummager_latest_consultations_request(organisation_slug)
+    stub_rummager_latest_publications_request(organisation_slug)
+    stub_rummager_latest_statistics_request(organisation_slug)
+  end
+
+  def stub_rummager_latest_documents_request(organisation_slug)
+    stub_request(:get, Plek.new.find("search") + "/search.json?count=3&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp").
+      to_return(body: { results: [] }.to_json)
+  end
+
+  def stub_rummager_latest_announcements_request(organisation_slug)
+    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_email_document_supertype=announcements&filter_organisations=#{organisation_slug}&order=-public_timestamp").
+      to_return(body: { results: [] }.to_json)
+  end
+
+  def stub_rummager_latest_consultations_request(organisation_slug)
+    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_government_document_supertype=consultations&filter_organisations=#{organisation_slug}&order=-public_timestamp").
+      to_return(body: { results: [] }.to_json)
+  end
+
+  def stub_rummager_latest_publications_request(organisation_slug)
+    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_email_document_supertype=publications&filter_organisations=#{organisation_slug}&order=-public_timestamp").
+      to_return(body: { results: [] }.to_json)
+  end
+
+  def stub_rummager_latest_statistics_request(organisation_slug)
+    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_government_document_supertype=statistics&filter_organisations=#{organisation_slug}&order=-public_timestamp").
+      to_return(body: { results: [] }.to_json)
   end
 end
