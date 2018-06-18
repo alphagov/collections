@@ -1,4 +1,18 @@
 module OrganisationHelpers
+  def organisation_with_no_people
+    {
+      title: "Attorney General's Office",
+      details: {
+        brand: "attorney-generals-office",
+        ordered_ministers: [],
+        ordered_board_members: [],
+        ordered_military_personnel: [],
+        ordered_chief_professional_officers: [],
+        ordered_special_representatives: []
+      }
+    }.with_indifferent_access
+  end
+
   def organisation_with_ministers
     {
       title: "Attorney General's Office",
@@ -87,6 +101,44 @@ module OrganisationHelpers
             links: {},
             api_url: "https://www.gov.uk/api/content/government/policies/waste-and-recycling",
             web_url: "https://www.gov.uk/government/policies/waste-and-recycling"
+          },
+        ]
+      }
+    }.with_indifferent_access
+  end
+
+  def organisation_with_board_members
+    {
+      title: "Attorney General's Office",
+      details: {
+        brand: "attorney-generals-office",
+        ordered_board_members: [
+          {
+            name: "Sir Jeremy Heywood",
+            role: "Cabinet Secretary",
+            href: "/government/people/jeremy-heywood",
+            image: {
+              url: "/photo/jeremy-heywood",
+              alt_text: "Sir Jeremy Heywood"
+            }
+          },
+          {
+            name: "John Manzoni",
+            role: "Chief Executive of the Civil Service ",
+            href: "/government/people/john-manzoni",
+            image: {
+              url: "/photo/john-manzoni",
+              alt_text: "John Manzoni"
+            }
+          },
+          {
+            name: "John Manzoni",
+            role: "Permanent Secretary (Cabinet Office)",
+            href: "/government/people/john-manzoni",
+            image: {
+              url: "/photo/john-manzoni",
+              alt_text: "John Manzoni"
+            }
           },
         ]
       }

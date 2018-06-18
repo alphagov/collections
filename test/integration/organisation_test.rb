@@ -120,6 +120,13 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             title: "Twitter - @attorneygeneral",
             href: "https://twitter.com/@attorneygeneral"
           }
+        ],
+        ordered_board_members: [
+          {
+            name: "Sir Jeremy Heywood",
+            role: "Cabinet Secretary",
+            href: "/government/people/jeremy-heywood",
+          }
         ]
       },
       links: {
@@ -204,17 +211,14 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     }
 
     @content_item_wales_office = {
-      title: "The Charity Commission",
-      base_path: "/government/organisations/charity-commission",
+      title: "Office of the Secretary of State for Wales",
+      base_path: "/government/organisations/office-of-the-secretary-of-state-for-wales",
       details: {
-        body: "We register and regulate charities in England and Wales, to ensure that the public can support charities with confidence.\r\n",
-        brand: "department-for-business-innovation-skills",
+        body: "The Office of the Secretary of State for Wales supports the Welsh Secretary",
+        brand: "wales-office",
         logo: {
-          formatted_title: "Charity Commission",
-          image: {
-            url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/organisation/logo/98/Home_page.jpg",
-            alt_text: "The Charity Commission"
-          }
+          formatted_title: "Office of the Secretary of State for Wales<br/>Swyddfa Ysgrifennydd Gwladol Cymru",
+          crest: "single-identity"
         },
         organisation_govuk_status: {
           status: "live",
@@ -222,13 +226,9 @@ class OrganisationTest < ActionDispatch::IntegrationTest
         organisation_type: "non_ministerial_department",
         ordered_featured_links: [
           {
-            title: "Find a charity",
-            href: "http://apps.charitycommission.gov.uk/showcharity/registerofcharities/RegisterHomePage.aspx"
-          },
-          {
-            title: "Online services and contact forms",
-            href: "https://www.gov.uk/government/organisations/charity-commission/about/about-our-services"
-          },
+            title: "Wales Office Featured Link",
+            href: "/wales/link/1"
+          }
         ],
         ordered_featured_documents: [
           {
@@ -253,6 +253,13 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             service_type: "twitter",
             title: "Trydar",
             href: "https://twitter.com/LlywDUCymru"
+          }
+        ],
+        ordered_military_personnel: [
+          {
+            name: "Air Chief Marshal Sir  Stuart Peach GBE KCB ADC DL",
+            role: "Chief of the Defence Staff",
+            href: "/government/people/stuart-peach",
           }
         ]
       },
@@ -396,18 +403,43 @@ class OrganisationTest < ActionDispatch::IntegrationTest
   it "shows the ministers for an organisation" do
     visit "/government/organisations/attorney-generals-office"
     assert page.has_css?(".gem-c-heading", text: "Our ministers")
-    assert page.has_css?('.gem-c-image-card .gem-c-image-card__title-link', text: 'Theresa May MP')
-    assert page.has_css?('.gem-c-image-card .gem-c-image-card__title-link', text: 'Stuart Andrew MP')
+    assert page.has_css?(".gem-c-image-card .gem-c-image-card__title-link", text: "Theresa May MP")
+    assert page.has_css?(".gem-c-image-card .gem-c-image-card__title-link", text: "Stuart Andrew MP")
   end
 
-  it 'does not show the ministers section for no.10' do
+  it "does not show the ministers section for no.10" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
-    refute page.has_css?('.gem-c-heading', text: 'Our ministers')
-    refute page.has_css?('.gem-c-image-card .gem-c-image-card__title-link', text: 'Theresa May MP')
+    refute page.has_css?(".gem-c-heading", text: "Our ministers")
+    refute page.has_css?(".gem-c-image-card .gem-c-image-card__title-link", text: "Theresa May MP")
   end
 
-  it 'does not display ministers for organisations without minister data' do
+  it "does not display ministers for organisations without minister data" do
     visit "/government/organisations/charity-commission"
-    refute page.has_css?('.gem-c-heading', text: 'Our ministers')
+    refute page.has_css?(".gem-c-heading", text: "Our ministers")
+  end
+
+  it "shows the non-ministers for an organisation" do
+    visit "/government/organisations/attorney-generals-office"
+    assert page.has_css?(".gem-c-heading", text: "Our management")
+    assert page.has_css?(".gem-c-image-card .gem-c-image-card__title-link", text: "Sir Jeremy Heywood")
+
+    visit "/government/organisations/office-of-the-secretary-of-state-for-wales"
+    assert page.has_css?(".gem-c-heading", text: "Our senior military officials")
+    assert page.has_css?(".gem-c-image-card__title .gem-c-image-card__title-link[href='/government/people/stuart-peach']")
+    assert page.has_css?(".gem-c-image-card__description", text: "Chief of the Defence Staff")
+  end
+
+  it "does not display non-ministers for an organisation if data not present" do
+    visit "/government/organisations/attorney-generals-office"
+    refute page.has_css?(".gem-c-heading", text: "Our senior military officials")
+    refute page.has_css?(".gem-c-heading", text: "Chief professional officers")
+    refute page.has_css?(".gem-c-heading", text: "Special representatives")
+    refute page.has_css?(".gem-c-heading", text: "Traffic commissioners")
+
+    visit "/government/organisations/office-of-the-secretary-of-state-for-wales"
+    refute page.has_css?(".gem-c-heading", text: "Our management")
+    refute page.has_css?(".gem-c-heading", text: "Chief professional officers")
+    refute page.has_css?(".gem-c-heading", text: "Special representatives")
+    refute page.has_css?(".gem-c-heading", text: "Traffic commissioners")
   end
 end

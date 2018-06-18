@@ -1,0 +1,23 @@
+<% if people.any? %>
+  <div class="organisations__section organisations__brand-border-top brand--<%= brand %> brand__border-color">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <%= render "govuk_publishing_components/components/heading", {
+          text: title,
+          padding: true,
+          margin_bottom: 2
+        } %>
+      </div>
+    </div>
+
+    <% people.in_groups_of(4, false) do |people| %>
+      <div class="grid-row">
+        <% people.each do |person| %>
+          <div class="column-quarter">
+            <%= render "govuk_publishing_components/components/image_card", person %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div >
+<% end %>

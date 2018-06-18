@@ -120,28 +120,14 @@
   </div>
 <% end %>
 
-<% if @people.ministers.any? && !@organisation.is_no_10? %>
-  <div class="organisations__section organisations__brand-border-top brand--<%= @organisation.brand %> brand__border-color">
-    <div class="grid-row">
-      <div class="column-two-thirds">
-        <%= render "govuk_publishing_components/components/heading", {
-          text: I18n.t('organisations.our_ministers'),
-          padding: true,
-          margin_bottom: 2
-        } %>
-      </div>
-    </div>
-
-    <% @people.ministers.in_groups_of(4, false) do |ministers| %>
-      <div class="grid-row">
-        <% ministers.each do |minister| %>
-          <div class="column-quarter">
-            <%= render "govuk_publishing_components/components/image_card", minister %>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
-  </div >
+<% unless @organisation.is_no_10? %>
+  <% @people.all_people.each do |people_data| %>
+    <%= render partial: 'related_people', locals: {
+      people: people_data[:people],
+      title: people_data[:title],
+      brand: @organisation.brand
+    } %>
+  <% end %>
 <% end %>
 
 <% if false %>

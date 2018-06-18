@@ -91,34 +91,23 @@ class Organisation
     details["organisation_featuring_priority"] == "news"
   end
 
-  def ordered_ministers
-    details["ordered_ministers"]
-  end
-
-  def social_media_links
-    details["social_media_links"]
+  def all_people
+    {
+      ministers: details["ordered_ministers"],
+      military_personnel: details["ordered_military_personnel"],
+      board_members: details["ordered_board_members"],
+      traffic_commissioners: details["ordered_traffic_commissioners"],
+      special_representatives: details["ordered_special_representatives"],
+      chief_professional_officers: details["ordered_chief_professional_officers"]
+    }
   end
 
   def ordered_featured_policies
     links["ordered_featured_policies"]
   end
 
-  # methods below are not in use yet, this comment to be removed once confirmed
-
-  def child_organisation_count
-    links["ordered_child_organisations"].count
-  end
-
-  def board_members
-    details["ordered_board_members"]
-  end
-
-  def ordered_contacts
-    links["ordered_contacts"]
-  end
-
-  def ordered_corporate_information_pages
-    details["ordered_corporate_information_pages"]
+  def social_media_links
+    details["social_media_links"]
   end
 
   def ordered_parent_organisations
@@ -133,5 +122,19 @@ private
 
   def details
     @content_item.content_item_data["details"]
+  end
+
+  # methods below are not in use yet, this comment to be removed once confirmed
+
+  def child_organisation_count
+    links["ordered_child_organisations"].count
+  end
+
+  def ordered_contacts
+    links["ordered_contacts"]
+  end
+
+  def ordered_corporate_information_pages
+    details["ordered_corporate_information_pages"]
   end
 end

@@ -1,68 +1,101 @@
 module Organisations
   class PeoplePresenter
     include ActionView::Helpers::UrlHelper
-    attr_reader :org
 
     def initialize(organisation)
       @org = organisation
     end
 
-    def ministers
-      all_ministers = []
+    def all_people
+      @org.all_people.map do |person_type, people|
+        {
+          title: I18n.t('organisations.people.' + person_type.to_s),
+          people: handle_duplicate_roles(people, person_type)
+        }
+      end
+    end
 
-      @org.ordered_ministers && @org.ordered_ministers.each do |minister|
-        minister_multiple_roles = all_ministers.select do |all_ministers_item|
-          all_ministers_item[:heading_text] === minister["name"]
+  private
+
+    def handle_duplicate_roles(people, person_type)
+      all_people = []
+
+      people && people.each do |person|
+        person_multiple_roles = all_people.select do |all_people_item|
+          all_people_item[:heading_text] === person["name"]
         end
 
-        if minister_multiple_roles.empty?
-          all_ministers.push(formatted_minister_data(minister))
+        if person_multiple_roles.empty?
+          all_people.push(formatted_person_data(person, person_type))
         else
-          all_ministers.map do |all_ministers_item|
-            if all_ministers_item[:heading_text].eql?(minister_multiple_roles.first[:heading_text])
-              all_ministers_item[:extra_links] = multiple_role_links(all_ministers_item, minister)
+          all_people.map do |all_people_item|
+            if all_people_item[:heading_text].eql?(person_multiple_roles.first[:heading_text])
+              if is_person_ministerial?(person_type)
+                all_people_item[:extra_links] = multiple_role_links(all_people_item, person)
+              else
+                all_people_item[:description] = multiple_role_description(all_people_item, person)
+              end
             end
           end
         end
       end
 
-      all_ministers
+      all_people
     end
 
-  private
-
-    def multiple_role_links(existing_minister_info, new_minister_info)
-      existing_role_links = existing_minister_info[:extra_links]
+    def multiple_role_links(existing_person_info, new_person_info)
+      existing_role_links = existing_person_info[:extra_links]
       new_role_links = [
         {
-          text: new_minister_info["role"],
-          href: new_minister_info["role_href"]
+          text: new_person_info["role"],
+          href: new_person_info["role_href"]
         }
       ]
 
       existing_role_links.concat(new_role_links)
     end
 
-    def formatted_minister_data(minister)
+    def multiple_role_description(existing_person_info, new_person_info)
+      existing_role_description = existing_person_info[:description]
+      new_role_description = new_person_info["role"]
+
+      existing_role_description + ', ' + new_role_description
+    end
+
+    def is_person_ministerial?(type)
+      type.eql?(:ministers)
+    end
+
+    def small_image_url(image_url)
+      image_url_array = image_url.split('/')
+      small_image_name = "s465_" + image_url_array[-1]
+      image_url_array[-1] = small_image_name
+
+      image_url_array.join("/")
+    end
+
+    def formatted_person_data(person, type)
       data = {
         brand: @org.brand,
-        href: minister["href"],
-        extra_links: [
-          {
-            text: minister["role"],
-            href: minister["role_href"]
-          }
-        ],
-        metadata: minister["payment_type"],
-        context: minister["name_prefix"],
-        heading_text: minister["name"],
+        href: person["href"],
+        description: (person["role"] unless is_person_ministerial?(type)),
+        metadata: person["payment_type"],
+        context: person["name_prefix"],
+        heading_text: person["name"],
         heading_level: 3,
         extra_links_no_indent: true
       }
 
-      if minister["image"]
-        data[:image_src] = minister["image"]["url"]
-        data[:image_alt] = minister["image"]["alt_text"]
+      if is_person_ministerial?(type)
+        data[:extra_links] = [{
+          text: person["role"],
+          href: person["role_href"]
+        }]
+      end
+
+      if person["image"]
+        data[:image_src] = small_image_url(person["image"]["url"])
+        data[:image_alt] = person["image"]["alt_text"]
       end
 
       data
