@@ -211,17 +211,14 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     }
 
     @content_item_wales_office = {
-      title: "The Charity Commission",
-      base_path: "/government/organisations/charity-commission",
+      title: "Office of the Secretary of State for Wales",
+      base_path: "/government/organisations/office-of-the-secretary-of-state-for-wales",
       details: {
-        body: "We register and regulate charities in England and Wales, to ensure that the public can support charities with confidence.\r\n",
-        brand: "department-for-business-innovation-skills",
+        body: "The Office of the Secretary of State for Wales supports the Welsh Secretary",
+        brand: "wales-office",
         logo: {
-          formatted_title: "Charity Commission",
-          image: {
-            url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/organisation/logo/98/Home_page.jpg",
-            alt_text: "The Charity Commission"
-          }
+          formatted_title: "Office of the Secretary of State for Wales<br/>Swyddfa Ysgrifennydd Gwladol Cymru",
+          crest: "single-identity"
         },
         organisation_govuk_status: {
           status: "live",
@@ -229,13 +226,9 @@ class OrganisationTest < ActionDispatch::IntegrationTest
         organisation_type: "non_ministerial_department",
         ordered_featured_links: [
           {
-            title: "Find a charity",
-            href: "http://apps.charitycommission.gov.uk/showcharity/registerofcharities/RegisterHomePage.aspx"
-          },
-          {
-            title: "Online services and contact forms",
-            href: "https://www.gov.uk/government/organisations/charity-commission/about/about-our-services"
-          },
+            title: "Wales Office Featured Link",
+            href: "/wales/link/1"
+          }
         ],
         ordered_featured_documents: [
           {
