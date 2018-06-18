@@ -43,6 +43,18 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             }
           }
         ],
+        social_media_links: [
+          {
+            service_type: "twitter",
+            title: "Twitter - @10DowningStreet",
+            href: "https://twitter.com/@10DowningStreet"
+          },
+          {
+            service_type: "facebook",
+            title: "Facebook",
+            href: "https://www.facebook.com/10downingstreet"
+          },
+        ]
       },
       links: {
         available_translations: []
@@ -102,6 +114,13 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             role_href: "/government/ministers/parliamentary-under-secretary-of-state--94"
           }
         ],
+        social_media_links: [
+          {
+            service_type: "twitter",
+            title: "Twitter - @attorneygeneral",
+            href: "https://twitter.com/@attorneygeneral"
+          }
+        ]
       },
       links: {
         available_translations: []
@@ -148,10 +167,39 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             public_updated_at: "2018-06-06T10:56:00.000+01:00",
             document_type: "News story"
           }
+        ],
+        social_media_links: [
+          {
+            service_type: "twitter",
+            title: "Twitter",
+            href: "https://twitter.com/chtycommission"
+          },
+          {
+            service_type: "youtube",
+            title: "YouTube",
+            href: "http://www.youtube.com/TheCharityCommission"
+          },
         ]
       },
       links: {
-        available_translations: []
+        available_translations: [],
+        ordered_featured_policies: [
+          {
+            api_path: "/api/content/government/policies/waste-and-recycling",
+            base_path: "/government/policies/waste-and-recycling",
+            content_id: "5d5e9324-7631-11e4-a3cb-005056011aef",
+            description: "What the government’s doing about waste and recycling.",
+            document_type: "policy",
+            locale: "en",
+            public_updated_at: "2015-05-14T16:39:48Z",
+            schema_name: "policy",
+            title: "Waste and recycling",
+            withdrawn: false,
+            links: {},
+            api_url: "https://www.gov.uk/api/content/government/policies/waste-and-recycling",
+            web_url: "https://www.gov.uk/government/policies/waste-and-recycling"
+          },
+        ]
       }
     }
 
@@ -194,6 +242,18 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             public_updated_at: "2018-06-08T23:23:11.000+01:00",
             document_type: "Press release"
           },
+        ],
+        social_media_links: [
+          {
+            service_type: "twitter",
+            title: "Twitter",
+            href: "https://twitter.com/UKGovWales"
+          },
+          {
+            service_type: "twitter",
+            title: "Trydar",
+            href: "https://twitter.com/LlywDUCymru"
+          }
         ]
       },
       links: {
@@ -210,10 +270,32 @@ class OrganisationTest < ActionDispatch::IntegrationTest
       }
     }
 
+    @content_item_blank = {
+      title: "An empty content item to test everything checks before trying to render things",
+      base_path: "/government/organisations/civil-service-resourcing",
+      details: {
+        body: "",
+        brand: "",
+        logo: {
+        },
+        organisation_govuk_status: {
+          status: "",
+        },
+      },
+      links: {
+      }
+    }
+
     content_store_has_item("/government/organisations/prime-ministers-office-10-downing-street", @content_item_no10)
     content_store_has_item("/government/organisations/attorney-generals-office", @content_item_attorney_general)
     content_store_has_item("/government/organisations/charity-commission", @content_item_charity_commission)
     content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales", @content_item_wales_office)
+    content_store_has_item("/government/organisations/civil-service-resourcing", @content_item_blank)
+  end
+
+  it "doesn't fail if the content item is missing any data" do
+    visit "/government/organisations/civil-service-resourcing"
+    assert page.has_css?(".content")
   end
 
   it "sets the page title" do
@@ -236,6 +318,9 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
     visit "/government/organisations/charity-commission"
     refute page.has_css?(".no10-banner")
+
+    visit "/government/organisations/civil-service-resourcing"
+    refute page.has_css?(".no10-banner")
   end
 
   it "renders the logo and logo brand correctly" do
@@ -247,6 +332,9 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
     visit "/government/organisations/charity-commission"
     assert page.has_css?(".gem-c-organisation-logo.brand--department-for-business-innovation-skills img[alt='The Charity Commission']")
+
+    visit "/government/organisations/civil-service-resourcing"
+    refute page.has_css?(".gem-c-organisation-logo")
   end
 
   it "shows featured links correctly if present" do
@@ -254,10 +342,10 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     refute page.has_css?(".app-c-topic-list")
 
     visit "/government/organisations/attorney-generals-office"
-    assert page.has_css?(".app-c-topic-list.app-c-topic-list--small")
+    assert page.has_css?(".app-c-topic-list.app-c-topic-list--small .app-c-topic-list__link", text: "Attorney General's guidance to the legal profession")
 
     visit "/government/organisations/charity-commission"
-    assert page.has_css?(".app-c-topic-list")
+    assert page.has_css?(".app-c-topic-list .app-c-topic-list__link", text: "Find a charity")
     refute page.has_css?(".app-c-topic-list.app-c-topic-list--small")
   end
 
@@ -270,14 +358,39 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
     visit "/government/organisations/office-of-the-secretary-of-state-for-wales"
     assert page.has_css?(".gem-c-translation-nav")
+
+    visit "/government/organisations/civil-service-resourcing"
+    refute page.has_css?(".gem-c-translation-nav")
   end
 
   it "shows a large news item only on news organisations" do
     visit "/government/organisations/attorney-generals-office"
-    assert page.has_css?(".gem-c-image-card.gem-c-image-card--large")
+    assert page.has_css?(".gem-c-image-card.gem-c-image-card--large .gem-c-image-card__title", text: "New head of the Serious Fraud Office announced")
 
     visit "/government/organisations/charity-commission"
-    refute page.has_css?(".gem-c-image-card.gem-c-image-card--large")
+    assert page.has_css?(".gem-c-image-card .gem-c-image-card__title", text: "Charity annual return 2018")
+    refute page.has_css?(".gem-c-image-card.gem-c-image-card--large .gem-c-image-card__title", text: "Charity annual return 2018")
+  end
+
+  it "shows the latest articles when it should" do
+    # TODO: can't write this test until the right content is being rendered in this section
+  end
+
+  it "shows the 'what we do' section" do
+    visit "/government/organisations/prime-ministers-office-10-downing-street"
+    assert page.has_content?(/10 Downing Street is the official residence and the office of the British Prime Minister/i)
+
+    visit "/government/organisations/attorney-generals-office"
+    assert page.has_content?(/provides legal advice and support to the Attorney General/i)
+  end
+
+  it "shows 'our policies' when it should" do
+    visit "/government/organisations/attorney-generals-office"
+    refute page.has_content?(/Our policies/i)
+
+    visit "/government/organisations/charity-commission"
+    assert page.has_content?(/Our policies/i)
+    assert page.has_css?(".gem-c-document-list__item-title", text: "Waste and recycling")
   end
 
   it "shows the ministers for an organisation" do

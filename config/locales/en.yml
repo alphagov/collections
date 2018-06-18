@@ -37,6 +37,12 @@ en:
       public_corporation: "Public corporation"
       tribunal_ndpb: "Tribunal non-departmental public body"
       other: "Other"
+    latest_from: "Latest from %{title}"
+    see_all: "See all"
+    what_we_do: "What %{title} does"
+    read_more: "Read more about what we do"
+    follow_us: "Follow us"
+    our_policies: "Our policies"
   language_names:
     en: English
     cy: Cymraeg

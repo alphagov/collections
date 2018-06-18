@@ -6,6 +6,10 @@ module Organisations
       @org = organisation
     end
 
+    def has_featured_news?
+      org.ordered_featured_documents.length.positive?
+    end
+
     def first_featured_news
       main_story = featured_news([org.ordered_featured_documents.first])[0]
       main_story[:large] = true
@@ -29,7 +33,7 @@ module Organisations
         news_stories << {
           href: news["href"],
           image_src: news["image"]["url"],
-          image_alt: news["image"]["alt"],
+          image_alt: news["image"]["alt_text"],
           context: "#{human_date}#{divider}#{document_type}",
           heading_text: news["title"],
           description: news["summary"],

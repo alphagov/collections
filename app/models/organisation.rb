@@ -18,6 +18,10 @@ class Organisation
     @content_item.content_item_data["title"]
   end
 
+  def acronym
+    details["acronym"]
+  end
+
   def organisation_type
     details["organisation_type"]
   end
@@ -47,6 +51,10 @@ class Organisation
     logo["formatted_title"]
   end
 
+  def body
+    details["body"]
+  end
+
   def organisation_image_url
     logo["image"]["url"] if logo["image"].present?
   end
@@ -57,6 +65,10 @@ class Organisation
 
   def web_url
     Plek.current.website_root + base_path
+  end
+
+  def slug
+    base_path.gsub("/government/organisations/", "")
   end
 
   def ordered_featured_links
@@ -83,18 +95,18 @@ class Organisation
     details["ordered_ministers"]
   end
 
-  # methods below are not in use yet, this comment to be removed once confirmed
-
-  def body
-    details["body"]
+  def social_media_links
+    details["social_media_links"]
   end
+
+  def ordered_featured_policies
+    links["ordered_featured_policies"]
+  end
+
+  # methods below are not in use yet, this comment to be removed once confirmed
 
   def child_organisation_count
     links["ordered_child_organisations"].count
-  end
-
-  def social_media_links
-    details["social_media_links"]
   end
 
   def board_members
@@ -111,10 +123,6 @@ class Organisation
 
   def ordered_parent_organisations
     links["ordered_parent_organisations"]
-  end
-
-  def ordered_featured_policies
-    links["ordered_featured_policies"]
   end
 
 private

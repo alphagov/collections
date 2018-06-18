@@ -27,8 +27,8 @@ module Organisations
 
       if has_services_and_information_link?
         see_more_link = {
-          text: "All #{org.title} services and information", # TODO: need to use acronym where available
-          path: "/government/organisations/#{slug}/services-information"
+          text: "All #{org.acronym} services and information",
+          path: "/government/organisations/#{org.slug}/services-information"
         }
       end
 
@@ -81,10 +81,6 @@ module Organisations
 
   private
 
-    def slug
-      org.base_path.gsub("/government/organisations/", "")
-    end
-
     def has_services_and_information_link?
       orgs_with_services_and_information_link = %w{
         charity-commission
@@ -101,7 +97,7 @@ module Organisations
         natural-england
         planning-inspectorate
       }
-      return true if orgs_with_services_and_information_link.include?(slug)
+      return true if orgs_with_services_and_information_link.include?(org.slug)
     end
   end
 end
