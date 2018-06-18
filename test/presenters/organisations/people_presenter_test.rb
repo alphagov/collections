@@ -17,7 +17,7 @@ describe Organisations::PeoplePresenter do
         people: {
           brand: "attorney-generals-office",
           href: "/government/people/oliver-dowden",
-          image_src: "/photo/oliver-dowden",
+          image_src: "/photo/s465_oliver-dowden",
           image_alt: "Oliver Dowden CBE MP",
           description: nil,
           metadata: nil,
@@ -44,7 +44,7 @@ describe Organisations::PeoplePresenter do
         people: {
           brand: "attorney-generals-office",
           href: "/government/people/theresa-may",
-          image_src: "/photo/theresa-may",
+          image_src: "/photo/s465_theresa-may",
           image_alt: "Theresa May MP",
           description: nil,
           metadata: nil,
@@ -146,6 +146,10 @@ describe Organisations::PeoplePresenter do
       expected = "Chief Executive of the Civil Service , Permanent Secretary (Cabinet Office)"
 
       assert_equal expected, @people_presenter.all_people.third[:people][1][:description]
+    end
+
+    it 'fetches small image' do
+      assert_equal "/photo/s465_jeremy-heywood", @people_presenter.all_people.third[:people][0][:image_src]
     end
   end
 end
