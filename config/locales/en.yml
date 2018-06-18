@@ -24,6 +24,7 @@ en:
   view_all: "view all"
   view_less: "view less"
   organisations:
+    high_profile_groups: High profile groups within %{title}
     separate_website: "separate website"
     people:
       board_members: "Our management"

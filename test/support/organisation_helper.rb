@@ -268,4 +268,28 @@ module OrganisationHelpers
       }
     }.with_indifferent_access
   end
+
+  def organisation_with_high_profile_groups
+    {
+      title: "Department for Environment, Food & Rural Affairs",
+      base_path: "/government/organisations/department-for-environment-food-rural-affairs",
+      details: {
+        acronym: "Defra",
+        brand: "department-for-environment-food-rural-affairs",
+        organisation_featuring_priority: "news",
+      },
+      links: {
+        ordered_high_profile_groups: [
+          {
+            base_path: "/government/organisations/rural-development-programme-for-england-network",
+            title: "Rural Development Programme for England Network",
+          },
+          {
+            base_path: "/government/organisations/rural-development-programme-for-england-network-2",
+            title: "Rural Development Programme for England Network 2",
+          }
+        ]
+      }
+    }.with_indifferent_access
+  end
 end
