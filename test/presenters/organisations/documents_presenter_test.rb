@@ -5,7 +5,7 @@ describe Organisations::DocumentsPresenter do
   include OrganisationHelpers
 
   before :each do
-    content_item = ContentItem.new(organisation_with_ministers)
+    content_item = ContentItem.new(organisation_with_featured_documents)
     organisation = Organisation.new(content_item)
     @documents_presenter = Organisations::DocumentsPresenter.new(organisation)
 

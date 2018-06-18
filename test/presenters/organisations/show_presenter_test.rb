@@ -30,7 +30,7 @@ describe Organisations::ShowPresenter do
   end
 
   it 'formats policies correctly' do
-    content_item = ContentItem.new(organisation_with_ministers)
+    content_item = ContentItem.new(organisation_with_policies)
     organisation = Organisation.new(content_item)
     @show_presenter = Organisations::ShowPresenter.new(organisation)
 
