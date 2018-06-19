@@ -73,7 +73,7 @@ class OrganisationAtomFeedTest < ActionDispatch::IntegrationTest
 
   def and_a_title
     title = page.first("feed>entry>title").text(:all)
-    assert_equal title, "OWL and NEWT qualifications, Ministry of Magic"
+    assert_equal title, "Detailed guide: OWL and NEWT qualifications, Ministry of Magic"
   end
 
   def and_a_summary
