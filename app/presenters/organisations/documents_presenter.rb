@@ -1,5 +1,5 @@
 module Organisations
-  class FeaturedNewsPresenter
+  class DocumentsPresenter
     attr_reader :org
 
     def initialize(organisation)

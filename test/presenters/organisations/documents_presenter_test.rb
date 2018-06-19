@@ -1,13 +1,13 @@
 require 'test_helper'
 
-describe Organisations::FeaturedNewsPresenter do
+describe Organisations::DocumentsPresenter do
   include RummagerHelpers
   include OrganisationHelpers
 
   before :each do
     content_item = ContentItem.new(organisation_with_ministers)
     organisation = Organisation.new(content_item)
-    @featured_news_presenter = Organisations::FeaturedNewsPresenter.new(organisation)
+    @documents_presenter = Organisations::DocumentsPresenter.new(organisation)
   end
 
   it 'formats the main large news story correctly' do
@@ -21,7 +21,7 @@ describe Organisations::FeaturedNewsPresenter do
       brand: "attorney-generals-office",
       large: true
     }
-    assert_equal expected, @featured_news_presenter.first_featured_news
+    assert_equal expected, @documents_presenter.first_featured_news
   end
 
   it 'formats the remaining news stories correctly' do
@@ -34,6 +34,6 @@ describe Organisations::FeaturedNewsPresenter do
       description: "John Someone appointed new Director of the Other Office ",
       brand: "attorney-generals-office"
     }]
-    assert_equal expected, @featured_news_presenter.remaining_featured_news
+    assert_equal expected, @documents_presenter.remaining_featured_news
   end
 end

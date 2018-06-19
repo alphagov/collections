@@ -11,7 +11,7 @@ class OrganisationsController < ApplicationController
 
     @show = Organisations::ShowPresenter.new(@organisation)
     @header = Organisations::HeaderPresenter.new(@organisation)
-    @featured_news = Organisations::FeaturedNewsPresenter.new(@organisation)
+    @documents = Organisations::DocumentsPresenter.new(@organisation)
     @what_we_do = Organisations::WhatWeDoPresenter.new(@organisation)
     @people = Organisations::PeoplePresenter.new(@organisation)
 
