@@ -22,7 +22,11 @@ class OrganisationFeedEntryPresenter
   end
 
   def title
-    result["title"]
+    if display_type.present?
+      "#{display_type}: #{result['title']}"
+    else
+      result['title']
+    end
   end
 
   def description
