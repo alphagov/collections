@@ -36,7 +36,11 @@ class Organisation
   end
 
   def is_no_10?
-    details["organisation_type"] == "executive_office"
+    organisation_type == "executive_office"
+  end
+
+  def is_promotional_org?
+    is_no_10? || organisation_type == "civil_service"
   end
 
   def logo
@@ -110,6 +114,18 @@ class Organisation
     details["social_media_links"]
   end
 
+  def foi_exempt?
+    details["foi_exempt"]
+  end
+
+  def foi_contacts
+    links["ordered_foi_contacts"]
+  end
+
+  def ordered_contacts
+    links["ordered_contacts"]
+  end
+
   def ordered_parent_organisations
     links["ordered_parent_organisations"]
   end
@@ -132,10 +148,6 @@ private
 
   def child_organisation_count
     links["ordered_child_organisations"].count
-  end
-
-  def ordered_contacts
-    links["ordered_contacts"]
   end
 
   def ordered_corporate_information_pages

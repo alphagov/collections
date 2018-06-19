@@ -1,0 +1,62 @@
+<div class="organisations__margin-bottom organisations__brand-border-top brand--<%= @organisation.brand %> brand__border-color">
+  <% if @organisation.foi_exempt? %>
+    <%= render "govuk_publishing_components/components/heading", {
+      text: t('organisations.foi.freedom_of_information_act'),
+      padding: true,
+    } %>
+    <p><%= t('organisations.foi.foi_exemption_html', foi_url: 'http://www.legislation.gov.uk/ukpga/2000/36/schedule/1') %></p>
+
+  <% else %>
+    <%= render "govuk_publishing_components/components/heading", {
+      text: t('organisations.foi.make_an_foi_request'),
+      padding: true,
+    } %>
+
+    <%= render "govuk_publishing_components/components/govspeak", {
+      } do %>
+        <ol class="steps">
+          <li>
+            <%= t('organisations.foi.making_foi_requests.step1_html', how_to_path: 'https://www.gov.uk/make-a-freedom-of-information-request/the-freedom-of-information-act') %>
+          </li>
+          <li>
+            <%= t('organisations.foi.making_foi_requests.step2_html', our_releases_path: @show.foi_previous_releases_link) %>
+          </li>
+          <% if @show.has_foi_contacts? %>
+            <li><%= t('organisations.foi.making_foi_requests.step3_html') %></li>
+          <% end %>
+        </ol>
+    <% end %>
+
+    <% if @show.has_foi_contacts? %>
+      <% @show.foi_contacts.each do |contact| %>
+        <%= render "govuk_publishing_components/components/heading", {
+          text: contact[:title],
+          padding: true,
+          heading_level: 3,
+          font_size: 19,
+        } %>
+
+        <div class="grid-row organisations__margin-bottom">
+          <% if contact[:post_addresses].any? %>
+            <div class="column-half">
+              <% contact[:post_addresses].each do |post| %>
+                <p><%= post.html_safe %></p>
+              <% end %>
+            </div>
+          <% end %>
+
+          <% if contact[:email_addresses].any? %>
+            <div class="column-half">
+              <p>Email</p>
+              <% contact[:email_addresses].each do |email| %>
+                <p><%= email.html_safe %></p>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+        <%= contact[:description] if contact[:description] %>
+      <% end %>
+
+    <% end %>
+  <% end %>
+</div>
