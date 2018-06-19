@@ -114,6 +114,10 @@ class Organisation
     links["ordered_parent_organisations"]
   end
 
+  def separate_website_url
+    details["organisation_govuk_status"]["url"]
+  end
+
 private
 
   def links
