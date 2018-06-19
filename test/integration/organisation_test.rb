@@ -499,6 +499,28 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     assert page.has_css?(".gem-c-document-list__item-title", text: "Waste and recycling")
   end
 
+  it "shows latest documents by type" do
+    visit "/government/organisations/attorney-generals-office"
+    assert page.has_css?(".gem-c-heading", text: "Documents")
+
+    assert page.has_css?(".gem-c-heading", text: "Our announcements")
+    assert page.has_css?(".gem-c-document-list__item-title[href='/government/news/first-events-announced-for-national-democracy-week']", text: "First events announced for National Democracy Week")
+
+    assert page.has_css?(".gem-c-heading", text: "Our consultations")
+    assert page.has_css?(".gem-c-document-list__item-title[href='/government/consultations/consultation-on-revised-code-of-data-matching-practice']", text: "Consultation on revised Code of Data Matching Practice")
+
+    assert page.has_css?(".gem-c-heading", text: "Our publications")
+    assert page.has_css?(".gem-c-document-list__item-title[href='/government/publications/national-democracy-week-partner-pack']", text: "National Democracy Week: partner pack")
+
+    refute page.has_css?(".gem-c-heading", text: "Our statistics")
+  end
+
+  it "does not show the latest documents by type section if there are none" do
+    stub_empty_rummager_requests("attorney-generals-office")
+    visit "/government/organisations/attorney-generals-office"
+    refute page.has_css?(".gem-c-heading", text: "Documents")
+  end
+
   it "shows the ministers for an organisation" do
     visit "/government/organisations/attorney-generals-office"
     assert page.has_css?(".gem-c-heading", text: "Our ministers")
