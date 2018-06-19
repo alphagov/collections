@@ -1,6 +1,8 @@
 require 'integration_test_helper'
 
 class OrganisationTest < ActionDispatch::IntegrationTest
+  include OrganisationHelpers
+
   before do
     @content_item_no10 = {
       title: "Prime Minister's Office, 10 Downing Street",
@@ -385,8 +387,23 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     refute page.has_css?(".gem-c-image-card.gem-c-image-card--large .gem-c-image-card__title", text: "Charity annual return 2018")
   end
 
-  it "shows the latest articles when it should" do
-    # TODO: can't write this test until the right content is being rendered in this section
+  it "shows the latest documents when it should" do
+    visit "/government/organisations/attorney-generals-office"
+    assert page.has_css?(".gem-c-heading", text: "Latest from the Attorney General's Office")
+    assert page.has_css?(".gem-c-document-list__item-title[href='/government/news/rapist-has-sentence-increased-after-solicitor-generals-referral']", text: "Rapist has sentence increased after Solicitor General’s referral")
+    assert page.has_css?(".gem-c-document-list__attribute", text: "Press release")
+    assert page.has_css?(".gem-c-document-list__attribute time[datetime='2018-06-18']", text: "18 June 2018")
+  end
+
+  it "shows a see all link in the latest documents section" do
+    visit "/government/organisations/attorney-generals-office"
+    assert page.has_css?("a[href='/government/latest?departments%5B%5D=attorney-generals-office']", text: "See all")
+  end
+
+  it "shows subscription links" do
+    visit "/government/organisations/attorney-generals-office"
+    assert page.has_css?(".gem-c-subscription-links__link[href='/government/email-signup/new?email_signup%5Bfeed%5D=http://www.test.gov.uk/government/organisations/attorney-generals-office.atom']", text: "Get email alerts")
+    assert page.has_css?(".gem-c-subscription-links__link[href='#']", text: "Subscribe to feed")
   end
 
   it "shows the 'what we do' section" do
@@ -447,40 +464,5 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     refute page.has_css?(".gem-c-heading", text: "Chief professional officers")
     refute page.has_css?(".gem-c-heading", text: "Special representatives")
     refute page.has_css?(".gem-c-heading", text: "Traffic commissioners")
-  end
-
-private
-
-  def stub_rummager_latest_content_requests(organisation_slug)
-    stub_rummager_latest_documents_request(organisation_slug)
-    stub_rummager_latest_announcements_request(organisation_slug)
-    stub_rummager_latest_consultations_request(organisation_slug)
-    stub_rummager_latest_publications_request(organisation_slug)
-    stub_rummager_latest_statistics_request(organisation_slug)
-  end
-
-  def stub_rummager_latest_documents_request(organisation_slug)
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=3&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp").
-      to_return(body: { results: [] }.to_json)
-  end
-
-  def stub_rummager_latest_announcements_request(organisation_slug)
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_email_document_supertype=announcements&filter_organisations=#{organisation_slug}&order=-public_timestamp").
-      to_return(body: { results: [] }.to_json)
-  end
-
-  def stub_rummager_latest_consultations_request(organisation_slug)
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_government_document_supertype=consultations&filter_organisations=#{organisation_slug}&order=-public_timestamp").
-      to_return(body: { results: [] }.to_json)
-  end
-
-  def stub_rummager_latest_publications_request(organisation_slug)
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_email_document_supertype=publications&filter_organisations=#{organisation_slug}&order=-public_timestamp").
-      to_return(body: { results: [] }.to_json)
-  end
-
-  def stub_rummager_latest_statistics_request(organisation_slug)
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_government_document_supertype=statistics&filter_organisations=#{organisation_slug}&order=-public_timestamp").
-      to_return(body: { results: [] }.to_json)
   end
 end

@@ -23,13 +23,13 @@
   </div>
 <% end %>
 
-<% if @featured_news.has_featured_news? %>
+<% if @documents.has_featured_news? %>
   <div class="organisations__margin-bottom">
     <% if @organisation.is_news_organisation? %>
-      <%= render "govuk_publishing_components/components/image_card", @featured_news.first_featured_news %>
+      <%= render "govuk_publishing_components/components/image_card", @documents.first_featured_news %>
     <% end %>
 
-    <% @featured_news.remaining_featured_news.in_groups_of(3, false) do |news| %>
+    <% @documents.remaining_featured_news.in_groups_of(3, false) do |news| %>
       <div class="grid-row">
         <% news.each do |news_item| %>
           <div class="column-one-third">
@@ -41,7 +41,7 @@
   </div>
 <% end %>
 
-<% if @show.has_latest_documents? %>
+<% if @documents.has_latest_documents? %>
   <div class="organisations__brand-border-top brand--<%= @organisation.brand %> brand__border-color organisations__margin-bottom">
     <div class="grid-row">
       <div class="column-two-thirds">
@@ -55,7 +55,7 @@
 
     <div class="grid-row">
       <div class="column-two-thirds">
-        <%= render "govuk_publishing_components/components/document_list", @show.latest_documents %>
+        <%= render "govuk_publishing_components/components/document_list", @documents.latest_documents %>
 
         <p class="organisations__margin-bottom brand--<%= @organisation.brand %>">
           <a href="<%= "/government/latest?departments[]=#{@organisation.slug}" %>" class="brand__color"><%= t('organisations.see_all') %></a>
