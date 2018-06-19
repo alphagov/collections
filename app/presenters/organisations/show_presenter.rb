@@ -1,5 +1,8 @@
 module Organisations
   class ShowPresenter
+    include ActionView::Helpers::TagHelper
+    include ActionView::Helpers::UrlHelper
+
     def initialize(organisation)
       @org = organisation
     end
@@ -46,7 +49,53 @@ module Organisations
       }
     end
 
+    def has_foi_contacts?
+      true if @org.foi_contacts && @org.foi_contacts.length.positive?
+    end
+
+    def foi_contacts
+      @org.foi_contacts.map do |foi_contact|
+        {
+          title: foi_title(foi_contact["details"]["title"]),
+          post_addresses: foi_contact["details"]["post_addresses"].map do |post|
+            data = ""
+            data << contact_line(post["title"])
+            data << contact_line(post["street_address"].gsub("\r\n", "<br/>"))
+            data << contact_line(post["locality"])
+            data << contact_line(post["postal_code"])
+            data << contact_line(post["world_location"])
+          end,
+          email_addresses: foi_contact["details"]["email_addresses"].map do |email|
+            make_email_link(email["email"])
+          end,
+          description: foi_description(foi_contact["details"]["description"])
+        }
+      end
+    end
+
+    def foi_previous_releases_link
+      "/government/publications?departments[]=#{@org.slug}&publication_type=foi-releases"
+    end
+
   private
+
+    def contact_line(line)
+      return line + "<br/>" if line && line.length.positive?
+      ""
+    end
+
+    def make_email_link(email)
+      mail_to(email, email, class: "brand__color")
+    end
+
+    def foi_title(title)
+      return title if title
+      I18n.t('organisations.foi.freedom_of_information_requests')
+    end
+
+    def foi_description(contact)
+      content_tag(:p, contact.gsub("\r\n", "<br/>").html_safe) if contact
+    end
 
     def needs_definite_article?(phrase)
       exceptions = [/civil service resourcing/, /^hm/, /ordnance survey/]

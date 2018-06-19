@@ -130,6 +130,10 @@
   <% end %>
 <% end %>
 
+<% unless @organisation.is_promotional_org? %>
+  <%= render partial: 'freedom_of_information' %>
+<% end %>
+
 <% if false %>
   <%
     # the code below is currently disabled as it will break following changes to accommodate the code

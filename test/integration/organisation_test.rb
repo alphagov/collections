@@ -149,6 +149,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             alt_text: "The Charity Commission"
           }
         },
+        foi_exempt: true,
         organisation_govuk_status: {
           status: "live",
         },
@@ -274,6 +275,56 @@ class OrganisationTest < ActionDispatch::IntegrationTest
           {
             "base_path": "/government/organisations/office-of-the-secretary-of-state-for-wales",
             "locale": "en",
+          }
+        ],
+        ordered_foi_contacts: [
+          {
+            withdrawn: false,
+            details: {
+              title: "FOI stuff",
+              description: "FOI requests\r\n\r\nare possible",
+              post_addresses: [
+                {
+                  title: "Office of the Secretary of State for Wales",
+                  street_address: "Gwydyr House\r\nWhitehall",
+                  locality: "",
+                  postal_code: "SW1A 2NP",
+                },
+                {
+                  title: "Office of the Secretary of State for Wales Cardiff",
+                  street_address: "White House\r\nCardiff",
+                  locality: "",
+                  postal_code: "W1 3BZ",
+                }
+              ],
+              email_addresses: [
+                {
+                  email: "walesofficefoi@walesoffice.gsi.gov.uk"
+                },
+                {
+                  email: "foiwales@walesoffice.gsi.gov.uk"
+                }
+              ]
+            }
+          },
+          {
+            withdrawn: false,
+            details: {
+              description: "Something here\r\n\r\nSomething there",
+              post_addresses: [
+                {
+                  title: "The Welsh Office",
+                  street_address: "Green House\r\nBracknell",
+                  locality: "",
+                  postal_code: "B2 3ZZ",
+                }
+              ],
+              email_addresses: [
+                {
+                  email: "welshofficefoi@walesoffice.gsi.gov.uk"
+                }
+              ]
+            }
           }
         ]
       }
@@ -488,5 +539,28 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     assert page.has_css?(".gem-c-notice a[href='http://www.google.com']", text: "separate website")
     assert page.has_css?(".gem-c-govspeak")
     assert page.has_content?(/The college was formerly an executive agency of the Department for Communities and Local Government/i)
+  end
+
+  it 'displays foi information correctly where required' do
+    visit "/government/organisations/prime-ministers-office-10-downing-street"
+    refute page.has_content?(/Make an FOI request/i)
+    refute page.has_content?(/Freedom of Information (FOI) Act/i)
+
+    visit "/government/organisations/charity-commission"
+    assert page.has_content?(/This organisation is not covered by the Freedom of Information Act. To see which organisations are included, see the legislation./i)
+
+    visit "/government/organisations/office-of-the-secretary-of-state-for-wales"
+    assert page.has_content?(/Make an FOI request/i)
+    assert page.has_css?(".gem-c-heading", text: "FOI stuff")
+    assert page.has_content?(/Office of the Secretary of State for Wales/i)
+    assert page.has_content?(/Gwydyr House/i)
+    assert page.has_content?(/Whitehall/i)
+    assert page.has_content?(/SW1A 2NP/i)
+
+    assert page.has_content?(/Office of the Secretary of State for Wales Cardiff/i)
+    assert page.has_content?(/The Welsh Office/i)
+    assert page.has_content?(/walesofficefoi@walesoffice.gsi.gov.uk/i)
+    assert page.has_content?(/foiwales@walesoffice.gsi.gov.uk/i)
+    assert page.has_content?(/welshofficefoi@walesoffice.gsi.gov.uk/i)
   end
 end
