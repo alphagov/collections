@@ -54,7 +54,7 @@
             </div>
           <% end %>
         </div>
-        <%= contact[:description] if contact[:description] %>
+        <%= auto_link(contact[:description]) if contact[:description] %>
       <% end %>
 
     <% end %>

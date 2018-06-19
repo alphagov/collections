@@ -267,6 +267,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
+    rinku (2.0.4)
     rouge (3.1.1)
     rubocop (0.52.1)
       parallel (~> 1.10)
@@ -370,6 +371,7 @@ DEPENDENCIES
   poltergeist
   pry-byebug
   rails (= 5.2.0)
+  rinku
   sass-rails (~> 5.0.3)
   simplecov
   simplecov-rcov
