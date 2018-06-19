@@ -23,64 +23,35 @@ module Organisations
       search_results_to_documents(@latest_documents)
     end
 
-    def has_latest_announcements?
-      latest_announcements.length.positive?
+    def has_latest_documents_by_type?
+      has_latest_announcements? ||
+        has_latest_consultations? ||
+        has_latest_publications? ||
+        has_latest_statistics?
     end
 
-    def latest_announcements
-      @latest_announcements ||= Services.rummager.search(
-        count: 2,
-        order: "-public_timestamp",
-        filter_organisations: @org.slug,
-        filter_email_document_supertype: "announcements",
-        fields: %w[title link content_store_document_type public_timestamp]
-      )["results"]
-      search_results_to_documents(@latest_announcements)
-    end
+    def latest_documents_by_type
+      all_documents = [
+        announcements: latest_announcements,
+        consultations: latest_consultations,
+        publications: latest_publications,
+        statistics: latest_statistics
+      ]
 
-    def has_latest_consultations?
-      latest_consultations.length.positive?
-    end
+      formatted_documents = []
 
-    def latest_consultations
-      @latest_consultations ||= Services.rummager.search(
-        count: 2,
-        order: "-public_timestamp",
-        filter_organisations: @org.slug,
-        filter_government_document_supertype: "consultations",
-        fields: %w[title link content_store_document_type public_timestamp]
-      )["results"]
-      search_results_to_documents(@latest_consultations)
-    end
+      all_documents.each do |document_group|
+        document_group.each do |document_type, documents|
+          if documents[:items].length > 1
+            formatted_documents << {
+              documents: documents,
+              title: I18n.t('organisations.document_types.' + document_type.to_s),
+            }
+          end
+        end
+      end
 
-    def has_latest_publications?
-      latest_publications.length.positive?
-    end
-
-    def latest_publications
-      @latest_publications ||= Services.rummager.search(
-        count: 2,
-        order: "-public_timestamp",
-        filter_organisations: @org.slug,
-        filter_email_document_supertype: "publications",
-        fields: %w[title link content_store_document_type public_timestamp]
-      )["results"]
-      search_results_to_documents(@latest_publications)
-    end
-
-    def has_latest_statistics?
-      latest_statistics.length.positive?
-    end
-
-    def latest_statistics
-      @latest_statistics ||= Services.rummager.search(
-        count: 2,
-        order: "-public_timestamp",
-        filter_organisations: @org.slug,
-        filter_government_document_supertype: "statistics",
-        fields: %w[title link content_store_document_type public_timestamp]
-      )["results"]
-      search_results_to_documents(@latest_statistics)
+      formatted_documents.compact
     end
 
     def subscription_links
@@ -122,16 +93,17 @@ module Organisations
 
   private
 
-    def search_results_to_documents(search_results)
+    def search_results_to_documents(search_results, see_all_link: false)
       documents = []
 
       search_results.each do |item|
         metadata = {}
-        metadata[:document_type] = item["content_store_document_type"].capitalize.tr("_", " ")
 
         if item["public_timestamp"]
           metadata[:public_updated_at] = Date.parse(item["public_timestamp"])
         end
+
+        metadata[:document_type] = item["content_store_document_type"].capitalize.tr("_", " ")
 
         documents << {
           link: {
@@ -139,6 +111,15 @@ module Organisations
             path: item["link"]
           },
           metadata: metadata
+        }
+      end
+
+      if see_all_link
+        documents << {
+          link: {
+            text: I18n.t('organisations.document_types.see_all_documents', type: see_all_link),
+            path: "/government/#{see_all_link}?departments%5B%5D=#{@org.slug}"
+          }
         }
       end
 
@@ -155,6 +136,66 @@ module Organisations
 
     def has_definite_article?(phrase)
       phrase.downcase.strip[0..2] == 'the'
+    end
+
+    def has_latest_announcements?
+      latest_announcements.length.positive?
+    end
+
+    def latest_announcements
+      @latest_announcements ||= Services.rummager.search(
+        count: 2,
+        order: "-public_timestamp",
+        filter_organisations: @org.slug,
+        filter_email_document_supertype: "announcements",
+        fields: %w[title link content_store_document_type public_timestamp]
+      )["results"]
+      search_results_to_documents(@latest_announcements, see_all_link: "announcements")
+    end
+
+    def has_latest_consultations?
+      latest_consultations.length.positive?
+    end
+
+    def latest_consultations
+      @latest_consultations ||= Services.rummager.search(
+        count: 2,
+        order: "-public_timestamp",
+        filter_organisations: @org.slug,
+        filter_government_document_supertype: "consultations",
+        fields: %w[title link content_store_document_type public_timestamp]
+      )["results"]
+      search_results_to_documents(@latest_consultations, see_all_link: "consultations")
+    end
+
+    def has_latest_publications?
+      latest_publications.length.positive?
+    end
+
+    def latest_publications
+      @latest_publications ||= Services.rummager.search(
+        count: 2,
+        order: "-public_timestamp",
+        filter_organisations: @org.slug,
+        filter_email_document_supertype: "publications",
+        fields: %w[title link content_store_document_type public_timestamp]
+      )["results"]
+      search_results_to_documents(@latest_publications, see_all_link: "publications")
+    end
+
+    def has_latest_statistics?
+      latest_statistics.length.positive?
+    end
+
+    def latest_statistics
+      @latest_statistics ||= Services.rummager.search(
+        count: 2,
+        order: "-public_timestamp",
+        filter_organisations: @org.slug,
+        filter_government_document_supertype: "statistics",
+        fields: %w[title link content_store_document_type public_timestamp]
+      )["results"]
+      search_results_to_documents(@latest_statistics, see_all_link: "statistics")
     end
   end
 end

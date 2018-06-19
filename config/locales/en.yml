@@ -24,6 +24,13 @@ en:
   view_all: "view all"
   view_less: "view less"
   organisations:
+    document_types:
+      documents: "Documents"
+      announcements: "Our announcements"
+      consultations: "Our consultations"
+      publications: "Our publications"
+      statistics: "Our statistics"
+      see_all_documents: "See all %{type}"
     separate_website: "separate website"
     people:
       board_members: "Our management"
