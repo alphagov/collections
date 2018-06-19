@@ -32,6 +32,10 @@ module Supergroups
 
     def consultation_closing_date(base_path)
       @consultation = ::Services.content_store.content_item(base_path)
+
+      # Don't continue if the Content Store returned something unexpected
+      return if @consultation["base_path"] != base_path
+
       date = Date.parse(@consultation["details"]["closing_date"])
 
       if date < Time.zone.today
