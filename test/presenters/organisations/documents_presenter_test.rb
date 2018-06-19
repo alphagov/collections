@@ -8,6 +8,8 @@ describe Organisations::DocumentsPresenter do
     content_item = ContentItem.new(organisation_with_ministers)
     organisation = Organisation.new(content_item)
     @documents_presenter = Organisations::DocumentsPresenter.new(organisation)
+
+    stub_rummager_latest_content_requests("attorney-generals-office")
   end
 
   it 'formats the main large news story correctly' do
@@ -35,5 +37,26 @@ describe Organisations::DocumentsPresenter do
       brand: "attorney-generals-office"
     }]
     assert_equal expected, @documents_presenter.remaining_featured_news
+  end
+
+  it 'formats latest documents correctly' do
+    expected =
+      {
+        items: [
+          {
+            link: {
+              text: "Rapist has sentence increased after Solicitor General’s referral",
+              path: "/government/news/rapist-has-sentence-increased-after-solicitor-generals-referral"
+            },
+            metadata: {
+              document_type: "Press release",
+              public_updated_at: Date.parse("2018-06-18T17:39:34.000+01:00")
+            }
+          }
+        ],
+        brand: "attorney-generals-office"
+      }
+
+    assert_equal expected, @documents_presenter.latest_documents
   end
 end
