@@ -141,68 +141,6 @@ module OrganisationHelpers
             }
           }
         ]
-      },
-      links: {
-        ordered_foi_contacts: [
-          {
-            withdrawn: false,
-            details: {
-              title: "FOI stuff",
-              description: "FOI requests\r\n\r\nare possible",
-              post_addresses: [
-                {
-                  title: "Office of the Secretary of State for Wales",
-                  street_address: "Gwydyr House\r\nWhitehall",
-                  postal_code: "SW1A 2NP",
-                  world_location: "UK"
-                },
-                {
-                  title: "Office of the Secretary of State for Wales Cardiff",
-                  street_address: "White House\r\nCardiff",
-                  postal_code: "W1 3BZ",
-                }
-              ],
-              email_addresses: [
-                {
-                  email: "walesofficefoi@walesoffice.gsi.gov.uk"
-                },
-                {
-                  email: "foiwales@walesoffice.gsi.gov.uk"
-                }
-              ]
-            }
-          },
-          {
-            withdrawn: false,
-            details: {
-              description: "Something here\r\n\r\nSomething there",
-              post_addresses: [
-                {
-                  title: "The Welsh Office",
-                  street_address: "Green House\r\nBracknell",
-                  postal_code: "B2 3ZZ",
-                }
-              ],
-              email_addresses: [
-                {
-                  email: "welshofficefoi@walesoffice.gsi.gov.uk"
-                }
-              ]
-            }
-          },
-          {
-            withdrawn: false,
-            details: {
-              post_addresses: [
-                {
-                  street_address: "Red House\r\nSlough",
-                  postal_code: "S1 9NN",
-                }
-              ],
-              email_addresses: []
-            }
-          }
-        ]
       }
     }.with_indifferent_access
   end
@@ -340,6 +278,82 @@ module OrganisationHelpers
           {
             base_path: "/government/organisations/rural-development-programme-for-england-network-2",
             title: "Rural Development Programme for England Network 2",
+          }
+        ]
+      }
+    }.with_indifferent_access
+  end
+
+  def organisation_with_foi
+    {
+      title: "Attorney General's Office",
+      base_path: "/government/organisations/attorney-generals-office",
+      details: {
+        brand: "attorney-generals-office",
+        organisation_featuring_priority: "news",
+        organisation_govuk_status: {
+          status: "live",
+        }
+      },
+      links: {
+        ordered_foi_contacts: [
+          {
+            withdrawn: false,
+            details: {
+              title: "FOI stuff",
+              description: "FOI requests\r\n\r\nare possible",
+              post_addresses: [
+                {
+                  title: "Office of the Secretary of State for Wales",
+                  street_address: "Gwydyr House\r\nWhitehall",
+                  postal_code: "SW1A 2NP",
+                  world_location: "UK"
+                },
+                {
+                  title: "Office of the Secretary of State for Wales Cardiff",
+                  street_address: "White House\r\nCardiff",
+                  postal_code: "W1 3BZ",
+                }
+              ],
+              email_addresses: [
+                {
+                  email: "walesofficefoi@walesoffice.gsi.gov.uk"
+                },
+                {
+                  email: "foiwales@walesoffice.gsi.gov.uk"
+                }
+              ]
+            }
+          },
+          {
+            withdrawn: false,
+            details: {
+              description: "Something here\r\n\r\nSomething there",
+              post_addresses: [
+                {
+                  title: "The Welsh Office",
+                  street_address: "Green House\r\nBracknell",
+                  postal_code: "B2 3ZZ",
+                }
+              ],
+              email_addresses: [
+                {
+                  email: "welshofficefoi@walesoffice.gsi.gov.uk"
+                }
+              ]
+            }
+          },
+          {
+            withdrawn: false,
+            details: {
+              post_addresses: [
+                {
+                  street_address: "Red House\r\nSlough",
+                  postal_code: "S1 9NN",
+                }
+              ],
+              email_addresses: []
+            }
           }
         ]
       }

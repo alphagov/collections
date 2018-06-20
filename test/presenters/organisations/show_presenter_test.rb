@@ -107,7 +107,7 @@ describe Organisations::ShowPresenter do
   end
 
   it 'formats foi contacts correctly' do
-    content_item = ContentItem.new(organisation_with_ministers)
+    content_item = ContentItem.new(organisation_with_foi)
     organisation = Organisation.new(content_item)
     @show_presenter = Organisations::ShowPresenter.new(organisation)
 
