@@ -98,6 +98,9 @@ module OrganisationHelpers
       details: {
         brand: "attorney-generals-office",
         organisation_featuring_priority: "news",
+        organisation_govuk_status: {
+          status: "live",
+        },
         ordered_ministers: [
           {
             name: "Oliver Dowden CBE MP",
@@ -209,6 +212,9 @@ module OrganisationHelpers
       title: "Attorney General's Office",
       details: {
         brand: "attorney-generals-office",
+        organisation_govuk_status: {
+          status: "live",
+        },
         ordered_board_members: [
           {
             name: "Sir Jeremy Heywood",
@@ -247,6 +253,9 @@ module OrganisationHelpers
       title: "Attorney General's Office",
       base_path: "/government/organisations/attorney-generals-office",
       details: {
+        organisation_govuk_status: {
+          status: "live",
+        },
         brand: "attorney-generals-office",
         organisation_featuring_priority: "news"
       },
@@ -277,6 +286,9 @@ module OrganisationHelpers
       title: "Attorney General's Office",
       base_path: "/government/organisations/attorney-generals-office",
       details: {
+        organisation_govuk_status: {
+          status: "live",
+        },
         brand: "attorney-generals-office",
         organisation_featuring_priority: "news",
         ordered_featured_documents: [
@@ -312,6 +324,9 @@ module OrganisationHelpers
       title: "Department for Environment, Food & Rural Affairs",
       base_path: "/government/organisations/department-for-environment-food-rural-affairs",
       details: {
+        organisation_govuk_status: {
+          status: "live",
+        },
         acronym: "Defra",
         brand: "department-for-environment-food-rural-affairs",
         organisation_featuring_priority: "news",

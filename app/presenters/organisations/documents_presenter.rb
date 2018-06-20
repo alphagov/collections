@@ -114,7 +114,7 @@ module Organisations
 
       {
         items: documents,
-        brand: @org.brand
+        brand: (@org.brand unless @org.has_separate_website?)
       }
     end
 

@@ -5,7 +5,7 @@
   title: "#{organisation.title} has a <a href='#{@organisation.separate_website_url}'>separate website</a>".html_safe
 } %>
 
-<div class="grid-row">
+<div class="grid-row organisations__margin-bottom">
   <div class="column-two-thirds">
     <%= render "govuk_publishing_components/components/govspeak", {
     } do %>
@@ -13,3 +13,7 @@
     <% end %>
   </div>
 </div>
+
+<% if @documents.has_latest_documents_by_type?  %>
+  <%= render partial: 'latest_documents_by_type' %>
+<% end %>
