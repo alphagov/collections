@@ -1,10 +1,8 @@
 require 'integration_test_helper'
-require 'slimmer/test_helpers/govuk_components'
 
 class WorldLocationTaxonTest < ActionDispatch::IntegrationTest
   include RummagerHelpers
   include TaxonHelpers
-  include Slimmer::TestHelpers::GovukComponents
 
   it 'contains both the atom and email signup url if we are browsing a world location' do
     @base_path = '/world/usa'

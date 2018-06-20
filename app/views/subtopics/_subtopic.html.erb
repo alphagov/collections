@@ -5,7 +5,7 @@
     <div class="column-two-thirds">
       <%= yield :page_title %>
       <% if organisations.any? %>
-        <%= render "govuk_component/metadata", from: organisations.array_of_links %>
+        <%= render "govuk_publishing_components/components/metadata", from: organisations.array_of_links %>
       <% end %>
     </div>
 
