@@ -1,0 +1,14 @@
+<div class="grid-row">
+  <div class="<%= @header.logo_wrapper_class %> organisations__margin-bottom">
+    <%= render "govuk_publishing_components/components/organisation_logo", {
+      organisation: @header.organisation_logo
+    } %>
+  </div>
+
+  <% unless @organisation.has_separate_website? %>
+    <div class="<%= @header.link_wrapper_class %> organisations__margin-bottom">
+      <%= render "govuk_publishing_components/components/translation-nav", @header.translation_links %>
+      <%= render "components/topic-list", @header.ordered_featured_links %>
+    </div>
+  <% end %>
+</div>

@@ -1,4 +1,4 @@
-<div class="organisations__margin-bottom organisations__brand-border-top brand--<%= @organisation.brand %> brand__border-color">
+<section class="brand--<%= @organisation.brand %> brand__border-color organisations__brand-border-top organisations__margin-bottom">
   <% if @organisation.foi_exempt? %>
     <%= render "govuk_publishing_components/components/heading", {
       text: t('organisations.foi.freedom_of_information_act'),
@@ -59,4 +59,4 @@
 
     <% end %>
   <% end %>
-</div>
+</section>

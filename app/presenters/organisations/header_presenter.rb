@@ -23,28 +23,30 @@ module Organisations
     end
 
     def ordered_featured_links
-      links = []
+      if org.ordered_featured_links
+        links = []
 
-      if has_services_and_information_link?
-        see_more_link = {
-          text: "All #{org.acronym} services and information",
-          path: "/government/organisations/#{org.slug}/services-information"
+        if has_services_and_information_link?
+          see_more_link = {
+            text: "All #{org.acronym} services and information",
+            path: "/government/organisations/#{org.slug}/services-information"
+          }
+        end
+
+        org.ordered_featured_links.each do |link|
+          links << {
+            text: link["title"],
+            path: link["href"]
+          }
+        end
+
+        {
+          small: org.is_news_organisation?,
+          brand: org.brand,
+          items: links,
+          see_more_link: see_more_link
         }
       end
-
-      org.ordered_featured_links.each do |link|
-        links << {
-          text: link["title"],
-          path: link["href"]
-        }
-      end
-
-      {
-        small: org.is_news_organisation?,
-        brand: org.brand,
-        items: links,
-        see_more_link: see_more_link
-      }
     end
 
     def logo_wrapper_class

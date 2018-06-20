@@ -1,0 +1,15 @@
+<section class="organisations__margin-bottom">
+  <% if @organisation.is_news_organisation? %>
+    <%= render "govuk_publishing_components/components/image_card", @documents.first_featured_news %>
+  <% end %>
+
+  <% @documents.remaining_featured_news.in_groups_of(3, false) do |news| %>
+    <div class="grid-row">
+      <% news.each do |news_item| %>
+        <div class="column-one-third">
+          <%= render "govuk_publishing_components/components/image_card", news_item %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</section>

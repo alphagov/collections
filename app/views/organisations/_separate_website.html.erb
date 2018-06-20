@@ -1,16 +1,5 @@
-<% content_for :breadcrumbs do %>
-  <div class="organisations__margin-bottom">
-    <h1 class="visually-hidden"><%= @header.org.title %></h1>
-  </div>
-<% end %>
-
-<div class="grid-row">
-  <div class="column-one-third organisations__margin-bottom">
-    <%= render "govuk_publishing_components/components/organisation_logo", {
-      organisation: @header.organisation_logo
-    } %>
-  </div>
-</div>
+<%= render partial: 'title' %>
+<%= render partial: 'header' %>
 
 <%= render "govuk_publishing_components/components/notice", {
   title: "#{organisation.title} has a <a href='#{@organisation.separate_website_url}'>separate website</a>".html_safe

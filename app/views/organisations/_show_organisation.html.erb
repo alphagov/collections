@@ -1,123 +1,23 @@
-<% content_for :breadcrumbs do %>
-  <div class="organisations__margin-bottom">
-    <% if @organisation.is_no_10? %>
-      <h1 class="no10-banner organisations__margin-bottom"><%= @header.org.title %></h1>
-    <% else %>
-      <h1 class="visually-hidden"><%= @header.org.title %></h1>
-    <% end %>
-  </div>
-<% end %>
+<%= render partial: 'title' %>
 
 <% unless @organisation.is_no_10? %>
-  <div class="grid-row">
-    <div class="<%= @header.logo_wrapper_class %> organisations__margin-bottom">
-      <%= render "govuk_publishing_components/components/organisation_logo", {
-        organisation: @header.organisation_logo
-      } %>
-    </div>
-
-    <div class="<%= @header.link_wrapper_class %> organisations__margin-bottom">
-      <%= render "govuk_publishing_components/components/translation-nav", @header.translation_links %>
-      <%= render "components/topic-list", @header.ordered_featured_links %>
-    </div>
-  </div>
+  <%= render partial: 'header' %>
 <% end %>
 
 <% if @documents.has_featured_news? %>
-  <div class="organisations__margin-bottom">
-    <% if @organisation.is_news_organisation? %>
-      <%= render "govuk_publishing_components/components/image_card", @documents.first_featured_news %>
-    <% end %>
-
-    <% @documents.remaining_featured_news.in_groups_of(3, false) do |news| %>
-      <div class="grid-row">
-        <% news.each do |news_item| %>
-          <div class="column-one-third">
-            <%= render "govuk_publishing_components/components/image_card", news_item %>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
+  <%= render partial: 'featured_news' %>
 <% end %>
 
 <% if @documents.has_latest_documents? %>
-  <div class="organisations__brand-border-top brand--<%= @organisation.brand %> brand__border-color organisations__margin-bottom">
-    <div class="grid-row">
-      <div class="column-two-thirds">
-        <%= render "govuk_publishing_components/components/heading", {
-          text: t('organisations.latest_from', title: @show.prefixed_title),
-          padding: true,
-          margin_bottom: 2
-        } %>
-      </div>
-    </div>
-
-    <div class="grid-row">
-      <div class="column-two-thirds">
-        <%= render "govuk_publishing_components/components/document_list", @documents.latest_documents %>
-
-        <p class="organisations__margin-bottom brand--<%= @organisation.brand %>">
-          <a href="<%= "/government/latest?departments[]=#{@organisation.slug}" %>" class="brand__color"><%= t('organisations.see_all') %></a>
-        </p>
-
-        <%= render "govuk_publishing_components/components/subscription-links", @show.subscription_links %>
-      </div>
-    </div>
-  </div>
+  <%= render partial: 'latest_documents' %>
 <% end %>
 
-<div class="organisations__brand-border-top brand--<%= @organisation.brand %> brand__border-color organisations__margin-bottom">
-  <div class="grid-row">
-    <div class="column-two-thirds">
-      <%= render "govuk_publishing_components/components/heading", {
-        text: t('organisations.what_we_do', title: @show.prefixed_title),
-        padding: true,
-        margin_bottom: 2
-      } %>
-    </div>
-  </div>
-
-  <div class="grid-row">
-    <div class="column-two-thirds brand--<%= @organisation.brand %>">
-      <%= render "govuk_publishing_components/components/govspeak", {
-        } do %>
-          <p><%= @organisation.body.html_safe %></p>
-          <p>
-            <a href="<%= @organisation.base_path %>/about" class="brand__color">
-              <%= t('organisations.read_more') %>
-            </a>
-          </p>
-      <% end %>
-    </div>
-
-    <% if @what_we_do.has_share_links? %>
-      <div class="column-one-third">
-        <%= render "govuk_publishing_components/components/heading", {
-          text: t('organisations.follow_us'),
-          margin_bottom: 2,
-          heading_level: 3,
-          font_size: 19
-        } %>
-        <%= render "govuk_publishing_components/components/share_links", @what_we_do.share_links %>
-      </div>
-    <% end %>
-  </div>
-</div>
+<% if @organisation.body || what_we_do.has_share_links? %>
+  <%= render partial: 'what_we_do' %>
+<% end %>
 
 <% if @show.has_featured_policies? %>
-  <div class="grid-row">
-    <div class="column-one-third">
-      <%= render "govuk_publishing_components/components/heading", {
-        text: t('organisations.our_policies'),
-        margin_bottom: 2
-      } %>
-    </div>
-
-    <div class="column-two-thirds">
-      <%= render "govuk_publishing_components/components/document_list", @show.featured_policies %>
-    </div>
-  </div>
+  <%= render partial: 'featured_policies' %>
 <% end %>
 
 <% unless @organisation.is_no_10? %>
@@ -135,7 +35,7 @@
 <% end %>
 
 <% if @show.high_profile_groups[:items] %>
-  <div class="grid-row organisations__section">
+  <section class="grid-row organisations__margin-bottom">
     <div class="column-two-thirds">
       <%= render "govuk_publishing_components/components/heading", {
         text: @show.high_profile_groups[:title],
@@ -147,24 +47,6 @@
 
       <%= render "components/topic-list", @show.high_profile_groups %>
     </div>
-  </div>
+  </section>
 <% end %>
 
-<% if false %>
-  <%
-    # the code below is currently disabled as it will break following changes to accommodate the code
-    # above, however it is still needed for reference. It will be updated and removed later
-  %>
-
-
-<%= render partial: 'contact',
-           locals: {
-               organisation: organisation,
-               contact: organisation.ordered_contacts } %>
-
-<%= render partial: 'corporate_information',
-           locals: {
-               organisation: organisation,
-               corporate_info: organisation.ordered_corporate_information_pages } %>
-
-<% end %>
