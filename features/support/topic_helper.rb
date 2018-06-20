@@ -9,11 +9,6 @@ module TopicHelper
   include Slimmer::TestHelpers::GovukComponents
 
   def stub_topic_lookups
-    @organisations = %w{
-      government/organisations/department-of-energy-climate-change
-      government/organisations/air-accidents-investigation-branch
-    }
-
     rummager_has_documents_for_subtopic(
       'content-id-for-fields-and-wells',
       %w{

@@ -70,10 +70,10 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
         assert page.has_css?(".gem-c-title__context-link[href='/topic/oil-and-gas']", text: "Oil and Gas")
       end
 
-      within_static_component('metadata') do
+      within '.gem-c-metadata' do
         # The orgs are fixed in the rummager test helpers
-        assert page.has_text?("Department of Energy &amp; Climate Change")
-        assert page.has_text?("Foreign &amp; Commonwealth Office")
+        assert page.has_text?("Department of Energy & Climate Change")
+        assert page.has_text?("Foreign & Commonwealth Office")
       end
     end
 
@@ -105,9 +105,9 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
         assert page.has_css?(".gem-c-title__context-link[href='/topic/oil-and-gas']", text: "Oil and Gas")
       end
 
-      within_static_component('metadata') do
-        assert page.has_text?("Department of Energy &amp; Climate Change")
-        assert page.has_text?("Foreign &amp; Commonwealth Office")
+      within '.gem-c-metadata' do
+        assert page.has_text?("Department of Energy & Climate Change")
+        assert page.has_text?("Foreign & Commonwealth Office")
       end
     end
 
@@ -146,10 +146,10 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
           assert page.has_css?(".gem-c-title__context-link[href='/topic/oil-and-gas/offshore']", text: "Offshore")
         end
 
-        within_static_component('metadata') do
+        within '.gem-c-metadata' do
           # The orgs are fixed in the rummager test helpers
-          assert page.has_text?("Department of Energy &amp; Climate Change")
-          assert page.has_text?("Foreign &amp; Commonwealth Office")
+          assert page.has_text?("Department of Energy & Climate Change")
+          assert page.has_text?("Foreign & Commonwealth Office")
         end
       end
 
