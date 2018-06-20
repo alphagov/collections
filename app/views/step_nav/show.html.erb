@@ -15,7 +15,7 @@
         average_title_length: 'long',
         margin_bottom: 0 %>
 
-    <div class="govuk-govspeak"><%= raw(step_by_step.introduction) %></div>
+    <div class="govuk-govspeak"><%= sanitize(step_by_step.introduction, tags: %w(strong, em, a), attributes: %w(href)) %></div>
   </div>
 </div>
 <div class="grid-row">
