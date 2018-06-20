@@ -132,7 +132,17 @@ class OrganisationTest < ActionDispatch::IntegrationTest
         ]
       },
       links: {
-        available_translations: []
+        available_translations: [],
+        ordered_high_profile_groups: [
+          {
+            base_path: "/government/organisations/attorney-generals-office-1",
+            title: "High Profile Group 1",
+          },
+          {
+            base_path: "/government/organisations/attorney-generals-office-2",
+            title: "High Profile Group 2",
+          }
+        ]
       }
     }
 
@@ -562,5 +572,17 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     assert page.has_content?(/walesofficefoi@walesoffice.gsi.gov.uk/i)
     assert page.has_content?(/foiwales@walesoffice.gsi.gov.uk/i)
     assert page.has_content?(/welshofficefoi@walesoffice.gsi.gov.uk/i)
+  end
+
+  it "shows high profile groups section" do
+    visit "/government/organisations/attorney-generals-office"
+    assert page.has_css?(".gem-c-heading", text: "High profile groups within the Attorney General\'s Office")
+    assert page.has_css?(".app-c-topic-list__link[href='/government/organisations/attorney-generals-office-1']", text: "High Profile Group 1")
+    assert page.has_css?(".app-c-topic-list__link[href='/government/organisations/attorney-generals-office-2']", text: "High Profile Group 2")
+  end
+
+  it 'does not show section for organisations without high profile groups' do
+    visit "/government/organisations/office-of-the-secretary-of-state-for-wales"
+    refute page.has_css?(".gem-c-heading", text: "High profile groups within the Office of the Secretary of State for Wales")
   end
 end

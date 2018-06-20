@@ -77,6 +77,21 @@ module Organisations
       "/government/publications?departments[]=#{@org.slug}&publication_type=foi-releases"
     end
 
+    def high_profile_groups
+      high_profile_groups = @org.ordered_high_profile_groups && @org.ordered_high_profile_groups.map do |group|
+        {
+          text: group["title"],
+          path: group["base_path"]
+        }
+      end
+
+      {
+        title: I18n.t('organisations.high_profile_groups', title: acronym),
+        brand: @org.brand,
+        items: high_profile_groups
+      }
+    end
+
   private
 
     def contact_line(line)
@@ -95,6 +110,14 @@ module Organisations
 
     def foi_description(contact)
       content_tag(:p, contact.gsub("\r\n", "<br/>").html_safe) if contact
+    end
+
+    def acronym
+      if @org.acronym && !@org.acronym.empty?
+        @org.acronym
+      else
+        prefixed_title
+      end
     end
 
     def needs_definite_article?(phrase)

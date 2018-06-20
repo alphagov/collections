@@ -30,7 +30,7 @@ describe Organisations::ShowPresenter do
   end
 
   it 'formats policies correctly' do
-    content_item = ContentItem.new(organisation_with_ministers)
+    content_item = ContentItem.new(organisation_with_policies)
     organisation = Organisation.new(content_item)
     @show_presenter = Organisations::ShowPresenter.new(organisation)
 
@@ -94,5 +94,28 @@ describe Organisations::ShowPresenter do
     ]
 
     assert_equal expected, @show_presenter.foi_contacts
+  end
+
+  it 'formats high profile groups correctly' do
+    content_item = ContentItem.new(organisation_with_high_profile_groups)
+    organisation = Organisation.new(content_item)
+    @show_presenter = Organisations::ShowPresenter.new(organisation)
+
+    expected = {
+      title: "High profile groups within Defra",
+      brand: "department-for-environment-food-rural-affairs",
+      items: [
+        {
+          text: "Rural Development Programme for England Network",
+          path: "/government/organisations/rural-development-programme-for-england-network"
+        },
+        {
+          text: "Rural Development Programme for England Network 2",
+          path: "/government/organisations/rural-development-programme-for-england-network-2"
+        }
+      ]
+    }
+
+    assert_equal expected, @show_presenter.high_profile_groups
   end
 end

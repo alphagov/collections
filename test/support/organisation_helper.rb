@@ -99,50 +99,9 @@ module OrganisationHelpers
               alt_text: "Theresa May MP"
             }
           }
-        ],
-        ordered_featured_documents: [
-          {
-            title: "New head of the Serious Fraud Office announced",
-            href: "/government/news/new-head-of-the-serious-fraud-office-announced",
-            image: {
-              url: "https://assets.publishing.service.gov.uk/jeremy.jpg",
-              alt_text: "Attorney General Jeremy Wright QC MP"
-            },
-            summary: "Lisa Osofsky appointed new Director of the Serious Fraud Office ",
-            public_updated_at: "2018-06-04T11:30:03.000+01:00",
-            document_type: "Press release"
-          },
-          {
-            title: "New head of a different office announced",
-            href: "/government/news/new-head-of-a-different-office-announced",
-            image: {
-              url: "https://assets.publishing.service.gov.uk/john.jpg",
-              alt_text: "John Someone MP"
-            },
-            summary: "John Someone appointed new Director of the Other Office ",
-            public_updated_at: "2017-06-04T11:30:03.000+01:00",
-            document_type: "Policy paper"
-          }
-        ],
+        ]
       },
       links: {
-        ordered_featured_policies: [
-          {
-            api_path: "/api/content/government/policies/waste-and-recycling",
-            base_path: "/government/policies/waste-and-recycling",
-            content_id: "5d5e9324-7631-11e4-a3cb-005056011aef",
-            description: "What the government’s doing about waste and recycling.",
-            document_type: "policy",
-            locale: "en",
-            public_updated_at: "2015-05-14T16:39:48Z",
-            schema_name: "policy",
-            title: "Waste and recycling",
-            withdrawn: false,
-            links: {},
-            api_url: "https://www.gov.uk/api/content/government/policies/waste-and-recycling",
-            web_url: "https://www.gov.uk/government/policies/waste-and-recycling"
-          },
-        ],
         ordered_foi_contacts: [
           {
             withdrawn: false,
@@ -240,6 +199,95 @@ module OrganisationHelpers
               alt_text: "John Manzoni"
             }
           },
+        ]
+      }
+    }.with_indifferent_access
+  end
+
+  def organisation_with_policies
+    {
+      title: "Attorney General's Office",
+      base_path: "/government/organisations/attorney-generals-office",
+      details: {
+        brand: "attorney-generals-office",
+        organisation_featuring_priority: "news"
+      },
+      links: {
+        ordered_featured_policies: [
+          {
+            api_path: "/api/content/government/policies/waste-and-recycling",
+            base_path: "/government/policies/waste-and-recycling",
+            content_id: "5d5e9324-7631-11e4-a3cb-005056011aef",
+            description: "What the government’s doing about waste and recycling.",
+            document_type: "policy",
+            locale: "en",
+            public_updated_at: "2015-05-14T16:39:48Z",
+            schema_name: "policy",
+            title: "Waste and recycling",
+            withdrawn: false,
+            links: {},
+            api_url: "https://www.gov.uk/api/content/government/policies/waste-and-recycling",
+            web_url: "https://www.gov.uk/government/policies/waste-and-recycling"
+          },
+        ]
+      }
+    }.with_indifferent_access
+  end
+
+  def organisation_with_featured_documents
+    {
+      title: "Attorney General's Office",
+      base_path: "/government/organisations/attorney-generals-office",
+      details: {
+        brand: "attorney-generals-office",
+        organisation_featuring_priority: "news",
+        ordered_featured_documents: [
+          {
+            title: "New head of the Serious Fraud Office announced",
+            href: "/government/news/new-head-of-the-serious-fraud-office-announced",
+            image: {
+              url: "https://assets.publishing.service.gov.uk/jeremy.jpg",
+              alt_text: "Attorney General Jeremy Wright QC MP"
+            },
+            summary: "Lisa Osofsky appointed new Director of the Serious Fraud Office ",
+            public_updated_at: "2018-06-04T11:30:03.000+01:00",
+            document_type: "Press release"
+          },
+          {
+            title: "New head of a different office announced",
+            href: "/government/news/new-head-of-a-different-office-announced",
+            image: {
+              url: "https://assets.publishing.service.gov.uk/john.jpg",
+              alt_text: "John Someone MP"
+            },
+            summary: "John Someone appointed new Director of the Other Office ",
+            public_updated_at: "2017-06-04T11:30:03.000+01:00",
+            document_type: "Policy paper"
+          }
+        ]
+      }
+    }.with_indifferent_access
+  end
+
+  def organisation_with_high_profile_groups
+    {
+      title: "Department for Environment, Food & Rural Affairs",
+      base_path: "/government/organisations/department-for-environment-food-rural-affairs",
+      details: {
+        acronym: "Defra",
+        brand: "department-for-environment-food-rural-affairs",
+        organisation_featuring_priority: "news",
+      },
+      links: {
+        ordered_high_profile_groups: [
+          {
+            base_path: "/government/organisations/rural-development-programme-for-england-network",
+            title: "Rural Development Programme for England Network",
+          },
+          {
+            base_path: "/government/organisations/rural-development-programme-for-england-network-2",
+            title: "Rural Development Programme for England Network 2",
+          }
         ]
       }
     }.with_indifferent_access
