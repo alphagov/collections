@@ -49,6 +49,15 @@ en:
     follow_us: "Follow us"
     high_profile_groups: High profile groups within %{title}
     latest_from: "Latest from %{title}"
+    notices:
+      separate_website: "%{title} has a <a href='%{url}'>separate website</a>"
+      changed_name: "%{title} is now called <a href='%{link_href}'>%{link_text}</a>"
+      joining: "%{title} will soon be incorporated into GOV.UK"
+      devolved: "%{title} is a body of <a href='%{link_href}'>%{link_text}</a>"
+      left_gov: "%{title} is now independent of the UK government"
+      merged: "%{title} became part of <a href='%{link_href}'>%{link_text}</a> in %{updated}"
+      split: "%{title} was replaced by %{links}"
+      no_longer_exists: "%{title} has closed"
     our_policies: "Our policies"
     part_of: "Part of"
     people:

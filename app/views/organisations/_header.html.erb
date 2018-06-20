@@ -12,7 +12,7 @@
     <% end %>
   </div>
 
-  <% unless @organisation.has_separate_website? %>
+  <% if @organisation.is_live? %>
     <div class="<%= @header.link_wrapper_class %> organisations__margin-bottom">
       <%= render "govuk_publishing_components/components/translation-nav", @header.translation_links %>
       <%= render "components/topic-list", @header.ordered_featured_links %>

@@ -2,7 +2,7 @@
 <%= render partial: 'header' %>
 
 <%= render "govuk_publishing_components/components/notice", {
-  title: "#{organisation.title} has a <a href='#{@organisation.separate_website_url}'>separate website</a>".html_safe
+  title: @show.non_live_organisation_notice
 } %>
 
 <div class="grid-row organisations__margin-bottom">
