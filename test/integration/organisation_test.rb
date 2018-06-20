@@ -340,23 +340,6 @@ class OrganisationTest < ActionDispatch::IntegrationTest
       }
     }
 
-    @content_item_separate_website = {
-      title: "Fire Service College",
-      base_path: "/government/organisations/fire-service-college",
-      details: {
-        body: "The Fire Service College (FSC) supplies specialist fire and rescue training to the UK's own fire and rescue services, the private security sector and the international market.\r\n\r\nThe college was formerly an executive agency of the Department for Communities and Local Government and was sold to Capita on 28 February 2013.<abbr title=\"Fire Service College\">FSC</abbr>",
-        brand: "null",
-        logo: {
-          formatted_title: "Fire Service College",
-        },
-        organisation_govuk_status: {
-          status: "exempt",
-          url: "http://www.google.com",
-          updated_at: "null"
-        },
-      }
-    }
-
     @content_item_blank = {
       title: "An empty content item to test everything checks before trying to render things",
       base_path: "/government/organisations/civil-service-resourcing",
@@ -377,7 +360,6 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     content_store_has_item("/government/organisations/attorney-generals-office", @content_item_attorney_general)
     content_store_has_item("/government/organisations/charity-commission", @content_item_charity_commission)
     content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales", @content_item_wales_office)
-    content_store_has_item("/government/organisations/fire-service-college", @content_item_separate_website)
     content_store_has_item("/government/organisations/civil-service-resourcing", @content_item_blank)
 
     stub_rummager_latest_content_requests("prime-ministers-office-10-downing-street")
