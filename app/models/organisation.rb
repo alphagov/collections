@@ -134,6 +134,10 @@ class Organisation
     details["organisation_govuk_status"]["url"]
   end
 
+  def has_separate_website?
+    details["organisation_govuk_status"]["status"] == "exempt"
+  end
+
   def ordered_high_profile_groups
     links["ordered_high_profile_groups"]
   end

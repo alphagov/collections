@@ -1,0 +1,12 @@
+<section class="grid-row">
+  <div class="column-one-third">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: t('organisations.our_policies'),
+      margin_bottom: 2
+    } %>
+  </div>
+
+  <div class="column-two-thirds">
+    <%= render "govuk_publishing_components/components/document_list", @show.featured_policies %>
+  </div>
+</section>
