@@ -126,3 +126,8 @@
   background-position: 50% 0;
   text-align: center;
 }
+
+.organisation__parent-organisations {
+  @include core-16;
+  margin-top: $gutter-half;
+}
