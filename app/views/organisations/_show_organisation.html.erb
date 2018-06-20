@@ -1,12 +1,4 @@
-<% content_for :breadcrumbs do %>
-  <div class="organisations__margin-bottom">
-    <% if @organisation.is_no_10? %>
-      <h1 class="no10-banner organisations__margin-bottom"><%= @header.org.title %></h1>
-    <% else %>
-      <h1 class="visually-hidden"><%= @header.org.title %></h1>
-    <% end %>
-  </div>
-<% end %>
+<%= render partial: 'title' %>
 
 <% unless @organisation.is_no_10? %>
   <div class="grid-row">
@@ -150,21 +142,3 @@
   </div>
 <% end %>
 
-<% if false %>
-  <%
-    # the code below is currently disabled as it will break following changes to accommodate the code
-    # above, however it is still needed for reference. It will be updated and removed later
-  %>
-
-
-<%= render partial: 'contact',
-           locals: {
-               organisation: organisation,
-               contact: organisation.ordered_contacts } %>
-
-<%= render partial: 'corporate_information',
-           locals: {
-               organisation: organisation,
-               corporate_info: organisation.ordered_corporate_information_pages } %>
-
-<% end %>
