@@ -1,5 +1,4 @@
 require 'integration_test_helper'
-require 'slimmer/test_helpers/govuk_components'
 
 class WorldWideTaxonBrowsingTest < ActionDispatch::IntegrationTest
   it "renders a leaf page for world content" do
@@ -67,7 +66,6 @@ class WorldWideTaxonBrowsingTest < ActionDispatch::IntegrationTest
 
   def then_i_see_the_taxon_page
     assert page.has_selector?('title', text: "Japan", visible: false)
-    assert_not_nil shared_component_selector('breadcrumbs')
   end
 
   def and_i_can_see_the_content_tagged_to_the_taxon

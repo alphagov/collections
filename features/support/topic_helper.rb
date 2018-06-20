@@ -1,12 +1,9 @@
 require 'gds_api/test_helpers/rummager'
-require 'slimmer/test_helpers/govuk_components'
-
 require_relative '../../test/support/rummager_helpers'
 
 module TopicHelper
   include GdsApi::TestHelpers::Rummager
   include RummagerHelpers
-  include Slimmer::TestHelpers::GovukComponents
 
   def stub_topic_lookups
     rummager_has_documents_for_subtopic(
@@ -57,8 +54,6 @@ module TopicHelper
       'oil-and-gas/fields-and-wells',
       'content-id-for-fields-and-wells'
     )
-
-    stub_shared_component_locales
   end
 end
 

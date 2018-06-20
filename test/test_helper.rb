@@ -21,7 +21,6 @@ WebMock.disable_net_connect!
 Dir[Rails.root.join('test/support/*.rb')].each { |f| require f }
 
 require 'gds_api/test_helpers/content_store'
-require 'slimmer/test_helpers/govuk_components'
 require 'gds_api/test_helpers/rummager'
 
 # Most tests use ActiveSupport TestCase behaviour, so we configure this here.
@@ -34,12 +33,7 @@ end
 
 class ActiveSupport::TestCase
   include GdsApi::TestHelpers::ContentStore
-  include Slimmer::TestHelpers::GovukComponents
   include GdsApi::TestHelpers::Rummager
-
-  before do
-    stub_shared_component_locales
-  end
 
   after do
     WebMock.reset!
