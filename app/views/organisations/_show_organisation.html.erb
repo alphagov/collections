@@ -38,7 +38,7 @@
   <%= render partial: 'freedom_of_information' %>
 <% end %>
 
-<% if @show.high_profile_groups[:items] %>
+<% if @show.high_profile_groups[:items] && !@organisation.is_promotional_org? %>
   <section class="grid-row organisations__margin-bottom">
     <div class="column-two-thirds">
       <%= render "govuk_publishing_components/components/heading", {
