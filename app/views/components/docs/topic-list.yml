@@ -75,3 +75,14 @@ examples:
       see_more_link:
         text: 'See more and more and more'
         path: '/more'
+  with_margin_bottom:
+    data:
+        items:
+        - text: 'Environmental taxes, reliefs and schemes for businesses'
+          path: '/green-taxes-and-reliefs'
+        - text: 'Aggregates Levy: register or change your details'
+          path: '/guidance/aggregates-levy-register-or-change-your-details'
+        - text: 'Pay environmental taxes'
+          path: '/guidance/pay-environmental-taxes'
+        margin_bottom: true
+

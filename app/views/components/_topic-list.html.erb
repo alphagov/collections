@@ -2,13 +2,15 @@
   items ||= []
   see_more_link ||= false
   small ||= false
+  margin_bottom ||= false
   component_size = "app-c-topic-list--small" if small
+  margin_bottom_class = "app-c-topic-list--margin-bottom" if margin_bottom
 
   brand ||= false
   brand_helper = GovukPublishingComponents::AppHelpers::BrandHelper.new(brand)
 %>
 <% if items.any? %>
-  <ol class="app-c-topic-list <%= component_size %> <%= brand_helper.brand_class %>">
+  <ol class="app-c-topic-list <%= component_size %> <%= brand_helper.brand_class %> <%= margin_bottom_class %>">
     <% items.each do |item| %>
       <li class="app-c-topic-list__item">
         <%=
