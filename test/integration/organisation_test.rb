@@ -368,6 +368,10 @@ class OrganisationTest < ActionDispatch::IntegrationTest
       }
     }
 
+    @content_item_wales_office_cy = @content_item_wales_office.deep_dup.tap do |cy|
+      cy[:base_path] = "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
+    end
+
     @content_item_blank = {
       title: "An empty content item to test everything checks before trying to render things",
       base_path: "/government/organisations/civil-service-resourcing",
@@ -388,6 +392,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     content_store_has_item("/government/organisations/attorney-generals-office", @content_item_attorney_general)
     content_store_has_item("/government/organisations/charity-commission", @content_item_charity_commission)
     content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales", @content_item_wales_office)
+    content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales.cy", @content_item_wales_office_cy)
     content_store_has_item("/government/organisations/civil-service-resourcing", @content_item_blank)
 
     stub_rummager_latest_content_requests("prime-ministers-office-10-downing-street")
@@ -457,7 +462,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     visit "/government/organisations/attorney-generals-office"
     refute page.has_css?(".gem-c-translation-nav")
 
-    visit "/government/organisations/office-of-the-secretary-of-state-for-wales"
+    visit "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
     assert page.has_css?(".gem-c-translation-nav")
 
     visit "/government/organisations/civil-service-resourcing"
@@ -553,9 +558,11 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     visit "/government/organisations/attorney-generals-office"
     assert page.has_css?(".gem-c-heading", text: "Our management")
     assert page.has_css?(".gem-c-image-card .gem-c-image-card__title-link", text: "Sir Jeremy Heywood")
+  end
 
-    visit "/government/organisations/office-of-the-secretary-of-state-for-wales"
-    assert page.has_css?(".gem-c-heading", text: "Our senior military officials")
+  it "shows translated text on welsh pages" do
+    visit "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
+    assert page.has_css?(".gem-c-heading", text: "Ein huwch swyddogion milwrol")
     assert page.has_css?(".gem-c-image-card__title .gem-c-image-card__title-link[href='/government/people/stuart-peach']")
     assert page.has_css?(".gem-c-image-card__description", text: "Chief of the Defence Staff")
   end
@@ -582,8 +589,8 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     visit "/government/organisations/charity-commission"
     assert page.has_content?(/This organisation is not covered by the Freedom of Information Act. To see which organisations are included, see the legislation./i)
 
-    visit "/government/organisations/office-of-the-secretary-of-state-for-wales"
-    assert page.has_content?(/Make an FOI request/i)
+    visit "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
+    assert page.has_content?(/Gwneud cais DRhG/i)
     assert page.has_css?(".gem-c-heading", text: "FOI stuff")
     assert page.has_content?(/Office of the Secretary of State for Wales/i)
     assert page.has_content?(/Gwydyr House/i)

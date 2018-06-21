@@ -71,8 +71,12 @@ class Organisation
     Plek.current.website_root + base_path
   end
 
-  def slug
+  def slug_with_locale
     base_path.gsub("/government/organisations/", "")
+  end
+
+  def slug
+    File.basename(slug_with_locale, File.extname(slug_with_locale))
   end
 
   def ordered_featured_links
