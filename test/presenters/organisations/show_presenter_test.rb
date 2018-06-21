@@ -174,4 +174,41 @@ describe Organisations::ShowPresenter do
 
     assert_equal expected, @show_presenter.high_profile_groups
   end
+
+  it "formats corporate information correctly" do
+    content_item = ContentItem.new(organisation_with_corporate_information)
+    organisation = Organisation.new(content_item)
+    @show_presenter = Organisations::ShowPresenter.new(organisation)
+
+    expected = {
+      corporate_information_links: {
+        items: [{
+          text: "Corporate Information page",
+          path: "/corporate-info"
+        }],
+        brand: "attorney-generals-office",
+        margin_bottom: true
+      },
+      job_links: {
+        items: [
+          {
+            text: "Jobs",
+            path: "/jobs"
+          },
+          {
+            text: "Working for Attorney General's Office",
+            path: "/government/attorney-general's-office/recruitment"
+          },
+          {
+            text: "Procurement at Attorney General's Office",
+            path: "/government/attorney-general's-office/procurement"
+          }
+        ],
+        brand: "attorney-generals-office",
+        margin_bottom: true
+      }
+    }
+
+    assert_equal expected, @show_presenter.corporate_information
+  end
 end

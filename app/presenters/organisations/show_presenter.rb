@@ -101,6 +101,30 @@ module Organisations
       }
     end
 
+    def corporate_information
+      corporate_information_links = @org.ordered_corporate_information.map do |link|
+        {
+          text: link["title"],
+          path: link["href"],
+        }
+      end
+
+      job_links = separate_job_links(corporate_information_links)
+
+      {
+        corporate_information_links: {
+          items: corporate_information_links - job_links,
+          brand: @org.brand,
+          margin_bottom: true
+        },
+        job_links: {
+          items: job_links,
+          brand: @org.brand,
+          margin_bottom: true
+        }
+      }
+    end
+
   private
 
     def contact_line(line)
@@ -156,6 +180,18 @@ module Organisations
 
     def has_definite_article?(phrase)
       phrase.downcase.strip[0..2] == 'the'
+    end
+
+    def separate_job_links(corporate_information_links)
+      job_links = []
+
+      corporate_information_links.each do |link|
+        if link[:path].end_with?("/recruitment", "/procurement") || link[:text].eql?("Jobs")
+          job_links << link
+        end
+      end
+
+      job_links
     end
   end
 end

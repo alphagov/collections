@@ -34,23 +34,27 @@
   <% end %>
 <% end %>
 
-<% unless @organisation.is_promotional_org? %>
-  <%= render partial: 'freedom_of_information' %>
-<% end %>
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <% unless @organisation.is_promotional_org? %>
+      <%= render partial: 'freedom_of_information' %>
+    <% end %>
 
-<% if @show.high_profile_groups[:items] && !@organisation.is_promotional_org? %>
-  <section class="grid-row organisations__margin-bottom">
-    <div class="column-two-thirds">
-      <%= render "govuk_publishing_components/components/heading", {
-        text: @show.high_profile_groups[:title],
-        brand: @organisation.brand,
-        border_top: 5,
-        padding: true,
-        margin_bottom: 2
-      } %>
+    <% if @show.high_profile_groups[:items] && !@organisation.is_promotional_org? %>
+      <section class="organisations__margin-bottom">
+        <%= render "govuk_publishing_components/components/heading", {
+          text: @show.high_profile_groups[:title],
+          brand: @organisation.brand,
+          border_top: 5,
+          padding: true,
+          margin_bottom: 2
+        } %>
 
-      <%= render "components/topic-list", @show.high_profile_groups %>
-    </div>
-  </section>
-<% end %>
-
+        <%= render "components/topic-list", @show.high_profile_groups %>
+      </section>
+    <% end %>
+  </div>
+  <% if @organisation.ordered_corporate_information && @organisation.ordered_corporate_information.any? %>
+    <%= render partial: 'corporate_information' %>
+  <% end %>
+</div>
