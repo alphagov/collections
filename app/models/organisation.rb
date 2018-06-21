@@ -134,8 +134,56 @@ class Organisation
     details["organisation_govuk_status"]["url"]
   end
 
-  def has_separate_website?
+  def is_live?
+    details["organisation_govuk_status"]["status"] == "live"
+  end
+
+  def is_changed_name?
+    details["organisation_govuk_status"]["status"] == "changed_name"
+  end
+
+  def is_exempt?
     details["organisation_govuk_status"]["status"] == "exempt"
+  end
+
+  def is_joining?
+    details["organisation_govuk_status"]["status"] == "joining"
+  end
+
+  def is_devolved?
+    details["organisation_govuk_status"]["status"] == "devolved"
+  end
+
+  def is_closed?
+    details["organisation_govuk_status"]["status"] == "closed"
+  end
+
+  def is_left_gov?
+    details["organisation_govuk_status"]["status"] == "left_gov"
+  end
+
+  def is_merged?
+    details["organisation_govuk_status"]["status"] == "merged"
+  end
+
+  def is_split?
+    details["organisation_govuk_status"]["status"] == "split"
+  end
+
+  def is_no_longer_exists?
+    details["organisation_govuk_status"]["status"] == "no_longer_exists"
+  end
+
+  def is_replaced?
+    details["organisation_govuk_status"]["status"] == "replaced"
+  end
+
+  def status_updated_at
+    details["organisation_govuk_status"]["updated_at"]
+  end
+
+  def ordered_successor_organisations
+    links["ordered_successor_organisations"]
   end
 
   def ordered_high_profile_groups

@@ -1,4 +1,4 @@
-<section class="<%= "brand--#{@organisation.brand} brand__border-color" unless @organisation.has_separate_website? %> organisations__brand-border-top organisations__margin-bottom">
+<section class="<%= "brand--#{@organisation.brand} brand__border-color" if @organisation.is_live? %> organisations__brand-border-top organisations__margin-bottom">
   <div class="grid-row">
     <div class="column-two-thirds">
       <%= render "govuk_publishing_components/components/heading", {
