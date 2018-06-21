@@ -36,20 +36,32 @@
           font_size: 19,
         } %>
 
-        <div class="grid-row organisations__margin-bottom">
+        <div class="grid-row">
           <% if contact[:post_addresses].any? %>
-            <div class="column-half">
+            <address class="column-half organisations__margin-bottom organisation__address">
               <% contact[:post_addresses].each do |post| %>
-                <p><%= post.html_safe %></p>
+                <%= post.html_safe %>
               <% end %>
-            </div>
+            </address>
           <% end %>
 
-          <% if contact[:email_addresses].any? %>
+          <% if contact[:email_addresses].any? || contact[:links].any? %>
             <div class="column-half">
-              <p>Email</p>
-              <% contact[:email_addresses].each do |email| %>
-                <p><%= email.html_safe %></p>
+              <% if contact[:email_addresses].any? %>
+                <div class="organisations__margin-bottom">
+                  <p>Email</p>
+                  <% contact[:email_addresses].each do |email| %>
+                    <p><%= email.html_safe %></p>
+                  <% end %>
+                </div>
+              <% end %>
+
+              <% if contact[:links].any? %>
+                <div class="organisations__margin-bottom">
+                  <% contact[:links].each do |link| %>
+                    <p><%= link.html_safe %></p>
+                  <% end %>
+                </div>
               <% end %>
             </div>
           <% end %>

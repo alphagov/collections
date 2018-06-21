@@ -46,6 +46,7 @@ en:
       foi_exemption_html: |
         This organisation is not covered by the Freedom of Information Act.
         To see which organisations are included, see <a href="%{foi_url}" class="brand__color">the legislation</a>.
+      contact_form: FOI contact form
     follow_us: "Follow us"
     high_profile_groups: High profile groups within %{title}
     latest_from: "Latest from %{title}"
