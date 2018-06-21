@@ -170,6 +170,24 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
         ]
       }
     }
+
+    @content_item_documents = {
+      title: "Fire Service College",
+      base_path: "/government/organisations/fire-service-college",
+      details: {
+        body: "The Fire Service College (FSC) supplies specialist fire and rescue training to the UK's own fire and rescue services, the private security sector and the international market.\r\n\r\nThe college was formerly an executive agency of the Department for Communities and Local Government and was sold to Capita on 28 February 2013.<abbr title=\"Fire Service College\">FSC</abbr>",
+        brand: "null",
+        logo: {
+          formatted_title: "Fire Service College",
+        },
+        organisation_govuk_status: {
+          status: "exempt",
+          url: "http://www.google.com",
+          updated_at: "null"
+        },
+      }
+    }
+
     content_store_has_item("/government/organisations/changed_name", @content_item_changed_name)
     content_store_has_item("/government/organisations/devolved", @content_item_devolved)
     content_store_has_item("/government/organisations/exempt", @content_item_exempt)
@@ -179,6 +197,18 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     content_store_has_item("/government/organisations/split", @content_item_split)
     content_store_has_item("/government/organisations/no_longer_exists", @content_item_no_longer_exists)
     content_store_has_item("/government/organisations/replaced", @content_item_replaced)
+    content_store_has_item("/government/organisations/fire-service-college", @content_item_documents)
+
+    stub_rummager_latest_content_requests("changed_name")
+    stub_rummager_latest_content_requests("devolved")
+    stub_rummager_latest_content_requests("exempt")
+    stub_rummager_latest_content_requests("joining")
+    stub_rummager_latest_content_requests("left_gov")
+    stub_rummager_latest_content_requests("merged")
+    stub_rummager_latest_content_requests("split")
+    stub_rummager_latest_content_requests("no_longer_exists")
+    stub_rummager_latest_content_requests("replaced")
+    stub_rummager_latest_content_requests("fire-service-college")
   end
 
   it 'displays a changed_name organisation page correctly' do
@@ -262,5 +292,20 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     assert page.has_css?(".gem-c-notice a[href='/replaced/successor']", text: "Replaced Successor")
     assert page.has_css?(".gem-c-govspeak")
     assert page.has_content?(/This organisation has a status of replaced./i)
+  end
+
+  it "shows latest documents by type on separate website page" do
+    visit "/government/organisations/fire-service-college"
+    assert page.has_css?(".gem-c-heading", text: "Documents")
+    assert page.has_css?(".gem-c-heading", text: "Our announcements")
+    assert page.has_css?(".gem-c-document-list__item-title[href='/government/news/first-events-announced-for-national-democracy-week']", text: "First events announced for National Democracy Week")
+
+    assert page.has_css?(".gem-c-heading", text: "Our consultations")
+    assert page.has_css?(".gem-c-document-list__item-title[href='/government/consultations/consultation-on-revised-code-of-data-matching-practice']", text: "Consultation on revised Code of Data Matching Practice")
+
+    assert page.has_css?(".gem-c-heading", text: "Our publications")
+    assert page.has_css?(".gem-c-document-list__item-title[href='/government/publications/national-democracy-week-partner-pack']", text: "National Democracy Week: partner pack")
+
+    refute page.has_css?(".gem-c-heading", text: "Our statistics")
   end
 end

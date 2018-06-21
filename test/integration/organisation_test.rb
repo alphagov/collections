@@ -366,7 +366,6 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     stub_rummager_latest_content_requests("attorney-generals-office")
     stub_rummager_latest_content_requests("charity-commission")
     stub_rummager_latest_content_requests("office-of-the-secretary-of-state-for-wales")
-    stub_rummager_latest_content_requests("fire-service-college")
     stub_rummager_latest_content_requests("civil-service-resourcing")
   end
 
@@ -409,19 +408,6 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
     visit "/government/organisations/charity-commission"
     assert page.has_css?(".gem-c-organisation-logo.brand--department-for-business-innovation-skills img[alt='The Charity Commission']")
-  end
-
-  it "displays the logo on separate website pages" do
-    visit "/government/organisations/fire-service-college"
-    assert page.has_css?(".gem-c-organisation-logo")
-  end
-
-  it "renders the separate website notice" do
-    visit "/government/organisations/fire-service-college"
-    assert page.has_css?(".gem-c-notice", text: "Fire Service College has a separate website")
-    assert page.has_css?(".gem-c-notice a[href='http://www.google.com']", text: "separate website")
-    assert page.has_css?(".gem-c-govspeak")
-    assert page.has_content?(/The college was formerly an executive agency of the Department for Communities and Local Government/i)
   end
 
   it "shows featured links correctly if present" do
@@ -515,21 +501,6 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     stub_empty_rummager_requests("attorney-generals-office")
     visit "/government/organisations/attorney-generals-office"
     refute page.has_css?(".gem-c-heading", text: "Documents")
-  end
-
-  it "shows latest documents by type on separate website page" do
-    visit "/government/organisations/fire-service-college"
-    assert page.has_css?(".gem-c-heading", text: "Documents")
-    assert page.has_css?(".gem-c-heading", text: "Our announcements")
-    assert page.has_css?(".gem-c-document-list__item-title[href='/government/news/first-events-announced-for-national-democracy-week']", text: "First events announced for National Democracy Week")
-
-    assert page.has_css?(".gem-c-heading", text: "Our consultations")
-    assert page.has_css?(".gem-c-document-list__item-title[href='/government/consultations/consultation-on-revised-code-of-data-matching-practice']", text: "Consultation on revised Code of Data Matching Practice")
-
-    assert page.has_css?(".gem-c-heading", text: "Our publications")
-    assert page.has_css?(".gem-c-document-list__item-title[href='/government/publications/national-democracy-week-partner-pack']", text: "National Democracy Week: partner pack")
-
-    refute page.has_css?(".gem-c-heading", text: "Our statistics")
   end
 
   it "shows the ministers for an organisation" do
