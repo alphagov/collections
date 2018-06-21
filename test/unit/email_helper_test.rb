@@ -1,6 +1,7 @@
-require 'test_helper'
-class EmailHelperTest < ActionView::TestCase
-  test "should return true if we are browsing a taxon that is live" do
+require "test_helper"
+
+describe EmailHelper do
+  it "should return true if we are browsing a taxon that is live" do
     presented_taxon = stub(
       live_taxon?: true
     )
@@ -8,7 +9,7 @@ class EmailHelperTest < ActionView::TestCase
     assert taxon_is_live?(presented_taxon)
   end
 
-  test "should return false if we are browsing a taxon that is not live" do
+  it "should return false if we are browsing a taxon that is not live" do
     presented_taxon = stub(
       live_taxon?: false
     )
@@ -16,7 +17,7 @@ class EmailHelperTest < ActionView::TestCase
     refute taxon_is_live?(presented_taxon)
   end
 
-  test "should return a valid whitehall .atom url in the form /government/{url}.atom" do
+  it "should return a valid whitehall .atom url in the form /government/{url}.atom" do
     self.stubs(:request).returns(ActionDispatch::TestRequest.create("PATH_INFO" => '/world/blefuscu'))
 
     expected_atom_url = Plek.new.website_root + "/world/blefuscu.atom"
@@ -24,7 +25,7 @@ class EmailHelperTest < ActionView::TestCase
     assert_equal expected_atom_url, whitehall_atom_url
   end
 
-  test "should return a valid whitehall email signup link" do
+  it "should return a valid whitehall email signup link" do
     self.stubs(:request).returns(ActionDispatch::TestRequest.create("PATH_INFO" => '/world/blefuscu'))
 
     atom_url = Plek.new.website_root + "/world/blefuscu.atom"

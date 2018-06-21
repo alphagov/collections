@@ -1,8 +1,6 @@
-require 'test_helper'
+require "test_helper"
 
-class ApplicationHelperTest < ActionView::TestCase
-  tests ApplicationHelper
-
+describe ApplicationHelper do
   describe "#current_path_without_query_string" do
     it "returns the path of the current request" do
       self.stubs(:request).returns(ActionDispatch::TestRequest.create("PATH_INFO" => '/foo/bar'))
