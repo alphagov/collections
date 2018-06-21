@@ -302,6 +302,13 @@ module OrganisationHelpers
             details: {
               title: "FOI stuff",
               description: "FOI requests\r\n\r\nare possible",
+              contact_form_links: [
+                {
+                  title: "title",
+                  link: "/to/some/foi/stuff",
+                  description: "Click me"
+                }
+              ],
               post_addresses: [
                 {
                   title: "Office of the Secretary of State for Wales",
@@ -329,6 +336,13 @@ module OrganisationHelpers
             withdrawn: false,
             details: {
               description: "Something here\r\n\r\nSomething there",
+              contact_form_links: [
+                {
+                  title: "",
+                  link: "/foi/stuff",
+                  description: ""
+                }
+              ],
               post_addresses: [
                 {
                   title: "The Welsh Office",
@@ -346,12 +360,9 @@ module OrganisationHelpers
           {
             withdrawn: false,
             details: {
-              post_addresses: [
-                {
-                  street_address: "Red House\r\nSlough",
-                  postal_code: "S1 9NN",
-                }
-              ],
+              description: "",
+              contact_form_links: [],
+              post_addresses: [],
               email_addresses: []
             }
           }

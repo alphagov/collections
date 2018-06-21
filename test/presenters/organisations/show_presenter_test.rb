@@ -122,6 +122,9 @@ describe Organisations::ShowPresenter do
           "<a class=\"brand__color\" href=\"mailto:walesofficefoi@walesoffice.gsi.gov.uk\">walesofficefoi@walesoffice.gsi.gov.uk</a>",
           "<a class=\"brand__color\" href=\"mailto:foiwales@walesoffice.gsi.gov.uk\">foiwales@walesoffice.gsi.gov.uk</a>"
         ],
+        links: [
+          "<a class=\"brand__color\" href=\"/to/some/foi/stuff\">Click me</a>"
+        ],
         description: "<p>FOI requests<br/><br/>are possible</p>"
       },
       {
@@ -132,14 +135,16 @@ describe Organisations::ShowPresenter do
         email_addresses: [
           "<a class=\"brand__color\" href=\"mailto:welshofficefoi@walesoffice.gsi.gov.uk\">welshofficefoi@walesoffice.gsi.gov.uk</a>"
         ],
+        links: [
+          "<a class=\"brand__color\" href=\"/foi/stuff\">FOI contact form</a>"
+        ],
         description: "<p>Something here<br/><br/>Something there</p>"
       },
       {
         title: "Freedom of Information requests",
-        post_addresses: [
-          "Red House<br/>Slough<br/>S1 9NN<br/>"
-        ],
+        post_addresses: [],
         email_addresses: [],
+        links: [],
         description: nil
       }
     ]
