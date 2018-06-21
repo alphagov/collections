@@ -1,0 +1,81 @@
+require "test_helper"
+
+describe OrganisationsApiPresenter do
+  let(:results) do
+    [
+      {
+        description: "The home of HM Revenue & Customs on GOV.UK. We are the UK’s tax, payments and customs authority, and we have a vital purpose: we collect the money that pays for the UK’s public services and help families and individuals with targeted financial support. We do this by being impartial and increasingly effective and efficient in our administration. We help the honest majority to get their tax right and make it hard for the dishonest minority to cheat the system.",
+        format: "organisation",
+        link: "/government/organisations/hm-revenue-customs",
+        organisations: [
+          {
+            organisation_crest: "hmrc",
+            superseded_organisations: [
+              "department-of-inland-revenue",
+            ],
+            acronym: "HMRC",
+            link: "/government/organisations/hm-revenue-customs",
+            analytics_identifier: "D25",
+            public_timestamp: "2015-05-13T11:09:06.000+01:00",
+            child_organisations: [
+              "valuation-office-agency",
+              "the-adjudicator-s-office",
+            ],
+            organisation_brand: "hm-revenue-customs",
+            logo_formatted_title: "HM Revenue\r\n& Customs",
+            title: "HM Revenue & Customs",
+            content_id: "6667cce2-e809-4e21-ae09-cb0bdc1ddda3",
+            slug: "hm-revenue-customs",
+            organisation_type: "non_ministerial_department",
+            organisation_state: "live",
+          },
+        ],
+        public_timestamp: "2015-05-13T11:09:06.000+01:00",
+        slug: "hm-revenue-customs",
+        title: "HM Revenue & Customs",
+        index: "government",
+        es_score: nil,
+        _id: "/government/organisations/hm-revenue-customs",
+        elasticsearch_type: "edition",
+        document_type: "edition",
+      }.deep_stringify_keys,
+    ]
+  end
+
+  let(:presenter_wrapped) do
+    OrganisationsApiPresenter.new(
+      results,
+      current_page: 1,
+      results_per_page: 20,
+      total_results: 1,
+      current_url_without_parameters: "https://www.gov.uk/api/organisations",
+    )
+  end
+
+  let(:presenter_not_wrapped) do
+    OrganisationsApiPresenter.new(
+      results,
+      current_page: 1,
+      results_per_page: 20,
+      total_results: 1,
+      current_url_without_parameters: "https://www.gov.uk/api/organisations",
+      wrap_in_results_array: false,
+    )
+  end
+
+  describe "#present with wrapped results" do
+    it "returns a presented result set" do
+      paginated_results = presenter_wrapped.present
+      assert_equal "HM Revenue & Customs", paginated_results[:results][0][:title]
+      assert_equal "hm-revenue-customs", paginated_results[:results][0][:details][:slug]
+    end
+  end
+
+  describe "#present without wrapped results" do
+    it "returns a presented result set" do
+      paginated_results = presenter_not_wrapped.present
+      assert_equal "HM Revenue & Customs", paginated_results[:title]
+      assert_equal "hm-revenue-customs", paginated_results[:details][:slug]
+    end
+  end
+end

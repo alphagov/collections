@@ -29,20 +29,32 @@ Rails.application.routes.draw do
   post "/topic/:topic_slug/:subtopic_slug/email-signup",
     to: "email_signups#create"
 
-  get "/government/organisations", to: "organisations#index"
+  get "/government/organisations",
+    to: "organisations#index",
+    as: :organisations
   get '/government/organisations/:organisation_name(.:locale).:format',
     constraints: {
       format: /atom/,
       locale: /\w{2}(-[\d\w]{2,3})?/,
     }, to: "feeds#organisation"
   get "/government/organisations/:organisation_name(.:locale)",
-    to: "organisations#show"
+    to: "organisations#show",
+    as: :organisation
   get "/government/organisations/:organisation_id/services-information",
     to: "services_and_information#index",
     as: :services_and_information
 
   get "/government/people/:name", to: "people#show"
   get "/government/ministers/:role_name", to: "roles#show"
+
+  scope :api, defaults: { format: :json } do
+    get "/organisations",
+      to: "organisations_api#index",
+      as: :api_organisations
+    get "/organisations/:organisation_name",
+      to: "organisations_api#show",
+      as: :api_organisation
+  end
 
   constraints DocumentTypeRoutingConstraint.new('step_by_step_nav') do
     get "/:slug", to: 'step_nav#show'
