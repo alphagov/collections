@@ -7,6 +7,23 @@ module OrganisationHelpers
     stub_rummager_latest_statistics_request(organisation_slug)
   end
 
+  def stub_empty_rummager_requests(organisation_slug)
+    stub_request(:get, Plek.new.find("search") + "/search.json?count=3&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp").
+      to_return(body: { results: [] }.to_json)
+
+    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_email_document_supertype=announcements&filter_organisations=#{organisation_slug}&order=-public_timestamp").
+      to_return(body: { results: [] }.to_json)
+
+    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_government_document_supertype=consultations&filter_organisations=#{organisation_slug}&order=-public_timestamp").
+      to_return(body: { results: [] }.to_json)
+
+    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_email_document_supertype=publications&filter_organisations=#{organisation_slug}&order=-public_timestamp").
+      to_return(body: { results: [] }.to_json)
+
+    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_government_document_supertype=statistics&filter_organisations=#{organisation_slug}&order=-public_timestamp").
+      to_return(body: { results: [] }.to_json)
+  end
+
   def stub_rummager_latest_documents_request(organisation_slug)
     stub_request(:get, Plek.new.find("search") + "/search.json?count=3&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp").
       to_return(body: { results: [
@@ -21,17 +38,38 @@ module OrganisationHelpers
 
   def stub_rummager_latest_announcements_request(organisation_slug)
     stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_email_document_supertype=announcements&filter_organisations=#{organisation_slug}&order=-public_timestamp").
-      to_return(body: { results: [] }.to_json)
+      to_return(body: { results: [
+        {
+          title: "First events announced for National Democracy Week",
+          link: "/government/news/first-events-announced-for-national-democracy-week",
+          content_store_document_type: "press release",
+          public_timestamp: "2018-06-13T17:39:34.000+01:00"
+        }
+      ] }.to_json)
   end
 
   def stub_rummager_latest_consultations_request(organisation_slug)
     stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_government_document_supertype=consultations&filter_organisations=#{organisation_slug}&order=-public_timestamp").
-      to_return(body: { results: [] }.to_json)
+      to_return(body: { results: [
+        {
+          title: "Consultation on revised Code of Data Matching Practice",
+          link: "/government/consultations/consultation-on-revised-code-of-data-matching-practice",
+          content_store_document_type: "closed_consultation",
+          public_timestamp: "2018-04-27T17:39:34.000+01:00"
+        }
+      ] }.to_json)
   end
 
   def stub_rummager_latest_publications_request(organisation_slug)
     stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_email_document_supertype=publications&filter_organisations=#{organisation_slug}&order=-public_timestamp").
-      to_return(body: { results: [] }.to_json)
+      to_return(body: { results: [
+        {
+          title: "National Democracy Week: partner pack",
+          link: "/government/publications/national-democracy-week-partner-pack",
+          content_store_document_type: "guidance",
+          public_timestamp: "2018-06-18T17:39:34.000+01:00"
+        }
+      ] }.to_json)
   end
 
   def stub_rummager_latest_statistics_request(organisation_slug)
@@ -60,6 +98,9 @@ module OrganisationHelpers
       details: {
         brand: "attorney-generals-office",
         organisation_featuring_priority: "news",
+        organisation_govuk_status: {
+          status: "live",
+        },
         ordered_ministers: [
           {
             name: "Oliver Dowden CBE MP",
@@ -100,6 +141,159 @@ module OrganisationHelpers
             }
           }
         ]
+      }
+    }.with_indifferent_access
+  end
+
+  def organisation_with_board_members
+    {
+      title: "Attorney General's Office",
+      details: {
+        brand: "attorney-generals-office",
+        organisation_govuk_status: {
+          status: "live",
+        },
+        ordered_board_members: [
+          {
+            name: "Sir Jeremy Heywood",
+            role: "Cabinet Secretary",
+            href: "/government/people/jeremy-heywood",
+            image: {
+              url: "/photo/jeremy-heywood",
+              alt_text: "Sir Jeremy Heywood"
+            }
+          },
+          {
+            name: "John Manzoni",
+            role: "Chief Executive of the Civil Service ",
+            href: "/government/people/john-manzoni",
+            image: {
+              url: "/photo/john-manzoni",
+              alt_text: "John Manzoni"
+            }
+          },
+          {
+            name: "John Manzoni",
+            role: "Permanent Secretary (Cabinet Office)",
+            href: "/government/people/john-manzoni",
+            image: {
+              url: "/photo/john-manzoni",
+              alt_text: "John Manzoni"
+            }
+          },
+        ]
+      }
+    }.with_indifferent_access
+  end
+
+  def organisation_with_policies
+    {
+      title: "Attorney General's Office",
+      base_path: "/government/organisations/attorney-generals-office",
+      details: {
+        organisation_govuk_status: {
+          status: "live",
+        },
+        brand: "attorney-generals-office",
+        organisation_featuring_priority: "news"
+      },
+      links: {
+        ordered_featured_policies: [
+          {
+            api_path: "/api/content/government/policies/waste-and-recycling",
+            base_path: "/government/policies/waste-and-recycling",
+            content_id: "5d5e9324-7631-11e4-a3cb-005056011aef",
+            description: "What the government’s doing about waste and recycling.",
+            document_type: "policy",
+            locale: "en",
+            public_updated_at: "2015-05-14T16:39:48Z",
+            schema_name: "policy",
+            title: "Waste and recycling",
+            withdrawn: false,
+            links: {},
+            api_url: "https://www.gov.uk/api/content/government/policies/waste-and-recycling",
+            web_url: "https://www.gov.uk/government/policies/waste-and-recycling"
+          },
+        ]
+      }
+    }.with_indifferent_access
+  end
+
+  def organisation_with_featured_documents
+    {
+      title: "Attorney General's Office",
+      base_path: "/government/organisations/attorney-generals-office",
+      details: {
+        organisation_govuk_status: {
+          status: "live",
+        },
+        brand: "attorney-generals-office",
+        organisation_featuring_priority: "news",
+        ordered_featured_documents: [
+          {
+            title: "New head of the Serious Fraud Office announced",
+            href: "/government/news/new-head-of-the-serious-fraud-office-announced",
+            image: {
+              url: "https://assets.publishing.service.gov.uk/jeremy.jpg",
+              alt_text: "Attorney General Jeremy Wright QC MP"
+            },
+            summary: "Lisa Osofsky appointed new Director of the Serious Fraud Office ",
+            public_updated_at: "2018-06-04T11:30:03.000+01:00",
+            document_type: "Press release"
+          },
+          {
+            title: "New head of a different office announced",
+            href: "/government/news/new-head-of-a-different-office-announced",
+            image: {
+              url: "https://assets.publishing.service.gov.uk/john.jpg",
+              alt_text: "John Someone MP"
+            },
+            summary: "John Someone appointed new Director of the Other Office ",
+            public_updated_at: "2017-06-04T11:30:03.000+01:00",
+            document_type: "Policy paper"
+          }
+        ]
+      }
+    }.with_indifferent_access
+  end
+
+  def organisation_with_high_profile_groups
+    {
+      title: "Department for Environment, Food & Rural Affairs",
+      base_path: "/government/organisations/department-for-environment-food-rural-affairs",
+      details: {
+        organisation_govuk_status: {
+          status: "live",
+        },
+        acronym: "Defra",
+        brand: "department-for-environment-food-rural-affairs",
+        organisation_featuring_priority: "news",
+      },
+      links: {
+        ordered_high_profile_groups: [
+          {
+            base_path: "/government/organisations/rural-development-programme-for-england-network",
+            title: "Rural Development Programme for England Network",
+          },
+          {
+            base_path: "/government/organisations/rural-development-programme-for-england-network-2",
+            title: "Rural Development Programme for England Network 2",
+          }
+        ]
+      }
+    }.with_indifferent_access
+  end
+
+  def organisation_with_foi
+    {
+      title: "Attorney General's Office",
+      base_path: "/government/organisations/attorney-generals-office",
+      details: {
+        brand: "attorney-generals-office",
+        organisation_featuring_priority: "news",
+        organisation_govuk_status: {
+          status: "live",
+        }
       },
       links: {
         ordered_foi_contacts: [
@@ -160,133 +354,6 @@ module OrganisationHelpers
               ],
               email_addresses: []
             }
-          }
-        ]
-      }
-    }.with_indifferent_access
-  end
-
-  def organisation_with_board_members
-    {
-      title: "Attorney General's Office",
-      details: {
-        brand: "attorney-generals-office",
-        ordered_board_members: [
-          {
-            name: "Sir Jeremy Heywood",
-            role: "Cabinet Secretary",
-            href: "/government/people/jeremy-heywood",
-            image: {
-              url: "/photo/jeremy-heywood",
-              alt_text: "Sir Jeremy Heywood"
-            }
-          },
-          {
-            name: "John Manzoni",
-            role: "Chief Executive of the Civil Service ",
-            href: "/government/people/john-manzoni",
-            image: {
-              url: "/photo/john-manzoni",
-              alt_text: "John Manzoni"
-            }
-          },
-          {
-            name: "John Manzoni",
-            role: "Permanent Secretary (Cabinet Office)",
-            href: "/government/people/john-manzoni",
-            image: {
-              url: "/photo/john-manzoni",
-              alt_text: "John Manzoni"
-            }
-          },
-        ]
-      }
-    }.with_indifferent_access
-  end
-
-  def organisation_with_policies
-    {
-      title: "Attorney General's Office",
-      base_path: "/government/organisations/attorney-generals-office",
-      details: {
-        brand: "attorney-generals-office",
-        organisation_featuring_priority: "news"
-      },
-      links: {
-        ordered_featured_policies: [
-          {
-            api_path: "/api/content/government/policies/waste-and-recycling",
-            base_path: "/government/policies/waste-and-recycling",
-            content_id: "5d5e9324-7631-11e4-a3cb-005056011aef",
-            description: "What the government’s doing about waste and recycling.",
-            document_type: "policy",
-            locale: "en",
-            public_updated_at: "2015-05-14T16:39:48Z",
-            schema_name: "policy",
-            title: "Waste and recycling",
-            withdrawn: false,
-            links: {},
-            api_url: "https://www.gov.uk/api/content/government/policies/waste-and-recycling",
-            web_url: "https://www.gov.uk/government/policies/waste-and-recycling"
-          },
-        ]
-      }
-    }.with_indifferent_access
-  end
-
-  def organisation_with_featured_documents
-    {
-      title: "Attorney General's Office",
-      base_path: "/government/organisations/attorney-generals-office",
-      details: {
-        brand: "attorney-generals-office",
-        organisation_featuring_priority: "news",
-        ordered_featured_documents: [
-          {
-            title: "New head of the Serious Fraud Office announced",
-            href: "/government/news/new-head-of-the-serious-fraud-office-announced",
-            image: {
-              url: "https://assets.publishing.service.gov.uk/jeremy.jpg",
-              alt_text: "Attorney General Jeremy Wright QC MP"
-            },
-            summary: "Lisa Osofsky appointed new Director of the Serious Fraud Office ",
-            public_updated_at: "2018-06-04T11:30:03.000+01:00",
-            document_type: "Press release"
-          },
-          {
-            title: "New head of a different office announced",
-            href: "/government/news/new-head-of-a-different-office-announced",
-            image: {
-              url: "https://assets.publishing.service.gov.uk/john.jpg",
-              alt_text: "John Someone MP"
-            },
-            summary: "John Someone appointed new Director of the Other Office ",
-            public_updated_at: "2017-06-04T11:30:03.000+01:00",
-            document_type: "Policy paper"
-          }
-        ]
-      }
-    }.with_indifferent_access
-  end
-
-  def organisation_with_high_profile_groups
-    {
-      title: "Department for Environment, Food & Rural Affairs",
-      base_path: "/government/organisations/department-for-environment-food-rural-affairs",
-      details: {
-        acronym: "Defra",
-        brand: "department-for-environment-food-rural-affairs",
-        organisation_featuring_priority: "news",
-      },
-      links: {
-        ordered_high_profile_groups: [
-          {
-            base_path: "/government/organisations/rural-development-programme-for-england-network",
-            title: "Rural Development Programme for England Network",
-          },
-          {
-            base_path: "/government/organisations/rural-development-programme-for-england-network-2",
-            title: "Rural Development Programme for England Network 2",
           }
         ]
       }

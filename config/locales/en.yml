@@ -24,33 +24,13 @@ en:
   view_all: "view all"
   view_less: "view less"
   organisations:
-    high_profile_groups: High profile groups within %{title}
-    separate_website: "separate website"
-    people:
-      board_members: "Our management"
-      chief_professional_officers: "Chief professional officers"
-      ministers: "Our ministers"
-      military_personnel: "Our senior military officials"
-      special_representatives: "Special representatives"
-      traffic_commissioners: "Traffic commissioners"
-    type:
-      adhoc_advisory_group: "Ad-hoc advisory group"
-      advisory_ndpb: "Advisory non-departmental public body"
-      civil_service: "Civil service"
-      executive_agency: "Executive agency"
-      executive_ndpb: "Executive non-departmental public body"
-      independent_monitoring_body: "Independent monitoring body"
-      non_ministerial_department: "Non-ministerial department"
-      public_corporation: "Public corporation"
-      tribunal_ndpb: "Tribunal non-departmental public body"
-      other: "Other"
-    latest_from: "Latest from %{title}"
-    see_all: "See all"
-    what_we_do: "What %{title} does"
-    read_more: "Read more about what we do"
-    follow_us: "Follow us"
-    our_policies: "Our policies"
-    part_of: "Part of"
+    document_types:
+      documents: "Documents"
+      announcements: "Our announcements"
+      consultations: "Our consultations"
+      publications: "Our publications"
+      statistics: "Our statistics"
+      see_all_documents: "See all %{type}"
     foi:
       make_an_foi_request: Make an FOI request
       freedom_of_information_act: Freedom of Information (FOI) Act
@@ -66,6 +46,33 @@ en:
       foi_exemption_html: |
         This organisation is not covered by the Freedom of Information Act.
         To see which organisations are included, see <a href="%{foi_url}" class="brand__color">the legislation</a>.
+    follow_us: "Follow us"
+    high_profile_groups: High profile groups within %{title}
+    latest_from: "Latest from %{title}"
+    our_policies: "Our policies"
+    part_of: "Part of"
+    people:
+      board_members: "Our management"
+      chief_professional_officers: "Chief professional officers"
+      ministers: "Our ministers"
+      military_personnel: "Our senior military officials"
+      special_representatives: "Special representatives"
+      traffic_commissioners: "Traffic commissioners"
+    read_more: "Read more about what we do"
+    see_all: "See all"
+    separate_website: "separate website"
+    type:
+      adhoc_advisory_group: "Ad-hoc advisory group"
+      advisory_ndpb: "Advisory non-departmental public body"
+      civil_service: "Civil service"
+      executive_agency: "Executive agency"
+      executive_ndpb: "Executive non-departmental public body"
+      independent_monitoring_body: "Independent monitoring body"
+      non_ministerial_department: "Non-ministerial department"
+      public_corporation: "Public corporation"
+      tribunal_ndpb: "Tribunal non-departmental public body"
+      other: "Other"
+    what_we_do: "What %{title} does"
   language_names:
     en: English
     cy: Cymraeg
