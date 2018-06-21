@@ -55,6 +55,8 @@
     <% end %>
   </div>
   <% if @organisation.ordered_corporate_information && @organisation.ordered_corporate_information.any? %>
-    <%= render partial: 'corporate_information' %>
+    <div class="organisation__corporate-information">
+      <%= render partial: 'corporate_information' %>
+    </div>
   <% end %>
 </div>
