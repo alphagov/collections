@@ -29,6 +29,57 @@ describe Organisations::ShowPresenter do
     assert_equal expected, @show_presenter.prefixed_title
   end
 
+  it 'returns a link to a parent organisation' do
+    content_hash = {
+      title: "Export Control Joint Unit",
+      details: {
+        organisation_type: "sub_organisation"
+      },
+      links: {
+        ordered_parent_organisations: [{
+          base_path: "/international-trade",
+          title: "Department for International Trade"
+        }]
+      }
+    }
+    content_item = ContentItem.new(content_hash.with_indifferent_access)
+    organisation = Organisation.new(content_item)
+    @show_presenter = Organisations::ShowPresenter.new(organisation)
+
+    expected = "<a href=\"/international-trade\">Department for International Trade</a>"
+
+    assert_equal expected, @show_presenter.parent_organisations
+  end
+
+  it 'returns a human-readable sentence with links to multiple parent organisation' do
+    content_hash = {
+      title: "Export Control Joint Unit",
+      details: {
+        organisation_type: "sub_organisation"
+      },
+      links: {
+        ordered_parent_organisations:
+        [
+          {
+            base_path: "/international-trade-1",
+            title: "Dept for Trade"
+          },
+          {
+            base_path: "/international-trade-2",
+            title: "Second Dept for Trade"
+          }
+        ]
+      }
+    }
+    content_item = ContentItem.new(content_hash.with_indifferent_access)
+    organisation = Organisation.new(content_item)
+    @show_presenter = Organisations::ShowPresenter.new(organisation)
+
+    expected = "<a href=\"/international-trade-1\">Dept for Trade</a> and <a href=\"/international-trade-2\">Second Dept for Trade</a>"
+
+    assert_equal expected, @show_presenter.parent_organisations
+  end
+
   it 'formats policies correctly' do
     content_item = ContentItem.new(organisation_with_policies)
     organisation = Organisation.new(content_item)

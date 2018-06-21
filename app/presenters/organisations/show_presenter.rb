@@ -20,6 +20,17 @@ module Organisations
       }
     end
 
+    def parent_organisations
+      parent_org_links = @org.ordered_parent_organisations.map do |parent_organisation|
+        link_to(
+          parent_organisation["title"],
+          parent_organisation["base_path"]
+        )
+      end
+
+      parent_org_links.to_sentence.html_safe
+    end
+
     def has_featured_policies?
       true if @org.ordered_featured_policies && @org.ordered_featured_policies.length.positive?
     end

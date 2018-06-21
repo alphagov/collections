@@ -22,10 +22,6 @@ class Organisation
     details["acronym"]
   end
 
-  def organisation_type
-    details["organisation_type"]
-  end
-
   def organisation_featuring_priority
     details["organisation_featuring_priority"]
   end
@@ -41,6 +37,10 @@ class Organisation
 
   def is_promotional_org?
     is_no_10? || organisation_type == "civil_service"
+  end
+
+  def is_sub_organisation?
+    organisation_type == "sub_organisation"
   end
 
   def logo
@@ -150,6 +150,10 @@ private
 
   def details
     @content_item.content_item_data["details"]
+  end
+
+  def organisation_type
+    details["organisation_type"]
   end
 
   # methods below are not in use yet, this comment to be removed once confirmed
