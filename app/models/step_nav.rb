@@ -56,7 +56,7 @@ class StepNav
     {
       "@context": "http://schema.org",
       "@type": "HowTo",
-      "name": "Learn to drive a car: step by step",
+      "name": title,
       "steps": {
         "@type": "ItemList",
         "itemListElement": step_items,
