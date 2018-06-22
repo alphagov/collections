@@ -120,7 +120,7 @@ module Organisations
         job_links: {
           items: job_links,
           brand: @org.brand,
-          margin_bottom: true
+          margin_bottom: @org.secondary_corporate_information.present?
         }
       }
     end

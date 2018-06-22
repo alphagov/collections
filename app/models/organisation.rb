@@ -194,6 +194,10 @@ class Organisation
     details["ordered_corporate_information_pages"]
   end
 
+  def secondary_corporate_information
+    details["secondary_corporate_information_pages"]
+  end
+
 private
 
   def links

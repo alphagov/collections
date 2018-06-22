@@ -23,4 +23,10 @@
     } %>
     <%= render "components/topic-list", @show.corporate_information[:job_links] %>
   <% end %>
+
+  <% if @organisation.secondary_corporate_information %>
+    <p class="organisation__secondary-corporate-information">
+      <%= @organisation.secondary_corporate_information.html_safe %>
+    </p>
+  <% end %>
 </div>
