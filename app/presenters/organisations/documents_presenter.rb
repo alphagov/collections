@@ -21,6 +21,41 @@ module Organisations
       featured_news(org.ordered_featured_documents)
     end
 
+    def has_promotional_features?
+      org.ordered_promotional_features.length.positive?
+    end
+
+    def promotional_features
+      org.ordered_promotional_features.map do |feature|
+        number_of_items = feature["items"].length
+
+        {
+          title: feature["title"],
+          number_of_items: number_of_items,
+          parent_column_class: "column-#{number_of_items}",
+          child_column_class: promotions_child_column_class(number_of_items),
+          items: feature["items"].map do |item|
+            {
+              title: "",
+              description: item["summary"].gsub("\r\n", "<br/>").html_safe,
+              href: promotional_feature_link(item["href"]),
+              image_src: item["image"]["url"],
+              image_alt: item["image"]["alt_text"],
+              heading_text: item["title"],
+              extra_links: item["links"].map do |link|
+                {
+                  text: link["title"],
+                  href: link["href"]
+                }
+              end,
+              brand: org.brand,
+              heading_level: 3
+            }
+          end
+        }
+      end
+    end
+
     def has_latest_documents?
       latest_documents.length.positive?
     end
@@ -173,6 +208,15 @@ module Organisations
     def latest_statistics
       @latest_statistics ||= search_rummager(filter_government_document_supertype: "statistics")
       search_results_to_documents(@latest_statistics)
+    end
+
+    def promotions_child_column_class(number_of_items)
+      return "column-half" if number_of_items == 2
+      "column-one-third" if number_of_items == 3
+    end
+
+    def promotional_feature_link(link)
+      link if link && link.length.positive?
     end
   end
 end

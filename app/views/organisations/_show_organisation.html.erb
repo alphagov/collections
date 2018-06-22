@@ -16,6 +16,10 @@
   <%= render partial: 'what_we_do' %>
 <% end %>
 
+<% if @organisation.is_promotional_org? && @documents.has_promotional_features? %>
+  <%= render partial: 'promotional_features' %>
+<% end %>
+
 <% if @show.has_featured_policies? %>
   <%= render partial: 'featured_policies' %>
 <% end %>

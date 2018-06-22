@@ -202,6 +202,10 @@ class Organisation
     details["secondary_corporate_information_pages"]
   end
 
+  def ordered_promotional_features
+    details["ordered_promotional_features"]
+  end
+
 private
 
   def links
