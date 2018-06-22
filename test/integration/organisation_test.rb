@@ -59,7 +59,17 @@ class OrganisationTest < ActionDispatch::IntegrationTest
         ]
       },
       links: {
-        available_translations: []
+        available_translations: [],
+        ordered_high_profile_groups: [
+          {
+            base_path: "/government/organisations/attorney-generals-office-1",
+            title: "High Profile Group 1",
+          },
+          {
+            base_path: "/government/organisations/attorney-generals-office-2",
+            title: "High Profile Group 2",
+          }
+        ]
       }
     }
 
@@ -579,5 +589,10 @@ class OrganisationTest < ActionDispatch::IntegrationTest
   it 'does not show section for organisations without high profile groups' do
     visit "/government/organisations/office-of-the-secretary-of-state-for-wales"
     refute page.has_css?(".gem-c-heading", text: "High profile groups within the Office of the Secretary of State for Wales")
+  end
+
+  it 'does not show high profile groups for promotional orgs' do
+    visit "/government/organisations/prime-ministers-office-10-downing-street"
+    refute page.has_css?(".gem-c-heading", text: "High profile groups within the Prime Minister's Office, 10 Downing Street")
   end
 end
