@@ -27,6 +27,9 @@ en:
     contact:
       contact_details: "Contact details"
       contact_form: "Contact form"
+      contact_organisation: "Contact %{organisation}"
+      email: "Email"
+      telephone: "Telephone"
     corporate_information: "Corporate information"
     document_types:
       documents: "Documents"

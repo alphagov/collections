@@ -74,7 +74,7 @@ module Organisations
     end
 
     def make_email_link(email)
-      mail_to(email, email, class: "brand__color")
+      mail_to(email, email, class: "brand__color") unless email.empty?
     end
 
     def foi_title(title, foi: false)

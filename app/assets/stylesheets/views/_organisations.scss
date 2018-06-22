@@ -146,3 +146,12 @@
 .organisation__address {
   font-style: normal;
 }
+
+.organisation__border-top {
+  border-top: 1px solid $grey-2;
+  margin-top: $gutter-half;
+}
+
+.organisation__contact-number {
+  margin-bottom: $gutter-one-third;
+}

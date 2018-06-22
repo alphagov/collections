@@ -1,0 +1,52 @@
+<% contacts.each do |contact| %>
+  <div class="<%= "organisation__border-top" if local_assigns[:border] %>">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: contact[:title],
+      padding: true,
+      heading_level: 3,
+      font_size: 19,
+    } %>
+
+    <div class="grid-row">
+      <% if contact[:post_addresses].any? %>
+        <address class="column-half organisations__margin-bottom organisation__address">
+          <% contact[:post_addresses].each do |post| %>
+            <%= post.html_safe %>
+          <% end %>
+        </address>
+      <% end %>
+
+      <% if contact[:email_addresses].any? || contact[:links].any? || contact[:phone_numbers].any?  %>
+        <div class="column-half">
+          <% if contact[:email_addresses].any? %>
+            <div class="organisations__margin-bottom">
+              <p><%= t('organisations.contact.email') %></p>
+              <% contact[:email_addresses].each do |email| %>
+                <p><%= email.html_safe %></p>
+              <% end %>
+            </div>
+          <% end %>
+
+          <% if contact[:links].any? %>
+            <div class="organisations__margin-bottom">
+              <% contact[:links].each do |link| %>
+                <p><%= link.html_safe %></p>
+              <% end %>
+            </div>
+          <% end %>
+
+          <% if contact[:phone_numbers] %>
+            <div class="organisations__margin-bottom">
+              <% contact[:phone_numbers].each do |phone| %>
+                <p><%= phone[:title] %></p>
+                <p class="organisation__contact-number"><%= phone[:number] %></p>
+              <% end %>
+            </div>
+          <% end %>
+
+        </div>
+      <% end %>
+    </div>
+    <%= auto_link(contact[:description]) if contact[:description] %>
+  </div>
+<% end %>

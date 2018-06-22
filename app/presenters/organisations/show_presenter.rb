@@ -99,8 +99,6 @@ module Organisations
       }
     end
 
-  private
-
     def acronym
       if @org.acronym && !@org.acronym.empty?
         @org.acronym
@@ -108,6 +106,8 @@ module Organisations
         prefixed_title
       end
     end
+
+  private
 
     def needs_definite_article?(phrase)
       exceptions = [/civil service resourcing/, /^hm/, /ordnance survey/]
