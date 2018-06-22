@@ -20,11 +20,11 @@
   <%= render partial: 'featured_policies' %>
 <% end %>
 
-<% if @documents.has_latest_documents_by_type? && !@organisation.is_no_10?  %>
+<% if @documents.has_latest_documents_by_type? && !@organisation.is_promotional_org?  %>
   <%= render partial: 'latest_documents_by_type' %>
 <% end %>
 
-<% unless @organisation.is_no_10? %>
+<% unless @organisation.is_promotional_org? %>
   <% @people.all_people.each do |people_data| %>
     <%= render partial: 'related_people', locals: {
       people: people_data[:people],
