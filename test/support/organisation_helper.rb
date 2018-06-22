@@ -370,4 +370,31 @@ module OrganisationHelpers
       }
     }.with_indifferent_access
   end
+
+  def organisation_with_corporate_information
+    {
+      title: "Attorney General's Office",
+      details: {
+        brand: "attorney-generals-office",
+        ordered_corporate_information_pages: [
+          {
+            title: "Corporate Information page",
+            href: "/corporate-info"
+          },
+          {
+            title: "Jobs",
+            href: "/jobs"
+          },
+          {
+            title: "Working for Attorney General's Office",
+            href: "/government/attorney-general's-office/recruitment"
+          },
+          {
+            title: "Procurement at Attorney General's Office",
+            href: "/government/attorney-general's-office/procurement"
+          },
+        ]
+      }
+    }.with_indifferent_access
+  end
 end

@@ -190,6 +190,10 @@ class Organisation
     links["ordered_high_profile_groups"]
   end
 
+  def ordered_corporate_information
+    details["ordered_corporate_information_pages"]
+  end
+
 private
 
   def links
@@ -202,15 +206,5 @@ private
 
   def organisation_type
     details["organisation_type"]
-  end
-
-  # methods below are not in use yet, this comment to be removed once confirmed
-
-  def child_organisation_count
-    links["ordered_child_organisations"].count
-  end
-
-  def ordered_corporate_information_pages
-    details["ordered_corporate_information_pages"]
   end
 end

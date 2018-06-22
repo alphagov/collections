@@ -110,6 +110,17 @@
   border-top-style: solid;
 }
 
+.organisation__section-border-top {
+  border-top: 5px solid $black;
+  padding-top: $gutter-half;
+}
+
+.organisation__corporate-information .organisation__float-section {
+  @include media(tablet) {
+    float: right;
+  }
+}
+
 .organisations__margin-bottom {
   margin-bottom: $gutter-half;
 

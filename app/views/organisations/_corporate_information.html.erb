@@ -1,11 +1,26 @@
-<div class="organisation-corporate-info">
-  <%= render "govuk_publishing_components/components/heading", {
-      text: "Corporate Information",
-      heading_level: 4
-  } %>
-  <% corporate_info.each do |info| %>
-    <p>
-      <%= link_to info["title"], info["href"] %>
-    </p>
+<div class="column-one-third organisation__float-section">
+  <% if @show.corporate_information[:corporate_information_links][:items].any? %>
+    <% unless @organisation.is_promotional_org? %>
+      <%= render "govuk_publishing_components/components/heading", {
+        text: t('organisations.corporate_information'),
+        margin_bottom: 2,
+        padding: true,
+        border_top: 5,
+        brand: @organisation.brand
+      } %>
+    <% end %>
+    <div class="<%= "organisation__section-border-top" if @organisation.is_promotional_org? %>">
+      <%= render "components/topic-list", @show.corporate_information[:corporate_information_links] %>
+    </div>
+  <% end %>
+
+  <% if @show.corporate_information[:job_links][:items].any? && !@organisation.is_no_10? %>
+    <%= render "govuk_publishing_components/components/heading", {
+      text: t('organisations.jobs_contracts'),
+      margin_bottom: 2,
+      heading_level: 3,
+      font_size: 24
+    } %>
+    <%= render "components/topic-list", @show.corporate_information[:job_links] %>
   <% end %>
 </div>

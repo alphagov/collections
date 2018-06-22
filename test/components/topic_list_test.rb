@@ -61,4 +61,12 @@ class TopicListTest < ComponentTestCase
     render_component(items: simple_item, small: true)
     assert_select ".app-c-topic-list.app-c-topic-list--small"
   end
+
+  test "renders with margin-bottom" do
+    render_component(items: simple_item)
+    assert_select ".app-c-topic-list--margin-bottom", false, "Margin bottom should not be applied by default"
+
+    render_component(items: simple_item, margin_bottom: true)
+    assert_select ".app-c-topic-list--margin-bottom"
+  end
 end

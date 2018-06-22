@@ -88,6 +88,16 @@ class OrganisationTest < ActionDispatch::IntegrationTest
         },
         organisation_type: "ministerial_department",
         organisation_featuring_priority: "news",
+        ordered_corporate_information_pages: [
+          {
+            title: "Complaints procedure",
+            href: "/complaints-procedure"
+          },
+          {
+            title: "Jobs",
+            href: "https://www.civilservicejobs.service.gov.uk/csr"
+          }
+        ],
         ordered_featured_links: [
           {
             title: "Attorney General's guidance to the legal profession",
@@ -603,5 +613,20 @@ class OrganisationTest < ActionDispatch::IntegrationTest
   it 'does not show high profile groups for promotional orgs' do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
     refute page.has_css?(".gem-c-heading", text: "High profile groups within the Prime Minister's Office, 10 Downing Street")
+  end
+
+  it "displays corporate information pages" do
+    visit "/government/organisations/attorney-generals-office"
+    assert page.has_css?(".gem-c-heading", text: "Corporate information")
+    assert page.has_css?(".app-c-topic-list__link[href='/complaints-procedure']", text: "Complaints procedure")
+
+    assert page.has_css?(".gem-c-heading", text: "Jobs and contracts")
+    assert page.has_css?(".app-c-topic-list__link[href='https://www.civilservicejobs.service.gov.uk/csr']", text: "Jobs")
+  end
+
+  it "does not show corporate information pages if none available" do
+    visit "/government/organisations/office-of-the-secretary-of-state-for-wales"
+    refute page.has_css?(".gem-c-heading", text: "Corporate information")
+    refute page.has_css?(".gem-c-heading", text: "Jobs and contracts")
   end
 end

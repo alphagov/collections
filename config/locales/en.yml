@@ -24,6 +24,7 @@ en:
   view_all: "view all"
   view_less: "view less"
   organisations:
+    corporate_information: "Corporate information"
     document_types:
       documents: "Documents"
       announcements: "Our announcements"
@@ -49,6 +50,7 @@ en:
       contact_form: FOI contact form
     follow_us: "Follow us"
     high_profile_groups: High profile groups within %{title}
+    jobs_contracts: "Jobs and contracts"
     latest_from: "Latest from %{title}"
     notices:
       separate_website: "%{title} has a <a href='%{url}'>separate website</a>"
@@ -61,6 +63,7 @@ en:
       no_longer_exists: "%{title} has closed"
     our_policies: "Our policies"
     part_of: "Part of"
+    separate_website: "separate website"
     people:
       board_members: "Our management"
       chief_professional_officers: "Chief professional officers"
