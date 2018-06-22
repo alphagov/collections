@@ -115,9 +115,15 @@
   padding-top: $gutter-half;
 }
 
-.organisation__corporate-information .organisation__float-section {
-  @include media(tablet) {
-    float: right;
+.organisation__corporate-information {
+  .organisation__float-section {
+    @include media(tablet) {
+      float: right;
+    }
+  }
+
+  .organisation__secondary-corporate-information {
+    @include core-16;
   }
 }
 

@@ -393,7 +393,8 @@ module OrganisationHelpers
             title: "Procurement at Attorney General's Office",
             href: "/government/attorney-general's-office/procurement"
           },
-        ]
+        ],
+        secondary_corporate_information_pages: "Read more about our pages"
       }
     }.with_indifferent_access
   end
