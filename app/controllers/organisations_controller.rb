@@ -1,4 +1,6 @@
 class OrganisationsController < ApplicationController
+  before_action :set_locale, only: :show
+
   def index
     @organisations = ContentStoreOrganisations.find!("/government/organisations")
     @presented_organisations = presented_organisations
@@ -44,5 +46,9 @@ private
 
   def locale
     ".#{params[:locale]}" if params[:locale]
+  end
+
+  def set_locale
+    I18n.locale = params[:locale] || I18n.default_locale
   end
 end

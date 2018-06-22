@@ -1,35 +1,35 @@
-en:
-  view_all: "view all"
-  view_less: "view less"
+cy:
+  common:
+    translations: Cyfieithiadau
+  view_all: gwelir holl
+  view_less: gwelir llai
   organisations:
-    corporate_information: "Corporate information"
     document_types:
-      documents: "Documents"
-      announcements: "Our announcements"
-      consultations: "Our consultations"
-      publications: "Our publications"
-      statistics: "Our statistics"
-      see_all_documents: "See all %{type}"
+      documents: "Dogfennau"
+      announcements: "Ein cyhoeddiadau"
+      consultations: "Ein ymgynghoriadau"
+      publications: "Ein cyhoeddiadau"
+      statistics: "Ein hystadegau"
+      see_all_documents: "Gweld ein holl %{type}"
     foi:
-      make_an_foi_request: Make an FOI request
+      make_an_foi_request: Gwneud cais DRhG
       freedom_of_information_act: Freedom of Information (FOI) Act
       freedom_of_information_requests: Freedom of Information requests
-      foi_release: See all our FOI releases
+      foi_release: Gweld ein holl datganiadau rhyddid gwybodaeth
       foi_releases:
-        one: FOI release
-        other: FOI releases
+        one: Datganiad Rhyddid Gwybodaeth
+        other: Datganiad Rhyddid Gwybodaeth
       making_foi_requests:
-        step1_html: Read about the Freedom of Information (FOI) Act and <a href="%{how_to_path}" class="brand__color">how to make a request</a>.
-        step2_html: Check <a href="%{our_releases_path}" class="brand__color">our previous releases</a> to see if we’ve already answered your question.
-        step3_html: Make a new request by contacting us using the details below.
+        step1_html: Darllenwch am y Ddeddf Rhyddid Gwybodaeth (DRhG) a <a href="%{how_to_path}" class="brand__color">sut i wneud cais</a>.
+        step2_html: Ymchwiliwch <a href="%{our_releases_path}" class="brand__color">ein datganiadau blaenorol</a> i weld os ydym eisioes wedi ateb eich cwestiwn.
+        step3_html: Gwnewch cais newydd drwy gysylltu a ni ar.
       foi_exemption_html: |
         This organisation is not covered by the Freedom of Information Act.
         To see which organisations are included, see <a href="%{foi_url}" class="brand__color">the legislation</a>.
       contact_form: FOI contact form
-    follow_us: "Follow us"
+    follow_us: "Dilynwch ni"
     high_profile_groups: High profile groups within %{title}
-    jobs_contracts: "Jobs and contracts"
-    latest_from: "Latest from %{title}"
+    latest_from: "Gweithgaredd diweddaraf gan %{title}"
     notices:
       separate_website: "%{title} has a <a href='%{url}'>separate website</a>"
       changed_name: "%{title} is now called <a href='%{link_href}'>%{link_text}</a>"
@@ -39,19 +39,18 @@ en:
       merged: "%{title} became part of <a href='%{link_href}'>%{link_text}</a> in %{updated}"
       split: "%{title} was replaced by %{links}"
       no_longer_exists: "%{title} has closed"
-    our_policies: "Our policies"
-    part_of: "Part of"
-    separate_website: "separate website"
+    our_policies: "Ein polisïau"
+    part_of: Rhan o
     people:
-      board_members: "Our management"
+      board_members: "Ein rheolaeth"
       chief_professional_officers: "Chief professional officers"
-      ministers: "Our ministers"
-      military_personnel: "Our senior military officials"
-      special_representatives: "Special representatives"
-      traffic_commissioners: "Traffic commissioners"
-    read_more: "Read more about what we do"
-    see_all: "See all"
-    separate_website: "separate website"
+      ministers: "Ein gweinidogion"
+      military_personnel: "Ein huwch swyddogion milwrol"
+      special_representatives: "Cynrychiolwyr arbennig"
+      traffic_commissioners: "Comisiynwyr traffig"
+    read_more: "Darllen mwy am yr hyn rydyn ni'n ei wneud"
+    see_all: "Gweld holl"
+    separate_website: "gwefan ar wahân"
     type:
       adhoc_advisory_group: "Ad-hoc advisory group"
       advisory_ndpb: "Advisory non-departmental public body"
@@ -63,7 +62,7 @@ en:
       public_corporation: "Public corporation"
       tribunal_ndpb: "Tribunal non-departmental public body"
       other: "Other"
-    what_we_do: "What %{title} does"
+    what_we_do: "Yr hyn rydym ni'n ei wneud"
   language_names:
     en: English
     cy: Cymraeg
