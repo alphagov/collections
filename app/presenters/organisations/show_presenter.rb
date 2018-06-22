@@ -69,15 +69,13 @@ module Organisations
         {
           title: foi_title(foi_contact["details"]["title"]),
           post_addresses: foi_contact["details"]["post_addresses"].map do |post|
-            data = ""
-            data << contact_line(post["title"])
-            data << contact_line(post["street_address"].gsub("\r\n", "<br/>"))
-            data << contact_line(post["locality"])
-            data << contact_line(post["postal_code"])
-            data << contact_line(post["world_location"])
+            foi_address(post)
           end,
           email_addresses: foi_contact["details"]["email_addresses"].map do |email|
             make_email_link(email["email"])
+          end,
+          links: foi_contact["details"]["contact_form_links"].map do |link|
+            make_link(link)
           end,
           description: foi_description(foi_contact["details"]["description"])
         }
@@ -110,6 +108,15 @@ module Organisations
       ""
     end
 
+    def make_link(link)
+      return link_to(make_link_text(link["description"]), link["link"], class: "brand__color") if link["link"].length.positive?
+      nil
+    end
+
+    def make_link_text(text)
+      text.length.positive? ? text : I18n.t('organisations.foi.contact_form')
+    end
+
     def make_email_link(email)
       mail_to(email, email, class: "brand__color")
     end
@@ -119,8 +126,19 @@ module Organisations
       I18n.t('organisations.foi.freedom_of_information_requests')
     end
 
-    def foi_description(contact)
-      content_tag(:p, contact.gsub("\r\n", "<br/>").html_safe) if contact
+    def foi_address(post)
+      data = ""
+      data << contact_line(post["title"])
+      data << contact_line(post["street_address"].gsub("\r\n", "<br/>"))
+      data << contact_line(post["locality"])
+      data << contact_line(post["postal_code"])
+      data << contact_line(post["world_location"])
+      data = data.gsub("<br/><br/>", "<br/>")
+      data if data.length.positive?
+    end
+
+    def foi_description(description)
+      return content_tag(:p, description.gsub("\r\n", "<br/>").html_safe) if description.length.positive?
     end
 
     def acronym

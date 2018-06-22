@@ -324,6 +324,13 @@ class OrganisationTest < ActionDispatch::IntegrationTest
                 {
                   email: "foiwales@walesoffice.gsi.gov.uk"
                 }
+              ],
+              contact_form_links: [
+                {
+                  title: "",
+                  link: "/foi_contact_link",
+                  description: ""
+                }
               ]
             }
           },
@@ -343,7 +350,8 @@ class OrganisationTest < ActionDispatch::IntegrationTest
                 {
                   email: "welshofficefoi@walesoffice.gsi.gov.uk"
                 }
-              ]
+              ],
+              contact_form_links: []
             }
           }
         ]
@@ -577,6 +585,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     assert page.has_content?(/walesofficefoi@walesoffice.gsi.gov.uk/i)
     assert page.has_content?(/foiwales@walesoffice.gsi.gov.uk/i)
     assert page.has_content?(/welshofficefoi@walesoffice.gsi.gov.uk/i)
+    assert page.has_css?("a[href='/foi_contact_link']", text: "FOI contact form")
   end
 
   it "shows high profile groups section" do
