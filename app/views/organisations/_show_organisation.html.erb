@@ -36,6 +36,20 @@
 
 <div class="grid-row">
   <div class="column-two-thirds">
+    <% if @contacts.has_contacts? %>
+      <section class="brand--<%= @organisation.brand %> organisations__margin-bottom">
+        <%= render "govuk_publishing_components/components/heading", {
+          text: t('organisations.contact.contact_organisation', organisation: @show.acronym),
+          brand: @organisation.brand,
+          border_top: 5,
+          padding: true,
+          margin_bottom: 2
+        } %>
+
+        <%= render partial: 'contacts', locals: { contacts: @contacts.contacts, border: true } %>
+      </section>
+    <% end %>
+
     <% unless @organisation.is_promotional_org? %>
       <%= render partial: 'freedom_of_information' %>
     <% end %>

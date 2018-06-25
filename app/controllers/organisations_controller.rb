@@ -17,6 +17,7 @@ class OrganisationsController < ApplicationController
     @what_we_do = Organisations::WhatWeDoPresenter.new(@organisation)
     @people = Organisations::PeoplePresenter.new(@organisation)
     @not_live = Organisations::NotLivePresenter.new(@organisation)
+    @contacts = Organisations::ContactsPresenter.new(@organisation)
 
     respond_to do |f|
       f.html do

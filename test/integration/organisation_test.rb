@@ -77,6 +77,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
       title: "Attorney General's Office",
       base_path: "/government/organisations/attorney-generals-office",
       details: {
+        acronym: "AGO",
         body: "The Attorney General's Office (AGO) provides legal advice and support to the Attorney General and the Solicitor General (the Law Officers) who give legal advice to government. The AGO helps the Law Officers perform other duties in the public interest, such as looking at sentences which may be too low.\r\n\r\n",
         brand: "attorney-generals-office",
         logo: {
@@ -153,6 +154,33 @@ class OrganisationTest < ActionDispatch::IntegrationTest
       },
       links: {
         available_translations: [],
+        ordered_contacts: [
+          {
+            title: "Department for International Trade",
+            details: {
+              title: "Department for International Trade",
+              post_addresses: [{
+                title: "",
+                street_address: "King Charles Street\r\nWhitehall",
+                postal_code: "SW1A 2AH",
+                world_location: "United Kingdom",
+                locality: "London"
+              }],
+              email_addresses: [{
+                title: "",
+                email: "enquiries@trade.gov.uk"
+              }],
+              phone_numbers: [{
+                title: "Custom Telephone",
+                number: "+44 (0) 20 7215 5000"
+              }],
+              contact_form_links: [{
+                title: "Enquiries for overseas companies looking to set up in the UK",
+                link: "https://invest.great.gov.uk/int/contact/"
+              }]
+            }
+          }
+        ],
         ordered_high_profile_groups: [
           {
             base_path: "/government/organisations/attorney-generals-office-1",
@@ -307,6 +335,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             "locale": "en",
           }
         ],
+        ordered_contacts: [],
         ordered_foi_contacts: [
           {
             withdrawn: false,
@@ -607,7 +636,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
   it "shows high profile groups section" do
     visit "/government/organisations/attorney-generals-office"
-    assert page.has_css?(".gem-c-heading", text: "High profile groups within the Attorney General\'s Office")
+    assert page.has_css?(".gem-c-heading", text: "High profile groups within AGO")
     assert page.has_css?(".app-c-topic-list__link[href='/government/organisations/attorney-generals-office-1']", text: "High Profile Group 1")
     assert page.has_css?(".app-c-topic-list__link[href='/government/organisations/attorney-generals-office-2']", text: "High Profile Group 2")
   end
@@ -635,5 +664,25 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     visit "/government/organisations/office-of-the-secretary-of-state-for-wales"
     refute page.has_css?(".gem-c-heading", text: "Corporate information")
     refute page.has_css?(".gem-c-heading", text: "Jobs and contracts")
+  end
+
+  it "displays contact information" do
+    visit "/government/organisations/attorney-generals-office"
+    assert page.has_css?("h2.gem-c-heading", text: "Contact AGO")
+    assert page.has_css?("h3.gem-c-heading", text: "Department for International Trade")
+    assert page.has_content?(/King Charles Street/i)
+    assert page.has_content?(/Whitehall/i)
+    assert page.has_content?(/SW1A 2AH/i)
+    assert page.has_css?("a[href='https://invest.great.gov.uk/int/contact/']", text: "Contact Form: Department for International Trade")
+    assert page.has_content?("enquiries@trade.gov.uk")
+    assert page.has_content?("+44 (0) 20 7215 5000")
+  end
+
+  it "does not show contact information if none available" do
+    visit "/government/organisations/office-of-the-secretary-of-state-for-wales"
+    refute page.has_css?("h2.gem-c-heading", text: "Contact WO")
+
+    visit "/government/organisations/charity-commission"
+    refute page.has_css?("h2.gem-c-heading", text: "Contact Charity Commission")
   end
 end

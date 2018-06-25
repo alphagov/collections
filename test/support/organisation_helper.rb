@@ -371,6 +371,44 @@ module OrganisationHelpers
     }.with_indifferent_access
   end
 
+  def organisation_with_contact_details
+    {
+      title: "Attorney General's Office",
+      details: {
+        brand: "attorney-generals-office"
+      },
+      links: {
+        ordered_contacts: [
+          {
+            title: "Department for International Trade",
+            details: {
+              title: "Department for International Trade",
+              post_addresses: [{
+                title: "",
+                street_address: "King Charles Street\r\nWhitehall",
+                postal_code: "SW1A 2AH",
+                world_location: "United Kingdom",
+                locality: "London"
+              }],
+              email_addresses: [{
+                title: "",
+                email: "enquiries@trade.gov.uk"
+              }],
+              phone_numbers: [{
+                title: "Custom Telephone",
+                number: "+44 (0) 20 7215 5000"
+              }],
+              contact_form_links: [{
+                title: "Department for Trade",
+                link: "/contact"
+              }]
+            }
+          }
+        ]
+      }
+    }.with_indifferent_access
+  end
+
   def organisation_with_corporate_information
     {
       title: "Attorney General's Office",
