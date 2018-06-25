@@ -1,5 +1,5 @@
 <% contacts.each do |contact| %>
-  <div class="organisation__contact-section <%= "organisation__border-top" if local_assigns[:border] %>">
+  <div class="organisation__contact-section <%= "organisation__contact-section--border-top" if local_assigns[:border] %>">
     <%= render "govuk_publishing_components/components/heading", {
       text: contact[:title],
       padding: true,
