@@ -25,7 +25,7 @@
   <% end %>
 
   <% if @organisation.secondary_corporate_information %>
-    <p class="organisation__secondary-corporate-information">
+    <p class="organisation__secondary-corporate-information brand--<%= @organisation.brand %>">
       <%= @organisation.secondary_corporate_information.html_safe %>
     </p>
   <% end %>
