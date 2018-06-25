@@ -509,16 +509,16 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
   it "shows the no10 banner element only on no10's page" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
-    assert page.has_css?(".no10-banner", text: "Prime Minister's Office, 10 Downing Street")
+    assert page.has_css?(".organisation__no10-banner", text: "Prime Minister's Office, 10 Downing Street")
 
     visit "/government/organisations/attorney-generals-office"
-    refute page.has_css?(".no10-banner")
+    refute page.has_css?(".organisation__no10-banner")
 
     visit "/government/organisations/charity-commission"
-    refute page.has_css?(".no10-banner")
+    refute page.has_css?(".organisation__no10-banner")
 
     visit "/government/organisations/civil-service-resourcing"
-    refute page.has_css?(".no10-banner")
+    refute page.has_css?(".organisation__no10-banner")
   end
 
   it "renders the logo and logo brand correctly" do
