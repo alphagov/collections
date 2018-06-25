@@ -1,5 +1,5 @@
 <% contacts.each do |contact| %>
-  <div class="<%= "organisation__border-top" if local_assigns[:border] %>">
+  <div class="organisation__contact-section <%= "organisation__border-top" if local_assigns[:border] %>">
     <%= render "govuk_publishing_components/components/heading", {
       text: contact[:title],
       padding: true,
@@ -17,7 +17,7 @@
       <% end %>
 
       <% if contact[:email_addresses].any? || contact[:links].any? || contact[:phone_numbers].any?  %>
-        <div class="column-half">
+        <div class="<%= contact[:post_addresses].any? ? "column-half" : "column-two-thirds" %>">
           <% if contact[:email_addresses].any? %>
             <div class="organisations__margin-bottom">
               <p><%= t('organisations.contact.email') %></p>
