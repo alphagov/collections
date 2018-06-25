@@ -397,6 +397,10 @@ module OrganisationHelpers
               phone_numbers: [{
                 title: "Custom Telephone",
                 number: "+44 (0) 20 7215 5000"
+              }],
+              contact_form_links: [{
+                title: "Department for Trade",
+                link: "/contact"
               }]
             }
           }

@@ -80,7 +80,9 @@ describe Organisations::ContactsPresenter do
           email_addresses: [
             "<a class=\"brand__color\" href=\"mailto:enquiries@trade.gov.uk\">enquiries@trade.gov.uk</a>",
           ],
-          links: [],
+          links: [
+            "<a class=\"brand__color\" href=\"/contact\">Contact Form: Department for International Trade</a>"
+          ],
           description: nil
         }
       ]

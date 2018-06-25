@@ -46,7 +46,7 @@ module Organisations
             make_email_link(email["email"])
           end || [],
           links: contact["details"]["contact_form_links"]&.map do |link|
-            make_link(link, foi)
+            make_link(link, foi_title(contact["details"]["title"], foi: foi), foi)
           end || [],
           description: contact_description(contact["details"]["description"])
         }
@@ -58,18 +58,23 @@ module Organisations
       ""
     end
 
-    def make_link(link, foi)
-      return link_to(make_link_text(link["description"], foi: foi), link["link"], class: "brand__color") if link["link"].length.positive?
-      nil
+    def make_link(link, contact_title, foi)
+      if link["link"].length.positive?
+        link_to(
+          make_link_text(link["description"], contact_title, foi: foi),
+          link["link"],
+          class: "brand__color",
+        )
+      end
     end
 
-    def make_link_text(text, foi: false)
-      if text.length.positive?
+    def make_link_text(text, contact_title, foi: false)
+      if text && text.length.positive?
         text
       elsif foi
         I18n.t('organisations.foi.contact_form')
       else
-        I18n.t('organisations.contact.contact_form')
+        I18n.t('organisations.contact.contact_form', title: contact_title)
       end
     end
 

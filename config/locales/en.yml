@@ -26,7 +26,7 @@ en:
   organisations:
     contact:
       contact_details: "Contact details"
-      contact_form: "Contact form"
+      contact_form: "Contact Form: %{title}"
       contact_organisation: "Contact %{organisation}"
       email: "Email"
       telephone: "Telephone"

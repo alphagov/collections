@@ -173,6 +173,10 @@ class OrganisationTest < ActionDispatch::IntegrationTest
               phone_numbers: [{
                 title: "Custom Telephone",
                 number: "+44 (0) 20 7215 5000"
+              }],
+              contact_form_links: [{
+                title: "Enquiries for overseas companies looking to set up in the UK",
+                link: "https://invest.great.gov.uk/int/contact/"
               }]
             }
           }
@@ -662,6 +666,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     assert page.has_content?(/King Charles Street/i)
     assert page.has_content?(/Whitehall/i)
     assert page.has_content?(/SW1A 2AH/i)
+    assert page.has_css?("a[href='https://invest.great.gov.uk/int/contact/']", text: "Contact Form: Department for International Trade")
     assert page.has_content?("enquiries@trade.gov.uk")
     assert page.has_content?("+44 (0) 20 7215 5000")
   end
