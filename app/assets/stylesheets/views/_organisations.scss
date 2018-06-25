@@ -165,3 +165,30 @@
 .organisation__contact-section {
   word-wrap: break-word;
 }
+
+.organisations__promotions {
+  @include media(tablet) {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: -$gutter-half;
+    margin-right: -$gutter-half;
+
+    .column-1 {
+      padding: 0 $gutter-half;
+      width: calc(100% / 3 - 30px);
+    }
+
+    .column-2 {
+      width: 50%;
+    }
+
+    .column-3 {
+      padding: 0 $gutter-half;
+      width: 100%;
+    }
+  }
+}

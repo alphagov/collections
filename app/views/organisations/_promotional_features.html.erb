@@ -1,0 +1,21 @@
+<section class="organisations__margin-bottom organisations__promotions">
+  <% @documents.promotional_features.each do |feature| %>
+    <div class="<%= feature[:parent_column_class] %>">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: feature[:title],
+        heading_level: 2,
+        padding: true,
+        border_top: 5,
+        brand: @organisation.brand
+      } %>
+
+      <div class="<%= "grid-row" if feature[:number_of_items] > 1 %>">
+        <% feature[:items].each do |item| %>
+          <div class="<%= feature[:child_column_class] %>">
+            <%= render "govuk_publishing_components/components/image_card", item %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</section>

@@ -56,6 +56,36 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             title: "Facebook",
             href: "https://www.facebook.com/10downingstreet"
           },
+        ],
+        ordered_promotional_features: [
+          {
+            title: "Transparency",
+            items: [
+              {
+                title: "",
+                href: "https://www.gov.uk/government/policies?keywords=&topics%5B%5D=government-efficiency-transparency-and-accountability&departments%5B%5D=all",
+                summary: "Greater transparency across government is at the heart of our commitment to let you hold politicians and public bodies to account. ",
+                image: {
+                  url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/promotional_feature_item/image/1/Transparency.jpg",
+                  alt_text: "Magnifying glass studying a graph"
+                },
+                links: [
+                  {
+                    title: "Single departmental plans",
+                    href: "https://www.gov.uk/government/collections/a-country-that-works-for-everyone-the-governments-plan"
+                  },
+                  {
+                    title: "Prime Minister's and Cabinet Office ministers' transparency publications",
+                    href: "https://www.gov.uk/government/collections/ministers-transparency-publications"
+                  },
+                  {
+                    title: "Government transparency data",
+                    href: "https://www.gov.uk/government/publications?keywords=&publication_filter_option=transparency-data&topics%5B%5D=all&departments%5B%5D=all&world_locations%5B%5D=all&direction=before&date=2013-05-01"
+                  }
+                ]
+              }
+            ]
+          },
         ]
       },
       links: {
@@ -150,6 +180,36 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             role: "Cabinet Secretary",
             href: "/government/people/jeremy-heywood",
           }
+        ],
+        ordered_promotional_features: [
+          {
+            title: "Transparency",
+            items: [
+              {
+                title: "",
+                href: "https://www.gov.uk/government/policies?keywords=&topics%5B%5D=government-efficiency-transparency-and-accountability&departments%5B%5D=all",
+                summary: "Greater transparency across government is at the heart of our commitment to let you hold politicians and public bodies to account. ",
+                image: {
+                  url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/promotional_feature_item/image/1/Transparency.jpg",
+                  alt_text: "Magnifying glass studying a graph"
+                },
+                links: [
+                  {
+                    title: "Single departmental plans",
+                    href: "https://www.gov.uk/government/collections/a-country-that-works-for-everyone-the-governments-plan"
+                  },
+                  {
+                    title: "Prime Minister's and Cabinet Office ministers' transparency publications",
+                    href: "https://www.gov.uk/government/collections/ministers-transparency-publications"
+                  },
+                  {
+                    title: "Government transparency data",
+                    href: "https://www.gov.uk/government/publications?keywords=&publication_filter_option=transparency-data&topics%5B%5D=all&departments%5B%5D=all&world_locations%5B%5D=all&direction=before&date=2013-05-01"
+                  }
+                ]
+              }
+            ]
+          },
         ]
       },
       links: {
@@ -684,5 +744,13 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
     visit "/government/organisations/charity-commission"
     refute page.has_css?("h2.gem-c-heading", text: "Contact Charity Commission")
+  end
+
+  it "shows promotional features on the right pages" do
+    visit "/government/organisations/prime-ministers-office-10-downing-street"
+    assert page.has_content?(/Greater transparency across government is at the heart of our commitment to let you hold politicians and public bodies to account./i)
+
+    visit "/government/organisations/attorney-generals-office"
+    refute page.has_content?(/Greater transparency across government is at the heart of our commitment to let you hold politicians and public bodies to account./i)
   end
 end
