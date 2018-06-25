@@ -69,6 +69,7 @@ module Organisations
         count: 3,
         order: "-public_timestamp",
         filter_organisations: @org.slug,
+        reject_email_document_supertype: "other",
         fields: %w[title link content_store_document_type public_timestamp]
       )["results"]
       search_results_to_documents(@latest_documents)
