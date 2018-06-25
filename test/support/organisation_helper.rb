@@ -436,4 +436,143 @@ module OrganisationHelpers
       }
     }.with_indifferent_access
   end
+
+  def organisation_with_promotional_features
+    {
+      title: "Prime Minister's Office, 10 Downing Street",
+      details: {
+        ordered_promotional_features: [
+          {
+            title: "One feature",
+            items: [
+              {
+                title: "",
+                href: "https://www.gov.uk/government/policies/1-1",
+                summary: "Story 1-1",
+                image: {
+                  url: "https://assets.publishing.service.gov.uk/government/uploads/1-1.jpg",
+                  alt_text: "Image 1-1"
+                },
+                links: [
+                  {
+                    title: "Single departmental plans",
+                    href: "https://www.gov.uk/government/collections/1-1"
+                  },
+                  {
+                    title: "Prime Minister's and Cabinet Office ministers' transparency publications",
+                    href: "https://www.gov.uk/government/collections/ministers-transparency-publications/1-1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            title: "Two features",
+            items: [
+              {
+                title: "",
+                href: "https://www.gov.uk/government/policies/2-1",
+                summary: "Story 2-1",
+                image: {
+                  url: "https://assets.publishing.service.gov.uk/government/uploads/2-1.jpg",
+                  alt_text: "Image 2-1"
+                },
+                links: [
+                  {
+                    title: "Single departmental plans",
+                    href: "https://www.gov.uk/government/collections/2-1"
+                  },
+                  {
+                    title: "Prime Minister's and Cabinet Office ministers' transparency publications",
+                    href: "https://www.gov.uk/government/collections/ministers-transparency-publications/2-1"
+                  }
+                ]
+              },
+              {
+                title: "",
+                href: "https://www.gov.uk/government/policies/2-2",
+                summary: "Story 2-2",
+                image: {
+                  url: "https://assets.publishing.service.gov.uk/government/uploads/2-2.jpg",
+                  alt_text: "Image 2-2"
+                },
+                links: [
+                  {
+                    title: "Single departmental plans",
+                    href: "https://www.gov.uk/government/collections/2-2"
+                  },
+                  {
+                    title: "Prime Minister's and Cabinet Office ministers' transparency publications",
+                    href: "https://www.gov.uk/government/collections/ministers-transparency-publications/2-2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            title: "Three features",
+            items: [
+              {
+                title: "",
+                href: "https://www.gov.uk/government/policies/3-1",
+                summary: "Story 3-1\r\n\r\nAnd a new line",
+                image: {
+                  url: "https://assets.publishing.service.gov.uk/government/uploads/3-1.jpg",
+                  alt_text: "Image 3-1"
+                },
+                links: [
+                  {
+                    title: "Single departmental plans",
+                    href: "https://www.gov.uk/government/collections/3-1"
+                  },
+                  {
+                    title: "Prime Minister's and Cabinet Office ministers' transparency publications",
+                    href: "https://www.gov.uk/government/collections/ministers-transparency-publications/3-1"
+                  }
+                ]
+              },
+              {
+                title: "",
+                href: "https://www.gov.uk/government/policies/3-3",
+                summary: "Story 3-2",
+                image: {
+                  url: "https://assets.publishing.service.gov.uk/government/uploads/3-2.jpg",
+                  alt_text: "Image 3-2"
+                },
+                links: [
+                  {
+                    title: "Single departmental plans",
+                    href: "https://www.gov.uk/government/collections/3-2"
+                  },
+                  {
+                    title: "Prime Minister's and Cabinet Office ministers' transparency publications",
+                    href: "https://www.gov.uk/government/collections/ministers-transparency-publications/3-2"
+                  }
+                ]
+              },
+              {
+                title: "",
+                href: "https://www.gov.uk/government/policies/3-3",
+                summary: "Story 3-3",
+                image: {
+                  url: "https://assets.publishing.service.gov.uk/government/uploads/3-3.jpg",
+                  alt_text: "Image 3-3"
+                },
+                links: [
+                  {
+                    title: "Single departmental plans",
+                    href: "https://www.gov.uk/government/collections/3-3"
+                  },
+                  {
+                    title: "Prime Minister's and Cabinet Office ministers' transparency publications",
+                    href: "https://www.gov.uk/government/collections/ministers-transparency-publications/3-3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }.with_indifferent_access
+  end
 end
