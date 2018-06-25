@@ -551,7 +551,7 @@ module OrganisationHelpers
                 ]
               },
               {
-                title: "",
+                title: "An unexpected title",
                 href: "https://www.gov.uk/government/policies/3-3",
                 summary: "Story 3-3",
                 image: {

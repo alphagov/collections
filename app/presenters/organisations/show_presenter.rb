@@ -7,6 +7,10 @@ module Organisations
       @org = organisation
     end
 
+    def featured_news_title
+      I18n.t('organisations.featured_news', title: prefixed_title)
+    end
+
     def prefixed_title
       prefix = needs_definite_article?(@org.title) ? "the " : ""
       (prefix + @org.title)

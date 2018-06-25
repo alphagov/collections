@@ -35,13 +35,11 @@ module Organisations
           parent_column_class: "column-#{number_of_items}",
           child_column_class: promotions_child_column_class(number_of_items),
           items: feature["items"].map do |item|
-            {
-              title: "",
+            data = {
               description: item["summary"].gsub("\r\n", "<br/>").html_safe,
               href: promotional_feature_link(item["href"]),
               image_src: item["image"]["url"],
               image_alt: item["image"]["alt_text"],
-              heading_text: item["title"],
               extra_links: item["links"].map do |link|
                 {
                   text: link["title"],
@@ -51,6 +49,12 @@ module Organisations
               brand: org.brand,
               heading_level: 3
             }
+
+            if item["title"].length.positive?
+              data[:heading_text] = item["title"]
+            end
+
+            data
           end
         }
       end
@@ -167,7 +171,8 @@ module Organisations
           context: "#{human_date}#{divider}#{document_type}",
           heading_text: news["title"],
           description: news["summary"],
-          brand: org.brand
+          brand: org.brand,
+          heading_level: 3
         }
       end
 
