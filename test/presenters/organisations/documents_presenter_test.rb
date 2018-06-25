@@ -22,7 +22,8 @@ describe Organisations::DocumentsPresenter do
         heading_text: "New head of the Serious Fraud Office announced",
         description: "Lisa Osofsky appointed new Director of the Serious Fraud Office ",
         brand: "attorney-generals-office",
-        large: true
+        large: true,
+        heading_level: 3
       }
       assert_equal expected, @documents_presenter.first_featured_news
     end
@@ -35,7 +36,8 @@ describe Organisations::DocumentsPresenter do
         context: "4 June 2017 — Policy paper",
         heading_text: "New head of a different office announced",
         description: "John Someone appointed new Director of the Other Office ",
-        brand: "attorney-generals-office"
+        brand: "attorney-generals-office",
+        heading_level: 3
       }]
       assert_equal expected, @documents_presenter.remaining_featured_news
     end
@@ -185,12 +187,10 @@ describe Organisations::DocumentsPresenter do
         child_column_class: nil,
         items: [
           {
-            title: "",
             description: "Story 1-1",
             href: "https://www.gov.uk/government/policies/1-1",
             image_src: "https://assets.publishing.service.gov.uk/government/uploads/1-1.jpg",
             image_alt: "Image 1-1",
-            heading_text: "",
             extra_links: [
               {
                 text: "Single departmental plans",
@@ -213,12 +213,10 @@ describe Organisations::DocumentsPresenter do
         child_column_class: "column-half",
         items: [
           {
-            title: "",
             description: "Story 2-1",
             href: "https://www.gov.uk/government/policies/2-1",
             image_src: "https://assets.publishing.service.gov.uk/government/uploads/2-1.jpg",
             image_alt: "Image 2-1",
-            heading_text: "",
             extra_links: [
               {
                 text: "Single departmental plans",
@@ -233,12 +231,10 @@ describe Organisations::DocumentsPresenter do
             heading_level: 3
           },
           {
-            title: "",
             description: "Story 2-2",
             href: "https://www.gov.uk/government/policies/2-2",
             image_src: "https://assets.publishing.service.gov.uk/government/uploads/2-2.jpg",
             image_alt: "Image 2-2",
-            heading_text: "",
             extra_links: [
               {
                 text: "Single departmental plans",
@@ -261,12 +257,10 @@ describe Organisations::DocumentsPresenter do
         child_column_class: "column-one-third",
         items: [
           {
-            title: "",
             description: "Story 3-1<br/><br/>And a new line",
             href: "https://www.gov.uk/government/policies/3-1",
             image_src: "https://assets.publishing.service.gov.uk/government/uploads/3-1.jpg",
             image_alt: "Image 3-1",
-            heading_text: "",
             extra_links: [
               {
                 text: "Single departmental plans",
@@ -281,12 +275,10 @@ describe Organisations::DocumentsPresenter do
             heading_level: 3
           },
           {
-            title: "",
             description: "Story 3-2",
             href: "https://www.gov.uk/government/policies/3-3",
             image_src: "https://assets.publishing.service.gov.uk/government/uploads/3-2.jpg",
             image_alt: "Image 3-2",
-            heading_text: "",
             extra_links: [
               {
                 text: "Single departmental plans",
@@ -301,12 +293,11 @@ describe Organisations::DocumentsPresenter do
             heading_level: 3
           },
           {
-            title: "",
             description: "Story 3-3",
             href: "https://www.gov.uk/government/policies/3-3",
             image_src: "https://assets.publishing.service.gov.uk/government/uploads/3-3.jpg",
             image_alt: "Image 3-3",
-            heading_text: "",
+            heading_text: "An unexpected title",
             extra_links: [
               {
                 text: "Single departmental plans",
