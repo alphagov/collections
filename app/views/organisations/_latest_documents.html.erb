@@ -1,4 +1,4 @@
-<section class="brand--<%= @organisation.brand %> brand__border-color organisations__brand-border-top organisations__margin-bottom">
+<section class="brand--<%= @organisation.brand %> brand__border-color organisation__brand-border-top organisation__margin-bottom">
   <div class="grid-row">
     <div class="column-two-thirds">
       <%= render "govuk_publishing_components/components/heading", {
@@ -13,7 +13,7 @@
     <div class="column-two-thirds">
       <%= render "govuk_publishing_components/components/document_list", @documents.latest_documents %>
 
-      <p class="organisations__margin-bottom brand--<%= @organisation.brand %>">
+      <p class="organisation__margin-bottom brand--<%= @organisation.brand %>">
         <a href="<%= "/government/latest?departments[]=#{@organisation.slug}" %>" class="brand__color"><%= t('organisations.see_all') %></a>
       </p>
 
