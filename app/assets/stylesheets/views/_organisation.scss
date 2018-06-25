@@ -1,6 +1,15 @@
-.organisations__brand-border-top {
+
+.organisation__brand-border-top {
   border-top-width: 5px;
   border-top-style: solid;
+}
+
+// This is only used to apply to promotional orgs where the border colour is always black
+// regardless of the link colour. This can be removed if we add the black border
+// colour as branding to the organisation.
+.organisation__section-border-top {
+  border-top: 5px solid $black;
+  padding-top: $gutter-half;
 }
 
 // This is only used to apply to promotional orgs where the border colour is always black
@@ -17,13 +26,12 @@
       float: right;
     }
   }
-
   .organisation__secondary-corporate-information {
     @include core-16;
   }
 }
 
-.organisations__promotions {
+.organisation__promotions {
   @include media(tablet) {
     display: -ms-flexbox;
     display: flex;
@@ -72,7 +80,7 @@
   word-wrap: break-word;
 }
 
-.organisations__margin-bottom {
+.organisation__margin-bottom {
   margin-bottom: $gutter-half;
 
   @include media(tablet) {
