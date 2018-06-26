@@ -41,7 +41,11 @@ module Organisations
     end
 
     def merged_notice
-      I18n.t('organisations.notices.merged', title: @org.title, link_href: notice_successor_link, link_text: notice_successor_title, updated: notice_successor_updated).html_safe
+      if status_updated_at
+        I18n.t('organisations.notices.merged', title: @org.title, link_href: notice_successor_link, link_text: notice_successor_title, updated: notice_successor_updated).html_safe
+      else
+        I18n.t('organisations.notices.merged_no_date', title: @org.title, link_href: notice_successor_link, link_text: notice_successor_title).html_safe
+      end
     end
 
     def split_notice
@@ -65,7 +69,11 @@ module Organisations
     end
 
     def notice_successor_updated
-      Date.parse(@org.status_updated_at).strftime("%B %Y")
+      Date.parse(status_updated_at).strftime("%B %Y")
+    end
+
+    def status_updated_at
+      @org.status_updated_at
     end
   end
 end

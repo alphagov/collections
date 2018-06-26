@@ -43,6 +43,7 @@ en:
       joining: "%{title} will soon be incorporated into GOV.UK"
       devolved: "%{title} is a body of <a href='%{link_href}'>%{link_text}</a>"
       left_gov: "%{title} is now independent of the UK government"
+      merged_no_date: "%{title} is now part of <a href='%{link_href}'>%{link_text}</a>"
       merged: "%{title} became part of <a href='%{link_href}'>%{link_text}</a> in %{updated}"
       split: "%{title} was replaced by %{links}"
       no_longer_exists: "%{title} has closed"
