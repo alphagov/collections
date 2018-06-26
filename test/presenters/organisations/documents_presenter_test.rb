@@ -16,7 +16,7 @@ describe Organisations::DocumentsPresenter do
     it 'formats the main large news story correctly' do
       expected = {
         href: "/government/news/new-head-of-the-serious-fraud-office-announced",
-        image_src: "https://assets.publishing.service.gov.uk/jeremy.jpg",
+        image_src: "https://assets.publishing.service.gov.uk/s712_jeremy.jpg",
         image_alt: "Attorney General Jeremy Wright QC MP",
         context: "4 June 2018 — Press release",
         heading_text: "New head of the Serious Fraud Office announced",
@@ -31,7 +31,7 @@ describe Organisations::DocumentsPresenter do
     it 'formats the remaining news stories correctly' do
       expected = [{
         href: "/government/news/new-head-of-a-different-office-announced",
-        image_src: "https://assets.publishing.service.gov.uk/john.jpg",
+        image_src: "https://assets.publishing.service.gov.uk/s465_john.jpg",
         image_alt: "John Someone MP",
         context: "4 June 2017 — Policy paper",
         heading_text: "New head of a different office announced",

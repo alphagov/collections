@@ -1,5 +1,6 @@
 module Organisations
   class PeoplePresenter
+    include OrganisationHelper
     include ActionView::Helpers::UrlHelper
 
     def initialize(organisation)
@@ -66,14 +67,6 @@ module Organisations
       type.eql?(:ministers)
     end
 
-    def small_image_url(image_url)
-      image_url_array = image_url.split('/')
-      small_image_name = "s465_" + image_url_array[-1]
-      image_url_array[-1] = small_image_name
-
-      image_url_array.join("/")
-    end
-
     def formatted_person_data(person, type)
       data = {
         brand: @org.brand,
@@ -94,7 +87,7 @@ module Organisations
       end
 
       if person["image"]
-        data[:image_src] = small_image_url(person["image"]["url"])
+        data[:image_src] = image_url_by_size(person["image"]["url"], 465)
         data[:image_alt] = person["image"]["alt_text"]
       end
 
