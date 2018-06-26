@@ -80,6 +80,7 @@ module OrganisationHelpers
   def organisation_with_no_people
     {
       title: "Attorney General's Office",
+      base_path: "/government/organisations/attorney-generals-office",
       details: {
         brand: "attorney-generals-office",
         ordered_ministers: [],
@@ -148,6 +149,7 @@ module OrganisationHelpers
   def organisation_with_board_members
     {
       title: "Attorney General's Office",
+      base_path: "/government/organisations/attorney-generals-office",
       details: {
         brand: "attorney-generals-office",
         organisation_govuk_status: {
@@ -412,6 +414,7 @@ module OrganisationHelpers
   def organisation_with_contact_details
     {
       title: "Attorney General's Office",
+      base_path: "/government/organisations/attorney-generals-office",
       details: {
         brand: "attorney-generals-office"
       },
@@ -450,6 +453,7 @@ module OrganisationHelpers
   def organisation_with_corporate_information
     {
       title: "Attorney General's Office",
+      base_path: "/government/organisations/attorney-generals-office",
       details: {
         brand: "attorney-generals-office",
         ordered_corporate_information_pages: [
@@ -478,6 +482,7 @@ module OrganisationHelpers
   def organisation_with_promotional_features
     {
       title: "Prime Minister's Office, 10 Downing Street",
+      base_path: "/government/organisations/attorney-generals-office",
       details: {
         ordered_promotional_features: [
           {
