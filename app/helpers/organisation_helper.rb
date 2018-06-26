@@ -35,4 +35,12 @@ module OrganisationHelper
   def organisation_type_name(organisation_type)
     ORGANISATION_TYPES.dig(organisation_type.to_sym, :name) || ORGANISATION_TYPES[:other][:name]
   end
+
+  def image_url_by_size(image_url, size)
+    image_url_array = image_url.split('/')
+    image_by_size_name = "s#{size}_" + image_url_array[-1]
+    image_url_array[-1] = image_by_size_name
+
+    image_url_array.join("/")
+  end
 end

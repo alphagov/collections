@@ -1,5 +1,6 @@
 module Organisations
   class DocumentsPresenter
+    include OrganisationHelper
     attr_reader :org
 
     def initialize(organisation)
@@ -11,7 +12,7 @@ module Organisations
     end
 
     def first_featured_news
-      main_story = featured_news([org.ordered_featured_documents.first])[0]
+      main_story = featured_news([org.ordered_featured_documents.first], first_featured: true)[0]
       main_story[:large] = true
       main_story
     end
@@ -158,8 +159,10 @@ module Organisations
       }
     end
 
-    def featured_news(featured)
+    def featured_news(featured, first_featured: false)
       news_stories = []
+      image_size = first_featured ? 712 : 465
+
       featured.each do |news|
         human_date = Date.parse(news["public_updated_at"]).strftime("%-d %B %Y") if news["public_updated_at"]
         document_type = news["document_type"]
@@ -167,7 +170,7 @@ module Organisations
 
         news_stories << {
           href: news["href"],
-          image_src: news["image"]["url"],
+          image_src: image_url_by_size(news["image"]["url"], image_size),
           image_alt: news["image"]["alt_text"],
           context: "#{human_date}#{divider}#{document_type}",
           heading_text: news["title"],
