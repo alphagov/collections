@@ -36,13 +36,13 @@ module Organisations
     end
 
     def has_featured_policies?
-      true if @org.ordered_featured_policies && @org.ordered_featured_policies.length.positive?
+      @org.ordered_featured_policies && @org.ordered_featured_policies.length.positive?
     end
 
     def featured_policies
       policies = []
 
-      @org.ordered_featured_policies.each do |policy|
+      @org.ordered_featured_policies.first(5).each do |policy|
         policies << {
           link: {
             text: policy["title"],
