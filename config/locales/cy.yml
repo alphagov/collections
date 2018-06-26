@@ -36,6 +36,7 @@ cy:
       contact_form: "Ffurflen cysylltu DRhG"
     follow_us: "Dilynwch ni"
     high_profile_groups: High profile groups within %{title}
+    jobs_contracts: "Swyddi a chontractau"
     latest_from: "Gweithgaredd diweddaraf gan %{title}"
     notices:
       separate_website: "%{title} has a <a href='%{url}'>separate website</a>"
