@@ -3,7 +3,6 @@
     <% unless @organisation.is_promotional_org? %>
       <%= render "govuk_publishing_components/components/heading", {
         text: t('organisations.corporate_information'),
-        margin_bottom: 2,
         padding: true,
         border_top: 5,
         brand: @organisation.brand

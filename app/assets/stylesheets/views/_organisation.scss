@@ -73,15 +73,11 @@
 
 .organisation__contact-section--border-top {
   border-top: 1px solid $grey-2;
-  margin-top: $gutter-half;
+  margin-bottom: $gutter-half;
 }
 
 .organisation__margin-bottom {
-  margin-bottom: $gutter-half;
-
-  @include media(tablet) {
-    margin-bottom: $gutter;
-  }
+  margin-bottom: $gutter;
 }
 
 .organisation__no10-banner {
