@@ -1,8 +1,5 @@
-<%= render partial: 'title' %>
-
-<% unless @organisation.is_no_10? %>
-  <%= render partial: 'header' %>
-<% end %>
+<%= render partial: 'breadcrumb' %>
+<%= render partial: 'header' %>
 
 <% if @documents.has_featured_news? %>
   <%= render partial: 'featured_news' %>

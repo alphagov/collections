@@ -1,9 +1,0 @@
-<% content_for :breadcrumbs do %>
-  <div class="organisation__margin-bottom">
-    <% if @organisation.is_no_10? %>
-      <h1 class="organisation__no10-banner organisation__margin-bottom"><%= @header.org.title %></h1>
-    <% else %>
-      <h1 class="visually-hidden"><%= @header.org.title %></h1>
-    <% end %>
-  </div>
-<% end %>
