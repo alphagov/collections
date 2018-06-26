@@ -200,19 +200,57 @@ module OrganisationHelpers
       links: {
         ordered_featured_policies: [
           {
-            api_path: "/api/content/government/policies/waste-and-recycling",
             base_path: "/government/policies/waste-and-recycling",
-            content_id: "5d5e9324-7631-11e4-a3cb-005056011aef",
-            description: "What the government’s doing about waste and recycling.",
             document_type: "policy",
-            locale: "en",
-            public_updated_at: "2015-05-14T16:39:48Z",
-            schema_name: "policy",
-            title: "Waste and recycling",
-            withdrawn: false,
-            links: {},
-            api_url: "https://www.gov.uk/api/content/government/policies/waste-and-recycling",
-            web_url: "https://www.gov.uk/government/policies/waste-and-recycling"
+            title: "Waste and recycling"
+          },
+        ]
+      }
+    }.with_indifferent_access
+  end
+
+  def organisation_with_multiple_policies
+    {
+      title: "Attorney General's Office",
+      base_path: "/government/organisations/attorney-generals-office",
+      details: {
+        organisation_govuk_status: {
+          status: "live",
+        },
+        brand: "attorney-generals-office",
+        organisation_featuring_priority: "news"
+      },
+      links: {
+        ordered_featured_policies: [
+          {
+            base_path: "/government/policies/policy-1",
+            document_type: "policy",
+            title: "Policy 1"
+          },
+          {
+            base_path: "/government/policies/policy-2",
+            document_type: "policy",
+            title: "Policy 2"
+          },
+          {
+            base_path: "/government/policies/policy-3",
+            document_type: "policy",
+            title: "Policy 3"
+          },
+          {
+            base_path: "/government/policies/policy-4",
+            document_type: "policy",
+            title: "Policy 4"
+          },
+          {
+            base_path: "/government/policies/policy-5",
+            document_type: "policy",
+            title: "Policy 5"
+          },
+          {
+            base_path: "/government/policies/policy-6",
+            document_type: "policy",
+            title: "Policy 6"
           },
         ]
       }
