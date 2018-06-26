@@ -174,7 +174,7 @@ module Organisations
           image_alt: news["image"]["alt_text"],
           context: "#{human_date}#{divider}#{document_type}",
           heading_text: news["title"],
-          description: news["summary"],
+          description: news["summary"].html_safe,
           brand: org.brand,
           heading_level: 3
         }
