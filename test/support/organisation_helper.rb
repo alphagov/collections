@@ -613,4 +613,26 @@ module OrganisationHelpers
       }
     }.with_indifferent_access
   end
+
+  def organisation_with_translations
+    {
+      title: "Office of the Secretary of State for Wales",
+      base_path: "/government/organisations/office-of-the-secretary-of-state-for-wales",
+      details: {
+        brand: "attorney-generals-office",
+      },
+      links: {
+        available_translations: [
+          {
+            base_path: "/government/organisations/office-of-the-secretary-of-state-for-wales.cy",
+            locale: "cy",
+          },
+          {
+            base_path: "/government/organisations/office-of-the-secretary-of-state-for-wales",
+            locale: "en",
+          }
+        ]
+      }
+    }.with_indifferent_access
+  end
 end
