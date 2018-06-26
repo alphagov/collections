@@ -496,6 +496,17 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     assert page.has_css?(".content")
   end
 
+  it "displays breadcrumbs" do
+    visit "/government/organisations/prime-ministers-office-10-downing-street"
+    assert page.has_css?(".gem-c-breadcrumbs .gem-c-breadcrumbs--item", text: "Prime Minister's Office, 10 Downing Street")
+
+    visit "/government/organisations/attorney-generals-office"
+    assert page.has_css?(".gem-c-breadcrumbs .gem-c-breadcrumbs--item", text: "Attorney General's Office")
+
+    visit "/government/organisations/charity-commission"
+    assert page.has_css?(".gem-c-breadcrumbs .gem-c-breadcrumbs--item", text: "The Charity Commission")
+  end
+
   it "sets the page title" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
     assert page.has_title?("Prime Minister's Office, 10 Downing Street - GOV.UK")
