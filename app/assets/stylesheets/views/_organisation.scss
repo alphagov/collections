@@ -3,6 +3,10 @@
   border-top-style: solid;
 }
 
+.organisation__section-wrap {
+  word-wrap: break-word;
+}
+
 // This is only used to apply to promotional orgs where the border colour is always black
 // regardless of the link colour. This can be removed if we add the black border
 // colour as branding to the organisation.
