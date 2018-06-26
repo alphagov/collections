@@ -97,6 +97,7 @@ module Organisations
       data << contact_line(post["title"])
       data << contact_line(post["street_address"].gsub("\r\n", "<br/>"))
       data << contact_line(post["locality"])
+      data << contact_line(post["region"])
       data << contact_line(post["postal_code"])
       data << contact_line(post["world_location"])
       data = data.gsub("<br/><br/>", "<br/>")
