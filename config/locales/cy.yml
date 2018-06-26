@@ -4,6 +4,13 @@ cy:
   view_all: gwelir holl
   view_less: gwelir llai
   organisations:
+    contact:
+      contact_details: "Contact details"
+      contact_form: "Ffurflen cysylltu: %{title}"
+      contact_organisation: "Cyswllt %{organisation}"
+      email: "E-bost"
+      telephone: "Ffôn"
+    corporate_information: "Gwybodaeth gorfforaethol"
     document_types:
       documents: "Dogfennau"
       announcements: "Ein cyhoeddiadau"
@@ -26,7 +33,7 @@ cy:
       foi_exemption_html: |
         This organisation is not covered by the Freedom of Information Act.
         To see which organisations are included, see <a href="%{foi_url}" class="brand__color">the legislation</a>.
-      contact_form: FOI contact form
+      contact_form: "Ffurflen cysylltu DRhG"
     follow_us: "Dilynwch ni"
     high_profile_groups: High profile groups within %{title}
     latest_from: "Gweithgaredd diweddaraf gan %{title}"

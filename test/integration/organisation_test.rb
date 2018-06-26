@@ -691,7 +691,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     assert page.has_content?(/walesofficefoi@walesoffice.gsi.gov.uk/i)
     assert page.has_content?(/foiwales@walesoffice.gsi.gov.uk/i)
     assert page.has_content?(/welshofficefoi@walesoffice.gsi.gov.uk/i)
-    assert page.has_css?("a[href='/foi_contact_link']", text: "FOI contact form")
+    assert page.has_css?("a[href='/foi_contact_link']", text: "Ffurflen cysylltu DRhG")
   end
 
   it "shows high profile groups section" do
