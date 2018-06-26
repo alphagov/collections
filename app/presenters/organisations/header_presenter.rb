@@ -76,7 +76,7 @@ module Organisations
         {
           brand: org.brand,
           no_margin_top: true,
-          translations: links
+          translations: links.sort_by { |t| t[:locale] == I18n.default_locale.to_s ? '' : t[:locale] }
         }
       end
     end
