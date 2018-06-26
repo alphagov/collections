@@ -43,8 +43,7 @@
           text: t('organisations.contact.contact_organisation', organisation: @show.acronym),
           brand: @organisation.brand,
           border_top: 5,
-          padding: true,
-          margin_bottom: 2
+          padding: true
         } %>
 
         <%= render partial: 'contacts', locals: { contacts: @contacts.contacts, border: true } %>
