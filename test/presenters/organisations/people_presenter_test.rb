@@ -23,7 +23,7 @@ describe Organisations::PeoplePresenter do
           metadata: nil,
           context: nil,
           heading_text: "Oliver Dowden CBE MP",
-          heading_level: 3,
+          heading_level: 0,
           extra_links_no_indent: true,
           extra_links: [
             {
@@ -50,7 +50,7 @@ describe Organisations::PeoplePresenter do
           metadata: nil,
           context: "The Rt Hon",
           heading_text: "Theresa May MP",
-          heading_level: 3,
+          heading_level: 0,
           extra_links_no_indent: true,
           extra_links: [
             {
@@ -79,7 +79,7 @@ describe Organisations::PeoplePresenter do
           metadata: nil,
           context: nil,
           heading_text: "Stuart Andrew MP",
-          heading_level: 3,
+          heading_level: 0,
           extra_links_no_indent: true,
           extra_links: [
             {
@@ -166,7 +166,7 @@ describe Organisations::PeoplePresenter do
         metadata: nil,
         context: nil,
         heading_text: "Sir Jeremy Heywood",
-        heading_level: 3,
+        heading_level: 0,
         extra_links_no_indent: true,
         image_src: "/photo/s465_jeremy-heywood",
         image_alt: "Sir Jeremy Heywood"
@@ -180,7 +180,7 @@ describe Organisations::PeoplePresenter do
         metadata: nil,
         context: nil,
         heading_text: "John Manzoni",
-        heading_level: 3,
+        heading_level: 0,
         extra_links_no_indent: true
       }
 
