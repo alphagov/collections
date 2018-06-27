@@ -93,7 +93,7 @@ module Organisations
         metadata: person["payment_type"],
         context: person["name_prefix"],
         heading_text: person["name"],
-        heading_level: 3,
+        heading_level: 0,
         extra_links_no_indent: true
       }
 
