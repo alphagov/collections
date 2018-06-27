@@ -112,10 +112,39 @@ module Organisations
     end
 
   private
+    NEED_A_THE = %w(
+      authority
+      agency
+      bank
+      board
+      body
+      centre
+      college
+      commission
+      committee
+      council
+      department
+      fund
+      group
+      hospital
+      inquiry
+      inspectorate
+      ministry
+      office
+      panel
+      review
+      service
+      team
+      tribunal
+    ).freeze
+
+    NO_THE = "civil service resourcing|civil service reform".freeze
 
     def needs_definite_article?(phrase)
-      exceptions = [/civil service resourcing/, /^hm/, /ordnance survey/]
-      !has_definite_article?(phrase) && !(exceptions.any? { |e| e =~ phrase.downcase })
+      should_have = Regexp::new(NEED_A_THE.join("|"), true)
+      should_not_have = Regexp::new(NO_THE, true)
+
+      !has_definite_article?(phrase) && (should_have =~ phrase) && (should_not_have !~ phrase)
     end
 
     def has_definite_article?(phrase)
