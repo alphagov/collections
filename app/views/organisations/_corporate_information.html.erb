@@ -1,5 +1,4 @@
 <div class="column-one-third organisation__float-section">
-  <% if @show.corporate_information[:corporate_information_links][:items].any? %>
     <% unless @organisation.is_promotional_org? %>
       <%= render "govuk_publishing_components/components/heading", {
         text: t('organisations.corporate_information'),
@@ -8,6 +7,7 @@
         brand: @organisation.brand
       } %>
     <% end %>
+  <% if @show.corporate_information[:corporate_information_links][:items].any? %>
     <div class="<%= "organisation__section-border-top" if @organisation.is_promotional_org? %>">
       <%= render "components/topic-list", @show.corporate_information[:corporate_information_links] %>
     </div>
