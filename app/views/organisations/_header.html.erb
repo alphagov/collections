@@ -10,7 +10,7 @@
       } %>
 
       <% if @organisation.is_sub_organisation? %>
-        <div class="organisation__parent-organisations">
+        <div class="organisation__parent-organisations brand--<%= @organisation.brand %>">
           <%= t('organisations.part_of') %>
           <%= @show.parent_organisations %>
         </div>
