@@ -206,7 +206,8 @@ module Organisations
     end
 
     def latest_publications
-      @latest_publications ||= search_rummager(filter_email_document_supertype: "publications", reject_government_document_supertype: "statistics")
+      @latest_publications ||= search_rummager(filter_email_document_supertype: "publications",
+        reject_government_document_supertype: %w(consultations statistics))
       search_results_to_documents(@latest_publications)
     end
 
