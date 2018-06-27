@@ -28,6 +28,10 @@ class ContentStoreOrganisationsTest < ActionDispatch::IntegrationTest
     assert page.has_css?('.gem-c-heading', text: 'Ministerial departments')
   end
 
+  it "adds an id to each organisation item" do
+    assert page.has_css?('.organisations-list__item#attorney-generals-office')
+  end
+
   it "renders organisation count" do
     assert page.has_css?('.organisations__department-count-wrapper span', text: '1')
   end
@@ -78,6 +82,7 @@ private
           title: "Attorney General's Office",
           href: "/government/organisations/attorney-generals-office",
           brand: "attorney-generals-office",
+          slug: "attorney-generals-office",
           logo: {
             formatted_title: "Attorney General's Office",
             crest: "single-identity"
@@ -112,11 +117,13 @@ private
         {
           title: "Arts and Humanities Research Council",
           href: "/government/organisations/arts-and-humanities-research-council",
-          separate_website: true
+          separate_website: true,
+          slug: "arts-and-humanities-research-council",
         },
         {
           title: "Competition and Markets Authority",
           href: "/government/organisations/competition-and-markets-authority",
+          slug: "competition-and-markets-authority",
           separate_website: true,
           works_with: {
             non_ministerial_department: [
