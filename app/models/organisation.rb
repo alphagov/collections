@@ -27,12 +27,12 @@ class Organisation
   end
 
   def brand
-    return "prime-ministers-office-10-downing-street" if is_no_10?
+    return slug if is_no_10?
     details["brand"]
   end
 
   def is_no_10?
-    organisation_type == "executive_office"
+    slug == "prime-ministers-office-10-downing-street"
   end
 
   def is_promotional_org?
