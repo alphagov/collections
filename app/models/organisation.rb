@@ -110,6 +110,10 @@ class Organisation
     }
   end
 
+  def important_board_member_count
+    details["important_board_members"]
+  end
+
   def ordered_featured_policies
     links["ordered_featured_policies"]
   end

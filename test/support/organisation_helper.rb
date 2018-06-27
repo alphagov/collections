@@ -188,6 +188,40 @@ module OrganisationHelpers
     }.with_indifferent_access
   end
 
+  def organisation_with_non_important_board_members
+    {
+      title: "Attorney General's Office",
+      base_path: "/government/organisations/attorney-generals-office",
+      details: {
+        brand: "attorney-generals-office",
+        organisation_govuk_status: {
+          status: "live",
+        },
+        important_board_members: 1,
+        ordered_board_members: [
+          {
+            name: "Sir Jeremy Heywood",
+            role: "Cabinet Secretary",
+            href: "/government/people/jeremy-heywood",
+            image: {
+              url: "/photo/jeremy-heywood",
+              alt_text: "Sir Jeremy Heywood"
+            }
+          },
+          {
+            name: "John Manzoni",
+            role: "Chief Executive of the Civil Service ",
+            href: "/government/people/john-manzoni",
+            image: {
+              url: "/photo/john-manzoni",
+              alt_text: "John Manzoni"
+            }
+          },
+        ]
+      }
+    }.with_indifferent_access
+  end
+
   def organisation_with_policies
     {
       title: "Attorney General's Office",

@@ -109,26 +109,32 @@ describe Organisations::PeoplePresenter do
 
       expected = [
         {
+          type: :ministers,
           title: "Our ministers",
           people: []
         },
         {
+          type: :military_personnel,
           title: "Our senior military officials",
           people: []
         },
         {
+          type: :board_members,
           title: "Our management",
           people: []
         },
         {
+          type: :traffic_commissioners,
           title: "Traffic commissioners",
           people: []
         },
         {
+          type: :special_representatives,
           title: "Special representatives",
           people: []
         },
         {
+          type: :chief_professional_officers,
           title: "Chief professional officers",
           people: []
         }
@@ -146,6 +152,40 @@ describe Organisations::PeoplePresenter do
       expected = "Chief Executive of the Civil Service , Permanent Secretary (Cabinet Office)"
 
       assert_equal expected, @people_presenter.all_people.third[:people][1][:description]
+    end
+
+    it 'does not show images for non-important board members' do
+      content_item = ContentItem.new(organisation_with_non_important_board_members)
+      organisation = Organisation.new(content_item)
+      @non_important_board_members = Organisations::PeoplePresenter.new(organisation)
+
+      expected_important = {
+        brand: "attorney-generals-office",
+        href: "/government/people/jeremy-heywood",
+        description: "Cabinet Secretary",
+        metadata: nil,
+        context: nil,
+        heading_text: "Sir Jeremy Heywood",
+        heading_level: 3,
+        extra_links_no_indent: true,
+        image_src: "/photo/s465_jeremy-heywood",
+        image_alt: "Sir Jeremy Heywood"
+      }
+
+
+      expected_non_important = {
+        brand: "attorney-generals-office",
+        href: "/government/people/john-manzoni",
+        description: "Chief Executive of the Civil Service ",
+        metadata: nil,
+        context: nil,
+        heading_text: "John Manzoni",
+        heading_level: 3,
+        extra_links_no_indent: true
+      }
+
+      assert_equal expected_important, @non_important_board_members.all_people.third[:people][0]
+      assert_equal expected_non_important, @non_important_board_members.all_people.third[:people][1]
     end
 
     it 'fetches small image' do

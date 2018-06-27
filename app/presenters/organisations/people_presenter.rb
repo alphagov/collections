@@ -8,12 +8,15 @@ module Organisations
     end
 
     def all_people
-      @org.all_people.map do |person_type, people|
+      all_people = @org.all_people.map do |person_type, people|
         {
+          type: person_type,
           title: I18n.t('organisations.people.' + person_type.to_s),
           people: handle_duplicate_roles(people, person_type)
         }
       end
+
+      images_for_important_board_members(all_people)
     end
 
   private
@@ -42,6 +45,21 @@ module Organisations
       end
 
       all_people
+    end
+
+    def images_for_important_board_members(people)
+      people.map do |people_group|
+        if people_group[:type].eql?(:board_members)
+          people_group[:people].map.with_index(1) do |person, i|
+            if @org.important_board_member_count && i > @org.important_board_member_count
+              person.delete(:image_src)
+              person.delete(:image_alt)
+            end
+          end
+        end
+
+        people_group
+      end
     end
 
     def multiple_role_links(existing_person_info, new_person_info)
