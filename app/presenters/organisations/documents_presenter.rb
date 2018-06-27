@@ -62,7 +62,7 @@ module Organisations
     end
 
     def has_latest_documents?
-      latest_documents.length.positive?
+      latest_documents[:items].length.positive?
     end
 
     def latest_documents

@@ -10,6 +10,10 @@ describe Organisations::DocumentsPresenter do
       organisation = Organisation.new(content_item)
       @documents_presenter = Organisations::DocumentsPresenter.new(organisation)
 
+      content_item = ContentItem.new(organisation_with_no_documents)
+      organisation = Organisation.new(content_item)
+      @no_documents_presenter = Organisations::DocumentsPresenter.new(organisation)
+      stub_empty_rummager_requests("org-with-no-docs")
       stub_rummager_latest_content_requests("attorney-generals-office")
     end
 
@@ -42,6 +46,14 @@ describe Organisations::DocumentsPresenter do
       assert_equal expected, @documents_presenter.remaining_featured_news
     end
 
+    it 'returns true if there are latest documents' do
+      assert @documents_presenter.has_latest_documents?
+    end
+
+    it 'returns false if there are no latest documents' do
+      assert_equal false, @no_documents_presenter.has_latest_documents?
+    end
+
     it 'formats latest documents correctly' do
       expected =
         {
@@ -68,9 +80,7 @@ describe Organisations::DocumentsPresenter do
     end
 
     it 'returns false if no latest documents by type exist for an organisation' do
-      stub_empty_rummager_requests("attorney-generals-office")
-
-      assert_equal false, @documents_presenter.has_latest_documents_by_type?
+      assert_equal false, @no_documents_presenter.has_latest_documents_by_type?
     end
 
     it 'formats latest announcements correctly' do
