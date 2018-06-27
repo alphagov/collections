@@ -28,7 +28,8 @@ module Organisations
       parent_org_links = @org.ordered_parent_organisations.map do |parent_organisation|
         link_to(
           parent_organisation["title"],
-          parent_organisation["base_path"]
+          parent_organisation["base_path"],
+          class: "brand__color"
         )
       end
 
