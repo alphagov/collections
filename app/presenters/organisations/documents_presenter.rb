@@ -116,7 +116,7 @@ module Organisations
 
   private
 
-    def search_rummager(filter_email_document_supertype: false, filter_government_document_supertype: false)
+    def search_rummager(filter_email_document_supertype: false, filter_government_document_supertype: false, reject_government_document_supertype: false)
       params = {
         count: 2,
         order: "-public_timestamp",
@@ -126,6 +126,7 @@ module Organisations
 
       params[:filter_email_document_supertype] = filter_email_document_supertype if filter_email_document_supertype
       params[:filter_government_document_supertype] = filter_government_document_supertype if filter_government_document_supertype
+      params[:reject_government_document_supertype] = reject_government_document_supertype if reject_government_document_supertype
 
       Services.rummager.search(params)["results"]
     end
@@ -205,7 +206,7 @@ module Organisations
     end
 
     def latest_publications
-      @latest_publications ||= search_rummager(filter_email_document_supertype: "publications")
+      @latest_publications ||= search_rummager(filter_email_document_supertype: "publications", reject_government_document_supertype: "statistics")
       search_results_to_documents(@latest_publications)
     end
 
