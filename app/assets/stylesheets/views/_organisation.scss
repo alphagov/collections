@@ -88,3 +88,16 @@
   background-position: 50% 0;
   text-align: center;
 }
+
+.organisation__uk-aid {
+  @include core-19;
+  padding: $gutter-half;
+  padding-left: 120px;
+  margin-bottom: $gutter;
+  min-height: 100px;
+  background: image-url('uk-aid-logo.png');
+  background-repeat: no-repeat;
+  background-position: $gutter-half $gutter-half;
+  background-size: auto 100px;
+  border: solid 1px $grey-2;
+}

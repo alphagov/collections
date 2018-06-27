@@ -20,6 +20,10 @@
             </a>
           </p>
       <% end %>
+
+      <% if @organisation.is_dfid? %>
+        <%= render partial: 'uk_aid' %>
+      <% end %>
     </div>
 
     <% if @what_we_do.has_share_links? %>

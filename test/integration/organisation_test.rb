@@ -461,20 +461,34 @@ class OrganisationTest < ActionDispatch::IntegrationTest
       cy[:base_path] = "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
     end
 
+    @content_item_dfid = {
+      title: "Department for International Development",
+      base_path: "/government/organisations/department-for-international-development",
+      details: {
+        body: "Some text",
+        brand: "",
+        logo: {},
+        organisation_govuk_status: {
+          status: "live",
+        },
+        ordered_featured_documents: [],
+        social_media_links: []
+      },
+      links: {}
+    }
+
     @content_item_blank = {
       title: "An empty content item to test everything checks before trying to render things",
       base_path: "/government/organisations/civil-service-resourcing",
       details: {
         body: "",
         brand: "",
-        logo: {
-        },
+        logo: {},
         organisation_govuk_status: {
           status: "",
         },
       },
-      links: {
-      }
+      links: {}
     }
 
     content_store_has_item("/government/organisations/prime-ministers-office-10-downing-street", @content_item_no10)
@@ -482,6 +496,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     content_store_has_item("/government/organisations/charity-commission", @content_item_charity_commission)
     content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales", @content_item_wales_office)
     content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales.cy", @content_item_wales_office_cy)
+    content_store_has_item("/government/organisations/department-for-international-development", @content_item_dfid)
     content_store_has_item("/government/organisations/civil-service-resourcing", @content_item_blank)
 
     stub_rummager_latest_content_requests("prime-ministers-office-10-downing-street")
@@ -489,6 +504,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     stub_rummager_latest_content_requests("charity-commission")
     stub_rummager_latest_content_requests("office-of-the-secretary-of-state-for-wales")
     stub_rummager_latest_content_requests("civil-service-resourcing")
+    stub_rummager_latest_content_requests("department-for-international-development")
   end
 
   it "doesn't fail if the content item is missing any data" do
@@ -763,5 +779,16 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
     visit "/government/organisations/attorney-generals-office"
     refute page.has_content?(/Greater transparency across government is at the heart of our commitment to let you hold politicians and public bodies to account./i)
+  end
+
+  it "displays the uk aid section only on dfid's page" do
+    visit "/government/organisations/department-for-international-development"
+    assert page.has_css?(".organisation__uk-aid")
+
+    visit "/government/organisations/prime-ministers-office-10-downing-street"
+    refute page.has_css?(".organisation__uk-aid")
+
+    visit "/government/organisations/attorney-generals-office"
+    refute page.has_css?(".organisation__uk-aid")
   end
 end
