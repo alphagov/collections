@@ -141,7 +141,7 @@ module Organisations
         end
 
         if item["content_store_document_type"]
-          metadata[:document_type] = item["content_store_document_type"].capitalize.tr("_", " ")
+          metadata[:document_type] = item["content_store_document_type"].capitalize.tr("_", " ").gsub("Foi ", "FOI ")
         end
 
         documents << {
