@@ -8,8 +8,8 @@ module OrganisationHelpers
   end
 
   def stub_empty_rummager_requests(organisation_slug)
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=3&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp").
-      to_return(body: { results: [] }.to_json)
+    stub_request(:get, Plek.new.find("search") + "/search.json?count=3&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp&reject_email_document_supertype=other").
+    to_return(body: { results: [] }.to_json)
 
     stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_email_document_supertype=announcements&filter_organisations=#{organisation_slug}&order=-public_timestamp").
       to_return(body: { results: [] }.to_json)
@@ -289,6 +289,20 @@ module OrganisationHelpers
             title: "Policy 6"
           },
         ]
+      }
+    }.with_indifferent_access
+  end
+
+  def organisation_with_no_documents
+    {
+      title: "Org with No Docs",
+      base_path: "/government/organisations/org-with-no-docs",
+      details: {
+        organisation_govuk_status: {
+          status: "live",
+        },
+        brand: "org-with-no-docs",
+        organisation_featuring_priority: "news",
       }
     }.with_indifferent_access
   end
