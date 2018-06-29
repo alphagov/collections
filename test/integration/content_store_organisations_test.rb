@@ -18,6 +18,10 @@ class ContentStoreOrganisationsTest < ActionDispatch::IntegrationTest
     assert page.has_css?('.gem-c-title__text', text: "Departments, agencies and public bodies")
   end
 
+  it "has autodiscovery links to the API" do
+    assert page.has_css?("link[rel='alternate'][type='application/json'][href$='/api/organisations']", visible: false)
+  end
+
   it "renders organisation filter" do
     assert page.has_css?('.filter-organisations-list__form')
     assert page.has_css?('.filter-organisations-list__label', text: "What's the latestfrom")

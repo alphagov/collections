@@ -1,4 +1,8 @@
-<% content_for :title, "Departments, agencies and public bodies - GOV.UK" %>
+<% content_for :title, "#{@presented_organisations.title} - GOV.UK" %>
+
+<% content_for :meta_tags do %>
+  <%= auto_discovery_link_tag(:json, api_organisations_url, title: @presented_organisations.title) %>
+<% end %>
 
 <div class="grid-row">
   <div class="column-two-thirds">
