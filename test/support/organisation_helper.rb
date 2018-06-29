@@ -8,16 +8,16 @@ module OrganisationHelpers
   end
 
   def stub_empty_rummager_requests(organisation_slug)
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=3&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp&reject_email_document_supertype=other").
+    stub_request(:get, Plek.new.find("search") + "/search.json?count=3&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp&reject_content_purpose_supergroup=other").
     to_return(body: { results: [] }.to_json)
 
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_email_document_supertype=announcements&filter_organisations=#{organisation_slug}&order=-public_timestamp").
+    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_content_purpose_supergroup=news_and_communications&filter_organisations=#{organisation_slug}&order=-public_timestamp").
       to_return(body: { results: [] }.to_json)
 
     stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_government_document_supertype=consultations&filter_organisations=#{organisation_slug}&order=-public_timestamp").
       to_return(body: { results: [] }.to_json)
 
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_email_document_supertype=publications&filter_organisations=#{organisation_slug}&order=-public_timestamp&reject_government_document_supertype%5B%5D=consultations&reject_government_document_supertype%5B%5D=statistics").
+    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_content_purpose_supergroup%5B%5D=guidance_and_regulation&filter_content_purpose_supergroup%5B%5D=policy_and_engagement&filter_content_purpose_supergroup%5B%5D=transparency&filter_organisations=#{organisation_slug}&order=-public_timestamp&reject_government_document_supertype%5B%5D=consultations&reject_government_document_supertype%5B%5D=statistics").
       to_return(body: { results: [] }.to_json)
 
     stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_government_document_supertype=statistics&filter_organisations=#{organisation_slug}&order=-public_timestamp").
@@ -25,7 +25,7 @@ module OrganisationHelpers
   end
 
   def stub_rummager_latest_documents_request(organisation_slug)
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=3&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp&reject_email_document_supertype=other").
+    stub_request(:get, Plek.new.find("search") + "/search.json?count=3&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp&reject_content_purpose_supergroup=other").
       to_return(body: { results: [
         {
           title: "Rapist has sentence increased after Solicitor General’s referral",
@@ -37,7 +37,7 @@ module OrganisationHelpers
   end
 
   def stub_rummager_latest_announcements_request(organisation_slug)
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_email_document_supertype=announcements&filter_organisations=#{organisation_slug}&order=-public_timestamp").
+    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_content_purpose_supergroup=news_and_communications&filter_organisations=#{organisation_slug}&order=-public_timestamp").
       to_return(body: { results: [
         {
           title: "First events announced for National Democracy Week",
@@ -61,7 +61,7 @@ module OrganisationHelpers
   end
 
   def stub_rummager_latest_publications_request(organisation_slug)
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_email_document_supertype=publications&filter_organisations=#{organisation_slug}&order=-public_timestamp&reject_government_document_supertype%5B%5D=consultations&reject_government_document_supertype%5B%5D=statistics").
+    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_content_purpose_supergroup%5B%5D=guidance_and_regulation&filter_content_purpose_supergroup%5B%5D=policy_and_engagement&filter_content_purpose_supergroup%5B%5D=transparency&filter_organisations=#{organisation_slug}&order=-public_timestamp&reject_government_document_supertype%5B%5D=consultations&reject_government_document_supertype%5B%5D=statistics").
       to_return(body: { results: [
         {
           title: "National Democracy Week: partner pack",

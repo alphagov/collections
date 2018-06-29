@@ -23,10 +23,7 @@ private
       count: 20,
       fields: RummagerFields::FEED_SEARCH_FIELDS,
       filter_organisations: organisation,
-      #using this as providing a list of the currently supported types is too big.
-      #email_document_supertype seems to fit with the ethos of what we're trying to
-      #provide.
-      reject_email_document_supertype: "other",
+      reject_content_purpose_supergroup: "other",
       order: '-public_timestamp',
     }
 
