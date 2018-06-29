@@ -70,7 +70,7 @@ module Organisations
         count: 3,
         order: "-public_timestamp",
         filter_organisations: @org.slug,
-        reject_email_document_supertype: "other",
+        reject_content_purpose_supergroup: "other",
         fields: %w[title link content_store_document_type public_timestamp]
       )["results"]
       search_results_to_documents(@latest_documents)
@@ -116,7 +116,7 @@ module Organisations
 
   private
 
-    def search_rummager(filter_email_document_supertype: false, filter_government_document_supertype: false, reject_government_document_supertype: false)
+    def search_rummager(filter_content_purpose_supergroup: false, filter_government_document_supertype: false, reject_government_document_supertype: false)
       params = {
         count: 2,
         order: "-public_timestamp",
@@ -124,7 +124,7 @@ module Organisations
         fields: %w[title link content_store_document_type public_timestamp]
       }
 
-      params[:filter_email_document_supertype] = filter_email_document_supertype if filter_email_document_supertype
+      params[:filter_content_purpose_supergroup] = filter_content_purpose_supergroup if filter_content_purpose_supergroup
       params[:filter_government_document_supertype] = filter_government_document_supertype if filter_government_document_supertype
       params[:reject_government_document_supertype] = reject_government_document_supertype if reject_government_document_supertype
 
@@ -201,12 +201,13 @@ module Organisations
     end
 
     def latest_announcements
-      @latest_announcements ||= search_rummager(filter_email_document_supertype: "announcements")
+      @latest_announcements ||= search_rummager(filter_content_purpose_supergroup: "news_and_communications")
       search_results_to_documents(@latest_announcements)
     end
 
     def latest_publications
-      @latest_publications ||= search_rummager(filter_email_document_supertype: "publications",
+      @latest_publications ||= search_rummager(
+        filter_content_purpose_supergroup: %w(guidance_and_regulation policy_and_engagement transparency),
         reject_government_document_supertype: %w(consultations statistics))
       search_results_to_documents(@latest_publications)
     end

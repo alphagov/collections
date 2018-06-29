@@ -5,7 +5,7 @@ module OrganisationFeedHelpers
       count: 20,
       fields: %w(title link description display_type public_timestamp),
       filter_organisations: organisation,
-      reject_email_document_supertype: "other",
+      reject_content_purpose_supergroup: "other",
       order: '-public_timestamp',
     }
 
