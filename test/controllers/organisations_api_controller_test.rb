@@ -9,6 +9,13 @@ describe OrganisationsApiController do
         count: 20,
         start: 0,
       ).returns(rummager_organisations_results)
+
+      Services.rummager.stubs(:search).with(
+        filter_format: "organisation",
+        order: "title",
+        count: 20,
+        start: 20,
+      ).returns(rummager_organisations_many_results)
     end
 
     it "renders JSON" do
@@ -26,6 +33,12 @@ describe OrganisationsApiController do
 
       assert_equal 1, body["current_page"]
       assert_equal "ok", body["_response_info"]["status"]
+    end
+
+    it "sets the Link HTTP header" do
+      get :index, format: :json, params: { page: 2 }
+
+      assert_equal '<http://test.host/api/organisations?page=1>; rel="previous", <http://test.host/api/organisations?page=3>; rel="next", <http://test.host/api/organisations?page=2>; rel="self"', response.headers["Link"]
     end
   end
 
@@ -59,6 +72,12 @@ describe OrganisationsApiController do
       body = JSON.parse(response.body)
 
       assert_nil body["current_page"]
+    end
+
+    it "sets the Link HTTP header" do
+      get :show, params: { organisation_name: "hm-revenue-customs" }, format: :json
+
+      assert_equal '<http://test.host/api/organisations/hm-revenue-customs>; rel="self"', response.headers["Link"]
     end
 
     it "adds _response_info" do
@@ -143,6 +162,14 @@ describe OrganisationsApiController do
         },
       ],
       total: 2,
+      start: 0,
+    }.deep_stringify_keys
+  end
+
+  def rummager_organisations_many_results
+    {
+      results: [],
+      total: 1000,
       start: 0,
     }.deep_stringify_keys
   end
