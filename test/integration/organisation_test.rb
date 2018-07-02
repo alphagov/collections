@@ -496,6 +496,12 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     assert page.has_css?(".content")
   end
 
+  it "has autodiscovery links to the RSS feed and the API" do
+    visit "/government/organisations/prime-ministers-office-10-downing-street"
+    assert page.has_css?("link[rel='alternate'][type='application/json'][href$='/api/organisations/prime-ministers-office-10-downing-street']", visible: false)
+    assert page.has_css?("link[rel='alternate'][type='application/atom+xml'][href$='/government/organisations/prime-ministers-office-10-downing-street.atom']", visible: false)
+  end
+
   it "displays breadcrumbs" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
     assert page.has_css?(".gem-c-breadcrumbs .gem-c-breadcrumbs--item", text: "Prime Minister's Office, 10 Downing Street")

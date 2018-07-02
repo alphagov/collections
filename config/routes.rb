@@ -36,7 +36,8 @@ Rails.application.routes.draw do
     constraints: {
       format: /atom/,
       locale: /\w{2}(-[\d\w]{2,3})?/,
-    }, to: "feeds#organisation"
+    }, to: "feeds#organisation",
+    as: :feed_organisation
   get "/government/organisations/:organisation_name(.:locale)",
     to: "organisations#show",
     as: :organisation
