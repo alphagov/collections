@@ -2,17 +2,21 @@ class OrganisationsApiController < ApplicationController
   enable_request_formats index: :json, show: :json
 
   def index
+    presented_organisations = presented_organisations(start: start_index)
+    set_link_header(links: presented_organisations[:_response_info][:links])
     respond_to do |f|
       f.json do
-        render json: presented_organisations(start: start_index)
+        render json: presented_organisations
       end
     end
   end
 
   def show
+    presented_organisation = presented_organisation(slug: params[:organisation_name])
+    set_link_header(links: presented_organisation[:_response_info][:links])
     respond_to do |f|
       f.json do
-        render json: presented_organisation(slug: params[:organisation_name])
+        render json: presented_organisation
       end
     end
   rescue OrganisationNotFound
@@ -65,6 +69,10 @@ private
       count: 1,
       start: 0
     )
+  end
+
+  def set_link_header(links:)
+    response.headers["Link"] = LinkHeaderPresenter.new(links).present
   end
 
   def start_index
