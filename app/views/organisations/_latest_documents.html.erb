@@ -14,7 +14,7 @@
       <%= render "govuk_publishing_components/components/document_list", @documents.latest_documents %>
 
       <p class="organisation__margin-bottom brand--<%= @organisation.brand %>">
-        <a href="<%= "/government/latest?departments[]=#{@organisation.slug}" %>" class="brand__color"><%= t('organisations.see_all_latest_documents') %></a>
+        <a href="<%= "/government/organisations/latest?organisations[]=#{@organisation.slug}" %>" class="brand__color"><%= t('organisations.see_all_latest_documents') %></a>
       </p>
 
       <%= render "govuk_publishing_components/components/subscription-links", @show.subscription_links %>
