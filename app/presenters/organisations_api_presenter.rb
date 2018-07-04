@@ -28,7 +28,7 @@ class OrganisationsApiPresenter
       organisation = organisation["organisations"][0]
       {
         id: api_url_from_slug(organisation["slug"]),
-        title: organisation["title"],
+        title: organisation["title"].gsub("Closed organisation: ", ""),
         format: organisation_type_name(organisation["organisation_type"]),
         updated_at: organisation["public_timestamp"],
         web_url: web_url_from_slug(organisation["slug"]),
