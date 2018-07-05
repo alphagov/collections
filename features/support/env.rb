@@ -13,9 +13,9 @@ ENV["RAILS_ENV"] ||= "test"
 
 require 'cucumber/rails'
 require_relative 'mocha'
+require_relative 'selenium'
 require 'slimmer/test'
 
 ActionController::Base.allow_rescue = false
 
-require 'capybara/poltergeist'
-Capybara.javascript_driver = :poltergeist
+Capybara.javascript_driver = :headless_chrome
