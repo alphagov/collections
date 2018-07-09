@@ -142,6 +142,10 @@ class Organisation
     details["organisation_govuk_status"]["url"]
   end
 
+  def no_website?
+    separate_website_url.blank?
+  end
+
   def is_live?
     details["organisation_govuk_status"]["status"] == "live"
   end
