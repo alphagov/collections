@@ -1,4 +1,6 @@
 class OrganisationsController < ApplicationController
+  skip_before_action :set_expiry
+  before_action -> { set_expiry(5.minutes) }
   before_action :set_locale, only: :show
 
   def index
