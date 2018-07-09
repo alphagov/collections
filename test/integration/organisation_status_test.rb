@@ -46,6 +46,20 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
       }
     }
 
+    @content_item_exempt_no_url = {
+      title: "Exempt organisation",
+      base_path: "/government/organisations/exempt-no-url",
+      details: {
+        body: "This organisation has a status of exempt.",
+        logo: {
+        },
+        organisation_govuk_status: {
+          status: "exempt",
+          url: ""
+        },
+      }
+    }
+
     @content_item_exempt = {
       title: "Exempt organisation",
       base_path: "/government/organisations/exempt",
@@ -191,6 +205,7 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     content_store_has_item("/government/organisations/changed_name", @content_item_changed_name)
     content_store_has_item("/government/organisations/devolved", @content_item_devolved)
     content_store_has_item("/government/organisations/exempt", @content_item_exempt)
+    content_store_has_item("/government/organisations/exempt-no-url", @content_item_exempt_no_url)
     content_store_has_item("/government/organisations/joining", @content_item_joining)
     content_store_has_item("/government/organisations/left_gov", @content_item_left_gov)
     content_store_has_item("/government/organisations/merged", @content_item_merged)
@@ -202,6 +217,7 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     stub_rummager_latest_content_requests("changed_name")
     stub_rummager_latest_content_requests("devolved")
     stub_rummager_latest_content_requests("exempt")
+    stub_rummager_latest_content_requests("exempt-no-url")
     stub_rummager_latest_content_requests("joining")
     stub_rummager_latest_content_requests("left_gov")
     stub_rummager_latest_content_requests("merged")
@@ -234,6 +250,14 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     assert page.has_css?(".gem-c-organisation-logo")
     assert page.has_css?(".gem-c-notice", text: "Exempt organisation has a separate website")
     assert page.has_css?(".gem-c-notice a[href='http://www.google.com']", text: "separate website")
+    assert page.has_css?(".gem-c-govspeak")
+    assert page.has_content?(/This organisation has a status of exempt./i)
+  end
+
+  it 'displays an exempt organisation page with no URL correctly' do
+    visit "/government/organisations/exempt-no-url"
+    assert page.has_css?(".gem-c-organisation-logo")
+    assert page.has_css?(".gem-c-notice__title", text: "Exempt organisation has no website")
     assert page.has_css?(".gem-c-govspeak")
     assert page.has_content?(/This organisation has a status of exempt./i)
   end

@@ -7,6 +7,7 @@ module Organisations
     end
 
     def non_live_organisation_notice
+      return has_no_website if @org.is_exempt? && @org.no_website?
       return separate_website_notice if @org.is_exempt?
       return changed_name_notice if @org.is_changed_name? || @org.is_closed?
       return joining_notice if @org.is_joining?
@@ -19,6 +20,10 @@ module Organisations
     end
 
   private
+
+    def has_no_website
+      I18n.t('organisations.notices.no_website', title: @org.title).html_safe
+    end
 
     def separate_website_notice
       I18n.t('organisations.notices.separate_website', title: @org.title, url: @org.separate_website_url).html_safe

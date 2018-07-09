@@ -38,6 +38,7 @@ en:
     jobs_contracts: "Jobs and contracts"
     latest_from: "Latest from %{title}"
     notices:
+      no_website: "%{title} has no website"
       separate_website: "%{title} has a <a href='%{url}'>separate website</a>"
       changed_name: "%{title} is now called <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} will soon be incorporated into GOV.UK"
