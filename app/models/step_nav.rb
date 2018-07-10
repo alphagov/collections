@@ -20,7 +20,7 @@ class StepNav
   end
 
   def payload_for_component
-    details["step_by_step_nav"].deep_symbolize_keys
+    details["step_by_step_nav"].deep_symbolize_keys.merge(tracking_id: content_id)
   end
 
   def self.find!(base_path)
