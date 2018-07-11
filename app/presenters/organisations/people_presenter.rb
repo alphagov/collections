@@ -7,6 +7,14 @@ module Organisations
       @org = organisation
     end
 
+    def has_people?
+      all_people.each do |people|
+        return true unless people[:people].empty?
+      end
+
+      false
+    end
+
     def all_people
       all_people = @org.all_people.map do |person_type, people|
         {

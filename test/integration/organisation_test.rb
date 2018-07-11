@@ -554,9 +554,11 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     refute page.has_css?(".app-c-topic-list")
 
     visit "/government/organisations/attorney-generals-office"
+    assert page.has_css?("section#featured-documents")
     assert page.has_css?(".app-c-topic-list.app-c-topic-list--small .app-c-topic-list__link", text: "Attorney General's guidance to the legal profession")
 
     visit "/government/organisations/charity-commission"
+    assert page.has_css?("section#featured-documents")
     assert page.has_css?(".app-c-topic-list .app-c-topic-list__link", text: "Find a charity")
     refute page.has_css?(".app-c-topic-list.app-c-topic-list--small")
   end
@@ -586,6 +588,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
   it "shows the latest documents when it should" do
     visit "/government/organisations/attorney-generals-office"
+    assert page.has_css?("section#latest-documents")
     assert page.has_css?(".gem-c-heading", text: "Latest from the Attorney General's Office")
     assert page.has_css?(".gem-c-document-list__item-title[href='/government/news/rapist-has-sentence-increased-after-solicitor-generals-referral']", text: "Rapist has sentence increased after Solicitor General’s referral")
     assert page.has_css?(".gem-c-document-list__attribute", text: "Press release")
@@ -605,9 +608,11 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
   it "shows the 'what we do' section" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
+    assert page.has_css?("section#what-we-do")
     assert page.has_content?(/10 Downing Street is the official residence and the office of the British Prime Minister/i)
 
     visit "/government/organisations/attorney-generals-office"
+    assert page.has_css?("section#what-we-do")
     assert page.has_content?(/provides legal advice and support to the Attorney General/i)
   end
 
@@ -617,6 +622,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
     visit "/government/organisations/charity-commission"
     assert page.has_content?(/Our policies/i)
+    assert page.has_css?("section#policies")
     assert page.has_css?(".gem-c-document-list__item-title", text: "Waste and recycling")
   end
 
@@ -644,6 +650,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
   it "shows the ministers for an organisation" do
     visit "/government/organisations/attorney-generals-office"
+    assert page.has_css?("div#people")
     assert page.has_css?(".gem-c-heading", text: "Our ministers")
     assert page.has_css?(".gem-c-image-card .gem-c-image-card__title-link", text: "Theresa May MP")
     assert page.has_css?(".gem-c-image-card .gem-c-image-card__title-link", text: "Stuart Andrew MP")
@@ -651,6 +658,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
   it "does not show the ministers section for no.10" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
+    refute page.has_css?("div#people")
     refute page.has_css?(".gem-c-heading", text: "Our ministers")
     refute page.has_css?(".gem-c-image-card .gem-c-image-card__title-link", text: "Theresa May MP")
   end
@@ -693,10 +701,12 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     refute page.has_content?(/Freedom of Information (FOI) Act/i)
 
     visit "/government/organisations/charity-commission"
+    assert page.has_css?("section#freedom-of-information")
     assert page.has_content?(/This organisation is not covered by the Freedom of Information Act. To see which organisations are included, see the legislation./i)
 
     visit "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
     assert page.has_content?(/Gwneud cais DRhG/i)
+    assert page.has_css?("section#freedom-of-information")
     assert page.has_css?(".gem-c-heading", text: "FOI stuff")
     assert page.has_content?(/Office of the Secretary of State for Wales/i)
     assert page.has_content?(/Gwydyr House/i)
@@ -713,6 +723,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
   it "shows high profile groups section" do
     visit "/government/organisations/attorney-generals-office"
+    assert page.has_css?("section#high-profile-groups")
     assert page.has_css?(".gem-c-heading", text: "High profile groups within AGO")
     assert page.has_css?(".app-c-topic-list__link[href='/government/organisations/attorney-generals-office-1']", text: "High Profile Group 1")
     assert page.has_css?(".app-c-topic-list__link[href='/government/organisations/attorney-generals-office-2']", text: "High Profile Group 2")
@@ -730,6 +741,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
   it "displays corporate information pages" do
     visit "/government/organisations/attorney-generals-office"
+    assert page.has_css?("div#corporate-info")
     assert page.has_css?(".gem-c-heading", text: "Corporate information")
     assert page.has_css?(".app-c-topic-list__link[href='/complaints-procedure']", text: "Complaints procedure")
 
@@ -745,6 +757,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
   it "displays contact information" do
     visit "/government/organisations/attorney-generals-office"
+    assert page.has_css?("section#org-contacts")
     assert page.has_css?("h2.gem-c-heading", text: "Contact AGO")
     assert page.has_css?("h3.gem-c-heading", text: "Department for International Trade")
     assert page.has_content?(/King Charles Street/i)
