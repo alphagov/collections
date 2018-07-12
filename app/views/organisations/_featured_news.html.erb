@@ -1,4 +1,4 @@
-<section class="organisation__section-wrap organisation__margin-bottom">
+<section class="organisation__section-wrap organisation__margin-bottom" id="featured-documents">
   <h2 class="visually-hidden"><%= @show.featured_news_title %></h2>
   <% if @organisation.is_news_organisation? %>
     <%= render "govuk_publishing_components/components/image_card", @documents.first_featured_news %>

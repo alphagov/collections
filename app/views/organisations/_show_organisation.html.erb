@@ -26,19 +26,23 @@
 <% end %>
 
 <% unless @organisation.is_promotional_org? %>
-  <% @people.all_people.each do |people_data| %>
-    <%= render partial: 'related_people', locals: {
-      people: people_data[:people],
-      title: people_data[:title],
-      brand: @organisation.brand
-    } %>
+  <% if @people.has_people? %>
+    <div id="people">
+      <% @people.all_people.each do |people_data| %>
+        <%= render partial: 'related_people', locals: {
+          people: people_data[:people],
+          title: people_data[:title],
+          brand: @organisation.brand
+        } %>
+      <% end %>
+    </div>
   <% end %>
 <% end %>
 
 <div class="grid-row">
   <div class="column-two-thirds">
     <% if @contacts.has_contacts? %>
-      <section class="brand--<%= @organisation.brand %> organisation__margin-bottom">
+      <section class="brand--<%= @organisation.brand %> organisation__margin-bottom" id="org-contacts">
         <%= render "govuk_publishing_components/components/heading", {
           text: t('organisations.contact.contact_organisation', organisation: @show.acronym),
           brand: @organisation.brand,
@@ -55,7 +59,7 @@
     <% end %>
 
     <% if @show.high_profile_groups[:items] && !@organisation.is_promotional_org? %>
-      <section class="organisation__margin-bottom">
+      <section class="organisation__margin-bottom" id="high-profile-groups">
         <%= render "govuk_publishing_components/components/heading", {
           text: @show.high_profile_groups[:title],
           brand: @organisation.brand,
@@ -69,7 +73,7 @@
     <% end %>
   </div>
   <% if @organisation.ordered_corporate_information && @organisation.ordered_corporate_information.any? %>
-    <div class="organisation__corporate-information">
+    <div class="organisation__corporate-information" id="corporate-info">
       <%= render partial: 'corporate_information' %>
     </div>
   <% end %>
