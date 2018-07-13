@@ -12,7 +12,7 @@ gem 'rails', '5.2.0'
 gem 'rinku', require: 'rails_rinku'
 gem 'sass-rails', '~> 5.0.3'
 gem 'slimmer', '~> 13.0.0'
-gem 'uglifier', '~> 4.1.14'
+gem 'uglifier', '~> 4.1.15'
 
 group :test do
   gem 'capybara'
