@@ -13,9 +13,12 @@
     <%= render 'govuk_publishing_components/components/title',
         title: step_by_step.title,
         average_title_length: 'long',
-        margin_bottom: 0 %>
+        margin_bottom: 4 %>
 
-    <div class="govuk-govspeak"><%= raw(step_by_step.introduction) %></div>
+    <%= render "govuk_publishing_components/components/govspeak", {
+    } do %>
+      <%= raw(step_by_step.introduction) %>
+    <% end %>
   </div>
 </div>
 <div class="grid-row">
