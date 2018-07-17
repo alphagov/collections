@@ -12,6 +12,14 @@ class AtomFeedsTest < ActionDispatch::IntegrationTest
     and_feed_items
   end
 
+  it "renders a global atom feed when there is content" do
+    given_there_is_a_government_feed
+    when_i_visit_the_government_atom_feed
+    then_i_can_see_the_government_feed
+    with_the_feed_updated_time_set_to_the_latest_item
+    and_feed_items
+  end
+
   it "renders a valid organisation atom feed when there is no content" do
     given_there_is_an_organisation_content_item
     but_no_content_for_that_organisation
@@ -28,6 +36,26 @@ class AtomFeedsTest < ActionDispatch::IntegrationTest
     content_store_has_schema_example("organisation")
   end
 
+  def given_there_is_a_government_feed
+    @updated_at = "2018-12-25T00:00:00Z"
+
+    Services.rummager.stubs(:search)
+      .with(
+        start: 0,
+        count: 20,
+        fields: %w(title link description display_type public_timestamp),
+        reject_content_purpose_supergroup: "other",
+        order: '-public_timestamp',
+      )
+      .returns(
+        "results" => results_from_rummager,
+        "start" => 0,
+        "total" => results_from_rummager.size,
+      )
+
+    @base_path = "/government/feed"
+  end
+
   def and_content_for_that_organisation
     stub_content_for_organisation_feed(@organisation_slug, results_from_rummager)
   end
@@ -38,6 +66,15 @@ class AtomFeedsTest < ActionDispatch::IntegrationTest
 
   def when_i_visit_the_organisation_atom_feed
     visit "#{@base_path}.atom"
+  end
+
+  def when_i_visit_the_government_atom_feed
+    visit @base_path
+  end
+
+  def then_i_can_see_the_government_feed
+    title = page.first("feed>title").text(:all)
+    assert_equal title, "Activity on GOV.UK"
   end
 
   def then_i_can_see_the_feed

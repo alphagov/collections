@@ -29,6 +29,8 @@ Rails.application.routes.draw do
   post "/topic/:topic_slug/:subtopic_slug/email-signup",
     to: "email_signups#create"
 
+  get "/government/feed" => "feeds#all", defaults: { format: "atom" }
+
   get "/government/organisations",
     to: "organisations#index",
     as: :organisations

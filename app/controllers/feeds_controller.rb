@@ -18,6 +18,13 @@ class FeedsController < ApplicationController
     render :feed, locals: { items: items, root_url: @organisation.web_url, title: "#{@organisation.title} - Activity on GOV.UK" }
   end
 
+  def all
+    results = FeedContent.new({}).results
+    items = results.map { |result| FeedEntryPresenter.new(result) }
+
+    render :feed, locals: { items: items, root_url: Plek.new.website_root, title: "Activity on GOV.UK" }
+  end
+
 private
 
   def organisation_name
