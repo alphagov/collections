@@ -1,7 +1,5 @@
 module Feeds
   class OrganisationFeedContent
-    include RummagerFields
-
     attr_reader :organisation
 
     def initialize(organisation:)
