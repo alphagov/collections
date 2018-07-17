@@ -6,7 +6,7 @@ class AtomFeedsTest < ActionDispatch::IntegrationTest
   it "renders an organisation atom feed when there is content" do
     given_there_is_an_organisation_content_item
     and_content_for_that_organisation
-    when_i_visit_the_atom_feed
+    when_i_visit_the_organisation_atom_feed
     then_i_can_see_the_feed
     with_the_feed_updated_time_set_to_the_latest_item
     and_feed_items
@@ -15,7 +15,7 @@ class AtomFeedsTest < ActionDispatch::IntegrationTest
   it "renders a valid organisation atom feed when there is no content" do
     given_there_is_an_organisation_content_item
     but_no_content_for_that_organisation
-    when_i_visit_the_atom_feed
+    when_i_visit_the_organisation_atom_feed
     then_i_can_see_the_feed
     but_no_feed_items
   end
@@ -36,7 +36,7 @@ class AtomFeedsTest < ActionDispatch::IntegrationTest
     stub_empty_results
   end
 
-  def when_i_visit_the_atom_feed
+  def when_i_visit_the_organisation_atom_feed
     visit "#{@base_path}.atom"
   end
 
