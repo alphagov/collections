@@ -1,4 +1,4 @@
-class OrganisationFeedEntryPresenter
+class FeedEntryPresenter
   attr_reader :result
 
   def initialize(result)

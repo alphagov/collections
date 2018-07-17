@@ -1,21 +1,21 @@
 require "integration_test_helper"
 
-class OrganisationAtomFeedTest < ActionDispatch::IntegrationTest
+class AtomFeedsTest < ActionDispatch::IntegrationTest
   include OrganisationFeedHelpers
 
-  it "renders an atom feed when there is content" do
+  it "renders an organisation atom feed when there is content" do
     given_there_is_an_organisation_content_item
     and_content_for_that_organisation
-    when_i_visit_the_atom_feed
+    when_i_visit_the_organisation_atom_feed
     then_i_can_see_the_feed
     with_the_feed_updated_time_set_to_the_latest_item
     and_feed_items
   end
 
-  it "renders a valid atom feed when there is no content" do
+  it "renders a valid organisation atom feed when there is no content" do
     given_there_is_an_organisation_content_item
     but_no_content_for_that_organisation
-    when_i_visit_the_atom_feed
+    when_i_visit_the_organisation_atom_feed
     then_i_can_see_the_feed
     but_no_feed_items
   end
@@ -29,14 +29,14 @@ class OrganisationAtomFeedTest < ActionDispatch::IntegrationTest
   end
 
   def and_content_for_that_organisation
-    stub_content_for_feed(@organisation_slug, results_from_rummager)
+    stub_content_for_organisation_feed(@organisation_slug, results_from_rummager)
   end
 
   def but_no_content_for_that_organisation
     stub_empty_results
   end
 
-  def when_i_visit_the_atom_feed
+  def when_i_visit_the_organisation_atom_feed
     visit "#{@base_path}.atom"
   end
 
