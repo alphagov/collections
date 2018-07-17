@@ -7,8 +7,8 @@ class FeedsController < ApplicationController
     path = "/government/organisations/#{organisation_name}#{locale}"
     @organisation = Organisation.find!(path)
 
-    response = OrganisationFeedContent.fetch(organisation: organisation_name)
-    @items = response["results"].map { |result| OrganisationFeedEntryPresenter.new(result) }
+    response = Feeds::OrganisationFeedContent.fetch(organisation: organisation_name)
+    @items = response["results"].map { |result| Feeds::OrganisationFeedEntryPresenter.new(result) }
   end
 
 private
