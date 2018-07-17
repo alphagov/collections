@@ -1,9 +1,9 @@
 require "integration_test_helper"
 
-class OrganisationAtomFeedTest < ActionDispatch::IntegrationTest
+class AtomFeedsTest < ActionDispatch::IntegrationTest
   include OrganisationFeedHelpers
 
-  it "renders an atom feed when there is content" do
+  it "renders an organisation atom feed when there is content" do
     given_there_is_an_organisation_content_item
     and_content_for_that_organisation
     when_i_visit_the_atom_feed
@@ -12,7 +12,7 @@ class OrganisationAtomFeedTest < ActionDispatch::IntegrationTest
     and_feed_items
   end
 
-  it "renders a valid atom feed when there is no content" do
+  it "renders a valid organisation atom feed when there is no content" do
     given_there_is_an_organisation_content_item
     but_no_content_for_that_organisation
     when_i_visit_the_atom_feed
