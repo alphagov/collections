@@ -12,8 +12,8 @@ class FeedsController < ApplicationController
     path = "/government/organisations/#{organisation_name}#{locale}"
     @organisation = Organisation.find!(path)
 
-    results = Feeds::FeedContent.new(filter_organisations: organisation_name).results
-    @items = results.map { |result| Feeds::FeedEntryPresenter.new(result) }
+    results = FeedContent.new(filter_organisations: organisation_name).results
+    @items = results.map { |result| FeedEntryPresenter.new(result) }
   end
 
 private
