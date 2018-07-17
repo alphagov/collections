@@ -29,7 +29,7 @@ class AtomFeedsTest < ActionDispatch::IntegrationTest
   end
 
   def and_content_for_that_organisation
-    stub_content_for_feed(@organisation_slug, results_from_rummager)
+    stub_content_for_organisation_feed(@organisation_slug, results_from_rummager)
   end
 
   def but_no_content_for_that_organisation

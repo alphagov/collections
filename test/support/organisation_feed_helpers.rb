@@ -1,5 +1,5 @@
 module OrganisationFeedHelpers
-  def stub_content_for_feed(organisation, results)
+  def stub_content_for_organisation_feed(organisation, results)
     params = {
       start: 0,
       count: 20,

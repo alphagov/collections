@@ -26,7 +26,7 @@ class FeedsControllerTest < ActionController::TestCase
 
   test "renders atom feeds" do
     content_item = content_store_has_schema_example("organisation")
-    stub_content_for_feed("ministry-of-magic", [])
+    stub_content_for_organisation_feed("ministry-of-magic", [])
 
     get :organisation, params: { organisation_name: organisation_slug(content_item), format: "atom" }
 
@@ -36,7 +36,7 @@ class FeedsControllerTest < ActionController::TestCase
 
   test "sets the Access-Control-Allow-Origin header for atom pages" do
     content_item = content_store_has_schema_example("organisation")
-    stub_content_for_feed("ministry-of-magic", [])
+    stub_content_for_organisation_feed("ministry-of-magic", [])
 
     get :organisation, params: { organisation_name: organisation_slug(content_item), format: "atom" }
 
