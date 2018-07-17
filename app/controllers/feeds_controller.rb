@@ -8,7 +8,7 @@ class FeedsController < ApplicationController
     @organisation = Organisation.find!(path)
 
     results = Feeds::FeedContent.new(filter_organisations: organisation_name).results
-    @items = results.map { |result| Feeds::OrganisationFeedEntryPresenter.new(result) }
+    @items = results.map { |result| Feeds::FeedEntryPresenter.new(result) }
   end
 
 private
