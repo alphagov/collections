@@ -21,7 +21,10 @@ describe Supergroups::Services do
             data_attributes: {
               track_category: "servicesDocumentListClicked",
               track_action: 1,
-              track_label: '/government/tagged/content'
+              track_label: '/government/tagged/content',
+              track_options: {
+                dimension29: 'Tagged Content Title'
+              }
             }
           }
         }
@@ -44,7 +47,10 @@ describe Supergroups::Services do
             data_attributes: {
               track_category: "servicesHighlightBoxClicked",
               track_action: 1,
-              track_label: '/government/tagged/content'
+              track_label: '/government/tagged/content',
+              track_options: {
+                dimension29: 'Tagged Content Title'
+              }
             }
           }
         }

@@ -126,7 +126,10 @@ describe Supergroups::PolicyAndEngagement do
                 data_attributes: {
                   track_category: "policyAndEngagementDocumentListClicked",
                   track_action: 1,
-                  track_label: '/government/tagged/content-1'
+                  track_label: '/government/tagged/content-1',
+                  track_options: {
+                    dimension29: 'Tagged Content Title'
+                  }
                 }
               },
               metadata: {
@@ -207,7 +210,10 @@ private
         data_attributes: {
           track_category: "policyAndEngagementDocumentListClicked",
           track_action: index + 1,
-          track_label: '/government/tagged/content'
+          track_label: '/government/tagged/content',
+          track_options: {
+            dimension29: 'Tagged Content Title'
+          }
         }
       },
       metadata: {

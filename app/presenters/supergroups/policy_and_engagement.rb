@@ -73,7 +73,7 @@ module Supergroups
           link: {
             text: document.title,
             path: document.base_path,
-            data_attributes: data_attributes(document.base_path, index)
+            data_attributes: data_attributes(document.base_path, document.title, index)
           },
           metadata: {
             public_updated_at: document.public_updated_at,

@@ -52,11 +52,14 @@ module Supergroups
 
   private
 
-    def data_attributes(base_path, index)
+    def data_attributes(base_path, link_text, index)
       {
         track_category: data_module_label + "DocumentListClicked",
         track_action: index,
-        track_label: base_path
+        track_label: base_path,
+        track_options: {
+          dimension29: link_text
+        }
       }
     end
 
@@ -70,7 +73,7 @@ module Supergroups
           link: {
             text: document.title,
             path: document.base_path,
-            data_attributes: data_attributes(document.base_path, index)
+            data_attributes: data_attributes(document.base_path, document.title, index)
           },
           metadata: {
             public_updated_at: document.public_updated_at,

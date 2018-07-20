@@ -39,7 +39,10 @@ describe TaxonOrganisationsPresenter do
             data_attributes: {
               track_category: "organisationsDocumentListClicked",
               track_action: 1,
-              track_label: '/government/organisations/department-for-education'
+              track_label: '/government/organisations/department-for-education',
+              track_options: {
+                dimension29: 'Department for Education'
+              }
             }
           }
         }
@@ -67,7 +70,10 @@ describe TaxonOrganisationsPresenter do
           data_attributes: {
             track_category: "organisationsDocumentListClicked",
             track_action: 1,
-            track_label: '/government/organisations/department-for-education'
+            track_label: '/government/organisations/department-for-education',
+            track_options: {
+              dimension29: 'Department for Education'
+            }
           }
         }
       ]
@@ -93,7 +99,10 @@ describe TaxonOrganisationsPresenter do
             data_attributes: {
               track_category: "organisationsDocumentListClicked",
               track_action: 1,
-              track_label: '/government/organisations/department-for-education'
+              track_label: '/government/organisations/department-for-education',
+              track_options: {
+                dimension29: 'Department for Education'
+              }
             }
           }
         }
@@ -123,7 +132,10 @@ describe TaxonOrganisationsPresenter do
           data_attributes: {
             track_category: "organisationsDocumentListClicked",
             track_action: index + 1,
-            track_label: '/government/organisations/department-for-education'
+            track_label: '/government/organisations/department-for-education',
+            track_options: {
+              dimension29: 'Department for Education'
+            }
           }
         )
       end
@@ -151,7 +163,10 @@ describe TaxonOrganisationsPresenter do
             data_attributes: {
               track_category: "organisationsDocumentListClicked",
               track_action: index + 1,
-              track_label: '/government/organisations/department-for-education'
+              track_label: '/government/organisations/department-for-education',
+              track_options: {
+                dimension29: 'Department for Education'
+              }
             }
           }
         )
@@ -183,7 +198,10 @@ describe TaxonOrganisationsPresenter do
           data_attributes: {
             track_category: "organisationsDocumentListClicked",
             track_action: index + 1,
-            track_label: '/government/organisations/department-for-education'
+            track_label: '/government/organisations/department-for-education',
+            track_options: {
+              dimension29: 'Department for Education'
+            }
           }
         )
       end
@@ -196,7 +214,10 @@ describe TaxonOrganisationsPresenter do
             data_attributes: {
               track_category: "organisationsDocumentListClicked",
               track_action: 4,
-              track_label: '/government/organisations/department-for-education'
+              track_label: '/government/organisations/department-for-education',
+              track_options: {
+                dimension29: 'Department for Education'
+              }
             }
           }
         }
@@ -228,7 +249,10 @@ describe TaxonOrganisationsPresenter do
           data_attributes: {
             track_category: "organisationsDocumentListClicked",
             track_action: 6,
-            track_label: '/government/organisations/department-for-education'
+            track_label: '/government/organisations/department-for-education',
+            track_options: {
+              dimension29: 'Department for Education'
+            }
           }
         }
       ]
@@ -256,7 +280,10 @@ describe TaxonOrganisationsPresenter do
             data_attributes: {
               track_category: "organisationsDocumentListClicked",
               track_action: 6,
-              track_label: '/government/organisations/department-for-education'
+              track_label: '/government/organisations/department-for-education',
+              track_options: {
+                dimension29: 'Department for Education'
+              }
             }
           }
         }
