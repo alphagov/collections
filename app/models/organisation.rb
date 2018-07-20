@@ -39,6 +39,10 @@ class Organisation
     is_no_10? || organisation_type == "civil_service"
   end
 
+  def is_dfid?
+    title == "Department for International Development"
+  end
+
   def is_sub_organisation?
     organisation_type == "sub_organisation"
   end
