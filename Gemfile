@@ -18,7 +18,7 @@ group :test do
   gem 'capybara'
   gem 'chromedriver-helper'
   gem 'cucumber-rails', require: false
-  gem 'govuk_schemas', '~> 3.1.0'
+  gem 'govuk_schemas', '~> 3.2.0'
   gem 'govuk-content-schema-test-helpers'
   gem 'minitest-spec-rails'
   gem 'mocha'
