@@ -25,7 +25,7 @@ module Supergroups
             text: document.title,
             path: document.base_path,
             description: document.description,
-            data_attributes: data_attributes(document.base_path, index)
+            data_attributes: data_attributes(document.base_path, document.title, index)
           }
         }
 

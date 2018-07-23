@@ -46,7 +46,7 @@ private
           url: org.link,
           brand: org.brand,
           crest: org.crest,
-          data_attributes: data_attributes(org.link, index + 1)
+          data_attributes: data_attributes(org.link, org.title, index + 1)
       }
     end
   end
@@ -61,17 +61,20 @@ private
         link: {
           text: organisation.title,
           path: organisation.link,
-          data_attributes: data_attributes(organisation.link, tracking_number + index)
+          data_attributes: data_attributes(organisation.link, organisation.title, tracking_number + index)
         }
       }
     end
   end
 
-  def data_attributes(base_path, index)
+  def data_attributes(base_path, link_text, index)
     {
       track_category: "organisationsDocumentListClicked",
       track_action: index,
-      track_label: base_path
+      track_label: base_path,
+      track_options: {
+        dimension29: link_text
+      }
     }
   end
 end

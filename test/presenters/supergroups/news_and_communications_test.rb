@@ -22,7 +22,10 @@ describe Supergroups::NewsAndCommunications do
             data_attributes: {
               track_category: "newsAndCommunicationsDocumentListClicked",
               track_action: 1,
-              track_label: '/government/tagged/content'
+              track_label: '/government/tagged/content',
+              track_options: {
+                dimension29: 'Tagged Content Title'
+              }
             }
           },
           metadata: {
@@ -76,7 +79,10 @@ describe Supergroups::NewsAndCommunications do
             data_attributes: {
               track_category: "newsAndCommunicationsFeaturedLinkClicked",
               track_action: 1,
-              track_label: '/government/tagged/content'
+              track_label: '/government/tagged/content',
+              track_options: {
+                dimension29: 'Tagged Content Title'
+              }
             }
           },
           metadata: {
