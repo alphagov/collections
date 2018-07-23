@@ -245,6 +245,7 @@ private
     child_taxons = @content_item["links"]["child_taxons"]
 
     child_taxons.each do |child_taxon|
+      assert page.has_css?("h3.taxon-page__grid-heading", text: child_taxon['title'])
       assert page.has_link?(child_taxon['title'], href: child_taxon['base_path'])
     end
   end
