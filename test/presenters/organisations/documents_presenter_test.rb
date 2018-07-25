@@ -75,6 +75,16 @@ describe Organisations::DocumentsPresenter do
       assert_equal expected, @documents_presenter.latest_documents
     end
 
+    it "formats document types with acronyms correctly" do
+      # This only applies to types containing "FOI" and "DFID"
+      stub_rummager_latest_content_with_acronym("attorney-generals-office")
+
+      expected = "DFID research output"
+      actual = @documents_presenter.latest_documents[:items].first[:metadata][:document_type]
+
+      assert_equal expected, actual
+    end
+
     it 'returns true if latest documents by type exist for an organisation' do
       assert @documents_presenter.has_latest_documents_by_type?
     end
