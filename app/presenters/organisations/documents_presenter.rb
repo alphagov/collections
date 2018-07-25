@@ -142,7 +142,13 @@ module Organisations
         end
 
         if item["content_store_document_type"]
-          metadata[:document_type] = item["content_store_document_type"].capitalize.tr("_", " ").gsub("Foi ", "FOI ")
+          metadata[:document_type] = item["content_store_document_type"].capitalize.tr("_", " ")
+
+          # Handle document types with acronyms
+          document_acronyms = %w{Foi Dfid}
+          document_acronyms.each do |acronym|
+            metadata[:document_type].gsub!(acronym, acronym.upcase)
+          end
         end
 
         documents << {

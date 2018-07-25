@@ -36,6 +36,18 @@ module OrganisationHelpers
       ] }.to_json)
   end
 
+  def stub_rummager_latest_content_with_acronym(organisation_slug)
+    stub_request(:get, Plek.new.find("search") + "/search.json?count=3&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp&reject_content_purpose_supergroup=other").
+      to_return(body: { results: [
+        {
+          title: "Rapist has sentence increased after Solicitor General’s referral",
+          link: "/government/news/rapist-has-sentence-increased-after-solicitor-generals-referral",
+          content_store_document_type: "dfid_research_output",
+          public_timestamp: "2018-06-18T17:39:34.000+01:00"
+        }
+      ] }.to_json)
+  end
+
   def stub_rummager_latest_announcements_request(organisation_slug)
     stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_content_purpose_supergroup=news_and_communications&filter_organisations=#{organisation_slug}&order=-public_timestamp").
       to_return(body: { results: [
@@ -340,6 +352,33 @@ module OrganisationHelpers
             public_updated_at: "2017-06-04T11:30:03.000+01:00",
             document_type: "Policy paper"
           }
+        ]
+      }
+    }.with_indifferent_access
+  end
+
+  def latest_documents_with_acronyms
+    {
+      title: "Attorney General's Office",
+      base_path: "/government/organisations/attorney-generals-office",
+      details: {
+        organisation_govuk_status: {
+          status: "live",
+        },
+        brand: "attorney-generals-office",
+        organisation_featuring_priority: "news",
+        ordered_featured_documents: [
+          {
+            title: "New head of the Serious Fraud Office announced",
+            href: "/government/news/new-head-of-the-serious-fraud-office-announced",
+            image: {
+              url: "https://assets.publishing.service.gov.uk/jeremy.jpg",
+              alt_text: "Attorney General Jeremy Wright QC MP"
+            },
+            summary: "Lisa Osofsky appointed new Director of the Serious Fraud Office ",
+            public_updated_at: "2018-06-04T11:30:03.000+01:00",
+            document_type: "Dfid_research_output"
+          },
         ]
       }
     }.with_indifferent_access
