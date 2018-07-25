@@ -145,7 +145,7 @@ module Organisations
           metadata[:document_type] = item["content_store_document_type"].capitalize.tr("_", " ")
 
           # Handle document types with acronyms
-          document_acronyms = %w{Foi Dfid}
+          document_acronyms = %w{Foi Dfid Aaib Cma Esi Hmrc Html Maib Raib Utaac}
           document_acronyms.each do |acronym|
             metadata[:document_type].gsub!(acronym, acronym.upcase)
           end
