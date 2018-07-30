@@ -48,6 +48,7 @@ Rails.application.routes.draw do
     as: :services_and_information
 
   get "/government/people/:name", to: "people#show"
+  get "/government/people/:slug.atom" => "feeds#person"
   get "/government/ministers/:role_name", to: "roles#show"
 
   scope :api, defaults: { format: :json } do
