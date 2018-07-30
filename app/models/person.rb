@@ -38,6 +38,10 @@ class Person
     details["body"]
   end
 
+  def web_url
+    Plek.current.website_root + base_path
+  end
+
 private
 
   def links

@@ -12,6 +12,15 @@ class AtomFeedsTest < ActionDispatch::IntegrationTest
     and_feed_items
   end
 
+  it "renders an person atom feed when there is content" do
+    given_there_is_an_person_content_item
+    and_content_for_that_person
+    when_i_visit_the_person_atom_feed
+    then_i_can_see_the_feed
+    with_the_feed_updated_time_set_to_the_latest_item
+    and_feed_items
+  end
+
   it "renders a global atom feed when there is content" do
     given_there_is_a_government_feed
     when_i_visit_the_government_atom_feed
@@ -34,6 +43,20 @@ class AtomFeedsTest < ActionDispatch::IntegrationTest
     @base_path = "/government/organisations/#{@organisation_slug}"
 
     content_store_has_schema_example("organisation")
+  end
+
+  def given_there_is_an_person_content_item
+    @updated_at = "2018-12-25T00:00:00Z"
+    @person_slug = "theresa-may"
+    @base_path = "/government/people/#{@person_slug}"
+
+    document = GovukSchemas::RandomExample.for_schema(frontend_schema: "person") do |item|
+      item["base_path"] = @base_path
+      item["title"] = "Ministry of Magic" # TODO
+      item
+    end
+
+    content_store_has_item(@base_path, document)
   end
 
   def given_there_is_a_government_feed
@@ -60,6 +83,27 @@ class AtomFeedsTest < ActionDispatch::IntegrationTest
     stub_content_for_organisation_feed(@organisation_slug, results_from_rummager)
   end
 
+  def and_content_for_that_person
+    results = results_from_rummager
+
+    params = {
+      start: 0,
+      count: 20,
+      fields: %w(title link description display_type public_timestamp),
+      filter_people: @person_slug,
+      reject_content_purpose_supergroup: "other",
+      order: '-public_timestamp',
+    }
+
+    Services.rummager.stubs(:search)
+      .with(params)
+      .returns(
+        "results" => results,
+        "start" => 0,
+        "total" => results.size,
+      )
+  end
+
   def but_no_content_for_that_organisation
     stub_empty_results
   end
@@ -70,6 +114,10 @@ class AtomFeedsTest < ActionDispatch::IntegrationTest
 
   def when_i_visit_the_government_atom_feed
     visit @base_path
+  end
+
+  def when_i_visit_the_person_atom_feed
+    visit "#{@base_path}.atom"
   end
 
   def then_i_can_see_the_government_feed

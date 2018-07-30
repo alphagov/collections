@@ -1,5 +1,5 @@
 class FeedsController < ApplicationController
-  enable_request_formats organisation: :atom, all: :atom
+  enable_request_formats organisation: :atom, all: :atom, person: :atom
 
   before_action do
     # Allows ajax requests as per https://govuk.zendesk.com/agent/tickets/1935680
@@ -16,6 +16,16 @@ class FeedsController < ApplicationController
     items = results.map { |result| FeedEntryPresenter.new(result) }
 
     render :feed, locals: { items: items, root_url: @organisation.web_url, title: "#{@organisation.title} - Activity on GOV.UK" }
+  end
+
+  def person
+    path = "/government/people/#{params[:slug]}"
+    @person = Person.find!(path)
+
+    results = FeedContent.new(filter_people: params[:slug]).results
+    items = results.map { |result| FeedEntryPresenter.new(result) }
+
+    render :feed, locals: { items: items, root_url: @person.web_url, title: "#{@person.title} - Activity on GOV.UK" }
   end
 
   def all
