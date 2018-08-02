@@ -14,6 +14,7 @@ node {
         govuk.runRakeTask("spec:javascript")
       }
     },
-    publishingE2ETests: true
+    publishingE2ETests: true,
+    brakeman: true,
   )
 }
