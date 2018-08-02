@@ -16,7 +16,7 @@ class StepNav
   end
 
   def introduction
-    details["step_by_step_nav"]["introduction"]
+    details["step_by_step_nav"]["introduction"].html_safe
   end
 
   def payload_for_component
