@@ -783,4 +783,14 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     visit "/government/organisations/attorney-generals-office"
     refute page.has_content?(/Greater transparency across government is at the heart of our commitment to let you hold politicians and public bodies to account./i)
   end
+
+  it "has GovernmentOrganization schema.org information" do
+    visit "/government/organisations/prime-ministers-office-10-downing-street"
+
+    schema_sections = page.find_all("script[type='application/ld+json']", visible: false)
+    schemas = schema_sections.map { |section| JSON.parse(section.text(:all)) }
+
+    org_schema = schemas.detect { |schema| schema["@type"] == "GovernmentOrganization" }
+    assert_equal org_schema["name"], "Prime Minister's Office, 10 Downing Street"
+  end
 end
