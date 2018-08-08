@@ -96,6 +96,8 @@
       return out.resolve();
     },
     showSection: function(state){
+      this.setContentIDMetaTag(state.sectionData.content_id);
+      this.setNavigationPageTypeMetaTag(state.sectionData.navigation_page_type);
       state.title = this.getTitle(state.slug);
       this.setTitle(state.title);
       this.$section.html(state.sectionData.html)
@@ -167,8 +169,9 @@
       return out.resolve();
     },
     showSubsection: function(state){
+      this.setContentIDMetaTag(state.sectionData.content_id);
+      this.setNavigationPageTypeMetaTag(state.sectionData.navigation_page_type);
       state.title = this.getTitle(state.slug);
-
       this.setTitle(state.title);
       this.$subsection.html(state.sectionData.html);
       this.highlightSection('section', state.path);
@@ -232,7 +235,13 @@
       }
     },
     setTitle: function(title){
-      $('title').text(title);
+      $('title').text(title + ' - GOV.UK');
+    },
+    setContentIDMetaTag: function(content_id){
+      $('meta[name="govuk:content-id"]').attr('content', content_id);
+    },
+    setNavigationPageTypeMetaTag: function(navigation_page_type){
+      $('meta[name="govuk:navigation-page-type"]').attr('content', navigation_page_type);
     },
     addLoading: function($el){
       this.$el.attr('aria-busy', 'true');

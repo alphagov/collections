@@ -11,6 +11,8 @@ class SecondLevelBrowsePageController < ApplicationController
       end
       f.json do
         render json: {
+          content_id: page.content_id,
+          navigation_page_type: "Second Level Browse",
           breadcrumbs: breadcrumb_content,
           html: render_partial('_links', page: page)
         }
