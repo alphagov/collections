@@ -16,10 +16,10 @@ describe('browse-columns.js', function() {
     expect(bc.sectionCache('prefix', 'object-name')).toBe('cache-thing');
   });
 
-  it("should set page title", function() {
+  it("should set page title with the GOV.UK suffix", function() {
     GOVUK.BrowseColumns.prototype.setTitle('new-title');
 
-    expect($('title').text()).toBe('new-title');
+    expect($('title').text()).toBe('new-title - GOV.UK');
   });
 
   it("should get section data and cache it", function() {

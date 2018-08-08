@@ -3,6 +3,7 @@ require "test_helper"
 describe MainstreamBrowsePage do
   setup do
     @api_data = {
+      "content_id" => "f818b54c-01c7-43e9-8165-cec12e4053ff",
       "base_path" => "/browse/benefits/child",
       "title" => "Child Benefit",
       "description" => "Information about eligibility, claiming and when Child Benefit stops",
@@ -16,6 +17,10 @@ describe MainstreamBrowsePage do
   end
 
   describe "basic properties" do
+    it "returns the browse page content_id" do
+      assert_equal "f818b54c-01c7-43e9-8165-cec12e4053ff", @page.content_id
+    end
+
     it "returns the browse page base_path" do
       assert_equal "/browse/benefits/child", @page.base_path
     end
