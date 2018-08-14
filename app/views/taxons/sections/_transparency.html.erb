@@ -1,1 +1,12 @@
-<%= render partial: 'document_list_with_grid', locals: { documents: section[:documents], see_more_link: section[:see_more_link] } %>
+<%= render 'govuk_publishing_components/components/taxonomy_list',
+  document_list: {
+    items: section[:documents]
+  }
+%>
+
+<% if section[:see_more_link] %>
+  <%= link_to(
+    section[:see_more_link][:text],
+    section[:see_more_link][:url]
+  )%>
+<% end %>
