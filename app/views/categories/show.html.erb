@@ -1,0 +1,225 @@
+<%
+
+  content_for :is_taxon_page, true
+  content_for :is_taxon_with_subtopics, taxon.child_taxons.any?
+  content_for :page_class, 'taxon-page taxon-page--grid'
+  content_for :title, taxon.title
+
+  format_result = -> (result) do
+    {
+      link: {
+        path: URI.join('https://gov.uk', result['link']).to_s,
+        text: result['title'],
+      }
+    }
+  end
+
+  format_chronological_result = -> (result) do
+    {
+      link: {
+        description: result['description'],
+        path: URI.join('https://gov.uk', result['link']).to_s,
+        text: result['title'],
+      },
+      metadata: {
+        public_updated_at: Time.parse(result['public_timestamp']),
+        document_type: result['content_store_document_type']&.humanize,
+      }
+    }
+  end
+%>
+
+<%= render 'govuk_publishing_components/components/inverse_header', full_width: true, padding_top: false do %>
+  <div class="full-page-width-wrapper">
+    <%= render 'govuk_publishing_components/components/breadcrumbs',
+               breadcrumbs: page_breadcrumbs,
+               collapse_on_mobile: true,
+               inverse: true %>
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <%= render 'govuk_publishing_components/components/title',
+                   title: page_title,
+                   context: page_context,
+                   inverse: true %>
+
+        <%= render 'govuk_publishing_components/components/lead_paragraph',
+                   text: page_description,
+                   inverse: true %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+
+<div class="full-page-width-wrapper">
+  <% if documents.none? %>
+    <div class="grid-row">
+      <div class="column-one-third">
+        <%= render 'govuk_publishing_components/components/back_link', href: url_for(:back) %>
+      </div>
+      <div class="column-two-thirds" style="padding-top: 1em;">
+        <%= render 'govuk_publishing_components/components/lead_paragraph',
+                   text: 'This page is currently empty.' %>
+      </div>
+    </div>
+  <% else %>
+    <div class="grid-row" id="browse">
+      <div class="column-one-third">
+
+        <span class="category-filter">Filter By:</span>
+
+        <% if taxon.child_taxons.any? %>
+          <div data-module="gem-toggle">
+            <a href="#" data-controls="filter-topic" data-expanded="false" class="category-filter-link">
+              Topic
+            </a>
+            <div id="filter-topic" class="js-hidden" class="category-filter-date">
+              <ol class="category-filter-list">
+                <% taxon.child_taxons.each_with_index do |child_taxon, index| %>
+                  <li class="category-filter-list-item">
+                    <%= link_to(
+                            child_taxon.title,
+                            "#{page_prefix}#{child_taxon.base_path}?order=#{order}"
+                        ) %>
+                  </li>
+                <% end %>
+              </ol>
+            </div>
+          </div>
+        <% end %>
+
+        <div data-module="gem-toggle">
+          <a href="#" data-controls="filter-category" data-expanded="false" class="category-filter-link">
+            Category
+          </a>
+          <div id="filter-category" class="js-hidden" class="category-filter-date">
+            <ol class="category-filter-list">
+              <li class="category-filter-list-item">
+                <%= link_to_supergroup 'All', organisation: organisation, taxon: taxon, order: order %>
+              </li>
+              <li class="category-filter-list-item">
+                <%= link_to_supergroup 'Services', organisation: organisation, taxon: taxon, order: 'a-z' %>
+              </li>
+              <li class="category-filter-list-item">
+                <%= link_to_supergroup 'Guidance and regulation', organisation: organisation, taxon: taxon, order: order %>
+              </li>
+              <li class="category-filter-list-item">
+                <%= link_to_supergroup 'News and communications', organisation: organisation, taxon: taxon, order: 'newest' %>
+              </li>
+              <li class="category-filter-list-item">
+                <%= link_to_supergroup 'Research and statistics', organisation: organisation, taxon: taxon, order: order %>
+              </li>
+              <li class="category-filter-list-item">
+                <%= link_to_supergroup 'Policy and engagement', organisation: organisation, taxon: taxon, order: order %>
+              </li>
+              <li class="category-filter-list-item">
+                <%= link_to_supergroup 'Transparency', organisation: organisation, taxon: taxon, order: order %>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <% if supergroup != 'services' %>
+          <div data-module="gem-toggle">
+            <a href="#" data-controls="filter-date" data-expanded="false" class="category-filter-link">
+              Date
+            </a>
+            <div id="filter-date" class="js-hidden" class="category-filter-date">
+              <label class="category-filter-date__label">
+                Date after
+                <input type="text" name="date[from]" id="date[from]" class="category-filter-date__input" />
+              </label>
+
+              <label class="category-filter-date__label">
+                Date before
+                <input type="text" name="date[to]" id="date[to]" class="category-filter-date__input" />
+              </label>
+
+              <span class="category-filter-date__help-text">For example, 2005 or 21/11/2014</span>
+            </div>
+          </div>
+        <% end %>
+
+      </div>
+
+      <div class="column-two-thirds">
+        <div class="category-filter-sort" data-module="gem-toggle">
+          <p>
+            <span class="category-filter">Sort By:</span>
+            <a href="#" data-controls="browse-filters" data-expanded="false" class="category-filter-toggle-link">
+              <%= order == 'a-z' ? 'A–Z' : order.humanize %> &#x25BE
+            </a>
+          </p>
+          <p id="browse-filters" class="js-hidden">
+            <% if supergroup == 'services' %>
+              <%= link_to 'A–Z', '?order=a-z#browse' %><br>
+            <% else %>
+              <%= link_to 'Newest', '?order=newest#browse' %><br>
+            <% end %>
+            <%= link_to 'Popularity', '?order=popularity#browse' %><br>
+          </p>
+        </div>
+
+        <div class="category-filter-a-z">
+          <% if order == 'a-z' %>
+            <%
+              alphabetical_documents = documents
+                  .group_by { |document| document['title'].gsub(/^('|"|\s)/, '').first.upcase }
+                  .sort_by { |letter, _documents| letter }
+            %>
+
+            <p class="category-filter-a-z-navigation">
+              <% alphabetical_documents.each do |letter, _documents| %>
+                <%= link_to letter, "#browse-#{letter.downcase}",
+                            class: 'category-filter-a-z-navigation-link' %>
+              <% end %>
+            </p>
+
+            <% alphabetical_documents.each do |letter, documents| %>
+              <%= render 'govuk_publishing_components/components/heading',
+                         id: "browse-#{letter.downcase}",
+                         text: letter,
+                         padding: true %>
+
+              <%= render 'govuk_publishing_components/components/document_list',
+                         items: documents.sort_by { |document| document['title'].squish.split }.map(&format_result) %>
+
+              <p class="category-filter-back-to-top">
+                <%= link_to 'Back to top', '#browse' %>
+              </p>
+            <% end %>
+          <% else %>
+            <%
+
+              previous_and_next_navigation_options = {}
+              previous_and_next_navigation_options[:next_page] = {
+                  url: url_for(page: page + 1),
+                  title: 'Next page',
+              }
+
+              if page > 1
+                previous_and_next_navigation_options[:previous_page] = {
+                    url: url_for(page: page - 1),
+                    title: 'Previous page',
+                }
+              end
+
+            %>
+
+            <% if supergroup != 'services' %>
+              <%= render 'govuk_publishing_components/components/document_list',
+                         items: documents.map(&format_chronological_result) %>
+            <% else %>
+              <%= render 'govuk_publishing_components/components/document_list',
+                         items: documents.map(&format_result) %>
+            <% end %>
+
+            <%= render 'govuk_publishing_components/components/previous_and_next_navigation',
+                       previous_and_next_navigation_options %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

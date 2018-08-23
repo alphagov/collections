@@ -38,6 +38,18 @@ class Taxon
     linked_items('child_taxons').present?
   end
 
+  def parent_taxons
+    return [] unless parents?
+
+    linked_items('parent_taxons').map do |parent_taxon|
+      self.class.new(parent_taxon)
+    end
+  end
+
+  def parents?
+    linked_items('parent_taxons').present?
+  end
+
   def merge(to_merge)
     Taxon.new(content_item.merge(to_merge))
   end

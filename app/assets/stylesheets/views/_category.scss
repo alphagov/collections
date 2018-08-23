@@ -1,0 +1,82 @@
+.category-filter {
+  color: #6f777b;
+}
+
+.category-filter-link {
+  color: #0b0c0c;
+  font-weight: bold;
+}
+
+.category-filter-toggle-link {
+  color: #0b0c0c;
+}
+
+.category-filter-list {
+  list-style-type: none;
+
+  &:first-child {
+    padding-top: 0.2em;
+  }
+
+  &:last-child {
+    padding-bottom: 2em;
+  }
+}
+
+.category-filter-list-item {
+  padding: 0.15em 0;
+}
+
+.category-filter-sort {
+  float: right;
+}
+
+.category-filter-back-to-top {
+  border-bottom: 2px solid #005ea5;
+  margin-top: 1em;
+  padding-bottom: 2em
+}
+
+.category-filter-a-z {
+  clear: both;
+  padding-top: 1em;
+}
+
+.category-filter-a-z-navigation {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.category-filter-a-z-navigation-link {
+  display: inline-block;
+  padding: 0.5em 0.5em 0.5em 0
+}
+
+.category-filter-date {
+  @include core-16;
+  background-color: $grey-3;
+  padding: 0 $gutter-one-third;
+  margin-bottom: $gutter;
+}
+
+.category-filter-date__label {
+  @include core-16;
+  display: inline-block;
+  margin-right: $gutter-one-third;
+  padding-top: $gutter-one-third;
+}
+
+.category-filter-date__input {
+  background: $white;
+  border: 1px solid $border-colour;
+  width: $full-width;
+  margin-left: -1px;
+  padding: 5px 0;
+  text-indent: 5px;
+  margin-bottom: $gutter-one-third;
+}
+
+.category-filter-date__help-text {
+  display: block;
+  padding: $gutter-one-third 0;
+}
