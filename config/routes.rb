@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   mount GovukPublishingComponents::Engine, at: "/component-guide"
 
   get "/browse.json" => redirect("/api/content/browse")
+  get "/browse/*category", to: "categories#show"
 
   resources :browse, only: %i(index show), param: :top_level_slug do
     get ':second_level_slug', on: :member, to: "second_level_browse_page#show"

@@ -1,0 +1,173 @@
+<%
+
+  content_for :is_taxon_page, true
+  content_for :is_taxon_with_subtopics, child_taxons.any?
+  content_for :page_class, "taxon-page taxon-page--grid"
+  content_for :title, taxon.title
+
+  format_result = -> (result) do
+    {
+      link: {
+        path: URI.join('https://gov.uk', result['link']).to_s,
+        text: result['title'],
+      }
+    }
+  end
+
+  format_chronological_result = -> (result) do
+    {
+      link: {
+        path: URI.join('https://gov.uk', result['link']).to_s,
+        text: result['title'],
+      },
+      metadata: {
+        public_updated_at: Time.parse(result['public_timestamp']),
+        document_type: result['content_store_document_type'].humanize,
+      }
+    }
+  end
+
+%>
+
+<%= render "govuk_publishing_components/components/inverse_header", full_width: true, padding_top: false do %>
+  <div class="full-page-width-wrapper">
+    <%= render 'govuk_publishing_components/components/breadcrumbs',
+               breadcrumbs: GovukPublishingComponents::AppHelpers::TaxonBreadcrumbs.new(@content_item).breadcrumbs.each { |breadcrumb| breadcrumb[:url] = "/browse/#{supergroup}#{breadcrumb[:url]}" },
+               collapse_on_mobile: true,
+               inverse: true %>
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <%= render "govuk_publishing_components/components/title",
+                   title: taxon.title,
+                   context: { text: supergroup.humanize, href: "/#{supergroup}", },
+                   inverse: true %>
+
+        <%= render 'govuk_publishing_components/components/lead_paragraph',
+                   text: taxon.description,
+                   inverse: true %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<% if child_taxons.any? %>
+  <div class="taxon-page__email-link-wrapper">
+    <div class="full-page-width-wrapper">
+      <nav role="navigation" class="taxon-page__grid" style="margin: 0">
+        <ol class="taxon-page__grid-wrapper">
+          <% child_taxons.each_with_index do |child_taxon, index| %>
+            <li class="taxon-page__grid-item">
+              <h2 class="taxon-page__grid-heading">
+                <%= link_to(
+                        child_taxon.title,
+                        "/browse/#{supergroup}#{child_taxon.base_path}",
+                        data: taxon.options_for_child_taxon(index: index)
+                    ) %>
+              </h2>
+              <p class="taxon-page__grid-item-description"><%= child_taxon.description %></p>
+            </li>
+          <% end %>
+        </ol>
+      </nav>
+    </div>
+  </div>
+<% end %>
+
+<div class="full-page-width-wrapper">
+  <div class="taxon-page__section-group">
+
+    <%= render "govuk_publishing_components/components/heading",
+               text: "Featured #{supergroup.humanize.downcase}" %>
+
+    <%= render "govuk_publishing_components/components/highlight_boxes",
+               items: documents.map(&format_result)[0...6],
+               inverse: true %>
+
+    <% if step_by_step_navs.any? %>
+      <%= render "govuk_publishing_components/components/highlight_boxes",
+                 items: step_by_step_navs %>
+    <% end %>
+
+    <br />
+
+    <div id="browse"></div>
+
+    <%= render "govuk_publishing_components/components/heading",
+               text: "Browse all #{supergroup.humanize.downcase}" %>
+
+    <div style="float: right;" data-module="gem-toggle">
+      <p>
+        <span style="color: #6f777b">Sort By:</span>
+        <a href="#" data-controls="browse-filters" data-expanded="false" style="color: #0b0c0c;">
+          <%= order == 'a-z' ? 'A–Z' : order.humanize %> &#x25BE
+        </a>
+      </p>
+      <p id="browse-filters" class="js-hidden">
+        <%= link_to 'A–Z', '?order=a-z#browse' %><br>
+        <% if supergroup != 'services' %>
+          <%= link_to 'Newest', '?order=newest#browse' %><br>
+        <% end %>
+        <%= link_to 'Popularity', '?order=popularity#browse' %><br>
+        <%= link_to 'Topic', '?order=topic#browse' %><br>
+      </p>
+    </div>
+
+    <div style="clear: both;">
+      <% if order == 'a-z' %>
+        <%
+          alphabetical_documents = documents
+              .group_by { |document| document['title'].gsub(/^('|"|\s)/, '').first }
+              .sort_by { |letter, _documents| letter }
+        %>
+
+        <p style="font-size: 19px; font-weight: bold;">
+          <% alphabetical_documents.each do |letter, _documents| %>
+            <%= link_to letter, "#browse-#{letter.downcase}",
+                        style: 'display: inline-block; padding: 0.5em 0.5em 0.5em 0' %>
+          <% end %>
+        </p>
+
+        <% alphabetical_documents.each do |letter, documents| %>
+          <%= render "govuk_publishing_components/components/heading",
+                     id: "browse-#{letter.downcase}",
+                     text: letter,
+                     padding: true %>
+
+          <%= render "govuk_publishing_components/components/document_list",
+                     items: documents.sort_by { |document| document['title'].squish.split }.map(&format_result) %>
+
+          <p style="border-bottom: 2px solid #005ea5; margin-top: 1em; padding-bottom: 2em">
+            <%= link_to 'Back to top', "#browse" %>
+          </p>
+        <% end %>
+      <% elsif order == 'topic' %>
+        <%
+          taxon_documents = documents
+              .group_by { |document| document['taxons'] }
+        %>
+
+        <% taxon_documents.each do |taxon, documents| %>
+          <%= render "govuk_publishing_components/components/heading",
+                     id: "browse-#{taxon}",
+                     text: taxon,
+                     padding: true %>
+
+          <%= render "govuk_publishing_components/components/document_list",
+                     items: documents.sort_by { |document| document['title'].squish.split }.map(&format_result) %>
+
+          <p style="border-bottom: 2px solid #005ea5; margin-top: 1em; padding-bottom: 2em">
+            <%= link_to 'Back to top', "#browse" %>
+          </p>
+        <% end %>
+
+      <% elsif order == 'newest' %>
+        <%= render "govuk_publishing_components/components/document_list",
+                   items: documents.map(&format_chronological_result)[6...-1] %>
+      <% else %>
+        <%= render "govuk_publishing_components/components/document_list",
+                   items: documents.map(&format_result)[6...-1] %>
+      <% end %>
+    </div>
+  </div>
+</div>
