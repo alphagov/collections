@@ -15,6 +15,9 @@
   <% end %>
 </ul>
 
+<h2 class="browse-heading">Tagging Information</h2>
+<p class="browse__margin-bottom">The taxons listed below each content page are the taxons that content is tagged to within that specific top-level taxon <em>only</em>. It is possible that the content page is tagged to other taxons outside that branch.
+
 <ul class="grid-row">
   <% @browse.top_level_taxons.each_with_index do |top_level_taxon, index| %>
     <li class="browse-list column-one-third <%= "browse-list__row" if index % 3 == 0 %>">
@@ -22,6 +25,7 @@
       <ul>
         <% top_level_taxon[:popular_content].each do |document| %>
           <li class="browse-document"><%= link_to(document.title, document.base_path) %></li>
+          <p class="browse-document__taxons">Tagged to <%= @browse.associated_taxons(document.base_path, top_level_taxon[:base_path]) %></p>
           <span class="browse-document__metadata browse-document__metadata--<%= document.content_purpose_supergroup %>"><%= document.content_purpose_supergroup %></span>
           <span class="browse-document__metadata browse-document__metadata--<%= document.content_purpose_supergroup %>"><%= document.content_purpose_subgroup %></span>
         <% end %>

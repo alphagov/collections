@@ -2,6 +2,10 @@
   float: right;
 }
 
+.browse__margin-bottom {
+  margin-bottom: $gutter;
+}
+
 .browse-colour-key {
   margin-bottom: $gutter;
 }
@@ -28,6 +32,10 @@
 
 .browse-document {
   margin-top: 10px;
+}
+
+.browse-document__taxons {
+  font-size: 14px;
 }
 
 .browse-document__metadata {
