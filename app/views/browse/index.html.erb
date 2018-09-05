@@ -1,10 +1,14 @@
-<% content_for :title, "All categories" %>
-<% content_for :page_class, "browse" %>
-<% content_for :meta_tags do %>
-  <meta name='govuk:navigation-page-type' content='Browse Index'>
-<% end %>
+<% content_for :title, "Prototype: Mainstream Browse" %>
 
-<div class="browse-panes root" data-module="track-click">
-  <%= render 'top_level_browse_pages',
-    top_level_browse_pages: page.top_level_browse_pages %>
-</div>
+<ul class="grid-row">
+  <% @browse.top_level_taxons.each_with_index do |top_level_taxon, index| %>
+    <li class="browse-list column-one-third <%= "browse-list__row" if index % 3 == 0 %>">
+      <h2 class="browse-heading"><%= top_level_taxon[:title] %></h2>
+      <ul>
+        <% top_level_taxon[:popular_content].each do |document| %>
+          <li class="browse-document"><%= link_to(document.title, document.base_path) %></li>
+        <% end %>
+      </ul>
+    </li>
+  <% end %>
+</ul>

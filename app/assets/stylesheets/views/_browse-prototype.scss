@@ -1,0 +1,16 @@
+.browse-list {
+  list-style: none;
+  margin-bottom: $gutter * 1.5;
+}
+
+.browse-list__row {
+  clear: both;
+}
+
+.browse-heading {
+  @include bold-19;
+}
+
+.browse-document {
+  margin: 5px 0;
+}
