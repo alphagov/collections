@@ -1,5 +1,20 @@
 <% content_for :title, "Prototype: Mainstream Browse" %>
 
+<script>
+  function toggleLabels() {
+    $('.browse-document__metadata').toggleClass("js-hidden")
+  }
+</script>
+
+<button class="browse-toggle-labels" onClick="toggleLabels()">Toggle labels</button>
+
+<h2 class="browse-heading">Supergroup Colour Key</h2>
+<ul class="browse-colour-key">
+  <% @browse.all_supergroups.each do |supergroup| %>
+    <li class="browse-document__metadata--<%= supergroup %>"><%= supergroup %></li>
+  <% end %>
+</ul>
+
 <ul class="grid-row">
   <% @browse.top_level_taxons.each_with_index do |top_level_taxon, index| %>
     <li class="browse-list column-one-third <%= "browse-list__row" if index % 3 == 0 %>">
@@ -7,6 +22,8 @@
       <ul>
         <% top_level_taxon[:popular_content].each do |document| %>
           <li class="browse-document"><%= link_to(document.title, document.base_path) %></li>
+          <span class="browse-document__metadata browse-document__metadata--<%= document.content_purpose_supergroup %>"><%= document.content_purpose_supergroup %></span>
+          <span class="browse-document__metadata browse-document__metadata--<%= document.content_purpose_supergroup %>"><%= document.content_purpose_subgroup %></span>
         <% end %>
       </ul>
     </li>

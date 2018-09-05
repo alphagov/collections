@@ -12,6 +12,10 @@ class BrowsePresenter
     top_level_taxons.sort_by {|taxon_hash| taxon_hash[:title]}
   end
 
+  def all_supergroups
+    %w(services guidance_and_regulation news_and_communications policy_and_engagement research_and_statistics transparency other)
+  end
+
 private
 
   def most_popular_content(taxon_id)

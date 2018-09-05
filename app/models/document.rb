@@ -11,6 +11,8 @@ class Document
     :change_note,
     :format,
     :content_store_document_type,
+    :content_purpose_supergroup,
+    :content_purpose_subgroup,
     :organisations
   )
 end

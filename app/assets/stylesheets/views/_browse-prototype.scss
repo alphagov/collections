@@ -1,3 +1,18 @@
+.browse-toggle-labels {
+  float: right;
+}
+
+.browse-colour-key {
+  margin-bottom: $gutter;
+}
+
+.browse-colour-key li {
+  margin: 5px;
+  padding: 3px;
+  list-style: none;
+  display: inline-block;
+}
+
 .browse-list {
   list-style: none;
   margin-bottom: $gutter * 1.5;
@@ -12,5 +27,38 @@
 }
 
 .browse-document {
-  margin: 5px 0;
+  margin-top: 10px;
+}
+
+.browse-document__metadata {
+  padding: 3px;
+  font-size: 12px;
+
+  &--services {
+    background-color: rgba($turquoise, 0.75);
+  }
+
+  &--guidance_and_regulation {
+    background-color: rgba($mellow-red, 0.5);
+  }
+
+  &--news_and_communications {
+    background-color: rgba($yellow, 0.75);
+  }
+
+  &--policy_and_engagement {
+    background-color: rgba($fuschia, 0.5);
+  }
+
+  &--transparency {
+    background-color: rgba($light-blue, 0.75);
+  }
+
+  &--research_and_statistics {
+    background-color: rgba($pink, 0.5);
+  }
+
+  &--other {
+    background-color: $grey-2;
+  }
 }

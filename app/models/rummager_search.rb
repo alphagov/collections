@@ -19,6 +19,8 @@ class RummagerSearch
         public_updated_at: timestamp,
         change_note: result["latest_change_note"],
         format: result["format"],
+        content_purpose_supergroup: result["content_purpose_supergroup"],
+        content_purpose_subgroup: result["content_purpose_subgroup"],
         content_store_document_type: result['content_store_document_type'],
         organisations: organisations
       )
