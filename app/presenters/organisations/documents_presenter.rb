@@ -214,7 +214,8 @@ module Organisations
     def latest_publications
       @latest_publications ||= search_rummager(
         filter_content_purpose_supergroup: %w(guidance_and_regulation policy_and_engagement transparency),
-        reject_government_document_supertype: %w(consultations statistics))
+        reject_government_document_supertype: %w(consultations statistics)
+      )
       search_results_to_documents(@latest_publications)
     end
 

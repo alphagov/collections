@@ -59,6 +59,7 @@ class RummagerSearch
   end
 
 private
+
   def search_result
     @_search_result ||= Services.rummager.search(@search_params)
   end

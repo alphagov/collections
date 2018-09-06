@@ -20,7 +20,7 @@ class OrganisationsApiController < ApplicationController
       end
     end
   rescue OrganisationNotFound
-    return error_404
+    error_404
   end
 
 private
