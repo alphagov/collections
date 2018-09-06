@@ -45,7 +45,9 @@ private
 
   def error_410; error 410; end
 
-  def error_503(e); error(503, e); end
+  def error_503(exception)
+    error(503, exception)
+  end
 
   def error(status_code, exception = nil)
     GovukError.notify(exception) if exception
