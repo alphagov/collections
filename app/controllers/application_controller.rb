@@ -37,7 +37,7 @@ private
   end
 
   def can_handle_format?(format)
-    return true if format == Mime[:html] || format == Mime::ALL
+    return true if [Mime[:html], Mime::ALL].include?(format)
     format && self.class.acceptable_formats.fetch(params[:action].to_sym, []).include?(format.to_sym)
   end
 
