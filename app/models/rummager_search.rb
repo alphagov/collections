@@ -9,7 +9,7 @@ class RummagerSearch
   end
 
   def documents
-    @_documents ||= search_result["results"].map do |result|
+    @documents ||= search_result["results"].map do |result|
       timestamp = result["public_timestamp"].present? ? Time.parse(result["public_timestamp"]) : nil
       organisations = tagged_content_organisations(result)
       Document.new(
@@ -41,7 +41,7 @@ class RummagerSearch
   end
 
   def organisations
-    @_organisations ||= search_result.dig('aggregates', 'organisations', 'options').map do |option|
+    @organisations ||= search_result.dig('aggregates', 'organisations', 'options').map do |option|
       organisation = option['value']
       RummagerOrganisation.new(
         title: organisation['title'],
@@ -61,6 +61,6 @@ class RummagerSearch
 private
 
   def search_result
-    @_search_result ||= Services.rummager.search(@search_params)
+    @search_result ||= Services.rummager.search(@search_params)
   end
 end

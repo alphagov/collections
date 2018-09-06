@@ -2,7 +2,7 @@ require 'test_helper'
 
 class DocumentTypeInspectorTest < ActiveSupport::TestCase
   def subject
-    @_s ||= DocumentTypeInspector.new(:slug)
+    @subject ||= DocumentTypeInspector.new(:slug)
   end
 
   context "content-store lookup throws an error" do
