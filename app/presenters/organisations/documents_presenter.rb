@@ -27,7 +27,7 @@ module Organisations
     end
 
     def promotional_features
-      org.ordered_promotional_features.map do |feature|
+      org.ordered_promotional_features.map do |feature| # rubocop:disable Metrics/BlockLength
         number_of_items = feature["items"].length
 
         {
