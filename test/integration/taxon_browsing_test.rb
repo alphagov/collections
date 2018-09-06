@@ -15,6 +15,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_the_news_and_communications_section
     and_i_can_see_the_policy_and_engagement_section
     and_i_can_see_the_transparency_section
+    and_i_can_see_the_research_and_statistics_section
     and_i_can_see_the_organisations_section
     and_i_can_see_the_sub_topics_grid
   end
@@ -102,6 +103,7 @@ private
     stub_most_recent_content_for_taxon(content_id, tagged_content_for_news_and_communications, filter_content_purpose_supergroup: 'news_and_communications')
     stub_most_recent_content_for_taxon(content_id, tagged_content_for_policy_and_engagement, filter_content_purpose_supergroup: 'policy_and_engagement')
     stub_most_recent_content_for_taxon(content_id, tagged_content_for_transparency, filter_content_purpose_supergroup: 'transparency')
+    stub_most_recent_content_for_taxon(content_id, tagged_content_for_research_and_statistics, filter_content_purpose_supergroup: 'research_and_statistics')
     stub_organisations_for_taxon(content_id, tagged_organisations)
   end
 
@@ -204,6 +206,21 @@ private
     expected_link = {
       text: "See all transparency",
       url: "/search/advanced?" + finder_query_string("transparency")
+    }
+
+    assert page.has_link?(expected_link[:text], href: expected_link[:url])
+  end
+
+  def and_i_can_see_the_research_and_statistics_section
+    assert page.has_content?("Research and statistics")
+
+    tagged_content_for_research_and_statistics.each do |item|
+      all_other_sections_list_item_test(item)
+    end
+
+    expected_link = {
+      text: "See all research and statistics",
+      url: "/search/advanced?" + finder_query_string("research_and_statistics")
     }
 
     assert page.has_link?(expected_link[:text], href: expected_link[:url])
@@ -332,6 +349,10 @@ private
 
   def tagged_content_for_transparency
     @tagged_content_for_transparency ||= generate_search_results(2, "transparency")
+  end
+
+  def tagged_content_for_research_and_statistics
+    @tagged_content_for_research_and_statistics ||= generate_search_results(2, "research_and_statistics")
   end
 
   def finder_query_string(supergroup)
