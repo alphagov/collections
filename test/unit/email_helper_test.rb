@@ -29,8 +29,7 @@ describe EmailHelper do
     self.stubs(:request).returns(ActionDispatch::TestRequest.create("PATH_INFO" => '/world/blefuscu'))
 
     atom_url = Plek.new.website_root + "/world/blefuscu.atom"
-    expected_url = Plek.new.website_root +
-      URI.encode("/government/email-signup/new?email_signup[feed]=#{atom_url}")
+    expected_url = "#{Plek.new.website_root}/government/email-signup/new?email_signup[feed]=#{atom_url}"
 
     assert_equal expected_url, whitehall_email_url
   end
