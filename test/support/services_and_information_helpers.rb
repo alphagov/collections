@@ -2,13 +2,15 @@ module ServicesAndInformationHelpers
   def stub_services_and_information_content_item
     stub_content_item(
       "/government/organisations/hm-revenue-customs/services-information",
-      "HM Revenue & Customs")
+      "HM Revenue & Customs"
+    )
   end
 
   def stub_education_services_and_information_content_item
     stub_content_item(
       "/government/organisations/department-for-education/services-information",
-      "Department for Education")
+      "Department for Education"
+    )
   end
 
   def stub_content_item(base_path, organisation_title)
@@ -27,7 +29,6 @@ module ServicesAndInformationHelpers
             title: organisation_title,
           },
         ],
-      },
-    )
+      },)
   end
 end

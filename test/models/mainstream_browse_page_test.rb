@@ -95,8 +95,9 @@ describe MainstreamBrowsePage do
   end
 
   %w(
-top_level_browse_pages
-second_level_browse_pages).each do |link_type|
+    top_level_browse_pages
+    second_level_browse_pages
+  ).each do |link_type|
     describe link_type do
       it "returns the title, base_path and description for all linked items" do
         @api_data["links"][link_type] = [
