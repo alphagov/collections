@@ -1,9 +1,9 @@
 require 'test_helper'
 
-include RummagerHelpers
-include TaxonHelpers
-
 describe TaxonPresenter do
+  include RummagerHelpers
+  include TaxonHelpers
+
   describe 'options' do
     let(:content_hash) { funding_and_finance_for_students_taxon }
     let(:content_item) { ContentItem.new(content_hash) }
