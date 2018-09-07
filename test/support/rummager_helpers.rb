@@ -97,6 +97,8 @@ module RummagerHelpers
       when "policy_and_engagement"
         rummager_document_for_supergroup_section("content-item-#{number}", "policy_paper")
       when "transparency"
+        rummager_document_for_supergroup_section("content-item-#{number}", "transparency")
+      when "research_and_statistics"
         rummager_document_for_supergroup_section("content-item-#{number}", "research")
       else
         rummager_document_for_slug("content-item-#{number}")

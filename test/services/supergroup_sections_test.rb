@@ -15,6 +15,7 @@ describe SupergroupSections::Sections do
       Supergroups::GuidanceAndRegulation.any_instance.stubs(:tagged_content).with(taxon_id).returns(section_tagged_content_list('guide'))
       Supergroups::NewsAndCommunications.any_instance.stubs(:tagged_content).with(taxon_id).returns([])
       Supergroups::Transparency.any_instance.stubs(:tagged_content).with(taxon_id).returns([])
+      Supergroups::ResearchAndStatistics.any_instance.stubs(:tagged_content).with(taxon_id).returns([])
       @sections = supergroup_sections.sections
     end
 
@@ -43,7 +44,8 @@ describe SupergroupSections::Sections do
         'Guidance and regulation',
         'News and communications',
         'Policy and engagement',
-        'Transparency'
+        'Transparency',
+        'Research and statistics'
       ]
 
       section_titles = @sections.map { |section| section[:title] }
