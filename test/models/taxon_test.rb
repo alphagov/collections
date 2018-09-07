@@ -4,8 +4,6 @@ describe Taxon do
   include TaxonHelpers
 
   context "without associate_taxons" do
-    let stubbed_content_results = %i(result_1 result_2 result_3 result_4 result_5)
-
     setup do
       content_item = ContentItem.new(student_finance_taxon)
       @taxon = Taxon.new(content_item)
