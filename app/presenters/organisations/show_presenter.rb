@@ -113,6 +113,7 @@ module Organisations
     end
 
   private
+
     NEED_A_THE = %w(
       authority
       agency

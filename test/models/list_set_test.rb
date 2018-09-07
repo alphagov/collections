@@ -182,7 +182,7 @@ describe ListSet do
     it "shouldn't display a document if its format is excluded" do
       rummager_has_documents_for_browse_page(
         'content-id-for-living-abroad',
-        ['baz'],
+        %w[baz],
         ListSet::BROWSE_FORMATS_TO_EXCLUDE.to_a.last,
         page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
       )
@@ -193,7 +193,7 @@ describe ListSet do
     it "should display a document if its format isn't excluded" do
       rummager_has_documents_for_browse_page(
         'content-id-for-living-abroad',
-        ['baz'],
+        %w[baz],
         'some-format-not-excluded',
         page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
       )

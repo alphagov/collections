@@ -235,8 +235,8 @@ private
   end
 
   def consultation?(document_type)
-    document_type == 'open_consultation' ||
-      document_type == 'consultation_outcome' ||
-      document_type == 'closed_consultation'
+    %w[open_consultation consultation_outcome closed_consultation].include?(
+      document_type
+    )
   end
 end

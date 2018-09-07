@@ -1,7 +1,7 @@
 require "test_helper"
 
 class ConcreteTestController < ApplicationController
-  enable_request_formats json: :json, js_or_atom: [:js, :atom]
+  enable_request_formats json: :json, js_or_atom: %i[js atom]
   protect_from_forgery except: :js_or_atom
 
   def test
@@ -52,7 +52,7 @@ describe ConcreteTestController do
 
   it "rejects non-HTML requests by default" do
     with_test_routing do
-      [:json, :xml, :atom].each do |format|
+      %i[json xml atom].each do |format|
         get :test, format: format
 
         assert_response :not_acceptable

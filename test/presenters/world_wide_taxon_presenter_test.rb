@@ -1,9 +1,9 @@
 require 'test_helper'
 
-include RummagerHelpers
-include TaxonHelpers
-
 describe WorldWideTaxonPresenter do
+  include RummagerHelpers
+  include TaxonHelpers
+
   describe '#rendering_type' do
     it 'returns ACCORDION when the taxon has children, but no grandchildren' do
       taxon = mock

@@ -1,9 +1,9 @@
 require 'test_helper'
 
-include RummagerHelpers
-include TaxonHelpers
-
 describe SupergroupSections::Sections do
+  include RummagerHelpers
+  include TaxonHelpers
+
   let(:taxon_id) { '12345' }
   let(:base_path) { '/base/path' }
   let(:supergroup_sections) { SupergroupSections::Sections.new(taxon_id, base_path) }

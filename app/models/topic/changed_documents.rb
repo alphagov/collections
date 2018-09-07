@@ -15,7 +15,7 @@ class Topic::ChangedDocuments
   def page_size
     count = @pagination_options[:count].to_i
     return MAX_PAGE_SIZE if count > MAX_PAGE_SIZE
-    count > 0 ? count : DEFAULT_PAGE_SIZE
+    count.positive? ? count : DEFAULT_PAGE_SIZE
   end
 
 private

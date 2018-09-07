@@ -36,14 +36,12 @@ private
     render :show, locals: {
       page: page,
     }
-
   end
 
   def second_level_browse_pages_partial(page)
     render_partial('second_level_browse_page/_second_level_browse_pages',
       title: page.title,
       second_level_browse_pages: page.second_level_browse_pages,
-      curated_order: page.second_level_pages_curated?,
-    )
+      curated_order: page.second_level_pages_curated?,)
   end
 end

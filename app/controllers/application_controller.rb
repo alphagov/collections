@@ -37,7 +37,7 @@ private
   end
 
   def can_handle_format?(format)
-    return true if format == Mime[:html] || format == Mime::ALL
+    return true if [Mime[:html], Mime::ALL].include?(format)
     format && self.class.acceptable_formats.fetch(params[:action].to_sym, []).include?(format.to_sym)
   end
 
@@ -45,7 +45,9 @@ private
 
   def error_410; error 410; end
 
-  def error_503(e); error(503, e); end
+  def error_503(exception)
+    error(503, exception)
+  end
 
   def error(status_code, exception = nil)
     GovukError.notify(exception) if exception

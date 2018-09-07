@@ -21,7 +21,7 @@ class TaxonPresenter
   end
 
   def organisations_section
-    @taxon_organisations ||= TaxonOrganisationsPresenter.new(organisations)
+    @organisations_section ||= TaxonOrganisationsPresenter.new(organisations)
   end
 
   def show_subtopic_grid?

@@ -1,14 +1,12 @@
 require "test_helper"
 
 describe BrowseController do
-
   describe "GET index" do
     before do
       content_store_has_item("/browse",
         links: {
           top_level_browse_pages: top_level_browse_pages
-        }
-      )
+        })
     end
 
     it "set correct expiry headers" do
@@ -26,8 +24,7 @@ describe BrowseController do
           links: {
             top_level_browse_pages: top_level_browse_pages,
             second_level_browse_pages: second_level_browse_pages,
-          }
-        )
+          })
       end
 
       it "sets correct expiry headers" do
