@@ -6,10 +6,6 @@ module Supergroups
       super('services')
     end
 
-    def tagged_content(taxon_id)
-      @content = MostPopularContent.fetch(content_id: taxon_id, filter_content_purpose_supergroup: @name)
-    end
-
     def promoted_content(taxon_id)
       items = tagged_content(taxon_id).shift(promoted_content_count)
 

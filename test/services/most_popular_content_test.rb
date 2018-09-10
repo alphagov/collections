@@ -63,7 +63,7 @@ describe MostPopularContent do
     end
 
     it 'filters content by the requested filter_content_purpose_supergroup only' do
-      assert_includes_params(filter_content_purpose_supergroup: 'guidance_and_regulation') do
+      assert_includes_params(filter_content_purpose_supergroup: %w(guidance_and_regulation)) do
         most_popular_content.fetch
       end
     end
