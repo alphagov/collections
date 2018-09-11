@@ -65,4 +65,6 @@ Rails.application.routes.draw do
 
   get '/world/*taxon_base_path', to: 'world_wide_taxons#show'
   get '*taxon_base_path', to: 'taxons#show'
+
+  resource :taxon_searches, only: %i(create)
 end

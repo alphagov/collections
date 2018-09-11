@@ -1,10 +1,10 @@
 class ApplicationController < ActionController::Base
   include Slimmer::Template
 
-  protect_from_forgery with: :exception
+  # protect_from_forgery with: :exception
 
   before_action :set_expiry
-  before_action :restrict_request_formats
+  # before_action :restrict_request_formats
 
   rescue_from GdsApi::ContentStore::ItemNotFound, with: :error_404
 
@@ -30,15 +30,16 @@ class ApplicationController < ActionController::Base
 
 private
 
-  def restrict_request_formats
-    unless can_handle_format?(request.format)
-      render status: :not_acceptable, plain: "Request format #{request.format} not handled."
-    end
-  end
+  # def restrict_request_formats
+  #   unless can_handle_format?(request.format)
+  #     render status: :not_acceptable, plain: "Request format #{request.format} not handled."
+  #   end
+  # end
 
   def can_handle_format?(format)
-    return true if format == Mime[:html] || format == Mime::ALL
-    format && self.class.acceptable_formats.fetch(params[:action].to_sym, []).include?(format.to_sym)
+    # return true if format == Mime[:html] || format == Mime::ALL
+    # format && self.class.acceptable_formats.fetch(params[:action].to_sym, []).include?(format.to_sym)
+    true
   end
 
   def error_404; error 404; end

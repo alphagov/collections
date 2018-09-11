@@ -13,6 +13,9 @@ gem 'rinku', require: 'rails_rinku'
 gem 'sass-rails', '~> 5.0.3'
 gem 'slimmer', '~> 13.0.0'
 gem 'uglifier', '~> 4.1.15'
+gem 'jquery-rails'
+gem 'fast-stemmer'
+gem 'text'
 
 group :test do
   gem 'capybara'

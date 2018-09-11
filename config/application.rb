@@ -24,9 +24,9 @@ module Collections
     config.assets.prefix = "/collections/"
 
     # Override Rails 4 default which restricts framing to SAMEORIGIN.
-    config.action_dispatch.default_headers = {
-      'X-Frame-Options' => 'ALLOWALL'
-    }
+    # config.action_dispatch.default_headers = {
+    #   'X-Frame-Options' => 'ALLOWALL'
+    # }
 
     # Custom directories with classes and modules you want to be autoloadable.
     config.eager_load_paths += %W(

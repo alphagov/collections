@@ -11,6 +11,7 @@ class BrowseController < ApplicationController
   end
 
   def show
+
     page =
       MainstreamBrowsePage.find("/browse/#{params[:top_level_slug]}")
     setup_content_item_and_navigation_helpers(page)

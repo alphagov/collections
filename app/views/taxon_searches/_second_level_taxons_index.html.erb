@@ -1,0 +1,3 @@
+<% taxons.each do |second_level_taxon| %>
+  <%= render(partial: "second_level_taxon_result.html.erb", locals: { taxon: second_level_taxon }) %>
+<% end %>

@@ -4,7 +4,103 @@
   <meta name='govuk:navigation-page-type' content='Browse Index'>
 <% end %>
 
-<div class="browse-panes root" data-module="track-click">
-  <%= render 'top_level_browse_pages',
-    top_level_browse_pages: page.top_level_browse_pages %>
+<div class="article-container group">
+
+  <div class="content-block">
+    <div class="inner">
+
+      <%= render "govuk_publishing_components/components/heading", {
+          text: "Search for a topic"
+      } %>
+      <%= form_tag({controller: "taxon_searches", action: "create"}, { remote: true, method: :post, format: :js } ) do %>
+        <%= render "govuk_publishing_components/components/search", {} %>
+      <% end %>
+    </div>
+    <div class="inner">
+      <div style="width: 100%; float: left; display: none" id="searchResultsText">
+        <div style="width: 100%; float: left; display: inline-block">
+        <%= render "govuk_publishing_components/components/heading", {
+            text: "Search results"
+        } %>
+        </div>
+        <div style="width: 20%; float: left">
+          <%= render "govuk_publishing_components/components/heading", {
+              text: "Topic",
+              font_size: 19
+          } %>
+        </div>
+        <div style="width: 32%; float: left">
+          <%= render "govuk_publishing_components/components/heading", {
+              text: "Subtopic",
+              font_size: 19
+          } %>
+        </div>
+        <div style="width: 30%; float: left">
+          <%= render "govuk_publishing_components/components/heading", {
+              text: "Pages",
+              font_size: 19
+          } %>
+        </div>
+        <div style="width: 10%; float: right; display: none;">
+          <button id="score">Get score</button>
+          <p>Is the result relevant</p>
+          <p style="text-align: right">No.....Somewhat.....Yes</p>
+        </div>
+        <div style="margin-top: 20px; display: inline-block" id="results"></div>
+      </div>
+    </div>
+  </div>
 </div>
+
+<style>
+  .second-level-taxon-result {
+    width: 100% !important;
+    display: inline-block;
+  }
+</style>
+
+<script>
+
+  $(document).on("click", "#score", function(){
+     alert(averagePrecision());
+  });
+
+  function retrievedDocs(){
+      return $('.document').length;
+  }
+
+  function relevantDocs(){
+      var numberRelevantDocs = 0;
+      $('input:checked').each(function(){
+          numberRelevantDocs += parseFloat($(this).val());
+      });
+      return parseFloat(numberRelevantDocs);
+  }
+
+  function averagePrecision(){
+      documentTotal = 0;
+      var docs = retrievedDocs();
+      for(var i=0; i < docs; ++i) {
+          documentTotal += precisionAtCutOff(i) * scoreAtRank(i);
+      }
+      if(documentTotal > 0){
+          return documentTotal / parseFloat(relevantDocs());
+      } else {
+          return 0;
+      }
+  }
+
+  function precisionAtCutOff(rank){
+      totalScore = 0;
+      for(var i=0; i < rank; ++i) {
+        totalScore += scoreAtRank(i);
+      }
+      return (totalScore / parseFloat(rank + 1));
+  }
+
+  function scoreAtRank(rank){
+    return parseFloat($('input:checked[data-rank=' + rank + ']').val());
+  }
+
+
+</script>

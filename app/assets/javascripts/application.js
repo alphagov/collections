@@ -7,3 +7,5 @@
 //= require modules/feeds.js
 //= require components/accordion
 //= require govuk_publishing_components/all_components
+//= require jquery.js
+//= require jquery_ujs

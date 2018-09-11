@@ -1,0 +1,58 @@
+<div class="second-level-taxon-result">
+  <div style="width: 20%; float: left">
+    <%= link_to(result[:topic_title], result[:topic_href], class: "top-level-link") %>
+  </div>
+  <div style="width: 80%; float: right; display: inline-block">
+    <% result[:sub_topics].each do |sub_topic| %>
+      <div style="display: inline-block; width: 100%">
+        <div style="width: 40%; float: left">
+          <a href="<%= sub_topic[:href] %>" class="<% (sub_topic.has_key?(:pages) ? "document" : "") %>">
+            <%= render "govuk_publishing_components/components/heading.html.erb", {
+                text: sub_topic[:title],
+                font_size: 19
+            } %>
+          </a>
+        </div>
+        <div style="width: 60%; float: right">
+
+          <% if sub_topic.has_key?(:pages) %>
+            <% sub_topic[:pages].each do |sub_topic_page| %>
+
+              <div style="width: 100%; float: left">
+                <%= link_to(sub_topic_page[:title], sub_topic_page[:link], class: "document") %>
+              </div>
+              <div style="width: 30%; float: right; display: none">
+                <div style="width: 33%; float: left">
+                  <%= radio_button_tag "#{@rank}", "0", true, { class: "rating-radio-button", "data-rank" => @rank } %>
+                </div>
+                <div style="width: 33%; float: right">
+                  <%= radio_button_tag "#{@rank}", "0.5", false, { class: "rating-radio-button", "data-rank" => @rank } %>
+                </div>
+                <div style="width: 33%; float: right">
+                  <%= radio_button_tag "#{@rank}", "1", false, { class: "rating-radio-button", "data-rank" => @rank } %>
+                </div>
+              </div>
+
+              <% @rank += 1 %>
+            <% end %>
+          <% else %>
+            <div style="width: 70%; float: left">
+            </div>
+            <div style="width: 30%; float: right; display: none">
+              <div style="width: 33%; float: left">
+                <%= radio_button_tag "#{@rank}", "0", true, { class: "rating-radio-button", "data-rank" => @rank } %>
+              </div>
+              <div style="width: 33%; float: right">
+                <%= radio_button_tag "#{@rank}", "0.5", false, { class: "rating-radio-button", "data-rank" => @rank } %>
+              </div>
+              <div style="width: 33%; float: right">
+                <%= radio_button_tag "#{@rank}", "1", false, { class: "rating-radio-button", "data-rank" => @rank } %>
+              </div>
+            </div>
+          <% @rank += 1 %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="second-level-taxon-result">
+
+  <div style="width: 40%; float: left">
+    <a href="<%= taxon[:href] %>">
+      <%= render "govuk_publishing_components/components/heading.html.erb", {
+          text: taxon[:title],
+          font_size: 19
+      } %>
+    </a>
+  </div>
+  <div style="width: 60%; float: right">
+    <% if taxon.has_key?(:pages) %>
+      <% taxon[:pages].each do |page| %>
+        <%= link_to(page[:title], page[:href]) %>
+        <br />
+      <% end %>
+    <% end %>
+  </div>
+</div>

@@ -2,6 +2,7 @@
 <html>
 <head>
   <title><%= yield :title %> - GOV.UK</title>
+  <%= javascript_include_tag :defaults %>
   <%= javascript_include_tag "application" %>
   <!--[if gt IE 8]><!--><%= stylesheet_link_tag "application" %><!--<![endif]-->
   <!--[if IE 6]><%= stylesheet_link_tag "application-ie6" %><script>var ieVersion = 6;</script><![endif]-->
