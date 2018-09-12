@@ -52,7 +52,7 @@ module Supergroups
         consultation?(content_item.content_store_document_type)
       end
 
-      return 3 if consultation_count > 3
+      return 2 if consultation_count > 2
 
       consultation_count
     end

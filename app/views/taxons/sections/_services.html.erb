@@ -1,7 +1,8 @@
 <%= render 'govuk_publishing_components/components/taxonomy_list',
   highlight_box: {
     items: section[:promoted_content],
-    inverse: true
+    inverse: true,
+    half_width: true
   },
   document_list: {
     items: section[:documents]

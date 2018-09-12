@@ -79,7 +79,7 @@ describe Supergroups::PolicyAndEngagement do
             .stubs(:fetch)
             .returns(tagged_content(tagged_document_list))
 
-          assert_equal 3, policy_and_engagement_supergroup.promoted_content(taxon_id).count
+          assert_equal 2, policy_and_engagement_supergroup.promoted_content(taxon_id).count
         end
       end
 

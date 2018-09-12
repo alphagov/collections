@@ -36,8 +36,8 @@ describe MostPopularContent do
       end
     end
 
-    it 'requests five results by default' do
-      assert_includes_params(count: 5) do
+    it 'requests four results by default' do
+      assert_includes_params(count: 4) do
         most_popular_content.fetch
       end
     end
