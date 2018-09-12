@@ -1,0 +1,11 @@
+<% if section[:child_topics] %>
+  <a href="#all-topics">See all topics</a>
+<% end %>
+
+<div>
+  <ul class="taxon-page__popular-list">
+    <% section[:documents].each do |document| %>
+      <li class="taxon-page__popular-link"><%= link_to(document[:title], document[:base_path]) %></li>
+    <% end %>
+  </ul>
+</div>

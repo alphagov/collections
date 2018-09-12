@@ -39,7 +39,19 @@
 }
 
 .taxon-page__section-group:first-child {
+  border: 0;
   margin-top: 0;
+  padding-top: 0;
+}
+
+.taxon-page__popular-list {
+  @include bold-19;
+  list-style: none;
+  margin-top: $gutter;
+
+  .taxon-page__popular-link {
+    margin: $gutter-one-third 0;
+  }
 }
 
 .taxon-page__featured-item {

@@ -17,7 +17,28 @@ class TaxonPresenter
   end
 
   def sections
-    SupergroupSections.supergroup_sections(taxon.content_id, taxon.base_path)
+    SupergroupSections.supergroup_sections(taxon.content_id, taxon.base_path).unshift(popular_content_section)
+  end
+
+  def popular_content_section
+    {
+      title: "Most popular topics",
+      show_section: true,
+      partial_template: "taxons/sections/most_popular",
+      documents: popular_content,
+      child_topics: show_subtopic_grid?
+    }
+  end
+
+  def popular_content
+    popular_content = MostPopularContent.fetch(content_id: taxon.content_id, filter_content_purpose_supergroup: false)
+
+    popular_content.map do |document|
+      {
+        title: document.title,
+        base_path: document.base_path
+      }
+    end
   end
 
   def organisations_section
