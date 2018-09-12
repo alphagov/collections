@@ -74,6 +74,8 @@ en:
       other: "Other"
     what_we_do: "What %{title} does"
   taxons:
+    all_subtopics: "All subtopics"
+    on_this_page: "On this page:"
     organisations: "Organisations"
     sub_topics: "Explore these sub-topics"
   language_names:

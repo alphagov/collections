@@ -3,7 +3,7 @@ class MostPopularContent
 
   attr_reader :content_id, :filter_content_purpose_supergroup, :number_of_links
 
-  def initialize(content_id:, filter_content_purpose_supergroup:, number_of_links: 5)
+  def initialize(content_id:, filter_content_purpose_supergroup:, number_of_links: 4)
     @content_id = content_id
     @filter_content_purpose_supergroup = filter_content_purpose_supergroup
     @number_of_links = number_of_links

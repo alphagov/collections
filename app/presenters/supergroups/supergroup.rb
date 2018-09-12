@@ -64,7 +64,7 @@ module Supergroups
     end
 
     def promoted_content_count(*)
-      3
+      2
     end
 
     def format_document_data(documents, data_category = "")

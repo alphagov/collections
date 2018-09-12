@@ -2,6 +2,10 @@
   background-color: $grey-4;
 }
 
+.taxon-page__sections {
+  border-left: 1px solid $grey-2;
+}
+
 .taxon-page__email-link-wrapper {
   background-color: $grey-4;
   margin-top: -$gutter;
@@ -22,8 +26,6 @@
 }
 
 .taxon-page__section-group:first-child {
-  border-top: none;
-  padding-top: 0;
   margin-top: 0;
 }
 

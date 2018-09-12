@@ -28,6 +28,27 @@ class TaxonPresenter
     child_taxons.count.positive?
   end
 
+  def taxon_page_navigation
+    navigation_links = sections.map do |section|
+      {
+        text: section[:title],
+        href: "#" + section[:title].parameterize
+      } if section[:show_section]
+    end
+
+    navigation_links << {
+      text: I18n.t('taxons.organisations'),
+      href: "#organisations"
+    } if organisations_section.show_organisations?
+
+    navigation_links << {
+      text: I18n.t('taxons.all_subtopics'),
+      href: "#all-topics"
+    } if show_subtopic_grid?
+
+    navigation_links.compact
+  end
+
   def options_for_child_taxon(index:)
     {
       module: 'track-click',
