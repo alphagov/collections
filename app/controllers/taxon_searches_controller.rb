@@ -1,12 +1,9 @@
 class TaxonSearchesController < ApplicationController
   def create
-    search_params = {
-        start: 0,
-        count: 5,
-        q: params[:q],
-        fields: ['title', 'link']
-    }
-    @results = Services.rummager.search(search_params)["results"]
+
+    taxon_search = TaxonSearch.new(params[:q])
+    taxon_search.fetch
+    @results = taxon_search.results
     answer_finder = AnswerFinder.new(params[:q])
     @answer = answer_finder.fetch
 
