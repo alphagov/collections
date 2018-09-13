@@ -2,10 +2,22 @@
   <a href="#all-topics">See all topics</a>
 <% end %>
 
-<div>
-  <ul class="taxon-page__popular-list">
-    <% section[:documents].each do |document| %>
-      <li class="taxon-page__popular-link"><%= link_to(document[:title], document[:base_path]) %></li>
-    <% end %>
-  </ul>
+<div class="grid-row">
+  <div class="column-half">
+    <h3 class="taxon-page__popular-title">Popular Content</h3>
+    <ul class="taxon-page__popular-list">
+      <% section[:documents][:popular_content].each do |document| %>
+        <li class="taxon-page__popular-link"><%= link_to(document[:title], document[:base_path]) %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="column-half">
+    <h3 class="taxon-page__popular-title">Popular Topics</h3>
+    <ul class="taxon-page__popular-list">
+      <% section[:documents][:associated_taxons].each do |taxon| %>
+        <li class="taxon-page__popular-link"><%= link_to(taxon[:title], taxon[:base_path]) %></li>
+      <% end %>
+    </ul>
+  </div>
 </div>

@@ -22,7 +22,7 @@ class TaxonPresenter
 
   def popular_content_section
     {
-      title: "Most popular topics",
+      title: "Most popular",
       show_section: true,
       partial_template: "taxons/sections/most_popular",
       documents: popular_content,
@@ -32,13 +32,36 @@ class TaxonPresenter
 
   def popular_content
     popular_content = MostPopularContent.fetch(content_id: taxon.content_id, filter_content_purpose_supergroup: false)
+    associated_taxons = []
 
-    popular_content.map do |document|
+    popular_content = popular_content.map do |document|
       {
         title: document.title,
         base_path: document.base_path
       }
     end
+
+    popular_content.each do |document|
+      associated_taxons << associated_taxons(document[:base_path])
+    end
+
+    {
+      popular_content: popular_content,
+      associated_taxons: associated_taxons.flatten.uniq
+    }
+  end
+
+  def associated_taxons(base_path)
+    associated_taxons = Services.content_store.content_item(base_path).dig('links', 'taxons')
+
+    associated_taxons = associated_taxons.map do |taxon|
+      {
+        title: taxon["title"],
+        base_path: taxon["base_path"]
+      } unless taxon["base_path"].start_with?("/world")
+    end
+
+    associated_taxons.compact
   end
 
   def organisations_section

@@ -44,10 +44,14 @@
   padding-top: 0;
 }
 
-.taxon-page__popular-list {
+.taxon-page__popular-title {
   @include bold-19;
+  margin-top: $gutter-two-thirds;
+}
+
+.taxon-page__popular-list {
+  @include bold-16;
   list-style: none;
-  margin-top: $gutter;
 
   .taxon-page__popular-link {
     margin: $gutter-one-third 0;
