@@ -9,9 +9,18 @@ class TaxonSearch
 
   def fetch
     @results = rummager_results
-    build_taxon_tree
-    calculate_metrics
-    build_results
+    time = Benchmark.realtime do
+      build_taxon_tree
+    end
+    p "building taxon tree took: #{time}"
+    time = Benchmark.realtime do
+      calculate_metrics
+    end
+    p "calculating metrics took: #{time}"
+    time = Benchmark.realtime do
+      build_results
+    end
+    p "building results took: #{time}"
   end
 
 
