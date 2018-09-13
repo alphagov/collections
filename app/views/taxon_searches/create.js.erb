@@ -1,11 +1,12 @@
 (function(){
-  //$("#topLevelResults").html("<%# j render(partial: "top_level_taxons.html.erb", locals: { taxons: @top_level_results }) %>");
-  //$("#secondLevelResults").html("<%# j render(partial: "second_level_taxons_index.html.erb", locals: { taxons: @second_level_results })%>");
-    $("#results").html("");
-    <% @rank = 0 %>
-    <% @results.each_with_index do |result, index| %>
-      $("#results").append("<%= j render(partial: "result.html.erb", locals: { result: result })%>");
-    <% end %>
 
-    $("#searchResultsText").show();
+  <% if @answer.any? %>
+    $("#answer").html("<%= "<h2>We think you want this <a href='https://www.gov.uk#{ @results.first["link"] }'>#{ @results.first["title"] }</a><h2>".html_safe %>");
+  <% else %>
+    $("#answer").html("");
+  <% end %>
+  $("#results").html("");
+  <% @results.each do |result| %>
+    $("#results").append("<a href='https://www.gov.uk<%= result["link"] %>'><%= result["title"] %></a><br />");
+  <% end %>
 })();

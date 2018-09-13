@@ -17,40 +17,55 @@
       <% end %>
     </div>
     <div class="inner">
-      <div style="width: 100%; float: left; display: none" id="searchResultsText">
-        <div style="width: 100%; float: left; display: inline-block">
-        <%= render "govuk_publishing_components/components/heading", {
-            text: "Search results"
-        } %>
-        </div>
-        <div style="width: 20%; float: left">
-          <%= render "govuk_publishing_components/components/heading", {
-              text: "Topic",
-              font_size: 19
-          } %>
-        </div>
-        <div style="width: 32%; float: left">
-          <%= render "govuk_publishing_components/components/heading", {
-              text: "Subtopic",
-              font_size: 19
-          } %>
-        </div>
-        <div style="width: 30%; float: left">
-          <%= render "govuk_publishing_components/components/heading", {
-              text: "Pages",
-              font_size: 19
-          } %>
-        </div>
-        <div style="width: 10%; float: right; display: none;">
-          <button id="score">Get score</button>
-          <p>Is the result relevant</p>
-          <p style="text-align: right">No.....Somewhat.....Yes</p>
-        </div>
-        <div style="margin-top: 20px; display: inline-block" id="results"></div>
+      <div id="answer">
+
+      </div>
+    </div>
+    <div class="inner" style="margin-top: 50px;">
+      <div>
+        <h3>Other results from GOV.UK</h3>
+      </div>
+      <div id="results">
+
+      </div>
+    </div>
+    <div class="inner">
+      <div style="margin-top: 50px">
+        <p>Fun searches to do and their rank in top 500 searches:</p>
+
+        <%= render "govuk_publishing_components/components/heading", { text: "Servicey things" } %>
+        <p>personal tax account (12)</p>
+        <p>self assessment (16)</p>
+        <p>driving test (24)</p>
+        <p>contact hmrc (51)</p>
+        <p>find a job (48)</p>
+        <p>universal credit login (66)</p>
+
+        <%= render "govuk_publishing_components/components/heading", { text: "Forms" } %>
+        <p>p800 refund (104)</p>
+        <p>ex50 (263)</p>
+        <p>ilr (268)</p>
+        <p>P60</p>
+
+        <%= render "govuk_publishing_components/components/heading", { text: "Topics/ guidance" } %>
+        <p>Uniform tax (99)</p>
+        <p>crisis loan (448)</p>
+        <p>student finance (33)</p>
+        <p>esa (40)</p>
+        <p>ssp (83)</p>
+
+        <%= render "govuk_publishing_components/components/heading", { text: "Departments" } %>
+        <p>hmrc (21)</p>
+        <p>dexeu (293)</p>
+        <p>dwp (194)</p>
+
+        <%= render "govuk_publishing_components/components/heading", { text: "Search by any country to get travel advice" } %>
       </div>
     </div>
   </div>
 </div>
+
+
 
 <style>
   .second-level-taxon-result {

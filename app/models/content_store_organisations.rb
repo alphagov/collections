@@ -71,6 +71,25 @@ class ContentStoreOrganisations
     details[department_type]
   end
 
+  # THIS IS HIDEOUS AND VERY SLOW GET RID OF IT
+  def all_organisations_list
+    organisations = []
+    details.values.each do |organisation_collection|
+      organisation_collection.each do |organisation|
+        organisation_data = {
+            href: organisation["href"],
+            names: [organisation["title"]]
+        }
+        organisation_content_item = ContentItem.find!(organisation["href"])
+        if organisation_content_item.details.has_key?("acronym")
+          organisation_data[:names] << organisation_content_item.details["acronym"]
+        end
+        organisations << organisation_data
+      end
+    end
+    organisations
+  end
+
   def category_name_from_type(category_type)
     DEPARTMENT_TYPE_AND_NAMES[category_type]
   end

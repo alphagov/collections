@@ -33,5 +33,7 @@ module Collections
       #{config.root}/lib
       #{config.root}/app/presenters/supergroups
     )
+    config.department_names = JSON.parse(File.open("config/department_names.json").read)["names"]
+    config.all_department_names = config.department_names.map{ |department| department["names"] }.flatten
   end
 end
