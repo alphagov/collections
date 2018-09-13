@@ -9,18 +9,11 @@ class TaxonSearch
 
   def fetch
     @results = rummager_results
-    time = Benchmark.realtime do
-      build_taxon_tree
-    end
-    p "building taxon tree took: #{time}"
-    time = Benchmark.realtime do
-      calculate_metrics
-    end
-    p "calculating metrics took: #{time}"
-    time = Benchmark.realtime do
-      build_results
-    end
-    p "building results took: #{time}"
+    build_taxon_tree
+    calculate_metrics
+    build_results
+
+    # File.open("config/content_counts.json", 'w') { |file| file.write(Rails.configuration.content_counts.to_json) }
   end
 
 
@@ -52,6 +45,7 @@ class TaxonSearch
       top_level_taxon.filter_second_level_taxon_pages(transform, median_transform)
       @results << top_level_taxon.to_h
     end
+
   end
 
   def build_top_level_taxons

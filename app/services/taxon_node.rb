@@ -109,16 +109,28 @@ class TaxonNode
         filter_part_of_taxonomy_tree: @taxon["content_id"],
         q: query
     }
+
     Services.rummager.search(params)["results"].count
   end
 
   def fetch_content_count
-    params = {
-        start: 0,
-        count: 1000,
-        filter_part_of_taxonomy_tree: @taxon["content_id"]
-    }
-    Services.rummager.search(params)["results"].count
+    return 400000 unless @taxon["content_id"].to_s.length > 0
+    result = 0
+    if !Rails.configuration.content_counts.has_key?(@taxon["content_id"])
+      params = {
+          start: 0,
+          count: 1000,
+          filter_part_of_taxonomy_tree: @taxon["content_id"]
+      }
+      # More accurate development count that counts everything
+      # result = Services.rummager.search_enum(params, page_size: 1000).count
+      # Rough and ready 'production' count that maxes out at 1000
+      result = Services.rummager.search(params)["results"].count
+      Rails.configuration.content_counts[@taxon["content_id"]] = result
+    else
+      result = Rails.configuration.content_counts[@taxon["content_id"]]
+    end
+    result
   end
 
   # def calculate_median(array)
