@@ -1,4 +1,5 @@
 require 'fast_stemmer'
+require 'kmeans-clusterer'
 
 class TaxonSearch
   attr_accessor :tree, :top_level_results, :second_level_results, :results
@@ -30,11 +31,17 @@ class TaxonSearch
     transform = 0
     mean_log = 0
     if all_second_level_scores.any?
-      # median_transform = all_second_level_scores.median_transform
-      mean_log = all_second_level_scores.map{ |score| Math.log10(score) }.mean
+      k = 2
+      data = []
+      all_second_level_scores.sort!
+      all_second_level_scores.sort.each_with_index do |score, index|
+        data << [Math.log10(score), index]
+      end
+      kmeans = KMeansClusterer.run(k, data, labels: all_second_level_scores, runs: 5)
+      centroids = kmeans.clusters.map { |cluster| cluster.centroid.to_a.first }
+      mean_log = centroids.max
     end
-    # p "TRANSFORM: #{transform}"
-    p "CUTOFF: #{mean_log}"
+    # p "CUTOFF: #{mean_log}"
     top_level_taxons.each do |top_level_taxon|
       top_level_taxon.filter_second_level_taxon_pages(transform, mean_log)
       @results << top_level_taxon.to_h

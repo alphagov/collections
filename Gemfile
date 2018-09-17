@@ -18,6 +18,7 @@ gem 'fast-stemmer'
 gem 'text'
 gem 'engtagger', '~> 0.2.0'
 gem 'levenshtein-ffi', :require => 'levenshtein'
+gem 'kmeans-clusterer', '~> 0.11.4'
 
 group :test do
   gem 'capybara'

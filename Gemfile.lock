@@ -180,6 +180,8 @@ GEM
     json-schema (2.8.0)
       addressable (>= 2.4)
     kgio (2.11.2)
+    kmeans-clusterer (0.11.4)
+      narray (~> 0.6)
     kramdown (1.15.0)
     levenshtein-ffi (1.1.0)
       ffi (~> 1.9)
@@ -217,6 +219,7 @@ GEM
     multi_json (1.13.1)
     multi_test (0.1.2)
     multipart-post (2.0.0)
+    narray (0.6.1.2)
     netrc (0.11.0)
     nio4r (2.3.1)
     nokogiri (1.8.4)
@@ -386,6 +389,7 @@ DEPENDENCIES
   govuk_schemas (~> 3.2.0)
   jasmine-rails
   jquery-rails
+  kmeans-clusterer (~> 0.11.4)
   levenshtein-ffi
   minitest-spec-rails
   mocha
