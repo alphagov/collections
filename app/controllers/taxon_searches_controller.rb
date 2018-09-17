@@ -5,7 +5,7 @@ class TaxonSearchesController < ApplicationController
     @results = taxon_search.results
     answer_finder = AnswerFinder.new(params[:q])
     @answer = answer_finder.fetch
-
+    taxon_search.print
     render "create.js.erb"
   end
 end

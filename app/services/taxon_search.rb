@@ -12,8 +12,6 @@ class TaxonSearch
     build_taxon_tree
     calculate_metrics
     build_results
-
-    # File.open("config/content_counts.json", 'w') { |file| file.write(Rails.configuration.content_counts.to_json) }
   end
 
 
@@ -22,27 +20,23 @@ class TaxonSearch
 
     top_level_taxons = build_top_level_taxons
     transform, mean_log = calculate_mean_log(top_level_taxons)
-    total_document_including_term_count = 0
-    total_document_count = 0
+
+    all_second_level_scores = []
     top_level_taxons.each do |top_level_taxon|
       top_level_taxon.build_second_level_taxons(transform, mean_log)
-      total_document_including_term_count += top_level_taxon.second_level_taxon_document_including_term_count
-      total_document_count += top_level_taxon.second_level_taxon_total_document_count
+      all_second_level_scores += top_level_taxon.second_level_content_page_scores
     end
-    second_level_idf = idf(total_document_count, total_document_including_term_count)
-    all_second_level_result_page_tf_idfs = []
-    top_level_taxons.each do |top_level_taxon|
-      all_second_level_result_page_tf_idfs += top_level_taxon.second_level_result_tf_idfs(second_level_idf)
-    end
+
     transform = 0
-    median_transform = 0
-    if all_second_level_result_page_tf_idfs.any?
-      median_transform = all_second_level_result_page_tf_idfs.median_transform_twice_std
+    mean_log = 0
+    if all_second_level_scores.any?
+      # median_transform = all_second_level_scores.median_transform
+      mean_log = all_second_level_scores.map{ |score| Math.log10(score) }.mean
     end
     # p "TRANSFORM: #{transform}"
-    p "CUTOFF: #{median_transform}"
+    p "CUTOFF: #{mean_log}"
     top_level_taxons.each do |top_level_taxon|
-      top_level_taxon.filter_second_level_taxon_pages(transform, median_transform)
+      top_level_taxon.filter_second_level_taxon_pages(transform, mean_log)
       @results << top_level_taxon.to_h
     end
 
@@ -58,19 +52,12 @@ class TaxonSearch
 
   def calculate_mean_log(top_level_taxons)
     all_children = top_level_taxons.inject([]) { |children, top_level_taxon| children += top_level_taxon.all_children_ranked; children }
-    tf_idfs = all_children.inject([]){|accum, taxon_node| accum << taxon_node.tf_idf; accum }
-    tf_idfs.median_log
+    scores = all_children.inject([]){|accum, taxon_node| accum << taxon_node.score; accum }
+    scores.median_log
   end
 
   def calculate_metrics
-    total_content_count = @tree.total_content_count
-    total_query_content_count = @tree.total_query_count(@q)
-    tree_idf = idf(total_content_count, total_query_content_count)
-    @tree.calculate_metrics(@q, tree_idf)
-  end
-
-  def idf(total_content_count, total_query_content_count)
-    Math.log10(total_content_count.to_f / (1.0 + total_query_content_count.to_f))
+    @tree.calculate_metrics(@q)
   end
 
   def build_taxon_tree

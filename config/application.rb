@@ -35,6 +35,5 @@ module Collections
     )
     config.department_names = JSON.parse(File.open("config/department_names.json").read)["names"]
     config.all_department_names = config.department_names.map{ |department| department["names"] }.flatten
-    config.content_counts = JSON.parse(File.open("config/content_counts.json").read)
   end
 end
