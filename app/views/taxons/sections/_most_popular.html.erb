@@ -1,23 +1,26 @@
 <% if section[:child_topics] %>
-  <a href="#all-topics">See all topics</a>
+  <a href="#all-topics"><%= t('see_all_topics') %></a>
 <% end %>
 
-<div class="grid-row">
-  <div class="column-half">
-    <h3 class="taxon-page__popular-title">Popular Content</h3>
-    <ul class="taxon-page__popular-list">
-      <% section[:documents][:popular_content].each do |document| %>
-        <li class="taxon-page__popular-link"><%= link_to(document[:title], document[:base_path]) %></li>
+<% section[:taxons].each do |taxon_name, taxon_group| %>
+  <% taxon_group.each do |taxon| %>
+  <div class="grid-row taxon-page__popular">
+    <h3 class="column-one-third taxon-page__popular-title">
+      <% if taxon_group.size > 1 %>
+        <span class="taxon-page__popular-title-context"><%= taxon[:parent] %></span>
       <% end %>
-    </ul>
-  </div>
-
-  <div class="column-half">
-    <h3 class="taxon-page__popular-title">Popular Topics</h3>
-    <ul class="taxon-page__popular-list">
-      <% section[:documents][:associated_taxons].each do |taxon| %>
-        <li class="taxon-page__popular-link"><%= link_to(taxon[:title], taxon[:base_path]) %></li>
+      <%= request.path.eql?(taxon[:base_path]) ? t('on_this_page') : taxon_name %>
+    </h3>
+    <div class="column-two-thirds">
+      <ul class="taxon-page__popular-list">
+        <% taxon[:popular_content].each do |document| %>
+          <li class="taxon-page__popular-link"><%= link_to(document[:title], document[:base_path]) %></li>
+        <% end %>
+      </ul>
+      <% unless request.path.eql?(taxon[:base_path]) %>
+        <a href="<%= taxon[:base_path] %>"><%= t('see_all_in', taxon: taxon_name) %></a>
       <% end %>
-    </ul>
+    </div>
   </div>
-</div>
+  <% end %>
+<% end %>

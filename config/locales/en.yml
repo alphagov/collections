@@ -1,4 +1,7 @@
 en:
+  on_this_page: "On this page"
+  see_all_in: "See all in %{taxon}"
+  see_all_topics: "See all topics"
   view_all: "view all"
   view_less: "view less"
   organisations:

@@ -25,43 +25,46 @@ class TaxonPresenter
       title: "Most popular",
       show_section: true,
       partial_template: "taxons/sections/most_popular",
-      documents: popular_content,
+      taxons: popular_taxon_content,
       child_topics: show_subtopic_grid?
     }
   end
 
-  def popular_content
+  def popular_taxons
     popular_content = MostPopularContent.fetch(content_id: taxon.content_id, filter_content_purpose_supergroup: false)
-    associated_taxons = []
-
-    popular_content = popular_content.map do |document|
-      {
-        title: document.title,
-        base_path: document.base_path
-      }
-    end
+    popular_taxons = []
 
     popular_content.each do |document|
-      associated_taxons << associated_taxons(document[:base_path])
+      popular_taxons << Services.content_store.content_item(document.base_path).dig('links', 'taxons').map do |taxon|
+        {
+          content_id: taxon["content_id"],
+          title: taxon["title"],
+          base_path: taxon["base_path"]
+        } unless taxon["base_path"].start_with?("/world")
+      end
     end
 
-    {
-      popular_content: popular_content,
-      associated_taxons: associated_taxons.flatten.uniq
-    }
+    popular_taxons.flatten.compact.uniq
   end
 
-  def associated_taxons(base_path)
-    associated_taxons = Services.content_store.content_item(base_path).dig('links', 'taxons')
+  def popular_taxon_content
+    popular_taxon_content = []
 
-    associated_taxons = associated_taxons.map do |taxon|
-      {
-        title: taxon["title"],
-        base_path: taxon["base_path"]
-      } unless taxon["base_path"].start_with?("/world")
-    end
+    popular_taxons[0..2].each do |taxon|
+      popular_taxon_content << {
+        title: taxon[:title],
+        base_path: taxon[:base_path],
+        parent: taxon[:base_path].split("/")[1].humanize.gsub("-", " "),
+        popular_content: MostPopularContent.fetch(content_id: taxon[:content_id], filter_content_purpose_supergroup: false).map do |document|
+          {
+            title: document.title,
+            base_path: document.base_path
+          }
+        end
+      }
+      end
 
-    associated_taxons.compact
+    popular_taxon_content.group_by{|row| row[:title]}
   end
 
   def organisations_section
