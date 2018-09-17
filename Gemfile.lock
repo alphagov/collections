@@ -48,7 +48,7 @@ GEM
       io-like (~> 0.3.0)
     arel (9.0.0)
     ast (2.4.0)
-    backports (3.11.3)
+    backports (3.11.4)
     better_errors (2.5.0)
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
@@ -66,7 +66,7 @@ GEM
       xpath (~> 3.1)
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
-    chromedriver-helper (1.2.0)
+    chromedriver-helper (2.0.1)
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
     coderay (1.1.2)
@@ -76,16 +76,16 @@ GEM
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     crass (1.0.4)
-    cucumber (3.1.1)
+    cucumber (3.1.2)
       builder (>= 2.1.2)
-      cucumber-core (~> 3.1.0)
-      cucumber-expressions (~> 6.0.0)
+      cucumber-core (~> 3.2.0)
+      cucumber-expressions (~> 6.0.1)
       cucumber-wire (~> 0.0.1)
       diff-lcs (~> 1.3)
       gherkin (~> 5.1.0)
       multi_json (>= 1.7.5, < 2.0)
       multi_test (>= 0.1.2)
-    cucumber-core (3.1.0)
+    cucumber-core (3.2.0)
       backports (>= 3.8.0)
       cucumber-tag_expressions (~> 1.1.0)
       gherkin (>= 5.0.0)
@@ -154,6 +154,11 @@ GEM
       slimmer (>= 11.1.0)
     govuk_schemas (3.2.0)
       json-schema (~> 2.8.0)
+    govuk_test (0.2.1)
+      capybara
+      chromedriver-helper
+      puma
+      selenium-webdriver
     hashdiff (0.3.7)
     highline (1.7.10)
     htmlentities (4.3.4)
@@ -185,7 +190,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
-    marcel (0.3.2)
+    marcel (0.3.3)
       mimemagic (~> 0.3.2)
     metaclass (0.0.4)
     method_source (0.9.0)
@@ -270,7 +275,7 @@ GEM
       netrc (~> 0.8)
     rinku (2.0.4)
     rouge (3.2.1)
-    rubocop (0.58.2)
+    rubocop (0.59.1)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.5, != 2.5.1.1)
@@ -360,8 +365,6 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
-  capybara
-  chromedriver-helper
   cucumber-rails
   gds-api-adapters (~> 53.0)
   govuk-content-schema-test-helpers
@@ -371,16 +374,15 @@ DEPENDENCIES
   govuk_frontend_toolkit (~> 7.6.0)
   govuk_publishing_components (~> 9.21.0)
   govuk_schemas (~> 3.2.0)
+  govuk_test (~> 0.2.1)
   jasmine-rails
   minitest-spec-rails
   mocha
   plek (~> 2.1.1)
   pry-byebug
-  puma
   rails (= 5.2.1)
   rinku
   sass-rails (~> 5.0.3)
-  selenium-webdriver
   simplecov
   simplecov-rcov
   slimmer (~> 13.0.0)
