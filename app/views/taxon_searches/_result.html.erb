@@ -2,7 +2,7 @@
   <div style="width: 20%; float: left">
     <%= link_to(result[:topic_title], "https://www.gov.uk#{result[:topic_href]}", class: "top-level-link") %>
   </div>
-  <div style="width: 5%; float: left">
+  <div style="width: 5%; float: left;  text-align: center">
     >
   </div>
   <div style="width: 75%; float: right; display: inline-block">
@@ -16,8 +16,10 @@
             } %>
           </a>
         </div>
-        <div style="width: 5%; float: left">
-          >
+        <div style="width: 5%; float: left; text-align: center">
+          <% if sub_topic.has_key?(:pages) and sub_topic[:pages].any? %>
+            >
+          <% end %>
         </div>
         <div style="width: 60%; float: right">
 
