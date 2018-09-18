@@ -2,15 +2,6 @@
   background-color: $grey-4;
 }
 
-.taxon-page__section-heading {
-  @include bold-27;
-  margin-bottom: $gutter-half;
-}
-
-.taxon-page__grid-heading {
-  margin-bottom: $gutter-half;
-}
-
 .taxon-page__email-link-wrapper {
   background-color: $grey-4;
   margin-top: -$gutter;
@@ -106,6 +97,8 @@
 
   .taxon-page__grid-heading {
     @include bold-19;
+    margin-bottom: $gutter-half;
+
     @include media (tablet) {
       padding-bottom: $gutter-one-third;
     }
