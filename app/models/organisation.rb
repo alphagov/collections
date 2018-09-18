@@ -28,6 +28,7 @@ class Organisation
 
   def brand
     return slug if is_no_10?
+
     details["brand"]
   end
 

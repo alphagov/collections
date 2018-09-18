@@ -30,6 +30,7 @@ class WorldWideTaxonPresenter
 
   def accordion_content
     return [] unless renders_as_accordion?
+
     accordion_items = ordered_child_taxons.map { |taxon| WorldWideTaxonPresenter.new(taxon) }
 
     if tagged_content.any?

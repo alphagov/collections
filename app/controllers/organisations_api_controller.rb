@@ -81,6 +81,7 @@ private
 
   def current_page
     return page_param if page_param.positive?
+
     1
   end
 
