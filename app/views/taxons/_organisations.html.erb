@@ -2,7 +2,11 @@
   <div class="taxon-page__section-group taxon-page__section-group--organisation" data-module="toggle">
     <div class="grid-row">
       <div class="column-two-thirds">
-        <h2 class="taxon-page__section-heading">Organisations</h2>
+        <%= render "govuk_publishing_components/components/heading", {
+            text: t('taxons.organisations'),
+            heading_level: 2,
+            margin_bottom: 2
+          } %>
 
 
         <%= render partial: 'organisation_logos_and_list', locals: {

@@ -134,7 +134,7 @@ private
   end
 
   def and_i_can_see_the_guidance_and_regulation_section
-    assert page.has_content?('Guidance and regulation')
+    assert page.has_selector?('.gem-c-heading', text: "Guidance and regulation")
 
     tagged_content_for_guidance_and_regulation.each do |item|
       if item['content_store_document_type'] == 'guide'
@@ -153,7 +153,7 @@ private
   end
 
   def and_i_can_see_the_services_section
-    assert page.has_content?('Services')
+    assert page.has_selector?('.gem-c-heading', text: "Services")
     tagged_content_for_services.each do |item|
       services_section_list_item_test(item)
     end
@@ -166,7 +166,7 @@ private
   end
 
   def and_i_can_see_the_news_and_communications_section
-    assert page.has_content?("News and communications")
+    assert page.has_selector?('.gem-c-heading', text: "News and communications")
     assert page.has_selector?('.taxon-page__featured-item')
 
     tagged_content_for_news_and_communications.each do |item|
@@ -182,7 +182,7 @@ private
   end
 
   def and_i_can_see_the_policy_and_engagement_section
-    assert page.has_content?("Policy and engagement")
+    assert page.has_selector?('.gem-c-heading', text: "Policy and engagement")
 
     tagged_content_for_policy_and_engagement.each do |item|
       all_other_sections_list_item_test(item)
@@ -197,7 +197,7 @@ private
   end
 
   def and_i_can_see_the_transparency_section
-    assert page.has_content?("Transparency")
+    assert page.has_selector?('.gem-c-heading', text: "Transparency")
 
     tagged_content_for_transparency.each do |item|
       all_other_sections_list_item_test(item)
@@ -212,7 +212,7 @@ private
   end
 
   def and_i_can_see_the_research_and_statistics_section
-    assert page.has_content?("Research and statistics")
+    assert page.has_selector?('.gem-c-heading', text: "Research and statistics")
 
     tagged_content_for_research_and_statistics.each do |item|
       all_other_sections_list_item_test(item)
