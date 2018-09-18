@@ -22,11 +22,15 @@ class TaxonNode
   end
 
   def all_children
-    children = [self.dup]
-    @children.values.each do |child|
-      children << child.all_children
+    if children.values.any?
+      children = []
+      @children.values.each do |child|
+        children << child.all_children
+      end
+      children.flatten
+    else
+      [self.dup]
     end
-    children.flatten
   end
 
   def title
@@ -34,7 +38,7 @@ class TaxonNode
   end
 
   def href
-    @taxon["link"]
+    @taxon["base_path"]
   end
 
   def content_id
@@ -75,6 +79,10 @@ class TaxonNode
     }
     @content_pages = Services.rummager.search(params)["results"]
     scores = @content_pages.map{ |result| result["es_score"]}
-    scores.median
+    if scores.any?
+      scores.median
+    else
+      -1000
+    end
   end
 end

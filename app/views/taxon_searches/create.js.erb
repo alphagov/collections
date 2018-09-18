@@ -1,7 +1,7 @@
 (function(){
 
   <% if @answer.any? %>
-    $("#answer").html("<%= "<h2>We think you want this <a href='https://www.gov.uk#{ @answer.first["link"] }'>#{ @answer.first["title"] }</a><h2>".html_safe %>");
+    $("#answer").html("<%= j render(partial: "answer.html.erb", locals: { answer: @answer.first }) %>");
   <% else %>
     $("#answer").html("");
   <% end %>
