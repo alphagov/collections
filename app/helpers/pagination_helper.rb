@@ -22,6 +22,7 @@ private
 
   def current_page_url
     return current_url_without_parameters if first_page? && last_page?
+
     "#{current_url_without_parameters}?page=#{current_page}"
   end
 

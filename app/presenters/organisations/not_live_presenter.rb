@@ -16,6 +16,7 @@ module Organisations
       return merged_notice if @org.is_merged?
       return split_notice if @org.is_split? || @org.is_replaced?
       return no_longer_exists_notice if @org.is_no_longer_exists?
+
       @org.title
     end
 

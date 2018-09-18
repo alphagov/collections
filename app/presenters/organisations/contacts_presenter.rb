@@ -55,6 +55,7 @@ module Organisations
 
     def contact_line(line)
       return line + "<br/>" if line && line.length.positive?
+
       ""
     end
 

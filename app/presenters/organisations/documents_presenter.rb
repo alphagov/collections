@@ -19,6 +19,7 @@ module Organisations
 
     def remaining_featured_news
       return featured_news(org.ordered_featured_documents.drop(1)) if org.is_news_organisation?
+
       featured_news(org.ordered_featured_documents)
     end
 
@@ -231,6 +232,7 @@ module Organisations
 
     def promotions_child_column_class(number_of_items)
       return "column-half" if number_of_items == 2
+
       "column-one-third" if number_of_items == 3
     end
 

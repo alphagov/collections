@@ -51,11 +51,13 @@ module Organisations
 
     def logo_wrapper_class
       return "column-two-thirds" if org.is_news_organisation?
+
       "column-one-third"
     end
 
     def link_wrapper_class
       return "column-one-third" if org.is_news_organisation?
+
       "column-two-thirds"
     end
 
