@@ -5,6 +5,7 @@
   <% else %>
     $("#answer").html("");
   <% end %>
+  $("#answer").show();
   $("#results").html("");
   <% @rank = 0 %>
   <% @results.each_with_index do |result, index| %>
