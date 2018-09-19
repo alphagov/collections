@@ -43,10 +43,10 @@ class TaxonSearch
       end
       kmeans = KMeansClusterer.run(k, data, labels: all_second_level_scores, runs: 5)
       centroids = kmeans.clusters.map { |cluster| cluster.centroid.to_a.first }
-      p data
+      # p data
       mean_log = centroids.min
     end
-    p "CUTOFF,#{mean_log}"
+    # p "CUTOFF,#{mean_log}"
     top_level_taxons.each do |top_level_taxon|
       top_level_taxon.filter_second_level_taxon_pages(transform, mean_log)
       @results << top_level_taxon.to_h

@@ -12,20 +12,20 @@
       <%= render "govuk_publishing_components/components/heading", {
           text: "Search for a topic"
       } %>
-      <%= form_tag({controller: "taxon_searches", action: "create"}, { remote: true, method: :post, format: :js } ) do %>
+      <%= form_tag({controller: "taxon_searches", action: "create"}, { remote: true, method: :post, format: :js, id: "searchForm" } ) do %>
         <%= render "govuk_publishing_components/components/search", {} %>
       <% end %>
     </div>
     <div class="inner" id="answer">
     </div>
     <div class="inner">
-      <div style="width: 100%; float: left; display: none; margin-top: 50px" id="searchResultsText">
+      <div style="width: 100%; float: left; margin-top: 50px" id="searchResultsText">
         <div style="width: 10%; float: right; display: none;">
           <button id="score">Get score</button>
           <p>Is the result relevant</p>
           <p style="text-align: right">No.....Somewhat.....Yes</p>
         </div>
-        <div style="margin-top: 20px; display: inline-block" id="results"></div>
+        <div style="margin-top: 20px; display: inline-block; min-height: 100px; width: 100%" id="results"></div>
       </div>
     </div>
   </div>
@@ -39,6 +39,12 @@
 </style>
 
 <script>
+    $("#searchForm").submit(function(){
+      $("#results").html("");
+      $("#results").LoadingOverlay("show");
+      $("#answer").hide();
+    });
+
     $(this).on('ajax:error', function(event, xhr, data, status) {
         alert("Timed out, sorry! Working on making it faster");
     });

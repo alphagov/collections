@@ -11,4 +11,5 @@
     $("#results").append("<%= j render(partial: "result.html.erb", locals: { result: result })%>");
   <% end %>
   $("#searchResultsText").show();
+    $("#results").LoadingOverlay("hide");
 })();

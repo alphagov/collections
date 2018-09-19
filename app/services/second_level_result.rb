@@ -48,7 +48,7 @@ class SecondLevelResult
   def filter_pages(transform, median_transform)
     @filtered_content_items = []
     @content_items.each do |content_item|
-      # p "#{content_item[:title]},#{number_with_precision(Math.log10(content_item[:score]), precision: 12)}"
+      p "#{content_item[:title]},#{number_with_precision(Math.log10(content_item[:score]), precision: 12)}"
       if content_item.has_key?(:score) and Math.log10(content_item[:score]) >= median_transform
         @filtered_content_items << content_item
       end
