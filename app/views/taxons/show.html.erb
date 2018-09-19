@@ -9,14 +9,16 @@
   )
 %>
 
-<div class="full-page-width-wrapper">
-  <div class="grid-row">
+<div class="full-page-width-wrapper" data-module="sticky-navigation-container">
+  <div class="grid-row taxon-page__navigation-wrapper">
     <div class="column-one-third">
-      <%= t('taxons.on_this_page') %>
-      <%= render "govuk_publishing_components/components/contents_list",
-        hide_title: true,
-        contents: presented_taxon.taxon_page_navigation
-      %>
+      <div class="taxon-page__navigation" data-module="sticky-navigation">
+        <%= t('taxons.on_this_page') %>
+        <%= render "govuk_publishing_components/components/contents_list",
+          hide_title: true,
+          contents: presented_taxon.taxon_page_navigation
+        %>
+      </div>
     </div>
     <div class="taxon-page__sections column-two-thirds">
       <% presented_taxon.sections.each do |section| %>

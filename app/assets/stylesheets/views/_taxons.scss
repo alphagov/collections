@@ -2,8 +2,9 @@
   background-color: $grey-4;
 }
 
-.taxon-page__sections {
+.full-page-width-wrapper .taxon-page__sections {
   border-left: 1px solid $grey-2;
+  float: right;
 }
 
 .taxon-page__email-link-wrapper {
@@ -12,6 +13,18 @@
   margin-bottom: $gutter;
   border-bottom: 1px solid $border-colour;
   padding: $gutter;
+}
+
+.taxon-page__navigation-wrapper {
+  position: relative;
+}
+
+.taxon-page__navigation {
+  margin-bottom: $gutter;
+
+  @include media(tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .taxon-page__section-description {
