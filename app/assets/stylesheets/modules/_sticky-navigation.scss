@@ -1,0 +1,30 @@
+[data-module=sticky-navigation].sticky-navigation--enabled {
+  @include media (tablet) {
+    @include grid-column(1 / 3);
+    position: fixed;
+    top: 25px;
+    left: 15px;
+    width: auto;
+  }
+
+  @include media(desktop) {
+    position: fixed;
+    top: 25px;
+    float: none;
+    left: inherit;
+    width: auto;
+    padding: 0;
+  }
+}
+
+[data-module=sticky-navigation].sticky-navigation--anchored {
+  @include media (tablet) {
+    @include grid-column(1 / 3);
+    position: absolute;
+    padding-left: 0;
+    bottom: 0;
+    left: 15px;
+    width: auto;
+  }
+}
+

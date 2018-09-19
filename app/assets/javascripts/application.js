@@ -3,6 +3,7 @@
 //= require support
 //= require browse-columns
 //= require organisation-list-filter
+//= require modules/sticky-navigation
 //= require modules/current-location
 //= require modules/feeds.js
 //= require components/accordion
