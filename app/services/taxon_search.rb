@@ -51,7 +51,6 @@ class TaxonSearch
       top_level_taxon.filter_second_level_taxon_pages(transform, mean_log)
       @results << top_level_taxon.to_h
     end
-
   end
 
   def build_top_level_taxons
@@ -65,7 +64,11 @@ class TaxonSearch
   def calculate_mean_log(top_level_taxons)
     all_children = top_level_taxons.inject([]) { |children, top_level_taxon| children += top_level_taxon.all_children_ranked; children }
     scores = all_children.inject([]){|accum, taxon_node| accum << taxon_node.score; accum }
-    scores.median_log
+    if scores.any?
+      scores.median_log
+    else
+      0
+    end
   end
 
   def calculate_metrics

@@ -11,6 +11,9 @@
   <% @results.each_with_index do |result, index| %>
     $("#results").append("<%= j render(partial: "result.html.erb", locals: { result: result })%>");
   <% end %>
+  <% if not @results.any? %>
+    $("#results").append("<h2 style='text-align: center'>No results found</h2>");
+  <% end %>
   $("#searchResultsText").show();
-    $("#results").LoadingOverlay("hide");
+  $("#results").LoadingOverlay("hide", true);
 })();
