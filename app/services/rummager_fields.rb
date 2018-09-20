@@ -4,7 +4,8 @@ module RummagerFields
                            description
                            content_store_document_type
                            public_timestamp
-                           organisations).freeze
+                           organisations
+                           image_url).freeze
 
   FEED_SEARCH_FIELDS = %w(title
                           link

@@ -67,7 +67,7 @@ module Supergroups
       3
     end
 
-    def format_document_data(documents, data_category = "")
+    def format_document_data(documents, data_category = "", with_image_url = false)
       documents.each.with_index(1).map do |document, index|
         data = {
           link: {
@@ -86,8 +86,16 @@ module Supergroups
           data[:link][:data_attributes][:track_category] = data_module_label + data_category
         end
 
+        if with_image_url
+          data[:image] = { url: (document.image_url || default_news_image_url) }
+        end
+
         data
       end
+    end
+
+    def default_news_image_url
+      "https://assets.publishing.service.gov.uk/government/assets/placeholder.jpg"
     end
   end
 end

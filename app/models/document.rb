@@ -11,6 +11,7 @@ class Document
     :change_note,
     :format,
     :content_store_document_type,
-    :organisations
+    :organisations,
+    :image_url
   )
 end
