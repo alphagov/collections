@@ -21,10 +21,6 @@
   <%= render partial: 'promotional_features' %>
 <% end %>
 
-<% if @show.has_featured_policies? %>
-  <%= render partial: 'featured_policies' %>
-<% end %>
-
 <% if @documents.has_latest_documents_by_type? && !@organisation.is_promotional_org?  %>
   <%= render partial: 'latest_documents_by_type' %>
 <% end %>
