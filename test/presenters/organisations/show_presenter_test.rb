@@ -80,48 +80,6 @@ describe Organisations::ShowPresenter do
     assert_equal expected, @show_presenter.parent_organisations
   end
 
-  it 'formats policies correctly' do
-    content_item = ContentItem.new(organisation_with_policies)
-    organisation = Organisation.new(content_item)
-    @show_presenter = Organisations::ShowPresenter.new(organisation)
-
-    expected = {
-      items: [
-        {
-          link: {
-            text: "Waste and recycling",
-            path: "/government/policies/waste-and-recycling"
-          }
-        },
-        {
-          link: {
-            text: "See all our policies",
-            path: "/government/policies?organisations[]=attorney-generals-office"
-          }
-        }
-      ],
-      brand: "attorney-generals-office"
-    }
-
-    assert_equal expected, @show_presenter.featured_policies
-  end
-
-  it 'only displays the first 5 policies plus a see all link' do
-    content_item = ContentItem.new(organisation_with_multiple_policies)
-    organisation = Organisation.new(content_item)
-    @show_presenter = Organisations::ShowPresenter.new(organisation)
-
-    expected_last_link = {
-      link: {
-        text: "See all our policies",
-        path: "/government/policies?organisations[]=attorney-generals-office"
-      }
-    }
-
-    assert_equal expected_last_link, @show_presenter.featured_policies[:items].last
-    assert_equal 6, @show_presenter.featured_policies[:items].length
-  end
-
   it 'formats high profile groups correctly' do
     content_item = ContentItem.new(organisation_with_high_profile_groups)
     organisation = Organisation.new(content_item)
