@@ -622,16 +622,6 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     assert page.has_content?(/provides legal advice and support to the Attorney General/i)
   end
 
-  it "shows 'our policies' when it should" do
-    visit "/government/organisations/attorney-generals-office"
-    refute page.has_content?(/Our policies/i)
-
-    visit "/government/organisations/charity-commission"
-    assert page.has_content?(/Our policies/i)
-    assert page.has_css?("section#policies")
-    assert page.has_css?(".gem-c-document-list__item-title", text: "Waste and recycling")
-  end
-
   it "shows latest documents by type" do
     visit "/government/organisations/attorney-generals-office"
     assert page.has_css?(".gem-c-heading", text: "Documents")
