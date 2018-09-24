@@ -89,5 +89,24 @@ describe Organisations::ContactsPresenter do
 
       assert_equal expected, @contacts_presenter.contacts
     end
+
+    it 'does not return empty address information' do
+      content_item = ContentItem.new(organisation_with_empty_contact_details)
+      organisation = Organisation.new(content_item)
+      @empty_contacts_presenter = Organisations::ContactsPresenter.new(organisation)
+
+      expected = [
+        {
+          title: "Department for International Trade",
+          post_addresses: [nil],
+          phone_numbers: [],
+          email_addresses: [],
+          links: [],
+          description: nil
+        }
+      ]
+
+      assert_equal expected, @empty_contacts_presenter.contacts
+    end
   end
 end
