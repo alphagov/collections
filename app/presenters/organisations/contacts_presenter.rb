@@ -94,14 +94,19 @@ module Organisations
     end
 
     def contact_address(post)
-      data = ""
-      data << contact_line(post["title"])
-      data << contact_line(post["street_address"].gsub("\r\n", "<br/>"))
-      data << contact_line(post["locality"])
-      data << contact_line(post["region"])
-      data << contact_line(post["postal_code"])
-      data << contact_line(post["world_location"])
-      data = data.gsub("<br/><br/>", "<br/>")
+      compacted_addresses = post.delete_if { |_key, address_line| address_line.blank? }
+
+      if compacted_addresses
+        data = ""
+        data << contact_line(post["title"])
+        data << contact_line(post["street_address"]&.gsub("\r\n", "<br/>"))
+        data << contact_line(post["locality"])
+        data << contact_line(post["region"])
+        data << contact_line(post["postal_code"])
+        data << contact_line(post["world_location"])
+        data = data.gsub("<br/><br/>", "<br/>")
+      end
+
       data if data.length.positive?
     end
 

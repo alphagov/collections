@@ -537,6 +537,33 @@ module OrganisationHelpers
     }.with_indifferent_access
   end
 
+  def organisation_with_empty_contact_details
+    {
+      title: "Attorney General's Office",
+      base_path: "/government/organisations/attorney-generals-office",
+      details: {
+        brand: "attorney-generals-office"
+      },
+      links: {
+        ordered_contacts: [
+          {
+            title: "Department for International Trade",
+            details: {
+              title: "Department for International Trade",
+              post_addresses: [{
+                title: "",
+                street_address: " ",
+                postal_code: " ",
+                world_location: "",
+                locality: ""
+              }]
+            }
+          }
+        ]
+      }
+    }.with_indifferent_access
+  end
+
   def organisation_with_corporate_information
     {
       title: "Attorney General's Office",
