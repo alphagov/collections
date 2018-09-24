@@ -1,6 +1,10 @@
 <%= render partial: 'breadcrumb' %>
 <%= render partial: 'header' %>
 
+<%= render 'govuk_publishing_components/components/machine_readable_metadata',
+  schema: :organisation,
+  content_item: organisation.content_item.content_item_data %>
+
 <%= render "govuk_publishing_components/components/notice", {
   title: @not_live.non_live_organisation_notice
 } %>

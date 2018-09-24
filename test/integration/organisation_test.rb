@@ -4,6 +4,8 @@ class OrganisationTest < ActionDispatch::IntegrationTest
   include OrganisationHelpers
 
   before do
+    org_example = GovukSchemas::Example.find("organisation", example_name: "organisation")
+
     @content_item_no10 = {
       title: "Prime Minister's Office, 10 Downing Street",
       base_path: "/government/organisations/prime-ministers-office-10-downing-street",
@@ -461,6 +463,16 @@ class OrganisationTest < ActionDispatch::IntegrationTest
       cy[:base_path] = "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
     end
 
+    @content_item_separate_student_loans = org_example.merge(
+      base_path: "/government/organisations/student-loans-company",
+      title: "Student Loans Company",
+      organisation_govuk_status: {
+        status: "exempt",
+        url: "http://www.slc.co.uk/",
+        updated_at: nil
+      }
+    )
+
     @content_item_blank = {
       title: "An empty content item to test everything checks before trying to render things",
       base_path: "/government/organisations/civil-service-resourcing",
@@ -483,12 +495,14 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales", @content_item_wales_office)
     content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales.cy", @content_item_wales_office_cy)
     content_store_has_item("/government/organisations/civil-service-resourcing", @content_item_blank)
+    content_store_has_item("/government/organisations/student-loans-company", @content_item_separate_student_loans)
 
     stub_rummager_latest_content_requests("prime-ministers-office-10-downing-street")
     stub_rummager_latest_content_requests("attorney-generals-office")
     stub_rummager_latest_content_requests("charity-commission")
     stub_rummager_latest_content_requests("office-of-the-secretary-of-state-for-wales")
     stub_rummager_latest_content_requests("civil-service-resourcing")
+    stub_rummager_latest_content_requests("student-loans-company")
   end
 
   it "doesn't fail if the content item is missing any data" do
@@ -790,7 +804,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     refute page.has_content?(/Greater transparency across government is at the heart of our commitment to let you hold politicians and public bodies to account./i)
   end
 
-  it "has GovernmentOrganization schema.org information" do
+  it "full org pages have GovernmentOrganization schema.org information" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
 
     schema_sections = page.find_all("script[type='application/ld+json']", visible: false)
@@ -798,5 +812,15 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
     org_schema = schemas.detect { |schema| schema["@type"] == "GovernmentOrganization" }
     assert_equal org_schema["name"], "Prime Minister's Office, 10 Downing Street"
+  end
+
+  it "separate website pages have GovernmentOrganization schema.org information" do
+    visit "/government/organisations/student-loans-company"
+
+    schema_sections = page.find_all("script[type='application/ld+json']", visible: false)
+    schemas = schema_sections.map { |section| JSON.parse(section.text(:all)) }
+
+    org_schema = schemas.detect { |schema| schema["@type"] == "GovernmentOrganization" }
+    assert_equal org_schema["name"], "Student Loans Company"
   end
 end
