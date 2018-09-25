@@ -48,7 +48,6 @@ en:
       merged: "%{title} became part of <a href='%{link_href}'>%{link_text}</a> in %{updated}"
       split: "%{title} was replaced by %{links}"
       no_longer_exists: "%{title} has closed"
-    our_policies: "Our policies"
     part_of: "Part of"
     separate_website: "separate website"
     people:

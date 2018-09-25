@@ -36,35 +36,6 @@ module Organisations
       parent_org_links.to_sentence.html_safe
     end
 
-    def has_featured_policies?
-      @org.ordered_featured_policies && @org.ordered_featured_policies.length.positive?
-    end
-
-    def featured_policies
-      policies = []
-
-      @org.ordered_featured_policies.first(5).each do |policy|
-        policies << {
-          link: {
-            text: policy["title"],
-            path: policy["base_path"]
-          }
-        }
-      end
-
-      policies << {
-        link: {
-          text: "See all our policies",
-          path: "/government/policies?organisations[]=#{@org.slug}"
-        }
-      }
-
-      {
-        items: policies,
-        brand: @org.brand
-      }
-    end
-
     def high_profile_groups
       high_profile_groups = @org.ordered_high_profile_groups && @org.ordered_high_profile_groups.map do |group|
         {

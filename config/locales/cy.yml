@@ -49,7 +49,6 @@ cy:
       merged: "%{title} became part of <a href='%{link_href}'>%{link_text}</a> in %{updated}"
       split: "%{title} was replaced by %{links}"
       no_longer_exists: "%{title} has closed"
-    our_policies: "Ein polisïau"
     part_of: Rhan o
     people:
       board_members: "Ein rheolaeth"

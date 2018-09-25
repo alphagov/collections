@@ -115,10 +115,6 @@ class Organisation
     details["important_board_members"]
   end
 
-  def ordered_featured_policies
-    links["ordered_featured_policies"]
-  end
-
   def social_media_links
     details["social_media_links"]
   end
