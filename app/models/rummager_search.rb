@@ -20,7 +20,8 @@ class RummagerSearch
         change_note: result["latest_change_note"],
         format: result["format"],
         content_store_document_type: result['content_store_document_type'],
-        organisations: organisations
+        organisations: organisations,
+        image_url: result["image_url"]
       )
     end
   end

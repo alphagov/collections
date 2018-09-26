@@ -5,36 +5,28 @@
 
 <div class="grid-row">
   <div class="taxon-page__featured-item column-one-third <%= featured_item_layout_class %>" <%= "data-module=track-click" if track_click?(section[:promoted_content]) %>>
-    <img class="taxon-page__featured-image" src="<%= featured_item[:image][:url] %>" alt="<%= featured_item[:image][:alt] %>">
-    <div class="taxon-page__featured-text">
-      <%= link_to(
-        featured_item[:link].fetch(:text),
-        featured_item[:link].fetch(:path),
-        class: "taxon-page__featured-link",
-        data: featured_item[:link][:data_attributes]
-        )
-      %>
-      <div class="taxon-page__featured-metadata-wrapper">
-        <% featured_item[:metadata].each do |metadata_key, metadata_value| %>
-          <% if metadata_key.to_s.eql?("public_updated_at") %>
-            <time class="taxon-page__featured-metadata" datetime="<%= metadata_value.iso8601 %>">
-              <%= l(metadata_value, format: '%e %B %Y') %>
-            </time>
-          <% else %>
-            <p class="taxon-page__featured-metadata"><%= metadata_value %></p>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
+    <% metadata = featured_item[:metadata].map do |metadata_key, metadata_value|
+        if metadata_key.to_s.eql?("public_updated_at")
+          l(metadata_value, format: '%e %B %Y')
+        else
+          metadata_value
+        end
+      end
+    %>
+    <%= render "govuk_publishing_components/components/image_card", {
+        href: featured_item[:link].fetch(:path),
+        image_src: featured_item[:image][:url],
+        heading_text: featured_item[:link].fetch(:text),
+        metadata: metadata.delete_if { |metadatum| metadatum.blank? }.join(" - ")
+    } %>
   </div>
-
   <% if section[:documents].any? %>
     <div class="column-two-thirds" <%= "data-module=track-click" if track_click?(section[:documents]) %>>
-    <%= render 'govuk_publishing_components/components/document_list',
-      items: section[:documents],
-      margin_top: true,
-      margin_bottom: true
-    %>
+      <%= render 'govuk_publishing_components/components/document_list',
+        items: section[:documents],
+        margin_top: true,
+        margin_bottom: true
+      %>
   <% else %>
     <div class="taxon-page__featured-see-more">
   <% end %>

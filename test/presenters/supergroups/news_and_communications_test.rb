@@ -57,8 +57,7 @@ describe Supergroups::NewsAndCommunications do
       content = content_item_for_base_path('/government/tagged/content').merge(
         "details": {
           "image": {
-            "url": "an/image/path",
-            "alt_text": "some alt text"
+            "url": "an/image/path"
           }
         }
       )
@@ -91,8 +90,7 @@ describe Supergroups::NewsAndCommunications do
             document_type: 'News story'
           },
           image: {
-            url: 'an/image/path',
-            alt: 'some alt text'
+            url: 'an/image/path'
           }
         }
       ]
@@ -114,34 +112,13 @@ describe Supergroups::NewsAndCommunications do
     end
 
     it 'returns the default whitehall image if no image is present' do
-      content = content_item_for_base_path('/government/tagged/content').merge(
-        "details": {}
-      )
-
-      content_store_has_item('/government/tagged/content', content)
-
+      content_list = section_tagged_content_list('news_story')
+      content_list.each { |content| content.image_url = nil }
       MostRecentContent.any_instance
       .stubs(:fetch)
-      .returns(section_tagged_content_list('news_story'))
+      .returns(content_list)
 
       assert_equal DEFAULT_WHITEHALL_IMAGE_URL, news_and_communications_supergroup.promoted_content(taxon_id).first[:image][:url]
-    end
-
-    it 'uses empty alt text if using the default whitehall image' do
-      # The default whitehall image does not give more context/information to the user about the news item they are viewing.
-      # We therefore want to hide the image from screenreaders by setting alt_text to a blank value
-
-      content = content_item_for_base_path('/government/tagged/content').merge(
-        "details": {}
-      )
-
-      content_store_has_item('/government/tagged/content', content)
-
-      MostRecentContent.any_instance
-      .stubs(:fetch)
-      .returns(section_tagged_content_list('news_story'))
-
-      assert_equal "", news_and_communications_supergroup.promoted_content(taxon_id).first[:image][:alt]
     end
   end
 end

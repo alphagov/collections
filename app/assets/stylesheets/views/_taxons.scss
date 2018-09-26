@@ -49,29 +49,6 @@
       width: 100%;
     }
   }
-
-  .taxon-page__featured-text {
-    display: inline-block;
-    width: (2 / 3) * 100%;
-
-    @include media(tablet) {
-      width: 100%;
-    }
-  }
-
-  .taxon-page__featured-link {
-    @include bold-19;
-  }
-
-  .taxon-page__featured-metadata-wrapper {
-    @include core-16;
-    margin-top: $gutter-one-third / 2;
-
-    .taxon-page__featured-metadata {
-      display: inline-block;
-      margin-right: $gutter-two-thirds;
-    }
-  }
 }
 
 .taxon-page__featured-see-more {

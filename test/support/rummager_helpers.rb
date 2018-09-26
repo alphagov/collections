@@ -255,7 +255,8 @@ module RummagerHelpers
           public_updated_at: '2018-02-28T08:01:00.000+00:00',
           base_path: '/government/tagged/content',
           content_store_document_type: doc_type,
-          organisations: 'Tagged Content Organisation'
+          organisations: 'Tagged Content Organisation',
+          image_url: 'an/image/path'
         )
       )
     end
