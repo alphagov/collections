@@ -11,15 +11,13 @@ module Supergroups
     end
 
     def finder_link(base_path)
-      link_text = title.downcase
-
       query_string = {
         topic: base_path,
         group: name
       }.to_query
 
       {
-        text: "See all #{link_text}",
+        text: see_all_link_text,
         url: "/search/advanced?#{query_string}"
       }
     end
@@ -51,6 +49,12 @@ module Supergroups
     end
 
   private
+
+    def see_all_link_text
+      group_title = I18n.t(name, scope: :content_purpose_supergroup, default: title)
+
+      I18n.t(:see_all_of_type, scope: :taxons, type: group_title.downcase)
+    end
 
     def data_attributes(base_path, link_text, index)
       {
