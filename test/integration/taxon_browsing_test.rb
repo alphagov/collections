@@ -134,7 +134,7 @@ private
   end
 
   def and_i_can_see_the_guidance_and_regulation_section
-    assert page.has_selector?('.gem-c-heading', text: "Guidance and regulation")
+    assert page.has_selector?('.gem-c-heading', text: "Guidance")
 
     tagged_content_for_guidance_and_regulation.each do |item|
       if item['content_store_document_type'] == 'guide'
@@ -145,7 +145,7 @@ private
     end
 
     expected_link = {
-      text: "See all guidance and regulation",
+      text: "See all",
       url: "/search/advanced?" + finder_query_string("guidance_and_regulation")
     }
 
@@ -159,14 +159,14 @@ private
     end
 
     expected_link = {
-      text: "See all services",
+      text: "See all",
       url: "/search/advanced?" + finder_query_string('services')
     }
     assert page.has_link?(expected_link[:text], href: expected_link[:url])
   end
 
   def and_i_can_see_the_news_and_communications_section
-    assert page.has_selector?('.gem-c-heading', text: "News and communications")
+    assert page.has_selector?('.gem-c-heading', text: "News")
     assert page.has_selector?('.taxon-page__featured-item')
 
     tagged_content_for_news_and_communications.each do |item|
@@ -174,7 +174,7 @@ private
     end
 
     expected_link = {
-      text: "See all news and communications",
+      text: "See all",
       url: "/search/advanced?" + finder_query_string("news_and_communications")
     }
 
@@ -182,14 +182,14 @@ private
   end
 
   def and_i_can_see_the_policy_and_engagement_section
-    assert page.has_selector?('.gem-c-heading', text: "Policy and engagement")
+    assert page.has_selector?('.gem-c-heading', text: "Policy")
 
     tagged_content_for_policy_and_engagement.each do |item|
       all_other_sections_list_item_test(item)
     end
 
     expected_link = {
-      text: "See all policy and engagement",
+      text: "See all",
       url: "/search/advanced?" + finder_query_string("policy_and_engagement")
     }
 
@@ -204,7 +204,7 @@ private
     end
 
     expected_link = {
-      text: "See all transparency",
+      text: "See all",
       url: "/search/advanced?" + finder_query_string("transparency")
     }
 
@@ -212,14 +212,14 @@ private
   end
 
   def and_i_can_see_the_research_and_statistics_section
-    assert page.has_selector?('.gem-c-heading', text: "Research and statistics")
+    assert page.has_selector?('.gem-c-heading', text: "Research")
 
     tagged_content_for_research_and_statistics.each do |item|
       all_other_sections_list_item_test(item)
     end
 
     expected_link = {
-      text: "See all research and statistics",
+      text: "See all",
       url: "/search/advanced?" + finder_query_string("research_and_statistics")
     }
 

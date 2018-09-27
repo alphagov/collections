@@ -17,10 +17,7 @@ describe Supergroups::Supergroup do
     it 'returns finder link details' do
       base_path = '/base/path'
 
-      expected_details = {
-        text: 'See all supergroup name',
-        url: 'search/advanced?group=supergroup_name&topic=%2Fbase%2Fpath'
-      }
+      expected_details = 'search/advanced?group=supergroup_name&topic=%2Fbase%2Fpath'
 
       assert expected_details, supergroup.finder_link(base_path)
     end

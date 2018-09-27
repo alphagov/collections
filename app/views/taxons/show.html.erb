@@ -16,7 +16,7 @@
       <div class="grid-row">
         <div class="column-two-thirds">
           <%= render "govuk_publishing_components/components/heading", {
-            text: section[:title],
+            text: t(section[:id], scope: :content_purpose_supergroup, default: section[:title]),
             heading_level: 2,
             margin_bottom: 2
           } %>

@@ -75,6 +75,7 @@ en:
   taxons:
     organisations: "Organisations"
     sub_topics: "Explore these sub-topics"
+    see_all_of_type: "See all %{type}"
   language_names:
     en: English
     cy: Cymraeg

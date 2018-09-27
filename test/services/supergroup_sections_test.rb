@@ -25,6 +25,7 @@ describe SupergroupSections::Sections do
 
     it 'returns a list of supergroup details' do
       section_details = %i(
+        id
         title
         promoted_content
         documents
@@ -38,22 +39,22 @@ describe SupergroupSections::Sections do
       end
     end
 
-    it 'each section has a title' do
-      expected_titles = [
-        'Services',
-        'Guidance and regulation',
-        'News and communications',
-        'Policy and engagement',
-        'Transparency',
-        'Research and statistics'
-      ]
+    it 'each section has an id' do
+      expected_ids = %w(
+        services
+        guidance_and_regulation
+        news_and_communications
+        policy_and_engagement
+        transparency
+        research_and_statistics
+      )
 
-      section_titles = @sections.map { |section| section[:title] }
+      section_ids = @sections.map { |section| section[:id] }
 
-      section_titles.map do |title|
-        assert_includes expected_titles, title
+      section_ids.map do |id|
+        assert_includes expected_ids, id
       end
-      assert expected_titles, section_titles
+      assert expected_ids, section_ids
     end
 
     it 'knows if each sections should be shown or not' do
