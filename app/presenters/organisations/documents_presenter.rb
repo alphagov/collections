@@ -172,15 +172,16 @@ module Organisations
       image_size = first_featured ? 712 : 465
 
       featured.each do |news|
-        human_date = Date.parse(news["public_updated_at"]).strftime("%-d %B %Y") if news["public_updated_at"]
-        document_type = news["document_type"]
-        divider = " — " if human_date && document_type
+        date = Date.parse(news["public_updated_at"]) if news["public_updated_at"]
 
         news_stories << {
           href: news["href"],
           image_src: image_url_by_size(news["image"]["url"], image_size),
           image_alt: news["image"]["alt_text"],
-          context: "#{human_date}#{divider}#{document_type}",
+          context: {
+            date: date,
+            text: news["document_type"]
+          },
           heading_text: news["title"],
           description: news["summary"].html_safe,
           brand: org.brand,

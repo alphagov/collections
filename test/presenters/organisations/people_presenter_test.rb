@@ -21,7 +21,6 @@ describe Organisations::PeoplePresenter do
           image_alt: "Oliver Dowden CBE MP",
           description: nil,
           metadata: nil,
-          context: nil,
           heading_text: "Oliver Dowden CBE MP",
           heading_level: 0,
           extra_links_no_indent: true,
@@ -48,7 +47,9 @@ describe Organisations::PeoplePresenter do
           image_alt: "Theresa May MP",
           description: nil,
           metadata: nil,
-          context: "The Rt Hon",
+          context: {
+            text: "The Rt Hon"
+          },
           heading_text: "Theresa May MP",
           heading_level: 0,
           extra_links_no_indent: true,
@@ -77,7 +78,6 @@ describe Organisations::PeoplePresenter do
           href: "/government/people/stuart-andrew",
           description: nil,
           metadata: nil,
-          context: nil,
           heading_text: "Stuart Andrew MP",
           heading_level: 0,
           extra_links_no_indent: true,
@@ -164,7 +164,6 @@ describe Organisations::PeoplePresenter do
         href: "/government/people/jeremy-heywood",
         description: "Cabinet Secretary",
         metadata: nil,
-        context: nil,
         heading_text: "Sir Jeremy Heywood",
         heading_level: 0,
         extra_links_no_indent: true,
@@ -178,7 +177,6 @@ describe Organisations::PeoplePresenter do
         href: "/government/people/john-manzoni",
         description: "Chief Executive of the Civil Service ",
         metadata: nil,
-        context: nil,
         heading_text: "John Manzoni",
         heading_level: 0,
         extra_links_no_indent: true

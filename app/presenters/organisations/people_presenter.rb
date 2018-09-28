@@ -99,11 +99,16 @@ module Organisations
         href: person["href"],
         description: (person["role"] unless is_person_ministerial?(type)),
         metadata: person["payment_type"],
-        context: person["name_prefix"],
         heading_text: person["name"],
         heading_level: 0,
         extra_links_no_indent: true
       }
+
+      if person["name_prefix"]
+        data[:context] = {
+          text: person["name_prefix"]
+        }
+      end
 
       if is_person_ministerial?(type)
         data[:extra_links] = [{
