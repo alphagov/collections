@@ -22,7 +22,10 @@ describe Organisations::DocumentsPresenter do
         href: "/government/news/new-head-of-the-serious-fraud-office-announced",
         image_src: "https://assets.publishing.service.gov.uk/s712_jeremy.jpg",
         image_alt: "Attorney General Jeremy Wright QC MP",
-        context: "4 June 2018 — Press release",
+        context: {
+          date: Time.zone.parse("2018-06-04"),
+          text: "Press release"
+        },
         heading_text: "New head of the Serious Fraud Office announced",
         description: "Lisa Osofsky appointed new Director of the Serious Fraud Office ",
         brand: "attorney-generals-office",
@@ -37,7 +40,10 @@ describe Organisations::DocumentsPresenter do
         href: "/government/news/new-head-of-a-different-office-announced",
         image_src: "https://assets.publishing.service.gov.uk/s465_john.jpg",
         image_alt: "John Someone MP",
-        context: "4 June 2017 — Policy paper",
+        context: {
+          date: Time.zone.parse("2017-06-04"),
+          text: "Policy paper"
+        },
         heading_text: "New head of a different office announced",
         description: "John Someone appointed new Director of the Other Office ",
         brand: "attorney-generals-office",
