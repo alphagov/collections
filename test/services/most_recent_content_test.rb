@@ -66,7 +66,7 @@ describe MostRecentContent do
   end
 
   it "filters content by the requested filter_content_purpose_supergroup only" do
-    assert_includes_params(filter_content_purpose_supergroup: "news_and_communications") do
+    assert_includes_params(filter_content_purpose_supergroup: %w(news_and_communications)) do
       most_recent_content.fetch
     end
   end

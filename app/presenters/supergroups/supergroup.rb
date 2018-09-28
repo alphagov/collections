@@ -2,8 +2,9 @@ module Supergroups
   class Supergroup
     attr_reader :name
 
-    def initialize(name)
+    def initialize(name, name_alias: nil)
       @name = name
+      @name_alias = name_alias
     end
 
     def title
@@ -30,8 +31,8 @@ module Supergroups
       "taxons/sections/#{name}"
     end
 
-    def tagged_content(_taxon_id)
-      raise NotImplementedError.new
+    def tagged_content(taxon_id)
+      MostRecentContent.fetch(content_id: taxon_id, filter_content_purpose_supergroup: [@name, @name_alias])
     end
 
     def document_list(taxon_id)

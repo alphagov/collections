@@ -19,7 +19,7 @@ module Supergroups
     end
 
     def tagged_content(taxon_id)
-      @content = MostRecentContent.fetch(content_id: taxon_id, filter_content_purpose_supergroup: @name)
+      @content = super
 
       reorder_tagged_documents_to_prioritise_consultations
     end

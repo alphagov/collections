@@ -29,7 +29,7 @@ module RummagerHelpers
       filter_part_of_taxonomy_tree: Array(content_id),
       order: '-popularity',
     }
-    params[:filter_content_purpose_supergroup] = filter_content_purpose_supergroup if filter_content_purpose_supergroup.present?
+    params[:filter_content_purpose_supergroup] = Array(filter_content_purpose_supergroup)
 
     Services.rummager.stubs(:search)
     .with(params)
@@ -50,7 +50,7 @@ module RummagerHelpers
       filter_part_of_taxonomy_tree: [content_id],
       order: '-public_timestamp',
     }
-    params[:filter_content_purpose_supergroup] = filter_content_purpose_supergroup if filter_content_purpose_supergroup.present?
+    params[:filter_content_purpose_supergroup] = Array(filter_content_purpose_supergroup)
 
     Services.rummager.stubs(:search)
     .with(params)
