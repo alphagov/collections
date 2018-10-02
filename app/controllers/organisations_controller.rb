@@ -10,7 +10,7 @@ class OrganisationsController < ApplicationController
   end
 
   def show
-    @organisation = Organisation.find!("/government/organisations/#{params[:organisation_name]}#{locale}")
+    @organisation = Organisation.find!(request.path)
     setup_content_item_and_navigation_helpers(@organisation)
 
     @show = Organisations::ShowPresenter.new(@organisation)
