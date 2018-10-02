@@ -1,3 +1,4 @@
+<% if @documents.has_latest_documents? %>
 <section class="brand--<%= @organisation.brand %> brand__border-color organisation__brand-border-top organisation__margin-bottom" id="latest-documents">
   <div class="grid-row">
     <div class="column-two-thirds">
@@ -21,3 +22,4 @@
     </div>
   </div>
 </section>
+<% end %>

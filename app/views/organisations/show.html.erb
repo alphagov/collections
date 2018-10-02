@@ -1,9 +1,60 @@
-<% content_for :title, organisation.title %>
+<%= render partial: 'meta', locals: { organisation: @organisation } %>
+<%= render partial: 'breadcrumb' %>
+<%= render partial: 'header' %>
 
-<% content_for :meta_tags do %>
-  <%= tag("meta", name: "description", content: organisation.description) if organisation.description %>
-  <%= auto_discovery_link_tag(:json, api_organisation_url(organisation.slug), title: organisation.title) %>
-  <%= auto_discovery_link_tag(:atom, feed_organisation_url(organisation.slug, format: :atom), title: organisation.title) %>
+<%= render 'govuk_publishing_components/components/machine_readable_metadata',
+           schema: :organisation,
+           content_item: @organisation.content_item.content_item_data %>
+
+<%= render partial: 'featured_news' %>
+<%= render partial: 'latest_documents' %>
+
+<%= render partial: 'what_we_do' %>
+
+<% if @organisation.is_promotional_org? %>
+  <%= render partial: 'promotional_features' %>
 <% end %>
 
-<%= show_organisation(organisation) %>
+<% unless @organisation.is_promotional_org? %>
+  <%= render partial: 'latest_documents_by_type' %>
+  <% if @people.has_people? %>
+    <div id="people">
+      <% @people.all_people.each do |people_data| %>
+        <%= render partial: 'related_people', locals: {
+            people: people_data[:people],
+            title: people_data[:title],
+            brand: @organisation.brand
+        } %>
+      <% end %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render partial: 'org_contacts', locals: { contacts: @contacts } %>
+
+    <% unless @organisation.is_promotional_org? %>
+      <%= render partial: 'freedom_of_information' %>
+    <% end %>
+
+    <% if @show.high_profile_groups[:items] && !@organisation.is_promotional_org? %>
+      <section class="organisation__margin-bottom" id="high-profile-groups">
+        <%= render "govuk_publishing_components/components/heading", {
+            text: @show.high_profile_groups[:title],
+            brand: @organisation.brand,
+            border_top: 5,
+            padding: true,
+            margin_bottom: 2
+        } %>
+
+        <%= render "components/topic-list", @show.high_profile_groups %>
+      </section>
+    <% end %>
+  </div>
+  <% if @organisation.ordered_corporate_information.present? %>
+    <div class="organisation__corporate-information" id="corporate-info">
+      <%= render partial: 'corporate_information' %>
+    </div>
+  <% end %>
+</div>

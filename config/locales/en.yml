@@ -2,6 +2,7 @@ en:
   view_all: "view all"
   view_less: "view less"
   organisations:
+    administered_by: "Administered by"
     contact:
       contact_details: "Contact details"
       contact_form: "Contact Form: %{title}"

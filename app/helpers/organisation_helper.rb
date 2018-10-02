@@ -22,16 +22,6 @@ module OrganisationHelper
     child_orgs.present? ? child_orgs.count : 0
   end
 
-  def show_organisation(organisation)
-    if organisation.content_item.content_item_data["details"]["organisation_govuk_status"]["status"] == "live"
-      render partial: 'show_organisation',
-             locals: { organisation: @organisation }
-    else
-      render partial: 'separate_website',
-             locals: { organisation: @organisation }
-    end
-  end
-
   def organisation_type_name(organisation_type)
     ORGANISATION_TYPES.dig(organisation_type.to_sym, :name) || ORGANISATION_TYPES[:other][:name]
   end

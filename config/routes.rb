@@ -62,6 +62,10 @@ Rails.application.routes.draw do
       as: :api_organisation
   end
 
+  get "/courts-tribunals/:organisation_name(.:locale)",
+    to: "organisations#court",
+    as: :court
+
   constraints DocumentTypeRoutingConstraint.new('step_by_step_nav') do
     get "/:slug", to: 'step_nav#show'
   end

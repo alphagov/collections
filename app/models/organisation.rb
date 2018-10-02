@@ -5,6 +5,8 @@ class Organisation
 
   attr_reader :content_item
 
+  HMCTS_CONTENT_ID = "6f757605-ab8f-4b62-84e4-99f79cf085c2".freeze
+
   def initialize(content_item)
     @content_item = content_item
   end
@@ -46,6 +48,10 @@ class Organisation
 
   def is_sub_organisation?
     organisation_type == "sub_organisation"
+  end
+
+  def is_court_or_hmcts_tribunal?
+    organisation_type == "court" || is_hmcts_tribunal?
   end
 
   def logo
@@ -227,5 +233,11 @@ private
 
   def organisation_type
     details["organisation_type"]
+  end
+
+  def is_hmcts_tribunal?
+    organisation_type == "tribunal_ndpb" &&
+      links["ordered_parent_organisations"] &&
+      links["ordered_parent_organisations"].detect { |org| org["content_id"] == HMCTS_CONTENT_ID }
   end
 end
