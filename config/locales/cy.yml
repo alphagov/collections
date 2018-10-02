@@ -13,10 +13,14 @@ cy:
     corporate_information: "Gwybodaeth gorfforaethol"
     document_types:
       documents: "Dogfennau"
-      announcements: "Ein cyhoeddiadau"
-      consultations: "Ein ymgynghoriadau"
-      publications: "Ein cyhoeddiadau"
-      statistics: "Ein hystadegau"
+      announcements: "cyhoeddiadau"
+      consultations: "ymgynghoriadau"
+      publications: "cyhoeddiadau"
+      statistics: "hystadegau"
+      our_announcements: "Ein cyhoeddiadau"
+      our_consultations: "Ein ymgynghoriadau"
+      our_publications: "Ein cyhoeddiadau"
+      our_statistics: "Ein hystadegau"
       see_all_documents: "Gweld ein holl %{type}"
     foi:
       make_an_foi_request: Gwneud cais DRhG

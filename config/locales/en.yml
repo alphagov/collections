@@ -11,10 +11,14 @@ en:
     corporate_information: "Corporate information"
     document_types:
       documents: "Documents"
-      announcements: "Our announcements"
-      consultations: "Our consultations"
-      publications: "Our publications"
-      statistics: "Our statistics"
+      announcements: "announcements"
+      consultations: "consultations"
+      publications: "publications"
+      statistics: "statistics"
+      our_announcements: "Our announcements"
+      our_consultations: "Our consultations"
+      our_publications: "Our publications"
+      our_statistics: "Our statistics"
       see_all_documents: "See all %{type}"
     featured_news: "What %{title} is doing"
     foi:
