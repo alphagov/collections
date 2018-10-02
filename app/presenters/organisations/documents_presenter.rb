@@ -97,16 +97,17 @@ module Organisations
       all_documents.each do |document_group|
         document_group.each do |document_type, documents|
           if documents[:items].length.positive?
+            translated_document_type = I18n.t("organisations.document_types.#{document_type}")
             documents[:items].push(
               link: {
-                text: I18n.t('organisations.document_types.see_all_documents', type: document_type),
+                text: I18n.t('organisations.document_types.see_all_documents', type: translated_document_type),
                 path: "/government/#{document_type}?departments%5B%5D=#{@org.slug}"
               }
             )
 
             formatted_documents << {
               documents: documents,
-              title: I18n.t('organisations.document_types.' + document_type.to_s),
+              title: I18n.t("organisations.document_types.our_#{document_type}"),
             }
           end
         end
