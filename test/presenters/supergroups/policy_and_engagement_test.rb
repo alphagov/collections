@@ -192,6 +192,14 @@ describe Supergroups::PolicyAndEngagement do
     end
   end
 
+  describe "document types" do
+    it "returns appropriate things" do
+      document_types = GovukDocumentTypes.supergroup_document_types("policy_and_engagement")
+
+      assert_includes document_types, "open_consultation"
+    end
+  end
+
 private
 
   def expected_results(document_types, promoted_content: false)

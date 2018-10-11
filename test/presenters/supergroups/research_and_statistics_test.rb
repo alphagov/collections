@@ -37,4 +37,13 @@ describe Supergroups::ResearchAndStatistics do
       assert_equal expected, research_and_statistics_supergroup.document_list(taxon_id)
     end
   end
+
+
+  describe "document types" do
+    it "returns appropriate things" do
+      document_types = GovukDocumentTypes.supergroup_document_types("research_and_statistics")
+
+      assert_includes document_types, "statistics"
+    end
+  end
 end

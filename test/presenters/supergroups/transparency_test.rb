@@ -37,4 +37,12 @@ describe Supergroups::Transparency do
       assert_equal expected, transparency_supergroup.document_list(taxon_id)
     end
   end
+
+  describe "document types" do
+    it "returns appropriate things" do
+      document_types = GovukDocumentTypes.supergroup_document_types("transparency")
+
+      assert_includes document_types, "transparency"
+    end
+  end
 end

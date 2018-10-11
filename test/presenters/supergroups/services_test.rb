@@ -59,4 +59,12 @@ describe Supergroups::Services do
       assert_equal expected, service_supergroup.promoted_content(taxon_id)
     end
   end
+
+  describe "document types" do
+    it "returns appropriate things" do
+      document_types = GovukDocumentTypes.supergroup_document_types("services")
+
+      assert_includes document_types, "transaction"
+    end
+  end
 end
