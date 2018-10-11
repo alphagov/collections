@@ -101,5 +101,9 @@ module Supergroups
     def default_news_image_url
       "https://assets.publishing.service.gov.uk/government/assets/placeholder.jpg"
     end
+
+    def document_types
+      GovukDocumentTypes.supergroup_document_types(name)
+    end
   end
 end

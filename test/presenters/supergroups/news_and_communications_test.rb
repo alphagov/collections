@@ -121,4 +121,12 @@ describe Supergroups::NewsAndCommunications do
       assert_equal DEFAULT_WHITEHALL_IMAGE_URL, news_and_communications_supergroup.promoted_content(taxon_id).first[:image][:url]
     end
   end
+
+  describe "document types" do
+    it "returns appropriate things" do
+      document_types = GovukDocumentTypes.supergroup_document_types("news_and_communications")
+
+      assert_includes document_types, "speech"
+    end
+  end
 end

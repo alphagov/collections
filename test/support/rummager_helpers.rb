@@ -19,7 +19,14 @@ module RummagerHelpers
       )
   end
 
-  def stub_most_popular_content_for_taxon(content_id, results, filter_content_purpose_supergroup: 'guidance_and_regulation')
+  def stub_document_types_for_supergroup(supergroup)
+    GovukDocumentTypes.stubs(:supergroup_document_types)
+      .with(supergroup)
+      .returns(supergroup)
+  end
+
+  def stub_most_popular_content_for_taxon(content_id, results,
+      filter_content_store_document_type: %w(detailed_guide manual))
     fields = RummagerFields::TAXON_SEARCH_FIELDS
 
     params = {
@@ -28,8 +35,8 @@ module RummagerHelpers
       fields: fields,
       filter_part_of_taxonomy_tree: Array(content_id),
       order: '-popularity',
+      filter_content_store_document_type: filter_content_store_document_type,
     }
-    params[:filter_content_purpose_supergroup] = filter_content_purpose_supergroup if filter_content_purpose_supergroup.present?
 
     Services.rummager.stubs(:search)
     .with(params)
@@ -40,7 +47,8 @@ module RummagerHelpers
     )
   end
 
-  def stub_most_recent_content_for_taxon(content_id, results, filter_content_purpose_supergroup: 'news_and_communication')
+  def stub_most_recent_content_for_taxon(content_id, results,
+      filter_content_store_document_type: %w(detailed_guide guidance))
     fields = RummagerFields::TAXON_SEARCH_FIELDS
 
     params = {
@@ -49,8 +57,8 @@ module RummagerHelpers
       fields: fields,
       filter_part_of_taxonomy_tree: [content_id],
       order: '-public_timestamp',
+      filter_content_store_document_type: filter_content_store_document_type,
     }
-    params[:filter_content_purpose_supergroup] = filter_content_purpose_supergroup if filter_content_purpose_supergroup.present?
 
     Services.rummager.stubs(:search)
     .with(params)

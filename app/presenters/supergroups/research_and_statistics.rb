@@ -7,7 +7,7 @@ module Supergroups
     end
 
     def tagged_content(taxon_id)
-      @content = MostRecentContent.fetch(content_id: taxon_id, filter_content_purpose_supergroup: @name)
+      @content = MostRecentContent.fetch(content_id: taxon_id, filter_content_store_document_type: document_types)
     end
 
     def promoted_content_count

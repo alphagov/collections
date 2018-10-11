@@ -6,7 +6,7 @@ describe MostRecentContent do
   def most_recent_content
     @most_recent_content ||= MostRecentContent.new(
       content_id: taxon_content_id,
-      filter_content_purpose_supergroup: "news_and_communications",
+      filter_content_store_document_type: %w(authored_article correspondence),
     )
   end
 
@@ -65,8 +65,8 @@ describe MostRecentContent do
     end
   end
 
-  it "filters content by the requested filter_content_purpose_supergroup only" do
-    assert_includes_params(filter_content_purpose_supergroup: "news_and_communications") do
+  it "filters content by the requested document types only" do
+    assert_includes_params(filter_content_store_document_type: %w(authored_article correspondence)) do
       most_recent_content.fetch
     end
   end

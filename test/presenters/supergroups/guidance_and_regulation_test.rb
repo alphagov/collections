@@ -102,4 +102,12 @@ describe Supergroups::GuidanceAndRegulation do
       assert_equal expected, guidance_and_regulation_supergroup.promoted_content(taxon_id)
     end
   end
+
+  describe "document types" do
+    it "returns appropriate things" do
+      document_types = GovukDocumentTypes.supergroup_document_types("guidance_and_regulation")
+
+      assert_includes document_types, "guidance"
+    end
+  end
 end
