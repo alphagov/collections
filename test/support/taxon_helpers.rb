@@ -40,6 +40,66 @@ module TaxonHelpers
     fetch_and_validate_taxon(:travelling_to_the_usa, params)
   end
 
+  def taxon
+    GovukSchemas::Example.find('taxon', example_name: 'taxon').tap do |content_item|
+      content_item["phase"] = "live"
+    end
+  end
+
+  def tagged_content_for_services
+    @tagged_content_for_services ||= generate_search_results(2, "services")
+  end
+
+  def tagged_content_for_guidance_and_regulation
+    @tagged_content_for_guidance_and_regulation ||= generate_search_results(2, 'guidance_and_regulation')
+  end
+
+  def tagged_content_for_news_and_communications
+    @tagged_content_for_news_and_communications ||= generate_search_results(2, "news_and_communications")
+  end
+
+  def tagged_content_for_policy_and_engagement
+    @tagged_content_for_policy_and_engagement ||= generate_search_results(2, "policy_and_engagement")
+  end
+
+  def tagged_content_for_transparency
+    @tagged_content_for_transparency ||= generate_search_results(2, "transparency")
+  end
+
+  def tagged_content_for_research_and_statistics
+    @tagged_content_for_research_and_statistics ||= generate_search_results(2, "research_and_statistics")
+  end
+
+  def tagged_organisations
+    [
+        tagged_organisation,
+        tagged_organisation_with_logo
+    ]
+  end
+
+  def tagged_organisation
+    {
+        'value' => {
+            'title' => 'Organisation without logo',
+            'link' => '/government/organisations/organisation-without-logo',
+            'organisation_state' => 'live'
+        }
+    }
+  end
+
+  def tagged_organisation_with_logo
+    {
+        'value' => {
+            'title' => 'Organisation with logo',
+            'link' => '/government/organisations/organisation-with-logo',
+            'organisation_state' => 'live',
+            'organisation_brand' => 'org-brand',
+            'organisation_crest' => 'single-identity',
+            'logo_formatted_title' => "organisation-with-logo"
+        }
+    }
+  end
+
 private
 
   def fetch_and_validate_taxon(basename, params = {})

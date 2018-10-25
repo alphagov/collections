@@ -12,6 +12,7 @@
   <%= yield :meta_section %>
   <%= render 'govuk_publishing_components/components/meta_tags', content_item: @content_item %>
   <%= stylesheet_link_tag "print.css", :media => "print", integrity: true, crossorigin: 'anonymous' %>
+  <%= taxon_page_variant.analytics_meta_tag.html_safe if is_testable_taxon_page? %>
 </head>
 
 <body <% if content_for(:is_taxon_page) %>class="full-width"<% end %>>
