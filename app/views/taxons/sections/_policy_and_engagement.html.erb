@@ -1,9 +1,6 @@
 <%= render 'govuk_publishing_components/components/taxonomy_list',
-  highlight_box: {
-    items: section[:promoted_content]
-  },
   document_list: {
-    items: section[:documents]
+    items: section[:promoted_content] + section[:documents]
   }
 %>
 

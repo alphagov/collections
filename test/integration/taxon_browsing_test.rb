@@ -1,7 +1,9 @@
 require 'integration_test_helper'
+require_relative '../support/taxon_helpers'
 
 class TaxonBrowsingTest < ActionDispatch::IntegrationTest
   include RummagerHelpers
+  include TaxonHelpers
 
   it 'renders a taxon page for a live taxon' do
     given_there_is_a_taxon_with_children
@@ -144,7 +146,7 @@ private
 
     tagged_content_for_guidance_and_regulation.each do |item|
       if item['content_store_document_type'] == 'guide'
-        guide_document_list_item_test(item)
+        mainstream_content_list_item_test(item)
       else
         all_other_sections_list_item_test(item)
       end
@@ -161,7 +163,7 @@ private
   def and_i_can_see_the_services_section
     assert page.has_selector?('.gem-c-heading', text: "Services")
     tagged_content_for_services.each do |item|
-      services_section_list_item_test(item)
+      mainstream_content_list_item_test(item)
     end
 
     expected_link = {
@@ -232,23 +234,16 @@ private
     assert page.has_link?(expected_link[:text], href: expected_link[:url])
   end
 
-  def services_section_list_item_test(item)
-    assert page.has_link?(item["title"], href: item["link"])
-    assert page.has_content?(item["description"])
-    assert page.has_no_content?(expected_organisations(item))
-  end
-
-  def guide_document_list_item_test(item)
-    assert page.has_link?(item["title"], href: item["link"])
-    assert page.has_content?(item["description"])
-    assert page.has_content?(item["content_store_document_type"].humanize)
+  def mainstream_content_list_item_test(item)
+    assert page.has_selector?('.gem-c-document-list__item-title[href="' + item["link"] + '"]', text: item["title"])
+    assert page.has_selector?('.gem-c-document-list__item-description', text: item["description"])
     assert page.has_no_content?(expected_organisations(item))
   end
 
   def all_other_sections_list_item_test(item)
-    assert page.has_link?(item["title"], href: item["link"])
-    assert page.has_content?(item["public_updated_at"])
-    assert page.has_content?(item["content_store_document_type"].humanize)
+    assert page.has_selector?('.gem-c-document-list__item-title[href="' + item["link"] + '"]', text: item["title"])
+    assert page.has_selector?('.gem-c-document-list__attribute time', text: item["public_updated_at"])
+    assert page.has_selector?('.gem-c-document-list__attribute', text: item["content_store_document_type"].humanize)
     assert page.has_content?(expected_organisations(item))
   end
 
@@ -307,34 +302,10 @@ private
     generate_search_results(5)
   end
 
-  def tagged_organisations
-    [
-      tagged_organisation,
-      tagged_organisation_with_logo
-    ]
-  end
-
-  def tagged_organisation
-    {
-      'value' => {
-        'title' => 'Organisation without logo',
-        'link' => '/government/organisations/organisation-without-logo',
-        'organisation_state' => 'live'
-      }
-    }
-  end
-
-  def tagged_organisation_with_logo
-    {
-      'value' => {
-        'title' => 'Organisation with logo',
-        'link' => '/government/organisations/organisation-with-logo',
-        'organisation_state' => 'live',
-        'organisation_brand' => 'org-brand',
-        'organisation_crest' => 'single-identity',
-        'logo_formatted_title' => "organisation-with-logo"
-      }
-    }
+  def taxon
+    GovukSchemas::Example.find('taxon', example_name: 'taxon').tap do |content_item|
+      content_item["phase"] = "live"
+    end
   end
 
   def tagged_content_for_services
@@ -359,6 +330,36 @@ private
 
   def tagged_content_for_research_and_statistics
     @tagged_content_for_research_and_statistics ||= generate_search_results(2, "research_and_statistics")
+  end
+
+  def tagged_organisations
+    [
+        tagged_organisation,
+        tagged_organisation_with_logo
+    ]
+  end
+
+  def tagged_organisation
+    {
+        'value' => {
+            'title' => 'Organisation without logo',
+            'link' => '/government/organisations/organisation-without-logo',
+            'organisation_state' => 'live'
+        }
+    }
+  end
+
+  def tagged_organisation_with_logo
+    {
+        'value' => {
+            'title' => 'Organisation with logo',
+            'link' => '/government/organisations/organisation-with-logo',
+            'organisation_state' => 'live',
+            'organisation_brand' => 'org-brand',
+            'organisation_crest' => 'single-identity',
+            'logo_formatted_title' => "organisation-with-logo"
+        }
+    }
   end
 
   def finder_query_string(supergroup)

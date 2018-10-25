@@ -35,13 +35,9 @@ module Supergroups
     end
 
     def document_list(taxon_id)
-      items = tagged_content(taxon_id).drop(promoted_content_count)
+      items = tagged_content(taxon_id)
 
       format_document_data(items)
-    end
-
-    def promoted_content(*)
-      []
     end
 
     def data_module_label
@@ -65,10 +61,6 @@ module Supergroups
           dimension29: link_text
         }
       }
-    end
-
-    def promoted_content_count(*)
-      3
     end
 
     def format_document_data(documents, data_category = "", with_image_url = false)
