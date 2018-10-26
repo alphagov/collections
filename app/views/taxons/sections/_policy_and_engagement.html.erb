@@ -1,6 +1,6 @@
 <%= render 'govuk_publishing_components/components/taxonomy_list',
   document_list: {
-    items: section[:promoted_content] + section[:documents]
+    items: section[:promoted_content].concat(section[:documents])
   }
 %>
 
