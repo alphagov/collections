@@ -4,6 +4,7 @@ require_relative '../support/taxon_helpers'
 class TaxonBrowsingTest < ActionDispatch::IntegrationTest
   include RummagerHelpers
   include TaxonHelpers
+  include GovukAbTesting::MinitestHelpers
 
   it 'renders a taxon page for a live taxon' do
     given_there_is_a_taxon_with_children
@@ -20,6 +21,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_the_research_and_statistics_section
     and_i_can_see_the_organisations_section
     and_i_can_see_the_sub_topics_grid
+    and_i_can_see_the_in_page_nav
   end
 
   it 'renders a taxon page for a draft taxon' do
@@ -279,6 +281,20 @@ private
 
     child_taxons.each do |child_taxon|
       assert page.has_css?("h3.taxon-page__grid-heading", text: child_taxon['title'])
+      assert page.has_link?(child_taxon['title'], href: child_taxon['base_path'])
+    end
+  end
+
+  def and_i_can_see_the_in_page_nav
+    GovukAbTesting::RequestedVariant.any_instance.stubs(:variant_name).returns("C")
+    visit base_path
+
+    assert page.has_selector?('#taxon-sub-topics')
+
+    child_taxons = @content_item["links"]["child_taxons"]
+
+    child_taxons.each do |child_taxon|
+      assert page.has_css?(".gem-c-document-list__item-title", text: child_taxon['title'])
       assert page.has_link?(child_taxon['title'], href: child_taxon['base_path'])
     end
   end
