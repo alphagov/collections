@@ -78,7 +78,7 @@ en:
     what_we_do: "What %{title} does"
   taxons:
     organisations: "Organisations"
-    sub_topics: "Explore these sub-topics"
+    sub_topics: "Sub-topics"
     see_all_of_type: "See all %{type}"
   language_names:
     en: English
