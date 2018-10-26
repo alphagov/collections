@@ -4,8 +4,9 @@
 %>
 
 <div class="grid-row">
-  <div class="taxon-page__featured-item column-one-third <%= featured_item_layout_class %>" <%= "data-module=track-click" if track_click?(section[:promoted_content]) %>>
+  <div class="taxon-page__featured-item <%= featured_item_layout_class %>" <%= "data-module=track-click" if track_click?(section[:promoted_content]) %>>
     <%= render "govuk_publishing_components/components/image_card", {
+        large: true,
         href: featured_item[:link].fetch(:path),
         image_src: featured_item[:image][:url],
         heading_text: featured_item[:link].fetch(:text),
@@ -17,7 +18,7 @@
     } %>
   </div>
   <% if section[:documents].any? %>
-    <div class="column-two-thirds" <%= "data-module=track-click" if track_click?(section[:documents]) %>>
+    <div <%= "data-module=track-click" if track_click?(section[:documents]) %>>
       <%= render 'govuk_publishing_components/components/document_list',
         items: section[:documents],
         margin_top: true,
