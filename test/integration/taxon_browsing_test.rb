@@ -37,7 +37,22 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     then_there_should_be_an_error
   end
 
+  %w(A B C D E).each do |variant|
+    it "has tracking on see all links on variant #{variant}" do
+      given_there_is_a_taxon_with_children
+      and_the_taxon_is_live
+      and_the_taxon_has_tagged_content
+      when_i_visit_that_taxon_with_variant(variant)
+      see_all_links_have_tracking_data
+    end
+  end
+
 private
+
+  def when_i_visit_that_taxon_with_variant(variant)
+    GovukAbTesting::RequestedVariant.any_instance.stubs(:variant_name).returns(variant)
+    visit base_path
+  end
 
   def given_there_is_a_thing_that_is_not_a_taxon
     thing = {
@@ -276,6 +291,15 @@ private
       content,
       "The content of the robots meta tag should be 'noindex'"
     )
+  end
+
+  def see_all_links_have_tracking_data
+    ['services', 'guidance and regulation', 'news and communications',
+     'research and statistics', 'policy papers and consultations',
+     'transparency and freedom of information releases'].each do |section|
+      assert page.has_css?("a[data-track-category='SeeAllLinkClicked']", text: "See all #{section}")
+      assert page.has_css?("a[data-track-action=\"/foo\"]", text: "See all #{section}")
+    end
   end
 
   def base_path

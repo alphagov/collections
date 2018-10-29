@@ -18,7 +18,8 @@ module Supergroups
 
       {
         text: see_all_link_text,
-        url: "/search/advanced?#{query_string}"
+        url: "/search/advanced?#{query_string}",
+        data: see_all_link_data_attributes(base_path)
       }
     end
 
@@ -50,6 +51,15 @@ module Supergroups
       group_title = I18n.t(name, scope: :content_purpose_supergroup, default: title)
 
       I18n.t(:see_all_of_type, scope: :taxons, type: group_title.downcase)
+    end
+
+    def see_all_link_data_attributes(base_path)
+      {
+        track_category: "SeeAllLinkClicked",
+        track_action: base_path,
+        track_label: name,
+        module: "track-click"
+      }
     end
 
     def data_attributes(base_path, link_text, index)
