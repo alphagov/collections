@@ -10,7 +10,7 @@ describe Supergroups::GuidanceAndRegulation do
     it 'returns a document list for the guidance and regulation supergroup' do
       MostPopularContent.any_instance
         .stubs(:fetch)
-        .returns(section_tagged_content_list('guidance', 4))
+        .returns(section_tagged_content_list('guidance', 1))
 
       expected = [
         {
@@ -40,7 +40,7 @@ describe Supergroups::GuidanceAndRegulation do
     it 'return a document list for guides' do
       MostPopularContent.any_instance
         .stubs(:fetch)
-        .returns(section_tagged_content_list('guide', 4))
+        .returns(section_tagged_content_list('guide', 1))
 
       expected = [
         {
@@ -68,38 +68,6 @@ describe Supergroups::GuidanceAndRegulation do
 
       assert_equal expected, actual
       assert_equal 1, actual.count
-    end
-  end
-
-  describe '#promoted_content' do
-    it 'returns promoted content for the guidance and regulation supergroup' do
-      MostPopularContent.any_instance
-        .stubs(:fetch)
-        .returns(section_tagged_content_list('guidance'))
-
-      expected = [
-        {
-          link: {
-            text: 'Tagged Content Title',
-            path: '/government/tagged/content',
-            data_attributes: {
-              track_category: "guidanceAndRegulationHighlightBoxClicked",
-              track_action: 1,
-              track_label: '/government/tagged/content',
-              track_options: {
-                dimension29: 'Tagged Content Title'
-              }
-            }
-          },
-          metadata: {
-            public_updated_at: '2018-02-28T08:01:00.000+00:00',
-            organisations: 'Tagged Content Organisation',
-            document_type: 'Guidance'
-          }
-        }
-      ]
-
-      assert_equal expected, guidance_and_regulation_supergroup.promoted_content(taxon_id)
     end
   end
 
