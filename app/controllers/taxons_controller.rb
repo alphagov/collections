@@ -3,7 +3,10 @@ class TaxonsController < ApplicationController
 
   def show
     setup_content_item_and_navigation_helpers(taxon)
-    render "show_#{taxon_page_variant.variant_name.downcase}", locals: {
+
+    variant = taxon_page_variant.variant_name.downcase
+
+    render "show_#{variant}", locals: {
       presented_taxon: presented_taxon
     }
   end

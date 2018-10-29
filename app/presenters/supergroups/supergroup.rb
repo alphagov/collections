@@ -50,7 +50,7 @@ module Supergroups
     def see_all_link_text
       group_title = I18n.t(name, scope: :content_purpose_supergroup, default: title)
 
-      I18n.t(:see_all_of_type, scope: :taxons, type: group_title.downcase)
+      I18n.t(:see_all_in_topic, scope: :taxons, type: group_title.downcase)
     end
 
     def see_all_link_data_attributes(base_path)

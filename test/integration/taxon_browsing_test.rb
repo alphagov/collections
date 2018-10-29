@@ -15,8 +15,8 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_the_services_section
     and_i_can_see_the_guidance_and_regulation_section
     and_i_can_see_the_news_and_communications_section
-    and_i_can_see_the_policy_and_engagement_section
-    and_i_can_see_the_transparency_section
+    and_i_can_see_the_policy_papers_and_consulations_section
+    and_i_can_see_the_transparency_and_foi_releases_section
     and_i_can_see_the_research_and_statistics_section
     and_i_can_see_the_organisations_section
     and_i_can_see_the_sub_topics_grid
@@ -168,7 +168,7 @@ private
     end
 
     expected_link = {
-      text: "See all",
+      text: "See more guidance and regulation in this topic",
       url: "/search/advanced?" + finder_query_string("guidance_and_regulation")
     }
 
@@ -182,7 +182,7 @@ private
     end
 
     expected_link = {
-      text: "See all",
+      text: "See more services in this topic",
       url: "/search/advanced?" + finder_query_string('services')
     }
     assert page.has_link?(expected_link[:text], href: expected_link[:url])
@@ -197,14 +197,14 @@ private
     end
 
     expected_link = {
-      text: "See all",
+      text: "See more news and communications in this topic",
       url: "/search/advanced?" + finder_query_string("news_and_communications")
     }
 
     assert page.has_link?(expected_link[:text], href: expected_link[:url])
   end
 
-  def and_i_can_see_the_policy_and_engagement_section
+  def and_i_can_see_the_policy_papers_and_consulations_section
     assert page.has_selector?('.gem-c-heading', text: "Policy")
 
     tagged_content_for_policy_and_engagement.each do |item|
@@ -212,14 +212,14 @@ private
     end
 
     expected_link = {
-      text: "See all",
+      text: "See more policy papers and consultations in this topic",
       url: "/search/advanced?" + finder_query_string("policy_and_engagement")
     }
 
     assert page.has_link?(expected_link[:text], href: expected_link[:url])
   end
 
-  def and_i_can_see_the_transparency_section
+  def and_i_can_see_the_transparency_and_foi_releases_section
     assert page.has_selector?('.gem-c-heading', text: "Transparency")
 
     tagged_content_for_transparency.each do |item|
@@ -227,7 +227,7 @@ private
     end
 
     expected_link = {
-      text: "See all",
+      text: "See more transparency and freedom of information releases in this topic",
       url: "/search/advanced?" + finder_query_string("transparency")
     }
 
@@ -242,7 +242,7 @@ private
     end
 
     expected_link = {
-      text: "See all",
+      text: "See more research and statistics in this topic",
       url: "/search/advanced?" + finder_query_string("research_and_statistics")
     }
 
@@ -294,11 +294,13 @@ private
   end
 
   def see_all_links_have_tracking_data
-    ['services', 'guidance and regulation', 'news and communications',
-     'research and statistics', 'policy papers and consultations',
-     'transparency and freedom of information releases'].each do |section|
-      assert page.has_css?("a[data-track-category='SeeAllLinkClicked']", text: "See all #{section}")
-      assert page.has_css?("a[data-track-action=\"/foo\"]", text: "See all #{section}")
+    [
+      'services', 'guidance and regulation', 'news and communications',
+      'research and statistics', 'policy papers and consultations',
+      'transparency and freedom of information releases'
+    ].each do |section|
+      assert page.has_css?("a[data-track-category='SeeAllLinkClicked']", text: "See more #{section} in this topic")
+      assert page.has_css?("a[data-track-action=\"/foo\"]", text: "See more #{section} in this topic")
     end
   end
 
