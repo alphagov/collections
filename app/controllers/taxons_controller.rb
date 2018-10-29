@@ -1,7 +1,9 @@
 class TaxonsController < ApplicationController
+  include TaxonPagesTestable
+
   def show
     setup_content_item_and_navigation_helpers(taxon)
-    render :show, locals: {
+    render "show_#{taxon_page_variant.variant_name.downcase}", locals: {
       presented_taxon: presented_taxon
     }
   end
