@@ -258,12 +258,12 @@ private
   end
 
   def and_i_can_see_the_sub_topics_grid
-    assert page.has_selector?('nav.taxon-page__grid')
+    assert page.has_selector?('#taxon-sub-topics')
 
     child_taxons = @content_item["links"]["child_taxons"]
 
     child_taxons.each do |child_taxon|
-      assert page.has_css?("h3.taxon-page__grid-heading", text: child_taxon['title'])
+      assert page.has_css?(".gem-c-document-list__item-title", text: child_taxon['title'])
       assert page.has_link?(child_taxon['title'], href: child_taxon['base_path'])
     end
   end
