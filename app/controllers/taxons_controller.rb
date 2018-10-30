@@ -4,7 +4,7 @@ class TaxonsController < ApplicationController
   def show
     setup_content_item_and_navigation_helpers(taxon)
 
-    render :show, locals: {
+    render "show_#{taxon_page_variant.variant_name.downcase}", locals: {
       presented_taxon: presented_taxon,
       presentable_section_items: presentable_section_items
     }
@@ -21,19 +21,19 @@ private
   end
 
   def presentable_section_items
-    section_items = @presented_taxon.sections.select { |section| section[:show_section] }.map do |section|
+    @presentable_section_items = @presented_taxon.sections.select { |section| section[:show_section] }.map do |section|
       {
           href: "##{section[:id]}",
           text: t(section[:id], scope: :content_purpose_supergroup, default: section[:title])
       }
     end
 
-    section_items << { href: "#organisations", text: t('taxons.organisations') }
+    @presentable_section_items << { href: "#organisations", text: t('taxons.organisations') }
 
     if presented_taxon.show_subtopic_grid?
-      section_items << { href: "#sub-topics", text: t('taxons.sub_topics') }
+      @presentable_section_items << { href: "#sub-topics", text: t('taxons.sub_topics') }
     end
 
-    section_items
+    @presentable_section_items
   end
 end
