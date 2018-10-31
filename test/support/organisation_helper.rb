@@ -706,7 +706,7 @@ module OrganisationHelpers
     visit content["base_path"]
   end
 
-  def i_see_breadcrumbs
+  def i_see_the_current_page_breadcrumb
     assert page.has_css?(".gem-c-breadcrumbs", text: @title)
   end
 
