@@ -19,7 +19,7 @@ module Supergroups
       {
         text: see_all_link_text,
         url: "/search/advanced?#{query_string}",
-        data: see_all_link_data_attributes(base_path)
+        data: see_all_link_data_attributes(base_path, name)
       }
     end
 
@@ -53,12 +53,12 @@ module Supergroups
       I18n.t(:see_all_in_topic, scope: :taxons, type: group_title.downcase)
     end
 
-    def see_all_link_data_attributes(base_path)
+    def see_all_link_data_attributes(base_path, name)
       {
         track_category: "SeeAllLinkClicked",
         track_action: base_path,
         track_label: name,
-        module: "track-click"
+        module: ("track-click" unless name.eql?('news_and_communications'))
       }
     end
 
