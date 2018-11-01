@@ -1,3 +1,13 @@
+.content-list__sticky {
+  @include media (tablet) {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+}
+
+
+
 .taxon-feedback-wrapper {
   background-color: $grey-4;
 }

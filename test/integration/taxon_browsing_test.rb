@@ -21,6 +21,13 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_the_research_and_statistics_section
     and_i_can_see_the_organisations_section
     and_i_can_see_the_sub_topics_grid
+  end
+
+  it 'renders an in-page nav in variant C' do
+    given_there_is_a_taxon_with_children
+    and_the_taxon_is_live
+    and_the_taxon_has_tagged_content
+    when_i_visit_that_taxon_with_variant("C")
     and_i_can_see_the_in_page_nav
   end
 
@@ -286,17 +293,15 @@ private
   end
 
   def and_i_can_see_the_in_page_nav
-    GovukAbTesting::RequestedVariant.any_instance.stubs(:variant_name).returns("C")
-    visit base_path
-
-    assert page.has_selector?('#taxon-sub-topics')
-
-    child_taxons = @content_item["links"]["child_taxons"]
-
-    child_taxons.each do |child_taxon|
-      assert page.has_css?(".gem-c-document-list__item-title", text: child_taxon['title'])
-      assert page.has_link?(child_taxon['title'], href: child_taxon['base_path'])
-    end
+    assert page.has_selector?('.gem-c-contents-list__list')
+    assert page.has_selector?('.gem-c-contents-list__link', text: "Services")
+    assert page.has_selector?('.gem-c-contents-list__link', text: "Guidance and regulation")
+    assert page.has_selector?('.gem-c-contents-list__link', text: "News and communications")
+    assert page.has_selector?('.gem-c-contents-list__link', text: "Research and statistics")
+    assert page.has_selector?('.gem-c-contents-list__link', text: "Policy papers and consultations")
+    assert page.has_selector?('.gem-c-contents-list__link', text: "Transparency and freedom of information releases")
+    assert page.has_selector?('.gem-c-contents-list__link', text: "Organisations")
+    assert page.has_selector?('.gem-c-contents-list__link', text: "Explore these sub-topics")
   end
 
   def then_page_has_meta_robots

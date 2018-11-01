@@ -2,10 +2,10 @@
 <% content_for :is_taxon_with_subtopics, presented_taxon.show_subtopic_grid? %>
 <%=
   render(
-      partial: 'common',
-      locals: {
-          presented_taxon: presented_taxon
-      }
+    partial: 'common',
+    locals: {
+      presented_taxon: presented_taxon
+    }
   )
 %>
 
@@ -16,16 +16,16 @@
         <div class="grid-row">
           <div class="column-two-thirds">
             <%= render "govuk_publishing_components/components/heading", {
-                text: t(section[:id], scope: :content_purpose_supergroup, default: section[:title]),
-                heading_level: 2,
-                margin_bottom: 2
+              text: t(section[:id], scope: :content_purpose_supergroup, default: section[:title]),
+              heading_level: 2,
+              margin_bottom: 2
             } %>
           </div>
         </div>
         <%= render(
-                partial: section[:partial_template],
-                locals: { presented_taxon: presented_taxon, section: section }
-            )
+          partial: section[:partial_template],
+          locals: { presented_taxon: presented_taxon, section: section }
+        )
         %>
       </div>
     <% end %>
@@ -38,20 +38,20 @@
   <nav role="navigation" class="taxon-page__grid">
     <div class="full-page-width-wrapper">
       <%= render "govuk_publishing_components/components/heading", {
-          text: t('taxons.sub_topics'),
-          heading_level: 2,
-          font_size: 19,
-          margin_bottom: 2
+        text: t('taxons.sub_topics'),
+        heading_level: 2,
+        font_size: 19,
+        margin_bottom: 2
       } %>
       <ol class="taxon-page__grid-wrapper">
         <% presented_taxon.child_taxons.each_with_index do |child_taxon, index| %>
           <li class="taxon-page__grid-item">
             <h3 class="taxon-page__grid-heading">
               <%= link_to(
-                      child_taxon.title,
-                      child_taxon.base_path,
-                      data: presented_taxon.options_for_child_taxon(index: index)
-                  )%>
+                child_taxon.title,
+                child_taxon.base_path,
+                data: presented_taxon.options_for_child_taxon(index: index)
+              )%>
             </h3>
             <p class="taxon-page__grid-item-description"><%= child_taxon.description %></p>
           </li>
