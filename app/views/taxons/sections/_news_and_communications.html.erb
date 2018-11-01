@@ -26,9 +26,7 @@
   <% else %>
     <div class="taxon-page__featured-see-more">
   <% end %>
-    <%= link_to(
-      section[:see_more_link][:text],
-      section[:see_more_link][:url]
-    )%>
+    <%= render partial: "taxons/sections/see_more_link", locals: { section: section } %>
+
   </div>
 </div>

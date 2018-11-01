@@ -58,6 +58,11 @@
   clear: both;
 }
 
+.taxon-page__see-more {
+  display: block;
+  margin-top: $gutter;
+}
+
 .taxon-page__show-more-toggle {
   display: none;
 

@@ -15,8 +15,8 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_the_services_section
     and_i_can_see_the_guidance_and_regulation_section
     and_i_can_see_the_news_and_communications_section
-    and_i_can_see_the_policy_and_engagement_section
-    and_i_can_see_the_transparency_section
+    and_i_can_see_the_policy_papers_and_consulations_section
+    and_i_can_see_the_transparency_and_foi_releases_section
     and_i_can_see_the_research_and_statistics_section
     and_i_can_see_the_organisations_section
     and_i_can_see_the_sub_topics_grid
@@ -37,7 +37,22 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     then_there_should_be_an_error
   end
 
+  %w(A B C D E).each do |variant|
+    it "has tracking on see all links on variant #{variant}" do
+      given_there_is_a_taxon_with_children
+      and_the_taxon_is_live
+      and_the_taxon_has_tagged_content
+      when_i_visit_that_taxon_with_variant(variant)
+      see_all_links_have_tracking_data
+    end
+  end
+
 private
+
+  def when_i_visit_that_taxon_with_variant(variant)
+    GovukAbTesting::RequestedVariant.any_instance.stubs(:variant_name).returns(variant)
+    visit base_path
+  end
 
   def given_there_is_a_thing_that_is_not_a_taxon
     thing = {
@@ -153,7 +168,7 @@ private
     end
 
     expected_link = {
-      text: "See all",
+      text: "See more guidance and regulation in this topic",
       url: "/search/advanced?" + finder_query_string("guidance_and_regulation")
     }
 
@@ -167,7 +182,7 @@ private
     end
 
     expected_link = {
-      text: "See all",
+      text: "See more services in this topic",
       url: "/search/advanced?" + finder_query_string('services')
     }
     assert page.has_link?(expected_link[:text], href: expected_link[:url])
@@ -182,14 +197,14 @@ private
     end
 
     expected_link = {
-      text: "See all",
+      text: "See more news and communications in this topic",
       url: "/search/advanced?" + finder_query_string("news_and_communications")
     }
 
     assert page.has_link?(expected_link[:text], href: expected_link[:url])
   end
 
-  def and_i_can_see_the_policy_and_engagement_section
+  def and_i_can_see_the_policy_papers_and_consulations_section
     assert page.has_selector?('.gem-c-heading', text: "Policy")
 
     tagged_content_for_policy_and_engagement.each do |item|
@@ -197,14 +212,14 @@ private
     end
 
     expected_link = {
-      text: "See all",
+      text: "See more policy papers and consultations in this topic",
       url: "/search/advanced?" + finder_query_string("policy_and_engagement")
     }
 
     assert page.has_link?(expected_link[:text], href: expected_link[:url])
   end
 
-  def and_i_can_see_the_transparency_section
+  def and_i_can_see_the_transparency_and_foi_releases_section
     assert page.has_selector?('.gem-c-heading', text: "Transparency")
 
     tagged_content_for_transparency.each do |item|
@@ -212,7 +227,7 @@ private
     end
 
     expected_link = {
-      text: "See all",
+      text: "See more transparency and freedom of information releases in this topic",
       url: "/search/advanced?" + finder_query_string("transparency")
     }
 
@@ -227,7 +242,7 @@ private
     end
 
     expected_link = {
-      text: "See all",
+      text: "See more research and statistics in this topic",
       url: "/search/advanced?" + finder_query_string("research_and_statistics")
     }
 
@@ -276,6 +291,17 @@ private
       content,
       "The content of the robots meta tag should be 'noindex'"
     )
+  end
+
+  def see_all_links_have_tracking_data
+    [
+      'services', 'guidance and regulation', 'news and communications',
+      'research and statistics', 'policy papers and consultations',
+      'transparency and freedom of information releases'
+    ].each do |section|
+      assert page.has_css?("a[data-track-category='SeeAllLinkClicked']", text: "See more #{section} in this topic")
+      assert page.has_css?("a[data-track-action=\"/foo\"]", text: "See more #{section} in this topic")
+    end
   end
 
   def base_path

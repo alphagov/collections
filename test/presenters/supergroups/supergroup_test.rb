@@ -21,6 +21,14 @@ describe Supergroups::Supergroup do
 
       assert expected_details, supergroup.finder_link(base_path)
     end
+
+    it 'returns correct data' do
+      base_path = '/base/path'
+      finder_link_data = supergroup.finder_link(base_path)[:data]
+      assert_equal "SeeAllLinkClicked", finder_link_data[:track_category]
+      assert_equal base_path, finder_link_data[:track_action]
+      assert_equal "supergroup_name", finder_link_data[:track_label]
+    end
   end
 
   describe '#partial_template' do
