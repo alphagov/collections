@@ -523,14 +523,14 @@ class OrganisationTest < ActionDispatch::IntegrationTest
       assert page.has_link?("Home", href: "/")
       assert page.has_link?("Organisations", href: "/government/organisations")
 
-      assert page.has_css?(".gem-c-breadcrumbs--current", text: "Prime Minister's Office, 10 Downing Street")
+      assert page.has_css?(".govuk-breadcrumbs__link", text: "Prime Minister's Office, 10 Downing Street")
     end
 
     visit "/government/organisations/attorney-generals-office"
-    assert page.has_css?(".gem-c-breadcrumbs--current", text: "Attorney General's Office")
+    assert page.has_css?(".govuk-breadcrumbs__link", text: "Attorney General's Office")
 
     visit "/government/organisations/charity-commission"
-    assert page.has_css?(".gem-c-breadcrumbs--current", text: "The Charity Commission")
+    assert page.has_css?(".govuk-breadcrumbs__link", text: "The Charity Commission")
   end
 
   it "sets the page title" do
