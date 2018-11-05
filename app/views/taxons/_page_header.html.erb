@@ -1,4 +1,4 @@
-<%= render "govuk_publishing_components/components/inverse_header", { full_width: true, padding_top: false } do %>
+<%= render "govuk_publishing_components/components/inverse_header", { full_width: true } do %>
   <div class="full-page-width-wrapper">
     <%= render 'govuk_publishing_components/components/breadcrumbs',
       breadcrumbs: GovukPublishingComponents::AppHelpers::TaxonBreadcrumbs.new(@content_item).breadcrumbs,
