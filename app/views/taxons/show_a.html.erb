@@ -12,22 +12,22 @@
 <div class="full-page-width-wrapper">
   <% presented_taxon.sections.each do |section| %>
     <% if section[:show_section] %>
-    <div class="taxon-page__section-group">
-      <div class="grid-row">
-        <div class="column-two-thirds">
-          <%= render "govuk_publishing_components/components/heading", {
-            text: t(section[:id], scope: :content_purpose_supergroup, default: section[:title]),
-            heading_level: 2,
-            margin_bottom: 2
-          } %>
+      <div class="taxon-page__section-group">
+        <div class="grid-row">
+          <div class="column-two-thirds">
+            <%= render "govuk_publishing_components/components/heading", {
+              text: t(section[:id], scope: :content_purpose_supergroup, default: section[:title]),
+              heading_level: 2,
+              margin_bottom: 2
+            } %>
+          </div>
         </div>
+        <%= render(
+          partial: section[:partial_template],
+          locals: { presented_taxon: presented_taxon, section: section }
+        )
+        %>
       </div>
-      <%= render(
-        partial: section[:partial_template],
-        locals: { presented_taxon: presented_taxon, section: section }
-      )
-     %>
-    </div>
     <% end %>
   <% end %>
 
