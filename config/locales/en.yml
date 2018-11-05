@@ -78,9 +78,12 @@ en:
     what_we_do: "What %{title} does"
   taxons:
     organisations: "Organisations"
-    sub_topics: "Explore these sub-topics"
+    explore_sub_topics: "Explore these sub-topics"
     see_all_in_topic: "See more %{type} in this topic"
     in_page_nav_title: "On this page"
+    in_page_sub_topic_title: "Sub-topics"
+    in_page_sub_topic_title_no_sub_topics: "No sub-topics"
+
   language_names:
     en: English
     cy: Cymraeg

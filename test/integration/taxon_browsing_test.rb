@@ -31,6 +31,22 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_the_in_page_nav
   end
 
+  it 'renders an in-page sub-topic side nav in variant D' do
+    given_there_is_a_taxon_with_children
+    and_the_taxon_is_live
+    and_the_taxon_has_tagged_content
+    when_i_visit_that_taxon_with_variant("D")
+    and_i_can_see_the_sub_topic_side_nav
+  end
+
+  it 'renders an in-page sub-topic side nav with notice if there are no sub-topics in variant D' do
+    given_there_is_a_taxon_without_children
+    and_the_taxon_is_live
+    and_the_taxon_has_tagged_content
+    when_i_visit_that_taxon_with_variant("D")
+    and_i_can_see_the_sub_topic_side_nav_with_no_sub_topics_notice
+  end
+
   it 'renders a taxon page for a draft taxon' do
     given_there_is_a_taxon_with_children
     and_the_taxon_is_not_live
@@ -106,9 +122,13 @@ private
 
     content_store_has_item('/content-item-1', content_item_for_base_path('/content-item-1'))
 
-    @content_item = content_item_without_children(base_path, content_id)
+    given_there_is_a_taxon_without_children
 
     @content_item["links"]["child_taxons"] = [child_one, child_two]
+  end
+
+  def given_there_is_a_taxon_without_children
+    @content_item = content_item_without_children(base_path, content_id)
   end
 
   def and_the_taxon_is_live
@@ -302,6 +322,30 @@ private
     assert page.has_selector?('.gem-c-contents-list__link', text: "Transparency and freedom of information releases")
     assert page.has_selector?('.gem-c-contents-list__link', text: "Organisations")
     assert page.has_selector?('.gem-c-contents-list__link', text: "Explore these sub-topics")
+  end
+
+  def and_i_can_see_the_sub_topic_side_nav
+    assert page.has_selector?('.taxon-page__sub-topic-sidebar')
+    within('.taxon-page__sub-topic-sidebar') do
+      assert page.has_selector?('h2', text: "Sub-topics")
+      child_taxons = @content_item["links"]["child_taxons"]
+
+      child_taxons.each_with_index do |child_taxon, index|
+        assert page.has_link?(child_taxon['title'], href: child_taxon['base_path'])
+        element = find("a[href='#{child_taxon['base_path']}']")
+        assert_equal "navGridContentClicked", element["data-track-category"]
+        assert_equal (index + 1).to_s, element["data-track-action"]
+        assert_equal child_taxon['base_path'], element["data-track-label"]
+        assert_equal "{}", element["data-track-options"]
+      end
+    end
+  end
+
+  def and_i_can_see_the_sub_topic_side_nav_with_no_sub_topics_notice
+    assert page.has_selector?('.taxon-page__sub-topic-sidebar')
+    within('.taxon-page__sub-topic-sidebar') do
+      assert page.has_selector?('h2', text: "No sub-topics")
+    end
   end
 
   def then_page_has_meta_robots

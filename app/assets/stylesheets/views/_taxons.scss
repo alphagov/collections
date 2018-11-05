@@ -140,3 +140,9 @@
     padding-bottom: $gutter-half;
   }
 }
+
+.taxon-page__sub-topic-sidebar a {
+  display: block;
+  text-decoration: none;
+  padding-top: $gutter-one-third;
+}
