@@ -17,7 +17,7 @@ class TaxonPresenter
   end
 
   def sections
-    SupergroupSections.supergroup_sections(taxon.content_id, taxon.base_path)
+    @sections ||= SupergroupSections.supergroup_sections(taxon.content_id, taxon.base_path)
   end
 
   def organisations_section
