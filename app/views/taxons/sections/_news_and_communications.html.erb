@@ -13,7 +13,8 @@
         context: {
           date: featured_item[:metadata][:public_updated_at],
           text: featured_item[:metadata][:document_type]
-        }
+        },
+        href_data_attributes: featured_item[:link][:data_attributes]
     } %>
   </div>
   <% if section[:documents].any? %>
