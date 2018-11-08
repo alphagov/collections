@@ -13,7 +13,13 @@
     <div class="full-page-width-wrapper">
         <%= render "components/email-link", {
           text: "Sign up for updates to this topic page",
-          href: "/email-signup/?topic=#{presented_taxon.base_path}"
+          href: "/email-signup/?topic=#{presented_taxon.base_path}",
+          data: {
+            module: "track-click",
+            track_category: "emailAlertLinkClicked",
+            track_action: presented_taxon.base_path,
+            track_label: ""
+          }
         } %>
     </div>
   </div>

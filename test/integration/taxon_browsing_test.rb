@@ -176,6 +176,9 @@ private
       'Sign up for updates to this topic page',
       href: "/email-signup/?topic=#{current_path}"
     )
+    assert page.has_css?("a[data-track-category='emailAlertLinkClicked']", text: "Sign up for updates to this topic page")
+    assert page.has_css?("a[data-track-action=\"#{current_path}\"]", text: "Sign up for updates to this topic page")
+    assert page.has_css?("a[data-track-label=\"\"]", text: "Sign up for updates to this topic page")
   end
 
   def and_i_cannot_see_an_email_signup_link
