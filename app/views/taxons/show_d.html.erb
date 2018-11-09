@@ -35,22 +35,25 @@
       <%= render partial: 'organisations', locals: { presented_organisations: presented_taxon.organisations_section} %>
 
     </div>
-    <div class="column-one-third">
-      <div id="taxon-sub-topics sub-topics" class="taxon-page__section-group taxon-page__sub-topic-sidebar" data-module="track-click">
-        <%= render "govuk_publishing_components/components/heading", {
-            text: (presented_taxon.show_subtopic_grid? ? t('taxons.in_page_sub_topic_title') : t('taxons.in_page_sub_topic_title_no_sub_topics')),
-            margin_bottom: 2
-        } %>
-        <% presented_taxon.child_taxons.each_with_index do |child_taxon, index| %>
-          <%= link_to child_taxon.title, child_taxon.base_path, data: {
-            track_category: "navGridContentClicked",
-            track_action: index + 1,
-            track_label: child_taxon.base_path,
-            track_options: {}
-          } %>
-        <% end %>
+
+    <% if presented_taxon.show_subtopic_grid? %>
+      <div class="column-one-third">
+          <div id="taxon-sub-topics sub-topics" class="taxon-page__section-group taxon-page__sub-topic-sidebar" data-module="track-click">
+            <%= render "govuk_publishing_components/components/heading", {
+                text: t('taxons.in_page_sub_topic_title'),
+                margin_bottom: 2
+            } %>
+            <% presented_taxon.child_taxons.each_with_index do |child_taxon, index| %>
+              <%= link_to child_taxon.title, child_taxon.base_path, data: {
+                track_category: "navGridContentClicked",
+                track_action: index + 1,
+                track_label: child_taxon.base_path,
+                track_options: {}
+              } %>
+            <% end %>
+          </div>
       </div>
-    </div>
+    <% end %>
   </div>
 </div>
 
