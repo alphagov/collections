@@ -50,7 +50,7 @@
           } %>
 
           <%= render 'govuk_publishing_components/components/document_list',
-            items: presented_taxon.child_taxons.map{ |child_taxon| { link: { text: child_taxon.title, path: child_taxon.base_path }} },
+            items: presented_taxon.child_taxons.each_with_index.map { |child_taxon, index| { link: { text: child_taxon.title, path: child_taxon.base_path, data_attributes: presented_taxon.options_for_child_taxon(index: index) }} },
             margin_bottom: true
           %>
 
