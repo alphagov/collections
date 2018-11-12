@@ -18,6 +18,7 @@ describe Supergroups::GuidanceAndRegulation do
             text: 'Tagged Content Title',
             path: '/government/tagged/content',
             data_attributes: {
+              module: "track-click",
               track_category: "guidanceAndRegulationDocumentListClicked",
               track_action: 1,
               track_label: '/government/tagged/content',
@@ -49,6 +50,7 @@ describe Supergroups::GuidanceAndRegulation do
             path: '/government/tagged/content',
             description: 'Description of tagged content',
             data_attributes: {
+              module: "track-click",
               track_category: "guidanceAndRegulationDocumentListClicked",
               track_action: 1,
               track_label: '/government/tagged/content',

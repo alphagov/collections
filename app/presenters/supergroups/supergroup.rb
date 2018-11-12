@@ -58,7 +58,7 @@ module Supergroups
         track_category: "SeeAllLinkClicked",
         track_action: base_path,
         track_label: name,
-        module: ("track-click" unless name.eql?('news_and_communications'))
+        module: "track-click"
       }
     end
 
