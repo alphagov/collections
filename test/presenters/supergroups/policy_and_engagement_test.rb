@@ -30,15 +30,18 @@ describe Supergroups::PolicyAndEngagement do
 
       it 'prioritises consultations over other content' do
         tagged_document_list = %w(
-          consultation_outcome
+          open_consultation
           case_study
           open_consultation
-          consultation_outcome
-          closed_consultation
+          open_consultation
+          open_consultation
         )
 
         expected_order = %w(
-          closed_consultation
+          open_consultation
+          open_consultation
+          open_consultation
+          open_consultation
           case_study
         )
 
@@ -49,65 +52,29 @@ describe Supergroups::PolicyAndEngagement do
         assert_equal expected_results(expected_order), policy_and_engagement_supergroup.document_list(taxon_id)
       end
 
-      describe '#special_format_count' do
-        it 'only include consultations in promoted_content' do
-          tagged_document_list = %w(
-            case_study
-            case_study
-            case_study
-            consultation_outcome
-            closed_consultation
-          )
-
-          MostRecentContent.any_instance
-            .stubs(:fetch)
-            .returns(tagged_content(tagged_document_list))
-
-          assert_equal 2, policy_and_engagement_supergroup.promoted_content(taxon_id).count
-        end
-
-        it 'only include first three consultations in promoted_content' do
-          tagged_document_list = %w(
-            consultation_outcome
-            closed_consultation
-            open_consultation
-            consultation_outcome
-            closed_consultation
-          )
-
-          MostRecentContent.any_instance
-            .stubs(:fetch)
-            .returns(tagged_content(tagged_document_list))
-
-          assert_equal 3, policy_and_engagement_supergroup.promoted_content(taxon_id).count
-        end
-      end
-
       describe '#consultation_closing_date' do
         it 'gets the closing date of past consultations' do
           MostRecentContent.any_instance
             .stubs(:fetch)
             .returns(section_tagged_content_list('open_consultation', 4))
 
-          assert_equal expected_result('open_consultation'), policy_and_engagement_supergroup.document_list(taxon_id)
+          expected = 4.times.map { |index| expected_result('open_consultation', index).first }
+          assert_equal expected, policy_and_engagement_supergroup.document_list(taxon_id)
         end
 
         it 'gets the closing date of future consultations' do
-          rummager_result = section_tagged_content_list('open_consultation', 3)
-          rummager_result.push(
-            Document.new(
-              title: 'Tagged Content Title',
-              description: 'Description of tagged content',
-              public_updated_at: '2018-02-28T08:01:00.000+00:00',
-              base_path: '/government/tagged/content-1',
-              content_store_document_type: 'open_consultation',
-              organisations: 'Tagged Content Organisation'
-            )
+          document = Document.new(
+            title: 'Tagged Content Title',
+            description: 'Description of tagged content',
+            public_updated_at: '2018-02-28T08:01:00.000+00:00',
+            base_path: '/government/tagged/content-1',
+            content_store_document_type: 'open_consultation',
+            organisations: 'Tagged Content Organisation'
           )
 
           MostRecentContent.any_instance
             .stubs(:fetch)
-            .returns(rummager_result)
+            .returns([document])
 
           content = content_item_for_base_path('/government/tagged/content-1').merge(
             "details": {
@@ -150,49 +117,6 @@ describe Supergroups::PolicyAndEngagement do
     end
   end
 
-  describe '#promoted_content' do
-    before do
-      content = content_item_for_base_path('/government/tagged/content').merge(
-        "details": {
-          "body": "",
-          "closing_date": "2017-07-10T23:45:00.000+00:00"
-        }
-      )
-
-      content_store_has_item('/government/tagged/content', content)
-    end
-
-    it 'returns promoted content for the policy and engagment supergroup' do
-      MostRecentContent.any_instance
-        .stubs(:fetch)
-        .returns(section_tagged_content_list('open_consultation'))
-
-      assert_equal expected_result('open_consultation', promoted_content: true), policy_and_engagement_supergroup.promoted_content(taxon_id)
-    end
-
-    it 'prioritises consultations over other content' do
-      tagged_document_list = %w(
-        consultation_outcome
-        case_study
-        open_consultation
-        case_study
-        closed_consultation
-      )
-
-      expected_order = %w(
-        consultation_outcome
-        open_consultation
-        closed_consultation
-      )
-
-      MostRecentContent.any_instance
-        .stubs(:fetch)
-        .returns(tagged_content(tagged_document_list))
-
-      assert_equal expected_results(expected_order, promoted_content: true), policy_and_engagement_supergroup.promoted_content(taxon_id)
-    end
-  end
-
   describe "document types" do
     it "returns appropriate things" do
       document_types = GovukDocumentTypes.supergroup_document_types("policy_and_engagement")
@@ -203,15 +127,15 @@ describe Supergroups::PolicyAndEngagement do
 
 private
 
-  def expected_results(document_types, promoted_content: false)
+  def expected_results(document_types)
     results = []
     document_types.each_with_index do |document_type, index|
-      results.push(*expected_result(document_type, index, promoted_content: promoted_content))
+      results.push(*expected_result(document_type, index))
     end
     results
   end
 
-  def expected_result(document_type, index = 0, promoted_content: false)
+  def expected_result(document_type, index = 0)
     result = {
       link: {
         text: 'Tagged Content Title',
@@ -232,10 +156,6 @@ private
         document_type: document_type.humanize,
       }
     }
-
-    if promoted_content
-      result[:link][:data_attributes][:track_category] = "policyAndEngagementHighlightBoxClicked"
-    end
 
     if consultation?(document_type)
       result[:metadata][:closing_date] = 'Date closed 10 July 2017'

@@ -7,15 +7,9 @@ module Supergroups
     end
 
     def document_list(taxon_id)
-      items = tagged_content(taxon_id).drop(promoted_content_count(taxon_id))
+      items = tagged_content(taxon_id)
 
       format_document_data(items)
-    end
-
-    def promoted_content(taxon_id)
-      items = tagged_content(taxon_id).shift(promoted_content_count(taxon_id))
-
-      format_document_data(items, "HighlightBoxClicked")
     end
 
     def tagged_content(taxon_id)
@@ -46,16 +40,6 @@ module Supergroups
     end
 
   private
-
-    def promoted_content_count(taxon_id)
-      consultation_count = tagged_content(taxon_id).count do |content_item|
-        consultation?(content_item.content_store_document_type)
-      end
-
-      return 3 if consultation_count > 3
-
-      consultation_count
-    end
 
     def reorder_tagged_documents_to_prioritise_consultations
       consultations = @content.select do |content_item|
