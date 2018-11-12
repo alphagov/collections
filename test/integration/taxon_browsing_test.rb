@@ -39,14 +39,6 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_the_sub_topic_side_nav
   end
 
-  it 'renders an in-page sub-topic side nav with notice if there are no sub-topics in variant D' do
-    given_there_is_a_taxon_without_children
-    and_the_taxon_is_live
-    and_the_taxon_has_tagged_content
-    when_i_visit_that_taxon_with_variant("D")
-    and_i_can_see_the_sub_topic_side_nav_with_no_sub_topics_notice
-  end
-
   it 'renders a taxon page for a draft taxon' do
     given_there_is_a_taxon_with_children
     and_the_taxon_is_not_live
@@ -341,13 +333,6 @@ private
         assert_equal child_taxon['base_path'], element["data-track-label"]
         assert_equal "{}", element["data-track-options"]
       end
-    end
-  end
-
-  def and_i_can_see_the_sub_topic_side_nav_with_no_sub_topics_notice
-    assert page.has_selector?('.taxon-page__sub-topic-sidebar')
-    within('.taxon-page__sub-topic-sidebar') do
-      assert page.has_selector?('h2', text: "No sub-topics")
     end
   end
 
