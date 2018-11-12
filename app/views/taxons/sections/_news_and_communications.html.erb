@@ -3,7 +3,7 @@
   featured_item_layout_class = "taxon-page__featured-item--single" if section[:documents].empty?
 %>
 
-  <div class="taxon-page__featured-item <%= featured_item_layout_class %>" <%= "data-module=track-click" if track_click?(section[:promoted_content]) %>>
+  <div class="taxon-page__featured-item <%= featured_item_layout_class %>">
     <%= render "govuk_publishing_components/components/image_card", {
         large: true,
         href: featured_item[:link].fetch(:path),
@@ -13,11 +13,17 @@
         context: {
           date: featured_item[:metadata][:public_updated_at],
           text: featured_item[:metadata][:document_type]
+        },
+        href_data_attributes: {
+          track_category: featured_item[:link][:data_attributes][:track_category],
+          track_action: featured_item[:link][:data_attributes][:track_action],
+          track_label: featured_item[:link][:data_attributes][:track_label],
+          track_options: featured_item[:link][:data_attributes][:track_options]
         }
     } %>
   </div>
   <% if section[:documents].any? %>
-    <div <%= "data-module=track-click" if track_click?(section[:documents]) %>>
+    <div>
       <%= render 'govuk_publishing_components/components/document_list',
         items: section[:documents],
         margin_top: true,
