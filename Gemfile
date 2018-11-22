@@ -13,7 +13,7 @@ gem 'rails', '5.2.1'
 gem 'rinku', require: 'rails_rinku'
 gem 'sass-rails', '~> 5.0.3'
 gem 'slimmer', '~> 13.0.0'
-gem 'uglifier', '~> 4.1.19'
+gem 'uglifier', '~> 4.1.20'
 
 group :test do
   gem 'cucumber-rails', require: false
