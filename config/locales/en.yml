@@ -82,6 +82,13 @@ en:
     see_all_in_topic: "See more %{type} in this topic"
     in_page_nav_title: "On this page"
     in_page_sub_topic_title: "Sub-topics"
+  campaign:
+    email_signup: "Get updates to all Brexit changes for citizens in the UK"
+    topics_affected_by_brexit: "Topics affected by Brexit"
+    see_more: "See more"
+    page_context: "Brexit campaign"
+    page_title: "EU Exit guidance for yourself"
+
 
   language_names:
     en: English

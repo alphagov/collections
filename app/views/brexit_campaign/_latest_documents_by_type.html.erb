@@ -2,7 +2,7 @@
   <div class="grid-row">
     <div class="column-two-thirds">
       <%= render "govuk_publishing_components/components/heading", {
-        text: "Topics affected by Brexit",
+        text: t('campaign.topics_affected_by_brexit'),
         padding: true,
         margin_bottom: 4
       }
@@ -40,7 +40,7 @@
             ],
           } %>
 
-          <a href="/more" class="campaign__see-more">See more</a>
+          <a href="/more" class="campaign__see-more"><%= t('campaign.see_more') %></a>
         </div>
       <% end %>
     </div>
