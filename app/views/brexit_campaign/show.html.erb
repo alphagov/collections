@@ -1,0 +1,20 @@
+<%= content_for :title, 'Prepare for the UK leaving the EU' %>
+
+<%= render partial: 'header' %>
+
+<div class="taxon-page__email-link-wrapper">
+  <div class="full-page-width-wrapper">
+      <%= render "components/email-link", {
+        text: t('campaign.email_signup'),
+        href: "https://www.gov.uk/email-signup/?topic=/government/brexit"
+      } %>
+  </div>
+</div>
+
+<div class="full-page-width-wrapper">
+  <%= render partial: 'featured_taxons' %>
+</div>
+
+<div class="full-page-width-wrapper">
+  <%= render partial: 'other_campaigns' %>
+</div>

@@ -82,6 +82,19 @@ en:
     see_all_in_topic: "See more %{type} in this topic"
     in_page_nav_title: "On this page"
     in_page_sub_topic_title: "Sub-topics"
+  campaign:
+    email_signup: "Sign up for updates about Brexit on all GOV.UK pages"
+    see_more: "See more"
+    page_title: "Prepare for EU Exit if you live in the UK"
+    see_more_in_taxon: "See more in %{topic}"
+    taxon_descriptions:
+      business-and-industry: "Includes consumer rights, banking and selling online"
+      crime-justice-and-law: "Includes data protection and legal services"
+      education: "Includes studying abroad and Erasmus+"
+      environment: "Includes environmental standards and food labels"
+      going-and-being-abroad: "Includes passports, pet travel and mobile roaming fees"
+      health-and-social-care: "Includes healthcare in the EU, medicine and health insurance"
+      transport: "Includes driving licenses, vehicle insurance and flying to the EU"
 
   language_names:
     en: English

@@ -1,0 +1,38 @@
+.campaign__taxon {
+  border-top: 2px solid $govuk-blue;
+  margin-bottom: $gutter * 2;
+
+  @include media(tablet) {
+    &--variable-border {
+      border: none;
+    }
+  }
+}
+
+.campaign__taxon-title {
+  @include bold-24;
+  padding: $gutter-half 0;
+}
+
+.campaign__description {
+  @include core-19;
+}
+
+.campaign__other-campaigns {
+  border-top: 2px solid $govuk-blue;
+  padding-top: $gutter-two-thirds;
+}
+
+.campaign__other-campaigns-title {
+  @include core-19;
+  margin-bottom: $gutter-one-third;
+}
+
+.campaign__other-campaigns-list {
+  padding-left: $gutter-two-thirds;
+}
+
+.campaign__other-campaigns-item {
+  @include core-19;
+  margin-bottom: 5px;
+}
