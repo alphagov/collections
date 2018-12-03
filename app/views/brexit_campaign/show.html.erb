@@ -1,0 +1,36 @@
+<%= render partial: 'breadcrumb' %>
+
+<% @taxons_content_item %>
+
+<%= render "govuk_publishing_components/components/title", {
+    title: 'Citizens in the UK',
+    context: 'Brexit'
+} %>
+
+<%= render "govuk_publishing_components/components/lead_paragraph", {
+    text: "An explanation of what this page is about, and how the content featured has been updated due to Brexit."
+} %>
+
+Get updates to all Brexit changes for citizens in the UK
+<%= render "govuk_publishing_components/components/subscription-links", {
+    email_signup_link: "/government/brexit/citizens-in-the-uk/email-signup",
+    feed_link: "/government/brexit/citizens-in-the-uk.atom"
+} %>
+
+<% if @documents.has_featured_news? %>
+  <% #render partial: 'featured_news' %>
+<% end %>
+
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <% if @documents.has_latest_documents_by_type? && !@campaign.is_promotional_org?  %>
+      <%= render partial: 'latest_documents_by_type' %>
+    <% end %>
+  </div>
+  <% if @campaign.ordered_corporate_information && @campaign.ordered_corporate_information.any? %>
+    <div class="organisation__corporate-information" id="corporate-info">
+      <%= render partial: 'all_topics' %>
+    </div>
+  <% end %>
+</div>

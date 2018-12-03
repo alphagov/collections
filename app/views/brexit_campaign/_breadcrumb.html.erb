@@ -1,0 +1,18 @@
+<% content_for :breadcrumbs do %>
+  <%= render "govuk_publishing_components/components/breadcrumbs", {
+    breadcrumbs: [
+      {
+        title: "Home",
+        url: "/"
+      },
+      {
+        title: "Brexit",
+        url: "/government/brexit"
+      },
+      {
+        title: "Citizens in the UK",
+        is_current_page: true
+      }
+    ]
+  } %>
+<% end %>

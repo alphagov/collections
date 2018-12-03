@@ -1,0 +1,15 @@
+<div class="column-one-third organisation__float-section">
+    <% unless @campaign.is_promotional_org? %>
+      <%= render "govuk_publishing_components/components/heading", {
+        text: 'All topics',
+        padding: true,
+        border_top: 5,
+        brand: @campaign.brand
+      } %>
+    <% end %>
+  <% if @show.corporate_information[:corporate_information_links][:items].any? %>
+    <div class="<%= "organisation__section-border-top" if @campaign.is_promotional_org? %>">
+      <%= render "components/topic-list", @show.corporate_information[:corporate_information_links] %>
+    </div>
+  <% end %>
+</div>

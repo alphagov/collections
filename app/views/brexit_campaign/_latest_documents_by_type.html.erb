@@ -1,0 +1,32 @@
+<section class="<%= "brand--#{@campaign.brand} brand__border-color" if @campaign.is_live? %> organisation__brand-border-top organisation__margin-bottom">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: 'Featured topics',
+        padding: true
+      } %>
+    </div>
+  </div>
+
+  <% @taxons_content_item.in_groups_of(2, false) do |documents_group| %>
+    <%= documents_group %>
+    <div class="grid-row">
+      <% documents_group.each do |documents| %>
+        <div>
+          <% #documents[:documents] %>
+        </div>
+        <div class="column-half">
+          <%= render "govuk_publishing_components/components/heading", {
+            text: documents[:title],
+            padding: true,
+            font_size: 24,
+            heading_level: 3
+          } %>
+          <% #documents[:documents][:items].map { |item| item[:link] } %>
+          <%= render "govuk_publishing_components/components/document_list", items: [] %>
+          <% # documents[:documents][:items].map { |item| { link: item[:link] } } %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</section>
