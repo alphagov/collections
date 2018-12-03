@@ -1,5 +1,4 @@
 class BrexitCampaignController < ApplicationController
-
   def show
     @campaign = Organisation.find!("/government/organisations/cabinet-office")
     setup_content_item_and_navigation_helpers(@campaign)
@@ -25,9 +24,9 @@ class BrexitCampaignController < ApplicationController
 
     # @documents = Organisations::DocumentsPresenter.new(@campaign)
     @documents = Organisations::DocumentsPresenter.new(@campaign)
-    @latest_docs = @documents.latest_documents_by_type.in_groups_of(2, false) do |documents_group|
-      test = 1
-    end
+    # @latest_docs = @documents.latest_documents_by_type.in_groups_of(2, false) do |documents_group|
+      #test = 1
+    #end
 
     # @what_we_do = Organisations::WhatWeDoPresenter.new(@campaign)
     # @people = Organisations::PeoplePresenter.new(@campaign)
@@ -38,5 +37,4 @@ class BrexitCampaignController < ApplicationController
       campaign: @campaign
     }
   end
-
 end
