@@ -31,21 +31,9 @@
           } %>
 
           <%= render "components/topic-list", {
-            items: [
-              {
-                text: "Example link 1",
-                path: "/example"
-              },
-              {
-                text: "This is another example of a link",
-                path: "/example"
-              },
-              {
-                text: "Another link",
-                path: "/example"
-              }
-            ],
-          } %>
+            items: taxon.sections.select { |section| section[:id] == "services" }.first[:documents].take(3).map {|doc| { text: doc[:link][:text], path: doc[:link][:path] } }
+
+              } %>
 
           <a href="https://finder-frontend-pr-706.herokuapp.com/prepare-individual-uk-leaving-eu?topic=<%= taxon.base_path %>"
              class="campaign__see-more"><%= t('campaign.see_more') %></a>
