@@ -19,9 +19,9 @@ class BrexitCampaignController < ApplicationController
 
     # @documents = Organisations::DocumentsPresenter.new(@campaign)
     @documents = Organisations::DocumentsPresenter.new(@campaign)
-    @latest_docs = @documents.latest_documents_by_type.in_groups_of(2, false) do |documents_group|
-      test = 1
-    end
+    # @latest_docs = @documents.latest_documents_by_type.in_groups_of(2, false) do |documents_group|
+      #test = 1
+    #end
 
     @what_we_do = Organisations::WhatWeDoPresenter.new(@campaign)
     @people = Organisations::PeoplePresenter.new(@campaign)
