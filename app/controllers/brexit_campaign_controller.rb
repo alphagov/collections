@@ -12,7 +12,10 @@ class BrexitCampaignController < ApplicationController
     end
 
     @taxons = []
-    @main_taxons.map do |taxon|
+
+    sorted_by = @main_taxons.sort_by! { |taxon| taxon[:title] }
+
+    sorted_by.map do |taxon|
       taxon = Taxon.find(taxon[:base_path])
       @taxons << TaxonPresenter.new(taxon)
     end

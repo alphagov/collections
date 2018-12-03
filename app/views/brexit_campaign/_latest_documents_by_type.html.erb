@@ -1,31 +1,42 @@
-<section class="<%= "brand--#{@campaign.brand} brand__border-color" if @campaign.is_live? %> organisation__brand-border-top organisation__margin-bottom">
+<section>
   <div class="grid-row">
     <div class="column-two-thirds">
       <%= render "govuk_publishing_components/components/heading", {
-        text: 'Featured topics',
-        padding: true
-      } %>
+        text: t('campaign.topics_affected_by_brexit'),
+        padding: true,
+        margin_bottom: 4
+      }
+      %>
     </div>
   </div>
 
-  <% @taxons.in_groups_of(3, false) do |taxon_group| %>
+  <% @taxons.in_groups_of(3, false) do |taxons_group| %>
     <% #taxon_group %>
     <div class="grid-row">
-      <% taxon_group.each do |taxon| %>
+      <% # taxon_group.each do |taxon| %>
         <!--<div>-->
           <% # taxon.sections.select { |section| section[:id] == "services" }.take(3) %>
         <!--</div>-->
-        <div class="column-one-third">
+        <!--<div class="column-one-third">-->
           <% # taxon.sections.select { |section| section[:id] == "services" }.first[:documents].take(3).map {|doc| { link: { text: doc[:link][:text], path: doc[:link][:path] } } } %>
+      <% taxons_group.each do |taxon| %>
+        <div class="column-one-third">
           <%= render "govuk_publishing_components/components/heading", {
             text: taxon.title,
             padding: true,
             font_size: 24,
-            heading_level: 3
+            heading_level: 3,
+            border_top: 2,
+            brand: "cabinet-office"
           } %>
-          <% #documents[:documents][:items].map { |item| item[:link] } %>
-          <%= render "govuk_publishing_components/components/document_list", items: taxon.sections.select { |section| section[:id] == "services" }.first[:documents].take(3).map {|doc| { link: { text: doc[:link][:text], path: doc[:link][:path] } } } %>
-          <% # documents[:documents][:items].map { |item| { link: item[:link] } } %>
+
+          <%= render "components/topic-list", {
+            items: taxon.sections.select { |section| section[:id] == "services" }.first[:documents].take(3).map {|doc| { text: doc[:link][:text], path: doc[:link][:path] } }
+          } %>
+
+          <% # taxon.sections.select { |section| section[:id] == "services" }.first[:documents].take(3).map {|doc| { text: doc[:link][:text], path: doc[:link][:path] } } %>
+
+          <a href="/more" class="campaign__see-more"><%= t('campaign.see_more') %></a>
         </div>
       <% end %>
     </div>

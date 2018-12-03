@@ -15,9 +15,9 @@
   <%= taxon_page_variant.analytics_meta_tag.html_safe if is_testable_taxon_page? %>
 </head>
 
-<body <% if content_for(:is_taxon_page) %>class="full-width"<% end %>>
+<body <% if content_for(:is_full_width_header) %>class="full-width"<% end %>>
   <div class="wrapper" id="wrapper">
-    <% unless content_for(:is_taxon_page) %>
+    <% unless content_for(:is_full_width_header) %>
       <% if content_for?(:breadcrumbs) %>
         <%= yield :breadcrumbs %>
       <% else %>
