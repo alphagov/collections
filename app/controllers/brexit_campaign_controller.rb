@@ -4,12 +4,17 @@ class BrexitCampaignController < ApplicationController
     @campaign = Organisation.find!("/government/organisations/cabinet-office")
     setup_content_item_and_navigation_helpers(@campaign)
 
-    main_taxons = ContentItem.find!("/").to_hash['links']['level_one_taxons']
-    @taxons_content_item = main_taxons.map do |taxon|
+    @main_taxons = ContentItem.find!("/").to_hash['links']['level_one_taxons'].map do |taxon|
       {
         base_path: taxon['base_path'],
         title: taxon['title']
       }
+    end
+
+    @taxons = []
+    @main_taxons.map do |taxon|
+      taxon = Taxon.find(taxon[:base_path])
+      @taxons << TaxonPresenter.new(taxon)
     end
 
     @show = Organisations::ShowPresenter.new(@campaign)
@@ -21,10 +26,10 @@ class BrexitCampaignController < ApplicationController
       test = 1
     end
 
-    @what_we_do = Organisations::WhatWeDoPresenter.new(@campaign)
-    @people = Organisations::PeoplePresenter.new(@campaign)
-    @not_live = Organisations::NotLivePresenter.new(@campaign)
-    @contacts = Organisations::ContactsPresenter.new(@campaign)
+    # @what_we_do = Organisations::WhatWeDoPresenter.new(@campaign)
+    # @people = Organisations::PeoplePresenter.new(@campaign)
+    # @not_live = Organisations::NotLivePresenter.new(@campaign)
+    # @contacts = Organisations::ContactsPresenter.new(@campaign)
 
     render :show, locals: {
       campaign: @campaign
