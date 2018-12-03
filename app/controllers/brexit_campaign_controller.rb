@@ -12,6 +12,8 @@ class BrexitCampaignController < ApplicationController
       }
     end
 
+    @taxons_content_item.sort_by! { |taxon| taxon[:title] }
+
     @show = Organisations::ShowPresenter.new(@campaign)
     @header = Organisations::HeaderPresenter.new(@campaign)
 
