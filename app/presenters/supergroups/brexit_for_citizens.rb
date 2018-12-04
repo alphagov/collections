@@ -5,7 +5,7 @@ module Supergroups
     attr_reader :content
 
     def initialize
-      super(['guidance_and_regulation', 'services'])
+      super(%w(guidance_and_regulation services))
     end
 
     def tagged_content(taxon_id)
@@ -30,8 +30,6 @@ module Supergroups
 
       RummagerSearch.new(params)
     end
-
-    private
 
     def format_document_data(documents, data_category = "")
       documents.each.with_index(1).map do |document, index|

@@ -16,7 +16,7 @@ class BrexitCampaignController < ApplicationController
 
     sorted_by.map do |taxon|
       taxon = Taxon.find(taxon[:base_path])
-      @taxons << BrexitCitizenPresenter.new(taxon)
+      @taxons << BrexitForCitizensPresenter.new(taxon)
     end
 
     @show = Organisations::ShowPresenter.new(@campaign)
