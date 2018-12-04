@@ -84,10 +84,8 @@ en:
     in_page_sub_topic_title: "Sub-topics"
   campaign:
     email_signup: "Sign up for updates about Brexit on all GOV.UK pages"
-    topics_affected_by_brexit: "Topics affected by Brexit"
     see_more: "See more"
-    page_context: "Brexit campaign"
-    page_title: "EU Exit guidance for yourself"
+    page_title: "Prepare for the UK leaving the EU"
 
 
   language_names:

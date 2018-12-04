@@ -1,3 +1,17 @@
+.campaign__taxon {
+  border-top: 2px solid $govuk-blue;
+
+  @include media(tablet) {
+    &--variable-border {
+      border: none;
+    }
+  }
+}
+
+.campaign__no-content {
+  @include core-19;
+}
+
 .campaign__see-more {
   display: block;
   margin-bottom: $gutter * 1.5;

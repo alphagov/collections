@@ -1,34 +1,27 @@
 <section>
-  <div class="grid-row">
-    <div class="column-two-thirds">
-      <%= render "govuk_publishing_components/components/heading", {
-        text: t('campaign.topics_affected_by_brexit'),
-        padding: true,
-        margin_bottom: 4
-      }
-      %>
-    </div>
-  </div>
-
-  <% @taxons.in_groups_of(3, false) do |taxons_group| %>
+  <% @taxons.in_groups_of(3, false).each_with_index do |taxons_group, row_index| %>
     <div class="grid-row">
       <% taxons_group.each do |taxon| %>
         <div class="column-one-third">
-          <%= render "govuk_publishing_components/components/heading", {
-            text: taxon.title,
-            padding: true,
-            font_size: 24,
-            heading_level: 3,
-            border_top: 2,
-            brand: "cabinet-office"
-          } %>
+          <div class="campaign__taxon <%= "campaign__taxon--variable-border" if row_index.eql?(0) %> ">
+            <%= render "govuk_publishing_components/components/heading", {
+              text: taxon.title,
+              padding: true,
+              font_size: 24,
+              heading_level: 3
+            } %>
 
-          <%= render "components/topic-list", {
-             items: taxon.content
-              } %>
+            <% if taxon.content.empty? %>
+              <p class="campaign__no-content">There's no Brexit guidance on this topic yet - <a href="https://finder-frontend-pr-706.herokuapp.com/prepare-individual-uk-leaving-eu?topic=<%= taxon.base_path %>">sign up for updates about <%= taxon.title.downcase %></a>
+            <% else %>
+              <%= render "components/topic-list", {
+                items: taxon.content
+                  } %>
 
-          <a href="https://finder-frontend-pr-706.herokuapp.com/prepare-individual-uk-leaving-eu?topic=<%= taxon.base_path %>"
-             class="campaign__see-more"><%= t('campaign.see_more') %></a>
+              <a href="https://finder-frontend-pr-706.herokuapp.com/prepare-individual-uk-leaving-eu?topic=<%= taxon.base_path %>"
+                class="campaign__see-more"><%= t('campaign.see_more') %></a>
+            <% end %>
+          </div>
         </div>
       <% end %>
     </div>
