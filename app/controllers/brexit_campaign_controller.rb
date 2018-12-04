@@ -16,7 +16,7 @@ class BrexitCampaignController < ApplicationController
 
     sorted_by.map do |taxon|
       taxon = Taxon.find(taxon[:base_path])
-      @taxons << TaxonPresenter.new(taxon)
+      @taxons << BrexitCitizenPresenter.new(taxon)
     end
 
     @show = Organisations::ShowPresenter.new(@campaign)
@@ -24,14 +24,6 @@ class BrexitCampaignController < ApplicationController
 
     # @documents = Organisations::DocumentsPresenter.new(@campaign)
     @documents = Organisations::DocumentsPresenter.new(@campaign)
-    # @latest_docs = @documents.latest_documents_by_type.in_groups_of(2, false) do |documents_group|
-      #test = 1
-    #end
-
-    # @what_we_do = Organisations::WhatWeDoPresenter.new(@campaign)
-    # @people = Organisations::PeoplePresenter.new(@campaign)
-    # @not_live = Organisations::NotLivePresenter.new(@campaign)
-    # @contacts = Organisations::ContactsPresenter.new(@campaign)
 
     render :show, locals: {
       campaign: @campaign

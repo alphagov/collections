@@ -11,14 +11,7 @@
   </div>
 
   <% @taxons.in_groups_of(3, false) do |taxons_group| %>
-    <% #taxon_group %>
     <div class="grid-row">
-      <% # taxon_group.each do |taxon| %>
-        <!--<div>-->
-          <% # taxon.sections.select { |section| section[:id] == "services" }.take(3) %>
-        <!--</div>-->
-        <!--<div class="column-one-third">-->
-          <% # taxon.sections.select { |section| section[:id] == "services" }.first[:documents].take(3).map {|doc| { link: { text: doc[:link][:text], path: doc[:link][:path] } } } %>
       <% taxons_group.each do |taxon| %>
         <div class="column-one-third">
           <%= render "govuk_publishing_components/components/heading", {
@@ -31,8 +24,7 @@
           } %>
 
           <%= render "components/topic-list", {
-            items: taxon.sections.select { |section| section[:id] == "services" }.first[:documents].take(3).map {|doc| { text: doc[:link][:text], path: doc[:link][:path] } }
-
+             items: taxon.content
               } %>
 
           <a href="https://finder-frontend-pr-706.herokuapp.com/prepare-individual-uk-leaving-eu?topic=<%= taxon.base_path %>"
