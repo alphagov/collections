@@ -9,7 +9,6 @@ module Supergroups
     end
 
     def tagged_content(taxon_id)
-      # @content = MostPopularContent.fetch(content_id: taxon_id, filter_content_store_document_type: document_types)
       @content = search_response_including_brexit(taxon_id, document_types, 3).documents
     end
 
