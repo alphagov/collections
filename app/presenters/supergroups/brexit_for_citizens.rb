@@ -5,15 +5,11 @@ module Supergroups
     attr_reader :content
 
     def initialize
-      super(%w(guidance_and_regulation services))
+      super('brexit-citizens')
     end
 
     def tagged_content(taxon_id)
       @content = search_response_including_brexit(taxon_id, document_types, 3).documents
-    end
-
-    def data_module_label
-      name.map { |n| n.camelize(:lower) }.join('_')
     end
 
   private
