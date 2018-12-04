@@ -19,12 +19,12 @@
     <div class="grid-row">
       <div class="column-two-thirds">
         <%= render "govuk_publishing_components/components/title", {
-          title: t('campaign.page_title'),
+          title: @campaign.title,
           inverse: true
         } %>
 
         <%= render 'govuk_publishing_components/components/lead_paragraph', {
-            text: "How you may be affected by Brexit.",
+            text: @campaign.description,
             inverse: true
         } %>
       </div>

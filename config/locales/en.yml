@@ -85,7 +85,6 @@ en:
   campaign:
     email_signup: "Sign up for updates about Brexit on all GOV.UK pages"
     see_more: "See more"
-    page_title: "Prepare for EU Exit if you live in the UK"
     see_more_in_taxon: "See more in %{topic}"
     taxon_descriptions:
       business-and-industry: "Includes consumer rights, banking and selling online"
@@ -95,7 +94,6 @@ en:
       going-and-being-abroad: "Includes passports, pet travel and mobile roaming fees"
       health-and-social-care: "Includes healthcare in the EU, medicine and health insurance"
       transport: "Includes driving licenses, vehicle insurance and flying to the EU"
-
   language_names:
     en: English
     cy: Cymraeg
