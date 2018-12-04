@@ -10,6 +10,7 @@
 
 .campaign__no-content {
   @include core-19;
+  margin-bottom: $gutter * 1.5;
 }
 
 .campaign__see-more {
