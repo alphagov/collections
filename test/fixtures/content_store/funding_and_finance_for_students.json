@@ -20,6 +20,7 @@
         "title": "Student finance",
         "description": "Student finance content",
         "base_path": "\/education-training-and-skills\/student-finance",
+        "phase": "live",
         "locale": "en",
         "links": {
           "parent_taxons": [

@@ -12,6 +12,9 @@ class Taxon
     to: :content_item
   )
 
+  class InAlphaPhase < StandardError
+  end
+
   def initialize(content_item)
     @content_item = content_item
   end
@@ -23,15 +26,20 @@ class Taxon
       raise "Tried to render a taxon page for content item that is not a taxon"
     end
 
+    if content_item.phase == "alpha"
+      # Ignore alpha taxons, as they shouldn't be shown
+      raise InAlphaPhase
+    end
+
     new(content_item)
   end
 
   def child_taxons
     return [] unless children?
 
-    linked_items('child_taxons').map do |child_taxon|
-      self.class.new(child_taxon)
-    end
+    linked_items('child_taxons')
+      .map { |child_taxon| self.class.new(child_taxon) }
+      .reject(&:alpha_taxon?)
   end
 
   def children?
@@ -44,6 +52,10 @@ class Taxon
 
   def live_taxon?
     phase == "live"
+  end
+
+  def alpha_taxon?
+    phase == "alpha"
   end
 
   def organisations

@@ -39,4 +39,19 @@ describe TaxonsController do
       end
     end
   end
+
+  context "when rendering a taxon in the alpha phase" do
+    before do
+      content_store_has_item(
+        taxon["base_path"],
+        taxon.merge("phase" => "alpha")
+      )
+    end
+
+    it do
+      get :show, params: { taxon_base_path: taxon["base_path"][1..-1] }
+
+      assert_response 404
+    end
+  end
 end
