@@ -1,0 +1,13 @@
+<% highlight_box_links = @campaign_links[:contents_list_links].map{ |link| link[:path] = link[:href]; { link: link, metadata: {} } } %>
+
+<div class="gem-c-related-navigation" style="padding-top: 20px">
+  <h2 id="related-nav-<%= @campaign_links[:section_title] %>-<%= @campaign_links[:random] %>"
+      data-track-count="sidebarRelatedItemSection"
+      class="gem-c-taxonomy-navigation__heading">
+    <%= @campaign_links[:section_title] %>
+  </h2>
+
+  <%= render "govuk_publishing_components/components/highlight_boxes", {
+      inverse: true,
+      items: highlight_box_links } %>
+</div>
