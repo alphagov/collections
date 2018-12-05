@@ -1,4 +1,13 @@
 class BrexitCampaignController < ApplicationController
+  EXCLUDED_TAXONS = %w(
+    /corporate-information
+    /defence-and-armed-forces
+    /international
+    /life-circumstances
+    /regional-and-local-government
+    /welfare
+  ).freeze
+
   def show
     @campaign = Organisation.find!("/government/organisations/cabinet-office")
     setup_content_item_and_navigation_helpers(@campaign)
@@ -19,15 +28,4 @@ class BrexitCampaignController < ApplicationController
       campaign: @campaign
     }
   end
-
-private
-
-  EXCLUDED_TAXONS = %w(
-                        /corporate-information
-                        /defence-and-armed-forces
-                        /international
-                        /life-circumstances
-                        /regional-and-local-government
-                        /welfare
-                      )
 end
