@@ -37,5 +37,9 @@
       font_size: 24,
       heading_level: 2
     } %>
+
+    <%= render 'components/taxon-list', {
+        items: @all_topics_links
+    } %>
   </div>
 </section>
