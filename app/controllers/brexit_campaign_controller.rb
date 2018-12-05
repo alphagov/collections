@@ -2,6 +2,7 @@ class BrexitCampaignController < ApplicationController
   EXCLUDED_TAXONS = %w(
     /corporate-information
     /defence-and-armed-forces
+    /government/all
     /international
     /life-circumstances
     /regional-and-local-government
