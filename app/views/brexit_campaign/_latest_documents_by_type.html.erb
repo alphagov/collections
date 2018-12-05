@@ -19,7 +19,8 @@
                   } %>
 
               <a href="https://finder-frontend-pr-706.herokuapp.com/prepare-individual-uk-leaving-eu?topic=<%= taxon.base_path %>"
-                class="campaign__see-more"><%= t('campaign.see_more') %></a>
+                class="campaign__see-more"
+                aria-label="<%= t('campaign.see_more_in_taxon', topic: taxon.title.downcase) %>"><%= t('campaign.see_more') %></a>
             <% end %>
           </div>
         </div>
