@@ -3,21 +3,12 @@ class BrexitCampaignController < ApplicationController
     @campaign = Organisation.find!("/government/organisations/cabinet-office")
     setup_content_item_and_navigation_helpers(@campaign)
 
-    @main_taxons = ContentItem.find!("/").to_hash['links']['level_one_taxons'].map do |taxon|
-      {
-        base_path: taxon['base_path'],
-        title: taxon['title']
-      }
-    end
-
-    @taxons = []
-
-    sorted_by = @main_taxons.sort_by! { |taxon| taxon[:title] }
-
-    sorted_by.map do |taxon|
-      taxon = Taxon.find(taxon[:base_path])
-      @taxons << BrexitForCitizensPresenter.new(taxon)
-    end
+    @taxons = ContentItem
+                .find!('/')
+                .linked_items('level_one_taxons')
+                .reject { |content_item| EXCLUDED_TAXONS.include?(content_item.base_path) }
+                .map { |content_item| Taxon.find(content_item.base_path) }
+                .map { |taxon| BrexitForCitizensPresenter.new(taxon) }
 
     @show = Organisations::ShowPresenter.new(@campaign)
     @header = Organisations::HeaderPresenter.new(@campaign)
@@ -29,4 +20,15 @@ class BrexitCampaignController < ApplicationController
       campaign: @campaign
     }
   end
+
+private
+
+  EXCLUDED_TAXONS = %w(
+                        /corporate-information
+                        /defence-and-armed-forces
+                        /international
+                        /life-circumstances
+                        /regional-and-local-government
+                        /welfare
+                      )
 end
