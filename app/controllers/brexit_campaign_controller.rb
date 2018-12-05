@@ -9,6 +9,15 @@ class BrexitCampaignController < ApplicationController
     /welfare
   ).freeze
 
+  FEATURED_TAXONS = %w(
+    /going-and-being-abroad
+    /health-and-social-care
+    /transport
+    /environment
+    /business-and-industry
+    /education
+  ).freeze
+
   def show
     @campaign = Organisation.find!("/government/organisations/cabinet-office")
     setup_content_item_and_navigation_helpers(@campaign)
@@ -42,7 +51,8 @@ class BrexitCampaignController < ApplicationController
                           .map { |taxon| BrexitForCitizensPresenter.new(taxon) }
 
     @taxons = @level_one_taxons
-                .take(6)
+                .select { |taxon| FEATURED_TAXONS.include?(taxon.base_path) }
+                .sort_by { |taxon| FEATURED_TAXONS.index(taxon.base_path) }
 
     @all_topics_links = @level_one_taxons.map do |taxon|
       {
