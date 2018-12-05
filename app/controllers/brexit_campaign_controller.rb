@@ -34,12 +34,22 @@ class BrexitCampaignController < ApplicationController
     @campaign = Organisation.find!("/government/organisations/cabinet-office")
     setup_content_item_and_navigation_helpers(@campaign)
 
-    @taxons = ContentItem
-                .find!('/')
-                .linked_items('level_one_taxons')
-                .reject { |content_item| EXCLUDED_TAXONS.include?(content_item.base_path) }
-                .map { |content_item| Taxon.find(content_item.base_path) }
-                .map { |taxon| BrexitForCitizensPresenter.new(taxon) }
+    @level_one_taxons = ContentItem
+                          .find!('/')
+                          .linked_items('level_one_taxons')
+                          .reject { |content_item| EXCLUDED_TAXONS.include?(content_item.base_path) }
+                          .map { |content_item| Taxon.find(content_item.base_path) }
+                          .map { |taxon| BrexitForCitizensPresenter.new(taxon) }
+
+    @taxons = @level_one_taxons
+                .take(6)
+
+    @all_topics_links = @level_one_taxons.map do |taxon|
+      {
+        path: "https://finder-frontend-pr-706.herokuapp.com/prepare-individual-uk-leaving-eu?topic=#{taxon.base_path}",
+        text: taxon.title
+      }
+    end
 
     @show = Organisations::ShowPresenter.new(@campaign)
     @header = Organisations::HeaderPresenter.new(@campaign)
