@@ -4,8 +4,7 @@
       <div class="grid-row">
         <% taxons_group.each do |taxon| %>
           <div class="column-half">
-            <div class="campaign__taxon--b">
-              <img src="https://assets.publishing.service.gov.uk/government/assets/placeholder.jpg" />
+            <div class="campaign__taxon <%= "campaign__taxon--variable-border" if row_index.eql?(0) %> ">
               <%= render "govuk_publishing_components/components/heading", {
                 text: taxon.title,
                 font_size: 24,
