@@ -14,7 +14,7 @@
               } %>
 
               <% if taxon.content.empty? %>
-                <p class="campaign__no-content">There's no Brexit guidance on this topic yet - <a href="https://finder-frontend-pr-706.herokuapp.com/prepare-individual-uk-leaving-eu?topic=<%= taxon.base_path %>">sign up for updates about <%= taxon.title.downcase %></a>
+                <p class="campaign__no-content">There's no EU Exit guidance on this topic yet - <a href="https://finder-frontend-pr-706.herokuapp.com/prepare-individual-uk-leaving-eu?topic=<%= taxon.base_path %>">sign up for updates about <%= taxon.title.downcase %></a>
               <% else %>
                 <%= render "components/topic-list", {
                   items: taxon.content
