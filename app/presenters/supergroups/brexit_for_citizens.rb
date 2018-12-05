@@ -9,9 +9,10 @@ module Supergroups
     end
 
     def tagged_content(taxon_id)
-      @content = search_response_including_brexit(taxon_id, document_types, 3)
+      @content = search_response_including_brexit(taxon_id, document_types, 30)
                    .documents
                    .select { |document| BASE_PATHS.include?(document.base_path) }
+                   .first(3)
     end
 
   private
