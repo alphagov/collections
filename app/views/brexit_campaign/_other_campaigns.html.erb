@@ -1,13 +1,21 @@
-<% highlight_box_links = @campaign_links[:contents_list_links].map{ |link| link[:path] = link[:href]; { link: link, metadata: {} } } %>
-
 <div class="gem-c-related-navigation" style="padding-top: 20px">
   <h2 id="related-nav-<%= @campaign_links[:section_title] %>-<%= @campaign_links[:random] %>"
       data-track-count="sidebarRelatedItemSection"
-      class="gem-c-taxonomy-navigation__heading">
+      class="gem-c-contents-list__title">
     <%= @campaign_links[:section_title] %>
   </h2>
 
-  <%= render "govuk_publishing_components/components/highlight_boxes", {
-      inverse: true,
-      items: highlight_box_links } %>
+  <style type="text/css">
+    .gem-c-contents-list, .gem-c-contents-list__list-item {
+      list-style-type: disc;
+    }
+
+    .gem-c-contents-list__list-item--dashed:before {
+      content: "";
+      margin-left: 0;
+      padding: 0;
+    }
+  </style>
+
+  <%= render "govuk_publishing_components/components/contents_list", contents: @campaign_links[:contents_list_links], hide_title: true %>
 </div>
