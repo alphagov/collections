@@ -8,6 +8,10 @@
   }
 }
 
+.campaign__taxon--b {
+  border: 0;
+}
+
 .campaign__no-content {
   @include core-19;
   margin-bottom: $gutter * 1.5;
