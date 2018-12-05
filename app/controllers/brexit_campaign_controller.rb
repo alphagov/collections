@@ -13,7 +13,6 @@ class BrexitCampaignController < ApplicationController
     @show = Organisations::ShowPresenter.new(@campaign)
     @header = Organisations::HeaderPresenter.new(@campaign)
 
-    # @documents = Organisations::DocumentsPresenter.new(@campaign)
     @documents = Organisations::DocumentsPresenter.new(@campaign)
 
     render :show, locals: {
