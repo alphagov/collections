@@ -4,7 +4,8 @@ class BrexitForCitizensPresenter
     "/transport" => "Includes driving licences, flying to the EU.",
     "/environment" => "Includes environmental standards.",
     "/business-and-industry" => "Includes consumer rights and banking.",
-    "/education" => "Includes studying abroad and Erasmus+."
+    "/education" => "Includes studying abroad and Erasmus+.",
+    "/going-and-being-abroad" => "Includes passports, pet travel and mobile roaming fees."
   }.freeze
 
   attr_reader :taxon
