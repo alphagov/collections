@@ -22,3 +22,11 @@
   margin-bottom: $gutter * 1.5;
   padding-top: $gutter-one-third;
 }
+
+.campaign__more-guidance {
+  @include core-19;
+}
+
+.gem-c-contents-list, .gem-c-contents-list__list-item {
+  @include core-19;
+}
