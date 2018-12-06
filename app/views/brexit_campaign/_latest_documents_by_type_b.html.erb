@@ -5,18 +5,12 @@
         <% taxons_group.each do |taxon| %>
           <div class="column-half">
             <div class="campaign__taxon <%= "campaign__taxon--variable-border" if row_index.eql?(0) %> ">
-              <%= render "govuk_publishing_components/components/heading", {
-                text: taxon.title,
-                font_size: 24,
-                padding: true,
-                heading_level: 3
-              } %>
+              <h3 class="gem-c-heading  gem-c-heading--font-size-24 gem-c-heading--padding">
+                <a href="https://finder-frontend-pr-706.herokuapp.com/prepare-individual-uk-leaving-eu?topic=<%= taxon.base_path %>"
+                   aria-label="<%= t('campaign.see_more_in_taxon', topic: taxon.title.downcase) %>"><%= taxon.title %></a>
+                </h3>
 
               <p class="campaign__no-content"><%= taxon.description %></p>
-
-              <a href="https://finder-frontend-pr-706.herokuapp.com/prepare-individual-uk-leaving-eu?topic=<%= taxon.base_path %>"
-                class="campaign__see-more"
-                aria-label="<%= t('campaign.see_more_in_taxon', topic: taxon.title.downcase) %>"><%= t('campaign.see_more') %></a>
             </div>
           </div>
         <% end %>
