@@ -1,5 +1,6 @@
 class Taxon
   attr_reader :content_item
+  attr_writer :description
 
   delegate(
     :content_id,
