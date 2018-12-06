@@ -10,7 +10,6 @@ class BrexitCampaignController < ApplicationController
   ).freeze
 
   FEATURED_TAXONS = %w(
-    /going-and-being-abroad
     /health-and-social-care
     /transport
     /environment
