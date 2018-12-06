@@ -1,11 +1,17 @@
 class BrexitForCitizensPresenter
   FEATURED_TAXONS_DESCRIPTIONS = {
-    "/health-and-social-care" => "Includes health insurance and healthcare in the EU.",
-    "/transport" => "Includes driving licences, flying to the EU.",
-    "/environment" => "Includes environmental standards.",
     "/business-and-industry" => "Includes consumer rights and banking.",
+    "/childcare-parenting" => "Includes divorce and child maintenance.",
+    "/crime-justice-and-law" => "Includes legal services and prisoner transfer.",
     "/education" => "Includes studying abroad and Erasmus+.",
-    "/going-and-being-abroad" => "Includes passports, pet travel and mobile roaming fees."
+    "/environment" => "Includes environmental standards.",
+    "/going-and-being-abroad" => "Includes passports, pet travel and mobile roaming fees.",
+    "/health-and-social-care" => "Includes health insurance and healthcare in the EU.",
+    "/housing-local-and-community" => "Includes owning property in the EU.",
+    "/money" => "Includes bank accounts, credit card fees and sending money abroad.",
+    "/society-and-culture" => "Includes internet streaming and arts funding.",
+    "/transport" => "Includes driving licences, flying to the EU.",
+    "/work" => "Includes workplace rights."
   }.freeze
 
   attr_reader :taxon

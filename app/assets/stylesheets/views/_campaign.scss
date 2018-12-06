@@ -35,3 +35,13 @@
 .gem-c-contents-list, .gem-c-contents-list__list-item {
   @include core-19;
 }
+
+.gem-c-contents-list, .gem-c-contents-list__list-item {
+  list-style-type: disc;
+}
+
+.gem-c-contents-list__list-item--dashed:before {
+  content: "";
+  margin-left: 0;
+  padding: 0;
+}
