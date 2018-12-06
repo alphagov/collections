@@ -52,4 +52,33 @@ describe Taxon do
       end
     end
   end
+
+  context "with a child in the alpha phase" do
+    setup do
+      content_item = ContentItem.new(
+        student_finance_taxon(
+          "links" => {
+            "child_taxons" => [
+              student_sponsorship_taxon(
+                "title" => "Foo",
+                "phase" => "live",
+                "base_path" => "/topic/business-tax/foo",
+              ),
+              student_loans_taxon(
+                "title" => "Bar",
+                "phase" => "alpha",
+                "base_path" => "/topic/business-tax/bar",
+              ),
+            ]
+          }
+        )
+      )
+      @taxon = Taxon.new(content_item)
+    end
+
+    it "ignores children in the alpha phase" do
+      assert_equal 'Foo', @taxon.child_taxons[0].title
+      assert_equal 1, @taxon.child_taxons.length
+    end
+  end
 end

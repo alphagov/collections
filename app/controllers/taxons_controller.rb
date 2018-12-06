@@ -1,6 +1,8 @@
 class TaxonsController < ApplicationController
   include TaxonPagesTestable
 
+  rescue_from Taxon::InAlphaPhase, with: :error_404
+
   def show
     setup_content_item_and_navigation_helpers(taxon)
 
