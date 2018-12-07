@@ -47,10 +47,7 @@ Rails.application.routes.draw do
     to: "services_and_information#index",
     as: :services_and_information
 
-  get "/government/brexit/citizens-in-the-uk",
-    to: "brexit_campaign#show"
-
-  get "/prepare-uk-leaving-eu",
+  get "/prepare-eu-exit-live-UK",
     to: "brexit_campaign#show"
 
   get "/government/people/:name", to: "people#show"
