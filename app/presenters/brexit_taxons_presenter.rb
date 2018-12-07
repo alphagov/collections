@@ -1,12 +1,11 @@
 class BrexitTaxonsPresenter
   FEATURED_TAXONS = %w(
     /going-and-being-abroad
-    /health-and-social-care
+    /crime-justice-and-law
     /transport
     /environment
     /business-and-industry
     /education
-    /crime-justice-and-law
   ).freeze
 
   def call
