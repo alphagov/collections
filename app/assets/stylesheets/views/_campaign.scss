@@ -1,5 +1,6 @@
 .campaign__taxon {
   border-top: 2px solid $govuk-blue;
+  margin-bottom: $gutter * 1.5;
 
   @include media(tablet) {
     &--variable-border {
@@ -10,6 +11,11 @@
 
 .campaign__taxon--b {
   border: 0;
+}
+
+.campaign__taxon-title {
+  @include bold-24;
+  padding: $gutter-half 0;
 }
 
 .campaign__description {

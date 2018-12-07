@@ -1,32 +1,18 @@
-<section class="grid-row">
-  <div class="column-two-thirds">
-    <% @taxons.in_groups_of(2, false).each_with_index do |taxons_group, row_index| %>
-      <div class="grid-row">
-        <% taxons_group.each do |taxon| %>
-          <div class="column-half">
-            <div class="campaign__taxon <%= "campaign__taxon--variable-border" if row_index.eql?(0) %> ">
-              <h3 class="gem-c-heading  gem-c-heading--font-size-24 gem-c-heading--padding">
-                <a href="https://finder-frontend-pr-706.herokuapp.com/prepare-individual-uk-leaving-eu?topic=<%= taxon.base_path %>"
-                   aria-label="<%= t('campaign.see_more_in_taxon', topic: taxon.title.downcase) %>"><%= taxon.title %></a>
-                </h3>
+<section>
+  <% @taxons.in_groups_of(3, false).each_with_index do |taxons_group, row_index| %>
+    <div class="grid-row">
+      <% taxons_group.each do |taxon| %>
+        <div class="column-one-third">
+          <div class="campaign__taxon <%= "campaign__taxon--variable-border" if row_index.eql?(0) %> ">
+            <h3 class="campaign__taxon-title">
+              <a href="<%= taxon.finder_link %>"
+                 aria-label="<%= t('campaign.see_more_in_taxon', topic: taxon.title.downcase) %>"><%= taxon.title %></a>
+              </h3>
 
-              <p class="campaign__no-content"><%= taxon.description %></p>
-            </div>
+            <p class="campaign__no-content"><%= taxon.description %></p>
           </div>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
-  <div class="column-one-third">
-    <%= render "govuk_publishing_components/components/heading", {
-      text: "All topics",
-      padding: true,
-      font_size: 24,
-      heading_level: 2
-    } %>
-
-    <%= render 'components/taxon-list', {
-        items: @all_topics_links
-    } %>
-  </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
 </section>

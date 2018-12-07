@@ -42,6 +42,10 @@ class BrexitForCitizensPresenter
     I18n.t("campaign.taxon_descriptions.#{@taxon.base_path.gsub("/", "")}")
   end
 
+  def finder_link
+    "/prepare-eu-exit-live-uk#{ taxon.base_path }"
+  end
+
 private
 
   def brexit_for_citizen_documents
