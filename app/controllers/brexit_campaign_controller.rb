@@ -16,7 +16,6 @@ private
 
   def campaign_links
     {
-      random: SecureRandom.hex(4),
       section_title: "There's different guidance if you're:",
       contents_list_links: [
         { text: "running a business", href: "https://tiger-team-5-campaign-business-ready.glitch.me/" },
