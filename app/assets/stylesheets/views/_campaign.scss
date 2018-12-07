@@ -1,6 +1,6 @@
 .campaign__taxon {
   border-top: 2px solid $govuk-blue;
-  margin-bottom: $gutter * 1.5;
+  margin-bottom: $gutter * 2;
 
   @include media(tablet) {
     &--variable-border {
@@ -20,12 +20,6 @@
 
 .campaign__description {
   @include core-19;
-  margin-bottom: $gutter-one-third;
-}
-
-.campaign__no-content {
-  @include core-19;
-  margin-bottom: $gutter * 1.5;
 }
 
 .campaign__see-more {
