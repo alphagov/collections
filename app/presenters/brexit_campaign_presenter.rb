@@ -18,11 +18,11 @@ class BrexitCampaignPresenter
   end
 
   def description
-    I18n.t("campaign.taxon_descriptions.#{taxon.base_path.gsub("/", "")}")
+    I18n.t("campaign.taxon_descriptions.#{taxon.base_path.delete('/')}")
   end
 
   def finder_link
-    "/prepare-eu-exit-live-uk#{ taxon.base_path }"
+    "/prepare-eu-exit-live-uk#{taxon.base_path}"
   end
 
 private

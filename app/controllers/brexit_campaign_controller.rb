@@ -1,5 +1,4 @@
 class BrexitCampaignController < ApplicationController
-
   def show
     @campaign = Organisation.find!("/government/organisations/cabinet-office")
     setup_content_item_and_navigation_helpers(@campaign)
@@ -13,7 +12,7 @@ class BrexitCampaignController < ApplicationController
     }
   end
 
-  private
+private
 
   def campaign_links
     {

@@ -52,7 +52,7 @@ module Supergroups
       /guidance/passport-rules-for-travel-to-europe-after-brexit
       /guidance/pet-travel-to-europe-after-brexit
       /guidance/prepare-to-drive-in-the-eu-after-brexit
-    )
+    ).freeze
 
     def search_response_including_brexit(content_id, filter_content_store_document_type, number_of_links = 5)
       params = {
