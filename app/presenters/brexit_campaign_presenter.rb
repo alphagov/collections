@@ -1,4 +1,4 @@
-class BrexitForCitizensPresenter
+class BrexitCampaignPresenter
   FEATURED_TAXONS_DESCRIPTIONS = {
     "/business-and-industry" => "Includes consumer rights and banking.",
     "/childcare-parenting" => "Includes divorce and child maintenance.",
@@ -16,14 +16,8 @@ class BrexitForCitizensPresenter
 
   attr_reader :taxon
   delegate(
-    :content_id,
     :title,
-    :description,
     :base_path,
-    :child_taxons,
-    :live_taxon?,
-    :section_content,
-    :organisations,
     to: :taxon
   )
 
