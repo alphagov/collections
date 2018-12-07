@@ -34,20 +34,16 @@
   padding-top: $gutter-one-third;
 }
 
-.campaign__more-guidance {
+.campaign__other-campaigns-title {
   @include core-19;
+  margin-bottom: $gutter-one-third;
 }
 
-.gem-c-contents-list, .gem-c-contents-list__list-item {
+.campaign__other-campaigns-list {
+  padding-left: $gutter-two-thirds;
+}
+
+.campaign__other-campaigns-item {
   @include core-19;
-}
-
-.gem-c-contents-list, .gem-c-contents-list__list-item {
-  list-style-type: disc;
-}
-
-.gem-c-contents-list__list-item--dashed:before {
-  content: "";
-  margin-left: 0;
-  padding: 0;
+  margin-bottom: 5px;
 }

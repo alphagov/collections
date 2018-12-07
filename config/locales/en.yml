@@ -88,19 +88,14 @@ en:
     page_title: "Prepare for EU Exit if you live in the UK"
     see_more_in_taxon: "See more in %{topic}"
     taxon_descriptions:
-      business-and-industry: "Includes consumer rights and banking."
-      childcare-parenting: "Includes divorce and child maintenance."
-      crime-justice-and-law: "Includes legal services and prisoner transfer."
-      education: "Includes studying abroad and Erasmus+."
-      environment: "Includes environmental standards."
-      going-and-being-abroad: "Includes passports, pet travel and mobile roaming fees."
-      health-and-social-care: "Includes health insurance and healthcare in the EU."
-      housing-local-and-community: "Includes owning property in the EU."
-      money: "Includes bank accounts, credit card fees and sending money abroad."
-      society-and-culture: "Includes internet streaming and arts funding."
-      transport: "Includes driving licences, flying to the EU."
-      work: "Includes workplace rights."
-  
+      business-and-industry: "Includes consumer rights, banking and selling online"
+      crime-justice-and-law: "Includes data protection and legal services"
+      education: "Includes studying abroad and Erasmus+"
+      environment: "Includes environmental standards and food labels"
+      going-and-being-abroad: "Includes passports, pet travel and mobile roaming fees"
+      health-and-social-care: "Includes healthcare in the EU, medicine and health insurance"
+      transport: "Includes driving licenses, vehicle insurance and flying to the EU"
+
   language_names:
     en: English
     cy: Cymraeg

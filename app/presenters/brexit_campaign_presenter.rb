@@ -1,19 +1,4 @@
 class BrexitCampaignPresenter
-  FEATURED_TAXONS_DESCRIPTIONS = {
-    "/business-and-industry" => "Includes consumer rights and banking.",
-    "/childcare-parenting" => "Includes divorce and child maintenance.",
-    "/crime-justice-and-law" => "Includes legal services and prisoner transfer.",
-    "/education" => "Includes studying abroad and Erasmus+.",
-    "/environment" => "Includes environmental standards.",
-    "/going-and-being-abroad" => "Includes passports, pet travel and mobile roaming fees.",
-    "/health-and-social-care" => "Includes health insurance and healthcare in the EU.",
-    "/housing-local-and-community" => "Includes owning property in the EU.",
-    "/money" => "Includes bank accounts, credit card fees and sending money abroad.",
-    "/society-and-culture" => "Includes internet streaming and arts funding.",
-    "/transport" => "Includes driving licences, flying to the EU.",
-    "/work" => "Includes workplace rights."
-  }.freeze
-
   attr_reader :taxon
   delegate(
     :title,
@@ -33,7 +18,7 @@ class BrexitCampaignPresenter
   end
 
   def description
-    I18n.t("campaign.taxon_descriptions.#{@taxon.base_path.gsub("/", "")}")
+    I18n.t("campaign.taxon_descriptions.#{taxon.base_path.gsub("/", "")}")
   end
 
   def finder_link

@@ -6,6 +6,7 @@ class BrexitTaxonsPresenter
     /environment
     /business-and-industry
     /education
+    /crime-justice-and-law
   ).freeze
 
   def call
