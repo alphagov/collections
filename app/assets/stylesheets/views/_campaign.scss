@@ -9,10 +9,6 @@
   }
 }
 
-.campaign__taxon--b {
-  border: 0;
-}
-
 .campaign__taxon-title {
   @include bold-24;
   padding: $gutter-half 0;
@@ -22,10 +18,9 @@
   @include core-19;
 }
 
-.campaign__see-more {
-  display: block;
-  margin-bottom: $gutter * 1.5;
-  padding-top: $gutter-one-third;
+.campaign__other-campaigns {
+  border-top: 2px solid $govuk-blue;
+  padding-top: $gutter-two-thirds;
 }
 
 .campaign__other-campaigns-title {

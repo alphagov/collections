@@ -1,4 +1,4 @@
-class BrexitCampaignPresenter
+class BrexitTaxonPresenter
   attr_reader :taxon
   delegate(
     :title,
@@ -15,6 +15,6 @@ class BrexitCampaignPresenter
   end
 
   def finder_link
-    "/prepare-eu-exit-live-uk#{taxon.base_path}"
+    "https://finder-frontend-pr-706.herokuapp.com/prepare-individual-uk-leaving-eu?topic=#{taxon.base_path}"
   end
 end

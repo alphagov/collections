@@ -1,6 +1,6 @@
 require 'test_helper'
 
-describe BrexitCampaignPresenter do
+describe BrexitTaxonPresenter do
   include TaxonHelpers
 
   let(:content_hash) { education_taxon }
