@@ -6,8 +6,9 @@ class BrexitTaxonPresenter
     to: :taxon
   )
 
-  def initialize(taxon)
+  def initialize(taxon, index = nil)
     @taxon = taxon
+    @index = index
   end
 
   def description
@@ -16,5 +17,13 @@ class BrexitTaxonPresenter
 
   def finder_link
     "/prepare-eu-exit-live-uk#{taxon.base_path}"
+  end
+
+  def data_attributes
+    {
+      "track-category": "navGridContentClicked",
+      "track-action": @index,
+      "track-label": taxon.title
+    }
   end
 end
