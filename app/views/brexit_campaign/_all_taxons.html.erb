@@ -1,0 +1,21 @@
+<section>
+  <% if @other_taxons.any? %>
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <%= render partial: 'featured_taxons', locals: { display_full_width: false } %>
+      </div>
+      <div class="column-one-third">
+        <% @other_taxons.each do |taxon| %>
+          <h3 class="campaign__other-topics-title">
+            <a href="<%= taxon.finder_link %>"
+               aria-label="<%= t('campaign.see_more_in_taxon', topic: taxon.title.downcase) %>"><%= taxon.title %></a>
+          </h3>
+        <% end %>
+      </div>
+    </div>
+  <% else %>
+    <div class="grid-row">
+      <%= render partial: 'featured_taxons' %>
+    </div>
+  <% end %>
+</section>

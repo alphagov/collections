@@ -3,7 +3,9 @@ class BrexitCampaignController < ApplicationController
     @campaign = Organisation.find!("/government/organisations/cabinet-office")
     setup_content_item_and_navigation_helpers(@campaign)
 
-    @taxons = BrexitTaxonsPresenter.new.call
+    presenter = BrexitTaxonsPresenter.new
+    @taxons = presenter.featured_taxons
+    @other_taxons = presenter.other_taxons
 
     @campaign_links = campaign_links
 

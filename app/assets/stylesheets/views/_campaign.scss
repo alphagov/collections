@@ -36,3 +36,8 @@
   @include core-19;
   margin-bottom: 5px;
 }
+
+.campaign__other-topics-title {
+  @include core-19;
+  margin-bottom: $gutter-one-third;
+}
