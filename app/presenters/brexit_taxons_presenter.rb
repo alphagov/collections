@@ -11,7 +11,7 @@ class BrexitTaxonsPresenter
   def featured_taxons
     @featured_taxons ||= FEATURED_TAXONS
       .map { |base_path| Taxon.find(base_path) }
-      .map { |taxon| BrexitTaxonPresenter.new(taxon) }
+      .each.with_index(1).map { |taxon, index| BrexitTaxonPresenter.new(taxon, index) }
   end
 
   def other_taxons

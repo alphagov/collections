@@ -6,8 +6,9 @@ class BrexitTaxonPresenter
     to: :taxon
   )
 
-  def initialize(taxon)
+  def initialize(taxon, index = false)
     @taxon = taxon
+    @index = index if index
   end
 
   def description
@@ -16,5 +17,13 @@ class BrexitTaxonPresenter
 
   def finder_link
     "https://finder-frontend-pr-706.herokuapp.com/prepare-individual-uk-leaving-eu?topic=#{taxon.base_path}"
+  end
+
+  def data_attributes
+    {
+      "track-category": "navGridContentClicked",
+      "track-action": @index,
+      "track-label": taxon.title
+    }
   end
 end
