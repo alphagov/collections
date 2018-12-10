@@ -1,7 +1,18 @@
+require 'gds_api/test_helpers/content_item_helpers'
+
 module TaxonHelpers
+  include GdsApi::TestHelpers::ContentItemHelpers
   # This taxon has grandchildren
   def funding_and_finance_for_students_taxon(params = {})
     fetch_and_validate_taxon(:funding_and_finance_for_students, params)
+  end
+
+  def generic_taxon(base_path)
+    content_item_for_base_path(base_path)
+  end
+
+  def education_taxon
+    content_item_for_base_path('/education')
   end
 
   # This taxon does not have grandchildren
