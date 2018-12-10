@@ -6,11 +6,18 @@
       </div>
       <div class="column-one-third">
         <h3 class="campaign__other-topics-title"><%= t("campaign.other_topics") %></h3>
-        <ul class="campaign__other-topics-list">
+        <ul class="campaign__other-topics-list" data-module="track-click">
         <% @other_taxons.each do |taxon| %>
           <li class="campaign__other-topics-item">
-            <a href="<%= taxon.finder_link %>"
-               aria-label="<%= t('campaign.see_more_in_taxon', topic: taxon.title.downcase) %>"><%= taxon.title %></a>
+            <%= link_to(
+              taxon.title,
+              taxon.finder_link,
+              "aria-label": "#{t('campaign.see_more_in_taxon', topic: taxon.title.downcase)}",
+              data: {
+                "track-category": "sideNavTopics",
+                "track-action": taxon.title
+              }
+            ) %>
           </li>
         <% end %>
         </ul>

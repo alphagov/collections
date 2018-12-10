@@ -6,7 +6,12 @@
   <div class="full-page-width-wrapper">
       <%= render "components/email-link", {
         text: t('campaign.email_signup'),
-        href: "https://www.gov.uk/email-signup/?topic=/government/brexit"
+        href: "https://www.gov.uk/email-signup/?topic=/government/brexit",
+        data: {
+          module: "track-click",
+          track_category: "emailAlertLinkClicked",
+          track_action: "/government/brexit"
+        }
       } %>
   </div>
 </div>
