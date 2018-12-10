@@ -1,4 +1,5 @@
 <% content_for :page_class, "taxon-page taxon-page--grid" %>
+<% content_for :brexit_taxon, presented_taxon.is_brexit? %>
 <%=
   render(
     partial: 'common',
@@ -18,6 +19,9 @@
       } %>
     </div>
     <div class="column-two-thirds">
+      <% if content_for(:brexit_taxon) %>
+        <%= render partial: 'brexit_preparation' %>
+      <% end %>
       <% presented_taxon.sections.each do |section| %>
         <% if section[:show_section] %>
           <div id="<%= section[:id] %>" class="taxon-page__section-group">
@@ -59,4 +63,3 @@
     </div>
   </div>
 </div>
-

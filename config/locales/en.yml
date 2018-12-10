@@ -85,6 +85,12 @@ en:
     see_all_in_topic: "See more %{type} in this topic"
     in_page_nav_title: "On this page"
     in_page_sub_topic_title: "Sub-topics"
+    brexit:
+      prepare_for_eu_exit: "Prepare for EU Exit"
+      business_preparations: "Prepare your business for the UK leaving the EU"
+      uk_resident_preparations: "Prepare for EU Exit if you live in the UK"
+      uk_nationals_in_eu_preparations: "Living in Europe after the UK leaves the EU"
+      eu_citizens_in_uk_preparations: "Continue to live in the UK after it leaves the EU"
   campaign:
     email_signup: "Sign up for updates about EU Exit on all GOV.UK pages"
     see_more: "See more"
@@ -98,6 +104,7 @@ en:
       health-and-social-care: "Includes healthcare in the EU, medicine and health insurance"
       transport: "Includes driving licences, vehicle insurance and flying to the EU"
       work: "Includes workplace rights and working in the EU"
+
   language_names:
     en: English
     cy: Cymraeg

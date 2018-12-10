@@ -1,5 +1,6 @@
 <% content_for :page_class, "taxon-page taxon-page--grid" %>
 <% content_for :is_taxon_with_subtopics, presented_taxon.show_subtopic_grid? %>
+<% content_for :brexit_taxon, presented_taxon.is_brexit? %>
 <%=
   render(
     partial: 'common',
@@ -10,6 +11,10 @@
 %>
 
 <div class="full-page-width-wrapper">
+  <% if content_for(:brexit_taxon) %>
+    <%= render partial: 'brexit_preparation' %>
+  <% end %>
+
   <% presented_taxon.sections.each do |section| %>
     <% if section[:show_section] %>
       <div class="taxon-page__section-group">
