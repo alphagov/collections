@@ -10,7 +10,7 @@ describe BrexitTaxonPresenter do
 
   describe '#finder_link' do
     it 'should return a link for the finder' do
-      assert_equal("/prepare-eu-exit-live-uk/education", presenter.finder_link)
+      assert_equal("/prepare-eu-exit/education", presenter.finder_link)
     end
   end
 

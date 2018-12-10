@@ -15,6 +15,6 @@ class BrexitTaxonPresenter
   end
 
   def finder_link
-    "/prepare-eu-exit-live-uk#{taxon.base_path}"
+    "/prepare-eu-exit#{taxon.base_path}"
   end
 end
