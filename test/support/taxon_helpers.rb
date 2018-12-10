@@ -7,6 +7,10 @@ module TaxonHelpers
     fetch_and_validate_taxon(:funding_and_finance_for_students, params)
   end
 
+  def generic_taxon(base_path)
+    content_item_for_base_path(base_path)
+  end
+
   def education_taxon
     content_item_for_base_path('/education')
   end

@@ -87,6 +87,7 @@ en:
     see_more: "See more"
     page_title: "Prepare for EU Exit if you live in the UK"
     see_more_in_taxon: "See more in %{topic}"
+    other_topics: "Other EU Exit topics"
     taxon_descriptions:
       business-and-industry: "Includes consumer rights, banking and selling online"
       crime-justice-and-law: "Includes data protection and legal services"

@@ -36,3 +36,23 @@
   @include core-19;
   margin-bottom: 5px;
 }
+
+.campaign__other-topics-title {
+  @include bold-24;
+  padding: $gutter-half 0;
+  border-top: 2px solid $govuk-blue;
+
+  @include media(tablet) {
+    border: none;
+  }
+}
+
+.campaign__other-topics-list {
+  list-style-type: none;
+  margin-bottom: $gutter * 1.5;
+}
+
+.campaign__other-topics-item {
+  @include core-19;
+  margin-bottom: $gutter-one-third;
+}
