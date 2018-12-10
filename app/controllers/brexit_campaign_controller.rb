@@ -1,6 +1,6 @@
 class BrexitCampaignController < ApplicationController
   def show
-    @campaign = Organisation.find!("/government/organisations/cabinet-office")
+    @campaign = Campaign.find!("/prepare-eu-exit")
     setup_content_item_and_navigation_helpers(@campaign)
 
     presenter = BrexitTaxonsPresenter.new
