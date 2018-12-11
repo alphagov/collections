@@ -1,0 +1,20 @@
+<div class="campaign__other-campaigns">
+    <h2 class="campaign__other-campaigns-title">
+      <%= @campaign_links[:section_title] %>
+    </h2>
+
+    <ul class="campaign__other-campaigns-list" data-module="track-click">
+      <% @campaign_links[:contents_list_links].each do |link| %>
+        <li class="campaign__other-campaigns-item">
+          <%= link_to(
+            link[:text],
+            link[:href],
+            data: {
+              "track-category": "contentsClicked",
+              "track-action": link[:text]
+            }
+          ) %>
+        </li>
+      <% end %>
+    </ul>
+</div>

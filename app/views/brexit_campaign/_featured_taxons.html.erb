@@ -1,0 +1,14 @@
+<% @taxons.in_groups_of(local_assigns.fetch(:display_full_width, true) ? 3 : 2, false).each_with_index do |taxons_group, row_index| %>
+  <div class="grid-row" data-module="track-click">
+    <% taxons_group.each do |taxon| %>
+      <div class="<%= local_assigns.fetch(:display_full_width, true) ? 'column-one-third' : 'column-half' %>">
+        <div class="campaign__taxon <%= "campaign__taxon--variable-border" if row_index.eql?(0) %> ">
+          <h3 class="campaign__taxon-title">
+            <%= link_to(taxon.title, taxon.finder_link, data: taxon.data_attributes, "aria-label": "#{t('campaign.see_more_in_taxon', topic: taxon.title.downcase)}") %>
+          </h3>
+          <p class="campaign__description"><%= taxon.description %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
