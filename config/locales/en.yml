@@ -89,12 +89,12 @@ en:
     other_topics: "Other EU Exit topics"
     taxon_descriptions:
       business-and-industry: "Includes consumer rights, banking and selling online"
-      crime-justice-and-law: "Includes data protection and legal services"
       education: "Includes studying abroad and Erasmus+"
       environment: "Includes environmental standards and food labels"
       going-and-being-abroad: "Includes passports, pet travel and mobile roaming fees"
       health-and-social-care: "Includes healthcare in the EU, medicine and health insurance"
       transport: "Includes driving licenses, vehicle insurance and flying to the EU"
+      work: "Includes workplace rights and working in the EU"
   language_names:
     en: English
     cy: Cymraeg
