@@ -83,7 +83,7 @@ en:
     in_page_nav_title: "On this page"
     in_page_sub_topic_title: "Sub-topics"
   campaign:
-    email_signup: "Sign up for updates about Brexit on all GOV.UK pages"
+    email_signup: "Sign up for updates about EU Exit on all GOV.UK pages"
     see_more: "See more"
     see_more_in_taxon: "See more in %{topic}"
     other_topics: "Other EU Exit topics"
