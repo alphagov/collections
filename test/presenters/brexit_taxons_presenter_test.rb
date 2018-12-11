@@ -5,7 +5,7 @@ describe BrexitTaxonsPresenter do
 
   FEATURED_TAXONS = [
     { "title" => "Going and being abroad", "base_path" => "/going-and-being-abroad" },
-    { "title" => "Crime, justice and law", "base_path" => "/crime-justice-and-law" },
+    { "title" => "Work", "base_path" => "/work" },
     { "title" => "Transport", "base_path" => "/transport" },
     { "title" => "Environment", "base_path" => "/environment" },
     { "title" => "Business and industry", "base_path" => "/business-and-industry" },

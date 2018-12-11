@@ -1,7 +1,7 @@
 class BrexitTaxonsPresenter
   FEATURED_TAXONS = %w(
     /going-and-being-abroad
-    /crime-justice-and-law
+    /work
     /transport
     /environment
     /business-and-industry
