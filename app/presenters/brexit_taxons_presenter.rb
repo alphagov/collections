@@ -8,6 +8,10 @@ class BrexitTaxonsPresenter
     /education
   ).freeze
 
+  REJECTED_TAXONS = %w(
+    /government/all
+  ).freeze
+
   def featured_taxons
     @featured_taxons ||= FEATURED_TAXONS
       .map { |base_path| ContentItem.find!(base_path) }
@@ -19,7 +23,7 @@ class BrexitTaxonsPresenter
     @other_taxons ||= ContentItem.find!('/')
       .linked_items('level_one_taxons')
       .reject { |content_item| FEATURED_TAXONS.include?(content_item.base_path) }
-      .reject { |content_item| content_item.base_path == "/government/all" }
+      .reject { |content_item| REJECTED_TAXONS.include?(content_item.base_path) }
       .select { |content_item| search_response_including_brexit(content_item.content_id, document_types).total.positive? }
       .map { |content_item| BrexitTaxonPresenter.new(content_item) }
   end
