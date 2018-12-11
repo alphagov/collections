@@ -12,16 +12,16 @@ describe BrexitTaxonsPresenter do
     { "title" => "Education", "base_path" => "/education" }
   ].freeze
 
-  GOV_TAXONS = [{ "title" => "Government", "base_path" => "/government/all" }].freeze
+  REJECTED_TAXONS = [{ "title" => "Government", "base_path" => "/government/all" }].freeze
 
   let(:presenter) { described_class.new }
 
   describe '#featured_taxons' do
     it 'should return the featured taxons presenters' do
       FEATURED_TAXONS.each do |taxon|
-        Taxon.stubs(:find)
+        ContentItem.stubs(:find!)
           .with(taxon.fetch('base_path'))
-          .returns(Taxon.new(ContentItem.new(generic_taxon(taxon.fetch('base_path')))))
+          .returns(ContentItem.new(generic_taxon(taxon.fetch('base_path'))))
       end
 
       featured_taxons = presenter.featured_taxons
@@ -35,12 +35,30 @@ describe BrexitTaxonsPresenter do
   end
 
   describe '#other_taxons' do
+    it 'should not process featured taxons when featured taxons are included in the content item' do
+      ContentItem.stubs(:find!)
+        .with('/')
+        .returns(ContentItem.new("links" => { "level_one_taxons" => FEATURED_TAXONS }))
+
+      Services.rummager.stubs(:search).never
+
+      presenter.other_taxons
+    end
+
+    it 'should not process rejected taxons when rejected taxons are included in the content item' do
+      ContentItem.stubs(:find!)
+        .with('/')
+        .returns(ContentItem.new("links" => { "level_one_taxons" => REJECTED_TAXONS }))
+
+      Services.rummager.stubs(:search).never
+
+      presenter.other_taxons
+    end
+
     it 'should return empty array when no other level one taxons have content tagged to Brexit' do
       ContentItem.stubs(:find!)
         .with('/')
-        .returns(ContentItem.new("links" => { "level_one_taxons" => [FEATURED_TAXONS, GOV_TAXONS].flatten }))
-
-      Services.rummager.stubs(:search).returns("total" => 0)
+        .returns(ContentItem.new("links" => { "level_one_taxons" => [FEATURED_TAXONS, REJECTED_TAXONS].flatten }))
 
       other_taxons = presenter.other_taxons
 
@@ -52,17 +70,11 @@ describe BrexitTaxonsPresenter do
         { "title" => "Brexit guidance", "base_path" => "/brexit-guidance" }
       ].freeze
 
-      OTHER_TAXONS.each do |taxon|
-        Taxon.stubs(:find)
-          .with(taxon.fetch('base_path'))
-          .returns(Taxon.new(ContentItem.new(generic_taxon(taxon.fetch('base_path')))))
-      end
-
       ContentItem.stubs(:find!)
         .with('/')
-        .returns(ContentItem.new("links" => { "level_one_taxons" => [FEATURED_TAXONS, GOV_TAXONS, OTHER_TAXONS].flatten }))
+        .returns(ContentItem.new("links" => { "level_one_taxons" => [FEATURED_TAXONS, REJECTED_TAXONS, OTHER_TAXONS].flatten }))
 
-      Services.rummager.stubs(:search).returns("total" => 1)
+      Services.rummager.stubs(:search).times(OTHER_TAXONS.count).returns("total" => 1)
 
       other_taxons = presenter.other_taxons
 
