@@ -20,7 +20,7 @@ private
     {
       section_title: "There's different guidance if you're:",
       contents_list_links: [
-        { text: "running a business", href: "https://euexitbusiness.campaign.gov.uk" },
+        { text: "running a business", href: "/business-uk-leaving-eu" },
         { text: "a UK national living in the EU", href: "/uk-nationals-living-eu" },
         { text: "an EU national living in the UK", href: "/staying-uk-eu-citizen" },
       ]
