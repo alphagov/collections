@@ -12,7 +12,7 @@ describe BrexitTaxonsPresenter do
     { "title" => "Education", "base_path" => "/education" }
   ].freeze
 
-  REJECTED_TAXONS = [{"title" => "Government", "base_path" => "/government/all" }].freeze
+  REJECTED_TAXONS = [{ "title" => "Government", "base_path" => "/government/all" }].freeze
 
   let(:presenter) { described_class.new }
 
