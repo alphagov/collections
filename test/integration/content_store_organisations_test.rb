@@ -24,7 +24,7 @@ class ContentStoreOrganisationsTest < ActionDispatch::IntegrationTest
 
   it "renders organisation filter" do
     assert page.has_css?('.filter-organisations-list__form')
-    assert page.has_css?('.filter-organisations-list__label', text: "What's the latestfrom")
+    assert page.has_css?('.filter-organisations-list__label', text: "What’s the latestfrom")
     assert page.has_css?('.filter-organisations-list__input')
   end
 
