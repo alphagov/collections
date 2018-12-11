@@ -19,9 +19,9 @@ describe BrexitTaxonsPresenter do
   describe '#featured_taxons' do
     it 'should return the featured taxons presenters' do
       FEATURED_TAXONS.each do |taxon|
-        Taxon.stubs(:find)
+        ContentItem.stubs(:find!)
           .with(taxon.fetch('base_path'))
-          .returns(Taxon.new(ContentItem.new(generic_taxon(taxon.fetch('base_path')))))
+          .returns(ContentItem.new(generic_taxon(taxon.fetch('base_path'))))
       end
 
       featured_taxons = presenter.featured_taxons
@@ -51,12 +51,6 @@ describe BrexitTaxonsPresenter do
       OTHER_TAXONS = [
         { "title" => "Brexit guidance", "base_path" => "/brexit-guidance" }
       ].freeze
-
-      OTHER_TAXONS.each do |taxon|
-        Taxon.stubs(:find)
-          .with(taxon.fetch('base_path'))
-          .returns(Taxon.new(ContentItem.new(generic_taxon(taxon.fetch('base_path')))))
-      end
 
       ContentItem.stubs(:find!)
         .with('/')

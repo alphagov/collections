@@ -10,9 +10,9 @@ class BrexitTaxonsPresenter
 
   def featured_taxons
     @featured_taxons ||= FEATURED_TAXONS
-      .map { |base_path| Taxon.find(base_path) }
-      .map
-      .with_index(1) { |taxon, index| BrexitTaxonPresenter.new(taxon, index) }
+      .map { |base_path| ContentItem.find!(base_path) }
+      .each_with_index
+      .map { |content_item, index| BrexitTaxonPresenter.new(content_item, index) }
   end
 
   def other_taxons
@@ -21,8 +21,7 @@ class BrexitTaxonsPresenter
       .reject { |content_item| FEATURED_TAXONS.include?(content_item.base_path) }
       .reject { |content_item| content_item.base_path == "/government/all" }
       .select { |content_item| search_response_including_brexit(content_item.content_id, document_types).total.positive? }
-      .map { |content_item| Taxon.find(content_item.base_path) }
-      .map { |taxon| BrexitTaxonPresenter.new(taxon) }
+      .map { |content_item| BrexitTaxonPresenter.new(content_item) }
   end
 
 private

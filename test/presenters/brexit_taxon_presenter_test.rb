@@ -5,8 +5,7 @@ describe BrexitTaxonPresenter do
 
   let(:content_hash) { education_taxon }
   let(:content_item) { ContentItem.new(content_hash) }
-  let(:taxon) { Taxon.new(ContentItem.new(content_hash)) }
-  let(:presenter) { described_class.new(taxon) }
+  let(:presenter) { described_class.new(content_item) }
 
   describe '#finder_link' do
     it 'should return a link for the finder' do
