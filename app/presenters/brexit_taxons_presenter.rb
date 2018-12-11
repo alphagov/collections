@@ -14,9 +14,13 @@ class BrexitTaxonsPresenter
 
   def featured_taxons
     @featured_taxons ||= FEATURED_TAXONS
-      .map { |base_path| ContentItem.find!(base_path) }
-      .each_with_index
-      .map { |content_item, index| BrexitTaxonPresenter.new(content_item, index) }
+      .to_enum
+      .with_index(1)
+      .map do |base_path, index|
+        content_item = ContentItem.find!(base_path)
+
+        BrexitTaxonPresenter.new(content_item, index)
+      end
   end
 
   def other_taxons
