@@ -4,12 +4,12 @@ describe BrexitTaxonsPresenter do
   include TaxonHelpers
 
   FEATURED_TAXONS = [
-    { "title" => "Going and being abroad", "base_path" => "/going-and-being-abroad" },
-    { "title" => "Work", "base_path" => "/work" },
-    { "title" => "Transport", "base_path" => "/transport" },
-    { "title" => "Environment", "base_path" => "/environment" },
-    { "title" => "Business and industry", "base_path" => "/business-and-industry" },
-    { "title" => "Education", "base_path" => "/education" }
+    { "title" => "Going and being abroad", "base_path" => "/going-and-being-abroad", "content_id" => "going-taxon-id" },
+    { "title" => "Work", "base_path" => "/work", "content_id" => "work-taxon-id" },
+    { "title" => "Transport", "base_path" => "/transport", "content_id" => "transport-taxon-id" },
+    { "title" => "Environment", "base_path" => "/environment", "content_id" => "environment-taxon-id" },
+    { "title" => "Business and industry", "base_path" => "/business-and-industry", "content_id" => "business-taxon-id" },
+    { "title" => "Education", "base_path" => "/education", "content_id" => "education-taxon-id" }
   ].freeze
 
   REJECTED_TAXONS = [{ "title" => "Government", "base_path" => "/government/all" }].freeze
@@ -67,14 +67,42 @@ describe BrexitTaxonsPresenter do
 
     it 'should return other level one taxons tagged to Brexit when these exist' do
       OTHER_TAXONS = [
-        { "title" => "Brexit guidance", "base_path" => "/brexit-guidance" }
+        { "title" => "Brexit guidance", "base_path" => "/brexit-guidance", "content_id" => "first-content-id" }
       ].freeze
 
       ContentItem.stubs(:find!)
         .with('/')
         .returns(ContentItem.new("links" => { "level_one_taxons" => [FEATURED_TAXONS, REJECTED_TAXONS, OTHER_TAXONS].flatten }))
 
-      Services.rummager.stubs(:search).times(OTHER_TAXONS.count).returns("total" => 1)
+      Services.rummager.stubs(:search).returns(
+        "results" => [],
+        "total" => 34,
+        "start" => 0,
+        "facets" => {
+          "part_of_taxonomy_tree" => {
+            "options" => [
+              {
+                "value" => {
+                  "slug" => "first-content-id"
+                },
+                "documents" => 12
+              },
+              {
+                "value" => {
+                  "slug" => "second-content-id"
+                },
+                "documents" => 10
+              },
+              {
+                "value" => {
+                  "slug" => "third-content-id"
+                },
+                "documents" => 5
+              }
+            ]
+          }
+        }
+      )
 
       other_taxons = presenter.other_taxons
 
