@@ -45,6 +45,6 @@ private
   end
 
   def document_types
-    GovukDocumentTypes.supergroup_document_types('guidance_and_regulation', 'services')
+    %w(travel_advice_index) + GovukDocumentTypes.supergroup_document_types('guidance_and_regulation', 'services')
   end
 end
