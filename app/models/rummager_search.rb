@@ -41,6 +41,10 @@ class RummagerSearch
     search_result["start"]
   end
 
+  def facets
+    search_result["facets"]
+  end
+
   def organisations
     @organisations ||= search_result.dig('aggregates', 'organisations', 'options').map do |option|
       organisation = option['value']
