@@ -71,12 +71,14 @@ class TaxonNode
   end
 
   def fetch_es_score(query)
+    return -1000 unless id
     params = {
         start: 0,
         count: 10,
         filter_part_of_taxonomy_tree: @taxon["content_id"],
         q: query
     }
+
     @content_pages = Services.rummager.search(params)["results"]
     scores = @content_pages.map{ |result| result["es_score"]}
     if scores.any?
