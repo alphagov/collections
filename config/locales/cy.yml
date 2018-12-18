@@ -22,6 +22,7 @@ cy:
       our_publications: "Ein cyhoeddiadau"
       our_statistics: "Ein hystadegau"
       see_all_documents: "Gweld ein holl %{type}"
+    featured: "Sylw"
     foi:
       make_an_foi_request: Gwneud cais DRhG
       freedom_of_information_act: Freedom of Information (FOI) Act
