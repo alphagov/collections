@@ -57,7 +57,7 @@ module Organisations
     end
 
     def has_latest_documents_by_type?
-      has_latest_announcements? ||
+      has_latest_news_and_communications? ||
         has_latest_consultations? ||
         has_latest_publications? ||
         has_latest_statistics?
@@ -65,7 +65,7 @@ module Organisations
 
     def latest_documents_by_type
       all_documents = [
-        announcements: latest_announcements,
+        news_and_communications: latest_news_and_communications,
         consultations: latest_consultations,
         publications: latest_publications,
         statistics: latest_statistics
@@ -204,8 +204,8 @@ module Organisations
       news_stories
     end
 
-    def has_latest_announcements?
-      latest_announcements[:items].present?
+    def has_latest_news_and_communications?
+      latest_news_and_communications[:items].present?
     end
 
     def has_latest_consultations?
@@ -220,9 +220,9 @@ module Organisations
       latest_statistics[:items].present?
     end
 
-    def latest_announcements
-      @latest_announcements ||= search_rummager(filter_content_purpose_supergroup: "news_and_communications")
-      search_results_to_documents(@latest_announcements)
+    def latest_news_and_communications
+      @latest_news_and_communications ||= search_rummager(filter_content_purpose_supergroup: "news_and_communications")
+      search_results_to_documents(@latest_news_and_communications)
     end
 
     def latest_publications

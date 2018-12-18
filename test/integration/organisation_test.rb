@@ -643,7 +643,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     visit "/government/organisations/attorney-generals-office"
     assert page.has_css?(".gem-c-heading", text: "Documents")
 
-    assert page.has_css?(".gem-c-heading", text: "Announcements")
+    assert page.has_css?(".gem-c-heading", text: "News and communications")
     assert page.has_css?(".gem-c-document-list__item-title[href='/government/news/first-events-announced-for-national-democracy-week']", text: "First events announced for National Democracy Week")
 
     assert page.has_css?(".gem-c-heading", text: "Consultations")
