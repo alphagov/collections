@@ -123,7 +123,7 @@ describe Organisations::DocumentsPresenter do
             ],
             brand: "attorney-generals-office"
           },
-          title: "Our announcements"
+          title: "Announcements"
         }
 
       assert_equal expected, @documents_presenter.latest_documents_by_type[0]
@@ -153,7 +153,7 @@ describe Organisations::DocumentsPresenter do
             ],
             brand: "attorney-generals-office"
           },
-          title: "Our consultations"
+          title: "Consultations"
         }
 
       assert_equal expected, @documents_presenter.latest_documents_by_type[1]
@@ -183,7 +183,7 @@ describe Organisations::DocumentsPresenter do
             ],
             brand: "attorney-generals-office"
           },
-          title: "Our publications"
+          title: "Publications"
         }
 
       assert_equal expected, @documents_presenter.latest_documents_by_type[2]

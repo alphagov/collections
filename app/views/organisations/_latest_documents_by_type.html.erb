@@ -1,11 +1,9 @@
 <section class="<%= "brand--#{@organisation.brand} brand__border-color" if @organisation.is_live? %> organisation__brand-border-top organisation__margin-bottom">
-  <div class="grid-row">
-    <div class="column-two-thirds">
-      <%= render "govuk_publishing_components/components/heading", {
+  <div class="visually-hidden">
+    <%= render "govuk_publishing_components/components/heading", {
         text: t('organisations.document_types.documents'),
         padding: true
-      } %>
-    </div>
+    } %>
   </div>
 
   <% @documents.latest_documents_by_type.in_groups_of(2, false) do |documents_group| %>
