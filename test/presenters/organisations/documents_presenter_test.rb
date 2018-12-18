@@ -117,7 +117,7 @@ describe Organisations::DocumentsPresenter do
               {
                 link: {
                   text: "See all announcements",
-                  path: "/government/announcements?departments%5B%5D=attorney-generals-office"
+                  path: "/government/announcements?departments[]=attorney-generals-office"
                 }
               }
             ],
@@ -147,7 +147,7 @@ describe Organisations::DocumentsPresenter do
               {
                 link: {
                   text: "See all consultations",
-                  path: "/government/consultations?departments%5B%5D=attorney-generals-office"
+                  path: "/government/consultations?departments[]=attorney-generals-office"
                 }
               }
             ],
@@ -177,7 +177,7 @@ describe Organisations::DocumentsPresenter do
               {
                 link: {
                   text: "See all publications",
-                  path: "/government/publications?departments%5B%5D=attorney-generals-office"
+                  path: "/government/publications?departments[]=attorney-generals-office"
                 }
               }
             ],
