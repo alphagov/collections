@@ -1,5 +1,14 @@
-<section class="organisation__section-wrap organisation__margin-bottom" id="featured-documents">
-  <h2 class="visually-hidden"><%= @show.featured_news_title %></h2>
+<section class="brand--<%= @organisation.brand %> brand__border-color organisation__brand-border-top organisation__section-wrap organisation__margin-bottom" id="featured-documents">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <%= render "govuk_publishing_components/components/heading", {
+          text: I18n.t('organisations.featured'),
+          padding: true,
+          margin_bottom: 2
+      } %>
+    </div>
+  </div>
+
   <% if @organisation.is_news_organisation? %>
     <%= render "govuk_publishing_components/components/image_card", @documents.first_featured_news %>
   <% end %>

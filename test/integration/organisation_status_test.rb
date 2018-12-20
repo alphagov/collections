@@ -321,15 +321,15 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
   it "shows latest documents by type on separate website page" do
     visit "/government/organisations/fire-service-college"
     assert page.has_css?(".gem-c-heading", text: "Documents")
-    assert page.has_css?(".gem-c-heading", text: "Our announcements")
+    assert page.has_css?(".gem-c-heading", text: "Announcements")
     assert page.has_css?(".gem-c-document-list__item-title[href='/government/news/first-events-announced-for-national-democracy-week']", text: "First events announced for National Democracy Week")
 
-    assert page.has_css?(".gem-c-heading", text: "Our consultations")
+    assert page.has_css?(".gem-c-heading", text: "Consultations")
     assert page.has_css?(".gem-c-document-list__item-title[href='/government/consultations/consultation-on-revised-code-of-data-matching-practice']", text: "Consultation on revised Code of Data Matching Practice")
 
-    assert page.has_css?(".gem-c-heading", text: "Our publications")
+    assert page.has_css?(".gem-c-heading", text: "Publications")
     assert page.has_css?(".gem-c-document-list__item-title[href='/government/publications/national-democracy-week-partner-pack']", text: "National Democracy Week: partner pack")
 
-    refute page.has_css?(".gem-c-heading", text: "Our statistics")
+    refute page.has_css?(".gem-c-heading", text: "Statistics")
   end
 end

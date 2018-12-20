@@ -11,16 +11,19 @@ en:
     corporate_information: "Corporate information"
     document_types:
       documents: "Documents"
-      announcements: "announcements"
-      consultations: "consultations"
-      publications: "publications"
-      statistics: "statistics"
-      our_announcements: "Our announcements"
-      our_consultations: "Our consultations"
-      our_publications: "Our publications"
-      our_statistics: "Our statistics"
-      see_all_documents: "See all %{type}"
-    featured_news: "What %{title} is doing"
+      announcements:
+        title: "Announcements"
+        see_all: "See all announcements"
+      consultations:
+        title: "Consultations"
+        see_all: "See all consultations"
+      publications:
+        title: "Publications"
+        see_all: "See all publications"
+      statistics:
+        title: "Statistics"
+        see_all: "See all statistics"
+    featured: "Featured"
     foi:
       make_an_foi_request: Make an FOI request
       freedom_of_information_act: Freedom of Information (FOI) Act

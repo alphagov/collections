@@ -13,15 +13,19 @@ cy:
     corporate_information: "Gwybodaeth gorfforaethol"
     document_types:
       documents: "Dogfennau"
-      announcements: "cyhoeddiadau"
-      consultations: "ymgynghoriadau"
-      publications: "cyhoeddiadau"
-      statistics: "hystadegau"
-      our_announcements: "Ein cyhoeddiadau"
-      our_consultations: "Ein ymgynghoriadau"
-      our_publications: "Ein cyhoeddiadau"
-      our_statistics: "Ein hystadegau"
-      see_all_documents: "Gweld ein holl %{type}"
+      announcements:
+        title: "Cyhoeddiadau"
+        see_all: "Gweld ein holl cyhoeddiadau"
+      consultations:
+        title: "Ymgynghoriadau"
+        see_all: "Gweld ein holl ymgynghoriadau"
+      publications:
+        title: "Cyhoeddiadau"
+        see_all: "Gweld ein holl cyhoeddiadau"
+      statistics:
+        title: "Hystadegau"
+        see_all: "Gweld ein holl hystadegau"
+    featured: "Sylw"
     foi:
       make_an_foi_request: Gwneud cais DRhG
       freedom_of_information_act: Freedom of Information (FOI) Act
