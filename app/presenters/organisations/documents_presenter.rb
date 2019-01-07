@@ -8,7 +8,7 @@ module Organisations
     end
 
     def has_featured_news?
-      org.ordered_featured_documents.length.positive?
+      org.ordered_featured_documents.present?
     end
 
     def first_featured_news
@@ -24,7 +24,7 @@ module Organisations
     end
 
     def has_promotional_features?
-      org.ordered_promotional_features.length.positive?
+      org.ordered_promotional_features.present?
     end
 
     def promotional_features
@@ -63,7 +63,7 @@ module Organisations
     end
 
     def has_latest_documents?
-      latest_documents[:items].length.positive?
+      latest_documents[:items].present?
     end
 
     def latest_documents
@@ -96,7 +96,7 @@ module Organisations
 
       all_documents.each do |document_group|
         document_group.each do |document_type, documents|
-          if documents[:items].length.positive?
+          if documents[:items].present?
             documents[:items].push(
               link: {
                 text: I18n.t(
@@ -201,19 +201,19 @@ module Organisations
     end
 
     def has_latest_announcements?
-      latest_announcements[:items].length.positive?
+      latest_announcements[:items].present?
     end
 
     def has_latest_consultations?
-      latest_consultations[:items].length.positive?
+      latest_consultations[:items].present?
     end
 
     def has_latest_publications?
-      latest_publications[:items].length.positive?
+      latest_publications[:items].present?
     end
 
     def has_latest_statistics?
-      latest_statistics[:items].length.positive?
+      latest_statistics[:items].present?
     end
 
     def latest_announcements
@@ -246,7 +246,7 @@ module Organisations
     end
 
     def promotional_feature_link(link)
-      link if link && link.length.positive?
+      link if link.present?
     end
   end
 end

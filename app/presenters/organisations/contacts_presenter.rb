@@ -8,7 +8,7 @@ module Organisations
     end
 
     def has_contacts?
-      @org.ordered_contacts && @org.ordered_contacts.length.positive?
+      @org.ordered_contacts.present?
     end
 
     def contacts
@@ -16,7 +16,7 @@ module Organisations
     end
 
     def has_foi_contacts?
-      @org.foi_contacts && @org.foi_contacts.length.positive?
+      @org.foi_contacts.present?
     end
 
     def foi_contacts
@@ -54,13 +54,13 @@ module Organisations
     end
 
     def contact_line(line)
-      return line + "<br/>" if line && line.length.positive?
+      return line + "<br/>" if line.present?
 
       ""
     end
 
     def make_link(link, contact_title, foi)
-      if link["link"].length.positive?
+      if link["link"].present?
         link_to(
           make_link_text(link["description"], contact_title, foi: foi),
           link["link"],
@@ -70,7 +70,7 @@ module Organisations
     end
 
     def make_link_text(text, contact_title, foi: false)
-      if text && text.length.positive?
+      if text.present?
         text
       elsif foi
         I18n.t('organisations.foi.contact_form')
@@ -107,7 +107,7 @@ module Organisations
         data = data.gsub("<br/><br/>", "<br/>")
       end
 
-      data if data.length.positive?
+      data if data.present?
     end
 
     def contact_description(description)
