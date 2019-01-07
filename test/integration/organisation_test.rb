@@ -8,6 +8,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
     @content_item_no10 = {
       title: "Prime Minister's Office, 10 Downing Street",
+      description: "10 Downing Street is the official residence of the British Prime Minister.",
       base_path: "/government/organisations/prime-ministers-office-10-downing-street",
       details: {
         body: "10 Downing Street is the official residence and the office of the British Prime Minister.",
@@ -510,8 +511,10 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     assert page.has_css?(".content")
   end
 
-  it "has autodiscovery links to the RSS feed and the API" do
+  it "includes description and autodiscovery meta tags" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
+
+    page.assert_selector("meta[name='description'][content='10 Downing Street is the official residence of the British Prime Minister.']", visible: false)
     assert page.has_css?("link[rel='alternate'][type='application/json'][href$='/api/organisations/prime-ministers-office-10-downing-street']", visible: false)
     assert page.has_css?("link[rel='alternate'][type='application/atom+xml'][href$='/government/organisations/prime-ministers-office-10-downing-street.atom']", visible: false)
   end
