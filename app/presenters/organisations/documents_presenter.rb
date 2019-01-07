@@ -28,7 +28,7 @@ module Organisations
     end
 
     def promotional_features
-      org.ordered_promotional_features.map do |feature| # rubocop:disable Metrics/BlockLength
+      org.ordered_promotional_features.map do |feature|
         number_of_items = feature["items"].length
 
         {
@@ -36,28 +36,7 @@ module Organisations
           number_of_items: number_of_items,
           parent_column_class: "column-#{number_of_items}",
           child_column_class: promotions_child_column_class(number_of_items),
-          items: feature["items"].map do |item|
-            data = {
-              description: item["summary"].gsub("\r\n", "<br/>").html_safe,
-              href: promotional_feature_link(item["href"]),
-              image_src: item["image"]["url"],
-              image_alt: item["image"]["alt_text"],
-              extra_links: item["links"].map do |link|
-                {
-                  text: link["title"],
-                  href: link["href"]
-                }
-              end,
-              brand: org.brand,
-              heading_level: 3
-            }
-
-            if item["title"].length.positive?
-              data[:heading_text] = item["title"]
-            end
-
-            data
-          end
+          items: items_for_a_promotional_feature(feature)
         }
       end
     end
@@ -124,6 +103,31 @@ module Organisations
     end
 
   private
+
+    def items_for_a_promotional_feature(feature)
+      feature["items"].map do |item|
+        data = {
+          description: item["summary"].gsub("\r\n", "<br/>").html_safe,
+          href: promotional_feature_link(item["href"]),
+          image_src: item["image"]["url"],
+          image_alt: item["image"]["alt_text"],
+          extra_links: item["links"].map do |link|
+            {
+              text: link["title"],
+              href: link["href"]
+            }
+          end,
+          brand: org.brand,
+          heading_level: 3
+        }
+
+        if item["title"].present?
+          data[:heading_text] = item["title"]
+        end
+
+        data
+      end
+    end
 
     def search_rummager(filter_content_purpose_supergroup: false, filter_government_document_supertype: false, reject_government_document_supertype: false)
       params = {
