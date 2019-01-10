@@ -35,6 +35,10 @@ class ActiveSupport::TestCase
   include GdsApi::TestHelpers::ContentStore
   include GdsApi::TestHelpers::Rummager
 
+  setup do
+    I18n.locale = :en
+  end
+
   after do
     WebMock.reset!
   end
