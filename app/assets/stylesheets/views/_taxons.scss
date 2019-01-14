@@ -153,7 +153,7 @@
 
 .taxon-page__link-list-item {
   @include core-19;
-  margin-bottom: 10px;
+  margin-bottom: $gutter-one-third;
 
   @include media(tablet) {
     margin-bottom: 5px;
