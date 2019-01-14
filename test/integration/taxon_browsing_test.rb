@@ -61,7 +61,13 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
       and_the_taxon_has_tagged_content
       when_i_visit_that_taxon_with_variant(variant)
       see_all_links_have_tracking_data
+      and_no_navigation_to_brexit_pages
     end
+  end
+
+  it "shows Brexit navigation" do
+    given_there_is_a_brexit_taxon_which_i_visit
+    then_i_can_see_navigation_to_brexit_pages
   end
 
 private
@@ -123,6 +129,19 @@ private
     @content_item = content_item_without_children(base_path, content_id)
   end
 
+  def given_there_is_a_brexit_taxon_which_i_visit
+    brexit_content_id = "d6c2de5d-ef90-45d1-82d4-5f2438369eea".freeze
+    brexit_taxon_path = "/a-brexit-path"
+
+    @content_item = content_item_without_children(brexit_taxon_path, brexit_content_id)
+    @content_item["phase"] = "live"
+    content_store_has_item(brexit_taxon_path, @content_item)
+
+    and_the_taxon_has_tagged_content(brexit_content_id)
+
+    visit brexit_taxon_path
+  end
+
   def and_the_taxon_is_live
     @content_item["phase"] = "live"
     content_store_has_item(base_path, @content_item)
@@ -133,22 +152,22 @@ private
     content_store_has_item(base_path, @content_item)
   end
 
-  def and_the_taxon_has_tagged_content
+  def and_the_taxon_has_tagged_content(taxon_content_id = content_id)
     # We still need to stub tagged content because it is used by the sub-topic grid
-    stub_content_for_taxon(content_id, tagged_content)
+    stub_content_for_taxon(taxon_content_id, tagged_content)
     stub_document_types_for_supergroup('guidance_and_regulation')
-    stub_most_popular_content_for_taxon(content_id, tagged_content_for_guidance_and_regulation, filter_content_store_document_type: 'guidance_and_regulation')
+    stub_most_popular_content_for_taxon(taxon_content_id, tagged_content_for_guidance_and_regulation, filter_content_store_document_type: 'guidance_and_regulation')
     stub_document_types_for_supergroup('services')
-    stub_most_popular_content_for_taxon(content_id, tagged_content_for_services, filter_content_store_document_type: 'services')
+    stub_most_popular_content_for_taxon(taxon_content_id, tagged_content_for_services, filter_content_store_document_type: 'services')
     stub_document_types_for_supergroup('news_and_communications')
-    stub_most_recent_content_for_taxon(content_id, tagged_content_for_news_and_communications, filter_content_store_document_type: 'news_and_communications')
+    stub_most_recent_content_for_taxon(taxon_content_id, tagged_content_for_news_and_communications, filter_content_store_document_type: 'news_and_communications')
     stub_document_types_for_supergroup('policy_and_engagement')
-    stub_most_recent_content_for_taxon(content_id, tagged_content_for_policy_and_engagement, filter_content_store_document_type: 'policy_and_engagement')
+    stub_most_recent_content_for_taxon(taxon_content_id, tagged_content_for_policy_and_engagement, filter_content_store_document_type: 'policy_and_engagement')
     stub_document_types_for_supergroup('transparency')
-    stub_most_recent_content_for_taxon(content_id, tagged_content_for_transparency, filter_content_store_document_type: 'transparency')
+    stub_most_recent_content_for_taxon(taxon_content_id, tagged_content_for_transparency, filter_content_store_document_type: 'transparency')
     stub_document_types_for_supergroup('research_and_statistics')
-    stub_most_recent_content_for_taxon(content_id, tagged_content_for_research_and_statistics, filter_content_store_document_type: 'research_and_statistics')
-    stub_organisations_for_taxon(content_id, tagged_organisations)
+    stub_most_recent_content_for_taxon(taxon_content_id, tagged_content_for_research_and_statistics, filter_content_store_document_type: 'research_and_statistics')
+    stub_organisations_for_taxon(taxon_content_id, tagged_organisations)
   end
 
   def when_i_visit_that_taxon
@@ -334,6 +353,16 @@ private
         assert_equal "{}", element["data-track-options"]
       end
     end
+  end
+
+  def then_i_can_see_navigation_to_brexit_pages
+    page.assert_selector("h2.gem-c-heading", text: "Prepare for EU Exit")
+    page.assert_selector("a[href='/business-uk-leaving-eu']", text: "Prepare your business for the UK leaving the EU")
+  end
+
+  def and_no_navigation_to_brexit_pages
+    page.assert_no_selector("h2.gem-c-heading", text: "Prepare for EU Exit")
+    page.assert_no_selector("a[href='/business-uk-leaving-eu']", text: "Prepare your business for the UK leaving the EU")
   end
 
   def then_page_has_meta_robots

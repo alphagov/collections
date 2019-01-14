@@ -146,3 +146,16 @@
   text-decoration: none;
   padding-top: $gutter-one-third;
 }
+
+.taxon-page__link-list {
+  list-style-type: none;
+}
+
+.taxon-page__link-list-item {
+  @include core-19;
+  margin-bottom: $gutter-one-third;
+
+  @include media(tablet) {
+    margin-bottom: 5px;
+  }
+}
