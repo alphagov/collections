@@ -13,16 +13,24 @@ en:
       documents: "Documents"
       announcements:
         title: "Announcements"
-        see_all: "See all announcements"
+        see_all:
+          text: "See all announcements"
+          path: "/government/announcements?departments[]=%{organisation}"
       consultations:
         title: "Consultations"
-        see_all: "See all consultations"
+        see_all:
+          text: "See all consultations"
+          path: "/government/consultations?departments[]=%{organisation}"
       publications:
         title: "Publications"
-        see_all: "See all publications"
+        see_all:
+          text: "See all publications"
+          path: "/government/publications?departments[]=%{organisation}"
       statistics:
         title: "Statistics"
-        see_all: "See all statistics"
+        see_all:
+          text: "See all statistics"
+          path: "/government/statistics?departments[]=%{organisation}"
     featured: "Featured"
     foi:
       make_an_foi_request: Make an FOI request

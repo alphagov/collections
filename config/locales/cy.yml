@@ -15,16 +15,24 @@ cy:
       documents: "Dogfennau"
       announcements:
         title: "Cyhoeddiadau"
-        see_all: "Gweld ein holl cyhoeddiadau"
+        see_all:
+          text: "Gweld ein holl cyhoeddiadau"
+          path: "/government/announcements?departments[]=%{organisation}"
       consultations:
         title: "Ymgynghoriadau"
-        see_all: "Gweld ein holl ymgynghoriadau"
+        see_all:
+          text: "Gweld ein holl ymgynghoriadau"
+          path: "/government/consultations?departments[]=%{organisation}"
       publications:
         title: "Cyhoeddiadau"
-        see_all: "Gweld ein holl cyhoeddiadau"
+        see_all:
+          text: "Gweld ein holl cyhoeddiadau"
+          path: "/government/publications?departments[]=%{organisation}"
       statistics:
         title: "Hystadegau"
-        see_all: "Gweld ein holl hystadegau"
+        see_all:
+          text: "Gweld ein holl hystadegau"
+          path: "/government/statistics?departments[]=%{organisation}"
     featured: "Sylw"
     foi:
       make_an_foi_request: Gwneud cais DRhG

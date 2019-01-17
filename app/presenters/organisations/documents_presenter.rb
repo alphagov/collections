@@ -99,8 +99,16 @@ module Organisations
           if documents[:items].length.positive?
             documents[:items].push(
               link: {
-                text: I18n.t(:see_all, scope: [:organisations, :document_types, document_type]),
-                path: "/government/#{document_type}?departments%5B%5D=#{@org.slug}"
+                text: I18n.t(
+                  :text,
+                  organisation: @org.slug,
+                  scope: [:organisations, :document_types, document_type, :see_all],
+                ),
+                path: I18n.t(
+                  :path,
+                  organisation: @org.slug,
+                  scope: [:organisations, :document_types, document_type, :see_all],
+                ),
               }
             )
 
