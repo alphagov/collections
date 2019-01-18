@@ -4,7 +4,7 @@ class TaxonsController < ApplicationController
   def show
     setup_content_item_and_navigation_helpers(taxon)
 
-    render "show_a", locals: {
+    render locals: {
       presented_taxon: presented_taxon,
       presentable_section_items: presentable_section_items
     }
