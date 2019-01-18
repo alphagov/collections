@@ -23,22 +23,6 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_the_sub_topics_grid
   end
 
-  it 'renders an in-page nav in variant C' do
-    given_there_is_a_taxon_with_children
-    and_the_taxon_is_live
-    and_the_taxon_has_tagged_content
-    when_i_visit_that_taxon_with_variant("C")
-    and_i_can_see_the_in_page_nav
-  end
-
-  it 'renders an in-page sub-topic side nav in variant D' do
-    given_there_is_a_taxon_with_children
-    and_the_taxon_is_live
-    and_the_taxon_has_tagged_content
-    when_i_visit_that_taxon_with_variant("D")
-    and_i_can_see_the_sub_topic_side_nav
-  end
-
   it 'renders a taxon page for a draft taxon' do
     given_there_is_a_taxon_with_children
     and_the_taxon_is_not_live
@@ -54,28 +38,12 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     then_there_should_be_an_error
   end
 
-  %w(A B C D E).each do |variant|
-    it "has tracking on see all links on variant #{variant}" do
-      given_there_is_a_taxon_with_children
-      and_the_taxon_is_live
-      and_the_taxon_has_tagged_content
-      when_i_visit_that_taxon_with_variant(variant)
-      see_all_links_have_tracking_data
-      and_no_navigation_to_brexit_pages
-    end
-  end
-
   it "shows Brexit navigation" do
     given_there_is_a_brexit_taxon_which_i_visit
     then_i_can_see_navigation_to_brexit_pages
   end
 
 private
-
-  def when_i_visit_that_taxon_with_variant(variant)
-    GovukAbTesting::RequestedVariant.any_instance.stubs(:variant_name).returns(variant)
-    visit base_path
-  end
 
   def given_there_is_a_thing_that_is_not_a_taxon
     thing = {

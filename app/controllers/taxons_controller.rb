@@ -1,14 +1,10 @@
 class TaxonsController < ApplicationController
-  include TaxonPagesTestable
-
   rescue_from Taxon::InAlphaPhase, with: :error_404
 
   def show
     setup_content_item_and_navigation_helpers(taxon)
 
-    variant = taxon_page_variant.variant_name.downcase
-
-    render "show_#{variant}", locals: {
+    render locals: {
       presented_taxon: presented_taxon,
       presentable_section_items: presentable_section_items
     }
