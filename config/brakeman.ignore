@@ -1,0 +1,25 @@
+{
+  "ignored_warnings": [
+    {
+      "warning_type": "Cross-Site Scripting",
+      "warning_code": 2,
+      "fingerprint": "69993c7fdb955862f1f0fb0afe804b3dd1ef40b9fd43273c285bd13ba23f6199",
+      "check_name": "CrossSiteScripting",
+      "message": "Unescaped model attribute",
+      "file": "app/views/organisations/_what_we_do.html.erb",
+      "line": 17,
+      "link": "https://brakemanscanner.org/docs/warning_types/cross_site_scripting",
+      "code": "Organisation.find!(request.path).body",
+      "render_path": [{"type":"controller","class":"OrganisationsController","method":"court","line":36,"file":"app/controllers/organisations_controller.rb"},{"type":"template","name":"organisations/court","line":10,"file":"app/views/organisations/court.html.erb"}],
+      "location": {
+        "type": "template",
+        "template": "organisations/_what_we_do"
+      },
+      "user_input": null,
+      "confidence": "Medium",
+      "note": "The body of an organisation is pre-rendered as html in the publishing app.  We need to show it in its raw form."
+    }
+  ],
+  "updated": "2019-01-17 12:58:42 +0000",
+  "brakeman_version": "4.3.1"
+}

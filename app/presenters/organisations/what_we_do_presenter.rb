@@ -7,7 +7,7 @@ module Organisations
     end
 
     def has_share_links?
-      org.social_media_links.length.positive?
+      org.social_media_links.present?
     end
 
     def share_links

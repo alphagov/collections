@@ -1,3 +1,4 @@
+<% if @documents.has_featured_news? %>
 <section class="brand--<%= @organisation.brand %> brand__border-color organisation__brand-border-top organisation__section-wrap organisation__margin-bottom" id="featured-documents">
   <div class="grid-row">
     <div class="column-two-thirds">
@@ -23,3 +24,4 @@
     </div>
   <% end %>
 </section>
+<% end %>

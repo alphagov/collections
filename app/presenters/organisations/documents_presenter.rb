@@ -8,7 +8,7 @@ module Organisations
     end
 
     def has_featured_news?
-      org.ordered_featured_documents.length.positive?
+      org.ordered_featured_documents.present?
     end
 
     def first_featured_news
@@ -24,11 +24,11 @@ module Organisations
     end
 
     def has_promotional_features?
-      org.ordered_promotional_features.length.positive?
+      org.ordered_promotional_features.present?
     end
 
     def promotional_features
-      org.ordered_promotional_features.map do |feature| # rubocop:disable Metrics/BlockLength
+      org.ordered_promotional_features.map do |feature|
         number_of_items = feature["items"].length
 
         {
@@ -36,34 +36,13 @@ module Organisations
           number_of_items: number_of_items,
           parent_column_class: "column-#{number_of_items}",
           child_column_class: promotions_child_column_class(number_of_items),
-          items: feature["items"].map do |item|
-            data = {
-              description: item["summary"].gsub("\r\n", "<br/>").html_safe,
-              href: promotional_feature_link(item["href"]),
-              image_src: item["image"]["url"],
-              image_alt: item["image"]["alt_text"],
-              extra_links: item["links"].map do |link|
-                {
-                  text: link["title"],
-                  href: link["href"]
-                }
-              end,
-              brand: org.brand,
-              heading_level: 3
-            }
-
-            if item["title"].length.positive?
-              data[:heading_text] = item["title"]
-            end
-
-            data
-          end
+          items: items_for_a_promotional_feature(feature)
         }
       end
     end
 
     def has_latest_documents?
-      latest_documents[:items].length.positive?
+      latest_documents[:items].present?
     end
 
     def latest_documents
@@ -96,7 +75,7 @@ module Organisations
 
       all_documents.each do |document_group|
         document_group.each do |document_type, documents|
-          if documents[:items].length.positive?
+          if documents[:items].present?
             documents[:items].push(
               link: {
                 text: I18n.t(
@@ -124,6 +103,31 @@ module Organisations
     end
 
   private
+
+    def items_for_a_promotional_feature(feature)
+      feature["items"].map do |item|
+        data = {
+          description: item["summary"].gsub("\r\n", "<br/>").html_safe,
+          href: promotional_feature_link(item["href"]),
+          image_src: item["image"]["url"],
+          image_alt: item["image"]["alt_text"],
+          extra_links: item["links"].map do |link|
+            {
+              text: link["title"],
+              href: link["href"]
+            }
+          end,
+          brand: org.brand,
+          heading_level: 3
+        }
+
+        if item["title"].present?
+          data[:heading_text] = item["title"]
+        end
+
+        data
+      end
+    end
 
     def search_rummager(filter_content_purpose_supergroup: false, filter_government_document_supertype: false, reject_government_document_supertype: false)
       params = {
@@ -201,19 +205,19 @@ module Organisations
     end
 
     def has_latest_announcements?
-      latest_announcements[:items].length.positive?
+      latest_announcements[:items].present?
     end
 
     def has_latest_consultations?
-      latest_consultations[:items].length.positive?
+      latest_consultations[:items].present?
     end
 
     def has_latest_publications?
-      latest_publications[:items].length.positive?
+      latest_publications[:items].present?
     end
 
     def has_latest_statistics?
-      latest_statistics[:items].length.positive?
+      latest_statistics[:items].present?
     end
 
     def latest_announcements
@@ -246,7 +250,7 @@ module Organisations
     end
 
     def promotional_feature_link(link)
-      link if link && link.length.positive?
+      link if link.present?
     end
   end
 end

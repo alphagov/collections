@@ -1,3 +1,4 @@
+<% if @organisation.body || @what_we_do.has_share_links? %>
 <section class="brand--<%= @organisation.brand %> brand__border-color organisation__brand-border-top organisation__section-wrap organisation__margin-bottom" id="what-we-do">
   <div class="grid-row">
     <div class="column-two-thirds">
@@ -14,11 +15,14 @@
       <%= render "govuk_publishing_components/components/govspeak", {
         } do %>
           <p><%= @organisation.body.html_safe %></p>
+
+          <% unless @organisation.is_court_or_hmcts_tribunal? %>
           <p>
             <a href="<%= @organisation.base_path %>/about" class="brand__color">
               <%= t('organisations.read_more') %>
             </a>
           </p>
+          <% end %>
       <% end %>
     </div>
 
@@ -35,3 +39,4 @@
     <% end %>
   </div>
 </section>
+<% end %>

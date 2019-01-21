@@ -1,0 +1,17 @@
+<%= render partial: 'meta', locals: { organisation: @organisation } %>
+<%= render partial: 'breadcrumb' %>
+<%= render partial: 'header' %>
+
+<%= render 'govuk_publishing_components/components/machine_readable_metadata',
+           schema: :organisation,
+           content_item: @organisation.content_item.content_item_data %>
+
+<% if @organisation.body || what_we_do.has_share_links? %>
+  <%= render partial: 'what_we_do' %>
+<% end %>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render partial: 'org_contacts', locals: { contacts: @contacts } %>
+  </div>
+</div>

@@ -4,6 +4,7 @@ cy:
   view_all: gwelir holl
   view_less: gwelir llai
   organisations:
+    administered_by: "Gweinyddir gan"
     contact:
       contact_details: "Contact details"
       contact_form: "Ffurflen cysylltu: %{title}"

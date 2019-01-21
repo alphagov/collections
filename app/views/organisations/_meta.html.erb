@@ -1,0 +1,7 @@
+<% content_for :title, organisation.title %>
+
+<% content_for :meta_tags do %>
+  <%= tag("meta", name: "description", content: organisation.description) if organisation.description %>
+  <%= auto_discovery_link_tag(:json, api_organisation_url(organisation.slug), title: organisation.title) %>
+  <%= auto_discovery_link_tag(:atom, feed_organisation_url(organisation.slug, format: :atom), title: organisation.title) %>
+<% end %>

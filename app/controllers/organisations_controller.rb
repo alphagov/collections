@@ -1,7 +1,7 @@
 class OrganisationsController < ApplicationController
   skip_before_action :set_expiry
   before_action -> { set_expiry(5.minutes) }
-  before_action :set_locale, only: :show
+  before_action :set_locale, only: %i[show court]
 
   def index
     @organisations = ContentStoreOrganisations.find!("/government/organisations")
@@ -10,7 +10,7 @@ class OrganisationsController < ApplicationController
   end
 
   def show
-    @organisation = Organisation.find!("/government/organisations/#{params[:organisation_name]}#{locale}")
+    @organisation = Organisation.find!(request.path)
     setup_content_item_and_navigation_helpers(@organisation)
 
     @show = Organisations::ShowPresenter.new(@organisation)
@@ -21,26 +21,25 @@ class OrganisationsController < ApplicationController
     @not_live = Organisations::NotLivePresenter.new(@organisation)
     @contacts = Organisations::ContactsPresenter.new(@organisation)
 
-    respond_to do |f|
-      f.html do
-        render :show, locals: {
-            organisation: @organisation
-        }
-      end
-      f.json do
-        render json: {
-            breadcrumbs: breadcrumb_content,
-            html: show_organisation_partial(@organisation)
-        }
-      end
-    end
+    render organisation_view, locals: { organisation: @organisation }
+  end
+
+  def court
+    @organisation = Organisation.find!(request.path)
+    setup_content_item_and_navigation_helpers(@organisation)
+
+    @show = Organisations::ShowPresenter.new(@organisation)
+    @header = Organisations::HeaderPresenter.new(@organisation)
+    @what_we_do = Organisations::WhatWeDoPresenter.new(@organisation)
+    @contacts = Organisations::ContactsPresenter.new(@organisation)
+
+    render organisation: @organisation
   end
 
 private
 
-  def show_organisation_partial(organisation)
-    render_partial('organisation/_show_organisation',
-                   organisation: organisation)
+  def organisation_view
+    @organisation.is_live? ? 'show' : 'separate_website'
   end
 
   def presented_organisations

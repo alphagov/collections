@@ -1,3 +1,4 @@
+<% if @documents.has_latest_documents_by_type? %>
 <section class="<%= "brand--#{@organisation.brand} brand__border-color" if @organisation.is_live? %> organisation__brand-border-top organisation__margin-bottom">
   <div class="visually-hidden">
     <%= render "govuk_publishing_components/components/heading", {
@@ -22,3 +23,4 @@
     </div>
   <% end %>
 </section>
+<% end %>

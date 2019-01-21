@@ -1,18 +1,5 @@
 <% content_for :breadcrumbs do %>
   <%= render "govuk_publishing_components/components/breadcrumbs", {
-    breadcrumbs: [
-      {
-        title: "Home",
-        url: "/"
-      },
-      {
-        title: "Organisations",
-        url: "/government/organisations"
-      },
-      {
-        title: @header.org.title,
-        is_current_page: true
-      }
-    ]
+    breadcrumbs: @header.breadcrumbs
   } %>
 <% end %>
