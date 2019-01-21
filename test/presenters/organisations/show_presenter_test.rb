@@ -5,28 +5,27 @@ describe Organisations::ShowPresenter do
   include OrganisationHelpers
 
   it 'adds a prefix to a title when it should' do
-    content_item = ContentItem.new({ title: "Attorney General's Office" }.with_indifferent_access)
-    organisation = Organisation.new(content_item)
-    @show_presenter = Organisations::ShowPresenter.new(organisation)
+    presenter = build_show_presenter_for_org("Attorney General's Office", "ministerial_department")
+    assert_equal "the Attorney General's Office", presenter.prefixed_title
 
-    expected = "the Attorney General's Office"
-    assert_equal expected, @show_presenter.prefixed_title
+    presenter = build_show_presenter_for_org("Queen's Bench Division of the High Court", "court")
+    assert_equal "the Queen's Bench Division of the High Court", presenter.prefixed_title
   end
 
   it 'does not add a prefix to a title when it should not' do
-    content_item = ContentItem.new({ title: "The Charity Commission" }.with_indifferent_access)
+    presenter = build_show_presenter_for_org("The Charity Commission", "non_ministerial_department")
+    assert_equal "The Charity Commission", presenter.prefixed_title
+
+    presenter = build_show_presenter_for_org("civil service resourcing", "sub_organisation")
+    assert_equal "civil service resourcing", presenter.prefixed_title
+  end
+
+  def build_show_presenter_for_org(title, type)
+    content_item = ContentItem.new({ title: title,
+      details: { organisation_type: type } }.with_indifferent_access)
+
     organisation = Organisation.new(content_item)
-    @show_presenter = Organisations::ShowPresenter.new(organisation)
-
-    expected = "The Charity Commission"
-    assert_equal expected, @show_presenter.prefixed_title
-
-    content_item = ContentItem.new({ title: "civil service resourcing" }.with_indifferent_access)
-    organisation = Organisation.new(content_item)
-    @show_presenter = Organisations::ShowPresenter.new(organisation)
-
-    expected = "civil service resourcing"
-    assert_equal expected, @show_presenter.prefixed_title
+    Organisations::ShowPresenter.new(organisation)
   end
 
   it 'returns a link to a parent organisation' do

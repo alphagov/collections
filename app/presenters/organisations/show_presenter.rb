@@ -113,7 +113,9 @@ module Organisations
       should_have = Regexp::new(NEED_A_THE.join("|"), true)
       should_not_have = Regexp::new(NO_THE, true)
 
-      !has_definite_article?(phrase) && (should_have =~ phrase) && (should_not_have !~ phrase)
+      !has_definite_article?(phrase) &&
+        (@org.is_court_or_hmcts_tribunal? ||
+        (should_have =~ phrase) && (should_not_have !~ phrase))
     end
 
     def has_definite_article?(phrase)
