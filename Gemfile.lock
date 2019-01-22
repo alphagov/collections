@@ -42,7 +42,7 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    addressable (2.5.2)
+    addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
     archive-zip (0.11.0)
       io-like (~> 0.3.0)
@@ -119,7 +119,7 @@ GEM
       rack-cache
       rest-client (~> 2.0)
     gherkin (5.1.0)
-    globalid (0.4.1)
+    globalid (0.4.2)
       activesupport (>= 4.2.0)
     govspeak (5.9.0)
       actionview (~> 5.0)
@@ -149,7 +149,7 @@ GEM
     govuk_frontend_toolkit (8.1.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
-    govuk_publishing_components (13.5.4)
+    govuk_publishing_components (13.6.1)
       govspeak (>= 5.0.3)
       govuk_app_config
       govuk_frontend_toolkit
@@ -211,19 +211,19 @@ GEM
       rails (>= 4.1)
     mocha (1.7.0)
       metaclass (~> 0.0.1)
-    money (6.13.1)
+    money (6.13.2)
       i18n (>= 0.6.4, <= 2)
     multi_json (1.13.1)
     multi_test (0.1.2)
     multipart-post (2.0.0)
     netrc (0.11.0)
     nio4r (2.3.1)
-    nokogiri (1.10.0)
+    nokogiri (1.10.1)
       mini_portile2 (~> 2.4.0)
     nokogumbo (1.5.0)
       nokogiri
     null_logger (0.0.1)
-    oj (3.7.6)
+    oj (3.7.7)
     parallel (1.12.1)
     parser (2.5.3.0)
       ast (~> 2.4.0)
@@ -384,7 +384,7 @@ DEPENDENCIES
   govuk_app_config (~> 1.11.2)
   govuk_document_types
   govuk_frontend_toolkit (~> 8.1.0)
-  govuk_publishing_components (~> 13.5.4)
+  govuk_publishing_components (~> 13.6.1)
   govuk_schemas (~> 3.2.0)
   govuk_test (~> 0.3.1)
   jasmine-rails
