@@ -33,4 +33,11 @@ module OrganisationHelper
 
     image_url_array.join("/")
   end
+
+  def search_results_to_documents(search_results, organisation)
+    {
+      brand: (organisation.brand if organisation.is_live?),
+      items: search_results.map { |result| Organisations::DocumentPresenter.new(result).present }
+    }
+  end
 end
