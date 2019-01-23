@@ -16,7 +16,9 @@
 <% end %>
 
 <% unless @organisation.is_promotional_org? %>
-  <%= render partial: 'latest_documents_by_type' %>
+  <% if @supergroups.has_groups? && !@organisation.is_promotional_org?  %>
+    <%= render partial: 'latest_documents_by_supergroup' %>
+  <% end %>
   <% if @people.has_people? %>
     <div id="people">
       <% @people.all_people.each do |people_data| %>

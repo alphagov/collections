@@ -642,16 +642,11 @@ class OrganisationTest < ActionDispatch::IntegrationTest
   it "shows latest documents by type" do
     visit "/government/organisations/attorney-generals-office"
     assert page.has_css?(".gem-c-heading", text: "Documents")
-
     assert page.has_css?(".gem-c-heading", text: "News and communications")
-    assert page.has_css?(".gem-c-document-list__item-title[href='/government/news/first-events-announced-for-national-democracy-week']", text: "First events announced for National Democracy Week")
-
-    assert page.has_css?(".gem-c-heading", text: "Consultations")
-    assert page.has_css?(".gem-c-document-list__item-title[href='/government/consultations/consultation-on-revised-code-of-data-matching-practice']", text: "Consultation on revised Code of Data Matching Practice")
-
-    assert page.has_css?(".gem-c-heading", text: "Publications")
-    assert page.has_css?(".gem-c-document-list__item-title[href='/government/publications/national-democracy-week-partner-pack']", text: "National Democracy Week: partner pack")
-
+    assert page.has_css?(".gem-c-document-list__item-title[href='/content-item-1']", text: "Content item 1")
+    assert page.has_css?(".gem-c-heading", text: "Transparency")
+    assert page.has_css?(".gem-c-heading", text: "Guidance and regulation")
+    refute page.has_css?(".gem-c-heading", text: "Services")
     refute page.has_css?(".gem-c-heading", text: "Statistics")
   end
 

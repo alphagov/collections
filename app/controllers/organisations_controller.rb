@@ -16,6 +16,7 @@ class OrganisationsController < ApplicationController
     @show = Organisations::ShowPresenter.new(@organisation)
     @header = Organisations::HeaderPresenter.new(@organisation)
     @documents = Organisations::DocumentsPresenter.new(@organisation)
+    @supergroups = Organisations::SupergroupsPresenter.new(@organisation)
     @what_we_do = Organisations::WhatWeDoPresenter.new(@organisation)
     @people = Organisations::PeoplePresenter.new(@organisation)
     @not_live = Organisations::NotLivePresenter.new(@organisation)
