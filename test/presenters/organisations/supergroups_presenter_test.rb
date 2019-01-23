@@ -46,7 +46,7 @@ describe Organisations::SupergroupsPresenter do
       assert_equal Date.parse(1.hour.ago.iso8601), document[:metadata][:public_updated_at]
       assert_equal "News story", document[:metadata][:document_type]
 
-      assert_equal '/news-and-communications?organisations[]=attorney-generals-office', supergroup[:finder_link][:path]
+      assert_equal '/news-and-communications?organisations[]=attorney-generals-office&parent=attorney-generals-office', supergroup[:finder_link][:path]
       assert_equal 'See all news and communications', supergroup[:finder_link][:text]
     end
 
@@ -62,7 +62,7 @@ describe Organisations::SupergroupsPresenter do
       assert_equal Date.parse(1.hour.ago.iso8601), document[:metadata][:public_updated_at]
       assert_equal "Transparency", document[:metadata][:document_type]
 
-      assert_equal '/transparency?organisations[]=attorney-generals-office', transparency[:finder_link][:path]
+      assert_equal '/transparency-and-freedom-of-information-releases?organisations[]=attorney-generals-office&parent=attorney-generals-office', transparency[:finder_link][:path]
       assert_equal 'See all transparency releases', transparency[:finder_link][:text]
     end
 
@@ -78,7 +78,7 @@ describe Organisations::SupergroupsPresenter do
       assert_equal Date.parse(1.hour.ago.iso8601), document[:metadata][:public_updated_at]
       assert_equal "Guide", document[:metadata][:document_type]
 
-      assert_equal '/guidance-and-regulation?organisations[]=attorney-generals-office', supergroup[:finder_link][:path]
+      assert_equal '/guidance-and-regulation?organisations[]=attorney-generals-office&parent=attorney-generals-office', supergroup[:finder_link][:path]
       assert_equal 'See all guidance and regulation', supergroup[:finder_link][:text]
     end
 
