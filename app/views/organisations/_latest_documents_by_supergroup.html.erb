@@ -1,0 +1,29 @@
+<% if @supergroups.has_groups? %>
+<section class="<%= "brand--#{@organisation.brand} brand__border-color" if @organisation.is_live? %> organisation__brand-border-top organisation__margin-bottom">
+  <div class="visually-hidden">
+    <%= render "govuk_publishing_components/components/heading", {
+        text: t('organisations.document_types.documents'),
+        padding: true
+    } %>
+  </div>
+
+  <% @supergroups.latest_documents_by_supergroup.in_groups_of(2, false) do |supergroup_pair| %>
+    <div class="grid-row">
+      <% supergroup_pair.each do |supergroup| %>
+        <div class="column-half organisation__supergroup--margin-bottom">
+          <%= render "govuk_publishing_components/components/heading", {
+            text: supergroup[:title],
+            padding: true,
+            font_size: 24,
+            heading_level: 3
+          } %>
+          <%= render "govuk_publishing_components/components/document_list", supergroup[:documents] %>
+          <a href="<%= supergroup[:finder_link][:path] %>" class="brand__color">
+            <%= supergroup[:finder_link][:text] %>
+          </a>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</section>
+<% end %>
