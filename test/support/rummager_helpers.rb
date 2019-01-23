@@ -277,4 +277,20 @@ module RummagerHelpers
 
     content_list
   end
+
+  def stub_supergroup_request(results: [], additional_params: {})
+    params = {
+      count: 2,
+      fields: %w(title link content_store_document_type public_timestamp),
+      order: '-public_timestamp',
+    }.merge(additional_params)
+
+    Services.rummager.stubs(:search)
+      .with(params)
+      .returns(
+        "results" => results,
+        "start" => 0,
+        "total" => results.size,
+      )
+  end
 end
