@@ -24,13 +24,8 @@ module Supergroups
       )
     end
 
-    def consultation_closing_date(base_path)
-      @consultation = ::Services.content_store.content_item(base_path)
-
-      # Don't continue if the Content Store returned something unexpected
-      return if @consultation["base_path"] != base_path
-
-      date = Date.parse(@consultation["details"]["closing_date"])
+    def consultation_closing_date(consultation)
+      date = Date.parse(consultation.end_date)
 
       if date < Time.zone.today
         return date.strftime("Date closed %d %B %Y")
@@ -67,7 +62,7 @@ module Supergroups
         }
 
         if consultation?(document.content_store_document_type)
-          data[:metadata][:closing_date] = consultation_closing_date(document.base_path)
+          data[:metadata][:closing_date] = consultation_closing_date(document)
         end
 
         if data_category.present?

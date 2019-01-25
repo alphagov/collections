@@ -255,17 +255,23 @@ module RummagerHelpers
   def section_tagged_content_list(doc_type, count = 1)
     content_list = []
 
+    params = {
+      title: 'Tagged Content Title',
+      description: 'Description of tagged content',
+      public_updated_at: '2018-02-28T08:01:00.000+00:00',
+      base_path: '/government/tagged/content',
+      content_store_document_type: doc_type,
+      organisations: 'Tagged Content Organisation',
+      image_url: 'an/image/path'
+    }
+
+    if doc_type.include?("consultation")
+      params[:end_date] = '2018-08-28T08:01:00.000+01:00'
+    end
+
     count.times do
       content_list.push(
-        Document.new(
-          title: 'Tagged Content Title',
-          description: 'Description of tagged content',
-          public_updated_at: '2018-02-28T08:01:00.000+00:00',
-          base_path: '/government/tagged/content',
-          content_store_document_type: doc_type,
-          organisations: 'Tagged Content Organisation',
-          image_url: 'an/image/path'
-        )
+        Document.new(params)
       )
     end
 

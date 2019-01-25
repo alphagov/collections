@@ -17,17 +17,6 @@ describe Supergroups::PolicyAndEngagement do
     end
 
     describe 'consultations' do
-      before do
-        content = content_item_for_base_path('/government/tagged/content').merge(
-          "details": {
-            "body": "",
-            "closing_date": "2017-07-10T23:45:00.000+00:00"
-          }
-        )
-
-        content_store_has_item('/government/tagged/content', content)
-      end
-
       it 'prioritises consultations over other content' do
         tagged_document_list = %w(
           open_consultation
@@ -67,6 +56,7 @@ describe Supergroups::PolicyAndEngagement do
             title: 'Tagged Content Title',
             description: 'Description of tagged content',
             public_updated_at: '2018-02-28T08:01:00.000+00:00',
+            end_date: '2018-07-10T23:45:00.000+00:00',
             base_path: '/government/tagged/content-1',
             content_store_document_type: 'open_consultation',
             organisations: 'Tagged Content Organisation'
@@ -75,15 +65,6 @@ describe Supergroups::PolicyAndEngagement do
           MostRecentContent.any_instance
             .stubs(:fetch)
             .returns([document])
-
-          content = content_item_for_base_path('/government/tagged/content-1').merge(
-            "details": {
-              "body": "",
-              "closing_date": "2018-07-10T23:45:00.000+00:00"
-            }
-          )
-
-          content_store_has_item('/government/tagged/content-1', content)
 
           expected = [
             {
@@ -158,7 +139,7 @@ private
     }
 
     if consultation?(document_type)
-      result[:metadata][:closing_date] = 'Date closed 10 July 2017'
+      result[:metadata][:closing_date] = 'Date closed 28 August 2018'
     end
 
     [result]

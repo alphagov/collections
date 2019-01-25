@@ -8,6 +8,7 @@ class Document
     :description,
     :base_path,
     :public_updated_at,
+    :end_date,
     :change_note,
     :format,
     :content_store_document_type,
