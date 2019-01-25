@@ -4,6 +4,7 @@ module RummagerFields
                            description
                            content_store_document_type
                            public_timestamp
+                           end_date
                            organisations
                            image_url).freeze
 

@@ -17,6 +17,7 @@ class RummagerSearch
         description: result["description"],
         base_path: result["link"],
         public_updated_at: timestamp,
+        end_date: result["end_date"],
         change_note: result["latest_change_note"],
         format: result["format"],
         content_store_document_type: result['content_store_document_type'],
