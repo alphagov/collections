@@ -33,7 +33,7 @@ private
   end
 
   def page
-    MainstreamBrowsePage.find(
+    @page ||= MainstreamBrowsePage.find(
       "/browse/#{params[:top_level_slug]}/#{params[:second_level_slug]}"
     )
   end
