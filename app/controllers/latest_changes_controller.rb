@@ -28,7 +28,7 @@ private
   end
 
   def subtopic
-    Topic.find(subtopic_base_path, pagination_params)
+    @subtopic ||= Topic.find(subtopic_base_path, pagination_params)
   end
 
   # Breadcrumbs for this page are hardcoded because it doesn't have a
