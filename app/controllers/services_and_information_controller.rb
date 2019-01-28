@@ -15,7 +15,7 @@ private
   end
 
   def service_and_information
-    ServiceAndInformation.find!(base_path)
+    @service_and_information ||= ServiceAndInformation.find!(base_path)
   end
 
   def grouped_links
