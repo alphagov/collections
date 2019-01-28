@@ -60,6 +60,8 @@ Rails.application.routes.draw do
     get "/organisations/:organisation_name",
       to: "organisations_api#show",
       as: :api_organisation
+
+    get "/organisations/*other_route", to: proc { [404, { }, ["404 error"]] }
   end
 
   get "/courts-tribunals/:organisation_name(.:locale)",
