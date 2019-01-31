@@ -15,19 +15,14 @@ class BrexitTaxonsPresenter
   ).freeze
 
   def featured_taxons
-    @featured_taxons ||= FEATURED_TAXONS
-      .to_enum
-      .with_index(1)
-      .map do |base_path, index|
-        content_item = ContentItem.find!(base_path)
-
-        BrexitTaxonPresenter.new(content_item, index)
-      end
+    @featured_taxons ||= FEATURED_TAXONS.map.with_index do |base_path, index|
+      featured_taxon = level_one_taxons.detect { |taxon| taxon.base_path == base_path }
+      BrexitTaxonPresenter.new(featured_taxon, index)
+    end
   end
 
   def other_taxons
-    @other_taxons ||= ContentItem.find!('/')
-      .linked_items('level_one_taxons')
+    @other_taxons ||= level_one_taxons
       .reject { |content_item| FEATURED_TAXONS.include?(content_item.base_path) }
       .reject { |content_item| REJECTED_TAXONS.include?(content_item.base_path) }
       .select { |content_item| taxon_ids_with_citizen_tagged_content.include?(content_item.content_id) }
@@ -35,6 +30,10 @@ class BrexitTaxonsPresenter
   end
 
 private
+
+  def level_one_taxons
+    @level_one_taxons ||= ContentItem.find!('/').linked_items('level_one_taxons')
+  end
 
   def taxon_ids_with_citizen_tagged_content
     @taxon_ids_with_citizen_tagged_content ||= begin
