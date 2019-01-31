@@ -18,11 +18,9 @@ describe BrexitTaxonsPresenter do
 
   describe '#featured_taxons' do
     it 'should return the featured taxons presenters' do
-      FEATURED_TAXONS.each do |taxon|
-        ContentItem.stubs(:find!)
-          .with(taxon.fetch('base_path'))
-          .returns(ContentItem.new(generic_taxon(taxon.fetch('base_path'))))
-      end
+      ContentItem.stubs(:find!)
+        .with('/')
+        .returns(ContentItem.new("links" => { "level_one_taxons" => FEATURED_TAXONS }))
 
       featured_taxons = presenter.featured_taxons
 
