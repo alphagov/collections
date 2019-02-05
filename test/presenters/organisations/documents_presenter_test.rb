@@ -116,14 +116,14 @@ describe Organisations::DocumentsPresenter do
               },
               {
                 link: {
-                  text: "See all announcements",
-                  path: "/government/announcements?departments[]=attorney-generals-office"
+                  text: "See all news and communications",
+                  path: "/news-and-communications?organisations[]=attorney-generals-office&parent=attorney-generals-office"
                 }
               }
             ],
             brand: "attorney-generals-office"
           },
-          title: "Announcements"
+          title: "News and communications"
         }
 
       assert_equal expected, @documents_presenter.latest_documents_by_type[0]

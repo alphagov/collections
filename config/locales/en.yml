@@ -12,11 +12,11 @@ en:
     corporate_information: "Corporate information"
     document_types:
       documents: "Documents"
-      announcements:
-        title: "Announcements"
+      news_and_communications:
+        title: "News and communications"
         see_all:
-          text: "See all announcements"
-          path: "/government/announcements?departments[]=%{organisation}"
+          text: "See all news and communications"
+          path: "/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
       consultations:
         title: "Consultations"
         see_all:

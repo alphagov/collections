@@ -14,11 +14,11 @@ cy:
     corporate_information: "Gwybodaeth gorfforaethol"
     document_types:
       documents: "Dogfennau"
-      announcements:
+      news_and_communications:
         title: "Cyhoeddiadau"
         see_all:
           text: "Gweld ein holl cyhoeddiadau"
-          path: "/government/announcements?departments[]=%{organisation}"
+          path: "/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
       consultations:
         title: "Ymgynghoriadau"
         see_all:
