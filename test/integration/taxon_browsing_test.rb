@@ -20,7 +20,6 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_the_transparency_and_foi_releases_section
     and_i_can_see_the_research_and_statistics_section
     and_i_can_see_the_organisations_section
-    and_i_can_see_the_sub_topics_grid
   end
 
   it 'renders a taxon page for a draft taxon' do
@@ -41,6 +40,23 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
   it "shows Brexit navigation" do
     given_there_is_a_brexit_taxon_which_i_visit
     then_i_can_see_navigation_to_brexit_pages
+  end
+
+  it 'renders an in-page nav' do
+    given_there_is_a_taxon_with_children
+    and_the_taxon_is_live
+    and_the_taxon_has_tagged_content
+    when_i_visit_that_taxon
+    and_i_can_see_the_in_page_nav
+  end
+
+  it "has tracking on all links" do
+    given_there_is_a_taxon_with_children
+    and_the_taxon_is_live
+    and_the_taxon_has_tagged_content
+    when_i_visit_that_taxon
+    then_all_links_have_tracking_data
+    and_no_navigation_to_brexit_pages
   end
 
 private
@@ -283,17 +299,6 @@ private
       href: tagged_organisation['value']['link'])
   end
 
-  def and_i_can_see_the_sub_topics_grid
-    assert page.has_selector?('nav.taxon-page__grid')
-
-    child_taxons = @content_item["links"]["child_taxons"]
-
-    child_taxons.each do |child_taxon|
-      assert page.has_css?("h3.taxon-page__grid-heading", text: child_taxon['title'])
-      assert page.has_link?(child_taxon['title'], href: child_taxon['base_path'])
-    end
-  end
-
   def and_i_can_see_the_in_page_nav
     assert page.has_selector?('.gem-c-contents-list__list')
     assert page.has_selector?('.gem-c-contents-list__link', text: "Services")
@@ -303,7 +308,7 @@ private
     assert page.has_selector?('.gem-c-contents-list__link', text: "Policy papers and consultations")
     assert page.has_selector?('.gem-c-contents-list__link', text: "Transparency and freedom of information releases")
     assert page.has_selector?('.gem-c-contents-list__link', text: "Organisations")
-    assert page.has_selector?('.gem-c-contents-list__link', text: "Explore these sub-topics")
+    assert page.has_selector?('.gem-c-contents-list__link', text: "Explore sub-topics")
   end
 
   def and_i_can_see_the_sub_topic_side_nav
@@ -343,7 +348,7 @@ private
     )
   end
 
-  def see_all_links_have_tracking_data
+  def then_all_links_have_tracking_data
     [
       'services', 'guidance and regulation', 'news and communications',
       'research and statistics', 'policy papers and consultations',
