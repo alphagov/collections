@@ -103,3 +103,8 @@
 .app-c-accordion__controls {
   @extend %contain-floats;
 }
+
+
+.govuk-accordion__controls {
+  display: none;
+}
