@@ -36,7 +36,7 @@ describe('An accordion module', function () {
   var expectedAccordionContentCount = 1;
 
   beforeEach(function () {
-    accordion = new GOVUK.Modules.Accordion();
+    accordion = new GOVUK.Modules.CollectionsAccordion();
     $element = $(html);
     accordion.start($element);
   });

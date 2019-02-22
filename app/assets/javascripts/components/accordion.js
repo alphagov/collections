@@ -5,7 +5,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 (function (Modules) {
   "use strict";
 
-  Modules.Accordion = function () {
+  Modules.CollectionsAccordion = function () {
 
     var bulkActions = {
       openAll: {

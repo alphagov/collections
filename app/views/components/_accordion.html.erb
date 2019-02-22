@@ -2,7 +2,7 @@
   sections ||= false
 %>
 <% if sections %>
-  <div data-module="accordion" class="app-c-accordion js-hidden">
+  <div data-module="collections-accordion" class="app-c-accordion js-hidden">
     <% sections.each_with_index do |section, index| %>
       <%
         id = section[:id] || section[:title].downcase.tr(" ","-")
