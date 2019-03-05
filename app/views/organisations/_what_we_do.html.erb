@@ -18,7 +18,7 @@
 
           <% unless @organisation.is_court_or_hmcts_tribunal? %>
           <p>
-            <a href="<%= @organisation.base_path %>/about" class="brand__color">
+            <a href="<%= t('organisations.about_page_path', organisation: @organisation.slug) %>" class="brand__color">
               <%= t('organisations.read_more') %>
             </a>
           </p>

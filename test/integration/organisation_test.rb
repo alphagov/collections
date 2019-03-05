@@ -687,6 +687,14 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     assert page.has_css?(".gem-c-image-card .gem-c-image-card__title-link", text: "Sir Jeremy Heywood")
   end
 
+  it "show a link to the correct about page on Welsh and English pages" do
+    visit "/government/organisations/attorney-generals-office"
+    assert page.has_css?("a[href='/government/organisations/attorney-generals-office/about']", text: "Read more about what we do")
+
+    visit "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
+    assert page.has_css?("a[href='/government/organisations/office-of-the-secretary-of-state-for-wales/about.cy']", text: "Darllen mwy am yr hyn rydyn ni'n ei wneud")
+  end
+
   it "shows translated text on welsh pages" do
     visit "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
     assert page.has_css?(".gem-c-heading", text: "Ein huwch swyddogion milwrol")
