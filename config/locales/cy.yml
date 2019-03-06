@@ -4,6 +4,7 @@ cy:
   view_all: gwelir holl
   view_less: gwelir llai
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.cy"
     administered_by: "Gweinyddir gan"
     contact:
       contact_details: "Contact details"
