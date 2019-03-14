@@ -4,8 +4,8 @@ class BrexitCampaignController < ApplicationController
     setup_content_item_and_navigation_helpers(@campaign)
 
     presenter = BrexitTaxonsPresenter.new
-    @taxons = presenter.featured_taxons
-    @other_taxons = presenter.other_taxons
+    @featured_links = presenter.featured_links
+    @other_links = presenter.other_links
 
     @campaign_links = campaign_links
 
