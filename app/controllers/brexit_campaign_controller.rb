@@ -18,7 +18,8 @@ private
 
   def campaign_links
     {
-      section_title: "There's different guidance if you're:",
+      section_title: "Other guidance",
+      description: "There's different guidance if you're:",
       contents_list_links: [
         { text: "running a business", href: "/business-uk-leaving-eu" },
         { text: "a UK national living in the EU", href: "/uk-nationals-living-eu" },
