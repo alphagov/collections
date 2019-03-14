@@ -1,22 +1,19 @@
 <section>
-  <% if @other_taxons.any? %>
+  <% if @other_links.any? %>
     <div class="grid-row">
       <div class="column-two-thirds">
         <%= render partial: 'featured_taxons', locals: { display_full_width: false } %>
       </div>
       <div class="column-one-third">
-        <h3 class="campaign__other-topics-title"><%= t("campaign.other_topics") %></h3>
+        <h2 class="campaign__other-topics-title"><%= t("campaign.other_topics") %></h2>
         <ul class="campaign__other-topics-list" data-module="track-click">
-        <% @other_taxons.each do |taxon| %>
+        <% @other_links.each do |link| %>
           <li class="campaign__other-topics-item">
             <%= link_to(
-              taxon.title,
-              taxon.finder_link,
-              "aria-label": "#{t('campaign.see_more_in_taxon', topic: taxon.title.downcase)}",
-              data: {
-                "track-category": "sideNavTopics",
-                "track-action": taxon.title
-              }
+              link.title,
+              link.link,
+              "aria-label": "#{t('campaign.see_more_in_taxon', topic: link.title.downcase)}",
+              data: link.sidebar_data_attributes
             ) %>
           </li>
         <% end %>

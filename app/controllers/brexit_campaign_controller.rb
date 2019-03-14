@@ -3,9 +3,9 @@ class BrexitCampaignController < ApplicationController
     @campaign = Campaign.find!("/prepare-eu-exit")
     setup_content_item_and_navigation_helpers(@campaign)
 
-    presenter = BrexitTaxonsPresenter.new
-    @taxons = presenter.featured_taxons
-    @other_taxons = presenter.other_taxons
+    presenter = CitizenReadiness::LinksPresenter.new
+    @featured_links = presenter.featured_links
+    @other_links = presenter.other_links
 
     @campaign_links = campaign_links
 
@@ -18,7 +18,8 @@ private
 
   def campaign_links
     {
-      section_title: "There's different guidance if you're:",
+      section_title: "Other guidance",
+      description: "There's different guidance if you're:",
       contents_list_links: [
         { text: "running a business", href: "/business-uk-leaving-eu" },
         { text: "a UK national living in the EU", href: "/uk-nationals-living-eu" },
