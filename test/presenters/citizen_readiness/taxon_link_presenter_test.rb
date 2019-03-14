@@ -23,7 +23,7 @@ describe CitizenReadiness::TaxonLinkPresenter do
     it 'should contain tracking data' do
       assert_equal({ "track-category" => "navGridContentClicked", "track-action" => 2, "track-label" => "Education" },
         presenter.featured_data_attributes)
-      assert_equal({ "track-category" => "sideNavTopics", "track-action" => "Education"},
+      assert_equal({ "track-category" => "sideNavTopics", "track-action" => "Education" },
         presenter.sidebar_data_attributes)
     end
   end
