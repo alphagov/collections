@@ -1,4 +1,4 @@
-class BrexitTaxonsPresenter
+class LinksPresenter
   CITIZEN_TAXON_CONTENT_ID = 'd7bdaee2-8ea5-460e-b00d-6e9382eb6b61'.freeze
 
   FEATURED_LINKS = %w(
@@ -28,7 +28,7 @@ class BrexitTaxonsPresenter
       .reject { |content_item| FEATURED_TAXONS.include?(content_item.base_path) }
       .reject { |content_item| REJECTED_TAXONS.include?(content_item.base_path) }
       .select { |content_item| taxon_ids_with_citizen_tagged_content.include?(content_item.content_id) }
-      .map { |content_item| BrexitTaxonPresenter.new(content_item) }
+      .map { |content_item| TaxonLinkPresenter.new(content_item) }
   end
 
 private
@@ -42,7 +42,7 @@ private
   def featured_taxons(index_offset = 0)
     @featured_taxons ||= FEATURED_TAXONS.map.with_index(index_offset) do |base_path, index|
       featured_taxon = level_one_taxons.detect { |taxon| taxon.base_path == base_path }
-      BrexitTaxonPresenter.new(featured_taxon, index)
+      TaxonLinkPresenter.new(featured_taxon, index)
     end
   end
 

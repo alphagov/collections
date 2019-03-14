@@ -1,6 +1,6 @@
 require 'test_helper'
 
-describe BrexitTaxonsPresenter do
+describe CitizenReadiness::LinksPresenter do
   include TaxonHelpers
 
   FEATURED_LINKS = [ { "base_path" => "/visit-europe-brexit"} ].freeze
