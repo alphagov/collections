@@ -3,9 +3,9 @@
     <% links_group.each do |link| %>
       <div class="<%= local_assigns.fetch(:display_full_width, true) ? 'column-one-third' : 'column-half' %>">
         <div class="campaign__taxon <%= "campaign__taxon--variable-border" if row_index.eql?(0) %> ">
-          <h3 class="campaign__taxon-title">
+          <h2 class="campaign__taxon-title">
             <%= link_to(link.title, link.link, data: link.featured_data_attributes, "aria-label": "#{t('campaign.see_more_in_taxon', topic: link.title.downcase)}") %>
-          </h3>
+          </h2>
           <p class="campaign__description"><%= link.description %></p>
         </div>
       </div>

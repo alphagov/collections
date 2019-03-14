@@ -47,7 +47,7 @@ class CitizenReadinessTest < ActionDispatch::IntegrationTest
   end
 
   def and_i_can_see_other_taxons_with_tracking
-    page.assert_selector "h3.campaign__other-topics-title",
+    page.assert_selector ".campaign__other-topics-title",
       text: "Other EU Exit topics"
     within ".campaign__other-topics-list" do
       page.assert_selector "a[href='/prepare-eu-exit/crime-and-law'][data-track-category=sideNavTopics][data-track-action='Crime, justice and law']"
