@@ -9,9 +9,8 @@ module CitizenReadiness
       to: :taxon_content_item
     )
 
-    def initialize(taxon_content_item, index = nil)
+    def initialize(taxon_content_item)
       @taxon_content_item = taxon_content_item
-      @index = index #used in link tracking
     end
 
     def description

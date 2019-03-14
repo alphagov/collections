@@ -20,8 +20,7 @@ module CitizenReadiness
     ).freeze
 
     def featured_links
-      custom_links +
-        featured_taxons(custom_links.length)
+      custom_links + featured_taxons
     end
 
     def other_links
@@ -35,15 +34,15 @@ module CitizenReadiness
   private
 
     def custom_links
-      @custom_links ||= FEATURED_LINKS.map.with_index do |base_path, index|
-        LinkPresenter.new(base_path, index)
+      @custom_links ||= FEATURED_LINKS.map do |base_path|
+        LinkPresenter.new(base_path)
       end
     end
 
-    def featured_taxons(index_offset = 0)
-      @featured_taxons ||= FEATURED_TAXONS.map.with_index(index_offset) do |base_path, index|
+    def featured_taxons
+      @featured_taxons ||= FEATURED_TAXONS.map do |base_path|
         featured_taxon = level_one_taxons.detect { |taxon| taxon.base_path == base_path }
-        TaxonLinkPresenter.new(featured_taxon, index)
+        TaxonLinkPresenter.new(featured_taxon)
       end
     end
 

@@ -4,9 +4,8 @@ module CitizenReadiness
 
     attr_reader :base_path
 
-    def initialize(base_path, index)
+    def initialize(base_path)
       @base_path = base_path
-      @index = index #used in link tracking
     end
 
     def title

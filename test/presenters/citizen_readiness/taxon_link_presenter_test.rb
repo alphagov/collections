@@ -5,7 +5,7 @@ describe CitizenReadiness::TaxonLinkPresenter do
 
   let(:content_hash) { education_taxon }
   let(:content_item) { ContentItem.new(content_hash) }
-  let(:presenter) { described_class.new(content_item, 2) }
+  let(:presenter) { described_class.new(content_item) }
 
   describe '#link' do
     it 'should return a link for the finder' do
@@ -22,7 +22,7 @@ describe CitizenReadiness::TaxonLinkPresenter do
   describe 'tracking' do
     it 'should contain tracking data' do
       assert_equal({ "track-category" => "navGridContentClicked", "track-action" => 2, "track-label" => "Education" },
-        presenter.featured_data_attributes)
+        presenter.featured_data_attributes(2))
       assert_equal({ "track-category" => "sideNavTopics", "track-action" => "Education" },
         presenter.sidebar_data_attributes)
     end

@@ -1,9 +1,9 @@
 module CitizenReadiness
   module Tracking
-    def featured_data_attributes
+    def featured_data_attributes(index)
       {
         "track-category" => "navGridContentClicked",
-        "track-action" => @index,
+        "track-action" => index,
         "track-label" => title
       }
     end
