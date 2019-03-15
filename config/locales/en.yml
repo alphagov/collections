@@ -17,7 +17,7 @@ en:
         title: "News and communications"
         see_all:
           text: "See all news and communications"
-          path: "/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
       consultations:
         title: "Consultations"
         see_all:

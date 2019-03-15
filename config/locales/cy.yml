@@ -19,7 +19,7 @@ cy:
         title: "Cyhoeddiadau"
         see_all:
           text: "Gweld ein holl cyhoeddiadau"
-          path: "/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
       consultations:
         title: "Ymgynghoriadau"
         see_all:
