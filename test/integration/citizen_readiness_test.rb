@@ -4,6 +4,7 @@ class CitizenReadinessTest < ActionDispatch::IntegrationTest
   it "renders links to citizen relevant content correctly" do
     when_i_visit_the_citizen_readiness_page
     then_i_can_see_the_correct_title
+    and_the_page_has_metatags
     and_i_can_see_email_signup_with_tracking
     and_i_can_see_featured_links_with_tracking
     and_i_can_see_featured_taxons_with_tracking
@@ -24,6 +25,10 @@ class CitizenReadinessTest < ActionDispatch::IntegrationTest
 
   def then_i_can_see_the_correct_title
     page.assert_selector "h1", text: "Prepare for EU exit"
+  end
+
+  def and_the_page_has_metatags
+    page.assert_selector("meta[name='description'][content='Prepare yourself for Brexit']", visible: false)
   end
 
   def and_i_can_see_email_signup_with_tracking
@@ -57,7 +62,7 @@ class CitizenReadinessTest < ActionDispatch::IntegrationTest
 
   def stub_citizen_readiness_page(base_path)
     content_item = GovukSchemas::RandomExample.for_schema(frontend_schema: 'special_route') do |payload|
-      payload.merge(title: "Prepare for EU exit", base_path: base_path)
+      payload.merge(title: "Prepare for EU exit", base_path: base_path, description: "Prepare yourself for Brexit")
     end
     content_store_has_item(base_path, content_item)
   end

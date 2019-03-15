@@ -1,5 +1,9 @@
 <%= content_for :title, 'Prepare for the UK leaving the EU' %>
 
+<% content_for :meta_tags do %>
+  <%= tag("meta", name: "description", content: @campaign.description) if @campaign.description %>
+<% end %>
+
 <%= render partial: 'header' %>
 
 <div class="taxon-page__email-link-wrapper">
