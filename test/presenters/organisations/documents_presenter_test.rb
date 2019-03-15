@@ -117,7 +117,7 @@ describe Organisations::DocumentsPresenter do
               {
                 link: {
                   text: "See all news and communications",
-                  path: "/news-and-communications?organisations[]=attorney-generals-office&parent=attorney-generals-office"
+                  path: "/search/news-and-communications?organisations[]=attorney-generals-office&parent=attorney-generals-office"
                 }
               }
             ],
