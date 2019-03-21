@@ -3,7 +3,10 @@ require 'test_helper'
 describe CitizenReadiness::LinksPresenter do
   include TaxonHelpers
 
-  FEATURED_LINKS = [{ "base_path" => "/visit-europe-brexit" }].freeze
+  FEATURED_LINKS = [
+    { "base_path" => "/visit-europe-brexit" },
+    { "base_path" => "/buying-europe-brexit" },
+  ].freeze
 
   FEATURED_TAXONS = [
     { "title" => "Work", "base_path" => "/work", "content_id" => "work-taxon-id" },

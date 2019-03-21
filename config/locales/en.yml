@@ -107,6 +107,9 @@ en:
     see_more_in_taxon: "See more in %{topic}"
     other_topics: "Other EU Exit topics"
     links:
+      buying-europe-brexit:
+        title: "Buying things from Europe after Brexit"
+        description: "Includes consumer rights, making payments and package holidays"
       visit-europe-brexit:
         title: "Visit Europe after Brexit"
         description: "Includes passports, driving and travel, EHIC cards, pets and mobile roaming fees"
