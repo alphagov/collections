@@ -107,11 +107,14 @@ en:
     see_more_in_taxon: "See more in %{topic}"
     other_topics: "Other EU Exit topics"
     links:
+      buying-europe-brexit:
+        title: "Buying things from Europe after Brexit"
+        description: "Includes consumer rights, making payments and package holidays"
       visit-europe-brexit:
         title: "Visit Europe after Brexit"
         description: "Includes passports, driving and travel, EHIC cards, pets and mobile roaming fees"
     taxon_descriptions:
-      business-and-industry: "Includes consumer rights, banking and selling online"
+      business-and-industry: "Includes imports, banking and selling online"
       education: "Includes studying abroad and Erasmus+"
       environment: "Includes environmental standards and food labels"
       going-and-being-abroad: "Includes passports, foreign travel advice, pet travel and mobile roaming fees"

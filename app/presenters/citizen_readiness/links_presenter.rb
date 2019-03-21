@@ -4,6 +4,7 @@ module CitizenReadiness
 
     FEATURED_LINKS = %w(
       /visit-europe-brexit
+      /buying-europe-brexit
     ).freeze
 
     FEATURED_TAXONS = %w(

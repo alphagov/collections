@@ -44,10 +44,10 @@ class CitizenReadinessTest < ActionDispatch::IntegrationTest
   end
 
   def and_i_can_see_featured_taxons_with_tracking
-    page.assert_selector ".campaign__taxon a[data-track-category][data-track-action][data-track-label]", count: 5
-    page.assert_selector ".campaign__taxon a[data-track-action=1]",
+    page.assert_selector ".campaign__taxon a[data-track-category][data-track-action][data-track-label]", count: 6
+    page.assert_selector ".campaign__taxon a[data-track-action=2]",
       text: "Work and things"
-    page.assert_selector ".campaign__taxon a[data-track-action=4]",
+    page.assert_selector ".campaign__taxon a[data-track-action=5]",
       text: "Education, training and skills"
   end
 
