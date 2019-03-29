@@ -13,8 +13,9 @@ ENV["RAILS_ENV"] ||= "test"
 
 require 'cucumber/rails'
 require_relative 'mocha'
-require_relative 'selenium'
 require 'slimmer/test'
+
+GovukTest.configure
 
 ActionController::Base.allow_rescue = false
 
