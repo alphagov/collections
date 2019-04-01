@@ -5,6 +5,8 @@ module CitizenReadiness
     FEATURED_LINKS = %w(
       /visit-europe-brexit
       /buying-europe-brexit
+      /guidance/studying-in-the-european-union-after-brexit
+      /government/publications/family-law-disputes-involving-eu-after-brexit
     ).freeze
 
     FEATURED_TAXONS = %w(

@@ -113,6 +113,12 @@ en:
       visit-europe-brexit:
         title: "Visit Europe after Brexit"
         description: "Includes passports, driving and travel, EHIC cards, pets and mobile roaming fees"
+      guidance-studying-in-the-european-union-after-brexit:
+        title: "Studying in the European Union after Brexit"
+        description:
+      government-publications-family-law-disputes-involving-eu-after-brexit:
+        title: "Family law disputes involving EU after Brexit"
+        description:
     taxon_descriptions:
       business-and-industry: "Includes imports, banking and selling online"
       education: "Includes studying abroad and Erasmus+"
