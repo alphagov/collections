@@ -5,10 +5,11 @@
         <%= render partial: 'featured_taxons', locals: { display_full_width: false } %>
       </div>
       <div class="column-one-third">
-        <h2 class="campaign__other-topics-title"><%= t("campaign.other_topics") %></h2>
-        <ul class="campaign__other-topics-list" data-module="track-click">
+        <h2 class="campaign__other-campaigns-title"><%= t("campaign.other_campaigns.title") %></h2>
+        <p class="campaign__other-campaigns-description"><%= t("campaign.other_campaigns.description") %></p>
+        <ul class="campaign__other-campaigns-list" data-module="track-click">
         <% @other_links.each do |link| %>
-          <li class="campaign__other-topics-item">
+          <li class="campaign__other-campaigns-item">
             <%= link_to(
               link.title,
               link.link,

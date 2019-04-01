@@ -23,11 +23,6 @@
   padding-top: $gutter-two-thirds;
 }
 
-.campaign__other-campaigns-description {
-  @include core-19;
-  margin-bottom: $gutter-one-third;
-}
-
 .campaign__other-campaigns-list {
   padding-left: $gutter-two-thirds;
 }
@@ -37,7 +32,7 @@
   margin-bottom: 5px;
 }
 
-.campaign__other-topics-title {
+.campaign__other-campaigns-title {
   @include bold-24;
   padding: $gutter-half 0;
   border-top: 2px solid $govuk-blue;
@@ -45,6 +40,11 @@
   @include media(tablet) {
     border: none;
   }
+}
+
+.campaign__other-campaigns-description {
+  @include core-19;
+  margin-bottom: $gutter-one-third;
 }
 
 .campaign__other-topics-list {

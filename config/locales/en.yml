@@ -105,7 +105,9 @@ en:
     email_signup: "Sign up for updates about EU Exit on all GOV.UK pages"
     see_more: "See more"
     see_more_in_taxon: "See more in %{topic}"
-    other_topics: "Other EU Exit topics"
+    other_campaigns:
+      title: "Other guidance"
+      description: "There's different guidance if you're:"
     links:
       buying-europe-brexit:
         title: "Buying things from Europe after Brexit"
@@ -118,6 +120,15 @@ en:
         description:
       government-publications-family-law-disputes-involving-eu-after-brexit:
         title: "Family law disputes involving EU after Brexit"
+        description:
+      business-uk-leaving-eu:
+        title: "running a business"
+        description:
+      uk-nationals-living-eu:
+        title: "a UK national living in the EU"
+        description:
+      staying-uk-eu-citizen:
+        title: "An EU national and you want to continue living in the UK"
         description:
     taxon_descriptions:
       business-and-industry: "Includes imports, banking and selling online"
