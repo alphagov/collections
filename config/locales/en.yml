@@ -110,17 +110,17 @@ en:
       description: "There's different guidance if you're:"
     links:
       buying-europe-brexit:
-        title: "Buying things from Europe after Brexit"
+        title: "Buying things from Europe"
         description: "Includes consumer rights, making payments and package holidays"
       visit-europe-brexit:
-        title: "Visit Europe after Brexit"
+        title: "Visiting Europe"
         description: "Includes passports, driving and travel, EHIC cards, pets and mobile roaming fees"
       guidance-studying-in-the-european-union-after-brexit:
-        title: "Studying in the European Union after Brexit"
-        description:
+        title: "Studying in the EU"
+        description: "Includes Erasmus+ and other options for higher education study abroad"
       government-publications-family-law-disputes-involving-eu-after-brexit:
-        title: "Family law disputes involving EU after Brexit"
-        description:
+        title: "Family law disputes in the EU"
+        description: "Includes divorce and disputes about parental responsibility or child maintenance"
       business-uk-leaving-eu:
         title: "running a business"
         description:
@@ -128,7 +128,7 @@ en:
         title: "a UK national living in the EU"
         description:
       staying-uk-eu-citizen:
-        title: "An EU national and you want to continue living in the UK"
+        title: "an EU national and you want to continue living in the UK"
         description:
     taxon_descriptions:
       business-and-industry: "Includes imports, banking and selling online"

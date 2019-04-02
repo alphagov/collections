@@ -27,8 +27,8 @@ class CitizenReadinessTest < ActionDispatch::IntegrationTest
     page.assert_selector ".campaign__taxon a[data-track-category][data-track-action][data-track-label]", count: 4
 
     within first('.campaign__taxon') do
-      page.assert_selector "a[data-track-category=navGridContentClicked][data-track-action=0][data-track-label='Visit Europe after Brexit']",
-        text: "Visit Europe after Brexit"
+      page.assert_selector "a[data-track-category=navGridContentClicked][data-track-action=0][data-track-label='Visiting Europe']",
+        text: "Visiting Europe"
     end
   end
 
