@@ -102,9 +102,6 @@ en:
       uk_nationals_in_eu_preparations: "Living in Europe after the UK leaves the EU"
       eu_citizens_in_uk_preparations: "Continue to live in the UK after it leaves the EU"
   campaign:
-    email_signup: "Sign up for updates about EU Exit on all GOV.UK pages"
-    see_more: "See more"
-    see_more_in_taxon: "See more in %{topic}"
     other_campaigns:
       title: "Other guidance"
       description: "There's different guidance if you're:"
@@ -123,21 +120,10 @@ en:
         description: "Includes divorce and disputes about parental responsibility or child maintenance"
       business-uk-leaving-eu:
         title: "running a business"
-        description:
       uk-nationals-living-eu:
         title: "a UK national living in the EU"
-        description:
       staying-uk-eu-citizen:
         title: "an EU national and you want to continue living in the UK"
-        description:
-    taxon_descriptions:
-      business-and-industry: "Includes imports, banking and selling online"
-      education: "Includes studying abroad and Erasmus+"
-      environment: "Includes environmental standards and food labels"
-      going-and-being-abroad: "Includes passports, foreign travel advice, pet travel and mobile roaming fees"
-      health-and-social-care: "Includes healthcare in the EU, medicine and health insurance"
-      transport: "Includes driving licences, vehicle insurance and flying to the EU"
-      work: "Includes workplace rights and working in the EU"
   language_names:
     en: English
     cy: Cymraeg
