@@ -620,7 +620,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
   it "shows a see all link in the latest documents section" do
     visit "/government/organisations/attorney-generals-office"
-    assert page.has_css?("a[href='/government/organisations/latest?organisations%5B%5D=attorney-generals-office']", text: "See all")
+    assert page.has_css?("a[href='/search/all?organisations%5B%5D=attorney-generals-office&order=updated-newest&parent=attorney-generals-office']", text: "See all")
   end
 
   it "shows subscription links" do
