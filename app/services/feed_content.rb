@@ -20,6 +20,8 @@ private
       order: '-public_timestamp',
     )
 
-    Services.rummager.search(params)
+    @search_response ||= Rails.cache.fetch(params, expires_in: 10.minutes) do
+      Services.rummager.search(params)
+    end
   end
 end

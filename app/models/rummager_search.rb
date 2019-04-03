@@ -67,6 +67,8 @@ class RummagerSearch
 private
 
   def search_result
-    @search_result ||= Services.rummager.search(@search_params)
+    @search_result ||= Rails.cache.fetch(@search_params, expires_in: 5.minutes) do
+      Services.rummager.search(@search_params).to_h
+    end
   end
 end
