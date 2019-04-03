@@ -20,6 +20,6 @@ private
       order: '-public_timestamp',
     )
 
-    Services.rummager.search(params)
+    @search_response ||= Services.cached_search(params, metric_key: 'feeds.search.request_time')
   end
 end

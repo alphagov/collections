@@ -28,7 +28,7 @@ private
   RESULTS_PER_PAGE = 20
 
   def presented_organisations(start:)
-    organisations = get_organisations(count: RESULTS_PER_PAGE, start: start)
+    organisations = organisations_from_search(count: RESULTS_PER_PAGE, start: start)
     OrganisationsApiPresenter.new(
       organisations["results"],
       current_page: current_page,
@@ -39,7 +39,7 @@ private
   end
 
   def presented_organisation(slug:)
-    organisation = get_organisation(slug: slug)
+    organisation = organisation_from_search(slug: slug)
 
     raise OrganisationNotFound if organisation["total"].zero?
 
@@ -53,22 +53,26 @@ private
     ).present
   end
 
-  def get_organisations(count:, start:)
-    Services.rummager.search(
+  def organisations_from_search(count:, start:)
+    params = {
       filter_format: "organisation",
       order: "title",
       count: count,
       start: start
-    )
+    }
+
+    @organisations_from_search ||= Services.cached_search(params, metric_key: 'organisations_api.search.request_time')
   end
 
-  def get_organisation(slug:)
-    Services.rummager.search(
+  def organisation_from_search(slug:)
+    params = {
       filter_format: "organisation",
       filter_slug: slug,
       count: 1,
       start: 0
-    )
+    }
+
+    @organisation_from_search ||= Services.cached_search(params, metric_key: 'organisation_api.search.request_time')
   end
 
   def set_link_header(links:)
