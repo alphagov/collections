@@ -5,7 +5,7 @@
       <div class="<%= local_assigns.fetch(:display_full_width, true) ? 'column-one-third' : 'column-half' %>">
         <div class="campaign__taxon <%= "campaign__taxon--variable-border" if row_index.eql?(0) %> ">
           <h2 class="campaign__taxon-title">
-            <%= link_to(link.title, link.link, data: link.featured_data_attributes(link_index), "aria-label": "#{t('campaign.see_more_in_taxon', topic: link.title.downcase)}") %>
+            <%= link_to(link.title, link.link, data: link.featured_data_attributes(link_index)) %>
             <% link_index += 1 %>
           </h2>
           <p class="campaign__description"><%= link.description %></p>

@@ -19,9 +19,9 @@ describe CitizenReadiness::LinkPresenter do
 
   describe 'tracking' do
     it 'should contain tracking data' do
-      assert_equal({ "track-category" => "navGridContentClicked", "track-action" => 1, "track-label" => "Visit Europe after Brexit" },
+      assert_equal({ "track-category" => "navGridContentClicked", "track-action" => 1, "track-label" => "Visiting Europe" },
         presenter.featured_data_attributes(1))
-      assert_equal({ "track-category" => "sideNavTopics", "track-action" => "Visit Europe after Brexit" },
+      assert_equal({ "track-category" => "sideNavTopics", "track-action" => "Visiting Europe" },
         presenter.sidebar_data_attributes)
     end
   end

@@ -102,25 +102,28 @@ en:
       uk_nationals_in_eu_preparations: "Living in Europe after the UK leaves the EU"
       eu_citizens_in_uk_preparations: "Continue to live in the UK after it leaves the EU"
   campaign:
-    email_signup: "Sign up for updates about EU Exit on all GOV.UK pages"
-    see_more: "See more"
-    see_more_in_taxon: "See more in %{topic}"
-    other_topics: "Other EU Exit topics"
+    other_campaigns:
+      title: "Other guidance"
+      description: "There's different guidance if you're:"
     links:
       buying-europe-brexit:
-        title: "Buying things from Europe after Brexit"
+        title: "Buying things from Europe"
         description: "Includes consumer rights, making payments and package holidays"
       visit-europe-brexit:
-        title: "Visit Europe after Brexit"
+        title: "Visiting Europe"
         description: "Includes passports, driving and travel, EHIC cards, pets and mobile roaming fees"
-    taxon_descriptions:
-      business-and-industry: "Includes imports, banking and selling online"
-      education: "Includes studying abroad and Erasmus+"
-      environment: "Includes environmental standards and food labels"
-      going-and-being-abroad: "Includes passports, foreign travel advice, pet travel and mobile roaming fees"
-      health-and-social-care: "Includes healthcare in the EU, medicine and health insurance"
-      transport: "Includes driving licences, vehicle insurance and flying to the EU"
-      work: "Includes workplace rights and working in the EU"
+      guidance-studying-in-the-european-union-after-brexit:
+        title: "Studying in the EU"
+        description: "Includes Erasmus+ and other options for higher education study abroad"
+      government-publications-family-law-disputes-involving-eu-after-brexit:
+        title: "Family law disputes in the EU"
+        description: "Includes divorce and disputes about parental responsibility or child maintenance"
+      business-uk-leaving-eu:
+        title: "running a business"
+      uk-nationals-living-eu:
+        title: "a UK national living in the EU"
+      staying-uk-eu-citizen:
+        title: "an EU national and you want to continue living in the UK"
   language_names:
     en: English
     cy: Cymraeg

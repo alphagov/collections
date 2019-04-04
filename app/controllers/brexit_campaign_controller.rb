@@ -3,11 +3,8 @@ class BrexitCampaignController < ApplicationController
     @campaign = Campaign.find!("/prepare-eu-exit")
     setup_content_item_and_navigation_helpers(@campaign)
 
-    presenter = CitizenReadiness::LinksPresenter.new
-    @featured_links = presenter.featured_links
-    @other_links = presenter.other_links
-
-    @campaign_links = campaign_links
+    @featured_links = featured_links
+    @other_links = other_links
 
     render :show, locals: {
       campaign: @campaign
@@ -16,15 +13,20 @@ class BrexitCampaignController < ApplicationController
 
 private
 
-  def campaign_links
-    {
-      section_title: "Other guidance",
-      description: "There's different guidance if you're:",
-      contents_list_links: [
-        { text: "running a business", href: "/business-uk-leaving-eu" },
-        { text: "a UK national living in the EU", href: "/uk-nationals-living-eu" },
-        { text: "an EU national and you want to continue living in the UK", href: "/staying-uk-eu-citizen" },
-      ]
-    }
+  def featured_links
+    %w(
+      /visit-europe-brexit
+      /buying-europe-brexit
+      /guidance/studying-in-the-european-union-after-brexit
+      /government/publications/family-law-disputes-involving-eu-after-brexit
+    ).map { |base_path| CitizenReadiness::LinkPresenter.new(base_path) }
+  end
+
+  def other_links
+    %w(
+      /business-uk-leaving-eu
+      /uk-nationals-living-eu
+      /staying-uk-eu-citizen
+    ).map { |path| CitizenReadiness::LinkPresenter.new(path) }
   end
 end

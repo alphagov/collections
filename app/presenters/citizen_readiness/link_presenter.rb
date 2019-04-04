@@ -23,7 +23,7 @@ module CitizenReadiness
   private
 
     def slug
-      link.delete("/")
+      link.parameterize
     end
   end
 end
