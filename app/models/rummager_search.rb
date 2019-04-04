@@ -67,6 +67,6 @@ class RummagerSearch
 private
 
   def search_result
-    @search_result ||= Services.rummager.search(@search_params)
+    @search_result ||= Services.cached_search(@search_params)
   end
 end

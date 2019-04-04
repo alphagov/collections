@@ -46,14 +46,19 @@ module Organisations
     end
 
     def latest_documents
-      @latest_documents ||= Services.rummager.search(
-        count: 3,
-        order: "-public_timestamp",
-        filter_organisations: @org.slug,
-        reject_content_purpose_supergroup: "other",
-        fields: %w[title link content_store_document_type public_timestamp]
-      )["results"]
-      search_results_to_documents(@latest_documents)
+      @latest_documents ||= begin
+        params = {
+          count: 3,
+          order: "-public_timestamp",
+          filter_organisations: @org.slug,
+          reject_content_purpose_supergroup: "other",
+          fields: %w[title link content_store_document_type public_timestamp]
+        }
+
+        results = Services.cached_search(params)["results"]
+
+        search_results_to_documents(results)
+      end
     end
 
     def has_latest_documents_by_type?
@@ -141,7 +146,7 @@ module Organisations
       params[:filter_government_document_supertype] = filter_government_document_supertype if filter_government_document_supertype
       params[:reject_government_document_supertype] = reject_government_document_supertype if reject_government_document_supertype
 
-      Services.rummager.search(params)["results"]
+      Services.cached_search(params, metric_key: "organisations.search.request_time")["results"]
     end
 
     def search_results_to_documents(search_results)
