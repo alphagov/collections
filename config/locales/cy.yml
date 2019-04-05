@@ -16,9 +16,9 @@ cy:
     document_types:
       documents: "Dogfennau"
       news_and_communications:
-        title: "Cyhoeddiadau"
+        title: "Newyddion a chyfathrebiadau"
         see_all:
-          text: "Gweld ein holl cyhoeddiadau"
+          text: "Gweld yr holl newyddion a chyfathrebiadau"
           path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
       consultations:
         title: "Ymgynghoriadau"
