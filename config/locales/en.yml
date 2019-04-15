@@ -22,7 +22,7 @@ en:
         title: "Services"
         see_all:
           text: "See all services"
-          path: "/services?organisations[]=%{organisation}&parent=%{organisation}"
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
       guidance_and_regulation:
         title: "Guidance and regulation"
         see_all:
@@ -32,17 +32,17 @@ en:
         title: "Research and statistics"
         see_all:
           text: "See all research and statistics"
-          path: "/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          path: "/government/statistics?departments[]=%{organisation}&parent=%{organisation}"
       policy_and_engagement:
         title: "Policy and engagement"
         see_all:
           text: "See all policy and engagement"
-          path: "/policy-and-engagement?organisations[]=%{organisation}&parent=%{organisation}"
+          path: "/search/policy-and-engagement?organisations[]=%{organisation}&parent=%{organisation}"
       transparency:
         title: "Transparency"
         see_all:
           text: "See all transparency releases"
-          path: "/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
     featured: "Featured"
     foi:
       make_an_foi_request: Make an FOI request
