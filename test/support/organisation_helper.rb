@@ -1,27 +1,58 @@
 module OrganisationHelpers
+  include ::RummagerHelpers
+
   def stub_rummager_latest_content_requests(organisation_slug)
+    stub_latest_content_from_supergroups_request(organisation_slug)
     stub_rummager_latest_documents_request(organisation_slug)
-    stub_rummager_latest_announcements_request(organisation_slug)
-    stub_rummager_latest_consultations_request(organisation_slug)
-    stub_rummager_latest_publications_request(organisation_slug)
-    stub_rummager_latest_statistics_request(organisation_slug)
+  end
+
+  def stub_latest_content_from_supergroups_request(organisation_slug, empty = false)
+    Search::Supergroups::SUPERGROUP_TYPES.each { |group|
+      url = build_rummager_query_url(
+        filter_organisations: organisation_slug,
+        filter_content_purpose_supergroup: group,
+      )
+
+      stub_request(:get, url).to_return(body: build_result_body(group, empty).to_json)
+    }
+  end
+
+  def build_result_body(group, empty, result_count = 2)
+    return { results: [] } if empty || group == "services"
+
+    {
+      results: generate_search_results(result_count, group)
+    }
+  end
+
+  def default_params
+    {
+      count: 2,
+      'fields[]': %w(
+        content_store_document_type
+        link
+        public_timestamp
+        title
+      ),
+      order: '-public_timestamp',
+    }
+  end
+
+  def build_rummager_query_url(params = {})
+    query = Rack::Utils.build_query default_params.merge(params)
+    "#{Plek.new.find('search')}/search.json?#{query}"
   end
 
   def stub_empty_rummager_requests(organisation_slug)
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=3&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp&reject_content_purpose_supergroup=other").
-    to_return(body: { results: [] }.to_json)
+    stub_latest_content_from_supergroups_request(organisation_slug, true)
 
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_content_purpose_supergroup=news_and_communications&filter_organisations=#{organisation_slug}&order=-public_timestamp").
-      to_return(body: { results: [] }.to_json)
+    url = build_rummager_query_url(
+      filter_organisations: organisation_slug,
+      reject_content_purpose_supergroup: 'other',
+      count: 3
+    )
 
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_government_document_supertype=consultations&filter_organisations=#{organisation_slug}&order=-public_timestamp").
-      to_return(body: { results: [] }.to_json)
-
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_content_purpose_supergroup%5B%5D=guidance_and_regulation&filter_content_purpose_supergroup%5B%5D=policy_and_engagement&filter_content_purpose_supergroup%5B%5D=transparency&filter_organisations=#{organisation_slug}&order=-public_timestamp&reject_government_document_supertype%5B%5D=consultations&reject_government_document_supertype%5B%5D=statistics").
-      to_return(body: { results: [] }.to_json)
-
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_government_document_supertype=statistics&filter_organisations=#{organisation_slug}&order=-public_timestamp").
-      to_return(body: { results: [] }.to_json)
+    stub_request(:get, url).to_return(body: build_result_body('other', true).to_json)
   end
 
   def stub_rummager_latest_documents_request(organisation_slug)
@@ -46,47 +77,6 @@ module OrganisationHelpers
           public_timestamp: "2018-06-18T17:39:34.000+01:00"
         }
       ] }.to_json)
-  end
-
-  def stub_rummager_latest_announcements_request(organisation_slug)
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_content_purpose_supergroup=news_and_communications&filter_organisations=#{organisation_slug}&order=-public_timestamp").
-      to_return(body: { results: [
-        {
-          title: "First events announced for National Democracy Week",
-          link: "/government/news/first-events-announced-for-national-democracy-week",
-          content_store_document_type: "press release",
-          public_timestamp: "2018-06-13T17:39:34.000+01:00"
-        }
-      ] }.to_json)
-  end
-
-  def stub_rummager_latest_consultations_request(organisation_slug)
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_government_document_supertype=consultations&filter_organisations=#{organisation_slug}&order=-public_timestamp").
-      to_return(body: { results: [
-        {
-          title: "Consultation on revised Code of Data Matching Practice",
-          link: "/government/consultations/consultation-on-revised-code-of-data-matching-practice",
-          content_store_document_type: "closed_consultation",
-          public_timestamp: "2018-04-27T17:39:34.000+01:00"
-        }
-      ] }.to_json)
-  end
-
-  def stub_rummager_latest_publications_request(organisation_slug)
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_content_purpose_supergroup%5B%5D=guidance_and_regulation&filter_content_purpose_supergroup%5B%5D=policy_and_engagement&filter_content_purpose_supergroup%5B%5D=transparency&filter_organisations=#{organisation_slug}&order=-public_timestamp&reject_government_document_supertype%5B%5D=consultations&reject_government_document_supertype%5B%5D=statistics").
-      to_return(body: { results: [
-        {
-          title: "National Democracy Week: partner pack",
-          link: "/government/publications/national-democracy-week-partner-pack",
-          content_store_document_type: "guidance",
-          public_timestamp: "2018-06-18T17:39:34.000+01:00"
-        }
-      ] }.to_json)
-  end
-
-  def stub_rummager_latest_statistics_request(organisation_slug)
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=2&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_government_document_supertype=statistics&filter_organisations=#{organisation_slug}&order=-public_timestamp").
-      to_return(body: { results: [] }.to_json)
   end
 
   def organisation_with_no_people

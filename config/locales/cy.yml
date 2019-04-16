@@ -35,6 +35,31 @@ cy:
         see_all:
           text: "Gweld ein holl hystadegau"
           path: "/government/statistics?departments[]=%{organisation}"
+      services:
+        title: "Gwasanaethau"
+        see_all:
+          text: "Gweld yr holl wasanaethau"
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+      guidance_and_regulation:
+        title: "Canllawiau a rheoleiddio"
+        see_all:
+          text: "Gweld yr holl ganllawiau a rheoleiddio"
+          path: "/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+      research_and_statistics:
+        title: "Ymchwil ac ystadegau"
+        see_all:
+          text: "Gweld yr holl ymchwil ac ystadegau"
+          path: "/government/statistics?departments[]=%{organisation}&parent=%{organisation}"
+      policy_and_engagement:
+        title: "Papurau polisi ac ymgynghoriadau"
+        see_all:
+          text: "Gweld yr holl bapurau polisi ac ymgynghoriadau"
+          path: "/search/policy-and-engagement?organisations[]=%{organisation}&parent=%{organisation}"
+      transparency:
+        title: "Datganiadau tryloywder a rhyddid gwybodaeth"
+        see_all:
+          text: "Gweld yr holl ddatganiadau tryloywder a rhyddid gwybodaeth"
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
     featured: "Sylw"
     foi:
       make_an_foi_request: Gwneud cais DRhG

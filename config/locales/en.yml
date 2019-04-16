@@ -18,21 +18,31 @@ en:
         see_all:
           text: "See all news and communications"
           path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
-      consultations:
-        title: "Consultations"
+      services:
+        title: "Services"
         see_all:
-          text: "See all consultations"
-          path: "/government/consultations?departments[]=%{organisation}"
-      publications:
-        title: "Publications"
+          text: "See all services"
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+      guidance_and_regulation:
+        title: "Guidance and regulation"
         see_all:
-          text: "See all publications"
-          path: "/government/publications?departments[]=%{organisation}"
-      statistics:
-        title: "Statistics"
+          text: "See all guidance and regulation"
+          path: "/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+      research_and_statistics:
+        title: "Research and statistics"
         see_all:
-          text: "See all statistics"
-          path: "/government/statistics?departments[]=%{organisation}"
+          text: "See all research and statistics"
+          path: "/government/statistics?departments[]=%{organisation}&parent=%{organisation}"
+      policy_and_engagement:
+        title: "Policy and engagement"
+        see_all:
+          text: "See all policy and engagement"
+          path: "/search/policy-and-engagement?organisations[]=%{organisation}&parent=%{organisation}"
+      transparency:
+        title: "Transparency"
+        see_all:
+          text: "See all transparency releases"
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
     featured: "Featured"
     foi:
       make_an_foi_request: Make an FOI request

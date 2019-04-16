@@ -46,65 +46,18 @@ module Organisations
     end
 
     def latest_documents
-      @latest_documents ||= begin
-        params = {
+      @latest_documents ||= Services.cached_search(
+        {
           count: 3,
           order: "-public_timestamp",
           filter_organisations: @org.slug,
           reject_content_purpose_supergroup: "other",
           fields: %w[title link content_store_document_type public_timestamp]
-        }
+        },
+        metric_key: "organisations.search.request_time"
+      )["results"]
 
-        results = Services.cached_search(params)["results"]
-
-        search_results_to_documents(results)
-      end
-    end
-
-    def has_latest_documents_by_type?
-      has_latest_news_and_communications? ||
-        has_latest_consultations? ||
-        has_latest_publications? ||
-        has_latest_statistics?
-    end
-
-    def latest_documents_by_type
-      all_documents = [
-        news_and_communications: latest_news_and_communications,
-        consultations: latest_consultations,
-        publications: latest_publications,
-        statistics: latest_statistics
-      ]
-
-      formatted_documents = []
-
-      all_documents.each do |document_group|
-        document_group.each do |document_type, documents|
-          if documents[:items].present?
-            documents[:items].push(
-              link: {
-                text: I18n.t(
-                  :text,
-                  organisation: @org.slug,
-                  scope: [:organisations, :document_types, document_type, :see_all],
-                ),
-                path: I18n.t(
-                  :path,
-                  organisation: @org.slug,
-                  scope: [:organisations, :document_types, document_type, :see_all],
-                ),
-              }
-            )
-
-            formatted_documents << {
-              documents: documents,
-              title: I18n.t(:title, scope: [:organisations, :document_types, document_type]),
-            }
-          end
-        end
-      end
-
-      formatted_documents.compact
+      search_results_to_documents(@latest_documents, @org)
     end
 
   private
@@ -134,56 +87,6 @@ module Organisations
       end
     end
 
-    def search_rummager(filter_content_purpose_supergroup: false, filter_government_document_supertype: false, reject_government_document_supertype: false)
-      params = {
-        count: 2,
-        order: "-public_timestamp",
-        filter_organisations: @org.slug,
-        fields: %w[title link content_store_document_type public_timestamp]
-      }
-
-      params[:filter_content_purpose_supergroup] = filter_content_purpose_supergroup if filter_content_purpose_supergroup
-      params[:filter_government_document_supertype] = filter_government_document_supertype if filter_government_document_supertype
-      params[:reject_government_document_supertype] = reject_government_document_supertype if reject_government_document_supertype
-
-      Services.cached_search(params, metric_key: "organisations.search.request_time")["results"]
-    end
-
-    def search_results_to_documents(search_results)
-      documents = []
-
-      search_results.each do |item|
-        metadata = {}
-
-        if item["public_timestamp"]
-          metadata[:public_updated_at] = Date.parse(item["public_timestamp"])
-        end
-
-        if item["content_store_document_type"]
-          metadata[:document_type] = item["content_store_document_type"].capitalize.tr("_", " ")
-
-          # Handle document types with acronyms
-          document_acronyms = %w{Foi Dfid Aaib Cma Esi Hmrc Html Maib Raib Utaac}
-          document_acronyms.each do |acronym|
-            metadata[:document_type].gsub!(acronym, acronym.upcase)
-          end
-        end
-
-        documents << {
-          link: {
-            text: item["title"],
-            path: item["link"]
-          },
-          metadata: metadata
-        }
-      end
-
-      {
-        items: documents,
-        brand: (@org.brand if @org.is_live?)
-      }
-    end
-
     def featured_news(featured, first_featured: false)
       news_stories = []
       image_size = first_featured ? 712 : 465
@@ -207,45 +110,6 @@ module Organisations
       end
 
       news_stories
-    end
-
-    def has_latest_news_and_communications?
-      latest_news_and_communications[:items].present?
-    end
-
-    def has_latest_consultations?
-      latest_consultations[:items].present?
-    end
-
-    def has_latest_publications?
-      latest_publications[:items].present?
-    end
-
-    def has_latest_statistics?
-      latest_statistics[:items].present?
-    end
-
-    def latest_news_and_communications
-      @latest_news_and_communications ||= search_rummager(filter_content_purpose_supergroup: "news_and_communications")
-      search_results_to_documents(@latest_news_and_communications)
-    end
-
-    def latest_publications
-      @latest_publications ||= search_rummager(
-        filter_content_purpose_supergroup: %w(guidance_and_regulation policy_and_engagement transparency),
-        reject_government_document_supertype: %w(consultations statistics)
-      )
-      search_results_to_documents(@latest_publications)
-    end
-
-    def latest_consultations
-      @latest_consultations ||= search_rummager(filter_government_document_supertype: "consultations")
-      search_results_to_documents(@latest_consultations)
-    end
-
-    def latest_statistics
-      @latest_statistics ||= search_rummager(filter_government_document_supertype: "statistics")
-      search_results_to_documents(@latest_statistics)
     end
 
     def promotions_child_column_class(number_of_items)

@@ -80,6 +80,10 @@
   margin-bottom: $gutter;
 }
 
+.organisation__supergroup--margin-bottom {
+  margin-bottom: $gutter-half;
+}
+
 .organisation__no10-banner {
   @include core-19;
   padding-top: 140px;
