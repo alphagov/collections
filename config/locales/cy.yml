@@ -44,7 +44,7 @@ cy:
         title: "Canllawiau a rheoleiddio"
         see_all:
           text: "Gweld yr holl ganllawiau a rheoleiddio"
-          path: "/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
       research_and_statistics:
         title: "Ymchwil ac ystadegau"
         see_all:
@@ -54,7 +54,7 @@ cy:
         title: "Papurau polisi ac ymgynghoriadau"
         see_all:
           text: "Gweld yr holl bapurau polisi ac ymgynghoriadau"
-          path: "/search/policy-and-engagement?organisations[]=%{organisation}&parent=%{organisation}"
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
       transparency:
         title: "Datganiadau tryloywder a rhyddid gwybodaeth"
         see_all:

@@ -78,7 +78,7 @@ describe Organisations::SupergroupsPresenter do
       assert_equal Date.parse(1.hour.ago.iso8601), document[:metadata][:public_updated_at]
       assert_equal "Guide", document[:metadata][:document_type]
 
-      assert_equal '/guidance-and-regulation?organisations[]=attorney-generals-office&parent=attorney-generals-office', supergroup[:finder_link][:path]
+      assert_equal '/search/guidance-and-regulation?organisations[]=attorney-generals-office&parent=attorney-generals-office', supergroup[:finder_link][:path]
       assert_equal 'See all guidance and regulation', supergroup[:finder_link][:text]
     end
 
