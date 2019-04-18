@@ -27,7 +27,7 @@ en:
         title: "Guidance and regulation"
         see_all:
           text: "See all guidance and regulation"
-          path: "/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
       research_and_statistics:
         title: "Research and statistics"
         see_all:
@@ -37,7 +37,7 @@ en:
         title: "Policy and engagement"
         see_all:
           text: "See all policy and engagement"
-          path: "/search/policy-and-engagement?organisations[]=%{organisation}&parent=%{organisation}"
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
       transparency:
         title: "Transparency"
         see_all:
