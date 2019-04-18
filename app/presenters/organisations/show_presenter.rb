@@ -14,7 +14,7 @@ module Organisations
 
     def subscription_links
       {
-        email_signup_link: "/government/email-signup/new?email_signup[feed]=#{@org.web_url}.atom",
+        email_signup_link: "/email-signup?link=#{@org.base_path}",
         feed_link_box_value: "#{@org.web_url}.atom",
         brand: @org.brand
       }
