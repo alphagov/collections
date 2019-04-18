@@ -1,3 +1,5 @@
+require_relative '../../test/support/rummager_helpers'
+
 module OrganisationHelpers
   include ::RummagerHelpers
 

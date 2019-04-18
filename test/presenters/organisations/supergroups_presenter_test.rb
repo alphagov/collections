@@ -51,10 +51,10 @@ describe Organisations::SupergroupsPresenter do
     end
 
     it 'formats latest transparency correctly' do
-      transparency = find_supergroup_by_name('Transparency')
+      transparency = find_supergroup_by_name('Transparency and freedom of information releases')
       document = transparency[:documents][:items].first
 
-      assert_equal 'Transparency', transparency[:title]
+      assert_equal 'Transparency and freedom of information releases', transparency[:title]
       assert_equal 'attorney-generals-office', transparency[:documents][:brand]
 
       assert_equal 'Content item 1', document[:link][:text]
@@ -63,7 +63,7 @@ describe Organisations::SupergroupsPresenter do
       assert_equal "Transparency", document[:metadata][:document_type]
 
       assert_equal '/search/transparency-and-freedom-of-information-releases?organisations[]=attorney-generals-office&parent=attorney-generals-office', transparency[:finder_link][:path]
-      assert_equal 'See all transparency releases', transparency[:finder_link][:text]
+      assert_equal 'See all transparency and freedom of information releases', transparency[:finder_link][:text]
     end
 
     it 'formats latest guidance_and_regulation correctly' do

@@ -34,14 +34,14 @@ en:
           text: "See all research and statistics"
           path: "/government/statistics?departments[]=%{organisation}&parent=%{organisation}"
       policy_and_engagement:
-        title: "Policy and engagement"
+        title: "Policy papers and consultations"
         see_all:
-          text: "See all policy and engagement"
+          text: "See all policy papers and consultations"
           path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
       transparency:
-        title: "Transparency"
+        title: "Transparency and freedom of information releases"
         see_all:
-          text: "See all transparency releases"
+          text: "See all transparency and freedom of information releases"
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
     featured: "Featured"
     foi:
