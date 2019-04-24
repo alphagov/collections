@@ -9,7 +9,10 @@ module Search
       transparency
     ).freeze
 
-    SUPERGROUP_SORT_ORDER = {}.freeze
+    SUPERGROUP_SORT_ORDER = {
+      'services' => '-popularity',
+      'guidance_and_regulation' => '-popularity',
+    }.freeze
 
     def initialize(organisation:)
       @organisation = organisation
