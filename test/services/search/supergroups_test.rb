@@ -37,6 +37,16 @@ describe Search::Supergroups do
     it 'returns an array of supergroups regardless of doc responses' do
       assert_equal @supergroups.groups.map(&:content_purpose_supergroup), @no_docs_supergroups.groups.map(&:content_purpose_supergroup)
     end
+
+    it 'sorts supergroup documents by the given sort order' do
+      @supergroups.groups.each do |group|
+        sort_order = Search::Supergroups::SUPERGROUP_SORT_ORDER.fetch(
+          group.content_purpose_supergroup,
+          Search::Supergroup::DEFAULT_SORT_ORDER,
+        )
+        assert_equal sort_order, group.sort_order
+      end
+    end
   end
 
   def raw_rummager_result
@@ -48,12 +58,13 @@ describe Search::Supergroups do
     }
   end
 
-  def stub_rummager_supergroup_request(supergroup, organisation, results)
+  def stub_rummager_supergroup_request(group, organisation, results)
     stub_supergroup_request(
       results: results,
       additional_params: {
-        filter_content_purpose_supergroup: supergroup,
+        filter_content_purpose_supergroup: group,
         filter_organisations: organisation.slug,
+        order: Search::Supergroups::SUPERGROUP_SORT_ORDER.fetch(group, Search::Supergroup::DEFAULT_SORT_ORDER),
       }
     )
   end

@@ -9,6 +9,8 @@ module Search
       transparency
     ).freeze
 
+    SUPERGROUP_SORT_ORDER = {}.freeze
+
     def initialize(organisation:)
       @organisation = organisation
     end
@@ -21,7 +23,8 @@ module Search
       @groups ||= SUPERGROUP_TYPES.map { |group|
         Supergroup.new(
           organisation_slug: (@organisation ? @organisation.slug : nil),
-          content_purpose_supergroup: group
+          content_purpose_supergroup: group,
+          sort_order: SUPERGROUP_SORT_ORDER.fetch(group, Supergroup::DEFAULT_SORT_ORDER),
         )
       }
     end
