@@ -26,7 +26,20 @@ describe Organisations::DocumentPresenter do
     end
   end
 
-  def presenter(options = {})
+  context 'metadata is excluded' do
+    it 'excludes the metadata' do
+      expected = {
+        link: {
+          text: "Quiddich World Cup 2022 begins",
+          path: "/government/news/its-coming-home",
+        }
+      }
+
+      assert_equal expected, presenter(include_metadata: false).present
+    end
+  end
+
+  def presenter(options = {}, include_metadata: true)
     params = {
       "title" => "Quiddich World Cup 2022 begins",
       "link" => "/government/news/its-coming-home",
@@ -34,6 +47,6 @@ describe Organisations::DocumentPresenter do
       "public_timestamp" => "2022-11-21T12:00:00.000+01:00"
     }.merge(options)
 
-    described_class.new(params)
+    described_class.new(params, include_metadata: include_metadata)
   end
 end

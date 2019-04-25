@@ -4,8 +4,11 @@ module Organisations
   #
   # See https://govuk-publishing-components.herokuapp.com/component-guide/document_list
   class DocumentPresenter
-    def initialize(rummager_result)
+    attr_accessor :include_metadata
+
+    def initialize(rummager_result, include_metadata: true)
       @raw_document = rummager_result
+      @include_metadata = include_metadata
     end
 
     def present
@@ -14,12 +17,22 @@ module Organisations
           text: @raw_document["title"],
           path: @raw_document["link"]
         },
-        metadata: {
-          public_updated_at: public_updated_at,
-          document_type: document_type
-        }
-      }
+      }.merge(present_metadata)
     end
+
+    def present_metadata
+      if include_metadata
+        {
+          metadata: {
+            public_updated_at: public_updated_at,
+            document_type: document_type
+          }
+        }
+      else
+        {}
+      end
+    end
+
 
   private
 
