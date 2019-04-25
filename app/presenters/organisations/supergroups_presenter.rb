@@ -3,8 +3,13 @@ module Organisations
     include OrganisationHelper
     attr_reader :org
 
-    def initialize(organisation)
+    DEFAULT_EXCLUDE_METADATA_FOR = %w(services).freeze
+
+    attr_accessor :exclude_metadata_for
+
+    def initialize(organisation, exclude_metadata_for: DEFAULT_EXCLUDE_METADATA_FOR)
       @org = organisation
+      @exclude_metadata_for = exclude_metadata_for
     end
 
     def has_groups?
@@ -15,8 +20,10 @@ module Organisations
       supergroups_collection.groups.map { |supergroup|
         next unless supergroup.has_documents?
 
+        exclude_metadata = exclude_metadata_for.include? supergroup.content_purpose_supergroup
+
         {
-          documents: search_results_to_documents(supergroup.documents, @org),
+          documents: search_results_to_documents(supergroup.documents, @org, include_metadata: !exclude_metadata),
           title: I18n.t(:title, scope: [:organisations, :document_types, supergroup.content_purpose_supergroup]),
           finder_link: finder_link(supergroup)
         }

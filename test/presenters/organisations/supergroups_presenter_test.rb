@@ -7,7 +7,7 @@ describe Organisations::SupergroupsPresenter do
   before :each do
     content_item = ContentItem.new(organisation_with_featured_documents)
     organisation = Organisation.new(content_item)
-    @supergroups_presenter = described_class.new(organisation)
+    @supergroups_presenter = described_class.new(organisation, exclude_metadata_for: %w(news_and_communications))
 
     content_item = ContentItem.new(organisation_with_no_documents)
     organisation = Organisation.new(content_item)
@@ -43,8 +43,7 @@ describe Organisations::SupergroupsPresenter do
 
       assert_equal 'Content item 1', document[:link][:text]
       assert_equal '/content-item-1', document[:link][:path]
-      assert_equal Date.parse(1.hour.ago.iso8601), document[:metadata][:public_updated_at]
-      assert_equal "News story", document[:metadata][:document_type]
+      assert_nil document[:metadata]
 
       assert_equal '/search/news-and-communications?organisations[]=attorney-generals-office&parent=attorney-generals-office', supergroup[:finder_link][:path]
       assert_equal 'See all news and communications', supergroup[:finder_link][:text]

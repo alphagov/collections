@@ -34,10 +34,12 @@ module OrganisationHelper
     image_url_array.join("/")
   end
 
-  def search_results_to_documents(search_results, organisation)
+  def search_results_to_documents(search_results, organisation, include_metadata: true)
     {
       brand: (organisation.brand if organisation.is_live?),
-      items: search_results.map { |result| Organisations::DocumentPresenter.new(result).present }
+      items: search_results.map { |result|
+        Organisations::DocumentPresenter.new(result, include_metadata: include_metadata).present
+      }
     }
   end
 end
