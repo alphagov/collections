@@ -1,10 +1,13 @@
 module Search
   class Supergroup
-    attr_reader :content_purpose_supergroup
+    attr_reader :content_purpose_supergroup, :sort_order
 
-    def initialize(organisation_slug:, content_purpose_supergroup:)
+    DEFAULT_SORT_ORDER = '-public_timestamp'.freeze
+
+    def initialize(organisation_slug:, content_purpose_supergroup:, sort_order: DEFAULT_SORT_ORDER)
       @organisation_slug = organisation_slug
       @content_purpose_supergroup = content_purpose_supergroup
+      @sort_order = sort_order
     end
 
     def has_documents?
@@ -29,7 +32,7 @@ module Search
     def default_rummager_params
       {
         count: 2,
-        order: "-public_timestamp",
+        order: sort_order,
         fields: %w[title link content_store_document_type public_timestamp]
       }
     end

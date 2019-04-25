@@ -13,6 +13,7 @@ module OrganisationHelpers
       url = build_rummager_query_url(
         filter_organisations: organisation_slug,
         filter_content_purpose_supergroup: group,
+        order: Search::Supergroups::SUPERGROUP_SORT_ORDER.fetch(group, Search::Supergroup::DEFAULT_SORT_ORDER),
       )
 
       stub_request(:get, url).to_return(body: build_result_body(group, empty).to_json)
