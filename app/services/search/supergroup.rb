@@ -32,7 +32,7 @@ module Search
     def default_rummager_params
       {
         count: 2,
-        order: @sort_order,
+        order: sort_order,
         fields: %w[title link content_store_document_type public_timestamp]
       }
     end
