@@ -15,20 +15,20 @@ module ServicesAndInformationHelpers
 
   def stub_content_item(base_path, organisation_title)
     content_store_has_item(base_path,
-      base_path: base_path,
-      title: "S&I page title",
-      description: "",
-      document_type: "services_and_information",
-      public_updated_at: 10.days.ago.iso8601,
-      details: {},
-      links: {
-        parent: [
-          {
-            analytics_identifier: "org_analytics_id",
-            base_path: "/organisation/base/path",
-            title: organisation_title,
-          },
-        ],
-      },)
+                           base_path: base_path,
+                           title: "S&I page title",
+                           description: "",
+                           document_type: "services_and_information",
+                           public_updated_at: 10.days.ago.iso8601,
+                           details: {},
+                           links: {
+                             parent: [
+                               {
+                                 analytics_identifier: "org_analytics_id",
+                                 base_path: "/organisation/base/path",
+                                 title: organisation_title,
+                               },
+                             ],
+                           },)
   end
 end

@@ -67,7 +67,7 @@ describe WorldWideTaxon do
         .returns(["own content", "associated content"])
 
       assert_equal ["own content", "associated content"],
-        @taxon.tagged_content
+                   @taxon.tagged_content
     end
   end
 end

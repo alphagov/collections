@@ -4,17 +4,17 @@ describe OrganisationsController do
   describe "GET index" do
     before do
       content_store_has_item("/government/organisations/ministry-of-magic",
-        title: "Ministry of magic",
-        base_path: "/government/organisations/ministry-of-magic",
-        details: {
-          body: "This organisation has a status of exempt.",
-          logo: {
-          },
-          organisation_govuk_status: {
-            status: "exempt",
-            url: "https://ministry-of-magic.gov.uk"
-          },
-        })
+                             title: "Ministry of magic",
+                             base_path: "/government/organisations/ministry-of-magic",
+                             details: {
+                               body: "This organisation has a status of exempt.",
+                               logo: {
+                               },
+                               organisation_govuk_status: {
+                                 status: "exempt",
+                                 url: "https://ministry-of-magic.gov.uk"
+                               },
+                             })
 
       Services.rummager.stubs(:search)
         .returns(

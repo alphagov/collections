@@ -31,7 +31,7 @@ class MainstreamBrowsingTest < ActionDispatch::IntegrationTest
 
       assert_equal 200, page.status_code
       assert page.has_css?('.gem-c-breadcrumbs'),
-        "Expected page at '#{content_item['base_path']}' to display breadcrumbs, but none found"
+             "Expected page at '#{content_item['base_path']}' to display breadcrumbs, but none found"
     end
   end
 end

@@ -21,34 +21,34 @@ module TopicHelper
     )
 
     content_store_has_item("/topic/oil-and-gas/fields-and-wells",
-      content_id: 'content-id-for-fields-and-wells',
-      base_path: "/topic/oil-and-gas/fields-and-wells",
-      title: "Fields and Wells",
-      format: "topic",
-      public_updated_at: 10.days.ago.iso8601,
-      details: {
-        groups: [
-          {
-            name: "Oil rigs",
-            contents: [
-              "/what-is-oil",
-              "/apply-for-an-oil-licence",
-            ]
-          },
-          {
-            name: "Piping",
-            contents: [
-              "/well-application-form",
-            ]
-          },
-        ],
-      },
-      links: {
-        "parent" => [
-          "title" => "Oil and Gas",
-          "base_path" => "/oil-and-gas",
-        ]
-      })
+                           content_id: 'content-id-for-fields-and-wells',
+                           base_path: "/topic/oil-and-gas/fields-and-wells",
+                           title: "Fields and Wells",
+                           format: "topic",
+                           public_updated_at: 10.days.ago.iso8601,
+                           details: {
+                             groups: [
+                               {
+                                 name: "Oil rigs",
+                                 contents: [
+                                   "/what-is-oil",
+                                   "/apply-for-an-oil-licence",
+                                 ]
+                               },
+                               {
+                                 name: "Piping",
+                                 contents: [
+                                   "/well-application-form",
+                                 ]
+                               },
+                             ],
+                           },
+                           links: {
+                             "parent" => [
+                               "title" => "Oil and Gas",
+                               "base_path" => "/oil-and-gas",
+                             ]
+                           })
 
     stub_topic_organisations(
       'oil-and-gas/fields-and-wells',
