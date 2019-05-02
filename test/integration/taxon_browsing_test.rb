@@ -296,7 +296,7 @@ private
     assert page.has_css?(".gem-c-organisation-logo a[href='#{tagged_org_with_logo}']")
 
     assert page.has_link?(tagged_organisation['value']['title'],
-      href: tagged_organisation['value']['link'])
+                          href: tagged_organisation['value']['link'])
   end
 
   def and_i_can_see_the_in_page_nav
