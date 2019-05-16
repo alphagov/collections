@@ -9,9 +9,16 @@ module Search
       transparency
     ).freeze
 
-    SUPERGROUP_SORT_ORDER = {
-      'services' => '-popularity',
-      'guidance_and_regulation' => '-popularity',
+    SUPERGROUP_ADDITIONAL_SEARCH_PARAMS = {
+      'guidance_and_regulation' => {
+        order: '-popularity',
+      },
+      'news_and_communications' => {
+        reject_content_purpose_subgroup: %w[decisions updates_and_alerts],
+      },
+      'services' => {
+        order: '-popularity',
+      },
     }.freeze
 
     def initialize(organisation:)
@@ -27,7 +34,7 @@ module Search
         Supergroup.new(
           organisation_slug: (@organisation ? @organisation.slug : nil),
           content_purpose_supergroup: group,
-          sort_order: SUPERGROUP_SORT_ORDER.fetch(group, Supergroup::DEFAULT_SORT_ORDER),
+          additional_search_params: SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(group, {}),
         )
       }
     end

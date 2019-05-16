@@ -11,9 +11,11 @@ module OrganisationHelpers
   def stub_latest_content_from_supergroups_request(organisation_slug, empty = false)
     Search::Supergroups::SUPERGROUP_TYPES.each { |group|
       url = build_rummager_query_url(
-        filter_organisations: organisation_slug,
-        filter_content_purpose_supergroup: group,
-        order: Search::Supergroups::SUPERGROUP_SORT_ORDER.fetch(group, Search::Supergroup::DEFAULT_SORT_ORDER),
+        {
+          filter_organisations: organisation_slug,
+          filter_content_purpose_supergroup: group,
+          order: Search::Supergroup::DEFAULT_SORT_ORDER,
+        }.merge(Search::Supergroups::SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(group, {}))
       )
 
       stub_request(:get, url).to_return(body: build_result_body(group, empty).to_json)
@@ -42,7 +44,7 @@ module OrganisationHelpers
   end
 
   def build_rummager_query_url(params = {})
-    query = Rack::Utils.build_query default_params.merge(params)
+    query = Rack::Utils.build_nested_query default_params.merge(params)
     "#{Plek.new.find('search')}/search.json?#{query}"
   end
 
