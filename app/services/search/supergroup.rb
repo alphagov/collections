@@ -1,13 +1,12 @@
 module Search
   class Supergroup
-    attr_reader :content_purpose_supergroup, :sort_order, :additional_search_params
+    attr_reader :content_purpose_supergroup, :additional_search_params
 
     DEFAULT_SORT_ORDER = '-public_timestamp'.freeze
 
-    def initialize(organisation_slug:, content_purpose_supergroup:, sort_order: DEFAULT_SORT_ORDER, additional_search_params: {})
+    def initialize(organisation_slug:, content_purpose_supergroup:, additional_search_params: {})
       @organisation_slug = organisation_slug
       @content_purpose_supergroup = content_purpose_supergroup
-      @sort_order = sort_order
       @additional_search_params = additional_search_params
     end
 
@@ -35,7 +34,7 @@ module Search
     def default_rummager_params
       {
         count: 2,
-        order: sort_order,
+        order: DEFAULT_SORT_ORDER,
         fields: %w[title link content_store_document_type public_timestamp]
       }
     end

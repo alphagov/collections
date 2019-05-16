@@ -38,16 +38,6 @@ describe Search::Supergroups do
       assert_equal @supergroups.groups.map(&:content_purpose_supergroup), @no_docs_supergroups.groups.map(&:content_purpose_supergroup)
     end
 
-    it 'sorts supergroup documents by the given sort order' do
-      @supergroups.groups.each do |group|
-        sort_order = Search::Supergroups::SUPERGROUP_SORT_ORDER.fetch(
-          group.content_purpose_supergroup,
-          Search::Supergroup::DEFAULT_SORT_ORDER,
-        )
-        assert_equal sort_order, group.sort_order
-      end
-    end
-
     it 'applies the given additional search parameters' do
       @supergroups.groups.each do |group|
         params = Search::Supergroups::SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(
@@ -74,7 +64,7 @@ describe Search::Supergroups do
       additional_params: {
         filter_content_purpose_supergroup: group,
         filter_organisations: organisation.slug,
-        order: Search::Supergroups::SUPERGROUP_SORT_ORDER.fetch(group, Search::Supergroup::DEFAULT_SORT_ORDER),
+        order: Search::Supergroup::DEFAULT_SORT_ORDER,
       }.merge(Search::Supergroups::SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(group, {}))
     )
   end
