@@ -120,7 +120,7 @@ module RummagerHelpers
       filter_topic_content_ids: [content_id],
       facet_organisations: "1000",
     ).returns(
-      rummager_has_specialist_sector_organisations(slug)
+      stub_search_has_specialist_sector_organisations(slug)
     )
   end
 
@@ -130,7 +130,7 @@ module RummagerHelpers
       filter_organisations: organisation_id,
       facet_specialist_sectors: "1000,examples:4,example_scope:query,order:value.title",
     ).returns(
-      rummager_has_services_and_info_data_for_organisation
+      stub_search_has_services_and_info_data_for_organisation
     )
   end
 

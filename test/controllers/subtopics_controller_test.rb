@@ -46,7 +46,7 @@ describe SubtopicsController do
       filter_topic_content_ids: [content_id],
       facet_organisations: "1000",
     ).returns(
-      rummager_has_specialist_sector_organisations("#{parent_path}/#{path}")
+      stub_search_has_specialist_sector_organisations("#{parent_path}/#{path}")
 )
   end
 end
