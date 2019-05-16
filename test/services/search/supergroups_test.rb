@@ -44,7 +44,8 @@ describe Search::Supergroups do
           group.content_purpose_supergroup,
           {},
         )
-        assert_equal params, group.additional_search_params
+        query = group.documents_query
+        assert_equal query.merge(params), query
       end
     end
   end

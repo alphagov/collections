@@ -15,12 +15,14 @@ module Search
     end
 
     def documents
-      @documents ||= search_rummager(
-        {
-          filter_organisations: @organisation_slug,
-          filter_content_purpose_supergroup: @content_purpose_supergroup,
-        }.merge(additional_search_params)
-      )
+      @documents ||= search_rummager(documents_query)
+    end
+
+    def documents_query
+      {
+        filter_organisations: @organisation_slug,
+        filter_content_purpose_supergroup: @content_purpose_supergroup,
+      }.merge(additional_search_params)
     end
 
   private
