@@ -1,13 +1,14 @@
 module Search
   class Supergroup
-    attr_reader :content_purpose_supergroup, :sort_order
+    attr_reader :content_purpose_supergroup, :sort_order, :additional_search_params
 
     DEFAULT_SORT_ORDER = '-public_timestamp'.freeze
 
-    def initialize(organisation_slug:, content_purpose_supergroup:, sort_order: DEFAULT_SORT_ORDER)
+    def initialize(organisation_slug:, content_purpose_supergroup:, sort_order: DEFAULT_SORT_ORDER, additional_search_params: {})
       @organisation_slug = organisation_slug
       @content_purpose_supergroup = content_purpose_supergroup
       @sort_order = sort_order
+      @additional_search_params = additional_search_params
     end
 
     def has_documents?
@@ -16,8 +17,10 @@ module Search
 
     def documents
       @documents ||= search_rummager(
-        filter_organisations: @organisation_slug,
-        filter_content_purpose_supergroup: @content_purpose_supergroup,
+        {
+          filter_organisations: @organisation_slug,
+          filter_content_purpose_supergroup: @content_purpose_supergroup,
+        }.merge(additional_search_params)
       )
     end
 

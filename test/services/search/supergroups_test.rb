@@ -47,6 +47,16 @@ describe Search::Supergroups do
         assert_equal sort_order, group.sort_order
       end
     end
+
+    it 'applies the given additional search parameters' do
+      @supergroups.groups.each do |group|
+        params = Search::Supergroups::SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(
+          group.content_purpose_supergroup,
+          {},
+        )
+        assert_equal params, group.additional_search_params
+      end
+    end
   end
 
   def raw_rummager_result
@@ -65,7 +75,7 @@ describe Search::Supergroups do
         filter_content_purpose_supergroup: group,
         filter_organisations: organisation.slug,
         order: Search::Supergroups::SUPERGROUP_SORT_ORDER.fetch(group, Search::Supergroup::DEFAULT_SORT_ORDER),
-      }
+      }.merge(Search::Supergroups::SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(group, {}))
     )
   end
 end

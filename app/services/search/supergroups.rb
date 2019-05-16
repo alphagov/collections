@@ -14,6 +14,12 @@ module Search
       'guidance_and_regulation' => '-popularity',
     }.freeze
 
+    SUPERGROUP_ADDITIONAL_SEARCH_PARAMS = {
+      'news_and_communications' => {
+        reject_content_purpose_subgroup: %w[decisions updates_and_alerts],
+      },
+    }.freeze
+
     def initialize(organisation:)
       @organisation = organisation
     end
@@ -28,6 +34,7 @@ module Search
           organisation_slug: (@organisation ? @organisation.slug : nil),
           content_purpose_supergroup: group,
           sort_order: SUPERGROUP_SORT_ORDER.fetch(group, Supergroup::DEFAULT_SORT_ORDER),
+          additional_search_params: SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(group, {}),
         )
       }
     end
