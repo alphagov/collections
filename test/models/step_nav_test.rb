@@ -5,6 +5,7 @@ describe StepNav do
     it 'generates structured data using the HowTo schema' do
       content_item = GovukSchemas::Example.find('step_by_step_nav', example_name: 'learn_to_drive_a_car')
       step_by_step = StepNav.new(ContentItem.new(content_item))
+      image_urls = %w(http://assets.gov.uk/image1.png http://assets.gov.uk/image2.png)
 
       # Generated with:
       # puts JSON.pretty_generate(step_by_step.structured_data)
@@ -12,10 +13,12 @@ describe StepNav do
         "@context": "http://schema.org",
         "@type": "HowTo",
         "description": "Learn to drive a car in the UK - get a provisional licence, take driving lessons, prepare for your theory test, book your practical test.",
+        "image": ["http://assets.gov.uk/image1.png", "http://assets.gov.uk/image2.png"],
         "name": "Learn to drive a car: step by step",
         "step": [
           {
             "@type": "HowToStep",
+            "image": ["http://assets.gov.uk/image1.png", "http://assets.gov.uk/image2.png"],
             "name": "Check you're allowed to drive",
             "position": 1,
             "itemListElement": [
@@ -46,6 +49,7 @@ describe StepNav do
           },
           {
             "@type": "HowToStep",
+            "image": ["http://assets.gov.uk/image1.png", "http://assets.gov.uk/image2.png"],
             "name": "Get a provisional driving licence",
             "position": 2,
             "itemListElement": [
@@ -59,6 +63,7 @@ describe StepNav do
           },
           {
             "@type": "HowToStep",
+            "image": ["http://assets.gov.uk/image1.png", "http://assets.gov.uk/image2.png"],
             "name": "Driving lessons and practice",
             "position": 3,
             "itemListElement": [
@@ -95,6 +100,7 @@ describe StepNav do
           },
           {
             "@type": "HowToStep",
+            "image": ["http://assets.gov.uk/image1.png", "http://assets.gov.uk/image2.png"],
             "name": "Prepare for your theory test",
             "position": 4,
             "itemListElement": [
@@ -120,6 +126,7 @@ describe StepNav do
           },
           {
             "@type": "HowToStep",
+            "image": ["http://assets.gov.uk/image1.png", "http://assets.gov.uk/image2.png"],
             "name": "Book and manage your theory test",
             "position": 5,
             "itemListElement": [
@@ -162,6 +169,7 @@ describe StepNav do
           },
           {
             "@type": "HowToStep",
+            "image": ["http://assets.gov.uk/image1.png", "http://assets.gov.uk/image2.png"],
             "name": "Book and manage your driving test",
             "position": 6,
             "itemListElement": [
@@ -203,6 +211,7 @@ describe StepNav do
           },
           {
             "@type": "HowToStep",
+            "image": ["http://assets.gov.uk/image1.png", "http://assets.gov.uk/image2.png"],
             "name": "When you pass",
             "position": 7,
             "itemListElement": [
@@ -227,7 +236,7 @@ describe StepNav do
         ]
       }
 
-      assert_equal expected.deep_stringify_keys, step_by_step.structured_data.deep_stringify_keys
+      assert_equal expected.deep_stringify_keys, step_by_step.structured_data(image_urls).deep_stringify_keys
     end
   end
 end

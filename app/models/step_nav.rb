@@ -28,7 +28,7 @@ class StepNav
     new(content_item)
   end
 
-  def structured_data
+  def structured_data(image_urls)
     step_items = details["step_by_step_nav"]["steps"].map.with_index(1) do |step, step_index|
       contents = step["contents"].map.with_index(1) do |content, item_index|
         direction_index = item_index
@@ -46,6 +46,7 @@ class StepNav
 
       {
         "@type": "HowToStep",
+        "image": image_urls,
         "name": step["title"],
         "position": step_index,
         "itemListElement": contents.flatten.compact,
@@ -56,6 +57,7 @@ class StepNav
       "@context": "http://schema.org",
       "@type": "HowTo",
       "description": description,
+      "image": image_urls,
       "name": title,
       "step": step_items,
     }
