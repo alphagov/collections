@@ -11,165 +11,220 @@ describe StepNav do
       expected = {
         "@context": "http://schema.org",
         "@type": "HowTo",
+        "description": "Learn to drive a car in the UK - get a provisional licence, take driving lessons, prepare for your theory test, book your practical test.",
         "name": "Learn to drive a car: step by step",
-        "steps": {
-          "@type": "ItemList",
-          "itemListElement": [
-            {
-              "@type": "HowToStep",
-              "name": "Check you're allowed to drive",
-              "itemListElement": [
-                "Most people can start learning to drive when they’re 17.",
-                {
-                  "@type": "WebPage",
-                  "@id": "http://www.test.gov.uk/vehicles-can-drive",
-                  "name": "Check what age you can drive"
-                },
-                {
-                  "@type": "WebPage",
-                  "@id": "http://www.test.gov.uk/legal-obligations-drivers-riders",
-                  "name": "Requirements for driving legally"
-                },
-                {
-                  "@type": "WebPage",
-                  "@id": "http://www.test.gov.uk/driving-eyesight-rules",
-                  "name": "Driving eyesight rules"
-                }
-              ]
-            },
-            {
-              "@type": "HowToStep",
-              "name": "Get a provisional driving licence",
-              "itemListElement": [
-                {
-                  "@type": "WebPage",
-                  "@id": "http://www.test.gov.uk/apply-first-provisional-driving-licence",
-                  "name": "Apply for your first provisional driving licence"
-                }
-              ]
-            },
-            {
-              "@type": "HowToStep",
-              "name": "Driving lessons and practice",
-              "itemListElement": [
-                "You need a provisional driving licence to take lessons or practice.",
-                {
-                  "@type": "WebPage",
-                  "@id": "http://www.test.gov.uk/guidance/the-highway-code",
-                  "name": "The Highway Code"
-                },
-                {
-                  "@type": "WebPage",
-                  "@id": "http://www.test.gov.uk/driving-lessons-learning-to-drive",
-                  "name": "Taking driving lessons"
-                },
-                {
-                  "@type": "WebPage",
-                  "@id": "http://www.test.gov.uk/find-driving-schools-and-lessons",
-                  "name": "Find driving schools, lessons and instructors"
-                },
-                {
-                  "@type": "WebPage",
-                  "@id": "http://www.test.gov.uk/government/publications/car-show-me-tell-me-vehicle-safety-questions",
-                  "name": "Practise vehicle safety questions"
-                }
-              ]
-            },
-            {
-              "@type": "HowToStep",
-              "name": "Prepare for your theory test",
-              "itemListElement": [
-                {
-                  "@type": "WebPage",
-                  "@id": "http://www.test.gov.uk/theory-test/revision-and-practice",
-                  "name": "Theory test revision and practice"
-                },
-                {
-                  "@type": "WebPage",
-                  "@id": "http://www.test.gov.uk/take-practice-theory-test",
-                  "name": "Take a practice theory test"
-                },
-                {
-                  "@type": "WebPage",
-                  "@id": "https://www.safedrivingforlife.info/shop/product/official-dvsa-theory-test-kit-app-app",
-                  "name": "Theory and hazard perception test app"
-                }
-              ]
-            },
-            {
-              "@type": "HowToStep",
-              "name": "Book and manage your theory test",
-              "itemListElement": [
-                "You need a provisional driving licence to book your theory test.",
-                {
-                  "@type": "WebPage",
-                  "@id": "http://www.test.gov.uk/book-theory-test",
-                  "name": "Book your theory test"
-                },
-                {
-                  "@type": "WebPage",
-                  "@id": "http://www.test.gov.uk/theory-test/what-to-take",
-                  "name": "What to take to your test"
-                },
-                {
-                  "@type": "WebPage",
-                  "@id": "http://www.test.gov.uk/change-theory-test",
-                  "name": "Change your theory test appointment"
-                },
-                {
-                  "@type": "WebPage",
-                  "@id": "http://www.test.gov.uk/check-theory-test",
-                  "name": "Check your theory test appointment details"
-                },
-                {
-                  "@type": "WebPage",
-                  "@id": "http://www.test.gov.uk/cancel-theory-test",
-                  "name": "Cancel your theory test"
-                }
-              ]
-            },
-            {
-              "@type": "HowToStep",
-              "name": "Book and manage your driving test",
-              "itemListElement": [
-                "You must pass your theory test before you can book your driving test.",
-                {
-                  "@type": "WebPage",
-                  "@id": "http://www.test.gov.uk/book-driving-test",
-                  "name": "Book your driving test"
-                },
-                {
-                  "@type": "WebPage",
-                  "@id": "http://www.test.gov.uk/driving-test/what-to-take",
-                  "name": "What to take to your test"
-                },
-                {
-                  "@type": "WebPage",
-                  "@id": "http://www.test.gov.uk/check-driving-test",
-                  "name": "Check your driving test appointment details"
-                },
-                {
-                  "@type": "WebPage",
-                  "@id": "http://www.test.gov.uk/cancel-driving-test",
-                  "name": "Cancel your driving test"
-                }
-              ]
-            },
-            {
-              "@type": "HowToStep",
-              "name": "When you pass",
-              "itemListElement": [
-                "You can start driving as soon as you pass your driving test.",
-                "You must have an insurance policy that allows you to drive without supervision.",
-                {
-                  "@type": "WebPage",
-                  "@id": "http://www.test.gov.uk/pass-plus",
-                  "name": "Find out about Pass Plus training courses"
-                }
-              ]
-            }
-          ]
-        }
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Check you're allowed to drive",
+            "position": 1,
+            "itemListElement": [
+              {
+                "@type": "HowToDirection",
+                "text": "Most people can start learning to drive when they’re 17.",
+                "position": 1
+              },
+              {
+                "@type": "HowToDirection",
+                "text": "Check what age you can drive",
+                "position": 2,
+                "url": "http://www.test.gov.uk/vehicles-can-drive"
+              },
+              {
+                "@type": "HowToDirection",
+                "text": "Requirements for driving legally",
+                "position": 3,
+                "url": "http://www.test.gov.uk/legal-obligations-drivers-riders"
+              },
+              {
+                "@type": "HowToDirection",
+                "text": "Driving eyesight rules",
+                "position": 4,
+                "url": "http://www.test.gov.uk/driving-eyesight-rules"
+              }
+            ]
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Get a provisional driving licence",
+            "position": 2,
+            "itemListElement": [
+              {
+                "@type": "HowToDirection",
+                "text": "Apply for your first provisional driving licence",
+                "position": 1,
+                "url": "http://www.test.gov.uk/apply-first-provisional-driving-licence"
+              }
+            ]
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Driving lessons and practice",
+            "position": 3,
+            "itemListElement": [
+              {
+                "@type": "HowToDirection",
+                "text": "You need a provisional driving licence to take lessons or practice.",
+                "position": 1
+              },
+              {
+                "@type": "HowToDirection",
+                "text": "The Highway Code",
+                "position": 2,
+                "url": "http://www.test.gov.uk/guidance/the-highway-code"
+              },
+              {
+                "@type": "HowToDirection",
+                "text": "Taking driving lessons",
+                "position": 3,
+                "url": "http://www.test.gov.uk/driving-lessons-learning-to-drive"
+              },
+              {
+                "@type": "HowToDirection",
+                "text": "Find driving schools, lessons and instructors",
+                "position": 4,
+                "url": "http://www.test.gov.uk/find-driving-schools-and-lessons"
+              },
+              {
+                "@type": "HowToDirection",
+                "text": "Practise vehicle safety questions",
+                "position": 5,
+                "url": "http://www.test.gov.uk/government/publications/car-show-me-tell-me-vehicle-safety-questions"
+              }
+            ]
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Prepare for your theory test",
+            "position": 4,
+            "itemListElement": [
+              {
+                "@type": "HowToDirection",
+                "text": "Theory test revision and practice",
+                "position": 1,
+                "url": "http://www.test.gov.uk/theory-test/revision-and-practice"
+              },
+              {
+                "@type": "HowToDirection",
+                "text": "Take a practice theory test",
+                "position": 2,
+                "url": "http://www.test.gov.uk/take-practice-theory-test"
+              },
+              {
+                "@type": "HowToDirection",
+                "text": "Theory and hazard perception test app",
+                "position": 3,
+                "url": "https://www.safedrivingforlife.info/shop/product/official-dvsa-theory-test-kit-app-app"
+              }
+            ]
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Book and manage your theory test",
+            "position": 5,
+            "itemListElement": [
+              {
+                "@type": "HowToDirection",
+                "text": "You need a provisional driving licence to book your theory test.",
+                "position": 1
+              },
+              {
+                "@type": "HowToDirection",
+                "text": "Book your theory test",
+                "position": 2,
+                "url": "http://www.test.gov.uk/book-theory-test"
+              },
+              {
+                "@type": "HowToDirection",
+                "text": "What to take to your test",
+                "position": 3,
+                "url": "http://www.test.gov.uk/theory-test/what-to-take"
+              },
+              {
+                "@type": "HowToDirection",
+                "text": "Change your theory test appointment",
+                "position": 4,
+                "url": "http://www.test.gov.uk/change-theory-test"
+              },
+              {
+                "@type": "HowToDirection",
+                "text": "Check your theory test appointment details",
+                "position": 5,
+                "url": "http://www.test.gov.uk/check-theory-test"
+              },
+              {
+                "@type": "HowToDirection",
+                "text": "Cancel your theory test",
+                "position": 6,
+                "url": "http://www.test.gov.uk/cancel-theory-test"
+              }
+            ]
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Book and manage your driving test",
+            "position": 6,
+            "itemListElement": [
+              {
+                "@type": "HowToDirection",
+                "text": "You must pass your theory test before you can book your driving test.",
+                "position": 1
+              },
+              {
+                "@type": "HowToDirection",
+                "text": "Book your driving test",
+                "position": 2,
+                "url": "http://www.test.gov.uk/book-driving-test"
+              },
+              {
+                "@type": "HowToDirection",
+                "text": "What to take to your test",
+                "position": 3,
+                "url": "http://www.test.gov.uk/driving-test/what-to-take"
+              },
+              {
+                "@type": "HowToDirection",
+                "text": "Change your driving test appointment",
+                "position": 4
+              },
+              {
+                "@type": "HowToDirection",
+                "text": "Check your driving test appointment details",
+                "position": 5,
+                "url": "http://www.test.gov.uk/check-driving-test"
+              },
+              {
+                "@type": "HowToDirection",
+                "text": "Cancel your driving test",
+                "position": 6,
+                "url": "http://www.test.gov.uk/cancel-driving-test"
+              }
+            ]
+          },
+          {
+            "@type": "HowToStep",
+            "name": "When you pass",
+            "position": 7,
+            "itemListElement": [
+              {
+                "@type": "HowToDirection",
+                "text": "You can start driving as soon as you pass your driving test.",
+                "position": 1
+              },
+              {
+                "@type": "HowToDirection",
+                "text": "You must have an insurance policy that allows you to drive without supervision.",
+                "position": 2
+              },
+              {
+                "@type": "HowToDirection",
+                "text": "Find out about Pass Plus training courses",
+                "position": 3,
+                "url": "http://www.test.gov.uk/pass-plus"
+              }
+            ]
+          }
+        ]
       }
 
       assert_equal expected.deep_stringify_keys, step_by_step.structured_data.deep_stringify_keys
