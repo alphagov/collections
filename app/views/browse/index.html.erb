@@ -4,6 +4,8 @@
   <meta name='govuk:navigation-page-type' content='Browse Index'>
 <% end %>
 
+<h1 class="visuallyhidden"><%= t("browse.title") %></h1>
+
 <div class="browse-panes root" data-module="track-click">
   <%= render 'top_level_browse_pages',
     top_level_browse_pages: page.top_level_browse_pages %>

@@ -134,6 +134,8 @@ en:
         title: "a UK national living in the EU"
       staying-uk-eu-citizen:
         title: "an EU national and you want to continue living in the UK"
+  browse:
+    title: "Browse GOV.UK"
   language_names:
     en: English
     cy: Cymraeg
