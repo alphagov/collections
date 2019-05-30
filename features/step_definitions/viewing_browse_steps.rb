@@ -74,7 +74,7 @@ When(/^I click on a second level browse page$/) do
 end
 
 Then(/^I should see the second level browse page$/) do
-  assert page.has_selector?('h1', text: 'Judges')
+  assert page.has_selector?('h2', text: 'Judges')
 end
 
 Then(/^the A to Z label should be present$/) do

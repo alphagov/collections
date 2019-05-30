@@ -1,5 +1,5 @@
 <div class="pane-inner <%= curated_order ? "curated" : "alphabetical" %>">
-  <h1 tabindex="-1"><%= title %></h1>
+  <h2 tabindex="-1" class="js-heading"><%= title %></h2>
   <% unless curated_order %>
     <p class="sort-order"><%= hairspace 'A to Z' %></p>
   <% end %>

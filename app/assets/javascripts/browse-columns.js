@@ -90,7 +90,7 @@
     showRoot: function(){
       this.$section.html('');
       this.displayState = 'root';
-      this.$root.find('h1').focus();
+      this.$root.find('.js-heading').focus();
 
       var out = new $.Deferred()
       return out.resolve();
@@ -117,7 +117,7 @@
         animationDone.resolve();
       }
       return animationDone.then(function(){
-        this.$section.find('h1').focus();
+        this.$section.find('.js-heading').focus();
       }.bind(this));
     },
     animateSubsectionToSectionDesktop: function(){
@@ -187,7 +187,7 @@
         animationDone.resolve();
       }
       return animationDone.then(function(){
-        this.$subsection.find('h1').focus();
+        this.$subsection.find('.js-heading').focus();
       }.bind(this));
     },
     animateSectionToSubsectionDesktop: function(){
