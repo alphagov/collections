@@ -10,15 +10,10 @@ module Supergroups
       name.humanize
     end
 
-    def finder_link(base_path)
-      query_string = {
-        topic: base_path,
-        group: name
-      }.to_query
-
+    def finder_link(base_path, taxon_id)
       {
         text: see_all_link_text,
-        url: "/search/advanced?#{query_string}",
+        url: finder_url(base_path, taxon_id),
         data: see_all_link_data_attributes(base_path, name)
       }
     end
@@ -46,6 +41,15 @@ module Supergroups
     end
 
   private
+
+    def finder_path
+      "/search/#{name.dasherize}"
+    end
+
+    def finder_url(base_path, taxon_id)
+      query_string = { parent: base_path, topic: taxon_id }.to_query
+      [finder_path, query_string].join('?')
+    end
 
     def see_all_link_text
       group_title = I18n.t(name, scope: :content_purpose_supergroup, default: title)

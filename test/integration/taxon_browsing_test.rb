@@ -196,7 +196,7 @@ private
 
     expected_link = {
       text: "See more guidance and regulation in this topic",
-      url: "/search/advanced?" + finder_query_string("guidance_and_regulation")
+      url: "/search/guidance-and-regulation?" + finder_query_string
     }
 
     assert page.has_link?(expected_link[:text], href: expected_link[:url])
@@ -210,7 +210,7 @@ private
 
     expected_link = {
       text: "See more services in this topic",
-      url: "/search/advanced?" + finder_query_string('services')
+      url: "/search/services?" + finder_query_string
     }
     assert page.has_link?(expected_link[:text], href: expected_link[:url])
   end
@@ -225,7 +225,7 @@ private
 
     expected_link = {
       text: "See more news and communications in this topic",
-      url: "/search/advanced?" + finder_query_string("news_and_communications")
+      url: "/search/news-and-communications?" + finder_query_string
     }
 
     assert page.has_link?(expected_link[:text], href: expected_link[:url])
@@ -240,7 +240,7 @@ private
 
     expected_link = {
       text: "See more policy papers and consultations in this topic",
-      url: "/search/advanced?" + finder_query_string("policy_and_engagement")
+      url: "/search/policy-papers-and-consultations?" + finder_query_string
     }
 
     assert page.has_link?(expected_link[:text], href: expected_link[:url])
@@ -255,7 +255,7 @@ private
 
     expected_link = {
       text: "See more transparency and freedom of information releases in this topic",
-      url: "/search/advanced?" + finder_query_string("transparency")
+      url: "/search/transparency-and-freedom-of-information-releases?" + finder_query_string
     }
 
     assert page.has_link?(expected_link[:text], href: expected_link[:url])
@@ -270,7 +270,7 @@ private
 
     expected_link = {
       text: "See more research and statistics in this topic",
-      url: "/search/advanced?" + finder_query_string("research_and_statistics")
+      url: "/search/research-and-statistics?" + finder_query_string
     }
 
     assert page.has_link?(expected_link[:text], href: expected_link[:url])
@@ -443,10 +443,10 @@ private
     }
   end
 
-  def finder_query_string(supergroup)
+  def finder_query_string
     {
-      topic: @content_item['base_path'],
-      group: supergroup
+      parent: @content_item['base_path'],
+      topic: @content_item['content_id'],
     }.to_query
   end
 

@@ -36,6 +36,10 @@ module Supergroups
 
   private
 
+    def finder_path
+      "/search/policy-papers-and-consultations"
+    end
+
     def reorder_tagged_documents_to_prioritise_consultations
       consultations = @content.select do |content_item|
         consultation?(content_item.content_store_document_type)
