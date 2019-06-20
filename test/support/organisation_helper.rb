@@ -717,6 +717,11 @@ module OrganisationHelpers
     refute page.has_css?(".organisation__no10-banner")
   end
 
+  def the_courts_title
+    assert page.has_title?("#{@title} - GOV.UK")
+    assert page.has_css?(".gem-c-title__text", text: @title)
+  end
+
   def and_featured_links
     assert page.has_css?(".app-c-topic-list")
   end
