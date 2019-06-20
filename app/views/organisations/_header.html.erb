@@ -14,11 +14,6 @@
           <%= t('organisations.part_of') %>
           <%= @show.parent_organisations %>
         </div>
-      <% elsif @organisation.is_court_or_hmcts_tribunal? %>
-        <div class="organisation__parent-organisations brand--<%= @organisation.brand %>">
-          <%= t('organisations.administered_by') %>
-          <%= @show.parent_organisations %>
-        </div>
       <% end %>
     </div>
 
