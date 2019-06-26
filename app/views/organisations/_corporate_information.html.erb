@@ -16,7 +16,7 @@
   <% if @show.corporate_information[:job_links][:items].any? && !@organisation.is_no_10? %>
     <%= render "govuk_publishing_components/components/heading", {
       text: t('organisations.jobs_contracts'),
-      margin_bottom: 2,
+      margin_bottom: 3,
       heading_level: 3,
       font_size: 24
     } %>
