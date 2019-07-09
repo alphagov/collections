@@ -36,7 +36,9 @@ Collections serves the GOV.UK navigation pages and organisation pages.
 
 ![Organisation page](docs/org-page.png)
 
-(As of June 2018)
+### Step by step page
+
+![Step by step page](docs/step-by-step-page.png)
 
 ## Live examples
 
