@@ -2,16 +2,43 @@
 
 Collections serves the GOV.UK navigation pages and organisation pages.
 
+## Screenshots
+
+### Browse page
+
 ![Browse page](docs/browse-page.jpg)
+
+### Topic page
+
 ![Topic page](docs/topic-page.jpg)
+
+### Subtopic page
+
 ![Subtopic page](docs/subtopic-page.jpg)
+
+### Services and information page
+
 ![Services and information page](docs/services-and-information-page.jpg)
+
+### Taxonomy page
+
 ![Taxonomy page](docs/taxonomy-page.png)
+
+### Worldwide taxonomy page
+
 ![Worldwide taxonomy page](docs/world-taxonomy-page.png)
+
+### Organisation index page
+
 ![Organisation index page](docs/orgs-index-page.png)
+
+### Organisation page
+
 ![Organisation page](docs/org-page.png)
 
-(As of June 2018)
+### Step by step page
+
+![Step by step page](docs/step-by-step-page.png)
 
 ## Live examples
 
