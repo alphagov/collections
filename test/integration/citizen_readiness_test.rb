@@ -16,7 +16,7 @@ class CitizenReadinessTest < ActionDispatch::IntegrationTest
   end
 
   def then_i_can_see_the_correct_title
-    page.assert_selector "h1", text: "Prepare for EU exit"
+    page.assert_selector "h1", text: "Prepare for Brexit"
   end
 
   def and_the_page_has_metatags
@@ -43,7 +43,7 @@ class CitizenReadinessTest < ActionDispatch::IntegrationTest
 
   def stub_citizen_readiness_page(base_path)
     content_item = GovukSchemas::RandomExample.for_schema(frontend_schema: 'special_route') do |payload|
-      payload.merge(title: "Prepare for EU exit", base_path: base_path, description: "Prepare yourself for Brexit")
+      payload.merge(title: "Prepare for Brexit", base_path: base_path, description: "Prepare yourself for Brexit")
     end
     content_store_has_item(base_path, content_item)
   end
