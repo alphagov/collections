@@ -50,6 +50,7 @@ Collections serves the GOV.UK navigation pages and organisation pages.
 - Worldwide taxonomy page: [gov.uk/world/japan](https://www.gov.uk/world/japan)
 - Organisation index page: [gov.uk/government/organisations](https://www.gov.uk/government/organisations)
 - Organisation page: [gov.uk/government/organisations/cabinet-office](https://www.gov.uk/government/organisations/cabinet-office)
+- Step by step page: [gov.uk/learn-to-drive-a-car](https://www.gov.uk/learn-to-drive-a-car)
 
 ## Nomenclature
 
