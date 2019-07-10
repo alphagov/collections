@@ -329,13 +329,13 @@ private
   end
 
   def then_i_can_see_navigation_to_brexit_pages
-    page.assert_selector("h2.gem-c-heading", text: "Prepare for EU Exit")
-    page.assert_selector("a[href='/business-uk-leaving-eu']", text: "Prepare your business for the UK leaving the EU")
+    page.assert_selector("h2.gem-c-heading", text: "Prepare for Brexit")
+    page.assert_selector("a[href='/business-uk-leaving-eu']", text: "Prepare your business or organisation for Brexit")
   end
 
   def and_no_navigation_to_brexit_pages
-    page.assert_no_selector("h2.gem-c-heading", text: "Prepare for EU Exit")
-    page.assert_no_selector("a[href='/business-uk-leaving-eu']", text: "Prepare your business for the UK leaving the EU")
+    page.assert_no_selector("h2.gem-c-heading", text: "Prepare for Brexit")
+    page.assert_no_selector("a[href='/business-uk-leaving-eu']")
   end
 
   def then_page_has_meta_robots
