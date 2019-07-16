@@ -26,13 +26,13 @@ describe ListSet do
 
       rummager_has_documents_for_subtopic(
         "paye-content-id",
-        [
-          "employee-tax-codes",
-          "get-paye-forms-p45-p60",
-          "pay-paye-penalty",
-          "pay-paye-tax",
-          "pay-psa",
-          "payroll-annual-reporting",
+        %w[
+          employee-tax-codes
+          get-paye-forms-p45-p60
+          pay-paye-penalty
+          pay-paye-tax
+          pay-psa
+          payroll-annual-reporting
         ],
         page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
       )
@@ -82,13 +82,13 @@ describe ListSet do
     setup do
       rummager_has_documents_for_subtopic(
         "paye-content-id",
-        [
-          "get-paye-forms-p45-p60",
-          "pay-paye-penalty",
-          "pay-paye-tax",
-          "pay-psa",
-          "employee-tax-codes",
-          "payroll-annual-reporting",
+        %w[
+          get-paye-forms-p45-p60
+          pay-paye-penalty
+          pay-paye-tax
+          pay-psa
+          employee-tax-codes
+          payroll-annual-reporting
         ],
         page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
       )
@@ -126,12 +126,12 @@ describe ListSet do
   describe "fetching content tagged to this tag" do
     setup do
       @subtopic_content_id = 'paye-content-id'
-      rummager_has_documents_for_subtopic(@subtopic_content_id, [
-        'pay-paye-penalty',
-        'pay-paye-tax',
-        'pay-psa',
-        'employee-tax-codes',
-        'payroll-annual-reporting',
+      rummager_has_documents_for_subtopic(@subtopic_content_id, %w[
+        pay-paye-penalty
+        pay-paye-tax
+        pay-psa
+        employee-tax-codes
+        payroll-annual-reporting
       ], page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING)
     end
 
@@ -161,7 +161,7 @@ describe ListSet do
       result.delete("public_timestamp")
 
       Services.rummager.stubs(:search).with(
-        has_entries(filter_topic_content_ids: ['paye-content-id'])
+        has_entries(filter_topic_content_ids: %w[paye-content-id])
       ).returns("results" => [result],
         "start" => 0,
         "total" => 1)

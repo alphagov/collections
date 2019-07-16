@@ -6,12 +6,12 @@ describe Topic::ChangedDocuments do
   describe "with a single page of results available" do
     setup do
       @subtopic_content_id = 'paye-content-id'
-      rummager_has_latest_documents_for_subtopic(@subtopic_content_id, [
-        'pay-paye-penalty',
-        'pay-paye-tax',
-        'pay-psa',
-        'employee-tax-codes',
-        'payroll-annual-reporting',
+      rummager_has_latest_documents_for_subtopic(@subtopic_content_id, %w[
+        pay-paye-penalty
+        pay-paye-tax
+        pay-psa
+        employee-tax-codes
+        payroll-annual-reporting
       ])
     end
 
@@ -49,12 +49,12 @@ describe Topic::ChangedDocuments do
   describe "with multiple pages of results available" do
     setup do
       @subtopic_content_id = 'paye-content-id'
-      rummager_has_latest_documents_for_subtopic(@subtopic_content_id, [
-        'pay-paye-penalty',
-        'pay-paye-tax',
-        'pay-psa',
-        'employee-tax-codes',
-        'payroll-annual-reporting',
+      rummager_has_latest_documents_for_subtopic(@subtopic_content_id, %w[
+        pay-paye-penalty
+        pay-paye-tax
+        pay-psa
+        employee-tax-codes
+        payroll-annual-reporting
       ], page_size: 3)
       @pagination_options = { count: 3 }
       @documents = Topic::ChangedDocuments.new(@subtopic_content_id, @pagination_options)
@@ -85,7 +85,7 @@ describe Topic::ChangedDocuments do
       result.delete("public_timestamp")
 
       Services.rummager.stubs(:search).with(
-        has_entries(filter_topic_content_ids: ['paye-content-id'])
+        has_entries(filter_topic_content_ids: %w[paye-content-id])
       ).returns("results" => [result],
         "start" => 0,
         "total" => 1)
