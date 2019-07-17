@@ -14,13 +14,13 @@ class MainstreamBrowsingTest < ActionDispatch::IntegrationTest
 
       rummager_has_documents_for_browse_page(
         content_item['content_id'],
-        [
-          "employee-tax-codes",
-          "get-paye-forms-p45-p60",
-          "pay-paye-penalty",
-          "pay-paye-tax",
-          "pay-psa",
-          "payroll-annual-reporting",
+        %w[
+          employee-tax-codes
+          get-paye-forms-p45-p60
+          pay-paye-penalty
+          pay-paye-tax
+          pay-psa
+          payroll-annual-reporting
         ],
         page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
       )

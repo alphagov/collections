@@ -39,7 +39,7 @@ private
   end
 
   def number_of_pages
-    (total_results.to_f / results_per_page.to_f).ceil
+    (total_results.to_f / results_per_page).ceil
   end
 
   def start_index

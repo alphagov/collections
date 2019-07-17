@@ -28,11 +28,11 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
   before do
     rummager_has_documents_for_subtopic(
       'content-id-for-offshore',
-      [
-        'oil-rig-safety-requirements',
-        'oil-rig-staffing',
-        'north-sea-shipping-lanes',
-        'undersea-piping-restrictions'
+      %w[
+        oil-rig-safety-requirements
+        oil-rig-staffing
+        north-sea-shipping-lanes
+        undersea-piping-restrictions
       ],
       page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
     )
@@ -128,11 +128,11 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
     it "displays the latest page" do
       # Given there is latest content for a subtopic
-      rummager_has_latest_documents_for_subtopic("content-id-for-offshore", [
-        "oil-and-gas-uk-field-data",
-        "oil-and-gas-wells",
-        "oil-and-gas-fields-and-field-development",
-        "oil-and-gas-geoscientific-data"
+      rummager_has_latest_documents_for_subtopic("content-id-for-offshore", %w[
+        oil-and-gas-uk-field-data
+        oil-and-gas-wells
+        oil-and-gas-fields-and-field-development
+        oil-and-gas-geoscientific-data
       ])
 
       # When I view the latest page for a subtopic

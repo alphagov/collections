@@ -131,8 +131,8 @@ describe OrganisationsApiController do
           organisations: [
             {
               organisation_crest: "hmrc",
-              superseded_organisations: [
-                "department-of-inland-revenue",
+              superseded_organisations: %w[
+                department-of-inland-revenue
               ],
               acronym: "HMRC",
               link: "/government/organisations/hm-revenue-customs",
@@ -184,8 +184,8 @@ describe OrganisationsApiController do
           organisations: [
             {
               organisation_crest: "hmrc",
-              superseded_organisations: [
-                "department-of-inland-revenue",
+              superseded_organisations: %w[
+                department-of-inland-revenue
               ],
               acronym: "HMRC",
               link: "/government/organisations/hm-revenue-customs",

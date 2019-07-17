@@ -51,8 +51,8 @@ describe TaggedContent do
     end
 
     it 'allows multiple content_ids' do
-      assert_includes_params(filter_taxons: ["test-content-id-one", "test-content-id-two"]) do
-        TaggedContent.fetch(["test-content-id-one", "test-content-id-two"])
+      assert_includes_params(filter_taxons: %w[test-content-id-one test-content-id-two]) do
+        TaggedContent.fetch(%w[test-content-id-one test-content-id-two])
       end
     end
   end
