@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby File.read(".ruby-version").strip
 
 gem 'dalli'
-gem 'gds-api-adapters', '~> 59.5.1'
+gem 'gds-api-adapters', '~> 59.6.0'
 gem 'govuk_ab_testing', '~> 2.4.1'
 gem 'govuk_app_config', '~> 1.20.1'
 gem 'govuk_frontend_toolkit', '~> 8.2.0'
