@@ -10,7 +10,29 @@
       "line": 17,
       "link": "https://brakemanscanner.org/docs/warning_types/cross_site_scripting",
       "code": "Organisation.find!(request.path).body",
-      "render_path": [{"type":"controller","class":"OrganisationsController","method":"court","line":36,"file":"app/controllers/organisations_controller.rb"},{"type":"template","name":"organisations/court","line":10,"file":"app/views/organisations/court.html.erb"}],
+      "render_path": [
+        {
+          "type": "controller",
+          "class": "OrganisationsController",
+          "method": "court",
+          "line": 37,
+          "file": "app/controllers/organisations_controller.rb",
+          "rendered": {
+            "name": "organisations/court",
+            "file": "app/views/organisations/court.html.erb"
+          }
+        },
+        {
+          "type": "template",
+          "name": "organisations/court",
+          "line": 10,
+          "file": "app/views/organisations/court.html.erb",
+          "rendered": {
+            "name": "organisations/_what_we_do",
+            "file": "app/views/organisations/_what_we_do.html.erb"
+          }
+        }
+      ],
       "location": {
         "type": "template",
         "template": "organisations/_what_we_do"
@@ -20,6 +42,6 @@
       "note": "The body of an organisation is pre-rendered as html in the publishing app.  We need to show it in its raw form."
     }
   ],
-  "updated": "2019-01-17 12:58:42 +0000",
-  "brakeman_version": "4.3.1"
+  "updated": "2019-07-31 13:46:55 +0100",
+  "brakeman_version": "4.6.1"
 }
