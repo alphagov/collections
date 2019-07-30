@@ -32,7 +32,7 @@ en:
         title: "Research and statistics"
         see_all:
           text: "See all research and statistics"
-          path: "/government/statistics?departments[]=%{organisation}&parent=%{organisation}"
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
       policy_and_engagement:
         title: "Policy papers and consultations"
         see_all:
