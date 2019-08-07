@@ -8,6 +8,13 @@ class ApplicationController < ActionController::Base
 
   rescue_from GdsApi::ContentStore::ItemNotFound, with: :error_404
 
+  if ENV["BASIC_AUTH_USERNAME"]
+    http_basic_authenticate_with(
+      name: ENV.fetch("BASIC_AUTH_USERNAME"),
+      password: ENV.fetch("BASIC_AUTH_PASSWORD")
+    )
+  end
+
   # Allows additional request formats to be enabled.
   #
   # By default, PublicFacingController actions will only respond to HTML requests. To enable
