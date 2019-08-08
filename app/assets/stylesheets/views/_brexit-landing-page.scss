@@ -3,3 +3,43 @@
   display: block;
   margin-bottom: govuk-spacing(5);
 }
+
+.landing-page__section em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.landing-page__section-title {
+  padding-top: govuk-spacing(3);
+}
+
+.landing-page__section--border,
+.landing-page__section--mobile-border {
+  border-top: 1px solid govuk-colour('mid-grey', $legacy: 'grey-2');
+}
+
+.landing-page__section--mobile-border {
+  @include govuk-media-query($from: desktop) {
+    border-top: none;
+  }
+}
+
+.landing-page__section-desc {
+  margin-bottom: govuk-spacing(6);
+}
+
+.landing-page__buckets {
+  padding-top: govuk-spacing(6);
+  margin-bottom: govuk-spacing(6);
+}
+
+.landing-page__section {
+  margin-bottom: govuk-spacing(8);
+}
+
+.landing-page__image {
+  display: block;
+  float: right;
+  width: 100px;
+  margin: govuk-spacing(2) 0;
+}

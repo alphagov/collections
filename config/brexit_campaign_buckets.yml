@@ -1,0 +1,62 @@
+- id: individuals
+  link_text: "A link to the individuals page"
+  link_path: "/prepare-eu-exit"
+  description: "Act now and find out how to get ready if you live in the UK."
+  items:
+    - text: "Take your pet abroad"
+      path: "/guidance/pet-travel-to-europe-after-brexit"
+      description: "You need to apply for a pet passport <em>3 weeks before you travel</em>."
+    - text: "Apply for a visa to travel through the UK: step by step"
+      path: "/apply-transit-visa"
+      description: EU nationals will need a new visa to travel after <em>31 October 2019</em>.
+- id: business
+  link_text: "Start preparing"
+  link_path: "/business-uk-leaving-eu"
+  description: "Answer a few simple questions to find out how to prepare your business or organisation."
+  items:
+    - text: "Get your business ready to export from the UK to the EU after Brexit"
+      path: "/prepare-export-from-uk-after-brexit"
+      description: "The rules will change on <em>31 October 2019</em>."
+    - text: "Get your business ready to import from the EU to the UK after Brexit"
+      path: "/prepare-import-to-uk-after-brexit"
+      description: "The rules will change on <em>31 October 2019</em>."
+    - text: "Get your business ready to employ staff: step by step"
+      path: "/get-ready-to-employ-someone"
+      description: "You need to do this by <em>3 September 2019</em> for your application to be processed."
+- id: eu_nationals
+  link_text: "Continue to live in the UK after it leaves the EU"
+  link_path: "/staying-uk-eu-citizen"
+  description: "Act now and find out how to continue to live in the UK after Brexit."
+  items:
+    - text: "Stay in the UK after it leaves the EU ('settled status'): step by step"
+      path: "/eusettledstatus"
+      description: "You will need to apply for settled status by <em>20 September 2019</em>."
+    - text: "Visit the UK on a Permitted Paid Engagement visa"
+      path: "/permitted-paid-engagement-visa"
+      description: "The rules will change on <em>31 October 2019</em>."
+- id: uk_nationals
+  link_text: "Read the guidance"
+  link_path: "/uk-nationals-living-eu"
+  description: "Act now and find out about living in the EU after Brexit."
+  items:
+    - text: "Stay in the EU after Brexit"
+      path: "/guidance/advice-for-british-nationals-travelling-and-living-in-europe"
+      description: "The rules will change on the <em>31 October 2019</em>."
+    - text: "Drive abroad: step by step"
+      path: "/drive-abroad"
+      description: "Some rules will change on <em>31 October 2019</em>."
+    - text: "Get married in Europe"
+      path: "/marriage-abroad"
+      description: "Rules will change for each country on <em>31 October 2019</em>."
+- id: funding
+  description: "Act now and find out how to apply for continued funding."
+  items:
+    - text: "Find out about student funding"
+      path: "/"
+      description: "Your student funding may be affected by <em>31 October 2019</em>."
+    - text: "Check your CAP funding"
+      path: "/"
+      description: "Your current CAP entitlement may be affected after <em>31 October 2019</em>."
+    - text: "Receiving rural development funding if there's a no-deal Brexit"
+      path: "/government/publications/receiving-rural-development-funding-if-theres-no-brexit-deal"
+      description: "Find out how the programme will be affected after <em>31 October 2019</em>."

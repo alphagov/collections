@@ -19,7 +19,7 @@ private
   end
 
   def presentable_section_items
-    @presentable_section_items = @presented_taxon.sections.select { |section| section[:show_section] }.map do |section|
+    @presentable_section_items = @presented_taxon.supergroup_sections.select { |section| section[:show_section] }.map do |section|
       {
           href: "##{section[:id]}",
           text: t(section[:id], scope: :content_purpose_supergroup, default: section[:title])

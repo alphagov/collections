@@ -9,9 +9,25 @@
   )
 %>
 
+<% global_bucket_index = 0 %>
+<div class="landing-page__buckets full-page-width-wrapper">
+  <% presented_taxon.buckets.each_slice(2) do |bucket_group| %>
+    <div class="govuk-grid-row">
+      <% bucket_group.each do |bucket| %>
+        <%
+          border = true unless global_bucket_index < 2
+          mobile_only_border = true if global_bucket_index.eql?(1)
+        %>
+        <%= render partial: 'buckets', locals: { bucket: bucket, border: border, mobile_only_border: mobile_only_border } %>
+        <% global_bucket_index = global_bucket_index + 1 %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
 <div class="full-page-width-wrapper">
-  <div class="grid-row">
-    <div class="column-two-thirds">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
       <%= render "govuk_publishing_components/components/heading", {
         text: "All Brexit information",
         padding: true,
@@ -20,7 +36,7 @@
       } %>
 
       <%= render "components/topic-list", {
-        items: presented_taxon.sections
+        items: presented_taxon.supergroup_sections
       } %>
     </div>
   </div>

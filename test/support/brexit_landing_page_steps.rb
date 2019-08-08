@@ -62,6 +62,18 @@ module BrexitLandingPageSteps
     end
   end
 
+  def then_i_can_see_the_buckets_section
+    assert page.has_selector?('.landing-page__section h2', text: "How individuals and families should get ready")
+    assert page.has_selector?('.landing-page__section h2', text: "How businesses and organisations should get ready")
+    assert page.has_selector?('.landing-page__section h2', text: "How EU nationals living in the UK should get ready")
+    assert page.has_selector?('.landing-page__section h2', text: "How UK nationals living in the EU should get ready")
+    assert page.has_selector?('.landing-page__section h2', text: "Prepare for Brexit if you receive EU funding")
+
+    assert page.has_selector?('.landing-page__section h2 a[href="/prepare-eu-exit"]', text: "How individuals and families should get ready")
+    assert page.has_selector?('.landing-page__section-desc', text: "Act now and find out how to get ready if you live in the UK.")
+    assert page.has_selector?('.landing-page__section .app-c-taxon-list')
+  end
+
   def and_i_can_see_the_explore_topics_section
     assert page.has_selector?('.gem-c-heading', text: "All Brexit information")
 

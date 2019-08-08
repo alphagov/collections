@@ -1,3 +1,5 @@
+require 'yaml'
+
 class BrexitLandingPagePresenter
   attr_reader :taxon
   delegate(
@@ -15,7 +17,22 @@ class BrexitLandingPagePresenter
     @taxon = taxon
   end
 
-  def sections
+  def buckets
+    buckets ||= YAML.load_file('config/brexit_campaign_buckets.yml')
+
+    buckets.map do |bucket|
+      if bucket["items"]
+        bucket["items"].map do |link|
+          link.symbolize_keys!
+          link[:description] = link[:description].html_safe
+        end
+      end
+    end
+
+    buckets
+  end
+
+  def supergroup_sections
     sections ||= SupergroupSections.supergroup_sections(taxon.content_id, taxon.base_path)
 
     sections.map do |section|
