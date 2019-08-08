@@ -11,5 +11,17 @@
 
 <div class="full-page-width-wrapper">
   <div class="grid-row">
+    <div class="column-two-thirds">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: "All Brexit information",
+        padding: true,
+        border_top: 2,
+        brand: "cabinet-office",
+      } %>
+
+      <%= render "components/topic-list", {
+        items: presented_taxon.sections
+      } %>
+    </div>
   </div>
 </div>
