@@ -36,7 +36,14 @@
       } %>
 
       <div class="govuk-body">
-        <%= link_to(t('brexit_landing_page.email'), "/email-signup/?topic=#{presented_taxon.base_path}", {class: "landing-page__email" }) %>
+        <%= link_to(t('brexit_landing_page.email'), "/email-signup/?topic=#{presented_taxon.base_path}", {
+          class: "landing-page__email",
+          data: {
+            module: "track-click",
+            "track-category": "emailAlertLinkClicked",
+            "track-action": presented_taxon.base_path
+          }
+        }) %>
       </div>
 
       <%= render "components/topic-list", {
