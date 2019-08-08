@@ -20,6 +20,7 @@ class BrexitLandingPageTest < ActionDispatch::IntegrationTest
     given_there_is_a_brexit_taxon
     when_i_visit_the_brexit_landing_page
     then_all_finder_links_have_tracking_data
+    and_the_start_button_is_tracked
     and_bucket_section_headings_are_tracked
     and_the_email_link_is_tracked
   end
