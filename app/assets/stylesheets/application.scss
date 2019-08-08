@@ -1,3 +1,6 @@
+// gem components
+@import 'govuk_publishing_components/all_components';
+
 @import "conditionals";
 @import "colours";
 @import "typography";
@@ -21,5 +24,3 @@
 
 @import "modules/full-page-width";
 
-// gem components
-@import 'govuk_publishing_components/all_components';
