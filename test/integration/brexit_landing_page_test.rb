@@ -19,6 +19,7 @@ class BrexitLandingPageTest < ActionDispatch::IntegrationTest
   it "has tracking on all links" do
     given_there_is_a_brexit_taxon
     when_i_visit_the_brexit_landing_page
-    then_all_links_have_tracking_data
+    then_all_finder_links_have_tracking_data
+    and_the_email_link_is_tracked
   end
 end
