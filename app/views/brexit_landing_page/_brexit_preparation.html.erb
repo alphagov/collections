@@ -1,0 +1,25 @@
+<div class="taxon-page__section-group taxon-page__section-group--brexit">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: I18n.t("taxons.brexit.prepare_for_eu_exit"),
+        heading_level: 2,
+        margin_bottom: 3
+      } %>
+    </div>
+  </div>
+  <ul class="taxon-page__link-list">
+    <li class="taxon-page__link-list-item">
+      <a href="/business-uk-leaving-eu"><%= I18n.t("taxons.brexit.business_preparations") %></a>
+    </li>
+    <li class="taxon-page__link-list-item">
+      <a href="/prepare-eu-exit"><%= I18n.t("taxons.brexit.uk_resident_preparations") %></a>
+    </li>
+    <li class="taxon-page__link-list-item">
+      <a href="/uk-nationals-living-eu"><%= I18n.t("taxons.brexit.uk_nationals_in_eu_preparations") %></a>
+    </li>
+    <li class="taxon-page__link-list-item">
+      <a href="/staying-uk-eu-citizen"><%= I18n.t("taxons.brexit.eu_citizens_in_uk_preparations") %></a>
+    </li>
+  </ul>
+</div>

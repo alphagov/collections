@@ -1,0 +1,21 @@
+<div class="taxon-page__organisations">
+  <ol>
+    <% organisations_with_logos.each do |promoted_organisation| %>
+      <li class="taxon-page__organisation">
+        <%= render 'govuk_publishing_components/components/organisation_logo', {
+            organisation: promoted_organisation
+          }
+        %>
+      </li>
+    <% end %>
+  </ol>
+</div>
+
+<% if organisations_without_logos.any? %>
+  <div <%= "data-module=track-click" if track_click?(organisations_without_logos) %>>
+    <%= render 'govuk_publishing_components/components/document_list',
+      items: organisations_without_logos,
+      margin_bottom: true
+    %>
+  </div>
+<% end %>

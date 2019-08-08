@@ -1,0 +1,7 @@
+<%= render 'govuk_publishing_components/components/document_list',
+    items: section[:documents]
+%>
+
+<% if section[:see_more_link] %>
+  <%= render partial: "taxons/sections/see_more_link", locals: { section: section } %>
+<% end %>
