@@ -13,6 +13,7 @@ class BrexitLandingPageTest < ActionDispatch::IntegrationTest
     then_i_can_see_the_share_links_section
     then_i_can_see_the_buckets_section
     and_i_can_see_the_explore_topics_section
+    and_i_can_see_an_email_subscription_link
   end
 
   it "has tracking on all links" do
