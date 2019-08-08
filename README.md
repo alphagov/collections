@@ -52,6 +52,10 @@ Collections serves the GOV.UK navigation pages and organisation pages.
 - Organisation page: [gov.uk/government/organisations/cabinet-office](https://www.gov.uk/government/organisations/cabinet-office)
 - Step by step page: [gov.uk/learn-to-drive-a-car](https://www.gov.uk/learn-to-drive-a-car)
 
+## APIs
+
+The endpoints and known consumers of this application's APIs are documented in [docs/api](docs/api.md)
+
 ## Nomenclature
 
 ### Topics
