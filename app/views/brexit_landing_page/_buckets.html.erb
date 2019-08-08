@@ -1,12 +1,21 @@
+<%
+  border = true unless index < 2
+  mobile_only_border = true if index.eql?(1)
+%>
+
 <div class="govuk-grid-column-one-half landing-page__section">
-  <h2 class="
-        govuk-heading-m
+  <h2 class="govuk-heading-m
         landing-page__section-title
         <%= "landing-page__section--border" if border %>
         <%= "landing-page__section--mobile-border" if mobile_only_border %> "
   >
     <% if bucket["link_path"] %>
-      <%= link_to(t('taxons.brexit.' + bucket["id"]), bucket["link_path"]) %>
+      <%= link_to(t('taxons.brexit.' + bucket["id"]), bucket["link_path"], data: {
+        module: "track-click",
+        "track-category": "navGridContentClicked",
+        "track-action": index,
+        "track-label": bucket["link_path"]
+      }) %>
     <% else %>
       <%= t('taxons.brexit.' + bucket["id"]) %>
     <% end %>
