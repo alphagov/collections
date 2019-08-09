@@ -73,6 +73,6 @@ Rails.application.routes.draw do
   end
 
   get '/world/*taxon_base_path', to: 'world_wide_taxons#show'
-  get '/government/brexit', to: 'brexit_landing_page#show'
+  get '/government/brexit', to: 'brexit_landing_page#show' if Rails.application.config.respond_to?(:show_brexit_landing_page) && Rails.application.config.show_brexit_landing_page
   get '*taxon_base_path', to: 'taxons#show'
 end
