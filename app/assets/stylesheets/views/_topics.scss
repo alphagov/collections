@@ -59,10 +59,6 @@
       padding: 0 0 30px 0;
       min-height: auto;
     }
-
-    @include ie-lte(8) {
-      padding: 0 3.5% 30px;
-    }
   }
 
   nav {
