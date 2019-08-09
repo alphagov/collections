@@ -5,6 +5,10 @@ $govuk-compatibility-govukelements: true;
 // gem components
 @import 'govuk_publishing_components/all_components';
 
+$govuk-compatibility-govukfrontendtoolkit: true;
+$govuk-compatibility-govuktemplate: true;
+$govuk-compatibility-govukelements: true;
+
 @import "conditionals";
 @import "colours";
 @import "typography";
