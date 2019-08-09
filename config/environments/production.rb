@@ -7,7 +7,7 @@ Rails.application.configure do
 
   # Configuration to stop Brexit landing page showing in production before campaign
   # goes live
-  if (ENV['BASIC_AUTH_USERNAME'] && ENV['BASIC_AUTH_PASSWORD'] && ENV['HEROKU_APP_NAME']) || ENV['JENKINS'] || ENV['PUBLISHING_E2E_TESTS_COMMAND']
+  if (ENV['BASIC_AUTH_USERNAME'] && ENV['BASIC_AUTH_PASSWORD'] && ENV['HEROKU_APP_NAME'])
     config.show_brexit_landing_page = true
   end
 
