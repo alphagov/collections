@@ -1,7 +1,43 @@
-.landing-page__subscribe {
-  @include govuk-font(19);
-  display: block;
-  margin-bottom: govuk-spacing(5);
+.large-paragraph {
+  @include govuk-font($size: 19, $weight: bold);
+}
+
+.contents-wrapper {
+  .gem-c-contents-list {
+    background: none;
+    box-shadow: none;
+  }
+
+  .gem-c-contents-list__link {
+    @include govuk-font($size: 19);
+  }
+}
+
+.landing-page__header {
+  padding-bottom: govuk-spacing(9);
+  // this image is an initial placeholder and will be replaced
+  background: asset-url("brexit-landing-page.jpg") no-repeat bottom center / 100% auto;
+
+  @include govuk-media-query($from: tablet) {
+    padding-bottom: govuk-spacing(6);
+  }
+
+  @include govuk-media-query($from: desktop) {
+    background-size: auto 100%;
+  }
+}
+
+$ready-grey: #f1f2f3;
+$share-grey: #e8eaec;
+
+.landing-page__ready {
+  padding: govuk-spacing(8) 0;
+  background-color: $ready-grey;
+}
+
+.landing-page__share {
+  padding: govuk-spacing(6) 0 govuk-spacing(4) 0;
+  background-color: $share-grey;
 }
 
 .landing-page__section em {
