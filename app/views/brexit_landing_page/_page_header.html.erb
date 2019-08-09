@@ -1,24 +1,46 @@
-<%= render "govuk_publishing_components/components/inverse_header", { full_width: true } do %>
+<header class="landing-page__header">
   <div class="full-page-width-wrapper">
     <%= render 'govuk_publishing_components/components/breadcrumbs',
       breadcrumbs: GovukPublishingComponents::AppHelpers::TaxonBreadcrumbs.new(@content_item).breadcrumbs,
-      collapse_on_mobile: true,
-      inverse: true
+      collapse_on_mobile: true
     %>
 
     <div class="grid-row">
       <div class="column-two-thirds">
         <%= render "govuk_publishing_components/components/title", {
-          title: presented_taxon.title,
-          average_title_length: 'long',
-          inverse: true
+          title: I18n.t("brexit_landing_page.get_ready")
         } %>
 
         <%= render 'govuk_publishing_components/components/lead_paragraph', {
-            text: presented_taxon.description,
-            inverse: true
+          text: I18n.t("brexit_landing_page.intro_text")
         } %>
+
+        <p class="large-paragraph"><%= I18n.t("brexit_landing_page.everyone_must") %>:</p>
+        <div class="contents-wrapper">
+          <%= render "govuk_publishing_components/components/contents_list", {
+            hide_title: true,
+            underline_links: true,
+            contents: [
+              {
+                href: "/prepare-eu-exit",
+                text: "Individuals and families"
+              },
+              {
+                href: "/business-uk-leaving-eu",
+                text: "Businesses and organisations"
+              },
+              {
+                href: "/uk-nationals-living-eu",
+                text: "UK nationals living in the EU"
+              },
+              {
+                href: "/staying-uk-eu-citizen",
+                text: "EU nationals living in the UK"
+              },
+            ]
+          } %>
+        </div>
       </div>
     </div>
   </div>
-<% end %>
+</header>
