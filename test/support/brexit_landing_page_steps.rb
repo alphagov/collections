@@ -62,6 +62,18 @@ module BrexitLandingPageSteps
     end
   end
 
+  def then_i_can_see_the_header_section
+    assert page.has_selector?('.landing-page__header h1', text: "Get ready for Brexit")
+  end
+
+  def then_i_can_see_the_get_ready_section
+    assert page.has_selector?('.landing-page__ready h2', text: "Check if you need to get ready")
+  end
+
+  def then_i_can_see_the_share_links_section
+    assert page.has_selector?('.landing-page__share .gem-c-share-links')
+  end
+
   def then_i_can_see_the_buckets_section
     assert page.has_selector?('.landing-page__section h2', text: "How individuals and families should get ready")
     assert page.has_selector?('.landing-page__section h2', text: "How businesses and organisations should get ready")
