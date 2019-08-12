@@ -3,7 +3,7 @@
 <head>
   <title><%= yield :title %> - GOV.UK</title>
   <%= javascript_include_tag "application" %>
-  <!--[if gt IE 8]><!--><%= stylesheet_link_tag "application" %><!--<![endif]-->
+  <%= stylesheet_link_tag "application" %>
   <%= csrf_meta_tags %>
   <%= yield :meta_tags %>
   <%= yield :meta_section %>
