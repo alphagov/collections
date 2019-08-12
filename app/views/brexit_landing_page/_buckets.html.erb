@@ -1,0 +1,20 @@
+<div class="govuk-grid-column-one-half landing-page__section">
+  <h2 class="
+        govuk-heading-m
+        landing-page__section-title
+        <%= "landing-page__section--border" if border %>
+        <%= "landing-page__section--mobile-border" if mobile_only_border %> "
+  >
+    <% if bucket["link_path"] %>
+      <%= link_to(t('taxons.brexit.' + bucket["id"]), bucket["link_path"]) %>
+    <% else %>
+      <%= t('taxons.brexit.' + bucket["id"]) %>
+    <% end %>
+  </h2>
+
+  <p class="govuk-body landing-page__section-desc"><%= bucket["description"] %></p>
+
+  <%= render "components/taxon-list", {
+    items: bucket["items"]
+  } %>
+</div>
