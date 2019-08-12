@@ -8,6 +8,9 @@ class BrexitLandingPageTest < ActionDispatch::IntegrationTest
     given_there_is_a_brexit_taxon
     when_i_visit_the_brexit_landing_page
     then_i_can_see_the_title_section
+    then_i_can_see_the_header_section
+    then_i_can_see_the_get_ready_section
+    then_i_can_see_the_share_links_section
     then_i_can_see_the_buckets_section
     and_i_can_see_the_explore_topics_section
   end
