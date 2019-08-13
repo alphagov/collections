@@ -21,9 +21,19 @@
     <% end %>
   </h2>
 
-  <p class="govuk-body landing-page__section-desc"><%= bucket["description"] %></p>
+  <% if bucket["description"] %>
+    <p class="govuk-body landing-page__section-desc"><%= bucket["description"] %></p>
+  <% end %>
 
-  <%= render "components/taxon-list", {
-    items: bucket["items"]
-  } %>
+  <% if bucket["block"] %>
+    <%= render "govuk_publishing_components/components/govspeak", {} do %>
+      <%= bucket["block"] %>
+    <% end %>
+  <% end %>
+
+  <% if bucket["items"] %>
+    <%= render "components/taxon-list", {
+      items: bucket["items"]
+    } %>
+  <% end %>
 </div>

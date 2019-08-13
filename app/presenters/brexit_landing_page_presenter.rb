@@ -1,4 +1,5 @@
 require 'yaml'
+require 'govspeak'
 
 class BrexitLandingPagePresenter
   attr_reader :taxon
@@ -26,6 +27,9 @@ class BrexitLandingPagePresenter
           link.symbolize_keys!
           link[:description] = link[:description].html_safe
         end
+      end
+      if bucket["block"]
+        bucket["block"] = Govspeak::Document.new(bucket["block"]).to_html.html_safe
       end
     end
 
