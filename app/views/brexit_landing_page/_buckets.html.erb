@@ -33,6 +33,7 @@
 
   <% if bucket["items"] %>
     <%= render "components/taxon-list", {
+      heading_level: 0,
       items: bucket["items"]
     } %>
   <% end %>
