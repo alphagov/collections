@@ -1,5 +1,10 @@
 .large-paragraph {
   @include govuk-font($size: 19, $weight: bold);
+  margin: govuk-spacing(6) 0 govuk-spacing(1);
+
+  @include govuk-media-query($from: tablet) {
+    margin: 0;
+  }
 }
 
 .contents-wrapper {
@@ -14,17 +19,7 @@
 }
 
 .landing-page__header {
-  padding-bottom: govuk-spacing(9);
-  // this image is an initial placeholder and will be replaced
-  background: asset-url("brexit-landing-page.jpg") no-repeat bottom center / 100% auto;
-
-  @include govuk-media-query($from: tablet) {
-    padding-bottom: govuk-spacing(6);
-  }
-
-  @include govuk-media-query($from: desktop) {
-    background-size: auto 100%;
-  }
+  padding-bottom: govuk-spacing(6);
 }
 
 $ready-grey: #f1f2f3;
