@@ -14,11 +14,7 @@
   <% presented_taxon.buckets.each_slice(2) do |bucket_group| %>
     <div class="govuk-grid-row">
       <% bucket_group.each do |bucket| %>
-        <%
-          border = true unless global_bucket_index < 2
-          mobile_only_border = true if global_bucket_index.eql?(1)
-        %>
-        <%= render partial: 'buckets', locals: { bucket: bucket, border: border, mobile_only_border: mobile_only_border } %>
+        <%= render partial: 'buckets', locals: { bucket: bucket, index: global_bucket_index } %>
         <% global_bucket_index = global_bucket_index + 1 %>
       <% end %>
     </div>
@@ -36,7 +32,14 @@
       } %>
 
       <div class="govuk-body">
-        <%= link_to(t('brexit_landing_page.email'), "/email-signup/?topic=#{presented_taxon.base_path}", {class: "landing-page__email" }) %>
+        <%= link_to(t('brexit_landing_page.email'), "/email-signup/?topic=#{presented_taxon.base_path}", {
+          class: "landing-page__email",
+          data: {
+            module: "track-click",
+            "track-category": "emailAlertLinkClicked",
+            "track-action": presented_taxon.base_path
+          }
+        }) %>
       </div>
 
       <%= render "components/topic-list", {
