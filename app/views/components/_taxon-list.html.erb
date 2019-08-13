@@ -1,12 +1,19 @@
 <%
-  heading_level ||= 'h2'
+  if !local_assigns[:heading_level]
+    heading_level = 'h2'
+  elsif local_assigns[:heading_level].zero?
+    heading_level = false
+  else
+    heading_level = [*1..6].include?(local_assigns[:heading_level]) ? "h#{local_assigns[:heading_level]}" : "h2"
+  end
+
   items ||= []
 %>
 <% if items.any? %>
   <ol class="app-c-taxon-list">
     <% items.each_with_index do |item, index| %>
       <li class="app-c-taxon-list__item">
-        <% if item[:description] %><<%= heading_level %> class="app-c-taxon-list__heading"><% end %>
+        <% if item[:description] && heading_level %><<%= heading_level %> class="app-c-taxon-list__heading"><% end %>
         <%=
           link_to(
             item[:text],
@@ -15,7 +22,9 @@
             class: "app-c-taxon-list__link"
           )
         %>
-        <% if item[:description] %></<%= heading_level %>>
+        <% if item[:description] && heading_level %></<%= heading_level %>><% end %>
+
+        <% if item[:description] %>
           <p class="app-c-taxon-list__description">
             <%= item[:description] %>
           </p>
