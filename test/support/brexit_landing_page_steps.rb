@@ -86,6 +86,10 @@ module BrexitLandingPageSteps
     assert page.has_selector?('.landing-page__section .app-c-taxon-list')
   end
 
+  def and_i_can_see_an_email_subscription_link
+    assert page.has_selector?('a[href="/email-signup/?topic=/government/brexit"]', text: "Subscribe to updates to this topic")
+  end
+
   def and_i_can_see_the_explore_topics_section
     assert page.has_selector?('.gem-c-heading', text: "All Brexit information")
 
