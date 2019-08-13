@@ -61,7 +61,7 @@ class TaxonListTest < ComponentTestCase
 
   test "renders a list item with custom heading level" do
     render_component(
-      heading_level: "h3",
+      heading_level: 3,
       items: [
         {
           text: 'Adult Dependants\' Grant',
@@ -75,9 +75,41 @@ class TaxonListTest < ComponentTestCase
     assert_select "h3.app-c-taxon-list__heading .app-c-taxon-list__link[href='/adult-dependants-grant']", text: 'Adult Dependants\' Grant'
   end
 
+  test "renders a list item without a heading if heading_level is 0" do
+    render_component(
+      heading_level: 0,
+      items: [
+        {
+          text: 'Adult Dependants\' Grant',
+          path: '/adult-dependants-grant',
+          description: 'Adult Dependants\' Grant for full-time students who financially support an adult'
+        }
+      ]
+    )
+
+    assert_select "h3.app-c-taxon-list__heading", false
+    assert_select ".app-c-taxon-list__item > .app-c-taxon-list__link[href='/adult-dependants-grant']", text: 'Adult Dependants\' Grant'
+    assert_select ".app-c-taxon-list__description", text: "Adult Dependants\' Grant for full-time students who financially support an adult"
+  end
+
+  test "defaults heading to h2 if heading level is out of range" do
+    render_component(
+      heading_level: 9,
+      items: [
+        {
+          text: 'Adult Dependants\' Grant',
+          path: '/adult-dependants-grant',
+          description: 'Adult Dependants\' Grant for full-time students who financially support an adult'
+        }
+      ]
+    )
+
+    assert_select "h2.app-c-taxon-list__heading", text: "Adult Dependants\' Grant"
+  end
+
   test "renders a list item with data attribute" do
     render_component(
-      heading_level: "h3",
+      heading_level: 3,
         items: [
         {
           text: 'Childcare Grant',
