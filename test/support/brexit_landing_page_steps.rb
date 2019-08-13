@@ -55,7 +55,7 @@ module BrexitLandingPageSteps
   end
 
   def then_i_can_see_the_title_section
-    assert page.has_selector?('title', text: content_item['title'], visible: false)
+    assert page.has_selector?('title', text: "Get ready for Brexit", visible: false)
 
     within '.gem-c-breadcrumbs' do
       assert page.has_link?('Home', href: '/')
