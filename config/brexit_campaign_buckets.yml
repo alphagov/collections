@@ -26,14 +26,14 @@
 - id: eu_nationals
   link_text: "Continue to live in the UK after it leaves the EU"
   link_path: "/staying-uk-eu-citizen"
-  description: "Act now and find out how to continue to live in the UK after Brexit."
-  items:
-    - text: "Stay in the UK after it leaves the EU ('settled status'): step by step"
-      path: "/eusettledstatus"
-      description: "You will need to apply for settled status by <em>20 September 2019</em>."
-    - text: "Visit the UK on a Permitted Paid Engagement visa"
-      path: "/permitted-paid-engagement-visa"
-      description: "The rules will change on <em>31 October 2019</em>."
+  block: |
+    Find out what you need to do to stay in the UK if you or your family are from the EU, Iceland, Liechtenstein, Norway or Switzerland.
+
+    You need to apply if you were born in the UK but are not a British citizen. If you’re not sure, [check if you’re a British citizen](/check-british-citizenship).
+
+    You need to apply even if you [have a UK ‘permanent residence document’](/settled-status-eu-citizens-families/if-you-have-permanent-residence-or-indefinite-leave-to-remain).
+
+    [Act now to continue to live in the UK after Brexit](/eusettledstatus)
 - id: uk_nationals
   link_text: "Read the guidance"
   link_path: "/uk-nationals-living-eu"
