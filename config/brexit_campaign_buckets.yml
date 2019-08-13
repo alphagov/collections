@@ -6,9 +6,17 @@
     - text: "Take your pet abroad"
       path: "/guidance/pet-travel-to-europe-after-brexit"
       description: "You need to apply for a pet passport <em>3 weeks before you travel</em>."
+      data_attributes:
+        ecommerce-row: true
+        ecommerce-content-id: 367aa9d6-f415-414e-9d1d-06ab0f5cce5e
+        ecommerce-path: "/guidance/pet-travel-to-europe-after-brexit"
     - text: "Apply for a visa to travel through the UK: step by step"
       path: "/apply-transit-visa"
       description: EU nationals will need a new visa to travel after <em>31 October 2019</em>.
+      data_attributes:
+        ecommerce-row: true
+        ecommerce-content-id: d8f3c2e0-d544-4664-9616-ab71323e4d18
+        ecommerce-path: "/apply-transit-visa"
 - id: business
   link_text: "Start preparing"
   link_path: "/business-uk-leaving-eu"
@@ -17,12 +25,24 @@
     - text: "Get your business ready to export from the UK to the EU after Brexit"
       path: "/prepare-export-from-uk-after-brexit"
       description: "The rules will change on <em>31 October 2019</em>."
+      data_attributes:
+        ecommerce-row: true
+        ecommerce-content-id: e169b2ac-8c90-4789-8e6c-3657729e21b2
+        ecommerce-path: "/prepare-export-from-uk-after-brexit"
     - text: "Get your business ready to import from the EU to the UK after Brexit"
       path: "/prepare-import-to-uk-after-brexit"
       description: "The rules will change on <em>31 October 2019</em>."
+      data_attributes:
+        ecommerce-row: true
+        ecommerce-content-id: db1149f5-f60a-4d02-be0c-9c9db2828665
+        ecommerce-path: "/prepare-import-to-uk-after-brexit"
     - text: "Get your business ready to employ staff: step by step"
       path: "/get-ready-to-employ-someone"
       description: "You need to do this by <em>3 September 2019</em> for your application to be processed."
+      data_attributes:
+        ecommerce-row: true
+        ecommerce-content-id: dc77c606-cc6b-49ac-9f40-b96959d02539
+        ecommerce-path: "/get-ready-to-employ-someone"
 - id: eu_nationals
   link_text: "Continue to live in the UK after it leaves the EU"
   link_path: "/staying-uk-eu-citizen"
@@ -34,6 +54,22 @@
     You need to apply even if you [have a UK ‘permanent residence document’](/settled-status-eu-citizens-families/if-you-have-permanent-residence-or-indefinite-leave-to-remain).
 
     [Act now to continue to live in the UK after Brexit](/eusettledstatus)
+  description: "Act now and find out how to continue to live in the UK after Brexit."
+  items:
+    - text: "Stay in the UK after it leaves the EU ('settled status'): step by step"
+      path: "/eusettledstatus"
+      description: "You will need to apply for settled status by <em>20 September 2019</em>."
+      data_attributes:
+        ecommerce-row: true
+        ecommerce-content-id: 0c79b832-75de-4854-8154-d62774a8dfb8
+        ecommerce-path: "/eusettledstatus"
+    - text: "Visit the UK on a Permitted Paid Engagement visa"
+      path: "/permitted-paid-engagement-visa"
+      description: "The rules will change on <em>31 October 2019</em>."
+      data_attributes:
+        ecommerce-row: true
+        ecommerce-content-id: 124edf01-5637-43d1-9c05-fe22530d54b4
+        ecommerce-path: "/permitted-paid-engagement-visa"
 - id: uk_nationals
   link_text: "Read the guidance"
   link_path: "/uk-nationals-living-eu"
@@ -42,21 +78,45 @@
     - text: "Stay in the EU after Brexit"
       path: "/guidance/advice-for-british-nationals-travelling-and-living-in-europe"
       description: "The rules will change on the <em>31 October 2019</em>."
+      data_attributes:
+        ecommerce-row: true
+        ecommerce-content-id: cba85045-8be7-4189-9c5e-7fda747ef779
+        ecommerce-path: "/guidance/advice-for-british-nationals-travelling-and-living-in-europe"
     - text: "Drive abroad: step by step"
       path: "/drive-abroad"
       description: "Some rules will change on <em>31 October 2019</em>."
+      data_attributes:
+        ecommerce-row: true
+        ecommerce-content-id: 51d1433e-893f-4424-8408-8427c1b6aba1
+        ecommerce-path: "/drive-abroad"
     - text: "Get married in Europe"
       path: "/marriage-abroad"
       description: "Rules will change for each country on <em>31 October 2019</em>."
+      data_attributes:
+        ecommerce-row: true
+        ecommerce-content-id: d0a95767-f6ab-432a-aebc-096e37fb3039
+        ecommerce-path: "/marriage-abroad"
 - id: funding
   description: "Act now and find out how to apply for continued funding."
   items:
     - text: "Find out about student funding"
       path: "/"
       description: "Your student funding may be affected by <em>31 October 2019</em>."
+      data_attributes:
+        ecommerce-row: true
+        ecommerce-content-id:
+        ecommerce-path: "/"
     - text: "Check your CAP funding"
       path: "/"
       description: "Your current CAP entitlement may be affected after <em>31 October 2019</em>."
+      data_attributes:
+        ecommerce-row: true
+        ecommerce-content-id:
+        ecommerce-path: "/"
     - text: "Receiving rural development funding if there's a no-deal Brexit"
       path: "/government/publications/receiving-rural-development-funding-if-theres-no-brexit-deal"
       description: "Find out how the programme will be affected after <em>31 October 2019</em>."
+      data_attributes:
+        ecommerce-row: true
+        ecommerce-content-id: ee741fe4-9862-4ebf-b400-ca8ab7d07f6c
+        ecommerce-path: "/government/publications/receiving-rural-development-funding-if-theres-no-brexit-deal"

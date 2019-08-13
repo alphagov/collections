@@ -84,6 +84,7 @@ class TaxonListTest < ComponentTestCase
           path: '/childcare-grant',
           description: 'Childcare Grants for full-time students in higher education',
           data_attributes: {
+            "ecommerce-row": true,
             track_category: "trackCategory",
             track_action: 1.1,
             track_label: "/track-path",
@@ -97,5 +98,6 @@ class TaxonListTest < ComponentTestCase
     )
 
     assert_select ".app-c-taxon-list__link[data-track-category=trackCategory]"
+    assert_select ".app-c-taxon-list__link[data-ecommerce-row=true]"
   end
 end
