@@ -117,6 +117,8 @@ en:
       uk_nationals_in_eu_preparations: "Living in Europe after Brexit"
       eu_citizens_in_uk_preparations: "Continue to live in the UK after Brexit"
   brexit_landing_page:
+    title: "Get ready for Brexit"
+    description: "How to get ready for Brexit and information about government activity"
     get_ready: "Get ready for Brexit"
     intro_text: "The United Kingdom is leaving the European Union on 31 October 2019."
     everyone_must: "Everyone must get ready"
