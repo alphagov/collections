@@ -20,7 +20,13 @@
 
           <%= render "govuk_publishing_components/components/button", {
             text: "Start now",
-            href: "#"
+            href: "#",
+            data_attributes: {
+              module: "track-click",
+              "track-category": "startButtonClicked",
+              "track-action": "#",
+              "track-label": "Start now"
+            }
           } %>
         </div>
       </div>

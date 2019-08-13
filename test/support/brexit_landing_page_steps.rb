@@ -110,7 +110,7 @@ module BrexitLandingPageSteps
     end
   end
 
-  def then_all_links_have_tracking_data
+  def then_all_finder_links_have_tracking_data
     [
       'Services', 'Guidance and regulation', 'News and communications',
       'Research and statistics', 'Policy papers and consultations',
@@ -119,6 +119,21 @@ module BrexitLandingPageSteps
       assert page.has_css?("a[data-track-category='SeeAllLinkClicked']", text: section)
       assert page.has_css?("a[data-track-action=\"#{current_path}\"]", text: section)
     end
+  end
+
+  def and_bucket_section_headings_are_tracked
+    assert_equal(page.all(".landing-page__section h2 a[data-track-category='navGridContentClicked']").count, 4)
+  end
+
+  def and_the_start_button_is_tracked
+    assert page.has_selector?(".gem-c-button[data-track-category='startButtonClicked']", text: "Start now")
+    assert page.has_selector?(".gem-c-button[data-track-label='Start now']", text: "Start now")
+    assert page.has_selector?(".gem-c-button[data-track-action='#']", text: "Start now")
+  end
+
+  def and_the_email_link_is_tracked
+    assert page.has_css?("a[data-track-category='emailAlertLinkClicked']", text: "Subscribe to updates to this topic")
+    assert page.has_css?("a[data-track-action=\"#{current_path}\"]", text: "Subscribe to updates to this topic")
   end
 
   def tagged_content
