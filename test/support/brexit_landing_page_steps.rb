@@ -87,7 +87,7 @@ module BrexitLandingPageSteps
   end
 
   def and_i_can_see_an_email_subscription_link
-    assert page.has_selector?('a[href="/email-signup/?topic=/government/brexit"]', text: "Subscribe to updates to this topic")
+    assert page.has_selector?('a[href="/email-signup/?topic=' + brexit_taxon_path + '"]', text: "Subscribe to updates to this topic")
   end
 
   def and_i_can_see_the_explore_topics_section
