@@ -59,7 +59,7 @@ module BrexitLandingPageSteps
     assert page.has_selector?('.landing-page__section h2', text: "How businesses and organisations should get ready")
     assert page.has_selector?('.landing-page__section h2', text: "How EU nationals living in the UK should get ready")
     assert page.has_selector?('.landing-page__section h2', text: "How UK nationals living in the EU should get ready")
-    assert page.has_selector?('.landing-page__section h2', text: "Prepare for Brexit if you receive EU funding")
+    assert page.has_selector?('.landing-page__section h2', text: "What to do if you receive funding from the EU")
 
     assert page.has_selector?('.landing-page__section h2 a[href="/prepare-eu-exit"]', text: "How individuals and families should get ready")
     assert page.has_selector?('.landing-page__section-desc', text: "Act now and find out how to get ready if you live in the UK.")
@@ -102,7 +102,7 @@ module BrexitLandingPageSteps
   end
 
   def and_bucket_section_headings_are_tracked
-    assert_equal(page.all(".landing-page__section h2 a[data-track-category='navGridContentClicked']").count, 4)
+    assert_equal(5, page.all(".landing-page__section h2 a[data-track-category='navGridContentClicked']").count)
   end
 
   def and_the_start_button_is_tracked
