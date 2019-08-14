@@ -33,7 +33,7 @@ private
     buckets.each_with_index do |bucket, index|
       bucket.fetch("items", []).each do |link|
         link.symbolize_keys!
-        link[:description] = link[:description].html_safe
+        link[:description] = link[:description].html_safe if link[:description]
       end
       bucket["block"] = Govspeak::Document.new(bucket["block"]).to_html.html_safe unless bucket['block'].nil?
       bucket["index"] = index
