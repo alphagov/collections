@@ -4,13 +4,8 @@ require 'govspeak'
 class BrexitLandingPagePresenter
   attr_reader :taxon, :buckets
   delegate(
-    :content_id,
     :title,
-    :description,
     :base_path,
-    :child_taxons,
-    :live_taxon?,
-    :section_content,
     to: :taxon
   )
 
