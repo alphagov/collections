@@ -25,10 +25,6 @@ class BrexitLandingPagePresenter
     end
   end
 
-  def brexit?
-    true
-  end
-
 private
 
   def fetch_buckets
