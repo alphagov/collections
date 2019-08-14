@@ -11,7 +11,7 @@
 %>
 <% if items.any? %>
   <ol class="app-c-taxon-list">
-    <% items.each_with_index do |item, index| %>
+    <% items.each do |item| %>
       <li class="app-c-taxon-list__item">
         <% if item[:description] && heading_level %><<%= heading_level %> class="app-c-taxon-list__heading"><% end %>
         <%=
