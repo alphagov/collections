@@ -3,8 +3,13 @@
   mobile_only_border = true if index.eql?(1)
 %>
 
-<div class="govuk-grid-column-one-half landing-page__section">
-  <h2 class="govuk-heading-m
+<div class="govuk-grid-column-one-half landing-page__section"
+  data-analytics-ecommerce
+  data-ecommerce-start-index="1"
+  data-list-title="Brexit landing page: <%= t('taxons.brexit.' + bucket["id"]) %>"
+  data-search-query>
+  <h2 class="
+        govuk-heading-m
         landing-page__section-title
         <%= "landing-page__section--border" if border %>
         <%= "landing-page__section--mobile-border" if mobile_only_border %> "
