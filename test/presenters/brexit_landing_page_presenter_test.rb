@@ -56,6 +56,16 @@ describe BrexitLandingPagePresenter do
     it 'html-safes the block' do
       assert subject.buckets.dig(2, 'block').html_safe?
     end
+    it 'has no border (line at the top) for the first and second bucket' do
+      refute subject.buckets.first['display_border']
+      refute subject.buckets.second['display_border']
+      assert subject.buckets.third['display_border']
+    end
+    it 'has a mobile border (line at the top) for the second bucket' do
+      refute subject.buckets.first['display_mobile_border']
+      assert subject.buckets.second['display_mobile_border']
+      refute subject.buckets.third['display_mobile_border']
+    end
   end
 
   describe '#supergroup_sections' do
