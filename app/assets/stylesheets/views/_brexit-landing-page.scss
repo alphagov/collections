@@ -7,17 +7,6 @@
   }
 }
 
-.contents-wrapper {
-  .gem-c-contents-list {
-    background: none;
-    box-shadow: none;
-  }
-
-  .gem-c-contents-list__link {
-    @include govuk-font($size: 19);
-  }
-}
-
 .landing-page__header {
   padding-bottom: govuk-spacing(6);
 }

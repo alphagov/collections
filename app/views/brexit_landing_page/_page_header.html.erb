@@ -16,30 +16,23 @@
         } %>
 
         <p class="large-paragraph"><%= I18n.t("brexit_landing_page.everyone_must") %>:</p>
-        <div class="contents-wrapper">
-          <%= render "govuk_publishing_components/components/contents_list", {
-            hide_title: true,
-            underline_links: true,
-            contents: [
-              {
-                href: "/prepare-eu-exit",
-                text: "Individuals and families"
-              },
-              {
-                href: "/business-uk-leaving-eu",
-                text: "Businesses and organisations"
-              },
-              {
-                href: "/uk-nationals-living-eu",
-                text: "UK nationals living in the EU"
-              },
-              {
-                href: "/staying-uk-eu-citizen",
-                text: "EU nationals living in the UK"
-              },
-            ]
-          } %>
-        </div>
+        <%= render "govuk_publishing_components/components/govspeak", {
+        } do %>
+          <ul data-module="track-click">
+            <li>
+              <a data-track-category="contentsClicked" data-track-action="content_item 1" data-track-label="/prepare-eu-exit" data-track-options="{&quot;dimension29&quot;:&quot;Individuals and families&quot;}" href="/prepare-eu-exit">Individuals and families</a>
+            </li>
+            <li>
+              <a data-track-category="contentsClicked" data-track-action="content_item 2" data-track-label="/business-uk-leaving-eu" data-track-options="{&quot;dimension29&quot;:&quot;Businesses and organisations&quot;}" href="/business-uk-leaving-eu">Businesses and organisations</a>
+            </li>
+            <li>
+              <a data-track-category="contentsClicked" data-track-action="content_item 3" data-track-label="/uk-nationals-living-eu" data-track-options="{&quot;dimension29&quot;:&quot;UK nationals living in the EU&quot;}" href="/uk-nationals-living-eu">UK nationals living in the EU</a>
+            </li>
+            <li>
+              <a data-track-category="contentsClicked" data-track-action="content_item 4" data-track-label="/staying-uk-eu-citizen" data-track-options="{&quot;dimension29&quot;:&quot;EU nationals living in the UK&quot;}" href="/staying-uk-eu-citizen">EU nationals living in the UK</a>
+            </li>
+          </ul>
+        <% end %>
       </div>
     </div>
   </div>
