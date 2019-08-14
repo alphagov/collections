@@ -8,13 +8,11 @@
   )
 %>
 
-<% global_bucket_index = 0 %>
 <div class="landing-page__buckets full-page-width-wrapper">
   <% presented_taxon.buckets.each_slice(2) do |bucket_group| %>
     <div class="govuk-grid-row">
       <% bucket_group.each do |bucket| %>
-        <%= render partial: 'buckets', locals: { bucket: bucket, index: global_bucket_index } %>
-        <% global_bucket_index = global_bucket_index + 1 %>
+        <%= render partial: 'buckets', locals: { bucket: bucket } %>
       <% end %>
     </div>
   <% end %>
