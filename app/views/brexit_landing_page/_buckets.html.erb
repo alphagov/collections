@@ -25,16 +25,16 @@
     <p class="govuk-body landing-page__section-desc"><%= bucket["description"] %></p>
   <% end %>
 
-  <% if bucket["block"] %>
-    <%= render "govuk_publishing_components/components/govspeak", {} do %>
-      <%= bucket["block"] %>
-    <% end %>
-  <% end %>
-
   <% if bucket["items"] %>
     <%= render "components/taxon-list", {
       heading_level: 0,
       items: bucket["items"]
     } %>
+  <% end %>
+
+  <% if bucket["block"] %>
+    <%= render "govuk_publishing_components/components/govspeak", {} do %>
+      <%= bucket["block"] %>
+    <% end %>
   <% end %>
 </div>
