@@ -13,6 +13,42 @@
   <% presented_taxon.buckets.each do |bucket| %>
     <%= render partial: 'buckets', locals: { bucket: bucket } %>
   <% end %>
+
+  <div class="landing-page__share">
+    <% hidden_text = capture do %>
+      <span class="govuk-visually-hidden">Share on</span>
+    <% end %>
+    <%= render "govuk_publishing_components/components/share_links", {
+      title: "Share this page",
+      links: [
+        {
+          href: "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.gov.uk%2Fbrexit",
+          text: hidden_text + "Facebook",
+          icon: "facebook"
+        },
+        {
+          href: "https://twitter.com/share?url=https%3A%2F%2Fwww.gov.uk%2Fbrexit",
+          text: hidden_text + "Twitter",
+          icon: "twitter"
+        },
+        {
+          href: "mailto:?body=https://www.gov.uk/brexit/&subject=Get ready for Brexit - GOV.UK",
+          text: hidden_text + "Email",
+          icon: "email"
+        },
+        {
+          href: "https://api.whatsapp.com/send?text=https://www.gov.uk/brexit",
+          text: hidden_text + "WhatsApp",
+          icon: "whatsapp"
+        },
+        {
+          href: "http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.gov.uk%2Fbrexit&title=Get%20ready%20for%20Brexit%20-%20GOV.UK",
+          text: hidden_text + "LinkedIn",
+          icon: "linkedin"
+        },
+      ]
+    } %>
+  </div>
 </div>
 
 <div class="full-page-width-wrapper full-page-width-wrapper--landing-page">
