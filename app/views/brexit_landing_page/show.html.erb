@@ -59,20 +59,30 @@
         padding: true,
       } %>
       <p class="govuk-body"><%= t('brexit_landing_page.finder_intro') %></p>
-
+      <%= render "govuk_publishing_components/components/heading", {
+        text: t('brexit_landing_page.finder_heading'),
+        heading_level: 3,
+        font_size: 19,
+        margin_bottom: 2
+      } %>
       <%= render "components/topic-list", {
         items: presented_taxon.supergroup_sections
       } %>
 
       <div class="landing-page__email-wrapper">
-        <h3 class="govuk-heading-s"><%= t('brexit_landing_page.email_intro') %></h3>
-        <%= link_to(t('brexit_landing_page.email'), "/email-signup/?topic=#{presented_taxon.base_path}", {
-          data: {
-            module: "track-click",
-            "track-category": "emailAlertLinkClicked",
-            "track-action": presented_taxon.base_path
-          }
-        }) %>
+        <%= render "govuk_publishing_components/components/govspeak", {
+          } do %>
+            <div class="call-to-action">
+              <h3 class="govuk-heading-s"><%= t('brexit_landing_page.email_intro') %></h3>
+          <%= link_to(t('brexit_landing_page.email'), "/email-signup/?topic=#{presented_taxon.base_path}", {
+            data: {
+              module: "track-click",
+              "track-category": "emailAlertLinkClicked",
+              "track-action": presented_taxon.base_path
+            }
+          }) %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
