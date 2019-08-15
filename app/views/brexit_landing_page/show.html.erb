@@ -1,7 +1,7 @@
 <% content_for :page_class, "taxon-page taxon-page--grid" %>
 <%=
   render(
-      partial: 'common',
+      partial: 'page_header',
       locals: {
           presented_taxon: presented_taxon,
           show_dynamic_list: show_dynamic_list
@@ -10,28 +10,27 @@
 %>
 
 <div class="landing-page__buckets full-page-width-wrapper">
-  <% presented_taxon.buckets.each_slice(2) do |bucket_group| %>
-    <div class="govuk-grid-row">
-      <% bucket_group.each do |bucket| %>
-        <%= render partial: 'buckets', locals: { bucket: bucket } %>
-      <% end %>
-    </div>
+  <% presented_taxon.buckets.each do |bucket| %>
+    <%= render partial: 'buckets', locals: { bucket: bucket } %>
   <% end %>
 </div>
 
-<div class="full-page-width-wrapper">
+<div class="full-page-width-wrapper full-page-width-wrapper--landing-page">
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-body govuk-grid-column-two-thirds">
       <%= render "govuk_publishing_components/components/heading", {
         text: t('brexit_landing_page.all_brexit_information'),
         padding: true,
-        border_top: 2,
-        brand: "cabinet-office",
+      } %>
+      <p class="govuk-body"><%= t('brexit_landing_page.finder_intro') %></p>
+
+      <%= render "components/topic-list", {
+        items: presented_taxon.supergroup_sections
       } %>
 
-      <div class="govuk-body landing-page__email-wrapper">
+      <div class="landing-page__email-wrapper">
+        <h3 class="govuk-heading-s"><%= t('brexit_landing_page.email_intro') %></h3>
         <%= link_to(t('brexit_landing_page.email'), "/email-signup/?topic=#{presented_taxon.base_path}", {
-          class: "landing-page__email",
           data: {
             module: "track-click",
             "track-category": "emailAlertLinkClicked",
@@ -39,10 +38,6 @@
           }
         }) %>
       </div>
-
-      <%= render "components/topic-list", {
-        items: presented_taxon.supergroup_sections
-      } %>
     </div>
   </div>
 </div>

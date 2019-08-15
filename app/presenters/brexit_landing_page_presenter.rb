@@ -30,15 +30,19 @@ private
   def fetch_buckets
     buckets = YAML.load_file('config/brexit_campaign_buckets.yml')
 
-    buckets.each_with_index do |bucket, index|
-      bucket.fetch("items", []).each do |link|
-        link.symbolize_keys!
-        link[:description] = link[:description].html_safe if link[:description]
+    buckets.each do |bucket|
+      bucket["section_description"] = convert_to_govspeak(bucket['section_description'])
+
+      if bucket["section_list"]
+        bucket["section_list"].map do |section_list|
+          section_list["list_block"] = convert_to_govspeak(section_list["list_block"])
+          section_list["row_title_description"] = convert_to_govspeak(section_list["row_title_description"])
+        end
       end
-      bucket["block"] = Govspeak::Document.new(bucket["block"]).to_html.html_safe unless bucket['block'].nil?
-      bucket["index"] = index
-      bucket["display_border"] = index > 1
-      bucket["display_mobile_border"] = index == 1
     end
+  end
+
+  def convert_to_govspeak(markdown)
+    Govspeak::Document.new(markdown).to_html.html_safe unless markdown.nil?
   end
 end
