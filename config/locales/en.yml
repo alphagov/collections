@@ -115,17 +115,16 @@ en:
   brexit_landing_page:
     title: "Get ready for Brexit"
     description: "The UK is leaving the EU. Find out how you should get ready for Brexit."
-    finder_intro: "Find out what government is doing to prepare for Brexit. Browse all information related to Brexit:"
     finder_heading: "Browse all information related to Brexit:"
     get_ready: "Get ready for Brexit"
-    intro_text: "The United Kingdom is leaving the European Union on 31 October 2019."
-    everyone_must: "Everyone must get ready"
+    intro_text: "The UK will leave the EU on 31 October 2019."
+    everyone_must: "Check what you need to do as"
     check_ready: "Find out how to get ready"
     all_brexit_information: "All Brexit information"
     email_intro: "Stay up to date"
     email: "Sign up for email alerts about new or updated information related to Brexit"
-    individuals: "Individuals and families"
-    business: "Businesses and organisations"
+    individuals: "individuals and families"
+    business: "businesses and organisations"
   campaign:
     other_campaigns:
       title: "Other guidance"

@@ -1,128 +1,41 @@
 - section_id: individuals
-  section_description: |
-    [Get yourself and your family ready for Brexit](/prepare-eu-exit)
   section_list:
     - row_title: "Visiting the EU after Brexit"
       list_block: |
-        [**Find out what you need to do to visit Europe after Brexit**](/visit-europe-brexit)
+        [**Check what you need to do to visit the EU**](/visit-europe-brexit)
 
-        For example, you should:
-      list_links:
-        - text: "Check your passport"
-          path: "/renew-adult-passport/renew"
-          description: "You will need at least 6 months left on your passport. Allow 3 weeks to get a new passport."
-          data_attributes:
-            ecommerce-row: true
-            ecommerce-content-id: 82248bb1-c4d6-41e0-9494-d98123475626
-            ecommerce-path: "/renew-adult-passport/renew"
-        - text: "Check driving documents"
-          path: "/guidance/driving-in-the-eu-after-brexit"
-          description: "You may need an international driving permit or vehicle insurance green card. Apply at least 1 month before travel."
-          data_attributes:
-            ecommerce-row: true
-            ecommerce-content-id: 0e196906-7b49-41ca-9ca8-8c792fb75cd0
-            ecommerce-path: "/guidance/driving-in-the-eu-after-brexit"
-        - text: "Check healthcare cover"
-          path: "/guidance/foreign-travel-insurance"
-          description: "You need to have travel insurance and healthcare cover in time for your trip. Check your cover includes any pre-existing medical conditions."
-          data_attributes:
-            ecommerce-row: true
-            ecommerce-content-id: 5d8bb0f3-7631-11e4-a3cb-005056011aef
-            ecommerce-path: "/guidance/foreign-travel-insurance"
-        - text: "Check pet travel"
-          path: "/guidance/pet-travel-to-europe-after-brexit"
-          description: "Pet passports will no longer be valid. Contact your vet at least 4 months before travel to arrange tests and get a health certificate."
-          data_attributes:
-            ecommerce-row: true
-            ecommerce-content-id: 367aa9d6-f415-414e-9d1d-06ab0f5cce5e
-            ecommerce-path: "/guidance/pet-travel-to-europe-after-brexit"
-    - row_title: "UK nationals living in the EU"
-      row_title_description: |
+        For example, you'll need to:
+
+        - check your passport - you’ll need at least 6 months left on your passport before you travel to the EU (allow 3 weeks to get a new passport)
+        - make sure you have the right driving documents
+        - get a health certificate for your pet, as UK pet passports will no longer be valid in the EU (contact your vet at least 4 months before you travel)
+    - row_title: "UK nationals living in the European Union"
+      list_block: |
+        [**Check your rights for the country you live in**](/guidance/advice-for-british-nationals-travelling-and-living-in-europe)
+
         Continuing to live and work in an EU country after Brexit depends on the rules in that country.
+
+        For example, you’ll need to:
+
+        - make sure you have insurance in place to cover healthcare in the EU after Brexit
+        - check your access to benefits and pensions
+        - exchange your UK driving licence for a licence issued by the EU country where you live
+    - row_title: "EU citizens living in the United Kingdom"
       list_block: |
-        [**Find out more about living in the EU after Brexit**](/guidance/advice-for-british-nationals-travelling-and-living-in-europe)
+        [**Check what you need to do to stay in the UK**](/staying-uk-eu-citizen)
 
-        For example, you should:
-      list_links:
-        - text: "Check your country guide"
-          path: "/government/collections/overseas-living-in-guides#eu-and-other-countries-affected-by-brexit"
-          description: "Read the guide and take appropriate steps by 31 October 2019."
-          data_attributes:
-            ecommerce-row: true
-            ecommerce-content-id: 5eb78a4e-7631-11e4-a3cb-005056011aef
-            ecommerce-path: "/government/collections/overseas-living-in-guides#eu-and-other-countries-affected-by-brexit"
-        - text: "Secure access to healthcare"
-          path: "/guidance/uk-nationals-living-in-the-eueea-and-switzerland-healthcare"
-          description: "You should make sure you have insurance in place to cover healthcare in the EU after Brexit."
-          data_attributes:
-            ecommerce-row: true
-            ecommerce-content-id: f5b1b6f4-603f-4c74-9ba0-7c1dc7099bcf
-            ecommerce-path: "/guidance/uk-nationals-living-in-the-eueea-and-switzerland-healthcare"
-        - text: "Check access to benefits and pensions"
-          description: "The UK will continue to pay state pension, child benefits, and disability benefits to eligible UK nationals in the EU. "
-          path: "/guidance/uk-nationals-in-the-eu-benefits-and-pensions-in-a-no-deal-scenario"
-          data_attributes:
-            ecommerce-row: true
-            ecommerce-content-id: 26efec84-5252-4443-b1c6-07ccd8a23263
-            ecommerce-path: "/guidance/uk-nationals-in-the-eu-benefits-and-pensions-in-a-no-deal-scenario"
-    - row_title: "EU citizens living in the UK"
-      list_block: |
-        [**Find out what you need to do to stay in the UK**](/eusettledstatus)
-
-        Check if you need to apply for settled status if you or your family are from the EU, Iceland, Liechtenstein, Norway or Switzerland.
-
-        You need to apply if you were born in the UK but are not a British citizen. If you’re not sure, [check if you’re a British citizen](/check-british-citizenship).
-
-        You need to apply even if you [have a UK ‘permanent residence document’](/settled-status-eu-citizens-families/if-you-have-permanent-residence-or-indefinite-leave-to-remain).
+        For example, you should check if you need to apply for settled status (if you or your family are from the EU, Iceland, Liechtenstein, Norway or Switzerland).
 - section_id: business
   section_list:
-    - row_title_description: |
-        If you trade any goods or services with the EU you will need to get ready for Brexit. Applications may take time so start to prepare now.
+    - row_title: "Businesses and self-employed"
       list_block: |
-        [**Find out how to prepare your business for Brexit.**](/business-uk-leaving-eu)
+        If you trade any goods or services with the EU you'll need to get ready for Brexit.
 
-        For example, you may need to take action if you:
-      list_links:
-        - text: "Sell things to people in the EU"
-          path: "/prepare-export-from-uk-after-brexit"
-          description: "Find out about customs procedures and how to apply for an EORI number so you can still trade with the EU."
-          data_attributes:
-            ecommerce-row: true
-            ecommerce-content-id: e169b2ac-8c90-4789-8e6c-3657729e21b2
-            ecommerce-path: "/prepare-export-from-uk-after-brexit"
-        - text: "Transport goods by road"
-          path: "/transport-goods-from-uk-by-road"
-          description: "How to transport goods commercially if you’re driving from the UK to or through Europe."
-          data_attributes:
-            ecommerce-row: true
-            ecommerce-content-id: 9be67e23-bd76-4d60-b6e1-66e0dce5965a
-            ecommerce-path: "/transport-goods-from-uk-by-road"
-        - text: "Move animals or animal products"
-          path: "/export-health-certificates"
-          description: "Export Health Certificates will be needed to move animals or animal products. Vets must check each item no more than 7 days before export."
-          data_attributes:
-            ecommerce-row: true
-            ecommerce-content-id: a485fe3e-6e1e-4d37-a2cc-06177089d1ac
-            ecommerce-path: "/export-health-certificates"
-        - text: "Export or import fish"
-          path: "/guidance/exporting-and-importing-fish-if-theres-no-brexit-deal"
-          description: "To export or import wild-caught marine fish you will need a catch certificate."
-          data_attributes:
-            ecommerce-row: true
-            ecommerce-content-id: 878e0e0d-b4e5-4855-8235-64e848f62914
-            ecommerce-path: "/guidance/exporting-and-importing-fish-if-theres-no-brexit-deal"
-        - text: "Employ EU citizens"
-          path: "/guidance/employing-eu-eea-and-swiss-citizens-and-their-family-members-after-brexit"
-          description: "Find out about right to work checks and how to support your employees to apply to the EU Settlement Scheme."
-          data_attributes:
-            ecommerce-row: true
-            ecommerce-content-id: 72733171-8230-4d7c-80ef-e6d2884f5b22
-            ecommerce-path: "/guidance/employing-eu-eea-and-swiss-citizens-and-their-family-members-after-brexit"
-        - text: "Handle personal data"
-          path: "/find-eu-exit-guidance-business?keywords=&personal_data%5B%5D=processing-personal-data&personal_data%5B%5D=interacting-with-eea-website&personal_data%5B%5D=digital-service-provider"
-          description: "Find out how to comply with data protection laws."
-          data_attributes:
-            ecommerce-row: true
-            ecommerce-content-id: 42ce66de-04f3-4192-bf31-8394538e0734
-            ecommerce-path: "/find-eu-exit-guidance-business?keywords=&personal_data%5B%5D=processing-personal-data&personal_data%5B%5D=interacting-with-eea-website&personal_data%5B%5D=digital-service-provider"
+        For example, you need to take action if you:
 
+        - <a href="/prepare-export-from-uk-after-brexit" data-ecommerce-row="true" data-ecommerce-content-id="e169b2ac-8c90-4789-8e6c-3657729e21b2" data-ecommerce-path="/prepare-export-from-uk-after-brexit">export goods to the EU</a>
+        - <a href="/guidance/importing-animals-animal-products-and-high-risk-food-and-feed-not-of-animal-origin-if-the-UK-leaves-the-EU-with-no-deal" data-ecommerce-row='true' data-ecommerce-content-id='4c76a7d6-7f8d-4782-ac89-62e86b147c34' datecoa-ecommerce-path='/guidance/importing-animals-animal-products-and-high-risk-food-and-feed-not-of-animal-origin-if-the-UK-leaves-the-EU-with-no-deal'>import goods from the EU</a>
+        - <a href="/transport-goods-from-uk-by-road" data-ecommerce-row="true" data-ecommerce-content-id="9be67e23-bd76-4d60-b6e1-66e0dce5965a" data-ecommerce-path="/transport-goods-from-uk-by-road">transport goods by road</a>
+        - <a href="/guidance/exporting-animals-animal-products-fish-and-fishery-products-if-the-uk-leaves-the-eu-with-no-deal" data-ecommerce-row="true" data-ecommerce-content-id="f175dfe5-9f18-4c2f-b673-5c7211902114" data-ecommerce-path="/guidance/exporting-animals-animal-products-fish-and-fishery-products-if-the-uk-leaves-the-eu-with-no-deal">export animals or animal products</a>
+
+        [**Find out how to prepare your business for Brexit**](/business-uk-leaving-eu)
