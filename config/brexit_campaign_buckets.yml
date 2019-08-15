@@ -1,51 +1,67 @@
 - id: individuals
-  link_text: "A link to the individuals page"
   link_path: "/prepare-eu-exit"
   description: "Act now and find out how to get ready if you live in the UK."
   items:
-    - text: "Take your pet abroad"
+    - text: "Visit Europe after 31 October 2019"
+      path: "/visit-europe-brexit"
+      description: "You will need at least 6 months left on your passport. <em>Allow 3 weeks</em> to apply for a new passport. You will also need travel insurance to <a href='/guidance/foreign-travel-insurance'>cover healthcare in Europe</a>."
+      data_attributes:
+        ecommerce-row: true
+        ecommerce-content-id: 7a616597-c921-47ba-bd50-7e73449e140b
+        ecommerce-path: "/visit-europe-brexit"
+    - text: "Take your pet to Europe"
       path: "/guidance/pet-travel-to-europe-after-brexit"
-      description: "You need to apply for a pet passport <em>3 weeks before you travel</em>."
+      description: "Pet passports will no longer be valid. To get a new passport, you will <a href='/guidance/pet-travel-to-europe-after-brexit'>need to take action</a> at least <em>4 months before travel</em>."
       data_attributes:
         ecommerce-row: true
         ecommerce-content-id: 367aa9d6-f415-414e-9d1d-06ab0f5cce5e
         ecommerce-path: "/guidance/pet-travel-to-europe-after-brexit"
-    - text: "Apply for a visa to travel through the UK: step by step"
-      path: "/apply-transit-visa"
-      description: EU nationals will need a new visa to travel after <em>31 October 2019</em>.
+    - text: "Drive in Europe"
+      path: "/guidance/driving-in-the-eu-after-brexit"
+      description: "You may need additional documentation, such as an international driving permit (IDP) and motor insurance green card. You should <em>allow at least 1 month</em> to apply."
       data_attributes:
         ecommerce-row: true
-        ecommerce-content-id: d8f3c2e0-d544-4664-9616-ab71323e4d18
-        ecommerce-path: "/apply-transit-visa"
+        ecommerce-content-id: 0e196906-7b49-41ca-9ca8-8c792fb75cd0
+        ecommerce-path: "/guidance/driving-in-the-eu-after-brexit"
+  block: |
+    [Get yourself and your family ready for Brexit](/prepare-eu-exit)
 - id: business
-  link_text: "Start preparing"
   link_path: "/business-uk-leaving-eu"
-  description: "Answer a few simple questions to find out how to prepare your business or organisation."
   items:
-    - text: "Get your business ready to export from the UK to the EU after Brexit"
+    - text: "Selling things to people in the EU"
       path: "/prepare-export-from-uk-after-brexit"
-      description: "The rules will change on <em>31 October 2019</em>."
+      description: "Find out about customs procedures and how to apply for an EORI number."
       data_attributes:
         ecommerce-row: true
         ecommerce-content-id: e169b2ac-8c90-4789-8e6c-3657729e21b2
         ecommerce-path: "/prepare-export-from-uk-after-brexit"
-    - text: "Get your business ready to import from the EU to the UK after Brexit"
-      path: "/prepare-import-to-uk-after-brexit"
-      description: "The rules will change on <em>31 October 2019</em>."
+    - text: "Employing EU citizens"
+      path: "/guidance/employing-eu-eea-and-swiss-citizens-and-their-family-members-after-brexit"
+      description: "Find out about right-to-work checks and how to support your employees to apply to the EU Settlement Scheme."
       data_attributes:
         ecommerce-row: true
-        ecommerce-content-id: db1149f5-f60a-4d02-be0c-9c9db2828665
-        ecommerce-path: "/prepare-import-to-uk-after-brexit"
-    - text: "Get your business ready to employ staff: step by step"
-      path: "/get-ready-to-employ-someone"
-      description: "You need to do this by <em>3 September 2019</em> for your application to be processed."
+        ecommerce-content-id: 72733171-8230-4d7c-80ef-e6d2884f5b22
+        ecommerce-path: "/guidance/employing-eu-eea-and-swiss-citizens-and-their-family-members-after-brexit"
+    - text: "Handling personal data"
+      path: "/find-eu-exit-guidance-business?keywords=&personal_data%5B%5D=processing-personal-data&personal_data%5B%5D=interacting-with-eea-website&personal_data%5B%5D=digital-service-provider"
+      description: "Find out how you can comply with data protection laws."
       data_attributes:
         ecommerce-row: true
-        ecommerce-content-id: dc77c606-cc6b-49ac-9f40-b96959d02539
-        ecommerce-path: "/get-ready-to-employ-someone"
+        ecommerce-content-id: 42ce66de-04f3-4192-bf31-8394538e0734
+        ecommerce-path: "/find-eu-exit-guidance-business?keywords=&personal_data%5B%5D=processing-personal-data&personal_data%5B%5D=interacting-with-eea-website&personal_data%5B%5D=digital-service-provider"
+  block: |
+    [Read more on preparing your business for Brexit](/business-uk-leaving-eu)
+- id: uk_nationals
+  link_path: "/uk-nationals-living-eu"
+  description: "Act now and find out about living in the EU after Brexit."
+  block: |
+    Continuing to live and work in an EU country after Brexit depends on the rules set by that country. Subscribe to updates from the [living in country guide](/government/collections/overseas-living-in-guides).
+
+    The UK will continue to pay [state pension, child benefits and disability benefits](/guidance/uk-nationals-in-the-eu-benefits-and-pensions-in-a-no-deal-scenario) to eligible UK nationals in the EU.
+
+    [Act now and find out more about living in the EU after Brexit](/guidance/important-eu-exit-information-for-uk-nationals-if-theres-no-deal)
 - id: eu_nationals
-  link_text: "Continue to live in the UK after it leaves the EU"
-  link_path: "/staying-uk-eu-citizen"
+  link_path: "/eusettledstatus"
   block: |
     Find out what you need to do to stay in the UK if you or your family are from the EU, Iceland, Liechtenstein, Norway or Switzerland.
 
@@ -54,69 +70,29 @@
     You need to apply even if you [have a UK ‘permanent residence document’](/settled-status-eu-citizens-families/if-you-have-permanent-residence-or-indefinite-leave-to-remain).
 
     [Act now to continue to live in the UK after Brexit](/eusettledstatus)
-  description: "Act now and find out how to continue to live in the UK after Brexit."
-  items:
-    - text: "Stay in the UK after it leaves the EU ('settled status'): step by step"
-      path: "/eusettledstatus"
-      description: "You will need to apply for settled status by <em>20 September 2019</em>."
-      data_attributes:
-        ecommerce-row: true
-        ecommerce-content-id: 0c79b832-75de-4854-8154-d62774a8dfb8
-        ecommerce-path: "/eusettledstatus"
-    - text: "Visit the UK on a Permitted Paid Engagement visa"
-      path: "/permitted-paid-engagement-visa"
-      description: "The rules will change on <em>31 October 2019</em>."
-      data_attributes:
-        ecommerce-row: true
-        ecommerce-content-id: 124edf01-5637-43d1-9c05-fe22530d54b4
-        ecommerce-path: "/permitted-paid-engagement-visa"
-- id: uk_nationals
-  link_text: "Read the guidance"
-  link_path: "/uk-nationals-living-eu"
-  description: "Act now and find out about living in the EU after Brexit."
-  items:
-    - text: "Stay in the EU after Brexit"
-      path: "/guidance/advice-for-british-nationals-travelling-and-living-in-europe"
-      description: "The rules will change on the <em>31 October 2019</em>."
-      data_attributes:
-        ecommerce-row: true
-        ecommerce-content-id: cba85045-8be7-4189-9c5e-7fda747ef779
-        ecommerce-path: "/guidance/advice-for-british-nationals-travelling-and-living-in-europe"
-    - text: "Drive abroad: step by step"
-      path: "/drive-abroad"
-      description: "Some rules will change on <em>31 October 2019</em>."
-      data_attributes:
-        ecommerce-row: true
-        ecommerce-content-id: 51d1433e-893f-4424-8408-8427c1b6aba1
-        ecommerce-path: "/drive-abroad"
-    - text: "Get married in Europe"
-      path: "/marriage-abroad"
-      description: "Rules will change for each country on <em>31 October 2019</em>."
-      data_attributes:
-        ecommerce-row: true
-        ecommerce-content-id: d0a95767-f6ab-432a-aebc-096e37fb3039
-        ecommerce-path: "/marriage-abroad"
 - id: funding
-  description: "Act now and find out how to apply for continued funding."
+  link_path: "/government/publications/the-governments-guarantee-for-eu-funded-programmes-if-theres-no-brexit-deal/the-governments-guarantee-for-eu-funded-programmes-if-theres-no-brexit-deal"
   items:
-    - text: "Find out about student funding"
-      path: "/"
-      description: "Your student funding may be affected by <em>31 October 2019</em>."
+    - text: "Farm payments"
+      path: "/government/publications/farm-payments-if-theres-no-brexit-deal/farm-payments-if-theres-no-brexit-deal"
+      description: "The nature of support for the agricultural sector will change. Find out how payments under the EU’s Common Agricultural Policy (CAP) schemes will be affected."
       data_attributes:
         ecommerce-row: true
-        ecommerce-content-id:
-        ecommerce-path: "/"
-    - text: "Check your CAP funding"
-      path: "/"
-      description: "Your current CAP entitlement may be affected after <em>31 October 2019</em>."
+        ecommerce-content-id: b086e251-aae4-4811-8f9b-08086ad355e2
+        ecommerce-path: "/government/publications/farm-payments-if-theres-no-brexit-deal/farm-payments-if-theres-no-brexit-deal"
+    - text: "Erasmus+ and the European Solidarity Corps (ESC) funding"
+      path: "/guidance/register-to-claim-erasmus-and-esc-funding-from-the-government-guarantee"
+      description: "Although this funding will remain until 2020, you will need to register to claim it from the government guarantee."
       data_attributes:
         ecommerce-row: true
-        ecommerce-content-id:
-        ecommerce-path: "/"
-    - text: "Receiving rural development funding if there's a no-deal Brexit"
-      path: "/government/publications/receiving-rural-development-funding-if-theres-no-brexit-deal"
-      description: "Find out how the programme will be affected after <em>31 October 2019</em>."
+        ecommerce-content-id: 47c8ed6a-214e-4bf4-ba47-bc05ac45b8f2
+        ecommerce-path: "/guidance/register-to-claim-erasmus-and-esc-funding-from-the-government-guarantee"
+    - text: "Horizon 2020 funding"
+      path: "/guidance/horizon-2020-funding-after-brexit"
+      description: "Find out about the government’s funding guarantee and <a href='https://apply-for-innovation-funding.service.gov.uk/eu-grant/overview'>register your project</a> if you currently receive this funding."
       data_attributes:
         ecommerce-row: true
-        ecommerce-content-id: ee741fe4-9862-4ebf-b400-ca8ab7d07f6c
-        ecommerce-path: "/government/publications/receiving-rural-development-funding-if-theres-no-brexit-deal"
+        ecommerce-content-id: 28e84a23-5c3f-48c2-8a6b-2a94045a838e
+        ecommerce-path: "/guidance/horizon-2020-funding-after-brexit"
+  block: |
+    [Find out about EU funding after Brexit](/government/publications/the-governments-guarantee-for-eu-funded-programmes-if-theres-no-brexit-deal/the-governments-guarantee-for-eu-funded-programmes-if-theres-no-brexit-deal)
