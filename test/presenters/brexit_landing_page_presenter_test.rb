@@ -8,30 +8,42 @@ describe BrexitLandingPagePresenter do
   let(:yaml_contents) {
     [
       {
-        'id' => 'id1',
-        'items' => [
-          {
-            'text' => 'text1',
-            'description' => '<h1>description1</h1>'
-          },
-          {
-            'text' => 'text2',
-            'description' => '<h1>description2</h1>'
-          }
-        ]
+        'section_id' => 'id1',
+        'section_description' => "description 1",
+        'section_list' => [{
+          'list_block' => "List block",
+          'list_links' => [
+            {
+              'text' => 'text1',
+              'description' => '<h1>description1</h1>'
+            },
+            {
+              'text' => 'text2',
+              'description' => '<h1>description2</h1>'
+            }
+          ]
+        }]
       },
       {
-        'id' => 'id2',
-        'items' => [
-          {
-            'text' => 'text3',
-            'description' => '<h1>description3</h1>'
-          }
-        ]
+        'section_id' => 'id2',
+        'section_list' => [{
+          'row_title' => "title",
+          'row_title_description' => "[Hello](/)",
+          'list_links' => [
+            {
+              'text' => 'text1',
+              'description' => '<h1>description1</h1>'
+            },
+            {
+              'text' => 'text2',
+              'description' => '<h1>description2</h1>'
+            }
+          ]
+        }]
       },
       {
-        'id' => 'id3',
-        'block' => "text"
+        'section_id' => 'id3',
+        'section_description' => "text"
       }
     ]
   }
@@ -43,28 +55,16 @@ describe BrexitLandingPagePresenter do
   let(:taxon) { Taxon.new(ContentItem.new('content_id' => 'content_id', 'base_path' => '/base_path')) }
 
   describe '#buckets' do
-    it 'symbolises the items keys' do
-      assert(subject.buckets.dig(0, 'items', 0).keys.all? { |key| key.is_a?(Symbol) })
-      assert(subject.buckets.dig(0, 'items', 1).keys.all? { |key| key.is_a?(Symbol) })
-      assert(subject.buckets.dig(1, 'items', 0).keys.all? { |key| key.is_a?(Symbol) })
+    it 'html-safes the section_description' do
+      assert subject.buckets[0]["section_description"].html_safe?
     end
-    it 'html-safes the descriptions' do
-      assert subject.buckets.dig(0, 'items', 0, :description).html_safe?
-      assert subject.buckets.dig(0, 'items', 1, :description).html_safe?
-      assert subject.buckets.dig(1, 'items', 0, :description).html_safe?
+
+    it 'html-safes the list block' do
+      assert subject.buckets[0]["section_list"][0]["list_block"].html_safe?
     end
-    it 'html-safes the block' do
-      assert subject.buckets.dig(2, 'block').html_safe?
-    end
-    it 'has no border (line at the top) for the first and second bucket' do
-      refute subject.buckets.first['display_border']
-      refute subject.buckets.second['display_border']
-      assert subject.buckets.third['display_border']
-    end
-    it 'has a mobile border (line at the top) for the second bucket' do
-      refute subject.buckets.first['display_mobile_border']
-      assert subject.buckets.second['display_mobile_border']
-      refute subject.buckets.third['display_mobile_border']
+
+    it 'html-safes the row title description' do
+      assert subject.buckets[1]["section_list"][0]["row_title_description"].html_safe?
     end
   end
 
