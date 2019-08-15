@@ -1,8 +1,3 @@
-<%
-  border = true unless index < 2
-  mobile_only_border = true if index.eql?(1)
-%>
-
 <div class="govuk-grid-column-one-half landing-page__section"
   data-analytics-ecommerce
   data-ecommerce-start-index="1"
@@ -11,14 +6,14 @@
   <h2 class="
         govuk-heading-m
         landing-page__section-title
-        <%= "landing-page__section--border" if border %>
-        <%= "landing-page__section--mobile-border" if mobile_only_border %> "
+        <%= "landing-page__section--border" if bucket["display_border"] %>
+        <%= "landing-page__section--mobile-border" if bucket["display_mobile_border"] %> "
   >
     <% if bucket["link_path"] %>
       <%= link_to(t('taxons.brexit.' + bucket["id"]), bucket["link_path"], data: {
         module: "track-click",
         "track-category": "navGridContentClicked",
-        "track-action": index,
+        "track-action": bucket["index"],
         "track-label": bucket["link_path"]
       }) %>
     <% else %>

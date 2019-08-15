@@ -8,47 +8,45 @@
 
 <%= render partial: 'page_header', locals: { presented_taxon: presented_taxon } %>
 
-<% if taxon_is_live?(presented_taxon) %>
-  <div class="landing-page__ready">
-    <div class="full-page-width-wrapper">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-half">
-          <h2 class="govuk-heading-m"><%= I18n.t("brexit_landing_page.check_ready") %></h2>
-          <%= render 'govuk_publishing_components/components/lead_paragraph', {
-            text: I18n.t("brexit_landing_page.checklist")
-          } %>
+<div class="landing-page__ready">
+  <div class="full-page-width-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <h2 class="govuk-heading-m"><%= I18n.t("brexit_landing_page.check_ready") %></h2>
+        <%= render 'govuk_publishing_components/components/lead_paragraph', {
+          text: I18n.t("brexit_landing_page.checklist")
+        } %>
 
-          <%= render "govuk_publishing_components/components/button", {
-            text: "Start now",
-            href: "#",
-            data_attributes: {
-              module: "track-click",
-              "track-category": "startButtonClicked",
-              "track-action": "#",
-              "track-label": "Start now"
-            }
-          } %>
-        </div>
+        <%= render "govuk_publishing_components/components/button", {
+          text: "Start now",
+          href: "#",
+          data_attributes: {
+            module: "track-click",
+            "track-category": "startButtonClicked",
+            "track-action": "#",
+            "track-label": "Start now"
+          }
+        } %>
       </div>
     </div>
   </div>
+</div>
 
-  <div class="landing-page__share">
-    <div class="full-page-width-wrapper">
-      <%= render "govuk_publishing_components/components/share_links", {
-        links: [
-          {
-            href: "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.gov.uk%2Fbrexit",
-            text: "Share on Facebook",
-            icon: "facebook"
-          },
-          {
-            href: "https://twitter.com/share?url=https%3A%2F%2Fwww.gov.uk%2Fbrexit",
-            text: "Share on Twitter",
-            icon: "twitter"
-          }
-        ]
-      } %>
-    </div>
+<div class="landing-page__share">
+  <div class="full-page-width-wrapper">
+    <%= render "govuk_publishing_components/components/share_links", {
+      links: [
+        {
+          href: "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.gov.uk%2Fbrexit",
+          text: "Share on Facebook",
+          icon: "facebook"
+        },
+        {
+          href: "https://twitter.com/share?url=https%3A%2F%2Fwww.gov.uk%2Fbrexit",
+          text: "Share on Twitter",
+          icon: "twitter"
+        }
+      ]
+    } %>
   </div>
-<% end %>
+</div>
