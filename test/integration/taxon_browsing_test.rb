@@ -20,6 +20,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_i_can_see_the_transparency_and_foi_releases_section
     and_i_can_see_the_research_and_statistics_section
     and_i_can_see_the_organisations_section
+    then_the_page_is_noindexed
   end
 
   it 'renders a taxon page for a draft taxon' do
@@ -27,7 +28,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_the_taxon_is_not_live
     and_the_taxon_has_tagged_content
     when_i_visit_that_taxon
-    then_page_has_meta_robots
+    then_the_page_is_noindexed
     and_i_cannot_see_an_email_signup_link
   end
 
@@ -40,6 +41,7 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
   it "shows Brexit navigation" do
     given_there_is_a_brexit_taxon_which_i_visit
     then_i_can_see_navigation_to_brexit_pages
+    then_the_page_is_not_noindexed
   end
 
   it 'renders an in-page nav' do
@@ -346,6 +348,20 @@ private
       content,
       "The content of the robots meta tag should be 'noindex'"
     )
+  end
+
+  def then_the_page_is_noindexed
+    content = page.find('meta[name="robots"]', visible: false)['content']
+
+    assert_equal(
+      "noindex",
+      content,
+      "The content of the robots meta tag should be 'noindex'"
+    )
+  end
+
+  def then_the_page_is_not_noindexed
+    page.assert_no_selector('meta[name="robots"]', visible: false)
   end
 
   def then_all_links_have_tracking_data
