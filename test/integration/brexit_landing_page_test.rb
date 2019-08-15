@@ -24,4 +24,10 @@ class BrexitLandingPageTest < ActionDispatch::IntegrationTest
     and_bucket_section_headings_are_tracked
     and_the_email_link_is_tracked
   end
+
+  it "is not noindexed" do
+    given_there_is_a_brexit_taxon
+    when_i_visit_the_brexit_landing_page
+    then_the_page_is_not_noindexed
+  end
 end

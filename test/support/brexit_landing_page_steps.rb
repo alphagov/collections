@@ -115,4 +115,8 @@ module BrexitLandingPageSteps
     assert page.has_css?("a[data-track-category='emailAlertLinkClicked']", text: "Subscribe to updates to this topic")
     assert page.has_css?("a[data-track-action=\"#{current_path}\"]", text: "Subscribe to updates to this topic")
   end
+
+  def then_the_page_is_not_noindexed
+    page.assert_no_selector('meta[name="robots"]', visible: false)
+  end
 end
