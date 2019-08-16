@@ -9,37 +9,32 @@
   <div class="full-page-width-wrapper">
     <%= render 'govuk_publishing_components/components/breadcrumbs',
       breadcrumbs: GovukPublishingComponents::AppHelpers::TaxonBreadcrumbs.new(@content_item).breadcrumbs,
-      collapse_on_mobile: true
+      collapse_on_mobile: true,
+      inverse: true
     %>
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <%= render "govuk_publishing_components/components/title", {
-          title: I18n.t("brexit_landing_page.get_ready")
+          title: I18n.t("brexit_landing_page.get_ready"),
+          inverse: true,
+          margin_bottom: 5
         } %>
 
         <%= render 'govuk_publishing_components/components/lead_paragraph', {
-          text: I18n.t("brexit_landing_page.intro_text")
+          text: I18n.t("brexit_landing_page.intro_text"),
+          inverse: true
         } %>
 
-        <p class="large-paragraph"><%= I18n.t("brexit_landing_page.everyone_must") %>:</p>
+        <% if show_dynamic_list %>
+          <p class="landing-page__ready-intro"><%= I18n.t("brexit_landing_page.call_to_action_intro") %></p>
 
-        <div class="landing-page__contents">
-          <%= render "govuk_publishing_components/components/contents_list", {
-            hide_title: true,
-            contents: [
-              {
-                href: "#business",
-                text: t('brexit_landing_page.business')
-              },
-              {
-                href: "#individuals",
-                text: t('brexit_landing_page.individuals'),
-
-              }
-            ]
-          } %>
-        </div>
+          <div class="landing-page__ready">
+            <div class="landing-page__ready-text">
+              <a href="/get-ready-brexit-check" class="landing-page__ready-link govuk-link" data-module="track-click" data-track-category="startButtonClicked" data-track-action="/get-ready-brexit-check" data-track-label="Check what you need to do">Check what you need to do</a>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
