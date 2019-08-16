@@ -115,7 +115,7 @@ GEM
     gherkin (5.1.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    govspeak (6.4.0)
+    govspeak (6.5.0)
       actionview (~> 5.0)
       addressable (>= 2.3.8, < 3)
       govuk_publishing_components (>= 16.16)
@@ -388,7 +388,7 @@ DEPENDENCIES
   cucumber-rails
   dalli
   gds-api-adapters (~> 59.6.0)
-  govspeak (~> 6.4.0)
+  govspeak (~> 6.5.0)
   govuk-content-schema-test-helpers
   govuk-lint
   govuk_ab_testing (~> 2.4.1)
@@ -416,6 +416,3 @@ DEPENDENCIES
 
 RUBY VERSION
    ruby 2.6.3p62
-
-BUNDLED WITH
-   1.17.3
