@@ -25,12 +25,12 @@ describe EmailHelper do
     assert_equal expected_atom_url, whitehall_atom_url
   end
 
-  it "should return a valid whitehall email signup link" do
+  it "should return a valid email alert frontend email signup link" do
     self.stubs(:request).returns(ActionDispatch::TestRequest.create("PATH_INFO" => '/world/blefuscu'))
+    taxon = stub(base_path: '/world/blefuscu')
 
-    atom_url = Plek.new.website_root + "/world/blefuscu.atom"
-    expected_url = "#{Plek.new.website_root}/government/email-signup/new?email_signup[feed]=#{atom_url}"
+    expected_url = "#{Plek.new.website_root}/email-signup?link=/world/blefuscu"
 
-    assert_equal expected_url, whitehall_email_url
+    assert_equal expected_url, email_alert_frontend_signup_url(taxon)
   end
 end
