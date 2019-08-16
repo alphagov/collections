@@ -112,9 +112,9 @@ module BrexitLandingPageSteps
   end
 
   def and_the_start_button_is_tracked
-    assert page.has_selector?("a[data-track-category='startButtonClicked']", text: "check what you need to do")
-    assert page.has_selector?("a[data-track-label='check what you need to do']", text: "check what you need to do")
-    assert page.has_selector?("a[data-track-action='https://brexit-dynamic-lists.cloudapps.digital/start']", text: "check what you need to do")
+    assert page.has_selector?("a[data-track-category='startButtonClicked']")
+    assert page.has_selector?("a[data-track-label='Start checking']")
+    assert page.has_selector?("a[data-track-action='/get-ready-brexit-check']")
   end
 
   def and_the_email_link_is_tracked
