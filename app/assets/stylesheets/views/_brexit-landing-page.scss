@@ -22,6 +22,10 @@ $share-grey: #e8eaec;
 .landing-page__share {
   padding: govuk-spacing(6) 0 govuk-spacing(4) 0;
   background-color: $share-grey;
+
+  .gem-c-share-links__list-item {
+    min-width: 160px;
+  }
 }
 
 .landing-page__section em {
