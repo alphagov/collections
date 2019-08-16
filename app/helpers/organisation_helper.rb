@@ -7,6 +7,7 @@ module OrganisationHelper
     executive_ndpb:              { name: "Executive non-departmental public body" },
     advisory_ndpb:               { name: "Advisory non-departmental public body" },
     tribunal_ndpb:               { name: "Tribunal non-departmental public body" },
+    tribunal:                    { name: "Tribunal" },
     public_corporation:          { name: "Public corporation" },
     independent_monitoring_body: { name: "Independent monitoring body" },
     adhoc_advisory_group:        { name: "Ad-hoc advisory group" },
