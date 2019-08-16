@@ -42,17 +42,5 @@
         </div>
       </div>
     </div>
-
-    <% if show_dynamic_list %>
-      <div class="landing-page__ready">
-        <%= render "govuk_publishing_components/components/govspeak", {
-        } do %>
-          <div class="call-to-action">
-            <h2 class="govuk-heading-m"><%= I18n.t("brexit_landing_page.check_ready") %></h2>
-            <p class="govuk-body-l">Answer a few simple questions to <a href="https://brexit-dynamic-lists.cloudapps.digital/start" data-module="track-click" data-track-category="startButtonClicked" data-track-action="https://brexit-dynamic-lists.cloudapps.digital/start" data-track-label="check what you need to do">check what you need to do.</a></p>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
   </div>
 </header>
