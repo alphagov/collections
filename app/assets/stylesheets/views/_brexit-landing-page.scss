@@ -1,9 +1,10 @@
-$red: #E61D32;
-$dark-red: #55150b;
-$hover-red: #aa2a16;
+
+$dark-blue: #182D4E;
+$red: #E61E32;
+$dark-red: #B31424;
 
 .large-paragraph {
-  @include govuk-font($size: 19, $weight: bold);
+  @include govuk-font($size: 19);
   margin: govuk-spacing(6) 0 govuk-spacing(1);
 
   @include govuk-media-query($from: tablet) {
@@ -12,63 +13,120 @@ $hover-red: #aa2a16;
 }
 
 .landing-page__header {
-  padding-bottom: govuk-spacing(6);
+  padding-bottom: govuk-spacing(9);
+  padding-top: govuk-spacing(3);
+  background-color: $dark-blue;
+  color: govuk-colour("white");
 }
 
-// This is a temporary override to increase the font size of the contents list component
-// TODO: make this an option within the component in the gem itself
-.landing-page__contents .gem-c-contents-list__link {
-  @include govuk-font(19);
+.landing-page__contents {
+  margin: govuk-spacing(6) 0 govuk-spacing(9) 0;
+
+  // This is a temporary override to increase the font size of the contents list component
+  // TODO: make this an option within the component in the gem itself
+  .gem-c-contents-list__link {
+    @include govuk-font(19);
+  }
+}
+
+.landing-page__ready-intro {
+  @include govuk-font(24);
+  margin-top: -10px; //TODO: make the margin bottom on lead para component more flexible, so this isn't needed.
 }
 
 
 .landing-page__ready {
-  padding: govuk-spacing(3) 0 govuk-spacing(6) 0;
-  border-top: 2px solid $red;
+  position: relative;
+  margin-top: govuk-spacing(6);
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    height: 100%;
+    width: 20px;
+    background-image: asset-url("chevron-extend-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+  }
+
+  @include govuk-media-query($from: mobile) {
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      min-width: 190px;
+      background-image: asset-url("chevron-extend.svg");
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: auto 100%;
+    }
+  }
 }
 
-.landing-page__ready-heading {
-  @include govuk-font($size: 24, $weight: bold);
-  margin-bottom: govuk-spacing(1);
+.landing-page__ready:hover {
+
+  @include govuk-media-query($from: mobile) {
+    &:after {
+      background-image: asset-url("chevron-extend-hover.svg");
+    }
+  }
+
+  .landing-page__ready-text {
+    border: 2px solid govuk-colour("white");
+    background-color: $dark-red;
+  }
 }
 
-.landing-page__ready-button {
-  @include govuk-font(19, $weight: bold);
-  display: inline-block;
+.landing-page__ready-text {
+  padding: govuk-spacing(3) govuk-spacing(7) govuk-spacing(3) govuk-spacing(3);
   background-color: $red;
+  border: 2px solid transparent;
+  border-radius: 5px;
+
+  @include govuk-media-query($from: mobile) {
+    padding: govuk-spacing(3);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-right: 170px;
+  }
+
+
+  @include govuk-media-query($from: tablet) {
+    padding: govuk-spacing(4);
+  }
+}
+
+.landing-page__ready-link {
+  @include govuk-font(24, $weight: bold);
   color: govuk-colour("white");
-  padding: 10px;
-  box-shadow: 0 2px 0 $dark-red;
+  margin-bottom: 0;
   text-decoration: none;
-}
 
-.landing-page__ready-button:link,
-.landing-page__ready-button:hover,
-.landing-page__ready-button:visited {
-  color: govuk-colour("white");
-}
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
-.landing-page__ready-button:hover {
-  background: $hover-red;
-  color: govuk-colour("white");
-}
+  &:link,
+  &:visited {
+    color: govuk-colour("white");
+  }
 
-.landing-page__ready-button:focus,
-.landing-page__ready-button:link:focus {
-  color: govuk-colour("black");
-  box-shadow: 0;
-}
-
-.landing-page__ready-button:focus {
-  color: govuk-colour("black");
-  background: govuk-colour("yellow");
-  outline: 0;
-  box-shadow: 0 2px 0 govuk-color("black");
-}
-
-.landing-page__ready-icon {
-  vertical-align: middle;
-  margin: 0 govuk-spacing(1);
+  &:focus {
+    color: govuk-colour("black");
+  }
 }
 
 .landing-page__share {
@@ -76,12 +134,26 @@ $hover-red: #aa2a16;
 }
 
 .full-page-width-wrapper--landing-page {
-  border-top: 2px solid govuk-colour("blue");
+  border-top: 2px solid $red;
 }
 
 .landing-page__section {
   margin-bottom: govuk-spacing(8);
-  border-top: 2px solid govuk-colour("blue");
+  border-top: 2px solid $red;
+}
+
+.landing-page__section-title {
+  padding: govuk-spacing(3) govuk-spacing(2) govuk-spacing(3) 0;
+}
+
+.landing-page__section-chevron {
+  padding-right: govuk-spacing(4);
+  background-image: asset-url('chevron.svg');
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: right govuk-spacing(3);
+  background-origin: content-box;
+  text-decoration: none;
 }
 
 .landing-page__section-list-wrapper {
@@ -113,4 +185,11 @@ $hover-red: #aa2a16;
 
 .landing-page__email-wrapper {
   margin-top: govuk-spacing(7);
+  padding: govuk-spacing(6);
+  background-color: govuk-colour("light-grey", $legacy: "grey-4");
+  border: 1px solid govuk-colour("med-grey", $legacy: "grey-2");
+}
+
+.landing-page__email-title {
+  margin-bottom: govuk-spacing(2);
 }
