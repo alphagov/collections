@@ -31,9 +31,6 @@ GovukAbTesting.configure do |config|
   config.acceptance_test_framework = :active_support
 end
 
-# Ensure the Brexit taxon page is visible for integration tests
-Rails.application.config.show_brexit_landing_page = true
-
 class ActiveSupport::TestCase
   include GdsApi::TestHelpers::ContentStore
   include GdsApi::TestHelpers::Rummager
