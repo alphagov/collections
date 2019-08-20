@@ -99,7 +99,6 @@ en:
       independent_monitoring_body: "Independent monitoring body"
       non_ministerial_department: "Non-ministerial department"
       public_corporation: "Public corporation"
-      tribunal_ndpb: "Tribunal non-departmental public body"
       tribunal: "Tribunal"
       other: "Other"
     what_we_do: "What %{title} does"
