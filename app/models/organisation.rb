@@ -236,7 +236,7 @@ private
   end
 
   def is_hmcts_tribunal?
-    organisation_type == "tribunal_ndpb" &&
+    (organisation_type == "tribunal_ndpb" || organisation_type == "tribunal") &&
       links["ordered_parent_organisations"] &&
       links["ordered_parent_organisations"].detect { |org| org["content_id"] == HMCTS_CONTENT_ID }
   end
