@@ -4,7 +4,8 @@ class BrexitLandingPageController < ApplicationController
 
     render locals: {
       presented_taxon: presented_taxon,
-      presentable_section_items: presentable_section_items
+      presentable_section_items: presentable_section_items,
+      show_dynamic_list: show_dynamic_list?
     }
   end
 
@@ -25,5 +26,9 @@ private
           text: t(section[:id], scope: :content_purpose_supergroup, default: section[:title])
       }
     end
+  end
+
+  def show_dynamic_list?
+    true
   end
 end
