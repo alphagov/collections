@@ -30,7 +30,13 @@ module BrexitLandingPageSteps
     end
   end
 
-  def when_i_visit_the_brexit_landing_page
+  def when_i_visit_the_brexit_landing_page_with_dynamic_list
+    BrexitLandingPageController.any_instance.stubs(:show_dynamic_list?).returns(true)
+    visit brexit_taxon_path
+  end
+
+  def when_i_visit_the_brexit_landing_page_without_dynamic_list
+    BrexitLandingPageController.any_instance.stubs(:show_dynamic_list?).returns(false)
     visit brexit_taxon_path
   end
 
@@ -48,6 +54,10 @@ module BrexitLandingPageSteps
 
   def then_i_can_see_the_get_ready_section
     assert page.has_selector?('.landing-page__ready h2', text: "Check if you need to get ready")
+  end
+
+  def then_i_cannot_see_the_get_ready_section
+    assert page.has_no_selector?('.landing-page__ready h2', text: "Check if you need to get ready")
   end
 
   def then_i_can_see_the_share_links_section
