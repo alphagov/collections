@@ -107,11 +107,6 @@ en:
     in_page_nav_title: "On this page"
     in_page_sub_topic_title: "Sub-topics"
     brexit:
-      individuals: "How individuals and families should get ready"
-      business: "How businesses and organisations should get ready"
-      uk_nationals: "How UK nationals living in the EU should get ready"
-      eu_nationals: "How EU nationals living in the UK should get ready"
-      funding: "What to do if you receive funding from the EU"
       prepare_for_eu_exit: "Prepare for Brexit"
       business_preparations: "Prepare your business or organisation for Brexit"
       uk_resident_preparations: "Prepare for Brexit if you live in the UK"
@@ -120,13 +115,16 @@ en:
   brexit_landing_page:
     title: "Get ready for Brexit"
     description: "The UK is leaving the EU. Find out how you should get ready for Brexit and what government is doing."
+    finder_intro: "Find out what government is doing to prepare for Brexit. Browse all information related to Brexit:"
     get_ready: "Get ready for Brexit"
     intro_text: "The United Kingdom is leaving the European Union on 31 October 2019."
     everyone_must: "Everyone must get ready"
-    check_ready: "Check if you need to get ready"
-    checklist: "Answer a few questions to find out what you need to do."
+    check_ready: "Find out how to get ready"
     all_brexit_information: "All Brexit information"
-    email: "Subscribe to updates to this topic"
+    email_intro: "Stay up to date"
+    email: "Sign up for email alerts about new or updated information related to Brexit"
+    individuals: "Individuals and families"
+    business: "Businesses and organisations"
   campaign:
     other_campaigns:
       title: "Other guidance"

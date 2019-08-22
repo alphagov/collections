@@ -22,8 +22,8 @@ class BrexitLandingPageTest < ActionDispatch::IntegrationTest
       when_i_visit_the_brexit_landing_page_with_dynamic_list
       then_all_finder_links_have_tracking_data
       and_the_start_button_is_tracked
-      and_bucket_section_headings_are_tracked
       and_the_email_link_is_tracked
+      and_ecommerce_tracking_is_setup
     end
 
     it "is not noindexed" do
