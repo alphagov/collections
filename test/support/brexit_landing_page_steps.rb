@@ -53,11 +53,11 @@ module BrexitLandingPageSteps
   end
 
   def then_i_can_see_the_get_ready_section
-    assert page.has_selector?('.landing-page__ready h2', text: "Check if you need to get ready")
+    assert page.has_selector?('.landing-page__ready h2', text: "Find out how to get ready")
   end
 
   def then_i_cannot_see_the_get_ready_section
-    assert page.has_no_selector?('.landing-page__ready h2', text: "Check if you need to get ready")
+    assert page.has_no_selector?('.landing-page__ready h2', text: "Find out how to get ready")
   end
 
   def then_i_can_see_the_share_links_section
@@ -65,19 +65,14 @@ module BrexitLandingPageSteps
   end
 
   def then_i_can_see_the_buckets_section
-    assert page.has_selector?('.landing-page__section h2', text: "How individuals and families should get ready")
-    assert page.has_selector?('.landing-page__section h2', text: "How businesses and organisations should get ready")
-    assert page.has_selector?('.landing-page__section h2', text: "How EU nationals living in the UK should get ready")
-    assert page.has_selector?('.landing-page__section h2', text: "How UK nationals living in the EU should get ready")
-    assert page.has_selector?('.landing-page__section h2', text: "What to do if you receive funding from the EU")
+    assert page.has_selector?('.landing-page__section h2', text: "Individuals and families")
+    assert page.has_selector?('.landing-page__section h2', text: "Businesses and organisations")
 
-    assert page.has_selector?('.landing-page__section h2 a[href="/prepare-eu-exit"]', text: "How individuals and families should get ready")
-    assert page.has_selector?('.landing-page__section-desc', text: "Act now and find out how to get ready if you live in the UK.")
-    assert page.has_selector?('.landing-page__section .app-c-taxon-list')
+    assert page.has_selector?('.landing-page__section a[href="/prepare-eu-exit"]', text: "Get yourself and your family ready for Brexit")
   end
 
   def and_i_can_see_an_email_subscription_link
-    assert page.has_selector?('a[href="/email-signup/?topic=' + brexit_taxon_path + '"]', text: "Subscribe to updates to this topic")
+    assert page.has_selector?('a[href="/email-signup/?topic=' + brexit_taxon_path + '"]', text: "Sign up for email alerts about new or updated information related to Brexit")
   end
 
   def and_i_can_see_the_explore_topics_section
@@ -100,6 +95,13 @@ module BrexitLandingPageSteps
     end
   end
 
+  def and_ecommerce_tracking_is_setup
+    assert page.has_css?(".landing-page__section[data-analytics-ecommerce]")
+    assert page.has_css?(".landing-page__section[data-ecommerce-start-index='1']")
+    assert page.has_css?(".landing-page__section[data-list-title='Brexit landing page: Individuals and families']")
+    assert page.has_css?(".landing-page__section[data-search-query]")
+  end
+
   def then_all_finder_links_have_tracking_data
     [
       'Services', 'Guidance and regulation', 'News and communications',
@@ -111,19 +113,15 @@ module BrexitLandingPageSteps
     end
   end
 
-  def and_bucket_section_headings_are_tracked
-    assert_equal(5, page.all(".landing-page__section h2 a[data-track-category='navGridContentClicked']").count)
-  end
-
   def and_the_start_button_is_tracked
-    assert page.has_selector?(".gem-c-button[data-track-category='startButtonClicked']", text: "Start now")
-    assert page.has_selector?(".gem-c-button[data-track-label='Start now']", text: "Start now")
-    assert page.has_selector?(".gem-c-button[data-track-action='#']", text: "Start now")
+    assert page.has_selector?("a[data-track-category='startButtonClicked']", text: "check what you need to do")
+    assert page.has_selector?("a[data-track-label='check what you need to do']", text: "check what you need to do")
+    assert page.has_selector?("a[data-track-action='https://brexit-dynamic-lists.cloudapps.digital/start']", text: "check what you need to do")
   end
 
   def and_the_email_link_is_tracked
-    assert page.has_css?("a[data-track-category='emailAlertLinkClicked']", text: "Subscribe to updates to this topic")
-    assert page.has_css?("a[data-track-action=\"#{current_path}\"]", text: "Subscribe to updates to this topic")
+    assert page.has_css?("a[data-track-category='emailAlertLinkClicked']", text: "Sign up for email alerts about new or updated information related to Brexit")
+    assert page.has_css?("a[data-track-action=\"#{current_path}\"]", text: "Sign up for email alerts about new or updated information related to Brexit")
   end
 
   def then_the_page_is_not_noindexed

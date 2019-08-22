@@ -1,40 +1,43 @@
-<div class="govuk-grid-column-one-half landing-page__section"
+<div class="landing-page__section" id="<%= bucket["section_id"].downcase() %>"
   data-analytics-ecommerce
   data-ecommerce-start-index="1"
-  data-list-title="Brexit landing page: <%= t('taxons.brexit.' + bucket["id"]) %>"
+  data-list-title="Brexit landing page: <%= t('brexit_landing_page.' + bucket["section_id"]) %>"
   data-search-query>
-  <h2 class="
-        govuk-heading-m
-        landing-page__section-title
-        <%= "landing-page__section--border" if bucket["display_border"] %>
-        <%= "landing-page__section--mobile-border" if bucket["display_mobile_border"] %> "
-  >
-    <% if bucket["link_path"] %>
-      <%= link_to(t('taxons.brexit.' + bucket["id"]), bucket["link_path"], data: {
-        module: "track-click",
-        "track-category": "navGridContentClicked",
-        "track-action": bucket["index"],
-        "track-label": bucket["link_path"]
-      }) %>
-    <% else %>
-      <%= t('taxons.brexit.' + bucket["id"]) %>
-    <% end %>
-  </h2>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: t('brexit_landing_page.' + bucket["section_id"]),
+        padding: true,
+      } %>
 
-  <% if bucket["description"] %>
-    <p class="govuk-body landing-page__section-desc"><%= bucket["description"] %></p>
-  <% end %>
+      <% if bucket["section_description"] %>
+        <%= render "govuk_publishing_components/components/govspeak", {
+          } do %>
+          <%= bucket["section_description"] %>
+        <% end %>
+      <% end %>
 
-  <% if bucket["items"] %>
-    <%= render "components/taxon-list", {
-      heading_level: 0,
-      items: bucket["items"]
-    } %>
-  <% end %>
+    </div>
+  </div>
 
-  <% if bucket["block"] %>
-    <%= render "govuk_publishing_components/components/govspeak", {} do %>
-      <%= bucket["block"] %>
+  <% if bucket["section_list"] %>
+    <% bucket["section_list"].each.with_index do |items, index| %>
+      <div class="landing-page__section-list-wrapper <%= "landing-page__section-list-wrapper--first" if index.eql?(0) %>" >
+        <div class="grid-row">
+          <div class="govuk-grid-column-one-third">
+            <% if items["row_title"] %><h3 class="govuk-heading-s"><%= items["row_title"] %></h3><% end %>
+
+            <% if items["row_title_description"] %>
+              <%= render "govuk_publishing_components/components/govspeak", {
+                } do %>
+                <%= items["row_title_description"] %>
+              <% end %>
+            <% end %>
+          </div>
+
+          <%= render partial: 'document_list', locals: { items: items["list_links"], block: items["list_block"], see_all_link: items["see_all_link"], see_all_text: items["see_all_text"]} %>
+        </div>
+      </div>
     <% end %>
   <% end %>
 </div>
