@@ -67,8 +67,6 @@ module BrexitLandingPageSteps
   def then_i_can_see_the_buckets_section
     assert page.has_selector?('.landing-page__section h2', text: "Individuals and families")
     assert page.has_selector?('.landing-page__section h2', text: "Businesses and organisations")
-
-    assert page.has_selector?('.landing-page__section a[href="/prepare-eu-exit"]', text: "Get yourself and your family ready for Brexit")
   end
 
   def and_i_can_see_an_email_subscription_link
@@ -98,7 +96,7 @@ module BrexitLandingPageSteps
   def and_ecommerce_tracking_is_setup
     assert page.has_css?(".landing-page__section[data-analytics-ecommerce]")
     assert page.has_css?(".landing-page__section[data-ecommerce-start-index='1']")
-    assert page.has_css?(".landing-page__section[data-list-title='Brexit landing page: Individuals and families']")
+    assert page.has_css?(".landing-page__section[data-list-title='Brexit landing page: individuals and families']")
     assert page.has_css?(".landing-page__section[data-search-query]")
   end
 
