@@ -26,7 +26,7 @@ class WorldLocationTaxonTest < ActionDispatch::IntegrationTest
     govuk_feeds = page.find('.feeds')
 
     expected_atom_url = Plek.new.website_root + "/world/usa.atom"
-    expected_url = Plek.new.website_root + "/government/email-signup/new?email_signup%5Bfeed%5D=#{expected_atom_url}"
+    expected_url = "#{Plek.new.website_root}/email-signup?link=#{@base_path}"
 
     assert govuk_feeds.has_link?(
       href: expected_url

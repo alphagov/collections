@@ -3,8 +3,8 @@ module EmailHelper
     equivalent_whitehall_url + ".atom"
   end
 
-  def whitehall_email_url
-    whitehall_base_email_sign_up_url + whitehall_atom_url
+  def email_alert_frontend_signup_url(taxon)
+    root + "/email-signup?link=#{taxon.base_path}"
   end
 
   def taxon_is_live?(presented_taxon)
@@ -13,14 +13,8 @@ module EmailHelper
 
 private
 
-  WHITEHALL_EMAIL_SIGNUP_PATH = "/government/email-signup/new?email_signup[feed]=".freeze
-
   def root
     Plek.new.website_root
-  end
-
-  def whitehall_base_email_sign_up_url
-    root + WHITEHALL_EMAIL_SIGNUP_PATH
   end
 
   def equivalent_whitehall_url
