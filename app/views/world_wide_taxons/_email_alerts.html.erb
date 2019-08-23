@@ -2,7 +2,7 @@
   <div class='subscriptions'>
     <% if presented_taxon.renders_as_accordion? %>
       <div class="feeds">
-        <%= link_to(whitehall_email_url, class:'email-alerts') do %>
+        <%= link_to(email_alert_frontend_signup_url(presented_taxon), class:'email-alerts') do %>
           Get email alerts for this topic
           <span class="visuallyhidden"><%= presented_taxon.title %></span>
         <% end %>
