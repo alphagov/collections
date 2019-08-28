@@ -11,7 +11,7 @@ module BrexitLandingPageSteps
   end
 
   def brexit_taxon_path
-    "/government/brexit"
+    "/brexit"
   end
 
   def content_id
@@ -88,7 +88,7 @@ module BrexitLandingPageSteps
     supergroups.each do |_|
       assert page.has_link?(
         'Services',
-        href: "/search/services?parent=%2Fgovernment%2Fbrexit&topic=d6c2de5d-ef90-45d1-82d4-5f2438369eea"
+        href: "/search/services?parent=%2Fbrexit&topic=d6c2de5d-ef90-45d1-82d4-5f2438369eea"
       )
     end
   end
