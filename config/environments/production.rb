@@ -5,12 +5,6 @@ Rails.application.configure do
     ENV['GOVUK_ASSET_ROOT'] = "https://#{ENV['HEROKU_APP_NAME']}.herokuapp.com"
   end
 
-  # Configuration to stop Brexit landing page showing in production before campaign
-  # goes live
-  if (ENV['BASIC_AUTH_USERNAME'] && ENV['BASIC_AUTH_PASSWORD'] && ENV['HEROKU_APP_NAME'])
-    config.show_brexit_landing_page = true
-  end
-
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
