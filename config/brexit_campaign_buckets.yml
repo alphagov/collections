@@ -21,6 +21,7 @@
         For example, you'll need to:
 
         - check your passport
+        - get travel insurance to make sure you are covered for healthcare
         - make sure you have the right driving documents
         - get a health certificate for your pet, as UK pet passports will no longer be valid in the EU (contact your vet at least 4 months before you travel)
     - row_title: "UK nationals living in the European Union"
@@ -31,9 +32,10 @@
 
         For example, you’ll need to:
 
-        - make sure you have insurance in place to cover healthcare in the EU after Brexit
-        - check your access to benefits and pensions
+        - register or apply for residency
+        - check if you are covered for healthcare and register if necessary
         - exchange your UK driving licence for a licence issued by the EU country where you live
+        - check your passport
     - row_title: "EU citizens living in the United Kingdom"
       list_block: |
         [**Check what you need to do to stay in the UK**](/staying-uk-eu-citizen)
