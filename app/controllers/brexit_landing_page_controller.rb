@@ -29,6 +29,6 @@ private
   end
 
   def show_dynamic_list?
-    false
+    true
   end
 end

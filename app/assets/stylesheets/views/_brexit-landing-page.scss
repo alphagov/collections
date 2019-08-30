@@ -1,3 +1,7 @@
+$red: #E61D32;
+$dark-red: #55150b;
+$hover-red: #aa2a16;
+
 .large-paragraph {
   @include govuk-font($size: 19, $weight: bold);
   margin: govuk-spacing(6) 0 govuk-spacing(1);
@@ -17,8 +21,54 @@
   @include govuk-font(19);
 }
 
+
 .landing-page__ready {
-  margin-top: govuk-spacing(4);
+  padding: govuk-spacing(3) 0 govuk-spacing(6) 0;
+  border-top: 2px solid $red;
+}
+
+.landing-page__ready-heading {
+  @include govuk-font($size: 24, $weight: bold);
+  margin-bottom: govuk-spacing(1);
+}
+
+.landing-page__ready-button {
+  @include govuk-font(19, $weight: bold);
+  display: inline-block;
+  background-color: $red;
+  color: govuk-colour("white");
+  padding: 10px;
+  box-shadow: 0 2px 0 $dark-red;
+  text-decoration: none;
+}
+
+.landing-page__ready-button:link,
+.landing-page__ready-button:hover,
+.landing-page__ready-button:visited {
+  color: govuk-colour("white");
+}
+
+.landing-page__ready-button:hover {
+  background: $hover-red;
+  color: govuk-colour("white");
+}
+
+.landing-page__ready-button:focus,
+.landing-page__ready-button:link:focus {
+  color: govuk-colour("black");
+  box-shadow: 0;
+}
+
+.landing-page__ready-button:focus {
+  color: govuk-colour("black");
+  background: govuk-colour("yellow");
+  outline: 0;
+  box-shadow: 0 2px 0 govuk-color("black");
+}
+
+.landing-page__ready-icon {
+  vertical-align: middle;
+  margin: 0 govuk-spacing(1);
 }
 
 .landing-page__share {
