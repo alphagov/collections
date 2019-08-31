@@ -3,13 +3,9 @@
   data-ecommerce-start-index="1"
   data-list-title="Brexit landing page: <%= t('brexit_landing_page.' + bucket["section_id"]) %>"
   data-search-query>
-  <div class="govuk-grid-row">
+  <div class="govuk-grid-row landing-page__section-chevron">
     <div class="govuk-grid-column-two-thirds">
-      <%= render "govuk_publishing_components/components/heading", {
-        text: t('brexit_landing_page.' + bucket["section_id"]).capitalize,
-        padding: true,
-        margin_bottom: 3
-      } %>
+      <h2 class="govuk-heading-m landing-page__section-title"><%= t('brexit_landing_page.' + bucket["section_id"]).capitalize %></h2>
 
       <% if bucket["section_description"] %>
         <%= render "govuk_publishing_components/components/govspeak", {
