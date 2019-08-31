@@ -1,10 +1,15 @@
 <% content_for :is_full_width_header, true %>
 <% content_for :title, I18n.t("brexit_landing_page.title") %>
 <% content_for :meta_tags do %>
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="GOV.UK">
+  <meta property="og:url" content="<%= request.base_url + request.path %>">
+  <meta property="og:title" content="<%= I18n.t("brexit_landing_page.title") %>">
+  <meta property="og:description" content="<%= I18n.t("brexit_landing_page.description") %>">
+  <meta property="og:image" content="<%= image_url("brexit-31-october.png") %>" />
+  <meta name="twitter:card" content="summary">
   <meta name="description" content="<%= I18n.t("brexit_landing_page.description") %>">
   <meta name="govuk:navigation-page-type" content="Taxon Page" />
-  <meta property="og:image" content="<%= image_url("brexit-31-october.png") %>" />
-  <meta property="og:type" content="website" />
 <% end %>
 
 <header class="landing-page__header">
