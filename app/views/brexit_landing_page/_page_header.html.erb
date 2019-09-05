@@ -36,11 +36,16 @@
         <% if show_dynamic_list %>
           <p class="landing-page__ready-intro"><%= I18n.t("brexit_landing_page.call_to_action_intro") %></p>
 
-          <div class="landing-page__ready">
-            <div class="landing-page__ready-text">
-              <a href="/get-ready-brexit-check" class="landing-page__ready-link govuk-link" data-module="track-click" data-track-category="startButtonClicked" data-track-action="/get-ready-brexit-check" data-track-label="Check what you need to do">Check what you need to do</a>
-            </div>
-          </div>
+          <%= render "govuk_publishing_components/components/chevron_banner", {
+            href: "/get-ready-brexit-check",
+            text: "Check what you need to do",
+            hover_border: true,
+            data_attributes: {
+              track_category: "startButtonClicked",
+              track_action: "/get-ready-brexit-check",
+              track_label: "Check what you need to do"
+            }
+          } %>
         <% end %>
       </div>
     </div>

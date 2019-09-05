@@ -54,12 +54,12 @@ module BrexitLandingPageSteps
 
   def then_i_can_see_the_get_ready_section
     assert page.has_selector?('.landing-page__ready-intro', text: "Answer a few questions to find out how you or your business should prepare.")
-    assert page.has_selector?('.landing-page__ready-link', text: "Check what you need to do")
+    assert page.has_selector?('.gem-c-chevron-banner__link', text: "Check what you need to do")
   end
 
   def then_i_cannot_see_the_get_ready_section
     assert page.has_no_selector?('.landing-page__ready-intro', text: "Answer a few questions to find out how you or your business should prepare.")
-    assert page.has_no_selector?('.landing-page__ready-link', text: "Check what you need to do")
+    assert page.has_no_selector?('.gem-c-chevron-banner__link', text: "Check what you need to do")
   end
 
   def then_i_can_see_the_share_links_section
