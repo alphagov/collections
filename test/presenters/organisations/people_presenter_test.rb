@@ -111,32 +111,38 @@ describe Organisations::PeoplePresenter do
         {
           type: :ministers,
           title: "Our ministers",
-          people: []
+          people: [],
+          lang: false
         },
         {
           type: :military_personnel,
           title: "Our senior military officials",
-          people: []
+          people: [],
+          lang: false
         },
         {
           type: :board_members,
           title: "Our management",
-          people: []
+          people: [],
+          lang: false
         },
         {
           type: :traffic_commissioners,
           title: "Traffic commissioners",
-          people: []
+          people: [],
+          lang: false
         },
         {
           type: :special_representatives,
           title: "Special representatives",
-          people: []
+          people: [],
+          lang: false
         },
         {
           type: :chief_professional_officers,
           title: "Chief professional officers",
-          people: []
+          people: [],
+          lang: false
         }
     ]
 

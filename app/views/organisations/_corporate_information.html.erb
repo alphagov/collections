@@ -4,7 +4,8 @@
         text: t('organisations.corporate_information'),
         padding: true,
         border_top: 5,
-        brand: @organisation.brand
+        brand: @organisation.brand,
+        lang: t_fallback('organisations.corporate_information')
       } %>
     <% end %>
   <% if @show.corporate_information[:corporate_information_links][:items].any? %>
@@ -18,7 +19,8 @@
       text: t('organisations.jobs_contracts'),
       margin_bottom: 3,
       heading_level: 3,
-      font_size: 24
+      font_size: 24,
+      lang: t_fallback('organisations.jobs_contracts')
     } %>
     <%= render "components/topic-list", @show.corporate_information[:job_links] %>
   <% end %>

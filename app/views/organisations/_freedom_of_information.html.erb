@@ -3,6 +3,7 @@
     <%= render "govuk_publishing_components/components/heading", {
       text: t('organisations.foi.freedom_of_information_act'),
       padding: true,
+      lang: t_fallback('organisations.foi.freedom_of_information_act')
     } %>
     <p><%= t('organisations.foi.foi_exemption_html', foi_url: 'http://www.legislation.gov.uk/ukpga/2000/36/schedule/1') %></p>
 
@@ -10,6 +11,7 @@
     <%= render "govuk_publishing_components/components/heading", {
       text: t('organisations.foi.make_an_foi_request'),
       padding: true,
+      lang: t_fallback('organisations.foi.make_an_foi_request')
     } %>
 
     <%= render "govuk_publishing_components/components/govspeak", {
