@@ -18,7 +18,7 @@
             heading_level: 3
           } %>
           <%= render "govuk_publishing_components/components/document_list", supergroup[:documents] %>
-          <a href="<%= supergroup[:finder_link][:path] %>" class="brand__color">
+          <a href="<%= supergroup[:finder_link][:path] %>" class="brand__color" <%= supergroup[:finder_link][:lang] %>>
             <%= supergroup[:finder_link][:text] %>
           </a>
         </div>

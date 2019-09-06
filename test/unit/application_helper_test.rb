@@ -12,4 +12,53 @@ describe ApplicationHelper do
       assert_equal '/foo/bar', current_path_without_query_string
     end
   end
+
+  describe "t_lang" do
+    it "t_fallback returns false if string is translated successfully" do
+      I18n.backend.store_translations :en, document: { one: "string" }
+      I18n.with_locale(:en) do
+        assert_equal false, t_fallback("document.one", {})
+      end
+    end
+
+    it "t_fallback returns default locale if translated string is nil" do
+      I18n.with_locale(:de) do
+        assert_equal :en, t_fallback("testing.nil", {})
+      end
+    end
+
+    it "t_fallback returns default locale if translated string uses fallback" do
+      I18n.default_locale = :en
+      I18n.backend.store_translations :en, document: { one: "string" }
+
+      I18n.with_locale(:de) do
+        assert_equal :en, t_fallback("document.one", {})
+      end
+    end
+
+    it "t_fallback returns default locale if translated string hash is all nil" do
+      I18n.default_locale = :en
+
+
+      I18n.with_locale(:de) do
+        I18n.backend.store_translations :de, testing: { test: { one: nil, others: nil } }
+        assert_equal :en, t_fallback("testing.test", count: 2)
+      end
+    end
+
+    it "t_lang returns nil if the translated string matches the current locale" do
+      I18n.backend.store_translations :en, document: { one: "string" }
+      I18n.with_locale(:en) do
+        assert_nil t_lang("document.one")
+      end
+    end
+
+    it "t_lang returns lang attribute if translated string does not match current locale" do
+      I18n.backend.store_translations :en, document: { one: "string" }
+
+      I18n.with_locale(:de) do
+        assert_equal "lang=en", t_lang("document.one")
+      end
+    end
+  end
 end
