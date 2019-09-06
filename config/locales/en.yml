@@ -77,6 +77,9 @@ en:
       no_longer_exists: "%{title} has closed"
     part_of: "Part of"
     separate_website: "separate website"
+    subscription:
+      email: "Get email alerts"
+      feed: "Subscribe to feed"
     people:
       board_members: "Our management"
       chief_professional_officers: "Chief professional officers"

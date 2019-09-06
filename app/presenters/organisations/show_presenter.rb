@@ -1,5 +1,6 @@
 module Organisations
   class ShowPresenter
+    include ApplicationHelper
     include ActionView::Helpers::TagHelper
     include ActionView::Helpers::UrlHelper
 
@@ -15,7 +16,11 @@ module Organisations
     def subscription_links
       {
         email_signup_link: "/email-signup?link=#{@org.base_path}",
+        email_signup_link_text: I18n.t('organisations.subscription.email'),
+        email_signup_link_text_locale: t_fallback('organisations.subscription.email'),
         feed_link_box_value: "#{@org.web_url}.atom",
+        feed_link_text: I18n.t('organisations.subscription.feed'),
+        feed_link_text_locale: t_fallback('organisations.subscription.feed'),
         brand: @org.brand
       }
     end
