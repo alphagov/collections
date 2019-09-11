@@ -18,4 +18,23 @@ module ApplicationHelper
   def is_testable_taxon_page?
     false
   end
+
+  def t_lang(key, options = {})
+    fallback = t_fallback(key, options)
+    if fallback && fallback != I18n.locale
+      "lang=#{fallback}"
+    end
+  end
+
+  def t_fallback(key, options = {})
+    translation = I18n.t(key, options, locale: I18n.locale, fallback: false, default: "fallback")
+
+    if !translation || translation.eql?("fallback")
+      I18n.default_locale
+    elsif translation.is_a? Hash
+      translation.values.all?(&:nil?) ? I18n.default_locale : false
+    else
+      false
+    end
+  end
 end

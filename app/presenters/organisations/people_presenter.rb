@@ -1,6 +1,7 @@
 module Organisations
   class PeoplePresenter
     include OrganisationHelper
+    include ApplicationHelper
     include ActionView::Helpers::UrlHelper
 
     def initialize(organisation)
@@ -20,6 +21,7 @@ module Organisations
         {
           type: person_type,
           title: I18n.t('organisations.people.' + person_type.to_s),
+          lang: t_fallback("organisations.people.#{person_type}"),
           people: handle_duplicate_roles(people, person_type)
         }
       end

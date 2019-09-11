@@ -4,7 +4,8 @@
       text: t('organisations.contact.contact_organisation', organisation: @show.acronym),
       brand: @organisation.brand,
       border_top: 5,
-      padding: true
+      padding: true,
+      lang: t_fallback("organisations.contact.contact_organisation", { organisation: @show.acronym })
   } %>
 
   <%= render partial: 'contacts', locals: { contacts: contacts.contacts, border: true } %>
