@@ -20,17 +20,10 @@ $red: #E61E32;
 
 .landing-page__contents {
   margin: govuk-spacing(6) 0 govuk-spacing(9) 0;
-
-  // This is a temporary override to increase the font size of the contents list component
-  // TODO: make this an option within the component in the gem itself
-  .gem-c-contents-list__link {
-    @include govuk-font(19);
-  }
 }
 
 .landing-page__ready-intro {
   @include govuk-font(24);
-  margin-top: -10px; //TODO: make the margin bottom on lead para component more flexible, so this isn't needed.
   margin-bottom: govuk-spacing(6);
 }
 
