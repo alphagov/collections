@@ -115,7 +115,6 @@ module Organisations
 
     def has_services_and_information_link?
       orgs_with_services_and_information_link = %w{
-        charity-commission
         department-for-education
         department-for-environment-food-rural-affairs
         driver-and-vehicle-standards-agency
