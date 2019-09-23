@@ -25,8 +25,8 @@ describe OrganisationHelper do
           "title" => "demo",
           "link" => "/demo",
           "content_store_document_type": "Foi",
-          "public_timestamp": "2019-01-03T04:05:06+07:00"
-        }
+          "public_timestamp": "2019-01-03T04:05:06+07:00",
+        },
       ]
     }
 
@@ -38,17 +38,17 @@ describe OrganisationHelper do
       {
         link: {
           text: "demo",
-          path: "/demo"
+          path: "/demo",
         },
         metadata: {
           public_updated_at: nil,
-          document_type: nil
-        }
+          document_type: nil,
+        },
       }
     }
 
     it "provides an expected document format" do
-      assert_equal result[:brand], 'attorney-generals-office'
+      assert_equal result[:brand], "attorney-generals-office"
       assert_equal expected, result[:items].first
     end
   end

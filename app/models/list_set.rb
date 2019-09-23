@@ -42,7 +42,7 @@ private
       "A to Z",
       content_tagged_to_tag
         .reject { |content| excluded_formats.include? content.format }
-        .sort_by(&:title)
+        .sort_by(&:title),
     )]
   end
 
@@ -63,12 +63,12 @@ private
       :start => 0,
       :count => RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       filter_name => [@tag_content_id],
-      :fields => %w(title link format)
+      :fields => %w(title link format),
     )
   end
 
   def filter_name
-    if @tag_type == 'section'
+    if @tag_type == "section"
       :filter_mainstream_browse_page_content_ids
     else
       :filter_topic_content_ids
@@ -76,7 +76,7 @@ private
   end
 
   def excluded_formats
-    if @tag_type == 'section'
+    if @tag_type == "section"
       BROWSE_FORMATS_TO_EXCLUDE
     else
       TOPIC_FORMATS_TO_EXCLUDE

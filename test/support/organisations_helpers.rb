@@ -10,22 +10,22 @@ module OrganisationsHelpers
             brand: "cabinet-office",
             logo: {
               formatted_title: "Prime Minister's Office, 10 Downing Street",
-              crest: "eo"
-            }
-          }
+              crest: "eo",
+            },
+          },
         ],
         ordered_ministerial_departments: [
           {
             title: "Attorney General's Office",
-            href: "/government/organisations/attorney-generals-office"
+            href: "/government/organisations/attorney-generals-office",
           },
         ],
         ordered_non_ministerial_departments: [],
         ordered_agencies_and_other_public_bodies: [],
         ordered_high_profile_groups: [],
         ordered_public_corporations: [],
-        ordered_devolved_administrations: []
-      }
+        ordered_devolved_administrations: [],
+      },
     }.with_indifferent_access
   end
 
@@ -40,38 +40,38 @@ module OrganisationsHelpers
             title: "The Charity Commission",
             href: "/government/organisations/charity-commission",
             brand: "department-for-business-innovation-skills",
-            separate_website: true
-          }
+            separate_website: true,
+          },
         ],
         ordered_agencies_and_other_public_bodies: [
           {
             title: "Academy for Social Justice Commissioning",
             href: "/government/organisations/academy-for-social-justice-commissioning",
             brand: "ministry-of-justice",
-          }
+          },
         ],
         ordered_high_profile_groups: [
           {
             title: "Bona Vacantia",
             href: "/government/organisations/bona-vacantia",
             brand: "attorney-generals-office",
-          }
+          },
         ],
         ordered_public_corporations: [
           {
             title: "BBC",
             href: "/government/organisations/bbc",
             brand: "department-for-culture-media-sport",
-          }
+          },
         ],
         ordered_devolved_administrations: [
           {
             title: "Northern Ireland Executive ",
             href: "/government/organisations/northern-ireland-executive",
-            brand: nil
-          }
-        ]
-      }
+            brand: nil,
+          },
+        ],
+      },
     }.with_indifferent_access
   end
 
@@ -84,9 +84,9 @@ module OrganisationsHelpers
             title: "The Charity Commission",
             href: "/government/organisations/charity-commission",
             brand: "department-for-business-innovation-skills",
-          }
-        ]
-      }
+          },
+        ],
+      },
     }.with_indifferent_access
   end
 end

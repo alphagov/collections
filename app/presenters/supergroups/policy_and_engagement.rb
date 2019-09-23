@@ -3,7 +3,7 @@ module Supergroups
     attr_reader :content
 
     def initialize
-      super('policy_and_engagement')
+      super("policy_and_engagement")
     end
 
     def document_list(taxon_id)
@@ -20,7 +20,7 @@ module Supergroups
 
     def consultation?(document_type)
       %w[open_consultation consultation_outcome closed_consultation].include?(
-        document_type
+        document_type,
       )
     end
 
@@ -56,13 +56,13 @@ module Supergroups
           link: {
             text: document.title,
             path: document.base_path,
-            data_attributes: data_attributes(document.base_path, document.title, index)
+            data_attributes: data_attributes(document.base_path, document.title, index),
           },
           metadata: {
             public_updated_at: document.public_updated_at,
             organisations: document.organisations,
-            document_type: document.content_store_document_type.humanize
-          }
+            document_type: document.content_store_document_type.humanize,
+          },
         }
 
         if consultation?(document.content_store_document_type)

@@ -4,7 +4,7 @@ class RolesController < ApplicationController
     @role = Role.find!("/government/ministers/#{params[:role_name]}")
     setup_content_item_and_navigation_helpers(@role)
     render :show, locals: {
-        role: @role
+        role: @role,
     }
   end
 end

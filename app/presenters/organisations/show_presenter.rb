@@ -16,12 +16,12 @@ module Organisations
     def subscription_links
       {
         email_signup_link: "/email-signup?link=#{@org.base_path}",
-        email_signup_link_text: I18n.t('organisations.subscription.email'),
-        email_signup_link_text_locale: t_fallback('organisations.subscription.email'),
+        email_signup_link_text: I18n.t("organisations.subscription.email"),
+        email_signup_link_text_locale: t_fallback("organisations.subscription.email"),
         feed_link_box_value: "#{@org.web_url}.atom",
-        feed_link_text: I18n.t('organisations.subscription.feed'),
-        feed_link_text_locale: t_fallback('organisations.subscription.feed'),
-        brand: @org.brand
+        feed_link_text: I18n.t("organisations.subscription.feed"),
+        feed_link_text_locale: t_fallback("organisations.subscription.feed"),
+        brand: @org.brand,
       }
     end
 
@@ -30,7 +30,7 @@ module Organisations
         link_to(
           parent_organisation["title"],
           parent_organisation["base_path"],
-          class: "brand__color"
+          class: "brand__color",
         )
       end
 
@@ -41,14 +41,14 @@ module Organisations
       high_profile_groups = @org.ordered_high_profile_groups && @org.ordered_high_profile_groups.map do |group|
         {
           text: group["title"],
-          path: group["base_path"]
+          path: group["base_path"],
         }
       end
 
       {
-        title: I18n.t('organisations.high_profile_groups', title: acronym),
+        title: I18n.t("organisations.high_profile_groups", title: acronym),
         brand: @org.brand,
-        items: high_profile_groups
+        items: high_profile_groups,
       }
     end
 
@@ -66,13 +66,13 @@ module Organisations
         corporate_information_links: {
           items: corporate_information_links - job_links,
           brand: @org.brand,
-          margin_bottom: true
+          margin_bottom: true,
         },
         job_links: {
           items: job_links,
           brand: @org.brand,
-          margin_bottom: @org.secondary_corporate_information.present?
-        }
+          margin_bottom: @org.secondary_corporate_information.present?,
+        },
       }
     end
 
@@ -124,7 +124,7 @@ module Organisations
     end
 
     def has_definite_article?(phrase)
-      phrase.downcase.strip[0..2] == 'the'
+      phrase.downcase.strip[0..2] == "the"
     end
 
     def separate_job_links(corporate_information_links)

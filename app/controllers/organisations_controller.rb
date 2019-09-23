@@ -40,7 +40,7 @@ class OrganisationsController < ApplicationController
 private
 
   def organisation_view
-    @organisation.is_live? ? 'show' : 'separate_website'
+    @organisation.is_live? ? "show" : "separate_website"
   end
 
   def presented_organisations

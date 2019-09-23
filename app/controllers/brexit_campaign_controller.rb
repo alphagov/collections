@@ -7,7 +7,7 @@ class BrexitCampaignController < ApplicationController
     @other_links = other_links
 
     render :show, locals: {
-      campaign: @campaign
+      campaign: @campaign,
     }
   end
 

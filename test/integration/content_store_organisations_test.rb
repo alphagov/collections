@@ -1,8 +1,8 @@
-require 'integration_test_helper'
+require "integration_test_helper"
 
 class ContentStoreOrganisationsTest < ActionDispatch::IntegrationTest
   before do
-    content_store_has_item('/government/organisations', organisations_content_hash)
+    content_store_has_item("/government/organisations", organisations_content_hash)
     visit "/government/organisations"
   end
 
@@ -15,7 +15,7 @@ class ContentStoreOrganisationsTest < ActionDispatch::IntegrationTest
   end
 
   it "renders page title" do
-    assert page.has_css?('.gem-c-title__text', text: "Departments, agencies and public bodies")
+    assert page.has_css?(".gem-c-title__text", text: "Departments, agencies and public bodies")
   end
 
   it "has autodiscovery links to the API" do
@@ -23,35 +23,35 @@ class ContentStoreOrganisationsTest < ActionDispatch::IntegrationTest
   end
 
   it "renders organisation filter" do
-    assert page.has_css?('.filter-organisations-list__form')
-    assert page.has_css?('.filter-organisations-list__label', text: "What’s the latestfrom")
-    assert page.has_css?('.filter-organisations-list__input')
+    assert page.has_css?(".filter-organisations-list__form")
+    assert page.has_css?(".filter-organisations-list__label", text: "What’s the latestfrom")
+    assert page.has_css?(".filter-organisations-list__input")
   end
 
   it "renders an organisation_type heading" do
-    assert page.has_css?('.gem-c-heading', text: 'Ministerial departments')
+    assert page.has_css?(".gem-c-heading", text: "Ministerial departments")
   end
 
   it "adds an id to each organisation item" do
-    assert page.has_css?('.organisations-list__item#attorney-generals-office')
+    assert page.has_css?(".organisations-list__item#attorney-generals-office")
   end
 
   it "renders organisation count" do
-    assert page.has_css?('.organisations__department-count-wrapper span', text: '1')
+    assert page.has_css?(".organisations__department-count-wrapper span", text: "1")
   end
 
   it "renders an accessible version of organisation count" do
     assert page.has_css?('.organisations__department-count-wrapper span[aria-hidden="true"]')
-    assert page.has_css?('.organisations__department-count-wrapper p.visuallyhidden', text: 'There are 2 Non ministerial departments')
+    assert page.has_css?(".organisations__department-count-wrapper p.visuallyhidden", text: "There are 2 Non ministerial departments")
   end
 
   it "renders ministerial organisation with crest" do
-    assert page.has_css?('.gem-c-organisation-logo')
+    assert page.has_css?(".gem-c-organisation-logo")
   end
 
   it "renders non-ministerial organisation without crest" do
-    assert page.has_css?('a.organisation-list__item-title[href="/government/organisations/arts-and-humanities-research-council"]', text: 'Arts and Humanities Research Council')
-    assert page.has_css?('.organisation-list__item-context', text: 'separate website')
+    assert page.has_css?('a.organisation-list__item-title[href="/government/organisations/arts-and-humanities-research-council"]', text: "Arts and Humanities Research Council")
+    assert page.has_css?(".organisation-list__item-context", text: "separate website")
   end
 
   it "displays child organisations count" do
@@ -89,33 +89,33 @@ private
           slug: "attorney-generals-office",
           logo: {
             formatted_title: "Attorney General's Office",
-            crest: "single-identity"
+            crest: "single-identity",
           },
           separate_website: false,
           works_with: {
             non_ministerial_department: [
               {
                 title: "Crown Prosecution Service",
-                href: "/government/organisations/crown-prosecution-service"
+                href: "/government/organisations/crown-prosecution-service",
               },
               {
                 title: "Government Legal Department",
-                href: "/government/organisations/government-legal-department"
+                href: "/government/organisations/government-legal-department",
               },
               {
                 title: "Serious Fraud Office",
-                href: "/government/organisations/serious-fraud-office"
-              }
+                href: "/government/organisations/serious-fraud-office",
+              },
           ],
             other: [
               {
                 title: "HM Crown Prosecution Service Inspectorate",
-                href: "/government/organisations/hm-crown-prosecution-service-inspectorate"
-              }
+                href: "/government/organisations/hm-crown-prosecution-service-inspectorate",
+              },
             ],
-            executive_ndpb: []
-          }
-        }
+            executive_ndpb: [],
+          },
+        },
       ],
       ordered_non_ministerial_departments: [
         {
@@ -133,18 +133,18 @@ private
             non_ministerial_department: [
               {
                 title: "Crown Prosecution Service",
-                href: "/government/organisations/crown-prosecution-service"
-              }
-            ]
-          }
-        }
+                href: "/government/organisations/crown-prosecution-service",
+              },
+            ],
+          },
+        },
       ],
       ordered_executive_offices: [],
       ordered_agencies_and_other_public_bodies: [],
       ordered_high_profile_groups: [],
       ordered_public_corporations: [],
-      ordered_devolved_administrations: []
-      }
+      ordered_devolved_administrations: [],
+      },
     }
   end
 end

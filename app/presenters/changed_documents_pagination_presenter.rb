@@ -11,7 +11,7 @@ class ChangedDocumentsPaginationPresenter
       component_params[:previous_page] = {
         url: previous_page_path,
         title: "Previous",
-        label: "#{previous_page_number} of #{total_pages}"
+        label: "#{previous_page_number} of #{total_pages}",
       }
     end
 
@@ -19,7 +19,7 @@ class ChangedDocumentsPaginationPresenter
       component_params[:next_page] = {
         url: next_page_path,
         title: "Next",
-        label: "#{next_page_number} of #{total_pages}"
+        label: "#{next_page_number} of #{total_pages}",
       }
     end
 

@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class FakeTaxon
   attr_reader :title
@@ -40,26 +40,26 @@ describe WorldTaxonomySorter do
     ]
   end
 
-  describe '#call' do
-    it 'sorts the given child taxons by the specified sorting order' do
+  describe "#call" do
+    it "sorts the given child taxons by the specified sorting order" do
       sorted_child_taxon_titles = WorldTaxonomySorter.call(@child_taxons).map(&:title)
 
       assert_equal(@expected_ordered_taxon_titles, sorted_child_taxon_titles)
     end
 
-    it 'appends any child taxons which did not match to a title in the specified sorting order' do
+    it "appends any child taxons which did not match to a title in the specified sorting order" do
       child_taxons = @child_taxons.concat(
         [
           FakeTaxon.new("Another taxon"),
           FakeTaxon.new("And another taxon"),
-        ]
+        ],
       )
 
       expected_ordered_taxon_titles = @expected_ordered_taxon_titles.concat(
         [
           "Another taxon",
           "And another taxon",
-        ]
+        ],
       )
 
       sorted_child_taxon_titles = WorldTaxonomySorter.call(child_taxons).map(&:title)

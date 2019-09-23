@@ -28,7 +28,7 @@ module OrganisationHelper
   end
 
   def image_url_by_size(image_url, size)
-    image_url_array = image_url.split('/')
+    image_url_array = image_url.split("/")
     image_by_size_name = "s#{size}_" + image_url_array[-1]
     image_url_array[-1] = image_by_size_name
 
@@ -40,7 +40,7 @@ module OrganisationHelper
       brand: (organisation.brand if organisation.is_live?),
       items: search_results.map { |result|
         Organisations::DocumentPresenter.new(result, include_metadata: include_metadata).present
-      }
+      },
     }
   end
 end

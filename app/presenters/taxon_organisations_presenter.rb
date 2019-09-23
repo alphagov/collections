@@ -21,14 +21,14 @@ class TaxonOrganisationsPresenter
 
     {
       "promoted_with_logos": promoted_organisations_with_logos,
-      "promoted_without_logos": promoted_organisations_without_logos
+      "promoted_without_logos": promoted_organisations_without_logos,
     }
   end
 
   def show_more_organisation_list
     {
       "organisations_with_logos": organisation_list_with_logos.drop(ORG_PROMOTED_CONTENT_COUNT),
-      "organisations_without_logos": organisation_list_without_logos.drop(ORG_PROMOTED_CONTENT_COUNT - promoted_organisation_list[:promoted_with_logos].count)
+      "organisations_without_logos": organisation_list_without_logos.drop(ORG_PROMOTED_CONTENT_COUNT - promoted_organisation_list[:promoted_with_logos].count),
     }
   end
 
@@ -46,7 +46,7 @@ private
           url: org.link,
           brand: org.brand,
           crest: org.crest,
-          data_attributes: data_attributes(org.link, org.title, index + 1)
+          data_attributes: data_attributes(org.link, org.title, index + 1),
       }
     end
   end
@@ -61,8 +61,8 @@ private
         link: {
           text: organisation.title,
           path: organisation.link,
-          data_attributes: data_attributes(organisation.link, organisation.title, tracking_number + index)
-        }
+          data_attributes: data_attributes(organisation.link, organisation.title, tracking_number + index),
+        },
       }
     end
   end
@@ -73,8 +73,8 @@ private
       track_action: index,
       track_label: base_path,
       track_options: {
-        dimension29: link_text
-      }
+        dimension29: link_text,
+      },
     }
   end
 end

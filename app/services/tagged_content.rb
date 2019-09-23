@@ -21,7 +21,7 @@ private
       count: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       fields: %w(title description link content_store_document_type),
       filter_taxons: content_ids,
-      order: 'title',
+      order: "title",
     }
 
     RummagerSearch.new(params)

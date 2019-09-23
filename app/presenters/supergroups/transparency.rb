@@ -3,7 +3,7 @@ module Supergroups
     attr_reader :content
 
     def initialize
-      super('transparency')
+      super("transparency")
     end
 
     def tagged_content(taxon_id)

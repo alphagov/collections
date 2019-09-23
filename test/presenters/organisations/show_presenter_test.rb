@@ -1,10 +1,10 @@
-require 'test_helper'
+require "test_helper"
 
 describe Organisations::ShowPresenter do
   include RummagerHelpers
   include OrganisationHelpers
 
-  it 'adds a prefix to a title when it should' do
+  it "adds a prefix to a title when it should" do
     presenter = build_show_presenter_for_org("Attorney General's Office", "ministerial_department")
     assert_equal "the Attorney General's Office", presenter.prefixed_title
 
@@ -12,7 +12,7 @@ describe Organisations::ShowPresenter do
     assert_equal "the Queen's Bench Division of the High Court", presenter.prefixed_title
   end
 
-  it 'does not add a prefix to a title when it should not' do
+  it "does not add a prefix to a title when it should not" do
     presenter = build_show_presenter_for_org("The Charity Commission", "non_ministerial_department")
     assert_equal "The Charity Commission", presenter.prefixed_title
 
@@ -28,18 +28,18 @@ describe Organisations::ShowPresenter do
     Organisations::ShowPresenter.new(organisation)
   end
 
-  it 'returns a link to a parent organisation' do
+  it "returns a link to a parent organisation" do
     content_hash = {
       title: "Export Control Joint Unit",
       details: {
-        organisation_type: "sub_organisation"
+        organisation_type: "sub_organisation",
       },
       links: {
         ordered_parent_organisations: [{
           base_path: "/international-trade",
-          title: "Department for International Trade"
-        }]
-      }
+          title: "Department for International Trade",
+        }],
+      },
     }
     content_item = ContentItem.new(content_hash.with_indifferent_access)
     organisation = Organisation.new(content_item)
@@ -50,25 +50,25 @@ describe Organisations::ShowPresenter do
     assert_equal expected, @show_presenter.parent_organisations
   end
 
-  it 'returns a human-readable sentence with links to multiple parent organisation' do
+  it "returns a human-readable sentence with links to multiple parent organisation" do
     content_hash = {
       title: "Export Control Joint Unit",
       details: {
-        organisation_type: "sub_organisation"
+        organisation_type: "sub_organisation",
       },
       links: {
         ordered_parent_organisations:
         [
           {
             base_path: "/international-trade-1",
-            title: "Dept for Trade"
+            title: "Dept for Trade",
           },
           {
             base_path: "/international-trade-2",
-            title: "Second Dept for Trade"
-          }
-        ]
-      }
+            title: "Second Dept for Trade",
+          },
+        ],
+      },
     }
     content_item = ContentItem.new(content_hash.with_indifferent_access)
     organisation = Organisation.new(content_item)
@@ -79,7 +79,7 @@ describe Organisations::ShowPresenter do
     assert_equal expected, @show_presenter.parent_organisations
   end
 
-  it 'formats high profile groups correctly' do
+  it "formats high profile groups correctly" do
     content_item = ContentItem.new(organisation_with_high_profile_groups)
     organisation = Organisation.new(content_item)
     @show_presenter = Organisations::ShowPresenter.new(organisation)
@@ -90,13 +90,13 @@ describe Organisations::ShowPresenter do
       items: [
         {
           text: "Rural Development Programme for England Network",
-          path: "/government/organisations/rural-development-programme-for-england-network"
+          path: "/government/organisations/rural-development-programme-for-england-network",
         },
         {
           text: "Rural Development Programme for England Network 2",
-          path: "/government/organisations/rural-development-programme-for-england-network-2"
-        }
-      ]
+          path: "/government/organisations/rural-development-programme-for-england-network-2",
+        },
+      ],
     }
 
     assert_equal expected, @show_presenter.high_profile_groups
@@ -111,29 +111,29 @@ describe Organisations::ShowPresenter do
       corporate_information_links: {
         items: [{
           text: "Corporate Information page",
-          path: "/corporate-info"
+          path: "/corporate-info",
         }],
         brand: "attorney-generals-office",
-        margin_bottom: true
+        margin_bottom: true,
       },
       job_links: {
         items: [
           {
             text: "Jobs",
-            path: "/jobs"
+            path: "/jobs",
           },
           {
             text: "Working for Attorney General's Office",
-            path: "/government/attorney-general's-office/recruitment"
+            path: "/government/attorney-general's-office/recruitment",
           },
           {
             text: "Procurement at Attorney General's Office",
-            path: "/government/attorney-general's-office/procurement"
-          }
+            path: "/government/attorney-general's-office/procurement",
+          },
         ],
         brand: "attorney-generals-office",
-        margin_bottom: true
-      }
+        margin_bottom: true,
+      },
     }
 
     assert_equal expected, @show_presenter.corporate_information

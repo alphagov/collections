@@ -115,13 +115,13 @@ describe MainstreamBrowsePage do
 
         items = @page.public_send(link_type)
 
-        assert_equal 'Bar', items[0].title
-        assert_equal 'All about bar', items[0].description
-        assert_equal '/browse/bar', items[0].base_path
+        assert_equal "Bar", items[0].title
+        assert_equal "All about bar", items[0].description
+        assert_equal "/browse/bar", items[0].base_path
 
-        assert_equal 'Foo', items[1].title
-        assert_equal 'All about foo', items[1].description
-        assert_equal '/browse/foo', items[1].base_path
+        assert_equal "Foo", items[1].title
+        assert_equal "All about foo", items[1].description
+        assert_equal "/browse/foo", items[1].base_path
       end
 
       it "returns empty array with no items" do
@@ -150,9 +150,9 @@ describe MainstreamBrowsePage do
 
     items = @page.second_level_browse_pages
 
-    assert_equal 'Bar', items[0].title
-    assert_equal 'All about bar', items[0].description
-    assert_equal '/browse/bar', items[0].base_path
+    assert_equal "Bar", items[0].title
+    assert_equal "All about bar", items[0].description
+    assert_equal "/browse/bar", items[0].base_path
   end
 
   describe "active_top_level_browse_page" do
@@ -163,9 +163,9 @@ describe MainstreamBrowsePage do
         "base_path" => "/browse/foo",
       }]
 
-      assert_equal 'Foo', @page.active_top_level_browse_page.title
-      assert_equal '/browse/foo', @page.active_top_level_browse_page.base_path
-      assert_equal 'All about foo', @page.active_top_level_browse_page.description
+      assert_equal "Foo", @page.active_top_level_browse_page.title
+      assert_equal "/browse/foo", @page.active_top_level_browse_page.base_path
+      assert_equal "All about foo", @page.active_top_level_browse_page.description
     end
 
     it "returns nil with no items" do
@@ -193,9 +193,9 @@ describe MainstreamBrowsePage do
         },
       ]
 
-      assert_equal 'Foo', @page.related_topics[1].title
-      assert_equal '/browse/bar', @page.related_topics[0].base_path
-      assert_equal 'All about foo', @page.related_topics[1].description
+      assert_equal "Foo", @page.related_topics[1].title
+      assert_equal "/browse/bar", @page.related_topics[0].base_path
+      assert_equal "All about foo", @page.related_topics[1].description
     end
 
     it "returns related topics alphabetised" do

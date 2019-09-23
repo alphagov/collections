@@ -14,7 +14,7 @@ module Supergroups
       {
         text: see_all_link_text,
         url: finder_url(base_path, taxon_id),
-        data: see_all_link_data_attributes(base_path, name)
+        data: see_all_link_data_attributes(base_path, name),
       }
     end
 
@@ -48,7 +48,7 @@ module Supergroups
 
     def finder_url(base_path, taxon_id)
       query_string = { parent: base_path, topic: taxon_id }.to_query
-      [finder_path, query_string].join('?')
+      [finder_path, query_string].join("?")
     end
 
     def see_all_link_text
@@ -62,7 +62,7 @@ module Supergroups
         track_category: "SeeAllLinkClicked",
         track_action: base_path,
         track_label: name,
-        module: "track-click"
+        module: "track-click",
       }
     end
 
@@ -73,8 +73,8 @@ module Supergroups
         track_action: index,
         track_label: base_path,
         track_options: {
-          dimension29: link_text
-        }
+          dimension29: link_text,
+        },
       }
     end
 
@@ -84,13 +84,13 @@ module Supergroups
           link: {
             text: document.title,
             path: document.base_path,
-            data_attributes: data_attributes(document.base_path, document.title, index)
+            data_attributes: data_attributes(document.base_path, document.title, index),
           },
           metadata: {
             public_updated_at: document.public_updated_at,
             organisations: document.organisations,
-            document_type: document.content_store_document_type.humanize
-          }
+            document_type: document.content_store_document_type.humanize,
+          },
         }
 
         if data_category.present?

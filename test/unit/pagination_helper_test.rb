@@ -25,21 +25,21 @@ describe PaginationHelper do
         child_organisations: [
           {
             id: "https://www.gov.uk/api/organisations/valuation-office-agency",
-            web_url: "https://www.gov.uk/government/organisations/valuation-office-agency"
+            web_url: "https://www.gov.uk/government/organisations/valuation-office-agency",
           },
           {
             id: "https://www.gov.uk/api/organisations/the-adjudicator-s-office",
-            web_url: "https://www.gov.uk/government/organisations/the-adjudicator-s-office"
-          }
+            web_url: "https://www.gov.uk/government/organisations/the-adjudicator-s-office",
+          },
         ],
         superseded_organisations: [
           {
             id: "https://www.gov.uk/api/organisations/department-of-inland-revenue",
-            web_url: "https://www.gov.uk/government/organisations/department-of-inland-revenue"
-          }
+            web_url: "https://www.gov.uk/government/organisations/department-of-inland-revenue",
+          },
         ],
         superseding_organisations: [],
-      }
+      },
     ]
   end
   let(:current_page) { 1 }

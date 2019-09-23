@@ -15,7 +15,7 @@ module Organisations
       {
         link: {
           text: @raw_document["title"],
-          path: @raw_document["link"]
+          path: @raw_document["link"],
         },
       }.merge(present_metadata)
     end
@@ -25,8 +25,8 @@ module Organisations
         {
           metadata: {
             public_updated_at: public_updated_at,
-            document_type: document_type
-          }
+            document_type: document_type,
+          },
         }
       else
         {}

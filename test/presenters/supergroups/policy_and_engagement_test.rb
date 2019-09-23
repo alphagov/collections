@@ -1,23 +1,23 @@
-require 'test_helper'
+require "test_helper"
 
 describe Supergroups::PolicyAndEngagement do
   include RummagerHelpers
   include SupergroupHelpers
 
-  let(:taxon_id) { '12345' }
+  let(:taxon_id) { "12345" }
   let(:policy_and_engagement_supergroup) { Supergroups::PolicyAndEngagement.new }
 
-  describe '#document_list' do
-    it 'returns a document list for the policy and engagment supergroup' do
+  describe "#document_list" do
+    it "returns a document list for the policy and engagment supergroup" do
       MostRecentContent.any_instance
         .stubs(:fetch)
-        .returns(section_tagged_content_list('case_study'))
+        .returns(section_tagged_content_list("case_study"))
 
-      assert_equal expected_result('case_study'), policy_and_engagement_supergroup.document_list(taxon_id)
+      assert_equal expected_result("case_study"), policy_and_engagement_supergroup.document_list(taxon_id)
     end
 
-    describe 'consultations' do
-      it 'prioritises consultations over other content' do
+    describe "consultations" do
+      it "prioritises consultations over other content" do
         tagged_document_list = %w(
           open_consultation
           case_study
@@ -41,25 +41,25 @@ describe Supergroups::PolicyAndEngagement do
         assert_equal expected_results(expected_order), policy_and_engagement_supergroup.document_list(taxon_id)
       end
 
-      describe '#consultation_closing_date' do
-        it 'gets the closing date of past consultations' do
+      describe "#consultation_closing_date" do
+        it "gets the closing date of past consultations" do
           MostRecentContent.any_instance
             .stubs(:fetch)
-            .returns(section_tagged_content_list('open_consultation', 4))
+            .returns(section_tagged_content_list("open_consultation", 4))
 
-          expected = 4.times.map { |index| expected_result('open_consultation', index).first }
+          expected = 4.times.map { |index| expected_result("open_consultation", index).first }
           assert_equal expected, policy_and_engagement_supergroup.document_list(taxon_id)
         end
 
-        it 'gets the closing date of future consultations' do
+        it "gets the closing date of future consultations" do
           document = Document.new(
-            title: 'Tagged Content Title',
-            description: 'Description of tagged content',
-            public_updated_at: '2018-02-28T08:01:00.000+00:00',
-            end_date: '2018-07-10T23:45:00.000+00:00',
-            base_path: '/government/tagged/content-1',
-            content_store_document_type: 'open_consultation',
-            organisations: 'Tagged Content Organisation'
+            title: "Tagged Content Title",
+            description: "Description of tagged content",
+            public_updated_at: "2018-02-28T08:01:00.000+00:00",
+            end_date: "2018-07-10T23:45:00.000+00:00",
+            base_path: "/government/tagged/content-1",
+            content_store_document_type: "open_consultation",
+            organisations: "Tagged Content Organisation",
           )
 
           MostRecentContent.any_instance
@@ -69,25 +69,25 @@ describe Supergroups::PolicyAndEngagement do
           expected = [
             {
               link: {
-                text: 'Tagged Content Title',
-                path: '/government/tagged/content-1',
+                text: "Tagged Content Title",
+                path: "/government/tagged/content-1",
                 data_attributes: {
                   module: "track-click",
                   track_category: "policyAndEngagementDocumentListClicked",
                   track_action: 1,
-                  track_label: '/government/tagged/content-1',
+                  track_label: "/government/tagged/content-1",
                   track_options: {
-                    dimension29: 'Tagged Content Title'
-                  }
-                }
+                    dimension29: "Tagged Content Title",
+                  },
+                },
               },
               metadata: {
-                public_updated_at: '2018-02-28T08:01:00.000+00:00',
-                organisations: 'Tagged Content Organisation',
-                document_type: 'Open consultation',
-                closing_date: 'Closing date 10 July 2018'
-              }
-            }
+                public_updated_at: "2018-02-28T08:01:00.000+00:00",
+                organisations: "Tagged Content Organisation",
+                document_type: "Open consultation",
+                closing_date: "Closing date 10 July 2018",
+              },
+            },
           ]
 
           Timecop.freeze("2018-04-18") do
@@ -119,27 +119,27 @@ private
   def expected_result(document_type, index = 0)
     result = {
       link: {
-        text: 'Tagged Content Title',
-        path: '/government/tagged/content',
+        text: "Tagged Content Title",
+        path: "/government/tagged/content",
         data_attributes: {
           module: "track-click",
           track_category: "policyAndEngagementDocumentListClicked",
           track_action: index + 1,
-          track_label: '/government/tagged/content',
+          track_label: "/government/tagged/content",
           track_options: {
-            dimension29: 'Tagged Content Title'
-          }
-        }
+            dimension29: "Tagged Content Title",
+          },
+        },
       },
       metadata: {
-        public_updated_at: '2018-02-28T08:01:00.000+00:00',
-        organisations: 'Tagged Content Organisation',
+        public_updated_at: "2018-02-28T08:01:00.000+00:00",
+        organisations: "Tagged Content Organisation",
         document_type: document_type.humanize,
-      }
+      },
     }
 
     if consultation?(document_type)
-      result[:metadata][:closing_date] = 'Date closed 28 August 2018'
+      result[:metadata][:closing_date] = "Date closed 28 August 2018"
     end
 
     [result]
@@ -147,7 +147,7 @@ private
 
   def consultation?(document_type)
     %w[open_consultation consultation_outcome closed_consultation].include?(
-      document_type
+      document_type,
     )
   end
 end

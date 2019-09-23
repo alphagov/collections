@@ -1,12 +1,12 @@
-require 'yaml'
-require 'govspeak'
+require "yaml"
+require "govspeak"
 
 class BrexitLandingPagePresenter
   attr_reader :taxon, :buckets
   delegate(
     :title,
     :base_path,
-    to: :taxon
+    to: :taxon,
   )
 
   def initialize(taxon)
@@ -22,7 +22,7 @@ class BrexitLandingPagePresenter
         text: supergroup_title,
         path: section[:see_more_link][:url],
         data_attributes: section[:see_more_link][:data],
-        aria_label: supergroup_title + " related to Brexit"
+        aria_label: supergroup_title + " related to Brexit",
       }
     end
   end
@@ -30,10 +30,10 @@ class BrexitLandingPagePresenter
 private
 
   def fetch_buckets
-    buckets = YAML.load_file('config/brexit_campaign_buckets.yml')
+    buckets = YAML.load_file("config/brexit_campaign_buckets.yml")
 
     buckets.each do |bucket|
-      bucket["section_description"] = convert_to_govspeak(bucket['section_description'])
+      bucket["section_description"] = convert_to_govspeak(bucket["section_description"])
 
       if bucket["section_list"]
         bucket["section_list"].map do |section_list|

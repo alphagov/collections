@@ -5,7 +5,7 @@ class BrexitLandingPageController < ApplicationController
     render locals: {
       presented_taxon: presented_taxon,
       presentable_section_items: presentable_section_items,
-      show_dynamic_list: show_dynamic_list?
+      show_dynamic_list: show_dynamic_list?,
     }
   end
 
@@ -23,7 +23,7 @@ private
     presented_taxon.supergroup_sections.select { |section| section[:show_section] }.map do |section|
       {
           href: "##{section[:id]}",
-          text: t(section[:id], scope: :content_purpose_supergroup, default: section[:title])
+          text: t(section[:id], scope: :content_purpose_supergroup, default: section[:title]),
       }
     end
   end

@@ -9,7 +9,7 @@ class Taxon
     :linked_items,
     :to_hash,
     :phase,
-    to: :content_item
+    to: :content_item,
   )
 
   class InAlphaPhase < StandardError
@@ -37,13 +37,13 @@ class Taxon
   def child_taxons
     return [] unless children?
 
-    linked_items('child_taxons')
+    linked_items("child_taxons")
       .map { |child_taxon| self.class.new(child_taxon) }
       .reject(&:alpha_taxon?)
   end
 
   def children?
-    linked_items('child_taxons').present?
+    linked_items("child_taxons").present?
   end
 
   def merge(to_merge)

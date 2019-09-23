@@ -3,7 +3,7 @@ module Supergroups
     attr_reader :content
 
     def initialize
-      super('services')
+      super("services")
     end
 
     def tagged_content(taxon_id)
@@ -19,8 +19,8 @@ module Supergroups
             text: document.title,
             path: document.base_path,
             description: document.description,
-            data_attributes: data_attributes(document.base_path, document.title, index)
-          }
+            data_attributes: data_attributes(document.base_path, document.title, index),
+          },
         }
 
         if data_category.present?

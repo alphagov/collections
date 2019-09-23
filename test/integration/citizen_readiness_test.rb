@@ -1,4 +1,4 @@
-require 'integration_test_helper'
+require "integration_test_helper"
 
 class CitizenReadinessTest < ActionDispatch::IntegrationTest
   it "renders links to citizen relevant content correctly" do
@@ -26,7 +26,7 @@ class CitizenReadinessTest < ActionDispatch::IntegrationTest
   def and_i_can_see_featured_links_with_tracking
     page.assert_selector ".campaign__taxon a[data-track-category][data-track-action][data-track-label]", count: 4
 
-    within first('.campaign__taxon') do
+    within first(".campaign__taxon") do
       page.assert_selector "a[data-track-category=navGridContentClicked][data-track-action=0][data-track-label='Visiting Europe']",
                            text: "Visiting Europe"
     end
@@ -42,7 +42,7 @@ class CitizenReadinessTest < ActionDispatch::IntegrationTest
   end
 
   def stub_citizen_readiness_page(base_path)
-    content_item = GovukSchemas::RandomExample.for_schema(frontend_schema: 'special_route') do |payload|
+    content_item = GovukSchemas::RandomExample.for_schema(frontend_schema: "special_route") do |payload|
       payload.merge(title: "Prepare for Brexit", base_path: base_path, description: "Prepare yourself for Brexit")
     end
     content_store_has_item(base_path, content_item)

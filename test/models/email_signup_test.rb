@@ -1,5 +1,5 @@
-require 'test_helper'
-require 'ostruct'
+require "test_helper"
+require "ostruct"
 
 describe EmailSignup do
   setup do
@@ -11,9 +11,9 @@ describe EmailSignup do
       to_return(
         body: {
           subscriber_list: {
-            subscription_url: "http://email_alert_api_signup_url"
+            subscription_url: "http://email_alert_api_signup_url",
           },
-        }.to_json
+        }.to_json,
       )
   end
 

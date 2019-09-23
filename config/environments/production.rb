@@ -1,8 +1,8 @@
 Rails.application.configure do
   # Set GOVUK_ASSET_ROOT for heroku - for review apps we have the hostname set
   # at the time of the app being built so can't be set up in the app.json
-  if !ENV.include?('GOVUK_ASSET_ROOT') && ENV['HEROKU_APP_NAME']
-    ENV['GOVUK_ASSET_ROOT'] = "https://#{ENV['HEROKU_APP_NAME']}.herokuapp.com"
+  if !ENV.include?("GOVUK_ASSET_ROOT") && ENV["HEROKU_APP_NAME"]
+    ENV["GOVUK_ASSET_ROOT"] = "https://#{ENV['HEROKU_APP_NAME']}.herokuapp.com"
   end
 
   # Settings specified here will take precedence over those in config/application.rb.
@@ -22,7 +22,7 @@ Rails.application.configure do
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
-  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_ASSETS'] == 'yes'
+  config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_ASSETS"] == "yes"
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -34,7 +34,7 @@ Rails.application.configure do
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.action_controller.asset_host = ENV['GOVUK_ASSET_HOST']
+  config.action_controller.asset_host = ENV["GOVUK_ASSET_HOST"]
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
@@ -56,7 +56,7 @@ Rails.application.configure do
   config.log_tags = [ :request_id ]
 
   # Use a different cache store in production.
-  config.cache_store = :dalli_store, nil, { namespace: :collections, compress: true } unless ENV['HEROKU_APP_NAME']
+  config.cache_store = :dalli_store, nil, { namespace: :collections, compress: true } unless ENV["HEROKU_APP_NAME"]
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque

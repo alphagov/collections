@@ -20,7 +20,7 @@ module Organisations
         agencies_and_other_public_bodies: @organisations.agencies_and_other_public_bodies,
         high_profile_groups: @organisations.high_profile_groups,
         public_corporations: @organisations.public_corporations,
-        devolved_administrations: @organisations.devolved_administrations
+        devolved_administrations: @organisations.devolved_administrations,
       }
     end
 

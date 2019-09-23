@@ -3,7 +3,7 @@ module Supergroups
     attr_reader :content
 
     def initialize
-      super('news_and_communications')
+      super("news_and_communications")
     end
 
     def tagged_content(taxon_id)

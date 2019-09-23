@@ -20,7 +20,7 @@ class ServicesAndInformationGroup
     if more_documents?
       {
         path: subsector_link,
-        text: 'See more',
+        text: "See more",
       }
     end
   end

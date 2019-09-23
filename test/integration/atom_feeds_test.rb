@@ -45,7 +45,7 @@ class AtomFeedsTest < ActionDispatch::IntegrationTest
         count: 20,
         fields: %w(title link description display_type public_timestamp),
         reject_content_purpose_supergroup: "other",
-        order: '-public_timestamp',
+        order: "-public_timestamp",
       )
       .returns(
         "results" => results_from_rummager,
@@ -152,8 +152,8 @@ class AtomFeedsTest < ActionDispatch::IntegrationTest
           "link" => @base_path,
           "slug" => @organisation_slug,
           "organisation_type" => "ministerial_department",
-          "organisation_state" => "live"
-          }
+          "organisation_state" => "live",
+          },
         ],
         "public_timestamp" => @updated_at,
         "title" => "OWL and NEWT qualifications, Ministry of Magic",
@@ -161,7 +161,7 @@ class AtomFeedsTest < ActionDispatch::IntegrationTest
         "es_score" => nil,
         "_id" => "/government/collections/owl-and-newt-examinations-at-hogwarts",
         "elasticsearch_type" => "edition",
-        "document_type" => "edition"
+        "document_type" => "edition",
       },
       {
         "content_store_document_type" => "detailed_guide",
@@ -178,8 +178,8 @@ class AtomFeedsTest < ActionDispatch::IntegrationTest
           "link" => @base_path,
           "slug" => @organisation_slug,
           "organisation_type" => "ministerial_department",
-          "organisation_state" => "live"
-          }
+          "organisation_state" => "live",
+          },
         ],
         "public_timestamp" => "2018-12-26T12:23:34+01:00",
         "title" => "Dealing with you know who, Ministry of Magic",
@@ -187,7 +187,7 @@ class AtomFeedsTest < ActionDispatch::IntegrationTest
         "es_score" => nil,
         "_id" => "/government/guidance/dark-arts-acolytes-to-dread",
         "elasticsearch_type" => "edition",
-        "document_type" => "edition"
+        "document_type" => "edition",
       },
     ]
   end

@@ -20,9 +20,9 @@ module Organisations
       all_people = @org.all_people.map do |person_type, people|
         {
           type: person_type,
-          title: I18n.t('organisations.people.' + person_type.to_s),
+          title: I18n.t("organisations.people." + person_type.to_s),
           lang: t_fallback("organisations.people.#{person_type}"),
-          people: handle_duplicate_roles(people, person_type)
+          people: handle_duplicate_roles(people, person_type),
         }
       end
 
@@ -77,8 +77,8 @@ module Organisations
       new_role_links = [
         {
           text: new_person_info["role"],
-          href: new_person_info["role_href"]
-        }
+          href: new_person_info["role_href"],
+        },
       ]
 
       existing_role_links.concat(new_role_links)
@@ -88,7 +88,7 @@ module Organisations
       existing_role_description = existing_person_info[:description]
       new_role_description = new_person_info["role"]
 
-      existing_role_description + ', ' + new_role_description
+      existing_role_description + ", " + new_role_description
     end
 
     def is_person_ministerial?(type)
@@ -103,19 +103,19 @@ module Organisations
         metadata: person["payment_type"],
         heading_text: person["name"],
         heading_level: 0,
-        extra_links_no_indent: true
+        extra_links_no_indent: true,
       }
 
       if person["name_prefix"]
         data[:context] = {
-          text: person["name_prefix"]
+          text: person["name_prefix"],
         }
       end
 
       if is_person_ministerial?(type)
         data[:extra_links] = [{
           text: person["role"],
-          href: person["role_href"]
+          href: person["role_href"],
         }]
       end
 

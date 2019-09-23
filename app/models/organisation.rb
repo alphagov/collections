@@ -1,4 +1,4 @@
-require 'active_model'
+require "active_model"
 
 class Organisation
   include ActiveModel::Model
@@ -117,7 +117,7 @@ class Organisation
       board_members: details["ordered_board_members"],
       traffic_commissioners: details["ordered_traffic_commissioners"],
       special_representatives: details["ordered_special_representatives"],
-      chief_professional_officers: details["ordered_chief_professional_officers"]
+      chief_professional_officers: details["ordered_chief_professional_officers"],
     }
   end
 

@@ -36,7 +36,7 @@ module Organisations
           number_of_items: number_of_items,
           parent_column_class: "column-#{number_of_items}",
           child_column_class: promotions_child_column_class(number_of_items),
-          items: items_for_a_promotional_feature(feature)
+          items: items_for_a_promotional_feature(feature),
         }
       end
     end
@@ -52,9 +52,9 @@ module Organisations
           order: "-public_timestamp",
           filter_organisations: @org.slug,
           reject_content_purpose_supergroup: "other",
-          fields: %w[title link content_store_document_type public_timestamp]
+          fields: %w[title link content_store_document_type public_timestamp],
         },
-        metric_key: "organisations.search.request_time"
+        metric_key: "organisations.search.request_time",
       )["results"]
 
       search_results_to_documents(@latest_documents, @org)
@@ -72,11 +72,11 @@ module Organisations
           extra_links: item["links"].map do |link|
             {
               text: link["title"],
-              href: link["href"]
+              href: link["href"],
             }
           end,
           brand: org.brand,
-          heading_level: 3
+          heading_level: 3,
         }
 
         if item["title"].present?
@@ -100,12 +100,12 @@ module Organisations
           image_alt: news["image"]["alt_text"],
           context: {
             date: date,
-            text: news["document_type"]
+            text: news["document_type"],
           },
           heading_text: news["title"],
           description: news["summary"].html_safe,
           brand: org.brand,
-          heading_level: 3
+          heading_level: 3,
         }
       end
 

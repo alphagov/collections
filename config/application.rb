@@ -1,4 +1,4 @@
-require_relative 'boot'
+require_relative "boot"
 
 require "action_controller/railtie"
 require "sprockets/railtie"
@@ -8,8 +8,8 @@ require "rails/test_unit/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-if !Rails.env.production? || ENV['HEROKU_APP_NAME'].present?
-  require 'govuk_publishing_components'
+if !Rails.env.production? || ENV["HEROKU_APP_NAME"].present?
+  require "govuk_publishing_components"
 end
 
 module Collections
@@ -25,7 +25,7 @@ module Collections
 
     # Override Rails 4 default which restricts framing to SAMEORIGIN.
     config.action_dispatch.default_headers = {
-      'X-Frame-Options' => 'ALLOWALL'
+      "X-Frame-Options" => "ALLOWALL",
     }
 
     # Custom directories with classes and modules you want to be autoloadable.

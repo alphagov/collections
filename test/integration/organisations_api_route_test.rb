@@ -1,4 +1,4 @@
-require 'integration_test_helper'
+require "integration_test_helper"
 
 class OrganisationApiRouteTest < ActionDispatch::IntegrationTest
   it "should respond with '404 for a bad route'" do

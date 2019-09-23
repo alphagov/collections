@@ -12,14 +12,14 @@ class ActiveSupport::TestCase
 
   def assert_includes_params(expected_params)
     search_results = {
-      'results' => [
+      "results" => [
         {
-          'title' => 'Doc 1'
+          "title" => "Doc 1",
         },
         {
-          'title' => 'Doc 2'
-        }
-      ]
+          "title" => "Doc 2",
+        },
+      ],
     }
 
     Services.
@@ -32,7 +32,7 @@ class ActiveSupport::TestCase
 
     assert_equal(results.count, 2)
 
-    assert_equal(results.first.title, 'Doc 1')
-    assert_equal(results.last.title, 'Doc 2')
+    assert_equal(results.first.title, "Doc 1")
+    assert_equal(results.last.title, "Doc 2")
   end
 end

@@ -13,7 +13,7 @@ module TopicListHelper
       track_action: list_index ? "#{list_index + 1}." : "",
       track_options: {
         dimension28: list_count.to_s,
-      }
+      },
     }
   end
 
@@ -21,7 +21,7 @@ module TopicListHelper
     tracking_attributes ||= topic_list_tracking_attributes(list.count, list_index, category)
 
     {
-      items: topic_list_items(list, tracking_attributes)
+      items: topic_list_items(list, tracking_attributes),
     }
   end
 
@@ -32,7 +32,7 @@ private
       {
         text: list_item.title,
         path: list_item.base_path,
-        data_attributes: topic_list_item_tracking_attributes(tracking_attributes, list_item.title, list_item.base_path, list_item_index)
+        data_attributes: topic_list_item_tracking_attributes(tracking_attributes, list_item.title, list_item.base_path, list_item_index),
       }
     end
   end

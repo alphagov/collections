@@ -8,7 +8,7 @@ class Topic
     :linked_items,
     :details,
     :to_hash,
-    to: :content_item
+    to: :content_item,
   )
 
   def self.find(base_path, pagination_options = {})
@@ -46,6 +46,6 @@ class Topic
   end
 
   def slug
-    base_path.sub(%r{\A/topic/}, '')
+    base_path.sub(%r{\A/topic/}, "")
   end
 end

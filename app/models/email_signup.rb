@@ -1,4 +1,4 @@
-require 'active_model'
+require "active_model"
 
 class EmailSignup
   include ActiveModel::Model
@@ -13,7 +13,7 @@ class EmailSignup
 
   def save
     if valid?
-      @subscription_url = find_or_create_subscription.dig('subscriber_list', 'subscription_url')
+      @subscription_url = find_or_create_subscription.dig("subscriber_list", "subscription_url")
     end
   end
 
@@ -27,10 +27,10 @@ private
 
   def subscription_params
     {
-      'title' => subtopic.combined_title,
-      'links' => {
-        'topics' => [subtopic.content_id]
-      }
+      "title" => subtopic.combined_title,
+      "links" => {
+        "topics" => [subtopic.content_id],
+      },
     }
   end
 end

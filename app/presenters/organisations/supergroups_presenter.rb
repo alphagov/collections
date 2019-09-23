@@ -27,7 +27,7 @@ module Organisations
           documents: search_results_to_documents(supergroup.documents, @org, include_metadata: !exclude_metadata),
           title: I18n.t(:title, scope: [:organisations, :document_types, supergroup.content_purpose_supergroup]),
           lang: t_fallback("organisations.document_types.#{supergroup.content_purpose_supergroup}.title"),
-          finder_link: finder_link(supergroup)
+          finder_link: finder_link(supergroup),
         }
       }.compact
     end
@@ -48,7 +48,7 @@ module Organisations
           organisation: @org.slug,
           scope: [:organisations, :document_types, document_type, :see_all],
         ),
-        lang: t_lang("organisations.document_types.#{supergroup.content_purpose_supergroup}.see_all.text")
+        lang: t_lang("organisations.document_types.#{supergroup.content_purpose_supergroup}.see_all.text"),
       }
     end
 

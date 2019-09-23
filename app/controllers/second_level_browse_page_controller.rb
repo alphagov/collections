@@ -13,7 +13,7 @@ class SecondLevelBrowsePageController < ApplicationController
           content_id: page.content_id,
           navigation_page_type: "Second Level Browse",
           breadcrumbs: breadcrumb_content,
-          html: render_partial('_links', page: page)
+          html: render_partial("_links", page: page),
         }
       end
     end
@@ -24,7 +24,7 @@ private
   def show_html
     render :show, locals: {
       page: page,
-      meta_section: meta_section
+      meta_section: meta_section,
     }
   end
 
@@ -34,7 +34,7 @@ private
 
   def page
     @page ||= MainstreamBrowsePage.find(
-      "/browse/#{params[:top_level_slug]}/#{params[:second_level_slug]}"
+      "/browse/#{params[:top_level_slug]}/#{params[:second_level_slug]}",
     )
   end
 end

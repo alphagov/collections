@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 describe Search::Supergroups do
   include OrganisationHelpers
@@ -19,26 +19,26 @@ describe Search::Supergroups do
     }
   end
 
-  describe '#has_groups?' do
-    it 'returns false if no groups have documents' do
+  describe "#has_groups?" do
+    it "returns false if no groups have documents" do
       assert_equal false, @no_docs_supergroups.has_groups?
     end
 
-    it 'returns true if at least one supergroup has documents' do
+    it "returns true if at least one supergroup has documents" do
       assert_equal true, @supergroups.has_groups?
     end
   end
 
-  describe '#groups' do
-    it 'returns an array of supergroups' do
+  describe "#groups" do
+    it "returns an array of supergroups" do
       assert_instance_of Search::Supergroup, @supergroups.groups.first
     end
 
-    it 'returns an array of supergroups regardless of doc responses' do
+    it "returns an array of supergroups regardless of doc responses" do
       assert_equal @supergroups.groups.map(&:content_purpose_supergroup), @no_docs_supergroups.groups.map(&:content_purpose_supergroup)
     end
 
-    it 'applies the given additional search parameters' do
+    it "applies the given additional search parameters" do
       @supergroups.groups.each do |group|
         params = Search::Supergroups::SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(
           group.content_purpose_supergroup,
@@ -55,7 +55,7 @@ describe Search::Supergroups do
       "title" => "Quiddich World Cup 2022 begins",
       "link" => "/government/news/its-coming-home",
       "content_store_document_type" => "news_story",
-      "public_timestamp " => "2022-11-21T12:00:00.000+01:00"
+      "public_timestamp " => "2022-11-21T12:00:00.000+01:00",
     }
   end
 
@@ -66,7 +66,7 @@ describe Search::Supergroups do
         filter_content_purpose_supergroup: group,
         filter_organisations: organisation.slug,
         order: Search::Supergroup::DEFAULT_SORT_ORDER,
-      }.merge(Search::Supergroups::SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(group, {}))
+      }.merge(Search::Supergroups::SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(group, {})),
     )
   end
 end

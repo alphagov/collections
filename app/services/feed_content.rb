@@ -17,9 +17,9 @@ private
       count: 20,
       fields: RummagerFields::FEED_SEARCH_FIELDS,
       reject_content_purpose_supergroup: "other",
-      order: '-public_timestamp',
+      order: "-public_timestamp",
     )
 
-    @search_response ||= Services.cached_search(params, metric_key: 'feeds.search.request_time')
+    @search_response ||= Services.cached_search(params, metric_key: "feeds.search.request_time")
   end
 end

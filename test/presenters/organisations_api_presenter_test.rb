@@ -68,7 +68,7 @@ describe OrganisationsApiPresenter do
         _id: "/government/organisations/who-framed-roger-rabbit",
         elasticsearch_type: "edition",
         document_type: "edition",
-      }.deep_stringify_keys
+      }.deep_stringify_keys,
     ]
   end
 

@@ -34,7 +34,7 @@ private
       current_page: current_page,
       results_per_page: RESULTS_PER_PAGE,
       total_results: organisations["total"],
-      current_url_without_parameters: current_url_without_parameters
+      current_url_without_parameters: current_url_without_parameters,
     ).present
   end
 
@@ -49,7 +49,7 @@ private
       results_per_page: 1,
       total_results: 1,
       current_url_without_parameters: current_url_without_parameters,
-      wrap_in_results_array: false
+      wrap_in_results_array: false,
     ).present
   end
 
@@ -58,10 +58,10 @@ private
       filter_format: "organisation",
       order: "title",
       count: count,
-      start: start
+      start: start,
     }
 
-    @organisations_from_search ||= Services.cached_search(params, metric_key: 'organisations_api.search.request_time')
+    @organisations_from_search ||= Services.cached_search(params, metric_key: "organisations_api.search.request_time")
   end
 
   def organisation_from_search(slug:)
@@ -69,10 +69,10 @@ private
       filter_format: "organisation",
       filter_slug: slug,
       count: 1,
-      start: 0
+      start: 0,
     }
 
-    @organisation_from_search ||= Services.cached_search(params, metric_key: 'organisation_api.search.request_time')
+    @organisation_from_search ||= Services.cached_search(params, metric_key: "organisation_api.search.request_time")
   end
 
   def set_link_header(links:)

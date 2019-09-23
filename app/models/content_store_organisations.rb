@@ -1,4 +1,4 @@
-require 'active_model'
+require "active_model"
 
 class ContentStoreOrganisations
   include ActiveModel::Model
@@ -16,7 +16,7 @@ class ContentStoreOrganisations
       "non_ministerial_department" => "Non-ministerial department",
       "tribunal_ndpb" => "Tribunal non-departmental public body",
       "tribunal" => "Tribunal",
-      "public_corporation" => "Public corporation"
+      "public_corporation" => "Public corporation",
   }.freeze
 
   def initialize(content_item)
@@ -24,7 +24,7 @@ class ContentStoreOrganisations
   end
 
   def live?
-    organisation_state == 'live'
+    organisation_state == "live"
   end
 
   def self.find!(base_path)

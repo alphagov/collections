@@ -6,7 +6,7 @@ module OrganisationFeedHelpers
       fields: %w(title link description display_type public_timestamp),
       filter_organisations: organisation,
       reject_content_purpose_supergroup: "other",
-      order: '-public_timestamp',
+      order: "-public_timestamp",
     }
 
     Services.rummager.stubs(:search)

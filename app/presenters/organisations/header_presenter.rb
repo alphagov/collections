@@ -10,13 +10,13 @@ module Organisations
       [
         {
           title: "Home",
-          url: "/"
+          url: "/",
         },
         index_page_breadcrumb,
         {
           title: @org.title,
-          is_current_page: true
-        }
+          is_current_page: true,
+        },
       ]
     end
 
@@ -29,7 +29,7 @@ module Organisations
       if org.organisation_image_url
         component_data[:image] = {
           url: org.organisation_image_url,
-          alt_text: org.organisation_image_alt_text
+          alt_text: org.organisation_image_alt_text,
         }
       end
 
@@ -43,14 +43,14 @@ module Organisations
         if has_services_and_information_link?
           see_more_link = {
             text: "All #{org.acronym} services and information",
-            path: "/government/organisations/#{org.slug}/services-information"
+            path: "/government/organisations/#{org.slug}/services-information",
           }
         end
 
         org.ordered_featured_links.each do |link|
           links << {
             text: link["title"],
-            path: link["href"]
+            path: link["href"],
           }
         end
 
@@ -58,7 +58,7 @@ module Organisations
           small: org.is_news_organisation?,
           brand: org.brand,
           items: links,
-          see_more_link: see_more_link
+          see_more_link: see_more_link,
         }
       end
     end
@@ -85,14 +85,14 @@ module Organisations
             locale: link["locale"],
             base_path: link["base_path"],
             text: I18n.t("language_names.#{link['locale']}"),
-            active: active
+            active: active,
           }
         end
 
         {
           brand: org.brand,
           no_margin_top: true,
-          translations: links.sort_by { |t| t[:locale] == I18n.default_locale.to_s ? '' : t[:locale] }
+          translations: links.sort_by { |t| t[:locale] == I18n.default_locale.to_s ? "" : t[:locale] },
         }
       end
     end
@@ -103,12 +103,12 @@ module Organisations
       if org.is_court_or_hmcts_tribunal?
         {
           title: "Courts and Tribunals",
-          url: "/courts-tribunals"
+          url: "/courts-tribunals",
         }
       else
         {
           title: "Organisations",
-          url: "/government/organisations"
+          url: "/government/organisations",
         }
       end
     end

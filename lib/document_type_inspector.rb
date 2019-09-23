@@ -8,7 +8,7 @@ class DocumentTypeInspector
   end
 
   def document_type
-    content_item['document_type']
+    content_item["document_type"]
   end
 
 private

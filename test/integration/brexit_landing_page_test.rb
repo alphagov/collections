@@ -1,11 +1,11 @@
-require 'integration_test_helper'
-require_relative '../support/brexit_landing_page_steps'
+require "integration_test_helper"
+require_relative "../support/brexit_landing_page_steps"
 
 class BrexitLandingPageTest < ActionDispatch::IntegrationTest
   include BrexitLandingPageSteps
 
-  context 'when there should be a dynamic list' do
-    it 'renders the brexit page' do
+  context "when there should be a dynamic list" do
+    it "renders the brexit page" do
       given_there_is_a_brexit_taxon
       when_i_visit_the_brexit_landing_page_with_dynamic_list
       then_i_can_see_the_title_section
@@ -33,8 +33,8 @@ class BrexitLandingPageTest < ActionDispatch::IntegrationTest
     end
   end
 
-  context 'when there should not be a dynamic list' do
-    it 'does not show the list' do
+  context "when there should not be a dynamic list" do
+    it "does not show the list" do
       given_there_is_a_brexit_taxon
       when_i_visit_the_brexit_landing_page_without_dynamic_list
       then_i_cannot_see_the_get_ready_section

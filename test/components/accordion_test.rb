@@ -1,4 +1,4 @@
-require 'component_test_helper'
+require "component_test_helper"
 
 class AccordionTest < ComponentTestCase
   def component_name
@@ -8,13 +8,13 @@ class AccordionTest < ComponentTestCase
   def simple_accordion
     [
       {
-        title: 'General information and guidance',
-        panel: '1st panel contents'
+        title: "General information and guidance",
+        panel: "1st panel contents",
       },
       {
-        title: 'Alternative provision censuses',
-        panel: '2nd panel contents'
-      }
+        title: "Alternative provision censuses",
+        panel: "2nd panel contents",
+      },
     ]
   end
 
