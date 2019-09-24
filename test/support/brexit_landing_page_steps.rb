@@ -1,6 +1,6 @@
-require 'gds_api/test_helpers/content_item_helpers'
-require 'gds_api/test_helpers/rummager'
-require_relative '../../test/support/rummager_helpers'
+require "gds_api/test_helpers/content_item_helpers"
+require "gds_api/test_helpers/rummager"
+require_relative "../../test/support/rummager_helpers"
 
 module BrexitLandingPageSteps
   include GdsApi::TestHelpers::ContentItemHelpers
@@ -41,34 +41,34 @@ module BrexitLandingPageSteps
   end
 
   def then_i_can_see_the_title_section
-    assert page.has_selector?('title', text: "Get ready for Brexit", visible: false)
+    assert page.has_selector?("title", text: "Get ready for Brexit", visible: false)
 
-    within '.gem-c-breadcrumbs' do
-      assert page.has_link?('Home', href: '/')
+    within ".gem-c-breadcrumbs" do
+      assert page.has_link?("Home", href: "/")
     end
   end
 
   def then_i_can_see_the_header_section
-    assert page.has_selector?('.landing-page__header h1', text: "Get ready for Brexit")
+    assert page.has_selector?(".landing-page__header h1", text: "Get ready for Brexit")
   end
 
   def then_i_can_see_the_get_ready_section
-    assert page.has_selector?('.landing-page__ready-intro', text: "Answer a few questions to find out how you or your business should prepare.")
-    assert page.has_selector?('.gem-c-chevron-banner__link', text: "Check what you need to do")
+    assert page.has_selector?(".landing-page__ready-intro", text: "Answer a few questions to find out how you or your business should prepare.")
+    assert page.has_selector?(".gem-c-chevron-banner__link", text: "Check what you need to do")
   end
 
   def then_i_cannot_see_the_get_ready_section
-    assert page.has_no_selector?('.landing-page__ready-intro', text: "Answer a few questions to find out how you or your business should prepare.")
-    assert page.has_no_selector?('.gem-c-chevron-banner__link', text: "Check what you need to do")
+    assert page.has_no_selector?(".landing-page__ready-intro", text: "Answer a few questions to find out how you or your business should prepare.")
+    assert page.has_no_selector?(".gem-c-chevron-banner__link", text: "Check what you need to do")
   end
 
   def then_i_can_see_the_share_links_section
-    assert page.has_selector?('.landing-page__share .gem-c-share-links')
+    assert page.has_selector?(".landing-page__share .gem-c-share-links")
   end
 
   def then_i_can_see_the_buckets_section
-    assert page.has_selector?('.landing-page__section h2', text: "Individuals and families")
-    assert page.has_selector?('.landing-page__section h2', text: "Businesses and organisations")
+    assert page.has_selector?(".landing-page__section h2", text: "Individuals and families")
+    assert page.has_selector?(".landing-page__section h2", text: "Businesses and organisations")
   end
 
   def and_i_can_see_an_email_subscription_link
@@ -76,7 +76,7 @@ module BrexitLandingPageSteps
   end
 
   def and_i_can_see_the_explore_topics_section
-    assert page.has_selector?('.gem-c-heading', text: "All Brexit information")
+    assert page.has_selector?(".gem-c-heading", text: "All Brexit information")
 
     supergroups = [
       "Services": "services",
@@ -84,13 +84,13 @@ module BrexitLandingPageSteps
       "Guidance and regulation": "guidance-and-regulation",
       "Research and statistics": "research-and-statistics",
       "Policy and engagement": "policy-and-engagement",
-      "Transparency": "transparency"
+      "Transparency": "transparency",
     ]
 
     supergroups.each do |_|
       assert page.has_link?(
-        'Services',
-        href: "/search/services?parent=%2Fbrexit&topic=d6c2de5d-ef90-45d1-82d4-5f2438369eea"
+        "Services",
+        href: "/search/services?parent=%2Fbrexit&topic=d6c2de5d-ef90-45d1-82d4-5f2438369eea",
       )
     end
   end
@@ -104,9 +104,9 @@ module BrexitLandingPageSteps
 
   def then_all_finder_links_have_tracking_data
     [
-      'Services', 'Guidance and regulation', 'News and communications',
-      'Research and statistics', 'Policy papers and consultations',
-      'Transparency and freedom of information releases'
+      "Services", "Guidance and regulation", "News and communications",
+      "Research and statistics", "Policy papers and consultations",
+      "Transparency and freedom of information releases"
     ].each do |section|
       assert page.has_css?("a[data-track-category='SeeAllLinkClicked']", text: section)
       assert page.has_css?("a[data-track-action=\"#{current_path}\"]", text: section)

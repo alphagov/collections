@@ -86,8 +86,8 @@ describe Topic do
         },
       ]
 
-      assert_equal 'Bar', @topic.children[0].title
-      assert_equal 'Foo', @topic.children[1].title
+      assert_equal "Bar", @topic.children[0].title
+      assert_equal "Foo", @topic.children[1].title
     end
 
     it "returns empty array with no children" do

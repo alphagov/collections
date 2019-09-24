@@ -1,4 +1,4 @@
-require 'component_test_helper'
+require "component_test_helper"
 
 class EmailLinkTest < ComponentTestCase
   def component_name
@@ -7,13 +7,13 @@ class EmailLinkTest < ComponentTestCase
 
   test "renders nothing without a href" do
     assert_empty render_component(
-      text: 'Sign up for email'
+      text: "Sign up for email",
     )
   end
 
   test "renders nothing without text" do
     assert_empty render_component(
-      href: '/email'
+      href: "/email",
     )
   end
 
@@ -23,10 +23,10 @@ class EmailLinkTest < ComponentTestCase
 
   test "renders correct link when given a href and text" do
     render_component(
-      text: 'Get alerts',
-      href: '/email'
+      text: "Get alerts",
+      href: "/email",
     )
 
-    assert_select ".app-c-email-link[href='/email']", text: 'Get alerts'
+    assert_select ".app-c-email-link[href='/email']", text: "Get alerts"
   end
 end

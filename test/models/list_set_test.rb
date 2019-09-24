@@ -9,18 +9,18 @@ describe ListSet do
         {
           "name" => "Paying HMRC",
           "contents" => [
-           '/pay-paye-tax',
-           '/pay-psa',
-           '/pay-paye-penalty',
-          ]
+           "/pay-paye-tax",
+           "/pay-psa",
+           "/pay-paye-penalty",
+          ],
         },
         {
           "name" => "Annual PAYE and payroll tasks",
           "contents" => [
-           '/payroll-annual-reporting',
-           '/get-paye-forms-p45-p60',
-           '/employee-tax-codes',
-          ]
+           "/payroll-annual-reporting",
+           "/get-paye-forms-p45-p60",
+           "/employee-tax-codes",
+          ],
         },
       ]
 
@@ -34,7 +34,7 @@ describe ListSet do
           pay-psa
           payroll-annual-reporting
         ],
-        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
+        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       )
 
       @list_set = ListSet.new("specialist_sector", "paye-content-id", @group_data)
@@ -90,7 +90,7 @@ describe ListSet do
           employee-tax-codes
           payroll-annual-reporting
         ],
-        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
+        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       )
       @list_set = ListSet.new("specialist_sector", "paye-content-id", [])
     end
@@ -107,7 +107,7 @@ describe ListSet do
         "Pay paye penalty",
         "Pay paye tax",
         "Pay psa",
-        "Payroll annual reporting"
+        "Payroll annual reporting",
       ]
       assert_equal expected_titles, @list_set.first.contents.map(&:title)
     end
@@ -125,7 +125,7 @@ describe ListSet do
 
   describe "fetching content tagged to this tag" do
     setup do
-      @subtopic_content_id = 'paye-content-id'
+      @subtopic_content_id = "paye-content-id"
       rummager_has_documents_for_subtopic(@subtopic_content_id, %w[
         pay-paye-penalty
         pay-paye-tax
@@ -137,11 +137,11 @@ describe ListSet do
 
     it "returns the content for the tag" do
       expected_titles = [
-        'Pay paye penalty',
-        'Pay paye tax',
-        'Pay psa',
-        'Employee tax codes',
-        'Payroll annual reporting',
+        "Pay paye penalty",
+        "Pay paye tax",
+        "Pay psa",
+        "Employee tax codes",
+        "Payroll annual reporting",
       ]
 
       assert_equal expected_titles.sort, ListSet.new("specialist_sector", @subtopic_content_id).first.contents.map(&:title).sort
@@ -157,11 +157,11 @@ describe ListSet do
 
   describe "handling missing fields in the search results" do
     it "handles documents that don't contain the public_timestamp field" do
-      result = rummager_document_for_slug('pay-psa')
+      result = rummager_document_for_slug("pay-psa")
       result.delete("public_timestamp")
 
       Services.rummager.stubs(:search).with(
-        has_entries(filter_topic_content_ids: %w[paye-content-id])
+        has_entries(filter_topic_content_ids: %w[paye-content-id]),
       ).returns("results" => [result],
         "start" => 0,
         "total" => 1)
@@ -169,7 +169,7 @@ describe ListSet do
       documents = ListSet.new("specialist_sector", "paye-content-id").first.contents
 
       assert_equal 1, documents.to_a.size
-      assert_equal 'Pay psa', documents.first.title
+      assert_equal "Pay psa", documents.first.title
       assert_nil documents.first.public_updated_at
     end
   end
@@ -181,10 +181,10 @@ describe ListSet do
 
     it "shouldn't display a document if its format is excluded" do
       rummager_has_documents_for_browse_page(
-        'content-id-for-living-abroad',
+        "content-id-for-living-abroad",
         %w[baz],
         ListSet::BROWSE_FORMATS_TO_EXCLUDE.to_a.last,
-        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
+        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       )
 
       assert_equal 0, @list_set.first.contents.length
@@ -192,15 +192,15 @@ describe ListSet do
 
     it "should display a document if its format isn't excluded" do
       rummager_has_documents_for_browse_page(
-        'content-id-for-living-abroad',
+        "content-id-for-living-abroad",
         %w[baz],
-        'some-format-not-excluded',
-        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
+        "some-format-not-excluded",
+        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       )
 
       results = @list_set.first.contents
       assert_equal 1, results.length
-      assert_equal 'Baz', results.first.title
+      assert_equal "Baz", results.first.title
     end
   end
 end

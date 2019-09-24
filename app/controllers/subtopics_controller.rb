@@ -5,7 +5,7 @@ class SubtopicsController < ApplicationController
 
     render :show, locals: {
       subtopic: subtopic,
-      meta_section: subtopic.parent.title.downcase
+      meta_section: subtopic.parent.title.downcase,
     }
   end
 
@@ -20,7 +20,7 @@ private
     params = {
       count: "0",
       filter_topic_content_ids: [subtopic_content_id],
-      facet_organisations: "1000"
+      facet_organisations: "1000",
     }
     results = Services.cached_search(params)
 

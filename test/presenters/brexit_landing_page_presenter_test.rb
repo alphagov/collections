@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 describe BrexitLandingPagePresenter do
   before :each do
@@ -8,43 +8,43 @@ describe BrexitLandingPagePresenter do
   let(:yaml_contents) {
     [
       {
-        'section_id' => 'id1',
-        'section_description' => "description 1",
-        'section_list' => [{
-          'list_block' => "List block",
-          'list_links' => [
+        "section_id" => "id1",
+        "section_description" => "description 1",
+        "section_list" => [{
+          "list_block" => "List block",
+          "list_links" => [
             {
-              'text' => 'text1',
-              'description' => '<h1>description1</h1>'
+              "text" => "text1",
+              "description" => "<h1>description1</h1>",
             },
             {
-              'text' => 'text2',
-              'description' => '<h1>description2</h1>'
-            }
-          ]
-        }]
+              "text" => "text2",
+              "description" => "<h1>description2</h1>",
+            },
+          ],
+        }],
       },
       {
-        'section_id' => 'id2',
-        'section_list' => [{
-          'row_title' => "title",
-          'row_title_description' => "[Hello](/)",
-          'list_links' => [
+        "section_id" => "id2",
+        "section_list" => [{
+          "row_title" => "title",
+          "row_title_description" => "[Hello](/)",
+          "list_links" => [
             {
-              'text' => 'text1',
-              'description' => '<h1>description1</h1>'
+              "text" => "text1",
+              "description" => "<h1>description1</h1>",
             },
             {
-              'text' => 'text2',
-              'description' => '<h1>description2</h1>'
-            }
-          ]
-        }]
+              "text" => "text2",
+              "description" => "<h1>description2</h1>",
+            },
+          ],
+        }],
       },
       {
-        'section_id' => 'id3',
-        'section_description' => "text"
-      }
+        "section_id" => "id3",
+        "section_description" => "text",
+      },
     ]
   }
 
@@ -52,24 +52,24 @@ describe BrexitLandingPagePresenter do
     BrexitLandingPagePresenter.new(taxon)
   }
 
-  let(:taxon) { Taxon.new(ContentItem.new('content_id' => 'content_id', 'base_path' => '/base_path')) }
+  let(:taxon) { Taxon.new(ContentItem.new("content_id" => "content_id", "base_path" => "/base_path")) }
 
-  describe '#buckets' do
-    it 'html-safes the section_description' do
+  describe "#buckets" do
+    it "html-safes the section_description" do
       assert subject.buckets[0]["section_description"].html_safe?
     end
 
-    it 'html-safes the list block' do
+    it "html-safes the list block" do
       assert subject.buckets[0]["section_list"][0]["list_block"].html_safe?
     end
 
-    it 'html-safes the row title description' do
+    it "html-safes the row title description" do
       assert subject.buckets[1]["section_list"][0]["row_title_description"].html_safe?
     end
   end
 
-  describe '#supergroup_sections' do
-    it 'returns the presented supergroup sections' do
+  describe "#supergroup_sections" do
+    it "returns the presented supergroup sections" do
       result_hash = [
         {
           text: "Services",
@@ -79,8 +79,8 @@ describe BrexitLandingPagePresenter do
             track_category: "SeeAllLinkClicked",
             track_action: "/base_path",
             track_label: "services",
-            module: "track-click"
-          }
+            module: "track-click",
+          },
         },
         {
           text: "Guidance and regulation",
@@ -90,8 +90,8 @@ describe BrexitLandingPagePresenter do
             track_category: "SeeAllLinkClicked",
             track_action: "/base_path",
             track_label: "guidance_and_regulation",
-            module: "track-click"
-          }
+            module: "track-click",
+          },
         },
         {
           text: "News and communications",
@@ -101,8 +101,8 @@ describe BrexitLandingPagePresenter do
             track_category: "SeeAllLinkClicked",
             track_action: "/base_path",
             track_label: "news_and_communications",
-            module: "track-click"
-          }
+            module: "track-click",
+          },
         },
         {
           text: "Research and statistics",
@@ -112,8 +112,8 @@ describe BrexitLandingPagePresenter do
             track_category: "SeeAllLinkClicked",
             track_action: "/base_path",
             track_label: "research_and_statistics",
-            module: "track-click"
-         }
+            module: "track-click",
+         },
         },
         {
           text: "Policy papers and consultations",
@@ -123,8 +123,8 @@ describe BrexitLandingPagePresenter do
             track_category: "SeeAllLinkClicked",
             track_action: "/base_path",
             track_label: "policy_and_engagement",
-            module: "track-click"
-          }
+            module: "track-click",
+          },
         },
         {
           text: "Transparency and freedom of information releases",
@@ -134,9 +134,9 @@ describe BrexitLandingPagePresenter do
             track_category: "SeeAllLinkClicked",
             track_action: "/base_path",
             track_label: "transparency",
-            module: "track-click"
-          }
-        }
+            module: "track-click",
+          },
+        },
       ]
       assert_equal subject.supergroup_sections, result_hash
     end

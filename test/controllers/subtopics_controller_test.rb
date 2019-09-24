@@ -33,12 +33,12 @@ describe SubtopicsController do
             "title" => "Parent Topic Title",
             "base_path" => "/#{parent_path}",
           }],
-        }
+        },
 ),
     )
 
     ListSet.stubs(:new).returns(
-      [ListSet::List.new("test", [])]
+      [ListSet::List.new("test", [])],
     )
 
     Services.rummager.stubs(:search).with(
@@ -46,7 +46,7 @@ describe SubtopicsController do
       filter_topic_content_ids: [content_id],
       facet_organisations: "1000",
     ).returns(
-      stub_search_has_specialist_sector_organisations("#{parent_path}/#{path}")
+      stub_search_has_specialist_sector_organisations("#{parent_path}/#{path}"),
 )
   end
 end

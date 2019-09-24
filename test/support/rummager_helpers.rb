@@ -7,7 +7,7 @@ module RummagerHelpers
       count: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       fields: %w(title description link content_store_document_type),
       filter_taxons: Array(content_ids),
-      order: 'title',
+      order: "title",
     }
 
     Services.rummager.stubs(:search)
@@ -34,7 +34,7 @@ module RummagerHelpers
       count: 5,
       fields: fields,
       filter_part_of_taxonomy_tree: Array(content_id),
-      order: '-popularity',
+      order: "-popularity",
       filter_content_store_document_type: filter_content_store_document_type,
     }
 
@@ -56,7 +56,7 @@ module RummagerHelpers
       count: 5,
       fields: fields,
       filter_part_of_taxonomy_tree: [content_id],
-      order: '-public_timestamp',
+      order: "-public_timestamp",
       filter_content_store_document_type: filter_content_store_document_type,
     }
 
@@ -73,19 +73,19 @@ module RummagerHelpers
     params = {
       count: 0,
       aggregate_organisations: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
-      filter_part_of_taxonomy_tree: [content_id]
+      filter_part_of_taxonomy_tree: [content_id],
     }
 
     Services.rummager
     .stubs(:search)
     .with(params)
     .returns(
-      'results' => [],
-      'aggregates' => {
-        'organisations' => {
-          'options' => organisations
-        }
-      }
+      "results" => [],
+      "aggregates" => {
+        "organisations" => {
+          "options" => organisations,
+        },
+      },
     )
   end
 
@@ -120,7 +120,7 @@ module RummagerHelpers
       filter_topic_content_ids: [content_id],
       facet_organisations: "1000",
     ).returns(
-      stub_search_has_specialist_sector_organisations(slug)
+      stub_search_has_specialist_sector_organisations(slug),
     )
   end
 
@@ -130,7 +130,7 @@ module RummagerHelpers
       filter_organisations: organisation_id,
       facet_specialist_sectors: "1000,examples:4,example_scope:query,order:value.title",
     ).returns(
-      stub_search_has_services_and_info_data_for_organisation
+      stub_search_has_services_and_info_data_for_organisation,
     )
   end
 
@@ -140,7 +140,7 @@ module RummagerHelpers
       filter_organisations: organisation_id,
       facet_specialist_sectors: "1000,examples:4,example_scope:query,order:value.title",
     ).returns(
-      rummager_has_services_and_info_data_with_missing_keys_for_organisation
+      rummager_has_services_and_info_data_with_missing_keys_for_organisation,
     )
   end
 
@@ -155,18 +155,18 @@ module RummagerHelpers
       "_id" => "/#{slug}",
       "document_type" => "edition",
       "content_store_document_type" => "guidance",
-      "organisations" => [{ "title" => "Tagged Organisation Title" }]
+      "organisations" => [{ "title" => "Tagged Organisation Title" }],
     }
   end
 
   def rummager_document_for_supergroup_section(slug, content_store_document_type)
     {
-      'title' => slug.titleize.humanize.to_s,
-      'link' => "/#{slug}",
-      'description' => 'A discription about tagged content',
-      'content_store_document_type' => content_store_document_type,
-      'public_timestamp' => 1.hour.ago.iso8601,
-      'organisations' => [{ 'title' => "#{content_store_document_type.humanize} Organisation Title" }]
+      "title" => slug.titleize.humanize.to_s,
+      "link" => "/#{slug}",
+      "description" => "A discription about tagged content",
+      "content_store_document_type" => content_store_document_type,
+      "public_timestamp" => 1.hour.ago.iso8601,
+      "organisations" => [{ "title" => "#{content_store_document_type.humanize} Organisation Title" }],
     }
   end
 
@@ -183,7 +183,7 @@ module RummagerHelpers
           count: page_size,
           filter_topic_content_ids: [subtopic_content_id],
           order: "-public_timestamp",
-        )
+        ),
       ).returns("results" => results_page,
         "start" => start,
         "total" => results.size)
@@ -202,7 +202,7 @@ module RummagerHelpers
           start: start,
           count: page_size,
           filter_topic_content_ids: [subtopic_content_id],
-        )
+        ),
       ).returns("results" => results_page,
         "start" => start,
         "total" => results.size)
@@ -221,7 +221,7 @@ module RummagerHelpers
           start: start,
           count: page_size,
           filter_mainstream_browse_page_content_ids: [browse_page_content_id],
-        )
+        ),
       ).returns("results" => results_page,
         "start" => start,
         "total" => results.size)
@@ -256,22 +256,22 @@ module RummagerHelpers
     content_list = []
 
     params = {
-      title: 'Tagged Content Title',
-      description: 'Description of tagged content',
-      public_updated_at: '2018-02-28T08:01:00.000+00:00',
-      base_path: '/government/tagged/content',
+      title: "Tagged Content Title",
+      description: "Description of tagged content",
+      public_updated_at: "2018-02-28T08:01:00.000+00:00",
+      base_path: "/government/tagged/content",
       content_store_document_type: doc_type,
-      organisations: 'Tagged Content Organisation',
-      image_url: 'an/image/path'
+      organisations: "Tagged Content Organisation",
+      image_url: "an/image/path",
     }
 
     if doc_type.include?("consultation")
-      params[:end_date] = '2018-08-28T08:01:00.000+01:00'
+      params[:end_date] = "2018-08-28T08:01:00.000+01:00"
     end
 
     count.times do
       content_list.push(
-        Document.new(params)
+        Document.new(params),
       )
     end
 
@@ -282,7 +282,7 @@ module RummagerHelpers
     params = {
       count: 2,
       fields: %w(title link content_store_document_type public_timestamp),
-      order: '-public_timestamp',
+      order: "-public_timestamp",
     }.merge(additional_params)
 
     Services.rummager.stubs(:search)

@@ -1,9 +1,9 @@
-require 'test_helper'
+require "test_helper"
 
 describe Organisations::HeaderPresenter do
   include OrganisationHelpers
 
-  it 'formats data for the translation component correctly' do
+  it "formats data for the translation component correctly" do
     content_item = ContentItem.new(organisation_with_translations)
     organisation = Organisation.new(content_item)
     @header_presenter = Organisations::HeaderPresenter.new(organisation)
@@ -16,15 +16,15 @@ describe Organisations::HeaderPresenter do
           locale: "en",
           base_path: "/government/organisations/office-of-the-secretary-of-state-for-wales",
           text: "English",
-          active: true
+          active: true,
         },
         {
           locale: "cy",
           base_path: "/government/organisations/office-of-the-secretary-of-state-for-wales.cy",
           text: "Cymraeg",
-          active: nil
-        }
-      ]
+          active: nil,
+        },
+      ],
     }
     assert_equal expected, @header_presenter.translation_links
   end

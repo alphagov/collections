@@ -1,5 +1,5 @@
 if defined?(JasmineRails)
-  require 'slimmer/headers'
+  require "slimmer/headers"
 
   module JasmineRails
     class ApplicationController < ActionController::Base

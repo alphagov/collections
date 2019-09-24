@@ -1,4 +1,4 @@
-require 'integration_test_helper'
+require "integration_test_helper"
 
 class TopicBrowsingTest < ActionDispatch::IntegrationTest
   def oil_and_gas_topic_item(params = {})
@@ -34,7 +34,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
 
     assert page.has_content?("Oil and Gas")
 
-    assert page.has_css?('.gem-c-breadcrumbs')
+    assert page.has_css?(".gem-c-breadcrumbs")
   end
 
   it "renders a topic tag page and list its subtopics" do
@@ -77,7 +77,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
     end
   end
 
-  it 'tracks click events on topic pages' do
+  it "tracks click events on topic pages" do
     content_store_has_item("/topic",
                            base_path: "/topic",
                            title: "Topics",
@@ -97,39 +97,39 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
 
     assert page.has_selector?('.topics-page[data-module="track-click"]')
 
-    topic_link = page.find('a', text: 'Oil and Gas')
+    topic_link = page.find("a", text: "Oil and Gas")
 
     assert_equal(
-      'navTopicLinkClicked',
-      topic_link['data-track-category'],
-      'Expected a tracking category to be set in the data attributes'
+      "navTopicLinkClicked",
+      topic_link["data-track-category"],
+      "Expected a tracking category to be set in the data attributes",
     )
 
     assert_equal(
-      '1',
-      topic_link['data-track-action'],
-      'Expected the link position to be set in the data attributes'
+      "1",
+      topic_link["data-track-action"],
+      "Expected the link position to be set in the data attributes",
     )
 
     assert_equal(
-      '/topic/oil-and-gas',
-      topic_link['data-track-label'],
-      'Expected the topic base path to be set in the data attributes'
+      "/topic/oil-and-gas",
+      topic_link["data-track-label"],
+      "Expected the topic base path to be set in the data attributes",
     )
 
-    assert topic_link['data-track-options'].present?
+    assert topic_link["data-track-options"].present?
 
-    data_options = JSON.parse(topic_link['data-track-options'])
+    data_options = JSON.parse(topic_link["data-track-options"])
     assert_equal(
-      '1',
-      data_options['dimension28'],
-      'Expected the total number of topics to be present in the tracking options'
+      "1",
+      data_options["dimension28"],
+      "Expected the total number of topics to be present in the tracking options",
     )
 
     assert_equal(
-      'Oil and Gas',
-      data_options['dimension29'],
-      'Expected the topic title to be present in the tracking options'
+      "Oil and Gas",
+      data_options["dimension29"],
+      "Expected the topic title to be present in the tracking options",
     )
   end
 
@@ -149,39 +149,39 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
 
     within ".app-c-topic-list" do
       within "li:nth-child(1)" do
-        subtopic_link = page.find('a', text: 'Wells')
+        subtopic_link = page.find("a", text: "Wells")
 
         assert_equal(
-          'navSubtopicLinkClicked',
-          subtopic_link['data-track-category'],
-          'Expected a tracking category to be set in the data attributes'
+          "navSubtopicLinkClicked",
+          subtopic_link["data-track-category"],
+          "Expected a tracking category to be set in the data attributes",
         )
 
         assert_equal(
-          '1',
-          subtopic_link['data-track-action'],
-          'Expected the link position to be set in the data attributes'
+          "1",
+          subtopic_link["data-track-action"],
+          "Expected the link position to be set in the data attributes",
         )
 
         assert_equal(
-          '/topic/oil-and-gas/wells',
-          subtopic_link['data-track-label'],
-          'Expected the subtopic base path to be set in the data attributes'
+          "/topic/oil-and-gas/wells",
+          subtopic_link["data-track-label"],
+          "Expected the subtopic base path to be set in the data attributes",
         )
 
-        assert subtopic_link['data-track-options'].present?
+        assert subtopic_link["data-track-options"].present?
 
-        data_options = JSON.parse(subtopic_link['data-track-options'])
+        data_options = JSON.parse(subtopic_link["data-track-options"])
         assert_equal(
-          '1',
-          data_options['dimension28'],
-          'Expected the total number of subtopics to be present in the tracking options'
+          "1",
+          data_options["dimension28"],
+          "Expected the total number of subtopics to be present in the tracking options",
         )
 
         assert_equal(
-          'Wells',
-          data_options['dimension29'],
-          'Expected the subtopic title to be present in the tracking options'
+          "Wells",
+          data_options["dimension29"],
+          "Expected the subtopic title to be present in the tracking options",
         )
       end
     end

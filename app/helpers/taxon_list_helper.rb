@@ -11,7 +11,7 @@ module TaxonListHelper
         path: content_item.base_path,
         text: content_item.title,
         data_attributes: data_attributes,
-        description: content_item.description
+        description: content_item.description,
       }
     end
   end

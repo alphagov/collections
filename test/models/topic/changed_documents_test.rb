@@ -5,7 +5,7 @@ describe Topic::ChangedDocuments do
 
   describe "with a single page of results available" do
     setup do
-      @subtopic_content_id = 'paye-content-id'
+      @subtopic_content_id = "paye-content-id"
       rummager_has_latest_documents_for_subtopic(@subtopic_content_id, %w[
         pay-paye-penalty
         pay-paye-tax
@@ -17,11 +17,11 @@ describe Topic::ChangedDocuments do
 
     it "returns the latest documents for the subtopic" do
       expected_titles = [
-        'Pay paye penalty',
-        'Pay paye tax',
-        'Pay psa',
-        'Employee tax codes',
-        'Payroll annual reporting',
+        "Pay paye penalty",
+        "Pay paye tax",
+        "Pay psa",
+        "Employee tax codes",
+        "Payroll annual reporting",
       ]
 
       assert_equal expected_titles, Topic::ChangedDocuments.new(@subtopic_content_id).map(&:title)
@@ -48,7 +48,7 @@ describe Topic::ChangedDocuments do
 
   describe "with multiple pages of results available" do
     setup do
-      @subtopic_content_id = 'paye-content-id'
+      @subtopic_content_id = "paye-content-id"
       rummager_has_latest_documents_for_subtopic(@subtopic_content_id, %w[
         pay-paye-penalty
         pay-paye-tax
@@ -62,9 +62,9 @@ describe Topic::ChangedDocuments do
 
     it "returns the first page of results" do
       expected_titles = [
-        'Pay paye penalty',
-        'Pay paye tax',
-        'Pay psa',
+        "Pay paye penalty",
+        "Pay paye tax",
+        "Pay psa",
       ]
       assert_equal expected_titles, @documents.map(&:title)
     end
@@ -72,8 +72,8 @@ describe Topic::ChangedDocuments do
     it "returns the requested page of results" do
       @pagination_options[:start] = 3
       expected_titles = [
-        'Employee tax codes',
-        'Payroll annual reporting',
+        "Employee tax codes",
+        "Payroll annual reporting",
       ]
       assert_equal expected_titles, @documents.map(&:title)
     end
@@ -81,11 +81,11 @@ describe Topic::ChangedDocuments do
 
   describe "handling missing fields in the search results" do
     it "handles documents that don't contain the public_timestamp field" do
-      result = rummager_document_for_slug('pay-psa')
+      result = rummager_document_for_slug("pay-psa")
       result.delete("public_timestamp")
 
       Services.rummager.stubs(:search).with(
-        has_entries(filter_topic_content_ids: %w[paye-content-id])
+        has_entries(filter_topic_content_ids: %w[paye-content-id]),
       ).returns("results" => [result],
         "start" => 0,
         "total" => 1)
@@ -93,7 +93,7 @@ describe Topic::ChangedDocuments do
       documents = Topic::ChangedDocuments.new("paye-content-id")
 
       assert_equal 1, documents.to_a.size
-      assert_equal 'Pay psa', documents.first.title
+      assert_equal "Pay psa", documents.first.title
       assert_nil documents.first.public_updated_at
     end
   end

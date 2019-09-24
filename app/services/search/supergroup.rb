@@ -2,7 +2,7 @@ module Search
   class Supergroup
     attr_reader :content_purpose_supergroup, :additional_search_params
 
-    DEFAULT_SORT_ORDER = '-public_timestamp'.freeze
+    DEFAULT_SORT_ORDER = "-public_timestamp".freeze
 
     def initialize(organisation_slug:, content_purpose_supergroup:, additional_search_params: {})
       @organisation_slug = organisation_slug
@@ -37,7 +37,7 @@ module Search
       {
         count: 2,
         order: DEFAULT_SORT_ORDER,
-        fields: %w[title link content_store_document_type public_timestamp]
+        fields: %w[title link content_store_document_type public_timestamp],
       }
     end
   end

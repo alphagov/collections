@@ -9,7 +9,7 @@ class TaxonPresenter
     :live_taxon?,
     :section_content,
     :organisations,
-    to: :taxon
+    to: :taxon,
   )
 
   def initialize(taxon)
@@ -30,8 +30,8 @@ class TaxonPresenter
 
   def options_for_child_taxon(index:)
     {
-      module: 'track-click',
-      track_category: 'navGridContentClicked',
+      module: "track-click",
+      track_category: "navGridContentClicked",
       track_action: (index + 1).to_s,
       track_label: child_taxons[index].base_path,
       track_options: {},

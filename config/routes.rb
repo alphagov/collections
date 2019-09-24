@@ -3,13 +3,13 @@ Rails.application.routes.draw do
   # content-store (by collections-publisher) - whenever the routes below
   # change, also change the routes claimed by collections-publisher.
 
-  mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
+  mount JasmineRails::Engine => "/specs" if defined?(JasmineRails)
   mount GovukPublishingComponents::Engine, at: "/component-guide"
 
   get "/browse.json" => redirect("/api/content/browse")
 
   resources :browse, only: %i(index show), param: :top_level_slug do
-    get ':second_level_slug', on: :member, to: "second_level_browse_page#show"
+    get ":second_level_slug", on: :member, to: "second_level_browse_page#show"
   end
 
   resources :topics, only: %i(index show), path: :topic, param: :topic_slug do
@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   #TODO this redirect causes the request to be routed to Whitehall where
   #the country A-Z currently lives. This needs to be removed when the world index
   #page is rendered here
-  get '/world/all', to: redirect('/world')
+  get "/world/all", to: redirect("/world")
 
   get "/topic/:topic_slug/:subtopic_slug/latest",
     to: "latest_changes#index", as: :latest_changes
@@ -34,7 +34,7 @@ Rails.application.routes.draw do
   get "/government/organisations",
     to: "organisations#index",
     as: :organisations
-  get '/government/organisations/:organisation_name(.:locale).:format',
+  get "/government/organisations/:organisation_name(.:locale).:format",
     constraints: {
       format: /atom/,
       locale: /\w{2}(-[\d\w]{2,3})?/,
@@ -68,11 +68,11 @@ Rails.application.routes.draw do
     to: "organisations#court",
     as: :court
 
-  constraints DocumentTypeRoutingConstraint.new('step_by_step_nav') do
-    get "/:slug", to: 'step_nav#show'
+  constraints DocumentTypeRoutingConstraint.new("step_by_step_nav") do
+    get "/:slug", to: "step_nav#show"
   end
 
-  get '/world/*taxon_base_path', to: 'world_wide_taxons#show'
-  get '/brexit', to: 'brexit_landing_page#show'
-  get '*taxon_base_path', to: 'taxons#show'
+  get "/world/*taxon_base_path", to: "world_wide_taxons#show"
+  get "/brexit", to: "brexit_landing_page#show"
+  get "*taxon_base_path", to: "taxons#show"
 end

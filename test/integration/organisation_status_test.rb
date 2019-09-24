@@ -1,4 +1,4 @@
-require 'integration_test_helper'
+require "integration_test_helper"
 
 class OrganisationStatusTest < ActionDispatch::IntegrationTest
   include OrganisationHelpers
@@ -12,17 +12,17 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
         logo: {
         },
         organisation_govuk_status: {
-          status: "changed_name"
+          status: "changed_name",
         },
       },
       links: {
         ordered_successor_organisations: [
           {
             title: "Successor",
-            base_path: "/changed/name/successor"
-          }
-        ]
-      }
+            base_path: "/changed/name/successor",
+          },
+        ],
+      },
     }
 
     @content_item_devolved = {
@@ -33,17 +33,17 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
         logo: {
         },
         organisation_govuk_status: {
-          status: "devolved"
+          status: "devolved",
         },
       },
       links: {
         ordered_successor_organisations: [
           {
             title: "Devolved Successor",
-            base_path: "/devolved/successor"
-          }
-        ]
-      }
+            base_path: "/devolved/successor",
+          },
+        ],
+      },
     }
 
     @content_item_exempt_no_url = {
@@ -55,9 +55,9 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
         },
         organisation_govuk_status: {
           status: "exempt",
-          url: ""
+          url: "",
         },
-      }
+      },
     }
 
     @content_item_exempt = {
@@ -69,9 +69,9 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
         },
         organisation_govuk_status: {
           status: "exempt",
-          url: "http://www.google.com"
+          url: "http://www.google.com",
         },
-      }
+      },
     }
 
     @content_item_joining = {
@@ -82,9 +82,9 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
         logo: {
         },
         organisation_govuk_status: {
-          status: "joining"
+          status: "joining",
         },
-      }
+      },
     }
 
     @content_item_left_gov = {
@@ -95,9 +95,9 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
         logo: {
         },
         organisation_govuk_status: {
-          status: "left_gov"
+          status: "left_gov",
         },
-      }
+      },
     }
 
     @content_item_merged = {
@@ -109,17 +109,17 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
         },
         organisation_govuk_status: {
           status: "merged",
-          updated_at: "2016-03-31T00:00:00.000+01:00"
+          updated_at: "2016-03-31T00:00:00.000+01:00",
         },
       },
       links: {
         ordered_successor_organisations: [
           {
             title: "Merged Successor",
-            base_path: "/merged/successor"
-          }
-        ]
-      }
+            base_path: "/merged/successor",
+          },
+        ],
+      },
     }
 
     @content_item_split = {
@@ -130,25 +130,25 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
         logo: {
         },
         organisation_govuk_status: {
-          status: "split"
+          status: "split",
         },
       },
       links: {
         ordered_successor_organisations: [
           {
             title: "Split Successor1",
-            base_path: "/split/successor1"
+            base_path: "/split/successor1",
           },
           {
             title: "Split Successor2",
-            base_path: "/split/successor2"
+            base_path: "/split/successor2",
           },
           {
             title: "Split Successor3",
-            base_path: "/split/successor3"
+            base_path: "/split/successor3",
           },
-        ]
-      }
+        ],
+      },
     }
 
     @content_item_no_longer_exists = {
@@ -159,9 +159,9 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
         logo: {
         },
         organisation_govuk_status: {
-          status: "no_longer_exists"
+          status: "no_longer_exists",
         },
-      }
+      },
     }
 
     @content_item_replaced = {
@@ -172,17 +172,17 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
         logo: {
         },
         organisation_govuk_status: {
-          status: "replaced"
+          status: "replaced",
         },
       },
       links: {
         ordered_successor_organisations: [
           {
             title: "Replaced Successor",
-            base_path: "/replaced/successor"
-          }
-        ]
-      }
+            base_path: "/replaced/successor",
+          },
+        ],
+      },
     }
 
     @content_item_documents = {
@@ -197,9 +197,9 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
         organisation_govuk_status: {
           status: "exempt",
           url: "http://www.google.com",
-          updated_at: "null"
+          updated_at: "null",
         },
-      }
+      },
     }
 
     content_store_has_item("/government/organisations/changed_name", @content_item_changed_name)
@@ -227,7 +227,7 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     stub_rummager_latest_content_requests("fire-service-college")
   end
 
-  it 'displays a changed_name organisation page correctly' do
+  it "displays a changed_name organisation page correctly" do
     visit "/government/organisations/changed_name"
     assert page.has_css?(".gem-c-organisation-logo")
     assert page.has_css?(".gem-c-notice", text: "Changed name organisation is now called Successor")
@@ -236,7 +236,7 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     assert page.has_content?(/This organisation has a status of changed_name./i)
   end
 
-  it 'displays a closed and devolved organisation page correctly' do
+  it "displays a closed and devolved organisation page correctly" do
     visit "/government/organisations/devolved"
     assert page.has_css?(".gem-c-organisation-logo")
     assert page.has_css?(".gem-c-notice", text: "Devolved organisation is a body of Devolved Successor")
@@ -245,7 +245,7 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     assert page.has_content?(/This organisation has a status of devolved./i)
   end
 
-  it 'displays an exempt organisation page correctly' do
+  it "displays an exempt organisation page correctly" do
     visit "/government/organisations/exempt"
     assert page.has_css?(".gem-c-organisation-logo")
     assert page.has_css?(".gem-c-notice", text: "Exempt organisation has a separate website")
@@ -254,7 +254,7 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     assert page.has_content?(/This organisation has a status of exempt./i)
   end
 
-  it 'displays an exempt organisation page with no URL correctly' do
+  it "displays an exempt organisation page with no URL correctly" do
     visit "/government/organisations/exempt-no-url"
     assert page.has_css?(".gem-c-organisation-logo")
     assert page.has_css?(".gem-c-notice__title", text: "Exempt organisation has no website")
@@ -262,7 +262,7 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     assert page.has_content?(/This organisation has a status of exempt./i)
   end
 
-  it 'displays a joining organisation page correctly' do
+  it "displays a joining organisation page correctly" do
     visit "/government/organisations/joining"
     assert page.has_css?(".gem-c-organisation-logo")
     assert page.has_css?(".gem-c-notice", text: "Joining organisation will soon be incorporated into GOV.UK")
@@ -271,7 +271,7 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     assert page.has_content?(/This organisation has a status of joining./i)
   end
 
-  it 'displays a left_gov organisation page correctly' do
+  it "displays a left_gov organisation page correctly" do
     visit "/government/organisations/left_gov"
     assert page.has_css?(".gem-c-organisation-logo")
     assert page.has_css?(".gem-c-notice", text: "Left_gov organisation is now independent of the UK government")
@@ -280,7 +280,7 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     assert page.has_content?(/This organisation has a status of left_gov./i)
   end
 
-  it 'displays a merged organisation page correctly' do
+  it "displays a merged organisation page correctly" do
     visit "/government/organisations/merged"
     assert page.has_css?(".gem-c-organisation-logo")
     assert page.has_css?(".gem-c-notice", text: "Merged organisation became part of Merged Successor in March 2016")
@@ -289,7 +289,7 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     assert page.has_content?(/This organisation has a status of merged./i)
   end
 
-  it 'displays a split organisation page correctly' do
+  it "displays a split organisation page correctly" do
     visit "/government/organisations/split"
     assert page.has_css?(".gem-c-organisation-logo")
     assert page.has_css?(".gem-c-notice", text: "Split organisation was replaced by Split Successor1, Split Successor2, and Split Successor3")
@@ -300,7 +300,7 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     assert page.has_content?(/This organisation has a status of split./i)
   end
 
-  it 'displays a no_longer_exists organisation page correctly' do
+  it "displays a no_longer_exists organisation page correctly" do
     visit "/government/organisations/no_longer_exists"
     assert page.has_css?(".gem-c-organisation-logo")
     assert page.has_css?(".gem-c-notice", text: "No_longer_exists organisation has closed")
@@ -309,7 +309,7 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     assert page.has_content?(/This organisation has a status of no_longer_exists./i)
   end
 
-  it 'displays a replaced organisation page correctly' do
+  it "displays a replaced organisation page correctly" do
     visit "/government/organisations/replaced"
     assert page.has_css?(".gem-c-organisation-logo")
     assert page.has_css?(".gem-c-notice", text: "Replaced organisation was replaced by Replaced Successor")

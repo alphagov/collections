@@ -13,12 +13,12 @@ Rails.application.configure do
   config.consider_all_requests_local = true
 
   # Enable/disable caching. By default caching is disabled.
-  if Rails.root.join('tmp/caching-dev.txt').exist?
+  if Rails.root.join("tmp/caching-dev.txt").exist?
     config.action_controller.perform_caching = true
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
-      'Cache-Control' => 'public, max-age=172800'
+      "Cache-Control" => "public, max-age=172800",
     }
   else
     config.action_controller.perform_caching = false
@@ -34,8 +34,8 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  if ENV['GOVUK_ASSET_ROOT'].present?
-    config.asset_host = ENV['GOVUK_ASSET_ROOT']
+  if ENV["GOVUK_ASSET_ROOT"].present?
+    config.asset_host = ENV["GOVUK_ASSET_ROOT"]
   end
   # Suppress logger output for asset requests.
   config.assets.quiet = true

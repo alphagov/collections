@@ -17,14 +17,14 @@ module Organisations
         links << {
           href: link["href"],
           text: link["title"],
-          icon: link["service_type"]
+          icon: link["service_type"],
         }
       end
 
       {
         stacked: true,
         brand: org.brand,
-        links: links
+        links: links,
       }
     end
   end

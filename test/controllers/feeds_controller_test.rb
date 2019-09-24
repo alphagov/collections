@@ -20,7 +20,7 @@ class FeedsControllerTest < ActionController::TestCase
       action: "organisation",
       organisation_name: "ministry-of-magic",
       format: "atom",
-      locale: "cy"
+      locale: "cy",
     )
   end
 

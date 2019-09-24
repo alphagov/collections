@@ -7,7 +7,7 @@ class EmailSignupsController < ApplicationController
     render :new, locals: {
       subtopic: subtopic,
       hardcoded_breadcrumbs: hardcoded_breadcrumbs,
-      meta_section: meta_section
+      meta_section: meta_section,
     }
   end
 
@@ -18,7 +18,7 @@ class EmailSignupsController < ApplicationController
       render :new, locals: {
         subtopic: subtopic,
         hardcoded_breadcrumbs: hardcoded_breadcrumbs,
-        meta_section: meta_section
+        meta_section: meta_section,
       }
     end
   end
@@ -42,7 +42,7 @@ private
           title: subtopic.title,
           url: subtopic.base_path,
         },
-      ]
+      ],
     }
   end
 
@@ -52,7 +52,7 @@ private
 
   def subtopic
     @subtopic ||= Topic.find(
-      "/topic/#{params[:topic_slug]}/#{params[:subtopic_slug]}"
+      "/topic/#{params[:topic_slug]}/#{params[:subtopic_slug]}",
     )
   end
   helper_method :subtopic

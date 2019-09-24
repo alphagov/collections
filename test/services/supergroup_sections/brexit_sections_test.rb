@@ -1,15 +1,15 @@
-require 'test_helper'
+require "test_helper"
 
 describe SupergroupSections::BrexitSections do
   include RummagerHelpers
   include TaxonHelpers
 
-  let(:taxon_id) { '12345' }
-  let(:base_path) { '/base/path' }
+  let(:taxon_id) { "12345" }
+  let(:base_path) { "/base/path" }
   let(:brexit_supergroup_sections) { SupergroupSections::BrexitSections.new(taxon_id, base_path).sections }
 
-  describe '#sections' do
-    it 'returns a list of supergroup details for the brexit page' do
+  describe "#sections" do
+    it "returns a list of supergroup details for the brexit page" do
       sections_hash = [
         {
           name: "services",
@@ -21,9 +21,9 @@ describe SupergroupSections::BrexitSections do
               track_category: "SeeAllLinkClicked",
               track_action: "/base/path",
               track_label: "services",
-              module: "track-click"
-            }
-          }
+              module: "track-click",
+            },
+          },
         },
         {
           name: "guidance_and_regulation",
@@ -35,9 +35,9 @@ describe SupergroupSections::BrexitSections do
               track_category: "SeeAllLinkClicked",
               track_action: "/base/path",
               track_label: "guidance_and_regulation",
-              module: "track-click"
-            }
-          }
+              module: "track-click",
+            },
+          },
         },
         {
           name: "news_and_communications",
@@ -50,9 +50,9 @@ describe SupergroupSections::BrexitSections do
                 track_category: "SeeAllLinkClicked",
                 track_action: "/base/path",
                 track_label: "news_and_communications",
-                module: "track-click"
-              }
-            }
+                module: "track-click",
+              },
+            },
         },
         {
           name: "research_and_statistics",
@@ -64,9 +64,9 @@ describe SupergroupSections::BrexitSections do
               track_category: "SeeAllLinkClicked",
               track_action: "/base/path",
               track_label: "research_and_statistics",
-              module: "track-click"
-            }
-          }
+              module: "track-click",
+            },
+          },
         },
         {
           name: "policy_and_engagement",
@@ -77,10 +77,10 @@ describe SupergroupSections::BrexitSections do
               track_category: "SeeAllLinkClicked",
               track_action: "/base/path",
               track_label: "policy_and_engagement",
-              module: "track-click"
-            }
+              module: "track-click",
+            },
           },
-          title: "Policy and engagement"
+          title: "Policy and engagement",
         },
         {
           name: "transparency",
@@ -92,10 +92,10 @@ describe SupergroupSections::BrexitSections do
               track_category: "SeeAllLinkClicked",
               track_action: "/base/path",
               track_label: "transparency",
-              module: "track-click"
-            }
+              module: "track-click",
+            },
           },
-        }
+        },
       ]
       assert_equal brexit_supergroup_sections, sections_hash
     end

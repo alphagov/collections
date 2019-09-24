@@ -38,8 +38,8 @@ module Organisations
           end || [],
           phone_numbers: contact["details"]["phone_numbers"]&.map do |phone|
             {
-              title: phone["title"] || I18n.t('organisations.contact.telephone'),
-              number: phone["number"]
+              title: phone["title"] || I18n.t("organisations.contact.telephone"),
+              number: phone["number"],
             }
           end || [],
           email_addresses: contact["details"]["email_addresses"]&.map do |email|
@@ -48,7 +48,7 @@ module Organisations
           links: contact["details"]["contact_form_links"]&.map do |link|
             make_link(link, foi_title(contact["details"]["title"], foi: foi), foi)
           end || [],
-          description: contact_description(contact["details"]["description"])
+          description: contact_description(contact["details"]["description"]),
         }
       end
     end
@@ -73,9 +73,9 @@ module Organisations
       if text.present?
         text
       elsif foi
-        I18n.t('organisations.foi.contact_form')
+        I18n.t("organisations.foi.contact_form")
       else
-        I18n.t('organisations.contact.contact_form', title: contact_title)
+        I18n.t("organisations.contact.contact_form", title: contact_title)
       end
     end
 
@@ -87,9 +87,9 @@ module Organisations
       if title
         title
       elsif foi
-        I18n.t('organisations.foi.freedom_of_information_requests')
+        I18n.t("organisations.foi.freedom_of_information_requests")
       else
-        I18n.t('organisations.contact.contact_details')
+        I18n.t("organisations.contact.contact_details")
       end
     end
 

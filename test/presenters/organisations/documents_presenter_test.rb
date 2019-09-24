@@ -1,10 +1,10 @@
-require 'test_helper'
+require "test_helper"
 
 describe Organisations::DocumentsPresenter do
   include RummagerHelpers
   include OrganisationHelpers
 
-  describe 'documents' do
+  describe "documents" do
     before :each do
       content_item = ContentItem.new(organisation_with_featured_documents)
       organisation = Organisation.new(content_item)
@@ -17,65 +17,65 @@ describe Organisations::DocumentsPresenter do
       stub_rummager_latest_content_requests("attorney-generals-office")
     end
 
-    it 'formats the main large news story correctly' do
+    it "formats the main large news story correctly" do
       expected = {
         href: "/government/news/new-head-of-the-serious-fraud-office-announced",
         image_src: "https://assets.publishing.service.gov.uk/s712_jeremy.jpg",
         image_alt: "Attorney General Jeremy Wright QC MP",
         context: {
           date: Time.zone.parse("2018-06-04"),
-          text: "Press release"
+          text: "Press release",
         },
         heading_text: "New head of the Serious Fraud Office announced",
         description: "Lisa Osofsky appointed new Director of the Serious Fraud Office ",
         brand: "attorney-generals-office",
         large: true,
-        heading_level: 3
+        heading_level: 3,
       }
       assert_equal expected, @documents_presenter.first_featured_news
     end
 
-    it 'formats the remaining news stories correctly' do
+    it "formats the remaining news stories correctly" do
       expected = [{
         href: "/government/news/new-head-of-a-different-office-announced",
         image_src: "https://assets.publishing.service.gov.uk/s465_john.jpg",
         image_alt: "John Someone MP",
         context: {
           date: Time.zone.parse("2017-06-04"),
-          text: "Policy paper"
+          text: "Policy paper",
         },
         heading_text: "New head of a different office announced",
         description: "John Someone appointed new Director of the Other Office ",
         brand: "attorney-generals-office",
-        heading_level: 3
+        heading_level: 3,
       }]
       assert_equal expected, @documents_presenter.remaining_featured_news
     end
 
-    it 'returns true if there are latest documents' do
+    it "returns true if there are latest documents" do
       assert @documents_presenter.has_latest_documents?
     end
 
-    it 'returns false if there are no latest documents' do
+    it "returns false if there are no latest documents" do
       assert_equal false, @no_documents_presenter.has_latest_documents?
     end
 
-    it 'formats latest documents correctly' do
+    it "formats latest documents correctly" do
       expected =
         {
           items: [
             {
               link: {
                 text: "Rapist has sentence increased after Solicitor General’s referral",
-                path: "/government/news/rapist-has-sentence-increased-after-solicitor-generals-referral"
+                path: "/government/news/rapist-has-sentence-increased-after-solicitor-generals-referral",
               },
               metadata: {
                 document_type: "Press release",
-                public_updated_at: Date.parse("2018-06-18T17:39:34.000+01:00")
-              }
-            }
+                public_updated_at: Date.parse("2018-06-18T17:39:34.000+01:00"),
+              },
+            },
           ],
-          brand: "attorney-generals-office"
+          brand: "attorney-generals-office",
         }
 
       assert_equal expected, @documents_presenter.latest_documents
@@ -92,7 +92,7 @@ describe Organisations::DocumentsPresenter do
     end
   end
 
-  it 'formats promotional features data correctly' do
+  it "formats promotional features data correctly" do
     content_item = ContentItem.new(organisation_with_promotional_features)
     organisation = Organisation.new(content_item)
     @documents_presenter = Organisations::DocumentsPresenter.new(organisation)
@@ -114,17 +114,17 @@ describe Organisations::DocumentsPresenter do
             extra_links: [
               {
                 text: "Single departmental plans",
-                href: "https://www.gov.uk/government/collections/1-1"
+                href: "https://www.gov.uk/government/collections/1-1",
               },
               {
                 text: "Prime Minister's and Cabinet Office ministers' transparency publications",
-                href: "https://www.gov.uk/government/collections/ministers-transparency-publications/1-1"
-              }
+                href: "https://www.gov.uk/government/collections/ministers-transparency-publications/1-1",
+              },
             ],
             brand: nil,
-            heading_level: 3
-          }
-        ]
+            heading_level: 3,
+          },
+        ],
       },
       {
         title: "Two features",
@@ -140,15 +140,15 @@ describe Organisations::DocumentsPresenter do
             extra_links: [
               {
                 text: "Single departmental plans",
-                href: "https://www.gov.uk/government/collections/2-1"
+                href: "https://www.gov.uk/government/collections/2-1",
               },
               {
                 text: "Prime Minister's and Cabinet Office ministers' transparency publications",
-                href: "https://www.gov.uk/government/collections/ministers-transparency-publications/2-1"
-              }
+                href: "https://www.gov.uk/government/collections/ministers-transparency-publications/2-1",
+              },
             ],
             brand: nil,
-            heading_level: 3
+            heading_level: 3,
           },
           {
             description: "Story 2-2",
@@ -158,17 +158,17 @@ describe Organisations::DocumentsPresenter do
             extra_links: [
               {
                 text: "Single departmental plans",
-                href: "https://www.gov.uk/government/collections/2-2"
+                href: "https://www.gov.uk/government/collections/2-2",
               },
               {
                 text: "Prime Minister's and Cabinet Office ministers' transparency publications",
-                href: "https://www.gov.uk/government/collections/ministers-transparency-publications/2-2"
-              }
+                href: "https://www.gov.uk/government/collections/ministers-transparency-publications/2-2",
+              },
             ],
             brand: nil,
-            heading_level: 3
-          }
-        ]
+            heading_level: 3,
+          },
+        ],
       },
       {
         title: "Three features",
@@ -184,15 +184,15 @@ describe Organisations::DocumentsPresenter do
             extra_links: [
               {
                 text: "Single departmental plans",
-                href: "https://www.gov.uk/government/collections/3-1"
+                href: "https://www.gov.uk/government/collections/3-1",
               },
               {
                 text: "Prime Minister's and Cabinet Office ministers' transparency publications",
-                href: "https://www.gov.uk/government/collections/ministers-transparency-publications/3-1"
-              }
+                href: "https://www.gov.uk/government/collections/ministers-transparency-publications/3-1",
+              },
             ],
             brand: nil,
-            heading_level: 3
+            heading_level: 3,
           },
           {
             description: "Story 3-2",
@@ -202,15 +202,15 @@ describe Organisations::DocumentsPresenter do
             extra_links: [
               {
                 text: "Single departmental plans",
-                href: "https://www.gov.uk/government/collections/3-2"
+                href: "https://www.gov.uk/government/collections/3-2",
               },
               {
                 text: "Prime Minister's and Cabinet Office ministers' transparency publications",
-                href: "https://www.gov.uk/government/collections/ministers-transparency-publications/3-2"
-              }
+                href: "https://www.gov.uk/government/collections/ministers-transparency-publications/3-2",
+              },
             ],
             brand: nil,
-            heading_level: 3
+            heading_level: 3,
           },
           {
             description: "Story 3-3",
@@ -221,18 +221,18 @@ describe Organisations::DocumentsPresenter do
             extra_links: [
               {
                 text: "Single departmental plans",
-                href: "https://www.gov.uk/government/collections/3-3"
+                href: "https://www.gov.uk/government/collections/3-3",
               },
               {
                 text: "Prime Minister's and Cabinet Office ministers' transparency publications",
-                href: "https://www.gov.uk/government/collections/ministers-transparency-publications/3-3"
-              }
+                href: "https://www.gov.uk/government/collections/ministers-transparency-publications/3-3",
+              },
             ],
             brand: nil,
-            heading_level: 3
-          }
-        ]
-      }
+            heading_level: 3,
+          },
+        ],
+      },
     ]
 
     assert_equal expected, @documents_presenter.promotional_features

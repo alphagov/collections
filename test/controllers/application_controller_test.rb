@@ -5,21 +5,21 @@ class ConcreteTestController < ApplicationController
   protect_from_forgery except: :js_or_atom
 
   def test
-    render html: 'ok'
+    render html: "ok"
   end
 
   def json
     respond_to do |format|
-      format.html { render body: 'html' }
-      format.json { render body: '{}' }
+      format.html { render body: "html" }
+      format.json { render body: "{}" }
     end
   end
 
   def js_or_atom
     respond_to do |format|
-      format.html  { render body: 'html' }
-      format.js    { render body: 'javascript' }
-      format.atom  { render body: 'atom' }
+      format.html  { render body: "html" }
+      format.js    { render body: "javascript" }
+      format.atom  { render body: "atom" }
     end
   end
 end
@@ -28,9 +28,9 @@ describe ConcreteTestController do
   def with_test_routing
     with_routing do |map|
       map.draw do
-        get '/test', to: 'concrete_test#test'
-        get '/test', to: 'concrete_test#json'
-        get '/test', to: 'concrete_test#js_or_atom'
+        get "/test", to: "concrete_test#test"
+        get "/test", to: "concrete_test#json"
+        get "/test", to: "concrete_test#js_or_atom"
       end
       yield
     end
@@ -41,7 +41,7 @@ describe ConcreteTestController do
 
     with_test_routing do
       mime_types.each do |type|
-        @request.env['HTTP_ACCEPT'] = type
+        @request.env["HTTP_ACCEPT"] = type
         get :test
 
         assert_equal 200, response.status, "mime type #{type} should be acceptable"
@@ -65,12 +65,12 @@ describe ConcreteTestController do
       get :json
       assert_response :success
       assert_equal Mime[:html], response.content_type
-      assert_equal 'html', response.body
+      assert_equal "html", response.body
 
       get :json, format: :json
       assert_response :success
       assert_equal Mime[:json], response.content_type
-      assert_equal '{}', response.body
+      assert_equal "{}", response.body
 
       get :json, format: :atom
       assert_response :not_acceptable
@@ -82,17 +82,17 @@ describe ConcreteTestController do
       get :js_or_atom
       assert_response :success
       assert_equal Mime[:html], response.content_type
-      assert_equal 'html', response.body
+      assert_equal "html", response.body
 
       get :js_or_atom, format: :js
       assert_response :success
       assert_equal Mime[:js], response.content_type
-      assert_equal 'javascript', response.body
+      assert_equal "javascript", response.body
 
       get :js_or_atom, format: :atom
       assert_response :success
       assert_equal Mime[:atom], response.content_type
-      assert_equal 'atom', response.body
+      assert_equal "atom", response.body
 
       get :js_or_atom, format: :json
       assert_response :not_acceptable

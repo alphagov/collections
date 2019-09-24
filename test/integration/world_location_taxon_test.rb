@@ -1,14 +1,14 @@
-require 'integration_test_helper'
+require "integration_test_helper"
 
 class WorldLocationTaxonTest < ActionDispatch::IntegrationTest
   include RummagerHelpers
   include TaxonHelpers
 
-  it 'contains both the atom and email signup url if we are browsing a world location' do
-    @base_path = '/world/usa'
-    @child_taxon_base_path = '/world/news-and-events-usa'
+  it "contains both the atom and email signup url if we are browsing a world location" do
+    @base_path = "/world/usa"
+    @child_taxon_base_path = "/world/news-and-events-usa"
 
-    world_usa = world_usa_taxon(base_path: @base_path, phase: 'live')
+    world_usa = world_usa_taxon(base_path: @base_path, phase: "live")
     world_usa_news_events = world_usa_news_events_taxon(base_path: @child_taxon_base_path)
 
     content_store_has_item(@base_path, world_usa)
@@ -23,22 +23,22 @@ class WorldLocationTaxonTest < ActionDispatch::IntegrationTest
     stub_content_for_taxon(@child_taxon.content_id, search_results)
 
     visit @base_path
-    govuk_feeds = page.find('.feeds')
+    govuk_feeds = page.find(".feeds")
 
     expected_atom_url = Plek.new.website_root + "/world/usa.atom"
     expected_url = "#{Plek.new.website_root}/email-signup?link=#{@base_path}"
 
     assert govuk_feeds.has_link?(
-      href: expected_url
+      href: expected_url,
     )
 
     assert govuk_feeds.has_link?(
-      href: expected_atom_url
+      href: expected_atom_url,
     )
   end
 
-  it 'does not contain the feed selector if we are browsing a world location leaf page' do
-    @base_path = '/world/usa'
+  it "does not contain the feed selector if we are browsing a world location leaf page" do
+    @base_path = "/world/usa"
 
     world_usa = world_usa_taxon(base_path: @base_path)
     world_usa.delete("links")
@@ -50,7 +50,7 @@ class WorldLocationTaxonTest < ActionDispatch::IntegrationTest
 
     visit @base_path
 
-    assert page.has_no_selector?('.feeds')
+    assert page.has_no_selector?(".feeds")
   end
 
 private
@@ -58,14 +58,14 @@ private
   def search_results
     [
       {
-        'title' => 'Content item 1',
-        'description' => 'Description of content item 1',
-        'link' => 'world-content-item-1'
+        "title" => "Content item 1",
+        "description" => "Description of content item 1",
+        "link" => "world-content-item-1",
       },
       {
-        'title' => 'Content item 2',
-        'description' => 'Description of content item 2',
-        'link' => 'world-content-item-2'
+        "title" => "Content item 2",
+        "description" => "Description of content item 2",
+        "link" => "world-content-item-2",
       },
     ]
   end

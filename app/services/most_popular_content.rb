@@ -26,7 +26,7 @@ private
       count: number_of_links,
       fields: RummagerFields::TAXON_SEARCH_FIELDS,
       filter_part_of_taxonomy_tree: Array(content_id),
-      order: '-popularity',
+      order: "-popularity",
       filter_content_store_document_type: filter_content_store_document_type,
     }
 

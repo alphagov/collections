@@ -6,7 +6,7 @@ class BrowseController < ApplicationController
     setup_content_item_and_navigation_helpers(page)
 
     render :index, locals: {
-      page: page
+      page: page,
     }
   end
 
@@ -24,7 +24,7 @@ class BrowseController < ApplicationController
           content_id: page.content_id,
           navigation_page_type: "First Level Browse",
           breadcrumbs: breadcrumb_content,
-          html: second_level_browse_pages_partial(page)
+          html: second_level_browse_pages_partial(page),
         }
       end
     end
@@ -39,9 +39,9 @@ private
   end
 
   def second_level_browse_pages_partial(page)
-    render_partial('second_level_browse_page/_second_level_browse_pages',
+    render_partial("second_level_browse_page/_second_level_browse_pages",
                    title: page.title,
                    second_level_browse_pages: page.second_level_browse_pages,
-                   curated_order: page.second_level_pages_curated?,)
+                   curated_order: page.second_level_pages_curated?)
   end
 end

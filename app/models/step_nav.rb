@@ -8,7 +8,7 @@ class StepNav
     :description,
     :details,
     :to_hash,
-    to: :content_item
+    to: :content_item,
   )
 
   def initialize(content_item)

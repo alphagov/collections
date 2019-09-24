@@ -22,8 +22,8 @@ describe MostRecentContent do
           { "title" => "Second news story" },
           { "title" => "Third news story" },
           { "title" => "Fourth news story" },
-          { "title" => "Fifth news story" }
-        ]
+          { "title" => "Fifth news story" },
+        ],
       }
 
       Services.rummager.stubs(:search).returns(search_results)
@@ -54,7 +54,7 @@ describe MostRecentContent do
   end
 
   it "orders the results by public_timestamp in descending order" do
-    assert_includes_params(order: '-public_timestamp') do
+    assert_includes_params(order: "-public_timestamp") do
       most_recent_content.fetch
     end
   end

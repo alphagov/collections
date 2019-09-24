@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class DocumentTypeRoutingConstraintTest < ActiveSupport::TestCase
   context "#matches?" do
@@ -66,7 +66,7 @@ class DocumentTypeRoutingConstraintTest < ActiveSupport::TestCase
 
   def request
     env = {}
-    stub(params: { slug: 'test_slug' }, env: env)
+    stub(params: { slug: "test_slug" }, env: env)
   end
 
   def subject(document_type, document_type_inspector)

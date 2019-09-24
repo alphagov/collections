@@ -1,8 +1,8 @@
-atom_feed(language: 'en-GB', root_url: root_url) do |feed|
+atom_feed(language: "en-GB", root_url: root_url) do |feed|
   feed.title(title)
 
   feed.author do |author|
-    author.name('HM Government')
+    author.name("HM Government")
   end
 
   feed.updated(items.first.updated) if items.any?

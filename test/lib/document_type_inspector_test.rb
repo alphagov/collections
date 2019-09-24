@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class DocumentTypeInspectorTest < ActiveSupport::TestCase
   def subject
@@ -30,7 +30,7 @@ class DocumentTypeInspectorTest < ActiveSupport::TestCase
   end
 
   def set_content_item_document_type(document_type)
-    @content_item = { 'schema_name' => document_type }
+    @content_item = { "schema_name" => document_type }
     stub_content_store
   end
 

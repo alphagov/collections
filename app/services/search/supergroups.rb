@@ -10,14 +10,14 @@ module Search
     ).freeze
 
     SUPERGROUP_ADDITIONAL_SEARCH_PARAMS = {
-      'guidance_and_regulation' => {
-        order: '-popularity',
+      "guidance_and_regulation" => {
+        order: "-popularity",
       },
-      'news_and_communications' => {
+      "news_and_communications" => {
         reject_content_purpose_subgroup: %w[decisions updates_and_alerts],
       },
-      'services' => {
-        order: '-popularity',
+      "services" => {
+        order: "-popularity",
       },
     }.freeze
 

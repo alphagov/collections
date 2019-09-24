@@ -1,4 +1,4 @@
-require 'integration_test_helper'
+require "integration_test_helper"
 
 class WorldWideTaxonBrowsingTest < ActionDispatch::IntegrationTest
   it "renders a leaf page for world content" do
@@ -65,7 +65,7 @@ class WorldWideTaxonBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   def then_i_see_the_taxon_page
-    assert page.has_selector?('title', text: "Japan", visible: false)
+    assert page.has_selector?("title", text: "Japan", visible: false)
   end
 
   def and_i_can_see_the_content_tagged_to_the_taxon
@@ -79,7 +79,7 @@ class WorldWideTaxonBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   def and_i_can_see_links_to_the_child_taxons_in_an_accordion
-    child_taxons = @content_item.dig('links', 'child_taxons')
+    child_taxons = @content_item.dig("links", "child_taxons")
     child_taxons.each do |child_taxon|
       assert page.has_content?(child_taxon["title"])
     end

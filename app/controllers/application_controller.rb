@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   if ENV["BASIC_AUTH_USERNAME"]
     http_basic_authenticate_with(
       name: ENV.fetch("BASIC_AUTH_USERNAME"),
-      password: ENV.fetch("BASIC_AUTH_PASSWORD")
+      password: ENV.fetch("BASIC_AUTH_PASSWORD"),
     )
   end
 
@@ -73,10 +73,10 @@ private
   end
 
   def breadcrumb_content
-    render_partial('_breadcrumbs')
+    render_partial("_breadcrumbs")
   end
 
   def render_partial(partial_name, locals = {})
-    render_to_string(partial_name, formats: 'html', layout: false, locals: locals)
+    render_to_string(partial_name, formats: "html", layout: false, locals: locals)
   end
 end

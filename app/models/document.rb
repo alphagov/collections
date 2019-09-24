@@ -1,4 +1,4 @@
-require 'active_model'
+require "active_model"
 
 class Document
   include ActiveModel::Model
@@ -13,6 +13,6 @@ class Document
     :format,
     :content_store_document_type,
     :organisations,
-    :image_url
+    :image_url,
   )
 end

@@ -8,7 +8,7 @@ class MainstreamBrowsePage
     :linked_items,
     :details,
     :to_hash,
-    to: :content_item
+    to: :content_item,
   )
 
   def self.find(base_path)
@@ -53,6 +53,6 @@ class MainstreamBrowsePage
   end
 
   def slug
-    base_path.sub(%r{\A/browse/}, '')
+    base_path.sub(%r{\A/browse/}, "")
   end
 end

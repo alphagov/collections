@@ -1,4 +1,4 @@
-require 'active_model'
+require "active_model"
 
 class RummagerOrganisation
   include ActiveModel::Model
@@ -13,18 +13,18 @@ class RummagerOrganisation
     :logo_formatted_title,
     :brand,
     :crest,
-    :logo_url
+    :logo_url,
   )
 
   def live?
-    organisation_state == 'live'
+    organisation_state == "live"
   end
 
   def has_logo?
-    crest.present? && crest != 'no-identity' && !custom_logo?
+    crest.present? && crest != "no-identity" && !custom_logo?
   end
 
   def custom_logo?
-    crest == 'custom' && logo_url.present?
+    crest == "custom" && logo_url.present?
   end
 end

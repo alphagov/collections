@@ -25,7 +25,7 @@ class FeedEntryPresenter
     if display_type.present?
       "#{display_type}: #{result['title']}"
     else
-      result['title']
+      result["title"]
     end
   end
 

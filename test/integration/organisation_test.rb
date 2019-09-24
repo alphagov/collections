@@ -1,4 +1,4 @@
-require 'integration_test_helper'
+require "integration_test_helper"
 
 class OrganisationTest < ActionDispatch::IntegrationTest
   include OrganisationHelpers
@@ -15,7 +15,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
         brand: "cabinet-office",
         logo: {
           formatted_title: "Prime Minister&#39;s Office, 10 Downing Street",
-          crest: "eo"
+          crest: "eo",
         },
         organisation_govuk_status: {
           status: "live",
@@ -28,11 +28,11 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             href: "/government/news/government-calls-on-technology-firms-to-help-tackle-the-uks-biggest-challenges",
             image: {
               url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/62609/Dowden.jpg",
-              alt_text: "Cabinet Office Minister Oliver Dowden"
+              alt_text: "Cabinet Office Minister Oliver Dowden",
             },
             summary: "The government is launching competitions for tech firms to develop solutions to tackle the major social challenges of our modern age.",
             public_updated_at: "2018-05-10T00:00:01.000+01:00",
-            document_type: "Press release"
+            document_type: "Press release",
           },
         ],
         ordered_ministers: [
@@ -44,20 +44,20 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             role_href: "/government/ministers/prime-minister",
             image: {
               url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/6/PM_portrait_960x640.jpg",
-              alt_text: "Theresa May MP"
-            }
-          }
+              alt_text: "Theresa May MP",
+            },
+          },
         ],
         social_media_links: [
           {
             service_type: "twitter",
             title: "Twitter - @10DowningStreet",
-            href: "https://twitter.com/@10DowningStreet"
+            href: "https://twitter.com/@10DowningStreet",
           },
           {
             service_type: "facebook",
             title: "Facebook",
-            href: "https://www.facebook.com/10downingstreet"
+            href: "https://www.facebook.com/10downingstreet",
           },
         ],
         ordered_promotional_features: [
@@ -70,26 +70,26 @@ class OrganisationTest < ActionDispatch::IntegrationTest
                 summary: "Greater transparency across government is at the heart of our commitment to let you hold politicians and public bodies to account. ",
                 image: {
                   url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/promotional_feature_item/image/1/Transparency.jpg",
-                  alt_text: "Magnifying glass studying a graph"
+                  alt_text: "Magnifying glass studying a graph",
                 },
                 links: [
                   {
                     title: "Single departmental plans",
-                    href: "https://www.gov.uk/government/collections/a-country-that-works-for-everyone-the-governments-plan"
+                    href: "https://www.gov.uk/government/collections/a-country-that-works-for-everyone-the-governments-plan",
                   },
                   {
                     title: "Prime Minister's and Cabinet Office ministers' transparency publications",
-                    href: "https://www.gov.uk/government/collections/ministers-transparency-publications"
+                    href: "https://www.gov.uk/government/collections/ministers-transparency-publications",
                   },
                   {
                     title: "Government transparency data",
-                    href: "https://www.gov.uk/government/publications?keywords=&publication_filter_option=transparency-data&topics%5B%5D=all&departments%5B%5D=all&world_locations%5B%5D=all&direction=before&date=2013-05-01"
-                  }
-                ]
-              }
-            ]
+                    href: "https://www.gov.uk/government/publications?keywords=&publication_filter_option=transparency-data&topics%5B%5D=all&departments%5B%5D=all&world_locations%5B%5D=all&direction=before&date=2013-05-01",
+                  },
+                ],
+              },
+            ],
           },
-        ]
+        ],
       },
       links: {
         available_translations: [],
@@ -101,9 +101,9 @@ class OrganisationTest < ActionDispatch::IntegrationTest
           {
             base_path: "/government/organisations/attorney-generals-office-2",
             title: "High Profile Group 2",
-          }
-        ]
-      }
+          },
+        ],
+      },
     }
 
     @content_item_attorney_general = {
@@ -115,7 +115,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
         brand: "attorney-generals-office",
         logo: {
           formatted_title: "Attorney <br/>General&#39;s <br/>Office",
-          crest: "single-identity"
+          crest: "single-identity",
         },
         organisation_govuk_status: {
           status: "live",
@@ -125,18 +125,18 @@ class OrganisationTest < ActionDispatch::IntegrationTest
         ordered_corporate_information_pages: [
           {
             title: "Complaints procedure",
-            href: "/complaints-procedure"
+            href: "/complaints-procedure",
           },
           {
             title: "Jobs",
-            href: "https://www.civilservicejobs.service.gov.uk/csr"
-          }
+            href: "https://www.civilservicejobs.service.gov.uk/csr",
+          },
         ],
         ordered_featured_links: [
           {
             title: "Attorney General's guidance to the legal profession",
-            href: "https://www.gov.uk/browse/justice/courts-sentencing-tribunals/attorney-general-guidance-to-the-legal-profession"
-          }
+            href: "https://www.gov.uk/browse/justice/courts-sentencing-tribunals/attorney-general-guidance-to-the-legal-profession",
+          },
         ],
         ordered_featured_documents: [
           {
@@ -144,12 +144,12 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             href: "/government/news/new-head-of-the-serious-fraud-office-announced",
             image: {
               url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/63252/Jeremy_Wright_FOR_WEBSITE.jpg",
-              alt_text: "Attorney General Jeremy Wright QC MP"
+              alt_text: "Attorney General Jeremy Wright QC MP",
             },
             summary: "Lisa Osofsky appointed new Director of the Serious Fraud Office ",
             public_updated_at: "2018-06-04T11:30:03.000+01:00",
-            document_type: "Press release"
-          }
+            document_type: "Press release",
+          },
         ],
         ordered_ministers: [
           {
@@ -160,29 +160,29 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             role_href: "/government/ministers/prime-minister",
             image: {
               url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/6/PM_portrait_960x640.jpg",
-              alt_text: "Theresa May MP"
-            }
+              alt_text: "Theresa May MP",
+            },
           },
           {
             name: "Stuart Andrew MP",
             role: "Parliamentary Under Secretary of State",
             href: "/government/people/stuart-andrew",
-            role_href: "/government/ministers/parliamentary-under-secretary-of-state--94"
-          }
+            role_href: "/government/ministers/parliamentary-under-secretary-of-state--94",
+          },
         ],
         social_media_links: [
           {
             service_type: "twitter",
             title: "Twitter - @attorneygeneral",
-            href: "https://twitter.com/@attorneygeneral"
-          }
+            href: "https://twitter.com/@attorneygeneral",
+          },
         ],
         ordered_board_members: [
           {
             name: "Sir Jeremy Heywood",
             role: "Cabinet Secretary",
             href: "/government/people/jeremy-heywood",
-          }
+          },
         ],
         ordered_promotional_features: [
           {
@@ -194,26 +194,26 @@ class OrganisationTest < ActionDispatch::IntegrationTest
                 summary: "Greater transparency across government is at the heart of our commitment to let you hold politicians and public bodies to account. ",
                 image: {
                   url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/promotional_feature_item/image/1/Transparency.jpg",
-                  alt_text: "Magnifying glass studying a graph"
+                  alt_text: "Magnifying glass studying a graph",
                 },
                 links: [
                   {
                     title: "Single departmental plans",
-                    href: "https://www.gov.uk/government/collections/a-country-that-works-for-everyone-the-governments-plan"
+                    href: "https://www.gov.uk/government/collections/a-country-that-works-for-everyone-the-governments-plan",
                   },
                   {
                     title: "Prime Minister's and Cabinet Office ministers' transparency publications",
-                    href: "https://www.gov.uk/government/collections/ministers-transparency-publications"
+                    href: "https://www.gov.uk/government/collections/ministers-transparency-publications",
                   },
                   {
                     title: "Government transparency data",
-                    href: "https://www.gov.uk/government/publications?keywords=&publication_filter_option=transparency-data&topics%5B%5D=all&departments%5B%5D=all&world_locations%5B%5D=all&direction=before&date=2013-05-01"
-                  }
-                ]
-              }
-            ]
+                    href: "https://www.gov.uk/government/publications?keywords=&publication_filter_option=transparency-data&topics%5B%5D=all&departments%5B%5D=all&world_locations%5B%5D=all&direction=before&date=2013-05-01",
+                  },
+                ],
+              },
+            ],
           },
-        ]
+        ],
       },
       links: {
         available_translations: [],
@@ -227,22 +227,22 @@ class OrganisationTest < ActionDispatch::IntegrationTest
                 street_address: "King Charles Street\r\nWhitehall",
                 postal_code: "SW1A 2AH",
                 world_location: "United Kingdom",
-                locality: "London"
+                locality: "London",
               }],
               email_addresses: [{
                 title: "",
-                email: "enquiries@trade.gov.uk"
+                email: "enquiries@trade.gov.uk",
               }],
               phone_numbers: [{
                 title: "Custom Telephone",
-                number: "+44 (0) 20 7215 5000"
+                number: "+44 (0) 20 7215 5000",
               }],
               contact_form_links: [{
                 title: "Enquiries for overseas companies looking to set up in the UK",
-                link: "https://invest.great.gov.uk/int/contact/"
-              }]
-            }
-          }
+                link: "https://invest.great.gov.uk/int/contact/",
+              }],
+            },
+          },
         ],
         ordered_high_profile_groups: [
           {
@@ -252,9 +252,9 @@ class OrganisationTest < ActionDispatch::IntegrationTest
           {
             base_path: "/government/organisations/attorney-generals-office-2",
             title: "High Profile Group 2",
-          }
-        ]
-      }
+          },
+        ],
+      },
     }
 
     @content_item_charity_commission = {
@@ -267,8 +267,8 @@ class OrganisationTest < ActionDispatch::IntegrationTest
           formatted_title: "Charity Commission",
           image: {
             url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/organisation/logo/98/Home_page.jpg",
-            alt_text: "The Charity Commission"
-          }
+            alt_text: "The Charity Commission",
+          },
         },
         foi_exempt: true,
         organisation_govuk_status: {
@@ -279,11 +279,11 @@ class OrganisationTest < ActionDispatch::IntegrationTest
         ordered_featured_links: [
           {
             title: "Find a charity",
-            href: "http://apps.charitycommission.gov.uk/showcharity/registerofcharities/RegisterHomePage.aspx"
+            href: "http://apps.charitycommission.gov.uk/showcharity/registerofcharities/RegisterHomePage.aspx",
           },
           {
             title: "Online services and contact forms",
-            href: "https://www.gov.uk/government/organisations/charity-commission/about/about-our-services"
+            href: "https://www.gov.uk/government/organisations/charity-commission/about/about-our-services",
           },
         ],
         ordered_featured_documents: [
@@ -292,25 +292,25 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             href: "/government/news/charity-annual-return-2018",
             image: {
               url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/63313/AR18_prepare_v1.1.png",
-              alt_text: "Annual return service 2018"
+              alt_text: "Annual return service 2018",
             },
             summary: "How you can prepare for the 2018 annual return service, which will be available this summer. ",
             public_updated_at: "2018-06-06T10:56:00.000+01:00",
-            document_type: "News story"
-          }
+            document_type: "News story",
+          },
         ],
         social_media_links: [
           {
             service_type: "twitter",
             title: "Twitter",
-            href: "https://twitter.com/chtycommission"
+            href: "https://twitter.com/chtycommission",
           },
           {
             service_type: "youtube",
             title: "YouTube",
-            href: "http://www.youtube.com/TheCharityCommission"
+            href: "http://www.youtube.com/TheCharityCommission",
           },
-        ]
+        ],
       },
       links: {
         available_translations: [],
@@ -328,10 +328,10 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             withdrawn: false,
             links: {},
             api_url: "https://www.gov.uk/api/content/government/policies/waste-and-recycling",
-            web_url: "https://www.gov.uk/government/policies/waste-and-recycling"
+            web_url: "https://www.gov.uk/government/policies/waste-and-recycling",
           },
-        ]
-      }
+        ],
+      },
     }
 
     @content_item_wales_office = {
@@ -342,7 +342,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
         brand: "wales-office",
         logo: {
           formatted_title: "Office of the Secretary of State for Wales<br/>Swyddfa Ysgrifennydd Gwladol Cymru",
-          crest: "single-identity"
+          crest: "single-identity",
         },
         organisation_govuk_status: {
           status: "live",
@@ -351,8 +351,8 @@ class OrganisationTest < ActionDispatch::IntegrationTest
         ordered_featured_links: [
           {
             title: "Wales Office Featured Link",
-            href: "/wales/link/1"
-          }
+            href: "/wales/link/1",
+          },
         ],
         ordered_featured_documents: [
           {
@@ -360,32 +360,32 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             href: "/government/news/welsh-secretary-hails-outstanding-individuals-in-the-queens-birthday-honours-list",
             image: {
               url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/63372/GOV.UK_honours_web.jpg",
-              alt_text: "Queen's Birthday Honours"
+              alt_text: "Queen's Birthday Honours",
             },
             summary: "Alun Cairns: \"I'm proud to see people from all walks of Welsh life honoured today\".",
             public_updated_at: "2018-06-08T23:23:11.000+01:00",
-            document_type: "Press release"
+            document_type: "Press release",
           },
         ],
         social_media_links: [
           {
             service_type: "twitter",
             title: "Twitter",
-            href: "https://twitter.com/UKGovWales"
+            href: "https://twitter.com/UKGovWales",
           },
           {
             service_type: "twitter",
             title: "Trydar",
-            href: "https://twitter.com/LlywDUCymru"
-          }
+            href: "https://twitter.com/LlywDUCymru",
+          },
         ],
         ordered_military_personnel: [
           {
             name: "Air Chief Marshal Sir  Stuart Peach GBE KCB ADC DL",
             role: "Chief of the Defence Staff",
             href: "/government/people/stuart-peach",
-          }
-        ]
+          },
+        ],
       },
       links: {
         available_translations: [
@@ -396,7 +396,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
           {
             "base_path": "/government/organisations/office-of-the-secretary-of-state-for-wales",
             "locale": "en",
-          }
+          },
         ],
         ordered_contacts: [],
         ordered_foi_contacts: [
@@ -417,24 +417,24 @@ class OrganisationTest < ActionDispatch::IntegrationTest
                   street_address: "White House\r\nCardiff",
                   locality: "",
                   postal_code: "W1 3BZ",
-                }
+                },
               ],
               email_addresses: [
                 {
-                  email: "walesofficefoi@walesoffice.gsi.gov.uk"
+                  email: "walesofficefoi@walesoffice.gsi.gov.uk",
                 },
                 {
-                  email: "foiwales@walesoffice.gsi.gov.uk"
-                }
+                  email: "foiwales@walesoffice.gsi.gov.uk",
+                },
               ],
               contact_form_links: [
                 {
                   title: "",
                   link: "/foi_contact_link",
-                  description: ""
-                }
-              ]
-            }
+                  description: "",
+                },
+              ],
+            },
           },
           {
             withdrawn: false,
@@ -446,18 +446,18 @@ class OrganisationTest < ActionDispatch::IntegrationTest
                   street_address: "Green House\r\nBracknell",
                   locality: "",
                   postal_code: "B2 3ZZ",
-                }
+                },
               ],
               email_addresses: [
                 {
-                  email: "welshofficefoi@walesoffice.gsi.gov.uk"
-                }
+                  email: "welshofficefoi@walesoffice.gsi.gov.uk",
+                },
               ],
-              contact_form_links: []
-            }
-          }
-        ]
-      }
+              contact_form_links: [],
+            },
+          },
+        ],
+      },
     }
 
     @content_item_wales_office_cy = @content_item_wales_office.deep_dup.tap do |cy|
@@ -470,8 +470,8 @@ class OrganisationTest < ActionDispatch::IntegrationTest
       organisation_govuk_status: {
         status: "exempt",
         url: "http://www.slc.co.uk/",
-        updated_at: nil
-      }
+        updated_at: nil,
+      },
     )
 
     @content_item_blank = {
@@ -487,7 +487,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
         },
       },
       links: {
-      }
+      },
     }
 
     content_store_has_item("/government/organisations/prime-ministers-office-10-downing-street", @content_item_no10)
@@ -711,7 +711,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     refute page.has_css?(".gem-c-heading", text: "Traffic commissioners")
   end
 
-  it 'displays foi information correctly where required' do
+  it "displays foi information correctly where required" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
     refute page.has_content?(/Make an FOI request/i)
     refute page.has_content?(/Freedom of Information (FOI) Act/i)
@@ -745,12 +745,12 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     assert page.has_css?(".app-c-topic-list__link[href='/government/organisations/attorney-generals-office-2']", text: "High Profile Group 2")
   end
 
-  it 'does not show section for organisations without high profile groups' do
+  it "does not show section for organisations without high profile groups" do
     visit "/government/organisations/office-of-the-secretary-of-state-for-wales"
     refute page.has_css?(".gem-c-heading", text: "High profile groups within the Office of the Secretary of State for Wales")
   end
 
-  it 'does not show high profile groups for promotional orgs' do
+  it "does not show high profile groups for promotional orgs" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
     refute page.has_css?(".gem-c-heading", text: "High profile groups within the Prime Minister's Office, 10 Downing Street")
   end

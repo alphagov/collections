@@ -12,7 +12,7 @@ describe OrganisationsController do
                                },
                                organisation_govuk_status: {
                                  status: "exempt",
-                                 url: "https://ministry-of-magic.gov.uk"
+                                 url: "https://ministry-of-magic.gov.uk",
                                },
                              })
 

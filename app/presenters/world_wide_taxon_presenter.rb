@@ -11,7 +11,7 @@ class WorldWideTaxonPresenter
     :tagged_content,
     :child_taxons,
     :live_taxon?,
-    to: :taxon
+    to: :taxon,
   )
 
   def initialize(taxon)
@@ -26,7 +26,7 @@ class WorldWideTaxonPresenter
     rendering_type == ACCORDION
   end
 
-  GENERAL_INFORMATION_TITLE = 'General information and guidance'.freeze
+  GENERAL_INFORMATION_TITLE = "General information and guidance".freeze
 
   def accordion_content
     return [] unless renders_as_accordion?
@@ -36,15 +36,15 @@ class WorldWideTaxonPresenter
     if tagged_content.any?
       general_information = WorldWideTaxon.new(
         ContentItem.new(
-          'content_id' => taxon.content_id,
-          'title' => GENERAL_INFORMATION_TITLE,
-          'base_path' => GENERAL_INFORMATION_TITLE.downcase.tr(' ', '-'),
-          'description' => ''
-        )
+          "content_id" => taxon.content_id,
+          "title" => GENERAL_INFORMATION_TITLE,
+          "base_path" => GENERAL_INFORMATION_TITLE.downcase.tr(" ", "-"),
+          "description" => "",
+        ),
       )
 
       accordion_items.unshift(
-        WorldWideTaxonPresenter.new(general_information)
+        WorldWideTaxonPresenter.new(general_information),
       )
     end
 
@@ -53,23 +53,23 @@ class WorldWideTaxonPresenter
 
   def options_for_leaf_content(index:)
     {
-      module: 'track-click',
-      track_category: 'navLeafLinkClicked',
+      module: "track-click",
+      track_category: "navLeafLinkClicked",
       track_action: (index + 1).to_s,
       track_label: tagged_content[index].base_path,
       track_options: { dimension28: tagged_content.size.to_s,
-                       dimension29: tagged_content[index].title }
+                       dimension29: tagged_content[index].title },
     }
   end
 
   def options_for_accordion_content(index:, section_index:)
     {
-      module: 'track-click',
-      track_category: 'navAccordionLinkClicked',
+      module: "track-click",
+      track_category: "navAccordionLinkClicked",
       track_action: "#{section_index + 1}.#{index + 1}",
       track_label: tagged_content[index].base_path,
       track_options: { dimension28: tagged_content.size.to_s,
-                       dimension29: tagged_content[index].title }
+                       dimension29: tagged_content[index].title },
     }
   end
 

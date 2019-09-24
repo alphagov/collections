@@ -1,4 +1,4 @@
-require 'active_model'
+require "active_model"
 
 class ExampleLink
   include ActiveModel::Model
@@ -6,7 +6,7 @@ class ExampleLink
   attr_accessor(
     :title,
     :link,
-    :class
+    :class,
   )
 
   def base_path

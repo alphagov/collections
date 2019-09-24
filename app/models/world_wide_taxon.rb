@@ -9,7 +9,7 @@ class WorldWideTaxon
     :linked_items,
     :to_hash,
     :phase,
-    to: :content_item
+    to: :content_item,
   )
 
   def initialize(content_item)
@@ -28,21 +28,21 @@ class WorldWideTaxon
   def child_taxons
     return [] unless children?
 
-    linked_items('child_taxons').map do |child_taxon|
+    linked_items("child_taxons").map do |child_taxon|
       self.class.new(child_taxon)
     end
   end
 
   def parent?
-    linked_items('parent_taxons').present?
+    linked_items("parent_taxons").present?
   end
 
   def children?
-    linked_items('child_taxons').present?
+    linked_items("child_taxons").present?
   end
 
   def associated_taxons
-    linked_items('associated_taxons').map do |associated_taxon|
+    linked_items("associated_taxons").map do |associated_taxon|
       self.class.new(associated_taxon)
     end
   end
