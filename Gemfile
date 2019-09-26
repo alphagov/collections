@@ -15,7 +15,7 @@ gem 'rails', '5.2.3'
 gem 'rinku', require: 'rails_rinku'
 gem 'sass-rails', '~> 5.0.3'
 gem 'slimmer', '~> 13.1.0'
-gem 'uglifier', '~> 4.1.20'
+gem 'uglifier', '~> 4.2.0'
 
 group :test do
   gem 'cucumber-rails', require: false
