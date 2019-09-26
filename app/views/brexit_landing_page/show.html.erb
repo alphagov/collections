@@ -1,14 +1,14 @@
 <% content_for :page_class, "taxon-page taxon-page--grid" %>
-<% content_for :extra_headers do %>
-  <link rel="preload" as="image" href="<%= asset_path 'chevron-extend-hover.svg' %>">
+<% content_for :meta_tags do %>
+  <%= page_variant.analytics_meta_tag.html_safe %>
 <% end %>
 
 <%=
   render(
       partial: 'page_header',
       locals: {
-          presented_taxon: presented_taxon,
-          show_dynamic_list: show_dynamic_list
+        presented_taxon: presented_taxon,
+        show_dynamic_list: show_dynamic_list
       }
   )
 %>

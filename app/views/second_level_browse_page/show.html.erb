@@ -2,12 +2,9 @@
 <%= render 'shared/tag_meta', tag: page %>
 <% content_for :meta_tags do %>
   <meta name='govuk:navigation-page-type' content='Second Level Browse'>
-<% end %>
-<% content_for :page_class, "browse" %>
-
-<% content_for :meta_section do %>
   <meta name="govuk:section" content="<%= meta_section %>">
 <% end %>
+<% content_for :page_class, "browse" %>
 
 <h1 class="visuallyhidden"><%= t("browse.title") %></h1>
 
