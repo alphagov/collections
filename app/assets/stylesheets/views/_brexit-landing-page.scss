@@ -44,16 +44,6 @@ $red: #E61E32;
   padding: govuk-spacing(3) govuk-spacing(2) govuk-spacing(3) 0;
 }
 
-.landing-page__section-chevron {
-  padding-right: govuk-spacing(4);
-  background-image: asset-url('chevron.svg');
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  background-position: right govuk-spacing(3);
-  background-origin: content-box;
-  text-decoration: none;
-}
-
 .landing-page__section-list-wrapper {
   margin-bottom: govuk-spacing(6);
   border-top: 1px solid govuk-colour("mid-grey", $legacy: "grey-2");
