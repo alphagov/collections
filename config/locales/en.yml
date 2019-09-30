@@ -125,7 +125,9 @@ en:
     call_to_action_intro: "Answer a few questions to find out how you or your business should prepare."
     all_brexit_information: "All Brexit information"
     email_intro: "Stay up to date"
-    email: "Sign up for email alerts about new or updated information related to Brexit"
+    email_a: "Sign up for email alerts about new or updated information related to Brexit"
+    email_b: "Sign up for email alerts about Brexit"
+    browse: "Browse Brexit guidance"
     individuals: "individuals and families"
     business: "businesses and organisations"
   campaign:

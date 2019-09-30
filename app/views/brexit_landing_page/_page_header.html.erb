@@ -35,7 +35,11 @@
         } %>
 
         <% if show_dynamic_list %>
-          <p class="landing-page__ready-intro"><%= I18n.t("brexit_landing_page.call_to_action_intro") %></p>
+          <% if page_variant.variant?("B") %>
+            <p class="landing-page__ready-intro">Find out how you or your business need to prepare by answering a few simple questions.</p>
+          <% else %>
+            <p class="landing-page__ready-intro"><%= I18n.t("brexit_landing_page.call_to_action_intro") %></p>
+          <% end %>
 
           <%= render "govuk_publishing_components/components/chevron_banner", {
             href: "/get-ready-brexit-check",
