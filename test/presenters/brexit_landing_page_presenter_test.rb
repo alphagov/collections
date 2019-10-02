@@ -48,23 +48,45 @@ describe BrexitLandingPagePresenter do
     ]
   }
 
+  let(:yaml_contents_b) {
+    [
+      {
+        "list_block" => "<p>This is some text</p>",
+      },
+    ]
+  }
+
   subject {
     BrexitLandingPagePresenter.new(taxon)
   }
 
   let(:taxon) { Taxon.new(ContentItem.new("content_id" => "content_id", "base_path" => "/base_path")) }
 
-  describe "#buckets" do
+  describe "#buckets_a" do
     it "html-safes the section_description" do
-      assert subject.buckets[0]["section_description"].html_safe?
+      assert subject.buckets_a[0]["section_description"].html_safe?
     end
 
     it "html-safes the list block" do
-      assert subject.buckets[0]["section_list"][0]["list_block"].html_safe?
+      assert subject.buckets_a[0]["section_list"][0]["list_block"].html_safe?
     end
 
     it "html-safes the row title description" do
-      assert subject.buckets[1]["section_list"][0]["row_title_description"].html_safe?
+      assert subject.buckets_a[1]["section_list"][0]["row_title_description"].html_safe?
+    end
+  end
+
+  describe "#buckets_b" do
+    before :each do
+      YAML.stubs(:load_file).returns(yaml_contents_b)
+
+      subject {
+        BrexitLandingPagePresenter.new(taxon)
+      }
+    end
+
+    it "html-safes the list block" do
+      assert subject.buckets_b[0]["list_block"].html_safe?
     end
   end
 

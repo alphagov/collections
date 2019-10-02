@@ -30,13 +30,15 @@ module BrexitLandingPageSteps
     end
   end
 
-  def when_i_visit_the_brexit_landing_page_with_dynamic_list
+  def when_i_visit_the_brexit_landing_page_with_dynamic_list(variant)
     BrexitLandingPageController.any_instance.stubs(:show_dynamic_list?).returns(true)
+    GovukAbTesting::RequestedVariant.any_instance.stubs(:variant_name).returns(variant)
     visit brexit_taxon_path
   end
 
-  def when_i_visit_the_brexit_landing_page_without_dynamic_list
+  def when_i_visit_the_brexit_landing_page_without_dynamic_list(variant)
     BrexitLandingPageController.any_instance.stubs(:show_dynamic_list?).returns(false)
+    GovukAbTesting::RequestedVariant.any_instance.stubs(:variant_name).returns(variant)
     visit brexit_taxon_path
   end
 
@@ -53,7 +55,7 @@ module BrexitLandingPageSteps
   end
 
   def then_i_can_see_the_get_ready_section
-    assert page.has_selector?(".landing-page__ready-intro", text: "Answer a few questions to find out how you or your business should prepare.")
+    assert page.has_selector?(".landing-page__ready-intro")
     assert page.has_selector?(".gem-c-chevron-banner__link", text: "Check what you need to do")
   end
 
@@ -66,13 +68,18 @@ module BrexitLandingPageSteps
     assert page.has_selector?(".landing-page__share .gem-c-share-links")
   end
 
-  def then_i_can_see_the_buckets_section
+  def then_i_can_see_the_buckets_section_variant_a
     assert page.has_selector?(".landing-page__section h2", text: "Individuals and families")
     assert page.has_selector?(".landing-page__section h2", text: "Businesses and organisations")
   end
 
+  def then_i_can_see_the_buckets_section_variant_b
+    assert page.has_selector?(".landing-page__section h2", text: "Browse Brexit guidance")
+  end
+
   def and_i_can_see_an_email_subscription_link
-    assert page.has_selector?('a[href="/email-signup/?topic=' + brexit_taxon_path + '"]', text: "Sign up for email alerts about new or updated information related to Brexit")
+    assert page.has_selector?('a[href="/email-signup/?topic=' + brexit_taxon_path + '"]')
+    assert page.has_text?("Sign up for email alerts")
   end
 
   def and_i_can_see_the_explore_topics_section
@@ -98,7 +105,7 @@ module BrexitLandingPageSteps
   def and_ecommerce_tracking_is_setup
     assert page.has_css?(".landing-page__section[data-analytics-ecommerce]")
     assert page.has_css?(".landing-page__section[data-ecommerce-start-index='1']")
-    assert page.has_css?(".landing-page__section[data-list-title='Brexit landing page: individuals and families']")
+    assert page.has_css?(".landing-page__section[data-list-title]")
     assert page.has_css?(".landing-page__section[data-search-query]")
   end
 
@@ -120,8 +127,8 @@ module BrexitLandingPageSteps
   end
 
   def and_the_email_link_is_tracked
-    assert page.has_css?("a[data-track-category='emailAlertLinkClicked']", text: "Sign up for email alerts about new or updated information related to Brexit")
-    assert page.has_css?("a[data-track-action=\"#{current_path}\"]", text: "Sign up for email alerts about new or updated information related to Brexit")
+    assert page.has_css?("a[data-track-category='emailAlertLinkClicked']")
+    assert page.has_css?("a[data-track-action=\"#{current_path}\"]")
   end
 
   def then_the_page_is_not_noindexed

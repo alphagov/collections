@@ -1,0 +1,26 @@
+<div class="landing-page__section"
+  data-analytics-ecommerce
+  data-ecommerce-start-index="1"
+  data-list-title="Brexit landing page: Browse Brexit guidance"
+  data-search-query>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m landing-page__section-title"><%= t('brexit_landing_page.browse') %></h2>
+    </div>
+  </div>
+
+  <% buckets.each do |bucket| %>
+    <div class="grid-row landing-page__section-list-wrapper">
+      <div class="govuk-grid-column-one-third">
+        <% if bucket["row_title"] %><h3 class="govuk-heading-s"><%= bucket["row_title"] %></h3><% end %>
+      </div>
+
+      <div class="govuk-grid-column-two-thirds">
+        <%= render "govuk_publishing_components/components/govspeak", {
+          } do %>
+          <%= bucket["list_block"] %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
