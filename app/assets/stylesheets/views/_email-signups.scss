@@ -43,7 +43,7 @@
   .email-alerts {
     background-image: image-url("mail-icon.png");
 
-    @include device-pixel-ratio() {
+    @include govuk-device-pixel-ratio() {
       background-image: image-url("mail-icon-x2.png");
       background-size: 20px 14px;
     }
