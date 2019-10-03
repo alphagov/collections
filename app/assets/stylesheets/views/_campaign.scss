@@ -1,8 +1,8 @@
 .campaign__taxon {
-  border-top: 2px solid $govuk-blue;
-  margin-bottom: $gutter * 2;
+  border-top: 2px solid $govuk-brand-colour;
+  margin-bottom: govuk-spacing(6) * 2;
 
-  @include media(tablet) {
+  @include govuk-media-query($from: tablet) {
     &--variable-border {
       border: none;
     }
@@ -10,49 +10,49 @@
 }
 
 .campaign__taxon-title {
-  @include bold-24;
-  padding: $gutter-half 0;
+  @include govuk-font(24, $weight: bold);
+  padding: govuk-spacing(3) 0;
 }
 
 .campaign__description {
-  @include core-19;
+  @include govuk-font(19);
 }
 
 .campaign__other-campaigns {
-  border-top: 2px solid $govuk-blue;
-  padding-top: $gutter-two-thirds;
+  border-top: 2px solid $govuk-brand-colour;
+  padding-top: govuk-spacing(4);
 }
 
 .campaign__other-campaigns-list {
-  padding-left: $gutter-two-thirds;
+  padding-left: govuk-spacing(4);
 }
 
 .campaign__other-campaigns-item {
-  @include core-19;
+  @include govuk-font(19);
   margin-bottom: 5px;
 }
 
 .campaign__other-campaigns-title {
-  @include bold-24;
-  padding: $gutter-half 0;
-  border-top: 2px solid $govuk-blue;
+  @include govuk-font(24, $weight: bold);
+  padding: govuk-spacing(3) 0;
+  border-top: 2px solid $govuk-brand-colour;
 
-  @include media(tablet) {
+  @include govuk-media-query($from: tablet) {
     border: none;
   }
 }
 
 .campaign__other-campaigns-description {
-  @include core-19;
-  margin-bottom: $gutter-one-third;
+  @include govuk-font(19);
+  margin-bottom: govuk-spacing(2);
 }
 
 .campaign__other-topics-list {
   list-style-type: none;
-  margin-bottom: $gutter * 1.5;
+  margin-bottom: 45px;
 }
 
 .campaign__other-topics-item {
-  @include core-19;
-  margin-bottom: $gutter-one-third;
+  @include govuk-font(19);
+  margin-bottom: govuk-spacing(2);
 }

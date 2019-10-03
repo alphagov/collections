@@ -2,16 +2,16 @@
 
   .page-header {
     h2 {
-      @include core-24;
+      @include govuk-font(24);
       color: inherit;
       margin: 0;
     }
 
     .latest-subscribe {
-      @include core-14;
+      @include govuk-font(14);
 
       ul {
-        @include media(tablet) {
+        @include govuk-media-query($from: tablet) {
           // align with the left edge of the search box
           margin-left: 18px;
         }
@@ -22,7 +22,7 @@
       }
 
       .primary {
-        border-bottom: 1px solid $border-colour;
+        border-bottom: 1px solid $govuk-border-colour;
         padding-bottom: 10px;
         margin-bottom: 14px;
       }
@@ -38,24 +38,24 @@
       }
 
       a {
-        @include bold-16;
+        @include govuk-font(16, $weight: bold);
         text-decoration: none;
       }
     }
   }
 
   .browse-container {
-    background-color: $page-colour;
+    background-color: govuk-colour("white");
     min-height: 500px;
     padding: 0 0 45px 0;
 
     h2,
     h3 {
-      @include bold-19;
+      @include govuk-font(19, $weight: bold);
       margin-bottom: 0;
     }
 
-    @include media(mobile) {
+    @include govuk-media-query($from: mobile) {
       padding: 0 0 30px 0;
       min-height: auto;
     }
@@ -67,11 +67,11 @@
     overflow: auto;
 
     h1 {
-      @include bold-24;
+      @include govuk-font(24, $weight: bold);
 
-      margin-bottom: $gutter-one-third;
+      margin-bottom: govuk-spacing(2);
 
-      @include media(desktop) {
+      @include govuk-media-query($from: desktop) {
         float: left;
         max-width: 12.5em;
       }

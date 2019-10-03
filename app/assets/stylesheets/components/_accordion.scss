@@ -1,7 +1,7 @@
 .app-c-accordion {
   &.app-c-accordion--active {
-    margin-bottom: $gutter;
-    border-bottom: 1px solid $border-colour;
+    margin-bottom: govuk-spacing(6);
+    border-bottom: 1px solid $govuk-border-colour;
   }
 }
 
@@ -11,11 +11,11 @@
   padding-bottom: 12px;
 
   .app-c-accordion--active & {
-    border-top: 1px solid $border-colour;
+    border-top: 1px solid $govuk-border-colour;
     cursor: pointer;
 
     &:hover {
-      background: $grey-3;
+      background: govuk-colour("light-grey", $legacy: "grey-3");
     }
   }
 }
@@ -32,7 +32,7 @@
   background-repeat: no-repeat;
   background-position: 0 -16px;
 
-  @include media (tablet) {
+  @include govuk-media-query($from: tablet) {
     right: 15px;
   }
 
@@ -42,7 +42,7 @@
 }
 
 .app-c-accordion__title {
-  @include bold-24;
+  @include govuk-font(24, $weight: bold);
 }
 
 // removes extra dotted outline from buttons in Firefox
@@ -54,21 +54,21 @@
 }
 
 .app-c-accordion__description {
-  @include core-19;
+  @include govuk-font(19);
 
   margin-top: 5px;
   margin-bottom: 0;
-  margin-right: $gutter * 1.5;
+  margin-right: 45px;
 }
 
 .app-c-accordion__panel {
   padding-top: 5px;
-  padding-bottom: $gutter-half;
+  padding-bottom: govuk-spacing(3);
 
   .section-is-open & {
-    @include media(tablet) {
+    @include govuk-media-query($from: tablet) {
       padding-top: 10px;
-      padding-bottom: $gutter;
+      padding-bottom: govuk-spacing(6);
     }
   }
 }
@@ -76,22 +76,22 @@
 .app-c-accordion__button {
   @include firefox-remove-second-button-outline;
 
-  color: $link-colour;
+  color: $govuk-link-colour;
   cursor: pointer;
   background: none;
   border: 0;
 
   &--title {
-    @include bold-24;
+    @include govuk-font(24, $weight: bold);
 
     display: inline-block;
-    margin-right: $gutter * 1.5;
+    margin-right: 45px;
     padding: 0;
     text-align: left;
   }
 
   &--controls {
-    @include core-16;
+    @include govuk-font(16);
 
     float: right;
     position: relative;
@@ -101,5 +101,5 @@
 }
 
 .app-c-accordion__controls {
-  @extend %contain-floats;
+  @include govuk-clearfix;
 }

@@ -1,7 +1,7 @@
 .app-c-topic-list__item {
-  @include bold-19;
+  @include govuk-font(19, $weight: bold);
   list-style: none;
-  margin-bottom: $gutter-one-third;
+  margin-bottom: govuk-spacing(2);
 }
 
 .app-c-topic-list__link--no-underline {
@@ -14,11 +14,11 @@
 
 .app-c-topic-list--small {
   .app-c-topic-list__item {
-    margin-bottom: $gutter-one-third / 2;
+    margin-bottom: govuk-spacing(1);
   }
 
   .app-c-topic-list__link {
-    @include bold-16;
+    @include govuk-font(16, $weight: bold);
   }
 }
 

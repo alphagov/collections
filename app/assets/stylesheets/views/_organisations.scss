@@ -1,36 +1,36 @@
 .organisations {
   .organisations-list__section {
-    margin-bottom: $gutter * 2;
+    margin-bottom: govuk-spacing(6) * 2;
   }
 
   .organisations__department-count-wrapper {
-    @include bold-80;
+    @include govuk-font(80, $weight: bold);
   }
 
   .organisations-list__item {
     list-style-type: none;
-    padding-bottom: $gutter-half;
-    margin-bottom: $gutter-half;
-    border-bottom: 1px solid $grey-2;
+    padding-bottom: govuk-spacing(3);
+    margin-bottom: govuk-spacing(3);
+    border-bottom: 1px solid govuk-colour("mid-grey", $legacy: "grey-2");
   }
 
   .organisation-list__item-title {
-    @include core-19;
-    margin-right: $gutter-one-third;
+    @include govuk-font(19);
+    margin-right: govuk-spacing(2);
   }
 
   .organisation-list__item-context {
-    color: $grey-1;
+    color: govuk-colour("dark-grey", $legacy: "grey-1");
     white-space: nowrap;
   }
 
   .organisation-list__item-works-with {
-    @include core-16;
+    @include govuk-font(16);
     display: block;
-    margin-top: $gutter-half;
-    margin-right: $gutter-two-thirds;
+    margin-top: govuk-spacing(3);
+    margin-right: govuk-spacing(4);
 
-    @include media(tablet) {
+    @include govuk-media-query($from: tablet) {
       display: inline-block;
     }
   }
@@ -39,15 +39,15 @@
     display: none;
 
     .js-enabled & {
-      @include core-16;
+      @include govuk-font(16);
       display: inline;
     }
   }
 
   .organisation-list__works-with {
-    background-color: $panel-colour;
-    margin-top: $gutter-one-third;
-    padding: $gutter-one-third;
+    background-color: govuk-colour("light-grey", $legacy: "grey-3");
+    margin-top: govuk-spacing(2);
+    padding: govuk-spacing(2);
   }
 
   .organisation-list__works-with-title {
@@ -56,7 +56,7 @@
   }
 
   .organisation-list__works-with-list {
-    margin-bottom: $gutter-half;
+    margin-bottom: govuk-spacing(3);
   }
 
   .organisation-list__works-with-list-item {
@@ -64,7 +64,7 @@
   }
 
   .organisations-list__without-number {
-    @include media(tablet) {
+    @include govuk-media-query($from: tablet) {
       float: right;
     }
   }
@@ -73,10 +73,10 @@
     display: none;
 
     .js-enabled & {
-      @include core-19;
+      @include govuk-font(19);
       display: block;
       text-align: center;
-      margin-bottom: $gutter * 2;
+      margin-bottom: govuk-spacing(9);
     }
   }
 }
@@ -85,22 +85,22 @@
   display: none;
 
   .filter-organisations-list__label {
-    @include bold-36;
-    margin-right: $gutter-one-third;
+    @include govuk-font(36, $weight: bold);
+    margin-right: govuk-spacing(2);
   }
 
   .filter-organisations-list__input {
-    @include core-16;
+    @include govuk-font(16);
     width: 30%;
     min-width: 150px;
     vertical-align: text-bottom;
     padding: 5px;
-    border: 1px solid $grey-2;
+    border: 1px solid govuk-colour("mid-grey", $legacy: "grey-2");
     margin: 0 5px 5px 0;
   }
 }
 
 .filter-organisations-list__form--active {
   display: block;
-  margin-bottom: $gutter * 1.5;
+  margin-bottom: 45px;
 }
