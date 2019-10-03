@@ -5,14 +5,6 @@ $govuk-compatibility-govukelements: true;
 // gem components
 @import 'govuk_publishing_components/all_components';
 
-@import "conditionals";
-@import "colours";
-@import "typography";
-@import "css3";
-@import "grid_layout";
-@import "measurements";
-@import "design-patterns/buttons";
-
 @import "helpers/layouts";
 @import "helpers/margins";
 @import "components/*";
