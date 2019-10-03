@@ -15,12 +15,6 @@
       }
     }
   }
-
-  button {
-    @include button;
-    @include bold-24;
-    margin: 20px 0;
-  }
 }
 
 .subscriptions {
