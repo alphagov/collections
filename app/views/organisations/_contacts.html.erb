@@ -8,9 +8,9 @@
       font_size: 19,
     } %>
 
-    <div class="grid-row">
+    <div class="govuk-grid-row">
       <% if contact[:post_addresses].any? %>
-        <address class="column-half organisation__margin-bottom organisation__address">
+        <address class="govuk-grid-column-one-half organisation__margin-bottom organisation__address">
           <% contact[:post_addresses].each do |post| %>
             <%= post.html_safe %>
           <% end %>
@@ -18,7 +18,7 @@
       <% end %>
 
       <% if contact[:email_addresses].any? || contact[:links].any? || contact[:phone_numbers].any?  %>
-        <div class="<%= contact[:post_addresses].any? ? "column-half" : "column-two-thirds" %>">
+        <div class="<%= contact[:post_addresses].any? ? "govuk-grid-column-one-half" : "govuk-grid-column-two-thirds" %>">
           <% if contact[:email_addresses].any? %>
             <div class="organisation__margin-bottom">
               <p><%= t('organisations.contact.email') %></p>

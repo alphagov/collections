@@ -1,7 +1,7 @@
 <% if @documents.has_latest_documents? %>
 <section class="brand--<%= @organisation.brand %> brand__border-color organisation__brand-border-top organisation__margin-bottom" id="latest-documents">
-  <div class="grid-row">
-    <div class="column-two-thirds">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
       <%= render "govuk_publishing_components/components/heading", {
         text: t('organisations.latest_from', title: @show.prefixed_title),
         padding: true,
@@ -11,8 +11,8 @@
     </div>
   </div>
 
-  <div class="grid-row">
-    <div class="column-two-thirds">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
       <%= render "govuk_publishing_components/components/document_list", @documents.latest_documents %>
 
       <p class="organisation__margin-bottom brand--<%= @organisation.brand %>">

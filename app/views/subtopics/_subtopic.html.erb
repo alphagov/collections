@@ -1,15 +1,15 @@
 <% content_for :page_class, "topics-page" %>
 
 <header class="page-header group">
-  <div class="grid-row">
-    <div class="column-two-thirds">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
       <%= yield :page_title %>
       <% if organisations.any? %>
         <%= render "govuk_publishing_components/components/metadata", from: organisations.array_of_links %>
       <% end %>
     </div>
 
-    <div class="column-one-third add-title-margin">
+    <div class="govuk-grid-column-one-third add-title-margin">
       <div class="latest-subscribe">
         <ul>
           <li class="email primary">

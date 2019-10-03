@@ -1,7 +1,7 @@
 <% if @organisation.body || @what_we_do.has_share_links? %>
 <section class="brand--<%= @organisation.brand %> brand__border-color organisation__brand-border-top organisation__section-wrap organisation__margin-bottom" id="what-we-do">
-  <div class="grid-row">
-    <div class="column-two-thirds">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
       <%= render "govuk_publishing_components/components/heading", {
         text: t('organisations.what_we_do', title: @show.prefixed_title),
         padding: true,
@@ -11,8 +11,8 @@
     </div>
   </div>
 
-  <div class="grid-row">
-    <div class="column-two-thirds">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
       <%= render "govuk_publishing_components/components/govspeak", {
         } do %>
           <p><%= @organisation.body.html_safe %></p>
@@ -28,7 +28,7 @@
     </div>
 
     <% if @what_we_do.has_share_links? %>
-      <div class="column-one-third">
+      <div class="govuk-grid-column-one-third">
         <%= render "govuk_publishing_components/components/heading", {
           text: t('organisations.follow_us'),
           margin_bottom: 3,

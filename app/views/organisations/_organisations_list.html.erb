@@ -1,7 +1,7 @@
 <% all_organisations.each do |organisation_type, organisations| %>
-  <div class="grid-row organisations-list__section" data-filter="block">
+  <div class="govuk-grid-row organisations-list__section" data-filter="block">
 
-    <div class="column-one-third" data-filter="count">
+    <div class="govuk-grid-column-one-third" data-filter="count">
       <% unless @presented_organisations.executive_office?(organisation_type) %>
         <%= render "govuk_publishing_components/components/heading", {
           text: organisation_type.to_s.humanize,
@@ -15,7 +15,7 @@
       <% end %>
     </div>
 
-    <div class="column-two-thirds <%= "organisations-list__without-number" if @presented_organisations.executive_office?(organisation_type) %>">
+    <div class="govuk-grid-column-two-thirds <%= "organisations-list__without-number" if @presented_organisations.executive_office?(organisation_type) %>">
       <ol data-filter="list">
         <% organisations.each do |organisation| %>
           <li class="organisations-list__item" id="<%= organisation['slug'] %>" data-filter="item">

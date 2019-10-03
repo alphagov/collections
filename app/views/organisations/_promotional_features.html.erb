@@ -10,7 +10,7 @@
         brand: @organisation.brand
       } %>
 
-      <div class="<%= "grid-row" if feature[:number_of_items] > 1 %>">
+      <div class="<%= "govuk-grid-row" if feature[:number_of_items] > 1 %>">
         <% feature[:items].each do |item| %>
           <div class="<%= feature[:child_column_class] %>">
             <%= render "govuk_publishing_components/components/image_card", item %>

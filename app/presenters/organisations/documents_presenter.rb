@@ -113,9 +113,9 @@ module Organisations
     end
 
     def promotions_child_column_class(number_of_items)
-      return "column-half" if number_of_items == 2
+      return "govuk-grid-column-one-half" if number_of_items == 2
 
-      "column-one-third" if number_of_items == 3
+      "govuk-grid-column-one-third" if number_of_items == 3
     end
 
     def promotional_feature_link(link)

@@ -130,7 +130,7 @@ describe Organisations::DocumentsPresenter do
         title: "Two features",
         number_of_items: 2,
         parent_column_class: "column-2",
-        child_column_class: "column-half",
+        child_column_class: "govuk-grid-column-one-half",
         items: [
           {
             description: "Story 2-1",
@@ -174,7 +174,7 @@ describe Organisations::DocumentsPresenter do
         title: "Three features",
         number_of_items: 3,
         parent_column_class: "column-3",
-        child_column_class: "column-one-third",
+        child_column_class: "govuk-grid-column-one-third",
         items: [
           {
             description: "Story 3-1<br/><br/>And a new line",
