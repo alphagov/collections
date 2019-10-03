@@ -11,5 +11,5 @@
 // scss-lint:enable IdSelector
 
 .full-page-width-wrapper {
-  @extend %site-width-container;
+  @include govuk-width-container;
 }
