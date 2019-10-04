@@ -20,6 +20,7 @@ describe StepNav do
             "@type": "HowToStep",
             "image": ["http://assets.gov.uk/image1.png", "http://assets.gov.uk/image2.png"],
             "name": "Check you're allowed to drive",
+            "url": "http://www.test.gov.uk/learn-to-drive-a-car#check-you-re-allowed-to-drive",
             "position": 1,
             "itemListElement": [
               {
@@ -51,6 +52,7 @@ describe StepNav do
             "@type": "HowToStep",
             "image": ["http://assets.gov.uk/image1.png", "http://assets.gov.uk/image2.png"],
             "name": "Get a provisional driving licence",
+            "url": "http://www.test.gov.uk/learn-to-drive-a-car#get-a-provisional-driving-licence",
             "position": 2,
             "itemListElement": [
               {
@@ -65,6 +67,7 @@ describe StepNav do
             "@type": "HowToStep",
             "image": ["http://assets.gov.uk/image1.png", "http://assets.gov.uk/image2.png"],
             "name": "Driving lessons and practice",
+            "url": "http://www.test.gov.uk/learn-to-drive-a-car#driving-lessons-and-practice",
             "position": 3,
             "itemListElement": [
               {
@@ -102,6 +105,7 @@ describe StepNav do
             "@type": "HowToStep",
             "image": ["http://assets.gov.uk/image1.png", "http://assets.gov.uk/image2.png"],
             "name": "Prepare for your theory test",
+            "url": "http://www.test.gov.uk/learn-to-drive-a-car#prepare-for-your-theory-test",
             "position": 4,
             "itemListElement": [
               {
@@ -128,6 +132,7 @@ describe StepNav do
             "@type": "HowToStep",
             "image": ["http://assets.gov.uk/image1.png", "http://assets.gov.uk/image2.png"],
             "name": "Book and manage your theory test",
+            "url": "http://www.test.gov.uk/learn-to-drive-a-car#book-and-manage-your-theory-test",
             "position": 5,
             "itemListElement": [
               {
@@ -171,6 +176,7 @@ describe StepNav do
             "@type": "HowToStep",
             "image": ["http://assets.gov.uk/image1.png", "http://assets.gov.uk/image2.png"],
             "name": "Book and manage your driving test",
+            "url": "http://www.test.gov.uk/learn-to-drive-a-car#book-and-manage-your-driving-test",
             "position": 6,
             "itemListElement": [
               {
@@ -213,6 +219,7 @@ describe StepNav do
             "@type": "HowToStep",
             "image": ["http://assets.gov.uk/image1.png", "http://assets.gov.uk/image2.png"],
             "name": "When you pass",
+            "url": "http://www.test.gov.uk/learn-to-drive-a-car#when-you-pass",
             "position": 7,
             "itemListElement": [
               {
