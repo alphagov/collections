@@ -48,6 +48,7 @@ class StepNav
         "@type": "HowToStep",
         "image": image_urls,
         "name": step["title"],
+        "url": step_url(step["title"].parameterize),
         "position": step_index,
         "itemListElement": contents.flatten.compact,
       }
@@ -85,5 +86,9 @@ class StepNav
     else
       Plek.new.website_root + href
     end
+  end
+
+  def step_url(step_slug)
+    Plek.new.website_root + base_path + "#" + step_slug
   end
 end
