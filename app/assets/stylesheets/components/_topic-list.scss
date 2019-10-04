@@ -10,6 +10,10 @@
   &:hover {
     text-decoration: underline;
   }
+
+  &:hover:focus {
+    text-decoration: none;
+  }
 }
 
 .app-c-topic-list--small {
