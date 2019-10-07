@@ -1,8 +1,8 @@
 <% link_index = 0 %>
 <% @featured_links.in_groups_of(local_assigns.fetch(:display_full_width, true) ? 3 : 2, false).each_with_index do |links_group, row_index| %>
-  <div class="grid-row" data-module="track-click">
+  <div class="govuk-grid-row" data-module="track-click">
     <% links_group.each do |link| %>
-      <div class="<%= local_assigns.fetch(:display_full_width, true) ? 'column-one-third' : 'column-half' %>">
+      <div class="<%= local_assigns.fetch(:display_full_width, true) ? 'govuk-grid-column-one-third' : 'govuk-grid-column-one-half' %>">
         <div class="campaign__taxon <%= "campaign__taxon--variable-border" if row_index.eql?(0) %> ">
           <h2 class="campaign__taxon-title">
             <%= link_to(link.title, link.link, data: link.featured_data_attributes(link_index)) %>

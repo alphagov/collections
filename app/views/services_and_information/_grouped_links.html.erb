@@ -1,9 +1,9 @@
 <% grouped_links.each_with_index do |group, group_index| -%>
-  <nav class="grid-row" aria-labelledby="<%= group.title.parameterize %>">
-    <div class="column-third">
+  <nav class="govuk-grid-row" aria-labelledby="<%= group.title.parameterize %>">
+    <div class="govuk-grid-column-one-third">
       <h1 id="<%= group.title.parameterize %>"><%= group.title %></h1>
     </div>
-    <div class="column-two-thirds">
+    <div class="govuk-grid-column-two-thirds">
       <%
         list_item_count = group.see_more_link ? group.examples.count + 1 : group.examples.count
         tracking_attributes = topic_list_tracking_attributes(list_item_count, group_index, 'navServicesInformationLinkClicked')

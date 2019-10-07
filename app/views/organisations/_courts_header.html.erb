@@ -1,5 +1,5 @@
-<div class="grid-row">
-  <div class="column-two-thirds organisation__margin-bottom">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds organisation__margin-bottom">
     <%= render "govuk_publishing_components/components/title", {
       title: @header.org.title
     } %>
@@ -10,7 +10,7 @@
     </div>
   </div>
 
-  <div class="column-one-third">
+  <div class="govuk-grid-column-one-third">
     <%= render "govuk_publishing_components/components/translation-nav", @header.translation_links %>
     <%= render "components/topic-list", @header.ordered_featured_links %>
   </div>

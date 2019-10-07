@@ -1,11 +1,11 @@
 .app-c-taxon-list__item {
-  @include core-19;
+  @include govuk-font(19);
   list-style: none;
-  margin-bottom: $gutter-two-thirds;
+  margin-bottom: govuk-spacing(4);
 }
 
 .app-c-taxon-list__heading {
-  margin-bottom: $gutter-one-third / 2;
+  margin-bottom: govuk-spacing(1);
 }
 
 .app-c-taxon-list__link {

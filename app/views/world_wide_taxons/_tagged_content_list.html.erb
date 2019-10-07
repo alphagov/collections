@@ -1,6 +1,6 @@
 <% if presented_taxon.tagged_content.any? %>
-  <div class="grid-row">
-    <div class="column-two-thirds">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
       <% heading_level = heading_level ? heading_level : false %>
       <%= render 'components/taxon-list', {
           heading_level: heading_level,

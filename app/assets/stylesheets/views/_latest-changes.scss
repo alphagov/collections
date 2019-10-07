@@ -8,7 +8,7 @@
 
   p,
   time {
-    @include core-14;
+    @include govuk-font(14);
   }
 
   time {
@@ -25,7 +25,7 @@
 
   li {
     padding-bottom: 10px;
-    border-bottom: 1px solid $border-colour;
+    border-bottom: 1px solid $govuk-border-colour;
     margin: 10px 0;
   }
 

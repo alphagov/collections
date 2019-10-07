@@ -1,7 +1,7 @@
 <% if @documents.has_featured_news? %>
 <section class="brand--<%= @organisation.brand %> brand__border-color organisation__brand-border-top organisation__section-wrap organisation__margin-bottom" id="featured-documents">
-  <div class="grid-row">
-    <div class="column-two-thirds">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
       <%= render "govuk_publishing_components/components/heading", {
           text: I18n.t('organisations.featured'),
           padding: true,
@@ -16,9 +16,9 @@
   <% end %>
 
   <% @documents.remaining_featured_news.in_groups_of(3, false) do |news| %>
-    <div class="grid-row">
+    <div class="govuk-grid-row">
       <% news.each do |news_item| %>
-        <div class="column-one-third">
+        <div class="govuk-grid-column-one-third">
           <%= render "govuk_publishing_components/components/image_card", news_item %>
         </div>
       <% end %>

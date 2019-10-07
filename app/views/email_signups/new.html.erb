@@ -19,7 +19,9 @@
     <%= form_for email_signup, url: email_signup_path(topic_slug: params[:topic_slug], subtopic_slug: params[:subtopic_slug]), html: { class: "signup-form" } do |form| %>
       <p>You’ll get an email each time content is published or updated in this topic.</p>
 
-      <%= button_tag 'Create subscription' %>
+      <%= render "govuk_publishing_components/components/button", {
+        text: "Create subscription"
+      } %>
     <% end %>
 
   <% else %>

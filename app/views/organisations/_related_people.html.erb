@@ -1,7 +1,7 @@
 <% if people.any? %>
   <section class="brand--<%= brand %> brand__border-color organisation__brand-border-top organisation__margin-bottom">
-    <div class="grid-row">
-      <div class="column-two-thirds">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
         <%= render "govuk_publishing_components/components/heading", {
           text: title,
           padding: true,
@@ -12,9 +12,9 @@
     </div>
 
     <% people.in_groups_of(4, false) do |people| %>
-      <div class="grid-row">
+      <div class="govuk-grid-row">
         <% people.each do |person| %>
-          <div class="column-quarter">
+          <div class="govuk-grid-column-one-quarter">
             <%= render "govuk_publishing_components/components/image_card", person %>
           </div>
         <% end %>

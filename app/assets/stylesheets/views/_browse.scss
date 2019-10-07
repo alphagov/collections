@@ -1,21 +1,19 @@
-$gutter-one-sixth: $gutter / 6;
-
 // scss-lint:disable NestingDepth
 .browse {
   .browse-panes {
-    @extend %contain-floats;
-    padding-bottom: $gutter;
+    @include govuk-clearfix;
+    padding-bottom: govuk-spacing(6);
     position: relative;
 
-    @include media(tablet) {
-      padding-top: $gutter;
+    @include govuk-media-query($from: tablet) {
+      padding-top: govuk-spacing(6);
     }
 
     &.section {
       .root-pane {
         display: none; // hide on mobile
 
-        @include media(tablet) {
+        @include govuk-media-query($from: tablet) {
           display: block;
           float: right;
           width: 25%;
@@ -23,13 +21,13 @@ $gutter-one-sixth: $gutter / 6;
       }
 
       .section-pane {
-        @include media(tablet) {
+        @include govuk-media-query($from: tablet) {
           float: right;
           width: 30%;
           margin-right: 45%;
         }
 
-        @include media(desktop) {
+        @include govuk-media-query($from: desktop) {
           width: 35%;
           margin-right: 40%;
         }
@@ -41,34 +39,34 @@ $gutter-one-sixth: $gutter / 6;
       .section-pane {
         display: none; // hide on mobile
 
-        @include media(tablet) {
+        @include govuk-media-query($from: tablet) {
           display: block;
           float: right;
           width: 25%;
         }
 
-        color: $secondary-text-colour;
+        color: $govuk-secondary-text-colour;
 
         a,
         p {
-          color: $secondary-text-colour;
+          color: $govuk-secondary-text-colour;
         }
       }
 
       .section-pane {
-        @include media(tablet) {
+        @include govuk-media-query($from: tablet) {
           margin-left: -18%;
           width: 30%;
         }
 
-        @include media(desktop) {
+        @include govuk-media-query($from: desktop) {
           margin-left: -13%;
           width: 25%;
         }
       }
 
       .subsection-pane {
-        @include media(tablet) {
+        @include govuk-media-query($from: tablet) {
           float: right;
           width: 50%;
           margin-right: 13%;
@@ -77,28 +75,28 @@ $gutter-one-sixth: $gutter / 6;
     }
 
     .pane-inner {
-      padding-bottom: $gutter;
+      padding-bottom: govuk-spacing(6);
 
-      @include media(tablet) {
-        border-left: 1px solid $border-colour;
+      @include govuk-media-query($from: tablet) {
+        border-left: 1px solid $govuk-border-colour;
         min-height: 950px;
       }
 
-      @include media(desktop) {
+      @include govuk-media-query($from: desktop) {
         min-height: 700px;
       }
     }
 
     h1,
     h2 {
-      @include bold-27;
-      margin-bottom: $gutter-one-third;
-      margin-top: $gutter-one-third;
+      @include govuk-font(27, $weight: bold);
+      margin-bottom: govuk-spacing(2);
+      margin-top: govuk-spacing(2);
       outline: none;
 
-      @include media(tablet) {
+      @include govuk-media-query($from: tablet) {
         margin-top: 0;
-        margin-bottom: $gutter-half;
+        margin-bottom: govuk-spacing(3);
       }
     }
 
@@ -108,8 +106,8 @@ $gutter-one-sixth: $gutter / 6;
 
       h1,
       h2 {
-        @include media(tablet) {
-          padding-left: $gutter-half;
+        @include govuk-media-query($from: tablet) {
+          padding-left: govuk-spacing(3);
         }
       }
 
@@ -125,25 +123,25 @@ $gutter-one-sixth: $gutter / 6;
       ul a {
         position: relative;
         display: block;
-        @include core-19;
+        @include govuk-font(19);
         text-decoration: none;
         padding: 12px 25px 8px 0;
 
-        @include media(tablet) {
-          padding: 12px $gutter 8px $gutter-half;
-          @include core-16;
+        @include govuk-media-query($from: tablet) {
+          padding: 12px govuk-spacing(6) 8px govuk-spacing(3);
+          @include govuk-font(16);
         }
 
         &:hover {
-          background: $panel-colour;
-          color: $link-colour;
+          background: govuk-colour("light-grey", $legacy: "grey-3");
+          color: $govuk-link-colour;
         }
 
         &:after {
           position: absolute;
           top: 50%;
           margin-top: -8px;
-          right: $gutter-one-third;
+          right: govuk-spacing(2);
           float: right;
           content: "\203A";
         }
@@ -162,34 +160,34 @@ $gutter-one-sixth: $gutter / 6;
         }
 
         p {
-          color: $text-colour;
-          @include core-14;
+          color: $govuk-text-colour;
+          @include govuk-font(14);
         }
       }
 
       ul .active a {
-        background: $link-colour;
-        color: $white;
+        background: $govuk-link-colour;
+        color: govuk-colour("white");
 
         &:hover {
-          background: $link-colour;
+          background: $govuk-link-colour;
         }
 
         p {
-          color: $white;
+          color: govuk-colour("white");
         }
       }
     }
 
     .section-pane {
       z-index: 2;
-      background: $white;
+      background: govuk-colour("white");
       position: relative;
 
-      @include media(desktop) {
+      @include govuk-media-query($from: desktop) {
         &.with-sort {
           .pane-inner {
-            padding-left: $gutter;
+            padding-left: govuk-spacing(6);
           }
 
           .pane-inner.alphabetical {
@@ -197,26 +195,26 @@ $gutter-one-sixth: $gutter / 6;
           }
 
           .sort-order {
-            @include bold-27;
+            @include govuk-font(27, $weight: bold);
             float: left;
             display: block;
             width: 75px;
             margin-left: -90px;
-            padding: 11px 0 $gutter-half $gutter-half;
+            padding: 11px 0 govuk-spacing(3) govuk-spacing(3);
           }
         }
       }
     }
 
     .subsection-pane {
-      @include media(tablet) {
+      @include govuk-media-query($from: tablet) {
         .pane-inner {
           &.a-to-z {
             padding-left: 100px;
           }
 
           &.curated-list {
-            padding-left: $gutter;
+            padding-left: govuk-spacing(6);
           }
         }
       }
@@ -226,26 +224,26 @@ $gutter-one-sixth: $gutter / 6;
       }
 
       .list-header {
-        @include bold-19;
-        margin: $gutter 0 0 0;
+        @include govuk-font(19, $weight: bold);
+        margin: govuk-spacing(6) 0 0 0;
       }
 
       .curated-list {
         .list-header {
-          margin: $gutter 0 $gutter-one-sixth 0;
+          margin: govuk-spacing(6) 0 govuk-spacing(1) 0;
         }
       }
 
       .sort-order {
         display: none;
 
-        @include media(tablet) {
+        @include govuk-media-query($from: tablet) {
           display: block;
-          @include bold-27;
+          @include govuk-font(27, $weight: bold);
           float: left;
           width: 75px;
           margin-left: -100px;
-          padding: 11px 0 $gutter-half $gutter-half;
+          padding: 11px 0 govuk-spacing(3) govuk-spacing(3);
         }
       }
 
@@ -260,20 +258,20 @@ $gutter-one-sixth: $gutter / 6;
       }
 
       ul li a {
-        @include bold-19;
+        @include govuk-font(19, $weight: bold);
         display: block;
         text-decoration: none;
-        padding: $gutter-one-third $gutter $gutter-one-third 0;
+        padding: govuk-spacing(2) govuk-spacing(6) govuk-spacing(2) 0;
       }
 
       .curated-list {
         ul li a {
-          padding: $gutter-one-sixth $gutter $gutter-one-sixth 0;
+          padding: govuk-spacing(1) govuk-spacing(6) govuk-spacing(1) 0;
         }
       }
 
       .detailed-guidance {
-        margin-top: $gutter;
+        margin-top: govuk-spacing(6);
       }
     }
   }

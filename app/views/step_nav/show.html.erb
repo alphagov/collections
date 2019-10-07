@@ -11,8 +11,8 @@
   <meta name="description" content="<%= step_by_step.description %>">
 <% end %>
 
-<div class="grid-row">
-  <div class="column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
     <%= render 'govuk_publishing_components/components/title',
         title: step_by_step.title,
         average_title_length: 'long',
@@ -24,8 +24,8 @@
     <% end %>
   </div>
 </div>
-<div class="grid-row">
-  <div class="column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
     <%= render "govuk_publishing_components/components/step_by_step_nav", step_by_step.payload_for_component %>
   </div>
 </div>

@@ -1,6 +1,6 @@
 .wrapper {
   .content {
-    @extend %contain-floats;
+    @include govuk-clearfix;
 
     display: block;
   }
