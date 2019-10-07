@@ -14,7 +14,6 @@ class ContentStoreOrganisations
       "other" => "Other",
       "civil_service" => "Civil Service",
       "non_ministerial_department" => "Non-ministerial department",
-      "tribunal_ndpb" => "Tribunal non-departmental public body",
       "tribunal" => "Tribunal",
       "public_corporation" => "Public corporation",
   }.freeze
