@@ -9,9 +9,10 @@ class Schemas::HowTo
 
   def initialize(step_by_step)
     @step_by_step = step_by_step
+    @step_image_index = 1
   end
 
-  def structured_data(image_urls)
+  def structured_data
     step_items = details["step_by_step_nav"]["steps"].map.with_index(1) do |step, step_index|
       contents = step["contents"].map.with_index(1) do |content, item_index|
         direction_index = item_index
@@ -29,7 +30,7 @@ class Schemas::HowTo
 
       {
         "@type": "HowToStep",
-        "image": image_urls,
+        "image": step_image_url(step),
         "name": step["title"],
         "url": step_url(step["title"].parameterize),
         "position": step_index,
@@ -41,7 +42,7 @@ class Schemas::HowTo
       "@context": "http://schema.org",
       "@type": "HowTo",
       "description": description,
-      "image": image_urls,
+      "image": image_urls["placeholder"],
       "name": title,
       "step": step_items,
     }
@@ -49,7 +50,7 @@ class Schemas::HowTo
 
 private
 
-  attr_reader :step_by_step
+  attr_reader :step_by_step, :step_image_index
 
   def how_to_direction(content, index)
     {
@@ -77,5 +78,33 @@ private
 
   def step_url(step_slug)
     Plek.new.website_root + base_path + "#" + step_slug
+  end
+
+  def step_image_url(step)
+    if step["logic"] == "and"
+      image_urls["and"]
+    elsif step["logic"] == "or"
+      image_urls["or"]
+    elsif step_image_index <= 12
+      image_urls[@step_image_index.to_s].tap do
+        @step_image_index += 1
+      end
+    end || image_urls["placeholder"]
+  end
+
+  def image_url(image_file)
+    ActionController::Base.helpers.asset_url(image_file, type: :image)
+  end
+
+  def image_urls
+    @image_urls ||= begin
+      (1..12).each_with_object({}) { |index, image_urls|
+        image_urls[index.to_s] = image_url("step-#{index}.png")
+      }.merge(
+        "or" => image_url("step-or.png"),
+        "and" => image_url("step-and.png"),
+        "placeholder" => image_url("govuk_publishing_components/govuk-schema-placeholder-1x1.png"),
+      )
+    end
   end
 end
