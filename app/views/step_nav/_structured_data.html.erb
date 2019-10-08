@@ -3,5 +3,5 @@
 ] %>
 
 <script type="application/ld+json">
-  <%= raw step_by_step.structured_data(step_image_urls).to_json %>
+  <%= raw Schemas::HowTo.new(step_by_step).structured_data(step_image_urls).to_json %>
 </script>

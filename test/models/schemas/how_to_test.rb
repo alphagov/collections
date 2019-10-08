@@ -1,11 +1,12 @@
 require "test_helper"
 
-describe StepNav do
+describe Schemas::HowTo do
   describe "#structured_data" do
     it "generates structured data using the HowTo schema" do
       content_item = GovukSchemas::Example.find("step_by_step_nav", example_name: "learn_to_drive_a_car")
       step_by_step = StepNav.new(ContentItem.new(content_item))
       image_urls = %w(http://assets.gov.uk/image1.png http://assets.gov.uk/image2.png)
+      how_to = Schemas::HowTo.new(step_by_step)
 
       # Generated with:
       # puts JSON.pretty_generate(step_by_step.structured_data)
@@ -243,7 +244,7 @@ describe StepNav do
         ],
       }
 
-      assert_equal expected.deep_stringify_keys, step_by_step.structured_data(image_urls).deep_stringify_keys
+      assert_equal expected.deep_stringify_keys, how_to.structured_data(image_urls).deep_stringify_keys
     end
   end
 end
