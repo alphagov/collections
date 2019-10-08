@@ -2,19 +2,19 @@
   <div class='subscriptions'>
     <% if presented_taxon.renders_as_accordion? %>
       <div class="feeds">
-        <%= link_to(email_alert_frontend_signup_url(presented_taxon), class:'email-alerts') do %>
+        <%= link_to(email_alert_frontend_signup_url(presented_taxon), class:'govuk-link email-alerts') do %>
           Get email alerts for this topic
           <span class="visuallyhidden"><%= presented_taxon.title %></span>
         <% end %>
 
-        <%= link_to "Feed", whitehall_atom_url, class: "feed js-feed" %>
+        <%= link_to "Feed", whitehall_atom_url, class: "govuk-link feed js-feed" %>
         <div class="feed-panel js-feed-panel">
           <h3>Copy and paste this URL in to your feed reader</h3>
           <input value="<%= whitehall_atom_url %>">
         </div>
       </div>
     <% else %>
-      <a href="/email-signup/?topic=<%= presented_taxon.base_path %>" class='email-alerts'>
+      <a href="/email-signup/?topic=<%= presented_taxon.base_path %>" class='govuk-link email-alerts'>
         Get email alerts for this topic
         <span class='visuallyhidden'><%= presented_taxon.title %></span>
       </a>
