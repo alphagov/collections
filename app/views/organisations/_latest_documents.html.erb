@@ -16,7 +16,7 @@
       <%= render "govuk_publishing_components/components/document_list", @documents.latest_documents %>
 
       <p class="organisation__margin-bottom brand--<%= @organisation.brand %>">
-        <a href="<%= "/search/all?organisations[]=#{@organisation.slug}&order=updated-newest&parent=#{@organisation.slug}" %>" class="brand__color" <%= t_lang('organisations.see_all_latest_documents') %>>
+        <a href="<%= "/search/all?organisations[]=#{@organisation.slug}&order=updated-newest&parent=#{@organisation.slug}" %>" class="govuk-link brand__color" <%= t_lang('organisations.see_all_latest_documents') %>>
           <%= t('organisations.see_all_latest_documents') %>
         </a>
       </p>

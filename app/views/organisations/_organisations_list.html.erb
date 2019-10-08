@@ -29,7 +29,7 @@
                 }
               } %>
             <% else %>
-              <%= link_to(organisation["title"], organisation["href"], class: "organisation-list__item-title") %>
+              <%= link_to(organisation["title"], organisation["href"], class: "govuk-link organisation-list__item-title") %>
 
               <% if organisation["separate_website"] %>
                 <span class="organisation-list__item-context"><%= t('organisations.separate_website') %></span>

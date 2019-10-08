@@ -1,4 +1,4 @@
-<a href="#" class="organisation-list__works-with-toggle" data-controls="toggle_<%= current_organisation.parameterize %>" data-expanded="false" data-toggled-text="<%= t('view_less') %>">
+<a href="#" class="govuk-link organisation-list__works-with-toggle" data-controls="toggle_<%= current_organisation.parameterize %>" data-expanded="false" data-toggled-text="<%= t('view_less') %>">
   <%= t('view_all') %>
 </a>
 
@@ -8,7 +8,7 @@
     <ul class="organisation-list__works-with-list">
       <% work_with_organisations.each do |work_with_organisation| %>
         <li class="organisation-list__works-with-list-item">
-          <%= link_to(work_with_organisation["title"], work_with_organisation["href"]) %>
+          <%= link_to(work_with_organisation["title"], work_with_organisation["href"], class: "govuk-link") %>
         </li>
       <% end %>
     </ul>

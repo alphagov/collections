@@ -64,7 +64,7 @@ module Organisations
         link_to(
           make_link_text(link["description"], contact_title, foi: foi),
           link["link"],
-          class: "brand__color",
+          class: "govuk-link brand__color",
         )
       end
     end
@@ -80,7 +80,7 @@ module Organisations
     end
 
     def make_email_link(email)
-      mail_to(email, email, class: "brand__color") unless email.empty?
+      mail_to(email, email, class: "govuk-link brand__color") unless email.empty?
     end
 
     def foi_title(title, foi: false)
