@@ -69,8 +69,8 @@
 }
 
 .taxon-page__see-more {
-  display: block;
-  margin-top: govuk-spacing(6);
+  position: relative;
+  top: govuk-spacing(3);
 }
 
 .taxon-page__show-more-toggle {
