@@ -10,18 +10,16 @@
     </div>
 
     <div class="govuk-grid-column-one-third add-title-margin">
-      <div class="latest-subscribe">
-        <ul>
-          <li class="email primary">
-            <%= link_to email_signup_path(topic_slug: params[:topic_slug], subtopic_slug: params[:subtopic_slug]) do %>
-            Subscribe to email alerts
-            <% end %>
-          </li>
-          <% if local_assigns[:link_to_latest_feed] %>
-            <li><%= link_to 'See latest changes to this content', latest_changes_path(topic_slug: params[:topic_slug], subtopic_slug: params[:subtopic_slug]) %></li>
-          <% end %>
-        </ul>
-      </div>
+      <%= render "govuk_publishing_components/components/subscription-links", {
+        email_signup_link: email_signup_path(topic_slug: params[:topic_slug], subtopic_slug: params[:subtopic_slug]),
+        email_signup_link_text: "Subscribe to email alerts"
+      } %>
+
+      <% if local_assigns[:link_to_latest_feed] %>
+        <div class="topics-page__latest">
+          <%= link_to 'See latest changes to this content', latest_changes_path(topic_slug: params[:topic_slug], subtopic_slug: params[:subtopic_slug]), class: "govuk-link topics-page__latest-link" %>
+        </div>
+      <% end %>
     </div>
   </div>
 </header>

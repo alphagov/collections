@@ -7,38 +7,12 @@
       margin: 0;
     }
 
-    .latest-subscribe {
-      @include govuk-font(14);
+    .topics-page__latest {
+      border-top: 1px solid $govuk-border-colour;
+      padding-top: govuk-spacing(3);
 
-      ul {
-        @include govuk-media-query($from: tablet) {
-          // align with the left edge of the search box
-          margin-left: 18px;
-        }
-      }
-
-      ul li {
-        display: block;
-      }
-
-      .primary {
-        border-bottom: 1px solid $govuk-border-colour;
-        padding-bottom: 10px;
-        margin-bottom: 14px;
-      }
-
-      .email a {
-        background: image-url('mail-icon.png') 0 40% no-repeat;
-        padding-left: 28px;
-
-        @include govuk-device-pixel-ratio() {
-          background-image: image-url('mail-icon-x2.png');
-          background-size: 20px 14px;
-        }
-      }
-
-      a {
-        @include govuk-font(16, $weight: bold);
+      .topics-page__latest-link {
+        @include govuk-font(19, $weight: "bold");
         text-decoration: none;
       }
     }
