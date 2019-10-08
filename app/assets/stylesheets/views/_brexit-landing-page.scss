@@ -22,11 +22,6 @@ $red: #E61E32;
   margin: govuk-spacing(6) 0 govuk-spacing(9) 0;
 }
 
-.landing-page__ready-intro {
-  @include govuk-font(24);
-  margin-bottom: govuk-spacing(6);
-}
-
 .landing-page__share {
   @include govuk-responsive-margin(8, "top");
 }
