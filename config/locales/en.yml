@@ -116,10 +116,9 @@ en:
       eu_citizens_in_uk_preparations: "Continue to live in the UK after Brexit"
   brexit_landing_page:
     title: "Get ready for Brexit"
-    description: "The UK is leaving the EU. Find out how you should get ready for Brexit."
+    description: "Get ready for Brexit on 31 October 2019. Check what you need to do."
     finder_heading: "Browse all information related to Brexit:"
-    get_ready: "Get ready for Brexit"
-    intro_text: "The UK will leave the EU on 31 October 2019."
+    get_ready_html: "Get ready for Brexit on <br /> 31 October 2019"
     everyone_must: "Check what you need to do as"
     call_to_action_intro: "Answer a few questions to find out how you or your business should prepare."
     all_brexit_information: "All Brexit information"
