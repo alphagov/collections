@@ -66,7 +66,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       }
 
       function addOpenCloseAllButton() {
-        $element.prepend('<div class="app-c-accordion__controls"><button aria-expanded="false" class="app-c-accordion__button app-c-accordion__button--controls js-section-controls-button">' + bulkActions.openAll.buttonText + '</button></div>');
+        $element.prepend('<div class="app-c-accordion__controls"><button aria-expanded="false" class="govuk-link app-c-accordion__button app-c-accordion__button--controls js-section-controls-button">' + bulkActions.openAll.buttonText + '</button></div>');
       }
 
       function addIconsToSubsections() {
@@ -125,7 +125,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
           $title.wrapInner(
             '<button ' +
-            'class="app-c-accordion__button app-c-accordion__button--title js-section-title-button" ' +
+            'class="govuk-link app-c-accordion__button app-c-accordion__button--title js-section-title-button" ' +
             'aria-expanded="false" aria-controls="' + contentId + '">' +
             '</button>' );
         });
