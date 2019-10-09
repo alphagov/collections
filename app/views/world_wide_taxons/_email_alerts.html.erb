@@ -1,23 +1,15 @@
 <% if taxon_is_live?(presented_taxon) %>
-  <div class='subscriptions'>
-    <% if presented_taxon.renders_as_accordion? %>
-      <div class="feeds">
-        <%= link_to(email_alert_frontend_signup_url(presented_taxon), class:'govuk-link email-alerts') do %>
-          Get email alerts for this topic
-          <span class="visuallyhidden"><%= presented_taxon.title %></span>
-        <% end %>
-
-        <%= link_to "Feed", whitehall_atom_url, class: "govuk-link feed js-feed" %>
-        <div class="feed-panel js-feed-panel">
-          <h3>Copy and paste this URL in to your feed reader</h3>
-          <input value="<%= whitehall_atom_url %>">
-        </div>
-      </div>
-    <% else %>
-      <a href="/email-signup/?topic=<%= presented_taxon.base_path %>" class='govuk-link email-alerts'>
-        Get email alerts for this topic
-        <span class='visuallyhidden'><%= presented_taxon.title %></span>
-      </a>
-    <% end %>
-  </div>
+  <% if presented_taxon.renders_as_accordion? %>
+    <%= render "govuk_publishing_components/components/subscription-links", {
+      email_signup_link: email_alert_frontend_signup_url(presented_taxon),
+      email_signup_link_text: "Get email alerts for this topic <span class='visuallyhidden'>#{presented_taxon.title}</span>".html_safe,
+      feed_link: whitehall_atom_url,
+      feed_link_box_value: whitehall_atom_url
+    } %>
+  <% else %>
+    <%= render "govuk_publishing_components/components/subscription-links", {
+      email_signup_link: email_alert_frontend_signup_url(presented_taxon),
+      email_signup_link_text: "Get email alerts for this topic <span class='visuallyhidden'>#{presented_taxon.title}</span>".html_safe,
+    } %>
+  <% end %>
 <% end %>
