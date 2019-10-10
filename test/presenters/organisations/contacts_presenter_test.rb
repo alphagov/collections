@@ -21,11 +21,11 @@ describe Organisations::ContactsPresenter do
           ],
           phone_numbers: [],
           email_addresses: [
-            "<a class=\"brand__color\" href=\"mailto:walesofficefoi@walesoffice.gsi.gov.uk\">walesofficefoi@walesoffice.gsi.gov.uk</a>",
-            "<a class=\"brand__color\" href=\"mailto:foiwales@walesoffice.gsi.gov.uk\">foiwales@walesoffice.gsi.gov.uk</a>",
+            "<a class=\"govuk-link brand__color\" href=\"mailto:walesofficefoi@walesoffice.gsi.gov.uk\">walesofficefoi@walesoffice.gsi.gov.uk</a>",
+            "<a class=\"govuk-link brand__color\" href=\"mailto:foiwales@walesoffice.gsi.gov.uk\">foiwales@walesoffice.gsi.gov.uk</a>",
           ],
           links: [
-            "<a class=\"brand__color\" href=\"/to/some/foi/stuff\">Click me</a>",
+            "<a class=\"govuk-link brand__color\" href=\"/to/some/foi/stuff\">Click me</a>",
           ],
           description: "<p>FOI requests<br/><br/>are possible</p>",
         },
@@ -36,10 +36,10 @@ describe Organisations::ContactsPresenter do
           ],
           phone_numbers: [],
           email_addresses: [
-            "<a class=\"brand__color\" href=\"mailto:welshofficefoi@walesoffice.gsi.gov.uk\">welshofficefoi@walesoffice.gsi.gov.uk</a>",
+            "<a class=\"govuk-link brand__color\" href=\"mailto:welshofficefoi@walesoffice.gsi.gov.uk\">welshofficefoi@walesoffice.gsi.gov.uk</a>",
           ],
           links: [
-            "<a class=\"brand__color\" href=\"/foi/stuff\">FOI contact form</a>",
+            "<a class=\"govuk-link brand__color\" href=\"/foi/stuff\">FOI contact form</a>",
           ],
           description: "<p>Something here<br/><br/>Something there</p>",
         },
@@ -78,10 +78,10 @@ describe Organisations::ContactsPresenter do
             },
           ],
           email_addresses: [
-            "<a class=\"brand__color\" href=\"mailto:enquiries@trade.gov.uk\">enquiries@trade.gov.uk</a>",
+            "<a class=\"govuk-link brand__color\" href=\"mailto:enquiries@trade.gov.uk\">enquiries@trade.gov.uk</a>",
           ],
           links: [
-            "<a class=\"brand__color\" href=\"/contact\">Contact Form: Department for International Trade</a>",
+            "<a class=\"govuk-link brand__color\" href=\"/contact\">Contact Form: Department for International Trade</a>",
           ],
           description: nil,
         },

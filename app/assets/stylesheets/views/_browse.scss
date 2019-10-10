@@ -45,8 +45,6 @@
           width: 25%;
         }
 
-        color: $govuk-secondary-text-colour;
-
         a,
         p {
           color: $govuk-secondary-text-colour;
@@ -118,6 +116,7 @@
       ul li {
         list-style: none;
         position: relative;
+        margin-top: 4px;
       }
 
       ul a {
@@ -135,6 +134,18 @@
         &:hover {
           background: govuk-colour("light-grey", $legacy: "grey-3");
           color: $govuk-link-colour;
+
+          p {
+            color: $govuk-text-colour;
+          }
+        }
+
+        &:focus {
+          color: $govuk-text-colour;
+
+          p {
+            color: $govuk-text-colour;
+          }
         }
 
         &:after {

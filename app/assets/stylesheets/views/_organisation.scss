@@ -24,6 +24,10 @@
 
   .organisation__secondary-corporate-information {
     @include govuk-font(16);
+
+    a:focus {
+      @include govuk-focused-text;
+    }
   }
 }
 
