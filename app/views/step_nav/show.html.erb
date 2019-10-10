@@ -1,11 +1,6 @@
 <% content_for :title, step_by_step.title %>
 
-<% step_image_urls = [
-  image_url("govuk_publishing_components/govuk-schema-placeholder-1x1.png"),
-] %>
-<script type="application/ld+json">
-  <%= raw step_by_step.structured_data(step_image_urls).to_json %>
-</script>
+<%= render 'structured_data', step_by_step: step_by_step %>
 
 <% content_for :meta_tags do %>
   <meta name="description" content="<%= step_by_step.description %>">

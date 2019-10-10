@@ -25,7 +25,7 @@ class ActiveSupport::TestCase
     Services.
       rummager.
       stubs(:search).
-      with { |params| params.including?(expected_params) }.
+      with { |params| _(params).including?(expected_params) }.
       returns(search_results)
 
     results = yield
