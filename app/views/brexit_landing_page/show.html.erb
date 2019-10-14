@@ -1,7 +1,4 @@
 <% content_for :page_class, "taxon-page taxon-page--grid" %>
-<% content_for :meta_tags do %>
-  <%= page_variant.analytics_meta_tag.html_safe %>
-<% end %>
 
 <%=
   render(
@@ -14,17 +11,11 @@
 %>
 
 <div class="landing-page__buckets full-page-width-wrapper">
-  <% if page_variant.variant?("B") %>
-    <%= render partial: 'buckets_b', locals: { buckets: presented_taxon.buckets_b } %>
-  <% else %>
-    <% presented_taxon.buckets_a.each do |bucket| %>
-      <%= render partial: 'buckets_a', locals: { bucket: bucket } %>
-    <% end %>
-  <% end %>
+  <%= render partial: 'buckets', locals: { buckets: presented_taxon.buckets } %>
 </div>
 
 <div class="full-page-width-wrapper full-page-width-wrapper--landing-page">
-  <%= render partial: page_variant.variant?("B") ? 'brexit_finders_b' : 'brexit_finders_a', locals: {supergroups: presented_taxon.supergroup_sections, email_path: presented_taxon.base_path } %>
+  <%= render partial: 'brexit_finders', locals: {supergroups: presented_taxon.supergroup_sections, email_path: presented_taxon.base_path } %>
 
   <div class="landing-page__share">
     <% hidden_text = capture do %>

@@ -8,49 +8,6 @@ describe BrexitLandingPagePresenter do
   let(:yaml_contents) {
     [
       {
-        "section_id" => "id1",
-        "section_description" => "description 1",
-        "section_list" => [{
-          "list_block" => "List block",
-          "list_links" => [
-            {
-              "text" => "text1",
-              "description" => "<h1>description1</h1>",
-            },
-            {
-              "text" => "text2",
-              "description" => "<h1>description2</h1>",
-            },
-          ],
-        }],
-      },
-      {
-        "section_id" => "id2",
-        "section_list" => [{
-          "row_title" => "title",
-          "row_title_description" => "[Hello](/)",
-          "list_links" => [
-            {
-              "text" => "text1",
-              "description" => "<h1>description1</h1>",
-            },
-            {
-              "text" => "text2",
-              "description" => "<h1>description2</h1>",
-            },
-          ],
-        }],
-      },
-      {
-        "section_id" => "id3",
-        "section_description" => "text",
-      },
-    ]
-  }
-
-  let(:yaml_contents_b) {
-    [
-      {
         "list_block" => "<p>This is some text</p>",
       },
     ]
@@ -62,23 +19,9 @@ describe BrexitLandingPagePresenter do
 
   let(:taxon) { Taxon.new(ContentItem.new("content_id" => "content_id", "base_path" => "/base_path")) }
 
-  describe "#buckets_a" do
-    it "html-safes the section_description" do
-      assert subject.buckets_a[0]["section_description"].html_safe?
-    end
-
-    it "html-safes the list block" do
-      assert subject.buckets_a[0]["section_list"][0]["list_block"].html_safe?
-    end
-
-    it "html-safes the row title description" do
-      assert subject.buckets_a[1]["section_list"][0]["row_title_description"].html_safe?
-    end
-  end
-
-  describe "#buckets_b" do
+  describe "#buckets" do
     before :each do
-      YAML.stubs(:load_file).returns(yaml_contents_b)
+      YAML.stubs(:load_file).returns(yaml_contents)
 
       subject {
         BrexitLandingPagePresenter.new(taxon)
@@ -86,7 +29,7 @@ describe BrexitLandingPagePresenter do
     end
 
     it "html-safes the list block" do
-      assert subject.buckets_b[0]["list_block"].html_safe?
+      assert subject.buckets[0]["list_block"].html_safe?
     end
   end
 

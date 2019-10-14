@@ -30,15 +30,13 @@ module BrexitLandingPageSteps
     end
   end
 
-  def when_i_visit_the_brexit_landing_page_with_dynamic_list(variant)
+  def when_i_visit_the_brexit_landing_page_with_dynamic_list
     BrexitLandingPageController.any_instance.stubs(:show_dynamic_list?).returns(true)
-    GovukAbTesting::RequestedVariant.any_instance.stubs(:variant_name).returns(variant)
     visit brexit_taxon_path
   end
 
-  def when_i_visit_the_brexit_landing_page_without_dynamic_list(variant)
+  def when_i_visit_the_brexit_landing_page_without_dynamic_list
     BrexitLandingPageController.any_instance.stubs(:show_dynamic_list?).returns(false)
-    GovukAbTesting::RequestedVariant.any_instance.stubs(:variant_name).returns(variant)
     visit brexit_taxon_path
   end
 
@@ -68,12 +66,7 @@ module BrexitLandingPageSteps
     assert page.has_selector?(".landing-page__share .gem-c-share-links")
   end
 
-  def then_i_can_see_the_buckets_section_variant_a
-    assert page.has_selector?(".landing-page__section h2", text: "Individuals and families")
-    assert page.has_selector?(".landing-page__section h2", text: "Businesses and organisations")
-  end
-
-  def then_i_can_see_the_buckets_section_variant_b
+  def then_i_can_see_the_buckets_section
     assert page.has_selector?(".landing-page__section h2", text: "Browse Brexit guidance")
   end
 
