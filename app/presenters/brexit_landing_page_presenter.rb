@@ -2,7 +2,7 @@ require "yaml"
 require "govspeak"
 
 class BrexitLandingPagePresenter
-  attr_reader :taxon, :buckets_a, :buckets_b
+  attr_reader :taxon, :buckets
   delegate(
     :title,
     :base_path,
@@ -11,8 +11,7 @@ class BrexitLandingPagePresenter
 
   def initialize(taxon)
     @taxon = taxon
-    @buckets_a = fetch_buckets_a
-    @buckets_b = fetch_buckets_b
+    @buckets = fetch_buckets
   end
 
   def supergroup_sections
@@ -30,26 +29,11 @@ class BrexitLandingPagePresenter
 
 private
 
-  def fetch_buckets_b
-    buckets = YAML.load_file("config/brexit_campaign_buckets_b.yml")
+  def fetch_buckets
+    buckets = YAML.load_file("config/brexit_campaign_buckets.yml")
 
     buckets.each do |bucket|
       bucket["list_block"] = convert_to_govspeak(bucket["list_block"])
-    end
-  end
-
-  def fetch_buckets_a
-    buckets = YAML.load_file("config/brexit_campaign_buckets_a.yml")
-
-    buckets.each do |bucket|
-      bucket["section_description"] = convert_to_govspeak(bucket["section_description"])
-
-      if bucket["section_list"]
-        bucket["section_list"].map do |section_list|
-          section_list["list_block"] = convert_to_govspeak(section_list["list_block"])
-          section_list["row_title_description"] = convert_to_govspeak(section_list["row_title_description"])
-        end
-      end
     end
   end
 
