@@ -1,4 +1,4 @@
-//= require govuk-frontend/govuk/vendor/polyfills/Function/prototype/bind
+//= require govuk/vendor/polyfills/Function/prototype/bind
 //
 //= require support
 //= require browse-columns
