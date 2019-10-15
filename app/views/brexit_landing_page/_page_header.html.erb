@@ -1,14 +1,14 @@
 <% content_for :is_full_width_header, true %>
-<% content_for :title, I18n.t("brexit_landing_page.title") %>
+<% content_for :title, I18n.t("brexit_landing_page.meta_title") %>
 <% content_for :meta_tags do %>
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="GOV.UK">
   <meta property="og:url" content="<%= request.base_url + request.path %>">
-  <meta property="og:title" content="<%= I18n.t("brexit_landing_page.title") %>">
-  <meta property="og:description" content="<%= I18n.t("brexit_landing_page.description") %>">
+  <meta property="og:title" content="<%= I18n.t("brexit_landing_page.meta_title") %>">
+  <meta property="og:description" content="<%= I18n.t("brexit_landing_page.meta_description") %>">
   <meta property="og:image" content="<%= image_url("brexit-31-october.png") %>" />
   <meta name="twitter:card" content="summary">
-  <meta name="description" content="<%= I18n.t("brexit_landing_page.description") %>">
+  <meta name="description" content="<%= I18n.t("brexit_landing_page.meta_description") %>">
   <meta name="govuk:navigation-page-type" content="Taxon Page" />
 <% end %>
 
@@ -23,7 +23,7 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <%= render "govuk_publishing_components/components/title", {
-          title: I18n.t("brexit_landing_page.get_ready_html").html_safe(),
+          title: I18n.t("brexit_landing_page.page_title").html_safe(),
           inverse: true,
           margin_bottom: 5
         } %>
