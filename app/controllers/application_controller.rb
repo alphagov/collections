@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   before_action :restrict_request_formats
 
   rescue_from GdsApi::ContentStore::ItemNotFound, with: :error_404
+  rescue_from GdsApi::HTTPForbidden, with: :error_403
 
   if ENV["BASIC_AUTH_USERNAME"]
     http_basic_authenticate_with(
@@ -48,6 +49,8 @@ private
 
     format && self.class.acceptable_formats.fetch(params[:action].to_sym, []).include?(format.to_sym)
   end
+
+  def error_403; error 403; end
 
   def error_404; error 404; end
 
