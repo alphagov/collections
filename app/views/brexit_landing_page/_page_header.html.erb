@@ -6,7 +6,7 @@
   <meta property="og:url" content="<%= request.base_url + request.path %>">
   <meta property="og:title" content="<%= I18n.t("brexit_landing_page.meta_title") %>">
   <meta property="og:description" content="<%= I18n.t("brexit_landing_page.meta_description") %>">
-  <meta property="og:image" content="<%= image_url("brexit-31-october.png") %>" />
+  <meta property="og:image" content="<%= image_url("brexit-unknown.png") %>" />
   <meta name="twitter:card" content="summary">
   <meta name="description" content="<%= I18n.t("brexit_landing_page.meta_description") %>">
   <meta name="govuk:navigation-page-type" content="Taxon Page" />
@@ -28,21 +28,27 @@
           margin_bottom: 5
         } %>
 
-        <% if show_dynamic_list %>
-          <%= render 'govuk_publishing_components/components/lead_paragraph', {
-            text: I18n.t("brexit_landing_page.call_to_action_intro"),
-            inverse: true,
-            margin_bottom: 6
-          } %>
+        <%= render "govuk_publishing_components/components/govspeak", {
+        } do %>
+          <p class="landing-page__header-text"><%= I18n.t("brexit_landing_page.page_lead") %></p>
+          <p class="landing-page__header-text"><%= I18n.t("brexit_landing_page.page_paragraph") %></p>
+          <hr class="landing-page__divider" aria-hidden="true">
+          <p class="landing-page__header-text"><%= I18n.t("brexit_landing_page.page_warning") %></p>
+        <% end %>
+      </div>
+    </div>
 
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+        <% if show_dynamic_list %>
           <%= render "govuk_publishing_components/components/chevron_banner", {
             href: "/get-ready-brexit-check",
-            text: "Check what you need to do",
+            text: "Check what you need to do if there is no deal",
             hover_border: true,
             data_attributes: {
               track_category: "startButtonClicked",
               track_action: "/get-ready-brexit-check",
-              track_label: "Check what you need to do"
+              track_label: "Check what you need to do if there is no deal"
             }
           } %>
         <% end %>

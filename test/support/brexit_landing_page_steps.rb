@@ -53,13 +53,11 @@ module BrexitLandingPageSteps
   end
 
   def then_i_can_see_the_get_ready_section
-    assert page.has_selector?(".landing-page__header .gem-c-lead-paragraph", text: "Answer a few questions to find out how you or your business should prepare.")
-    assert page.has_selector?(".gem-c-chevron-banner__link", text: "Check what you need to do")
+    assert page.has_selector?(".gem-c-chevron-banner__link", text: "Check what you need to do if there is no deal")
   end
 
   def then_i_cannot_see_the_get_ready_section
-    assert page.has_no_selector?(".landing-page__header .gem-c-lead-paragraph", text: "Answer a few questions to find out how you or your business should prepare.")
-    assert page.has_no_selector?(".gem-c-chevron-banner__link", text: "Check what you need to do")
+    assert page.has_no_selector?(".gem-c-chevron-banner__link", text: "Check what you need to do if there is no deal")
   end
 
   def then_i_can_see_the_share_links_section
@@ -67,7 +65,7 @@ module BrexitLandingPageSteps
   end
 
   def then_i_can_see_the_buckets_section
-    assert page.has_selector?(".landing-page__section h2", text: "Browse Brexit guidance")
+    assert page.has_selector?(".landing-page__section h2", text: "Browse no-deal Brexit guidance")
   end
 
   def and_i_can_see_an_email_subscription_link
@@ -115,7 +113,7 @@ module BrexitLandingPageSteps
 
   def and_the_start_button_is_tracked
     assert page.has_selector?("a[data-track-category='startButtonClicked']")
-    assert page.has_selector?("a[data-track-label='Check what you need to do']")
+    assert page.has_selector?("a[data-track-label='Check what you need to do if there is no deal']")
     assert page.has_selector?("a[data-track-action='/get-ready-brexit-check']")
   end
 

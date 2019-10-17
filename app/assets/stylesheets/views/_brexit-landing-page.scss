@@ -18,6 +18,18 @@ $red: #E61E32;
   color: govuk-colour("white");
 }
 
+// scss-lint:disable QualifyingElement
+p.landing-page__header-text {
+  @include govuk-font(24);
+  color: govuk-colour("white");
+}
+
+hr.landing-page__divider {
+  outline: 0;
+  border: 1px solid govuk-colour("white");
+}
+// scss-lint:enable QualifyingElement
+
 .landing-page__contents {
   margin: govuk-spacing(6) 0 govuk-spacing(9) 0;
 }
@@ -75,4 +87,9 @@ $red: #E61E32;
 
 .landing-page__email-title {
   margin-bottom: govuk-spacing(2);
+}
+
+.landing-page__divide {
+  border-top: 1px solid govuk-colour("white");
+  padding-top: govuk-spacing(4);
 }
