@@ -1,4 +1,6 @@
 class BrexitLandingPageController < ApplicationController
+  around_action :switch_locale
+
   def show
     setup_content_item_and_navigation_helpers(taxon)
 
@@ -30,5 +32,10 @@ private
 
   def show_dynamic_list?
     true
+  end
+
+  def switch_locale(&action)
+    locale = params[:locale] || I18n.default_locale
+    I18n.with_locale(locale, &action)
   end
 end
