@@ -29,6 +29,10 @@ class BrexitLandingPagePresenter
     end
   end
 
+  def email_path
+    base_path.split(".").first
+  end
+
 private
 
   def fetch_buckets

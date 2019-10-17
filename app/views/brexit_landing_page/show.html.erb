@@ -15,7 +15,7 @@
 </div>
 
 <div class="full-page-width-wrapper full-page-width-wrapper--landing-page">
-  <%= render partial: 'brexit_finders', locals: {supergroups: presented_taxon.supergroup_sections, email_path: presented_taxon.base_path } %>
+  <%= render partial: 'brexit_finders', locals: { supergroups: presented_taxon.supergroup_sections, email_path: presented_taxon.email_path } %>
 
   <div class="landing-page__share">
     <% hidden_text = capture do %>
