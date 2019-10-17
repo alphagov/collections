@@ -14,6 +14,19 @@ cy:
     email_intro: "I gael y manylion diweddaraf"
     email: "Cofrestrwch i gael hysbysiadau e-bost am Brexit"
     browse: "Pori drwy ganllawiau Brexit"
+  brexit_sections:
+    services:
+      title: Gwasanaethau
+    guidance_and_regulation:
+      title: Canllawiau a rheoliadau
+    news_and_communications:
+      title: Newyddion a chyfathrebu
+    research_and_statistics:
+      title: Ymchwil ag ystadegau
+    policy_and_engagement:
+      title: Polisi ac ymgynghoriadau
+    transparency:
+      title: Tryloywder a datganiadau rhyddid gwybodaeth
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.cy"
     administered_by: "Gweinyddir gan"

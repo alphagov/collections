@@ -129,8 +129,19 @@ en:
     email_intro: "Stay up to date"
     email: "Sign up for email alerts about Brexit"
     browse: "Browse Brexit guidance"
-    individuals: "individuals and families"
-    business: "businesses and organisations"
+  brexit_sections:
+    services:
+      title: Services
+    guidance_and_regulation:
+      title: Guidance and regulation
+    news_and_communications:
+      title: News and communications
+    research_and_statistics:
+      title: Research and statistics
+    policy_and_engagement:
+      title: Policy and engagement
+    transparency:
+      title: Transparency
   campaign:
     other_campaigns:
       title: "Other guidance"

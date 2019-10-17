@@ -10,7 +10,7 @@ module SupergroupSections
         {
           name: supergroup.name,
           see_more_link: supergroup.finder_link(base_path, taxon_id),
-          title: supergroup.title,
+          title: I18n.t("brexit_sections.#{supergroup.name}.title"),
         }
       end
     end
