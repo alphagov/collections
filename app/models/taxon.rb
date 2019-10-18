@@ -61,4 +61,8 @@ class Taxon
   def organisations
     @organisations ||= TaggedOrganisations.fetch(content_id)
   end
+
+  def translations
+    linked_items("available_translations")
+  end
 end

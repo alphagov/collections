@@ -33,6 +33,21 @@ class BrexitLandingPagePresenter
     base_path.split(".").first
   end
 
+  def translation_links
+    links = taxon.translations.map do |link|
+      active = true if link.base_path == taxon.base_path
+
+      {
+        locale: link.locale,
+        base_path: link.base_path,
+        text: I18n.t("language_names.#{link.locale}"),
+        active: active,
+      }
+    end
+
+    links.sort_by { |t| t[:locale] == I18n.default_locale.to_s ? "" : t[:locale] }
+  end
+
 private
 
   def fetch_buckets

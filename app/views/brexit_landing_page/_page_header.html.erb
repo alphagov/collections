@@ -21,13 +21,21 @@
     %>
 
     <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third landing-page__translation">
+        <%= render "govuk_publishing_components/components/translation-nav", {
+          translations: presented_taxon.translation_links,
+          inverse: true
+        } %>
+      </div>
       <div class="govuk-grid-column-two-thirds">
         <%= render "govuk_publishing_components/components/title", {
-          title: I18n.t("brexit_landing_page.page_title").html_safe(),
+          title: I18n.t("brexit_landing_page.page_title"),
           inverse: true,
           margin_bottom: 5
         } %>
+      </div>
 
+      <div class="govuk-grid-column-two-thirds">
         <%= render "govuk_publishing_components/components/govspeak", {
         } do %>
           <p class="landing-page__header-text"><%= I18n.t("brexit_landing_page.page_lead") %></p>
