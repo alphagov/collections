@@ -65,7 +65,7 @@ module BrexitLandingPageSteps
   end
 
   def then_i_can_see_the_buckets_section
-    assert page.has_selector?(".landing-page__section h2", text: "Browse no-deal Brexit guidance")
+    assert page.has_selector?(".landing-page__section h2", text: "Browse Brexit guidance")
   end
 
   def and_i_can_see_an_email_subscription_link

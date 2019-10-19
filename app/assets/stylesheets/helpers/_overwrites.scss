@@ -1,0 +1,9 @@
+.gem-c-chevron-banner__link-container {
+  @include govuk-media-query(desktop) {
+    padding: govuk-spacing(3);
+  }
+
+  @include govuk-media-query(920px) {
+    padding: govuk-spacing(4);
+  }
+}
