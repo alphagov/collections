@@ -4,11 +4,14 @@ cy:
   view_all: gwelir holl
   view_less: gwelir llai
   brexit_landing_page:
-    title: "Byddwch yn barod am Brexit"
-    chevron_banner: "Gwiriwch beth sydd angen i chi wneud"
-    description: "Byddwch yn barod am Brexit ar 31 Hydref 2019. Gwiriwch beth sydd angen i chi wneud."
+    meta_title: "Byddwch yn barod am Brexit"
+    meta_description: "Mae bargen Brexit wedi ei gytuno mewn egwyddor gyda’r UE. Darganfyddwch beth mae hyn yn ei olygu i chi."
+    page_title: "Byddwch yn barod am Brexit"
+    page_lead: "Mae bargen Brexit wedi ei gytuno mewn egwyddor gyda’r UE."
+    page_paragraph: "Bydd angen i’r DU a’r UE gymeradwyo ac arwyddo’r cytundeb ymadael."
+    page_warning: "Os nad ydy’r cytundeb ymadael wedi ei arwyddo gan y DU a’r UE, gall y DU ymadael heb gytundeb ar 31 Hydref 2019. Darganfyddwch beth ddylech chi, eich teulu neu’ch busnes wneud os yw’r DU yn gadael yr UE heb gytundeb."
+    chevron_banner: "Gwiriwch beth sydd angen i chi wneud os nad oes cytundeb"
     finder_heading: "Pori drwy’r holl wybodaeth sy’n gysylltiedig â Brexit:"
-    get_ready_html: "Byddwch yn barod am Brexit <br />ar 31 Hydref 2019"
     call_to_action_intro: "Atebwch ychydig o gwestiynau i ddarganfod sut y dylech chi neu’ch busnes baratoi."
     all_brexit_information: "Holl wybodaeth Brexit"
     email_intro: "I gael y manylion diweddaraf"
