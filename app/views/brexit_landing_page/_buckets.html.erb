@@ -11,11 +11,11 @@
 
   <% buckets.each do |bucket| %>
     <div class="grid-row landing-page__section-list-wrapper">
-      <div class="govuk-grid-column-one-third">
+      <div class="govuk-grid-column-one-third govuk-!-padding-left-0 govuk-!-padding-right-0">
         <% if bucket["row_title"] %><h3 class="govuk-heading-s"><%= bucket["row_title"] %></h3><% end %>
       </div>
 
-      <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-grid-column-two-thirds govuk-!-padding-left-0 govuk-!-padding-right-0">
         <%= render "govuk_publishing_components/components/govspeak", {
           } do %>
           <%= bucket["list_block"] %>
