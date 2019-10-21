@@ -13,7 +13,7 @@
 
     You should check if you need to renew your passport, buy travel insurance with healthcare cover, and make sure you have the right driving documents.
 
-    <a href="/visit-europe-brexit" data-module="track-click" data-track-category="brexit-landing-page" data-track-action="/visit-europe-brexit" data-track-label="Check what you need to do to visit the EU"><strong>Check what you need to do to visit the EU</strong></a>
+    <a href="/visit-europe-brexit" data-module="track-click" data-track-category="brexit-landing-page" data-track-action="Section link" data-track-label="/visit-europe-brexit" data-track-options="&#123;&quot;dimension29&quot;:&quot;Check what you need to do to visit the EU&quot;&#125;"><strong>Check what you need to do to visit the EU</strong></a>
 
 - row_title: "Living and working in the EU"
   list_block: |
@@ -21,11 +21,11 @@
 
     You may need to register or apply for residency, check if you’re covered for healthcare, and exchange your UK driving licence for a licence issued by the EU country where you live.
 
-    <a href="/uk-nationals-living-eu" data-module="track-click" data-track-category="brexit-landing-page" data-track-action="/uk-nationals-living-eu" data-track-label="Check your rights for the country you live in"><strong>Check your rights for the country you live in</strong></a>
+    <a href="/uk-nationals-living-eu" data-module="track-click" data-track-category="brexit-landing-page" data-track-action="Section link" data-track-label="/uk-nationals-living-eu" data-track-options="&#123;&quot;dimension29&quot;:&quot;Check your rights for the country you live in&quot;&#125;"><strong>Check your rights for the country you live in</strong></a>
 
 - row_title: "Staying in the UK if you’re an EU citizen"
   list_block: |
     You should check if you need to apply to the settlement scheme if you or your family are from the EU, Switzerland, Norway, Iceland or Liechtenstein.
 
-    <a href="staying-uk-eu-citizen" data-module="track-click" data-track-category="brexit-landing-page" data-track-action="/staying-uk-eu-citizen" data-track-label="Check what you need to do to stay in the UK"><strong>Check what you need to do to stay in the UK</strong></a>
+    <a href="/staying-uk-eu-citizen" data-module="track-click" data-track-category="brexit-landing-page" data-track-action="Section link" data-track-label="/staying-uk-eu-citizen" data-track-options="&#123;&quot;dimension29&quot;:&quot;Check what you need to do to stay in the UK&quot;&#125;"><strong>Check what you need to do to stay in the UK</strong></a>
 
