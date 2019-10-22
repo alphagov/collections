@@ -3,6 +3,17 @@ cy:
     translations: Cyfieithiadau
   view_all: gwelir holl
   view_less: gwelir llai
+  brexit_landing_page:
+    title: "Byddwch yn barod am Brexit"
+    chevron_banner: "Gwiriwch beth sydd angen i chi wneud"
+    description: "Byddwch yn barod am Brexit ar 31 Hydref 2019. Gwiriwch beth sydd angen i chi wneud."
+    finder_heading: "Pori drwy’r holl wybodaeth sy’n gysylltiedig â Brexit:"
+    get_ready_html: "Byddwch yn barod am Brexit <br />ar 31 Hydref 2019"
+    call_to_action_intro: "Atebwch ychydig o gwestiynau i ddarganfod sut y dylech chi neu’ch busnes baratoi."
+    all_brexit_information: "Holl wybodaeth Brexit"
+    email_intro: "I gael y manylion diweddaraf"
+    email: "Cofrestrwch i gael hysbysiadau e-bost am Brexit"
+    browse: "Pori drwy ganllawiau Brexit"
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.cy"
     administered_by: "Gweinyddir gan"

@@ -43,12 +43,12 @@
         <% if show_dynamic_list %>
           <%= render "govuk_publishing_components/components/chevron_banner", {
             href: "/get-ready-brexit-check",
-            text: "Check what you need to do if there is no deal",
+            text: I18n.t("brexit_landing_page.chevron_banner"),
             hover_border: true,
             data_attributes: {
               track_category: "startButtonClicked",
               track_action: "/get-ready-brexit-check",
-              track_label: "Check what you need to do if there is no deal"
+              track_label: I18n.t("brexit_landing_page.chevron_banner")
             }
           } %>
         <% end %>
