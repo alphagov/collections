@@ -19,7 +19,7 @@ class BrexitLandingPagePresenter
                                                              taxon.base_path)
                                                         .sections
     brexit_sections.map do |section|
-      supergroup_title = I18n.t(section[:name], scope: :content_purpose_supergroup, default: section[:title])
+      supergroup_title = I18n.t(section[:name], scope: %i[brexit_landing_page sections])
       {
         text: supergroup_title,
         path: section[:see_more_link][:url],

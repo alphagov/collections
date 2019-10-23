@@ -18,19 +18,13 @@ cy:
     email: "Cofrestrwch i gael hysbysiadau e-bost am Brexit"
     browse: "Pori drwy ganllawiau Brexit"
     share_links: "Rhannu’r dudalen hon"
-  brexit_sections:
-    services:
-      title: Gwasanaethau
-    guidance_and_regulation:
-      title: Canllawiau a rheoliadau
-    news_and_communications:
-      title: Newyddion a chyfathrebu
-    research_and_statistics:
-      title: Ymchwil ag ystadegau
-    policy_and_engagement:
-      title: Polisi ac ymgynghoriadau
-    transparency:
-      title: Tryloywder a datganiadau rhyddid gwybodaeth
+    sections:
+      services: Gwasanaethau
+      guidance_and_regulation: Canllawiau a rheoliadau
+      news_and_communications: Newyddion a chyfathrebu
+      research_and_statistics: Ymchwil ag ystadegau
+      policy_and_engagement: Polisi ac ymgynghoriadau
+      transparency: Tryloywder a datganiadau rhyddid gwybodaeth
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.cy"
     administered_by: "Gweinyddir gan"

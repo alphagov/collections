@@ -129,19 +129,13 @@ en:
     email: "Sign up for email alerts about Brexit"
     browse: "Browse Brexit guidance"
     share_links: "Share this page"
-  brexit_sections:
-    services:
-      title: Services
-    guidance_and_regulation:
-      title: Guidance and regulation
-    news_and_communications:
-      title: News and communications
-    research_and_statistics:
-      title: Research and statistics
-    policy_and_engagement:
-      title: Policy and engagement
-    transparency:
-      title: Transparency
+    sections:
+      services: Services
+      guidance_and_regulation: Guidance and regulation
+      news_and_communications: News and communications
+      research_and_statistics: Research and statistics
+      policy_and_engagement: Policy papers and consultations
+      transparency: Transparency and freedom of information releases
   campaign:
     other_campaigns:
       title: "Other guidance"
