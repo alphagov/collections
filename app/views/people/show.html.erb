@@ -1,8 +1,35 @@
 <% content_for :title, person.title %>
 
-<p class="type"><%= person.roles %></p>
-<h1><%= person.title %></h1>
+<%= render "govuk_publishing_components/components/title", {
+  context: person.roles,
+  title: person.title
+} %>
 
-<p><img src="<%= person.image_url %>" alt="<%= person.image_alt_text %>"></p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <%= render "govuk_publishing_components/components/image_card", {
+      href: "#",
+      image_src: person.image_url,
+      image_alt: person.image_alt_text,
+      description: "Contents",
+      extra_links: [
+        {
+          text: "Biography",
+          href: "#biography"
+        }
+      ]
+    } %>
+  </div>
 
-<p><%= person.biography %></p>
+  <div class="govuk-grid-column-two-thirds">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: "Biography",
+      id: "biography",
+    } %>
+
+    <%= render "govuk_publishing_components/components/govspeak", {
+    } do %>
+      <p><%= person.biography %></p>
+    <% end %>
+  </div>
+</div>
