@@ -117,6 +117,7 @@ en:
   brexit_landing_page:
     meta_title: "Get ready for Brexit"
     meta_description: "A Brexit deal has been agreed in principle with the EU. Find out what this means for you."
+    chevron_banner: "Check what you need to do if there is no deal"
     finder_heading: "Browse all information related to Brexit:"
     page_title: "Get ready for Brexit"
     page_lead: "A Brexit deal has been agreed in principle with the EU."
@@ -127,8 +128,14 @@ en:
     email_intro: "Stay up to date"
     email: "Sign up for email alerts about Brexit"
     browse: "Browse Brexit guidance"
-    individuals: "individuals and families"
-    business: "businesses and organisations"
+    share_links: "Share this page"
+    sections:
+      services: Services
+      guidance_and_regulation: Guidance and regulation
+      news_and_communications: News and communications
+      research_and_statistics: Research and statistics
+      policy_and_engagement: Policy papers and consultations
+      transparency: Transparency and freedom of information releases
   campaign:
     other_campaigns:
       title: "Other guidance"

@@ -106,4 +106,14 @@ describe BrexitLandingPagePresenter do
       assert_equal subject.supergroup_sections, result_hash
     end
   end
+
+  describe "#email_path" do
+    it "strips the locale extension from the base path if present" do
+      I18n.with_locale(:fr) do
+        taxon = Taxon.new(ContentItem.new("base_path" => "/base_path.fr"))
+        subject = BrexitLandingPagePresenter.new(taxon)
+        assert_equal "/base_path", subject.email_path
+      end
+    end
+  end
 end

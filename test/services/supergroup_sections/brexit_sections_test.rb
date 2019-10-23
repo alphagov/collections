@@ -6,7 +6,9 @@ describe SupergroupSections::BrexitSections do
 
   let(:taxon_id) { "12345" }
   let(:base_path) { "/base/path" }
-  let(:brexit_supergroup_sections) { SupergroupSections::BrexitSections.new(taxon_id, base_path).sections }
+  let(:brexit_supergroup_sections) do
+    SupergroupSections::BrexitSections.new(taxon_id, base_path).sections
+  end
 
   describe "#sections" do
     it "returns a list of supergroup details for the brexit page" do

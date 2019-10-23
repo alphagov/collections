@@ -15,9 +15,11 @@ class BrexitLandingPagePresenter
   end
 
   def supergroup_sections
-    brexit_sections = SupergroupSections::BrexitSections.new(taxon.content_id, taxon.base_path).sections
+    brexit_sections = SupergroupSections::BrexitSections.new(taxon.content_id,
+                                                             taxon.base_path)
+                                                        .sections
     brexit_sections.map do |section|
-      supergroup_title = I18n.t(section[:name], scope: :content_purpose_supergroup, default: section[:title])
+      supergroup_title = I18n.t(section[:name], scope: %i[brexit_landing_page sections])
       {
         text: supergroup_title,
         path: section[:see_more_link][:url],
@@ -27,10 +29,29 @@ class BrexitLandingPagePresenter
     end
   end
 
+  def email_path
+    base_path.split(".").first
+  end
+
+  def translation_links
+    links = taxon.translations.map do |link|
+      active = true if link.base_path == taxon.base_path
+
+      {
+        locale: link.locale,
+        base_path: link.base_path,
+        text: I18n.t("language_names.#{link.locale}"),
+        active: active,
+      }
+    end
+
+    links.sort_by { |t| t[:locale] == I18n.default_locale.to_s ? "" : t[:locale] }
+  end
+
 private
 
   def fetch_buckets
-    buckets = YAML.load_file("config/brexit_campaign_buckets.yml")
+    buckets = YAML.load_file("config/brexit_campaign_buckets/#{I18n.locale}.yml")
 
     buckets.each do |bucket|
       bucket["list_block"] = convert_to_govspeak(bucket["list_block"])

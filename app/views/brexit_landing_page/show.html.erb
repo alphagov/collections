@@ -15,14 +15,14 @@
 </div>
 
 <div class="full-page-width-wrapper full-page-width-wrapper--landing-page">
-  <%= render partial: 'brexit_finders', locals: {supergroups: presented_taxon.supergroup_sections, email_path: presented_taxon.base_path } %>
+  <%= render partial: 'brexit_finders', locals: { supergroups: presented_taxon.supergroup_sections, email_path: presented_taxon.email_path } %>
 
   <div class="landing-page__share">
     <% hidden_text = capture do %>
       <span class="govuk-visually-hidden">Share on</span>
     <% end %>
     <%= render "govuk_publishing_components/components/share_links", {
-      title: "Share this page",
+      title: I18n.t("brexit_landing_page.share_links"),
       columns: true,
       links: [
         {

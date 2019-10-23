@@ -39,6 +39,12 @@ hr.landing-page__divider {
 }
 // scss-lint:enable QualifyingElement
 
+.landing-page__translation {
+  @include govuk-media-query($from: tablet) {
+    float: right;
+  }
+}
+
 .landing-page__contents {
   margin: govuk-spacing(6) 0 govuk-spacing(9) 0;
 }

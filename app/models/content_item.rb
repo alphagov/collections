@@ -10,7 +10,7 @@ class ContentItem
     @content_item_data = content_item_data
   end
 
-  %i[base_path title description content_id document_type].each do |field|
+  %i[base_path title description content_id document_type locale].each do |field|
     define_method field do
       @content_item_data[field.to_s]
     end
