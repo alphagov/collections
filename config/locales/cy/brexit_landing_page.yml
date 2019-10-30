@@ -1,0 +1,23 @@
+cy:
+  brexit_landing_page:
+    meta_title: "Byddwch yn barod am Brexit"
+    meta_description: "Mae bargen Brexit wedi ei gytuno mewn egwyddor gyda’r UE. Darganfyddwch beth mae hyn yn ei olygu i chi."
+    page_title: "Byddwch yn barod am Brexit"
+    page_lead: "Mae bargen Brexit wedi ei gytuno mewn egwyddor gyda’r UE."
+    page_paragraph: "Bydd angen i’r DU a’r UE gymeradwyo ac arwyddo’r cytundeb ymadael."
+    page_warning: "Os nad ydy’r cytundeb ymadael wedi ei arwyddo gan y DU a’r UE, gall y DU ymadael heb gytundeb. Darganfyddwch beth ddylech chi, eich teulu neu’ch busnes wneud os yw’r DU yn gadael yr UE heb gytundeb."
+    chevron_banner: "Gwiriwch beth sydd angen i chi wneud os nad oes cytundeb"
+    finder_heading: "Pori drwy’r holl wybodaeth sy’n gysylltiedig â Brexit:"
+    call_to_action_intro: "Atebwch ychydig o gwestiynau i ddarganfod sut y dylech chi neu’ch busnes baratoi."
+    all_brexit_information: "Holl wybodaeth Brexit"
+    email_intro: "I gael y manylion diweddaraf"
+    email: "Cofrestrwch i gael hysbysiadau e-bost am Brexit"
+    browse: "Pori drwy ganllawiau Brexit"
+    share_links: "Rhannu’r dudalen hon"
+    sections:
+      services: Gwasanaethau
+      guidance_and_regulation: Canllawiau a rheoliadau
+      news_and_communications: Newyddion a chyfathrebu
+      research_and_statistics: Ymchwil ag ystadegau
+      policy_and_engagement: Polisi ac ymgynghoriadau
+      transparency: Tryloywder a datganiadau rhyddid gwybodaeth

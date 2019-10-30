@@ -1,0 +1,23 @@
+en:
+  brexit_landing_page:
+    meta_title: "Get ready for Brexit"
+    meta_description: "A Brexit deal has been agreed in principle with the EU. Find out what this means for you."
+    chevron_banner: "Check what you need to do if there is no deal"
+    finder_heading: "Browse all information related to Brexit:"
+    page_title: "Get ready for Brexit"
+    page_lead: "A Brexit deal has been agreed in principle with the EU."
+    page_paragraph: "Both the UK and the EU need to approve and sign the withdrawal agreement."
+    page_warning: "If the withdrawal agreement is not signed by the UK and the EU, the UK could still leave with no deal. Find out what you, your family, or your business need to do if the UK leaves the EU with no deal."
+    call_to_action_intro: "Answer a few questions to find out how you or your business should prepare."
+    all_brexit_information: "All Brexit information"
+    email_intro: "Stay up to date"
+    email: "Sign up for email alerts about Brexit"
+    browse: "Browse Brexit guidance"
+    share_links: "Share this page"
+    sections:
+      services: Services
+      guidance_and_regulation: Guidance and regulation
+      news_and_communications: News and communications
+      research_and_statistics: Research and statistics
+      policy_and_engagement: Policy papers and consultations
+      transparency: Transparency and freedom of information releases
