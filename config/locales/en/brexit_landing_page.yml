@@ -21,3 +21,42 @@ en:
       research_and_statistics: Research and statistics
       policy_and_engagement: Policy papers and consultations
       transparency: Transparency and freedom of information releases
+    campaign_buckets:
+      - row_title: "Preparing your business for Brexit"
+        list_block: |
+          Find out how to get your business ready for Brexit.
+
+          %You risk not being able to do business with the EU unless you act now. [Check what you need to do.](/get-ready-brexit-check)%
+
+          For example, you must take action if you <a href="/prepare-export-from-uk-after-brexit" data-ecommerce-row="true" data-ecommerce-content-id="e169b2ac-8c90-4789-8e6c-3657729e21b2" data-ecommerce-path="/prepare-export-from-uk-after-brexit">export goods to the EU</a> or <a href="/transport-goods-from-uk-by-road" data-ecommerce-row="true" data-ecommerce-content-id="9be67e23-bd76-4d60-b6e1-66e0dce5965a" data-ecommerce-path="/transport-goods-from-uk-by-road">transport goods out of the UK by road.</a>
+
+          You must also check what you need to do now if you <a href="/prepare-import-to-uk-after-brexit" data-ecommerce-row="true" data-ecommerce-content-id="db1149f5-f60a-4d02-be0c-9c9db2828665" data-ecommerce-path="/prepare-import-to-uk-after-brexit">import goods from the EU</a> or <a href="/guidance/providing-services-to-any-country-in-the-eu-iceland-liechtenstein-norway-or-switzerland-after-eu-exit" data-ecommerce-row="true" data-ecommerce-content-id="e9dca8c7-04f5-4065-b2ac-70d140512bfa" data-ecommerce-path="/guidance/providing-services-to-any-country-in-the-eu-iceland-liechtenstein-norway-or-switzerland-after-eu-exit">sell services to the EU.</a>
+
+          There are different rules for <a href="/guidance/trading-and-moving-from-northern-ireland-to-ireland-in-a-no-deal-brexit" data-ecommerce-row="true" data-ecommerce-content-id="b7b0d001-07a3-4652-81fd-36688aa18b01" data-ecommerce-path="/guidance/trading-and-moving-from-northern-ireland-to-ireland-in-a-no-deal-brexit">moving goods between Ireland and Northern Ireland.</a>
+      - row_title: "EU funding after Brexit"
+        list_block: |
+          <a href="/guidance/european-and-domestic-funding-after-brexit" data-module="track-click" data-track-category="brexit-landing-page" data-track-action="Section link" data-track-label="/guidance/european-and-domestic-funding-after-brexit" data-track-options="&#123;&quot;dimension29&quot;:&quot;Check if your EU-funded project is covered by the UK government’s funding guarantee&quot;&#125;">Check if your EU-funded project is covered by the UK government’s funding guarantee.</a> The guarantee covers Erasmus+, Horizon 2020 and others.
+      - row_title: "Visiting the EU after Brexit"
+        list_block: |
+          To visit Europe after Brexit there are things you need to do before you travel.
+
+          <div role="note" aria-label="Information" class="application-notice info-notice">
+            <p>You may not be able to travel unless your UK passport meets new validity rules.</p>
+            <p>You may not have access to free emergency medical treatment in the EU after Brexit, so get travel insurance to make sure your health needs are covered.</p>
+            <p>You will not be allowed to drive in the EU unless you have new documents.</p>
+          </div>
+
+          <a href="/visit-europe-brexit" data-module="track-click" data-track-category="brexit-landing-page" data-track-action="Section link" data-track-label="/visit-europe-brexit" data-track-options="&#123;&quot;dimension29&quot;:&quot;Check what you need to do to visit the EU&quot;&#125;"><strong>Check what you need to do to visit the EU</strong></a>
+      - row_title: "Living and working in the EU"
+        list_block: |
+          Living and working in an EU country after Brexit depends on the rules in that country.
+
+          You may need to register or apply for residency, check if you’re covered for healthcare, and exchange your UK driving licence for a licence issued by the EU country where you live.
+
+          <a href="/uk-nationals-living-eu" data-module="track-click" data-track-category="brexit-landing-page" data-track-action="Section link" data-track-label="/uk-nationals-living-eu" data-track-options="&#123;&quot;dimension29&quot;:&quot;Check your rights for the country you live in&quot;&#125;"><strong>Check your rights for the country you live in</strong></a>
+
+      - row_title: "Staying in the UK if you’re an EU citizen"
+        list_block: |
+          You should check if you need to apply to the settlement scheme if you or your family are from the EU, Switzerland, Norway, Iceland or Liechtenstein.
+
+          <a href="/staying-uk-eu-citizen" data-module="track-click" data-track-category="brexit-landing-page" data-track-action="Section link" data-track-label="/staying-uk-eu-citizen" data-track-options="&#123;&quot;dimension29&quot;:&quot;Check what you need to do to stay in the UK&quot;&#125;"><strong>Check what you need to do to stay in the UK</strong></a>
