@@ -6,7 +6,6 @@ $govuk-compatibility-govukelements: true;
 
 @import "helpers/layouts";
 @import "helpers/margins";
-@import "helpers/overwrites";
 @import "components/*";
 
 @import "views/browse";
