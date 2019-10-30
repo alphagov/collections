@@ -1,9 +1,6 @@
 cy:
   common:
     translations: Cyfieithiadau
-  language_names:
-    en: English
-    cy: Cymraeg
   date:
     formats:
       default: "%d %M %Y"
