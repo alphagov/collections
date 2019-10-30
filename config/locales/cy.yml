@@ -1,8 +1,6 @@
 cy:
   common:
     translations: Cyfieithiadau
-  view_all: gwelir holl
-  view_less: gwelir llai
   language_names:
     en: English
     cy: Cymraeg
