@@ -9,11 +9,11 @@ module CitizenReadiness
     end
 
     def title
-      I18n.t("campaign.links.#{slug}.title")
+      I18n.t("brexit_campaign.links.#{slug}.title")
     end
 
     def description
-      I18n.t("campaign.links.#{slug}.description")
+      I18n.t("brexit_campaign.links.#{slug}.description")
     end
 
     def link
