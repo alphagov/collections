@@ -14,30 +14,25 @@ $red: #E61E32;
 .landing-page__header {
   padding-bottom: govuk-spacing(6);
   padding-top: govuk-spacing(3);
-  background-color: $dark-blue;
+  background-color: $govuk-brand-colour;
   color: govuk-colour("white");
 }
 
-// scss-lint:disable QualifyingElement
-p.landing-page__header-text {
-  font-size: 16px;
-  line-height: 1.25;
-  color: govuk-colour("white");
-
-  @include govuk-media-query($from: mobile) {
-    @include govuk-font(24, $line-height: 1.25);
+.landing-page__intro {
+  p {
+    color: govuk-colour("white");
   }
 
-  &:last-child {
-    margin-bottom: govuk-spacing(6);
+  a:link,
+  a:visited {
+    font-weight: bold;
+    color: govuk-colour("white");
+  }
+
+  a:focus {
+    color: govuk-colour("black");
   }
 }
-
-hr.landing-page__divider {
-  outline: 0;
-  border: 1px solid govuk-colour("white");
-}
-// scss-lint:enable QualifyingElement
 
 .landing-page__translation {
   @include govuk-media-query($from: tablet) {
@@ -54,12 +49,12 @@ hr.landing-page__divider {
 }
 
 .full-page-width-wrapper--landing-page {
-  border-top: 2px solid $red;
+  border-top: 2px solid govuk-colour("black");
 }
 
 .landing-page__section {
   margin-bottom: govuk-spacing(8);
-  border-top: 2px solid $red;
+  border-top: 2px solid govuk-colour("black");
 }
 
 .landing-page__section-title {
