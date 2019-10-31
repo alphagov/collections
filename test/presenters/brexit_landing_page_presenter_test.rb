@@ -29,7 +29,7 @@ describe BrexitLandingPagePresenter do
     end
 
     it "html-safes the list block" do
-      assert subject.buckets[0]["list_block"].html_safe?
+      assert subject.buckets[0][:list_block].html_safe?
     end
   end
 
@@ -109,8 +109,8 @@ describe BrexitLandingPagePresenter do
 
   describe "#email_path" do
     it "strips the locale extension from the base path if present" do
-      I18n.with_locale(:fr) do
-        taxon = Taxon.new(ContentItem.new("base_path" => "/base_path.fr"))
+      I18n.with_locale(:cy) do
+        taxon = Taxon.new(ContentItem.new("base_path" => "/base_path.cy"))
         subject = BrexitLandingPagePresenter.new(taxon)
         assert_equal "/base_path", subject.email_path
       end

@@ -40,7 +40,7 @@ class BrexitLandingPagePresenter
       {
         locale: link.locale,
         base_path: link.base_path,
-        text: I18n.t("language_names.#{link.locale}"),
+        text: I18n.t("shared.language_names.#{link.locale}"),
         active: active,
       }
     end
@@ -51,10 +51,9 @@ class BrexitLandingPagePresenter
 private
 
   def fetch_buckets
-    buckets = YAML.load_file("config/brexit_campaign_buckets/#{I18n.locale}.yml")
-
+    buckets = I18n.t("brexit_landing_page.campaign_buckets")
     buckets.each do |bucket|
-      bucket["list_block"] = convert_to_govspeak(bucket["list_block"])
+      bucket[:list_block] = convert_to_govspeak(bucket[:list_block])
     end
   end
 

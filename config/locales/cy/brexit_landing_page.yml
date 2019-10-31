@@ -1,0 +1,61 @@
+cy:
+  brexit_landing_page:
+    meta_title: "Byddwch yn barod am Brexit"
+    meta_description: "Mae bargen Brexit wedi ei gytuno mewn egwyddor gyda’r UE. Darganfyddwch beth mae hyn yn ei olygu i chi."
+    page_title: "Byddwch yn barod am Brexit"
+    page_lead: "Mae bargen Brexit wedi ei gytuno mewn egwyddor gyda’r UE."
+    page_paragraph: "Bydd angen i’r DU a’r UE gymeradwyo ac arwyddo’r cytundeb ymadael."
+    page_warning: "Os nad ydy’r cytundeb ymadael wedi ei arwyddo gan y DU a’r UE, gall y DU ymadael heb gytundeb. Darganfyddwch beth ddylech chi, eich teulu neu’ch busnes wneud os yw’r DU yn gadael yr UE heb gytundeb."
+    chevron_banner: "Gwiriwch beth sydd angen i chi wneud os nad oes cytundeb"
+    finder_heading: "Pori drwy’r holl wybodaeth sy’n gysylltiedig â Brexit:"
+    call_to_action_intro: "Atebwch ychydig o gwestiynau i ddarganfod sut y dylech chi neu’ch busnes baratoi."
+    all_brexit_information: "Holl wybodaeth Brexit"
+    email_intro: "I gael y manylion diweddaraf"
+    email: "Cofrestrwch i gael hysbysiadau e-bost am Brexit"
+    browse: "Pori drwy ganllawiau Brexit"
+    share_links: "Rhannu’r dudalen hon"
+    sections:
+      services: Gwasanaethau
+      guidance_and_regulation: Canllawiau a rheoliadau
+      news_and_communications: Newyddion a chyfathrebu
+      research_and_statistics: Ymchwil ag ystadegau
+      policy_and_engagement: Polisi ac ymgynghoriadau
+      transparency: Tryloywder a datganiadau rhyddid gwybodaeth
+    campaign_buckets:
+      - row_title: "Paratoi eich busnes ar gyfer Brexit"
+        list_block: |
+          Darganfyddwch sut i baratoi eich busnes ar gyfer Brexit.
+
+          %Mae perygl na fyddwch yn gallu gwneud busnes gyda'r UE oni bai eich bod yn gweithredu nawr. [Gwiriwch beth sydd angen i chi wneud.](/get-ready-brexit-check)%
+
+          Er enghraifft, mae'n rhaid i chi gymryd camau os ydych yn <a href="/prepare-export-from-uk-after-brexit" data-ecommerce-row="true" data-ecommerce-content-id="e169b2ac-8c90-4789-8e6c-3657729e21b2" data-ecommerce-path="/prepare-export-from-uk-after-brexit">allforio nwyddau i'r UE</a> neu’n <a href="/transport-goods-from-uk-by-road" data-ecommerce-row="true" data-ecommerce-content-id="9be67e23-bd76-4d60-b6e1-66e0dce5965a" data-ecommerce-path="/transport-goods-from-uk-by-road">cludo nwyddau allan o’r DU ar y ffyrdd</a>.
+
+          Mae'n rhaid i chi hefyd wirio beth sydd angen i chi ei wneud nawr os ydych yn <a href="/prepare-import-to-uk-after-brexit" data-ecommerce-row="true" data-ecommerce-content-id="db1149f5-f60a-4d02-be0c-9c9db2828665" data-ecommerce-path="/prepare-import-to-uk-after-brexit">mewnforio nwyddau o’r UE</a> neu'n <a href="/guidance/providing-services-to-any-country-in-the-eu-iceland-liechtenstein-norway-or-switzerland-after-eu-exit" data-ecommerce-row="true" data-ecommerce-content-id="e9dca8c7-04f5-4065-b2ac-70d140512bfa" data-ecommerce-path="/guidance/providing-services-to-any-country-in-the-eu-iceland-liechtenstein-norway-or-switzerland-after-eu-exit">gwerthu gwasanaethau i’r UE.</a>
+
+          Mae rheolau gwahanol i <a href="/guidance/trading-and-moving-from-northern-ireland-to-ireland-in-a-no-deal-brexit" data-ecommerce-row="true" data-ecommerce-content-id="b7b0d001-07a3-4652-81fd-36688aa18b01" data-ecommerce-path="/guidance/trading-and-moving-from-northern-ireland-to-ireland-in-a-no-deal-brexit">symud nwyddau rhwng Iwerddon a Gogledd Iwerddon.</a>
+      - row_title: "Cyllid yr UE ar ôl Brexit"
+        list_block: |
+          <a href="/guidance/european-and-domestic-funding-after-brexit" data-module="track-click" data-track-category="brexit-landing-page" data-track-action="Section link" data-track-label="/guidance/european-and-domestic-funding-after-brexit" data-track-options="&#123;&quot;dimension29&quot;:&quot;Gwiriwch os yw eich prosiect a ariennir gan yr UE wedi ei warantu gan arian Llywodraeth y DU&quot;&#125;">Gwiriwch os yw eich prosiect a ariennir gan yr UE wedi ei warantu gan arian Llywodraeth y DU.</a> Mae'r warant yn cwmpasu Erasmus +, Horizon 2020 ac eraill.
+      - row_title: "Ymweld â’r UE ar ôl Brexit"
+        list_block: |
+          I ymweld ag Ewrop ar ôl Brexit, mae pethau sydd angen i chi wneud cyn teithio.
+
+          <div role="note" aria-label="Information" class="application-notice info-notice">
+            <p>Mae'n bosibl na fyddwch yn gallu teithio oni bai bod eich pasport DU yn bodloni rheolau dilysrwydd newydd.</p>
+            <p>Efallai na fyddwch yn gallu cael triniaeth feddygol ar frys am ddim yn yr UE ar ôl Brexit, felly dylech gael yswiriant teithio er mwyn sicrhau bod eich anghenion iechyd yn cael eu cynnwys.</p>
+            <p>Ni fydd hawl gennych yrru yn yr UE oni bai fod gennych ddogfennau newydd.</p>
+          </div>
+
+          <a href="/visit-europe-brexit" data-module="track-click" data-track-category="brexit-landing-page" data-track-action="Section link" data-track-label="/visit-europe-brexit" data-track-options="&#123;&quot;dimension29&quot;:&quot;Gwiriwch beth sydd angen i chi wneud i ymweld â’r UE&quot;&#125;"><strong>Gwiriwch beth sydd angen i chi wneud i ymweld â’r UE</strong></a>
+      - row_title: "Byw a gweithio yn yr UE"
+        list_block: |
+          Mae byw a gweithio mewn gwlad yr UE yn ddibynnol ar y rheolau yn y wlad honno.
+
+          Efallai bydd angen i chi gofrestru neu gyflwyno cais am breswyliaeth, gwirio os ydych chi’n gymwys am ofal iechyd a chyfnewid eich trwydded yrru DU am drwydded a roddir gan wlad yr UE ble rydych yn byw.
+
+          <a href="/uk-nationals-living-eu" data-module="track-click" data-track-category="brexit-landing-page" data-track-action="Section link" data-track-label="/uk-nationals-living-eu" data-track-options="&#123;&quot;dimension29&quot;:&quot;Gwiriwch eich hawliau ar gyfer y wlad yr ydych yn byw ynddi&quot;&#125;"><strong>Gwiriwch eich hawliau ar gyfer y wlad yr ydych yn byw ynddi</strong></a>
+      - row_title: "Aros yn y DU os ydych yn ddinesydd o’r UE"
+        list_block: |
+          Bydd angen i chi wirio os oes angen i chi gyflwyno cais i’r cynllun setliad os ydych chi neu’ch teulu yn dod o’r UE, Y Swistir, Norwy, Gwlad yr Iâ neu Liechtenstein.
+
+          <a href="/staying-uk-eu-citizen" data-module="track-click" data-track-category="brexit-landing-page" data-track-action="Section link" data-track-label="/staying-uk-eu-citizen" data-track-options="&#123;&quot;dimension29&quot;:&quot;Gwiriwch beth sydd angen i chi wneud i aros yn y DU&quot;&#125;"><strong>Gwiriwch beth sydd angen i chi wneud i aros yn y DU</strong></a>
