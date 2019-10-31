@@ -31,7 +31,7 @@ private
   end
 
   def show_dynamic_list?
-    true
+    false
   end
 
   def switch_locale(&action)

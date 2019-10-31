@@ -14,7 +14,7 @@ $red: #E61E32;
 .landing-page__header {
   padding-bottom: govuk-spacing(6);
   padding-top: govuk-spacing(3);
-  background-color: $dark-blue;
+  background-color: $govuk-brand-colour;
   color: govuk-colour("white");
 }
 
@@ -54,12 +54,12 @@ hr.landing-page__divider {
 }
 
 .full-page-width-wrapper--landing-page {
-  border-top: 2px solid $red;
+  border-top: 2px solid govuk-colour("black");
 }
 
 .landing-page__section {
   margin-bottom: govuk-spacing(8);
-  border-top: 2px solid $red;
+  border-top: 2px solid govuk-colour("black");
 }
 
 .landing-page__section-title {
