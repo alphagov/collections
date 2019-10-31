@@ -35,13 +35,10 @@
         } %>
       </div>
 
-      <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-grid-column-two-thirds landing-page__intro">
         <%= render "govuk_publishing_components/components/govspeak", {
         } do %>
-          <p class="landing-page__header-text"><%= I18n.t("brexit_landing_page.page_lead") %></p>
-          <p class="landing-page__header-text"><%= I18n.t("brexit_landing_page.page_paragraph") %></p>
-          <hr class="landing-page__divider" aria-hidden="true">
-          <p class="landing-page__header-text"><%= I18n.t("brexit_landing_page.page_warning") %></p>
+          <%= t('brexit_landing_page.page_intro').html_safe() %>
         <% end %>
       </div>
     </div>

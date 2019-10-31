@@ -18,26 +18,21 @@ $red: #E61E32;
   color: govuk-colour("white");
 }
 
-// scss-lint:disable QualifyingElement
-p.landing-page__header-text {
-  font-size: 16px;
-  line-height: 1.25;
-  color: govuk-colour("white");
-
-  @include govuk-media-query($from: mobile) {
-    @include govuk-font(24, $line-height: 1.25);
+.landing-page__intro {
+  p {
+    color: govuk-colour("white");
   }
 
-  &:last-child {
-    margin-bottom: govuk-spacing(6);
+  a:link,
+  a:visited {
+    font-weight: bold;
+    color: govuk-colour("white");
+  }
+
+  a:focus {
+    color: govuk-colour("black");
   }
 }
-
-hr.landing-page__divider {
-  outline: 0;
-  border: 1px solid govuk-colour("white");
-}
-// scss-lint:enable QualifyingElement
 
 .landing-page__translation {
   @include govuk-media-query($from: tablet) {
