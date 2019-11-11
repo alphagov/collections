@@ -1,7 +1,7 @@
 <% content_for :title, person.title %>
 
 <%= render "govuk_publishing_components/components/title", {
-  context: person.roles,
+  context: person.current_roles_title,
   title: person.title
 } %>
 
