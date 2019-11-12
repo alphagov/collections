@@ -32,4 +32,8 @@
       <%= person.biography %>
     <% end %>
   </div>
+
+  <%= render partial: 'previous_roles', locals: {
+      person: person
+  } %>
 </div>
