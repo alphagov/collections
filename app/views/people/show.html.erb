@@ -29,7 +29,7 @@
 
     <%= render "govuk_publishing_components/components/govspeak", {
     } do %>
-      <%= person.biography %>
+      <%= person.biography.html_safe %>
     <% end %>
   </div>
 </div>
