@@ -7,7 +7,7 @@
       "check_name": "CrossSiteScripting",
       "message": "Unescaped model attribute",
       "file": "app/views/organisations/_what_we_do.html.erb",
-      "line": 17,
+      "line": 18,
       "link": "https://brakemanscanner.org/docs/warning_types/cross_site_scripting",
       "code": "Organisation.find!(request.path).body",
       "render_path": [
@@ -40,8 +40,70 @@
       "user_input": null,
       "confidence": "Medium",
       "note": "The body of an organisation is pre-rendered as html in the publishing app.  We need to show it in its raw form."
+    },
+    {
+      "warning_type": "Cross-Site Scripting",
+      "warning_code": 2,
+      "fingerprint": "a31c67ced459f8f8fed487bace51003d694decf9b9295bfcb19227bcd687cdbc",
+      "check_name": "CrossSiteScripting",
+      "message": "Unescaped model attribute",
+      "file": "app/views/roles/show.html.erb",
+      "line": 17,
+      "link": "https://brakemanscanner.org/docs/warning_types/cross_site_scripting",
+      "code": "Role.find!(\"/government/ministers/#{params[:role_name]}\").responsibilities",
+      "render_path": [
+        {
+          "type": "controller",
+          "class": "RolesController",
+          "method": "show",
+          "line": 6,
+          "file": "app/controllers/roles_controller.rb",
+          "rendered": {
+            "name": "roles/show",
+            "file": "app/views/roles/show.html.erb"
+          }
+        }
+      ],
+      "location": {
+        "type": "template",
+        "template": "roles/show"
+      },
+      "user_input": null,
+      "confidence": "Medium",
+      "note": "The resposibilities of a role comes from the Content Store which is trusted and provides us with rendered HTML."
+    },
+    {
+      "warning_type": "Cross-Site Scripting",
+      "warning_code": 2,
+      "fingerprint": "f6346b68e4ff615b38d84bfac2e512879402f408449cf504389b56515d453379",
+      "check_name": "CrossSiteScripting",
+      "message": "Unescaped model attribute",
+      "file": "app/views/people/show.html.erb",
+      "line": 32,
+      "link": "https://brakemanscanner.org/docs/warning_types/cross_site_scripting",
+      "code": "Person.find!(\"/government/people/#{params[:name]}\").biography",
+      "render_path": [
+        {
+          "type": "controller",
+          "class": "PeopleController",
+          "method": "show",
+          "line": 5,
+          "file": "app/controllers/people_controller.rb",
+          "rendered": {
+            "name": "people/show",
+            "file": "app/views/people/show.html.erb"
+          }
+        }
+      ],
+      "location": {
+        "type": "template",
+        "template": "people/show"
+      },
+      "user_input": null,
+      "confidence": "Medium",
+      "note": "The biography of a person comes from the Content Store which is trusted and provides us with rendered HTML."
     }
   ],
-  "updated": "2019-07-31 13:46:55 +0100",
-  "brakeman_version": "4.6.1"
+  "updated": "2019-11-13 14:39:16 +0000",
+  "brakeman_version": "4.7.1"
 }
