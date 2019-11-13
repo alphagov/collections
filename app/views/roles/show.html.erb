@@ -1,6 +1,8 @@
 <% content_for :title, role.title %>
 
-<p class="type">Ministerial role</p>
-<h1><%= role.title %></h1>
+<%= render "govuk_publishing_components/components/title", {
+  context: "Ministerial role",
+  title: role.title
+} %>
 
 <p><%= role.responsibilities %></p>
