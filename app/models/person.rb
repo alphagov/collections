@@ -22,8 +22,13 @@ class Person
     @content_item.content_item_data["title"]
   end
 
-  def roles
-    links["ordered_current_appointments"].map { |ra| ra["title"] }.to_sentence
+  def current_roles
+    links.fetch("ordered_current_appointments", [])
+      .map { |appointment| appointment["links"]["role"].first }
+  end
+
+  def current_roles_title
+    current_roles.map { |role| role["title"] }.to_sentence
   end
 
   def image_url
