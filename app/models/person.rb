@@ -22,11 +22,6 @@ class Person
     @content_item.content_item_data["title"]
   end
 
-  def current_roles
-    links.fetch("ordered_current_appointments", [])
-      .map { |appointment| appointment["links"]["role"].first }
-  end
-
   def current_roles_title
     current_roles.map { |role| role["title"] }.to_sentence
   end
@@ -44,6 +39,11 @@ class Person
   end
 
 private
+
+  def current_roles
+    links.fetch("ordered_current_appointments", [])
+      .map { |appointment| appointment["links"]["role"].first }
+  end
 
   def links
     @content_item.content_item_data["links"]
