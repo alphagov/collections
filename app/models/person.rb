@@ -38,6 +38,20 @@ class Person
     details["body"]
   end
 
+  def previous_appointments
+    ordered_previous_appointments.map do |role|
+      {
+        link: {
+          text: role["title"],
+          path: role["base_path"],
+        },
+        metadata: {
+          appointment_duration: "#{role['start_year']} to #{role['end_year']}",
+        },
+      }
+    end
+  end
+
 private
 
   def current_roles
@@ -51,5 +65,14 @@ private
 
   def details
     @content_item.content_item_data["details"]
+  end
+
+  def ordered_previous_appointments
+    links["ordered_previous_appointments"].map do |previous_appointment|
+      role = previous_appointment["links"]["role"].first
+      role["start_year"] = Time.parse(previous_appointment["details"]["started_on"]).strftime("%Y")
+      role["end_year"] = Time.parse(previous_appointment["details"]["ended_on"]).strftime("%Y")
+      role
+    end
   end
 end
