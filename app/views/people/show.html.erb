@@ -21,17 +21,7 @@
     } %>
   </div>
 
-  <div class="govuk-grid-column-two-thirds">
-    <%= render "govuk_publishing_components/components/heading", {
-      text: "Biography",
-      id: "biography",
-    } %>
-
-    <%= render "govuk_publishing_components/components/govspeak", {
-    } do %>
-      <%= person.biography.html_safe %>
-    <% end %>
-  </div>
+  <%= render partial: "biography", locals: { person: person } %>
 
   <%= render partial: 'previous_roles', locals: {
       person: person
