@@ -8,8 +8,10 @@
       href: "#",
       image_src: person.image_url,
       image_alt: person.image_alt_text,
-      description: "Contents",
-      extra_links: [
+    } %>
+
+    <%= render "govuk_publishing_components/components/contents_list", {
+      contents: [
         {
           text: "Biography",
           href: "#biography"
