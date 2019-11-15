@@ -1,9 +1,6 @@
 <% content_for :title, person.title %>
 
-<%= render "govuk_publishing_components/components/title", {
-  context: person.current_roles_title,
-  title: person.title
-} %>
+<%= render partial: "header", locals: { person: person } %>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-third">
@@ -11,29 +8,23 @@
       href: "#",
       image_src: person.image_url,
       image_alt: person.image_alt_text,
-      description: "Contents",
-      extra_links: [
+    } %>
+
+    <%= render "govuk_publishing_components/components/contents_list", {
+      contents: [
         {
           text: "Biography",
           href: "#biography"
-        }
-      ]
+        },
+        person.has_previous_roles? ? {
+          text: "Previous roles",
+          href: "#previous-roles"
+        } : nil,
+      ].compact
     } %>
   </div>
 
-  <div class="govuk-grid-column-two-thirds">
-    <%= render "govuk_publishing_components/components/heading", {
-      text: "Biography",
-      id: "biography",
-    } %>
+  <%= render partial: "biography", locals: { person: person } %>
 
-    <%= render "govuk_publishing_components/components/govspeak", {
-    } do %>
-      <%= person.biography.html_safe %>
-    <% end %>
-  </div>
-
-  <%= render partial: 'previous_roles', locals: {
-      person: person
-  } %>
+  <%= render partial: "previous_roles", locals: { person: person } %>
 </div>

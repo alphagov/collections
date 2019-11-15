@@ -26,20 +26,8 @@ class Person
     current_roles.map { |role| role["title"] }.to_sentence
   end
 
-  def image_url
-    details.dig("image", "url")
-  end
-
-  def image_alt_text
-    details.dig("image", "alt_text")
-  end
-
-  def biography
-    details["body"]
-  end
-
-  def previous_appointments
-    ordered_previous_appointments.map do |role|
+  def previous_roles_items
+    previous_roles.map do |role|
       {
         link: {
           text: role["title"],
@@ -52,11 +40,36 @@ class Person
     end
   end
 
+  def has_previous_roles?
+    previous_roles.present?
+  end
+
+  def image_url
+    details.dig("image", "url")
+  end
+
+  def image_alt_text
+    details.dig("image", "alt_text")
+  end
+
+  def biography
+    details["body"]
+  end
+
 private
 
   def current_roles
     links.fetch("ordered_current_appointments", [])
       .map { |appointment| appointment["links"]["role"].first }
+  end
+
+  def previous_roles
+    links.fetch("ordered_previous_appointments", []).map do |previous_appointment|
+      previous_appointment["links"]["role"].first.tap do |role|
+        role["start_year"] = Time.parse(previous_appointment["details"]["started_on"]).strftime("%Y")
+        role["end_year"] = Time.parse(previous_appointment["details"]["ended_on"]).strftime("%Y")
+      end
+    end
   end
 
   def links
@@ -65,14 +78,5 @@ private
 
   def details
     @content_item.content_item_data["details"]
-  end
-
-  def ordered_previous_appointments
-    links["ordered_previous_appointments"].map do |previous_appointment|
-      role = previous_appointment["links"]["role"].first
-      role["start_year"] = Time.parse(previous_appointment["details"]["started_on"]).strftime("%Y")
-      role["end_year"] = Time.parse(previous_appointment["details"]["ended_on"]).strftime("%Y")
-      role
-    end
   end
 end

@@ -1,9 +1,6 @@
 <% content_for :title, role.title %>
 
-<%= render "govuk_publishing_components/components/title", {
-  context: "Ministerial role",
-  title: role.title
-} %>
+<%= render partial: "header", locals: { role: role } %>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
