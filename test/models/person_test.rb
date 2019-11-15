@@ -49,10 +49,11 @@ describe Person do
 
   describe "ordered previous appointments" do
     it "should have previous appointment text" do
-      assert_equal "Secretary of State for Foreign and Commonwealth Affairs", @person.previous_appointments.first[:link][:text]
+      assert_equal "Secretary of State for Foreign and Commonwealth Affairs", @person.previous_roles_items.first[:link][:text]
     end
+
     it "should have previous appointment duration text" do
-      assert_equal "2016 to 2018", @person.previous_appointments.first[:metadata][:appointment_duration]
+      assert_equal "2016 to 2018", @person.previous_roles_items.first[:metadata][:appointment_duration]
     end
   end
 end
