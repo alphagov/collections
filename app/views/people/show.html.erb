@@ -14,11 +14,11 @@
           text: "Biography",
           href: "#biography"
         },
-        {
+        person.has_previous_roles? ? {
           text: "Previous roles",
           href: "#previous-roles"
-        },
-      ]
+        } : nil,
+      ].compact
     } %>
   </div>
 

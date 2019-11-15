@@ -1,11 +1,13 @@
-<div class="govuk-grid-column-two-thirds">
-  <%= render "govuk_publishing_components/components/heading", {
-    text: "Previous roles in government",
-    id: "previous-roles",
-    margin_bottom: 2,
-  } %>
+<% if person.has_previous_roles? %>
+  <div class="govuk-grid-column-two-thirds">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: "Previous roles in government",
+      id: "previous-roles",
+      margin_bottom: 2,
+    } %>
 
-  <%= render "govuk_publishing_components/components/document_list", {
-    items: person.previous_roles_items
-  } %>
-</div>
+    <%= render "govuk_publishing_components/components/document_list", {
+      items: person.previous_roles_items
+    } %>
+  </div>
+<% end %>

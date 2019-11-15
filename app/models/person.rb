@@ -40,6 +40,10 @@ class Person
     end
   end
 
+  def has_previous_roles?
+    previous_roles.present?
+  end
+
   def image_url
     details.dig("image", "url")
   end
