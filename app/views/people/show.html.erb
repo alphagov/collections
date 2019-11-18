@@ -24,7 +24,9 @@
     } %>
   </div>
 
-  <%= render partial: "biography", locals: { person: person } %>
+  <div class="govuk-grid-column-two-thirds">
+    <%= render partial: "biography", locals: { person: person } %>
 
-  <%= render partial: "previous_roles", locals: { person: person } %>
+    <%= render partial: "previous_roles", locals: { person: person } %>
+  </div>
 </div>
