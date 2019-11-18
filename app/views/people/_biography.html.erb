@@ -1,10 +1,11 @@
-<%= render "govuk_publishing_components/components/heading", {
-  text: "Biography",
-  id: "biography",
-  margin_bottom: 2,
-} %>
+<section id="biography" class="govuk-!-padding-bottom-9">
+  <%= render "govuk_publishing_components/components/heading", {
+    text: "Biography",
+    margin_bottom: 2,
+  } %>
 
-<%= render "govuk_publishing_components/components/govspeak", {
-} do %>
-  <%= person.biography.html_safe %>
-<% end %>
+  <%= render "govuk_publishing_components/components/govspeak", {
+  } do %>
+    <%= person.biography.html_safe %>
+  <% end %>
+</section>
