@@ -9,5 +9,9 @@
     <%= render "govuk_publishing_components/components/document_list", {
         items: person.announcement_items
     } %>
+
+    <div class="read-more">
+      <%= link_to "View all announcements", person.redirect_to_news_and_communications, class: "govuk-link" %>
+    </div>
   </div>
 <% end %>

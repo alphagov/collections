@@ -59,8 +59,8 @@ describe Person do
   end
 
   describe "announcements" do
-    it "should have annoucements" do
-      results = [
+    setup do
+      @results = [
         { "title" => "Government announces further support for those affected by flooding",
           "link" => "/government/news/government-announces-further-support-for-those-affected-by-flooding",
           "content_store_document_type" => "press_release",
@@ -72,11 +72,17 @@ describe Person do
           "document_type" => "edition" },
       ]
 
-      Services.rummager.stubs(:search).returns("results" => results,
-        "start" => 0,
-        "total" => 1)
+      Services.rummager.stubs(:search).returns("results" => @results,
+                                               "start" => 0,
+                                               "total" => 1)
+    end
 
+    it "should have annoucements" do
       assert_equal "Government announces further support for those affected by flooding", @person.announcement_items.first[:link][:text]
+    end
+
+    it "should have link to news and communications finder" do
+      assert_equal "/search/news-and-communications?people=boris-johnson", @person.link_to_news_and_communications
     end
   end
 end

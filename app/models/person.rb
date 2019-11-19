@@ -75,7 +75,15 @@ class Person
     announcements.present?
   end
 
+  def link_to_news_and_communications
+    "/search/news-and-communications?people=#{slug}"
+  end
+
 private
+
+  def slug
+    base_path.split("/").last
+  end
 
   def announcements
     @announcements ||= Services.cached_search(
@@ -85,10 +93,6 @@ private
       reject_content_purpose_supergroup: "other",
       fields: %w[title link content_store_document_type public_timestamp],
     )["results"]
-  end
-
-  def slug
-    base_path.split("/").last
   end
 
   def current_roles
