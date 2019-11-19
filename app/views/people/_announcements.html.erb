@@ -1,9 +1,9 @@
 <% if person.has_announcements? %>
-  <div class="govuk-grid-column-two-thirds">
+  <section id="announcements">
     <%= render "govuk_publishing_components/components/heading", {
         text: "Announcements",
         id: "announcements",
-        margin_bottom: 2,
+        margin_bottom: 5,
     } %>
 
     <%= render "govuk_publishing_components/components/document_list", {
@@ -13,5 +13,5 @@
     <div class="read-more">
       <%= link_to "View all announcements", person.redirect_to_news_and_communications, class: "govuk-link" %>
     </div>
-  </div>
+  </section>
 <% end %>

@@ -1,4 +1,5 @@
 <% if person.has_previous_roles? %>
+  <section class="previous-roles govuk-!-padding-bottom-9">
   <%= render "govuk_publishing_components/components/heading", {
     text: "Previous roles in government",
     id: "previous-roles",
@@ -8,4 +9,5 @@
   <%= render "govuk_publishing_components/components/document_list", {
     items: person.previous_roles_items
   } %>
+  </section>
 <% end %>
