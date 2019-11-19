@@ -79,6 +79,14 @@ class Person
     "/search/news-and-communications?people=#{slug}"
   end
 
+  def email_signup
+    "/email-signup?link=/government/people/#{slug}"
+  end
+
+  def subscribe_to_feed
+    "https://www.gov.uk/government/people/#{slug}.atom"
+  end
+
 private
 
   def slug

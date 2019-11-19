@@ -6,6 +6,12 @@
         margin_bottom: 5,
     } %>
 
+    <%= render "govuk_publishing_components/components/subscription-links", {
+        email_signup_link: person.email_signup,
+        feed_link: person.subscribe_to_feed,
+        margin_bottom: 5,
+    } %>
+
     <%= render "govuk_publishing_components/components/document_list", {
         items: person.announcement_items
     } %>
