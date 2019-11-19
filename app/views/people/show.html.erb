@@ -19,7 +19,11 @@
         person.has_previous_roles? ? {
           text: "Previous roles",
           href: "#previous-roles"
-        } : nil,
+        }: nil,
+        person.has_announcements? ? {
+            text: "Announcements",
+            href: "#announcements"
+        }: nil,
       ].compact
     } %>
   </div>
