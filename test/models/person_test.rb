@@ -3,6 +3,7 @@ require "test_helper"
 describe Person do
   setup do
     @api_data = {
+      "base_path" => "/government/people/boris-johnson",
       "links" => {
         "ordered_current_appointments" => [
           {
@@ -54,6 +55,42 @@ describe Person do
 
     it "should have previous appointment duration text" do
       assert_equal "2016 to 2018", @person.previous_roles_items.first[:metadata][:appointment_duration]
+    end
+  end
+
+  describe "announcements" do
+    setup do
+      @results = [
+        { "title" => "Government announces further support for those affected by flooding",
+          "link" => "/government/news/government-announces-further-support-for-those-affected-by-flooding",
+          "content_store_document_type" => "press_release",
+          "public_timestamp" => "2019-11-12T21:07:00.000+00:00",
+          "index" => "government",
+          "es_score" => nil,
+          "_id" => "/government/news/government-announces-further-support-for-those-affected-by-flooding",
+          "elasticsearch_type" => "edition",
+          "document_type" => "edition" },
+      ]
+
+      Services.rummager.stubs(:search).returns("results" => @results,
+                                               "start" => 0,
+                                               "total" => 1)
+    end
+
+    it "should have announcements" do
+      assert_equal "Government announces further support for those affected by flooding", @person.announcement_items.first[:link][:text]
+    end
+
+    it "should have link to news and communications finder" do
+      assert_equal "/search/news-and-communications?people=boris-johnson", @person.link_to_news_and_communications
+    end
+
+    it "should have link to email signup" do
+      assert_equal "/email-signup?link=/government/people/boris-johnson", @person.email_signup
+    end
+
+    it "should have link to subscription atom feed" do
+      assert_equal "https://www.gov.uk/government/people/boris-johnson.atom", @person.subscribe_to_feed
     end
   end
 end

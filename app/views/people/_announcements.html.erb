@@ -1,0 +1,23 @@
+<% if person.has_announcements? %>
+  <section id="announcements">
+    <%= render "govuk_publishing_components/components/heading", {
+        text: "Announcements",
+        id: "announcements",
+        margin_bottom: 5,
+    } %>
+
+    <%= render "govuk_publishing_components/components/subscription-links", {
+        email_signup_link: person.email_signup,
+        feed_link: person.subscribe_to_feed,
+        margin_bottom: 5,
+    } %>
+
+    <%= render "govuk_publishing_components/components/document_list", {
+        items: person.announcement_items
+    } %>
+
+    <div class="read-more">
+      <%= link_to "View all announcements", person.redirect_to_news_and_communications, class: "govuk-link" %>
+    </div>
+  </section>
+<% end %>
