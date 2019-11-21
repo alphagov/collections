@@ -50,7 +50,7 @@ Rails.application.routes.draw do
   get "/prepare-eu-exit",
     to: "brexit_campaign#show"
 
-  get "/government/people/:name", to: "people#show"
+  get "/government/people/:name(.:locale)", to: "people#show"
   get "/government/ministers/:role_name", to: "roles#show"
 
   scope :api, defaults: { format: :json } do
