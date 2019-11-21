@@ -1,0 +1,6 @@
+<% if role.organisations %>
+  <div class="organisations-list">
+    Organisations:
+    <%= role.organisations.map { |organisation| link_to(organisation['title'], organisation['base_path']) }.to_sentence.html_safe %>
+  </div>
+<% end %>
