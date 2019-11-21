@@ -139,4 +139,12 @@ private
   def details
     @content_item.content_item_data["details"]
   end
+
+  def language_name(language)
+    I18n.t("shared.language_names.#{language}")
+  end
+
+  def available_translations
+    links["available_translations"].map(&:symbolize_keys)
+  end
 end
