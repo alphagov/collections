@@ -103,13 +103,28 @@ private
     )["results"]
   end
 
+  def role_appointments(current:)
+    links
+      .fetch("role_appointments", [])
+      .filter { |role_appointment| role_appointment["details"]["current"] == current }
+      .sort_by { |role_appointment| role_appointment["details"]["person_appointment_order"] }
+  end
+
+  def current_role_appointments
+    @current_role_appointments ||= role_appointments(current: true)
+  end
+
+  def previous_role_appointments
+    @previous_role_appointments ||= role_appointments(current: false)
+  end
+
   def current_roles
-    links.fetch("ordered_current_appointments", [])
+    current_role_appointments
       .map { |appointment| appointment["links"]["role"].first }
   end
 
   def previous_roles
-    links.fetch("ordered_previous_appointments", []).map do |previous_appointment|
+    previous_role_appointments.map do |previous_appointment|
       previous_appointment["links"]["role"].first.tap do |role|
         role["start_year"] = Time.parse(previous_appointment["details"]["started_on"]).strftime("%Y")
         role["end_year"] = Time.parse(previous_appointment["details"]["ended_on"]).strftime("%Y")

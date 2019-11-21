@@ -5,12 +5,16 @@ describe Person do
     @api_data = {
       "base_path" => "/government/people/boris-johnson",
       "links" => {
-        "ordered_current_appointments" => [
+        "role_appointments" => [
           {
             "links" => {
               "role" => [{
                 "title" => "Prime Minister",
               }],
+            },
+            "details" => {
+              "current" => true,
+              "person_appointment_order" => 1,
             },
           },
           {
@@ -19,20 +23,24 @@ describe Person do
                 "title" => "First Lord of the Treasury",
               }],
             },
-          },
-        ],
-        "ordered_previous_appointments" => [
-          {
             "details" => {
-              "started_on" => "2016-07-13T00:00:00+01:00",
-              "ended_on" => "2018-07-09T00:00:00+01:00",
+              "current" => true,
+              "person_appointment_order" => 2,
             },
+          },
+          {
             "links" => {
               "role" => [
                 {
                   "title" => "Secretary of State for Foreign and Commonwealth Affairs",
                 },
               ],
+            },
+            "details" => {
+              "current" => false,
+              "person_appointment_order" => 3,
+              "started_on" => "2016-07-13T00:00:00+01:00",
+              "ended_on" => "2018-07-09T00:00:00+01:00",
             },
           },
         ],
