@@ -1,2 +1,3 @@
-AllCops:
-  TargetRubyVersion: 2.3
+inherit_gem:
+  rubocop-govuk:
+    - config/default.yml
