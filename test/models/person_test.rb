@@ -56,6 +56,18 @@ describe Person do
     end
   end
 
+  describe "currently_in_a_role?" do
+    it "returns true if the person has a current role appointment" do
+      assert @person.currently_in_a_role?
+    end
+
+    it "returns false if the person doesn't have a current role appointment" do
+      @api_data["links"]["role_appointments"][0]["details"]["current"] = false
+      @api_data["links"]["role_appointments"][1]["details"]["current"] = false
+      refute @person.currently_in_a_role?
+    end
+  end
+
   describe "ordered previous appointments" do
     it "should have previous appointment text" do
       assert_equal "Secretary of State for Foreign and Commonwealth Affairs", @person.previous_roles_items.first[:link][:text]

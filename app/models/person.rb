@@ -98,6 +98,10 @@ class Person
     end
   end
 
+  def currently_in_a_role?
+    current_role_appointments.any?
+  end
+
 private
 
   def slug
