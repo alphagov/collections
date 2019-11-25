@@ -126,11 +126,52 @@
     {
       "warning_type": "Cross-Site Scripting",
       "warning_code": 2,
+      "fingerprint": "997cdc4a952da1ecc8c0db8a12009b7bc5b7359a1c86900d45f65104f77f5f5f",
+      "check_name": "CrossSiteScripting",
+      "message": "Unescaped model attribute",
+      "file": "app/views/people/_biography.html.erb",
+      "line": 9,
+      "link": "https://brakemanscanner.org/docs/warning_types/cross_site_scripting",
+      "code": "Person.find!(request.path).biography",
+      "render_path": [
+        {
+          "type": "controller",
+          "class": "PeopleController",
+          "method": "show",
+          "line": 5,
+          "file": "app/controllers/people_controller.rb",
+          "rendered": {
+            "name": "people/show",
+            "file": "app/views/people/show.html.erb"
+          }
+        },
+        {
+          "type": "template",
+          "name": "people/show",
+          "line": 32,
+          "file": "app/views/people/show.html.erb",
+          "rendered": {
+            "name": "people/_biography",
+            "file": "app/views/people/_biography.html.erb"
+          }
+        }
+      ],
+      "location": {
+        "type": "template",
+        "template": "people/_biography"
+      },
+      "user_input": null,
+      "confidence": "Medium",
+      "note": "This comes from the content store"
+    },
+    {
+      "warning_type": "Cross-Site Scripting",
+      "warning_code": 2,
       "fingerprint": "a31c67ced459f8f8fed487bace51003d694decf9b9295bfcb19227bcd687cdbc",
       "check_name": "CrossSiteScripting",
       "message": "Unescaped model attribute",
       "file": "app/views/roles/show.html.erb",
-      "line": 16,
+      "line": 18,
       "link": "https://brakemanscanner.org/docs/warning_types/cross_site_scripting",
       "code": "Role.find!(\"/government/ministers/#{params[:role_name]}\").responsibilities",
       "render_path": [
@@ -155,6 +196,6 @@
       "note": "The resposibilities of a role comes from the Content Store which is trusted and provides us with rendered HTML."
     }
   ],
-  "updated": "2019-11-25 09:53:01 +0000",
+  "updated": "2019-11-25 13:40:26 +0000",
   "brakeman_version": "4.7.1"
 }
