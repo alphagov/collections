@@ -15,11 +15,11 @@ class Role
   end
 
   def base_path
-    @content_item.content_item_data["base_path"]
+    content_item_data["base_path"]
   end
 
   def title
-    @content_item.content_item_data["title"]
+    content_item_data["title"]
   end
 
   def responsibilities
@@ -30,13 +30,25 @@ class Role
     links["ordered_parent_organisations"]
   end
 
+  def current_holder
+    links
+      .fetch("role_appointments", [])
+      .find { |ra| ra.dig("details", "current") }
+      .dig("links", "person")
+      .first
+  end
+
 private
 
+  def content_item_data
+    content_item.content_item_data
+  end
+
   def links
-    @content_item.content_item_data["links"]
+    content_item_data["links"]
   end
 
   def details
-    @content_item.content_item_data["details"]
+    content_item_data["details"]
   end
 end
