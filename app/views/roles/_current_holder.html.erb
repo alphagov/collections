@@ -1,0 +1,6 @@
+<% if role.current_holder %>
+  <div>
+      Current role holder:
+      <%= link_to role.current_holder["title"], role.current_holder["base_path"] %>
+  </div>
+<% end %>

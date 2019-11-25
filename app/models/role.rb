@@ -30,6 +30,14 @@ class Role
     links["ordered_parent_organisations"]
   end
 
+  def current_holder
+    links
+      .fetch("role_appointments", [])
+      .find { |ra| ra.dig("details", "current") }
+      .dig("links", "person")
+      .first
+  end
+
 private
 
   def content_item_data
