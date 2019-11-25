@@ -32,8 +32,8 @@ end
 group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'govuk-lint'
   gem 'jasmine-rails'
   gem 'pry-byebug'
+  gem 'rubocop-govuk'
   gem 'timecop'
 end
