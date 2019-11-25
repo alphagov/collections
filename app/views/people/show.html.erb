@@ -4,11 +4,13 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-third">
-    <%= render "govuk_publishing_components/components/image_card", {
-      href: "#",
-      image_src: person.image_url,
-      image_alt: person.image_alt_text,
-    } %>
+    <% if person.currently_in_a_role? %>
+      <%= render "govuk_publishing_components/components/image_card", {
+        href: "#",
+        image_src: person.image_url,
+        image_alt: person.image_alt_text,
+      } %>
+    <% end %>
 
     <%= render "govuk_publishing_components/components/contents_list", {
       contents: [
