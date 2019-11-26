@@ -17,5 +17,7 @@
     } do %>
       <%= role.responsibilities.html_safe %>
     <% end %>
+
+    <%= render partial: "current_role_holder_with_biography", locals: { role: role } %>
   </div>
 </div>

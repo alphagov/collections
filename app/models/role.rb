@@ -38,6 +38,14 @@ class Role
       .first
   end
 
+  def current_holder_biography
+    current_holder["details"]["body"]
+  end
+
+  def link_to_person
+    current_holder["base_path"]
+  end
+
 private
 
   def content_item_data
