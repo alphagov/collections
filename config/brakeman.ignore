@@ -126,6 +126,47 @@
     {
       "warning_type": "Cross-Site Scripting",
       "warning_code": 2,
+      "fingerprint": "99342e4a797343171ee3adf1765bce6d0726c090b505f28f013003a1d200f725",
+      "check_name": "CrossSiteScripting",
+      "message": "Unescaped model attribute",
+      "file": "app/views/roles/_current_role_holder_with_biography.html.erb",
+      "line": 17,
+      "link": "https://brakemanscanner.org/docs/warning_types/cross_site_scripting",
+      "code": "Role.find!(request.path).current_holder_biography",
+      "render_path": [
+        {
+          "type": "controller",
+          "class": "RolesController",
+          "method": "show",
+          "line": 6,
+          "file": "app/controllers/roles_controller.rb",
+          "rendered": {
+            "name": "roles/show",
+            "file": "app/views/roles/show.html.erb"
+          }
+        },
+        {
+          "type": "template",
+          "name": "roles/show",
+          "line": 21,
+          "file": "app/views/roles/show.html.erb",
+          "rendered": {
+            "name": "roles/_current_role_holder_with_biography",
+            "file": "app/views/roles/_current_role_holder_with_biography.html.erb"
+          }
+        }
+      ],
+      "location": {
+        "type": "template",
+        "template": "roles/_current_role_holder_with_biography"
+      },
+      "user_input": null,
+      "confidence": "Medium",
+      "note": "This comes from the content store"
+    },
+    {
+      "warning_type": "Cross-Site Scripting",
+      "warning_code": 2,
       "fingerprint": "997cdc4a952da1ecc8c0db8a12009b7bc5b7359a1c86900d45f65104f77f5f5f",
       "check_name": "CrossSiteScripting",
       "message": "Unescaped model attribute",
