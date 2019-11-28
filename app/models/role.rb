@@ -34,8 +34,8 @@ class Role
     links
       .fetch("role_appointments", [])
       .find { |ra| ra.dig("details", "current") }
-      .dig("links", "person")
-      .first
+      &.dig("links", "person")
+      &.first
   end
 
   def current_holder_biography
