@@ -102,6 +102,11 @@ class Person
     current_role_appointments.any?
   end
 
+  def current_roles
+    current_role_appointments
+        .map { |appointment| appointment["links"]["role"].first }
+  end
+
 private
 
   def slug
@@ -131,11 +136,6 @@ private
 
   def previous_role_appointments
     @previous_role_appointments ||= role_appointments(current: false)
-  end
-
-  def current_roles
-    current_role_appointments
-      .map { |appointment| appointment["links"]["role"].first }
   end
 
   def previous_roles
