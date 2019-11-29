@@ -47,7 +47,7 @@ describe Supergroups::PolicyAndEngagement do
             .stubs(:fetch)
             .returns(section_tagged_content_list("open_consultation", 4))
 
-          expected = 4.times.map { |index| expected_result("open_consultation", index).first }
+          expected = Array.new(4) { |index| expected_result("open_consultation", index).first }
           assert_equal expected, policy_and_engagement_supergroup.document_list(taxon_id)
         end
 

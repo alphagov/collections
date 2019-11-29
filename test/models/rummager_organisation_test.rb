@@ -12,7 +12,7 @@ describe RummagerOrganisation do
     organisation = RummagerOrganisation.new(
       organisation_state: "closed",
     )
-    refute(organisation.live?)
+    assert_not(organisation.live?)
   end
 
   describe "#has_logo?" do
@@ -31,7 +31,7 @@ describe RummagerOrganisation do
         brand: "ministry-of-blah",
         crest: "",
       )
-      refute(organisation.has_logo?)
+      assert_not(organisation.has_logo?)
     end
 
     it "returns false if the it is a custom logo" do
@@ -39,7 +39,7 @@ describe RummagerOrganisation do
         crest: "custom",
         logo_url: "/logo.png",
       )
-      refute(organisation.has_logo?)
+      assert_not(organisation.has_logo?)
     end
   end
 
@@ -57,14 +57,14 @@ describe RummagerOrganisation do
         crest: "somethingelse",
         logo_url: "/logo.png",
       )
-      refute(organisation.custom_logo?)
+      assert_not(organisation.custom_logo?)
     end
 
     it "returns false if the logo url is missing" do
       organisation = RummagerOrganisation.new(
         crest: "somethingelse",
       )
-      refute(organisation.custom_logo?)
+      assert_not(organisation.custom_logo?)
     end
   end
 end

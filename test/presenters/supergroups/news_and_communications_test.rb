@@ -48,7 +48,7 @@ describe Supergroups::NewsAndCommunications do
         .returns(tagged_content(tagged_document_list))
 
       news_and_communications_supergroup.document_list(taxon_id).each do |content_item|
-        refute content_item.key?(:image)
+        assert_not content_item.key?(:image)
       end
     end
   end

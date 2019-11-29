@@ -39,7 +39,7 @@ module Organisations
     def document_type
       type = @raw_document["content_store_document_type"]
 
-      return unless type.present?
+      return if type.blank?
 
       document_type = type.capitalize.tr("_", " ")
 

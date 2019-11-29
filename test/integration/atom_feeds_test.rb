@@ -124,7 +124,7 @@ class AtomFeedsTest < ActionDispatch::IntegrationTest
   end
 
   def but_no_feed_items
-    refute page.has_css?("feed entry")
+    assert_not page.has_css?("feed entry")
   end
 
   def content_store_has_schema_example(schema_name)

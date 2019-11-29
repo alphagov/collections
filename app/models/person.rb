@@ -143,8 +143,8 @@ private
       .sort_by { |role_appointment| role_appointment["details"]["started_on"] }
       .map do |role_appointment|
         role_appointment["links"]["role"].first.tap do |role|
-          role["start_year"] = Time.parse(role_appointment["details"]["started_on"]).strftime("%Y")
-          role["end_year"] = Time.parse(role_appointment["details"]["ended_on"]).strftime("%Y")
+          role["start_year"] = Time.zone.parse(role_appointment["details"]["started_on"]).strftime("%Y")
+          role["end_year"] = Time.zone.parse(role_appointment["details"]["ended_on"]).strftime("%Y")
         end
       end
   end

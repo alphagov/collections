@@ -714,7 +714,7 @@ module OrganisationHelpers
     assert page.has_css?(".gem-c-organisation-logo", text: @title)
 
     # Does not have the No. 10 banner
-    refute page.has_css?(".organisation__no10-banner")
+    assert_not page.has_css?(".organisation__no10-banner")
   end
 
   def the_courts_title
@@ -743,20 +743,20 @@ module OrganisationHelpers
   end
 
   def but_no_documents
-    refute page.has_css?("section#latest-documents")
-    refute page.has_css?(".gem-c-heading", text: "Documents")
-    refute page.has_css?(".gem-c-heading", text: "Our announcements")
-    refute page.has_css?(".gem-c-heading", text: "Our consultations")
-    refute page.has_css?(".gem-c-heading", text: "Our publications")
-    refute page.has_css?(".gem-c-heading", text: "Our statistics")
+    assert_not page.has_css?("section#latest-documents")
+    assert_not page.has_css?(".gem-c-heading", text: "Documents")
+    assert_not page.has_css?(".gem-c-heading", text: "Our announcements")
+    assert_not page.has_css?(".gem-c-heading", text: "Our consultations")
+    assert_not page.has_css?(".gem-c-heading", text: "Our publications")
+    assert_not page.has_css?(".gem-c-heading", text: "Our statistics")
   end
 
   def or_foi_section
-    refute page.has_content?(/Make an FOI request/i)
-    refute page.has_content?(/Freedom of Information (FOI) Act/i)
+    assert_not page.has_content?(/Make an FOI request/i)
+    assert_not page.has_content?(/Freedom of Information (FOI) Act/i)
   end
 
   def or_corporate_information
-    refute page.has_css?("div#corporate-info")
+    assert_not page.has_css?("div#corporate-info")
   end
 end

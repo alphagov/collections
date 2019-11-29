@@ -82,7 +82,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
     assert page.has_link?("Oil rig safety requirements", href: "/oil-rig-safety-requirements")
     assert page.has_link?("Undersea piping restrictions", href: "/undersea-piping-restrictions")
 
-    refute page.has_link?("North sea shipping lanes")
+    assert_not page.has_link?("North sea shipping lanes")
 
     within ".gem-c-breadcrumbs" do
       assert page.has_link?("Home", href: "/")
@@ -179,7 +179,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
       within ".changed-documents" do
         assert page.has_content?("Document 1")
         assert page.has_content?("Document 50")
-        refute page.has_content?("Document 51")
+        assert_not page.has_content?("Document 51")
       end
 
       # When I go to the next page
@@ -191,8 +191,8 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
       within ".changed-documents" do
         assert page.has_content?("Document 51")
         assert page.has_content?("Document 55")
-        refute page.has_content?("Document 1")
-        refute page.has_content?("Document 50")
+        assert_not page.has_content?("Document 1")
+        assert_not page.has_content?("Document 50")
       end
 
       # When I go back to the first page
@@ -204,7 +204,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
       within ".changed-documents" do
         assert page.has_content?("Document 1")
         assert page.has_content?("Document 50")
-        refute page.has_content?("Document 51")
+        assert_not page.has_content?("Document 51")
       end
     end
   end

@@ -56,7 +56,7 @@ describe ListSet do
 
       groups = @list_set.to_a
       assert_equal 3, groups[0].contents.size
-      refute groups[0]["contents"].map(&:base_path).include?("/pay-bear-tax")
+      assert_not groups[0]["contents"].map(&:base_path).include?("/pay-bear-tax")
     end
 
     it "omits groups with no active items in them" do
@@ -73,8 +73,8 @@ describe ListSet do
 
       assert_equal 2, @list_set.count
       list_titles = @list_set.map(&:title)
-      refute list_titles.include?("Group with untagged items")
-      refute list_titles.include?("Empty group")
+      assert_not list_titles.include?("Group with untagged items")
+      assert_not list_titles.include?("Empty group")
     end
   end
 

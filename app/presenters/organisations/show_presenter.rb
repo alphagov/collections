@@ -77,11 +77,7 @@ module Organisations
     end
 
     def acronym
-      if @org.acronym && !@org.acronym.empty?
-        @org.acronym
-      else
-        prefixed_title
-      end
+      @org.acronym.presence || prefixed_title
     end
 
   private

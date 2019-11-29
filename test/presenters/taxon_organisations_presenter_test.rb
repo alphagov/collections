@@ -14,7 +14,7 @@ describe TaxonOrganisationsPresenter do
       .stubs(:fetch)
       .returns([])
 
-    refute taxon_organisations_presenter.show_organisations?
+    assert_not taxon_organisations_presenter.show_organisations?
   end
 
   it "checks whether more organisations should be shown" do
@@ -22,7 +22,7 @@ describe TaxonOrganisationsPresenter do
       .stubs(:fetch)
       .returns(multiple_organisations_with_logo)
 
-    refute taxon_organisations_presenter.show_more_organisations?
+    assert_not taxon_organisations_presenter.show_more_organisations?
   end
 
   describe "#promoted_organisation_list" do

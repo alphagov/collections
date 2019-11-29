@@ -28,9 +28,11 @@ describe ConcreteTestController do
   def with_test_routing
     with_routing do |map|
       map.draw do
+        # rubocop:disable Rails/HttpPositionalArguments
         get "/test", to: "concrete_test#test"
         get "/test", to: "concrete_test#json"
         get "/test", to: "concrete_test#js_or_atom"
+        # rubocop:enable Rails/HttpPositionalArguments
       end
       yield
     end

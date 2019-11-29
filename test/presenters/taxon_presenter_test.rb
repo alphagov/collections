@@ -44,7 +44,7 @@ describe TaxonPresenter do
       taxon.stubs(:child_taxons).returns([])
       taxon_presenter = TaxonPresenter.new(taxon)
 
-      refute taxon_presenter.show_subtopic_grid?
+      assert_not taxon_presenter.show_subtopic_grid?
     end
   end
 
@@ -64,7 +64,7 @@ describe TaxonPresenter do
       }
 
       it "returns false" do
-        refute taxon_presenter.noindex?
+        assert_not taxon_presenter.noindex?
       end
     end
   end

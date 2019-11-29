@@ -64,7 +64,7 @@ describe Person do
     it "returns false if the person doesn't have a current role appointment" do
       @api_data["links"]["role_appointments"][0]["details"]["current"] = false
       @api_data["links"]["role_appointments"][1]["details"]["current"] = false
-      refute @person.currently_in_a_role?
+      assert_not @person.currently_in_a_role?
     end
   end
 

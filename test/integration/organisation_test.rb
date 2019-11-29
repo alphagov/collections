@@ -552,18 +552,18 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     assert page.has_css?(".organisation__no10-banner", text: "Prime Minister's Office, 10 Downing Street")
 
     visit "/government/organisations/attorney-generals-office"
-    refute page.has_css?(".organisation__no10-banner")
+    assert_not page.has_css?(".organisation__no10-banner")
 
     visit "/government/organisations/charity-commission"
-    refute page.has_css?(".organisation__no10-banner")
+    assert_not page.has_css?(".organisation__no10-banner")
 
     visit "/government/organisations/civil-service-resourcing"
-    refute page.has_css?(".organisation__no10-banner")
+    assert_not page.has_css?(".organisation__no10-banner")
   end
 
   it "renders the logo and logo brand correctly" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
-    refute page.has_css?(".gem-c-organisation-logo")
+    assert_not page.has_css?(".gem-c-organisation-logo")
 
     visit "/government/organisations/attorney-generals-office"
     assert page.has_css?(".gem-c-organisation-logo.brand--attorney-generals-office .gem-c-organisation-logo__name", text: "Attorney General's Office")
@@ -574,7 +574,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
   it "shows featured links correctly if present" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
-    refute page.has_css?(".app-c-topic-list")
+    assert_not page.has_css?(".app-c-topic-list")
 
     visit "/government/organisations/attorney-generals-office"
     assert page.has_css?("section#featured-documents")
@@ -583,21 +583,21 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     visit "/government/organisations/charity-commission"
     assert page.has_css?("section#featured-documents")
     assert page.has_css?(".app-c-topic-list .app-c-topic-list__link", text: "Find a charity")
-    refute page.has_css?(".app-c-topic-list.app-c-topic-list--small")
+    assert_not page.has_css?(".app-c-topic-list.app-c-topic-list--small")
   end
 
   it "shows the translation nav if required" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
-    refute page.has_css?(".gem-c-translation-nav")
+    assert_not page.has_css?(".gem-c-translation-nav")
 
     visit "/government/organisations/attorney-generals-office"
-    refute page.has_css?(".gem-c-translation-nav")
+    assert_not page.has_css?(".gem-c-translation-nav")
 
     visit "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
     assert page.has_css?(".gem-c-translation-nav")
 
     visit "/government/organisations/civil-service-resourcing"
-    refute page.has_css?(".gem-c-translation-nav")
+    assert_not page.has_css?(".gem-c-translation-nav")
   end
 
   it "shows a large news item only on news organisations" do
@@ -606,7 +606,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
     visit "/government/organisations/charity-commission"
     assert page.has_css?(".gem-c-image-card .gem-c-image-card__title", text: "Charity annual return 2018")
-    refute page.has_css?(".gem-c-image-card.gem-c-image-card--large .gem-c-image-card__title", text: "Charity annual return 2018")
+    assert_not page.has_css?(".gem-c-image-card.gem-c-image-card--large .gem-c-image-card__title", text: "Charity annual return 2018")
   end
 
   it "shows the latest documents when it should" do
@@ -646,14 +646,14 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     assert page.has_css?(".gem-c-document-list__item-title[href='/content-item-1']", text: "Content item 1")
     assert page.has_css?(".gem-c-heading", text: "Transparency")
     assert page.has_css?(".gem-c-heading", text: "Guidance and regulation")
-    refute page.has_css?(".gem-c-heading", text: "Services")
-    refute page.has_css?(".gem-c-heading", text: "Statistics")
+    assert_not page.has_css?(".gem-c-heading", text: "Services")
+    assert_not page.has_css?(".gem-c-heading", text: "Statistics")
   end
 
   it "does not show the latest documents by type section if there are none" do
     stub_empty_rummager_requests("attorney-generals-office")
     visit "/government/organisations/attorney-generals-office"
-    refute page.has_css?(".gem-c-heading", text: "Documents")
+    assert_not page.has_css?(".gem-c-heading", text: "Documents")
   end
 
   it "shows the ministers for an organisation" do
@@ -666,14 +666,14 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
   it "does not show the ministers section for no.10" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
-    refute page.has_css?("div#people")
-    refute page.has_css?(".gem-c-heading", text: "Our ministers")
-    refute page.has_css?(".gem-c-image-card .gem-c-image-card__title-link", text: "Theresa May MP")
+    assert_not page.has_css?("div#people")
+    assert_not page.has_css?(".gem-c-heading", text: "Our ministers")
+    assert_not page.has_css?(".gem-c-image-card .gem-c-image-card__title-link", text: "Theresa May MP")
   end
 
   it "does not display ministers for organisations without minister data" do
     visit "/government/organisations/charity-commission"
-    refute page.has_css?(".gem-c-heading", text: "Our ministers")
+    assert_not page.has_css?(".gem-c-heading", text: "Our ministers")
   end
 
   it "shows the non-ministers for an organisation" do
@@ -699,22 +699,22 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
   it "does not display non-ministers for an organisation if data not present" do
     visit "/government/organisations/attorney-generals-office"
-    refute page.has_css?(".gem-c-heading", text: "Our senior military officials")
-    refute page.has_css?(".gem-c-heading", text: "Chief professional officers")
-    refute page.has_css?(".gem-c-heading", text: "Special representatives")
-    refute page.has_css?(".gem-c-heading", text: "Traffic commissioners")
+    assert_not page.has_css?(".gem-c-heading", text: "Our senior military officials")
+    assert_not page.has_css?(".gem-c-heading", text: "Chief professional officers")
+    assert_not page.has_css?(".gem-c-heading", text: "Special representatives")
+    assert_not page.has_css?(".gem-c-heading", text: "Traffic commissioners")
 
     visit "/government/organisations/office-of-the-secretary-of-state-for-wales"
-    refute page.has_css?(".gem-c-heading", text: "Our management")
-    refute page.has_css?(".gem-c-heading", text: "Chief professional officers")
-    refute page.has_css?(".gem-c-heading", text: "Special representatives")
-    refute page.has_css?(".gem-c-heading", text: "Traffic commissioners")
+    assert_not page.has_css?(".gem-c-heading", text: "Our management")
+    assert_not page.has_css?(".gem-c-heading", text: "Chief professional officers")
+    assert_not page.has_css?(".gem-c-heading", text: "Special representatives")
+    assert_not page.has_css?(".gem-c-heading", text: "Traffic commissioners")
   end
 
   it "displays foi information correctly where required" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
-    refute page.has_content?(/Make an FOI request/i)
-    refute page.has_content?(/Freedom of Information (FOI) Act/i)
+    assert_not page.has_content?(/Make an FOI request/i)
+    assert_not page.has_content?(/Freedom of Information (FOI) Act/i)
 
     visit "/government/organisations/charity-commission"
     assert page.has_css?("section#freedom-of-information")
@@ -747,12 +747,12 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
   it "does not show section for organisations without high profile groups" do
     visit "/government/organisations/office-of-the-secretary-of-state-for-wales"
-    refute page.has_css?(".gem-c-heading", text: "High profile groups within the Office of the Secretary of State for Wales")
+    assert_not page.has_css?(".gem-c-heading", text: "High profile groups within the Office of the Secretary of State for Wales")
   end
 
   it "does not show high profile groups for promotional orgs" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
-    refute page.has_css?(".gem-c-heading", text: "High profile groups within the Prime Minister's Office, 10 Downing Street")
+    assert_not page.has_css?(".gem-c-heading", text: "High profile groups within the Prime Minister's Office, 10 Downing Street")
   end
 
   it "displays corporate information pages" do
@@ -767,8 +767,8 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
   it "does not show corporate information pages if none available" do
     visit "/government/organisations/office-of-the-secretary-of-state-for-wales"
-    refute page.has_css?(".gem-c-heading", text: "Corporate information")
-    refute page.has_css?(".gem-c-heading", text: "Jobs and contracts")
+    assert_not page.has_css?(".gem-c-heading", text: "Corporate information")
+    assert_not page.has_css?(".gem-c-heading", text: "Jobs and contracts")
   end
 
   it "displays contact information" do
@@ -786,10 +786,10 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
   it "does not show contact information if none available" do
     visit "/government/organisations/office-of-the-secretary-of-state-for-wales"
-    refute page.has_css?("h2.gem-c-heading", text: "Contact WO")
+    assert_not page.has_css?("h2.gem-c-heading", text: "Contact WO")
 
     visit "/government/organisations/charity-commission"
-    refute page.has_css?("h2.gem-c-heading", text: "Contact Charity Commission")
+    assert_not page.has_css?("h2.gem-c-heading", text: "Contact Charity Commission")
   end
 
   it "shows promotional features on the right pages" do
@@ -797,7 +797,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     assert page.has_content?(/Greater transparency across government is at the heart of our commitment to let you hold politicians and public bodies to account./i)
 
     visit "/government/organisations/attorney-generals-office"
-    refute page.has_content?(/Greater transparency across government is at the heart of our commitment to let you hold politicians and public bodies to account./i)
+    assert_not page.has_content?(/Greater transparency across government is at the heart of our commitment to let you hold politicians and public bodies to account./i)
   end
 
   it "full org pages have GovernmentOrganization schema.org information" do
