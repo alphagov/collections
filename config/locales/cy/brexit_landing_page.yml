@@ -8,14 +8,14 @@ cy:
       <p>Bydd angen i’r DU a’r UE gymeradwyo ac arwyddo’r cytundeb ymadael. Byddent wedyn yn dechrau trafod trefniadau newydd. Bydd cyfnod pontio i baratoi ar gyfer y rheolau newydd.</p>
       <p>Gall y DU adael heb fargen os nad yw’r cytundeb ymadael wedi ei gymeradwyo erbyn 31 Ionawr 2020, neu ar ddiwedd y cyfnod pontio.</p>
       <p>Darganfyddwch beth ddylech chi, eich teulu neu’ch busnes wneud os yw’r DU yn gadael yr UE heb fargen.</p>
-      <p><a href="/get-ready-brexit-check">Gwiriwch sut i baratoi ar gyfer Brexit heb fargen.</a></p>
+      <p><a href="/get-ready-brexit-check">Gwiriwch sut i baratoi ar gyfer Brexit heb fargen</a></p>
     chevron_banner: "Gwiriwch beth sydd angen i chi wneud os nad oes cytundeb"
     finder_heading: "Pori drwy’r holl wybodaeth sy’n gysylltiedig â Brexit:"
     call_to_action_intro: "Atebwch ychydig o gwestiynau i ddarganfod sut y dylech chi neu’ch busnes baratoi."
     all_brexit_information: "Holl wybodaeth Brexit"
     email_intro: "I gael y manylion diweddaraf"
     email: "Cofrestrwch i gael hysbysiadau e-bost am Brexit"
-    browse: "Pori’r canllawiau Brexit."
+    browse: "Pori’r canllawiau Brexit"
     share_links: "Rhannu’r dudalen hon"
     sections:
       services: Gwasanaethau
@@ -52,7 +52,7 @@ cy:
 
           Efallai hefyd bydd angen i chi gyfnewid eich trwydded yrru DU am drwydded a roddir gan wlad yr UE ble rydych yn byw.
 
-          <a href="/uk-nationals-living-eu" data-module="track-click" data-track-category="brexit-landing-page" data-track-action="Section link" data-track-label="/uk-nationals-living-eu" data-track-options="&#123;&quot;dimension29&quot;:&quot;Gwiriwch beth sydd angen i chi wneud yn y wlad yr ydych yn byw ynddi&quot;&#125;"><strong>Gwiriwch beth sydd angen i chi wneud yn y wlad yr ydych yn byw ynddi.</strong></a>
+          <a href="/uk-nationals-living-eu" data-module="track-click" data-track-category="brexit-landing-page" data-track-action="Section link" data-track-label="/uk-nationals-living-eu" data-track-options="&#123;&quot;dimension29&quot;:&quot;Gwiriwch beth sydd angen i chi wneud yn y wlad yr ydych yn byw ynddi&quot;&#125;"><strong>Gwiriwch beth sydd angen i chi wneud yn y wlad yr ydych yn byw ynddi</strong></a>
       - row_title: "Aros yn y DU os ydych yn ddinesydd o’r UE"
         list_block: |
           Gwiriwch os oes angen i chi gyflwyno cais i’r cynllun setliad os ydych chi neu’ch teulu yn dod o’r UE, Y Swistir, Norwy, Gwlad yr Iâ neu Liechtenstein.
