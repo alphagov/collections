@@ -30,6 +30,10 @@ class Role
     links["ordered_parent_organisations"]
   end
 
+  def currently_occupied?
+    current_holder.present?
+  end
+
   def current_holder
     links
       .fetch("role_appointments", [])
