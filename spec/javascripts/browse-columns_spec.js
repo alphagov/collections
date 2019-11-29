@@ -140,12 +140,22 @@ describe('browse-columns.js', function() {
     var bc = new GOVUK.BrowseColumns({ $el: $('<div>') });
     bc.trackPageview(state);
 
+    expect(GOVUK.analytics.trackPageview).toHaveBeenCalledTimes(2)
     expect(GOVUK.analytics.trackPageview).toHaveBeenCalledWith(
       'foo',
       null,
       {
         dimension1: 'browse',
         dimension32: 'none'
+      }
+    );
+    expect(GOVUK.analytics.trackPageview).toHaveBeenCalledWith(
+      'foo',
+      null,
+      {
+        dimension1: 'browse',
+        dimension32: 'none',
+        trackerName: 'govuk'
       }
     );
   });

@@ -363,14 +363,24 @@
         navigationPageType = 'Second Level Browse';
       }
 
+      this.firePageview(state, sectionTitle, navigationPageType);
+      this.firePageview(state, sectionTitle, navigationPageType, 'govuk');
+    },
+    firePageview: function(state, sectionTitle, navigationPageType, tracker) {
       if (GOVUK.analytics && GOVUK.analytics.trackPageview) {
+        var options = {
+          dimension1: sectionTitle,
+          dimension32: navigationPageType
+        }
+
+        if (typeof tracker !== 'undefined') {
+          options.trackerName = tracker
+        }
+
         GOVUK.analytics.trackPageview(
           state.path,
           null,
-          {
-            dimension1: sectionTitle,
-            dimension32: navigationPageType
-          }
+          options
         );
       }
     }
