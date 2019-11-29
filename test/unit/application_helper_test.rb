@@ -13,6 +13,24 @@ describe ApplicationHelper do
     end
   end
 
+  describe "page_text_direction" do
+    context "when a left to right language script" do
+      it "sets the direction wrapper class to ltr" do
+        @content_item = { locale: "test_data" }
+        I18n.stubs(:t).returns("ltr")
+        assert_equal "ltr", page_text_direction
+      end
+    end
+
+    context "when a right to left language script" do
+      it "sets the direction wrapper class to rtl" do
+        @content_item = { locale: "test_data" }
+        I18n.stubs(:t).returns("rtl")
+        assert_equal "rtl", page_text_direction
+      end
+    end
+  end
+
   describe "t_lang" do
     it "t_fallback returns false if string is translated successfully" do
       I18n.backend.store_translations :en, document: { one: "string" }

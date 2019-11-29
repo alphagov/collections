@@ -34,7 +34,7 @@
     } %>
   </div>
 
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-two-thirds" dir="<%=page_text_direction%>">
     <%= render partial: "biography", locals: { person: person } %>
 
     <%= render partial: "current_roles", locals: { person: person } if person.currently_in_a_role? %>
