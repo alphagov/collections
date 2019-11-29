@@ -64,3 +64,5 @@ en:
       zh: 中文
       zh-hk: 中文
       zh-tw: 中文
+    language_direction:
+      ar: rtl
