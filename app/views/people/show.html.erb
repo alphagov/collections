@@ -17,11 +17,8 @@
 
   <div class="govuk-grid-column-two-thirds" dir="<%=page_text_direction%>">
     <%= render partial: "biography", locals: { person: person } %>
-
-    <%= render partial: "current_roles", locals: { person: person } if person.currently_in_a_role? %>
-
-    <%= render partial: "previous_roles", locals: { person: person } if person.has_previous_roles? %>
-
+    <%= render partial: "current_roles", locals: { person: person } %>
+    <%= render partial: "previous_roles", locals: { person: person } %>
     <%= render partial: "announcements", locals: { person: person } %>
   </div>
 </div>
