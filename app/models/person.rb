@@ -141,6 +141,7 @@ private
   def previous_roles
     previous_role_appointments
       .sort_by { |role_appointment| role_appointment["details"]["started_on"] }
+      .reverse
       .map do |role_appointment|
         role_appointment["links"]["role"].first.tap do |role|
           role["start_year"] = Time.parse(role_appointment["details"]["started_on"]).strftime("%Y")
