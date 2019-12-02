@@ -1,0 +1,23 @@
+<%= render "govuk_publishing_components/components/contents_list", {
+  contents: [
+    {
+      text: "Biography",
+      href: "#biography"
+    },
+
+    person.currently_in_a_role? ? {
+      text: "Role",
+      href: "#current-roles"
+    } : nil,
+
+    person.has_previous_roles? ? {
+      text: "Previous roles",
+      href: "#previous-roles"
+    } : nil,
+
+    person.has_announcements? ? {
+      text: "Announcements",
+      href: "#announcements"
+    } : nil,
+  ].compact
+} %>

@@ -4,43 +4,14 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-third">
-    <% if person.currently_in_a_role? %>
-      <%= render "govuk_publishing_components/components/image_card", {
-        href: "#",
-        image_src: person.image_url,
-        image_alt: person.image_alt_text,
-      } %>
-    <% end %>
-
-    <%= render "govuk_publishing_components/components/contents_list", {
-      contents: [
-        {
-          text: "Biography",
-          href: "#biography"
-        },
-        person.currently_in_a_role? ? {
-            text: "Roles",
-            href: "#current-roles"
-        }: nil,
-        person.has_previous_roles? ? {
-          text: "Previous roles",
-          href: "#previous-roles"
-        }: nil,
-        person.has_announcements? ? {
-            text: "Announcements",
-            href: "#announcements"
-        }: nil,
-      ].compact
-    } %>
+    <%= render partial: "image", locals: { person: person } %>
+    <%= render partial: "contents", locals: { person: person } %>
   </div>
 
   <div class="govuk-grid-column-two-thirds" dir="<%=page_text_direction%>">
     <%= render partial: "biography", locals: { person: person } %>
-
-    <%= render partial: "current_roles", locals: { person: person } if person.currently_in_a_role? %>
-
-    <%= render partial: "previous_roles", locals: { person: person } if person.has_previous_roles? %>
-
+    <%= render partial: "current_roles", locals: { person: person } %>
+    <%= render partial: "previous_roles", locals: { person: person } %>
     <%= render partial: "announcements", locals: { person: person } %>
   </div>
 </div>
