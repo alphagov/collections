@@ -1,5 +1,5 @@
 <% if role.current_holder %>
-  <div>
+  <div dir="<%= page_text_direction %>" lang="<%= role.locale %>">
       Current role holder:
       <%= link_to role.current_holder["title"], role.current_holder["base_path"] %>
   </div>

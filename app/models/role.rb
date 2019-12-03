@@ -57,6 +57,10 @@ class Role
     end
   end
 
+  def locale
+    content_item_data["locale"]
+  end
+
 private
 
   def content_item_data
@@ -77,9 +81,5 @@ private
 
   def available_translations
     links["available_translations"].map(&:symbolize_keys)
-  end
-
-  def locale
-    content_item_data["locale"]
   end
 end

@@ -5,7 +5,7 @@
       title: person.title
     } %>
   </div>
-  <div class="govuk-grid-column-one-third">
+  <div class="govuk-grid-column-one-third" dir="<%= page_text_direction %>">
     <%= render "govuk_publishing_components/components/translation-nav", {
       translations: person.translations
     } %>
