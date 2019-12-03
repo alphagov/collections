@@ -1,5 +1,5 @@
 <% if person.has_announcements? %>
-  <section id="announcements">
+  <section id="announcements" dir="<%= page_text_direction %>" lang="<%= person.locale %>">
     <%= render "govuk_publishing_components/components/heading", {
         text: "Announcements",
         id: "announcements",
