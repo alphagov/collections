@@ -65,6 +65,10 @@ class Role
     content_item_data["locale"]
   end
 
+  def announcements
+    @announcements ||= AnnouncementsPresenter.new(slug)
+  end
+
 private
 
   def content_item_data
@@ -85,5 +89,9 @@ private
 
   def available_translations
     links["available_translations"].map(&:symbolize_keys)
+  end
+
+  def slug
+    link_to_person.split("/").last
   end
 end
