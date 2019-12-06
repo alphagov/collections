@@ -10,7 +10,7 @@ class RummagerSearch
 
   def documents
     @documents ||= search_result["results"].map do |result|
-      timestamp = result["public_timestamp"].present? ? Time.parse(result["public_timestamp"]) : nil
+      timestamp = result["public_timestamp"].present? ? Time.zone.parse(result["public_timestamp"]) : nil
       organisations = tagged_content_organisations(result)
       Document.new(
         title: result["title"],

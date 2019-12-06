@@ -107,11 +107,11 @@ module Organisations
         data = data.gsub("<br/><br/>", "<br/>")
       end
 
-      data if data.present?
+      data.presence
     end
 
     def contact_description(description)
-      return content_tag(:p, description.gsub("\r\n", "<br/>").html_safe) if description && !description.empty?
+      return content_tag(:p, description.gsub("\r\n", "<br/>").html_safe) if description.present?
     end
   end
 end

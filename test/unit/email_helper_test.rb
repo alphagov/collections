@@ -14,7 +14,7 @@ describe EmailHelper do
       live_taxon?: false,
     )
 
-    refute taxon_is_live?(presented_taxon)
+    assert_not taxon_is_live?(presented_taxon)
   end
 
   it "should return a valid whitehall .atom url in the form /government/{url}.atom" do

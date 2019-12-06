@@ -43,7 +43,7 @@ describe ChangedDocumentsPaginationPresenter do
     it "is false if there are no further page" do
       presenter = build_presenter_for_subtopic(start: 60, total: 100)
 
-      refute presenter.next_page?
+      assert_not presenter.next_page?
     end
   end
 
@@ -63,7 +63,7 @@ describe ChangedDocumentsPaginationPresenter do
     it "is false if the current start value is zero" do
       presenter = build_presenter_for_subtopic(start: 0, total: 100)
 
-      refute presenter.previous_page?
+      assert_not presenter.previous_page?
     end
   end
 

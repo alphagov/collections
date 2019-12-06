@@ -162,8 +162,8 @@ describe Organisations::IndexPresenter do
       test_organisation_type_ministerial = :ministerial_departments
       test_organisation_type_non_ministerial = :public_corporations
 
-      refute @organisations_presenter.executive_office?(test_organisation_type_ministerial)
-      refute @organisations_presenter.executive_office?(test_organisation_type_non_ministerial)
+      assert_not @organisations_presenter.executive_office?(test_organisation_type_ministerial)
+      assert_not @organisations_presenter.executive_office?(test_organisation_type_non_ministerial)
     end
 
     it "ministerial_organisation? returns true if organisation is number_10" do
@@ -181,7 +181,7 @@ describe Organisations::IndexPresenter do
     it "ministerial_organisation? returns false if organisation is non ministerial department" do
       test_organisation_type = :agencies_and_other_public_bodies
 
-      refute @organisations_presenter.ministerial_organisation?(test_organisation_type)
+      assert_not @organisations_presenter.ministerial_organisation?(test_organisation_type)
     end
   end
 end

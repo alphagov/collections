@@ -1,3 +1,9 @@
 inherit_gem:
   rubocop-govuk:
     - config/default.yml
+    - config/rails.yml
+
+Rails/OutputSafety:
+  Enabled: false
+Rails/HelperInstanceVariable:
+  Enabled: false

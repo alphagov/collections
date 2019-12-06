@@ -266,7 +266,7 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     visit "/government/organisations/joining"
     assert page.has_css?(".gem-c-organisation-logo")
     assert page.has_css?(".gem-c-notice", text: "Joining organisation will soon be incorporated into GOV.UK")
-    refute page.has_css?(".gem-c-notice a")
+    assert_not page.has_css?(".gem-c-notice a")
     assert page.has_css?(".gem-c-govspeak")
     assert page.has_content?(/This organisation has a status of joining./i)
   end
@@ -275,7 +275,7 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     visit "/government/organisations/left_gov"
     assert page.has_css?(".gem-c-organisation-logo")
     assert page.has_css?(".gem-c-notice", text: "Left_gov organisation is now independent of the UK government")
-    refute page.has_css?(".gem-c-notice a")
+    assert_not page.has_css?(".gem-c-notice a")
     assert page.has_css?(".gem-c-govspeak")
     assert page.has_content?(/This organisation has a status of left_gov./i)
   end
@@ -304,7 +304,7 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     visit "/government/organisations/no_longer_exists"
     assert page.has_css?(".gem-c-organisation-logo")
     assert page.has_css?(".gem-c-notice", text: "No_longer_exists organisation has closed")
-    refute page.has_css?(".gem-c-notice a")
+    assert_not page.has_css?(".gem-c-notice a")
     assert page.has_css?(".gem-c-govspeak")
     assert page.has_content?(/This organisation has a status of no_longer_exists./i)
   end
@@ -325,7 +325,7 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     assert page.has_css?(".gem-c-document-list__item-title[href='/content-item-1']", text: "Content item 1")
     assert page.has_css?(".gem-c-heading", text: "Transparency")
     assert page.has_css?(".gem-c-heading", text: "Guidance and regulation")
-    refute page.has_css?(".gem-c-heading", text: "Services")
-    refute page.has_css?(".gem-c-heading", text: "Statistics")
+    assert_not page.has_css?(".gem-c-heading", text: "Services")
+    assert_not page.has_css?(".gem-c-heading", text: "Statistics")
   end
 end

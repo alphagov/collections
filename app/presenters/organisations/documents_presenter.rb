@@ -119,7 +119,7 @@ module Organisations
     end
 
     def promotional_feature_link(link)
-      link if link.present?
+      link.presence
     end
   end
 end

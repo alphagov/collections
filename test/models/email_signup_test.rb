@@ -18,7 +18,7 @@ describe EmailSignup do
   end
 
   it "is invalid with no subtopic" do
-    refute EmailSignup.new(nil).valid?
+    assert_not EmailSignup.new(nil).valid?
   end
 
   describe "#save" do
@@ -31,7 +31,7 @@ describe EmailSignup do
     it "does not create a subscription if the subtopic is missing" do
       Services.email_alert_api.expects(:find_or_create_subscriber_list).never
 
-      refute EmailSignup.new(nil).save
+      assert_not EmailSignup.new(nil).save
     end
   end
 

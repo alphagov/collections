@@ -41,17 +41,17 @@ describe MainstreamBrowsePage do
 
       it "is false when second_level_ordering == alphabetical" do
         @api_data["details"]["second_level_ordering"] = "alphabetical"
-        refute @page.second_level_pages_curated?
+        assert_not @page.second_level_pages_curated?
       end
 
       it "is false when second_level_ordering is unspecified" do
         @api_data["details"] = {}
-        refute @page.second_level_pages_curated?
+        assert_not @page.second_level_pages_curated?
       end
 
       it "is false when details hash is missing" do
         @api_data.delete("details")
-        refute @page.second_level_pages_curated?
+        assert_not @page.second_level_pages_curated?
       end
     end
 
