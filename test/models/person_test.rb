@@ -98,19 +98,19 @@ describe Person do
     end
 
     it "should have announcements" do
-      assert_equal "Government announces further support for those affected by flooding", @person.announcement_items.first[:link][:text]
+      assert_equal "Government announces further support for those affected by flooding", @person.announcements.items.first[:link][:text]
     end
 
     it "should have link to news and communications finder" do
-      assert_equal "/search/news-and-communications?people=boris-johnson", @person.link_to_news_and_communications
+      assert_equal "/search/news-and-communications?people=boris-johnson", @person.announcements.links[:link_to_news_and_communications]
     end
 
     it "should have link to email signup" do
-      assert_equal "/email-signup?link=/government/people/boris-johnson", @person.email_signup
+      assert_equal "/email-signup?link=/government/people/boris-johnson", @person.announcements.links[:email_signup]
     end
 
     it "should have link to subscription atom feed" do
-      assert_equal "https://www.gov.uk/government/people/boris-johnson.atom", @person.subscribe_to_feed
+      assert_equal "https://www.gov.uk/government/people/boris-johnson.atom", @person.announcements.links[:subscribe_to_feed]
     end
   end
 end

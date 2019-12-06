@@ -15,7 +15,7 @@
       href: "#previous-roles"
     } : nil,
 
-    person.has_announcements? ? {
+    person.announcements.items.present? ? {
       text: "Announcements",
       href: "#announcements"
     } : nil,
