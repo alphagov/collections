@@ -1,0 +1,16 @@
+<%= render "govuk_publishing_components/components/contents_list", {
+    contents: [
+        {
+            text: "Responsibilities",
+            href: "#responsibiities"
+        },
+        role.currently_occupied? ? {
+            text: "Current Role Holder",
+            href: "#current-role-holder"
+        } : nil,
+        role.announcements.items.present? ? {
+            text: "Announcements",
+            href: "#announcements"
+        } : nil,
+    ].compact
+} %>

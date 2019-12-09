@@ -8,18 +8,7 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-third">
-    <%= render "govuk_publishing_components/components/contents_list", {
-      contents: [
-        {
-          text: "Responsibilities",
-          href: "#responsibiities"
-        },
-        role.currently_occupied? ? {
-          text: "Current Role Holder",
-          href: "#current-role-holder"
-        } : nil
-      ].compact
-    } %>
+    <%= render partial: "contents", locals: { role: role } %>
   </div>
   <div class="govuk-grid-column-two-thirds" dir="<%= page_text_direction %>" lang="<%= role.locale %>">
     <%= render "govuk_publishing_components/components/heading", {
