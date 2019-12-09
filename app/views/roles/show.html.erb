@@ -34,6 +34,6 @@
 
     <%= render partial: "current_role_holder_with_biography", locals: { role: role } %>
 
-    <%= render partial: "announcements", locals: { role: role } %>
+    <%= render partial: "shared/announcements", locals: { announcements: role.announcements, locale: role.locale } %>
   </div>
 </div>

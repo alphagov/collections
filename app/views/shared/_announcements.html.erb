@@ -1,5 +1,5 @@
-<% if role.announcements %>
-  <section id="announcements">
+<% if announcements %>
+  <section id="announcements" dir="<%= page_text_direction %>" lang="<%= locale %>">
     <%= render "govuk_publishing_components/components/heading", {
         text: "Announcements",
         id: "announcements",
@@ -7,17 +7,17 @@
     } %>
 
     <%= render "govuk_publishing_components/components/subscription-links", {
-        email_signup_link: role.announcements.links[:email_signup],
-        feed_link: role.announcements.links[:subscribe_to_feed],
+        email_signup_link: announcements.links[:email_signup],
+        feed_link: announcements.links[:subscribe_to_feed],
         margin_bottom: 5,
     } %>
 
     <%= render "govuk_publishing_components/components/document_list", {
-        items: role.announcements.items
+        items: announcements.items
     } %>
 
     <div class="read-more">
-      <%= link_to "View all announcements", role.announcements.links[:link_to_news_and_communications], class: "govuk-link" %>
+      <%= link_to "View all announcements", announcements.links[:link_to_news_and_communications], class: "govuk-link" %>
     </div>
   </section>
 <% end %>
