@@ -1,5 +1,5 @@
 require "gds_api/test_helpers/content_item_helpers"
-require "gds_api/test_helpers/rummager"
+require "gds_api/test_helpers/search"
 require_relative "../../test/support/rummager_helpers"
 
 module BrexitLandingPageSteps
