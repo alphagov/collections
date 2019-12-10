@@ -21,7 +21,7 @@ WebMock.disable_net_connect!
 Dir[Rails.root.join("test/support/*.rb")].each { |f| require f }
 
 require "gds_api/test_helpers/content_store"
-require "gds_api/test_helpers/rummager"
+require "gds_api/test_helpers/search"
 
 # Most tests use ActiveSupport TestCase behaviour, so we configure this here.
 
@@ -33,7 +33,7 @@ end
 
 class ActiveSupport::TestCase
   include GdsApi::TestHelpers::ContentStore
-  include GdsApi::TestHelpers::Rummager
+  include GdsApi::TestHelpers::Search
 
   setup do
     I18n.locale = :en

@@ -140,7 +140,7 @@ module RummagerHelpers
       filter_organisations: organisation_id,
       facet_specialist_sectors: "1000,examples:4,example_scope:query,order:value.title",
     ).returns(
-      rummager_has_services_and_info_data_with_missing_keys_for_organisation,
+      stub_search_has_services_and_info_data_with_missing_keys_for_organisation,
     )
   end
 
