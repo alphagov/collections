@@ -34,9 +34,13 @@ private
     @announcements ||= Services.cached_search(
       count: 10,
       order: "-public_timestamp",
-      filter_people: slug,
+      filter_people: slug_without_locale,
       reject_content_purpose_supergroup: "other",
       fields: %w[title link content_store_document_type public_timestamp],
-      )["results"]
+    )["results"]
+  end
+
+  def slug_without_locale
+    slug.split(".").first
   end
 end
