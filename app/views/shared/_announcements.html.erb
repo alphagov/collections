@@ -1,4 +1,4 @@
-<% if announcements %>
+<% if announcements.items.present? %>
   <section id="announcements" dir="<%= page_text_direction %>" lang="<%= locale %>">
     <%= render "govuk_publishing_components/components/heading", {
         text: "Announcements",
