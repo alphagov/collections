@@ -1,0 +1,11 @@
+<section id="responsibilities" class="govuk-!-padding-bottom-9">
+  <%= render "govuk_publishing_components/components/heading", {
+    text: "Responsibilities",
+    id: "responsibilities",
+  } %>
+
+  <%= render "govuk_publishing_components/components/govspeak", {
+  } do %>
+    <%= role.responsibilities.html_safe %>
+  <% end %>
+</section>

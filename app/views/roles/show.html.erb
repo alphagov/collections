@@ -12,15 +12,7 @@
   </div>
 
   <div class="govuk-grid-column-two-thirds" dir="<%= page_text_direction %>" lang="<%= role.locale %>">
-    <%= render "govuk_publishing_components/components/heading", {
-      text: "Responsibilities",
-      id: "responsibilities",
-    } %>
-
-    <%= render "govuk_publishing_components/components/govspeak", {
-    } do %>
-      <%= role.responsibilities.html_safe %>
-    <% end %>
+    <%= render partial: "responsibilities", locals: { role: role } %>
 
     <%= render partial: "current_role_holder_with_biography", locals: { role: role } %>
 
