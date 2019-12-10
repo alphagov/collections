@@ -1,24 +1,22 @@
-<% if role.current_holder %>
-  <%= render "govuk_publishing_components/components/heading", {
-    text: "Current role holder:",
-    id: "current-role-holder-title",
-  } %>
+<% if role.current_holder.present? %>
+  <section id="current-holder" class="govuk-!-padding-bottom-9">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: "Current role holder:",
+      id: "current-role-holder-title",
+    } %>
 
-  <div>
     <%= render "govuk_publishing_components/components/heading", {
       text: role.current_holder["title"],
       id: "current-role-holder-title",
     } %>
-  </div>
 
-  <div>
     <%= render "govuk_publishing_components/components/govspeak", {
     } do %>
       <%= role.current_holder_biography.html_safe %>
     <% end %>
-  </div>
 
-  <div class="read-more">
-    <%= link_to "More about this person", role.link_to_person, class: "govuk-link" %>
-  </div>
+    <p class="govuk-body">
+      <%= link_to "More about this person", role.link_to_person, class: "govuk-link" %>
+    </p>
+  </section>
 <% end %>
