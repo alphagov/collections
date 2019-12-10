@@ -103,4 +103,40 @@ describe Role do
       end
     end
   end
+
+  describe "announcements" do
+    setup do
+      @results = [
+        { "title" => "PM statement at NATO meeting: 4 December 2019",
+          "link" => "/government/speeches/pm-statement-at-nato-meeting-4-december-2019",
+          "content_store_document_type" => "speech",
+          "public_timestamp" => "2019-11-12T21:07:00.000+00:00",
+          "index" => "government",
+          "es_score" => nil,
+          "_id" => "/government/speeches/pm-statement-at-nato-meeting-4-december-2019",
+          "elasticsearch_type" => "edition",
+          "document_type" => "edition" },
+      ]
+
+      Services.rummager.stubs(:search).returns("results" => @results,
+                                               "start" => 0,
+                                               "total" => 1)
+    end
+
+    it "should have announcements" do
+      assert_equal "PM statement at NATO meeting: 4 December 2019", @role.announcements.items.first[:link][:text]
+    end
+
+    it "should have link to email signup" do
+      assert_equal "/email-signup?link=/government/people/boris-johnson", @role.announcements.links[:email_signup]
+    end
+
+    it "should have link to subscription atom feed" do
+      assert_equal "https://www.gov.uk/government/people/boris-johnson.atom", @role.announcements.links[:subscribe_to_feed]
+    end
+
+    it "should have link to news and communications finder" do
+      assert_equal "/search/news-and-communications?people=boris-johnson", @role.announcements.links[:link_to_news_and_communications]
+    end
+  end
 end
