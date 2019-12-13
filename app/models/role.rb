@@ -35,15 +35,27 @@ class Role
   end
 
   def current_holder
-    links
-      .fetch("role_appointments", [])
-      .find { |ra| ra.dig("details", "current") }
+    @current_holder ||= role_holders(current: true)
+      .first
       &.dig("links", "person")
       &.first
   end
 
   def current_holder_biography
     current_holder["details"]["body"]
+  end
+
+  def past_holders
+    @past_holders ||= role_holders(current: false)
+      .reverse
+      .map do |rh|
+        rh.dig("links", "person")
+          &.first
+          &.tap do |hash|
+            hash["details"]["start_year"] = Time.zone.parse(rh["details"]["started_on"]).year
+            hash["details"]["end_year"] = Time.zone.parse(rh["details"]["ended_on"]).year
+          end
+      end
   end
 
   def link_to_person
@@ -93,5 +105,11 @@ private
 
   def slug
     link_to_person.split("/").last
+  end
+
+  def role_holders(current:)
+    links.fetch("role_appointments", [])
+      .find_all { |rh| rh["details"]["current"] == current }
+      .sort_by { |rh| rh["details"]["started_on"] }
   end
 end

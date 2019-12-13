@@ -10,6 +10,11 @@
       href: "#current-role-holder"
     } : nil,
 
+    role.past_holders.present? ? {
+      text: "Previous holders",
+      href: "#past-role-holders"
+    } : nil,
+
     role.announcements.items.present? ? {
       text: "Announcements",
       href: "#announcements"

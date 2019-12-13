@@ -1,0 +1,17 @@
+<% unless role.past_holders.empty? %>
+  <section id="past-role-holders" class="govuk-!-padding-bottom-9">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: "Previous holders of this role",
+    } %>
+
+    <%= render "components/taxon-list", {
+      items: role.past_holders.map do |rh|
+        {
+          text: rh['title'],
+          path: rh['base_path'],
+          description: "#{rh['details']['start_year']} to #{rh['details']['end_year']}"
+        }
+      end
+    } %>
+  </section>
+<% end %>
