@@ -67,6 +67,18 @@ $red: #E61E32;
   padding-top: govuk-spacing(4);
 }
 
+.landing-page__section-row-title {
+  padding-left: 0;
+}
+
+.landing-page__section-content {
+  padding-left: 0;
+
+  @include govuk-media-query($from: tablet) {
+    padding-right: 0;
+  }
+}
+
 .landing-page__section-list {
   @include govuk-font(19);
   margin-bottom: govuk-spacing(3);
