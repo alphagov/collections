@@ -12,13 +12,13 @@
     <%= render partial: "contents", locals: { role: role } %>
   </div>
 
-  <div class="govuk-grid-column-two-thirds" dir="<%= page_texdir_attribute %>" lang="<%= role.locale %>">
+  <div class="govuk-grid-column-two-thirds <%= direction_rtl_class %>" <%= dir_attribute %> <%= lang_attribute %>">
     <%= render partial: "responsibilities", locals: { role: role } %>
 
     <%= render partial: "current_role_holder_with_biography", locals: { role: role } %>
 
     <%= render partial: "past_role_holders", locals: { role: role } %>
 
-    <%= render partial: "shared/announcements", locals: { announcements: role.announcements, locale: role.locale } %>
+    <%= render partial: "shared/announcements", locals: { announcements: role.announcements, locale: I18n.locale } %>
   </div>
 </div>
