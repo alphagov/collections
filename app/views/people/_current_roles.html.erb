@@ -13,7 +13,9 @@
         <% end  %>
 
         <% if role["document_type"] == "ministerial_role" %>
-          <p class="govuk-body-s"><a href=<%= role["base_path"] %>>More about this role</a></p>
+          <p class="govuk-body-s">
+            <a href="<%= role["base_path"] %>"><%= t('roles.read_more') %></a>
+          </p>
         <% end %>
 
         <p class="govuk-body">
