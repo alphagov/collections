@@ -20,12 +20,15 @@ module ApplicationHelper
   end
 
   def page_text_direction
-    I18n.t("shared.language_direction.#{I18n.locale}", default: "ltr")
+    @page_text_direction ||= I18n.t("shared.language_direction.#{I18n.locale}", default: "ltr")
   end
 
   def t_direction
-    direction = page_text_direction
-    "dir=#{direction}" unless direction == "ltr"
+    "dir=#{page_text_direction}" unless page_text_direction == "ltr"
+  end
+
+  def direction_rtl_class
+    "direction-rtl" unless page_text_direction == "ltr"
   end
 
   def t_lang(key, options = {})
