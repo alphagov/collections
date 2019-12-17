@@ -1,5 +1,5 @@
 <% if person.currently_in_a_role? %>
-  <section id="current-roles" dir="<%= page_text_direction %>" lang="<%= person.locale %>">
+  <section id="current-roles" <%= t_direction %> lang="<%= person.locale %>">
     <% person.current_roles.each do |role| %>
       <section class="role_appointment role govuk-!-padding-bottom-8">
         <%= render "govuk_publishing_components/components/heading", {

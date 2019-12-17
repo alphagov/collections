@@ -1,8 +1,4 @@
 module ApplicationHelper
-  def page_text_direction
-    I18n.t("shared.language_direction.#{@content_item['locale']}", default: "ltr")
-  end
-
   def browsing_in_top_level_page?(top_level_page)
     request.path.starts_with?(top_level_page.base_path)
   end
@@ -21,6 +17,15 @@ module ApplicationHelper
 
   def is_testable_taxon_page?
     false
+  end
+
+  def page_text_direction
+    I18n.t("shared.language_direction.#{I18n.locale}", default: "ltr")
+  end
+
+  def t_direction
+    direction = page_text_direction
+    "dir=#{direction}" unless direction == "ltr"
   end
 
   def t_lang(key, options = {})

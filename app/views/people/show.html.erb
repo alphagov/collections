@@ -3,7 +3,7 @@
 <%= render partial: "header", locals: { person: person } %>
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-third" dir="<%= page_text_direction %>" lang="<%= person.locale %>">
+  <div class="govuk-grid-column-one-third" <%= t_direction %> lang="<%= person.locale %>">
     <%= render partial: "image", locals: { person: person } %>
     <%= render partial: "contents", locals: { person: person } %>
   </div>
