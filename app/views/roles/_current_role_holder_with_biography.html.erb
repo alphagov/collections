@@ -15,7 +15,9 @@
     <% end %>
 
     <p class="govuk-body">
-      <%= link_to t("people.read_more"), role.link_to_person, class: "govuk-link" %>
+      <a href="<%= role.link_to_person %>" class="govuk-link" <%= t_lang("people.read_more") %>>
+        <%= t("people.read_more") %>
+      </a>
     </p>
   </section>
 <% end %>
