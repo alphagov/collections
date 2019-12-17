@@ -17,6 +17,8 @@
 
     <%= render partial: "current_role_holder_with_biography", locals: { role: role } %>
 
+    <%= render partial: "past_role_holders", locals: { role: role } %>
+
     <%= render partial: "shared/announcements", locals: { announcements: role.announcements, locale: role.locale } %>
   </div>
 </div>
