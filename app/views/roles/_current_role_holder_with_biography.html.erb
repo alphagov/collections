@@ -1,7 +1,7 @@
 <% if role.current_holder.present? %>
   <section id="current-role-holder" class="govuk-!-padding-bottom-9">
     <%= render "govuk_publishing_components/components/heading", {
-      text: "Current role holder:",
+      text: t("roles.headings.current_holder"),
     } %>
 
     <%= render "govuk_publishing_components/components/heading", {
