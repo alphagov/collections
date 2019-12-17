@@ -23,7 +23,7 @@ module ApplicationHelper
     @page_text_direction ||= I18n.t("shared.language_direction.#{I18n.locale}", default: "ltr")
   end
 
-  def t_direction
+  def dir_attribute
     "dir=#{page_text_direction}" unless page_text_direction == "ltr"
   end
 

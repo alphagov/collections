@@ -12,7 +12,7 @@
     <%= render partial: "contents", locals: { role: role } %>
   </div>
 
-  <div class="govuk-grid-column-two-thirds" dir="<%= page_text_direction %>" lang="<%= role.locale %>">
+  <div class="govuk-grid-column-two-thirds" dir="<%= page_texdir_attribute %>" lang="<%= role.locale %>">
     <%= render partial: "responsibilities", locals: { role: role } %>
 
     <%= render partial: "current_role_holder_with_biography", locals: { role: role } %>
