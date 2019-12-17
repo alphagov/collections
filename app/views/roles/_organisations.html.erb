@@ -1,6 +1,6 @@
 <% if role.organisations %>
   <div class="organisations-list" dir="<%= page_text_direction %>" lang="<%= role.locale %>">
-    Organisations:
+    <span lang="en">Organisations</span>:
     <%= role.organisations.map { |organisation| link_to(organisation['title'], organisation['base_path']) }.to_sentence.html_safe %>
   </div>
 <% end %>
