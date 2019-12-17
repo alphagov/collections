@@ -1,23 +1,25 @@
-<%= render "govuk_publishing_components/components/contents_list", {
-  contents: [
-    {
-      text: t("roles.headings.responsibilities"),
-      href: "#responsibilities"
-    },
+<div <%= t_lang("roles.headings.responsibilities") %>>
+  <%= render "govuk_publishing_components/components/contents_list", {
+    contents: [
+      {
+        text: t("roles.headings.responsibilities"),
+        href: "#responsibilities"
+      },
 
-    role.currently_occupied? ? {
-      text: t("roles.headings.current_holder"),
-      href: "#current-role-holder"
-    } : nil,
+      role.currently_occupied? ? {
+        text: t("roles.headings.current_holder"),
+        href: "#current-role-holder"
+      } : nil,
 
-    role.past_holders.present? ? {
-      text: "Previous holders",
-      href: "#past-role-holders"
-    } : nil,
+      role.past_holders.present? ? {
+        text: t("roles.headings.previous_holders"),
+        href: "#past-role-holders"
+      } : nil,
 
-    role.announcements.items.present? ? {
-      text: t("organisations.content_item.schema_name.announcement.other"),
-      href: "#announcements"
-    } : nil,
-  ].compact
-} %>
+      role.announcements.items.present? ? {
+        text: t("organisations.content_item.schema_name.announcement.other"),
+        href: "#announcements"
+      } : nil,
+    ].compact
+  } %>
+</div>
