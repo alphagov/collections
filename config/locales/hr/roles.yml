@@ -1,0 +1,15 @@
+hr:
+  roles:
+    heading:
+      one:
+      few:
+      many:
+      other:
+    headings:
+      current_holder:
+      previous_holders:
+      responsibilities:
+    ministerial:
+    policies_responsible_with_person:
+    previous_holders:
+    read_more:

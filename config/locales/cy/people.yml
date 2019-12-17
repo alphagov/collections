@@ -1,0 +1,13 @@
+cy:
+  people:
+    heading:
+      zero:
+      one: Person
+      two:
+      few:
+      many: Pobl
+      other:
+    biography: Bywgraffiad
+    previous_roles: Rolau blaenorol
+    previous_roles_in_government: Rolau blaenorol mewn llywodraeth
+    read_more: Mwy am y person yma

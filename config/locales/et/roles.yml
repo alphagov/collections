@@ -1,0 +1,13 @@
+et:
+  roles:
+    heading:
+      one: Ülesanne
+      other: Ülesanded
+    headings:
+      current_holder: Praegu sellel ametikohal
+      previous_holders: Eelmised ametikoha täitjad
+      responsibilities: Vastutusalad
+    ministerial: Ministri ülesanne
+    policies_responsible_with_person: 'Pädevus haldusala järgi: %{person}, %{role}'
+    previous_holders: 'Varem sellel ametikohal '
+    read_more: Sellest ametikohast lähemalt
