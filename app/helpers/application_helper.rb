@@ -31,6 +31,10 @@ module ApplicationHelper
     "direction-rtl" unless page_text_direction == "ltr"
   end
 
+  def lang_attribute
+    "lang=#{I18n.locale}" unless I18n.locale == I18n.default_locale
+  end
+
   def t_lang(key, options = {})
     fallback = t_fallback(key, options)
     if fallback && fallback != I18n.locale

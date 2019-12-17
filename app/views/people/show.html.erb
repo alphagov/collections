@@ -3,7 +3,7 @@
 <%= render partial: "header", locals: { person: person } %>
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-third <%= t_direction_class %>" <%= t_direction %> lang="<%= person.locale %>">
+  <div class="govuk-grid-column-one-third <%= direction_rtl_class %>" <%= t_direction %> <%= lang_attribute %>>
     <%= render partial: "image", locals: { person: person } %>
     <%= render partial: "contents", locals: { person: person } %>
   </div>
@@ -12,6 +12,6 @@
     <%= render partial: "biography", locals: { person: person } %>
     <%= render partial: "current_roles", locals: { person: person } %>
     <%= render partial: "previous_roles", locals: { person: person } %>
-    <%= render partial: "shared/announcements", locals: { announcements: person.announcements, locale: person.locale } %>
+    <%= render partial: "shared/announcements", locals: { announcements: person.announcements, locale: I18n.locale } %>
   </div>
 </div>

@@ -1,5 +1,5 @@
 <% if announcements.items.present? %>
-  <section id="announcements" class="<%= t_direction_class %>" <%= t_direction %> lang="<%= locale %>">
+  <section id="announcements" class="<%= direction_rtl_class %>" <%= t_direction %>>
     <%= render "govuk_publishing_components/components/heading", {
         text: t("organisations.content_item.schema_name.announcement.other"),
         lang: t_fallback("organisations.content_item.schema_name.announcement.other"),
