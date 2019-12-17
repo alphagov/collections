@@ -1,17 +1,17 @@
 <%= render "govuk_publishing_components/components/contents_list", {
   contents: [
     {
-      text: "Responsibilities",
+      text: t("roles.headings.responsibilities"),
       href: "#responsibilities"
     },
 
     role.currently_occupied? ? {
-      text: "Current Role Holder",
+      text: t("roles.headings.current_holder"),
       href: "#current-role-holder"
     } : nil,
 
     role.announcements.items.present? ? {
-      text: "Announcements",
+      text: t("organisations.content_item.schema_name.announcement.other"),
       href: "#announcements"
     } : nil,
   ].compact
