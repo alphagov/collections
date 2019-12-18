@@ -81,6 +81,14 @@ class Role
     @announcements ||= AnnouncementsPresenter.new(slug)
   end
 
+  def supports_historical_accounts?
+    details["supports_historical_accounts"]
+  end
+
+  def past_holders_url
+    "/government/history/past-#{title.pluralize.downcase.gsub(/ /, '-')}"
+  end
+
 private
 
   def content_item_data
