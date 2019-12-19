@@ -86,7 +86,7 @@ class Role
   end
 
   def past_holders_url
-    "/government/history/past-#{title.pluralize.downcase.gsub(/ /, '-')}"
+    "/government/history/past-#{role_slug.pluralize}"
   end
 
 private
@@ -119,5 +119,9 @@ private
     links.fetch("role_appointments", [])
       .find_all { |rh| rh["details"]["current"] == current }
       .sort_by { |rh| rh["details"]["started_on"] }
+  end
+
+  def role_slug
+    base_path.split("/").last
   end
 end
