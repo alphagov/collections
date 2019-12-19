@@ -16,7 +16,7 @@
 # end
 
 ActiveSupport::Inflector.inflections do |inflect|
-  inflect.plural /Secretary of State for (.*)/, "Secretaries of State for \\1"
+  inflect.plural /Secretary of State( for .*)?/, "Secretaries of State\\1"
 end
 
 ActiveSupport::Inflector.inflections do |inflect|
