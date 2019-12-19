@@ -28,7 +28,7 @@ module ApplicationHelper
   end
 
   def direction_rtl_class(prefix: false)
-    if page_text_direction == 'rtl'
+    if page_text_direction == "rtl"
       prefix ? "class=direction-rtl" : "direction-rtl"
     end
   end
