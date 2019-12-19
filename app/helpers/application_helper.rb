@@ -27,8 +27,10 @@ module ApplicationHelper
     "dir=#{page_text_direction}" unless page_text_direction == "ltr"
   end
 
-  def direction_rtl_class
-    "direction-rtl" unless page_text_direction == "ltr"
+  def direction_rtl_class(prefix: false)
+    if page_text_direction == 'rtl'
+      prefix ? "class=direction-rtl" : "direction-rtl"
+    end
   end
 
   def lang_attribute
