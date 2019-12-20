@@ -5,7 +5,9 @@
     } %>
 
     <% if role.supports_historical_accounts? %>
-      <p>Find out more about previous holders of this role in our <%= link_to "past #{role.title.pluralize}", role.past_holders_url, class: "govuk-link" %> section.</p>
+      <p class="govuk-body" lang="en">
+        Find out more about previous holders of this role in our <%= link_to "past #{role.title.pluralize}", role.past_holders_url, class: "govuk-link" %> section.
+      </p>
     <% elsif role.past_holders.present? %>
       <%= render "components/taxon-list", {
         items: role.past_holders.map do |rh|
