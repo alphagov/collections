@@ -144,7 +144,7 @@ describe Role do
   describe "supports_historical_accounts" do
     context "without a historical account page" do
       it "does not support historical accounts by default" do
-        refute @role.supports_historical_accounts?
+        assert_not @role.supports_historical_accounts?
       end
     end
     context "with a historical account page" do
