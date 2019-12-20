@@ -1,8 +1,10 @@
 class AnnouncementsPresenter
-  attr_reader :slug
+  attr_reader :slug, :slug_prefix, :filter_key
 
-  def initialize(slug)
+  def initialize(slug, slug_prefix: nil, filter_key:)
     @slug = slug
+    @slug_prefix = slug_prefix || filter_key
+    @filter_key = filter_key
   end
 
   def items
@@ -22,22 +24,27 @@ class AnnouncementsPresenter
 
   def links
     {
-      email_signup: "/email-signup?link=/government/people/#{slug}",
-      subscribe_to_feed: "https://www.gov.uk/government/people/#{slug}.atom",
-      link_to_news_and_communications: "/search/news-and-communications?people=#{slug}",
+      email_signup: "/email-signup?link=/government/#{slug_prefix}/#{slug}",
+      subscribe_to_feed: "https://www.gov.uk/government/#{slug_prefix}/#{slug}.atom",
+      link_to_news_and_communications: "/search/news-and-communications?#{filter_key}=#{slug}",
     }
   end
 
 private
 
   def announcements
-    @announcements ||= Services.cached_search(
+    @announcements ||= Services.cached_search(search_options)["results"]
+  end
+
+  def search_options
+    {
       count: 10,
       order: "-public_timestamp",
-      filter_people: slug_without_locale,
       reject_content_purpose_supergroup: "other",
       fields: %w[title link content_store_document_type public_timestamp],
-    )["results"]
+    }.tap do |hash|
+      hash[:"filter_#{filter_key}"] = slug_without_locale
+    end
   end
 
   def slug_without_locale
