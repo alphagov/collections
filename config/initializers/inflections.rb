@@ -14,3 +14,8 @@
 # ActiveSupport::Inflector.inflections(:en) do |inflect|
 #   inflect.acronym 'RESTful'
 # end
+
+ActiveSupport::Inflector.inflections(:en) do |inflect|
+  inflect.plural /Secretary of State( for .*)?/, "Secretaries of State\\1"
+  inflect.plural /Chancellor of (.*)/, "Chancellors of \\1"
+end

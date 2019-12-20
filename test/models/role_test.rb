@@ -4,6 +4,7 @@ describe Role do
   setup do
     @api_data = {
       "base_path" => "/government/ministers/prime-minister",
+      "details" => {},
       "links" => {
         "ordered_parent_organisations" => [
           {
@@ -137,6 +138,53 @@ describe Role do
 
     it "should have link to news and communications finder" do
       assert_equal "/search/news-and-communications?people=boris-johnson", @role.announcements.links[:link_to_news_and_communications]
+    end
+  end
+
+  describe "supports_historical_accounts" do
+    context "without a historical account page" do
+      it "does not support historical accounts by default" do
+        assert_not @role.supports_historical_accounts?
+      end
+    end
+    context "with a historical account page" do
+      setup do
+        @api_data["details"]["supports_historical_accounts"] = true
+      end
+      it "supports historical accounts" do
+        assert @role.supports_historical_accounts?
+      end
+      it "points to the correct historical account page" do
+        assert @role.past_holders_url == "/government/history/past-prime-ministers"
+      end
+    end
+
+    context "when applied to a chancellor" do
+      setup do
+        @api_data["title"] = "Chancellor of the Exchequer"
+        @api_data["base_path"] = "/government/ministers/chancellor"
+      end
+      it "pluralises correctly" do
+        assert @role.title.pluralize == "Chancellors of the Exchequer"
+      end
+
+      it "points to the correct historical account page" do
+        assert @role.past_holders_url == "/government/history/past-chancellors"
+      end
+    end
+    context "when applied to a foreign secretary" do
+      setup do
+        @api_data["title"] = "Secretary of State for Foreign and Commonwealth Affairs"
+        @api_data["base_path"] = "/government/ministers/foreign-secretary"
+      end
+
+      it "pluralises correctly" do
+        assert @role.title.pluralize == "Secretaries of State for Foreign and Commonwealth Affairs"
+      end
+
+      it "points to the correct historical account page" do
+        assert @role.past_holders_url == "/government/history/past-foreign-secretaries"
+      end
     end
   end
 end

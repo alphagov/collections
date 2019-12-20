@@ -81,6 +81,14 @@ class Role
     @announcements ||= AnnouncementsPresenter.new(slug)
   end
 
+  def supports_historical_accounts?
+    details["supports_historical_accounts"]
+  end
+
+  def past_holders_url
+    "/government/history/past-#{role_slug.pluralize}"
+  end
+
 private
 
   def content_item_data
@@ -111,5 +119,9 @@ private
     links.fetch("role_appointments", [])
       .find_all { |rh| rh["details"]["current"] == current }
       .sort_by { |rh| rh["details"]["started_on"] }
+  end
+
+  def role_slug
+    base_path.split("/").last
   end
 end
