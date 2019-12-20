@@ -57,7 +57,7 @@ class Person
   end
 
   def announcements
-    @announcements ||= AnnouncementsPresenter.new(slug)
+    @announcements ||= AnnouncementsPresenter.new(slug, filter_key: "people")
   end
 
   def translations

@@ -78,7 +78,7 @@ class Role
   end
 
   def announcements
-    @announcements ||= AnnouncementsPresenter.new(slug)
+    @announcements ||= AnnouncementsPresenter.new(slug, slug_prefix: "ministers", filter_key: "roles")
   end
 
   def supports_historical_accounts?
@@ -86,7 +86,7 @@ class Role
   end
 
   def past_holders_url
-    "/government/history/past-#{role_slug.pluralize}"
+    "/government/history/past-#{slug.pluralize}"
   end
 
 private
@@ -112,16 +112,12 @@ private
   end
 
   def slug
-    link_to_person.split("/").last
+    base_path.split("/").last
   end
 
   def role_holders(current:)
     links.fetch("role_appointments", [])
       .find_all { |rh| rh["details"]["current"] == current }
       .sort_by { |rh| rh["details"]["started_on"] }
-  end
-
-  def role_slug
-    base_path.split("/").last
   end
 end
