@@ -2,6 +2,7 @@
   <section id="current-role-holder" class="govuk-!-padding-bottom-9">
     <%= render "govuk_publishing_components/components/heading", {
       text: t("roles.headings.current_holder"),
+      lang: t_fallback("roles.headings.current_holder"),
     } %>
 
     <%= render "govuk_publishing_components/components/heading", {
@@ -15,7 +16,9 @@
     <% end %>
 
     <p class="govuk-body">
-      <%= link_to t("people.read_more"), role.link_to_person, class: "govuk-link" %>
+      <a href="<%= role.link_to_person %>" class="govuk-link" <%= t_lang("people.read_more") %>>
+        <%= t("people.read_more") %>
+      </a>
     </p>
   </section>
 <% end %>

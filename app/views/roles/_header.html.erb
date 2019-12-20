@@ -2,6 +2,7 @@
   <div class="govuk-grid-column-two-thirds">
     <%= render "govuk_publishing_components/components/title", {
       context: t("roles.ministerial"),
+      context_locale: t_fallback("roles.ministerial"),
       title: role.title
     } %>
   </div>
