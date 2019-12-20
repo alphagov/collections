@@ -129,15 +129,15 @@ describe Role do
     end
 
     it "should have link to email signup" do
-      assert_equal "/email-signup?link=/government/people/boris-johnson", @role.announcements.links[:email_signup]
+      assert_equal "/email-signup?link=/government/ministers/prime-minister", @role.announcements.links[:email_signup]
     end
 
     it "should have link to subscription atom feed" do
-      assert_equal "https://www.gov.uk/government/people/boris-johnson.atom", @role.announcements.links[:subscribe_to_feed]
+      assert_equal "https://www.gov.uk/government/ministers/prime-minister.atom", @role.announcements.links[:subscribe_to_feed]
     end
 
     it "should have link to news and communications finder" do
-      assert_equal "/search/news-and-communications?people=boris-johnson", @role.announcements.links[:link_to_news_and_communications]
+      assert_equal "/search/news-and-communications?roles=prime-minister", @role.announcements.links[:link_to_news_and_communications]
     end
   end
 
