@@ -31,6 +31,56 @@ describe ApplicationHelper do
     end
   end
 
+  describe "direction_rtl_class" do
+    context "when a left to right language script" do
+      it "returns nil" do
+        self.stubs(:page_text_direction).returns("ltr")
+        assert_equal nil, direction_rtl_class
+      end
+    end
+
+    context "when a right to right language script" do
+      it "returns the class name" do
+        self.stubs(:page_text_direction).returns("rtl")
+        assert_equal "direction-rtl", direction_rtl_class
+      end
+
+      it "returns the class with prefix when requested" do
+        self.stubs(:page_text_direction).returns("rtl")
+        assert_equal "class=direction-rtl", direction_rtl_class(prefix: true)
+      end
+    end
+  end
+
+  describe "lang_attribute" do
+    it "returns nil for default language" do
+      I18n.with_locale(:en) do
+        assert_equal nil, lang_attribute
+      end
+    end
+    it "returns a lang attribute string for non-default language" do
+      I18n.with_locale(:ar) do
+        assert_equal "lang=ar", lang_attribute
+      end
+    end
+  end
+
+  describe "dir_attribute" do
+    context "when a left to right language script" do
+      it "returns nil" do
+        self.stubs(:page_text_direction).returns("ltr")
+        assert_equal nil, dir_attribute
+      end
+    end
+
+    context "when a right to right language script" do
+      it "returns the rtl dir attribute name" do
+        self.stubs(:page_text_direction).returns("rtl")
+        assert_equal "dir=rtl", dir_attribute
+      end
+    end
+  end
+
   describe "t_lang" do
     it "t_fallback returns false if string is translated successfully" do
       I18n.backend.store_translations :en, document: { one: "string" }
