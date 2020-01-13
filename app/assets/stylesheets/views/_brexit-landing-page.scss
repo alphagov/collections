@@ -104,7 +104,7 @@ $red: #E61E32;
   margin-top: govuk-spacing(7);
   padding: govuk-spacing(6);
   background-color: govuk-colour("light-grey", $legacy: "grey-4");
-  border: 1px solid govuk-colour("med-grey", $legacy: "grey-2");
+  border: 1px solid $govuk-border-colour;
 }
 
 .landing-page__email-title {
