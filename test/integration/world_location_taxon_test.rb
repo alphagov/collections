@@ -11,8 +11,8 @@ class WorldLocationTaxonTest < ActionDispatch::IntegrationTest
     world_usa = world_usa_taxon(base_path: @base_path, phase: "live")
     world_usa_news_events = world_usa_news_events_taxon(base_path: @child_taxon_base_path)
 
-    content_store_has_item(@base_path, world_usa)
-    content_store_has_item(@child_taxon_base_path, world_usa_news_events)
+    stub_content_store_has_item(@base_path, world_usa)
+    stub_content_store_has_item(@child_taxon_base_path, world_usa_news_events)
 
     @taxon = WorldWideTaxon.find(@base_path)
     stub_content_for_taxon(@taxon.content_id, search_results) # For the "general information" taxon
@@ -38,7 +38,7 @@ class WorldLocationTaxonTest < ActionDispatch::IntegrationTest
     world_usa = world_usa_taxon(base_path: @base_path)
     world_usa.delete("links")
 
-    content_store_has_item(@base_path, world_usa)
+    stub_content_store_has_item(@base_path, world_usa)
 
     @taxon = WorldWideTaxon.find(@base_path)
     stub_content_for_taxon(@taxon.content_id, search_results)

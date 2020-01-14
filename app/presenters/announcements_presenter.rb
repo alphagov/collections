@@ -8,15 +8,15 @@ class AnnouncementsPresenter
   end
 
   def items
-    announcements.map do |announcenment|
+    announcements.map do |announcement|
       {
         link: {
-          text: announcenment["title"],
-          path: announcenment["link"],
+          text: announcement["title"],
+          path: announcement["link"],
         },
         metadata: {
-          public_timestamp: Date.parse(announcenment["public_timestamp"]).strftime("%d %B %Y"),
-          content_store_document_type: announcenment["content_store_document_type"].humanize,
+          public_timestamp: Date.parse(announcement["public_timestamp"]).strftime("%d %B %Y"),
+          content_store_document_type: announcement["content_store_document_type"].humanize,
         },
       }
     end

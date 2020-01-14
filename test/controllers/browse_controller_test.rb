@@ -3,10 +3,10 @@ require "test_helper"
 describe BrowseController do
   describe "GET index" do
     before do
-      content_store_has_item("/browse",
-                             links: {
-                               top_level_browse_pages: top_level_browse_pages,
-                             })
+      stub_content_store_has_item("/browse",
+                                  links: {
+                                    top_level_browse_pages: top_level_browse_pages,
+                                  })
     end
 
     it "set correct expiry headers" do
@@ -19,12 +19,12 @@ describe BrowseController do
   describe "GET top_level_browse_page" do
     describe "for a valid browse page" do
       before do
-        content_store_has_item("/browse/benefits",
-                               base_path: "/browse/benefits",
-                               links: {
-                                 top_level_browse_pages: top_level_browse_pages,
-                                 second_level_browse_pages: second_level_browse_pages,
-                               })
+        stub_content_store_has_item("/browse/benefits",
+                                    base_path: "/browse/benefits",
+                                    links: {
+                                      top_level_browse_pages: top_level_browse_pages,
+                                      second_level_browse_pages: second_level_browse_pages,
+                                    })
       end
 
       it "sets correct expiry headers" do
@@ -35,7 +35,7 @@ describe BrowseController do
     end
 
     it "404 if the browse page does not exist" do
-      content_store_does_not_have_item("/browse/banana")
+      stub_content_store_does_not_have_item("/browse/banana")
 
       get :show, params: { top_level_slug: "banana" }
 

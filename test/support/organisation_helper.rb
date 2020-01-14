@@ -694,7 +694,7 @@ module OrganisationHelpers
   end
 
   def setup_and_visit_page(content)
-    content_store_has_item(content["base_path"], content)
+    stub_content_store_has_item(content["base_path"], content)
     @title = content["title"]
     @what_we_do = content.dig("details", "body")
 

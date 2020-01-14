@@ -6,7 +6,7 @@ describe TopicsController do
   describe "GET topic" do
     describe "with a valid topic slug" do
       before do
-        content_store_has_item("/topic/oil-and-gas", topic_example)
+        stub_content_store_has_item("/topic/oil-and-gas", topic_example)
       end
 
       it "sets expiry headers for 30 minutes" do
@@ -17,7 +17,7 @@ describe TopicsController do
     end
 
     it "returns a 404 status for GET topic with an invalid sector tag" do
-      content_store_does_not_have_item("/topic/oil-and-gas")
+      stub_content_store_does_not_have_item("/topic/oil-and-gas")
       get :show, params: { topic_slug: "oil-and-gas" }
 
       assert_equal 404, response.status

@@ -70,7 +70,7 @@ private
       "document_type" => "not_a_taxon",
     }
 
-    content_store_has_item("/not-a-taxon", thing)
+    stub_content_store_has_item("/not-a-taxon", thing)
   end
 
   def when_i_visit_that_thing
@@ -101,10 +101,10 @@ private
       "locale" => "en",
     }
 
-    content_store_has_item(child_one_base_path, child_one)
-    content_store_has_item(child_two_base_path, child_two)
+    stub_content_store_has_item(child_one_base_path, child_one)
+    stub_content_store_has_item(child_two_base_path, child_two)
 
-    content_store_has_item("/content-item-1", content_item_for_base_path("/content-item-1"))
+    stub_content_store_has_item("/content-item-1", content_item_for_base_path("/content-item-1"))
 
     given_there_is_a_taxon_without_children
 
@@ -121,7 +121,7 @@ private
 
     @content_item = content_item_without_children(brexit_taxon_path, brexit_content_id)
     @content_item["phase"] = "live"
-    content_store_has_item(brexit_taxon_path, @content_item)
+    stub_content_store_has_item(brexit_taxon_path, @content_item)
 
     and_the_taxon_has_tagged_content(brexit_content_id)
 
@@ -130,12 +130,12 @@ private
 
   def and_the_taxon_is_live
     @content_item["phase"] = "live"
-    content_store_has_item(base_path, @content_item)
+    stub_content_store_has_item(base_path, @content_item)
   end
 
   def and_the_taxon_is_not_live
     @content_item["phase"] = "beta"
-    content_store_has_item(base_path, @content_item)
+    stub_content_store_has_item(base_path, @content_item)
   end
 
   def and_the_taxon_has_tagged_content(taxon_content_id = content_id)

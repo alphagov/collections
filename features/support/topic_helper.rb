@@ -20,7 +20,7 @@ module TopicHelper
       page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING
     )
 
-    content_store_has_item("/topic/oil-and-gas/fields-and-wells",
+    stub_content_store_has_item("/topic/oil-and-gas/fields-and-wells",
                            content_id: 'content-id-for-fields-and-wells',
                            base_path: "/topic/oil-and-gas/fields-and-wells",
                            title: "Fields and Wells",

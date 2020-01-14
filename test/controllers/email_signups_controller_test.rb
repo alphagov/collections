@@ -3,7 +3,7 @@ require "test_helper"
 describe EmailSignupsController do
   setup do
     @valid_subtopic_params = { topic_slug: "oil-and-gas", subtopic_slug: "wells" }
-    content_store_has_item(
+    stub_content_store_has_item(
       "/topic/oil-and-gas/wells",
       content_item_for_base_path("/topic/oil-and-gas/wells").merge("links" => {
           "parent" => [{
@@ -14,7 +14,7 @@ describe EmailSignupsController do
     )
 
     @invalid_subtopic_params = { topic_slug: "invalid", subtopic_slug: "subtopic" }
-    content_store_does_not_have_item("/topic/invalid/subtopic")
+    stub_content_store_does_not_have_item("/topic/invalid/subtopic")
 
     @email_signup = EmailSignup.new(nil)
     @email_signup.stubs(:save)

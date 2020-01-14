@@ -15,7 +15,7 @@ module ServicesAndInformationHelpers
 
     stub_services_and_information_links("hm-revenue-customs")
 
-    content_store_has_item("/government/organisations/hm-revenue-customs/services-information",
+    stub_content_store_has_item("/government/organisations/hm-revenue-customs/services-information",
                            content_id: 'content-id-for-hm-revenue-customs-services-information',
                            base_path: "/government/organisations/hm-revenue-customs/services-information",
                            title: "Services and information - HM Revenue & Customs",

@@ -40,7 +40,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
   it "renders a curated subtopic" do
     # Given a curated subtopic exists
-    content_store_has_item("/topic/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore", details: {
+    stub_content_store_has_item("/topic/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore", details: {
       groups: [
         {
           name: "Oil rigs",
@@ -92,7 +92,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
   it "renders a non-curated subtopic" do
     # Given a non-curated subtopic exists
-    content_store_has_item("/topic/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore"))
+    stub_content_store_has_item("/topic/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore"))
     stub_topic_organisations("oil-and-gas/offshore", "content-id-for-offshore")
 
     # When I visit the subtopic page
@@ -122,7 +122,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
   describe "latest page for a subtopic" do
     setup do
-      content_store_has_item("/topic/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore"))
+      stub_content_store_has_item("/topic/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore"))
       stub_topic_organisations("oil-and-gas/offshore", "content-id-for-offshore")
     end
 
@@ -211,7 +211,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
   it "adds tracking attributes to links within sections" do
     # Given a curated subtopic exists
-    content_store_has_item(
+    stub_content_store_has_item(
       "/topic/oil-and-gas/offshore",
       oil_and_gas_subtopic_item("offshore", details: {
         groups: [

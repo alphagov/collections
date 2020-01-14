@@ -63,7 +63,7 @@ describe Supergroups::NewsAndCommunications do
         },
       )
 
-      content_store_has_item("/government/tagged/content", content)
+      stub_content_store_has_item("/government/tagged/content", content)
     end
 
     it "returns promoted content for the news and communications section" do
