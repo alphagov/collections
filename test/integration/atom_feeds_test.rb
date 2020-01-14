@@ -131,7 +131,7 @@ class AtomFeedsTest < ActionDispatch::IntegrationTest
     document = GovukSchemas::Example.find(schema_name, example_name: schema_name)
     document["base_path"] = "/government/organisations/ministry-of-magic"
     document["title"] = "Ministry of Magic"
-    content_store_has_item(document["base_path"], document)
+    stub_content_store_has_item(document["base_path"], document)
     document
   end
 

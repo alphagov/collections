@@ -202,17 +202,17 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
       },
     }
 
-    content_store_has_item("/government/organisations/changed_name", @content_item_changed_name)
-    content_store_has_item("/government/organisations/devolved", @content_item_devolved)
-    content_store_has_item("/government/organisations/exempt", @content_item_exempt)
-    content_store_has_item("/government/organisations/exempt-no-url", @content_item_exempt_no_url)
-    content_store_has_item("/government/organisations/joining", @content_item_joining)
-    content_store_has_item("/government/organisations/left_gov", @content_item_left_gov)
-    content_store_has_item("/government/organisations/merged", @content_item_merged)
-    content_store_has_item("/government/organisations/split", @content_item_split)
-    content_store_has_item("/government/organisations/no_longer_exists", @content_item_no_longer_exists)
-    content_store_has_item("/government/organisations/replaced", @content_item_replaced)
-    content_store_has_item("/government/organisations/fire-service-college", @content_item_documents)
+    stub_content_store_has_item("/government/organisations/changed_name", @content_item_changed_name)
+    stub_content_store_has_item("/government/organisations/devolved", @content_item_devolved)
+    stub_content_store_has_item("/government/organisations/exempt", @content_item_exempt)
+    stub_content_store_has_item("/government/organisations/exempt-no-url", @content_item_exempt_no_url)
+    stub_content_store_has_item("/government/organisations/joining", @content_item_joining)
+    stub_content_store_has_item("/government/organisations/left_gov", @content_item_left_gov)
+    stub_content_store_has_item("/government/organisations/merged", @content_item_merged)
+    stub_content_store_has_item("/government/organisations/split", @content_item_split)
+    stub_content_store_has_item("/government/organisations/no_longer_exists", @content_item_no_longer_exists)
+    stub_content_store_has_item("/government/organisations/replaced", @content_item_replaced)
+    stub_content_store_has_item("/government/organisations/fire-service-college", @content_item_documents)
 
     stub_rummager_latest_content_requests("changed_name")
     stub_rummager_latest_content_requests("devolved")

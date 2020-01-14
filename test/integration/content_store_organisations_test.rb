@@ -2,7 +2,7 @@ require "integration_test_helper"
 
 class ContentStoreOrganisationsTest < ActionDispatch::IntegrationTest
   before do
-    content_store_has_item("/government/organisations", organisations_content_hash)
+    stub_content_store_has_item("/government/organisations", organisations_content_hash)
     visit "/government/organisations"
   end
 

@@ -3,7 +3,7 @@ require "test_helper"
 describe OrganisationsController do
   describe "GET index" do
     before do
-      content_store_has_item("/government/organisations/ministry-of-magic",
+      stub_content_store_has_item("/government/organisations/ministry-of-magic",
                              title: "Ministry of magic",
                              base_path: "/government/organisations/ministry-of-magic",
                              details: {

@@ -3,7 +3,7 @@ require "test_helper"
 describe EmailSignupsController do
   setup do
     @valid_subtopic_params = { topic_slug: "oil-and-gas", subtopic_slug: "wells" }
-    content_store_has_item(
+    stub_content_store_has_item(
       "/topic/oil-and-gas/wells",
       content_item_for_base_path("/topic/oil-and-gas/wells").merge("links" => {
           "parent" => [{

@@ -6,7 +6,7 @@ describe SecondLevelBrowsePageController do
   describe "GET second_level_browse_page" do
     describe "for a valid browse page" do
       before do
-        content_store_has_item("/browse/benefits/entitlement",
+        stub_content_store_has_item("/browse/benefits/entitlement",
                                content_id: "entitlement-content-id",
                                title: "Entitlement",
                                base_path: "/browse/benefits/entitlement",

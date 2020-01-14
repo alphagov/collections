@@ -45,6 +45,6 @@ class CitizenReadinessTest < ActionDispatch::IntegrationTest
     content_item = GovukSchemas::RandomExample.for_schema(frontend_schema: "special_route") do |payload|
       payload.merge(title: "Prepare for Brexit", base_path: base_path, description: "Prepare yourself for Brexit")
     end
-    content_store_has_item(base_path, content_item)
+    stub_content_store_has_item(base_path, content_item)
   end
 end

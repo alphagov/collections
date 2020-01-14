@@ -14,7 +14,7 @@ module ServicesAndInformationHelpers
   end
 
   def stub_content_item(base_path, organisation_title)
-    content_store_has_item(base_path,
+    stub_content_store_has_item(base_path,
                            base_path: base_path,
                            title: "S&I page title",
                            description: "",

@@ -7,7 +7,7 @@ describe TaxonsController do
 
   describe "GET show" do
     before do
-      content_store_has_item(taxon["base_path"], taxon)
+      stub_content_store_has_item(taxon["base_path"], taxon)
       stub_content_for_taxon(taxon["content_id"], [taxon])
       stub_content_for_taxon(taxon["content_id"], generate_search_results(5))
       stub_document_types_for_supergroup("guidance_and_regulation")
@@ -28,7 +28,7 @@ describe TaxonsController do
 
   context "when rendering a taxon in the alpha phase" do
     before do
-      content_store_has_item(
+      stub_content_store_has_item(
         taxon["base_path"],
         taxon.merge("phase" => "alpha"),
       )

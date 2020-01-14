@@ -10,7 +10,7 @@ class StepNavPageTest < ActionDispatch::IntegrationTest
   before do
     sample = GovukContentSchemaTestHelpers::Examples.new.get("step_by_step_nav", "learn_to_drive_a_car")
     content_item = JSON.parse(sample)
-    content_store_has_item(content_item["base_path"], content_item)
+    stub_content_store_has_item(content_item["base_path"], content_item)
 
     visit content_item["base_path"]
   end
@@ -37,7 +37,7 @@ class StepNavPageTest < ActionDispatch::IntegrationTest
   it "works for a generated example" do
     content_item = step_nav_example
 
-    content_store_has_item(content_item["base_path"], content_item)
+    stub_content_store_has_item(content_item["base_path"], content_item)
 
     get content_item["base_path"]
     assert_response 200

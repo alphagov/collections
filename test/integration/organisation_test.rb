@@ -490,13 +490,13 @@ class OrganisationTest < ActionDispatch::IntegrationTest
       },
     }
 
-    content_store_has_item("/government/organisations/prime-ministers-office-10-downing-street", @content_item_no10)
-    content_store_has_item("/government/organisations/attorney-generals-office", @content_item_attorney_general)
-    content_store_has_item("/government/organisations/charity-commission", @content_item_charity_commission)
-    content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales", @content_item_wales_office)
-    content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales.cy", @content_item_wales_office_cy)
-    content_store_has_item("/government/organisations/civil-service-resourcing", @content_item_blank)
-    content_store_has_item("/government/organisations/student-loans-company", @content_item_separate_student_loans)
+    stub_content_store_has_item("/government/organisations/prime-ministers-office-10-downing-street", @content_item_no10)
+    stub_content_store_has_item("/government/organisations/attorney-generals-office", @content_item_attorney_general)
+    stub_content_store_has_item("/government/organisations/charity-commission", @content_item_charity_commission)
+    stub_content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales", @content_item_wales_office)
+    stub_content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales.cy", @content_item_wales_office_cy)
+    stub_content_store_has_item("/government/organisations/civil-service-resourcing", @content_item_blank)
+    stub_content_store_has_item("/government/organisations/student-loans-company", @content_item_separate_student_loans)
 
     stub_rummager_latest_content_requests("prime-ministers-office-10-downing-street")
     stub_rummager_latest_content_requests("attorney-generals-office")

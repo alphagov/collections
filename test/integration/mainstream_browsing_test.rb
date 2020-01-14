@@ -10,7 +10,7 @@ class MainstreamBrowsingTest < ActionDispatch::IntegrationTest
     # Add all examples to the content store and rummager to allow pages to
     # request their parents and links.
     schemas.each do |content_item|
-      content_store_has_item(content_item["base_path"], content_item)
+      stub_content_store_has_item(content_item["base_path"], content_item)
 
       rummager_has_documents_for_browse_page(
         content_item["content_id"],

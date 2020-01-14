@@ -7,7 +7,7 @@ module BrexitLandingPageSteps
   include RummagerHelpers
 
   def given_there_is_a_brexit_taxon
-    content_store_has_item(brexit_taxon_path, content_item)
+    stub_content_store_has_item(brexit_taxon_path, content_item)
   end
 
   def brexit_taxon_path

@@ -15,7 +15,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   it "is possible to visit the topic index page" do
-    content_store_has_item("/topic",
+    stub_content_store_has_item("/topic",
                            base_path: "/topic",
                            title: "Topics",
                            format: "topic",
@@ -38,7 +38,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   it "renders a topic tag page and list its subtopics" do
-    content_store_has_item("/topic/oil-and-gas", oil_and_gas_topic_item.merge(links: {
+    stub_content_store_has_item("/topic/oil-and-gas", oil_and_gas_topic_item.merge(links: {
         "children" => [
           {
             "title" => "Wells",
@@ -78,7 +78,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   it "tracks click events on topic pages" do
-    content_store_has_item("/topic",
+    stub_content_store_has_item("/topic",
                            base_path: "/topic",
                            title: "Topics",
                            format: "topic",
@@ -134,7 +134,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   it "tracks clicks events on subtopic pages" do
-    content_store_has_item("/topic/oil-and-gas", oil_and_gas_topic_item.merge(links: {
+    stub_content_store_has_item("/topic/oil-and-gas", oil_and_gas_topic_item.merge(links: {
         "children" => [
           {
             "title" => "Wells",

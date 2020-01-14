@@ -22,7 +22,7 @@ class WorldWideTaxonBrowsingTest < ActionDispatch::IntegrationTest
   def given_there_is_a_world_wide_country_taxon_without_children
     content_item = content_item_without_children(base_path, content_id)
 
-    content_store_has_item(base_path, content_item)
+    stub_content_store_has_item(base_path, content_item)
     stub_rummager_tagged_content_request(content_id, tagged_content)
   end
 
@@ -46,14 +46,14 @@ class WorldWideTaxonBrowsingTest < ActionDispatch::IntegrationTest
       "locale" => "en",
     }
 
-    content_store_has_item(child_one_content_id, child_one)
-    content_store_has_item(child_one_content_id, child_two)
+    stub_content_store_has_item(child_one_content_id, child_one)
+    stub_content_store_has_item(child_one_content_id, child_two)
 
     @content_item = content_item_without_children(base_path, content_id)
 
     @content_item["links"]["child_taxons"] = [child_one, child_two]
 
-    content_store_has_item(base_path, @content_item)
+    stub_content_store_has_item(base_path, @content_item)
 
     stub_rummager_tagged_content_request(content_id)
     stub_rummager_tagged_content_request(child_one_content_id)

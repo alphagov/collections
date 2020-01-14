@@ -109,13 +109,13 @@ def top_level_browse_pages
 end
 
 def add_browse_pages
-  content_store_has_item '/browse', links: {
+  stub_content_store_has_item '/browse', links: {
     top_level_browse_pages: top_level_browse_pages
   }
 end
 
 def add_first_level_browse_pages(child_pages:, order_type:)
-  content_store_has_item('/browse/crime-and-justice', base_path: '/browse/crime-and-justice',
+  stub_content_store_has_item('/browse/crime-and-justice', base_path: '/browse/crime-and-justice',
     links: {
       top_level_browse_pages: top_level_browse_pages,
       second_level_browse_pages: child_pages,
@@ -127,7 +127,7 @@ def add_first_level_browse_pages(child_pages:, order_type:)
 end
 
 def add_second_level_browse_pages(second_level_browse_pages)
-  content_store_has_item '/browse/crime-and-justice/judges', content_id: 'judges-content-id',
+  stub_content_store_has_item '/browse/crime-and-justice/judges', content_id: 'judges-content-id',
     title: 'Judges',
     base_path: '/browse/crime-and-justice/judges',
     links: {

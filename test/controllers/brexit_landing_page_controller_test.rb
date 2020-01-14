@@ -7,7 +7,7 @@ describe BrexitLandingPageController do
     before do
       brexit_taxon = taxon
       brexit_taxon["base_path"] = "/brexit"
-      content_store_has_item(brexit_taxon["base_path"], brexit_taxon)
+      stub_content_store_has_item(brexit_taxon["base_path"], brexit_taxon)
     end
 
     it "renders the page" do
