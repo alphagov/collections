@@ -35,7 +35,7 @@ describe ApplicationHelper do
     context "when a left to right language script" do
       it "returns nil" do
         self.stubs(:page_text_direction).returns("ltr")
-        assert_equal nil, direction_rtl_class
+        assert_nil direction_rtl_class
       end
     end
 
@@ -55,7 +55,7 @@ describe ApplicationHelper do
   describe "lang_attribute" do
     it "returns nil for default language" do
       I18n.with_locale(:en) do
-        assert_equal nil, lang_attribute
+        assert_nil lang_attribute
       end
     end
     it "returns a lang attribute string for non-default language" do
@@ -69,7 +69,7 @@ describe ApplicationHelper do
     context "when a left to right language script" do
       it "returns nil" do
         self.stubs(:page_text_direction).returns("ltr")
-        assert_equal nil, dir_attribute
+        assert_nil dir_attribute
       end
     end
 
