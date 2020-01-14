@@ -16,19 +16,19 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
 
   it "is possible to visit the topic index page" do
     stub_content_store_has_item("/topic",
-                           base_path: "/topic",
-                           title: "Topics",
-                           format: "topic",
-                           public_updated_at: 10.days.ago.iso8601,
-                           details: {},
-                           links: {
-                             children: [
-                               {
-                                 title: "Oil and Gas",
-                                 base_path: "/topic/oil-and-gas",
-                               },
-                             ],
-                           })
+                                base_path: "/topic",
+                                title: "Topics",
+                                format: "topic",
+                                public_updated_at: 10.days.ago.iso8601,
+                                details: {},
+                                links: {
+                                  children: [
+                                    {
+                                      title: "Oil and Gas",
+                                      base_path: "/topic/oil-and-gas",
+                                    },
+                                  ],
+                                })
 
     visit "/topic"
 
@@ -79,19 +79,19 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
 
   it "tracks click events on topic pages" do
     stub_content_store_has_item("/topic",
-                           base_path: "/topic",
-                           title: "Topics",
-                           format: "topic",
-                           public_updated_at: 10.days.ago.iso8601,
-                           details: {},
-                           links: {
-                             children: [
-                               {
-                                 title: "Oil and Gas",
-                                 base_path: "/topic/oil-and-gas",
-                               },
-                             ],
-                           })
+                                base_path: "/topic",
+                                title: "Topics",
+                                format: "topic",
+                                public_updated_at: 10.days.ago.iso8601,
+                                details: {},
+                                links: {
+                                  children: [
+                                    {
+                                      title: "Oil and Gas",
+                                      base_path: "/topic/oil-and-gas",
+                                    },
+                                  ],
+                                })
 
     visit "/topic"
 

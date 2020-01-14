@@ -7,19 +7,19 @@ describe SecondLevelBrowsePageController do
     describe "for a valid browse page" do
       before do
         stub_content_store_has_item("/browse/benefits/entitlement",
-                               content_id: "entitlement-content-id",
-                               title: "Entitlement",
-                               base_path: "/browse/benefits/entitlement",
-                               links: {
-                                 top_level_browse_pages: top_level_browse_pages,
-                                 second_level_browse_pages: second_level_browse_pages,
-                                 active_top_level_browse_page: [{
-                                   content_id: "content-id-for-benefits",
-                                   title: "Benefits",
-                                   base_path: "/browse/benefits",
-                                 }],
-                                 related_topics: [{ title: "A linked topic", base_path: "/browse/linked-topic" }],
-                               })
+                                    content_id: "entitlement-content-id",
+                                    title: "Entitlement",
+                                    base_path: "/browse/benefits/entitlement",
+                                    links: {
+                                      top_level_browse_pages: top_level_browse_pages,
+                                      second_level_browse_pages: second_level_browse_pages,
+                                      active_top_level_browse_page: [{
+                                        content_id: "content-id-for-benefits",
+                                        title: "Benefits",
+                                        base_path: "/browse/benefits",
+                                      }],
+                                      related_topics: [{ title: "A linked topic", base_path: "/browse/linked-topic" }],
+                                    })
 
         rummager_has_documents_for_browse_page(
           "entitlement-content-id",
