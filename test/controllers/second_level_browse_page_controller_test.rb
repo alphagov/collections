@@ -42,7 +42,7 @@ describe SecondLevelBrowsePageController do
     end
 
     it "404 if the section does not exist" do
-      content_store_does_not_have_item("/browse/crime-and-justice/frume")
+      stub_content_store_does_not_have_item("/browse/crime-and-justice/frume")
 
       get(
         :show,

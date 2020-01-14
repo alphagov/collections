@@ -17,7 +17,7 @@ describe TopicsController do
     end
 
     it "returns a 404 status for GET topic with an invalid sector tag" do
-      content_store_does_not_have_item("/topic/oil-and-gas")
+      stub_content_store_does_not_have_item("/topic/oil-and-gas")
       get :show, params: { topic_slug: "oil-and-gas" }
 
       assert_equal 404, response.status

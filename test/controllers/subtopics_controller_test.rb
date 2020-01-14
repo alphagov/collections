@@ -15,7 +15,7 @@ describe SubtopicsController do
     end
 
     it "returns a 404 status for GET subtopic with an invalid subtopic tag" do
-      content_store_does_not_have_item("/topic/oil-and-gas/coal")
+      stub_content_store_does_not_have_item("/topic/oil-and-gas/coal")
 
       get :show, params: { topic_slug: "oil-and-gas", subtopic_slug: "coal" }
 

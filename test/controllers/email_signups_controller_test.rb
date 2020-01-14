@@ -14,7 +14,7 @@ describe EmailSignupsController do
     )
 
     @invalid_subtopic_params = { topic_slug: "invalid", subtopic_slug: "subtopic" }
-    content_store_does_not_have_item("/topic/invalid/subtopic")
+    stub_content_store_does_not_have_item("/topic/invalid/subtopic")
 
     @email_signup = EmailSignup.new(nil)
     @email_signup.stubs(:save)

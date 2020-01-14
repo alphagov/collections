@@ -17,7 +17,7 @@ describe ServicesAndInformationController do
 
   describe "GET services and information page" do
     it "returns a 404 status for GET services and information with an invalid organisation id" do
-      content_store_does_not_have_item("/government/organisations/hm-revenue-customs/services-information")
+      stub_content_store_does_not_have_item("/government/organisations/hm-revenue-customs/services-information")
 
       get :index, params: { organisation_id: "hm-revenue-customs" }
 

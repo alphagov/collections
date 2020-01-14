@@ -35,7 +35,7 @@ describe BrowseController do
     end
 
     it "404 if the browse page does not exist" do
-      content_store_does_not_have_item("/browse/banana")
+      stub_content_store_does_not_have_item("/browse/banana")
 
       get :show, params: { top_level_slug: "banana" }
 
