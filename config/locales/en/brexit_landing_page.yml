@@ -1,49 +1,29 @@
 en:
   brexit_landing_page:
     meta_title: "Brexit"
-    meta_description: "Brexit information and guidance on how to prepare for a no deal Brexit."
-    chevron_banner: "Check what you need to do if there is no deal"
-    finder_heading: "Browse all information related to Brexit:"
-    page_title: "Brexit"
-    page_intro: |
-      <p>A Brexit deal has been agreed in principle with the EU.</p>
-      <p>Both the UK and the EU need to approve and sign the withdrawal agreement. They will then start to negotiate new arrangements. There would be a transition period to prepare for new rules.</p>
-      <p>The UK could still leave with no deal if the withdrawal agreement is not approved by 31 January 2020, or at the end of a transition period.</p>
-      <p>Find out what you, your family, or your business should do to be prepared if the UK leaves the EU with no deal.</p>
-      <p><a href="/get-ready-brexit-check">Check how to prepare for a no deal Brexit</a></p>
-    call_to_action_intro: "Answer a few questions to find out how you or your business should prepare."
-    all_brexit_information: "All Brexit information"
-    email_intro: "Stay up to date"
-    email: "Sign up for email alerts about Brexit"
-    browse: "Browse Brexit guidance"
-    share_links: "Share this page"
-    sections:
-      services: Services
-      guidance_and_regulation: Guidance and regulation
-      news_and_communications: News and communications
-      research_and_statistics: Research and statistics
-      policy_and_engagement: Policy papers and consultations
-      transparency: Transparency and freedom of information releases
+    meta_description: "The UK and EU have agreed an exit deal. Find out what happens next."
+    page_header: "The UK and EU have agreed an exit deal"
+    explainer_title: "What happens next"
+    explainer_text: |
+      <p>Both the UK and the EU need to ratify the withdrawal agreement by 31 January 2020.</p>
+      <p>There will then be an implementation period until 31 December 2020 while the EU and UK negotiate new arrangements.</p>
+      <p>You, your family or your business can take some actions now to prepare for the UK’s exit from the EU.</p>
+    guidance_header: "What you can do now"
+    guidance_subheader: "Actions you can take now that do not depend on negotiations."
     campaign_buckets:
       - row_title: "Preparing your business for Brexit"
         list_block: |
-          <a href="/get-ready-brexit-check" data-ecommerce-row="true" data-ecommerce-path="/get-ready-brexit-check">Check how to get your business ready for a no deal Brexit.</a>
-
-          For example, you must take action if you <a href="/prepare-export-from-uk-after-brexit" data-ecommerce-row="true" data-ecommerce-path="/prepare-export-from-uk-after-brexit">export goods to the EU</a> or <a href="/transport-goods-from-uk-by-road" data-ecommerce-row="true" data-ecommerce-path="/transport-goods-from-uk-by-road">transport goods out of the UK by road.</a>
-
-          Also check what you must do if you <a href="/prepare-import-to-uk-after-brexit" data-ecommerce-row="true" data-ecommerce-path="/prepare-import-to-uk-after-brexit">import goods from the EU</a> or <a href="/guidance/providing-services-to-any-country-in-the-eu-iceland-liechtenstein-norway-or-switzerland-after-eu-exit" data-ecommerce-row="true" data-ecommerce-path="/guidance/providing-services-to-any-country-in-the-eu-iceland-liechtenstein-norway-or-switzerland-after-eu-exit">sell services to the EU.</a>
-
-          There are different rules for <a href="/guidance/trading-and-moving-from-northern-ireland-to-ireland-in-a-no-deal-brexit" data-ecommerce-row="true" data-ecommerce-path="/guidance/trading-and-moving-from-northern-ireland-to-ireland-in-a-no-deal-brexit">moving goods between Ireland and Northern Ireland.</a>
-      - row_title: "EU funding after Brexit"
+          Check what you need to do if you:
+          <ul>
+            <li><a href="/prepare-import-to-uk-after-brexit" data-ecommerce-row="true" data-ecommerce-path="/prepare-import-to-uk-after-brexit">import goods from the EU</a></li>
+            <li><a href="/prepare-export-from-uk-after-brexit" data-ecommerce-row="true" data-ecommerce-path="/prepare-export-from-uk-after-brexit">export goods to the EU</a></li>
+            <li><a href="/transport-goods-from-uk-by-road" data-ecommerce-row="true" data-ecommerce-path="/prepare-export-from-uk-after-brexit">transport goods out of the UK by road</a></li>
+          </ul>
+      - row_title: "Staying in the UK if you’re an EU citizen"
         list_block: |
-          <a href="/guidance/european-and-domestic-funding-after-brexit" data-module="track-click" data-track-category="brexit-landing-page" data-track-action="Section link" data-track-label="/guidance/european-and-domestic-funding-after-brexit" data-track-options="&#123;&quot;dimension29&quot;:&quot;Check if your EU-funded project is covered by the UK government’s funding guarantee&quot;&#125;">Check if your EU-funded project is covered by the UK government’s funding guarantee.</a> The guarantee covers Erasmus+, Horizon 2020 and others.
-      - row_title: "Visiting the EU"
-        list_block: |
-          To visit Europe after Brexit there are things you need to do before you travel.
+          Check if you need to apply to the settlement scheme if you or your family are from the EU, or from Switzerland, Norway, Iceland or Liechtenstein.
 
-          For example, you will need to check your passport, get travel insurance which covers healthcare, and get the right driving documents.
-
-          <a href="/visit-europe-brexit" data-module="track-click" data-track-category="brexit-landing-page" data-track-action="Section link" data-track-label="/visit-europe-brexit" data-track-options="&#123;&quot;dimension29&quot;:&quot;Visit Europe after Brexit&quot;&#125;"><strong>Visit Europe after Brexit</strong></a>
+          <a href="/staying-uk-eu-citizen" data-ecommerce-row="true" data-ecommerce-path="/staying-uk-eu-citizen">Check what you need to do to stay in the UK</a>
       - row_title: "Living and working in the EU"
         list_block: |
           Living and working in an EU country after Brexit depends on the rules in that country.
@@ -52,11 +32,20 @@ en:
 
           You may also need to exchange your UK driving licence for a licence issued by the EU country where you live.
 
-          <a href="/uk-nationals-living-eu" data-module="track-click" data-track-category="brexit-landing-page" data-track-action="Section link" data-track-label="/uk-nationals-living-eu" data-track-options="&#123;&quot;dimension29&quot;:&quot;Check what you must do in the country where you live&quot;&#125;"><strong>Check what you must do in the country where you live</strong></a>
-
-      - row_title: "Staying in the UK if you’re an EU citizen"
+          <a href="/staying-uk-eu-citizen" data-module="track-click" data-track-category="brexit-landing-page" data-track-label="/staying-uk-eu-citizen">Check what you must do in the country where you live</a>
+      - row_title: "EU funding after Brexit"
         list_block: |
-          Check if you need to apply to the settlement scheme if you or your family are from the EU, or from Switzerland, Norway, Iceland or Liechtenstein.
+          <a href="https://www.gov.uk/guidance/european-and-domestic-funding-after-brexit">Check if your EU-funded project is covered by the UK government’s funding guarantee.</a> The guarantee covers Erasmus+, Horizon 2020 and others.
+    topic_section_header: "All Brexit information"
+    topic_section_subheading: "Browse all information related to Brexit:"
+    email_intro: "Stay up to date"
+    email: "Sign up for email alerts about Brexit"
 
-          <a href="/staying-uk-eu-citizen" data-module="track-click" data-track-category="brexit-landing-page" data-track-action="Section link" data-track-label="/staying-uk-eu-citizen" data-track-options="&#123;&quot;dimension29&quot;:&quot;Check what you need to do to stay in the UK&quot;&#125;"><strong>Check what you need to do to stay in the UK</strong></a>
-
+    share_links: "Share this page"
+    sections:
+      services: Services
+      guidance_and_regulation: Guidance and regulation
+      news_and_communications: News and communications
+      research_and_statistics: Research and statistics
+      policy_and_engagement: Policy papers and consultations
+      transparency: Transparency and freedom of information releases

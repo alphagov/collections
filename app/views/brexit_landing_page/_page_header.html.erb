@@ -29,34 +29,10 @@
       </div>
       <div class="govuk-grid-column-two-thirds">
         <%= render "govuk_publishing_components/components/title", {
-          title: I18n.t("brexit_landing_page.page_title"),
+          title: I18n.t("brexit_landing_page.page_header"),
           inverse: true,
           margin_bottom: 5
         } %>
-      </div>
-
-      <div class="govuk-grid-column-two-thirds landing-page__intro">
-        <%= render "govuk_publishing_components/components/govspeak", {
-        } do %>
-          <%= t('brexit_landing_page.page_intro').html_safe() %>
-        <% end %>
-      </div>
-    </div>
-
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-three-quarters">
-        <% if show_dynamic_list %>
-          <%= render "govuk_publishing_components/components/chevron_banner", {
-            href: "/get-ready-brexit-check",
-            text: I18n.t("brexit_landing_page.chevron_banner"),
-            hover_border: true,
-            data_attributes: {
-              track_category: "startButtonClicked",
-              track_action: "/get-ready-brexit-check",
-              track_label: I18n.t("brexit_landing_page.chevron_banner")
-            }
-          } %>
-        <% end %>
       </div>
     </div>
   </div>
