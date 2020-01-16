@@ -33,10 +33,6 @@ en:
           You may also need to exchange your UK driving licence for a licence issued by the EU country where you live.
 
           <a class="govuk-!-font-weight-bold" href="/uk-nationals-living-eu" data-track-category="transition-landing-page" data-track-action="/uk-nationals-living-eu" data-track-label="Check what you must do in the country where you live">Check what you must do in the country where you live</a>
-      - row_title: "EU funding after Brexit"
-        list_block: |
-          <a class="govuk-!-font-weight-bold" href="/guidance/european-and-domestic-funding-after-brexit" data-track-category="transition-landing-page" data-track-action="/guidance/european-and-domestic-funding-after-brexit" data-track-label="Check if your EU-funded project is covered by the UK government’s funding guarantee.">Check if your EU-funded project is covered by the UK government’s funding guarantee.</a> The guarantee covers Erasmus+, Horizon 2020 and others.
-
     topic_section_header: "All Brexit information"
     topic_section_subheading: "Browse all information related to Brexit:"
     email_intro: "Stay up to date"

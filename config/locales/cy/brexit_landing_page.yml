@@ -33,9 +33,6 @@ cy:
           Efallai bydd angen i chi gyfnewid eich trwydded yrru am drwydded a roddwyd gan wlad yr UE ble rydych yn byw.
 
           <a class="govuk-!-font-weight-bold" href="/uk-nationals-living-eu" data-track-category="transition-landing-page" data-track-action="/uk-nationals-living-eu" data-track-label="Gwiriwch beth sydd angen i chi wneud yn y wlad yr ydych yn byw">Gwiriwch beth sydd angen i chi wneud yn y wlad yr ydych yn byw</a>
-      - row_title: "Cyllid yr UE ar ôl Brexit"
-        list_block: |
-          <a class="govuk-!-font-weight-bold" href="/guidance/european-and-domestic-funding-after-brexit" data-track-category="transition-landing-page" data-track-action="/guidance/european-and-domestic-funding-after-brexit" data-track-label="Gwiriwch os yw eich prosiect sydd wedi ei hariannu gan yr UE yn dod o dan warrant ariannu Llywodraeth y DU.">Gwiriwch os yw eich prosiect sydd wedi ei hariannu gan yr UE yn dod o dan warrant ariannu Llywodraeth y DU.</a> TMae’r warrant yn cynnwys Erasmus +, Horizon 2020 ac eraill.
     topic_section_header: "Holl wybodaeth Brexit"
     topic_section_subheading: "Pori’r holl wybodaeth sy’n gysylltiedig â Brexit:"
     email_intro: "I gael y manylion diweddaraf"
