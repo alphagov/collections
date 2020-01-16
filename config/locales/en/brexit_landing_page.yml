@@ -15,15 +15,15 @@ en:
         list_block: |
           Check what you need to do if you:
           <ul>
-            <li><strong><a href="/prepare-import-to-uk-after-brexit" data-ecommerce-row="true" data-ecommerce-path="/prepare-import-to-uk-after-brexit">import goods from the EU</a></strong></li>
-            <li><strong><a href="/prepare-export-from-uk-after-brexit" data-ecommerce-row="true" data-ecommerce-path="/prepare-export-from-uk-after-brexit">export goods to the EU</a></strong></li>
-            <li><strong><a href="/transport-goods-from-uk-by-road" data-ecommerce-row="true" data-ecommerce-path="/prepare-export-from-uk-after-brexit">transport goods out of the UK by road</a></strong></li>
+            <li><a class="govuk-!-font-weight-bold" href="/prepare-import-to-uk-after-brexit" data-module="track-click" data-track-category="transition-landing-page" data-track-action="/prepare-import-to-uk-after-brexit" data-track-label="import goods from the EU">import goods from the EU</a></li>
+            <li><a class="govuk-!-font-weight-bold" href="/prepare-export-from-uk-after-brexit" data-module="track-click" data-track-category="transition-landing-page" data-track-action="/prepare-export-from-uk-after-brexit" data-track-label="export goods to the EU">export goods to the EU</a></li>
+            <li><a class="govuk-!-font-weight-bold" href="/transport-goods-from-uk-by-road" data-module="track-click" data-track-category="transition-landing-page" data-track-action="/transport-goods-from-uk-by-road" data-track-label="transport goods out of the UK by road">transport goods out of the UK by road</a></li>
           </ul>
       - row_title: "Staying in the UK if you’re an EU citizen"
         list_block: |
           Check if you need to apply to the settlement scheme if you or your family are from the EU, or from Switzerland, Norway, Iceland or Liechtenstein.
 
-          <strong><a href="/staying-uk-eu-citizen" data-ecommerce-row="true" data-ecommerce-path="/staying-uk-eu-citizen">Check what you need to do to stay in the UK</a></strong>
+          <a class="govuk-!-font-weight-bold" href="/staying-uk-eu-citizen" data-module="track-click" data-track-category="transition-landing-page" data-track-action="/staying-uk-eu-citizen" data-track-label="Check what you need to do to stay in the UK">Check what you need to do to stay in the UK</a>
       - row_title: "Living and working in the EU"
         list_block: |
           Living and working in an EU country after Brexit depends on the rules in that country.
@@ -32,10 +32,11 @@ en:
 
           You may also need to exchange your UK driving licence for a licence issued by the EU country where you live.
 
-          <strong><a href="/staying-uk-eu-citizen" data-module="track-click" data-track-category="brexit-landing-page" data-track-label="/staying-uk-eu-citizen">Check what you must do in the country where you live</a></strong>
+          <a class="govuk-!-font-weight-bold" href="/uk-nationals-living-eu" data-module="track-click" data-track-category="transition-landing-page" data-track-action="/uk-nationals-living-eu" data-track-label="Check what you must do in the country where you live">Check what you must do in the country where you live</a>
       - row_title: "EU funding after Brexit"
         list_block: |
-          <strong><a href="https://www.gov.uk/guidance/european-and-domestic-funding-after-brexit">Check if your EU-funded project is covered by the UK government’s funding guarantee.</a></strong> The guarantee covers Erasmus+, Horizon 2020 and others.
+          <a class="govuk-!-font-weight-bold" href="/guidance/european-and-domestic-funding-after-brexit" data-module="track-click" data-track-category="transition-landing-page" data-track-action="/guidance/european-and-domestic-funding-after-brexit" data-track-label="Check if your EU-funded project is covered by the UK government’s funding guarantee.">Check if your EU-funded project is covered by the UK government’s funding guarantee.</a> The guarantee covers Erasmus+, Horizon 2020 and others.
+
     topic_section_header: "All Brexit information"
     topic_section_subheading: "Browse all information related to Brexit:"
     email_intro: "Stay up to date"

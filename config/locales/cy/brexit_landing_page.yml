@@ -15,14 +15,15 @@ cy:
         list_block: |
           Gwiriwch beth sydd angen i chi wneud os ydych yn:
           <ul>
-            <li><strong><a href="/prepare-import-to-uk-after-brexit" data-ecommerce-row="true" data-ecommerce-path="/prepare-import-to-uk-after-brexit">mewnforio nwyddau o’r UE</a></strong></li>
-            <li><strong><a href="/prepare-export-from-uk-after-brexit" data-ecommerce-row="true" data-ecommerce-path="/prepare-export-from-uk-after-brexit">allforio nwyddau i’r UE</a></strong></li>
-            <li><strong><a href="/transport-goods-from-uk-by-road" data-ecommerce-row="true" data-ecommerce-path="/prepare-export-from-uk-after-brexit">cludo nwyddau allan o’r DU ar y ffyrdd</a></strong></li>
+            <li><a class="govuk-!-font-weight-bold" href="/prepare-import-to-uk-after-brexit" data-module="track-click" data-track-category="transition-landing-page" data-track-action="/prepare-import-to-uk-after-brexit" data-track-label="mewnforio nwyddau o’r UE">mewnforio nwyddau o’r UE</a></li>
+            <li><a class="govuk-!-font-weight-bold" href="/prepare-export-from-uk-after-brexit" data-module="track-click" data-track-category="transition-landing-page" data-track-action="/prepare-export-from-uk-after-brexit" data-track-label="allforio nwyddau i’r UE">allforio nwyddau i’r UE</a></li>
+            <li><a class="govuk-!-font-weight-bold" href="/transport-goods-from-uk-by-road" data-module="track-click" data-track-category="transition-landing-page" data-track-action="/transport-goods-from-uk-by-road" data-track-label="cludo nwyddau allan o’r DU ar y ffyrdd">cludo nwyddau allan o’r DU ar y ffyrdd</a></li>
           </ul>
       - row_title: "Aros yn y DU os ydych yn ddinesydd yr UE"
         list_block: |
           Gwiriwch os oes angen i chi gyflwyno cais am y cynllun preswylio os ydych chi neu’ch teulu yn dod o’r UE, neu o’r Swistir, Norwy, Gwlad yr Iâ neu Liechtenstein.
-          <strong><a href="/staying-uk-eu-citizen" data-ecommerce-row="true" data-ecommerce-path="/staying-uk-eu-citizen">Gwiriwch beth sydd angen i chi wneud i aros yn y DU</a></strong>
+
+          <a href="/staying-uk-eu-citizen" data-module="track-click" data-track-category="transition-landing-page" data-track-action="/staying-uk-eu-citizen" data-track-label="Gwiriwch beth sydd angen i chi wneud i aros yn y DU">Gwiriwch beth sydd angen i chi wneud i aros yn y DU</a>
       - row_title: "Byw a gweithio yn yr UE"
         list_block: |
           Mae byw a gweithio mewn gwlad yn yr UE yn ddibynnol ar reolau’r wlad honno.
@@ -31,10 +32,10 @@ cy:
 
           Efallai bydd angen i chi gyfnewid eich trwydded yrru am drwydded a roddwyd gan wlad yr UE ble rydych yn byw.
 
-          <strong><a href="/staying-uk-eu-citizen" data-module="track-click" data-track-category="brexit-landing-page" data-track-label="/staying-uk-eu-citizen">Gwiriwch beth sydd angen i chi wneud yn y wlad yr ydych yn byw</a></strong>
+          <a class="govuk-!-font-weight-bold" href="/uk-nationals-living-eu" data-module="track-click" data-track-category="transition-landing-page" data-track-action="/uk-nationals-living-eu" data-track-label="Gwiriwch beth sydd angen i chi wneud yn y wlad yr ydych yn byw">Gwiriwch beth sydd angen i chi wneud yn y wlad yr ydych yn byw</a>
       - row_title: "Cyllid yr UE ar ôl Brexit"
         list_block: |
-          <strong><a href="https://www.gov.uk/guidance/european-and-domestic-funding-after-brexit">Gwiriwch os yw eich prosiect sydd wedi ei hariannu gan yr UE yn dod o dan warrant ariannu Llywodraeth y DU.</a></strong> TMae’r warrant yn cynnwys Erasmus +, Horizon 2020 ac eraill.
+          <a class="govuk-!-font-weight-bold" href="/guidance/european-and-domestic-funding-after-brexit" data-module="track-click" data-track-category="transition-landing-page" data-track-action="/guidance/european-and-domestic-funding-after-brexit" data-track-label="Gwiriwch os yw eich prosiect sydd wedi ei hariannu gan yr UE yn dod o dan warrant ariannu Llywodraeth y DU.">Gwiriwch os yw eich prosiect sydd wedi ei hariannu gan yr UE yn dod o dan warrant ariannu Llywodraeth y DU.</a> TMae’r warrant yn cynnwys Erasmus +, Horizon 2020 ac eraill.
     topic_section_header: "Holl wybodaeth Brexit"
     topic_section_subheading: "Pori’r holl wybodaeth sy’n gysylltiedig â Brexit:"
     email_intro: "I gael y manylion diweddaraf"
