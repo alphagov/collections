@@ -1,10 +1,9 @@
 <div class="govuk-grid-row">
   <div class="govuk-body govuk-grid-column-two-thirds">
-    <%= render "govuk_publishing_components/components/heading", {
-      text: t('brexit_landing_page.all_brexit_information'),
-      padding: true,
-    } %>
-    <p class="govuk-body"><%= t('brexit_landing_page.finder_heading') %></p>
+    <h2 class="govuk-heading-m landing-page__section-title">
+      <%= t('brexit_landing_page.topic_section_header') %>
+    </h2>
+    <p class="govuk-body"><%= t('brexit_landing_page.topic_section_subheading') %></p>
 
     <%= render "components/topic-list", {
       items: supergroups

@@ -1,21 +1,30 @@
 <div class="landing-page__section"
   data-analytics-ecommerce
   data-ecommerce-start-index="1"
-  data-list-title="Brexit landing page: <%= t('brexit_landing_page.browse') %>"
+  data-list-title="Brexit landing page: <%= t('brexit_landing_page.guidance_header') %>"
   data-search-query>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h2 class="govuk-heading-m landing-page__section-title"><%= t('brexit_landing_page.browse') %></h2>
+      <h2 class="govuk-heading-l landing-page__section-title">
+        <%= t('brexit_landing_page.guidance_header') %>
+      </h2>
+       <p class="landing-page__guidance_subheader">
+        <%= t('brexit_landing_page.guidance_subheader') %>
+      </p>
     </div>
   </div>
 
   <% buckets.each do |bucket| %>
     <div class="grid-row landing-page__section-list-wrapper">
       <div class="govuk-grid-column-one-third landing-page__section-row-title">
-        <% if bucket[:row_title] %><h3 class="govuk-heading-s"><%= bucket[:row_title] %></h3><% end %>
+        <% if bucket[:row_title] %>
+          <h3 class="govuk-heading-m">
+            <%= bucket[:row_title] %>
+          </h3>
+        <% end %>
       </div>
 
-      <div class="govuk-grid-column-two-thirds landing-page__section-content">
+      <div class="govuk-grid-column-two-thirds landing-page__section-content" data-module="track-click">
         <%= render "govuk_publishing_components/components/govspeak", {
           } do %>
           <%= bucket[:list_block] %>
