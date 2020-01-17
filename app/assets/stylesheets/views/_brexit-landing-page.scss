@@ -85,7 +85,7 @@ $red: #E61E32;
 }
 
 .landing-page__section-content {
-  padding-left: 0;
+  padding-left: govuk-spacing(3);
 
   @include govuk-media-query($from: tablet) {
     padding-right: 0;
