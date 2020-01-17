@@ -25,7 +25,7 @@ class AnnouncementsPresenter
   def links
     {
       email_signup: "/email-signup?link=/government/#{slug_prefix}/#{slug_without_locale}",
-      subscribe_to_feed: "/government/#{slug_prefix}/#{slug_without_locale}.atom",
+      subscribe_to_feed: "/search/news-and-communications.atom?#{filter_key}=#{slug_without_locale}",
       link_to_news_and_communications: "/search/news-and-communications?#{filter_key}=#{slug_without_locale}",
     }
   end

@@ -110,7 +110,7 @@ describe Person do
     end
 
     it "should have link to subscription atom feed" do
-      assert_equal "/government/people/boris-johnson.atom", @person.announcements.links[:subscribe_to_feed]
+      assert_equal "/search/news-and-communications.atom?people=boris-johnson", @person.announcements.links[:subscribe_to_feed]
     end
   end
 end
