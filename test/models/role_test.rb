@@ -133,7 +133,7 @@ describe Role do
     end
 
     it "should have link to subscription atom feed" do
-      assert_equal "https://www.gov.uk/government/ministers/prime-minister.atom", @role.announcements.links[:subscribe_to_feed]
+      assert_equal "/government/ministers/prime-minister.atom", @role.announcements.links[:subscribe_to_feed]
     end
 
     it "should have link to news and communications finder" do

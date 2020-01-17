@@ -9,7 +9,7 @@ describe AnnouncementsPresenter do
     it "uses a locale-less slug in the links" do
       links = @presenter.links
       assert_equal links[:email_signup], "/email-signup?link=/government/people/boris-johnson"
-      assert_equal links[:subscribe_to_feed], "https://www.gov.uk/government/people/boris-johnson.atom"
+      assert_equal links[:subscribe_to_feed], "/government/people/boris-johnson.atom"
       assert_equal links[:link_to_news_and_communications], "/search/news-and-communications?people=boris-johnson"
     end
   end
