@@ -24,9 +24,9 @@ class AnnouncementsPresenter
 
   def links
     {
-      email_signup: "/email-signup?link=/government/#{slug_prefix}/#{slug}",
-      subscribe_to_feed: "https://www.gov.uk/government/#{slug_prefix}/#{slug}.atom",
-      link_to_news_and_communications: "/search/news-and-communications?#{filter_key}=#{slug}",
+      email_signup: "/email-signup?link=/government/#{slug_prefix}/#{slug_without_locale}",
+      subscribe_to_feed: "https://www.gov.uk/government/#{slug_prefix}/#{slug_without_locale}.atom",
+      link_to_news_and_communications: "/search/news-and-communications?#{filter_key}=#{slug_without_locale}",
     }
   end
 
