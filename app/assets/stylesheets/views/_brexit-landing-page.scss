@@ -34,6 +34,13 @@ $red: #E61E32;
   }
 }
 
+.landing-page__page_title {
+  @include govuk-font($size: 48, $weight: bold);
+  color: govuk-colour("white");
+  margin-top: govuk-spacing(7);
+  margin-bottom: govuk-spacing(4);
+}
+
 .landing-page__translation {
   @include govuk-media-query($from: tablet) {
     float: right;
