@@ -13,7 +13,7 @@
 <% end %>
 
 <header class="landing-page__header">
-  <div class="full-page-width-wrapper">
+  <div class="govuk-width-container">
     <%= render 'govuk_publishing_components/components/breadcrumbs',
       breadcrumbs: GovukPublishingComponents::AppHelpers::TaxonBreadcrumbs.new(@content_item).breadcrumbs,
       collapse_on_mobile: true,
