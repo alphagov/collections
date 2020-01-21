@@ -45,7 +45,7 @@ describe Organisations::ShowPresenter do
     organisation = Organisation.new(content_item)
     @show_presenter = Organisations::ShowPresenter.new(organisation)
 
-    expected = "<a class=\"brand__color\" href=\"/international-trade\">Department for International Trade</a>"
+    expected = "<a class=\"brand__color govuk-link\" href=\"/international-trade\">Department for International Trade</a>"
 
     assert_equal expected, @show_presenter.parent_organisations
   end
@@ -74,7 +74,7 @@ describe Organisations::ShowPresenter do
     organisation = Organisation.new(content_item)
     @show_presenter = Organisations::ShowPresenter.new(organisation)
 
-    expected = "<a class=\"brand__color\" href=\"/international-trade-1\">Dept for Trade</a> and <a class=\"brand__color\" href=\"/international-trade-2\">Second Dept for Trade</a>"
+    expected = "<a class=\"brand__color govuk-link\" href=\"/international-trade-1\">Dept for Trade</a> and <a class=\"brand__color govuk-link\" href=\"/international-trade-2\">Second Dept for Trade</a>"
 
     assert_equal expected, @show_presenter.parent_organisations
   end

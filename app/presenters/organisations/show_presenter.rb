@@ -30,7 +30,7 @@ module Organisations
         link_to(
           parent_organisation["title"],
           parent_organisation["base_path"],
-          class: "brand__color",
+          class: "brand__color govuk-link",
         )
       end
 

@@ -1,5 +1,6 @@
 $govuk-compatibility-govuktemplate: true;
 $govuk-compatibility-govukelements: true;
+$govuk-use-legacy-palette: false;
 
 // gem components
 @import 'govuk_publishing_components/all_components';

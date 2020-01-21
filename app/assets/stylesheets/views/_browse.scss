@@ -177,16 +177,22 @@
       }
 
       ul .active a {
-        background: $govuk-link-colour;
+        background: $govuk-brand-colour;
         color: govuk-colour("white");
-
-        &:hover {
-          background: $govuk-link-colour;
-        }
 
         p {
           color: govuk-colour("white");
         }
+
+        &:focus {
+          background: $govuk-focus-colour;
+          color: $govuk-focus-text-colour;
+
+          p {
+          color: $govuk-focus-text-colour;
+          }
+        }
+
       }
     }
 
