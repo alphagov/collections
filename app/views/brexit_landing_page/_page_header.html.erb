@@ -32,6 +32,13 @@
           <%= I18n.t("brexit_landing_page.page_header") %>
         </h1>
       </div>
+
+      <div class="govuk-grid-column-two-thirds landing-page__intro">
+        <%= render "govuk_publishing_components/components/govspeak", {
+        } do %>
+          <p><%= t('brexit_landing_page.page_header_explainer') %></p>
+        <% end %>
+      </div>
     </div>
   </div>
 </header>
