@@ -16,6 +16,14 @@ class PersonTest < ActionDispatch::IntegrationTest
     assert_equal page.title, "Rufus Scrimgeour - GOV.UK"
   end
 
+  it "shows schema.org Person structured data" do
+    schema_sections = page.find_all("script[type='application/ld+json']", visible: false)
+    schemas = schema_sections.map { |section| JSON.parse(section.text(:all)) }
+
+    person_schema = schemas.detect { |schema| schema["@type"] == "Person" }
+    assert_equal person_schema["name"], "Rufus Scrimgeour"
+  end
+
   def stub_person_page_content_item(base_path, name)
     content_item = GovukSchemas::RandomExample.for_schema(frontend_schema: "person").merge(
       "title" => name,
