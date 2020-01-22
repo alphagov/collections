@@ -1,3 +1,4 @@
+<% if person.biography %>
 <section id="biography" class="govuk-!-padding-bottom-9 <%= direction_rtl_class %>" <%= dir_attribute %> <%= lang_attribute %>>
   <%= render "govuk_publishing_components/components/heading", {
     text: t("people.biography"),
@@ -9,3 +10,4 @@
     <%= person.biography.html_safe %>
   <% end %>
 </section>
+<% end %>
