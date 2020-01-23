@@ -13,7 +13,7 @@
 <% end %>
 
 <header class="landing-page__header">
-  <div class="full-page-width-wrapper">
+  <div class="govuk-width-container">
     <%= render 'govuk_publishing_components/components/breadcrumbs',
       breadcrumbs: GovukPublishingComponents::AppHelpers::TaxonBreadcrumbs.new(@content_item).breadcrumbs,
       collapse_on_mobile: true,
@@ -28,11 +28,9 @@
         } %>
       </div>
       <div class="govuk-grid-column-two-thirds">
-        <%= render "govuk_publishing_components/components/title", {
-          title: I18n.t("brexit_landing_page.page_header"),
-          inverse: true,
-          margin_bottom: 5
-        } %>
+        <h1 class="landing-page__page_title">
+          <%= I18n.t("brexit_landing_page.page_header") %>
+        </h1>
       </div>
     </div>
   </div>

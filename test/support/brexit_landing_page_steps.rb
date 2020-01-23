@@ -53,7 +53,7 @@ module BrexitLandingPageSteps
   end
 
   def then_i_can_see_the_what_happens_next_section
-    assert page.has_selector?("h2.landing-page__section-title", text: "What happens next")
+    assert page.has_selector?("h2.govuk-heading-l", text: "What happens next")
   end
 
   def then_i_cannot_see_the_get_ready_section
@@ -65,7 +65,7 @@ module BrexitLandingPageSteps
   end
 
   def then_i_can_see_the_buckets_section
-    assert page.has_selector?("h2.landing-page__section-title", text: "What happens next")
+    assert page.has_selector?("h2.govuk-heading-l", text: "What happens next")
   end
 
   def and_i_can_see_an_email_subscription_link
@@ -74,7 +74,7 @@ module BrexitLandingPageSteps
   end
 
   def and_i_can_see_the_explore_topics_section
-    assert page.has_selector?("h2.landing-page__section-title", text: "All Brexit information")
+    assert page.has_selector?("h2.govuk-heading-m", text: "All Brexit information")
 
     supergroups = [
       "Services": "services",
