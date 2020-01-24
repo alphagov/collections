@@ -1,42 +1,43 @@
 cy:
   brexit_landing_page:
-    meta_title: "Brexit"
-    meta_description: "Mae’r DU a’r UE wedi cytuno ar gytundeb ymadael. Dysgwch beth fydd yn digwydd nesaf."
-    page_header: "Mae’r DU a’r UE wedi cytuno ar gytundeb ymadael"
-    explainer_title: "Beth sy’n digwydd nesaf"
+    meta_title: "Y cyfnod pontio"
+    meta_description: "Bydd y DU yn gadael yr UE. Ewch i weld beth mae’n ei olygu i chi."
+    page_header: "Bydd y DU yn gadael yr UE ar 31 Ionawr 2020"
+    page_header_explainer: "Mae'r DU a'r UE wedi cytuno ar gytundeb gadael."
+    explainer_title: "Y cyfnod pontio"
     explainer_text: |
-      <p>Mae angen i’r DU a’r UE gadarnhau’r cytundeb ymadael erbyn 31 Ionawr 2020.</p>
-      <p>Bydd cyfnod gweithredu tan 31 Rhagfyr 2020 tra bydd yr UE a’r DU yn trafod trefniadau newydd.</p>
-      <p>Gallwch chi, eich teulu neu’ch busnes gymryd rhai camau nawr i baratoi am ymadawiad y DU o’r UE.</p>
-    guidance_header: "Beth allwch wneud nawr"
-    guidance_subheader: "Camau y gallwch eu cymryd nawr sydd ddim yn ddibynnol ar drafodaethau."
+      <p>Mae angen i’r DU a’r UE gadarnhau’r cytundeb gadael erbyn 31 Ionawr 2020.</p>
+      <p>Wedyn bydd cyfnod pontio tan 31 Rhagfyr 2020 tra bydd yr UE a’r DU yn trafod trefniadau ychwanegol.</p>
+      <p>Gallwch chi, eich teulu neu eich busnes gymryd rhai camau nawr i baratoi ar gyfer ymadawiad y DU o’r UE.</p>
+    guidance_header: "Beth allwch chi ei wneud nawr"
+    guidance_subheader: "Camau y gallwch eu cymryd nawr sydd ddim yn dibynnu ar drafodaethau."
     campaign_buckets:
-      - row_title: "Paratoi eich busnes ar gyfer Brexit"
+      - row_title: "Paratoi eich busnes"
         list_block: |
-          Gwiriwch beth sydd angen i chi wneud os ydych yn:
+          Ewch i weld beth mae angen i chi ei wneud os ydych chi’n:
           <ul>
             <li><a class="govuk-!-font-weight-bold" href="/prepare-import-to-uk-after-brexit" data-track-category="transition-landing-page" data-track-action="/prepare-import-to-uk-after-brexit" data-track-label="mewnforio nwyddau o’r UE">mewnforio nwyddau o’r UE</a></li>
             <li><a class="govuk-!-font-weight-bold" href="/prepare-export-from-uk-after-brexit" data-track-category="transition-landing-page" data-track-action="/prepare-export-from-uk-after-brexit" data-track-label="allforio nwyddau i’r UE">allforio nwyddau i’r UE</a></li>
-            <li><a class="govuk-!-font-weight-bold" href="/transport-goods-from-uk-by-road" data-track-category="transition-landing-page" data-track-action="/transport-goods-from-uk-by-road" data-track-label="cludo nwyddau allan o’r DU ar y ffyrdd">cludo nwyddau allan o’r DU ar y ffyrdd</a></li>
+            <li><a class="govuk-!-font-weight-bold" href="/transport-goods-from-uk-by-road" data-track-category="transition-landing-page" data-track-action="/transport-goods-from-uk-by-road" data-track-label="cludo nwyddau o’r DU ar y ffyrdd">cludo nwyddau o’r DU ar y ffyrdd</a></li>
           </ul>
       - row_title: "Aros yn y DU os ydych yn ddinesydd yr UE"
         list_block: |
-          Gwiriwch os oes angen i chi gyflwyno cais am y cynllun preswylio os ydych chi neu’ch teulu yn dod o’r UE, neu o’r Swistir, Norwy, Gwlad yr Iâ neu Liechtenstein.
+          Holwch a oes angen i chi wneud cais ar gyfer y cynllun preswylio os ydych chi neu'ch teulu yn dod o'r UE, neu o'r Swistir, Norwy, Gwlad yr Iâ neu Liechtenstein.
 
-          <a href="/staying-uk-eu-citizen" data-track-category="transition-landing-page" data-track-action="/staying-uk-eu-citizen" data-track-label="Gwiriwch beth sydd angen i chi wneud i aros yn y DU">Gwiriwch beth sydd angen i chi wneud i aros yn y DU</a>
+          <a href="/staying-uk-eu-citizen" data-track-category="transition-landing-page" data-track-action="/staying-uk-eu-citizen" data-track-label="Ewch i weld beth mae angen i chi ei wneud er mwyn aros yn y DU">Ewch i weld beth mae angen i chi ei wneud er mwyn aros yn y DU</a>
       - row_title: "Byw a gweithio yn yr UE"
         list_block: |
-          Mae byw a gweithio mewn gwlad yn yr UE yn ddibynnol ar reolau’r wlad honno.
+          Mae byw a gweithio mewn gwlad yn yr UE yn dibynnu ar y rheolau yn y wlad honno.
 
-          Efallai bydd angen i chi gyflwyno cais am breswyliaeth. Dylech wirio os ydych yn gymwysedig am ofal iechyd.
+          Efallai y bydd angen i chi gofrestru neu wneud cais am breswyliaeth. Dylech gadarnhau beth yw’r trefniadau gofal iechyd.
 
-          Efallai bydd angen i chi gyfnewid eich trwydded yrru am drwydded a roddwyd gan wlad yr UE ble rydych yn byw.
+          Efallai y bydd angen i chi gyfnewid eich trwydded yrru o'r DU am drwydded a gyhoeddwyd gan wlad rydych chi’n byw ynddi yn yr UE.
 
-          <a class="govuk-!-font-weight-bold" href="/uk-nationals-living-eu" data-track-category="transition-landing-page" data-track-action="/uk-nationals-living-eu" data-track-label="Gwiriwch beth sydd angen i chi wneud yn y wlad yr ydych yn byw">Gwiriwch beth sydd angen i chi wneud yn y wlad yr ydych yn byw</a>
-    topic_section_header: "Holl wybodaeth Brexit"
-    topic_section_subheading: "Pori’r holl wybodaeth sy’n gysylltiedig â Brexit:"
+          <a class="govuk-!-font-weight-bold" href="/uk-nationals-living-eu" data-track-category="transition-landing-page" data-track-action="/uk-nationals-living-eu" data-track-label="Ewch i weld beth mae’n rhaid i chi ei wneud yn y wlad rydych chi’n byw ynddi">Ewch i weld beth mae’n rhaid i chi ei wneud yn y wlad rydych chi’n byw ynddi</a>
+    topic_section_header: "Yr holl wybodaeth am y cyfnod pontio"
+    topic_section_subheading: "Pori’r holl wybodaeth sy’n gysylltiedig â cyfnod pontio:"
     email_intro: "I gael y manylion diweddaraf"
-    email: "Cofrestrwch i gael hysbysiadau ebost am Brexit"
+    email: "Cofrestrwch i gael hysbysiadau drwy e-bost am y cyfnod pontio"
     share_links: "Rhannu’r dudalen hon"
     sections:
       services: Gwasanaethau
