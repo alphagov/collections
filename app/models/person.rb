@@ -93,8 +93,8 @@ private
   def role_appointments(current:)
     links
       .fetch("role_appointments", [])
-      .filter { |role_appointment| role_appointment["details"]["current"] == current }
-      .sort_by { |role_appointment| role_appointment["details"]["person_appointment_order"] }
+      .filter { |role_appointment| role_appointment.dig("details", "current") == current }
+      .sort_by { |role_appointment| role_appointment.dig("details", "person_appointment_order") }
   end
 
   def current_role_appointments
@@ -130,6 +130,6 @@ private
   end
 
   def available_translations
-    links["available_translations"].map(&:symbolize_keys)
+    links["available_translations"]&.map(&:symbolize_keys) || []
   end
 end
