@@ -12,6 +12,14 @@ en:
     guidance_header: "What you can do now"
     guidance_subheader: "Actions you can take now that do not depend on negotiations."
     campaign_buckets:
+      - row_title: "Preparing your business"
+        list_block: |
+          Check what you need to do if you:
+          <ul>
+            <li><a class="govuk-!-font-weight-bold" href="/prepare-import-to-uk-after-brexit" data-track-category="transition-landing-page" data-track-action="/prepare-import-to-uk-after-brexit" data-track-label="import goods from the EU">import goods from the EU</a></li>
+            <li><a class="govuk-!-font-weight-bold" href="/prepare-export-from-uk-after-brexit" data-track-category="transition-landing-page" data-track-action="/prepare-export-from-uk-after-brexit" data-track-label="export goods to the EU">export goods to the EU</a></li>
+            <li><a class="govuk-!-font-weight-bold" href="/transport-goods-from-uk-by-road" data-track-category="transition-landing-page" data-track-action="/transport-goods-from-uk-by-road" data-track-label="transport goods out of the UK by road">transport goods out of the UK by road</a></li>
+          </ul>
       - row_title: "Staying in the UK if you’re an EU citizen"
         list_block: |
           Check if you need to apply to the settlement scheme if you or your family are from the EU, or from Switzerland, Norway, Iceland or Liechtenstein.
