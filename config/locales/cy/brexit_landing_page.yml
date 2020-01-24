@@ -12,6 +12,14 @@ cy:
     guidance_header: "Beth allwch chi ei wneud nawr"
     guidance_subheader: "Camau y gallwch eu cymryd nawr sydd ddim yn dibynnu ar drafodaethau."
     campaign_buckets:
+      - row_title: "Paratoi eich busnes"
+        list_block: |
+          Ewch i weld beth mae angen i chi ei wneud os ydych chi’n:
+          <ul>
+            <li><a class="govuk-!-font-weight-bold" href="/prepare-import-to-uk-after-brexit" data-track-category="transition-landing-page" data-track-action="/prepare-import-to-uk-after-brexit" data-track-label="mewnforio nwyddau o’r UE">mewnforio nwyddau o’r UE</a></li>
+            <li><a class="govuk-!-font-weight-bold" href="/prepare-export-from-uk-after-brexit" data-track-category="transition-landing-page" data-track-action="/prepare-export-from-uk-after-brexit" data-track-label="allforio nwyddau i’r UE">allforio nwyddau i’r UE</a></li>
+            <li><a class="govuk-!-font-weight-bold" href="/transport-goods-from-uk-by-road" data-track-category="transition-landing-page" data-track-action="/transport-goods-from-uk-by-road" data-track-label="cludo nwyddau o’r DU ar y ffyrdd">cludo nwyddau o’r DU ar y ffyrdd</a></li>
+          </ul>
       - row_title: "Aros yn y DU os ydych yn ddinesydd yr UE"
         list_block: |
           Holwch a oes angen i chi wneud cais ar gyfer y cynllun preswylio os ydych chi neu'ch teulu yn dod o'r UE, neu o'r Swistir, Norwy, Gwlad yr Iâ neu Liechtenstein.
