@@ -1,17 +1,18 @@
 en:
   brexit_landing_page:
-    meta_title: "Brexit"
-    meta_description: "The UK and EU have agreed an exit deal. Find out what happens next."
-    page_header: "The UK and EU have agreed an exit deal"
-    explainer_title: "What happens next"
+    meta_title: "The transition period"
+    meta_description: "The UK will leave the EU. Find out what this means for you."
+    page_header: "The UK leaves the EU on 31 January 2020"
+    page_header_explainer: "An exit deal has been agreed between the UK and the EU."
+    explainer_title: "The transition period"
     explainer_text: |
       <p>Both the UK and the EU need to ratify the withdrawal agreement by 31 January 2020.</p>
-      <p>There will then be an implementation period until 31 December 2020 while the EU and UK negotiate new arrangements.</p>
+      <p>There will then be a transition period until 31 December 2020 while the EU and UK negotiate additional arrangements.</p>
       <p>You, your family or your business can take some actions now to prepare for the UK’s exit from the EU.</p>
     guidance_header: "What you can do now"
     guidance_subheader: "Actions you can take now that do not depend on negotiations."
     campaign_buckets:
-      - row_title: "Preparing your business for Brexit"
+      - row_title: "Preparing your business"
         list_block: |
           Check what you need to do if you:
           <ul>
@@ -26,18 +27,17 @@ en:
           <a class="govuk-!-font-weight-bold" href="/staying-uk-eu-citizen" data-track-category="transition-landing-page" data-track-action="/staying-uk-eu-citizen" data-track-label="Check what you need to do to stay in the UK">Check what you need to do to stay in the UK</a>
       - row_title: "Living and working in the EU"
         list_block: |
-          Living and working in an EU country after Brexit depends on the rules in that country.
+          Living and working in an EU country depends on the rules in that country.
 
           You may need to register or apply for residency. You should check that you’re covered for healthcare.
 
           You may also need to exchange your UK driving licence for a licence issued by the EU country where you live.
 
           <a class="govuk-!-font-weight-bold" href="/uk-nationals-living-eu" data-track-category="transition-landing-page" data-track-action="/uk-nationals-living-eu" data-track-label="Check what you must do in the country where you live">Check what you must do in the country where you live</a>
-    topic_section_header: "All Brexit information"
-    topic_section_subheading: "Browse all information related to Brexit:"
+    topic_section_header: "All transition period information"
+    topic_section_subheading: "Browse all information related to the transition period"
     email_intro: "Stay up to date"
-    email: "Sign up for email alerts about Brexit"
-
+    email: "Sign up for email alerts about transition"
     share_links: "Share this page"
     sections:
       services: Services
