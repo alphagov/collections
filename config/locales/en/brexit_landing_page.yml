@@ -43,3 +43,51 @@ en:
       research_and_statistics: Research and statistics
       policy_and_engagement: Policy papers and consultations
       transparency: Transparency and freedom of information releases
+  transition_landing_page:
+    meta_title: Integration Test
+    meta_description: Integration Test
+    page_header: Integration Test
+    page_header_explainer: Integration Test
+    explainer_title: Integration Test
+    explainer_text: |
+      <p>Integration Test</p>
+      <p>Integration Test</p>
+      <p>Integration Test</p>
+      <p><a href="https://duckduckgo.com">Now with added link</a></p>
+    guidance_header: "Integration Test"
+    guidance_subheader: "Integration Test"
+    campaign_buckets:
+      - row_title: "Preparing your business"
+        list_block: |
+          Check what you need to do if you:
+          <ul>
+            <li><a class="govuk-!-font-weight-bold" href="/prepare-import-to-uk-after-brexit" data-track-category="transition-landing-page" data-track-action="/prepare-import-to-uk-after-brexit" data-track-label="import goods from the EU">import goods from the EU</a></li>
+            <li><a class="govuk-!-font-weight-bold" href="/prepare-export-from-uk-after-brexit" data-track-category="transition-landing-page" data-track-action="/prepare-export-from-uk-after-brexit" data-track-label="export goods to the EU">export goods to the EU</a></li>
+            <li><a class="govuk-!-font-weight-bold" href="/transport-goods-from-uk-by-road" data-track-category="transition-landing-page" data-track-action="/transport-goods-from-uk-by-road" data-track-label="transport goods out of the UK by road">transport goods out of the UK by road</a></li>
+          </ul>
+      - row_title: "Staying in the UK if you’re an EU citizen"
+        list_block: |
+          Check if you need to apply to the settlement scheme if you or your family are from the EU, or from Switzerland, Norway, Iceland or Liechtenstein.
+
+          <a class="govuk-!-font-weight-bold" href="/staying-uk-eu-citizen" data-track-category="transition-landing-page" data-track-action="/staying-uk-eu-citizen" data-track-label="Check what you need to do to stay in the UK">Check what you need to do to stay in the UK</a>
+      - row_title: "Living and working in the EU"
+        list_block: |
+          Living and working in an EU country depends on the rules in that country.
+
+          You may need to register or apply for residency. You should check that you’re covered for healthcare.
+
+          You may also need to exchange your UK driving licence for a licence issued by the EU country where you live.
+
+          <a class="govuk-!-font-weight-bold" href="/uk-nationals-living-eu" data-track-category="transition-landing-page" data-track-action="/uk-nationals-living-eu" data-track-label="Check what you must do in the country where you live">Check what you must do in the country where you live</a
+    topic_section_header: Integration Test
+    topic_section_subheading: Integration Test
+    email_intro: Integration Test
+    email: Integration Test
+    share_links: Integration Test
+    sections:
+      services: Services
+      guidance_and_regulation: Guidance and regulation
+      news_and_communications: News and communications
+      research_and_statistics: Research and statistics
+      policy_and_engagement: Policy papers and consultations
+      transparency: Transparency and freedom of information releases
