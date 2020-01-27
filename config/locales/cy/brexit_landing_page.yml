@@ -3,23 +3,20 @@ cy:
     meta_title: "Y cyfnod pontio"
     meta_description: "Bydd y DU yn gadael yr UE. Ewch i weld beth mae’n ei olygu i chi."
     page_header: "Bydd y DU yn gadael yr UE ar 31 Ionawr 2020"
-    page_header_explainer: "Mae'r DU a'r UE wedi cytuno ar gytundeb gadael."
+    page_header_explainer: "Dysgwch beth mae hyn yn golygu i chi."
     explainer_title: "Y cyfnod pontio"
     explainer_text: |
-      <p>Mae angen i’r DU a’r UE gadarnhau’r cytundeb gadael erbyn 31 Ionawr 2020.</p>
-      <p>Wedyn bydd cyfnod pontio tan 31 Rhagfyr 2020 tra bydd yr UE a’r DU yn trafod trefniadau ychwanegol.</p>
-      <p>Gallwch chi, eich teulu neu eich busnes gymryd rhai camau nawr i baratoi ar gyfer ymadawiad y DU o’r UE.</p>
+      <p>Ar ôl 31 Ionawr 2020 bydd cyfnod pontio tan ddiwedd 2020, tra bod y DU a'r UE yn trafod trefniadau ychwanegol.</p>
+      <p>Bydd y rheolau cyfredol ar fasnach, teithio a busnes ar gyfer y DU a’r UE yn parhau i fod yn berthnasol yn ystod y cyfnod pontio.</p>
+      <p>Gallwch chi, eich teulu neu’ch busnes gymryd rhai camau nawr i baratoi ar gyfer 2021.</p>
     guidance_header: "Beth allwch chi ei wneud nawr"
     guidance_subheader: "Camau y gallwch eu cymryd nawr sydd ddim yn dibynnu ar drafodaethau."
     campaign_buckets:
       - row_title: "Paratoi eich busnes"
         list_block: |
-          Ewch i weld beth mae angen i chi ei wneud os ydych chi’n:
-          <ul>
-            <li><a class="govuk-!-font-weight-bold" href="/prepare-import-to-uk-after-brexit" data-track-category="transition-landing-page" data-track-action="/prepare-import-to-uk-after-brexit" data-track-label="mewnforio nwyddau o’r UE">mewnforio nwyddau o’r UE</a></li>
-            <li><a class="govuk-!-font-weight-bold" href="/prepare-export-from-uk-after-brexit" data-track-category="transition-landing-page" data-track-action="/prepare-export-from-uk-after-brexit" data-track-label="allforio nwyddau i’r UE">allforio nwyddau i’r UE</a></li>
-            <li><a class="govuk-!-font-weight-bold" href="/transport-goods-from-uk-by-road" data-track-category="transition-landing-page" data-track-action="/transport-goods-from-uk-by-road" data-track-label="cludo nwyddau o’r DU ar y ffyrdd">cludo nwyddau o’r DU ar y ffyrdd</a></li>
-          </ul>
+          Os ydych yn symud nwyddau i mewn neu allan o’r UE, bydd angen <a class="govuk-!-font-weight-bold" href="/eori" data-track-category="transition-landing-page" data-track-action="/eori" data-track-label="rhif EORI arnoch">rhif EORI arnoch</a>.
+
+          Dylech hefyd benderfynu sut rydych am wneud datganiadau tollau ac os angen i chi gael <a class="govuk-!-font-weight-bold" href="/guidance/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-category="transition-landing-page" data-track-action="/guidance/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-label="rhywun i ddelio â’r tollau ar eich rhan">rhywun i ddelio â’r tollau ar eich rhan</a>.
       - row_title: "Aros yn y DU os ydych yn ddinesydd yr UE"
         list_block: |
           Holwch a oes angen i chi wneud cais ar gyfer y cynllun preswylio os ydych chi neu'ch teulu yn dod o'r UE, neu o'r Swistir, Norwy, Gwlad yr Iâ neu Liechtenstein.
@@ -37,7 +34,7 @@ cy:
     topic_section_header: "Yr holl wybodaeth am y cyfnod pontio"
     topic_section_subheading: "Porwch yr holl wybodaeth sy'n gysylltiedig â'r cyfnod pontio:"
     email_intro: "I gael y manylion diweddaraf"
-    email: "Cofrestrwch i gael hysbysiadau drwy e-bost am y cyfnod pontio"
+    email: "Cofrestrwch i gael hysbysiadau ebost am y cyfnod pontio"
     share_links: "Rhannu’r dudalen hon"
     sections:
       services: Gwasanaethau

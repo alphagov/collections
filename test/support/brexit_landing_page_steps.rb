@@ -70,7 +70,7 @@ module BrexitLandingPageSteps
 
   def and_i_can_see_an_email_subscription_link
     assert page.has_selector?('a[href="/email-signup/?topic=' + brexit_taxon_path + '"]')
-    assert page.has_text?("Sign up for email alerts")
+    assert page.has_text?("Sign up for email alerts about the transition period")
   end
 
   def and_i_can_see_the_explore_topics_section
