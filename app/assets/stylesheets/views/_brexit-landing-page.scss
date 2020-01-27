@@ -73,7 +73,9 @@ $red: #E61E32;
     border-top: 1px solid govuk-colour("mid-grey", $legacy: "grey-2");
     content: "";
     display: block;
-    margin: 0 govuk-spacing(3) govuk-spacing(6);
+    margin-right: govuk-spacing(3);
+    margin-left: govuk-spacing(3);
+    @include govuk-responsive-margin(6, "bottom");
   }
 }
 
