@@ -3,23 +3,20 @@ en:
     meta_title: "The transition period"
     meta_description: "The UK will leave the EU. Find out what this means for you."
     page_header: "The UK leaves the EU on 31 January 2020"
-    page_header_explainer: "An exit deal has been agreed between the UK and the EU."
+    page_header_explainer: "Find out what this means for you."
     explainer_title: "The transition period"
     explainer_text: |
-      <p>Both the UK and the EU need to ratify the withdrawal agreement by 31 January 2020.</p>
-      <p>There will then be a transition period until 31 December 2020 while the EU and UK negotiate additional arrangements.</p>
-      <p>You, your family or your business can take some actions now to prepare for the UK’s exit from the EU.</p>
+      <p>After 31 January 2020 there will be a transition period until the end of 2020, while the UK and EU negotiate additional arrangements.</p>
+      <p>The current rules on trade, travel, and business for the UK and EU will continue to apply during the transition period.</p>
+      <p>You, your family or your business can take some actions now to prepare for 2021.</p>
     guidance_header: "What you can do now"
     guidance_subheader: "Actions you can take now that do not depend on negotiations."
     campaign_buckets:
       - row_title: "Preparing your business"
         list_block: |
-          Check what you need to do if you:
-          <ul>
-            <li><a class="govuk-!-font-weight-bold" href="/prepare-import-to-uk-after-brexit" data-track-category="transition-landing-page" data-track-action="/prepare-import-to-uk-after-brexit" data-track-label="import goods from the EU">import goods from the EU</a></li>
-            <li><a class="govuk-!-font-weight-bold" href="/prepare-export-from-uk-after-brexit" data-track-category="transition-landing-page" data-track-action="/prepare-export-from-uk-after-brexit" data-track-label="export goods to the EU">export goods to the EU</a></li>
-            <li><a class="govuk-!-font-weight-bold" href="/transport-goods-from-uk-by-road" data-track-category="transition-landing-page" data-track-action="/transport-goods-from-uk-by-road" data-track-label="transport goods out of the UK by road">transport goods out of the UK by road</a></li>
-          </ul>
+          If you move goods into or out of the EU, you must <a class="govuk-!-font-weight-bold" href="/eori" data-track-category="transition-landing-page" data-track-action="/eori" data-track-label="get an EORI number">get an EORI number</a>.
+
+          You should also decide how you want to make customs declarations and whether you need to <a class="govuk-!-font-weight-bold" href="/guidance/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-category="transition-landing-page" data-track-action="/guidance/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-label="get someone to deal with customs for you">get someone to deal with customs for you</a>.
       - row_title: "Staying in the UK if you’re an EU citizen"
         list_block: |
           Check if you need to apply to the settlement scheme if you or your family are from the EU, or from Switzerland, Norway, Iceland or Liechtenstein.
@@ -37,7 +34,7 @@ en:
     topic_section_header: "All transition period information"
     topic_section_subheading: "Browse all information related to the transition period"
     email_intro: "Stay up to date"
-    email: "Sign up for email alerts about transition"
+    email: "Sign up for email alerts about the transition period"
     share_links: "Share this page"
     sections:
       services: Services
