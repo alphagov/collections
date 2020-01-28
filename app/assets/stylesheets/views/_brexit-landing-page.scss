@@ -119,3 +119,10 @@ $red: #E61E32;
 .landing-page__finders {
   margin-bottom: 0;
 }
+
+.landing-page__comms-video {
+  @include govuk-media-query($from: "tablet") {
+    position: relative;
+    top: -15px;
+  }
+}

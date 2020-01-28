@@ -11,6 +11,20 @@ cy:
       <p>Bydd rheolau newydd yn dod i rym ar 1 Ionawr 2021.</p>
       <p>Dylech baratoi nawr a thanysgrifio i ddiweddariadau ebost am unrhyw drefniadau ychwanegol.</p>
       <p><a class="govuk-!-font-weight-bold" href="/transition-check" data-track-category="transition-landing-page" data-track-action="/transition-check" data-track-label="Gwiriwch sut i baratoi ar gyfer y rheolau newydd yn 2021">Gwiriwch sut i baratoi ar gyfer y rheolau newydd yn 2021</a>
+    comms:
+      links:
+      - link:
+          text: "This is a really interesting link"
+          path: "/"
+          description: "This is a description"
+      - link:
+          text: "This is a second interesting link"
+          path: "/"
+          description: "This is a description"
+      - link:
+          text: "This is a third interesting link"
+          path: "/"
+          description: "This is a description"
     guidance_header: "Beth allwch chi wneud nawr"
     guidance_subheader: "Camau y gallwch eu cymryd nawr sydd ddim yn ddibynnol ar drafodaethau."
     campaign_buckets:

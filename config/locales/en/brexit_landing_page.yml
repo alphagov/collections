@@ -11,6 +11,23 @@ en:
       <p>New rules will take effect on 1 January 2021.</p>
       <p>You should prepare now and subscribe to email updates about any additional arrangements.</p>
       <p><a class="govuk-!-font-weight-bold" href="/transition-check" data-track-category="transition-landing-page" data-track-action="/transition-check" data-track-label="Check how to get ready for new rules in 2021">Check how to get ready for new rules in 2021</a></p>
+    comms:
+      links:
+      - link:
+          text: "This is a really interesting link"
+          path: "/"
+          description: "This is a description"
+        metadata:
+          public_updated_at: 2015-09-24 16:42:48
+          document_type: "Statutory guidance"
+      - link:
+          text: "This is a second interesting link"
+          path: "/"
+          description: "This is a description"
+      - link:
+          text: "This is a third interesting link"
+          path: "/"
+          description: "This is a description"
     guidance_header: "What you can do now"
     guidance_subheader: "Actions you can take now that do not depend on negotiations."
     campaign_buckets:
