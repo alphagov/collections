@@ -2,7 +2,7 @@ require "yaml"
 require "govspeak"
 
 class BrexitLandingPagePresenter
-  attr_reader :taxon, :buckets
+  attr_reader :taxon, :buckets, :comms
   delegate(
     :title,
     :base_path,
@@ -12,6 +12,7 @@ class BrexitLandingPagePresenter
   def initialize(taxon)
     @taxon = taxon
     @buckets = fetch_buckets
+    @comms = fetch_comms
   end
 
   def supergroup_sections
@@ -55,6 +56,13 @@ private
     buckets.each do |bucket|
       bucket[:list_block] = convert_to_govspeak(bucket[:list_block])
     end
+  end
+
+  def fetch_comms
+    comms = I18n.t("transition_landing_page.comms")
+    comms[:video][:transcript] = convert_to_govspeak(comms[:video][:transcript]) if comms[:video]
+
+    comms
   end
 
   def convert_to_govspeak(markdown)

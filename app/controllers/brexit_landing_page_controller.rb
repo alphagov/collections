@@ -11,6 +11,7 @@ class BrexitLandingPageController < ApplicationController
       presented_taxon: presented_taxon,
       presentable_section_items: presentable_section_items,
       show_dynamic_list: show_dynamic_list?,
+      show_comms: show_comms?,
     }
   end
 
@@ -35,6 +36,10 @@ private
 
   def show_dynamic_list?
     false
+  end
+
+  def show_comms?
+    true
   end
 
   def switch_locale(&action)

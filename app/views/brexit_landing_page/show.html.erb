@@ -12,6 +12,10 @@
 
 <%= render partial: 'explainer' %>
 
+<% if show_comms %>
+  <%= render partial: 'comms', locals: { comms: presented_taxon.comms } %>
+<% end %>
+
 <div class="landing-page__buckets govuk-width-container">
   <%= render partial: 'buckets', locals: { buckets: presented_taxon.buckets } %>
 </div>
