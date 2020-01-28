@@ -1,4 +1,7 @@
 class BrexitLandingPageController < ApplicationController
+  skip_before_action :set_expiry
+  before_action -> { set_expiry(1.minute) }
+
   around_action :switch_locale
 
   def show
