@@ -44,50 +44,50 @@ cy:
       policy_and_engagement: Polisi ac ymgynghoriadau
       transparency: Tryloywder a datganiadau rhyddid gwybodaeth
   transition_landing_page:
-    meta_title: Integration Test
-    meta_description: Integration Test
-    page_header: Integration Test
-    page_header_explainer: Integration Test
-    explainer_title: Integration Test
+    meta_title: "Y cyfnod pontio"
+    meta_description: "Mae’r DU wedi gadael yr UE. Ewch i weld beth mae’n ei olygu i chi."
+    page_header: Mae’r DU wedi gadael yr UE
+    page_header_explainer: Darganfyddwch beth mae hyn yn ei olygu i chi.
+    explainer_title: Y cyfnod pontio
     explainer_text: |
-      <p>Integration Test</p>
-      <p>Integration Test</p>
-      <p>Integration Test</p>
-      <p><a href="https://duckduckgo.com">Now with added link</a></p>
-    guidance_header: "Integration Test"
-    guidance_subheader: "Integration Test"
+      <p>Bydd cyfnod pontio tan ddiwedd 2020 tra bod y DU a’r UE yn trafod trefniadau ychwanegol.</p>
+      <p>Bydd y rheolau cyfredol ar fasnach, teithio a busnes ar gyfer y DU a’r UE yn parhau i fod yn berthnasol yn ystod y cyfnod pontio.</p>
+      <p>Bydd rheolau newydd yn dod i rym ar 1 Ionawr 2021.</p>
+      <p>Dylech baratoi nawr a thanysgrifio i ddiweddariadau ebost am unrhyw drefniadau ychwanegol.</p>
+      <p><a class="govuk-!-font-weight-bold" href="/transition-check" data-track-category="transition-landing-page" data-track-action="/transition-check" data-track-label="Gwiriwch sut i baratoi ar gyfer y rheolau newydd yn 2021">Gwiriwch sut i baratoi ar gyfer y rheolau newydd yn 2021</a>
+    guidance_header: "Beth allwch chi wneud nawr"
+    guidance_subheader: "Camau y gallwch eu cymryd nawr sydd ddim yn ddibynnol ar drafodaethau."
     campaign_buckets:
       - row_title: "Paratoi eich busnes"
         list_block: |
-          Ewch i weld beth mae angen i chi ei wneud os ydych chi’n:
+          Ar ôl 1 Ionawr 2021, bydd angen i chi wneud datganiadau tollau i symud nwyddau i mewn ac allan o’r UE. Dylech chi:
           <ul>
-            <li><a class="govuk-!-font-weight-bold" href="/prepare-import-to-uk-after-brexit" data-track-category="transition-landing-page" data-track-action="/prepare-import-to-uk-after-brexit" data-track-label="mewnforio nwyddau o’r UE">mewnforio nwyddau o’r UE</a></li>
-            <li><a class="govuk-!-font-weight-bold" href="/prepare-export-from-uk-after-brexit" data-track-category="transition-landing-page" data-track-action="/prepare-export-from-uk-after-brexit" data-track-label="allforio nwyddau i’r UE">allforio nwyddau i’r UE</a></li>
-            <li><a class="govuk-!-font-weight-bold" href="/transport-goods-from-uk-by-road" data-track-category="transition-landing-page" data-track-action="/transport-goods-from-uk-by-road" data-track-label="cludo nwyddau o’r DU ar y ffyrdd">cludo nwyddau o’r DU ar y ffyrdd</a></li>
+            <li><a class="govuk-!-font-weight-bold" href="/eori" data-track-category="transition-landing-page" data-track-action="/eori" data-track-label="gael rhif EORI">gael rhif EORI</a> os nad oes gennych un yn barod</li>
+            <li>penderfynu sut yr hoffech wneud datganiadau tollau ac os oes angen i chi gael <a class="govuk-!-font-weight-bold" href="/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-category="transition-landing-page" data-track-action="/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-label="rhywun i ddelio â’r tollau ar eich rhan">rhywun i ddelio â’r tollau ar eich rhan</a>.</li>
           </ul>
-      - row_title: "Aros yn y DU os ydych yn ddinesydd yr UE"
+      - row_title: "Aros yn y DU os ydych yn ddinesydd o’r UE"
         list_block: |
-          Holwch a oes angen i chi wneud cais ar gyfer y cynllun preswylio os ydych chi neu'ch teulu yn dod o'r UE, neu o'r Swistir, Norwy, Gwlad yr Iâ neu Liechtenstein.
+          Gwiriwch os oes angen i chi gyflwyno cais i’r cynllun setliad os ydych chi, neu’ch teulu, yn dod o’r UE, neu o’r Swistir, Norwy, Gwlad yr Iâ neu Liechtenstein.
 
-          <a href="/staying-uk-eu-citizen" data-track-category="transition-landing-page" data-track-action="/staying-uk-eu-citizen" data-track-label="Ewch i weld beth mae angen i chi ei wneud er mwyn aros yn y DU">Ewch i weld beth mae angen i chi ei wneud er mwyn aros yn y DU</a>
+          <a href="/staying-uk-eu-citizen" data-track-category="transition-landing-page" data-track-action="/staying-uk-eu-citizen" data-track-label="Gwiriwch beth sydd angen i chi wneud i aros yn y DU">Gwiriwch beth sydd angen i chi wneud i aros yn y DU</a>
       - row_title: "Byw a gweithio yn yr UE"
         list_block: |
-          Mae byw a gweithio mewn gwlad yn yr UE yn dibynnu ar y rheolau yn y wlad honno.
+          Mae byw a gweithio mewn gwlad yr UE yn ddibynnol ar y rheolau yn y wlad honno.
 
-          Efallai y bydd angen i chi gofrestru neu wneud cais am breswyliaeth. Dylech gadarnhau beth yw’r trefniadau gofal iechyd.
+          Efallai bydd angen i chi gofrestru neu gyflwyno cais am breswyliaeth. Dylech chi wirio os ydych chi’n gymwys am ofal iechyd.
 
-          Efallai y bydd angen i chi gyfnewid eich trwydded yrru o'r DU am drwydded a gyhoeddwyd gan wlad rydych chi’n byw ynddi yn yr UE.
+          Efallai bydd angen i chi gyfnewid eich trwydded yrru DU am drwydded a roddir gan wlad yr UE ble rydych yn byw.
 
-          <a class="govuk-!-font-weight-bold" href="/uk-nationals-living-eu" data-track-category="transition-landing-page" data-track-action="/uk-nationals-living-eu" data-track-label="Ewch i weld beth mae’n rhaid i chi ei wneud yn y wlad rydych chi’n byw ynddi">Ewch i weld beth mae’n rhaid i chi ei wneud yn y wlad rydych chi’n byw ynddi</a>
-    topic_section_header: Integration Test
-    topic_section_subheading: Integration Test
-    email_intro: Integration Test
-    email: Integration Test
-    share_links: Integration Test
+          <a class="govuk-!-font-weight-bold" href="/uk-nationals-living-eu" data-track-category="transition-landing-page" data-track-action="/uk-nationals-living-eu" data-track-label="Gwiriwch beth sydd angen i chi wneud yn y wlad yr ydych yn byw ynddi">Gwiriwch beth sydd angen i chi wneud yn y wlad yr ydych yn byw ynddi</a>
+    topic_section_header: Holl wybodaeth y cyfnod pontio
+    topic_section_subheading: Pori’r holl wybodaeth sy’n berthnasol i’r cyfnod pontio
+    email_intro: "I gael y manylion diweddaraf"
+    email: "Cofrestrwch i gael hysbysiadau ebost am y cyfnod pontio"
+    share_links: "Rhannu’r dudalen hon"
     sections:
-      services: Services
-      guidance_and_regulation: Guidance and regulation
-      news_and_communications: News and communications
-      research_and_statistics: Research and statistics
-      policy_and_engagement: Policy papers and consultations
-      transparency: Transparency and freedom of information releases
+      services: Gwasanaethau
+      guidance_and_regulation: Canllawiau a rheoliadau
+      news_and_communications: Newyddion a chyfathrebu
+      research_and_statistics: Ymchwil ag ystadegau
+      policy_and_engagement: Polisi ac ymgynghoriadau
+      transparency: Tryloywder a datganiadau rhyddid gwybodaeth

@@ -44,26 +44,26 @@ en:
       policy_and_engagement: Policy papers and consultations
       transparency: Transparency and freedom of information releases
   transition_landing_page:
-    meta_title: Integration Test
-    meta_description: Integration Test
-    page_header: Integration Test
-    page_header_explainer: Integration Test
-    explainer_title: Integration Test
+    meta_title: The transition period
+    meta_description: The UK has left the EU. Find out what this means for you.
+    page_header: The UK has left the EU
+    page_header_explainer: Find out what this means for you.
+    explainer_title: The transition period
     explainer_text: |
-      <p>Integration Test</p>
-      <p>Integration Test</p>
-      <p>Integration Test</p>
-      <p><a href="https://duckduckgo.com">Now with added link</a></p>
-    guidance_header: "Integration Test"
-    guidance_subheader: "Integration Test"
+      <p>There is now a transition period until the end of 2020 while the UK and EU negotiate additional arrangements.</p>
+      <p>The current rules on trade, travel, and business for the UK and EU will continue to apply during the transition period.</p>
+      <p>New rules will take effect on 1 January 2021.</p>
+      <p>You should prepare now and subscribe to email updates about any additional arrangements.</p>
+      <p><a class="govuk-!-font-weight-bold" href="/transition-check" data-track-category="transition-landing-page" data-track-action="/transition-check" data-track-label="Check how to get ready for new rules in 2021">Check how to get ready for new rules in 2021</a></p>
+    guidance_header: "What you can do now"
+    guidance_subheader: "Actions you can take now that do not depend on negotiations."
     campaign_buckets:
       - row_title: "Preparing your business"
         list_block: |
-          Check what you need to do if you:
+          From 1 January 2021 you will need to make customs declarations to move goods into and out of the EU. You should:
           <ul>
-            <li><a class="govuk-!-font-weight-bold" href="/prepare-import-to-uk-after-brexit" data-track-category="transition-landing-page" data-track-action="/prepare-import-to-uk-after-brexit" data-track-label="import goods from the EU">import goods from the EU</a></li>
-            <li><a class="govuk-!-font-weight-bold" href="/prepare-export-from-uk-after-brexit" data-track-category="transition-landing-page" data-track-action="/prepare-export-from-uk-after-brexit" data-track-label="export goods to the EU">export goods to the EU</a></li>
-            <li><a class="govuk-!-font-weight-bold" href="/transport-goods-from-uk-by-road" data-track-category="transition-landing-page" data-track-action="/transport-goods-from-uk-by-road" data-track-label="transport goods out of the UK by road">transport goods out of the UK by road</a></li>
+            <li><a class="govuk-!-font-weight-bold" href="/eori" data-track-category="transition-landing-page" data-track-action="/eori" data-track-label="get an EORI number">get an EORI number</a> if you do not already have one</li>
+            <li>decide how you want to make customs declarations and whether you need to <a class="govuk-!-font-weight-bold" href="/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-category="transition-landing-page" data-track-action="/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-label="get someone to deal with customs for you">get someone to deal with customs for you</a>.</li>
           </ul>
       - row_title: "Staying in the UK if you’re an EU citizen"
         list_block: |
@@ -78,12 +78,12 @@ en:
 
           You may also need to exchange your UK driving licence for a licence issued by the EU country where you live.
 
-          <a class="govuk-!-font-weight-bold" href="/uk-nationals-living-eu" data-track-category="transition-landing-page" data-track-action="/uk-nationals-living-eu" data-track-label="Check what you must do in the country where you live">Check what you must do in the country where you live</a
-    topic_section_header: Integration Test
-    topic_section_subheading: Integration Test
-    email_intro: Integration Test
-    email: Integration Test
-    share_links: Integration Test
+          <a class="govuk-!-font-weight-bold" href="/uk-nationals-living-eu" data-track-category="transition-landing-page" data-track-action="/uk-nationals-living-eu" data-track-label="Check what you must do in the country where you live">Check what you must do in the country where you live</a>
+    topic_section_header: All transition period information
+    topic_section_subheading: Browse all information related to the transition period
+    email_intro: "Stay up to date"
+    email: Sign up for email updates about the transition period
+    share_links: "Share this page"
     sections:
       services: Services
       guidance_and_regulation: Guidance and regulation
