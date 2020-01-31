@@ -50,8 +50,22 @@ class BrexitLandingPagePresenter
 
 private
 
+  SWITCHOVER_TIME = Time.zone.parse("2020-01-31 23:00:00").in_time_zone
+
+  def time_based_intl
+    if before_switchover?
+      "brexit_landing_page"
+    else
+      "transition_landing_page"
+    end
+  end
+
+  def before_switchover?
+    Time.zone.now < SWITCHOVER_TIME
+  end
+
   def fetch_buckets
-    buckets = I18n.t("brexit_landing_page.campaign_buckets")
+    buckets = I18n.t("#{time_based_intl}.campaign_buckets")
     buckets.each do |bucket|
       bucket[:list_block] = convert_to_govspeak(bucket[:list_block])
     end
