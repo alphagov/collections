@@ -69,7 +69,7 @@ cy:
         list_block: |
           Gwiriwch os oes angen i chi gyflwyno cais i’r cynllun setliad os ydych chi, neu’ch teulu, yn dod o’r UE, neu o’r Swistir, Norwy, Gwlad yr Iâ neu Liechtenstein.
 
-          <a href="/staying-uk-eu-citizen" data-track-category="transition-landing-page" data-track-action="/staying-uk-eu-citizen" data-track-label="Gwiriwch beth sydd angen i chi wneud i aros yn y DU">Gwiriwch beth sydd angen i chi wneud i aros yn y DU</a>
+          <a class="govuk-!-font-weight-bold" href="/staying-uk-eu-citizen" data-track-category="transition-landing-page" data-track-action="/staying-uk-eu-citizen" data-track-label="Gwiriwch beth sydd angen i chi wneud i aros yn y DU">Gwiriwch beth sydd angen i chi wneud i aros yn y DU</a>
       - row_title: "Byw a gweithio yn yr UE"
         list_block: |
           Mae byw a gweithio mewn gwlad yr UE yn ddibynnol ar y rheolau yn y wlad honno.
