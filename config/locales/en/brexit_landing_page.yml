@@ -17,6 +17,9 @@ en:
           text: "This is a really interesting link"
           path: "/"
           description: "This is a description"
+        metadata:
+          public_updated_at: 2015-09-24 16:42:48
+          document_type: "Statutory guidance"
       - link:
           text: "This is a second interesting link"
           path: "/"
