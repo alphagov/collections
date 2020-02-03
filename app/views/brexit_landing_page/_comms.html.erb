@@ -11,7 +11,7 @@
   <h2 class="govuk-heading-l">News</h2>
   <div class="<%= grid_class %>">
     <% if comms_links %>
-      <div class="<%= links_grid_class %> landing-page__comms-links">
+      <div class="<%= links_grid_class %> landing-page__comms-links" data-module="track-click">
         <%= render "govuk_publishing_components/components/document_list", {
           items: comms_links
         } %>

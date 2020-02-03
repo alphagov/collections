@@ -60,6 +60,15 @@ private
 
   def fetch_comms
     comms = I18n.t("transition_landing_page.comms")
+    comms[:links].map do |link_item|
+      data_attributes = {
+        track_category: "transition-landing-page",
+        track_action: link_item[:link][:path],
+        track_label: link_item[:link][:text],
+      }
+
+      link_item[:link][:data_attributes] = data_attributes
+    end
     comms[:video][:transcript] = convert_to_govspeak(comms[:video][:transcript]) if comms[:video]
 
     comms
