@@ -65,7 +65,7 @@ private
   end
 
   def fetch_buckets
-    buckets = I18n.t("#{time_based_intl}.campaign_buckets")
+    buckets = I18n.t("transition_landing_page.campaign_buckets")
     buckets.each do |bucket|
       bucket[:list_block] = convert_to_govspeak(bucket[:list_block])
     end
