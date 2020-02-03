@@ -57,6 +57,7 @@ $red: #E61E32;
 }
 
 .landing-page__section {
+  margin-top: govuk-spacing(4);
   border-top: 2px solid govuk-colour("black");
   @include govuk-responsive-padding(6, "top");
 }
@@ -96,7 +97,6 @@ $red: #E61E32;
 }
 
 .landing-page__buckets {
-  padding-top: govuk-spacing(6);
   margin-bottom: govuk-spacing(6);
 }
 
