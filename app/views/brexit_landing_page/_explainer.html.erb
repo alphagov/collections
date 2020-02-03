@@ -1,13 +1,11 @@
-<div class="full-page-width-wrapper">
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h2 class="govuk-heading-l">
-        <%= t("transition_landing_page.explainer_title") %>
-      </h2>
-      <%= render "govuk_publishing_components/components/govspeak", {
-      } do %>
-        <%= t("transition_landing_page.explainer_text").html_safe() %>
-      <% end %>
-    </div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-l">
+      <%= t("transition_landing_page.explainer_title") %>
+    </h2>
+    <%= render "govuk_publishing_components/components/govspeak", {
+    } do %>
+      <%= t("transition_landing_page.explainer_text").html_safe() %>
+    <% end %>
   </div>
 </div>
