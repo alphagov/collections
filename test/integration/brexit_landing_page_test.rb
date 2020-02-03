@@ -31,12 +31,4 @@ class BrexitLandingPageTest < ActionDispatch::IntegrationTest
       then_the_page_is_not_noindexed
     end
   end
-
-  context "when there should not be a dynamic list" do
-    it "does not show the list" do
-      given_there_is_a_brexit_taxon
-      when_i_visit_the_brexit_landing_page_without_dynamic_list
-      then_i_cannot_see_the_get_ready_section
-    end
-  end
 end

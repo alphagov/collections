@@ -56,10 +56,6 @@ module BrexitLandingPageSteps
     assert page.has_selector?("h2.govuk-heading-l", text: "The transition period")
   end
 
-  def then_i_cannot_see_the_get_ready_section
-    assert page.has_no_selector?(".gem-c-chevron-banner__link", text: "Check what you need to do if there is no deal")
-  end
-
   def then_i_can_see_the_share_links_section
     assert page.has_selector?(".landing-page__share .gem-c-share-links")
   end
