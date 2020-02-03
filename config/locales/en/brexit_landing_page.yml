@@ -19,7 +19,7 @@ en:
           From 1 January 2021 you will need to make customs declarations to move goods into and out of the EU. You should:
           <ul>
             <li><a class="govuk-!-font-weight-bold" href="/eori" data-track-category="transition-landing-page" data-track-action="/eori" data-track-label="get an EORI number">get an EORI number</a> if you do not already have one</li>
-            <li>decide how you want to make customs declarations and whether you need to <a class="govuk-!-font-weight-bold" href="/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-category="transition-landing-page" data-track-action="/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-label="get someone to deal with customs for you">get someone to deal with customs for you</a>.</li>
+            <li>decide how you want to make customs declarations and whether you need to <a class="govuk-!-font-weight-bold" href="/guidance/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-category="transition-landing-page" data-track-action="/guidance/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-label="get someone to deal with customs for you">get someone to deal with customs for you</a>.</li>
           </ul>
       - row_title: "Staying in the UK if you’re an EU citizen"
         list_block: |
