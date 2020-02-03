@@ -7,7 +7,7 @@
   video_grid_class = "govuk-grid-column-one-half" if comms_links
 %>
 
-<div class="landing-page__section govuk-!-margin-top-6">
+<div class="landing-page__section">
   <h2 class="govuk-heading-l">News</h2>
   <div class="<%= grid_class %>">
     <% if comms_links %>
@@ -23,10 +23,12 @@
         } do %>
           <p><a href="<%= comms_video[:href] %>"><%= comms_video[:title] %></a></p>
           <% if comms_video[:transcript] %>
-            <%= render "govuk_publishing_components/components/details", {
-              title: "Read the transcript for this video"
-            } do %>
-              <%= comms_video[:transcript] %>
+            <% if comms_video[:transcript] %>
+              <%= render "govuk_publishing_components/components/details", {
+                title: "Read the transcript for this video"
+              } do %>
+                <%= comms_video[:transcript] %>
+              <% end %>
             <% end %>
           <% end %>
         <% end %>
