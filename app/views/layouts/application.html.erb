@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
   <%= yield :meta_tags %>
   <%= render 'govuk_publishing_components/components/meta_tags', content_item: @content_item %>
-  <%= stylesheet_link_tag "print.css", :media => "print", integrity: true, crossorigin: 'anonymous' %>
+  <%= stylesheet_link_tag "print.css", :media => "print", integrity: false %>
 </head>
 
 <body <% if content_for(:is_full_width_header) %>class="full-width"<% end %>>
