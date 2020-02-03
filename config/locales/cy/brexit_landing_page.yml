@@ -11,20 +11,30 @@ cy:
       <p>Bydd rheolau newydd yn dod i rym ar 1 Ionawr 2021.</p>
       <p>Dylech baratoi nawr a thanysgrifio i ddiweddariadau ebost am unrhyw drefniadau ychwanegol.</p>
       <p><a class="govuk-!-font-weight-bold" href="/transition-check" data-track-category="transition-landing-page" data-track-action="/transition-check" data-track-label="Gwiriwch sut i baratoi ar gyfer y rheolau newydd yn 2021">Gwiriwch sut i baratoi ar gyfer y rheolau newydd yn 2021</a>
+    comms_header: "Newyddion"
     comms:
       links:
       - link:
-          text: "This is a really interesting link"
-          path: "/"
-          description: "This is a description"
+          text: "The future relationship between the UK and the EU"
+          path: "/government/speeches/the-future-relationship-between-the-uk-and-the-eu"
+          description: "This statement sets out the Government’s proposed approach to the negotiations with the EU about our future relationship."
+        metadata:
+          public_updated_at: 2020-02-03
+          document_type: "Written Statement to Parliament"
       - link:
-          text: "This is a second interesting link"
-          path: "/"
-          description: "This is a description"
+          text: "Prime Minister’s address to the nation on leaving the EU"
+          path: "/government/speeches/pm-address-to-the-nation-31-january-2020"
+          description: "Prime Minister Boris Johnson addresses the nation as the UK leaves the EU."
+        metadata:
+          public_updated_at: 2020-01-31
+          document_type: "Speech"
       - link:
-          text: "This is a third interesting link"
-          path: "/"
-          description: "This is a description"
+          text: "The Withdrawal Agreement and Political Declaration"
+          path: "/government/publications/new-withdrawal-agreement-and-political-declaration"
+          description: "The Withdrawal Agreement is the UK and EU’s agreement on the UK leaving the EU. It shows the terms of the UK’s exit and sets out the framework for the future relationship between the UK and EU."
+        metadata:
+          public_updated_at: 2019-10-19
+          document_type: "Policy Paper"
     guidance_header: "Beth allwch chi wneud nawr"
     guidance_subheader: "Camau y gallwch eu cymryd nawr sydd ddim yn ddibynnol ar drafodaethau."
     campaign_buckets:
