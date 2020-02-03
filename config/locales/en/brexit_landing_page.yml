@@ -42,6 +42,7 @@ en:
     email_mailto_subject: "Get%20ready%20for%202021%20-%20GOV.UK"
     share_links: "Share this page"
     sections:
+      aria_string_suffix: related to the transition period
       services: Services
       guidance_and_regulation: Guidance and regulation
       news_and_communications: News and communications

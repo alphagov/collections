@@ -24,7 +24,7 @@ class BrexitLandingPagePresenter
         text: supergroup_title,
         path: section[:see_more_link][:url],
         data_attributes: section[:see_more_link][:data],
-        aria_label: supergroup_title + " related to the transition period",
+        aria_label: "#{supergroup_title} #{I18n.t('transition_landing_page.sections.aria_string_suffix')}",
       }
     end
   end
