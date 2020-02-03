@@ -24,7 +24,7 @@
       <span class="govuk-visually-hidden">Share on</span>
     <% end %>
     <%= render "govuk_publishing_components/components/share_links", {
-      title: t("#{time_based_intl}.share_links"),
+      title: t("transition_landing_page.share_links"),
       columns: true,
       links: [
         {
@@ -38,7 +38,7 @@
           icon: "twitter"
         },
         {
-          href: "mailto:?body=https://www.gov.uk#{CGI.escape(request.fullpath)}/&subject=Get ready for 2021 - GOV.UK",
+          href: "mailto:?body=https://www.gov.uk#{CGI.escape(request.fullpath)}/&subject=#{t('transition_landing_page.email_mailto_subject')}",
           text: hidden_text + "Email",
           icon: "email"
         },
@@ -48,7 +48,7 @@
           icon: "whatsapp"
         },
         {
-          href: "http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.gov.uk#{CGI.escape(request.fullpath)}&title=Get%20ready%20for%202021%20-%20GOV.UK",
+          href: "http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.gov.uk#{CGI.escape(request.fullpath)}&title=#{t('transition_landing_page.email_mailto_subject')}",
           text: hidden_text + "LinkedIn",
           icon: "linkedin"
         },

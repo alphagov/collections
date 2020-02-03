@@ -39,7 +39,7 @@ describe BrexitLandingPagePresenter do
         {
           text: "Services",
           path: "/search/services?parent=%2Fbase_path&topic=content_id",
-          aria_label: "Services related to Brexit",
+          aria_label: "Services related to the transition period",
           data_attributes: {
             track_category: "SeeAllLinkClicked",
             track_action: "/base_path",
@@ -50,7 +50,7 @@ describe BrexitLandingPagePresenter do
         {
           text: "Guidance and regulation",
           path: "/search/guidance-and-regulation?parent=%2Fbase_path&topic=content_id",
-          aria_label: "Guidance and regulation related to Brexit",
+          aria_label: "Guidance and regulation related to the transition period",
           data_attributes: {
             track_category: "SeeAllLinkClicked",
             track_action: "/base_path",
@@ -61,7 +61,7 @@ describe BrexitLandingPagePresenter do
         {
           text: "News and communications",
           path: "/search/news-and-communications?parent=%2Fbase_path&topic=content_id",
-          aria_label: "News and communications related to Brexit",
+          aria_label: "News and communications related to the transition period",
           data_attributes: {
             track_category: "SeeAllLinkClicked",
             track_action: "/base_path",
@@ -72,7 +72,7 @@ describe BrexitLandingPagePresenter do
         {
           text: "Research and statistics",
           path: "/search/research-and-statistics?parent=%2Fbase_path&topic=content_id",
-          aria_label: "Research and statistics related to Brexit",
+          aria_label: "Research and statistics related to the transition period",
           data_attributes: {
             track_category: "SeeAllLinkClicked",
             track_action: "/base_path",
@@ -83,7 +83,7 @@ describe BrexitLandingPagePresenter do
         {
           text: "Policy papers and consultations",
           path: "/search/policy-papers-and-consultations?parent=%2Fbase_path&topic=content_id",
-          aria_label: "Policy papers and consultations related to Brexit",
+          aria_label: "Policy papers and consultations related to the transition period",
           data_attributes: {
             track_category: "SeeAllLinkClicked",
             track_action: "/base_path",
@@ -94,7 +94,7 @@ describe BrexitLandingPagePresenter do
         {
           text: "Transparency and freedom of information releases",
           path: "/search/transparency-and-freedom-of-information-releases?parent=%2Fbase_path&topic=content_id",
-          aria_label: "Transparency and freedom of information releases related to Brexit",
+          aria_label: "Transparency and freedom of information releases related to the transition period",
           data_attributes: {
             track_category: "SeeAllLinkClicked",
             track_action: "/base_path",

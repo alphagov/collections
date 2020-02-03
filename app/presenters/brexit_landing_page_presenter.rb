@@ -19,12 +19,12 @@ class BrexitLandingPagePresenter
                                                              taxon.base_path)
                                                         .sections
     brexit_sections.map do |section|
-      supergroup_title = I18n.t(section[:name], scope: %i[brexit_landing_page sections])
+      supergroup_title = I18n.t(section[:name], scope: %i[transition_landing_page sections])
       {
         text: supergroup_title,
         path: section[:see_more_link][:url],
         data_attributes: section[:see_more_link][:data],
-        aria_label: supergroup_title + " related to Brexit",
+        aria_label: "#{supergroup_title} #{I18n.t('transition_landing_page.sections.aria_string_suffix')}",
       }
     end
   end
@@ -50,22 +50,8 @@ class BrexitLandingPagePresenter
 
 private
 
-  SWITCHOVER_TIME = Time.zone.parse("2020-01-31 23:00:00").in_time_zone
-
-  def time_based_intl
-    if before_switchover?
-      "brexit_landing_page"
-    else
-      "transition_landing_page"
-    end
-  end
-
-  def before_switchover?
-    Time.zone.now < SWITCHOVER_TIME
-  end
-
   def fetch_buckets
-    buckets = I18n.t("#{time_based_intl}.campaign_buckets")
+    buckets = I18n.t("transition_landing_page.campaign_buckets")
     buckets.each do |bucket|
       bucket[:list_block] = convert_to_govspeak(bucket[:list_block])
     end
