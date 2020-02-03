@@ -10,53 +10,57 @@
   )
 %>
 
-<%= render partial: 'explainer' %>
+<div class="govuk-width-container">
+  <%= render partial: 'explainer' %>
 
-<% if show_comms %>
-  <%= render partial: 'comms', locals: { comms: presented_taxon.comms } %>
-<% end %>
+  <% if show_comms %>
+    <div class="landing-page__comms">
+      <%= render partial: 'comms', locals: { comms: presented_taxon.comms } %>
+    </div>
+  <% end %>
 
-<div class="landing-page__buckets govuk-width-container">
-  <%= render partial: 'buckets', locals: { buckets: presented_taxon.buckets } %>
-</div>
+  <div class="landing-page__buckets">
+    <%= render partial: 'buckets', locals: { buckets: presented_taxon.buckets } %>
+  </div>
 
-<div class="govuk-width-container landing-page__section">
-  <%= render partial: 'brexit_finders', locals: { supergroups: presented_taxon.supergroup_sections, email_path: presented_taxon.email_path } %>
+  <div class="landing-page__section">
+    <%= render partial: 'brexit_finders', locals: { supergroups: presented_taxon.supergroup_sections, email_path: presented_taxon.email_path } %>
 
-  <div class="landing-page__share">
-    <% hidden_text = capture do %>
-      <span class="govuk-visually-hidden">Share on</span>
-    <% end %>
-    <%= render "govuk_publishing_components/components/share_links", {
-      title: t("transition_landing_page.share_links"),
-      columns: true,
-      links: [
-        {
-          href: "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.gov.uk#{CGI.escape(request.fullpath)}",
-          text: hidden_text + "Facebook",
-          icon: "facebook"
-        },
-        {
-          href: "https://twitter.com/share?url=https%3A%2F%2Fwww.gov.uk#{CGI.escape(request.fullpath)}",
-          text: hidden_text + "Twitter",
-          icon: "twitter"
-        },
-        {
-          href: "mailto:?body=https://www.gov.uk#{CGI.escape(request.fullpath)}/&subject=#{t('transition_landing_page.email_mailto_subject')}",
-          text: hidden_text + "Email",
-          icon: "email"
-        },
-        {
-          href: "https://api.whatsapp.com/send?text=https://www.gov.uk#{CGI.escape(request.fullpath)}",
-          text: hidden_text + "WhatsApp",
-          icon: "whatsapp"
-        },
-        {
-          href: "http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.gov.uk#{CGI.escape(request.fullpath)}&title=#{t('transition_landing_page.email_mailto_subject')}",
-          text: hidden_text + "LinkedIn",
-          icon: "linkedin"
-        },
-      ]
-    } %>
+    <div class="landing-page__share">
+      <% hidden_text = capture do %>
+        <span class="govuk-visually-hidden">Share on</span>
+      <% end %>
+      <%= render "govuk_publishing_components/components/share_links", {
+        title: t("transition_landing_page.share_links"),
+        columns: true,
+        links: [
+          {
+            href: "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.gov.uk#{CGI.escape(request.fullpath)}",
+            text: hidden_text + "Facebook",
+            icon: "facebook"
+          },
+          {
+            href: "https://twitter.com/share?url=https%3A%2F%2Fwww.gov.uk#{CGI.escape(request.fullpath)}",
+            text: hidden_text + "Twitter",
+            icon: "twitter"
+          },
+          {
+            href: "mailto:?body=https://www.gov.uk#{CGI.escape(request.fullpath)}/&subject=#{t('transition_landing_page.email_mailto_subject')}",
+            text: hidden_text + "Email",
+            icon: "email"
+          },
+          {
+            href: "https://api.whatsapp.com/send?text=https://www.gov.uk#{CGI.escape(request.fullpath)}",
+            text: hidden_text + "WhatsApp",
+            icon: "whatsapp"
+          },
+          {
+            href: "http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.gov.uk#{CGI.escape(request.fullpath)}&title=#{t('transition_landing_page.email_mailto_subject')}",
+            text: hidden_text + "LinkedIn",
+            icon: "linkedin"
+          },
+        ]
+      } %>
+    </div>
   </div>
 </div>
