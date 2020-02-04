@@ -12,7 +12,7 @@ describe WorldTaxonomySorter do
   setup do
     child_taxon_titles = [
      "Birth, death and marriage abroad",
-     "Brexit",
+     "Transition",
      "British embassy or high commission",
      "Coming to the UK",
      "Emergency help for British nationals",
@@ -27,7 +27,7 @@ describe WorldTaxonomySorter do
 
     @expected_ordered_taxon_titles = [
       "Emergency help for British nationals",
-      "Brexit",
+      "Transition",
       "Passports and emergency travel documents",
       "Travelling to",
       "Coming to the UK",

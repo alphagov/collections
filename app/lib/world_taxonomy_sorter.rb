@@ -1,7 +1,7 @@
 class WorldTaxonomySorter
   WORLD_TAXONOMY_ORDER = [
     "Emergency help for British nationals",
-    "Brexit",
+    "Transition",
     "Passports and emergency travel documents",
     "Travelling to",
     "Coming to the UK",
