@@ -13,10 +13,6 @@ module Organisations
           url: "/",
         },
         index_page_breadcrumb,
-        {
-          title: @org.title,
-          is_current_page: true,
-        },
       ]
     end
 
