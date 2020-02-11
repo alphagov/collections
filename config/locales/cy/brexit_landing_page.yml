@@ -29,13 +29,6 @@ cy:
           public_updated_at: 2020-02-03
           document_type: "Written Statement to Parliament"
       - link:
-          text: "Prime Minister’s address to the nation on leaving the EU"
-          path: "/government/speeches/pm-address-to-the-nation-31-january-2020"
-          description: "Prime Minister Boris Johnson addresses the nation as the UK leaves the EU."
-        metadata:
-          public_updated_at: 2020-01-31
-          document_type: "Speech"
-      - link:
           text: "The Withdrawal Agreement and Political Declaration"
           path: "/government/publications/new-withdrawal-agreement-and-political-declaration"
           description: "The Withdrawal Agreement is the UK and EU’s agreement on the UK leaving the EU. It shows the terms of the UK’s exit and sets out the framework for the future relationship between the UK and EU."
