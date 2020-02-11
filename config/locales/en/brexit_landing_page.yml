@@ -15,6 +15,13 @@ en:
     comms:
       links:
       - link:
+          text: "Government confirms plans to introduce import controls"
+          path: "/government/news/government-confirms-plans-to-introduce-import-controls"
+          description: "The government has confirmed plans to introduce import controls on EU goods at the border after the transition period ends on 31 December 2020."
+        metadata:
+          public_updated_at: 2020-02-10
+          document_type: "Press Release"
+      - link:
           text: "The future relationship between the UK and the EU"
           path: "/government/speeches/the-future-relationship-between-the-uk-and-the-eu"
           description: "This statement sets out the Government’s proposed approach to the negotiations with the EU about our future relationship."
