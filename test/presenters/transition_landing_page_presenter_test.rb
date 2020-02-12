@@ -1,6 +1,6 @@
 require "test_helper"
 
-describe BrexitLandingPagePresenter do
+describe TransitionLandingPagePresenter do
   before :each do
     YAML.stubs(:load_file).returns(yaml_contents)
   end
@@ -14,7 +14,7 @@ describe BrexitLandingPagePresenter do
   }
 
   subject {
-    BrexitLandingPagePresenter.new(taxon)
+    TransitionLandingPagePresenter.new(taxon)
   }
 
   let(:taxon) { Taxon.new(ContentItem.new("content_id" => "content_id", "base_path" => "/base_path")) }
@@ -24,7 +24,7 @@ describe BrexitLandingPagePresenter do
       YAML.stubs(:load_file).returns(yaml_contents)
 
       subject {
-        BrexitLandingPagePresenter.new(taxon)
+        TransitionLandingPagePresenter.new(taxon)
       }
     end
 
@@ -111,7 +111,7 @@ describe BrexitLandingPagePresenter do
     it "strips the locale extension from the base path if present" do
       I18n.with_locale(:cy) do
         taxon = Taxon.new(ContentItem.new("base_path" => "/base_path.cy"))
-        subject = BrexitLandingPagePresenter.new(taxon)
+        subject = TransitionLandingPagePresenter.new(taxon)
         assert_equal "/base_path", subject.email_path
       end
     end

@@ -2,7 +2,7 @@ require "gds_api/test_helpers/content_item_helpers"
 require "gds_api/test_helpers/search"
 require_relative "../../test/support/rummager_helpers"
 
-module BrexitLandingPageSteps
+module TransitionLandingPageSteps
   include GdsApi::TestHelpers::ContentItemHelpers
   include RummagerHelpers
 
@@ -30,13 +30,13 @@ module BrexitLandingPageSteps
     end
   end
 
-  def when_i_visit_the_brexit_landing_page_with_dynamic_list
-    BrexitLandingPageController.any_instance.stubs(:show_dynamic_list?).returns(true)
+  def when_i_visit_the_transition_landing_page_with_dynamic_list
+    TransitionLandingPageController.any_instance.stubs(:show_dynamic_list?).returns(true)
     visit brexit_taxon_path
   end
 
-  def when_i_visit_the_brexit_landing_page_without_dynamic_list
-    BrexitLandingPageController.any_instance.stubs(:show_dynamic_list?).returns(false)
+  def when_i_visit_the_transition_landing_page_without_dynamic_list
+    TransitionLandingPageController.any_instance.stubs(:show_dynamic_list?).returns(false)
     visit brexit_taxon_path
   end
 
