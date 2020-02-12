@@ -6,12 +6,12 @@ module TransitionLandingPageSteps
   include GdsApi::TestHelpers::ContentItemHelpers
   include RummagerHelpers
 
-  def given_there_is_a_brexit_taxon
-    stub_content_store_has_item(brexit_taxon_path, content_item)
+  def given_there_is_a_transition_taxon
+    stub_content_store_has_item(transition_taxon_path, content_item)
   end
 
-  def brexit_taxon_path
-    "/brexit"
+  def transition_taxon_path
+    "/transition"
   end
 
   def content_id
@@ -21,9 +21,9 @@ module TransitionLandingPageSteps
   def content_item
     GovukSchemas::RandomExample.for_schema(frontend_schema: "taxon") do |item|
       item.merge(
-        "base_path" => brexit_taxon_path,
+        "base_path" => transition_taxon_path,
         "content_id" => content_id,
-        "title" => "Brexit",
+        "title" => "Transition",
         "phase" => "live",
         "links" => {},
       )
@@ -32,12 +32,12 @@ module TransitionLandingPageSteps
 
   def when_i_visit_the_transition_landing_page_with_dynamic_list
     TransitionLandingPageController.any_instance.stubs(:show_dynamic_list?).returns(true)
-    visit brexit_taxon_path
+    visit transition_taxon_path
   end
 
   def when_i_visit_the_transition_landing_page_without_dynamic_list
     TransitionLandingPageController.any_instance.stubs(:show_dynamic_list?).returns(false)
-    visit brexit_taxon_path
+    visit transition_taxon_path
   end
 
   def then_i_can_see_the_title_section
@@ -69,7 +69,7 @@ module TransitionLandingPageSteps
   end
 
   def and_i_can_see_an_email_subscription_link
-    assert page.has_selector?('a[href="/email-signup/?topic=' + brexit_taxon_path + '"]')
+    assert page.has_selector?('a[href="/email-signup/?topic=' + transition_taxon_path + '"]')
     assert page.has_text?("Sign up for email updates about the transition period")
   end
 
@@ -88,7 +88,7 @@ module TransitionLandingPageSteps
     supergroups.each do |_|
       assert page.has_link?(
         "Services",
-        href: "/search/services?parent=%2Fbrexit&topic=d6c2de5d-ef90-45d1-82d4-5f2438369eea",
+        href: "/search/services?parent=%2Ftransition&topic=d6c2de5d-ef90-45d1-82d4-5f2438369eea",
       )
     end
   end
