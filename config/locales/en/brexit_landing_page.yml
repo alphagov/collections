@@ -50,6 +50,13 @@ en:
           Check if you need to apply to the settlement scheme if you or your family are from the EU, or from Switzerland, Norway, Iceland or Liechtenstein.
 
           <a class="govuk-!-font-weight-bold" href="/staying-uk-eu-citizen" data-track-category="transition-landing-page" data-track-action="/staying-uk-eu-citizen" data-track-label="Check what you need to do to stay in the UK">Check what you need to do to stay in the UK</a>
+      - row_title: "Travel to the EU"
+        list_block: |
+          You can continue to travel to the EU as usual during the transition period.
+
+          From 1 January 2021 there will be new rules to travel to the EU, Switzerland, Norway and Liechtenstein.
+
+          <a class="govuk-!-font-weight-bold" href="/visit-europe-1-january-2021" data-track-category="transition-landing-page" data-track-action="/visit-europe-1-january-2021" data-track-label="Check what you need to do to travel to Europe from 2020">Check what you need to do to travel to Europe from 2020</a>
       - row_title: "Living and working in the EU"
         list_block: |
           Living and working in an EU country depends on the rules in that country.
