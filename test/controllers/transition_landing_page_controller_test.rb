@@ -1,6 +1,6 @@
 require "test_helper"
 
-describe BrexitLandingPageController do
+describe TransitionLandingPageController do
   include TaxonHelpers
 
   describe "GET show" do
