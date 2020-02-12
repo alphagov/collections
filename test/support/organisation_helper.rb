@@ -701,11 +701,7 @@ module OrganisationHelpers
     visit content["base_path"]
   end
 
-  def i_see_the_current_page_breadcrumb
-    assert page.has_css?(".gem-c-breadcrumbs", text: @title)
-  end
-
-  def and_the_courts_breadcrumb
+  def i_see_the_courts_breadcrumb
     assert page.has_css?(".gem-c-breadcrumbs", text: "Courts and Tribunals")
   end
 

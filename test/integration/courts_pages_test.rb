@@ -5,8 +5,7 @@ class CourtsPagesTest < ActionDispatch::IntegrationTest
 
   it "renders a courts page correctly" do
     when_i_visit_a_courts_page
-    i_see_the_current_page_breadcrumb
-    and_the_courts_breadcrumb
+    i_see_the_courts_breadcrumb
     the_courts_title
     and_featured_links
     and_the_what_we_do_section
@@ -19,8 +18,7 @@ class CourtsPagesTest < ActionDispatch::IntegrationTest
 
   it "renders an HMCTS tribunal page correctly" do
     when_i_visit_an_hmcts_tribunal_page
-    i_see_the_current_page_breadcrumb
-    and_the_courts_breadcrumb
+    i_see_the_courts_breadcrumb
     the_courts_title
     and_featured_links
     and_the_what_we_do_section
