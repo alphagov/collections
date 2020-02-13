@@ -6,7 +6,7 @@ module TransitionLandingPageSteps
   include GdsApi::TestHelpers::ContentItemHelpers
   include RummagerHelpers
 
-  CONTENT_ID = "d6c2de5d-ef90-45d1-82d4-5f2438369eea".freeze
+  TRANSITION_TAXON_CONTENT_ID = "d6c2de5d-ef90-45d1-82d4-5f2438369eea".freeze
   TRANSITION_TAXON_PATH = "/transition".freeze
 
   def given_there_is_a_transition_taxon
@@ -65,7 +65,7 @@ module TransitionLandingPageSteps
     supergroups.each do |_|
       assert page.has_link?(
         "Services",
-        href: "/search/services?parent=#{CGI.escape(TRANSITION_TAXON_PATH)}&topic=#{CONTENT_ID}",
+        href: "/search/services?parent=#{CGI.escape(TRANSITION_TAXON_PATH)}&topic=#{TRANSITION_TAXON_CONTENT_ID}",
       )
     end
   end
@@ -101,7 +101,7 @@ module TransitionLandingPageSteps
     GovukSchemas::RandomExample.for_schema(frontend_schema: "taxon") do |item|
       item.merge(
         "base_path" => TRANSITION_TAXON_PATH,
-        "content_id" => CONTENT_ID,
+        "content_id" => TRANSITION_TAXON_CONTENT_ID,
         "title" => "Transition",
         "phase" => "live",
         "links" => {},
