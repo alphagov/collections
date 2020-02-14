@@ -1,3 +1,19 @@
+GIT
+  remote: git://github.com/alphagov/govuk_publishing_components.git
+  revision: 9c33cb90e5f56397c22a0d5268205ac0a626c3a7
+  branch: increse-spacing-document-list-for-test-only
+  specs:
+    govuk_publishing_components (21.22.1)
+      gds-api-adapters
+      govuk_app_config
+      kramdown
+      plek
+      rails (>= 5.0.0.1)
+      rake
+      rouge
+      sassc-rails (>= 2.0.1)
+      sprockets (< 4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -133,16 +149,6 @@ GEM
       statsd-ruby (~> 1.4.0)
       unicorn (>= 5.4, < 5.6)
     govuk_document_types (0.9.2)
-    govuk_publishing_components (21.22.1)
-      gds-api-adapters
-      govuk_app_config
-      kramdown
-      plek
-      rails (>= 5.0.0.1)
-      rake
-      rouge
-      sassc-rails (>= 2.0.1)
-      sprockets (< 4)
     govuk_schemas (4.0.0)
       json-schema (~> 2.8.0)
     govuk_test (1.0.3)
@@ -267,7 +273,7 @@ GEM
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
     rinku (2.0.6)
-    rouge (3.15.0)
+    rouge (3.16.0)
     rubocop (0.77.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
@@ -380,7 +386,7 @@ DEPENDENCIES
   govuk_ab_testing (~> 2.4.1)
   govuk_app_config (~> 2.0.3)
   govuk_document_types
-  govuk_publishing_components (~> 21.22.1)
+  govuk_publishing_components!
   govuk_schemas (~> 4.0.0)
   govuk_test (~> 1.0.3)
   jasmine-rails
@@ -404,4 +410,4 @@ RUBY VERSION
    ruby 2.6.5p114
 
 BUNDLED WITH
-   1.17.2
+   1.17.3
