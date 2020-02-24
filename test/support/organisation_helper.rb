@@ -327,8 +327,8 @@ module OrganisationHelpers
             title: "Rural Development Programme for England Network",
           },
           {
-            base_path: "/government/organisations/rural-development-programme-for-england-network-2",
-            title: "Rural Development Programme for England Network 2",
+            base_path: "/government/organisations/another-rural-development-programme-for-england-network",
+            title: "Another Rural Development Programme for England Network",
           },
         ],
       },

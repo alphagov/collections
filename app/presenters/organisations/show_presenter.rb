@@ -38,7 +38,10 @@ module Organisations
     end
 
     def high_profile_groups
-      high_profile_groups = @org.ordered_high_profile_groups && @org.ordered_high_profile_groups.map do |group|
+      alphabetical_high_profile_groups = @org.ordered_high_profile_groups
+                                             &.sort_by { |key| key["base_path"] }
+
+      alphabetical_high_profile_groups&.map! do |group|
         {
           text: group["title"],
           path: group["base_path"],
@@ -48,7 +51,7 @@ module Organisations
       {
         title: I18n.t("organisations.high_profile_groups", title: acronym),
         brand: @org.brand,
-        items: high_profile_groups,
+        items: alphabetical_high_profile_groups,
       }
     end
 

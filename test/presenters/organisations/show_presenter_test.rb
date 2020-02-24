@@ -79,7 +79,7 @@ describe Organisations::ShowPresenter do
     assert_equal expected, @show_presenter.parent_organisations
   end
 
-  it "formats high profile groups correctly" do
+  it "formats high profile groups correctly and in alphabetical order" do
     content_item = ContentItem.new(organisation_with_high_profile_groups)
     organisation = Organisation.new(content_item)
     @show_presenter = Organisations::ShowPresenter.new(organisation)
@@ -89,12 +89,12 @@ describe Organisations::ShowPresenter do
       brand: "department-for-environment-food-rural-affairs",
       items: [
         {
-          text: "Rural Development Programme for England Network",
-          path: "/government/organisations/rural-development-programme-for-england-network",
+          text: "Another Rural Development Programme for England Network",
+          path: "/government/organisations/another-rural-development-programme-for-england-network",
         },
         {
-          text: "Rural Development Programme for England Network 2",
-          path: "/government/organisations/rural-development-programme-for-england-network-2",
+          text: "Rural Development Programme for England Network",
+          path: "/government/organisations/rural-development-programme-for-england-network",
         },
       ],
     }
