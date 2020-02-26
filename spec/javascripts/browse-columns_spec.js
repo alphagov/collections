@@ -131,6 +131,7 @@ describe('browse-columns.js', function() {
   });
 
   it("should track a page view", function() {
+    GOVUK.Ecommerce = jasmine.createSpyObj('Ecommerce', ['start'])
     GOVUK.analytics = jasmine.createSpyObj('analytics', ['trackPageview']);
 
     var state = {

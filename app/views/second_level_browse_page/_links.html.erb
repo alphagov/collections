@@ -8,13 +8,15 @@
       <p class="sort-order"><%= hairspace list.title %></p>
     <% end %>
 
-    <ul>
+    <ul data-analytics-ecommerce data-ecommerce-start-index=<%= "#{section_index + 1}" %> data-list-title="Mainstream browse" data-search-query="<%= page.lists.curated? ? list.title : page.title %>">
       <% list.contents.each_with_index do |list_item, index| %>
         <li>
           <%= link_to(
             list_item.title,
             list_item.base_path,
             data: {
+              ecommerce_row: "#{section_index}.#{index + 1}",
+              ecommerce_path: list_item.base_path,
               track_category: 'thirdLevelBrowseLinkClicked',
               track_action: "#{section_index + 1}.#{index + 1}",
               track_label: list_item.base_path,
