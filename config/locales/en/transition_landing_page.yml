@@ -15,6 +15,13 @@ en:
     comms:
       links:
       - link:
+          text: "Our approach to the Future Relationship with the EU"
+          path: "/government/publications/our-approach-to-the-future-relationship-with-the-eu"
+          description: "The UK’s approach to negotiations with the European Union."
+        metadata:
+          public_updated_at: 2020-02-27
+          document_type: "Policy Paper"
+      - link:
           text: "Government confirms plans to introduce import controls"
           path: "/government/news/government-confirms-plans-to-introduce-import-controls"
           description: "The government has confirmed plans to introduce import controls on EU goods at the border after the transition period ends on 31 December 2020."
