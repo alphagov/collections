@@ -106,7 +106,8 @@ module Supergroups
     end
 
     def default_news_image_url
-      "https://assets.publishing.service.gov.uk/government/assets/placeholder.jpg"
+      # this image has been uploaded to asset-manager
+      "https://assets.publishing.service.gov.uk/media/5e59279b86650c53b2cefbfe/placeholder.jpg"
     end
 
     def document_types

@@ -4,7 +4,8 @@ describe Supergroups::NewsAndCommunications do
   include RummagerHelpers
   include SupergroupHelpers
 
-  DEFAULT_WHITEHALL_IMAGE_URL = "https://assets.publishing.service.gov.uk/government/assets/placeholder.jpg".freeze
+  DEFAULT_IMAGE_URL = "https://assets.publishing.service.gov.uk/media/5e59279b86650c53b2cefbfe/placeholder.jpg".freeze
+
   let(:taxon_id) { "12345" }
   let(:news_and_communications_supergroup) { Supergroups::NewsAndCommunications.new }
 
@@ -120,7 +121,7 @@ describe Supergroups::NewsAndCommunications do
       .stubs(:fetch)
       .returns(content_list)
 
-      assert_equal DEFAULT_WHITEHALL_IMAGE_URL, news_and_communications_supergroup.promoted_content(taxon_id).first[:image][:url]
+      assert_equal DEFAULT_IMAGE_URL, news_and_communications_supergroup.promoted_content(taxon_id).first[:image][:url]
     end
   end
 
