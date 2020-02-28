@@ -19,6 +19,8 @@ describe Supergroups::ResearchAndStatistics do
             path: "/government/tagged/content",
             data_attributes: {
               module: "track-click",
+              ecommerce_row: true,
+              ecommerce_path: "/government/tagged/content",
               track_category: "researchAndStatisticsDocumentListClicked",
               track_action: 1,
               track_label: "/government/tagged/content",

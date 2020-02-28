@@ -22,6 +22,8 @@ describe Supergroups::NewsAndCommunications do
             path: "/government/tagged/content",
             data_attributes: {
               module: "track-click",
+              ecommerce_row: true,
+              ecommerce_path: "/government/tagged/content",
               track_category: "newsAndCommunicationsDocumentListClicked",
               track_action: 1,
               track_label: "/government/tagged/content",
@@ -78,6 +80,8 @@ describe Supergroups::NewsAndCommunications do
             text: "Tagged Content Title",
             path: "/government/tagged/content",
             data_attributes: {
+              ecommerce_row: true,
+              ecommerce_path: "/government/tagged/content",
               module: "track-click",
               track_category: "newsAndCommunicationsFeaturedLinkClicked",
               track_action: 1,

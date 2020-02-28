@@ -47,7 +47,7 @@ describe Supergroups::PolicyAndEngagement do
             .stubs(:fetch)
             .returns(section_tagged_content_list("open_consultation", 4))
 
-          expected = Array.new(4) { |index| expected_result("open_consultation", index).first }
+          expected = Array.new(4) { |index| expected_result("open_consultation", index + 1).first }
           assert_equal expected, policy_and_engagement_supergroup.document_list(taxon_id)
         end
 
@@ -73,6 +73,8 @@ describe Supergroups::PolicyAndEngagement do
                 path: "/government/tagged/content-1",
                 data_attributes: {
                   module: "track-click",
+                  ecommerce_row: true,
+                  ecommerce_path: "/government/tagged/content-1",
                   track_category: "policyAndEngagementDocumentListClicked",
                   track_action: 1,
                   track_label: "/government/tagged/content-1",
@@ -110,21 +112,23 @@ private
 
   def expected_results(document_types)
     results = []
-    document_types.each_with_index do |document_type, index|
+    document_types.each.with_index(1) do |document_type, index|
       results.push(*expected_result(document_type, index))
     end
     results
   end
 
-  def expected_result(document_type, index = 0)
+  def expected_result(document_type, index = 1)
     result = {
       link: {
         text: "Tagged Content Title",
         path: "/government/tagged/content",
         data_attributes: {
           module: "track-click",
+          ecommerce_row: true,
+          ecommerce_path: "/government/tagged/content",
           track_category: "policyAndEngagementDocumentListClicked",
-          track_action: index + 1,
+          track_action: index,
           track_label: "/government/tagged/content",
           track_options: {
             dimension29: "Tagged Content Title",

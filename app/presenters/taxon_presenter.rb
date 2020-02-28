@@ -31,6 +31,8 @@ class TaxonPresenter
   def options_for_child_taxon(index:)
     {
       module: "track-click",
+      ecommerce_row: true,
+      ecommerce_path: child_taxons[index].base_path,
       track_category: "navGridContentClicked",
       track_action: (index + 1).to_s,
       track_label: child_taxons[index].base_path,

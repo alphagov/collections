@@ -69,6 +69,8 @@ private
 
   def data_attributes(base_path, link_text, index)
     {
+      ecommerce_row: true,
+      ecommerce_path:  base_path,
       track_category: "organisationsDocumentListClicked",
       track_action: index,
       track_label: base_path,

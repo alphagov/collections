@@ -37,6 +37,8 @@ describe TaxonOrganisationsPresenter do
             text: "Department for Education",
             path: "/government/organisations/department-for-education",
             data_attributes: {
+              ecommerce_row: true,
+              ecommerce_path:  "/government/organisations/department-for-education",
               track_category: "organisationsDocumentListClicked",
               track_action: 1,
               track_label: "/government/organisations/department-for-education",
@@ -68,6 +70,8 @@ describe TaxonOrganisationsPresenter do
           brand: "department-for-education",
           crest: "single-identity",
           data_attributes: {
+            ecommerce_row: true,
+            ecommerce_path:  "/government/organisations/department-for-education",
             track_category: "organisationsDocumentListClicked",
             track_action: 1,
             track_label: "/government/organisations/department-for-education",
@@ -97,6 +101,8 @@ describe TaxonOrganisationsPresenter do
             text: "Department for Education",
             path: "/government/organisations/department-for-education",
             data_attributes: {
+              ecommerce_row: true,
+              ecommerce_path:  "/government/organisations/department-for-education",
               track_category: "organisationsDocumentListClicked",
               track_action: 1,
               track_label: "/government/organisations/department-for-education",
@@ -130,6 +136,8 @@ describe TaxonOrganisationsPresenter do
           brand: "department-for-education",
           crest: "single-identity",
           data_attributes: {
+            ecommerce_row: true,
+            ecommerce_path:  "/government/organisations/department-for-education",
             track_category: "organisationsDocumentListClicked",
             track_action: index + 1,
             track_label: "/government/organisations/department-for-education",
@@ -161,6 +169,8 @@ describe TaxonOrganisationsPresenter do
             text: "Department for Education",
             path: "/government/organisations/department-for-education",
             data_attributes: {
+              ecommerce_row: true,
+              ecommerce_path:  "/government/organisations/department-for-education",
               track_category: "organisationsDocumentListClicked",
               track_action: index + 1,
               track_label: "/government/organisations/department-for-education",
@@ -196,6 +206,8 @@ describe TaxonOrganisationsPresenter do
           brand: "department-for-education",
           crest: "single-identity",
           data_attributes: {
+            ecommerce_row: true,
+            ecommerce_path:  "/government/organisations/department-for-education",
             track_category: "organisationsDocumentListClicked",
             track_action: index + 1,
             track_label: "/government/organisations/department-for-education",
@@ -212,6 +224,8 @@ describe TaxonOrganisationsPresenter do
             text: "Department for Education",
             path: "/government/organisations/department-for-education",
             data_attributes: {
+              ecommerce_row: true,
+              ecommerce_path:  "/government/organisations/department-for-education",
               track_category: "organisationsDocumentListClicked",
               track_action: 4,
               track_label: "/government/organisations/department-for-education",
@@ -247,6 +261,8 @@ describe TaxonOrganisationsPresenter do
           brand: "department-for-education",
           crest: "single-identity",
           data_attributes: {
+            ecommerce_row: true,
+            ecommerce_path:  "/government/organisations/department-for-education",
             track_category: "organisationsDocumentListClicked",
             track_action: 6,
             track_label: "/government/organisations/department-for-education",
@@ -278,6 +294,8 @@ describe TaxonOrganisationsPresenter do
             text: "Department for Education",
             path: "/government/organisations/department-for-education",
             data_attributes: {
+              ecommerce_row: true,
+              ecommerce_path:  "/government/organisations/department-for-education",
               track_category: "organisationsDocumentListClicked",
               track_action: 6,
               track_label: "/government/organisations/department-for-education",
