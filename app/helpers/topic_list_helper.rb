@@ -27,12 +27,21 @@ module TopicListHelper
 
 private
 
+  def data_attributes(tracking_attributes, list_item, list_index)
+    {
+      ecommerce_row: list_index ? "#{list_index + 1}." : "",
+      ecommerce_path: list_item.base_path,
+    }.merge(
+      topic_list_item_tracking_attributes(tracking_attributes, list_item.title, list_item.base_path, list_index),
+    )
+  end
+
   def topic_list_items(list, tracking_attributes)
     list.each_with_index.map do |list_item, list_item_index|
       {
         text: list_item.title,
         path: list_item.base_path,
-        data_attributes: topic_list_item_tracking_attributes(tracking_attributes, list_item.title, list_item.base_path, list_item_index),
+        data_attributes: data_attributes(tracking_attributes, list_item, list_item_index),
       }
     end
   end

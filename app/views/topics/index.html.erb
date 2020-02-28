@@ -10,7 +10,7 @@
 </header>
 
 <div class="browse-container full-width topics-page" data-module="track-click">
-  <nav class="topics">
+  <nav class="topics" data-analytics-ecommerce data-ecommerce-start-index="1" data-list-title="Topic browse" data-search-query="<%= topic.title %>">
     <% tracking_category = topic.base_path == '/topic' ? 'navTopicLinkClicked' : 'navSubtopicLinkClicked' %>
     <%= render 'components/topic-list', topic_list_params(topic.children, category: tracking_category) %>
   </nav>
