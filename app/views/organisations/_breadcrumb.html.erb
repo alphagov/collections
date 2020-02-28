@@ -1,5 +1,6 @@
 <% content_for :breadcrumbs do %>
   <%= render "govuk_publishing_components/components/breadcrumbs", {
-    breadcrumbs: @header.breadcrumbs
+    breadcrumbs: @header.breadcrumbs,
+    collapse_on_mobile: true
   } %>
 <% end %>

@@ -20,7 +20,7 @@ module TransitionLandingPageSteps
   def then_i_can_see_the_title_section
     assert page.has_selector?("title", text: "The transition period", visible: false)
 
-    within ".gem-c-breadcrumbs" do
+    within ".gem-c-breadcrumbs.gem-c-breadcrumbs--collapse-on-mobile" do
       assert page.has_link?("Home", href: "/")
     end
   end

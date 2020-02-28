@@ -701,6 +701,10 @@ module OrganisationHelpers
     visit content["base_path"]
   end
 
+  def and_the_breadcrumbs_collapse_on_mobile
+    assert page.has_css?(".gem-c-breadcrumbs--collapse-on-mobile")
+  end
+
   def i_see_the_courts_breadcrumb
     assert page.has_css?(".gem-c-breadcrumbs", text: "Courts and Tribunals")
   end

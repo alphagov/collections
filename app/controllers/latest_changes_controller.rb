@@ -34,22 +34,20 @@ private
   # Breadcrumbs for this page are hardcoded because it doesn't have a
   # content item with parents.
   def hardcoded_breadcrumbs
-    {
-      breadcrumbs: [
-        {
-          title: "Home",
-          url: "/",
-        },
-        {
-          title: subtopic.parent.title,
-          url: subtopic.parent.base_path,
-        },
-        {
-          title: subtopic.title,
-          url: subtopic.base_path,
-        },
-      ],
-    }
+    [
+      {
+        title: "Home",
+        url: "/",
+      },
+      {
+        title: subtopic.parent.title,
+        url: subtopic.parent.base_path,
+      },
+      {
+        title: subtopic.title,
+        url: subtopic.base_path,
+      },
+    ]
   end
 
   def pagination_params
