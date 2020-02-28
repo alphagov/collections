@@ -34,7 +34,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
 
     assert page.has_content?("Oil and Gas")
 
-    assert page.has_css?(".gem-c-breadcrumbs")
+    assert page.has_css?(".gem-c-breadcrumbs.gem-c-breadcrumbs--collapse-on-mobile")
   end
 
   it "renders a topic tag page and list its subtopics" do

@@ -84,7 +84,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
     assert_not page.has_link?("North sea shipping lanes")
 
-    within ".gem-c-breadcrumbs" do
+    within ".gem-c-breadcrumbs.gem-c-breadcrumbs--collapse-on-mobile" do
       assert page.has_link?("Home", href: "/")
       assert page.has_link?("Oil and Gas", href: "/topic/oil-and-gas")
     end

@@ -14,11 +14,11 @@
 
 <header class="landing-page__header">
   <div class="govuk-width-container">
-    <%= render 'govuk_publishing_components/components/breadcrumbs',
+    <%= render 'govuk_publishing_components/components/breadcrumbs', {
       breadcrumbs: GovukPublishingComponents::AppHelpers::TaxonBreadcrumbs.new(@content_item).breadcrumbs,
       collapse_on_mobile: true,
       inverse: true
-    %>
+    } %>
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-third landing-page__translation">
