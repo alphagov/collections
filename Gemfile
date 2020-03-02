@@ -13,7 +13,7 @@ gem 'plek', '~> 3.0.0'
 gem 'rails', '5.2.4.1'
 gem 'rinku', require: 'rails_rinku'
 gem 'sass-rails', '~> 5.0.3'
-gem 'slimmer', '~> 13.2.0'
+gem 'slimmer', '~> 13.2.1'
 gem 'uglifier', '~> 4.2.0'
 
 group :test do
