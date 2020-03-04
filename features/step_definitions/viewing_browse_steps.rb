@@ -1,24 +1,11 @@
 Given(/^there is an alphabetical browse page set up with links$/) do
-  second_level_browse_pages = [{
-    content_id: "judges-content-id",
-    title: "Judges",
-    base_path: "/browse/crime-and-justice/judges",
-  }]
-
   add_browse_pages
   add_first_level_browse_pages(
     child_pages: second_level_browse_pages,
     order_type: "alphabetical",
   )
   add_second_level_browse_pages(second_level_browse_pages)
-
-  rummager_has_documents_for_browse_page(
-    "judges-content-id",
-    %w[
-      judge-dredd
-    ],
-    page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
-  )
+  third_level_browse_documents
 end
 
 Given(/^that there are curated second level browse pages$/) do
@@ -106,6 +93,22 @@ def top_level_browse_pages
       base_path: "/browse/benefits",
     },
   ]
+end
+
+def second_level_browse_pages
+  [{
+    content_id: "judges-content-id",
+    title: "Judges",
+    base_path: "/browse/crime-and-justice/judges",
+  }]
+end
+
+def third_level_browse_documents
+  rummager_has_documents_for_browse_page(
+    "judges-content-id",
+    %w(judge-dredd),
+    page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+  )
 end
 
 def add_browse_pages
