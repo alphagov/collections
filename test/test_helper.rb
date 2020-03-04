@@ -18,7 +18,7 @@ require "mocha/minitest"
 require "webmock/minitest"
 WebMock.disable_net_connect!
 
-Dir[Rails.root.join("test/support/*.rb")].each { |f| require f }
+Dir[Rails.root.join("test/support/*.rb")].sort.each { |f| require f }
 
 require "gds_api/test_helpers/content_store"
 require "gds_api/test_helpers/search"
