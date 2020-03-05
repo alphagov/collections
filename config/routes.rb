@@ -72,5 +72,16 @@ Rails.application.routes.draw do
   get "/world/*taxon_base_path", to: "world_wide_taxons#show"
   get "/brexit(.:locale)", to: "transition_landing_page#show"
   get "/transition(.:locale)", to: "transition_landing_page#show"
+
+  # We get requests for URLs like
+  # https://www.gov.uk/topic%2Flegal-aid-for-providers%2Fmake-application%2Flatest
+  # which fall through to here and error in the taxons controller.
+  # We can fix the path and redirect to the correct place.
+  get "/:slug",
+    to: redirect { |path_params, req|
+      [req.path.gsub("%2F", "/"), req.query_string].join("?").chomp("?")
+    },
+    constraints: lambda { |req| req.path.include? "%2F" }
+
   get "*taxon_base_path", to: "taxons#show"
 end
