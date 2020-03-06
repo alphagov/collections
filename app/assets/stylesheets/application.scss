@@ -3,7 +3,30 @@ $govuk-compatibility-govukelements: true;
 $govuk-use-legacy-palette: false;
 
 // gem components
-@import 'govuk_publishing_components/all_components';
+@import 'govuk_publishing_components/govuk_frontend_support';
+@import 'govuk_publishing_components/component_support';
+@import 'govuk_publishing_components/components/_breadcrumbs';
+@import 'govuk_publishing_components/components/_button';
+@import 'govuk_publishing_components/components/_contents-list';
+@import 'govuk_publishing_components/components/_details';
+@import 'govuk_publishing_components/components/_document-list';
+@import 'govuk_publishing_components/components/_feedback';
+@import 'govuk_publishing_components/components/_govspeak';
+@import 'govuk_publishing_components/components/_heading';
+@import 'govuk_publishing_components/components/_image-card';
+@import 'govuk_publishing_components/components/_input';
+@import 'govuk_publishing_components/components/_inverse-header';
+@import 'govuk_publishing_components/components/_lead-paragraph';
+@import 'govuk_publishing_components/components/_metadata';
+@import 'govuk_publishing_components/components/_notice';
+@import 'govuk_publishing_components/components/_organisation-logo';
+@import 'govuk_publishing_components/components/_phase-banner';
+@import 'govuk_publishing_components/components/_previous-and-next-navigation';
+@import 'govuk_publishing_components/components/_share-links';
+@import 'govuk_publishing_components/components/_step-by-step-nav';
+@import 'govuk_publishing_components/components/_subscription-links';
+@import 'govuk_publishing_components/components/_title';
+@import 'govuk_publishing_components/components/_translation-nav';
 
 @import "helpers/layouts";
 @import "helpers/margins";

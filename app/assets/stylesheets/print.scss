@@ -1,1 +1,11 @@
-@import 'govuk_publishing_components/all_components_print';
+@import 'govuk_publishing_components/govuk_frontend_support';
+@import 'govuk_publishing_components/components/print/_button';
+@import 'govuk_publishing_components/components/print/_contents-list';
+@import 'govuk_publishing_components/components/print/_feedback';
+@import 'govuk_publishing_components/components/print/_govspeak';
+@import 'govuk_publishing_components/components/print/_metadata';
+@import 'govuk_publishing_components/components/print/_share-links';
+@import 'govuk_publishing_components/components/print/_step-by-step-nav';
+@import 'govuk_publishing_components/components/print/_subscription-links';
+@import 'govuk_publishing_components/components/print/_title';
+@import 'govuk_publishing_components/components/print/_translation-nav';
