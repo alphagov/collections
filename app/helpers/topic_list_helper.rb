@@ -46,7 +46,7 @@ private
 
   def data_attributes(tracking_attributes, list_item, list_index)
     {
-      ecommerce_row: list_index ? "#{list_index + 1}." : "",
+      ecommerce_row: list_index ? "#{list_index + 1}" : "",
       ecommerce_path: list_item.base_path,
     }.merge(
       topic_list_item_tracking_attributes(tracking_attributes, list_item.title, list_item.base_path, list_index),
