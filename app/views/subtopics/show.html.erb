@@ -25,7 +25,7 @@
     link_to_latest_feed: true,
   }) do %>
   <% subtopic.lists.each_with_index do |list, list_index| -%>
-    <nav class="govuk-grid-row" aria-labelledby="<%= list.title.parameterize %>" data-analytics-ecommerce data-ecommerce-start-index="1" data-list-title="Topic browse" data-search-query="<%= list.title %>">
+    <nav class="govuk-grid-row" aria-labelledby="<%= list.title.parameterize %>" data-analytics-ecommerce data-ecommerce-start-index="1" data-list-title="Topic browse" data-search-query="<%= eCommerce_subtopic_category(list, subtopic.title) %>">
       <div class="govuk-grid-column-one-third">
         <h1 id="<%= list.title.parameterize %>"><%= list.title %></h1>
       </div>
