@@ -25,21 +25,21 @@ module TopicListHelper
     }
   end
 
-  def is_root_topic(topic)
+  def root_topic?(topic)
     topic.base_path == '/topic'
   end
 
   def tracking_category(topic)
-    is_root_topic(topic) ? "navTopicLinkClicked" : 'navSubtopicLinkClicked'
+    root_topic?(topic) ? "navTopicLinkClicked" : 'navSubtopicLinkClicked'
   end
 
-  def eCommerce_subtopic_category(list, subtopic_title)
+  def ecommerce_subtopic_category(list, subtopic_title)
     return subtopic_title if list.title == "A to Z"
     list.title
   end
 
   def eCommerce_topic_category(topic)
-     is_root_topic(topic) ? "topic index" : topic.title.downcase.to_s
+     root_topic?(topic) ? "topic index" : topic.title.downcase.to_s
   end
 
 private
