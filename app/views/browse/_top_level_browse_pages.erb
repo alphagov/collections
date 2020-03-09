@@ -1,4 +1,11 @@
-<div id="root" class="pane root-pane">
+<div id="root"
+  class="pane root-pane"
+  data-analytics-ecommerce
+  data-search-query
+  data-ecommerce-start-index="1"
+  data-list-title="Mainstream browse - Column 1"
+ >
+
   <h2 class="visuallyhidden" tabindex="-1">All categories</h2>
   <ul>
     <% top_level_browse_pages.each_with_index do |page, index| %>
@@ -10,6 +17,9 @@
             track_category: 'firstLevelBrowseLinkClicked',
             track_action: "#{index + 1}",
             track_label: page.base_path,
+            ecommerce_row: true,
+            ecommerce_path: page.base_path,
+            ecommerce_subheading: "All categories",
             track_options: {
               dimension28: top_level_browse_pages.count.to_s,
               dimension29: page.title,

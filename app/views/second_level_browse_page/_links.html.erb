@@ -1,3 +1,4 @@
+<% ecommerce_page_row_count = 1 %>
 <div class="pane-inner <%= page.lists.curated? ? 'curated-list' : 'a-to-z' %>">
   <h2 tabindex="-1" class="js-heading"><%= page.title %></h2>
 
@@ -8,13 +9,19 @@
       <p class="sort-order"><%= hairspace list.title %></p>
     <% end %>
 
-    <ul>
+    <ul data-analytics-ecommerce
+        data-search-query
+        data-ecommerce-start-index=<%= "#{section_index + 1}" %>
+        data-list-title="Mainstream browse - Column 3">
       <% list.contents.each_with_index do |list_item, index| %>
         <li>
           <%= link_to(
             list_item.title,
             list_item.base_path,
             data: {
+              ecommerce_row: true,
+              ecommerce_path: list_item.base_path,
+              ecommerce_subheading: page.lists.curated? ? list.title : 'A to Z',
               track_category: 'thirdLevelBrowseLinkClicked',
               track_action: "#{section_index + 1}.#{index + 1}",
               track_label: list_item.base_path,
@@ -25,6 +32,7 @@
             },
             class: "govuk-link",
           ) %>
+          <% ecommerce_page_row_count += 1 %>
         </li>
       <% end %>
     </ul>
@@ -33,13 +41,19 @@
   <% if page.related_topics.any? %>
     <div class="detailed-guidance">
       <h2>Detailed guidance</h2>
-      <ul>
+      <ul data-analytics-ecommerce
+          data-search-query
+          data-ecommerce-start-index=<%= "#{ecommerce_page_row_count}" %>
+          data-list-title="Mainstream browse - Column 3">
         <% page.related_topics.each_with_index do |related_topic, index| %>
           <li>
             <%= link_to(
               related_topic.title,
               related_topic.base_path,
               data: {
+                ecommerce_row: true,
+                ecommerce_path: related_topic.base_path,
+                ecommerce_subheading: "Detailed guidance",
                 track_category: 'thirdLevelBrowseLinkClicked',
                 track_action: "#{page.lists.count + 1}.#{index + 1}",
                 track_label: related_topic.base_path,

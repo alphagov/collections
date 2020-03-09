@@ -1,4 +1,8 @@
-<div class="pane-inner <%= curated_order ? "curated" : "alphabetical" %>">
+<div class="pane-inner <%= curated_order ? "curated" : "alphabetical" %>"
+     data-analytics-ecommerce
+     data-search-query
+     data-ecommerce-start-index="1"
+     data-list-title="Mainstream browse - Column 2">
   <h2 tabindex="-1" class="js-heading"><%= title %></h2>
   <% unless curated_order %>
     <p class="sort-order"><%= hairspace 'A to Z' %></p>
@@ -9,6 +13,9 @@
         <%= link_to(
           browse_page.base_path,
           data: {
+            ecommerce_row: true,
+            ecommerce_path: browse_page.base_path,
+            ecommerce_subheading: "#{title} - #{curated_order ? 'Curated' : 'A to Z'}",
             track_category: 'secondLevelBrowseLinkClicked',
             track_action: "#{index + 1}",
             track_label: browse_page.base_path,
