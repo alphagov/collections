@@ -19,7 +19,7 @@ module Collections
     # -- all .rb files in that directory are automatically loaded.
 
     config.i18n.default_locale = :en
-    config.i18n.load_path += Dir[Rails.root.join("config", "locales", "**", "*.yml").to_s]
+    config.i18n.load_path += Dir[Rails.root.join("config/locales/**/*.yml")]
     config.i18n.fallbacks = true
 
     config.assets.prefix = "/collections/"
