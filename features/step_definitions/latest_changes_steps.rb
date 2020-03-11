@@ -17,16 +17,16 @@ Given(/^there is latest content for a subtopic$/) do
       "link" => "/government/publications/#{slug}",
       "index" => "government",
       "_id" => "/government/publications/#{slug}",
-      "document_type" => "edition"
+      "document_type" => "edition",
     }
   end
   Services.rummager.stubs(:search).with(
     has_entries(
       start: 0,
       count: 50,
-      filter_topic_content_ids: ['content-id-for-fields-and-wells'],
+      filter_topic_content_ids: %w[content-id-for-fields-and-wells],
       order: "-public_timestamp",
-    )
+    ),
   ).returns("results" => @stubbed_rummager_documents,
     "start" => 0,
     "total" => @stubbed_rummager_documents.size)

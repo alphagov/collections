@@ -1,6 +1,6 @@
-require 'gds_api/test_helpers/search'
+require "gds_api/test_helpers/search"
 
-require_relative '../../test/support/rummager_helpers'
+require_relative "../../test/support/rummager_helpers"
 
 module ServicesAndInformationHelpers
   include GdsApi::TestHelpers::Search
@@ -16,18 +16,18 @@ module ServicesAndInformationHelpers
     stub_services_and_information_links("hm-revenue-customs")
 
     stub_content_store_has_item("/government/organisations/hm-revenue-customs/services-information",
-                           content_id: 'content-id-for-hm-revenue-customs-services-information',
-                           base_path: "/government/organisations/hm-revenue-customs/services-information",
-                           title: "Services and information - HM Revenue & Customs",
-                           format: "services_and_information",
-                           public_updated_at: 10.days.ago.iso8601,
-                           details: {},
-                           links: {
-                             "parent" => [
-                               "title" => "HM Revenue & Customs",
-                               "base_path" => "/government/organisations/hm-revenue-customs",
-                             ]
-                           },)
+                                content_id: "content-id-for-hm-revenue-customs-services-information",
+                                base_path: "/government/organisations/hm-revenue-customs/services-information",
+                                title: "Services and information - HM Revenue & Customs",
+                                format: "services_and_information",
+                                public_updated_at: 10.days.ago.iso8601,
+                                details: {},
+                                links: {
+                                  "parent" => [
+                                    "title" => "HM Revenue & Customs",
+                                    "base_path" => "/government/organisations/hm-revenue-customs",
+                                  ],
+                                })
   end
 end
 

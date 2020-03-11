@@ -6,8 +6,8 @@ Given(/^a topic subscription is expected$/) do
     .with(
       "title" => "Oil and Gas: Fields and Wells",
       "links" => {
-        "topics" => ['content-id-for-fields-and-wells']
-      }
+        "topics" => %w[content-id-for-fields-and-wells],
+      },
     ).returns("subscriber_list" =>
        # This redirects to email-alert-api in real life, but force redirection to a fake path to verify redirect success
        { "subscription_url" => "/email_success" })
