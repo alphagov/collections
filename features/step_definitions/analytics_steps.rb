@@ -1,6 +1,6 @@
 Then(/^the ecommerce tracking tags are present$/) do
   assert page.has_selector?("div#root[data-analytics-ecommerce]")
-  assert page.has_selector?('div#root[data-search-query]')
+  assert page.has_selector?("div#root[data-search-query]")
   assert page.has_selector?('div#root[data-ecommerce-start-index="1"]')
   assert page.has_selector?('div#root[data-list-title="Mainstream browse - Column 1"]')
   assert page.has_selector?("div#root li:nth-child(1) a[data-ecommerce-row]")
