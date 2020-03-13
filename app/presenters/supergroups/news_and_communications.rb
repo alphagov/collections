@@ -10,15 +10,15 @@ module Supergroups
       @content = MostRecentContent.fetch(content_id: taxon_id, filter_content_store_document_type: document_types)
     end
 
-    def document_list(taxon_id)
+    def document_list(taxon_id, secton_title)
       items = tagged_content(taxon_id).drop(promoted_content_count)
 
-      format_document_data(items)
+      format_document_data(items, secton_title)
     end
 
-    def promoted_content(taxon_id)
+    def promoted_content(taxon_id, secton_title)
       items = tagged_content(taxon_id).shift(promoted_content_count)
-      format_document_data(items, "FeaturedLinkClicked", true)
+      format_document_data(items, secton_title, "FeaturedLinkClicked", true)
     end
 
   private

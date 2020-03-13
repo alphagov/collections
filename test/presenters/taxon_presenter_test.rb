@@ -17,10 +17,14 @@ describe TaxonPresenter do
           stub_content_for_taxon([taxon.content_id], generate_search_results(15))
         end
 
-        subject { taxon_presenter.options_for_child_taxon(index: 0) }
+        subject { taxon_presenter.options_for_child_taxon(0, "Section Title") }
 
         it "contains the track-click module" do
           assert_equal("track-click", subject[:module])
+        end
+
+        it "contains the ecommerce subheader" do
+          assert_equal("Section Title", subject[:ecommerce_subheading])
         end
 
         it "contains the navGridContentClicked track_category" do

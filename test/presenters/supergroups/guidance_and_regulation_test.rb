@@ -21,6 +21,7 @@ describe Supergroups::GuidanceAndRegulation do
               module: "track-click",
               ecommerce_row: true,
               ecommerce_path: "/government/tagged/content",
+              ecommerce_subheading: "Guidance and regulation",
               track_category: "guidanceAndRegulationDocumentListClicked",
               track_action: 1,
               track_label: "/government/tagged/content",
@@ -37,7 +38,7 @@ describe Supergroups::GuidanceAndRegulation do
         },
       ]
 
-      assert_equal expected, guidance_and_regulation_supergroup.document_list(taxon_id)
+      assert_equal expected, guidance_and_regulation_supergroup.document_list(taxon_id, "Guidance and regulation")
     end
 
     it "return a document list for guides" do
@@ -55,6 +56,7 @@ describe Supergroups::GuidanceAndRegulation do
               module: "track-click",
               ecommerce_row: true,
               ecommerce_path: "/government/tagged/content",
+              ecommerce_subheading: "Guidance and regulation",
               track_category: "guidanceAndRegulationDocumentListClicked",
               track_action: 1,
               track_label: "/government/tagged/content",
@@ -70,7 +72,7 @@ describe Supergroups::GuidanceAndRegulation do
         },
       ]
 
-      actual = guidance_and_regulation_supergroup.document_list(taxon_id)
+      actual = guidance_and_regulation_supergroup.document_list(taxon_id, "Guidance and regulation")
 
       assert_equal expected, actual
       assert_equal 1, actual.count

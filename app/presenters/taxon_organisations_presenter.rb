@@ -41,12 +41,11 @@ private
   def organisation_list_with_logos
     organisations_with_logos.map.with_index do |org, index|
       {
-
           name: org.logo_formatted_title,
           url: org.link,
           brand: org.brand,
           crest: org.crest,
-          data_attributes: data_attributes(org.link, org.title, index + 1),
+          data_attributes: data_attributes(org.link, org.title, index + 1, "Organisations"),
       }
     end
   end
@@ -61,16 +60,17 @@ private
         link: {
           text: organisation.title,
           path: organisation.link,
-          data_attributes: data_attributes(organisation.link, organisation.title, tracking_number + index),
+          data_attributes: data_attributes(organisation.link, organisation.title, tracking_number + index, "Organisations"),
         },
       }
     end
   end
 
-  def data_attributes(base_path, link_text, index)
+  def data_attributes(base_path, link_text, index, secton_title)
     {
       ecommerce_row: true,
       ecommerce_path:  base_path,
+      ecommerce_subheading: secton_title,
       track_category: "organisationsDocumentListClicked",
       track_action: index,
       track_label: base_path,

@@ -30,10 +30,10 @@ module Supergroups
       raise NotImplementedError.new
     end
 
-    def document_list(taxon_id)
+    def document_list(taxon_id, secton_title)
       items = tagged_content(taxon_id)
 
-      format_document_data(items)
+      format_document_data(items, secton_title)
     end
 
     def data_module_label
@@ -66,11 +66,12 @@ module Supergroups
       }
     end
 
-    def data_attributes(base_path, link_text, index)
+    def data_attributes(base_path, link_text, index, secton_title)
       {
         module: "track-click",
         ecommerce_row: true,
         ecommerce_path: base_path,
+        ecommerce_subheading: secton_title,
         track_category: data_module_label + "DocumentListClicked",
         track_action: index,
         track_label: base_path,
@@ -80,13 +81,13 @@ module Supergroups
       }
     end
 
-    def format_document_data(documents, data_category = "", with_image_url = false)
+    def format_document_data(documents, secton_title, data_category = "", with_image_url = false)
       documents.each.with_index(1).map do |document, index|
         data = {
           link: {
             text: document.title,
             path: document.base_path,
-            data_attributes: data_attributes(document.base_path, document.title, index),
+            data_attributes: data_attributes(document.base_path, document.title, index, secton_title),
           },
           metadata: {
             public_updated_at: document.public_updated_at,

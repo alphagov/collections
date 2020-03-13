@@ -21,6 +21,7 @@ describe Supergroups::Transparency do
               module: "track-click",
               ecommerce_row: true,
               ecommerce_path: "/government/tagged/content",
+              ecommerce_subheading: "Transparency and freedom of information releases",
               track_category: "transparencyDocumentListClicked",
               track_action: 1,
               track_label: "/government/tagged/content",
@@ -37,7 +38,7 @@ describe Supergroups::Transparency do
         },
       ]
 
-      assert_equal expected, transparency_supergroup.document_list(taxon_id)
+      assert_equal expected, transparency_supergroup.document_list(taxon_id, "Transparency and freedom of information releases")
     end
   end
 

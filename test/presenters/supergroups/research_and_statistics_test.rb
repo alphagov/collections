@@ -21,6 +21,7 @@ describe Supergroups::ResearchAndStatistics do
               module: "track-click",
               ecommerce_row: true,
               ecommerce_path: "/government/tagged/content",
+              ecommerce_subheading: "Research and statistics",
               track_category: "researchAndStatisticsDocumentListClicked",
               track_action: 1,
               track_label: "/government/tagged/content",
@@ -37,7 +38,7 @@ describe Supergroups::ResearchAndStatistics do
         },
       ]
 
-      assert_equal expected, research_and_statistics_supergroup.document_list(taxon_id)
+      assert_equal expected, research_and_statistics_supergroup.document_list(taxon_id, "Research and statistics")
     end
   end
 

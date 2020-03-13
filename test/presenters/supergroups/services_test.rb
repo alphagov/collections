@@ -22,6 +22,7 @@ describe Supergroups::Services do
               module: "track-click",
               ecommerce_row: true,
               ecommerce_path: "/government/tagged/content",
+              ecommerce_subheading: "Services",
               track_category: "servicesDocumentListClicked",
               track_action: 1,
               track_label: "/government/tagged/content",
@@ -33,7 +34,7 @@ describe Supergroups::Services do
         },
       ]
 
-      assert_equal expected, service_supergroup.document_list(taxon_id)
+      assert_equal expected, service_supergroup.document_list(taxon_id, "Services")
     end
   end
 

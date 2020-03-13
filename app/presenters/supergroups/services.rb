@@ -12,14 +12,14 @@ module Supergroups
 
   private
 
-    def format_document_data(documents, data_category = "")
+    def format_document_data(documents, secton_title, data_category = "")
       documents.each.with_index(1).map do |document, index|
         data = {
           link: {
             text: document.title,
             path: document.base_path,
             description: document.description,
-            data_attributes: data_attributes(document.base_path, document.title, index),
+            data_attributes: data_attributes(document.base_path, document.title, index, secton_title),
           },
         }
 

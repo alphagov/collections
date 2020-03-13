@@ -13,7 +13,7 @@ describe Supergroups::PolicyAndEngagement do
         .stubs(:fetch)
         .returns(section_tagged_content_list("case_study"))
 
-      assert_equal expected_result("case_study"), policy_and_engagement_supergroup.document_list(taxon_id)
+      assert_equal expected_result("case_study"), policy_and_engagement_supergroup.document_list(taxon_id, "Policy papers and consultations")
     end
 
     describe "consultations" do
@@ -38,7 +38,7 @@ describe Supergroups::PolicyAndEngagement do
           .stubs(:fetch)
           .returns(tagged_content(tagged_document_list))
 
-        assert_equal expected_results(expected_order), policy_and_engagement_supergroup.document_list(taxon_id)
+        assert_equal expected_results(expected_order), policy_and_engagement_supergroup.document_list(taxon_id, "Policy papers and consultations")
       end
 
       describe "#consultation_closing_date" do
@@ -48,7 +48,7 @@ describe Supergroups::PolicyAndEngagement do
             .returns(section_tagged_content_list("open_consultation", 4))
 
           expected = Array.new(4) { |index| expected_result("open_consultation", index + 1).first }
-          assert_equal expected, policy_and_engagement_supergroup.document_list(taxon_id)
+          assert_equal expected, policy_and_engagement_supergroup.document_list(taxon_id, "Policy papers and consultations")
         end
 
         it "gets the closing date of future consultations" do
@@ -75,6 +75,7 @@ describe Supergroups::PolicyAndEngagement do
                   module: "track-click",
                   ecommerce_row: true,
                   ecommerce_path: "/government/tagged/content-1",
+                  ecommerce_subheading: "Policy papers and consultations",
                   track_category: "policyAndEngagementDocumentListClicked",
                   track_action: 1,
                   track_label: "/government/tagged/content-1",
@@ -93,7 +94,7 @@ describe Supergroups::PolicyAndEngagement do
           ]
 
           Timecop.freeze("2018-04-18") do
-            assert_equal expected, policy_and_engagement_supergroup.document_list(taxon_id)
+            assert_equal expected, policy_and_engagement_supergroup.document_list(taxon_id, "Policy papers and consultations")
           end
         end
       end
@@ -127,6 +128,7 @@ private
           module: "track-click",
           ecommerce_row: true,
           ecommerce_path: "/government/tagged/content",
+          ecommerce_subheading: "Policy papers and consultations",
           track_category: "policyAndEngagementDocumentListClicked",
           track_action: index,
           track_label: "/government/tagged/content",

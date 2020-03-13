@@ -24,6 +24,7 @@ describe Supergroups::NewsAndCommunications do
               module: "track-click",
               ecommerce_row: true,
               ecommerce_path: "/government/tagged/content",
+              ecommerce_subheading: "News and communications",
               track_category: "newsAndCommunicationsDocumentListClicked",
               track_action: 1,
               track_label: "/government/tagged/content",
@@ -40,7 +41,7 @@ describe Supergroups::NewsAndCommunications do
         },
       ]
 
-      assert_equal expected, news_and_communications_supergroup.document_list(taxon_id)
+      assert_equal expected, news_and_communications_supergroup.document_list(taxon_id, "News and communications")
     end
 
     it "does not returns an image for news items" do
@@ -50,7 +51,7 @@ describe Supergroups::NewsAndCommunications do
         .stubs(:fetch)
         .returns(tagged_content(tagged_document_list))
 
-      news_and_communications_supergroup.document_list(taxon_id).each do |content_item|
+      news_and_communications_supergroup.document_list(taxon_id, "News and communications").each do |content_item|
         assert_not content_item.key?(:image)
       end
     end
@@ -82,6 +83,7 @@ describe Supergroups::NewsAndCommunications do
             data_attributes: {
               ecommerce_row: true,
               ecommerce_path: "/government/tagged/content",
+              ecommerce_subheading: "News and communications",
               module: "track-click",
               track_category: "newsAndCommunicationsFeaturedLinkClicked",
               track_action: 1,
@@ -102,7 +104,7 @@ describe Supergroups::NewsAndCommunications do
         },
       ]
 
-      assert_equal expected, news_and_communications_supergroup.promoted_content(taxon_id)
+      assert_equal expected, news_and_communications_supergroup.promoted_content(taxon_id, "News and communications")
     end
 
     it "returns an image for the first news item" do
@@ -112,7 +114,7 @@ describe Supergroups::NewsAndCommunications do
         .stubs(:fetch)
         .returns(tagged_content(tagged_document_list))
 
-      promoted_news = news_and_communications_supergroup.promoted_content(taxon_id)
+      promoted_news = news_and_communications_supergroup.promoted_content(taxon_id, "News and communications")
 
       assert_equal 1, promoted_news.size
       assert promoted_news.first.key?(:image)
@@ -125,7 +127,7 @@ describe Supergroups::NewsAndCommunications do
       .stubs(:fetch)
       .returns(content_list)
 
-      assert_equal DEFAULT_IMAGE_URL, news_and_communications_supergroup.promoted_content(taxon_id).first[:image][:url]
+      assert_equal DEFAULT_IMAGE_URL, news_and_communications_supergroup.promoted_content(taxon_id, "News and communications").first[:image][:url]
     end
   end
 

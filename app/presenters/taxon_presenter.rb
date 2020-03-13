@@ -28,11 +28,12 @@ class TaxonPresenter
     child_taxons.count.positive?
   end
 
-  def options_for_child_taxon(index:)
+  def options_for_child_taxon(index, secton_title)
     {
       module: "track-click",
       ecommerce_row: true,
       ecommerce_path: child_taxons[index].base_path,
+      ecommerce_subheading: secton_title,
       track_category: "navGridContentClicked",
       track_action: (index + 1).to_s,
       track_label: child_taxons[index].base_path,

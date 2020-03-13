@@ -6,10 +6,10 @@ module Supergroups
       super("policy_and_engagement")
     end
 
-    def document_list(taxon_id)
+    def document_list(taxon_id, secton_title)
       items = tagged_content(taxon_id)
 
-      format_document_data(items)
+      format_document_data(items, secton_title)
     end
 
     def tagged_content(taxon_id)
@@ -50,13 +50,13 @@ module Supergroups
       consultations + other_document_types
     end
 
-    def format_document_data(documents, data_category = "")
+    def format_document_data(documents, secton_title, data_category = "")
       documents.each.with_index(1).map do |document, index|
         data = {
           link: {
             text: document.title,
             path: document.base_path,
-            data_attributes: data_attributes(document.base_path, document.title, index),
+            data_attributes: data_attributes(document.base_path, document.title, index, secton_title),
           },
           metadata: {
             public_updated_at: document.public_updated_at,
