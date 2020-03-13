@@ -90,7 +90,7 @@ def leaf_node_ecommerce_tracking_is_present(groups_css_selector, list_title, top
     group_fixture = topic_fixtures[:details][:groups][nav_index]
     list_has_ecommerce_attributes("#{groups_css_selector}:nth-child(#{nav_index + 1})", list_title, group_fixture[:name])
     group_css_selector = "#{groups_css_selector}:nth-child(#{nav_index + 1})"
-    nav_group.find_all("li").each.with_index do |list_item, list_item_index|
+    nav_group.find_all("li").each.with_index do |_list_item, list_item_index|
       list_item_css_selector = "#{group_css_selector} li:nth-child(#{list_item_index + 1}) a"
       expected_href = group_fixture[:contents][list_item_index]
       assert_equal page.find(list_item_css_selector)["data-ecommerce-row"], (list_item_index + start_index).to_s
@@ -99,12 +99,12 @@ def leaf_node_ecommerce_tracking_is_present(groups_css_selector, list_title, top
   end
 end
 
-def topic_leaf_nodes_have_ecommerce_tracking_attributes(group_list_selector, list_items, list_element, start_index = 1)
+def topic_leaf_nodes_have_ecommerce_tracking_attributes(_group_list_selector, list_items, list_element, start_index = 1)
   alphabetised_groups = list_items[:details][:groups].sort_by { |item| item[:name] }
   alphabetised_groups.each.with_index do |group, group_index|
-    group_row_selector = "#{}:nth-child(#{group_index}) li"
+    group_row_selector = ":nth-child(#{group_index}) li"
     group[:contents].each.with_index do |document_path, index|
-      css_selector = "#{css_list_selector}:nth-child(#{index + 1}) #{list_element}"
+      css_selector = "#{css_list_selector}#{group_row_selector} #{list_element}"
       assert_equal page.find(css_selector)["data-ecommerce-row"], (index + start_index).to_s
       puts page.find(css_selector)["data-ecommerce-path"]
       puts document_path
@@ -136,7 +136,7 @@ def topics_root_node_search_data
       content_id: "/topic/oil-and-gas",
       title: "Oil and Gas",
       base_path: "/topic/oil-and-gas",
-    }
+    },
   ]
 end
 
@@ -146,7 +146,7 @@ def topics_branch_node_search_data
       content_id: "/topic/oil-and-gas/fields-and-wells",
       title: "Fields and wells",
       base_path: "/topic/oil-and-gas/fields-and-wells",
-    }
+    },
   ]
 end
 
@@ -163,13 +163,13 @@ def topics_leaf_node_search_data
             contents: [
               "/what-is-oil",
               "/apply-for-an-oil-licence",
-            ]
+            ],
           },
           {
             name: "Piping",
             contents: [
               "/well-application-form",
-            ]
+            ],
           },
         ],
       },

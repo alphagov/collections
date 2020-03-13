@@ -21,38 +21,36 @@ module TopicHelper
     )
 
     stub_content_store_has_item("/topic",
-      content_id: "topics",
-      base_path: "/topic",
-      title: "Topics",
-      document_type: "topic",
-      public_updated_at: 10.days.ago.iso8601,
-      details: {
-        internal_name: "Topic index page",
-      },
-      links: {
-        "children" => [
-          "title" => "Oil and Gas",
-          "base_path" => "/topic/oil-and-gas",
-        ],
-      },
-    )
+                                content_id: "topics",
+                                base_path: "/topic",
+                                title: "Topics",
+                                document_type: "topic",
+                                public_updated_at: 10.days.ago.iso8601,
+                                details: {
+                                  internal_name: "Topic index page",
+                                },
+                                links: {
+                                  "children" => [
+                                    "title" => "Oil and Gas",
+                                    "base_path" => "/topic/oil-and-gas",
+                                  ],
+                                })
     stub_content_store_has_item("/topic/oil-and-gas",
-      content_id: "/topic/oil-and-gas",
-      base_path: "/topic/oil-and-gas",
-      title: "Oil and gas",
-      document_type: "topic",
-      public_updated_at: 10.days.ago.iso8601,
-      details: {
-        "groups": [],
-        "internal_name": "Oil and gas"
-      },
-      links: {
-        "children" => [
-          "title" => "Fields and wells",
-          "base_path" => "/topic/oil-and-gas/fields-and-wells",
-        ],
-      },
-    )
+                                content_id: "/topic/oil-and-gas",
+                                base_path: "/topic/oil-and-gas",
+                                title: "Oil and gas",
+                                document_type: "topic",
+                                public_updated_at: 10.days.ago.iso8601,
+                                details: {
+                                  "groups": [],
+                                  "internal_name": "Oil and gas",
+                                },
+                                links: {
+                                  "children" => [
+                                    "title" => "Fields and wells",
+                                    "base_path" => "/topic/oil-and-gas/fields-and-wells",
+                                  ],
+                                })
 
     stub_content_store_has_item("/topic/oil-and-gas/fields-and-wells",
                                 content_id: "content-id-for-fields-and-wells",

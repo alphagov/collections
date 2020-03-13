@@ -26,27 +26,28 @@ module TopicListHelper
   end
 
   def root_topic?(topic)
-    topic.base_path == '/topic'
+    topic.base_path == "/topic"
   end
 
   def tracking_category(topic)
-    root_topic?(topic) ? "navTopicLinkClicked" : 'navSubtopicLinkClicked'
+    root_topic?(topic) ? "navTopicLinkClicked" : "navSubtopicLinkClicked"
   end
 
   def ecommerce_subtopic_category(list, subtopic_title)
     return subtopic_title if list.title == "A to Z"
+
     list.title
   end
 
-  def eCommerce_topic_category(topic)
-     root_topic?(topic) ? "topic index" : topic.title.downcase.to_s
+  def ecommerce_topic_category(topic)
+    root_topic?(topic) ? "topic index" : topic.title.downcase.to_s
   end
 
 private
 
   def data_attributes(tracking_attributes, list_item, list_index)
     {
-      ecommerce_row: list_index ? "#{list_index + 1}" : "",
+      ecommerce_row: list_index ? (list_index + 1).to_s : "",
       ecommerce_path: list_item.base_path,
     }.merge(
       topic_list_item_tracking_attributes(tracking_attributes, list_item.title, list_item.base_path, list_index),
