@@ -353,9 +353,6 @@
       this.$breadcrumbs.html($newBreadcrumbs.html());
     },
     trackPageview: function(state){
-      // We want to track eCommerce on both real page views (done via static)
-      // and also these pretend page views (done here via ajax)
-      GOVUK.Ecommerce.start();
       var sectionTitle = this.$section.find('h1').text();
       sectionTitle = sectionTitle ? sectionTitle.toLowerCase() : 'browse';
       var navigationPageType = 'none';
