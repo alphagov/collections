@@ -1,0 +1,10 @@
+<div class="landing-page__section">
+    <h2 class="govuk-heading-m"><%= title %></h2>
+    <ul class="govuk-list">
+      <% list.each do | item | %>
+        <li>
+          <a class="govuk-link" href="<%= item[:url] %>"><%= item[:label] %></a>
+        </li>
+      <% end %>
+    </ul>
+</div>

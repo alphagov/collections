@@ -1,0 +1,12 @@
+<%=
+  render(
+      partial: 'page_header'
+  )
+%>
+
+<div class="govuk-width-container">
+  <%= render partial: 'explainer' %>
+  <% t("coronavirus_landing_page.sections").each do | section | %>
+    <%= render( partial: 'section', locals: section ) %>
+  <% end %>
+</div>

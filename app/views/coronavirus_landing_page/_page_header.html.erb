@@ -1,0 +1,47 @@
+<% content_for :is_full_width_header, true %>
+<% content_for :title, t("coronavirus_landing_page.meta_title") %>
+<% content_for :meta_tags do %>
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="GOV.UK">
+  <meta property="og:url" content="<%= request.base_url + request.path %>">
+  <meta property="og:title" content="<%= t("coronavirus_landing_page.meta_title") %>">
+  <meta property="og:description" content="<%= t("coronavirus_landing_page.meta_description") %>">
+  <meta property="og:image" content="<%= image_url("transition-period.png") %>" />
+  <meta name="twitter:card" content="summary">
+  <meta name="description" content="<%= t("coronavirus_landing_page.meta_description") %>">
+  <meta name="govuk:navigation-page-type" content="Taxon Page" />
+<% end %>
+
+<header class="landing-page__header">
+  <div class="govuk-width-container">
+    <%= render 'govuk_publishing_components/components/breadcrumbs', {
+      breadcrumbs: GovukPublishingComponents::AppHelpers::TaxonBreadcrumbs.new(@content_item).breadcrumbs,
+      collapse_on_mobile: true,
+      inverse: true
+    } %>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="landing-page__page_title">
+          <%= t("coronavirus_landing_page.page_header") %>
+        </h1>
+      </div>
+
+      <div class="govuk-grid-column-two-thirds landing-page__intro">
+        <%= render "govuk_publishing_components/components/govspeak", {
+        } do %>
+          <p class="govuk-body"><%= t("coronavirus_landing_page.page_header_explainer") %></p>
+        <% end %>
+
+        <h2 class="govuk-heading-m govuk-font-colour-white"><%= t("coronavirus_landing_page.latest_news.title") %></h2>
+        <ul class="govuk-list">
+          <% t("coronavirus_landing_page.latest_news.items").each do | item | %>
+            <li>
+              <a class="govuk-link" href="<%= item[:url] %>"><%= item[:label] %></a>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
