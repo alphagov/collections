@@ -6,7 +6,19 @@
 
 <div class="govuk-width-container">
   <%= render partial: 'explainer' %>
+
+  <% accordion_contents = [] %>
   <% t("coronavirus_landing_page.sections").each do | section | %>
-    <%= render( partial: 'section', locals: section ) %>
+    <% contents = capture do %>
+      <%= render( partial: 'section', locals: section ) %>
+    <% end %>
+    <%
+      accordion_contents << {
+        title: section[:title],
+        id: section[:title].underscore,
+        panel: contents
+      }
+    %>
   <% end %>
+  <%= render 'components/accordion', sections: accordion_contents %>
 </div>
