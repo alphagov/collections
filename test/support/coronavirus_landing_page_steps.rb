@@ -8,9 +8,11 @@ module CoronavirusLandingPageSteps
 
   CORONAVIRUS_CONTENT_ID = "c4cd0e8a-3ae1-4385-8936-1cfafe5031fb".freeze
   CORONAVIRUS_PATH = "/coronavirus".freeze
+  TE_CORONAVIRUS_PATH = "/government/topical-events/coronavirus-covid-19-uk-government-response".freeze
 
   def given_there_is_a_content_item
-    stub_content_store_has_item(CORONAVIRUS_PATH, content_item)
+    stub_content_store_has_item(CORONAVIRUS_PATH)
+    stub_content_store_has_item(TE_CORONAVIRUS_PATH, content_item)
   end
 
   def when_i_visit_the_coronavirus_landing_page
@@ -28,7 +30,7 @@ module CoronavirusLandingPageSteps
   def content_item
     GovukSchemas::RandomExample.for_schema(frontend_schema: "taxon") do |item|
       item.merge(
-        "base_path" => CORONAVIRUS_PATH,
+        "base_path" => TE_CORONAVIRUS_PATH,
         "content_id" => CORONAVIRUS_CONTENT_ID,
         "title" => "Coronavirus",
         "phase" => "live",
