@@ -1,10 +1,15 @@
 <div class="landing-page__section">
     <h2 class="govuk-heading-m"><%= title %></h2>
-    <ul class="govuk-list">
-      <% list.each do | item | %>
-        <li>
-          <a class="govuk-link" href="<%= item[:url] %>"><%= item[:label] %></a>
-        </li>
+    <% sub_sections.each do |sub_section| %>
+      <% if sub_section[:title] %>
+        <h3 class="govuk-heading-s"><%= sub_section[:title] %></h3>
       <% end %>
-    </ul>
+      <ul class="govuk-list">
+        <% sub_section[:list].each do | item | %>
+          <li>
+            <a class="govuk-link" href="<%= item[:url] %>"><%= item[:label] %></a>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
 </div>

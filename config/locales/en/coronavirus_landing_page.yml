@@ -21,18 +21,24 @@ en:
       <p class="govuk-body">This is a bunch of text which explains what corona virus is about.</p>
     sections:
       - title: If you or someone you know have contact with has Coronavirus symptoms
-        list:
-          - label: item 1
-            url: /1
-          - label: item 2
-            url: /2
-          - label: item 3
-            url: /3
+        sub_sections:
+          - title:
+            list:
+              - label: item 1
+                url: /1
+              - label: item 2
+                url: /2
+          - title: "A subsection title"
+            list:
+              - label: item 1
+                url: /1
       - title: Protecting yourself and preventing the spread
-        list:
-          - label: item 1
-            url: /1
-          - label: item 2
-            url: /2
-          - label: item 3
-            url: /3
+        sub_sections:
+          - title: "Social distancing"
+            list:
+              - label: item 1
+                url: /1
+              - label: item 2
+                url: /2
+              - label: item 3
+                url: /3
