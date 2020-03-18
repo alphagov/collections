@@ -1,0 +1,38 @@
+en:
+  coronavirus_landing_page:
+    meta_title: "Coronavirus: what you need to do"
+    meta_description: Find out what you need to do for Coronavirus
+    page_header: Coronavirus
+    page_header_explainer: What you need to do
+    latest_news:
+      title: Latest news
+      items:
+        - label: News item 1
+          url: /news/1
+        - label: News item 2
+          url: /news/2
+        - label: News item 3
+          url: /news/3
+      see_all:
+        label: See all news
+        url: /news/all
+    explainer_title: Guidance for Coronavirus
+    explainer_text: |
+      <p class="govuk-body">This is a bunch of text which explains what corona virus is about.</p>
+    sections:
+      - title: If you or someone you know have contact with has Coronavirus symptoms
+        list:
+          - label: item 1
+            url: /1
+          - label: item 2
+            url: /2
+          - label: item 3
+            url: /3
+      - title: Protecting yourself and preventing the spread
+        list:
+          - label: item 1
+            url: /1
+          - label: item 2
+            url: /2
+          - label: item 3
+            url: /3

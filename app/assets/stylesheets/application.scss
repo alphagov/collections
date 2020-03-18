@@ -30,6 +30,7 @@ $govuk-use-legacy-palette: false;
 
 @import "helpers/layouts";
 @import "helpers/margins";
+@import "helpers/typography";
 @import "components/*";
 
 @import "views/browse";
