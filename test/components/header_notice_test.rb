@@ -5,7 +5,7 @@ class HeaderNoticeTest < ComponentTestCase
     "header-notice"
   end
 
-  def branded_noticed
+  def branded_notice
     {
       nhs_branding: true,
       title_logo_url: "/path/to/image.png",
@@ -18,7 +18,7 @@ class HeaderNoticeTest < ComponentTestCase
     }
   end
 
-  def unbranded_noticed
+  def unbranded_notice
     {
       title: "this is a title",
       heading: "This is a header",
@@ -35,29 +35,29 @@ class HeaderNoticeTest < ComponentTestCase
   end
 
   test "renders a notice correctly if no branding is passed in" do
-    render_component(unbranded_noticed)
+    render_component(unbranded_notice)
     assert_select ".app-c-header-notice"
   end
 
   test "renders a branded notice if branding is passed in" do
-    render_component(branded_noticed)
+    render_component(branded_notice)
     assert_select ".app-c-header-notice.app-c-header-notice__branding--nhs"
   end
 
   test "renders a logo if title logo is passed in" do
-    render_component(branded_noticed)
-    assert_select "img.app-c-header-notice__title-logo", attributes: { src: branded_noticed[:title_logo_url] }
+    render_component(branded_notice)
+    assert_select "img.app-c-header-notice__title-logo", attributes: { src: branded_notice[:title_logo_url] }
     assert_select ".app-c-header-notice__title", count: 0
   end
 
   test "renders a title if title is passed in" do
-    render_component(unbranded_noticed)
-    assert_select ".app-c-header-notice__title", text: branded_noticed[:title]
+    render_component(unbranded_notice)
+    assert_select ".app-c-header-notice__title", text: branded_notice[:title]
     assert_select "img.app-c-header-notice__title-logo", count: 0
   end
 
   test "renders a title and logo if title and logo are both passed in" do
-    config = branded_noticed
+    config = branded_notice
     config[:title] = "this is a title"
     render_component(config)
     assert_select ".app-c-header-notice__title", text: config[:title]
@@ -65,41 +65,41 @@ class HeaderNoticeTest < ComponentTestCase
   end
 
   test "does not renders a heading if no heading is passed in" do
-    render_component(branded_noticed.without(:heading))
+    render_component(branded_notice.without(:heading))
     assert_select ".app-c-header-notice__heading", count: 0
   end
 
   test "renders a heading if heading is passed in" do
-    render_component(branded_noticed)
-    assert_select ".app-c-header-notice__heading", text: branded_noticed[:heading]
+    render_component(branded_notice)
+    assert_select ".app-c-header-notice__heading", text: branded_notice[:heading]
   end
 
   test "does not renders a list if no list is passed in" do
-    render_component(branded_noticed.without(:list))
+    render_component(branded_notice.without(:list))
     assert_select ".app-c-header-notice__list", count: 0
   end
 
   test "renders a list if list is passed in" do
-    render_component(branded_noticed)
+    render_component(branded_notice)
     assert_select ".app-c-header-notice__list"
-    assert_select ".app-c-header-notice__list li", count: branded_noticed[:list].count
+    assert_select ".app-c-header-notice__list li", count: branded_notice[:list].count
     assert_select ".app-c-header-notice__list li" do |items|
       items.each_with_index do |item, index|
-        assert_equal item.text, branded_noticed[:list][index]
+        assert_equal item.text, branded_notice[:list][index]
       end
     end
   end
 
   test "does not renders a call to action if no call to action is passed in" do
-    render_component(branded_noticed.without(:call_to_action))
+    render_component(branded_notice.without(:call_to_action))
     assert_select ".app-c-header-notice__call-to-action", count: 0
   end
 
   test "renders a call to action if a call to action is passed in" do
-    render_component(branded_noticed)
+    render_component(branded_notice)
     assert_select ".app-c-header-notice__call-to-action-link", {
-      text: branded_noticed[:call_to_action][:title],
-      href: branded_noticed[:call_to_action][:href],
+      text: branded_notice[:call_to_action][:title],
+      href: branded_notice[:call_to_action][:href],
     }
   end
 end
