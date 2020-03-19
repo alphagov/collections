@@ -1,3 +1,22 @@
+$covid-green: #7eff8e;
+
+.covid__page-header {
+  padding-bottom: govuk-spacing(6);
+  margin-bottom: govuk-spacing(6);
+  border-top: solid govuk-spacing(2) $covid-green;
+  background-color: govuk-colour("black");
+  color: govuk-colour("white");
+}
+
+.covid__page-title {
+  @include govuk-font(48, $weight: bold);
+
+  @include govuk-media-query($from: tablet) {
+    margin-top: govuk-spacing(4);
+    margin-bottom: govuk-spacing(8);
+  }
+}
+
 .covid__topic-wrapper {
   padding-top: govuk-spacing(6);
 
