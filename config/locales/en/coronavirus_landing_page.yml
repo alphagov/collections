@@ -1,7 +1,7 @@
 en:
   coronavirus_landing_page:
-    meta_title: "Coronavirus: what you need to do"
-    meta_description: Find out what you need to do for Coronavirus
+    meta_title: "Coronavirus (COVID-19): what you need to do"
+    meta_description: "Find out about the government response to coronavirus (COVID-19) and what you need to do."
     page_header: Coronavirus
     page_header_explainer: What you need to do
     latest_news:
@@ -17,36 +17,118 @@ en:
         label: See all news
         url: /news/all
     nhs_banner:
-      heading: Stay at home if you have coronavirus symptoms
+      heading: "Stay at home if you or someone you live with have either:"
       list:
-        - a high temperature – you feel hot to touch on your chest or back
-        - a new, continuous cough – this means you've started coughing repeatedly
+        - a high temperature
+        - a new, continuous cough
       call_to_action:
-        title: Check if you need medical help on the NHS website
-        href: https://111.nhs.uk/service/COVID-19/
+        title: Check the NHS website if you have symptoms
+        href: https://www.nhs.uk/conditions/coronavirus-covid-19/
     explainer_title: Guidance for Coronavirus
     explainer_text: |
       <p class="govuk-body">This is a bunch of text which explains what corona virus is about.</p>
     sections:
-      - title: If you or someone you know have contact with has Coronavirus symptoms
+      - title: How to protect yourself and others
         sub_sections:
           - title:
             list:
-              - label: item 1
+              - label: How to keep you and your family safe at home
                 url: /1
-              - label: item 2
+              - label: Find out what social distancing is and how to protect vulnerable people
                 url: /2
-          - title: "A subsection title"
-            list:
-              - label: item 1
-                url: /1
-      - title: Protecting yourself and preventing the spread
+      - title: Coronavirus (COVID-19) cases in the UK
         sub_sections:
-          - title: "Social distancing"
+          - title: "Data on reported cases of coronavirus around the UK."
             list:
-              - label: item 1
+              - label: Number of coronavirus cases in the UK
                 url: /1
-              - label: item 2
+              - label: Track coronavirus cases in the UK
                 url: /2
-              - label: item 3
+      - title: Healthcare workers and carers
+        sub_sections:
+          - title:
+            list:
+              - label: NHS guidance for people working in healthcare
+                url: /1
+              - label: How to protect people in residential care, supported living and home care
+                url: /2
+              - label: How to manage adult social care
                 url: /3
+      - title: How you can help
+        sub_sections:
+          - title:
+            list:
+              - label: How to safely help people at home
+                url: /1
+              - label: Support your local community
+                url: /2
+              - label: Help produce ventilators and components
+                url: /3
+      - title: Employment and financial support
+        sub_sections:
+          - title:
+            list:
+              - label: Check if you can get statutory sick pay (SSP)
+                url: /1
+              - label: Check if you're eligible for Universal Credit
+                url: /2
+              - label: Check if you're eligible for Employment and Support Allowance (ESA)
+                url: /3
+              - label: Lay-offs and short-time working
+                url: /4
+              - label: What to do if you cannot pay your tax bill on time
+                url: /5
+      - title: Businesses and other organisations
+        sub_sections:
+          - title:
+            list:
+              - label: How to keep your employees safe
+                url: /1
+              - label: How to clean workplaces safely
+                url: /2
+              - label: Check what you need to do about Statutory Sick Pay
+                url: /3
+              - label: Find out what to do for different businesses and organisations
+                url: /4
+              - label: What the government is doing to support businesses
+                url: /5
+      - title: Travel
+        sub_sections:
+          - title:
+            list:
+              - label: Information for British citizens living or travelling abroad
+                url: /1
+              - label: Foreign travel advice for each country
+                url: /2
+              - label: What to do if you're visiting the UK from China and you can't travel home
+                url: /3
+      - title: Check how coronavirus is affecting public services
+        sub_sections:
+          - title: Benefits
+            list:
+              - label: Employment and Support Allowance (ESA)
+                url: /1
+              - label: Personal Independence Payment (PIP)
+                url: /2
+              - label: Universal credit
+                url: /3
+          - title: Crime, justice and the law
+            list:
+              - label: Visiting prisoners
+                url: /1
+              - label: Court and tribunal cases
+                url: /2
+          - title: Driving and transport
+            list:
+              - label: Employment and Support Allowance (ESA)
+                url: /1
+          - title: Education
+            list:
+              - label: Schools, childcare, further and higher education
+                url: /1
+              - label: Free school meals
+                url: /2
+          - title: Housing and local services
+            list:
+              - label: Planning inspections
+                url: /1
