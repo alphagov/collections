@@ -13,10 +13,22 @@ module CoronavirusLandingPageSteps
   end
 
   def then_i_can_see_the_header_section
-    assert page.has_selector?(".landing-page__header h1", text: "Coronavirus")
+    assert page.has_selector?(".landing-page__header h1", text: "Coronavirus (COVID-19): what you need to do")
   end
 
-  def then_i_can_see_the_introduction_section
-    assert page.has_selector?("h2.govuk-heading-l", text: "Guidance for Coronavirus")
+  def then_i_can_see_the_nhs_banner
+    assert page.has_selector?(".app-c-header-notice__branding--nhs h2", text: "Stay at home if you or someone you live with have either")
+  end
+
+  def then_i_can_see_the_accordians
+    assert page.has_selector?(".govuk-accordion__section-header", text: "How to protect yourself and others")
+  end
+
+  def and_i_click_on_an_accordian
+    first(".govuk-accordion__section").find(".govuk-accordion__section-button").click
+  end
+
+  def then_i_can_see_the_accordians_content
+    assert page.has_selector?(".govuk-link", text: "How to keep you and your family safe at home")
   end
 end
