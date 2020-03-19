@@ -1,0 +1,32 @@
+$nhs_brand_color: #005EB8;
+
+.app-c-header-notice {
+  margin-bottom: govuk-spacing(8);
+}
+
+.app-c-header-notice__header {
+  background-color: govuk-colour("black");
+  padding: govuk-spacing(4) govuk-spacing(4) govuk-spacing(2) govuk-spacing(4);
+}
+
+.app-c-header-notice__title {
+  color: govuk-colour("white");
+  margin: 0;
+}
+
+.app-c-header-notice__title-logo {
+  max-width: 90px;
+}
+
+.app-c-header-notice__content {
+  border: $govuk-border-width solid govuk-colour("black");
+  padding: govuk-spacing(4);
+}
+
+.app-c-header-notice__list {
+  margin-bottom: govuk-spacing(5);
+}
+
+.app-c-header-notice__call-to-action-link {
+  @include govuk-font(24, $weight: bold);
+}
