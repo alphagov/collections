@@ -16,6 +16,14 @@ en:
       see_all:
         label: See all news
         url: /news/all
+    nhs_banner:
+      heading: Stay at home if you have coronavirus symptoms
+      list:
+        - a high temperature – you feel hot to touch on your chest or back
+        - a new, continuous cough – this means you've started coughing repeatedly
+      call_to_action:
+        title: Check if you need medical help on the NHS website
+        href: https://111.nhs.uk/service/COVID-19/
     explainer_title: Guidance for Coronavirus
     explainer_text: |
       <p class="govuk-body">This is a bunch of text which explains what corona virus is about.</p>

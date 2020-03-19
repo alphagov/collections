@@ -5,6 +5,16 @@
 %>
 
 <div class="govuk-width-container">
+  <%= render 'components/header-notice', {
+    branding_classes: "app-c-header-notice__branding--nhs",
+    title_logo_url: image_url('nhs-logotype-blue.svg'),
+    heading: t("coronavirus_landing_page.nhs_banner.heading"),
+    list: t("coronavirus_landing_page.nhs_banner.list"),
+    call_to_action: {
+      href: t("coronavirus_landing_page.nhs_banner.call_to_action.href"),
+      title: t("coronavirus_landing_page.nhs_banner.call_to_action.title")
+    }
+  } %>
   <%= render partial: 'explainer' %>
 
   <%= render partial: 'accordion_sections'%>

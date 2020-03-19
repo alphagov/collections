@@ -1,0 +1,39 @@
+<%
+  title ||= false
+  title_logo_url ||= false
+  heading ||= false
+  list ||= []
+  call_to_action ||= false
+  branding_classes ||= false
+%>
+<% if title.present? || title_logo_url.present? %>
+<section class="app-c-header-notice <%= branding_classes %>" aria-label="notice" role="region">
+  <div class="app-c-header-notice__header">
+    <% if title_logo_url.present? %>
+      <%= image_tag(title_logo_url, class: "app-c-header-notice__title-logo") %>
+    <% end %>
+    <% if title.present? %>
+      <h2 class="app-c-header-notice__title govuk-heading-m"><%= title %></h2>
+    <% end %>
+  </div>
+
+  <div class="app-c-header-notice__content">
+    <% if heading.present? %>
+      <h2 class="app-c-header-notice__heading govuk-heading-m"><%= heading %></h2>
+    <% end %>
+    <% if list.any? %>
+      <ul class="app-c-header-notice__list govuk-list govuk-list--bullet">
+        <% list.each do |item| %>
+          <li><%= item %></li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <% if call_to_action.present? %>
+      <p class="app-c-header-notice__call-to-action govuk-body">
+        <%= link_to(call_to_action[:title], call_to_action[:href], class: "app-c-header-notice__call-to-action-link") %>
+      </p>
+    <% end %>
+  </div>
+</section>
+<% end %>
