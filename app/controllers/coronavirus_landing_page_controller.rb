@@ -2,8 +2,10 @@ class CoronavirusLandingPageController < ApplicationController
   before_action :set_locale
 
   def show
-    @content_item = ContentItem.find!("/government/topical-events/coronavirus-covid-19-uk-government-response").to_hash
-    render :show
+    @content_item = { "locale" => "en" }
+    breadcrumbs = [{ title: "Home", url: "/", is_page_parent: true }]
+
+    render "show", locals: { breadcrumbs: breadcrumbs }
   end
 
 private
