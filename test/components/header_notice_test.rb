@@ -7,7 +7,7 @@ class HeaderNoticeTest < ComponentTestCase
 
   def branded_noticed
     {
-      branding_classes: "app-c-header-notice__branding--nhs",
+      nhs_branding: true,
       title_logo_url: "/path/to/image.png",
       heading: "This is a header",
       list: %w(blah blah2),
@@ -41,7 +41,7 @@ class HeaderNoticeTest < ComponentTestCase
 
   test "renders a branded notice if branding is passed in" do
     render_component(branded_noticed)
-    assert_select ".app-c-header-notice.#{branded_noticed[:branding_classes]}"
+    assert_select ".app-c-header-notice.app-c-header-notice__branding--nhs"
   end
 
   test "renders a logo if title logo is passed in" do

@@ -4,7 +4,8 @@
   heading ||= false
   list ||= []
   call_to_action ||= false
-  branding_classes ||= false
+  nhs_branding ||= false
+  branding_classes = 'app-c-header-notice__branding--nhs' if nhs_branding
 %>
 <% if title.present? || title_logo_url.present? %>
 <section class="app-c-header-notice <%= branding_classes %>" aria-label="notice" role="region">
