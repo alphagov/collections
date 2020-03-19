@@ -4,6 +4,16 @@ $nhs_brand_color: #005EB8;
   margin-bottom: govuk-spacing(8);
 }
 
+.app-c-header-notice__branding--nhs {
+  .app-c-header-notice__header {
+    background-color: $nhs_brand_color
+  }
+
+  .app-c-header-notice__content {
+    border-color: $nhs_brand_color
+  }
+}
+
 .app-c-header-notice__header {
   background-color: govuk-colour("black");
   padding: govuk-spacing(4) govuk-spacing(4) govuk-spacing(2) govuk-spacing(4);
