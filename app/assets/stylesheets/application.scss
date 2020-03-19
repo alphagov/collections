@@ -5,6 +5,7 @@ $govuk-use-legacy-palette: false;
 // gem components
 @import 'govuk_publishing_components/govuk_frontend_support';
 @import 'govuk_publishing_components/component_support';
+@import 'govuk_publishing_components/components/_accordion';
 @import 'govuk_publishing_components/components/_breadcrumbs';
 @import 'govuk_publishing_components/components/_button';
 @import 'govuk_publishing_components/components/_contents-list';

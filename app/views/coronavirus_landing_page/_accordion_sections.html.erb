@@ -1,14 +1,18 @@
   <% accordion_contents = [] %>
   <% t("coronavirus_landing_page.sections").each do | section | %>
-    <% contents = capture do %>
+    <% content = capture do %>
       <%= render( partial: 'section', locals: section ) %>
     <% end %>
     <%
       accordion_contents << {
-        title: section[:title],
-        id: section[:title].underscore,
-        panel: contents
+        heading: {
+          text: section[:title],
+        },
+        content: {
+          html: content,
+        },
+        data_attributes: nil
       }
     %>
   <% end %>
-  <%= render 'components/accordion', sections: accordion_contents %>
+  <%= render 'govuk_publishing_components/components/accordion', { items: accordion_contents } %>
