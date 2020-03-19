@@ -5,17 +5,23 @@
 %>
 
 <div class="govuk-width-container">
-  <%= render 'components/header-notice', {
-    nhs_branding: true,
-    title_logo_url: image_url('nhs-logotype-blue.svg'),
-    heading: t("coronavirus_landing_page.nhs_banner.heading"),
-    list: t("coronavirus_landing_page.nhs_banner.list"),
-    call_to_action: {
-      href: t("coronavirus_landing_page.nhs_banner.call_to_action.href"),
-      title: t("coronavirus_landing_page.nhs_banner.call_to_action.title")
-    }
-  } %>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <%= render 'components/header-notice', {
+        nhs_branding: true,
+        title_logo_url: image_url('nhs-logotype-blue.svg'),
+        heading: t("coronavirus_landing_page.nhs_banner.heading"),
+        list: t("coronavirus_landing_page.nhs_banner.list"),
+        call_to_action: {
+          href: t("coronavirus_landing_page.nhs_banner.call_to_action.href"),
+          title: t("coronavirus_landing_page.nhs_banner.call_to_action.title")
+        }
+      } %>
+    </div>
 
-  <%= render partial: 'accordion_sections'%>
-  <%= render partial: 'topic_section' %>
+    <div class="govuk-grid-column-two-thirds">
+      <%= render partial: 'accordion_sections'%>
+      <%= render partial: 'topic_section' %>
+    </div>
+  </div>
 </div>
