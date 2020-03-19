@@ -1,0 +1,11 @@
+<h2 class="govuk-heading-l">
+  <%= t("coronavirus_landing_page.topic_section.header") %>
+</h2>
+<h2 class="govuk-body-m">
+  <%= t("coronavirus_landing_page.topic_section.text") %>
+</h2>
+<% t("coronavirus_landing_page.topic_section.links").each do | link | %>
+  <h2 class="govuk-body-m">
+    <%= link_to link[:label].html_safe, link[:url] %>
+  </h2>
+<% end %>

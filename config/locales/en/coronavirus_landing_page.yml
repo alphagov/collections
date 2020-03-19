@@ -119,3 +119,11 @@ en:
             list:
               - label: Planning inspections
                 url: /guidance/coronavirus-covid-19-planning-inspectorate-guidance
+    topic_section:
+      header: "All coronavirus (COVID-19) information"
+      text: "Browse information related to coronavirus"
+      links:
+        - label: "News"
+          url: /search/news-and-communications?topical_events%5B%5D=coronavirus-covid-19-uk-government-response
+        - label: "Guidance"
+          url: government/collections/coronavirus-covid-19-list-of-guidance
