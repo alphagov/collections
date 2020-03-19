@@ -6,7 +6,6 @@
 
 <div class="govuk-width-container">
   <%= render partial: 'explainer' %>
-  <% t("coronavirus_landing_page.sections").each do | section | %>
-    <%= render( partial: 'section', locals: section ) %>
-  <% end %>
+
+  <%= render partial: 'accordion_sections'%>
 </div>
