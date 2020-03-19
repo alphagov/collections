@@ -26,22 +26,6 @@
           <%= t("coronavirus_landing_page.page_header") %>
         </h1>
       </div>
-
-      <div class="govuk-grid-column-two-thirds landing-page__intro">
-        <%= render "govuk_publishing_components/components/govspeak", {
-        } do %>
-          <p class="govuk-body"><%= t("coronavirus_landing_page.page_header_explainer") %></p>
-        <% end %>
-
-        <h2 class="govuk-heading-m govuk-font-colour-white"><%= t("coronavirus_landing_page.latest_news.title") %></h2>
-        <ul class="govuk-list">
-          <% t("coronavirus_landing_page.latest_news.items").each do | item | %>
-            <li>
-              <a class="govuk-link" href="<%= item[:url] %>"><%= item[:label] %></a>
-            </li>
-          <% end %>
-        </ul>
-      </div>
     </div>
   </div>
 </header>
