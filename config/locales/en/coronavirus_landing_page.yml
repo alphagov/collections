@@ -31,7 +31,7 @@ en:
               - label: Check if you're eligible for Universal Credit
                 url: /universal-credit
               - label: Check if you're eligible for Employment and Support Allowance (ESA)
-                url: /universal-credit
+                url: /employment-support-allowance
               - label: Your rights if your hours are cut or you’re laid off
                 url: /lay-offs-short-timeworking
               - label: What to do if you cannot pay your tax bill on time
