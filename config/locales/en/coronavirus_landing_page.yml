@@ -93,7 +93,7 @@ en:
           - title: Education
             list:
               - label: "School closures: advice for parents and carers"
-              - url: /government/publications/closure-of-educational-settings-information-for-parents-and-carers
+                url: /government/publications/closure-of-educational-settings-information-for-parents-and-carers
               - label: School closures and children of key workers
                 url: /government/publications/coronavirus-covid-19-maintaining-educational-provision
               - label: "Schools, childcare, further and higher education: advice for headteachers"
