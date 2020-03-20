@@ -1,7 +1,7 @@
 $nhs_brand_color: #005EB8;
 
 .app-c-header-notice {
-  margin-bottom: govuk-spacing(8);
+  @include govuk-responsive-margin(8, "bottom");
 }
 
 .app-c-header-notice__branding--nhs {
@@ -25,7 +25,7 @@ $nhs_brand_color: #005EB8;
 }
 
 .app-c-header-notice__title-logo {
-  max-width: 90px;
+  max-width: 60px;
 }
 
 .app-c-header-notice__content {
@@ -34,7 +34,7 @@ $nhs_brand_color: #005EB8;
 }
 
 .app-c-header-notice__list {
-  margin-bottom: govuk-spacing(5);
+  @include govuk-responsive-margin(5, "bottom");
 }
 
 .app-c-header-notice__call-to-action-link {
