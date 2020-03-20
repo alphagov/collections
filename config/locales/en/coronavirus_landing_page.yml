@@ -18,9 +18,9 @@ en:
         sub_sections:
           - title:
             list:
-              - label: How to keep you and your family safe at home
+              - label: Staying at home if you think you have coronavirus (self-isolating)
                 url: /government/publications/covid-19-stay-at-home-guidance
-              - label: Find out what social distancing is and how to protect vulnerable people
+              - label: How everyone can help stop coronavirus (social distancing)
                 url: /government/publications/covid-19-guidance-on-social-distancing-and-for-vulnerable-people
       - title: Employment and financial support
         sub_sections:
@@ -49,7 +49,7 @@ en:
               - label: Find out what to do for different businesses and organisations
                 url: /government/collections/coronavirus-covid-19-list-of-guidance
               - label: What the government is doing to support businesses
-                url: /government/publications/coronavirus-covid-19-guidance-for-uk-businesses
+                url: /government/publications/guidance-to-employers-and-businesses-about-covid-19
       - title: Healthcare workers and carers
         sub_sections:
           - title:
@@ -64,8 +64,8 @@ en:
         sub_sections:
           - title:
             list:
-              - label: Information for British citizens living or travelling abroad
-                url: /guidance/travel-advice-novel-coronavirus#when-youre-abroad
+              - label: Information for British citizens travelling abroad
+                url: /guidance/travel-advice-novel-coronavirus
               - label: Foreign travel advice for each country
                 url: /foreign-travel-advice
               - label: What to do if you're visiting the UK from China and you can't travel home
