@@ -1,7 +1,10 @@
   <% accordion_contents = [] %>
   <% t("coronavirus_landing_page.sections").each do | section | %>
     <% content = capture do %>
-      <%= render( partial: 'section', locals: section ) %>
+      <%# this element captures an override from the accordion that the last item has margin 0 %>
+      <div class="covid__accordion-inner">
+        <%= render( partial: 'section', locals: section ) %>
+      </div>
     <% end %>
     <%
       accordion_contents << {
