@@ -11,46 +11,17 @@ en:
       call_to_action:
         title: Check the NHS website if you have symptoms
         href: https://www.nhs.uk/conditions/coronavirus-covid-19/
-    explainer_title: Guidance for Coronavirus
-    explainer_text: |
-      <p class="govuk-body">This is a bunch of text which explains what corona virus is about.</p>
+    explainer_title:
+    explainer_text:
     sections:
       - title: How to protect yourself and others
         sub_sections:
           - title:
             list:
               - label: How to keep you and your family safe at home
-                url: /government/publications/covid-19-stay-at-home-guidance/stay-at-home-guidance-for-households-with-possible-coronavirus-covid-19-infection
+                url: /government/publications/covid-19-stay-at-home-guidance
               - label: Find out what social distancing is and how to protect vulnerable people
-                url: /government/publications/covid-19-guidance-on-social-distancing-and-for-vulnerable-people/guidance-on-social-distancing-for-everyone-in-the-uk-and-protecting-older-people-and-vulnerable-adults
-      - title: Coronavirus (COVID-19) cases in the UK
-        sub_sections:
-          - title:
-            list:
-              - label: Number of coronavirus cases in the UK
-                url: /guidance/coronavirus-covid-19-information-for-the-public
-              - label: Track coronavirus cases in the UK
-                url: /government/publications/covid-19-track-coronavirus-cases
-      - title: Healthcare workers and carers
-        sub_sections:
-          - title:
-            list:
-              - label: NHS guidance for people working in healthcare
-                url: https://www.england.nhs.uk/coronavirus/
-              - label: How to protect people in residential care, supported living and home care
-                url: /government/publications/covid-19-residential-care-supported-living-and-home-care-guidance
-              - label: How to manage adult social care
-                url: /government/publications/covid-19-ethical-framework-for-adult-social-care
-      - title: How you can help
-        sub_sections:
-          - title:
-            list:
-              - label: How to safely help people at home
-                url: /safehelp
-              - label: Support your local community
-                url: https://covidmutualaid.org
-              - label: Help produce ventilators and components
-                url: https://ventilator.herokuapp.com
+                url: /government/publications/covid-19-guidance-on-social-distancing-and-for-vulnerable-people
       - title: Employment and financial support
         sub_sections:
           - title:
@@ -60,8 +31,8 @@ en:
               - label: Check if you're eligible for Universal Credit
                 url: /universal-credit
               - label: Check if you're eligible for Employment and Support Allowance (ESA)
-                url: /universal-credit
-              - label: Lay-offs and short-time working
+                url: /employment-support-allowance
+              - label: Your rights if your hours are cut or you’re laid off
                 url: /lay-offs-short-timeworking
               - label: What to do if you cannot pay your tax bill on time
                 url: /difficulties-paying-hmrc
@@ -79,6 +50,16 @@ en:
                 url: /government/collections/coronavirus-covid-19-list-of-guidance
               - label: What the government is doing to support businesses
                 url: /government/publications/coronavirus-covid-19-guidance-for-uk-businesses
+      - title: Healthcare workers and carers
+        sub_sections:
+          - title:
+            list:
+              - label: NHS guidance for people working in healthcare
+                url: https://www.england.nhs.uk/coronavirus/
+              - label: How to protect people in residential care, supported living and home care
+                url: /government/publications/covid-19-residential-care-supported-living-and-home-care-guidance
+              - label: How to manage adult social care
+                url: /government/publications/covid-19-ethical-framework-for-adult-social-care
       - title: Travel
         sub_sections:
           - title:
@@ -101,24 +82,40 @@ en:
                 url: /universal-credit/how-to-claim
           - title: Crime, justice and the law
             list:
-              - label: Visiting prisoners
-                url: /guidance/coronavirus-covid-19-and-prisons
               - label: Court and tribunal cases
                 url: /guidance/coronavirus-covid-19-courts-and-tribunals-planning-and-preparation
+              - label: Visiting prisoners
+                url: /guidance/coronavirus-covid-19-and-prisons
           - title: Driving and transport
             list:
               - label: Driving and theory tests
                 url: /guidance/coronavirus-covid-19-driving-tests-and-theory-tests
           - title: Education
             list:
-              - label: Schools, childcare, further and higher education
+              - label: "School closures: advice for parents and carers"
+                url: /government/publications/closure-of-educational-settings-information-for-parents-and-carers
+              - label: School closures and children of key workers
+                url: /government/publications/coronavirus-covid-19-maintaining-educational-provision
+              - label: "Schools, childcare, further and higher education: advice for headteachers"
                 url: /government/publications/guidance-to-educational-settings-about-covid-19
-              - label: Free school meals
-                url: /government/publications/covid-19-free-school-meals-guidance
           - title: Housing and local services
             list:
               - label: Planning inspections
                 url: /guidance/coronavirus-covid-19-planning-inspectorate-guidance
+      - title: How you can help
+        sub_sections:
+          - title:
+            list:
+              - label: Help produce ventilators and components
+                url: https://ventilator.herokuapp.com
+      - title: Coronavirus (COVID-19) cases in the UK
+        sub_sections:
+          - title:
+            list:
+              - label: Track coronavirus cases in the UK
+                url: /government/publications/covid-19-track-coronavirus-cases
+              - label: Latest number of coronavirus cases in the UK
+                url: /guidance/coronavirus-covid-19-information-for-the-public
     topic_section:
       header: "All coronavirus (COVID-19) information"
       text: "Browse information related to coronavirus"
