@@ -127,3 +127,6 @@ en:
           url: /search/news-and-communications?topical_events%5B%5D=coronavirus-covid-19-uk-government-response
         - label: "Guidance"
           url: government/collections/coronavirus-covid-19-list-of-guidance
+    notifications:
+      intro: "Stay up to date with GOV.UK"
+      email_link: "Sign up to get emails when we change any coronavirus information on GOV.UK"
