@@ -29,6 +29,6 @@ module CoronavirusLandingPageSteps
   end
 
   def then_i_can_see_the_accordians_content
-    assert page.has_selector?(".govuk-link", text: "How to keep you and your family safe at home")
+    assert page.has_selector?(".govuk-link", text: "Staying at home if you think you have coronavirus (self-isolating)")
   end
 end
