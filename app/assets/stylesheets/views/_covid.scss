@@ -17,6 +17,20 @@ $covid-green: #7eff8e;
   }
 }
 
+.covid__list-item {
+  @include govuk-media-query($until: desktop) {
+    padding-bottom: govuk-spacing(3);
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.govuk-list ~ .covid__accordion-heading {
+  margin-top: govuk-spacing(4);
+}
+
 .covid__topic-wrapper {
   padding-top: govuk-spacing(6);
 
