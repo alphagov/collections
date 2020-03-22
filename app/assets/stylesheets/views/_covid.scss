@@ -6,6 +6,18 @@ $covid-green: #7eff8e;
   border-top: solid govuk-spacing(2) $covid-green;
   background-color: govuk-colour("black");
   color: govuk-colour("white");
+
+  .gem-c-heading, .govuk-body-m {
+    color: govuk-colour("white");
+  }
+
+  .gem-c-heading {
+    border-color: $covid-green;
+  }
+
+  a {
+    color: govuk-colour("white");
+  }
 }
 
 .covid__page-title {
