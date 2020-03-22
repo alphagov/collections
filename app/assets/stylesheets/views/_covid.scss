@@ -7,16 +7,28 @@ $covid-green: #7eff8e;
   background-color: govuk-colour("black");
   color: govuk-colour("white");
 
-  .gem-c-heading, .govuk-body-m {
-    color: govuk-colour("white");
-  }
-
   .gem-c-heading {
     border-color: $covid-green;
+    color: unset
   }
 
   a {
     color: govuk-colour("white");
+
+    &:link,
+    &:visited {
+      color: govuk-colour("white");
+    }
+
+    &:active,
+    &:hover {
+      color: $govuk-hover-colour;
+    }
+
+    &:focus,
+    &:link:focus {
+      @include govuk-focused-text;
+    }
   }
 }
 
