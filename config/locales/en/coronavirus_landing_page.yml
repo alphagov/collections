@@ -68,6 +68,8 @@ en:
             list:
               - label: NHS guidance for people working in healthcare
                 url: https://www.england.nhs.uk/coronavirus/
+              - label: How to protect extremely vulnerable people
+                url: /government/publications/guidance-on-shielding-and-protecting-extremely-vulnerable-persons-from-covid-19/guidance-on-shielding-and-protecting-extremely-vulnerable-persons-from-covid-19
               - label: How to protect people in residential care, supported living and home care
                 url: /government/publications/covid-19-residential-care-supported-living-and-home-care-guidance
               - label: How to manage adult social care
