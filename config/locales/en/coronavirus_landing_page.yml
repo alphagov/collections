@@ -22,6 +22,8 @@ en:
                 url: /government/publications/covid-19-stay-at-home-guidance
               - label: How everyone can help stop coronavirus (social distancing)
                 url: /government/publications/covid-19-guidance-on-social-distancing-and-for-vulnerable-people
+              - label: How to protect extremely vulnerable people (shielding)
+                url: /government/publications/guidance-on-shielding-and-protecting-extremely-vulnerable-persons-from-covid-19/guidance-on-shielding-and-protecting-extremely-vulnerable-persons-from-covid-19
       - title: Employment and financial support
         sub_sections:
           - title:
@@ -70,12 +72,12 @@ en:
             list:
               - label: NHS guidance for people working in healthcare
                 url: https://www.england.nhs.uk/coronavirus/
-              - label: How to protect extremely vulnerable people
-                url: /government/publications/guidance-on-shielding-and-protecting-extremely-vulnerable-persons-from-covid-19/guidance-on-shielding-and-protecting-extremely-vulnerable-persons-from-covid-19
               - label: How to protect people in residential care, supported living and home care
                 url: /government/publications/covid-19-residential-care-supported-living-and-home-care-guidance
               - label: How to manage adult social care
                 url: /government/publications/covid-19-ethical-framework-for-adult-social-care
+              - label: How to protect extremely vulnerable people (shielding)
+                url: /government/publications/guidance-on-shielding-and-protecting-extremely-vulnerable-persons-from-covid-19/guidance-on-shielding-and-protecting-extremely-vulnerable-persons-from-covid-19
       - title: Travel
         sub_sections:
           - title:
