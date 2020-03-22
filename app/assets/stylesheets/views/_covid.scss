@@ -6,10 +6,38 @@ $covid-green: #7eff8e;
   border-top: solid govuk-spacing(2) $covid-green;
   background-color: govuk-colour("black");
   color: govuk-colour("white");
+
+  .gem-c-heading {
+    border-color: $covid-green;
+    color: unset
+  }
+
+  a {
+    color: govuk-colour("white");
+
+    &:link,
+    &:visited {
+      color: govuk-colour("white");
+    }
+
+    &:active,
+    &:hover {
+      color: $govuk-hover-colour;
+    }
+
+    &:focus,
+    &:link:focus {
+      @include govuk-focused-text;
+    }
+  }
 }
 
 .covid__page-title {
   @include govuk-font(48, $weight: bold);
+
+  @include govuk-media-query($from: mobile) {
+    margin-bottom: govuk-spacing(6);
+  }
 
   @include govuk-media-query($from: tablet) {
     margin-top: govuk-spacing(4);
