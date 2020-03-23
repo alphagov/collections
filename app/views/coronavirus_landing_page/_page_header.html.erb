@@ -6,7 +6,9 @@
   <meta property="og:url" content="<%= request.base_url + request.path %>">
   <meta property="og:title" content="<%= t("coronavirus_landing_page.meta_title") %>">
   <meta property="og:description" content="<%= t("coronavirus_landing_page.meta_description") %>">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="<%= image_url("corona-opengraph-image.png") %>" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="<%= image_url("corona-twitter-image.png") %>">
   <meta name="description" content="<%= t("coronavirus_landing_page.meta_description") %>">
   <meta name="govuk:navigation-page-type" content="Taxon Page" />
 <% end %>
