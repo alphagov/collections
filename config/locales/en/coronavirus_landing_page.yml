@@ -3,6 +3,17 @@ en:
     meta_title: "Coronavirus (COVID-19): what you need to do"
     meta_description: "Find out about the government response to coronavirus (COVID-19) and what you need to do."
     page_header: "Coronavirus (COVID-19): what you need to do"
+    stay_at_home:
+      pretext: "Stay at home"
+      list:
+        - Only go outside for food, health reasons or essential work
+        - Stay 2 metres (6ft) away from other people
+        - Wash your hands as soon as you get home
+    guidance:
+      pretext: Anyone can spread the virus.
+      link:
+        href: /government/publications/covid-19-guidance-on-social-distancing-and-for-vulnerable-people
+        text: Full guidance on social distancing
     announcements:
       - text: Schools and childcare are only open to children of key workers
         href: /government/publications/closure-of-educational-settings-information-for-parents-and-carers/closure-of-educational-settings-information-for-parents-and-carers

@@ -28,6 +28,27 @@
       </div>
     </div>
 
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1 govuk-font-colour-white">
+          <%= t("coronavirus_landing_page.stay_at_home.pretext") %>
+        </p>
+        <ul class="govuk-list govuk-list--bullet govuk-font-colour-white">
+          <% t("coronavirus_landing_page.stay_at_home.list").each do | item | %>
+            <li><%= item %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row covid__page-header-guidance-section">
+      <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body govuk-font-colour-white govuk-!-margin-bottom-1">
+          <%= t("coronavirus_landing_page.guidance.pretext") %>
+        </p>
+      </div>
+    </div>
+
     <%= image_tag("corona-landing-page-logos.png", class: "covid__logos") %>
 
     <%= render "govuk_publishing_components/components/heading", {
