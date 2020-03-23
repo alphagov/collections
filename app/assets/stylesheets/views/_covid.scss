@@ -31,6 +31,16 @@ $covid-green: #7eff8e;
   }
 }
 
+.covid__page-header-guidance-section {
+  margin-top: govuk-spacing(7);
+  margin-bottom: govuk-spacing(8);
+
+  @include govuk-media-query($from: tablet) {
+    margin-top: govuk-spacing(3);
+    margin-bottom: govuk-spacing(3);
+  }
+}
+
 .covid__page-title {
   @include govuk-font(48, $weight: bold);
   margin-bottom: govuk-spacing(6);
