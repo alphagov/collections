@@ -3,6 +3,13 @@ en:
     meta_title: "Coronavirus (COVID-19): what you need to do"
     meta_description: "Find out about the government response to coronavirus (COVID-19) and what you need to do."
     page_header: "Coronavirus (COVID-19): what you need to do"
+    announcements:
+      - text: Schools and childcare are only open to children of key workers
+        href: /government/publications/closure-of-educational-settings-information-for-parents-and-carers/closure-of-educational-settings-information-for-parents-and-carers
+      - text: Pubs, restaurants, and leisure venues must stay closed or they may be fined
+        href: /government/publications/business-and-other-venues-subject-to-further-social-distancing-measures
+      - text: Food shops and pharmacies will remain open
+        href:
     nhs_banner:
       heading: "Stay at home if you or someone you live with have either:"
       list:
