@@ -16,9 +16,11 @@ en:
         text: Full guidance on staying at home and away from others
     announcements:
       - text: You must stay at home apart from essential travel or you may be fined
+        href: /government/publications/full-guidance-on-staying-at-home-and-away-from-others
       - text: If you live in the UK and are currently abroad you are strongly advised to return now
         href: /guidance/travel-advice-novel-coronavirus
       - text: All non-essential shops are to close
+        href: /government/publications/full-guidance-on-staying-at-home-and-away-from-others
     nhs_banner:
       heading: "Do not leave home if you or someone you live with has either:"
       list:
