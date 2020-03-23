@@ -15,14 +15,12 @@ en:
         href: /government/publications/covid-19-guidance-on-social-distancing-and-for-vulnerable-people
         text: Full guidance on social distancing
     announcements:
-      - text: Schools and childcare are only open to children of key workers
-        href: /government/publications/closure-of-educational-settings-information-for-parents-and-carers/closure-of-educational-settings-information-for-parents-and-carers
-      - text: Pubs, restaurants, and leisure venues must stay closed or they may be fined
-        href: /government/publications/business-and-other-venues-subject-to-further-social-distancing-measures
-      - text: Food shops and pharmacies will remain open
-        href:
+      - text: You must stay at home apart from essential travel or you may be fined
+      - text: If you live in the UK and are currently abroad you are strongly advised to return now
+        href: /guidance/travel-advice-novel-coronavirus
+      - text: All non-essential shops are to close
     nhs_banner:
-      heading: "Stay at home if you or someone you live with have either:"
+      heading: "Do not leave home if you or someone you live with has either:"
       list:
         - a high temperature
         - a new, continuous cough
