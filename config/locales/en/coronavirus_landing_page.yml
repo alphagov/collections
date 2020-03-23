@@ -51,12 +51,16 @@ en:
             list:
               - label: What parents and carers need to know about closures
                 url: /government/publications/closure-of-educational-settings-information-for-parents-and-carers
-              - label: "Who schools should stay open for: advice on children of key workers"
+              - label: Guidance for schools and local authorities on closures
+                url: /government/publications/covid-19-school-closures
+              - label: "School opening for children of key workers"
                 url: /government/publications/coronavirus-covid-19-maintaining-educational-provision
               - label: Cancelled exams
                 url: /government/publications/coronavirus-covid-19-cancellation-of-gcses-as-and-a-levels-in-2020/coronavirus-covid-19-cancellation-of-gcses-as-and-a-levels-in-2020
               - label: Dealing with COVID-19 in nurseries, schools and universities
                 url: /government/publications/guidance-to-educational-settings-about-covid-19
+              - label: Supporting vulnerable children
+                url: /government/publications/coronavirus-covid-19-guidance-on-vulnerable-children-and-young-people
       - title: Businesses and other organisations
         sub_sections:
           - title:
@@ -95,6 +99,8 @@ en:
                 url: /foreign-travel-advice
               - label: What to do if you're visiting the UK from China and you can't travel home
                 url: /guidance/coronavirus-immigration-guidance-if-youre-unable-to-return-to-china-from-the-uk
+              - label: Avoid travel to second homes, campsites and caravan parks
+                url: /government/news/covid-19-essential-travel-guidance
       - title: How coronavirus is affecting public services
         sub_sections:
           - title: Benefits
@@ -119,6 +125,8 @@ en:
                 url: /guidance/coronavirus-covid-19-mots-for-lorries-buses-and-trailers
               - label: Relaxation of drivers’ hours rules
                 url: /government/publications/covid-19-guidance-on-drivers-hours-relaxations/coronavirus-covid-19-guidance-on-drivers-hours-relaxations
+              - label: Vehicle approval tests suspended
+                url: /guidance/coronavirus-covid-19-vehicle-approval-tests
           - title: Housing and local services
             list:
               - label: Planning inspections
@@ -147,4 +155,4 @@ en:
           url: /search/all?topical_events%5B%5D=coronavirus-covid-19-uk-government-response&order=updated-newest
     notifications:
       intro: "Stay up to date with GOV.UK"
-      email_link: "Sign up to get emails when we change any coronavirus information on GOV.UK"
+      email_link: "Sign up to get emails when we change any coronavirus information on the GOV.UK website"
