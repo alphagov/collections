@@ -5,12 +5,19 @@ $nhs_brand_color: #005EB8;
 }
 
 .app-c-header-notice__branding--nhs {
+  border: solid 5px $nhs_brand_color;
+
   .app-c-header-notice__header {
-    background-color: $nhs_brand_color
+    padding-bottom: 0;
+    background-color: govuk-colour("white");
+  }
+
+  .app-c-header-notice__title-logo {
+    display: block;
   }
 
   .app-c-header-notice__content {
-    border-color: $nhs_brand_color
+    border: 0;
   }
 }
 
@@ -39,4 +46,8 @@ $nhs_brand_color: #005EB8;
 
 .app-c-header-notice__call-to-action-link {
   @include govuk-font(19, $weight: bold);
+}
+
+.app-c-header-notice__call-to-action {
+  @include govuk-font(16, $weight: bold);
 }
