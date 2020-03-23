@@ -36,13 +36,13 @@
     } %>
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-third">
-        <% link = capture do %>
-          <a href="https://www.gov.uk/government/publications/closure-of-educational-settings-information-for-parents-and-carers/closure-of-educational-settings-information-for-parents-and-carers" class="govuk-link covid__page-header-link">
+        <% schools_link = capture do %>
+          <a href="/government/publications/closure-of-educational-settings-information-for-parents-and-carers/closure-of-educational-settings-information-for-parents-and-carers" class="govuk-link covid__page-header-link">
             Schools and childcare are only open to children of key workers
           </a>
         <% end %>
         <%= render "govuk_publishing_components/components/heading", {
-          text: link,
+          text: schools_link,
           heading_level: 3,
           font_size: 19,
           border_top: 2,
@@ -53,8 +53,13 @@
       </div>
 
       <div class="govuk-grid-column-one-third">
+        <% pubs_link = capture do %>
+          <a href="/government/publications/business-and-other-venues-subject-to-further-social-distancing-measures" class="govuk-link covid__page-header-link">
+            Pubs, restaurants, and leisure venues must stay closed or they may be fined
+          </a>
+        <% end %>
         <%= render "govuk_publishing_components/components/heading", {
-          text: "Pubs, restaurants, and leisure venues must stay closed or they may be fined",
+          text: pubs_link,
           heading_level: 3,
           font_size: 19,
           border_top: 2,
