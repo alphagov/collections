@@ -6,7 +6,7 @@ module CoronavirusLandingPageSteps
   include GdsApi::TestHelpers::ContentItemHelpers
   include RummagerHelpers
 
-  CORONAVIRUS_PATH = "/coronavirus".freeze
+  CORONAVIRUS_PATH = "https://www.gov.uk/coronavirus".freeze
 
   def when_i_visit_the_coronavirus_landing_page
     visit CORONAVIRUS_PATH
