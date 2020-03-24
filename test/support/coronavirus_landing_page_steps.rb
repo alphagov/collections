@@ -17,18 +17,18 @@ module CoronavirusLandingPageSteps
   end
 
   def then_i_can_see_the_nhs_banner
-    assert page.has_selector?(".app-c-header-notice__branding--nhs h2", text: "Stay at home if you or someone you live with have either")
+    assert page.has_selector?(".app-c-header-notice__branding--nhs h2", text: "Do not leave home if you or someone you live with has either")
   end
 
-  def then_i_can_see_the_accordians
+  def then_i_can_see_the_accordions
     assert page.has_selector?(".govuk-accordion__section-header", text: "How to protect yourself and others")
   end
 
-  def and_i_click_on_an_accordian
+  def and_i_click_on_an_accordion
     first(".govuk-accordion__section").find(".govuk-accordion__section-button").click
   end
 
-  def then_i_can_see_the_accordians_content
+  def then_i_can_see_the_accordions_content
     assert page.has_selector?(".govuk-link", text: "Staying at home if you think you have coronavirus (self-isolating)")
   end
 end
