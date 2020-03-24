@@ -17,7 +17,7 @@ module CoronavirusLandingPageSteps
   end
 
   def then_i_can_see_the_nhs_banner
-    assert page.has_selector?(".app-c-header-notice__branding--nhs h2", text: "Stay at home if you or someone you live with have either")
+    assert page.has_selector?(".app-c-header-notice__branding--nhs h2", text: "Do not leave home if you or someone you live with has either:")
   end
 
   def then_i_can_see_the_accordians
