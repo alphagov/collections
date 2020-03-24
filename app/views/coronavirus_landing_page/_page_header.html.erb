@@ -30,27 +30,28 @@
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1 govuk-font-colour-white">
-          <%= t("coronavirus_landing_page.stay_at_home.pretext") %>
-        </p>
-        <ul class="govuk-list govuk-list--bullet govuk-font-colour-white">
+        <%= render "govuk_publishing_components/components/heading", {
+          text: t("coronavirus_landing_page.stay_at_home.pretext"),
+          padding: true,
+          font_size: 19,
+          inverse: true
+        } %>
+        <ul class="govuk-list govuk-list--bullet covid__page-header-list">
           <% t("coronavirus_landing_page.stay_at_home.list").each do | item | %>
             <li><%= item %></li>
           <% end %>
         </ul>
-      </div>
-    </div>
 
-    <div class="govuk-grid-row covid__page-header-guidance-section">
-      <div class="govuk-grid-column-two-thirds">
-        <p class="govuk-body govuk-font-colour-white govuk-!-margin-bottom-1">
-          <%= t("coronavirus_landing_page.guidance.pretext") %>
-        </p>
-        <p class="govuk-body govuk-font-colour-white">
-          <a class="govuk-link covid__page-header-link" href="<%= t("coronavirus_landing_page.guidance.link.href") %>">
-            <%= t("coronavirus_landing_page.guidance.link.text") %>
-          </a>
-        </p>
+        <div class="covid__page-header-guidance-section">
+          <p class="govuk-body covid__page-header-body-pretext">
+            <%= t("coronavirus_landing_page.guidance.pretext") %>
+          </p>
+          <p class="govuk-body">
+            <a class="govuk-link covid__page-header-link" href="<%= t("coronavirus_landing_page.guidance.link.href") %>">
+              <%= t("coronavirus_landing_page.guidance.link.text") %>
+            </a>
+          </p>
+        </div>
       </div>
     </div>
 

@@ -32,13 +32,8 @@ $covid-green: #7eff8e;
 }
 
 .covid__page-header-guidance-section {
-  margin-top: govuk-spacing(7);
-  margin-bottom: govuk-spacing(8);
-
-  @include govuk-media-query($from: tablet) {
-    margin-top: govuk-spacing(3);
-    margin-bottom: govuk-spacing(3);
-  }
+  margin-top: govuk-spacing(6);
+  margin-bottom: govuk-spacing(7);
 }
 
 .covid__page-title {
@@ -49,6 +44,15 @@ $covid-green: #7eff8e;
     margin-top: govuk-spacing(4);
     margin-bottom: govuk-spacing(8);
   }
+}
+
+.covid__page-header-list {
+  color: govuk-colour('white');
+}
+
+.covid__page-header-body-pretext {
+  color: govuk-colour('white');
+  margin-bottom: govuk-spacing(1);
 }
 
 .covid__list-item {
