@@ -53,6 +53,8 @@ en:
                 url: /universal-credit
               - label: Check if you're eligible for Employment and Support Allowance (ESA)
                 url: /employment-support-allowance
+              - label: Get an isolation note to give to your employer
+                url: https://www.nhs.uk/conditions/coronavirus-covid-19/self-isolation-advice/
               - label: Your rights if your hours are cut or you’re laid off
                 url: /lay-offs-short-timeworking
               - label: What to do if you cannot pay your tax bill on time
@@ -89,6 +91,8 @@ en:
                 url: /government/publications/coronavirus-covid-19-guidance-for-uk-businesses
               - label: What the government is doing to support businesses
                 url: /government/publications/guidance-to-employers-and-businesses-about-covid-19
+              - label: How to close holiday accommodation to temporary residents
+                url: /guidance/covid-19-advice-for-accommodation-providers
       - title: Healthcare workers and carers
         sub_sections:
           - title:
@@ -109,7 +113,7 @@ en:
                 url: /guidance/travel-advice-novel-coronavirus
               - label: Foreign travel advice for each country
                 url: /foreign-travel-advice
-              - label: What to do if you're visiting the UK from China and you can't travel home
+              - label: Guidance for visa applicants in the UK and abroad
                 url: /guidance/coronavirus-immigration-guidance-if-youre-unable-to-return-to-china-from-the-uk
               - label: Avoid travel to second homes, campsites and caravan parks
                 url: /government/news/covid-19-essential-travel-guidance
