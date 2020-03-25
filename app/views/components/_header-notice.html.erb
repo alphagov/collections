@@ -1,17 +1,17 @@
 <%
   title ||= false
-  title_logo_url ||= false
+  title_logo ||= false
   heading ||= false
   list ||= []
   call_to_action ||= false
   nhs_branding ||= false
   branding_classes = 'app-c-header-notice__branding--nhs' if nhs_branding
 %>
-<% if title.present? || title_logo_url.present? %>
+<% if title.present? || title_logo.present? %>
 <section class="app-c-header-notice <%= branding_classes %>" aria-label="notice" role="region">
   <div class="app-c-header-notice__header">
-    <% if title_logo_url.present? %>
-      <%= image_tag(title_logo_url, class: "app-c-header-notice__title-logo") %>
+    <% if title_logo.present? %>
+      <span class="app-c-header-notice__title-logo"><%= title_logo %></span>
     <% end %>
     <% if title.present? %>
       <h2 class="app-c-header-notice__title govuk-heading-m"><%= title %></h2>

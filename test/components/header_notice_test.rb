@@ -8,7 +8,7 @@ class HeaderNoticeTest < ComponentTestCase
   def branded_notice
     {
       nhs_branding: true,
-      title_logo_url: "/path/to/image.png",
+      title_logo: tag.img(src: "/path/to/image.png"),
       heading: "This is a header",
       list: %w(blah blah2),
       call_to_action: {
@@ -46,14 +46,14 @@ class HeaderNoticeTest < ComponentTestCase
 
   test "renders a logo if title logo is passed in" do
     render_component(branded_notice)
-    assert_select "img.app-c-header-notice__title-logo", attributes: { src: branded_notice[:title_logo_url] }
+    assert_select ".app-c-header-notice__title-logo", attributes: { src: branded_notice[:title_logo_url] }
     assert_select ".app-c-header-notice__title", count: 0
   end
 
   test "renders a title if title is passed in" do
     render_component(unbranded_notice)
     assert_select ".app-c-header-notice__title", text: branded_notice[:title]
-    assert_select "img.app-c-header-notice__title-logo", count: 0
+    assert_select ".app-c-header-notice__title-logo", count: 0
   end
 
   test "renders a title and logo if title and logo are both passed in" do
@@ -61,7 +61,7 @@ class HeaderNoticeTest < ComponentTestCase
     config[:title] = "this is a title"
     render_component(config)
     assert_select ".app-c-header-notice__title", text: config[:title]
-    assert_select "img.app-c-header-notice__title-logo", attributes: { src: config[:title_logo_url] }
+    assert_select ".app-c-header-notice__title-logo", attributes: { src: config[:title_logo_url] }
   end
 
   test "does not renders a heading if no heading is passed in" do
