@@ -13,7 +13,7 @@ en:
       pretext: You can spread the virus even if you don’t have symptoms.
       link:
         href: /government/publications/full-guidance-on-staying-at-home-and-away-from-others
-        text: Full guidance on staying at home and away from others
+        text: Staying at home and away from others (social distancing)
     announcements_label: Announcements
     announcements:
       - text: You must stay at home apart from essential travel or you may be fined
@@ -39,7 +39,7 @@ en:
             list:
               - label: Staying at home if you think you have coronavirus (self-isolating)
                 url: /government/publications/covid-19-stay-at-home-guidance
-              - label: Full guidance on staying at home and away from others
+              - label: Staying at home and away from others (social distancing)
                 url: /government/publications/full-guidance-on-staying-at-home-and-away-from-others
               - label: How to protect extremely vulnerable people (shielding)
                 url: /government/publications/guidance-on-shielding-and-protecting-extremely-vulnerable-persons-from-covid-19
