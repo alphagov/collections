@@ -10,7 +10,7 @@ en:
         - Stay 2 metres (6ft) away from other people
         - Wash your hands as soon as you get home
     guidance:
-      pretext: Anyone can spread the virus.
+      pretext: You can spread the virus even if you don’t have symptoms.
       link:
         href: /government/publications/full-guidance-on-staying-at-home-and-away-from-others
         text: Full guidance on staying at home and away from others
@@ -29,7 +29,7 @@ en:
         - a new, continuous cough
       call_to_action:
         title: Check the NHS website if you have symptoms
-        href: https://www.nhs.uk/conditions/coronavirus-covid-19/
+        href: https://www.nhs.uk/conditions/coronavirus-covid-19/symptoms-and-what-to-do/
     explainer_title:
     explainer_text:
     sections:
@@ -42,7 +42,7 @@ en:
               - label: Full guidance on staying at home and away from others
                 url: /government/publications/full-guidance-on-staying-at-home-and-away-from-others
               - label: How to protect extremely vulnerable people (shielding)
-                url: /government/publications/guidance-on-shielding-and-protecting-extremely-vulnerable-persons-from-covid-19/guidance-on-shielding-and-protecting-extremely-vulnerable-persons-from-covid-19
+                url: /government/publications/guidance-on-shielding-and-protecting-extremely-vulnerable-persons-from-covid-19
       - title: Employment and financial support
         sub_sections:
           - title:
@@ -121,7 +121,7 @@ en:
                 url: /employment-support-allowance/your-esa-claim
               - label: Personal Independence Payment (PIP)
                 url: /pip/how-to-claim
-              - label: Universal credit
+              - label: Universal Credit
                 url: /universal-credit/how-to-claim
           - title: Crime, justice and the law
             list:
@@ -131,6 +131,8 @@ en:
                 url: /guidance/coronavirus-covid-19-and-prisons
           - title: Driving and transport
             list:
+              - label: Car, motorcycle and van MOTs extended by 6 months
+                url: /guidance/coronavirus-covid-19-mots-for-cars-vans-and-motorcycles-due-from-30-march-2020
               - label: Driving and theory tests suspended
                 url: /guidance/coronavirus-covid-19-driving-tests-and-theory-tests
               - label: MOTs for heavy vehicles suspended
