@@ -4,7 +4,7 @@ en:
     meta_description: "Find out about the government response to coronavirus (COVID-19) and what you need to do."
     page_header: "Coronavirus (COVID-19): what you need to do"
     stay_at_home:
-      pretext: "Stay at home"
+      pretext: Stay at home
       list:
         - Only go outside for food, health reasons or work (where this absolutely cannot be done from home)
         - Stay 2 metres (6ft) away from other people
@@ -14,6 +14,7 @@ en:
       link:
         href: /government/publications/full-guidance-on-staying-at-home-and-away-from-others
         text: Full guidance on staying at home and away from others
+    announcements_label: Announcements
     announcements:
       - text: You must stay at home apart from essential travel or you may be fined
         href: /government/publications/full-guidance-on-staying-at-home-and-away-from-others
