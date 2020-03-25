@@ -1,4 +1,7 @@
-  <% accordion_contents = [] %>
+  <%
+    accordion_contents = []
+    number_of_accordion_sections = t("coronavirus_landing_page.sections").length
+  %>
   <% t("coronavirus_landing_page.sections").each do | section | %>
     <% content = capture do %>
       <%# this element captures an override from the accordion that the last item has margin 0 %>
@@ -14,8 +17,26 @@
         content: {
           html: content,
         },
-        data_attributes: nil
+        data_attributes: {
+          toggle_attribute: "data-track-action",
+          when_closed_text: "accordionClosed",
+          when_open_text: "accordionOpened",
+          track_category: "pageElementInteraction",
+          track_action: "accordionClosed",
+          track_label: section[:title],
+          track_dimension: number_of_accordion_sections,
+          track_dimension_index: 26
+        }
       }
     %>
   <% end %>
-  <%= render 'govuk_publishing_components/components/accordion', { items: accordion_contents } %>
+  <div data-module="track-click">
+    <div data-module="toggle-attribute">
+      <%= render 'govuk_publishing_components/components/accordion', {
+        data_attributes: {
+          module: "govuk-accordion"
+        },
+        items: accordion_contents
+      } %>
+    </div>
+  </div>
