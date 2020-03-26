@@ -1,5 +1,14 @@
 $covid-green: #7eff8e;
 
+.covid__page {
+  .govuk-grid-column-one-third,
+  .govuk-grid-column-two-thirds {
+    @media (max-width: 950px) {
+      width: 100%;
+    }
+  }
+}
+
 .covid__page-header {
   padding-bottom: govuk-spacing(6);
   margin-bottom: govuk-spacing(8);
