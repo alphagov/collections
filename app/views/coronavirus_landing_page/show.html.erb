@@ -1,27 +1,32 @@
-<%=
-  render(
-    partial: 'page_header', locals: { breadcrumbs: breadcrumbs }
-  )
-%>
+<div class="covid__page">
+  <%=
+    render(
+      partial: 'page_header', locals: {
+        details: details,
+        breadcrumbs: breadcrumbs,
+        rules: details.stay_at_home,
+        guidance: details.guidance }
+    )
+  %>
 
-<div class="govuk-width-container covid__page">
+<div class="govuk-width-container">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-one-third">
       <%= render 'components/header-notice', {
         nhs_branding: true,
         title_logo: render("nhs_logo"),
-        heading: t("coronavirus_landing_page.nhs_banner.heading"),
-        list: t("coronavirus_landing_page.nhs_banner.list"),
+        heading: details.nhs_banner['heading'],
+        list: details.nhs_banner['list'],
         call_to_action: {
-          href: t("coronavirus_landing_page.nhs_banner.call_to_action.href"),
-          title: t("coronavirus_landing_page.nhs_banner.call_to_action.title")
+          href: details.nhs_banner['call_to_action']['href'],
+          title: details.nhs_banner['call_to_action']['title']
         }
       } %>
     </div>
 
     <div class="govuk-grid-column-two-thirds">
-      <%= render partial: 'accordion_sections'%>
-      <%= render partial: 'topic_section' %>
+      <%= render partial: 'accordion_sections', locals: { accordions: details.sections }%>
+      <%= render partial: 'topic_section', locals: { topic_section: details.topic_section } %>
 
       <div class="landing-page__email-wrapper">
         <svg  class="app-c-email-link__icon" xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 459.334 459.334">

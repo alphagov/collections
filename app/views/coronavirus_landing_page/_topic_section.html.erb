@@ -1,36 +1,17 @@
 <section class="covid__topic-wrapper">
   <%= render "govuk_publishing_components/components/heading", {
-    text: t("coronavirus_landing_page.country_section.header"),
+    text: topic_section["header"],
     padding: true,
     border_top: 2
   } %>
   <p class="govuk-body-m">
-    <%= t("coronavirus_landing_page.country_section.text") %>
+    <%= topic_section["text"] %>
   </p>
 
   <ul class="govuk-list">
-    <% t("coronavirus_landing_page.country_section.links").each do | link | %>
+    <% topic_section["links"].each do | link | %>
       <li class="covid__topic-list-item">
-        <%= link_to link[:label].html_safe, link[:url], class: 'covid__topic-list-link govuk-link' %>
-      </li>
-    <% end %>
-  </ul>
-</section>
-
-<section class="covid__topic-wrapper">
-  <%= render "govuk_publishing_components/components/heading", {
-    text: t("coronavirus_landing_page.topic_section.header"),
-    padding: true,
-    border_top: 2
-  } %>
-  <p class="govuk-body-m">
-    <%= t("coronavirus_landing_page.topic_section.text") %>
-  </p>
-
-  <ul class="govuk-list">
-    <% t("coronavirus_landing_page.topic_section.links").each do | link | %>
-      <li class="covid__topic-list-item">
-        <%= link_to link[:label].html_safe, link[:url], class: 'covid__topic-list-link govuk-link' %>
+        <%= link_to link["label"].html_safe, link["url"], class: 'covid__topic-list-link govuk-link' %>
       </li>
     <% end %>
   </ul>

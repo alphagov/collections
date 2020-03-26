@@ -31,8 +31,6 @@ en:
       call_to_action:
         title: Check the NHS website if you have symptoms
         href: https://www.nhs.uk/conditions/coronavirus-covid-19/symptoms-and-what-to-do/
-    explainer_title:
-    explainer_text:
     sections:
       - title: How to protect yourself and others
         sub_sections:
