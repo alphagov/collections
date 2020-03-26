@@ -6,7 +6,7 @@ en:
     stay_at_home:
       pretext: Stay at home
       list:
-        - Only go outside for food, health reasons or work (where this absolutely cannot be done from home)
+        - Only go outside for food, health reasons or work (but only if you cannot work from home)
         - Stay 2 metres (6ft) away from other people
         - Wash your hands as soon as you get home
     guidance:
@@ -53,6 +53,8 @@ en:
                 url: /universal-credit
               - label: Check if you're eligible for Employment and Support Allowance (ESA)
                 url: /employment-support-allowance
+              - label: Employers can apply for staff to get up to 80% pay if they can’t work
+                url: /government/publications/guidance-to-employers-and-businesses-about-covid-19/covid-19-guidance-for-employees
               - label: Get an isolation note to give to your employer
                 url: https://www.nhs.uk/conditions/coronavirus-covid-19/self-isolation-advice/
               - label: Your rights if your hours are cut or you’re laid off
