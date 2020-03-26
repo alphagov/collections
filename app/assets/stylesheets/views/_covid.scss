@@ -71,10 +71,6 @@ $covid-green: #7eff8e;
 .covid__list-item {
   padding-bottom: govuk-spacing(3);
 
-  &:last-child {
-    padding-bottom: 0;
-  }
-
   @include govuk-media-query($from: desktop) {
     padding-bottom: govuk-spacing(2);
   }
@@ -82,6 +78,18 @@ $covid-green: #7eff8e;
 
 .govuk-list ~ .covid__accordion-heading {
   margin-top: govuk-spacing(4);
+}
+
+.covid__accordion-link {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+
+    &:focus {
+      text-decoration: none;
+    }
+  }
 }
 
 .covid__topic-wrapper {
