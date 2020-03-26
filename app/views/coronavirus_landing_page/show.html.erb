@@ -9,7 +9,7 @@
     <div class="govuk-grid-column-one-third">
       <%= render 'components/header-notice', {
         nhs_branding: true,
-        title_logo_url: image_url('nhs-logotype-blue.svg'),
+        title_logo: render("nhs_logo"),
         heading: t("coronavirus_landing_page.nhs_banner.heading"),
         list: t("coronavirus_landing_page.nhs_banner.list"),
         call_to_action: {
