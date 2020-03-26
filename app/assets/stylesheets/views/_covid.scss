@@ -29,6 +29,10 @@ $covid-green: #7eff8e;
   &:focus {
     color: $govuk-text-colour;
   }
+
+  @include govuk-media-query($until: tablet) {
+    font-weight: normal;
+  }
 }
 
 .covid__page-header-guidance-section {
@@ -56,12 +60,14 @@ $covid-green: #7eff8e;
 }
 
 .covid__list-item {
-  @include govuk-media-query($until: desktop) {
-    padding-bottom: govuk-spacing(3);
+  padding-bottom: govuk-spacing(3);
 
-    &:last-child {
-      padding-bottom: 0;
-    }
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  @include govuk-media-query($from: desktop) {
+    padding-bottom: govuk-spacing(2);
   }
 }
 
