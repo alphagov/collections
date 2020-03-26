@@ -20,8 +20,8 @@ en:
         href: /government/publications/full-guidance-on-staying-at-home-and-away-from-others
       - text: If you live in the UK and are currently abroad you are strongly advised to return now
         href: /guidance/travel-advice-novel-coronavirus
-      - text: All non-essential shops and community spaces are closed
-        href: /government/publications/further-businesses-and-premises-to-close
+      - text: If you’re self-employed, you’ll get up to £2,500 a month in grants for at least 3 months
+        href: /government/news/chancellor-gives-support-to-millions-of-self-employed-individuals
     nhs_banner:
       heading: "Do not leave home if you or someone you live with has either:"
       list:
@@ -81,8 +81,12 @@ en:
         sub_sections:
           - title:
             list:
+              - label: Financial help if you’re self-employed
+                url: /guidance/claim-a-grant-through-the-coronavirus-covid-19-self-employment-income-support-scheme
               - label: How to keep your employees safe
                 url: /government/publications/guidance-to-employers-and-businesses-about-covid-19
+              - label: Businesses and community spaces that must be closed
+                url: /government/publications/further-businesses-and-premises-to-close
               - label: How to clean workplaces safely
                 url: /government/publications/covid-19-decontamination-in-non-healthcare-settings
               - label: Check what you need to do about Statutory Sick Pay
