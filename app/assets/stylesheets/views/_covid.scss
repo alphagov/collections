@@ -29,6 +29,10 @@ $covid-green: #7eff8e;
   &:focus {
     color: $govuk-text-colour;
   }
+
+  @include govuk-media-query($until: tablet) {
+    font-weight: normal;
+  }
 }
 
 .covid__page-header-guidance-section {
@@ -61,7 +65,7 @@ $covid-green: #7eff8e;
   &:last-child {
     padding-bottom: 0;
   }
-  
+
   @include govuk-media-query($from: desktop) {
     padding-bottom: govuk-spacing(2);
   }
