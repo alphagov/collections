@@ -43,6 +43,8 @@ en:
                 url: /government/publications/full-guidance-on-staying-at-home-and-away-from-others
               - label: How to protect extremely vulnerable people (shielding)
                 url: /government/publications/guidance-on-shielding-and-protecting-extremely-vulnerable-persons-from-covid-19
+              - label: Guidance on pregnancy and coronavirus
+                url: https://www.rcog.org.uk/en/guidelines-research-services/guidelines/coronavirus-pregnancy/covid-19-virus-infection-and-pregnancy/
       - title: Employment and financial support
         sub_sections:
           - title:
@@ -55,6 +57,8 @@ en:
                 url: /employment-support-allowance
               - label: Employers can apply for staff to get up to 80% pay if they can’t work
                 url: /government/publications/guidance-to-employers-and-businesses-about-covid-19/covid-19-guidance-for-employees
+              - label: Financial help if you’re self-employed
+                url: /guidance/claim-a-grant-through-the-coronavirus-covid-19-self-employment-income-support-scheme
               - label: Get an isolation note to give to your employer
                 url: https://www.nhs.uk/conditions/coronavirus-covid-19/self-isolation-advice/
               - label: Your rights if your hours are cut or you’re laid off
@@ -81,8 +85,6 @@ en:
         sub_sections:
           - title:
             list:
-              - label: Financial help if you’re self-employed
-                url: /guidance/claim-a-grant-through-the-coronavirus-covid-19-self-employment-income-support-scheme
               - label: How to keep your employees safe
                 url: /government/publications/guidance-to-employers-and-businesses-about-covid-19
               - label: Businesses and community spaces that must be closed
@@ -161,8 +163,6 @@ en:
             list:
               - label: Offer the help of your business
                 url: /coronavirus-support-from-business
-              - label: Help produce ventilators and components
-                url: https://ventilator.herokuapp.com
       - title: Coronavirus (COVID-19) cases in the UK
         sub_sections:
           - title:
