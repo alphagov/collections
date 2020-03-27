@@ -1,6 +1,6 @@
 class CoronavirusLandingPageController < ApplicationController
   skip_before_action :set_expiry
-  before_action -> { set_expiry(1.minute) }
+  before_action -> { set_expiry(5.minutes) }
 
   def show
     @content_item = content_item.to_hash
