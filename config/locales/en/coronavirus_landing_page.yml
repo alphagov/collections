@@ -159,6 +159,8 @@ en:
         sub_sections:
           - title:
             list:
+              - label: Offer the help of your business
+                url: /coronavirus-support-from-business
               - label: Help produce ventilators and components
                 url: https://ventilator.herokuapp.com
       - title: Coronavirus (COVID-19) cases in the UK
