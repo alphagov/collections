@@ -1,4 +1,5 @@
 $covid-green: #7eff8e;
+$covid-grey: #272828;
 
 .covid__page {
   .govuk-grid-column-one-third,
@@ -10,27 +11,43 @@ $covid-green: #7eff8e;
 }
 
 .covid__page-header {
-  padding-bottom: govuk-spacing(6);
   margin-bottom: govuk-spacing(8);
   border-top: solid govuk-spacing(2) $covid-green;
   background-color: govuk-colour("black");
   color: govuk-colour("white");
 }
 
-.covid__logos {
-  max-width: 100%;
+.covid__page-header-light {
+  padding-top: govuk-spacing(3);
+  padding-bottom: govuk-spacing(1);
+  background: $covid-grey;
+
+  @include govuk-media-query($from: tablet) {
+    padding-bottom: govuk-spacing(3);
+  }
+}
+
+.covid__logo-wrapper {
   margin-bottom: govuk-spacing(6);
 
   @include govuk-media-query($from: tablet) {
-    max-width: 75%;
+    margin-bottom: govuk-spacing(8);
   }
+}
 
-  @include govuk-media-query($from: desktop) {
-    max-width: 50%;
+.covid__logos {
+  max-width: 100%;
+  height: auto;
+
+  @include govuk-media-query($from: tablet) {
+    margin-top: govuk-spacing(2);
+    max-height: 38px; // the SVG canvas height is too big on IE
   }
 }
 
 .covid__page-header-link {
+  font-weight: normal;
+
   &:link,
   &:visited {
     color: govuk-colour("white");
@@ -38,15 +55,33 @@ $covid-green: #7eff8e;
   &:focus {
     color: $govuk-text-colour;
   }
-
-  @include govuk-media-query($until: tablet) {
-    font-weight: normal;
-  }
 }
 
-.covid__page-header-guidance-section {
-  margin-top: govuk-spacing(6);
-  margin-bottom: govuk-spacing(7);
+.covid__highlight-link {
+  box-sizing: border-box;
+  display: inline-block;
+  padding-left: 50px;
+  min-height: 45px;
+  max-width: 460px;
+  background-image: image-url("covid-arrow.png"); // PNG fallback for SVG
+  background: image-url("covid-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 37px auto;
+
+  @include govuk-media-query($until: tablet) {
+    max-width: 410px;
+    margin-top: govuk-spacing(2);
+    margin-bottom: govuk-spacing(6);
+  }
+
+  @include govuk-media-query($from: tablet) {
+    background-position: 0 3px;
+  }
+
+  .covid__page-header-link {
+    @include govuk-font(19, $weight: bold);
+  }
 }
 
 .covid__page-title {
@@ -65,7 +100,6 @@ $covid-green: #7eff8e;
 
 .covid__page-header-body-pretext {
   color: govuk-colour('white');
-  margin-bottom: govuk-spacing(1);
 }
 
 .covid__list-item {
@@ -96,7 +130,7 @@ $covid-green: #7eff8e;
   padding-top: govuk-spacing(6);
 
   @include govuk-media-query($from: tablet) {
-    margin-top: govuk-spacing(7);
+    margin-top: govuk-spacing(6);
   }
 }
 
@@ -112,5 +146,9 @@ $covid-green: #7eff8e;
 
   &:hover {
     text-decoration: underline;
+
+    &:focus {
+      text-decoration: none;
+    }
   }
 }
