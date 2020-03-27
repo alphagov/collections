@@ -7,10 +7,11 @@ en:
       pretext: Stay at home
       list:
         - Only go outside for food, health reasons or work (but only if you cannot work from home)
-        - Stay 2 metres (6ft) away from other people
+        - If you go out, stay 2 metres (6ft) away from other people at all times
         - Wash your hands as soon as you get home
     guidance:
-      pretext: You can spread the virus even if you don’t have symptoms.
+      pretext-1: Do not meet others, even friends or family. 
+      pretext-2: You can spread the virus even if you don’t have symptoms.
       link:
         href: /government/publications/full-guidance-on-staying-at-home-and-away-from-others
         text: "Staying at home and away from others (social&nbsp;distancing)"
@@ -171,6 +172,16 @@ en:
                 url: /government/publications/covid-19-track-coronavirus-cases
               - label: Latest number of coronavirus cases in the UK
                 url: /guidance/coronavirus-covid-19-information-for-the-public
+    country_section:
+      header: "If you live in Scotland, Wales or Northern Ireland"
+      text: "Additional guidance is available"
+      links:
+        - label: "Scotland"
+          url: https://www.gov.scot/coronavirus-covid-19/
+        - label: "Wales"
+          url: https://gov.wales/coronavirus
+        - label: "Northern Ireland"
+          url: https://www.nidirect.gov.uk/campaigns/coronavirus-covid-19
     topic_section:
       header: "All coronavirus (COVID-19) information"
       text: "Browse information related to coronavirus"

@@ -130,7 +130,7 @@ $covid-grey: #272828;
   padding-top: govuk-spacing(6);
 
   @include govuk-media-query($from: tablet) {
-    margin-top: govuk-spacing(7);
+    margin-top: govuk-spacing(6);
   }
 }
 
@@ -146,5 +146,9 @@ $covid-grey: #272828;
 
   &:hover {
     text-decoration: underline;
+
+    &:focus {
+      text-decoration: none;
+    }
   }
 }
