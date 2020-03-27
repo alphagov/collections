@@ -5,7 +5,7 @@
   <ul class="govuk-list">
     <% sub_section[:list].each do | item | %>
       <li class="covid__list-item">
-        <a class="govuk-link" href="<%= item[:url] %>"><%= item[:label] %></a>
+        <a class="govuk-link covid__accordion-link" href="<%= item[:url] %>"><%= item[:label] %></a>
       </li>
     <% end %>
   </ul>
