@@ -80,10 +80,10 @@ en:
                 url: /government/publications/coronavirus-covid-19-maintaining-educational-provision
               - label: Cancelled exams
                 url: /government/publications/coronavirus-covid-19-cancellation-of-gcses-as-and-a-levels-in-2020/coronavirus-covid-19-cancellation-of-gcses-as-and-a-levels-in-2020
-              - label: Dealing with COVID-19 in nurseries, schools and universities
-                url: /government/publications/guidance-to-educational-settings-about-covid-19
               - label: Supporting vulnerable children
                 url: /government/publications/coronavirus-covid-19-guidance-on-vulnerable-children-and-young-people
+              - label: Full guidance for schools and other educational settings
+                url: /government/collections/coronavirus-covid-19-guidance-for-schools-and-other-educational-settings
       - title: Businesses and other organisations
         sub_sections:
           - title:
