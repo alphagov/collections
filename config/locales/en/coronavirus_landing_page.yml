@@ -13,8 +13,8 @@ en:
       pretext-1: Do not meet others, even friends or family.
       pretext-2: You can spread the virus even if you don’t have symptoms.
       link:
-        href: /government/publications/full-guidance-on-staying-at-home-and-away-from-others
-        text: "Read more about staying at home and away from&nbsp;others"
+        href: /government/publications/coronavirus-outbreak-faqs-what-you-can-and-cant-do/coronavirus-outbreak-faqs-what-you-can-and-cant-do
+        text: "Read more about what you can and can't do"
     announcements_label: Announcements
     announcements:
       - text: You must stay at home apart from certain exceptions or you may be fined
@@ -42,6 +42,8 @@ en:
                 url: /government/publications/covid-19-stay-at-home-guidance
               - label: Staying at home and away from others (social distancing)
                 url: /government/publications/full-guidance-on-staying-at-home-and-away-from-others
+              - label: "Staying at home: what you can and can't do"
+                url: /government/publications/coronavirus-outbreak-faqs-what-you-can-and-cant-do/coronavirus-outbreak-faqs-what-you-can-and-cant-do
               - label: How to protect extremely vulnerable people (shielding)
                 url: /government/publications/guidance-on-shielding-and-protecting-extremely-vulnerable-persons-from-covid-19
               - label: Guidance on pregnancy and coronavirus
