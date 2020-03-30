@@ -1,0 +1,29 @@
+<div class="govuk-grid-row">
+  <% announcements.each do |announcement| %>
+    <div class="govuk-grid-column-one-third">
+      <% announcement_text = capture do %>
+        <% if announcement["href"].present? %>
+          <a
+            href="<%= announcement["href"] %>"
+            class="govuk-link covid__page-header-link"
+            data-module="track-click"
+            data-track-category="pageElementInteraction"
+            data-track-action="Announcements"
+            data-track-label="<%= announcement["href"] %>"
+          >
+            <%= announcement["text"] %>
+          </a>
+        <% else %>
+          <%= announcement["text"] %>
+        <% end %>
+      <% end %>
+      <%= render "govuk_publishing_components/components/heading", {
+        text: announcement_text,
+        heading_level: 3,
+        font_size: 19,
+        inverse: true,
+        margin_bottom: 4
+      } %>
+    </div>
+  <% end %>
+</div>
