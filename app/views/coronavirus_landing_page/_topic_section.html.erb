@@ -1,5 +1,24 @@
 <section class="covid__topic-wrapper">
   <%= render "govuk_publishing_components/components/heading", {
+    text: country_section["header"],
+    padding: true,
+    border_top: 2
+  } %>
+  <p class="govuk-body-m">
+    <%= country_section["text"] %>
+  </p>
+
+  <ul class="govuk-list">
+    <% country_section["links"].each do | link | %>
+      <li class="covid__topic-list-item">
+        <%= link_to link["label"].html_safe, link["url"], class: 'covid__topic-list-link govuk-link' %>
+      </li>
+    <% end %>
+  </ul>
+</section>
+
+<section class="covid__topic-wrapper">
+  <%= render "govuk_publishing_components/components/heading", {
     text: topic_section["header"],
     padding: true,
     border_top: 2

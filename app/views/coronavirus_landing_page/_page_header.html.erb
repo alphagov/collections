@@ -58,33 +58,34 @@
         <div class="govuk-grid-column-two-thirds">
           <span class="covid__highlight-link">
             <a class="govuk-link covid__page-header-link" href="<%= guidance["link"]["href"] %>">
-              <%= guidance["link"]["text"] %>
+              <%= raw guidance["link"]["text"] %>
             </a>
           </span>
         </div>
-      <div class="govuk-grid-column-one-third">
-        <%= render 'covid_logos' %>
-      </div>
-    </div>
-
-    <%= render "govuk_publishing_components/components/heading", {
-      text: details.announcements_label,
-      padding: true,
-      font_size: 19,
-      border_top: 2,
-      brand: 'public-health-england',
-      inverse: true
-    } %>
-    <div class="govuk-grid-row">
-      <% details.announcements.each do |announcement| %>
         <div class="govuk-grid-column-one-third">
-          <% announcement_text = capture do %>
-            <% if announcement["href"].present? %>
-              <a href="<%= announcement["href"] %>" class="govuk-link covid__page-header-link">
+          <%= render 'covid_logos' %>
+        </div>
+      </div>
+
+      <%= render "govuk_publishing_components/components/heading", {
+        text: details.announcements_label,
+        padding: true,
+        font_size: 19,
+        border_top: 2,
+        brand: 'public-health-england',
+        inverse: true
+      } %>
+      <div class="govuk-grid-row">
+        <% details.announcements.each do |announcement| %>
+          <div class="govuk-grid-column-one-third">
+            <% announcement_text = capture do %>
+              <% if announcement["href"].present? %>
+                <a href="<%= announcement["href"] %>" class="govuk-link covid__page-header-link">
+                  <%= announcement["text"] %>
+                </a>
+              <% else %>
                 <%= announcement["text"] %>
-              </a>
-            <% else %>
-              <%= announcement["text"] %>
+              <% end %>
             <% end %>
             <%= render "govuk_publishing_components/components/heading", {
               text: announcement_text,
