@@ -105,6 +105,10 @@ $covid-grey: #272828;
 
 .covid__page-header-list {
   color: govuk-colour('white');
+
+  .covid__page-header-list-item {
+    margin-bottom: govuk-spacing(2);
+  }
 }
 
 .covid__page-header-body-pretext {

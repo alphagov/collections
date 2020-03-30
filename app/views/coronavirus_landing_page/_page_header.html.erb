@@ -41,14 +41,12 @@
           } %>
           <ul class="govuk-list govuk-list--bullet covid__page-header-list">
             <% rules["list"].each do | item | %>
-              <li><%= item %></li>
+              <li class="covid__page-header-list-item"><%= item %></li>
             <% end %>
           </ul>
 
           <p class="govuk-body covid__page-header-body-pretext">
             <%= guidance["pretext-1"] %>
-          </p>
-          <p class="govuk-body covid__page-header-body-pretext">
             <%= guidance["pretext-2"] %>
           </p>
         </div>
