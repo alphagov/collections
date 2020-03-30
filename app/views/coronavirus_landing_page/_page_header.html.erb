@@ -1,14 +1,14 @@
 <% content_for :is_full_width_header, true %>
-<% content_for :title, t("coronavirus_landing_page.meta_title") %>
+<% content_for :title, @content_item["title"] %>
 <% content_for :meta_tags do %>
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="GOV.UK">
   <meta property="og:url" content="<%= request.base_url + request.path %>">
-  <meta property="og:title" content="<%= t("coronavirus_landing_page.meta_title") %>">
-  <meta property="og:description" content="<%= t("coronavirus_landing_page.meta_description") %>">
+  <meta property="og:title" content="<%= @content_item["title"] %>">
+  <meta property="og:description" content="<%= @content_item["description"] %>">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="<%= image_url("corona-twitter-image.png") %>">
-  <meta name="description" content="<%= t("coronavirus_landing_page.meta_description") %>">
+  <meta name="description" content="<%= @content_item["description"] %>">
   <meta name="govuk:navigation-page-type" content="Taxon Page" />
 <% end %>
 
@@ -23,7 +23,7 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <h1 class="covid__page-title">
-          <%= t("coronavirus_landing_page.page_header") %>
+          <%= @content_item["title"] %>
         </h1>
       </div>
     </div>
@@ -31,27 +31,25 @@
 
   <div class="covid__page-header-light">
     <div class="govuk-width-container">
-
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
           <%= render "govuk_publishing_components/components/heading", {
-            text: t("coronavirus_landing_page.stay_at_home.pretext"),
+            text: rules["pretext"],
             padding: true,
             font_size: 19,
             inverse: true
           } %>
           <ul class="govuk-list govuk-list--bullet covid__page-header-list">
-            <% t("coronavirus_landing_page.stay_at_home.list").each do | item | %>
+            <% rules["list"].each do | item | %>
               <li><%= item %></li>
             <% end %>
           </ul>
 
           <p class="govuk-body covid__page-header-body-pretext">
-            <%= t("coronavirus_landing_page.guidance.pretext-1") %>
+            <%= guidance["pretext-1"] %>
           </p>
-
           <p class="govuk-body covid__page-header-body-pretext">
-            <%= t("coronavirus_landing_page.guidance.pretext-2") %>
+            <%= guidance["pretext-2"] %>
           </p>
         </div>
       </div>
@@ -59,19 +57,18 @@
       <div class="govuk-grid-row covid__logo-wrapper">
         <div class="govuk-grid-column-two-thirds">
           <span class="covid__highlight-link">
-            <a class="govuk-link covid__page-header-link" href="<%= t("coronavirus_landing_page.guidance.link.href") %>">
-              <%= raw t("coronavirus_landing_page.guidance.link.text") %>
+            <a class="govuk-link covid__page-header-link" href="<%= guidance["link"]["href"] %>">
+              <%= raw guidance["link"]["text"] %>
             </a>
           </span>
         </div>
-
         <div class="govuk-grid-column-one-third">
           <%= render 'covid_logos' %>
         </div>
       </div>
 
       <%= render "govuk_publishing_components/components/heading", {
-        text: t("coronavirus_landing_page.announcements_label"),
+        text: details.announcements_label,
         padding: true,
         font_size: 19,
         border_top: 2,
@@ -79,15 +76,15 @@
         inverse: true
       } %>
       <div class="govuk-grid-row">
-        <% t("coronavirus_landing_page.announcements").each do |announcement| %>
+        <% details.announcements.each do |announcement| %>
           <div class="govuk-grid-column-one-third">
             <% announcement_text = capture do %>
-              <% if announcement[:href].present? %>
-                <a href="<%= announcement[:href] %>" class="govuk-link covid__page-header-link">
-                  <%= announcement[:text] %>
+              <% if announcement["href"].present? %>
+                <a href="<%= announcement["href"] %>" class="govuk-link covid__page-header-link">
+                  <%= announcement["text"] %>
                 </a>
               <% else %>
-                <%= announcement[:text] %>
+                <%= announcement["text"] %>
               <% end %>
             <% end %>
             <%= render "govuk_publishing_components/components/heading", {

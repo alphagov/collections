@@ -1,12 +1,17 @@
 require "gds_api/test_helpers/content_item_helpers"
 require "gds_api/test_helpers/search"
 require_relative "../../test/support/rummager_helpers"
-
+require_relative "../../test/support/coronavirus_helper"
 module CoronavirusLandingPageSteps
   include GdsApi::TestHelpers::ContentItemHelpers
   include RummagerHelpers
 
+  CORONAVIRUS_CONTENT_ID = "774cee22-d896-44c1-a611-e3109cce8eae".freeze
   CORONAVIRUS_PATH = "/coronavirus".freeze
+
+  def given_there_is_a_content_item
+    stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item)
+  end
 
   def when_i_visit_the_coronavirus_landing_page
     visit CORONAVIRUS_PATH
