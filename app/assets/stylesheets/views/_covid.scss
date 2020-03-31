@@ -57,15 +57,17 @@ $covid-grey: #272828;
   }
 }
 
-.covid__page-header-link {
-  font-weight: normal;
+.covid__page-header-light {
+  .covid__page-header-link {
+    font-weight: normal;
 
-  &:link,
-  &:visited {
-    color: govuk-colour("white");
-  }
-  &:focus {
-    color: $govuk-text-colour;
+    &:link,
+    &:visited {
+      color: govuk-colour("white");
+    }
+    &:focus {
+      color: $govuk-text-colour;
+    }
   }
 }
 
@@ -139,7 +141,12 @@ $covid-grey: #272828;
   margin-top: govuk-spacing(7);
 }
 
-.covid__page-header-body-pretext {
+.covid__video {
+  margin-top: govuk-spacing(8);
+  margin-bottom: govuk-spacing(8);
+}
+
+.covid__inverse {
   color: govuk-colour("white");
 }
 

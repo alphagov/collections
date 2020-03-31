@@ -45,7 +45,7 @@
             <% end %>
           </ul>
 
-          <p class="govuk-body covid__page-header-body-pretext">
+          <p class="govuk-body covid__inverse">
             <%= guidance["pretext-1"] %>
             <%= guidance["pretext-2"] %>
           </p>
@@ -95,6 +95,16 @@
           </div>
         <% end %>
       </div>
+
+      <% if details.show_live_stream? %>
+        <%= render partial: 'live_stream', locals: {
+          title: details.live_stream["title"],
+          url: details.live_stream["video_url"],
+          date: details.live_stream["date"],
+          time: details.live_stream["time"],
+          no_cookies_message: details.live_stream["no_cookies_message"]
+        } %>
+      <% end %>
     </div>
   </div>
 </header>
