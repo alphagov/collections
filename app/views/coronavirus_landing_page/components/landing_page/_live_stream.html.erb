@@ -7,18 +7,28 @@
       margin_bottom: 1
     } %>
     <p class="govuk-body covid__inverse">
-      <%= date %> <%= ("at " + time) if time.present? %>
+      <%= details["date"] %> <%= ("at " + details["time"]) if details["time"].present? %>
     </p>
   </div>
 
   <div class="govuk-grid-column-two-thirds">
     <%= render "govuk_publishing_components/components/govspeak", {
     } do %>
-      <p class="govuk-body">
-        <a href="<%= url %>" class="govuk-link covid__page-header-link">
+      <div class="covid__video-placeholder">
+        <div class="covid__video-logo">Live</div>
+        <p class="govuk-body">
+          <a href="/help/cookies" class="govuk-link covid__page-header-link covid__bold">Change your cookie settings</a>
+        </p>
+        <p class="govuk-body covid__inverse covid__bold">
+          to watch the live stream
+        </p>
+        <p class="govuk-body covid__inverse">
+          or
+        </p>
+        <a href="<%= url %>" class="govuk-body govuk-link covid__page-header-link">
           <%= no_cookies_message %>
         </a>
-      </p>
+      </div>
     <% end %>
   </div>
 </div>
