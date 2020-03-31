@@ -2,7 +2,7 @@
   <% if sub_section["title"] %>
     <h3 class="govuk-heading-s covid__accordion-heading"><%= sub_section["title"] %></h3>
   <% end %>
-  <ul class="govuk-list">
+  <ul class="covid__list covid__list--accordion">
     <% sub_section["list"].each do | item | %>
       <li class="covid__list-item">
         <a class="govuk-link covid__accordion-link" href="<%= item["url"] %>"><%= item["label"] %></a>

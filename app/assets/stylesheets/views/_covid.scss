@@ -103,28 +103,44 @@ $covid-grey: #272828;
   }
 }
 
-.covid__page-header-list {
-  color: govuk-colour('white');
+.covid__list {
+  @include govuk-font(19);
+  margin-bottom: govuk-spacing(3);
+  list-style-type: none;
 
-  .covid__page-header-list-item {
-    margin-bottom: govuk-spacing(2);
+  @include govuk-media-query($from: tablet) {
+    margin-bottom: govuk-spacing(4);
   }
 }
 
-.covid__page-header-body-pretext {
-  color: govuk-colour('white');
+.covid__list--header {
+  padding-left: govuk-spacing(4);
+  list-style-type: disc;
+  color: govuk-colour("white");
+}
+
+.covid__list--accordion {
+  margin-bottom: govuk-spacing(6);
+
+  .covid__list-item {
+    margin-bottom: govuk-spacing(4);
+
+    @include govuk-media-query($from: tablet) {
+      margin-bottom: govuk-spacing(3);
+    }
+  }
 }
 
 .covid__list-item {
-  padding-bottom: govuk-spacing(3);
-
-  @include govuk-media-query($from: desktop) {
-    padding-bottom: govuk-spacing(2);
-  }
+  margin-bottom: govuk-spacing(2);
 }
 
-.govuk-list ~ .covid__accordion-heading {
-  margin-top: govuk-spacing(4);
+.covid__list ~ .covid__accordion-heading {
+  margin-top: govuk-spacing(7);
+}
+
+.covid__page-header-body-pretext {
+  color: govuk-colour("white");
 }
 
 .covid__accordion-link {
