@@ -104,6 +104,23 @@
           time: details.live_stream["time"],
           no_cookies_message: details.live_stream["no_cookies_message"]
         } %>
+      <% else %>
+        <div class="govuk-grid-row covid__video">
+          <div class="govuk-grid-column-two-thirds">
+            <%= render "govuk_publishing_components/components/heading", {
+              text: "The next live press conference will be shown here",
+              heading_level: 2,
+              font_size: 19,
+              inverse: true,
+              margin_bottom: 0
+            } %>
+            <p class="govuk-body covid__inverse">
+              <a href="https://www.youtube.com/user/Number10gov/videos" class="govuk-link covid__page-header-link">
+                View past coronavirus press conferences on YouTube
+              </a>
+            </p>
+          </div>
+        </div>
       <% end %>
     </div>
   </div>
