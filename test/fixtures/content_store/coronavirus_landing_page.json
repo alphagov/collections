@@ -167,6 +167,11 @@
              "url":"/search/all?topical_events%5B%5D=coronavirus-covid-19-uk-government-response&order=updated-newest"}]},
         "notifications":
          {"intro":"Stay up to date with GOV.UK",
-          "email_link":"Sign up to get emails when we change any coronavirus information on the GOV.UK website"}
+          "email_link":"Sign up to get emails when we change any coronavirus information on the GOV.UK website"},
+        "live_stream":
+          {"video": "",
+           "date": "31/03/2020",
+           "time": "17:00",
+            "show_video": "yes"}
         }
 }
