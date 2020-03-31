@@ -45,7 +45,7 @@
             <% end %>
           </ul>
 
-          <p class="govuk-body covid__page-header-body-pretext">
+          <p class="govuk-body covid__inverse">
             <%= guidance["pretext-1"] %>
             <%= guidance["pretext-2"] %>
           </p>
@@ -92,6 +92,52 @@
               inverse: true,
               margin_bottom: 4
             } %>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="govuk-grid-row covid__video">
+        <% if true %>
+          <div class="govuk-grid-column-two-thirds">
+            <%= render "govuk_publishing_components/components/heading", {
+              text: "#{@content_item["livestream_pending"]} #{@content_item["livestream_pending_date"]}",
+              font_size: 19,
+              inverse: true,
+              margin_bottom: 0
+            } %>
+            <p class="govuk-body covid__inverse">
+              <a href="https://www.youtube.com/user/Number10gov/videos" class="govuk-link covid__page-header-link">
+                <%= @content_item["livestream_past"] %>
+              </a>
+            </p>
+          </div>
+        <% else %>
+          <div class="govuk-grid-column-one-third">
+            <%= render "govuk_publishing_components/components/heading", {
+              text: @content_item["livestream_title"],
+              font_size: 19,
+              inverse: true,
+              margin_bottom: 0
+            } %>
+            <p class="govuk-body covid__inverse">
+              <%= @content_item["livestream_datetime"] %>
+            </p>
+          </div>
+
+          <div class="govuk-grid-column-two-thirds">
+            <%= render "govuk_publishing_components/components/govspeak", {
+            } do %>
+              <a href="<%= @content_item["livestream_video"] %>">
+                <%= tag.image(src: image_url("corona-video-placeholder.jpg"),
+                  alt: @content_item["livestream_placeholder_alt"])
+                %>
+              </a>
+              <p class="govuk-body">
+                <a href="https://www.youtube.com/watch?v=5qap5aO4i9A" class="govuk-link covid__page-header-link">
+                  <%= @content_item["livestream_placeholder_link"] %>
+                </a>
+              </p>
+            <% end %>
           </div>
         <% end %>
       </div>
