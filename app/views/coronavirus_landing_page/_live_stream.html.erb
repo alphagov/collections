@@ -1,0 +1,24 @@
+<div class="govuk-grid-row covid__video">
+  <div class="govuk-grid-column-one-third">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: title,
+      font_size: 19,
+      inverse: true,
+      margin_bottom: 1
+    } %>
+    <p class="govuk-body covid__inverse">
+      <%= date %> at <%= time %>
+    </p>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <%= render "govuk_publishing_components/components/govspeak", {
+    } do %>
+      <p class="govuk-body">
+        <a href="<%= url %>" class="govuk-link covid__page-header-link">
+          <%= no_cookies_message %>
+        </a>
+      </p>
+    <% end %>
+  </div>
+</div>
