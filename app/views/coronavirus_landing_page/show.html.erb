@@ -1,4 +1,8 @@
-<%= render(partial: 'schema', locals: { presenter: details } ) %>
+<%= render(partial: 'schema', locals: {
+    presenter: details,
+    special_announcement: special_announcement,
+  })
+%>
 
 <%=
   render(
@@ -6,7 +10,8 @@
       details: details,
       breadcrumbs: breadcrumbs,
       rules: details.stay_at_home,
-      guidance: details.guidance }
+      guidance: details.guidance,
+    }
   )
 %>
 

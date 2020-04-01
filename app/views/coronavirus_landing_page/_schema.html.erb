@@ -1,3 +1,7 @@
 <script type="application/ld+json">
   <%= (presenter.faq_schema(@content_item).to_json).html_safe %>
 </script>
+
+<script type="application/ld+json">
+  <%= (special_announcement.payload.to_json).html_safe %>
+</script>
