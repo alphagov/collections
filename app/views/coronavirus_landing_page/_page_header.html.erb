@@ -55,7 +55,14 @@
       <div class="govuk-grid-row covid__logo-wrapper">
         <div class="govuk-grid-column-two-thirds">
           <span class="covid__highlight-link">
-            <a class="govuk-link covid__page-header-link" href="<%= guidance["link"]["href"] %>">
+            <a
+              class="govuk-link covid__page-header-link"
+              href="<%= guidance["link"]["href"] %>"
+              data-module="track-click"
+              data-track-category="pageElementInteraction"
+              data-track-action="Announcements"
+              data-track-label="<%= guidance["link"]["href"] %>"
+            >
               <%= raw guidance["link"]["text"] %>
             </a>
           </span>
@@ -78,7 +85,14 @@
           <div class="govuk-grid-column-one-third">
             <% announcement_text = capture do %>
               <% if announcement["href"].present? %>
-                <a href="<%= announcement["href"] %>" class="govuk-link covid__page-header-link">
+                <a
+                  href="<%= announcement["href"] %>"
+                  class="govuk-link covid__page-header-link"
+                  data-module="track-click"
+                  data-track-category="pageElementInteraction"
+                  data-track-action="Announcements"
+                  data-track-label="<%= announcement["href"] %>"
+                >
                   <%= announcement["text"] %>
                 </a>
               <% else %>
