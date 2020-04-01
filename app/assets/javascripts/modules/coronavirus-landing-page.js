@@ -4,7 +4,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 (function (Modules) {
   function CoronavirusLandingPage () {}
 
-  CoronavirusLandingPage.prototype.start = function ($module) {
+  CoronavirusLandingPage.prototype.start = function () {
     // Confirm the user is on the coronavirus landing page
     if (this.checkOnLandingPage()) {
       if (window.GOVUK.cookie('global_bar_seen')) {
