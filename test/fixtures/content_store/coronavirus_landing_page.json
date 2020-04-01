@@ -167,6 +167,13 @@
              "url":"/search/all?topical_events%5B%5D=coronavirus-covid-19-uk-government-response&order=updated-newest"}]},
         "notifications":
          {"intro":"Stay up to date with GOV.UK",
-          "email_link":"Sign up to get emails when we change any coronavirus information on the GOV.UK website"}
+          "email_link":"Sign up to get emails when we change any coronavirus information on the GOV.UK website"},
+        "live_stream" :
+        { "title": "Live press conference",
+          "video_url": "https://www.youtube.com/watch?v=nB8MZaspQZw",
+          "no_cookies_message": "Watch the live stream on YouTube",
+          "date": "31st March 2020",
+          "time": "5:00pm",
+          "show_video": true }
         }
 }
