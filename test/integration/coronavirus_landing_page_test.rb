@@ -24,6 +24,7 @@ class CoronavirusLandingPageTest < ActionDispatch::IntegrationTest
       given_there_is_a_content_item
       when_i_visit_the_coronavirus_landing_page
       then_the_special_announcement_schema_is_rendered
+      and_the_faqpage_schema_is_rendered
     end
   end
 end
