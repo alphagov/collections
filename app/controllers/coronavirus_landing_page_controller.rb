@@ -9,10 +9,22 @@ class CoronavirusLandingPageController < ApplicationController
       special_announcement: special_announcement }
   end
 
+  def business
+    @content_item = content_item.to_hash
+    breadcrumbs = [
+      { title: "Home", url: "/" },
+      { title: "Coronavirus (COVID-19)", url: "/coronavirus", is_page_parent: true },
+    ]
+    render "business", locals: {
+      breadcrumbs: breadcrumbs,
+      details: business_presenter,
+    }
+  end
+
 private
 
   def content_item
-    ContentItem.find!("/coronavirus")
+    ContentItem.find!(request.path)
   end
 
   def presenter
@@ -21,5 +33,9 @@ private
 
   def special_announcement
     SpecialAnnouncementPresenter.new(@content_item)
+  end
+
+  def business_presenter
+    BusinessSupportPagePresenter.new(@content_item)
   end
 end
