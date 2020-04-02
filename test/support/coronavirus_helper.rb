@@ -10,3 +10,9 @@ def coronavirus_content_item
     item.merge(coronavirus_landing_page_content_item)
   end
 end
+
+def coronavirus_content_item_with_no_time
+  content_item = coronavirus_content_item
+  content_item["details"]["live_stream"]["time"] = nil
+  content_item
+end

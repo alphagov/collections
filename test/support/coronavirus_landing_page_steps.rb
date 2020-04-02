@@ -13,12 +13,25 @@ module CoronavirusLandingPageSteps
     stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item)
   end
 
+  def given_there_is_a_content_item_with_no_time
+    stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item_with_no_time)
+  end
+
   def when_i_visit_the_coronavirus_landing_page
     visit CORONAVIRUS_PATH
   end
 
   def then_i_can_see_the_header_section
     assert page.has_selector?(".covid__page-header h1", text: "Coronavirus (COVID-19): what you need to do")
+  end
+
+  def and_i_can_see_the_live_stream_section
+    assert page.has_text?("1st April 2020 at 5:00pm")
+  end
+
+  def then_i_can_see_the_live_stream_section_with_no_time
+    assert_not page.has_text?("1st April 2020 at")
+    assert page.has_text?("1st April 2020")
   end
 
   def then_i_can_see_the_nhs_banner
