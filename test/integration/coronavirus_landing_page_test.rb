@@ -9,6 +9,7 @@ class CoronavirusLandingPageTest < ActionDispatch::IntegrationTest
       given_there_is_a_content_item
       when_i_visit_the_coronavirus_landing_page
       then_i_can_see_the_header_section
+      and_i_can_see_the_live_stream_section
       then_i_can_see_the_nhs_banner
       then_i_can_see_the_accordions
     end
@@ -18,6 +19,12 @@ class CoronavirusLandingPageTest < ActionDispatch::IntegrationTest
       when_i_visit_the_coronavirus_landing_page
       and_i_click_on_an_accordion
       then_i_can_see_the_accordions_content
+    end
+
+    it "optionally shows the time" do
+      given_there_is_a_content_item_with_no_time
+      when_i_visit_the_coronavirus_landing_page
+      then_i_can_see_the_live_stream_section_with_no_time
     end
 
     it "renders machine readable content" do

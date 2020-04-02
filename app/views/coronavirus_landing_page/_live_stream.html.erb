@@ -7,7 +7,7 @@
       margin_bottom: 1
     } %>
     <p class="govuk-body covid__inverse">
-      <%= date %> at <%= time %>
+      <%= date %> <%= ("at " + time) if time.present? %>
     </p>
   </div>
 

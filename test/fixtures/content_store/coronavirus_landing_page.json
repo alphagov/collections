@@ -361,6 +361,21 @@
       "intro": "Stay up to date with GOV.UK",
       "email_link": "Sign up to get emails when we change any coronavirus information on the GOV.UK website"
     },
+    "live_stream": {
+      "title": "Live press conference",
+      "video_url": "https://www.youtube.com/embed/live_stream?channel=UC8o7mIMg3mmO9-dx3e2iFgw",
+      "no_cookies_message": "Watch the live stream on YouTube",
+      "no_cookies": {
+      "change_settings": "Change your cookie settings",
+      "change_settings_link": "/help/cookies",
+      "to_watch": "to watch the live stream",
+      "or": "or",
+      "watch_link_text": "Watch the live stream on YouTube"
+      },
+      "date": "1st April 2020",
+      "time": "5:00pm",
+      "show_video": true
+    },
     "special_announcement_schema": {
       "category": "https://www.wikidata.org/wiki/Q81068910",
       "disease_prevention_info_url": "https://www.gov.uk/coronavirus",
