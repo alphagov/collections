@@ -1,17 +1,3 @@
-<% content_for :is_full_width_header, true %>
-<% content_for :title, @content_item["title"] %>
-<% content_for :meta_tags do %>
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="GOV.UK">
-  <meta property="og:url" content="<%= request.base_url + request.path %>">
-  <meta property="og:title" content="<%= @content_item["title"] %>">
-  <meta property="og:description" content="<%= @content_item["description"] %>">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="<%= image_url("corona-twitter-image.png") %>">
-  <meta name="description" content="<%= @content_item["description"] %>">
-  <meta name="govuk:navigation-page-type" content="Taxon Page" />
-<% end %>
-
 <header class="covid__page-header" data-module="coronavirus-landing-page">
   <div class="govuk-width-container">
     <%= render 'govuk_publishing_components/components/breadcrumbs', {
@@ -82,33 +68,7 @@
       } %>
 
       <%= render partial: 'announcements', locals: { announcements: details.announcements } %>
-
-      <% if details.show_live_stream? %>
-        <%= render partial: 'live_stream', locals: {
-          title: details.live_stream["title"],
-          url: details.live_stream["video_url"],
-          date: details.live_stream["date"],
-          time: details.live_stream["time"],
-          no_cookies_message: details.live_stream["no_cookies_message"]
-        } %>
-      <% else %>
-        <div class="govuk-grid-row covid__video">
-          <div class="govuk-grid-column-two-thirds">
-            <%= render "govuk_publishing_components/components/heading", {
-              text: "The next live press conference will be shown here",
-              heading_level: 2,
-              font_size: 19,
-              inverse: true,
-              margin_bottom: 0
-            } %>
-            <p class="govuk-body covid__inverse">
-              <a href="https://www.youtube.com/user/Number10gov/videos" class="govuk-link covid__page-header-link">
-                View past coronavirus press conferences on YouTube
-              </a>
-            </p>
-          </div>
-        </div>
-      <% end %>
+      <%= render partial: 'live_stream_section', locals: { details: details } %>
     </div>
   </div>
 </header>

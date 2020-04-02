@@ -1,3 +1,5 @@
+<%= render partial: "meta_tags" %>
+
 <%= render(partial: 'schema', locals: {
     presenter: details,
     special_announcement: special_announcement,
@@ -32,9 +34,8 @@
 
     <div class="govuk-grid-column-two-thirds">
       <%= render partial: 'accordion_sections', locals: { accordions: details.sections }%>
-      <%= render partial: 'topic_section', locals: {
-          topic_section: details.topic_section,
-          country_section: details.country_section } %>
+      <%= render partial: 'country_section', locals: { country_section: details.country_section } %>
+      <%= render partial: 'topic_section', locals: { topic_section: details.topic_section } %>
 
       <div class="landing-page__email-wrapper">
         <svg  class="app-c-email-link__icon" xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 459.334 459.334">
