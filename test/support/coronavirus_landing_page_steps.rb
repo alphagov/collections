@@ -41,6 +41,8 @@ module CoronavirusLandingPageSteps
     special_announcement_schema = find_schema("SpecialAnnouncement")
     assert_equal(special_announcement_schema["headline"], "Coronavirus (COVID-19): what you need to do")
     assert_equal(special_announcement_schema["diseasePreventionInfo"], "https://www.gov.uk/coronavirus")
+    # proves that the schema handles non-existent properties OK
+    assert_nil(special_announcement_schema["gettingTestedInfo"])
   end
 
   def find_schema(schema_name)
