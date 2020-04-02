@@ -17,6 +17,8 @@ class CoronavirusLandingPagePresenter
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
+      "name": content_item["title"],
+      "description": content_item["description"],
       "mainEntity": build_faq_main_entity(content_item),
     }
   end

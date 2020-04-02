@@ -19,5 +19,12 @@ class CoronavirusLandingPageTest < ActionDispatch::IntegrationTest
       and_i_click_on_an_accordion
       then_i_can_see_the_accordions_content
     end
+
+    it "renders machine readable content" do
+      given_there_is_a_content_item
+      when_i_visit_the_coronavirus_landing_page
+      then_the_special_announcement_schema_is_rendered
+      and_the_faqpage_schema_is_rendered
+    end
   end
 end

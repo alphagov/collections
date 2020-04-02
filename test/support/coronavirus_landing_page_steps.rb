@@ -36,4 +36,25 @@ module CoronavirusLandingPageSteps
   def then_i_can_see_the_accordions_content
     assert page.has_selector?(".govuk-link", text: "Staying at home if you think you have coronavirus (self-isolating)")
   end
+
+  def then_the_special_announcement_schema_is_rendered
+    special_announcement_schema = find_schema("SpecialAnnouncement")
+    assert_equal(special_announcement_schema["headline"], "Coronavirus (COVID-19): what you need to do")
+    assert_equal(special_announcement_schema["diseasePreventionInfo"], "https://www.gov.uk/coronavirus")
+    # proves that the schema handles non-existent properties OK
+    assert_nil(special_announcement_schema["gettingTestedInfo"])
+  end
+
+  def and_the_faqpage_schema_is_rendered
+    special_announcement_schema = find_schema("FAQPage")
+    assert_equal(special_announcement_schema["name"], "Coronavirus (COVID-19): what you need to do")
+    assert_equal(special_announcement_schema["description"], "Find out about the government response to coronavirus (COVID-19) and what you need to do.")
+  end
+
+  def find_schema(schema_name)
+    schema_sections = page.find_all("script[type='application/ld+json']", visible: false)
+    schemas = schema_sections.map { |section| JSON.parse(section.text(:all)) }
+
+    schemas.detect { |schema| schema["@type"] == schema_name }
+  end
 end
