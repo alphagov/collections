@@ -1,4 +1,4 @@
-$covid-green: #7eff8e;
+$covid-yellow: #ffe114;
 $covid-grey: #272828;
 
 .covid__page {
@@ -22,7 +22,7 @@ $covid-grey: #272828;
 
 .covid__page-header {
   margin-bottom: govuk-spacing(8);
-  border-top: solid govuk-spacing(2) $covid-green;
+  border-top: solid govuk-spacing(2) $covid-yellow;
   background-color: govuk-colour("black");
   color: govuk-colour("white");
 }
