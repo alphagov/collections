@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
 
   get "/coronavirus", to: "coronavirus_landing_page#show"
+  get "/coronavirus/business", to: "coronavirus_landing_page#business"
+
   get "/browse.json" => redirect("/api/content/browse")
 
   resources :browse, only: %i(index show), param: :top_level_slug do
