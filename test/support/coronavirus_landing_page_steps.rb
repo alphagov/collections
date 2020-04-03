@@ -84,7 +84,7 @@ module CoronavirusLandingPageSteps
   end
 
   def and_i_can_see_related_links
-    assert page.has_link?( "Get an isolation note to give to your employer", href: "https://www.nhs.uk/conditions/coronavirus-covid-19/self-isolation-advice/" )
+    assert page.has_link?("Get an isolation note to give to your employer", href: "https://www.nhs.uk/conditions/coronavirus-covid-19/self-isolation-advice/")
   end
 
   def then_the_special_announcement_schema_is_rendered
