@@ -23,7 +23,7 @@ class CoronavirusLandingPageController < ApplicationController
     title = {
       text: @content_item["title"],
       context: {
-        text: "Coronavirus (Covid-19)",
+        text: "Coronavirus (COVID-19)",
         href: "/coronavirus",
       },
     }
