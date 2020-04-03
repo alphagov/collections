@@ -188,3 +188,38 @@ $covid-grey: #272828;
     }
   }
 }
+
+.covid__page-guidance {
+  padding: govuk-spacing(8) 0 govuk-spacing(7) 0;
+  background-color: govuk-colour("light-grey");
+  color: govuk-colour("black");
+}
+
+.covid__page-guidance-link {
+  display: inline-block;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  padding-left: 35px;
+  min-height: 30px;
+  background-image: image-url("corona-arrow-mini-dark.png"); // PNG fallback for SVG
+  background-image: image-url("corona-arrow-mini-dark.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 25px auto;
+  text-decoration: none;
+
+  @include govuk-font(19, $weight: bold);
+
+  @include govuk-media-query($until: tablet) {
+    margin-bottom: govuk-spacing(2);
+  }
+
+  @include govuk-media-query($from: desktop) {
+    // IE10/11 specific - vertical align in flexbox is ignored
+    // unless an explicit height is set
+    @media screen and (min-width:0\0) {
+      height: 45px;
+    }
+  }
+}
