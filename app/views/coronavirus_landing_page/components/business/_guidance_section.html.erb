@@ -17,15 +17,7 @@
           <% end %>
         </ul>
       </div>
-      <%#  COMMENTED OUT UNTIL WE HAVE THE LINKS
-      <div class="govuk-grid-column-one-third">
-        <%#= render "govuk_publishing_components/components/heading", {
-          text: "Related links",
-          padding: true,
-          font_size: 19,
-        } %>
-      <%#</div>
-      %>
+      <%= render partial: 'coronavirus_landing_page/components/shared/related_links', locals: { related: related } %>
     </div>
   </div>
 </div>
