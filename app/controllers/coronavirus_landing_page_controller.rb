@@ -5,15 +5,32 @@ class CoronavirusLandingPageController < ApplicationController
   def show
     @content_item = content_item.to_hash
     breadcrumbs = [{ title: "Home", url: "/", is_page_parent: true }]
-    render "show", locals: { breadcrumbs: breadcrumbs, details: presenter,
-      special_announcement: special_announcement }
+    title = {
+      text: @content_item["title"],
+    }
+
+    render "show", locals: {
+      breadcrumbs: breadcrumbs,
+      title: title,
+      details: presenter,
+      special_announcement: special_announcement,
+    }
   end
 
   def business
     @content_item = content_item.to_hash
     breadcrumbs = [{ title: "Home", url: "/" }]
+    title = {
+      text: @content_item["title"],
+      context: {
+        text: "Coronavirus (Covid-19)",
+        href: "/coronavirus",
+      },
+    }
+
     render "business", locals: {
       breadcrumbs: breadcrumbs,
+      title: title,
       details: business_presenter,
     }
   end
