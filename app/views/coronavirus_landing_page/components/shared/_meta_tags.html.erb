@@ -1,3 +1,7 @@
+<%
+  corona_opengraph_images ||= false
+%>
+
 <% content_for :is_full_width_header, true %>
 <% content_for :title, @content_item["title"] %>
 <% content_for :meta_tags do %>
@@ -6,9 +10,12 @@
   <meta property="og:url" content="<%= request.base_url + request.path %>">
   <meta property="og:title" content="<%= @content_item["title"] %>">
   <meta property="og:description" content="<%= @content_item["description"] %>">
-  <meta property="og:image" content="<%= image_url("corona-opengraph.png") %>" />
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="<%= image_url("corona-twitter-image.png") %>">
   <meta name="description" content="<%= @content_item["description"] %>">
   <meta name="govuk:navigation-page-type" content="Taxon Page" />
+
+  <% if corona_opengraph_images %>
+    <meta property="og:image" content="<%= image_url("corona-opengraph.png") %>" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="<%= image_url("corona-twitter-image.png") %>">
+  <% end %>
 <% end %>
