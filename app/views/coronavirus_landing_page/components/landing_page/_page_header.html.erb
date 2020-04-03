@@ -54,7 +54,7 @@
           </span>
         </div>
         <div class="govuk-grid-column-one-third">
-          <%= render 'covid_logos' %>
+          <%= render 'coronavirus_landing_page/components/shared/covid_logos' %>
         </div>
       </div>
 
@@ -67,8 +67,8 @@
         inverse: true
       } %>
 
-      <%= render partial: 'announcements', locals: { announcements: details.announcements } %>
-      <%= render partial: 'live_stream_section', locals: { details: details } %>
+      <%= render partial: 'coronavirus_landing_page/components/shared/announcements', locals: { announcements: details.announcements } %>
+      <%= render partial: 'coronavirus_landing_page/components/landing_page/live_stream_section', locals: { details: details } %>
     </div>
   </div>
 </header>

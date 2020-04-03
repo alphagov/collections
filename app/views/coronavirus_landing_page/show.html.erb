@@ -1,6 +1,6 @@
-<%= render partial: "meta_tags" %>
+<%= render partial: "coronavirus_landing_page/components/shared/meta_tags" %>
 
-<%= render(partial: 'schema', locals: {
+<%= render(partial: 'coronavirus_landing_page/components/shared/schema', locals: {
     presenter: details,
     special_announcement: special_announcement,
   })
@@ -8,7 +8,7 @@
 
 <%=
   render(
-    partial: 'page_header', locals: {
+    partial: 'coronavirus_landing_page/components/landing_page/page_header', locals: {
       details: details,
       breadcrumbs: breadcrumbs,
       rules: details.stay_at_home,
@@ -22,7 +22,7 @@
     <div class="govuk-grid-column-one-third">
       <%= render 'components/header-notice', {
         nhs_branding: true,
-        title_logo: render("nhs_logo"),
+        title_logo: render("coronavirus_landing_page/components/shared/nhs_logo"),
         heading: details.nhs_banner["heading"],
         list: details.nhs_banner["list"],
         call_to_action: {
@@ -33,9 +33,9 @@
     </div>
 
     <div class="govuk-grid-column-two-thirds">
-      <%= render partial: 'accordion_sections', locals: { accordions: details.sections }%>
-      <%= render partial: 'country_section', locals: { country_section: details.country_section } %>
-      <%= render partial: 'topic_section', locals: { topic_section: details.topic_section } %>
+      <%= render partial: 'coronavirus_landing_page/components/shared/accordion_sections', locals: { accordions: details.sections }%>
+      <%= render partial: 'coronavirus_landing_page/components/shared/country_section', locals: { country_section: details.country_section } %>
+      <%= render partial: 'coronavirus_landing_page/components/shared/topic_section', locals: { topic_section: details.topic_section } %>
 
       <div class="landing-page__email-wrapper">
         <svg  class="app-c-email-link__icon" xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 459.334 459.334">

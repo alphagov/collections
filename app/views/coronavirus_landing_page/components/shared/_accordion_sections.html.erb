@@ -6,7 +6,7 @@
     <% content = capture do %>
       <%# this element captures an override from the accordion that the last item has margin 0 %>
       <div class="covid__accordion-inner">
-        <%= render partial: 'section', locals: { section: section } %>
+        <%= render partial: 'coronavirus_landing_page/components/shared/section', locals: { section: section } %>
       </div>
     <% end %>
     <%

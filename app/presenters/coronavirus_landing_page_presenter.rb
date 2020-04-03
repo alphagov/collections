@@ -43,7 +43,7 @@ private
   end
 
   def build_announcements_schema(content_item)
-    announcement_text = ApplicationController.render partial: "coronavirus_landing_page/announcements",
+    announcement_text = ApplicationController.render partial: "coronavirus_landing_page/components/shared/announcements",
       locals: {
         announcements: content_item["details"]["announcements"],
       }
@@ -54,7 +54,7 @@ private
     question_and_answers = []
     content_item["details"]["sections"].each do |section|
       question = section["title"]
-      answers_text = ApplicationController.render partial: "coronavirus_landing_page/section", locals: { section: section }
+      answers_text = ApplicationController.render partial: "coronavirus_landing_page/components/shared/section", locals: { section: section }
       question_and_answers.push question_and_answer_schema(question, answers_text)
     end
     question_and_answers

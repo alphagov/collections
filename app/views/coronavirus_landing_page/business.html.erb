@@ -1,4 +1,4 @@
-<%= render partial: "meta_tags" %>
+<%= render partial: "coronavirus_landing_page/components/shared/meta_tags" %>
 
 <%# Have copied in the contents of _page_header.html.erb and removed the bits we don't need %>
 <header class="covid__page-header" data-module="coronavirus-landing-page">
@@ -45,17 +45,17 @@
         inverse: true
       } %>
 
-      <%= render partial: 'announcements', locals: { announcements: details.announcements } %>
+      <%= render partial: 'coronavirus_landing_page/components/shared/announcements', locals: { announcements: details.announcements } %>
     </div>
   </div>
-  <%= render partial: 'guidance_section', locals: { guidance: details.guidance_section } %>
+  <%= render 'coronavirus_landing_page/components/business/guidance_section', guidance: details.guidance_section %>
 </header>
 
 <div class="govuk-width-container covid__page">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <%= render partial: 'accordion_sections', locals: { accordions: details.sections } %>
-      <%= render partial: 'topic_section', locals: { topic_section: details.topic_section } %>
+      <%= render partial: 'coronavirus_landing_page/components/shared/accordion_sections', locals: { accordions: details.sections } %>
+      <%= render partial: 'coronavirus_landing_page/components/shared/topic_section', locals: { topic_section: details.topic_section } %>
 
       <%# Have removed email section here until we work out how to line up the notifications %>
     </div>
