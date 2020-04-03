@@ -41,7 +41,7 @@ class CoronavirusLandingPageTest < ActionDispatch::IntegrationTest
       given_there_is_a_business_content_item
       when_i_visit_the_business_landing_page
       then_i_can_see_the_business_header_section
-      and_i_can_see_the_business_announcements
+      # and_i_can_see_the_business_announcements
       then_i_can_see_the_business_accordions
       and_i_can_see_business_links_to_search
       and_i_can_see_related_links
