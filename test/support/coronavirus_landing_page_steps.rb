@@ -10,7 +10,7 @@ module CoronavirusLandingPageSteps
   CORONAVIRUS_PATH = "/coronavirus".freeze
 
   BUSINESS_CONTENT_ID = "09944b84-02ba-4742-a696-9e562fc9b29d".freeze
-  BUSINESS_PATH = "/coronavirus/business".freeze
+  BUSINESS_PATH = "/coronavirus/business-support".freeze
 
   def given_there_is_a_content_item
     stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item)

@@ -8,7 +8,9 @@ Rails.application.routes.draw do
 
 
   get "/coronavirus", to: "coronavirus_landing_page#show"
+  # todo: remove this line when the page gets republished
   get "/coronavirus/business", to: "coronavirus_landing_page#business"
+  get "/coronavirus/business-support", to: "coronavirus_landing_page#business"
 
   get "/browse.json" => redirect("/api/content/browse")
 
