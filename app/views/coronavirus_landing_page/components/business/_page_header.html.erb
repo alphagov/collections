@@ -1,4 +1,4 @@
-<header class="covid__page-header" data-module="coronavirus-landing-page">
+<header class="covid__page-header covid__page-header--business" data-module="coronavirus-landing-page">
   <div class="govuk-width-container">
     <%= render 'govuk_publishing_components/components/breadcrumbs', {
       breadcrumbs: breadcrumbs,
@@ -8,9 +8,13 @@
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="covid__page-title">
-          <%= @content_item["title"] %>
-        </h1>
+        <%= render "govuk_publishing_components/components/title", {
+          context: title[:context],
+          title: title[:text],
+          inverse: true,
+          margin_top: 4,
+          margin_bottom: 0,
+        } %>
       </div>
     </div>
   </div>
