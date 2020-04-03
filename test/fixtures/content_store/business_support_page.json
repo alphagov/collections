@@ -1,17 +1,42 @@
 {
+  "analytics_identifier": null,
   "base_path": "/coronavirus/business-support",
   "content_id": "09944b84-02ba-4742-a696-9e562fc9b29d",
   "document_type": "coronavirus_landing_page",
-  "description": "Business support page",
+  "first_published_at": "2020-04-03T08:13:24.000+00:00",
+  "locale": "en",
   "phase": "live",
+  "public_updated_at": "2020-04-03T08:13:24.000+00:00",
   "publishing_app": "collections-publisher",
+  "publishing_scheduled_at": null,
   "rendering_app": "collections",
+  "scheduled_publishing_delay_seconds": null,
   "schema_name": "coronavirus_landing_page",
   "title": "Business support",
-  "locale": "en",
-  "updated_at": "2020-03-25T14:40:22Z",
-  "links": {},
+  "updated_at": "2020-04-03T10:00:08.123Z",
+  "withdrawn_notice": {},
+  "publishing_request_id": "16413-1585908007.720-10.1.5.11-537",
+  "links": {
+    "available_translations": [
+      {
+        "title": "Business support",
+        "public_updated_at": "2020-04-03T08:13:24Z",
+        "document_type": "coronavirus_landing_page",
+        "schema_name": "coronavirus_landing_page",
+        "base_path": "/coronavirus/business-support",
+        "api_path": "/api/content/coronavirus/business-support",
+        "withdrawn": false,
+        "content_id": "09944b84-02ba-4742-a696-9e562fc9b29d",
+        "locale": "en",
+        "api_url": "https://www.integration.publishing.service.gov.uk/api/content/coronavirus/business-support",
+        "web_url": "https://www.integration.publishing.service.gov.uk/coronavirus/business-support",
+        "links": {}
+      }
+    ]
+  },
+  "description": "Support and guidance for businesses",
   "details": {
+    "page_header": "Business support",
     "header_section": {
       "pretext": "Support will be available to businesses",
       "list": [
@@ -23,7 +48,7 @@
     "announcements_label": "Announcements",
     "announcements": [
       {
-        "text": "If you're self employed you'll get up to £2500 in grants for at least 3 months",
+        "text": "If you’re self employed, you’ll get up to £2,500 in grants for at least 3 months",
         "href": "/"
       },
       {
@@ -32,7 +57,7 @@
       },
       {
         "text": "High street businesses will receive grants",
-        "href": "government/news/high-street-benefits-from-22-billion-grants-and-business-rates-package"
+        "href": "/government/news/high-street-benefits-from-22-billion-grants-and-business-rates-package"
       }
     ],
     "other_announcements": [
@@ -50,10 +75,12 @@
       },
       {
         "text": "COVID-19: Call for rapid sanitising technology for ambulances",
-        "href": "/government/news/covid-19-call-for-rapid-sanitising-technology-for-ambulances"},
+        "href": "/government/news/covid-19-call-for-rapid-sanitising-technology-for-ambulances"
+      },
       {
         "text": "Coronavirus support for employees, benefit claimants and businesses",
-        "href": "/government/news/coronavirus-support-for-employees-benefit-claimants-and-businesses"},
+        "href": "/government/news/coronavirus-support-for-employees-benefit-claimants-and-businesses"
+      },
       {
         "text": "If you're self employed, you'll get up to £2,500 a month in grants, for up to 3 months",
         "href": "/government/news/chancellor-gives-support-to-millions-of-self-employed-individuals"
@@ -81,234 +108,207 @@
         "title": "Funding and support",
         "sub_sections": [
           {
-            "title": "",
+            "title": null,
             "list": [
               {
-                "label": "Staying at home if you think you have coronavirus (self-isolating)",
-                "url": "/government/publications/covid-19-stay-at-home-guidance"
+                "label": "Financial support for businesses",
+                "url": "/government/publications/guidance-to-employers-and-businesses-about-covid-19/covid-19-support-for-businesses"
               },
               {
-                "label": "Full guidance on staying at home and away from others",
-                "url": "/government/publications/full-guidance-on-staying-at-home-and-away-from-others"
+                "label": "HMRC coronavirus (COVID-19) helpline",
+                "url": "/government/organisations/hm-revenue-customs/contact/coronavirus-covid-19-helpline"
               },
               {
-                "label": "How to protect extremely vulnerable people (shielding)",
-                "url": "/government/publications/guidance-on-shielding-and-protecting-extremely-vulnerable-persons-from-covid-19/guidance-on-shielding-and-protecting-extremely-vulnerable-persons-from-covid-19"
+                "label": "Defer VAT payments",
+                "url": "/guidance/deferral-of-vat-payments-due-to-coronavirus-covid-19"
+              },
+              {
+                "label": "Apply to extend your accounts filing deadline",
+                "url": "https://beta.companieshouse.gov.uk/extensions"
+              },
+              {
+                "label": "Claim for your employee's wages through the coronavirus job retention scheme",
+                "url": "/guidance/claim-for-wage-costs-through-the-coronavirus-job-retention-scheme"
+              },
+              {
+                "label": "Grant funding for small business, retail, hospitality and leisure",
+                "url": "/government/publications/coronavirus-covid-19-business-support-grant-funding-guidance-for-businesses"
               }
             ]
           }
         ]
       },
       {
-        "title": "Employment and financial support",
+        "title": "Your responsibilities as an employer",
         "sub_sections": [
           {
-            "title": "",
+            "title": null,
             "list": [
               {
-                "label": "Check if you can get statutory sick pay (SSP)",
-                "url": "/statutory-sick-pay"
-              },
-              {
-                "label": "Check if you're eligible for Universal Credit",
-                "url": "/universal-credit"
-              },
-              {
-                "label": "Check if you're eligible for Employment and Support Allowance (ESA)",
-                "url": "/employment-support-allowance"
-              },
-              {
-                "label": "Your rights if your hours are cut or you’re laid off",
-                "url": "/lay-offs-short-timeworking"
-              },
-              {
-                "label": "What to do if you cannot pay your tax bill on time",
-                "url": "/difficulties-paying-hmrc"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "title": "School closures, education, and childcare",
-        "sub_sections": [
-          {
-            "title": "",
-            "list": [
-              {
-                "label": "What parents and carers need to know about closures",
-                "url": "/government/publications/closure-of-educational-settings-information-for-parents-and-carers"
-              },
-              {
-                "label": "Guidance for schools and local authorities on closures",
-                "url": "/government/publications/covid-19-school-closures"
-              },
-              {
-                "label": "School opening for children of key workers",
-                "url": "/government/publications/coronavirus-covid-19-maintaining-educational-provision"
-              },
-              {
-                "label": "Cancelled exams",
-                "url": "/government/publications/coronavirus-covid-19-cancellation-of-gcses-as-and-a-levels-in-2020/coronavirus-covid-19-cancellation-of-gcses-as-and-a-levels-in-2020"
-              },
-              {
-                "label": "Dealing with COVID-19 in nurseries, schools and universities",
-                "url": "/government/publications/guidance-to-educational-settings-about-covid-19"
-              },
-              {
-                "label": "Supporting vulnerable children",
-                "url": "/government/publications/coronavirus-covid-19-guidance-on-vulnerable-children-and-young-people"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "title": "Businesses and other organisations",
-        "sub_sections": [
-          {
-            "title": "",
-            "list": [
-              {
-                "label": "How to keep your employees safe",
-                "url": "/government/publications/guidance-to-employers-and-businesses-about-covid-19"
-              },
-              {
-                "label": "How to clean workplaces safely",
-                "url": "/government/publications/covid-19-decontamination-in-non-healthcare-settings"
-              },
-              {
-                "label": "Check what you need to do about Statutory Sick Pay",
+                "label": "Statutory Sick Pay (SSP): employer guide",
                 "url": "/employers-sick-pay"
               },
               {
-                "label": "Find out what to do for different businesses and organisations",
-                "url": "/government/collections/coronavirus-covid-19-list-of-guidance"
-              },
-              {
-                "label": "UK businesses trading internationally",
-                "url": "/government/publications/coronavirus-covid-19-guidance-for-uk-businesses"
-              },
-              {
-                "label": "What the government is doing to support businesses",
-                "url": "/government/publications/guidance-to-employers-and-businesses-about-covid-19"
+                "label": "Claim for your employee's wages through the coronavirus job retention scheme",
+                "url": "/guidance/claim-for-wage-costs-through-the-coronavirus-job-retention-scheme"
               }
             ]
           }
         ]
       },
       {
-        "title": "Healthcare workers and carers",
+        "title": "Managing your business during coronavirus",
         "sub_sections": [
           {
-            "title": "",
+            "title": null,
             "list": [
               {
-                "label": "NHS guidance for people working in healthcare",
-                "url": "https://www.england.nhs.uk/coronavirus/"
+                "label": "COVID-19: guidance for employees, employers and businesses",
+                "url": "/government/publications/guidance-to-employers-and-businesses-about-covid-19"
               },
               {
-                "label": "How to protect people in residential care, supported living and home care",
+                "label": "How to clean your workplace safely",
+                "url": "/government/publications/covid-19-decontamination-in-non-healthcare-settings"
+              },
+              {
+                "label": "Handwashing Advice - Public Information Materials",
+                "url": "https://campaignresources.phe.gov.uk/resources/campaigns/101/resources/5016"
+              },
+              {
+                "label": "Food businesses",
+                "url": "/government/publications/covid-19-guidance-for-food-businesses"
+              },
+              {
+                "label": "Supported accommodation, residential care, and home care",
                 "url": "/government/publications/covid-19-residential-care-supported-living-and-home-care-guidance"
               },
               {
-                "label": "How to manage adult social care",
-                "url": "/government/publications/covid-19-ethical-framework-for-adult-social-care"
+                "label": "Shipping and sea ports guidance",
+                "url": "/government/publications/covid-19-shipping-and-sea-ports-guidance"
               },
               {
-                "label": "How to protect extremely vulnerable people (shielding)",
-                "url": "/government/publications/guidance-on-shielding-and-protecting-extremely-vulnerable-persons-from-covid-19/guidance-on-shielding-and-protecting-extremely-vulnerable-persons-from-covid-19"
+                "label": "Staff in transport sector",
+                "url": "/government/publications/covid-19-guidance-for-staff-in-the-transport-sector"
+              },
+              {
+                "label": "The freight transport industry",
+                "url": "/government/publications/covid-19-guidance-on-freight-transport"
+              },
+              {
+                "label": "Farmers, landowners and rural businesses",
+                "url": "/guidance/coronavirus-covid-19-information-for-farmers-landowners-and-rural-businesses"
+              },
+              {
+                "label": "MHRA guidance on coronavirus (COVID-19)",
+                "url": "/government/collections/mhra-guidance-on-coronavirus-covid-19"
               }
             ]
           }
         ]
       },
       {
-        "title": "Travel",
+        "title": "Business closures",
         "sub_sections": [
           {
-            "title": "",
+            "title": null,
             "list": [
               {
-                "label": "Information for British citizens travelling abroad",
-                "url": "/guidance/travel-advice-novel-coronavirus"
+                "label": "Businesses that must be closed",
+                "url": "/government/publications/further-businesses-and-premises-to-close"
               },
               {
-                "label": "Foreign travel advice for each country",
-                "url": "/foreign-travel-advice"
+                "label": "How to close holiday accommodation to temporary residents",
+                "url": "/guidance/covid-19-advice-for-accommodation-providers"
               },
               {
-                "label": "What to do if you're visiting the UK from China and you can't travel home",
-                "url": "/guidance/coronavirus-immigration-guidance-if-youre-unable-to-return-to-china-from-the-uk"
-              },
-              {
-                "label": "Avoid travel to second homes, campsites and caravan parks",
-                "url": "/government/news/covid-19-essential-travel-guidance"
+                "label": "Claim for your employee's wages through the coronavirus job retention scheme",
+                "url": "/guidance/claim-for-wage-costs-through-the-coronavirus-job-retention-scheme"
               }
             ]
           }
         ]
       },
       {
-        "title": "How coronavirus is affecting public services",
+        "title": "Self employed and sole traders",
         "sub_sections": [
           {
-            "title": "Benefits",
+            "title": null,
             "list": [
               {
-                "label": "Employment and Support Allowance (ESA)",
-                "url": "/employment-support-allowance/your-esa-claim"
+                "label": "Self-employment and Universal Credit",
+                "url": "/self-employment-and-universal-credit"
               },
               {
-                "label": "Personal Independence Payment (PIP)",
-                "url": "/pip/how-to-claim"
+                "label": "If you cannot pay your tax bill on time",
+                "url": "/difficulties-paying-hmrc"
               },
               {
-                "label": "Universal credit",
-                "url": "/universal-credit/how-to-claim"
+                "label": "Claim a grant through the coronavirus (COVID-19) Self-employment Income Support Scheme",
+                "url": "/guidance/claim-a-grant-through-the-coronavirus-covid-19-self-employment-income-support-scheme"
               }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "title": "Employees",
+        "sub_sections": [
           {
-            "title": "Crime, justice and the law",
+            "title": null,
             "list": [
               {
-                "label": "Court and tribunal cases",
-                "url": "/guidance/coronavirus-covid-19-courts-and-tribunals-planning-and-preparation"
+                "label": "COVID-19: guidance for employees",
+                "url": "/government/publications/guidance-to-employers-and-businesses-about-covid-19/covid-19-guidance-for-employees"
               },
               {
-                "label": "Visiting prisoners",
-                "url": "/guidance/coronavirus-covid-19-and-prisons"
+                "label": "Check if your employer can use the Coronavirus Job Retention Scheme",
+                "url": "/guidance/check-if-you-could-be-covered-by-the-coronavirus-job-retention-scheme"
               }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "title": "Apprenticeships",
+        "sub_sections": [
           {
-            "title": "Driving and transport",
+            "title": null,
             "list": [
               {
-                "label": "Driving and theory tests suspended",
-                "url": "/guidance/coronavirus-covid-19-driving-tests-and-theory-tests"
-              },
-              {
-                "label": "MOTs for heavy vehicles suspended",
-                "url": "/guidance/coronavirus-covid-19-mots-for-lorries-buses-and-trailers"
-              },
-              {
-                "label": "Relaxation of drivers’ hours rules",
-                "url": "/government/publications/covid-19-guidance-on-drivers-hours-relaxations/coronavirus-covid-19-guidance-on-drivers-hours-relaxations"
-              },
-              {
-                "label": "Vehicle approval tests suspended",
-                "url": "/guidance/coronavirus-covid-19-vehicle-approval-tests"
+                "label": "Coronavirus (COVID-19): apprenticeship programme response",
+                "url": "/government/publications/coronavirus-covid-19-apprenticeship-programme-response"
               }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "title": "Consumer rights",
+        "sub_sections": [
           {
-            "title": "Housing and local services",
+            "title": null,
             "list": [
               {
-                "label": "Planning inspections",
-                "url": "/guidance/coronavirus-covid-19-planning-inspectorate-guidance"
+                "label": "CMA approach to business cooperation in response to Coronavirus (COVID-19)",
+                "url": "/government/publications/cma-approach-to-business-cooperation-in-response-to-covid-19"
+              },
+              {
+                "label": "CMA Coronavirus (COVID-19) response",
+                "url": "/government/collections/cma-covid-19-response"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "International trade and supply chains",
+        "sub_sections": [
+          {
+            "title": null,
+            "list": [
+              {
+                "label": "Guidance for UK businesses trading internationally",
+                "url": "/government/publications/coronavirus-covid-19-guidance-for-uk-businesses"
               }
             ]
           }
@@ -318,55 +318,19 @@
         "title": "How you can help",
         "sub_sections": [
           {
-            "title": "",
+            "title": null,
             "list": [
               {
-                "label": "Help produce ventilators and components",
-                "url": "https://ventilator.herokuapp.com"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "title": "Coronavirus (COVID-19) cases in the UK",
-        "sub_sections": [
-          {
-            "title": "",
-            "list": [
-              {
-                "label": "Track coronavirus cases in the UK",
-                "url": "/government/publications/covid-19-track-coronavirus-cases"
-              },
-              {
-                "label": "Latest number of coronavirus cases in the UK",
-                "url": "/guidance/coronavirus-covid-19-information-for-the-public"
+                "label": "Offer the help of your business",
+                "url": "/coronavirus-support-from-business"
               }
             ]
           }
         ]
       }
     ],
-    "country_section": {
-      "header": "If you live in Scotland, Wales or Northern Ireland",
-      "text": "Additional guidance is available",
-      "links": [
-        {
-          "label": "Scotland",
-          "url": "https://www.gov.scot/coronavirus-covid-19/"
-        },
-        {
-          "label": "Wales",
-          "url": "https://gov.wales/coronavirus"
-        },
-        {
-          "label": "Northern Ireland",
-          "url": "https://www.nidirect.gov.uk/campaigns/coronavirus-covid-19"
-        }
-      ]
-    },
     "topic_section": {
-      "header": "All coronavirus (COVID-19) information",
+      "header": "All coronavirus business support information on GOV.UK",
       "text": "Browse information related to coronavirus",
       "links": [
         {
