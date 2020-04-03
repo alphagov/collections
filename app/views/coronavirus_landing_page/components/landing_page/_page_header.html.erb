@@ -1,0 +1,74 @@
+<header class="covid__page-header" data-module="coronavirus-landing-page">
+  <div class="govuk-width-container">
+    <%= render 'govuk_publishing_components/components/breadcrumbs', {
+      breadcrumbs: breadcrumbs,
+      collapse_on_mobile: true,
+      inverse: true
+    } %>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="covid__page-title">
+          <%= @content_item["title"] %>
+        </h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="covid__page-header-light">
+    <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <%= render "govuk_publishing_components/components/heading", {
+            text: rules["pretext"],
+            font_size: 19,
+            margin_bottom: 3,
+            inverse: true
+          } %>
+          <ul class="covid__list covid__list--header">
+            <% rules["list"].each do | item | %>
+              <li class="covid__list-item"><%= item %></li>
+            <% end %>
+          </ul>
+
+          <p class="govuk-body covid__inverse">
+            <%= guidance["pretext-1"] %>
+            <%= guidance["pretext-2"] %>
+          </p>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row covid__logo-wrapper">
+        <div class="govuk-grid-column-two-thirds">
+          <span class="covid__highlight-link">
+            <a
+              class="govuk-link covid__page-header-link"
+              href="<%= guidance["link"]["href"] %>"
+              data-module="track-click"
+              data-track-category="pageElementInteraction"
+              data-track-action="Announcements"
+              data-track-label="<%= guidance["link"]["href"] %>"
+            >
+              <%= raw guidance["link"]["text"] %>
+            </a>
+          </span>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <%= render 'coronavirus_landing_page/components/shared/covid_logos' %>
+        </div>
+      </div>
+
+      <%= render "govuk_publishing_components/components/heading", {
+        text: details.announcements_label,
+        padding: true,
+        font_size: 19,
+        border_top: 2,
+        brand: 'public-health-england',
+        inverse: true
+      } %>
+
+      <%= render partial: 'coronavirus_landing_page/components/shared/announcements', locals: { announcements: details.announcements } %>
+      <%= render partial: 'coronavirus_landing_page/components/landing_page/live_stream_section', locals: { details: details } %>
+    </div>
+  </div>
+</header>

@@ -1,5 +1,5 @@
 <% if details.show_live_stream? %>
-  <%= render partial: 'live_stream', locals: {
+  <%= render partial: 'coronavirus_landing_page/components/landing_page/live_stream', locals: {
     title: details.live_stream["title"],
     url: details.live_stream["video_url"],
     date: details.live_stream["date"],

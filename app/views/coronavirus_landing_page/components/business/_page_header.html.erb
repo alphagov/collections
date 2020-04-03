@@ -20,41 +20,16 @@
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
           <%= render "govuk_publishing_components/components/heading", {
-            text: rules["pretext"],
+            text: details.header_section["pretext"],
             font_size: 19,
             margin_bottom: 3,
             inverse: true
           } %>
           <ul class="covid__list covid__list--header">
-            <% rules["list"].each do | item | %>
+            <% details.header_section["list"].each do | item | %>
               <li class="covid__list-item"><%= item %></li>
             <% end %>
           </ul>
-
-          <p class="govuk-body covid__inverse">
-            <%= guidance["pretext-1"] %>
-            <%= guidance["pretext-2"] %>
-          </p>
-        </div>
-      </div>
-
-      <div class="govuk-grid-row covid__logo-wrapper">
-        <div class="govuk-grid-column-two-thirds">
-          <span class="covid__highlight-link">
-            <a
-              class="govuk-link covid__page-header-link"
-              href="<%= guidance["link"]["href"] %>"
-              data-module="track-click"
-              data-track-category="pageElementInteraction"
-              data-track-action="Announcements"
-              data-track-label="<%= guidance["link"]["href"] %>"
-            >
-              <%= raw guidance["link"]["text"] %>
-            </a>
-          </span>
-        </div>
-        <div class="govuk-grid-column-one-third">
-          <%= render 'covid_logos' %>
         </div>
       </div>
 
@@ -67,8 +42,8 @@
         inverse: true
       } %>
 
-      <%= render partial: 'announcements', locals: { announcements: details.announcements } %>
-      <%= render partial: 'live_stream_section', locals: { details: details } %>
+      <%= render partial: 'coronavirus_landing_page/components/shared/announcements', locals: { announcements: details.announcements } %>
     </div>
   </div>
+  <%= render 'coronavirus_landing_page/components/business/guidance_section', guidance: details.guidance_section %>
 </header>

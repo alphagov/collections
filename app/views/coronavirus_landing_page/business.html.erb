@@ -1,61 +1,15 @@
-<%= render partial: "meta_tags" %>
+<%= render partial: "coronavirus_landing_page/components/shared/meta_tags" %>
 
-<%# Have copied in the contents of _page_header.html.erb and removed the bits we don't need %>
-<header class="covid__page-header" data-module="coronavirus-landing-page">
-  <div class="govuk-width-container">
-    <%= render 'govuk_publishing_components/components/breadcrumbs', {
-      breadcrumbs: breadcrumbs,
-      collapse_on_mobile: true,
-      inverse: true
-    } %>
-
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <h1 class="covid__page-title">
-          <%= @content_item["title"] %>
-        </h1>
-      </div>
-    </div>
-  </div>
-
-  <div class="covid__page-header-light">
-    <div class="govuk-width-container">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-          <%= render "govuk_publishing_components/components/heading", {
-            text: details.header_section["pretext"],
-            font_size: 19,
-            margin_bottom: 3,
-            inverse: true
-          } %>
-          <ul class="covid__list covid__list--header">
-            <% details.header_section["list"].each do | item | %>
-              <li class="covid__list-item"><%= item %></li>
-            <% end %>
-          </ul>
-        </div>
-      </div>
-
-      <%= render "govuk_publishing_components/components/heading", {
-        text: details.announcements_label,
-        padding: true,
-        font_size: 19,
-        border_top: 2,
-        brand: 'public-health-england',
-        inverse: true
-      } %>
-
-      <%= render partial: 'announcements', locals: { announcements: details.announcements } %>
-    </div>
-  </div>
-  <%= render partial: 'guidance_section', locals: { guidance: details.guidance_section } %>
-</header>
+<%= render partial: "coronavirus_landing_page/components/business/page_header", locals: {
+  details: details,
+  breadcrumbs: breadcrumbs
+} %>
 
 <div class="govuk-width-container covid__page">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <%= render partial: 'accordion_sections', locals: { accordions: details.sections } %>
-      <%= render partial: 'topic_section', locals: { topic_section: details.topic_section } %>
+      <%= render partial: 'coronavirus_landing_page/components/shared/accordion_sections', locals: { accordions: details.sections } %>
+      <%= render partial: 'coronavirus_landing_page/components/shared/topic_section', locals: { topic_section: details.topic_section } %>
 
       <%# Have removed email section here until we work out how to line up the notifications %>
     </div>
