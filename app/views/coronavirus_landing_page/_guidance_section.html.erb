@@ -1,0 +1,31 @@
+<div class="covid__page-guidance">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <%= render "govuk_publishing_components/components/heading", {
+          text: guidance["header"],
+          font_size: 19,
+          margin_bottom: 5
+        } %>
+        <ul class="covid__list">
+          <% guidance["list"].each do | item | %>
+            <li class="covid__list-item">
+              <a class="govuk-link covid__page-guidance-link" href="<%= item["url"] %>">
+                <%= item["text"] %>
+              </a>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+      <%#  COMMENTED OUT UNTIL WE HAVE THE LINKS
+      <div class="govuk-grid-column-one-third">
+        <%#= render "govuk_publishing_components/components/heading", {
+          text: "Related links",
+          padding: true,
+          font_size: 19,
+        } %>
+      <%#</div>
+      %>
+    </div>
+  </div>
+</div>
