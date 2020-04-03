@@ -44,6 +44,7 @@ class CoronavirusLandingPageTest < ActionDispatch::IntegrationTest
       and_i_can_see_the_business_announcements
       then_i_can_see_the_business_accordions
       and_i_can_see_business_links_to_search
+      and_i_can_see_related_links
     end
   end
 end

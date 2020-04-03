@@ -83,6 +83,10 @@ module CoronavirusLandingPageSteps
     assert page.has_link?("Guidance", href: "/search/all?level_one_taxon=495afdb6-47be-4df1-8b38-91c8adb1eefc&topical_events%5B%5D=coronavirus-covid-19-uk-government-response&order=updated-newest")
   end
 
+  def and_i_can_see_related_links
+    assert page.has_link?( "Get an isolation note to give to your employer", href: "https://www.nhs.uk/conditions/coronavirus-covid-19/self-isolation-advice/" )
+  end
+
   def then_the_special_announcement_schema_is_rendered
     special_announcement_schema = find_schema("SpecialAnnouncement")
     assert_equal(special_announcement_schema["name"], "Coronavirus (COVID-19): what you need to do")
