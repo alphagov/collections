@@ -7,11 +7,12 @@
   "publishing_app": "collections-publisher",
   "rendering_app": "collections",
   "schema_name": "coronavirus_landing_page",
-  "title": "Business support",
+  "title": "Coronavirus (COVID-19): Business support",
   "locale": "en",
   "updated_at": "2020-03-25T14:40:22Z",
   "links": {},
   "details": {
+    "page_title": "Business support",
     "header_section": {
       "pretext": "Support will be available to businesses",
       "list": [
