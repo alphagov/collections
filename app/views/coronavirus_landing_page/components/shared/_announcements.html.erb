@@ -1,7 +1,7 @@
 <div class="govuk-grid-row">
   <% announcements.each do |announcement| %>
     <div class="govuk-grid-column-one-third">
-      <% announcement_text = capture do %>
+      <p class="govuk-body covid__inverse">
         <% if announcement["href"].present? %>
           <a
             href="<%= announcement["href"] %>"
@@ -16,14 +16,7 @@
         <% else %>
           <%= announcement["text"] %>
         <% end %>
-      <% end %>
-      <%= render "govuk_publishing_components/components/heading", {
-        text: announcement_text,
-        heading_level: 3,
-        font_size: 19,
-        inverse: true,
-        margin_bottom: 4
-      } %>
+      </p>
     </div>
   <% end %>
 </div>
