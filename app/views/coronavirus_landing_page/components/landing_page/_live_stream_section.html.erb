@@ -6,15 +6,15 @@
   <div class="govuk-grid-row covid__video">
     <div class="govuk-grid-column-two-thirds">
       <%= render "govuk_publishing_components/components/heading", {
-        text: "The next live press conference will be shown here",
+        text: details.live_stream["previous_videos"]["next_conference_text"],
         heading_level: 2,
         font_size: 19,
         inverse: true,
         margin_bottom: 0
       } %>
       <p class="govuk-body covid__inverse">
-        <a href="https://www.youtube.com/user/Number10gov/videos" class="govuk-link covid__page-header-link">
-          View past coronavirus press conferences on YouTube
+        <a href="<%= details.live_stream["previous_videos"]["url"] %>" class="govuk-link covid__page-header-link">
+          <%= details.live_stream["previous_videos"]["previous_videos_text"] %>
         </a>
       </p>
     </div>
