@@ -4,6 +4,23 @@ describe('Coronavirus landing page', function () {
   var coronavirusLandingPage;
   var html = '\
   <div id="element" data-module="coronavirus-landing-page">\
+    <div class="gem-c-accordion govuk-accordion" data-module="govuk-accordion">\
+      <div class="govuk-accordion__controls">\
+        <button type="button" class="govuk-accordion__open-all" aria-expanded="false">\
+          Open all<span class="govuk-visually-hidden"> sections</span>\
+        </button>\
+      </div>\
+      <div class="govuk-accordion__section">\
+        <div class="govuk-accordion__section-header">\
+          <h2 class="govuk-accordion__section-heading">\
+            <button type="button">How to protect yourself and others</button><span class="govuk-accordion__icon" aria-hidden="true"></span>\
+          </h2>\
+        </div>\
+        <div class="govuk-accordion__section-content">\
+          accordion content\
+        </div> \
+      </div> \
+    </div>\
   </div>'
   var $element
 
@@ -28,6 +45,40 @@ describe('Coronavirus landing page', function () {
 
     expect(parseCookie(GOVUK.cookie("global_bar_seen")).count).not.toBe(999)
     expect(parseCookie(GOVUK.cookie("global_bar_seen")).version).toBe(1)
+  })
+
+  describe('Clicking the "Open all" button', function () {
+    beforeEach(function () {
+      GOVUK.analytics = {
+        trackEvent: function () {
+        }
+      }
+      spyOn(GOVUK.analytics, 'trackEvent')
+      coronavirusLandingPage.start($element)
+    })
+
+    it("tracks expanding", function () {
+      var $openCloseAllButton = $element.find('.govuk-accordion__open-all')
+      expect($openCloseAllButton).toExist()
+      expect($openCloseAllButton.attr("aria-expanded")).toBe("false")
+      $openCloseAllButton.trigger('click')
+      expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith(
+        'pageElementInteraction', 'accordionOpened', { transport: 'beacon', label: 'Expand all' }
+      )
+    })
+
+    it("tracks collapsing", function () {
+      var $openCloseAllButton = $element.find('.govuk-accordion__open-all')
+      $openCloseAllButton.attr('aria-expanded', 'true')
+
+      // collapse check
+      expect($openCloseAllButton).toExist()
+      expect($openCloseAllButton).toHaveAttr("aria-expanded", "true")
+      $openCloseAllButton.trigger('click')
+      expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith(
+        'pageElementInteraction', 'accordionClosed', { transport: 'beacon', label: 'Collapse all' }
+      )
+    })
   })
 });
 
