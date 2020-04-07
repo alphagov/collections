@@ -36,7 +36,8 @@ module CoronavirusLandingPageSteps
     assert page.has_selector?(".covid__page-header h1", text: "Coronavirus (COVID-19): what you need to do")
   end
 
-  def then_i_can_see_the_business_header_section
+  def then_i_can_see_the_business_page
+    assert page.has_title?("Coronavirus (COVID-19): Business support")
     assert page.has_selector?(".covid__page-header h1", text: "Business support")
   end
 

@@ -21,7 +21,7 @@ class CoronavirusLandingPageController < ApplicationController
     @content_item = content_item.to_hash
     breadcrumbs = [{ title: "Home", url: "/" }]
     title = {
-      text: @content_item["title"],
+      text: @content_item.dig("details", "page_title") || @content_item["title"],
       context: {
         text: "Coronavirus (COVID-19)",
         href: "/coronavirus",
