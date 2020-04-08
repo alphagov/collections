@@ -14,10 +14,12 @@ module CoronavirusLandingPageSteps
 
   def given_there_is_a_content_item
     stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item)
+    stub_content_store_has_item(CORONAVIRUS_TAXON_PATH, coronavirus_root_taxon_content_item)
   end
 
   def given_there_is_a_content_item_with_no_time
     stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item_with_no_time)
+    stub_content_store_has_item(CORONAVIRUS_TAXON_PATH, coronavirus_root_taxon_content_item)
   end
 
   def given_there_is_a_business_content_item
@@ -59,7 +61,7 @@ module CoronavirusLandingPageSteps
   end
 
   def then_i_can_see_the_accordions
-    assert page.has_selector?(".govuk-accordion__section-header", text: "How to protect yourself and others")
+    assert page.has_selector?(".govuk-accordion__section-header", text: "A level")
   end
 
   def then_i_can_see_the_business_accordions
@@ -71,7 +73,7 @@ module CoronavirusLandingPageSteps
   end
 
   def then_i_can_see_the_accordions_content
-    assert page.has_selector?(".govuk-link", text: "Staying at home if you think you have coronavirus (self-isolating)")
+    assert page.has_selector?(".govuk-link", text: "The national curriculum")
   end
 
   def and_i_can_see_links_to_search
