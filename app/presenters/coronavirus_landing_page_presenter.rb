@@ -1,5 +1,5 @@
 class CoronavirusLandingPagePresenter
-  COMPONENTS = %w(live_stream stay_at_home guidance announcements_label announcements nhs_banner sections topic_section country_section notifications).freeze
+  COMPONENTS = %w(live_stream stay_at_home guidance announcements_label announcements nhs_banner topic_section country_section notifications).freeze
 
   def initialize(content_item)
     COMPONENTS.each do |component|
@@ -23,12 +23,16 @@ class CoronavirusLandingPagePresenter
     }
   end
 
+  def sections
+    @sections ||= TaxonomySectionsPresenter.new.present
+  end
+
 private
 
   def build_faq_main_entity(content_item)
     question_and_answers = []
     question_and_answers.push build_announcements_schema(content_item)
-    question_and_answers.concat build_sections_schema(content_item)
+    question_and_answers.concat build_sections_schema
   end
 
   def question_and_answer_schema(question, answer)
@@ -50,9 +54,9 @@ private
     question_and_answer_schema("Announcements", announcement_text)
   end
 
-  def build_sections_schema(content_item)
+  def build_sections_schema
     question_and_answers = []
-    content_item["details"]["sections"].each do |section|
+    sections.each do |section|
       question = section["title"]
       answers_text = ApplicationController.render partial: "coronavirus_landing_page/components/shared/section", locals: { section: section }
       question_and_answers.push question_and_answer_schema(question, answers_text)

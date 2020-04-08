@@ -10,6 +10,7 @@ describe CoronavirusLandingPagePresenter do
   end
 
   it "build valid FAQ Schema" do
+    stub_content_store_has_item(CORONAVIRUS_TAXON_PATH, coronavirus_root_taxon_content_item)
     presenter = described_class.new(coronavirus_landing_page_content_item)
     faq_schema = presenter.faq_schema(coronavirus_landing_page_content_item)
     assert_equal(faq_schema[:@context], "https://schema.org")
@@ -19,5 +20,20 @@ describe CoronavirusLandingPagePresenter do
       assert_equal(question[:@type], "Question")
       assert_equal(question[:acceptedAnswer][:@type], "Answer")
     end
+  end
+
+  it "has sub_sections for sections with child taxons" do
+    stub_content_store_has_item(CORONAVIRUS_TAXON_PATH, coronavirus_root_taxon_content_item)
+    presenter = described_class.new(coronavirus_landing_page_content_item)
+    assert_equal 2, presenter.sections.count
+
+    first_section = presenter.sections.first
+    assert_equal 1, first_section["sub_sections"].count
+    assert_nil first_section["sub_sections"].first["title"]
+
+    second_section = presenter.sections.second
+    assert_equal 2, second_section["sub_sections"].count
+    assert_not_nil second_section["sub_sections"].first["title"]
+    assert_not_nil second_section["sub_sections"].second["title"]
   end
 end
