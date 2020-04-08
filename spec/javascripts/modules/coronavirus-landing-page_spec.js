@@ -54,14 +54,24 @@ describe('Coronavirus landing page', function () {
         }
       }
       spyOn(GOVUK.analytics, 'trackEvent')
+
+      // similate govuk-accordion module
+      $element.find('.govuk-accordion__open-all').on("click", function(e) {
+        var expanded = $(e.target).attr('aria-expanded') == 'true'
+        $(e.target).attr('aria-expanded', expanded ? "false" : "true") 
+      })
+
       coronavirusLandingPage.start($element)
     })
 
     it("tracks expanding", function () {
       var $openCloseAllButton = $element.find('.govuk-accordion__open-all')
+
       expect($openCloseAllButton).toExist()
       expect($openCloseAllButton.attr("aria-expanded")).toBe("false")
       $openCloseAllButton.trigger('click')
+
+      expect($openCloseAllButton.attr("aria-expanded")).toBe("true")
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith(
         'pageElementInteraction', 'accordionOpened', { transport: 'beacon', label: 'Expand all' }
       )
@@ -71,10 +81,11 @@ describe('Coronavirus landing page', function () {
       var $openCloseAllButton = $element.find('.govuk-accordion__open-all')
       $openCloseAllButton.attr('aria-expanded', 'true')
 
-      // collapse check
       expect($openCloseAllButton).toExist()
       expect($openCloseAllButton).toHaveAttr("aria-expanded", "true")
       $openCloseAllButton.trigger('click')
+
+      expect($openCloseAllButton.attr("aria-expanded")).toBe("false")
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith(
         'pageElementInteraction', 'accordionClosed', { transport: 'beacon', label: 'Collapse all' }
       )

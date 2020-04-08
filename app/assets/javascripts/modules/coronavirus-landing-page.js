@@ -29,8 +29,8 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
   CoronavirusLandingPage.prototype.addAccordionOpenAllTracking = function ($element) {
     $element.find('.govuk-accordion__open-all').on('click', function(e) {
       var expanded = $(e.target).attr('aria-expanded') == 'true'
-      var label = expanded ?  'Collapse all' : 'Expand all'
-      var action = expanded ?  'accordionClosed' : 'accordionOpened'
+      var label = expanded ?  'Expand all' : 'Collapse all'
+      var action = expanded ?  'accordionOpened' : 'accordionClosed'
       var options = { transport: 'beacon', label: label }
 
       GOVUK.analytics.trackEvent('pageElementInteraction', action, options)
