@@ -27,7 +27,12 @@
         <p class="govuk-body covid__inverse">
           <%= details["no_cookies"]["or"] %>
         </p>
-        <a href="<%= details["video_url"] %>" class="govuk-body govuk-link covid__page-header-link">
+        <a
+          href="<%= details["video_url"] %>"
+          class="govuk-body govuk-link covid__page-header-link"
+          data-youtube-player-analytics="true"
+          data-youtube-player-analytics-category="EmbeddedYoutube"
+        >
           <%= details["no_cookies"]["watch_link_text"] %>
         </a>
       </div>
