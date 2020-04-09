@@ -17,7 +17,7 @@ class CoronavirusLandingPageController < ApplicationController
     }
   end
 
-  def business
+  def hub
     @content_item = content_item.to_hash
     breadcrumbs = [{ title: "Home", url: "/" }]
     title = {
@@ -28,10 +28,10 @@ class CoronavirusLandingPageController < ApplicationController
       },
     }
 
-    render "business", locals: {
+    render "hub", locals: {
       breadcrumbs: breadcrumbs,
       title: title,
-      details: business_presenter,
+      details: hub_presenter,
     }
   end
 
@@ -49,7 +49,7 @@ private
     SpecialAnnouncementPresenter.new(@content_item)
   end
 
-  def business_presenter
-    BusinessSupportPagePresenter.new(@content_item)
+  def hub_presenter
+    CoronavirusHubPresenter.new(@content_item)
   end
 end

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
 
   get "/coronavirus", to: "coronavirus_landing_page#show"
-  get "/coronavirus/business-support", to: "coronavirus_landing_page#business"
+  get "/coronavirus/:hub_slug", to: "coronavirus_landing_page#hub"
 
   get "/browse.json" => redirect("/api/content/browse")
 

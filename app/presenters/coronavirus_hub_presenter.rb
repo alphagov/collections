@@ -1,4 +1,4 @@
-class BusinessSupportPagePresenter
+class CoronavirusHubPresenter
   COMPONENTS = %w(header_section guidance related_links announcements_label announcements other_announcements guidance_section sections topic_section notifications).freeze
 
   def initialize(content_item)
