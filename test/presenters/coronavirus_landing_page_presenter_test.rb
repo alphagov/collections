@@ -33,7 +33,21 @@ describe CoronavirusLandingPagePresenter do
 
     second_section = presenter.sections.second
     assert_equal 2, second_section["sub_sections"].count
-    assert_not_nil second_section["sub_sections"].first["title"]
-    assert_not_nil second_section["sub_sections"].second["title"]
+    assert_equal "Associates", second_section["sub_sections"].first["title"]
+    assert_equal "A level", second_section["sub_sections"].second["title"]
+  end
+
+  it "can override taxon names for sub sections" do
+    stub_content_store_has_item(CORONAVIRUS_TAXON_PATH, coronavirus_root_taxon_content_item)
+    TaxonomySectionsPresenter.any_instance
+        .stubs(:title_overrides)
+        .returns({ coronavirus_taxon_two_child_one["content_id"] => "new title" })
+    presenter = described_class.new(coronavirus_landing_page_content_item)
+    assert_equal 2, presenter.sections.count
+
+    second_section = presenter.sections.second
+    assert_equal 2, second_section["sub_sections"].count
+    assert_equal "new title", second_section["sub_sections"].first["title"]
+    assert_equal "A level", second_section["sub_sections"].second["title"]
   end
 end
