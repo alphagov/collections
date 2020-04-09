@@ -6,7 +6,7 @@ class TaxonomySectionsPresenter
   def present
     content_item["links"]["child_taxons"].map do |child_taxon|
       {
-        "title" => child_taxon["title"],
+        "title" => title(child_taxon),
         "sub_sections" => sub_sections(child_taxon),
       }
     end
@@ -20,7 +20,7 @@ private
     if should_display_with_sub_sections?(child_taxon)
       child_taxon["links"].fetch("child_taxons", []).map do |grandchild_taxon|
         {
-          "title" => grandchild_taxon["title"],
+          "title" => title(grandchild_taxon),
           "list" => ordered_related_items(grandchild_taxon),
         }
       end
@@ -46,5 +46,17 @@ private
         "label" => item["title"],
       }
     end
+  end
+
+  def title(taxon)
+    if title_overrides.has_key?(taxon["content_id"])
+      title_overrides[taxon["content_id"]]
+    else
+      taxon["title"]
+    end
+  end
+
+  def title_overrides
+    {}
   end
 end

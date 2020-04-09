@@ -56,15 +56,7 @@ def coronavirus_taxon_one
 end
 
 def coronavirus_taxon_two_with_children
-  child_taxon_one = GovukSchemas::Example.find("taxon", example_name: "taxon_in_alpha_phase").tap do |item|
-    item["links"]["ordered_related_items"] =
-      [
-        GovukSchemas::Example.find("speech", example_name: "speech"),
-        GovukSchemas::Example.find("travel_advice", example_name: "full-country"),
-      ]
-  end
-
-  child_taxon_two = GovukSchemas::Example.find("taxon", example_name: "taxon_in_alpha_phase").tap do |item|
+  child_taxon_two = GovukSchemas::Example.find("taxon", example_name: "taxon").tap do |item|
     item["links"]["ordered_related_items"] =
       [
         GovukSchemas::Example.find("statistical_data_set", example_name: "statistical_data_set"),
@@ -73,6 +65,16 @@ def coronavirus_taxon_two_with_children
   end
 
   GovukSchemas::Example.find("taxon", example_name: "taxon_with_child_taxons").tap do |item|
-    item["links"]["child_taxons"] = [child_taxon_one, child_taxon_two]
+    item["links"]["child_taxons"] = [coronavirus_taxon_two_child_one, child_taxon_two]
+  end
+end
+
+def coronavirus_taxon_two_child_one
+  GovukSchemas::Example.find("taxon", example_name: "taxon_with_associated_taxons").tap do |item|
+    item["links"]["ordered_related_items"] =
+      [
+        GovukSchemas::Example.find("speech", example_name: "speech"),
+        GovukSchemas::Example.find("travel_advice", example_name: "full-country"),
+      ]
   end
 end
