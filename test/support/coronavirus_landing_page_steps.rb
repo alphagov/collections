@@ -73,7 +73,7 @@ module CoronavirusLandingPageSteps
   end
 
   def then_i_can_see_the_accordions_content
-    assert page.has_selector?(".govuk-link", text: "The national curriculum")
+    assert page.has_selector?(".govuk-link", text: "A level")
   end
 
   def and_i_can_see_links_to_search

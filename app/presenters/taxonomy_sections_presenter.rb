@@ -7,6 +7,7 @@ class TaxonomySectionsPresenter
     content_item["links"]["child_taxons"].map do |child_taxon|
       {
         "title" => title(child_taxon),
+        "hub_url" => hub_url(child_taxon),
         "sub_sections" => sub_sections(child_taxon),
       }
     end
@@ -42,7 +43,7 @@ private
     taxon["links"].fetch("ordered_related_items", []).map do |item|
       {
         "url" => item["base_path"],
-        "label" => item["title"],
+        "label" => title(taxon),
       }
     end
   end
@@ -57,5 +58,15 @@ private
 
   def title_overrides
     {}
+  end
+
+  def hub_url(taxon)
+    if hub_urls.include?(taxon["content_id"])
+      taxon["base_path"]
+    end
+  end
+
+  def hub_urls
+    %w()
   end
 end

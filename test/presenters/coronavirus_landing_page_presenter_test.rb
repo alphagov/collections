@@ -50,4 +50,15 @@ describe CoronavirusLandingPagePresenter do
     assert_equal "new title", second_section["sub_sections"].first["title"]
     assert_equal "A level", second_section["sub_sections"].second["title"]
   end
+
+  it "can display sections as hub pages" do
+    stub_content_store_has_item(CORONAVIRUS_TAXON_PATH, coronavirus_root_taxon_content_item)
+    TaxonomySectionsPresenter.any_instance
+        .stubs(:hub_urls)
+        .returns([coronavirus_taxon_two_with_children["content_id"]])
+    presenter = described_class.new(coronavirus_landing_page_content_item)
+
+    assert_nil presenter.sections.first["hub_url"]
+    assert_equal coronavirus_taxon_two_with_children["base_path"], presenter.sections.second["hub_url"]
+  end
 end

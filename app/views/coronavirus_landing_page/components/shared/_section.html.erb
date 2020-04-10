@@ -1,6 +1,12 @@
 <% section["sub_sections"].each do |sub_section| %>
   <% if sub_section["title"] %>
-    <h3 class="govuk-heading-s covid__accordion-heading"><%= sub_section["title"] %></h3>
+    <% if sub_section["hub_url"] %>
+      <a class="govuk-link covid__page-guidance-link" href="<%= sub_section["hub_url"] %>">
+        <%= sub_section["text"] %>
+      </a>
+    <% else %>
+      <h3 class="govuk-heading-s covid__accordion-heading"><%= sub_section["title"] %></h3>
+    <% end %>
   <% end %>
   <ul class="covid__list covid__list--accordion">
     <% sub_section["list"].each do | item | %>
