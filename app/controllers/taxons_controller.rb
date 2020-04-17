@@ -40,7 +40,7 @@ private
   end
 
   def redirect_coronavirus_taxons
-    if is_child_of_coronavirus_taxon? || is_coronavirus_taxon?
+    if is_coronavirus_taxon? || is_child_of_coronavirus_taxon?
       redirect_to(coronavirus_landing_page_url, status: :temporary_redirect) && return
     end
   end
@@ -52,6 +52,6 @@ private
 
   def is_coronavirus_taxon?
     # The root of the branch is always the first entry
-    taxon.base_path == CORONAVIRUS_TAXON_PATH
+    request.path == CORONAVIRUS_TAXON_PATH
   end
 end

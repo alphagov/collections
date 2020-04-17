@@ -60,13 +60,6 @@ describe TaxonsController do
   end
 
   context "when rendering the coronavirus taxon" do
-    before do
-      stub_content_store_has_item(
-        coronavirus_root_taxon_content_item["base_path"],
-        coronavirus_root_taxon_content_item,
-      )
-    end
-
     it "redirects to the coronavirus page" do
       get :show, params: { taxon_base_path: coronavirus_root_taxon_content_item["base_path"][1..-1] }
       assert_redirected_to "/coronavirus"
