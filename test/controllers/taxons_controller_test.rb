@@ -1,4 +1,5 @@
 require "test_helper"
+require_relative "../../test/support/coronavirus_helper"
 
 describe TaxonsController do
   include RummagerHelpers
@@ -38,6 +39,30 @@ describe TaxonsController do
       get :show, params: { taxon_base_path: taxon["base_path"][1..-1] }
 
       assert_response 404
+    end
+  end
+
+  context "when rendering a taxon that is a child of the coronavirus taxon" do
+    before do
+      stub_content_store_has_item(
+        coronavirus_root_taxon_content_item["base_path"],
+        coronavirus_root_taxon_content_item,
+      )
+      stub_content_store_has_item(
+        coronavirus_taxon_one["base_path"], coronavirus_taxon_one
+      )
+    end
+
+    it "redirects to the coronavirus page" do
+      get :show, params: { taxon_base_path: coronavirus_taxon_one["base_path"][1..-1] }
+      assert_redirected_to "/coronavirus"
+    end
+  end
+
+  context "when rendering the coronavirus taxon" do
+    it "redirects to the coronavirus page" do
+      get :show, params: { taxon_base_path: coronavirus_root_taxon_content_item["base_path"][1..-1] }
+      assert_redirected_to "/coronavirus"
     end
   end
 end

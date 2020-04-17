@@ -1,4 +1,6 @@
 class TaxonsController < ApplicationController
+  CORONAVIRUS_TAXON_PATH = "/coronavirus-taxon".freeze
+  before_action :redirect_coronavirus_taxons
   rescue_from Taxon::InAlphaPhase, with: :error_404
 
   def show
@@ -35,5 +37,21 @@ private
     end
 
     @presentable_section_items
+  end
+
+  def redirect_coronavirus_taxons
+    if is_coronavirus_taxon? || is_child_of_coronavirus_taxon?
+      redirect_to(coronavirus_landing_page_url, status: :temporary_redirect) && return
+    end
+  end
+
+  def is_child_of_coronavirus_taxon?
+    # The root of the branch is always the first entry
+    taxon.parents? && taxon.parent_taxons.first.base_path == CORONAVIRUS_TAXON_PATH
+  end
+
+  def is_coronavirus_taxon?
+    # The root of the branch is always the first entry
+    request.path == CORONAVIRUS_TAXON_PATH
   end
 end

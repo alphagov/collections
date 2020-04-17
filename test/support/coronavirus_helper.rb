@@ -1,3 +1,5 @@
+CORONAVIRUS_TAXON_PATH = "/coronavirus-taxons".freeze
+
 def coronavirus_landing_page_content_item
   load_content_item("coronavirus_landing_page.json")
 end
@@ -34,5 +36,22 @@ end
 def business_content_item
   random_landing_page do |item|
     item.merge(business_content_item_fixture)
+  end
+end
+
+def coronavirus_root_taxon_content_item
+  GovukSchemas::Example.find("taxon", example_name: "taxon").tap do |item|
+    item["base_path"] = "/coronavirus-taxon"
+  end
+end
+
+def coronavirus_taxon_one
+  GovukSchemas::Example.find("taxon", example_name: "taxon").tap do |item|
+    item["links"]["parent_taxons"] = [coronavirus_root_taxon_content_item]
+    item["links"]["ordered_related_items"] =
+      [
+        GovukSchemas::Example.find("guide", example_name: "guide"),
+        GovukSchemas::Example.find("news_article", example_name: "news_article"),
+      ]
   end
 end
