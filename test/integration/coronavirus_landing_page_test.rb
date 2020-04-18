@@ -9,7 +9,7 @@ class CoronavirusLandingPageTest < ActionDispatch::IntegrationTest
       given_there_is_a_content_item
       when_i_visit_the_coronavirus_landing_page
       then_i_can_see_the_header_section
-      and_i_can_see_the_live_stream_section
+      and_i_can_see_the_live_stream_placeholder
       then_i_can_see_the_nhs_banner
       then_i_can_see_the_accordions
       and_i_can_see_links_to_search
@@ -22,10 +22,16 @@ class CoronavirusLandingPageTest < ActionDispatch::IntegrationTest
       then_i_can_see_the_accordions_content
     end
 
-    it "optionally shows the time" do
-      given_there_is_a_content_item_with_no_time
+    it "shows todays date when a live stream is enabled" do
+      given_there_is_a_content_item_with_live_stream_enabled
       when_i_visit_the_coronavirus_landing_page
-      then_i_can_see_the_live_stream_section_with_no_time
+      then_i_can_see_the_live_stream_section_with_todays_date
+    end
+
+    it "optionally shows the time when a live stream is enabled" do
+      given_there_is_a_content_item_with_live_stream_enabled_and_date
+      when_i_visit_the_coronavirus_landing_page
+      then_i_can_see_the_live_stream_section_with_date_and_time
     end
 
     it "renders machine readable content" do
