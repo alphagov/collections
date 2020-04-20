@@ -12,6 +12,11 @@ Rails/OutputSafety:
 Rails/HelperInstanceVariable:
   Enabled: false
 
+AllCops:
+  Exclude:
+    - 'lib/tasks/cucumber.rake'
+    - 'script/cucumber'
+
 Metrics/BlockLength:
   Exclude:
     - 'config/routes.rb'
