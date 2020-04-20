@@ -16,8 +16,12 @@ module CoronavirusLandingPageSteps
     stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item)
   end
 
-  def given_there_is_a_content_item_with_no_time
-    stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item_with_no_time)
+  def given_there_is_a_content_item_with_live_stream_enabled
+    stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item_with_live_stream_enabled)
+  end
+
+  def given_there_is_a_content_item_with_live_stream_enabled_and_date
+    stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item_with_live_stream_enabled_and_date)
   end
 
   def given_there_is_a_business_content_item
@@ -45,13 +49,18 @@ module CoronavirusLandingPageSteps
     assert page.has_selector?(".covid__page-header-link", text: "High street businesses will receive grants")
   end
 
-  def and_i_can_see_the_live_stream_section
-    assert page.has_text?("1st April 2020 at 5:00pm")
+  def and_i_can_see_the_live_stream_placeholder
+    assert page.has_text?("The next live press conference will be shown here")
   end
 
-  def then_i_can_see_the_live_stream_section_with_no_time
-    assert_not page.has_text?("1st April 2020 at")
-    assert page.has_text?("1st April 2020")
+  def then_i_can_see_the_live_stream_section_with_todays_date
+    assert page.has_text?(todays_date)
+    assert_not page.has_text?("#{todays_date} at")
+  end
+
+  def then_i_can_see_the_live_stream_section_with_date_and_time
+    assert page.has_text?(todays_date)
+    assert page.has_text?("5:00pm")
   end
 
   def then_i_can_see_the_nhs_banner
