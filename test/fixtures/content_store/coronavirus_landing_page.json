@@ -54,6 +54,14 @@
         "href": "https://www.nhs.uk/conditions/coronavirus-covid-19/"
       }
     },
+    "find_help": {
+      "heading": "Find help if you’re struggling because of coronavirus",
+      "paragraph": "For example, with paying bills, being out of work, or taking care of your mental health.",
+      "link": {
+      "href": "/find-coronavirus-support",
+      "text": "Find help"
+      }
+    },
     "sections": [
       {
         "title": "How to protect yourself and others",

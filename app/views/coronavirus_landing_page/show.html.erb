@@ -33,6 +33,15 @@
           title: details.nhs_banner["call_to_action"]["title"]
         }
       } %>
+
+      <%= render 'coronavirus_landing_page/components/landing_page/find_help',  {
+        heading: details.find_help["heading"],
+        copy: details.find_help["paragraph"],
+        call_to_action: {
+          href: details.find_help["link"]["href"],
+          text: details.find_help["link"]["text"]
+        }
+      } %>
     </div>
 
     <div class="govuk-grid-column-two-thirds">
