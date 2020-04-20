@@ -1,11 +1,10 @@
-$nhs_brand_color: #005EB8;
 
 .app-c-header-notice {
-  @include govuk-responsive-margin(8, "bottom");
+  @include govuk-responsive-margin(4, "bottom");
 }
 
 .app-c-header-notice__branding--nhs {
-  border: solid 5px $nhs_brand_color;
+  border: solid 5px $covid-grey;
 
   .app-c-header-notice__header {
     padding-bottom: 0;

@@ -1,0 +1,24 @@
+<%
+  copy ||= false
+  heading ||= false
+  call_to_action ||= false
+%>
+
+<section class="covid__find-help">
+  <% if heading.present? %>
+    <%= render "govuk_publishing_components/components/heading", {
+      text: heading,
+      inverse: true,
+      font_size: 24,
+      margin_bottom: 4
+    } %>
+  <% end %>
+
+  <% if copy.present? %>
+    <p class="govuk-body covid__inverse"><%= copy %></p>
+  <% end %>
+
+  <% if call_to_action.present? %>
+    <%= link_to(call_to_action[:text], call_to_action[:href], class: "govuk-link covid__page-guidance-link covid__page-guidance-link--white") %>
+  <% end %>
+</section>
