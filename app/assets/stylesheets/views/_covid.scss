@@ -37,7 +37,7 @@
   @include govuk-media-query($until: tablet) {
     margin-bottom: govuk-spacing(3);
   }
-  
+
 }
 
 .covid__page-header-light {
@@ -74,7 +74,7 @@
   }
 }
 
-.covid__page-header-light {
+.covid__page-header {
   .covid__page-header-link {
     font-weight: normal;
 
