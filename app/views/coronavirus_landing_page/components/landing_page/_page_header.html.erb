@@ -70,7 +70,27 @@
         inverse: true
       } %>
 
-      <%= render partial: 'coronavirus_landing_page/components/shared/announcements', locals: { announcements: details.announcements } %>
+      <%= render partial: 'coronavirus_landing_page/components/shared/announcements', locals: { 
+        announcements: details.announcements
+      } %>
+      <% if details.see_all_announcements_link.present? %>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <p class="govuk-body covid__inverse">
+              <a
+                href="<%= details.see_all_announcements_link["href"] %>"
+                class="govuk-link covid__page-header-link"
+                data-module="track-click"
+                data-track-category="pageElementInteraction"
+                data-track-action="Announcements"
+                data-track-label="<%= details.see_all_announcements_link["href"] %>"
+              >
+                <%= details.see_all_announcements_link["text"] %>
+              </a>
+            </p>
+          </div>
+        </div>
+      <% end %>
       <%= render partial: 'coronavirus_landing_page/components/landing_page/live_stream_section', locals: { details: details } %>
     </div>
   </div>
