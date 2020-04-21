@@ -51,6 +51,18 @@
   }
 }
 
+.covid__page-header-announcement {
+  margin-bottom: govuk-spacing(7);
+
+  @include govuk-media-query($from: desktop) {
+    margin-bottom: govuk-spacing(3);
+  }
+
+  .govuk-body {
+    margin-bottom: govuk-spacing(1);
+  }
+}
+
 .covid__business-list-wrapper {
   margin-bottom: 45px;
 }
