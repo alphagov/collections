@@ -59,7 +59,11 @@
   }
 
   .govuk-body {
-    margin-bottom: govuk-spacing(1);
+    margin-bottom: govuk-spacing(2);
+  }
+
+  .covid__announcement-published-text {
+    @include govuk-font(16);
   }
 }
 
