@@ -104,40 +104,6 @@
   }
 }
 
-.covid__highlight-link {
-  display: inline-block;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  box-sizing: border-box;
-  padding-left: 50px;
-  min-height: 45px;
-  max-width: 460px;
-  background-image: image-url("covid-arrow.png"); // PNG fallback for SVG
-  background-image: image-url("covid-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: 0 50%;
-  background-size: 37px auto;
-
-  @include govuk-media-query($until: tablet) {
-    max-width: 410px;
-    margin-bottom: govuk-spacing(8);
-  }
-
-  @include govuk-media-query($from: desktop) {
-    // IE10/11 specific - vertical align in flexbox is ignored
-    // unless an explicit height is set
-    @media screen and (min-width:0\0) {
-      height: 45px;
-    }
-  }
-
-  .covid__page-header-link {
-    @include govuk-font(19, $weight: bold);
-  }
-}
-
 .covid__find-help {
   @include govuk-responsive-margin(9, "bottom");
   background-color: $covid-grey;
@@ -273,54 +239,4 @@
   padding: govuk-spacing(8) 0 govuk-spacing(7) 0;
   background-color: govuk-colour("light-grey");
   color: govuk-colour("black");
-}
-
-.covid__page-guidance-link {
-  display: inline-block;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  box-sizing: border-box;
-  padding-left: 35px;
-  min-height: 30px;
-  background-image: image-url("corona-arrow-mini-dark.png"); // PNG fallback for SVG
-  background-image: image-url("corona-arrow-mini-dark.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: 25px auto;
-  text-decoration: none;
-
-  @include govuk-font(19, $weight: bold);
-
-  @include govuk-media-query($until: tablet) {
-    margin-bottom: govuk-spacing(2);
-  }
-
-  @include govuk-media-query($from: desktop) {
-    // IE10/11 specific - vertical align in flexbox is ignored
-    // unless an explicit height is set
-    @media screen and (min-width:0\0) {
-      height: 45px;
-    }
-  }
-}
-
-.covid__page-guidance-link--white {
-  color: govuk-colour("white");
-  text-decoration: underline;
-  padding-left: govuk-spacing(5);
-
-  &:focus {
-    text-decoration: none;
-  }
-
-  &:visited,
-  &:link {
-    color: govuk-colour("white");
-  }
-
-  @include govuk-media-query($until: tablet) {
-    margin-bottom: 0;
-  }
 }
