@@ -10,7 +10,14 @@
         <ul class="covid__list">
           <% guidance["list"].each do | item | %>
             <li class="covid__list-item">
-              <a class="govuk-link covid__page-guidance-link" href="<%= item["url"] %>">
+              <a
+                class="govuk-link covid__page-guidance-link"
+                href="<%= item["url"] %>"
+                data-module="track-click"
+                data-track-category="pageElementInteraction"
+                data-track-action="What you can do now"
+                data-track-label="<%= item["url"] %>"
+              >
                 <%= item["text"] %>
               </a>
             </li>
