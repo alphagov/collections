@@ -1,6 +1,6 @@
 <div class="govuk-grid-row">
   <% announcements.each do |announcement| %>
-    <div class="govuk-grid-column-one-third">
+    <div class="govuk-grid-column-one-third covid__page-header-announcement">
       <p class="govuk-body covid__inverse">
         <% if announcement["href"].present? %>
           <a
@@ -17,6 +17,9 @@
           <%= announcement["text"] %>
         <% end %>
       </p>
+      <% if announcement["published_text"].present? %>
+        <p class="govuk-body covid__inverse"><%= announcement["published_text"] %></p>
+      <% end %>
     </div>
   <% end %>
 </div>

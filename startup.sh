@@ -10,6 +10,14 @@ if [[ $1 == "--integration" ]] ; then
   PLEK_SERVICE_SEARCH_URI=${PLEK_SERVICE_SEARCH_URI-https://www.integration.publishing.service.gov.uk/api} \
   bundle exec rails s -p 3070
 
+elif [[ $1 == "--staging" ]] ; then
+  GOVUK_APP_DOMAIN=www.staging.publishing.service.gov.uk \
+  GOVUK_WEBSITE_ROOT=https://www.staging.publishing.service.gov.uk \
+  PLEK_SERVICE_CONTENT_STORE_URI=${PLEK_SERVICE_CONTENT_STORE_URI-https://www.staging.publishing.service.gov.uk/api} \
+  PLEK_SERVICE_STATIC_URI=${PLEK_SERVICE_STATIC_URI-assets.staging.publishing.service.gov.uk} \
+  PLEK_SERVICE_SEARCH_URI=${PLEK_SERVICE_SEARCH_URI-https://www.staging.publishing.service.gov.uk/api} \
+  bundle exec rails s -p 3070
+
 elif [[ $1 == "--live" ]] ; then
   GOVUK_APP_DOMAIN=www.gov.uk \
   GOVUK_WEBSITE_ROOT=https://www.gov.uk \
