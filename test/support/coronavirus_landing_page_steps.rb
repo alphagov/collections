@@ -45,10 +45,6 @@ module CoronavirusLandingPageSteps
     assert page.has_selector?(".covid__page-header h1", text: "Business support")
   end
 
-  def and_i_can_see_the_business_announcements
-    assert page.has_selector?(".covid__page-header-link", text: "High street businesses will receive grants")
-  end
-
   def and_i_can_see_the_live_stream_placeholder
     assert page.has_text?("The next live press conference will be shown here")
   end
@@ -91,10 +87,6 @@ module CoronavirusLandingPageSteps
   def and_i_can_see_business_links_to_search
     assert page.has_link?("News", href: "/search/news-and-communications?level_one_taxon=495afdb6-47be-4df1-8b38-91c8adb1eefc&topical_events%5B%5D=coronavirus-covid-19-uk-government-response&order=updated-newest")
     assert page.has_link?("Guidance", href: "/search/all?level_one_taxon=495afdb6-47be-4df1-8b38-91c8adb1eefc&topical_events%5B%5D=coronavirus-covid-19-uk-government-response&order=updated-newest")
-  end
-
-  def and_i_can_see_related_links
-    assert page.has_link?("Get an isolation note to give to your employer", href: "https://www.nhs.uk/conditions/coronavirus-covid-19/self-isolation-advice/")
   end
 
   def then_the_special_announcement_schema_is_rendered
