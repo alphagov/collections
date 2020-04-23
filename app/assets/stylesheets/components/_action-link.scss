@@ -35,7 +35,6 @@
 .app-c-action-link__link {
   @include govuk-font(19, $weight: bold);
 
-
   &:hover {
     text-decoration: underline;
   }
@@ -48,6 +47,10 @@
 }
 
 .app-c-action-link--dark-icon {
+  @include govuk-media-query($until: tablet) {
+    margin-bottom: govuk-spacing(2);
+  }
+
   @include govuk-media-query($from: desktop) {
     // IE10/11 specific - vertical align in flexbox is ignored
     @media screen and (min-width:0\0) {
@@ -78,7 +81,6 @@
       color: govuk-colour("white");
     }
 
-
     &:focus,
     &:active {
       text-decoration: none;
@@ -89,4 +91,8 @@
 
 .app-c-action-link--compact {
   padding-left: 25px;
+
+  @include govuk-media-query($until: tablet) {
+    margin-bottom: 0;
+  }
 }
