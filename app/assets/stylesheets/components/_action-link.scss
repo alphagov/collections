@@ -34,6 +34,8 @@
 
 .app-c-action-link__link {
   @include govuk-font(19, $weight: bold);
+  display: inline-block;
+  max-width: 100%;
 
   &:hover {
     text-decoration: underline;
