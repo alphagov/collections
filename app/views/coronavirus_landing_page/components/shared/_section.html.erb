@@ -6,21 +6,17 @@
     <% sub_section["list"].each do | item | %>
       <li class="covid__list-item">
         <% if item["featured_link"] %> 
-          <%= 
-            render 'components/action-link', {
-              dark_icon: true,
-              href: item["url"],
-              text: item["label"] 
-            }
-          %>
+          <%= render 'components/action-link', {
+            dark_icon: true,
+            href: item["url"],
+            text: item["label"] 
+          }%>
         <% else %>
-          <%= 
-            link_to(
-              item["label"], 
-              item["url"], 
-              class: "govuk-link covid__accordion-link"
-            )
-          %>
+          <%= link_to(
+            item["label"], 
+            item["url"], 
+            class: "govuk-link covid__accordion-link"
+          ) %>
         <% end %>
       </li>
     <% end %>

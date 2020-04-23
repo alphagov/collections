@@ -13,6 +13,15 @@ class ActionLinkTest < ComponentTestCase
     assert_empty render_component(href: "/coronavirus")
   end
 
+  test "renders non wrapping text if nowrap text is passed through" do
+    render_component(
+      text: "Get more info",
+      nowrap_text: "about COVID",
+      href: "/coronavirus",
+    )
+    assert_select ".app-c-action-link .app-c-action-link__nowrap-text", text: "about COVID"
+  end
+
   test "renders dark icon version" do
     render_component(
       text: "Get more info",
