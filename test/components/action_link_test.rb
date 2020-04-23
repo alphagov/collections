@@ -6,22 +6,18 @@ class ActionLinkTest < ComponentTestCase
   end
 
   test "renders nothing without a href" do
-    assert_empty render_component(
-      text: "Get more info"
-    )
+    assert_empty render_component(text: "Get more info")
   end
 
   test "renders nothing without text" do
-    assert_empty render_component(
-      href: "/coronavirus"
-    )
+    assert_empty render_component(href: "/coronavirus")
   end
 
   test "renders dark icon version" do
     render_component(
       text: "Get more info",
       href: "/coronavirus",
-      dark_icon: true
+      dark_icon: true,
     )
     assert_select ".app-c-action-link--dark-icon"
   end
@@ -30,7 +26,7 @@ class ActionLinkTest < ComponentTestCase
     render_component(
       text: "Get more info",
       href: "/coronavirus",
-      light_text: true
+      light_text: true,
     )
     assert_select ".app-c-action-link--light-text"
   end
@@ -39,7 +35,7 @@ class ActionLinkTest < ComponentTestCase
     render_component(
       text: "Get more info",
       href: "/coronavirus",
-      compact: true
+      compact: true,
     )
     assert_select ".app-c-action-link--compact"
   end
@@ -49,8 +45,8 @@ class ActionLinkTest < ComponentTestCase
       text: "Get more info",
       href: "/coronavirus",
       data: {
-        testing: "hasDataAttribute"
-      }
+        testing: "hasDataAttribute",
+      },
     )
     assert_select ".app-c-action-link__link[data-testing='hasDataAttribute']"
   end
