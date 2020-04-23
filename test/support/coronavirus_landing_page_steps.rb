@@ -6,11 +6,9 @@ module CoronavirusLandingPageSteps
   include GdsApi::TestHelpers::ContentItemHelpers
   include RummagerHelpers
 
-  CORONAVIRUS_CONTENT_ID = "774cee22-d896-44c1-a611-e3109cce8eae".freeze
   CORONAVIRUS_PATH = "/coronavirus".freeze
-
-  BUSINESS_CONTENT_ID = "09944b84-02ba-4742-a696-9e562fc9b29d".freeze
   BUSINESS_PATH = "/coronavirus/business-support".freeze
+  EDUCATION_PATH = "/coronavirus/education".freeze
 
   def given_there_is_a_content_item
     stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item)
@@ -28,12 +26,20 @@ module CoronavirusLandingPageSteps
     stub_content_store_has_item(BUSINESS_PATH, business_content_item)
   end
 
+  def given_there_is_an_education_content_item
+    stub_content_store_has_item(EDUCATION_PATH, education_content_item)
+  end
+
   def when_i_visit_the_coronavirus_landing_page
     visit CORONAVIRUS_PATH
   end
 
-  def when_i_visit_the_business_landing_page
+  def when_i_visit_the_business_hub_page
     visit BUSINESS_PATH
+  end
+
+  def when_i_visit_the_education_hub_page
+    visit EDUCATION_PATH
   end
 
   def then_i_can_see_the_header_section
@@ -42,7 +48,11 @@ module CoronavirusLandingPageSteps
 
   def then_i_can_see_the_business_page
     assert page.has_title?("Coronavirus (COVID-19): Business support")
-    assert page.has_selector?(".covid__page-header h1", text: "Business support")
+    then_i_can_see_the_page_title("Business support")
+  end
+
+  def then_i_can_see_the_page_title(title)
+    assert page.has_selector?(".covid__page-header h1", text: title)
   end
 
   def and_i_can_see_the_live_stream_placeholder

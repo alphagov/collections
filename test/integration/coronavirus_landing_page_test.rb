@@ -42,13 +42,21 @@ class CoronavirusLandingPageTest < ActionDispatch::IntegrationTest
     end
   end
 
-  describe "the business support landing page" do
+  describe "the business support hub page" do
     it "renders" do
       given_there_is_a_business_content_item
-      when_i_visit_the_business_landing_page
+      when_i_visit_the_business_hub_page
       then_i_can_see_the_business_page
       then_i_can_see_the_business_accordions
       and_i_can_see_business_links_to_search
+    end
+  end
+
+  describe "the education hub page" do
+    it "renders" do
+      given_there_is_an_education_content_item
+      when_i_visit_the_education_hub_page
+      then_i_can_see_the_page_title("Education and Childcare")
     end
   end
 end
