@@ -15,6 +15,10 @@ def business_content_item_fixture
   load_content_item("business_support_page.json")
 end
 
+def education_content_item_fixture
+  load_content_item("coronavirus_education_page.json")
+end
+
 def random_landing_page
   GovukSchemas::RandomExample.for_schema(frontend_schema: "coronavirus_landing_page") do |item|
     yield(item)
@@ -48,6 +52,12 @@ end
 def business_content_item
   random_landing_page do |item|
     item.merge(business_content_item_fixture)
+  end
+end
+
+def education_content_item
+  random_landing_page do |item|
+    item.merge(education_content_item_fixture)
   end
 end
 
