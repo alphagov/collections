@@ -18,7 +18,9 @@
         <% end %>
       </p>
       <% if announcement["published_text"].present? %>
-        <p class="govuk-body covid__inverse"><%= announcement["published_text"] %></p>
+        <p class="govuk-body covid__inverse covid__announcement-published-text">
+          <%= announcement["published_text"] %>
+        </p>
       <% end %>
     </div>
   <% end %>
