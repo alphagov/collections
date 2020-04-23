@@ -9,7 +9,7 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <% title_link = capture do %>
-          Part of <a href="<%= title[:context][:href] %>" class="govuk-link covid__page-header-link">
+          <span class="covid__inverse">Part of</span> <a href="<%= title[:context][:href] %>" class="govuk-link covid__page-header-link">
             <%= title[:context][:text] %>
           </a>
         <% end %>
