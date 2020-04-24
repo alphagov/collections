@@ -1,27 +1,25 @@
-<div class="govuk-grid-row">
-  <% announcements.each do |announcement| %>
-    <div class="govuk-grid-column-one-third covid__page-header-announcement">
-      <p class="govuk-body covid__inverse">
-        <% if announcement["href"].present? %>
-          <a
-            href="<%= announcement["href"] %>"
-            class="govuk-link covid__page-header-link"
-            data-module="track-click"
-            data-track-category="pageElementInteraction"
-            data-track-action="Announcements"
-            data-track-label="<%= announcement["href"] %>"
-          >
-            <%= announcement["text"] %>
-          </a>
-        <% else %>
+<ul class="govuk-list covid__announcements">
+  <% announcements.each do | announcement | %>
+    <li class="covid__topic-list-item">
+      <% if announcement["href"].present? %>
+        <a
+          href="<%= announcement["href"] %>"
+          class="govuk-link covid__topic-list-link"
+          data-module="track-click"
+          data-track-category="pageElementInteraction"
+          data-track-action="Announcements"
+          data-track-label="<%= announcement["href"] %>"
+        >
           <%= announcement["text"] %>
-        <% end %>
-      </p>
+        </a>
+      <% else %>
+        <%= announcement["text"] %>
+      <% end %>
       <% if announcement["published_text"].present? %>
-        <p class="govuk-body covid__inverse covid__announcement-published-text">
+        <p class="govuk-body covid__announcement-published-text">
           <%= announcement["published_text"] %>
         </p>
       <% end %>
-    </div>
+    </li>
   <% end %>
-</div>
+</ul>

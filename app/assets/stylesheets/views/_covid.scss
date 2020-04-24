@@ -51,19 +51,11 @@
   }
 }
 
-.covid__page-header-announcement {
-  margin-bottom: govuk-spacing(7);
-
-  @include govuk-media-query($from: desktop) {
-    margin-bottom: govuk-spacing(3);
-  }
-
-  .govuk-body {
-    margin-bottom: govuk-spacing(2);
-  }
+.covid__announcements {
+  margin-top: govuk-spacing(5);
 
   .covid__announcement-published-text {
-    @include govuk-font(16);
+    margin-top: govuk-spacing(2);
   }
 }
 
