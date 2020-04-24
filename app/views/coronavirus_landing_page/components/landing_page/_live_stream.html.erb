@@ -27,5 +27,5 @@
 </div>
 
 <p class="govuk-body">
-  <%= live_stream["date_text"] %> <%= today %> <%= ("at " + live_stream["time"]) if live_stream["time"].present? %>
+  <%= live_stream["date_text"] %> <%= " " + live_stream["date"] %> <%= ("at " + live_stream["time"]) if live_stream["time"].present? %>
 </p>

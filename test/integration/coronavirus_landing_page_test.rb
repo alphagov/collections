@@ -21,10 +21,10 @@ class CoronavirusLandingPageTest < ActionDispatch::IntegrationTest
       then_i_can_see_the_accordions_content
     end
 
-    it "shows todays date when a live stream is enabled" do
+    it "shows livestream date when a live stream is enabled" do
       given_there_is_a_content_item_with_live_stream_enabled
       when_i_visit_the_coronavirus_landing_page
-      then_i_can_see_the_live_stream_section_with_todays_date
+      then_i_can_see_the_live_stream_section_with_streamed_date
     end
 
     it "optionally shows the time when a live stream is enabled" do

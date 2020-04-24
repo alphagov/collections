@@ -41,12 +41,8 @@ def coronavirus_content_item_with_live_stream_enabled_and_date
   content_item = coronavirus_content_item
   content_item["details"]["live_stream_enabled"] = true
   content_item["details"]["live_stream"]["time"] = "5:00pm"
+  content_item["details"]["live_stream"]["date"] = "19 April"
   content_item
-end
-
-def todays_date
-  d = DateTime.now
-  d.day.ordinalize + d.strftime(" %B %Y")
 end
 
 def business_content_item

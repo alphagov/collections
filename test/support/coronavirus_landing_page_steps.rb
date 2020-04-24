@@ -55,13 +55,13 @@ module CoronavirusLandingPageSteps
     assert page.has_selector?(".covid__page-header h1", text: title)
   end
 
-  def then_i_can_see_the_live_stream_section_with_todays_date
-    assert page.has_text?(todays_date)
-    assert_not page.has_text?("#{todays_date} at")
+  def then_i_can_see_the_live_stream_section_with_streamed_date
+    assert page.has_text?("19 April")
+    assert_not page.has_text?("19 April at")
   end
 
   def then_i_can_see_the_live_stream_section_with_date_and_time
-    assert page.has_text?(todays_date)
+    assert page.has_text?("19 April")
     assert page.has_text?("5:00pm")
   end
 
