@@ -1,42 +1,50 @@
-  <%
-    accordion_contents = []
-    number_of_accordion_sections = accordions.length
-  %>
-  <% accordions.each do | section | %>
-    <% content = capture do %>
-      <%# this element captures an override from the accordion that the last item has margin 0 %>
-      <div class="covid__accordion-inner">
-        <%= render partial: 'coronavirus_landing_page/components/shared/section', locals: { section: section } %>
-      </div>
-    <% end %>
-    <%
-      accordion_contents << {
-        heading: {
-          text: section["title"],
-        },
-        content: {
-          html: content,
-        },
-        data_attributes: {
-          toggle_attribute: "data-track-action",
-          when_closed_text: "accordionClosed",
-          when_open_text: "accordionOpened",
-          track_category: "pageElementInteraction",
-          track_action: "accordionClosed",
-          track_label: section["title"],
-          track_dimension: number_of_accordion_sections,
-          track_dimension_index: 26
-        }
-      }
-    %>
-  <% end %>
-  <div data-module="track-click">
-    <div data-module="toggle-attribute">
-      <%= render 'govuk_publishing_components/components/accordion', {
-        data_attributes: {
-          module: "govuk-accordion"
-        },
-        items: accordion_contents
-      } %>
+<%
+  heading ||= false
+  country_guidance ||= false
+  accordion_contents = []
+  number_of_accordion_sections = accordions.length
+%>
+<% accordions.each do | section | %>
+  <% content = capture do %>
+    <%# this element captures an override from the accordion that the last item has margin 0 %>
+    <div class="covid__accordion-inner">
+      <%= render partial: 'coronavirus_landing_page/components/shared/section', locals: { section: section } %>
     </div>
+  <% end %>
+  <%
+    accordion_contents << {
+      heading: {
+        text: section["title"],
+      },
+      content: {
+        html: content,
+      },
+      data_attributes: {
+        toggle_attribute: "data-track-action",
+        when_closed_text: "accordionClosed",
+        when_open_text: "accordionOpened",
+        track_category: "pageElementInteraction",
+        track_action: "accordionClosed",
+        track_label: section["title"],
+        track_dimension: number_of_accordion_sections,
+        track_dimension_index: 26
+      }
+    }
+  %>
+<% end %>
+<%= render "govuk_publishing_components/components/heading", {
+  text: heading,
+  padding: true,
+} if heading %>
+<div data-module="track-click">
+  <div data-module="toggle-attribute">
+    <%= render 'govuk_publishing_components/components/accordion', {
+      data_attributes: {
+        module: "govuk-accordion"
+      },
+      items: accordion_contents,
+      margin_bottom: 3
+    } %>
   </div>
+</div>
+
