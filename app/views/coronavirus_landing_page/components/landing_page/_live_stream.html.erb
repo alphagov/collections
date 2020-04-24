@@ -1,41 +1,31 @@
-<div class="govuk-grid-row covid__video">
-  <div class="govuk-grid-column-one-third">
-    <%= render "govuk_publishing_components/components/heading", {
-      text: live_stream["title"],
-      font_size: 19,
-      inverse: true,
-      margin_bottom: 1
-    } %>
-    <p class="govuk-body covid__inverse">
-      <%= details.todays_date %> <%= ("at " + live_stream["time"]) if live_stream["time"].present? %>
-    </p>
-  </div>
-
-  <div class="govuk-grid-column-two-thirds">
-    <%= render "govuk_publishing_components/components/govspeak", {
-    } do %>
-      <div class="covid__video-placeholder">
-        <div class="covid__video-logo">Live</div>
-        <p class="govuk-body">
-          <a href="<%= live_stream["no_cookies"]["change_settings_link"] %>" class="govuk-link covid__page-header-link covid__bold">
-            <%= live_stream["no_cookies"]["change_settings"] %>
-          </a>
-        </p>
-        <p class="govuk-body covid__inverse covid__bold">
-          <%= live_stream["no_cookies"]["to_watch"] %>
-        </p>
-        <p class="govuk-body covid__inverse">
-          <%= live_stream["no_cookies"]["or"] %>
-        </p>
-        <a
-          href="<%= live_stream["video_url"] %>"
-          class="govuk-body govuk-link covid__page-header-link"
-          data-youtube-player-analytics="true"
-          data-youtube-player-analytics-category="EmbeddedYoutube"
-        >
-          <%= live_stream["no_cookies"]["watch_link_text"] %>
+<div class="covid__video-wrapper">
+  <%= render "govuk_publishing_components/components/govspeak", {
+  } do %>
+    <div class="covid__video-placeholder">
+      <div class="covid__video-logo"><%= live_stream["no_cookies"]["icon_text"] %></div>
+      <p class="govuk-body">
+        <a href="<%= live_stream["no_cookies"]["change_settings_link"] %>" class="govuk-link covid__page-header-link covid__bold">
+          <%= live_stream["no_cookies"]["change_settings"] %>
         </a>
-      </div>
-    <% end %>
-  </div>
+      </p>
+      <p class="govuk-body covid__bold">
+        <%= live_stream["no_cookies"]["to_watch"] %>
+      </p>
+      <p class="govuk-body">
+        <%= live_stream["no_cookies"]["or"] %>
+      </p>
+      <a
+        href="<%= live_stream["video_url"] %>"
+        class="govuk-body govuk-link covid__page-header-link"
+        data-youtube-player-analytics="true"
+        data-youtube-player-analytics-category="EmbeddedYoutube"
+      >
+        <%= live_stream["no_cookies"]["watch_link_text"] %>
+      </a>
+    </div>
+  <% end %>
 </div>
+
+<p class="govuk-body">
+  <%= live_stream["date_text"] %> <%= " " + live_stream["date"] %> <%= ("at " + live_stream["time"]) if live_stream["time"].present? %>
+</p>

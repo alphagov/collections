@@ -13,11 +13,6 @@ class CoronavirusLandingPagePresenter
     live_stream_enabled == true
   end
 
-  def todays_date
-    date = DateTime.now
-    date.day.ordinalize + date.strftime(" %B %Y")
-  end
-
   def faq_schema(content_item)
     {
       "@context": "https://schema.org",
