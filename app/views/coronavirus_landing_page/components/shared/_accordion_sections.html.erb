@@ -35,7 +35,7 @@
 <%= render "govuk_publishing_components/components/heading", {
   text: heading,
   padding: true,
-} %>
+} if heading %>
 <div data-module="track-click">
   <div data-module="toggle-attribute">
     <%= render 'govuk_publishing_components/components/accordion', {
