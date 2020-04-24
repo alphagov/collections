@@ -9,7 +9,6 @@ class CoronavirusLandingPageTest < ActionDispatch::IntegrationTest
       given_there_is_a_content_item
       when_i_visit_the_coronavirus_landing_page
       then_i_can_see_the_header_section
-      and_i_can_see_the_live_stream_placeholder
       then_i_can_see_the_nhs_banner
       then_i_can_see_the_accordions
       and_i_can_see_links_to_search
