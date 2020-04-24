@@ -176,10 +176,15 @@
   margin-bottom: govuk-spacing(2);
 }
 
+.covid__video-wrapper {
+  margin-bottom: govuk-spacing(4);
+}
+
 .covid__video-placeholder {
   position: relative;
   padding: 110px 0;
-  border: solid 2px govuk-colour("white");
+  margin-bottom: govuk-spacing(4);
+  border: solid 2px govuk-colour("black");
   text-align: center;
 
   .govuk-body {
@@ -214,8 +219,7 @@
   padding-left: govuk-spacing(5);
   padding-right: govuk-spacing(2);
   margin: govuk-spacing(3);
-  border: solid 1px govuk-colour("white");
-  color: govuk-colour("white");
+  border: solid 1px govuk-colour("black");
   text-transform: uppercase;
 
   &:before {
@@ -232,11 +236,6 @@
 
 .covid__list ~ .covid__accordion-heading {
   margin-top: govuk-spacing(7);
-}
-
-.covid__video {
-  margin-top: govuk-spacing(8);
-  margin-bottom: govuk-spacing(8);
 }
 
 .covid__inverse {

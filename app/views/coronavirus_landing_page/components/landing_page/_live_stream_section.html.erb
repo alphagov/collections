@@ -2,25 +2,27 @@
   <%= render "govuk_publishing_components/components/heading", {
     text: details.live_stream["title"],
     heading_level: 2,
-    margin_bottom: 0,
+    margin_bottom: 6,
     padding: true,
     border_top: 2
   } %>
-  <% if details.show_live_stream? %>
-    <%= render partial: 'coronavirus_landing_page/components/landing_page/live_stream', locals: {
-      details: details,
-      live_stream: details.live_stream
-    } %>
-  <% else %>
-  <% end %>
+
+  <%= render partial: 'coronavirus_landing_page/components/landing_page/live_stream', locals: {
+    details: details,
+    live_stream: details.live_stream
+  } %>
+
   <p class="govuk-body">
     <a href="<%= details.live_stream["previous_videos"]["url"] %>" class="govuk-link covid__video-sublink">
       <%= details.live_stream["previous_videos"]["previous_videos_text"] %>
     </a>
   </p>
+
+<% if false %>
   <p class="govuk-body">
     <a href="<%= details.live_stream["ask_a_question_link"] %>" class="govuk-link covid__video-sublink">
       <%= details.live_stream["ask_a_question_text"] %>
     </a>
   </p>
+<% end %>
 </section>
