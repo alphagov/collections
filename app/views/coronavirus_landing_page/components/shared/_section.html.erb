@@ -5,7 +5,19 @@
   <ul class="covid__list covid__list--accordion">
     <% sub_section["list"].each do | item | %>
       <li class="covid__list-item">
-        <a class="govuk-link covid__accordion-link <%= "covid__page-guidance-link" if item["featured_link"] %>" href="<%= item["url"] %>"><%= item["label"] %></a>
+        <% if item["featured_link"] %> 
+          <%= render 'components/action-link', {
+            dark_icon: true,
+            href: item["url"],
+            text: item["label"] 
+          }%>
+        <% else %>
+          <%= link_to(
+            item["label"], 
+            item["url"], 
+            class: "govuk-link covid__accordion-link"
+          ) %>
+        <% end %>
       </li>
     <% end %>
   </ul>

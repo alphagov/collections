@@ -1,0 +1,97 @@
+.app-c-action-link {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 50px;
+  min-height: 45px;
+  background-image: image-url("covid-arrow.png"); // PNG fallback for SVG
+  background-image: image-url("covid-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: 37px auto;
+
+  @include govuk-media-query($until: tablet) {
+    max-width: 410px;
+    margin-bottom: govuk-spacing(8);
+  }
+
+  @include govuk-media-query($from: desktop) {
+    // IE10/11 specific - vertical align in flexbox is ignored
+    // add padding to action link container to improve arrow/text alignment on IE
+    @media screen and (min-width:0\0) {
+      padding-top: govuk-spacing(2);
+    }
+  }
+}
+
+.app-c-action-link__nowrap-text {
+  white-space: nowrap;
+}
+
+.app-c-action-link__link {
+  @include govuk-font(19, $weight: bold);
+  display: inline-block;
+  max-width: 100%;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus,
+  &:active {
+    text-decoration: none;
+    color: govuk-colour("black");
+  }
+}
+
+.app-c-action-link--dark-icon {
+  background-image: image-url("corona-arrow-mini-dark.png"); // PNG fallback for SVG
+  background-image: image-url("corona-arrow-mini-dark.svg");
+  background-size: 25px auto;
+  background-position: 0 0;
+  padding-left: 35px;
+  min-height: 30px;
+  max-width: none;
+
+  @include govuk-media-query($until: tablet) {
+    margin-bottom: govuk-spacing(2);
+  }
+
+  @include govuk-media-query($from: desktop) {
+    // IE10/11 specific - vertical align in flexbox is ignored
+    @media screen and (min-width:0\0) {
+      padding-top: 0;
+    }
+  }
+
+  .app-c-action-link__link {
+    text-decoration: none;
+  }
+}
+
+.app-c-action-link--light-text {
+  .app-c-action-link__link {
+    color: govuk-colour("white");
+    text-decoration: underline;
+
+    &:link,
+    &:visited {
+      color: govuk-colour("white");
+    }
+
+    &:focus,
+    &:active {
+      text-decoration: none;
+      color: govuk-colour("black");
+    }
+  }
+}
+
+.app-c-action-link--compact {
+  padding-left: 25px;
+
+  @include govuk-media-query($until: tablet) {
+    margin-bottom: 0;
+  }
+}
