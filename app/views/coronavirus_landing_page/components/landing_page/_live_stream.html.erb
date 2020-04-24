@@ -7,7 +7,7 @@
       margin_bottom: 1
     } %>
     <p class="govuk-body covid__inverse">
-      <%= details.todays_date %> <%= ("at " + live_stream["time"]) if live_stream["time"].present? %>
+      <%= live_stream["date_text"] %> <%= details.todays_date %> <%= ("at " + live_stream["time"]) if live_stream["time"].present? %>
     </p>
   </div>
 
@@ -15,7 +15,7 @@
     <%= render "govuk_publishing_components/components/govspeak", {
     } do %>
       <div class="covid__video-placeholder">
-        <div class="covid__video-logo">Live</div>
+        <div class="covid__video-logo"><%= live_stream["no_cookies"]["icon_text"] %></div>
         <p class="govuk-body">
           <a href="<%= live_stream["no_cookies"]["change_settings_link"] %>" class="govuk-link covid__page-header-link covid__bold">
             <%= live_stream["no_cookies"]["change_settings"] %>
