@@ -7,7 +7,7 @@
     content_tag :p, :class => 'govuk-body' do
       concat(guidance["text"] + " ")
       guidance_links.each do | link |
-        elem =  link_to(link["label"],link["url"])
+        elem =  link_to(link["label"],link["url"], class: "govuk-link")
         if  link.equal? guidance_links.last
           concat(elem)
         elsif link.equal? guidance_links[guidance_links.length - 2]
