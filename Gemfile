@@ -3,7 +3,7 @@ source "https://rubygems.org"
 ruby File.read(".ruby-version").strip
 
 gem "dalli"
-gem "gds-api-adapters", "~> 63.5.1"
+gem "gds-api-adapters", "~> 63.6.0"
 gem "govspeak", "~> 6.5.3"
 gem "govuk_ab_testing", "~> 2.4.1"
 gem "govuk_app_config", "~> 2.1.2"
