@@ -70,7 +70,7 @@
         inverse: true
       } %>
 
-      <%= render partial: 'coronavirus_landing_page/components/shared/announcements', locals: { 
+      <%= render partial: 'coronavirus_landing_page/components/shared/announcements', locals: {
         announcements: details.announcements
       } %>
       <% if details.see_all_announcements_link.present? %>
@@ -91,7 +91,6 @@
           </div>
         </div>
       <% end %>
-      <%= render partial: 'coronavirus_landing_page/components/landing_page/live_stream_section', locals: { details: details } %>
     </div>
   </div>
 </header>

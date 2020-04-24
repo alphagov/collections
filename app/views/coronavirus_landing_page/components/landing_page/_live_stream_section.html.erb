@@ -1,23 +1,26 @@
-<% if details.show_live_stream? %>
-  <%= render partial: 'coronavirus_landing_page/components/landing_page/live_stream', locals: {
-    details: details,
-    live_stream: details.live_stream
+<section class="covid__topic-wrapper">
+  <%= render "govuk_publishing_components/components/heading", {
+    text: details.live_stream["title"],
+    heading_level: 2,
+    margin_bottom: 0,
+    padding: true,
+    border_top: 2
   } %>
-<% else %>
-  <div class="govuk-grid-row covid__video">
-    <div class="govuk-grid-column-two-thirds">
-      <%= render "govuk_publishing_components/components/heading", {
-        text: details.live_stream["previous_videos"]["next_conference_text"],
-        heading_level: 2,
-        font_size: 19,
-        inverse: true,
-        margin_bottom: 0
-      } %>
-      <p class="govuk-body covid__inverse">
-        <a href="<%= details.live_stream["previous_videos"]["url"] %>" class="govuk-link covid__page-header-link">
-          <%= details.live_stream["previous_videos"]["previous_videos_text"] %>
-        </a>
-      </p>
-    </div>
-  </div>
-<% end %>
+  <% if details.show_live_stream? %>
+    <%= render partial: 'coronavirus_landing_page/components/landing_page/live_stream', locals: {
+      details: details,
+      live_stream: details.live_stream
+    } %>
+  <% else %>
+  <% end %>
+  <p class="govuk-body">
+    <a href="<%= details.live_stream["previous_videos"]["url"] %>" class="govuk-link covid__video-sublink">
+      <%= details.live_stream["previous_videos"]["previous_videos_text"] %>
+    </a>
+  </p>
+  <p class="govuk-body">
+    <a href="<%= details.live_stream["ask_a_question_link"] %>" class="govuk-link covid__video-sublink">
+      <%= details.live_stream["ask_a_question_text"] %>
+    </a>
+  </p>
+</section>
