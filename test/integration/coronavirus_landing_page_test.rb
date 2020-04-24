@@ -25,12 +25,19 @@ class CoronavirusLandingPageTest < ActionDispatch::IntegrationTest
       given_there_is_a_content_item_with_live_stream_enabled
       when_i_visit_the_coronavirus_landing_page
       then_i_can_see_the_live_stream_section_with_streamed_date
+      and_there_is_no_ask_a_question_section
     end
 
     it "optionally shows the time when a live stream is enabled" do
       given_there_is_a_content_item_with_live_stream_enabled_and_date
       when_i_visit_the_coronavirus_landing_page
       then_i_can_see_the_live_stream_section_with_date_and_time
+    end
+
+    it "optionally shows the ask a question link when a live stream is enabled" do
+      given_there_is_a_content_item_with_live_stream_enabled_and_ask_a_question_enabled
+      when_i_visit_the_coronavirus_landing_page
+      then_i_can_see_the_ask_a_question_section
     end
 
     it "renders machine readable content" do
