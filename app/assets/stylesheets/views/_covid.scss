@@ -71,7 +71,7 @@
   margin-bottom: 45px;
 }
 
-.covid__logo-wrapper {
+.covid__action-link-wrapper {
   margin-top: govuk-spacing(5);
   margin-bottom: govuk-spacing(8);
 
@@ -80,13 +80,27 @@
   }
 }
 
+.covid__logo-wrapper {
+  margin-bottom: govuk-spacing(7);
+
+  @include govuk-media-query($from: tablet) {
+    margin-bottom: 0;
+    position: relative;
+    height: 108px;
+  }
+}
+
 .covid__logos {
   max-width: 100%;
   height: auto;
+  display: block;
+  margin: 0 auto;
 
   @include govuk-media-query($from: tablet) {
     margin-top: govuk-spacing(2);
     max-height: 38px; // the SVG canvas height is too big on IE
+    position: absolute;
+    bottom: 0;
   }
 }
 
