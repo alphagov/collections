@@ -13,7 +13,6 @@
 
   @include govuk-media-query($until: tablet) {
     max-width: 410px;
-    margin-bottom: govuk-spacing(8);
   }
 
   @include govuk-media-query($from: desktop) {
