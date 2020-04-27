@@ -2,11 +2,9 @@
   <%= render "govuk_publishing_components/components/heading", {
     text: topic_section["header"],
     padding: true,
-    border_top: 2
+    border_top: 2,
+    margin_bottom: 6
   } %>
-  <p class="govuk-body-m">
-    <%= topic_section["text"] %>
-  </p>
 
   <ul class="govuk-list">
     <% topic_section["links"].each do | link | %>
