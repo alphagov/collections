@@ -10,18 +10,18 @@
   <%= render partial: 'coronavirus_landing_page/components/landing_page/live_stream', locals: {
     live_stream: details.live_stream
   } %>
-
-  <p class="govuk-body">
-    <a href="<%= details.live_stream["previous_videos"]["url"] %>" class="govuk-link covid__video-sublink">
-      <%= details.live_stream["previous_videos"]["previous_videos_text"] %>
-    </a>
-  </p>
-
-<% if details.live_stream["ask_a_question_visible"] == true %>
-  <p class="govuk-body">
-    <a href="<%= details.live_stream["ask_a_question_link"] %>" class="govuk-link covid__video-sublink">
-      <%= details.live_stream["ask_a_question_text"] %>
-    </a>
-  </p>
-<% end %>
+  <ul class="govuk-list">
+    <li class="covid__topic-list-item">
+      <a href="<%= details.live_stream["previous_videos"]["url"] %>" class="covid__topic-list-link govuk-link">
+        <%= details.live_stream["previous_videos"]["previous_videos_text"] %>
+      </a>
+    </li>
+    <% if details.live_stream["ask_a_question_visible"] == true %>
+      <li class="covid__topic-list-item">
+        <a href="<%= details.live_stream["ask_a_question_link"] %>" class="covid__topic-list-link govuk-link">
+          <%= details.live_stream["ask_a_question_text"] %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
 </section>
