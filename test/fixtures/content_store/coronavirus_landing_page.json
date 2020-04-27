@@ -352,16 +352,15 @@
       ]
     },
     "topic_section": {
-      "header": "All coronavirus (COVID-19) information",
-      "text": "Browse information related to coronavirus",
+      "header": "All coronavirus information on GOV.UK",
       "links": [
-        {
-          "label": "News",
-          "url": "/search/news-and-communications?topical_events%5B%5D=coronavirus-covid-19-uk-government-response"
-        },
         {
           "label": "Guidance",
           "url": "/search/all?topical_events%5B%5D=coronavirus-covid-19-uk-government-response&order=updated-newest"
+        },
+        {
+          "label": "News",
+          "url": "/search/news-and-communications?topical_events%5B%5D=coronavirus-covid-19-uk-government-response"
         }
       ]
     },
