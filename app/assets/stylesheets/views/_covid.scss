@@ -164,19 +164,6 @@
   }
 }
 
-.covid__video-sublink {
-  font-weight: bold;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-
-    &:focus {
-      text-decoration: none;
-    }
-  }
-}
-
 .covid__video-logo {
   @include govuk-font(19, $weight: bold, $line-height: 1);
   position: absolute;
