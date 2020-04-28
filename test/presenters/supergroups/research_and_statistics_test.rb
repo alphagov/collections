@@ -39,7 +39,6 @@ describe Supergroups::ResearchAndStatistics do
     end
   end
 
-
   describe "document types" do
     it "returns appropriate things" do
       document_types = GovukDocumentTypes.supergroup_document_types("research_and_statistics")

@@ -43,7 +43,6 @@ class FeedsControllerTest < ActionController::TestCase
     assert_equal "*", response.headers["Access-Control-Allow-Origin"]
   end
 
-
   def organisation_slug(content_item)
     File.basename(content_item["base_path"])
   end

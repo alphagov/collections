@@ -177,7 +177,6 @@ describe Organisations::PeoplePresenter do
         image_alt: "Sir Jeremy Heywood",
       }
 
-
       expected_non_important = {
         brand: "attorney-generals-office",
         href: "/government/people/john-manzoni",
