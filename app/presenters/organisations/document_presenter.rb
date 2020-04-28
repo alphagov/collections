@@ -33,7 +33,6 @@ module Organisations
       end
     end
 
-
   private
 
     def document_type

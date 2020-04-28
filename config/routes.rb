@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   mount JasmineRails::Engine => "/specs" if defined?(JasmineRails)
   mount GovukPublishingComponents::Engine, at: "/component-guide"
 
-
   get "/coronavirus", to: "coronavirus_landing_page#show", as: :coronavirus_landing_page
   get "/coronavirus/:hub_slug", to: "coronavirus_landing_page#hub"
 
