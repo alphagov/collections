@@ -34,14 +34,14 @@ class PersonTest < ActionDispatch::IntegrationTest
   end
 
   def stub_person_page_search_query(slug)
-    stub_request(:get, "https://search.test.gov.uk/search.json").
-      with(query: {
+    stub_request(:get, "https://search.test.gov.uk/search.json")
+      .with(query: {
         count: 10,
-        fields: %w(content_store_document_type link public_timestamp title),
+        fields: %w[content_store_document_type link public_timestamp title],
         filter_people: slug,
         order: "-public_timestamp",
         reject_content_purpose_supergroup: "other",
-      }).
-      to_return(body: { results: [] }.to_json)
+      })
+      .to_return(body: { results: [] }.to_json)
   end
 end

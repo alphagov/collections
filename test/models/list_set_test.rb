@@ -163,8 +163,8 @@ describe ListSet do
       Services.rummager.stubs(:search).with(
         has_entries(filter_topic_content_ids: %w[paye-content-id]),
       ).returns("results" => [result],
-        "start" => 0,
-        "total" => 1)
+                "start" => 0,
+                "total" => 1)
 
       documents = ListSet.new("specialist_sector", "paye-content-id").first.contents
 

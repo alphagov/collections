@@ -5,7 +5,7 @@ module RummagerHelpers
     params = {
       start: 0,
       count: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
-      fields: %w(title description link content_store_document_type),
+      fields: %w[title description link content_store_document_type],
       filter_taxons: Array(content_ids),
       order: "title",
     }
@@ -26,7 +26,7 @@ module RummagerHelpers
   end
 
   def stub_most_popular_content_for_taxon(content_id, results,
-      filter_content_store_document_type: %w(detailed_guide manual))
+                                          filter_content_store_document_type: %w[detailed_guide manual])
     fields = RummagerFields::TAXON_SEARCH_FIELDS
 
     params = {
@@ -48,7 +48,7 @@ module RummagerHelpers
   end
 
   def stub_most_recent_content_for_taxon(content_id, results,
-      filter_content_store_document_type: %w(detailed_guide guidance))
+                                         filter_content_store_document_type: %w[detailed_guide guidance])
     fields = RummagerFields::TAXON_SEARCH_FIELDS
 
     params = {
@@ -185,8 +185,8 @@ module RummagerHelpers
           order: "-public_timestamp",
         ),
       ).returns("results" => results_page,
-        "start" => start,
-        "total" => results.size)
+                "start" => start,
+                "total" => results.size)
     end
   end
 
@@ -204,8 +204,8 @@ module RummagerHelpers
           filter_topic_content_ids: [subtopic_content_id],
         ),
       ).returns("results" => results_page,
-        "start" => start,
-        "total" => results.size)
+                "start" => start,
+                "total" => results.size)
     end
   end
 
@@ -223,8 +223,8 @@ module RummagerHelpers
           filter_mainstream_browse_page_content_ids: [browse_page_content_id],
         ),
       ).returns("results" => results_page,
-        "start" => start,
-        "total" => results.size)
+                "start" => start,
+                "total" => results.size)
     end
   end
 
@@ -239,10 +239,10 @@ module RummagerHelpers
         start: start,
         count: page_size,
         filter_mainstream_browse_page_content_ids: [browse_page_content_id],
-        fields: %w(title link format),
+        fields: %w[title link format],
       ).returns("results" => results_page,
-        "start" => start,
-        "total" => results.size)
+                "start" => start,
+                "total" => results.size)
     end
   end
 
@@ -281,7 +281,7 @@ module RummagerHelpers
   def stub_supergroup_request(results: [], additional_params: {})
     params = {
       count: 2,
-      fields: %w(title link content_store_document_type public_timestamp),
+      fields: %w[title link content_store_document_type public_timestamp],
       order: "-public_timestamp",
     }.merge(additional_params)
 

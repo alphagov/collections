@@ -6,7 +6,7 @@ describe MostRecentContent do
   def most_recent_content
     @most_recent_content ||= MostRecentContent.new(
       content_id: taxon_content_id,
-      filter_content_store_document_type: %w(authored_article correspondence),
+      filter_content_store_document_type: %w[authored_article correspondence],
     )
   end
 
@@ -66,7 +66,7 @@ describe MostRecentContent do
   end
 
   it "filters content by the requested document types only" do
-    assert_includes_params(filter_content_store_document_type: %w(authored_article correspondence)) do
+    assert_includes_params(filter_content_store_document_type: %w[authored_article correspondence]) do
       most_recent_content.fetch
     end
   end

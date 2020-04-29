@@ -7,7 +7,7 @@ describe Organisations::SupergroupsPresenter do
   before :each do
     content_item = ContentItem.new(organisation_with_featured_documents)
     organisation = Organisation.new(content_item)
-    @supergroups_presenter = described_class.new(organisation, exclude_metadata_for: %w(news_and_communications))
+    @supergroups_presenter = described_class.new(organisation, exclude_metadata_for: %w[news_and_communications])
 
     content_item = ContentItem.new(organisation_with_no_documents)
     organisation = Organisation.new(content_item)

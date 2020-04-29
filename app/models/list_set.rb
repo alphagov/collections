@@ -2,20 +2,20 @@ class ListSet
   include Enumerable
   delegate :each, to: :lists
 
-  BROWSE_FORMATS_TO_EXCLUDE = %w(
+  BROWSE_FORMATS_TO_EXCLUDE = %w[
     fatality_notice
     news_article
     speech
     world_location_news_article
     travel-advice
-  ).to_set
+  ].to_set
 
-  TOPIC_FORMATS_TO_EXCLUDE = %w(
+  TOPIC_FORMATS_TO_EXCLUDE = %w[
     fatality_notice
     news_article
     speech
     world_location_news_article
-  ).to_set
+  ].to_set
 
   def initialize(tag_type, tag_content_id, group_data = nil)
     @tag_type = tag_type
@@ -63,7 +63,7 @@ private
       :start => 0,
       :count => RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       filter_name => [@tag_content_id],
-      :fields => %w(title link format),
+      :fields => %w[title link format],
     )
   end
 

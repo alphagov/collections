@@ -10,7 +10,7 @@ class HeaderNoticeTest < ComponentTestCase
       nhs_branding: true,
       title_logo: tag.img(src: "/path/to/image.png"),
       heading: "This is a header",
-      list: %w(blah blah2),
+      list: %w[blah blah2],
       call_to_action: {
         href: "/this-is-a-link",
         title: "Click me!",
@@ -22,7 +22,7 @@ class HeaderNoticeTest < ComponentTestCase
     {
       title: "this is a title",
       heading: "This is a header",
-      list: %w(blah blah2),
+      list: %w[blah blah2],
       call_to_action: {
         href: "/this-is-a-link",
         title: "Click me!",

@@ -85,7 +85,7 @@ module Organisations
 
   private
 
-    NEED_A_THE = %w(
+    NEED_A_THE = %w[
       authority
       agency
       bank
@@ -109,13 +109,13 @@ module Organisations
       service
       team
       tribunal
-    ).freeze
+    ].freeze
 
     NO_THE = "civil service resourcing|civil service reform".freeze
 
     def needs_definite_article?(phrase)
-      should_have = Regexp::new(NEED_A_THE.join("|"), true)
-      should_not_have = Regexp::new(NO_THE, true)
+      should_have = Regexp.new(NEED_A_THE.join("|"), true)
+      should_not_have = Regexp.new(NO_THE, true)
 
       !has_definite_article?(phrase) &&
         (@org.is_court_or_hmcts_tribunal? ||

@@ -100,8 +100,8 @@ class WorldWideTaxonBrowsingTest < ActionDispatch::IntegrationTest
 private
 
   def stub_rummager_tagged_content_request(content_id, search_result = [])
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=1000&fields%5B%5D=content_store_document_type&fields%5B%5D=description&fields%5B%5D=link&fields%5B%5D=title&filter_taxons%5B%5D=#{content_id}&order=title&start=0").
-      to_return(body: { results: search_result }.to_json)
+    stub_request(:get, Plek.new.find("search") + "/search.json?count=1000&fields%5B%5D=content_store_document_type&fields%5B%5D=description&fields%5B%5D=link&fields%5B%5D=title&filter_taxons%5B%5D=#{content_id}&order=title&start=0")
+      .to_return(body: { results: search_result }.to_json)
   end
 
   def content_item_without_children(base_path, content_id)

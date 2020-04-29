@@ -34,7 +34,7 @@ describe SubtopicsController do
             "base_path" => "/#{parent_path}",
           }],
         },
-),
+      ),
     )
 
     ListSet.stubs(:new).returns(
@@ -47,6 +47,6 @@ describe SubtopicsController do
       facet_organisations: "1000",
     ).returns(
       stub_search_has_specialist_sector_organisations("#{parent_path}/#{path}"),
-)
+    )
   end
 end

@@ -69,7 +69,7 @@ describe MainstreamBrowsePage do
           "description" => "All about bar",
           "base_path" => "/browse/bar",
         }
-        @api_data["details"]["ordered_second_level_browse_pages"] = %w(1 2)
+        @api_data["details"]["ordered_second_level_browse_pages"] = %w[1 2]
         @api_data["links"]["second_level_browse_pages"] = [
           @second_level_browse_page2,
           @second_level_browse_page1,
@@ -94,10 +94,10 @@ describe MainstreamBrowsePage do
     end
   end
 
-  %w(
+  %w[
     top_level_browse_pages
     second_level_browse_pages
-  ).each do |link_type|
+  ].each do |link_type|
     describe link_type do
       it "returns the title, base_path and description for all linked items" do
         @api_data["links"][link_type] = [
@@ -208,7 +208,7 @@ describe MainstreamBrowsePage do
         },
       ]
 
-      assert_equal %w(Bar Foo), @page.related_topics.map(&:title)
+      assert_equal %w[Bar Foo], @page.related_topics.map(&:title)
     end
 
     it "returns empty array with no items" do

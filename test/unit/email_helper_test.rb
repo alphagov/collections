@@ -18,7 +18,7 @@ describe EmailHelper do
   end
 
   it "should return a valid whitehall .atom url in the form /government/{url}.atom" do
-    self.stubs(:request).returns(ActionDispatch::TestRequest.create("PATH_INFO" => "/world/blefuscu"))
+    stubs(:request).returns(ActionDispatch::TestRequest.create("PATH_INFO" => "/world/blefuscu"))
 
     expected_atom_url = Plek.new.website_root + "/world/blefuscu.atom"
 
@@ -26,7 +26,7 @@ describe EmailHelper do
   end
 
   it "should return a valid email alert frontend email signup link" do
-    self.stubs(:request).returns(ActionDispatch::TestRequest.create("PATH_INFO" => "/world/blefuscu"))
+    stubs(:request).returns(ActionDispatch::TestRequest.create("PATH_INFO" => "/world/blefuscu"))
     taxon = stub(base_path: "/world/blefuscu")
 
     expected_url = "#{Plek.new.website_root}/email-signup?link=/world/blefuscu"

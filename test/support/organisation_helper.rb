@@ -33,12 +33,12 @@ module OrganisationHelpers
   def default_params
     {
       count: 2,
-      'fields[]': %w(
+      'fields[]': %w[
         content_store_document_type
         link
         public_timestamp
         title
-      ),
+      ],
       order: "-public_timestamp",
     }
   end
@@ -61,8 +61,8 @@ module OrganisationHelpers
   end
 
   def stub_rummager_latest_documents_request(organisation_slug)
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=3&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp&reject_content_purpose_supergroup=other").
-      to_return(body: { results: [
+    stub_request(:get, Plek.new.find("search") + "/search.json?count=3&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp&reject_content_purpose_supergroup=other")
+      .to_return(body: { results: [
         {
           title: "Rapist has sentence increased after Solicitor General’s referral",
           link: "/government/news/rapist-has-sentence-increased-after-solicitor-generals-referral",
@@ -73,8 +73,8 @@ module OrganisationHelpers
   end
 
   def stub_rummager_latest_content_with_acronym(organisation_slug)
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=3&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp&reject_content_purpose_supergroup=other").
-      to_return(body: { results: [
+    stub_request(:get, Plek.new.find("search") + "/search.json?count=3&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp&reject_content_purpose_supergroup=other")
+      .to_return(body: { results: [
         {
           title: "Rapist has sentence increased after Solicitor General’s referral",
           link: "/government/news/rapist-has-sentence-increased-after-solicitor-generals-referral",

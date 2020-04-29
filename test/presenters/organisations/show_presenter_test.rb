@@ -22,7 +22,7 @@ describe Organisations::ShowPresenter do
 
   def build_show_presenter_for_org(title, type)
     content_item = ContentItem.new({ title: title,
-      details: { organisation_type: type } }.with_indifferent_access)
+                                     details: { organisation_type: type } }.with_indifferent_access)
 
     organisation = Organisation.new(content_item)
     Organisations::ShowPresenter.new(organisation)

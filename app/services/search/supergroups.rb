@@ -1,13 +1,13 @@
 module Search
   class Supergroups
-    SUPERGROUP_TYPES = %w(
+    SUPERGROUP_TYPES = %w[
       services
       guidance_and_regulation
       news_and_communications
       research_and_statistics
       policy_and_engagement
       transparency
-    ).freeze
+    ].freeze
 
     SUPERGROUP_ADDITIONAL_SEARCH_PARAMS = {
       "guidance_and_regulation" => {

@@ -3,7 +3,7 @@ require "active_model"
 class EmailSignup
   include ActiveModel::Model
 
-  validates_presence_of :subtopic
+  validates :subtopic, presence: true
 
   attr_reader :subscription_url
 
