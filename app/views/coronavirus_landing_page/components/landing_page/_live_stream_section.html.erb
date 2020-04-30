@@ -12,6 +12,11 @@
   } %>
   <ul class="govuk-list">
     <li class="covid__topic-list-item">
+      <a href="<%= details.live_stream["transcript_link"] %>" class="covid__topic-list-link govuk-link">
+        <%= details.live_stream["transcript_text"] %>
+      </a>
+    </li>
+    <li class="covid__topic-list-item">
       <a href="<%= details.live_stream["previous_videos"]["url"] %>" class="covid__topic-list-link govuk-link">
         <%= details.live_stream["previous_videos"]["previous_videos_text"] %>
       </a>
