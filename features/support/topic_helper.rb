@@ -8,7 +8,7 @@ module TopicHelper
   def stub_topic_lookups
     rummager_has_documents_for_subtopic(
       "content-id-for-fields-and-wells",
-      %w{
+      %w[
         what-is-oil
         apply-for-an-oil-licence
         environmental-policy
@@ -16,7 +16,7 @@ module TopicHelper
         well-application-form
         well-report-2014
         oil-extraction-count-2013
-      },
+      ],
       page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
     )
 

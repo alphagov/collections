@@ -24,7 +24,7 @@ describe SupergroupSections::Sections do
     end
 
     it "returns a list of supergroup details" do
-      section_details = %i(
+      section_details = %i[
         id
         title
         promoted_content
@@ -32,7 +32,7 @@ describe SupergroupSections::Sections do
         partial_template
         see_more_link
         show_section
-      )
+      ]
 
       @sections.each do |section|
         assert_equal(section_details, section.keys)
@@ -40,14 +40,14 @@ describe SupergroupSections::Sections do
     end
 
     it "each section has an id" do
-      expected_ids = %w(
+      expected_ids = %w[
         services
         guidance_and_regulation
         news_and_communications
         policy_and_engagement
         transparency
         research_and_statistics
-      )
+      ]
 
       section_ids = @sections.map { |section| section[:id] }
 

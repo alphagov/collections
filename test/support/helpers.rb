@@ -22,11 +22,11 @@ class ActiveSupport::TestCase
       ],
     }
 
-    Services.
-      rummager.
-      stubs(:search).
-      with { |params| _(params).including?(expected_params) }.
-      returns(search_results)
+    Services
+      .rummager
+      .stubs(:search)
+      .with { |params| _(params).including?(expected_params) }
+      .returns(search_results)
 
     results = yield
 

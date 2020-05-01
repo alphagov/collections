@@ -1,5 +1,5 @@
 class CoronavirusLandingPagePresenter
-  COMPONENTS = %w(live_stream live_stream_enabled stay_at_home guidance announcements_label announcements see_all_announcements_link nhs_banner sections sections_heading additional_country_guidance topic_section notifications find_help).freeze
+  COMPONENTS = %w[live_stream live_stream_enabled stay_at_home guidance announcements_label announcements see_all_announcements_link nhs_banner sections sections_heading additional_country_guidance topic_section notifications find_help].freeze
 
   def initialize(content_item)
     COMPONENTS.each do |component|
@@ -44,7 +44,7 @@ private
 
   def build_announcements_schema(content_item)
     announcement_text = ApplicationController.render partial: "coronavirus_landing_page/components/shared/announcements",
-      locals: {
+                                                     locals: {
         announcements: content_item["details"]["announcements"],
       }
     question_and_answer_schema("Announcements", announcement_text)

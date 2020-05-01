@@ -7,7 +7,7 @@ describe MostPopularContent do
   def most_popular_content
     @most_popular_content ||= MostPopularContent.new(
       content_id: taxon_content_id,
-      filter_content_store_document_type: %w(detailed_guide guidance),
+      filter_content_store_document_type: %w[detailed_guide guidance],
     )
   end
 
@@ -63,7 +63,7 @@ describe MostPopularContent do
     end
 
     it "filters content by the requested document types only" do
-      assert_includes_params(filter_content_store_document_type: %w(detailed_guide guidance)) do
+      assert_includes_params(filter_content_store_document_type: %w[detailed_guide guidance]) do
         most_popular_content.fetch
       end
     end

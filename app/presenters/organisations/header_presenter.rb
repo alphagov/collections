@@ -110,7 +110,7 @@ module Organisations
     end
 
     def has_services_and_information_link?
-      orgs_with_services_and_information_link = %w{
+      orgs_with_services_and_information_link = %w[
         department-for-education
         department-for-environment-food-rural-affairs
         driver-and-vehicle-standards-agency
@@ -123,7 +123,7 @@ module Organisations
         medicines-and-healthcare-products-regulatory-agency
         natural-england
         planning-inspectorate
-      }
+      ]
       return true if orgs_with_services_and_information_link.include?(org.slug)
     end
   end

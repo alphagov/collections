@@ -1,7 +1,7 @@
 Given(/^there is latest content for a subtopic$/) do
   stub_topic_lookups
 
-  @stubbed_rummager_documents = %w(
+  @stubbed_rummager_documents = %w[
     what-is-oil
     apply-for-an-oil-licence
     environmental-policy
@@ -9,7 +9,7 @@ Given(/^there is latest content for a subtopic$/) do
     well-application-form
     well-report-2014
     oil-extraction-count-2013
-  ).map.with_index do |slug, i|
+  ].map.with_index do |slug, i|
     {
       "latest_change_note" => "This has changed",
       "public_timestamp" => (i + 1).hours.ago.iso8601,
@@ -28,8 +28,8 @@ Given(/^there is latest content for a subtopic$/) do
       order: "-public_timestamp",
     ),
   ).returns("results" => @stubbed_rummager_documents,
-    "start" => 0,
-    "total" => @stubbed_rummager_documents.size)
+            "start" => 0,
+            "total" => @stubbed_rummager_documents.size)
 end
 
 When(/^I view the latest changes page for that subtopic$/) do

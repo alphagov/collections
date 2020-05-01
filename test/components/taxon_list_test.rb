@@ -110,7 +110,7 @@ class TaxonListTest < ComponentTestCase
   test "renders a list item with data attribute" do
     render_component(
       heading_level: 3,
-        items: [
+      items: [
         {
           text: "Childcare Grant",
           path: "/childcare-grant",

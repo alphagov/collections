@@ -43,7 +43,7 @@ module Organisations
       document_type = type.capitalize.tr("_", " ")
 
       # Handle document types with acronyms
-      document_acronyms = %w{Foi Dfid Aaib Cma Esi Hmrc Html Maib Raib Utaac}
+      document_acronyms = %w[Foi Dfid Aaib Cma Esi Hmrc Html Maib Raib Utaac]
       document_acronyms.each { |acronym|
         document_type.gsub!(acronym, acronym.upcase)
       }

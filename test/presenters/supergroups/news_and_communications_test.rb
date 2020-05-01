@@ -42,7 +42,7 @@ describe Supergroups::NewsAndCommunications do
     end
 
     it "does not returns an image for news items" do
-      tagged_document_list = %w(news_story correspondance press_release)
+      tagged_document_list = %w[news_story correspondance press_release]
 
       MostRecentContent.any_instance
         .stubs(:fetch)
@@ -102,7 +102,7 @@ describe Supergroups::NewsAndCommunications do
     end
 
     it "returns an image for the first news item" do
-      tagged_document_list = %w(news_story correspondance press_release)
+      tagged_document_list = %w[news_story correspondance press_release]
 
       MostRecentContent.any_instance
         .stubs(:fetch)

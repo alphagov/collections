@@ -18,21 +18,21 @@ describe Supergroups::PolicyAndEngagement do
 
     describe "consultations" do
       it "prioritises consultations over other content" do
-        tagged_document_list = %w(
+        tagged_document_list = %w[
           open_consultation
           case_study
           open_consultation
           open_consultation
           open_consultation
-        )
+        ]
 
-        expected_order = %w(
+        expected_order = %w[
           open_consultation
           open_consultation
           open_consultation
           open_consultation
           case_study
-        )
+        ]
 
         MostRecentContent.any_instance
           .stubs(:fetch)

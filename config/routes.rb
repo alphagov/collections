@@ -11,17 +11,17 @@ Rails.application.routes.draw do
 
   get "/browse.json" => redirect("/api/content/browse")
 
-  resources :browse, only: %i(index show), param: :top_level_slug do
+  resources :browse, only: %i[index show], param: :top_level_slug do
     get ":second_level_slug", on: :member, to: "second_level_browse_page#show"
   end
 
-  resources :topics, only: %i(index show), path: :topic, param: :topic_slug do
+  resources :topics, only: %i[index show], path: :topic, param: :topic_slug do
     get ":subtopic_slug", on: :member, to: "subtopics#show"
   end
 
-  #TODO this redirect causes the request to be routed to Whitehall where
-  #the country A-Z currently lives. This needs to be removed when the world index
-  #page is rendered here
+  # TODO: this redirect causes the request to be routed to Whitehall where
+  # the country A-Z currently lives. This needs to be removed when the world index
+  # page is rendered here
   get "/world/all", to: redirect("/world")
 
   get "/topic/:topic_slug/:subtopic_slug/latest",
@@ -78,7 +78,7 @@ Rails.application.routes.draw do
 
   # We get requests for URLs like
   # https://www.gov.uk/topic%2Flegal-aid-for-providers%2Fmake-application%2Flatest
-  # which fall through to here and error in the taxons controller.
+  #  which fall through to here and error in the taxons controller.
   # We can fix the path and redirect to the correct place.
   get "/:slug",
       to: redirect { |_path_params, req|

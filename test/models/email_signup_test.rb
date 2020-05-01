@@ -7,8 +7,8 @@ describe EmailSignup do
     @subtopic.stubs(slug: "oil-and-gas/wells", content_id: "uuid-888")
     @subtopic.stubs(combined_title: "Oil and gas: Wells")
 
-    @request = stub_request(:get, "https://email-alert-api.test.gov.uk/subscriber-lists?links%5Btopics%5D%5B0%5D=uuid-888").
-      to_return(
+    @request = stub_request(:get, "https://email-alert-api.test.gov.uk/subscriber-lists?links%5Btopics%5D%5B0%5D=uuid-888")
+      .to_return(
         body: {
           subscriber_list: {
             subscription_url: "http://email_alert_api_signup_url",

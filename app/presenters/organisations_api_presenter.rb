@@ -10,11 +10,11 @@ class OrganisationsApiPresenter
               :wrap_in_results_array
 
   def initialize(organisations,
-    current_page:,
-    results_per_page:,
-    total_results:,
-    current_url_without_parameters:,
-    wrap_in_results_array: true)
+                 current_page:,
+                 results_per_page:,
+                 total_results:,
+                 current_url_without_parameters:,
+                 wrap_in_results_array: true)
     @organisations = organisations
     @current_page = current_page
     @results_per_page = results_per_page

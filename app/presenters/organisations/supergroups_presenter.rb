@@ -4,7 +4,7 @@ module Organisations
     include ApplicationHelper
     attr_reader :org
 
-    DEFAULT_EXCLUDE_METADATA_FOR = %w(services).freeze
+    DEFAULT_EXCLUDE_METADATA_FOR = %w[services].freeze
 
     attr_accessor :exclude_metadata_for
 
@@ -13,9 +13,7 @@ module Organisations
       @exclude_metadata_for = exclude_metadata_for
     end
 
-    def has_groups?
-      supergroups_collection.has_groups?
-    end
+    delegate :has_groups?, to: :supergroups_collection
 
     def latest_documents_by_supergroup
       supergroups_collection.groups.map { |supergroup|

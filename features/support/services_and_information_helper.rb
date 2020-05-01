@@ -7,11 +7,11 @@ module ServicesAndInformationHelpers
   include RummagerHelpers
 
   def stub_services_and_information_lookups
-    @services_and_information = %w{
+    @services_and_information = %w[
       environmental-permit-check-if-you-need-one
       government/publications/environmental-permitting-ep-charges-scheme-april-2014-to-march-2015
       hazardous-waste-producer-registration
-    }
+    ]
 
     stub_services_and_information_links("hm-revenue-customs")
 

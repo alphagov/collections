@@ -3,7 +3,7 @@ module OrganisationFeedHelpers
     params = {
       start: 0,
       count: 20,
-      fields: %w(title link description display_type public_timestamp),
+      fields: %w[title link description display_type public_timestamp],
       filter_organisations: organisation,
       reject_content_purpose_supergroup: "other",
       order: "-public_timestamp",
