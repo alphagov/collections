@@ -17,7 +17,7 @@ describe Organisations::PeoplePresenter do
         people: {
           brand: "attorney-generals-office",
           href: "/government/people/oliver-dowden",
-          image_src: "/photo/s465_oliver-dowden",
+          image_src: "/photo/oliver-dowden",
           image_alt: "Oliver Dowden CBE MP",
           description: nil,
           metadata: nil,
@@ -43,14 +43,11 @@ describe Organisations::PeoplePresenter do
         people: {
           brand: "attorney-generals-office",
           href: "/government/people/theresa-may",
-          image_src: "/photo/s465_theresa-may",
+          image_src: "/photo/theresa-may",
           image_alt: "Theresa May MP",
           description: nil,
           metadata: nil,
-          context: {
-            text: "The Rt Hon",
-          },
-          heading_text: "Theresa May MP",
+          heading_text: "The Rt Hon Theresa May MP",
           heading_level: 0,
           extra_links_no_indent: true,
           extra_links: [
@@ -155,7 +152,7 @@ describe Organisations::PeoplePresenter do
     end
 
     it "handles non-ministers with multiple roles" do
-      expected = "Chief Executive of the Civil Service , Permanent Secretary (Cabinet Office)"
+      expected = "Chief Executive of the Civil Service, Permanent Secretary (Cabinet Office)"
 
       assert_equal expected, @people_presenter.all_people.third[:people][1][:description]
     end
@@ -173,14 +170,14 @@ describe Organisations::PeoplePresenter do
         heading_text: "Sir Jeremy Heywood",
         heading_level: 0,
         extra_links_no_indent: true,
-        image_src: "/photo/s465_jeremy-heywood",
+        image_src: "/photo/jeremy-heywood",
         image_alt: "Sir Jeremy Heywood",
       }
 
       expected_non_important = {
         brand: "attorney-generals-office",
         href: "/government/people/john-manzoni",
-        description: "Chief Executive of the Civil Service ",
+        description: "Chief Executive of the Civil Service",
         metadata: nil,
         heading_text: "John Manzoni",
         heading_level: 0,
@@ -191,8 +188,8 @@ describe Organisations::PeoplePresenter do
       assert_equal expected_non_important, @non_important_board_members.all_people.third[:people][1]
     end
 
-    it "fetches small image" do
-      assert_equal "/photo/s465_jeremy-heywood", @people_presenter.all_people.third[:people][0][:image_src]
+    it "fetches image" do
+      assert_equal "/photo/jeremy-heywood", @people_presenter.all_people.third[:people][0][:image_src]
     end
   end
 end
