@@ -15,7 +15,7 @@ node {
       }
     },
     publishingE2ETests: true,
-    rubyLintDiff: false,
+    rubyLintDirs: "",
     brakeman: true,
   )
 }
