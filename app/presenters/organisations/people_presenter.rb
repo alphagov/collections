@@ -9,11 +9,7 @@ module Organisations
     end
 
     def has_people?
-      all_people.each do |people|
-        return true unless people[:people].empty?
-      end
-
-      false
+      all_people.map { |people| people[:people] }.any?(&:present?)
     end
 
     def all_people
