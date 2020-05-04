@@ -10,6 +10,7 @@ class OrganisationsController < ApplicationController
   end
 
   def show
+    raise "This is an intended exception"
     @organisation = Organisation.find!(request.path)
     setup_content_item_and_navigation_helpers(@organisation)
 
