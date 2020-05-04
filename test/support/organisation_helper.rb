@@ -84,6 +84,17 @@ module OrganisationHelpers
       ] }.to_json)
   end
 
+  def current_role_appointment(title:, base_path: nil)
+    {
+      details: {
+        current: true,
+      },
+      links: {
+        role: [{ title: title, base_path: base_path }.compact],
+      },
+    }
+  end
+
   def organisation_with_no_people
     {
       title: "Attorney General's Office",
@@ -96,6 +107,7 @@ module OrganisationHelpers
         ordered_chief_professional_officers: [],
         ordered_special_representatives: [],
       },
+      links: {},
     }.with_indifferent_access
   end
 
@@ -109,43 +121,60 @@ module OrganisationHelpers
         organisation_govuk_status: {
           status: "live",
         },
+      },
+      links: {
         ordered_ministers: [
           {
-            name: "Oliver Dowden CBE MP",
-            role: "Parliamentary Secretary (Minister for Implementation)",
-            href: "/government/people/oliver-dowden",
-            role_href: "/government/ministers/parliamentary-secretary",
-            image: {
-              url: "/photo/oliver-dowden",
-              alt_text: "Oliver Dowden CBE MP",
+            title: "Oliver Dowden CBE MP",
+            base_path: "/government/people/oliver-dowden",
+            details: {
+              image: {
+                url: "/photo/oliver-dowden",
+                alt_text: "Oliver Dowden CBE MP",
+              },
+            },
+            links: {
+              role_appointments: [
+                current_role_appointment(
+                  title: "Parliamentary Secretary (Minister for Implementation)",
+                  base_path: "/government/ministers/parliamentary-secretary",
+                ),
+              ],
             },
           },
           {
-            name: "Stuart Andrew MP",
-            role: "Parliamentary Under Secretary of State",
-            href: "/government/people/stuart-andrew",
-            role_href: "/government/ministers/parliamentary-under-secretary-of-state--94",
-          },
-          {
-            name_prefix: "The Rt Hon",
-            name: "Theresa May MP",
-            role: "Prime Minister",
-            href: "/government/people/theresa-may",
-            role_href: "/government/ministers/prime-minister",
-            image: {
-              url: "/photo/theresa-may",
-              alt_text: "Theresa May MP",
+            title: "Stuart Andrew MP",
+            base_path: "/government/people/stuart-andrew",
+            details: {},
+            links: {
+              role_appointments: [
+                current_role_appointment(
+                  title: "Parliamentary Under Secretary of State",
+                  base_path: "/government/ministers/parliamentary-under-secretary-of-state--94",
+                ),
+              ],
             },
           },
           {
-            name_prefix: "The Rt Hon",
-            name: "Theresa May MP",
-            role: "Minister for the Civil Service",
-            href: "/government/people/theresa-may",
-            role_href: "/government/ministers/minister-for-the-civil-service",
-            image: {
-              url: "/photo/theresa-may",
-              alt_text: "Theresa May MP",
+            title: "The Rt Hon Theresa May MP",
+            base_path: "/government/people/theresa-may",
+            details: {
+              image: {
+                url: "/photo/theresa-may",
+                alt_text: "Theresa May MP",
+              },
+            },
+            links: {
+              role_appointments: [
+                current_role_appointment(
+                  title: "Prime Minister",
+                  base_path: "/government/ministers/prime-minister",
+                ),
+                current_role_appointment(
+                  title: "Minister for the Civil Service",
+                  base_path: "/government/ministers/minister-for-the-civil-service",
+                ),
+              ],
             },
           },
         ],
@@ -162,32 +191,38 @@ module OrganisationHelpers
         organisation_govuk_status: {
           status: "live",
         },
+      },
+      links: {
         ordered_board_members: [
           {
-            name: "Sir Jeremy Heywood",
-            role: "Cabinet Secretary",
-            href: "/government/people/jeremy-heywood",
-            image: {
-              url: "/photo/jeremy-heywood",
-              alt_text: "Sir Jeremy Heywood",
+            title: "Sir Jeremy Heywood",
+            base_path: "/government/people/jeremy-heywood",
+            details: {
+              image: {
+                url: "/photo/jeremy-heywood",
+                alt_text: "Sir Jeremy Heywood",
+              },
+            },
+            links: {
+              role_appointments: [
+                current_role_appointment(title: "Cabinet Secretary"),
+              ],
             },
           },
           {
-            name: "John Manzoni",
-            role: "Chief Executive of the Civil Service ",
-            href: "/government/people/john-manzoni",
-            image: {
-              url: "/photo/john-manzoni",
-              alt_text: "John Manzoni",
+            title: "John Manzoni",
+            base_path: "/government/people/john-manzoni",
+            details: {
+              image: {
+                url: "/photo/john-manzoni",
+                alt_text: "John Manzoni",
+              },
             },
-          },
-          {
-            name: "John Manzoni",
-            role: "Permanent Secretary (Cabinet Office)",
-            href: "/government/people/john-manzoni",
-            image: {
-              url: "/photo/john-manzoni",
-              alt_text: "John Manzoni",
+            links: {
+              role_appointments: [
+                current_role_appointment(title: "Chief Executive of the Civil Service"),
+                current_role_appointment(title: "Permanent Secretary (Cabinet Office)"),
+              ],
             },
           },
         ],
@@ -205,23 +240,37 @@ module OrganisationHelpers
           status: "live",
         },
         important_board_members: 1,
+      },
+      links: {
         ordered_board_members: [
           {
-            name: "Sir Jeremy Heywood",
-            role: "Cabinet Secretary",
-            href: "/government/people/jeremy-heywood",
-            image: {
-              url: "/photo/jeremy-heywood",
-              alt_text: "Sir Jeremy Heywood",
+            title: "Sir Jeremy Heywood",
+            base_path: "/government/people/jeremy-heywood",
+            details: {
+              image: {
+                url: "/photo/jeremy-heywood",
+                alt_text: "Sir Jeremy Heywood",
+              },
+            },
+            links: {
+              role_appointments: [
+                current_role_appointment(title: "Cabinet Secretary"),
+              ],
             },
           },
           {
-            name: "John Manzoni",
-            role: "Chief Executive of the Civil Service ",
-            href: "/government/people/john-manzoni",
-            image: {
-              url: "/photo/john-manzoni",
-              alt_text: "John Manzoni",
+            title: "John Manzoni",
+            base_path: "/government/people/john-manzoni",
+            details: {
+              image: {
+                url: "/photo/john-manzoni",
+                alt_text: "John Manzoni",
+              },
+            },
+            links: {
+              role_appointments: [
+                current_role_appointment(title: "Chief Executive of the Civil Service"),
+              ],
             },
           },
         ],

@@ -35,19 +35,6 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             document_type: "Press release",
           },
         ],
-        ordered_ministers: [
-          {
-            name_prefix: "The Rt Hon",
-            name: "Theresa May MP",
-            role: "Prime Minister",
-            href: "/government/people/theresa-may",
-            role_href: "/government/ministers/prime-minister",
-            image: {
-              url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/6/PM_portrait_960x640.jpg",
-              alt_text: "Theresa May MP",
-            },
-          },
-        ],
         social_media_links: [
           {
             service_type: "twitter",
@@ -103,6 +90,27 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             title: "High Profile Group 2",
           },
         ],
+        ordered_ministers: [
+          {
+            content_id: "ec7cb2ba-3c02-48c5-a918-1f4a211499ae",
+            title: "The Rt Hon Theresa May MP",
+            base_path: "/government/people/theresa-may",
+            details: {
+              image: {
+                url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/6/PM_portrait_960x640.jpg",
+                alt_text: "Theresa May MP",
+              },
+            },
+            links: {
+              role_appointments: [
+                current_role_appointment(
+                  title: "Prime Minister",
+                  base_path: "/government/ministers/prime-minister",
+                ),
+              ],
+            },
+          },
+        ],
       },
     }
 
@@ -151,37 +159,11 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             document_type: "Press release",
           },
         ],
-        ordered_ministers: [
-          {
-            name_prefix: "The Rt Hon",
-            name: "Theresa May MP",
-            role: "Prime Minister",
-            href: "/government/people/theresa-may",
-            role_href: "/government/ministers/prime-minister",
-            image: {
-              url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/6/PM_portrait_960x640.jpg",
-              alt_text: "Theresa May MP",
-            },
-          },
-          {
-            name: "Stuart Andrew MP",
-            role: "Parliamentary Under Secretary of State",
-            href: "/government/people/stuart-andrew",
-            role_href: "/government/ministers/parliamentary-under-secretary-of-state--94",
-          },
-        ],
         social_media_links: [
           {
             service_type: "twitter",
             title: "Twitter - @attorneygeneral",
             href: "https://twitter.com/@attorneygeneral",
-          },
-        ],
-        ordered_board_members: [
-          {
-            name: "Sir Jeremy Heywood",
-            role: "Cabinet Secretary",
-            href: "/government/people/jeremy-heywood",
           },
         ],
         ordered_promotional_features: [
@@ -217,6 +199,54 @@ class OrganisationTest < ActionDispatch::IntegrationTest
       },
       links: {
         available_translations: [],
+        ordered_board_members: [
+          {
+            content_id: "ec7cb2ba-3c02-48c5-a918-1f4a211499ae",
+            title: "Sir Jeremy Heywood",
+            base_path: "/government/people/jeremy-heywood",
+            details: {},
+            links: {
+              role_appointments: [
+                current_role_appointment(title: "Cabinet Secretary"),
+              ],
+            },
+          },
+        ],
+        ordered_ministers: [
+          {
+            content_id: "ec7cb2ba-3c02-48c5-a918-1f4a211499ae",
+            title: "The Rt Hon Theresa May MP",
+            base_path: "/government/people/theresa-may",
+            details: {
+              image: {
+                url: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/6/PM_portrait_960x640.jpg",
+                alt_text: "Theresa May MP",
+              },
+            },
+            links: {
+              role_appointments: [
+                current_role_appointment(
+                  title: "Prime Minister",
+                  base_path: "/government/ministers/prime-minister",
+                ),
+              ],
+            },
+          },
+          {
+            content_id: "d6f8db55-5ff4-4e95-81e7-df2ac6d76a6b",
+            title: "Stuart Andrew MP",
+            base_path: "/government/people/stuart-andrew",
+            details: {},
+            links: {
+              role_appointments: [
+                current_role_appointment(
+                  title: "Parliamentary Under Secretary of State",
+                  base_path: "/government/ministers/parliamentary-under-secretary-of-state--94",
+                ),
+              ],
+            },
+          },
+        ],
         ordered_contacts: [
           {
             title: "Department for International Trade",
@@ -379,13 +409,6 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             href: "https://twitter.com/LlywDUCymru",
           },
         ],
-        ordered_military_personnel: [
-          {
-            name: "Air Chief Marshal Sir  Stuart Peach GBE KCB ADC DL",
-            role: "Chief of the Defence Staff",
-            href: "/government/people/stuart-peach",
-          },
-        ],
       },
       links: {
         available_translations: [
@@ -454,6 +477,18 @@ class OrganisationTest < ActionDispatch::IntegrationTest
                 },
               ],
               contact_form_links: [],
+            },
+          },
+        ],
+        ordered_military_personnel: [
+          {
+            title: "Air Chief Marshal Sir  Stuart Peach GBE KCB ADC DL",
+            base_path: "/government/people/stuart-peach",
+            details: {},
+            links: {
+              role_appointments: [
+                current_role_appointment(title: "Chief of the Defence Staff"),
+              ],
             },
           },
         ],
