@@ -499,13 +499,15 @@ class OrganisationTest < ActionDispatch::IntegrationTest
       cy[:base_path] = "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
     end
 
-    @content_item_separate_student_loans = org_example.merge(
-      base_path: "/government/organisations/student-loans-company",
-      title: "Student Loans Company",
-      organisation_govuk_status: {
-        status: "exempt",
-        url: "http://www.slc.co.uk/",
-        updated_at: nil,
+    @content_item_separate_student_loans = org_example.deep_merge(
+      "base_path" => "/government/organisations/student-loans-company",
+      "title" => "Student Loans Company",
+      "details" => {
+        "organisation_govuk_status" => {
+          "status" => "exempt",
+          "url" => "http://www.slc.co.uk/",
+          "updated_at" => nil,
+        },
       },
     )
 
