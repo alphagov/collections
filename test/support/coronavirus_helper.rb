@@ -56,6 +56,43 @@ def business_content_item
   end
 end
 
+def random_taxon_page
+  GovukSchemas::RandomExample.for_schema(frontend_schema: "taxon") do |item|
+    yield(item) if block_given?
+    item["phase"] = "live"
+    item
+  end
+end
+
+def business_taxon_content_item
+  random_taxon_page do |item|
+    item["content_id"] = TaxonsRedirectionController::CORONAVIRUS_BUSINESS_TAXON_CONTENT_ID
+    item
+  end
+end
+
+def business_subtaxon_content_item
+  stubbed_business_taxon = business_taxon_content_item.tap do |item|
+    item["links"] = {}
+  end
+
+  random_taxon_page do |item|
+    item["links"]["parent_taxons"] = [stubbed_business_taxon]
+    item
+  end
+end
+
+def other_subtaxon_item
+  random_linked_taxon = random_taxon_page do |item|
+    item["links"] = {}
+  end
+
+  random_taxon_page do |item|
+    item["links"]["parent_taxons"] = [random_linked_taxon]
+    item
+  end
+end
+
 def education_content_item
   random_landing_page do |item|
     item.merge(education_content_item_fixture)

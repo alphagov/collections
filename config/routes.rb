@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   mount JasmineRails::Engine => "/specs" if defined?(JasmineRails)
   mount GovukPublishingComponents::Engine, at: "/component-guide"
 
+  ["/coronavirus-taxon", "/coronavirus-taxon/*slug"].each do |path|
+    get path, to: "taxons_redirection#redirect"
+  end
+
   get "/coronavirus", to: "coronavirus_landing_page#show", as: :coronavirus_landing_page
   get "/coronavirus/:hub_slug", to: "coronavirus_landing_page#hub"
 
