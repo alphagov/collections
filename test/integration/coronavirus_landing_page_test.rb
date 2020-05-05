@@ -65,4 +65,33 @@ class CoronavirusLandingPageTest < ActionDispatch::IntegrationTest
       then_i_can_see_the_page_title("Education and Childcare")
     end
   end
+
+  describe "redirects from the taxon" do
+    it "redirects /coronavirus-taxon to the landing page" do
+      given_there_is_a_content_item
+      when_i_visit_the_coronavirus_taxon_page
+      then_i_am_redirected_to_the_landing_page
+    end
+
+    it "redirects subtaxons to appropriate hub pages" do
+      given_there_is_a_business_content_item
+      and_a_coronavirus_business_taxon
+      when_i_visit_the_coronavirus_business_taxon
+      then_i_am_redirected_to_the_business_hub_page
+    end
+
+    it "redirects subtaxons to appropriate hub pages" do
+      given_there_is_a_business_content_item
+      and_a_coronavirus_business_subtaxon
+      when_i_visit_the_coronavirus_business_subtaxon
+      then_i_am_redirected_to_the_business_hub_page
+    end
+
+    it "redirects subtaxons to the landing page if there is no overriding rule" do
+      given_there_is_a_content_item
+      and_another_coronavirus_subtaxon
+      when_i_visit_a_coronavirus_subtaxon_without_a_hub_page
+      then_i_am_redirected_to_the_landing_page
+    end
+  end
 end

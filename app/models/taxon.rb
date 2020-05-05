@@ -35,11 +35,13 @@ class Taxon
   end
 
   def child_taxons
-    return [] unless children?
+    @child_taxons ||= begin
+      return [] unless children?
 
-    linked_items("child_taxons")
-      .map { |child_taxon| self.class.new(child_taxon) }
-      .reject(&:alpha_taxon?)
+      linked_items("child_taxons")
+        .map { |child_taxon| self.class.new(child_taxon) }
+        .reject(&:alpha_taxon?)
+    end
   end
 
   def children?
@@ -47,11 +49,13 @@ class Taxon
   end
 
   def parent_taxons
-    return [] unless parents?
+    @parent_taxons ||= begin
+      return [] unless parents?
 
-    linked_items("parent_taxons")
-        .map { |child_taxon| self.class.new(child_taxon) }
-        .reject(&:alpha_taxon?)
+      linked_items("parent_taxons")
+          .map { |child_taxon| self.class.new(child_taxon) }
+          .reject(&:alpha_taxon?)
+    end
   end
 
   def parents?
