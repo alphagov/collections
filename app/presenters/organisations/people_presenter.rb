@@ -6,6 +6,7 @@ module Organisations
 
     def initialize(organisation)
       @org = organisation
+      @allowed_role_content_ids = organisation.all_roles.map { |role| role["content_id"] }
     end
 
     def has_people?
@@ -26,6 +27,8 @@ module Organisations
     end
 
   private
+
+    attr_reader :allowed_role_content_ids
 
     def images_for_important_board_members(people)
       people.map do |people_group|
@@ -58,6 +61,7 @@ module Organisations
       person["links"].fetch("role_appointments", [])
         .select { |ra| ra["details"]["current"] }
         .map { |ra| ra["links"]["role"].first }
+        .select { |role| allowed_role_content_ids.include?(role["content_id"]) }
         .select { |role| role["document_type"] == expected_document_type(type) }
     end
 

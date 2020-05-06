@@ -49,6 +49,7 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     @content_item_exempt_no_url = {
       title: "Exempt organisation",
       base_path: "/government/organisations/exempt-no-url",
+      links: {},
       details: {
         body: "This organisation has a status of exempt.",
         logo: {
@@ -63,6 +64,7 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     @content_item_exempt = {
       title: "Exempt organisation",
       base_path: "/government/organisations/exempt",
+      links: {},
       details: {
         body: "This organisation has a status of exempt.",
         logo: {
@@ -77,6 +79,7 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     @content_item_joining = {
       title: "Joining organisation",
       base_path: "/government/organisations/joining",
+      links: {},
       details: {
         body: "This organisation has a status of joining.",
         logo: {
@@ -90,6 +93,7 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     @content_item_left_gov = {
       title: "Left_gov organisation",
       base_path: "/government/organisations/left_gov",
+      links: {},
       details: {
         body: "This organisation has a status of left_gov.",
         logo: {
@@ -154,6 +158,7 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     @content_item_no_longer_exists = {
       title: "No_longer_exists organisation",
       base_path: "/government/organisations/no_longer_exists",
+      links: {},
       details: {
         body: "This organisation has a status of no_longer_exists.",
         logo: {
@@ -188,6 +193,7 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     @content_item_documents = {
       title: "Fire Service College",
       base_path: "/government/organisations/fire-service-college",
+      links: {},
       details: {
         body: "The Fire Service College (FSC) supplies specialist fire and rescue training to the UK's own fire and rescue services, the private security sector and the international market.\r\n\r\nThe college was formerly an executive agency of the Department for Communities and Local Government and was sold to Capita on 28 February 2013.<abbr title=\"Fire Service College\">FSC</abbr>",
         brand: "null",

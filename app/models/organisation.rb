@@ -121,6 +121,10 @@ class Organisation
     }
   end
 
+  def all_roles
+    links.fetch("ordered_roles", [])
+  end
+
   def important_board_member_count
     details["important_board_members"]
   end

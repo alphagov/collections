@@ -6,6 +6,7 @@ describe OrganisationsController do
       stub_content_store_has_item("/government/organisations/ministry-of-magic",
                                   title: "Ministry of magic",
                                   base_path: "/government/organisations/ministry-of-magic",
+                                  links: {},
                                   details: {
                                     body: "This organisation has a status of exempt.",
                                     logo: {

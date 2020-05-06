@@ -90,6 +90,9 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             title: "High Profile Group 2",
           },
         ],
+        ordered_roles: [
+          { content_id: "61a62a60-df26-4454-81da-0594f0d74d76" },
+        ],
         ordered_ministers: [
           {
             content_id: "ec7cb2ba-3c02-48c5-a918-1f4a211499ae",
@@ -104,6 +107,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             links: {
               role_appointments: [
                 current_role_appointment(
+                  content_id: "61a62a60-df26-4454-81da-0594f0d74d76",
                   title: "Prime Minister",
                   base_path: "/government/ministers/prime-minister",
                   document_type: "ministerial_role",
@@ -199,6 +203,11 @@ class OrganisationTest < ActionDispatch::IntegrationTest
         ],
       },
       links: {
+        ordered_roles: [
+          { content_id: "264a1f0e-6e0a-479b-83d4-2660afe36339" },
+          { content_id: "61a62a60-df26-4454-81da-0594f0d74d76" },
+          { content_id: "849f0fdc-6393-49fa-9661-9afdfb40615c" },
+        ],
         available_translations: [],
         ordered_board_members: [
           {
@@ -209,6 +218,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             links: {
               role_appointments: [
                 current_role_appointment(
+                  content_id: "264a1f0e-6e0a-479b-83d4-2660afe36339",
                   title: "Cabinet Secretary",
                   document_type: "board_member_role",
                 ),
@@ -230,6 +240,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             links: {
               role_appointments: [
                 current_role_appointment(
+                  content_id: "61a62a60-df26-4454-81da-0594f0d74d76",
                   title: "Prime Minister",
                   base_path: "/government/ministers/prime-minister",
                   document_type: "ministerial_role",
@@ -245,6 +256,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             links: {
               role_appointments: [
                 current_role_appointment(
+                  content_id: "849f0fdc-6393-49fa-9661-9afdfb40615c",
                   title: "Parliamentary Under Secretary of State",
                   base_path: "/government/ministers/parliamentary-under-secretary-of-state--94",
                   document_type: "ministerial_role",
@@ -486,6 +498,9 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             },
           },
         ],
+        ordered_roles: [
+          { content_id: "61a62a60-df26-4454-81da-0594f0d74d76" },
+        ],
         ordered_military_personnel: [
           {
             title: "Air Chief Marshal Sir  Stuart Peach GBE KCB ADC DL",
@@ -494,6 +509,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             links: {
               role_appointments: [
                 current_role_appointment(
+                  content_id: "61a62a60-df26-4454-81da-0594f0d74d76",
                   title: "Chief of the Defence Staff",
                   document_type: "military_role",
                 ),
