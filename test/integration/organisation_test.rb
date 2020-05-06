@@ -106,6 +106,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
                 current_role_appointment(
                   title: "Prime Minister",
                   base_path: "/government/ministers/prime-minister",
+                  document_type: "ministerial_role",
                 ),
               ],
             },
@@ -207,7 +208,10 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             details: {},
             links: {
               role_appointments: [
-                current_role_appointment(title: "Cabinet Secretary"),
+                current_role_appointment(
+                  title: "Cabinet Secretary",
+                  document_type: "board_member_role",
+                ),
               ],
             },
           },
@@ -228,6 +232,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
                 current_role_appointment(
                   title: "Prime Minister",
                   base_path: "/government/ministers/prime-minister",
+                  document_type: "ministerial_role",
                 ),
               ],
             },
@@ -242,6 +247,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
                 current_role_appointment(
                   title: "Parliamentary Under Secretary of State",
                   base_path: "/government/ministers/parliamentary-under-secretary-of-state--94",
+                  document_type: "ministerial_role",
                 ),
               ],
             },
@@ -487,7 +493,10 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             details: {},
             links: {
               role_appointments: [
-                current_role_appointment(title: "Chief of the Defence Staff"),
+                current_role_appointment(
+                  title: "Chief of the Defence Staff",
+                  document_type: "military_role",
+                ),
               ],
             },
           },

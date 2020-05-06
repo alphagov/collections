@@ -46,10 +46,19 @@ module Organisations
       type.eql?(:ministers)
     end
 
-    def current_roles(person)
+    def expected_document_type(type)
+      return "ministerial_role" if type == :ministers
+      return "military_role" if type == :military_personnel
+
+      # for example: board_members -> board_member_role
+      type.to_s.delete_suffix("s") + "_role"
+    end
+
+    def current_roles(person, type)
       person["links"].fetch("role_appointments", [])
         .select { |ra| ra["details"]["current"] }
         .map { |ra| ra["links"]["role"].first }
+        .select { |role| role["document_type"] == expected_document_type(type) }
     end
 
     def formatted_role_link(role)
@@ -60,7 +69,7 @@ module Organisations
     end
 
     def formatted_person_data(person, type)
-      roles = current_roles(person)
+      roles = current_roles(person, type)
 
       data = {
         brand: @org.brand,
