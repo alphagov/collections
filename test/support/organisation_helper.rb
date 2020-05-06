@@ -84,7 +84,7 @@ module OrganisationHelpers
       ] }.to_json)
   end
 
-  def current_role_appointment(title:, base_path: nil, payment_type: nil, document_type: nil)
+  def current_role_appointment(title:, base_path: nil, payment_type: nil, document_type: nil, content_id: nil)
     {
       details: {
         current: true,
@@ -92,6 +92,7 @@ module OrganisationHelpers
       links: {
         role: [
           {
+            content_id: content_id,
             title: title,
             base_path: base_path,
             document_type: document_type,
@@ -130,6 +131,12 @@ module OrganisationHelpers
         },
       },
       links: {
+        ordered_roles: [
+          { content_id: "264a1f0e-6e0a-479b-83d4-2660afe36339" },
+          { content_id: "61a62a60-df26-4454-81da-0594f0d74d76" },
+          { content_id: "849f0fdc-6393-49fa-9661-9afdfb40615c" },
+          { content_id: "3f4bbf6c-741e-4207-9135-63d1c8f39c28" },
+        ],
         ordered_ministers: [
           {
             title: "Oliver Dowden CBE MP",
@@ -143,6 +150,7 @@ module OrganisationHelpers
             links: {
               role_appointments: [
                 current_role_appointment(
+                  content_id: "264a1f0e-6e0a-479b-83d4-2660afe36339",
                   title: "Parliamentary Secretary (Minister for Implementation)",
                   base_path: "/government/ministers/parliamentary-secretary",
                   document_type: "ministerial_role",
@@ -157,6 +165,7 @@ module OrganisationHelpers
             links: {
               role_appointments: [
                 current_role_appointment(
+                  content_id: "61a62a60-df26-4454-81da-0594f0d74d76",
                   title: "Parliamentary Under Secretary of State",
                   base_path: "/government/ministers/parliamentary-under-secretary-of-state--94",
                   document_type: "ministerial_role",
@@ -176,11 +185,13 @@ module OrganisationHelpers
             links: {
               role_appointments: [
                 current_role_appointment(
+                  content_id: "849f0fdc-6393-49fa-9661-9afdfb40615c",
                   title: "Prime Minister",
                   base_path: "/government/ministers/prime-minister",
                   document_type: "ministerial_role",
                 ),
                 current_role_appointment(
+                  content_id: "3f4bbf6c-741e-4207-9135-63d1c8f39c28",
                   title: "Minister for the Civil Service",
                   base_path: "/government/ministers/minister-for-the-civil-service",
                   document_type: "ministerial_role",
@@ -204,6 +215,11 @@ module OrganisationHelpers
         },
       },
       links: {
+        ordered_roles: [
+          { content_id: "264a1f0e-6e0a-479b-83d4-2660afe36339" },
+          { content_id: "61a62a60-df26-4454-81da-0594f0d74d76" },
+          { content_id: "849f0fdc-6393-49fa-9661-9afdfb40615c" },
+        ],
         ordered_board_members: [
           {
             title: "Sir Jeremy Heywood",
@@ -217,6 +233,7 @@ module OrganisationHelpers
             links: {
               role_appointments: [
                 current_role_appointment(
+                  content_id: "264a1f0e-6e0a-479b-83d4-2660afe36339",
                   title: "Cabinet Secretary",
                   document_type: "board_member_role",
                 ),
@@ -235,10 +252,12 @@ module OrganisationHelpers
             links: {
               role_appointments: [
                 current_role_appointment(
+                  content_id: "61a62a60-df26-4454-81da-0594f0d74d76",
                   title: "Chief Executive of the Civil Service",
                   document_type: "board_member_role",
                 ),
                 current_role_appointment(
+                  content_id: "849f0fdc-6393-49fa-9661-9afdfb40615c",
                   title: "Permanent Secretary (Cabinet Office)",
                   document_type: "board_member_role",
                 ),
@@ -262,6 +281,10 @@ module OrganisationHelpers
         important_board_members: 1,
       },
       links: {
+        ordered_roles: [
+          { content_id: "264a1f0e-6e0a-479b-83d4-2660afe36339" },
+          { content_id: "61a62a60-df26-4454-81da-0594f0d74d76" },
+        ],
         ordered_board_members: [
           {
             title: "Sir Jeremy Heywood",
@@ -275,6 +298,7 @@ module OrganisationHelpers
             links: {
               role_appointments: [
                 current_role_appointment(
+                  content_id: "264a1f0e-6e0a-479b-83d4-2660afe36339",
                   title: "Cabinet Secretary",
                   document_type: "board_member_role",
                   payment_type: "Unpaid",
@@ -294,6 +318,7 @@ module OrganisationHelpers
             links: {
               role_appointments: [
                 current_role_appointment(
+                  content_id: "61a62a60-df26-4454-81da-0594f0d74d76",
                   title: "Chief Executive of the Civil Service",
                   document_type: "board_member_role",
                 ),
