@@ -11,17 +11,17 @@ end
 describe WorldTaxonomySorter do
   setup do
     child_taxon_titles = [
-     "Birth, death and marriage abroad",
-     "Transition",
-     "British embassy or high commission",
-     "Coming to the UK",
-     "Emergency help for British nationals",
-     "News and events",
-     "Passports and emergency travel documents",
-     "Living in",
-     "Tax, benefits, pensions and working abroad",
-     "Trade and invest",
-     "Travelling to",
+      "Birth, death and marriage abroad",
+      "Transition",
+      "British embassy or high commission",
+      "Coming to the UK",
+      "Emergency help for British nationals",
+      "News and events",
+      "Passports and emergency travel documents",
+      "Living in",
+      "Tax, benefits, pensions and working abroad",
+      "Trade and invest",
+      "Travelling to",
     ]
     @child_taxons = child_taxon_titles.map { |title| FakeTaxon.new(title) }
 

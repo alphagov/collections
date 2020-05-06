@@ -6,11 +6,11 @@ describe EmailSignupsController do
     stub_content_store_has_item(
       "/topic/oil-and-gas/wells",
       content_item_for_base_path("/topic/oil-and-gas/wells").merge("links" => {
-          "parent" => [{
-            "title" => "Oil and Gas",
-            "base_path" => "/oil-and-gas",
-          }],
-        }),
+        "parent" => [{
+          "title" => "Oil and Gas",
+          "base_path" => "/oil-and-gas",
+        }],
+      }),
     )
 
     @invalid_subtopic_params = { topic_slug: "invalid", subtopic_slug: "subtopic" }

@@ -42,11 +42,11 @@ private
     organisations_with_logos.map.with_index do |org, index|
       {
 
-          name: org.logo_formatted_title,
-          url: org.link,
-          brand: org.brand,
-          crest: org.crest,
-          data_attributes: data_attributes(org.link, org.title, index + 1),
+        name: org.logo_formatted_title,
+        url: org.link,
+        brand: org.brand,
+        crest: org.crest,
+        data_attributes: data_attributes(org.link, org.title, index + 1),
       }
     end
   end

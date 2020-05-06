@@ -78,7 +78,7 @@ describe TransitionLandingPagePresenter do
             track_action: "/base_path",
             track_label: "research_and_statistics",
             module: "track-click",
-         },
+          },
         },
         {
           text: "Policy papers and consultations",

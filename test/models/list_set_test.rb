@@ -9,17 +9,17 @@ describe ListSet do
         {
           "name" => "Paying HMRC",
           "contents" => [
-           "/pay-paye-tax",
-           "/pay-psa",
-           "/pay-paye-penalty",
+            "/pay-paye-tax",
+            "/pay-psa",
+            "/pay-paye-penalty",
           ],
         },
         {
           "name" => "Annual PAYE and payroll tasks",
           "contents" => [
-           "/payroll-annual-reporting",
-           "/get-paye-forms-p45-p60",
-           "/employee-tax-codes",
+            "/payroll-annual-reporting",
+            "/get-paye-forms-p45-p60",
+            "/employee-tax-codes",
           ],
         },
       ]

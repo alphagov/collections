@@ -83,31 +83,31 @@ module TaxonHelpers
 
   def tagged_organisations
     [
-        tagged_organisation,
-        tagged_organisation_with_logo,
+      tagged_organisation,
+      tagged_organisation_with_logo,
     ]
   end
 
   def tagged_organisation
     {
-        "value" => {
-            "title" => "Organisation without logo",
-            "link" => "/government/organisations/organisation-without-logo",
-            "organisation_state" => "live",
-        },
+      "value" => {
+        "title" => "Organisation without logo",
+        "link" => "/government/organisations/organisation-without-logo",
+        "organisation_state" => "live",
+      },
     }
   end
 
   def tagged_organisation_with_logo
     {
-        "value" => {
-            "title" => "Organisation with logo",
-            "link" => "/government/organisations/organisation-with-logo",
-            "organisation_state" => "live",
-            "organisation_brand" => "org-brand",
-            "organisation_crest" => "single-identity",
-            "logo_formatted_title" => "organisation-with-logo",
-        },
+      "value" => {
+        "title" => "Organisation with logo",
+        "link" => "/government/organisations/organisation-with-logo",
+        "organisation_state" => "live",
+        "organisation_brand" => "org-brand",
+        "organisation_crest" => "single-identity",
+        "logo_formatted_title" => "organisation-with-logo",
+      },
     }
   end
 

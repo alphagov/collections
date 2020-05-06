@@ -45,8 +45,8 @@ private
   def build_announcements_schema(content_item)
     announcement_text = ApplicationController.render partial: "coronavirus_landing_page/components/shared/announcements",
                                                      locals: {
-        announcements: content_item["details"]["announcements"],
-      }
+                                                       announcements: content_item["details"]["announcements"],
+                                                     }
     question_and_answer_schema("Announcements", announcement_text)
   end
 

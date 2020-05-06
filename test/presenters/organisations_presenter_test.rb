@@ -48,11 +48,11 @@ describe Organisations::IndexPresenter do
 
     it "returns agencies_and_other_public_bodies departments as part of all_organisations hash" do
       expected = [{
-          "title": "The Charity Commission",
-          "href": "/government/organisations/charity-commission",
-          "brand": "department-for-business-innovation-skills",
-          "separate_website": true,
-    }.with_indifferent_access]
+        "title": "The Charity Commission",
+        "href": "/government/organisations/charity-commission",
+        "brand": "department-for-business-innovation-skills",
+        "separate_website": true,
+      }.with_indifferent_access]
 
       assert_equal expected, @organisations_presenter.all_organisations[:non_ministerial_departments]
     end
