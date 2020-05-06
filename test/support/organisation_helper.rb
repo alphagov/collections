@@ -84,7 +84,7 @@ module OrganisationHelpers
       ] }.to_json)
   end
 
-  def current_role_appointment(title:, base_path: nil, payment_type: nil)
+  def current_role_appointment(title:, base_path: nil, payment_type: nil, document_type: nil)
     {
       details: {
         current: true,
@@ -94,6 +94,7 @@ module OrganisationHelpers
           {
             title: title,
             base_path: base_path,
+            document_type: document_type,
             details: { role_payment_type: payment_type },
           }.compact,
         ],
@@ -144,6 +145,7 @@ module OrganisationHelpers
                 current_role_appointment(
                   title: "Parliamentary Secretary (Minister for Implementation)",
                   base_path: "/government/ministers/parliamentary-secretary",
+                  document_type: "ministerial_role",
                 ),
               ],
             },
@@ -157,6 +159,7 @@ module OrganisationHelpers
                 current_role_appointment(
                   title: "Parliamentary Under Secretary of State",
                   base_path: "/government/ministers/parliamentary-under-secretary-of-state--94",
+                  document_type: "ministerial_role",
                 ),
               ],
             },
@@ -175,10 +178,12 @@ module OrganisationHelpers
                 current_role_appointment(
                   title: "Prime Minister",
                   base_path: "/government/ministers/prime-minister",
+                  document_type: "ministerial_role",
                 ),
                 current_role_appointment(
                   title: "Minister for the Civil Service",
                   base_path: "/government/ministers/minister-for-the-civil-service",
+                  document_type: "ministerial_role",
                 ),
               ],
             },
@@ -211,7 +216,10 @@ module OrganisationHelpers
             },
             links: {
               role_appointments: [
-                current_role_appointment(title: "Cabinet Secretary"),
+                current_role_appointment(
+                  title: "Cabinet Secretary",
+                  document_type: "board_member_role",
+                ),
               ],
             },
           },
@@ -226,8 +234,14 @@ module OrganisationHelpers
             },
             links: {
               role_appointments: [
-                current_role_appointment(title: "Chief Executive of the Civil Service"),
-                current_role_appointment(title: "Permanent Secretary (Cabinet Office)"),
+                current_role_appointment(
+                  title: "Chief Executive of the Civil Service",
+                  document_type: "board_member_role",
+                ),
+                current_role_appointment(
+                  title: "Permanent Secretary (Cabinet Office)",
+                  document_type: "board_member_role",
+                ),
               ],
             },
           },
@@ -260,7 +274,11 @@ module OrganisationHelpers
             },
             links: {
               role_appointments: [
-                current_role_appointment(title: "Cabinet Secretary", payment_type: "Unpaid"),
+                current_role_appointment(
+                  title: "Cabinet Secretary",
+                  document_type: "board_member_role",
+                  payment_type: "Unpaid",
+                ),
               ],
             },
           },
@@ -275,7 +293,10 @@ module OrganisationHelpers
             },
             links: {
               role_appointments: [
-                current_role_appointment(title: "Chief Executive of the Civil Service"),
+                current_role_appointment(
+                  title: "Chief Executive of the Civil Service",
+                  document_type: "board_member_role",
+                ),
               ],
             },
           },
