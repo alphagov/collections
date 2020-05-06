@@ -166,7 +166,7 @@ describe Organisations::PeoplePresenter do
         brand: "attorney-generals-office",
         href: "/government/people/jeremy-heywood",
         description: "Cabinet Secretary",
-        metadata: nil,
+        metadata: "Unpaid",
         heading_text: "Sir Jeremy Heywood",
         heading_level: 0,
         extra_links_no_indent: true,

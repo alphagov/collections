@@ -84,13 +84,19 @@ module OrganisationHelpers
       ] }.to_json)
   end
 
-  def current_role_appointment(title:, base_path: nil)
+  def current_role_appointment(title:, base_path: nil, payment_type: nil)
     {
       details: {
         current: true,
       },
       links: {
-        role: [{ title: title, base_path: base_path }.compact],
+        role: [
+          {
+            title: title,
+            base_path: base_path,
+            details: { role_payment_type: payment_type },
+          }.compact,
+        ],
       },
     }
   end
@@ -254,7 +260,7 @@ module OrganisationHelpers
             },
             links: {
               role_appointments: [
-                current_role_appointment(title: "Cabinet Secretary"),
+                current_role_appointment(title: "Cabinet Secretary", payment_type: "Unpaid"),
               ],
             },
           },
