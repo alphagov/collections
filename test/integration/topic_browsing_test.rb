@@ -39,21 +39,21 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
 
   it "renders a topic tag page and list its subtopics" do
     stub_content_store_has_item("/topic/oil-and-gas", oil_and_gas_topic_item.merge(links: {
-        "children" => [
-          {
-            "title" => "Wells",
-            "base_path" => "/topic/oil-and-gas/wells",
-          },
-          {
-            "title" => "Fields",
-            "base_path" => "/topic/oil-and-gas/fields",
-          },
-          {
-            "title" => "Offshore",
-            "base_path" => "/topic/oil-and-gas/offshore",
-          },
-        ],
-      }))
+      "children" => [
+        {
+          "title" => "Wells",
+          "base_path" => "/topic/oil-and-gas/wells",
+        },
+        {
+          "title" => "Fields",
+          "base_path" => "/topic/oil-and-gas/fields",
+        },
+        {
+          "title" => "Offshore",
+          "base_path" => "/topic/oil-and-gas/offshore",
+        },
+      ],
+    }))
 
     visit "/topic/oil-and-gas"
     assert page.has_title?("Oil and gas - GOV.UK")
@@ -135,13 +135,13 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
 
   it "tracks clicks events on subtopic pages" do
     stub_content_store_has_item("/topic/oil-and-gas", oil_and_gas_topic_item.merge(links: {
-        "children" => [
-          {
-            "title" => "Wells",
-            "base_path" => "/topic/oil-and-gas/wells",
-          },
-        ],
-      }))
+      "children" => [
+        {
+          "title" => "Wells",
+          "base_path" => "/topic/oil-and-gas/wells",
+        },
+      ],
+    }))
 
     visit "/topic/oil-and-gas"
 

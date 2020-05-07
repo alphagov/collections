@@ -141,7 +141,7 @@ describe Organisations::PeoplePresenter do
           people: [],
           lang: false,
         },
-    ]
+      ]
 
       assert_equal expected, @no_people_presenter.all_people
     end

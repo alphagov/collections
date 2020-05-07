@@ -6,16 +6,16 @@ class ContentStoreOrganisations
   attr_reader :content_item
 
   DEPARTMENT_TYPE_AND_NAMES = {
-      "executive_office" => "",
-      "ministerial_department" => "Ministerial department",
-      "executive_agency" => "Executive agency",
-      "executive_ndpb" => "Executive non-departmental public body",
-      "advisory_ndpb" => "Advisory non-departmental public body",
-      "other" => "Other",
-      "civil_service" => "Civil Service",
-      "non_ministerial_department" => "Non-ministerial department",
-      "tribunal" => "Tribunal",
-      "public_corporation" => "Public corporation",
+    "executive_office" => "",
+    "ministerial_department" => "Ministerial department",
+    "executive_agency" => "Executive agency",
+    "executive_ndpb" => "Executive non-departmental public body",
+    "advisory_ndpb" => "Advisory non-departmental public body",
+    "other" => "Other",
+    "civil_service" => "Civil Service",
+    "non_ministerial_department" => "Non-ministerial department",
+    "tribunal" => "Tribunal",
+    "public_corporation" => "Public corporation",
   }.freeze
 
   def initialize(content_item)

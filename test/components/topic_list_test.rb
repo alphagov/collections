@@ -33,14 +33,14 @@ class TopicListTest < ComponentTestCase
 
   test "renders links with data attributes" do
     render_component(items: [
-                              {
-                                path: "/path",
-                                text: "Text",
-                                data_attributes: {
-                                  test: "test",
-                                },
-                              },
-                            ])
+      {
+        path: "/path",
+        text: "Text",
+        data_attributes: {
+          test: "test",
+        },
+      },
+    ])
 
     assert_select ".app-c-topic-list__link[data-test='test']"
   end

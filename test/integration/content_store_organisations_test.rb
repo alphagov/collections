@@ -81,69 +81,69 @@ private
     @content_hash = {
       title: "Departments, agencies and public bodies",
       details: {
-      ordered_ministerial_departments: [
-        {
-          title: "Attorney General's Office",
-          href: "/government/organisations/attorney-generals-office",
-          brand: "attorney-generals-office",
-          slug: "attorney-generals-office",
-          logo: {
-            formatted_title: "Attorney General's Office",
-            crest: "single-identity",
+        ordered_ministerial_departments: [
+          {
+            title: "Attorney General's Office",
+            href: "/government/organisations/attorney-generals-office",
+            brand: "attorney-generals-office",
+            slug: "attorney-generals-office",
+            logo: {
+              formatted_title: "Attorney General's Office",
+              crest: "single-identity",
+            },
+            separate_website: false,
+            works_with: {
+              non_ministerial_department: [
+                {
+                  title: "Crown Prosecution Service",
+                  href: "/government/organisations/crown-prosecution-service",
+                },
+                {
+                  title: "Government Legal Department",
+                  href: "/government/organisations/government-legal-department",
+                },
+                {
+                  title: "Serious Fraud Office",
+                  href: "/government/organisations/serious-fraud-office",
+                },
+              ],
+              other: [
+                {
+                  title: "HM Crown Prosecution Service Inspectorate",
+                  href: "/government/organisations/hm-crown-prosecution-service-inspectorate",
+                },
+              ],
+              executive_ndpb: [],
+            },
           },
-          separate_website: false,
-          works_with: {
-            non_ministerial_department: [
-              {
-                title: "Crown Prosecution Service",
-                href: "/government/organisations/crown-prosecution-service",
-              },
-              {
-                title: "Government Legal Department",
-                href: "/government/organisations/government-legal-department",
-              },
-              {
-                title: "Serious Fraud Office",
-                href: "/government/organisations/serious-fraud-office",
-              },
-          ],
-            other: [
-              {
-                title: "HM Crown Prosecution Service Inspectorate",
-                href: "/government/organisations/hm-crown-prosecution-service-inspectorate",
-              },
-            ],
-            executive_ndpb: [],
+        ],
+        ordered_non_ministerial_departments: [
+          {
+            title: "Arts and Humanities Research Council",
+            href: "/government/organisations/arts-and-humanities-research-council",
+            separate_website: true,
+            slug: "arts-and-humanities-research-council",
           },
-        },
-      ],
-      ordered_non_ministerial_departments: [
-        {
-          title: "Arts and Humanities Research Council",
-          href: "/government/organisations/arts-and-humanities-research-council",
-          separate_website: true,
-          slug: "arts-and-humanities-research-council",
-        },
-        {
-          title: "Competition and Markets Authority",
-          href: "/government/organisations/competition-and-markets-authority",
-          slug: "competition-and-markets-authority",
-          separate_website: true,
-          works_with: {
-            non_ministerial_department: [
-              {
-                title: "Crown Prosecution Service",
-                href: "/government/organisations/crown-prosecution-service",
-              },
-            ],
+          {
+            title: "Competition and Markets Authority",
+            href: "/government/organisations/competition-and-markets-authority",
+            slug: "competition-and-markets-authority",
+            separate_website: true,
+            works_with: {
+              non_ministerial_department: [
+                {
+                  title: "Crown Prosecution Service",
+                  href: "/government/organisations/crown-prosecution-service",
+                },
+              ],
+            },
           },
-        },
-      ],
-      ordered_executive_offices: [],
-      ordered_agencies_and_other_public_bodies: [],
-      ordered_high_profile_groups: [],
-      ordered_public_corporations: [],
-      ordered_devolved_administrations: [],
+        ],
+        ordered_executive_offices: [],
+        ordered_agencies_and_other_public_bodies: [],
+        ordered_high_profile_groups: [],
+        ordered_public_corporations: [],
+        ordered_devolved_administrations: [],
       },
     }
   end
