@@ -10,8 +10,8 @@
   display: table-cell;
   width: 50px;
   height: 45px;
-  background-image: image-url("covid-arrow.png"); // PNG fallback for SVG
-  background-image: image-url("covid-arrow.svg");
+  background-image: image-url("action-link-arrow.png"); // PNG fallback for SVG
+  background-image: image-url("action-link-arrow.svg");
   background-repeat: no-repeat;
   background-position: 0 50%;
   background-size: 37px auto;
@@ -50,8 +50,8 @@
   .app-c-action-link__arrow {
     width: 35px;
     height: 30px;
-    background-image: image-url("corona-arrow-mini-dark.png"); // PNG fallback for SVG
-    background-image: image-url("corona-arrow-mini-dark.svg");
+    background-image: image-url("action-link-arrow--dark.png"); // PNG fallback for SVG
+    background-image: image-url("action-link-arrow--dark.svg");
     background-size: 25px auto;
     background-position: 0 0;
   }
