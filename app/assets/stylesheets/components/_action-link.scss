@@ -40,6 +40,21 @@
   white-space: nowrap;
 }
 
+.app-c-action-link--simple {
+  .app-c-action-link__arrow {
+    width: 30px;
+    height: 30px;
+    background-image: image-url("action-link-arrow--simple.png");
+    background-image: image-url("action-link-arrow--simple.svg");
+    background-size: 25px auto;
+    background-position: 0 0;
+  }
+
+  .app-c-action-link__link {
+    text-decoration: none;
+  }
+}
+
 .app-c-action-link--dark-icon {
   max-width: none;
 

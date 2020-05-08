@@ -22,6 +22,15 @@ class ActionLinkTest < ComponentTestCase
     assert_select ".app-c-action-link .app-c-action-link__nowrap-text", text: "about COVID"
   end
 
+  test "renders simple icon version" do
+    render_component(
+      text: "Get more info",
+      href: "/coronavirus",
+      simple: true,
+    )
+    assert_select ".app-c-action-link--simple"
+  end
+
   test "renders dark icon version" do
     render_component(
       text: "Get more info",

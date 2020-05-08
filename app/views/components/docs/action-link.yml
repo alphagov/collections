@@ -10,7 +10,7 @@ examples:
   with_no_wrapping_text:
     data:
       text: "Coronavirus (COVID-19):"
-      nowrap_text: what you need to do 
+      nowrap_text: what you need to do
       href: '/my-test-page'
   with_light_text:
     data:
@@ -19,6 +19,11 @@ examples:
       light_text: true
     context:
       dark_background: true
+  simple_arrow:
+    data:
+      text: "Getting financial help and keeping your business safe"
+      href: "/financial-help"
+      simple: true
   with_dark_icon:
     data:
       text: "Coronavirus (COVID-19)"
