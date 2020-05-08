@@ -12,10 +12,13 @@
   css_classes << "app-c-action-link--dark-icon" if dark_icon
 %>
 <% if href.present? && text.present? %>
-  <span class="<%= css_classes.join(' ') %>">
-    <%= link_to  href, :class => "govuk-link app-c-action-link__link", :data => data do %>
-      <%= text %>
-      <%= content_tag(:span, nowrap_text, class: "app-c-action-link__nowrap-text") if nowrap_text %>
-    <% end %>
-  </span>
+  <div class="<%= css_classes.join(' ') %>">
+    <span class="app-c-action-link__arrow"></span>
+    <span class="app-c-action-link__link-wrapper">
+      <%= link_to  href, :class => "govuk-link app-c-action-link__link", :data => data do %>
+        <%= text %>
+        <%= content_tag(:span, nowrap_text, class: "app-c-action-link__nowrap-text") if nowrap_text %>
+      <% end %>
+    </span>
+  </div>
 <% end %>
