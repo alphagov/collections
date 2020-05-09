@@ -6,7 +6,7 @@ class CoronavirusLandingPageController < ApplicationController
     @content_item = content_item.to_hash
     breadcrumbs = [{ title: "Home", url: "/", is_page_parent: true }]
     title = {
-      text: @content_item["title"],
+      text: presenter.page_header,
     }
 
     render "show", locals: {
@@ -38,18 +38,18 @@ class CoronavirusLandingPageController < ApplicationController
 private
 
   def content_item
-    ContentItem.find!(request.path)
+    @content_item ||= ContentItem.find!(request.path)
   end
 
   def presenter
-    CoronavirusLandingPagePresenter.new(@content_item)
+    @presenter ||= CoronavirusLandingPagePresenter.new(@content_item)
   end
 
   def special_announcement
-    SpecialAnnouncementPresenter.new(@content_item)
+    @special_announcement ||= SpecialAnnouncementPresenter.new(@content_item)
   end
 
   def hub_presenter
-    CoronavirusHubPresenter.new(@content_item)
+    @hub_presenter ||= CoronavirusHubPresenter.new(@content_item)
   end
 end
