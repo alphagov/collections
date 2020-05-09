@@ -1,4 +1,3 @@
-<% page_title_text = raw title[:text] %>
 <header class="covid__page-header covid__page-header--landing-page">
   <div class="govuk-width-container">
     <%= render 'govuk_publishing_components/components/breadcrumbs', {
@@ -11,7 +10,7 @@
       <div class="govuk-grid-column-two-thirds">
         <%= render "govuk_publishing_components/components/title", {
           context: title[:context],
-          title: page_title_text,
+          title: raw(title[:text]),
           inverse: true,
           margin_top: 4
         } %>
