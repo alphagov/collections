@@ -1,21 +1,23 @@
 .app-c-action-link {
   display: table;
 
+  &:before {
+    content: "";
+    display: table-cell;
+    width: 50px;
+    height: 45px;
+    background-image: image-url("action-link-arrow.png"); // PNG fallback for SVG
+    background-image: image-url("action-link-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-size: 37px auto;
+  }
+
   @include govuk-media-query($until: tablet) {
     max-width: 410px;
   }
 }
 
-.app-c-action-link__arrow {
-  display: table-cell;
-  width: 50px;
-  height: 45px;
-  background-image: image-url("action-link-arrow.png"); // PNG fallback for SVG
-  background-image: image-url("action-link-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: 0 50%;
-  background-size: 37px auto;
-}
 
 .app-c-action-link__link-wrapper {
   display: table-cell;
@@ -41,7 +43,7 @@
 }
 
 .app-c-action-link--simple {
-  .app-c-action-link__arrow {
+  &:before {
     width: 30px;
     height: 30px;
     background-image: image-url("action-link-arrow--simple.png");
@@ -62,7 +64,7 @@
     margin-bottom: govuk-spacing(2);
   }
 
-  .app-c-action-link__arrow {
+  &:before {
     width: 35px;
     height: 30px;
     background-image: image-url("action-link-arrow--dark.png"); // PNG fallback for SVG
@@ -95,7 +97,7 @@
 }
 
 .app-c-action-link--compact {
-  .app-c-action-link__arrow {
+  &:before {
     height: 30px;
     width: 26px;
   }

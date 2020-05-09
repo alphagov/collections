@@ -15,7 +15,6 @@
 %>
 <% if href.present? && text.present? %>
   <div class="<%= css_classes.join(' ') %>">
-    <span class="app-c-action-link__arrow"></span>
     <span class="app-c-action-link__link-wrapper">
       <%= link_to  href, :class => "govuk-link app-c-action-link__link", :data => data do %>
         <%= text %>
