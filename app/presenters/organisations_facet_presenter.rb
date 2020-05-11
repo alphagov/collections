@@ -3,10 +3,10 @@ class OrganisationsFacetPresenter
   include ActionView::Helpers::UrlHelper
 
   def initialize(facet_information)
-    @organisations = facet_information["options"].map { |option|
+    @organisations = facet_information["options"].map do |option|
       value = option["value"]
       [value["title"], value["link"]]
-    }
+    end
   end
 
   def any?
@@ -14,8 +14,8 @@ class OrganisationsFacetPresenter
   end
 
   def array_of_links
-    @organisations.map { |title, link|
+    @organisations.map do |title, link|
       link_to title, link
-    }
+    end
   end
 end

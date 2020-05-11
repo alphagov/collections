@@ -50,11 +50,17 @@ private
     format && self.class.acceptable_formats.fetch(params[:action].to_sym, []).include?(format.to_sym)
   end
 
-  def error_403; error 403; end
+  def error_403
+    error 403
+  end
 
-  def error_404; error 404; end
+  def error_404
+    error 404
+  end
 
-  def error_410; error 410; end
+  def error_410
+    error 410
+  end
 
   def error_503(exception)
     error(503, exception)

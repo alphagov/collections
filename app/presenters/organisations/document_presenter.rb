@@ -44,9 +44,9 @@ module Organisations
 
       # Handle document types with acronyms
       document_acronyms = %w[Foi Dfid Aaib Cma Esi Hmrc Html Maib Raib Utaac]
-      document_acronyms.each { |acronym|
+      document_acronyms.each do |acronym|
         document_type.gsub!(acronym, acronym.upcase)
-      }
+      end
 
       document_type
     end

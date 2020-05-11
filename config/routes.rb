@@ -88,7 +88,7 @@ Rails.application.routes.draw do
       to: redirect { |_path_params, req|
         [req.path.gsub("%2F", "/"), req.query_string].join("?").chomp("?")
       },
-      constraints: lambda { |req| req.path.include? "%2F" }
+      constraints: ->(req) { req.path.include? "%2F" }
 
   get "*taxon_base_path", to: "taxons#show"
 end

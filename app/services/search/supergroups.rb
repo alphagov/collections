@@ -30,13 +30,13 @@ module Search
     end
 
     def groups
-      @groups ||= SUPERGROUP_TYPES.map { |group|
+      @groups ||= SUPERGROUP_TYPES.map do |group|
         Supergroup.new(
           organisation_slug: (@organisation ? @organisation.slug : nil),
           content_purpose_supergroup: group,
           additional_search_params: SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(group, {}),
         )
-      }
+      end
     end
   end
 end
