@@ -26,35 +26,40 @@
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
           <%= render "govuk_publishing_components/components/heading", {
-            text: "Stay alert",
+            text: rules["pretext"],
             font_size: 19,
             margin_bottom: 3,
             inverse: true
           } %>
           <p class="govuk-body covid__inverse">
-            We can all help control the virus if we all stay alert. This means you must: 
+            <%= guidance["pretext-1"] %>
           </p>
           <ul class="covid__list covid__list--header">
-            <% [
-              "Stay at home as much as possible",
-              "Work from home if you can",
-              "Limit contact with other people",
-              "Keep your distance if you go out (2 metres apart where possible)",
-              "Wash your hands regularly"
-            ].each do | item | %>
+            <% rules["list"].each do | item | %>
               <li class="covid__list-item"><%= item %></li>
             <% end %>
           </ul>
 
           <p class="govuk-body covid__inverse">
-            Self-isolate if you or anyone in your household has symptoms.
+            <%= guidance["pretext-2"] %>
           </p>
+        </div>
+      </div>
 
-          <p class="govuk-body covid__inverse">
-            Read the
-            <a class="govuk-link covid__page-header-link" href="/government/speeches/pm-address-to-the-nation-on-coronavirus-10-may-2020">Prime Minister’s address</a>
-            for the latest information.
-          </p>
+      <div class="govuk-grid-row covid__action-link-wrapper">
+        <div class="govuk-grid-column-two-thirds">
+          <%= render 'components/action-link', {
+            light_text: true,
+            href: guidance["link"]["href"],
+            text: guidance["link"]["link_text"],
+            nowrap_text: guidance["link"]["link_nowrap_text"],
+            data: {
+              module: "track-click",
+              track_category: "pageElementInteraction",
+              track_action: "Announcements",
+              track_label: guidance["link"]["href"]
+            }
+          } %>
         </div>
       </div>
     </div>
