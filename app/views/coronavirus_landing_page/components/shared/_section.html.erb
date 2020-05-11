@@ -5,16 +5,16 @@
   <ul class="covid__list covid__list--accordion">
     <% sub_section["list"].each do | item | %>
       <li class="covid__list-item">
-        <% if item["featured_link"] %> 
+        <% if item["featured_link"] %>
           <%= render 'components/action-link', {
-            dark_icon: true,
+            simple: true,
             href: item["url"],
-            text: item["label"] 
+            text: item["label"]
           }%>
         <% else %>
           <%= link_to(
-            item["label"], 
-            item["url"], 
+            item["label"],
+            item["url"],
             class: "govuk-link covid__accordion-link"
           ) %>
         <% end %>
