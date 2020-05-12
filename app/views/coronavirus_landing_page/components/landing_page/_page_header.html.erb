@@ -26,22 +26,22 @@
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
           <%= render "govuk_publishing_components/components/heading", {
-            text: rules["pretext"],
+            text: header["title"],
             font_size: 19,
             margin_bottom: 3,
             inverse: true
           } %>
           <p class="govuk-body covid__inverse">
-            <%= guidance["pretext-1"] %>
+            <%= header["pretext-1"] %>
           </p>
           <ul class="covid__list covid__list--header">
-            <% rules["list"].each do | item | %>
+            <% header["list"].each do | item | %>
               <li class="covid__list-item"><%= item %></li>
             <% end %>
           </ul>
 
           <p class="govuk-body covid__inverse">
-            <%= guidance["pretext-2"] %>
+            <%= header["pretext-2"] %>
           </p>
         </div>
       </div>
@@ -50,14 +50,14 @@
         <div class="govuk-grid-column-two-thirds">
           <%= render 'components/action-link', {
             light_text: true,
-            href: guidance["link"]["href"],
-            text: guidance["link"]["link_text"],
-            nowrap_text: guidance["link"]["link_nowrap_text"],
+            href: header["link"]["href"],
+            text: header["link"]["link_text"],
+            nowrap_text: header["link"]["link_nowrap_text"],
             data: {
               module: "track-click",
               track_category: "pageElementInteraction",
               track_action: "Announcements",
-              track_label: guidance["link"]["href"]
+              track_label: header["link"]["href"]
             }
           } %>
         </div>

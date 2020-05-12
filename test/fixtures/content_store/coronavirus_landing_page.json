@@ -13,17 +13,17 @@
   "links": {},
   "details": {
     "page_header": "Coronavirus (COVID-19)",
-    "stay_at_home": {
-      "pretext": "Stay at home",
+    "header_section": {
+      "title": "Stay alert",
+      "pretext-1": "We can all help control the virus if we all stay alert. This means you must:",
+      "pretext-2": "Self-isolate if you or anyone in your household has symptoms",
       "list": [
-        "Only go outside for food, health reasons or work (where this absolutely cannot be done from home)",
-        "If you go out, stay 2 metres (6ft) away from other people",
-        "Wash your hands as soon as you get home"
-      ]
-    },
-    "guidance": {
-      "pretext-1": "Do not meet others, even friends or family",
-      "pretext-2": "You can spread the virus even if you don’t have symptoms",
+        "stay at home as much as possible",
+        "work from home if you can",
+        "limit contact with other people",
+        "keep your distance if you go out (2 metres apart where possible)",
+        "wash your hands regularly"
+      ],
       "link": {
         "href": "/government/publications/coronavirus-outbreak-faqs-what-you-can-and-cant-do/coronavirus-outbreak-faqs-what-you-can-and-cant-do",
         "text": "Read more about what you can and cannot do."
