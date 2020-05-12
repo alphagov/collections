@@ -20,13 +20,12 @@
 
 
 .app-c-action-link__link-wrapper {
+  @include govuk-font(19, $weight: bold, $line-height: 20px);
   display: table-cell;
   vertical-align: middle;
 }
 
 .app-c-action-link__link {
-  @include govuk-font(19, $weight: bold);
-
   &:hover {
     text-decoration: underline;
   }

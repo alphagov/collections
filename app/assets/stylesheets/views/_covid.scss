@@ -44,7 +44,7 @@
   background: $covid-grey;
 
   @include govuk-media-query($from: tablet) {
-    padding: 45px 0;
+    padding: 45px 0 40px 0;
   }
 }
 
@@ -64,7 +64,7 @@
   margin-top: govuk-spacing(5);
 
   @include govuk-media-query($from: tablet) {
-    margin-top: govuk-spacing(6);
+    margin-top: govuk-spacing(3);
   }
 }
 
