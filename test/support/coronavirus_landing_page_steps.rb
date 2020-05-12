@@ -35,6 +35,14 @@ module CoronavirusLandingPageSteps
     stub_content_store_has_item(CORONAVIRUS_PATH, content_item_with_popular_questions_link_enabled)
   end
 
+  def given_there_is_a_content_item_with_risk_level_element_enabled
+    stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item_with_risk_level_element_enabled)
+  end
+
+  def given_there_is_a_content_item_with_risk_level_element_not_enabled
+    stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item_with_risk_level_element_not_enabled)
+  end
+
   def given_there_is_a_business_content_item
     stub_content_store_has_item(BUSINESS_PATH, business_content_item)
   end
@@ -158,6 +166,14 @@ module CoronavirusLandingPageSteps
   def and_i_can_see_business_links_to_search
     assert page.has_link?("News", href: "/search/news-and-communications?level_one_taxon=495afdb6-47be-4df1-8b38-91c8adb1eefc&topical_events%5B%5D=coronavirus-covid-19-uk-government-response&order=updated-newest")
     assert page.has_link?("Guidance", href: "/search/all?level_one_taxon=495afdb6-47be-4df1-8b38-91c8adb1eefc&topical_events%5B%5D=coronavirus-covid-19-uk-government-response&order=updated-newest")
+  end
+
+  def then_i_can_see_the_risk_level
+    assert page.has_selector?('[data-module="govspeak"]', text: "COVID-19 alert level")
+  end
+
+  def then_i_can_not_see_the_risk_level
+    assert page.has_no_selector?('[data-module="govspeak"]', text: "COVID-19 alert level")
   end
 
   def then_the_special_announcement_schema_is_rendered

@@ -44,6 +44,16 @@
         "href": "/government/publications/further-businesses-and-premises-to-close"
       }
     ],
+    "risk_level": {
+      "heading": "COVID-19 alert level",
+      "show_risk_level_section": false,
+      "paragraph":"Level X of 5 – this is the alert level!",
+      "bold_text": "Level X of 5",
+      "link": {
+        "href": "/risk-level",
+        "text": "Read more about COVID-19 alert levels"
+      }
+    },
     "nhs_banner": {
       "heading": "Do not leave home if you or someone you live with has either:",
       "list": [
