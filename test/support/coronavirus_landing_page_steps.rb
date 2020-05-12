@@ -139,7 +139,7 @@ module CoronavirusLandingPageSteps
   end
 
   def and_i_can_see_links_to_statistics
-    assert page.has_link?("Track coronavirus cases in the UK", href: "Track coronavirus cases in the UK")
+    assert page.has_link?("Track coronavirus cases in the UK", href: "/government/publications/covid-19-track-coronavirus-cases")
   end
 
   def and_i_can_see_links_to_search
