@@ -138,6 +138,10 @@ module CoronavirusLandingPageSteps
     assert page.has_selector?(".govuk-link", text: "Staying at home if you think you have coronavirus (self-isolating)")
   end
 
+  def and_i_can_see_links_to_statistics
+    assert page.has_link?("Track coronavirus cases in the UK", href: "Track coronavirus cases in the UK")
+  end
+
   def and_i_can_see_links_to_search
     assert page.has_link?("News", href: "/search/news-and-communications?topical_events%5B%5D=coronavirus-covid-19-uk-government-response")
     assert page.has_link?("Guidance", href: "/search/all?topical_events%5B%5D=coronavirus-covid-19-uk-government-response&order=updated-newest")
