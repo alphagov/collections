@@ -18,9 +18,9 @@ describe Organisations::SupergroupsPresenter do
   end
 
   def find_supergroup_by_name(name)
-    @supergroups_presenter.latest_documents_by_supergroup.find { |group|
+    @supergroups_presenter.latest_documents_by_supergroup.find do |group|
       group[:title] == name
-    }
+    end
   end
 
   describe "#has_groups" do

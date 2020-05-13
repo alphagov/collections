@@ -14,12 +14,12 @@ describe OrganisationHelper do
   end
 
   describe "#search_results_to_documents" do
-    let(:organisation) {
+    let(:organisation) do
       content_item = ContentItem.new(organisation_with_featured_documents)
       Organisation.new(content_item)
-    }
+    end
 
-    let(:search_results) {
+    let(:search_results) do
       [
         {
           "title" => "demo",
@@ -28,13 +28,13 @@ describe OrganisationHelper do
           "public_timestamp": "2019-01-03T04:05:06+07:00",
         },
       ]
-    }
+    end
 
-    let(:result) {
+    let(:result) do
       search_results_to_documents(search_results, organisation)
-    }
+    end
 
-    let(:expected) {
+    let(:expected) do
       {
         link: {
           text: "demo",
@@ -45,7 +45,7 @@ describe OrganisationHelper do
           document_type: nil,
         },
       }
-    }
+    end
 
     it "provides an expected document format" do
       assert_equal result[:brand], "attorney-generals-office"

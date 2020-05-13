@@ -29,7 +29,7 @@ module Organisations
         works_with_count = child_organisations_count(organisation)
         works_with_text = "Works with #{works_with_count}"
 
-        if works_with_count === 1
+        if works_with_count == 1
           works_with_text << " public body"
         elsif works_with_count > 1
           works_with_text << " agencies and public bodies"

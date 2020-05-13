@@ -13,10 +13,10 @@ describe Search::Supergroups do
     @supergroups = described_class.new(organisation: organisation)
     @no_docs_supergroups = described_class.new(organisation: empty_organisation)
 
-    Search::Supergroups::SUPERGROUP_TYPES.each { |supergroup|
+    Search::Supergroups::SUPERGROUP_TYPES.each do |supergroup|
       stub_rummager_supergroup_request(supergroup, organisation, [raw_rummager_result])
       stub_rummager_supergroup_request(supergroup, empty_organisation, [])
-    }
+    end
   end
 
   describe "#has_groups?" do

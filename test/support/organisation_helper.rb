@@ -9,7 +9,7 @@ module OrganisationHelpers
   end
 
   def stub_latest_content_from_supergroups_request(organisation_slug, empty = false)
-    Search::Supergroups::SUPERGROUP_TYPES.each { |group|
+    Search::Supergroups::SUPERGROUP_TYPES.each do |group|
       url = build_rummager_query_url(
         {
           filter_organisations: organisation_slug,
@@ -19,7 +19,7 @@ module OrganisationHelpers
       )
 
       stub_request(:get, url).to_return(body: build_result_body(group, empty).to_json)
-    }
+    end
   end
 
   def build_result_body(group, empty, result_count = 2)

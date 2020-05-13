@@ -59,9 +59,9 @@ describe TaxonPresenter do
     end
 
     context "when it is a brexit taxon" do
-      let(:content_hash) {
+      let(:content_hash) do
         funding_and_finance_for_students_taxon.merge("content_id" => "d6c2de5d-ef90-45d1-82d4-5f2438369eea")
-      }
+      end
 
       it "returns false" do
         assert_not taxon_presenter.noindex?

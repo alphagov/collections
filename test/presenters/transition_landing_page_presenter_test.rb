@@ -5,17 +5,17 @@ describe TransitionLandingPagePresenter do
     YAML.stubs(:load_file).returns(yaml_contents)
   end
 
-  let(:yaml_contents) {
+  let(:yaml_contents) do
     [
       {
         "list_block" => "<p>This is some text</p>",
       },
     ]
-  }
+  end
 
-  subject {
+  subject do
     TransitionLandingPagePresenter.new(taxon)
-  }
+  end
 
   let(:taxon) { Taxon.new(ContentItem.new("content_id" => "content_id", "base_path" => "/base_path")) }
 
@@ -23,9 +23,9 @@ describe TransitionLandingPagePresenter do
     before :each do
       YAML.stubs(:load_file).returns(yaml_contents)
 
-      subject {
+      subject do
         TransitionLandingPagePresenter.new(taxon)
-      }
+      end
     end
 
     it "html-safes the list block" do

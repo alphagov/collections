@@ -21,7 +21,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
         ],
       },
     }
-    base[:details].merge!(params.delete(:details)) if params.has_key?(:details)
+    base[:details].merge!(params.delete(:details)) if params.key?(:details)
     base.merge(params)
   end
 

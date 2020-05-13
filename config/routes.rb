@@ -82,13 +82,13 @@ Rails.application.routes.draw do
 
   # We get requests for URLs like
   # https://www.gov.uk/topic%2Flegal-aid-for-providers%2Fmake-application%2Flatest
-  #  which fall through to here and error in the taxons controller.
+  # which fall through to here and error in the taxons controller.
   # We can fix the path and redirect to the correct place.
   get "/:slug",
       to: redirect { |_path_params, req|
         [req.path.gsub("%2F", "/"), req.query_string].join("?").chomp("?")
       },
-      constraints: lambda { |req| req.path.include? "%2F" }
+      constraints: ->(req) { req.path.include? "%2F" }
 
   get "*taxon_base_path", to: "taxons#show"
 end

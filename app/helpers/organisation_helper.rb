@@ -37,9 +37,9 @@ module OrganisationHelper
   def search_results_to_documents(search_results, organisation, include_metadata: true)
     {
       brand: (organisation.brand if organisation.is_live?),
-      items: search_results.map { |result|
+      items: search_results.map do |result|
         Organisations::DocumentPresenter.new(result, include_metadata: include_metadata).present
-      },
+      end,
     }
   end
 end
