@@ -6,13 +6,16 @@ describe Topic::ChangedDocuments do
   describe "with a single page of results available" do
     setup do
       @subtopic_content_id = "paye-content-id"
-      rummager_has_latest_documents_for_subtopic(@subtopic_content_id, %w[
-        pay-paye-penalty
-        pay-paye-tax
-        pay-psa
-        employee-tax-codes
-        payroll-annual-reporting
-      ])
+      rummager_has_latest_documents_for_subtopic(
+        @subtopic_content_id,
+        %w[
+          pay-paye-penalty
+          pay-paye-tax
+          pay-psa
+          employee-tax-codes
+          payroll-annual-reporting
+        ],
+      )
     end
 
     it "returns the latest documents for the subtopic" do
@@ -49,13 +52,17 @@ describe Topic::ChangedDocuments do
   describe "with multiple pages of results available" do
     setup do
       @subtopic_content_id = "paye-content-id"
-      rummager_has_latest_documents_for_subtopic(@subtopic_content_id, %w[
-        pay-paye-penalty
-        pay-paye-tax
-        pay-psa
-        employee-tax-codes
-        payroll-annual-reporting
-      ], page_size: 3)
+      rummager_has_latest_documents_for_subtopic(
+        @subtopic_content_id,
+        %w[
+          pay-paye-penalty
+          pay-paye-tax
+          pay-psa
+          employee-tax-codes
+          payroll-annual-reporting
+        ],
+        page_size: 3,
+      )
       @pagination_options = { count: 3 }
       @documents = Topic::ChangedDocuments.new(@subtopic_content_id, @pagination_options)
     end

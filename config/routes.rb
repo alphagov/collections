@@ -29,10 +29,12 @@ Rails.application.routes.draw do
   get "/world/all", to: redirect("/world")
 
   get "/topic/:topic_slug/:subtopic_slug/latest",
-      to: "latest_changes#index", as: :latest_changes
+      to: "latest_changes#index",
+      as: :latest_changes
 
   get "/topic/:topic_slug/:subtopic_slug/email-signup",
-      to: "email_signups#new", as: :email_signup
+      to: "email_signups#new",
+      as: :email_signup
   post "/topic/:topic_slug/:subtopic_slug/email-signup",
        to: "email_signups#create"
 
@@ -45,7 +47,8 @@ Rails.application.routes.draw do
       constraints: {
         format: /atom/,
         locale: /\w{2}(-[\d\w]{2,3})?/,
-      }, to: "feeds#organisation",
+      },
+      to: "feeds#organisation",
       as: :feed_organisation
   get "/government/organisations/:organisation_name(.:locale)",
       to: "organisations#show",

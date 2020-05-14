@@ -2,12 +2,13 @@ class LatestChangesController < SubtopicsController
   def index
     setup_content_item_and_navigation_helpers(subtopic)
 
-    render :index, locals: {
-      subtopic: subtopic,
-      meta_section: meta_section,
-      hardcoded_breadcrumbs: hardcoded_breadcrumbs,
-      pagination_presenter: pagination_presenter,
-    }
+    render :index,
+           locals: {
+             subtopic: subtopic,
+             meta_section: meta_section,
+             hardcoded_breadcrumbs: hardcoded_breadcrumbs,
+             pagination_presenter: pagination_presenter,
+           }
   end
 
 private

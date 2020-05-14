@@ -40,23 +40,29 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
   it "renders a curated subtopic" do
     # Given a curated subtopic exists
-    stub_content_store_has_item("/topic/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore", details: {
-      groups: [
-        {
-          name: "Oil rigs",
-          contents: [
-            "/oil-rig-staffing",
-            "/oil-rig-safety-requirements",
+    stub_content_store_has_item(
+      "/topic/oil-and-gas/offshore",
+      oil_and_gas_subtopic_item(
+        "offshore",
+        details: {
+          groups: [
+            {
+              name: "Oil rigs",
+              contents: [
+                "/oil-rig-staffing",
+                "/oil-rig-safety-requirements",
+              ],
+            },
+            {
+              name: "Piping",
+              contents: [
+                "/undersea-piping-restrictions",
+              ],
+            },
           ],
         },
-        {
-          name: "Piping",
-          contents: [
-            "/undersea-piping-restrictions",
-          ],
-        },
-      ],
-    }))
+      ),
+    )
 
     stub_topic_organisations("oil-and-gas/offshore", "content-id-for-offshore")
 
@@ -128,12 +134,15 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
     it "displays the latest page" do
       # Given there is latest content for a subtopic
-      rummager_has_latest_documents_for_subtopic("content-id-for-offshore", %w[
-        oil-and-gas-uk-field-data
-        oil-and-gas-wells
-        oil-and-gas-fields-and-field-development
-        oil-and-gas-geoscientific-data
-      ])
+      rummager_has_latest_documents_for_subtopic(
+        "content-id-for-offshore",
+        %w[
+          oil-and-gas-uk-field-data
+          oil-and-gas-wells
+          oil-and-gas-fields-and-field-development
+          oil-and-gas-geoscientific-data
+        ],
+      )
 
       # When I view the latest page for a subtopic
       visit "/topic/oil-and-gas/offshore"
@@ -213,22 +222,25 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
     # Given a curated subtopic exists
     stub_content_store_has_item(
       "/topic/oil-and-gas/offshore",
-      oil_and_gas_subtopic_item("offshore", details: {
-        groups: [
-          {
-            name: "Oil rigs",
-            contents: [
-              "/oil-rig-safety-requirements",
-            ],
-          },
-          {
-            name: "Piping",
-            contents: [
-              "/undersea-piping-restrictions",
-            ],
-          },
-        ],
-      }),
+      oil_and_gas_subtopic_item(
+        "offshore",
+        details: {
+          groups: [
+            {
+              name: "Oil rigs",
+              contents: [
+                "/oil-rig-safety-requirements",
+              ],
+            },
+            {
+              name: "Piping",
+              contents: [
+                "/undersea-piping-restrictions",
+              ],
+            },
+          ],
+        },
+      ),
     )
 
     stub_topic_organisations("oil-and-gas/offshore", "content-id-for-offshore")

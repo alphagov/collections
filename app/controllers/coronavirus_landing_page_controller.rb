@@ -9,12 +9,13 @@ class CoronavirusLandingPageController < ApplicationController
       text: presenter.page_header,
     }
 
-    render "show", locals: {
-      breadcrumbs: breadcrumbs,
-      title: title,
-      details: presenter,
-      special_announcement: special_announcement,
-    }
+    render "show",
+           locals: {
+             breadcrumbs: breadcrumbs,
+             title: title,
+             details: presenter,
+             special_announcement: special_announcement,
+           }
   end
 
   def hub
@@ -28,11 +29,12 @@ class CoronavirusLandingPageController < ApplicationController
       },
     }
 
-    render "hub", locals: {
-      breadcrumbs: breadcrumbs,
-      title: title,
-      details: hub_presenter,
-    }
+    render "hub",
+           locals: {
+             breadcrumbs: breadcrumbs,
+             title: title,
+             details: hub_presenter,
+           }
   end
 
 private

@@ -119,9 +119,11 @@ describe Role do
           "document_type" => "edition" },
       ]
 
-      Services.rummager.stubs(:search).returns("results" => @results,
-                                               "start" => 0,
-                                               "total" => 1)
+      Services.rummager.stubs(:search).returns(
+        "results" => @results,
+        "start" => 0,
+        "total" => 1,
+      )
     end
 
     it "should have announcements" do

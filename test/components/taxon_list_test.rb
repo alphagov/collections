@@ -31,11 +31,12 @@ class TaxonListTest < ComponentTestCase
           text: "Care to Learn",
           path: "/care-to-learn",
           description: "Care to Learn helps pay for childcare while you're studying",
-        }, {
+        },
+        {
           text: "Childcare Grant",
           path: "/childcare-grant",
           description: "Childcare Grants for full-time students in higher education",
-        }
+        },
       ],
     )
 

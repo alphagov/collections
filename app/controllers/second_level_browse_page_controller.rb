@@ -22,10 +22,11 @@ class SecondLevelBrowsePageController < ApplicationController
 private
 
   def show_html
-    render :show, locals: {
-      page: page,
-      meta_section: meta_section,
-    }
+    render :show,
+           locals: {
+             page: page,
+             meta_section: meta_section,
+           }
   end
 
   def meta_section

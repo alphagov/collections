@@ -3,10 +3,11 @@ class SubtopicsController < ApplicationController
     subtopic = Topic.find(request.path)
     setup_content_item_and_navigation_helpers(subtopic)
 
-    render :show, locals: {
-      subtopic: subtopic,
-      meta_section: subtopic.parent.title.downcase,
-    }
+    render :show,
+           locals: {
+             subtopic: subtopic,
+             meta_section: subtopic.parent.title.downcase,
+           }
   end
 
 private

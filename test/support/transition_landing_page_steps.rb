@@ -79,9 +79,12 @@ module TransitionLandingPageSteps
 
   def then_all_finder_links_have_tracking_data
     [
-      "Services", "Guidance and regulation", "News and communications",
-      "Research and statistics", "Policy papers and consultations",
-      "Transparency and freedom of information releases"
+      "Services",
+      "Guidance and regulation",
+      "News and communications",
+      "Research and statistics",
+      "Policy papers and consultations",
+      "Transparency and freedom of information releases",
     ].each do |section|
       assert page.has_css?("a[data-track-category='SeeAllLinkClicked']", text: section)
       assert page.has_css?("a[data-track-action=\"#{current_path}\"]", text: section)

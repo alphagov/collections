@@ -97,9 +97,10 @@ class HeaderNoticeTest < ComponentTestCase
 
   test "renders a call to action if a call to action is passed in" do
     render_component(branded_notice)
-    assert_select ".app-c-header-notice__call-to-action-link", {
-      text: branded_notice[:call_to_action][:title],
-      href: branded_notice[:call_to_action][:href],
-    }
+    assert_select ".app-c-header-notice__call-to-action-link",
+                  {
+                    text: branded_notice[:call_to_action][:title],
+                    href: branded_notice[:call_to_action][:href],
+                  }
   end
 end

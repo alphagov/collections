@@ -277,8 +277,10 @@ private
     tagged_org_with_logo = tagged_organisation_with_logo["value"]["link"]
     assert page.has_css?(".gem-c-organisation-logo a[href='#{tagged_org_with_logo}']")
 
-    assert page.has_link?(tagged_organisation["value"]["title"],
-                          href: tagged_organisation["value"]["link"])
+    assert page.has_link?(
+      tagged_organisation["value"]["title"],
+      href: tagged_organisation["value"]["link"],
+    )
   end
 
   def and_i_can_see_the_in_page_nav
@@ -336,9 +338,12 @@ private
 
   def then_all_links_have_tracking_data
     [
-      "services", "guidance and regulation", "news and communications",
-      "research and statistics", "policy papers and consultations",
-      "transparency and freedom of information releases"
+      "services",
+      "guidance and regulation",
+      "news and communications",
+      "research and statistics",
+      "policy papers and consultations",
+      "transparency and freedom of information releases",
     ].each do |section|
       assert page.has_css?("a[data-track-category='SeeAllLinkClicked']", text: "See more #{section} in this topic")
       assert page.has_css?("a[data-track-action=\"/foo\"]", text: "See more #{section} in this topic")

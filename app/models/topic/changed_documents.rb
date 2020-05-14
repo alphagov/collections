@@ -27,10 +27,12 @@ private
   end
 
   def rummager_search
-    @rummager_search ||= RummagerSearch.new(start: start_param,
-                                            count: page_size,
-                                            order: "-public_timestamp",
-                                            fields: %w[title link latest_change_note public_timestamp format],
-                                            filter_topic_content_ids: [@topic_content_id])
+    @rummager_search ||= RummagerSearch.new(
+      start: start_param,
+      count: page_size,
+      order: "-public_timestamp",
+      fields: %w[title link latest_change_note public_timestamp format],
+      filter_topic_content_ids: [@topic_content_id],
+    )
   end
 end
