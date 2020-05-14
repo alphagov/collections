@@ -55,6 +55,7 @@ Rails.application.routes.draw do
       as: :services_and_information
 
   get "/government/people/:name(.:locale)", to: "people#show"
+  get "/government/ministers(.:locale)", to: "ministers#index"
   get "/government/ministers/:name(.:locale)", to: "roles#show"
 
   scope :api, defaults: { format: :json } do
