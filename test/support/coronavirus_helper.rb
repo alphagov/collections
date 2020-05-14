@@ -31,40 +31,27 @@ def coronavirus_content_item
   end
 end
 
-def coronavirus_content_item_with_live_stream_enabled
+def coronavirus_content_item_with_live_stream_time
   content_item = coronavirus_content_item
-  content_item["details"]["live_stream_enabled"] = true
-  content_item
-end
-
-def coronavirus_content_item_with_live_stream_enabled_and_date
-  content_item = coronavirus_content_item_with_live_stream_enabled
   content_item["details"]["live_stream"]["time"] = "5:00pm"
-  content_item["details"]["live_stream"]["date"] = "19 April"
   content_item
 end
 
-def content_item_with_live_stream_enabled_and_ask_a_question_enabled
-  content_item = coronavirus_content_item_with_live_stream_enabled
-  content_item["details"]["live_stream"]["ask_a_question_visible"] = true
-  content_item
-end
-
-def content_item_with_popular_questions_link_enabled
+def content_item_with_ask_a_question_disabled
   content_item = coronavirus_content_item
-  content_item["details"]["live_stream"]["popular_questions_link_visible"] = true
+  content_item["details"]["live_stream"]["ask_a_question_visible"] = false
+  content_item
+end
+
+def content_item_with_popular_questions_link_disabled
+  content_item = coronavirus_content_item
+  content_item["details"]["live_stream"]["popular_questions_link_visible"] = false
   content_item
 end
 
 def coronavirus_content_item_with_risk_level_element_enabled
   content_item = coronavirus_content_item
   content_item["details"]["risk_level"]["show_risk_level_section"] = true
-  content_item
-end
-
-def coronavirus_content_item_with_risk_level_element_not_enabled
-  content_item = coronavirus_content_item
-  content_item["details"]["risk_level"]["show_risk_level_section"] = false
   content_item
 end
 
