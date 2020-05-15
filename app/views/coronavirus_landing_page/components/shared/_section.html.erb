@@ -11,12 +11,6 @@
             href: item["url"],
             text: item["label"]
           }%>
-          <% item_description = content_item_description item["url"] %>
-          <% if item_description %>
-            <p class="govuk-body covid__list-item-description">
-              <%= item_description %>
-            </p>
-          <% end %>
         <% else %>
           <%= link_to(
             item["label"],
