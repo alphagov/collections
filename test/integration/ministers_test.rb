@@ -18,6 +18,13 @@ class MinistersTest < ActionDispatch::IntegrationTest
     assert page.has_css?(".gem-c-title__text", text: "Ministers")
   end
 
+  it "renders section headers" do
+    assert page.has_css?(".gem-c-heading", text: "Cabinet ministers")
+    assert page.has_css?(".gem-c-heading", text: "Also attends Cabinet")
+    assert page.has_css?(".gem-c-heading", text: "Ministers by department")
+    assert page.has_css?(".gem-c-heading", text: "Whips")
+  end
+
 private
 
   def ministers_content_hash

@@ -3,7 +3,51 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <%= render "govuk_publishing_components/components/title", {
-        title: 'Ministers',
+      title: "Ministers",
     } %>
   </div>
 </div>
+
+<section class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: "Cabinet ministers",
+      id: "cabinet-ministers",
+      margin_bottom: 4,
+      padding: true,
+    } %>
+  </div>
+</section>
+
+<section class="govuk-grid-row govuk-!-padding-top-9">
+  <div class="govuk-grid-column-full">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: "Also attends Cabinet",
+      id: "also-attends-cabinet-ministers",
+      margin_bottom: 4,
+      padding: true,
+    } %>
+  </div>
+</section>
+
+<section class="govuk-grid-row govuk-!-padding-top-9">
+  <div class="govuk-grid-column-full">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: "Ministers by department",
+      id: "ministers-by-department",
+      margin_bottom: 4,
+      padding: true,
+    } %>
+  </div>
+</section>
+
+<section class="govuk-grid-row govuk-!-padding-top-9">
+  <div class="govuk-grid-column-full">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: "Whips",
+      id: "whips",
+      margin_bottom: 4,
+      padding: true,
+    } %>
+  </div>
+</section>
