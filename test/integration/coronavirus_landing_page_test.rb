@@ -40,6 +40,12 @@ class CoronavirusLandingPageTest < ActionDispatch::IntegrationTest
       then_i_can_see_the_ask_a_question_section
     end
 
+    it "optionally shows the popular questions link when a live stream is enabled" do
+      given_there_is_a_content_item_with_popular_questions_link_enabled
+      when_i_visit_the_coronavirus_landing_page
+      then_i_can_see_the_popular_questions_link
+    end
+
     it "renders machine readable content" do
       given_there_is_a_content_item
       when_i_visit_the_coronavirus_landing_page

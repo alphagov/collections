@@ -125,6 +125,19 @@
     margin-bottom: govuk-spacing(4);
   }
 }
+.covid__spaced-list>li {
+  &:nth-child(2n) {
+    margin-bottom: govuk-spacing(5);
+
+    @include govuk-media-query($from: desktop) {
+      margin-bottom: govuk-spacing(4);
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
 
 .covid__list--header {
   padding-left: govuk-spacing(4);

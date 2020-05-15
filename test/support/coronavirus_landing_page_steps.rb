@@ -31,6 +31,10 @@ module CoronavirusLandingPageSteps
     stub_content_store_has_item(CORONAVIRUS_PATH, content_item_with_live_stream_enabled_and_ask_a_question_enabled)
   end
 
+  def given_there_is_a_content_item_with_popular_questions_link_enabled
+    stub_content_store_has_item(CORONAVIRUS_PATH, content_item_with_popular_questions_link_enabled)
+  end
+
   def given_there_is_a_business_content_item
     stub_content_store_has_item(BUSINESS_PATH, business_content_item)
   end
@@ -112,6 +116,10 @@ module CoronavirusLandingPageSteps
 
   def then_i_can_see_the_ask_a_question_section
     assert page.has_link?("Ask a question at the next press conference", href: "https://www.gov.uk")
+  end
+
+  def then_i_can_see_the_popular_questions_link
+    assert page.has_link?("See the types of questions submitted by the public", href: "https://www.gov.uk")
   end
 
   def and_there_is_no_ask_a_question_section

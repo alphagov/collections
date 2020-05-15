@@ -50,6 +50,12 @@ def content_item_with_live_stream_enabled_and_ask_a_question_enabled
   content_item
 end
 
+def content_item_with_popular_questions_link_enabled
+  content_item = coronavirus_content_item
+  content_item["details"]["live_stream"]["popular_questions_link_visible"] = true
+  content_item
+end
+
 def business_content_item
   random_landing_page do |item|
     item.merge(business_content_item_fixture)
