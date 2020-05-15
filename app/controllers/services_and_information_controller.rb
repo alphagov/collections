@@ -1,11 +1,12 @@
 class ServicesAndInformationController < ApplicationController
   def index
     setup_content_item_and_navigation_helpers(service_and_information)
-    render :index, locals: {
-      service_and_information: service_and_information,
-      organisation: service_and_information.organisation,
-      grouped_links: grouped_links,
-    }
+    render :index,
+           locals: {
+             service_and_information: service_and_information,
+             organisation: service_and_information.organisation,
+             grouped_links: grouped_links,
+           }
   end
 
 private

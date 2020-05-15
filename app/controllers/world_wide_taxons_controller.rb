@@ -4,9 +4,10 @@ class WorldWideTaxonsController < ApplicationController
 
     taxon_template = presented_taxon.rendering_type
 
-    render taxon_template, locals: {
-      presented_taxon: presented_taxon,
-    }
+    render taxon_template,
+           locals: {
+             presented_taxon: presented_taxon,
+           }
   end
 
 private

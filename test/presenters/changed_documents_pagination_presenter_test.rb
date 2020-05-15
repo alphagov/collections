@@ -6,10 +6,12 @@ describe ChangedDocumentsPaginationPresenter do
   end
 
   def build_presenter_for_subtopic(total: 100, start: 0, page_size: 50, view_context: mock_view_context)
-    changed_documents = stub("Topic::ChangedDocuments",
-                             total: total,
-                             page_size: page_size,
-                             start: start)
+    changed_documents = stub(
+      "Topic::ChangedDocuments",
+      total: total,
+      page_size: page_size,
+      start: start,
+    )
     ChangedDocumentsPaginationPresenter.new(changed_documents, view_context)
   end
 
@@ -99,8 +101,10 @@ describe ChangedDocumentsPaginationPresenter do
     end
 
     it 'includes the "count" parameter given a custom per_page value' do
-      presenter = build_presenter_for_subtopic(view_context: @view_context,
-                                               page_size: 20)
+      presenter = build_presenter_for_subtopic(
+        view_context: @view_context,
+        page_size: 20,
+      )
 
       @view_context.expects(:latest_changes_path).with(count: 20, start: 20)
         .returns("/a/path")
@@ -114,8 +118,11 @@ describe ChangedDocumentsPaginationPresenter do
     end
 
     it "returns a path to the previous page" do
-      presenter = build_presenter_for_subtopic(view_context: @view_context,
-                                               start: 100, total: 150)
+      presenter = build_presenter_for_subtopic(
+        view_context: @view_context,
+        start: 100,
+        total: 150,
+      )
 
       @view_context.expects(:latest_changes_path).with(start: 50)
         .returns("/a/path")
@@ -123,8 +130,11 @@ describe ChangedDocumentsPaginationPresenter do
     end
 
     it 'includes the "count" parameter given a custom per_page value' do
-      presenter = build_presenter_for_subtopic(view_context: @view_context,
-                                               page_size: 20, start: 40)
+      presenter = build_presenter_for_subtopic(
+        view_context: @view_context,
+        page_size: 20,
+        start: 40,
+      )
 
       @view_context.expects(:latest_changes_path).with(count: 20, start: 20)
         .returns("/a/path")
@@ -132,8 +142,10 @@ describe ChangedDocumentsPaginationPresenter do
     end
 
     it 'excludes the "start" parameter when it would be zero' do
-      presenter = build_presenter_for_subtopic(view_context: @view_context,
-                                               start: 50)
+      presenter = build_presenter_for_subtopic(
+        view_context: @view_context,
+        start: 50,
+      )
 
       @view_context.expects(:latest_changes_path).with({})
         .returns("/a/path")

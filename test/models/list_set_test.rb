@@ -126,13 +126,17 @@ describe ListSet do
   describe "fetching content tagged to this tag" do
     setup do
       @subtopic_content_id = "paye-content-id"
-      rummager_has_documents_for_subtopic(@subtopic_content_id, %w[
-        pay-paye-penalty
-        pay-paye-tax
-        pay-psa
-        employee-tax-codes
-        payroll-annual-reporting
-      ], page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING)
+      rummager_has_documents_for_subtopic(
+        @subtopic_content_id,
+        %w[
+          pay-paye-penalty
+          pay-paye-tax
+          pay-psa
+          employee-tax-codes
+          payroll-annual-reporting
+        ],
+        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+      )
     end
 
     it "returns the content for the tag" do

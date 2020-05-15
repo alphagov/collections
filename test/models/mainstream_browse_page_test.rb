@@ -81,7 +81,8 @@ describe MainstreamBrowsePage do
         assert_equal [
           @second_level_browse_page1["content_id"],
           @second_level_browse_page2["content_id"],
-        ], @page.second_level_browse_pages.map(&:content_id)
+        ],
+                     @page.second_level_browse_pages.map(&:content_id)
       end
 
       it "returns an alphabetically ordered set of links when second_level_ordering == alphabetical" do
@@ -89,7 +90,8 @@ describe MainstreamBrowsePage do
         assert_equal [
           @second_level_browse_page2["content_id"],
           @second_level_browse_page1["content_id"],
-        ], @page.second_level_browse_pages.map(&:content_id)
+        ],
+                     @page.second_level_browse_pages.map(&:content_id)
       end
     end
   end

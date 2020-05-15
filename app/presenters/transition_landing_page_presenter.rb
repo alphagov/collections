@@ -16,8 +16,10 @@ class TransitionLandingPagePresenter
   end
 
   def supergroup_sections
-    brexit_sections = SupergroupSections::BrexitSections.new(taxon.content_id,
-                                                             taxon.base_path)
+    brexit_sections = SupergroupSections::BrexitSections.new(
+      taxon.content_id,
+      taxon.base_path,
+    )
                                                         .sections
     brexit_sections.map do |section|
       supergroup_title = I18n.t(section[:name], scope: %i[transition_landing_page sections])

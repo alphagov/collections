@@ -4,22 +4,24 @@ class EmailSignupsController < ApplicationController
   def new
     setup_content_item_and_navigation_helpers(subtopic)
 
-    render :new, locals: {
-      subtopic: subtopic,
-      hardcoded_breadcrumbs: hardcoded_breadcrumbs,
-      meta_section: meta_section,
-    }
+    render :new,
+           locals: {
+             subtopic: subtopic,
+             hardcoded_breadcrumbs: hardcoded_breadcrumbs,
+             meta_section: meta_section,
+           }
   end
 
   def create
     if email_signup.save
       redirect_to email_signup.subscription_url
     else
-      render :new, locals: {
-        subtopic: subtopic,
-        hardcoded_breadcrumbs: hardcoded_breadcrumbs,
-        meta_section: meta_section,
-      }
+      render :new,
+             locals: {
+               subtopic: subtopic,
+               hardcoded_breadcrumbs: hardcoded_breadcrumbs,
+               meta_section: meta_section,
+             }
     end
   end
 

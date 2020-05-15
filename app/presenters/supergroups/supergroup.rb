@@ -27,7 +27,7 @@ module Supergroups
     end
 
     def tagged_content(_taxon_id)
-      raise NotImplementedError.new
+      raise NotImplementedError
     end
 
     def document_list(taxon_id)
