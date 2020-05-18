@@ -5,7 +5,8 @@ describe Schemas::HowTo do
     it "generates structured data using the HowTo schema" do
       content_item = GovukSchemas::Example.find("step_by_step_nav", example_name: "learn_to_drive_a_car")
       step_by_step = StepNav.new(ContentItem.new(content_item))
-      how_to = Schemas::HowTo.new(step_by_step)
+      view_context = ApplicationController.new.view_context
+      how_to = Schemas::HowTo.new(step_by_step, view_context)
 
       # Generated with:
       # puts JSON.pretty_generate(how_to.structured_data)
