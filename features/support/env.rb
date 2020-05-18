@@ -8,7 +8,6 @@ end
 # Duplicated in test_helper.rb
 ENV["GOVUK_WEBSITE_ROOT"] = "http://www.test.gov.uk"
 ENV["GOVUK_APP_DOMAIN"] = "test.gov.uk"
-ENV["GOVUK_ASSET_ROOT"] = "http://static.test.gov.uk"
 ENV["RAILS_ENV"] ||= "test"
 
 require "cucumber/rails"
