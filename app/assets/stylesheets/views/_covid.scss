@@ -158,7 +158,8 @@
 }
 
 .covid__list-item-description {
-  margin-top: govuk-spacing(2);
+  @include govuk-font(16);
+  margin-top: govuk-spacing(1);
   padding-left: govuk-spacing(6);
 }
 
