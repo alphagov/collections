@@ -1,6 +1,4 @@
-Rails.application.config.assets.precompile += %w[
-  print.css
-]
+Rails.application.config.assets.precompile += %w[print.css]
 
 Rails.application.config.assets.prefix = "/collections"
 
