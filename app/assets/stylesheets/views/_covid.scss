@@ -264,3 +264,10 @@
   background-color: govuk-colour("light-grey");
   color: govuk-colour("black");
 }
+
+.covid__alert-notice .covid__alert-notice-body {
+  @include govuk-media-query($from: desktop) {
+    margin-top: govuk-spacing(2);
+    margin-bottom: govuk-spacing(2);
+  }
+}
