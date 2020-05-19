@@ -11,7 +11,7 @@
         <ul class="covid__list">
           <% guidance["list"].each do | item | %>
             <li class="covid__list-item">
-              <%= render 'components/action-link', {
+              <%= render 'govuk_publishing_components/components/action_link', {
                 dark_icon: true,
                 href: item["url"],
                 text: item["text"],

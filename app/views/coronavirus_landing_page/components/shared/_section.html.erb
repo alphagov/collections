@@ -6,7 +6,7 @@
     <% sub_section["list"].each do | item | %>
       <li class="covid__list-item">
         <% if item["featured_link"] %>
-          <%= render 'components/action-link', {
+          <%= render 'govuk_publishing_components/components/action_link', {
             simple: true,
             href: item["url"],
             text: item["label"]
