@@ -97,23 +97,6 @@ For example:
 This is a public facing Ruby on Rails application that retrieves browse content from APIs and presents it.
 There is no underlying persistence layer and all content is retrieved from external sources.
 
-### Whitehall email and feed links for World Locations
-
-A special case exists within Collections to allow email links on Taxon pages to be generated
-such that they point to the email subscription logic in Whitehall. This is
-currently implemented in `app/helpers/email_helper.rb` with the branching logic
-sitting in `app/views/taxons/_email_alerts.html`.
-
-The intention is to migrate rendering of World Location pages from Whitehall to
-Collections. Whitehall serves these from `/government/world/{world_location}`.
-Collections will serve these from `/world/{world_location}`.
-
-The helper currently tests for `base_path` starting with `/world` and provides two methods;
-one to create an atom link and one to create an email link.
-
-Once email subscriptions for World Locations have been completely ported to use
-Email Alert Api, this functionality can be removed.
-
 ### Content for taxon pages
 
 Content for taxon pages is returned by a search in Rummager based on content_ids for world taxonomy pages and content_ids and [supergroups](https://docs.publishing.service.gov.uk/document-types/content_purpose_supergroup.html) for all other taxonomy pages.
