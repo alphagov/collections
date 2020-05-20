@@ -17,7 +17,7 @@ describe EmailHelper do
     assert_not taxon_is_live?(presented_taxon)
   end
 
-  it "should return a valid whitehall .atom url in the form /government/{url}.atom" do
+  it "should return a valid atom url" do
     stubs(:request).returns(ActionDispatch::TestRequest.create("PATH_INFO" => "/world/blefuscu"))
 
     expected_atom_url = Plek.new.website_root + "/world/blefuscu.atom"
