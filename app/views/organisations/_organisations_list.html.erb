@@ -41,7 +41,7 @@
                 <p class="organisation-list__item-works-with"><%= @presented_organisations.works_with_statement(organisation) %></p>
                 <%= render partial: 'expanded_works_with_organisations',
                   locals: {
-                    works_with_organisations: organisation["works_with"],
+                    works_with_organisations: @presented_organisations.ordered_works_with(organisation),
                     current_organisation: organisation["title"]
                   } %>
               </div>

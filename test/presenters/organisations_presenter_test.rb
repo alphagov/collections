@@ -98,7 +98,7 @@ describe Organisations::IndexPresenter do
     end
   end
 
-  describe "#works_with" do
+  describe "#works_with_statement" do
     before :each do
       content_item = ContentItem.new(some_non_ministerial_departments_hash)
       content_store_organisations = ContentStoreOrganisations.new(content_item)
@@ -143,6 +143,60 @@ describe Organisations::IndexPresenter do
       }.with_indifferent_access
 
       assert_equal "Works with 2 agencies and public bodies", @organisations_presenter.works_with_statement(test_org)
+    end
+  end
+
+  describe "#ordered_works_with" do
+    before :each do
+      content_item = ContentItem.new(some_non_ministerial_departments_hash)
+      content_store_organisations = ContentStoreOrganisations.new(content_item)
+      @organisations_presenter = Organisations::IndexPresenter.new(content_store_organisations)
+    end
+
+    it "returns [] when organisation does not work with others" do
+      assert_equal [], @organisations_presenter.ordered_works_with({})
+    end
+
+    it "returns organisation groups in the correct order" do
+      test_org = {
+        works_with: {
+          other: [
+            {
+              title: "HM Crown Prosecution Service Inspectorate",
+              path: "/government/organisations/hm-crown-prosecution-service-inspectorate",
+            },
+          ],
+          non_ministerial_department: [
+            {
+              title: "Crown Prosecution Service",
+              path: "/government/organisations/crown-prosecution-service",
+            },
+          ],
+        },
+      }.with_indifferent_access
+
+      expected = [
+        [
+          "non_ministerial_department",
+          [
+            {
+              "title" => "Crown Prosecution Service",
+              "path" => "/government/organisations/crown-prosecution-service",
+            },
+          ],
+        ],
+        [
+          "other",
+          [
+            {
+              "title" => "HM Crown Prosecution Service Inspectorate",
+              "path" => "/government/organisations/hm-crown-prosecution-service-inspectorate",
+            },
+          ],
+        ],
+      ]
+
+      assert_equal expected, @organisations_presenter.ordered_works_with(test_org)
     end
   end
 
