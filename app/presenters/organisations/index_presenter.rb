@@ -4,6 +4,24 @@ module Organisations
     include ActionView::Helpers::UrlHelper
     include OrganisationsHelper
 
+    LISTING_ORDER = %w[
+      executive_office
+      ministerial_department
+      non_ministerial_department
+      executive_agency
+      executive_ndpb
+      advisory_ndpb
+      tribunal
+      public_corporation
+      independent_monitoring_body
+      adhoc_advisory_group
+      devolved_administration
+      sub_organisation
+      other
+      civil_service
+      court
+    ].freeze
+
     def initialize(organisations)
       @organisations = organisations
     end
@@ -22,6 +40,10 @@ module Organisations
         public_corporations: @organisations.public_corporations,
         devolved_administrations: @organisations.devolved_administrations,
       }
+    end
+
+    def ordered_works_with(organisation)
+      organisation.fetch("works_with", []).to_a.sort_by { |type, _departments| LISTING_ORDER.index(type) || 999 }
     end
 
     def works_with_statement(organisation)
