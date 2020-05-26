@@ -19,20 +19,16 @@ module CoronavirusLandingPageSteps
     stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item)
   end
 
-  def given_there_is_a_content_item_with_live_stream_enabled
-    stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item_with_live_stream_enabled)
+  def given_there_is_a_content_item_with_live_stream_time
+    stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item_with_live_stream_time)
   end
 
-  def given_there_is_a_content_item_with_live_stream_enabled_and_date
-    stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item_with_live_stream_enabled_and_date)
+  def given_there_is_a_content_item_with_popular_questions_link_disabled
+    stub_content_store_has_item(CORONAVIRUS_PATH, content_item_with_popular_questions_link_disabled)
   end
 
-  def given_there_is_a_content_item_with_live_stream_enabled_and_ask_a_question_enabled
-    stub_content_store_has_item(CORONAVIRUS_PATH, content_item_with_live_stream_enabled_and_ask_a_question_enabled)
-  end
-
-  def given_there_is_a_content_item_with_popular_questions_link_enabled
-    stub_content_store_has_item(CORONAVIRUS_PATH, content_item_with_popular_questions_link_enabled)
+  def given_there_is_a_content_item_with_ask_a_question_disabled
+    stub_content_store_has_item(CORONAVIRUS_PATH, content_item_with_ask_a_question_disabled)
   end
 
   def given_there_is_a_content_item_with_risk_level_element_enabled
@@ -118,20 +114,32 @@ module CoronavirusLandingPageSteps
   end
 
   def then_i_can_see_the_live_stream_section_with_date_and_time
-    assert page.has_text?("19 April")
-    assert page.has_text?("5:00pm")
+    assert page.has_text?("19 April at 5:00pm")
   end
 
   def then_i_can_see_the_ask_a_question_section
     assert page.has_link?("Ask a question at the next press conference", href: "https://www.gov.uk")
   end
 
+  def then_i_cannot_see_the_ask_a_question_section
+    assert page.has_no_link?("Ask a question at the next press conference", href: "https://www.gov.uk")
+  end
+
   def then_i_can_see_the_popular_questions_link
     assert page.has_link?("See the types of questions submitted by the public", href: "https://www.gov.uk")
   end
 
+  def then_i_cannot_see_the_popular_questions_link
+    assert page.has_no_link?("See the types of questions submitted by the public", href: "https://www.gov.uk")
+  end
+
   def and_there_is_no_ask_a_question_section
     assert page.has_no_link?("Ask a question at the next press conference")
+  end
+
+  def then_i_can_see_the_live_stream_section
+    assert page.has_selector?(".covid__topic-wrapper h2", text: "Press conferences and speeches")
+    assert page.has_selector?(".covid__video-wrapper")
   end
 
   def then_i_can_see_the_nhs_banner

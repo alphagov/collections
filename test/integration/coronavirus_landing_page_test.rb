@@ -11,6 +11,7 @@ class CoronavirusLandingPageTest < ActionDispatch::IntegrationTest
       then_i_can_see_the_header_section
       then_i_can_see_the_nhs_banner
       then_i_can_see_the_accordions
+      then_i_can_see_the_live_stream_section
       and_i_can_see_links_to_search
     end
 
@@ -21,29 +22,30 @@ class CoronavirusLandingPageTest < ActionDispatch::IntegrationTest
       then_i_can_see_the_accordions_content
     end
 
-    it "shows livestream date when a live stream is enabled" do
-      given_there_is_a_content_item_with_live_stream_enabled
+    it "displays all livestream information" do
+      given_there_is_a_content_item
       when_i_visit_the_coronavirus_landing_page
       then_i_can_see_the_live_stream_section_with_streamed_date
-      and_there_is_no_ask_a_question_section
+      then_i_can_see_the_ask_a_question_section
+      then_i_can_see_the_popular_questions_link
     end
 
-    it "optionally shows the time when a live stream is enabled" do
-      given_there_is_a_content_item_with_live_stream_enabled_and_date
+    it "optionally shows the time of a livestream" do
+      given_there_is_a_content_item_with_live_stream_time
       when_i_visit_the_coronavirus_landing_page
       then_i_can_see_the_live_stream_section_with_date_and_time
     end
 
-    it "optionally shows the ask a question link when a live stream is enabled" do
-      given_there_is_a_content_item_with_live_stream_enabled_and_ask_a_question_enabled
+    it "optionally hides the ask a question link" do
+      given_there_is_a_content_item_with_ask_a_question_disabled
       when_i_visit_the_coronavirus_landing_page
-      then_i_can_see_the_ask_a_question_section
+      then_i_cannot_see_the_ask_a_question_section
     end
 
-    it "optionally shows the popular questions link when a live stream is enabled" do
-      given_there_is_a_content_item_with_popular_questions_link_enabled
+    it "optionally hides the popular questions link" do
+      given_there_is_a_content_item_with_popular_questions_link_disabled
       when_i_visit_the_coronavirus_landing_page
-      then_i_can_see_the_popular_questions_link
+      then_i_cannot_see_the_popular_questions_link
     end
 
     it "shows COVID-19 risk level when risk level is enabled" do
@@ -53,7 +55,7 @@ class CoronavirusLandingPageTest < ActionDispatch::IntegrationTest
     end
 
     it "does not show COVID-19 risk level when risk level is not enabled" do
-      given_there_is_a_content_item_with_risk_level_element_not_enabled
+      given_there_is_a_content_item
       when_i_visit_the_coronavirus_landing_page
       then_i_can_not_see_the_risk_level
     end
