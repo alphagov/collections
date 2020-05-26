@@ -81,6 +81,7 @@ class CoronavirusLandingPageTest < ActionDispatch::IntegrationTest
       given_there_is_an_education_content_item
       when_i_visit_the_education_hub_page
       then_i_can_see_the_page_title("Education and Childcare")
+      then_i_can_see_the_education_accordions
     end
   end
 

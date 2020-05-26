@@ -139,11 +139,18 @@ module CoronavirusLandingPageSteps
   end
 
   def then_i_can_see_the_accordions
+    assert page.has_selector?("h2", text: "Guidance and support")
     assert page.has_selector?(".govuk-accordion__section-header", text: "How to protect yourself and others")
   end
 
   def then_i_can_see_the_business_accordions
+    assert page.has_selector?("h2", text: "Guidance and support")
     assert page.has_selector?(".govuk-accordion__section-header", text: "Funding and support")
+  end
+
+  def then_i_can_see_the_education_accordions
+    assert page.has_selector?("h2", text: "Guidance and support")
+    assert page.has_selector?(".govuk-accordion__section-header", text: "School curriculum and teaching")
   end
 
   def and_i_click_on_an_accordion
