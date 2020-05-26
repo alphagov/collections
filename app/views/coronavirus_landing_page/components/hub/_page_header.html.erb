@@ -9,7 +9,14 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <% title_link = capture do %>
-          Part of <a href="<%= title[:context][:href] %>" class="govuk-link covid__page-header-link">
+          Part of <a
+            href="<%= title[:context][:href] %>"
+            class="govuk-link covid__page-header-link"
+            data-module="track-click"
+            data-track-category="breadcrumbClicked"
+            data-track-action="superBreadcrumb"
+            data-track-label="<%= title[:context][:href] %>"
+          >
             <%= title[:context][:text] %>
           </a>
         <% end %>
