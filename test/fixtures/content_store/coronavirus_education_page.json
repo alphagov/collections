@@ -36,6 +36,7 @@
   },
   "description": "Get coronavirus (COVID-19) support",
   "details": {
+    "sections_heading": "Guidance and support",
     "sections": [
       {
         "title": "School curriculum and teaching",
