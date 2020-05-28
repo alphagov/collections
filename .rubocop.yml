@@ -6,13 +6,3 @@ inherit_gem:
 inherit_mode:
   merge:
     - Exclude
-
-Rails/OutputSafety:
-  Enabled: false
-Rails/HelperInstanceVariable:
-  Enabled: false
-
-Metrics/BlockLength:
-  Exclude:
-    - 'config/routes.rb'
-    - 'features/**/*.rb'
