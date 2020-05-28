@@ -9,3 +9,8 @@
 //= require components/accordion
 //= require modules/coronavirus-landing-page
 //= require govuk_publishing_components/all_components
+
+$(document).on('ready', function(){
+  var toggleAttribute = new GOVUK.Modules.ToggleAttribute();
+  toggleAttribute.start($('[data-module=toggle-attribute]'));
+});
