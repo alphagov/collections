@@ -20,7 +20,7 @@ module ApplicationHelper
   end
 
   def page_text_direction
-    @page_text_direction ||= I18n.t("shared.language_direction.#{I18n.locale}", default: "ltr")
+    @page_text_direction ||= I18n.t("shared.language_direction.#{I18n.locale}", default: "ltr") # rubocop:disable Rails/HelperInstanceVariable
   end
 
   def dir_attribute
