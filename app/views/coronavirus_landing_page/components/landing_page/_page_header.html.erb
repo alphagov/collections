@@ -1,12 +1,12 @@
 <header class="covid__page-header covid__page-header--landing-page">
-  <div class="govuk-width-container">
+  <div class="govuk-width-container covid__page-header-title-wrapper">
     <%= render 'govuk_publishing_components/components/breadcrumbs', {
       breadcrumbs: breadcrumbs,
       collapse_on_mobile: true,
       inverse: true
     } %>
 
-    <div class="govuk-grid-row covid__page-header-title-wrapper">
+    <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <%= render "govuk_publishing_components/components/title", {
           context: title[:context],
