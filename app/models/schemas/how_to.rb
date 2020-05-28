@@ -7,8 +7,9 @@ class Schemas::HowTo
     to: :step_by_step,
   )
 
-  def initialize(step_by_step)
+  def initialize(step_by_step, view_context)
     @step_by_step = step_by_step
+    @view_context = view_context
     @step_image_index = 1
   end
 
@@ -50,7 +51,7 @@ class Schemas::HowTo
 
 private
 
-  attr_reader :step_by_step, :step_image_index
+  attr_reader :step_by_step, :step_image_index, :view_context
 
   def how_to_direction(content, index)
     {
@@ -92,18 +93,14 @@ private
     end || image_urls["placeholder"]
   end
 
-  def image_url(image_file)
-    ActionController::Base.helpers.asset_url(image_file, type: :image)
-  end
-
   def image_urls
     @image_urls ||= begin
       (1..12).each_with_object({}) { |index, image_urls|
-        image_urls[index.to_s] = image_url("step-#{index}.png")
+        image_urls[index.to_s] = view_context.image_url("step-#{index}.png")
       }.merge(
-        "or" => image_url("step-or.png"),
-        "and" => image_url("step-and.png"),
-        "placeholder" => image_url("govuk_publishing_components/govuk-schema-placeholder-1x1.png"),
+        "or" => view_context.image_url("step-or.png"),
+        "and" => view_context.image_url("step-and.png"),
+        "placeholder" => view_context.image_url("govuk_publishing_components/govuk-schema-placeholder-1x1.png"),
       )
     end
   end
