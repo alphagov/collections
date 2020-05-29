@@ -11,8 +11,8 @@
 
     <div class="govuk-grid-column-one-third add-title-margin">
       <%= render "govuk_publishing_components/components/subscription-links", {
-        email_signup_link: email_signup_path(topic_slug: params[:topic_slug], subtopic_slug: params[:subtopic_slug]),
-        email_signup_link_text: "Subscribe to email alerts"
+        email_signup_link: "/email-signup?topic=/topic/#{params[:topic_slug]}/#{params[:subtopic_slug]}",
+        email_signup_link_text: "Subscribe to email alerts",
       } %>
 
       <% if local_assigns[:link_to_latest_feed] %>
