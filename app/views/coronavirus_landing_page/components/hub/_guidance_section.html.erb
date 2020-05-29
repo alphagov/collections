@@ -8,7 +8,7 @@
           font_size: 19,
           margin_bottom: 5
         } %>
-        <ul class="covid__list">
+        <ul class="covid__list govuk-!-margin-bottom-8">
           <% guidance["list"].each do | item | %>
             <li class="covid__list-item">
               <%= render 'govuk_publishing_components/components/action_link', {
@@ -25,6 +25,17 @@
             </li>
           <% end %>
         </ul>
+        <%= render partial: 'components/signup-link', locals: {
+          heading_level: 2,
+          link_text: email_signup["email_link"],
+          link_href: email_signup["email_url"],
+          heading: email_signup["intro"],
+          data: {
+            "module": "track-click",
+            "track-category": "emailAlertLinkClicked",
+            "track-action": request.path
+          },
+        } if email_signup %>
       </div>
     </div>
   </div>
