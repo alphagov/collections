@@ -279,3 +279,30 @@
     margin-bottom: govuk-spacing(2);
   }
 }
+
+.covid-header-notice {
+  @include govuk-responsive-margin(4, "bottom");
+  border: solid 5px $covid-grey;
+}
+
+.covid-header-notice__header {
+  padding: govuk-spacing(4) govuk-spacing(4) 0 govuk-spacing(4);
+}
+
+.covid-header-notice__title-logo {
+  display: block;
+  max-width: 60px;
+  height: 25px;
+}
+
+.covid-header-notice__content {
+  padding: govuk-spacing(4);
+}
+
+.covid-header-notice__list {
+  @include govuk-responsive-margin(5, "bottom");
+}
+
+.covid-header-notice__call-to-action {
+  @include govuk-font(19, $weight: bold);
+}
