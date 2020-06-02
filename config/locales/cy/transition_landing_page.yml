@@ -10,7 +10,7 @@ cy:
       <p>Bydd y rheolau cyfredol ar fasnach, teithio a busnes ar gyfer y DU a’r UE yn parhau i fod yn berthnasol yn ystod y cyfnod pontio.</p>
       <p>Bydd rheolau newydd yn dod i rym ar 1 Ionawr 2021.</p>
       <p>Dylech baratoi nawr a thanysgrifio i ddiweddariadau ebost am unrhyw drefniadau ychwanegol.</p>
-      <p><a class="govuk-!-font-weight-bold" href="/transition-check" data-track-category="transition-landing-page" data-track-action="/transition-check" data-track-label="Gwiriwch sut i baratoi ar gyfer y rheolau newydd yn 2021">Gwiriwch sut i baratoi ar gyfer y rheolau newydd yn 2021</a>
+      <p><a class="govuk-!-font-weight-bold" href="/transition-check" data-track-category="transition-landing-page" data-track-action="/transition-check" data-track-label="Gwiriwch sut i baratoi ar gyfer y rheolau newydd yn 2021" data-module="track-click">Gwiriwch sut i baratoi ar gyfer y rheolau newydd yn 2021</a>
     comms_header: "Newyddion"
     comms:
       links:

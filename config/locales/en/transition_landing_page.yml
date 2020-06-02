@@ -10,7 +10,7 @@ en:
       <p>The current rules on trade, travel, and business for the UK and EU will continue to apply during the transition period.</p>
       <p>New rules will take effect on 1 January 2021.</p>
       <p>You should prepare now and subscribe to email updates about any additional arrangements.</p>
-      <p><a class="govuk-!-font-weight-bold" href="/transition-check" data-track-category="transition-landing-page" data-track-action="/transition-check" data-track-label="Check how to get ready for new rules in 2021">Check how to get ready for new rules in 2021</a></p>
+      <p><a class="govuk-!-font-weight-bold" href="/transition-check" data-track-category="transition-landing-page" data-track-action="/transition-check" data-track-label="Check how to get ready for new rules in 2021" data-module="track-click">Check how to get ready for new rules in 2021</a></p>
     comms_header: "News"
     comms:
       links:
