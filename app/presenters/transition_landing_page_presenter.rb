@@ -66,7 +66,7 @@ private
       data_attributes = {
         track_category: "transition-landing-page",
         track_action: link_item[:link][:path],
-        track_label: link_item[:link][:text],
+        track_label: "News",
       }
 
       link_item[:link][:data_attributes] = data_attributes
