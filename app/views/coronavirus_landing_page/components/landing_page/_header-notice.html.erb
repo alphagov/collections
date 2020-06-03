@@ -19,4 +19,14 @@
       <%= link_to(call_to_action[:title], call_to_action[:href], class: "covid-header-notice__call-to-action govuk-link") %>
     <% end %>
   </div>
+
+  <div class="covid-header-notice__footer">
+    <%= render "govuk_publishing_components/components/action_link", {
+      text: "Placeholder text",
+      subtext: "More placeholder text",
+      subtext_href: "/page-not-provided-yet",
+      mobile_subtext: true,
+      nhs_icon: true
+    } %>
+  </div>
 </section>

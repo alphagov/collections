@@ -306,3 +306,8 @@
 .covid-header-notice__call-to-action {
   @include govuk-font(19, $weight: bold);
 }
+
+.covid-header-notice__footer {
+  padding: govuk-spacing(4);
+  background: govuk-colour("light-grey");
+}
