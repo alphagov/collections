@@ -1,13 +1,13 @@
-class TaxonsRedirectionController < ApplicationController
-  CORONAVIRUS_LANDING_PAGE_PATH = "/coronavirus".freeze
-  CORONAVIRUS_TAXON_PATH = "/coronavirus-taxon".freeze
+# frozen_string_literal: true
 
-  CORONAVIRUS_BUSINESS_TAXON_CONTENT_ID = "65666cdf-b177-4d79-9687-b9c32805e450".freeze
-  CORONAVIRUS_EDUCATION_TAXON_CONTENT_ID = "272308f4-05c8-4d0d-abc7-b7c2e3ccd249".freeze
+class TaxonsRedirectionController < ApplicationController
+  CORONAVIRUS_LANDING_PAGE_PATH = "/coronavirus"
+  CORONAVIRUS_TAXON_PATH = "/coronavirus-taxon"
 
   HUB_PAGE_FROM_CONTENT_ID = {
-    CORONAVIRUS_BUSINESS_TAXON_CONTENT_ID => "/coronavirus/business-support",
-    CORONAVIRUS_EDUCATION_TAXON_CONTENT_ID => "/coronavirus/education-and-childcare",
+    "65666cdf-b177-4d79-9687-b9c32805e450" => "/coronavirus/business-support",
+    "272308f4-05c8-4d0d-abc7-b7c2e3ccd249" => "/coronavirus/education-and-childcare",
+    "b7f57213-4b16-446d-8ded-81955d782680" => "/coronavirus/worker-support",
   }.freeze
 
   def redirect

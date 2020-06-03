@@ -94,7 +94,7 @@ class CoronavirusLandingPageTest < ActionDispatch::IntegrationTest
       then_i_am_redirected_to_the_landing_page
     end
 
-    it "redirects subtaxons to appropriate hub pages" do
+    it "redirects taxons to appropriate hub pages" do
       given_there_is_a_business_content_item
       and_a_coronavirus_business_taxon
       when_i_visit_the_coronavirus_business_taxon

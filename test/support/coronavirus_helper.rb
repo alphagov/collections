@@ -71,7 +71,7 @@ end
 
 def business_taxon_content_item
   random_taxon_page do |item|
-    item["content_id"] = TaxonsRedirectionController::CORONAVIRUS_BUSINESS_TAXON_CONTENT_ID
+    item["content_id"] = TaxonsRedirectionController::HUB_PAGE_FROM_CONTENT_ID.key("/coronavirus/business-support")
     item
   end
 end
