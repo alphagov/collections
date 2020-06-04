@@ -10,7 +10,7 @@ cy:
       <p>Bydd y rheolau cyfredol ar fasnach, teithio a busnes ar gyfer y DU a’r UE yn parhau i fod yn berthnasol yn ystod y cyfnod pontio.</p>
       <p>Bydd rheolau newydd yn dod i rym ar 1 Ionawr 2021.</p>
       <p>Dylech baratoi nawr a thanysgrifio i ddiweddariadau ebost am unrhyw drefniadau ychwanegol.</p>
-      <p><a class="govuk-!-font-weight-bold" href="/transition-check" data-track-category="transition-landing-page" data-track-action="/transition-check" data-track-label="Gwiriwch sut i baratoi ar gyfer y rheolau newydd yn 2021">Gwiriwch sut i baratoi ar gyfer y rheolau newydd yn 2021</a>
+      <p><a class="govuk-!-font-weight-bold" href="/transition-check" data-track-category="transition-landing-page" data-track-action="/transition-check" data-track-label="Gwiriwch sut i baratoi ar gyfer y rheolau newydd yn 2021" data-module="track-click">Gwiriwch sut i baratoi ar gyfer y rheolau newydd yn 2021</a>
     comms_header: "Newyddion"
     comms:
       links:
@@ -49,21 +49,21 @@ cy:
         list_block: |
           Ar ôl 1 Ionawr 2021, bydd angen i chi wneud datganiadau tollau i symud nwyddau i mewn ac allan o’r UE. Dylech chi:
           <ul>
-            <li><a class="govuk-!-font-weight-bold" href="/eori" data-track-category="transition-landing-page" data-track-action="/eori" data-track-label="gael rhif EORI">gael rhif EORI</a> os nad oes gennych un yn barod</li>
-            <li>penderfynu sut yr hoffech wneud datganiadau tollau ac os oes angen i chi gael <a class="govuk-!-font-weight-bold" href="/guidance/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-category="transition-landing-page" data-track-action="/guidance/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-label="rhywun i ddelio â’r tollau ar eich rhan">rhywun i ddelio â’r tollau ar eich rhan</a>.</li>
+            <li><a class="govuk-!-font-weight-bold" href="/eori" data-track-category="transition-landing-page" data-track-action="/eori" data-track-label="What you can do now">gael rhif EORI</a> os nad oes gennych un yn barod</li>
+            <li>penderfynu sut yr hoffech wneud datganiadau tollau ac os oes angen i chi gael <a class="govuk-!-font-weight-bold" href="/guidance/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-category="transition-landing-page" data-track-action="/guidance/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-label="What you can do now">rhywun i ddelio â’r tollau ar eich rhan</a>.</li>
           </ul>
       - row_title: "Aros yn y DU os ydych yn ddinesydd o’r UE"
         list_block: |
           Gwiriwch os oes angen i chi gyflwyno cais i’r cynllun setliad os ydych chi, neu’ch teulu, yn dod o’r UE, neu o’r Swistir, Norwy, Gwlad yr Iâ neu Liechtenstein.
 
-          <a class="govuk-!-font-weight-bold" href="/staying-uk-eu-citizen" data-track-category="transition-landing-page" data-track-action="/staying-uk-eu-citizen" data-track-label="Gwiriwch beth sydd angen i chi wneud i aros yn y DU">Gwiriwch beth sydd angen i chi wneud i aros yn y DU</a>
+          <a class="govuk-!-font-weight-bold" href="/staying-uk-eu-citizen" data-track-category="transition-landing-page" data-track-action="/staying-uk-eu-citizen" data-track-label="What you can do now">Gwiriwch beth sydd angen i chi wneud i aros yn y DU</a>
       - row_title: "Teithio i’r UE"
         list_block: |
           Gallwch barhau i deithio i’r UE fel arfer yn ystod y cyfnod pontio.
 
           O 1 Ionawr 2021 bydd rheolau newydd i deithio i'r UE, neu i'r Swistir, Norwy, Gwlad yr Iâ neu Liechtenstein.
 
-          <a class="govuk-!-font-weight-bold" href="/visit-europe-1-january-2021" data-track-category="transition-landing-page" data-track-action="/visit-europe-1-january-2021" data-track-label="Gwiriwch beth sydd angen i chi wneud i deithio i Ewrop o 2021">Gwiriwch beth sydd angen i chi wneud i deithio i Ewrop o 2021</a>
+          <a class="govuk-!-font-weight-bold" href="/visit-europe-1-january-2021" data-track-category="transition-landing-page" data-track-action="/visit-europe-1-january-2021" data-track-label="What you can do now">Gwiriwch beth sydd angen i chi wneud i deithio i Ewrop o 2021</a>
       - row_title: "Byw a gweithio yn yr UE"
         list_block: |
           Mae byw a gweithio mewn gwlad yr UE yn ddibynnol ar y rheolau yn y wlad honno.
@@ -72,7 +72,7 @@ cy:
 
           Efallai bydd angen i chi gyfnewid eich trwydded yrru DU am drwydded a roddir gan wlad yr UE ble rydych yn byw.
 
-          <a class="govuk-!-font-weight-bold" href="/uk-nationals-living-eu" data-track-category="transition-landing-page" data-track-action="/uk-nationals-living-eu" data-track-label="Gwiriwch beth sydd angen i chi wneud yn y wlad yr ydych yn byw ynddi">Gwiriwch beth sydd angen i chi wneud yn y wlad yr ydych yn byw ynddi</a>
+          <a class="govuk-!-font-weight-bold" href="/uk-nationals-living-eu" data-track-category="transition-landing-page" data-track-action="/uk-nationals-living-eu" data-track-label="What you can do now">Gwiriwch beth sydd angen i chi wneud yn y wlad yr ydych yn byw ynddi</a>
     topic_section_header: Holl wybodaeth y cyfnod pontio
     topic_section_subheading: Pori’r holl wybodaeth sy’n berthnasol i’r cyfnod pontio
     email_intro: "I gael y manylion diweddaraf"
