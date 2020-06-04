@@ -38,20 +38,20 @@ module Organisations
     end
 
     def high_profile_groups
-      alphabetical_high_profile_groups = @org.ordered_high_profile_groups
-                                             &.sort_by { |key| key["base_path"] }
-
-      alphabetical_high_profile_groups&.map! do |group|
-        {
-          text: group["title"],
-          path: group["base_path"],
-        }
-      end
+      high_profile_groups = @org.ordered_high_profile_groups
+        &.filter { |org| %w[live exempt transitioning].include?(org["details"]["organisation_govuk_status"]["status"]) }
+        &.sort_by { |key| key["base_path"] }
+        &.map do |group|
+          {
+            text: group["title"],
+            path: group["base_path"],
+          }
+        end
 
       {
         title: I18n.t("organisations.high_profile_groups", title: acronym),
         brand: @org.brand,
-        items: alphabetical_high_profile_groups,
+        items: high_profile_groups,
       }
     end
 
