@@ -84,10 +84,12 @@ class OrganisationTest < ActionDispatch::IntegrationTest
           {
             base_path: "/government/organisations/attorney-generals-office-1",
             title: "High Profile Group 1",
+            details: { organisation_govuk_status: { status: "live" } },
           },
           {
             base_path: "/government/organisations/attorney-generals-office-2",
             title: "High Profile Group 2",
+            details: { organisation_govuk_status: { status: "live" } },
           },
         ],
         ordered_roles: [
@@ -296,10 +298,12 @@ class OrganisationTest < ActionDispatch::IntegrationTest
           {
             base_path: "/government/organisations/attorney-generals-office-1",
             title: "High Profile Group 1",
+            details: { organisation_govuk_status: { status: "live" } },
           },
           {
             base_path: "/government/organisations/attorney-generals-office-2",
             title: "High Profile Group 2",
+            details: { organisation_govuk_status: { status: "live" } },
           },
         ],
       },

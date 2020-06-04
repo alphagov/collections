@@ -426,10 +426,17 @@ module OrganisationHelpers
           {
             base_path: "/government/organisations/rural-development-programme-for-england-network",
             title: "Rural Development Programme for England Network",
+            details: { organisation_govuk_status: { status: "live" } },
           },
           {
             base_path: "/government/organisations/another-rural-development-programme-for-england-network",
             title: "Another Rural Development Programme for England Network",
+            details: { organisation_govuk_status: { status: "live" } },
+          },
+          {
+            base_path: "/government/organisations/yet-another-rural-development-programme-for-england-network",
+            title: "Yet another Rural Development Programme for England Network",
+            details: { organisation_govuk_status: { status: "closed" } },
           },
         ],
       },
