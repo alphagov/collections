@@ -5,11 +5,16 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
   function CoronavirusLandingPage () {}
 
   CoronavirusLandingPage.prototype.start = function ($element) {
+    var $this = this
     // Confirm the user is on the coronavirus landing page
     if (this.checkOnLandingPage()) {
       this.globarBarSeen()
     }
-    this.addAccordionOpenAllTracking($element)
+
+    // Ensure that the "Open/Close all" element exists when attaching the event listeners for tracking
+    $(document).ready(function() {
+      $this.addAccordionOpenAllTracking($element)
+    })
   }
 
   CoronavirusLandingPage.prototype.checkOnLandingPage = function () {
