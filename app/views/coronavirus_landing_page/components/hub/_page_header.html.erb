@@ -35,13 +35,13 @@
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
           <%= render "govuk_publishing_components/components/heading", {
-            text: details.header_section["pretext"],
+            text: header["pretext"],
             font_size: 19,
             margin_bottom: 3,
             inverse: true
           } %>
           <ul class="covid__list covid__list--header">
-            <% details.header_section["list"].each do | item | %>
+            <% header["list"].each do | item | %>
               <li class="covid__list-item"><%= item %></li>
             <% end %>
           </ul>
@@ -49,5 +49,5 @@
       </div>
     </div>
   </div>
-  <%= render 'coronavirus_landing_page/components/hub/guidance_section', guidance: details.guidance_section, email_signup: details.notifications %>
+  <%= render 'coronavirus_landing_page/components/hub/guidance_section', guidance: guidance, email_signup: notifications %>
 </header>
