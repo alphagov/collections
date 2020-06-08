@@ -99,6 +99,14 @@ module CoronavirusLandingPageSteps
     assert page.has_selector?(".covid__page-header h1", text: "Coronavirus (COVID-19)")
   end
 
+  def then_i_can_see_the_education_header_section
+    assert page.has_text?("Find out when schools are expected to reopen in Scotland, Wales and Northern Ireland")
+  end
+
+  def then_i_cannot_see_the_education_header_section
+    assert page.has_no_text?("Find out when schools are expected to reopen in Scotland, Wales and Northern Ireland")
+  end
+
   def then_i_can_see_the_business_page
     assert page.has_title?("Coronavirus (COVID-19): Business support")
     then_i_can_see_the_page_title("Business support")
