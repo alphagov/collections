@@ -30,22 +30,44 @@
       </div>
     </div>
   </div>
-
   <div class="covid__page-header-light covid__page-header-light--hub">
     <div class="govuk-width-container">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-          <%= render "govuk_publishing_components/components/heading", {
-            text: details.header_section["pretext"],
-            font_size: 19,
-            margin_bottom: 3,
-            inverse: true
-          } %>
-          <ul class="covid__list covid__list--header">
-            <% details.header_section["list"].each do | item | %>
-              <li class="covid__list-item"><%= item %></li>
-            <% end %>
-          </ul>
+          <% if params[:hub_slug] == "education-and-childcare" %>
+            <%= render "govuk_publishing_components/components/heading", {
+              text: "Guidance for teachers, school leaders, carers, parents and students",
+              font_size: 19,
+              margin_bottom: 3,
+              inverse: true
+            } %>
+            <p class="govuk-body covid__inverse">
+              In England:
+            </p>
+            <ul class="covid__list covid__list--header">
+              <li class="covid__list-item">children in nursery, reception, year 1 and year 6 can return to school</li>
+              <li class="covid__list-item">schools remain closed for other year groups, except for children of key workers and vulnerable children</li>
+              <li class="covid__list-item">childminders can return to work</li>
+            </ul>
+            <p class="govuk-body covid__inverse">
+              Find out when schools are expected to reopen in
+              <%= link_to "Scotland","https://www.gov.scot/news/schools-to-re-open-in-august/", class: "covid__page-header-link govuk-link"%>,
+              <%= link_to "Wales","https://gov.wales/how-schools-will-work-during-coronavirus-pandemic#section-38402", class: "covid__page-header-link govuk-link"%> and
+              <%= link_to "Northern Ireland","https://www.nidirect.gov.uk/articles/coronavirus-covid-19-advice-schools-colleges-and-universities", class: "covid__page-header-link govuk-link"%>.
+            </p>
+          <% else %>
+            <%= render "govuk_publishing_components/components/heading", {
+              text: details.header_section["pretext"],
+              font_size: 19,
+              margin_bottom: 3,
+              inverse: true
+            } %>
+            <ul class="covid__list covid__list--header">
+              <% details.header_section["list"].each do | item | %>
+                <li class="covid__list-item"><%= item %></li>
+              <% end %>
+            </ul>
+          <% end %>
         </div>
       </div>
     </div>
