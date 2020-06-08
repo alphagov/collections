@@ -143,13 +143,30 @@
       "header": "All coronavirus education and childcare information on GOV.UK"
     },
     "header_section": {
+      "list_heading": "In England:",
       "list": [
         "Schools and nurseries remain closed to all pupils except children of keyworkers and vulnerable children",
         "Exams are cancelled and grades will be assessed differently",
         "Free school meals or food vouchers will be available for pupils not attending school"
       ],
-      "pretext": "How nurseries, schools, colleges and universities are working during coronavirus (COVID-19)"
-    },
-    "live_stream_enabled": false
+      "pretext": "How nurseries, schools, colleges and universities are working during coronavirus (COVID-19)",
+      "education-pretext": {
+        "text": "Find out when schools are expected to reopen in",
+        "countries": [
+          {
+            "label": "Scotland",
+            "url": "https://www.gov.scot/news/schools-to-re-open-in-august/"
+          },
+          {
+            "label": "Wales",
+            "url": "https://gov.wales/how-schools-will-work-during-coronavirus-pandemic#section-38402"
+          },
+          {
+            "label": "Northern Ireland",
+            "url": "https://www.nidirect.gov.uk/articles/coronavirus-covid-19-advice-schools-colleges-and-universities"
+          }
+        ]
+      }
+    }
   }
 }
