@@ -111,7 +111,7 @@ module Organisations
     end
 
     def contact_description(description)
-      return content_tag(:p, description.gsub("\r\n", "<br/>").html_safe) if description.present?
+      return tag.p(description.gsub("\r\n", "<br/>").html_safe) if description.present?
     end
   end
 end
