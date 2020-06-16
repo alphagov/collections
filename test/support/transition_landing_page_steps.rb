@@ -26,7 +26,7 @@ module TransitionLandingPageSteps
   end
 
   def then_i_can_see_the_header_section
-    assert page.has_selector?(".landing-page__header h1", text: "The UK has left the EU")
+    assert page.has_selector?(".landing-page__header h1", text: "Get ready for 2021")
   end
 
   def then_i_can_see_the_what_happens_next_section
