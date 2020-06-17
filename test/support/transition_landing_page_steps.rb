@@ -26,11 +26,11 @@ module TransitionLandingPageSteps
   end
 
   def then_i_can_see_the_header_section
-    assert page.has_selector?(".landing-page__header h1", text: "Get ready for 2021")
+    assert page.has_selector?(".landing-page__header h1", text: "The UK has left the EU")
   end
 
   def then_i_can_see_the_what_happens_next_section
-    assert page.has_selector?("h2.govuk-heading-l", text: "The transition period")
+    assert page.has_selector?("h2.govuk-heading-l", text: "Get ready for 2021")
   end
 
   def then_i_cannot_see_the_get_ready_section
@@ -42,7 +42,7 @@ module TransitionLandingPageSteps
   end
 
   def then_i_can_see_the_buckets_section
-    assert page.has_selector?("h2.govuk-heading-l", text: "The transition period")
+    assert page.has_selector?("h2.govuk-heading-l", text: "Get ready for 2021")
   end
 
   def and_i_can_see_an_email_subscription_link
