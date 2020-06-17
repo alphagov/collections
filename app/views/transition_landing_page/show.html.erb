@@ -12,13 +12,13 @@
 <div class="govuk-width-container">
   <%= render partial: 'explainer' %>
 
-  <% if show_comms %>
-    <%= render partial: 'comms', locals: { comms: presented_taxon.comms } %>
-  <% end %>
-
   <div class="landing-page__buckets">
     <%= render partial: 'buckets', locals: { buckets: presented_taxon.buckets } %>
   </div>
+
+  <% if show_comms %>
+    <%= render partial: 'comms', locals: { comms: presented_taxon.comms } %>
+  <% end %>
 
   <div class="landing-page__section">
     <%= render partial: 'brexit_finders', locals: { supergroups: presented_taxon.supergroup_sections, email_path: presented_taxon.email_path } %>
