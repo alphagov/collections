@@ -8,7 +8,7 @@ en:
     explainer_text: |
       <p>The UK has left the EU and is now in a transition period, before new rules come into place from 1 January 2021. </p>
       <p>There will be new rules in many areas. For example, if you have a business, travel to Europe or sell your goods abroad. Use this service to answer some questions and get a personalised list of the changes that might affect you.</p>
-      <p><a class="govuk-!-font-weight-bold" href="/transition-check" data-track-category="transition-landing-page" data-track-action="/transition-check" data-track-label="Check how to get ready for new rules in 2021" data-module="track-click">Check how to get ready for new rules in 2021</a></p>
+      <p><a class="govuk-!-font-weight-bold" href="/transition-check" data-track-category="transition-landing-page" data-track-action="/transition-check" data-track-label="Check what’s changing and sign up for email alerts" data-module="track-click">Check what’s changing and sign up for email alerts</a></p>
     guidance_header: "Actions you can take now"
     guidance_subheader: "Actions you can take now that do not depend on negotiations."
     campaign_buckets:
