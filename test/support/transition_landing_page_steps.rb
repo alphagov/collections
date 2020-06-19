@@ -8,13 +8,19 @@ module TransitionLandingPageSteps
 
   TRANSITION_TAXON_CONTENT_ID = "d6c2de5d-ef90-45d1-82d4-5f2438369eea".freeze
   TRANSITION_TAXON_PATH = "/transition".freeze
+  TRANSITION_TAXON_PATH_WELSH = "/transition.cy".freeze
 
   def given_there_is_a_transition_taxon
     stub_content_store_has_item(TRANSITION_TAXON_PATH, content_item)
+    stub_content_store_has_item(TRANSITION_TAXON_PATH_WELSH, content_item)
   end
 
   def when_i_visit_the_transition_landing_page
     visit TRANSITION_TAXON_PATH
+  end
+
+  def when_i_visit_the_welsh_transition_landing_page
+    visit TRANSITION_TAXON_PATH_WELSH
   end
 
   def then_i_can_see_the_title_section
@@ -45,9 +51,9 @@ module TransitionLandingPageSteps
     assert page.has_selector?("h2.govuk-heading-l", text: "Get ready for 2021")
   end
 
-  def and_i_can_see_an_email_subscription_link
+  def then_i_can_see_an_email_subscription_link
     assert page.has_selector?('a[href="/email-signup/?topic=' + TRANSITION_TAXON_PATH + '"]')
-    assert page.has_text?("Sign up for email updates about the transition period")
+    assert page.has_text?("Cofrestrwch i gael hysbysiadau ebost am y cyfnod pontio")
   end
 
   def and_i_can_see_the_explore_topics_section
@@ -87,13 +93,13 @@ module TransitionLandingPageSteps
       "Transparency and freedom of information releases",
     ].each do |section|
       assert page.has_css?("a[data-track-category='SeeAllLinkClicked']", text: section)
-      assert page.has_css?("a[data-track-action=\"#{current_path}\"]", text: section)
+      assert page.has_css?("a[data-track-action=\"#{TRANSITION_TAXON_PATH}\"]", text: section)
     end
   end
 
   def and_the_email_link_is_tracked
     assert page.has_css?("a[data-track-category='emailAlertLinkClicked']")
-    assert page.has_css?("a[data-track-action=\"#{current_path}\"]")
+    assert page.has_css?("a[data-track-action=\"#{TRANSITION_TAXON_PATH}\"]")
   end
 
   def then_the_page_is_not_noindexed
