@@ -16,13 +16,6 @@ class TransitionLandingPageTest < ActionDispatch::IntegrationTest
       and_i_can_see_the_explore_topics_section
     end
 
-    it "renders an email subscription section on Welsh version" do
-      given_there_is_a_transition_taxon
-      when_i_visit_the_welsh_transition_landing_page
-      then_i_can_see_an_email_subscription_link
-      and_the_email_link_is_tracked
-    end
-
     it "has tracking on all links" do
       given_there_is_a_transition_taxon
       when_i_visit_the_transition_landing_page
