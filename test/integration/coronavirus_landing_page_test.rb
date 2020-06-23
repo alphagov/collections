@@ -13,6 +13,7 @@ class CoronavirusLandingPageTest < ActionDispatch::IntegrationTest
       then_i_can_see_the_accordions
       then_i_can_see_the_live_stream_section
       and_i_can_see_links_to_search
+      and_there_are_metatags
     end
 
     it "has sections that can be clicked" do
