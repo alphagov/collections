@@ -1,3 +1,4 @@
+<% if ActiveModel::Type::Boolean.new.cast(live_stream["show_live_stream"]) %>
 <%
   list_css_classes = %w(govuk-list)
   list_css_classes << "covid__spaced-list" if live_stream["spaced_links"]
@@ -41,3 +42,4 @@
     <% end %>
   </ul>
 </section>
+<% end %>

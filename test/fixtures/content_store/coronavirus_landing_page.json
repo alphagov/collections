@@ -402,7 +402,7 @@
       "popular_questions_link_visible": true,
       "see_popular_questions_text": "See the types of questions submitted by the public",
       "see_popular_questions_link": "https://www.gov.uk",
-      "date_text": "Live streamed"
+      "show_live_stream": true
     },
     "special_announcement_schema": {
       "category": "https://www.wikidata.org/wiki/Q81068910",

@@ -19,6 +19,10 @@ module CoronavirusLandingPageSteps
     stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item)
   end
 
+  def given_there_is_a_content_item_with_livestream_disabled
+    stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item_with_livestream_disabled)
+  end
+
   def given_there_is_a_content_item_with_live_stream_time
     stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item_with_live_stream_time)
   end
@@ -116,7 +120,12 @@ module CoronavirusLandingPageSteps
     assert page.has_selector?(".covid__page-header h1", text: title)
   end
 
+  def then_i_cannot_see_the_live_stream_section
+    assert page.has_no_text?("Press conferences and speeches")
+  end
+
   def then_i_can_see_the_live_stream_section_with_streamed_date
+    assert page.has_text?("Press conferences and speeches")
     assert page.has_text?("19 April")
     assert_not page.has_text?("19 April at")
   end

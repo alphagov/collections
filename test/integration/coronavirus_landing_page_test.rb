@@ -30,6 +30,12 @@ class CoronavirusLandingPageTest < ActionDispatch::IntegrationTest
       then_i_can_see_the_popular_questions_link
     end
 
+    it "can hide the livestream section" do
+      given_there_is_a_content_item_with_livestream_disabled
+      when_i_visit_the_coronavirus_landing_page
+      then_i_cannot_see_the_live_stream_section
+    end
+
     it "optionally shows the time of a livestream" do
       given_there_is_a_content_item_with_live_stream_time
       when_i_visit_the_coronavirus_landing_page
