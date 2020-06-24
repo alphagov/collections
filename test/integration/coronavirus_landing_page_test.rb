@@ -26,8 +26,6 @@ class CoronavirusLandingPageTest < ActionDispatch::IntegrationTest
       given_there_is_a_content_item
       when_i_visit_the_coronavirus_landing_page
       then_i_can_see_the_live_stream_section_with_streamed_date
-      then_i_can_see_the_ask_a_question_section
-      then_i_can_see_the_popular_questions_link
     end
 
     it "can hide the livestream section" do
@@ -40,18 +38,6 @@ class CoronavirusLandingPageTest < ActionDispatch::IntegrationTest
       given_there_is_a_content_item_with_live_stream_time
       when_i_visit_the_coronavirus_landing_page
       then_i_can_see_the_live_stream_section_with_date_and_time
-    end
-
-    it "optionally hides the ask a question link" do
-      given_there_is_a_content_item_with_ask_a_question_disabled
-      when_i_visit_the_coronavirus_landing_page
-      then_i_cannot_see_the_ask_a_question_section
-    end
-
-    it "optionally hides the popular questions link" do
-      given_there_is_a_content_item_with_popular_questions_link_disabled
-      when_i_visit_the_coronavirus_landing_page
-      then_i_cannot_see_the_popular_questions_link
     end
 
     it "shows COVID-19 risk level when risk level is enabled" do

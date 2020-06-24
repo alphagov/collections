@@ -134,26 +134,6 @@ module CoronavirusLandingPageSteps
     assert page.has_text?("19 April at 5:00pm")
   end
 
-  def then_i_can_see_the_ask_a_question_section
-    assert page.has_link?("Ask a question at the next press conference", href: "https://www.gov.uk")
-  end
-
-  def then_i_cannot_see_the_ask_a_question_section
-    assert page.has_no_link?("Ask a question at the next press conference", href: "https://www.gov.uk")
-  end
-
-  def then_i_can_see_the_popular_questions_link
-    assert page.has_link?("See the types of questions submitted by the public", href: "https://www.gov.uk")
-  end
-
-  def then_i_cannot_see_the_popular_questions_link
-    assert page.has_no_link?("See the types of questions submitted by the public", href: "https://www.gov.uk")
-  end
-
-  def and_there_is_no_ask_a_question_section
-    assert page.has_no_link?("Ask a question at the next press conference")
-  end
-
   def then_i_can_see_the_live_stream_section
     assert page.has_selector?(".covid__topic-wrapper h2", text: "Press conferences and speeches")
     assert page.has_selector?(".covid__video-wrapper")
