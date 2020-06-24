@@ -45,11 +45,6 @@ module TransitionLandingPageSteps
     assert page.has_selector?("h2.govuk-heading-l", text: "Get ready for 2021")
   end
 
-  def and_i_can_see_an_email_subscription_link
-    assert page.has_selector?('a[href="/email-signup/?topic=' + TRANSITION_TAXON_PATH + '"]')
-    assert page.has_text?("Sign up for email updates about the transition period")
-  end
-
   def and_i_can_see_the_explore_topics_section
     assert page.has_selector?("h2.govuk-heading-m", text: "All transition period information")
 
@@ -87,13 +82,8 @@ module TransitionLandingPageSteps
       "Transparency and freedom of information releases",
     ].each do |section|
       assert page.has_css?("a[data-track-category='SeeAllLinkClicked']", text: section)
-      assert page.has_css?("a[data-track-action=\"#{current_path}\"]", text: section)
+      assert page.has_css?("a[data-track-action=\"#{TRANSITION_TAXON_PATH}\"]", text: section)
     end
-  end
-
-  def and_the_email_link_is_tracked
-    assert page.has_css?("a[data-track-category='emailAlertLinkClicked']")
-    assert page.has_css?("a[data-track-action=\"#{current_path}\"]")
   end
 
   def then_the_page_is_not_noindexed

@@ -10,14 +10,3 @@
     } %>
   </div>
 </div>
-<%= render partial: 'components/signup-link', locals: {
-  link_href: "/email-signup/?topic=#{email_path}",
-  link_text: t("transition_landing_page.email"),
-  heading: t("transition_landing_page.email_intro"),
-  data: {
-    "module": "track-click",
-    "track-category": "emailAlertLinkClicked",
-    "track-action": email_path
-  },
-  background: true
-} %>

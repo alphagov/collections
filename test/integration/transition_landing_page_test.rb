@@ -14,14 +14,12 @@ class TransitionLandingPageTest < ActionDispatch::IntegrationTest
       then_i_can_see_the_what_happens_next_section
       then_i_can_see_the_share_links_section
       and_i_can_see_the_explore_topics_section
-      and_i_can_see_an_email_subscription_link
     end
 
     it "has tracking on all links" do
       given_there_is_a_transition_taxon
       when_i_visit_the_transition_landing_page
       then_all_finder_links_have_tracking_data
-      and_the_email_link_is_tracked
       and_ecommerce_tracking_is_setup
     end
 
