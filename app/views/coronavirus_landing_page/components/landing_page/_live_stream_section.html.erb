@@ -1,3 +1,4 @@
+<% if ActiveModel::Type::Boolean.new.cast(live_stream["show_live_stream"]) %>
 <%
   list_css_classes = %w(govuk-list)
   list_css_classes << "covid__spaced-list" if live_stream["spaced_links"]
@@ -25,19 +26,6 @@
         <%= live_stream["previous_videos"]["previous_videos_text"] %>
       </a>
     </li>
-    <% if live_stream["ask_a_question_visible"] == true %>
-      <li class="covid__topic-list-item">
-        <a href="<%= live_stream["ask_a_question_link"] %>" class="covid__topic-list-link govuk-link">
-          <%= live_stream["ask_a_question_text"] %>
-        </a>
-      </li>
-    <% end %>
-    <% if live_stream["popular_questions_link_visible"] == true %>
-      <li class="covid__topic-list-item">
-        <a href="<%= live_stream["see_popular_questions_link"] %>" class="covid__topic-list-link govuk-link">
-          <%= live_stream["see_popular_questions_text"] %>
-        </a>
-      </li>
-    <% end %>
   </ul>
 </section>
+<% end %>

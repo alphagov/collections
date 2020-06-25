@@ -31,6 +31,12 @@ def coronavirus_content_item
   end
 end
 
+def coronavirus_content_item_with_livestream_disabled
+  content_item = coronavirus_content_item
+  content_item["details"]["live_stream"].delete("show_live_stream")
+  content_item
+end
+
 def coronavirus_content_item_with_live_stream_time
   content_item = coronavirus_content_item
   content_item["details"]["live_stream"]["time"] = "5:00pm"

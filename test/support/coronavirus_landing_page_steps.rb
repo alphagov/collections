@@ -19,6 +19,10 @@ module CoronavirusLandingPageSteps
     stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item)
   end
 
+  def given_there_is_a_content_item_with_livestream_disabled
+    stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item_with_livestream_disabled)
+  end
+
   def given_there_is_a_content_item_with_live_stream_time
     stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item_with_live_stream_time)
   end
@@ -116,33 +120,18 @@ module CoronavirusLandingPageSteps
     assert page.has_selector?(".covid__page-header h1", text: title)
   end
 
+  def then_i_cannot_see_the_live_stream_section
+    assert page.has_no_text?("Press conferences and speeches")
+  end
+
   def then_i_can_see_the_live_stream_section_with_streamed_date
+    assert page.has_text?("Press conferences and speeches")
     assert page.has_text?("19 April")
     assert_not page.has_text?("19 April at")
   end
 
   def then_i_can_see_the_live_stream_section_with_date_and_time
     assert page.has_text?("19 April at 5:00pm")
-  end
-
-  def then_i_can_see_the_ask_a_question_section
-    assert page.has_link?("Ask a question at the next press conference", href: "https://www.gov.uk")
-  end
-
-  def then_i_cannot_see_the_ask_a_question_section
-    assert page.has_no_link?("Ask a question at the next press conference", href: "https://www.gov.uk")
-  end
-
-  def then_i_can_see_the_popular_questions_link
-    assert page.has_link?("See the types of questions submitted by the public", href: "https://www.gov.uk")
-  end
-
-  def then_i_cannot_see_the_popular_questions_link
-    assert page.has_no_link?("See the types of questions submitted by the public", href: "https://www.gov.uk")
-  end
-
-  def and_there_is_no_ask_a_question_section
-    assert page.has_no_link?("Ask a question at the next press conference")
   end
 
   def then_i_can_see_the_live_stream_section
