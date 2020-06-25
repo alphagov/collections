@@ -207,6 +207,11 @@ module CoronavirusLandingPageSteps
     assert_nil(special_announcement_schema["gettingTestedInfo"])
   end
 
+  def and_there_are_metatags
+    assert page.has_selector? "meta[name='description'][content='Find out about the government response to coronavirus (COVID-19) and what you need to do.']", visible: false
+    assert page.has_selector?("link[rel='canonical'][href='http://www.example.com/coronavirus']", visible: false)
+  end
+
   def and_the_faqpage_schema_is_rendered
     special_announcement_schema = find_schema("FAQPage")
     assert_equal(special_announcement_schema["name"], "Coronavirus (COVID-19): what you need to do")

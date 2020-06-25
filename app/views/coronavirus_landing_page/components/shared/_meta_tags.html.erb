@@ -5,9 +5,10 @@
 <% content_for :is_full_width_header, true %>
 <% content_for :title, @content_item["title"] %>
 <% content_for :meta_tags do %>
+  <% page_url = File.join(request.base_url, request.path) %>
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="GOV.UK">
-  <meta property="og:url" content="<%= request.base_url + request.path %>">
+  <meta property="og:url" content="<%= page_url %>">
   <meta property="og:title" content="<%= @content_item["title"] %>">
   <meta property="og:description" content="<%= @content_item["description"] %>">
   <meta name="description" content="<%= @content_item["description"] %>">
@@ -18,4 +19,5 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="<%= image_url("corona-share-image.png") %>">
   <% end %>
+  <link rel="canonical" href="<%= page_url %>">
 <% end %>
