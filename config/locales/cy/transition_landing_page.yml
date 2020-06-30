@@ -71,7 +71,7 @@ cy:
           Ar ôl 1 Ionawr 2021, bydd angen i chi wneud datganiadau tollau i symud nwyddau i mewn ac allan o’r UE. Dylech chi:
           <ul>
             <li><a class="govuk-!-font-weight-bold" href="/eori" data-track-category="transition-landing-page" data-track-action="/eori" data-track-label="What you can do now">gael rhif EORI</a> os nad oes gennych un yn barod</li>
-            <li>penderfynu sut yr hoffech wneud datganiadau tollau ac os oes angen i chi gael <a class="govuk-!-font-weight-bold" href="/guidance/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-category="transition-landing-page" data-track-action="/guidance/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-label="What you can do now">rhywun i ddelio â’r tollau ar eich rhan</a>.</li>
+            <li>penderfynu sut yr hoffech wneud datganiadau tollau ac os oes angen i chi gael <a class="govuk-!-font-weight-bold" href="/guidance/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-category="transition-landing-page" data-track-action="/guidance/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-label="What you can do now">rhywun i ddelio â’r tollau ar eich rhan</a></li>
           </ul>
     topic_section_header: Holl wybodaeth y cyfnod pontio
     topic_section_subheading: Pori’r holl wybodaeth sy’n berthnasol i’r cyfnod pontio
