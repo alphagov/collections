@@ -368,30 +368,30 @@ DEPENDENCIES
   binding_of_caller
   cucumber-rails
   dalli
-  gds-api-adapters (~> 67.0.1)
-  govspeak (~> 6.5.4)
+  gds-api-adapters
+  govspeak
   govuk-content-schema-test-helpers
-  govuk_ab_testing (~> 2.4.2)
-  govuk_app_config (~> 2.2.1)
+  govuk_ab_testing
+  govuk_app_config
   govuk_document_types
-  govuk_publishing_components (~> 21.60.3)
-  govuk_schemas (~> 4.1.0)
-  govuk_test (~> 1.0.3)
+  govuk_publishing_components
+  govuk_schemas
+  govuk_test
   jasmine-rails
   minitest-spec-rails
   mocha
-  plek (~> 4.0.0)
+  plek
   pry-byebug
   rails (= 5.2.4.3)
   rails-controller-testing
   rinku
   rubocop-govuk
-  sass-rails (~> 5.0.3)
+  sass-rails
   simplecov
   simplecov-rcov
-  slimmer (~> 15.0.0)
+  slimmer
   timecop
-  uglifier (~> 4.2.0)
+  uglifier
   webmock
 
 RUBY VERSION
