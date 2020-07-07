@@ -1,14 +1,29 @@
 en:
   transition_landing_page:
     meta_title: The transition period
-    meta_description: The UK’s transition period after Brexit comes to an end this year. Find out how to get ready for new rules from January 2021.
-    page_header: The UK has left the EU
-    page_header_explainer: Find out what this means for you.
-    explainer_title: Get ready for 2021
-    explainer_text: |
-      <p>The UK has left the EU and is now in a transition period, before new rules come into place from 1 January 2021. </p>
-      <p>There will be new rules in many areas. For example, if you have a business, travel to Europe or sell your goods abroad. Use this service to answer some questions and get a personalised list of the changes that might affect you.</p>
-      <p><a class="govuk-!-font-weight-bold" href="/transition-check/questions" data-track-category="transition-landing-page" data-track-action="/transition-check/questions" data-track-label="Check what’s changing and sign up for email alerts" data-module="track-click">Check what’s changing and sign up for email alerts</a></p>
+    meta_description: The UK has left the EU. Find out what this means for you.
+    page_header: The UK transition
+    page_header_explainer: |
+      The UK has left the EU, and the transition period after Brexit comes to an end this year. Take action now to get ready for new rules from January 2021.
+    take_action_title: Take action and sign up for emails
+    take_action_text: |
+      <p>Answer a few questions to get a personalised list of actions for you, your family, and your business. Then sign up for emails to get updates when things change.</p>
+    take_action_start_now: Start now
+    take_action_list:
+      red: Check
+      amber: Change
+      green: Go
+    video_section_title: "UK’s new start: let’s get going"
+    video_section_description: |
+      <p>The UK is leaving the EU single market and customs union, and the end of the transition period will affect citizens, businesses, as well as travel to and from the EU.</p>
+      <p>Watch the video to find out what 2021 will mean for you.</p>
+    video_section_link: https://www.youtube.com/watch?v=0VoX9NCvMsg
+    no_cookies:
+      icon_text: VIDEO
+      change_settings_text: Change your cookie settings
+      to_watch_text: to watch the video
+      or_text: or
+      watch_link_text: Watch on YouTube
     guidance_header: "Actions you can take now"
     guidance_subheader: "Actions you can take now that do not depend on negotiations."
     campaign_buckets:
@@ -40,7 +55,7 @@ en:
             <li><a class="govuk-!-font-weight-bold" href="/eori" data-track-category="transition-landing-page" data-track-action="/eori" data-track-label="What you can do now">get an EORI number</a> if you do not already have one</li>
             <li>decide how you want to make customs declarations and whether you need to <a class="govuk-!-font-weight-bold" href="/guidance/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-category="transition-landing-page" data-track-action="/guidance/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-label="What you can do now">get someone to deal with customs for you</a></li>
           </ul>
-    comms_header: "News"
+    comms_header: "Announcements"
     comms:
       links:
       - link:

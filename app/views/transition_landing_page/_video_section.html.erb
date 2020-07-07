@@ -1,0 +1,25 @@
+<div class="landing-page__section landing-page__section--blue">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <h2 class="govuk-heading-l">
+          <%= t("transition_landing_page.video_section_title") %>
+        </h2>
+        <%= render "govuk_publishing_components/components/govspeak", {
+        } do %>
+          <%= t("transition_landing_page.video_section_description").html_safe() %>
+        <% end %>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <%= render partial: 'transition_landing_page/components/youtube_player', locals: { 
+          no_cookies_icon_text: t("transition_landing_page.no_cookies.icon_text"),
+          no_cookies_change_settings_text: t("transition_landing_page.no_cookies.change_settings_text"),
+          no_cookies_to_watch_text: t("transition_landing_page.no_cookies.to_watch_text"),
+          no_cookies_or_text: t("transition_landing_page.no_cookies.or_text"),
+          no_cookies_watch_link_text: t("transition_landing_page.no_cookies.watch_link_text"),
+          youtube_video_url: t("transition_landing_page.video_section_link"),
+        } %>
+      </div>
+    </div>
+  </div>
+</div>

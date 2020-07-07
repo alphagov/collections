@@ -1,0 +1,36 @@
+<%
+  no_cookies_icon_text ||= "VIDEO"
+  no_cookies_change_settings_link ||= "/help/cookies"
+  no_cookies_change_settings_text ||= "Change your cookie settings"
+  no_cookies_to_watch_text ||= "to watch the video"
+  no_cookies_or_text ||= "or"
+  no_cookies_watch_link_text ||= "Watch on YouTube"
+%>
+
+<div class="youtube__video-wrapper">
+  <%= render "govuk_publishing_components/components/govspeak", {
+  } do %>
+    <div class="youtube__video-placeholder">
+      <div class="youtube__video-logo"><%= no_cookies_icon_text %></div>
+      <p class="govuk-body">
+        <a href="<%= no_cookies_change_settings_link %>" class="govuk-link youtube__page-header-link youtube__bold">
+          <%= no_cookies_change_settings_text %>
+        </a>
+      </p>
+      <p class="govuk-body youtube__bold">
+        <%= no_cookies_to_watch_text %>
+      </p>
+      <p class="govuk-body">
+        <%= no_cookies_or_text %>
+      </p>
+      <a
+        href="<%= youtube_video_url %>"
+        class="govuk-body govuk-link"
+        data-youtube-player-analytics="true"
+        data-youtube-player-analytics-category="EmbeddedYoutube"
+      >
+        <%= no_cookies_watch_link_text %>
+      </a>
+    </div>
+  <% end %>
+</div>

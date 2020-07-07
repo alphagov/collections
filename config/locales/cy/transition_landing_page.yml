@@ -2,16 +2,29 @@ cy:
   transition_landing_page:
     meta_title: "Y cyfnod pontio"
     meta_description: "Mae’r DU wedi gadael yr UE. Ewch i weld beth mae’n ei olygu i chi."
-    page_header: Mae’r DU wedi gadael yr UE
-    page_header_explainer: Darganfyddwch beth mae hyn yn ei olygu i chi.
-    explainer_title: Y cyfnod pontio
-    explainer_text: |
-      <p>Bydd cyfnod pontio tan ddiwedd 2020 tra bod y DU a’r UE yn trafod trefniadau ychwanegol.</p>
-      <p>Bydd y rheolau cyfredol ar fasnach, teithio a busnes ar gyfer y DU a’r UE yn parhau i fod yn berthnasol yn ystod y cyfnod pontio.</p>
-      <p>Bydd rheolau newydd yn dod i rym ar 1 Ionawr 2021.</p>
-      <p>Dylech baratoi nawr a thanysgrifio i ddiweddariadau ebost am unrhyw drefniadau ychwanegol.</p>
-      <p><a class="govuk-!-font-weight-bold" href="/transition-check" data-track-category="transition-landing-page" data-track-action="/transition-check" data-track-label="Gwiriwch sut i baratoi ar gyfer y rheolau newydd yn 2021" data-module="track-click">Gwiriwch sut i baratoi ar gyfer y rheolau newydd yn 2021</a>
-    comms_header: "Newyddion"
+    page_header: Cyfnod pontio’r DU
+    page_header_explainer: |
+      Mae’r DU wedi gadael yr UE ac mae’r cyfnod pontio ar ôl Brexit yn dod i ben eleni. Gwnewch rywbeth nawr i baratoi ar gyfer y rheolau newydd o fis Ionawr 2021 ymlaen.
+    take_action_title: Gweithredu a chofrestru ar gyfer negeseuon e-bost
+    take_action_text: |
+      <p>Atebwch rywfaint o gwestiynau er mwyn cael rhestr bersonol o gamau gweithredu ar eich cyfer chi, eich teulu a’ch busnes. Yna, cofrestrwch i gael yr wybodaeth ddiweddaraf dros yr e-bost pan fydd pethau’n newid.</p>
+    take_action_start_now: Dechrau nawr
+    take_action_list:
+      red: Gwirio
+      amber: Newid
+      green: Mynd
+    video_section_title: "Dechrau newydd y DU: dechrau arni"
+    video_section_description: |
+      <p>Mae’r DU yn gadael marchnad sengl ac undeb tollau’r UE, a bydd diwedd y cyfnod pontio yn effeithio ar ddinasyddion, busnesau a theithio i’r UE ac oddi yno.</p>
+      <p>Gwyliwch y fideo i wybod beth fydd 2021 yn ei olygu i chi.</p>
+    video_section_link: https://www.youtube.com/watch?v=0VoX9NCvMsg
+    no_cookies:
+      icon_text: FIDEO
+      change_settings_text: Newidiwch eich gosodiadau cwcis
+      to_watch_text: i wylio’r fideo
+      or_text: neu
+      watch_link_text: Gwylio ar YouTube
+    comms_header: "Cyhoeddiadau"
     comms:
       links:
       - link:
@@ -42,7 +55,7 @@ cy:
         metadata:
           public_updated_at: 2019-10-19
           document_type: "Policy Paper"
-    guidance_header: "Beth allwch chi wneud nawr"
+    guidance_header: "Camau y gallwch eu cymryd nawr"
     guidance_subheader: "Camau y gallwch eu cymryd nawr sydd ddim yn ddibynnol ar drafodaethau."
     campaign_buckets:
       - row_title: "Teithio i’r UE"
@@ -51,12 +64,12 @@ cy:
 
           O 1 Ionawr 2021 bydd rheolau newydd i deithio i'r UE, neu i'r Swistir, Norwy, Gwlad yr Iâ neu Liechtenstein.
 
-          <a class="govuk-!-font-weight-bold" href="/visit-europe-1-january-2021" data-track-category="transition-landing-page" data-track-action="/visit-europe-1-january-2021" data-track-label="What you can do now">Gwiriwch beth sydd angen i chi wneud i deithio i Ewrop o 2021</a>
+          <a class="govuk-!-font-weight-bold" href="/visit-europe-1-january-2021" data-track-category="transition-landing-page" data-track-action="/visit-europe-1-january-2021" data-track-label="What you can do now">Dylech wirio beth sydd angen i chi ei wneud er mwyn teithio i Ewrop o 2021 ymlaen</a>
       - row_title: "Aros yn y DU os ydych yn ddinesydd o’r UE"
         list_block: |
           Gwiriwch os oes angen i chi gyflwyno cais i’r cynllun setliad os ydych chi, neu’ch teulu, yn dod o’r UE, neu o’r Swistir, Norwy, Gwlad yr Iâ neu Liechtenstein.
 
-          <a class="govuk-!-font-weight-bold" href="/staying-uk-eu-citizen" data-track-category="transition-landing-page" data-track-action="/staying-uk-eu-citizen" data-track-label="What you can do now">Gwiriwch beth sydd angen i chi wneud i aros yn y DU</a>
+          <a class="govuk-!-font-weight-bold" href="/staying-uk-eu-citizen" data-track-category="transition-landing-page" data-track-action="/staying-uk-eu-citizen" data-track-label="What you can do now">Dylech wirio beth rydych angen ei wneud i aros yn y DU</a>
       - row_title: "Byw a gweithio yn yr UE"
         list_block: |
           Mae byw a gweithio mewn gwlad yr UE yn ddibynnol ar y rheolau yn y wlad honno.
@@ -68,12 +81,12 @@ cy:
           <a class="govuk-!-font-weight-bold" href="/uk-nationals-living-eu" data-track-category="transition-landing-page" data-track-action="/uk-nationals-living-eu" data-track-label="What you can do now">Gwiriwch beth sydd angen i chi wneud yn y wlad yr ydych yn byw ynddi</a>
       - row_title: "Paratoi eich busnes"
         list_block: |
-          Ar ôl 1 Ionawr 2021, bydd angen i chi wneud datganiadau tollau i symud nwyddau i mewn ac allan o’r UE. Dylech chi:
+          O 1 Ionawr 2021 ymlaen, bydd angen i chi wneud datganiadau tollau i symud nwyddau i mewn i’r UE ac allan. Dylech wneud y canlynol:
           <ul>
-            <li><a class="govuk-!-font-weight-bold" href="/eori" data-track-category="transition-landing-page" data-track-action="/eori" data-track-label="What you can do now">gael rhif EORI</a> os nad oes gennych un yn barod</li>
+            <li><a class="govuk-!-font-weight-bold" href="/eori" data-track-category="transition-landing-page" data-track-action="/eori" data-track-label="What you can do now">cael rhif EORI</a> os nad oes gennych un yn barod</li>
             <li>penderfynu sut yr hoffech wneud datganiadau tollau ac os oes angen i chi gael <a class="govuk-!-font-weight-bold" href="/guidance/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-category="transition-landing-page" data-track-action="/guidance/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-label="What you can do now">rhywun i ddelio â’r tollau ar eich rhan</a></li>
           </ul>
-    topic_section_header: Holl wybodaeth y cyfnod pontio
+    topic_section_header: Yr holl wybodaeth am y cyfnod pontio
     topic_section_subheading: Pori’r holl wybodaeth sy’n berthnasol i’r cyfnod pontio
     email_intro: "I gael y manylion diweddaraf"
     email: "Cofrestrwch i gael hysbysiadau ebost am y cyfnod pontio"

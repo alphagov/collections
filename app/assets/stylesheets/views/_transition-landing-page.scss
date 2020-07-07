@@ -1,6 +1,9 @@
 
-$dark-blue: #182D4E;
-$red: #E61E32;
+$red: #FF003B;
+$dark-blue: #0055D2;
+$dark-blue-shadow: #020659;
+$transparent: #ffffff00;
+$header-breakpoint: 960px;
 
 .large-paragraph {
   @include govuk-font($size: 19);
@@ -19,8 +22,123 @@ $red: #E61E32;
   color: govuk-colour("white");
 }
 
+.landing-page__header--with-bg-image {
+  padding-bottom: govuk-spacing(4);
+  padding-top: govuk-spacing(3);
+  background-color: $dark-blue;
+  border-top: govuk-spacing(2) solid $red;
+
+  @include govuk-media-query($from: $header-breakpoint) {
+    padding-bottom: govuk-spacing(4);
+    padding-top: govuk-spacing(8);
+    background-image: image-url('transition-2020-header-background.jpg');
+    background-size: cover;
+    background-position: top;
+    min-height: 500px;
+  }
+}
+
+.landing-page__header-text-block {
+  @include govuk-media-query($from: $header-breakpoint) {
+    padding-bottom: 80px;
+    padding-top: govuk-spacing(5);
+    background: linear-gradient(
+      to right, 
+      $dark-blue 0%, 
+      $dark-blue 66.66%, 
+      $transparent 66.66%, 
+      $transparent 100%
+    );
+  }
+}
+
+.landing-page__header-arrow-container {
+  text-align: right;
+
+  @include govuk-media-query($from: $header-breakpoint) {
+    position: absolute;
+    left: 52%;
+  }
+
+  @include govuk-media-query($from: 1000px) {
+    left: 53%;
+  }
+
+  @include govuk-media-query($from: 1100px) {
+    left: 54%;
+  }
+
+  @include govuk-media-query($from: 1200px) {
+    left: 56%;
+  }
+
+  @include govuk-media-query($from: 1300px) {
+    left: 57%;
+  }
+
+  @include govuk-media-query($from: 1400px) {
+    left: 58%;
+  }
+
+  @include govuk-media-query($from: 1800px) {
+    left: 59%;
+  }
+}
+
+.landing-page__header-arrow {
+  width: 90px;
+
+  @include govuk-media-query($from: $header-breakpoint) {
+    width: 165px;
+  }
+}
+
+.landing-page__take-action-button {
+  .govuk-button {
+    background-color: $dark-blue;
+    box-shadow: 0 2px 0 $dark-blue-shadow;
+  }
+}
+
+.landing-page__take-action-traffic-lights {
+  @include govuk-media-query($until: tablet) {
+    margin-top: govuk-spacing(4);
+    margin-bottom: govuk-spacing(6);
+    text-align: center;
+  }
+}
+
+.landing-page__take-action-traffic-lights > li {
+  margin-bottom: govuk-spacing(1);
+
+  @include govuk-media-query($until: tablet) {
+    display: inline;
+    margin-right: govuk-spacing(2);
+  }
+}
+
+.landing-page__take-action-traffic-lists-icon {
+  vertical-align: middle;
+  margin-top: -5px;
+  width: 18px;
+
+  @include govuk-media-query($from: tablet) {
+    width: 36px;
+  }
+}
+
+.landing-page__take-action-traffic-lists-text {
+  @include govuk-font($size: 24, $weight: bold, $line-height: 1.1);
+  vertical-align: middle;
+
+  @include govuk-media-query($from: tablet) {
+    @include govuk-font($size: 36, $weight: bold, $line-height: 1.1);
+  }
+}
+
 .landing-page__intro {
   p {
+    @include govuk-font($size: 24);
     color: govuk-colour("white");
   }
 
@@ -58,8 +176,34 @@ $red: #E61E32;
 
 .landing-page__section {
   margin-top: govuk-spacing(4);
-  border-top: 2px solid govuk-colour("black");
   @include govuk-responsive-padding(6, "top");
+}
+
+.landing-page__section--border-top {
+  border-top: govuk-spacing(2) solid govuk-colour('black');
+}
+
+.landing-page__section--border-bottom-red {
+  border-bottom: govuk-spacing(2) solid $red;
+}
+
+.landing-page__section--blue {
+  @include govuk-responsive-padding(8, "top");
+  @include govuk-responsive-padding(8, "bottom");
+  background-color: $dark-blue;
+
+  h2,
+  p {
+    color: govuk-colour("white");
+  }
+}
+
+
+.landing-page__section--light-grey {
+  @include govuk-responsive-padding(8, "top");
+  @include govuk-responsive-padding(4, "bottom");
+  background-color: govuk-colour('light-grey');
+  margin-top: 0;
 }
 
 .landing-page__guidance_subheader {
