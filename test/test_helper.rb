@@ -15,7 +15,7 @@ require "rails/test_help"
 require "mocha/minitest"
 
 require "webmock/minitest"
-WebMock.disable_net_connect!
+WebMock.disable_net_connect!(allow_localhost: true)
 
 Dir[Rails.root.join("test/support/*.rb")].sort.each { |f| require f }
 

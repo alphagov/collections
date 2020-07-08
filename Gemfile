@@ -26,13 +26,15 @@ group :test do
   gem "rails-controller-testing"
   gem "simplecov"
   gem "simplecov-rcov"
+  gem "webdrivers"
   gem "webmock", require: false
 end
 
 group :development, :test do
   gem "better_errors"
   gem "binding_of_caller"
-  gem "jasmine-rails"
+  gem "jasmine"
+  gem "jasmine_selenium_runner", require: false
   gem "pry-byebug"
   gem "rubocop-govuk"
   gem "timecop"

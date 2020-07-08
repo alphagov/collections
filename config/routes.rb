@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   # content-store (by collections-publisher) - whenever the routes below
   # change, also change the routes claimed by collections-publisher.
 
-  mount JasmineRails::Engine => "/specs" if defined?(JasmineRails)
   mount GovukPublishingComponents::Engine, at: "/component-guide"
 
   ["/coronavirus-taxon", "/coronavirus-taxon/*slug"].each do |path|

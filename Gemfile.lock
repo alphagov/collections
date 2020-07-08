@@ -154,12 +154,15 @@ GEM
       domain_name (~> 0.5)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
-    jasmine-core (3.4.0)
-    jasmine-rails (0.15.0)
-      jasmine-core (>= 1.3, < 4.0)
-      phantomjs (>= 1.9)
-      railties (>= 3.2.0)
-      sprockets-rails
+    jasmine (3.5.1)
+      jasmine-core (~> 3.5.0)
+      phantomjs
+      rack (>= 1.2.1)
+      rake
+    jasmine-core (3.5.0)
+    jasmine_selenium_runner (3.0.0)
+      jasmine (~> 3.0)
+      selenium-webdriver (~> 3.8)
     json (2.3.0)
     json-schema (2.8.1)
       addressable (>= 2.4)
@@ -377,7 +380,8 @@ DEPENDENCIES
   govuk_publishing_components
   govuk_schemas
   govuk_test
-  jasmine-rails
+  jasmine
+  jasmine_selenium_runner
   minitest-spec-rails
   mocha
   plek
@@ -392,6 +396,7 @@ DEPENDENCIES
   slimmer
   timecop
   uglifier
+  webdrivers
   webmock
 
 RUBY VERSION
