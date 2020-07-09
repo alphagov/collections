@@ -2,6 +2,8 @@ source "https://rubygems.org"
 
 ruby File.read(".ruby-version").strip
 
+gem "rails", "6.0.3.2"
+
 gem "dalli"
 gem "gds-api-adapters"
 gem "govspeak"
@@ -10,7 +12,6 @@ gem "govuk_app_config"
 gem "govuk_document_types"
 gem "govuk_publishing_components"
 gem "plek"
-gem "rails", "5.2.4.3"
 gem "rinku", require: "rails_rinku"
 gem "sass-rails"
 gem "slimmer"
