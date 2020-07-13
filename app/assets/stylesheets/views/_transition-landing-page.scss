@@ -87,9 +87,11 @@ $header-breakpoint: 960px;
 
 .landing-page__header-arrow {
   width: 90px;
+  height: 81px;
 
   @include govuk-media-query($from: $header-breakpoint) {
     width: 165px;
+    height: 149px;
   }
 }
 
