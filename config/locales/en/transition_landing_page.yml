@@ -59,6 +59,13 @@ en:
     comms:
       links:
       - link:
+          text: "Major new campaign to prepare UK for end of the transition period"
+          path: "/government/publications/our-approach-to-the-future-relationship-with-the-eu"
+          description: "The government has launched a new campaign to help businesses and individuals prepare for the end of the transition period."
+        metadata:
+          public_updated_at: 2020-07-13
+          document_type: "Press Release"
+      - link:
           text: "Our approach to the Future Relationship with the EU"
           path: "/government/publications/our-approach-to-the-future-relationship-with-the-eu"
           description: "The UK’s approach to negotiations with the European Union."
@@ -79,13 +86,6 @@ en:
         metadata:
           public_updated_at: 2020-02-03
           document_type: "Written Statement to Parliament"
-      - link:
-          text: "The Withdrawal Agreement and Political Declaration"
-          path: "/government/publications/new-withdrawal-agreement-and-political-declaration"
-          description: "The Withdrawal Agreement is the UK and EU’s agreement on the UK leaving the EU. It shows the terms of the UK’s exit and sets out the framework for the future relationship between the UK and EU."
-        metadata:
-          public_updated_at: 2019-10-19
-          document_type: "Policy Paper"
     topic_section_header: All transition period information
     topic_section_subheading: Browse all information related to the transition period
     share_links: "Share this page"
