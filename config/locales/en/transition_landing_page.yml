@@ -17,7 +17,7 @@ en:
     video_section_description: |
       <p>The UK is leaving the EU single market and customs union, and the end of the transition period will affect citizens, businesses, as well as travel to and from the EU.</p>
       <p>Watch the video to find out what 2021 will mean for you.</p>
-    video_section_link: https://www.youtube.com/watch?v=0VoX9NCvMsg
+    video_section_link: https://www.youtube.com/watch?v=4aO-YTQ94jA
     no_cookies:
       icon_text: VIDEO
       change_settings_text: Change your cookie settings
@@ -88,6 +88,7 @@ en:
           document_type: "Written Statement to Parliament"
     topic_section_header: All transition period information
     topic_section_subheading: Browse all information related to the transition period
+    email_mailto_subject: "Get%20ready%20for%202021%20-%20GOV.UK"
     share_links: "Share this page"
     sections:
       aria_string_suffix: related to the transition period
