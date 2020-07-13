@@ -192,6 +192,7 @@ $header-breakpoint: 960px;
   @include govuk-responsive-padding(8, "top");
   @include govuk-responsive-padding(8, "bottom");
   background-color: $dark-blue;
+  margin-top: 0;
 
   h2,
   p {
