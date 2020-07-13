@@ -9,6 +9,7 @@ cy:
     take_action_text: |
       <p>Atebwch rywfaint o gwestiynau er mwyn cael rhestr bersonol o gamau gweithredu ar eich cyfer chi, eich teulu a’ch busnes. Yna, cofrestrwch i gael yr wybodaeth ddiweddaraf dros yr e-bost pan fydd pethau’n newid.</p>
     take_action_start_now: Dechrau nawr
+    take_action_start_now_link: "/transition-check/questions"
     take_action_list:
       red: Gwirio
       amber: Newid
