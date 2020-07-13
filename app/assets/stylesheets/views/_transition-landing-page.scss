@@ -2,7 +2,7 @@
 $red: #FF003B;
 $dark-blue: #0055D2;
 $dark-blue-shadow: #020659;
-$transparent: #ffffff00;
+$transparent: rgba(0,0,0,0);
 $header-breakpoint: 960px;
 
 .large-paragraph {
@@ -42,13 +42,12 @@ $header-breakpoint: 960px;
   @include govuk-media-query($from: $header-breakpoint) {
     padding-bottom: 80px;
     padding-top: govuk-spacing(5);
-    background: linear-gradient(
-      to right, 
-      $dark-blue 0%, 
-      $dark-blue 66.66%, 
-      $transparent 66.66%, 
-      $transparent 100%
-    );
+
+    background: $dark-blue;
+    background: -moz-linear-gradient(90deg, $dark-blue 66.66%, $transparent 66.66%);
+    background: -webkit-linear-gradient(90deg, $dark-blue 66.66%, $transparent 66.66%);
+    background: linear-gradient(90deg, $dark-blue 66.66%, $transparent 66.66%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#{$dark-blue}", endColorstr="#{$transparent}", GradientType=1);
   }
 }
 
