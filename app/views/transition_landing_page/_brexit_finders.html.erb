@@ -1,10 +1,11 @@
 <div class="govuk-grid-row govuk-!-margin-bottom-8">
-  <div class="govuk-body govuk-grid-column-two-thirds landing-page__finders">
+  <div class="govuk-grid-column-one-third">
     <h2 class="govuk-heading-m">
       <%= t("transition_landing_page.topic_section_header") %>
     </h2>
+  </div>
+  <div class="govuk-body govuk-grid-column-two-thirds landing-page__finders">
     <p class="govuk-body"><%= t("transition_landing_page.topic_section_subheading") %></p>
-
     <%= render "components/topic-list", {
       items: supergroups
     } %>
