@@ -36,6 +36,18 @@ $header-breakpoint: 960px;
     background-position: top;
     min-height: 500px;
   }
+
+  // HIDE BACKGROUND IMAGE ON IE
+
+  // IE 6, 7, 8
+  @media \0screen\,screen\9 {
+    background-image: none;
+  }
+
+  // IE 9
+  @media screen and (min-width:0\0) and (min-resolution: .001dpcm) { 
+    background-image: none;
+  }
 }
 
 .landing-page__header-text-block {
@@ -47,7 +59,6 @@ $header-breakpoint: 960px;
     background: -moz-linear-gradient(90deg, $dark-blue 66.66%, $transparent 66.66%);
     background: -webkit-linear-gradient(90deg, $dark-blue 66.66%, $transparent 66.66%);
     background: linear-gradient(90deg, $dark-blue 66.66%, $transparent 66.66%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#{$dark-blue}", endColorstr="#{$transparent}", GradientType=1);
   }
 }
 
