@@ -17,7 +17,7 @@ en:
     video_section_description: |
       <p>The UK is leaving the EU single market and customs union, and the end of the transition period will affect citizens, businesses, as well as travel to and from the EU.</p>
       <p>Watch the video to find out what 2021 will mean for you.</p>
-    video_section_link: https://www.youtube.com/watch?v=4aO-YTQ94jA
+    video_section_link: https://www.youtube.com/watch?v=4aO-YTQ94jA&rel=0
     no_cookies:
       icon_text: VIDEO
       change_settings_text: Change your cookie settings
