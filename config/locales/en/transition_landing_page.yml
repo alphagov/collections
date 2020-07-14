@@ -9,6 +9,7 @@ en:
     take_action_text: |
       <p>Answer a few questions to get a personalised list of actions for you, your family, and your business. Then sign up for emails to get updates when things change.</p>
     take_action_start_now: Start now
+    take_action_start_now_link: "/transition-check/questions"
     take_action_list:
       red: Check
       amber: Change
