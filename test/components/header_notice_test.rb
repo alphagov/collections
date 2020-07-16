@@ -30,6 +30,18 @@ class HeaderNoticeTest < ComponentTestCase
     }
   end
 
+  def list_with_links
+    {
+      title: "this is a title",
+      heading: "This is a header",
+      list: ["blah", "blah2", { "label" => "blahWithLink", "href" => "/blah" }],
+      call_to_action: {
+        href: "/this-is-a-link",
+        title: "Click me!",
+      },
+    }
+  end
+
   test "renders nothing without passed content" do
     assert_empty render_component({})
   end
@@ -85,7 +97,27 @@ class HeaderNoticeTest < ComponentTestCase
     assert_select ".app-c-header-notice__list li", count: branded_notice[:list].count
     assert_select ".app-c-header-notice__list li" do |items|
       items.each_with_index do |item, index|
-        assert_equal item.text, branded_notice[:list][index]
+        assert_equal item.text.strip, branded_notice[:list][index]
+      end
+    end
+  end
+
+  test "renders a list with links if list with links is passed in" do
+    render_component(list_with_links)
+    assert_select ".app-c-header-notice__list"
+    assert_select ".app-c-header-notice__list li", count: list_with_links[:list].count
+    assert_select ".app-c-header-notice__list li a", count: 1
+    assert_select ".app-c-header-notice__list li" do |items|
+      items.each_with_index do |item, index|
+        if list_with_links[:list][index].is_a?(Hash)
+          assert_select "a[href=?]", list_with_links[:list][index]["href"],
+                        {
+                          count: 1,
+                          text: list_with_links[:list][index]["label"],
+                        }
+        else
+          assert_equal item.text.strip, list_with_links[:list][index]
+        end
       end
     end
   end
