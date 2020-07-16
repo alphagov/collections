@@ -32,9 +32,6 @@ Rails.application.routes.draw do
       to: "latest_changes#index",
       as: :latest_changes
 
-  # Collections used to have an interstitial signup screen. This was removed in https://github.com/alphagov/collections/pull/1749
-  get "/topic/:topic_slug/:subtopic_slug/email-signup", to: redirect("/email-signup?topic=/topic/%{topic_slug}/%{subtopic_slug}")
-
   get "/government/feed" => "feeds#all", defaults: { format: "atom" }
 
   get "/government/organisations",
