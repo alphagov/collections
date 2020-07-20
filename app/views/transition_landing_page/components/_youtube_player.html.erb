@@ -33,4 +33,7 @@
       </a>
     </div>
   <% end %>
+  <%= render "govuk_publishing_components/components/details", { title: transcription_summary} do %>
+    <%= transcription_text.html_safe %>
+  <% end %>
 </div>
