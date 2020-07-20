@@ -25,7 +25,13 @@
     <% if list.any? %>
       <ul class="app-c-header-notice__list govuk-list govuk-list--bullet">
         <% list.each do |item| %>
-          <li><%= item %></li>
+          <li>
+            <% if item.is_a?(Hash) %>
+              <%= link_to(item["label"], item["href"], class: "app-c-header-notice__call-to-action-link govuk-link") %>
+            <% else %>
+              <%= item %>
+            <% end %>
+          </li>
         <% end %>
       </ul>
     <% end %>
