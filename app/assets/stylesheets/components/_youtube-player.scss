@@ -39,3 +39,25 @@
     border-radius: 100%;
   }
 }
+
+.govuk-details__summary {
+  color: govuk-colour('white');
+  &:hover {
+    color: govuk-colour('white');
+  }
+  &:hover:focus,
+  &:hover:focus .govuk-details__summary-text {
+    color: govuk-colour('black');
+  }
+}
+
+.govuk-details__text {
+  color: govuk-colour('white');
+  border-left-color: govuk-colour('white');
+}
+
+.govuk-details__summary-text {
+  &:hover {
+    color: govuk-colour('white');
+  }
+}
