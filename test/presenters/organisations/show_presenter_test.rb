@@ -18,6 +18,9 @@ describe Organisations::ShowPresenter do
 
     presenter = build_show_presenter_for_org("civil service resourcing", "sub_organisation")
     assert_equal "civil service resourcing", presenter.prefixed_title
+
+    presenter = build_show_presenter_for_org("civil service hr", "sub_organisation")
+    assert_equal "civil service hr", presenter.prefixed_title
   end
 
   def build_show_presenter_for_org(title, type)

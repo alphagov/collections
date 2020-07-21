@@ -111,11 +111,15 @@ module Organisations
       tribunal
     ].freeze
 
-    NO_THE = "civil service resourcing|civil service reform".freeze
+    NO_THE = [
+      "civil service resourcing",
+      "civil service reform",
+      "civil service hr",
+    ].freeze
 
     def needs_definite_article?(phrase)
       should_have = Regexp.new(NEED_A_THE.join("|"), true)
-      should_not_have = Regexp.new(NO_THE, true)
+      should_not_have = Regexp.new(NO_THE.join("|"), true)
 
       !has_definite_article?(phrase) &&
         (@org.is_court_or_hmcts_tribunal? ||
