@@ -1,6 +1,6 @@
 cy:
   transition_landing_page:
-    meta_title: "Y cyfnod pontio"
+    meta_title: Cymrwch y camau
     meta_description: "Mae’r DU wedi gadael yr UE. Ewch i weld beth mae’n ei olygu i chi."
     page_header: Cymrwch y camau
     page_header_explainer: |
