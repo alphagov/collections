@@ -51,10 +51,10 @@ en:
           <a class="govuk-!-font-weight-bold" href="/uk-nationals-living-eu" data-track-category="transition-landing-page" data-track-action="/uk-nationals-living-eu" data-track-label="What you can do now">Check what you must do in the country where you live</a>
       - row_title: "Businesses that import and export goods"
         list_block: |
-          From 1 January 2021 you will need to make customs declarations to move goods into and out of the EU. You should:
+          From 1 January 2021 the process for importing and exporting goods will change. Find out what you need to do to continue to:
           <ul>
-            <li><a class="govuk-!-font-weight-bold" href="/eori" data-track-category="transition-landing-page" data-track-action="/eori" data-track-label="What you can do now">get an EORI number</a> if you do not already have one</li>
-            <li>decide how you want to make customs declarations and whether you need to <a class="govuk-!-font-weight-bold" href="/guidance/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-category="transition-landing-page" data-track-action="/guidance/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-label="What you can do now">get someone to deal with customs for you</a></li>
+            <li><a class="govuk-!-font-weight-bold" href="/prepare-to-import-to-great-britain-from-january-2021" data-track-category="transition-landing-page" data-track-action="/prepare-to-import-to-great-britain-from-january-2021" data-track-label="What you can do now">import goods from the EU</a></li>
+            <li><a class="govuk-!-font-weight-bold" href="/prepare-to-export-from-great-britain-from-january-2021" data-track-category="transition-landing-page" data-track-action="/prepare-to-export-from-great-britain-from-january-2021" data-track-label="What you can do now">export goods to the EU</a></li>
           </ul>
     comms_header: "Announcements"
     comms:
