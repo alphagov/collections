@@ -2,19 +2,19 @@ cy:
   transition_landing_page:
     meta_title: "Y cyfnod pontio"
     meta_description: "Mae’r DU wedi gadael yr UE. Ewch i weld beth mae’n ei olygu i chi."
-    page_header: Cyfnod pontio’r DU
+    page_header: Cymrwch y camau
     page_header_explainer: |
       Mae’r DU wedi gadael yr UE ac mae’r cyfnod pontio ar ôl Brexit yn dod i ben eleni. Gwnewch rywbeth nawr i baratoi ar gyfer y rheolau newydd o fis Ionawr 2021 ymlaen.
-    take_action_title: Gweithredu a chofrestru ar gyfer negeseuon e-bost
+    take_action_title: Cymrwch y camau a chofrestru ar gyfer negeseuon e-bost
     take_action_text: |
-      <p>Atebwch rywfaint o gwestiynau er mwyn cael rhestr bersonol o gamau gweithredu ar eich cyfer chi, eich teulu a’ch busnes. Yna, cofrestrwch i gael yr wybodaeth ddiweddaraf dros yr e-bost pan fydd pethau’n newid.</p>
+      <p>Atebwch ychydig o gwestiynau er mwyn cael rhestr bersonol o gamau gweithredu ar eich cyfer chi, eich teulu a’ch busnes. Yna, cofrestrwch i gael yr wybodaeth ddiweddaraf dros e-bost pan fydd pethau’n newid.</p>
     take_action_start_now: Dechrau nawr
     take_action_start_now_link: "/transition-check/questions"
     take_action_list:
-      red: Gwirio
-      amber: Newid
-      green: Mynd
-    video_section_title: "Dechrau newydd y DU: dechrau arni"
+      red: Gwiriwch
+      amber: Newidiwch
+      green: Ewch
+    video_section_title: "Dechrau newydd y DU: Ymlaen â ni"
     video_section_description: |
       <p>Mae’r DU yn gadael marchnad sengl ac undeb tollau’r UE, a bydd diwedd y cyfnod pontio yn effeithio ar ddinasyddion, busnesau a theithio i’r UE ac oddi yno.</p>
       <p>Gwyliwch y fideo i wybod beth fydd 2021 yn ei olygu i chi.</p>
