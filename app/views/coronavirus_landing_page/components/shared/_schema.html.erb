@@ -1,7 +1,7 @@
 <script type="application/ld+json">
-  <%= (presenter.faq_schema(@content_item).to_json).html_safe %>
+  <%= raw JSON.pretty_generate(presenter.faq_schema(@content_item)) %>
 </script>
 
 <script type="application/ld+json">
-  <%= (special_announcement.payload.to_json).html_safe %>
+  <%= raw JSON.pretty_generate(special_announcement.payload) %>
 </script>

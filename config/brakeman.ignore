@@ -15,7 +15,7 @@
           "type": "controller",
           "class": "RolesController",
           "method": "show",
-          "line": 5,
+          "line": 7,
           "file": "app/controllers/roles_controller.rb",
           "rendered": {
             "name": "roles/show",
@@ -56,7 +56,7 @@
           "type": "controller",
           "class": "PeopleController",
           "method": "show",
-          "line": 5,
+          "line": 7,
           "file": "app/controllers/people_controller.rb",
           "rendered": {
             "name": "people/show",
@@ -66,7 +66,7 @@
         {
           "type": "template",
           "name": "people/show",
-          "line": 13,
+          "line": 17,
           "file": "app/views/people/show.html.erb",
           "rendered": {
             "name": "people/_current_roles",
@@ -130,7 +130,7 @@
       "check_name": "CrossSiteScripting",
       "message": "Unescaped model attribute",
       "file": "app/views/people/_current_roles.html.erb",
-      "line": 20,
+      "line": 24,
       "link": "https://brakemanscanner.org/docs/warning_types/cross_site_scripting",
       "code": "(Unresolved Model).new[\"links\"].fetch(\"ordered_parent_organisations\", []).map do\n link_to(parent[\"title\"], parent[\"base_path\"], :class => \"govuk-link\")\n end.to_sentence",
       "render_path": [
@@ -138,7 +138,7 @@
           "type": "controller",
           "class": "PeopleController",
           "method": "show",
-          "line": 5,
+          "line": 7,
           "file": "app/controllers/people_controller.rb",
           "rendered": {
             "name": "people/show",
@@ -148,7 +148,7 @@
         {
           "type": "template",
           "name": "people/show",
-          "line": 13,
+          "line": 17,
           "file": "app/views/people/show.html.erb",
           "rendered": {
             "name": "people/_current_roles",
@@ -171,7 +171,7 @@
       "check_name": "CrossSiteScripting",
       "message": "Unescaped model attribute",
       "file": "app/views/roles/_responsibilities.html.erb",
-      "line": 9,
+      "line": 10,
       "link": "https://brakemanscanner.org/docs/warning_types/cross_site_scripting",
       "code": "Role.find!(request.path).responsibilities",
       "render_path": [
@@ -179,7 +179,7 @@
           "type": "controller",
           "class": "RolesController",
           "method": "show",
-          "line": 5,
+          "line": 7,
           "file": "app/controllers/roles_controller.rb",
           "rendered": {
             "name": "roles/show",
@@ -207,6 +207,36 @@
     },
     {
       "warning_type": "Cross-Site Scripting",
+      "warning_code": 2,
+      "fingerprint": "83c75781847c3bb2bb1f9d24934b22722d8f340da3401b6697fc5d160fbd6155",
+      "check_name": "CrossSiteScripting",
+      "message": "Unescaped model attribute",
+      "file": "app/views/step_nav/_structured_data.html.erb",
+      "line": 3,
+      "link": "https://brakemanscanner.org/docs/warning_types/cross_site_scripting",
+      "code": "JSON.pretty_generate(Schemas::HowTo.new(step_by_step, self).structured_data)",
+      "render_path": [
+        {
+          "type": "template",
+          "name": "step_nav/show",
+          "line": 3,
+          "file": "app/views/step_nav/show.html.erb",
+          "rendered": {
+            "name": "step_nav/_structured_data",
+            "file": "app/views/step_nav/_structured_data.html.erb"
+          }
+        }
+      ],
+      "location": {
+        "type": "template",
+        "template": "step_nav/_structured_data"
+      },
+      "user_input": "Schemas::HowTo.new(step_by_step, self).structured_data",
+      "confidence": "Weak",
+      "note": "This comes from the content store and we trust the data there"
+    },
+    {
+      "warning_type": "Cross-Site Scripting",
       "warning_code": 84,
       "fingerprint": "840e07ce0072ce08b8e6875bde330c91ba40ac3cd6545a95952a567008a3aa83",
       "check_name": "RenderInline",
@@ -220,7 +250,7 @@
           "type": "controller",
           "class": "PeopleController",
           "method": "show",
-          "line": 5,
+          "line": 7,
           "file": "app/controllers/people_controller.rb",
           "rendered": {
             "name": "people/show",
@@ -230,7 +260,7 @@
         {
           "type": "template",
           "name": "people/show",
-          "line": 13,
+          "line": 17,
           "file": "app/views/people/show.html.erb",
           "rendered": {
             "name": "people/_current_roles",
@@ -253,7 +283,7 @@
       "check_name": "CrossSiteScripting",
       "message": "Unescaped model attribute",
       "file": "app/views/roles/_current_role_holder_with_biography.html.erb",
-      "line": 14,
+      "line": 15,
       "link": "https://brakemanscanner.org/docs/warning_types/cross_site_scripting",
       "code": "Role.find!(request.path).current_holder_biography",
       "render_path": [
@@ -261,7 +291,7 @@
           "type": "controller",
           "class": "RolesController",
           "method": "show",
-          "line": 5,
+          "line": 7,
           "file": "app/controllers/roles_controller.rb",
           "rendered": {
             "name": "roles/show",
@@ -294,7 +324,7 @@
       "check_name": "CrossSiteScripting",
       "message": "Unescaped model attribute",
       "file": "app/views/people/_biography.html.erb",
-      "line": 9,
+      "line": 10,
       "link": "https://brakemanscanner.org/docs/warning_types/cross_site_scripting",
       "code": "Person.find!(request.path).biography",
       "render_path": [
@@ -302,7 +332,7 @@
           "type": "controller",
           "class": "PeopleController",
           "method": "show",
-          "line": 5,
+          "line": 7,
           "file": "app/controllers/people_controller.rb",
           "rendered": {
             "name": "people/show",
@@ -312,7 +342,7 @@
         {
           "type": "template",
           "name": "people/show",
-          "line": 12,
+          "line": 16,
           "file": "app/views/people/show.html.erb",
           "rendered": {
             "name": "people/_biography",
@@ -335,7 +365,7 @@
       "check_name": "RenderInline",
       "message": "Unescaped model attribute rendered inline",
       "file": "app/views/roles/_current_role_holder_with_biography.html.erb",
-      "line": 8,
+      "line": 9,
       "link": "https://brakemanscanner.org/docs/warning_types/cross-site_scripting/",
       "code": "render(text => Role.find!(request.path).current_holder[\"title\"], { :margin_bottom => 2 })",
       "render_path": [
@@ -343,7 +373,7 @@
           "type": "controller",
           "class": "RolesController",
           "method": "show",
-          "line": 5,
+          "line": 7,
           "file": "app/controllers/roles_controller.rb",
           "rendered": {
             "name": "roles/show",
@@ -370,6 +400,6 @@
       "note": "This comes from the content store and we trust the data there."
     }
   ],
-  "updated": "2019-12-10 12:38:36 +0000",
-  "brakeman_version": "4.7.1"
+  "updated": "2020-07-21 17:06:24 +0100",
+  "brakeman_version": "4.8.2"
 }

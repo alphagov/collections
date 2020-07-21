@@ -1,3 +1,4 @@
 <script type="application/ld+json">
-  <%= raw Schemas::HowTo.new(step_by_step, self).structured_data.to_json %>
+  <% structured_data = Schemas::HowTo.new(step_by_step, self).structured_data %>
+  <%= raw JSON.pretty_generate(structured_data) %>
 </script>
