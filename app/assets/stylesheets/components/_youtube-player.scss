@@ -42,8 +42,17 @@
 
 .govuk-details__summary {
   color: govuk-colour('white');
+  &:hover {
+    color: govuk-colour('white');
+  }
 }
 
 .govuk-details__text {
   color: govuk-colour('white');
+}
+
+.govuk-details__summary-text {
+  &:hover {
+    color: govuk-colour('white');
+  }
 }
