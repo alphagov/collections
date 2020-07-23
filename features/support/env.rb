@@ -14,6 +14,8 @@ require "cucumber/rails"
 require_relative "mocha"
 require "slimmer/test"
 
+Cucumber::Rails::Database.autorun_database_cleaner = false
+
 GovukTest.configure
 
 ActionController::Base.allow_rescue = false
