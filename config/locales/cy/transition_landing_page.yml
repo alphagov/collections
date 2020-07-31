@@ -1,8 +1,8 @@
 cy:
   transition_landing_page:
-    meta_title: Cymrwch y camau
+    meta_title: Pontio’r DU
     meta_description: "Mae’r DU wedi gadael yr UE. Ewch i weld beth mae’n ei olygu i chi."
-    page_header: Cymrwch y camau
+    page_header: Pontio’r DU
     page_header_explainer: |
       Mae’r DU wedi gadael yr UE ac mae’r cyfnod pontio ar ôl Brexit yn dod i ben eleni. Gwnewch rywbeth nawr i baratoi ar gyfer y rheolau newydd o fis Ionawr 2021 ymlaen.
     take_action_title: Cymrwch y camau a chofrestru ar gyfer negeseuon e-bost
@@ -19,6 +19,12 @@ cy:
       <p>Mae’r DU yn gadael marchnad sengl ac undeb tollau’r UE, a bydd diwedd y cyfnod pontio yn effeithio ar ddinasyddion, busnesau a theithio i’r UE ac oddi yno.</p>
       <p>Gwyliwch y fideo i wybod beth fydd 2021 yn ei olygu i chi.</p>
     video_section_link: https://www.youtube.com/watch?v=3ZHKjj-9WTk&rel=0
+    video_section_transcription_summary: Gwelwch y trawsgrifiad fideo
+    video_section_transcription_text: |
+      <p>Ar y 1af o Ionawr, bydd y Deyrnas Unedig yn adennill ei hannibyniaeth wleidyddol ac economaidd ac yn gallu dechrau cysylltiadau masnachol gyda’r UE a gweddill y byd.</p>
+      <p>Gall dinasyddion a busnesau wirio’r hyn y mae angen iddynt wneud i baratoi ar gyfer y newidiadau a chyfleodd sydd i ddod fel cenedl sofran.</p>
+      <p>I fusnesau, mae hyn yn cynnwys paratoi ar gyfer ffordd newydd o fasnachu gyda’n partneriaid yn yr Undeb Ewropeaidd. </p>
+      <p>I unigolion, gall hyn gynnwys cofrestru eich hawliau preswylio. </p>
     no_cookies:
       icon_text: FIDEO
       change_settings_text: Newidiwch eich gosodiadau cwcis
@@ -82,10 +88,10 @@ cy:
           <a class="govuk-!-font-weight-bold" href="/uk-nationals-living-eu" data-track-category="transition-landing-page" data-track-action="/uk-nationals-living-eu" data-track-label="What you can do now">Gwiriwch beth sydd angen i chi wneud yn y wlad yr ydych yn byw ynddi</a>
       - row_title: "Paratoi eich busnes"
         list_block: |
-          O 1 Ionawr 2021 ymlaen, bydd angen i chi wneud datganiadau tollau i symud nwyddau i mewn i’r UE ac allan. Dylech wneud y canlynol:
+          O’r 1af o Ionawr, bydd y broses o fewnforio ac allforio nwyddau yn newid. Dysgwch beth sydd angen i chi wneud i barhau i:
           <ul>
-            <li><a class="govuk-!-font-weight-bold" href="/eori" data-track-category="transition-landing-page" data-track-action="/eori" data-track-label="What you can do now">cael rhif EORI</a> os nad oes gennych un yn barod</li>
-            <li>penderfynu sut yr hoffech wneud datganiadau tollau ac os oes angen i chi gael <a class="govuk-!-font-weight-bold" href="/guidance/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-category="transition-landing-page" data-track-action="/guidance/appoint-someone-to-deal-with-customs-on-your-behalf" data-track-label="What you can do now">rhywun i ddelio â’r tollau ar eich rhan</a></li>
+            <li><a class="govuk-!-font-weight-bold" href="/prepare-to-import-to-great-britain-from-january-2021" data-track-category="transition-landing-page" data-track-action="/prepare-to-import-to-great-britain-from-january-2021" data-track-label="What you can do now">fewnforio nwyddau o’r UE</a></li>
+            <li><a class="govuk-!-font-weight-bold" href="/prepare-to-export-from-great-britain-from-january-2021" data-track-category="transition-landing-page" data-track-action="/prepare-to-export-from-great-britain-from-january-2021" data-track-label="What you can do now">allforio nwyddau i’r UE</a></li>
           </ul>
     topic_section_header: Yr holl wybodaeth am y cyfnod pontio
     topic_section_subheading: Pori’r holl wybodaeth sy’n berthnasol i’r cyfnod pontio
