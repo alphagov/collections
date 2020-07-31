@@ -36,7 +36,13 @@
           </p>
           <ul class="covid__list covid__list--header">
             <% header["list"].each do | item | %>
-              <li class="covid__list-item"><%= item %></li>
+              <li class="covid__list-item">
+                <% if item.is_a?(Hash) %>
+                  <strong><%= item["instruction"] %></strong> - <%= item["detail"] %>
+                <% else %>
+                  <%= item %>
+                <% end %>
+              </li>
             <% end %>
           </ul>
 
