@@ -4,6 +4,7 @@ module Organisations
   #
   # See https://govuk-publishing-components.herokuapp.com/component-guide/document_list
   class DocumentPresenter
+    include ApplicationHelper
     attr_accessor :include_metadata
 
     def initialize(rummager_result, include_metadata: true)
@@ -20,12 +21,16 @@ module Organisations
       }.merge(present_metadata)
     end
 
-    def present_metadata      
+    def present_metadata
       if include_metadata
         {
           metadata: {
             public_updated_at: public_updated_at,
             document_type: document_type,
+            locale: {
+              public_updated_at: t_fallback(:"date.month_names"),
+              document_type: t_fallback(document_translation),
+            },
           },
         }
       else
@@ -36,11 +41,9 @@ module Organisations
   private
 
     def document_type
-      type = @raw_document["content_store_document_type"]
+      return if document_translation.blank?
 
-      return if type.blank?
-
-      document_type = I18n.t("organisations.content_item.schema_name.#{type}.one")
+      document_type = I18n.t(document_translation, default: cleaned_document_type)
 
       # Handle document types with acronyms
       document_acronyms = %w[Foi Dfid Aaib Cma Esi Hmrc Html Maib Raib Utaac]
@@ -49,6 +52,20 @@ module Organisations
       end
 
       document_type
+    end
+
+    def cleaned_document_type
+      type = @raw_document["content_store_document_type"]
+
+      return if type.blank?
+
+      type.downcase.gsub(" ", "_")
+    end
+
+    def document_translation
+      return if cleaned_document_type.blank?
+
+      "organisations.content_item.schema_name.#{cleaned_document_type}.one"
     end
 
     def public_updated_at
