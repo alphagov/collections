@@ -20,7 +20,7 @@ module Organisations
       }.merge(present_metadata)
     end
 
-    def present_metadata
+    def present_metadata      
       if include_metadata
         {
           metadata: {
@@ -40,7 +40,7 @@ module Organisations
 
       return if type.blank?
 
-      document_type = type.capitalize.tr("_", " ")
+      document_type = I18n.t("organisations.content_item.schema_name.#{type}.one")
 
       # Handle document types with acronyms
       document_acronyms = %w[Foi Dfid Aaib Cma Esi Hmrc Html Maib Raib Utaac]
