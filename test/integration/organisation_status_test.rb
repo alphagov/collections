@@ -275,6 +275,11 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     assert_not page.has_css?(".gem-c-notice a")
     assert page.has_css?(".gem-c-govspeak")
     assert page.has_content?(/This organisation has a status of joining./i)
+    assert_not page.has_css?(".gem-c-heading", text: "Documents")
+    assert_not page.has_css?(".gem-c-heading", text: "News and communications")
+    assert_not page.has_css?(".gem-c-document-list__item-title[href='/content-item-1']", text: "Content item 1")
+    assert_not page.has_css?(".gem-c-heading", text: "Transparency")
+    assert_not page.has_css?(".gem-c-heading", text: "Guidance and regulation")
   end
 
   it "displays a left_gov organisation page correctly" do
