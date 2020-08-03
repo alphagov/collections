@@ -132,7 +132,7 @@ GEM
       statsd-ruby (~> 1.4.0)
       unicorn (>= 5.4, < 5.6)
     govuk_document_types (0.9.2)
-    govuk_publishing_components (21.60.0)
+    govuk_publishing_components (21.60.1)
       govuk_app_config
       kramdown
       plek
@@ -374,7 +374,7 @@ DEPENDENCIES
   govuk_ab_testing (~> 2.4.1)
   govuk_app_config (~> 2.2.1)
   govuk_document_types
-  govuk_publishing_components (~> 21.60.0)
+  govuk_publishing_components (~> 21.60.1)
   govuk_schemas (~> 4.1.0)
   govuk_test (~> 1.0.3)
   jasmine-rails
