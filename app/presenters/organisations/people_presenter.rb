@@ -81,6 +81,7 @@ module Organisations
         description: nil,
         metadata: roles.map { |role| role["details"]["role_payment_type"] }.compact.first,
         heading_text: person["title"],
+        lang: person["locale"],
         heading_level: 0,
         extra_links_no_indent: true,
       }

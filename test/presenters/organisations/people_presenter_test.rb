@@ -22,6 +22,7 @@ describe Organisations::PeoplePresenter do
           description: nil,
           metadata: nil,
           heading_text: "Oliver Dowden CBE MP",
+          lang: "en",
           heading_level: 0,
           extra_links_no_indent: true,
           extra_links: [
@@ -48,6 +49,7 @@ describe Organisations::PeoplePresenter do
           description: nil,
           metadata: nil,
           heading_text: "The Rt Hon Theresa May MP",
+          lang: "en",
           heading_level: 0,
           extra_links_no_indent: true,
           extra_links: [
@@ -76,6 +78,7 @@ describe Organisations::PeoplePresenter do
           description: nil,
           metadata: nil,
           heading_text: "Stuart Andrew MP",
+          lang: "en",
           heading_level: 0,
           extra_links_no_indent: true,
           extra_links: [
@@ -168,6 +171,7 @@ describe Organisations::PeoplePresenter do
         description: "Cabinet Secretary",
         metadata: "Unpaid",
         heading_text: "Sir Jeremy Heywood",
+        lang: "en",
         heading_level: 0,
         extra_links_no_indent: true,
         image_src: "/photo/jeremy-heywood",
@@ -180,6 +184,7 @@ describe Organisations::PeoplePresenter do
         description: "Chief Executive of the Civil Service",
         metadata: nil,
         heading_text: "John Manzoni",
+        lang: "en",
         heading_level: 0,
         extra_links_no_indent: true,
       }
