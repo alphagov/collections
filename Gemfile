@@ -5,7 +5,7 @@ ruby File.read(".ruby-version").strip
 gem "dalli"
 gem "gds-api-adapters", "~> 67.0.1"
 gem "govspeak", "~> 6.5.4"
-gem "govuk_ab_testing", "~> 2.4.1"
+gem "govuk_ab_testing", "~> 2.4.2"
 gem "govuk_app_config", "~> 2.2.1"
 gem "govuk_document_types"
 gem "govuk_publishing_components", "~> 21.60.1"
