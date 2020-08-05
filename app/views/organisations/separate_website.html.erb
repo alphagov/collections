@@ -19,4 +19,6 @@
   </div>
 </div>
 
-<%= render partial: 'latest_documents_by_supergroup' %>
+<% unless @organisation.is_joining? %>
+  <%= render partial: 'latest_documents_by_supergroup' %>
+<% end %>
