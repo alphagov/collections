@@ -36,7 +36,9 @@
           font_size: 19,
           lang: t_fallback('organisations.follow_us')
         } %>
-        <%= render "govuk_publishing_components/components/share_links", @what_we_do.share_links %>
+        <div lang="en">
+          <%= render "govuk_publishing_components/components/share_links", @what_we_do.share_links %>
+        </div>
       </div>
     <% end %>
   </div>
