@@ -140,6 +140,7 @@ module OrganisationHelpers
         ordered_ministers: [
           {
             title: "Oliver Dowden CBE MP",
+            locale: "en",
             base_path: "/government/people/oliver-dowden",
             details: {
               image: {
@@ -160,6 +161,7 @@ module OrganisationHelpers
           },
           {
             title: "Stuart Andrew MP",
+            locale: "en",
             base_path: "/government/people/stuart-andrew",
             details: {},
             links: {
@@ -175,6 +177,7 @@ module OrganisationHelpers
           },
           {
             title: "The Rt Hon Theresa May MP",
+            locale: "en",
             base_path: "/government/people/theresa-may",
             details: {
               image: {
@@ -223,6 +226,7 @@ module OrganisationHelpers
         ordered_board_members: [
           {
             title: "Sir Jeremy Heywood",
+            locale: "en",
             base_path: "/government/people/jeremy-heywood",
             details: {
               image: {
@@ -242,6 +246,7 @@ module OrganisationHelpers
           },
           {
             title: "John Manzoni",
+            locale: "en",
             base_path: "/government/people/john-manzoni",
             details: {
               image: {
@@ -288,6 +293,7 @@ module OrganisationHelpers
         ordered_board_members: [
           {
             title: "Sir Jeremy Heywood",
+            locale: "en",
             base_path: "/government/people/jeremy-heywood",
             details: {
               image: {
@@ -308,6 +314,7 @@ module OrganisationHelpers
           },
           {
             title: "John Manzoni",
+            locale: "en",
             base_path: "/government/people/john-manzoni",
             details: {
               image: {
