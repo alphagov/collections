@@ -1,6 +1,6 @@
 <% if contacts.present? %>
 <% contacts.each do |contact| %>
-  <div class="organisation__contact-section <%= "organisation__contact-section--border-top" if local_assigns[:border] %>">
+  <div class="organisation__contact-section <%= "organisation__contact-section--border-top" if local_assigns[:border] %>" <%= "lang=#{contact[:locale]}" if contact[:locale] %>>
     <%= render "govuk_publishing_components/components/heading", {
       text: contact[:title],
       padding: true,
