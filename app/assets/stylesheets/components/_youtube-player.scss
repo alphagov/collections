@@ -56,6 +56,10 @@
   border-left-color: govuk-colour('white');
 }
 
+.govuk-details__list {
+  color: govuk-colour('white');
+}
+
 .govuk-details__summary-text {
   &:hover {
     color: govuk-colour('white');
