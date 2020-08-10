@@ -33,13 +33,25 @@ module Organisations
     def all_organisations
       {
         number_10: @organisations.number_10,
-        ministerial_departments: @organisations.ministerial_departments,
-        non_ministerial_departments: @organisations.non_ministerial_departments,
-        agencies_and_other_public_bodies: @organisations.agencies_and_other_public_bodies,
+        ministerial_departments: filter_not_joining(
+          @organisations.ministerial_departments,
+        ),
+        non_ministerial_departments: filter_not_joining(
+          @organisations.non_ministerial_departments,
+        ),
+        agencies_and_other_public_bodies: filter_not_joining(
+          @organisations.agencies_and_other_public_bodies,
+        ),
         high_profile_groups: @organisations.high_profile_groups,
         public_corporations: @organisations.public_corporations,
         devolved_administrations: @organisations.devolved_administrations,
       }
+    end
+
+    def filter_not_joining(organisations)
+      organisations.filter do |organisation|
+        organisation["govuk_status"] != "joining"
+      end
     end
 
     def ordered_works_with(organisation)
