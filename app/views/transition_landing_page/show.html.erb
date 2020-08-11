@@ -1,7 +1,4 @@
 <% content_for :page_class, "taxon-page taxon-page--grid" %>
-<% content_for :meta_tags do %>
-  <%= ab_test_variant.analytics_meta_tag.html_safe if page_under_test? %>
-<% end %>
 
 <%=
   render(
