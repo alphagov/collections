@@ -1,0 +1,27 @@
+<div class="landing-page__section landing-page__section--light-grey">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">
+          <%= t("dit_landing_page.take_action_title") %>
+        </h2>
+      </div>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <%= render "govuk_publishing_components/components/govspeak", {
+        } do %>
+          <%= t("dit_landing_page.take_action_text").html_safe %>
+          <ul class="govuk-list govuk-bulleted_list">
+            <% t("dit_landing_page.countries").each do |country| %>
+              <li><%= link_to country[:label], country[:url]  %></li>
+            <% end %>
+          </ul>
+        <% end %>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <%= image_tag 'KBM-logo.svg' %>
+      </div>
+    </div>
+  </div>
+</div>

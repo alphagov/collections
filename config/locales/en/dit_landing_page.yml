@@ -1,0 +1,29 @@
+en:
+  dit_landing_page:
+    meta_title: Trade with the UK from 2021 if you're an EU business
+    meta_description: The UK has left the EU. From 1 January 2021 the rules for trading with the UK will change.
+    page_header: Trade with the UK from 2021 if you’re an EU business
+    page_header_explainer: The UK has left the EU. From 1 January 2021 the rules for trading with the UK will change.
+    take_action_title: Check what your business needs to do
+    take_action_text: |
+      <p>Find out what <a href="https://ec.europa.eu/info/european-union-and-united-kingdom-forging-new-partnership/future-partnership/getting-ready-end-transition-period_en">your business needs to do</a> to prepare to trade with the UK on the European Commission website.</p>
+      <p>You can also read information from the UK government in the following languages:</p>
+    countries:
+      - label: Deutsche
+        url: /transition
+      - label: Dutch
+        url: /transition
+      - label: English
+        url: /transition
+      - label: Español
+        url: /transition
+      - label: Français
+        url: /transition
+      - label: Italiano
+        url: /transition
+      - label: Polskie
+        url: /transition
+    training_section_title: Online training events
+    training_section_description: |
+      <p>The UK government and local officials, ports and carriers will run online training to help you understand the systems and rules you’ll need to follow from your country.</p>
+      <p>Dates for those training sessions will be announced on 2 September 2020.</p>
