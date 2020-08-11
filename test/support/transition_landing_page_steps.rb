@@ -26,7 +26,7 @@ module TransitionLandingPageSteps
   end
 
   def then_i_can_see_the_what_happens_next_section
-    assert page.has_selector?("h2.govuk-heading-l", text: "Take action and sign up for emails")
+    assert page.has_selector?("h2.govuk-heading-l", text: "Take action")
   end
 
   def then_i_cannot_see_the_get_ready_section
@@ -38,7 +38,7 @@ module TransitionLandingPageSteps
   end
 
   def then_i_can_see_the_buckets_section
-    assert page.has_selector?("h2.govuk-heading-l", text: "Take action and sign up for emails")
+    assert page.has_selector?("h2.govuk-heading-l", text: "Take action")
   end
 
   def and_i_can_see_the_explore_topics_section
