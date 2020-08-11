@@ -11,7 +11,7 @@
 </head>
 
 <body <% if content_for(:is_full_width_header) %>class="full-width"<% end %>>
-  <div class="wrapper" id="wrapper" <%= "lang=#{@content_item["locale"]}" unless !@content_item["locale"] || @content_item["locale"].eql?("en") %>>
+  <div class="wrapper" id="wrapper">
     <% unless content_for(:is_full_width_header) %>
       <% if content_for?(:breadcrumbs) %>
         <%= yield :breadcrumbs %>
@@ -20,7 +20,7 @@
       <% end %>
     <% end %>
 
-    <main id="content" role="main" class="content <%= yield :page_class %>">
+    <main id="content" role="main" class="content <%= yield :page_class %>" <%= "lang=#{@content_item["locale"]}" unless !@content_item["locale"] || @content_item["locale"].eql?("en") %>>
       <%= yield %>
     </main>
 
