@@ -32,6 +32,7 @@ module Organisations
     def format_contacts(contacts, foi: false)
       contacts.map do |contact|
         {
+          locale: contact["locale"].presence,
           title: foi_title(contact["details"]["title"], foi: foi),
           post_addresses: contact["details"]["post_addresses"]&.map do |post|
             contact_address(post)

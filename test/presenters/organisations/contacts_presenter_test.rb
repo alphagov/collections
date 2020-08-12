@@ -14,6 +14,7 @@ describe Organisations::ContactsPresenter do
     it "formats foi contacts correctly" do
       expected = [
         {
+          locale: "en",
           title: "FOI stuff",
           post_addresses: [
             "Office of the Secretary of State for Wales<br/>Gwydyr House<br/>Whitehall<br/>SW1A 2NP<br/>UK<br/>",
@@ -30,6 +31,7 @@ describe Organisations::ContactsPresenter do
           description: "<p>FOI requests<br/><br/>are possible</p>",
         },
         {
+          locale: "en",
           title: "Freedom of Information requests",
           post_addresses: [
             "The Welsh Office<br/>Green House<br/>Bracknell<br/>B2 3ZZ<br/>",
@@ -44,6 +46,7 @@ describe Organisations::ContactsPresenter do
           description: "<p>Something here<br/><br/>Something there</p>",
         },
         {
+          locale: "en",
           title: "Freedom of Information requests",
           post_addresses: [],
           phone_numbers: [],
@@ -67,6 +70,7 @@ describe Organisations::ContactsPresenter do
     it "formats contact information correctly" do
       expected = [
         {
+          locale: "en",
           title: "Department for International Trade",
           post_addresses: [
             "King Charles Street<br/>Whitehall<br/>London<br/>SW1A 2AH<br/>United Kingdom<br/>",
@@ -97,6 +101,7 @@ describe Organisations::ContactsPresenter do
 
       expected = [
         {
+          locale: "en",
           title: "Department for International Trade",
           post_addresses: [nil],
           phone_numbers: [],

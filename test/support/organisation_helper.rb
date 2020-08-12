@@ -464,6 +464,7 @@ module OrganisationHelpers
       links: {
         ordered_foi_contacts: [
           {
+            locale: "en",
             withdrawn: false,
             details: {
               title: "FOI stuff",
@@ -499,6 +500,7 @@ module OrganisationHelpers
             },
           },
           {
+            locale: "en",
             withdrawn: false,
             details: {
               description: "Something here\r\n\r\nSomething there",
@@ -524,6 +526,7 @@ module OrganisationHelpers
             },
           },
           {
+            locale: "en",
             withdrawn: false,
             details: {
               description: "",
@@ -547,6 +550,7 @@ module OrganisationHelpers
       links: {
         ordered_contacts: [
           {
+            locale: "en",
             title: "Department for International Trade",
             details: {
               title: "Department for International Trade",
@@ -586,6 +590,7 @@ module OrganisationHelpers
       links: {
         ordered_contacts: [
           {
+            locale: "en",
             title: "Department for International Trade",
             details: {
               title: "Department for International Trade",
