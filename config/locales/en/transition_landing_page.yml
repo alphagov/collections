@@ -76,6 +76,13 @@ en:
     comms:
       links:
       - link:
+          text: "£650 million investment for Northern Ireland"
+          path: "/government/news/major-650-million-investment-for-northern-ireland"
+          description: "The Chancellor of the Duchy of Lancaster and the Secretary of State for Northern Ireland have announced a £650m package of investment."
+        metadata:
+          public_updated_at: 2020-08-07
+          document_type: "News story"
+      - link:
           text: "Major new campaign to prepare UK for end of the transition period"
           path: "/government/news/major-new-campaign-to-prepare-uk-for-end-of-the-transition-period"
           description: "The government has launched a new campaign to help businesses and individuals prepare for the end of the transition period."
@@ -96,13 +103,6 @@ en:
         metadata:
           public_updated_at: 2020-02-10
           document_type: "Press Release"
-      - link:
-          text: "The future relationship between the UK and the EU"
-          path: "/government/speeches/the-future-relationship-between-the-uk-and-the-eu"
-          description: "This statement sets out the Government’s proposed approach to the negotiations with the EU about our future relationship."
-        metadata:
-          public_updated_at: 2020-02-03
-          document_type: "Written Statement to Parliament"
     topic_section_header: All transition period information
     topic_section_subheading: Browse all information related to the transition period
     email_mailto_subject: "Get%20ready%20for%202021%20-%20GOV.UK"
