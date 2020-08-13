@@ -44,7 +44,7 @@ module Organisations
     def document_type
       return if document_translation.blank?
 
-      document_type = I18n.t(document_translation, default: cleaned_document_type)
+      document_type = I18n.t(document_translation, default: cleaned_document_type.titleize.gsub("_", " "))
 
       # Handle document types with acronyms
       document_acronyms = %w[Foi Dfid Aaib Cma Esi Hmrc Html Maib Raib Utaac]

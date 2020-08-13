@@ -7,10 +7,15 @@ describe Organisations::DocumentPresenter do
         link: {
           text: "Quiddich World Cup 2022 begins",
           path: "/government/news/its-coming-home",
+          locale: "en",
         },
         metadata: {
           public_updated_at: Date.parse("2022-11-21T12:00:00.000+01:00"),
           document_type: "News story",
+          locale: {
+            public_updated_at: false,
+            document_type: false,
+          },
         },
       }
 
@@ -22,7 +27,7 @@ describe Organisations::DocumentPresenter do
     it "transforms the acronym in the doc type" do
       expected = presenter("content_store_document_type" => "Aaib_report")
 
-      assert_equal expected.present[:metadata][:document_type], "AAIB report"
+      assert_equal expected.present[:metadata][:document_type], "Air Accidents Investigation Branch report"
     end
   end
 
@@ -32,6 +37,7 @@ describe Organisations::DocumentPresenter do
         link: {
           text: "Quiddich World Cup 2022 begins",
           path: "/government/news/its-coming-home",
+          locale: "en",
         },
       }
 
