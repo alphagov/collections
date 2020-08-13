@@ -4,12 +4,16 @@
   data-list-title="Brexit landing page: <%= t("transition_landing_page.guidance_header") %>"
   data-search-query>
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full">
       <h2 class="govuk-heading-l">
         <%= t("transition_landing_page.guidance_header") %>
       </h2>
        <p class="landing-page__guidance_subheader">
-        <%= t("transition_landing_page.guidance_subheader") %>
+        <% if show_variant? %>
+          <%= raw t("transition_landing_page.guidance_subheader_variant_b") %>
+        <% else %>
+          <%= t("transition_landing_page.guidance_subheader") %>
+        <% end %>
       </p>
     </div>
   </div>
