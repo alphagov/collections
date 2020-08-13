@@ -17,6 +17,7 @@ module Organisations
         link: {
           text: @raw_document["title"],
           path: @raw_document["link"],
+          locale: "en",
         },
       }.merge(present_metadata)
     end
