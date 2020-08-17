@@ -2,37 +2,40 @@ source "https://rubygems.org"
 
 ruby File.read(".ruby-version").strip
 
+gem "rails", "6.0.3.2"
+
 gem "dalli"
-gem "gds-api-adapters", "~> 67.0.1"
-gem "govspeak", "~> 6.5.4"
-gem "govuk_ab_testing", "~> 2.4.2"
-gem "govuk_app_config", "~> 2.2.1"
+gem "gds-api-adapters"
+gem "govspeak"
+gem "govuk_ab_testing"
+gem "govuk_app_config"
 gem "govuk_document_types"
-gem "govuk_publishing_components", "~> 21.60.3"
-gem "plek", "~> 4.0.0"
-gem "rails", "5.2.4.3"
+gem "govuk_publishing_components"
+gem "plek"
 gem "rinku", require: "rails_rinku"
-gem "sass-rails", "~> 5.0.3"
-gem "slimmer", "~> 15.0.0"
-gem "uglifier", "~> 4.2.0"
+gem "sass-rails"
+gem "slimmer"
+gem "uglifier"
 
 group :test do
   gem "cucumber-rails", require: false
   gem "govuk-content-schema-test-helpers"
-  gem "govuk_schemas", "~> 4.1.0"
-  gem "govuk_test", "~> 1.0.3"
+  gem "govuk_schemas"
+  gem "govuk_test"
   gem "minitest-spec-rails"
   gem "mocha"
   gem "rails-controller-testing"
   gem "simplecov"
   gem "simplecov-rcov"
+  gem "webdrivers"
   gem "webmock", require: false
 end
 
 group :development, :test do
   gem "better_errors"
   gem "binding_of_caller"
-  gem "jasmine-rails"
+  gem "jasmine"
+  gem "jasmine_selenium_runner", require: false
   gem "pry-byebug"
   gem "rubocop-govuk"
   gem "timecop"

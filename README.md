@@ -141,9 +141,7 @@ Use `bundle exec rake` to run the test suite, excluding JavaScript
 
 #### Javascript tests
 
-Use `bundle exec rake spec:javascript` to run Jasmine tests
-Alternatively, visit [`collections.dev.gov.uk/specs`](http://collections.dev.gov.uk/specs)
-for a live debugger in your browser
+Use `bundle exec rake jasmine:ci` to run Jasmine tests
 
 ## License
 

@@ -11,7 +11,7 @@ node {
       }
 
       stage("Run Javascript tests") {
-        govuk.runRakeTask("spec:javascript")
+        govuk.runRakeTask("jasmine:ci")
       }
     },
     publishingE2ETests: true,

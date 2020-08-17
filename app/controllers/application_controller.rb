@@ -45,8 +45,13 @@ private
   end
 
   def can_handle_format?(format)
-    return true if [Mime[:html], Mime::ALL].include?(format)
+    # Cannot use include? method rubocop suggests due to bug in Rails that means
+    # include? in this case will return incorrect results. Therefore disabling rubocop
+    # for this line.
+    # rubocop:disable Style/MultipleComparison
+    return true if format == Mime[:html] || format == Mime::ALL
 
+    # rubocop:enable Style/MultipleComparison
     format && self.class.acceptable_formats.fetch(params[:action].to_sym, []).include?(format.to_sym)
   end
 
@@ -86,6 +91,6 @@ private
   end
 
   def render_partial(partial_name, locals = {})
-    render_to_string(partial_name, formats: "html", layout: false, locals: locals)
+    render_to_string(partial_name, formats: [:html], layout: false, locals: locals)
   end
 end

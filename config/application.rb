@@ -1,8 +1,11 @@
 require_relative "boot"
 
+require "rails"
+
 require "action_controller/railtie"
 require "sprockets/railtie"
 require "rails/test_unit/railtie"
+require "action_mailer/railtie" # Needed for cucumber-rails 2.1.0
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -14,9 +17,12 @@ end
 
 module Collections
   class Application < Rails::Application
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
+    # Initialize configuration defaults for originally generated Rails version.
+    config.load_defaults 6.0
+
+    # Application configuration can go into files in config/initializers
+    # -- all .rb files in that directory are automatically loaded after loading
+    # the framework and any gems in your application.
 
     config.i18n.default_locale = :en
     config.i18n.load_path += Dir[Rails.root.join("config/locales/**/*.yml")]
@@ -33,10 +39,10 @@ module Collections
       "X-Frame-Options" => "ALLOWALL",
     }
 
-    # Custom directories with classes and modules you want to be autoloadable.
-    config.eager_load_paths += %W[
-      #{config.root}/lib
-      #{config.root}/app/presenters/supergroups
-    ]
+    # Using a sass css compressor causes a scss file to be processed twice
+    # (once to build, once to compress) which breaks the usage of "unquote"
+    # to use CSS that has same function names as SCSS such as max.
+    # https://github.com/alphagov/govuk-frontend/issues/1350
+    config.assets.css_compressor = nil
   end
 end
