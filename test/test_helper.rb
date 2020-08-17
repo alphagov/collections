@@ -15,7 +15,10 @@ require "rails/test_help"
 require "mocha/minitest"
 
 require "webmock/minitest"
-WebMock.disable_net_connect!(allow_localhost: true)
+WebMock.disable_net_connect!(
+  allow_localhost: true,
+  allow: ["chromedriver.storage.googleapis.com"],
+)
 
 Dir[Rails.root.join("test/support/*.rb")].sort.each { |f| require f }
 
