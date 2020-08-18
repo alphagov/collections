@@ -100,7 +100,7 @@ module Organisations
           image_alt: news["image"]["alt_text"],
           context: {
             date: date,
-            text: I18n.t("content_item.schema_name.#{news['document_type']&.parameterize(separator: '_')}", count: 1, default: news["document_type"]),
+            text: I18n.t("organisations.content_item.schema_name.#{news['document_type']&.parameterize(separator: '_')}", count: 1, default: news["document_type"]),
           },
           heading_text: news["title"],
           description: news["summary"].html_safe,
