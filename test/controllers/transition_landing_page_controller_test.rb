@@ -24,31 +24,31 @@ describe TransitionLandingPageController do
 
     %w[A INVALID_VARIANT].each do |variant|
       it "displays the default text for the #{variant} variant in the en locale" do
-        with_variant TransitionChecker2: "A" do
+        with_variant TransitionChecker3: "A" do
           get :show
-          assert_select ".landing-page__guidance_subheader", text: "Actions you can take now that do not depend on negotiations."
-          assert_select ".landing-page__guidance_subheader", text: "These are some of the new rules from January 2021. For a complete list of actions answer a few questions about you, your family or business.", count: 0
+          assert_select "h2", text: "Actions you can take now"
+          assert_select "h2", text: "Some of the new rules for 2021", count: 0
         end
       end
     end
 
     it "shows the alternate text for the B variant in the en locale" do
-      with_variant TransitionChecker2: "B" do
+      with_variant TransitionChecker3: "B" do
         get :show
-        assert_select ".landing-page__guidance_subheader", text: "These are some of the new rules from January 2021. For a complete list of actions answer a few questions about you, your family or business."
-        assert_select ".landing-page__guidance_subheader", text: "Actions you can take now that do not depend on negotiations.", count: 0
+        assert_select "h2", text: "Some of the new rules for 2021"
+        assert_select "h2", text: "Actions you can take now", count: 0
       end
     end
 
     %w[A B INVALID_VARIANT].each do |variant|
       it "displays the default text for the #{variant} variant in the cy locale" do
-        setup_ab_variant("TransitionChecker2", variant)
+        setup_ab_variant("TransitionChecker3", variant)
 
         get :show, params: { locale: "cy" }
 
-        assert_response_not_modified_for_ab_test("TransitionChecker1")
-        assert_select ".landing-page__guidance_subheader", text: "Camau y gallwch eu cymryd nawr sydd ddim yn ddibynnol ar drafodaethau."
-        assert_select ".landing-page__guidance_subheader", text: "These are some of the new rules from January 2021. For a complete list of actions answer a few questions about you, your family or business.", count: 0
+        assert_response_not_modified_for_ab_test("TransitionChecker3")
+        assert_select "h2", text: "Camau y gallwch eu cymryd nawr"
+        assert_select "h2", text: "Some of the new rules for 2021", count: 0
       end
     end
   end
