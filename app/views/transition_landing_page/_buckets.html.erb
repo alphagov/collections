@@ -6,14 +6,14 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <h2 class="govuk-heading-l">
-        <%= t("transition_landing_page.guidance_header") %>
-      </h2>
-       <p class="landing-page__guidance_subheader" data-module="track-click">
         <% if show_variant? %>
-          <%= raw t("transition_landing_page.guidance_subheader_variant_b") %>
+          <%= raw t("transition_landing_page.guidance_header_variant_b") %>
         <% else %>
-          <%= t("transition_landing_page.guidance_subheader") %>
+          <%= t("transition_landing_page.guidance_header") %>
         <% end %>
+      </h2>
+      <p class="landing-page__guidance_subheader" data-module="track-click">
+        <%= raw t("transition_landing_page.guidance_subheader") %>
       </p>
     </div>
   </div>
