@@ -93,6 +93,7 @@ module Organisations
 
       featured.each do |news|
         date = Date.parse(news["public_updated_at"]) if news["public_updated_at"]
+        text = I18n.t("organisations.content_item.schema_name.#{news['document_type']&.parameterize(separator: '_')}", count: 1, default: news["document_type"]) if news["document_type"]
 
         news_stories << {
           href: news["href"],
@@ -100,7 +101,7 @@ module Organisations
           image_alt: news["image"]["alt_text"],
           context: {
             date: date,
-            text: I18n.t("content_item.schema_name.#{news['document_type']&.parameterize(separator: '_')}", count: 1, default: news["document_type"]),
+            text: text,
           },
           heading_text: news["title"],
           description: news["summary"].html_safe,
