@@ -6,8 +6,8 @@ examples:
     data:
       nhs_branding: true
       title_logo: |
-        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 69.2 28" aria-labelledby="nhs-logo__title">
-          <title id="nhs-logo__title">NHS logo</title>
+        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 69.2 28" aria-labelledby="nhs-logo__title_0">
+          <title id="nhs-logo__title_0">NHS logo</title>
           <style>
               .st0 { fill: #005EB8; }
               .st1 { fill: #FFFFFF; }
@@ -28,8 +28,8 @@ examples:
     data:
       nhs_branding: true
       title_logo: |
-        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 69.2 28" aria-labelledby="nhs-logo__title">
-          <title id="nhs-logo__title">NHS logo</title>
+        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 69.2 28" aria-labelledby="nhs-logo__title_1">
+          <title id="nhs-logo__title_1">NHS logo</title>
           <style>
               .st0 { fill: #005EB8; }
               .st1 { fill: #FFFFFF; }
@@ -51,8 +51,8 @@ examples:
     data:
       nhs_branding: true
       title_logo: |
-        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 69.2 28" aria-labelledby="nhs-logo__title">
-          <title id="nhs-logo__title">NHS logo</title>
+        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 69.2 28" aria-labelledby="nhs-logo__title_2">
+          <title id="nhs-logo__title_2">NHS logo</title>
           <style>
               .st0 { fill: #005EB8; }
               .st1 { fill: #FFFFFF; }
