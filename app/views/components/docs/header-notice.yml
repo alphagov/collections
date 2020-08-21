@@ -1,6 +1,8 @@
 name: Header notice
 shared_accessibility_criteria:
   - link
+accessibility_excluded_rules:
+  - 'landmark-unique' # the component sets aria-label="notice" to all examples
 examples:
   default:
     data:
