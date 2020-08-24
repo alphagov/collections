@@ -26,7 +26,7 @@ class ServicesAndInformationBrowsingTest < ActionDispatch::IntegrationTest
       assert page.has_content?("Waste")
     end
 
-    assert page.has_css?(".gem-c-breadcrumbs.gem-c-breadcrumbs--collapse-on-mobile")
+    assert page.has_css?(".gem-c-breadcrumbs")
   end
 
   it "includes tracking attributes on all links" do
