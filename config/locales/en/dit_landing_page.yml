@@ -1,29 +1,97 @@
 en:
   dit_landing_page:
-    meta_title: Trade with the UK from 2021 if you're an EU business
-    meta_description: The UK has left the EU. From 1 January 2021 the rules for trading with the UK will change.
-    page_header: Trade with the UK from 2021 if you’re an EU business
-    page_header_explainer: The UK has left the EU. From 1 January 2021 the rules for trading with the UK will change.
-    take_action_title: Check what your business needs to do
-    take_action_text: |
-      <p>Find out what <a href="https://ec.europa.eu/info/european-union-and-united-kingdom-forging-new-partnership/future-partnership/getting-ready-end-transition-period_en">your business needs to do</a> to prepare to trade with the UK on the European Commission website.</p>
-      <p>You can also read information from the UK government in the following languages:</p>
+    kbm-logo-alt-text: Keep Business Moving
+    meta_title: Trade with the UK from 1 January 2021 as a business based in the EU
+    meta_description: The UK has left the EU. On 31 December 2020 the UK will leave the EU single market and customs union. From 1 January 2021 the rules for trading with the UK will change.
+    page_header: Trade with the UK from 1 January 2021 as a business based in the EU
+    page_header_explainer: |
+      <p>The UK has left the EU. On 31 December 2020 the UK will leave the EU single market and customs union.</p>
+      <p>From 1 January 2021 the rules for trading with the UK will change.</p>
+    guidance_title: Prepare your business for January 2021 if you are based in the EU
+    guidance_subheader: What your business needs to know
+    guidance_text: |
+      <p>If you run an EU-based business, you need to check the new rules and prepare for the changes so that you can continue trading with the UK from January 2021.</p>
+      <p>This information is also available in the following languages:</p>
     countries:
       - label: Deutsche
-        url: /transition
-      - label: Dutch
-        url: /transition
-      - label: English
-        url: /transition
+        url: government/publications/trade-with-the-uk-from-january-2021-prepare-your-eu-business/handel-mit-dem-vereinigten-konigreich-ab-1-januar-2021-fur-unternehmen-mit-sitz-in-der-eu
       - label: Español
-        url: /transition
+        url: /government/publications/trade-with-the-uk-from-january-2021-prepare-your-eu-business/como-hacer-negocios-con-el-reino-unido-a-partir-del-1-de-enero-de-2021-en-caso-de-ser-una-empresa-con-sede-en-la-ue
       - label: Français
-        url: /transition
+        url: /government/publications/trade-with-the-uk-from-january-2021-prepare-your-eu-business/travailler-avec-le-royaume-uni-a-partir-du-1er-janvier-2021-en-tant-quentreprise-basee-dans-lue
       - label: Italiano
-        url: /transition
-      - label: Polskie
-        url: /transition
-    training_section_title: Online training events
+        url: /government/publications/trade-with-the-uk-from-january-2021-prepare-your-eu-business/come-le-aziende-presenti-nellunione-europea-potranno-effettuare-scambi-commerciali-con-il-regno-unito-a-partire-dal-01012021
+      - label: Polski
+        url: /government/publications/trade-with-the-uk-from-january-2021-prepare-your-eu-business/handel-z-wielka-brytania-od-1-stycznia-2021-roku-informacje-dla-firm-z-unii-europejskiej
+    goods_title: Buying or selling goods
+    goods_text: |
+      <p>Rules are changing and there will be border requirements placed on the movement of goods between the EU and UK. <a href="/government/publications/the-border-operating-model">Find out more about how the border with the UK will work.</a></p>
+      <p>Make sure you talk to your trading partners in the UK to agree responsibilities and have the correct paperwork for the type of goods you are trading with counterparts in the UK. Ensure you have completed the necessary border requirements.</p>
+      <p>If you sell agri-food products to the UK, your business may need to:</p>
+    goods_list:
+      - check the requirements for exporting food, drink or agricultural products to the UK from the EU
+      - check what documents, licences and certificates are required for the goods you are exporting from the EU into the UK and how to apply for them
+      - pre-notify the UK authorities about the goods you are exporting from the EU into the UK
+    goods_list_end: <p>There will be no substantive change for the movement of goods between <a href="/government/publications/moving-goods-under-the-northern-ireland-protocol/moving-goods-under-the-northern-ireland-protocol-section-three-moving-goods-from-northern-ireland-to-the-european-union">Northern Ireland</a> and EU Member States, including Ireland.</p>
+    tax_title: Paying VAT or claiming VAT refunds
+    tax_text: |
+      <p>Make sure you understand the <a href="/government/publications/changes-to-vat-treatment-of-overseas-goods-sold-to-customers-from-1-january-2021">new rules for paying import VAT on parcels</a> you send to UK buyers.</p>
+      <p>Check how to <a href="/guidance/claim-refunds-of-uk-vat-from-1-january-2021-if-youre-an-eu-business">claim VAT refunds on goods and services</a> you buy from the UK from 1 January 2021.</p>
+    data_title: Transferring personal data to the UK
+    data_text: |
+      <p>Your business may need to make some changes to allow you to continue to share personal data with businesses or other organisations in the UK. Be prepared on data protection and data transfers.</p>
+    services_title: Providing services in the UK
+    services_text: |
+      <p>Your business might be affected by the changes from 1 January 2021. There may be new rules if:</p>
+    services_list:
+      - you have branches or subsidiaries in the UK
+      - your business is part of a service sector within the UK
+      - you are planning a merger with a UK company
+      - you or your employees travel to the UK for business
+      - you or your employees provide services in a UK regulated profession
+    services_list_end: <p>Check the regulations for the UK, including visa requirements, and understand how changes could affect your business.</p>
+    training_section_title: Additional help and support
     training_section_description: |
-      <p>The UK government and local officials, ports and carriers will run online training to help you understand the systems and rules you’ll need to follow from your country.</p>
-      <p>Dates for those training sessions will be announced on 2 September 2020.</p>
+      <p>The UK government and local officials, ports and carriers will be running a series of online events to help your business understand changes to UK border requirements. Further information will be provided shortly, and provisional dates and times are listed in the table below.</p>
+    training_section_table:
+      rows:
+        - - text: "21/09/2020"
+          - text: "Belgium"
+          - text: "SME webinar"
+          - text: "11am"
+          - text: "10am"
+        - - text: "23/09/2020"
+          - text: "France"
+          - text: "SME webinar"
+          - text: "Midday"
+          - text: "11am"
+        - - text: "25/09/2020"
+          - text: "Ireland"
+          - text: "SME webinar"
+          - text: "10am"
+          - text: "10am"
+        - - text: "28/09/2020"
+          - text: "Netherlands"
+          - text: "SME webinar"
+          - text: "11am"
+          - text: "10am"
+        - - text: "30/09/2020"
+          - text: "Italy"
+          - text: "SME webinar"
+          - text: "Midday"
+          - text: "11am"
+        - - text: "30/09/2020"
+          - text: "Spain"
+          - text: "SME webinar"
+          - text: "2pm"
+          - text: "1pm"
+        - - text: "01/10/2020"
+          - text: "Germany"
+          - text: "SME webinar"
+          - text: "11am"
+          - text: "10am"
+        - - text: "02/10/2020"
+          - text: "Poland"
+          - text: "SME webinar"
+          - text: "10am"
+          - text: "9am"

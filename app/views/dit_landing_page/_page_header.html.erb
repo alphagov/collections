@@ -6,9 +6,9 @@
   <meta property="og:url" content="<%= request.base_url + request.path %>">
   <meta property="og:title" content="<%= t("dit_landing_page.meta_title") %>">
   <meta property="og:description" content="<%= t("dit_landing_page.meta_description") %>">
-  <meta property="og:image" content="<%= image_url("KBM-logo-placeholder.png") %>" />
+  <meta property="og:image" content="<%= image_url("KBM_share_image.png") %>" />
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="<%= image_url("KBM-logo-placeholder.png") %>">
+  <meta name="twitter:image" content="<%= image_url("KBM_twitter.png") %>">
   <meta name="description" content="<%= t("dit_landing_page.meta_description") %>">
   <meta name="govuk:navigation-page-type" content="Taxon Page" />
 <% end %>
@@ -16,14 +16,6 @@
 <header class="dit-landing-page__header--with-bg-image">
   <div class="dit-landing-page__header-text-block">
     <div class="govuk-width-container landing-page_header-text-container">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <%= render "govuk_publishing_components/components/translation-nav", {
-            translations: @translation_links,
-            inverse: true
-          } %>
-        </div>
-      </div>
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
           <h1 class="dit-landing-page__page_title">
@@ -33,9 +25,9 @@
         <div class="govuk-grid-column-two-thirds dit-landing-page__intro">
           <%= render "govuk_publishing_components/components/govspeak", {
           } do %>
-            <p class="govuk-body-l"><%= t("dit_landing_page.page_header_explainer") %></p>
+            <%= t("dit_landing_page.page_header_explainer").html_safe %>
           <% end %>
-        </div>
+          </div>
       </div>
     </div>
   </div>

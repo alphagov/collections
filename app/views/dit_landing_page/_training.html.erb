@@ -1,7 +1,7 @@
 <div class="landing-page__section dit-landing-page__section--dark-grey landing-page__section--border-bottom-red">
   <div class="govuk-width-container">
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-half">
+      <div class="govuk-grid-column-two-thirds">
         <h2 class="govuk-heading-l">
           <%= t("dit_landing_page.training_section_title") %>
         </h2>
@@ -9,9 +9,20 @@
         } do %>
           <%= t("dit_landing_page.training_section_description").html_safe() %>
         <% end %>
+        <%= render "govuk_publishing_components/components/table", {
+          head: [
+            { text: "Date" },
+            { text: "Country" },
+            { text: "Type of event" },
+            { text: "Time in member state" },
+            { text: "Time in UK" },
+          ],
+          rows: t("dit_landing_page.training_section_table.rows")
+        }
+        %>
       </div>
-      <div class="govuk-grid-column-one-half">
-        <%= image_tag 'DIT-small-image.png' %>
+      <div class="govuk-grid-column-one-third">
+        <%= image_tag 'DIT-small-image.png', class: "dit-landing-page__training-image", alt: "", loading: "lazy" %>
       </div>
     </div>
   </div>
