@@ -588,7 +588,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
   it "displays breadcrumbs" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
 
-    within ".gem-c-breadcrumbs.gem-c-breadcrumbs--collapse-on-mobile" do
+    within ".gem-c-breadcrumbs" do
       assert page.has_link?("Home", href: "/")
       assert page.has_link?("Organisations", href: "/government/organisations")
     end

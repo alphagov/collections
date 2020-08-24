@@ -16,7 +16,7 @@ class StepNavPageTest < ActionDispatch::IntegrationTest
   end
 
   it "renders breadcrumbs" do
-    assert page.has_css?(".gem-c-breadcrumbs.gem-c-breadcrumbs--collapse-on-mobile")
+    assert page.has_css?(".gem-c-breadcrumbs")
   end
 
   it "renders the title" do

@@ -822,7 +822,7 @@ module OrganisationHelpers
   end
 
   def and_the_breadcrumbs_collapse_on_mobile
-    assert page.has_css?(".gem-c-breadcrumbs--collapse-on-mobile")
+    assert page.has_css?(".govuk-breadcrumbs--collapse-on-mobile")
   end
 
   def i_see_the_courts_breadcrumb
