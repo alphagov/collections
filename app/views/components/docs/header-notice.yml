@@ -1,0 +1,76 @@
+name: Header notice
+shared_accessibility_criteria:
+  - link
+accessibility_excluded_rules:
+  - 'landmark-unique' # the component sets aria-label="notice" to all examples
+examples:
+  default:
+    data:
+      nhs_branding: true
+      title_logo: |
+        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 69.2 28" aria-labelledby="nhs-logo__title_0">
+          <title id="nhs-logo__title_0">NHS logo</title>
+          <style>
+              .st0 { fill: #005EB8; }
+              .st1 { fill: #FFFFFF; }
+          </style>
+          <path class="st0" d="M0 0h69.2v28H0z"></path>
+          <path class="st1" d="M6.8 2.7h7.5l4.6 15.6h.1l3.1-15.6h5.7L23 25.2h-7.4L10.8 9.6h-.1L7.6 25.2H2L6.8 2.7zM30 2.7h6l-1.7 8.6h7.1l1.8-8.6h6l-4.7 22.5h-6l2-9.6h-7.2l-2 9.6h-6L30 2.7zM65.1 7.8c-1.6-.7-3.3-1.1-5-1-2.4 0-4.3.3-4.3 2.2 0 3.2 8.8 2 8.8 8.9 0 6.2-5.8 7.9-11 7.9-2.4-.1-4.7-.4-7-1.2L48 20c1.7.9 3.6 1.3 5.5 1.3s4.8-.4 4.8-2.7c0-3.6-8.8-2.3-8.8-8.6 0-5.8 5.1-7.6 10-7.6 2.3-.1 4.7.2 6.9 1l-1.3 4.4z"></path>
+          <image src="https://www.gov.uk/assets/collections/nhs-logo-cf9547f8f7a5dc6acaf25d2786f158cd719709888f87b74ef6fb95966357cb8d.png" alt="NHS logo" xlink:href=""></image>
+        </svg>
+      heading: "If you have coronavirus symptoms:"
+      list:
+        - a high temperature
+        - a new, continuous cough
+        - a loss of, or change to, your sense of smell or taste
+      call_to_action:
+        href: "https://www.gov.uk/get-coronavirus-test"
+        title: Get a test now
+  with_description:
+    data:
+      nhs_branding: true
+      title_logo: |
+        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 69.2 28" aria-labelledby="nhs-logo__title_1">
+          <title id="nhs-logo__title_1">NHS logo</title>
+          <style>
+              .st0 { fill: #005EB8; }
+              .st1 { fill: #FFFFFF; }
+          </style>
+          <path class="st0" d="M0 0h69.2v28H0z"></path>
+          <path class="st1" d="M6.8 2.7h7.5l4.6 15.6h.1l3.1-15.6h5.7L23 25.2h-7.4L10.8 9.6h-.1L7.6 25.2H2L6.8 2.7zM30 2.7h6l-1.7 8.6h7.1l1.8-8.6h6l-4.7 22.5h-6l2-9.6h-7.2l-2 9.6h-6L30 2.7zM65.1 7.8c-1.6-.7-3.3-1.1-5-1-2.4 0-4.3.3-4.3 2.2 0 3.2 8.8 2 8.8 8.9 0 6.2-5.8 7.9-11 7.9-2.4-.1-4.7-.4-7-1.2L48 20c1.7.9 3.6 1.3 5.5 1.3s4.8-.4 4.8-2.7c0-3.6-8.8-2.3-8.8-8.6 0-5.8 5.1-7.6 10-7.6 2.3-.1 4.7.2 6.9 1l-1.3 4.4z"></path>
+          <image src="https://www.gov.uk/assets/collections/nhs-logo-cf9547f8f7a5dc6acaf25d2786f158cd719709888f87b74ef6fb95966357cb8d.png" alt="NHS logo" xlink:href=""></image>
+        </svg>
+      heading: "If you have coronavirus symptoms:"
+      list:
+        - a high temperature
+        - a new, continuous cough
+        - a loss of, or change to, your sense of smell or taste
+      call_to_action:
+        href: "https://www.gov.uk/get-coronavirus-test"
+        title: Get a test now
+        description: Do not leave home for at least 10 days after your test
+  with_list_links:
+    data:
+      nhs_branding: true
+      title_logo: |
+        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 69.2 28" aria-labelledby="nhs-logo__title_2">
+          <title id="nhs-logo__title_2">NHS logo</title>
+          <style>
+              .st0 { fill: #005EB8; }
+              .st1 { fill: #FFFFFF; }
+          </style>
+          <path class="st0" d="M0 0h69.2v28H0z"></path>
+          <path class="st1" d="M6.8 2.7h7.5l4.6 15.6h.1l3.1-15.6h5.7L23 25.2h-7.4L10.8 9.6h-.1L7.6 25.2H2L6.8 2.7zM30 2.7h6l-1.7 8.6h7.1l1.8-8.6h6l-4.7 22.5h-6l2-9.6h-7.2l-2 9.6h-6L30 2.7zM65.1 7.8c-1.6-.7-3.3-1.1-5-1-2.4 0-4.3.3-4.3 2.2 0 3.2 8.8 2 8.8 8.9 0 6.2-5.8 7.9-11 7.9-2.4-.1-4.7-.4-7-1.2L48 20c1.7.9 3.6 1.3 5.5 1.3s4.8-.4 4.8-2.7c0-3.6-8.8-2.3-8.8-8.6 0-5.8 5.1-7.6 10-7.6 2.3-.1 4.7.2 6.9 1l-1.3 4.4z"></path>
+          <image src="https://www.gov.uk/assets/collections/nhs-logo-cf9547f8f7a5dc6acaf25d2786f158cd719709888f87b74ef6fb95966357cb8d.png" alt="NHS logo" xlink:href=""></image>
+        </svg>
+      heading: "If you have coronavirus symptoms:"
+      list:
+        - label: a high temperature
+          href: "/"
+        - label: a new, continuous cough
+          href: "/"
+        - label: a loss of, or change to, your sense of smell or taste
+          href: "/"
+      call_to_action:
+        href: "https://www.gov.uk/get-coronavirus-test"
+        title: Get a test now
