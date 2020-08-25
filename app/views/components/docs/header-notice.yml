@@ -48,7 +48,7 @@ examples:
       call_to_action:
         href: "https://www.gov.uk/get-coronavirus-test"
         title: Get a test now
-        description: do not leave home for at least 10 days after your test
+        description: Do not leave home for at least 10 days after your test
   with_list_links:
     data:
       nhs_branding: true
