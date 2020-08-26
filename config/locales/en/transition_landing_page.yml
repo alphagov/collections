@@ -41,7 +41,6 @@ en:
       or_text: or
       watch_link_text: Watch on YouTube
     guidance_header: "Actions you can take now"
-    guidance_header_variant_b: "Some of the new rules for 2021"
     guidance_subheader: "These are some of the new rules from January 2021. For a complete list of actions <a href='/transition-check/questions' class='govuk-link' data-track-category='transition-landing-page' data-track-action='/transition-check/questions' data-track-label='answer a few questions' >answer a few questions</a> about you, your family or business."
     campaign_buckets:
       - row_title: "Travelling to the EU"
