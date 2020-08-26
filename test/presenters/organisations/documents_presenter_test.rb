@@ -68,10 +68,15 @@ describe Organisations::DocumentsPresenter do
               link: {
                 text: "Rapist has sentence increased after Solicitor General’s referral",
                 path: "/government/news/rapist-has-sentence-increased-after-solicitor-generals-referral",
+                locale: "en",
               },
               metadata: {
                 document_type: "Press release",
                 public_updated_at: Date.parse("2018-06-18T17:39:34.000+01:00"),
+                locale: {
+                  document_type: false,
+                  public_updated_at: false,
+                },
               },
             },
           ],
@@ -85,7 +90,7 @@ describe Organisations::DocumentsPresenter do
       # This only applies to types containing "FOI" and "DFID"
       stub_rummager_latest_content_with_acronym("attorney-generals-office")
 
-      expected = "DFID research output"
+      expected = "Research for Development Output"
       actual = @documents_presenter.latest_documents[:items].first[:metadata][:document_type]
 
       assert_equal expected, actual

@@ -39,10 +39,15 @@ describe OrganisationHelper do
         link: {
           text: "demo",
           path: "/demo",
+          locale: "en",
         },
         metadata: {
           public_updated_at: nil,
           document_type: nil,
+          locale: {
+            public_updated_at: false,
+            document_type: :en,
+          },
         },
       }
     end

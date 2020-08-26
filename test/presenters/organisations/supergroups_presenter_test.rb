@@ -59,7 +59,7 @@ describe Organisations::SupergroupsPresenter do
       assert_equal "Content item 1", document[:link][:text]
       assert_equal "/content-item-1", document[:link][:path]
       assert_equal Date.parse(1.hour.ago.iso8601), document[:metadata][:public_updated_at]
-      assert_equal "Transparency", document[:metadata][:document_type]
+      assert_equal "Transparency data", document[:metadata][:document_type]
 
       assert_equal "/search/transparency-and-freedom-of-information-releases?organisations[]=attorney-generals-office&parent=attorney-generals-office", transparency[:finder_link][:path]
       assert_equal "See all transparency and freedom of information releases", transparency[:finder_link][:text]
