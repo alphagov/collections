@@ -78,11 +78,11 @@ Then(/^I should see the second level browse page$/) do
 end
 
 Then(/^the A to Z label should be present$/) do
-  assert page.has_content?("A\u200Ato\u200AZ")
+  assert page.has_content?("A to Z")
 end
 
 Then(/^the A to Z label should not be present$/) do
-  assert page.has_no_content?("A\u200Ato\u200AZ")
+  assert page.has_no_content?("A to Z")
 end
 
 When(/^I visit that browse page$/) do

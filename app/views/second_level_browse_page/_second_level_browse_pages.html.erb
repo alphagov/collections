@@ -1,7 +1,7 @@
 <div class="pane-inner <%= curated_order ? "curated" : "alphabetical" %>">
   <h2 tabindex="-1" class="js-heading"><%= title %></h2>
   <% unless curated_order %>
-    <p class="sort-order"><%= hairspace 'A to Z' %></p>
+    <h3 class="sort-order"><%= "A to Z" %></h3>
   <% end %>
   <ul>
     <% second_level_browse_pages.each_with_index do |browse_page, index| %>
