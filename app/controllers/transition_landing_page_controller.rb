@@ -48,7 +48,7 @@ private
   def ab_test_variant
     @ab_test_variant ||= begin
       ab_test = GovukAbTesting::AbTest.new(
-        "TransitionChecker3",
+        "TransitionChecker4",
         dimension: 44,
         allowed_variants: %w[A B Z],
         control_variant: "Z",

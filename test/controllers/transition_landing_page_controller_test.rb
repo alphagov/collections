@@ -23,32 +23,32 @@ describe TransitionLandingPageController do
     end
 
     %w[A INVALID_VARIANT].each do |variant|
-      it "displays the default text for the #{variant} variant in the en locale" do
-        with_variant TransitionChecker3: "A" do
+      it "displays the default blue button for the #{variant} variant in the en locale" do
+        with_variant TransitionChecker4: "A" do
           get :show
-          assert_select "h2", text: "Actions you can take now"
-          assert_select "h2", text: "Some of the new rules for 2021", count: 0
+          assert_select "div.landing-page__take-action-button"
+          assert_select "div.landing-page__take-action-button_variantB", count: 0
         end
       end
     end
 
-    it "shows the alternate text for the B variant in the en locale" do
-      with_variant TransitionChecker3: "B" do
+    it "displays a red button for the B variant in the en locale" do
+      with_variant TransitionChecker4: "B" do
         get :show
-        assert_select "h2", text: "Some of the new rules for 2021"
-        assert_select "h2", text: "Actions you can take now", count: 0
+        assert_select "div.landing-page__take-action-button_variantB"
+        assert_select "div.landing-page__take-action-button", count: 0
       end
     end
 
     %w[A B INVALID_VARIANT].each do |variant|
-      it "displays the default text for the #{variant} variant in the cy locale" do
-        setup_ab_variant("TransitionChecker3", variant)
+      it "displays the default blue button for the #{variant} variant in the cy locale" do
+        setup_ab_variant("TransitionChecker4", variant)
 
         get :show, params: { locale: "cy" }
 
         assert_response_not_modified_for_ab_test("TransitionChecker3")
-        assert_select "h2", text: "Camau y gallwch eu cymryd nawr"
-        assert_select "h2", text: "Some of the new rules for 2021", count: 0
+        assert_select "div.landing-page__take-action-button"
+        assert_select "div.landing-page__take-action-button_variantB", count: 0
       end
     end
   end
