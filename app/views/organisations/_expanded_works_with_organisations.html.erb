@@ -4,7 +4,7 @@
 
 <div class="organisation-list__works-with js-hidden" id="toggle_<%= current_organisation.parameterize %>">
   <% works_with_organisations.each do |type, work_with_organisations| %>
-    <p class="organisation-list__works-with-title"><%=  t('organisations.type.' + type) %></p>
+    <h4 class="organisation-list__works-with-title"><%=  t('organisations.type.' + type) %></h4>
     <ul class="organisation-list__works-with-list">
       <% work_with_organisations.each do |work_with_organisation| %>
         <li class="organisation-list__works-with-list-item">
@@ -14,4 +14,3 @@
     </ul>
   <% end %>
 </div>
-
