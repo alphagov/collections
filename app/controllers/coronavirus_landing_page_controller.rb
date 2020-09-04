@@ -1,3 +1,5 @@
+require "active_model"
+
 class CoronavirusLandingPageController < ApplicationController
   skip_before_action :set_expiry
   before_action -> { set_expiry(5.minutes) }
