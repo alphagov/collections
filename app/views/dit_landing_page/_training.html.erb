@@ -5,18 +5,9 @@
         <h2 class="govuk-heading-l">
           <%= t("dit_landing_page.training_section_title") %>
         </h2>
-        <%= render "govuk_publishing_components/components/govspeak", {
-        } do %>
-          <%= t("dit_landing_page.training_section_description").html_safe() %>
-        <% end %>
+        <p class="govuk-body"><%= t("dit_landing_page.training_section_description") %></p>
         <%= render "govuk_publishing_components/components/table", {
-          head: [
-            { text: "Date" },
-            { text: "Country" },
-            { text: "Type of event" },
-            { text: "Time in member state" },
-            { text: "Time in UK" },
-          ],
+          head: t("dit_landing_page.training_section_table.headings"),
           rows: t("dit_landing_page.training_section_table.rows")
         }
         %>

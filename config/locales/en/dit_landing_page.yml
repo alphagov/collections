@@ -51,9 +51,14 @@ en:
       - you or your employees provide services in a UK regulated profession
     services_list_end: <p>Check the regulations for the UK, including visa requirements, and understand how changes could affect your business.</p>
     training_section_title: Additional help and support
-    training_section_description: |
-      <p>The UK government and local officials, ports and carriers will be running a series of online events to help your business understand changes to UK border requirements. Further information will be provided shortly, and provisional dates and times are listed in the table below.</p>
+    training_section_description: The UK government and local officials, ports and carriers will be running a series of online events to help your business understand changes to UK border requirements. Further information will be provided shortly, and provisional dates and times are listed in the table below.
     training_section_table:
+      headings:
+        - text: "Date"
+        - text: "Country"
+        - text: "Type of event"
+        - text: "Time in member state"
+        - text: "Time in UK"
       rows:
         - - text: "21/09/2020"
           - text: "Belgium"
