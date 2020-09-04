@@ -1,0 +1,34 @@
+<div class="landing-page__section landing-page__section--light-grey">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">
+          <%= t("dit_landing_page.guidance_title") %>
+        </h2>
+      </div>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <%= render "govuk_publishing_components/components/govspeak", {
+        } do %>
+          <h3 class="govuk-heading-m">
+            <%= t("dit_landing_page.guidance_subheader") %>
+          </h3>
+          <%= t("dit_landing_page.guidance_text").html_safe %>
+          <ul class="govuk-list govuk-list">
+            <% t("dit_landing_page.countries").each do |country| %>
+              <li><%= link_to country[:label], country[:url]  %></li>
+            <% end %>
+          </ul>
+        <% end %>
+        <%= render partial: 'goods' %>
+        <%= render partial: 'tax' %>
+        <%= render partial: 'data' %>
+        <%= render partial: 'services' %>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <%= image_tag 'KBM-logo.svg', class: "dit-landing-page__kbm-logo", alt: t("dit_landing_page.kbm-logo-alt-text")%>
+      </div>
+    </div>
+  </div>
+</div>

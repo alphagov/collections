@@ -19,9 +19,12 @@
         <%= render 'breadcrumbs' %>
       <% end %>
     <% end %>
-
-    <main id="content" role="main" class="content <%= yield :page_class %>" <%= "lang=#{@content_item["locale"]}" unless !@content_item["locale"] || @content_item["locale"].eql?("en") %>>
-      <%= yield %>
+    <% if @content_item %>
+      <main id="content" role="main" class="content <%= yield :page_class %>" <%= "lang=#{@content_item["locale"]}" unless !@content_item["locale"] || @content_item["locale"].eql?("en") %>>
+    <% else %>
+      <main id="content" role="main" class="content <%= yield :page_class %>">
+    <% end %>
+    <%= yield %>
     </main>
 
     <% if content_for(:is_taxon_with_subtopics) %>
