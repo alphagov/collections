@@ -82,33 +82,6 @@ $c19-landing-page-header-background: #0843a1;
   }
 }
 
-.covid__logo-wrapper {
-  margin-bottom: govuk-spacing(6);
-
-  @include govuk-media-query($from: tablet) {
-    margin-bottom: govuk-spacing(8);
-    position: absolute;
-    bottom: 10px;
-    right: 0;
-    width: 33%;
-  }
-}
-
-.covid__logos {
-  display: block;
-  margin: 0 auto;
-  max-width: 50%;
-  min-width: 230px;
-  height: auto;
-
-  @include govuk-media-query($from: tablet) {
-    max-width: 100%;
-    min-width: 0;
-    margin: 0;
-    max-height: 44px; // the SVG canvas height is too big on IE
-  }
-}
-
 .covid__page-header {
   .covid__page-header-link {
     font-weight: normal;
