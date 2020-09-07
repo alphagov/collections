@@ -2,22 +2,17 @@
   corona_opengraph_images: true
 } %>
 
-<%= render(partial: 'coronavirus_landing_page/components/shared/schema', locals: {
-    presenter: details,
-    special_announcement: special_announcement,
-  })
-%>
+<%= render partial: 'coronavirus_landing_page/components/shared/schema', locals: {
+  presenter: details,
+  special_announcement: special_announcement,
+} %>
 
-<%=
-  render(
-    partial: 'coronavirus_landing_page/components/landing_page/page_header', locals: {
-      details: details,
-      breadcrumbs: breadcrumbs,
-      title: title,
-      header: details.header_section
-    }
-  )
-%>
+<%= render partial: 'coronavirus_landing_page/components/landing_page/page_header', locals: {
+  details: details,
+  breadcrumbs: breadcrumbs,
+  title: title,
+  header: details.header_section
+} %>
 
 <div class="govuk-width-container covid__page" data-module="coronavirus-landing-page">
   <div class="govuk-grid-row">
