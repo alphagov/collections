@@ -25,12 +25,9 @@
           <%= render "govuk_publishing_components/components/heading", {
             text: header["title"],
             font_size: 19,
-            margin_bottom: 3,
+            margin_bottom: 6,
             inverse: true
           } %>
-          <p class="govuk-body covid__inverse">
-            <%= header["pretext-1"] %>
-          </p>
           <ul class="covid__instruction-list">
             <% icons = [
               "icon-hand-wash",
@@ -51,10 +48,6 @@
               </li>
             <% end %>
           </ul>
-
-          <p class="govuk-body covid__inverse">
-            <%= header["pretext-2"] %>
-          </p>
         </div>
       </div>
 
