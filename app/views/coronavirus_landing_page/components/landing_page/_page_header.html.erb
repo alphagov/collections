@@ -31,11 +31,20 @@
           <p class="govuk-body covid__inverse">
             <%= header["pretext-1"] %>
           </p>
-          <ul class="covid__list covid__list--header">
-            <% header["list"].each do | item | %>
-              <li class="covid__list-item">
+          <ul class="covid__instruction-list">
+            <% icons = [
+              "icon-hand-wash",
+              "icon-face-cover",
+              "icon-make-space"
+            ] %>
+            <% header["list"].each_with_index do | item, index | %>
+              <li class="covid__instruction-list-item">
                 <% if item.is_a?(Hash) %>
-                  <strong><%= item["instruction"] %></strong> - <%= item["detail"] %>
+                  <%= render "coronavirus_landing_page/components/landing_page/#{icons[index]}.svg" if icons[index] %>
+                  <span class="covid__instruction-text">
+                    <strong class="covid__instruction"><%= item["instruction"].capitalize %></strong>
+                    <%= item["detail"] %>
+                  </span>
                 <% else %>
                   <%= item %>
                 <% end %>

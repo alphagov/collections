@@ -49,6 +49,40 @@ $c19-landing-page-header-background: #0843a1;
   }
 }
 
+.covid__instruction-list {
+  @include govuk-font(19);
+  margin-bottom: govuk-spacing(3);
+  list-style: none;
+}
+
+.covid__instruction-list-item {
+  color: govuk-colour("white");
+  margin-bottom: govuk-spacing(4);
+  display: table;
+}
+
+.covid__instruction-icon {
+  fill: govuk-colour("white");
+  display: table-cell;
+  margin-right: govuk-spacing(3);
+}
+
+.covid__instruction-text {
+  display: table-cell;
+  padding-top: 5px;
+  vertical-align: top;
+
+  @include govuk-media-query($from: tablet) {
+    padding-top: 0px;
+  }
+}
+
+.covid__instruction {
+  @extend %govuk-heading-m;
+  margin-bottom: 0;
+  color: govuk-colour("white");
+}
+
 .covid__page-header-light--hub {
   padding-bottom: 35px;
   background: $covid-grey;
