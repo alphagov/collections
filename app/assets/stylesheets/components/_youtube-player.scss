@@ -4,6 +4,7 @@
   padding: 110px 0;
   border: solid 2px govuk-colour("black");
   text-align: center;
+  margin-bottom: govuk-spacing(2);
 
   .govuk-body {
     margin: 0;
@@ -40,28 +41,33 @@
   }
 }
 
-.govuk-details__summary {
-  color: govuk-colour('white');
-  &:hover {
+.youtube__video-wrapper--inverse {
+  .govuk-details__summary {
+    color: govuk-colour('white');
+
+    &:hover {
+      color: govuk-colour('white');
+    }
+
+    &:focus,
+    &:hover:focus,
+    &:hover:focus .govuk-details__summary-text {
+      color: govuk-colour('black');
+    }
+  }
+
+  .govuk-details__text {
+    color: govuk-colour('white');
+    border-left-color: govuk-colour('white');
+  }
+
+  .govuk-details__list {
     color: govuk-colour('white');
   }
-  &:hover:focus,
-  &:hover:focus .govuk-details__summary-text {
-    color: govuk-colour('black');
-  }
-}
 
-.govuk-details__text {
-  color: govuk-colour('white');
-  border-left-color: govuk-colour('white');
-}
-
-.govuk-details__list {
-  color: govuk-colour('white');
-}
-
-.govuk-details__summary-text {
-  &:hover {
-    color: govuk-colour('white');
+  .govuk-details__summary-text {
+    &:hover {
+      color: govuk-colour('white');
+    }
   }
 }
