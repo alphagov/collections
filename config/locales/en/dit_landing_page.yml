@@ -13,7 +13,7 @@ en:
       <p>If you run an EU-based business, you need to check the new rules and prepare for the changes so that you can continue trading with the UK from January 2021.</p>
       <p>This information is also available in the following languages:</p>
     countries:
-      - label: Deutsche
+      - label: Deutsch
         url: government/publications/trade-with-the-uk-from-january-2021-prepare-your-eu-business/handel-mit-dem-vereinigten-konigreich-ab-1-januar-2021-fur-unternehmen-mit-sitz-in-der-eu
       - label: Español
         url: /government/publications/trade-with-the-uk-from-january-2021-prepare-your-eu-business/como-hacer-negocios-con-el-reino-unido-a-partir-del-1-de-enero-de-2021-en-caso-de-ser-una-empresa-con-sede-en-la-ue
@@ -51,7 +51,7 @@ en:
       - you or your employees provide services in a UK regulated profession
     services_list_end: <p>Check the regulations for the UK, including visa requirements, and understand how changes could affect your business.</p>
     training_section_title: Additional help and support
-    training_section_description: The UK government and local officials, ports and carriers will be running a series of online events to help your business understand changes to UK border requirements. Further information will be provided shortly, and provisional dates and times are listed in the table below.
+    training_section_description: These online events will help you understand the UK border requirements if you're a trader in the EU, and what you need to do to prepare for the end of the transition period. More information will be added soon, but provisional dates and times are listed below.
     training_section_table:
       headings:
         - text: "Date"
