@@ -108,13 +108,6 @@ $green: #00703C;
 
 .landing-page__take-action-button {
   .govuk-button {
-    background-color: $dark-blue;
-    box-shadow: 0 2px 0 $dark-blue-shadow;
-  }
-}
-
-.landing-page__take-action-button_variantB {
-  .govuk-button {
     background-color: $green;
     box-shadow: 0 2px 0 $dark-blue-shadow;
   }
