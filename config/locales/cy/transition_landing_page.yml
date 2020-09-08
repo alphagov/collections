@@ -56,12 +56,12 @@ cy:
           public_updated_at: 2020-02-27
           document_type: "Policy Paper"
       - link:
-          text: "Government confirms plans to introduce import controls"
-          path: "/government/news/government-confirms-plans-to-introduce-import-controls"
-          description: "The government has confirmed plans to introduce import controls on EU goods at the border after the transition period ends on 31 December 2020."
+          text: "Government speeds up border planning for the end of the transition period"
+          path: "/government/news/government-accelerates-border-planning-for-the-end-of-the-transition-period"
+          description: Border controls for EU goods imported into Great Britain will be introduced in stages from the end of the transition period.
         metadata:
-          public_updated_at: 2020-02-10
-          document_type: "Press Release"
+          public_updated_at: 2020-06-12
+          document_type: "News Story"
     guidance_header: "Camau y gallwch eu cymryd nawr"
     guidance_subheader: "Camau y gallwch eu cymryd nawr sydd ddim yn ddibynnol ar drafodaethau."
     campaign_buckets:
