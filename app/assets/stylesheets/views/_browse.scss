@@ -277,7 +277,6 @@
       ul li a {
         @include govuk-font(19, $weight: bold);
         display: block;
-        text-decoration: none;
         padding: govuk-spacing(2) govuk-spacing(6) govuk-spacing(2) 0;
       }
 
