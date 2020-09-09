@@ -2,6 +2,7 @@ en:
   shared:
     browse:
       title: "Browse GOV.UK"
+      prefix: "Browse:"
     language_names:
       ar: العربية
       az: Azərbaycanca

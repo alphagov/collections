@@ -1,4 +1,4 @@
-<% content_for :title, page.title %>
+<% content_for :title, "#{t("shared.browse.prefix")} #{page.title}" %>
 <%= render 'shared/tag_meta', tag: page %>
 <% content_for :meta_tags do %>
   <meta name='govuk:navigation-page-type' content='First Level Browse'>
@@ -10,7 +10,7 @@
 <div class="browse-panes section" data-state="section" data-module="track-click">
   <div id="section" class="section-pane pane with-sort">
     <%= render 'second_level_browse_page/second_level_browse_pages',
-          title: page.title,
+          title: yield(:title),
           second_level_browse_pages: page.second_level_browse_pages,
           curated_order: page.second_level_pages_curated? %>
   </div>
