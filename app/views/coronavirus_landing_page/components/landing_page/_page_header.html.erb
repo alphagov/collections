@@ -23,7 +23,7 @@
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
           <%= render "govuk_publishing_components/components/heading", {
-            text: header["title"],
+            text: sanitize(header["title"]),
             font_size: 19,
             margin_bottom: 6,
             inverse: true
