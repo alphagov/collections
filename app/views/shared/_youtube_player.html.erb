@@ -5,9 +5,12 @@
   no_cookies_to_watch_text ||= "to watch the video"
   no_cookies_or_text ||= "or"
   no_cookies_watch_link_text ||= "Watch on YouTube"
+  inverse ||= false
+  css_classes = %w(youtube__video-wrapper)
+  css_classes << "youtube__video-wrapper--inverse" if inverse
 %>
 
-<div class="youtube__video-wrapper">
+<%= tag.div class: css_classes do %>
   <%= render "govuk_publishing_components/components/govspeak", {
   } do %>
     <div class="youtube__video-placeholder">
@@ -36,4 +39,4 @@
   <%= render "govuk_publishing_components/components/details", { title: transcription_summary} do %>
     <%= transcription_text.html_safe %>
   <% end %>
-</div>
+<% end %>

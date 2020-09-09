@@ -11,7 +11,7 @@
         <% end %>
       </div>
       <div class="govuk-grid-column-one-half">
-        <%= render partial: 'transition_landing_page/components/youtube_player', locals: {
+        <%= render partial: 'shared/youtube_player', locals: {
           no_cookies_icon_text: t("transition_landing_page.no_cookies.icon_text"),
           no_cookies_change_settings_text: t("transition_landing_page.no_cookies.change_settings_text"),
           no_cookies_to_watch_text: t("transition_landing_page.no_cookies.to_watch_text"),
@@ -19,7 +19,8 @@
           no_cookies_watch_link_text: t("transition_landing_page.no_cookies.watch_link_text"),
           youtube_video_url: t("transition_landing_page.video_section_link"),
           transcription_summary: t("transition_landing_page.video_section_transcription_summary"),
-          transcription_text: t("transition_landing_page.video_section_transcription_text")
+          transcription_text: t("transition_landing_page.video_section_transcription_text"),
+          inverse: true
         } %>
       </div>
     </div>
