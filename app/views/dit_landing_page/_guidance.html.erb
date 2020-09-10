@@ -17,7 +17,7 @@
           <%= t("dit_landing_page.guidance_text").html_safe %>
           <ul class="govuk-list govuk-list">
             <% t("dit_landing_page.countries").each do |country| %>
-              <li><%= link_to country[:label], country[:url]  %></li>
+              <li lang='<%= country[:lang] %>'><%= link_to country[:label], country[:url]  %></li>
             <% end %>
           </ul>
         <% end %>
