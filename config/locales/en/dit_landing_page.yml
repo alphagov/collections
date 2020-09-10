@@ -14,14 +14,19 @@ en:
       <p>This information is also available in the following languages:</p>
     countries:
       - label: Deutsch
+        lang: de
         url: government/publications/trade-with-the-uk-from-january-2021-prepare-your-eu-business/handel-mit-dem-vereinigten-konigreich-ab-1-januar-2021-fur-unternehmen-mit-sitz-in-der-eu
       - label: Español
+        lang: es
         url: /government/publications/trade-with-the-uk-from-january-2021-prepare-your-eu-business/como-hacer-negocios-con-el-reino-unido-a-partir-del-1-de-enero-de-2021-en-caso-de-ser-una-empresa-con-sede-en-la-ue
       - label: Français
+        lang: fr
         url: /government/publications/trade-with-the-uk-from-january-2021-prepare-your-eu-business/travailler-avec-le-royaume-uni-a-partir-du-1er-janvier-2021-en-tant-quentreprise-basee-dans-lue
       - label: Italiano
+        lang: it
         url: /government/publications/trade-with-the-uk-from-january-2021-prepare-your-eu-business/come-le-aziende-presenti-nellunione-europea-potranno-effettuare-scambi-commerciali-con-il-regno-unito-a-partire-dal-01012021
       - label: Polski
+        lang: pl
         url: /government/publications/trade-with-the-uk-from-january-2021-prepare-your-eu-business/handel-z-wielka-brytania-od-1-stycznia-2021-roku-informacje-dla-firm-z-unii-europejskiej
     goods_title: Buying or selling goods
     goods_text: |
