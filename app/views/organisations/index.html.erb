@@ -9,21 +9,24 @@
     <%= render "govuk_publishing_components/components/title", {
         title: @presented_organisations.title
     } %>
+
+    <form class="filter-organisations-list__form" data-filter="form">
+      <%= render "govuk_publishing_components/components/input", {
+        label: {
+          text: "Search for a department, agency or public body"
+        },
+        name: "search-box",
+        id: "filter-organisations-list",
+        controls: "organisations_search_results"
+      } %>
+    </form>
   </div>
 </div>
 
-<form class="filter-organisations-list__form" data-filter="form">
-  <label class="filter-organisations-list__label" for="filter-organisations-list">What’s the latest<br />from</label>
-  <input class="filter-organisations-list__input govuk-input" type="text" id="filter-organisations-list" placeholder="For example, Home Office">
-  <span class="filter-organisations-list__label" aria-hidden="true">?</span>
-</form>
-
-<div class="organisations">
+<div class="organisations" id="organisations_search_results">
   <%= render partial: 'organisations_list', locals: {
     all_organisations: @presented_organisations.all_organisations
   } %>
-
-  <p class="organisations__no-filter-match js-hidden js-no-filter-matches">No departments match that filter.</p>
 </div>
 
 <p>Errors or omissions? <a class="govuk-link" href="/contact/govuk">Tell us here</a>. For official lists of non–departmental public bodies <a class="govuk-link" href="/government/collections/public-bodies">see public bodies</a>.</p>

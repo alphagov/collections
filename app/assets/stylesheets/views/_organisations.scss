@@ -68,39 +68,12 @@
       float: right;
     }
   }
-
-  .organisations__no-filter-match {
-    display: none;
-
-    .js-enabled & {
-      @include govuk-font(19);
-      display: block;
-      text-align: center;
-      margin-bottom: govuk-spacing(9);
-    }
-  }
 }
 
 .filter-organisations-list__form {
   display: none;
-
-  .filter-organisations-list__label {
-    @include govuk-font(36, $weight: bold);
-    margin-right: govuk-spacing(2);
-  }
-
-  .filter-organisations-list__input {
-    @include govuk-font(16);
-    width: 30%;
-    min-width: 150px;
-    vertical-align: text-bottom;
-    padding: 5px;
-    border: 1px solid govuk-colour("mid-grey", $legacy: "grey-2");
-    margin: 0 5px 5px 0;
-  }
 }
 
 .filter-organisations-list__form--active {
   display: block;
-  margin-bottom: 45px;
 }

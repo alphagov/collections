@@ -18,36 +18,37 @@ describe('organisation-list-filter.js', function() {
   ';
 
   var organisations = '\
-    <div data-filter="block">\
-      <div data-filter="count" class="count-for-logos">\
-        <h2>Ministerial Departments</h2>\
-        <p>There are <span class="js-accessible-department-count">2</span> Ministerial Departments</p>\
-        <span class="js-department-count">2</span>\
+    <div id="organisations_search_results">\
+      <div data-filter="block">\
+        <div data-filter="count" class="count-for-logos">\
+          <h2>Ministerial Departments</h2>\
+          <p>There are <span class="js-accessible-department-count">2</span> Ministerial Departments</p>\
+          <span class="js-department-count">2</span>\
+        </div>\
+        <ol data-filter="list">\
+          <li data-filter="item" class="org-logo-1">\
+            <div class="gem-c-organisation-logo__name">Cabinet Office</div>\
+          </li>\
+          <li data-filter="item" class="org-logo-2">\
+            <div class="gem-c-organisation-logo__name">Cabinet Office</div>\
+          </li>\
+        </ol>\
       </div>\
-      <ol data-filter="list">\
-        <li data-filter="item" class="org-logo-1">\
-          <div class="gem-c-organisation-logo__name">Cabinet Office</div>\
-        </li>\
-        <li data-filter="item" class="org-logo-2">\
-          <div class="gem-c-organisation-logo__name">Cabinet Office</div>\
-        </li>\
-      </ol>\
-    </div>\
-    <div data-filter="block">\
-      <div data-filter="count" class="count-for-no-logos">\
-        <h2>Non Ministerial Departments</h2>\
-        <p>There are <span class="js-accessible-department-count">2</span> Non Ministerial Departments</p>\
-        <span class="js-department-count">2</span>\
+      <div data-filter="block">\
+        <div data-filter="count" class="count-for-no-logos">\
+          <h2>Non Ministerial Departments</h2>\
+          <p>There are <span class="js-accessible-department-count">2</span> Non Ministerial Departments</p>\
+          <span class="js-department-count">2</span>\
+        </div>\
+        <ol data-filter="list">\
+          <li data-filter="item" class="org-no-logo-1">\
+            <a class="organisation-list__item-title">Advisory Committee on Releases to the Environment</a>\
+          </li>\
+          <li data-filter="item" class="org-no-logo-2">\
+            <a class="organisation-list__item-title">Advisory Council on the Misuse of Drugs</a>\
+          </li>\
+        </ol>\
       </div>\
-      <ol data-filter="list">\
-        <li data-filter="item" class="org-no-logo-1">\
-          <a class="organisation-list__item-title">Advisory Committee on Releases to the Environment</a>\
-        </li>\
-        <li data-filter="item" class="org-no-logo-2">\
-          <a class="organisation-list__item-title">Advisory Council on the Misuse of Drugs</a>\
-        </li>\
-      </ol>\
-      <p class="js-hidden js-no-filter-matches">No departments match that filter.</p>\
     </div>\
   ';
 
@@ -74,6 +75,7 @@ describe('organisation-list-filter.js', function() {
       expect($('.org-logo-1')).toHaveClass("js-hidden");
       expect($('.org-logo-2')).toHaveClass("js-hidden");
       expect($('.org-no-logo-1')).toHaveClass("js-hidden");
+      expect($('.js-search-results')).toHaveText("1 result found");
       done();
     }, timeout);
   });
@@ -84,6 +86,7 @@ describe('organisation-list-filter.js', function() {
 
     setTimeout(function () {
       expect($('.org-no-logo-2')).not.toHaveClass("js-hidden");
+      expect($('.js-search-results')).toHaveText("1 result found");
       done();
     }, timeout);
   });
@@ -94,6 +97,7 @@ describe('organisation-list-filter.js', function() {
 
     setTimeout(function () {
       expect($('.count-for-logos')).toHaveClass("js-hidden");
+      expect($('.js-search-results')).toHaveText("1 result found");
       done();
     }, timeout);
   });
@@ -106,6 +110,7 @@ describe('organisation-list-filter.js', function() {
       expect($('.count-for-no-logos')).not.toHaveClass("js-hidden");
       expect($('.count-for-no-logos .js-accessible-department-count')).toHaveText(1);
       expect($('.count-for-no-logos .js-department-count')).toHaveText(1);
+      expect($('.js-search-results')).toHaveText("1 result found");
       done();
     }, timeout);
   });
@@ -115,7 +120,7 @@ describe('organisation-list-filter.js', function() {
     $('[data-filter="form"] input').trigger('keyup');
 
     setTimeout(function () {
-      expect($('.js-no-filter-matches')).not.toHaveClass("js-hidden");
+      expect($('.js-search-results')).toHaveText("0 results found");
       done();
     }, timeout);
   });
