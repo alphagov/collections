@@ -25,7 +25,7 @@ describe Organisations::DocumentPresenter do
 
   context "content_store_document_type has an acronym" do
     it "transforms the acronym in the doc type" do
-      expected = presenter("content_store_document_type" => "Aaib_report")
+      expected = presenter({ "content_store_document_type" => "Aaib_report" })
 
       assert_equal expected.present[:metadata][:document_type], "Air Accidents Investigation Branch report"
     end
