@@ -25,13 +25,13 @@
     link_to_latest_feed: true,
   }) do %>
   <% subtopic.lists.each_with_index do |list, list_index| -%>
-    <nav class="govuk-grid-row" aria-labelledby="<%= list.title.parameterize %>">
+    <div class="govuk-grid-row govuk-!-margin-bottom-5">
       <div class="govuk-grid-column-one-third">
-        <h1 id="<%= list.title.parameterize %>"><%= list.title %></h1>
+        <h2 class="govuk-heading-m"><%= list.title %></h1>
       </div>
       <div class="govuk-grid-column-two-thirds">
         <%= render 'components/topic-list', topic_list_params(list.contents, list_index: list_index, category: 'navSubtopicContentItemLinkClicked') %>
       </div>
-    </nav>
+    </div>
   <% end -%>
 <% end %>
