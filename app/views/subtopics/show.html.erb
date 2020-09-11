@@ -6,7 +6,7 @@
 <% end %>
 <% content_for :page_title do %>
   <%
-    title_params = { title: subtopic.title }
+    title_params = { title: "#{subtopic.title}: detailed information" }
     if subtopic.parent
       title_params[:context] = {
         text: subtopic.parent.title,

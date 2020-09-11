@@ -31,9 +31,9 @@ class Topic
 
   def combined_title
     if parent
-      "#{parent.title}: #{title}"
+      "#{parent.title}: #{title} - detailed information"
     else
-      title
+      "#{title}: detailed information"
     end
   end
 
