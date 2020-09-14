@@ -7,7 +7,7 @@ When(/^I view the browse page for that subtopic$/) do
 end
 
 Then(/^I see a list of organisations associated with content in the subtopic$/) do
-  within ".gem-c-metadata" do
+  within "#subtopic-metadata" do
     assert page.has_text?("Department of Energy & Climate Change")
   end
 end

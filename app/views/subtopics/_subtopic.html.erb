@@ -2,7 +2,7 @@
 
 <header class="page-header group">
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-two-thirds" id="subtopic-metadata">
       <%= yield :page_title %>
       <% if organisations.any? %>
         <%= render "govuk_publishing_components/components/metadata", from: organisations.array_of_links %>
