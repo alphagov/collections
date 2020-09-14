@@ -9,6 +9,13 @@
       // Form should only appear if the JS is working
       $('[data-filter="form"]').addClass('filter-organisations-list__form--active');
 
+      this.results = document.createElement('div')
+      this.results.classList.add('filter-organisations-list__results', 'govuk-heading-m', 'js-search-results')
+      this.results.setAttribute('aria-live', 'polite')
+      this.results.innerHTML = window.GOVUK.filter.countInitialDepartments() + ' results found'
+
+      $('#organisations_search_results').prepend(this.results)
+
       // We don't want the form to submit/refresh the page on enter key
       $('[data-filter="form"]').on('submit', function() { return false; })
 
@@ -54,6 +61,10 @@
       }
     },
 
+    countInitialDepartments: function () {
+      return document.querySelectorAll('[data-filter="item"]').length;
+    },
+
     updateDepartmentCount: function(listsToFilter) {
       var totalMatchingOrgs = 0;
 
@@ -74,7 +85,11 @@
         totalMatchingOrgs += matchingOrgCount;
       });
 
-      $('.js-no-filter-matches').toggleClass('js-hidden', totalMatchingOrgs > 0);
+      var text = ' results found'
+      if (totalMatchingOrgs === 1) {
+        text = ' result found'
+      }
+      this.results.innerHTML = totalMatchingOrgs + text
     }
   };
 
