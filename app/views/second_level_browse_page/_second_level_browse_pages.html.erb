@@ -1,5 +1,5 @@
 <div class="pane-inner <%= curated_order ? "curated" : "alphabetical" %>">
-  <h2 tabindex="-1" class="js-heading"><%= title %></h2>
+  <h2 tabindex="-1" class="js-heading"><%= t("shared.browse.prefix") %> <%= title.sub(t("shared.browse.prefix"), "") %></h2>
   <% unless curated_order %>
     <h3 class="sort-order"><%= "A to Z" %></h3>
   <% end %>
