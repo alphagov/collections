@@ -39,6 +39,7 @@
     <% if call_to_action.present? %>
       <p class="app-c-header-notice__call-to-action">
         <%= link_to(call_to_action[:title], call_to_action[:href], class: "app-c-header-notice__call-to-action-link govuk-link") %>
+        <%= call_to_action[:subtext] %>
       </p>
       <% if call_to_action[:description].present? %>
         <p class="app-c-header-notice__call-to-action-description"><%= call_to_action[:description] %></p>
