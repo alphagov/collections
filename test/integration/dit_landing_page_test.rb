@@ -26,6 +26,5 @@ class DitLandingPageTest < ActionDispatch::IntegrationTest
 
   def then_i_can_see_the_training_section
     assert page.has_selector?("h2", text: "Additional help and support")
-    assert page.has_selector?(".govuk-table__row", text: "Date")
   end
 end
