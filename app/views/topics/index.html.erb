@@ -1,4 +1,5 @@
-<% content_for :title, topic.title %>
+<% title_with_suffix = "#{topic.title}: detailed information" %>
+<% content_for :title, title_with_suffix %>
 <%= render 'shared/tag_meta', tag: topic %>
 <% content_for :meta_tags do %>
   <meta name='govuk:navigation-page-type' content='<%= navigation_page_type %>'>
@@ -6,7 +7,7 @@
 <% content_for :page_class, "topics-page" %>
 
 <header class="page-header group">
-  <%= render "govuk_publishing_components/components/title", title: topic.title %>
+  <%= render "govuk_publishing_components/components/title", title: title_with_suffix %>
 </header>
 
 <div class="browse-container full-width topics-page" data-module="track-click">

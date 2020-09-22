@@ -49,7 +49,7 @@ describe Topic do
     end
 
     it "returns the combined_title" do
-      assert_equal "Business tax: PAYE", @topic.combined_title
+      assert_equal "Business tax: PAYE - detailed information", @topic.combined_title
     end
 
     describe "when parent details are missing" do
@@ -63,7 +63,7 @@ describe Topic do
       end
 
       it "returns the topic title in combined_title" do
-        assert_equal "PAYE", @topic.combined_title
+        assert_equal "PAYE: detailed information", @topic.combined_title
       end
 
       it "handles the links hash missing completely" do

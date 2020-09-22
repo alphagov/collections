@@ -69,10 +69,13 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
     # When I visit the subtopic page
     visit "/topic/oil-and-gas/offshore"
 
+    # Then it should have the correct page title
+    assert page.has_title?("Oil and Gas: Offshore - detailed information - GOV.UK")
+
     # Then I should see the subtopic metadata
     within ".page-header" do
       within ".gem-c-title" do
-        assert page.has_css?(".gem-c-title__text", text: "Offshore")
+        assert page.has_css?(".gem-c-title__text", text: "Offshore: detailed information")
         assert page.has_css?(".gem-c-title__context-link[href='/topic/oil-and-gas']", text: "Oil and Gas")
       end
 

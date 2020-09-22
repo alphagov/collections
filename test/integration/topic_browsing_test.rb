@@ -61,7 +61,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
     )
 
     visit "/topic/oil-and-gas"
-    assert page.has_title?("Oil and gas - GOV.UK")
+    assert page.has_title?("Oil and gas: detailed information - GOV.UK")
 
     within "header.page-header" do
       assert page.has_content?("Oil and gas")
