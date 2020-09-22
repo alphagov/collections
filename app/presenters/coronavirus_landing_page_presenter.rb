@@ -1,5 +1,23 @@
 class CoronavirusLandingPagePresenter
-  COMPONENTS = %w[live_stream live_stream_enabled header_section announcements_label announcements risk_level see_all_announcements_link nhs_banner sections sections_heading additional_country_guidance topic_section statistics_section notifications find_help page_header].freeze
+  COMPONENTS = %w[
+    live_stream
+    live_stream_enabled
+    header_section
+    announcements_label
+    announcements
+    see_all_announcements_link
+    risk_level
+    nhs_banner
+    sections
+    sections_heading
+    additional_country_guidance
+    topic_section
+    statistics_section
+    notifications
+    find_help
+    page_header
+    timeline
+  ].freeze
 
   def initialize(content_item)
     COMPONENTS.each do |component|

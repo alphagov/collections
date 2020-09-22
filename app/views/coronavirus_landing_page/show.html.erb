@@ -41,7 +41,13 @@
     </div>
 
     <div class="govuk-grid-column-two-thirds">
-      <%= render partial: 'coronavirus_landing_page/components/shared/accordion_sections', locals: { accordions: details.sections, heading: details.sections_heading }%>
+      <%= render partial: 'coronavirus_landing_page/components/shared/timeline', locals: { timeline: details.timeline } %>
+      <%= render partial: 'coronavirus_landing_page/components/shared/accordion_sections', locals: {
+        accordions: details.sections,
+        heading: details.sections_heading,
+        heading_padding: true,
+        border_top: 2,
+      } %>
       <%= render partial: 'coronavirus_landing_page/components/shared/country_section', locals: { guidance: details.additional_country_guidance } %>
       <%= render partial: 'coronavirus_landing_page/components/shared/video_player_section' %>
       <%= render partial: 'coronavirus_landing_page/components/shared/announcements_section', locals: { details: details } %>

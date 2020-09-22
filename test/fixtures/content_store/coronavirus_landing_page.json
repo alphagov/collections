@@ -371,6 +371,27 @@
         }
       ]
     },
+    "timeline": {
+      "list": [
+        {
+          "heading": "18 September",
+          "paragraph": "If you live, work or travel in the North East, you need to [follow different covid rules](/guidance/north-east-of-england-local-restrictions)\n"
+        },
+        {
+          "heading": "15 September",
+          "paragraph": "If you live, work or visit Bolton, you need to [follow different covid rules](/guidance/bolton-local-restrictions)\n"
+        },
+        {
+          "heading": "14 September",
+          "paragraph": "People must not meet in groups larger than 6 in England. There are [exceptions to this 'rule of 6'](/government/publications/coronavirus-covid-19-meeting-with-others-safely-social-distancing/coronavirus-covid-19-meeting-with-others-safely-social-distancing#seeing-friends-and-family)\n"
+        },
+        {
+          "heading": "24 July",
+          "paragraph": "[Face coverings are mandatory in shops](/government/publications/face-coverings-when-to-wear-one-and-how-to-make-your-own/face-coverings-when-to-wear-one-and-how-to-make-your-own)\n"
+        }
+      ],
+      "heading": "Recent and upcoming changes"
+    },
     "notifications": {
       "intro": "Stay up to date with GOV.UK",
       "email_link": "Sign up to get emails when we change any coronavirus information on the GOV.UK website",

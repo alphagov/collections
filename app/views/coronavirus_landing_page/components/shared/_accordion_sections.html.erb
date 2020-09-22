@@ -1,5 +1,7 @@
 <%
   heading ||= false
+  heading_padding ||= false
+  border_top ||= false
   country_guidance ||= false
   accordion_contents = []
   number_of_accordion_sections = accordions.length
@@ -34,7 +36,8 @@
 <% end %>
 <%= render "govuk_publishing_components/components/heading", {
   text: heading,
-  margin_bottom: 3,
+  padding: heading_padding,
+  border_top: border_top,
 } if heading %>
 <div data-module="track-click">
   <div data-module="toggle-attribute">

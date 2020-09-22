@@ -1,0 +1,14 @@
+<div class="covid-timeline">
+  <%= render "govuk_publishing_components/components/heading", {
+    text: timeline["heading"],
+    padding: true,
+    margin_bottom: 4
+  } %>
+
+  <% timeline["list"].each do | item | %>
+    <div class="covid-timeline__item">
+      <h3 class="covid-timeline__item-heading govuk-heading-s"><%= item["heading"] %></h3>
+      <%= render_govspeak(item["paragraph"]) %>
+    </div>
+  <% end %>
+</div>
