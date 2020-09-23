@@ -1,8 +1,14 @@
 <% grouped_links.each_with_index do |group, group_index| -%>
-  <nav class="govuk-grid-row" aria-labelledby="<%= group.title.parameterize %>">
+  <div class="govuk-grid-row" aria-labelledby="<%= group.title.parameterize %>">
     <div class="govuk-grid-column-one-third">
-      <h1 id="<%= group.title.parameterize %>"><%= group.title %></h1>
+      <%= render "govuk_publishing_components/components/heading", {
+        font_size: "m",
+        heading_level: 2,
+        id: group.title.parameterize,
+        text: group.title,
+      } %>
     </div>
+    
     <div class="govuk-grid-column-two-thirds">
       <%
         list_item_count = group.see_more_link ? group.examples.count + 1 : group.examples.count
@@ -17,5 +23,5 @@
       %>
       <%= render 'components/topic-list', topic_list_component_params %>
     </div>
-  </nav>
+  </div>
 <% end -%>
