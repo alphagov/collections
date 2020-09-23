@@ -10,7 +10,7 @@
   brand_helper = GovukPublishingComponents::AppHelpers::BrandHelper.new(brand)
 %>
 <% if items.any? %>
-  <%= tag.ul(class: ["app-c-topic-list", component_size, brand_helper.brand_class, margin_bottom_class]) do %>
+  <%= tag.ul(class: ["app-c-topic-list", component_size, brand_helper.brand_class, margin_bottom_class], lang: "en") do %>
     <% items.each do |item| %>
       <li class="app-c-topic-list__item">
         <%=
