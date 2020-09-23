@@ -52,6 +52,7 @@ module Organisations
     def expected_document_type(type)
       return "ministerial_role" if type == :ministers
       return "military_role" if type == :military_personnel
+      return %w[board_member_role chief_scientific_advisor_role] if type == :board_members
 
       # for example: board_members -> board_member_role
       type.to_s.delete_suffix("s") + "_role"
@@ -62,7 +63,7 @@ module Organisations
         .select { |ra| ra["details"]["current"] }
         .map { |ra| ra["links"]["role"].first }
         .select { |role| allowed_role_content_ids.include?(role["content_id"]) }
-        .select { |role| role["document_type"] == expected_document_type(type) }
+        .select { |role| expected_document_type(type).include?(role["document_type"]) }
     end
 
     def formatted_role_link(role)
