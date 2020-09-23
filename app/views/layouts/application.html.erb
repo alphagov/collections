@@ -27,11 +27,7 @@
     <%= yield %>
     </main>
 
-    <% if content_for(:is_taxon_with_subtopics) %>
-      <div class="taxon-feedback-wrapper">
-        <%= render 'govuk_publishing_components/components/feedback', margin_top: 0 %>
-      </div>
-    <% elsif content_for(:is_full_width_header) %>
+    <% if content_for(:is_full_width_header) %>
       <div class="govuk-width-container">
         <%= render 'govuk_publishing_components/components/feedback' %>
       </div>
