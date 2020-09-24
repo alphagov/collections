@@ -4,7 +4,25 @@ require_relative "../../test/support/coronavirus_helper"
 describe CoronavirusLandingPagePresenter do
   it "provides getter methods for all component keys" do
     presenter = described_class.new(coronavirus_landing_page_content_item)
-    %i[live_stream header_section announcements_label announcements see_all_announcements_link nhs_banner find_help sections sections_heading additional_country_guidance topic_section statistics_section notifications live_stream].each do |method|
+    %i[
+      live_stream
+      live_stream_enabled
+      header_section
+      announcements_label
+      announcements
+      see_all_announcements_link
+      risk_level
+      nhs_banner
+      sections
+      sections_heading
+      additional_country_guidance
+      topic_section
+      statistics_section
+      notifications
+      find_help
+      page_header
+      timeline
+    ].each do |method|
       assert_respond_to(presenter, method)
     end
   end
