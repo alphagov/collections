@@ -50,7 +50,7 @@ $c19-landing-page-header-background: #0843a1;
 
   .govuk-link {
     &:hover {
-      opacity: $covid-hover-opacity;
+      color: $covid-hover;
     }
   }
 }
@@ -156,7 +156,7 @@ $c19-landing-page-header-background: #0843a1;
 
   .govuk-link {
     &:hover {
-      opacity: $covid-hover-opacity;
+      color: $covid-hover;
     }
   }
 }
