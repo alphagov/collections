@@ -5,7 +5,6 @@
       collapse_on_mobile: true,
       inverse: true
     } %>
-
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <%= render "govuk_publishing_components/components/title", {
@@ -17,7 +16,6 @@
       </div>
     </div>
   </div>
-
   <div class="covid__page-header-light">
     <div class="govuk-width-container">
       <div class="govuk-grid-row">
@@ -50,7 +48,6 @@
           </ul>
         </div>
       </div>
-
       <div class="govuk-grid-row covid__action-link-wrapper">
         <div class="govuk-grid-column-two-thirds">
           <% if header["link2"] && header["link3"] %>
@@ -87,8 +84,6 @@
               transparent_icon: true,
               href: header["link"]["href"],
               text: header["link"]["link_text"],
-              subtext: header["link"]["subtext"],
-              mobile_subtext: true,
               nowrap_text: header["link"]["link_nowrap_text"],
               data: {
                 module: "track-click",

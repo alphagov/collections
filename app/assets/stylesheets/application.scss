@@ -3,8 +3,7 @@ $govuk-compatibility-govukelements: true;
 $govuk-use-legacy-palette: false;
 $covid-grey: #272828;
 $covid-yellow: #fff500;
-
-
+$covid-hover-opacity: 68%;
 // gem components
 @import 'govuk_publishing_components/govuk_frontend_support';
 @import 'govuk_publishing_components/component_support';
@@ -36,12 +35,10 @@ $covid-yellow: #fff500;
 @import 'govuk_publishing_components/components/table';
 @import 'govuk_publishing_components/components/title';
 @import 'govuk_publishing_components/components/translation-nav';
-
 @import "helpers/layouts";
 @import "helpers/margins";
 @import "helpers/typography";
 @import "components/*";
-
 @import "views/browse";
 @import "views/transition-landing-page";
 @import "views/dit-landing-page";
@@ -51,5 +48,4 @@ $covid-yellow: #fff500;
 @import "views/organisations";
 @import "views/organisation";
 @import "views/covid";
-
 @import "modules/full-page-width";
