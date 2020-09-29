@@ -167,7 +167,7 @@ GEM
       sprockets (< 4)
     govuk_schemas (4.1.1)
       json-schema (~> 2.8.0)
-    govuk_test (1.0.3)
+    govuk_test (2.0.0)
       brakeman (~> 4.6)
       capybara
       puma
@@ -247,7 +247,7 @@ GEM
       byebug (~> 11.0)
       pry (~> 0.13.0)
     public_suffix (4.0.6)
-    puma (4.3.6)
+    puma (5.0.2)
       nio4r (~> 2.0)
     rack (2.2.3)
     rack-test (1.1.0)
@@ -285,7 +285,7 @@ GEM
     rainbow (3.0.0)
     raindrops (0.19.1)
     rake (13.0.1)
-    regexp_parser (1.7.1)
+    regexp_parser (1.8.0)
     request_store (1.5.0)
       rack (>= 1.4)
     rest-client (2.1.0)

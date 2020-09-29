@@ -19,7 +19,6 @@ group :test do
   gem "cucumber-rails", require: false
   gem "govuk-content-schema-test-helpers"
   gem "govuk_schemas"
-  gem "govuk_test"
   gem "minitest-spec-rails"
   gem "mocha"
   gem "rails-controller-testing"
@@ -32,8 +31,9 @@ end
 group :development, :test do
   gem "better_errors"
   gem "binding_of_caller"
+  gem "govuk_test"
   gem "jasmine"
-  gem "jasmine_selenium_runner", require: false
+  gem "jasmine_selenium_runner"
   gem "pry-byebug"
   gem "rubocop-govuk"
   gem "timecop"
