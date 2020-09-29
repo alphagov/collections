@@ -48,9 +48,12 @@ $c19-landing-page-header-background: #0843a1;
     padding: 45px 0 40px;
   }
 
-  .govuk-link {
+  .gem-c-action-link__link {
     &:hover {
       color: $covid-hover;
+    }
+    &:focus {
+      color: $govuk-text-colour;
     }
   }
 }
@@ -154,9 +157,12 @@ $c19-landing-page-header-background: #0843a1;
     )
     25;
 
-  .govuk-link {
+  .gem-c-action-link__link {
     &:hover {
       color: $covid-hover;
+    }
+    &:focus {
+      color: $govuk-text-colour;
     }
   }
 }
