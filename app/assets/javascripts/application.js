@@ -16,6 +16,7 @@
 //= require modules/toggle-attribute
 //= require components/accordion
 //= require modules/coronavirus-landing-page
+//= require modules/track-timeline-links
 
 $(document).on('ready', function(){
   var toggleAttribute = new GOVUK.Modules.ToggleAttribute();
