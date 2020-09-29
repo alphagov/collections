@@ -50,7 +50,7 @@ $c19-landing-page-header-background: #0843a1;
 
   .gem-c-action-link__link {
     &:hover {
-      color: $covid-hover;
+      color: $covid-action-link-hover;
     }
     &:focus {
       color: $govuk-text-colour;
@@ -159,7 +159,7 @@ $c19-landing-page-header-background: #0843a1;
 
   .gem-c-action-link__link {
     &:hover {
-      color: $covid-hover;
+      color: $covid-action-link-hover;
     }
     &:focus {
       color: $govuk-text-colour;
