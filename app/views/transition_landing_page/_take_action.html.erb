@@ -28,6 +28,9 @@
           } %>
         </div>
       </div>
+      <% if show_countdown %>
+        <%= render partial: 'components/countdown', locals: { clock: CountdownClock.new } %>
+      <% end %>
       <div class="govuk-grid-column-one-third" data-module="track-click">
         <ul class="govuk-list landing-page__take-action-traffic-lights">
           <li>
