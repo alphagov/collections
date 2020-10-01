@@ -21,52 +21,108 @@ describe TransitionLandingPageController do
       end
     end
 
-    %w[A Z].each do |variant|
-      it "displays the default page header for the #{variant} variant in the en locale" do
-        with_variant TransitionUrgency1: variant do
-          get :show
-          assert_select "h1", text: "The UK transition"
-          assert_select "h1", text: "The transition period ends in December", count: 0
+    describe "TransitionUrgency1 AB test" do
+      context "Page header test in the en locale" do
+        it "A" do
+          with_variant TransitionUrgency1: "A" do
+            get :show
+            assert_select "h1", text: "The UK transition"
+            assert_select "h1", text: "The transition period ends in December", count: 0
+          end
+        end
+
+        it "B" do
+          with_variant TransitionUrgency1: "B" do
+            get :show
+            assert_select "h1", text: "The transition period ends in December"
+            assert_select "h1", text: "The UK transition", count: 0
+          end
+        end
+
+        it "Z" do
+          with_variant TransitionUrgency1: "Z" do
+            get :show
+            assert_select "h1", text: "The UK transition"
+            assert_select "h1", text: "The transition period ends in December", count: 0
+          end
         end
       end
 
-      it "displays the default take action title for the #{variant} variant in the en locale" do
-        with_variant TransitionUrgency1: variant do
-          get :show
-          assert_select "h2", text: "Take action"
-          assert_select "h2", text: "Make sure you're ready", count: 0
+      context "Take action title test in the en locale" do
+        it "A" do
+          with_variant TransitionUrgency1: "A" do
+            get :show
+            assert_select "h2", text: "Take action"
+            assert_select "h2", text: "Make sure you're ready", count: 0
+          end
+        end
+
+        it "B" do
+          with_variant TransitionUrgency1: "B" do
+            get :show
+            assert_select "h2", text: "Make sure you're ready"
+            assert_select "h2", text: "Take action", count: 0
+          end
+        end
+
+        it "Z" do
+          with_variant TransitionUrgency1: "Z" do
+            get :show
+            assert_select "h2", text: "Take action"
+            assert_select "h2", text: "Make sure you're ready", count: 0
+          end
         end
       end
-    end
 
-    it "displays the value of take_action_title_variant_B for the B variant in the en locale" do
-      with_variant TransitionUrgency1: "B" do
-        get :show
-        assert_select "h2", text: "Make sure you're ready"
-        assert_select "h2", text: "Take action", count: 0
+      context "Take action summary text test in the en locale" do
+        let(:default) do
+          "Answer a few questions to get a personalised list of actions for you, your family, and your business. Then sign up for emails to get updates when things change."
+        end
+        let(:variant) do
+          "Your business, family, and personal circumstances with be affected. Answer a few questions to get a personalised list of actions. You can also sign up for emails to get updates for what you need to do."
+        end
+        let(:summary_text) { "p.take_action_test_class" }
+
+        it "A" do
+          with_variant TransitionUrgency1: "A" do
+            get :show
+            assert_select summary_text, text: default
+            assert_select summary_text, text: variant, count: 0
+          end
+        end
+
+        it "B" do
+          with_variant TransitionUrgency1: "B" do
+            get :show
+            assert_select summary_text, text: variant
+            assert_select summary_text, text: default, count: 0
+          end
+        end
+
+        it "Z" do
+          with_variant TransitionUrgency1: "Z" do
+            get :show
+            assert_select summary_text, text: default
+            assert_select summary_text, text: variant, count: 0
+          end
+        end
       end
-    end
 
-    it "displays the value of page_header_variant_B for the B variant in the en locale" do
-      with_variant TransitionUrgency1: "B" do
-        get :show
-        assert_select "h1", text: "The transition period ends in December"
-        assert_select "h1", text: "The UK transition", count: 0
-      end
-    end
+      context "In the cy locale" do
+        %w[A B Z].each do |variant|
+          it "displays the control text for the #{variant} variant" do
+            setup_ab_variant("TransitionUrgency1", variant)
 
-    %w[A B Z].each do |variant|
-      it "displays the control text for the #{variant} variant in the cy locale" do
-        setup_ab_variant("TransitionUrgency1", variant)
+            get :show, params: { locale: "cy" }
 
-        get :show, params: { locale: "cy" }
+            assert_response_not_modified_for_ab_test("TransitionUrgency1")
+            assert_select "h1", text: "Pontio’r DU"
+            assert_select "h1", text: "The transition period ends in December", count: 0
 
-        assert_response_not_modified_for_ab_test("TransitionUrgency1")
-        assert_select "h1", text: "Pontio’r DU"
-        assert_select "h1", text: "The transition period ends in December", count: 0
-
-        assert_select "h2", text: "Cymrwch y camau a chofrestru ar gyfer negeseuon e-bost"
-        assert_select "h2", text: "Make sure you're ready", count: 0
+            assert_select "h2", text: "Cymrwch y camau a chofrestru ar gyfer negeseuon e-bost"
+            assert_select "h2", text: "Make sure you're ready", count: 0
+          end
+        end
       end
     end
   end
