@@ -21,10 +21,34 @@ describe TransitionLandingPageController do
       end
     end
 
-    it "does not render the countdown partial" do
-      get :show
-      assert_template :show
-      assert_template partial: "_countdown", count: 0
+    %w[A Z].each do |variant|
+      it "displays the default page header for the #{variant} variant in the en locale" do
+        with_variant TransitionUrgency1: variant do
+          get :show
+          assert_select "h1", text: "The UK transition"
+          assert_select "h1", text: "The transition period ends in December", count: 0
+        end
+      end
+    end
+
+    it "displays the value of page_header_variant_B for the B variant in the en locale" do
+      with_variant TransitionUrgency1: "B" do
+        get :show
+        assert_select "h1", text: "The transition period ends in December"
+        assert_select "h1", text: "The UK transition", count: 0
+      end
+    end
+
+    %w[A B Z].each do |variant|
+      it "displays the default page header for the #{variant} variant in the cy locale" do
+        setup_ab_variant("TransitionUrgency1", variant)
+
+        get :show, params: { locale: "cy" }
+
+        assert_response_not_modified_for_ab_test("TransitionUrgency1")
+        assert_select "h1", text: "Pontio’r DU"
+        assert_select "h1", text: "The transition period ends in December", count: 0
+      end
     end
   end
 end

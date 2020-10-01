@@ -27,7 +27,11 @@
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
           <h1 class="landing-page__page_title">
-            <%= t("transition_landing_page.page_header") %>
+            <% if show_variant? %>
+              <%= t("transition_landing_page.page_header_variant_B") %>
+            <% else %>
+              <%= t("transition_landing_page.page_header") %>
+            <% end %>
           </h1>
         </div>
         <div class="govuk-grid-column-two-thirds landing-page__intro">
