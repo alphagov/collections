@@ -3,7 +3,11 @@
     <div class="govuk-grid-row">
       <div class="<%= show_countdown ? "govuk-grid-column-two-thirds" : "govuk-grid-column-full" %>">
         <h2 class="govuk-heading-l">
-          <%= t("transition_landing_page.take_action_title") %>
+          <% if show_variant? %>
+            <%= t("transition_landing_page.take_action_title_variant_B") %>
+          <% else %>
+            <%= t("transition_landing_page.take_action_title") %>
+          <% end %>
         </h2>
         <div class="govuk-grid-row">
           <div class="<%= show_countdown ? "govuk-grid-column-full" : "govuk-grid-column-two-thirds" %>">
