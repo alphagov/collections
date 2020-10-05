@@ -17,7 +17,7 @@ $desktop-breakpoint-override: 1000px;
     }
   }
 
-  .transition-countdown__countdown-days-left {
+  .transition-countdown__days-left {
     @include govuk-font(80, $weight: bold);
     display: inline-block;
     vertical-align: middle;
@@ -32,7 +32,7 @@ $desktop-breakpoint-override: 1000px;
     }
   }
 
-  .transition-countdown__countdown-days-text {
+  .transition-countdown__days-text {
     @include govuk-font($size: 24, $line-height: 1.5);
     display: inline-block;
     vertical-align: middle;
