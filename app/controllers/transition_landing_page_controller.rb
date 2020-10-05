@@ -41,7 +41,7 @@ private
   end
 
   def show_countdown?
-    show_variant? || false
+    show_variant?
   end
 
   def switch_locale(&action)
