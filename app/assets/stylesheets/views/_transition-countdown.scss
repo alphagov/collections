@@ -1,0 +1,85 @@
+$dark-blue-2: #003078;
+$desktop-breakpoint-override: 1000px;
+
+.transition-countdown {
+  border: govuk-spacing(1) solid $dark-blue-2;
+  margin: 0;
+
+  .transition-countdown__countdown {
+    padding: govuk-spacing(3);
+    color: $dark-blue-2;
+    text-align: center;
+    width: 100%;
+
+    @include govuk-media-query($from: $desktop-breakpoint-override) {
+      padding: govuk-spacing(4);
+      width: 50%;
+    }
+  }
+
+  .transition-countdown__countdown-days-left {
+    @include govuk-font(80, $weight: bold);
+    display: inline-block;
+    vertical-align: middle;
+
+    @include govuk-media-query($from: tablet) {
+      @include govuk-font(48, $weight: bold);
+    }
+
+    @include govuk-media-query($from: $desktop-breakpoint-override) {
+      @include govuk-font(80, $weight: bold);
+      display: block;
+    }
+  }
+
+  .transition-countdown__countdown-days-text {
+    @include govuk-font($size: 24, $line-height: 1.5);
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 govuk-spacing(1) govuk-spacing(1);
+
+    @include govuk-media-query($from: $desktop-breakpoint-override) {
+      @include govuk-font(19);
+      display: block;
+      margin: 0;
+    }
+  }
+
+  .transition-countdown__traffic-lights {
+    background-color: $dark-blue-2;
+    padding: govuk-spacing(3) govuk-spacing(2) govuk-spacing(2);
+    width: 100%;
+
+    @include govuk-media-query($from: $desktop-breakpoint-override) {
+      padding: govuk-spacing(2) govuk-spacing(3);
+      width: 50%;
+    }
+
+    .landing-page__take-action-traffic-lights {
+      margin-bottom: 0;
+      margin-top: 0;
+
+      @include govuk-media-query($from: tablet) {
+        margin: govuk-spacing(3) 0;
+      }
+    }
+
+    .landing-page__take-action-traffic-lists-icon {
+      vertical-align: middle;
+      margin-top: -5px;
+      width: 18px;
+    
+      @include govuk-media-query($from: tablet) {
+        width: 23px;
+      }
+    }
+
+    .landing-page__take-action-traffic-lists-text {
+      color: govuk-colour('white');
+
+      @include govuk-media-query($from: tablet) {
+        @include govuk-font($size: 24, $weight: bold);
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<div class="transition-countdown govuk-grid-row">
+  <div class="govuk-grid-column-one-half transition-countdown__countdown">
+    <p>
+      <span class="transition-countdown__countdown-days-left"><%= clock.days_left %></span>
+      <span class="transition-countdown__countdown-days-text"><%= clock.days_text %> to go</span>
+    </p>
+  </div>
+  <div class="govuk-grid-column-one-half transition-countdown__traffic-lights">
+    <%= render partial: 'transition_landing_page/take-action-traffic-lights' %>
+  </div>
+</div>

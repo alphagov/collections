@@ -17,9 +17,14 @@ describe TransitionLandingPageController do
 
       it "renders the page for the #{locale} locale" do
         get :show, params: params
-
         assert_response :success
       end
+    end
+
+    it "does not render the countdown partial" do
+      get :show
+      assert_template :show
+      assert_template partial: "_countdown", count: 0
     end
   end
 end
