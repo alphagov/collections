@@ -79,7 +79,7 @@ describe TransitionLandingPageController do
           "Answer a few questions to get a personalised list of actions for you, your family, and your business. Then sign up for emails to get updates when things change."
         end
         let(:variant) do
-          "Your business, family, and personal circumstances with be affected. Answer a few questions to get a personalised list of actions. You can also sign up for emails to get updates for what you need to do."
+          "Your business, family, and personal circumstances will be affected. Answer a few questions to get a personalised list of actions. You can also sign up for emails to get updates for what you need to do."
         end
         let(:summary_text) { "p.take_action_test_class" }
 

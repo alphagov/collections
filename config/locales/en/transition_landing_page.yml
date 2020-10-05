@@ -11,7 +11,7 @@ en:
     take_action_text: |
       Answer a few questions to get a personalised list of actions for you, your family, and your business. Then sign up for emails to get updates when things change.
     take_action_text_variant_B: |
-      Your business, family, and personal circumstances with be affected. Answer a few questions to get a personalised list of actions. You can also sign up for emails to get updates for what you need to do.
+      Your business, family, and personal circumstances will be affected. Answer a few questions to get a personalised list of actions. You can also sign up for emails to get updates for what you need to do.
     take_action_start_now: Start now
     take_action_start_now_link: "/transition-check/questions"
     take_action_list:
