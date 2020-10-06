@@ -28,8 +28,10 @@ private
   end
 
   def response
-    JSON.parse(GdsApi.mapit.location_for_postcode(postcode).to_json)
-  rescue GdsApi::HTTPNotFound
-    []
+    @response ||= begin
+                    JSON.parse(GdsApi.mapit.location_for_postcode(postcode).to_json)
+                  rescue GdsApi::HTTPNotFound
+                    []
+                  end
   end
 end
