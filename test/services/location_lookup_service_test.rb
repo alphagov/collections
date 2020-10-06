@@ -73,5 +73,12 @@ describe LocationLookupService do
 
       assert_equal(described_class.new(postcode).data, expected_data)
     end
+
+    it "returns nothing if the postcode isn't found" do
+      postcode = "E18QS"
+      stub_mapit_does_not_have_a_postcode(postcode)
+
+      assert_equal([], described_class.new(postcode).data)
+    end
   end
 end
