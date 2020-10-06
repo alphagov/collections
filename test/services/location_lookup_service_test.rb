@@ -27,20 +27,14 @@ describe LocationLookupService do
       ]
       stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
 
-      expected_data = [
-        {
-          gss: "E01000123",
-          area_name: "Coruscant Planetary Council",
-          country: "England",
-        },
-        {
-          gss: "E02000456",
-          area_name: "Galactic Empire",
-          country: "England",
-        },
-      ]
+      data = described_class.new(postcode).data
 
-      assert_equal(described_class.new(postcode).data, expected_data)
+      assert_equal(2, data.size)
+      assert_instance_of(MapitPostcodeResponse, data.first)
+      assert_equal("E01000123", data.first.gss)
+
+      assert_instance_of(MapitPostcodeResponse, data.second)
+      assert_equal("E02000456", data.second.gss)
     end
 
     it "only returns locations with a gss code" do
@@ -63,15 +57,11 @@ describe LocationLookupService do
       ]
       stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
 
-      expected_data = [
-        {
-          gss: "E01000123",
-          area_name: "Coruscant Planetary Council",
-          country: "England",
-        },
-      ]
+      data = described_class.new(postcode).data
 
-      assert_equal(described_class.new(postcode).data, expected_data)
+      assert_equal(1, data.size)
+      assert_instance_of(MapitPostcodeResponse, data.first)
+      assert_equal("E01000123", data.first.gss)
     end
 
     it "returns nothing if the postcode isn't found" do
