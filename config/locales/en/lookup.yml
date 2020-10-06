@@ -1,0 +1,14 @@
+en:
+  coronavirus_local_restrictions:
+    lookup:
+      input_label: Enter your postcode
+      hint_text: For example SW1A 2AA
+      button_text: Find
+      link_text: Find a postcode on Royal Mail's postcode finder
+      href: http://www.royalmail.com/find-a-postcode
+      title: Find out the coronavirus restrictions in a local area
+      inset_text: There are different restrictions in Scotland, Wales and Northern Ireland.
+      body_content: |
+        <p class="govuk-body">Enter the postcode of the place you want to find information about. For example where you live, work, or visit.</p>
+        <p class="govuk-body">You can find out what you can or cannot do. Sometimes this is known as a ‘local lockdown’.</p>
+        <p class="govuk-body">Each area has a local alert level. There are 3 alert levels. Level 1 areas have the least restrictions and level 3 areas have the most restrictions.</p>

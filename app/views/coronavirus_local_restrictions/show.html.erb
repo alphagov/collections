@@ -5,6 +5,10 @@
   } %>
 <% end %>
 
-<% content_for :title, "Collections" %>
+<% content_for :title, t("coronavirus_local_restrictions.lookup.title") %>
 
-<%= render "govuk_publishing_components/components/title", title: "Collections" %>
+<%= render "govuk_publishing_components/components/title", title: t("coronavirus_local_restrictions.lookup.title") %>
+
+<%= render "govuk_publishing_components/components/inset_text", text: t('coronavirus_local_restrictions.lookup.inset_text') %>
+
+<%= sanitize(t("coronavirus_local_restrictions.lookup.body_content")) %>
