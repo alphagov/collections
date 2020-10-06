@@ -64,11 +64,20 @@ describe LocationLookupService do
       assert_equal("E01000123", data.first.gss)
     end
 
-    it "returns nothing if the postcode isn't found" do
+    it "returns an error if the postcode isn't found" do
       postcode = "E18QS"
       stub_mapit_does_not_have_a_postcode(postcode)
 
       assert_equal([], described_class.new(postcode).data)
+      assert_not_nil(described_class.new(postcode).error)
+    end
+
+    it "returns an error if the postcode is not valid" do
+      invalid_postcode = "hello"
+      stub_mapit_does_not_have_a_bad_postcode(invalid_postcode)
+
+      assert_equal([], described_class.new(invalid_postcode).data)
+      assert_match(invalid_postcode, described_class.new(invalid_postcode).error)
     end
   end
 end

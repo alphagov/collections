@@ -6,12 +6,18 @@ class LocationLookupService
   end
 
   def data
+    return [] if error
+
     location_data = areas.map do |_, area|
       location = MapitPostcodeResponse.new(area)
       location if location.gss
     end
 
     location_data.compact
+  end
+
+  def error
+    response[:error]
   end
 
 private
@@ -25,8 +31,8 @@ private
   def response
     @response ||= begin
                     JSON.parse(GdsApi.mapit.location_for_postcode(postcode).to_json)
-                  rescue GdsApi::HTTPNotFound
-                    []
+                  rescue GdsApi::HTTPNotFound, GdsApi::HTTPClientError => e
+                    { error: e.error_details["error"] }
                   end
   end
 end
