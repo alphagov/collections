@@ -1,0 +1,433 @@
+---
+E08000001:
+  alert_level: 2
+  name: Bolton
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/bolton-local-restrictions"
+  extra_restrictions:
+E07000125:
+  alert_level: 2
+  name: Rossendale
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-west-england-local-restrictions"
+  extra_restrictions:
+E07000120:
+  alert_level: 2
+  name: Hyndburn
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-west-england-local-restrictions"
+  extra_restrictions:
+E07000123:
+  alert_level: 2
+  name: Preston
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-west-england-local-restrictions"
+  extra_restrictions:
+E08000012:
+  alert_level: 2
+  name: Liverpool
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-west-england-local-restrictions"
+  extra_restrictions:
+E08000002:
+  alert_level: 2
+  name: Bury
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/greater-manchester-local-restrictions"
+  extra_restrictions:
+E06000008:
+  alert_level: 2
+  name: Blackburn with Darwen
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-west-england-local-restrictions"
+  extra_restrictions:
+E06000006:
+  alert_level: 2
+  name: Halton
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-west-england-local-restrictions"
+  extra_restrictions:
+E07000117:
+  alert_level: 2
+  name: Burnley
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-west-england-local-restrictions"
+  extra_restrictions:
+E08000004:
+  alert_level: 2
+  name: Oldham
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/greater-manchester-local-restrictions"
+  extra_restrictions:
+E08000023:
+  alert_level: 2
+  name: South Tyneside
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-east-of-england-local-restrictions"
+  extra_restrictions:
+E08000011:
+  alert_level: 2
+  name: Knowsley
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-west-england-local-restrictions"
+  extra_restrictions:
+E08000003:
+  alert_level: 2
+  name: Manchester
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/greater-manchester-local-restrictions"
+  extra_restrictions:
+E08000015:
+  alert_level: 2
+  name: Wirral
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-west-england-local-restrictions"
+  extra_restrictions:
+E08000006:
+  alert_level: 2
+  name: Salford
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/greater-manchester-local-restrictions"
+  extra_restrictions:
+E08000005:
+  alert_level: 2
+  name: Rochdale
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/greater-manchester-local-restrictions"
+  extra_restrictions:
+E08000008:
+  alert_level: 2
+  name: Tameside
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/greater-manchester-local-restrictions"
+  extra_restrictions:
+E08000032:
+  alert_level: 2
+  name: Bradford
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/west-yorkshire-local-restrictions"
+  extra_restrictions:
+E08000013:
+  alert_level: 2
+  name: St. Helens
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-west-england-local-restrictions"
+  extra_restrictions:
+E07000122:
+  alert_level: 2
+  name: Pendle
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-west-england-local-restrictions"
+  extra_restrictions:
+E06000007:
+  alert_level: 2
+  name: Warrington
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-west-england-local-restrictions"
+  extra_restrictions:
+E07000135:
+  alert_level: 2
+  name: Oadby and Wigston
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/leicester-lockdown-what-you-can-and-cannot-do"
+  extra_restrictions:
+E08000037:
+  alert_level: 2
+  name: Gateshead
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-east-of-england-local-restrictions"
+  extra_restrictions:
+E06000016:
+  alert_level: 2
+  name: Leicester
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/leicester-lockdown-what-you-can-and-cannot-do"
+  extra_restrictions:
+E08000021:
+  alert_level: 2
+  name: Newcastle upon Tyne
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-east-of-england-local-restrictions"
+  extra_restrictions:
+E08000014:
+  alert_level: 2
+  name: Sefton
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-west-england-local-restrictions"
+  extra_restrictions:
+E08000035:
+  alert_level: 2
+  name: Leeds
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/west-yorkshire-local-restrictions"
+  extra_restrictions:
+E08000024:
+  alert_level: 2
+  name: Sunderland
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-east-of-england-local-restrictions"
+  extra_restrictions:
+E08000025:
+  alert_level: 2
+  name: Birmingham
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/birmingham-sandwell-and-solihull-local-restrictions"
+  extra_restrictions:
+E08000010:
+  alert_level: 2
+  name: Wigan
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/greater-manchester-local-restrictions"
+  extra_restrictions:
+E08000034:
+  alert_level: 2
+  name: Kirklees
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/west-yorkshire-local-restrictions"
+  extra_restrictions:
+E08000029:
+  alert_level: 2
+  name: Solihull
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/birmingham-sandwell-and-solihull-local-restrictions"
+  extra_restrictions:
+E08000022:
+  alert_level: 2
+  name: North Tyneside
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-east-of-england-local-restrictions"
+  extra_restrictions:
+E08000028:
+  alert_level: 2
+  name: Sandwell
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/birmingham-sandwell-and-solihull-local-restrictions"
+  extra_restrictions:
+E06000009:
+  alert_level: 2
+  name: Blackpool
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-west-england-local-restrictions"
+  extra_restrictions:
+E08000007:
+  alert_level: 2
+  name: Stockport
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/greater-manchester-local-restrictions"
+  extra_restrictions:
+E08000009:
+  alert_level: 2
+  name: Trafford
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/greater-manchester-local-restrictions"
+  extra_restrictions:
+E07000128:
+  alert_level: 2
+  name: Wyre
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-west-england-local-restrictions"
+  extra_restrictions:
+E07000127:
+  alert_level: 2
+  name: West Lancashire
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-west-england-local-restrictions"
+  extra_restrictions:
+E08000033:
+  alert_level: 2
+  name: Calderdale
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/west-yorkshire-local-restrictions"
+  extra_restrictions:
+E06000057:
+  alert_level: 2
+  name: Northumberland
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-east-of-england-local-restrictions"
+  extra_restrictions:
+E08000031:
+  alert_level: 2
+  name: Wolverhampton
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/birmingham-sandwell-and-solihull-local-restrictions"
+  extra_restrictions:
+E07000119:
+  alert_level: 2
+  name: Fylde
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-west-england-local-restrictions"
+  extra_restrictions:
+E07000118:
+  alert_level: 2
+  name: Chorley
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-west-england-local-restrictions"
+  extra_restrictions:
+E07000126:
+  alert_level: 2
+  name: South Ribble
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-west-england-local-restrictions"
+  extra_restrictions:
+E06000047:
+  alert_level: 2
+  name: County Durham
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-east-of-england-local-restrictions"
+  extra_restrictions:
+E07000124:
+  alert_level: 2
+  name: Ribble Valley
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-west-england-local-restrictions"
+  extra_restrictions:
+E07000121:
+  alert_level: 2
+  name: Lancaster
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "guidance/north-west-england-local-restrictions"
+  extra_restrictions:
