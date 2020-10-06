@@ -1,3 +1,10 @@
+<% content_for :breadcrumbs do %>
+  <%= render 'govuk_publishing_components/components/breadcrumbs', {
+    breadcrumbs: breadcrumbs,
+    collapse_on_mobile: true
+  } %>
+<% end %>
+
 <% content_for :title, "Collections" %>
 
 <%= render "govuk_publishing_components/components/title", title: "Collections" %>
