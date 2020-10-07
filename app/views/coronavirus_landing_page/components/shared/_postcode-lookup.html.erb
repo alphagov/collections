@@ -1,12 +1,11 @@
 <%
   input_label ||= "Enter your postcode"
   input_value ||= nil
-  input_error ||= nil
+  input_error ||= "We couldn’t find this postcode"
   hint_text ||= "For example SW1A 2AA"
   button_text ||= "Find"
-  error_message ||= nil
-  error_description ||= nil
-  autocomplete ||= "postal-code"
+  error_message ||= "This isn't a valid postcode."
+  error_description ||= "Check it and enter it again."
   link ||= { text: "Find a postcode on Royal Mail's postcode finder", href: "http://www.royalmail.com/find-a-postcode"}
 %>
 <% if error_message %>
@@ -15,8 +14,7 @@
       description: error_description,
     } %>
 <% end %>
-<div class="covid__postcode-lookup">
-  <form action="" method="post">
+<div class="postcode-lookup">
     <%= render "govuk_publishing_components/components/input", {
           label: {
             text: input_label
@@ -24,19 +22,15 @@
           heading_size: "s",
           error_message: input_error,
           value: input_value,
-          name: "covid__postcode-lookup",
+          name: "postcode-lookup",
           hint: hint_text,
           invalid: error_message ? 'true' : 'false',
-          autocomplete: autocomplete,
+          autocomplete: "postal-code",
         } %>
     <%= render "govuk_publishing_components/components/button", text: button_text, margin_bottom: true %>
-  </form>
-
-  <% if link %>
     <%= tag.p link_to(
       link[:text],
       link[:href],
       class: "govuk-link covid__postcode-lookup--link"),
       class: "govuk-body" %>
-  <% end %>
 </div>
