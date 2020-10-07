@@ -1,0 +1,13 @@
+---
+E08000001:
+  alert_level: 4
+  name: Tatooine
+  start_date: "01 October 2020"
+  end_date: "02 October 2020"
+  guidance:
+    label: These are not the restrictions you are looking for
+    link: "guidance/tatooine-local-restrictions"
+  extra_restrictions:
+E08000002:
+  start_date:
+  end_date:
