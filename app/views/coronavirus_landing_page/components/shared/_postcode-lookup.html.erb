@@ -6,6 +6,7 @@
   button_text ||= "Find"
   error_message ||= nil
   error_description ||= nil
+  autocomplete ||= "postal-code"
   link ||= { text: "Find a postcode on Royal Mail's postcode finder", href: "http://www.royalmail.com/find-a-postcode"}
 %>
 <% if error_message %>
@@ -26,7 +27,7 @@
           name: "covid__postcode-lookup",
           hint: hint_text,
           invalid: error_message ? 'true' : 'false',
-          autocomplete: "postal-code",
+          autocomplete: autocomplete,
         } %>
     <%= render "govuk_publishing_components/components/button", text: button_text, margin_bottom: true %>
   </form>
