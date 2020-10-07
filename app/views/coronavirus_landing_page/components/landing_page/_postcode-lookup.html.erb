@@ -1,12 +1,12 @@
 <%
   input_label ||= "Enter your postcode"
-  input_value ||= ""
+  input_value ||= nil
   input_error ||= ""
   hint_text ||= "For example SW1A 2AA"
   button_text ||= "Find"
   error_message ||= nil
   error_description ||= nil
-  autocomplete ||= "postcode"
+  autocomplete ||= "postal-code"
   link ||= { text: "Find a postcode on Royal Mail's postcode finder", href: "http://www.royalmail.com/find-a-postcode"}
 %>
 <% if error_message %>
