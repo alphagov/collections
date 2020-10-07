@@ -3,3 +3,7 @@
 
 require File.expand_path("config/application", __dir__)
 Collections::Application.load_tasks
+
+unless Rails.env.production?
+  task default: %w[lint]
+end
