@@ -70,6 +70,7 @@ describe LocationLookupService do
 
       assert_equal([], described_class.new(postcode).data)
       assert_not_nil(described_class.new(postcode).error)
+      assert(described_class.new(postcode).postcode_not_found?)
     end
 
     it "returns an error if the postcode is not valid" do
@@ -77,7 +78,8 @@ describe LocationLookupService do
       stub_mapit_does_not_have_a_bad_postcode(invalid_postcode)
 
       assert_equal([], described_class.new(invalid_postcode).data)
-      assert_match(invalid_postcode, described_class.new(invalid_postcode).error)
+      assert_match(invalid_postcode, described_class.new(invalid_postcode).error[:message])
+      assert(described_class.new(invalid_postcode).invalid_postcode?)
     end
   end
 end

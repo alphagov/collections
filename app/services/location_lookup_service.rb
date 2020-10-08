@@ -16,6 +16,14 @@ class LocationLookupService
     location_data.compact
   end
 
+  def postcode_not_found?
+    error && error[:code] == 404
+  end
+
+  def invalid_postcode?
+    error && error[:code] == 400
+  end
+
   def error
     response[:error]
   end
@@ -32,7 +40,12 @@ private
     @response ||= begin
                     JSON.parse(GdsApi.mapit.location_for_postcode(postcode).to_json)
                   rescue GdsApi::HTTPNotFound, GdsApi::HTTPClientError => e
-                    { error: e.error_details["error"] }
+                    {
+                      error: {
+                        message: e.error_details["error"],
+                        code: e.code,
+                      },
+                    }
                   end
   end
 end
