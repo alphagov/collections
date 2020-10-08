@@ -1,9 +1,15 @@
 class CoronavirusLocalRestrictionsController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: [:results]
+
   def show
     render :show,
            locals: {
              breadcrumbs: breadcrumbs,
            }
+  end
+
+  def results
+    @postcode = params["postcode-lookup"].gsub(/\s+/, "").upcase
   end
 
   def error_404
