@@ -53,7 +53,8 @@ $covid-yellow: #fff500;
 @import "views/taxons";
 @import "views/organisations";
 @import "views/organisation";
-@import "views/postcode-lookup";
 @import "views/covid";
 
 @import "modules/full-page-width";
+
+@import "shared/postcode-lookup";
