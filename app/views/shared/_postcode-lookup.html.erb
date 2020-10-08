@@ -1,12 +1,12 @@
 <%
-  input_label ||= "Enter your postcode"
+  input_label ||= t("coronavirus_local_restrictions.lookup.input_label")
   input_value ||= nil
-  input_error ||= "We couldn’t find this postcode"
-  hint_text ||= "For example SW1A 2AA"
-  button_text ||= "Find"
-  error_message ||= "This isn't a valid postcode."
-  error_description ||= "Check it and enter it again."
-  link ||= { text: "Find a postcode on Royal Mail's postcode finder", href: "http://www.royalmail.com/find-a-postcode"}
+  input_error ||= nil
+  hint_text ||= t("coronavirus_local_restrictions.lookup.hint_text")
+  button_text ||= t("coronavirus_local_restrictions.lookup.button_text")
+  error_message ||= nil
+  error_description ||= nil
+  link ||= { text: t("coronavirus_local_restrictions.royal_mail_lookup.link_text"), href: t("coronavirus_local_restrictions.royal_mail_lookup.href")}
 %>
 <% if error_message %>
   <%= render "govuk_publishing_components/components/error_alert", {

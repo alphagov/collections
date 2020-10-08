@@ -22,6 +22,13 @@ Rails.application.routes.draw do
     get ":subtopic_slug", on: :member, to: "subtopics#show"
   end
 
+  # Routes for local restrictions postcode lookup
+  constraints CoronavirusLocalRestrictionsConstraint.new do
+    get "/find-coronavirus-local-restrictions" => "coronavirus_local_restrictions#show"
+  end
+
+  get "/find-coronavirus-local-restrictions" => "coronavirus_local_restrictions#error_404"
+
   # TODO: this redirect causes the request to be routed to Whitehall where
   # the country A-Z currently lives. This needs to be removed when the world index
   # page is rendered here

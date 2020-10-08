@@ -1,0 +1,22 @@
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <% content_for :breadcrumbs do %>
+        <%= render 'govuk_publishing_components/components/breadcrumbs', {
+          breadcrumbs: breadcrumbs,
+          collapse_on_mobile: true
+        } %>
+      <% end %>
+
+      <% content_for :title, t("coronavirus_local_restrictions.lookup.title") %>
+
+      <%= render "govuk_publishing_components/components/title", title: t("coronavirus_local_restrictions.lookup.title") %>
+
+      <%= render "govuk_publishing_components/components/inset_text", text: t('coronavirus_local_restrictions.lookup.inset_text') %>
+
+      <%= sanitize(t("coronavirus_local_restrictions.lookup.body_content")) %>
+
+      <%= render "shared/postcode-lookup" %>
+    </div>
+  </div>
+</div>
