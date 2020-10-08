@@ -15,8 +15,9 @@
       <%= render "govuk_publishing_components/components/inset_text", text: t('coronavirus_local_restrictions.lookup.inset_text') %>
 
       <%= sanitize(t("coronavirus_local_restrictions.lookup.body_content")) %>
-
-      <%= render "shared/postcode-lookup" %>
+      <%= form_for :postcode_lookup, :url => find_coronavirus_local_restrictions_path do |f| %>
+        <%= render "shared/postcode-lookup" %>
+      <% end %>
     </div>
   </div>
 </div>

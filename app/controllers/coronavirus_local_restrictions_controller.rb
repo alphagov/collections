@@ -1,9 +1,28 @@
 class CoronavirusLocalRestrictionsController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: [:results]
+
   def show
     render :show,
            locals: {
              breadcrumbs: breadcrumbs,
            }
+  end
+
+  def results
+    @content_item = content_item.to_hash
+    @postcode = params["postcode-lookup"]
+
+    @location_lookup = LocationLookupService.new(@postcode)
+    if @location_lookup.data.present?
+      restrictions = @location_lookup.data.map do |area|
+        restriction = LocalRestriction.new(area.gss)
+        restriction if restriction.area_name
+      end
+
+      @restriction = restrictions.compact.first
+
+      render
+    end
   end
 
   def error_404
@@ -23,7 +42,11 @@ private
       {
         title: "Coronavirus (COVID-19)",
         url: "/coronavirus",
-      },
+      }
     ]
+  end
+
+  def content_item
+    @content_item ||= ContentItem.find!(request.path)
   end
 end
