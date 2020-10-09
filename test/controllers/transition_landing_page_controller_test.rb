@@ -26,8 +26,7 @@ describe TransitionLandingPageController do
         it "A" do
           with_variant TransitionUrgency1: "A" do
             get :show
-            assert_select "h1", text: "The UK transition"
-            assert_select "h1", text: "The transition period ends in December", count: 0
+            assert_select "h1", text: "The transition period ends in December"
           end
         end
 
@@ -35,15 +34,13 @@ describe TransitionLandingPageController do
           with_variant TransitionUrgency1: "B" do
             get :show
             assert_select "h1", text: "The transition period ends in December"
-            assert_select "h1", text: "The UK transition", count: 0
           end
         end
 
         it "Z" do
           with_variant TransitionUrgency1: "Z" do
             get :show
-            assert_select "h1", text: "The UK transition"
-            assert_select "h1", text: "The transition period ends in December", count: 0
+            assert_select "h1", text: "The transition period ends in December"
           end
         end
       end
@@ -52,8 +49,7 @@ describe TransitionLandingPageController do
         it "A" do
           with_variant TransitionUrgency1: "A" do
             get :show
-            assert_select "h2", text: "Take action"
-            assert_select "h2", text: "Make sure you're ready", count: 0
+            assert_select "h2", text: "Make sure you're ready"
           end
         end
 
@@ -61,15 +57,13 @@ describe TransitionLandingPageController do
           with_variant TransitionUrgency1: "B" do
             get :show
             assert_select "h2", text: "Make sure you're ready"
-            assert_select "h2", text: "Take action", count: 0
           end
         end
 
         it "Z" do
           with_variant TransitionUrgency1: "Z" do
             get :show
-            assert_select "h2", text: "Take action"
-            assert_select "h2", text: "Make sure you're ready", count: 0
+            assert_select "h2", text: "Make sure you're ready"
           end
         end
       end

@@ -2,15 +2,11 @@ en:
   transition_landing_page:
     meta_title: The UK transition
     meta_description: The UK's transition period after Brexit comes to an end this year. Check the new rules from January 2021 and take action now.
-    page_header: The UK transition
-    page_header_variant_B: The transition period ends in December
+    page_header: The transition period ends in December
     page_header_explainer: |
       The UK has left the EU, and the transition period after Brexit comes to an end this year. Check the new rules from January 2021 and take action now.
-    take_action_title: Take action
-    take_action_title_variant_B: Make sure you're ready
+    take_action_title: Make sure you're ready
     take_action_text: |
-      Answer a few questions to get a personalised list of actions for you, your family, and your business. Then sign up for emails to get updates when things change.
-    take_action_text_variant_B: |
       Your business, family, and personal circumstances will be affected. Answer a few questions to get a personalised list of actions. You can also sign up for emails to get updates for what you need to do.
     take_action_start_now: Start now
     take_action_start_now_link: "/transition-check/questions"

@@ -11,7 +11,6 @@ class TransitionLandingPageTest < ActionDispatch::IntegrationTest
       then_i_can_see_the_buckets_section
       then_i_can_see_the_title_section
       then_i_can_see_the_header_section
-      then_i_can_see_the_what_happens_next_section
       then_i_can_see_the_share_links_section
       and_i_can_see_the_explore_topics_section
     end
