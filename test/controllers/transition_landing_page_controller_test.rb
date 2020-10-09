@@ -74,36 +74,33 @@ describe TransitionLandingPageController do
         end
       end
 
-      context "Take action summary text test in the en locale" do
-        let(:default) do
+      context "Take action text test in the en locale" do
+        let(:default_summary) do
           "Answer a few questions to get a personalised list of actions for you, your family, and your business. Then sign up for emails to get updates when things change."
         end
-        let(:variant) do
+        let(:variant_summary) do
           "Your business, family, and personal circumstances will be affected. Answer a few questions to get a personalised list of actions. You can also sign up for emails to get updates for what you need to do."
         end
-        let(:summary_text) { "p.take_action_test_class" }
+        let(:summary_text_selector) { "p.take_action_test_class" }
 
         it "A" do
           with_variant TransitionUrgency1: "A" do
             get :show
-            assert_select summary_text, text: default
-            assert_select summary_text, text: variant, count: 0
+            assert_select summary_text_selector, text: variant_summary
           end
         end
 
         it "B" do
           with_variant TransitionUrgency1: "B" do
             get :show
-            assert_select summary_text, text: variant
-            assert_select summary_text, text: default, count: 0
+            assert_select summary_text_selector, text: variant_summary
           end
         end
 
         it "Z" do
           with_variant TransitionUrgency1: "Z" do
             get :show
-            assert_select summary_text, text: default
-            assert_select summary_text, text: variant, count: 0
+            assert_select summary_text_selector, text: variant_summary
           end
         end
       end
