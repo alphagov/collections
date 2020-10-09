@@ -1,1 +1,19 @@
-<p> Not England! </p>
+<div class="covid-local-restrictions__devolved-nation-guidance">
+  <%= render "govuk_publishing_components/components/title", {
+    title: "There might be restrictions in this area"
+  } %>
+
+  <% if @location_lookup.data.first.scotland? %>
+    <p class="govuk-body">
+      <a class="govuk-link" href="https://www.gov.scot/coronavirus-covid-19/">Find out what you can or cannot do from the Scottish Government.</a>
+    </p>
+  <% elsif @location_lookup.data.first.northern_ireland? %>
+    <p class="govuk-body">
+      <a class="govuk-link" href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-and-localised-restrictions">Find out what you can or cannot do from the Northern Ireland Government.</a>
+    </p>
+  <% else %>
+    <p class="govuk-body">
+      <a class="govuk-link" href="https://gov.wales/local-lockdown">Find out what you can or cannot do from the Welsh Government.</a>
+    </p>
+  <% end %>
+</div>
