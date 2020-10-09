@@ -24,6 +24,7 @@ class CoronavirusLocalRestrictionsController < ApplicationController
                       error_description: "error description",
                     }
     elsif !postcode_validation
+      @error = true
       return render :show,
                     locals: {
                       breadcrumbs: breadcrumbs,
@@ -36,6 +37,9 @@ class CoronavirusLocalRestrictionsController < ApplicationController
     @content_item = content_item.to_hash
 
     @location_lookup = LocationLookupService.new(@postcode)
+    if @location_lookup.error
+
+    end
     if @location_lookup.data.present?
       restrictions = @location_lookup.data.map do |area|
         restriction = LocalRestriction.new(area.gss)
