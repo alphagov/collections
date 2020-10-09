@@ -5,12 +5,27 @@ class CoronavirusLocalRestrictionsController < ApplicationController
     render :show,
            locals: {
              breadcrumbs: breadcrumbs,
+             error_message: nil,
+             input_error: nil,
+             error_description: nil,
            }
   end
 
   def results
-    @content_item = content_item.to_hash
     @postcode = params["postcode-lookup"]
+
+    if @postcode.blank?
+      @error = true
+      return render :show,
+             locals: {
+               breadcrumbs: breadcrumbs,
+               error_message: "Please enter a postcode",
+               input_error: "input error",
+               error_description: "error description",
+             }
+    end
+
+    @content_item = content_item.to_hash
 
     @location_lookup = LocationLookupService.new(@postcode)
     if @location_lookup.data.present?
