@@ -105,32 +105,6 @@ describe TransitionLandingPageController do
         end
       end
 
-      context "Brexit countdown clock test in the en locale" do
-        it "A" do
-          with_variant TransitionUrgency1: "A" do
-            get :show
-            assert_template partial: "_countdown", count: 0
-            assert_template partial: "_take-action-traffic-lights", count: 1
-          end
-        end
-
-        it "B" do
-          with_variant TransitionUrgency1: "B" do
-            get :show
-            assert_template partial: "_countdown", count: 1
-            assert_template partial: "_take-action-traffic-lights", count: 1
-          end
-        end
-
-        it "Z" do
-          with_variant TransitionUrgency1: "Z" do
-            get :show
-            assert_template partial: "_countdown", count: 0
-            assert_template partial: "_take-action-traffic-lights", count: 1
-          end
-        end
-      end
-
       context "In the cy locale" do
         %w[A B Z].each do |variant|
           it "displays the control text for the #{variant} variant" do

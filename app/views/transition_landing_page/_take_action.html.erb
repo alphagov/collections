@@ -1,7 +1,7 @@
 <div class="landing-page__section landing-page__section--light-grey">
   <div class="govuk-width-container">
     <div class="govuk-grid-row">
-      <div class="<%= show_countdown ? "govuk-grid-column-two-thirds" : "govuk-grid-column-full" %>">
+      <div class="govuk-grid-column-full">
         <h2 class="govuk-heading-l">
           <% if show_variant? %>
             <%= t("transition_landing_page.take_action_title_variant_B") %>
@@ -10,7 +10,7 @@
           <% end %>
         </h2>
         <div class="govuk-grid-row">
-          <div class="<%= show_countdown ? "govuk-grid-column-full" : "govuk-grid-column-two-thirds" %>">
+          <div class="govuk-grid-column-two-thirds">
             <%= render "govuk_publishing_components/components/govspeak", {} do %>
               <p class="take_action_test_class">
                 <% if show_variant? %>
@@ -35,18 +35,11 @@
               } %>
             </div>
           </div>
-          <% unless show_countdown %>
-            <div class="govuk-grid-column-one-third">
-              <%= render partial: 'transition_landing_page/take-action-traffic-lights' %>
-            </div>
-          <% end %>
+          <div class="govuk-grid-column-one-third">
+            <%= render partial: 'transition_landing_page/take-action-traffic-lights' %>
+          </div>
         </div>
       </div>
-      <% if show_countdown %>
-        <div class="govuk-grid-column-one-third">
-            <%= render partial: 'transition_landing_page/countdown', locals: { clock: CountdownClock.new } %>
-        </div>
-      <% end %>
     </div>
   </div>
 </div>

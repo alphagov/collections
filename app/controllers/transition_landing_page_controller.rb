@@ -13,7 +13,6 @@ class TransitionLandingPageController < ApplicationController
       presented_taxon: presented_taxon,
       presentable_section_items: presentable_section_items,
       show_comms: show_comms?,
-      show_countdown: show_countdown?,
     }
   end
 
@@ -38,10 +37,6 @@ private
 
   def show_comms?
     true
-  end
-
-  def show_countdown?
-    show_variant?
   end
 
   def switch_locale(&action)
