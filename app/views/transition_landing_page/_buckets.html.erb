@@ -1,12 +1,14 @@
+<% guidance_header = show_variant? ? t("transition_landing_page.guidance_header_variant_B") : t("transition_landing_page.guidance_header")%>
+
 <div class="landing-page__section"
   data-analytics-ecommerce
   data-ecommerce-start-index="1"
-  data-list-title="Brexit landing page: <%= t("transition_landing_page.guidance_header") %>"
+  data-list-title="Brexit landing page: <%= guidance_header %>"
   data-search-query>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <h2 class="govuk-heading-l">
-        <%= t("transition_landing_page.guidance_header") %>
+        <%= guidance_header %>
       </h2>
       <p class="landing-page__guidance_subheader" data-module="track-click">
         <%= raw t("transition_landing_page.guidance_subheader") %>
