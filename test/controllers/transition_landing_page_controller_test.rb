@@ -21,10 +21,10 @@ describe TransitionLandingPageController do
       end
     end
 
-    describe "TransitionUrgency1 AB test" do
+    describe "TransitionUrgency2 AB test" do
       context "Bucket section header test in the en locale" do
         it "A" do
-          with_variant TransitionUrgency1: "A" do
+          with_variant TransitionUrgency2: "A" do
             get :show
             assert_select ".govuk-heading-l", text: "Actions you can take now"
             assert_select ".govuk-heading-l", text: "Changes for businesses and citizens", count: 0
@@ -32,7 +32,7 @@ describe TransitionLandingPageController do
         end
 
         it "B" do
-          with_variant TransitionUrgency1: "B" do
+          with_variant TransitionUrgency2: "B" do
             get :show
             assert_select ".govuk-heading-l", text: "Changes for businesses and citizens"
             assert_select ".govuk-heading-l", text: "Actions you can take now", count: 0
@@ -40,7 +40,7 @@ describe TransitionLandingPageController do
         end
 
         it "Z" do
-          with_variant TransitionUrgency1: "Z" do
+          with_variant TransitionUrgency2: "Z" do
             get :show
             assert_select ".govuk-heading-l", text: "Actions you can take now"
           end
@@ -49,21 +49,21 @@ describe TransitionLandingPageController do
 
       context "Make sure that buckets appear in the expected order in the en locale" do
         it "A" do
-          with_variant TransitionUrgency1: "A" do
+          with_variant TransitionUrgency2: "A" do
             get :show
             assert_select ".landing-page__section-list-wrapper h3:first-of-type", text: "Travelling to the EU"
           end
         end
 
         it "B" do
-          with_variant TransitionUrgency1: "B" do
+          with_variant TransitionUrgency2: "B" do
             get :show
             assert_select ".landing-page__section-list-wrapper h3:first-of-type", text: "Businesses that import and export goods"
           end
         end
 
         it "Z" do
-          with_variant TransitionUrgency1: "Z" do
+          with_variant TransitionUrgency2: "Z" do
             get :show
             assert_select ".landing-page__section-list-wrapper h3:first-of-type", text: "Travelling to the EU"
           end
@@ -73,11 +73,11 @@ describe TransitionLandingPageController do
       context "In the cy locale" do
         %w[A B Z].each do |variant|
           it "displays the control text for the #{variant} variant" do
-            setup_ab_variant("TransitionUrgency1", variant)
+            setup_ab_variant("TransitionUrgency2", variant)
 
             get :show, params: { locale: "cy" }
 
-            assert_response_not_modified_for_ab_test("TransitionUrgency1")
+            assert_response_not_modified_for_ab_test("TransitionUrgency2")
             assert_select "h1", text: "Pontio’r DU"
             assert_select "h1", text: "The transition period ends in December", count: 0
 
