@@ -17,6 +17,10 @@ class MapitPostcodeResponse
     location["country_name"]
   end
 
+  def area_type
+    location["type"]
+  end
+
   def england?
     country == "England"
   end

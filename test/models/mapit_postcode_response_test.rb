@@ -26,6 +26,10 @@ describe MapitPostcodeResponse do
     assert_equal("England", described_class.new(mapit_location).country)
   end
 
+  it "returns the area type" do
+    assert_equal("LBO", described_class.new(mapit_location).area_type)
+  end
+
   describe "#england?" do
     it "returns true if the country is England" do
       assert(described_class.new(mapit_location).england?)
