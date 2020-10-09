@@ -37,8 +37,14 @@ class CoronavirusLocalRestrictionsController < ApplicationController
     @content_item = content_item.to_hash
 
     @location_lookup = LocationLookupService.new(@postcode)
-    if @location_lookup.error
-
+    if @location_lookup.postcode_not_found?
+      return render :show,
+                    locals: {
+                      breadcrumbs: breadcrumbs,
+                      error_message: "Postcode not found",
+                      input_error: "Postcode not found",
+                      error_description: "Postcode: \"#{@postcode}\" was not found",
+                    }
     end
     if @location_lookup.data.present?
       restrictions = @location_lookup.data.map do |area|
