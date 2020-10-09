@@ -45,6 +45,14 @@ class CoronavirusLocalRestrictionsController < ApplicationController
                       input_error: "Postcode not found",
                       error_description: "Postcode: \"#{@postcode}\" was not found",
                     }
+    elsif @location_lookup.invalid_postcode?
+      return render :show,
+                    locals: {
+                      breadcrumbs: breadcrumbs,
+                      error_message: "Invalid postcode",
+                      input_error: "Invalid postcode",
+                      error_description: "\"#{@postcode}\" is not a valid postcode",
+                    }
     end
     if @location_lookup.data.present?
       restrictions = @location_lookup.data.map do |area|
