@@ -12,13 +12,13 @@
   )
 %>
 
-<%= render partial: 'take_action', locals: { show_countdown: show_countdown } %>
+<%= render partial: 'take_action' %>
 
 <%= render partial: 'video_section' %>
 
 <div class="govuk-width-container">
   <div class="landing-page__buckets">
-    <%= render partial: 'buckets', locals: { buckets: presented_taxon.buckets } %>
+    <%= render partial: 'buckets', locals: { buckets: presented_taxon.buckets(show_variant?) } %>
   </div>
 
   <% if show_comms %>

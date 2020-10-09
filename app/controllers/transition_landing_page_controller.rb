@@ -13,7 +13,6 @@ class TransitionLandingPageController < ApplicationController
       presented_taxon: presented_taxon,
       presentable_section_items: presentable_section_items,
       show_comms: show_comms?,
-      show_countdown: show_countdown?,
     }
   end
 
@@ -40,10 +39,6 @@ private
     true
   end
 
-  def show_countdown?
-    show_variant?
-  end
-
   def switch_locale(&action)
     locale = params[:locale] || I18n.default_locale
     I18n.with_locale(locale, &action)
@@ -53,7 +48,7 @@ private
   def ab_test_variant
     @ab_test_variant ||= begin
       ab_test = GovukAbTesting::AbTest.new(
-        "TransitionUrgency1",
+        "TransitionUrgency2",
         dimension: 44,
         allowed_variants: %w[A B Z],
         control_variant: "Z",
