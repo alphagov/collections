@@ -17,12 +17,20 @@ class CoronavirusLocalRestrictionsController < ApplicationController
     if @postcode.blank?
       @error = true
       return render :show,
-             locals: {
-               breadcrumbs: breadcrumbs,
-               error_message: "Please enter a postcode",
-               input_error: "input error",
-               error_description: "error description",
-             }
+                    locals: {
+                      breadcrumbs: breadcrumbs,
+                      error_message: "Please enter a postcode",
+                      input_error: "input error",
+                      error_description: "error description",
+                    }
+    elsif !postcode_validation
+      return render :show,
+                    locals: {
+                      breadcrumbs: breadcrumbs,
+                      error_message: "Invalid postcode",
+                      input_error: "Invalid postcode",
+                      error_description: "\"#{@postcode}\" is not a valid postcode",
+                    }
     end
 
     @content_item = content_item.to_hash
@@ -57,8 +65,12 @@ private
       {
         title: "Coronavirus (COVID-19)",
         url: "/coronavirus",
-      }
+      },
     ]
+  end
+
+  def postcode_validation
+    @postcode =~ /^([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))\s?[0-9][A-Za-z]{2})$/
   end
 
   def content_item

@@ -24,8 +24,8 @@ Rails.application.routes.draw do
 
   # Routes for local restrictions postcode lookup
   # constraints CoronavirusLocalRestrictionsConstraint.new do
-    get "/find-coronavirus-local-restrictions" => "coronavirus_local_restrictions#show"
-    post "/find-coronavirus-local-restrictions" => "coronavirus_local_restrictions#results"
+  get "/find-coronavirus-local-restrictions" => "coronavirus_local_restrictions#show"
+  post "/find-coronavirus-local-restrictions" => "coronavirus_local_restrictions#results"
   # end
 
   # get "/find-coronavirus-local-restrictions" => "coronavirus_local_restrictions#error_404"
