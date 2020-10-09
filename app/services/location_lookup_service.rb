@@ -1,6 +1,8 @@
 class LocationLookupService
   attr_reader :postcode
 
+  LOWER_TIER_AREA_CODES = %w[COI LBO LGD MTD UTA DIS].freeze
+
   def initialize(postcode)
     @postcode = postcode
   end
@@ -26,6 +28,11 @@ class LocationLookupService
 
   def error
     response[:error]
+  end
+
+  def lower_tier_area_name
+    lower_tier = data.select { |d| d.area_type.in?(LOWER_TIER_AREA_CODES) }
+    lower_tier.first.area_name
   end
 
 private
