@@ -5,15 +5,39 @@ class CoronavirusLocalRestrictionsController < ApplicationController
     render :show,
            locals: {
              breadcrumbs: breadcrumbs,
+             error_message: nil,
+             input_error: nil,
+             error_description: nil,
            }
   end
 
   def results
     @postcode = params["postcode-lookup"].gsub(/\s+/, "").upcase
 
+    if @postcode.blank?
+      @error = true
+      return render :show,
+                    locals: {
+                      breadcrumbs: breadcrumbs,
+                      error_message: I18n.t("coronavirus_local_restrictions.errors.no_postcode.error_message"),
+                      input_error: I18n.t("coronavirus_local_restrictions.errors.no_postcode.input_error"),
+                      error_description: I18n.t("coronavirus_local_restrictions.errors.no_postcode.error_description"),
+                    }
+    end
+
     @content_item = content_item.to_hash
 
     @location_lookup = LocationLookupService.new(@postcode)
+
+    elsif @location_lookup.postcode_not_found?
+      return render :show,
+                    locals: {
+                      breadcrumbs: breadcrumbs,
+                      error_message: I18n.t("coronavirus_local_restrictions.errors.no_postcode.error_message"),
+                      input_error: I18n.t("coronavirus_local_restrictions.errors.no_postcode.input_error"),
+                      error_description: I18n.t("coronavirus_local_restrictions.errors.no_postcode.error_description"),
+                    }
+    end
 
     if @location_lookup.data.present?
       restrictions = @location_lookup.data.map do |area|
