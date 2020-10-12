@@ -1,433 +1,658 @@
 ---
-E08000001:
-  alert_level: 2
-  name: Bolton
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "guidance/bolton-local-restrictions"
-  extra_restrictions:
-E07000125:
-  alert_level: 2
-  name: Rossendale
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "guidance/north-west-england-local-restrictions"
-  extra_restrictions:
-E07000120:
-  alert_level: 2
-  name: Hyndburn
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "guidance/north-west-england-local-restrictions"
-  extra_restrictions:
-E07000123:
-  alert_level: 2
-  name: Preston
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "guidance/north-west-england-local-restrictions"
-  extra_restrictions:
 E08000012:
-  alert_level: 2
-  name: Liverpool
+  alert_level: 3
+  name: Liverpool City Council
   start_date:
   end_date:
   guidance:
     label: The guidance
-    link: "guidance/north-west-england-local-restrictions"
-  extra_restrictions:
-E08000002:
-  alert_level: 2
-  name: Bury
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "guidance/greater-manchester-local-restrictions"
-  extra_restrictions:
-E06000008:
-  alert_level: 2
-  name: Blackburn with Darwen
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "guidance/north-west-england-local-restrictions"
-  extra_restrictions:
-E06000006:
-  alert_level: 2
-  name: Halton
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "guidance/north-west-england-local-restrictions"
-  extra_restrictions:
-E07000117:
-  alert_level: 2
-  name: Burnley
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "guidance/north-west-england-local-restrictions"
-  extra_restrictions:
-E08000004:
-  alert_level: 2
-  name: Oldham
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "guidance/greater-manchester-local-restrictions"
-  extra_restrictions:
-E08000023:
-  alert_level: 2
-  name: South Tyneside
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "guidance/north-east-of-england-local-restrictions"
+    link: "/covid19app/localalertlevel3"
   extra_restrictions:
 E08000011:
-  alert_level: 2
-  name: Knowsley
+  alert_level: 3
+  name: Knowsley Borough Council
   start_date:
   end_date:
   guidance:
     label: The guidance
-    link: "guidance/north-west-england-local-restrictions"
-  extra_restrictions:
-E08000003:
-  alert_level: 2
-  name: Manchester
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "guidance/greater-manchester-local-restrictions"
+    link: "/covid19app/localalertlevel3"
   extra_restrictions:
 E08000015:
-  alert_level: 2
-  name: Wirral
+  alert_level: 3
+  name: Wirral Borough Council
   start_date:
   end_date:
   guidance:
     label: The guidance
-    link: "guidance/north-west-england-local-restrictions"
-  extra_restrictions:
-E08000006:
-  alert_level: 2
-  name: Salford
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "guidance/greater-manchester-local-restrictions"
-  extra_restrictions:
-E08000005:
-  alert_level: 2
-  name: Rochdale
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "guidance/greater-manchester-local-restrictions"
-  extra_restrictions:
-E08000008:
-  alert_level: 2
-  name: Tameside
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "guidance/greater-manchester-local-restrictions"
-  extra_restrictions:
-E08000032:
-  alert_level: 2
-  name: Bradford
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "guidance/west-yorkshire-local-restrictions"
+    link: "/covid19app/localalertlevel3"
   extra_restrictions:
 E08000013:
-  alert_level: 2
-  name: St. Helens
+  alert_level: 3
+  name: St Helens Borough Council
   start_date:
   end_date:
   guidance:
     label: The guidance
-    link: "guidance/north-west-england-local-restrictions"
+    link: "/covid19app/localalertlevel3"
   extra_restrictions:
-E07000122:
-  alert_level: 2
-  name: Pendle
+E08000014:
+  alert_level: 3
+  name: Sefton Borough Council
   start_date:
   end_date:
   guidance:
     label: The guidance
-    link: "guidance/north-west-england-local-restrictions"
+    link: "/covid19app/localalertlevel3"
+  extra_restrictions:
+E06000006:
+  alert_level: 3
+  name: Halton Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel3"
   extra_restrictions:
 E06000007:
   alert_level: 2
-  name: Warrington
+  name: Warrington Borough Council
   start_date:
   end_date:
   guidance:
     label: The guidance
-    link: "guidance/north-west-england-local-restrictions"
+    link: "/covid19app/localalertlevel2"
   extra_restrictions:
-E07000135:
+E06000050:
   alert_level: 2
-  name: Oadby and Wigston
+  name: Cheshire West and Chester Council
   start_date:
   end_date:
   guidance:
     label: The guidance
-    link: "guidance/leicester-lockdown-what-you-can-and-cannot-do"
+    link: "/covid19app/localalertlevel2"
   extra_restrictions:
-E08000037:
+E06000049:
   alert_level: 2
-  name: Gateshead
+  name: Cheshire East Council
   start_date:
   end_date:
   guidance:
     label: The guidance
-    link: "guidance/north-east-of-england-local-restrictions"
+    link: "/covid19app/localalertlevel2"
   extra_restrictions:
-E06000016:
+E08000003:
   alert_level: 2
-  name: Leicester
+  name: Manchester City Council
   start_date:
   end_date:
   guidance:
     label: The guidance
-    link: "guidance/leicester-lockdown-what-you-can-and-cannot-do"
+    link: "/covid19app/localalertlevel2"
   extra_restrictions:
-E08000021:
+E08000001:
   alert_level: 2
-  name: Newcastle upon Tyne
+  name: Bolton Borough Council
   start_date:
   end_date:
   guidance:
     label: The guidance
-    link: "guidance/north-east-of-england-local-restrictions"
+    link: "/covid19app/localalertlevel2"
   extra_restrictions:
-E08000014:
+E08000002:
   alert_level: 2
-  name: Sefton
+  name: Bury Borough Council
   start_date:
   end_date:
   guidance:
     label: The guidance
-    link: "guidance/north-west-england-local-restrictions"
-  extra_restrictions:
-E08000035:
-  alert_level: 2
-  name: Leeds
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "guidance/west-yorkshire-local-restrictions"
-  extra_restrictions:
-E08000024:
-  alert_level: 2
-  name: Sunderland
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "guidance/north-east-of-england-local-restrictions"
-  extra_restrictions:
-E08000025:
-  alert_level: 2
-  name: Birmingham
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "guidance/birmingham-sandwell-and-solihull-local-restrictions"
-  extra_restrictions:
-E08000010:
-  alert_level: 2
-  name: Wigan
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "guidance/greater-manchester-local-restrictions"
-  extra_restrictions:
-E08000034:
-  alert_level: 2
-  name: Kirklees
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "guidance/west-yorkshire-local-restrictions"
-  extra_restrictions:
-E08000029:
-  alert_level: 2
-  name: Solihull
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "guidance/birmingham-sandwell-and-solihull-local-restrictions"
-  extra_restrictions:
-E08000022:
-  alert_level: 2
-  name: North Tyneside
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "guidance/north-east-of-england-local-restrictions"
-  extra_restrictions:
-E08000028:
-  alert_level: 2
-  name: Sandwell
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "guidance/birmingham-sandwell-and-solihull-local-restrictions"
-  extra_restrictions:
-E06000009:
-  alert_level: 2
-  name: Blackpool
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "guidance/north-west-england-local-restrictions"
+    link: "/covid19app/localalertlevel2"
   extra_restrictions:
 E08000007:
   alert_level: 2
-  name: Stockport
+  name: Stockport Borough Council
   start_date:
   end_date:
   guidance:
     label: The guidance
-    link: "guidance/greater-manchester-local-restrictions"
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E08000008:
+  alert_level: 2
+  name: Tameside Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
   extra_restrictions:
 E08000009:
   alert_level: 2
-  name: Trafford
+  name: Trafford Borough Council
   start_date:
   end_date:
   guidance:
     label: The guidance
-    link: "guidance/greater-manchester-local-restrictions"
+    link: "/covid19app/localalertlevel2"
   extra_restrictions:
-E07000128:
+E08000010:
   alert_level: 2
-  name: Wyre
+  name: Wigan Borough Council
   start_date:
   end_date:
   guidance:
     label: The guidance
-    link: "guidance/north-west-england-local-restrictions"
+    link: "/covid19app/localalertlevel2"
   extra_restrictions:
-E07000127:
+E08000006:
   alert_level: 2
-  name: West Lancashire
+  name: Salford City Council
   start_date:
   end_date:
   guidance:
     label: The guidance
-    link: "guidance/north-west-england-local-restrictions"
+    link: "/covid19app/localalertlevel2"
   extra_restrictions:
-E08000033:
+E08000005:
   alert_level: 2
-  name: Calderdale
+  name: Rochdale Borough Council
   start_date:
   end_date:
   guidance:
     label: The guidance
-    link: "guidance/west-yorkshire-local-restrictions"
+    link: "/covid19app/localalertlevel2"
   extra_restrictions:
-E06000057:
+E08000004:
   alert_level: 2
-  name: Northumberland
+  name: Oldham Borough Council
   start_date:
   end_date:
   guidance:
     label: The guidance
-    link: "guidance/north-east-of-england-local-restrictions"
+    link: "/covid19app/localalertlevel2"
   extra_restrictions:
-E08000031:
+E02004093:
   alert_level: 2
-  name: Wolverhampton
+  name: Hadfield East & Tintwistle
   start_date:
   end_date:
   guidance:
     label: The guidance
-    link: "guidance/birmingham-sandwell-and-solihull-local-restrictions"
+    link: "/covid19app/localalertlevel2"
   extra_restrictions:
-E07000119:
+E02004094:
   alert_level: 2
-  name: Fylde
+  name: Hadfield West & Gamesley
   start_date:
   end_date:
   guidance:
     label: The guidance
-    link: "guidance/north-west-england-local-restrictions"
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E02004095:
+  alert_level: 2
+  name: Glossop
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E02004096:
+  alert_level: 2
+  name: Dinting, Simmondley & Charlesworth
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E07000117:
+  alert_level: 2
+  name: Burnley Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
   extra_restrictions:
 E07000118:
   alert_level: 2
-  name: Chorley
+  name: Chorley Borough Council
   start_date:
   end_date:
   guidance:
     label: The guidance
-    link: "guidance/north-west-england-local-restrictions"
+    link: "/covid19app/localalertlevel2"
   extra_restrictions:
-E07000126:
+E07000119:
   alert_level: 2
-  name: South Ribble
+  name: Fylde Borough Council
   start_date:
   end_date:
   guidance:
     label: The guidance
-    link: "guidance/north-west-england-local-restrictions"
+    link: "/covid19app/localalertlevel2"
   extra_restrictions:
-E06000047:
+E07000120:
   alert_level: 2
-  name: County Durham
+  name: Hyndburn Borough Council
   start_date:
   end_date:
   guidance:
     label: The guidance
-    link: "guidance/north-east-of-england-local-restrictions"
-  extra_restrictions:
-E07000124:
-  alert_level: 2
-  name: Ribble Valley
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "guidance/north-west-england-local-restrictions"
+    link: "/covid19app/localalertlevel2"
   extra_restrictions:
 E07000121:
   alert_level: 2
-  name: Lancaster
+  name: Lancaster City Council
   start_date:
   end_date:
   guidance:
     label: The guidance
-    link: "guidance/north-west-england-local-restrictions"
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E07000122:
+  alert_level: 2
+  name: Pendle Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E07000123:
+  alert_level: 2
+  name: Preston City Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E07000124:
+  alert_level: 2
+  name: Ribble Valley Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E07000125:
+  alert_level: 2
+  name: Rossendale Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E07000126:
+  alert_level: 2
+  name: South Ribble Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E07000127:
+  alert_level: 2
+  name: West Lancashire Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E07000128:
+  alert_level: 2
+  name: Wyre Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E06000009:
+  alert_level: 2
+  name: Blackpool Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E06000008:
+  alert_level: 2
+  name: Blackburn with Darwen Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E08000035:
+  alert_level: 2
+  name: Leeds City Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E08000032:
+  alert_level: 2
+  name: City of Bradford Metropolitan District Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E08000034:
+  alert_level: 2
+  name: Kirklees Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E08000033:
+  alert_level: 2
+  name: Calderdale Metropolitan Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E08000016:
+  alert_level: 2
+  name: Barnsley Metropolitan Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E08000018:
+  alert_level: 2
+  name: Rotherham Metropolitan Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E08000017:
+  alert_level: 2
+  name: Doncaster Metropolitan Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E08000019:
+  alert_level: 2
+  name: Sheffield City Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E08000021:
+  alert_level: 2
+  name: Newcastle City Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E08000023:
+  alert_level: 2
+  name: South Tyneside Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E08000022:
+  alert_level: 2
+  name: North Tyneside Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E08000037:
+  alert_level: 2
+  name: Gateshead Metropolitan Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E08000024:
+  alert_level: 2
+  name: Sunderland City Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E06000047:
+  alert_level: 2
+  name: Durham County Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E06000057:
+  alert_level: 2
+  name: Northumberland County Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E06000002:
+  alert_level: 2
+  name: Middlesbrough Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E06000003:
+  alert_level: 2
+  name: Redcar and Cleveland Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E06000004:
+  alert_level: 2
+  name: Stockton-on-Tees Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E06000005:
+  alert_level: 2
+  name: Darlington Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E06000001:
+  alert_level: 2
+  name: Hartlepool Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E08000025:
+  alert_level: 2
+  name: Birmingham City Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E08000028:
+  alert_level: 2
+  name: Sandwell Metropolitan Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E08000029:
+  alert_level: 2
+  name: Solihull Metropolitan Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E08000031:
+  alert_level: 2
+  name: City of Wolverhampton Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E08000030:
+  alert_level: 2
+  name: Walsall Metropolitan Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E08000026:
+  alert_level: 2
+  name: Coventry City Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E06000016:
+  alert_level: 2
+  name: Leicester City Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E07000135:
+  alert_level: 2
+  name: Oadby and Wigston District Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E07000170:
+  alert_level: 2
+  name: Ashfield District Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E07000171:
+  alert_level: 2
+  name: Bassetlaw District Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E07000172:
+  alert_level: 2
+  name: Broxtowe Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E07000173:
+  alert_level: 2
+  name: Gedling Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E07000174:
+  alert_level: 2
+  name: Mansfield District Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E07000175:
+  alert_level: 2
+  name: Newark and Sherwood District Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E07000176:
+  alert_level: 2
+  name: Rushcliffe Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E06000018:
+  alert_level: 2
+  name: Nottingham City Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
   extra_restrictions:
