@@ -38,6 +38,11 @@ class CoronavirusLocalRestrictionsController < ApplicationController
 
     @location_lookup = LocationLookupService.new(@postcode)
 
+    if @location_lookup.no_information?
+      return render :no_information,
+                    locals: {
+                      breadcrumbs: breadcrumbs,
+                    }
     elsif @location_lookup.invalid_postcode?
       return render :show,
                     locals: {
