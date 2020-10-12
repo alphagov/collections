@@ -10,6 +10,21 @@ class CoronavirusLocalRestrictionsController < ApplicationController
 
   def results
     @postcode = params["postcode-lookup"].gsub(/\s+/, "").upcase
+
+    @content_item = content_item.to_hash
+
+    @location_lookup = LocationLookupService.new(@postcode)
+
+    if @location_lookup.data.present?
+      restrictions = @location_lookup.data.map do |area|
+        restriction = LocalRestriction.new(area.gss)
+        restriction if restriction.area_name
+      end
+
+      @restriction = restrictions.compact.first
+
+      render
+    end
   end
 
   def error_404
@@ -31,5 +46,9 @@ private
         url: "/coronavirus",
       },
     ]
+  end
+
+  def content_item
+    @content_item ||= ContentItem.find!(request.path)
   end
 end
