@@ -2,13 +2,13 @@ en:
   coronavirus_local_restrictions:
     errors:
       no_postcode:
-        error_message: There is a problem.
-        input_error: Enter a postcode.
-        error_description: Enter a postcode.
+        error_message: There is a problem
+        input_error: Enter a postcode
+        error_description: Enter a postcode
       invalid_postcode:
-        error_message: There is a problem.
-        input_error: Enter a valid postcode.
-        error_description: Enter a valid postcode.
+        error_message: There is a problem
+        input_error: Enter a valid postcode
+        error_description: Enter a valid postcode
     lookup:
       input_label: Enter your postcode
       hint_text: For example SW1A 2AA
@@ -17,8 +17,8 @@ en:
       inset_text: There are different restrictions in Scotland, Wales and Northern Ireland.
       body_content: |
         <p class="govuk-body">Enter the postcode of the place you want to find information about. For example where you live, work, or visit.</p>
-        <p class="govuk-body">You can find out what you can or cannot do. Sometimes this is known as a ‘local lockdown’.</p>
-        <p class="govuk-body">Each area has a local alert level. There are 3 alert levels. Level 1 areas have the least restrictions and level 3 areas have the most restrictions.</p>
+        <p class="govuk-body">Each area has a <a class="govuk-link" href="/guidance/local-covid-alert-levels-what-you-need-to-know">Local COVID Alert Level</a>. There are 3 Local COVID Alert Levels. Sometimes this is known as a ‘local lockdown’.</p>
+        <p class="govuk-body">You can find out what you can or cannot do.</p>
     royal_mail_lookup:
       link_text: Find a postcode on Royal Mail's postcode finder
       href: http://www.royalmail.com/find-a-postcode
@@ -51,4 +51,4 @@ en:
           guidance: <a class="govuk-link" href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-and-localised-restrictions">Find out what you can or cannot do from the Northern Ireland Government.</a>
       no_information:
         heading: There is no information about the restrictions in this area
-        guidance: <a class="govuk-link" href="/government/collections/local-restrictions-areas-with-an-outbreak-of-coronavirus-covid-19">All coronavirus information about what you can and cannot do.</a>
+        guidance: <a class="govuk-link" href="/coronavirus">All coronavirus information about what you can and cannot do.</a>
