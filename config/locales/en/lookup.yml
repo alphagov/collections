@@ -19,6 +19,8 @@ en:
         <p class="govuk-body">Enter the postcode of the place you want to find information about. For example where you live, work, or visit.</p>
         <p class="govuk-body">Each area has a <a class="govuk-link" href="/guidance/local-covid-alert-levels-what-you-need-to-know">Local COVID Alert Level</a>. There are 3 Local COVID Alert Levels. Sometimes this is known as a ‘local lockdown’.</p>
         <p class="govuk-body">You can find out what you can or cannot do.</p>
+      meta_title: Find out the coronavirus restrictions in a local area
+      meta_description: Find out the Local COVID Alert Level for an area. Search by postcode.
     royal_mail_lookup:
       link_text: Find a postcode on Royal Mail's postcode finder
       href: http://www.royalmail.com/find-a-postcode
