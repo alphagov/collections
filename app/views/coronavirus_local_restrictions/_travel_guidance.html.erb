@@ -1,0 +1,10 @@
+<div class="covid-local-restrictions__travel-gudiance">
+  <%= render "govuk_publishing_components/components/heading", {
+    text: travel_heading,
+    font_size: "m",
+    margin_bottom: 3
+  } %>
+  <p class="govuk-body">
+    <%= sanitize(t("coronavirus_local_restrictions.results.travel_text")) %>
+  </p>
+</div>

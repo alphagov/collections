@@ -19,11 +19,15 @@ class LocationLookupService
   end
 
   def postcode_not_found?
-    error && error[:code] == 404
+    (error && error[:code] == 404)
   end
 
   def invalid_postcode?
     error && error[:code] == 400
+  end
+
+  def no_information?
+    error.blank? && data.blank?
   end
 
   def error

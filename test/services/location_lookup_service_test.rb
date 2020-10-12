@@ -106,5 +106,15 @@ describe LocationLookupService do
 
       assert_equal("Coruscant Planetary Council", described_class.new(postcode).lower_tier_area_name)
     end
+
+    it "returns no information if the postcode is in a valid format but there is no data" do
+      postcode = "IM11AF"
+      MAPIT_ENDPOINT = Plek.current.find("mapit")
+
+      stub_request(:get, "#{MAPIT_ENDPOINT}/postcode/" + postcode.tr(" ", "+") + ".json")
+          .to_return(body: { "postcode" => postcode.to_s, "areas" => {} }.to_json, status: 200)
+
+      assert(described_class.new(postcode).no_information?)
+    end
   end
 end

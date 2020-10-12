@@ -1,0 +1,19 @@
+<div class="covid-local-restrictions__devolved-nation-guidance">
+  <%= render "govuk_publishing_components/components/title", {
+    title: t("coronavirus_local_restrictions.results.devolved_nations.heading")
+  } %>
+  <% if @location_lookup.data.first.scotland? %>
+    <p class="govuk-body">
+      <%= sanitize(t("coronavirus_local_restrictions.results.devolved_nations.scotland.guidance")) %>
+    </p>
+  <% elsif @location_lookup.data.first.northern_ireland? %>
+    <p class="govuk-body">
+      <%= sanitize(t("coronavirus_local_restrictions.results.devolved_nations.northern_ireland.guidance")) %>
+    </p>
+  <% elsif @location_lookup.data.first.wales? %>
+    <p class="govuk-body">
+      <%= sanitize(t("coronavirus_local_restrictions.results.devolved_nations.wales.guidance")) %>
+    </p>
+  <% end %>
+  <%= render partial: "coronavirus_local_restrictions/travel_guidance", locals: { travel_heading: t("coronavirus_local_restrictions.results.devolved_nations.travel_heading") } %>
+</div>

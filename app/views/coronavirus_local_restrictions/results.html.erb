@@ -1,0 +1,15 @@
+<% content_for :title, t("coronavirus_local_restrictions.lookup.title") %>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <% if !@location_lookup.data.first.england? %>
+      <%= render partial: "coronavirus_local_restrictions/devolved_nation" %>
+    <% elsif @restriction.present? && @restriction.alert_level == 2 %>
+        <%= render partial: "coronavirus_local_restrictions/tier_two_restrictions" %>
+    <% elsif @restriction.present? && @restriction.alert_level == 3 %>
+        <%= render partial: "coronavirus_local_restrictions/tier_three_restrictions" %>
+    <% else %>
+      <%= render partial: "coronavirus_local_restrictions/tier_one_restrictions" %>
+    <% end %>
+  </div>
+</div>
