@@ -170,42 +170,6 @@ E08000004:
     label: The guidance
     link: "/covid19app/localalertlevel2"
   extra_restrictions:
-E02004093:
-  alert_level: 2
-  name: Hadfield East & Tintwistle
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/covid19app/localalertlevel2"
-  extra_restrictions:
-E02004094:
-  alert_level: 2
-  name: Hadfield West & Gamesley
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/covid19app/localalertlevel2"
-  extra_restrictions:
-E02004095:
-  alert_level: 2
-  name: Glossop
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/covid19app/localalertlevel2"
-  extra_restrictions:
-E02004096:
-  alert_level: 2
-  name: Dinting, Simmondley & Charlesworth
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/covid19app/localalertlevel2"
-  extra_restrictions:
 E07000117:
   alert_level: 2
   name: Burnley Borough Council
@@ -362,6 +326,15 @@ E08000034:
 E08000033:
   alert_level: 2
   name: Calderdale Metropolitan Borough Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E08000036:
+  alert_level: 2
+  name: Wakefield Metropolitan District Council
   start_date:
   end_date:
   guidance:
@@ -557,15 +530,6 @@ E08000030:
     label: The guidance
     link: "/covid19app/localalertlevel2"
   extra_restrictions:
-E08000026:
-  alert_level: 2
-  name: Coventry City Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/covid19app/localalertlevel2"
-  extra_restrictions:
 E06000016:
   alert_level: 2
   name: Leicester City Council
@@ -650,6 +614,105 @@ E07000176:
 E06000018:
   alert_level: 2
   name: Nottingham City Council
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E05010637:
+  alert_level: 2
+  name: Howard Town
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E05010645:
+  alert_level: 2
+  name: Simmondley
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E05010634:
+  alert_level: 2
+  name: Hadfield South
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E05010631:
+  alert_level: 2
+  name: Dinting
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E05010643:
+  alert_level: 2
+  name: "St John's"
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E05010641:
+  alert_level: 2
+  name: Old Glossop
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E05010633:
+  alert_level: 2
+  name: Hadfield North
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E05010650:
+  alert_level: 2
+  name: Whitfield
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E05010648:
+  alert_level: 2
+  name: Tintwistle
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E05010642:
+  alert_level: 2
+  name: Padfield
+  start_date:
+  end_date:
+  guidance:
+    label: The guidance
+    link: "/covid19app/localalertlevel2"
+  extra_restrictions:
+E05010632:
+  alert_level: 2
+  name: Gamesley
   start_date:
   end_date:
   guidance:
