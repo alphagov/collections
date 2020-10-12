@@ -23,12 +23,29 @@ class CoronavirusLocalRestrictionsController < ApplicationController
                       input_error: I18n.t("coronavirus_local_restrictions.errors.no_postcode.input_error"),
                       error_description: I18n.t("coronavirus_local_restrictions.errors.no_postcode.error_description"),
                     }
+    elsif !postcode_validation
+      @error = true
+      return render :show,
+                    locals: {
+                      breadcrumbs: breadcrumbs,
+                      error_message: I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.error_message"),
+                      input_error: I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.input_error"),
+                      error_description: I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.error_description"),
+                    }
     end
 
     @content_item = content_item.to_hash
 
     @location_lookup = LocationLookupService.new(@postcode)
 
+    elsif @location_lookup.invalid_postcode?
+      return render :show,
+                    locals: {
+                      breadcrumbs: breadcrumbs,
+                      error_message: I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.error_message"),
+                      input_error: I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.input_error"),
+                      error_description: I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.error_description"),
+                    }
     elsif @location_lookup.postcode_not_found?
       return render :show,
                     locals: {
@@ -70,6 +87,10 @@ private
         url: "/coronavirus",
       },
     ]
+  end
+
+  def postcode_validation
+    @postcode =~ /^([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))\s?[0-9][A-Za-z]{2})$/
   end
 
   def content_item

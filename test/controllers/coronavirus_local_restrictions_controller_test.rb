@@ -33,5 +33,14 @@ describe CoronavirusLocalRestrictionsController do
       assert_response :success
       assert_template :results
     end
+
+    it "renders the local restriction page when given an incorrect postcode" do
+      postcode = "invalid postcode"
+      stub_mapit_does_not_have_a_postcode(postcode)
+      post :results, params: { "postcode-lookup" => postcode }
+
+      assert_response :success
+      assert_template :show
+    end
   end
 end
