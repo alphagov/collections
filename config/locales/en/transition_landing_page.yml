@@ -105,6 +105,13 @@ en:
     comms:
       links:
       - link:
+          text: "Government publishes updated GB-EU Border Operating Model"
+          path: "/government/news/government-publishes-updated-gb-eu-border-operating-model"
+          description: The government has published further detail on how the borders between Great Britain and the EU will work and the actions that traders, hauliers and passengers need to take.
+        metadata:
+          public_updated_at: 2020-10-08
+          document_type: "News Story"
+      - link:
           text: "£650 million investment for Northern Ireland"
           path: "/government/news/major-650-million-investment-for-northern-ireland"
           description: "The Chancellor of the Duchy of Lancaster and the Secretary of State for Northern Ireland have announced a £650m package of investment."
@@ -125,13 +132,6 @@ en:
         metadata:
           public_updated_at: 2020-02-27
           document_type: "Policy Paper"
-      - link:
-          text: "Government speeds up border planning for the end of the transition period"
-          path: "/government/news/government-accelerates-border-planning-for-the-end-of-the-transition-period"
-          description: Border controls for EU goods imported into Great Britain will be introduced in stages from the end of the transition period.
-        metadata:
-          public_updated_at: 2020-06-12
-          document_type: "News Story"
     topic_section_header: All transition period information
     topic_section_subheading: Browse all information related to the transition period
     email_mailto_subject: "UK's%20new%20start:%20let's%20get%20going-%20GOV.UK"
