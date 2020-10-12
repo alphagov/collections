@@ -1,5 +1,14 @@
 en:
   coronavirus_local_restrictions:
+    errors:
+      no_postcode:
+        error_message: There is a problem.
+        input_error: Enter a postcode.
+        error_description: Enter a postcode.
+      invalid_postcode:
+        error_message: There is a problem.
+        input_error: Enter a valid postcode.
+        error_description: Enter a valid postcode.
     lookup:
       input_label: Enter your postcode
       hint_text: For example SW1A 2AA
@@ -13,3 +22,33 @@ en:
     royal_mail_lookup:
       link_text: Find a postcode on Royal Mail's postcode finder
       href: http://www.royalmail.com/find-a-postcode
+    results:
+      travel_heading: If you travel to other areas
+      travel_text: <a class="govuk-link" href="/find-coronavirus-local-restrictions">Enter another postcode</a> to find out what restrictions there are.
+      level_one:
+        heading: Local COVID Alert Level Medium
+        match: "We've matched the postcode"
+        alert_level: This area is in Local COVID Alert Level Medium.
+        guidance: <a class="govuk-link" href="/covid19app/localalertlevel1">What you can and cannot do.</a
+      level_two:
+        heading: Local COVID Alert Level High
+        alert_level: This area is in Local COVID Alert Level High.
+        guidance: <a class="govuk-link" href="/covid19app/localalertlevel2">What you can and cannot do.</a>
+        match: "We've matched the postcode"
+      level_three:
+        heading: Local COVID Alert Level Very High
+        alert_level: This area is in Local COVID Alert Level Very High.
+        guidance: <a class="govuk-link" href="/covid19app/localalertlevel3">What you can and cannot do.</a>
+        match: "We've matched the postcode"
+      devolved_nations:
+        heading: There might be restrictions in this area
+        travel_heading: If you travel to areas in England
+        scotland:
+          guidance: <a class="govuk-link" href="https://www.gov.scot/coronavirus-covid-19/">Find out what you can or cannot do from the Scottish Government.</a>
+        wales:
+          guidance: <a class="govuk-link" href="https://gov.wales/local-lockdown">Find out what you can or cannot do from the Welsh Government.</a>
+        northern_ireland:
+          guidance: <a class="govuk-link" href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-and-localised-restrictions">Find out what you can or cannot do from the Northern Ireland Government.</a>
+      no_information:
+        heading: There is no information about the restrictions in this area
+        guidance: <a class="govuk-link" href="/government/collections/local-restrictions-areas-with-an-outbreak-of-coronavirus-covid-19">All coronavirus information about what you can and cannot do.</a>
