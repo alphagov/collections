@@ -2,7 +2,7 @@ require "yaml"
 require "govspeak"
 
 class TransitionLandingPagePresenter
-  attr_reader :taxon, :comms
+  attr_reader :taxon, :comms, :buckets
   delegate(
     :title,
     :base_path,
@@ -12,6 +12,7 @@ class TransitionLandingPagePresenter
   def initialize(taxon)
     @taxon = taxon
     @comms = fetch_comms
+    @buckets = fetch_buckets
   end
 
   def supergroup_sections
@@ -50,17 +51,10 @@ class TransitionLandingPagePresenter
     links.sort_by { |t| t[:locale] == I18n.default_locale.to_s ? "" : t[:locale] }
   end
 
-  def buckets(show_variant = false)
-    @buckets ||= begin
-      bucket_translation_key = show_variant ? "transition_landing_page.campaign_buckets_variant_B" : "transition_landing_page.campaign_buckets"
-      fetch_buckets(bucket_translation_key)
-    end
-  end
-
 private
 
-  def fetch_buckets(bucket_translation_key)
-    buckets = I18n.t(bucket_translation_key)
+  def fetch_buckets
+    buckets = I18n.t("transition_landing_page.campaign_buckets")
     buckets.each do |bucket|
       bucket[:list_block] = convert_to_govspeak(bucket[:list_block])
     end
