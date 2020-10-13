@@ -31,16 +31,16 @@ en:
         heading: Local COVID Alert Level Medium
         match: "We've matched the postcode"
         alert_level: This area is in Local COVID Alert Level Medium.
-        guidance: <a class="govuk-link" href="/covid19app/localalertlevel1">What you can and cannot do.</a
+        guidance: <a class="govuk-link" href="/guidance/local-covid-alert-level-medium">What you can and cannot do.</a
       level_two:
         heading: Local COVID Alert Level High
         alert_level: This area is in Local COVID Alert Level High.
-        guidance: <a class="govuk-link" href="/covid19app/localalertlevel2">What you can and cannot do.</a>
+        guidance: <a class="govuk-link" href="/guidance/local-covid-alert-level-high">What you can and cannot do.</a>
         match: "We've matched the postcode"
       level_three:
         heading: Local COVID Alert Level Very High
         alert_level: This area is in Local COVID Alert Level Very High.
-        guidance: <a class="govuk-link" href="/covid19app/localalertlevel3">What you can and cannot do.</a>
+        guidance: <a class="govuk-link" href="/guidance/local-covid-alert-level-very-high">What you can and cannot do.</a>
         match: "We've matched the postcode"
       devolved_nations:
         heading: There might be restrictions in this area
@@ -53,4 +53,4 @@ en:
           guidance: <a class="govuk-link" href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-and-localised-restrictions">Find out what you can or cannot do from the Northern Ireland Government.</a>
       no_information:
         heading: There is no information about the restrictions in this area
-        guidance: <a class="govuk-link" href="/coronavirus">All coronavirus information about what you can and cannot do.</a>
+        guidance: <a class="govuk-link" href="/guidance/full-list-of-local-covid-alert-levels-by-area">Full list of Local COVID Alert Levels by area.</a>
