@@ -23,49 +23,12 @@ describe TransitionLandingPageController do
 
     describe "TransitionUrgency2 AB test" do
       context "Bucket section header test in the en locale" do
-        it "A" do
-          with_variant TransitionUrgency2: "A" do
-            get :show
-            assert_select ".govuk-heading-l", text: "Actions you can take now"
-            assert_select ".govuk-heading-l", text: "Changes for businesses and citizens", count: 0
-          end
-        end
-
-        it "B" do
-          with_variant TransitionUrgency2: "B" do
-            get :show
-            assert_select ".govuk-heading-l", text: "Changes for businesses and citizens"
-            assert_select ".govuk-heading-l", text: "Actions you can take now", count: 0
-          end
-        end
-
-        it "Z" do
-          with_variant TransitionUrgency2: "Z" do
-            get :show
-            assert_select ".govuk-heading-l", text: "Actions you can take now"
-          end
-        end
-      end
-
-      context "Make sure that buckets appear in the expected order in the en locale" do
-        it "A" do
-          with_variant TransitionUrgency2: "A" do
-            get :show
-            assert_select ".landing-page__section-list-wrapper h3:first-of-type", text: "Travelling to the EU"
-          end
-        end
-
-        it "B" do
-          with_variant TransitionUrgency2: "B" do
-            get :show
-            assert_select ".landing-page__section-list-wrapper h3:first-of-type", text: "Businesses that import and export goods"
-          end
-        end
-
-        it "Z" do
-          with_variant TransitionUrgency2: "Z" do
-            get :show
-            assert_select ".landing-page__section-list-wrapper h3:first-of-type", text: "Travelling to the EU"
+        %w[A B Z].each do |variant|
+          it "displays the winning text for the #{variant} variant" do
+            with_variant TransitionUrgency2: variant do
+              get :show
+              assert_select ".govuk-heading-l", text: "Changes for businesses and citizens"
+            end
           end
         end
       end
