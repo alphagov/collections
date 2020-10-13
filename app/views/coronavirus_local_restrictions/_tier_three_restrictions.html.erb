@@ -1,15 +1,13 @@
-<div class="covid-local-restrictions__local-alert-guidance">
-  <%= render "govuk_publishing_components/components/title", {
-    title: t("coronavirus_local_restrictions.results.level_three.heading")
-  } %>
-  <p class="govuk-body">
-    <%= t("coronavirus_local_restrictions.results.level_three.match") %> <strong><%= @postcode %></strong> to <strong><%= @restriction.area_name %></strong>.
-  </p>
-  <p class="govuk-body">
-    <%= t("coronavirus_local_restrictions.results.level_three.alert_level") %>
-  </p>
-  <p class="govuk-body">
-    <%= sanitize(t("coronavirus_local_restrictions.results.level_three.guidance")) %>
-  </p>
-  <%= render partial: "coronavirus_local_restrictions/travel_guidance", locals: { travel_heading: t("coronavirus_local_restrictions.results.travel_heading") } %>
-</div>
+<%= render "govuk_publishing_components/components/title", {
+  title: t("coronavirus_local_restrictions.results.level_three.heading")
+} %>
+<p class="govuk-body">
+  <%= t("coronavirus_local_restrictions.results.level_three.match") %> <strong><%= @postcode %></strong> to <strong><%= @restriction.area_name %></strong>.
+</p>
+<p class="govuk-body">
+  <%= t("coronavirus_local_restrictions.results.level_three.alert_level") %>
+</p>
+<p class="govuk-body">
+  <%= sanitize(t("coronavirus_local_restrictions.results.level_three.guidance")) %>
+</p>
+<%= render partial: "coronavirus_local_restrictions/travel_guidance", locals: { travel_heading: t("coronavirus_local_restrictions.results.travel_heading") } %>
