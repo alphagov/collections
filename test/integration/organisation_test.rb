@@ -689,8 +689,8 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
   it "shows subscription links" do
     visit "/government/organisations/attorney-generals-office"
-    assert page.has_css?(".gem-c-subscription-links__link[href='/email-signup?link=/government/organisations/attorney-generals-office']", text: "Get email alerts")
-    assert page.has_css?(".gem-c-subscription-links__link[href='#']", text: "Subscribe to feed")
+    assert page.has_css?("a[href='/email-signup?link=/government/organisations/attorney-generals-office']", text: "Get email alerts")
+    assert page.has_css?("button", text: "Subscribe to feed")
   end
 
   it "shows the 'what we do' section" do
