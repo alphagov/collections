@@ -28,18 +28,18 @@ en:
       travel_heading: If you travel to other areas
       travel_text: <a class="govuk-link" href="/find-coronavirus-local-restrictions">Enter another postcode</a> to find out what restrictions there are.
       level_one:
-        heading: Local COVID Alert Level Medium
+        heading: "Local COVID Alert Level: Medium"
         match: "We've matched the postcode"
-        alert_level: This area is in Local COVID Alert Level Medium.
+        alert_level: "This area is in Local COVID Alert Level: Medium."
         guidance: <a class="govuk-link" href="/guidance/local-covid-alert-level-medium">What you can and cannot do.</a
       level_two:
-        heading: Local COVID Alert Level High
-        alert_level: This area is in Local COVID Alert Level High.
+        heading: "Local COVID Alert Level: High"
+        alert_level: "This area is in Local COVID Alert Level: High."
         guidance: <a class="govuk-link" href="/guidance/local-covid-alert-level-high">What you can and cannot do.</a>
         match: "We've matched the postcode"
       level_three:
-        heading: Local COVID Alert Level Very High
-        alert_level: This area is in Local COVID Alert Level Very High.
+        heading: "Local COVID Alert Level: Very High"
+        alert_level: "This area is in Local COVID Alert Level: Very High."
         guidance: <a class="govuk-link" href="/guidance/local-covid-alert-level-very-high">What you can and cannot do.</a>
         match: "We've matched the postcode"
       devolved_nations:
