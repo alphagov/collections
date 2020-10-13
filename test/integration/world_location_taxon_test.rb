@@ -27,9 +27,9 @@ class WorldLocationTaxonTest < ActionDispatch::IntegrationTest
     email_url = Plek.new.website_root + "/email-signup?link=#{@base_path}"
     feed_url = Plek.new.website_root + "/world/usa.atom"
 
-    assert page.has_selector?(".gem-c-subscription-links__link[href='#{email_url}']")
-    assert page.has_selector?(".gem-c-subscription-links__link[href='#']", text: "Subscribe to feed")
-    assert page.has_selector?(".gem-c-subscription-links__feed-box input[value='#{feed_url}']")
+    assert page.has_selector?("a[href='#{email_url}']", text: "Get email alerts")
+    assert page.has_selector?("button", text: "Subscribe to feed")
+    assert page.has_selector?(".gem-c-subscription-links input[value='#{feed_url}']")
   end
 
   it "does not contain the feed selector if we are browsing a world location leaf page" do
@@ -47,8 +47,8 @@ class WorldLocationTaxonTest < ActionDispatch::IntegrationTest
 
     feed_url = Plek.new.website_root + "/world/usa.atom"
 
-    assert page.has_no_selector?(".gem-c-subscription-links__link[href='#']", text: "Subscribe to feed")
-    assert page.has_no_selector?(".gem-c-subscription-links__feed-box input[value='#{feed_url}']")
+    assert page.has_no_selector?("button", text: "Subscribe to feed")
+    assert page.has_no_selector?(".gem-c-subscription-links input[value='#{feed_url}']")
   end
 
 private
