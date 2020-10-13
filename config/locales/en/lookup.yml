@@ -11,7 +11,7 @@ en:
         error_description: Enter a valid postcode
     lookup:
       input_label: Enter your postcode
-      hint_text: For example SW1A 2AA
+      hint_text: For example LS1 1UR
       button_text: Find
       title: Find out the coronavirus restrictions in a local area
       inset_text: There are different restrictions in <a class="govuk-link" href="https://www.gov.scot/coronavirus-covid-19/">Scotland</a>, <a class="govuk-link" href="https://gov.wales/local-lockdown">Wales</a> and <a class="govuk-link" href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-and-localised-restrictions">Northern Ireland</a>.
