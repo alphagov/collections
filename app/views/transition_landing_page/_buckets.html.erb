@@ -10,28 +10,43 @@
       <h2 class="govuk-heading-l">
         <%= guidance_header %>
       </h2>
-      <p class="landing-page__guidance_subheader" data-module="track-click">
-        <%= raw t("transition_landing_page.guidance_subheader") %>
-      </p>
+      <% unless show_variant? %>
+        <p class="landing-page__guidance_subheader" data-module="track-click">
+          <%= raw t("transition_landing_page.guidance_subheader") %>
+        </p>
+      <% end %>
     </div>
   </div>
 
-  <% buckets.each do |bucket| %>
-    <div class="govuk-grid-row landing-page__section-list-wrapper">
-      <div class="govuk-grid-column-one-third">
-        <% if bucket[:row_title] %>
-          <h3 class="govuk-heading-m">
-            <%= bucket[:row_title] %>
-          </h3>
-        <% end %>
-      </div>
+  <% if show_variant? %>
+    <% variant_b_section = I18n.t("transition_landing_page.campaign_links") %>
+    <% links = variant_b_section[:links].map{ |link| "<a href='#{link[:path]}'>#{link[:text]}</a>"} %>
+    <p class='govuk-body'><%= variant_b_section[:lead_in] %>
+      <%= render "govuk_publishing_components/components/list", {
+        extra_spacing: true,
+        visible_counters: true,
+        items: links
+      } %>
+    </p>
+    <p class="govuk-body govuk-!-padding-top-2"><%= variant_b_section[:lead_out].html_safe %></p>
+  <% else %>
+    <% buckets.each do |bucket| %>
+      <div class="govuk-grid-row landing-page__section-list-wrapper">
+        <div class="govuk-grid-column-one-third">
+          <% if bucket[:row_title] %>
+            <h3 class="govuk-heading-m">
+              <%= bucket[:row_title] %>
+            </h3>
+          <% end %>
+        </div>
 
-      <div class="govuk-grid-column-two-thirds" data-module="track-click">
-        <%= render "govuk_publishing_components/components/govspeak", {
-          } do %>
-          <%= bucket[:list_block] %>
-        <% end %>
+        <div class="govuk-grid-column-two-thirds" data-module="track-click">
+          <%= render "govuk_publishing_components/components/govspeak", {
+            } do %>
+            <%= bucket[:list_block] %>
+          <% end %>
+        </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
 </div>
