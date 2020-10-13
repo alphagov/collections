@@ -73,10 +73,6 @@ class CoronavirusLocalRestrictionsController < ApplicationController
     end
   end
 
-  def error_404
-    super
-  end
-
 private
 
   # Breadcrumbs for this page are hardcoded because it doesn't yet have a
