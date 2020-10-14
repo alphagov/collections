@@ -52,7 +52,7 @@ en:
       level_three:
         heading: "Local COVID Alert Level: Very High"
         alert_level: "This area is in Local COVID Alert Level: Very High."
-        guidance: <a class="govuk-link" href="/guidance/local-covid-alert-level-very-high">What you can and cannot do.</a>
+        guidance: <a class="govuk-link" href="/guidance/local-covid-alert-level-very-high-liverpool-city-region">What you can and cannot do.</a>
         match: "We've matched the postcode"
       devolved_nations:
         heading: There might be restrictions in this area
