@@ -201,6 +201,10 @@ $green: #00703C;
   border-top: govuk-spacing(2) solid govuk-colour('black');
 }
 
+.landing-page__section--border-top-light {
+  border-top: govuk-spacing(1) solid govuk-colour("mid-grey", $legacy: "grey-2");
+}
+
 .landing-page__section--border-bottom-red {
   border-bottom: govuk-spacing(2) solid $red;
 }

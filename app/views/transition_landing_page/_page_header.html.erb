@@ -33,7 +33,7 @@
         <div class="govuk-grid-column-two-thirds landing-page__intro">
           <%= render "govuk_publishing_components/components/govspeak", {
           } do %>
-            <p class="govuk-body-l"><%= t("transition_landing_page.page_header_explainer") %></p>
+            <p class="govuk-body-l"><%= t("transition_landing_page.page_header_explainer").html_safe %></p>
           <% end %>
         </div>
       </div>
