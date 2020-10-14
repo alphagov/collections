@@ -17,6 +17,7 @@
 //= require modules/toggle-attribute
 //= require components/accordion
 //= require modules/coronavirus-landing-page
+//= require modules/coronavirus-track-local-restrictions
 //= require modules/track-timeline-links
 
 $(document).on('ready', function(){
