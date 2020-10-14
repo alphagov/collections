@@ -1,0 +1,43 @@
+$header-breakpoint: 960px;
+
+.transition-countdown__countdown {
+  padding: govuk-spacing(3);
+  text-align: left;
+
+  @include govuk-media-query($from: $header-breakpoint) {
+    padding: govuk-spacing(4);
+    width: 50%;
+  }
+}
+
+.transition-countdown__days-left {
+  float: left;
+  @include govuk-font(80, $weight: bold);
+  display: inline-block;
+  vertical-align: middle;
+  background-color: black;
+  color: white;
+
+  @include govuk-media-query($from: tablet) {
+    @include govuk-font(48, $weight: bold);
+  }
+
+  @include govuk-media-query($from: $header-breakpoint) {
+    @include govuk-font(80, $weight: bold);
+    display: inline-block;
+  }
+}
+
+.transition-countdown__days-text {
+  @include govuk-font($size: 24, $weight: bold, $line-height: 1.5);
+  display: inline-block;
+  color: black;
+  margin-left: 8px;
+  margin-top: 10px;
+
+  @include govuk-media-query($from: $header-breakpoint) {
+    @include govuk-font(24, $weight: bold);
+    margin-left: 15px;
+    margin-top: 20px;
+  }
+}

@@ -56,7 +56,6 @@ $green: #00703C;
 
 .landing-page__header-text-block {
   @include govuk-media-query($from: $header-breakpoint) {
-    padding-bottom: 80px;
   }
 }
 
@@ -113,7 +112,6 @@ $green: #00703C;
 .landing-page__page_title {
   @include govuk-font($size: 48, $weight: bold);
   color: govuk-colour("black");
-  margin-top: govuk-spacing(7);
   margin-bottom: govuk-spacing(4);
 }
 

@@ -36,6 +36,7 @@
               <%= t("transition_landing_page.page_header_explainer").html_safe %>
             </p>
           <% end %>
+          <%= render partial: "countdown", locals: {clock: CountdownClock.new} %>
         </div>
       </div>
     </div>
