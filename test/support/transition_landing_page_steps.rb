@@ -22,7 +22,7 @@ module TransitionLandingPageSteps
   end
 
   def then_i_can_see_the_header_section
-    assert page.has_selector?(".landing-page__header--with-bg-image h1", text: "The UK transition: you need to act now")
+    assert page.has_selector?(".landing-page__header--with-bg-image h1", text: "The UK transition: time is running out")
   end
 
   def then_i_cannot_see_the_get_ready_section
