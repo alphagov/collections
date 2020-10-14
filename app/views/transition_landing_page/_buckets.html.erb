@@ -20,15 +20,30 @@
 
   <% if show_variant? %>
     <% variant_b_section = I18n.t("transition_landing_page.campaign_links") %>
-    <% links = variant_b_section[:links].map{ |link| "<a href='#{link[:path]}'>#{link[:text]}</a>"} %>
-    <p class='govuk-body'><%= variant_b_section[:lead_in] %>
-      <%= render "govuk_publishing_components/components/list", {
-        extra_spacing: true,
-        visible_counters: true,
-        items: links
-      } %>
-    </p>
-    <p class="govuk-body govuk-!-padding-top-2"><%= variant_b_section[:lead_out].html_safe %></p>
+    <%
+      links = variant_b_section[:links].map do |link|
+        link_to(link[:text], link[:path], data: {
+          track_action: link[:path],
+          track_category: "transition-landing-page",
+          track_label: "What you can do now"
+        })
+      end
+    %>
+    <div class="govuk-grid-row landing-page__section-list-wrapper">
+      <div class="govuk-grid-column-two-thirds" data-module="track-click">
+        <p class='govuk-body'><%= variant_b_section[:lead_in] %></p>
+
+        <%= tag.ul class: %w[govuk-list govuk-list--bullet govuk-list--spaced] do %>
+          <% links.each do |link| %>
+            <%= tag.li do %>
+              <%= link %>
+            <% end %>
+          <% end %>
+        <% end %>
+
+        <p class="govuk-body govuk-!-padding-top-2"><%= variant_b_section[:lead_out].html_safe %></p>
+      </div>
+    </div>
   <% else %>
     <% buckets.each do |bucket| %>
       <div class="govuk-grid-row landing-page__section-list-wrapper">
