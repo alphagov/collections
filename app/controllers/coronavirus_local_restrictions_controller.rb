@@ -13,17 +13,14 @@ class CoronavirusLocalRestrictionsController < ApplicationController
 
   def results
     if params["postcode-lookup"].blank?
-      @error = true
       return render_no_postcode_error
     end
 
     @postcode = params["postcode-lookup"].gsub(/\s+/, "").upcase
 
     if @postcode.blank?
-      @error = true
       return render_no_postcode_error
     elsif !postcode_validation
-      @error = true
       return render_invalid_postcode_error
     end
 
