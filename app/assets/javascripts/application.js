@@ -18,6 +18,7 @@
 //= require components/accordion
 //= require modules/coronavirus-landing-page
 //= require modules/coronavirus-track-local-restrictions
+//= require modules/coronavirus-track-local-restriction-results
 //= require modules/track-timeline-links
 
 $(document).on('ready', function(){
