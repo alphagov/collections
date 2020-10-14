@@ -11,7 +11,7 @@
         href: "#current-role-holder"
       } : nil,
 
-      role.past_holders.present? ? {
+      role.past_holders.present? || role.supports_historical_accounts? ? {
         text: t("roles.headings.previous_holders"),
         href: "#past-role-holders"
       } : nil,

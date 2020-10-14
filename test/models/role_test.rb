@@ -164,10 +164,7 @@ describe Role do
     context "when applied to a chancellor" do
       setup do
         @api_data["title"] = "Chancellor of the Exchequer"
-        @api_data["base_path"] = "/government/ministers/chancellor"
-      end
-      it "pluralises correctly" do
-        assert @role.title.pluralize == "Chancellors of the Exchequer"
+        @api_data["base_path"] = "/government/ministers/chancellor-of-the-exchequer"
       end
 
       it "points to the correct historical account page" do
@@ -176,12 +173,8 @@ describe Role do
     end
     context "when applied to a foreign secretary" do
       setup do
-        @api_data["title"] = "Secretary of State for Foreign and Commonwealth Affairs"
-        @api_data["base_path"] = "/government/ministers/foreign-secretary"
-      end
-
-      it "pluralises correctly" do
-        assert @role.title.pluralize == "Secretaries of State for Foreign and Commonwealth Affairs"
+        @api_data["title"] = "Secretary of State for Foreign, Commonwealth and Development Affairs"
+        @api_data["base_path"] = "/government/ministers/secretary-of-state-for-foreign-commonwealth-and-development-affairs"
       end
 
       it "points to the correct historical account page" do
