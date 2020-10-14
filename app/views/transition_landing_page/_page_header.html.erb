@@ -19,8 +19,7 @@
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-one-third">
           <%= render "govuk_publishing_components/components/translation-nav", {
-            translations: presented_taxon.translation_links,
-            inverse: true
+            translations: presented_taxon.translation_links
           } %>
         </div>
       </div>
@@ -33,7 +32,9 @@
         <div class="govuk-grid-column-two-thirds landing-page__intro">
           <%= render "govuk_publishing_components/components/govspeak", {
           } do %>
-            <p class="govuk-body-l"><%= t("transition_landing_page.page_header_explainer").html_safe %></p>
+            <p class="govuk-body govuk-!-font-size-36">
+              <%= t("transition_landing_page.page_header_explainer").html_safe %>
+            </p>
           <% end %>
         </div>
       </div>

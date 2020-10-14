@@ -19,8 +19,7 @@ $green: #00703C;
   padding-bottom: govuk-spacing(6);
   padding-top: govuk-spacing(3);
   margin-bottom: govuk-spacing(6);
-  background-color: $dark-blue;
-  color: govuk-colour("white");
+  color: govuk-colour("black");
 }
 
 .red-highlight {
@@ -31,15 +30,14 @@ $green: #00703C;
 .landing-page__header--with-bg-image {
   padding-bottom: govuk-spacing(4);
   padding-top: govuk-spacing(3);
-  background-color: $dark-blue;
   border-top: govuk-spacing(2) solid $red;
 
   @include govuk-media-query($from: $header-breakpoint) {
     padding-bottom: govuk-spacing(4);
-    padding-top: govuk-spacing(8);
-    background-image: image-url('transition-2020-header-background.jpg');
-    background-size: cover;
-    background-position: top;
+    background-image: image-url('transition-image-placeholder.png');
+    background-size: 37%;
+    background-repeat: no-repeat;
+    background-position: right;
     min-height: 500px;
   }
 
@@ -59,12 +57,6 @@ $green: #00703C;
 .landing-page__header-text-block {
   @include govuk-media-query($from: $header-breakpoint) {
     padding-bottom: 80px;
-    padding-top: govuk-spacing(5);
-
-    background: $dark-blue;
-    background: -moz-linear-gradient(90deg, $dark-blue 66.66%, $transparent 66.66%);
-    background: -webkit-linear-gradient(90deg, $dark-blue 66.66%, $transparent 66.66%);
-    background: linear-gradient(90deg, $dark-blue 66.66%, $transparent 66.66%);
   }
 }
 
@@ -114,23 +106,13 @@ $green: #00703C;
 .landing-page__intro {
   p {
     @include govuk-font($size: 24);
-    color: govuk-colour("white");
-  }
-
-  a:link,
-  a:visited {
-    font-weight: bold;
-    color: govuk-colour("white");
-  }
-
-  a:focus {
     color: govuk-colour("black");
   }
 }
 
 .landing-page__page_title {
   @include govuk-font($size: 48, $weight: bold);
-  color: govuk-colour("white");
+  color: govuk-colour("black");
   margin-top: govuk-spacing(7);
   margin-bottom: govuk-spacing(4);
 }
