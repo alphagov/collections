@@ -12,6 +12,17 @@ class CoronavirusLocalRestrictionsController < ApplicationController
   end
 
   def results
+    if params["postcode-lookup"].blank?
+      @error = true
+      return render :show,
+                    locals: {
+                      breadcrumbs: breadcrumbs,
+                      error_message: I18n.t("coronavirus_local_restrictions.errors.no_postcode.error_message"),
+                      input_error: I18n.t("coronavirus_local_restrictions.errors.no_postcode.input_error"),
+                      error_description: I18n.t("coronavirus_local_restrictions.errors.no_postcode.error_description"),
+                    }
+    end
+
     @postcode = params["postcode-lookup"].gsub(/\s+/, "").upcase
 
     if @postcode.blank?
