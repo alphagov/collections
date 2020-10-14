@@ -4,18 +4,11 @@
   input_error ||= nil
   hint_text ||= t("coronavirus_local_restrictions.lookup.hint_text")
   button_text ||= t("coronavirus_local_restrictions.lookup.button_text")
-  error_message ||= nil
-  error_description ||= nil
   link ||= { text: t("coronavirus_local_restrictions.royal_mail_lookup.link_text"), href: t("coronavirus_local_restrictions.royal_mail_lookup.href")}
 %>
-<% if error_message %>
-  <%= render "govuk_publishing_components/components/error_alert", {
-      message: error_message,
-      description: error_description,
-    } %>
-<% end %>
 <div class="postcode-lookup">
     <%= render "govuk_publishing_components/components/input", {
+          id: "postcodeLookup",
           label: {
             text: input_label
           },
@@ -24,7 +17,7 @@
           value: input_value,
           name: "postcode-lookup",
           hint: hint_text,
-          invalid: error_message ? 'true' : 'false',
+          invalid: input_error ? 'true' : 'false',
           autocomplete: "postal-code",
         } %>
     <%= render "govuk_publishing_components/components/button", text: button_text, margin_bottom: true %>
