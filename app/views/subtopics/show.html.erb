@@ -25,9 +25,13 @@
     link_to_latest_feed: true,
   }) do %>
   <% subtopic.lists.each_with_index do |list, list_index| -%>
-    <div class="govuk-grid-row govuk-!-margin-bottom-5">
-      <div class="govuk-grid-column-one-third">
-        <h2 class="govuk-heading-m"><%= list.title %></h2>
+    <div class="govuk-grid-row govuk-!-margin-bottom-7">
+      <div class="govuk-grid-column-one-third  govuk-!-margin-bottom-2">
+        <%= render "govuk_publishing_components/components/heading", {
+          font_size: "m",
+          heading_level: 2,
+          text: list.title,
+        } %>
       </div>
       <div class="govuk-grid-column-two-thirds">
         <%= render 'components/topic-list', topic_list_params(list.contents, list_index: list_index, category: 'navSubtopicContentItemLinkClicked') %>
