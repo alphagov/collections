@@ -23,6 +23,11 @@ $green: #00703C;
   color: govuk-colour("white");
 }
 
+.red-highlight {
+  background: red;
+  color: white;
+}
+
 .landing-page__header--with-bg-image {
   padding-bottom: govuk-spacing(4);
   padding-top: govuk-spacing(3);
