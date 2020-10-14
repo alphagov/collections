@@ -1,5 +1,10 @@
 <% guidance ||= nil %>
 
+<% if guidance.present? && guidance["intro"].present? %>
+  <p class="govuk-body">
+    <%= render_govspeak(guidance["intro"]) %>
+  <p>
+<% end %>
 <% if guidance.present? && guidance["links"].present? %>
   <%
     guidance_links = guidance["links"].map do | link |
