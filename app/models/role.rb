@@ -87,7 +87,7 @@ class Role
 
   def past_holders_url
     if slug == "prime-minister"
-      "/government/history/past-prime-minister"
+      "/government/history/past-prime-ministers"
     elsif slug == "chancellor-of-the-exchequer"
       "/government/history/past-chancellors"
     elsif slug == "secretary-of-state-for-foreign-commonwealth-and-development-affairs"
