@@ -2,720 +2,240 @@
 E08000012:
   alert_level: 3
   name: Liverpool City Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-very-high"
-  extra_restrictions:
 E08000011:
   alert_level: 3
   name: Knowsley Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-very-high"
-  extra_restrictions:
 E08000015:
   alert_level: 3
   name: Wirral Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-very-high"
-  extra_restrictions:
 E08000013:
   alert_level: 3
   name: St Helens Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-very-high"
-  extra_restrictions:
 E08000014:
   alert_level: 3
   name: Sefton Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-very-high"
-  extra_restrictions:
 E06000006:
   alert_level: 3
   name: Halton Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-very-high"
-  extra_restrictions:
 E06000007:
   alert_level: 2
   name: Warrington Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E06000050:
   alert_level: 2
   name: Cheshire West and Chester Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E06000049:
   alert_level: 2
   name: Cheshire East Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000003:
   alert_level: 2
   name: Manchester City Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000001:
   alert_level: 2
   name: Bolton Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000002:
   alert_level: 2
   name: Bury Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000007:
   alert_level: 2
   name: Stockport Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000008:
   alert_level: 2
   name: Tameside Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000009:
   alert_level: 2
   name: Trafford Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000010:
   alert_level: 2
   name: Wigan Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000006:
   alert_level: 2
   name: Salford City Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000005:
   alert_level: 2
   name: Rochdale Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000004:
   alert_level: 2
   name: Oldham Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E07000117:
   alert_level: 2
   name: Burnley Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E07000118:
   alert_level: 2
   name: Chorley Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E07000119:
   alert_level: 2
   name: Fylde Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E07000120:
   alert_level: 2
   name: Hyndburn Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E07000121:
   alert_level: 2
   name: Lancaster City Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E07000122:
   alert_level: 2
   name: Pendle Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E07000123:
   alert_level: 2
   name: Preston City Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E07000124:
   alert_level: 2
   name: Ribble Valley Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E07000125:
   alert_level: 2
   name: Rossendale Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E07000126:
   alert_level: 2
   name: South Ribble Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E07000127:
   alert_level: 2
   name: West Lancashire Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E07000128:
   alert_level: 2
   name: Wyre Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E06000009:
   alert_level: 2
   name: Blackpool Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E06000008:
   alert_level: 2
   name: Blackburn with Darwen Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000035:
   alert_level: 2
   name: Leeds City Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000032:
   alert_level: 2
   name: City of Bradford Metropolitan District Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000034:
   alert_level: 2
   name: Kirklees Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000033:
   alert_level: 2
   name: Calderdale Metropolitan Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000036:
   alert_level: 2
   name: Wakefield Metropolitan District Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000016:
   alert_level: 2
   name: Barnsley Metropolitan Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000018:
   alert_level: 2
   name: Rotherham Metropolitan Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000017:
   alert_level: 2
   name: Doncaster Metropolitan Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000019:
   alert_level: 2
   name: Sheffield City Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000021:
   alert_level: 2
   name: Newcastle City Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000023:
   alert_level: 2
   name: South Tyneside Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000022:
   alert_level: 2
   name: North Tyneside Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000037:
   alert_level: 2
   name: Gateshead Metropolitan Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000024:
   alert_level: 2
   name: Sunderland City Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E06000047:
   alert_level: 2
   name: Durham County Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E06000057:
   alert_level: 2
   name: Northumberland County Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E06000002:
   alert_level: 2
   name: Middlesbrough Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E06000003:
   alert_level: 2
   name: Redcar and Cleveland Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E06000004:
   alert_level: 2
   name: Stockton-on-Tees Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E06000005:
   alert_level: 2
   name: Darlington Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E06000001:
   alert_level: 2
   name: Hartlepool Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000025:
   alert_level: 2
   name: Birmingham City Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000028:
   alert_level: 2
   name: Sandwell Metropolitan Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000029:
   alert_level: 2
   name: Solihull Metropolitan Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000031:
   alert_level: 2
   name: City of Wolverhampton Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E08000030:
   alert_level: 2
   name: Walsall Metropolitan Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E06000016:
   alert_level: 2
   name: Leicester City Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E07000135:
   alert_level: 2
   name: Oadby and Wigston District Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E07000170:
   alert_level: 2
   name: Ashfield District Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E07000171:
   alert_level: 2
   name: Bassetlaw District Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E07000172:
   alert_level: 2
   name: Broxtowe Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E07000173:
   alert_level: 2
   name: Gedling Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E07000174:
   alert_level: 2
   name: Mansfield District Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E07000175:
   alert_level: 2
   name: Newark and Sherwood District Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E07000176:
   alert_level: 2
   name: Rushcliffe Borough Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E06000018:
   alert_level: 2
   name: Nottingham City Council
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E05010637:
   alert_level: 2
   name: Howard Town
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E05010645:
   alert_level: 2
   name: Simmondley
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E05010634:
   alert_level: 2
   name: Hadfield South
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E05010631:
   alert_level: 2
   name: Dinting
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E05010643:
   alert_level: 2
   name: "St John's"
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E05010641:
   alert_level: 2
   name: Old Glossop
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E05010633:
   alert_level: 2
   name: Hadfield North
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E05010650:
   alert_level: 2
   name: Whitfield
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E05010648:
   alert_level: 2
   name: Tintwistle
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E05010642:
   alert_level: 2
   name: Padfield
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
 E05010632:
   alert_level: 2
   name: Gamesley
-  start_date:
-  end_date:
-  guidance:
-    label: The guidance
-    link: "/guidance/local-covid-alert-level-high"
-  extra_restrictions:
