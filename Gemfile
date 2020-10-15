@@ -14,6 +14,7 @@ gem "rinku", require: "rails_rinku"
 gem "sass-rails"
 gem "slimmer"
 gem "uglifier"
+gem "uk_postcode"
 
 group :test do
   gem "cucumber-rails", require: false
