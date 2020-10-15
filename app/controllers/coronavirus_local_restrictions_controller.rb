@@ -16,7 +16,7 @@ class CoronavirusLocalRestrictionsController < ApplicationController
       return render_no_postcode_error
     end
 
-    @postcode = params["postcode-lookup"].gsub(/\s+/, "").upcase
+    @postcode = PostcodeService.new(params["postcode-lookup"]).sanitize
 
     if @postcode.blank?
       return render_no_postcode_error

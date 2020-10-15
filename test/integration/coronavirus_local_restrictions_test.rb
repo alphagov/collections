@@ -45,6 +45,14 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     then_i_see_the_no_information_page
   end
 
+  it "displays the right restrictions if the postcode is correct except for a special character" do
+    given_i_am_on_the_local_restrictions_page
+    then_i_can_see_the_postcode_lookup_form
+    then_i_enter_a_valid_english_postcode_with_an_extra_special_character
+    then_i_click_on_find
+    then_i_see_the_results_page_for_level_two_with_future_level_three_restrictions
+  end
+
   describe "future restrictions" do
     before do
       travel_to Time.zone.local(2020, 10, 12, 20, 10, 10)
@@ -74,7 +82,7 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   end
 
   def then_i_enter_a_valid_english_postcode
-    postcode = "E18QS"
+    postcode = "E1 8QS"
     areas = [
       {
         "gss" => "E01000123",
@@ -89,7 +97,7 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   end
 
   def then_i_enter_a_valid_english_postcode_with_a_future_restriction
-    postcode = "E18QS"
+    postcode = "E1 8QS"
     areas = [
       {
         "gss" => "E08000001",
@@ -104,8 +112,23 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     fill_in "Enter your postcode", with: postcode
   end
 
+  def then_i_enter_a_valid_english_postcode_with_an_extra_special_character
+    areas = [
+      {
+        "gss" => "E08000001",
+        "name" => "Coruscant Planetary Council",
+        "type" => "LBO",
+        "country_name" => "England",
+      },
+    ]
+    stub_mapit_has_a_postcode_and_areas("E1 8QS", [], areas)
+    LocalRestriction.any_instance.stubs(:file_name).returns("test/fixtures/local-restrictions.yaml")
+
+    fill_in "Enter your postcode", with: ".e18qs"
+  end
+
   def then_i_enter_a_valid_english_postcode_in_tier_two
-    postcode = "E18QS"
+    postcode = "E1 8QS"
     areas = [
       {
         "gss" => "E09000030",
@@ -120,7 +143,7 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   end
 
   def then_i_enter_a_valid_welsh_postcode
-    postcode = "LL110BY"
+    postcode = "LL11 0BY"
     areas = [
       {
         "gss" => "E01000123",
@@ -133,7 +156,7 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   end
 
   def when_i_enter_a_valid_postcode_that_returns_no_results
-    postcode = "IM11AF"
+    postcode = "IM1 1AF"
     mapit_endpoint = Plek.current.find("mapit")
 
     stub_request(:get, "#{mapit_endpoint}/postcode/" + postcode.tr(" ", "+") + ".json")
