@@ -24,20 +24,4 @@ class LocalRestriction
   def alert_level
     restriction["alert_level"]
   end
-
-  def guidance
-    restriction["guidance"]
-  end
-
-  def extra_restrictions
-    restriction["extra_restrictions"]
-  end
-
-  def start_date
-    restriction["start_date"]&.to_date
-  end
-
-  def end_date
-    restriction["end_date"]&.to_date
-  end
 end
