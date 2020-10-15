@@ -38,6 +38,7 @@ en:
     results:
       travel_heading: If you travel to other areas
       travel_text: <a class="govuk-link" href="/find-coronavirus-local-restrictions">Enter another postcode</a> to find out what restrictions there are.
+      current_level_heading: Current Local COVID Alert Level
       level_one:
         heading: "Local COVID Alert Level: Medium"
         match: "We've matched the postcode"

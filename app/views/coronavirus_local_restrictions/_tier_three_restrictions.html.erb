@@ -4,6 +4,13 @@
 <p class="govuk-body">
   <%= t("coronavirus_local_restrictions.results.level_three.match") %> <strong><%= @postcode %></strong> to <strong><%= @restriction.area_name %></strong>.
 </p>
+
+<%= render "govuk_publishing_components/components/heading", {
+  text: t("coronavirus_local_restrictions.results.current_level_heading"),
+  font_size: "m",
+  margin_bottom: 4
+} %>
+
 <p class="govuk-body">
   <%= t("coronavirus_local_restrictions.results.level_three.alert_level") %>
 </p>

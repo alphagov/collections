@@ -1,8 +1,9 @@
 <section class="govuk-!-margin-top-9 govuk-!-margin-bottom-5">
-<%= render "govuk_publishing_components/components/heading", {
-  text: t("coronavirus_local_restrictions.lookup.changes_header"),
-  font_size: "m"
-} %>
+  <%= render "govuk_publishing_components/components/heading", {
+    text: t("coronavirus_local_restrictions.lookup.changes_header"),
+    font_size: "m",
+    margin_bottom: 4
+  } %>
 
   <p class="govuk-body">
     <%= sanitize(t("coronavirus_local_restrictions.lookup.changes_text")) %>
