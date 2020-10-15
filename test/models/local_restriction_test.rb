@@ -16,7 +16,8 @@ describe LocalRestriction do
   end
 
   it "returns nil values if the gss code doesn't exist" do
-    restriction = described_class.new("fake code")
-    assert_nil restriction.area_name
+    local_restriction = described_class.new("fake code")
+    assert_empty local_restriction.restriction
+    assert_nil local_restriction.area_name
   end
 end
