@@ -14,4 +14,7 @@
     <%= sanitize(t("coronavirus_local_restrictions.results.devolved_nations.wales.guidance")) %>
   </p>
 <% end %>
+
+<%= render partial: "coronavirus_local_restrictions/changes_information" %>
+
 <%= render partial: "coronavirus_local_restrictions/travel_guidance", locals: { travel_heading: t("coronavirus_local_restrictions.results.devolved_nations.travel_heading") } %>
