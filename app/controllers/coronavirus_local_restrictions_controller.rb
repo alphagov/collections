@@ -12,26 +12,16 @@ class CoronavirusLocalRestrictionsController < ApplicationController
   end
 
   def results
+    if params["postcode-lookup"].blank?
+      return render_no_postcode_error
+    end
+
     @postcode = params["postcode-lookup"].gsub(/\s+/, "").upcase
 
     if @postcode.blank?
-      @error = true
-      return render :show,
-                    locals: {
-                      breadcrumbs: breadcrumbs,
-                      error_message: I18n.t("coronavirus_local_restrictions.errors.no_postcode.error_message"),
-                      input_error: I18n.t("coronavirus_local_restrictions.errors.no_postcode.input_error"),
-                      error_description: I18n.t("coronavirus_local_restrictions.errors.no_postcode.error_description"),
-                    }
+      return render_no_postcode_error
     elsif !postcode_validation
-      @error = true
-      return render :show,
-                    locals: {
-                      breadcrumbs: breadcrumbs,
-                      error_message: I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.error_message"),
-                      input_error: I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.input_error"),
-                      error_description: I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.error_description"),
-                    }
+      return render_invalid_postcode_error
     end
 
     @content_item = content_item.to_hash
@@ -44,21 +34,9 @@ class CoronavirusLocalRestrictionsController < ApplicationController
                       breadcrumbs: breadcrumbs,
                     }
     elsif @location_lookup.invalid_postcode?
-      return render :show,
-                    locals: {
-                      breadcrumbs: breadcrumbs,
-                      error_message: I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.error_message"),
-                      input_error: I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.input_error"),
-                      error_description: I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.error_description"),
-                    }
+      return render_invalid_postcode_error
     elsif @location_lookup.postcode_not_found?
-      return render :show,
-                    locals: {
-                      breadcrumbs: breadcrumbs,
-                      error_message: I18n.t("coronavirus_local_restrictions.errors.no_postcode.error_message"),
-                      input_error: I18n.t("coronavirus_local_restrictions.errors.no_postcode.input_error"),
-                      error_description: I18n.t("coronavirus_local_restrictions.errors.no_postcode.error_description"),
-                    }
+      return render_no_postcode_error
     end
 
     if @location_lookup.data.present?
@@ -74,6 +52,26 @@ class CoronavirusLocalRestrictionsController < ApplicationController
   end
 
 private
+
+  def render_no_postcode_error
+    render :show,
+           locals: {
+             breadcrumbs: breadcrumbs,
+             error_message: I18n.t("coronavirus_local_restrictions.errors.no_postcode.error_message"),
+             input_error: I18n.t("coronavirus_local_restrictions.errors.no_postcode.input_error"),
+             error_description: I18n.t("coronavirus_local_restrictions.errors.no_postcode.error_description"),
+           }
+  end
+
+  def render_invalid_postcode_error
+    render :show,
+           locals: {
+             breadcrumbs: breadcrumbs,
+             error_message: I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.error_message"),
+             input_error: I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.input_error"),
+             error_description: I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.error_description"),
+           }
+  end
 
   # Breadcrumbs for this page are hardcoded because it doesn't yet have a
   # content item with parents.

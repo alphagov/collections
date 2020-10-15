@@ -42,5 +42,20 @@ describe CoronavirusLocalRestrictionsController do
       assert_response :success
       assert_template :show
     end
+
+    it "renders the local restriction page when the postcode is blank" do
+      postcode = ""
+      post :results, params: { "postcode-lookup" => postcode }
+
+      assert_response :success
+      assert_template :show
+    end
+
+    it "renders the local restriction page when the postcode param is not passed in" do
+      post :results
+
+      assert_response :success
+      assert_template :show
+    end
   end
 end
