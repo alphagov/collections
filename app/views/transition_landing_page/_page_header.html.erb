@@ -19,29 +19,28 @@
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-one-third">
           <%= render "govuk_publishing_components/components/translation-nav", {
-            translations: presented_taxon.translation_links,
-            inverse: true
+            translations: presented_taxon.translation_links
           } %>
         </div>
       </div>
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
           <h1 class="landing-page__page_title">
-            <%= t("transition_landing_page.page_header") %>
+            <%= sanitize(t("transition_landing_page.page_header")) %>
           </h1>
         </div>
+      </div>
+      <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds landing-page__intro">
           <%= render "govuk_publishing_components/components/govspeak", {
           } do %>
-            <p class="govuk-body-l"><%= t("transition_landing_page.page_header_explainer") %></p>
+            <p class="govuk-body-l"><%= sanitize(t("transition_landing_page.page_header_explainer")) %></p>
           <% end %>
         </div>
       </div>
       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-          <div class="landing-page__header-arrow-container">
-            <%= image_tag 'white-arrow.svg', class: "landing-page__header-arrow", alt: "" %>
-          </div>
+        <div class="govuk-grid-column-two-thirds">
+          <%= render partial: 'countdown-flip-clock' %>
         </div>
       </div>
     </div>
