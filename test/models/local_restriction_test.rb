@@ -20,4 +20,26 @@ describe LocalRestriction do
     assert_empty local_restriction.restriction
     assert_nil local_restriction.area_name
   end
+
+  it "returns the latest past date as a current restriction" do
+    travel_to Time.zone.local(2020, 10, 15, 10, 10, 10)
+    current_restriction = {
+      "alert_level" => 3,
+      "start_date" => "2020-10-12".to_date,
+      "start_time" => "00:01",
+    }
+    assert_equal current_restriction, restriction.current
+    travel_back
+  end
+
+  it "returns the soonest future date as a current restriction" do
+    travel_to Time.zone.local(2020, 10, 15, 10, 10, 10)
+    future_restriction = {
+      "alert_level" => 3,
+      "start_date" => "2021-10-12".to_date,
+      "start_time" => "00:01",
+    }
+    assert_equal future_restriction, restriction.future
+    travel_back
+  end
 end

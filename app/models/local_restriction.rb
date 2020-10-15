@@ -24,4 +24,16 @@ class LocalRestriction
   def alert_level
     restriction["alert_level"]
   end
+
+  def current
+    restrictions = restriction["restrictions"]
+    restrictions.select { |rest| rest["start_date"].to_date.past? }
+                .max_by { |rest| rest["start_date"] }
+  end
+
+  def future
+    restrictions = restriction["restrictions"]
+    restrictions.select { |rest| rest["start_date"].to_date.future? }
+                .min_by { |rest| rest["start_date"] }
+  end
 end
