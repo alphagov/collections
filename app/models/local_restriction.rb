@@ -21,8 +21,12 @@ class LocalRestriction
     restriction["name"]
   end
 
-  def alert_level
-    restriction["alert_level"]
+  def current_alert_level
+    current["alert_level"] if current.present?
+  end
+
+  def future_alert_level
+    future["alert_level"] if future.present?
   end
 
   def current
