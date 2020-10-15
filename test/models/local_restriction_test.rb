@@ -1,3 +1,5 @@
+require "test_helper"
+
 describe LocalRestriction do
   let(:restriction) { described_class.new("E08000001") }
 
