@@ -5,6 +5,11 @@ Rails.application.routes.draw do
 
   mount GovukPublishingComponents::Engine, at: "/component-guide"
 
+  get "/healthcheck",
+      to: GovukHealthcheck.rack_response(
+        GovukHealthcheck::RailsCache,
+      )
+
   ["/coronavirus-taxon", "/coronavirus-taxon/*slug"].each do |path|
     get path, to: "taxons_redirection#redirect"
   end
