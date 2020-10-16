@@ -3,6 +3,7 @@ class LocalRestriction
 
   def initialize(gss_code)
     @gss_code = gss_code
+    @time_zone = Time.find_zone("London")
   end
 
   def all_restrictions
@@ -21,7 +22,31 @@ class LocalRestriction
     restriction["name"]
   end
 
-  def alert_level
-    restriction["alert_level"]
+  def current_alert_level
+    current["alert_level"] if current.present?
+  end
+
+  def future_alert_level
+    future["alert_level"] if future.present?
+  end
+
+  def current
+    restrictions = restriction["restrictions"]
+    current_restrictions = restrictions.select do |rest|
+      start_date = @time_zone.parse("#{rest['start_date']} #{rest['start_time']}")
+      start_date.past?
+    end
+
+    current_restrictions.max_by { |rest| rest["start_date"] }
+  end
+
+  def future
+    restrictions = restriction["restrictions"]
+    future_restrictions = restrictions.select do |rest|
+      start_date = @time_zone.parse("#{rest['start_date']} #{rest['start_time']}")
+      start_date.future?
+    end
+
+    future_restrictions.min_by { |rest| rest["start_date"] }
   end
 end

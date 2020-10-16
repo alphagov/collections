@@ -45,6 +45,23 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     then_i_see_the_no_information_page
   end
 
+  describe "future restrictions" do
+    before do
+      travel_to Time.zone.local(2020, 10, 12, 20, 10, 10)
+    end
+
+    after do
+      travel_back
+    end
+
+    it "displays future restrictions" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_enter_a_valid_english_postcode_with_a_future_restriction
+      then_i_click_on_find
+      then_i_see_the_results_page_for_level_two_with_future_level_three_restrictions
+    end
+  end
+
   def given_i_am_on_the_local_restrictions_page
     stub_content_store_has_item("/find-coronavirus-local-restrictions", {})
 
@@ -67,6 +84,22 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       },
     ]
     stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
+
+    fill_in "Enter your postcode", with: postcode
+  end
+
+  def then_i_enter_a_valid_english_postcode_with_a_future_restriction
+    postcode = "E18QS"
+    areas = [
+      {
+        "gss" => "E08000001",
+        "name" => "Coruscant Planetary Council",
+        "type" => "LBO",
+        "country_name" => "England",
+      },
+    ]
+    stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
+    LocalRestriction.any_instance.stubs(:file_name).returns("test/fixtures/local-restrictions.yaml")
 
     fill_in "Enter your postcode", with: postcode
   end
@@ -133,5 +166,13 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
 
   def then_i_see_the_no_information_page
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.no_information.heading"))
+  end
+
+  def then_i_see_the_results_page_for_level_two_with_future_level_three_restrictions
+    date = "2021-10-12".to_date.strftime("%-d %B")
+
+    assert page.has_text?("Tatooine")
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.changing_alert_level"))
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.future.level_three.alert_level", date: date))
   end
 end

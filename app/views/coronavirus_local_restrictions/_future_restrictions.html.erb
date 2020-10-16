@@ -1,0 +1,32 @@
+<% if @restriction.present? && @restriction.future.present? %>
+  <% date = @restriction.future["start_date"].strftime("%-d %B") %>
+
+  <%= render "govuk_publishing_components/components/heading", {
+    text: t("coronavirus_local_restrictions.results.future.heading"),
+    font_size: "m",
+    margin_bottom: 4
+  } %>
+
+  <% if @restriction.future_alert_level == 1 %>
+    <p class="govuk-body">
+      <%= t("coronavirus_local_restrictions.results.future.level_one.alert_level", date: date) %>
+    </p>
+    <p class="govuk-body">
+      <%= sanitize(t("coronavirus_local_restrictions.results.level_one.guidance", date: date)) %>
+    </p>
+  <% elsif @restriction.future_alert_level == 2 %>
+    <p class="govuk-body">
+      <%= t("coronavirus_local_restrictions.results.future.level_two.alert_level", date: date) %>
+    </p>
+    <p class="govuk-body">
+      <%= sanitize(t("coronavirus_local_restrictions.results.future.level_two.guidance", date: date)) %>
+    </p>
+  <% elsif @restriction.future_alert_level == 3 %>
+    <p class="govuk-body">
+      <%= t("coronavirus_local_restrictions.results.future.level_three.alert_level", date: date) %>
+    </p>
+    <p class="govuk-body">
+      <%= sanitize(t("coronavirus_local_restrictions.results.future.level_three.guidance", date: date)) %>
+    </p>
+  <% end %>
+<% end %>
