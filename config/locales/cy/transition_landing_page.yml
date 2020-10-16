@@ -2,12 +2,14 @@ cy:
   transition_landing_page:
     meta_title: Pontio’r DU
     meta_description: "Mae’r DU wedi gadael yr UE. Ewch i weld beth mae’n ei olygu i chi."
-    page_header: Pontio’r DU
+    page_header: "Pontio’r DU:<br/>mae amser yn rhedeg allan"
     page_header_explainer: |
-      Mae’r DU wedi gadael yr UE ac mae’r cyfnod pontio ar ôl Brexit yn dod i ben eleni. Gwnewch rywbeth nawr i baratoi ar gyfer y rheolau newydd o fis Ionawr 2021 ymlaen.
-    take_action_title: Cymrwch y camau a chofrestru ar gyfer negeseuon e-bost
+      <span class="landing-page__intro-highlight">Bydd rheolau newydd</span> i fusnesau a dinasyddion o 1 Ionawr 2021.
+    countdown_days_to_go: diwrnod i fynd
+    countdown_day_to_go: diwrnod i fynd
+    take_action_title: Sicrhewch eich bod yn barod
     take_action_text: |
-      Atebwch ychydig o gwestiynau er mwyn cael rhestr bersonol o gamau gweithredu ar eich cyfer chi, eich teulu a’ch busnes. Yna, cofrestrwch i gael yr wybodaeth ddiweddaraf dros e-bost pan fydd pethau’n newid.
+      Bydd hyn yn effeithio ar eich busnes, eich teulu a’ch amgylchiadau personol. Atebwch ychydig o gwestiynau i gael rhestr bersonol o gamau gweithredu. Gallwch hefyd gofrestru am negeseuon e-bost i dderbyn diweddariadau ar gyfer yr hyn y mae angen i chi ei wneud.
     take_action_start_now: Dechrau nawr
     take_action_start_now_link: "/transition-check/questions"
     take_action_list:
