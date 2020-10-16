@@ -37,6 +37,10 @@ module TransitionLandingPageSteps
     assert page.has_selector?("h2.govuk-heading-l", text: "Make sure you're ready")
   end
 
+  def then_i_can_see_the_buckets_section
+    assert page.has_selector?("h2.govuk-heading-l", text: "Changes for businesses and citizens")
+  end
+
   def and_i_can_see_the_explore_topics_section
     assert page.has_selector?("h2.govuk-heading-m", text: "All transition period information")
 
