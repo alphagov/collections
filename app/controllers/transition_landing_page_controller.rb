@@ -7,6 +7,8 @@ class TransitionLandingPageController < ApplicationController
   def show
     setup_content_item_and_navigation_helpers(taxon)
 
+    ab_test_variant.configure_response(response) if page_under_test?
+
     render locals: {
       presented_taxon: presented_taxon,
       presentable_section_items: presentable_section_items,
@@ -34,11 +36,32 @@ private
   end
 
   def show_comms?
-    true
+    !show_variant?
   end
 
   def switch_locale(&action)
     locale = params[:locale] || I18n.default_locale
     I18n.with_locale(locale, &action)
+  end
+
+  helper_method :ab_test_variant, :page_under_test?, :show_variant?
+  def ab_test_variant
+    @ab_test_variant ||= begin
+      ab_test = GovukAbTesting::AbTest.new(
+        "TransitionUrgency4",
+        dimension: 44,
+        allowed_variants: %w[A B Z],
+        control_variant: "Z",
+      )
+      ab_test.requested_variant(request.headers)
+    end
+  end
+
+  def page_under_test?
+    request.path == "/transition"
+  end
+
+  def show_variant?
+    page_under_test? && ab_test_variant.variant?("B")
   end
 end
