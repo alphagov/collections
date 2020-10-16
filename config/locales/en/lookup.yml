@@ -20,16 +20,20 @@ en:
         <p class="govuk-body">Each area has a <a class="govuk-link" href="/guidance/local-covid-alert-levels-what-you-need-to-know">Local COVID Alert Level</a>. There are 3 Local COVID Alert Levels. Sometimes these are called ‘tiers’ or known as a ‘local lockdown’.</p>
         <p class="govuk-body">You can find out what you can or cannot do.</p>
       changes_header: Changes from Saturday 17 October
-      changes_text: "The following areas will move into Local COVID Alert Level High:"
-      changes_list: |
-        <li>Barrow-in-Furness</li>
-        <li>Chesterfield</li>
-        <li>Elmbridge</li>
-        <li>Erewash</li>
-        <li>Essex</li>
-        <li>London – all boroughs</li>
-        <li>North East Derbyshire</li>
-        <li>York</li>
+      levels:
+        - changes_text: "The following areas will move into Local COVID Alert Level Very High:"
+          changes_list: |
+            <li>Lancashire</li>
+        - changes_text: "The following areas will move into Local COVID Alert Level High:"
+          changes_list: |
+            <li>Barrow-in-Furness</li>
+            <li>Chesterfield</li>
+            <li>Elmbridge</li>
+            <li>Erewash</li>
+            <li>Essex</li>
+            <li>London – all boroughs</li>
+            <li>North East Derbyshire</li>
+            <li>York</li>
       meta_title: Find out the coronavirus restrictions in a local area
       meta_description: Use the postcode checker to find out the Local COVID Alert Level for an area.
     royal_mail_lookup:

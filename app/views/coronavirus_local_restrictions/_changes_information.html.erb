@@ -5,11 +5,13 @@
     margin_bottom: 4
   } %>
 
-  <p class="govuk-body">
-    <%= sanitize(t("coronavirus_local_restrictions.lookup.changes_text")) %>
-  </p>
+  <% t("coronavirus_local_restrictions.lookup.levels").each do |level| %>
+    <p class="govuk-body">
+      <%= sanitize(level[:changes_text]) %>
+    </p>
 
-  <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-9">
-    <%= sanitize(t("coronavirus_local_restrictions.lookup.changes_list")) %>
-  </ul>
+    <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-9">
+      <%= sanitize(level[:changes_list]) %>
+    </ul>
+  <% end %>
 </section>
