@@ -31,7 +31,7 @@ $green: #00703C;
   @include govuk-media-query($from: $header-breakpoint) {
     background-image: image-url('transition-2020-header-background.jpg');
     background-size: cover;
-    background-position: top;
+    background-position: center;
     min-height: 500px;
   }
 
