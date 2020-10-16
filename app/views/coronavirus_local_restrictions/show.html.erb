@@ -36,8 +36,6 @@
 
     <%= sanitize(t("coronavirus_local_restrictions.lookup.body_content")) %>
 
-    <%= render partial: "coronavirus_local_restrictions/changes_information" %>
-
     <%= form_for :postcode_lookup, :url => find_coronavirus_local_restrictions_path do |f| %>
       <%= render "shared/postcode-lookup", {
         input_error: input_error
