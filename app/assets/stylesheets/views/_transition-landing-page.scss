@@ -105,13 +105,6 @@ $green: #00703C;
   }
 }
 
-.landing-page__take-action-button {
-  .govuk-button {
-    background-color: $green;
-    box-shadow: 0 2px 0 $dark-blue-shadow;
-  }
-}
-
 .landing-page__take-action-traffic-lights {
   @include govuk-media-query($until: tablet) {
     margin-top: govuk-spacing(4);
