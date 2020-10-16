@@ -1,7 +1,5 @@
 <% content_for :page_class, "taxon-page taxon-page--grid" %>
-<% content_for :meta_tags do %>
-  <%= ab_test_variant.analytics_meta_tag.html_safe if page_under_test? %>
-<% end %>
+<% content_for :meta_tags %>
 
 <%=
   render(
@@ -18,7 +16,7 @@
 
 <div class="govuk-width-container">
   <div class="landing-page__buckets">
-    <%= render partial: 'buckets', locals: { buckets: presented_taxon.buckets } %>
+    <%= render partial: 'buckets' %>
   </div>
 
   <% if show_comms %>

@@ -10,58 +10,32 @@
       <h2 class="govuk-heading-l">
         <%= guidance_header %>
       </h2>
-      <% unless show_variant? %>
-        <p class="landing-page__guidance_subheader" data-module="track-click">
-          <%= raw t("transition_landing_page.guidance_subheader") %>
-        </p>
-      <% end %>
     </div>
   </div>
 
-  <% if show_variant? %>
-    <% variant_b_section = I18n.t("transition_landing_page.campaign_links") %>
-    <%
-      links = variant_b_section[:links].map do |link|
-        link_to(link[:text], link[:path], data: {
-          track_action: link[:path],
-          track_category: "transition-landing-page",
-          track_label: "What you can do now"
-        })
-      end
-    %>
-    <div class="govuk-grid-row landing-page__section-list-wrapper">
-      <div class="govuk-grid-column-two-thirds" data-module="track-click">
-        <p class='govuk-body'><%= variant_b_section[:lead_in] %></p>
+  <% campaign_links = I18n.t("transition_landing_page.campaign_links") %>
+  <%
+    links = campaign_links[:links].map do |link|
+      link_to(link[:text], link[:path], data: {
+        track_action: link[:path],
+        track_category: "transition-landing-page",
+        track_label: "What you can do now"
+      })
+    end
+  %>
+  <div class="govuk-grid-row landing-page__section-list-wrapper">
+    <div class="govuk-grid-column-two-thirds" data-module="track-click">
+      <p class='govuk-body'><%= campaign_links[:lead_in] %></p>
 
-        <%= tag.ul class: %w[govuk-list govuk-list--bullet govuk-list--spaced] do %>
-          <% links.each do |link| %>
-            <%= tag.li do %>
-              <%= link %>
-            <% end %>
+      <%= tag.ul class: %w[govuk-list govuk-list--bullet govuk-list--spaced] do %>
+        <% links.each do |link| %>
+          <%= tag.li do %>
+            <%= link %>
           <% end %>
         <% end %>
+      <% end %>
 
-        <p class="govuk-body govuk-!-padding-top-2"><%= variant_b_section[:lead_out].html_safe %></p>
-      </div>
+      <p class="govuk-body govuk-!-padding-top-2"><%= campaign_links[:lead_out].html_safe %></p>
     </div>
-  <% else %>
-    <% buckets.each do |bucket| %>
-      <div class="govuk-grid-row landing-page__section-list-wrapper">
-        <div class="govuk-grid-column-one-third">
-          <% if bucket[:row_title] %>
-            <h3 class="govuk-heading-m">
-              <%= bucket[:row_title] %>
-            </h3>
-          <% end %>
-        </div>
-
-        <div class="govuk-grid-column-two-thirds" data-module="track-click">
-          <%= render "govuk_publishing_components/components/govspeak", {
-            } do %>
-            <%= bucket[:list_block] %>
-          <% end %>
-        </div>
-      </div>
-    <% end %>
-  <% end %>
+  </div>
 </div>

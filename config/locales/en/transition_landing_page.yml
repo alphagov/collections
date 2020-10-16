@@ -41,36 +41,6 @@ en:
       or_text: or
       watch_link_text: Watch on YouTube
     guidance_header: "Changes for businesses and citizens"
-    guidance_subheader: "These are some of the new rules from January 2021. For a complete list of actions <a href='/transition-check/questions' class='govuk-link' data-track-category='transition-landing-page' data-track-action='/transition-check/questions' data-track-label='answer a few questions' >answer a few questions</a> about you, your family or business."
-    campaign_buckets:
-      - row_title: "Businesses that import and export goods"
-        list_block: |
-          From 1 January 2021 the process for importing and exporting goods will change. Find out what you need to do to continue to:
-          <ul>
-            <li><a class="govuk-!-font-weight-bold" href="/prepare-to-import-to-great-britain-from-january-2021" data-track-category="transition-landing-page" data-track-action="/prepare-to-import-to-great-britain-from-january-2021" data-track-label="What you can do now">import goods from the EU</a></li>
-            <li><a class="govuk-!-font-weight-bold" href="/prepare-to-export-from-great-britain-from-january-2021" data-track-category="transition-landing-page" data-track-action="/prepare-to-export-from-great-britain-from-january-2021" data-track-label="What you can do now">export goods to the EU</a></li>
-          </ul>
-      - row_title: "Travelling to the EU"
-        list_block: |
-          You can continue to travel to the EU as usual during the transition period.
-
-          From 1 January 2021 there will be new rules to travel to the EU, or to Switzerland, Norway, Iceland or Liechtenstein.
-
-          <a class="govuk-!-font-weight-bold" href="/visit-europe-1-january-2021" data-track-category="transition-landing-page" data-track-action="/visit-europe-1-january-2021" data-track-label="What you can do now">Check what you need to do to travel to Europe from 2021</a>
-      - row_title: "Continue living and working in the EU"
-        list_block: |
-          Living and working in an EU country depends on the rules in that country.
-
-          You may need to register or apply for residency. You should check that you’re covered for healthcare.
-
-          You may also need to exchange your UK driving licence for a licence issued by the EU country where you live.
-
-          <a class="govuk-!-font-weight-bold" href="/uk-nationals-living-eu" data-track-category="transition-landing-page" data-track-action="/uk-nationals-living-eu" data-track-label="What you can do now">Check what you must do in the country where you live</a>
-      - row_title: "Staying in the UK if you’re an EU citizen"
-        list_block: |
-          Check if you need to apply to the settlement scheme if you or your family are from the EU, or from Switzerland, Norway, Iceland or Liechtenstein.
-
-          <a class="govuk-!-font-weight-bold" href="/staying-uk-eu-citizen" data-track-category="transition-landing-page" data-track-action="/staying-uk-eu-citizen" data-track-label="What you can do now">Check what you need to do to stay in the UK</a>
     campaign_links:
       lead_in: "You need to take action now if you're:"
       links:

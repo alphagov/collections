@@ -19,20 +19,6 @@ describe TransitionLandingPagePresenter do
 
   let(:taxon) { Taxon.new(ContentItem.new("content_id" => "content_id", "base_path" => "/base_path")) }
 
-  describe "#buckets" do
-    before :each do
-      YAML.stubs(:load_file).returns(yaml_contents)
-
-      subject do
-        TransitionLandingPagePresenter.new(taxon)
-      end
-    end
-
-    it "html-safes the list block" do
-      assert subject.buckets[0][:list_block].html_safe?
-    end
-  end
-
   describe "#supergroup_sections" do
     it "returns the presented supergroup sections" do
       result_hash = [

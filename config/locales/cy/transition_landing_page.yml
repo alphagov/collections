@@ -62,37 +62,22 @@ cy:
         metadata:
           public_updated_at: 2020-06-12
           document_type: "News Story"
-    guidance_header: "Camau y gallwch eu cymryd nawr"
+    guidance_header: "Newidiadau i fusnesau a dinasyddion"
     guidance_subheader: "Camau y gallwch eu cymryd nawr sydd ddim yn ddibynnol ar drafodaethau."
-    campaign_buckets:
-      - row_title: "Teithio i’r UE"
-        list_block: |
-          Gallwch barhau i deithio i’r UE fel arfer yn ystod y cyfnod pontio.
-
-          O 1 Ionawr 2021 bydd rheolau newydd i deithio i'r UE, neu i'r Swistir, Norwy, Gwlad yr Iâ neu Liechtenstein.
-
-          <a class="govuk-!-font-weight-bold" href="/visit-europe-1-january-2021" data-track-category="transition-landing-page" data-track-action="/visit-europe-1-january-2021" data-track-label="What you can do now">Dylech wirio beth sydd angen i chi ei wneud er mwyn teithio i Ewrop o 2021 ymlaen</a>
-      - row_title: "Aros yn y DU os ydych yn ddinesydd o’r UE"
-        list_block: |
-          Gwiriwch os oes angen i chi gyflwyno cais i’r cynllun setliad os ydych chi, neu’ch teulu, yn dod o’r UE, neu o’r Swistir, Norwy, Gwlad yr Iâ neu Liechtenstein.
-
-          <a class="govuk-!-font-weight-bold" href="/staying-uk-eu-citizen" data-track-category="transition-landing-page" data-track-action="/staying-uk-eu-citizen" data-track-label="What you can do now">Dylech wirio beth rydych angen ei wneud i aros yn y DU</a>
-      - row_title: "Byw a gweithio yn yr UE"
-        list_block: |
-          Mae byw a gweithio mewn gwlad yr UE yn ddibynnol ar y rheolau yn y wlad honno.
-
-          Efallai bydd angen i chi gofrestru neu gyflwyno cais am breswyliaeth. Dylech chi wirio os ydych chi’n gymwys am ofal iechyd.
-
-          Efallai bydd angen i chi gyfnewid eich trwydded yrru DU am drwydded a roddir gan wlad yr UE ble rydych yn byw.
-
-          <a class="govuk-!-font-weight-bold" href="/uk-nationals-living-eu" data-track-category="transition-landing-page" data-track-action="/uk-nationals-living-eu" data-track-label="What you can do now">Gwiriwch beth sydd angen i chi wneud yn y wlad yr ydych yn byw ynddi</a>
-      - row_title: "Paratoi eich busnes"
-        list_block: |
-          O’r 1af o Ionawr, bydd y broses o fewnforio ac allforio nwyddau yn newid. Dysgwch beth sydd angen i chi wneud i barhau i:
-          <ul>
-            <li><a class="govuk-!-font-weight-bold" href="/prepare-to-import-to-great-britain-from-january-2021" data-track-category="transition-landing-page" data-track-action="/prepare-to-import-to-great-britain-from-january-2021" data-track-label="What you can do now">fewnforio nwyddau o’r UE</a></li>
-            <li><a class="govuk-!-font-weight-bold" href="/prepare-to-export-from-great-britain-from-january-2021" data-track-category="transition-landing-page" data-track-action="/prepare-to-export-from-great-britain-from-january-2021" data-track-label="What you can do now">allforio nwyddau i’r UE</a></li>
-          </ul>
+    campaign_links:
+      lead_in: "Mae’n rhaid i chi gymryd camau nawr os ydych chi’n:"
+      links:
+        - text: mewnforio nwyddau i mewn i’r DU
+          path: /prepare-to-import-to-great-britain-from-january-2021
+        - text: allforio nwyddau allan o’r DU
+          path: /prepare-to-export-from-great-britain-from-january-2021
+        - text: teithio i’r UE
+          path: /visit-europe-1-january-2021
+        - text: byw a gweithio yn yr UE
+          path: /uk-nationals-living-eu
+        - text: aros yn y DU os ydych chi’n ddinesydd o’r UE
+          path: /staying-uk-eu-citizen
+      lead_out: <a href="/transition-check/questions">Cael y rhestr gyflawn</a> o'r hyn y mae angen i chi ei wneud ar eich cyfer chi, eich busnes a'ch teulu.
     topic_section_header: Yr holl wybodaeth am y cyfnod pontio
     topic_section_subheading: Pori’r holl wybodaeth sy’n berthnasol i’r cyfnod pontio
     email_intro: "I gael y manylion diweddaraf"
