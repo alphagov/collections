@@ -20,7 +20,7 @@ en:
         <p class="govuk-body">Each area has a <a class="govuk-link" href="/guidance/local-covid-alert-levels-what-you-need-to-know">Local COVID Alert Level</a>. There are 3 Local COVID Alert Levels. Sometimes these are called ‘tiers’ or known as a ‘local lockdown’.</p>
         <p class="govuk-body">You can find out what you can or cannot do.</p>
       changes_header: Changes from Saturday 17 October
-      changes_text: The following areas will move into Local COVID Alert Level High,
+      changes_text: "The following areas will move into Local COVID Alert Level High:"
       changes_list: |
         <li>Barrow-in-Furness</li>
         <li>Chesterfield</li>
