@@ -31,13 +31,21 @@ class LocalRestriction
 
   def current
     restrictions = restriction["restrictions"]
-    restrictions.select { |rest| rest["start_date"].to_date.past? }
-                .max_by { |rest| rest["start_date"] }
+    current_restrictions = restrictions.select do |rest|
+      start_date = Time.zone.parse("#{rest['start_date']} #{rest['start_time']}")
+      start_date.past?
+    end
+
+    current_restrictions.max_by { |rest| rest["start_date"] }
   end
 
   def future
     restrictions = restriction["restrictions"]
-    restrictions.select { |rest| rest["start_date"].to_date.future? }
-                .min_by { |rest| rest["start_date"] }
+    future_restrictions = restrictions.select do |rest|
+      start_date = Time.zone.parse("#{rest['start_date']} #{rest['start_time']}")
+      start_date.future?
+    end
+
+    future_restrictions.min_by { |rest| rest["start_date"] }
   end
 end
