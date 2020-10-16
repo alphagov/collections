@@ -33,7 +33,7 @@ module TransitionLandingPageSteps
     assert page.has_selector?(".landing-page__share .gem-c-share-links")
   end
 
-  def then_i_can_see_the_buckets_section
+  def then_i_can_see_the_take_action_section
     assert page.has_selector?("h2.govuk-heading-l", text: "Make sure you're ready")
   end
 
