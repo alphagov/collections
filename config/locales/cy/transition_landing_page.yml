@@ -4,11 +4,9 @@ cy:
     meta_description: "Mae’r DU wedi gadael yr UE. Ewch i weld beth mae’n ei olygu i chi."
     page_header: "Pontio’r DU:<br/>mae amser yn rhedeg allan"
     page_header_explainer: |
-      Bydd rheolau newydd i fusnesau a dinasyddion o 1 Ionawr 2021.
-    # to be translated
+      <span class="landing-page__intro-highlight">Bydd rheolau newydd</span> i fusnesau a dinasyddion o 1 Ionawr 2021.
     countdown_days_to_go: diwrnod i fynd
     countdown_day_to_go: diwrnod i fynd
-    # ---
     take_action_title: Sicrhewch eich bod yn barod
     take_action_text: |
       Bydd hyn yn effeithio ar eich busnes, eich teulu a’ch amgylchiadau personol. Atebwch ychydig o gwestiynau i gael rhestr bersonol o gamau gweithredu. Gallwch hefyd gofrestru am negeseuon e-bost i dderbyn diweddariadau ar gyfer yr hyn y mae angen i chi ei wneud.
