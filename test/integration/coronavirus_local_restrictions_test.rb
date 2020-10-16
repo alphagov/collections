@@ -172,7 +172,7 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     date = "2021-10-12".to_date.strftime("%-d %B")
 
     assert page.has_text?("Tatooine")
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.alert_level"))
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.changing_alert_level"))
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.future.level_three.alert_level", date: date))
   end
 end
