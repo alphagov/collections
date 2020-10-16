@@ -1,5 +1,7 @@
 <% content_for :page_class, "taxon-page taxon-page--grid" %>
-<% content_for :meta_tags %>
+<% content_for :meta_tags do %>
+  <%= ab_test_variant.analytics_meta_tag.html_safe if page_under_test? %>
+<% end %>
 
 <%=
   render(
@@ -13,7 +15,9 @@
 
 <%= render partial: 'take_action' %>
 
-<%= render partial: 'video_section' %>
+<% unless show_variant? %>
+  <%= render partial: 'video_section' %>
+<% end %>
 
 <div class="govuk-width-container">
   <div class="landing-page__buckets">
