@@ -2,25 +2,25 @@
 E08000001:
   name: Tatooine
   restrictions:
-    - alert_level: 4
+    - alert_level: 2
       start_date: 2020-10-12
       start_time: "00:01"
-    - alert_level: 4
+    - alert_level: 3
       start_date: 2022-10-12
       start_time: "18:00"
-    - alert_level: 4
+    - alert_level: 2
       start_date: 2019-10-12
       start_time: "00:01"
-    - alert_level: 4
+    - alert_level: 3
       start_date: 2021-10-12
       start_time: "00:01"
 E08000002:
   name: Tatooine
   restrictions:
-    - alert_level: 4
+    - alert_level: 2
       start_date: 2020-10-12
       start_time: "00:01"
-    - alert_level: 4
+    - alert_level: 3
       start_date: 2019-10-12
       start_time: "00:01"
 E08000003:

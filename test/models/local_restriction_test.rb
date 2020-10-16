@@ -13,7 +13,7 @@ describe LocalRestriction do
 
   it "returns the current alert level" do
     travel_to Time.zone.local(2020, 10, 15, 10, 10, 10)
-    assert_equal 4, restriction.current_alert_level
+    assert_equal 2, restriction.current_alert_level
     travel_back
   end
 
@@ -26,7 +26,7 @@ describe LocalRestriction do
   it "returns the latest past date as a current restriction" do
     travel_to Time.zone.local(2020, 10, 15, 10, 10, 10)
     current_restriction = {
-      "alert_level" => 4,
+      "alert_level" => 2,
       "start_date" => "2020-10-12".to_date,
       "start_time" => "00:01",
     }
@@ -37,7 +37,7 @@ describe LocalRestriction do
   it "returns today as a current restriction when the start time is in the past" do
     travel_to Time.zone.local(2022, 10, 12, 20, 10, 10)
     expected_restriction = {
-      "alert_level" => 4,
+      "alert_level" => 3,
       "start_date" => "2022-10-12".to_date,
       "start_time" => "18:00",
     }
@@ -48,7 +48,7 @@ describe LocalRestriction do
   it "returns the soonest future date as a current restriction" do
     travel_to Time.zone.local(2020, 10, 15, 10, 10, 10)
     future_restriction = {
-      "alert_level" => 4,
+      "alert_level" => 3,
       "start_date" => "2021-10-12".to_date,
       "start_time" => "00:01",
     }
@@ -59,7 +59,7 @@ describe LocalRestriction do
   it "returns today as a future restriction when the start time is in the future" do
     travel_to Time.zone.local(2022, 10, 12, 10, 10, 10)
     expected_restriction = {
-      "alert_level" => 4,
+      "alert_level" => 3,
       "start_date" => "2022-10-12".to_date,
       "start_time" => "18:00",
     }
