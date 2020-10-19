@@ -70,13 +70,13 @@ describe Organisations::DocumentsPresenter do
           items: [
             {
               link: {
-                text: "Rapist has sentence increased after Solicitor General’s referral",
-                path: "/government/news/rapist-has-sentence-increased-after-solicitor-generals-referral",
+                text: "Attorney General launches recruitment campaign for new Chief Inspector",
+                path: "/government/news/attorney-general-launches-recruitment-campaign-for-new-chief-inspector",
                 locale: "en",
               },
               metadata: {
                 document_type: "Press release",
-                public_updated_at: Date.parse("2018-06-18T17:39:34.000+01:00"),
+                public_updated_at: Date.parse("2020-07-26T23:15:09.000+00:00"),
                 locale: {
                   document_type: false,
                   public_updated_at: false,
@@ -92,9 +92,9 @@ describe Organisations::DocumentsPresenter do
 
     it "formats document types with acronyms correctly" do
       # This only applies to types containing "FOI" and "DFID"
-      stub_rummager_latest_content_with_acronym("attorney-generals-office")
+      stub_search_api_latest_content_with_acronym("attorney-generals-office")
 
-      expected = "Research for Development Output"
+      expected = "Press release"
       actual = @documents_presenter.latest_documents[:items].first[:metadata][:document_type]
 
       assert_equal expected, actual
