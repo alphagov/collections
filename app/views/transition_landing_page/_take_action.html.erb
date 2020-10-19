@@ -12,20 +12,18 @@
                 <%= t("transition_landing_page.take_action_text") %>
               </p>
             <% end %>
-            <div class="landing-page__take-action-button">
-              <%= render "govuk_publishing_components/components/button", {
-                text: t("transition_landing_page.take_action_start_now"),
-                href: t("transition_landing_page.take_action_start_now_link"),
-                start: true,
-                margin_bottom: true,
-                data_attributes: {
-                  "module": "track-click",
-                  "track-action": t("transition_landing_page.take_action_start_now_link"),
-                  "track-category": "transition-landing-page",
-                  "track-label": t("transition_landing_page.take_action_start_now")
-                }
-              } %>
-            </div>
+            <%= render "govuk_publishing_components/components/button", {
+              text: t("transition_landing_page.take_action_start_now"),
+              href: t("transition_landing_page.take_action_start_now_link"),
+              start: true,
+              margin_bottom: true,
+              data_attributes: {
+                "module": "track-click",
+                "track-action": t("transition_landing_page.take_action_start_now_link"),
+                "track-category": "transition-landing-page",
+                "track-label": t("transition_landing_page.take_action_start_now")
+              }
+            } %>
           </div>
           <div class="govuk-grid-column-one-third">
             <%= render partial: 'transition_landing_page/take-action-traffic-lights' %>
