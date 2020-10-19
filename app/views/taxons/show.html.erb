@@ -11,9 +11,7 @@
 <div class="full-page-width-wrapper">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-one-third content-list__sticky">
-      <h2><%= t('taxons.in_page_nav_title') %></h2>
       <%= render "govuk_publishing_components/components/contents_list", {
-          hide_title: true,
           contents: @presentable_section_items
       } %>
     </div>
