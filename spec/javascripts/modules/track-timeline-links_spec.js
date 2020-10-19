@@ -23,6 +23,10 @@ describe('Track timeline links', function () {
   var element;
   
   beforeEach(function () {
+    GOVUK.analytics = {
+      trackEvent: function () {
+      }
+    }
     spyOn(GOVUK.analytics, 'trackEvent')
 
     element = document.createElement('div');
