@@ -49,7 +49,7 @@ private
 
   def response
     @response ||= begin
-                    JSON.parse(GdsApi.mapit.location_for_postcode(postcode).to_json)
+                    JSON.parse(mapit.location_for_postcode(postcode).to_json)
                   rescue GdsApi::HTTPNotFound, GdsApi::HTTPClientError => e
                     {
                       error: {
@@ -58,5 +58,11 @@ private
                       },
                     }
                   end
+  end
+
+  def mapit
+    return GdsApi.mapit unless Rails.env.development?
+
+    GdsApi::Mapit.new("https://mapit.mysociety.org/")
   end
 end
