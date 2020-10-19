@@ -16,26 +16,23 @@ en:
       red: Check
       amber: Change
       green: Go
-    video_section_title: "UK’s new start: let’s get going"
+    video_section_title: "Time is running out"
     video_section_description: |
       <p>The UK is leaving the EU single market and customs union, and the end of the transition period will affect citizens, businesses, as well as travel to and from the EU.</p>
       <p>Watch the video to find out what 2021 will mean for you.</p>
-    video_section_link: https://www.youtube.com/watch?v=3ZHKjj-9WTk&rel=0
+    video_section_link: https://www.youtube.com/watch?v=_Hyq5U4mLdQ
     video_section_transcription_summary: View the video transcript
     video_section_transcription_text: |
-      <p>On 1 January, the UK will regain its political and economic independence and can start new trading relationships with the EU and rest of the world.</p>
-      <p>Citizens and business can check what they need to do, to prepare for the changes and opportunities ahead as a sovereign nation.</p>
-      <p>For businesses this includes preparing for a new approach to trade with our partners in the European Union.</p>
-      <p>For individuals this may include registering your residency rights.</p>
-      <p>The government will ensure:</p>
-      <ul class="govuk-list govuk-list--bullet govuk-details__list">
-        <li>exporters can take advantage of new trade agreements</li>
-        <li>industry regulation allows small businesses to thrive</li>
-        <li>our immigration system suits the needs of our economy</li>
-        <li>the UK fishing industry takes back control of UK waters</li>
-      </ul>
-      <p>Now is the time to unleash the productive power of every corner of the UK.</p>
-      <p>UK's new start: let's get going</p>
+      <p>Time’s running out.</p>
+      <p>Businesses that deal with Europe will have to follow new rules from 1st January 2021.</p>
+      <p>If it crosses borders there’s definite actions we need to take already. No matter what.</p>
+      <p>New rules from the 1st January.</p>
+      <p>I’ll give you a second to jot that down.</p>
+      <p>1st Jan.</p>
+      <p>Oh and getting ready can take longer than you think.</p>
+      <p>So get on it now at gov.uk/transition.</p>
+      <p>TIME IS RUNNING OUT. Start now at gov.uk/transition</p>
+      <p>Got it? Good.</p>
     no_cookies:
       icon_text: VIDEO
       change_settings_text: Change your cookie settings
