@@ -6,6 +6,7 @@ describe Organisations::DocumentsPresenter do
 
   describe "documents" do
     before :each do
+      @documents = organisation_with_featured_documents["details"]["ordered_featured_documents"]
       content_item = ContentItem.new(organisation_with_featured_documents)
       organisation = Organisation.new(content_item)
       @documents_presenter = Organisations::DocumentsPresenter.new(organisation)
@@ -13,17 +14,19 @@ describe Organisations::DocumentsPresenter do
       content_item = ContentItem.new(organisation_with_no_documents)
       organisation = Organisation.new(content_item)
       @no_documents_presenter = Organisations::DocumentsPresenter.new(organisation)
+
       stub_empty_rummager_requests("org-with-no-docs")
       stub_rummager_latest_content_requests("attorney-generals-office")
     end
 
     it "formats the main large news story correctly" do
+      time_stamp = @documents.first["public_updated_at"]
       expected = {
         href: "/government/news/new-head-of-the-serious-fraud-office-announced",
         image_src: "https://assets.publishing.service.gov.uk/s712_jeremy.jpg",
         image_alt: "Attorney General Jeremy Wright QC MP",
         context: {
-          date: Time.zone.parse("2018-06-04"),
+          date: Date.parse(time_stamp),
           text: "Press release",
         },
         heading_text: "New head of the Serious Fraud Office announced",
@@ -36,12 +39,13 @@ describe Organisations::DocumentsPresenter do
     end
 
     it "formats the remaining news stories correctly" do
+      time_stamp = @documents.last["public_updated_at"]
       expected = [{
         href: "/government/news/new-head-of-a-different-office-announced",
         image_src: "https://assets.publishing.service.gov.uk/s465_john.jpg",
         image_alt: "John Someone MP",
         context: {
-          date: Time.zone.parse("2017-06-04"),
+          date: Date.parse(time_stamp),
           text: "Policy paper",
         },
         heading_text: "New head of a different office announced",
