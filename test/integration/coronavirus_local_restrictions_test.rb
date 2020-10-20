@@ -105,12 +105,12 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   end
 
   def then_i_enter_a_valid_english_postcode_in_tier_two
-    postcode = "M11AD"
+    postcode = "B24QA"
     areas = [
       {
-        "gss" => "E08000001",
-        "name" => "Bolton",
-        "type" => "LBO",
+        "gss" => "E08000025",
+        "name" => "Birmingham",
+        "type" => "MTD",
         "country_name" => "England",
       },
     ]
@@ -152,7 +152,7 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   end
 
   def then_i_see_the_results_page_for_level_two
-    assert page.has_text?("Bolton")
+    assert page.has_text?("Birmingham")
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.alert_level"))
   end
 
