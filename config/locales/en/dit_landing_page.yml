@@ -28,33 +28,40 @@ en:
       - label: Polski
         lang: pl
         url: /government/publications/trade-with-the-uk-from-january-2021-prepare-your-eu-business/handel-z-wielka-brytania-od-1-stycznia-2021-roku-informacje-dla-firm-z-unii-europejskiej
-    goods_title: Buying or selling goods
-    goods_text: |
-      <p>Rules are changing and there will be border requirements placed on the movement of goods between the EU and UK. <a href="/government/publications/the-border-operating-model">Find out more about how the border with the UK will work.</a></p>
-      <p>Make sure you talk to your trading partners in the UK to agree responsibilities and have the correct paperwork for the type of goods you are trading with counterparts in the UK. Ensure you have completed the necessary border requirements.</p>
-      <p>If you sell agri-food products to the UK, your business may need to:</p>
-    goods_list:
+    body_markdown: |
+      ### Buying or selling goods
+
+      Rules are changing and there will be border requirements placed on the movement of goods between the EU and UK. [Find out more about how the border with the UK will work](/government/publications/the-border-operating-model).
+      Make sure you talk to your trading partners in the UK to agree responsibilities and have the correct paperwork for the type of goods you are trading with counterparts in the UK. Ensure you have completed the necessary border requirements.
+      If you sell agri-food products to the UK, your business may need to:
+
       - check the requirements for exporting food, drink or agricultural products to the UK from the EU
       - check what documents, licences and certificates are required for the goods you are exporting from the EU into the UK and how to apply for them
       - pre-notify the UK authorities about the goods you are exporting from the EU into the UK
-    goods_list_end: <p>There will be no substantive change for the movement of goods between <a href="/government/publications/moving-goods-under-the-northern-ireland-protocol/moving-goods-under-the-northern-ireland-protocol-section-three-moving-goods-from-northern-ireland-to-the-european-union">Northern Ireland</a> and EU Member States, including Ireland.</p>
-    tax_title: Paying VAT or claiming VAT refunds
-    tax_text: |
-      <p>Make sure you understand the <a href="/government/publications/changes-to-vat-treatment-of-overseas-goods-sold-to-customers-from-1-january-2021">new rules for paying import VAT on parcels</a> you send to UK buyers.</p>
-      <p>Check how to <a href="/guidance/claim-refunds-of-uk-vat-from-1-january-2021-if-youre-an-eu-business">claim VAT refunds on goods and services</a> you buy from the UK from 1 January 2021.</p>
-    data_title: Transferring personal data to the UK
-    data_text: |
-      <p>Your business may need to make some changes to allow you to continue to share personal data with businesses or other organisations in the UK. Be prepared on data protection and data transfers.</p>
-    services_title: Providing services in the UK
-    services_text: |
-      <p>Your business might be affected by the changes from 1 January 2021. There may be new rules if:</p>
-    services_list:
+
+      There will be no substantive change for the movement of goods between [Northern Ireland](/government/publications/moving-goods-under-the-northern-ireland-protocol/moving-goods-under-the-northern-ireland-protocol-section-three-moving-goods-from-northern-ireland-to-the-european-union) and EU Member States, including Ireland.
+
+      ### Paying VAT or claiming VAT refunds
+
+      Make sure you understand the [new rules for paying import VAT on parcels](/government/publications/changes-to-vat-treatment-of-overseas-goods-sold-to-customers-from-1-january-2021) you send to UK buyers.
+      Check how to [claim VAT refunds on goods and services](/guidance/claim-refunds-of-uk-vat-from-1-january-2021-if-youre-an-eu-business) you buy from the UK from 1 January 2021.
+
+      ### Transferring personal data to the UK
+
+      Your business may need to make some changes to allow you to continue to share personal data with businesses or other organisations in the UK. Be prepared on data protection and data transfers.
+
+      ### Providing services in the UK
+
+      Your business might be affected by the changes from 1 January 2021. There may be new rules if:
+
       - you have branches or subsidiaries in the UK
       - your business is part of a service sector within the UK
       - you are planning a merger with a UK company
       - you or your employees travel to the UK for business
       - you or your employees provide services in a UK regulated profession
-    services_list_end: <p>Check the regulations for the UK, including visa requirements, and understand how changes could affect your business.</p>
+
+      Check the regulations for the UK, including visa requirements, and understand how changes could affect your business.
+
     training_section_title: Additional help and support
     training_section_description: |
       Online events will help you understand the UK border requirements if you’re a trader in the EU, and what you need to do to prepare for the end of the transition period. Dates for these events are currently being scheduled and will be published on this page once they’re available.
