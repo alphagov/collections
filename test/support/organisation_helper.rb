@@ -5,7 +5,7 @@ module OrganisationHelpers
 
   def stub_rummager_latest_content_requests(organisation_slug)
     stub_latest_content_from_supergroups_request(organisation_slug)
-    stub_rummager_latest_documents_request(organisation_slug)
+    stub_search_api_latest_documents_request(organisation_slug)
   end
 
   def stub_latest_content_from_supergroups_request(organisation_slug, empty = false)
@@ -60,28 +60,23 @@ module OrganisationHelpers
     stub_request(:get, url).to_return(body: build_result_body("other", true).to_json)
   end
 
-  def stub_rummager_latest_documents_request(organisation_slug)
+  def stub_search_api_latest_documents_request(organisation_slug)
     stub_request(:get, Plek.new.find("search") + "/search.json?count=3&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp&reject_content_purpose_supergroup=other")
-      .to_return(body: { results: [
-        {
-          title: "Rapist has sentence increased after Solicitor General’s referral",
-          link: "/government/news/rapist-has-sentence-increased-after-solicitor-generals-referral",
-          content_store_document_type: "press release",
-          public_timestamp: "2018-06-18T17:39:34.000+01:00",
-        },
-      ] }.to_json)
+      .to_return(body: { results: [search_response] }.to_json)
   end
 
-  def stub_rummager_latest_content_with_acronym(organisation_slug)
+  def stub_search_api_latest_content_with_acronym(organisation_slug)
     stub_request(:get, Plek.new.find("search") + "/search.json?count=3&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp&reject_content_purpose_supergroup=other")
-      .to_return(body: { results: [
-        {
-          title: "Rapist has sentence increased after Solicitor General’s referral",
-          link: "/government/news/rapist-has-sentence-increased-after-solicitor-generals-referral",
-          content_store_document_type: "dfid_research_output",
-          public_timestamp: "2018-06-18T17:39:34.000+01:00",
-        },
-      ] }.to_json)
+      .to_return(body: { results: [search_response] }.to_json)
+  end
+
+  def search_response
+    {
+      title: "Attorney General launches recruitment campaign for new Chief Inspector",
+      link: "/government/news/attorney-general-launches-recruitment-campaign-for-new-chief-inspector",
+      content_store_document_type: "press release",
+      public_timestamp: "2020-07-26T23:15:09.000+00:00",
+    }
   end
 
   def current_role_appointment(title:, base_path: nil, payment_type: nil, document_type: nil, content_id: nil)

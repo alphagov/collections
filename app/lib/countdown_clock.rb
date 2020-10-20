@@ -24,6 +24,6 @@ private
   end
 
   def today_in_london
-    Time.zone.now.utc.to_date
+    Time.zone.today
   end
 end

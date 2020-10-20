@@ -677,9 +677,9 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     visit "/government/organisations/attorney-generals-office"
     assert page.has_css?("section#latest-documents")
     assert page.has_css?(".gem-c-heading", text: "Latest from the Attorney General's Office")
-    assert page.has_css?(".gem-c-document-list__item-title[href='/government/news/rapist-has-sentence-increased-after-solicitor-generals-referral']", text: "Rapist has sentence increased after Solicitor General’s referral")
+    assert page.has_css?(".gem-c-document-list__item-title[href='/government/news/attorney-general-launches-recruitment-campaign-for-new-chief-inspector']", text: "Attorney General launches recruitment campaign for new Chief Inspector")
     assert page.has_css?(".gem-c-document-list__attribute", text: "Press release")
-    assert page.has_css?(".gem-c-document-list__attribute time[datetime='2018-06-18']", text: "18 June 2018")
+    assert page.has_css?(".gem-c-document-list__attribute time[datetime='2020-07-26']", text: "26 July 2020")
   end
 
   it "shows a see all link in the latest documents section" do
