@@ -3,8 +3,8 @@ cy:
     meta_title: Pontio’r DU
     meta_description: "Mae’r DU wedi gadael yr UE. Ewch i weld beth mae’n ei olygu i chi."
     page_header: "Pontio’r DU:<br/>mae amser yn rhedeg allan"
-    page_header_explainer: |
-      <span class="landing-page__intro-highlight">Bydd rheolau newydd</span> i fusnesau a dinasyddion o 1 Ionawr 2021.
+    page_header_highlight: Bydd rheolau newydd
+    page_header_explainer: i fusnesau a dinasyddion o 1 Ionawr 2021.
     countdown_days_to_go: diwrnod i fynd
     countdown_day_to_go: diwrnod i fynd
     take_action_title: Sicrhewch eich bod yn barod
