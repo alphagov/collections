@@ -9,6 +9,7 @@
         href: featured_item[:link].fetch(:path),
         image_src: featured_item[:image][:url],
         heading_text: featured_item[:link].fetch(:text),
+        heading_level: 3,
         metadata: featured_item[:metadata][:organisations],
         context: {
           date: featured_item[:metadata][:public_updated_at],
