@@ -116,126 +116,84 @@ E08000004:
 E07000117:
   name: Burnley Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-10-12
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-10-17
       start_time: "00:01"
 E07000118:
   name: Chorley Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-10-12
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-10-17
       start_time: "00:01"
 E07000119:
   name: Fylde Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-10-12
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-10-17
       start_time: "00:01"
 E07000120:
   name: Hyndburn Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-10-12
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-10-17
       start_time: "00:01"
 E07000121:
   name: Lancaster City Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-10-12
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-10-17
       start_time: "00:01"
 E07000122:
   name: Pendle Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-10-12
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-10-17
       start_time: "00:01"
 E07000123:
   name: Preston City Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-10-12
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-10-17
       start_time: "00:01"
 E07000124:
   name: Ribble Valley Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-10-12
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-10-17
       start_time: "00:01"
 E07000125:
   name: Rossendale Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-10-12
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-10-17
       start_time: "00:01"
 E07000126:
   name: South Ribble Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-10-12
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-10-17
       start_time: "00:01"
 E07000127:
   name: West Lancashire Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-10-12
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-10-17
       start_time: "00:01"
 E07000128:
   name: Wyre Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-10-12
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-10-17
       start_time: "00:01"
 E06000009:
   name: Blackpool Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-10-12
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-10-17
       start_time: "00:01"
 E06000008:
   name: Blackburn with Darwen Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-10-12
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-10-17
       start_time: "00:01"
