@@ -25,8 +25,8 @@ en:
       link_text: Find a postcode on Royal Mail's postcode finder
       href: http://www.royalmail.com/find-a-postcode
     results:
-      travel_heading: If you travel to other areas
-      travel_text: <a class="govuk-link" href="/find-coronavirus-local-restrictions">Enter another postcode</a> to find out what restrictions there are.
+      travel_heading: Find information about somewhere else
+      travel_text: <a class="govuk-link" href="/find-coronavirus-local-restrictions">Enter another postcode.</a>
       current_level_heading: Current Local COVID Alert Level
       changing_levels_title: The Local COVID Alert Level is changing soon
       level_one:
