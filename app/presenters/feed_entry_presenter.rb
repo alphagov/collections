@@ -21,8 +21,7 @@ class FeedEntryPresenter
     # Collections now uses London time. Convert it back to it's former zone
     # of UTC in the domain of atom feeds to ensure backwards compatibility.
 
-    @utc_time = Time.find_zone("UTC")
-    @utc_time.parse(result["public_timestamp"])
+    Time.find_zone("UTC").parse(result["public_timestamp"])
   end
 
   def title
