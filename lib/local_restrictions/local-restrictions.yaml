@@ -59,11 +59,17 @@ E08000003:
     - alert_level: 2
       start_date: 2020-10-12
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-10-23
+      start_time: "00:01"
 E08000001:
   name: Bolton Borough Council
   restrictions:
     - alert_level: 2
       start_date: 2020-10-12
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-10-23
       start_time: "00:01"
 E08000002:
   name: Bury Borough Council
@@ -71,11 +77,17 @@ E08000002:
     - alert_level: 2
       start_date: 2020-10-12
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-10-23
+      start_time: "00:01"
 E08000007:
   name: Stockport Borough Council
   restrictions:
     - alert_level: 2
       start_date: 2020-10-12
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-10-23
       start_time: "00:01"
 E08000008:
   name: Tameside Borough Council
@@ -83,11 +95,17 @@ E08000008:
     - alert_level: 2
       start_date: 2020-10-12
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-10-23
+      start_time: "00:01"
 E08000009:
   name: Trafford Borough Council
   restrictions:
     - alert_level: 2
       start_date: 2020-10-12
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-10-23
       start_time: "00:01"
 E08000010:
   name: Wigan Borough Council
@@ -95,11 +113,17 @@ E08000010:
     - alert_level: 2
       start_date: 2020-10-12
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-10-23
+      start_time: "00:01"
 E08000006:
   name: Salford City Council
   restrictions:
     - alert_level: 2
       start_date: 2020-10-12
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-10-23
       start_time: "00:01"
 E08000005:
   name: Rochdale Borough Council
@@ -107,11 +131,17 @@ E08000005:
     - alert_level: 2
       start_date: 2020-10-12
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-10-23
+      start_time: "00:01"
 E08000004:
   name: Oldham Borough Council
   restrictions:
     - alert_level: 2
       start_date: 2020-10-12
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-10-23
       start_time: "00:01"
 E07000117:
   name: Burnley Borough Council
