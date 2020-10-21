@@ -199,7 +199,6 @@ private
 
   def and_i_can_see_the_news_and_communications_section
     assert page.has_selector?(".gem-c-heading", text: "News")
-    assert page.has_selector?(".taxon-page__featured-item")
 
     tagged_content_for_news_and_communications.each do |item|
       all_other_sections_list_item_test(item)
