@@ -263,11 +263,17 @@ E08000016:
     - alert_level: 2
       start_date: 2020-10-12
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-10-24
+      start_time: "00:01"
 E08000018:
   name: Rotherham Metropolitan Borough Council
   restrictions:
     - alert_level: 2
       start_date: 2020-10-12
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-10-24
       start_time: "00:01"
 E08000017:
   name: Doncaster Metropolitan Borough Council
@@ -275,11 +281,17 @@ E08000017:
     - alert_level: 2
       start_date: 2020-10-12
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-10-24
+      start_time: "00:01"
 E08000019:
   name: Sheffield City Council
   restrictions:
     - alert_level: 2
       start_date: 2020-10-12
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-10-24
       start_time: "00:01"
 E08000021:
   name: Newcastle City Council
