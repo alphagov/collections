@@ -62,11 +62,11 @@ en:
       future:
         heading: Future Local COVID Alert Level
         level_one:
-          alert_level: "From the %{date} this area will be in Local COVID Alert Level: Medium."
+          alert_level: "From %{date} this area will be in Local COVID Alert Level: Medium."
           guidance: "<a class='govuk-link' href='/guidance/local-covid-alert-level-medium'>What you can and cannot do from %{date}.</a>"
         level_two:
-          alert_level: "From the %{date} this area will be Local COVID Alert Level: High."
+          alert_level: "From %{date} this area will be Local COVID Alert Level: High."
           guidance: "<a class='govuk-link' href='/guidance/local-covid-alert-level-high'>What you can and cannot do from %{date}.</a>"
         level_three:
-          alert_level: "From the %{date} this area will be in Local COVID Alert Level: Very High."
+          alert_level: "From %{date} this area will be in Local COVID Alert Level: Very High."
           guidance: "<a class='govuk-link' href='/guidance/local-covid-alert-level-very-high'>What you can and cannot do from %{date}.</a>"
