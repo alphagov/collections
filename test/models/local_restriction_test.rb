@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe LocalRestriction do
-  let(:restriction) { described_class.new("E08000001") }
+  let(:restriction) { described_class.new("E08000123") }
 
   before do
     LocalRestriction.any_instance.stubs(:file_name).returns("test/fixtures/local-restrictions.yaml")
@@ -69,14 +69,14 @@ describe LocalRestriction do
 
   it "returns nil when there are no future restrictions" do
     travel_to Time.zone.local(2020, 10, 15, 10, 10, 10)
-    restriction = described_class.new("E08000002")
+    restriction = described_class.new("E08000456")
     assert_nil restriction.future
     travel_back
   end
 
   it "returns nil when there are no current restrictions" do
     travel_to Time.zone.local(2020, 10, 15, 10, 10, 10)
-    restriction = described_class.new("E08000003")
+    restriction = described_class.new("E08000789")
     assert_nil restriction.current
     travel_back
   end

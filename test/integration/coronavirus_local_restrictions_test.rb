@@ -5,6 +5,10 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   include GdsApi::TestHelpers::Mapit
   include GdsApi::TestHelpers::ContentStore
 
+  before do
+    LocalRestriction.any_instance.stubs(:file_name).returns("test/fixtures/local-restrictions.yaml")
+  end
+
   it "displays the tier one restrictions" do
     given_i_am_on_the_local_restrictions_page
     then_i_can_see_the_postcode_lookup_form
@@ -50,12 +54,12 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     then_i_can_see_the_postcode_lookup_form
     then_i_enter_a_valid_english_postcode_with_an_extra_special_character
     then_i_click_on_find
-    then_i_see_the_results_page_for_level_two_with_future_level_three_restrictions
+    then_i_see_the_results_page_for_level_two
   end
 
   describe "future restrictions" do
     before do
-      travel_to Time.zone.local(2020, 10, 12, 20, 10, 10)
+      travel_to Time.zone.local(2020, 10, 11, 10, 10, 10)
     end
 
     after do
@@ -66,7 +70,7 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       given_i_am_on_the_local_restrictions_page
       then_i_enter_a_valid_english_postcode_with_a_future_restriction
       then_i_click_on_find
-      then_i_see_the_results_page_for_level_two_with_future_level_three_restrictions
+      then_i_see_the_results_page_for_changing_restriction_levels
     end
   end
 
@@ -86,7 +90,7 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     areas = [
       {
         "gss" => "E01000123",
-        "name" => "Coruscant Planetary Council",
+        "name" => "Tatooine",
         "type" => "LBO",
         "country_name" => "England",
       },
@@ -100,14 +104,13 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     postcode = "E1 8QS"
     areas = [
       {
-        "gss" => "E08000001",
+        "gss" => "E08000456",
         "name" => "Coruscant Planetary Council",
         "type" => "LBO",
         "country_name" => "England",
       },
     ]
     stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
-    LocalRestriction.any_instance.stubs(:file_name).returns("test/fixtures/local-restrictions.yaml")
 
     fill_in "Enter your postcode", with: postcode
   end
@@ -115,14 +118,13 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   def then_i_enter_a_valid_english_postcode_with_an_extra_special_character
     areas = [
       {
-        "gss" => "E08000001",
+        "gss" => "E08000456",
         "name" => "Coruscant Planetary Council",
         "type" => "LBO",
         "country_name" => "England",
       },
     ]
     stub_mapit_has_a_postcode_and_areas("E1 8QS", [], areas)
-    LocalRestriction.any_instance.stubs(:file_name).returns("test/fixtures/local-restrictions.yaml")
 
     fill_in "Enter your postcode", with: ".e18qs"
   end
@@ -131,8 +133,8 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     postcode = "E1 8QS"
     areas = [
       {
-        "gss" => "E09000030",
-        "name" => "London Borough of Tower Hamlets",
+        "gss" => "E08000456",
+        "name" => "Coruscant Planetary Council",
         "type" => "LBO",
         "country_name" => "England",
       },
@@ -170,12 +172,12 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   end
 
   def then_i_see_the_results_page_for_level_one
-    assert page.has_text?("Coruscant Planetary Council")
+    assert page.has_text?("Tatooine")
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_one.heading"))
   end
 
   def then_i_see_the_results_page_for_level_two
-    assert page.has_text?("London Borough of Tower Hamlets")
+    assert page.has_text?("Coruscant Planetary Council")
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.alert_level"))
   end
 
@@ -191,11 +193,11 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.no_information.heading"))
   end
 
-  def then_i_see_the_results_page_for_level_two_with_future_level_three_restrictions
-    date = "2021-10-12".to_date.strftime("%-d %B")
+  def then_i_see_the_results_page_for_changing_restriction_levels
+    date = "2020-10-12".to_date.strftime("%-d %B")
 
-    assert page.has_text?("Tatooine")
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.changing_alert_level"))
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.future.level_three.alert_level", date: date))
+    assert page.has_text?("Coruscant Planetary Council")
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_three.changing_alert_level"))
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.future.level_two.alert_level", date: date))
   end
 end
