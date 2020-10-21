@@ -16,7 +16,7 @@ describe CoronavirusLocalRestrictionsController do
 
   describe "POST results" do
     it "renders the results page when given a real postcode" do
-      postcode = "E18QS"
+      postcode = "E1 8QS"
       areas = [
         {
           "gss" => "E01000123",

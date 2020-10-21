@@ -16,11 +16,11 @@ class CoronavirusLocalRestrictionsController < ApplicationController
       return render_no_postcode_error
     end
 
-    @postcode = params["postcode-lookup"].gsub(/\s+/, "").upcase
+    @postcode = PostcodeService.new(params["postcode-lookup"]).sanitize
 
     if @postcode.blank?
       return render_no_postcode_error
-    elsif !postcode_validation
+    elsif !PostcodeService.new(@postcode).valid?
       return render_invalid_postcode_error
     end
 
@@ -86,10 +86,6 @@ private
         url: "/coronavirus",
       },
     ]
-  end
-
-  def postcode_validation
-    @postcode =~ /^([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))\s?[0-9][A-Za-z]{2})$/
   end
 
   def content_item
