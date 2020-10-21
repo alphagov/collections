@@ -25,6 +25,14 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_click_on_find
       then_i_see_the_results_page_for_level_two
     end
+
+    it "displays the tier three restrictions" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_can_see_the_postcode_lookup_form
+      then_i_enter_a_valid_english_postcode_in_tier_three
+      then_i_click_on_find
+      then_i_see_the_results_page_for_level_three
+    end
   end
 
   it "displays guidance for a devolved nation" do
@@ -122,6 +130,21 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     fill_in "Enter your postcode", with: postcode
   end
 
+  def then_i_enter_a_valid_english_postcode_in_tier_three
+    postcode = "E1 8QS"
+    areas = [
+      {
+        "gss" => "E08001234",
+        "name" => "Mandalore",
+        "type" => "LBO",
+        "country_name" => "England",
+      },
+    ]
+    stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
+
+    fill_in "Enter your postcode", with: postcode
+  end
+
   def then_i_enter_a_valid_welsh_postcode
     postcode = "LL11 0BY"
     areas = [
@@ -159,6 +182,12 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     assert page.has_text?("Coruscant Planetary Council")
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.heading"))
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.alert_level"))
+  end
+
+  def then_i_see_the_results_page_for_level_three
+    assert page.has_text?("Mandalore")
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_three.heading"))
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_three.alert_level"))
   end
 
   def then_i_see_the_results_for_wales
