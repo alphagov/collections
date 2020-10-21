@@ -29,3 +29,9 @@ E08000789:
     - alert_level: 2
       start_date: 2021-10-12
       start_time: "00:01"
+E08001234:
+  name: Mandalore
+  restrictions:
+    - alert_level: 3
+      start_date: 2020-10-12
+      start_time: "00:01"
