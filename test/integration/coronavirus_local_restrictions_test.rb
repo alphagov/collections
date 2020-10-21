@@ -102,44 +102,20 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
 
   def then_i_enter_a_valid_english_postcode_with_a_future_restriction
     postcode = "E1 8QS"
-    areas = [
-      {
-        "gss" => "E08000456",
-        "name" => "Coruscant Planetary Council",
-        "type" => "LBO",
-        "country_name" => "England",
-      },
-    ]
-    stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
+    stub_mapit_has_a_postcode_and_areas(postcode, [], [level_two_area])
 
     fill_in "Enter your postcode", with: postcode
   end
 
   def then_i_enter_a_valid_english_postcode_with_an_extra_special_character
-    areas = [
-      {
-        "gss" => "E08000456",
-        "name" => "Coruscant Planetary Council",
-        "type" => "LBO",
-        "country_name" => "England",
-      },
-    ]
-    stub_mapit_has_a_postcode_and_areas("E1 8QS", [], areas)
+    stub_mapit_has_a_postcode_and_areas("E1 8QS", [], [level_two_area])
 
     fill_in "Enter your postcode", with: ".e18qs"
   end
 
   def then_i_enter_a_valid_english_postcode_in_tier_two
     postcode = "E1 8QS"
-    areas = [
-      {
-        "gss" => "E08000456",
-        "name" => "Coruscant Planetary Council",
-        "type" => "LBO",
-        "country_name" => "England",
-      },
-    ]
-    stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
+    stub_mapit_has_a_postcode_and_areas(postcode, [], [level_two_area])
 
     fill_in "Enter your postcode", with: postcode
   end
@@ -199,5 +175,14 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     assert page.has_text?("Coruscant Planetary Council")
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_three.changing_alert_level"))
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.future.level_two.alert_level", date: date))
+  end
+
+  def level_two_area
+    {
+      "gss" => "E08000456",
+      "name" => "Coruscant Planetary Council",
+      "type" => "LBO",
+      "country_name" => "England",
+    }
   end
 end
