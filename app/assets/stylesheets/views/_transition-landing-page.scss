@@ -1,7 +1,6 @@
 
 $red: #FF003B;
-$dark-blue: #0055D2;
-$dark-blue-2: #1E1348;
+$dark-blue: #1E1348;
 $dark-blue-shadow: #020659;
 $transparent: rgba(0,0,0,0);
 $header-breakpoint: 960px;
@@ -21,7 +20,7 @@ $green: #00703C;
   padding-top: govuk-spacing(3);
   margin-bottom: govuk-spacing(6);
   background-color: govuk-colour("white");
-  color: $dark-blue-2;
+  color: $dark-blue;
 }
 
 .landing-page__header--with-bg-image {
@@ -60,7 +59,7 @@ $green: #00703C;
   @include govuk-font($size: 80, $weight: bold, $line-height: 60px);
 
   display: inline-block;
-  background: $dark-blue-2;
+  background: $dark-blue;
   color: govuk-colour('white');
   position: relative;
 
@@ -98,7 +97,7 @@ $green: #00703C;
   margin-left: govuk-spacing(2);
   height: 35px;
   vertical-align: middle;
-  color: $dark-blue-2;
+  color: $dark-blue;
 
   @include govuk-media-query($from: tablet) {
     height: 60px;
@@ -144,7 +143,7 @@ $green: #00703C;
 .landing-page__intro {
   p {
     @include govuk-font($size: 36, $line-height: 35px);
-    color: $dark-blue-2;
+    color: $dark-blue;
 
     @include govuk-media-query($from: tablet) {
       @include govuk-font($size: 36, $line-height: 45px);
@@ -154,7 +153,7 @@ $green: #00703C;
   a:link,
   a:visited {
     font-weight: bold;
-    color: $dark-blue-2;
+    color: $dark-blue;
   }
 
   a:focus {
@@ -170,7 +169,7 @@ $green: #00703C;
 
 .landing-page__page_title {
   @include govuk-font($size: 48, $weight: bold);
-  color: $dark-blue-2;
+  color: $dark-blue;
   margin-top: govuk-spacing(7);
   margin-bottom: govuk-spacing(4);
 }
@@ -195,7 +194,7 @@ $green: #00703C;
 }
 
 .landing-page__section--border-top {
-  border-top: govuk-spacing(2) solid $dark-blue-2;
+  border-top: govuk-spacing(2) solid $dark-blue;
 }
 
 .landing-page__section--border-bottom-red {
@@ -205,7 +204,7 @@ $green: #00703C;
 .landing-page__section--blue {
   @include govuk-responsive-padding(8, "top");
   @include govuk-responsive-padding(8, "bottom");
-  background-color: $dark-blue-2;
+  background-color: $dark-blue;
   margin-top: 0;
 
   h2,
