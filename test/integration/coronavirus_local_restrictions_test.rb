@@ -9,20 +9,22 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     LocalRestriction.any_instance.stubs(:file_name).returns("test/fixtures/local-restrictions.yaml")
   end
 
-  it "displays the tier one restrictions" do
-    given_i_am_on_the_local_restrictions_page
-    then_i_can_see_the_postcode_lookup_form
-    then_i_enter_a_valid_english_postcode
-    then_i_click_on_find
-    then_i_see_the_results_page_for_level_one
-  end
+  describe "current restrictions" do
+    it "displays the tier one restrictions" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_can_see_the_postcode_lookup_form
+      then_i_enter_a_valid_english_postcode
+      then_i_click_on_find
+      then_i_see_the_results_page_for_level_one
+    end
 
-  it "displays the tier two restrictions" do
-    given_i_am_on_the_local_restrictions_page
-    then_i_can_see_the_postcode_lookup_form
-    then_i_enter_a_valid_english_postcode_in_tier_two
-    then_i_click_on_find
-    then_i_see_the_results_page_for_level_two
+    it "displays the tier two restrictions" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_can_see_the_postcode_lookup_form
+      then_i_enter_a_valid_english_postcode_in_tier_two
+      then_i_click_on_find
+      then_i_see_the_results_page_for_level_two
+    end
   end
 
   it "displays guidance for a devolved nation" do
@@ -150,10 +152,12 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   def then_i_see_the_results_page_for_level_one
     assert page.has_text?("Tatooine")
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_one.heading"))
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_one.alert_level"))
   end
 
   def then_i_see_the_results_page_for_level_two
     assert page.has_text?("Coruscant Planetary Council")
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.heading"))
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.alert_level"))
   end
 
