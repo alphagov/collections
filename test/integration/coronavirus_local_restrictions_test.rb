@@ -35,12 +35,30 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     end
   end
 
-  it "displays guidance for a devolved nation" do
-    given_i_am_on_the_local_restrictions_page
-    then_i_can_see_the_postcode_lookup_form
-    then_i_enter_a_valid_welsh_postcode
-    then_i_click_on_find
-    then_i_see_the_results_for_wales
+  describe "devolved_nations" do
+    it "displays guidance for Wales" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_can_see_the_postcode_lookup_form
+      then_i_enter_a_valid_welsh_postcode
+      then_i_click_on_find
+      then_i_see_the_results_for_wales
+    end
+
+    it "displays guidance for Scotland" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_can_see_the_postcode_lookup_form
+      then_i_enter_a_valid_scottish_postcode
+      then_i_click_on_find
+      then_i_see_the_results_for_scotland
+    end
+
+    it "displays guidance for Northern Ireland" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_can_see_the_postcode_lookup_form
+      then_i_enter_a_valid_northern_ireland_postcode
+      then_i_click_on_find
+      then_i_see_the_results_for_northern_ireland
+    end
   end
 
   it "errors gracefully if you don't enter a postcode" do
@@ -158,6 +176,32 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     fill_in "Enter your postcode", with: postcode
   end
 
+  def then_i_enter_a_valid_scottish_postcode
+    postcode = "G20 9SH"
+    areas = [
+      {
+        "gss" => "E01000123",
+        "country_name" => "Scotland",
+      },
+    ]
+    stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
+
+    fill_in "Enter your postcode", with: postcode
+  end
+
+  def then_i_enter_a_valid_northern_ireland_postcode
+    postcode = "BT48 7PX"
+    areas = [
+      {
+        "gss" => "E01000123",
+        "country_name" => "Northern Ireland",
+      },
+    ]
+    stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
+
+    fill_in "Enter your postcode", with: postcode
+  end
+
   def when_i_enter_a_valid_postcode_that_returns_no_results
     postcode = "IM1 1AF"
     mapit_endpoint = Plek.current.find("mapit")
@@ -192,6 +236,14 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
 
   def then_i_see_the_results_for_wales
     assert page.has_text?("Welsh Government")
+  end
+
+  def then_i_see_the_results_for_scotland
+    assert page.has_text?("Scottish Government")
+  end
+
+  def then_i_see_the_results_for_northern_ireland
+    assert page.has_text?("Northern Ireland Government")
   end
 
   def then_i_see_an_error_message
