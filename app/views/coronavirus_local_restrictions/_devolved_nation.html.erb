@@ -6,17 +6,26 @@
     title: t("coronavirus_local_restrictions.results.devolved_nations.heading")
   } %>
   <% if @location_lookup.data.first.scotland? %>
-    <p class="govuk-body">
-      <%= sanitize(t("coronavirus_local_restrictions.results.devolved_nations.scotland.guidance")) %>
-    </p>
+    <%= render "govuk_publishing_components/components/action_link", {
+      text: t("coronavirus_local_restrictions.results.devolved_nations.scotland.guidance.label"),
+      href: t("coronavirus_local_restrictions.results.devolved_nations.scotland.guidance.link"),
+      simple: true,
+      margin_bottom: 9
+    } %>
   <% elsif @location_lookup.data.first.northern_ireland? %>
-    <p class="govuk-body">
-      <%= sanitize(t("coronavirus_local_restrictions.results.devolved_nations.northern_ireland.guidance")) %>
-    </p>
+    <%= render "govuk_publishing_components/components/action_link", {
+      text: t("coronavirus_local_restrictions.results.devolved_nations.northern_ireland.guidance.label"),
+      href: t("coronavirus_local_restrictions.results.devolved_nations.northern_ireland.guidance.link"),
+      simple: true,
+      margin_bottom: 9
+    } %>
   <% elsif @location_lookup.data.first.wales? %>
-    <p class="govuk-body">
-      <%= sanitize(t("coronavirus_local_restrictions.results.devolved_nations.wales.guidance")) %>
-    </p>
+    <%= render "govuk_publishing_components/components/action_link", {
+      text: t("coronavirus_local_restrictions.results.devolved_nations.wales.guidance.label"),
+      href: t("coronavirus_local_restrictions.results.devolved_nations.wales.guidance.link"),
+      simple: true,
+      margin_bottom: 9
+    } %>
   <% end %>
 
   <%= render partial: "coronavirus_local_restrictions/travel_guidance", locals: { travel_heading: t("coronavirus_local_restrictions.results.devolved_nations.travel_heading") } %>

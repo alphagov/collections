@@ -52,11 +52,17 @@ en:
         heading: There might be restrictions in this area
         travel_heading: If you travel to areas in England
         scotland:
-          guidance: <a class="govuk-link" href="https://www.gov.scot/coronavirus-covid-19/">Find out what you can or cannot do from the Scottish Government.</a>
+          guidance:
+           label: Find out what you can or cannot do from the Scottish Government.
+           link: "https://www.gov.scot/coronavirus-covid-19/"
         wales:
-          guidance: <a class="govuk-link" href="https://gov.wales/local-lockdown">Find out what you can or cannot do from the Welsh Government.</a>
+          guidance:
+            label: Find out what you can or cannot do from the Welsh Government.
+            link: "https://gov.wales/local-lockdown"
         northern_ireland:
-          guidance: <a class="govuk-link" href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-and-localised-restrictions">Find out what you can or cannot do from the Northern Ireland Government.</a>
+          guidance:
+            label: Find out what you can or cannot do from the Northern Ireland Government.
+            link: "https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-and-localised-restrictions"
       no_information:
         heading: There is no information about the restrictions in this area
         guidance: <a class="govuk-link" href="/guidance/full-list-of-local-covid-alert-levels-by-area">Full list of Local COVID Alert Levels by area.</a>
