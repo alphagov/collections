@@ -9,7 +9,6 @@
   css_classes = %w(youtube__video-wrapper)
   css_classes << "youtube__video-wrapper--inverse" if inverse
 %>
-
 <%= tag.div class: css_classes do %>
   <%= render "govuk_publishing_components/components/govspeak", {
   } do %>
@@ -25,15 +24,15 @@
         </span>
         <br>
         <%= no_cookies_or_text %>
+        <br>
+        <a
+          href="<%= youtube_video_url %>"
+          class="govuk-body govuk-link"
+          data-youtube-player-analytics="true"
+          data-youtube-player-analytics-category="EmbeddedYoutube">
+          <%= no_cookies_watch_link_text %>
+        </a>
       </p>
-      <a
-        href="<%= youtube_video_url %>"
-        class="govuk-body govuk-link"
-        data-youtube-player-analytics="true"
-        data-youtube-player-analytics-category="EmbeddedYoutube"
-      >
-        <%= no_cookies_watch_link_text %>
-      </a>
     </div>
   <% end %>
   <%= render "govuk_publishing_components/components/details", { title: transcription_summary} do %>
