@@ -105,11 +105,18 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       travel_back
     end
 
-    it "displays future restrictions" do
+    it "displays restrictions changing from level one to level two" do
       given_i_am_on_the_local_restrictions_page
-      then_i_enter_a_valid_english_postcode_with_a_future_restriction
+      then_i_enter_a_valid_english_postcode_with_a_future_level_two_restriction
       then_i_click_on_find
-      then_i_see_the_results_page_for_changing_restriction_levels
+      then_i_see_the_results_page_for_level_one_with_changing_restriction_levels
+    end
+
+    it "displays restrictions changing from level two to level three" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_enter_a_valid_english_postcode_with_a_future_level_three_restriction
+      then_i_click_on_find
+      then_i_see_the_results_page_for_level_two_with_changing_restriction_levels
     end
   end
 
@@ -139,9 +146,32 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     fill_in "Enter your postcode", with: postcode
   end
 
-  def then_i_enter_a_valid_english_postcode_with_a_future_restriction
+  def then_i_enter_a_valid_english_postcode_with_a_future_level_two_restriction
     postcode = "E1 8QS"
-    stub_mapit_has_a_postcode_and_areas(postcode, [], [level_two_area])
+    areas = [
+      {
+        "gss" => "E08000789",
+        "name" => "Naboo",
+        "type" => "LBO",
+        "country_name" => "England",
+      },
+    ]
+    stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
+
+    fill_in "Enter your postcode", with: postcode
+  end
+
+  def then_i_enter_a_valid_english_postcode_with_a_future_level_three_restriction
+    postcode = "E1 8QS"
+    areas = [
+      {
+        "gss" => "E08001456",
+        "name" => "Alderaan",
+        "type" => "LBO",
+        "country_name" => "England",
+      },
+    ]
+    stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
 
     fill_in "Enter your postcode", with: postcode
   end
@@ -273,12 +303,20 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.no_information.heading"))
   end
 
-  def then_i_see_the_results_page_for_changing_restriction_levels
+  def then_i_see_the_results_page_for_level_one_with_changing_restriction_levels
+    date = "2021-10-12".to_date.strftime("%-d %B")
+
+    assert page.has_text?("Naboo")
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_one.changing_alert_level"))
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.future.level_two.alert_level", date: date))
+  end
+
+  def then_i_see_the_results_page_for_level_two_with_changing_restriction_levels
     date = "2020-10-12".to_date.strftime("%-d %B")
 
-    assert page.has_text?("Coruscant Planetary Council")
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_three.changing_alert_level"))
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.future.level_two.alert_level", date: date))
+    assert page.has_text?("Alderaan")
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.changing_alert_level"))
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.future.level_three.alert_level", date: date))
   end
 
   def level_two_area

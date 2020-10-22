@@ -35,3 +35,12 @@ E08001234:
     - alert_level: 3
       start_date: 2020-10-12
       start_time: "00:01"
+E08001456:
+  name: Alderaan
+  restrictions:
+    - alert_level: 2
+      start_date: 2020-10-10
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-10-12
+      start_time: "00:01"
