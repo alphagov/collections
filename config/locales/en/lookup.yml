@@ -65,7 +65,9 @@ en:
             link: "https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-and-localised-restrictions"
       no_information:
         heading: There is no information about the restrictions in this area
-        guidance: <a class="govuk-link" href="/guidance/full-list-of-local-covid-alert-levels-by-area">Full list of Local COVID Alert Levels by area.</a>
+        guidance:
+          label: Full list of Local COVID Alert Levels by area.
+          link: "/guidance/full-list-of-local-covid-alert-levels-by-area"
       future:
         heading: Future Local COVID Alert Level
         guidance_label: What you can and cannot do from %{date}.
