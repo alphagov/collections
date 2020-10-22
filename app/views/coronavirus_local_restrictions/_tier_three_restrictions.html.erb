@@ -32,9 +32,12 @@
     </p>
   <% end %>
 
-  <p class="govuk-body">
-    <%= sanitize(t("coronavirus_local_restrictions.results.level_three.guidance")) %>
-  </p>
+  <%= render "govuk_publishing_components/components/action_link", {
+    text: t("coronavirus_local_restrictions.results.guidance_label"),
+    href: t("coronavirus_local_restrictions.results.level_three.guidance_link"),
+    simple: true,
+    margin_bottom: 9
+  } %>
 
   <%= render partial: "coronavirus_local_restrictions/future_restrictions" %>
 
