@@ -9,36 +9,75 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     LocalRestriction.any_instance.stubs(:file_name).returns("test/fixtures/local-restrictions.yaml")
   end
 
-  it "displays the tier one restrictions" do
-    given_i_am_on_the_local_restrictions_page
-    then_i_can_see_the_postcode_lookup_form
-    then_i_enter_a_valid_english_postcode
-    then_i_click_on_find
-    then_i_see_the_results_page_for_level_one
+  describe "current restrictions" do
+    it "displays the tier one restrictions" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_can_see_the_postcode_lookup_form
+      then_i_enter_a_valid_english_postcode
+      then_i_click_on_find
+      then_i_see_the_results_page_for_level_one
+    end
+
+    it "displays the tier two restrictions" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_can_see_the_postcode_lookup_form
+      then_i_enter_a_valid_english_postcode_in_tier_two
+      then_i_click_on_find
+      then_i_see_the_results_page_for_level_two
+    end
+
+    it "displays the tier three restrictions" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_can_see_the_postcode_lookup_form
+      then_i_enter_a_valid_english_postcode_in_tier_three
+      then_i_click_on_find
+      then_i_see_the_results_page_for_level_three
+    end
   end
 
-  it "displays the tier two restrictions" do
-    given_i_am_on_the_local_restrictions_page
-    then_i_can_see_the_postcode_lookup_form
-    then_i_enter_a_valid_english_postcode_in_tier_two
-    then_i_click_on_find
-    then_i_see_the_results_page_for_level_two
+  describe "devolved_nations" do
+    it "displays guidance for Wales" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_can_see_the_postcode_lookup_form
+      then_i_enter_a_valid_welsh_postcode
+      then_i_click_on_find
+      then_i_see_the_results_for_wales
+    end
+
+    it "displays guidance for Scotland" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_can_see_the_postcode_lookup_form
+      then_i_enter_a_valid_scottish_postcode
+      then_i_click_on_find
+      then_i_see_the_results_for_scotland
+    end
+
+    it "displays guidance for Northern Ireland" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_can_see_the_postcode_lookup_form
+      then_i_enter_a_valid_northern_ireland_postcode
+      then_i_click_on_find
+      then_i_see_the_results_for_northern_ireland
+    end
   end
 
-  it "displays guidance for a devolved nation" do
-    given_i_am_on_the_local_restrictions_page
-    then_i_can_see_the_postcode_lookup_form
-    then_i_enter_a_valid_welsh_postcode
-    then_i_click_on_find
-    then_i_see_the_results_for_wales
-  end
+  describe "errors" do
+    it "errors gracefully if you don't enter a postcode" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_can_see_the_postcode_lookup_form
+      then_i_click_on_find
+      then_i_can_see_the_postcode_lookup_form
+      then_i_see_a_no_postcode_error_message
+    end
 
-  it "errors gracefully if you don't enter a postcode" do
-    given_i_am_on_the_local_restrictions_page
-    then_i_can_see_the_postcode_lookup_form
-    then_i_click_on_find
-    then_i_can_see_the_postcode_lookup_form
-    then_i_see_an_error_message
+    it "errors gracefully if the postcode is invalid" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_can_see_the_postcode_lookup_form
+      when_i_enter_an_invalid_postcode
+      then_i_click_on_find
+      then_i_can_see_the_postcode_lookup_form
+      then_i_see_an_invalid_postcode_error_message
+    end
   end
 
   it "displays no information found if the postcode is in a valid format, but there is no data" do
@@ -66,11 +105,18 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       travel_back
     end
 
-    it "displays future restrictions" do
+    it "displays restrictions changing from level one to level two" do
       given_i_am_on_the_local_restrictions_page
-      then_i_enter_a_valid_english_postcode_with_a_future_restriction
+      then_i_enter_a_valid_english_postcode_with_a_future_level_two_restriction
       then_i_click_on_find
-      then_i_see_the_results_page_for_changing_restriction_levels
+      then_i_see_the_results_page_for_level_one_with_changing_restriction_levels
+    end
+
+    it "displays restrictions changing from level two to level three" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_enter_a_valid_english_postcode_with_a_future_level_three_restriction
+      then_i_click_on_find
+      then_i_see_the_results_page_for_level_two_with_changing_restriction_levels
     end
   end
 
@@ -100,9 +146,32 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     fill_in "Enter your postcode", with: postcode
   end
 
-  def then_i_enter_a_valid_english_postcode_with_a_future_restriction
+  def then_i_enter_a_valid_english_postcode_with_a_future_level_two_restriction
     postcode = "E1 8QS"
-    stub_mapit_has_a_postcode_and_areas(postcode, [], [level_two_area])
+    areas = [
+      {
+        "gss" => "E08000789",
+        "name" => "Naboo",
+        "type" => "LBO",
+        "country_name" => "England",
+      },
+    ]
+    stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
+
+    fill_in "Enter your postcode", with: postcode
+  end
+
+  def then_i_enter_a_valid_english_postcode_with_a_future_level_three_restriction
+    postcode = "E1 8QS"
+    areas = [
+      {
+        "gss" => "E08001456",
+        "name" => "Alderaan",
+        "type" => "LBO",
+        "country_name" => "England",
+      },
+    ]
+    stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
 
     fill_in "Enter your postcode", with: postcode
   end
@@ -120,12 +189,53 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     fill_in "Enter your postcode", with: postcode
   end
 
+  def then_i_enter_a_valid_english_postcode_in_tier_three
+    postcode = "E1 8QS"
+    areas = [
+      {
+        "gss" => "E08001234",
+        "name" => "Mandalore",
+        "type" => "LBO",
+        "country_name" => "England",
+      },
+    ]
+    stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
+
+    fill_in "Enter your postcode", with: postcode
+  end
+
   def then_i_enter_a_valid_welsh_postcode
     postcode = "LL11 0BY"
     areas = [
       {
         "gss" => "E01000123",
         "country_name" => "Wales",
+      },
+    ]
+    stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
+
+    fill_in "Enter your postcode", with: postcode
+  end
+
+  def then_i_enter_a_valid_scottish_postcode
+    postcode = "G20 9SH"
+    areas = [
+      {
+        "gss" => "E01000123",
+        "country_name" => "Scotland",
+      },
+    ]
+    stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
+
+    fill_in "Enter your postcode", with: postcode
+  end
+
+  def then_i_enter_a_valid_northern_ireland_postcode
+    postcode = "BT48 7PX"
+    areas = [
+      {
+        "gss" => "E01000123",
+        "country_name" => "Northern Ireland",
       },
     ]
     stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
@@ -143,6 +253,10 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     fill_in "Enter your postcode", with: postcode
   end
 
+  def when_i_enter_an_invalid_postcode
+    fill_in "Enter your postcode", with: "Hello"
+  end
+
   def then_i_click_on_find
     click_on "Find"
   end
@@ -150,31 +264,59 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   def then_i_see_the_results_page_for_level_one
     assert page.has_text?("Tatooine")
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_one.heading"))
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_one.alert_level"))
   end
 
   def then_i_see_the_results_page_for_level_two
     assert page.has_text?("Coruscant Planetary Council")
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.heading"))
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.alert_level"))
+  end
+
+  def then_i_see_the_results_page_for_level_three
+    assert page.has_text?("Mandalore")
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_three.heading"))
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_three.alert_level"))
   end
 
   def then_i_see_the_results_for_wales
     assert page.has_text?("Welsh Government")
   end
 
-  def then_i_see_an_error_message
+  def then_i_see_the_results_for_scotland
+    assert page.has_text?("Scottish Government")
+  end
+
+  def then_i_see_the_results_for_northern_ireland
+    assert page.has_text?("Northern Ireland Government")
+  end
+
+  def then_i_see_a_no_postcode_error_message
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.errors.no_postcode.error_message"))
+  end
+
+  def then_i_see_an_invalid_postcode_error_message
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.error_message"))
   end
 
   def then_i_see_the_no_information_page
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.no_information.heading"))
   end
 
-  def then_i_see_the_results_page_for_changing_restriction_levels
+  def then_i_see_the_results_page_for_level_one_with_changing_restriction_levels
+    date = "2021-10-12".to_date.strftime("%-d %B")
+
+    assert page.has_text?("Naboo")
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_one.changing_alert_level"))
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.future.level_two.alert_level", date: date))
+  end
+
+  def then_i_see_the_results_page_for_level_two_with_changing_restriction_levels
     date = "2020-10-12".to_date.strftime("%-d %B")
 
-    assert page.has_text?("Coruscant Planetary Council")
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_three.changing_alert_level"))
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.future.level_two.alert_level", date: date))
+    assert page.has_text?("Alderaan")
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.changing_alert_level"))
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.future.level_three.alert_level", date: date))
   end
 
   def level_two_area
