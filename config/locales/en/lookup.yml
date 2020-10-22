@@ -62,12 +62,10 @@ en:
         guidance: <a class="govuk-link" href="/guidance/full-list-of-local-covid-alert-levels-by-area">Full list of Local COVID Alert Levels by area.</a>
       future:
         heading: Future Local COVID Alert Level
+        guidance_label: What you can and cannot do from %{date}.
         level_one:
           alert_level: "From %{date} this area will be in Local COVID Alert Level: Medium."
-          guidance: "<a class='govuk-link' href='/guidance/local-covid-alert-level-medium'>What you can and cannot do from %{date}.</a>"
         level_two:
           alert_level: "From %{date} this area will be Local COVID Alert Level: High."
-          guidance: "<a class='govuk-link' href='/guidance/local-covid-alert-level-high'>What you can and cannot do from %{date}.</a>"
         level_three:
           alert_level: "From %{date} this area will be in Local COVID Alert Level: Very High."
-          guidance: "<a class='govuk-link' href='/guidance/local-covid-alert-level-very-high'>What you can and cannot do from %{date}.</a>"
