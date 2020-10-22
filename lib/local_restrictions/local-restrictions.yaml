@@ -41,6 +41,18 @@ E06000007:
     - alert_level: 2
       start_date: 2020-10-12
       start_time: "00:01"
+E06000021:
+  name: Stoke-on-Trent City Council
+  restrictions:
+    - alert_level: 2
+      start_date: 2020-10-24
+      start_time: "00:01"
+E06000039:
+  name: Slough Borough Council
+  restrictions:
+    - alert_level: 2
+      start_date: 2020-10-24
+      start_time: "00:01"
 E06000050:
   name: Cheshire West and Chester Council
   restrictions:
@@ -322,6 +334,12 @@ E08000024:
   restrictions:
     - alert_level: 2
       start_date: 2020-10-12
+      start_time: "00:01"
+E08000026:
+  name: Coventry City Council
+  restrictions:
+    - alert_level: 2
+      start_date: 2020-10-24
       start_time: "00:01"
 E06000047:
   name: Durham County Council
