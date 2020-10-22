@@ -23,6 +23,14 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     then_the_page_is_noindexed
   end
 
+  it "renders a promoted item when there is only 1 tagged news item" do
+    given_there_is_a_taxon_with_children
+    and_the_taxon_is_live
+    and_the_taxon_has_short_tagged_content
+    when_i_visit_that_taxon
+    then_i_can_see_the_short_news_and_communications_section
+  end
+
   it "renders a taxon page for a draft taxon" do
     given_there_is_a_taxon_with_children
     and_the_taxon_is_not_live
@@ -136,6 +144,11 @@ private
     stub_organisations_for_taxon(taxon_content_id, tagged_organisations)
   end
 
+  def and_the_taxon_has_short_tagged_content(taxon_content_id = content_id)
+    stub_content_for_taxon(taxon_content_id, tagged_content)
+    stub_document_types_for_supergroup("news_and_communications")
+  end
+
   def when_i_visit_that_taxon
     visit base_path
   end
@@ -199,11 +212,22 @@ private
 
   def and_i_can_see_the_news_and_communications_section
     assert page.has_selector?(".gem-c-heading", text: "News")
-    assert page.has_selector?(".taxon-page__featured-item")
 
     tagged_content_for_news_and_communications.each do |item|
       all_other_sections_list_item_test(item)
     end
+
+    expected_link = {
+      text: "See more news and communications in this topic",
+      url: "/search/news-and-communications?" + finder_query_string,
+    }
+
+    assert page.has_link?(expected_link[:text], href: expected_link[:url])
+  end
+
+  def then_i_can_see_the_short_news_and_communications_section
+    assert page.has_selector?(".gem-c-heading", text: "News")
+    assert page.has_selector?(".taxon-page__featured-item")
 
     expected_link = {
       text: "See more news and communications in this topic",
