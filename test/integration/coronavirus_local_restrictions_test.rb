@@ -61,12 +61,23 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     end
   end
 
-  it "errors gracefully if you don't enter a postcode" do
-    given_i_am_on_the_local_restrictions_page
-    then_i_can_see_the_postcode_lookup_form
-    then_i_click_on_find
-    then_i_can_see_the_postcode_lookup_form
-    then_i_see_an_error_message
+  describe "errors" do
+    it "errors gracefully if you don't enter a postcode" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_can_see_the_postcode_lookup_form
+      then_i_click_on_find
+      then_i_can_see_the_postcode_lookup_form
+      then_i_see_a_no_postcode_error_message
+    end
+
+    it "errors gracefully if the postcode is invalid" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_can_see_the_postcode_lookup_form
+      when_i_enter_an_invalid_postcode
+      then_i_click_on_find
+      then_i_can_see_the_postcode_lookup_form
+      then_i_see_an_invalid_postcode_error_message
+    end
   end
 
   it "displays no information found if the postcode is in a valid format, but there is no data" do
@@ -212,6 +223,10 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     fill_in "Enter your postcode", with: postcode
   end
 
+  def when_i_enter_an_invalid_postcode
+    fill_in "Enter your postcode", with: "Hello"
+  end
+
   def then_i_click_on_find
     click_on "Find"
   end
@@ -246,8 +261,12 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     assert page.has_text?("Northern Ireland Government")
   end
 
-  def then_i_see_an_error_message
+  def then_i_see_a_no_postcode_error_message
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.errors.no_postcode.error_message"))
+  end
+
+  def then_i_see_an_invalid_postcode_error_message
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.error_message"))
   end
 
   def then_i_see_the_no_information_page
