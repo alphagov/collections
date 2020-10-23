@@ -41,6 +41,9 @@ E06000007:
     - alert_level: 2
       start_date: 2020-10-12
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-10-27
+      start_time: "00:01"
 E06000021:
   name: Stoke-on-Trent City Council
   restrictions:
