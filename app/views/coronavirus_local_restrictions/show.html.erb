@@ -50,4 +50,21 @@
       } %>
     <% end %>
   </div>
+  <% if t("coronavirus_local_restrictions.related_navigation").is_a?(Array) %>
+    <div class="govuk-grid-column-one-third">
+      <%= render 'govuk_publishing_components/components/related_navigation', {
+        "content_item": {
+          "links" => {
+            "ordered_related_items" => t("coronavirus_local_restrictions.related_navigation").map do | item |
+              {
+                "title" => item[:title],
+                "base_path" => item[:base_path]
+              }
+            end
+          }
+        },
+        context: :sidebar
+      } %>
+    </div>
+  <% end %>
 </div>
