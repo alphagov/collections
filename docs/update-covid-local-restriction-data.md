@@ -58,18 +58,7 @@ This should look similar to the `Wigan Borough Council` example above (aka as a 
 
 If the GSS code **does not already exist** in the file then you will need to add it.
 
-To get the `name:` you will need to query Mapit using:
-
-```
-GdsApi.mapit.area_for_code("gss", "E06000006").to_h["name"]
-```
-
-Example of `area_for_code` response:
-
-```
-irb(main):002:0> GdsApi.mapit.area_for_code("gss", "E06000006").to_h
-=> {"generation_low"=>1, "name"=>"Halton Borough Council", "country_name"=>"England", "type"=>"UTA", "parent_area"=>nil, "id"=>1758, "type_name"=>"Unitary Authority", "country"=>"E", "generation_high"=>1, "all_names"=>{"M"=>["Override name", "Halton Borough Council"], "O"=>["Ordnance Survey", "Halton (B)"]}, "codes"=>{"ons"=>"00ET", "govuk_slug"=>"halton", "gss"=>"E06000006", "unit_id"=>"38848"}}
-```
+The `name` is just a human-readble description to make it easier to find existing entries in the YAML file. It is not displayed to users. 
 
 ### Test and deploy
 
