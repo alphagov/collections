@@ -29,44 +29,51 @@ en:
       travel_text: <a class="govuk-link" href="/find-coronavirus-local-restrictions">Enter another postcode.</a>
       current_level_heading: Current Local COVID Alert Level
       changing_levels_title: The Local COVID Alert Level is changing soon
+      guidance_label: What you can and cannot do.
       level_one:
         heading: "Local COVID Alert Level: Medium"
         match: "We've matched the postcode"
         alert_level: "This area is in Local COVID Alert Level: Medium."
         changing_alert_level: "At the moment this area is in Local COVID Alert Level: Medium."
-        guidance: <a class="govuk-link" href="/guidance/local-covid-alert-level-medium">What you can and cannot do.</a>
+        guidance_link: "/guidance/local-covid-alert-level-medium"
       level_two:
         heading: "Local COVID Alert Level: High"
         alert_level: "This area is in Local COVID Alert Level: High."
         changing_alert_level: "At the moment this area is in Local COVID Alert Level: High."
-        guidance: <a class="govuk-link" href="/guidance/local-covid-alert-level-high">What you can and cannot do.</a>
+        guidance_link: "/guidance/local-covid-alert-level-high"
         match: "We've matched the postcode"
       level_three:
         heading: "Local COVID Alert Level: Very High"
         alert_level: "This area is in Local COVID Alert Level: Very High."
         changing_alert_level: "At the moment this area is in Local COVID Alert Level: Very High."
-        guidance: <a class="govuk-link" href="/guidance/local-covid-alert-level-very-high">What you can and cannot do.</a>
+        guidance_link: "/guidance/local-covid-alert-level-very-high"
         match: "We've matched the postcode"
       devolved_nations:
         heading: There might be restrictions in this area
         travel_heading: If you travel to areas in England
         scotland:
-          guidance: <a class="govuk-link" href="https://www.gov.scot/coronavirus-covid-19/">Find out what you can or cannot do from the Scottish Government.</a>
+          guidance:
+           label: Find out what you can or cannot do from the Scottish Government.
+           link: "https://www.gov.scot/coronavirus-covid-19/"
         wales:
-          guidance: <a class="govuk-link" href="https://gov.wales/local-lockdown">Find out what you can or cannot do from the Welsh Government.</a>
+          guidance:
+            label: Find out what you can or cannot do from the Welsh Government.
+            link: "https://gov.wales/local-lockdown"
         northern_ireland:
-          guidance: <a class="govuk-link" href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-and-localised-restrictions">Find out what you can or cannot do from the Northern Ireland Government.</a>
+          guidance:
+            label: Find out what you can or cannot do from the Northern Ireland Government.
+            link: "https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-and-localised-restrictions"
       no_information:
         heading: There is no information about the restrictions in this area
-        guidance: <a class="govuk-link" href="/guidance/full-list-of-local-covid-alert-levels-by-area">Full list of Local COVID Alert Levels by area.</a>
+        guidance:
+          label: Full list of Local COVID Alert Levels by area.
+          link: "/guidance/full-list-of-local-covid-alert-levels-by-area"
       future:
         heading: Future Local COVID Alert Level
+        guidance_label: What you can and cannot do from %{date}.
         level_one:
           alert_level: "From %{date} this area will be in Local COVID Alert Level: Medium."
-          guidance: "<a class='govuk-link' href='/guidance/local-covid-alert-level-medium'>What you can and cannot do from %{date}.</a>"
         level_two:
           alert_level: "From %{date} this area will be Local COVID Alert Level: High."
-          guidance: "<a class='govuk-link' href='/guidance/local-covid-alert-level-high'>What you can and cannot do from %{date}.</a>"
         level_three:
           alert_level: "From %{date} this area will be in Local COVID Alert Level: Very High."
-          guidance: "<a class='govuk-link' href='/guidance/local-covid-alert-level-very-high'>What you can and cannot do from %{date}.</a>"

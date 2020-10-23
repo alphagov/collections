@@ -11,22 +11,34 @@
     <p class="govuk-body">
       <%= t("coronavirus_local_restrictions.results.future.level_one.alert_level", date: date) %>
     </p>
-    <p class="govuk-body">
-      <%= sanitize(t("coronavirus_local_restrictions.results.level_one.guidance", date: date)) %>
-    </p>
+
+    <%= render "govuk_publishing_components/components/action_link", {
+      text: t("coronavirus_local_restrictions.results.future.guidance_label", date: date),
+      href: t("coronavirus_local_restrictions.results.level_one.guidance_link"),
+      simple: true,
+      margin_bottom: 9
+    } %>
   <% elsif @restriction.future_alert_level == 2 %>
     <p class="govuk-body">
       <%= t("coronavirus_local_restrictions.results.future.level_two.alert_level", date: date) %>
     </p>
-    <p class="govuk-body">
-      <%= sanitize(t("coronavirus_local_restrictions.results.future.level_two.guidance", date: date)) %>
-    </p>
+
+    <%= render "govuk_publishing_components/components/action_link", {
+      text: t("coronavirus_local_restrictions.results.future.guidance_label", date: date),
+      href: t("coronavirus_local_restrictions.results.level_two.guidance_link"),
+      simple: true,
+      margin_bottom: 9
+    } %>
   <% elsif @restriction.future_alert_level == 3 %>
     <p class="govuk-body">
       <%= t("coronavirus_local_restrictions.results.future.level_three.alert_level", date: date) %>
     </p>
-    <p class="govuk-body">
-      <%= sanitize(t("coronavirus_local_restrictions.results.future.level_three.guidance", date: date)) %>
-    </p>
+
+    <%= render "govuk_publishing_components/components/action_link", {
+      text: t("coronavirus_local_restrictions.results.future.guidance_label", date: date),
+      href: t("coronavirus_local_restrictions.results.level_three.guidance_link"),
+      simple: true,
+      margin_bottom: 9
+    } %>
   <% end %>
 <% end %>
