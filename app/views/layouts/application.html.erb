@@ -12,7 +12,8 @@
 
 <body <% if content_for(:is_full_width_header) %>class="full-width"<% end %>>
   <div class="wrapper" id="wrapper">
-    <% unless content_for(:is_full_width_header) %>
+    <%= yield :back_link %>
+    <% unless (content_for(:is_full_width_header) || content_for(:back_link)) %>
       <% if content_for?(:breadcrumbs) %>
         <%= yield :breadcrumbs %>
       <% else %>
