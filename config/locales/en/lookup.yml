@@ -14,7 +14,7 @@ en:
       hint_text: For example LS1 1UR
       button_text: Find
       title: Find out the coronavirus restrictions in a local area
-      inset_text: There are different restrictions in <a class="govuk-link" href="https://www.gov.scot/coronavirus-covid-19/">Scotland</a>, <a class="govuk-link" href="https://gov.wales/local-lockdown">Wales</a> and <a class="govuk-link" href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-and-localised-restrictions">Northern Ireland</a>.
+      inset_text: There are different restrictions in <a class="govuk-link" href="https://www.gov.scot/coronavirus-covid-19/">Scotland</a>, <a class="govuk-link" href="https://gov.wales/coronavirus-firebreak-frequently-asked-questions">Wales</a> and <a class="govuk-link" href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-and-localised-restrictions">Northern Ireland</a>.
       body_content: |
         <p class="govuk-body">Enter the postcode of the place you want to find information about.</p>
         <p class="govuk-body">Each area has a <a class="govuk-link" href="/guidance/local-covid-alert-levels-what-you-need-to-know">Local COVID Alert Level</a>. There are 3 Local COVID Alert Levels. Sometimes these are called ‘tiers’ or known as a ‘local lockdown’.</p>
@@ -29,7 +29,7 @@ en:
       travel_text: <a class="govuk-link" href="/find-coronavirus-local-restrictions">Enter another postcode.</a>
       current_level_heading: Current Local COVID Alert Level
       changing_levels_title: The Local COVID Alert Level is changing soon
-      guidance_label: What you can and cannot do.
+      guidance_label: What you can and cannot do
       level_one:
         heading: "Local COVID Alert Level: Medium"
         match: "We've matched the postcode"
@@ -53,24 +53,24 @@ en:
         travel_heading: If you travel to areas in England
         scotland:
           guidance:
-           label: Find out what you can or cannot do from the Scottish Government.
+           label: Find out what you can or cannot do (Scottish Government)
            link: "https://www.gov.scot/coronavirus-covid-19/"
         wales:
           guidance:
-            label: Find out what you can or cannot do from the Welsh Government.
-            link: "https://gov.wales/local-lockdown"
+            label: Find out what you can or cannot do (Welsh Government)
+            link: "https://gov.wales/coronavirus-firebreak-frequently-asked-questions"
         northern_ireland:
           guidance:
-            label: Find out what you can or cannot do from the Northern Ireland Government.
+            label: Find out what you can or cannot do (Northern Ireland Government)
             link: "https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-and-localised-restrictions"
       no_information:
         heading: There is no information about the restrictions in this area
         guidance:
-          label: Full list of Local COVID Alert Levels by area.
+          label: Full list of Local COVID Alert Levels by area
           link: "/guidance/full-list-of-local-covid-alert-levels-by-area"
       future:
         heading: Future Local COVID Alert Level
-        guidance_label: What you can and cannot do from %{date}.
+        guidance_label: What you can and cannot do from %{date}
         level_one:
           alert_level: "From %{date} this area will be in Local COVID Alert Level: Medium."
         level_two:
