@@ -22,8 +22,8 @@ en:
       meta_title: Find out the coronavirus restrictions in a local area
       meta_description: Use the postcode checker to find out the Local COVID Alert Level for an area.
     royal_mail_lookup:
-      link_text: Find a postcode on Royal Mail's postcode finder
-      href: http://www.royalmail.com/find-a-postcode
+      link_text: Find a postcode on Royal Mail’s postcode finder
+      href: https://www.royalmail.com/find-a-postcode
     results:
       travel_heading: Find information about somewhere else
       travel_text: <a class="govuk-link" href="/find-coronavirus-local-restrictions">Enter another postcode.</a>
