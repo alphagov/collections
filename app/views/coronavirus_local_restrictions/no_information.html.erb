@@ -1,5 +1,11 @@
 <% content_for :title, t("coronavirus_local_restrictions.results.no_information.heading") %>
 
+<% content_for :back_link do %>
+  <%= render "govuk_publishing_components/components/back_link", {
+    href: find_coronavirus_local_restrictions_path
+  } %>
+<% end %>
+
 <%= tag.div :data => {
   :module => "coronavirus-track-local-restriction-results",
   "tracking-label" => t("coronavirus_local_restrictions.results.no_information.heading")
