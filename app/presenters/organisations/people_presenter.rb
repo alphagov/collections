@@ -95,7 +95,6 @@ module Organisations
 
       if (image = person["details"]["image"])
         data[:image_src] = image["url"]
-        data[:image_alt] = image["alt_text"]
       end
 
       data

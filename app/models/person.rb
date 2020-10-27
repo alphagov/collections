@@ -48,10 +48,6 @@ class Person
     details.dig("image", "url")
   end
 
-  def image_alt_text
-    details.dig("image", "alt_text")
-  end
-
   def biography
     details["body"]
   end

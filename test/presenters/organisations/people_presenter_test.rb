@@ -18,7 +18,6 @@ describe Organisations::PeoplePresenter do
           brand: "attorney-generals-office",
           href: "/government/people/oliver-dowden",
           image_src: "/photo/oliver-dowden",
-          image_alt: "Oliver Dowden CBE MP",
           description: nil,
           metadata: nil,
           heading_text: "Oliver Dowden CBE MP",
@@ -45,7 +44,6 @@ describe Organisations::PeoplePresenter do
           brand: "attorney-generals-office",
           href: "/government/people/theresa-may",
           image_src: "/photo/theresa-may",
-          image_alt: "Theresa May MP",
           description: nil,
           metadata: nil,
           heading_text: "The Rt Hon Theresa May MP",
@@ -175,7 +173,6 @@ describe Organisations::PeoplePresenter do
         heading_level: 0,
         extra_links_no_indent: true,
         image_src: "/photo/jeremy-heywood",
-        image_alt: "Sir Jeremy Heywood",
       }
 
       expected_non_important = {
