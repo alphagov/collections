@@ -434,11 +434,17 @@ E07000170:
     - alert_level: 2
       start_date: 2020-10-12
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-10-30
+      start_time: "00:01"
 E07000171:
   name: Bassetlaw District Council
   restrictions:
     - alert_level: 2
       start_date: 2020-10-12
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-10-30
       start_time: "00:01"
 E07000172:
   name: Broxtowe Borough Council
@@ -446,11 +452,17 @@ E07000172:
     - alert_level: 2
       start_date: 2020-10-12
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-10-30
+      start_time: "00:01"
 E07000173:
   name: Gedling Borough Council
   restrictions:
     - alert_level: 2
       start_date: 2020-10-12
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-10-30
       start_time: "00:01"
 E07000174:
   name: Mansfield District Council
@@ -458,11 +470,17 @@ E07000174:
     - alert_level: 2
       start_date: 2020-10-12
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-10-30
+      start_time: "00:01"
 E07000175:
   name: Newark and Sherwood District Council
   restrictions:
     - alert_level: 2
       start_date: 2020-10-12
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-10-30
       start_time: "00:01"
 E07000176:
   name: Rushcliffe Borough Council
@@ -470,11 +488,17 @@ E07000176:
     - alert_level: 2
       start_date: 2020-10-12
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-10-30
+      start_time: "00:01"
 E06000018:
   name: Nottingham City Council
   restrictions:
     - alert_level: 2
       start_date: 2020-10-12
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-10-30
       start_time: "00:01"
 E05010637:
   name: Howard Town
