@@ -1,4 +1,7 @@
 <% content_for :page_class, "taxon-page taxon-page--grid" %>
+<% content_for :head do %>
+  <%= account_variant.analytics_meta_tag.html_safe %>
+<% end %>
 <% content_for :meta_tags %>
 
 <%=
