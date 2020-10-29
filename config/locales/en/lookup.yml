@@ -24,6 +24,13 @@ en:
     royal_mail_lookup:
       link_text: Find a postcode on Royal Mail’s postcode finder
       href: https://www.royalmail.com/find-a-postcode
+    related_navigation:
+      - title: "Coronavirus (COVID-19): guidance and support"
+        base_path: /coronavirus
+      - title: Find out what support you can get if you’re affected by coronavirus
+        base_path: /find-coronavirus-support
+      - title: Making a support bubble with another household
+        base_path: /guidance/making-a-support-bubble-with-another-household
     results:
       travel_heading: Find information about somewhere else
       travel_text: <a class="govuk-link" href="/find-coronavirus-local-restrictions">Enter another postcode.</a>

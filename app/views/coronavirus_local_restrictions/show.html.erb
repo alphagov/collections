@@ -50,4 +50,14 @@
       } %>
     <% end %>
   </div>
+  <div class="govuk-grid-column-one-third">
+    <%= render 'govuk_publishing_components/components/related_navigation', {
+      "content_item": {
+        "links" => {
+          "ordered_related_items" => t("coronavirus_local_restrictions.related_navigation").map(&:with_indifferent_access)
+        }
+      },
+      context: :sidebar
+    } %>
+  </div>
 </div>
