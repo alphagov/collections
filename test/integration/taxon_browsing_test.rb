@@ -126,26 +126,26 @@ private
     stub_content_store_has_item(base_path, @content_item)
   end
 
-  def and_the_taxon_has_tagged_content(taxon_content_id = content_id)
+  def and_the_taxon_has_tagged_content
     # We still need to stub tagged content because it is used by the sub-topic grid
-    stub_content_for_taxon(taxon_content_id, tagged_content)
+    stub_content_for_taxon(content_id, tagged_content)
     stub_document_types_for_supergroup("guidance_and_regulation")
-    stub_most_popular_content_for_taxon(taxon_content_id, tagged_content_for_guidance_and_regulation, filter_content_store_document_type: "guidance_and_regulation")
+    stub_most_popular_content_for_taxon(content_id, tagged_content_for_guidance_and_regulation, filter_content_store_document_type: "guidance_and_regulation")
     stub_document_types_for_supergroup("services")
-    stub_most_popular_content_for_taxon(taxon_content_id, tagged_content_for_services, filter_content_store_document_type: "services")
+    stub_most_popular_content_for_taxon(content_id, tagged_content_for_services, filter_content_store_document_type: "services")
     stub_document_types_for_supergroup("news_and_communications")
-    stub_most_recent_content_for_taxon(taxon_content_id, tagged_content_for_news_and_communications, filter_content_store_document_type: "news_and_communications")
+    stub_most_recent_content_for_taxon(content_id, tagged_content_for_news_and_communications, filter_content_store_document_type: "news_and_communications")
     stub_document_types_for_supergroup("policy_and_engagement")
-    stub_most_recent_content_for_taxon(taxon_content_id, tagged_content_for_policy_and_engagement, filter_content_store_document_type: "policy_and_engagement")
+    stub_most_recent_content_for_taxon(content_id, tagged_content_for_policy_and_engagement, filter_content_store_document_type: "policy_and_engagement")
     stub_document_types_for_supergroup("transparency")
-    stub_most_recent_content_for_taxon(taxon_content_id, tagged_content_for_transparency, filter_content_store_document_type: "transparency")
+    stub_most_recent_content_for_taxon(content_id, tagged_content_for_transparency, filter_content_store_document_type: "transparency")
     stub_document_types_for_supergroup("research_and_statistics")
-    stub_most_recent_content_for_taxon(taxon_content_id, tagged_content_for_research_and_statistics, filter_content_store_document_type: "research_and_statistics")
-    stub_organisations_for_taxon(taxon_content_id, tagged_organisations)
+    stub_most_recent_content_for_taxon(content_id, tagged_content_for_research_and_statistics, filter_content_store_document_type: "research_and_statistics")
+    stub_organisations_for_taxon(content_id, tagged_organisations)
   end
 
-  def and_the_taxon_has_short_tagged_content(taxon_content_id = content_id)
-    stub_content_for_taxon(taxon_content_id, tagged_content)
+  def and_the_taxon_has_short_tagged_content
+    stub_content_for_taxon(content_id, tagged_content)
     stub_document_types_for_supergroup("news_and_communications")
   end
 
