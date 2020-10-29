@@ -150,7 +150,7 @@ private
     stub_document_types_for_supergroup("services")
     stub_most_popular_content_for_taxon(content_id, tagged_content_for_services, filter_content_store_document_type: "services")
     stub_document_types_for_supergroup("news_and_communications")
-    stub_most_recent_content_for_taxon(content_id, tagged_content_for_news_and_communications, filter_content_store_document_type: "news_and_communications")
+    stub_most_recent_content_for_taxon(content_id, tagged_content_for_news_and_communications(number_of_docs: 1), filter_content_store_document_type: "news_and_communications")
     stub_document_types_for_supergroup("policy_and_engagement")
     stub_most_recent_content_for_taxon(content_id, tagged_content_for_policy_and_engagement, filter_content_store_document_type: "policy_and_engagement")
     stub_document_types_for_supergroup("transparency")
@@ -423,8 +423,8 @@ private
     @tagged_content_for_guidance_and_regulation ||= generate_search_results(2, "guidance_and_regulation")
   end
 
-  def tagged_content_for_news_and_communications
-    @tagged_content_for_news_and_communications ||= generate_search_results(2, "news_and_communications")
+  def tagged_content_for_news_and_communications(number_of_docs: 2)
+    @tagged_content_for_news_and_communications ||= generate_search_results(number_of_docs, "news_and_communications")
   end
 
   def tagged_content_for_policy_and_engagement
