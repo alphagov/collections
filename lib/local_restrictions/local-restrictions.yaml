@@ -515,72 +515,6 @@ E06000018:
     - alert_level: 3
       start_date: 2020-10-30
       start_time: "00:01"
-E05010637:
-  name: Howard Town
-  restrictions:
-    - alert_level: 2
-      start_date: 2020-10-12
-      start_time: "00:01"
-E05010645:
-  name: Simmondley
-  restrictions:
-    - alert_level: 2
-      start_date: 2020-10-12
-      start_time: "00:01"
-E05010634:
-  name: Hadfield South
-  restrictions:
-    - alert_level: 2
-      start_date: 2020-10-12
-      start_time: "00:01"
-E05010631:
-  name: Dinting
-  restrictions:
-    - alert_level: 2
-      start_date: 2020-10-12
-      start_time: "00:01"
-E05010643:
-  name: "St John's"
-  restrictions:
-    - alert_level: 2
-      start_date: 2020-10-12
-      start_time: "00:01"
-E05010641:
-  name: Old Glossop
-  restrictions:
-    - alert_level: 2
-      start_date: 2020-10-12
-      start_time: "00:01"
-E05010633:
-  name: Hadfield North
-  restrictions:
-    - alert_level: 2
-      start_date: 2020-10-12
-      start_time: "00:01"
-E05010650:
-  name: Whitfield
-  restrictions:
-    - alert_level: 2
-      start_date: 2020-10-12
-      start_time: "00:01"
-E05010648:
-  name: Tintwistle
-  restrictions:
-    - alert_level: 2
-      start_date: 2020-10-12
-      start_time: "00:01"
-E05010642:
-  name: Padfield
-  restrictions:
-    - alert_level: 2
-      start_date: 2020-10-12
-      start_time: "00:01"
-E05010632:
-  name: Gamesley
-  restrictions:
-    - alert_level: 2
-      start_date: 2020-10-12
-      start_time: "00:01"
 E06000014:
   name: City of York Council
   restrictions:
@@ -979,6 +913,12 @@ E07000178:
       start_time: "00:01"
 E07000028:
   name: Carlisle City Council
+  restrictions:
+    - alert_level: 2
+      start_date: 2020-10-31
+      start_time: "00:01"
+E07000037:
+  name: High Peak Borough Council
   restrictions:
     - alert_level: 2
       start_date: 2020-10-31
