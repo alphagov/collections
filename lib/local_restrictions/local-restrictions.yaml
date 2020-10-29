@@ -872,3 +872,93 @@ E09000033:
     - alert_level: 2
       start_date: 2020-10-17
       start_time: "00:01"
+E06000011:
+  name: East Riding of Yorkshire Council
+  restrictions:
+    - alert_level: 2
+      start_date: 2020-10-31
+      start_time: "00:01"
+E06000010:
+  name: Hull City Council
+  restrictions:
+    - alert_level: 2
+      start_date: 2020-10-31
+      start_time: "00:01"
+E06000012:
+  name: North East Lincolnshire Council
+  restrictions:
+    - alert_level: 2
+      start_date: 2020-10-31
+      start_time: "00:01"
+E06000013:
+  name: North Lincolnshire Council
+  restrictions:
+    - alert_level: 2
+      start_date: 2020-10-31
+      start_time: "00:01"
+E08000027:
+  name: Dudley Borough Council
+  restrictions:
+    - alert_level: 2
+      start_date: 2020-10-31
+      start_time: "00:01"
+E10000028:
+  name: Staffordshire County Council
+  restrictions:
+    - alert_level: 2
+      start_date: 2020-10-31
+      start_time: "00:01"
+E06000020:
+  name: Telford and Wrekin Council
+  restrictions:
+    - alert_level: 2
+      start_date: 2020-10-31
+      start_time: "00:01"
+E07000032:
+  name: Amber Valley Borough Council
+  restrictions:
+    - alert_level: 2
+      start_date: 2020-10-31
+      start_time: "00:01"
+E07000033:
+  name: Bolsover District Council
+  restrictions:
+    - alert_level: 2
+      start_date: 2020-10-31
+      start_time: "00:01"
+E07000035:
+  name: Derbyshire Dales District Council
+  restrictions:
+    - alert_level: 2
+      start_date: 2020-10-31
+      start_time: "00:01"
+E06000015:
+  name: Derby City Council
+  restrictions:
+    - alert_level: 2
+      start_date: 2020-10-31
+      start_time: "00:01"
+E07000039:
+  name: South Derbyshire District Council
+  restrictions:
+    - alert_level: 2
+      start_date: 2020-10-31
+      start_time: "00:01"
+E07000130:
+  name: Charnwood Borough Council
+  restrictions:
+    - alert_level: 2
+      start_date: 2020-10-31
+      start_time: "00:01"
+E06000032:
+  name: Luton Borough Council
+  restrictions:
+    - alert_level: 2
+      start_date: 2020-10-31
+      start_time: "00:01"
+E07000178:
+  name: Oxford City Council
+  restrictions:
+    - alert_level: 2
+      start_date: 2020-10-31
+      start_time: "00:01"
