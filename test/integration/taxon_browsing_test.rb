@@ -127,32 +127,28 @@ private
   end
 
   def and_the_taxon_has_tagged_content
-    [
-      { content_type: "guidance_and_regulation", query_type: "most_popular" },
-      { content_type: "services", query_type: "most_popular" },
-      { content_type: "news_and_communications", query_type: "most_recent" },
-      { content_type: "policy_and_engagement", query_type: "most_recent" },
-      { content_type: "transparency", query_type: "most_recent" },
-      { content_type: "research_and_statistics", query_type: "most_recent" },
-    ].each do |config|
-      stub_document_types_for_supergroup(config[:content_type])
-
-      dummy_content = generate_dummy_search_content(config)
-      stub_search_api_response(dummy_content, config)
-    end
-
-    stub_organisations_for_taxon(content_id, tagged_organisations)
+    set_up_tagged_content
   end
 
   def and_the_taxon_has_short_tagged_content
-    [
-      { content_type: "guidance_and_regulation", query_type: "most_popular" },
-      { content_type: "services", query_type: "most_popular" },
-      { content_type: "news_and_communications", query_type: "most_recent", number_of_docs: 1 },
-      { content_type: "policy_and_engagement", query_type: "most_recent" },
-      { content_type: "transparency", query_type: "most_recent" },
-      { content_type: "research_and_statistics", query_type: "most_recent" },
-    ].each do |config|
+    set_up_tagged_content(news_and_communications: {
+      content_type: "news_and_communications",
+      query_type: "most_recent",
+      number_of_docs: 1,
+    })
+  end
+
+  def set_up_tagged_content(override_config = {})
+    content_config = {
+      guidance_and_regulation: { content_type: "guidance_and_regulation", query_type: "most_popular" },
+      services: { content_type: "services", query_type: "most_popular" },
+      news_and_communications: { content_type: "news_and_communications", query_type: "most_recent" },
+      policy_and_engagement: { content_type: "policy_and_engagement", query_type: "most_recent" },
+      transparency: { content_type: "transparency", query_type: "most_recent" },
+      research_and_statistics: { content_type: "research_and_statistics", query_type: "most_recent" },
+    }.merge(override_config)
+
+    content_config.each_value do |config|
       stub_document_types_for_supergroup(config[:content_type])
 
       dummy_content = generate_dummy_search_content(config)
@@ -162,13 +158,16 @@ private
     stub_organisations_for_taxon(content_id, tagged_organisations)
   end
 
-  def generate_dummy_search_content(content_type:, query_type:, number_of_docs: 2)
+  def generate_dummy_search_content(content_type:, number_of_docs: 2, **_unused_config)
     generate_search_results(number_of_docs, content_type)
   end
 
-  def stub_search_api_response(dummy_content, content_type:, query_type:, number_of_docs: 2)
-    # can be stub_most_recent_content_for_taxon or stub_most_popular_content_for_taxon
-    send("stub_#{query_type}_content_for_taxon", content_id, dummy_content, filter_content_store_document_type: content_type)
+  def stub_search_api_response(dummy_content, content_type:, query_type:, **_unused_config)
+    if query_type == "most_recent"
+      stub_most_recent_content_for_taxon(content_id, dummy_content, filter_content_store_document_type: content_type)
+    elsif query_type == "most_popular"
+      stub_most_popular_content_for_taxon(content_id, dummy_content, filter_content_store_document_type: content_type)
+    end
   end
 
   def when_i_visit_that_taxon
