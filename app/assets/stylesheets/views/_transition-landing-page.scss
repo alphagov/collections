@@ -114,6 +114,7 @@ $green: #00703C;
 
 .landing-page__take-action-traffic-lights > li {
   margin-bottom: govuk-spacing(1);
+  white-space: nowrap;
 
   @include govuk-media-query($until: tablet) {
     display: inline;
