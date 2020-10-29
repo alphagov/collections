@@ -130,23 +130,23 @@ private
     # We still need to stub tagged content because it is used by the sub-topic grid
     stub_content_for_taxon(content_id, tagged_content)
     stub_supergroup_document_types
-    stub_guidance_and_regulation
-    stub_services
-    stub_news_and_communications
-    stub_policy_and_engagement
-    stub_transparency
-    stub_research_and_statistics
+    stub_content_for(content_type: "guidance_and_regulation", query_type: "most_popular")
+    stub_content_for(content_type: "services", query_type: "most_popular")
+    stub_content_for(content_type: "news_and_communications", query_type: "most_recent")
+    stub_content_for(content_type: "policy_and_engagement", query_type: "most_recent")
+    stub_content_for(content_type: "transparency", query_type: "most_recent")
+    stub_content_for(content_type: "research_and_statistics", query_type: "most_recent")
     stub_organisations_for_taxon(content_id, tagged_organisations)
   end
 
   def and_the_taxon_has_short_tagged_content
     stub_supergroup_document_types
-    stub_guidance_and_regulation
-    stub_services
-    stub_news_and_communications(number_of_docs: 1)
-    stub_policy_and_engagement
-    stub_transparency
-    stub_research_and_statistics
+    stub_content_for(content_type: "guidance_and_regulation", query_type: "most_popular")
+    stub_content_for(content_type: "services", query_type: "most_popular")
+    stub_content_for(content_type: "news_and_communications", query_type: "most_recent", number_of_docs: 1)
+    stub_content_for(content_type: "policy_and_engagement", query_type: "most_recent")
+    stub_content_for(content_type: "transparency", query_type: "most_recent")
+    stub_content_for(content_type: "research_and_statistics", query_type: "most_recent")
     stub_organisations_for_taxon(content_id, tagged_organisations)
   end
 
@@ -159,28 +159,10 @@ private
     stub_document_types_for_supergroup("research_and_statistics")
   end
 
-  def stub_guidance_and_regulation
-    stub_most_popular_content_for_taxon(content_id, tagged_content_for_guidance_and_regulation, filter_content_store_document_type: "guidance_and_regulation")
-  end
-
-  def stub_services
-    stub_most_popular_content_for_taxon(content_id, tagged_content_for_services, filter_content_store_document_type: "services")
-  end
-
-  def stub_news_and_communications(number_of_docs: 2)
-    stub_most_recent_content_for_taxon(content_id, tagged_content_for_news_and_communications(number_of_docs: number_of_docs), filter_content_store_document_type: "news_and_communications")
-  end
-
-  def stub_policy_and_engagement
-    stub_most_recent_content_for_taxon(content_id, tagged_content_for_policy_and_engagement, filter_content_store_document_type: "policy_and_engagement")
-  end
-
-  def stub_transparency
-    stub_most_recent_content_for_taxon(content_id, tagged_content_for_transparency, filter_content_store_document_type: "transparency")
-  end
-
-  def stub_research_and_statistics
-    stub_most_recent_content_for_taxon(content_id, tagged_content_for_research_and_statistics, filter_content_store_document_type: "research_and_statistics")
+  def stub_content_for(content_type:, query_type:, number_of_docs: 2)
+    generated_content = generate_search_results(number_of_docs, content_type)
+    # can be stub_most_recent_content_for_taxon or stub_most_popular_content_for_taxon
+    send("stub_#{query_type}_content_for_taxon", content_id, generated_content, filter_content_store_document_type: content_type)
   end
 
   def when_i_visit_that_taxon
@@ -436,30 +418,6 @@ private
     GovukSchemas::Example.find("taxon", example_name: "taxon").tap do |content_item|
       content_item["phase"] = "live"
     end
-  end
-
-  def tagged_content_for_services
-    @tagged_content_for_services ||= generate_search_results(2, "services")
-  end
-
-  def tagged_content_for_guidance_and_regulation
-    @tagged_content_for_guidance_and_regulation ||= generate_search_results(2, "guidance_and_regulation")
-  end
-
-  def tagged_content_for_news_and_communications(number_of_docs: 2)
-    @tagged_content_for_news_and_communications ||= generate_search_results(number_of_docs, "news_and_communications")
-  end
-
-  def tagged_content_for_policy_and_engagement
-    @tagged_content_for_policy_and_engagement ||= generate_search_results(2, "policy_and_engagement")
-  end
-
-  def tagged_content_for_transparency
-    @tagged_content_for_transparency ||= generate_search_results(2, "transparency")
-  end
-
-  def tagged_content_for_research_and_statistics
-    @tagged_content_for_research_and_statistics ||= generate_search_results(2, "research_and_statistics")
   end
 
   def tagged_organisations
