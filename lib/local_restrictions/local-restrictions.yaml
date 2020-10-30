@@ -977,3 +977,9 @@ E07000178:
     - alert_level: 2
       start_date: 2020-10-31
       start_time: "00:01"
+E07000028:
+  name: Carlisle City Council
+  restrictions:
+    - alert_level: 2
+      start_date: 2020-10-31
+      start_time: "00:01"
