@@ -274,6 +274,7 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     area = "Coruscant Planetary Council"
     assert page.has_text?(area)
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.alert_level", area: area))
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.travelling_between_levels.levels_one_and_two.heading"))
   end
 
   def then_i_see_the_results_page_for_level_three

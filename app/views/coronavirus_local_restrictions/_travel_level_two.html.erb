@@ -1,0 +1,28 @@
+<%= render "govuk_publishing_components/components/heading", {
+  text: t("coronavirus_local_restrictions.results.travelling_between_levels.levels_one_and_two.heading"),
+  font_size: "m",
+  margin_bottom: 4
+} %>
+
+<%= sanitize(t("coronavirus_local_restrictions.results.travelling_between_levels.levels_one_and_two.body")) %>
+
+<%= render "govuk_publishing_components/components/list", {
+  visible_counters: true,
+  items: t("coronavirus_local_restrictions.results.travelling_between_levels.reasons")
+} %>
+
+<%= render "govuk_publishing_components/components/heading", {
+  text: t("coronavirus_local_restrictions.results.travelling_between_levels.travel_to.heading", area: @restriction.area_name),
+  font_size: "s",
+  margin_bottom: 4
+} %>
+
+<%= sanitize(t("coronavirus_local_restrictions.results.travelling_between_levels.travel_to.body.level_two", area: @restriction.area_name)) %>
+
+<%= render "govuk_publishing_components/components/heading", {
+  text: t("coronavirus_local_restrictions.results.travelling_between_levels.travel_from.heading", area: @restriction.area_name),
+  font_size: "s",
+  margin_bottom: 4
+} %>
+
+<%= sanitize(t("coronavirus_local_restrictions.results.travelling_between_levels.travel_from.body.level_two", area: @restriction.area_name)) %>
