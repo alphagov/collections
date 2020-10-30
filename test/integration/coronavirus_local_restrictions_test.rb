@@ -280,6 +280,7 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     area = "Mandalore"
     assert page.has_text?(area)
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_three.alert_level", area: area))
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.travelling_between_levels.level_three.heading"))
   end
 
   def then_i_see_details_of_national_restrictions
