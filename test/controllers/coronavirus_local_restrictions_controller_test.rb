@@ -7,6 +7,8 @@ describe CoronavirusLocalRestrictionsController do
 
   describe "GET show" do
     it "correctly renders the local restrictions page" do
+      stub_content_store_has_item("/find-coronavirus-local-restrictions", {})
+
       get :show
 
       assert_response :success

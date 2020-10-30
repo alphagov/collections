@@ -2,6 +2,8 @@ class CoronavirusLocalRestrictionsController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:results]
 
   def show
+    @content_item = content_item.to_hash
+
     render :show,
            locals: {
              breadcrumbs: breadcrumbs,
