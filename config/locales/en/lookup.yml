@@ -84,3 +84,47 @@ en:
           alert_level: "From %{date} this area will be in tier 2."
         level_three:
           alert_level: "From %{date} this area will be in tier 3."
+      travelling_between_levels:
+        levels_one_and_two:
+          heading: Travelling between areas
+          body: |
+            <p class="govuk-body">You can travel between areas which are in tier 1 or tier 2.</p>
+            <p class="govuk-body">You should only travel into or out of a tier 3 area if you need to travel for:</p>
+        level_three:
+          heading: Travelling in or out of the area
+          body: |
+            <p class="govuk-body">You should only travel into or out of a tier 3 area if you need to travel for:</p>
+        reasons:
+           - work
+           - education
+           - youth services
+           - caring responsibilities
+           - Medical treatment
+        extra_information: |
+          <p class="govuk-body">You can travel through a tier 3 area as part of a longer journey.</p>
+        travel_to:
+          heading: Travelling to %{area}
+          body:
+            level_one: |
+              <p class="govuk-body">If you’re going to %{area} from another tier 1 area, the guidance is the same.</p>
+              <p class="govuk-body">If you’re going to %{area} from a tier 2 or tier 3 area, you must follow the guidance for the place you’re coming from.</p>
+            level_two: |
+              <p class="govuk-body">If you’re going to %{area} from another tier 2 area, the guidance is the same.</p>
+              <p class="govuk-body">If you’re going to %{area} from a tier 1 area, you must follow the guidance for %{area}, which is tier 2.</p>
+              <p class="govuk-body">If you’re going to %{area} from a tier 3 area, you must follow the guidance for the area you’re coming from.</p>
+            level_three: |
+              <p class="govuk-body">If you’re going to %{area} from another tier 3 area, the guidance is the same.</p>
+              <p class="govuk-body">If you’re going to %{area} from a tier 1 or tier 2 area, you must follow the guidance for %{area}, which is tier 3.</p>
+        travel_from:
+          heading: Travelling from %{area}
+          body:
+            level_one: |
+              <p class="govuk-body">If you’re going from %{area} to another tier 1 area, the guidance is the same.</p>
+              <p class="govuk-body">If you're going from %{area} to a tier 2 or tier 3 area you must follow the guidance for the area you’re going to.</p>
+            level_two: |
+              <p class="govuk-body">If you’re going from %{area} to another tier 2 area, the guidance is the same.</p>
+              <p class="govuk-body">If you’re going from %{area} to a tier 1 area you must follow the guidance for %{area}, which is tier 2.</p>
+              <p class="govuk-body">If you’re going from %{area} to a tier 3 area you must follow the guidance for the area you’re going to.</p>
+            level_three: |
+              <p class="govuk-body">If you’re going from %{area} to another Very High area, the guidance is the same.</p>
+              <p class="govuk-body">If you’re going from %{area} to a tier 1 or tier 2 area you must follow the guidance for %{area}, which is tier 3.</p>
