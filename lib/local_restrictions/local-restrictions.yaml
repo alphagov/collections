@@ -248,17 +248,11 @@ E08000035:
     - alert_level: 2
       start_date: 2020-10-12
       start_time: "00:01"
-    - alert_level: 3
-      start_date: 2020-11-02
-      start_time: "00:01"
 E08000032:
   name: City of Bradford Metropolitan District Council
   restrictions:
     - alert_level: 2
       start_date: 2020-10-12
-      start_time: "00:01"
-    - alert_level: 3
-      start_date: 2020-11-02
       start_time: "00:01"
 E08000034:
   name: Kirklees Council
@@ -266,26 +260,17 @@ E08000034:
     - alert_level: 2
       start_date: 2020-10-12
       start_time: "00:01"
-    - alert_level: 3
-      start_date: 2020-11-02
-      start_time: "00:01"
 E08000033:
   name: Calderdale Metropolitan Borough Council
   restrictions:
     - alert_level: 2
       start_date: 2020-10-12
       start_time: "00:01"
-    - alert_level: 3
-      start_date: 2020-11-02
-      start_time: "00:01"
 E08000036:
   name: Wakefield Metropolitan District Council
   restrictions:
     - alert_level: 2
       start_date: 2020-10-12
-      start_time: "00:01"
-    - alert_level: 3
-      start_date: 2020-11-02
       start_time: "00:01"
 E08000016:
   name: Barnsley Metropolitan Borough Council
