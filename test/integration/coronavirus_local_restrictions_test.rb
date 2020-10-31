@@ -16,6 +16,7 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_enter_a_valid_english_postcode
       then_i_click_on_find
       then_i_see_the_results_page_for_level_one
+      then_i_see_details_of_national_restrictions
     end
 
     it "displays the tier two restrictions" do
@@ -24,6 +25,7 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_enter_a_valid_english_postcode_in_tier_two
       then_i_click_on_find
       then_i_see_the_results_page_for_level_two
+      then_i_see_details_of_national_restrictions
     end
 
     it "displays the tier three restrictions" do
@@ -32,6 +34,7 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_enter_a_valid_english_postcode_in_tier_three
       then_i_click_on_find
       then_i_see_the_results_page_for_level_three
+      then_i_see_details_of_national_restrictions
     end
   end
 
@@ -284,6 +287,11 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     assert page.has_text?("Mandalore")
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_three.heading"))
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_three.alert_level"))
+  end
+
+  def then_i_see_details_of_national_restrictions
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.national_restrictions.heading"))
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.national_restrictions.action_label"))
   end
 
   def then_i_see_the_results_for_wales
