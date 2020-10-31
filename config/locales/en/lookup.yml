@@ -14,11 +14,13 @@ en:
       hint_text: For example LS1 1UR
       button_text: Find
       title: Find out the coronavirus restrictions in a local area
-      inset_text: There are different restrictions in <a class="govuk-link" href="https://www.gov.scot/coronavirus-covid-19/">Scotland</a>, <a class="govuk-link" href="https://gov.wales/coronavirus-firebreak-frequently-asked-questions">Wales</a> and <a class="govuk-link" href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-and-localised-restrictions">Northern Ireland</a>.
+      inset_text: |
+        <p class="govuk-body"><a class="govuk-link" href="/guidance/new-national-restrictions-from-5-november">National restrictions will begin in England from 5 November.</a></p>
+        <p class="govuk-body">There are different restrictions in <a class="govuk-link" href="https://www.gov.scot/coronavirus-covid-19/">Scotland</a>, <a class="govuk-link" href="https://gov.wales/coronavirus-firebreak-frequently-asked-questions">Wales</a> and <a class="govuk-link" href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-and-localised-restrictions">Northern Ireland</a>.</p>
       body_content: |
-        <p class="govuk-body">Enter the postcode of the place you want to find information about.</p>
+        <p class="govuk-body">Until 5 November you must follow the local restrictions for your area.</p>
         <p class="govuk-body">Each area has a Local COVID Alert Level. There are 3 Local COVID Alert Levels. Sometimes these are called ‘tiers’ or known as a ‘local lockdown’.</p>
-        <p class="govuk-body">You can find out what you can or cannot do.</p>
+        <p class="govuk-body">Enter the postcode of the place to find out what you can or cannot do.</p>
       meta_title: Find out the coronavirus restrictions in a local area
       meta_description: Use the postcode checker to find out the Local COVID Alert Level for an area.
     royal_mail_lookup:
@@ -37,6 +39,10 @@ en:
       current_level_heading: Current Local COVID Alert Level
       changing_levels_title: The Local COVID Alert Level is changing soon
       guidance_label: What you can and cannot do
+      national_restrictions:
+        heading: National restrictions begin in England from 5 November
+        action_label: Find out about new restrictions and what you can and cannot do
+        action_link: /guidance/new-national-restrictions-from-5-november
       level_one:
         heading: "Local COVID Alert Level: Medium"
         match: "We've matched the postcode"
