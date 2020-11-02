@@ -12,27 +12,28 @@
 <%= tag.div class: css_classes do %>
   <%= render "govuk_publishing_components/components/govspeak", {
   } do %>
-    <div class="youtube__video-placeholder">
-      <div class="youtube__video-logo"><%= no_cookies_icon_text %></div>
-      <p class="govuk-body">
-        <a href="<%= no_cookies_change_settings_link %>" class="govuk-link youtube__page-header-link youtube__bold">
+    <p class="youtube__video-placeholder">
+      <span class="youtube__video-logo">
+        <%= no_cookies_icon_text %>
+      </span>
+      <strong>
+        <a href="<%= no_cookies_change_settings_link %>" class="govuk-link">
           <%= no_cookies_change_settings_text %>
-        </a>
-        <br>
-        <span class="youtube__bold">
+          <br aria-hidden="true">
           <%= no_cookies_to_watch_text %>
-        </span>
-        <br>
-        <%= no_cookies_or_text %>
-      </p>
+        </a>
+      </strong>
+      <br aria-hidden="true">
+      <%= no_cookies_or_text %>
+      <br aria-hidden="true">
       <a
-        href="<%= youtube_video_url %>"
-        class="govuk-body govuk-link"
-        data-youtube-player-analytics="true"
-        data-youtube-player-analytics-category="EmbeddedYoutube">
+          href="<%= youtube_video_url %>"
+          class="govuk-body govuk-link"
+          data-youtube-player-analytics="true"
+          data-youtube-player-analytics-category="EmbeddedYoutube">
         <%= no_cookies_watch_link_text %>
       </a>
-    </div>
+    </p>
   <% end %>
   <%= render "govuk_publishing_components/components/details", { title: transcription_summary} do %>
     <%= transcription_text.html_safe %>

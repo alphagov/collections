@@ -5,15 +5,6 @@
   border: solid 2px govuk-colour("black");
   text-align: center;
   margin-bottom: govuk-spacing(2);
-
-  .govuk-body {
-    margin: 0;
-    color: govuk-colour("black");
-  }
-
-  .youtube__bold {
-    font-weight: bold;
-  }
 }
 
 .youtube__video-logo {
@@ -42,6 +33,10 @@
 }
 
 .youtube__video-wrapper--inverse {
+  .youtube__video-placeholder {
+    color: govuk-colour("black");
+  }
+
   .govuk-details__summary {
     color: govuk-colour('white');
 
