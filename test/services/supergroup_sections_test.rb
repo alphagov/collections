@@ -29,6 +29,7 @@ describe SupergroupSections::Sections do
         title
         promoted_content
         documents
+        documents_with_promoted
         partial_template
         see_more_link
         show_section

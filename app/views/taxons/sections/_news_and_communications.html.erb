@@ -1,9 +1,9 @@
 <%
   featured_item = section[:promoted_content].first
-  featured_item_layout_class = "taxon-page__featured-item--single" if section[:documents].empty?
 %>
 
-  <div class="taxon-page__featured-item <%= featured_item_layout_class %>">
+<% if section[:documents].empty? %>
+  <div class="taxon-page__featured-item taxon-page__featured-item--single">
     <%= render "govuk_publishing_components/components/image_card", {
         large: true,
         href: featured_item[:link].fetch(:path),
@@ -22,16 +22,18 @@
         }
     } %>
   </div>
-  <% if section[:documents].any? %>
-    <div>
-      <%= render 'govuk_publishing_components/components/document_list',
-        items: section[:documents],
-        margin_top: true,
-        margin_bottom: true
-      %>
-  <% else %>
-    <div class="taxon-page__featured-see-more">
-  <% end %>
-    <%= render partial: "taxons/sections/see_more_link", locals: { section: section } %>
+<% end %>
 
-  </div>
+<% if section[:documents].any? %>
+  <div>
+    <%= render 'govuk_publishing_components/components/document_list',
+      items: section[:documents_with_promoted],
+      margin_top: true,
+      margin_bottom: true
+    %>
+<% else %>
+  <div class="taxon-page__featured-see-more">
+<% end %>
+  <%= render partial: "taxons/sections/see_more_link", locals: { section: section } %>
+
+</div>

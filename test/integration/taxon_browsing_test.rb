@@ -23,6 +23,14 @@ class TaxonBrowsingTest < ActionDispatch::IntegrationTest
     then_the_page_is_noindexed
   end
 
+  it "renders a promoted item when there is only 1 tagged news item" do
+    given_there_is_a_taxon_with_children
+    and_the_taxon_is_live
+    and_the_taxon_has_short_tagged_content
+    when_i_visit_that_taxon
+    then_i_can_see_the_short_news_and_communications_section
+  end
+
   it "renders a taxon page for a draft taxon" do
     given_there_is_a_taxon_with_children
     and_the_taxon_is_not_live
@@ -118,22 +126,48 @@ private
     stub_content_store_has_item(base_path, @content_item)
   end
 
-  def and_the_taxon_has_tagged_content(taxon_content_id = content_id)
-    # We still need to stub tagged content because it is used by the sub-topic grid
-    stub_content_for_taxon(taxon_content_id, tagged_content)
-    stub_document_types_for_supergroup("guidance_and_regulation")
-    stub_most_popular_content_for_taxon(taxon_content_id, tagged_content_for_guidance_and_regulation, filter_content_store_document_type: "guidance_and_regulation")
-    stub_document_types_for_supergroup("services")
-    stub_most_popular_content_for_taxon(taxon_content_id, tagged_content_for_services, filter_content_store_document_type: "services")
-    stub_document_types_for_supergroup("news_and_communications")
-    stub_most_recent_content_for_taxon(taxon_content_id, tagged_content_for_news_and_communications, filter_content_store_document_type: "news_and_communications")
-    stub_document_types_for_supergroup("policy_and_engagement")
-    stub_most_recent_content_for_taxon(taxon_content_id, tagged_content_for_policy_and_engagement, filter_content_store_document_type: "policy_and_engagement")
-    stub_document_types_for_supergroup("transparency")
-    stub_most_recent_content_for_taxon(taxon_content_id, tagged_content_for_transparency, filter_content_store_document_type: "transparency")
-    stub_document_types_for_supergroup("research_and_statistics")
-    stub_most_recent_content_for_taxon(taxon_content_id, tagged_content_for_research_and_statistics, filter_content_store_document_type: "research_and_statistics")
-    stub_organisations_for_taxon(taxon_content_id, tagged_organisations)
+  def and_the_taxon_has_tagged_content
+    set_up_tagged_content
+  end
+
+  def and_the_taxon_has_short_tagged_content
+    set_up_tagged_content(news_and_communications: {
+      content_type: "news_and_communications",
+      query_type: "most_recent",
+      number_of_docs: 1,
+    })
+  end
+
+  def set_up_tagged_content(override_config = {})
+    content_config = {
+      guidance_and_regulation: { content_type: "guidance_and_regulation", query_type: "most_popular" },
+      services: { content_type: "services", query_type: "most_popular" },
+      news_and_communications: { content_type: "news_and_communications", query_type: "most_recent" },
+      policy_and_engagement: { content_type: "policy_and_engagement", query_type: "most_recent" },
+      transparency: { content_type: "transparency", query_type: "most_recent" },
+      research_and_statistics: { content_type: "research_and_statistics", query_type: "most_recent" },
+    }.merge(override_config)
+
+    content_config.each_value do |config|
+      stub_document_types_for_supergroup(config[:content_type])
+
+      dummy_content = generate_dummy_search_content(config)
+      stub_search_api_response(dummy_content, config)
+    end
+
+    stub_organisations_for_taxon(content_id, tagged_organisations)
+  end
+
+  def generate_dummy_search_content(content_type:, number_of_docs: 2, **_unused_config)
+    generate_search_results(number_of_docs, content_type)
+  end
+
+  def stub_search_api_response(dummy_content, content_type:, query_type:, **_unused_config)
+    if query_type == "most_recent"
+      stub_most_recent_content_for_taxon(content_id, dummy_content, filter_content_store_document_type: content_type)
+    elsif query_type == "most_popular"
+      stub_most_popular_content_for_taxon(content_id, dummy_content, filter_content_store_document_type: content_type)
+    end
   end
 
   def when_i_visit_that_taxon
@@ -199,11 +233,22 @@ private
 
   def and_i_can_see_the_news_and_communications_section
     assert page.has_selector?(".gem-c-heading", text: "News")
-    assert page.has_selector?(".taxon-page__featured-item")
 
     tagged_content_for_news_and_communications.each do |item|
       all_other_sections_list_item_test(item)
     end
+
+    expected_link = {
+      text: "See more news and communications in this topic",
+      url: "/search/news-and-communications?" + finder_query_string,
+    }
+
+    assert page.has_link?(expected_link[:text], href: expected_link[:url])
+  end
+
+  def then_i_can_see_the_short_news_and_communications_section
+    assert page.has_selector?(".gem-c-heading", text: "News")
+    assert page.has_selector?(".taxon-page__featured-item")
 
     expected_link = {
       text: "See more news and communications in this topic",
@@ -378,30 +423,6 @@ private
     GovukSchemas::Example.find("taxon", example_name: "taxon").tap do |content_item|
       content_item["phase"] = "live"
     end
-  end
-
-  def tagged_content_for_services
-    @tagged_content_for_services ||= generate_search_results(2, "services")
-  end
-
-  def tagged_content_for_guidance_and_regulation
-    @tagged_content_for_guidance_and_regulation ||= generate_search_results(2, "guidance_and_regulation")
-  end
-
-  def tagged_content_for_news_and_communications
-    @tagged_content_for_news_and_communications ||= generate_search_results(2, "news_and_communications")
-  end
-
-  def tagged_content_for_policy_and_engagement
-    @tagged_content_for_policy_and_engagement ||= generate_search_results(2, "policy_and_engagement")
-  end
-
-  def tagged_content_for_transparency
-    @tagged_content_for_transparency ||= generate_search_results(2, "transparency")
-  end
-
-  def tagged_content_for_research_and_statistics
-    @tagged_content_for_research_and_statistics ||= generate_search_results(2, "research_and_statistics")
   end
 
   def tagged_organisations
