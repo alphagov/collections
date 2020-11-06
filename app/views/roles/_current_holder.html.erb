@@ -1,6 +1,6 @@
 <% if role.current_holder %>
   <div <%= direction_rtl_class(prefix: true) %> <%= dir_attribute %> <%= lang_attribute %>>
     <span <%= t_lang("roles.headings.current_holder") %>><%= t("roles.headings.current_holder") %></span>:
-    <%= link_to role.current_holder["title"], role.current_holder["base_path"] %>
+    <%= link_to role.current_holder["title"], role.current_holder["base_path"], class: "govuk-link" %>
   </div>
 <% end %>
