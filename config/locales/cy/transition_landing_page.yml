@@ -85,7 +85,7 @@ cy:
           path: /uk-nationals-living-eu
         - text: aros yn y DU os ydych chi’n ddinesydd o’r UE
           path: /staying-uk-eu-citizen
-      lead_out: <a href="/transition-check/questions">Cael y rhestr gyflawn</a> o'r hyn y mae angen i chi ei wneud ar eich cyfer chi, eich busnes a'ch teulu.
+      lead_out: <a href="/transition-check/questions" class="govuk-link">Cael y rhestr gyflawn</a> o'r hyn y mae angen i chi ei wneud ar eich cyfer chi, eich busnes a'ch teulu.
     topic_section_header: Yr holl wybodaeth am y cyfnod pontio
     topic_section_subheading: Pori’r holl wybodaeth sy’n berthnasol i’r cyfnod pontio
     email_intro: "I gael y manylion diweddaraf"

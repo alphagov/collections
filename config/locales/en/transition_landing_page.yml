@@ -53,7 +53,7 @@ en:
           path: /uk-nationals-living-eu
         - text: staying in the UK if you're an EU citizen
           path: /staying-uk-eu-citizen
-      lead_out: <a href="/transition-check/questions">Get the complete list</a> of what you need to do for you, your business and your family.
+      lead_out: <a href="/transition-check/questions" class="govuk-link">Get the complete list</a> of what you need to do for you, your business and your family.
     comms_header: "Announcements"
     comms:
       links:
