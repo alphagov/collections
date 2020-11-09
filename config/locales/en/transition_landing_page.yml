@@ -41,11 +41,11 @@ en:
       watch_link_text: Watch on YouTube
     guidance_header: "Changes for businesses and citizens"
     campaign_links:
-      lead_in: "You need to take action now if you're:"
+      lead_in: "You need to act now if you’re"
       links:
-        - text: importing goods into the UK
+        - text: importing goods from the EU
           path: /prepare-to-import-to-great-britain-from-january-2021
-        - text: exporting goods from the UK
+        - text: exporting goods to the EU
           path: /prepare-to-export-from-great-britain-from-january-2021
         - text: travelling to the EU
           path: /visit-europe-1-january-2021
