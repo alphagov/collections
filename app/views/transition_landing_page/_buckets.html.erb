@@ -35,7 +35,7 @@
         <% end %>
       <% end %>
 
-      <p class="govuk-body govuk-!-padding-top-2"><%= campaign_links[:lead_out].html_safe %></p>
+      <p class="govuk-body govuk-!-padding-top-2"><%= sanitize(campaign_links[:lead_out]) %></p>
     </div>
   </div>
 </div>
