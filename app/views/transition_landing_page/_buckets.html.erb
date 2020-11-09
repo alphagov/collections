@@ -16,7 +16,7 @@
   <% campaign_links = I18n.t("transition_landing_page.campaign_links") %>
   <%
     links = campaign_links[:links].map do |link|
-      link_to(link[:text], link[:path], data: {
+      link_to(link[:text], link[:path], class: "govuk-link", data: {
         track_action: link[:path],
         track_category: "transition-landing-page",
         track_label: "What you can do now"
@@ -35,7 +35,7 @@
         <% end %>
       <% end %>
 
-      <p class="govuk-body govuk-!-padding-top-2"><%= campaign_links[:lead_out].html_safe %></p>
+      <p class="govuk-body govuk-!-padding-top-2"><%= sanitize(campaign_links[:lead_out]) %></p>
     </div>
   </div>
 </div>
