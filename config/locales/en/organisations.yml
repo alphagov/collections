@@ -266,12 +266,12 @@ en:
         one: FOI release
         other: FOI releases
       making_foi_requests:
-        step1_html: Read about the Freedom of Information (FOI) Act and <a href="%{how_to_path}" class="brand__color">how to make a request</a>.
-        step2_html: Check <a href="%{our_releases_path}" class="brand__color">our previous releases</a> to see if we’ve already answered your question.
+        step1_html: Read about the Freedom of Information (FOI) Act and <a href="%{how_to_path}" class="govuk-link brand__color">how to make a request</a>.
+        step2_html: Check <a href="%{our_releases_path}" class="govuk-link brand__color">our previous releases</a> to see if we’ve already answered your question.
         step3_html: Make a new request by contacting us using the details below.
       foi_exemption_html: |
         This organisation is not covered by the Freedom of Information Act.
-        To see which organisations are included, see <a href="%{foi_url}" class="brand__color">the legislation</a>.
+        To see which organisations are included, see <a href="%{foi_url}" class="govuk-link brand__color">the legislation</a>.
       contact_form: FOI contact form
     follow_us: "Follow us"
     high_profile_groups: High profile groups within %{title}
