@@ -13,7 +13,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
         var closedText = clicked.getAttribute('data-when-closed-text')
         var openText = clicked.getAttribute('data-when-open-text')
 
-        clicked.setAttribute(toggleAttribute, current == closedText ? openText : closedText)
+        clicked.setAttribute(toggleAttribute, current === closedText ? openText : closedText)
       })
     }
   }
