@@ -1,7 +1,7 @@
-describe('organisation-list-filter.js', function() {
-  "use strict";
+describe('organisation-list-filter.js', function () {
+  'use strict'
 
-  var timeout = 210;
+  var timeout = 210
 
   var stubStyling =
     '<style>' +
@@ -15,7 +15,7 @@ describe('organisation-list-filter.js', function() {
     <form data-filter="form"></div>\
       <input type="search" id="filter-organisations-list" />\
     </form>\
-  ';
+  '
 
   var organisations = '\
     <div id="organisations_search_results">\
@@ -50,78 +50,78 @@ describe('organisation-list-filter.js', function() {
         </ol>\
       </div>\
     </div>\
-  ';
+  '
 
   beforeAll(function () {
-    $(document.body).append(stubStyling);
-    $(document.body).append(form);
-    $(document.body).append(organisations);
-    GOVUK.filter.init();
-  });
+    $(document.body).append(stubStyling)
+    $(document.body).append(form)
+    $(document.body).append(organisations)
+    GOVUK.filter.init()
+  })
 
-  afterEach(function(done) {
-    setTimeout(function() {
-      $('[data-filter="form"] input').val("");
-      $('[data-filter="form"] input').trigger('keyup');
-      done();
-    }, 1);
-  });
+  afterEach(function (done) {
+    setTimeout(function () {
+      $('[data-filter="form"] input').val('')
+      $('[data-filter="form"] input').trigger('keyup')
+      done()
+    }, 1)
+  })
 
-  it("hide items that do not match the search term", function(done) {
-    $('[data-filter="form"] input').val("Advisory cou");
-    $('[data-filter="form"] input').trigger('keyup');
+  it('hide items that do not match the search term', function (done) {
+    $('[data-filter="form"] input').val('Advisory cou')
+    $('[data-filter="form"] input').trigger('keyup')
 
     setTimeout(function () {
-      expect($('.org-logo-1')).toHaveClass("js-hidden");
-      expect($('.org-logo-2')).toHaveClass("js-hidden");
-      expect($('.org-no-logo-1')).toHaveClass("js-hidden");
-      expect($('.js-search-results')).toHaveText("1 result found");
-      done();
-    }, timeout);
-  });
+      expect($('.org-logo-1')).toHaveClass('js-hidden')
+      expect($('.org-logo-2')).toHaveClass('js-hidden')
+      expect($('.org-no-logo-1')).toHaveClass('js-hidden')
+      expect($('.js-search-results')).toHaveText('1 result found')
+      done()
+    }, timeout)
+  })
 
-  it("show items that do match the search term", function(done) {
-    $('[data-filter="form"] input').val("Advisory cou");
-    $('[data-filter="form"] input').trigger('keyup');
-
-    setTimeout(function () {
-      expect($('.org-no-logo-2')).not.toHaveClass("js-hidden");
-      expect($('.js-search-results')).toHaveText("1 result found");
-      done();
-    }, timeout);
-  });
-
-  it("hide department counts and names if they have no matching organisations", function(done) {
-    $('[data-filter="form"] input').val("Advisory cou");
-    $('[data-filter="form"] input').trigger('keyup');
+  it('show items that do match the search term', function (done) {
+    $('[data-filter="form"] input').val('Advisory cou')
+    $('[data-filter="form"] input').trigger('keyup')
 
     setTimeout(function () {
-      expect($('.count-for-logos')).toHaveClass("js-hidden");
-      expect($('.js-search-results')).toHaveText("1 result found");
-      done();
-    }, timeout);
-  });
+      expect($('.org-no-logo-2')).not.toHaveClass('js-hidden')
+      expect($('.js-search-results')).toHaveText('1 result found')
+      done()
+    }, timeout)
+  })
 
-  it("update the department count", function(done) {
-    $('[data-filter="form"] input').val("Advisory cou");
-    $('[data-filter="form"] input').trigger('keyup');
-
-    setTimeout(function () {
-      expect($('.count-for-no-logos')).not.toHaveClass("js-hidden");
-      expect($('.count-for-no-logos .js-accessible-department-count')).toHaveText(1);
-      expect($('.count-for-no-logos .js-department-count')).toHaveText(1);
-      expect($('.js-search-results')).toHaveText("1 result found");
-      done();
-    }, timeout);
-  });
-
-  it("shows a message if there are no matching organisations", function(done) {
-    $('[data-filter="form"] input').val("Nothing will match this");
-    $('[data-filter="form"] input').trigger('keyup');
+  it('hide department counts and names if they have no matching organisations', function (done) {
+    $('[data-filter="form"] input').val('Advisory cou')
+    $('[data-filter="form"] input').trigger('keyup')
 
     setTimeout(function () {
-      expect($('.js-search-results')).toHaveText("0 results found");
-      done();
-    }, timeout);
-  });
-});
+      expect($('.count-for-logos')).toHaveClass('js-hidden')
+      expect($('.js-search-results')).toHaveText('1 result found')
+      done()
+    }, timeout)
+  })
+
+  it('update the department count', function (done) {
+    $('[data-filter="form"] input').val('Advisory cou')
+    $('[data-filter="form"] input').trigger('keyup')
+
+    setTimeout(function () {
+      expect($('.count-for-no-logos')).not.toHaveClass('js-hidden')
+      expect($('.count-for-no-logos .js-accessible-department-count')).toHaveText(1)
+      expect($('.count-for-no-logos .js-department-count')).toHaveText(1)
+      expect($('.js-search-results')).toHaveText('1 result found')
+      done()
+    }, timeout)
+  })
+
+  it('shows a message if there are no matching organisations', function (done) {
+    $('[data-filter="form"] input').val('Nothing will match this')
+    $('[data-filter="form"] input').trigger('keyup')
+
+    setTimeout(function () {
+      expect($('.js-search-results')).toHaveText('0 results found')
+      done()
+    }, timeout)
+  })
+})

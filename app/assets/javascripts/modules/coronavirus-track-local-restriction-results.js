@@ -12,11 +12,11 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     var label = element.getAttribute('data-tracking-label')
 
     var options = {
-      transport: "beacon",
+      transport: 'beacon',
       label: label
     }
 
-    GOVUK.analytics.trackEvent("postcodeSearch:local_lockdown", "postcodeResultShown", options)
+    GOVUK.analytics.trackEvent('postcodeSearch:local_lockdown', 'postcodeResultShown', options)
   }
 
   Modules.CoronavirusTrackLocalRestrictionResults = CoronavirusTrackLocalRestrictionResults

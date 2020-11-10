@@ -11,12 +11,12 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
   CoronavirusTrackLocalRestrictions.prototype.addPostcodeFormSubmitListener = function (element) {
     element.querySelector('.coronavirus-local-restrictions__postcode-form')
-      .addEventListener('submit', function(event){
+      .addEventListener('submit', function (event) {
         var options = {
-          transport: "beacon"
+          transport: 'beacon'
         }
 
-        GOVUK.analytics.trackEvent("postcodeSearch:local_lockdown", "postcodeSearchStarted", options)
+        GOVUK.analytics.trackEvent('postcodeSearch:local_lockdown', 'postcodeSearchStarted', options)
       })
   }
 
@@ -26,11 +26,11 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     if (errorMessage) {
       var errorCode = errorMessage.getAttribute('data-error-code')
       var options = {
-        transport: "beacon",
+        transport: 'beacon',
         label: errorMessage.textContent.trim()
       }
 
-      GOVUK.analytics.trackEvent("userAlerts:local_lockdown", "postcodeErrorShown: " + errorCode, options)
+      GOVUK.analytics.trackEvent('userAlerts:local_lockdown', 'postcodeErrorShown: ' + errorCode, options)
     }
   }
 

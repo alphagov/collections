@@ -1,9 +1,8 @@
 describe('Coronavirus local restrictions landing page', function () {
-  "use strict"
+  'use strict'
 
-  var coronavirusTrackLocalRestrictions;
+  var coronavirusTrackLocalRestrictions
   var element
-
 
   describe('landing page without errors', function () {
     var html = '<div data-module="coronavirus-track-local-restrictions">\
@@ -17,8 +16,8 @@ describe('Coronavirus local restrictions landing page', function () {
       }
       spyOn(GOVUK.analytics, 'trackEvent')
 
-      element = document.createElement('div');
-      element.innerHTML = html;
+      element = document.createElement('div')
+      element.innerHTML = html
       element = element.firstElementChild
 
       coronavirusTrackLocalRestrictions = new GOVUK.Modules.CoronavirusTrackLocalRestrictions()
@@ -29,7 +28,7 @@ describe('Coronavirus local restrictions landing page', function () {
       GOVUK.analytics.trackEvent.calls.reset()
     })
 
-    it("track submit event", function () {
+    it('track submit event', function () {
       element.querySelector('form').dispatchEvent(new Event('submit'))
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith(
@@ -37,7 +36,6 @@ describe('Coronavirus local restrictions landing page', function () {
       )
     })
   })
-
 
   describe('landing page with errors', function () {
     var html = '<div data-module="coronavirus-track-local-restrictions">\
@@ -59,8 +57,8 @@ describe('Coronavirus local restrictions landing page', function () {
       }
       spyOn(GOVUK.analytics, 'trackEvent')
 
-      element = document.createElement('div');
-      element.innerHTML = html;
+      element = document.createElement('div')
+      element.innerHTML = html
       element = element.firstElementChild
 
       coronavirusTrackLocalRestrictions = new GOVUK.Modules.CoronavirusTrackLocalRestrictions()
@@ -71,9 +69,9 @@ describe('Coronavirus local restrictions landing page', function () {
       GOVUK.analytics.trackEvent.calls.reset()
     })
 
-    it("track error event", function () {
+    it('track error event', function () {
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith(
-        'userAlerts:local_lockdown', 'postcodeErrorShown: invalidPostcodeFormat', { transport: 'beacon', label: "Enter a postcode" }
+        'userAlerts:local_lockdown', 'postcodeErrorShown: invalidPostcodeFormat', { transport: 'beacon', label: 'Enter a postcode' }
       )
     })
   })

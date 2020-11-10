@@ -1,7 +1,7 @@
 describe('Coronavirus local restriction results page', function () {
-  "use strict"
+  'use strict'
 
-  var coronavirusTrackLocalRestrictionResults;
+  var coronavirusTrackLocalRestrictionResults
   var html = '<div id="element" data-module="coronavirus-track-local-restriction-results" data-tracking-label="Tier One: London"></div>'
   var element
 
@@ -12,8 +12,8 @@ describe('Coronavirus local restriction results page', function () {
     }
     spyOn(GOVUK.analytics, 'trackEvent')
 
-    element = document.createElement('div');
-    element.innerHTML = html;
+    element = document.createElement('div')
+    element.innerHTML = html
     element = element.firstElementChild
 
     coronavirusTrackLocalRestrictionResults = new GOVUK.Modules.CoronavirusTrackLocalRestrictionResults()
@@ -24,12 +24,12 @@ describe('Coronavirus local restriction results page', function () {
     GOVUK.analytics.trackEvent.calls.reset()
   })
 
-  it("sends event on load", function () {
+  it('sends event on load', function () {
     expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith(
-      "postcodeSearch:local_lockdown", "postcodeResultShown", {
-        transport: "beacon",
-        label: "Tier One: London"
+      'postcodeSearch:local_lockdown', 'postcodeResultShown', {
+        transport: 'beacon',
+        label: 'Tier One: London'
       }
     )
   })
-});
+})
