@@ -23,8 +23,9 @@ jobs:
       - run: |
           bundle config path tmp/bundle
           bundle install --jobs 4 --retry 3
+          yarn
 
-      - run: bundle exec rubocop
+      - run: bundle exec rake lint
       - run: bundle exec rake assets:precompile
       - run: bundle exec rake
         env:
