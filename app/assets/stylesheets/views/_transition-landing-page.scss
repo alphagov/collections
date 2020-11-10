@@ -231,7 +231,7 @@ $green: #00703C;
   margin-bottom: govuk-spacing(6);
 
   &:before {
-    border-top: 1px solid govuk-colour("mid-grey", $legacy: "grey-2");
+    border-top: 1px solid govuk-colour("mid-grey");
     content: "";
     display: block;
     margin-right: govuk-spacing(3);
