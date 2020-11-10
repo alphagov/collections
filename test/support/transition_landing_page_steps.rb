@@ -18,11 +18,11 @@ module TransitionLandingPageSteps
   end
 
   def then_i_can_see_the_title_section
-    assert page.has_selector?("title", text: "The UK transition", visible: false)
+    assert page.has_selector?("title", text: "Brexit transition", visible: false)
   end
 
   def then_i_can_see_the_header_section
-    assert page.has_selector?(".landing-page__header--with-bg-image h1", text: "The UK transition:time is running out")
+    assert page.has_selector?(".landing-page__header--with-bg-image h1", text: "Brexit transition:time is running out")
   end
 
   def then_i_cannot_see_the_get_ready_section

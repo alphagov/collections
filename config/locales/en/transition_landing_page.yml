@@ -1,8 +1,8 @@
 en:
   transition_landing_page:
-    meta_title: The UK transition
-    meta_description: The UK's transition period after Brexit comes to an end this year. Check the new rules from January 2021 and take action now.
-    page_header: "The UK transition:<br/>time is running out"
+    meta_title: Brexit transition
+    meta_description: The Brexit transition period ends this year. Check the new rules from January 2021 and act now.
+    page_header: "Brexit transition:<br/>time is running out"
     page_header_highlight: There are new rules
     page_header_explainer: for businesses and citizens from 1 January 2021.
     countdown_days_to_go: days to go
@@ -18,7 +18,7 @@ en:
       green: Go
     video_section_title: "Time is running out"
     video_section_description: |
-      <p>The UK is leaving the EU single market and customs union, and the end of the transition period will affect citizens, businesses, as well as travel to and from the EU.</p>
+      <p>You need to act now. The new rules affect citizens, businesses and travel to the EU. Make sure you’re ready for the end of the Brexit transition.</p>
       <p>Watch the video to find out what 2021 will mean for you.</p>
     video_section_link: https://www.youtube.com/watch?v=_Hyq5U4mLdQ
     video_section_transcription_summary: View the video transcript
