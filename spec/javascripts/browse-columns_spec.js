@@ -29,6 +29,7 @@ describe('browse-columns.js', function () {
     var bc = new GOVUK.BrowseColumns({ $el: $('<div>') })
     spyOn(bc, 'sectionCache')
 
+    /* eslint-disable no-unused-vars */
     var responseObj = bc.getSectionData({ slug: 'section' })
 
     expect(jQuery.ajax).toHaveBeenCalledWith({
@@ -120,12 +121,12 @@ describe('browse-columns.js', function () {
       $breadcrumbs: $('<div class="gem-c-breadcrumbs"><ol><li>one</li></ol></div>')
     }
 
-    var cached_data = {
+    var cachedData = {
       sectionData: {
         breadcrumbs: '<div class="gem-c-breadcrumbs"><script type="application/ld+json">{"something":"other"}</script><ol><li>one</li><li>two</li></ol></div>'
       }
     }
-    GOVUK.BrowseColumns.prototype.updateBreadcrumbs.call(context, cached_data)
+    GOVUK.BrowseColumns.prototype.updateBreadcrumbs.call(context, cachedData)
     expect(context.$breadcrumbs.find('li').length).toEqual(2)
   })
 
