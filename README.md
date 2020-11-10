@@ -112,6 +112,7 @@ Content for taxon pages is returned by a search in Rummager based on content_ids
     - content tagged to a particular Topic, Mainstream browse page or Organisation
 - [email-alert-api](https://github.com/alphagov/email-alert-api), provides:
     - support for subscribing to notifications from a topic
+- [yarn][] - package manager for JavaScripts
 
 ### Running the application
 
@@ -137,12 +138,19 @@ This will run the app and point it at the [dummy content store](https://govuk-co
 
 ### Running the test suite
 
-Use `bundle exec rake` to run the test suite, excluding JavaScript
+```
+yarn install
 
-#### Javascript tests
+# ruby tests
+bundle exec rspec
 
-Use `bundle exec rake jasmine:ci` to run Jasmine tests
+# JS tests (in console, or in browser)
+bundle exec rake jasmine:ci
+bundle exec rake jasmine
+```
 
 ## License
 
 [MIT License](LICENCE.txt)
+
+[yarn]: https://yarnpkg.com/
