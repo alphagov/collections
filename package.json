@@ -1,0 +1,26 @@
+{
+  "name": "collections",
+  "description": "Serves GOV.UK navigation pages, browse, topic, step-by-steps & services and information pages.",
+  "private": true,
+  "author": "Government Digital Service",
+  "license": "MIT",
+  "scripts": {
+    "lint:js": "standard 'app/assets/javascripts/**/*.js' 'spec/javascripts/**/*.js'"
+  },
+  "standard": {
+    "env": {
+      "browser": true,
+      "jquery": true,
+      "jasmine": true
+    },
+    "globals": [
+      "GOVUK"
+    ],
+    "ignore": [
+      "spec/javascripts/vendor/"
+    ]
+  },
+  "devDependencies": {
+    "standard": "^15.0.0"
+  }
+}
