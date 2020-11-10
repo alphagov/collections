@@ -4,6 +4,7 @@ describe('A toggle attribute module', function () {
   var $element
   var toggle
   var clickon
+  /* eslint-disable no-multi-str */
   var html = '\
     <div id="element" data-module="toggle-attribute">\
       <div id="clickon" data-toggle-attribute="data-state" data-when-closed-text="closed" data-when-open-text="open" data-state="closed">\

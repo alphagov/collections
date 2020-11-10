@@ -3,6 +3,7 @@ describe('An accordion module', function () {
 
   var $element
   var accordion
+  /* eslint-disable no-multi-str */
   var html = '\
     <div class="app-c-accordion js-hidden" data-module="accordion">\
       <div class="app-c-accordion__section js-section" id="topic-section-one">\

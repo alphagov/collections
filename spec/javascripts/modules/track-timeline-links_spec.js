@@ -4,6 +4,7 @@ GOVUK.analytics.trackEvent = function () {}
 describe('Track timeline links', function () {
   'use strict'
 
+  /* eslint-disable no-multi-str */
   var html = '<div class="covid-timeline" data-module="track-timeline-links"> \
     <h2 class="gem-c-heading gem-c-heading--font-size-27 gem-c-heading--padding   govuk-!-margin-bottom-4">Recent and upcoming changes</h2> \
     <div class="covid-timeline__item"> \

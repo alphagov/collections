@@ -1,6 +1,7 @@
 describe('organisation-list-filter.js', function () {
   'use strict'
 
+  /* eslint-disable no-multi-str */
   var timeout = 210
 
   var stubStyling =

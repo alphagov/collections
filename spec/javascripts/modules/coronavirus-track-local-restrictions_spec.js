@@ -5,6 +5,7 @@ describe('Coronavirus local restrictions landing page', function () {
   var element
 
   describe('landing page without errors', function () {
+    /* eslint-disable no-multi-str */
     var html = '<div data-module="coronavirus-track-local-restrictions">\
       <form class="coronavirus-local-restrictions__postcode-form"></form>\
     </div>'

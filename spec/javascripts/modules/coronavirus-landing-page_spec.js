@@ -2,6 +2,7 @@ describe('Coronavirus landing page', function () {
   'use strict'
 
   var coronavirusLandingPage
+  /* eslint-disable no-multi-str */
   var html = '\
   <div id="element" data-module="coronavirus-landing-page">\
     <div class="gem-c-accordion govuk-accordion" data-module="govuk-accordion">\
@@ -57,7 +58,7 @@ describe('Coronavirus landing page', function () {
 
       // similate govuk-accordion module
       $element.find('.govuk-accordion__open-all').on('click', function (e) {
-        var expanded = $(e.target).attr('aria-expanded') == 'true'
+        var expanded = $(e.target).attr('aria-expanded') === 'true'
         $(e.target).attr('aria-expanded', expanded ? 'false' : 'true')
       })
 
