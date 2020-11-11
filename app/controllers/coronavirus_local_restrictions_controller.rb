@@ -15,14 +15,29 @@ class CoronavirusLocalRestrictionsController < ApplicationController
 
   def results
     if params["postcode-lookup"].blank?
+      GovukError.notify(
+        "Postcode left blank",
+        extra: { error_message: "Postcode field left blank" },
+      )
+
       return render_no_postcode_error
     end
 
     @postcode = PostcodeService.new(params["postcode-lookup"]).sanitize
 
     if @postcode.blank?
+      GovukError.notify(
+        "Sanitized postcode is blank",
+        extra: { error_message: "Postcode is blank after being sanitized" },
+      )
+
       return render_no_postcode_error
     elsif !PostcodeService.new(@postcode).valid?
+      GovukError.notify(
+        "Postcode failed validation",
+        extra: { error_message: "Postcode #{@postcode} failed validation after being sanitized" },
+      )
+
       return render_invalid_postcode_error
     end
 
@@ -36,8 +51,18 @@ class CoronavirusLocalRestrictionsController < ApplicationController
                       breadcrumbs: breadcrumbs,
                     }
     elsif @location_lookup.invalid_postcode?
+      GovukError.notify(
+        "Postcode failed Mapit validation",
+        extra: { error_message: "Postcode #{@postcode} failed validation with Mapit" },
+      )
+
       return render_invalid_postcode_error
     elsif @location_lookup.postcode_not_found?
+      GovukError.notify(
+        "Mapit couldn't find postcode",
+        extra: { error_message: "Postcode #{@postcode} couldn't be found in Mapit" },
+      )
+
       return render_no_postcode_error
     end
 
