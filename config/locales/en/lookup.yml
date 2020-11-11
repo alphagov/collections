@@ -16,7 +16,7 @@ en:
       title: Find out the coronavirus restrictions in a local area
       inset_text: |
         <p class="govuk-body"><a class="govuk-link" href="/guidance/new-national-restrictions-from-5-november">National restrictions will begin in England from 5 November.</a></p>
-        <p class="govuk-body">There are different restrictions in <a class="govuk-link" href="https://www.gov.scot/coronavirus-covid-19/">Scotland</a>, <a class="govuk-link" href="https://gov.wales/coronavirus-firebreak-frequently-asked-questions">Wales</a> and <a class="govuk-link" href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-and-localised-restrictions">Northern Ireland</a>.</p>
+        <p class="govuk-body">There are different restrictions in <a class="govuk-link" href="https://www.gov.scot/coronavirus-covid-19/">Scotland</a>, <a class="govuk-link" href="https://gov.wales/local-lockdown">Wales</a> and <a class="govuk-link" href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-and-localised-restrictions">Northern Ireland</a>.</p>
       body_content: |
         <p class="govuk-body">Until 5 November you must follow the local restrictions for your area.</p>
         <p class="govuk-body">Each area has a Local COVID Alert Level. There are 3 Local COVID Alert Levels. Sometimes these are called ‘tiers’ or known as a ‘local lockdown’.</p>
@@ -71,7 +71,7 @@ en:
         wales:
           guidance:
             label: Find out what you can or cannot do (Welsh Government)
-            link: "https://gov.wales/coronavirus-firebreak-frequently-asked-questions"
+            link: "https://gov.wales/local-lockdown"
         northern_ireland:
           guidance:
             label: Find out what you can or cannot do (Northern Ireland Government)
