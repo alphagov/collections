@@ -5,10 +5,12 @@ describe CoronavirusLocalRestrictionsController do
   include GdsApi::TestHelpers::Mapit
   include GdsApi::TestHelpers::ContentStore
 
+  before do
+    stub_content_store_has_item("/find-coronavirus-local-restrictions", {})
+  end
+
   describe "GET show" do
     it "correctly renders the local restrictions page" do
-      stub_content_store_has_item("/find-coronavirus-local-restrictions", {})
-
       get :show
 
       assert_response :success
@@ -27,8 +29,6 @@ describe CoronavirusLocalRestrictionsController do
         },
       ]
       stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
-
-      stub_content_store_has_item("/find-coronavirus-local-restrictions", {})
 
       post :results, params: { "postcode-lookup" => postcode }
 

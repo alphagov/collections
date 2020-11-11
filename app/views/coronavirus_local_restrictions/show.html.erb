@@ -4,10 +4,7 @@
 %>
 
 <% content_for :breadcrumbs do %>
-  <%= render 'govuk_publishing_components/components/breadcrumbs', {
-    breadcrumbs: breadcrumbs,
-    collapse_on_mobile: true
-  } %>
+  <%= render 'govuk_publishing_components/components/contextual_breadcrumbs', content_item: @content_item %>
 <% end %>
 
 <% content_for :title, title %>
