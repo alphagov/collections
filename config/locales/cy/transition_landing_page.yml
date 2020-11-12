@@ -58,6 +58,13 @@ cy:
     comms:
       links:
       - link:
+          text: "Government publishes updated GB-EU Border Operating Model"
+          path: "/government/news/government-publishes-updated-gb-eu-border-operating-model"
+          description: The government has published further detail on how the borders between Great Britain and the EU will work and the actions that traders, hauliers and passengers need to take.
+        metadata:
+          public_updated_at: 2020-10-08
+          document_type: "News Story"
+      - link:
           text: "£650 million investment for Northern Ireland"
           path: "/government/news/major-650-million-investment-for-northern-ireland"
           description: "The Chancellor of the Duchy of Lancaster and the Secretary of State for Northern Ireland have announced a £650m package of investment."
@@ -78,13 +85,6 @@ cy:
         metadata:
           public_updated_at: 2020-02-27
           document_type: "Policy Paper"
-      - link:
-          text: "Government speeds up border planning for the end of the transition period"
-          path: "/government/news/government-accelerates-border-planning-for-the-end-of-the-transition-period"
-          description: Border controls for EU goods imported into Great Britain will be introduced in stages from the end of the transition period.
-        metadata:
-          public_updated_at: 2020-06-12
-          document_type: "News Story"
     topic_section_header: Yr holl wybodaeth am y cyfnod pontio
     topic_section_subheading: Pori’r holl wybodaeth sy’n berthnasol i’r cyfnod pontio
     email_mailto_subject: "Dechrau%20newydd%20y%20DU:%20Ymlaen%20â%20ni-%20GOV.UK"
@@ -97,7 +97,7 @@ cy:
       research_and_statistics: Ymchwil ag ystadegau
       policy_and_engagement: Polisi ac ymgynghoriadau
       transparency: Tryloywder a datganiadau rhyddid gwybodaeth
-    ## Unused keys? 
+    ## Unused keys?
     guidance_subheader: "Camau y gallwch eu cymryd nawr sydd ddim yn ddibynnol ar drafodaethau."
     email_intro: "I gael y manylion diweddaraf"
     email: "Cofrestrwch i gael hysbysiadau ebost am y cyfnod pontio"
