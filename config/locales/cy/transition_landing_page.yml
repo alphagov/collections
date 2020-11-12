@@ -2,7 +2,7 @@ cy:
   transition_landing_page:
     meta_title: Pontio’r DU
     meta_description: "Mae’r DU wedi gadael yr UE. Ewch i weld beth mae’n ei olygu i chi."
-    page_header: "Pontio’r DU:<br/>mae amser yn rhedeg allan"
+    page_header: "Pontio Brexit:<br/>mae amser yn rhedeg allan"
     page_header_highlight: Bydd rheolau newydd
     page_header_explainer: i fusnesau a dinasyddion o 1 Ionawr 2021.
     countdown_days_to_go: diwrnod i fynd
@@ -18,7 +18,7 @@ cy:
       green: Ewch
     video_section_title: "Mae amser yn rhedeg allan"
     video_section_description: |
-      <p>Mae’r DU yn gadael marchnad sengl ac undeb tollau’r UE, a bydd diwedd y cyfnod pontio yn effeithio ar ddinasyddion, busnesau a theithio i’r UE ac oddi yno.</p>
+      <p>Mae’n rhaid i chi weithredu nawr. Mae’r rheolau newydd yn effeithio ar ddinasyddion, busnesau a theithio i’r UE. Gwnewch yn siŵr eich bod yn barod ar gyfer ddiwedd cyfnod pontio Brexit.</p>
       <p>Gwyliwch y fideo i wybod beth fydd 2021 yn ei olygu i chi.</p>
     video_section_link: https://www.youtube.com/watch?v=_Hyq5U4mLdQ
     video_section_transcription_summary: Gwelwch y trawsgrifiad fideo
@@ -43,10 +43,12 @@ cy:
     campaign_links:
       lead_in: "Mae’n rhaid i chi gymryd camau nawr os ydych chi’n:"
       links:
-        - text: mewnforio nwyddau i mewn i’r DU
+        - text: mewnforio nwyddau o’r UE
           path: /prepare-to-import-to-great-britain-from-january-2021
-        - text: allforio nwyddau allan o’r DU
+        - text: allforio nwyddau i’r UE
           path: /prepare-to-export-from-great-britain-from-january-2021
+        - text: symud nwyddau i mewn neu allan o Ogledd Iwerddon
+          path: /guidance/moving-goods-into-out-of-or-through-northern-ireland-from-1-january-2021
         - text: teithio i’r UE
           path: /visit-europe-1-january-2021
         - text: byw a gweithio yn yr UE
