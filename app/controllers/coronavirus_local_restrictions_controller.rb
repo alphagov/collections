@@ -6,7 +6,6 @@ class CoronavirusLocalRestrictionsController < ApplicationController
 
     render :show,
            locals: {
-             breadcrumbs: breadcrumbs,
              error_message: nil,
              input_error: nil,
              error_description: nil,
@@ -14,6 +13,8 @@ class CoronavirusLocalRestrictionsController < ApplicationController
   end
 
   def results
+    @content_item = content_item.to_hash
+
     if params["postcode-lookup"].blank?
       return render_no_postcode_error
     end
@@ -26,15 +27,10 @@ class CoronavirusLocalRestrictionsController < ApplicationController
       return render_invalid_postcode_error
     end
 
-    @content_item = content_item.to_hash
-
     @location_lookup = LocationLookupService.new(@postcode)
 
     if @location_lookup.no_information?
-      return render :no_information,
-                    locals: {
-                      breadcrumbs: breadcrumbs,
-                    }
+      return render :no_information
     elsif @location_lookup.invalid_postcode?
       return render_invalid_postcode_error
     elsif @location_lookup.postcode_not_found?
@@ -58,7 +54,6 @@ private
   def render_no_postcode_error
     render :show,
            locals: {
-             breadcrumbs: breadcrumbs,
              error_message: I18n.t("coronavirus_local_restrictions.errors.no_postcode.error_message"),
              input_error: I18n.t("coronavirus_local_restrictions.errors.no_postcode.input_error"),
              error_description: I18n.t("coronavirus_local_restrictions.errors.no_postcode.error_description"),
@@ -68,26 +63,10 @@ private
   def render_invalid_postcode_error
     render :show,
            locals: {
-             breadcrumbs: breadcrumbs,
              error_message: I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.error_message"),
              input_error: I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.input_error"),
              error_description: I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.error_description"),
            }
-  end
-
-  # Breadcrumbs for this page are hardcoded because it doesn't yet have a
-  # content item with parents.
-  def breadcrumbs
-    [
-      {
-        title: "Home",
-        url: "/",
-      },
-      {
-        title: "Coronavirus (COVID-19)",
-        url: "/coronavirus",
-      },
-    ]
   end
 
   def content_item

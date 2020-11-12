@@ -4,10 +4,7 @@
 %>
 
 <% content_for :breadcrumbs do %>
-  <%= render 'govuk_publishing_components/components/breadcrumbs', {
-    breadcrumbs: breadcrumbs,
-    collapse_on_mobile: true
-  } %>
+  <%= render 'govuk_publishing_components/components/contextual_breadcrumbs', content_item: @content_item %>
 <% end %>
 
 <% content_for :title, title %>
@@ -52,14 +49,10 @@
   </div>
   <div class="govuk-grid-column-one-third">
     <div class="coronavirus-local-restriction__related-navigation">
-      <%= render 'govuk_publishing_components/components/related_navigation', {
-        "content_item": {
-          "links" => {
-            "ordered_related_items" => t("coronavirus_local_restrictions.related_navigation").map(&:with_indifferent_access)
-          }
-        },
-        context: :sidebar
-      } %>
+      <%= render 'govuk_publishing_components/components/contextual_sidebar', { "content_item": @content_item } %>
     </div>
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+    <%= render 'govuk_publishing_components/components/contextual_footer', { content_item: @content_item } %>
   </div>
 </div>

@@ -123,13 +123,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     end
   end
 
-  describe "related links" do
-    it "renders related links" do
-      given_i_am_on_the_local_restrictions_page
-      then_i_see_the_related_links_for_coronavirus
-    end
-  end
-
   def given_i_am_on_the_local_restrictions_page
     stub_content_store_has_item("/find-coronavirus-local-restrictions", {})
 
@@ -341,13 +334,5 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       "type" => "LBO",
       "country_name" => "England",
     }
-  end
-
-  def then_i_see_the_related_links_for_coronavirus
-    within ".gem-c-related-navigation" do
-      I18n.t("coronavirus_local_restrictions.related_navigation").each do |link|
-        assert page.has_link?(link[:title], href: link[:base_path])
-      end
-    end
   end
 end
