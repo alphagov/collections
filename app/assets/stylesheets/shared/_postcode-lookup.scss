@@ -2,4 +2,8 @@
   padding: govuk-spacing(3);
   margin: govuk-spacing(6) 0;
   background: govuk-colour("light-grey");
+
+  .govuk-hint .gem-c-govspeak {
+    color: $govuk-secondary-text-colour;
+  }
 }

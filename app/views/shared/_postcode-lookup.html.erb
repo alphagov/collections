@@ -2,7 +2,7 @@
   input_label ||= t("coronavirus_local_restrictions.lookup.input_label")
   input_value ||= nil
   input_error ||= nil
-  hint_text ||= t("coronavirus_local_restrictions.lookup.hint_text")
+  hint_text ||= render_govspeak(t("coronavirus_local_restrictions.lookup.hint_text"))
   button_text ||= t("coronavirus_local_restrictions.lookup.button_text")
   link ||= { text: t("coronavirus_local_restrictions.royal_mail_lookup.link_text"), href: t("coronavirus_local_restrictions.royal_mail_lookup.href")}
 %>
@@ -12,6 +12,7 @@
           label: {
             text: input_label
           },
+          heading_level: 2,
           heading_size: "s",
           error_message: input_error,
           value: input_value,
