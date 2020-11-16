@@ -12,9 +12,9 @@ describe('Coronavirus landing page', function () {
       </div>\
       <div class="govuk-accordion__section">\
         <div class="govuk-accordion__section-header">\
-          <h2 class="govuk-accordion__section-heading">\
+          <h3 class="govuk-accordion__section-heading">\
             <button type="button">How to protect yourself and others</button><span class="govuk-accordion__icon" aria-hidden="true"></span>\
-          </h2>\
+          </h3>\
         </div>\
         <div class="govuk-accordion__section-content">\
           accordion content\
