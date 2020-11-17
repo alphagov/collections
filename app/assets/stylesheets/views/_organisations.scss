@@ -11,7 +11,7 @@
     list-style-type: none;
     padding-bottom: govuk-spacing(3);
     margin-bottom: govuk-spacing(3);
-    border-bottom: 1px solid govuk-colour("mid-grey", $legacy: "grey-2");
+    border-bottom: 1px solid govuk-colour("mid-grey");
   }
 
   .organisation-list__item-title {
@@ -20,7 +20,7 @@
   }
 
   .organisation-list__item-context {
-    color: govuk-colour("dark-grey", $legacy: "grey-1");
+    color: govuk-colour("dark-grey");
     white-space: nowrap;
   }
 
@@ -45,7 +45,7 @@
   }
 
   .organisation-list__works-with {
-    background-color: govuk-colour("light-grey", $legacy: "grey-3");
+    background-color: govuk-colour("light-grey");
     margin-top: govuk-spacing(2);
     padding: govuk-spacing(2);
   }

@@ -132,7 +132,7 @@
         }
 
         &:hover {
-          background: govuk-colour("light-grey", $legacy: "grey-3");
+          background: govuk-colour("light-grey");
           color: $govuk-link-colour;
 
           p {

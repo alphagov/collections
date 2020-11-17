@@ -15,7 +15,7 @@
     cursor: pointer;
 
     &:hover {
-      background: govuk-colour("light-grey", $legacy: "grey-3");
+      background: govuk-colour("light-grey");
     }
   }
 }
