@@ -14,10 +14,11 @@ module Organisations
       links = []
 
       org.social_media_links.each do |link|
+        link_has_cta = ["Sign up", "Follow", "Watch", "Read"].any? { |cta| link["title"].include?(cta) }
         links << {
           href: link["href"],
           text: link["title"],
-          hidden_text: link["title"].include?('Sign up') ? "" : "Follow on",
+          hidden_text: link_has_cta ? "" : "Follow on",
           icon: link["service_type"],
         }
       end
