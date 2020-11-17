@@ -17,7 +17,7 @@ module Organisations
         links << {
           href: link["href"],
           text: link["title"],
-          hidden_text: "Follow on",
+          hidden_text: link["title"].include?('Sign up') ? "" : "Follow on",
           icon: link["service_type"],
         }
       end
