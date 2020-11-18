@@ -20,19 +20,14 @@ en:
     video_section_description: |
       <p>You need to act now. The new rules affect citizens, businesses and travel to the EU. Make sure you’re ready for the end of the Brexit transition.</p>
       <p>Watch the video to find out what 2021 will mean for you.</p>
-    video_section_link: https://www.youtube.com/watch?v=_Hyq5U4mLdQ
+    video_section_link: https://www.youtube.com/watch?v=Zk9bSnHwjqE
     video_section_transcription_summary: View the video transcript
     video_section_transcription_text: |
-      <p>Time’s running out.</p>
-      <p>Businesses that deal with Europe will have to follow new rules from 1st January 2021.</p>
-      <p>If it crosses borders there’s definite actions we need to take already. No matter what.</p>
-      <p>New rules from the 1st January.</p>
-      <p>I’ll give you a second to jot that down.</p>
-      <p>1st Jan.</p>
-      <p>Oh and getting ready can take longer than you think.</p>
-      <p>So get on it now at gov.uk/transition.</p>
-      <p>TIME IS RUNNING OUT. Start now at gov.uk/transition</p>
-      <p>Got it? Good.</p>
+      <p>The clock is ticking.</p>
+      <p>From 1 January 2021 businesses that deal with Europe will have to follow new rules on exports, imports, tariffs, data and hiring.</p>
+      <p>If that’s you, there’s actions that need sorting. Right now. Pronto.</p>
+      <p>I know we’ve all got our hands full. But if you want to keep your business moving, check what you need to do at gov.uk/transition today.</p>
+      <p>We’re getting ready. Are you?</p>
     no_cookies:
       icon_text: VIDEO
       change_settings_text: Change your cookie settings
@@ -53,7 +48,7 @@ en:
           path: /visit-europe-1-january-2021
         - text: living and working in the EU
           path: /uk-nationals-living-eu
-        - text: staying in the UK if you're an EU citizen
+        - text: staying in the UK if you’re an EU citizen
           path: /staying-uk-eu-citizen
       lead_out: <a href="/transition-check/questions" class="govuk-link">Get the complete list</a> of what you need to do for you, your business and your family.
     comms_header: "Announcements"
