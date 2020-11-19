@@ -24,12 +24,13 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     var errorMessage = element.querySelector('[data-tracking=local-restrictions-postcode-error]')
 
     if (errorMessage) {
+      var errorCode = errorMessage.getAttribute('data-error-code')
       var options = {
         transport: "beacon",
         label: errorMessage.textContent.trim()
       }
 
-      GOVUK.analytics.trackEvent("userAlerts:local_lockdown", "postcodeErrorShown: invalidPostcodeFormat", options)
+      GOVUK.analytics.trackEvent("userAlerts:local_lockdown", "postcodeErrorShown: " + errorCode, options)
     }
   }
 
