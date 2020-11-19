@@ -10,11 +10,11 @@ en:
         input_error: Enter a valid postcode
         error_description: Enter a valid postcode
     lookup:
-      input_label: Enter a full postcode 
+      input_label: Enter a full postcode
       hint_text: |
         For example, LS1 1UR
 
-        We use this to give you more accurate information about the area. 
+        We use this to give you more accurate information about the area.
       button_text: Find
       title: Find out the coronavirus restrictions in a local area
       inset_text: |

@@ -16,15 +16,15 @@ class CoronavirusLocalRestrictionsController < ApplicationController
     @content_item = content_item.to_hash
 
     if params["postcode-lookup"].blank?
-      return render_no_postcode_error
+      return render_no_postcode_error("postcodeLeftBlank")
     end
 
     @postcode = PostcodeService.new(params["postcode-lookup"]).sanitize
 
     if @postcode.blank?
-      return render_no_postcode_error
+      return render_no_postcode_error("postcodeLeftBlankSanitized")
     elsif !PostcodeService.new(@postcode).valid?
-      return render_invalid_postcode_error
+      return render_invalid_postcode_error("invalidPostcodeFormat")
     end
 
     @location_lookup = LocationLookupService.new(@postcode)
@@ -32,9 +32,9 @@ class CoronavirusLocalRestrictionsController < ApplicationController
     if @location_lookup.no_information?
       return render :no_information
     elsif @location_lookup.invalid_postcode?
-      return render_invalid_postcode_error
+      return render_invalid_postcode_error("fullPostcodeNoMapitValidation")
     elsif @location_lookup.postcode_not_found?
-      return render_no_postcode_error
+      return render_no_postcode_error("fullPostcodeNoMapitMatch")
     end
 
     if @location_lookup.data.present?
@@ -51,21 +51,23 @@ class CoronavirusLocalRestrictionsController < ApplicationController
 
 private
 
-  def render_no_postcode_error
+  def render_no_postcode_error(error_code)
     render :show,
            locals: {
              error_message: I18n.t("coronavirus_local_restrictions.errors.no_postcode.error_message"),
              input_error: I18n.t("coronavirus_local_restrictions.errors.no_postcode.input_error"),
              error_description: I18n.t("coronavirus_local_restrictions.errors.no_postcode.error_description"),
+             error_code: error_code,
            }
   end
 
-  def render_invalid_postcode_error
+  def render_invalid_postcode_error(error_code)
     render :show,
            locals: {
              error_message: I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.error_message"),
              input_error: I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.input_error"),
              error_description: I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.error_description"),
+             error_code: error_code,
            }
   end
 
