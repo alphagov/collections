@@ -11,6 +11,8 @@
   items: t("coronavirus_local_restrictions.results.travelling_between_levels.reasons")
 } %>
 
+<%= sanitize(t("coronavirus_local_restrictions.results.travelling_between_levels.extra_information")) %>
+
 <%= render "govuk_publishing_components/components/heading", {
   text: t("coronavirus_local_restrictions.results.travelling_between_levels.travel_to.heading", area: @restriction.area_name),
   font_size: "s",
