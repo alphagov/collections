@@ -20,20 +20,15 @@
     <%= t("coronavirus_local_restrictions.results.level_three.match") %> <strong><%= @postcode %></strong> to <strong><%= @restriction.area_name %></strong>.
   </p>
 
-  <%= render "govuk_publishing_components/components/heading", {
-    text: t("coronavirus_local_restrictions.results.current_level_heading"),
-    font_size: "m",
-    margin_bottom: 4
-  } %>
   <%= render partial: "coronavirus_local_restrictions/national_restrictions" %>
 
   <% if @restriction.present? && @restriction.future.present? %>
     <p class="govuk-body">
-      <%= t("coronavirus_local_restrictions.results.level_three.changing_alert_level") %>
+      <%= t("coronavirus_local_restrictions.results.level_three.alert_level", area: @restriction.area_name) %>
     </p>
   <% else %>
     <p class="govuk-body">
-      <%= t("coronavirus_local_restrictions.results.level_three.alert_level") %>
+      <%= t("coronavirus_local_restrictions.results.level_three.alert_level", area: @restriction.area_name) %>
     </p>
   <% end %>
 
@@ -43,8 +38,6 @@
     simple: true,
     margin_bottom: 9
   } %>
-
-  <%= render partial: "coronavirus_local_restrictions/future_restrictions" %>
 
   <%= render partial: "coronavirus_local_restrictions/travel_guidance", locals: { travel_heading: t("coronavirus_local_restrictions.results.travel_heading") } %>
 <% end %>
