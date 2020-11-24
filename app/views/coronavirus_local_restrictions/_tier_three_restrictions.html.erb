@@ -1,8 +1,8 @@
 <%
   title = if @restriction.present? && @restriction.future.present?
-    t("coronavirus_local_restrictions.results.changing_levels_title")
+    t("coronavirus_local_restrictions.results.current_level_heading")
   else
-    t("coronavirus_local_restrictions.results.level_three.heading")
+    t("coronavirus_local_restrictions.results.current_level_heading")
   end
 %>
 

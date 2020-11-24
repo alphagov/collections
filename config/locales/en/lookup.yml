@@ -32,7 +32,7 @@ en:
     results:
       travel_heading: Find information about somewhere else
       travel_text: <a class="govuk-link" href="/find-coronavirus-local-restrictions">Enter another postcode.</a>
-      current_level_heading: Current tier
+      current_level_heading: National restrictions are in place
       changing_levels_title: The tier is changing soon
       guidance_label: What you can and cannot do
       national_restrictions:
