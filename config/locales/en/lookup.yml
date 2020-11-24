@@ -34,7 +34,7 @@ en:
       travel_text: <a class="govuk-link" href="/find-coronavirus-local-restrictions">Enter another postcode.</a>
       current_level_heading: National restrictions are in place
       changing_levels_title: The tier is changing soon
-      guidance_label: What you can and cannot do
+      guidance_label: Find out what the tier %{level} rules are
       national_restrictions:
         heading: From 2 December
         action_label: Find out what the national rules are
