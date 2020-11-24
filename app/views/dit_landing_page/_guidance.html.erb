@@ -16,13 +16,11 @@
           </h3>
           <%= t("dit_landing_page.guidance_text").html_safe %>
           <ul class="govuk-list govuk-list">
-            <% t("dit_landing_page.countries").each do |country| %>
-              <li lang='<%= country[:lang] %>'><%= link_to country[:label], country[:url]  %></li>
+            <% t("dit_landing_page.guidance_links").each do |guidance| %>
+              <li><%= link_to guidance[:label], guidance[:url]  %></li>
             <% end %>
           </ul>
         <% end %>
-
-        <%= render_govspeak t("dit_landing_page.body_markdown") %>
       </div>
       <div class="govuk-grid-column-one-third">
         <%= image_tag 'KBM-logo.svg', class: "dit-landing-page__kbm-logo", alt: t("dit_landing_page.kbm-logo-alt-text")%>

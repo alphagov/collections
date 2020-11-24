@@ -7,7 +7,7 @@ class DitLandingPageTest < ActionDispatch::IntegrationTest
     it "renders" do
       when_i_visit_the_dit_landing_page
       then_i_can_see_the_header_section
-      and_i_can_see_the_translation_links
+      and_i_can_see_the_guidance_links
       then_i_can_see_the_training_section
     end
   end
@@ -20,8 +20,8 @@ class DitLandingPageTest < ActionDispatch::IntegrationTest
     assert page.has_title? "Trade with the UK from 1 January 2021 as a business based in the EU"
   end
 
-  def and_i_can_see_the_translation_links
-    assert page.has_selector?("li[lang='de']", text: "Deutsch")
+  def and_i_can_see_the_guidance_links
+    assert page.has_selector?("li:first-child", text: "Importing from the UK")
   end
 
   def then_i_can_see_the_training_section
