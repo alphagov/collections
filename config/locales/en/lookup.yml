@@ -36,8 +36,8 @@ en:
       changing_levels_title: The tier is changing soon
       guidance_label: What you can and cannot do
       national_restrictions:
-        heading: National restrictions begin in England from 5 November
-        action_label: Find out about new restrictions and what you can and cannot do
+        heading: From 2 December
+        action_label: Find out what the national rules are
         action_link: /guidance/new-national-restrictions-from-5-november
       level_one:
         heading: "Tier 1"

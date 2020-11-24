@@ -25,6 +25,7 @@
     font_size: "m",
     margin_bottom: 4
   } %>
+  <%= render partial: "coronavirus_local_restrictions/national_restrictions" %>
 
   <% if @restriction.present? && @restriction.future.present? %>
     <p class="govuk-body">
@@ -44,8 +45,6 @@
   } %>
 
   <%= render partial: "coronavirus_local_restrictions/future_restrictions" %>
-
-  <%= render partial: "coronavirus_local_restrictions/national_restrictions" %>
 
   <%= render partial: "coronavirus_local_restrictions/travel_guidance", locals: { travel_heading: t("coronavirus_local_restrictions.results.travel_heading") } %>
 <% end %>
