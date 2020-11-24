@@ -39,7 +39,7 @@ $dark-grey: #282828;
 
 .dit-landing-page_header-text-container {
   background-color: $dark-red;
-  box-shadow: 15px 0 0 0 $dark-red;
+  box-shadow: 15px 0 0 0 $dark-red, 4px 0 0 0 $dark-red, 3px 0 0 0 $dark-red, 1px 0 0 0 $dark-red;
   padding-bottom: govuk-spacing(4);
 
   @include govuk-media-query($from: tablet) {
