@@ -1,8 +1,8 @@
 <%
   title = if @restriction.present? && @restriction.future.present?
-    t("coronavirus_local_restrictions.results.changing_levels_title")
+    t("coronavirus_local_restrictions.results.current_level_heading")
   else
-    t("coronavirus_local_restrictions.results.level_two.heading")
+    t("coronavirus_local_restrictions.results.current_level_heading")
   end
 %>
 
@@ -20,32 +20,24 @@
     <%= t("coronavirus_local_restrictions.results.level_two.match") %> <strong><%= @postcode %></strong> to <strong><%= @restriction.area_name %></strong>.
   </p>
 
-  <%= render "govuk_publishing_components/components/heading", {
-    text: t("coronavirus_local_restrictions.results.current_level_heading"),
-    font_size: "m",
-    margin_bottom: 4
-  } %>
+  <%= render partial: "coronavirus_local_restrictions/national_restrictions" %>
 
   <% if @restriction.present? && @restriction.future.present? %>
     <p class="govuk-body">
-      <%= t("coronavirus_local_restrictions.results.level_two.changing_alert_level") %>
+      <%= t("coronavirus_local_restrictions.results.level_two.alert_level", area: @restriction.area_name) %>
     </p>
   <% else %>
     <p class="govuk-body">
-      <%= t("coronavirus_local_restrictions.results.level_two.alert_level") %>
+      <%= t("coronavirus_local_restrictions.results.level_two.alert_level", area: @restriction.area_name) %>
     </p>
   <% end %>
 
   <%= render "govuk_publishing_components/components/action_link", {
-    text: t("coronavirus_local_restrictions.results.guidance_label"),
+    text: t("coronavirus_local_restrictions.results.guidance_label", level: 2),
     href: t("coronavirus_local_restrictions.results.level_two.guidance_link"),
     simple: true,
     margin_bottom: 9
   } %>
-
-  <%= render partial: "coronavirus_local_restrictions/future_restrictions" %>
-
-  <%= render partial: "coronavirus_local_restrictions/national_restrictions" %>
 
   <%= render partial: "coronavirus_local_restrictions/travel_guidance", locals: { travel_heading: t("coronavirus_local_restrictions.results.travel_heading") } %>
 <% end %>
