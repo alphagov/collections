@@ -284,7 +284,7 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
 
   def then_i_see_details_of_national_restrictions
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.national_restrictions.heading"))
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.national_restrictions.action_label"))
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.national_restrictions.button_label"))
   end
 
   def then_i_see_the_results_for_wales

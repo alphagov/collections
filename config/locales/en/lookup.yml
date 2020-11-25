@@ -35,8 +35,8 @@ en:
       guidance_label: Find out what the tier %{level} rules are
       national_restrictions:
         heading: From 2 December
-        action_label: Find out what the national rules are
-        action_link: /guidance/new-national-restrictions-from-5-november
+        button_label: Find out what the national rules are
+        button_link: /guidance/new-national-restrictions-from-5-november
       level_one:
         heading: "Tier 1"
         match: "We've matched the postcode"
