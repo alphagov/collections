@@ -40,18 +40,18 @@ en:
       level_one:
         heading: "Tier 1"
         match: "We've matched the postcode"
-        alert_level: "%{area} will be in tier 1."
+        alert_level: "%{area} will be in tier 1: medium alert."
         changing_alert_level: "At the moment this area is in tier 1."
         guidance_link: "/guidance/local-covid-alert-level-medium"
       level_two:
         heading: "Tier 2"
-        alert_level: "%{area} will be in tier 2."
+        alert_level: "%{area} will be in tier 2: high alert."
         changing_alert_level: "At the moment this area is in tier 2."
         guidance_link: "/guidance/local-covid-alert-level-high"
         match: "We've matched the postcode"
       level_three:
         heading: "Tier 3"
-        alert_level: "%{area} will be in tier 3."
+        alert_level: "%{area} will be in tier 3: very high alert."
         changing_alert_level: "At the moment this area is in tier 3."
         guidance_link: "/guidance/local-covid-alert-level-very-high"
         match: "We've matched the postcode"
