@@ -265,21 +265,21 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   end
 
   def then_i_see_the_results_page_for_level_one
-    assert page.has_text?("Tatooine")
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_one.heading"))
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_one.alert_level"))
+    area = "Tatooine"
+    assert page.has_text?(area)
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_one.alert_level", area: area))
   end
 
   def then_i_see_the_results_page_for_level_two
-    assert page.has_text?("Coruscant Planetary Council")
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.heading"))
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.alert_level"))
+    area = "Coruscant Planetary Council"
+    assert page.has_text?(area)
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.alert_level", area: area))
   end
 
   def then_i_see_the_results_page_for_level_three
-    assert page.has_text?("Mandalore")
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_three.heading"))
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_three.alert_level"))
+    area = "Mandalore"
+    assert page.has_text?(area)
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_three.alert_level", area: area))
   end
 
   def then_i_see_details_of_national_restrictions
@@ -312,19 +312,17 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   end
 
   def then_i_see_the_results_page_for_level_one_with_changing_restriction_levels
-    date = "2021-10-12".to_date.strftime("%-d %B")
+    area = "Naboo"
 
-    assert page.has_text?("Naboo")
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_one.changing_alert_level"))
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.future.level_two.alert_level", date: date))
+    assert page.has_text?(area)
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_one.alert_level", area: area))
   end
 
   def then_i_see_the_results_page_for_level_two_with_changing_restriction_levels
-    date = "2020-10-12".to_date.strftime("%-d %B")
+    area = "Alderaan"
 
-    assert page.has_text?("Alderaan")
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.changing_alert_level"))
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.future.level_three.alert_level", date: date))
+    assert page.has_text?(area)
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.alert_level", area: area))
   end
 
   def level_two_area
