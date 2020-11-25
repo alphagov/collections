@@ -16,16 +16,14 @@ en:
 
         We use this to give you more accurate information about the area.
       button_text: Find
-      title: Find out the coronavirus restrictions in a local area
+      title: Find out the coronavirus restrictions in your local area
       inset_text: |
-        <p class="govuk-body"><a class="govuk-link" href="/guidance/new-national-restrictions-from-5-november">National restrictions will begin in England from 5 November.</a></p>
         <p class="govuk-body">There are different restrictions in <a class="govuk-link" href="https://www.gov.scot/coronavirus-covid-19/">Scotland</a>, <a class="govuk-link" href="https://gov.wales/local-lockdown">Wales</a> and <a class="govuk-link" href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-and-localised-restrictions">Northern Ireland</a>.</p>
       body_content: |
-        <p class="govuk-body">Until 5 November you must follow the local restrictions for your area.</p>
-        <p class="govuk-body">Each area has a Local COVID Alert Level. There are 3 Local COVID Alert Levels. Sometimes these are called ‘tiers’ or known as a ‘local lockdown’.</p>
-        <p class="govuk-body">Enter the postcode of the place to find out what you can or cannot do.</p>
-      meta_title: Find out the coronavirus restrictions in a local area
-      meta_description: Use the postcode checker to find out the Local COVID Alert Level for an area.
+        <p class="govuk-body">There are 3 tiers. There are different rules depending on what tier an area is in.</p>
+        <p class="govuk-body">Enter the postcode where you’re living or spend most of your time to find out what the rules are.</p>
+      meta_title: Find out the coronavirus restrictions in your local area
+      meta_description: Use the postcode checker to find out the tier that your local area is in.
     royal_mail_lookup:
       link_text: Find a postcode on Royal Mail’s postcode finder
       href: https://www.royalmail.com/find-a-postcode
