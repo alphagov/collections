@@ -26,7 +26,7 @@ E08000456:
 E08000789:
   name: Naboo
   restrictions:
-    - alert_level: 2
+    - alert_level: 1
       start_date: 2021-10-12
       start_time: "00:01"
 E08001234:
@@ -42,5 +42,11 @@ E08001456:
       start_date: 2020-10-10
       start_time: "00:01"
     - alert_level: 3
+      start_date: 2020-10-12
+      start_time: "00:01"
+E08001798:
+  name: Chandrila
+  restrictions:
+    - alert_level: 2
       start_date: 2020-10-12
       start_time: "00:01"
