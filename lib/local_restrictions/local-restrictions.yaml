@@ -218,7 +218,7 @@ E06000038:
 E06000039:
   name: Slough Borough Council
   restrictions:
-    - alert_level: 2
+    - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
 E06000040:
