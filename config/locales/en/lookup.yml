@@ -74,7 +74,7 @@ en:
         heading: There is no information about the restrictions in this area
         guidance:
           label: Full list of tiers by area
-          link: "https://www.gov.uk/guidance/full-list-of-local-restriction-tiers-by-area"
+          link: "/guidance/local-restriction-tiers-what-you-need-to-know"
       future:
         heading: Future tier
         guidance_label: What you can and cannot do from %{date}
