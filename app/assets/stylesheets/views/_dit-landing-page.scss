@@ -24,7 +24,7 @@ $dark-grey: #282828;
   @include govuk-media-query($from: $header-breakpoint) {
     padding-bottom: govuk-spacing(4);
     padding-top: govuk-spacing(8);
-    background-image: image-url('DIT-banner@2x.png');
+    background-image: image-url('DIT-banner@2x.jpg');
     background-size: cover;
     background-position: top;
     min-height: 500px;
