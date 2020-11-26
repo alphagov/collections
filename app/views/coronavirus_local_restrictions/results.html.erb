@@ -8,9 +8,9 @@
   <div class="govuk-grid-column-two-thirds">
     <% if !@location_lookup.data.first.england? %>
       <%= render partial: "coronavirus_local_restrictions/devolved_nation" %>
-    <% elsif @restriction.present? && @restriction.current.present? && @restriction.current_alert_level == 2 %>
+    <% elsif @restriction.present? && @restriction.tier_two? %>
         <%= render partial: "coronavirus_local_restrictions/tier_two_restrictions" %>
-    <% elsif @restriction.present? && @restriction.current.present? && @restriction.current_alert_level == 3 %>
+    <% elsif @restriction.present? && @restriction.tier_three? %>
         <%= render partial: "coronavirus_local_restrictions/tier_three_restrictions" %>
     <% else %>
       <%= render partial: "coronavirus_local_restrictions/tier_one_restrictions" %>
