@@ -3,7 +3,13 @@ $red: #ff003b;
 $dark-grey: #282828;
 
 .dit-landing-page__kbm-logo {
-  max-height: 100px;
+  max-height: 70px;
+  margin-top: govuk-spacing(3);
+
+  @include govuk-media-query($from: desktop) {
+    max-height: 100px;
+    margin-top: 0;
+  }
 }
 
 .dit-landing-page__header {
