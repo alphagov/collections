@@ -72,6 +72,11 @@ private
   end
 
   def content_item
-    @content_item ||= ContentItem.find!(request.path)
+    base_path = request.path
+    @content_item ||= begin
+      Rails.cache.fetch("collections_content_items#{base_path}", expires_in: 1.minute) do
+        ContentItem.find!(base_path)
+      end
+    end
   end
 end
