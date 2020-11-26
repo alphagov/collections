@@ -28,12 +28,8 @@ Rails.application.routes.draw do
   end
 
   # Routes for local restrictions postcode lookup
-  constraints CoronavirusLocalRestrictionsConstraint.new do
-    get "/find-coronavirus-local-restrictions" => "coronavirus_local_restrictions#show"
-    post "/find-coronavirus-local-restrictions" => "coronavirus_local_restrictions#results"
-  end
-
-  get "/find-coronavirus-local-restrictions", to: redirect("https://www.gov.uk/guidance/full-list-of-local-restriction-tiers-by-area")
+  get "/find-coronavirus-local-restrictions" => "coronavirus_local_restrictions#show"
+  post "/find-coronavirus-local-restrictions" => "coronavirus_local_restrictions#results"
 
   # TODO: this redirect causes the request to be routed to Whitehall where
   # the country A-Z currently lives. This needs to be removed when the world index
