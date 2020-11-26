@@ -73,8 +73,8 @@ en:
       no_information:
         heading: There is no information about the restrictions in this area
         guidance:
-          label: Full list of Local COVID Alert Levels by area
-          link: "/guidance/full-list-of-local-covid-alert-levels-by-area"
+          label: Full list of tiers by area
+          link: "https://www.gov.uk/guidance/full-list-of-local-restriction-tiers-by-area"
       future:
         heading: Future tier
         guidance_label: What you can and cannot do from %{date}
