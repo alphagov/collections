@@ -57,7 +57,6 @@ en:
         match: "We've matched the postcode"
       devolved_nations:
         heading: There might be restrictions in this area
-        travel_heading: If you travel to areas in England
         scotland:
           guidance:
            label: Find out what the rules are in Scotland
