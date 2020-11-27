@@ -32,7 +32,7 @@ en:
       travel_text: <a class="govuk-link" href="/find-coronavirus-local-restrictions">Enter another postcode.</a>
       current_level_heading: National restrictions are in place
       changing_levels_title: The tier is changing soon
-      guidance_label: Find out what the tier %{level} rules are
+      guidance_label: Find out what the Tier %{level} rules are
       national_restrictions:
         heading: From 2 December
         button_label: Find out what the national rules are
@@ -40,19 +40,19 @@ en:
       level_one:
         heading: "Tier 1"
         match: "We've matched the postcode"
-        alert_level: "%{area} will be in tier 1: medium alert."
-        changing_alert_level: "At the moment this area is in tier 1."
+        alert_level: "%{area} will be in Tier 1: Medium alert."
+        changing_alert_level: "At the moment this area is in Tier 1."
         guidance_link: "/guidance/local-restriction-tiers-what-you-need-to-know"
       level_two:
         heading: "Tier 2"
-        alert_level: "%{area} will be in tier 2: high alert."
-        changing_alert_level: "At the moment this area is in tier 2."
+        alert_level: "%{area} will be in Tier 2: High alert."
+        changing_alert_level: "At the moment this area is in Tier 2."
         guidance_link: "/guidance/local-restriction-tiers-what-you-need-to-know"
         match: "We've matched the postcode"
       level_three:
         heading: "Tier 3"
-        alert_level: "%{area} will be in tier 3: very high alert."
-        changing_alert_level: "At the moment this area is in tier 3."
+        alert_level: "%{area} will be in Tier 3: Very High alert."
+        changing_alert_level: "At the moment this area is in Tier 3."
         guidance_link: "/guidance/local-restriction-tiers-what-you-need-to-know"
         match: "We've matched the postcode"
       devolved_nations:
@@ -79,8 +79,8 @@ en:
         heading: Future tier
         guidance_label: What you can and cannot do from %{date}
         level_one:
-          alert_level: "From %{date} this area will be in tier 1."
+          alert_level: "From %{date} this area will be in Tier 1: Medium alert."
         level_two:
-          alert_level: "From %{date} this area will be in tier 2."
+          alert_level: "From %{date} this area will be in Tier 2: High alert."
         level_three:
-          alert_level: "From %{date} this area will be in tier 3."
+          alert_level: "From %{date} this area will be in Tier 3: Very High alert."
