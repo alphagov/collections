@@ -74,7 +74,7 @@ private
   def content_item
     base_path = request.path
     @content_item ||= begin
-      Rails.cache.fetch("collections_content_items#{base_path}", expires_in: 1.minute) do
+      Rails.cache.fetch("collections_content_items#{base_path}", expires_in: 10.minutes) do
         ContentItem.find!(base_path)
       end
     end
