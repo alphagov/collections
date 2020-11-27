@@ -12,24 +12,21 @@
     title: title
   } %>
   <% if @location_lookup.data.first.scotland? %>
-    <%= render "govuk_publishing_components/components/action_link", {
+    <%= render "govuk_publishing_components/components/button", {
       text: t("coronavirus_local_restrictions.results.devolved_nations.scotland.guidance.label"),
       href: t("coronavirus_local_restrictions.results.devolved_nations.scotland.guidance.link"),
-      simple: true,
       margin_bottom: 9
     } %>
   <% elsif @location_lookup.data.first.northern_ireland? %>
-    <%= render "govuk_publishing_components/components/action_link", {
+    <%= render "govuk_publishing_components/components/button", {
       text: t("coronavirus_local_restrictions.results.devolved_nations.northern_ireland.guidance.label"),
       href: t("coronavirus_local_restrictions.results.devolved_nations.northern_ireland.guidance.link"),
-      simple: true,
       margin_bottom: 9
     } %>
   <% elsif @location_lookup.data.first.wales? %>
-    <%= render "govuk_publishing_components/components/action_link", {
+    <%= render "govuk_publishing_components/components/button", {
       text: t("coronavirus_local_restrictions.results.devolved_nations.wales.guidance.label"),
       href: t("coronavirus_local_restrictions.results.devolved_nations.wales.guidance.link"),
-      simple: true,
       margin_bottom: 9
     } %>
   <% end %>
