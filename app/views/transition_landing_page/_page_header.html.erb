@@ -1,9 +1,10 @@
 <% content_for :is_full_width_header, true %>
 <% content_for :title, t("transition_landing_page.meta_title") %>
 <% content_for :meta_tags do %>
+  <% page_url = File.join(request.base_url, request.path) %>
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="GOV.UK">
-  <meta property="og:url" content="<%= request.base_url + request.path %>">
+  <meta property="og:url" content="<%= page_url %>">
   <meta property="og:title" content="<%= t("transition_landing_page.meta_title") %>">
   <meta property="og:description" content="<%= t("transition_landing_page.meta_description") %>">
   <meta property="og:image" content="<%= image_url("transition-time-is-running-out.jpg") %>" />
@@ -11,6 +12,7 @@
   <meta name="twitter:image" content="<%= image_url("transition-time-is-running-out.jpg") %>">
   <meta name="description" content="<%= t("transition_landing_page.meta_description") %>">
   <meta name="govuk:navigation-page-type" content="Taxon Page" />
+  <link rel="canonical" href="<%= page_url %>">
   <%= account_variant.analytics_meta_tag.html_safe %>
 <% end %>
 

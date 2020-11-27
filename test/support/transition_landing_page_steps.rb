@@ -86,6 +86,12 @@ module TransitionLandingPageSteps
     page.assert_no_selector('meta[name="robots"]', visible: false)
   end
 
+  def and_there_is_metadata
+    assert page.has_css?("meta[property='og:title'][content='#{I18n.t('transition_landing_page.meta_title')}']", visible: false)
+    assert page.has_css?("meta[name='description'][content='#{I18n.t('transition_landing_page.meta_description')}']", visible: false)
+    assert page.has_css?("link[rel='canonical'][href='http://www.example.com/transition']", visible: false)
+  end
+
   def content_item
     GovukSchemas::RandomExample.for_schema(frontend_schema: "taxon") do |item|
       item.merge(
