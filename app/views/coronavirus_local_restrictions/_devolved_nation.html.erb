@@ -11,6 +11,9 @@
   <%= render "govuk_publishing_components/components/title", {
     title: title
   } %>
+  <p class="govuk-body">
+    <%= t("coronavirus_local_restrictions.results.match") %> <strong><%= @postcode %></strong> to <strong><%= @location_lookup.data.first.country %></strong>.
+  </p>
   <% if @location_lookup.data.first.scotland? %>
     <%= render "govuk_publishing_components/components/button", {
       text: t("coronavirus_local_restrictions.results.devolved_nations.scotland.guidance.label"),
