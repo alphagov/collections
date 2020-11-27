@@ -13,6 +13,7 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     it "displays the tier one restrictions" do
       given_i_am_on_the_local_restrictions_page
       then_i_can_see_the_postcode_lookup_form
+      and_there_is_metadata
       then_i_enter_a_valid_english_postcode
       then_i_click_on_find
       then_i_see_the_results_page_for_level_one
@@ -332,5 +333,11 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       "type" => "LBO",
       "country_name" => "England",
     }
+  end
+
+  def and_there_is_metadata
+    assert page.has_css?("meta[property='og:title'][content='#{I18n.t('coronavirus_local_restrictions.lookup.meta_title')}']", visible: false)
+    assert page.has_css?("meta[name='description'][content='#{I18n.t('coronavirus_local_restrictions.lookup.meta_description')}']", visible: false)
+    assert page.has_css?("link[rel='canonical'][href='http://www.example.com/find-coronavirus-local-restrictions']", visible: false)
   end
 end
