@@ -3,6 +3,7 @@ require "test_helper"
 describe TablePresenter do
   let(:table_data) do
     {
+      show: true,
       headings: %w[
         Date
         Country
@@ -62,6 +63,19 @@ describe TablePresenter do
       presenter = described_class.new(table_data)
       assert_nil(presenter.headings)
       assert_nil(presenter.rows)
+    end
+  end
+
+  describe "#show" do
+    it "returns true when table is set to be shown" do
+      presenter = described_class.new(table_data)
+      assert_equal presenter.show, true
+    end
+
+    it "returns false when table is set to be hidden" do
+      table_data[:show] = false
+      presenter = described_class.new(table_data)
+      assert_equal presenter.show, false
     end
   end
 end

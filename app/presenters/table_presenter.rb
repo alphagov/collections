@@ -3,6 +3,12 @@ class TablePresenter
     @table = table
   end
 
+  def show?
+    return unless valid_input?
+
+    table[:show]
+  end
+
   def rows
     return unless valid_input?
 
@@ -26,7 +32,7 @@ private
   attr_reader :table
 
   def valid_input?
-    return unless %i[headings rows].sort == table.keys.sort
+    return unless %i[show headings rows].sort == table.keys.sort
 
     table[:rows].all? { |e| e.is_a? Array }
   end
