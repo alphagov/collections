@@ -73,7 +73,7 @@ en:
       no_information:
         heading: There is no information about the restrictions in this area
         guidance:
-          label: Full list of tiers by area
+          label: Full list of areas and tiers
           link: "/guidance/full-list-of-local-restriction-tiers-by-area"
       future:
         heading: Future tier
