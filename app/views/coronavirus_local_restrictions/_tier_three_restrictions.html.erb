@@ -20,8 +20,6 @@
     <%= t("coronavirus_local_restrictions.results.match") %> <strong><%= @postcode %></strong> to <strong><%= @restriction.area_name %></strong>.
   </p>
 
-  <%= render partial: "coronavirus_local_restrictions/national_restrictions" %>
-
   <% if @restriction.present? && @restriction.future.present? %>
     <p class="govuk-body">
       <%= t("coronavirus_local_restrictions.results.level_three.alert_level", area: @restriction.area_name) %>

@@ -34,10 +34,6 @@ en:
       changing_levels_title: The tier is changing soon
       guidance_label: Find out what the Tier %{level} rules are
       match: "We've matched the postcode"
-      national_restrictions:
-        heading: From 2 December
-        button_label: Find out what the national rules are
-        button_link: /guidance/new-national-restrictions-from-5-november
       level_one:
         heading: "Tier 1"
         alert_level: "%{area} will be in Tier 1: Medium alert."
