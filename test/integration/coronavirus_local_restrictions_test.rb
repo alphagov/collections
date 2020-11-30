@@ -265,19 +265,19 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   def then_i_see_the_results_page_for_level_one
     area = "Tatooine"
     assert page.has_text?(area)
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_one.alert_level", area: area))
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_one.heading"))
   end
 
   def then_i_see_the_results_page_for_level_two
     area = "Coruscant Planetary Council"
     assert page.has_text?(area)
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.alert_level", area: area))
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.heading"))
   end
 
   def then_i_see_the_results_page_for_level_three
     area = "Mandalore"
     assert page.has_text?(area)
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_three.alert_level", area: area))
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_three.heading"))
   end
 
   def then_i_see_the_results_for_wales
@@ -308,14 +308,14 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     area = "Naboo"
 
     assert page.has_text?(area)
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_one.alert_level", area: area))
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_one.changing_alert_level", area: area))
   end
 
   def then_i_see_the_results_page_for_level_two_with_changing_restriction_levels
     area = "Alderaan"
 
     assert page.has_text?(area)
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.alert_level", area: area))
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.changing_alert_level", area: area))
   end
 
   def level_two_area

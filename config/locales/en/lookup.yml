@@ -36,17 +36,17 @@ en:
       level_one:
         heading: "This area is in Tier 1: Medium"
         alert_level: "%{area} will be in Tier 1: Medium alert."
-        changing_alert_level: "At the moment this area is in Tier 1."
+        changing_alert_level: "At the moment %{area} is in Tier 1."
         guidance_link: "/guidance/tier-1-medium-alert"
       level_two:
         heading: "This area is in Tier 2: High"
         alert_level: "%{area} will be in Tier 2: High alert."
-        changing_alert_level: "At the moment this area is in Tier 2."
+        changing_alert_level: "At the moment %{area} is in Tier 2."
         guidance_link: "/guidance/tier-2-high-alert"
       level_three:
         heading: "This area is in Tier 3: Very High"
         alert_level: "%{area} will be in Tier 3: Very High alert."
-        changing_alert_level: "At the moment this area is in Tier 3."
+        changing_alert_level: "At the moment %{area} is in Tier 3."
         guidance_link: "/guidance/tier-3-very-high-alert"
       devolved_nations:
         heading: There might be restrictions in this area

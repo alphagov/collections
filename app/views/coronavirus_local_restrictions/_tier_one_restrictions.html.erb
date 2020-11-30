@@ -21,12 +21,13 @@
   </p>
 
   <% if @restriction.present? && @restriction.future.present? %>
+    <%= render "govuk_publishing_components/components/heading", {
+      text: t("coronavirus_local_restrictions.results.level_one.heading"),
+      font_size: "m",
+      margin_bottom: 4
+    } %>
     <p class="govuk-body">
-      <%= t("coronavirus_local_restrictions.results.level_one.alert_level", area: @location_lookup.lower_tier_area_name) %>
-    </p>
-  <% else %>
-    <p class="govuk-body">
-      <%= t("coronavirus_local_restrictions.results.level_one.alert_level", area: @location_lookup.lower_tier_area_name) %>
+      <%= t("coronavirus_local_restrictions.results.level_one.changing_alert_level", area: @restriction.area_name) %>
     </p>
   <% end %>
 
