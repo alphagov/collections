@@ -68,7 +68,7 @@ en:
           label: Full list of tiers by area
           link: "/guidance/full-list-of-local-restriction-tiers-by-area"
       future:
-        heading: Future tier
+        heading: From %{date}
         guidance_label: What you can and cannot do from %{date}
         level_one:
           alert_level: "From %{date} this area will be in Tier 1: Medium alert."

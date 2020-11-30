@@ -2,7 +2,7 @@
   <% date = @restriction.future["start_date"].strftime("%-d %B") %>
 
   <%= render "govuk_publishing_components/components/heading", {
-    text: t("coronavirus_local_restrictions.results.future.heading"),
+    text: t("coronavirus_local_restrictions.results.future.heading", date: date),
     font_size: "m",
     margin_bottom: 4
   } %>
