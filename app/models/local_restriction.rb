@@ -50,17 +50,14 @@ class LocalRestriction
   end
 
   def tier_three?
-    (current.present? && current_alert_level == 3) ||
-      (future.present? && future_alert_level == 3)
+    current.present? && current_alert_level == 3
   end
 
   def tier_two?
-    (current.present? && current_alert_level == 2) ||
-      (future.present? && future_alert_level == 2)
+    current.present? && current_alert_level == 2
   end
 
   def tier_one?
-    (current.present? && current_alert_level == 1) ||
-      (future.present? && future_alert_level == 1)
+    current.present? && current_alert_level == 1
   end
 end
