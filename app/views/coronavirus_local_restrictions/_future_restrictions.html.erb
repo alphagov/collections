@@ -9,7 +9,7 @@
 
   <% if @restriction.future_alert_level == 1 %>
     <p class="govuk-body">
-      <%= t("coronavirus_local_restrictions.results.future.level_one.alert_level", date: date) %>
+      <%= t("coronavirus_local_restrictions.results.future.level_one.alert_level", area: @restriction.area_name) %>
     </p>
 
     <%= render "govuk_publishing_components/components/action_link", {
@@ -20,7 +20,7 @@
     } %>
   <% elsif @restriction.future_alert_level == 2 %>
     <p class="govuk-body">
-      <%= t("coronavirus_local_restrictions.results.future.level_two.alert_level", date: date) %>
+      <%= t("coronavirus_local_restrictions.results.future.level_two.alert_level", area: @restriction.area_name) %>
     </p>
 
     <%= render "govuk_publishing_components/components/action_link", {
@@ -31,7 +31,7 @@
     } %>
   <% elsif @restriction.future_alert_level == 3 %>
     <p class="govuk-body">
-      <%= t("coronavirus_local_restrictions.results.future.level_three.alert_level", date: date) %>
+      <%= t("coronavirus_local_restrictions.results.future.level_three.alert_level", area: @restriction.area_name) %>
     </p>
 
     <%= render "govuk_publishing_components/components/action_link", {

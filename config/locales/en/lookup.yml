@@ -71,8 +71,8 @@ en:
         heading: From %{date}
         guidance_label: What you can and cannot do from %{date}
         level_one:
-          alert_level: "From %{date} this area will be in Tier 1: Medium alert."
+          alert_level: "%{area} will be in Tier 1: Medium alert."
         level_two:
-          alert_level: "From %{date} this area will be in Tier 2: High alert."
+          alert_level: "%{area} will be in Tier 2: High alert."
         level_three:
-          alert_level: "From %{date} this area will be in Tier 3: Very High alert."
+          alert_level: "%{area} will be in Tier 3: Very High alert."
