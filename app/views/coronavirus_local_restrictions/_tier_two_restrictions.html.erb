@@ -17,7 +17,7 @@
   } %>
 
   <p class="govuk-body">
-    <%= t("coronavirus_local_restrictions.results.level_two.match") %> <strong><%= @postcode %></strong> to <strong><%= @restriction.area_name %></strong>.
+    <%= t("coronavirus_local_restrictions.results.match") %> <strong><%= @postcode %></strong> to <strong><%= @restriction.area_name %></strong>.
   </p>
 
   <%= render partial: "coronavirus_local_restrictions/national_restrictions" %>
@@ -39,5 +39,5 @@
     margin_bottom: 9
   } %>
 
-  <%= render partial: "coronavirus_local_restrictions/travel_guidance", locals: { travel_heading: t("coronavirus_local_restrictions.results.travel_heading") } %>
+  <%= render partial: "coronavirus_local_restrictions/travel_guidance" %>
 <% end %>

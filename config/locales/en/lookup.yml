@@ -33,13 +33,13 @@ en:
       current_level_heading: National restrictions are in place until 2 December
       changing_levels_title: The tier is changing soon
       guidance_label: Find out what the Tier %{level} rules are
+      match: "We've matched the postcode"
       national_restrictions:
         heading: From 2 December
         button_label: Find out what the national rules are
         button_link: /guidance/new-national-restrictions-from-5-november
       level_one:
         heading: "Tier 1"
-        match: "We've matched the postcode"
         alert_level: "%{area} will be in Tier 1: Medium alert."
         changing_alert_level: "At the moment this area is in Tier 1."
         guidance_link: "/guidance/tier-1-medium-alert"
@@ -48,27 +48,24 @@ en:
         alert_level: "%{area} will be in Tier 2: High alert."
         changing_alert_level: "At the moment this area is in Tier 2."
         guidance_link: "/guidance/tier-2-high-alert"
-        match: "We've matched the postcode"
       level_three:
         heading: "Tier 3"
         alert_level: "%{area} will be in Tier 3: Very High alert."
         changing_alert_level: "At the moment this area is in Tier 3."
         guidance_link: "/guidance/tier-3-very-high-alert"
-        match: "We've matched the postcode"
       devolved_nations:
         heading: There might be restrictions in this area
-        travel_heading: If you travel to areas in England
         scotland:
           guidance:
-           label: Find out what you can or cannot do (Scottish Government)
+           label: Find out what the rules are in Scotland
            link: "https://www.gov.scot/coronavirus-covid-19/"
         wales:
           guidance:
-            label: Find out what you can or cannot do (Welsh Government)
+            label: Find out what the rules are in Wales
             link: "https://gov.wales/coronavirus-regulations-guidance"
         northern_ireland:
           guidance:
-            label: Find out what you can or cannot do (Northern Ireland Government)
+            label: Find out what the rules are in Northern Ireland
             link: "https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-and-localised-restrictions"
       no_information:
         heading: There is no information about the restrictions in this area

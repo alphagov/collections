@@ -289,15 +289,15 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   end
 
   def then_i_see_the_results_for_wales
-    assert page.has_text?("Welsh Government")
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.devolved_nations.wales.guidance.label"))
   end
 
   def then_i_see_the_results_for_scotland
-    assert page.has_text?("Scottish Government")
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.devolved_nations.scotland.guidance.label"))
   end
 
   def then_i_see_the_results_for_northern_ireland
-    assert page.has_text?("Northern Ireland Government")
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.devolved_nations.northern_ireland.guidance.label"))
   end
 
   def then_i_see_a_no_postcode_error_message
