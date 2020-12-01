@@ -35,17 +35,14 @@ en:
       match: "We've matched the postcode"
       level_one:
         heading: "This area is in Tier 1: Medium alert"
-        alert_level: "%{area} will be in Tier 1: Medium alert."
         changing_alert_level: "At the moment %{area} is in Tier 1."
         guidance_link: "/guidance/tier-1-medium-alert"
       level_two:
         heading: "This area is in Tier 2: High alert"
-        alert_level: "%{area} will be in Tier 2: High alert."
         changing_alert_level: "At the moment %{area} is in Tier 2."
         guidance_link: "/guidance/tier-2-high-alert"
       level_three:
         heading: "This area is in Tier 3: Very High alert"
-        alert_level: "%{area} will be in Tier 3: Very High alert."
         changing_alert_level: "At the moment %{area} is in Tier 3."
         guidance_link: "/guidance/tier-3-very-high-alert"
       devolved_nations:
@@ -69,7 +66,6 @@ en:
           link: "/guidance/full-list-of-local-restriction-tiers-by-area"
       future:
         heading: From %{date}
-        guidance_label: What you can and cannot do from %{date}
         level_one:
           alert_level: "%{area} will be in Tier 1: Medium alert."
         level_two:
