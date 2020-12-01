@@ -24,9 +24,10 @@ en:
         url: "/guidance/eu-business-working-in-the-uk"
       - label: Data protection and copyright
         url: "/guidance/eu-business-data-protection-and-copyright"
-    training_section_title: Additional help and support
+    training_section_title: Webinars for EU-based businesses trading with the UK
     training_section_description: |
-      Online events will help you understand the UK border requirements if you’re a trader in the EU, and what you need to do to prepare for the end of the transition period. Dates for these events are currently being scheduled and will be published on this page once they’re available.
+      Learn more about UK border requirements by registering for an upcoming webinar or viewing previous <a href="%{url}" class="govuk-link">webinars for your industry</a>.
+    training_section_url: "https://www.gov.uk/guidance/webinars-for-eu-based-organisations-that-trade-with-the-uk"
     training_section_table:
       headings:
         - "Date"

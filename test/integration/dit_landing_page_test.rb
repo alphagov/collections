@@ -25,6 +25,6 @@ class DitLandingPageTest < ActionDispatch::IntegrationTest
   end
 
   def then_i_can_see_the_training_section
-    assert page.has_selector?("h2", text: "Additional help and support")
+    assert page.has_selector?("h2", text: "Webinars for EU-based businesses trading with the UK")
   end
 end
