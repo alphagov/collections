@@ -4,11 +4,11 @@ describe('A toggle attribute module', function () {
   var $element
   var toggle
   var clickon
-  var html = '\
-    <div id="element" data-module="toggle-attribute">\
-      <div id="clickon" data-toggle-attribute="data-state" data-when-closed-text="closed" data-when-open-text="open" data-state="closed">\
-      </div>\
-    </div>'
+  var html =
+    '<div id="element" data-module="toggle-attribute">' +
+      '<div id="clickon" data-toggle-attribute="data-state" data-when-closed-text="closed" data-when-open-text="open" data-state="closed">' +
+      '</div>' +
+    '</div>'
 
   beforeEach(function () {
     toggle = new GOVUK.Modules.ToggleAttribute()

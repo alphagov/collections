@@ -4,21 +4,22 @@ GOVUK.analytics.trackEvent = function () {}
 describe('Track timeline links', function () {
   'use strict'
 
-  var html = '<div class="covid-timeline" data-module="track-timeline-links"> \
-    <h2 class="gem-c-heading gem-c-heading--font-size-27 gem-c-heading--padding   govuk-!-margin-bottom-4">Recent and upcoming changes</h2> \
-    <div class="covid-timeline__item"> \
-      <h3 class="covid-timeline__item-heading govuk-heading-s">24 September</h3> \
-      <div class="gem-c-govspeak govuk-govspeak " data-module="govspeak"> \
-        <p>Get the <a rel="external" href="https://covid19.nhs.uk/">NHS COVID-19 app</a> to help protect yourself and others</p> \
-      </div> \
-    </div> \
-      <div class="covid-timeline__item"> \
-        <h3 class="covid-timeline__item-heading govuk-heading-s">24 September</h3> \
-        <div class="gem-c-govspeak govuk-govspeak " data-module="govspeak"> \
-        <p>Find out how the <a href="/government/news/chancellor-outlines-winter-economy-plan">Winter Economy Plan</a> will protect jobs and support businesses</p> \
-      </div> \
-    </div> \
-  </div>'
+  var html =
+    '<div class="covid-timeline" data-module="track-timeline-links">' +
+      '<h2 class="gem-c-heading gem-c-heading--font-size-27 gem-c-heading--padding   govuk-!-margin-bottom-4">Recent and upcoming changes</h2>' +
+      '<div class="covid-timeline__item">' +
+        '<h3 class="covid-timeline__item-heading govuk-heading-s">24 September</h3>' +
+        '<div class="gem-c-govspeak govuk-govspeak " data-module="govspeak">' +
+          '<p>Get the <a rel="external" href="https://covid19.nhs.uk/">NHS COVID-19 app</a> to help protect yourself and others</p>' +
+        '</div>' +
+      '</div>' +
+        '<div class="covid-timeline__item">' +
+          '<h3 class="covid-timeline__item-heading govuk-heading-s">24 September</h3>' +
+          '<div class="gem-c-govspeak govuk-govspeak " data-module="govspeak">' +
+          '<p>Find out how the <a href="/government/news/chancellor-outlines-winter-economy-plan">Winter Economy Plan</a> will protect jobs and support businesses</p>' +
+        '</div>' +
+      '</div>' +
+    '</div>'
 
   var element
 

@@ -5,9 +5,10 @@ describe('Coronavirus local restrictions landing page', function () {
   var element
 
   describe('landing page without errors', function () {
-    var html = '<div data-module="coronavirus-track-local-restrictions">\
-      <form class="coronavirus-local-restrictions__postcode-form"></form>\
-    </div>'
+    var html =
+      '<div data-module="coronavirus-track-local-restrictions">' +
+        '<form class="coronavirus-local-restrictions__postcode-form"></form>' +
+      '</div>'
 
     beforeEach(function () {
       GOVUK.analytics = {
@@ -38,17 +39,18 @@ describe('Coronavirus local restrictions landing page', function () {
   })
 
   describe('landing page with errors', function () {
-    var html = '<div data-module="coronavirus-track-local-restrictions">\
-      <div class="gem-c-error-summary govuk-error-summary" data-module="govuk-error-summary"> \
-        <h2 class="govuk-error-summary__title">There is a problem</h2> \
-      <div class="govuk-error-summary__body"> \
-          <ul class="govuk-list govuk-error-summary__list"> \
-              <li class="gem-c-error-summary__list-item" data-tracking="local-restrictions-postcode-error" data-error-code="invalidPostcodeFormat"><a href="#postcodeLookup">Enter a postcode</a></li> \
-          </ul> \
-      </div> \
-      </div>\
-      <form class="coronavirus-local-restrictions__postcode-form"></form>\
-    </div>'
+    var html =
+      '<div data-module="coronavirus-track-local-restrictions">' +
+        '<div class="gem-c-error-summary govuk-error-summary" data-module="govuk-error-summary">' +
+          '<h2 class="govuk-error-summary__title">There is a problem</h2>' +
+          '<div class="govuk-error-summary__body">' +
+            '<ul class="govuk-list govuk-error-summary__list">' +
+              '<li class="gem-c-error-summary__list-item" data-tracking="local-restrictions-postcode-error" data-error-code="invalidPostcodeFormat"><a href="#postcodeLookup">Enter a postcode</a></li>' +
+            '</ul>' +
+          '</div>' +
+        '</div>' +
+        '<form class="coronavirus-local-restrictions__postcode-form"></form>' +
+      '</div>'
 
     beforeEach(function () {
       GOVUK.analytics = {

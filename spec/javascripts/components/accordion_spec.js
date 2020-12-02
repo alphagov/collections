@@ -3,35 +3,35 @@ describe('An accordion module', function () {
 
   var $element
   var accordion
-  var html = '\
-    <div class="app-c-accordion js-hidden" data-module="accordion">\
-      <div class="app-c-accordion__section js-section" id="topic-section-one">\
-        <div class="app-c-accordion__header js-toggle-panel">\
-          <h2 class="app-c-accordion__title js-section-title">Topic Section One</h2>\
-          <p class="app-c-accordion__description">Subsection description in here</p>\
-        </div>\
-        <div class="app-c-accordion__panel js-panel" id="section_panel_10_0">\
-          <ul>\
-            <li>\
-              <a href="">list item in here</a>\
-            </li>\
-          </ul>\
-        </div>\
-      </div>\
-      <div class="app-c-accordion__section js-section" id="topic-section-two">\
-        <div class="app-c-accordion__header js-toggle-panel">\
-          <h2 class="app-c-accordion__title js-section-title">Topic Section Two</h2>\
-          <p class="app-c-accordion__description">Subsection description in here</p>\
-        </div>\
-        <div class="app-c-accordion__panel js-panel" id="section_panel_11_1">\
-          <ul>\
-            <li>\
-              <a href="">list item in here</a>\
-            </li>\
-          </ul>\
-        </div>\
-      </div>\
-    </div>'
+  var html =
+    '<div class="app-c-accordion js-hidden" data-module="accordion">' +
+      '<div class="app-c-accordion__section js-section" id="topic-section-one">' +
+        '<div class="app-c-accordion__header js-toggle-panel">' +
+          '<h2 class="app-c-accordion__title js-section-title">Topic Section One</h2>' +
+          '<p class="app-c-accordion__description">Subsection description in here</p>' +
+        '</div>' +
+        '<div class="app-c-accordion__panel js-panel" id="section_panel_10_0">' +
+          '<ul>' +
+            '<li>' +
+              '<a href="">list item in here</a>' +
+            '</li>' +
+          '</ul>' +
+        '</div>' +
+      '</div>' +
+      '<div class="app-c-accordion__section js-section" id="topic-section-two">' +
+        '<div class="app-c-accordion__header js-toggle-panel">' +
+          '<h2 class="app-c-accordion__title js-section-title">Topic Section Two</h2>' +
+          '<p class="app-c-accordion__description">Subsection description in here</p>' +
+        '</div>' +
+        '<div class="app-c-accordion__panel js-panel" id="section_panel_11_1">' +
+          '<ul>' +
+            '<li>' +
+              '<a href="">list item in here</a>' +
+            '</li>' +
+          '</ul>' +
+        '</div>' +
+      '</div>' +
+    '</div>'
   var expectedAccordionSectionCount = 2
   var expectedAccordionContentCount = 1
 

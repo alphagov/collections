@@ -74,7 +74,7 @@
         var departmentCount = departmentSection.find('.js-department-count')
         var accessibleDepartmentCount = departmentSection.find('.js-accessible-department-count')
 
-        departmentCountWrapper.toggleClass('js-hidden', matchingOrgCount == 0)
+        departmentCountWrapper.toggleClass('js-hidden', matchingOrgCount === 0)
 
         if (matchingOrgCount > 0) {
           departmentCount.text(matchingOrgCount)

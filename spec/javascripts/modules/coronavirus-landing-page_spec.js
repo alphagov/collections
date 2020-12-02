@@ -2,26 +2,24 @@ describe('Coronavirus landing page', function () {
   'use strict'
 
   var coronavirusLandingPage
-  var html = '\
-  <div id="element" data-module="coronavirus-landing-page">\
-    <div class="gem-c-accordion govuk-accordion" data-module="govuk-accordion">\
-      <div class="govuk-accordion__controls">\
-        <button type="button" class="govuk-accordion__open-all" aria-expanded="false">\
-          Open all<span class="govuk-visually-hidden"> sections</span>\
-        </button>\
-      </div>\
-      <div class="govuk-accordion__section">\
-        <div class="govuk-accordion__section-header">\
-          <h3 class="govuk-accordion__section-heading">\
-            <button type="button">How to protect yourself and others</button><span class="govuk-accordion__icon" aria-hidden="true"></span>\
-          </h3>\
-        </div>\
-        <div class="govuk-accordion__section-content">\
-          accordion content\
-        </div> \
-      </div> \
-    </div>\
-  </div>'
+  var html =
+    '<div id="element" data-module="coronavirus-landing-page">' +
+      '<div class="gem-c-accordion govuk-accordion" data-module="govuk-accordion">' +
+        '<div class="govuk-accordion__controls">' +
+          '<button type="button" class="govuk-accordion__open-all" aria-expanded="false">' +
+            'Open all<span class="govuk-visually-hidden"> sections</span>' +
+          '</button>' +
+        '</div>' +
+        '<div class="govuk-accordion__section">' +
+          '<div class="govuk-accordion__section-header">' +
+            '<h3 class="govuk-accordion__section-heading">' +
+              '<button type="button">How to protect yourself and others</button><span class="govuk-accordion__icon" aria-hidden="true"></span>' +
+            '</h3>' +
+          '</div>' +
+          '<div class="govuk-accordion__section-content">accordion content</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>'
   var $element
 
   beforeEach(function () {
@@ -57,7 +55,7 @@ describe('Coronavirus landing page', function () {
 
       // similate govuk-accordion module
       $element.find('.govuk-accordion__open-all').on('click', function (e) {
-        var expanded = $(e.target).attr('aria-expanded') == 'true'
+        var expanded = $(e.target).attr('aria-expanded') === 'true'
         $(e.target).attr('aria-expanded', expanded ? 'false' : 'true')
       })
 

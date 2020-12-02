@@ -158,7 +158,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
         $openOrCloseAllButton.on('click', function () {
           var shouldOpenAll
 
-          if ($openOrCloseAllButton.text() == bulkActions.openAll.buttonText) {
+          if ($openOrCloseAllButton.text() === bulkActions.openAll.buttonText) {
             $openOrCloseAllButton.text(bulkActions.closeAll.buttonText)
             shouldOpenAll = true
 
@@ -196,7 +196,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       // Ideally we'd use jQuery.escapeSelector, but this is only available from v3
       // See https://github.com/jquery/jquery/blob/2d4f53416e5f74fa98e0c1d66b6f3c285a12f0ce/src/selector-native.js#L46
       function escapeSelector (s) {
-        var cssMatcher = /([\x00-\x1f\x7f]|^-?\d)|^-$|[^\x80-\uFFFF\w-]/g
+        var cssMatcher = /([\x00-\x1f\x7f]|^-?\d)|^-$|[^\x80-\uFFFF\w-]/g // eslint-disable-line no-control-regex
         return s.replace(cssMatcher, '\\$&')
       }
     }
@@ -278,8 +278,8 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       this.track = trackClick
 
       function trackClick () {
-        var tracking_options = { label: trackingLabel(), dimension28: subsectionView.numberOfContentItems().toString() }
-        accordionTracker.track('pageElementInteraction', trackingAction(), tracking_options)
+        var trackingOptions = { label: trackingLabel(), dimension28: subsectionView.numberOfContentItems().toString() }
+        accordionTracker.track('pageElementInteraction', trackingAction(), trackingOptions)
 
         if (!subsectionView.isClosed()) {
           accordionTracker.track(

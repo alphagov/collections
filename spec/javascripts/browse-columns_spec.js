@@ -29,7 +29,7 @@ describe('browse-columns.js', function () {
     var bc = new GOVUK.BrowseColumns({ $el: $('<div>') })
     spyOn(bc, 'sectionCache')
 
-    var responseObj = bc.getSectionData({ slug: 'section' })
+    bc.getSectionData({ slug: 'section' })
 
     expect(jQuery.ajax).toHaveBeenCalledWith({
       url: '/browse/section.json'
@@ -47,7 +47,7 @@ describe('browse-columns.js', function () {
     var bc = new GOVUK.BrowseColumns({ $el: $('<div>') })
     bc.sectionCache('section', 'section', 'data')
 
-    var responseObj = bc.getSectionData({ slug: 'section' })
+    bc.getSectionData({ slug: 'section' })
 
     expect(jQuery.ajax.calls.any()).toBe(false)
 
@@ -63,7 +63,7 @@ describe('browse-columns.js', function () {
     var bc = new GOVUK.BrowseColumns({ $el: $('<div>') })
     spyOn(bc, 'sectionCache')
 
-    var responseObj = bc.getSectionData({ subsection: true, slug: 'section/subsection' })
+    bc.getSectionData({ subsection: true, slug: 'section/subsection' })
 
     expect(jQuery.ajax).toHaveBeenCalledWith({
       url: '/browse/section/subsection.json'
@@ -81,7 +81,7 @@ describe('browse-columns.js', function () {
     var bc = new GOVUK.BrowseColumns({ $el: $('<div>') })
     bc.sectionCache('section', 'section/subsection', 'data')
 
-    var responseObj = bc.getSectionData({ slug: 'section/subsection' })
+    bc.getSectionData({ slug: 'section/subsection' })
 
     expect(jQuery.ajax.calls.any()).toBe(false)
 
@@ -114,18 +114,16 @@ describe('browse-columns.js', function () {
   })
 
   it('should update breadcrumbs from cache', function () {
-    var context
-
-    context = {
+    var context = {
       $breadcrumbs: $('<div class="gem-c-breadcrumbs"><ol><li>one</li></ol></div>')
     }
 
-    var cached_data = {
+    var cachedData = {
       sectionData: {
         breadcrumbs: '<div class="gem-c-breadcrumbs"><script type="application/ld+json">{"something":"other"}</script><ol><li>one</li><li>two</li></ol></div>'
       }
     }
-    GOVUK.BrowseColumns.prototype.updateBreadcrumbs.call(context, cached_data)
+    GOVUK.BrowseColumns.prototype.updateBreadcrumbs.call(context, cachedData)
     expect(context.$breadcrumbs.find('li').length).toEqual(2)
   })
 

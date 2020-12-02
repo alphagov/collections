@@ -52,7 +52,7 @@
         return // nothing has changed
       }
 
-      if (state.slug == '') {
+      if (state.slug === '') {
         loadPromise = this.showRoot()
       } else if (state.subsection) {
         loadPromise = this.restoreSubsection(state)
@@ -65,7 +65,7 @@
     },
     restoreSubsection: function (state) {
       // are we displaying the correct section for the subsection?
-      if (this.lastState.section != state.section) {
+      if (this.lastState.section !== state.section) {
         // load the section then load the subsection after
         var sectionPathname = window.location.pathname.split('/').slice(0, -1).join('/')
         var sectionState = this.parsePathname(sectionPathname)
@@ -137,6 +137,8 @@
       this.$root.css({ position: 'absolute', width: this.$root.width() })
       this.$subsection.hide()
       this.$section.css('margin-right', '63%')
+      var sectionProperties
+
       if (this.isDesktop()) {
         this.$section.find('.pane-inner.curated').animate({
           paddingLeft: '30px'
@@ -146,13 +148,13 @@
           paddingLeft: '96px'
         }, this.animateSpeed)
 
-        var sectionProperties = {
+        sectionProperties = {
           width: '35%',
           marginLeft: '0%',
           marginRight: '40%'
         }
       } else {
-        var sectionProperties = {
+        sectionProperties = {
           width: '30%',
           marginLeft: '0%',
           marginRight: '45%'
@@ -198,14 +200,16 @@
       this.$section.find('.pane-inner').animate({
         paddingLeft: '0'
       }, this.animateSpeed)
+      var sectionProperties
+
       if (this.isDesktop()) {
-        var sectionProperties = {
+        sectionProperties = {
           width: '25%',
           marginLeft: '-13%',
           marginRight: '63%'
         }
       } else {
-        var sectionProperties = {
+        sectionProperties = {
           width: '30%',
           marginLeft: '-18%',
           marginRight: '63%'
@@ -237,11 +241,11 @@
     setTitle: function (title) {
       $('title').text(title + ' - GOV.UK')
     },
-    setContentIDMetaTag: function (content_id) {
-      $('meta[name="govuk:content-id"]').attr('content', content_id)
+    setContentIDMetaTag: function (contentId) {
+      $('meta[name="govuk:content-id"]').attr('content', contentId)
     },
-    setNavigationPageTypeMetaTag: function (navigation_page_type) {
-      $('meta[name="govuk:navigation-page-type"]').attr('content', navigation_page_type)
+    setNavigationPageTypeMetaTag: function (navigationPageType) {
+      $('meta[name="govuk:navigation-page-type"]').attr('content', navigationPageType)
     },
     addLoading: function ($el) {
       this.$el.attr('aria-busy', 'true')
@@ -329,7 +333,7 @@
         }.bind(this))
     },
     navigate: function (e) {
-      if (e.currentTarget.pathname.match(/^\/browse\/[^\/]+(\/[^\/]+)?$/)) {
+      if (e.currentTarget.pathname.match(/^\/browse\/[^/]+(\/[^/]+)?$/)) {
         var $target = $(e.currentTarget)
         e.preventDefault()
 
@@ -356,9 +360,9 @@
       sectionTitle = sectionTitle ? sectionTitle.toLowerCase() : 'browse'
       var navigationPageType = 'none'
 
-      if (this.displayState == 'section') {
+      if (this.displayState === 'section') {
         navigationPageType = 'First Level Browse'
-      } else if (this.displayState == 'subsection') {
+      } else if (this.displayState === 'subsection') {
         navigationPageType = 'Second Level Browse'
       }
 
