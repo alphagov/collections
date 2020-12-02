@@ -75,7 +75,7 @@ class WorldWideTaxonBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   def and_i_can_see_the_email_signup_link
-    assert page.has_link?("Get email alerts for this topic")
+    assert page.has_link?("Get emails for this topic")
   end
 
   def and_i_can_see_links_to_the_child_taxons_in_an_accordion
