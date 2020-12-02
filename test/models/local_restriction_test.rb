@@ -88,10 +88,10 @@ describe LocalRestriction do
       assert restriction.tier_three?
     end
 
-    it "returns true if there is only a future restriction in tier 3" do
+    it "returns false if there is only a future restriction in tier 3" do
       travel_to Time.zone.local(2020, 10, 10, 10, 10, 10)
       restriction = described_class.new("E08001234")
-      assert restriction.tier_three?
+      assert_not restriction.tier_three?
     end
   end
 
@@ -102,24 +102,24 @@ describe LocalRestriction do
       assert restriction.tier_two?
     end
 
-    it "returns true if there is only a future restriction in tier 2" do
+    it "returns false if there is only a future restriction in tier 2" do
       travel_to Time.zone.local(2020, 10, 10, 10, 10, 10)
       restriction = described_class.new("E08001798")
-      assert restriction.tier_two?
+      assert_not restriction.tier_two?
     end
   end
 
   describe "#tier_one?" do
     it "returns true if there is current restriction in tier 1" do
-      travel_to Time.zone.local(2020, 10, 15, 10, 10, 10)
+      travel_to Time.zone.local(2021, 10, 15, 10, 10, 10)
       restriction = described_class.new("E08000789")
       assert restriction.tier_one?
     end
 
-    it "returns true if there is only a future restriction in tier 1" do
+    it "returns false if there is only a future restriction in tier 1" do
       travel_to Time.zone.local(2020, 10, 10, 10, 10, 10)
       restriction = described_class.new("E08000789")
-      assert restriction.tier_one?
+      assert_not restriction.tier_one?
     end
   end
 end

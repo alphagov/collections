@@ -30,28 +30,20 @@ en:
     results:
       travel_heading: Find information about somewhere else
       travel_text: <a class="govuk-link" href="/find-coronavirus-local-restrictions">Enter another postcode.</a>
-      current_level_heading: National restrictions are in place until 2 December
-      changing_levels_title: The tier is changing soon
+      changing_levels_title: The tier for this area is changing soon
       guidance_label: Find out what the Tier %{level} rules are
       match: "We've matched the postcode"
-      national_restrictions:
-        heading: From 2 December
-        button_label: Find out what the national rules are
-        button_link: /guidance/new-national-restrictions-from-5-november
       level_one:
-        heading: "Tier 1"
-        alert_level: "%{area} will be in Tier 1: Medium alert."
-        changing_alert_level: "At the moment this area is in Tier 1."
+        heading: "This area is in Tier 1: Medium alert"
+        changing_alert_level: "At the moment %{area} is in Tier 1."
         guidance_link: "/guidance/tier-1-medium-alert"
       level_two:
-        heading: "Tier 2"
-        alert_level: "%{area} will be in Tier 2: High alert."
-        changing_alert_level: "At the moment this area is in Tier 2."
+        heading: "This area is in Tier 2: High alert"
+        changing_alert_level: "At the moment %{area} is in Tier 2."
         guidance_link: "/guidance/tier-2-high-alert"
       level_three:
-        heading: "Tier 3"
-        alert_level: "%{area} will be in Tier 3: Very High alert."
-        changing_alert_level: "At the moment this area is in Tier 3."
+        heading: "This area is in Tier 3: Very High alert"
+        changing_alert_level: "At the moment %{area} is in Tier 3."
         guidance_link: "/guidance/tier-3-very-high-alert"
       devolved_nations:
         heading: There might be restrictions in this area
@@ -73,11 +65,10 @@ en:
           label: Full list of areas and tiers
           link: "/guidance/full-list-of-local-restriction-tiers-by-area"
       future:
-        heading: Future tier
-        guidance_label: What you can and cannot do from %{date}
+        heading: From %{date}
         level_one:
-          alert_level: "From %{date} this area will be in Tier 1: Medium alert."
+          alert_level: "%{area} will be in Tier 1: Medium alert."
         level_two:
-          alert_level: "From %{date} this area will be in Tier 2: High alert."
+          alert_level: "%{area} will be in Tier 2: High alert."
         level_three:
-          alert_level: "From %{date} this area will be in Tier 3: Very High alert."
+          alert_level: "%{area} will be in Tier 3: Very High alert."

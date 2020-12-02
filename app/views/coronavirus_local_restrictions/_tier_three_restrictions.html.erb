@@ -1,8 +1,8 @@
 <%
   title = if @restriction.present? && @restriction.future.present?
-    t("coronavirus_local_restrictions.results.current_level_heading")
+    t("coronavirus_local_restrictions.results.changing_levels_title")
   else
-    t("coronavirus_local_restrictions.results.current_level_heading")
+    t("coronavirus_local_restrictions.results.level_three.heading")
   end
 %>
 
@@ -20,24 +20,23 @@
     <%= t("coronavirus_local_restrictions.results.match") %> <strong><%= @postcode %></strong> to <strong><%= @restriction.area_name %></strong>.
   </p>
 
-  <%= render partial: "coronavirus_local_restrictions/national_restrictions" %>
-
   <% if @restriction.present? && @restriction.future.present? %>
+    <%= render "govuk_publishing_components/components/heading", {
+      text: t("coronavirus_local_restrictions.results.level_three.heading"),
+      font_size: "m",
+      margin_bottom: 4
+    } %>
     <p class="govuk-body">
-      <%= t("coronavirus_local_restrictions.results.level_three.alert_level", area: @restriction.area_name) %>
-    </p>
-  <% else %>
-    <p class="govuk-body">
-      <%= t("coronavirus_local_restrictions.results.level_three.alert_level", area: @restriction.area_name) %>
+      <%= t("coronavirus_local_restrictions.results.level_three.changing_alert_level", area: @restriction.area_name) %>
     </p>
   <% end %>
 
   <%= render "govuk_publishing_components/components/button", {
     text: t("coronavirus_local_restrictions.results.guidance_label", level: 3),
     href: t("coronavirus_local_restrictions.results.level_three.guidance_link"),
-    secondary: true,
     margin_bottom: 9
   } %>
 
+  <%= render partial: "coronavirus_local_restrictions/future_restrictions" %>
   <%= render partial: "coronavirus_local_restrictions/travel_guidance" %>
 <% end %>

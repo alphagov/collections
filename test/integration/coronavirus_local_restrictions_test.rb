@@ -17,7 +17,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_enter_a_valid_english_postcode
       then_i_click_on_find
       then_i_see_the_results_page_for_level_one
-      then_i_see_details_of_national_restrictions
     end
 
     it "displays the tier two restrictions" do
@@ -26,7 +25,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_enter_a_valid_english_postcode_in_tier_two
       then_i_click_on_find
       then_i_see_the_results_page_for_level_two
-      then_i_see_details_of_national_restrictions
     end
 
     it "displays the tier three restrictions" do
@@ -35,7 +33,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_enter_a_valid_english_postcode_in_tier_three
       then_i_click_on_find
       then_i_see_the_results_page_for_level_three
-      then_i_see_details_of_national_restrictions
     end
   end
 
@@ -268,24 +265,19 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   def then_i_see_the_results_page_for_level_one
     area = "Tatooine"
     assert page.has_text?(area)
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_one.alert_level", area: area))
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_one.heading"))
   end
 
   def then_i_see_the_results_page_for_level_two
     area = "Coruscant Planetary Council"
     assert page.has_text?(area)
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.alert_level", area: area))
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.heading"))
   end
 
   def then_i_see_the_results_page_for_level_three
     area = "Mandalore"
     assert page.has_text?(area)
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_three.alert_level", area: area))
-  end
-
-  def then_i_see_details_of_national_restrictions
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.national_restrictions.heading"))
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.national_restrictions.button_label"))
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_three.heading"))
   end
 
   def then_i_see_the_results_for_wales
@@ -316,14 +308,14 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     area = "Naboo"
 
     assert page.has_text?(area)
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_one.alert_level", area: area))
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_one.changing_alert_level", area: area))
   end
 
   def then_i_see_the_results_page_for_level_two_with_changing_restriction_levels
     area = "Alderaan"
 
     assert page.has_text?(area)
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.alert_level", area: area))
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.changing_alert_level", area: area))
   end
 
   def level_two_area
