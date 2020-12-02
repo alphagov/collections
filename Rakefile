@@ -2,8 +2,7 @@
 # for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
 
 require File.expand_path("config/application", __dir__)
-Collections::Application.load_tasks
+Rails.application.load_tasks
 
-unless Rails.env.production?
-  task default: %w[lint]
-end
+Rake::Task[:default].clear if Rake::Task.task_defined?(:default)
+task default: %i[lint cucumber test jasmine:ci]
