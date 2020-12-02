@@ -27,8 +27,10 @@
   height: 16px;
   width: 16px;
   margin-top: -8px;
+  // stylelint-disable declaration-block-no-shorthand-property-overrides
   background-image: image-url('icons-plus-minus.png'); // PNG fallback for SVG
   background: image-url("icons-plus-minus.svg"), linear-gradient(transparent, transparent); // SVG sprite
+  // stylelint-enable declaration-block-no-shorthand-property-overrides
   background-repeat: no-repeat;
   background-position: 0 -16px;
 

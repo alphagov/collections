@@ -5,16 +5,16 @@
       color: inherit;
       margin: 0;
     }
+  }
 
-    .topics-page__latest {
-      border-top: 1px solid $govuk-border-colour;
-      padding-top: govuk-spacing(3);
+  .page-header .topics-page__latest {
+    border-top: 1px solid $govuk-border-colour;
+    padding-top: govuk-spacing(3);
+  }
 
-      .topics-page__latest-link {
-        @include govuk-font(19, $weight: "bold");
-        text-decoration: none;
-      }
-    }
+  .page-header .topics-page__latest .topics-page__latest-link {
+    @include govuk-font(19, $weight: "bold");
+    text-decoration: none;
   }
 
   .browse-container {

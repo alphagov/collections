@@ -1,4 +1,4 @@
-// scss-lint:disable IdSelector
+// stylelint-disable selector-max-id
 .full-width #wrapper {
   margin: 0;
   width: auto;
@@ -8,7 +8,7 @@
 .full-width #global-header-bar {
   display: none;
 }
-// scss-lint:enable IdSelector
+// stylelint-enable selector-max-id
 
 .full-page-width-wrapper {
   @include govuk-width-container;
