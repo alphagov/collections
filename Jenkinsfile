@@ -5,6 +5,7 @@ library("govuk")
 node {
   govuk.setEnvar("PUBLISHING_E2E_TESTS_COMMAND", "test-collections")
   govuk.buildProject(
+    beforeTest: { sh("yarn install") },
     overrideTestTask: {
       stage("Run tests") {
         govuk.runTests()

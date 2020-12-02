@@ -16,3 +16,7 @@
 /tmp
 /coverage
 /public/collections
+
+# Yarn
+/node_modules
+/yarn-error.log
