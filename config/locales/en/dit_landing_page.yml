@@ -7,23 +7,28 @@ en:
     page_header_explainer: |
       <p>The UK has left the EU. On 31 December 2020 the UK will leave the EU single market and customs union.</p>
       <p>From 1 January 2021 the rules for trading with the UK will change.</p>
-    guidance_title: Prepare your business for January 2021 if you are based in the EU
-    guidance_subheader: What your business needs to know
+    guidance_title: What your business needs to know
     guidance_text: |
-      <p>If you run an EU-based business, you need to check the new rules and prepare for the changes so that you can continue trading with the UK from January 2021.</p>
+      If you run an EU-based business, you need to check the new rules and prepare for the changes so that you can continue trading with the UK from January 2021.
     guidance_links:
       - label: Importing from the UK
         url: "/guidance/eu-business-importing-from-the-uk"
+        text: Find out what you need to do to import from the UK, including customs procedures and importing goods such as food, drink, animal, and plant products.
       - label: Exporting to the UK
         url: "/guidance/eu-business-exporting-to-the-uk"
+        text: Find out what you need to do to export to the UK, including new rules for hauliers, checks, moving goods across borders and exporting goods such as food, drink, animal, plant, and energy-related products.
       - label: Taxes and tariffs
         url: "/guidance/eu-business-taxes-and-tariffs"
-      - label: Goods and services
-        url: "/guidance/eu-business-goods-and-services"
+        text: Learn more about paying or reclaiming VAT.
+      - label: Providing services to the UK
+        url: "/guidance/eu-business-services"
+        text: Find out how the way you provide services in the UK may change.
       - label: Working in the UK
         url: "/guidance/eu-business-working-in-the-uk"
+        text: Find out what EU workers in the UK need to do from 1 January 2021, including rules on driving, visas, and recognising professional qualifications.
       - label: Data protection and copyright
         url: "/guidance/eu-business-data-protection-and-copyright"
+        text: Learn more about changes to rules including intellectual property, copyright, and sharing personal data.
     training_section_title: Webinars for EU-based businesses trading with the UK
     training_section_description: |
       Learn more about UK border requirements by <a href="/guidance/webinars-for-eu-based-organisations-that-trade-with-the-uk" class="govuk-link">registering for an upcoming webinar or industry day, or viewing previous webinars</a>.
