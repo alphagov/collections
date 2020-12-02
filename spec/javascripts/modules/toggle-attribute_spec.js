@@ -1,5 +1,5 @@
 describe('A toggle attribute module', function () {
-  "use strict"
+  'use strict'
 
   var $element
   var toggle
@@ -11,9 +11,9 @@ describe('A toggle attribute module', function () {
     </div>'
 
   beforeEach(function () {
-    toggle = new GOVUK.Modules.ToggleAttribute();
-    $element = $(html);
-    toggle.start($element);
+    toggle = new GOVUK.Modules.ToggleAttribute()
+    $element = $(html)
+    toggle.start($element)
     clickon = $element.find('#clickon')
   })
 
@@ -21,11 +21,11 @@ describe('A toggle attribute module', function () {
     $(document).off()
   })
 
-  it("sets the state to open when clicked and back again", function () {
-    expect(clickon).toHaveAttr("data-state", "closed")
+  it('sets the state to open when clicked and back again', function () {
+    expect(clickon).toHaveAttr('data-state', 'closed')
     clickon.click()
-    expect(clickon).toHaveAttr("data-state", "open")
+    expect(clickon).toHaveAttr('data-state', 'open')
     clickon.click()
-    expect(clickon).toHaveAttr("data-state", "closed")
+    expect(clickon).toHaveAttr('data-state', 'closed')
   })
-});
+})

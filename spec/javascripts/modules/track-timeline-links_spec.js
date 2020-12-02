@@ -2,7 +2,7 @@ GOVUK.analytics = GOVUK.analytics || {}
 GOVUK.analytics.trackEvent = function () {}
 
 describe('Track timeline links', function () {
-  "use strict"
+  'use strict'
 
   var html = '<div class="covid-timeline" data-module="track-timeline-links"> \
     <h2 class="gem-c-heading gem-c-heading--font-size-27 gem-c-heading--padding   govuk-!-margin-bottom-4">Recent and upcoming changes</h2> \
@@ -18,10 +18,10 @@ describe('Track timeline links', function () {
         <p>Find out how the <a href="/government/news/chancellor-outlines-winter-economy-plan">Winter Economy Plan</a> will protect jobs and support businesses</p> \
       </div> \
     </div> \
-  </div>';
+  </div>'
 
-  var element;
-  
+  var element
+
   beforeEach(function () {
     GOVUK.analytics = {
       trackEvent: function () {
@@ -29,8 +29,8 @@ describe('Track timeline links', function () {
     }
     spyOn(GOVUK.analytics, 'trackEvent')
 
-    element = document.createElement('div');
-    element.innerHTML = html;
+    element = document.createElement('div')
+    element.innerHTML = html
     element = element.firstElementChild
 
     var tracker = new GOVUK.Modules.TrackTimelineLinks()
@@ -45,9 +45,9 @@ describe('Track timeline links', function () {
     element.querySelector('a[href="/government/news/chancellor-outlines-winter-economy-plan"]').dispatchEvent(new Event('click'))
 
     expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith(
-      "pageElementInteraction", "Timeline", {
-        transport: "beacon",
-        label: "/government/news/chancellor-outlines-winter-economy-plan"
+      'pageElementInteraction', 'Timeline', {
+        transport: 'beacon',
+        label: '/government/news/chancellor-outlines-winter-economy-plan'
       }
     )
   })
@@ -56,9 +56,9 @@ describe('Track timeline links', function () {
     element.querySelector('a[href="https://covid19.nhs.uk/"]').dispatchEvent(new Event('click'))
 
     expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith(
-      "pageElementInteraction", "Timeline", {
-        transport: "beacon",
-        label: "https://covid19.nhs.uk/"
+      'pageElementInteraction', 'Timeline', {
+        transport: 'beacon',
+        label: 'https://covid19.nhs.uk/'
       }
     )
   })

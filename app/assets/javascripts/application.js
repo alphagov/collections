@@ -21,7 +21,7 @@
 //= require modules/coronavirus-track-local-restriction-results
 //= require modules/track-timeline-links
 
-$(document).on('ready', function(){
-  var toggleAttribute = new GOVUK.Modules.ToggleAttribute();
-  toggleAttribute.start($('[data-module=toggle-attribute]'));
-});
+$(document).on('ready', function () {
+  var toggleAttribute = new GOVUK.Modules.ToggleAttribute()
+  toggleAttribute.start($('[data-module=toggle-attribute]'))
+})

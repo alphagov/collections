@@ -1,8 +1,8 @@
-(function(root) {
-  "use strict";
-  root.GOVUK = root.GOVUK || {};
+(function (root) {
+  'use strict'
+  root.GOVUK = root.GOVUK || {}
 
-  root.GOVUK.getCurrentLocation = function(){
-    return root.location;
-  };
-}(window));
+  root.GOVUK.getCurrentLocation = function () {
+    return root.location
+  }
+}(window))

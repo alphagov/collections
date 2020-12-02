@@ -1,7 +1,7 @@
 describe('Coronavirus landing page', function () {
-  "use strict"
+  'use strict'
 
-  var coronavirusLandingPage;
+  var coronavirusLandingPage
   var html = '\
   <div id="element" data-module="coronavirus-landing-page">\
     <div class="gem-c-accordion govuk-accordion" data-module="govuk-accordion">\
@@ -25,26 +25,26 @@ describe('Coronavirus landing page', function () {
   var $element
 
   beforeEach(function () {
-    coronavirusLandingPage = new GOVUK.Modules.CoronavirusLandingPage();
-    $element = $(html);
-    GOVUK.approveAllCookieTypes();
+    coronavirusLandingPage = new GOVUK.Modules.CoronavirusLandingPage()
+    $element = $(html)
+    GOVUK.approveAllCookieTypes()
   })
 
-  it("sets global_bar_seen to automatically hide if on /coronavirus", function () {
-    GOVUK.cookie("global_bar_seen", JSON.stringify({"count": 0, "version": 1}));
-    spyOn(coronavirusLandingPage, "checkOnLandingPage").and.returnValue(true)
-    coronavirusLandingPage.start($element);
+  it('sets global_bar_seen to automatically hide if on /coronavirus', function () {
+    GOVUK.cookie('global_bar_seen', JSON.stringify({ count: 0, version: 1 }))
+    spyOn(coronavirusLandingPage, 'checkOnLandingPage').and.returnValue(true)
+    coronavirusLandingPage.start($element)
 
-    expect(parseCookie(GOVUK.cookie("global_bar_seen")).count).toBe(999)
+    expect(parseCookie(GOVUK.cookie('global_bar_seen')).count).toBe(999)
   })
 
-  it("only sets global_bar_seen if on /coronavirus", function () {
-    GOVUK.cookie("global_bar_seen", JSON.stringify({"count": 0, "version": 1}));
-    spyOn(coronavirusLandingPage, "checkOnLandingPage").and.returnValue(false)
-    coronavirusLandingPage.start($element);
+  it('only sets global_bar_seen if on /coronavirus', function () {
+    GOVUK.cookie('global_bar_seen', JSON.stringify({ count: 0, version: 1 }))
+    spyOn(coronavirusLandingPage, 'checkOnLandingPage').and.returnValue(false)
+    coronavirusLandingPage.start($element)
 
-    expect(parseCookie(GOVUK.cookie("global_bar_seen")).count).not.toBe(999)
-    expect(parseCookie(GOVUK.cookie("global_bar_seen")).version).toBe(1)
+    expect(parseCookie(GOVUK.cookie('global_bar_seen')).count).not.toBe(999)
+    expect(parseCookie(GOVUK.cookie('global_bar_seen')).version).toBe(1)
   })
 
   describe('Clicking the "Open all" button', function () {
@@ -56,48 +56,48 @@ describe('Coronavirus landing page', function () {
       spyOn(GOVUK.analytics, 'trackEvent')
 
       // similate govuk-accordion module
-      $element.find('.govuk-accordion__open-all').on("click", function(e) {
+      $element.find('.govuk-accordion__open-all').on('click', function (e) {
         var expanded = $(e.target).attr('aria-expanded') == 'true'
-        $(e.target).attr('aria-expanded', expanded ? "false" : "true") 
+        $(e.target).attr('aria-expanded', expanded ? 'false' : 'true')
       })
 
       coronavirusLandingPage.start($element)
     })
 
-    it("tracks expanding", function () {
+    it('tracks expanding', function () {
       var $openCloseAllButton = $element.find('.govuk-accordion__open-all')
 
       expect($openCloseAllButton).toExist()
-      expect($openCloseAllButton.attr("aria-expanded")).toBe("false")
+      expect($openCloseAllButton.attr('aria-expanded')).toBe('false')
       $openCloseAllButton.trigger('click')
 
-      expect($openCloseAllButton.attr("aria-expanded")).toBe("true")
+      expect($openCloseAllButton.attr('aria-expanded')).toBe('true')
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith(
         'pageElementInteraction', 'accordionOpened', { transport: 'beacon', label: 'Expand all' }
       )
     })
 
-    it("tracks collapsing", function () {
+    it('tracks collapsing', function () {
       var $openCloseAllButton = $element.find('.govuk-accordion__open-all')
       $openCloseAllButton.attr('aria-expanded', 'true')
 
       expect($openCloseAllButton).toExist()
-      expect($openCloseAllButton).toHaveAttr("aria-expanded", "true")
+      expect($openCloseAllButton).toHaveAttr('aria-expanded', 'true')
       $openCloseAllButton.trigger('click')
 
-      expect($openCloseAllButton.attr("aria-expanded")).toBe("false")
+      expect($openCloseAllButton.attr('aria-expanded')).toBe('false')
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith(
         'pageElementInteraction', 'accordionClosed', { transport: 'beacon', label: 'Collapse all' }
       )
     })
   })
-});
+})
 
-function parseCookie(cookie) {
+function parseCookie (cookie) {
   var parsedCookie = JSON.parse(cookie)
 
   // Tests seem to run differently on CI, and require an extra parse
-  if (typeof parsedCookie !== "object") {
+  if (typeof parsedCookie !== 'object') {
     parsedCookie = JSON.parse(parsedCookie)
   }
 
