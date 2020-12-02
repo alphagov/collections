@@ -1,8 +1,11 @@
 <%= render "govuk_publishing_components/components/heading", {
-  text: t("coronavirus_local_restrictions.results.travel_heading"),
+  text: t("coronavirus_local_restrictions.results.travel.heading"),
   font_size: "m",
   margin_bottom: 3
 } %>
-<p class="govuk-body">
-  <%= sanitize(t("coronavirus_local_restrictions.results.travel_text")) %>
-</p>
+
+<%= link_to(
+  t("coronavirus_local_restrictions.results.travel.label"),
+  t("coronavirus_local_restrictions.results.travel.link"),
+  class: "govuk-body govuk-link"
+) %>
