@@ -16,12 +16,12 @@ $dark-grey: #282828;
   padding-bottom: govuk-spacing(6);
   padding-top: govuk-spacing(3);
   margin-bottom: govuk-spacing(6);
-  background-color: $dark-red;
-  color: govuk-colour("white");
+  background-color: govuk-colour("white");
+  color: govuk-colour("black");
 }
 
 .dit-landing-page__header--with-bg-image  {
-  background-color: $dark-red;
+  background-color: govuk-colour("white");
   border-top: govuk-spacing(2) solid $red;
 
   @include govuk-media-query($from: $header-breakpoint) {
@@ -44,8 +44,8 @@ $dark-grey: #282828;
 }
 
 .dit-landing-page_header-text-container {
-  background-color: $dark-red;
-  box-shadow: 15px 0 0 0 $dark-red, 4px 0 0 0 $dark-red, 3px 0 0 0 $dark-red, 1px 0 0 0 $dark-red;
+  background-color: govuk-colour("white");
+  box-shadow: 15px 0 0 0 govuk-colour("white"), 4px 0 0 0 govuk-colour("white"), 3px 0 0 0 govuk-colour("white"), 1px 0 0 0 govuk-colour("white");
   padding-bottom: govuk-spacing(4);
 
   @include govuk-media-query($from: tablet) {
@@ -61,16 +61,16 @@ $dark-grey: #282828;
 
 .dit-landing-page__header-text-block {
   @include govuk-media-query($from: $header-breakpoint) {
-    background: $dark-red;
-    background: -webkit-linear-gradient(90deg, $dark-red 50%, $transparent 50%);
-    background: linear-gradient(90deg, $dark-red 50%, $transparent 50%);
+    background: govuk-colour("white");
+    background: -webkit-linear-gradient(90deg, govuk-colour("white") 50%, $transparent 50%);
+    background: linear-gradient(90deg, govuk-colour("white") 50%, $transparent 50%);
   }
 }
 
 .dit-landing-page__intro {
   p {
     @include govuk-font($size: 24);
-    color: govuk-colour("white");
+    color: govuk-colour("black");
   }
 
   a:link,
@@ -86,7 +86,7 @@ $dark-grey: #282828;
 
 .dit-landing-page__page_title {
   @include govuk-font($size: 48, $weight: bold);
-  color: govuk-colour("white");
+  color: govuk-colour("black");
   margin-top: govuk-spacing(7);
   margin-bottom: govuk-spacing(4);
 }
@@ -113,6 +113,14 @@ $dark-grey: #282828;
       color: $govuk-focus-text-colour;
     }
   }
+}
+
+.dit-landing-page__section--border-top {
+  @include govuk-responsive-padding(8, "top");
+  @include govuk-responsive-padding(8, "bottom");
+
+  border-top: 2px solid govuk-colour("black");
+  margin-top: 0;
 }
 
 .dit-landing-page__training-image {
