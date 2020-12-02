@@ -1,10 +1,10 @@
 
-$red: #FF003B;
-$dark-blue: #1E1348;
+$red: #ff003b;
+$dark-blue: #1e1348;
 $dark-blue-shadow: #020659;
-$transparent: rgba(0,0,0,0);
+$transparent: rgba(0, 0, 0, 0);
 $header-breakpoint: 960px;
-$green: #00703C;
+$green: #00703c;
 
 .large-paragraph {
   @include govuk-font($size: 19);
@@ -213,7 +213,6 @@ $green: #00703C;
     color: govuk-colour("white");
   }
 }
-
 
 .landing-page__section--light-grey {
   @include govuk-responsive-padding(8, "top");

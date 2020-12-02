@@ -45,7 +45,7 @@ $c19-landing-page-header-background: #0843a1;
   background: $c19-landing-page-header-background;
 
   @include govuk-media-query($from: tablet) {
-    padding: 45px 0 40px 0;
+    padding: 45px 0 40px;
   }
 }
 
@@ -73,7 +73,7 @@ $c19-landing-page-header-background: #0843a1;
   vertical-align: top;
 
   @include govuk-media-query($from: tablet) {
-    padding-top: 0px;
+    padding-top: 0;
   }
 }
 
@@ -124,6 +124,7 @@ $c19-landing-page-header-background: #0843a1;
     &:visited {
       color: govuk-colour("white");
     }
+
     &:focus {
       color: $govuk-text-colour;
     }
@@ -148,7 +149,8 @@ $c19-landing-page-header-background: #0843a1;
     margin-bottom: govuk-spacing(4);
   }
 }
-.covid__spaced-list>li {
+
+.covid__spaced-list > li {
   &:nth-child(2n) {
     margin-bottom: govuk-spacing(5);
 
