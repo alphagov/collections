@@ -31,7 +31,7 @@ en:
         text: Learn more about changes to rules including intellectual property, copyright, and sharing personal data.
     training_section_title: Webinars for EU-based businesses trading with the UK
     training_section_description: |
-      Learn more about UK border requirements by <a href="%{url}" class="govuk-link">registering for an upcoming webinar or industry day, or viewing previous webinars</a>.
+      Learn more about UK border requirements from 1 January 2021 by <a href="%{url}" class="govuk-link">registering for an upcoming webinar or industry day</a>.
     training_section_url: "/guidance/webinars-for-eu-based-organisations-that-trade-with-the-uk"
     training_section_table:
       headings:
