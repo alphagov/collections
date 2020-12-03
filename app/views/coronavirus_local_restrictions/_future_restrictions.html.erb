@@ -4,7 +4,8 @@
   <%= render "govuk_publishing_components/components/heading", {
     text: t("coronavirus_local_restrictions.results.future.heading", date: date),
     font_size: "m",
-    margin_bottom: 4
+    margin_bottom: 4,
+    mobile_top_margin: true,
   } %>
 
   <% if @restriction.future_alert_level == 1 %>
