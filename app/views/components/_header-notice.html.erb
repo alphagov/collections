@@ -20,7 +20,12 @@
 
   <div class="app-c-header-notice__content">
     <% if heading.present? %>
-      <h2 class="app-c-header-notice__heading govuk-heading-m"><%= heading %></h2>
+      <%= render "govuk_publishing_components/components/heading", {
+        text: heading,
+        heading_level: 2,
+        font_size: "m",
+        margin_bottom: 4,
+      } %>
     <% end %>
     <% if list.any? %>
       <ul class="app-c-header-notice__list govuk-list govuk-list--bullet">

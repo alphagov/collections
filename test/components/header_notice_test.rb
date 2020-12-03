@@ -78,12 +78,12 @@ class HeaderNoticeTest < ComponentTestCase
 
   test "does not renders a heading if no heading is passed in" do
     render_component(branded_notice.without(:heading))
-    assert_select ".app-c-header-notice__heading", count: 0
+    assert_select ".gem-c-heading", count: 0
   end
 
   test "renders a heading if heading is passed in" do
     render_component(branded_notice)
-    assert_select ".app-c-header-notice__heading", text: branded_notice[:heading]
+    assert_select ".gem-c-heading", text: branded_notice[:heading]
   end
 
   test "does not renders a list if no list is passed in" do
