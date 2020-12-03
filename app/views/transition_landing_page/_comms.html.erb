@@ -8,7 +8,12 @@
 %>
 
 <div class="landing-page__section landing-page__section--border-top">
-  <h2 class="govuk-heading-l"><%= I18n.t('transition_landing_page.comms_header') %></h2>
+  <%= render "govuk_publishing_components/components/heading", {
+    text: t('transition_landing_page.comms_header'),
+    heading_level: 2,
+    font_size: "l",
+    margin_bottom: 6,
+  } %>
   <div class="<%= grid_class %>" lang="en">
 
     <% if comms_links %>
