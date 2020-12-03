@@ -22,9 +22,14 @@
             translations: @presenter.translation_links
           } %>
 
-          <h1 class="dit-landing-page__page_title">
-            <%= sanitize(t("dit_landing_page.page_header")) %>
-          </h1>
+          <div class="govuk-!-margin-top-8">
+            <%= render "govuk_publishing_components/components/heading", {
+              text: sanitize(t("dit_landing_page.page_header")),
+              heading_level: 1,
+              font_size: "xl",
+              margin_bottom: 6,
+            } %>
+          </div>
           <div class="dit-landing-page__intro">
             <%= render "govuk_publishing_components/components/govspeak", {
             } do %>

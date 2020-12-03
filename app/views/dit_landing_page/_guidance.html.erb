@@ -2,7 +2,12 @@
   <div class="govuk-width-container">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <%= tag.h2 sanitize(t("dit_landing_page.ribbon_title")), class: "govuk-heading-l" %>
+        <%= render "govuk_publishing_components/components/heading", {
+          text: sanitize(t("dit_landing_page.ribbon_title")),
+          font_size: "l",
+          heading_level: 2,
+          margin_bottom: 6,
+        } %>
       </div>
     </div>
     <div class="govuk-grid-row">
