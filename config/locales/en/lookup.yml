@@ -28,8 +28,10 @@ en:
       link_text: Find a postcode on Royal Mail’s postcode finder
       href: https://www.royalmail.com/find-a-postcode
     results:
-      travel_heading: Find information about somewhere else
-      travel_text: <a class="govuk-link" href="/find-coronavirus-local-restrictions">Enter another postcode.</a>
+      travel:
+        heading: Find information about somewhere else
+        label: Enter another postcode.
+        link: "/find-coronavirus-local-restrictions"
       changing_levels_title: The tier for this area is changing soon
       guidance_label: Find out what the Tier %{level} rules are
       match: "We've matched the postcode"
