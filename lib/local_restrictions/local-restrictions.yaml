@@ -1416,7 +1416,7 @@ E07000111:
       start_date: 2020-12-02
       start_time: "00:01"
 E07000112:
-  name: Shepway District Council
+  name: Folkestone and Hythe
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
