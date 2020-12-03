@@ -32,7 +32,10 @@
 
   <% if page.related_topics.any? %>
     <div class="detailed-guidance">
-      <h2>Detailed guidance</h2>
+      <%= render "govuk_publishing_components/components/heading", {
+        text: "Detailed guidance",
+        heading_level: 2,
+      } %>
       <ul>
         <% page.related_topics.each_with_index do |related_topic, index| %>
           <li>
