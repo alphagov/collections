@@ -9,12 +9,18 @@
     </div>
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-          <%= tag.p sanitize(t("dit_landing_page.guidance_text")), class: "govuk-body" %>
-
-          <% t("dit_landing_page.guidance_links").each do |guidance| %>
-            <%= tag.h3 link_to(guidance[:label], guidance[:url], class: "govuk-link"), class: "dit-landing-page__guidance-heading" %>
-            <%= tag.p sanitize(guidance[:text]), class: "govuk-body" %>
-          <% end %>
+        <%= render "govuk_publishing_components/components/govspeak", {
+        } do %>
+          <h3 class="govuk-heading-m">
+            <%= t("dit_landing_page.guidance_subheader") %>
+          </h3>
+          <%= t("dit_landing_page.guidance_text").html_safe %>
+          <ul class="govuk-list govuk-list">
+            <% t("dit_landing_page.guidance_links").each do |guidance| %>
+              <li><%= link_to guidance[:label], guidance[:url]  %></li>
+            <% end %>
+          </ul>
+        <% end %>
       </div>
       <div class="govuk-grid-column-one-third">
         <%= image_tag 'KBM-logo.svg', class: "dit-landing-page__kbm-logo", alt: t("dit_landing_page.kbm-logo-alt-text")%>

@@ -119,12 +119,6 @@ $dark-grey: #282828;
   max-width: 100%;
 }
 
-.dit-landing-page__guidance-heading {
-  @extend %govuk-heading-s;
-
-  margin-bottom: govuk-spacing(2);
-}
-
 .govuk-table__header {
   color: govuk-colour("white");
 }

@@ -21,7 +21,7 @@ class DitLandingPageTest < ActionDispatch::IntegrationTest
   end
 
   def and_i_can_see_the_guidance_links
-    assert page.has_selector?("h3", text: "Importing from the UK")
+    assert page.has_selector?("li:first-child", text: "Importing from the UK")
   end
 
   def then_i_can_see_the_training_section
