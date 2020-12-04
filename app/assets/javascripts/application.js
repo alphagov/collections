@@ -12,6 +12,7 @@
 //= require support
 //= require browse-columns
 //= require organisation-list-filter
+//= require ga_cross_domain_accounts_tracking
 //= require modules/current-location
 //= require modules/feeds.js
 //= require modules/toggle-attribute
