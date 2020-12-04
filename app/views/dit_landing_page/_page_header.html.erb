@@ -21,6 +21,7 @@
           <% if defined?(presented_taxon) %>
             <%= render "govuk_publishing_components/components/translation-nav", {
               translations: presented_taxon.translation_links,
+              inverse: true,
             } %>
           <% end %>
 
