@@ -15,26 +15,19 @@
 
 <header class="dit-landing-page__header--with-bg-image">
   <div class="dit-landing-page__header-text-block">
-    <div class="govuk-width-container">
+    <div class="govuk-width-container landing-page_header-text-container">
       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds dit-landing-page_header-text-container <%= 'dit-landing-page_header-text-container--no-translation-nav' unless defined?(presented_taxon) %>">
-          <% if defined?(presented_taxon) %>
-            <%= render "govuk_publishing_components/components/translation-nav", {
-              translations: presented_taxon.translation_links,
-              inverse: true,
-            } %>
-          <% end %>
-
+        <div class="govuk-grid-column-two-thirds">
           <h1 class="dit-landing-page__page_title">
-            <%= sanitize(t("dit_landing_page.page_header")) %>
+            <%= t("dit_landing_page.page_header") %>
           </h1>
-          <div class="dit-landing-page__intro">
-            <%= render "govuk_publishing_components/components/govspeak", {
-            } do %>
-              <%= t("dit_landing_page.page_header_explainer").html_safe %>
-            <% end %>
-          </div>
         </div>
+        <div class="govuk-grid-column-two-thirds dit-landing-page__intro">
+          <%= render "govuk_publishing_components/components/govspeak", {
+          } do %>
+            <%= t("dit_landing_page.page_header_explainer").html_safe %>
+          <% end %>
+          </div>
       </div>
     </div>
   </div>
