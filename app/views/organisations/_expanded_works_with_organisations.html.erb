@@ -4,7 +4,11 @@
 
 <div class="organisation-list__works-with js-hidden" id="toggle_<%= current_organisation.parameterize %>">
   <% works_with_organisations.each do |type, work_with_organisations| %>
-    <h4 class="organisation-list__works-with-title"><%=  t('organisations.type.' + type) %></h4>
+    <%= render "govuk_publishing_components/components/heading", {
+      text: t('organisations.type.' + type),
+      heading_level: 4,
+      font_size: "s",
+    } %>
     <ul class="organisation-list__works-with-list">
       <% work_with_organisations.each do |work_with_organisation| %>
         <li class="organisation-list__works-with-list-item">
