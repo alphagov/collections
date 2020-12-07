@@ -1,24 +1,21 @@
 class LocalRestriction
-  attr_reader :gss_code
+  def self.find(gss_code)
+    all.find { |restriction| restriction.gss_code == gss_code }
+  end
 
-  def initialize(gss_code)
+  def self.all
+    @all ||= begin
+      restriction_data = YAML.load_file(Rails.root.join("config/local_restrictions.yml"))
+      restriction_data.map { |gss_code, data| new(gss_code, data) }
+    end
+  end
+
+  attr_reader :gss_code, :area_name, :restrictions
+
+  def initialize(gss_code, data)
     @gss_code = gss_code
-  end
-
-  def all_restrictions
-    @all_restrictions ||= YAML.load_file(file_name)
-  end
-
-  def restriction
-    all_restrictions[gss_code] || {}
-  end
-
-  def file_name
-    "config/local_restrictions.yml"
-  end
-
-  def area_name
-    restriction["name"]
+    @area_name = data.fetch("name")
+    @restrictions = data.fetch("restrictions", [])
   end
 
   def current_alert_level
@@ -30,7 +27,6 @@ class LocalRestriction
   end
 
   def current
-    restrictions = restriction["restrictions"]
     current_restrictions = restrictions.select do |rest|
       start_date = Time.zone.parse("#{rest['start_date']} #{rest['start_time']}")
       start_date.past?
@@ -40,7 +36,6 @@ class LocalRestriction
   end
 
   def future
-    restrictions = restriction["restrictions"]
     future_restrictions = restrictions.select do |rest|
       start_date = Time.zone.parse("#{rest['start_date']} #{rest['start_time']}")
       start_date.future?
