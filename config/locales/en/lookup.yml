@@ -36,15 +36,18 @@ en:
       guidance_label: Find out what the Tier %{level} rules are
       match: "We've matched the postcode"
       level_one:
-        heading: "This area is in Tier 1: Medium alert"
+        heading_pretext: This area is in
+        heading_tier_label: "Tier 1: Medium alert"
         changing_alert_level: "At the moment %{area} is in Tier 1."
         guidance_link: "/guidance/tier-1-medium-alert"
       level_two:
-        heading: "This area is in Tier 2: High alert"
+        heading_pretext: This area is in
+        heading_tier_label: "Tier 2: High alert"
         changing_alert_level: "At the moment %{area} is in Tier 2."
         guidance_link: "/guidance/tier-2-high-alert"
       level_three:
-        heading: "This area is in Tier 3: Very High alert"
+        heading_pretext: This area is in
+        heading_tier_label: "Tier 3: Very High alert"
         changing_alert_level: "At the moment %{area} is in Tier 3."
         guidance_link: "/guidance/tier-3-very-high-alert"
       devolved_nations:
