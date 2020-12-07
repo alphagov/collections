@@ -14,7 +14,7 @@ class LocalRestriction
   end
 
   def file_name
-    "lib/local_restrictions/local-restrictions.yaml"
+    "config/local_restrictions.yml"
   end
 
   def area_name
