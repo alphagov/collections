@@ -1,0 +1,11 @@
+<% content_for :meta_tags do %>
+  <% page_url = find_coronavirus_local_restrictions_url %>
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="GOV.UK">
+  <meta property="og:url" content="<%= page_url %>">
+  <meta property="og:title" content="<%= t("coronavirus_local_restrictions.lookup.meta_title") %>">
+  <meta property="og:description" content="<%= t("coronavirus_local_restrictions.lookup.meta_description") %>">
+  <meta name="description" content="<%= t("coronavirus_local_restrictions.lookup.meta_description") %>">
+  <meta name="govuk:static-analytics:strip-postcodes" content="true">
+  <link rel="canonical" href="<%= page_url %>">
+<% end %>
