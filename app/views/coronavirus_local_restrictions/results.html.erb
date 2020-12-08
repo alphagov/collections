@@ -4,16 +4,26 @@
   } %>
 <% end %>
 
+<%
+  partial = if !@search.location_lookup.data.first.england?
+              "devolved_nation"
+            elsif @search.local_restriction&.tier_two?
+              "tier_two_restrictions"
+            elsif @search.local_restriction&.tier_three?
+              "tier_three_restrictions"
+            else
+              "tier_one_restrictions"
+            end
+%>
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <% if !@location_lookup.data.first.england? %>
-      <%= render partial: "coronavirus_local_restrictions/devolved_nation" %>
-    <% elsif @restriction.present? && @restriction.tier_two? %>
-        <%= render partial: "coronavirus_local_restrictions/tier_two_restrictions" %>
-    <% elsif @restriction.present? && @restriction.tier_three? %>
-        <%= render partial: "coronavirus_local_restrictions/tier_three_restrictions" %>
-    <% else %>
-      <%= render partial: "coronavirus_local_restrictions/tier_one_restrictions" %>
-    <% end %>
+    <%= render partial: partial,
+      locals: {
+        restriction: @search.local_restriction,
+        postcode: @search.normalised_postcode,
+        location_lookup: @search.location_lookup,
+      }
+    %>
   </div>
 </div>

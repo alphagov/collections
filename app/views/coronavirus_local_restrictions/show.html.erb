@@ -1,6 +1,12 @@
 <%
+  error = if @search&.empty?
+            t("coronavirus_local_restrictions.errors.no_postcode")
+          elsif @search&.invalid?
+            t("coronavirus_local_restrictions.errors.invalid_postcode")
+          end
+
   title = t("coronavirus_local_restrictions.lookup.title")
-  title = "Error: #{title}" if error_message
+  title = "Error: #{title}" if error
 %>
 
 <% content_for :breadcrumbs do %>
@@ -22,16 +28,16 @@
 
 <div class="govuk-grid-row" data-module="coronavirus-track-local-restrictions">
   <div class="govuk-grid-column-two-thirds">
-    <% if error_message %>
+    <% if error %>
       <%= render "govuk_publishing_components/components/error_summary", {
-        title: error_message,
+        title: error.fetch(:error_message),
         items: [
           {
-            text: error_description,
+            text: error.fetch(:error_description),
             href: "#postcodeLookup",
             data_attributes: {
               tracking: "local-restrictions-postcode-error",
-              "error-code": error_code,
+              "error-code": @search.error_code,
             }
           }
         ]
@@ -44,9 +50,9 @@
 
     <%= sanitize(t("coronavirus_local_restrictions.lookup.body_content")) %>
 
-    <%= form_for :postcode_lookup, :url => find_coronavirus_local_restrictions_path, :html => {:class => "coronavirus-local-restrictions__postcode-form"} do |f| %>
+    <%= form_tag find_coronavirus_local_restrictions_path, method: :post, class: "coronavirus-local-restrictions__postcode-form" do |f| %>
       <%= render "shared/postcode-lookup", {
-        input_error: input_error
+        input_error: error&.fetch(:input_error)
       } %>
     <% end %>
   </div>

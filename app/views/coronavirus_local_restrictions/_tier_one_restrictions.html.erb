@@ -6,7 +6,7 @@
 <% end %>
 
 <%
-  title = if @restriction.present? && @restriction.future.present?
+  title = if restriction.present? && restriction.future.present?
     t("coronavirus_local_restrictions.results.changing_levels_title")
   else
     tier_heading
@@ -17,17 +17,17 @@
 
 <%= tag.div :data => {
   :module => "coronavirus-track-local-restriction-results",
-  "tracking-label" => "Tier one: #{@location_lookup.lower_tier_area_name}"
+  "tracking-label" => "Tier one: #{location_lookup.lower_tier_area_name}"
 } do %>
   <%= render "govuk_publishing_components/components/title", {
     title: sanitize(title)
   } %>
 
   <p class="govuk-body">
-    <%= t("coronavirus_local_restrictions.results.match") %> <strong><%= @postcode %></strong> to <strong><%= @location_lookup.lower_tier_area_name %></strong>.
+    <%= t("coronavirus_local_restrictions.results.match") %> <strong><%= postcode %></strong> to <strong><%= location_lookup.lower_tier_area_name %></strong>.
   </p>
 
-  <% if @restriction.present? && @restriction.future.present? %>
+  <% if restriction.present? && restriction.future.present? %>
     <%= render "govuk_publishing_components/components/heading", {
       text: sanitize(tier_heading),
       font_size: "m",
@@ -44,6 +44,6 @@
     margin_bottom: 9
   } %>
 
-  <%= render partial: "coronavirus_local_restrictions/future_restrictions" %>
+  <%= render partial: "coronavirus_local_restrictions/future_restrictions", locals: { restriction: restriction } %>
   <%= render partial: "coronavirus_local_restrictions/travel_guidance" %>
 <% end %>
