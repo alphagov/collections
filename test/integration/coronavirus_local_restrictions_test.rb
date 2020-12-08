@@ -264,20 +264,23 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
 
   def then_i_see_the_results_page_for_level_one
     area = "Tatooine"
+    heading = "#{I18n.t('coronavirus_local_restrictions.results.level_one.heading_pretext')} #{I18n.t('coronavirus_local_restrictions.results.level_one.heading_tier_label')}"
     assert page.has_text?(area)
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_one.heading"))
+    assert page.has_text?(heading)
   end
 
   def then_i_see_the_results_page_for_level_two
     area = "Coruscant Planetary Council"
+    heading = "#{I18n.t('coronavirus_local_restrictions.results.level_two.heading_pretext')} #{I18n.t('coronavirus_local_restrictions.results.level_two.heading_tier_label')}"
     assert page.has_text?(area)
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.heading"))
+    assert page.has_text?(heading)
   end
 
   def then_i_see_the_results_page_for_level_three
     area = "Mandalore"
+    heading = "#{I18n.t('coronavirus_local_restrictions.results.level_three.heading_pretext')} #{I18n.t('coronavirus_local_restrictions.results.level_three.heading_tier_label')}"
     assert page.has_text?(area)
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_three.heading"))
+    assert page.has_text?(heading)
   end
 
   def then_i_see_the_results_for_wales
