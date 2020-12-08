@@ -43,11 +43,6 @@ private
     true
   end
 
-  def switch_locale(&action)
-    locale = params[:locale] || I18n.default_locale
-    I18n.with_locale(locale, &action)
-  end
-
   def set_account_variant
     return unless Rails.configuration.feature_flag_govuk_accounts
     return unless show_signed_in_header? || show_signed_out_header?
