@@ -6,14 +6,21 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    <%
+      locals = {
+        restriction: @restriction,
+        postcode: @postcode,
+        location_lookup: @location_lookup,
+      }
+    %>
     <% if !@location_lookup.data.first.england? %>
-      <%= render partial: "coronavirus_local_restrictions/devolved_nation" %>
+      <%= render partial: "coronavirus_local_restrictions/devolved_nation", locals: locals %>
     <% elsif @restriction.present? && @restriction.tier_two? %>
-        <%= render partial: "coronavirus_local_restrictions/tier_two_restrictions" %>
+        <%= render partial: "coronavirus_local_restrictions/tier_two_restrictions", locals: locals %>
     <% elsif @restriction.present? && @restriction.tier_three? %>
-        <%= render partial: "coronavirus_local_restrictions/tier_three_restrictions" %>
+        <%= render partial: "coronavirus_local_restrictions/tier_three_restrictions", locals: locals %>
     <% else %>
-      <%= render partial: "coronavirus_local_restrictions/tier_one_restrictions" %>
+      <%= render partial: "coronavirus_local_restrictions/tier_one_restrictions", locals: locals %>
     <% end %>
   </div>
 </div>
