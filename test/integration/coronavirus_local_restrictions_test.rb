@@ -5,10 +5,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   include GdsApi::TestHelpers::Mapit
   include GdsApi::TestHelpers::ContentStore
 
-  before do
-    LocalRestriction.any_instance.stubs(:file_name).returns("test/fixtures/local-restrictions.yaml")
-  end
-
   describe "current restrictions" do
     it "displays the tier one restrictions" do
       given_i_am_on_the_local_restrictions_page
@@ -101,14 +97,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   end
 
   describe "future restrictions" do
-    before do
-      travel_to Time.zone.local(2020, 10, 11, 10, 10, 10)
-    end
-
-    after do
-      travel_back
-    end
-
     it "displays restrictions changing from level one to level two" do
       given_i_am_on_the_local_restrictions_page
       then_i_enter_a_valid_english_postcode_with_a_future_level_two_restriction
@@ -136,113 +124,74 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   end
 
   def then_i_enter_a_valid_english_postcode
+    @area = "Tattooine"
     postcode = "E1 8QS"
-    areas = [
-      {
-        "gss" => "E01000123",
-        "name" => "Tatooine",
-        "type" => "LBO",
-        "country_name" => "England",
-      },
-    ]
-    stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
+    stub_local_restriction(postcode: postcode, name: @area)
 
     fill_in "Enter a full postcode", with: postcode
   end
 
   def then_i_enter_a_valid_english_postcode_with_a_future_level_two_restriction
+    @area = "Naboo"
     postcode = "E1 8QS"
-    areas = [
-      {
-        "gss" => "E08000789",
-        "name" => "Naboo",
-        "type" => "LBO",
-        "country_name" => "England",
-      },
-    ]
-    stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
+    stub_local_restriction(postcode: postcode,
+                           name: @area,
+                           future_alert_level: 2)
 
     fill_in "Enter a full postcode", with: postcode
   end
 
   def then_i_enter_a_valid_english_postcode_with_a_future_level_three_restriction
+    @area = "Alderaan"
     postcode = "E1 8QS"
-    areas = [
-      {
-        "gss" => "E08001456",
-        "name" => "Alderaan",
-        "type" => "LBO",
-        "country_name" => "England",
-      },
-    ]
-    stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
+    stub_local_restriction(postcode: postcode,
+                           name: @area,
+                           current_alert_level: 2,
+                           future_alert_level: 3)
 
     fill_in "Enter a full postcode", with: postcode
   end
 
   def then_i_enter_a_valid_english_postcode_with_an_extra_special_character
-    stub_mapit_has_a_postcode_and_areas("E1 8QS", [], [level_two_area])
+    @area = "Coruscant Planetary Council"
+    stub_local_restriction(postcode: "E1 8QS", name: @area, current_alert_level: 2)
 
     fill_in "Enter a full postcode", with: ".e18qs"
   end
 
   def then_i_enter_a_valid_english_postcode_in_tier_two
+    @area = "Coruscant Planetary Council"
     postcode = "E1 8QS"
-    stub_mapit_has_a_postcode_and_areas(postcode, [], [level_two_area])
+    stub_local_restriction(postcode: postcode, name: @area, current_alert_level: 2)
 
     fill_in "Enter a full postcode", with: postcode
   end
 
   def then_i_enter_a_valid_english_postcode_in_tier_three
+    @area = "Mandalore"
     postcode = "E1 8QS"
-    areas = [
-      {
-        "gss" => "E08001234",
-        "name" => "Mandalore",
-        "type" => "LBO",
-        "country_name" => "England",
-      },
-    ]
-    stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
+    stub_local_restriction(postcode: postcode, name: @area, current_alert_level: 3)
 
     fill_in "Enter a full postcode", with: postcode
   end
 
   def then_i_enter_a_valid_welsh_postcode
     postcode = "LL11 0BY"
-    areas = [
-      {
-        "gss" => "E01000123",
-        "country_name" => "Wales",
-      },
-    ]
-    stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
+    stub_local_restriction(postcode: postcode, country_name: "Wales")
 
     fill_in "Enter a full postcode", with: postcode
   end
 
   def then_i_enter_a_valid_scottish_postcode
     postcode = "G20 9SH"
-    areas = [
-      {
-        "gss" => "E01000123",
-        "country_name" => "Scotland",
-      },
-    ]
-    stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
+    stub_local_restriction(postcode: postcode, country_name: "Scotland")
 
     fill_in "Enter a full postcode", with: postcode
   end
 
   def then_i_enter_a_valid_northern_ireland_postcode
     postcode = "BT48 7PX"
-    areas = [
-      {
-        "gss" => "E01000123",
-        "country_name" => "Northern Ireland",
-      },
-    ]
-    stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
+    stub_local_restriction(postcode: postcode, country_name: "Northern Ireland")
 
     fill_in "Enter a full postcode", with: postcode
   end
@@ -266,23 +215,20 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   end
 
   def then_i_see_the_results_page_for_level_one
-    area = "Tatooine"
     heading = "#{I18n.t('coronavirus_local_restrictions.results.level_one.heading_pretext')} #{I18n.t('coronavirus_local_restrictions.results.level_one.heading_tier_label')}"
-    assert page.has_text?(area)
+    assert page.has_text?(@area)
     assert page.has_text?(heading)
   end
 
   def then_i_see_the_results_page_for_level_two
-    area = "Coruscant Planetary Council"
     heading = "#{I18n.t('coronavirus_local_restrictions.results.level_two.heading_pretext')} #{I18n.t('coronavirus_local_restrictions.results.level_two.heading_tier_label')}"
-    assert page.has_text?(area)
+    assert page.has_text?(@area)
     assert page.has_text?(heading)
   end
 
   def then_i_see_the_results_page_for_level_three
-    area = "Mandalore"
     heading = "#{I18n.t('coronavirus_local_restrictions.results.level_three.heading_pretext')} #{I18n.t('coronavirus_local_restrictions.results.level_three.heading_tier_label')}"
-    assert page.has_text?(area)
+    assert page.has_text?(@area)
     assert page.has_text?(heading)
   end
 
@@ -311,35 +257,57 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   end
 
   def then_i_see_the_results_page_for_level_one_with_changing_restriction_levels
-    area = "Naboo"
-
-    assert page.has_text?(area)
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_one.changing_alert_level", area: area))
+    assert page.has_text?(@area)
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_one.changing_alert_level", area: @area))
   end
 
   def then_i_see_the_results_page_for_level_two_with_changing_restriction_levels
-    area = "Alderaan"
-
-    assert page.has_text?(area)
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.changing_alert_level", area: area))
+    assert page.has_text?(@area)
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.changing_alert_level", area: @area))
   end
 
   def then_i_see_details_of_christmas_rules
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.christmas_rules.heading"))
   end
 
-  def level_two_area
-    {
-      "gss" => "E08000456",
-      "name" => "Coruscant Planetary Council",
-      "type" => "LBO",
-      "country_name" => "England",
-    }
-  end
-
   def and_there_is_metadata
     assert page.has_css?("meta[property='og:title'][content='#{I18n.t('coronavirus_local_restrictions.lookup.meta_title')}']", visible: false)
     assert page.has_css?("meta[name='description'][content='#{I18n.t('coronavirus_local_restrictions.lookup.meta_description')}']", visible: false)
     assert page.has_css?("link[rel='canonical'][href='http://www.example.com/find-coronavirus-local-restrictions']", visible: false)
+  end
+
+  def stub_local_restriction(postcode:,
+                             name: "Tatooine",
+                             gss: SecureRandom.alphanumeric(10),
+                             country_name: "England",
+                             current_alert_level: nil,
+                             future_alert_level: nil)
+    areas = [
+      {
+        "gss" => gss,
+        "name" => name,
+        "type" => "LBO",
+        "country_name" => country_name,
+      },
+    ]
+    stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
+
+    current_restriction = if current_alert_level
+                            { "alert_level" => current_alert_level,
+                              "start_date" => 1.week.ago.to_date,
+                              "start_time" => "10:00" }
+                          end
+
+    future_restriction = if future_alert_level
+                           { "alert_level" => future_alert_level,
+                             "start_date" => 1.week.from_now.to_date,
+                             "start_time" => "10:00" }
+                         end
+
+    local_restriction = LocalRestriction.new(gss, {
+      "name" => name,
+      "restrictions" => [current_restriction, future_restriction].compact,
+    })
+    LocalRestriction.stubs(:find).with(gss).returns(local_restriction)
   end
 end
