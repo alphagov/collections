@@ -9,21 +9,11 @@
   title = "Error: #{title}" if error_key
 %>
 
+<% content_for :title, title %>
+<%= render partial: "meta_tags" %>
+
 <% content_for :breadcrumbs do %>
   <%= render 'govuk_publishing_components/components/contextual_breadcrumbs', content_item: @content_item %>
-<% end %>
-
-<% content_for :title, title %>
-
-<% content_for :meta_tags do %>
-  <% page_url = File.join(request.base_url, request.path) %>
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="GOV.UK">
-  <meta property="og:url" content="<%= page_url %>">
-  <meta property="og:title" content="<%= t("coronavirus_local_restrictions.lookup.meta_title") %>">
-  <meta property="og:description" content="<%= t("coronavirus_local_restrictions.lookup.meta_description") %>">
-  <meta name="description" content="<%= t("coronavirus_local_restrictions.lookup.meta_description") %>">
-  <link rel="canonical" href="<%= page_url %>">
 <% end %>
 
 <div class="govuk-grid-row" data-module="coronavirus-track-local-restrictions">
