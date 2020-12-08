@@ -29,7 +29,7 @@ Rails.application.routes.draw do
 
   # Routes for local restrictions postcode lookup
   get "/find-coronavirus-local-restrictions" => "coronavirus_local_restrictions#show"
-  post "/find-coronavirus-local-restrictions" => "coronavirus_local_restrictions#results"
+  post "/find-coronavirus-local-restrictions" => "coronavirus_local_restrictions#legacy"
 
   # TODO: this redirect causes the request to be routed to Whitehall where
   # the country A-Z currently lives. This needs to be removed when the world index
