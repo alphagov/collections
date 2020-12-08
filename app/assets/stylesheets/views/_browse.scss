@@ -1,4 +1,4 @@
-// scss-lint:disable NestingDepth
+// stylelint-disable max-nesting-depth
 .browse {
   .browse-panes {
     @include govuk-clearfix;
@@ -157,7 +157,7 @@
           content: "\203A";
         }
 
-        &.loading {
+        &.loading { // stylelint-disable-line selector-no-qualifying-type
           cursor: default;
           background: transparent image-url("loading.gif") 95% 50% no-repeat;
 
@@ -189,10 +189,9 @@
           color: $govuk-focus-text-colour;
 
           p {
-          color: $govuk-focus-text-colour;
+            color: $govuk-focus-text-colour;
           }
         }
-
       }
     }
 
@@ -249,6 +248,10 @@
         .list-header {
           margin: govuk-spacing(6) 0 govuk-spacing(1) 0;
         }
+
+        ul li a {
+          padding: govuk-spacing(1) govuk-spacing(6) govuk-spacing(1) 0;
+        }
       }
 
       .sort-order {
@@ -280,16 +283,9 @@
         padding: govuk-spacing(2) govuk-spacing(6) govuk-spacing(2) 0;
       }
 
-      .curated-list {
-        ul li a {
-          padding: govuk-spacing(1) govuk-spacing(6) govuk-spacing(1) 0;
-        }
-      }
-
       .detailed-guidance {
         margin-top: govuk-spacing(6);
       }
     }
   }
 }
-// scss-lint:enable NestingDepth

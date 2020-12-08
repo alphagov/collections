@@ -5,17 +5,9 @@ library("govuk")
 node {
   govuk.setEnvar("PUBLISHING_E2E_TESTS_COMMAND", "test-collections")
   govuk.buildProject(
-    overrideTestTask: {
-      stage("Run tests") {
-        govuk.runTests()
-      }
-
-      stage("Run Javascript tests") {
-        govuk.runRakeTask("jasmine:ci")
-      }
-    },
+    beforeTest: { sh("yarn install") },
     publishingE2ETests: true,
-    rubyLintDiff: false,
+    sassLint: false,
     brakeman: true,
   )
 }

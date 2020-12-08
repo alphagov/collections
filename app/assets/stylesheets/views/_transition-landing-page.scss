@@ -1,10 +1,10 @@
 
-$red: #FF003B;
-$dark-blue: #1E1348;
+$red: #ff003b;
+$dark-blue: #1e1348;
 $dark-blue-shadow: #020659;
-$transparent: rgba(0,0,0,0);
+$transparent: rgba(0, 0, 0, 0);
 $header-breakpoint: 960px;
-$green: #00703C;
+$green: #00703c;
 
 .large-paragraph {
   @include govuk-font($size: 19);
@@ -37,12 +37,12 @@ $green: #00703C;
   // HIDE BACKGROUND IMAGE ON IE
 
   // IE 6, 7, 8
-  @media \0screen\,screen\9 {
+  @media \0screen\,screen\9 { // stylelint-disable-line media-query-list-comma-space-after
     background-image: none;
   }
 
   // IE 9
-  @media screen and (min-width:0\0) and (min-resolution: .001dpcm) {
+  @media screen and (min-width:0\0) and (min-resolution: .001dpcm) { // stylelint-disable-line media-feature-colon-space-after
     background-image: none;
   }
 }
@@ -68,7 +68,7 @@ $green: #00703C;
   }
 }
 
-/* adds the line in across the middle of the div */
+// adds the line in across the middle of the div
 .landing-page__countdown-number-wrapper:after {
   position: absolute;
   left: 0;
@@ -213,7 +213,6 @@ $green: #00703C;
     color: govuk-colour("white");
   }
 }
-
 
 .landing-page__section--light-grey {
   @include govuk-responsive-padding(8, "top");

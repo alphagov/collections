@@ -1,5 +1,5 @@
-$dark-red: #C21D26;
-$red: #FF003B;
+$dark-red: #c21d26;
+$red: #ff003b;
 $dark-grey: #282828;
 
 .dit-landing-page__kbm-logo {
@@ -33,12 +33,12 @@ $dark-grey: #282828;
   // HIDE BACKGROUND IMAGE ON IE
 
   // IE 6, 7, 8
-  @media \0screen\,screen\9 {
+  @media \0screen\,screen\9 { // stylelint-disable-line media-query-list-comma-space-after
     background-image: none;
   }
 
   // IE 9
-  @media screen and (min-width:0\0) and (min-resolution: .001dpcm) {
+  @media screen and (min-width:0\0) and (min-resolution: .001dpcm) { // stylelint-disable-line media-feature-colon-space-after
     background-image: none;
   }
 }

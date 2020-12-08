@@ -1,96 +1,95 @@
-describe('browse-columns.js', function() {
-
+describe('browse-columns.js', function () {
   beforeEach(function () {
     // The window size needs to be wider than 500 pixels, otherwise the
     // ajax-browsing will be disabled.
     setWindowSize(1024)
   })
 
-  it("should cache objects", function() {
-    var bc = new GOVUK.BrowseColumns({ $el: $('<div>') });
+  it('should cache objects', function () {
+    var bc = new GOVUK.BrowseColumns({ $el: $('<div>') })
 
-    expect(bc.sectionCache('prefix', 'object-name')).toBe(undefined);
+    expect(bc.sectionCache('prefix', 'object-name')).toBe(undefined)
 
-    bc.sectionCache('prefix', 'object-name', 'cache-thing');
+    bc.sectionCache('prefix', 'object-name', 'cache-thing')
 
-    expect(bc.sectionCache('prefix', 'object-name')).toBe('cache-thing');
-  });
+    expect(bc.sectionCache('prefix', 'object-name')).toBe('cache-thing')
+  })
 
-  it("should set page title with the GOV.UK suffix", function() {
-    GOVUK.BrowseColumns.prototype.setTitle('new-title');
+  it('should set page title with the GOV.UK suffix', function () {
+    GOVUK.BrowseColumns.prototype.setTitle('new-title')
 
-    expect($('title').text()).toBe('new-title - GOV.UK');
-  });
+    expect($('title').text()).toBe('new-title - GOV.UK')
+  })
 
-  it("should get section data and cache it", function() {
-    var promiseObj = jasmine.createSpyObj('promiseObj', ['then', 'error', 'resolve']);
-    spyOn(jQuery, 'ajax').and.returnValue(promiseObj);
-    spyOn(jQuery, 'Deferred').and.returnValue(promiseObj);
+  it('should get section data and cache it', function () {
+    var promiseObj = jasmine.createSpyObj('promiseObj', ['then', 'error', 'resolve'])
+    spyOn(jQuery, 'ajax').and.returnValue(promiseObj)
+    spyOn(jQuery, 'Deferred').and.returnValue(promiseObj)
 
-    var bc = new GOVUK.BrowseColumns({ $el: $('<div>') });
-    spyOn(bc, 'sectionCache');
+    var bc = new GOVUK.BrowseColumns({ $el: $('<div>') })
+    spyOn(bc, 'sectionCache')
 
-    var responseObj = bc.getSectionData({ slug: 'section' });
+    bc.getSectionData({ slug: 'section' })
 
     expect(jQuery.ajax).toHaveBeenCalledWith({
       url: '/browse/section.json'
-    });
-    expect(promiseObj.then).toHaveBeenCalled();
+    })
+    expect(promiseObj.then).toHaveBeenCalled()
     promiseObj.then.calls.mostRecent().args[0]('response data')
-    expect(bc.sectionCache).toHaveBeenCalled();
-  });
+    expect(bc.sectionCache).toHaveBeenCalled()
+  })
 
-  it("should use the section data from the cache if it has it", function() {
-    var promiseObj = jasmine.createSpyObj('promiseObj', ['then', 'resolve']);
-    spyOn(jQuery, 'ajax').and.returnValue(promiseObj);
-    spyOn(jQuery, 'Deferred').and.returnValue(promiseObj);
+  it('should use the section data from the cache if it has it', function () {
+    var promiseObj = jasmine.createSpyObj('promiseObj', ['then', 'resolve'])
+    spyOn(jQuery, 'ajax').and.returnValue(promiseObj)
+    spyOn(jQuery, 'Deferred').and.returnValue(promiseObj)
 
-    var bc = new GOVUK.BrowseColumns({ $el: $('<div>') });
-    bc.sectionCache('section', 'section', 'data');
+    var bc = new GOVUK.BrowseColumns({ $el: $('<div>') })
+    bc.sectionCache('section', 'section', 'data')
 
-    var responseObj = bc.getSectionData({ slug: 'section' });
+    bc.getSectionData({ slug: 'section' })
 
-    expect(jQuery.ajax.calls.any()).toBe(false);
+    expect(jQuery.ajax.calls.any()).toBe(false)
 
-    expect(promiseObj.resolve).toHaveBeenCalled();
+    expect(promiseObj.resolve).toHaveBeenCalled()
     expect(promiseObj.resolve.calls.mostRecent().args[0]).toBe('data')
-  });
+  })
 
-  it("should get subsection data and cache it", function() {
-    var promiseObj = jasmine.createSpyObj('promiseObj', ['then', 'error', 'resolve']);
-    spyOn(jQuery, 'ajax').and.returnValue(promiseObj);
-    spyOn(jQuery, 'Deferred').and.returnValue(promiseObj);
+  it('should get subsection data and cache it', function () {
+    var promiseObj = jasmine.createSpyObj('promiseObj', ['then', 'error', 'resolve'])
+    spyOn(jQuery, 'ajax').and.returnValue(promiseObj)
+    spyOn(jQuery, 'Deferred').and.returnValue(promiseObj)
 
-    var bc = new GOVUK.BrowseColumns({ $el: $('<div>') });
-    spyOn(bc, 'sectionCache');
+    var bc = new GOVUK.BrowseColumns({ $el: $('<div>') })
+    spyOn(bc, 'sectionCache')
 
-    var responseObj = bc.getSectionData({ subsection: true, slug: 'section/subsection' });
+    bc.getSectionData({ subsection: true, slug: 'section/subsection' })
 
     expect(jQuery.ajax).toHaveBeenCalledWith({
       url: '/browse/section/subsection.json'
-    });
-    expect(promiseObj.then).toHaveBeenCalled();
+    })
+    expect(promiseObj.then).toHaveBeenCalled()
     promiseObj.then.calls.mostRecent().args[0]('response data')
-    expect(bc.sectionCache).toHaveBeenCalled();
-  });
+    expect(bc.sectionCache).toHaveBeenCalled()
+  })
 
-  it("should use the subsection data from the cache if it has it", function() {
-    var promiseObj = jasmine.createSpyObj('promiseObj', ['then', 'resolve']);
-    spyOn(jQuery, 'ajax').and.returnValue(promiseObj);
-    spyOn(jQuery, 'Deferred').and.returnValue(promiseObj);
+  it('should use the subsection data from the cache if it has it', function () {
+    var promiseObj = jasmine.createSpyObj('promiseObj', ['then', 'resolve'])
+    spyOn(jQuery, 'ajax').and.returnValue(promiseObj)
+    spyOn(jQuery, 'Deferred').and.returnValue(promiseObj)
 
-    var bc = new GOVUK.BrowseColumns({ $el: $('<div>') });
-    bc.sectionCache('section', 'section/subsection', 'data');
+    var bc = new GOVUK.BrowseColumns({ $el: $('<div>') })
+    bc.sectionCache('section', 'section/subsection', 'data')
 
-    var responseObj = bc.getSectionData({ slug: 'section/subsection' });
+    bc.getSectionData({ slug: 'section/subsection' })
 
-    expect(jQuery.ajax.calls.any()).toBe(false);
+    expect(jQuery.ajax.calls.any()).toBe(false)
 
-    expect(promiseObj.resolve).toHaveBeenCalled();
+    expect(promiseObj.resolve).toHaveBeenCalled()
     expect(promiseObj.resolve.calls.mostRecent().args[0]).toBe('data')
-  });
+  })
 
-  it("should parse a pathname", function() {
+  it('should parse a pathname', function () {
     var paths = [
       {
         path: '/browse',
@@ -108,37 +107,35 @@ describe('browse-columns.js', function() {
         path: '/browse/tax-money/money',
         output: { section: 'tax-money', subsection: 'money', path: '/browse/tax-money/money', slug: 'tax-money/money' }
       }
-    ];
-    for(var i=0, pathLength=paths.length; i<pathLength; i++){
-      expect(GOVUK.BrowseColumns.prototype.parsePathname(paths[i].path)).toEqual(paths[i].output);
+    ]
+    for (var i = 0, pathLength = paths.length; i < pathLength; i++) {
+      expect(GOVUK.BrowseColumns.prototype.parsePathname(paths[i].path)).toEqual(paths[i].output)
     }
-  });
+  })
 
-  it("should update breadcrumbs from cache", function(){
-    var context;
-
-    context = {
+  it('should update breadcrumbs from cache', function () {
+    var context = {
       $breadcrumbs: $('<div class="gem-c-breadcrumbs"><ol><li>one</li></ol></div>')
-    };
+    }
 
-    var cached_data = {
+    var cachedData = {
       sectionData: {
         breadcrumbs: '<div class="gem-c-breadcrumbs"><script type="application/ld+json">{"something":"other"}</script><ol><li>one</li><li>two</li></ol></div>'
       }
     }
-    GOVUK.BrowseColumns.prototype.updateBreadcrumbs.call(context, cached_data);
-    expect(context.$breadcrumbs.find('li').length).toEqual(2);
-  });
+    GOVUK.BrowseColumns.prototype.updateBreadcrumbs.call(context, cachedData)
+    expect(context.$breadcrumbs.find('li').length).toEqual(2)
+  })
 
-  it("should track a page view", function() {
-    GOVUK.analytics = jasmine.createSpyObj('analytics', ['trackPageview']);
+  it('should track a page view', function () {
+    GOVUK.analytics = jasmine.createSpyObj('analytics', ['trackPageview'])
 
     var state = {
       path: 'foo'
-    };
+    }
 
-    var bc = new GOVUK.BrowseColumns({ $el: $('<div>') });
-    bc.trackPageview(state);
+    var bc = new GOVUK.BrowseColumns({ $el: $('<div>') })
+    bc.trackPageview(state)
 
     expect(GOVUK.analytics.trackPageview).toHaveBeenCalledTimes(2)
     expect(GOVUK.analytics.trackPageview).toHaveBeenCalledWith(
@@ -148,7 +145,7 @@ describe('browse-columns.js', function() {
         dimension1: 'browse',
         dimension32: 'none'
       }
-    );
+    )
     expect(GOVUK.analytics.trackPageview).toHaveBeenCalledWith(
       'foo',
       null,
@@ -157,19 +154,19 @@ describe('browse-columns.js', function() {
         dimension32: 'none',
         trackerName: 'govuk'
       }
-    );
-  });
+    )
+  })
 
   // http://stackoverflow.com/questions/9821166/error-accessing-jquerywindow-height-in-jasmine-while-running-tests-in-maven
-  function setWindowSize(size) {
-    $.prototype.width = function() {
-      var original = $.prototype.width;
+  function setWindowSize (size) {
+    $.prototype.width = function () {
+      var original = $.prototype.width
 
       if (this[0] === window) {
-        return size;
+        return size
       } else {
-        return original.apply(this, arguments);
+        return original.apply(this, arguments)
       }
     }
   }
-});
+})

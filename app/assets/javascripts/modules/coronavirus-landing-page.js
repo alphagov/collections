@@ -12,7 +12,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     }
 
     // Ensure that the "Open/Close all" element exists when attaching the event listeners for tracking
-    $(document).ready(function() {
+    $(document).ready(function () {
       $this.addAccordionOpenAllTracking($element)
     })
   }
@@ -32,10 +32,10 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
   }
 
   CoronavirusLandingPage.prototype.addAccordionOpenAllTracking = function ($element) {
-    $element.find('.govuk-accordion__open-all').on('click', function(e) {
-      var expanded = $(e.target).attr('aria-expanded') == 'true'
-      var label = expanded ?  'Expand all' : 'Collapse all'
-      var action = expanded ?  'accordionOpened' : 'accordionClosed'
+    $element.find('.govuk-accordion__open-all').on('click', function (e) {
+      var expanded = $(e.target).attr('aria-expanded') === 'true'
+      var label = expanded ? 'Expand all' : 'Collapse all'
+      var action = expanded ? 'accordionOpened' : 'accordionClosed'
       var options = { transport: 'beacon', label: label }
 
       GOVUK.analytics.trackEvent('pageElementInteraction', action, options)

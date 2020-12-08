@@ -1,30 +1,29 @@
 .topics-page {
-
   .page-header {
     h2 {
       @include govuk-font(24);
       color: inherit;
       margin: 0;
     }
+  }
 
-    .topics-page__latest {
-      border-top: 1px solid $govuk-border-colour;
-      padding-top: govuk-spacing(3);
+  .page-header .topics-page__latest {
+    border-top: 1px solid $govuk-border-colour;
+    padding-top: govuk-spacing(3);
+  }
 
-      .topics-page__latest-link {
-        @include govuk-font(19, $weight: "bold");
-        text-decoration: none;
-      }
-    }
+  .page-header .topics-page__latest .topics-page__latest-link {
+    @include govuk-font(19, $weight: "bold");
+    text-decoration: none;
   }
 
   .browse-container {
     background-color: govuk-colour("white");
     min-height: 500px;
-    padding: 0 0 45px 0;
+    padding: 0 0 45px;
 
     @include govuk-media-query($from: mobile) {
-      padding: 0 0 30px 0;
+      padding: 0 0 30px;
       min-height: auto;
     }
   }

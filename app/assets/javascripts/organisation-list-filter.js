@@ -1,13 +1,13 @@
-(function() {
-  "use strict";
-  window.GOVUK = window.GOVUK || {};
+(function () {
+  'use strict'
+  window.GOVUK = window.GOVUK || {}
 
-  var filterTimeout = null;
+  var filterTimeout = null
 
   window.GOVUK.filter = {
-    init: function() {
+    init: function () {
       // Form should only appear if the JS is working
-      $('[data-filter="form"]').addClass('filter-organisations-list__form--active');
+      $('[data-filter="form"]').addClass('filter-organisations-list__form--active')
 
       this.results = document.createElement('div')
       this.results.classList.add('filter-organisations-list__results', 'govuk-heading-m', 'js-search-results')
@@ -17,73 +17,72 @@
       $('#organisations_search_results').prepend(this.results)
 
       // We don't want the form to submit/refresh the page on enter key
-      $('[data-filter="form"]').on('submit', function() { return false; })
+      $('[data-filter="form"]').on('submit', function () { return false })
 
-      $('[data-filter="form"] input').on('keyup', window.GOVUK.filter.filterViaTimeout);
+      $('[data-filter="form"] input').on('keyup', window.GOVUK.filter.filterViaTimeout)
     },
 
-    filterViaTimeout: function(e) {
-      clearTimeout(filterTimeout);
+    filterViaTimeout: function (e) {
+      clearTimeout(filterTimeout)
 
-      filterTimeout = setTimeout(function() {
-        window.GOVUK.filter.filterList(e);
-      }, 200);
+      filterTimeout = setTimeout(function () {
+        window.GOVUK.filter.filterList(e)
+      }, 200)
     },
 
-    filterList: function(e) {
-      var itemsToFilter = $('[data-filter="item"]');
-      var listsToFilter = $('[data-filter="list"]');
-      var searchTerm = $(e.target).val();
+    filterList: function (e) {
+      var itemsToFilter = $('[data-filter="item"]')
+      var listsToFilter = $('[data-filter="list"]')
+      var searchTerm = $(e.target).val()
 
-      itemsToFilter.not(function() {
-        var currentOrganisation = $(this);
-        return window.GOVUK.filter.matchSearchTerm(currentOrganisation, searchTerm);
-      }).addClass('js-hidden');
+      itemsToFilter.not(function () {
+        var currentOrganisation = $(this)
+        return window.GOVUK.filter.matchSearchTerm(currentOrganisation, searchTerm)
+      }).addClass('js-hidden')
 
-      window.GOVUK.filter.updateDepartmentCount(listsToFilter);
+      window.GOVUK.filter.updateDepartmentCount(listsToFilter)
     },
 
-    matchSearchTerm: function(organisation, term) {
-      var organisationText = "";
+    matchSearchTerm: function (organisation, term) {
+      var organisationText = ''
 
-      organisation.removeClass('js-hidden');
+      organisation.removeClass('js-hidden')
 
       if (organisation.find('.gem-c-organisation-logo__name').length > 0) {
-        organisationText = organisation.find('.gem-c-organisation-logo__name').text();
-      }
-      else {
-        organisationText = organisation.find('.organisation-list__item-title').text();
+        organisationText = organisation.find('.gem-c-organisation-logo__name').text()
+      } else {
+        organisationText = organisation.find('.organisation-list__item-title').text()
       }
 
-      var searchTermRegexp = new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
+      var searchTermRegexp = new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i')
       if (searchTermRegexp.exec(organisationText) !== null) {
-        return true;
+        return true
       }
     },
 
     countInitialDepartments: function () {
-      return document.querySelectorAll('[data-filter="item"]').length;
+      return document.querySelectorAll('[data-filter="item"]').length
     },
 
-    updateDepartmentCount: function(listsToFilter) {
-      var totalMatchingOrgs = 0;
+    updateDepartmentCount: function (listsToFilter) {
+      var totalMatchingOrgs = 0
 
-      listsToFilter.each(function() {
-        var matchingOrgCount = $(this).find('[data-filter="item"]:visible').length;
-        var departmentSection = $(this).closest('[data-filter="block"]');
-        var departmentCountWrapper = departmentSection.find('[data-filter="count"]');
-        var departmentCount = departmentSection.find('.js-department-count');
-        var accessibleDepartmentCount = departmentSection.find('.js-accessible-department-count');
+      listsToFilter.each(function () {
+        var matchingOrgCount = $(this).find('[data-filter="item"]:visible').length
+        var departmentSection = $(this).closest('[data-filter="block"]')
+        var departmentCountWrapper = departmentSection.find('[data-filter="count"]')
+        var departmentCount = departmentSection.find('.js-department-count')
+        var accessibleDepartmentCount = departmentSection.find('.js-accessible-department-count')
 
-        departmentCountWrapper.toggleClass('js-hidden', matchingOrgCount == 0 );
+        departmentCountWrapper.toggleClass('js-hidden', matchingOrgCount === 0)
 
         if (matchingOrgCount > 0) {
-          departmentCount.text(matchingOrgCount);
-          accessibleDepartmentCount.text(matchingOrgCount);
+          departmentCount.text(matchingOrgCount)
+          accessibleDepartmentCount.text(matchingOrgCount)
         }
 
-        totalMatchingOrgs += matchingOrgCount;
-      });
+        totalMatchingOrgs += matchingOrgCount
+      })
 
       var text = ' results found'
       if (totalMatchingOrgs === 1) {
@@ -91,7 +90,7 @@
       }
       this.results.innerHTML = totalMatchingOrgs + text
     }
-  };
+  }
 
-  $(function(){ GOVUK.filter.init(); })
-}());
+  $(function () { GOVUK.filter.init() })
+}())
