@@ -1,7 +1,7 @@
 class OrganisationsController < ApplicationController
   skip_before_action :set_expiry
   before_action -> { set_expiry(5.minutes) }
-  before_action :set_locale, only: %i[show court]
+  around_action :switch_locale, only: %i[show court]
 
   def index
     @organisations = ContentStoreOrganisations.find!("/government/organisations")
@@ -49,9 +49,5 @@ private
 
   def locale
     ".#{params[:locale]}" if params[:locale]
-  end
-
-  def set_locale
-    I18n.locale = params[:locale] || I18n.default_locale
   end
 end

@@ -38,6 +38,11 @@ class ApplicationController < ActionController::Base
 
 private
 
+  def switch_locale(&action)
+    locale = params[:locale] || I18n.default_locale
+    I18n.with_locale(locale, &action)
+  end
+
   def restrict_request_formats
     unless can_handle_format?(request.format)
       render status: :not_acceptable, plain: "Request format #{request.format} not handled."

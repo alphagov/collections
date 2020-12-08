@@ -3,9 +3,14 @@ require "test_helper"
 class ConcreteTestController < ApplicationController
   enable_request_formats json: :json, js_or_atom: %i[js atom]
   protect_from_forgery except: :js_or_atom
+  around_action :switch_locale
 
   def test
     render html: "ok"
+  end
+
+  def locale_check
+    render html: I18n.locale
   end
 
   def json
@@ -29,6 +34,7 @@ describe ConcreteTestController do
     with_routing do |map|
       map.draw do
         get "/test", to: "concrete_test#test"
+        get "/locale", to: "concrete_test#locale_check"
         get "/test", to: "concrete_test#json"
         get "/test", to: "concrete_test#js_or_atom"
       end
@@ -103,6 +109,16 @@ describe ConcreteTestController do
     with_test_routing do
       get :test, format: 'atom\\'
       assert_response :not_acceptable
+    end
+  end
+
+  it "changes locale only for the duration of the request" do
+    with_test_routing do
+      get :locale_check, params: { locale: "cy" }
+      assert_response :success
+      assert_equal "cy", response.body
+
+      assert_equal :en, I18n.locale
     end
   end
 end
