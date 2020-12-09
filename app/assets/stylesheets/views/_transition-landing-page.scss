@@ -216,7 +216,7 @@ $green: #00703c;
 
 .landing-page__section--light-grey {
   @include govuk-responsive-padding(8, "top");
-  @include govuk-responsive-padding(4, "bottom");
+  @include govuk-responsive-padding(8, "bottom");
   background-color: govuk-colour('light-grey');
   margin-top: 0;
 }
