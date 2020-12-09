@@ -18,15 +18,20 @@
 
 <div class="landing-page__section">
   <div class="govuk-width-container">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <%= tag.h2 t("dit_landing_page.guidance_title"), class: "govuk-heading-l" %>
+    <%= tag.h2 t("dit_landing_page.guidance_title"), class: "dit-landing-page__guidance-title govuk-heading-l" %>
 
-        <% t("dit_landing_page.guidance_links").each do |guidance| %>
-          <%= tag.h3 link_to(guidance[:label], guidance[:url], class: "govuk-link"), class: "dit-landing-page__guidance-heading" %>
-          <%= tag.p sanitize(guidance[:text]), class: "dit-landing-page__guidance-description" %>
-        <% end %>
+    <% t("dit_landing_page.guidance_links").each do |guidance| %>
+    <div class="dit-landing-page__guidance-item">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <%= tag.h3 guidance[:title], class: "govuk-heading-m" %>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+          <%= tag.p sanitize(guidance[:text]), class: "govuk-body" %>
+          <%= tag.p link_to(guidance[:link], guidance[:url], class: "govuk-link"), class: "govuk-body" %>
+        </div>
       </div>
     </div>
+    <% end %>
   </div>
 </div>
