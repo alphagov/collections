@@ -16,7 +16,7 @@
     <%= render "govuk_publishing_components/components/button", {
       text: t("coronavirus_local_restrictions.results.guidance_label", level: @restriction.future_alert_level),
       href: t("coronavirus_local_restrictions.results.level_one.guidance_link"),
-      secondary: true,
+      secondary_solid: true,
       margin_bottom: 9
     } %>
   <% elsif @restriction.future_alert_level == 2 %>
@@ -27,7 +27,7 @@
     <%= render "govuk_publishing_components/components/button", {
       text: t("coronavirus_local_restrictions.results.guidance_label", level: @restriction.future_alert_level),
       href: t("coronavirus_local_restrictions.results.level_two.guidance_link"),
-      secondary: true,
+      secondary_solid: true,
       margin_bottom: 9
     } %>
   <% elsif @restriction.future_alert_level == 3 %>
@@ -38,7 +38,7 @@
     <%= render "govuk_publishing_components/components/button", {
       text: t("coronavirus_local_restrictions.results.guidance_label", level: @restriction.future_alert_level),
       href: t("coronavirus_local_restrictions.results.level_three.guidance_link"),
-      secondary: true,
+      secondary_solid: true,
       margin_bottom: 9
     } %>
   <% end %>
