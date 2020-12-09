@@ -17,7 +17,11 @@
   <div class="dit-landing-page__header-text-block">
     <div class="govuk-width-container">
       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds dit-landing-page_header-text-container dit-landing-page_header-text-container--no-translation-nav">
+        <div class="govuk-grid-column-two-thirds dit-landing-page_header-text-container">
+          <%= render "govuk_publishing_components/components/translation-nav", {
+            translations: translation_links
+          } %>
+
           <h1 class="dit-landing-page__page_title">
             <%= sanitize(t("dit_landing_page.page_header")) %>
           </h1>
