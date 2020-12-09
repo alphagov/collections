@@ -1,23 +1,31 @@
-<div class="landing-page__section">
+<div class="landing-page__section landing-page__section--light-grey">
   <div class="govuk-width-container">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-l">
-          <%= t("dit_landing_page.guidance_title") %>
-        </h2>
+        <%= tag.h2 t("dit_landing_page.ribbon_title"), class: "govuk-heading-l" %>
       </div>
     </div>
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-          <%= tag.p sanitize(t("dit_landing_page.guidance_text")), class: "govuk-body" %>
-
-          <% t("dit_landing_page.guidance_links").each do |guidance| %>
-            <%= tag.h3 link_to(guidance[:label], guidance[:url], class: "govuk-link"), class: "dit-landing-page__guidance-heading" %>
-            <%= tag.p sanitize(guidance[:text]), class: "dit-landing-page__guidance-description" %>
-          <% end %>
+        <%= tag.p t("dit_landing_page.ribbon_text"), class: "govuk-body" %>
       </div>
       <div class="govuk-grid-column-one-third">
         <%= image_tag 'KBM-logo.svg', class: "dit-landing-page__kbm-logo", alt: t("dit_landing_page.kbm-logo-alt-text")%>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="landing-page__section">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <%= tag.h2 t("dit_landing_page.guidance_title"), class: "govuk-heading-l" %>
+
+        <% t("dit_landing_page.guidance_links").each do |guidance| %>
+          <%= tag.h3 link_to(guidance[:label], guidance[:url], class: "govuk-link"), class: "dit-landing-page__guidance-heading" %>
+          <%= tag.p sanitize(guidance[:text]), class: "dit-landing-page__guidance-description" %>
+        <% end %>
       </div>
     </div>
   </div>

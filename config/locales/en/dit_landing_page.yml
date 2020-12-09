@@ -7,9 +7,10 @@ en:
     page_header_explainer: |
       <p>The UK has left the EU. On 31 December 2020 the UK will leave the EU single market and customs union.</p>
       <p>From 1 January 2021 the rules for trading with the UK will change.</p>
-    guidance_title: What your business needs to know
-    guidance_text: |
+    ribbon_title: Make sure your EU-based business is ready
+    ribbon_text: |
       If you run an EU-based business, you need to check the new rules and prepare for the changes so that you can continue trading with the UK from January 2021.
+    guidance_title: What your business needs to know
     guidance_links:
       - label: Importing from the UK
         url: "/guidance/eu-business-importing-from-the-uk"
