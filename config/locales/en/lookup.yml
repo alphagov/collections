@@ -77,3 +77,10 @@ en:
           alert_level: "%{area} will be in Tier 2: High alert."
         level_three:
           alert_level: "%{area} will be in Tier 3: Very High alert."
+      christmas_rules:
+        heading: From 23 to 27 December
+        body: |
+          There are different Christmas rules for meeting friends and family.
+        guidance:
+           label: Find out what the Christmas rules are
+           link: "/guidance/guidance-for-the-christmas-period"

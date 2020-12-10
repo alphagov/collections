@@ -1,0 +1,17 @@
+<%= render "govuk_publishing_components/components/heading", {
+    text: t("coronavirus_local_restrictions.results.christmas_rules.heading"),
+    font_size: "m",
+    margin_bottom: 4,
+    mobile_top_margin: true,
+  } %>
+
+<p class="govuk-body">
+  <%= t("coronavirus_local_restrictions.results.christmas_rules.body") %>
+</p>
+
+<%= render "govuk_publishing_components/components/button", {
+    text: t("coronavirus_local_restrictions.results.christmas_rules.guidance.label"),
+    href: t("coronavirus_local_restrictions.results.christmas_rules.guidance.link"),
+    margin_bottom: true,
+    secondary_solid: true,
+  } %>
