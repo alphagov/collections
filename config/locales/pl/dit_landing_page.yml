@@ -15,27 +15,27 @@ pl:
       - title: Importuj z Wielkiej Brytanii
         text: Dowiedz się jakie kroki należy podjąć by importować towary z Wielkiej Brytanii, włączając w to procedury cłowe i zasady importu towarów takich jak żywność, napoje, produkty pochodzenia zwierzęcego i roślinnego.
         link: Dowiedz się więcej o imporcie z Wielkiej Brytanii
-        url: "/guidance/eu-business-importing-from-the-uk"
+        url: "/guidance/eu-business-importing-from-the-uk.pl"
       - title: Eksportuj do Wielkiej Brytanii
         text: Dowiedz się jakie jakie kroki należy podjąć by eksportować towary do Wielkiej Brytanii, włączając w to nowe zasady obowiązujące przewoźników, kontrole graniczne, przewóz towarów przez granice, a także eksport towarów takich jak żywność, napoje, produkty pochodzenia zwierzęcego i roślinnego oraz produkty związane z sektorem energetycznym.
         link: Dowiedz się więcej o imporcie do Wielkiej Brytanii
-        url: "/guidance/eu-business-exporting-to-the-uk"
+        url: "/guidance/eu-business-exporting-to-the-uk.pl"
       - title: Płać podatki i taryfy
         text: Dowiedz się więcej o taryfach, a także o zwrocie podatku VAT dla Twojej firmy z siedzibą w UE.
         link: Dowiedz się więcej o podatkach i taryfach
-        url: "/guidance/eu-business-taxes-and-tariffs"
+        url: "/guidance/eu-business-taxes-and-tariffs.pl"
       - title: Świadcz usługi w Wielkiej Brytanii
         text: Dowiedz się o tym, jak mogą zmienić się zasady dostarczania usług w Wielkiej Brytanii dla Twojej firmy z siedzibą w UE.
         link: Dowiedz się więcej o świadczeniu usług w Wielkiej Brytanii
-        url: "/guidance/eu-business-services"
+        url: "/guidance/eu-business-services.pl"
       - title: Pracuj w Wielkiej Brytanii
         text: Dowiedz się jakie kroki pracownicy z Unii Europejskiej będą musieli podjąć od 1 stycznia, między innymi w zakresie uprawnień do prowadzenia pojazdów, wiz i kwalifikacji zawodowych.
         link: Dowiedz się więcej o pracy w Wielkiej Brytanii
-        url: "/guidance/eu-business-working-in-the-uk"
+        url: "/guidance/eu-business-working-in-the-uk.pl"
       - title: Ochrona danych i prawo autorskie
         text: Dowiedz się jakie zajdą zmiany w zakresie własności intelektualnej, prawa autorskiego i przekazywania danych osobowych.
         link: Dowiedz się więcej o ochronie danych osobowych i prawie autorskim
-        url: "/guidance/eu-business-data-protection-and-copyright"
+        url: "/guidance/eu-business-data-protection-and-copyright.pl"
     training_section_title: Webinary dla firm z siedzibą w UE prowadzących wymianę handlową z Wielką Brytanią
     training_section_description:
        Zarejestruj się na zbliżające się webinary i dni branżowe <a href="/guidance/webinars-for-eu-based-organisations-that-trade-with-the-uk" class="govuk-link">i dowiedz się więcej o zasadach jakie będą obowiązywały na granicy z Wielką Brytanią</a>.
