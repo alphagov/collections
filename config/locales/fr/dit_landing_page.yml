@@ -1,0 +1,41 @@
+fr:
+  dit_landing_page:
+    kbm-logo-alt-text: Continuons à travailler ensemble
+    meta_title: Travailler avec le Royaume-Uni à partir du 1er janvier 2021 en tant qu'entreprise basée dans l'UE
+    meta_description: Le Royaume-Uni a quitté l'UE. Le 31 décembre 2020, le Royaume-Uni quittera le marché unique et l'union douanière de l'UE. À partir du 1er janvier 2021, les règles relatives aux échanges commerciaux avec le Royaume-Uni seront modifiées.
+    page_header: Travailler avec le Royaume-Uni à partir du 1er janvier 2021 en tant qu'entreprise basée dans l'UE
+    page_header_explainer:
+      <p>Le Royaume-Uni a quitté l'UE. Le 31 décembre 2020, le Royaume-Uni quittera le marché unique et l'union douanière de l'UE.</p>
+      <p>À partir du 1er janvier 2021, les règles relatives aux échanges commerciaux avec le Royaume-Uni seront modifiées.</p>
+    ribbon_title: Assurez-vous que votre entreprise basée dans l'UE soit prête
+    ribbon_text: |
+      Si vous dirigez une entreprise basée dans l'UE, vous devez vérifier les nouvelles règles et vous préparer aux changements afin de pouvoir continuer à faire des échanges commerciaux avec le Royaume-Uni à partir du 1er janvier 2021.
+    guidance_title: Ce que votre entreprise doit savoir
+    guidance_links:
+      - title: Importer du Royaume-Uni
+        text: Découvrez ce que les entreprises basées dans l'UE doivent faire pour importer des produits du Royaume-Uni, notamment les procédures douanières et l'importation de biens tels que les denrées alimentaires, les boissons, les produits animaux et végétaux.
+        link: En savoir plus sur les importations en provenance du Royaume-Uni
+        url: "/guidance/eu-business-importing-from-the-uk"
+      - title: Exportation vers le Royaume-Uni
+        text: Découvrez ce que les entreprises basées dans l'UE doivent faire pour exporter vers le Royaume-Uni, notamment les nouvelles règles applicables aux transporteurs, aux contrôles, à la circulation transfrontalière des marchandises et à l'exportation de produits tels que les denrées alimentaires, les boissons, les animaux, les plantes et les produits liés à l'énergie.
+        link: En savoir plus pour exporter vers le Royaume-Uni
+        url: "/guidance/eu-business-exporting-to-the-uk"
+      - title: Payer des taxes et des droits de douane
+        text: En savoir plus sur les droits de douane et la récupération de la TVA pour votre entreprise basée dans l'UE.
+        link: En savoir plus sur les taxes et les droits de douane
+        url: "/guidance/eu-business-taxes-and-tariffs"
+      - title: Fournir des services au Royaume-Uni
+        text: Découvrez ce qui peut changer si vous êtes une entreprise basée dans l'UE et que vous fournissez des services au Royaume-Uni.
+        link: En savoir plus sur la prestation de services au Royaume-Uni
+        url: "/guidance/eu-business-services"
+      - title: Travailler au Royaume-Uni
+        text: Découvrez ce que les travailleurs de l'UE installés au Royaume-Uni doivent faire à partir du 1er janvier 2021, notamment les règles en matière de conduite, de visas et de reconnaissance des qualifications professionnelles.
+        link: En savoir plus pour travailler au Royaume-Uni
+        url: "/guidance/eu-business-working-in-the-uk"
+      - title: Protection des données et droit d'auteur
+        text: En savoir plus sur les modifications apportées aux règles, notamment en matière de propriété intellectuelle, de droits d'auteur et de partage des données personnelles.
+        link: En savoir plus sur la protection des données et le droit d'auteur
+        url: "/guidance/eu-business-data-protection-and-copyright"
+    training_section_title: Webinaires pour les entreprises basées dans l'UE qui travaillent avec le Royaume-Uni
+    training_section_description:
+       Pour en savoir plus sur les exigences aux frontières du Royaume-Uni, <a href="/guidance/webinars-for-eu-based-organisations-that-trade-with-the-uk" class="govuk-link">inscrivez-vous à un prochain webinaire ou à une journée sectorielle</a>.
