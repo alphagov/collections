@@ -20,11 +20,15 @@ describe CoronavirusLocalRestrictionsController do
 
   describe "POST results" do
     it "renders the results page when given a real postcode" do
+      restriction = LocalRestriction.new("E01000123",
+                                         { "name" => "Coruscant Planetary Council" })
+      LocalRestriction.stubs(:find).returns(restriction)
+
       postcode = "E1 8QS"
       areas = [
         {
-          "gss" => "E01000123",
-          "name" => "Coruscant Planetary Council",
+          "gss" => restriction.gss_code,
+          "name" => restriction.area_name,
           "type" => "LBO",
         },
       ]

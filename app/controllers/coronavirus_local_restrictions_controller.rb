@@ -39,8 +39,8 @@ class CoronavirusLocalRestrictionsController < ApplicationController
 
     if @location_lookup.data.present?
       restrictions = @location_lookup.data.map do |area|
-        restriction = LocalRestriction.new(area.gss)
-        restriction if restriction.area_name
+        restriction = LocalRestriction.find(area.gss)
+        restriction if restriction&.area_name
       end
 
       @restriction = restrictions.compact.first
