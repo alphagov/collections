@@ -9,7 +9,7 @@ en:
       <p>From 1 January 2021 the rules for trading with the UK will change.</p>
     ribbon_title: Make sure your EU-based business is ready
     ribbon_text: |
-      If you run an EU-based business, you need to check the new rules and prepare for the changes so that you can continue trading with the UK from January 2021.
+      If you run an EU-based business, you need to check the new rules and prepare for the changes so that you can continue trading with the UK from 1 January 2021.
     guidance_title: What your business needs to know
     guidance_links:
       - title: Import from the UK
@@ -25,7 +25,7 @@ en:
         link: Learn more about taxes and tariffs
         url: "/guidance/eu-business-taxes-and-tariffs"
       - title: Provide services to the UK
-        text: Find out how providing services in the UK may change if you're and EU-based business.
+        text: Find out how providing services in the UK may change if you’re an EU-based business.
         link: Learn more about providing services to the UK
         url: "/guidance/eu-business-services"
       - title: Work in the UK
@@ -38,4 +38,4 @@ en:
         url: "/guidance/eu-business-data-protection-and-copyright"
     training_section_title: Webinars for EU-based businesses trading with the UK
     training_section_description: |
-      Learn more about UK border requirements by <a href="/guidance/webinars-for-eu-based-organisations-that-trade-with-the-uk" class="govuk-link">registering for an upcoming webinar or industry day, or viewing previous webinars</a>.
+      Learn more about UK border requirements by <a href="/guidance/webinars-for-eu-based-organisations-that-trade-with-the-uk" class="govuk-link">registering for an upcoming webinar or industry day</a>.
