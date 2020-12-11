@@ -1,7 +1,9 @@
 class CoronavirusLocalRestrictionsController < ApplicationController
+  MAX_CACHE_TIME = 30.minutes
   skip_before_action :verify_authenticity_token, only: [:legacy]
 
   def show
+    expires_in(MAX_CACHE_TIME, public: true)
     @content_item = content_item.to_hash
 
     if params[:postcode].nil?
@@ -16,6 +18,8 @@ class CoronavirusLocalRestrictionsController < ApplicationController
     elsif @search.no_information?
       render :no_information
     else
+      expires_in(restriction_expiry(@search), public: true)
+
       render :results
     end
   end
@@ -35,5 +39,15 @@ private
         ContentItem.find!(base_path)
       end
     end
+  end
+
+  def restriction_expiry(search)
+    return MAX_CACHE_TIME unless search.local_restriction&.future
+
+    future_restriction = search.local_restriction.future
+    future_start = Time.zone.parse("#{future_restriction['start_date']} #{future_restriction['start_time']}")
+    time_until_restriction = future_start - Time.zone.now
+
+    [time_until_restriction, MAX_CACHE_TIME].min
   end
 end
