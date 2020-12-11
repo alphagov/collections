@@ -2,31 +2,36 @@
   <div class="govuk-width-container">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-l">
-          <%= t("dit_landing_page.guidance_title") %>
-        </h2>
+        <%= tag.h2 sanitize(t("dit_landing_page.ribbon_title")), class: "govuk-heading-l" %>
       </div>
     </div>
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <%= render "govuk_publishing_components/components/govspeak", {
-        } do %>
-          <h3 class="govuk-heading-m">
-            <%= t("dit_landing_page.guidance_subheader") %>
-          </h3>
-          <%= t("dit_landing_page.guidance_text").html_safe %>
-          <ul class="govuk-list govuk-list">
-            <% t("dit_landing_page.countries").each do |country| %>
-              <li lang='<%= country[:lang] %>'><%= link_to country[:label], country[:url]  %></li>
-            <% end %>
-          </ul>
-        <% end %>
-
-        <%= render_govspeak t("dit_landing_page.body_markdown") %>
+        <%= tag.p t("dit_landing_page.ribbon_text"), class: "govuk-body" %>
       </div>
       <div class="govuk-grid-column-one-third">
         <%= image_tag 'KBM-logo.svg', class: "dit-landing-page__kbm-logo", alt: t("dit_landing_page.kbm-logo-alt-text")%>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="landing-page__section">
+  <div class="govuk-width-container">
+    <%= tag.h2 t("dit_landing_page.guidance_title"), class: "dit-landing-page__guidance-title govuk-heading-l" %>
+
+    <% t("dit_landing_page.guidance_links").each do |guidance| %>
+    <div class="dit-landing-page__guidance-item">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <%= tag.h3 guidance[:title], class: "govuk-heading-m" %>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+          <%= tag.p sanitize(guidance[:text]), class: "govuk-body" %>
+          <%= tag.p link_to(guidance[:link], guidance[:url], class: "govuk-link"), class: "govuk-body" %>
+        </div>
+      </div>
+    </div>
+    <% end %>
   </div>
 </div>
