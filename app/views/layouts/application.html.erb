@@ -23,7 +23,7 @@
     <% if @content_item %>
       <main id="content" role="main" class="content <%= yield :page_class %>" <%= "lang=#{@content_item["locale"]}" unless !@content_item["locale"] || @content_item["locale"].eql?("en") %>>
     <% else %>
-      <main id="content" role="main" class="content <%= yield :page_class %>">
+      <main id="content" role="main" class="content <%= yield :page_class %>" <%= "lang=#{params["locale"]}" if params["locale"] %>>
     <% end %>
     <%= yield %>
     </main>

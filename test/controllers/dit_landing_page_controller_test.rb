@@ -17,6 +17,7 @@ describe DitLandingPageController do
         get :show, params: { locale: locale.to_s }
         assert_response :success
         assert_select "h1", expected_content[locale]
+        assert_select "main[lang=#{locale}]"
       end
     end
   end
