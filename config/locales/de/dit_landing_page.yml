@@ -7,7 +7,7 @@ de:
     page_header_explainer:
       <p>Das Vereinigte Königreich ist aus der EU ausgetreten. Am 31. Dezember 2020 wird das Vereinigte Königreich den EU-Binnenmarkt und die Zollunion verlassen.</p>
       <p>Ab 1. Januar 2021 ändern sich die Regeln für den Handel mit dem Vereinigten Königreich.</p>
-    ribbon_title: Stellen Sie sicher, dass Ihr Unternehmen mit Sitz in der EU gut vorbereitet ist
+    ribbon_title: Stellen Sie sicher, dass Ihr Unternehmen gut vorbereitet ist
     ribbon_text: |
       Als Unternehmen mit Sitz in der EU müssen Sie sich über die neuen Vorschriften informieren und sich auf die Änderungen einstellen, damit Sie ab Januar 2021 weiterhin Handelsbeziehungen mit dem Vereinigten Königreich unterhalten können.
     guidance_title: Was Sie wissen müssen
@@ -38,4 +38,4 @@ de:
         url: "/guidance/eu-business-data-protection-and-copyright.de"
     training_section_title: Webinare für EU-Unternehmen mit Geschäftsbeziehungen ins Vereinigte Königreich
     training_section_description:
-       Erfahren Sie mehr über die Grenzbestimmungen im Vereinigten Königreich. <a href="/guidance/webinars-for-eu-based-organisations-that-trade-with-the-uk" class="govuk-link">Melden Sie sich dazu für ein Webinar oder einen Industrietag an.</a>.
+       Erfahren Sie mehr über die Grenzbestimmungen im Vereinigten Königreich. <a href="/guidance/webinars-for-eu-based-organisations-that-trade-with-the-uk" class="govuk-link">Melden Sie sich dazu für ein Webinar oder einen Industrietag an</a>.
