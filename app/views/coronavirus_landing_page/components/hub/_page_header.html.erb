@@ -33,7 +33,7 @@
   <div class="covid__page-header-light covid__page-header-light--hub">
     <div class="govuk-width-container">
       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-grid-column-two-thirds covid__page-header-list">
           <%= render "govuk_publishing_components/components/heading", {
             text: header["pretext"],
             font_size: 19,
@@ -45,11 +45,11 @@
               <%= header["list_heading"] %>
             </p>
           <% end %>
-          <ul class="covid__list covid__list--header">
-            <% header["list"].each do | item | %>
-              <li class="covid__list-item"><%= item %></li>
-            <% end %>
-          </ul>
+          <%= render "govuk_publishing_components/components/list", {
+            extra_spacing: true,
+            visible_counters: true,
+            items: header["list"],
+          } %>
           <% if header["education-pretext"].present? %>
             <p class="govuk-body covid__inverse">
               <%= header["education-pretext"]["text"] %>
