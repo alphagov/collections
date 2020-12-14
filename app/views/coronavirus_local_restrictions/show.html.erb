@@ -1,37 +1,33 @@
 <%
+  error_key = if @search&.blank_postcode?
+                "no_postcode"
+              elsif @search&.invalid_postcode?
+                "invalid_postcode"
+              end
+
   title = t("coronavirus_local_restrictions.lookup.title")
-  title = "Error: #{title}" if error_message
+  title = "Error: #{title}" if error_key
 %>
+
+<% content_for :title, title %>
+<%= render partial: "meta_tags" %>
 
 <% content_for :breadcrumbs do %>
   <%= render 'govuk_publishing_components/components/contextual_breadcrumbs', content_item: @content_item %>
 <% end %>
 
-<% content_for :title, title %>
-
-<% content_for :meta_tags do %>
-  <% page_url = File.join(request.base_url, request.path) %>
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="GOV.UK">
-  <meta property="og:url" content="<%= page_url %>">
-  <meta property="og:title" content="<%= t("coronavirus_local_restrictions.lookup.meta_title") %>">
-  <meta property="og:description" content="<%= t("coronavirus_local_restrictions.lookup.meta_description") %>">
-  <meta name="description" content="<%= t("coronavirus_local_restrictions.lookup.meta_description") %>">
-  <link rel="canonical" href="<%= page_url %>">
-<% end %>
-
 <div class="govuk-grid-row" data-module="coronavirus-track-local-restrictions">
   <div class="govuk-grid-column-two-thirds">
-    <% if error_message %>
+    <% if error_key %>
       <%= render "govuk_publishing_components/components/error_summary", {
-        title: error_message,
+        title: t("coronavirus_local_restrictions.errors.#{error_key}.error_message"),
         items: [
           {
-            text: error_description,
+            text: t("coronavirus_local_restrictions.errors.#{error_key}.error_description"),
             href: "#postcodeLookup",
             data_attributes: {
               tracking: "local-restrictions-postcode-error",
-              "error-code": error_code,
+              "error-code": @search.error_code,
             }
           }
         ]
@@ -44,9 +40,9 @@
 
     <%= sanitize(t("coronavirus_local_restrictions.lookup.body_content")) %>
 
-    <%= form_for :postcode_lookup, :url => find_coronavirus_local_restrictions_path, :html => {:class => "coronavirus-local-restrictions__postcode-form"} do |f| %>
+    <%= form_tag find_coronavirus_local_restrictions_path, method: :get, class: "coronavirus-local-restrictions__postcode-form" do |f| %>
       <%= render "shared/postcode-lookup", {
-        input_error: input_error
+        input_error: error_key ? t("coronavirus_local_restrictions.errors.#{error_key}.input_error") : nil,
       } %>
     <% end %>
   </div>

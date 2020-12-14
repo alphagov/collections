@@ -1,125 +1,182 @@
 require "test_helper"
 
 describe LocalRestriction do
-  let(:restriction) { described_class.new("E08000123") }
-
-  before do
-    LocalRestriction.any_instance.stubs(:file_name).returns("test/fixtures/local-restrictions.yaml")
+  describe ".all" do
+    it "contains an array of LocalRestriction models" do
+      assert(described_class.all.all? { |item| item.is_a?(described_class) })
+    end
   end
 
-  it "returns the area name" do
-    assert_equal "Tatooine", restriction.area_name
+  describe ".find" do
+    it "can find a LocalRestriction by gss_code" do
+      gss_code = described_class.all.first.gss_code
+      assert gss_code, described_class.find(gss_code).gss_code
+    end
+
+    it "returns nil if it can't find a LocalRestriction" do
+      assert_nil described_class.find("not-a-gss-code")
+    end
   end
 
-  it "returns the current alert level" do
-    travel_to Time.zone.local(2020, 10, 15, 10, 10, 10)
-    assert_equal 2, restriction.current_alert_level
-    travel_back
+  describe "#current_alert_level" do
+    let(:instance) do
+      described_class.new("gss-code", {
+        "name" => "Tattooine",
+        "restrictions" => [{ "alert_level" => 2,
+                             "start_date" => Date.new(2020, 10, 1),
+                             "start_time" => "10:00" }],
+      })
+    end
+
+    it "returns the alert level when a current alert exists" do
+      assert_equal 2, instance.current_alert_level
+    end
+
+    it "returns nil when there is not a current alert" do
+      travel_to(Time.zone.parse("2020-01-01")) do
+        assert_nil instance.current_alert_level
+      end
+    end
   end
 
-  it "returns nil values if the gss code doesn't exist" do
-    local_restriction = described_class.new("fake code")
-    assert_empty local_restriction.restriction
-    assert_nil local_restriction.area_name
+  describe "#future_alert_level" do
+    let(:instance) do
+      described_class.new("gss-code", {
+        "name" => "Coruscant Planetary Council",
+        "restrictions" => [{ "alert_level" => 3,
+                             "start_date" => Date.new(2021, 1, 1),
+                             "start_time" => "10:00" }],
+      })
+    end
+
+    it "returns the alert level when a future alert exists" do
+      travel_to(Time.zone.parse("2020-12-01")) do
+        assert_equal 3, instance.future_alert_level
+      end
+    end
+
+    it "returns nil when there is not a future alert" do
+      travel_to(Time.zone.parse("2021-02-01")) do
+        assert_nil instance.future_alert_level
+      end
+    end
   end
 
-  it "returns the latest past date as a current restriction" do
-    travel_to Time.zone.local(2020, 10, 15, 10, 10, 10)
-    current_restriction = {
-      "alert_level" => 2,
-      "start_date" => "2020-10-12".to_date,
-      "start_time" => "00:01",
-    }
-    assert_equal current_restriction, restriction.current
-    travel_back
+  describe "#current" do
+    it "returns the restriction in the past with the latest start date" do
+      first_restriction = { "alert_level" => 3, "start_date" => Date.new(2020, 8, 1), "start_time" => "10:00" }
+      second_restriction = { "alert_level" => 2, "start_date" => Date.new(2020, 10, 1), "start_time" => "10:00" }
+      instance = described_class.new("gss-code", {
+        "name" => "Naboo",
+        "restrictions" => [first_restriction, second_restriction],
+      })
+      assert_equal second_restriction, instance.current
+    end
+
+    it "returns nil when there are no current restrictions" do
+      instance = described_class.new("gss-code", {
+        "name" => "Naboo",
+        "restrictions" => [
+          { "alert_level" => 2, "start_date" => Date.new(2021, 1, 1), "start_time" => "10:00" },
+        ],
+      })
+
+      travel_to(Time.zone.parse("2020-12-01")) do
+        assert_nil instance.current
+      end
+    end
   end
 
-  it "returns today as a current restriction when the start time is in the past" do
-    travel_to Time.zone.local(2022, 10, 12, 20, 10, 10)
-    expected_restriction = {
-      "alert_level" => 3,
-      "start_date" => "2022-10-12".to_date,
-      "start_time" => "18:00",
-    }
-    assert_equal expected_restriction, restriction.current
-    travel_back
-  end
+  describe "#future" do
+    it "returns the restriction in the future with the earliest start date" do
+      first_restriction = { "alert_level" => 3, "start_date" => Date.new(2021, 8, 1), "start_time" => "10:00" }
+      second_restriction = { "alert_level" => 2, "start_date" => Date.new(2021, 10, 1), "start_time" => "10:00" }
+      instance = described_class.new("gss-code", {
+        "name" => "Mandalore",
+        "restrictions" => [first_restriction, second_restriction],
+      })
+      travel_to(Time.zone.parse("2020-12-01")) do
+        assert_equal first_restriction, instance.future
+      end
+    end
 
-  it "returns the soonest future date as a current restriction" do
-    travel_to Time.zone.local(2020, 10, 15, 10, 10, 10)
-    future_restriction = {
-      "alert_level" => 3,
-      "start_date" => "2021-10-12".to_date,
-      "start_time" => "00:01",
-    }
-    assert_equal future_restriction, restriction.future
-    travel_back
-  end
-
-  it "returns today as a future restriction when the start time is in the future" do
-    travel_to Time.zone.local(2022, 10, 12, 10, 10, 10)
-    expected_restriction = {
-      "alert_level" => 3,
-      "start_date" => "2022-10-12".to_date,
-      "start_time" => "18:00",
-    }
-    assert_equal expected_restriction, restriction.future
-    travel_back
-  end
-
-  it "returns nil when there are no future restrictions" do
-    travel_to Time.zone.local(2020, 10, 15, 10, 10, 10)
-    restriction = described_class.new("E08000456")
-    assert_nil restriction.future
-    travel_back
-  end
-
-  it "returns nil when there are no current restrictions" do
-    travel_to Time.zone.local(2020, 10, 15, 10, 10, 10)
-    restriction = described_class.new("E08000789")
-    assert_nil restriction.current
-    travel_back
+    it "returns nil when there are no future restrictions" do
+      instance = described_class.new("gss-code", {
+        "name" => "Mandalore",
+        "restrictions" => [
+          { "alert_level" => 2, "start_date" => Date.new(2020, 1, 1), "start_time" => "10:00" },
+        ],
+      })
+      assert_nil instance.future
+    end
   end
 
   describe "#tier_three?" do
-    it "returns true if there is current restriction in tier 3" do
-      travel_to Time.zone.local(2020, 10, 15, 10, 10, 10)
-      restriction = described_class.new("E08001234")
-      assert restriction.tier_three?
+    let(:instance) do
+      described_class.new("gss-code", {
+        "name" => "Alderaan",
+        "restrictions" => [{ "alert_level" => 3,
+                             "start_date" => Date.new(2020, 10, 1),
+                             "start_time" => "10:00" }],
+      })
     end
 
-    it "returns false if there is only a future restriction in tier 3" do
-      travel_to Time.zone.local(2020, 10, 10, 10, 10, 10)
-      restriction = described_class.new("E08001234")
-      assert_not restriction.tier_three?
+    it "returns true if there is current restriction in tier 3" do
+      travel_to(Time.zone.parse("2020-12-01")) do
+        assert instance.tier_three?
+      end
+    end
+
+    it "returns false if there is not a current tier 3 restriction" do
+      travel_to(Time.zone.parse("2020-09-01")) do
+        assert_not instance.tier_three?
+      end
     end
   end
 
   describe "#tier_two?" do
-    it "returns true if there is current restriction in tier 2" do
-      travel_to Time.zone.local(2020, 10, 15, 10, 10, 10)
-      restriction = described_class.new("E08001798")
-      assert restriction.tier_two?
+    let(:instance) do
+      described_class.new("gss-code", {
+        "name" => "Alderaan",
+        "restrictions" => [{ "alert_level" => 2,
+                             "start_date" => Date.new(2020, 10, 1),
+                             "start_time" => "10:00" }],
+      })
     end
 
-    it "returns false if there is only a future restriction in tier 2" do
-      travel_to Time.zone.local(2020, 10, 10, 10, 10, 10)
-      restriction = described_class.new("E08001798")
-      assert_not restriction.tier_two?
+    it "returns true if there is current restriction in tier 2" do
+      travel_to(Time.zone.parse("2020-12-01")) do
+        assert instance.tier_two?
+      end
+    end
+
+    it "returns false if there is not a current tier 2 restriction" do
+      travel_to(Time.zone.parse("2020-09-01")) do
+        assert_not instance.tier_two?
+      end
     end
   end
 
   describe "#tier_one?" do
-    it "returns true if there is current restriction in tier 1" do
-      travel_to Time.zone.local(2021, 10, 15, 10, 10, 10)
-      restriction = described_class.new("E08000789")
-      assert restriction.tier_one?
+    let(:instance) do
+      described_class.new("gss-code", {
+        "name" => "Alderaan",
+        "restrictions" => [{ "alert_level" => 1,
+                             "start_date" => Date.new(2020, 10, 1),
+                             "start_time" => "10:00" }],
+      })
     end
 
-    it "returns false if there is only a future restriction in tier 1" do
-      travel_to Time.zone.local(2020, 10, 10, 10, 10, 10)
-      restriction = described_class.new("E08000789")
-      assert_not restriction.tier_one?
+    it "returns true if there is current restriction in tier 1" do
+      travel_to(Time.zone.parse("2020-12-01")) do
+        assert instance.tier_one?
+      end
+    end
+
+    it "returns false if there is not a current tier 1 restriction" do
+      travel_to(Time.zone.parse("2020-09-01")) do
+        assert_not instance.tier_one?
+      end
     end
   end
 end

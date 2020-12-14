@@ -1,0 +1,135 @@
+require "test_helper"
+require "gds_api/test_helpers/mapit"
+
+describe PostcodeLocalRestrictionSearch do
+  include GdsApi::TestHelpers::Mapit
+
+  before do
+    stub_mapit_has_a_postcode_and_areas("E1 8QS", [], [{
+      "gss" => "E09000030",
+      "name" => "London Borough of Tower Hamlets",
+      "type" => "LBO",
+      "country_name" => "England",
+    }])
+  end
+
+  describe "#sanitised_postcode" do
+    it "returns the postcode as a formatted UK postcode" do
+      instance = described_class.new("e18qs")
+      assert_equal "E1 8QS", instance.sanitised_postcode
+    end
+
+    it "accepts postcodes that have non-alphanumeric characters" do
+      instance = described_class.new("E1!@£$%^&*8QS")
+      assert_equal "E1 8QS", instance.sanitised_postcode
+    end
+
+    it "accepts and fixes common character errors in postcodes" do
+      instance = described_class.new("EI 8QS")
+      assert_equal "E1 8QS", instance.sanitised_postcode
+    end
+  end
+
+  describe "#error_code" do
+    it "returns nil when there isn't an error" do
+      instance = described_class.new("E1 8QS")
+      assert_nil instance.error_code
+    end
+
+    it "returns 'postcodeLeftBlank' for a blank postcode" do
+      instance = described_class.new("")
+      assert_equal "postcodeLeftBlank", instance.error_code
+    end
+
+    it "returns 'postcodeLeftBlankSanitized' for an unsalvagable postcode" do
+      instance = described_class.new("!@£$%^&*(")
+      assert_equal "postcodeLeftBlankSanitized", instance.error_code
+    end
+
+    it "returns 'invalidPostcodeFormat' for a non postcode" do
+      instance = described_class.new("not-a-postcode")
+      assert_equal "invalidPostcodeFormat", instance.error_code
+    end
+
+    it "returns 'fullPostcodeNoMapitMatch' when mapit doesn't know the postcode" do
+      stub_mapit_does_not_have_a_postcode("E1 8QS")
+      instance = described_class.new("E1 8QS")
+      assert_equal "fullPostcodeNoMapitMatch", instance.error_code
+    end
+
+    it "returns 'fullPostcodeNoMapitValidation' when mapit doesn't like the postcode" do
+      stub_mapit_does_not_have_a_bad_postcode("E1 8QS")
+      instance = described_class.new("E1 8QS")
+      assert_equal "fullPostcodeNoMapitValidation", instance.error_code
+    end
+  end
+
+  describe "#blank_postcode?" do
+    it "returns true for missing postcode scenarios" do
+      assert described_class.new("").blank_postcode?
+    end
+
+    it "returns false when a postcode is input" do
+      assert_not described_class.new("E1 8QS").blank_postcode?
+    end
+  end
+
+  describe "#invalid_postcode?" do
+    it "returns true for an invalid postcode scenarios" do
+      assert described_class.new("not-a-postcode").invalid_postcode?
+    end
+
+    it "returns false when the input is a valid postcode" do
+      assert_not described_class.new("E1 8QS").invalid_postcode?
+    end
+  end
+
+  describe "#local_restriction" do
+    it "matches a postcode to its local restriction" do
+      stub_mapit_has_a_postcode_and_areas("SW1A 2AA", [], [
+        {
+          "gss" => "E32000014",
+          "name" => "West Central",
+          "type" => "LAC",
+          "country_name" => "England",
+        },
+        {
+          "gss" => "E09000033",
+          "name" => "Westminster City Council",
+          "type" => "LBO",
+          "country_name" => "England",
+        },
+      ])
+
+      LocalRestriction.stubs(:find).with("E32000014").returns(nil)
+      restriction = LocalRestriction.new("E09000033", { "name" => "Westminster City Council" })
+      LocalRestriction.stubs(:find).with("E09000033").returns(restriction)
+
+      assert_equal restriction, described_class.new("SW1A 2AA").local_restriction
+    end
+
+    it "returns nil when the area doesn't have a local restriction" do
+      stub_mapit_has_a_postcode_and_areas("SW1A 2AA", [], [
+        {
+          "gss" => "E09000033",
+          "name" => "Westminster City Council",
+          "type" => "LBO",
+          "country_name" => "England",
+        },
+      ])
+      LocalRestriction.stubs(:find).with("E09000033").returns(nil)
+
+      assert_nil described_class.new("SW1A 2AA").local_restriction
+    end
+
+    it "returns nil when the postcode has an error" do
+      assert_nil described_class.new("not-a-postcode").local_restriction
+    end
+
+    it "returns nil when Mapit has no information for the location" do
+      stub_mapit_has_a_postcode_and_areas("SW1A 2AA", [], [])
+
+      assert_nil described_class.new("SW1A 2AA").local_restriction
+    end
+  end
+end
