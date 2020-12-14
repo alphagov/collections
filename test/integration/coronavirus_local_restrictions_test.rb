@@ -75,7 +75,7 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_can_see_the_postcode_lookup_form
       when_i_enter_an_invalid_postcode
       then_i_click_on_find
-      then_i_can_see_the_postcode_lookup_form
+      then_i_can_see_the_invalid_postcode_in_the_form
       then_i_see_an_invalid_postcode_error_message
     end
   end
@@ -121,6 +121,11 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   def then_i_can_see_the_postcode_lookup_form
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.lookup.title"))
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.lookup.input_label"))
+  end
+
+  def then_i_can_see_the_invalid_postcode_in_the_form
+    field = page.find_field(I18n.t("coronavirus_local_restrictions.lookup.input_label"))
+    assert_equal @postcode, field.value
   end
 
   def then_i_enter_a_valid_english_postcode
@@ -207,7 +212,8 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   end
 
   def when_i_enter_an_invalid_postcode
-    fill_in "Enter a full postcode", with: "Hello"
+    @postcode = "Hello"
+    fill_in "Enter a full postcode", with: @postcode
   end
 
   def then_i_click_on_find

@@ -45,7 +45,7 @@ describe('Coronavirus local restrictions landing page', function () {
           '<h2 class="govuk-error-summary__title">There is a problem</h2>' +
           '<div class="govuk-error-summary__body">' +
             '<ul class="govuk-list govuk-error-summary__list">' +
-              '<li class="gem-c-error-summary__list-item" data-tracking="local-restrictions-postcode-error" data-error-code="invalidPostcodeFormat"><a href="#postcodeLookup">Enter a postcode</a></li>' +
+              '<li class="gem-c-error-summary__list-item" data-tracking="local-restrictions-postcode-error" data-error-code="invalidPostcodeFormat"><a href="#postcode">Enter a postcode</a></li>' +
             '</ul>' +
           '</div>' +
         '</div>' +
