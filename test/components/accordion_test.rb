@@ -18,8 +18,8 @@ class AccordionTest < ComponentTestCase
     ]
   end
 
-  section1 = ".app-c-accordion__section:nth-child(1)"
-  section2 = ".app-c-accordion__section:nth-child(2)"
+  section1 = ".govuk-accordion__section:nth-child(1)"
+  section2 = ".govuk-accordion__section:nth-child(2)"
 
   test "renders nothing without passed content" do
     assert_empty render_component({})
@@ -27,15 +27,15 @@ class AccordionTest < ComponentTestCase
 
   test "renders an accordion correctly" do
     render_component(sections: simple_accordion)
-    assert_select ".app-c-accordion"
+    assert_select ".govuk-accordion__section"
 
     assert_select section1, id: "general-information-and-guidance"
-    assert_select section1 + " .app-c-accordion__title", text: "General information and guidance"
-    assert_select section1 + " .app-c-accordion__panel", text: "1st panel contents"
+    assert_select section1 + " .govuk-accordion__section-heading", text: "General information and guidance"
+    assert_select section1 + " .govuk-accordion__section-content", text: "1st panel contents"
 
     assert_select section2, id: "alternative-provision-censuses"
-    assert_select section2 + " .app-c-accordion__title", text: "Alternative provision censuses"
-    assert_select section2 + " .app-c-accordion__panel", text: "2nd panel contents"
+    assert_select section2 + " .govuk-accordion__section-heading", text: "Alternative provision censuses"
+    assert_select section2 + " .govuk-accordion__section-content", text: "2nd panel contents"
   end
 
   test "renders accordion with description in a header" do
@@ -44,8 +44,8 @@ class AccordionTest < ComponentTestCase
 
     render_component(sections: descriptions_accordion)
 
-    assert_select ".app-c-accordion__header:nth-child(1) .app-c-accordion__description", text: "1st section description"
-    assert_select ".app-c-accordion__header:nth-child(2) .app-c-accordion__description", false
+    assert_select ".govuk-accordion__section-header:nth-child(1) .govuk-accordion__section-summary", text: "1st section description"
+    assert_select ".govuk-accordion__section-header:nth-child(2) .govuk-accordion__section-summary", false
   end
 
   test "renders an accordion with custom section ids" do
