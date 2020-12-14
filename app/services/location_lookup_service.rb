@@ -49,7 +49,9 @@ private
 
   def response
     @response ||= begin
-                    JSON.parse(mapit.location_for_postcode(postcode).to_json)
+                    Rails.cache.fetch("mapit-location-#{postcode}", expires_in: 3.hours) do
+                      JSON.parse(mapit.location_for_postcode(postcode).to_json)
+                    end
                   rescue GdsApi::HTTPNotFound, GdsApi::HTTPClientError => e
                     {
                       error: {
