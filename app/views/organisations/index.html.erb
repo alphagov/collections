@@ -11,13 +11,11 @@
     } %>
 
     <form class="filter-organisations-list__form" data-filter="form" role="search" aria-label="Departments, agencies and public bodies">
-      <%= render "govuk_publishing_components/components/input", {
-        label: {
-          text: "Search for a department, agency or public body"
-        },
-        name: "search-box",
+      <%= render "govuk_publishing_components/components/search", {
+        inline_label: false,
+        label_text: "Search for a department, agency or public body",
         id: "filter-organisations-list",
-        controls: "organisations_search_results"
+        aria_controls: "organisations_search_results",
       } %>
     </form>
   </div>

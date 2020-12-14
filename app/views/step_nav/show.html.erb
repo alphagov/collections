@@ -15,7 +15,9 @@
 
     <%= render "govuk_publishing_components/components/govspeak", {
     } do %>
-      <%= step_by_step.introduction %>
+    <%= render "govuk_publishing_components/components/lead_paragraph", {
+      text: step_by_step.introduction
+    } %>
     <% end %>
   </div>
 </div>
