@@ -9,14 +9,14 @@ class CoronavirusLocalRestrictionsController < ApplicationController
       return
     end
 
-    @search = PostcodeLocalRestrictionSearch.new(params[:postcode])
+    @search = CoronavirusRestrictionSearch.new(params[:postcode])
 
     if @search.blank_postcode? || @search.invalid_postcode?
       render
-    elsif @search.no_information?
+    elsif !@search.result
       render :no_information
     else
-      render :results
+      render :results, locals: { result: @search.result }
     end
   end
 

@@ -1,33 +1,31 @@
 <%
-  location = location_lookup.data.first
   title = t("coronavirus_local_restrictions.results.devolved_nations.heading")
 %>
-
 <% content_for :title, title %>
 
 <%= tag.div :data => {
   :module => "coronavirus-track-local-restriction-results",
-  "tracking-label" => "Devolved nation: #{location.country}"
+  "tracking-label" => "Devolved nation: #{result.country}"
 } do %>
   <%= render "govuk_publishing_components/components/title", {
     title: title
   } %>
   <p class="govuk-body">
-    <%= t("coronavirus_local_restrictions.results.match") %> <strong><%= postcode %></strong> to <strong><%= location.country %></strong>.
+    <%= t("coronavirus_local_restrictions.results.match") %> <strong><%= result.postcode %></strong> to <strong><%= result.country %></strong>.
   </p>
-  <% if location.scotland? %>
+  <% if result.scotland? %>
     <%= render "govuk_publishing_components/components/button", {
       text: t("coronavirus_local_restrictions.results.devolved_nations.scotland.guidance.label"),
       href: t("coronavirus_local_restrictions.results.devolved_nations.scotland.guidance.link"),
       margin_bottom: 9
     } %>
-  <% elsif location.northern_ireland? %>
+  <% elsif result.northern_ireland? %>
     <%= render "govuk_publishing_components/components/button", {
       text: t("coronavirus_local_restrictions.results.devolved_nations.northern_ireland.guidance.label"),
       href: t("coronavirus_local_restrictions.results.devolved_nations.northern_ireland.guidance.link"),
       margin_bottom: 9
     } %>
-  <% elsif location.wales? %>
+  <% elsif result.wales? %>
     <%= render "govuk_publishing_components/components/button", {
       text: t("coronavirus_local_restrictions.results.devolved_nations.wales.guidance.label"),
       href: t("coronavirus_local_restrictions.results.devolved_nations.wales.guidance.link"),
