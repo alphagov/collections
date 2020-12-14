@@ -5,7 +5,6 @@
       collapse_on_mobile: true,
       inverse: true
     } %>
-
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <% title_link = capture do %>
@@ -57,10 +56,10 @@
                 <% link_to country["label"], country["url"], class: "covid__page-header-link govuk-link" %>
               <% end %>
               <%= countries.to_sentence(last_word_connector: ' and ').html_safe %>.
-          <% end %>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <%= render 'coronavirus_landing_page/components/hub/guidance_section', guidance: guidance, email_signup: notifications %>
-</header>
+    <%= render 'coronavirus_landing_page/components/hub/guidance_section', guidance: guidance, email_signup: notifications %>
+  </header>

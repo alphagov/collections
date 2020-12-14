@@ -1,20 +1,15 @@
 <%= render partial: 'meta', locals: { organisation: @organisation } %>
 <%= render partial: 'breadcrumb' %>
 <%= render partial: 'header' %>
-
 <%= render 'govuk_publishing_components/components/machine_readable_metadata',
            schema: :organisation,
            content_item: @organisation.content_item.content_item_data %>
-
 <%= render partial: 'featured_news' %>
 <%= render partial: 'latest_documents' %>
-
 <%= render partial: 'what_we_do' %>
-
 <% if @organisation.is_promotional_org? %>
   <%= render partial: 'promotional_features' %>
 <% end %>
-
 <% unless @organisation.is_promotional_org? %>
   <% if @supergroups.has_groups? && !@organisation.is_promotional_org?  %>
     <%= render partial: 'latest_documents_by_supergroup' %>
@@ -32,15 +27,12 @@
     </div>
   <% end %>
 <% end %>
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <%= render partial: 'org_contacts', locals: { contacts: @contacts } %>
-
     <% unless @organisation.is_promotional_org? %>
       <%= render partial: 'freedom_of_information' %>
     <% end %>
-
     <% if @show.high_profile_groups[:items] && !@organisation.is_promotional_org? %>
       <section class="organisation__margin-bottom" id="high-profile-groups">
         <%= render "govuk_publishing_components/components/heading", {
@@ -50,7 +42,6 @@
             padding: true,
             margin_bottom: 3
         } %>
-
         <%= render "components/topic-list", @show.high_profile_groups %>
       </section>
     <% end %>

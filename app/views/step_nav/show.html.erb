@@ -1,23 +1,19 @@
 <% content_for :title, step_by_step.title %>
-
 <%= render 'structured_data', step_by_step: step_by_step %>
-
 <% content_for :meta_tags do %>
   <meta name="description" content="<%= step_by_step.description %>">
 <% end %>
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <%= render 'govuk_publishing_components/components/title',
         title: step_by_step.title,
         average_title_length: 'long',
         margin_bottom: 6 %>
-
     <%= render "govuk_publishing_components/components/govspeak", {
     } do %>
-    <%= render "govuk_publishing_components/components/lead_paragraph", {
-      text: step_by_step.introduction
-    } %>
+      <%= render "govuk_publishing_components/components/lead_paragraph", {
+        text: step_by_step.introduction
+      } %>
     <% end %>
   </div>
 </div>

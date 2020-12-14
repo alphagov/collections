@@ -135,19 +135,6 @@ $c19-landing-page-header-background: #0843a1;
   }
 }
 
-.covid__page-header .covid__page-header-link {
-  font-weight: normal;
-
-  &:link,
-  &:visited {
-    color: govuk-colour("white");
-  }
-
-  &:focus {
-    color: $govuk-text-colour;
-  }
-}
-
 .covid__find-help {
   @include govuk-responsive-margin(9, "bottom");
   background-color: $covid-grey;

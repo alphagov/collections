@@ -6,26 +6,25 @@
   <% sections.each_with_index do |section, index| %>
     <% id = section[:id] || section[:title].downcase.tr(" ","-")%>
     <%
-  accordion_contents << {
-    id: id,
-    data_attributes: {
-      "track-count": "accordionSection",
-      id: "section-panel-#{id}-#{index + 1}",
-    },
-    heading: {
-        text: section[:title],
+    accordion_contents << {
+      id: id,
+      data_attributes: {
+        "track-count": "accordionSection",
+        id: "section-panel-#{id}-#{index + 1}",
       },
-      summary: {
-        text: section[:description].presence,
-      },
-      content: {
-        html: section[:panel]
-      },
-    }
-  %>
+      heading: {
+          text: section[:title],
+        },
+        summary: {
+          text: section[:description].presence,
+        },
+        content: {
+          html: section[:panel]
+        },
+      }
+    %>
   <% end %>
   <%= render "govuk_publishing_components/components/accordion", {
       items: accordion_contents
-    } %>
-</div>
+  } %>
 <% end %>
