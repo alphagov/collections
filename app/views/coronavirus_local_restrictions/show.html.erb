@@ -40,7 +40,10 @@
 
     <%= sanitize(t("coronavirus_local_restrictions.lookup.body_content")) %>
 
-    <%= form_tag find_coronavirus_local_restrictions_path, method: :get, class: "coronavirus-local-restrictions__postcode-form" do |f| %>
+    <%= form_tag find_coronavirus_local_restrictions_path,
+      method: :get,
+      class: "coronavirus-local-restrictions__postcode-form",
+      data: { module: "coronavirus-local-restrictions-postcode-form" } do |f| %>
       <div class="postcode-lookup">
         <%= render "govuk_publishing_components/components/input", {
           id: "postcode",
