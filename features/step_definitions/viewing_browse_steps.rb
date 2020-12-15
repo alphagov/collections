@@ -119,6 +119,7 @@ def add_first_level_browse_pages(child_pages:, order_type:)
   stub_content_store_has_item(
     "/browse/crime-and-justice",
     base_path: "/browse/crime-and-justice",
+    title: "Crime and Justice",
     links: {
       top_level_browse_pages: top_level_browse_pages,
       second_level_browse_pages: child_pages,
