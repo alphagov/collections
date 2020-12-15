@@ -61,6 +61,19 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     end
   end
 
+  describe "with javascript" do
+    before { Capybara.current_driver = Capybara.javascript_driver }
+    after { Capybara.use_default_driver }
+
+    it "normalises the submitted postcode" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_can_see_the_postcode_lookup_form
+      then_i_enter_an_unusually_formatted_postcode
+      then_i_click_on_find
+      then_i_see_the_results_with_conventional_postcode_formatting
+    end
+  end
+
   describe "errors" do
     it "errors gracefully if you don't enter a postcode" do
       given_i_am_on_the_local_restrictions_page
@@ -134,6 +147,14 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     stub_local_restriction(postcode: postcode, name: @area)
 
     fill_in "Enter a full postcode", with: postcode
+  end
+
+  def then_i_enter_an_unusually_formatted_postcode
+    @postcode = "E1 8QS"
+    @area = "Hoth"
+    stub_local_restriction(postcode: @postcode, name: @area)
+
+    fill_in "Enter a full postcode", with: "e18qs"
   end
 
   def then_i_enter_a_valid_english_postcode_with_a_future_level_two_restriction
@@ -218,6 +239,12 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
 
   def then_i_click_on_find
     click_on "Find"
+  end
+
+  def then_i_see_the_results_with_conventional_postcode_formatting
+    assert page.has_text?(@area)
+    assert page.has_text?(@postcode)
+    assert page.current_url.match?(/postcode=#{Regexp.escape(CGI.escape(@postcode))}/)
   end
 
   def then_i_see_the_results_page_for_level_one
