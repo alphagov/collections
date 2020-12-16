@@ -1,0 +1,67 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/eubusiness",
+  "content_id": "bb986a97-3b8c-4b1a-89bf-2a9f46be9747",
+  "document_type": "answer",
+  "first_published_at": "2020-09-04T16:14:37.000+00:00",
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2020-09-04T16:14:36.000+00:00",
+  "publishing_app": "collections-publisher",
+  "publishing_scheduled_at": null,
+  "rendering_app": "collections",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "special_route",
+  "title": "Trade with the UK from 1 January 2021 as a business based in the EU",
+  "updated_at": "2020-11-25T16:25:53.298Z",
+  "withdrawn_notice": {},
+  "publishing_request_id": "27623-1599236077.071-10.13.4.55-537",
+  "links": {
+    "available_translations": [
+      {
+        "title": "Trade with the UK from 1 January 2021 as a business based in the EU",
+        "public_updated_at": "2020-09-04T16:14:36Z",
+        "document_type": "answer",
+        "schema_name": "special_route",
+        "base_path": "/eubusiness",
+        "api_path": "/api/content/eubusiness",
+        "withdrawn": false,
+        "content_id": "bb986a97-3b8c-4b1a-89bf-2a9f46be9747",
+        "locale": "en",
+        "api_url": "https://www.gov.uk/api/content/eubusiness",
+        "web_url": "https://www.gov.uk/eubusiness",
+        "links": {}
+      },
+      {
+        "title": "Trade with the UK from 1 January 2021 as a business based in the EU",
+        "public_updated_at": "2020-09-04T16:14:36Z",
+        "document_type": "answer",
+        "schema_name": "special_route",
+        "base_path": "/eubusiness.fr",
+        "api_path": "/api/content/eubusiness.fr",
+        "withdrawn": false,
+        "content_id": "bb986a97-3b8c-4b1a-89bf-2a9f46be9747",
+        "locale": "fr",
+        "api_url": "https://www.gov.uk/api/content/eubusiness.fr",
+        "web_url": "https://www.gov.uk/eubusiness.fr",
+        "links": {}
+      },
+      {
+        "title": "Trade with the UK from 1 January 2021 as a business based in the EU",
+        "public_updated_at": "2020-09-04T16:14:36Z",
+        "document_type": "answer",
+        "schema_name": "special_route",
+        "base_path": "/eubusiness.de",
+        "api_path": "/api/content/eubusiness.de",
+        "withdrawn": false,
+        "content_id": "bb986a97-3b8c-4b1a-89bf-2a9f46be9747",
+        "locale": "de",
+        "api_url": "https://www.gov.uk/api/content/eubusiness.de",
+        "web_url": "https://www.gov.uk/eubusiness.de",
+        "links": {}
+      }
+    ]
+  },
+  "description": "The UK has left the EU. On 31 December 2020 the UK will leave the EU single market and customs union. From 1 January 2021 the rules for trading with the UK will change.",
+  "details": {}
+}
