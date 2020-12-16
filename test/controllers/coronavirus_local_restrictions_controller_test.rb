@@ -87,12 +87,4 @@ describe CoronavirusLocalRestrictionsController do
       end
     end
   end
-
-  describe "POST legacy" do
-    it "redirects to the GET endpoint" do
-      post :legacy, params: { "postcode-lookup" => "E1 8QS" }
-
-      assert_redirected_to find_coronavirus_local_restrictions_path(postcode: "E1 8QS")
-    end
-  end
 end

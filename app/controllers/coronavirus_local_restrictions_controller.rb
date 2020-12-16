@@ -1,6 +1,5 @@
 class CoronavirusLocalRestrictionsController < ApplicationController
   MAX_CACHE_TIME = 30.minutes
-  skip_before_action :verify_authenticity_token, only: [:legacy]
 
   def show
     expires_in(MAX_CACHE_TIME, public: true)
@@ -22,12 +21,6 @@ class CoronavirusLocalRestrictionsController < ApplicationController
 
       render :results
     end
-  end
-
-  # This action is temporary. It exists to prevent errors while the application
-  # transitions from a POST endpoint to a GET one.
-  def legacy
-    redirect_to find_coronavirus_local_restrictions_path(postcode: params["postcode-lookup"])
   end
 
 private
