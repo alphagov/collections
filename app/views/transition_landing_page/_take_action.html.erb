@@ -8,9 +8,9 @@
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
             <%= render "govuk_publishing_components/components/govspeak", {} do %>
-              <p class="take_action_test_class">
-                <%= t("transition_landing_page.take_action_text") %>
-              </p>
+              <%= render "govuk_publishing_components/components/lead_paragraph", {
+                text: t("transition_landing_page.take_action_text")
+              } %>
             <% end %>
             <%= render "govuk_publishing_components/components/button", {
               text: t("transition_landing_page.take_action_start_now"),
