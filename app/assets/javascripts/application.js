@@ -8,6 +8,7 @@
 //= require govuk_publishing_components/components/govspeak
 //= require govuk_publishing_components/components/step-by-step-nav
 //= require govuk_publishing_components/components/error-summary
+//= require govuk_publishing_components/analytics/explicit-cross-domain-links
 
 //= require support
 //= require browse-columns
