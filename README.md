@@ -1,6 +1,13 @@
-# Collections Frontend
+# Collections
 
 Collections serves the GOV.UK navigation pages and organisation pages.
+
+At time of writing, it also serves the priority campaign pages ie:
+-  Coronavirus pages
+- Transition landing page ([ gov.uk/transition](https://www.gov.uk/transition) )
+- DIT landing page ( [gov.uk/eubusiness ](https://www.gov.uk/transition ))
+
+See the [Campaign pages](#campaign-pages) section below for more information.
 
 ## Screenshots
 
@@ -41,7 +48,6 @@ Collections serves the GOV.UK navigation pages and organisation pages.
 ![Step by step page](docs/step-by-step-page.png)
 
 ## Live examples
-
 - Browse page: [gov.uk/browse](https://www.gov.uk/browse)
 - Topic page: [gov.uk/oil-and-gas](https://www.gov.uk/oil-and-gas)
 - Subtopic page: [gov.uk/oil-and-gas/fields-and-wells](https://www.gov.uk/oil-and-gas/fields-and-wells)
@@ -91,15 +97,28 @@ For example:
   include content that is directly tagged to it and also content that has been
   tagged to any of the associated taxons.
 
+## Campaign pages
+
+Collections currently renders the following campaign pages:
+
+#### Transition landing page ([ /transition ](https://www.gov.uk/transition))
+All content for the transition landing pages are currently read from yaml files. [Welsh](config/locales/cy/transition_landing_page.yml) and [English](config/locales/en/transition_landing_page.yml) translations are available.
+
+#### DIT landing page ([ /eubusiness ](https://www.gov.uk/eubusiness))
+All content for the DIT landing pages are currently read from yaml files e.g. for [English](config/locales/en/dit_landing_page.yml). See the [content item's available translations](https://www.gov.uk/api/content/eubusiness) for the current list.
+
+#### Coronavirus pages:
+  - Landing page ( [gov.uk/coronavirus](https://www.gov.uk/coronavirus) )
+  - Postcode lookup service( [gov.uk/find-coronavirus-local-restrictions](https://www.gov.uk/find-coronavirus-local-restrictions) )
+  - Hub pages ( [/getting-tested-for-coronavirus](https://www.gov.uk/getting-tested-for-coronavirus), [/worker-support](https://www.gov.uk/coronavirus/worker-support), [/business-support](https://www.gov.uk/coronavirus/business-support) and [/education-and-childcare](https://www.gov.uk/coronavirus/education-and-childcare) )
 
 ## Technical documentation
 
-This is a public facing Ruby on Rails application that retrieves browse content from APIs and presents it.
-There is no underlying persistence layer and all content is retrieved from external sources.
+This is a public facing Ruby on Rails application that retrieves browse content from APIs and presents it. There is no underlying persistence layer, and (with the exception of the [campaign pages](#campaign-pages)) all content is retrieved from external sources.
 
 ### Content for taxon pages
 
-Content for taxon pages is returned by a search in Rummager based on content_ids for world taxonomy pages and content_ids and [supergroups](https://docs.publishing.service.gov.uk/document-types/content_purpose_supergroup.html) for all other taxonomy pages.
+Content for taxon pages is returned by Search API based on content_ids for world taxonomy pages and content_ids and [supergroups](https://docs.publishing.service.gov.uk/document-types/content_purpose_supergroup.html) for all other taxonomy pages.
 
 ### Dependencies
 
@@ -107,7 +126,7 @@ Content for taxon pages is returned by a search in Rummager based on content_ids
     - Mainstream browse pages (Root, Top and Second level browse pages)
     - Topics
     - Subtopics and their curated lists
-- [rummager](https://github.com/alphagov/rummager), provides:
+- [search api](https://github.com/alphagov/search-api), provides:
     - latest changes for Topics
     - content tagged to a particular Topic, Mainstream browse page or Organisation
 - [email-alert-api](https://github.com/alphagov/email-alert-api), provides:
@@ -115,12 +134,13 @@ Content for taxon pages is returned by a search in Rummager based on content_ids
 
 ### Running the application
 
+- #### With startup scripts
+
 ```
 ./startup.sh
 ```
 
-The app should start on http://localhost:3070 or
-http://collections.dev.gov.uk on GOV.UK development machines.
+The app should start on http://localhost:3070
 
 ```
 ./startup.sh --live
@@ -134,10 +154,23 @@ This will run the app and point it at the production GOV.UK `content-store` and 
 
 This will run the app and point it at the [dummy content store](https://govuk-content-store-examples.herokuapp.com/), which serves the content schema examples and random content.
 
+- #### With govuk-docker
+
+Once you have installed [govuk-docker](https://github.com/alphagov/govuk-docker#installation), do the following
+```
+> cd govuk/govuk-docker
+> git pull origin master
+> make collections
+
+> cd govuk/collections
+> govuk-docker-up
+```
+
+Collections will be running locally at collections.dev.gov.uk.
 
 ### Running the test suite
 
-Use `bundle exec rake` to run the test suite, excluding JavaScript
+Use `bundle exec rake` to run the test suite, excluding JavaScript. Or if you are running in docker, `govuk-docker-run bundle exec rake`
 
 #### Javascript tests
 
