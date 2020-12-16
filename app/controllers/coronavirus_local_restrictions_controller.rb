@@ -14,7 +14,7 @@ class CoronavirusLocalRestrictionsController < ApplicationController
 
     if @search.blank_postcode? || @search.invalid_postcode?
       render
-    elsif @search.no_information?
+    elsif @search.no_restriction? || @search.no_information?
       render :no_information
     else
       expires_in(restriction_expiry(@search), public: true)

@@ -84,6 +84,32 @@ describe PostcodeLocalRestrictionSearch do
     end
   end
 
+  describe "#no_restriction?" do
+    it "returns true when an english postcode has no restriction data" do
+      LocalRestriction.stubs(:find).with("E09000030").returns(nil)
+
+      assert described_class.new("E1 8QS").no_restriction?
+    end
+
+    it "returns false when an english postcode has a restriction" do
+      restriction = LocalRestriction.new("E09000030", { "name" => "London Borough of Tower Hamlets" })
+      LocalRestriction.stubs(:find).with("E09000030").returns(restriction)
+
+      assert_not described_class.new("E1 8QS").no_restriction?
+    end
+
+    it "returns false for a develolved nation postcode" do
+      stub_mapit_has_a_postcode_and_areas("EH7 4EW", [], [{
+        "gss" => "S12000036",
+        "name" => "Edinburgh",
+        "type" => "LBO",
+        "country_name" => "Scotland",
+      }])
+
+      assert_not described_class.new("EH7 4EW").no_restriction?
+    end
+  end
+
   describe "#local_restriction" do
     it "matches a postcode to its local restriction" do
       stub_mapit_has_a_postcode_and_areas("SW1A 2AA", [], [
