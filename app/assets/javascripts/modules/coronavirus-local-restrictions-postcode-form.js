@@ -6,14 +6,35 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
   CoronavirusLocalRestrictionsPostcodeForm.prototype.start = function ($element) {
     var element = $element[0] // access dom element from jQuery
-    var that = this
+    this.trackErrors(element)
 
-    element.addEventListener('submit', function (e) {
-      var input = element.querySelector('input[name=postcode]')
-      if (!input) { return }
+    element.addEventListener('submit', this.submitHandler.bind(this))
+  }
 
-      input.value = that.normalisePostcode(input.value)
-    })
+  CoronavirusLocalRestrictionsPostcodeForm.prototype.trackErrors = function (element) {
+    var errorCode = element.getAttribute('data-error-code')
+    var errorMessage = element.getAttribute('data-error-message')
+
+    if (!errorCode || !errorMessage) { return }
+
+    GOVUK.analytics.trackEvent(
+      'userAlerts:local_lockdown',
+      'postcodeErrorShown: ' + errorCode,
+      { transport: 'beacon', label: errorMessage }
+    )
+  }
+
+  CoronavirusLocalRestrictionsPostcodeForm.prototype.submitHandler = function (event) {
+    var input = event.target.querySelector('input[name=postcode]')
+    if (!input) { return }
+
+    input.value = this.normalisePostcode(input.value)
+
+    GOVUK.analytics.trackEvent(
+      'postcodeSearch:local_lockdown',
+      'postcodeSearchStarted',
+      { transport: 'beacon' }
+    )
   }
 
   CoronavirusLocalRestrictionsPostcodeForm.prototype.normalisePostcode = function (postcode) {
