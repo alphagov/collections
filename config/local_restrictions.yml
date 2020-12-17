@@ -545,7 +545,7 @@ E08000029:
 E08000030:
   name: Walsall Metropolitan Borough Council
   restrictions:
-    - alert_level: 3
+    - alert_level: 1
       start_date: 2020-12-02
       start_time: "00:01"
 E08000031:
