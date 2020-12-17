@@ -176,9 +176,6 @@ E06000030:
     - alert_level: 2
       start_date: 2020-12-02
       start_time: "00:01"
-    - alert_level: 3
-      start_date: 2020-12-19
-      start_time: "00:01"
 E06000031:
   name: Peterborough City Council
   restrictions:
