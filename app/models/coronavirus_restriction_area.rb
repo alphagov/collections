@@ -1,11 +1,11 @@
-class LocalRestriction
+class CoronavirusRestrictionArea
   def self.find(gss_code)
     all.find { |restriction| restriction.gss_code == gss_code }
   end
 
   def self.all
     @all ||= begin
-      restriction_data = YAML.load_file(Rails.root.join("config/local_restrictions.yml"))
+      restriction_data = YAML.load_file(Rails.root.join("config/coronavirus_restriction_areas.yml"))
       restriction_data.map { |gss_code, data| new(gss_code, data) }
     end
   end

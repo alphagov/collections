@@ -1,19 +1,19 @@
 require "test_helper"
 
-describe LocalRestriction do
+describe CoronavirusRestrictionArea do
   describe ".all" do
-    it "contains an array of LocalRestriction models" do
+    it "contains an array of CoronavirusRestrictionArea models" do
       assert(described_class.all.all? { |item| item.is_a?(described_class) })
     end
   end
 
   describe ".find" do
-    it "can find a LocalRestriction by gss_code" do
+    it "can find a CoronavirusRestrictionArea by gss_code" do
       gss_code = described_class.all.first.gss_code
       assert gss_code, described_class.find(gss_code).gss_code
     end
 
-    it "returns nil if it can't find a LocalRestriction" do
+    it "returns nil if it can't find a CoronavirusRestrictionArea" do
       assert_nil described_class.find("not-a-gss-code")
     end
   end
