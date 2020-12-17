@@ -56,7 +56,7 @@ en:
         scotland:
           guidance:
            label: Find out what the rules are in Scotland
-           link: "https://www.gov.scot/check-local-covid-level/"
+           link: "https://www.gov.scot/check-local-covid-level/#!/%{postcode}"
         wales:
           guidance:
             label: Find out what the rules are in Wales

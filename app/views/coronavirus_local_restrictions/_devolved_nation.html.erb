@@ -22,7 +22,7 @@
   <% if location.scotland? %>
     <%= render "govuk_publishing_components/components/button", {
       text: t("coronavirus_local_restrictions.results.devolved_nations.scotland.guidance.label"),
-      href: t("coronavirus_local_restrictions.results.devolved_nations.scotland.guidance.link"),
+      href: t("coronavirus_local_restrictions.results.devolved_nations.scotland.guidance.link", postcode: postcode.gsub(/\s+/, '')),
       margin_bottom: 9
     } %>
   <% elsif location.northern_ireland? %>
