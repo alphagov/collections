@@ -1,28 +1,30 @@
 <%
   sections ||= false
+  accordion_contents = []
 %>
 <% if sections %>
-  <div data-module="collections-accordion" class="app-c-accordion js-hidden">
-    <% sections.each_with_index do |section, index| %>
-      <%
-        id = section[:id] || section[:title].downcase.tr(" ","-")
-      %>
-      <div class="app-c-accordion__section js-section" id="<%= id %>" data-track-count="accordionSection">
-        <div class="app-c-accordion__header js-toggle-panel">
-          <h2 class="app-c-accordion__title js-section-title">
-            <%= section[:title] %>
-          </h2>
-          <% if section[:description].present? %>
-            <p class="app-c-accordion__description">
-              <%= section[:description] %>
-            </p>
-          <% end %>
-        </div>
-
-        <div class="app-c-accordion__panel js-panel" id="section-panel-<%= id %>-<%= index + 1 %>">
-          <%= section[:panel] %>
-        </div>
-      </div>
-    <% end %>
-  </div>
+  <% sections.each_with_index do |section, index| %>
+    <% id = section[:id] || section[:title].downcase.tr(" ","-")%>
+    <%
+    accordion_contents << {
+      id: id,
+      data_attributes: {
+        "track-count": "accordionSection",
+        id: "section-panel-#{id}-#{index + 1}",
+      },
+      heading: {
+          text: section[:title],
+        },
+        summary: {
+          text: section[:description].presence,
+        },
+        content: {
+          html: section[:panel]
+        },
+      }
+    %>
+  <% end %>
+  <%= render "govuk_publishing_components/components/accordion", {
+      items: accordion_contents
+  } %>
 <% end %>

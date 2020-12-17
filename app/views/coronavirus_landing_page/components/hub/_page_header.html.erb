@@ -5,7 +5,6 @@
       collapse_on_mobile: true,
       inverse: true
     } %>
-
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <% title_link = capture do %>
@@ -33,7 +32,7 @@
   <div class="covid__page-header-light covid__page-header-light--hub">
     <div class="govuk-width-container">
       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-grid-column-two-thirds covid__page-header-list">
           <%= render "govuk_publishing_components/components/heading", {
             text: header["pretext"],
             font_size: 19,
@@ -45,11 +44,11 @@
               <%= header["list_heading"] %>
             </p>
           <% end %>
-          <ul class="covid__list covid__list--header">
-            <% header["list"].each do | item | %>
-              <li class="covid__list-item"><%= item %></li>
-            <% end %>
-          </ul>
+          <%= render "govuk_publishing_components/components/list", {
+            extra_spacing: true,
+            visible_counters: true,
+            items: header["list"],
+          } %>
           <% if header["education-pretext"].present? %>
             <p class="govuk-body covid__inverse">
               <%= header["education-pretext"]["text"] %>
@@ -57,10 +56,10 @@
                 <% link_to country["label"], country["url"], class: "covid__page-header-link govuk-link" %>
               <% end %>
               <%= countries.to_sentence(last_word_connector: ' and ').html_safe %>.
-          <% end %>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <%= render 'coronavirus_landing_page/components/hub/guidance_section', guidance: guidance, email_signup: notifications %>
-</header>
+    <%= render 'coronavirus_landing_page/components/hub/guidance_section', guidance: guidance, email_signup: notifications %>
+  </header>

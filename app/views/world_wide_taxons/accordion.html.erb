@@ -7,7 +7,6 @@
     }
   )
 %>
-
 <% if presented_taxon.accordion_content.present? %>
   <div class="govuk-grid-row child-topic-contents">
     <div class="govuk-grid-column-two-thirds">
@@ -31,9 +30,9 @@
             }
           %>
         <% end %>
-
         <%= render 'components/accordion', sections: accordion_contents %>
       </div>
     </div>
   </div>
 <% end %>
+

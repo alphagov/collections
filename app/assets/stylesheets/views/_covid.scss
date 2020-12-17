@@ -24,10 +24,29 @@ $c19-landing-page-header-background: #0843a1;
   border-top: solid govuk-spacing(2) $covid-yellow;
   background-color: $c19-landing-page-header-background;
   color: govuk-colour("white");
+
+  .covid__page-header-link {
+    font-weight: normal;
+
+    &:link,
+    &:visited {
+      color: govuk-colour("white");
+    }
+
+    &:focus {
+      color: $govuk-text-colour;
+    }
+  }
 }
 
 .covid__page-header--business {
   background-color: $covid-grey;
+}
+
+.covid__page-header-list {
+  .govuk-list {
+    color: govuk-colour("white");
+  }
 }
 
 .covid__page-header--hub {
@@ -113,19 +132,6 @@ $c19-landing-page-header-background: #0843a1;
 
   @include govuk-media-query($from: tablet) {
     position: relative;
-  }
-}
-
-.covid__page-header .covid__page-header-link {
-  font-weight: normal;
-
-  &:link,
-  &:visited {
-    color: govuk-colour("white");
-  }
-
-  &:focus {
-    color: $govuk-text-colour;
   }
 }
 
