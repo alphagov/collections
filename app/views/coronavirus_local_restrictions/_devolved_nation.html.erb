@@ -15,6 +15,10 @@
   <p class="govuk-body">
     <%= t("coronavirus_local_restrictions.results.match") %> <strong><%= postcode %></strong> to <strong><%= location_lookup.lower_tier_area_name %></strong>.
   </p>
+  <p class="govuk-body">
+    <%= t("coronavirus_local_restrictions.results.devolved_nations.country_rules", country: location.country) %>
+  </p>
+
   <% if location.scotland? %>
     <%= render "govuk_publishing_components/components/button", {
       text: t("coronavirus_local_restrictions.results.devolved_nations.scotland.guidance.label"),

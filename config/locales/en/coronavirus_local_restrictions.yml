@@ -52,6 +52,7 @@ en:
         guidance_link: "/guidance/tier-3-very-high-alert"
       devolved_nations:
         heading: There might be restrictions in this area
+        country_rules: The rules are different in %{country}.
         scotland:
           guidance:
            label: Find out what the rules are in Scotland
