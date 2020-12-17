@@ -1,24 +1,24 @@
-class MapitPostcodeResponse
-  attr_reader :location
+class MapitLocation
+  attr_reader :area
 
-  def initialize(location)
-    @location = location
+  def initialize(area)
+    @area = area
   end
 
   def gss
-    location["codes"]["gss"]
+    area["codes"]["gss"]
   end
 
   def area_name
-    location["name"]
+    area["name"]
   end
 
   def country
-    location["country_name"]
+    area["country_name"]
   end
 
   def area_type
-    location["type"]
+    area["type"]
   end
 
   def england?
