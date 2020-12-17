@@ -43,7 +43,11 @@
     <%= form_tag find_coronavirus_local_restrictions_path,
       method: :get,
       class: "coronavirus-local-restrictions__postcode-form",
-      data: { module: "coronavirus-local-restrictions-postcode-form" } do |f| %>
+      data: {
+        module: "coronavirus-local-restrictions-postcode-form",
+        "error-code": @search&.error_code,
+        "error-message": error_key ? t("coronavirus_local_restrictions.errors.#{error_key}.error_description") : nil,
+      } do |f| %>
       <div class="postcode-lookup">
         <%= render "govuk_publishing_components/components/input", {
           id: "postcode",
