@@ -33,22 +33,6 @@ class MapitLocation
     area.country_name
   end
 
-  def england?
-    country == "England"
-  end
-
-  def scotland?
-    country == "Scotland"
-  end
-
-  def wales?
-    country == "Wales"
-  end
-
-  def northern_ireland?
-    country == "Northern Ireland"
-  end
-
 private
 
   attr_reader :area

@@ -60,47 +60,10 @@ describe MapitLocation do
     end
   end
 
-  def mapit_area(**attributes)
-    OpenStruct.new(
-      codes: { "gss" => attributes.fetch(:gss, "E01000123") },
-      name: attributes.fetch(:name, "Coruscant Planetary Council"),
-      type: attributes.fetch(:type, "LBO"),
-      country_name: attributes.fetch(:country_name, "England"),
-    )
-  end
-
   describe "#gss" do
     it "returns the area's gss code" do
-      instance = described_class.new(mapit_area(gss: "E01000456"))
-      assert_equal "E01000456", instance.gss
-    end
-  end
-
-  describe "#england?" do
-    it "returns true if the country is England" do
-      instance = described_class.new(mapit_area(country_name: "England"))
-      assert instance.england?
-    end
-  end
-
-  describe "#scotland?" do
-    it "returns true if the country is Scotland" do
-      instance = described_class.new(mapit_area(country_name: "Scotland"))
-      assert instance.scotland?
-    end
-  end
-
-  describe "#wales?" do
-    it "returns true if the country is Wales" do
-      instance = described_class.new(mapit_area(country_name: "Wales"))
-      assert instance.wales?
-    end
-  end
-
-  describe "#northern_ireland?" do
-    it "returns true if the country is Northern Ireland" do
-      instance = described_class.new(mapit_area(country_name: "Northern Ireland"))
-      assert instance.northern_ireland?
+      instance = described_class.new(OpenStruct.new(codes: { "gss" => "E01000123" }))
+      assert_equal "E01000123", instance.gss
     end
   end
 end
