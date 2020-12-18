@@ -1,5 +1,8 @@
-<% if restriction.present? && restriction.future.present? %>
-  <% date = restriction.future["start_date"].strftime("%-d %B") %>
+<% if result.future_restriction %>
+  <%
+    future_restriction = result.future_restriction
+    date = future_restriction.start_time.strftime("%-d %B")
+  %>
 
   <%= render "govuk_publishing_components/components/heading", {
     text: t("coronavirus_local_restrictions.results.future.heading", date: date),
@@ -8,46 +11,46 @@
     mobile_top_margin: true,
   } %>
 
-  <% if restriction.future_alert_level == 1 %>
+  <% if future_restriction.tier_one? %>
     <p class="govuk-body">
-      <%= t("coronavirus_local_restrictions.results.future.level_one.alert_level", area: restriction.area_name) %>
+      <%= t("coronavirus_local_restrictions.results.future.level_one.alert_level", area: result.area_name) %>
     </p>
 
     <%= render "govuk_publishing_components/components/button", {
-      text: t("coronavirus_local_restrictions.results.guidance_label", level: restriction.future_alert_level),
+      text: t("coronavirus_local_restrictions.results.guidance_label", level: future_restriction.alert_level),
       href: t("coronavirus_local_restrictions.results.level_one.guidance_link"),
       secondary_solid: true,
       margin_bottom: 9
     } %>
-  <% elsif restriction.future_alert_level == 2 %>
+  <% elsif future_restriction.tier_two? %>
     <p class="govuk-body">
-      <%= t("coronavirus_local_restrictions.results.future.level_two.alert_level", area: restriction.area_name) %>
+      <%= t("coronavirus_local_restrictions.results.future.level_two.alert_level", area: result.area_name) %>
     </p>
 
     <%= render "govuk_publishing_components/components/button", {
-      text: t("coronavirus_local_restrictions.results.guidance_label", level: restriction.future_alert_level),
+      text: t("coronavirus_local_restrictions.results.guidance_label", level: future_restriction.alert_level),
       href: t("coronavirus_local_restrictions.results.level_two.guidance_link"),
       secondary_solid: true,
       margin_bottom: 9
     } %>
-  <% elsif restriction.future_alert_level == 3 %>
+  <% elsif future_restriction.tier_three? %>
     <p class="govuk-body">
-      <%= t("coronavirus_local_restrictions.results.future.level_three.alert_level", area: restriction.area_name) %>
+      <%= t("coronavirus_local_restrictions.results.future.level_three.alert_level", area: result.area_name) %>
     </p>
 
     <%= render "govuk_publishing_components/components/button", {
-      text: t("coronavirus_local_restrictions.results.guidance_label", level: restriction.future_alert_level),
+      text: t("coronavirus_local_restrictions.results.guidance_label", level: future_restriction.alert_level),
       href: t("coronavirus_local_restrictions.results.level_three.guidance_link"),
       secondary_solid: true,
       margin_bottom: 9
     } %>
-  <% elsif restriction.future_alert_level == 4 %>
+  <% elsif future_restriction.tier_four? %>
     <p class="govuk-body">
-      <%= t("coronavirus_local_restrictions.results.future.level_four.alert_level", area: restriction.area_name) %>
+      <%= t("coronavirus_local_restrictions.results.future.level_four.alert_level", area: result.area_name) %>
     </p>
 
     <%= render "govuk_publishing_components/components/button", {
-      text: t("coronavirus_local_restrictions.results.guidance_label", level: restriction.future_alert_level),
+      text: t("coronavirus_local_restrictions.results.guidance_label", level: future_restriction.alert_level),
       href: t("coronavirus_local_restrictions.results.level_four.guidance_link"),
       secondary_solid: true,
       margin_bottom: 9
