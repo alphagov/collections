@@ -1,7 +1,7 @@
 require "test_helper"
 require "gds_api/test_helpers/mapit"
 
-describe PostcodeLocalRestrictionSearch do
+describe CoronavirusRestrictionSearch do
   include GdsApi::TestHelpers::Mapit
 
   before do

@@ -1,4 +1,4 @@
-class PostcodeLocalRestrictionSearch
+class CoronavirusRestrictionSearch
   UK_POSTCODE_PATTERN = %r{
     \A
     # Outward code, for example SW1A
