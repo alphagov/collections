@@ -52,10 +52,11 @@ en:
         guidance_link: "/guidance/tier-3-very-high-alert"
       devolved_nations:
         heading: There might be restrictions in this area
+        country_rules: The rules are different in %{country}.
         scotland:
           guidance:
            label: Find out what the rules are in Scotland
-           link: "https://www.gov.scot/check-local-covid-level/"
+           link: "https://www.gov.scot/check-local-covid-level/#!/%{postcode}"
         wales:
           guidance:
             label: Find out what the rules are in Wales
