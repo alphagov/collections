@@ -13,6 +13,26 @@ describe PostcodeLocalRestrictionSearch do
     }])
   end
 
+  describe "UK_POSTCODE_PATTERN" do
+    let(:pattern) { described_class::UK_POSTCODE_PATTERN }
+
+    it "matches valid postcodes" do
+      assert_match pattern, "sw1a 2aa"
+      assert_match pattern, "LS11UR"
+      assert_match pattern, "BT15 3JX"
+    end
+
+    it "doesn't match invalid postcodes" do
+      assert_no_match pattern, "sw1a"
+      assert_no_match pattern, "LS 11UR"
+      assert_no_match pattern, " BT15 3JX "
+    end
+
+    it "doesn't match quirky non-geographical postcodes" do
+      assert_no_match pattern, "GIR 0AA"
+    end
+  end
+
   describe "#sanitised_postcode" do
     it "returns the postcode as a formatted UK postcode" do
       instance = described_class.new("e18qs")

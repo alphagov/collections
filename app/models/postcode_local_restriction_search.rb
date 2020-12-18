@@ -1,16 +1,12 @@
 class PostcodeLocalRestrictionSearch
   UK_POSTCODE_PATTERN = %r{
     \A
-    ([Gg][Ii][Rr] 0[Aa]{2}) # Unusual postcodes
-    |
-    (
-      # Outward code, for example SW1A
-      (([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))
-      \s?
-      [0-9][A-Za-z]{2} # Inward code, for example 2AA
-    )
+    # Outward code, for example SW1A
+    (([A-Z][0-9]{1,2})|(([A-Z][A-HJ-Y][0-9]{1,2})|(([A-Z][0-9][A-Z])|([A-Z][A-HJ-Y][0-9][A-Z]?))))
+    \s?
+    [0-9][A-Z]{2} # Inward code, for example 2AA
     \Z
-  }x.freeze
+  }xi.freeze
 
   attr_reader :postcode
   delegate :no_information?, to: :location_lookup
