@@ -49,5 +49,38 @@ describe TransitionLandingPageController do
         end
       end
     end
+
+    describe "BrexitChecker AB test" do
+      context "In the en locale" do
+        %w[A Z].each do |variant|
+          it "Variant #{variant} shows the default button text" do
+            with_variant BrexitChecker: variant do
+              get :show
+              assert_select ".govuk-button", text: "Start now"
+            end
+          end
+        end
+
+        it "Variant B shows the alternate button text" do
+          with_variant BrexitChecker: "B" do
+            get :show
+            assert_select ".govuk-button", text: "Brexit checker: start now"
+          end
+        end
+      end
+
+      context "In the cy locale" do
+        %w[A B Z].each do |variant|
+          it "All variants shows the default button text" do
+            setup_ab_variant("BrexitChecker", variant)
+            get :show, params: { locale: "cy" }
+            assert_select ".govuk-button", text: "Dechrau nawr"
+
+            # we don't want to set Vary headers for pages that are not modified
+            assert_response_not_modified_for_ab_test("BrexitChecker")
+          end
+        end
+      end
+    end
   end
 end
