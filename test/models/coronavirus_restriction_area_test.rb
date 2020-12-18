@@ -18,6 +18,23 @@ describe CoronavirusRestrictionArea do
     end
   end
 
+  describe "#initialize" do
+    it "raises an error when initialised without any current restrictions" do
+      assert_raises RuntimeError do
+        described_class.new("gss-code", {
+          "name" => "Tattooine",
+          "restrictions" => [
+            {
+              "alert_level" => 2,
+              "start_date" => Date.tomorrow,
+              "start_time" => "10:00",
+            },
+          ],
+        })
+      end
+    end
+  end
+
   describe "#restrictions" do
     it "returns an array of CoronavirusRestrictionArea::Restriction objects" do
       instance = described_class.new("gss-code", {
@@ -51,37 +68,29 @@ describe CoronavirusRestrictionArea do
 
       restriction = instance.current_restriction
       assert_instance_of described_class::Restriction, restriction
-      assert_equal 2, restriction.alert_level
-      assert_equal Time.zone.parse("2020-10-1 10:00"), restriction.start_time
-    end
-
-    it "returns nil when there are no current restrictions" do
-      instance = described_class.new("gss-code", {
-        "name" => "Naboo",
-        "restrictions" => [
-          { "alert_level" => 2, "start_date" => Date.new(2021, 1, 1), "start_time" => "10:00" },
-        ],
-      })
-
-      travel_to(Time.zone.parse("2020-12-01")) do
-        assert_nil instance.current_restriction
-      end
+      assert_equal second_restriction["alert_level"], restriction.alert_level
+      assert_equal Time.zone.parse("#{second_restriction['start_date']} #{second_restriction['start_time']}"),
+                   restriction.start_time
     end
   end
 
   describe "#future_restriction" do
     it "returns the restriction in the future with the earliest start date" do
-      first_restriction = { "alert_level" => 3, "start_date" => Date.new(2021, 8, 1), "start_time" => "10:00" }
-      second_restriction = { "alert_level" => 2, "start_date" => Date.new(2021, 10, 1), "start_time" => "10:00" }
+      current_restriction = { "alert_level" => 1, "start_date" => Date.new(2020, 8, 1), "start_time" => "10:00" }
+      next_restriction = { "alert_level" => 3, "start_date" => Date.new(2021, 8, 1), "start_time" => "10:00" }
+      further_restriction = { "alert_level" => 2, "start_date" => Date.new(2021, 10, 1), "start_time" => "10:00" }
+
       instance = described_class.new("gss-code", {
         "name" => "Mandalore",
-        "restrictions" => [first_restriction, second_restriction],
+        "restrictions" => [current_restriction, next_restriction, further_restriction],
       })
+
       travel_to(Time.zone.parse("2020-12-01")) do
         restriction = instance.future_restriction
         assert_instance_of described_class::Restriction, restriction
-        assert_equal 3, restriction.alert_level
-        assert_equal Time.zone.parse("2021-8-1 10:00"), restriction.start_time
+        assert_equal next_restriction["alert_level"], restriction.alert_level
+        assert_equal Time.zone.parse("#{next_restriction['start_date']} #{next_restriction['start_time']}"),
+                     restriction.start_time
       end
     end
 

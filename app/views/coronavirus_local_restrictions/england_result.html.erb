@@ -8,13 +8,13 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <% if @result.current_restriction&.tier_one? %>
+    <% if @result.current_restriction.tier_one? %>
       <%= render partial: "coronavirus_local_restrictions/tier_one_restrictions", locals: { result: @result } %>
-    <% elsif @result.current_restriction&.tier_two? %>
+    <% elsif @result.current_restriction.tier_two? %>
       <%= render partial: "coronavirus_local_restrictions/tier_two_restrictions", locals: { result: @result } %>
-    <% elsif @result.current_restriction&.tier_three? %>
+    <% elsif @result.current_restriction.tier_three? %>
       <%= render partial: "coronavirus_local_restrictions/tier_three_restrictions", locals: { result: @result } %>
-    <% elsif @result.current_restriction&.tier_four? %>
+    <% elsif @result.current_restriction.tier_four? %>
       <%= render partial: "coronavirus_local_restrictions/tier_four_restrictions", locals: { result: @result } %>
     <% end %>
   </div>

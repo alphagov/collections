@@ -18,6 +18,7 @@ class CoronavirusRestrictionArea
     @restrictions = attributes.fetch("restrictions", []).map do |restriction|
       Restriction.new(restriction)
     end
+    raise "#{gss_code} does not have a current restriction" unless current_restriction
   end
 
   def current_restriction

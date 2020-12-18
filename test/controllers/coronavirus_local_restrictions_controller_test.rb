@@ -53,8 +53,13 @@ describe CoronavirusLocalRestrictionsController do
     end
 
     it "renders the England result template for an area with restriction information" do
-      area = CoronavirusRestrictionArea.new("E01000123",
-                                            { "name" => "Coruscant Planetary Council" })
+      area = CoronavirusRestrictionArea.new(
+        "E01000123",
+        {
+          "name" => "Coruscant Planetary Council",
+          "restrictions" => [{ "alert_level" => 1, "start_date" => Date.yesterday, "start_time" => "00:01" }],
+        },
+      )
       CoronavirusRestrictionArea.stubs(:find).returns(area)
 
       postcode = "E1 8QS"
@@ -76,6 +81,11 @@ describe CoronavirusLocalRestrictionsController do
         {
           "name" => "Coruscant Planetary Council",
           "restrictions" => [
+            {
+              "alert_level" => 2,
+              "start_date" => Date.new(2020, 12, 1),
+              "start_time" => "10:00",
+            },
             {
               "alert_level" => 3,
               "start_date" => Date.new(2020, 12, 15),
