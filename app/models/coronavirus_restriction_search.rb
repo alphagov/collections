@@ -8,26 +8,23 @@ class CoronavirusRestrictionSearch
     \Z
   }xi.freeze
 
-  attr_reader :postcode
-  delegate :no_information?, to: :location_lookup
+  attr_reader :postcode, :error_code
 
   def initialize(postcode)
     @postcode = postcode
-  end
+    @error_code = if postcode.empty?
+                    "postcodeLeftBlank"
+                  elsif sanitised_postcode.empty?
+                    "postcodeLeftBlankSanitized"
+                  elsif !sanitised_postcode.match(UK_POSTCODE_PATTERN)
+                    "invalidPostcodeFormat"
+                  end
 
-  def sanitised_postcode
-    # Use the uk_postcode gem to potentially transpose O/0 and I/1.
-    @sanitised_postcode ||= UKPostcode.parse(
-      postcode.gsub(/[^a-z0-9 ]/i, "").strip,
-    ).to_s
-  end
-
-  def error_code
-    return "postcodeLeftBlank" if postcode.empty?
-    return "postcodeLeftBlankSanitized" if sanitised_postcode.empty?
-    return "invalidPostcodeFormat" unless sanitised_postcode.match?(UK_POSTCODE_PATTERN)
-    return "fullPostcodeNoMapitMatch" if location_lookup.postcode_not_found?
-    return "fullPostcodeNoMapitValidation" if location_lookup.invalid_postcode?
+    @locations = MapitLocation.locations_for_postcode(sanitised_postcode) unless @error_code
+  rescue MapitLocation::LocationNotFound
+    @error_code = "fullPostcodeNoMapitMatch"
+  rescue MapitLocation::LocationInvalid
+    @error_code = "fullPostcodeNoMapitValidation"
   end
 
   def blank_postcode?
@@ -38,19 +35,54 @@ class CoronavirusRestrictionSearch
     %w[invalidPostcodeFormat fullPostcodeNoMapitValidation].include?(error_code)
   end
 
-  def no_restriction?
-    location_lookup.data.first&.england? && local_restriction.nil?
+  def devolved_nation?
+    ["Northern Ireland", "Scotland", "Wales"].include?(locations&.first&.country)
   end
 
-  def location_lookup
-    @location_lookup ||= LocationLookupService.new(sanitised_postcode)
+  def england_result
+    return if error_code || locations.empty? || devolved_nation?
+
+    @england_result ||= begin
+      restriction_areas = locations.filter_map do |area|
+        CoronavirusRestrictionArea.find(area.gss)
+      end
+
+      EnglandResult.new(sanitised_postcode, restriction_areas.first) if restriction_areas.any?
+    end
   end
 
-  def local_restriction
-    return if error_code || location_lookup.no_information?
+  def devolved_nation_result
+    return if error_code || locations.empty? || !devolved_nation?
 
-    @local_restriction ||= location_lookup.data
-                                          .filter_map { |area| LocalRestriction.find(area.gss) }
-                                          .first
+    @devolved_nation_result ||= DevolvedNationResult.new(sanitised_postcode, locations)
+  end
+
+private
+
+  attr_reader :locations
+
+  def sanitised_postcode
+    # Use the uk_postcode gem to potentially transpose O/0 and I/1.
+    @sanitised_postcode ||= UKPostcode.parse(
+      postcode.gsub(/[^a-z0-9 ]/i, "").strip,
+    ).to_s
+  end
+
+  class CoronavirusRestrictionSearch::EnglandResult
+    attr_reader :postcode
+    delegate :future_restriction, :current_restriction, to: :area
+
+    def initialize(postcode, area)
+      @postcode = postcode
+      @area = area
+    end
+
+    def area_name
+      area.name
+    end
+
+  private
+
+    attr_reader :area
   end
 end

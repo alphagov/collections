@@ -11,6 +11,13 @@ describe CoronavirusRestrictionSearch do
       "type" => "LBO",
       "country_name" => "England",
     }])
+
+    stub_mapit_has_a_postcode_and_areas("EH1 1BE", [], [{
+      "gss" => "S12000036",
+      "name" => "City of Edinburgh Council",
+      "type" => "UTA",
+      "country_name" => "Scotland",
+    }])
   end
 
   describe "UK_POSTCODE_PATTERN" do
@@ -30,23 +37,6 @@ describe CoronavirusRestrictionSearch do
 
     it "doesn't match quirky non-geographical postcodes" do
       assert_no_match pattern, "GIR 0AA"
-    end
-  end
-
-  describe "#sanitised_postcode" do
-    it "returns the postcode as a formatted UK postcode" do
-      instance = described_class.new("e18qs")
-      assert_equal "E1 8QS", instance.sanitised_postcode
-    end
-
-    it "accepts postcodes that have non-alphanumeric characters" do
-      instance = described_class.new("E1!@£$%^&*8QS")
-      assert_equal "E1 8QS", instance.sanitised_postcode
-    end
-
-    it "accepts and fixes common character errors in postcodes" do
-      instance = described_class.new("EI 8QS")
-      assert_equal "E1 8QS", instance.sanitised_postcode
     end
   end
 
@@ -104,34 +94,18 @@ describe CoronavirusRestrictionSearch do
     end
   end
 
-  describe "#no_restriction?" do
-    it "returns true when an english postcode has no restriction data" do
-      LocalRestriction.stubs(:find).with("E09000030").returns(nil)
-
-      assert described_class.new("E1 8QS").no_restriction?
+  describe "#devolved_nation?" do
+    it "returns true for a non-England UK nation" do
+      assert described_class.new("EH1 1BE").devolved_nation?
     end
 
-    it "returns false when an english postcode has a restriction" do
-      restriction = LocalRestriction.new("E09000030", { "name" => "London Borough of Tower Hamlets" })
-      LocalRestriction.stubs(:find).with("E09000030").returns(restriction)
-
-      assert_not described_class.new("E1 8QS").no_restriction?
-    end
-
-    it "returns false for a develolved nation postcode" do
-      stub_mapit_has_a_postcode_and_areas("EH7 4EW", [], [{
-        "gss" => "S12000036",
-        "name" => "Edinburgh",
-        "type" => "LBO",
-        "country_name" => "Scotland",
-      }])
-
-      assert_not described_class.new("EH7 4EW").no_restriction?
+    it "returns false for a location within England" do
+      assert_not described_class.new("E1 8QS").devolved_nation?
     end
   end
 
-  describe "#local_restriction" do
-    it "matches a postcode to its local restriction" do
+  describe "#england_result" do
+    it "returns an EnglandResult object when a restriction if found" do
       stub_mapit_has_a_postcode_and_areas("SW1A 2AA", [], [
         {
           "gss" => "E32000014",
@@ -147,35 +121,67 @@ describe CoronavirusRestrictionSearch do
         },
       ])
 
-      LocalRestriction.stubs(:find).with("E32000014").returns(nil)
-      restriction = LocalRestriction.new("E09000033", { "name" => "Westminster City Council" })
-      LocalRestriction.stubs(:find).with("E09000033").returns(restriction)
-
-      assert_equal restriction, described_class.new("SW1A 2AA").local_restriction
-    end
-
-    it "returns nil when the area doesn't have a local restriction" do
-      stub_mapit_has_a_postcode_and_areas("SW1A 2AA", [], [
+      CoronavirusRestrictionArea.stubs(:find).with("E32000014").returns(nil)
+      area = CoronavirusRestrictionArea.new(
+        "E09000033",
         {
-          "gss" => "E09000033",
           "name" => "Westminster City Council",
-          "type" => "LBO",
-          "country_name" => "England",
+          "restrictions" => [
+            {
+              "alert_level" => 1,
+              "start_date" => Date.yesterday,
+              "start_time" => "00:01",
+            },
+          ],
         },
-      ])
-      LocalRestriction.stubs(:find).with("E09000033").returns(nil)
+      )
+      CoronavirusRestrictionArea.stubs(:find).with("E09000033").returns(area)
 
-      assert_nil described_class.new("SW1A 2AA").local_restriction
+      instance = described_class.new("SW1A 2AA")
+      assert_instance_of described_class::EnglandResult, instance.england_result
+      assert 1, instance.england_result.current_restriction.alert_level
     end
 
-    it "returns nil when the postcode has an error" do
-      assert_nil described_class.new("not-a-postcode").local_restriction
+    it "returns nil for an English postcode where no restriction is found" do
+      CoronavirusRestrictionArea.stubs(:find).returns(nil)
+
+      assert_nil described_class.new("E1 8QS").england_result
     end
 
-    it "returns nil when Mapit has no information for the location" do
+    it "returns nil when the input has an error" do
+      assert_nil described_class.new("").england_result
+    end
+
+    it "returns nil where mapit doesn't have any areas for the postcode" do
       stub_mapit_has_a_postcode_and_areas("SW1A 2AA", [], [])
 
-      assert_nil described_class.new("SW1A 2AA").local_restriction
+      assert_nil described_class.new("SW1A 2AA").england_result
+    end
+
+    it "returns nil for a devolved nation" do
+      assert_nil described_class.new("EH1 1BE").england_result
+    end
+  end
+
+  describe "#devolved_nation_result" do
+    it "returns an DevolvedNationResult object when a location is found" do
+      instance = described_class.new("EH1 1BE")
+      assert_instance_of described_class::DevolvedNationResult, instance.devolved_nation_result
+      assert "Scotland", instance.devolved_nation_result.country
+    end
+
+    it "returns nil when the input has an error" do
+      assert_nil described_class.new("").devolved_nation_result
+    end
+
+    it "returns nil where mapit doesn't have any areas for the postcode" do
+      stub_mapit_has_a_postcode_and_areas("G1 1BX", [], [])
+
+      assert_nil described_class.new("G1 1BX").devolved_nation_result
+    end
+
+    it "returns nil for an English postcode" do
+      assert_nil described_class.new("E1 8QS").devolved_nation_result
     end
   end
 end
