@@ -16,7 +16,7 @@
   <%= render 'govuk_publishing_components/components/contextual_breadcrumbs', content_item: @content_item %>
 <% end %>
 
-<div class="govuk-grid-row" data-module="coronavirus-track-local-restrictions">
+<div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <% if error_key %>
       <%= render "govuk_publishing_components/components/error_summary", {
@@ -25,10 +25,6 @@
           {
             text: t("coronavirus_local_restrictions.errors.#{error_key}.error_description"),
             href: "#postcode",
-            data_attributes: {
-              tracking: "local-restrictions-postcode-error",
-              "error-code": @search.error_code,
-            }
           }
         ]
       } %>
@@ -40,7 +36,14 @@
 
     <%= sanitize(t("coronavirus_local_restrictions.lookup.body_content")) %>
 
-    <%= form_tag find_coronavirus_local_restrictions_path, method: :get, class: "coronavirus-local-restrictions__postcode-form" do |f| %>
+    <%= form_tag find_coronavirus_local_restrictions_path,
+      method: :get,
+      class: "coronavirus-local-restrictions__postcode-form",
+      data: {
+        module: "coronavirus-local-restrictions-postcode-form",
+        "error-code": @search&.error_code,
+        "error-message": error_key ? t("coronavirus_local_restrictions.errors.#{error_key}.error_description") : nil,
+      } do |f| %>
       <div class="postcode-lookup">
         <%= render "govuk_publishing_components/components/input", {
           id: "postcode",
