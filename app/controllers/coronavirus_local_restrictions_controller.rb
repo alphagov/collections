@@ -10,16 +10,21 @@ class CoronavirusLocalRestrictionsController < ApplicationController
       return
     end
 
-    @search = PostcodeLocalRestrictionSearch.new(params[:postcode])
+    @search = CoronavirusRestrictionSearch.new(params[:postcode])
 
     if @search.blank_postcode? || @search.invalid_postcode?
       render
-    elsif @search.no_restriction? || @search.no_information?
-      render :no_information
-    else
-      expires_in(restriction_expiry(@search), public: true)
+    elsif @search.devolved_nation_result
+      @result = @search.devolved_nation_result
 
-      render :results
+      render :devolved_nation_result
+    elsif @search.england_result
+      @result = @search.england_result
+
+      expires_in(restriction_expiry(@result), public: true)
+      render :england_result
+    else
+      render :no_information
     end
   end
 
@@ -34,13 +39,10 @@ private
     end
   end
 
-  def restriction_expiry(search)
-    return MAX_CACHE_TIME unless search.local_restriction&.future
+  def restriction_expiry(england_result)
+    return MAX_CACHE_TIME unless england_result.future_restriction
 
-    future_restriction = search.local_restriction.future
-    future_start = Time.zone.parse("#{future_restriction['start_date']} #{future_restriction['start_time']}")
-    time_until_restriction = future_start - Time.zone.now
-
+    time_until_restriction = england_result.future_restriction.start_time - Time.zone.now
     [time_until_restriction, MAX_CACHE_TIME].min
   end
 end

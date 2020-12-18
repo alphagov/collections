@@ -38,26 +38,40 @@ describe CoronavirusLocalRestrictionsController do
       assert_template :no_information
     end
 
-    it "renders the results template for an area with information" do
-      restriction = LocalRestriction.new("E01000123",
-                                         { "name" => "Coruscant Planetary Council" })
-      LocalRestriction.stubs(:find).returns(restriction)
+    it "renders the devolved nation result template for nations other than England" do
+      postcode = "EH4 1SB"
+      stub_mapit_has_a_postcode_and_areas(postcode, [], [{
+        "gss" => "E01000456",
+        "name" => "City of Edinburgh Council",
+        "type" => "UTA",
+        "country_name" => "Scotland",
+      }])
+      get :show, params: { postcode: postcode }
+
+      assert_response :success
+      assert_template :devolved_nation_result
+    end
+
+    it "renders the England result template for an area with restriction information" do
+      area = CoronavirusRestrictionArea.new("E01000123",
+                                            { "name" => "Coruscant Planetary Council" })
+      CoronavirusRestrictionArea.stubs(:find).returns(area)
 
       postcode = "E1 8QS"
       stub_mapit_has_a_postcode_and_areas(postcode, [], [{
-        "gss" => restriction.gss_code,
-        "name" => restriction.area_name,
+        "gss" => area.gss_code,
+        "name" => area.name,
         "type" => "LBO",
         "country_name" => "England",
       }])
       get :show, params: { postcode: postcode }
 
       assert_response :success
-      assert_template :results
+      assert_template :england_result
     end
 
     it "reduces the cache time when an area has an upcoming future restriction" do
-      restriction = LocalRestriction.new(
+      area = CoronavirusRestrictionArea.new(
         "E01000123",
         {
           "name" => "Coruscant Planetary Council",
@@ -70,12 +84,12 @@ describe CoronavirusLocalRestrictionsController do
           ],
         },
       )
-      LocalRestriction.stubs(:find).returns(restriction)
+      CoronavirusRestrictionArea.stubs(:find).returns(area)
 
       postcode = "E1 8QS"
       stub_mapit_has_a_postcode_and_areas(postcode, [], [{
-        "gss" => restriction.gss_code,
-        "name" => restriction.area_name,
+        "gss" => area.gss_code,
+        "name" => area.name,
         "type" => "LBO",
         "country_name" => "England",
       }])
