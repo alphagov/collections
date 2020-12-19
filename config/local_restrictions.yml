@@ -179,38 +179,38 @@ E06000030:
 E06000031:
   name: Peterborough City Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E06000032:
   name: Luton Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E06000033:
   name: Southend-on-Sea Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E06000034:
   name: Thurrock Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E06000035:
   name: Medway Council
@@ -218,32 +218,35 @@ E06000035:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
+      start_time: "00:01"
 E06000036:
   name: Bracknell Forest Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E06000037:
   name: West Berkshire Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E06000038:
   name: Reading Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E06000039:
   name: Slough Borough Council
@@ -251,32 +254,35 @@ E06000039:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
+      start_time: "00:01"
 E06000040:
   name: Royal Borough of Windsor and Maidenhead
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E06000041:
   name: Wokingham Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E06000042:
   name: Milton Keynes Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E06000043:
   name: Brighton and Hove City Council
@@ -287,11 +293,11 @@ E06000043:
 E06000044:
   name: Portsmouth City Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E06000045:
   name: Southampton City Council
@@ -332,20 +338,20 @@ E06000054:
 E06000055:
   name: Bedford Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E06000056:
   name: Central Bedfordshire Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E06000057:
   name: Northumberland County Council
@@ -428,11 +434,11 @@ E08000010:
 E09000023:
   name: London Borough of Lewisham
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E08000011:
   name: Knowsley Metropolitan Borough Council
@@ -593,339 +599,339 @@ E08000037:
 E09000001:
   name: City of London Corporation
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000002:
   name: London Borough of Barking and Dagenham
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000003:
   name: London Borough of Barnet
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000004:
   name: London Borough of Bexley
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000005:
   name: London Borough of Brent
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000006:
   name: London Borough of Bromley
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000007:
   name: London Borough of Camden
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000008:
   name: London Borough of Croydon
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000009:
   name: London Borough of Ealing
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000010:
   name: London Borough of Enfield
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000011:
   name: Royal Borough of Greenwich
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000012:
   name: London Borough of Hackney
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000013:
   name: London Borough of Hammersmith & Fulham
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000014:
   name: London Borough of Haringey
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000015:
   name: London Borough of Harrow
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000016:
   name: London Borough of Havering
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000017:
   name: London Borough of Hillingdon
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000018:
   name: London Borough of Hounslow
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000019:
   name: London Borough of Islington
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000020:
   name: Royal Borough of Kensington and Chelsea
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000021:
   name: Royal Borough of Kingston upon Thames
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000022:
   name: London Borough of Lambeth
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000024:
   name: London Borough of Merton
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000025:
   name: London Borough of Newham
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000026:
   name: London Borough of Redbridge
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000027:
   name: London Borough of Richmond upon Thames
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000028:
   name: London Borough of Southwark
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000029:
   name: London Borough of Sutton
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000030:
   name: London Borough of Tower Hamlets
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000031:
   name: London Borough of Waltham Forest
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000032:
   name: London Borough of Wandsworth
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E09000033:
   name: City of Westminster
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000004:
   name: Buckinghamshire Council
   delete_later: true
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000005:
   name: Buckinghamshire Council
   delete_later: true
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000006:
   name: Buckinghamshire Council
   delete_later: true
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000007:
   name: Buckinghamshire Council
   delete_later: true
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E06000060:
   name: Buckinghamshire Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000008:
   name: Cambridge City Council
@@ -1098,11 +1104,11 @@ E07000061:
 E07000062:
   name: Hastings Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000063:
   name: Lewes District Council
@@ -1113,11 +1119,11 @@ E07000063:
 E07000064:
   name: Rother District Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000065:
   name: Wealden District Council
@@ -1128,47 +1134,47 @@ E07000065:
 E07000066:
   name: Basildon Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000067:
   name: Braintree District Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000068:
   name: Brentwood Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000069:
   name: Castle Point Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000070:
   name: Chelmsford City Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000071:
   name: Colchester Borough Council
@@ -1179,38 +1185,38 @@ E07000071:
 E07000072:
   name: Epping Forest District Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000073:
   name: Harlow Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000074:
   name: Maldon District Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000075:
   name: Rochford District Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000203:
   name: Mid Suffolk District Council
@@ -1233,83 +1239,83 @@ E07000245:
 E07000207:
   name: Elmbridge Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000208:
   name: Epsom and Ewell Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000209:
   name: Guildford Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000210:
   name: Mole Valley District Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000211:
   name: Reigate and Banstead Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000212:
   name: Runnymede Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000213:
   name: Spelthorne Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000214:
   name: Surrey Heath Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000215:
   name: Tandridge District Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000216:
   name: Waverley Borough Council
@@ -1320,11 +1326,11 @@ E07000216:
 E07000217:
   name: Woking Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000218:
   name: North Warwickshire Borough Council
@@ -1509,11 +1515,11 @@ E07000087:
 E07000088:
   name: Gosport Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000089:
   name: Hart District Council
@@ -1524,11 +1530,11 @@ E07000089:
 E07000090:
   name: Havant Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000091:
   name: New Forest District Council
@@ -1557,92 +1563,92 @@ E07000094:
 E07000095:
   name: Borough of Broxbourne
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000096:
   name: Dacorum Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000098:
   name: Hertsmere Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000099:
   name: North Hertfordshire District Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000102:
   name: Three Rivers District Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000103:
   name: Watford Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-16
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000240:
   name: St Albans City and District Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000241:
   name: Welwyn Hatfield Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000242:
   name: East Hertfordshire District Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000243:
   name: Stevenage Borough Council
   restrictions:
-    - alert_level: 2
-      start_date: 2020-12-02
-      start_time: "00:01"
     - alert_level: 3
       start_date: 2020-12-19
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000105:
   name: Ashford Borough Council
@@ -1650,11 +1656,17 @@ E07000105:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
+      start_time: "00:01"
 E07000106:
   name: Canterbury City Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000107:
   name: Dartford Borough Council
@@ -1662,11 +1674,17 @@ E07000107:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
+      start_time: "00:01"
 E07000108:
   name: Dover District Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000109:
   name: Gravesham Borough Council
@@ -1674,11 +1692,17 @@ E07000109:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
+      start_time: "00:01"
 E07000110:
   name: Maidstone Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000111:
   name: Sevenoaks District Council
@@ -1686,11 +1710,17 @@ E07000111:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
+      start_time: "00:01"
 E07000112:
   name: Folkestone and Hythe
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000113:
   name: Swale Borough Council
@@ -1698,11 +1728,17 @@ E07000113:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
+      start_time: "00:01"
 E07000114:
   name: Thanet District Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000115:
   name: Tonbridge and Malling Borough Council
@@ -1710,11 +1746,17 @@ E07000115:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
+      start_time: "00:01"
 E07000116:
   name: Tunbridge Wells Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-20
       start_time: "00:01"
 E07000117:
   name: Burnley Borough Council
