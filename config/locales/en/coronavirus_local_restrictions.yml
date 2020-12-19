@@ -86,7 +86,7 @@ en:
         level_four:
           alert_level: "%{area} will be in Tier 4: Stay at Home."
       christmas_rules:
-        heading: From 23 to 27 December
+        heading: On 25 December
         body: |
           There are different Christmas rules for meeting friends and family.
         guidance:
