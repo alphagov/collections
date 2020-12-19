@@ -41,5 +41,16 @@
       secondary_solid: true,
       margin_bottom: 9
     } %>
+  <% elsif restriction.future_alert_level == 4 %>
+    <p class="govuk-body">
+      <%= t("coronavirus_local_restrictions.results.future.level_four.alert_level", area: restriction.area_name) %>
+    </p>
+
+    <%= render "govuk_publishing_components/components/button", {
+      text: t("coronavirus_local_restrictions.results.guidance_label", level: restriction.future_alert_level),
+      href: t("coronavirus_local_restrictions.results.level_four.guidance_link"),
+      secondary_solid: true,
+      margin_bottom: 9
+    } %>
   <% end %>
 <% end %>

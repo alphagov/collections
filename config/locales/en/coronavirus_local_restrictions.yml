@@ -50,6 +50,11 @@ en:
         heading_tier_label: "Tier 3: Very High alert"
         changing_alert_level: "At the moment %{area} is in Tier 3."
         guidance_link: "/guidance/tier-3-very-high-alert"
+      level_four:
+        heading_pretext: This area is in
+        heading_tier_label: "Tier 4: Stay at Home"
+        changing_alert_level: "At the moment %{area} is in Tier 4."
+        guidance_link: "/guidance/tier-4-stay-at-home"
       devolved_nations:
         heading: There might be restrictions in this area
         country_rules: The rules are different in %{country}.
@@ -78,6 +83,8 @@ en:
           alert_level: "%{area} will be in Tier 2: High alert."
         level_three:
           alert_level: "%{area} will be in Tier 3: Very High alert."
+        level_four:
+          alert_level: "%{area} will be in Tier 4: Stay at Home."
       christmas_rules:
         heading: From 23 to 27 December
         body: |

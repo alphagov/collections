@@ -44,6 +44,10 @@ class LocalRestriction
     future_restrictions.min_by { |rest| rest["start_date"] }
   end
 
+  def tier_four?
+    current.present? && current_alert_level == 4
+  end
+
   def tier_three?
     current.present? && current_alert_level == 3
   end
