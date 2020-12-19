@@ -30,6 +30,14 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_click_on_find
       then_i_see_the_results_page_for_level_three
     end
+
+    it "displays the tier four restrictions" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_can_see_the_postcode_lookup_form
+      then_i_enter_a_valid_english_postcode_in_tier_four
+      then_i_click_on_find
+      then_i_see_the_results_page_for_level_four
+    end
   end
 
   describe "devolved_nations" do
@@ -120,6 +128,13 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_click_on_find
       then_i_see_the_results_page_for_level_two_with_changing_restriction_levels
     end
+
+    it "displays restrictions changing from level three to level four" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_enter_a_valid_english_postcode_with_a_future_level_four_restriction
+      then_i_click_on_find
+      then_i_see_the_results_page_for_level_three_with_changing_restriction_levels
+    end
   end
 
   def given_i_am_on_the_local_restrictions_page
@@ -175,6 +190,17 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     fill_in "Enter a full postcode", with: postcode
   end
 
+  def then_i_enter_a_valid_english_postcode_with_a_future_level_four_restriction
+    @area = "Kashyyyk"
+    postcode = "E1 8QS"
+    stub_local_restriction(postcode: postcode,
+                           name: @area,
+                           current_alert_level: 3,
+                           future_alert_level: 4)
+
+    fill_in "Enter a full postcode", with: postcode
+  end
+
   def then_i_enter_a_valid_english_postcode_with_an_extra_special_character
     @area = "Coruscant Planetary Council"
     stub_local_restriction(postcode: "E1 8QS", name: @area, current_alert_level: 2)
@@ -194,6 +220,14 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     @area = "Mandalore"
     postcode = "E1 8QS"
     stub_local_restriction(postcode: postcode, name: @area, current_alert_level: 3)
+
+    fill_in "Enter a full postcode", with: postcode
+  end
+
+  def then_i_enter_a_valid_english_postcode_in_tier_four
+    @area = "Anoat"
+    postcode = "E1 8QS"
+    stub_local_restriction(postcode: postcode, name: @area, current_alert_level: 4)
 
     fill_in "Enter a full postcode", with: postcode
   end
@@ -262,6 +296,12 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     assert page.has_text?(heading)
   end
 
+  def then_i_see_the_results_page_for_level_four
+    heading = "#{I18n.t('coronavirus_local_restrictions.results.level_four.heading_pretext')} #{I18n.t('coronavirus_local_restrictions.results.level_four.heading_tier_label')}"
+    assert page.has_text?(@area)
+    assert page.has_text?(heading)
+  end
+
   def then_i_see_the_results_for_wales
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.devolved_nations.wales.guidance.label"))
   end
@@ -294,6 +334,11 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   def then_i_see_the_results_page_for_level_two_with_changing_restriction_levels
     assert page.has_text?(@area)
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.changing_alert_level", area: @area))
+  end
+
+  def then_i_see_the_results_page_for_level_three_with_changing_restriction_levels
+    assert page.has_text?(@area)
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_three.changing_alert_level", area: @area))
   end
 
   def then_i_see_details_of_christmas_rules
