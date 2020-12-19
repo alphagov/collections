@@ -13,7 +13,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_enter_a_valid_english_postcode
       then_i_click_on_find
       then_i_see_the_results_page_for_level_one
-      then_i_see_details_of_christmas_rules
     end
 
     it "displays the tier two restrictions" do
@@ -22,7 +21,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_enter_a_valid_english_postcode_in_tier_two
       then_i_click_on_find
       then_i_see_the_results_page_for_level_two
-      then_i_see_details_of_christmas_rules
     end
 
     it "displays the tier three restrictions" do
@@ -31,7 +29,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_enter_a_valid_english_postcode_in_tier_three
       then_i_click_on_find
       then_i_see_the_results_page_for_level_three
-      then_i_see_details_of_christmas_rules
     end
   end
 
