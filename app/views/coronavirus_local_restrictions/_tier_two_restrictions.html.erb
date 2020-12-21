@@ -46,7 +46,7 @@
 
   <%= render partial: "coronavirus_local_restrictions/future_restrictions", locals: { restriction: restriction } %>
 
-  <% unless restriction.future_alert_level == 4 %>
+  <% unless restriction.present? && restriction.future_alert_level == 4 %>
     <%= render partial: "coronavirus_local_restrictions/christmas_rules" %>
   <% end %>
 
