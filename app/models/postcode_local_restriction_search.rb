@@ -42,6 +42,10 @@ class PostcodeLocalRestrictionSearch
     %w[invalidPostcodeFormat fullPostcodeNoMapitValidation].include?(error_code)
   end
 
+  def no_restriction?
+    location_lookup.data.first&.england? && local_restriction.nil?
+  end
+
   def location_lookup
     @location_lookup ||= LocationLookupService.new(sanitised_postcode)
   end
