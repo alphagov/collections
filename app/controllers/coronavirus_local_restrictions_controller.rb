@@ -43,4 +43,12 @@ private
 
     [time_until_restriction, MAX_CACHE_TIME].min
   end
+
+  def after_christmas?
+    christmas = Time.zone.parse("2020-12-25")
+
+    Time.zone.today.after?(christmas)
+  end
+
+  helper_method :after_christmas?
 end
