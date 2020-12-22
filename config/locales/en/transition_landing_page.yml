@@ -10,7 +10,7 @@ en:
     take_action_title: Make sure you’re ready
     take_action_text: |
       Your business, family, and personal circumstances will be affected. Use the Brexit checker to get a personalised list of actions. You can also sign up for emails to get updates for what you need to do.
-    take_action_start_now: Start now
+    take_action_start_now: "Brexit checker: start now"
     take_action_start_now_link: "/transition-check/questions"
     take_action_list:
       red: Check
