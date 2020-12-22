@@ -1,4 +1,6 @@
 class LocalRestriction
+  OUT_OF_DATE = false
+
   def self.find(gss_code)
     all.find { |restriction| restriction.gss_code == gss_code }
   end
@@ -8,6 +10,10 @@ class LocalRestriction
       restriction_data = YAML.load_file(Rails.root.join("config/local_restrictions.yml"))
       restriction_data.map { |gss_code, data| new(gss_code, data) }
     end
+  end
+
+  def self.out_of_date?
+    OUT_OF_DATE
   end
 
   attr_reader :gss_code, :area_name, :restrictions

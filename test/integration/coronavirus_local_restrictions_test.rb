@@ -152,6 +152,56 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     end
   end
 
+  describe "when the restrictions are out of date" do
+    before do
+      LocalRestriction.stubs(:out_of_date?).returns(true)
+    end
+
+    it "displays an out of date warning on the lookup page" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_see_an_out_of_date_warning
+    end
+
+    it "displays an out of date warning on the tier one page" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_enter_a_valid_english_postcode_in_tier_one
+      then_i_click_on_find
+      then_i_see_an_out_of_date_warning
+    end
+
+    it "displays an out of date warning on the tier two page" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_enter_a_valid_english_postcode_in_tier_two
+      then_i_click_on_find
+      then_i_see_an_out_of_date_warning
+    end
+
+    it "displays an out of date warning on the tier three page" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_enter_a_valid_english_postcode_in_tier_three
+      then_i_click_on_find
+      then_i_see_an_out_of_date_warning
+    end
+
+    it "displays an out of date warning on the tier four page" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_enter_a_valid_english_postcode_in_tier_four
+      then_i_click_on_find
+      then_i_see_an_out_of_date_warning
+    end
+  end
+
+  describe "when the restrictions are up to date" do
+    before do
+      LocalRestriction.stubs(:out_of_date?).returns(false)
+    end
+
+    it "does not display an out of date warning on the lookup page" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_do_not_see_an_out_of_date_warning
+    end
+  end
+
   def given_i_am_on_the_local_restrictions_page
     stub_content_store_has_item("/find-coronavirus-local-restrictions", {})
 
@@ -371,6 +421,14 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
 
   def then_i_do_not_see_details_of_christmas_rules
     assert_not page.has_text?(I18n.t("coronavirus_local_restrictions.results.christmas_rules.heading"))
+  end
+
+  def then_i_see_an_out_of_date_warning
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.out_of_date_warning"))
+  end
+
+  def then_i_do_not_see_an_out_of_date_warning
+    assert_not page.has_text?(I18n.t("coronavirus_local_restrictions.out_of_date_warning"))
   end
 
   def and_there_is_metadata
