@@ -1,17 +1,14 @@
 class TransitionLandingPageController < ApplicationController
   include AccountAbTestable
-  include BrexitButtonAbTestable
   include Slimmer::Headers
 
   skip_before_action :set_expiry
   before_action -> { set_expiry(1.minute) }
   before_action :set_account_variant
-  before_action :set_brexit_button_variant
 
   around_action :switch_locale
 
-  helper_method :account_variant,
-                :brexit_button_variant, :is_english_transition_page?, :show_brexit_button_variant?
+  helper_method :account_variant
 
   def show
     setup_content_item_and_navigation_helpers(taxon)
