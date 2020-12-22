@@ -51,4 +51,10 @@ private
   end
 
   helper_method :after_christmas?
+
+  def out_of_date?
+    false
+  end
+
+  helper_method :out_of_date?
 end
