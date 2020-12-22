@@ -154,7 +154,8 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
 
   describe "when the restrictions are out of date" do
     before do
-      LocalRestriction.stubs(:out_of_date?).returns(true)
+      CoronavirusLocalRestrictionsController.any_instance.stubs(:coronavirus_restrictions_changing?).returns(true)
+      # LocalRestriction.stubs(:out_of_date?).returns(true)
     end
 
     it "displays an out of date warning on the lookup page" do
@@ -193,7 +194,7 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
 
   describe "when the restrictions are up to date" do
     before do
-      LocalRestriction.stubs(:out_of_date?).returns(false)
+      CoronavirusLocalRestrictionsController.any_instance.stubs(:coronavirus_restrictions_changing?).returns(false)
     end
 
     it "does not display an out of date warning on the lookup page" do

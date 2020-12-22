@@ -23,6 +23,12 @@ class CoronavirusLocalRestrictionsController < ApplicationController
     end
   end
 
+  def coronavirus_restrictions_changing?
+    false
+  end
+
+  helper_method :coronavirus_restrictions_changing?
+
 private
 
   def content_item

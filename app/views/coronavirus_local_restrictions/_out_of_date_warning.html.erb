@@ -1,4 +1,4 @@
-<% if LocalRestriction.out_of_date? %>
+<% if coronavirus_restrictions_changing? %>
   <%= render "govuk_publishing_components/components/warning_text", {
     text: t("coronavirus_local_restrictions.out_of_date_warning")
   } %>
