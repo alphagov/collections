@@ -4,6 +4,7 @@ require "gds_api/test_helpers/mapit"
 class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   include GdsApi::TestHelpers::Mapit
   include GdsApi::TestHelpers::ContentStore
+  include ActiveSupport::Testing::TimeHelpers
 
   describe "current restrictions" do
     it "displays the tier one restrictions" do
@@ -13,7 +14,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_enter_a_valid_english_postcode_in_tier_one
       then_i_click_on_find
       then_i_see_the_results_page_for_level_one
-      then_i_see_details_of_christmas_rules
     end
 
     it "displays the tier two restrictions" do
@@ -22,7 +22,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_enter_a_valid_english_postcode_in_tier_two
       then_i_click_on_find
       then_i_see_the_results_page_for_level_two
-      then_i_see_details_of_christmas_rules
     end
 
     it "displays the tier three restrictions" do
@@ -31,7 +30,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_enter_a_valid_english_postcode_in_tier_three
       then_i_click_on_find
       then_i_see_the_results_page_for_level_three
-      then_i_see_details_of_christmas_rules
     end
 
     it "displays the tier four restrictions" do
@@ -40,7 +38,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_enter_a_valid_english_postcode_in_tier_four
       then_i_click_on_find
       then_i_see_the_results_page_for_level_four
-      then_i_do_not_see_details_of_christmas_rules
     end
 
     it "displays no tier information" do
@@ -132,7 +129,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_enter_a_valid_english_postcode_with_a_future_level_two_restriction
       then_i_click_on_find
       then_i_see_the_results_page_for_level_one_with_changing_restriction_levels
-      then_i_see_details_of_christmas_rules
     end
 
     it "displays restrictions changing from level two to level three" do
@@ -140,7 +136,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_enter_a_valid_english_postcode_with_a_future_level_three_restriction
       then_i_click_on_find
       then_i_see_the_results_page_for_level_two_with_changing_restriction_levels
-      then_i_see_details_of_christmas_rules
     end
 
     it "displays restrictions changing from level three to level four" do
@@ -148,6 +143,116 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_enter_a_valid_english_postcode_with_a_future_level_four_restriction
       then_i_click_on_find
       then_i_see_the_results_page_for_level_three_with_changing_restriction_levels
+    end
+  end
+
+  describe "on or before christmas" do
+    before do
+      travel_to Time.zone.parse("2020-12-25")
+    end
+
+    after do
+      travel_back
+    end
+
+    it "displays christmas rules for current tier one restrictions" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_enter_a_valid_english_postcode_in_tier_one
+      then_i_click_on_find
+      then_i_see_details_of_christmas_rules
+    end
+
+    it "displays christmas rules for current tier two restrictions" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_enter_a_valid_english_postcode_in_tier_two
+      then_i_click_on_find
+      then_i_see_details_of_christmas_rules
+    end
+
+    it "displays christmas rules for current tier three restrictions" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_enter_a_valid_english_postcode_in_tier_three
+      then_i_click_on_find
+      then_i_see_details_of_christmas_rules
+    end
+
+    it "does not display christmas rules for current tier four restrictions" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_enter_a_valid_english_postcode_in_tier_four
+      then_i_click_on_find
+      then_i_do_not_see_details_of_christmas_rules
+    end
+
+    it "displays christmas rules for future tier two restrictions" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_enter_a_valid_english_postcode_with_a_future_level_two_restriction
+      then_i_click_on_find
+      then_i_see_details_of_christmas_rules
+    end
+
+    it "displays christmas rules for future tier three restrictions" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_enter_a_valid_english_postcode_with_a_future_level_three_restriction
+      then_i_click_on_find
+      then_i_see_details_of_christmas_rules
+    end
+
+    it "does not display christmas rules for future tier four restrictions" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_enter_a_valid_english_postcode_with_a_future_level_four_restriction
+      then_i_click_on_find
+      then_i_do_not_see_details_of_christmas_rules
+    end
+  end
+
+  describe "after christmas" do
+    before do
+      travel_to Time.zone.parse("2020-12-26")
+    end
+
+    after do
+      travel_back
+    end
+
+    it "does not display christmas rules for current tier one restrictions" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_enter_a_valid_english_postcode_in_tier_one
+      then_i_click_on_find
+      then_i_do_not_see_details_of_christmas_rules
+    end
+
+    it "does not display christmas rules for current tier two restrictions" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_enter_a_valid_english_postcode_in_tier_two
+      then_i_click_on_find
+      then_i_do_not_see_details_of_christmas_rules
+    end
+
+    it "does not display christmas rules for current tier three restrictions" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_enter_a_valid_english_postcode_in_tier_three
+      then_i_click_on_find
+      then_i_do_not_see_details_of_christmas_rules
+    end
+
+    it "does not display christmas rules for future tier two restrictions" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_enter_a_valid_english_postcode_with_a_future_level_two_restriction
+      then_i_click_on_find
+      then_i_do_not_see_details_of_christmas_rules
+    end
+
+    it "does not display christmas rules for future tier three restrictions" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_enter_a_valid_english_postcode_with_a_future_level_three_restriction
+      then_i_click_on_find
+      then_i_do_not_see_details_of_christmas_rules
+    end
+
+    it "does not display christmas rules for future tier four restrictions" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_enter_a_valid_english_postcode_with_a_future_level_four_restriction
+      then_i_click_on_find
       then_i_do_not_see_details_of_christmas_rules
     end
   end
