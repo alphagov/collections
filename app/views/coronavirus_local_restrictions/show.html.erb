@@ -36,6 +36,8 @@
 
     <%= sanitize(t("coronavirus_local_restrictions.lookup.body_content")) %>
 
+    <%= render partial: "coronavirus_local_restrictions/out_of_date_warning" %>
+
     <%= form_tag find_coronavirus_local_restrictions_path,
       method: :get,
       class: "coronavirus-local-restrictions__postcode-form",

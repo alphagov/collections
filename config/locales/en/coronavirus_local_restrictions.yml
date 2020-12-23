@@ -9,6 +9,8 @@ en:
         error_message: There is a problem
         input_error: Enter a valid postcode
         error_description: Enter a valid postcode
+    out_of_date_warning: |
+      This service is being updated, at the moment it might not show the latest information for your area
     lookup:
       input_label: Enter a full postcode
       hint_text: |
