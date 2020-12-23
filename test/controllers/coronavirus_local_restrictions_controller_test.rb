@@ -23,6 +23,14 @@ describe CoronavirusLocalRestrictionsController do
       assert_equal "max-age=#{30.minutes}, public", response.headers["Cache-Control"]
     end
 
+    it "caches responses for for 5 minutes when the data is being updated" do
+      CoronavirusLocalRestrictionsController.any_instance.stubs(:out_of_date?).returns(true)
+
+      get :show
+
+      assert_equal "max-age=#{5.minutes}, public", response.headers["Cache-Control"]
+    end
+
     it "renders the show template when given an invalid postcode" do
       get :show, params: { postcode: "not-a-postcode" }
 
