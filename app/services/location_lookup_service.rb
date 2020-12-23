@@ -49,7 +49,7 @@ private
 
   def response
     @response ||= begin
-                    Rails.cache.fetch("mapit-location-#{postcode}", expires_in: 3.hours) do
+                    Rails.cache.fetch("mapit-location-#{postcode}", expires_in: 30.days) do
                       JSON.parse(mapit.location_for_postcode(postcode).to_json)
                     end
                   rescue GdsApi::HTTPNotFound, GdsApi::HTTPClientError => e
