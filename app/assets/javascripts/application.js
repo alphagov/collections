@@ -17,10 +17,12 @@
 //= require modules/feeds.js
 //= require modules/toggle-attribute
 //= require components/accordion
+//= require modules/cookieless-tracker
 //= require modules/coronavirus-landing-page
 //= require modules/coronavirus-track-local-restriction-results
 //= require modules/coronavirus-local-restrictions-postcode-form
 //= require modules/track-links
+//= require modules/track-variant
 
 $(document).on('ready', function () {
   var toggleAttribute = new GOVUK.Modules.ToggleAttribute()
