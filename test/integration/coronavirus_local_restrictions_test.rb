@@ -197,11 +197,11 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_see_details_of_christmas_rules
     end
 
-    it "does not display christmas rules for future tier four restrictions" do
+    it "displays christmas rules for future tier four restrictions" do
       given_i_am_on_the_local_restrictions_page
       then_i_enter_a_valid_english_postcode_with_a_future_level_four_restriction
       then_i_click_on_find
-      then_i_do_not_see_details_of_christmas_rules
+      then_i_see_details_of_christmas_rules
     end
   end
 
