@@ -23,7 +23,12 @@ class TransitionLandingPageController < ApplicationController
 private
 
   def taxon
-    Taxon.find(request.path)
+    base_path = request.path
+    @taxon ||= begin
+      Rails.cache.fetch("collections_content_items#{base_path}", expires_in: 10.minutes) do
+        Taxon.find(base_path)
+      end
+    end
   end
 
   def presented_taxon
