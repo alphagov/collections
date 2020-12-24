@@ -7,9 +7,9 @@ en:
     page_header_explainer: for businesses and citizens from 1 January 2021.
     countdown_days_to_go: days to go
     countdown_day_to_go: day to go
-    take_action_title: Make sure you’re ready
+    take_action_title: Get ready for the UK’s deal with the EU
     take_action_text: |
-      Your business, family, and personal circumstances will be affected. Use the Brexit checker to get a personalised list of actions. You can also sign up for emails to get updates for what you need to do.
+      The UK’s deal with the EU affects your business, family, and personal circumstances. Use the Brexit checker to get a personalised list of actions. You can also sign up for emails to get updates for what you need to do.
     take_action_start_now: "Brexit checker: start now"
     take_action_start_now_link: "/transition-check/questions"
     take_action_list:
@@ -18,7 +18,7 @@ en:
       green: Go
     video_section_title: "Time is running out"
     video_section_description: |
-      <p>You need to act now. The new rules affect citizens, businesses and travel to the EU. Make sure you’re ready for the end of the Brexit transition.</p>
+      <p>You need to act now. The UK’s deal with the EU affects citizens, businesses, and travel to the EU. Make sure you’re ready for the end of the Brexit transition.</p>
       <p>Watch the video to find out what 2021 will mean for you.</p>
     video_section_link: https://www.youtube.com/watch?v=kM9Lf6mLx2I
     video_section_transcription_summary: View the video transcript
@@ -58,6 +58,13 @@ en:
     comms:
       links:
       - link:
+          text: "Agreements reached between the United Kingdom of Great Britain and Northern Ireland and the European Union"
+          path: "/government/publications/agreements-reached-between-the-united-kingdom-of-great-britain-and-northern-ireland-and-the-european-union"
+          description: This document summarises the Agreements between the United Kingdom and the European Union.
+        metadata:
+          public_updated_at: 2020-12-24
+          document_type: "International treaty"
+      - link:
           text: "Government publishes updated GB-EU Border Operating Model"
           path: "/government/news/government-publishes-updated-gb-eu-border-operating-model"
           description: The government has published further detail on how the borders between Great Britain and the EU will work and the actions that traders, hauliers and passengers need to take.
@@ -78,13 +85,6 @@ en:
         metadata:
           public_updated_at: 2020-07-13
           document_type: "Press Release"
-      - link:
-          text: "Our approach to the Future Relationship with the EU"
-          path: "/government/publications/our-approach-to-the-future-relationship-with-the-eu"
-          description: "The UK’s approach to negotiations with the European Union."
-        metadata:
-          public_updated_at: 2020-02-27
-          document_type: "Policy Paper"
     topic_section_header: All transition period information
     topic_section_subheading: Browse all information related to the transition period
     email_mailto_subject: "UK's%20new%20start:%20let's%20get%20going-%20GOV.UK"

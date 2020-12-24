@@ -7,9 +7,9 @@ cy:
     page_header_explainer: i fusnesau a dinasyddion o 1 Ionawr 2021.
     countdown_days_to_go: diwrnod i fynd
     countdown_day_to_go: diwrnod i fynd
-    take_action_title: Sicrhewch eich bod yn barod
+    take_action_title: Paratowch ar gyfer cytundeb y DU â’r UE
     take_action_text: |
-      Bydd hyn yn effeithio ar eich busnes, eich teulu a’ch amgylchiadau personol. Atebwch ychydig o gwestiynau i gael rhestr bersonol o gamau gweithredu. Gallwch hefyd gofrestru am negeseuon e-bost i dderbyn diweddariadau ar gyfer yr hyn y mae angen i chi ei wneud.
+      Mae cytundeb y DU â'r UE yn effeithio ar eich busnes, eich teulu a'ch amgylchiadau personol. Defnyddiwch y gwiriwr Brexit i gael rhestr o gamau gweithredu personol. Gallwch hefyd gofrestru ar gyfer negeseuon e-bost i gael diweddariadau ar gyfer yr hyn y mae angen i chi ei wneud.
     take_action_start_now: Dechrau nawr
     take_action_start_now_link: "/transition-check/questions"
     take_action_list:
@@ -18,7 +18,7 @@ cy:
       green: Ewch
     video_section_title: "Mae amser yn rhedeg allan"
     video_section_description: |
-      <p>Mae’n rhaid i chi weithredu nawr. Mae’r rheolau newydd yn effeithio ar ddinasyddion, busnesau a theithio i’r UE. Gwnewch yn siŵr eich bod yn barod ar gyfer ddiwedd cyfnod pontio Brexit.</p>
+      <p>Gweithredwch nawr. Mae cytundeb y DU â'r UE yn effeithio ar ddinasyddion, busnesau a theithio i'r UE. Gwnewch yn siŵr eich bod wedi paratoi ar gyfer diwedd cyfnod pontio Brexit.</p>
       <p>Gwyliwch y fideo i wybod beth fydd 2021 yn ei olygu i chi.</p>
     video_section_link: https://www.youtube.com/watch?v=kM9Lf6mLx2I
     video_section_transcription_summary: Gwelwch y trawsgrifiad fideo
@@ -58,6 +58,13 @@ cy:
     comms:
       links:
       - link:
+          text: "Agreements reached between the United Kingdom of Great Britain and Northern Ireland and the European Union"
+          path: "/government/publications/agreements-reached-between-the-united-kingdom-of-great-britain-and-northern-ireland-and-the-european-union"
+          description: This document summarises the Agreements between the United Kingdom and the European Union.
+        metadata:
+          public_updated_at: 2020-12-24
+          document_type: "International treaty"
+      - link:
           text: "Government publishes updated GB-EU Border Operating Model"
           path: "/government/news/government-publishes-updated-gb-eu-border-operating-model"
           description: The government has published further detail on how the borders between Great Britain and the EU will work and the actions that traders, hauliers and passengers need to take.
@@ -78,13 +85,6 @@ cy:
         metadata:
           public_updated_at: 2020-07-13
           document_type: "Press Release"
-      - link:
-          text: "Our approach to the Future Relationship with the EU"
-          path: "/government/publications/our-approach-to-the-future-relationship-with-the-eu"
-          description: "The UK’s approach to negotiations with the European Union."
-        metadata:
-          public_updated_at: 2020-02-27
-          document_type: "Policy Paper"
     topic_section_header: Yr holl wybodaeth am y cyfnod pontio
     topic_section_subheading: Pori’r holl wybodaeth sy’n berthnasol i’r cyfnod pontio
     email_mailto_subject: "Dechrau%20newydd%20y%20DU:%20Ymlaen%20â%20ni-%20GOV.UK"
@@ -97,7 +97,7 @@ cy:
       research_and_statistics: Ymchwil ag ystadegau
       policy_and_engagement: Polisi ac ymgynghoriadau
       transparency: Tryloywder a datganiadau rhyddid gwybodaeth
-    ## Unused keys?
+    ## Unused keys?
     guidance_subheader: "Camau y gallwch eu cymryd nawr sydd ddim yn ddibynnol ar drafodaethau."
     email_intro: "I gael y manylion diweddaraf"
     email: "Cofrestrwch i gael hysbysiadau ebost am y cyfnod pontio"

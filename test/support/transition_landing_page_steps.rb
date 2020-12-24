@@ -34,7 +34,7 @@ module TransitionLandingPageSteps
   end
 
   def then_i_can_see_the_take_action_section
-    assert page.has_selector?("h2.govuk-heading-l", text: "Make sure you’re ready")
+    assert page.has_selector?("h2.govuk-heading-l", text: "Get ready for the UK’s deal with the EU")
     assert page.has_selector?(".gem-c-button", text: "Brexit checker: start now")
   end
 
