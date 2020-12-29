@@ -47,10 +47,6 @@
     margin_bottom: 9
   } %>
 
-  <% unless after_christmas? %>
-    <%= render partial: "coronavirus_local_restrictions/christmas_rules" %>
-  <% end %>
-
   <%= render partial: "coronavirus_local_restrictions/future_restrictions", locals: { restriction: restriction } %>
   <%= render partial: "coronavirus_local_restrictions/travel_guidance" %>
 <% end %>
