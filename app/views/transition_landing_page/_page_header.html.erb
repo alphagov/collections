@@ -34,6 +34,22 @@
               <%= tag.p t("transition_landing_page.page_header_explainer") %>
             <% end %>
           </div>
+
+          <%
+            button_text = t("transition_landing_page.take_action_start_now")
+            button_href = t("transition_landing_page.take_action_start_now_link")
+          %>
+          <%= render "govuk_publishing_components/components/button", {
+            text: button_text,
+            href: button_href,
+            start: true,
+            data_attributes: {
+              "module": "track-click",
+              "track-action": button_href,
+              "track-category": "transition-landing-page",
+              "track-label": button_text
+            }
+          } %>
         </div>
       </div>
     </div>
