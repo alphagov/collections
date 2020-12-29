@@ -99,6 +99,7 @@ $green: #00703c;
 
 .landing-page__intro {
   margin-bottom: govuk-spacing(6);
+  padding-right: govuk-spacing(4);
 
   p {
     @include govuk-font($size: 24);
