@@ -18,39 +18,31 @@
 
 <header class="landing-page__header--with-bg-image">
   <div class="landing-page__header-text-block">
-    <div class="govuk-width-container landing-page_header-text-container">
+    <div class="govuk-width-container">
       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
+        <div class="govuk-grid-column-two-thirds landing-page_header-text-container">
           <%= render "govuk_publishing_components/components/translation-nav", {
             translations: presented_taxon.translation_links
           } %>
-        </div>
-      </div>
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
+
           <h1 class="landing-page__page_title">
             <%= sanitize(t("transition_landing_page.page_header")) %>
           </h1>
-        </div>
-      </div>
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds landing-page__intro">
-          <%= render "govuk_publishing_components/components/govspeak", {
-          } do %>
-            <p class="govuk-body-l">
-              <mark class="landing-page__intro-highlight"><%= t("transition_landing_page.page_header_highlight")%></mark>
-              <%= t("transition_landing_page.page_header_explainer")%>
-            </p>
+          <div class="landing-page__intro">
+            <%= render "govuk_publishing_components/components/govspeak", {
+            } do %>
+              <p class="govuk-body-l">
+                <mark class="landing-page__intro-highlight"><%= t("transition_landing_page.page_header_highlight")%></mark>
+                <%= t("transition_landing_page.page_header_explainer")%>
+              </p>
+            <% end %>
+          </div>
+
+          <% if clock.show? %>
+            <%= render partial: 'countdown-flip-clock', locals: { clock: clock } %>
           <% end %>
         </div>
       </div>
-      <% if clock.show? %>
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-two-thirds">
-            <%= render partial: 'countdown-flip-clock', locals: { clock: clock } %>
-          </div>
-        </div>
-      <% end %>
     </div>
   </div>
 </header>
