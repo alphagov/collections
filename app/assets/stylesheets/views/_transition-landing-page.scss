@@ -149,6 +149,23 @@ $green: #00703c;
   p {
     color: govuk-colour("white");
   }
+
+  a {
+    color: govuk-colour("white");
+
+    &:link,
+    &:visited {
+      color: govuk-colour("white");
+    }
+
+    &:hover {
+      color: $gem-hover-dark-background;
+    }
+
+    &:focus {
+      color: $govuk-focus-text-colour;
+    }
+  }
 }
 
 .landing-page__section--light-grey {
