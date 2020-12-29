@@ -31,10 +31,7 @@
           <div class="landing-page__intro">
             <%= render "govuk_publishing_components/components/govspeak", {
             } do %>
-              <p class="govuk-body-l">
-                <mark class="landing-page__intro-highlight"><%= t("transition_landing_page.page_header_highlight")%></mark>
-                <%= t("transition_landing_page.page_header_explainer")%>
-              </p>
+              <%= tag.p t("transition_landing_page.page_header_explainer") %>
             <% end %>
           </div>
 

@@ -2,9 +2,8 @@ en:
   transition_landing_page:
     meta_title: Brexit transition
     meta_description: The Brexit transition period ends this year. Check the new rules from January 2021 and act now.
-    page_header: "Brexit transition:<br/>time is running out"
-    page_header_highlight: There are new rules
-    page_header_explainer: for businesses and citizens from 1 January 2021.
+    page_header: "Brexit:<br/>new rules are here"
+    page_header_explainer: New rules apply to things like travel and doing business with Europe. Use the Brexit checker to get a personalised list of actions for you, your business and your family.
     countdown_days_to_go: days to go
     countdown_day_to_go: day to go
     take_action_title: Get ready for the UK’s deal with the EU

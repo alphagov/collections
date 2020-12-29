@@ -152,30 +152,11 @@ $green: #00703c;
 }
 
 .landing-page__intro {
+  margin-bottom: govuk-spacing(6);
+
   p {
-    @include govuk-font($size: 36, $line-height: 35px);
-    color: $dark-blue;
-
-    @include govuk-media-query($from: tablet) {
-      @include govuk-font($size: 36, $line-height: 45px);
-    }
+    @include govuk-font($size: 24);
   }
-
-  a:link,
-  a:visited {
-    font-weight: bold;
-    color: $dark-blue;
-  }
-
-  a:focus {
-    color: govuk-colour("black");
-  }
-}
-
-.landing-page__intro-highlight {
-  color: govuk-colour("white");
-  background-color: $red;
-  padding: 0 3px;
 }
 
 .landing-page__page_title {
