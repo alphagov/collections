@@ -28,7 +28,7 @@ $green: #00703c;
   border-top: govuk-spacing(2) solid $red;
 
   @include govuk-media-query($from: $header-breakpoint) {
-    background-image: image-url('transition-2020-header-background.jpg');
+    background-image: image-url('transition-2021-header-background.jpg');
     background-position: right;
     background-repeat: no-repeat;
     background-size: contain;
