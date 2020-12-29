@@ -55,6 +55,11 @@ $green: #00703c;
   @include govuk-media-query($from: tablet) {
     padding-bottom: govuk-spacing(9);
   }
+
+  .gem-c-button {
+    padding-left: govuk-spacing(3);
+    padding-right: govuk-spacing(3);
+  }
 }
 
 .landing-page__header-text-block {
