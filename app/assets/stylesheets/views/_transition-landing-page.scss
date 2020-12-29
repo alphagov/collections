@@ -65,55 +65,6 @@ $green: #00703c;
   }
 }
 
-.landing-page__countdown-number-wrapper {
-  @include govuk-font($size: 80, $weight: bold, $line-height: 60px);
-
-  display: inline-block;
-  background: $dark-blue;
-  color: govuk-colour('white');
-  position: relative;
-
-  @include govuk-media-query($from: tablet) {
-    padding: govuk-spacing(1);
-  }
-}
-
-// adds the line in across the middle of the div
-.landing-page__countdown-number-wrapper:after {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  height: 3px;
-  background: govuk-colour('white');
-  content: "";
-  width: 100%;
-  display: block;
-}
-
-.landing-page__countdown-number {
-  padding-top: govuk-spacing(2);
-  min-width: 50px;
-  text-align: center;
-
-  @include govuk-media-query($from: tablet) {
-    padding-top: govuk-spacing(3);
-  }
-}
-
-.landing-page__countdown-text {
-  @include govuk-font($size: 27, $weight: bold);
-
-  display: inline-block;
-  margin-left: govuk-spacing(2);
-  height: 35px;
-  vertical-align: middle;
-  color: $dark-blue;
-
-  @include govuk-media-query($from: tablet) {
-    height: 60px;
-  }
-}
-
 .landing-page__take-action-traffic-lights {
   @include govuk-media-query($until: tablet) {
     margin-top: govuk-spacing(4);
