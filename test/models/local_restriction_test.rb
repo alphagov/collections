@@ -62,6 +62,29 @@ describe LocalRestriction do
     end
   end
 
+  describe "#future_alert_level" do
+    let(:instance) do
+      described_class.new("gss-code", {
+        "name" => "Coruscant Planetary Council",
+        "restrictions" => [{ "alert_level" => 3,
+                             "start_date" => Date.new(2021, 1, 1),
+                             "start_time" => "10:00" }],
+      })
+    end
+
+    it "returns a Time object when a future restriction exists" do
+      travel_to(Time.zone.parse("2020-12-01")) do
+        assert_equal Time.zone.parse("2021-01-01 10:00"), instance.future_start_time
+      end
+    end
+
+    it "returns nil when there is not a future restriction" do
+      travel_to(Time.zone.parse("2021-02-01")) do
+        assert_nil instance.future_start_time
+      end
+    end
+  end
+
   describe "#current" do
     it "returns the restriction in the past with the latest start date" do
       first_restriction = { "alert_level" => 3, "start_date" => Date.new(2020, 8, 1), "start_time" => "10:00" }

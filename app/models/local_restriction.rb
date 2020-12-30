@@ -26,6 +26,12 @@ class LocalRestriction
     future["alert_level"] if future.present?
   end
 
+  def future_start_time
+    return unless future
+
+    Time.zone.parse("#{future['start_date']} #{future['start_time']}")
+  end
+
   def current
     current_restrictions = restrictions.select do |rest|
       start_date = Time.zone.parse("#{rest['start_date']} #{rest['start_time']}")
