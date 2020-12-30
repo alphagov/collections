@@ -1,0 +1,21 @@
+<%= render partial: "meta_tags" %>
+
+<% content_for :back_link do %>
+  <%= render "govuk_publishing_components/components/back_link", {
+    href: find_coronavirus_local_restrictions_path
+  } %>
+<% end %>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <% if @result.current_alert_level == 1 %>
+      <%= render partial: "coronavirus_local_restrictions/tier_one_restrictions", locals: { result: @result } %>
+    <% elsif @result.current_alert_level == 2 %>
+      <%= render partial: "coronavirus_local_restrictions/tier_two_restrictions", locals: { result: @result } %>
+    <% elsif @result.current_alert_level == 3 %>
+      <%= render partial: "coronavirus_local_restrictions/tier_three_restrictions", locals: { result: @result } %>
+    <% elsif @result.current_alert_level == 4 %>
+      <%= render partial: "coronavirus_local_restrictions/tier_four_restrictions", locals: { result: @result } %>
+    <% end %>
+  </div>
+</div>
