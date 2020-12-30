@@ -5,11 +5,17 @@ E06000001:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E06000002:
   name: Middlesbrough Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E06000003:
   name: Redcar and Cleveland Borough Council
@@ -17,11 +23,17 @@ E06000003:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E06000004:
   name: Stockton-on-Tees Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E06000005:
   name: Darlington Borough Council
@@ -29,11 +41,17 @@ E06000005:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E06000006:
   name: Halton Borough Council
   restrictions:
     - alert_level: 2
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
       start_time: "00:01"
 E06000007:
   name: Warrington Borough Council
@@ -41,17 +59,26 @@ E06000007:
     - alert_level: 3
       start_date: 2020-12-26
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E06000008:
   name: Blackburn with Darwen Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E06000009:
   name: Blackpool Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E06000010:
   name: Hull City Council
@@ -83,11 +110,17 @@ E06000014:
     - alert_level: 2
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
+      start_time: "00:01"
 E06000015:
   name: Derby City
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E06000016:
   name: Leicester City Council
@@ -95,11 +128,17 @@ E06000016:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E06000017:
   name: Rutland County Council
   restrictions:
     - alert_level: 2
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
       start_time: "00:01"
 E06000018:
   name: Nottingham City Council
@@ -107,11 +146,17 @@ E06000018:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E06000019:
   name: Herefordshire Council
   restrictions:
     - alert_level: 2
       start_date: 2020-12-26
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
       start_time: "00:01"
 E06000020:
   name: Telford & Wrekin Council
@@ -119,17 +164,26 @@ E06000020:
     - alert_level: 2
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
+      start_time: "00:01"
 E06000021:
   name: Stoke-on-Trent City Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E06000022:
   name: Bath and North East Somerset Council
   restrictions:
     - alert_level: 2
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
       start_time: "00:01"
 E06000023:
   name: Bristol City Council
@@ -155,17 +209,26 @@ E06000026:
     - alert_level: 2
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
+      start_time: "00:01"
 E06000027:
   name: Torbay Council
   restrictions:
     - alert_level: 2
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
+      start_time: "00:01"
 E06000030:
   name: Swindon Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-26
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E06000031:
   name: Peterborough City Council
@@ -263,11 +326,17 @@ E06000047:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E06000049:
   name: Cheshire East Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-26
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E06000050:
   name: Cheshire West and Chester Council
@@ -275,17 +344,26 @@ E06000050:
     - alert_level: 3
       start_date: 2020-12-26
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E06000051:
   name: Shropshire Council
   restrictions:
     - alert_level: 2
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
+      start_time: "00:01"
 E06000054:
   name: Wiltshire Council
   restrictions:
     - alert_level: 2
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
       start_time: "00:01"
 E06000055:
   name: Bedford Borough Council
@@ -305,11 +383,17 @@ E06000057:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E06000058:
   name: Bournemouth, Christchurch and Poole Council
   restrictions:
     - alert_level: 2
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E06000059:
   name: Dorset Council
@@ -317,11 +401,17 @@ E06000059:
     - alert_level: 2
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
+      start_time: "00:01"
 E08000001:
   name: Bolton Metropolitan Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E08000002:
   name: Bury Metropolitan Borough Council
@@ -329,11 +419,17 @@ E08000002:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E08000003:
   name: Manchester City Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E08000004:
   name: Oldham Metropolitan Borough Council
@@ -341,11 +437,17 @@ E08000004:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E08000005:
   name: Rochdale Metropolitan Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E08000006:
   name: Salford City Council
@@ -353,11 +455,17 @@ E08000006:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E08000007:
   name: Stockport Metropolitan Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E08000008:
   name: Tameside Metropolitan Borough Council
@@ -365,17 +473,26 @@ E08000008:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E08000009:
   name: Trafford Metropolitan Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E08000010:
   name: Wigan Metropolitan Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E09000023:
   name: London Borough of Lewisham
@@ -389,11 +506,17 @@ E08000011:
     - alert_level: 2
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
+      start_time: "00:01"
 E08000012:
   name: Liverpool City Council
   restrictions:
     - alert_level: 2
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
       start_time: "00:01"
 E08000013:
   name: St Helens Council
@@ -401,17 +524,26 @@ E08000013:
     - alert_level: 2
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
+      start_time: "00:01"
 E08000014:
   name: Sefton Metropolitan Borough Council
   restrictions:
     - alert_level: 2
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
+      start_time: "00:01"
 E08000015:
   name: Wirral Council
   restrictions:
     - alert_level: 2
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
       start_time: "00:01"
 E08000016:
   name: Barnsley Metropolitan Borough Council
@@ -443,11 +575,17 @@ E08000021:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E08000022:
   name: North Tyneside Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E08000023:
   name: South Tyneside Council
@@ -455,11 +593,17 @@ E08000023:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E08000024:
   name: Sunderland City Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E08000025:
   name: Birmingham City Council
@@ -467,11 +611,17 @@ E08000025:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E08000026:
   name: Coventry City Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E08000027:
   name: Dudley Metropolitan Borough Council
@@ -479,11 +629,17 @@ E08000027:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E08000028:
   name: Sandwell Metropolitan Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E08000029:
   name: Solihull Metropolitan Borough Council
@@ -491,17 +647,26 @@ E08000029:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E08000030:
   name: Walsall Metropolitan Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E08000031:
   name: City of Wolverhampton Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E08000032:
   name: City of Bradford Metropolitan District Council
@@ -538,6 +703,9 @@ E08000037:
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E09000001:
   name: City of London Corporation
@@ -801,11 +969,17 @@ E07000026:
     - alert_level: 2
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000027:
   name: Borough of Barrow-in-Furness
   restrictions:
     - alert_level: 2
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000028:
   name: Carlisle City Council
@@ -813,11 +987,17 @@ E07000028:
     - alert_level: 2
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000029:
   name: Copeland Borough Council
   restrictions:
     - alert_level: 2
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000030:
   name: Eden District Council
@@ -825,11 +1005,17 @@ E07000030:
     - alert_level: 2
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000031:
   name: South Lakeland District Council
   restrictions:
     - alert_level: 2
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000032:
   name: Amber Valley Borough Council
@@ -837,11 +1023,17 @@ E07000032:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000033:
   name: Bolsover District Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000034:
   name: Chesterfield Borough Council
@@ -849,11 +1041,17 @@ E07000034:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000035:
   name: Derbyshire Dales District Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000036:
   name: Erewash Borough Council
@@ -861,11 +1059,17 @@ E07000036:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000037:
   name: High Peak Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000038:
   name: North East Derbyshire District Council
@@ -873,11 +1077,17 @@ E07000038:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000039:
   name: South Derbyshire District Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000040:
   name: East Devon District Council
@@ -885,11 +1095,17 @@ E07000040:
     - alert_level: 2
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000041:
   name: Exeter City Council
   restrictions:
     - alert_level: 2
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000042:
   name: Mid Devon District Council
@@ -897,11 +1113,17 @@ E07000042:
     - alert_level: 2
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000043:
   name: North Devon Council
   restrictions:
     - alert_level: 2
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000044:
   name: South Hams District Council
@@ -909,11 +1131,17 @@ E07000044:
     - alert_level: 2
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000045:
   name: Teignbridge District Council
   restrictions:
     - alert_level: 2
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000046:
   name: Torridge District Council
@@ -921,11 +1149,17 @@ E07000046:
     - alert_level: 2
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000047:
   name: West Devon Borough Council
   restrictions:
     - alert_level: 2
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000061:
   name: Eastbourne Borough Council
@@ -1107,11 +1341,17 @@ E07000218:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000219:
   name: Nuneaton and Bedworth Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000220:
   name: Rugby Borough Council
@@ -1119,17 +1359,26 @@ E07000220:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000221:
   name: Stratford-on-Avon District Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000222:
   name: Warwick District Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000223:
   name: Adur District Council
@@ -1179,11 +1428,17 @@ E07000234:
     - alert_level: 2
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000235:
   name: Malvern Hills District Council
   restrictions:
     - alert_level: 2
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000236:
   name: Redditch Borough Council
@@ -1191,11 +1446,17 @@ E07000236:
     - alert_level: 2
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000237:
   name: Worcester City Council
   restrictions:
     - alert_level: 2
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000238:
   name: Wychavon District Council
@@ -1203,11 +1464,17 @@ E07000238:
     - alert_level: 2
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000239:
   name: Wyre Forest District Council
   restrictions:
     - alert_level: 2
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000076:
   name: Tendring District Council
@@ -1227,11 +1494,17 @@ E07000078:
     - alert_level: 3
       start_date: 2020-12-26
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000079:
   name: Cotswold District Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-26
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000080:
   name: Forest of Dean District Council
@@ -1239,11 +1512,17 @@ E07000080:
     - alert_level: 3
       start_date: 2020-12-26
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000081:
   name: Gloucester City Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-26
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000082:
   name: Stroud District Council
@@ -1251,11 +1530,17 @@ E07000082:
     - alert_level: 3
       start_date: 2020-12-26
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000083:
   name: Tewkesbury Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-26
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000084:
   name: Basingstoke and Deane Borough Council
@@ -1304,6 +1589,9 @@ E07000091:
   restrictions:
     - alert_level: 3
       start_date: 2020-12-26
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000092:
   name: Rushmoor Borough Council
@@ -1461,11 +1749,17 @@ E07000117:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000118:
   name: Chorley Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000119:
   name: Fylde Borough Council
@@ -1473,11 +1767,17 @@ E07000119:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000120:
   name: Hyndburn Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000121:
   name: Lancaster City Council
@@ -1485,11 +1785,17 @@ E07000121:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000122:
   name: Pendle Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000123:
   name: Preston City Council
@@ -1497,11 +1803,17 @@ E07000123:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000124:
   name: Ribble Valley Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000125:
   name: Rossendale Borough Council
@@ -1509,11 +1821,17 @@ E07000125:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000126:
   name: South Ribble Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000127:
   name: West Lancashire Borough Council
@@ -1521,11 +1839,17 @@ E07000127:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000128:
   name: Wyre Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000129:
   name: Blaby District Council
@@ -1533,11 +1857,17 @@ E07000129:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000130:
   name: Charnwood Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000131:
   name: Harborough District Council
@@ -1545,11 +1875,17 @@ E07000131:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000132:
   name: Hinckley and Bosworth Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000133:
   name: Melton Borough Council
@@ -1557,11 +1893,17 @@ E07000133:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000134:
   name: North West Leicestershire District Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000135:
   name: Oadby and Wigston District Council
@@ -1569,11 +1911,17 @@ E07000135:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000136:
   name: Boston Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000137:
   name: East Lindsey District Council
@@ -1581,11 +1929,17 @@ E07000137:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000138:
   name: City of Lincoln Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000139:
   name: North Kesteven District Council
@@ -1593,11 +1947,17 @@ E07000139:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000140:
   name: South Holland District Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000141:
   name: South Kesteven District Council
@@ -1605,11 +1965,17 @@ E07000141:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000142:
   name: West Lindsey District Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000143:
   name: Breckland Council
@@ -1659,11 +2025,17 @@ E07000150:
     - alert_level: 3
       start_date: 2020-12-26
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000151:
   name: Daventry District Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-26
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000152:
   name: East Northamptonshire Council
@@ -1671,11 +2043,17 @@ E07000152:
     - alert_level: 3
       start_date: 2020-12-26
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000153:
   name: Kettering Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-26
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000154:
   name: Northampton Borough Council
@@ -1683,11 +2061,17 @@ E07000154:
     - alert_level: 3
       start_date: 2020-12-26
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000155:
   name: South Northamptonshire Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-26
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000156:
   name: Wellingborough Borough Council
@@ -1695,11 +2079,17 @@ E07000156:
     - alert_level: 3
       start_date: 2020-12-26
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000163:
   name: Craven District Council
   restrictions:
     - alert_level: 2
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000164:
   name: Hambleton District Council
@@ -1707,11 +2097,17 @@ E07000164:
     - alert_level: 2
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000165:
   name: Harrogate Borough Council
   restrictions:
     - alert_level: 2
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000166:
   name: Richmondshire District Council
@@ -1719,11 +2115,17 @@ E07000166:
     - alert_level: 2
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000167:
   name: Ryedale District Council
   restrictions:
     - alert_level: 2
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000168:
   name: Scarborough Borough Council
@@ -1731,11 +2133,17 @@ E07000168:
     - alert_level: 2
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000169:
   name: Selby District Council
   restrictions:
     - alert_level: 2
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000170:
   name: Ashfield District Council
@@ -1743,11 +2151,17 @@ E07000170:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000171:
   name: Bassetlaw District Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000172:
   name: Broxtowe Borough Council
@@ -1755,11 +2169,17 @@ E07000172:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000173:
   name: Gedling Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000174:
   name: Mansfield District Council
@@ -1767,17 +2187,26 @@ E07000174:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000175:
   name: Newark and Sherwood District Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000176:
   name: Rushcliffe Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000177:
   name: Cherwell District Council
@@ -1815,11 +2244,17 @@ E07000187:
     - alert_level: 3
       start_date: 2020-12-26
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000188:
   name: Sedgemoor District Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-26
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000189:
   name: South Somerset District Council
@@ -1827,11 +2262,17 @@ E07000189:
     - alert_level: 3
       start_date: 2020-12-26
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000246:
   name: Somerset West and Taunton District Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-26
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000192:
   name: Cannock Chase District Council
@@ -1839,11 +2280,17 @@ E07000192:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000193:
   name: East Staffordshire Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000194:
   name: Lichfield District Council
@@ -1851,11 +2298,17 @@ E07000194:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000195:
   name: Newcastle-under-Lyme District Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000196:
   name: South Staffordshire Council
@@ -1863,11 +2316,17 @@ E07000196:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000197:
   name: Stafford Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000198:
   name: Staffordshire Moorlands District Council
@@ -1875,11 +2334,17 @@ E07000198:
     - alert_level: 3
       start_date: 2020-12-02
       start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
+      start_time: "00:01"
 E07000199:
   name: Tamworth Borough Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-02
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E07000200:
   name: Babergh District Council
@@ -1899,11 +2364,17 @@ E06000052:
     - alert_level: 2
       start_date: 2020-12-26
       start_time: "00:01"
+    - alert_level: 3
+      start_date: 2020-12-31
+      start_time: "00:01"
 E06000046:
   name: Isle of Wight Council
   restrictions:
     - alert_level: 3
       start_date: 2020-12-26
+      start_time: "00:01"
+    - alert_level: 4
+      start_date: 2020-12-31
       start_time: "00:01"
 E06000053:
   name: Council of the Isles of Scilly
