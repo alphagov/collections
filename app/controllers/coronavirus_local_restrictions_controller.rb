@@ -58,7 +58,7 @@ private
   helper_method :after_christmas?
 
   def out_of_date?
-    false
+    content_item["details"]["out_of_date"]
   end
 
   helper_method :out_of_date?
