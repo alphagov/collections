@@ -5,13 +5,10 @@
   render(
       partial: 'page_header',
       locals: {
-        presented_taxon: presented_taxon,
-        clock: CountdownClock.new
+        presented_taxon: presented_taxon
       }
   )
 %>
-
-<%= render partial: 'take_action' %>
 
 <%= render partial: 'video_section' %>
 

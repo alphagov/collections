@@ -7,9 +7,9 @@
   <meta property="og:url" content="<%= page_url %>">
   <meta property="og:title" content="<%= t("transition_landing_page.meta_title") %>">
   <meta property="og:description" content="<%= t("transition_landing_page.meta_description") %>">
-  <meta property="og:image" content="<%= image_url("transition-time-is-running-out.jpg") %>" />
+  <meta property="og:image" content="<%= image_url("transition-period.png") %>" />
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="<%= image_url("transition-time-is-running-out.jpg") %>">
+  <meta name="twitter:image" content="<%= image_url("transition-period.png") %>">
   <meta name="description" content="<%= t("transition_landing_page.meta_description") %>">
   <meta name="govuk:navigation-page-type" content="Taxon Page" />
   <link rel="canonical" href="<%= page_url %>">
@@ -18,39 +18,42 @@
 
 <header class="landing-page__header--with-bg-image">
   <div class="landing-page__header-text-block">
-    <div class="govuk-width-container landing-page_header-text-container">
+    <div class="govuk-width-container">
       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
+        <div class="govuk-grid-column-two-thirds landing-page_header-text-container">
           <%= render "govuk_publishing_components/components/translation-nav", {
             translations: presented_taxon.translation_links
           } %>
-        </div>
-      </div>
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
+
           <h1 class="landing-page__page_title">
             <%= sanitize(t("transition_landing_page.page_header")) %>
           </h1>
-        </div>
-      </div>
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds landing-page__intro">
-          <%= render "govuk_publishing_components/components/govspeak", {
-          } do %>
-            <p class="govuk-body-l">
-              <mark class="landing-page__intro-highlight"><%= t("transition_landing_page.page_header_highlight")%></mark>
-              <%= t("transition_landing_page.page_header_explainer")%>
-            </p>
-          <% end %>
-        </div>
-      </div>
-      <% if clock.show? %>
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-two-thirds">
-            <%= render partial: 'countdown-flip-clock', locals: { clock: clock } %>
+          <div class="landing-page__intro">
+            <%= render "govuk_publishing_components/components/govspeak", {
+            } do %>
+              <%= tag.p t("transition_landing_page.page_header_explainer") %>
+            <% end %>
           </div>
+
+          <%
+            button_text = t("transition_landing_page.take_action_start_now")
+            button_href = t("transition_landing_page.take_action_start_now_link")
+          %>
+          <%= render "govuk_publishing_components/components/button", {
+            text: button_text,
+            href: button_href,
+            start: true,
+            data_attributes: {
+              "module": "track-click",
+              "track-action": button_href,
+              "track-category": "transition-landing-page",
+              "track-label": button_text
+            }
+          } %>
+
+          <%= render partial: 'transition_landing_page/take-action-traffic-lights' %>
         </div>
-      <% end %>
+      </div>
     </div>
   </div>
 </header>

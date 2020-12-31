@@ -1,36 +1,31 @@
 cy:
   transition_landing_page:
-    meta_title: Pontio’r DU
-    meta_description: "Mae’r DU wedi gadael yr UE. Ewch i weld beth mae’n ei olygu i chi."
-    page_header: "Pontio Brexit:<br/>mae amser yn rhedeg allan"
+    meta_title: Brexit
+    meta_description: "Darganfyddwch sut mae’r rheolau newydd yn effeithio arnoch chi"
+    page_header: "Brexit:<br/>mae’r rheolau newydd yma"
     page_header_highlight: Bydd rheolau newydd
-    page_header_explainer: i fusnesau a dinasyddion o 1 Ionawr 2021.
+    page_header_explainer: Mae rheolau newydd yn berthnasol ar gyfer theithio a gwneud busnes â Ewrop. Defnyddiwch yr adnodd gwirio Brexit i dderbyn rhestr o gamau personol i chi, eich busnes, a’ch teulu.
     countdown_days_to_go: diwrnod i fynd
     countdown_day_to_go: diwrnod i fynd
     take_action_title: Paratowch ar gyfer cytundeb y DU â’r UE
     take_action_text: |
       Mae cytundeb y DU â'r UE yn effeithio ar eich busnes, eich teulu a'ch amgylchiadau personol. Defnyddiwch y gwiriwr Brexit i gael rhestr o gamau gweithredu personol. Gallwch hefyd gofrestru ar gyfer negeseuon e-bost i gael diweddariadau ar gyfer yr hyn y mae angen i chi ei wneud.
-    take_action_start_now: Dechrau nawr
+    take_action_start_now: "Adnodd gwirio Brexit: dechreuwch nawr"
     take_action_start_now_link: "/transition-check/questions"
     take_action_list:
       red: Gwiriwch
       amber: Newidiwch
       green: Ewch
-    video_section_title: "Mae amser yn rhedeg allan"
+    video_section_title: "Cadwch eich busnes i symud"
     video_section_description: |
-      <p>Gweithredwch nawr. Mae cytundeb y DU â'r UE yn effeithio ar ddinasyddion, busnesau a theithio i'r UE. Gwnewch yn siŵr eich bod wedi paratoi ar gyfer diwedd cyfnod pontio Brexit.</p>
-      <p>Gwyliwch y fideo i wybod beth fydd 2021 yn ei olygu i chi.</p>
-    video_section_link: https://www.youtube.com/watch?v=kM9Lf6mLx2I
+      <p>Mae gwneud busnes â Ewrop wedi newid. Mae angen i chi dilyn rheolau newydd ar allforio, mewnforio, tariffau, data a chyflogi.</p>
+      <p>Gwyliwch y fideo i ddarganfod beth mae’r rheolau newydd yn ei olygu i’ch busnes. Gallwch hefyd defnyddio’r <a href="/transition-check/questions" class="govuk-link" data-module="track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="adnodd gwirio Brexit">adnodd gwirio Brexit</a> i dderbyn rhestr o gamau personol.</p>
+    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
     video_section_transcription_summary: Gwelwch y trawsgrifiad fideo
     video_section_transcription_text: |
-      <p>Mae amser yn rhedeg allan.</p>
-      <p>Bydd busnesau sy’n delio ag Ewrop yn gorfod dilyn rheolau newydd o 1af Ionawr 2021.<p>
-      <p>Os yw’n croesi ffiniau mae camau pendant y mae’n rhaid i ni eu cymryd eisoes. Beth bynnag yw’r sefyllfa.</p>
-      <p>Rheolau newydd o’r 1af Ionawr.</p>
-      <p>‘Na i roi eiliad i chi ysgrifennu hynny i lawr. Ionawr y 1af.</p>
-      <p>O, a gall baratoi gymryd mwy o amser ‘na chi’n feddwl</p>
-      <p>Felly ewch ati nawr ar gov.uk/transition.cy</p>
-      <p>Deall? Iawn.</p>
+      <p>Busnesau, mae’r DU wedi gadael yr UE ac mae rheolau newydd mewn grym.</p>
+      <p>I gadw eich busnes i symud, defnyddiwch yr adnodd gwirio Brexit ar gov.uk/transition i dderbyn camau personol ar gyfer eich busnes.<p>
+      <p>Cadwch eich busnes i symud.</p>
     no_cookies:
       icon_text: FIDEO
       change_settings_text: Newidiwch eich gosodiadau cwcis

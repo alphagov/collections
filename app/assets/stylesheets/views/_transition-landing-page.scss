@@ -28,10 +28,10 @@ $green: #00703c;
   border-top: govuk-spacing(2) solid $red;
 
   @include govuk-media-query($from: $header-breakpoint) {
-    background-image: image-url('transition-2020-header-background.jpg');
-    background-size: cover;
-    background-position: center;
-    min-height: 500px;
+    background-image: image-url('transition-2021-header-background.jpg');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   // HIDE BACKGROUND IMAGE ON IE
@@ -47,125 +47,72 @@ $green: #00703c;
   }
 }
 
-.landing-page__header-text-block {
+.landing-page_header-text-container {
+  background-color: govuk-colour("white");
+  box-shadow: 15px 0 0 0 govuk-colour("white"), 4px 0 0 0 govuk-colour("white"), 3px 0 0 0 govuk-colour("white"), 1px 0 0 0 govuk-colour("white");
   padding-bottom: govuk-spacing(4);
 
   @include govuk-media-query($from: tablet) {
     padding-bottom: govuk-spacing(9);
   }
-}
 
-.landing-page__countdown-number-wrapper {
-  @include govuk-font($size: 80, $weight: bold, $line-height: 60px);
+  .gem-c-button {
+    padding-left: govuk-spacing(3);
+    padding-right: govuk-spacing(3);
+  }
 
-  display: inline-block;
-  background: $dark-blue;
-  color: govuk-colour('white');
-  position: relative;
-
-  @include govuk-media-query($from: tablet) {
-    padding: govuk-spacing(1);
+  .gem-c-translation-nav {
+    width: 50%;
   }
 }
 
-// adds the line in across the middle of the div
-.landing-page__countdown-number-wrapper:after {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  height: 3px;
-  background: govuk-colour('white');
-  content: "";
-  width: 100%;
-  display: block;
-}
-
-.landing-page__countdown-number {
-  padding-top: govuk-spacing(2);
-  min-width: 50px;
-  text-align: center;
-
-  @include govuk-media-query($from: tablet) {
-    padding-top: govuk-spacing(3);
-  }
-}
-
-.landing-page__countdown-text {
-  @include govuk-font($size: 27, $weight: bold);
-
-  display: inline-block;
-  margin-left: govuk-spacing(2);
-  height: 35px;
-  vertical-align: middle;
-  color: $dark-blue;
-
-  @include govuk-media-query($from: tablet) {
-    height: 60px;
+.landing-page__header-text-block {
+  @include govuk-media-query($from: $header-breakpoint) {
+    background: govuk-colour("white");
+    background: -webkit-linear-gradient(90deg, govuk-colour("white") 50%, $transparent 50%);
+    background: linear-gradient(90deg, govuk-colour("white") 50%, $transparent 50%);
   }
 }
 
 .landing-page__take-action-traffic-lights {
-  @include govuk-media-query($until: tablet) {
-    margin-top: govuk-spacing(4);
-    margin-bottom: govuk-spacing(6);
-    text-align: center;
+  margin-top: govuk-spacing(6);
+  text-align: center;
+
+  @include govuk-media-query($from: tablet) {
+    text-align: left;
   }
 }
 
 .landing-page__take-action-traffic-lights > li {
   margin-bottom: govuk-spacing(1);
   white-space: nowrap;
-
-  @include govuk-media-query($until: tablet) {
-    display: inline;
-    margin-right: govuk-spacing(2);
-  }
+  display: inline;
+  margin-right: govuk-spacing(3);
 }
 
 .landing-page__take-action-traffic-lists-icon {
   vertical-align: middle;
   margin-top: -5px;
-  width: 18px;
+  width: 22px;
+  margin-right: 5px;
 
   @include govuk-media-query($from: tablet) {
-    width: 36px;
+    width: 28px;
   }
 }
 
 .landing-page__take-action-traffic-lists-text {
   @include govuk-font($size: 24, $weight: bold, $line-height: 1.1);
   vertical-align: middle;
-
-  @include govuk-media-query($from: tablet) {
-    @include govuk-font($size: 36, $weight: bold, $line-height: 1.1);
-  }
 }
 
 .landing-page__intro {
+  margin-bottom: govuk-spacing(6);
+  padding-right: govuk-spacing(4);
+
   p {
-    @include govuk-font($size: 36, $line-height: 35px);
-    color: $dark-blue;
-
-    @include govuk-media-query($from: tablet) {
-      @include govuk-font($size: 36, $line-height: 45px);
-    }
+    @include govuk-font($size: 24);
   }
-
-  a:link,
-  a:visited {
-    font-weight: bold;
-    color: $dark-blue;
-  }
-
-  a:focus {
-    color: govuk-colour("black");
-  }
-}
-
-.landing-page__intro-highlight {
-  color: govuk-colour("white");
-  background-color: $red;
-  padding: 0 3px;
 }
 
 .landing-page__page_title {
@@ -211,6 +158,23 @@ $green: #00703c;
   h2,
   p {
     color: govuk-colour("white");
+  }
+
+  a {
+    color: govuk-colour("white");
+
+    &:link,
+    &:visited {
+      color: govuk-colour("white");
+    }
+
+    &:hover {
+      color: $gem-hover-dark-background;
+    }
+
+    &:focus {
+      color: $govuk-focus-text-colour;
+    }
   }
 }
 

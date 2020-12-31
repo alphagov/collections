@@ -8,7 +8,6 @@ class TransitionLandingPageTest < ActionDispatch::IntegrationTest
     it "renders" do
       given_there_is_a_transition_taxon
       when_i_visit_the_transition_landing_page
-      then_i_can_see_the_take_action_section
       then_i_can_see_the_title_section
       then_i_can_see_the_header_section
       then_i_can_see_the_buckets_section

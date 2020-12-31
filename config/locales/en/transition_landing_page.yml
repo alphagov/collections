@@ -1,36 +1,25 @@
 en:
   transition_landing_page:
-    meta_title: Brexit transition
-    meta_description: The Brexit transition period ends this year. Check the new rules from January 2021 and act now.
-    page_header: "Brexit transition:<br/>time is running out"
-    page_header_highlight: There are new rules
-    page_header_explainer: for businesses and citizens from 1 January 2021.
-    countdown_days_to_go: days to go
-    countdown_day_to_go: day to go
-    take_action_title: Get ready for the UK’s deal with the EU
-    take_action_text: |
-      The UK’s deal with the EU affects your business, family, and personal circumstances. Use the Brexit checker to get a personalised list of actions. You can also sign up for emails to get updates for what you need to do.
+    meta_title: Brexit
+    meta_description: The Brexit transition period has ended. Check how the new rules affect you.
+    page_header: "Brexit:<br/>new rules are here"
+    page_header_explainer: New rules apply to things like travel and doing business with Europe. Use the Brexit checker to get a personalised list of actions for you, your business and your family.
     take_action_start_now: "Brexit checker: start now"
     take_action_start_now_link: "/transition-check/questions"
     take_action_list:
       red: Check
       amber: Change
       green: Go
-    video_section_title: "Time is running out"
+    video_section_title: "Keep your business moving"
     video_section_description: |
-      <p>You need to act now. The UK’s deal with the EU affects citizens, businesses, and travel to the EU. Make sure you’re ready for the end of the Brexit transition.</p>
-      <p>Watch the video to find out what 2021 will mean for you.</p>
-    video_section_link: https://www.youtube.com/watch?v=kM9Lf6mLx2I
+      <p>Doing business with Europe has changed. You need to follow new rules on exports, imports, tariffs, data and&nbsp;hiring.</p>
+      <p>Watch the video to find out what the new rules mean for your business. You can also <a href="/transition-check/questions" class="govuk-link" data-module="track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">use the Brexit checker</a> to get a personalised list of actions.</p>
+    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
     video_section_transcription_summary: View the video transcript
     video_section_transcription_text: |
-      <p>Time is running out.</p>
-      <p>Businesses that deal with Europe will have to follow new rules from 1 January 2021.</p>
-      <p>If it crosses borders there's definite actions we need to take already. No matter what.</p>
-      <p>New rules from 1 January.</p>
-      <p>I'll give you a second to jot that down. 1 Jan.</p>
-      <p>Oh and getting ready can take longer than you think. </p>
-      <p>So get on it now, at gov.uk/transition.</p>
-      <p>Got it? Good.</p>
+      <p>Businesses, the UK has left the EU and new rules now apply.</p>
+      <p>To keep your business moving, use the Brexit checker tool on gov.uk/transition to get personalised actions for your business.</p>
+      <p>Let’s keep business moving.</p>
     no_cookies:
       icon_text: VIDEO
       change_settings_text: Change your cookie settings
@@ -39,7 +28,7 @@ en:
       watch_link_text: Watch on YouTube
     guidance_header: "Changes for businesses and citizens"
     campaign_links:
-      lead_in: "You need to act now if you’re:"
+      lead_in: "Check what you need to do differently if you’re:"
       links:
         - text: importing goods from the EU
           path: /prepare-to-import-to-great-britain-from-january-2021
@@ -53,7 +42,7 @@ en:
           path: /uk-nationals-living-eu
         - text: staying in the UK if you’re an EU citizen
           path: /staying-uk-eu-citizen
-      lead_out: <a href="/transition-check/questions" class="govuk-link">Get the complete list</a> of what you need to do for you, your business and your family.
+      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="Get the complete list">Get the complete list</a> of what you need to do for you, your business and your family.
     comms_header: "Announcements"
     comms:
       links:
