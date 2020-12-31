@@ -18,7 +18,7 @@ module TransitionLandingPageSteps
   end
 
   def then_i_can_see_the_title_section
-    assert page.has_selector?("title", text: "Brexit transition", visible: false)
+    assert page.has_selector?("title", text: "Brexit", visible: false)
   end
 
   def then_i_can_see_the_header_section
