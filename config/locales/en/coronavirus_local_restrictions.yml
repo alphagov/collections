@@ -87,10 +87,3 @@ en:
           alert_level: "%{area} will be in Tier 3: Very High alert."
         level_four:
           alert_level: "%{area} will be in Tier 4: Stay at Home."
-      christmas_rules:
-        heading: On 25 December
-        body: |
-          There are different Christmas rules for meeting friends and family.
-        guidance:
-           label: Find out what the Christmas rules are
-           link: "/government/publications/making-a-christmas-bubble-with-friends-and-family/making-a-christmas-bubble-with-friends-and-family"
