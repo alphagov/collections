@@ -23,41 +23,13 @@
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
           <%= render "govuk_publishing_components/components/heading", {
-            text: sanitize(header["title"]),
+            text: t("coronavirus_landing_page.header_title"),
             font_size: 24,
             margin_bottom: 6,
             inverse: true
           } %>
 
-          <% if header["description"] %>
-            <%= render "govuk_publishing_components/components/govspeak", {
-            } do %>
-              <%= sanitize(header["description"]) %>
-            <% end %>
-          <% end %>
-
-          <% if header["list"] %>
-            <ul class="covid__instruction-list">
-              <% icons = [
-                "icon-hand-wash",
-                "icon-face-cover",
-                "icon-make-space"
-              ] %>
-              <% header["list"].each_with_index do | item, index | %>
-                <li class="covid__instruction-list-item">
-                  <% if item.is_a?(Hash) %>
-                    <%= render "coronavirus_landing_page/components/landing_page/#{icons[index]}.svg" if icons[index] %>
-                    <span class="covid__instruction-text">
-                      <strong class="covid__instruction"><%= item["instruction"].capitalize %></strong>
-                      <%= item["detail"] %>
-                    </span>
-                  <% else %>
-                    <%= item %>
-                  <% end %>
-                </li>
-              <% end %>
-            </ul>
-          <% end %>
+          <%= render_govspeak(t("coronavirus_landing_page.header_intro")) %>
         </div>
       </div>
 
@@ -95,8 +67,8 @@
             <%= render 'govuk_publishing_components/components/action_link', {
               light_text: true,
               transparent_icon: true,
-              href: header["link"]["href"],
-              text: header["link"]["link_text"],
+              href: t("coronavirus_landing_page.action_link_url"),
+              text: t("coronavirus_landing_page.action_link_text"),
               subtext: header["link"]["subtext"],
               mobile_subtext: true,
               nowrap_text: header["link"]["link_nowrap_text"],
@@ -104,7 +76,7 @@
                 module: "track-click",
                 track_category: "pageElementInteraction",
                 track_action: "Announcements",
-                track_label: header["link"]["href"]
+                track_label: t("coronavirus_landing_page.action_link_url")
               }
             } %>
           <% end %>
