@@ -12,7 +12,7 @@ describe DitLandingPageController do
       de: "Informationen für Unternehmen mit Sitz in der EU, die Handelsbeziehungen mit dem Vereinigten Königreich unterhalten",
       es: "Comerciar con el Reino Unido como empresa con sede en la UE",
       fr: "Travailler avec le Royaume-Uni en tant qu'entreprise basée dans l'UE",
-      it: "Se la tua azienda ha sede nell’UE, scopri le nuove regole per continuare a fare affari con il Regno Unito dal 1° gennaio 2021",
+      it: "Se la tua impresa ha sede nell’UE, scopri come continuare a intrattenere scambi commerciali con il Regno Unito",
       nl: "Handel drijven met het Verenigd Koninkrijk vanuit een in de EU gevestigde onderneming vanaf 1 januari 2021",
       pl: "Handel z Wielką Brytanią od 1 stycznia 2021 roku – informacje dla firm z Unii Europejskiej",
     }
