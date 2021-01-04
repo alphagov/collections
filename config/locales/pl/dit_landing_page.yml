@@ -1,15 +1,14 @@
 pl:
   dit_landing_page:
     kbm-logo-alt-text: Utrzymaj swój biznes w grze
-    meta_title: Handel z Wielką Brytanią od 1 stycznia 2021 roku – informacje dla firm z Unii Europejskiej
-    meta_description: Wielka Brytania opuściła Unię Europejską. 31 grudnia 2020 roku Wielka Brytania opuści jednolity rynek i unię celną UE. Od 1 stycznia 2021 roku zasady handlu z Wielką Brytanią ulegną zmianie.
-    page_header: Handel z Wielką Brytanią od 1 stycznia 2021 roku – informacje dla firm z Unii Europejskiej
-    page_header_explainer:
-      <p>Wielka Brytania opuściła Unię Europejską. 31 grudnia 2020 roku Wielka Brytania opuści jednolity rynek i unię celną UE.</p>
-      <p>Od 1 stycznia 2021 roku zasady handlu z Wielką Brytanią ulegną zmianie.</p>
+    meta_title: Wymiana handlowa z Wielką Brytanią z punktu widzenia firmy z siedzibą w UE
+    meta_description: Zmieniły się zasady handlu z Wielką Brytanią.
+    page_header: Wymiana handlowa z Wielką Brytanią z punktu widzenia firmy z siedzibą w UE
+    page_header_explainer: |
+      <p>Zmieniły się zasady handlu z Wielką Brytanią.</p>
     ribbon_title: Upewnij się, że Twój biznes jest na to gotowy.
     ribbon_text: |
-      Jeżeli prowadzisz firmę mającą siedzibę w UE, musisz zapoznać się z nowymi zasadami i przygotować się na zmiany aby kontynuować handel z Wielką Brytanią od 1 stycznia 2021 roku.
+      Jeśli prowadzisz firmę z siedzibą w UE, sprawdź zasady, których musisz przestrzegać, aby kontynuować handel z Wielką Brytanią.
     guidance_title: Co trzeba wiedzieć
     guidance_links:
       - title: Importuj z Wielkiej Brytanii
@@ -17,7 +16,7 @@ pl:
         link: Dowiedz się więcej o imporcie z Wielkiej Brytanii
         url: "/guidance/eu-business-importing-from-the-uk.pl"
       - title: Eksportuj do Wielkiej Brytanii
-        text: Dowiedz się jakie jakie kroki należy podjąć by eksportować towary do Wielkiej Brytanii, włączając w to nowe zasady obowiązujące przewoźników, kontrole graniczne, przewóz towarów przez granice, a także eksport towarów takich jak żywność, napoje, produkty pochodzenia zwierzęcego i roślinnego oraz produkty związane z sektorem energetycznym.
+        text: Dowiedz się, co Twoja firma z siedzibą w UE musi zrobić, aby eksportować do Wielkiej Brytanii, Zwróć uwagę na przepisy dotyczące przewoźników, kontroli, przewozu towarów przez granice i eksportu towarów takich jak żywność, napoje, zwierzęta, rośliny i produkty energetyczne.
         link: Dowiedz się więcej o imporcie do Wielkiej Brytanii
         url: "/guidance/eu-business-exporting-to-the-uk.pl"
       - title: Płać podatki i taryfy
@@ -25,11 +24,11 @@ pl:
         link: Dowiedz się więcej o podatkach i taryfach
         url: "/guidance/eu-business-taxes-and-tariffs.pl"
       - title: Świadcz usługi w Wielkiej Brytanii
-        text: Dowiedz się o tym, jak mogą zmienić się zasady dostarczania usług w Wielkiej Brytanii dla Twojej firmy z siedzibą w UE.
+        text: Dowiedz się, jak świadczyć usługi w Wielkiej Brytanii, jeśli Twoja firma ma siedzibę w UE.
         link: Dowiedz się więcej o świadczeniu usług w Wielkiej Brytanii
         url: "/guidance/eu-business-services.pl"
-      - title: Pracuj w Wielkiej Brytanii
-        text: Dowiedz się jakie kroki pracownicy z Unii Europejskiej będą musieli podjąć od 1 stycznia, między innymi w zakresie uprawnień do prowadzenia pojazdów, wiz i kwalifikacji zawodowych.
+      - title: Praca w Wielkiej Brytanii
+        text: Dowiedz się, jakie przepisy obowiązują pracowników z UE w Wielkiej Brytanii, w tym przepisy dotyczące prowadzenia pojazdów, wiz i uznawania kwalifikacji zawodowych.
         link: Dowiedz się więcej o pracy w Wielkiej Brytanii
         url: "/guidance/eu-business-working-in-the-uk.pl"
       - title: Ochrona danych i prawo autorskie

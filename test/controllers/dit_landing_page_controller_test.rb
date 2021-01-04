@@ -14,7 +14,7 @@ describe DitLandingPageController do
       fr: "Travailler avec le Royaume-Uni en tant qu'entreprise basée dans l'UE",
       it: "Se la tua impresa ha sede nell’UE, scopri come continuare a intrattenere scambi commerciali con il Regno Unito",
       nl: "Handel drijven met het VK vanuit een in Europa gevestigde onderneming.",
-      pl: "Handel z Wielką Brytanią od 1 stycznia 2021 roku – informacje dla firm z Unii Europejskiej",
+      pl: "Wymiana handlowa z Wielką Brytanią z punktu widzenia firmy z siedzibą w UE",
     }
 
     expected_content.each_key do |locale|
