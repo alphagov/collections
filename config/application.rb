@@ -52,5 +52,13 @@ module Collections
     # header on /transition prompting users to return to their
     # account.
     config.feature_flag_govuk_accounts = ENV["FEATURE_FLAG_ACCOUNTS"] == "enabled"
+
+    config.after_initialize do
+      # This variable allows specifying a time that we don't want any
+      # /find-coronavirus-local-restrictions cache headers to be set longer than
+
+      # config.coronavirus_local_restrictions_cache_clear_time = Time.zone.local(2021, 4, 1, 0, 1)
+      config.coronavirus_local_restrictions_cache_clear_time = nil
+    end
   end
 end
