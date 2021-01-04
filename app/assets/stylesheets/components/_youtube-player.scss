@@ -37,6 +37,10 @@
     color: govuk-colour("black");
   }
 
+  .govuk-link {
+    @include govuk-link-style-default;
+  }
+
   .govuk-details__summary {
     color: govuk-colour('white');
 
