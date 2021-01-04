@@ -29,7 +29,7 @@ describe DitLandingPageController do
     it "renders the English page" do
       get :show
       assert_response :success
-      assert_select "h1", "Trade with the UK as a business based in the EU"
+      assert_select "h1", I18n.t!("dit_landing_page.page_header")
       assert_select "main[lang=en]", false
     end
   end
