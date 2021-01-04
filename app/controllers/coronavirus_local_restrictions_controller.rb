@@ -36,7 +36,14 @@ private
   end
 
   def cache_time
-    out_of_date? ? OUT_OF_DATE_CACHE_TIME : MAX_CACHE_TIME
+    cache_for = out_of_date? ? OUT_OF_DATE_CACHE_TIME : MAX_CACHE_TIME
+
+    cache_clear_time = Rails.configuration.coronavirus_local_restrictions_cache_clear_time
+    return cache_for if !cache_clear_time || cache_clear_time.past?
+
+    time_until_cache_clear = cache_clear_time - Time.zone.now
+
+    [time_until_cache_clear, cache_for].min
   end
 
   def restriction_expiry(search)

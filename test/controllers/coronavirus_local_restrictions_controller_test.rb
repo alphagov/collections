@@ -31,6 +31,18 @@ describe CoronavirusLocalRestrictionsController do
       assert_equal "max-age=#{5.minutes}, public", response.headers["Cache-Control"]
     end
 
+    it "reduces the cache time when there is an upcoming cache clear time" do
+      freeze_time do
+        Rails.configuration
+             .stubs(:coronavirus_local_restrictions_cache_clear_time)
+             .returns(1.minute.from_now)
+
+        get :show
+
+        assert_equal "max-age=#{1.minute}, public", response.headers["Cache-Control"]
+      end
+    end
+
     it "renders the show template when given an invalid postcode" do
       get :show, params: { postcode: "not-a-postcode" }
 
