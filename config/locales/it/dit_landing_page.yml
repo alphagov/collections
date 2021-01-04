@@ -1,35 +1,34 @@
 it:
   dit_landing_page:
     kbm-logo-alt-text: Restiamo in affari
-    meta_title: Se la tua azienda ha sede nell’UE, scopri le nuove regole per continuare a fare affari con il Regno Unito dal 1° gennaio 2021
-    meta_description: Il Regno Unito ha lasciato l’UE. Il 31 dicembre 2020 il Regno Unito lascerà il mercato unico e l’unione doganale dell’UE. A partire dal 1° gennaio 2021 cambieranno le norme che regolano gli scambi commerciali con il Regno Unito.
-    page_header: Se la tua azienda ha sede nell’UE, scopri le nuove regole per continuare a fare affari con il Regno Unito dal 1° gennaio 2021
-    page_header_explainer:
-      <p>Il Regno Unito ha lasciato l’UE. Il 31 dicembre 2020 il Regno Unito lascerà il mercato unico e l’unione doganale dell’UE.</p>
-      <p>A partire dal 1° gennaio 2021 cambieranno le norme che regolano gli scambi commerciali con il Regno Unito.</p>
+    meta_title: Se la tua impresa ha sede nell’UE, scopri come continuare a intrattenere scambi commerciali con il Regno Unito
+    meta_description: Le norme per gli scambi commerciali con il Regno Unito sono cambiate.
+    page_header: Se la tua impresa ha sede nell’UE, scopri come continuare a intrattenere scambi commerciali con il Regno Unito
+    page_header_explainer: |
+      <p>Le norme per gli scambi commerciali con il Regno Unito sono cambiate.</p>
     ribbon_title: Se la tua azienda ha sede nell’UE, accertati che sia pronta
     ribbon_text: |
-      Se gestisci un’impresa con sede nell’UE, verifica le nuove norme e preparati ai cambiamenti per poter continuare ad intrattenere rapporti commerciali con il Regno Unito dal 1° gennaio 2021.
+      Se gestisci un’impresa con sede nell’UE, informati sulle norme da rispettare per continuare a intrattenere scambi commerciali con il Regno Unito.
     guidance_title: Informazioni utili per la tua azienda
     guidance_links:
-      - title: Importazioni dal Regno Unito
+      - title: Importazioni dal Regno&nbsp;Unito
         text: Scopri le azioni necessarie che tua azienda con sede nell’UE dovrà attuare per importare dal Regno Unito, nonché le relative procedure doganali per importare merci quali prodotti alimentari, bevande e prodotti di origine animale e vegetale.
         link: Scopri di più sulle procedure d’importazione dal Regno Unito
         url: "/guidance/eu-business-importing-from-the-uk.it"
-      - title: Esportazioni nel Regno Unito
-        text: Scopri le azioni necessarie che la tua azienda con sede nell’UE dovrà attuare per esportare nel Regno Unito, incluse le nuove regolamentazioni per gli autotrasportatori, i controlli, la movimentazione transfrontaliera e l’esportazione di merci quali prodotti alimentari, bevande, prodotti di origine animale e vegetale e prodotti energetici.
+      - title: Esportazioni nel Regno&nbsp;Unito
+        text: Scopri le azioni che le imprese con sede nell’UE devono intraprendere per esportare nel Regno Unito, nonché le norme che riguardano gli autotrasportatori, i controlli, la circolazione transfrontaliera delle merci e l’esportazione di prodotti alimentari, bevande, prodotti di origine animale e vegetale e prodotti connessi all’energia.
         link: Scopri di più sulle procedure d’esportazione nel Regno Unito
         url: "/guidance/eu-business-exporting-to-the-uk.it"
       - title: Tasse e dazi
         text: Scopri di più sui dazi e sul rimborso transfrontaliero dell’IVA applicabili alle imprese con sede nell’UE.
         link: Scopri di più su tasse e dazi
         url: "/guidance/eu-business-taxes-and-tariffs.it"
-      - title: Fornitura di servizi nel Regno Unito
-        text: Scopri di più su come le imprese con sede nell’UE potrebbero dover cambiare la modalità di fornitura dei propri servizi.
+      - title: Fornitura di servizi al Regno&nbsp;Unito
+        text: Se sei un’impresa con sede nell’UE, scopri come fornire servizi nel Regno Unito.
         link: Scopri di più sulla fornitura di servizi nel Regno Unito
         url: "/guidance/eu-business-services.it"
       - title: Lavoro nel Regno Unito
-        text: Scopri le azioni che i lavoratori dell’UE dovranno intraprendere a partire dal 1° gennaio 2021, comprese le norme relative alla guida, ai visti e al riconoscimento delle qualifiche professionali.
+        text: Scopri quali norme si applicano ai cittadini dell’UE che lavorano nel Regno Unito, comprese le norme relative alla guida, ai visti e al riconoscimento delle qualifiche professionali.
         link: Scopri di più sul lavoro nel Regno Unito
         url: "/guidance/eu-business-working-in-the-uk.it"
       - title: Protezione dei dati e diritto d’autore

@@ -1,23 +1,22 @@
 fr:
   dit_landing_page:
     kbm-logo-alt-text: Continuons à travailler ensemble
-    meta_title: Travailler avec le Royaume-Uni à partir du 1er janvier 2021 en tant qu'entreprise basée dans l'UE
-    meta_description: Le Royaume-Uni a quitté l'UE. Le 31 décembre 2020, le Royaume-Uni quittera le marché unique et l'union douanière de l'UE. À partir du 1er janvier 2021, les règles relatives aux échanges commerciaux avec le Royaume-Uni seront modifiées.
-    page_header: Travailler avec le Royaume-Uni à partir du 1er janvier 2021 en tant qu'entreprise basée dans l'UE
-    page_header_explainer:
-      <p>Le Royaume-Uni a quitté l'UE. Le 31 décembre 2020, le Royaume-Uni quittera le marché unique et l'union douanière de l'UE.</p>
-      <p>À partir du 1er janvier 2021, les règles relatives aux échanges commerciaux avec le Royaume-Uni seront modifiées.</p>
+    meta_title: Travailler avec le Royaume-Uni en tant qu'entreprise basée dans l'UE
+    meta_description: Les règles relatives aux échanges commerciaux avec le Royaume-Uni ont changé.
+    page_header: Travailler avec le Royaume-Uni en tant qu'entreprise basée dans l'UE
+    page_header_explainer: |
+      <p>Les règles relatives aux échanges commerciaux avec le Royaume-Uni ont changé.</p>
     ribbon_title: Assurez-vous que votre entreprise basée dans l'UE soit prête
     ribbon_text: |
-      Si vous dirigez une entreprise basée dans l'UE, vous devez vérifier les nouvelles règles et vous préparer aux changements afin de pouvoir continuer à faire des échanges commerciaux avec le Royaume-Uni à partir du 1er janvier 2021.
+      Si vous dirigez une entreprise basée dans l'UE, vérifiez les règles que vous devez suivre pour continuer à commercer avec le Royaume-Uni.
     guidance_title: Ce que votre entreprise doit savoir
     guidance_links:
       - title: Importer du Royaume-Uni
         text: Découvrez ce que les entreprises basées dans l'UE doivent faire pour importer des produits du Royaume-Uni, notamment les procédures douanières et l'importation de biens tels que les denrées alimentaires, les boissons, les produits d’origine animale et végétaux.
         link: En savoir plus sur les importations en provenance du Royaume-Uni
         url: "/guidance/eu-business-importing-from-the-uk.fr"
-      - title: Exportation vers le Royaume-Uni
-        text: Découvrez ce que les entreprises basées dans l'UE doivent faire pour exporter vers le Royaume-Uni, notamment les nouvelles règles applicables aux transporteurs, aux contrôles, à la circulation transfrontalière des marchandises et à l'exportation de produits tels que les denrées alimentaires, les boissons, les animaux, les plantes et les produits liés à l'énergie.
+      - title: Exporter au Royaume-Uni
+        text: Découvrez ce que votre entreprise basée dans l'UE doit faire pour exporter au Royaume-Uni, notamment les règles applicables aux transporteurs, aux contrôles, au passage des frontières et à l'exportation de produits tels que les denrées alimentaires, les boissons, les animaux, les plantes et les produits liés à l'énergie.
         link: En savoir plus pour exporter vers le Royaume-Uni
         url: "/guidance/eu-business-exporting-to-the-uk.fr"
       - title: Payer des taxes et des droits de douane
@@ -25,11 +24,11 @@ fr:
         link: En savoir plus sur les taxes et les droits de douane
         url: "/guidance/eu-business-taxes-and-tariffs.fr"
       - title: Fournir des services au Royaume-Uni
-        text: Découvrez ce qui peut changer si vous êtes une entreprise basée dans l'UE et que vous fournissez des services au Royaume-Uni.
+        text: Découvrez comment fournir des services au Royaume-Uni si vous êtes une entreprise établie dans l'UE.
         link: En savoir plus sur la prestation de services au Royaume-Uni
         url: "/guidance/eu-business-services.fr"
       - title: Travailler au Royaume-Uni
-        text: Découvrez ce que les travailleurs de l'UE installés au Royaume-Uni doivent faire à partir du 1er janvier 2021, notamment les règles en matière de conduite, de visas et de reconnaissance des qualifications professionnelles.
+        text: Découvrez les règles applicables aux travailleurs de l'UE au Royaume-Uni, notamment en matière de conduite, de visas et de reconnaissance des qualifications professionnelles.
         link: En savoir plus pour travailler au Royaume-Uni
         url: "/guidance/eu-business-working-in-the-uk.fr"
       - title: Protection des données et droit d'auteur

@@ -24,7 +24,7 @@
     <div class="dit-landing-page__guidance-item">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-one-third">
-          <%= tag.h3 guidance[:title], class: "govuk-heading-m" %>
+          <%= tag.h3 sanitize(guidance[:title]), class: "govuk-heading-m" %>
         </div>
         <div class="govuk-grid-column-two-thirds">
           <%= tag.p sanitize(guidance[:text]), class: "govuk-body" %>

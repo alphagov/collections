@@ -35,7 +35,7 @@ class DitLandingPageTest < ActionDispatch::IntegrationTest
   end
 
   def then_i_can_see_the_header_section
-    assert page.has_title? "Trade with the UK from 1 January 2021 as a business based in the EU"
+    assert page.has_title? I18n.t!("dit_landing_page.page_header")
   end
 
   def and_i_can_see_the_guidance_links
@@ -43,7 +43,7 @@ class DitLandingPageTest < ActionDispatch::IntegrationTest
   end
 
   def then_i_can_see_the_training_section
-    assert page.has_selector?("h2", text: "Webinars for EU-based businesses trading with the UK")
+    assert page.has_selector?("h2", text: I18n.t!("dit_landing_page.training_section_title"))
   end
 
   # test 2
@@ -56,7 +56,7 @@ class DitLandingPageTest < ActionDispatch::IntegrationTest
   end
 
   def then_i_see_the_german_translation_of_the_page
-    assert page.has_title? "Handel mit dem Vereinigten Königreich ab 1. Januar 2021 als Unternehmen mit Sitz in der EU"
+    assert page.has_title? "Informationen für Unternehmen mit Sitz in der EU, die Handelsbeziehungen mit dem Vereinigten Königreich unterhalten"
   end
 
   def and_i_click_on_english
