@@ -1,7 +1,7 @@
 <% if taxon_is_live?(presented_taxon) %>
   <div class='subscriptions'>
     <a href="/email-signup/?topic=<%= presented_taxon.base_path %>" class='email-alerts'>
-      Get email alerts for this topic
+      Get emails for this topic
       <span class='visuallyhidden'><%= presented_taxon.title %></span>
     </a>
   </div>
