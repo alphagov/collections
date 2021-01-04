@@ -1,4 +1,4 @@
-$c19-landing-page-header-background: #0843a1;
+$c19-landing-page-header-background: #272828;
 
 .covid__page {
   .govuk-grid-column-one-third,
@@ -22,7 +22,7 @@ $c19-landing-page-header-background: #0843a1;
 .covid__page-header {
   margin-bottom: govuk-spacing(8);
   border-top: solid govuk-spacing(2) $covid-yellow;
-  background-color: $c19-landing-page-header-background;
+  background-color: govuk-colour("black");
   color: govuk-colour("white");
 
   .covid__page-header-link {
@@ -65,6 +65,10 @@ $c19-landing-page-header-background: #0843a1;
 
   @include govuk-media-query($from: tablet) {
     padding: 45px 0 40px;
+  }
+
+  .gem-c-govspeak {
+    color: govuk-colour("white");
   }
 }
 
@@ -128,8 +132,6 @@ $c19-landing-page-header-background: #0843a1;
 }
 
 .covid__page-header-title-wrapper {
-  border-bottom: 1px solid $covid-yellow;
-
   @include govuk-media-query($from: tablet) {
     position: relative;
   }
