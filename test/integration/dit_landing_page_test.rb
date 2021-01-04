@@ -56,7 +56,7 @@ class DitLandingPageTest < ActionDispatch::IntegrationTest
   end
 
   def then_i_see_the_german_translation_of_the_page
-    assert page.has_title? "Handel mit dem Vereinigten Königreich ab 1. Januar 2021 als Unternehmen mit Sitz in der EU"
+    assert page.has_title? "Informationen für Unternehmen mit Sitz in der EU, die Handelsbeziehungen mit dem Vereinigten Königreich unterhalten"
   end
 
   def and_i_click_on_english

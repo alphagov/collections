@@ -1,15 +1,14 @@
 de:
   dit_landing_page:
     kbm-logo-alt-text: Keep Business Moving
-    meta_title: Handel mit dem Vereinigten Königreich ab 1. Januar 2021 als Unternehmen mit Sitz in der EU
-    meta_description: Das Vereinigte Königreich ist aus der EU ausgetreten. Am 31. Dezember 2020 wird das Vereinigte Königreich den EU-Binnenmarkt und die Zollunion verlassen. Ab 1. Januar 2021 ändern sich die Regeln für den Handel mit dem Vereinigten Königreich.
-    page_header: Handel mit dem Vereinigten Königreich ab 1. Januar 2021 als Unternehmen mit Sitz in der EU
+    meta_title: Informationen für Unternehmen mit Sitz in der EU, die Handelsbeziehungen mit dem Vereinigten Königreich unterhalten
+    meta_description: Die Vorschriften für den Handel mit dem Vereinigten Königreich haben sich geändert.
+    page_header: Informationen für Unternehmen mit Sitz in der EU, die Handelsbeziehungen mit dem Vereinigten Königreich unterhalten
     page_header_explainer:
-      <p>Das Vereinigte Königreich ist aus der EU ausgetreten. Am 31. Dezember 2020 wird das Vereinigte Königreich den EU-Binnenmarkt und die Zollunion verlassen.</p>
-      <p>Ab 1. Januar 2021 ändern sich die Regeln für den Handel mit dem Vereinigten Königreich.</p>
+      <p>Die Vorschriften für den Handel mit dem Vereinigten Königreich haben sich geändert.</p>
     ribbon_title: Stellen Sie sicher, dass Ihr Unternehmen gut vorbereitet ist
     ribbon_text: |
-      Als Unternehmen mit Sitz in der EU müssen Sie sich über die neuen Vorschriften informieren und sich auf die Änderungen einstellen, damit Sie ab 1. Januar 2021 weiterhin Handelsbeziehungen mit dem Vereinigten Königreich unterhalten können.
+      Wenn Sie ein Unternehmen mit Sitz in der EU führen, beachten Sie bitte die neuen Vorschriften für den Handel mit dem Vereinigten Königreich.
     guidance_title: Was Sie wissen müssen
     guidance_links:
       - title: Einfuhren aus dem Vereinigten Königreich
@@ -17,19 +16,19 @@ de:
         link: Mehr zu Einfuhren aus dem Vereinigten Königreich
         url: "/guidance/eu-business-importing-from-the-uk.de"
       - title: Ausfuhren in das Vereinigte Königreich
-        text: Informieren Sie sich, was Sie als Unternehmen mit Sitz in der EU im Zusammenhang mit Ausfuhren in das Vereinigte Königreich beachten müssen, u.a. zu neuen Vorschriften für Spediteure, Kontrollen, dem grenzüberschreitenden Warenverkehr und Export von Waren wie Lebensmitteln, Getränken, Tier- und Pflanzenprodukten und energieverbrauchsrelevanten Produkten.
+        text: Informationen für Unternehmen mit Sitz in der EU, die in das Vereinigte Königreich exportieren möchten, u. a. zu Vorschriften für Spediteure, Kontrollen, zur grenzüberschreitenden Beförderung von Waren und zum Export von Waren wie Lebensmitteln, Getränken, Tier- und Pflanzenprodukten sowie energieverbrauchsrelevanten Produkten.
         link: Mehr zu Ausfuhren in das Vereinigte Königreich
         url: "/guidance/eu-business-exporting-to-the-uk.de"
       - title: Steuern und Zölle
         text: Informieren Sie sich über Zölle und Umsatzsteuererstattung für Unternehmen mit Sitz in der EU.
         link: Mehr zu Steuern und Zöllen
         url: "/guidance/eu-business-taxes-and-tariffs.de"
-      - title: Anbieten von Dienstleistungen im Vereinigten Königreich
-        text: Erfahren Sie, welche Änderungen auf Sie zukommen, wenn Sie als Unternehmen mit Sitz in der EU Dienstleistungen im Vereinigten Königreich erbringen.
+      - title: Bereitstellung von Dienstleistungen im Vereinigten Königreich
+        text: Informationen für Unternehmen mit Sitz in der EU, die Dienstleistungen im Vereinigten Königreich erbringen möchten.
         link: Mehr zur Bereitstellung von Dienstleistungen im Vereinigten Königreich
         url: "/guidance/eu-business-services.de"
       - title: Arbeiten im Vereinigten Königreich
-        text: Erfahren Sie, welche Vorkehrungen EU-Arbeitnehmer im Vereinigten Königreich ab 1. Januar 2021 treffen müssen, u.a. zu Vorschriften beim Autofahren, Visa und zur Anerkennung beruflicher Qualifikationen.
+        text: Informationen für EU-Arbeitnehmer im Vereinigten Königreich zu den geltenden Vorschriften, u.a. zum Autofahren, zu den Visabestimmungen und zur Anerkennung beruflicher Qualifikationen.
         link: Mehr zum Thema Arbeiten im Vereinigten Königreich
         url: "/guidance/eu-business-working-in-the-uk.de"
       - title: Datenschutz und Urheberrecht

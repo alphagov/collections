@@ -9,7 +9,7 @@ describe DitLandingPageController do
 
   describe "GET show" do
     expected_content = {
-      de: "Handel mit dem Vereinigten Königreich ab 1. Januar 2021 als Unternehmen mit Sitz in der EU",
+      de: "Informationen für Unternehmen mit Sitz in der EU, die Handelsbeziehungen mit dem Vereinigten Königreich unterhalten",
       es: "Cómo hacer negocios con el Reino Unido a partir del 1 de enero de 2021 en caso de ser una empresa con sede en la UE",
       fr: "Travailler avec le Royaume-Uni à partir du 1er janvier 2021 en tant qu'entreprise basée dans l'UE",
       it: "Se la tua azienda ha sede nell’UE, scopri le nuove regole per continuare a fare affari con il Regno Unito dal 1° gennaio 2021",
