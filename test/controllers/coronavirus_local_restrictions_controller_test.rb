@@ -7,6 +7,7 @@ describe CoronavirusLocalRestrictionsController do
 
   before do
     stub_content_store_has_item("/find-coronavirus-local-restrictions", {})
+    CoronavirusLocalRestrictionsController.any_instance.stubs(:out_of_date?).returns(false)
   end
 
   describe "GET show" do
