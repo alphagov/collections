@@ -33,12 +33,14 @@
     <div class="govuk-width-container">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds covid__page-header-list">
-          <%= render "govuk_publishing_components/components/heading", {
-            text: header["pretext"],
-            font_size: 19,
-            margin_bottom: 3,
-            inverse: true
-          } %>
+          <% if header["pretext"].present? %>
+            <%= render "govuk_publishing_components/components/heading", {
+              text: header["pretext"],
+              font_size: 19,
+              margin_bottom: 3,
+              inverse: true
+            } %>
+          <% end %>
           <% if header["list_heading"].present? %>
             <p class="govuk-body covid__inverse">
               <%= header["list_heading"] %>
