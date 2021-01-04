@@ -35,7 +35,7 @@ class DitLandingPageTest < ActionDispatch::IntegrationTest
   end
 
   def then_i_can_see_the_header_section
-    assert page.has_title? "Trade with the UK from 1 January 2021 as a business based in the EU"
+    assert page.has_title? "Trade with the UK as a business based in the EU"
   end
 
   def and_i_can_see_the_guidance_links

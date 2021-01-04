@@ -1,15 +1,14 @@
 en:
   dit_landing_page:
     kbm-logo-alt-text: Keep Business Moving
-    meta_title: Trade with the UK from 1 January 2021 as a business based in the EU
-    meta_description: The UK has left the EU. On 31 December 2020 the UK will leave the EU single market and customs union. From 1 January 2021 the rules for trading with the UK will change.
-    page_header: Trade with the UK from 1&nbsp;January 2021 as a business based in the EU
+    meta_title: Trade with the UK as a business based in the EU
+    meta_description: The rules for trading with the UK have changed.
+    page_header: Trade with the UK as a business based in the EU
     page_header_explainer: |
-      <p>The UK has left the EU. On 31 December 2020 the UK will leave the EU single market and customs union.</p>
-      <p>From 1 January 2021 the rules for trading with the UK will change.</p>
+      <p>The rules for trading with the UK have changed.</p>
     ribbon_title: Make sure your EU-based business is&nbsp;ready
     ribbon_text: |
-      If you run an EU-based business, you need to check the new rules and prepare for the changes so that you can continue trading with the UK from 1 January 2021.
+      If you run an EU-based business, check the rules you need to follow to continue trading with the UK.
     guidance_title: What your business needs to know
     guidance_links:
       - title: Import from the UK
@@ -17,19 +16,19 @@ en:
         link: Learn more about importing from the UK
         url: "/guidance/eu-business-importing-from-the-uk"
       - title: Export to the UK
-        text: Find out what your EU-based business needs to do to export to the UK, including new rules for hauliers, checks, moving goods across borders and exporting goods such as food, drink, animal, plant, and energy-related products.
+        text: Find out what your EU-based business needs to do to export to the UK, including rules for hauliers, checks, moving goods across borders and exporting goods such as food, drink, animal, plant, and energy-related products.
         link: Learn more about exporting to the UK
         url: "/guidance/eu-business-exporting-to-the-uk"
       - title: Pay taxes and tariffs
         text: Find out more about tariffs and reclaiming VAT for your EU-based business.
         link: Learn more about taxes and tariffs
         url: "/guidance/eu-business-taxes-and-tariffs"
-      - title: Provide services to the UK
-        text: Find out how providing services in the UK may change if you’re an EU-based business.
+      - title: Providing services to the UK
+        text: Find out how to provide services in the UK if you’re an EU-based business.
         link: Learn more about providing services to the UK
         url: "/guidance/eu-business-services"
       - title: Work in the UK
-        text: Find out what EU workers in the UK need to do from 1 January 2021, including rules on driving, visas, and recognising professional qualifications.
+        text: Find out what rules apply to EU workers in the UK, including rules on driving, visas, and recognising professional qualifications.
         link: Learn more about working in the UK
         url: "/guidance/eu-business-working-in-the-uk"
       - title: Data protection and copyright
