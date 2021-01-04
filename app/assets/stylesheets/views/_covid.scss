@@ -66,6 +66,10 @@ $c19-landing-page-header-background: #0843a1;
   @include govuk-media-query($from: tablet) {
     padding: 45px 0 40px;
   }
+
+  .gem-c-govspeak {
+    color: govuk-colour("white");
+  }
 }
 
 .covid__instruction-list {

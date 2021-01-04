@@ -29,6 +29,13 @@
             inverse: true
           } %>
 
+          <% if header["description"] %>
+            <%= render "govuk_publishing_components/components/govspeak", {
+            } do %>
+              <%= sanitize(header["description"]) %>
+            <% end %>
+          <% end %>
+
           <% if header["list"] %>
             <ul class="covid__instruction-list">
               <% icons = [
