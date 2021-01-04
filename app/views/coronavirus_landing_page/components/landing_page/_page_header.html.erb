@@ -23,13 +23,13 @@
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
           <%= render "govuk_publishing_components/components/heading", {
-            text: t("coronavirus_landing_page.header_title"),
+            text: header["title"],
             font_size: 24,
             margin_bottom: 6,
             inverse: true
           } %>
 
-          <%= render_govspeak(t("coronavirus_landing_page.header_intro")) %>
+          <%= render_govspeak(header["intro"]) %>
         </div>
       </div>
 
@@ -67,8 +67,8 @@
             <%= render 'govuk_publishing_components/components/action_link', {
               light_text: true,
               transparent_icon: true,
-              href: t("coronavirus_landing_page.action_link_url"),
-              text: t("coronavirus_landing_page.action_link_text"),
+              href: header["link"]["url"],
+              text: header["link"]["text"],
               subtext: header["link"]["subtext"],
               mobile_subtext: true,
               nowrap_text: header["link"]["link_nowrap_text"],
@@ -76,7 +76,7 @@
                 module: "track-click",
                 track_category: "pageElementInteraction",
                 track_action: "Announcements",
-                track_label: t("coronavirus_landing_page.action_link_url")
+                track_label: header["link"]["url"]
               }
             } %>
           <% end %>
