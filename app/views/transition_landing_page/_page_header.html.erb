@@ -25,9 +25,15 @@
             translations: presented_taxon.translation_links
           } %>
 
-          <h1 class="landing-page__page_title">
-            <%= sanitize(t("transition_landing_page.page_header")) %>
-          </h1>
+          <div class="govuk-!-margin-top-7">
+            <%= render "govuk_publishing_components/components/heading", {
+              text: sanitize(t("transition_landing_page.page_header")),
+              heading_level: 1,
+              font_size: "xl",
+              margin_bottom: 4,
+            } %>
+          </div>
+          
           <div class="landing-page__intro">
             <%= render "govuk_publishing_components/components/govspeak", {
             } do %>

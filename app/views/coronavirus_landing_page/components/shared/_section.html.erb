@@ -1,6 +1,11 @@
 <% section["sub_sections"].each do |sub_section| %>
   <% if sub_section["title"] %>
-    <h4 class="govuk-heading-s covid__accordion-heading"><%= sub_section["title"] %></h4>
+    <%= render "govuk_publishing_components/components/heading", {
+      text: sub_section["title"],
+      heading_level: 4,
+      font_size: "s",
+      margin_bottom: 4,
+    } %>
   <% end %>
   <ul class="covid__list covid__list--accordion">
     <% sub_section["list"].each do | item | %>

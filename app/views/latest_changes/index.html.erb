@@ -28,7 +28,7 @@
   <ul class="changed-documents">
     <% subtopic.changed_documents.each do |document| -%>
       <li>
-        <h3><a href="<%= document.base_path %>"><%= document.title %></a></h3>
+        <a href="<%= document.base_path %>"><%= document.title %></a>
 
         <% if document.public_updated_at %>
           <time class="updated-at" datetime="<%= document.public_updated_at.iso8601 %>">

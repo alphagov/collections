@@ -64,8 +64,8 @@ class ContentStoreOrganisationsTest < ActionDispatch::IntegrationTest
 
   it "renders a list of organisations that an organisation works with" do
     assert page.has_css?(".organisation-list__works-with#toggle_attorney-general-s-office")
-    assert page.has_css?("#toggle_attorney-general-s-office .organisation-list__works-with-title", text: "Non-ministerial department")
-    assert page.has_css?("#toggle_attorney-general-s-office .organisation-list__works-with-title", text: "Other")
+    assert page.has_css?("#toggle_attorney-general-s-office h4", text: "Non-ministerial department")
+    assert page.has_css?("#toggle_attorney-general-s-office h4", text: "Other")
 
     assert page.has_css?("#toggle_attorney-general-s-office a[href='/government/organisations/crown-prosecution-service']", text: "Crown Prosecution Service")
     assert page.has_css?("#toggle_attorney-general-s-office a[href='/government/organisations/government-legal-department']", text: "Government Legal Department")

@@ -166,16 +166,16 @@ module CoronavirusLandingPageSteps
   def then_i_can_see_the_timeline
     assert page.has_selector?("h2", text: "Recent and upcoming changes")
 
-    assert page.has_selector?(".covid-timeline__item-heading", text: "18 September")
+    assert page.has_selector?(".covid-timeline .gem-c-heading", text: "18 September")
     assert page.has_selector?(".covid-timeline__item .gem-c-govspeak", text: "If you live, work or travel in the North East, you need to follow different covid rules")
 
-    assert page.has_selector?(".covid-timeline__item-heading", text: "15 September")
+    assert page.has_selector?(".covid-timeline .gem-c-heading", text: "15 September")
     assert page.has_selector?(".covid-timeline__item .gem-c-govspeak", text: "If you live, work or visit Bolton, you need to follow different covid rules")
 
-    assert page.has_selector?(".covid-timeline__item-heading", text: "14 September")
+    assert page.has_selector?(".covid-timeline .gem-c-heading", text: "14 September")
     assert page.has_selector?(".covid-timeline__item .gem-c-govspeak", text: "People must not meet in groups larger than 6 in England. There are exceptions to this ‘rule of 6’")
 
-    assert page.has_selector?(".covid-timeline__item-heading", text: "24 July")
+    assert page.has_selector?(".covid-timeline .gem-c-heading", text: "24 July")
     assert page.has_selector?(".covid-timeline__item .gem-c-govspeak", text: "Face coverings are mandatory in shops")
   end
 
