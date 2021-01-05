@@ -31,9 +31,9 @@ en:
       lead_in: "Check what you need to do differently if you’re:"
       links:
         - text: importing goods from the EU
-          path: /prepare-to-import-to-great-britain-from-january-2021
+          path: /import-goods-into-uk
         - text: exporting goods to the EU
-          path: /prepare-to-export-from-great-britain-from-january-2021
+          path: /export-goods
         - text: moving goods to or from Northern Ireland
           path: /guidance/moving-goods-into-out-of-or-through-northern-ireland-from-1-january-2021
         - text: travelling to the EU
