@@ -290,11 +290,6 @@ $c19-landing-page-header-background: #272828;
 }
 
 .covid__logos {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
   margin-top: govuk-spacing(4);
-
-  @include govuk-media-query($from: tablet) {
-    max-height: 45px; // the SVG canvas height is too big on IE
-  }
 }
