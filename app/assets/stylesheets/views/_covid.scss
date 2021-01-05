@@ -72,40 +72,6 @@ $c19-landing-page-header-background: #272828;
   }
 }
 
-.covid__instruction-list {
-  @include govuk-font(19);
-  margin-bottom: govuk-spacing(3);
-  list-style: none;
-}
-
-.covid__instruction-list-item {
-  color: govuk-colour("white");
-  margin-bottom: govuk-spacing(4);
-  display: table;
-}
-
-.covid__instruction-icon {
-  fill: govuk-colour("white");
-  display: table-cell;
-  margin-right: govuk-spacing(3);
-}
-
-.covid__instruction-text {
-  display: table-cell;
-  padding-top: 5px;
-  vertical-align: top;
-
-  @include govuk-media-query($from: tablet) {
-    padding-top: 0;
-  }
-}
-
-.covid__instruction {
-  @extend %govuk-heading-m;
-  margin-bottom: 0;
-  color: govuk-colour("white");
-}
-
 .covid__page-header-light--hub {
   padding-bottom: 35px;
   background: $covid-grey;
@@ -312,4 +278,23 @@ $c19-landing-page-header-background: #272828;
 
 .covid-timeline__item-heading {
   margin-bottom: govuk-spacing(1);
+}
+
+.covid__logo-wrapper {
+  margin-bottom: govuk-spacing(6);
+  text-align: center;
+
+  @include govuk-media-query($from: tablet) {
+    text-align: left;
+  }
+}
+
+.covid__logos {
+  max-width: 100%;
+  height: auto;
+  margin-top: govuk-spacing(4);
+
+  @include govuk-media-query($from: tablet) {
+    max-height: 45px; // the SVG canvas height is too big on IE
+  }
 }
