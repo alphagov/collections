@@ -313,3 +313,22 @@ $c19-landing-page-header-background: #272828;
 .covid-timeline__item-heading {
   margin-bottom: govuk-spacing(1);
 }
+
+.covid__logo-wrapper {
+  margin-bottom: govuk-spacing(6);
+  text-align: center;
+
+  @include govuk-media-query($from: tablet) {
+    text-align: left;
+  }
+}
+
+.covid__logos {
+  max-width: 100%;
+  height: auto;
+  margin-top: govuk-spacing(4);
+
+  @include govuk-media-query($from: tablet) {
+    max-height: 45px; // the SVG canvas height is too big on IE
+  }
+}
