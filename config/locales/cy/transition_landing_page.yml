@@ -3,13 +3,7 @@ cy:
     meta_title: Brexit
     meta_description: "Darganfyddwch sut mae’r rheolau newydd yn effeithio arnoch chi"
     page_header: "Brexit:<br/>mae’r rheolau newydd yma"
-    page_header_highlight: Bydd rheolau newydd
     page_header_explainer: Mae rheolau newydd yn berthnasol ar gyfer theithio a gwneud busnes â Ewrop. Defnyddiwch yr adnodd gwirio Brexit i dderbyn rhestr o gamau personol i chi, eich busnes, a’ch teulu.
-    countdown_days_to_go: diwrnod i fynd
-    countdown_day_to_go: diwrnod i fynd
-    take_action_title: Paratowch ar gyfer cytundeb y DU â’r UE
-    take_action_text: |
-      Mae cytundeb y DU â'r UE yn effeithio ar eich busnes, eich teulu a'ch amgylchiadau personol. Defnyddiwch y gwiriwr Brexit i gael rhestr o gamau gweithredu personol. Gallwch hefyd gofrestru ar gyfer negeseuon e-bost i gael diweddariadau ar gyfer yr hyn y mae angen i chi ei wneud.
     take_action_start_now: "Adnodd gwirio Brexit: dechreuwch nawr"
     take_action_start_now_link: "/transition-check/questions"
     take_action_list:
@@ -37,9 +31,9 @@ cy:
       lead_in: "Mae’n rhaid i chi gymryd camau nawr os ydych chi’n:"
       links:
         - text: mewnforio nwyddau o’r UE
-          path: /prepare-to-import-to-great-britain-from-january-2021
+          path: /import-goods-into-uk
         - text: allforio nwyddau i’r UE
-          path: /prepare-to-export-from-great-britain-from-january-2021
+          path: /export-goods
         - text: symud nwyddau i mewn neu allan o Ogledd Iwerddon
           path: /guidance/moving-goods-into-out-of-or-through-northern-ireland-from-1-january-2021
         - text: teithio i’r UE
