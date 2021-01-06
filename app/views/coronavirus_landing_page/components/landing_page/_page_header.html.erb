@@ -72,8 +72,8 @@
             <%= render 'govuk_publishing_components/components/action_link', {
               light_text: true,
               transparent_icon: true,
-              href: header["link"]["url"],
-              text: header["link"]["text"],
+              href: header["link"]["href"],
+              text: header["link"]["link_text"],
               subtext: header["link"]["subtext"],
               mobile_subtext: true,
               nowrap_text: header["link"]["link_nowrap_text"],
@@ -81,7 +81,7 @@
                 module: "track-click",
                 track_category: "pageElementInteraction",
                 track_action: "Announcements",
-                track_label: header["link"]["url"]
+                track_label: header["link"]["href"]
               }
             } %>
           <% end %>
