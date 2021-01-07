@@ -28,12 +28,7 @@ Rails.application.routes.draw do
   end
 
   # Route for local restrictions postcode lookup
-  constraints CoronavirusLocalRestrictionsConstraint.new do
-    get "/find-coronavirus-local-restrictions" => "coronavirus_local_restrictions#show"
-  end
-
-  # This redirects to the full guidance when the checker is offline
-  get "/find-coronavirus-local-restrictions", to: redirect("/guidance/national-lockdown-stay-at-home")
+  get "/find-coronavirus-local-restrictions" => "coronavirus_local_restrictions#show"
 
   # TODO: this redirect causes the request to be routed to Whitehall where
   # the country A-Z currently lives. This needs to be removed when the world index

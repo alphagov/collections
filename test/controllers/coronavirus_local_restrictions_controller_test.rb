@@ -11,6 +11,15 @@ describe CoronavirusLocalRestrictionsController do
   end
 
   describe "GET show" do
+    it "returns a cached redirect when Rails is in production" do
+      Rails.env.stubs(:production?).returns(true)
+      get :show
+
+      assert_equal "max-age=#{30.minutes}, public", response.headers["Cache-Control"]
+      assert_response :temporary_redirect
+      assert_redirected_to "/guidance/national-lockdown-stay-at-home"
+    end
+
     it "renders the show template when not given a postcode" do
       get :show
 

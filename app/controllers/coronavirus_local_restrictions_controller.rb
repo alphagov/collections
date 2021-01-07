@@ -2,6 +2,13 @@ class CoronavirusLocalRestrictionsController < ApplicationController
   OUT_OF_DATE_CACHE_TIME = 5.minutes
   MAX_CACHE_TIME = 30.minutes
 
+  before_action do
+    next unless Rails.env.production?
+
+    expires_in(cache_time, public: true)
+    redirect_to "/guidance/national-lockdown-stay-at-home", status: :temporary_redirect
+  end
+
   def show
     expires_in(cache_time, public: true)
     @content_item = content_item.to_hash
