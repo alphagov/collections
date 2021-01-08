@@ -53,7 +53,11 @@
       <%#= render partial: 'coronavirus_landing_page/components/shared/video_player_section' %>
       <%= render partial: 'coronavirus_landing_page/components/shared/announcements_section', locals: { details: details } %>
       <%= render partial: 'coronavirus_landing_page/components/landing_page/live_stream_section', locals: { live_stream: details.live_stream } %>
-      <%= render partial: 'coronavirus_landing_page/components/shared/topic_section', locals: { topic_section: details.statistics_section } %>
+      <%= render partial: 'coronavirus_landing_page/components/shared/topic_section', locals: {
+        topic_section: details.statistics_section,
+        tracking_category: "pageElementInteraction",
+        tracking_action: "Statistics",
+      } %>
       <%= render partial: 'coronavirus_landing_page/components/shared/topic_section', locals: { topic_section: details.topic_section } %>
       <%= content_tag :section, class: "covid__topic-wrapper" do
         render partial: 'components/signup-link', locals: {
