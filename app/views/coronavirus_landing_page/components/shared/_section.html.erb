@@ -27,7 +27,12 @@
           <%= link_to(
             item["label"],
             item["url"],
-            class: "govuk-link covid__accordion-link"
+            class: "govuk-link covid__accordion-link",
+            data: {
+              track_category: "pageElementInteraction",
+              track_action: "AccordionClick",
+              track_label: item["url"],
+            }
           ) %>
         <% end %>
       </li>
