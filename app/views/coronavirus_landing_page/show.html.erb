@@ -41,7 +41,13 @@
         copy: details.find_help["paragraph"],
         call_to_action: {
           href: details.find_help["link"]["href"],
-          text: details.find_help["link"]["text"]
+          text: details.find_help["link"]["text"],
+          data_attributes: {
+            module: "track-click",
+            track_category: "pageElementInteraction",
+            track_action: "callOutBox",
+            track_label: details.find_help["link"]["href"],
+          },
         }
       } %>
     </div>
