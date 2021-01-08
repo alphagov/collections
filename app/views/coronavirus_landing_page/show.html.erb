@@ -25,8 +25,14 @@
         call_to_action: {
           href: details.nhs_banner["call_to_action"]["href"],
           title: details.nhs_banner["call_to_action"]["title"],
+          link_data_attributes: {
+            module: "track-click",
+            track_category: "pageElementInteraction",
+            track_action: "callOutBox",
+            track_label: details.nhs_banner["call_to_action"]["href"],
+          },
           subtext: details.nhs_banner["call_to_action"]["subtext"],
-          description: details.nhs_banner["call_to_action"]["description"]
+          description: details.nhs_banner["call_to_action"]["description"],
         }
       } %>
 
