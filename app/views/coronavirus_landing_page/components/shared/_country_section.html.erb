@@ -1,9 +1,14 @@
 <% guidance ||= nil %>
 
 <% if guidance.present? && guidance["intro"].present? %>
-  <p class="govuk-body">
+  <div 
+    class="govuk-body"
+    data-module="track-links"
+    data-track-category="pageElementInteraction"
+    data-track-action="AccordionClick"
+  >
     <%= render_govspeak(guidance["intro"]) %>
-  </p>
+  </div>
 <% end %>
 <% if guidance.present? && guidance["links"].present? %>
   <%
