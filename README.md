@@ -172,6 +172,10 @@ Collections will be running locally at collections.dev.gov.uk.
 
 Use `bundle exec rake` to run the test suite, excluding JavaScript. Or if you are running in docker, `govuk-docker-run bundle exec rake`
 
+To test a single file:
+
+`govuk-docker-run bundle exec rails test test/unit/application_helper_test.rb`
+
 #### Javascript tests
 
 Use `bundle exec rake jasmine:ci` to run Jasmine tests
