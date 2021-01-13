@@ -15,7 +15,12 @@
             simple: true,
             href: item["url"],
             text: item["label"],
-            margin_bottom: 1
+            margin_bottom: 1,
+            data: {
+              track_category: "pageElementInteraction",
+              track_action: "AccordionFeatureClick",
+              track_label: item["url"],
+            }
           }%>
           <% item_description = item["description"] %>
           <% if item_description %>
