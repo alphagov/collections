@@ -1,11 +1,11 @@
 GOVUK.analytics = GOVUK.analytics || {}
 GOVUK.analytics.trackEvent = function () {}
 
-describe('Track timeline links', function () {
+describe('Track links', function () {
   'use strict'
 
   var html =
-    '<div class="covid-timeline" data-module="track-timeline-links">' +
+    '<div class="covid-timeline" data-module="track-links" data-track-category="pageElementInteraction" data-track-action="Timeline">' +
       '<h2 class="gem-c-heading gem-c-heading--font-size-27 gem-c-heading--padding   govuk-!-margin-bottom-4">Recent and upcoming changes</h2>' +
       '<div class="covid-timeline__item">' +
         '<h3 class="covid-timeline__item-heading govuk-heading-s">24 September</h3>' +
@@ -34,7 +34,7 @@ describe('Track timeline links', function () {
     element.innerHTML = html
     element = element.firstElementChild
 
-    var tracker = new GOVUK.Modules.TrackTimelineLinks()
+    var tracker = new GOVUK.Modules.TrackLinks()
     tracker.start([element])
   })
 
