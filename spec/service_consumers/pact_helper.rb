@@ -70,7 +70,12 @@ Pact.provider_states_for "GDS API Adapters" do
 
   provider_state "no organisation exists" do
     set_up do
-      ##
+      Services
+      .search_api
+      .stub(:search)
+      .with(
+        organisation_params(slug: "department-for-making-life-better"),
+      ) { search_api_organisation_no_results }
     end
   end
 end
