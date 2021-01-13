@@ -59,7 +59,12 @@ Pact.provider_states_for "GDS API Adapters" do
 
   provider_state "the organisation hmrc exists" do
     set_up do
-      ##
+      Services
+      .search_api
+      .stub(:search)
+      .with(
+        organisation_params(slug: "hm-revenue-customs"),
+      ) { search_api_organisation_results }
     end
   end
 
