@@ -8,7 +8,14 @@
 <% if guidance.present? && guidance["links"].present? %>
   <%
     guidance_links = guidance["links"].map do | link |
-      link_to(link["label"],link["url"], class: "govuk-link")
+      link_to(
+        link["label"], link["url"], class: "govuk-link",
+        data: {
+          track_category: "pageElementInteraction",
+          track_action: "AccordionClick",
+          track_label: link["url"],
+        }
+      )
     end
   %>
   <p class="govuk-body">
