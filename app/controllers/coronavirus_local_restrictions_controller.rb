@@ -1,16 +1,17 @@
 class CoronavirusLocalRestrictionsController < ApplicationController
   OUT_OF_DATE_CACHE_TIME = 5.minutes
+  TEMPORARY_CACHE_TIME = 2.minutes
   MAX_CACHE_TIME = 30.minutes
 
-  before_action do
-    next unless Rails.env.production?
-
-    expires_in(cache_time, public: true)
-    redirect_to "/guidance/national-lockdown-stay-at-home", status: :temporary_redirect
-  end
+  # before_action do
+  #   next if Rails.env.production?
+  #
+  #   expires_in(cache_time, public: true)
+  #   redirect_to "/guidance/national-lockdown-stay-at-home", status: :temporary_redirect
+  # end
 
   def show
-    expires_in(cache_time, public: true)
+    expires_in(TEMPORARY_CACHE_TIME, public: true)
     @content_item = content_item.to_hash
 
     if params[:postcode].nil?
@@ -25,7 +26,7 @@ class CoronavirusLocalRestrictionsController < ApplicationController
     elsif @search.no_restriction? || @search.no_information?
       render :no_information
     else
-      expires_in(restriction_expiry(@search), public: true)
+      expires_in(TEMPORARY_CACHE_TIME, public: true)
 
       render :results
     end

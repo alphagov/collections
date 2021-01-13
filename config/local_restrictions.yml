@@ -899,34 +899,6 @@ E09000033:
     - alert_level: 4
       start_date: 2020-12-20
       start_time: "00:01"
-E07000004:
-  name: Buckinghamshire Council
-  delete_later: true
-  restrictions:
-    - alert_level: 4
-      start_date: 2020-12-20
-      start_time: "00:01"
-E07000005:
-  name: Buckinghamshire Council
-  delete_later: true
-  restrictions:
-    - alert_level: 4
-      start_date: 2020-12-20
-      start_time: "00:01"
-E07000006:
-  name: Buckinghamshire Council
-  delete_later: true
-  restrictions:
-    - alert_level: 4
-      start_date: 2020-12-20
-      start_time: "00:01"
-E07000007:
-  name: Buckinghamshire Council
-  delete_later: true
-  restrictions:
-    - alert_level: 4
-      start_date: 2020-12-20
-      start_time: "00:01"
 E06000060:
   name: Buckinghamshire Council
   restrictions:
