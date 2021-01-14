@@ -25,8 +25,14 @@
         call_to_action: {
           href: details.nhs_banner["call_to_action"]["href"],
           title: details.nhs_banner["call_to_action"]["title"],
+          link_data_attributes: {
+            module: "track-click",
+            track_category: "pageElementInteraction",
+            track_action: "callOutBox",
+            track_label: details.nhs_banner["call_to_action"]["href"],
+          },
           subtext: details.nhs_banner["call_to_action"]["subtext"],
-          description: details.nhs_banner["call_to_action"]["description"]
+          description: details.nhs_banner["call_to_action"]["description"],
         }
       } %>
 
@@ -35,7 +41,13 @@
         copy: details.find_help["paragraph"],
         call_to_action: {
           href: details.find_help["link"]["href"],
-          text: details.find_help["link"]["text"]
+          text: details.find_help["link"]["text"],
+          data_attributes: {
+            module: "track-click",
+            track_category: "pageElementInteraction",
+            track_action: "callOutBox",
+            track_label: details.find_help["link"]["href"],
+          },
         }
       } %>
     </div>
@@ -53,7 +65,11 @@
       <%#= render partial: 'coronavirus_landing_page/components/shared/video_player_section' %>
       <%= render partial: 'coronavirus_landing_page/components/shared/announcements_section', locals: { details: details } %>
       <%= render partial: 'coronavirus_landing_page/components/landing_page/live_stream_section', locals: { live_stream: details.live_stream } %>
-      <%= render partial: 'coronavirus_landing_page/components/shared/topic_section', locals: { topic_section: details.statistics_section } %>
+      <%= render partial: 'coronavirus_landing_page/components/shared/topic_section', locals: {
+        topic_section: details.statistics_section,
+        tracking_category: "pageElementInteraction",
+        tracking_action: "Statistics",
+      } %>
       <%= render partial: 'coronavirus_landing_page/components/shared/topic_section', locals: { topic_section: details.topic_section } %>
       <%= content_tag :section, class: "covid__topic-wrapper" do
         render partial: 'components/signup-link', locals: {
