@@ -185,7 +185,7 @@ private
   def and_i_can_see_the_email_signup_link
     assert page.has_link?(
       "Sign up for updates to this topic page",
-      href: "/email-signup/?topic=#{current_path}",
+      href: "/email-signup/?link=#{current_path}",
     )
     assert page.has_css?("a[data-track-category='emailAlertLinkClicked']", text: "Sign up for updates to this topic page")
     assert page.has_css?("a[data-track-action=\"#{current_path}\"]", text: "Sign up for updates to this topic page")
@@ -195,7 +195,7 @@ private
   def and_i_cannot_see_an_email_signup_link
     assert_not page.has_link?(
       "Sign up for updates to this topic page",
-      href: "/email-signup/?topic=#{current_path}",
+      href: "/email-signup/?link=#{current_path}",
     )
   end
 
