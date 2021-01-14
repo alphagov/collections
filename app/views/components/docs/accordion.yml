@@ -63,7 +63,7 @@ examples:
           title: 'Alternative provision censuses',
           panel: '<div class="govuk-govspeak">
             <div class="subscriptions">
-              <a href="/email-signup/?topic=/education/alternative-provision-censuses" class="email-alerts">
+              <a href="/email-signup/?link=/education/alternative-provision-censuses" class="email-alerts">
                 Get emails for this topic
                 <span class="visuallyhidden">Alternative provision censuses</span>
               </a>
@@ -84,7 +84,7 @@ examples:
           title: 'General hospital school censuses',
           panel: '<div class="govuk-govspeak">
             <div class="subscriptions">
-              <a href="/email-signup/?topic=/education/general-hospital-school-censuses" class="email-alerts">
+              <a href="/email-signup/?link=/education/general-hospital-school-censuses" class="email-alerts">
                 Get emails for this topic
                 <span class="visuallyhidden">General hospital school censuses</span>
               </a>
