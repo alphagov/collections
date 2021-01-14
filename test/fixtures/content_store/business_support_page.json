@@ -384,19 +384,6 @@
     "notifications": {
       "intro": "Stay up to date with GOV.UK",
       "email_link": "Sign up to get emails when we change any coronavirus information on the GOV.UK website"
-    },
-    "related_links": {
-      "title": "Related links",
-      "list": [
-        {
-          "text": "Get an isolation note to give to your employer",
-          "url": "https://www.nhs.uk/conditions/coronavirus-covid-19/self-isolation-advice/"
-        },
-        {
-          "text": "Your rights if your hours are cut or you’re laid off",
-          "url": "/lay-offs-short-timeworking"
-        }
-      ]
     }
   }
 }
