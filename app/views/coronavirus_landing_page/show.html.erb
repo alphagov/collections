@@ -70,7 +70,11 @@
         tracking_category: "pageElementInteraction",
         tracking_action: "Statistics",
       } %>
-      <%= render partial: 'coronavirus_landing_page/components/shared/topic_section', locals: { topic_section: details.topic_section } %>
+      <%= render partial: 'coronavirus_landing_page/components/shared/topic_section', locals: {
+        topic_section: details.topic_section,
+        tracking_category: "pageElementInteraction",
+        tracking_action: "CoronavirusInformation",
+      } %>
       <%= content_tag :section, class: "covid__topic-wrapper" do
         render partial: 'components/signup-link', locals: {
           link_text: details.notifications["email_link"],
