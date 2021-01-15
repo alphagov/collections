@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   include Slimmer::Template
+  include CookielessTestable
 
   protect_from_forgery with: :exception
 

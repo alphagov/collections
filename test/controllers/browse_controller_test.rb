@@ -1,6 +1,8 @@
 require "test_helper"
 
 describe BrowseController do
+  include GovukAbTesting::MinitestHelpers
+
   describe "GET index" do
     before do
       stub_content_store_has_item(
@@ -44,6 +46,33 @@ describe BrowseController do
       get :show, params: { top_level_slug: "banana" }
 
       assert_response 404
+    end
+  end
+
+  describe "Check correct behaviour of CookielessAATest" do
+    before do
+      stub_content_store_has_item(
+        "/browse",
+        links: {
+          top_level_browse_pages: top_level_browse_pages,
+        },
+      )
+    end
+
+    %w[A B].each do |test_variant|
+      it "record hit when in variant #{test_variant}" do
+        with_variant CookielessAATest: test_variant.to_s do
+          get :index
+          assert_select "meta[data-module=track-variant][content=#{test_variant}]"
+        end
+      end
+    end
+
+    it "not record hit when in variant Z" do
+      with_variant CookielessAATest: "Z" do
+        get :index
+        assert_select "meta[data-module=track-variant]", false
+      end
     end
   end
 
