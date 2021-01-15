@@ -36,6 +36,8 @@ en:
           path: /export-goods
         - text: moving goods to or from Northern Ireland
           path: /guidance/moving-goods-into-out-of-or-through-northern-ireland-from-1-january-2021
+        - text: providing services to EU countries
+          path: /guidance/providing-services-to-any-country-in-the-eu-iceland-liechtenstein-norway-or-switzerland-after-eu-exit
         - text: travelling to the EU
           path: /visit-europe-1-january-2021
         - text: living and working in the EU
