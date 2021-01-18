@@ -25,25 +25,21 @@
     organisations: organisations(subtopic.content_id),
     link_to_latest_feed: false,
   }) do %>
-  <ul class="changed-documents">
-    <% subtopic.changed_documents.each do |document| -%>
-      <li>
-        <a href="<%= document.base_path %>"><%= document.title %></a>
 
-        <% if document.public_updated_at %>
-          <time class="updated-at" datetime="<%= document.public_updated_at.iso8601 %>">
-            <%= document.public_updated_at.strftime("%-d %B %Y") %>
-          </time>
-        <% end %>
-
-        <% if document.change_note %>
-          <p>
-            <%= document.change_note %>
-          </p>
-        <% end %>
-      </li>
-    <% end -%>
-  </ul>
+  <%= render "govuk_publishing_components/components/document_list", {
+      items: subtopic.changed_documents.map do | document |
+        {
+          link: {
+            text: "#{document.title}",
+            path: "#{document.base_path}",
+          },
+          metadata: {
+            public_updated_at: document.public_updated_at,
+          },
+          subtext: "#{document.change_note}",
+        }
+      end
+  } %>
 
   <%= render "govuk_publishing_components/components/previous_and_next_navigation", pagination_presenter.previous_and_next_navigation %>
 <% end %>
