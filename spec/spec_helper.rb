@@ -3,6 +3,14 @@ require File.expand_path("../config/environment", __dir__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require "rspec/rails"
 
+# The helpers in the test/support directory are used by minitest specs that are not yet
+# converted to RSpec. We should require those helpers rather than duplicate them in
+# spec/support so that the files don't diverge. Once all the specs using a helper are
+# converted to rspec, we can move the helper file over to spec/support and uncomment:
+# Dir[Rails.root.join("spec/support/**/*.rb")].sort.each { |f| require f }.
+
+Dir[Rails.root.join("test/support/**/*.rb")].sort.each { |f| require f }
+
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.use_active_record = false
