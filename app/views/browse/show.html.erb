@@ -1,7 +1,11 @@
 <% content_for :title, "#{t("shared.browse.prefix")} #{page.title}" %>
 <%= render 'shared/tag_meta', tag: page %>
 <% content_for :meta_tags do %>
-  <meta name='govuk:navigation-page-type' content='First Level Browse'>
+  <%= render "govuk_publishing_components/components/meta_tags", {
+    content_item: {
+      navigation_page_type: "First Level Browse",
+    }
+  } %>
 <% end %>
 <% content_for :page_class, "browse" %>
 

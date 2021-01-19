@@ -2,7 +2,11 @@
 <% content_for :title, title_with_suffix %>
 <%= render 'shared/tag_meta', tag: topic %>
 <% content_for :meta_tags do %>
-  <meta name='govuk:navigation-page-type' content='<%= navigation_page_type %>'>
+  <%= render "govuk_publishing_components/components/meta_tags", {
+    content_item: {
+      navigation_page_type: navigation_page_type,
+    }
+  } %>
 <% end %>
 <% content_for :page_class, "topics-page" %>
 

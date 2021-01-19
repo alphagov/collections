@@ -7,7 +7,11 @@
 <% end %>
 
 <% content_for :meta_tags do %>
-  <meta name="govuk:section" content="<%= meta_section %>">
+  <%= render "govuk_publishing_components/components/meta_tags", {
+    content_item: {
+      section: meta_section,
+    }
+  } %>
   <meta name="robots" content="noindex">
 <% end %>
 

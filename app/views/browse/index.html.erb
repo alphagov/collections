@@ -1,7 +1,11 @@
 <% content_for :title, "All categories" %>
 <% content_for :page_class, "browse" %>
 <% content_for :meta_tags do %>
-  <meta name='govuk:navigation-page-type' content='Browse Index'>
+  <%= render "govuk_publishing_components/components/meta_tags", {
+    content_item: {
+      navigation_page_type: "Browse Index",
+    }
+  } %>
 <% end %>
 
 <h1 class="govuk-visually-hidden"><%= t("shared.browse.title") %></h1>
