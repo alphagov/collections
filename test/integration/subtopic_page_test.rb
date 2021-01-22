@@ -166,7 +166,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
       end
 
       # And I should see the latest documents for the subtopic in date order
-      titles = page.all(".changed-documents li a").map(&:text)
+      titles = page.all(".gem-c-document-list__item-link").map(&:text)
       expected_titles = [
         "Oil and gas uk field data",
         "Oil and gas wells",
@@ -188,7 +188,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
       click_on "See latest changes to this content"
 
       # Then I should see the first 50 documents
-      within ".changed-documents" do
+      within ".gem-c-document-list" do
         assert page.has_content?("Document 1")
         assert page.has_content?("Document 50")
         assert_not page.has_content?("Document 51")
@@ -200,7 +200,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
       visit next_href
 
       # Then I should see the remaining documents
-      within ".changed-documents" do
+      within ".gem-c-document-list" do
         assert page.has_content?("Document 51")
         assert page.has_content?("Document 55")
         assert_not page.has_content?("Document 1")
@@ -213,7 +213,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
       visit prev_href
 
       # Then I should see the first 50 documents again
-      within ".changed-documents" do
+      within ".gem-c-document-list" do
         assert page.has_content?("Document 1")
         assert page.has_content?("Document 50")
         assert_not page.has_content?("Document 51")

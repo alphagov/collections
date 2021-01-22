@@ -1,5 +1,4 @@
 <% guidance_header = t("transition_landing_page.guidance_header") %>
-
 <div class="landing-page__section"
   data-analytics-ecommerce
   data-ecommerce-start-index="1"
@@ -15,29 +14,30 @@
       } %>
     </div>
   </div>
-
-  <% campaign_links = I18n.t("transition_landing_page.campaign_links") %>
-  <%
-    links = campaign_links[:links].map do |link|
-      link_to(link[:text], link[:path], class: "govuk-link", data: {
-        track_action: link[:path],
-        track_category: "transition-landing-page",
-        track_label: "What you can do now"
-      })
-    end
-  %>
   <div class="govuk-grid-row landing-page__section-list-wrapper">
     <div class="govuk-grid-column-two-thirds">
+      <% campaign_links = I18n.t("transition_landing_page.campaign_links") %>
       <p class='govuk-body'><%= campaign_links[:lead_in] %></p>
-
-      <%= tag.ul class: %w[govuk-list govuk-list--bullet govuk-list--spaced], data: { module: "track-click" } do %>
-        <% links.each do |link| %>
-          <%= tag.li do %>
-            <%= link %>
-          <% end %>
-        <% end %>
+      <%
+        links = campaign_links[:links].map do |link|
+          link_to(link[:text], link[:path], class: "govuk-link", data: {
+            track_action: link[:path],
+            track_category: "transition-landing-page",
+            track_label: "What you can do now"
+          })
+        end
+      %>
+      <%= tag.div data: { module: "track-click" } do %>
+        <%= render "govuk_publishing_components/components/list", {
+          visible_counters: true,
+          extra_spacing: true,
+          items: links.each do | link |
+            {
+              items: link,
+            }
+          end
+        } %>
       <% end %>
-
       <p class="govuk-body govuk-!-padding-top-2"><%= sanitize(campaign_links[:lead_out], attributes: %w(href class data-module data-track-action data-track-category data-track-label)) %></p>
     </div>
   </div>
