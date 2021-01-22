@@ -5,7 +5,11 @@
     <meta name="robots" content="noindex, nofollow">
   <% end %>
   <meta name="description" content="<%= presented_taxon.description %>">
-  <meta name="govuk:navigation-page-type" content="<%= presented_taxon.rendering_type %>" />
+  <%= render "govuk_publishing_components/components/meta_tags", {
+    content_item: {
+      navigation_page_type: presented_taxon.rendering_type,
+    }
+  } %>
 <% end %>
 
 <%= render partial: 'page_header', locals: { presented_taxon: presented_taxon } %>

@@ -2,8 +2,12 @@
 <% top_level_title = "#{t("shared.browse.prefix")} #{page.active_top_level_browse_page.title}" %>
 <%= render 'shared/tag_meta', tag: page %>
 <% content_for :meta_tags do %>
-  <meta name='govuk:navigation-page-type' content='Second Level Browse'>
-  <meta name="govuk:section" content="<%= meta_section %>">
+  <%= render "govuk_publishing_components/components/meta_tags", {
+    content_item: {
+      navigation_page_type: "Second Level Browse",
+      section: meta_section,
+    }
+  } %>
 <% end %>
 <% content_for :page_class, "browse" %>
 

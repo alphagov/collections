@@ -12,7 +12,12 @@
   <meta property="og:title" content="<%= @content_item["title"] %>">
   <meta property="og:description" content="<%= @content_item["description"] %>">
   <meta name="description" content="<%= @content_item["description"] %>">
-  <meta name="govuk:navigation-page-type" content="Taxon Page" />
+
+  <%= render "govuk_publishing_components/components/meta_tags", {
+    content_item: {
+      navigation_page_type: "Taxon Page",
+    }
+  } %>
 
   <% if corona_opengraph_images %>
     <meta property="og:image" content="<%= image_url("stay-at-home-social-share.png") %>" />

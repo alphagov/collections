@@ -1,8 +1,12 @@
 <% content_for :title, subtopic.combined_title %>
 <%= render 'shared/tag_meta', tag: subtopic %>
 <% content_for :meta_tags do %>
-  <meta name='govuk:navigation-page-type' content='Second Level Topic'>
-  <meta name="govuk:section" content="<%= meta_section %>">
+  <%= render "govuk_publishing_components/components/meta_tags", {
+    content_item: {
+      navigation_page_type: "Second Level Topic",
+      section: meta_section,
+    }
+  } %>
 <% end %>
 <% content_for :page_title do %>
   <%

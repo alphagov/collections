@@ -11,7 +11,13 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="<%= image_url("transition-period.png") %>">
   <meta name="description" content="<%= t("transition_landing_page.meta_description") %>">
-  <meta name="govuk:navigation-page-type" content="Taxon Page" />
+  
+  <%= render "govuk_publishing_components/components/meta_tags", {
+    content_item: {
+      navigation_page_type: "Taxon Page",
+    }
+  } %>
+  
   <link rel="canonical" href="<%= page_url %>">
   <%= account_variant.analytics_meta_tag.html_safe %>
 <% end %>

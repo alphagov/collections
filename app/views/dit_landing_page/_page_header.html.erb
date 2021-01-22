@@ -10,7 +10,12 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:image" content="<%= image_url("KBM_twitter.png") %>">
   <meta name="description" content="<%= t("dit_landing_page.meta_description") %>">
-  <meta name="govuk:navigation-page-type" content="Taxon Page" />
+  
+  <%= render "govuk_publishing_components/components/meta_tags", {
+    content_item: {
+      navigation_page_type: "Taxon Page",
+    }
+  } %>
 <% end %>
 
 <header class="dit-landing-page__header--with-bg-image">
