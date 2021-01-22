@@ -18,7 +18,14 @@
     <div class="govuk-grid-column-two-thirds <%= "organisations-list__without-number" if @presented_organisations.executive_office?(organisation_type) %>">
       <ol data-filter="list">
         <% organisations.each do |organisation| %>
-          <li class="organisations-list__item" id="<%= organisation['slug'] %>" data-filter="item">
+          <%= content_tag :li, {
+            class: "organisations-list__item",
+            id: organisation['slug'],
+            data: {
+              filter: "item",
+              "filter-acronym": organisation["acronym"].presence,
+            },
+          } do %>
             <% if @presented_organisations.ministerial_organisation?(organisation_type) %>
               <%= render "govuk_publishing_components/components/organisation_logo", {
                 organisation: {
@@ -47,7 +54,7 @@
                   } %>
               </div>
             <% end %>
-          </li>
+          <% end # </li> %>
         <% end %>
       </ol>
     </div>
