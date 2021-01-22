@@ -1,3 +1,6 @@
+/* global $ GOVUK */
+/* eslint-disable no-var */
+
 (function () {
   'use strict'
   window.GOVUK = window.GOVUK || {}
@@ -44,18 +47,33 @@
     },
 
     matchSearchTerm: function (organisation, term) {
+      var normaliseWhitespace = function (string) {
+        return string
+          .trim() // Removes spaces at beginning and end of string.
+          .replace(/\r?\n|\r/g, ' ') // Replaces line breaks with one space.
+          .replace(/\s+/g, ' ') // Squashes multiple spaces to one space.
+      }
+
       var organisationText = ''
+      var organisationAcronym = organisation.attr('data-filter-acronym') || ''
 
       organisation.removeClass('js-hidden')
 
       if (organisation.find('.gem-c-organisation-logo__name').length > 0) {
-        organisationText = organisation.find('.gem-c-organisation-logo__name').text()
+        organisationText = normaliseWhitespace(
+          organisation.find('.gem-c-organisation-logo__name').text()
+        )
       } else {
-        organisationText = organisation.find('.organisation-list__item-title').text()
+        organisationText = normaliseWhitespace(
+          organisation.find('.organisation-list__item-title').text()
+        )
       }
 
-      var searchTermRegexp = new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i')
-      if (searchTermRegexp.exec(organisationText) !== null) {
+      var searchTermRegexp = new RegExp(term.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i')
+      if (
+        searchTermRegexp.exec(organisationText) !== null ||
+        searchTermRegexp.exec(organisationAcronym) !== null
+      ) {
         return true
       }
     },
