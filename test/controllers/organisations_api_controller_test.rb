@@ -4,19 +4,13 @@ describe OrganisationsApiController do
   include OrganisationsApiTestHelper
   describe "GET index" do
     setup do
-      Services.search_api.stubs(:search).with(
-        filter_format: "organisation",
-        order: "title",
-        count: 20,
-        start: 0,
-      ).returns(search_api_organisations_results)
+      Services.search_api.stubs(:search)
+      .with(organisations_params)
+      .returns(search_api_organisations_results)
 
-      Services.search_api.stubs(:search).with(
-        filter_format: "organisation",
-        order: "title",
-        count: 20,
-        start: 20,
-      ).returns(search_api_organisations_many_results)
+      Services.search_api.stubs(:search)
+      .with(organisations_params(start: 20))
+      .returns(search_api_organisations_many_results)
     end
 
     it "renders JSON" do
@@ -45,19 +39,13 @@ describe OrganisationsApiController do
 
   describe "GET show" do
     setup do
-      Services.search_api.stubs(:search).with(
-        filter_format: "organisation",
-        filter_slug: "hm-revenue-customs",
-        count: 1,
-        start: 0,
-      ).returns(search_api_organisation_results)
+      Services.search_api.stubs(:search)
+      .with(organisation_params(slug: "hm-revenue-customs"))
+      .returns(search_api_organisation_results)
 
-      Services.search_api.stubs(:search).with(
-        filter_format: "organisation",
-        filter_slug: "something-else",
-        count: 1,
-        start: 0,
-      ).returns(search_api_organisation_no_results)
+      Services.search_api.stubs(:search)
+      .with(organisation_params(slug: "something-else"))
+      .returns(search_api_organisation_no_results)
     end
 
     it "renders JSON" do
