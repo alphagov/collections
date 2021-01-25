@@ -1,10 +1,12 @@
 require "pact/provider/rspec"
 require "webmock/rspec"
+require_relative "../../test/support/organisations_api_test_helper"
 
 Pact.configure do |config|
   config.reports_dir = "spec/reports/pacts"
   config.include WebMock::API
   config.include WebMock::Matchers
+  config.include OrganisationsApiTestHelper
 end
 
 Pact.service_provider "Organisations API" do
