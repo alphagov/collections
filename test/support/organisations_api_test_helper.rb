@@ -25,6 +25,14 @@ module OrganisationsApiTestHelper
     }.deep_stringify_keys
   end
 
+  def search_api_organisations_two_pages_of_results
+    {
+      results: Array.new(40, hmrc),
+      total: 40,
+      start: 0,
+    }.deep_stringify_keys
+  end
+
   def search_api_organisations_many_results
     {
       results: [],
