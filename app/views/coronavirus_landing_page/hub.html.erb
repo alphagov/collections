@@ -11,6 +11,7 @@
 <div class="govuk-width-container covid__page" data-module="coronavirus-landing-page">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      <%# TODO update to gem %>
       <%= render partial: 'coronavirus_landing_page/components/shared/accordion_sections', locals: { accordions: details.sections, heading: details.sections_heading } %>
       <%= render partial: 'coronavirus_landing_page/components/shared/topic_section', locals: { topic_section: details.topic_section } %>
 

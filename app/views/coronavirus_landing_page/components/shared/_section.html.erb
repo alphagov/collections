@@ -7,9 +7,9 @@
       margin_bottom: 4,
     } %>
   <% end %>
-  <ul class="covid__list covid__list--accordion">
+  <ul class="govuk-list">
     <% sub_section["list"].each do | item | %>
-      <li class="covid__list-item">
+      <li>
         <% if item["featured_link"] %>
           <%= render 'govuk_publishing_components/components/action_link', {
             simple: true,
@@ -24,7 +24,7 @@
           }%>
           <% item_description = item["description"] %>
           <% if item_description %>
-            <p class="govuk-body covid__list-item-description">
+            <p class="govuk-body">
               <%= item_description %>
             </p>
           <% end %>
@@ -32,7 +32,6 @@
           <%= link_to(
             item["label"],
             item["url"],
-            class: "govuk-link covid__accordion-link",
             data: {
               track_category: "pageElementInteraction",
               track_action: "AccordionClick",

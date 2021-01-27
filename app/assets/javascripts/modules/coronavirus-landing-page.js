@@ -31,6 +31,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     }
   }
 
+  // TODO update to gem
   CoronavirusLandingPage.prototype.addAccordionOpenAllTracking = function ($element) {
     $element.find('.govuk-accordion__open-all').on('click', function (e) {
       var expanded = $(e.target).attr('aria-expanded') === 'true'

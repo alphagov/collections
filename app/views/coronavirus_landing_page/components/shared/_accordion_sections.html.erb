@@ -3,15 +3,13 @@
   heading_padding ||= false
   border_top ||= false
   country_guidance ||= false
+  # TODO update to gem
   accordion_contents = []
   number_of_accordion_sections = accordions.length
 %>
 <% accordions.each do | section | %>
   <% content = capture do %>
-    <%# this element captures an override from the accordion that the last item has margin 0 %>
-    <div class="covid__accordion-inner">
       <%= render partial: 'coronavirus_landing_page/components/shared/section', locals: { section: section } %>
-    </div>
   <% end %>
   <%
     accordion_contents << {
@@ -26,6 +24,7 @@
         when_closed_text: "accordionClosed",
         when_open_text: "accordionOpened",
         track_category: "pageElementInteraction",
+        # TODO update to gem
         track_action: "accordionClosed",
         track_label: section["title"],
         track_dimension: number_of_accordion_sections,
@@ -43,9 +42,6 @@
   <div data-module="toggle-attribute">
     <%= render 'govuk_publishing_components/components/accordion', {
       heading_level: 3,
-      data_attributes: {
-        module: "govuk-accordion"
-      },
       items: accordion_contents,
       margin_bottom: 3
     } %>
