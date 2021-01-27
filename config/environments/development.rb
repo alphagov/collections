@@ -49,5 +49,6 @@ Rails.application.configure do
   config.hosts += [
     "collections.dev.gov.uk",
     "draft-collections.dev.gov.uk",
+    "example.org",
   ]
 end

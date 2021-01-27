@@ -18,7 +18,10 @@ end
 Pact.provider_states_for "GDS API Adapters" do
   provider_state "there is a list of organisations" do
     set_up do
-      ##
+      Services
+      .search_api
+      .stub(:search)
+      .with(organisations_params) { search_api_organisations_results }
     end
   end
 
