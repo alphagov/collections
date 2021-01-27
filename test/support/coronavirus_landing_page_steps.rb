@@ -199,7 +199,7 @@ module CoronavirusLandingPageSteps
   end
 
   def then_i_can_see_the_accordions_content
-    assert page.has_selector?(".govuk-link", text: "Staying at home if you think you have coronavirus (self-isolating)")
+    assert page.has_selector?(".govuk-link li", text: "Staying at home if you think you have coronavirus (self-isolating)")
   end
 
   def and_i_can_see_links_to_statistics
