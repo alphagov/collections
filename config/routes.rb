@@ -82,7 +82,7 @@ Rails.application.routes.draw do
   end
 
   get "/world/*taxon_base_path", to: "world_wide_taxons#show"
-  get "/transition(.:locale)", to: "transition_landing_page#show"
+  #get "/transition(.:locale)", to: "transition_landing_page#show"
 
   # We get requests for URLs like
   # https://www.gov.uk/topic%2Flegal-aid-for-providers%2Fmake-application%2Flatest
