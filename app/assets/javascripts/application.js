@@ -13,7 +13,6 @@
 //= require support
 //= require browse-columns
 //= require organisation-list-filter
-//= require modules/current-location
 //= require modules/feeds.js
 //= require modules/toggle-attribute
 //= require components/accordion
