@@ -6,12 +6,13 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
   helper Rails.application.helpers
 
   test "renders postcode match" do
-    postcode = "E18QS"
+    postcode = "E1 8QS"
+
     @search = PostcodeLocalRestrictionSearch.new(postcode)
     stub_local_restriction(postcode: postcode, name: "Tattooine", current_alert_level: 1)
 
-    # render "/find-coronavirus-local-restrictions/#{postcode}"
-    render "coronavirus_local_restrictions/results"
+    view.stubs(:out_of_date?).returns(false)
+    render template: "coronavirus_local_restrictions/results"
 
     assert_select ".govuk-body"
   end
