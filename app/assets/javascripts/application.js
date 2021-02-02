@@ -15,7 +15,6 @@
 //= require organisation-list-filter
 //= require modules/feeds.js
 //= require modules/toggle-attribute
-//= require components/accordion
 //= require modules/cookieless-tracker
 //= require modules/coronavirus-landing-page
 //= require modules/coronavirus-track-local-restriction-results
