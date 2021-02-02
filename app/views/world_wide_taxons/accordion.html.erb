@@ -30,9 +30,30 @@
             }
           %>
         <% end %>
-        <%= render 'components/accordion', sections: accordion_contents %>
+        <% items = [] %>
+        <% accordion_contents.each_with_index do |section, index| %>
+          <%
+          id = section[:id] || section[:title].downcase.tr(" ","-")
+          items << {
+            id: id,
+            data_attributes: {
+              "track-count": "accordionSection",
+              id: "section-panel-#{id}-#{index + 1}",
+            },
+            heading: {
+                text: section[:title],
+              },
+              summary: {
+                text: section[:description].presence,
+              },
+              content: {
+                html: section[:panel]
+              },
+            }
+          %>
+        <% end %>
+        <%= render 'govuk_publishing_components/components/accordion', items: items %>
       </div>
     </div>
   </div>
 <% end %>
-
