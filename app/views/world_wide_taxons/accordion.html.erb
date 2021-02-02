@@ -20,8 +20,8 @@
              } %>
           <% end %>
           <%
+            id = taxon.base_path || taxon.title.downcase.tr(" ","-")
             items << {
-              id: id,
               data_attributes: {
                 "track-count": "accordionSection",
                 id: "section-panel-#{id}-#{index + 1}",
