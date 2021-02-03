@@ -1,7 +1,5 @@
 <%
-  error_key = if @search&.blank_postcode?
-                "no_postcode"
-              elsif @search&.invalid_postcode?
+  error_key = if @search&.invalid_postcode?
                 "invalid_postcode"
               end
 

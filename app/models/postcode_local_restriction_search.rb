@@ -30,12 +30,13 @@ class PostcodeLocalRestrictionSearch
     return "fullPostcodeNoMapitValidation" if location_lookup.invalid_postcode?
   end
 
-  def blank_postcode?
-    %w[postcodeLeftBlank postcodeLeftBlankSanitized fullPostcodeNoMapitMatch].include?(error_code)
-  end
-
   def invalid_postcode?
-    %w[invalidPostcodeFormat fullPostcodeNoMapitValidation].include?(error_code)
+    %w[
+      postcodeLeftBlank
+      postcodeLeftBlankSanitized
+      invalidPostcodeFormat
+      fullPostcodeNoMapitValidation
+    ].include?(error_code)
   end
 
   def no_restriction?
