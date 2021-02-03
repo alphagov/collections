@@ -1,7 +1,7 @@
 en:
   coronavirus_local_restrictions:
     errors:
-      no_postcode:
+      postcode_not_found:
         error_message: There is a problem
         input_error: The postcode could not be found, enter a full postcode
         error_description: The postcode could not be found, enter a full postcode

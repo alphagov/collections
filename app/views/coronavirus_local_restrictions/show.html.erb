@@ -2,7 +2,7 @@
   error_key = if @search&.invalid_postcode?
                 "invalid_postcode"
               elsif @search&.postcode_not_found?
-                "no_postcode"
+                "postcode_not_found"
               end
 
   title = t("coronavirus_local_restrictions.lookup.title")
