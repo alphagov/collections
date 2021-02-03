@@ -23,7 +23,7 @@ en:
         <p class="govuk-body">There are different restrictions in <a class="govuk-link" href="https://www.gov.scot/check-local-covid-level/">Scotland</a>, <a class="govuk-link" href="https://gov.wales/covid-19-alert-levels">Wales</a> and <a class="govuk-link" href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-and-localised-restrictions">Northern Ireland</a>.</p>
       body_content: |
         <p class="govuk-body">There are 4 tiers. There are different rules depending on what tier an area is in.</p>
-        <p class="govuk-body">Enter the postcode where you’re living or spend most of your time to find out what the rules are.</p>
+        <p class="govuk-body">Enter the postcode where you’re living or spend most of your time to find out what the rules are. If you do not have a postcode, <a class="govuk-link" href="https://www.gov.uk/guidance/full-list-of-local-restriction-tiers-by-area">use the list of areas to find out your tier</a>.</p>
       meta_title: Find out the coronavirus restrictions in your local area
       meta_description: Use the postcode checker to find out the tier that your local area is in.
     royal_mail_lookup:
