@@ -39,4 +39,5 @@ group :development, :test do
   gem "rspec-rails"
   gem "rubocop-govuk"
   gem "timecop"
+  gem "unparser", require: false
 end
