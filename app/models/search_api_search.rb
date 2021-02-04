@@ -1,4 +1,4 @@
-class RummagerSearch
+class SearchApiSearch
   PAGE_SIZE_TO_GET_EVERYTHING = 1000
 
   include Enumerable

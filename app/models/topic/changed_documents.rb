@@ -27,7 +27,7 @@ private
   end
 
   def rummager_search
-    @rummager_search ||= RummagerSearch.new(
+    @rummager_search ||= SearchApiSearch.new(
       start: start_param,
       count: page_size,
       order: "-public_timestamp",

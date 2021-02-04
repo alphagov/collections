@@ -17,7 +17,7 @@ module TopicHelper
         well-report-2014
         oil-extraction-count-2013
       ],
-      page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+      page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
     )
 
     stub_content_store_has_item(

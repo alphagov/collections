@@ -34,7 +34,7 @@ describe ListSet do
           pay-psa
           payroll-annual-reporting
         ],
-        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+        page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       )
 
       @list_set = ListSet.new("specialist_sector", "paye-content-id", @group_data)
@@ -90,7 +90,7 @@ describe ListSet do
           employee-tax-codes
           payroll-annual-reporting
         ],
-        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+        page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       )
       @list_set = ListSet.new("specialist_sector", "paye-content-id", [])
     end
@@ -135,7 +135,7 @@ describe ListSet do
           employee-tax-codes
           payroll-annual-reporting
         ],
-        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+        page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       )
     end
 
@@ -188,7 +188,7 @@ describe ListSet do
         "content-id-for-living-abroad",
         %w[baz],
         ListSet::BROWSE_FORMATS_TO_EXCLUDE.to_a.last,
-        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+        page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       )
 
       assert_equal 0, @list_set.first.contents.length
@@ -199,7 +199,7 @@ describe ListSet do
         "content-id-for-living-abroad",
         %w[baz],
         "some-format-not-excluded",
-        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+        page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       )
 
       results = @list_set.first.contents

@@ -29,6 +29,6 @@ private
       filter_content_store_document_type: filter_content_store_document_type,
     }
 
-    RummagerSearch.new(params)
+    SearchApiSearch.new(params)
   end
 end

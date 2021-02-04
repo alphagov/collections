@@ -24,7 +24,7 @@ describe TaggedContent do
     end
 
     it "requests all results" do
-      assert_includes_params(count: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING) do
+      assert_includes_params(count: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING) do
         tagged_content.fetch
       end
     end

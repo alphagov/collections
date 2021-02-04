@@ -17,7 +17,7 @@ Given(/^there is an alphabetical browse page set up with links$/) do
     %w[
       judge-dredd
     ],
-    page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+    page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
   )
 end
 

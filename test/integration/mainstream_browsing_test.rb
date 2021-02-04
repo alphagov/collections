@@ -22,7 +22,7 @@ class MainstreamBrowsingTest < ActionDispatch::IntegrationTest
           pay-psa
           payroll-annual-reporting
         ],
-        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+        page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       )
     end
 

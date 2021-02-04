@@ -59,9 +59,9 @@ private
   end
 
   def content_tagged_to_tag
-    @content_tagged_to_tag ||= RummagerSearch.new(
+    @content_tagged_to_tag ||= SearchApiSearch.new(
       :start => 0,
-      :count => RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+      :count => SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       filter_name => [@tag_content_id],
       :fields => %w[title link format],
     )

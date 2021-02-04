@@ -4,7 +4,7 @@ module SearchApiHelpers
   def stub_content_for_taxon(content_ids, results)
     params = {
       start: 0,
-      count: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+      count: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       fields: %w[title description link content_store_document_type],
       filter_taxons: Array(content_ids),
       order: "title",
@@ -72,7 +72,7 @@ module SearchApiHelpers
   def stub_organisations_for_taxon(content_id, organisations)
     params = {
       count: 0,
-      aggregate_organisations: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+      aggregate_organisations: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       filter_part_of_taxonomy_tree: [content_id],
     }
 
