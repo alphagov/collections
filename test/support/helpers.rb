@@ -23,7 +23,7 @@ class ActiveSupport::TestCase
     }
 
     Services
-      .rummager
+      .search_api
       .stubs(:search)
       .with { |params| _(params).including?(expected_params) }
       .returns(search_results)

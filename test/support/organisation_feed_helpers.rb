@@ -9,7 +9,7 @@ module OrganisationFeedHelpers
       order: "-public_timestamp",
     }
 
-    Services.rummager.stubs(:search)
+    Services.search_api.stubs(:search)
       .with(params)
       .returns(
         "results" => results,
@@ -19,7 +19,7 @@ module OrganisationFeedHelpers
   end
 
   def stub_empty_results
-    Services.rummager.stubs(:search)
+    Services.search_api.stubs(:search)
       .returns(
         "results" => [],
         "start" => 0,

@@ -26,7 +26,7 @@ describe MostRecentContent do
         ],
       }
 
-      Services.rummager.stubs(:search).returns(search_results)
+      Services.search_api.stubs(:search).returns(search_results)
 
       results = most_recent_content.fetch
       assert_equal(results.count, 5)

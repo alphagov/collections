@@ -3,14 +3,14 @@ require "test_helper"
 describe OrganisationsApiController do
   describe "GET index" do
     setup do
-      Services.rummager.stubs(:search).with(
+      Services.search_api.stubs(:search).with(
         filter_format: "organisation",
         order: "title",
         count: 20,
         start: 0,
       ).returns(rummager_organisations_results)
 
-      Services.rummager.stubs(:search).with(
+      Services.search_api.stubs(:search).with(
         filter_format: "organisation",
         order: "title",
         count: 20,
@@ -44,14 +44,14 @@ describe OrganisationsApiController do
 
   describe "GET show" do
     setup do
-      Services.rummager.stubs(:search).with(
+      Services.search_api.stubs(:search).with(
         filter_format: "organisation",
         filter_slug: "hm-revenue-customs",
         count: 1,
         start: 0,
       ).returns(rummager_organisation_results)
 
-      Services.rummager.stubs(:search).with(
+      Services.search_api.stubs(:search).with(
         filter_format: "organisation",
         filter_slug: "something-else",
         count: 1,

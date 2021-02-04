@@ -39,7 +39,7 @@ class AtomFeedsTest < ActionDispatch::IntegrationTest
   def given_there_is_a_government_feed
     @updated_at = "2018-12-25T00:00:00Z"
 
-    Services.rummager.stubs(:search)
+    Services.search_api.stubs(:search)
       .with(
         start: 0,
         count: 20,

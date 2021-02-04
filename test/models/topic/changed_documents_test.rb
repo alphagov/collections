@@ -91,7 +91,7 @@ describe Topic::ChangedDocuments do
       result = rummager_document_for_slug("pay-psa")
       result.delete("public_timestamp")
 
-      Services.rummager.stubs(:search).with(
+      Services.search_api.stubs(:search).with(
         has_entries(filter_topic_content_ids: %w[paye-content-id]),
       ).returns("results" => [result],
                 "start" => 0,

@@ -30,7 +30,7 @@ module Search
     def search_rummager(additional_params)
       params = default_rummager_params.merge(additional_params).compact
 
-      Services.rummager.search(params)["results"]
+      Services.search_api.search(params)["results"]
     end
 
     def default_rummager_params

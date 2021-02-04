@@ -10,7 +10,7 @@ describe TaggedContent do
         }],
       }
 
-      Services.rummager.stubs(:search).returns(search_results)
+      Services.search_api.stubs(:search).returns(search_results)
 
       results = tagged_content.fetch
       assert_equal(results.count, 1)

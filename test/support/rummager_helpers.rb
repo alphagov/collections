@@ -10,7 +10,7 @@ module RummagerHelpers
       order: "title",
     }
 
-    Services.rummager.stubs(:search)
+    Services.search_api.stubs(:search)
       .with(params)
       .returns(
         "results" => results,
@@ -38,7 +38,7 @@ module RummagerHelpers
       filter_content_store_document_type: filter_content_store_document_type,
     }
 
-    Services.rummager.stubs(:search)
+    Services.search_api.stubs(:search)
     .with(params)
     .returns(
       "results" => results,
@@ -60,7 +60,7 @@ module RummagerHelpers
       filter_content_store_document_type: filter_content_store_document_type,
     }
 
-    Services.rummager.stubs(:search)
+    Services.search_api.stubs(:search)
     .with(params)
     .returns(
       "results" => results,
@@ -76,7 +76,7 @@ module RummagerHelpers
       filter_part_of_taxonomy_tree: [content_id],
     }
 
-    Services.rummager
+    Services.search_api
     .stubs(:search)
     .with(params)
     .returns(
@@ -115,7 +115,7 @@ module RummagerHelpers
   end
 
   def stub_topic_organisations(slug, content_id)
-    Services.rummager.stubs(:search).with(
+    Services.search_api.stubs(:search).with(
       count: "0",
       filter_topic_content_ids: [content_id],
       facet_organisations: "1000",
@@ -125,7 +125,7 @@ module RummagerHelpers
   end
 
   def stub_services_and_information_links(organisation_id)
-    Services.rummager.stubs(:search).with(
+    Services.search_api.stubs(:search).with(
       count: "0",
       filter_organisations: organisation_id,
       facet_specialist_sectors: "1000,examples:4,example_scope:query,order:value.title",
@@ -135,7 +135,7 @@ module RummagerHelpers
   end
 
   def stub_services_and_information_links_with_missing_keys(organisation_id)
-    Services.rummager.stubs(:search).with(
+    Services.search_api.stubs(:search).with(
       count: "0",
       filter_organisations: organisation_id,
       facet_specialist_sectors: "1000,examples:4,example_scope:query,order:value.title",
@@ -177,7 +177,7 @@ module RummagerHelpers
 
     results.each_slice(page_size).with_index do |results_page, page|
       start = page * page_size
-      Services.rummager.stubs(:search).with(
+      Services.search_api.stubs(:search).with(
         has_entries(
           start: start,
           count: page_size,
@@ -197,7 +197,7 @@ module RummagerHelpers
 
     results.each_slice(page_size).with_index do |results_page, page|
       start = page * page_size
-      Services.rummager.stubs(:search).with(
+      Services.search_api.stubs(:search).with(
         has_entries(
           start: start,
           count: page_size,
@@ -216,7 +216,7 @@ module RummagerHelpers
 
     results.each_slice(page_size).with_index do |results_page, page|
       start = page * page_size
-      Services.rummager.stubs(:search).with(
+      Services.search_api.stubs(:search).with(
         has_entries(
           start: start,
           count: page_size,
@@ -235,7 +235,7 @@ module RummagerHelpers
 
     results.each_slice(page_size).with_index do |results_page, page|
       start = page * page_size
-      Services.rummager.stubs(:search).with(
+      Services.search_api.stubs(:search).with(
         start: start,
         count: page_size,
         filter_mainstream_browse_page_content_ids: [browse_page_content_id],
@@ -247,7 +247,7 @@ module RummagerHelpers
   end
 
   def expect_search_params(params)
-    GdsApi::Rummager.any_instance.expects(:search)
+    GdsApi::Search.any_instance.expects(:search)
       .with(has_entries(params))
       .returns(:some_results)
   end
@@ -285,7 +285,7 @@ module RummagerHelpers
       order: "-public_timestamp",
     }.merge(additional_params)
 
-    Services.rummager.stubs(:search)
+    Services.search_api.stubs(:search)
       .with(params)
       .returns(
         "results" => results,

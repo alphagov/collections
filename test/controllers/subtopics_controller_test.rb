@@ -41,7 +41,7 @@ describe SubtopicsController do
       [ListSet::List.new("test", [])],
     )
 
-    Services.rummager.stubs(:search).with(
+    Services.search_api.stubs(:search).with(
       count: "0",
       filter_topic_content_ids: [content_id],
       facet_organisations: "1000",

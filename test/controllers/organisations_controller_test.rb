@@ -19,7 +19,7 @@ describe OrganisationsController do
         },
       )
 
-      Services.rummager.stubs(:search)
+      Services.search_api.stubs(:search)
         .returns(
           "results" => [],
           "start" => 0,

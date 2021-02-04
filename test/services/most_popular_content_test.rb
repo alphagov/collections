@@ -24,7 +24,7 @@ describe MostPopularContent do
         ],
       }
 
-      Services.rummager.stubs(:search).returns(search_results)
+      Services.search_api.stubs(:search).returns(search_results)
 
       results = most_popular_content.fetch
       assert_equal(results.count, 2)
