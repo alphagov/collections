@@ -62,26 +62,21 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
 
      assert_select ".govuk-body"
 
-     # assert_select ".gem-c-title__text", text: "There is no information about the restrictions in this area"
+     assert_select ".gem-c-title__text", text: "There is no information about the restrictions in this area"
    end
 
   test "renders error when invalid postcode is entered" do
     postcode = "hello"
 
-    @search = PostcodeLocalRestrictionSearch.new(postcode)
-
     stub_local_restriction(postcode: postcode)
-    stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item)
+
+    @search = PostcodeLocalRestrictionSearch.new(postcode)
+    @content_item = coronavirus_content_item
 
     view.stubs(:out_of_date?).returns(false)
-    view.stubs(:simple_smart_answer?).returns(false)
 
     render template: "coronavirus_local_restrictions/show"
-    render partial: "coronavirus_local_restrictions/meta_tags"
-    render partial: 'govuk_publishing_components/components/contextual_breadcrumbs', locals: { content_item: coronavirus_content_item }
-    render partial: 'govuk_publishing_components/components/contextual_footer', locals: { content_item: coronavirus_content_item }
 
-    # This won't work as the last rendered partial doesn't contain the error summary...
     assert_select ".govuk-error-summary__body"
   end
 
