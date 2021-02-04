@@ -26,7 +26,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
   end
 
   before do
-    rummager_has_documents_for_subtopic(
+    search_api_has_documents_for_subtopic(
       "content-id-for-offshore",
       %w[
         oil-rig-safety-requirements
@@ -137,7 +137,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
     it "displays the latest page" do
       # Given there is latest content for a subtopic
-      rummager_has_latest_documents_for_subtopic(
+      search_api_has_latest_documents_for_subtopic(
         "content-id-for-offshore",
         %w[
           oil-and-gas-uk-field-data
@@ -178,7 +178,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
     it "paginates the results" do
       # Given there is latest content for a subtopic
-      rummager_has_latest_documents_for_subtopic(
+      search_api_has_latest_documents_for_subtopic(
         "content-id-for-offshore",
         (1..55).map { |n| "document-#{n}" },
       )

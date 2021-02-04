@@ -15,8 +15,8 @@ describe Organisations::DocumentsPresenter do
       organisation = Organisation.new(content_item)
       @no_documents_presenter = Organisations::DocumentsPresenter.new(organisation)
 
-      stub_empty_rummager_requests("org-with-no-docs")
-      stub_rummager_latest_content_requests("attorney-generals-office")
+      stub_empty_search_api_requests("org-with-no-docs")
+      stub_search_api_latest_content_requests("attorney-generals-office")
     end
 
     it "formats the main large news story correctly" do
@@ -106,7 +106,7 @@ describe Organisations::DocumentsPresenter do
     organisation = Organisation.new(content_item)
     @documents_presenter = Organisations::DocumentsPresenter.new(organisation)
 
-    stub_rummager_latest_content_requests("prime-ministers-office-10-downing-street")
+    stub_search_api_latest_content_requests("prime-ministers-office-10-downing-street")
 
     expected = [
       {

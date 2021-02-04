@@ -6,7 +6,7 @@ describe Topic::ChangedDocuments do
   describe "with a single page of results available" do
     setup do
       @subtopic_content_id = "paye-content-id"
-      rummager_has_latest_documents_for_subtopic(
+      search_api_has_latest_documents_for_subtopic(
         @subtopic_content_id,
         %w[
           pay-paye-penalty
@@ -52,7 +52,7 @@ describe Topic::ChangedDocuments do
   describe "with multiple pages of results available" do
     setup do
       @subtopic_content_id = "paye-content-id"
-      rummager_has_latest_documents_for_subtopic(
+      search_api_has_latest_documents_for_subtopic(
         @subtopic_content_id,
         %w[
           pay-paye-penalty
@@ -88,7 +88,7 @@ describe Topic::ChangedDocuments do
 
   describe "handling missing fields in the search results" do
     it "handles documents that don't contain the public_timestamp field" do
-      result = rummager_document_for_slug("pay-psa")
+      result = search_api_document_for_slug("pay-psa")
       result.delete("public_timestamp")
 
       Services.search_api.stubs(:search).with(

@@ -93,23 +93,23 @@ module SearchApiHelpers
     (1..count).map do |number|
       case supergroup
       when "services"
-        rummager_document_for_supergroup_section("content-item-#{number}", "local_transaction")
+        search_api_document_for_supergroup_section("content-item-#{number}", "local_transaction")
       when "guidance_and_regulation"
         if number <= 2
-          rummager_document_for_supergroup_section("content-item-#{number}", "guide")
+          search_api_document_for_supergroup_section("content-item-#{number}", "guide")
         else
-          rummager_document_for_supergroup_section("content-item-#{number}", "guidance")
+          search_api_document_for_supergroup_section("content-item-#{number}", "guidance")
         end
       when "news_and_communications"
-        rummager_document_for_supergroup_section("content-item-#{number}", "news_story")
+        search_api_document_for_supergroup_section("content-item-#{number}", "news_story")
       when "policy_and_engagement"
-        rummager_document_for_supergroup_section("content-item-#{number}", "policy_paper")
+        search_api_document_for_supergroup_section("content-item-#{number}", "policy_paper")
       when "transparency"
-        rummager_document_for_supergroup_section("content-item-#{number}", "transparency")
+        search_api_document_for_supergroup_section("content-item-#{number}", "transparency")
       when "research_and_statistics"
-        rummager_document_for_supergroup_section("content-item-#{number}", "research")
+        search_api_document_for_supergroup_section("content-item-#{number}", "research")
       else
-        rummager_document_for_slug("content-item-#{number}")
+        search_api_document_for_slug("content-item-#{number}")
       end
     end
   end
@@ -144,7 +144,7 @@ module SearchApiHelpers
     )
   end
 
-  def rummager_document_for_slug(slug, updated_at = 1.hour.ago, format = "guide")
+  def search_api_document_for_slug(slug, updated_at = 1.hour.ago, format = "guide")
     {
       "format" => format.to_s,
       "latest_change_note" => "This has changed",
@@ -159,7 +159,7 @@ module SearchApiHelpers
     }
   end
 
-  def rummager_document_for_supergroup_section(slug, content_store_document_type)
+  def search_api_document_for_supergroup_section(slug, content_store_document_type)
     {
       "title" => slug.titleize.humanize.to_s,
       "link" => "/#{slug}",
@@ -170,9 +170,9 @@ module SearchApiHelpers
     }
   end
 
-  def rummager_has_latest_documents_for_subtopic(subtopic_content_id, document_slugs, page_size: 50)
+  def search_api_has_latest_documents_for_subtopic(subtopic_content_id, document_slugs, page_size: 50)
     results = document_slugs.map.with_index do |slug, i|
-      rummager_document_for_slug(slug, (i + 1).hours.ago)
+      search_api_document_for_slug(slug, (i + 1).hours.ago)
     end
 
     results.each_slice(page_size).with_index do |results_page, page|
@@ -190,9 +190,9 @@ module SearchApiHelpers
     end
   end
 
-  def rummager_has_documents_for_subtopic(subtopic_content_id, document_slugs, format = "guide", page_size: 50)
+  def search_api_has_documents_for_subtopic(subtopic_content_id, document_slugs, format = "guide", page_size: 50)
     results = document_slugs.map.with_index do |slug, i|
-      rummager_document_for_slug(slug, (i + 1).hours.ago, format)
+      search_api_document_for_slug(slug, (i + 1).hours.ago, format)
     end
 
     results.each_slice(page_size).with_index do |results_page, page|
@@ -209,9 +209,9 @@ module SearchApiHelpers
     end
   end
 
-  def rummager_has_documents_for_browse_page(browse_page_content_id, document_slugs, format = "guide", page_size: 50)
+  def search_api_has_documents_for_browse_page(browse_page_content_id, document_slugs, format = "guide", page_size: 50)
     results = document_slugs.map.with_index do |slug, i|
-      rummager_document_for_slug(slug, (i + 1).hours.ago, format)
+      search_api_document_for_slug(slug, (i + 1).hours.ago, format)
     end
 
     results.each_slice(page_size).with_index do |results_page, page|
@@ -228,9 +228,9 @@ module SearchApiHelpers
     end
   end
 
-  def rummager_has_documents_for_second_level_browse_page(browse_page_content_id, document_slugs, format = "guide", page_size: 1000)
+  def search_api_has_documents_for_second_level_browse_page(browse_page_content_id, document_slugs, format = "guide", page_size: 1000)
     results = document_slugs.map.with_index do |slug, i|
-      rummager_document_for_slug(slug, (i + 1).hours.ago, format)
+      search_api_document_for_slug(slug, (i + 1).hours.ago, format)
     end
 
     results.each_slice(page_size).with_index do |results_page, page|

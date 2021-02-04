@@ -1,7 +1,7 @@
 Given(/^there is latest content for a subtopic$/) do
   stub_topic_lookups
 
-  @stubbed_rummager_documents = %w[
+  @stubbed_search_api_documents = %w[
     what-is-oil
     apply-for-an-oil-licence
     environmental-policy
@@ -27,9 +27,9 @@ Given(/^there is latest content for a subtopic$/) do
       filter_topic_content_ids: %w[content-id-for-fields-and-wells],
       order: "-public_timestamp",
     ),
-  ).returns("results" => @stubbed_rummager_documents,
+  ).returns("results" => @stubbed_search_api_documents,
             "start" => 0,
-            "total" => @stubbed_rummager_documents.size)
+            "total" => @stubbed_search_api_documents.size)
 end
 
 When(/^I view the latest changes page for that subtopic$/) do
@@ -37,7 +37,7 @@ When(/^I view the latest changes page for that subtopic$/) do
 end
 
 Then(/^I see a date\-ordered list of content with change notes$/) do
-  @stubbed_rummager_documents.each_with_index do |document, index|
+  @stubbed_search_api_documents.each_with_index do |document, index|
     within(".gem-c-document-list__item:nth-of-type(#{index + 1})") do
       assert page.has_selector?("a[href='#{document['link']}']", text: document["title"])
       assert page.has_content?(document["latest_change_note"]) if document["latest_change_note"]

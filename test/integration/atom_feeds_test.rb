@@ -48,16 +48,16 @@ class AtomFeedsTest < ActionDispatch::IntegrationTest
         order: "-public_timestamp",
       )
       .returns(
-        "results" => results_from_rummager,
+        "results" => results_from_search_api,
         "start" => 0,
-        "total" => results_from_rummager.size,
+        "total" => results_from_search_api.size,
       )
 
     @base_path = "/government/feed"
   end
 
   def and_content_for_that_organisation
-    stub_content_for_organisation_feed(@organisation_slug, results_from_rummager)
+    stub_content_for_organisation_feed(@organisation_slug, results_from_search_api)
   end
 
   def but_no_content_for_that_organisation
@@ -135,7 +135,7 @@ class AtomFeedsTest < ActionDispatch::IntegrationTest
     document
   end
 
-  def results_from_rummager
+  def results_from_search_api
     [
       {
         "content_store_document_type" => "document_collection",

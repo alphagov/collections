@@ -12,7 +12,7 @@ class MainstreamBrowsingTest < ActionDispatch::IntegrationTest
     schemas.each do |content_item|
       stub_content_store_has_item(content_item["base_path"], content_item)
 
-      rummager_has_documents_for_browse_page(
+      search_api_has_documents_for_browse_page(
         content_item["content_id"],
         %w[
           employee-tax-codes

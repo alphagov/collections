@@ -564,12 +564,12 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     stub_content_store_has_item("/government/organisations/civil-service-resourcing", @content_item_blank)
     stub_content_store_has_item("/government/organisations/student-loans-company", @content_item_separate_student_loans)
 
-    stub_rummager_latest_content_requests("prime-ministers-office-10-downing-street")
-    stub_rummager_latest_content_requests("attorney-generals-office")
-    stub_rummager_latest_content_requests("charity-commission")
-    stub_rummager_latest_content_requests("office-of-the-secretary-of-state-for-wales")
-    stub_rummager_latest_content_requests("civil-service-resourcing")
-    stub_rummager_latest_content_requests("student-loans-company")
+    stub_search_api_latest_content_requests("prime-ministers-office-10-downing-street")
+    stub_search_api_latest_content_requests("attorney-generals-office")
+    stub_search_api_latest_content_requests("charity-commission")
+    stub_search_api_latest_content_requests("office-of-the-secretary-of-state-for-wales")
+    stub_search_api_latest_content_requests("civil-service-resourcing")
+    stub_search_api_latest_content_requests("student-loans-company")
   end
 
   it "doesn't fail if the content item is missing any data" do
@@ -715,7 +715,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
   end
 
   it "does not show the latest documents by type section if there are none" do
-    stub_empty_rummager_requests("attorney-generals-office")
+    stub_empty_search_api_requests("attorney-generals-office")
     visit "/government/organisations/attorney-generals-office"
     assert_not page.has_css?(".gem-c-heading", text: "Documents")
   end

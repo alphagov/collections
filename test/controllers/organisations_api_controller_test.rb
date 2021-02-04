@@ -8,14 +8,14 @@ describe OrganisationsApiController do
         order: "title",
         count: 20,
         start: 0,
-      ).returns(rummager_organisations_results)
+      ).returns(search_api_organisations_results)
 
       Services.search_api.stubs(:search).with(
         filter_format: "organisation",
         order: "title",
         count: 20,
         start: 20,
-      ).returns(rummager_organisations_many_results)
+      ).returns(search_api_organisations_many_results)
     end
 
     it "renders JSON" do
@@ -49,14 +49,14 @@ describe OrganisationsApiController do
         filter_slug: "hm-revenue-customs",
         count: 1,
         start: 0,
-      ).returns(rummager_organisation_results)
+      ).returns(search_api_organisation_results)
 
       Services.search_api.stubs(:search).with(
         filter_format: "organisation",
         filter_slug: "something-else",
         count: 1,
         start: 0,
-      ).returns(rummager_organisation_no_results)
+      ).returns(search_api_organisation_no_results)
     end
 
     it "renders JSON" do
@@ -93,7 +93,7 @@ describe OrganisationsApiController do
     end
   end
 
-  def rummager_organisations_results
+  def search_api_organisations_results
     {
       results: [
         {
@@ -166,7 +166,7 @@ describe OrganisationsApiController do
     }.deep_stringify_keys
   end
 
-  def rummager_organisations_many_results
+  def search_api_organisations_many_results
     {
       results: [],
       total: 1000,
@@ -174,7 +174,7 @@ describe OrganisationsApiController do
     }.deep_stringify_keys
   end
 
-  def rummager_organisation_results
+  def search_api_organisation_results
     {
       results: [
         {
@@ -219,7 +219,7 @@ describe OrganisationsApiController do
     }.deep_stringify_keys
   end
 
-  def rummager_organisation_no_results
+  def search_api_organisation_no_results
     {
       results: [],
       total: 0,

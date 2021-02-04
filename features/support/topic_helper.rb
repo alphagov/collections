@@ -6,7 +6,7 @@ module TopicHelper
   include SearchApiHelpers
 
   def stub_topic_lookups
-    rummager_has_documents_for_subtopic(
+    search_api_has_documents_for_subtopic(
       "content-id-for-fields-and-wells",
       %w[
         what-is-oil

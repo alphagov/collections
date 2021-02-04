@@ -23,7 +23,7 @@ describe SecondLevelBrowsePageController do
           },
         )
 
-        rummager_has_documents_for_browse_page(
+        search_api_has_documents_for_browse_page(
           "entitlement-content-id",
           %w[entitlement],
           page_size: 1000,

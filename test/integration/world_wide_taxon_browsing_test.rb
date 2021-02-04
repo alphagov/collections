@@ -23,7 +23,7 @@ class WorldWideTaxonBrowsingTest < ActionDispatch::IntegrationTest
     content_item = content_item_without_children(base_path, content_id)
 
     stub_content_store_has_item(base_path, content_item)
-    stub_rummager_tagged_content_request(content_id, tagged_content)
+    stub_search_api_tagged_content_request(content_id, tagged_content)
   end
 
   def given_there_is_a_world_wide_country_taxon_with_children
@@ -55,9 +55,9 @@ class WorldWideTaxonBrowsingTest < ActionDispatch::IntegrationTest
 
     stub_content_store_has_item(base_path, @content_item)
 
-    stub_rummager_tagged_content_request(content_id)
-    stub_rummager_tagged_content_request(child_one_content_id)
-    stub_rummager_tagged_content_request(child_two_content_id)
+    stub_search_api_tagged_content_request(content_id)
+    stub_search_api_tagged_content_request(child_one_content_id)
+    stub_search_api_tagged_content_request(child_two_content_id)
   end
 
   def when_i_visit_that_taxon
@@ -99,7 +99,7 @@ class WorldWideTaxonBrowsingTest < ActionDispatch::IntegrationTest
 
 private
 
-  def stub_rummager_tagged_content_request(content_id, search_result = [])
+  def stub_search_api_tagged_content_request(content_id, search_result = [])
     stub_request(:get, Plek.new.find("search") + "/search.json?count=1000&fields%5B%5D=content_store_document_type&fields%5B%5D=description&fields%5B%5D=link&fields%5B%5D=title&filter_taxons%5B%5D=#{content_id}&order=title&start=0")
       .to_return(body: { results: search_result }.to_json)
   end

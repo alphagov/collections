@@ -24,7 +24,7 @@ describe ListSet do
         },
       ]
 
-      rummager_has_documents_for_subtopic(
+      search_api_has_documents_for_subtopic(
         "paye-content-id",
         %w[
           employee-tax-codes
@@ -80,7 +80,7 @@ describe ListSet do
 
   describe "for a non-curated topic" do
     setup do
-      rummager_has_documents_for_subtopic(
+      search_api_has_documents_for_subtopic(
         "paye-content-id",
         %w[
           get-paye-forms-p45-p60
@@ -126,7 +126,7 @@ describe ListSet do
   describe "fetching content tagged to this tag" do
     setup do
       @subtopic_content_id = "paye-content-id"
-      rummager_has_documents_for_subtopic(
+      search_api_has_documents_for_subtopic(
         @subtopic_content_id,
         %w[
           pay-paye-penalty
@@ -161,7 +161,7 @@ describe ListSet do
 
   describe "handling missing fields in the search results" do
     it "handles documents that don't contain the public_timestamp field" do
-      result = rummager_document_for_slug("pay-psa")
+      result = search_api_document_for_slug("pay-psa")
       result.delete("public_timestamp")
 
       Services.search_api.stubs(:search).with(
@@ -184,7 +184,7 @@ describe ListSet do
     end
 
     it "shouldn't display a document if its format is excluded" do
-      rummager_has_documents_for_browse_page(
+      search_api_has_documents_for_browse_page(
         "content-id-for-living-abroad",
         %w[baz],
         ListSet::BROWSE_FORMATS_TO_EXCLUDE.to_a.last,
@@ -195,7 +195,7 @@ describe ListSet do
     end
 
     it "should display a document if its format isn't excluded" do
-      rummager_has_documents_for_browse_page(
+      search_api_has_documents_for_browse_page(
         "content-id-for-living-abroad",
         %w[baz],
         "some-format-not-excluded",

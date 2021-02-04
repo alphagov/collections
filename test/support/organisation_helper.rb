@@ -3,14 +3,14 @@ require_relative "../../test/support/search_api_helpers"
 module OrganisationHelpers
   include ::SearchApiHelpers
 
-  def stub_rummager_latest_content_requests(organisation_slug)
+  def stub_search_api_latest_content_requests(organisation_slug)
     stub_latest_content_from_supergroups_request(organisation_slug)
     stub_search_api_latest_documents_request(organisation_slug)
   end
 
   def stub_latest_content_from_supergroups_request(organisation_slug, empty = false)
     Search::Supergroups::SUPERGROUP_TYPES.each do |group|
-      url = build_rummager_query_url(
+      url = build_search_api_query_url(
         {
           filter_organisations: organisation_slug,
           filter_content_purpose_supergroup: group,
@@ -43,15 +43,15 @@ module OrganisationHelpers
     }
   end
 
-  def build_rummager_query_url(params = {})
+  def build_search_api_query_url(params = {})
     query = Rack::Utils.build_nested_query default_params.merge(params)
     "#{Plek.new.find('search')}/search.json?#{query}"
   end
 
-  def stub_empty_rummager_requests(organisation_slug)
+  def stub_empty_search_api_requests(organisation_slug)
     stub_latest_content_from_supergroups_request(organisation_slug, true)
 
-    url = build_rummager_query_url(
+    url = build_search_api_query_url(
       filter_organisations: organisation_slug,
       reject_content_purpose_supergroup: "other",
       count: 3,
