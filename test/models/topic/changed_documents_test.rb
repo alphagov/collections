@@ -33,7 +33,7 @@ describe Topic::ChangedDocuments do
     it "provides the title, base_path and change_note for each document" do
       documents = Topic::ChangedDocuments.new(@subtopic_content_id).to_a
 
-      # Actual values come from rummager helpers.
+      # Actual values come from search_api helpers.
       assert_equal "/pay-psa", documents[2].base_path
       assert_equal "Employee tax codes", documents[3].title
       assert_equal "This has changed", documents[4].change_note
@@ -44,7 +44,7 @@ describe Topic::ChangedDocuments do
 
       assert documents[0].public_updated_at.is_a?(Time)
 
-      # Document timestamp value set in rummager helpers
+      # Document timestamp value set in search_api helpers
       assert_in_epsilon 1.hour.ago.to_i, documents[0].public_updated_at.to_i, 5
     end
   end

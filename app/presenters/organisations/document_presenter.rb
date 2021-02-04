@@ -1,5 +1,5 @@
 module Organisations
-  # DocumentPresenter transforms a raw rummager result into a format
+  # DocumentPresenter transforms a raw search_api result into a format
   # required by the govuk_publishing_components document_list component.
   #
   # See https://govuk-publishing-components.herokuapp.com/component-guide/document_list
@@ -7,8 +7,8 @@ module Organisations
     include ApplicationHelper
     attr_accessor :include_metadata
 
-    def initialize(rummager_result, include_metadata: true)
-      @raw_document = rummager_result
+    def initialize(search_api_result, include_metadata: true)
+      @raw_document = search_api_result
       @include_metadata = include_metadata
     end
 

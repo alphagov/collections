@@ -15,7 +15,7 @@ module Search
     end
 
     def documents
-      @documents ||= search_rummager(documents_query)
+      @documents ||= search_search_api(documents_query)
     end
 
     def documents_query
@@ -27,13 +27,13 @@ module Search
 
   private
 
-    def search_rummager(additional_params)
-      params = default_rummager_params.merge(additional_params).compact
+    def search_search_api(additional_params)
+      params = default_search_api_params.merge(additional_params).compact
 
       Services.search_api.search(params)["results"]
     end
 
-    def default_rummager_params
+    def default_search_api_params
       {
         count: 2,
         order: DEFAULT_SORT_ORDER,

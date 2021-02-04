@@ -80,7 +80,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
       end
 
       within ".gem-c-metadata" do
-        # The orgs are fixed in the rummager test helpers
+        # The orgs are fixed in the search_api test helpers
         assert page.has_text?("Department of Energy & Climate Change")
         assert page.has_text?("Foreign & Commonwealth Office")
       end
@@ -159,7 +159,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
         end
 
         within ".gem-c-metadata" do
-          # The orgs are fixed in the rummager test helpers
+          # The orgs are fixed in the search_api test helpers
           assert page.has_text?("Department of Energy & Climate Change")
           assert page.has_text?("Foreign & Commonwealth Office")
         end
