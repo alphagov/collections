@@ -9,7 +9,7 @@ class PostcodeLocalRestrictionSearch
   }xi.freeze
 
   attr_reader :postcode
-  delegate :no_information?, to: :location_lookup
+  delegate :no_information?, :postcode_not_found?, to: :location_lookup
 
   def initialize(postcode)
     @postcode = postcode
@@ -26,16 +26,17 @@ class PostcodeLocalRestrictionSearch
     return "postcodeLeftBlank" if postcode.empty?
     return "postcodeLeftBlankSanitized" if sanitised_postcode.empty?
     return "invalidPostcodeFormat" unless sanitised_postcode.match?(UK_POSTCODE_PATTERN)
-    return "fullPostcodeNoMapitMatch" if location_lookup.postcode_not_found?
+    return "fullPostcodeNoMapitMatch" if postcode_not_found?
     return "fullPostcodeNoMapitValidation" if location_lookup.invalid_postcode?
   end
 
-  def blank_postcode?
-    %w[postcodeLeftBlank postcodeLeftBlankSanitized fullPostcodeNoMapitMatch].include?(error_code)
-  end
-
   def invalid_postcode?
-    %w[invalidPostcodeFormat fullPostcodeNoMapitValidation].include?(error_code)
+    %w[
+      postcodeLeftBlank
+      postcodeLeftBlankSanitized
+      invalidPostcodeFormat
+      fullPostcodeNoMapitValidation
+    ].include?(error_code)
   end
 
   def no_restriction?

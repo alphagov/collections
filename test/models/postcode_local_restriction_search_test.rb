@@ -84,16 +84,6 @@ describe PostcodeLocalRestrictionSearch do
     end
   end
 
-  describe "#blank_postcode?" do
-    it "returns true for missing postcode scenarios" do
-      assert described_class.new("").blank_postcode?
-    end
-
-    it "returns false when a postcode is input" do
-      assert_not described_class.new("E1 8QS").blank_postcode?
-    end
-  end
-
   describe "#invalid_postcode?" do
     it "returns true for an invalid postcode scenarios" do
       assert described_class.new("not-a-postcode").invalid_postcode?
@@ -101,6 +91,16 @@ describe PostcodeLocalRestrictionSearch do
 
     it "returns false when the input is a valid postcode" do
       assert_not described_class.new("E1 8QS").invalid_postcode?
+    end
+
+    it "returns false if mapit doesn't know about the postcode" do
+      stub_mapit_does_not_have_a_postcode("E1 8QS")
+
+      assert_not described_class.new("E1 8QS").invalid_postcode?
+    end
+
+    it "returns true for missing postcode scenarios" do
+      assert described_class.new("").invalid_postcode?
     end
   end
 

@@ -1,8 +1,8 @@
 <%
-  error_key = if @search&.blank_postcode?
-                "no_postcode"
-              elsif @search&.invalid_postcode?
+  error_key = if @search&.invalid_postcode?
                 "invalid_postcode"
+              elsif @search&.postcode_not_found?
+                "postcode_not_found"
               end
 
   title = t("coronavirus_local_restrictions.lookup.title")

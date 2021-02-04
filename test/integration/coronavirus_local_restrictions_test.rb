@@ -91,9 +91,10 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     it "errors gracefully if you don't enter a postcode" do
       given_i_am_on_the_local_restrictions_page
       then_i_can_see_the_postcode_lookup_form
+      when_i_enter_an_invalid_postcode
       then_i_click_on_find
       then_i_can_see_the_postcode_lookup_form
-      then_i_see_a_no_postcode_error_message
+      then_i_see_an_invalid_postcode_error_message
     end
 
     it "errors gracefully if the postcode is invalid" do
@@ -103,6 +104,15 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_click_on_find
       then_i_can_see_the_invalid_postcode_in_the_form
       then_i_see_an_invalid_postcode_error_message
+    end
+
+    it "errors gracefully if the postcode doesn't exist" do
+      given_i_am_on_the_local_restrictions_page
+      then_i_can_see_the_postcode_lookup_form
+      when_i_enter_a_postcode_that_does_not_exist
+      then_i_click_on_find
+      then_i_can_see_the_postcode_lookup_form
+      then_i_see_a_postcode_not_found_error_message
     end
   end
 
@@ -216,7 +226,7 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     postcode = "E1 8QS"
     stub_no_local_restriction(postcode: postcode, name: @area)
 
-    fill_in "Enter a full postcode", with: postcode
+    fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: postcode
   end
 
   def then_i_enter_an_unusually_formatted_postcode
@@ -224,7 +234,7 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     @area = "Hoth"
     stub_local_restriction(postcode: @postcode, name: @area, current_alert_level: 1)
 
-    fill_in "Enter a full postcode", with: "e18qs"
+    fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: "e18qs"
   end
 
   def then_i_enter_a_valid_english_postcode_with_a_future_level_two_restriction
@@ -235,7 +245,7 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
                            current_alert_level: 1,
                            future_alert_level: 2)
 
-    fill_in "Enter a full postcode", with: postcode
+    fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: postcode
   end
 
   def then_i_enter_a_valid_english_postcode_with_a_future_level_three_restriction
@@ -246,7 +256,7 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
                            current_alert_level: 2,
                            future_alert_level: 3)
 
-    fill_in "Enter a full postcode", with: postcode
+    fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: postcode
   end
 
   def then_i_enter_a_valid_english_postcode_with_a_future_level_four_restriction
@@ -257,14 +267,14 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
                            current_alert_level: 3,
                            future_alert_level: 4)
 
-    fill_in "Enter a full postcode", with: postcode
+    fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: postcode
   end
 
   def then_i_enter_a_valid_english_postcode_with_an_extra_special_character
     @area = "Coruscant Planetary Council"
     stub_local_restriction(postcode: "E1 8QS", name: @area, current_alert_level: 2)
 
-    fill_in "Enter a full postcode", with: ".e18qs"
+    fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: ".e18qs"
   end
 
   def then_i_enter_a_valid_english_postcode_in_tier_one
@@ -272,7 +282,7 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     postcode = "E1 8QS"
     stub_local_restriction(postcode: "E1 8QS", name: @area, current_alert_level: 1)
 
-    fill_in "Enter a full postcode", with: postcode
+    fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: postcode
   end
 
   def then_i_enter_a_valid_english_postcode_in_tier_two
@@ -280,7 +290,7 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     postcode = "E1 8QS"
     stub_local_restriction(postcode: postcode, name: @area, current_alert_level: 2)
 
-    fill_in "Enter a full postcode", with: postcode
+    fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: postcode
   end
 
   def then_i_enter_a_valid_english_postcode_in_tier_three
@@ -288,7 +298,7 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     postcode = "E1 8QS"
     stub_local_restriction(postcode: postcode, name: @area, current_alert_level: 3)
 
-    fill_in "Enter a full postcode", with: postcode
+    fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: postcode
   end
 
   def then_i_enter_a_valid_english_postcode_in_tier_four
@@ -296,28 +306,28 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     postcode = "E1 8QS"
     stub_local_restriction(postcode: postcode, name: @area, current_alert_level: 4)
 
-    fill_in "Enter a full postcode", with: postcode
+    fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: postcode
   end
 
   def then_i_enter_a_valid_welsh_postcode
     postcode = "LL11 0BY"
     stub_local_restriction(postcode: postcode, country_name: "Wales")
 
-    fill_in "Enter a full postcode", with: postcode
+    fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: postcode
   end
 
   def then_i_enter_a_valid_scottish_postcode
     postcode = "G20 9SH"
     stub_local_restriction(postcode: postcode, country_name: "Scotland")
 
-    fill_in "Enter a full postcode", with: postcode
+    fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: postcode
   end
 
   def then_i_enter_a_valid_northern_ireland_postcode
     postcode = "BT48 7PX"
     stub_local_restriction(postcode: postcode, country_name: "Northern Ireland")
 
-    fill_in "Enter a full postcode", with: postcode
+    fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: postcode
   end
 
   def when_i_enter_a_valid_postcode_that_returns_no_results
@@ -327,12 +337,19 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     stub_request(:get, "#{mapit_endpoint}/postcode/" + postcode.tr(" ", "+") + ".json")
         .to_return(body: { "postcode" => postcode.to_s, "areas" => {} }.to_json, status: 200)
 
-    fill_in "Enter a full postcode", with: postcode
+    fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: postcode
   end
 
   def when_i_enter_an_invalid_postcode
     @postcode = "Hello"
-    fill_in "Enter a full postcode", with: @postcode
+    fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: @postcode
+  end
+
+  def when_i_enter_a_postcode_that_does_not_exist
+    postcode = "XM4 5HQ"
+    stub_mapit_does_not_have_a_postcode(postcode)
+
+    fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: postcode
   end
 
   def then_i_click_on_find
@@ -381,12 +398,12 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.devolved_nations.northern_ireland.guidance.label"))
   end
 
-  def then_i_see_a_no_postcode_error_message
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.errors.no_postcode.error_message"))
+  def then_i_see_a_postcode_not_found_error_message
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.errors.postcode_not_found.input_error"))
   end
 
   def then_i_see_an_invalid_postcode_error_message
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.error_message"))
+    assert page.has_text?(I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.input_error"))
   end
 
   def then_i_see_the_no_information_page

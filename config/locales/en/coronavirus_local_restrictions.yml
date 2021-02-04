@@ -1,14 +1,14 @@
 en:
   coronavirus_local_restrictions:
     errors:
-      no_postcode:
+      postcode_not_found:
         error_message: There is a problem
-        input_error: Enter a postcode
-        error_description: Enter a postcode
+        input_error: The postcode could not be found, enter a full postcode
+        error_description: The postcode could not be found, enter a full postcode
       invalid_postcode:
         error_message: There is a problem
-        input_error: Enter a valid postcode
-        error_description: Enter a valid postcode
+        input_error: Enter a full postcode, like LS1 1UR
+        error_description: Enter a full postcode, like LS1 1UR
     out_of_date_warning: |
       This service is being updated, at the moment it might not show the latest information for your area
     lookup:
