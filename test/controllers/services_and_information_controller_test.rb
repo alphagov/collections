@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe ServicesAndInformationController do
-  include RummagerHelpers
+  include SearchApiHelpers
   include ServicesAndInformationHelpers
 
   describe "with a valid organisation slug" do

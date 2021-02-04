@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe Supergroups::NewsAndCommunications do
-  include RummagerHelpers
+  include SearchApiHelpers
   include SupergroupHelpers
 
   DEFAULT_IMAGE_URL = "https://assets.publishing.service.gov.uk/media/5e59279b86650c53b2cefbfe/placeholder.jpg".freeze

@@ -1,7 +1,7 @@
-require_relative "../../test/support/rummager_helpers"
+require_relative "../../test/support/search_api_helpers"
 
 module OrganisationHelpers
-  include ::RummagerHelpers
+  include ::SearchApiHelpers
 
   def stub_rummager_latest_content_requests(organisation_slug)
     stub_latest_content_from_supergroups_request(organisation_slug)

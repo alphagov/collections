@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe Organisations::SupergroupsPresenter do
-  include RummagerHelpers
+  include SearchApiHelpers
   include OrganisationHelpers
 
   before :each do

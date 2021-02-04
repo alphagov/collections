@@ -1,9 +1,9 @@
 require "gds_api/test_helpers/search"
-require_relative "../../test/support/rummager_helpers"
+require_relative "../../test/support/search_api_helpers"
 
 module TopicHelper
   include GdsApi::TestHelpers::Search
-  include RummagerHelpers
+  include SearchApiHelpers
 
   def stub_topic_lookups
     rummager_has_documents_for_subtopic(

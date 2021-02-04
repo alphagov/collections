@@ -1,10 +1,10 @@
 require "gds_api/test_helpers/search"
 
-require_relative "../../test/support/rummager_helpers"
+require_relative "../../test/support/search_api_helpers"
 
 module ServicesAndInformationHelpers
   include GdsApi::TestHelpers::Search
-  include RummagerHelpers
+  include SearchApiHelpers
 
   def stub_services_and_information_lookups
     @services_and_information = %w[

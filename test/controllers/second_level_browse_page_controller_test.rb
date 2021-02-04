@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe SecondLevelBrowsePageController do
-  include RummagerHelpers
+  include SearchApiHelpers
 
   describe "GET second_level_browse_page" do
     describe "for a valid browse page" do

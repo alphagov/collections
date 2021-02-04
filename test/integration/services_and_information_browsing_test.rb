@@ -1,7 +1,7 @@
 require "integration_test_helper"
 
 class ServicesAndInformationBrowsingTest < ActionDispatch::IntegrationTest
-  include RummagerHelpers
+  include SearchApiHelpers
   include ServicesAndInformationHelpers
 
   before do

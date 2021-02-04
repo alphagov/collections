@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe ListSet do
-  include RummagerHelpers
+  include SearchApiHelpers
 
   describe "for a curated subtopic" do
     setup do

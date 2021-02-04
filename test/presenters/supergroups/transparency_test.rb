@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe Supergroups::Transparency do
-  include RummagerHelpers
+  include SearchApiHelpers
 
   let(:taxon_id) { "12345" }
   let(:transparency_supergroup) { Supergroups::Transparency.new }

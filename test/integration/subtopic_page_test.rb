@@ -1,7 +1,7 @@
 require "integration_test_helper"
 
 class SubtopicPageTest < ActionDispatch::IntegrationTest
-  include RummagerHelpers
+  include SearchApiHelpers
 
   def oil_and_gas_subtopic_item(subtopic_slug, params = {})
     base = {

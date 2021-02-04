@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe Organisations::IndexPresenter do
-  include RummagerHelpers
+  include SearchApiHelpers
   include OrganisationsHelpers
 
   describe "ministerial departments" do

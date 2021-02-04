@@ -1,10 +1,10 @@
 require "gds_api/test_helpers/content_item_helpers"
 require "gds_api/test_helpers/search"
-require_relative "../../test/support/rummager_helpers"
+require_relative "../../test/support/search_api_helpers"
 
 module TransitionLandingPageSteps
   include GdsApi::TestHelpers::ContentItemHelpers
-  include RummagerHelpers
+  include SearchApiHelpers
 
   TRANSITION_TAXON_CONTENT_ID = "d6c2de5d-ef90-45d1-82d4-5f2438369eea".freeze
   TRANSITION_TAXON_PATH = "/transition".freeze

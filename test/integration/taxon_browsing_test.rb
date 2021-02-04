@@ -2,7 +2,7 @@ require "integration_test_helper"
 require_relative "../support/taxon_helpers"
 
 class TaxonBrowsingTest < ActionDispatch::IntegrationTest
-  include RummagerHelpers
+  include SearchApiHelpers
   include TaxonHelpers
   include GovukAbTesting::MinitestHelpers
 

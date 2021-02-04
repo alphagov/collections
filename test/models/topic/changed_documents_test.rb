@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe Topic::ChangedDocuments do
-  include RummagerHelpers
+  include SearchApiHelpers
 
   describe "with a single page of results available" do
     setup do

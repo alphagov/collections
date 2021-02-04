@@ -1,10 +1,10 @@
 require "gds_api/test_helpers/content_item_helpers"
 require "gds_api/test_helpers/search"
-require_relative "../../test/support/rummager_helpers"
+require_relative "../../test/support/search_api_helpers"
 require_relative "../../test/support/coronavirus_helper"
 module CoronavirusLandingPageSteps
   include GdsApi::TestHelpers::ContentItemHelpers
-  include RummagerHelpers
+  include SearchApiHelpers
 
   CORONAVIRUS_PATH = "/coronavirus".freeze
   BUSINESS_PATH = "/coronavirus/business-support".freeze

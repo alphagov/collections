@@ -1,4 +1,4 @@
-module RummagerHelpers
+module SearchApiHelpers
   include SearchApiFields
 
   def stub_content_for_taxon(content_ids, results)

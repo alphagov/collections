@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe Supergroups::PolicyAndEngagement do
-  include RummagerHelpers
+  include SearchApiHelpers
   include SupergroupHelpers
 
   let(:taxon_id) { "12345" }

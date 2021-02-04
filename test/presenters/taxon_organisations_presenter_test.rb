@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe TaxonOrganisationsPresenter do
-  include RummagerHelpers
+  include SearchApiHelpers
   include TaxonHelpers
 
   let(:content_hash) { funding_and_finance_for_students_taxon }

@@ -1,7 +1,7 @@
 require "integration_test_helper"
 
 class MainstreamBrowsingTest < ActionDispatch::IntegrationTest
-  include RummagerHelpers
+  include SearchApiHelpers
 
   test "that we can handle all examples" do
     # Shuffle the examples to ensure tests don't become order dependent

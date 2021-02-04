@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe Search::Supergroup do
-  include RummagerHelpers
+  include SearchApiHelpers
 
   before :each do
     @supergroup = described_class.new(organisation_slug: "attorney-generals-office", content_purpose_supergroup: "news_and_communications")

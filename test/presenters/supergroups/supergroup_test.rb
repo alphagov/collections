@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe Supergroups::Supergroup do
-  include RummagerHelpers
+  include SearchApiHelpers
 
   let(:taxon_id) { "12345" }
   let(:supergroup_name) { "news_and_communications" }

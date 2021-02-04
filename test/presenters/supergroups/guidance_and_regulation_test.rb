@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe Supergroups::GuidanceAndRegulation do
-  include RummagerHelpers
+  include SearchApiHelpers
 
   let(:taxon_id) { "12345" }
   let(:guidance_and_regulation_supergroup) { Supergroups::GuidanceAndRegulation.new }

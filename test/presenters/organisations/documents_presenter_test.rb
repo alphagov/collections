@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe Organisations::DocumentsPresenter do
-  include RummagerHelpers
+  include SearchApiHelpers
   include OrganisationHelpers
 
   describe "documents" do
