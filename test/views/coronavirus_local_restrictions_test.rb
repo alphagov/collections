@@ -77,7 +77,7 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
 
     render template: "coronavirus_local_restrictions/show"
 
-    assert_select ".govuk-error-summary__body"
+    assert_includes rendered, I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.input_error")
   end
 
   def stub_local_restriction(postcode:,
