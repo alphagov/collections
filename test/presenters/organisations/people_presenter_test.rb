@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe Organisations::PeoplePresenter do
-  include RummagerHelpers
+  include SearchApiHelpers
   include OrganisationHelpers
 
   describe "ministers" do

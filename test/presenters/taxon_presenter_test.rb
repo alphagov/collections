@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe TaxonPresenter do
-  include RummagerHelpers
+  include SearchApiHelpers
   include TaxonHelpers
 
   describe "options" do

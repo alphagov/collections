@@ -220,17 +220,17 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     stub_content_store_has_item("/government/organisations/replaced", @content_item_replaced)
     stub_content_store_has_item("/government/organisations/fire-service-college", @content_item_documents)
 
-    stub_rummager_latest_content_requests("changed_name")
-    stub_rummager_latest_content_requests("devolved")
-    stub_rummager_latest_content_requests("exempt")
-    stub_rummager_latest_content_requests("exempt-no-url")
-    stub_rummager_latest_content_requests("joining")
-    stub_rummager_latest_content_requests("left_gov")
-    stub_rummager_latest_content_requests("merged")
-    stub_rummager_latest_content_requests("split")
-    stub_rummager_latest_content_requests("no_longer_exists")
-    stub_rummager_latest_content_requests("replaced")
-    stub_rummager_latest_content_requests("fire-service-college")
+    stub_search_api_latest_content_requests("changed_name")
+    stub_search_api_latest_content_requests("devolved")
+    stub_search_api_latest_content_requests("exempt")
+    stub_search_api_latest_content_requests("exempt-no-url")
+    stub_search_api_latest_content_requests("joining")
+    stub_search_api_latest_content_requests("left_gov")
+    stub_search_api_latest_content_requests("merged")
+    stub_search_api_latest_content_requests("split")
+    stub_search_api_latest_content_requests("no_longer_exists")
+    stub_search_api_latest_content_requests("replaced")
+    stub_search_api_latest_content_requests("fire-service-college")
   end
 
   it "displays a changed_name organisation page correctly" do

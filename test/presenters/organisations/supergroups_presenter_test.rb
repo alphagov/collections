@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe Organisations::SupergroupsPresenter do
-  include RummagerHelpers
+  include SearchApiHelpers
   include OrganisationHelpers
 
   before :each do
@@ -13,8 +13,8 @@ describe Organisations::SupergroupsPresenter do
     organisation = Organisation.new(content_item)
     @empty_supergroups_presenter = described_class.new(organisation)
 
-    stub_empty_rummager_requests("org-with-no-docs")
-    stub_rummager_latest_content_requests("attorney-generals-office")
+    stub_empty_search_api_requests("org-with-no-docs")
+    stub_search_api_latest_content_requests("attorney-generals-office")
   end
 
   def find_supergroup_by_name(name)

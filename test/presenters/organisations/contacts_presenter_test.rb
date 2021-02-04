@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe Organisations::ContactsPresenter do
-  include RummagerHelpers
+  include SearchApiHelpers
   include OrganisationHelpers
 
   describe "FOI" do

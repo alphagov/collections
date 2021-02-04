@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe ServicesAndInformationController do
-  include RummagerHelpers
+  include SearchApiHelpers
   include ServicesAndInformationHelpers
 
   describe "with a valid organisation slug" do
@@ -24,7 +24,7 @@ describe ServicesAndInformationController do
       assert_equal 404, response.status
     end
 
-    it "renders the page correctly when there are unexpanded links in the rummager results" do
+    it "renders the page correctly when there are unexpanded links in the search_api results" do
       stub_services_and_information_content_item
       stub_services_and_information_links_with_missing_keys("hm-revenue-customs")
 

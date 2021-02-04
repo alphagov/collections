@@ -1,15 +1,15 @@
 require "test_helper"
 
-describe RummagerOrganisation do
+describe SearchApiOrganisation do
   it "returns the state of an organisation" do
-    organisation = RummagerOrganisation.new(
+    organisation = SearchApiOrganisation.new(
       organisation_state: "live",
     )
     assert(organisation.live?)
   end
 
   it "returns false if the state of an organisation is not live" do
-    organisation = RummagerOrganisation.new(
+    organisation = SearchApiOrganisation.new(
       organisation_state: "closed",
     )
     assert_not(organisation.live?)
@@ -17,7 +17,7 @@ describe RummagerOrganisation do
 
   describe "#has_logo?" do
     it "returns true if logo attributes are present" do
-      organisation = RummagerOrganisation.new(
+      organisation = SearchApiOrganisation.new(
         logo_formatted_title: "some\ntitle",
         brand: "ministry-of-blah",
         crest: "single-identity",
@@ -26,7 +26,7 @@ describe RummagerOrganisation do
     end
 
     it "returns false if the crest is missing" do
-      organisation = RummagerOrganisation.new(
+      organisation = SearchApiOrganisation.new(
         logo_formatted_title: "some\ntitle",
         brand: "ministry-of-blah",
         crest: "",
@@ -35,7 +35,7 @@ describe RummagerOrganisation do
     end
 
     it "returns false if the it is a custom logo" do
-      organisation = RummagerOrganisation.new(
+      organisation = SearchApiOrganisation.new(
         crest: "custom",
         logo_url: "/logo.png",
       )
@@ -45,7 +45,7 @@ describe RummagerOrganisation do
 
   describe "#custom_logo?" do
     it 'returns true if the crest is "custom"' do
-      organisation = RummagerOrganisation.new(
+      organisation = SearchApiOrganisation.new(
         crest: "custom",
         logo_url: "/logo.png",
       )
@@ -53,7 +53,7 @@ describe RummagerOrganisation do
     end
 
     it 'returns false if the crest is not "custom"' do
-      organisation = RummagerOrganisation.new(
+      organisation = SearchApiOrganisation.new(
         crest: "somethingelse",
         logo_url: "/logo.png",
       )
@@ -61,7 +61,7 @@ describe RummagerOrganisation do
     end
 
     it "returns false if the logo url is missing" do
-      organisation = RummagerOrganisation.new(
+      organisation = SearchApiOrganisation.new(
         crest: "somethingelse",
       )
       assert_not(organisation.custom_logo?)

@@ -26,7 +26,7 @@ describe TaggedOrganisations do
         },
       }
 
-      Services.rummager.stubs(:search).returns(search_results)
+      Services.search_api.stubs(:search).returns(search_results)
 
       organisations = tagged_organisations.fetch
       assert_equal(1, organisations.count)
@@ -54,7 +54,7 @@ describe TaggedOrganisations do
         },
       }
 
-      Services.rummager.stubs(:search).returns(search_results)
+      Services.search_api.stubs(:search).returns(search_results)
 
       organisations = tagged_organisations.fetch
       assert_equal(1, organisations.count)
@@ -102,6 +102,6 @@ private
       },
     }
 
-    Services.rummager.stubs(:search).returns(search_results)
+    Services.search_api.stubs(:search).returns(search_results)
   end
 end

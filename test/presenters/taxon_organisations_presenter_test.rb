@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe TaxonOrganisationsPresenter do
-  include RummagerHelpers
+  include SearchApiHelpers
   include TaxonHelpers
 
   let(:content_hash) { funding_and_finance_for_students_taxon }
@@ -302,7 +302,7 @@ private
 
   def tagged_organisation
     [
-      RummagerOrganisation.new(
+      SearchApiOrganisation.new(
         title: "Department for Education",
         content_id: "ebd15ade-73b2-4eaf-b1c3-43034a42eb37",
         link: "/government/organisations/department-for-education",
@@ -319,7 +319,7 @@ private
 
   def tagged_organisation_with_logo
     [
-      RummagerOrganisation.new(
+      SearchApiOrganisation.new(
         title: "Department for Education",
         content_id: "ebd15ade-73b2-4eaf-b1c3-43034a42eb37",
         link: "/government/organisations/department-for-education",
@@ -336,7 +336,7 @@ private
 
   def tagged_custom_organisation
     [
-      RummagerOrganisation.new(
+      SearchApiOrganisation.new(
         title: "Department for Education",
         content_id: "ebd15ade-73b2-4eaf-b1c3-43034a42eb37",
         link: "/government/organisations/department-for-education",
@@ -356,7 +356,7 @@ private
 
     number_of_organisations.times do
       organisations.push(
-        RummagerOrganisation.new(
+        SearchApiOrganisation.new(
           title: "Department for Education",
           content_id: "ebd15ade-73b2-4eaf-b1c3-43034a42eb37",
           link: "/government/organisations/department-for-education",

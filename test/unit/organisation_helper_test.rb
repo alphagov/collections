@@ -2,7 +2,7 @@ require "test_helper"
 
 describe OrganisationHelper do
   include OrganisationHelpers
-  include RummagerHelpers
+  include SearchApiHelpers
   describe "#organisation_type_name" do
     it "returns a human-readable name given an organisation_type" do
       assert_equal "Executive non-departmental public body", organisation_type_name("executive_ndpb")

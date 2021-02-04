@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe SupergroupSections::BrexitSections do
-  include RummagerHelpers
+  include SearchApiHelpers
   include TaxonHelpers
 
   let(:taxon_id) { "12345" }

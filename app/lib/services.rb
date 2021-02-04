@@ -17,12 +17,12 @@ module Services
   def self.cached_search(params, metric_key: "search.request_time")
     Rails.cache.fetch(params, expires_in: 5.minutes) do
       GovukStatsd.time(metric_key) do
-        rummager.search(params).to_h
+        search_api.search(params).to_h
       end
     end
   end
 
-  def self.rummager
-    @rummager ||= GdsApi::Search.new(Plek.new.find("search"))
+  def self.search_api
+    @search_api ||= GdsApi::Search.new(Plek.new.find("search"))
   end
 end

@@ -1,7 +1,7 @@
 require "integration_test_helper"
 
 class WorldLocationTaxonTest < ActionDispatch::IntegrationTest
-  include RummagerHelpers
+  include SearchApiHelpers
   include TaxonHelpers
 
   it "contains both the atom and email signup url if we are browsing a world location" do

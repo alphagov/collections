@@ -1,7 +1,7 @@
 class Topic::ChangedDocuments
   include Enumerable
 
-  delegate :documents, :total, :start, to: :rummager_search
+  delegate :documents, :total, :start, to: :search_api_search
   delegate :each, to: :documents
 
   DEFAULT_PAGE_SIZE = 50
@@ -26,8 +26,8 @@ private
     start >= 0 ? start : 0
   end
 
-  def rummager_search
-    @rummager_search ||= RummagerSearch.new(
+  def search_api_search
+    @search_api_search ||= SearchApiSearch.new(
       start: start_param,
       count: page_size,
       order: "-public_timestamp",

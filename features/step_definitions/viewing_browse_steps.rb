@@ -12,12 +12,12 @@ Given(/^there is an alphabetical browse page set up with links$/) do
   )
   add_second_level_browse_pages(second_level_browse_pages)
 
-  rummager_has_documents_for_browse_page(
+  search_api_has_documents_for_browse_page(
     "judges-content-id",
     %w[
       judge-dredd
     ],
-    page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+    page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
   )
 end
 

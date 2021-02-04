@@ -1,4 +1,4 @@
-module RummagerFields
+module SearchApiFields
   TAXON_SEARCH_FIELDS = %w[title
                            link
                            description

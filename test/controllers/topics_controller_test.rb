@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe TopicsController do
-  include RummagerHelpers
+  include SearchApiHelpers
 
   describe "GET topic" do
     describe "with a valid topic slug" do

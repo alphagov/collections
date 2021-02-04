@@ -10,7 +10,7 @@ describe TaggedContent do
         }],
       }
 
-      Services.rummager.stubs(:search).returns(search_results)
+      Services.search_api.stubs(:search).returns(search_results)
 
       results = tagged_content.fetch
       assert_equal(results.count, 1)
@@ -24,7 +24,7 @@ describe TaggedContent do
     end
 
     it "requests all results" do
-      assert_includes_params(count: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING) do
+      assert_includes_params(count: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING) do
         tagged_content.fetch
       end
     end

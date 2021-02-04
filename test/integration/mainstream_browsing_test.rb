@@ -1,18 +1,18 @@
 require "integration_test_helper"
 
 class MainstreamBrowsingTest < ActionDispatch::IntegrationTest
-  include RummagerHelpers
+  include SearchApiHelpers
 
   test "that we can handle all examples" do
     # Shuffle the examples to ensure tests don't become order dependent
     schemas = GovukSchemas::Example.find_all("mainstream_browse_page").shuffle
 
-    # Add all examples to the content store and rummager to allow pages to
+    # Add all examples to the content store and search_api to allow pages to
     # request their parents and links.
     schemas.each do |content_item|
       stub_content_store_has_item(content_item["base_path"], content_item)
 
-      rummager_has_documents_for_browse_page(
+      search_api_has_documents_for_browse_page(
         content_item["content_id"],
         %w[
           employee-tax-codes
@@ -22,7 +22,7 @@ class MainstreamBrowsingTest < ActionDispatch::IntegrationTest
           pay-psa
           payroll-annual-reporting
         ],
-        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+        page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       )
     end
 

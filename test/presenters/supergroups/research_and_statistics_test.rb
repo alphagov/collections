@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe Supergroups::ResearchAndStatistics do
-  include RummagerHelpers
+  include SearchApiHelpers
 
   let(:taxon_id) { "12345" }
   let(:research_and_statistics_supergroup) { Supergroups::ResearchAndStatistics.new }

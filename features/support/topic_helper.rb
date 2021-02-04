@@ -1,12 +1,12 @@
 require "gds_api/test_helpers/search"
-require_relative "../../test/support/rummager_helpers"
+require_relative "../../test/support/search_api_helpers"
 
 module TopicHelper
   include GdsApi::TestHelpers::Search
-  include RummagerHelpers
+  include SearchApiHelpers
 
   def stub_topic_lookups
-    rummager_has_documents_for_subtopic(
+    search_api_has_documents_for_subtopic(
       "content-id-for-fields-and-wells",
       %w[
         what-is-oil
@@ -17,7 +17,7 @@ module TopicHelper
         well-report-2014
         oil-extraction-count-2013
       ],
-      page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+      page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
     )
 
     stub_content_store_has_item(

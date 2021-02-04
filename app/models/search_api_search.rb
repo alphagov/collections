@@ -1,4 +1,4 @@
-class RummagerSearch
+class SearchApiSearch
   PAGE_SIZE_TO_GET_EVERYTHING = 1000
 
   include Enumerable
@@ -49,7 +49,7 @@ class RummagerSearch
   def organisations
     @organisations ||= search_result.dig("aggregates", "organisations", "options").map do |option|
       organisation = option["value"]
-      RummagerOrganisation.new(
+      SearchApiOrganisation.new(
         title: organisation["title"],
         content_id: organisation["content_id"],
         link: organisation["link"],

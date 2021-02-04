@@ -2,7 +2,7 @@ require "test_helper"
 require_relative "../../test/support/coronavirus_helper"
 
 describe TaxonsController do
-  include RummagerHelpers
+  include SearchApiHelpers
   include GovukAbTesting::MinitestHelpers
   include TaxonHelpers
 

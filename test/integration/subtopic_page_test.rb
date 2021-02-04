@@ -1,7 +1,7 @@
 require "integration_test_helper"
 
 class SubtopicPageTest < ActionDispatch::IntegrationTest
-  include RummagerHelpers
+  include SearchApiHelpers
 
   def oil_and_gas_subtopic_item(subtopic_slug, params = {})
     base = {
@@ -26,7 +26,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
   end
 
   before do
-    rummager_has_documents_for_subtopic(
+    search_api_has_documents_for_subtopic(
       "content-id-for-offshore",
       %w[
         oil-rig-safety-requirements
@@ -34,7 +34,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
         north-sea-shipping-lanes
         undersea-piping-restrictions
       ],
-      page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+      page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
     )
   end
 
@@ -80,7 +80,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
       end
 
       within ".gem-c-metadata" do
-        # The orgs are fixed in the rummager test helpers
+        # The orgs are fixed in the search_api test helpers
         assert page.has_text?("Department of Energy & Climate Change")
         assert page.has_text?("Foreign & Commonwealth Office")
       end
@@ -137,7 +137,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
     it "displays the latest page" do
       # Given there is latest content for a subtopic
-      rummager_has_latest_documents_for_subtopic(
+      search_api_has_latest_documents_for_subtopic(
         "content-id-for-offshore",
         %w[
           oil-and-gas-uk-field-data
@@ -159,7 +159,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
         end
 
         within ".gem-c-metadata" do
-          # The orgs are fixed in the rummager test helpers
+          # The orgs are fixed in the search_api test helpers
           assert page.has_text?("Department of Energy & Climate Change")
           assert page.has_text?("Foreign & Commonwealth Office")
         end
@@ -178,7 +178,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
     it "paginates the results" do
       # Given there is latest content for a subtopic
-      rummager_has_latest_documents_for_subtopic(
+      search_api_has_latest_documents_for_subtopic(
         "content-id-for-offshore",
         (1..55).map { |n| "document-#{n}" },
       )

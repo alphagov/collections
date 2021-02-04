@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe Search::Supergroup do
-  include RummagerHelpers
+  include SearchApiHelpers
 
   before :each do
     @supergroup = described_class.new(organisation_slug: "attorney-generals-office", content_purpose_supergroup: "news_and_communications")
@@ -22,11 +22,11 @@ describe Search::Supergroup do
   end
 
   describe "#documents" do
-    it "provides a set of raw rummager search results" do
-      assert_equal @supergroup.documents, [raw_rummager_result]
+    it "provides a set of raw search_api search results" do
+      assert_equal @supergroup.documents, [raw_search_api_result]
     end
 
-    it "provides a set of raw rummager search results even if the set is empty" do
+    it "provides a set of raw search_api search results even if the set is empty" do
       assert_equal @no_docs_supergroup.documents, []
     end
   end
@@ -41,7 +41,7 @@ describe Search::Supergroup do
     )
   end
 
-  def raw_rummager_result
+  def raw_search_api_result
     {
       "title" => "Quiddich World Cup 2022 begins",
       "link" => "/government/news/its-coming-home",
@@ -52,7 +52,7 @@ describe Search::Supergroup do
 
   def stub_news_and_comms_supergroup_request
     stub_supergroup_request(
-      results: [raw_rummager_result],
+      results: [raw_search_api_result],
       additional_params: {
         filter_content_purpose_supergroup: "news_and_communications",
         filter_organisations: "attorney-generals-office",

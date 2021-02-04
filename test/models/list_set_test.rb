@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe ListSet do
-  include RummagerHelpers
+  include SearchApiHelpers
 
   describe "for a curated subtopic" do
     setup do
@@ -24,7 +24,7 @@ describe ListSet do
         },
       ]
 
-      rummager_has_documents_for_subtopic(
+      search_api_has_documents_for_subtopic(
         "paye-content-id",
         %w[
           employee-tax-codes
@@ -34,7 +34,7 @@ describe ListSet do
           pay-psa
           payroll-annual-reporting
         ],
-        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+        page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       )
 
       @list_set = ListSet.new("specialist_sector", "paye-content-id", @group_data)
@@ -80,7 +80,7 @@ describe ListSet do
 
   describe "for a non-curated topic" do
     setup do
-      rummager_has_documents_for_subtopic(
+      search_api_has_documents_for_subtopic(
         "paye-content-id",
         %w[
           get-paye-forms-p45-p60
@@ -90,7 +90,7 @@ describe ListSet do
           employee-tax-codes
           payroll-annual-reporting
         ],
-        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+        page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       )
       @list_set = ListSet.new("specialist_sector", "paye-content-id", [])
     end
@@ -126,7 +126,7 @@ describe ListSet do
   describe "fetching content tagged to this tag" do
     setup do
       @subtopic_content_id = "paye-content-id"
-      rummager_has_documents_for_subtopic(
+      search_api_has_documents_for_subtopic(
         @subtopic_content_id,
         %w[
           pay-paye-penalty
@@ -135,7 +135,7 @@ describe ListSet do
           employee-tax-codes
           payroll-annual-reporting
         ],
-        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+        page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       )
     end
 
@@ -161,10 +161,10 @@ describe ListSet do
 
   describe "handling missing fields in the search results" do
     it "handles documents that don't contain the public_timestamp field" do
-      result = rummager_document_for_slug("pay-psa")
+      result = search_api_document_for_slug("pay-psa")
       result.delete("public_timestamp")
 
-      Services.rummager.stubs(:search).with(
+      Services.search_api.stubs(:search).with(
         has_entries(filter_topic_content_ids: %w[paye-content-id]),
       ).returns("results" => [result],
                 "start" => 0,
@@ -184,22 +184,22 @@ describe ListSet do
     end
 
     it "shouldn't display a document if its format is excluded" do
-      rummager_has_documents_for_browse_page(
+      search_api_has_documents_for_browse_page(
         "content-id-for-living-abroad",
         %w[baz],
         ListSet::BROWSE_FORMATS_TO_EXCLUDE.to_a.last,
-        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+        page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       )
 
       assert_equal 0, @list_set.first.contents.length
     end
 
     it "should display a document if its format isn't excluded" do
-      rummager_has_documents_for_browse_page(
+      search_api_has_documents_for_browse_page(
         "content-id-for-living-abroad",
         %w[baz],
         "some-format-not-excluded",
-        page_size: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+        page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       )
 
       results = @list_set.first.contents

@@ -19,10 +19,10 @@ private
   def search_response
     params = {
       count: 0,
-      aggregate_organisations: RummagerSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+      aggregate_organisations: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       filter_part_of_taxonomy_tree: content_ids,
     }
 
-    RummagerSearch.new(params)
+    SearchApiSearch.new(params)
   end
 end

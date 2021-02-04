@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe WorldWideTaxonPresenter do
-  include RummagerHelpers
+  include SearchApiHelpers
   include TaxonHelpers
 
   describe "#rendering_type" do

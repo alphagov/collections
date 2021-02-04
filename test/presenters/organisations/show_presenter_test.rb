@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe Organisations::ShowPresenter do
-  include RummagerHelpers
+  include SearchApiHelpers
   include OrganisationHelpers
 
   it "adds a prefix to a title when it should" do

@@ -14,8 +14,8 @@ describe Search::Supergroups do
     @no_docs_supergroups = described_class.new(organisation: empty_organisation)
 
     Search::Supergroups::SUPERGROUP_TYPES.each do |supergroup|
-      stub_rummager_supergroup_request(supergroup, organisation, [raw_rummager_result])
-      stub_rummager_supergroup_request(supergroup, empty_organisation, [])
+      stub_search_api_supergroup_request(supergroup, organisation, [raw_search_api_result])
+      stub_search_api_supergroup_request(supergroup, empty_organisation, [])
     end
   end
 
@@ -50,7 +50,7 @@ describe Search::Supergroups do
     end
   end
 
-  def raw_rummager_result
+  def raw_search_api_result
     {
       "title" => "Quiddich World Cup 2022 begins",
       "link" => "/government/news/its-coming-home",
@@ -59,7 +59,7 @@ describe Search::Supergroups do
     }
   end
 
-  def stub_rummager_supergroup_request(group, organisation, results)
+  def stub_search_api_supergroup_request(group, organisation, results)
     stub_supergroup_request(
       results: results,
       additional_params: {
