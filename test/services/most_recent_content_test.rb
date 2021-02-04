@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe MostRecentContent do
-  include RummagerFields
+  include SearchApiFields
 
   def most_recent_content
     @most_recent_content ||= MostRecentContent.new(
@@ -46,7 +46,7 @@ describe MostRecentContent do
   end
 
   it "requests a limited number of fields" do
-    fields = RummagerFields::TAXON_SEARCH_FIELDS
+    fields = SearchApiFields::TAXON_SEARCH_FIELDS
 
     assert_includes_params(fields: fields) do
       most_recent_content.fetch

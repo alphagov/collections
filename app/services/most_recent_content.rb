@@ -1,5 +1,5 @@
 class MostRecentContent
-  include RummagerFields
+  include SearchApiFields
 
   attr_reader :content_id, :filter_content_store_document_type, :number_of_links
 
@@ -23,7 +23,7 @@ private
     params = {
       start: 0,
       count: number_of_links,
-      fields: RummagerFields::TAXON_SEARCH_FIELDS,
+      fields: SearchApiFields::TAXON_SEARCH_FIELDS,
       filter_part_of_taxonomy_tree: [content_id],
       order: "-public_timestamp",
       filter_content_store_document_type: filter_content_store_document_type,

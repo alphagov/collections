@@ -2,7 +2,7 @@ require "test_helper"
 require "./test/support/custom_assertions.rb"
 
 describe MostPopularContent do
-  include RummagerFields
+  include SearchApiFields
 
   def most_popular_content
     @most_popular_content ||= MostPopularContent.new(
@@ -43,7 +43,7 @@ describe MostPopularContent do
     end
 
     it "requests a limited number of fields" do
-      fields = RummagerFields::TAXON_SEARCH_FIELDS
+      fields = SearchApiFields::TAXON_SEARCH_FIELDS
 
       assert_includes_params(fields: fields) do
         most_popular_content.fetch

@@ -1,5 +1,5 @@
 module RummagerHelpers
-  include RummagerFields
+  include SearchApiFields
 
   def stub_content_for_taxon(content_ids, results)
     params = {
@@ -27,7 +27,7 @@ module RummagerHelpers
 
   def stub_most_popular_content_for_taxon(content_id, results,
                                           filter_content_store_document_type: %w[detailed_guide manual])
-    fields = RummagerFields::TAXON_SEARCH_FIELDS
+    fields = SearchApiFields::TAXON_SEARCH_FIELDS
 
     params = {
       start: 0,
@@ -49,7 +49,7 @@ module RummagerHelpers
 
   def stub_most_recent_content_for_taxon(content_id, results,
                                          filter_content_store_document_type: %w[detailed_guide guidance])
-    fields = RummagerFields::TAXON_SEARCH_FIELDS
+    fields = SearchApiFields::TAXON_SEARCH_FIELDS
 
     params = {
       start: 0,
