@@ -25,28 +25,12 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   end
 
   describe "devolved_nations" do
-    it "displays guidance for Wales" do
+    it "displays guidance for a devolved nation" do
       given_i_am_on_the_local_restrictions_page
       then_i_can_see_the_postcode_lookup_form
       then_i_enter_a_valid_welsh_postcode
       then_i_click_on_find
       then_i_see_the_results_for_wales
-    end
-
-    it "displays guidance for Scotland" do
-      given_i_am_on_the_local_restrictions_page
-      then_i_can_see_the_postcode_lookup_form
-      then_i_enter_a_valid_scottish_postcode
-      then_i_click_on_find
-      then_i_see_the_results_for_scotland
-    end
-
-    it "displays guidance for Northern Ireland" do
-      given_i_am_on_the_local_restrictions_page
-      then_i_can_see_the_postcode_lookup_form
-      then_i_enter_a_valid_northern_ireland_postcode
-      then_i_click_on_find
-      then_i_see_the_results_for_northern_ireland
     end
   end
 
@@ -292,20 +276,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: postcode
   end
 
-  def then_i_enter_a_valid_scottish_postcode
-    postcode = "G20 9SH"
-    stub_local_restriction(postcode: postcode, country_name: "Scotland")
-
-    fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: postcode
-  end
-
-  def then_i_enter_a_valid_northern_ireland_postcode
-    postcode = "BT48 7PX"
-    stub_local_restriction(postcode: postcode, country_name: "Northern Ireland")
-
-    fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: postcode
-  end
-
   def when_i_enter_a_valid_postcode_that_returns_no_results
     postcode = "IM1 1AF"
     mapit_endpoint = Plek.current.find("mapit")
@@ -352,14 +322,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
 
   def then_i_see_the_results_for_wales
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.devolved_nations.wales.guidance.label"))
-  end
-
-  def then_i_see_the_results_for_scotland
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.devolved_nations.scotland.guidance.label"))
-  end
-
-  def then_i_see_the_results_for_northern_ireland
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.devolved_nations.northern_ireland.guidance.label"))
   end
 
   def then_i_see_a_postcode_not_found_error_message
