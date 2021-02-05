@@ -50,12 +50,51 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
     end
   end
 
+  describe "devolved_nations" do
+    test "renders guidance for Wales" do
+      postcode = "LL11 0BY"
+      country_name = "Wales"
+
+      render_devolved_nation_guidance(postcode, country_name)
+
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.devolved_nations.wales.guidance.label")
+    end
+
+    test "renders guidance for Scotland" do
+      postcode = "G20 9SH"
+      country_name = "Scotland"
+
+      render_devolved_nation_guidance(postcode, country_name)
+
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.devolved_nations.scotland.guidance.label")
+    end
+  end
+
+  test "renders guidance for Northern Ireland" do
+    postcode = "BT48 7PX"
+    country_name = "Northern Ireland"
+
+    render_devolved_nation_guidance(postcode, country_name)
+
+    assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.devolved_nations.northern_ireland.guidance.label")
+  end
+
   def area
     "Tattooine"
   end
 
   def postcode
     "E1 8QS"
+  end
+
+  def render_devolved_nation_guidance(postcode, country_name)
+    stub_local_restriction(postcode: postcode, country_name: country_name)
+
+    @search = PostcodeLocalRestrictionSearch.new(postcode)
+
+    view.stubs(:out_of_date?).returns(false)
+
+    render template: "coronavirus_local_restrictions/results"
   end
 
   def render_tier_results(tier)
