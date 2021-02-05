@@ -4,36 +4,50 @@ require "gds_api/test_helpers/mapit"
 class CoronavirusLocalRestrictionTest < ActionView::TestCase
   include GdsApi::TestHelpers::Mapit
 
-  test "renders postcode match tier 4" do
-    render_tier_results(4)
+  describe "current restrictions" do
+    test "renders postcode match tier 4" do
+      render_tier_results(4)
 
-    assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_four.heading_pretext")
-    assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_four.heading_tier_label")
-    assert_includes rendered, area
-  end
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_four.heading_pretext")
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_four.heading_tier_label")
+      assert_includes rendered, area
+    end
 
-  test "renders postcode match tier 3" do
-    render_tier_results(3)
+    test "renders postcode match tier 3" do
+      render_tier_results(3)
 
-    assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_four.heading_pretext")
-    assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_three.heading_tier_label")
-    assert_includes rendered, area
-  end
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_four.heading_pretext")
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_three.heading_tier_label")
+      assert_includes rendered, area
+    end
 
-  test "renders postcode match tier 2" do
-    render_tier_results(2)
+    test "renders postcode match tier 2" do
+      render_tier_results(2)
 
-    assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_two.heading_pretext")
-    assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_two.heading_tier_label")
-    assert_includes rendered, area
-  end
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_two.heading_pretext")
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_two.heading_tier_label")
+      assert_includes rendered, area
+    end
 
-  test "renders postcode match tier 1" do
-    render_tier_results(1)
+    test "renders postcode match tier 1" do
+      render_tier_results(1)
 
-    assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_two.heading_pretext")
-    assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_one.heading_tier_label")
-    assert_includes rendered, area
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_two.heading_pretext")
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_one.heading_tier_label")
+      assert_includes rendered, area
+    end
+
+    test "renders no tier information" do
+      stub_no_local_restriction(postcode: postcode, name: @area)
+
+      @search = PostcodeLocalRestrictionSearch.new(postcode)
+
+      view.stubs(:out_of_date?).returns(false)
+
+      render template: "coronavirus_local_restrictions/no_information"
+
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.no_information.heading")
+    end
   end
 
   def area
@@ -86,5 +100,24 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
       "restrictions" => [current_restriction, future_restriction].compact,
     })
     LocalRestriction.stubs(:find).with(gss).returns(local_restriction)
+  end
+
+  def stub_no_local_restriction(
+    postcode:,
+    name: "Tatooine",
+    gss: SecureRandom.alphanumeric(10),
+    country_name: "England"
+  )
+    areas = [
+      {
+        "gss" => gss,
+        "name" => name,
+        "type" => "LBO",
+        "country_name" => country_name,
+      },
+    ]
+    stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
+
+    LocalRestriction.stubs(:find).with(gss).returns(nil)
   end
 end
