@@ -15,30 +15,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_see_the_results_page_for_level_one
     end
 
-    it "displays the tier two restrictions" do
-      given_i_am_on_the_local_restrictions_page
-      then_i_can_see_the_postcode_lookup_form
-      then_i_enter_a_valid_english_postcode_in_tier_two
-      then_i_click_on_find
-      then_i_see_the_results_page_for_level_two
-    end
-
-    it "displays the tier three restrictions" do
-      given_i_am_on_the_local_restrictions_page
-      then_i_can_see_the_postcode_lookup_form
-      then_i_enter_a_valid_english_postcode_in_tier_three
-      then_i_click_on_find
-      then_i_see_the_results_page_for_level_three
-    end
-
-    it "displays the tier four restrictions" do
-      given_i_am_on_the_local_restrictions_page
-      then_i_can_see_the_postcode_lookup_form
-      then_i_enter_a_valid_english_postcode_in_tier_four
-      then_i_click_on_find
-      then_i_see_the_results_page_for_level_four
-    end
-
     it "displays no tier information" do
       given_i_am_on_the_local_restrictions_page
       then_i_can_see_the_postcode_lookup_form
@@ -370,18 +346,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
 
   def then_i_see_the_results_page_for_level_two
     heading = "#{I18n.t('coronavirus_local_restrictions.results.level_two.heading_pretext')} #{I18n.t('coronavirus_local_restrictions.results.level_two.heading_tier_label')}"
-    assert page.has_text?(@area)
-    assert page.has_text?(heading)
-  end
-
-  def then_i_see_the_results_page_for_level_three
-    heading = "#{I18n.t('coronavirus_local_restrictions.results.level_three.heading_pretext')} #{I18n.t('coronavirus_local_restrictions.results.level_three.heading_tier_label')}"
-    assert page.has_text?(@area)
-    assert page.has_text?(heading)
-  end
-
-  def then_i_see_the_results_page_for_level_four
-    heading = "#{I18n.t('coronavirus_local_restrictions.results.level_four.heading_pretext')} #{I18n.t('coronavirus_local_restrictions.results.level_four.heading_tier_label')}"
     assert page.has_text?(@area)
     assert page.has_text?(heading)
   end
