@@ -1,8 +1,11 @@
 require "test_helper"
 require "gds_api/test_helpers/mapit"
+require_relative "../../test/support/coronavirus_helper"
 
 class CoronavirusLocalRestrictionTest < ActionView::TestCase
   include GdsApi::TestHelpers::Mapit
+  include GdsApi::TestHelpers::ContentItemHelpers
+  helper Rails.application.helpers
 
   describe "current restrictions" do
     test "renders postcode match tier 4" do
@@ -79,6 +82,28 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
     assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.devolved_nations.northern_ireland.guidance.label")
   end
 
+  describe "errors" do
+    test "renders error when invalid postcode is entered" do
+      postcode = "hello"
+
+      stub_local_restriction(postcode: postcode)
+
+      render_show_page(postcode)
+
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.input_error")
+    end
+
+    test "renders error when postcode does not exist" do
+      postcode = "XM4 5HQ"
+
+      stub_mapit_does_not_have_a_postcode(postcode)
+
+      render_show_page(postcode)
+
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.errors.postcode_not_found.input_error")
+    end
+  end
+
   def area
     "Tattooine"
   end
@@ -104,6 +129,15 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
     view.stubs(:out_of_date?).returns(false)
 
     render template: "coronavirus_local_restrictions/results"
+  end
+
+  def render_show_page(postcode)
+    @search = PostcodeLocalRestrictionSearch.new(postcode)
+    @content_item = coronavirus_content_item
+
+    view.stubs(:out_of_date?).returns(false)
+
+    render template: "coronavirus_local_restrictions/show"
   end
 
   def stub_local_restriction(postcode:,
