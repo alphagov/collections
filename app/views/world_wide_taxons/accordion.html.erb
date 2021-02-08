@@ -11,9 +11,7 @@
   <div class="govuk-grid-row child-topic-contents">
     <div class="govuk-grid-column-two-thirds">
       <div class="topic-content">
-        <%
-          accordion_contents = []
-        %>
+        <% items = [] %>
         <% presented_taxon.accordion_content.each_with_index do |taxon, index| %>
           <% contents = capture do %>
             <%= render 'components/taxon-list', {
@@ -22,17 +20,26 @@
              } %>
           <% end %>
           <%
-            accordion_contents << {
-              title: taxon.title,
-              description: taxon.description,
-              id: taxon.base_path,
-              panel: contents
+            id = taxon.base_path || taxon.title.downcase.tr(" ","-")
+            items << {
+              data_attributes: {
+                "track-count": "accordionSection",
+                id: "section-panel-#{id}-#{index + 1}",
+              },
+              heading: {
+                text: taxon.title,
+              },
+              summary: {
+                text: taxon.description.presence,
+              },
+              content: {
+                html: contents
+              },
             }
           %>
         <% end %>
-        <%= render 'components/accordion', sections: accordion_contents %>
+        <%= render 'govuk_publishing_components/components/accordion', items: items %>
       </div>
     </div>
   </div>
 <% end %>
-
