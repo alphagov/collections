@@ -151,6 +151,32 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
     end
   end
 
+  describe "when the restrictions are out of date" do
+    test "renders an out of date warning on the tier one page" do
+      render_tier_results_out_of_date_warning(current_alert_level: 1)
+
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.out_of_date_warning")
+    end
+
+    test "renders an out of date warning on the tier two page" do
+      render_tier_results_out_of_date_warning(current_alert_level: 2)
+
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.out_of_date_warning")
+    end
+
+    test "renders an out of date warning on the tier three page" do
+      render_tier_results_out_of_date_warning(current_alert_level: 3)
+
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.out_of_date_warning")
+    end
+
+    test "renders an out of date warning on the tier four page" do
+      render_tier_results_out_of_date_warning(current_alert_level: 4)
+
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.out_of_date_warning")
+    end
+  end
+
   def area
     "Tattooine"
   end
@@ -174,6 +200,15 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
     stub_local_restriction(postcode: postcode, name: area, current_alert_level: current_alert_level, future_alert_level: future_alert_level)
 
     view.stubs(:out_of_date?).returns(false)
+
+    render template: "coronavirus_local_restrictions/results"
+  end
+
+  def render_tier_results_out_of_date_warning(current_alert_level: nil, future_alert_level: nil)
+    @search = PostcodeLocalRestrictionSearch.new(postcode)
+    stub_local_restriction(postcode: postcode, name: area, current_alert_level: current_alert_level, future_alert_level: future_alert_level)
+
+    view.stubs(:out_of_date?).returns(true)
 
     render template: "coronavirus_local_restrictions/results"
   end
