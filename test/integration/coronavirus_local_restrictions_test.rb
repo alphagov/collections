@@ -73,20 +73,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_click_on_find
       then_i_see_the_results_page_for_level_one_with_changing_restriction_levels
     end
-
-    it "displays restrictions changing from level two to level three" do
-      given_i_am_on_the_local_restrictions_page
-      then_i_enter_a_valid_english_postcode_with_a_future_level_three_restriction
-      then_i_click_on_find
-      then_i_see_the_results_page_for_level_two_with_changing_restriction_levels
-    end
-
-    it "displays restrictions changing from level three to level four" do
-      given_i_am_on_the_local_restrictions_page
-      then_i_enter_a_valid_english_postcode_with_a_future_level_four_restriction
-      then_i_click_on_find
-      then_i_see_the_results_page_for_level_three_with_changing_restriction_levels
-    end
   end
 
   describe "when the restrictions are out of date" do
@@ -182,28 +168,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: postcode
   end
 
-  def then_i_enter_a_valid_english_postcode_with_a_future_level_three_restriction
-    @area = "Alderaan"
-    postcode = "E1 8QS"
-    stub_local_restriction(postcode: postcode,
-                           name: @area,
-                           current_alert_level: 2,
-                           future_alert_level: 3)
-
-    fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: postcode
-  end
-
-  def then_i_enter_a_valid_english_postcode_with_a_future_level_four_restriction
-    @area = "Kashyyyk"
-    postcode = "E1 8QS"
-    stub_local_restriction(postcode: postcode,
-                           name: @area,
-                           current_alert_level: 3,
-                           future_alert_level: 4)
-
-    fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: postcode
-  end
-
   def then_i_enter_a_valid_english_postcode_in_tier_one
     @area = "Coruscant Planetary Council"
     postcode = "E1 8QS"
@@ -278,10 +242,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.devolved_nations.wales.guidance.label"))
   end
 
-  def then_i_see_a_postcode_not_found_error_message
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.errors.postcode_not_found.input_error"))
-  end
-
   def then_i_see_an_invalid_postcode_error_message
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.input_error"))
   end
@@ -293,16 +253,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   def then_i_see_the_results_page_for_level_one_with_changing_restriction_levels
     assert page.has_text?(@area)
     assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_one.changing_alert_level", area: @area))
-  end
-
-  def then_i_see_the_results_page_for_level_two_with_changing_restriction_levels
-    assert page.has_text?(@area)
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_two.changing_alert_level", area: @area))
-  end
-
-  def then_i_see_the_results_page_for_level_three_with_changing_restriction_levels
-    assert page.has_text?(@area)
-    assert page.has_text?(I18n.t("coronavirus_local_restrictions.results.level_three.changing_alert_level", area: @area))
   end
 
   def then_i_see_an_out_of_date_warning
