@@ -9,7 +9,7 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
 
   describe "current restrictions" do
     test "renders postcode match tier 4" do
-      render_tier_results(4)
+      render_tier_results(current_alert_level: 4)
 
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_four.heading_pretext")
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_four.heading_tier_label")
@@ -17,7 +17,7 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
     end
 
     test "renders postcode match tier 3" do
-      render_tier_results(3)
+      render_tier_results(current_alert_level: 3)
 
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_four.heading_pretext")
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_three.heading_tier_label")
@@ -25,7 +25,7 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
     end
 
     test "renders postcode match tier 2" do
-      render_tier_results(2)
+      render_tier_results(current_alert_level: 2)
 
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_two.heading_pretext")
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_two.heading_tier_label")
@@ -33,7 +33,7 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
     end
 
     test "renders postcode match tier 1" do
-      render_tier_results(1)
+      render_tier_results(current_alert_level: 1)
 
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_two.heading_pretext")
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_one.heading_tier_label")
@@ -131,6 +131,26 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
     end
   end
 
+  describe "future restrictions" do
+    test "renders restrictions changing from level one to level two" do
+      render_tier_results(current_alert_level: 1, future_alert_level: 2)
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_one.changing_alert_level", area: area)
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.future.level_two.alert_level", area: area)
+    end
+
+    test "renders restrictions changing from level two to level three" do
+      render_tier_results(current_alert_level: 2, future_alert_level: 3)
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_two.changing_alert_level", area: area)
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.future.level_three.alert_level", area: area)
+    end
+
+    test "renders restrictions changing from level three to level four" do
+      render_tier_results(current_alert_level: 3, future_alert_level: 4)
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_three.changing_alert_level", area: area)
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.future.level_four.alert_level", area: area)
+    end
+  end
+
   def area
     "Tattooine"
   end
@@ -149,9 +169,9 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
     render template: "coronavirus_local_restrictions/results"
   end
 
-  def render_tier_results(tier)
+  def render_tier_results(current_alert_level: nil, future_alert_level: nil)
     @search = PostcodeLocalRestrictionSearch.new(postcode)
-    stub_local_restriction(postcode: postcode, name: area, current_alert_level: tier)
+    stub_local_restriction(postcode: postcode, name: area, current_alert_level: current_alert_level, future_alert_level: future_alert_level)
 
     view.stubs(:out_of_date?).returns(false)
 
