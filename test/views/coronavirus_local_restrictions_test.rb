@@ -43,11 +43,7 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
     test "renders no tier information" do
       stub_no_local_restriction(postcode: postcode, name: @area)
 
-      @search = PostcodeLocalRestrictionSearch.new(postcode)
-
-      view.stubs(:out_of_date?).returns(false)
-
-      render template: "coronavirus_local_restrictions/no_information"
+      render_no_information_page
 
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.no_information.heading")
     end
@@ -104,6 +100,20 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
     end
   end
 
+  describe "no data returned from mapit" do
+    test "renders no information found if the postcode is in a valid format, but there is no data" do
+      postcode = "IM1 1AF"
+      mapit_endpoint = Plek.current.find("mapit")
+
+      stub_request(:get, "#{mapit_endpoint}/postcode/" + postcode.tr(" ", "+") + ".json")
+          .to_return(body: { "postcode" => postcode.to_s, "areas" => {} }.to_json, status: 200)
+
+      render_no_information_page
+
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.no_information.heading")
+    end
+  end
+
   def area
     "Tattooine"
   end
@@ -138,6 +148,14 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
     view.stubs(:out_of_date?).returns(false)
 
     render template: "coronavirus_local_restrictions/show"
+  end
+
+  def render_no_information_page
+    @search = PostcodeLocalRestrictionSearch.new(postcode)
+
+    view.stubs(:out_of_date?).returns(false)
+
+    render template: "coronavirus_local_restrictions/no_information"
   end
 
   def stub_local_restriction(postcode:,
