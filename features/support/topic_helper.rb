@@ -5,18 +5,22 @@ module TopicHelper
   include GdsApi::TestHelpers::Search
   include SearchApiHelpers
 
+  def subtopic_slugs
+    %w[
+      what-is-oil
+      apply-for-an-oil-licence
+      environmental-policy
+      onshore-exploration-and-production
+      well-application-form
+      well-report-2014
+      oil-extraction-count-2013
+    ]
+  end
+
   def stub_topic_lookups
     search_api_has_documents_for_subtopic(
       "content-id-for-fields-and-wells",
-      %w[
-        what-is-oil
-        apply-for-an-oil-licence
-        environmental-policy
-        onshore-exploration-and-production
-        well-application-form
-        well-report-2014
-        oil-extraction-count-2013
-      ],
+      subtopic_slugs,
       page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
     )
 
@@ -56,6 +60,10 @@ module TopicHelper
       "oil-and-gas/fields-and-wells",
       "content-id-for-fields-and-wells",
     )
+  end
+
+  def stub_latest_changes
+    search_api_has_latest_documents_for_subtopic("content-id-for-fields-and-wells", subtopic_slugs)
   end
 end
 
