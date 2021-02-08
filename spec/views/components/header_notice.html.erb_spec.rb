@@ -1,4 +1,4 @@
-describe "header-notice component" do
+RSpec.describe "header-notice component" do
   include ComponentTestHelper
 
   def component_name

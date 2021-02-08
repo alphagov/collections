@@ -1,4 +1,4 @@
-describe "signup-link component" do
+RSpec.describe "signup-link component" do
   include ComponentTestHelper
 
   def component_name

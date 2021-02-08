@@ -1,4 +1,4 @@
-describe "topic-list component" do
+RSpec.describe "topic-list component" do
   include ComponentTestHelper
 
   def component_name

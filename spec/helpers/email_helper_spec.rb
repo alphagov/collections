@@ -1,4 +1,4 @@
-describe EmailHelper do
+RSpec.describe EmailHelper do
   it "should return true if we are browsing a taxon that is live" do
     presented_taxon = double
     allow(presented_taxon).to receive(:live_taxon?) { true }

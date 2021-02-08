@@ -1,4 +1,4 @@
-describe OrganisationHelper do
+RSpec.describe OrganisationHelper do
   include OrganisationHelpers
   include SearchApiHelpers
   describe "#organisation_type_name" do

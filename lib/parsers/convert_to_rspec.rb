@@ -46,10 +46,10 @@ class ConvertToRspec
   def describe!(body)
     replace_line!(body) do |line|
       if line =~ /class ([:\w]+)Test < .*::(TestCase|IntegrationTest)\s*$/
-        "describe #{Regexp.last_match(1)} do"
+        "RSpec.describe #{Regexp.last_match(1)} do"
       end
       if line =~ / ([:\w]+) < ComponentTestCase/
-        "describe #{Regexp.last_match(1)} do"
+        "RSpec.describe #{Regexp.last_match(1)} do"
       end
     end
   end

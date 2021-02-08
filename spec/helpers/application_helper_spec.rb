@@ -1,4 +1,4 @@
-describe ApplicationHelper do
+RSpec.describe ApplicationHelper do
   describe "#current_path_without_query_string" do
     it "returns the path of the current request" do
       controller.request = ActionDispatch::TestRequest.create("PATH_INFO" => "/foo/bar")

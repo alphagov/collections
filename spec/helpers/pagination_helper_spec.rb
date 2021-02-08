@@ -1,4 +1,4 @@
-describe PaginationHelper do
+RSpec.describe PaginationHelper do
   let(:presented_results) do
     [
       {

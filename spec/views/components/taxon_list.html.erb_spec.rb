@@ -1,4 +1,4 @@
-describe "taxon-list component" do
+RSpec.describe "taxon-list component" do
   include ComponentTestHelper
 
   def component_name
