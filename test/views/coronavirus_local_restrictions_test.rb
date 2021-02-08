@@ -19,7 +19,7 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
     test "rendering tier 3 results for a postcode in tier 3" do
       render_tier_results(current_alert_level: 3)
 
-      assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_four.heading_pretext")
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_three.heading_pretext")
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_three.heading_tier_label")
       assert_includes rendered, area
     end
@@ -35,7 +35,7 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
     test "rendering tier 1 results for a postcode in tier 1" do
       render_tier_results(current_alert_level: 1)
 
-      assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_two.heading_pretext")
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_one.heading_pretext")
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_one.heading_tier_label")
       assert_includes rendered, area
     end
