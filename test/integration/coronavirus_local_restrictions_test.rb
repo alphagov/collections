@@ -48,15 +48,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   end
 
   describe "errors" do
-    it "errors gracefully if you don't enter a postcode" do
-      given_i_am_on_the_local_restrictions_page
-      then_i_can_see_the_postcode_lookup_form
-      when_i_enter_an_invalid_postcode
-      then_i_click_on_find
-      then_i_can_see_the_postcode_lookup_form
-      then_i_see_an_invalid_postcode_error_message
-    end
-
     it "errors gracefully if the postcode is invalid" do
       given_i_am_on_the_local_restrictions_page
       then_i_can_see_the_postcode_lookup_form
@@ -64,15 +55,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_click_on_find
       then_i_can_see_the_invalid_postcode_in_the_form
       then_i_see_an_invalid_postcode_error_message
-    end
-
-    it "errors gracefully if the postcode doesn't exist" do
-      given_i_am_on_the_local_restrictions_page
-      then_i_can_see_the_postcode_lookup_form
-      when_i_enter_a_postcode_that_does_not_exist
-      then_i_click_on_find
-      then_i_can_see_the_postcode_lookup_form
-      then_i_see_a_postcode_not_found_error_message
     end
   end
 
@@ -289,13 +271,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   def when_i_enter_an_invalid_postcode
     @postcode = "Hello"
     fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: @postcode
-  end
-
-  def when_i_enter_a_postcode_that_does_not_exist
-    postcode = "XM4 5HQ"
-    stub_mapit_does_not_have_a_postcode(postcode)
-
-    fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: postcode
   end
 
   def then_i_click_on_find
