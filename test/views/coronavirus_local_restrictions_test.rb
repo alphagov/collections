@@ -8,7 +8,7 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
   helper Rails.application.helpers
 
   describe "current restrictions" do
-    test "renders postcode match tier 4" do
+    test "rendering tier 4 results for a postcode in tier 4" do
       render_tier_results(current_alert_level: 4)
 
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_four.heading_pretext")
@@ -16,7 +16,7 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
       assert_includes rendered, area
     end
 
-    test "renders postcode match tier 3" do
+    test "rendering tier 3 results for a postcode in tier 3" do
       render_tier_results(current_alert_level: 3)
 
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_four.heading_pretext")
@@ -24,7 +24,7 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
       assert_includes rendered, area
     end
 
-    test "renders postcode match tier 2" do
+    test "rendering tier 2 results for a postcode in tier 2" do
       render_tier_results(current_alert_level: 2)
 
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_two.heading_pretext")
@@ -32,7 +32,7 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
       assert_includes rendered, area
     end
 
-    test "renders postcode match tier 1" do
+    test "rendering tier 1 results for a postcode in tier 1" do
       render_tier_results(current_alert_level: 1)
 
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_two.heading_pretext")
@@ -40,7 +40,7 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
       assert_includes rendered, area
     end
 
-    test "renders postcode match if the postcode is correct except for a special character" do
+    test "rendering postcode match if the postcode is correct except for a special character" do
       area = "Coruscant Planetary Council"
       postcode = ".E1 8QS"
 
@@ -57,7 +57,7 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
       assert_includes rendered, area
     end
 
-    test "renders no tier information" do
+    test "rendering no tier information for a postcode without a local restriction" do
       stub_no_local_restriction(postcode: postcode, name: @area)
 
       render_no_information_page
@@ -66,8 +66,8 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
     end
   end
 
-  describe "devolved_nations" do
-    test "renders guidance for Wales" do
+  describe "devolved nations" do
+    test "rendering results for a welsh postcode" do
       postcode = "LL11 0BY"
       country_name = "Wales"
 
@@ -76,7 +76,7 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.devolved_nations.wales.guidance.label")
     end
 
-    test "renders guidance for Scotland" do
+    test "rendering results for a scottish postcode" do
       postcode = "G20 9SH"
       country_name = "Scotland"
 
@@ -86,7 +86,7 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
     end
   end
 
-  test "renders guidance for Northern Ireland" do
+  test "rendering results for a northern irish postcode" do
     postcode = "BT48 7PX"
     country_name = "Northern Ireland"
 
@@ -96,7 +96,7 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
   end
 
   describe "errors" do
-    test "renders error when invalid postcode is entered" do
+    test "rendering error when invalid postcode is entered" do
       postcode = "hello"
 
       stub_local_restriction(postcode: postcode)
@@ -106,7 +106,7 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.input_error")
     end
 
-    test "renders error when postcode does not exist" do
+    test "rendering error when postcode does not exist" do
       postcode = "XM4 5HQ"
 
       stub_mapit_does_not_have_a_postcode(postcode)
@@ -117,8 +117,8 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
     end
   end
 
-  describe "no data returned from mapit" do
-    test "renders no information found if the postcode is in a valid format, but there is no data" do
+  describe "no data returned from Mapit" do
+    test "rendering no information found if the postcode is in a valid format, but there is no data" do
       postcode = "IM1 1AF"
       mapit_endpoint = Plek.current.find("mapit")
 
@@ -132,45 +132,45 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
   end
 
   describe "future restrictions" do
-    test "renders restrictions changing from level one to level two" do
+    test "rendering restrictions changing from level one to level two" do
       render_tier_results(current_alert_level: 1, future_alert_level: 2)
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_one.changing_alert_level", area: area)
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.future.level_two.alert_level", area: area)
     end
 
-    test "renders restrictions changing from level two to level three" do
+    test "rendering restrictions changing from level two to level three" do
       render_tier_results(current_alert_level: 2, future_alert_level: 3)
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_two.changing_alert_level", area: area)
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.future.level_three.alert_level", area: area)
     end
 
-    test "renders restrictions changing from level three to level four" do
+    test "rendering restrictions changing from level three to level four" do
       render_tier_results(current_alert_level: 3, future_alert_level: 4)
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_three.changing_alert_level", area: area)
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.future.level_four.alert_level", area: area)
     end
   end
 
-  describe "when the restrictions are out of date" do
-    test "renders an out of date warning on the tier one page" do
+  describe "out of date restrictions" do
+    test "rendering an out of date warning on the tier one page" do
       render_tier_results_out_of_date_warning(current_alert_level: 1)
 
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.out_of_date_warning")
     end
 
-    test "renders an out of date warning on the tier two page" do
+    test "rendering an out of date warning on the tier two page" do
       render_tier_results_out_of_date_warning(current_alert_level: 2)
 
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.out_of_date_warning")
     end
 
-    test "renders an out of date warning on the tier three page" do
+    test "rendering an out of date warning on the tier three page" do
       render_tier_results_out_of_date_warning(current_alert_level: 3)
 
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.out_of_date_warning")
     end
 
-    test "renders an out of date warning on the tier four page" do
+    test "rendering an out of date warning on the tier four page" do
       render_tier_results_out_of_date_warning(current_alert_level: 4)
 
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.out_of_date_warning")
