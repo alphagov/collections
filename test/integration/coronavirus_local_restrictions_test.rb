@@ -66,14 +66,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     then_i_see_the_no_information_page
   end
 
-  it "displays the right restrictions if the postcode is correct except for a special character" do
-    given_i_am_on_the_local_restrictions_page
-    then_i_can_see_the_postcode_lookup_form
-    then_i_enter_a_valid_english_postcode_with_an_extra_special_character
-    then_i_click_on_find
-    then_i_see_the_results_page_for_level_two
-  end
-
   describe "future restrictions" do
     it "displays restrictions changing from level one to level two" do
       given_i_am_on_the_local_restrictions_page
@@ -212,13 +204,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: postcode
   end
 
-  def then_i_enter_a_valid_english_postcode_with_an_extra_special_character
-    @area = "Coruscant Planetary Council"
-    stub_local_restriction(postcode: "E1 8QS", name: @area, current_alert_level: 2)
-
-    fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: ".e18qs"
-  end
-
   def then_i_enter_a_valid_english_postcode_in_tier_one
     @area = "Coruscant Planetary Council"
     postcode = "E1 8QS"
@@ -285,12 +270,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
 
   def then_i_see_the_results_page_for_level_one
     heading = "#{I18n.t('coronavirus_local_restrictions.results.level_one.heading_pretext')} #{I18n.t('coronavirus_local_restrictions.results.level_one.heading_tier_label')}"
-    assert page.has_text?(@area)
-    assert page.has_text?(heading)
-  end
-
-  def then_i_see_the_results_page_for_level_two
-    heading = "#{I18n.t('coronavirus_local_restrictions.results.level_two.heading_pretext')} #{I18n.t('coronavirus_local_restrictions.results.level_two.heading_tier_label')}"
     assert page.has_text?(@area)
     assert page.has_text?(heading)
   end
