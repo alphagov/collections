@@ -91,27 +91,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
       then_i_click_on_find
       then_i_see_an_out_of_date_warning
     end
-
-    it "displays an out of date warning on the tier two page" do
-      given_i_am_on_the_local_restrictions_page
-      then_i_enter_a_valid_english_postcode_in_tier_two
-      then_i_click_on_find
-      then_i_see_an_out_of_date_warning
-    end
-
-    it "displays an out of date warning on the tier three page" do
-      given_i_am_on_the_local_restrictions_page
-      then_i_enter_a_valid_english_postcode_in_tier_three
-      then_i_click_on_find
-      then_i_see_an_out_of_date_warning
-    end
-
-    it "displays an out of date warning on the tier four page" do
-      given_i_am_on_the_local_restrictions_page
-      then_i_enter_a_valid_english_postcode_in_tier_four
-      then_i_click_on_find
-      then_i_see_an_out_of_date_warning
-    end
   end
 
   describe "when the restrictions are up to date" do
@@ -172,30 +151,6 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
     @area = "Coruscant Planetary Council"
     postcode = "E1 8QS"
     stub_local_restriction(postcode: "E1 8QS", name: @area, current_alert_level: 1)
-
-    fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: postcode
-  end
-
-  def then_i_enter_a_valid_english_postcode_in_tier_two
-    @area = "Coruscant Planetary Council"
-    postcode = "E1 8QS"
-    stub_local_restriction(postcode: postcode, name: @area, current_alert_level: 2)
-
-    fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: postcode
-  end
-
-  def then_i_enter_a_valid_english_postcode_in_tier_three
-    @area = "Mandalore"
-    postcode = "E1 8QS"
-    stub_local_restriction(postcode: postcode, name: @area, current_alert_level: 3)
-
-    fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: postcode
-  end
-
-  def then_i_enter_a_valid_english_postcode_in_tier_four
-    @area = "Anoat"
-    postcode = "E1 8QS"
-    stub_local_restriction(postcode: postcode, name: @area, current_alert_level: 4)
 
     fill_in I18n.t("coronavirus_local_restrictions.lookup.input_label"), with: postcode
   end
