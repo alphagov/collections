@@ -1,10 +1,12 @@
 require "test_helper"
 require "gds_api/test_helpers/mapit"
 require_relative "../../test/support/coronavirus_helper"
+require_relative "../support/coronavirus_local_restrictions_helpers"
 
 class CoronavirusLocalRestrictionTest < ActionView::TestCase
   include GdsApi::TestHelpers::Mapit
   include GdsApi::TestHelpers::ContentItemHelpers
+  include CoronavirusLocalRestrictionsHelpers
   helper Rails.application.helpers
 
   describe "current restrictions" do
@@ -76,7 +78,7 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.devolved_nations.wales.guidance.label")
     end
 
-    test "rendering results for a scottish postcode" do
+    test "rendering results for a scottish then_i_see_an_invalid_postcode_error_message" do
       postcode = "G20 9SH"
       country_name = "Scotland"
 
@@ -228,59 +230,5 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
     view.stubs(:out_of_date?).returns(false)
 
     render template: "coronavirus_local_restrictions/no_information"
-  end
-
-  def stub_local_restriction(postcode:,
-                             name: "Tatooine",
-                             gss: SecureRandom.alphanumeric(10),
-                             country_name: "England",
-                             current_alert_level: nil,
-                             future_alert_level: nil)
-    areas = [
-      {
-        "gss" => gss,
-        "name" => name,
-        "type" => "LBO",
-        "country_name" => country_name,
-      },
-    ]
-    stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
-
-    current_restriction = if current_alert_level
-                            { "alert_level" => current_alert_level,
-                              "start_date" => 1.week.ago.to_date,
-                              "start_time" => "10:00" }
-                          end
-
-    future_restriction = if future_alert_level
-                           { "alert_level" => future_alert_level,
-                             "start_date" => 1.week.from_now.to_date,
-                             "start_time" => "10:00" }
-                         end
-
-    local_restriction = LocalRestriction.new(gss, {
-      "name" => name,
-      "restrictions" => [current_restriction, future_restriction].compact,
-    })
-    LocalRestriction.stubs(:find).with(gss).returns(local_restriction)
-  end
-
-  def stub_no_local_restriction(
-    postcode:,
-    name: "Tatooine",
-    gss: SecureRandom.alphanumeric(10),
-    country_name: "England"
-  )
-    areas = [
-      {
-        "gss" => gss,
-        "name" => name,
-        "type" => "LBO",
-        "country_name" => country_name,
-      },
-    ]
-    stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
-
-    LocalRestriction.stubs(:find).with(gss).returns(nil)
   end
 end
