@@ -1,15 +1,13 @@
-require "test_helper"
-
-describe OrganisationHelper do
+RSpec.describe OrganisationHelper do
   include OrganisationHelpers
   include SearchApiHelpers
   describe "#organisation_type_name" do
     it "returns a human-readable name given an organisation_type" do
-      assert_equal "Executive non-departmental public body", organisation_type_name("executive_ndpb")
+      expect(organisation_type_name("executive_ndpb")).to eq("Executive non-departmental public body")
     end
 
     it "returns 'other' for an unrecognised organisation_type" do
-      assert_equal "Other", organisation_type_name("something_else")
+      expect(organisation_type_name("something_else")).to eq("Other")
     end
   end
 
@@ -53,8 +51,8 @@ describe OrganisationHelper do
     end
 
     it "provides an expected document format" do
-      assert_equal result[:brand], "attorney-generals-office"
-      assert_equal expected, result[:items].first
+      expect("attorney-generals-office").to eq(result[:brand])
+      expect(result[:items].first).to eq(expected)
     end
   end
 end
