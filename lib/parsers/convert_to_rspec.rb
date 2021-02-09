@@ -1,7 +1,4 @@
 # Taken from https://gist.github.com/seven1m/e375bcdf2864da0022f1
-
-require "parser/current"
-require "unparser"
 require "fileutils"
 
 class ConvertToRspec
