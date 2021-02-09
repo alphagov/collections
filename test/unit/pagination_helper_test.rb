@@ -1,4 +1,6 @@
-RSpec.describe PaginationHelper do
+require "test_helper"
+
+describe PaginationHelper do
   let(:presented_results) do
     [
       {
@@ -50,18 +52,18 @@ RSpec.describe PaginationHelper do
     it "returns a hash with results and pagination details" do
       paginated_results = paginate(presented_results, true)
 
-      expect(paginated_results[:results]).to eq(presented_results)
-      expect(paginated_results[:previous_page_url]).to be_nil
-      expect(paginated_results[:next_page_url]).to eq("#{current_url_without_parameters}?page=2")
-      expect(paginated_results[:current_page]).to eq(current_page)
-      expect(paginated_results[:total]).to eq(total_results)
-      expect(paginated_results[:pages]).to eq(2)
-      expect(paginated_results[:page_size]).to eq(results_per_page)
-      expect(paginated_results[:start_index]).to eq(1)
+      assert_equal presented_results, paginated_results[:results]
+      assert_nil paginated_results[:previous_page_url]
+      assert_equal "#{current_url_without_parameters}?page=2", paginated_results[:next_page_url]
+      assert_equal current_page, paginated_results[:current_page]
+      assert_equal total_results, paginated_results[:total]
+      assert_equal 2, paginated_results[:pages]
+      assert_equal results_per_page, paginated_results[:page_size]
+      assert_equal 1, paginated_results[:start_index]
       # next_page_url
-      expect(paginated_results[:_response_info][:links][0][:href]).to eq("#{current_url_without_parameters}?page=2")
+      assert_equal "#{current_url_without_parameters}?page=2", paginated_results[:_response_info][:links][0][:href]
       # current_page_url
-      expect(paginated_results[:_response_info][:links][1][:href]).to eq("#{current_url_without_parameters}?page=1")
+      assert_equal "#{current_url_without_parameters}?page=1", paginated_results[:_response_info][:links][1][:href]
     end
   end
 
@@ -72,10 +74,10 @@ RSpec.describe PaginationHelper do
     it "returns a hash with results and no pagination details" do
       paginated_results = paginate(presented_results, false)
 
-      expect(paginated_results[:title]).to eq("HM Revenue & Customs")
-      expect(paginated_results[:results]).to be_nil
+      assert_equal "HM Revenue & Customs", paginated_results[:title]
+      assert_nil paginated_results[:results]
       # current_page_url
-      expect(paginated_results[:_response_info][:links][0][:href]).to eq(current_url_without_parameters)
+      assert_equal current_url_without_parameters, paginated_results[:_response_info][:links][0][:href]
     end
   end
 end
