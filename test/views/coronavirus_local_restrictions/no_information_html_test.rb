@@ -9,7 +9,7 @@ class NoInformationHtmlTest < ActionView::TestCase
 
   describe "current restrictions" do
     test "rendering no tier information for a postcode without a local restriction" do
-      stub_no_local_restriction(postcode: postcode, name: @area)
+      stub_no_local_restriction(postcode: "E1 8QS")
 
       render_no_information_page
 
@@ -31,16 +31,8 @@ class NoInformationHtmlTest < ActionView::TestCase
     end
   end
 
-  def area
-    "Tattooine"
-  end
-
-  def postcode
-    "E1 8QS"
-  end
-
   def render_no_information_page
-    @search = PostcodeLocalRestrictionSearch.new(postcode)
+    @search = PostcodeLocalRestrictionSearch.new("E1 8QS")
 
     view.stubs(:out_of_date?).returns(false)
 

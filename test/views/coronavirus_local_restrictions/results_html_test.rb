@@ -134,6 +134,7 @@ class ResultsHtmlTest < ActionView::TestCase
   end
 
   def render_tier_results(current_alert_level: nil, future_alert_level: nil)
+    postcode = "E1 8QS"
     @search = PostcodeLocalRestrictionSearch.new(postcode)
     stub_local_restriction(postcode: postcode, name: area, current_alert_level: current_alert_level, future_alert_level: future_alert_level)
 
@@ -153,6 +154,7 @@ class ResultsHtmlTest < ActionView::TestCase
   end
 
   def render_tier_results_out_of_date_warning(current_alert_level: nil, future_alert_level: nil)
+    postcode = "E1 8QS"
     @search = PostcodeLocalRestrictionSearch.new(postcode)
     stub_local_restriction(postcode: postcode, name: area, current_alert_level: current_alert_level, future_alert_level: future_alert_level)
 
@@ -163,9 +165,5 @@ class ResultsHtmlTest < ActionView::TestCase
 
   def area
     "Tattooine"
-  end
-
-  def postcode
-    "E1 8QS"
   end
 end

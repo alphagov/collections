@@ -7,6 +7,11 @@ class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
   include GdsApi::TestHelpers::ContentStore
   include CoronavirusLocalRestrictionsHelpers
 
+  #   Consider writing view tests in test/views/coronavirus_local_restrictions/ to test rendering page information.
+  #
+  #   Integration tests should still be used to test users journeys. However, the number of these may be decreased
+  #   by testing all possible outcomes using view tests and the general user journeys using integration tests.
+
   describe "current restrictions" do
     it "displays the tier one restrictions" do
       given_i_am_on_the_local_restrictions_page
