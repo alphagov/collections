@@ -36,6 +36,8 @@ group :development, :test do
   gem "jasmine"
   gem "jasmine_selenium_runner"
   gem "pry-byebug"
+  gem "rspec-rails"
   gem "rubocop-govuk"
   gem "timecop"
+  gem "unparser"
 end
