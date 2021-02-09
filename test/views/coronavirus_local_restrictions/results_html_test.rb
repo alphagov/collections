@@ -1,11 +1,9 @@
 require "test_helper"
 require "gds_api/test_helpers/mapit"
-require_relative "../../test/support/coronavirus_helper"
-require_relative "../support/coronavirus_local_restrictions_helpers"
+require_relative "../../support/coronavirus_local_restrictions_helpers"
 
-class CoronavirusLocalRestrictionTest < ActionView::TestCase
+class ResultsHtmlTest < ActionView::TestCase
   include GdsApi::TestHelpers::Mapit
-  include GdsApi::TestHelpers::ContentItemHelpers
   include CoronavirusLocalRestrictionsHelpers
   helper Rails.application.helpers
 
@@ -58,18 +56,10 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_two.heading_tier_label")
       assert_includes rendered, area
     end
-
-    test "rendering no tier information for a postcode without a local restriction" do
-      stub_no_local_restriction(postcode: postcode, name: @area)
-
-      render_no_information_page
-
-      assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.no_information.heading")
-    end
   end
 
   describe "devolved nations" do
-    test "rendering results for a welsh postcode" do
+    test "rendering results for a Welsh postcode" do
       postcode = "LL11 0BY"
       country_name = "Wales"
 
@@ -78,7 +68,7 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.devolved_nations.wales.guidance.label")
     end
 
-    test "rendering results for a scottish then_i_see_an_invalid_postcode_error_message" do
+    test "rendering results for a Scottish postcode" do
       postcode = "G20 9SH"
       country_name = "Scotland"
 
@@ -86,50 +76,14 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
 
       assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.devolved_nations.scotland.guidance.label")
     end
-  end
 
-  test "rendering results for a northern irish postcode" do
-    postcode = "BT48 7PX"
-    country_name = "Northern Ireland"
+    test "rendering results for a Northern Irish postcode" do
+      postcode = "BT48 7PX"
+      country_name = "Northern Ireland"
 
-    render_devolved_nation_guidance(postcode, country_name)
+      render_devolved_nation_guidance(postcode, country_name)
 
-    assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.devolved_nations.northern_ireland.guidance.label")
-  end
-
-  describe "errors" do
-    test "rendering error when invalid postcode is entered" do
-      postcode = "hello"
-
-      stub_local_restriction(postcode: postcode)
-
-      render_show_page(postcode)
-
-      assert_includes rendered, I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.input_error")
-    end
-
-    test "rendering error when postcode does not exist" do
-      postcode = "XM4 5HQ"
-
-      stub_mapit_does_not_have_a_postcode(postcode)
-
-      render_show_page(postcode)
-
-      assert_includes rendered, I18n.t("coronavirus_local_restrictions.errors.postcode_not_found.input_error")
-    end
-  end
-
-  describe "no data returned from Mapit" do
-    test "rendering no information found if the postcode is in a valid format, but there is no data" do
-      postcode = "IM1 1AF"
-      mapit_endpoint = Plek.current.find("mapit")
-
-      stub_request(:get, "#{mapit_endpoint}/postcode/" + postcode.tr(" ", "+") + ".json")
-          .to_return(body: { "postcode" => postcode.to_s, "areas" => {} }.to_json, status: 200)
-
-      render_no_information_page
-
-      assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.no_information.heading")
+      assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.devolved_nations.northern_ireland.guidance.label")
     end
   end
 
@@ -179,27 +133,19 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
     end
   end
 
-  def area
-    "Tattooine"
-  end
-
-  def postcode
-    "E1 8QS"
-  end
-
-  def render_devolved_nation_guidance(postcode, country_name)
-    stub_local_restriction(postcode: postcode, country_name: country_name)
-
+  def render_tier_results(current_alert_level: nil, future_alert_level: nil)
     @search = PostcodeLocalRestrictionSearch.new(postcode)
+    stub_local_restriction(postcode: postcode, name: area, current_alert_level: current_alert_level, future_alert_level: future_alert_level)
 
     view.stubs(:out_of_date?).returns(false)
 
     render template: "coronavirus_local_restrictions/results"
   end
 
-  def render_tier_results(current_alert_level: nil, future_alert_level: nil)
+  def render_devolved_nation_guidance(postcode, country_name)
+    stub_local_restriction(postcode: postcode, country_name: country_name)
+
     @search = PostcodeLocalRestrictionSearch.new(postcode)
-    stub_local_restriction(postcode: postcode, name: area, current_alert_level: current_alert_level, future_alert_level: future_alert_level)
 
     view.stubs(:out_of_date?).returns(false)
 
@@ -215,20 +161,11 @@ class CoronavirusLocalRestrictionTest < ActionView::TestCase
     render template: "coronavirus_local_restrictions/results"
   end
 
-  def render_show_page(postcode)
-    @search = PostcodeLocalRestrictionSearch.new(postcode)
-    @content_item = coronavirus_content_item
-
-    view.stubs(:out_of_date?).returns(false)
-
-    render template: "coronavirus_local_restrictions/show"
+  def area
+    "Tattooine"
   end
 
-  def render_no_information_page
-    @search = PostcodeLocalRestrictionSearch.new(postcode)
-
-    view.stubs(:out_of_date?).returns(false)
-
-    render template: "coronavirus_local_restrictions/no_information"
+  def postcode
+    "E1 8QS"
   end
 end
