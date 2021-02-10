@@ -35,6 +35,8 @@ group :development, :test do
   gem "govuk_test"
   gem "jasmine"
   gem "jasmine_selenium_runner"
+  gem "pact", require: false
+  gem "pact_broker-client"
   gem "pry-byebug"
   gem "rspec-rails"
   gem "rubocop-govuk"
