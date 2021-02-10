@@ -14,9 +14,9 @@ Then(/^I see a date\-ordered list of content with change notes$/) do
 
   results.each_with_index do |document, index|
     within(".gem-c-document-list__item:nth-of-type(#{index + 1})") do
-      assert page.has_selector?("a[href='#{document['link']}']", text: document["title"])
-      assert page.has_content?(document["latest_change_note"]) if document["latest_change_note"]
-      assert page.has_selector?("time") if document["public_updated_at"]
+      expect(page).to have_selector("a[href='#{document['link']}']", text: document["title"])
+      expect(page).to have_content(document["latest_change_note"]) if document["latest_change_note"]
+      expect(page).to have_selector("time") if document["public_updated_at"]
     end
   end
 end
