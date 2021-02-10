@@ -39,7 +39,7 @@ module TransitionLandingPageSteps
   end
 
   def and_i_can_see_the_explore_topics_section
-    assert page.has_selector?("h2.govuk-heading-m", text: "All transition period information")
+    assert page.has_selector?("h2.govuk-heading-m", text: "All Brexit information")
 
     supergroups = [
       "Services": "services",
