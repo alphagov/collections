@@ -1,8 +1,10 @@
 require "gds_api/test_helpers/search"
 require_relative "../../test/support/search_api_helpers"
+require "gds_api/test_helpers/content_store"
 
 module TopicHelper
   include GdsApi::TestHelpers::Search
+  include GdsApi::TestHelpers::ContentStore
   include SearchApiHelpers
 
   def subtopic_slugs
