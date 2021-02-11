@@ -9,10 +9,6 @@
   <%= yield :meta_tags %>
   <%= render 'govuk_publishing_components/components/meta_tags', content_item: @content_item %>
   <%= stylesheet_link_tag "print.css", :media => "print", integrity: false %>
-  <%= cookieless_variant.analytics_meta_tag.html_safe %>
-  <% unless cookieless_variant.variant?('Z') %>
-    <meta name="Cookieless-Variant" content="<%= cookieless_variant.variant_name %>" data-module="track-variant">
-  <% end %>
 </head>
 
 <body <% if content_for(:is_full_width_header) %>class="full-width"<% end %>>
