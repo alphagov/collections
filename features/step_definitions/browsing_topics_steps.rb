@@ -8,6 +8,6 @@ end
 
 Then(/^I see a list of organisations associated with content in the subtopic$/) do
   within ".gem-c-metadata" do
-    assert page.has_text?("Department of Energy & Climate Change")
+    expect(page).to have_text("Department of Energy & Climate Change")
   end
 end

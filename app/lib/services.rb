@@ -23,6 +23,6 @@ module Services
   end
 
   def self.search_api
-    @search_api ||= GdsApi::Search.new(Plek.new.find("search"))
+    @search_api ||= GdsApi.search
   end
 end

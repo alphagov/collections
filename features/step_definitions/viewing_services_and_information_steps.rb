@@ -8,6 +8,6 @@ end
 
 Then(/^I see a list of links associated with content in the topic$/) do
   @services_and_information.each do |slug|
-    assert page.has_selector?("a[href='/#{slug}']")
+    expect(page).to have_selector("a[href='/#{slug}']")
   end
 end
