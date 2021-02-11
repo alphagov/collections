@@ -4,19 +4,19 @@ describe('Coronavirus landing page', function () {
   var coronavirusLandingPage
   var html =
     '<div id="element" data-module="coronavirus-landing-page">' +
-      '<div class="gem-c-accordion govuk-accordion" data-module="govuk-accordion">' +
-        '<div class="govuk-accordion__controls">' +
-          '<button type="button" class="govuk-accordion__open-all" aria-expanded="false">' +
+      '<div class="gem-c-accordion" data-module="gem-accordion">' +
+        '<div class="gem-c-accordion__controls">' +
+          '<button type="button" class="gem-c-accordion__open-all" aria-expanded="false">' +
             'Open all<span class="govuk-visually-hidden"> sections</span>' +
           '</button>' +
         '</div>' +
-        '<div class="govuk-accordion__section">' +
-          '<div class="govuk-accordion__section-header">' +
-            '<h3 class="govuk-accordion__section-heading">' +
-              '<button type="button">How to protect yourself and others</button><span class="govuk-accordion__icon" aria-hidden="true"></span>' +
+        '<div class="gem-c-accordion__section">' +
+          '<div class="gem-c-accordion__section-header">' +
+            '<h3 class="gem-c-accordion__section-heading">' +
+              '<button type="button">How to protect yourself and others</button><span class="gem-c-accordion__icon" aria-hidden="true"></span>' +
             '</h3>' +
           '</div>' +
-          '<div class="govuk-accordion__section-content">accordion content</div>' +
+          '<div class="gem-c-accordion__section-content">accordion content</div>' +
         '</div>' +
       '</div>' +
     '</div>'
@@ -53,8 +53,8 @@ describe('Coronavirus landing page', function () {
       }
       spyOn(GOVUK.analytics, 'trackEvent')
 
-      // similate govuk-accordion module
-      $element.find('.govuk-accordion__open-all').on('click', function (e) {
+      // similate gem-c-accordion module
+      $element.find('.gem-c-accordion__open-all').on('click', function (e) {
         var expanded = $(e.target).attr('aria-expanded') === 'true'
         $(e.target).attr('aria-expanded', expanded ? 'false' : 'true')
       })
@@ -63,7 +63,7 @@ describe('Coronavirus landing page', function () {
     })
 
     it('tracks expanding', function () {
-      var $openCloseAllButton = $element.find('.govuk-accordion__open-all')
+      var $openCloseAllButton = $element.find('.gem-c-accordion__open-all')
 
       expect($openCloseAllButton).toExist()
       expect($openCloseAllButton.attr('aria-expanded')).toBe('false')
@@ -76,7 +76,7 @@ describe('Coronavirus landing page', function () {
     })
 
     it('tracks collapsing', function () {
-      var $openCloseAllButton = $element.find('.govuk-accordion__open-all')
+      var $openCloseAllButton = $element.find('.gem-c-accordion__open-all')
       $openCloseAllButton.attr('aria-expanded', 'true')
 
       expect($openCloseAllButton).toExist()
