@@ -40,11 +40,13 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             service_type: "twitter",
             title: "Twitter - @10DowningStreet",
             href: "https://twitter.com/@10DowningStreet",
+            locale: "en",
           },
           {
             service_type: "facebook",
             title: "Facebook",
             href: "https://www.facebook.com/10downingstreet",
+            locale: "en",
           },
         ],
         ordered_promotional_features: [
@@ -171,6 +173,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             service_type: "twitter",
             title: "Twitter - @attorneygeneral",
             href: "https://twitter.com/@attorneygeneral",
+            locale: "en",
           },
         ],
         ordered_promotional_features: [
@@ -356,11 +359,13 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             service_type: "twitter",
             title: "Twitter",
             href: "https://twitter.com/chtycommission",
+            locale: "en",
           },
           {
             service_type: "youtube",
             title: "YouTube",
             href: "http://www.youtube.com/TheCharityCommission",
+            locale: "en",
           },
         ],
       },
@@ -424,11 +429,13 @@ class OrganisationTest < ActionDispatch::IntegrationTest
             service_type: "twitter",
             title: "Twitter",
             href: "https://twitter.com/UKGovWales",
+            locale: "en",
           },
           {
-            service_type: "twitter",
-            title: "Trydar",
-            href: "https://twitter.com/LlywDUCymru",
+            service_type: "facebook",
+            title: "Facebook",
+            href: "https://facebook.com/LlywDUCymru",
+            locale: "cy",
           },
         ],
       },
@@ -882,5 +889,19 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
     org_schema = schemas.detect { |schema| schema["@type"] == "GovernmentOrganization" }
     assert_equal org_schema["name"], "Student Loans Company"
+  end
+
+  it "only shows social media links that have English as locale on pages in English" do
+    visit "/government/organisations/office-of-the-secretary-of-state-for-wales"
+
+    assert page.has_css?("a[href='https://twitter.com/cabinetofficeuk']", text: "Twitter")
+    assert_not page.has_css?("a[href='https://facebook.com/LlywDUCymru']", text: "Facebook")
+  end
+
+  it "only shows social media links that do not have English as locale on pages not in English" do
+    visit "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
+
+    assert_not page.has_css?("a[href='https://twitter.com/cabinetofficeuk']", text: "Twitter")
+    assert page.has_css?("a[href='https://facebook.com/LlywDUCymru']", text: "Facebook")
   end
 end

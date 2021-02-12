@@ -6,14 +6,18 @@ module Organisations
       @org = organisation
     end
 
-    def has_share_links?
-      org.social_media_links.present?
+    def has_share_links?(req)
+      return unless req && org.social_media_links.present?
+
+      request_locale = req.filtered_parameters["locale"] || "en"
+      org.social_media_links.select { |k, _| k["locale"] == request_locale }
     end
 
-    def share_links
+    def share_links(req)
+      social = has_share_links?(req)
       links = []
 
-      org.social_media_links.each do |link|
+      social.each do |link|
         link_has_cta = ["Sign up", "Follow", "Watch", "Read"].any? { |cta| link["title"].include?(cta) }
         links << {
           href: link["href"],

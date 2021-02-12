@@ -27,7 +27,7 @@
       <% end %>
     </div>
 
-    <% if @what_we_do.has_share_links? %>
+    <% if @what_we_do.has_share_links?(@_request).present? %>
       <div class="govuk-grid-column-one-third">
         <%= render "govuk_publishing_components/components/heading", {
           text: t('organisations.follow_us'),
@@ -36,9 +36,7 @@
           font_size: 19,
           lang: t_fallback('organisations.follow_us')
         } %>
-        <div lang="en">
-          <%= render "govuk_publishing_components/components/share_links", @what_we_do.share_links %>
-        </div>
+        <%= render "govuk_publishing_components/components/share_links", @what_we_do.share_links(@_request) %>
       </div>
     <% end %>
   </div>
