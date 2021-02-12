@@ -13,8 +13,6 @@ module CoronavirusLocalRestrictions
       test "rendering error when invalid postcode is entered" do
         postcode = "hello"
 
-        stub_local_restriction(postcode: postcode)
-
         render_show_page(postcode)
 
         assert_includes rendered, I18n.t("coronavirus_local_restrictions.errors.invalid_postcode.input_error")
