@@ -56,6 +56,29 @@ describe CoronavirusLocalRestrictionsController do
       assert_template :no_information
     end
 
+    it "renders the no_information template when there is no restriction data for an area in local_restrictions.yml" do
+      postcode = "E1 8QS"
+      gss = SecureRandom.alphanumeric(10)
+
+      areas = [
+        {
+          "gss" => gss,
+          "name" => "Tatooine",
+          "type" => "LBO",
+          "country_name" => "England",
+        },
+      ]
+
+      LocalRestriction.stubs(:find).with(gss).returns(nil)
+
+      stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
+
+      get :show, params: { postcode: "E1 8QS" }
+
+      assert_response :success
+      assert_template :no_information
+    end
+
     it "renders the results template for an area with information" do
       restriction = LocalRestriction.new("E01000123",
                                          { "name" => "Coruscant Planetary Council" })
