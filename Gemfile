@@ -32,6 +32,7 @@ end
 group :development, :test do
   gem "better_errors"
   gem "binding_of_caller"
+  gem "climate_control"
   gem "govuk_test"
   gem "jasmine"
   gem "jasmine_selenium_runner"
