@@ -142,18 +142,6 @@ $c19-landing-page-header-background: #272828;
   color: govuk-colour("white");
 }
 
-.covid__list--accordion {
-  margin-bottom: govuk-spacing(6);
-
-  .covid__list-item {
-    margin-bottom: govuk-spacing(4);
-
-    @include govuk-media-query($from: tablet) {
-      margin-bottom: govuk-spacing(3);
-    }
-  }
-}
-
 .covid__list-item-description {
   @include govuk-font(19);
   padding-left: govuk-spacing(6);
@@ -214,18 +202,6 @@ $c19-landing-page-header-background: #272828;
 
 .covid__inverse {
   color: govuk-colour("white");
-}
-
-.covid__accordion-link {
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-
-    &:focus {
-      text-decoration: none;
-    }
-  }
 }
 
 .covid__topic-wrapper {
