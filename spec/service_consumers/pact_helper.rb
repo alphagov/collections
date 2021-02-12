@@ -22,7 +22,7 @@ class ProxyApp
   end
 end
 
-Pact.service_provider "Organisations API" do
+Pact.service_provider "Collections Organisation API" do
   app { ProxyApp.new(Rails.application) }
   honours_pact_with "GDS API Adapters" do
     pact_uri "../gds-api-adapters/spec/pacts/gds_api_adapters-collections_organisation_api.json"
