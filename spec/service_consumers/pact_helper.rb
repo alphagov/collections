@@ -30,6 +30,15 @@ Pact.service_provider "Collections Organisation API" do
 end
 
 Pact.provider_states_for "GDS API Adapters" do
+  set_up do
+    WebMock.enable!
+    WebMock.reset!
+  end
+
+  tear_down do
+    WebMock.disable!
+  end
+
   provider_state "there is a list of organisations" do
     set_up do
       Services
