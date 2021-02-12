@@ -8,7 +8,7 @@ module CoronavirusLocalRestrictions
     include CoronavirusLocalRestrictionsHelpers
     helper Rails.application.helpers
 
-    describe "current restrictions" do
+    describe "no restriction data found in local_restrictions.yml" do
       test "rendering no tier information for a postcode without a local restriction" do
         stub_no_local_restriction(postcode: "E1 8QS")
 
