@@ -1,7 +1,6 @@
 require "test_helper"
 require "gds_api/test_helpers/mapit"
 require_relative "../../../test/support/coronavirus_helper"
-require_relative "../../support/coronavirus_local_restrictions_helpers"
 
 module CoronavirusLocalRestrictions
   class CoronavirusLocalRestrictions::ShowHtmlTest < ActionView::TestCase
