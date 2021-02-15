@@ -9,7 +9,7 @@ node {
     brakeman: true,
     extraParameters: [
       stringParam(
-        name: "GDS_API_PACT_BRANCH",
+        name: "GDS_API_ADAPTERS_PACT_BRANCH",
         defaultValue: "master",
         description: "The branch of gds-api-adapters pact tests to run against"
       ),
@@ -17,9 +17,9 @@ node {
     beforeTest: {
       govuk.setEnvar("PACT_BROKER_BASE_URL", "https://pact-broker.cloudapps.digital")
     },
-    afterTest : {
+    afterTest: {
       stage("Verify pact with gds-api-adapters") {
-        govuk.runRakeTask("pact:verify:branch[${env.GDS_API_PACT_BRANCH}]")
+        govuk.runRakeTask("pact:verify:branch[${env.GDS_API_ADAPTERS_PACT_BRANCH}]")
       }
     }
   )
