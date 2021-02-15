@@ -86,13 +86,14 @@
       var totalMatchingOrgs = 0
 
       listsToFilter.each(function () {
-        var matchingOrgCount = $(this).find('[data-filter="item"]:visible').length
         var departmentSection = $(this).closest('[data-filter="block"]')
-        var departmentCountWrapper = departmentSection.find('[data-filter="count"]')
+        departmentSection.removeClass('js-hidden')
+
+        var matchingOrgCount = $(this).find('[data-filter="item"]:visible').length
         var departmentCount = departmentSection.find('.js-department-count')
         var accessibleDepartmentCount = departmentSection.find('.js-accessible-department-count')
 
-        departmentCountWrapper.toggleClass('js-hidden', matchingOrgCount === 0)
+        departmentSection.toggleClass('js-hidden', matchingOrgCount === 0)
 
         if (matchingOrgCount > 0) {
           departmentCount.text(matchingOrgCount)
