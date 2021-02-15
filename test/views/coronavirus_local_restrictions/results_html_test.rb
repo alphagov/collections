@@ -10,7 +10,6 @@ module CoronavirusLocalRestrictions
 
         assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_four.heading_pretext")
         assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_four.heading_tier_label")
-        assert_includes rendered, area
       end
 
       test "rendering tier 3 results for a postcode in tier 3" do
@@ -18,7 +17,6 @@ module CoronavirusLocalRestrictions
 
         assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_three.heading_pretext")
         assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_three.heading_tier_label")
-        assert_includes rendered, area
       end
 
       test "rendering tier 2 results for a postcode in tier 2" do
@@ -26,7 +24,6 @@ module CoronavirusLocalRestrictions
 
         assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_two.heading_pretext")
         assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_two.heading_tier_label")
-        assert_includes rendered, area
       end
 
       test "rendering tier 1 results for a postcode in tier 1" do
@@ -34,7 +31,6 @@ module CoronavirusLocalRestrictions
 
         assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_one.heading_pretext")
         assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_one.heading_tier_label")
-        assert_includes rendered, area
       end
     end
 
@@ -59,25 +55,27 @@ module CoronavirusLocalRestrictions
     end
 
     describe "future restrictions" do
-      test "rendering restrictions changing from level one to level two" do
-        render_results_view(local_restriction: { current_alert_level: 1, future_alert_level: 2 })
+      before { @area = "Naboo" }
 
-        assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_one.changing_alert_level", area: area)
-        assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.future.level_two.alert_level", area: area)
+      test "rendering restrictions changing from level one to level two" do
+        render_results_view(local_restriction: { current_alert_level: 1, future_alert_level: 2, name: @area })
+
+        assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_one.changing_alert_level", area: @area)
+        assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.future.level_two.alert_level", area: @area)
       end
 
       test "rendering restrictions changing from level two to level three" do
-        render_results_view(local_restriction: { current_alert_level: 2, future_alert_level: 3 })
+        render_results_view(local_restriction: { current_alert_level: 2, future_alert_level: 3, name: @area })
 
-        assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_two.changing_alert_level", area: area)
-        assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.future.level_three.alert_level", area: area)
+        assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_two.changing_alert_level", area: @area)
+        assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.future.level_three.alert_level", area: @area)
       end
 
       test "rendering restrictions changing from level three to level four" do
-        render_results_view(local_restriction: { current_alert_level: 3, future_alert_level: 4 })
+        render_results_view(local_restriction: { current_alert_level: 3, future_alert_level: 4, name: @area })
 
-        assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_three.changing_alert_level", area: area)
-        assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.future.level_four.alert_level", area: area)
+        assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_three.changing_alert_level", area: @area)
+        assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.future.level_four.alert_level", area: @area)
       end
     end
 
@@ -114,10 +112,6 @@ module CoronavirusLocalRestrictions
       view.stubs(:out_of_date?).returns(out_of_date)
 
       render template: "coronavirus_local_restrictions/results"
-    end
-
-    def area
-      "Tatooine"
     end
   end
 end
