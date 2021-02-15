@@ -138,7 +138,7 @@ describe('organisation-list-filter.js', function () {
     $('[data-filter="form"] input').trigger('keyup')
 
     setTimeout(function () {
-      expect($('.count-for-logos')).toHaveClass('js-hidden')
+      expect($('.count-for-logos').parent()).toHaveClass('js-hidden')
       expect($('.js-search-results')).toHaveText('1 result found')
       done()
     }, timeout)
