@@ -1,8 +1,5 @@
-require "gds_api/test_helpers/search"
-
 module SearchApiHelpers
   include SearchApiFields
-  include Search
 
   def stub_content_for_taxon(content_ids, results)
     params = {
