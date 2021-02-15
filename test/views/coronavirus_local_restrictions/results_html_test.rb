@@ -36,23 +36,6 @@ module CoronavirusLocalRestrictions
         assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_one.heading_tier_label")
         assert_includes rendered, area
       end
-
-      test "rendering postcode match if the postcode is correct except for a special character" do
-        area = "Coruscant Planetary Council"
-        postcode = ".E1 8QS"
-
-        stub_local_restriction(postcode: "E1 8QS", name: area, current_alert_level: 2)
-
-        @search = PostcodeLocalRestrictionSearch.new(postcode)
-
-        view.stubs(:out_of_date?).returns(false)
-
-        render template: "coronavirus_local_restrictions/results"
-
-        assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_two.heading_pretext")
-        assert_includes rendered, I18n.t("coronavirus_local_restrictions.results.level_two.heading_tier_label")
-        assert_includes rendered, area
-      end
     end
 
     describe "devolved nations" do
