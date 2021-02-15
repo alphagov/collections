@@ -2,10 +2,8 @@ require "test_helper"
 require "gds_api/test_helpers/mapit"
 
 module CoronavirusLocalRestrictions
-  class CoronavirusLocalRestrictions::ResultsHtmlTest < ActionView::TestCase
-    include GdsApi::TestHelpers::Mapit
+  class ResultsHtmlTest < ActionView::TestCase
     include CoronavirusLocalRestrictionsHelpers
-    helper Rails.application.helpers
 
     describe "current restrictions" do
       test "rendering tier 4 results for a postcode in tier 4" do

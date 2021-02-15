@@ -1,5 +1,5 @@
-require "test_helper"
 module CoronavirusLocalRestrictionsHelpers
+  include GdsApi::TestHelpers::Mapit
   def stub_local_restriction(postcode:,
                              name: "Tatooine",
                              gss: SecureRandom.alphanumeric(10),

@@ -20,10 +20,10 @@ WebMock.disable_net_connect!(
   allow: ["chromedriver.storage.googleapis.com"],
 )
 
-Dir[Rails.root.join("test/support/*.rb")].sort.each { |f| require f }
-
 require "gds_api/test_helpers/content_store"
 require "gds_api/test_helpers/search"
+
+Dir[Rails.root.join("test/support/*.rb")].sort.each { |f| require f }
 
 # Most tests use ActiveSupport TestCase behaviour, so we configure this here.
 

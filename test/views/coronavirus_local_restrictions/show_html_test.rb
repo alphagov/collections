@@ -3,9 +3,7 @@ require "gds_api/test_helpers/mapit"
 require_relative "../../../test/support/coronavirus_helper"
 
 module CoronavirusLocalRestrictions
-  class CoronavirusLocalRestrictions::ShowHtmlTest < ActionView::TestCase
-    include GdsApi::TestHelpers::Mapit
-    include GdsApi::TestHelpers::ContentItemHelpers
+  class ShowHtmlTest < ActionView::TestCase
     include CoronavirusLocalRestrictionsHelpers
     helper Rails.application.helpers
 
