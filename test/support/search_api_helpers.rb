@@ -1,12 +1,16 @@
 module SearchApiHelpers
   include SearchApiFields
 
-  def stub_search(params:, body:)
-    stub_any_search
-      .with(
-        query: hash_including(params),
-      )
-      .to_return("body" => body.to_json)
+  def stub_search(params: nil, body:)
+    if params
+      stub_any_search
+        .with(
+          query: hash_including(params),
+        )
+        .to_return("body" => body.to_json)
+    else
+      stub_any_search.to_return("body" => body.to_json)
+    end
   end
 
   def stub_content_for_taxon(content_ids, results)

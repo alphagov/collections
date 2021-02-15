@@ -1,20 +1,18 @@
-require "test_helper"
-
-describe LocalRestriction do
+RSpec.describe LocalRestriction do
   describe ".all" do
     it "contains an array of LocalRestriction models" do
-      assert(described_class.all.all? { |item| item.is_a?(described_class) })
+      expect(described_class.all.all? { |item| item.is_a?(described_class) })
     end
   end
 
   describe ".find" do
     it "can find a LocalRestriction by gss_code" do
       gss_code = described_class.all.first.gss_code
-      assert gss_code, described_class.find(gss_code).gss_code
+      expect(described_class.find(gss_code).gss_code).to be(gss_code)
     end
 
     it "returns nil if it can't find a LocalRestriction" do
-      assert_nil described_class.find("not-a-gss-code")
+      expect(described_class.find("not-a-gss-code")).to be_nil
     end
   end
 
@@ -29,12 +27,12 @@ describe LocalRestriction do
     end
 
     it "returns the alert level when a current alert exists" do
-      assert_equal 2, instance.current_alert_level
+      expect(instance.current_alert_level).to eq(2)
     end
 
     it "returns nil when there is not a current alert" do
       travel_to(Time.zone.parse("2020-01-01")) do
-        assert_nil instance.current_alert_level
+        expect(instance.current_alert_level).to be_nil
       end
     end
   end
@@ -51,13 +49,13 @@ describe LocalRestriction do
 
     it "returns the alert level when a future alert exists" do
       travel_to(Time.zone.parse("2020-12-01")) do
-        assert_equal 3, instance.future_alert_level
+        expect(instance.future_alert_level).to eq(3)
       end
     end
 
     it "returns nil when there is not a future alert" do
       travel_to(Time.zone.parse("2021-02-01")) do
-        assert_nil instance.future_alert_level
+        expect(instance.future_alert_level).to be_nil
       end
     end
   end
@@ -70,7 +68,7 @@ describe LocalRestriction do
         "name" => "Naboo",
         "restrictions" => [first_restriction, second_restriction],
       })
-      assert_equal second_restriction, instance.current
+      expect(instance.current).to eq(second_restriction)
     end
 
     it "returns nil when there are no current restrictions" do
@@ -82,7 +80,7 @@ describe LocalRestriction do
       })
 
       travel_to(Time.zone.parse("2020-12-01")) do
-        assert_nil instance.current
+        expect(instance.current).to be_nil
       end
     end
   end
@@ -96,7 +94,7 @@ describe LocalRestriction do
         "restrictions" => [first_restriction, second_restriction],
       })
       travel_to(Time.zone.parse("2020-12-01")) do
-        assert_equal first_restriction, instance.future
+        expect(instance.future).to eq(first_restriction)
       end
     end
 
@@ -107,7 +105,7 @@ describe LocalRestriction do
           { "alert_level" => 2, "start_date" => Date.new(2020, 1, 1), "start_time" => "10:00" },
         ],
       })
-      assert_nil instance.future
+      expect(instance.future).to be nil
     end
   end
 
@@ -123,13 +121,13 @@ describe LocalRestriction do
 
     it "returns true if there is current restriction in tier 3" do
       travel_to(Time.zone.parse("2020-12-01")) do
-        assert instance.tier_three?
+        expect(instance.tier_three?).to be(true)
       end
     end
 
     it "returns false if there is not a current tier 3 restriction" do
       travel_to(Time.zone.parse("2020-09-01")) do
-        assert_not instance.tier_three?
+        expect(instance.tier_three?).to be(false)
       end
     end
   end
@@ -146,13 +144,13 @@ describe LocalRestriction do
 
     it "returns true if there is current restriction in tier 2" do
       travel_to(Time.zone.parse("2020-12-01")) do
-        assert instance.tier_two?
+        expect(instance.tier_two?).to be(true)
       end
     end
 
     it "returns false if there is not a current tier 2 restriction" do
       travel_to(Time.zone.parse("2020-09-01")) do
-        assert_not instance.tier_two?
+        expect(instance.tier_two?).to be(false)
       end
     end
   end
@@ -169,13 +167,13 @@ describe LocalRestriction do
 
     it "returns true if there is current restriction in tier 1" do
       travel_to(Time.zone.parse("2020-12-01")) do
-        assert instance.tier_one?
+        expect(instance.tier_one?).to be(true)
       end
     end
 
     it "returns false if there is not a current tier 1 restriction" do
       travel_to(Time.zone.parse("2020-09-01")) do
-        assert_not instance.tier_one?
+        expect(instance.tier_one?).to be(false)
       end
     end
   end

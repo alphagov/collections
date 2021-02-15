@@ -15,6 +15,7 @@ Dir[Rails.root.join("spec/support/**/*.rb")].sort.each { |f| require f }
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.include GdsApi::TestHelpers::Search
+  config.include ActiveSupport::Testing::TimeHelpers
   config.use_active_record = false
   config.infer_spec_type_from_file_location!
 
