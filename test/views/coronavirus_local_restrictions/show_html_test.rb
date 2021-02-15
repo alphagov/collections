@@ -1,5 +1,4 @@
 require "test_helper"
-require "gds_api/test_helpers/mapit"
 require_relative "../../../test/support/coronavirus_helper"
 
 module CoronavirusLocalRestrictions
