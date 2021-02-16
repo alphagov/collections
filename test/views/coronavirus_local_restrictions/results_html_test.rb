@@ -1,5 +1,4 @@
 require "test_helper"
-
 module CoronavirusLocalRestrictions
   class ResultsHtmlTest < ActionView::TestCase
     include CoronavirusLocalRestrictionsHelpers

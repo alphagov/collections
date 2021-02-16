@@ -1,3 +1,4 @@
+require "gds_api/test_helpers/mapit"
 module CoronavirusLocalRestrictionsHelpers
   include GdsApi::TestHelpers::Mapit
   def stub_local_restriction(postcode:,

@@ -1,6 +1,4 @@
 require "test_helper"
-require_relative "../../../test/support/coronavirus_helper"
-
 module CoronavirusLocalRestrictions
   class ShowHtmlTest < ActionView::TestCase
     include CoronavirusLocalRestrictionsHelpers

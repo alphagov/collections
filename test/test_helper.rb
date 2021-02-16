@@ -22,7 +22,6 @@ WebMock.disable_net_connect!(
 
 require "gds_api/test_helpers/content_store"
 require "gds_api/test_helpers/search"
-require "gds_api/test_helpers/mapit"
 
 Dir[Rails.root.join("test/support/*.rb")].sort.each { |f| require f }
 
