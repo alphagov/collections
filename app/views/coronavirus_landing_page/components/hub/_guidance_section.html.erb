@@ -17,7 +17,7 @@
                   href: item["url"],
                   text: item["text"],
                   data: {
-                    module: "track-click",
+                    module: "gem-track-click",
                     track_category: "pageElementInteraction",
                     track_action: "What you can do now",
                     track_label: item["url"]
@@ -35,7 +35,7 @@
             link_href: email_signup["email_url"],
             heading: email_signup["intro"],
             data: {
-              "module": "track-click",
+              "module": "gem-track-click",
               "track-category": "emailAlertLinkClicked",
               "track-action": request.path
             },

@@ -250,7 +250,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
     visit "/topic/oil-and-gas/offshore"
 
-    assert page.has_selector?('.browse-container[data-module="track-click"]')
+    assert page.has_selector?('.browse-container[data-module="gem-track-click"]')
 
     oil_rig_safety_requirements = page.find(
       "a",

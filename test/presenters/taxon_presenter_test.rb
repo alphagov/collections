@@ -19,8 +19,8 @@ describe TaxonPresenter do
 
         subject { taxon_presenter.options_for_child_taxon(index: 0) }
 
-        it "contains the track-click module" do
-          assert_equal("track-click", subject[:module])
+        it "contains the gem-track-click module" do
+          assert_equal("gem-track-click", subject[:module])
         end
 
         it "contains the navGridContentClicked track_category" do

@@ -62,13 +62,13 @@ module Supergroups
         track_category: "SeeAllLinkClicked",
         track_action: base_path,
         track_label: name,
-        module: "track-click",
+        module: "gem-track-click",
       }
     end
 
     def data_attributes(base_path, link_text, index)
       {
-        module: "track-click",
+        module: "gem-track-click",
         track_category: data_module_label + "DocumentListClicked",
         track_action: index,
         track_label: base_path,

@@ -30,7 +30,7 @@
     <div class="govuk-grid-column-two-thirds">
       <p class='govuk-body'><%= campaign_links[:lead_in] %></p>
 
-      <%= tag.ul class: %w[govuk-list govuk-list--bullet govuk-list--spaced], data: { module: "track-click" } do %>
+      <%= tag.ul class: %w[govuk-list govuk-list--bullet govuk-list--spaced], data: { module: "gem-track-click" } do %>
         <% links.each do |link| %>
           <%= tag.li do %>
             <%= link %>
