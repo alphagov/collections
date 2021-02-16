@@ -1,10 +1,6 @@
 require "integration_test_helper"
-require "gds_api/test_helpers/mapit"
-require_relative "../support/coronavirus_local_restrictions_helpers"
 
 class CoronavirusLocalRestrictionsTest < ActionDispatch::IntegrationTest
-  include GdsApi::TestHelpers::Mapit
-  include GdsApi::TestHelpers::ContentStore
   include CoronavirusLocalRestrictionsHelpers
 
   #   Consider writing view tests in test/views/coronavirus_local_restrictions/ to test rendering page information.
