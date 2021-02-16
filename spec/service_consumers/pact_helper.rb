@@ -22,14 +22,35 @@ class ProxyApp
   end
 end
 
-Pact.service_provider "Organisations API" do
+def url_encode(str)
+  ERB::Util.url_encode(str)
+end
+
+Pact.service_provider "Collections Organisation API" do
   app { ProxyApp.new(Rails.application) }
   honours_pact_with "GDS API Adapters" do
-    pact_uri "../gds-api-adapters/spec/pacts/gds_api_adapters-collections_organisation_api.json"
+    if ENV["USE_LOCAL_PACT"]
+      pact_uri ENV.fetch("GDS_API_PACT_PATH", "../gds-api-adapters/spec/pacts/gds_api_adapters-collections_organisation_api.json")
+    else
+      base_url = ENV.fetch("PACT_BROKER_BASE_URL", "https://pact-broker.cloudapps.digital")
+      url = "#{base_url}/pacts/provider/#{url_encode(name)}/consumer/#{url_encode(consumer_name)}"
+      version_part = "versions/#{url_encode(ENV.fetch('GDS_API_PACT_VERSION', 'master'))}"
+
+      pact_uri "#{url}/#{version_part}"
+    end
   end
 end
 
 Pact.provider_states_for "GDS API Adapters" do
+  set_up do
+    WebMock.enable!
+    WebMock.reset!
+  end
+
+  tear_down do
+    WebMock.disable!
+  end
+
   provider_state "there is a list of organisations" do
     set_up do
       Services
