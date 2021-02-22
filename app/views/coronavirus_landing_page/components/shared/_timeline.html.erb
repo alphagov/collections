@@ -5,6 +5,10 @@
     margin_bottom: 4
   } %>
 
+  <% if timeline["summary"] %>
+    <%= render_govspeak(timeline["summary"]) %>
+  <% end %>
+
   <% timeline["list"].each do | item | %>
     <div class="covid-timeline__item">
       <%= render "govuk_publishing_components/components/heading", {
