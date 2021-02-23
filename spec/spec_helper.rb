@@ -1,4 +1,7 @@
 ENV["RAILS_ENV"] ||= "test"
+ENV["GOVUK_WEBSITE_ROOT"] = "http://www.test.gov.uk"
+ENV["GOVUK_APP_DOMAIN"] = "test.gov.uk"
+
 require File.expand_path("../config/environment", __dir__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require "rspec/rails"
