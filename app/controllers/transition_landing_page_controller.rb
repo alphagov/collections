@@ -4,12 +4,8 @@ class TransitionLandingPageController < ApplicationController
 
   skip_before_action :set_expiry
   before_action -> { set_expiry(1.minute) }
-  before_action :set_account_variant
 
   around_action :switch_locale
-
-  helper_method :account_variant
-
   def show
     setup_content_item_and_navigation_helpers(taxon)
 
@@ -46,17 +42,5 @@ private
 
   def show_comms?
     true
-  end
-
-  def set_account_variant
-    return unless Rails.configuration.feature_flag_govuk_accounts
-    return unless show_signed_in_header? || show_signed_out_header?
-
-    account_variant.configure_response(response)
-
-    set_slimmer_headers(
-      remove_search: true,
-      show_accounts: show_signed_in_header? ? "signed-in" : "signed-out",
-    )
   end
 end
