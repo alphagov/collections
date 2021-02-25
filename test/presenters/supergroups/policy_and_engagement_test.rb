@@ -72,7 +72,7 @@ describe Supergroups::PolicyAndEngagement do
                 text: "Tagged Content Title",
                 path: "/government/tagged/content-1",
                 data_attributes: {
-                  module: "track-click",
+                  module: "gem-track-click",
                   track_category: "policyAndEngagementDocumentListClicked",
                   track_action: 1,
                   track_label: "/government/tagged/content-1",
@@ -122,7 +122,7 @@ private
         text: "Tagged Content Title",
         path: "/government/tagged/content",
         data_attributes: {
-          module: "track-click",
+          module: "gem-track-click",
           track_category: "policyAndEngagementDocumentListClicked",
           track_action: index + 1,
           track_label: "/government/tagged/content",

@@ -12,7 +12,7 @@
 </div>
 
 <% if organisations_without_logos.any? %>
-  <div <%= "data-module=track-click" if track_click?(organisations_without_logos) %>>
+  <div <%= "data-module=gem-track-click" if track_click?(organisations_without_logos) %>>
     <%= render 'govuk_publishing_components/components/document_list',
       items: organisations_without_logos,
       margin_bottom: true

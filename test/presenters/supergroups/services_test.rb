@@ -19,7 +19,7 @@ describe Supergroups::Services do
             path: "/government/tagged/content",
             description: "Description of tagged content",
             data_attributes: {
-              module: "track-click",
+              module: "gem-track-click",
               track_category: "servicesDocumentListClicked",
               track_action: 1,
               track_label: "/government/tagged/content",

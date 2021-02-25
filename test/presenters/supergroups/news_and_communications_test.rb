@@ -21,7 +21,7 @@ describe Supergroups::NewsAndCommunications do
             text: "Tagged Content Title",
             path: "/government/tagged/content",
             data_attributes: {
-              module: "track-click",
+              module: "gem-track-click",
               track_category: "newsAndCommunicationsDocumentListClicked",
               track_action: 1,
               track_label: "/government/tagged/content",
@@ -78,7 +78,7 @@ describe Supergroups::NewsAndCommunications do
             text: "Tagged Content Title",
             path: "/government/tagged/content",
             data_attributes: {
-              module: "track-click",
+              module: "gem-track-click",
               track_category: "newsAndCommunicationsFeaturedLinkClicked",
               track_action: 1,
               track_label: "/government/tagged/content",

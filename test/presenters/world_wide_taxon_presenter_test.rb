@@ -44,8 +44,8 @@ describe WorldWideTaxonPresenter do
       describe "root options" do
         subject { world_wide_taxon_presenter.options_for_leaf_content(index: 10) }
 
-        it "contains the track-click module" do
-          assert_equal("track-click", subject[:module])
+        it "contains the gem-track-click module" do
+          assert_equal("gem-track-click", subject[:module])
         end
 
         it "contains the navLeafLinkClicked track_category" do

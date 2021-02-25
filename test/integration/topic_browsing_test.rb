@@ -102,7 +102,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
 
     visit "/topic"
 
-    assert page.has_selector?('.topics-page[data-module="track-click"]')
+    assert page.has_selector?('.topics-page[data-module="gem-track-click"]')
 
     topic_link = page.find("a", text: "Oil and Gas")
 
@@ -155,7 +155,7 @@ class TopicBrowsingTest < ActionDispatch::IntegrationTest
 
     visit "/topic/oil-and-gas"
 
-    assert page.has_selector?('.topics-page[data-module="track-click"]')
+    assert page.has_selector?('.topics-page[data-module="gem-track-click"]')
 
     within ".app-c-topic-list" do
       within "li:nth-child(1)" do

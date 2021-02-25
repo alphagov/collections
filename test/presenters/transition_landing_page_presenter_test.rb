@@ -30,7 +30,7 @@ describe TransitionLandingPagePresenter do
             track_category: "SeeAllLinkClicked",
             track_action: "/base_path",
             track_label: "services",
-            module: "track-click",
+            module: "gem-track-click",
           },
         },
         {
@@ -41,7 +41,7 @@ describe TransitionLandingPagePresenter do
             track_category: "SeeAllLinkClicked",
             track_action: "/base_path",
             track_label: "guidance_and_regulation",
-            module: "track-click",
+            module: "gem-track-click",
           },
         },
         {
@@ -52,7 +52,7 @@ describe TransitionLandingPagePresenter do
             track_category: "SeeAllLinkClicked",
             track_action: "/base_path",
             track_label: "news_and_communications",
-            module: "track-click",
+            module: "gem-track-click",
           },
         },
         {
@@ -63,7 +63,7 @@ describe TransitionLandingPagePresenter do
             track_category: "SeeAllLinkClicked",
             track_action: "/base_path",
             track_label: "research_and_statistics",
-            module: "track-click",
+            module: "gem-track-click",
           },
         },
         {
@@ -74,7 +74,7 @@ describe TransitionLandingPagePresenter do
             track_category: "SeeAllLinkClicked",
             track_action: "/base_path",
             track_label: "policy_and_engagement",
-            module: "track-click",
+            module: "gem-track-click",
           },
         },
         {
@@ -85,7 +85,7 @@ describe TransitionLandingPagePresenter do
             track_category: "SeeAllLinkClicked",
             track_action: "/base_path",
             track_label: "transparency",
-            module: "track-click",
+            module: "gem-track-click",
           },
         },
       ]

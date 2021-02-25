@@ -14,7 +14,7 @@
   <%= render "govuk_publishing_components/components/title", title: title_with_suffix %>
 </header>
 
-<div class="browse-container full-width topics-page" data-module="track-click">
+<div class="browse-container full-width topics-page" data-module="gem-track-click">
   <nav class="topics">
     <% tracking_category = topic.base_path == '/topic' ? 'navTopicLinkClicked' : 'navSubtopicLinkClicked' %>
     <%= render 'components/topic-list', topic_list_params(topic.children, category: tracking_category) %>

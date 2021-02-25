@@ -32,7 +32,7 @@ class ServicesAndInformationBrowsingTest < ActionDispatch::IntegrationTest
   it "includes tracking attributes on all links" do
     visit "/government/organisations/hm-revenue-customs/services-information"
 
-    assert page.has_selector?('.browse-container[data-module="track-click"]')
+    assert page.has_selector?('.browse-container[data-module="gem-track-click"]')
 
     within ".govuk-grid-row:first-child .app-c-topic-list" do
       content_item_link = page.first("li a")

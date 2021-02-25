@@ -53,7 +53,7 @@ class WorldWideTaxonPresenter
 
   def options_for_leaf_content(index:)
     {
-      module: "track-click",
+      module: "gem-track-click",
       track_category: "navLeafLinkClicked",
       track_action: (index + 1).to_s,
       track_label: tagged_content[index].base_path,
@@ -64,7 +64,7 @@ class WorldWideTaxonPresenter
 
   def options_for_accordion_content(index:, section_index:)
     {
-      module: "track-click",
+      module: "gem-track-click",
       track_category: "navAccordionLinkClicked",
       track_action: "#{section_index + 1}.#{index + 1}",
       track_label: tagged_content[index].base_path,
