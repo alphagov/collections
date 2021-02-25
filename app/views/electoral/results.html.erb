@@ -1,0 +1,78 @@
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <% title = "Electoral information" %>
+    <% content_for :title, title %>
+
+    <div>
+      <%= render "govuk_publishing_components/components/title", title: title %>
+
+      <p class="govuk-body">
+        We've matched the postcode <strong><%= @postcode %></strong> to <strong><%= @council["name"] %></strong>.
+      </p>
+
+      <% electoral_contact = @council["electoral_services_contacts"] %>
+      <% registration_contact = @council["registration_contacts"] %>
+      <%
+        electoral_contact_title = "Get help with electoral registration"
+        electoral_contact_description = "Need help? Get in touch with your local electoral registration team. They can tell you if you’re on the electoral register, or if you’ve registered for a postal or proxy vote."
+
+        if registration_contact
+          electoral_contact_title = "Your local council"
+          electoral_contact_description = "For questions about your poll card, polling place, or about returning your postal voting ballot, contact your council."
+        end
+      %>
+
+
+
+      <% if electoral_contact %>
+        <%= render "govuk_publishing_components/components/heading",
+            text: electoral_contact_title,
+            font_size: "m",
+            margin_bottom: 4
+        %>
+        <p class="govuk-body"><%= electoral_contact_description %></p>
+
+        <p class="govuk-body"><%= @council["name"] %>
+        <% if electoral_contact["address"].present? %>
+          <address class="govuk-body">
+            <%= electoral_contact["address"].split("\r\n").join("<br>").split("\n").join("<br>").html_safe %><br>
+            <%= electoral_contact["postcode"] %><br>
+          </address>
+        <% end %>
+        <%= render "govuk_publishing_components/components/list", {
+          items: [
+            sanitize("<a href='#{electoral_contact["website"]}'>#{electoral_contact["website"]}</a>"),
+            electoral_contact["phone_numbers"][0],
+            electoral_contact["email"],
+          ]
+        } %>
+      <% end %>
+
+      <% registration_contact = @council["registration_contacts"] %>
+      <% if registration_contact %>
+        <%= render "govuk_publishing_components/components/heading",
+            text: "Get help with electoral registration",
+            font_size: "m",
+            margin_bottom: 4
+        %>
+        <p class="govuk-body">Need help? Get in touch with your local electoral registration team. They can tell you if you’re on the electoral register, or if you’ve registered for a postal or proxy vote.</p>
+
+        <% if registration_contact["address"] %>
+          <address class="govuk-body">
+            <%= registration_contact["address"].split("\r\n").join("<br>").split("\n").join("<br>").html_safe %><br>
+            <%= registration_contact["postcode"] %><br>
+          </address>
+        <% end %>
+        <%= render "govuk_publishing_components/components/list", {
+          items: [
+            registration_contact["website"],
+            registration_contact["phone_numbers"][0],
+            registration_contact["email"],
+          ]
+        } %>
+      <% end %>
+
+    </div>
+  </div>
+</div>

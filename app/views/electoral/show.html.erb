@@ -1,0 +1,56 @@
+<% content_for :title, "Elections lookup" %>
+
+<% content_for :breadcrumbs do %>
+  <%= render 'govuk_publishing_components/components/contextual_breadcrumbs', content_item: { title: "Elections" } %>
+<% end %>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <%= render "govuk_publishing_components/components/title", title: "Elections lookup" %>
+
+
+    <%= form_tag find_electoral_things_path,
+      method: :get,
+      class: "coronavirus-local-restrictions__postcode-form",
+      data: {
+        module: "coronavirus-local-restrictions-postcode-form",
+        "error-code": nil,
+        "error-message": nil,
+      } do |f| %>
+      <div class="postcode-lookup">
+        <%= render "govuk_publishing_components/components/input", {
+          id: "postcode",
+          label: { text: t("coronavirus_local_restrictions.lookup.input_label") },
+          heading_level: 2,
+          heading_size: "s",
+          error_message: nil,
+          name: "postcode",
+          hint: render_govspeak(t("coronavirus_local_restrictions.lookup.hint_text")),
+          invalid: false,
+          autocomplete: "postal-code",
+          width: 10,
+          value: params[:postcode],
+        } %>
+
+        <%= render "govuk_publishing_components/components/button",
+                   text: t("coronavirus_local_restrictions.lookup.button_text"),
+                   margin_bottom: true %>
+
+        <p class="govuk-body">
+          <%= link_to t("coronavirus_local_restrictions.royal_mail_lookup.link_text"),
+                      t("coronavirus_local_restrictions.royal_mail_lookup.href"),
+                      class: "govuk-link covid__postcode-lookup--link" %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <div class="coronavirus-local-restriction__related-navigation">
+      <%= render 'govuk_publishing_components/components/contextual_sidebar', { content_item: { title: "Elections" } } %>
+    </div>
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+    <%= render 'govuk_publishing_components/components/contextual_footer', { content_item: { title: "Elections" } } %>
+  </div>
+</div>

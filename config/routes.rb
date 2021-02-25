@@ -27,6 +27,7 @@ Rails.application.routes.draw do
     get ":subtopic_slug", on: :member, to: "subtopics#show"
   end
 
+  get "/find-electoral-things" => "electoral#show"
   # Route for local restrictions postcode lookup
   get "/find-coronavirus-local-restrictions" => "coronavirus_local_restrictions#show"
 
