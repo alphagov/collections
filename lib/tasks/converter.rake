@@ -1,4 +1,4 @@
-require_relative "../parsers/convert_to_rspec.rb"
+require_relative "../minitest_to_rspec/convert_to_rspec.rb"
 
 # example usage: bundle exec rake convert:to_rspec\["test/components","spec/views/components"\]
 namespace :convert do
