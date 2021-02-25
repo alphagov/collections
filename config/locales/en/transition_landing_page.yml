@@ -13,7 +13,7 @@ en:
     video_section_title: "Keep your business moving"
     video_section_description: |
       <p>Doing business with Europe has changed. You need to follow new rules on exports, imports, tariffs, data and&nbsp;hiring.</p>
-      <p>Watch the video to find out what the new rules mean for your business. You can also <a href="/transition-check/questions" class="govuk-link" data-module="track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">use the Brexit checker</a> to get a personalised list of actions.</p>
+      <p>Watch the video to find out what the new rules mean for your business. You can also <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">use the Brexit checker</a> to get a personalised list of actions.</p>
     video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
     video_section_transcription_summary: View the video transcript
     video_section_transcription_text: |
@@ -44,7 +44,7 @@ en:
           path: /uk-nationals-living-eu
         - text: staying in the UK if you’re an EU citizen
           path: /staying-uk-eu-citizen
-      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="Get the complete list">Get the complete list</a> of what you need to do for you, your business and your family.
+      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="Get the complete list">Get the complete list</a> of what you need to do for you, your business and your family.
     comms_header: "Announcements"
     comms:
       links:

@@ -13,7 +13,7 @@ cy:
     video_section_title: "Cadwch eich busnes i symud"
     video_section_description: |
       <p>Mae gwneud busnes â Ewrop wedi newid. Mae angen i chi dilyn rheolau newydd ar allforio, mewnforio, tariffau, data a chyflogi.</p>
-      <p>Gwyliwch y fideo i ddarganfod beth mae’r rheolau newydd yn ei olygu i’ch busnes. Gallwch hefyd defnyddio’r <a href="/transition-check/questions" class="govuk-link" data-module="track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="adnodd gwirio Brexit">adnodd gwirio Brexit</a> i dderbyn rhestr o gamau personol.</p>
+      <p>Gwyliwch y fideo i ddarganfod beth mae’r rheolau newydd yn ei olygu i’ch busnes. Gallwch hefyd defnyddio’r <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="adnodd gwirio Brexit">adnodd gwirio Brexit</a> i dderbyn rhestr o gamau personol.</p>
     video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
     video_section_transcription_summary: Gwelwch y trawsgrifiad fideo
     video_section_transcription_text: |
