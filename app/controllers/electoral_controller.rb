@@ -3,16 +3,31 @@ class ElectoralController < ApplicationController
   def show
     @content_item = { title: "Elections" }
 
-    if params[:postcode].nil?
+    if params[:postcode].nil? && params[:uprn].nil?
       render
       return
     end
 
-    @postcode = params[:postcode].strip
-    postcode_result = JSON.parse(RestClient.get("https://wheredoivote.co.uk/api/beta/postcode/#{CGI.escape(@postcode)}.json").body).to_h
+    @postcode = params[:postcode]
+    uprn = params[:uprn]
 
-    @council = postcode_result["council"]
-    ballots = postcode_result["ballots"]
+    lookup_result =
+      if @postcode
+        JSON.parse(RestClient.get("https://wheredoivote.co.uk/api/beta/postcode/#{CGI.escape(@postcode)}.json").body).to_h
+      else
+        JSON.parse(RestClient.get("https://wheredoivote.co.uk/api/beta/address/#{uprn}.json").body).to_h
+      end
+
+    addresses = lookup_result["addresses"]
+
+    if addresses.any? && addresses.count > 1 # WV14 8TU
+      @address_links = addresses.map { |a| "<a href='#{find_electoral_things_path}?uprn=#{a["uprn"]}'>#{a["address"]}</a>" }
+      render :address_picker
+      return
+    end
+
+    @council = lookup_result["council"]
+    ballots = lookup_result["ballots"]
     @elections = ballots.map { |b| "#{b["poll_open_date"]} - #{b["ballot_title"]}" } if ballots
 
     render :results

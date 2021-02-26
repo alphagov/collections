@@ -7,9 +7,15 @@
     <div>
       <%= render "govuk_publishing_components/components/title", title: title %>
 
+      <% if @postcode %>
       <p class="govuk-body">
         We've matched the postcode <strong><%= @postcode %></strong> to <strong><%= @council["name"] %></strong>.
       </p>
+      <% else %>
+      <p class="govuk-body">
+        We've matched your address to <strong><%= @council["name"] %></strong>.
+      </p>
+      <% end %>
 
       <% electoral_contact = @council["electoral_services_contacts"] %>
       <% registration_contact = @council["registration_contacts"] %>
