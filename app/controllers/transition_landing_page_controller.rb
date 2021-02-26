@@ -1,5 +1,5 @@
 class TransitionLandingPageController < ApplicationController
-  include AccountAbTestable
+  include AccountConcern
   include Slimmer::Headers
 
   skip_before_action :set_expiry

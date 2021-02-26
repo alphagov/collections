@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module AccountAbTestable
+module AccountConcern
   extend ActiveSupport::Concern
 
   ACCOUNT_AB_CUSTOM_DIMENSION = 42
