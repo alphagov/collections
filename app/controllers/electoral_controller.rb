@@ -12,6 +12,8 @@ class ElectoralController < ApplicationController
     postcode_result = JSON.parse(RestClient.get("https://wheredoivote.co.uk/api/beta/postcode/#{CGI.escape(@postcode)}.json").body).to_h
 
     @council = postcode_result["council"]
+    ballots = postcode_result["ballots"]
+    @elections = ballots.map { |b| "#{b["poll_open_date"]} - #{b["ballot_title"]}" } if ballots
 
     render :results
   end
