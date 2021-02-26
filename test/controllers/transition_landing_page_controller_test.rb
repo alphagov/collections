@@ -26,26 +26,54 @@ describe TransitionLandingPageController do
         Rails.configuration.stubs(:feature_flag_govuk_accounts).returns(true)
       end
 
-      %w[LoggedIn LoggedOut].each do |variant|
-        it "Variant #{variant} disables the search field" do
-          with_variant AccountExperiment: variant do
-            get :show
-            assert_equal "true", response.headers["X-Slimmer-Remove-Search"]
-          end
-        end
+      it "disables the search field" do
+        get :show
+        assert_equal "true", response.headers["X-Slimmer-Remove-Search"]
       end
 
-      it "Variant LoggedIn requests the signed-in header" do
-        with_variant AccountExperiment: "LoggedIn" do
+      it "sets the Vary: GOVUK-Account-Session response header" do
+        get :show
+        assert response.headers["Vary"].include? "GOVUK-Account-Session"
+      end
+
+      it "requests the signed-out header" do
+        get :show
+        assert_equal "signed-out", response.headers["X-Slimmer-Show-Accounts"]
+      end
+
+      context "the GOVUK-Account-Session header is set" do
+        it "requests the signed-in header" do
+          request.headers["GOVUK-Account-Session"] = "foo"
           get :show
           assert_equal "signed-in", response.headers["X-Slimmer-Show-Accounts"]
         end
       end
 
-      it "Variant LoggedOut requests the signed-out header" do
-        with_variant AccountExperiment: "LoggedOut" do
-          get :show
-          assert_equal "signed-out", response.headers["X-Slimmer-Show-Accounts"]
+      context "with the LoggedIn A/B variant" do
+        it "requests the signed-in header" do
+          with_variant AccountExperiment: "LoggedIn" do
+            get :show
+            assert_equal "signed-in", response.headers["X-Slimmer-Show-Accounts"]
+          end
+        end
+      end
+
+      context "with the LoggedOut A/B variant" do
+        it "requests the signed-out header" do
+          with_variant AccountExperiment: "LoggedOut" do
+            get :show
+            assert_equal "signed-out", response.headers["X-Slimmer-Show-Accounts"]
+          end
+        end
+
+        context "the GOVUK-Account-Session header is set" do
+          it "requests the signed-in header" do
+            with_variant AccountExperiment: "LoggedOut" do
+              request.headers["GOVUK-Account-Session"] = "foo"
+              get :show
+              assert_equal "signed-in", response.headers["X-Slimmer-Show-Accounts"]
+            end
+          end
         end
       end
     end
