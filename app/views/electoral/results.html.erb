@@ -73,7 +73,7 @@
       <% end %>
       <%= render "govuk_publishing_components/components/list", {
         items: [
-          registration_contact["website"],
+          sanitize("<a href='#{registration_contact["website"]}'>#{registration_contact["website"]}</a>"),
           registration_contact["phone_numbers"][0],
           registration_contact["email"],
         ]
