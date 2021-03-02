@@ -1,8 +1,17 @@
-require "gds_api/test_helpers/search"
-
 module SearchApiHelpers
   include SearchApiFields
-  include Search
+
+  def stub_search(params: nil, body:)
+    if params
+      stub_any_search
+        .with(
+          query: hash_including(params),
+        )
+        .to_return("body" => body.to_json)
+    else
+      stub_any_search.to_return("body" => body.to_json)
+    end
+  end
 
   def stub_content_for_taxon(content_ids, results)
     params = {
@@ -12,15 +21,14 @@ module SearchApiHelpers
       filter_taxons: Array(content_ids),
       order: "title",
     }
-    stub_any_search
-      .with(query: hash_including(params))
-      .to_return(
-        body: {
-          "results" => results,
-          "start" => 0,
-          "total" => results.size,
-        }.to_json,
-      )
+
+    body = {
+      "results" => results,
+      "start" => 0,
+      "total" => results.size,
+    }
+
+    stub_search(params: params, body: body)
   end
 
   def stub_document_types_for_supergroup(supergroup)
@@ -42,15 +50,13 @@ module SearchApiHelpers
       filter_content_store_document_type: filter_content_store_document_type,
     }
 
-    stub_any_search
-    .with(query: hash_including(params))
-    .to_return(
-      body: {
-        "results" => results,
-        "start" => 0,
-        "total" => results.size,
-      }.to_json,
-    )
+    body = {
+      "results" => results,
+      "start" => 0,
+      "total" => results.size,
+    }
+
+    stub_search(params: params, body: body)
   end
 
   def stub_most_recent_content_for_taxon(content_id, results,
@@ -66,15 +72,13 @@ module SearchApiHelpers
       filter_content_store_document_type: filter_content_store_document_type,
     }
 
-    stub_any_search
-    .with(query: hash_including(params))
-    .to_return(
-      body: {
-        "results" => results,
-        "start" => "0",
-        "total" => results.size,
-      }.to_json,
-    )
+    body = {
+      "results" => results,
+      "start" => "0",
+      "total" => results.size,
+    }
+
+    stub_search(params: params, body: body)
   end
 
   def stub_organisations_for_taxon(content_id, organisations)
@@ -84,18 +88,16 @@ module SearchApiHelpers
       filter_part_of_taxonomy_tree: [content_id],
     }
 
-    stub_any_search
-    .with(query: hash_including(params))
-    .to_return(
-      body: {
-        "results" => [],
-        "aggregates" => {
-          "organisations" => {
-            "options" => organisations,
-          },
+    body = {
+      "results" => [],
+      "aggregates" => {
+        "organisations" => {
+          "options" => organisations,
         },
-      }.to_json,
-    )
+      },
+    }
+
+    stub_search(params: params, body: body)
   end
 
   def generate_search_results(count, supergroup = "default")
@@ -129,9 +131,8 @@ module SearchApiHelpers
         filter_topic_content_ids: [content_id],
         facet_organisations: "1000" }
     response = stub_search_has_specialist_sector_organisations(slug)
-    stub_any_search
-    .with({ query: params })
-    .to_return(body: response.to_json)
+
+    stub_search(params: params, body: response)
   end
 
   def stub_services_and_information_links(organisation_id)
@@ -141,9 +142,8 @@ module SearchApiHelpers
       facet_specialist_sectors: "1000,examples:4,example_scope:query,order:value.title",
     }
     response = stub_search_has_services_and_info_data_for_organisation
-    stub_any_search
-    .with({ query: params })
-    .to_return(body: response.to_json)
+
+    stub_search(params: params, body: response)
   end
 
   def stub_services_and_information_links_with_missing_keys(organisation_id)
@@ -153,9 +153,8 @@ module SearchApiHelpers
       facet_specialist_sectors: "1000,examples:4,example_scope:query,order:value.title",
     }
     response = stub_search_has_services_and_info_data_with_missing_keys_for_organisation
-    stub_any_search
-    .with({ query: params })
-    .to_return(body: response.to_json)
+
+    stub_search(params: params, body: response)
   end
 
   def search_api_document_for_slug(slug, updated_at = 1.hour.ago, format = "guide")
@@ -191,22 +190,18 @@ module SearchApiHelpers
 
     results.each_slice(page_size).with_index do |results_page, page|
       start = page * page_size
-      stub_any_search
-      .with(query:
-        hash_including(
-          {
-            start: start.to_s,
-            count: page_size.to_s,
-            filter_topic_content_ids: [subtopic_content_id],
-            order: "-public_timestamp",
-          },
-        )).to_return(
-          body: {
-            "results" => results_page,
-            "start" => start,
-            "total" => results.size,
-          }.to_json,
-        )
+      params = {
+        start: start.to_s,
+        count: page_size.to_s,
+        filter_topic_content_ids: [subtopic_content_id],
+        order: "-public_timestamp",
+      }
+      body = {
+        "results" => results_page,
+        "start" => start,
+        "total" => results.size,
+      }
+      stub_search(params: params, body: body)
     end
   end
 
@@ -214,26 +209,19 @@ module SearchApiHelpers
     results = document_slugs.map.with_index do |slug, i|
       search_api_document_for_slug(slug, (i + 1).hours.ago, format)
     end
-
     results.each_slice(page_size).with_index do |results_page, page|
       start = page * page_size
-      stub_any_search
-      .with(
-        query:
-          hash_including(
-            {
-              "start" => start.to_s,
-              "count" => page_size.to_s,
-              "filter_topic_content_ids" => [subtopic_content_id],
-            },
-          ),
-      ).to_return(
-        body: {
-          "results" => results_page,
-          "start" => start,
-          "total" => results.size,
-        }.to_json,
-      )
+      params = {
+        "start" => start.to_s,
+        "count" => page_size.to_s,
+        "filter_topic_content_ids" => [subtopic_content_id],
+      }
+      body = {
+        "results" => results_page,
+        "start" => start,
+        "total" => results.size,
+      }
+      stub_search(params: params, body: body)
     end
   end
 
@@ -244,23 +232,17 @@ module SearchApiHelpers
 
     results.each_slice(page_size).with_index do |results_page, page|
       start = page * page_size
-      stub_any_search
-      .with(
-        query:
-          hash_including(
-            {
-              start: start.to_s,
-              count: page_size.to_s,
-              filter_mainstream_browse_page_content_ids: [browse_page_content_id],
-            },
-          ),
-      ).to_return(
-        body: {
-          "results" => results_page,
-          "start" => start,
-          "total" => results.size,
-        }.to_json,
-      )
+      params = {
+        start: start.to_s,
+        count: page_size.to_s,
+        filter_mainstream_browse_page_content_ids: [browse_page_content_id],
+      }
+      body = {
+        "results" => results_page,
+        "start" => start,
+        "total" => results.size,
+      }
+      stub_search(params: params, body: body)
     end
   end
 
@@ -271,30 +253,19 @@ module SearchApiHelpers
 
     results.each_slice(page_size).with_index do |results_page, page|
       start = page * page_size
-      stub_any_search
-      .with(
-        query: {
-          start: start.to_s,
-          count: page_size.to_s,
-          filter_mainstream_browse_page_content_ids: [browse_page_content_id],
-          fields: %w[title link format],
-        },
-      ).to_return(
-        body: {
-          "results" => results_page,
-          "start" => start,
-          "total" => results.size,
-        }.to_json,
-      )
+      params = {
+        start: start.to_s,
+        count: page_size.to_s,
+        filter_mainstream_browse_page_content_ids: [browse_page_content_id],
+        fields: %w[title link format],
+      }
+      body = {
+        "results" => results_page,
+        "start" => start,
+        "total" => results.size,
+      }
+      stub_search(params: params, body: body)
     end
-  end
-
-  def expect_search_params(params)
-    stub_any_search
-      .with(
-        query: hash_including(params),
-      )
-      .to_return("body" => :some_results).to_json
   end
 
   def section_tagged_content_list(doc_type, count = 1)
@@ -330,15 +301,12 @@ module SearchApiHelpers
       order: "-public_timestamp",
     }.merge(additional_params)
 
-    stub_any_search
-      .with(query: hash_including(params))
-      .to_return(
-        body: {
-          "results" => results,
-          "start" => "0",
-          "total" => results.size,
-        }.to_json,
-      )
+    body = {
+      "results" => results,
+      "start" => "0",
+      "total" => results.size,
+    }
+    stub_search(params: params, body: body)
   end
 
   # arrays are sorted when webmock turns the parameters hash into a query string.

@@ -1,8 +1,8 @@
-require "test_helper"
+RSpec.describe Person do
+  include SearchApiHelpers
 
-describe Person do
-  setup do
-    @api_data = {
+  let(:api_data) do
+    {
       "base_path" => "/government/people/boris-johnson",
       "links" => {
         "role_appointments" => [
@@ -46,41 +46,44 @@ describe Person do
         ],
       },
     }
-    @content_item = ContentItem.new(@api_data)
-    @person = Person.new(@content_item)
   end
+  let(:content_item) { ContentItem.new(api_data) }
+  let(:person) { described_class.new(content_item) }
 
   describe "current_roles_title" do
     it "combines the titles into a sentence" do
-      assert_equal "Prime Minister and First Lord of the Treasury", @person.current_roles_title
+      expect(person.current_roles_title).to eq("Prime Minister and First Lord of the Treasury")
     end
   end
 
   describe "currently_in_a_role?" do
     it "returns true if the person has a current role appointment" do
-      assert @person.currently_in_a_role?
+      expect(person.currently_in_a_role?).to be(true)
     end
 
     it "returns false if the person doesn't have a current role appointment" do
-      @api_data["links"]["role_appointments"][0]["details"]["current"] = false
-      @api_data["links"]["role_appointments"][1]["details"]["current"] = false
-      assert_not @person.currently_in_a_role?
+      api_data["links"]["role_appointments"][0]["details"]["current"] = false
+      api_data["links"]["role_appointments"][1]["details"]["current"] = false
+      expect(person.currently_in_a_role?).to be(false)
     end
   end
 
   describe "ordered previous appointments" do
     it "should have previous appointment text" do
-      assert_equal "Secretary of State for Foreign and Commonwealth Affairs", @person.previous_roles_items.first[:link][:text]
+      text = person.previous_roles_items.first[:link][:text]
+
+      expect(text).to eq("Secretary of State for Foreign and Commonwealth Affairs")
     end
 
     it "should have previous appointment duration text" do
-      assert_equal "2016 to 2018", @person.previous_roles_items.first[:metadata][:appointment_duration]
+      duration = person.previous_roles_items.first[:metadata][:appointment_duration]
+      expect(duration).to eq("2016 to 2018")
     end
   end
 
   describe "announcements" do
-    setup do
-      @results = [
+    before do
+      results = [
         { "title" => "Government announces further support for those affected by flooding",
           "link" => "/government/news/government-announces-further-support-for-those-affected-by-flooding",
           "content_store_document_type" => "press_release",
@@ -92,27 +95,33 @@ describe Person do
           "document_type" => "edition" },
       ]
 
-      Services.search_api.stubs(:search).returns(
-        "results" => @results,
+      body = {
+        "results" => results,
         "start" => 0,
         "total" => 1,
-      )
+      }
+
+      stub_search(body: body)
     end
 
     it "should have announcements" do
-      assert_equal "Government announces further support for those affected by flooding", @person.announcements.items.first[:link][:text]
+      text = person.announcements.items.first[:link][:text]
+      expect(text).to eq("Government announces further support for those affected by flooding")
     end
 
     it "should have link to news and communications finder" do
-      assert_equal "/search/news-and-communications?people=boris-johnson", @person.announcements.links[:link_to_news_and_communications]
+      link = person.announcements.links[:link_to_news_and_communications]
+      expect(link).to eq("/search/news-and-communications?people=boris-johnson")
     end
 
     it "should have link to email signup" do
-      assert_equal "/email-signup?link=/government/people/boris-johnson", @person.announcements.links[:email_signup]
+      link = person.announcements.links[:email_signup]
+      expect(link).to eq("/email-signup?link=/government/people/boris-johnson")
     end
 
     it "should have link to subscription atom feed" do
-      assert_equal "/search/news-and-communications.atom?people=boris-johnson", @person.announcements.links[:subscribe_to_feed]
+      link = person.announcements.links[:subscribe_to_feed]
+      expect(link).to eq("/search/news-and-communications.atom?people=boris-johnson")
     end
   end
 end

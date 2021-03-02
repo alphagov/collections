@@ -1,6 +1,4 @@
-require "test_helper"
-
-describe MapitPostcodeResponse do
+RSpec.describe MapitPostcodeResponse do
   let(:mapit_location) do
     {
       "codes" => {
@@ -15,19 +13,19 @@ describe MapitPostcodeResponse do
   end
 
   it "returns the gss code" do
-    assert_equal("E01000123", described_class.new(mapit_location).gss)
+    expect(described_class.new(mapit_location).gss).to eq("E01000123")
   end
 
   it "returns the area name" do
-    assert_equal("Coruscant Planetary Council", described_class.new(mapit_location).area_name)
+    expect(described_class.new(mapit_location).area_name).to eq("Coruscant Planetary Council")
   end
 
   it "returns the country" do
-    assert_equal("England", described_class.new(mapit_location).country)
+    expect(described_class.new(mapit_location).country).to eq("England")
   end
 
   it "returns the area type" do
-    assert_equal("LBO", described_class.new(mapit_location).area_type)
+    expect(described_class.new(mapit_location).area_type).to eq("LBO")
   end
 
   describe "#england?" do
@@ -40,7 +38,7 @@ describe MapitPostcodeResponse do
     it "returns true if the country is Scotland" do
       mapit_location["country_name"] = "Scotland"
 
-      assert(described_class.new(mapit_location).scotland?)
+      expect(described_class.new(mapit_location).scotland?).to be(true)
     end
   end
 
@@ -48,7 +46,7 @@ describe MapitPostcodeResponse do
     it "returns true if the country is Wales" do
       mapit_location["country_name"] = "Wales"
 
-      assert(described_class.new(mapit_location).wales?)
+      expect(described_class.new(mapit_location).wales?).to be(true)
     end
   end
 
@@ -56,7 +54,7 @@ describe MapitPostcodeResponse do
     it "returns true if the country is Northern Ireland" do
       mapit_location["country_name"] = "Northern Ireland"
 
-      assert(described_class.new(mapit_location).northern_ireland?)
+      expect(described_class.new(mapit_location).northern_ireland?).to be(true)
     end
   end
 end

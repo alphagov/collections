@@ -1,32 +1,28 @@
-require "test_helper"
-
-describe Taxon do
+RSpec.describe Taxon do
   include TaxonHelpers
 
-  context "without associate_taxons" do
-    setup do
-      content_item = ContentItem.new(student_finance_taxon)
-      @taxon = Taxon.new(content_item)
-    end
+  let(:content_item) { ContentItem.new(student_finance_taxon) }
+  subject { described_class.new(content_item) }
 
+  context "without associate_taxons" do
     it "has a title" do
-      assert_equal @taxon.title, student_finance_taxon["title"]
+      expect(student_finance_taxon["title"]).to eq(subject.title)
     end
 
     it "has a description" do
-      assert_equal @taxon.description, student_finance_taxon["description"]
+      expect(student_finance_taxon["description"]).to eq(subject.description)
     end
 
     it "has a content id" do
-      assert_equal @taxon.content_id, student_finance_taxon["content_id"]
+      expect(student_finance_taxon["content_id"]).to eq(subject.content_id)
     end
 
     it "has a base path" do
-      assert_equal @taxon.base_path, student_finance_taxon["base_path"]
+      expect(student_finance_taxon["base_path"]).to eq(subject.base_path)
     end
 
     it "has a phase" do
-      assert_equal @taxon.phase, student_finance_taxon["phase"]
+      expect(student_finance_taxon["phase"]).to eq(subject.phase)
     end
 
     it "errors if phase is not found" do
@@ -34,28 +30,28 @@ describe Taxon do
       student_finance_taxon_without_phase.delete("phase")
 
       content_item = ContentItem.new(student_finance_taxon_without_phase)
-      @taxon_without_phase = Taxon.new(content_item)
+      taxon_without_phase = Taxon.new(content_item)
 
-      assert_raises(RuntimeError) { @taxon_without_phase.phase }
+      expect { taxon_without_phase.phase }.to raise_error(RuntimeError)
     end
 
     it "checks if content is live" do
-      assert(@taxon.live_taxon?)
+      expect(subject.live_taxon?).to be(true)
     end
 
     it "has two taxon children" do
-      assert_equal @taxon.child_taxons.length, 2
+      expect(subject.child_taxons.length).to eq(2)
 
-      @taxon.child_taxons.each do |child|
-        assert_instance_of Taxon, child
-        assert_includes ["Student sponsorship", "Student loans"], child.title
+      subject.child_taxons.each do |child|
+        expect(child).to be_an_instance_of(Taxon)
+        expect(["Student sponsorship", "Student loans"]).to include(child.title)
       end
     end
   end
 
   context "with a child in the alpha phase" do
-    setup do
-      content_item = ContentItem.new(
+    let(:content_item) do
+      ContentItem.new(
         student_finance_taxon(
           "links" => {
             "child_taxons" => [
@@ -73,12 +69,11 @@ describe Taxon do
           },
         ),
       )
-      @taxon = Taxon.new(content_item)
     end
 
     it "ignores children in the alpha phase" do
-      assert_equal "Foo", @taxon.child_taxons[0].title
-      assert_equal 1, @taxon.child_taxons.length
+      expect(subject.child_taxons[0].title).to eq("Foo")
+      expect(subject.child_taxons.length).to eq(1)
     end
   end
 end

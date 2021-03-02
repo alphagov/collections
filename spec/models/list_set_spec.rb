@@ -1,11 +1,8 @@
-require "test_helper"
-
-describe ListSet do
+RSpec.describe ListSet do
   include SearchApiHelpers
-
-  describe "for a curated subtopic" do
-    setup do
-      @group_data = [
+  context "for a curated subtopic" do
+    let(:group_data) do
+      [
         {
           "name" => "Paying HMRC",
           "contents" => [
@@ -23,7 +20,11 @@ describe ListSet do
           ],
         },
       ]
+    end
 
+    let(:list_set) { described_class.new("specialist_sector", "paye-content-id", group_data) }
+
+    before do
       search_api_has_documents_for_subtopic(
         "paye-content-id",
         %w[
@@ -36,50 +37,51 @@ describe ListSet do
         ],
         page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       )
-
-      @list_set = ListSet.new("specialist_sector", "paye-content-id", @group_data)
     end
 
     it "returns the groups in the curated order" do
-      assert_equal ["Paying HMRC", "Annual PAYE and payroll tasks"], @list_set.map(&:title)
+      expect(list_set.map(&:title)).to eq(["Paying HMRC", "Annual PAYE and payroll tasks"])
     end
 
     it "provides the title and base_path for group items" do
-      groups = @list_set.to_a
+      groups = list_set.to_a
 
-      assert_equal "Employee tax codes", groups[1].contents.to_a[2].title
-      assert_equal "/pay-psa", groups[0].contents.to_a[1].base_path
+      expect(groups[1].contents.to_a[2].title).to eq("Employee tax codes")
+      expect(groups[0].contents.to_a[1].base_path).to eq("/pay-psa")
     end
 
     it "skips items no longer tagged to this subtopic" do
-      @group_data[0]["contents"] << "/pay-bear-tax"
+      group_data[0]["contents"] << "/pay-bear-tax"
 
-      groups = @list_set.to_a
-      assert_equal 3, groups[0].contents.size
-      assert_not groups[0]["contents"].map(&:base_path).include?("/pay-bear-tax")
+      groups = list_set.to_a
+      expect(groups[0].contents.size).to eq(3)
+      expect(groups[0]["contents"].map(&:base_path)).not_to include("/pay-bear-tax")
     end
 
     it "omits groups with no active items in them" do
-      @group_data << {
+      group_data << {
         "name" => "Group with untagged items",
         "contents" => [
           "/pay-bear-tax",
         ],
       }
-      @group_data << {
+      group_data << {
         "name" => "Empty group",
         "contents" => [],
       }
 
-      assert_equal 2, @list_set.count
-      list_titles = @list_set.map(&:title)
-      assert_not list_titles.include?("Group with untagged items")
-      assert_not list_titles.include?("Empty group")
+      expect(list_set.count).to eq(2)
+      list_titles = list_set.map(&:title)
+      expect(list_titles).not_to include("Group with untagged items")
+      expect(list_titles).not_to include("Empty group")
     end
   end
 
-  describe "for a non-curated topic" do
-    setup do
+  context "for a non-curated topic" do
+    let(:list_set_empty_data) { described_class.new("specialist_sector", "paye-content-id", []) }
+    let(:list_set_nil_data) { described_class.new("specialist_sector", "paye-content-id", nil) }
+
+    before do
       search_api_has_documents_for_subtopic(
         "paye-content-id",
         %w[
@@ -92,12 +94,11 @@ describe ListSet do
         ],
         page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       )
-      @list_set = ListSet.new("specialist_sector", "paye-content-id", [])
     end
 
     it "constructs a single A-Z group" do
-      assert_equal 1, @list_set.to_a.size
-      assert_equal "A to Z", @list_set.first.title
+      expect(list_set_empty_data.to_a.size).to eq(1)
+      expect(list_set_empty_data.first.title).to eq("A to Z")
     end
 
     it "includes content tagged to the topic in alphabetical order" do
@@ -109,34 +110,32 @@ describe ListSet do
         "Pay psa",
         "Payroll annual reporting",
       ]
-      assert_equal expected_titles, @list_set.first.contents.map(&:title)
+      expect(list_set_empty_data.first.contents.map(&:title)).to eq(expected_titles)
     end
 
     it "includes the base_path for all items" do
-      assert_equal "/pay-paye-tax", @list_set.first.contents.to_a[3].base_path
+      expect(list_set_empty_data.first.contents.to_a.[](3).base_path).to eq("/pay-paye-tax")
     end
 
     it "handles nil data the same as empty array" do
-      @list_set = ListSet.new("specialist_sector", "paye-content-id", nil)
-      assert_equal 1, @list_set.to_a.size
-      assert_equal "A to Z", @list_set.first.title
+      expect(list_set_nil_data.to_a.size).to eq(1)
+      expect(list_set_nil_data.first.title).to eq("A to Z")
     end
   end
 
   describe "fetching content tagged to this tag" do
-    setup do
-      @subtopic_content_id = "paye-content-id"
-      search_api_has_documents_for_subtopic(
-        @subtopic_content_id,
-        %w[
-          pay-paye-penalty
-          pay-paye-tax
-          pay-psa
-          employee-tax-codes
-          payroll-annual-reporting
-        ],
-        page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
-      )
+    let(:list_set) { described_class.new("specialist_sector", "paye-content-id") }
+
+    before do
+      search_api_has_documents_for_subtopic("paye-content-id",
+                                            %w[
+                                              pay-paye-penalty
+                                              pay-paye-tax
+                                              pay-psa
+                                              employee-tax-codes
+                                              payroll-annual-reporting
+                                            ],
+                                            page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING)
     end
 
     it "returns the content for the tag" do
@@ -147,41 +146,45 @@ describe ListSet do
         "Employee tax codes",
         "Payroll annual reporting",
       ]
-
-      assert_equal expected_titles.sort, ListSet.new("specialist_sector", @subtopic_content_id).first.contents.map(&:title).sort
+      titles = list_set.first.contents.map(&:title).sort
+      expect(titles).to eq(expected_titles.sort)
     end
 
     it "provides the title, base_path for each document" do
-      documents = ListSet.new("specialist_sector", @subtopic_content_id).first.contents
+      documents = list_set.first.contents
 
-      assert_equal "/pay-paye-tax", documents[2].base_path
-      assert_equal "Pay paye tax", documents[2].title
+      expect(documents.[](2).base_path).to eq("/pay-paye-tax")
+      expect(documents.[](2).title).to eq("Pay paye tax")
     end
   end
 
   describe "handling missing fields in the search results" do
+    let(:list_set) { described_class.new("specialist_sector", "paye-content-id") }
     it "handles documents that don't contain the public_timestamp field" do
       result = search_api_document_for_slug("pay-psa")
       result.delete("public_timestamp")
 
-      Services.search_api.stubs(:search).with(
-        has_entries(filter_topic_content_ids: %w[paye-content-id]),
-      ).returns("results" => [result],
-                "start" => 0,
-                "total" => 1)
+      params = {
+        "filter_topic_content_ids" => %w[paye-content-id],
+      }
+      body = {
+        "results" => [result],
+        "start" => 0,
+        "total" => 1,
+      }
 
-      documents = ListSet.new("specialist_sector", "paye-content-id").first.contents
+      stub_search(params: params, body: body)
 
-      assert_equal 1, documents.to_a.size
-      assert_equal "Pay psa", documents.first.title
-      assert_nil documents.first.public_updated_at
+      documents = list_set.first.contents
+
+      expect(documents.to_a.size).to eq(1)
+      expect(documents.first.title).to eq("Pay psa")
+      expect(documents.first.public_updated_at).to be_nil
     end
   end
 
   describe "filtering uncurated lists" do
-    before do
-      @list_set = ListSet.new("section", "content-id-for-living-abroad")
-    end
+    let(:list_set) { described_class.new("section", "content-id-for-living-abroad") }
 
     it "shouldn't display a document if its format is excluded" do
       search_api_has_documents_for_browse_page(
@@ -191,7 +194,7 @@ describe ListSet do
         page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       )
 
-      assert_equal 0, @list_set.first.contents.length
+      expect(list_set.first.contents.length).to eq(0)
     end
 
     it "should display a document if its format isn't excluded" do
@@ -202,9 +205,9 @@ describe ListSet do
         page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       )
 
-      results = @list_set.first.contents
-      assert_equal 1, results.length
-      assert_equal "Baz", results.first.title
+      results = list_set.first.contents
+      expect(results.length).to eq(1)
+      expect(results.first.title).to eq("Baz")
     end
   end
 end

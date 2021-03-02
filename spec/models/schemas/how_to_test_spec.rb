@@ -1,6 +1,4 @@
-require "test_helper"
-
-describe Schemas::HowTo do
+RSpec.describe Schemas::HowTo do
   describe "#structured_data" do
     it "generates structured data using the HowTo schema" do
       content_item = GovukSchemas::Example.find("step_by_step_nav", example_name: "learn_to_drive_a_car")
@@ -243,8 +241,7 @@ describe Schemas::HowTo do
           },
         ],
       }
-
-      assert_equal expected.deep_stringify_keys, how_to.structured_data.deep_stringify_keys
+      expect(expected.deep_stringify_keys).to eq how_to.structured_data.deep_stringify_keys
     end
   end
 end
