@@ -37,6 +37,31 @@ module SearchApiHelpers
       .returns(supergroup)
   end
 
+  def stub_minister_announcements(role)
+    fields = %w[title link content_store_document_type public_timestamp]
+    params = {
+      count: "10",
+      order: "-public_timestamp",
+      reject_content_purpose_supergroup: "other",
+      fields: webmock_match_array(fields),
+      filter_roles: role,
+    }
+    results = [
+      {
+        "title" => "foo",
+        "link" => "/foo",
+        "public_timestamp" => "2010-05-12T00:00:00+01:00",
+        "content_store_document_type" => "",
+      },
+    ]
+    body = {
+      "results" => results,
+      "start" => 0,
+      "total" => results.size,
+    }
+    stub_search(params: params, body: body)
+  end
+
   def stub_most_popular_content_for_taxon(content_id, results,
                                           filter_content_store_document_type: %w[detailed_guide manual])
     fields = SearchApiFields::TAXON_SEARCH_FIELDS
