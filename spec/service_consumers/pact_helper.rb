@@ -26,17 +26,19 @@ def url_encode(str)
   ERB::Util.url_encode(str)
 end
 
+def pact_broker_base_url
+  "https://pact-broker.cloudapps.digital"
+end
+
 Pact.service_provider "Collections Organisation API" do
   app { ProxyApp.new(Rails.application) }
   honours_pact_with "GDS API Adapters" do
-    if ENV["USE_LOCAL_PACT"]
-      pact_uri ENV.fetch("GDS_API_PACT_PATH", "../gds-api-adapters/spec/pacts/gds_api_adapters-collections_organisation_api.json")
+    if ENV["PACT_URI"]
+      pact_uri(ENV["PACT_URI"])
     else
-      base_url = ENV.fetch("PACT_BROKER_BASE_URL", "https://pact-broker.cloudapps.digital")
-      url = "#{base_url}/pacts/provider/#{url_encode(name)}/consumer/#{url_encode(consumer_name)}"
-      version_part = "versions/#{url_encode(ENV.fetch('GDS_API_ADAPTERS_PACT_VERSION', 'master'))}"
-
-      pact_uri "#{url}/#{version_part}"
+      path = "pacts/provider/#{url_encode(name)}/consumer/#{url_encode(consumer_name)}"
+      version_modifier = "versions/#{url_encode(ENV.fetch('GDS_API_ADAPTERS_PACT_VERSION', 'master'))}"
+      pact_uri("#{pact_broker_base_url}/#{path}/#{version_modifier}")
     end
   end
 end
