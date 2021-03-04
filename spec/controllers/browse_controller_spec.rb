@@ -1,6 +1,4 @@
-require "test_helper"
-
-describe BrowseController do
+RSpec.describe BrowseController do
   describe "GET index" do
     before do
       stub_content_store_has_item(
@@ -14,7 +12,7 @@ describe BrowseController do
     it "set correct expiry headers" do
       get :index
 
-      assert_equal "max-age=1800, public", response.headers["Cache-Control"]
+      expect(response.headers["Cache-Control"]).to eq("max-age=1800, public")
     end
   end
 
@@ -34,7 +32,7 @@ describe BrowseController do
       it "sets correct expiry headers" do
         get :show, params: { top_level_slug: "benefits" }
 
-        assert_equal "max-age=1800, public", response.headers["Cache-Control"]
+        expect(response.headers["Cache-Control"]).to eq("max-age=1800, public")
       end
     end
 
@@ -43,7 +41,7 @@ describe BrowseController do
 
       get :show, params: { top_level_slug: "banana" }
 
-      assert_response 404
+      expect(response).to have_http_status(404)
     end
   end
 
