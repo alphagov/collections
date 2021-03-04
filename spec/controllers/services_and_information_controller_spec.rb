@@ -1,6 +1,4 @@
-require "test_helper"
-
-describe ServicesAndInformationController do
+RSpec.describe ServicesAndInformationController do
   include SearchApiHelpers
   include ServicesAndInformationHelpers
 
@@ -11,7 +9,7 @@ describe ServicesAndInformationController do
 
       get :index, params: { organisation_id: "hm-revenue-customs" }
 
-      assert_equal "max-age=1800, public", response.headers["Cache-Control"]
+      expect(response.headers["Cache-Control"]).to eq("max-age=1800, public")
     end
   end
 
@@ -21,7 +19,7 @@ describe ServicesAndInformationController do
 
       get :index, params: { organisation_id: "hm-revenue-customs" }
 
-      assert_equal 404, response.status
+      expect(response).to have_http_status(:not_found)
     end
 
     it "renders the page correctly when there are unexpanded links in the search_api results" do
@@ -30,7 +28,7 @@ describe ServicesAndInformationController do
 
       get :index, params: { organisation_id: "hm-revenue-customs" }
 
-      assert_equal 200, response.status
+      expect(response).to have_http_status(:success)
     end
   end
 end
