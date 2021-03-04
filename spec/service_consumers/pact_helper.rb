@@ -1,13 +1,21 @@
 require "pact/provider/rspec"
 require "webmock/rspec"
-require_relative "../../test/support/organisations_api_test_helper"
+require "gds_api"
 require ::File.expand_path("../../config/environment", __dir__)
+require "gds_api/test_helpers/search"
+
+require_relative "../../app/services/search_api_fields"
+require_relative "../../test/support/organisations_api_test_helper"
+require_relative "../../test/support/search_api_helpers"
 
 Pact.configure do |config|
   config.reports_dir = "spec/reports/pacts"
   config.include WebMock::API
   config.include WebMock::Matchers
   config.include OrganisationsApiTestHelper
+  config.include SearchApiHelpers
+  config.include SearchApiFields
+  config.include GdsApi::TestHelpers::Search
 end
 
 class ProxyApp
@@ -55,50 +63,34 @@ Pact.provider_states_for "GDS API Adapters" do
 
   provider_state "there is a list of organisations" do
     set_up do
-      Services
-      .search_api
-      .stub(:search)
-      .with(organisations_params) { search_api_organisations_results }
+      stub_search(params: organisations_params, body: search_api_organisations_results)
     end
   end
 
   provider_state "the organisation list is paginated, beginning at page 1" do
     set_up do
-      Services
-      .search_api
-      .stub(:search)
-      .with(organisations_params) { search_api_organisations_two_pages_of_results }
+      stub_search(params: organisations_params, body: search_api_organisations_two_pages_of_results)
     end
   end
 
   provider_state "the organisation list is paginated, beginning at page 2" do
     set_up do
-      Services
-      .search_api
-      .stub(:search)
-      .with(organisations_params(start: 20)) { search_api_organisations_two_pages_of_results }
+      paginated_params = organisations_params(start: "20")
+      stub_search(params: paginated_params, body: search_api_organisations_two_pages_of_results)
     end
   end
 
   provider_state "the organisation hmrc exists" do
     set_up do
-      Services
-      .search_api
-      .stub(:search)
-      .with(
-        organisation_params(slug: "hm-revenue-customs"),
-      ) { search_api_organisation_results }
+      hmrc = organisation_params(slug: "hm-revenue-customs")
+      stub_search(params: hmrc, body: search_api_organisation_results)
     end
   end
 
   provider_state "no organisation exists" do
     set_up do
-      Services
-      .search_api
-      .stub(:search)
-      .with(
-        organisation_params(slug: "department-for-making-life-better"),
-      ) { search_api_organisation_no_results }
+      better = organisation_params(slug: "department-for-making-life-better")
+      stub_search(params: better, body: search_api_organisation_no_results)
     end
   end
 end

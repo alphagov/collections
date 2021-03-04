@@ -1,9 +1,9 @@
 module OrganisationsApiTestHelper
-  def organisations_params(start: 0)
+  def organisations_params(start: "0")
     {
       filter_format: "organisation",
       order: "title",
-      count: 20,
+      count: "20",
       start: start,
     }
   end
@@ -12,8 +12,8 @@ module OrganisationsApiTestHelper
     {
       filter_format: "organisation",
       filter_slug: slug,
-      count: 1,
-      start: 0,
+      count: "1",
+      start: "0",
     }
   end
 

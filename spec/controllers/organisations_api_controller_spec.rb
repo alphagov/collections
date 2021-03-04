@@ -1,16 +1,11 @@
 RSpec.describe OrganisationsApiController do
   include OrganisationsApiTestHelper
+  include SearchApiHelpers
   describe "GET index" do
     before do
-      allow(Services.search_api)
-      .to receive(:search)
-      .with(organisations_params)
-      .and_return(search_api_organisations_results)
-
-      allow(Services.search_api)
-      .to receive(:search)
-      .with(organisations_params(start: 20))
-      .and_return(search_api_organisations_many_results)
+      stub_search(params: organisations_params, body: search_api_organisations_results)
+      paginated = organisations_params(start: "20")
+      stub_search(params: paginated, body: search_api_organisations_many_results)
     end
 
     it "renders JSON" do
@@ -39,15 +34,11 @@ RSpec.describe OrganisationsApiController do
 
   describe "GET show" do
     before do
-      allow(Services.search_api)
-      .to receive(:search)
-      .with(organisation_params(slug: "hm-revenue-customs"))
-      .and_return(search_api_organisation_results)
+      hmrc = organisation_params(slug: "hm-revenue-customs")
+      stub_search(params: hmrc, body: search_api_organisation_results)
 
-      allow(Services.search_api)
-      .to receive(:search)
-      .with(organisation_params(slug: "something-else"))
-      .and_return(search_api_organisation_no_results)
+      something_else = organisation_params(slug: "something-else")
+      stub_search(params: something_else, body: search_api_organisation_no_results)
     end
 
     it "renders JSON" do
@@ -80,7 +71,7 @@ RSpec.describe OrganisationsApiController do
 
     it "renders a 404 error if the organisation is not found" do
       get :show, params: { organisation_name: "something-else" }, format: :json
-      expect(response.status).to eq(404)
+      expect(response).to have_http_status(:not_found)
     end
   end
 end
