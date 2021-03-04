@@ -1,7 +1,6 @@
-require "test_helper"
-
-describe DitLandingPageController do
+RSpec.describe DitLandingPageController do
   include DitLandingPageHelpers
+  render_views
 
   before do
     stub_all_eubusiness_pages
@@ -20,17 +19,17 @@ describe DitLandingPageController do
     expected_content.each_key do |locale|
       it "renders translated page for the #{locale} locale" do
         get :show, params: { locale: locale }
-        assert_response :success
-        assert_select "h1", expected_content[locale]
-        assert_select "main[lang=#{locale}]"
+        expect(response).to have_http_status(:success)
+        expect(response.body).to have_selector("h1", text: expected_content[locale])
+        expect(response.body).to have_selector("main[lang=#{locale}]")
       end
     end
 
     it "renders the English page" do
       get :show
-      assert_response :success
-      assert_select "h1", I18n.t!("dit_landing_page.page_header")
-      assert_select "main[lang=en]", false
+      expect(response).to have_http_status(:success)
+      expect(response.body).to have_selector("h1", text: I18n.t!("dit_landing_page.page_header"))
+      expect(response).not_to have_selector("main[lang=en]")
     end
   end
 end
