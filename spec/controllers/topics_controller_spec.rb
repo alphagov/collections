@@ -1,6 +1,4 @@
-require "test_helper"
-
-describe TopicsController do
+RSpec.describe TopicsController do
   include SearchApiHelpers
 
   describe "GET topic" do
@@ -12,7 +10,7 @@ describe TopicsController do
       it "sets expiry headers for 30 minutes" do
         get :show, params: { topic_slug: "oil-and-gas" }
 
-        assert_equal "max-age=1800, public", response.headers["Cache-Control"]
+        expect(response.headers["Cache-Control"]).to eq("max-age=1800, public")
       end
     end
 
@@ -20,7 +18,7 @@ describe TopicsController do
       stub_content_store_does_not_have_item("/topic/oil-and-gas")
       get :show, params: { topic_slug: "oil-and-gas" }
 
-      assert_equal 404, response.status
+      expect(response).to have_http_status(:not_found)
     end
   end
 
