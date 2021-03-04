@@ -1,84 +1,86 @@
-require "test_helper"
-
-describe OrganisationsApiController do
+RSpec.describe OrganisationsApiController do
   include OrganisationsApiTestHelper
   describe "GET index" do
-    setup do
-      Services.search_api.stubs(:search)
+    before do
+      allow(Services.search_api)
+      .to receive(:search)
       .with(organisations_params)
-      .returns(search_api_organisations_results)
+      .and_return(search_api_organisations_results)
 
-      Services.search_api.stubs(:search)
+      allow(Services.search_api)
+      .to receive(:search)
       .with(organisations_params(start: 20))
-      .returns(search_api_organisations_many_results)
+      .and_return(search_api_organisations_many_results)
     end
 
     it "renders JSON" do
       get :index, format: :json
-      assert_equal 200, response.status
+      expect(response.status).to eq(200)
 
       body = JSON.parse(response.body)
-      assert_equal 2, body["results"].count
-      assert_equal "HM Revenue & Customs", body["results"][1]["title"]
+      expect(body["results"].count).to eq(2)
+      expect(body["results"][1]["title"]).to eq("HM Revenue & Customs")
     end
 
     it "paginates the results" do
       get :index, format: :json
       body = JSON.parse(response.body)
 
-      assert_equal 1, body["current_page"]
-      assert_equal "ok", body["_response_info"]["status"]
+      expect(body["current_page"]).to eq(1)
+      expect(body["_response_info"]["status"]).to eq("ok")
     end
 
     it "sets the Link HTTP header" do
       get :index, format: :json, params: { page: 2 }
-
-      assert_equal '<http://test.host/api/organisations?page=1>; rel="previous", <http://test.host/api/organisations?page=3>; rel="next", <http://test.host/api/organisations?page=2>; rel="self"', response.headers["Link"]
+      link = "<http://test.host/api/organisations?page=1>; rel=\"previous\", <http://test.host/api/organisations?page=3>; rel=\"next\", <http://test.host/api/organisations?page=2>; rel=\"self\""
+      expect(response.headers["Link"]).to eq(link)
     end
   end
 
   describe "GET show" do
-    setup do
-      Services.search_api.stubs(:search)
+    before do
+      allow(Services.search_api)
+      .to receive(:search)
       .with(organisation_params(slug: "hm-revenue-customs"))
-      .returns(search_api_organisation_results)
+      .and_return(search_api_organisation_results)
 
-      Services.search_api.stubs(:search)
+      allow(Services.search_api)
+      .to receive(:search)
       .with(organisation_params(slug: "something-else"))
-      .returns(search_api_organisation_no_results)
+      .and_return(search_api_organisation_no_results)
     end
 
     it "renders JSON" do
       get :show, params: { organisation_name: "hm-revenue-customs" }, format: :json
-      assert_equal 200, response.status
+      expect(response.status).to eq(200)
 
       body = JSON.parse(response.body)
-      assert_equal "HM Revenue & Customs", body["title"]
+      expect(body["title"]).to eq("HM Revenue & Customs")
     end
 
     it "does not paginate the results" do
       get :show, params: { organisation_name: "hm-revenue-customs" }, format: :json
       body = JSON.parse(response.body)
 
-      assert_nil body["current_page"]
+      expect(body["current_page"]).to be_nil
     end
 
     it "sets the Link HTTP header" do
       get :show, params: { organisation_name: "hm-revenue-customs" }, format: :json
-
-      assert_equal '<http://test.host/api/organisations/hm-revenue-customs>; rel="self"', response.headers["Link"]
+      link = "<http://test.host/api/organisations/hm-revenue-customs>; rel=\"self\""
+      expect(response.headers["Link"]).to eq(link)
     end
 
     it "adds _response_info" do
       get :show, params: { organisation_name: "hm-revenue-customs" }, format: :json
       body = JSON.parse(response.body)
 
-      assert_equal "ok", body["_response_info"]["status"]
+      expect(body["_response_info"]["status"]).to eq("ok")
     end
 
     it "renders a 404 error if the organisation is not found" do
       get :show, params: { organisation_name: "something-else" }, format: :json
-      assert_equal 404, response.status
+      expect(response.status).to eq(404)
     end
   end
 end
