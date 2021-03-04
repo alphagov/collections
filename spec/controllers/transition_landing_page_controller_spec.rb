@@ -1,6 +1,4 @@
-require "test_helper"
-
-describe TransitionLandingPageController do
+RSpec.describe TransitionLandingPageController do
   include TaxonHelpers
 
   describe "GET show" do
@@ -16,35 +14,35 @@ describe TransitionLandingPageController do
 
       it "renders the page for the #{locale} locale" do
         get :show, params: params
-        assert_response :success
+        expect(response).to have_http_status(:success)
       end
     end
 
     describe "accounts are enabled" do
       before do
-        Rails.configuration.stubs(:feature_flag_govuk_accounts).returns(true)
+        allow(Rails.configuration).to receive(:feature_flag_govuk_accounts).and_return(true)
       end
 
       it "disables the search field" do
         get :show
-        assert_equal "true", response.headers["X-Slimmer-Remove-Search"]
+        expect(response.headers["X-Slimmer-Remove-Search"]).to eq("true")
       end
 
       it "sets the Vary: GOVUK-Account-Session response header" do
         get :show
-        assert response.headers["Vary"].include? "GOVUK-Account-Session"
+        expect(response.headers["Vary"]).to include("GOVUK-Account-Session")
       end
 
       it "requests the signed-out header" do
         get :show
-        assert_equal "signed-out", response.headers["X-Slimmer-Show-Accounts"]
+        expect(response.headers["X-Slimmer-Show-Accounts"]).to eq("signed-out")
       end
 
       context "the GOVUK-Account-Session header is set" do
         it "requests the signed-in header" do
           request.headers["GOVUK-Account-Session"] = "foo"
           get :show
-          assert_equal "signed-in", response.headers["X-Slimmer-Show-Accounts"]
+          expect(response.headers["X-Slimmer-Show-Accounts"]).to eq("signed-in")
         end
       end
     end

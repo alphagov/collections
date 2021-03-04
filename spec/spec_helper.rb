@@ -6,6 +6,7 @@ require File.expand_path("../config/environment", __dir__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require "rspec/rails"
 require "gds_api/test_helpers/search"
+require "gds_api/test_helpers/content_store"
 require "webmock/rspec"
 
 # The helpers in the test/support directory are used by minitest specs that are not yet
@@ -18,6 +19,7 @@ Dir[Rails.root.join("spec/support/**/*.rb")].sort.each { |f| require f }
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.include GdsApi::TestHelpers::Search
+  config.include GdsApi::TestHelpers::ContentStore
   config.include ActiveSupport::Testing::TimeHelpers
   config.use_active_record = false
   config.infer_spec_type_from_file_location!
