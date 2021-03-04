@@ -180,6 +180,15 @@ To test a single file:
 
 Use `bundle exec rake jasmine:ci` to run Jasmine tests
 
+### Pact tests
+Collections Organisations API has pact tests with [gds-api-adapters](https://github.com/alphagov/gds-api-adapters/blob/19515f01395a2a2cdfa22e1c86f8cb1a4298c492/test/test_helpers/pact_helper.rb).
+
+Use `bundle exec rake pact:verify` to run the pact tests against the master pactfile stored on the pact broker.
+
+If you have made a change to the code that consumes the organisations api, you might want to confirm that collections will still honour its pact. You can do so by running the pact tests against your local gds-api-adapters branch like so:
+- From gds-api-adapters run `bundle exec rake` to regenerate a new pactfile on you local machine.
+- From collections run `bundle exec rake PACT_URI="../gds-api-adapters/spec/pacts/gds_api_adapters-collections_organisation_api.json" pact:verify`
+
 ## License
 
 [MIT License](LICENCE.txt)
