@@ -3,68 +3,7 @@ en:
     browse:
       title: "Browse GOV.UK"
       prefix: "Browse:"
-    language_names:
-      ar: العربية
-      az: Azərbaycanca
-      be: Беларуская
-      bg: български
-      bn: বাংলা
-      cs: Česky
-      cy: Cymraeg
-      da: Dansk
-      de: Deutsch
-      dr: دری
-      el: 'Ελληνικά '
-      en: English
-      es: Español
-      es-419: Español
-      et: Eesti
-      fa: فارسی
-      fi: Suomi
-      fr: Français
-      gd: Gaeilge
-      he: עברית
-      hi: हिंदी
-      hr: Hrvatski
-      hu: Magyar
-      hy: Հայերեն
-      id: Bahasa Indonesia
-      is: Íslensk
-      it: Italiano
-      ja: 日本語
-      ka: ქართული
-      kk: Qazaq
-      ko: 한국어
-      lt: Lietuvių
-      lv: Latviešu
-      ms: Bahasa Melayu
-      mt: Malti
-      nl: Nederlands
-      "no": Norsk
-      pl: Polski
-      ps: پښتو
-      pt: Português
-      ro: Română
-      ru: Русский
-      si: සිංහල
-      sk: Slovenčina
-      sl: Slovenščina
-      so: Soomaaliga
-      sq: Shqip
-      sr: Srpski
-      sv: Svensk
-      sw: Kiswahili
-      ta: தமிழ்
-      th: ไทย
-      tk: Türkmençe
-      tr: Türkçe
-      uk: Українська
-      ur: اردو
-      uz: O'zbekcha
-      vi: Tiếng Việt
-      zh: 中文
-      zh-hk: 中文
-      zh-tw: 中文
+    language_name: English
     language_direction:
       ar: rtl
       fa: rtl

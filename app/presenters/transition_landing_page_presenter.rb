@@ -42,7 +42,7 @@ class TransitionLandingPagePresenter
       {
         locale: link.locale,
         base_path: link.base_path,
-        text: I18n.t("shared.language_names.#{link.locale}"),
+        text: I18n.t("shared.language_name", locale: link.locale),
         active: active,
       }
     end
