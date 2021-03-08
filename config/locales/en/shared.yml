@@ -4,10 +4,3 @@ en:
       title: "Browse GOV.UK"
       prefix: "Browse:"
     language_name: English
-    language_direction:
-      ar: rtl
-      fa: rtl
-      ur: rtl
-      he: rtl
-      dr: rtl
-      ps: rtl
