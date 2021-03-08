@@ -122,7 +122,7 @@ private
   end
 
   def language_name(language)
-    I18n.t("shared.language_names.#{language}")
+    I18n.t("shared.language_name", locale: language)
   end
 
   def available_translations

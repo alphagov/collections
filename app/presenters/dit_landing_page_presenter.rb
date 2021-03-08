@@ -8,7 +8,7 @@ class DitLandingPagePresenter
       {
         locale: item.locale,
         base_path: item.base_path,
-        text: I18n.t("shared.language_names.#{item.locale}"),
+        text: I18n.t("shared.language_name", locale: item.locale),
         active: (item.base_path == content_item.base_path),
       }
     end
