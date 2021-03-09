@@ -1,6 +1,4 @@
-require "test_helper"
-
-describe SecondLevelBrowsePageController do
+RSpec.describe SecondLevelBrowsePageController do
   include SearchApiHelpers
 
   describe "GET second_level_browse_page" do
@@ -31,30 +29,23 @@ describe SecondLevelBrowsePageController do
       end
 
       it "set correct expiry headers" do
-        get(
-          :show,
-          params: {
-            top_level_slug: "benefits",
-            second_level_slug: "entitlement",
-          },
-        )
-
-        assert_equal "max-age=1800, public", response.headers["Cache-Control"]
+        params = {
+          top_level_slug: "benefits",
+          second_level_slug: "entitlement",
+        }
+        get :show, params: params
+        expect(response.headers["Cache-Control"]).to eq("max-age=1800, public")
       end
     end
 
     it "404 if the section does not exist" do
       stub_content_store_does_not_have_item("/browse/crime-and-justice/frume")
-
-      get(
-        :show,
-        params: {
-          top_level_slug: "crime-and-justice",
-          second_level_slug: "frume",
-        },
-      )
-
-      assert_response 404
+      params = {
+        top_level_slug: "crime-and-justice",
+        second_level_slug: "frume",
+      }
+      get :show, params: params
+      expect(response).to have_http_status(:not_found)
     end
   end
 

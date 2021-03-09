@@ -1,6 +1,5 @@
-require "test_helper"
-
-describe OrganisationsController do
+RSpec.describe OrganisationsController do
+  include SearchApiHelpers
   describe "GET index" do
     before do
       stub_content_store_has_item(
@@ -19,18 +18,17 @@ describe OrganisationsController do
         },
       )
 
-      Services.search_api.stubs(:search)
-        .returns(
-          "results" => [],
-          "start" => 0,
-          "total" => 0,
-        )
+      stub_search(body: {
+        "results" => [],
+        "start" => 0,
+        "total" => 0,
+      })
     end
 
     it "set correct expiry headers" do
       get :show, params: { organisation_name: "ministry-of-magic" }
 
-      assert_equal "max-age=300, public", response.headers["Cache-Control"]
+      expect(response.headers["Cache-Control"]).to eq("max-age=300, public")
     end
   end
 end

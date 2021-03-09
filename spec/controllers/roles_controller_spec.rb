@@ -1,6 +1,4 @@
-require "test_helper"
-
-describe RolesController do
+RSpec.describe RolesController do
   include SearchApiHelpers
 
   def prime_minister
@@ -19,13 +17,13 @@ describe RolesController do
 
     it "when the content item exists" do
       get :show, params: { name: role }
-      assert_response :success
-      assert_template :show
+      expect(response).to have_http_status(:success)
+      expect(response).to render_template(:show)
     end
 
     it "when there is no content item" do
       get :show, params: { name: "she-ra" }
-      assert_response 404
+      expect(response).to have_http_status(:not_found)
     end
   end
 end

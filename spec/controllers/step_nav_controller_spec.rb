@@ -1,13 +1,11 @@
-require "test_helper"
-
-describe StepNavController do
+RSpec.describe StepNavController do
   it "returns a 404 when the page doesn't exist" do
     slug = SecureRandom.hex
     stub_content_store_does_not_have_item("/#{slug}")
 
     get :show, params: { slug: slug }
 
-    assert_response 404
+    expect(response).to have_http_status(:not_found)
   end
 
   it "returns a 403 when the user is not authorised" do
@@ -17,6 +15,6 @@ describe StepNavController do
 
     get :show, params: { slug: slug }
 
-    assert_response 403
+    expect(response).to have_http_status(:forbidden)
   end
 end

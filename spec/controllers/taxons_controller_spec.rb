@@ -1,9 +1,7 @@
-require "test_helper"
 require_relative "../../test/support/coronavirus_helper"
 
-describe TaxonsController do
+RSpec.describe TaxonsController do
   include SearchApiHelpers
-  include GovukAbTesting::MinitestHelpers
   include TaxonHelpers
 
   describe "GET show" do
@@ -38,7 +36,7 @@ describe TaxonsController do
     it do
       get :show, params: { taxon_base_path: taxon["base_path"][1..-1] }
 
-      assert_response 404
+      expect(response).to have_http_status(:not_found)
     end
   end
 end
