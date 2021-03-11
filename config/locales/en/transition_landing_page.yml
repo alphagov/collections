@@ -49,6 +49,13 @@ en:
     comms:
       links:
       - link:
+          text: "Government focuses on recovery from COVID with new timeline for border control processes on import of goods"
+          path: "/government/news/government-focuses-on-recovery-from-covid-with-new-timeline-for-border-control-processes-on-import-of-goods"
+          description: A new timetable for introducing import border control processes has been set out by the government to enable UK businesses to focus on their recovery.
+        metadata:
+          public_updated_at: 2020-03-11
+          document_type: "Press release"
+      - link:
           text: "Agreements reached between the United Kingdom of Great Britain and Northern Ireland and the European Union"
           path: "/government/publications/agreements-reached-between-the-united-kingdom-of-great-britain-and-northern-ireland-and-the-european-union"
           description: This document summarises the Agreements between the United Kingdom and the European Union.
@@ -61,7 +68,7 @@ en:
           description: The government has published further detail on how the borders between Great Britain and the EU will work and the actions that traders, hauliers and passengers need to take.
         metadata:
           public_updated_at: 2020-10-08
-          document_type: "News Story"
+          document_type: "News story"
       - link:
           text: "£650 million investment for Northern Ireland"
           path: "/government/news/major-650-million-investment-for-northern-ireland"
@@ -69,13 +76,6 @@ en:
         metadata:
           public_updated_at: 2020-08-07
           document_type: "News story"
-      - link:
-          text: "Major new campaign to prepare UK for end of the transition period"
-          path: "/government/news/major-new-campaign-to-prepare-uk-for-end-of-the-transition-period"
-          description: "The government has launched a new campaign to help businesses and individuals prepare for the end of the transition period."
-        metadata:
-          public_updated_at: 2020-07-13
-          document_type: "Press Release"
     topic_section_header: All Brexit information
     topic_section_subheading: Browse all information related to Brexit
     email_mailto_subject: "UK's%20new%20start:%20let's%20get%20going-%20GOV.UK"
