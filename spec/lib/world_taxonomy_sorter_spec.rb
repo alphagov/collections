@@ -1,15 +1,13 @@
-require "test_helper"
+RSpec.describe WorldTaxonomySorter do
+  class FakeTaxon
+    attr_reader :title
 
-class FakeTaxon
-  attr_reader :title
-
-  def initialize(title)
-    @title = title
+    def initialize(title)
+      @title = title
+    end
   end
-end
 
-describe WorldTaxonomySorter do
-  setup do
+  before do
     child_taxon_titles = [
       "Birth, death and marriage abroad",
       "Transition",
@@ -44,7 +42,7 @@ describe WorldTaxonomySorter do
     it "sorts the given child taxons by the specified sorting order" do
       sorted_child_taxon_titles = WorldTaxonomySorter.call(@child_taxons).map(&:title)
 
-      assert_equal(@expected_ordered_taxon_titles, sorted_child_taxon_titles)
+      expect(sorted_child_taxon_titles).to eq(@expected_ordered_taxon_titles)
     end
 
     it "appends any child taxons which did not match to a title in the specified sorting order" do
@@ -64,7 +62,7 @@ describe WorldTaxonomySorter do
 
       sorted_child_taxon_titles = WorldTaxonomySorter.call(child_taxons).map(&:title)
 
-      assert_equal(expected_ordered_taxon_titles, sorted_child_taxon_titles)
+      expect(sorted_child_taxon_titles).to eq(expected_ordered_taxon_titles)
     end
   end
 end
