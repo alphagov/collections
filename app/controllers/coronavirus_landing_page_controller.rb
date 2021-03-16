@@ -2,7 +2,8 @@ require "active_model"
 
 class CoronavirusLandingPageController < ApplicationController
   def show
-    set_expiry 5.minutes
+    @statistics = FetchCoronavirusStatisticsService.call
+    set_expiry(@statistics ? 5.minutes : 30.seconds)
 
     @content_item = content_item.to_hash
     breadcrumbs = [{ title: "Home", url: "/", is_page_parent: true }]
@@ -20,7 +21,7 @@ class CoronavirusLandingPageController < ApplicationController
   end
 
   def hub
-    set_expiry 5.minutes
+    set_expiry(5.minutes)
 
     @content_item = content_item.to_hash
     breadcrumbs = [{ title: "Home", url: "/" }]
