@@ -510,6 +510,7 @@ DEPENDENCIES
   climate_control
   cucumber-rails
   dalli
+  faraday
   gds-api-adapters
   govspeak
   govuk-content-schema-test-helpers
