@@ -14,7 +14,7 @@ class FetchCoronavirusStatisticsService
   def call
     statistics = Rails.cache.fetch(
       "coronavirus_statistics",
-      expires_in: 30.minutes,
+      expires_in: 5.minutes,
       race_condition_ttl: 30.seconds,
     ) { request_statistics }
 
