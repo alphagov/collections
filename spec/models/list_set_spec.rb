@@ -114,7 +114,7 @@ RSpec.describe ListSet do
     end
 
     it "includes the base_path for all items" do
-      expect(list_set_empty_data.first.contents.to_a.[](3).base_path).to eq("/pay-paye-tax")
+      expect(list_set_empty_data.first.contents.to_a[3].base_path).to eq("/pay-paye-tax")
     end
 
     it "handles nil data the same as empty array" do
@@ -153,8 +153,8 @@ RSpec.describe ListSet do
     it "provides the title, base_path for each document" do
       documents = list_set.first.contents
 
-      expect(documents.[](2).base_path).to eq("/pay-paye-tax")
-      expect(documents.[](2).title).to eq("Pay paye tax")
+      expect(documents[2].base_path).to eq("/pay-paye-tax")
+      expect(documents[2].title).to eq("Pay paye tax")
     end
   end
 

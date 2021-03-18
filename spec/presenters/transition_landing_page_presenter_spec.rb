@@ -1,23 +1,7 @@
-require "test_helper"
-
-describe TransitionLandingPagePresenter do
-  before :each do
-    YAML.stubs(:load_file).returns(yaml_contents)
-  end
-
-  let(:yaml_contents) do
-    [
-      {
-        "list_block" => "<p>This is some text</p>",
-      },
-    ]
-  end
-
-  subject do
-    TransitionLandingPagePresenter.new(taxon)
-  end
-
+RSpec.describe TransitionLandingPagePresenter do
   let(:taxon) { Taxon.new(ContentItem.new("content_id" => "content_id", "base_path" => "/base_path")) }
+
+  subject { described_class.new(taxon) }
 
   describe "#supergroup_sections" do
     it "returns the presented supergroup sections" do
@@ -89,7 +73,7 @@ describe TransitionLandingPagePresenter do
           },
         },
       ]
-      assert_equal subject.supergroup_sections, result_hash
+      expect(result_hash).to eq(subject.supergroup_sections)
     end
   end
 
@@ -98,7 +82,7 @@ describe TransitionLandingPagePresenter do
       I18n.with_locale(:cy) do
         taxon = Taxon.new(ContentItem.new("base_path" => "/base_path.cy"))
         subject = TransitionLandingPagePresenter.new(taxon)
-        assert_equal "/base_path", subject.email_path
+        expect(subject.email_path).to eq("/base_path")
       end
     end
   end

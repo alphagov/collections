@@ -1,7 +1,6 @@
-require "test_helper"
 require_relative "../../test/support/coronavirus_helper"
 
-describe CoronavirusLandingPagePresenter do
+RSpec.describe CoronavirusLandingPagePresenter do
   it "provides getter methods for all component keys" do
     presenter = described_class.new(coronavirus_landing_page_content_item)
     %i[
@@ -23,19 +22,19 @@ describe CoronavirusLandingPagePresenter do
       page_header
       timeline
     ].each do |method|
-      assert_respond_to(presenter, method)
+      expect(presenter).to respond_to(method)
     end
   end
 
   it "build valid FAQ Schema" do
     presenter = described_class.new(coronavirus_landing_page_content_item)
     faq_schema = presenter.faq_schema(coronavirus_landing_page_content_item)
-    assert_equal(faq_schema[:@context], "https://schema.org")
-    assert_equal(faq_schema[:@type], "FAQPage")
+    expect("https://schema.org").to eq(faq_schema[:@context])
+    expect("FAQPage").to eq(faq_schema[:@type])
 
     faq_schema[:mainEntity].each do |question|
-      assert_equal(question[:@type], "Question")
-      assert_equal(question[:acceptedAnswer][:@type], "Answer")
+      expect("Question").to eq(question[:@type])
+      expect("Answer").to eq(question[:acceptedAnswer][:@type])
     end
   end
 end

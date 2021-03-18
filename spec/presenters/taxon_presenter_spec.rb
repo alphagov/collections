@@ -1,6 +1,4 @@
-require "test_helper"
-
-describe TaxonPresenter do
+RSpec.describe TaxonPresenter do
   include SearchApiHelpers
   include TaxonHelpers
 
@@ -13,26 +11,26 @@ describe TaxonPresenter do
 
     describe "#options_for_child_taxon" do
       describe "root options" do
-        before :each do
+        before do
           stub_content_for_taxon([taxon.content_id], generate_search_results(15))
         end
 
         subject { taxon_presenter.options_for_child_taxon(index: 0) }
 
         it "contains the gem-track-click module" do
-          assert_equal("gem-track-click", subject[:module])
+          expect(subject[:module]).to eq("gem-track-click")
         end
 
         it "contains the navGridContentClicked track_category" do
-          assert_equal("navGridContentClicked", subject[:track_category])
+          expect(subject[:track_category]).to eq("navGridContentClicked")
         end
 
         it "contains track-action equal to the index + 1" do
-          assert_equal("1", subject[:track_action])
+          expect(subject[:track_action]).to eq("1")
         end
 
         it "contains track_label equal to the base path of the child taxon" do
-          assert_equal(child_taxon.base_path, subject[:track_label])
+          expect(subject[:track_label]).to eq(child_taxon.base_path)
         end
       end
     end
@@ -40,11 +38,10 @@ describe TaxonPresenter do
 
   describe "topic_grid_section" do
     it "checks whether topic grid section should be shown" do
-      taxon = mock
-      taxon.stubs(:child_taxons).returns([])
+      taxon = double("Taxon", child_taxons: [])
       taxon_presenter = TaxonPresenter.new(taxon)
 
-      assert_not taxon_presenter.show_subtopic_grid?
+      expect(taxon_presenter.show_subtopic_grid?).to be false
     end
   end
 
@@ -55,7 +52,7 @@ describe TaxonPresenter do
     let(:taxon_presenter) { TaxonPresenter.new(taxon) }
 
     it "returns true by default" do
-      assert taxon_presenter.noindex?
+      expect(taxon_presenter.noindex?).to be true
     end
 
     context "when it is a brexit taxon" do
@@ -64,7 +61,7 @@ describe TaxonPresenter do
       end
 
       it "returns false" do
-        assert_not taxon_presenter.noindex?
+        expect(taxon_presenter.noindex?).to be false
       end
     end
   end
