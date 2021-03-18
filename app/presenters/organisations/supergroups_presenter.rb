@@ -51,7 +51,7 @@ module Organisations
     end
 
     def supergroups_collection
-      @supergroups_collection ||= Search::Supergroups.new(organisation: @org)
+      @supergroups_collection ||= Search::Supergroups.new(organisation_slug: @org.slug)
     end
   end
 end

@@ -21,8 +21,8 @@ module Search
       },
     }.freeze
 
-    def initialize(organisation:)
-      @organisation = organisation
+    def initialize(organisation_slug:)
+      @organisation_slug = organisation_slug
     end
 
     def has_groups?
@@ -32,7 +32,7 @@ module Search
     def groups
       @groups ||= SUPERGROUP_TYPES.map do |group|
         Supergroup.new(
-          organisation_slug: (@organisation ? @organisation.slug : nil),
+          organisation_slug: @organisation_slug,
           content_purpose_supergroup: group,
           additional_search_params: SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(group, {}),
         )
