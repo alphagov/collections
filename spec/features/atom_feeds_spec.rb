@@ -1,9 +1,9 @@
-require "integration_test_helper"
+require "integration_spec_helper"
 
-class AtomFeedsTest < ActionDispatch::IntegrationTest
+feature "Atom feeds" do
   include OrganisationFeedHelpers
 
-  it "renders an organisation atom feed when there is content" do
+  scenario "renders an organisation atom feed when there is content" do
     given_there_is_an_organisation_content_item
     and_content_for_that_organisation
     when_i_visit_the_organisation_atom_feed
@@ -12,7 +12,7 @@ class AtomFeedsTest < ActionDispatch::IntegrationTest
     and_feed_items
   end
 
-  it "renders a global atom feed when there is content" do
+  scenario "renders a global atom feed when there is content" do
     given_there_is_a_government_feed
     when_i_visit_the_government_atom_feed
     then_i_can_see_the_government_feed
@@ -20,7 +20,7 @@ class AtomFeedsTest < ActionDispatch::IntegrationTest
     and_feed_items
   end
 
-  it "renders a valid organisation atom feed when there is no content" do
+  scenario "renders a valid organisation atom feed when there is no content" do
     given_there_is_an_organisation_content_item
     but_no_content_for_that_organisation
     when_i_visit_the_organisation_atom_feed
@@ -74,7 +74,7 @@ class AtomFeedsTest < ActionDispatch::IntegrationTest
 
   def then_i_can_see_the_government_feed
     title = page.first("feed title").text(:all)
-    assert_equal title, "Activity on GOV.UK"
+    expect("Activity on GOV.UK").to eq(title)
   end
 
   def then_i_can_see_the_feed
@@ -84,16 +84,16 @@ class AtomFeedsTest < ActionDispatch::IntegrationTest
 
   def with_a_title
     title = page.first("feed title").text(:all)
-    assert_equal title, "Ministry of Magic - Activity on GOV.UK"
+    expect("Ministry of Magic - Activity on GOV.UK").to eq(title)
   end
 
   def and_an_alternate_link
-    assert page.has_css?("feed link[rel='alternate'][href$='#{@base_path}']")
+    expect(page.has_css?("feed link[rel='alternate'][href$='#{@base_path}']")).to be(true)
   end
 
   def with_the_feed_updated_time_set_to_the_latest_item
     updated = page.first("feed updated").text(:all)
-    assert_equal updated, @updated_at
+    expect(@updated_at).to eq(updated)
   end
 
   def and_feed_items
@@ -105,26 +105,26 @@ class AtomFeedsTest < ActionDispatch::IntegrationTest
 
   def with_an_id
     id = page.first("feed entry id").text(:all)
-    assert id.end_with?("/government/collections/owl-and-newt-examinations-at-hogwarts##{@updated_at}")
+    expect(id).to include("/government/collections/owl-and-newt-examinations-at-hogwarts##{@updated_at}")
   end
 
   def and_a_title
     title = page.first("feed entry title").text(:all)
-    assert_equal title, "Detailed guide: OWL and NEWT qualifications, Ministry of Magic"
+    expect(title).to eq("Detailed guide: OWL and NEWT qualifications, Ministry of Magic")
   end
 
   def and_a_summary
     summary = page.first("feed entry summary").text(:all)
-    assert_equal summary, "This series brings together all documents relating to OWL and NEWT syllabuses, examinations and grading"
+    expect(summary).to eq("This series brings together all documents relating to OWL and NEWT syllabuses, examinations and grading")
   end
 
   def and_an_updated_time
     updated = page.first("feed entry updated").text(:all)
-    assert_equal updated, @updated_at
+    expect(@updated_at).to eq(updated)
   end
 
   def but_no_feed_items
-    assert_not page.has_css?("feed entry")
+    expect(page.has_css?("feed entry")).to be(false)
   end
 
   def content_store_has_schema_example(schema_name)
