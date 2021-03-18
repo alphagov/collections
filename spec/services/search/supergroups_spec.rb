@@ -1,45 +1,40 @@
-require "test_helper"
-
 describe Search::Supergroups do
   include OrganisationHelpers
 
-  before :each do
-    content_item = ContentItem.new(organisation_with_featured_documents)
-    empty_organisation = Organisation.new(content_item)
+  let(:slug_for_org_with_docs) { "sitting-on-the-docs-of-the-bay" }
+  let(:slug_for_org_with_no_docs) { "i-got-no-docs-and-i-cannot-lie" }
 
-    content_item = ContentItem.new(organisation_with_translations)
-    organisation = Organisation.new(content_item)
+  let(:supergroups) { described_class.new(organisation_slug: slug_for_org_with_docs) }
+  let(:no_docs_supergroups) { described_class.new(organisation_slug: slug_for_org_with_no_docs) }
 
-    @supergroups = described_class.new(organisation: organisation)
-    @no_docs_supergroups = described_class.new(organisation: empty_organisation)
-
+  before do
     Search::Supergroups::SUPERGROUP_TYPES.each do |supergroup|
-      stub_search_api_supergroup_request(supergroup, organisation, [raw_search_api_result])
-      stub_search_api_supergroup_request(supergroup, empty_organisation, [])
+      stub_search_api_supergroup_request(supergroup, slug_for_org_with_docs, [raw_search_api_result])
+      stub_search_api_supergroup_request(supergroup, slug_for_org_with_no_docs, [])
     end
   end
 
   describe "#has_groups?" do
     it "returns false if no groups have documents" do
-      expect(@no_docs_supergroups.has_groups?).to eq(false)
+      expect(no_docs_supergroups.has_groups?).to eq(false)
     end
 
     it "returns true if at least one supergroup has documents" do
-      expect(@supergroups.has_groups?).to eq(true)
+      expect(supergroups.has_groups?).to eq(true)
     end
   end
 
   describe "#groups" do
     it "returns an array of supergroups" do
-      assert_instance_of Search::Supergroup, @supergroups.groups.first
+      expect(supergroups.groups.first).to be_kind_of(Search::Supergroup)
     end
 
     it "returns an array of supergroups regardless of doc responses" do
-      expect(@no_docs_supergroups.groups.map(&:content_purpose_supergroup)).to eq(@supergroups.groups.map(&:content_purpose_supergroup))
+      expect(no_docs_supergroups.groups.map(&:content_purpose_supergroup)).to eq(supergroups.groups.map(&:content_purpose_supergroup))
     end
 
     it "applies the given additional search parameters" do
-      @supergroups.groups.each do |group|
+      supergroups.groups.each do |group|
         params = Search::Supergroups::SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(
           group.content_purpose_supergroup,
           {},
@@ -59,12 +54,12 @@ describe Search::Supergroups do
     }
   end
 
-  def stub_search_api_supergroup_request(group, organisation, results)
+  def stub_search_api_supergroup_request(group, organisation_slug, results)
     stub_supergroup_request(
       results: results,
       additional_params: {
         filter_content_purpose_supergroup: group,
-        filter_organisations: organisation.slug,
+        filter_organisations: organisation_slug,
         order: Search::Supergroup::DEFAULT_SORT_ORDER,
       }.merge(Search::Supergroups::SUPERGROUP_ADDITIONAL_SEARCH_PARAMS.fetch(group, {})),
     )
