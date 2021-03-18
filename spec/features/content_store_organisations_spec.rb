@@ -1,77 +1,77 @@
-require "integration_test_helper"
+require "integration_spec_helper"
 
-class ContentStoreOrganisationsTest < ActionDispatch::IntegrationTest
+feature "Content store organisations" do
   before do
     stub_content_store_has_item("/government/organisations", organisations_content_hash)
     visit "/government/organisations"
   end
 
-  it "returns 200 when visiting organisations page" do
-    assert_equal 200, page.status_code
+  scenario "returns 200 when visiting organisations page" do
+    expect(page.status_code).to eq 200
   end
 
-  it "renders webpage title" do
-    assert page.has_title?("Departments, agencies and public bodies - GOV.UK")
+  scenario "renders webpage title" do
+    expect(page.has_title?("Departments, agencies and public bodies - GOV.UK")).to be(true)
   end
 
-  it "renders page title" do
-    assert page.has_css?(".gem-c-title__text", text: "Departments, agencies and public bodies")
+  scenario "renders page title" do
+    expect(page.has_css?(".gem-c-title__text", text: "Departments, agencies and public bodies")).to be(true)
   end
 
-  it "has autodiscovery links to the API" do
-    assert page.has_css?("link[rel='alternate'][type='application/json'][href$='/api/organisations']", visible: false)
+  scenario "has autodiscovery links to the API" do
+    expect(page.has_css?("link[rel='alternate'][type='application/json'][href$='/api/organisations']", visible: false)).to be(true)
   end
 
-  it "renders organisation filter" do
-    assert page.has_css?(".filter-organisations-list__form")
-    assert page.has_css?("label", text: "Search for a department, agency or public body")
+  scenario "renders organisation filter" do
+    expect(page.has_css?(".filter-organisations-list__form")).to be(true)
+    expect(page.has_css?("label", text: "Search for a department, agency or public body")).to be(true)
   end
 
-  it "renders an organisation_type heading" do
-    assert page.has_css?(".gem-c-heading", text: "Ministerial departments")
+  scenario "renders an organisation_type heading" do
+    expect(page.has_css?(".gem-c-heading", text: "Ministerial departments")).to be(true)
   end
 
-  it "adds an id to each organisation item" do
-    assert page.has_css?(".organisations-list__item#attorney-generals-office")
+  scenario "adds an id to each organisation item" do
+    expect(page.has_css?(".organisations-list__item#attorney-generals-office")).to be(true)
   end
 
-  it "renders organisation count" do
-    assert page.has_css?(".organisations__department-count-wrapper span", text: "1")
+  scenario "renders organisation count" do
+    expect(page.has_css?(".organisations__department-count-wrapper span", text: "1")).to be(true)
   end
 
-  it "renders an accessible version of organisation count" do
-    assert page.has_css?('.organisations__department-count-wrapper span[aria-hidden="true"]')
-    assert page.has_css?(".organisations__department-count-wrapper p.visuallyhidden", text: "There are 2 Non ministerial departments")
+  scenario "renders an accessible version of organisation count" do
+    expect(page.has_css?('.organisations__department-count-wrapper span[aria-hidden="true"]')).to be(true)
+    expect(page.has_css?(".organisations__department-count-wrapper p.visuallyhidden", text: "There are 2 Non ministerial departments")).to be(true)
   end
 
-  it "renders ministerial organisation with crest" do
-    assert page.has_css?(".gem-c-organisation-logo")
+  scenario "renders ministerial organisation with crest" do
+    expect(page.has_css?(".gem-c-organisation-logo")).to be(true)
   end
 
-  it "renders non-ministerial organisation without crest" do
-    assert page.has_css?('a.organisation-list__item-title[href="/government/organisations/arts-and-humanities-research-council"]', text: "Arts and Humanities Research Council")
-    assert page.has_css?(".organisation-list__item-context", text: "separate website")
+  scenario "renders non-ministerial organisation without crest" do
+    expect(page.has_css?('a.organisation-list__item-title[href="/government/organisations/arts-and-humanities-research-council"]', text: "Arts and Humanities Research Council")).to be(true)
+    expect(page.has_css?(".organisation-list__item-context", text: "separate website")).to be(true)
   end
 
-  it "displays child organisations count" do
-    assert page.has_content?("Works with 4 agencies and public bodies")
+  scenario "displays child organisations count" do
+    expect(page.has_content?("Works with 4 agencies and public bodies")).to be(true)
   end
 
-  it "renders a view all link with toggle attributes" do
-    assert page.has_css?("a[data-controls='toggle_attorney-general-s-office']", text: "view all")
-    assert page.has_css?("a[data-controls='toggle_attorney-general-s-office'][data-expanded='false']")
+  scenario "renders a view all link with toggle attributes" do
+    expect(page.has_css?("a[data-controls='toggle_attorney-general-s-office']", text: "view all")).to be(true)
+    expect(page.has_css?("a[data-controls='toggle_attorney-general-s-office'][data-expanded='false']")).to be(true)
   end
 
-  it "renders a list of organisations that an organisation works with" do
-    assert page.has_css?(".organisation-list__works-with#toggle_attorney-general-s-office")
-    assert page.has_css?("#toggle_attorney-general-s-office h4", text: "Non-ministerial department")
-    assert page.has_css?("#toggle_attorney-general-s-office h4", text: "Other")
+  scenario "renders a list of organisations that an organisation works with" do
+    expect(page.has_css?(".organisation-list__works-with#toggle_attorney-general-s-office")).to be(true)
+    expect(page.has_css?("#toggle_attorney-general-s-office h4", text: "Non-ministerial department")).to be(true)
+    expect(page.has_css?("#toggle_attorney-general-s-office h4", text: "Other")).to be(true)
 
-    assert page.has_css?("#toggle_attorney-general-s-office a[href='/government/organisations/crown-prosecution-service']", text: "Crown Prosecution Service")
-    assert page.has_css?("#toggle_attorney-general-s-office a[href='/government/organisations/government-legal-department']", text: "Government Legal Department")
-    assert page.has_css?("#toggle_attorney-general-s-office a[href='/government/organisations/serious-fraud-office']", text: "Serious Fraud Office")
+    expect(page.has_css?("#toggle_attorney-general-s-office a[href='/government/organisations/crown-prosecution-service']", text: "Crown Prosecution Service")).to be(true)
+    expect(page.has_css?("#toggle_attorney-general-s-office a[href='/government/organisations/government-legal-department']", text: "Government Legal Department")).to be(true)
+    expect(page.has_css?("#toggle_attorney-general-s-office a[href='/government/organisations/serious-fraud-office']", text: "Serious Fraud Office")).to be(true)
 
-    assert page.has_css?("#toggle_attorney-general-s-office a[href='/government/organisations/hm-crown-prosecution-service-inspectorate']", text: "HM Crown Prosecution Service Inspectorate")
+    expect(page.has_css?("#toggle_attorney-general-s-office a[href='/government/organisations/hm-crown-prosecution-service-inspectorate']", text: "HM Crown Prosecution Service Inspectorate")).to be(true)
   end
 
 private
