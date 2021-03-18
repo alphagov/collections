@@ -1,26 +1,33 @@
-require "test_helper"
-
-describe SupergroupSections::Sections do
+RSpec.describe SupergroupSections::Sections do
   include SearchApiHelpers
   include TaxonHelpers
 
   let(:taxon_id) { "12345" }
   let(:base_path) { "/base/path" }
   let(:supergroup_sections) { SupergroupSections::Sections.new(taxon_id, base_path) }
+  let(:sections) { supergroup_sections.sections }
 
   describe "#sections" do
-    before(:all) do
-      Supergroups::PolicyAndEngagement.any_instance.stubs(:tagged_content).with(taxon_id).returns(section_tagged_content_list("case_study"))
-      Supergroups::Services.any_instance.stubs(:tagged_content).with(taxon_id).returns(section_tagged_content_list("form"))
-      Supergroups::GuidanceAndRegulation.any_instance.stubs(:tagged_content).with(taxon_id).returns(section_tagged_content_list("guide"))
-      Supergroups::NewsAndCommunications.any_instance.stubs(:tagged_content).with(taxon_id).returns([])
-      Supergroups::Transparency.any_instance.stubs(:tagged_content).with(taxon_id).returns([])
-      Supergroups::ResearchAndStatistics.any_instance.stubs(:tagged_content).with(taxon_id).returns([])
-      @sections = supergroup_sections.sections
+    before do
+      stub_config = {
+        Supergroups::PolicyAndEngagement => section_tagged_content_list("case_study"),
+        Supergroups::Services => section_tagged_content_list("form"),
+        Supergroups::GuidanceAndRegulation => section_tagged_content_list("guide"),
+        Supergroups::NewsAndCommunications => [],
+        Supergroups::Transparency => [],
+        Supergroups::ResearchAndStatistics => [],
+      }
+
+      stub_config.each do |klass, results|
+        allow_any_instance_of(klass)
+          .to receive(:tagged_content)
+          .with(taxon_id)
+          .and_return(results)
+      end
     end
 
-    it "returns a list of sections with tagged content" do
-      assert 5, @sections.length
+    it "returns a list of supergroup sections" do
+      expect(sections.length).to be 6
     end
 
     it "returns a list of supergroup details" do
@@ -35,8 +42,8 @@ describe SupergroupSections::Sections do
         show_section
       ]
 
-      @sections.each do |section|
-        assert_equal(section_details, section.keys)
+      sections.each do |section|
+        expect(section.keys).to eq(section_details)
       end
     end
 
@@ -50,20 +57,17 @@ describe SupergroupSections::Sections do
         research_and_statistics
       ]
 
-      section_ids = @sections.map { |section| section[:id] }
+      section_ids = sections.map { |section| section[:id] }
 
-      section_ids.map do |id|
-        assert_includes expected_ids, id
-      end
-      assert expected_ids, section_ids
+      expect(section_ids).to match_array(expected_ids)
     end
 
     it "knows if each sections should be shown or not" do
-      shown_sections = @sections.select { |section| section[:show_section] == true }
-      not_show_sections = @sections.select { |section| section[:show_section] == false }
+      shown_sections = sections.select { |section| section[:show_section] == true }
+      not_show_sections = sections.select { |section| section[:show_section] == false }
 
-      assert 3, shown_sections.length
-      assert 2, not_show_sections.length
+      expect(shown_sections.length).to be 3
+      expect(not_show_sections.length).to be 3
     end
   end
 end
