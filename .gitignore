@@ -7,18 +7,16 @@
 # Ignore bundler config.
 /.bundle
 
-# Ignore the default SQLite database.
-/db/*.sqlite3
-/db/*.sqlite3-journal
-
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp
 /coverage
-/public/collections
 
 # Yarn
 /node_modules
 /yarn-error.log
 
 /public/assets
+
+# pact reports
+/spec/reports
