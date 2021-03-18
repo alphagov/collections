@@ -7,58 +7,42 @@
   } %>
 
   <% if statistics && statistics.cumulative_vaccinations %>
-    <div>
-      <%= render "govuk_publishing_components/components/heading", {
-        text: "Total vaccinations"
-      } %>
-
-      <span class="govuk-heading-xl">
-        <%= number_with_precision(statistics.cumulative_vaccinations / 1_000_000.0, precision: 1) %>
-        million
-      </span>
-
-      <p class="govuk-body">people have received their first dose</p>
-
-      <p class="govuk-body">
-        Last updated <%= statistics.cumulative_vaccinations_date.strftime("%d %B %Y") %>
-      </p>
-    </div>
+    <%= render "coronavirus_landing_page/components/landing_page/statistic", {
+      title: "Total vaccinations",
+      stat: "#{number_with_precision(statistics.cumulative_vaccinations / 1_000_000.0, precision: 1)} million",
+      subtext: "people have received their first dose",
+      last_updated_date: statistics.cumulative_vaccinations_date,
+      guidance_link: {
+        label: "Vaccination data from the coronavirus data dashboard",
+        href: "https://coronavirus.data.gov.uk/details/vaccinations",
+      },
+    } %>
   <% end %>
 
   <% if statistics && statistics.hospital_admissions %>
-    <div>
-      <%= render "govuk_publishing_components/components/heading", {
-        text: "Daily hospital admissions"
-      } %>
-
-      <span class="govuk-heading-xl">
-        <%= number_with_delimiter(statistics.hospital_admissions) %>
-      </span>
-
-      <p class="govuk-body">new patients have been admitted to hospital</p>
-
-      <p class="govuk-body">
-        Last updated <%= statistics.hospital_admissions_date.strftime("%d %B %Y") %>
-      </p>
-    </div>
+    <%= render "coronavirus_landing_page/components/landing_page/statistic", {
+      title: "Daily hospital admissions",
+      stat: number_with_delimiter(statistics.hospital_admissions),
+      subtext: "new patients have been admitted to hospital",
+      last_updated_date: statistics.hospital_admissions_date,
+      guidance_link: {
+        label: "Healthcare data from the coronavirus data dashboard",
+        href: "https://coronavirus.data.gov.uk/details/healthcare",
+      },
+    } %>
   <% end %>
 
   <% if statistics && statistics.new_positive_tests %>
-    <div>
-      <%= render "govuk_publishing_components/components/heading", {
-        text: "Daily new cases"
-      } %>
-
-      <span class="govuk-heading-xl">
-        <%= number_with_delimiter(statistics.new_positive_tests) %>
-      </span>
-
-      <p class="govuk-body">people tested positive with COVID-19</p>
-
-      <p class="govuk-body">
-        Last updated <%= statistics.new_positive_tests_date.strftime("%d %B %Y") %>
-      </p>
-    </div>
+    <%= render "coronavirus_landing_page/components/landing_page/statistic", {
+      title: "Daily new cases",
+      stat: number_with_delimiter(statistics.new_positive_tests),
+      subtext: "people tested positive with COVID-19",
+      last_updated_date: statistics.new_positive_tests_date,
+      guidance_link: {
+        label: "Cases data from the coronavirus data dashboard",
+        href: "https://coronavirus.data.gov.uk/details/cases",
+      },
+    } %>
   <% end %>
 
   <ul class="govuk-list">

@@ -269,3 +269,12 @@ $c19-landing-page-header-background: #272828;
   width: 100%;
   margin-top: govuk-spacing(4);
 }
+
+.covid-statistics__statistic-wrapper {
+  margin-bottom: govuk-spacing(5);
+}
+
+.covid-statistics__statistic-value {
+  @include govuk-font(80, $weight: bold);
+  margin-bottom: 0;
+}
