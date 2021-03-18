@@ -21,11 +21,11 @@ describe Search::Supergroups do
 
   describe "#has_groups?" do
     it "returns false if no groups have documents" do
-      assert_equal false, @no_docs_supergroups.has_groups?
+      expect(@no_docs_supergroups.has_groups?).to eq(false)
     end
 
     it "returns true if at least one supergroup has documents" do
-      assert_equal true, @supergroups.has_groups?
+      expect(@supergroups.has_groups?).to eq(true)
     end
   end
 
@@ -35,7 +35,7 @@ describe Search::Supergroups do
     end
 
     it "returns an array of supergroups regardless of doc responses" do
-      assert_equal @supergroups.groups.map(&:content_purpose_supergroup), @no_docs_supergroups.groups.map(&:content_purpose_supergroup)
+      expect(@no_docs_supergroups.groups.map(&:content_purpose_supergroup)).to eq(@supergroups.groups.map(&:content_purpose_supergroup))
     end
 
     it "applies the given additional search parameters" do
@@ -45,7 +45,7 @@ describe Search::Supergroups do
           {},
         )
         query = group.documents_query
-        assert_equal query.merge(params), query
+        expect(query).to eq(query.merge(params))
       end
     end
   end

@@ -13,21 +13,21 @@ describe Search::Supergroup do
 
   describe "#has_documents?" do
     it "returns false if there are no docs" do
-      assert_equal false, @no_docs_supergroup.has_documents?
+      expect(@no_docs_supergroup.has_documents?).to eq(false)
     end
 
     it "returns true if there are docs" do
-      assert_equal true, @supergroup.has_documents?
+      expect(@supergroup.has_documents?).to eq(true)
     end
   end
 
   describe "#documents" do
     it "provides a set of raw search_api search results" do
-      assert_equal @supergroup.documents, [raw_search_api_result]
+      expect([raw_search_api_result]).to eq(@supergroup.documents)
     end
 
     it "provides a set of raw search_api search results even if the set is empty" do
-      assert_equal @no_docs_supergroup.documents, []
+      expect([]).to eq(@no_docs_supergroup.documents)
     end
   end
 
