@@ -1,0 +1,27 @@
+<div class="covid-statistics__statistic-wrapper">
+  <%= render "govuk_publishing_components/components/heading", {
+      text: title,
+      heading_level: 3,
+      font_size: "s",
+      margin_bottom: 1
+    } %>
+
+  <p class="covid-statistics__statistic-value govuk-body">
+    <%= stat %>
+  </p>
+  <p class="govuk-body"><%= subtext %></p>
+
+  <p class="govuk-body-s">
+    Last updated <%= last_updated_date.strftime("%d %B %Y") %>
+  </p>
+
+  <p class="govuk-body">
+    <%= link_to guidance_link[:label], guidance_link[:href], class: "govuk-link", data: {
+      module: "gem-track-click",
+      track_category: "pageElementInteraction",
+      track_action: "Statistics",
+      track_label: guidance_link[:href],
+    } %>
+  </p>
+  <hr>
+</div>
