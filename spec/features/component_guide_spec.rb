@@ -1,11 +1,11 @@
-require "integration_test_helper"
 require "govuk_publishing_components/minitest/component_guide_test"
+require "integration_spec_helper"
 
-class ComponentGuideTest < ActionDispatch::IntegrationTest
+feature "Component guide" do
   # temporarily disabling to get around an error to do with an image in one of the component pages
   # include GovukPublishingComponents::Minitest::ComponentGuideTest
 
-  def setup
+  before do
     WebMock.disable_net_connect!(allow_localhost: true)
     Capybara.current_driver = Capybara.javascript_driver
   end
