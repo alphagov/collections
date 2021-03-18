@@ -1,14 +1,7 @@
-require "test_helper"
-
 describe SupergroupSections::BrexitSections do
-  include SearchApiHelpers
-  include TaxonHelpers
-
   let(:taxon_id) { "12345" }
   let(:base_path) { "/base/path" }
-  let(:brexit_supergroup_sections) do
-    SupergroupSections::BrexitSections.new(taxon_id, base_path).sections
-  end
+  let(:brexit_supergroup_sections) { SupergroupSections::BrexitSections.new(taxon_id, base_path).sections }
 
   describe "#sections" do
     it "returns a list of supergroup details for the brexit page" do
@@ -99,7 +92,7 @@ describe SupergroupSections::BrexitSections do
           },
         },
       ]
-      assert_equal brexit_supergroup_sections, sections_hash
+      expect(sections_hash).to eq(brexit_supergroup_sections)
     end
   end
 end
