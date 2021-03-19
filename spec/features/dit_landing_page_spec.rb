@@ -1,6 +1,6 @@
 require "integration_test_helper"
 
-class DitLandingPageTest < ActionDispatch::IntegrationTest
+feature "Dit landing page" do
   include DitLandingPageHelpers
 
   describe "the DIT landing page" do
@@ -35,20 +35,20 @@ class DitLandingPageTest < ActionDispatch::IntegrationTest
   end
 
   def then_i_can_see_the_header_section
-    assert page.has_title? I18n.t!("dit_landing_page.page_header")
+    expect(page.has_title?(I18n.t!("dit_landing_page.page_header"))).to be
   end
 
   def and_i_can_see_the_guidance_links
-    assert page.has_selector?("h3", text: "Import from the UK")
+    expect(page.has_selector?("h3", text: "Import from the UK")).to be
   end
 
   def then_i_can_see_the_training_section
-    assert page.has_selector?("h2", text: I18n.t!("dit_landing_page.training_section_title"))
+    expect(page.has_selector?("h2", text: I18n.t!("dit_landing_page.training_section_title"))).to be
   end
 
   # test 2
   def then_i_can_see_the_translation_nav
-    assert page.has_selector?("nav", text: "Deutsch")
+    expect(page.has_selector?("nav", text: "Deutsch")).to be
   end
 
   def and_i_click_on_deutsch
@@ -56,7 +56,7 @@ class DitLandingPageTest < ActionDispatch::IntegrationTest
   end
 
   def then_i_see_the_german_translation_of_the_page
-    assert page.has_title? "Informationen für Unternehmen mit Sitz in der EU, die Handelsbeziehungen mit dem Vereinigten Königreich unterhalten"
+    expect(page.has_title?("Informationen für Unternehmen mit Sitz in der EU, die Handelsbeziehungen mit dem Vereinigten Königreich unterhalten")).to be
   end
 
   def and_i_click_on_english
