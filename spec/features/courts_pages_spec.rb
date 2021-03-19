@@ -1,7 +1,7 @@
 require "integration_test_helper"
 
 feature "Courts pages" do
-  include OrganisationHelpers
+  include CourtPagesHelper
 
   scenario "renders a courts page correctly" do
     when_i_visit_a_courts_page
