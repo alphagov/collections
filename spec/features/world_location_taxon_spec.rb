@@ -1,54 +1,44 @@
-require "integration_test_helper"
+require "integration_spec_helper"
 
-class WorldLocationTaxonTest < ActionDispatch::IntegrationTest
+RSpec.feature "World location taxon page" do
   include SearchApiHelpers
   include TaxonHelpers
 
-  it "contains both the atom and email signup url if we are browsing a world location" do
-    @base_path = "/world/usa"
-    @child_taxon_base_path = "/world/news-and-events-usa"
+  let(:base_path) { "/world/usa" }
+  let(:taxon) { WorldWideTaxon.find(base_path) }
+  let(:child_taxon_base_path) { "/world/news-and-events-usa" }
+  let(:child_taxon) { WorldWideTaxon.find(child_taxon_base_path) }
+  let(:feed_url) { Plek.new.website_root + "/world/usa.atom" }
+  let(:email_url) { Plek.new.website_root + "/email-signup?link=#{base_path}" }
 
-    world_usa = world_usa_taxon(base_path: @base_path, phase: "live")
-    world_usa_news_events = world_usa_news_events_taxon(base_path: @child_taxon_base_path)
+  scenario "contains both the atom and email signup url if we are browsing a world location" do
+    world_usa = world_usa_taxon(base_path: base_path, phase: "live")
+    world_usa_news_events = world_usa_news_events_taxon(base_path: child_taxon_base_path)
 
-    stub_content_store_has_item(@base_path, world_usa)
-    stub_content_store_has_item(@child_taxon_base_path, world_usa_news_events)
+    stub_content_store_has_item(base_path, world_usa)
+    stub_content_store_has_item(child_taxon_base_path, world_usa_news_events)
+    stub_content_for_taxon(taxon.content_id, search_results) # For the "general information" taxon
+    stub_most_popular_content_for_taxon(taxon.content_id, search_results, filter_content_store_document_type: nil)
+    stub_content_for_taxon(child_taxon.content_id, search_results)
 
-    @taxon = WorldWideTaxon.find(@base_path)
-    stub_content_for_taxon(@taxon.content_id, search_results) # For the "general information" taxon
-    stub_content_for_taxon(@taxon.content_id, search_results)
-    stub_most_popular_content_for_taxon(@taxon.content_id, search_results, filter_content_store_document_type: nil)
+    visit base_path
 
-    @child_taxon = WorldWideTaxon.find(@child_taxon_base_path)
-    stub_content_for_taxon(@child_taxon.content_id, search_results)
-
-    visit @base_path
-
-    email_url = Plek.new.website_root + "/email-signup?link=#{@base_path}"
-    feed_url = Plek.new.website_root + "/world/usa.atom"
-
-    assert page.has_selector?("a[href='#{email_url}']", text: "Get emails for this topic")
-    assert page.has_selector?("button", text: "Subscribe to feed")
-    assert page.has_selector?(".gem-c-subscription-links input[value='#{feed_url}']")
+    expect(page).to have_selector("a[href='#{email_url}']", text: "Get emails for this topic")
+    expect(page).to have_selector("button", text: "Subscribe to feed")
+    expect(page).to have_selector(".gem-c-subscription-links input[value='#{feed_url}']")
   end
 
-  it "does not contain the feed selector if we are browsing a world location leaf page" do
-    @base_path = "/world/usa"
-
-    world_usa = world_usa_taxon(base_path: @base_path)
+  scenario "does not contain the feed selector if we are browsing a world location leaf page" do
+    world_usa = world_usa_taxon(base_path: base_path)
     world_usa.delete("links")
 
-    stub_content_store_has_item(@base_path, world_usa)
+    stub_content_store_has_item(base_path, world_usa)
+    stub_content_for_taxon(taxon.content_id, search_results)
 
-    @taxon = WorldWideTaxon.find(@base_path)
-    stub_content_for_taxon(@taxon.content_id, search_results)
+    visit base_path
 
-    visit @base_path
-
-    feed_url = Plek.new.website_root + "/world/usa.atom"
-
-    assert page.has_no_selector?("button", text: "Subscribe to feed")
-    assert page.has_no_selector?(".gem-c-subscription-links input[value='#{feed_url}']")
+    expect(page).not_to have_selector("button", text: "Subscribe to feed")
+    expect(page).not_to have_selector(".gem-c-subscription-links input[value='#{feed_url}']")
   end
 
 private
