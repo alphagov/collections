@@ -1,6 +1,6 @@
 require "integration_spec_helper"
 
-feature "Courts pages" do
+RSpec.feature "Courts pages" do
   include CourtPagesHelper
 
   scenario "renders a courts page correctly" do

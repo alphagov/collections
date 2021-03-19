@@ -1,6 +1,6 @@
 require "integration_spec_helper"
 
-feature "Content store organisations" do
+RSpec.feature "Content store organisations" do
   before do
     stub_content_store_has_item("/government/organisations", organisations_content_hash)
     visit "/government/organisations"

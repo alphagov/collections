@@ -1,6 +1,6 @@
 require "integration_spec_helper"
 
-feature "Mainstream browsing" do
+RSpec.feature "Mainstream browsing" do
   include SearchApiHelpers
 
   scenario "that we can handle all examples" do

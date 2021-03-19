@@ -1,6 +1,6 @@
 require "integration_spec_helper"
 
-feature "Atom feeds" do
+RSpec.feature "Atom feeds" do
   include OrganisationFeedHelpers
 
   scenario "renders an organisation atom feed when there is content" do

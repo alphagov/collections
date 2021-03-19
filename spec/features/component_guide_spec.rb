@@ -1,7 +1,7 @@
 require "govuk_publishing_components/minitest/component_guide_test"
 require "integration_spec_helper"
 
-feature "Component guide" do
+RSpec.feature "Component guide" do
   # temporarily disabling to get around an error to do with an image in one of the component pages
   # include GovukPublishingComponents::Minitest::ComponentGuideTest
 

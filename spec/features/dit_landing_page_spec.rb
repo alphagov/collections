@@ -1,6 +1,6 @@
 require "integration_spec_helper"
 
-feature "Dit landing page" do
+RSpec.feature "Dit landing page" do
   include DitLandingPageHelpers
 
   before do
