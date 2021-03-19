@@ -13,7 +13,7 @@ class PersonTest < ActionDispatch::IntegrationTest
   end
 
   it "displays the person page" do
-    assert_equal page.title, "Rufus Scrimgeour - GOV.UK"
+    expect("Rufus Scrimgeour - GOV.UK").to eq(page.title)
   end
 
   it "shows schema.org Person structured data" do
@@ -21,7 +21,7 @@ class PersonTest < ActionDispatch::IntegrationTest
     schemas = schema_sections.map { |section| JSON.parse(section.text(:all)) }
 
     person_schema = schemas.detect { |schema| schema["@type"] == "Person" }
-    assert_equal person_schema["name"], "Rufus Scrimgeour"
+    expect("Rufus Scrimgeour").to eq(person_schema.[]("name"))
   end
 
   def stub_person_page_content_item(base_path, name)
