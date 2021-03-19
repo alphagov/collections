@@ -13,15 +13,15 @@ class RedirectionTest < ActionDispatch::IntegrationTest
     it "redirects to their unencoded paths" do
       get "/government%2Fpeople%2Fcornelius-fudge"
 
-      assert_response :redirect
-      assert_equal response.header["Location"], "http://www.example.com/government/people/cornelius-fudge"
+      expect(response).to be_redirect
+      expect("http://www.example.com/government/people/cornelius-fudge").to eq(response.header.[]("Location"))
     end
 
     it "ignores query strings" do
       get "/government%2Fpeople%2Fcornelius-fudge?associates=higgs%26mclaggen%2Fshacklebolt%26tonks"
 
-      assert_response :redirect
-      assert_equal response.header["Location"], "http://www.example.com/government/people/cornelius-fudge?associates=higgs%26mclaggen%2Fshacklebolt%26tonks"
+      expect(response).to be_redirect
+      expect("http://www.example.com/government/people/cornelius-fudge?associates=higgs%26mclaggen%2Fshacklebolt%26tonks").to eq(response.header.[]("Location"))
     end
   end
 end
