@@ -1,6 +1,6 @@
-require "integration_test_helper"
+require "integration_spec_helper"
 
-class PersonTest < ActionDispatch::IntegrationTest
+RSpec.feature "Person page" do
   before do
     name = "Rufus Scrimgeour"
     slug = "rufus-scrimgeour"
@@ -12,16 +12,16 @@ class PersonTest < ActionDispatch::IntegrationTest
     visit base_path
   end
 
-  it "displays the person page" do
-    assert_equal page.title, "Rufus Scrimgeour - GOV.UK"
+  scenario "displays the person page" do
+    expect(page).to have_title("Rufus Scrimgeour - GOV.UK")
   end
 
-  it "shows schema.org Person structured data" do
+  scenario "shows schema.org Person structured data" do
     schema_sections = page.find_all("script[type='application/ld+json']", visible: false)
     schemas = schema_sections.map { |section| JSON.parse(section.text(:all)) }
 
     person_schema = schemas.detect { |schema| schema["@type"] == "Person" }
-    assert_equal person_schema["name"], "Rufus Scrimgeour"
+    expect("Rufus Scrimgeour").to eq(person_schema["name"])
   end
 
   def stub_person_page_content_item(base_path, name)

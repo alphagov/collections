@@ -1,9 +1,9 @@
-require "integration_test_helper"
+require "integration_spec_helper"
 
-class MainstreamBrowsingTest < ActionDispatch::IntegrationTest
+RSpec.feature "Mainstream browsing" do
   include SearchApiHelpers
 
-  test "that we can handle all examples" do
+  scenario "that we can handle all examples" do
     # Shuffle the examples to ensure tests don't become order dependent
     schemas = GovukSchemas::Example.find_all("mainstream_browse_page").shuffle
 
@@ -29,9 +29,8 @@ class MainstreamBrowsingTest < ActionDispatch::IntegrationTest
     schemas.each do |content_item|
       visit content_item["base_path"]
 
-      assert_equal 200, page.status_code
-      assert page.has_css?(".gem-c-breadcrumbs"),
-             "Expected page at '#{content_item['base_path']}' to display breadcrumbs, but none found"
+      expect(page.status_code).to eq(200)
+      expect(page).to have_selector(".gem-c-breadcrumbs")
     end
   end
 end
