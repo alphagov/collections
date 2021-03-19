@@ -1,7 +1,6 @@
-require "test_helper"
 require "gds_api/test_helpers/mapit"
 
-describe LocationLookupService do
+RSpec.describe LocationLookupService do
   include GdsApi::TestHelpers::Mapit
 
   describe "#data" do
@@ -29,12 +28,12 @@ describe LocationLookupService do
 
       data = described_class.new(postcode).data
 
-      assert_equal(2, data.size)
-      assert_instance_of(MapitPostcodeResponse, data.first)
-      assert_equal("E01000123", data.first.gss)
+      expect(data.size).to eq(2)
+      expect(data.first).to be_kind_of(MapitPostcodeResponse)
+      expect(data.first.gss).to eq("E01000123")
 
-      assert_instance_of(MapitPostcodeResponse, data.second)
-      assert_equal("E02000456", data.second.gss)
+      expect(data.second).to be_kind_of(MapitPostcodeResponse)
+      expect(data.second.gss).to eq("E02000456")
     end
 
     it "only returns locations with a gss code" do
@@ -59,27 +58,27 @@ describe LocationLookupService do
 
       data = described_class.new(postcode).data
 
-      assert_equal(1, data.size)
-      assert_instance_of(MapitPostcodeResponse, data.first)
-      assert_equal("E01000123", data.first.gss)
+      expect(data.size).to eq(1)
+      expect(data.first).to be_kind_of(MapitPostcodeResponse)
+      expect(data.first.gss).to eq("E01000123")
     end
 
     it "returns an error if the postcode isn't found" do
       postcode = "E18QS"
       stub_mapit_does_not_have_a_postcode(postcode)
 
-      assert_equal([], described_class.new(postcode).data)
-      assert_not_nil(described_class.new(postcode).error)
-      assert(described_class.new(postcode).postcode_not_found?)
+      expect(described_class.new(postcode).data).to eq([])
+      expect(described_class.new(postcode).error).to_not be nil
+      expect(described_class.new(postcode).postcode_not_found?).to be true
     end
 
     it "returns an error if the postcode is not valid" do
       invalid_postcode = "hello"
       stub_mapit_does_not_have_a_bad_postcode(invalid_postcode)
 
-      assert_equal([], described_class.new(invalid_postcode).data)
-      assert_match(invalid_postcode, described_class.new(invalid_postcode).error[:message])
-      assert(described_class.new(invalid_postcode).invalid_postcode?)
+      expect(described_class.new(invalid_postcode).data).to eq([])
+      expect(described_class.new(invalid_postcode).error[:message]).to match(invalid_postcode)
+      expect(described_class.new(invalid_postcode).invalid_postcode?).to be true
     end
 
     it "returns the lowest tier area code" do
@@ -104,7 +103,7 @@ describe LocationLookupService do
       ]
       stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
 
-      assert_equal("Coruscant Planetary Council", described_class.new(postcode).lower_tier_area_name)
+      expect(described_class.new(postcode).lower_tier_area_name).to eq("Coruscant Planetary Council")
     end
 
     it "returns no information if the postcode is in a valid format but there is no data" do
@@ -114,7 +113,7 @@ describe LocationLookupService do
       stub_request(:get, "#{MAPIT_ENDPOINT}/postcode/" + postcode.tr(" ", "+") + ".json")
           .to_return(body: { "postcode" => postcode.to_s, "areas" => {} }.to_json, status: 200)
 
-      assert(described_class.new(postcode).no_information?)
+      expect(described_class.new(postcode).no_information?).to be true
     end
   end
 end
