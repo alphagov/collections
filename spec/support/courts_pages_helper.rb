@@ -22,36 +22,36 @@ module CourtPagesHelper
   end
 
   def and_the_breadcrumbs_collapse_on_mobile
-    assert page.has_css?(".govuk-breadcrumbs--collapse-on-mobile")
+    expect(page).to have_selector(".govuk-breadcrumbs--collapse-on-mobile")
   end
 
   def i_see_the_courts_breadcrumb
-    assert page.has_css?(".gem-c-breadcrumbs", text: "Courts and Tribunals")
+    expect(page).to have_selector(".gem-c-breadcrumbs", text: "Courts and Tribunals")
   end
 
   def the_correct_title
-    assert page.has_title?("#{@title} - GOV.UK")
-    assert page.has_css?(".gem-c-organisation-logo", text: @title)
+    expect(page).to have_title("#{@title} - GOV.UK")
+    expect(page).to have_selector(".gem-c-organisation-logo", text: @title)
 
     # Does not have the No. 10 banner
-    assert_not page.has_css?(".organisation__no10-banner")
+    expect(page).not_to have_selector(".organisation__no10-banner")
   end
 
   def the_courts_title
-    assert page.has_title?("#{@title} - GOV.UK")
-    assert page.has_css?(".gem-c-title__text", text: @title)
+    expect(page).to have_title("#{@title} - GOV.UK")
+    expect(page).to have_selector(".gem-c-title__text", text: @title)
   end
 
   def and_featured_links
-    assert page.has_css?(".app-c-topic-list")
+    expect(page).to have_selector(".app-c-topic-list")
   end
 
   def and_the_what_we_do_section
-    assert page.has_css?("section#what-we-do", text: @what_we_do)
+    expect(page).to have_selector("section#what-we-do", text: @what_we_do)
   end
 
   def and_contacts
-    assert page.has_css?("section#org-contacts")
+    expect(page).to have_selector("section#org-contacts")
   end
 
   def and_there_is_schema_org_information
@@ -63,20 +63,20 @@ module CourtPagesHelper
   end
 
   def but_no_documents
-    assert_not page.has_css?("section#latest-documents")
-    assert_not page.has_css?(".gem-c-heading", text: "Documents")
-    assert_not page.has_css?(".gem-c-heading", text: "Our announcements")
-    assert_not page.has_css?(".gem-c-heading", text: "Our consultations")
-    assert_not page.has_css?(".gem-c-heading", text: "Our publications")
-    assert_not page.has_css?(".gem-c-heading", text: "Our statistics")
+    expect(page).not_to have_selector("section#latest-documents")
+    expect(page).not_to have_selector(".gem-c-heading", text: "Documents")
+    expect(page).not_to have_selector(".gem-c-heading", text: "Our announcements")
+    expect(page).not_to have_selector(".gem-c-heading", text: "Our consultations")
+    expect(page).not_to have_selector(".gem-c-heading", text: "Our publications")
+    expect(page).not_to have_selector(".gem-c-heading", text: "Our statistics")
   end
 
   def or_foi_section
-    assert_not page.has_content?(/Make an FOI request/i)
-    assert_not page.has_content?(/Freedom of Information (FOI) Act/i)
+    expect(page).not_to have_content(/Make an FOI request/i)
+    expect(page).not_to have_content(/Freedom of Information (FOI) Act/i)
   end
 
   def or_corporate_information
-    assert_not page.has_css?("div#corporate-info")
+    expect(page).not_to have_selector("div#corporate-info")
   end
 end

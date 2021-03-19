@@ -1,4 +1,4 @@
-require "integration_test_helper"
+require "integration_spec_helper"
 
 feature "Courts pages" do
   include CourtPagesHelper
