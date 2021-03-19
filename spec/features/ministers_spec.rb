@@ -7,22 +7,22 @@ class MinistersTest < ActionDispatch::IntegrationTest
   end
 
   it "returns 200 when visiting ministers page" do
-    assert_equal 200, page.status_code
+    expect(page.status_code).to eq(200)
   end
 
   it "renders webpage title" do
-    assert page.has_title?("Ministers - GOV.UK")
+    expect(page.has_title?("Ministers - GOV.UK")).to be
   end
 
   it "renders page title" do
-    assert page.has_css?(".gem-c-title__text", text: "Ministers")
+    expect(page.has_css?(".gem-c-title__text", text: "Ministers")).to be
   end
 
   it "renders section headers" do
-    assert page.has_css?(".gem-c-heading", text: "Cabinet ministers")
-    assert page.has_css?(".gem-c-heading", text: "Also attends Cabinet")
-    assert page.has_css?(".gem-c-heading", text: "Ministers by department")
-    assert page.has_css?(".gem-c-heading", text: "Whips")
+    expect(page.has_css?(".gem-c-heading", text: "Cabinet ministers")).to be
+    expect(page.has_css?(".gem-c-heading", text: "Also attends Cabinet")).to be
+    expect(page.has_css?(".gem-c-heading", text: "Ministers by department")).to be
+    expect(page.has_css?(".gem-c-heading", text: "Whips")).to be
   end
 
 private
