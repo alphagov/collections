@@ -2,7 +2,13 @@ require "active_model"
 
 class CoronavirusLandingPageController < ApplicationController
   def show
-    set_expiry 5.minutes
+    @statistics = FetchCoronavirusStatisticsService.call
+    if @statistics
+      set_expiry 5.minutes
+    else
+      logger.warn "Serving /coronavirus without statistics"
+      set_expiry 30.seconds
+    end
 
     @content_item = content_item.to_hash
     breadcrumbs = [{ title: "Home", url: "/", is_page_parent: true }]

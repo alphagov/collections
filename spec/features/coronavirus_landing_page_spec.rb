@@ -5,6 +5,8 @@ RSpec.feature "Coronavirus Pages" do
   include CoronavirusContentItemHelper
 
   describe "the landing page" do
+    before { stub_coronavirus_statistics }
+
     scenario "renders" do
       given_there_is_a_content_item
       when_i_visit_the_coronavirus_landing_page

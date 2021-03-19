@@ -20,6 +20,15 @@ module CoronavirusContentItemHelper
     load_content_item("coronavirus_education_page.json")
   end
 
+  def stub_coronavirus_statistics
+    body = { data: [{ "date" => "2021-03-18",
+                      "cumulativeVaccinations" => 25_000_000,
+                      "hospitalAdmissions" => 1000,
+                      "newPositiveTests" => 5000 }] }
+
+    stub_request(:get, /coronavirus.data.gov.uk/).to_return(status: 200, body: body.to_json)
+  end
+
   def random_landing_page
     GovukSchemas::RandomExample.for_schema(frontend_schema: "coronavirus_landing_page") do |item|
       yield(item)
