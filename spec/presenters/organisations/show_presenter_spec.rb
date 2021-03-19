@@ -1,26 +1,24 @@
-require "test_helper"
-
-describe Organisations::ShowPresenter do
+RSpec.describe Organisations::ShowPresenter do
   include SearchApiHelpers
   include OrganisationHelpers
 
   it "adds a prefix to a title when it should" do
     presenter = build_show_presenter_for_org("Attorney General's Office", "ministerial_department")
-    assert_equal "the Attorney General's Office", presenter.prefixed_title
+    expect(presenter.prefixed_title).to eq("the Attorney General's Office")
 
     presenter = build_show_presenter_for_org("Queen's Bench Division of the High Court", "court")
-    assert_equal "the Queen's Bench Division of the High Court", presenter.prefixed_title
+    expect(presenter.prefixed_title).to eq("the Queen's Bench Division of the High Court")
   end
 
   it "does not add a prefix to a title when it should not" do
     presenter = build_show_presenter_for_org("The Charity Commission", "non_ministerial_department")
-    assert_equal "The Charity Commission", presenter.prefixed_title
+    expect(presenter.prefixed_title).to eq("The Charity Commission")
 
     presenter = build_show_presenter_for_org("civil service resourcing", "sub_organisation")
-    assert_equal "civil service resourcing", presenter.prefixed_title
+    expect(presenter.prefixed_title).to eq("civil service resourcing")
 
     presenter = build_show_presenter_for_org("civil service hr", "sub_organisation")
-    assert_equal "civil service hr", presenter.prefixed_title
+    expect(presenter.prefixed_title).to eq("civil service hr")
   end
 
   def build_show_presenter_for_org(title, type)
@@ -46,11 +44,11 @@ describe Organisations::ShowPresenter do
     }
     content_item = ContentItem.new(content_hash.with_indifferent_access)
     organisation = Organisation.new(content_item)
-    @show_presenter = Organisations::ShowPresenter.new(organisation)
+    show_presenter = Organisations::ShowPresenter.new(organisation)
 
     expected = "<a class=\"brand__color govuk-link\" href=\"/international-trade\">Department for International Trade</a>"
 
-    assert_equal expected, @show_presenter.parent_organisations
+    expect(show_presenter.parent_organisations).to eq(expected)
   end
 
   it "returns a human-readable sentence with links to multiple parent organisation" do
@@ -75,17 +73,17 @@ describe Organisations::ShowPresenter do
     }
     content_item = ContentItem.new(content_hash.with_indifferent_access)
     organisation = Organisation.new(content_item)
-    @show_presenter = Organisations::ShowPresenter.new(organisation)
+    show_presenter = Organisations::ShowPresenter.new(organisation)
 
     expected = "<a class=\"brand__color govuk-link\" href=\"/international-trade-1\">Dept for Trade</a> and <a class=\"brand__color govuk-link\" href=\"/international-trade-2\">Second Dept for Trade</a>"
 
-    assert_equal expected, @show_presenter.parent_organisations
+    expect(show_presenter.parent_organisations).to eq(expected)
   end
 
   it "formats high profile groups correctly and in alphabetical order" do
     content_item = ContentItem.new(organisation_with_high_profile_groups)
     organisation = Organisation.new(content_item)
-    @show_presenter = Organisations::ShowPresenter.new(organisation)
+    show_presenter = Organisations::ShowPresenter.new(organisation)
 
     expected = {
       title: "High profile groups within Defra",
@@ -102,13 +100,13 @@ describe Organisations::ShowPresenter do
       ],
     }
 
-    assert_equal expected, @show_presenter.high_profile_groups
+    expect(show_presenter.high_profile_groups).to eq(expected)
   end
 
   it "formats corporate information correctly" do
     content_item = ContentItem.new(organisation_with_corporate_information)
     organisation = Organisation.new(content_item)
-    @show_presenter = Organisations::ShowPresenter.new(organisation)
+    show_presenter = Organisations::ShowPresenter.new(organisation)
 
     expected = {
       corporate_information_links: {
@@ -139,6 +137,6 @@ describe Organisations::ShowPresenter do
       },
     }
 
-    assert_equal expected, @show_presenter.corporate_information
+    expect(show_presenter.corporate_information).to eq(expected)
   end
 end

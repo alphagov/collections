@@ -1,6 +1,4 @@
-require "test_helper"
-
-describe Organisations::DocumentPresenter do
+RSpec.describe Organisations::DocumentPresenter do
   describe "#present" do
     it "transforms" do
       expected = {
@@ -19,7 +17,7 @@ describe Organisations::DocumentPresenter do
         },
       }
 
-      assert_equal expected, presenter.present
+      expect(presenter.present).to eq(expected)
     end
   end
 
@@ -27,7 +25,7 @@ describe Organisations::DocumentPresenter do
     it "transforms the acronym in the doc type" do
       expected = presenter({ "content_store_document_type" => "Aaib_report" })
 
-      assert_equal expected.present[:metadata][:document_type], "Air Accidents Investigation Branch report"
+      expect("Air Accidents Investigation Branch report").to eq(expected.present[:metadata][:document_type])
     end
   end
 
@@ -41,7 +39,7 @@ describe Organisations::DocumentPresenter do
         },
       }
 
-      assert_equal expected, presenter(include_metadata: false).present
+      expect(presenter(include_metadata: false).present).to eq(expected)
     end
   end
 

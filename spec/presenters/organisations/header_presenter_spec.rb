@@ -1,12 +1,10 @@
-require "test_helper"
-
-describe Organisations::HeaderPresenter do
+RSpec.describe Organisations::HeaderPresenter do
   include OrganisationHelpers
 
   it "formats data for the translation component correctly" do
     content_item = ContentItem.new(organisation_with_translations)
     organisation = Organisation.new(content_item)
-    @header_presenter = Organisations::HeaderPresenter.new(organisation)
+    header_presenter = Organisations::HeaderPresenter.new(organisation)
 
     expected = {
       brand: "attorney-generals-office",
@@ -26,6 +24,6 @@ describe Organisations::HeaderPresenter do
         },
       ],
     }
-    assert_equal expected, @header_presenter.translation_links
+    expect(header_presenter.translation_links).to eq(expected)
   end
 end

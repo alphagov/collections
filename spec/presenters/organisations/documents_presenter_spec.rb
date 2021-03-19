@@ -1,26 +1,19 @@
-require "test_helper"
-
-describe Organisations::DocumentsPresenter do
+RSpec.describe Organisations::DocumentsPresenter do
   include SearchApiHelpers
   include OrganisationHelpers
 
   describe "documents" do
-    before :each do
-      @documents = organisation_with_featured_documents["details"]["ordered_featured_documents"]
-      content_item = ContentItem.new(organisation_with_featured_documents)
-      organisation = Organisation.new(content_item)
-      @documents_presenter = Organisations::DocumentsPresenter.new(organisation)
+    let(:documents) { organisation_with_featured_documents["details"]["ordered_featured_documents"] }
+    let(:documents_presenter) { presenter_from_organisation_hash(organisation_with_featured_documents) }
+    let(:no_documents_presenter) { presenter_from_organisation_hash(organisation_with_no_documents) }
 
-      content_item = ContentItem.new(organisation_with_no_documents)
-      organisation = Organisation.new(content_item)
-      @no_documents_presenter = Organisations::DocumentsPresenter.new(organisation)
-
+    before do
       stub_empty_search_api_requests("org-with-no-docs")
       stub_search_api_latest_content_requests("attorney-generals-office")
     end
 
     it "formats the main large news story correctly" do
-      time_stamp = @documents.first["public_updated_at"]
+      time_stamp = documents.first["public_updated_at"]
       expected = {
         href: "/government/news/new-head-of-the-serious-fraud-office-announced",
         image_src: "https://assets.publishing.service.gov.uk/s712_jeremy.jpg",
@@ -35,11 +28,11 @@ describe Organisations::DocumentsPresenter do
         large: true,
         heading_level: 3,
       }
-      assert_equal expected, @documents_presenter.first_featured_news
+      expect(documents_presenter.first_featured_news).to eq(expected)
     end
 
     it "formats the remaining news stories correctly" do
-      time_stamp = @documents.last["public_updated_at"]
+      time_stamp = documents.last["public_updated_at"]
       expected = [{
         href: "/government/news/new-head-of-a-different-office-announced",
         image_src: "https://assets.publishing.service.gov.uk/s465_john.jpg",
@@ -53,15 +46,15 @@ describe Organisations::DocumentsPresenter do
         brand: "attorney-generals-office",
         heading_level: 3,
       }]
-      assert_equal expected, @documents_presenter.remaining_featured_news
+      expect(documents_presenter.remaining_featured_news).to eq(expected)
     end
 
     it "returns true if there are latest documents" do
-      assert @documents_presenter.has_latest_documents?
+      expect(documents_presenter.has_latest_documents?).to be true
     end
 
     it "returns false if there are no latest documents" do
-      assert_equal false, @no_documents_presenter.has_latest_documents?
+      expect(no_documents_presenter.has_latest_documents?).to be false
     end
 
     it "formats latest documents correctly" do
@@ -87,7 +80,7 @@ describe Organisations::DocumentsPresenter do
           brand: "attorney-generals-office",
         }
 
-      assert_equal expected, @documents_presenter.latest_documents
+      expect(documents_presenter.latest_documents).to eq(expected)
     end
 
     it "formats document types with acronyms correctly" do
@@ -95,16 +88,14 @@ describe Organisations::DocumentsPresenter do
       stub_search_api_latest_content_with_acronym("attorney-generals-office")
 
       expected = "Press release"
-      actual = @documents_presenter.latest_documents[:items].first[:metadata][:document_type]
+      actual = documents_presenter.latest_documents[:items].first[:metadata][:document_type]
 
-      assert_equal expected, actual
+      expect(actual).to eq(expected)
     end
   end
 
   it "formats promotional features data correctly" do
-    content_item = ContentItem.new(organisation_with_promotional_features)
-    organisation = Organisation.new(content_item)
-    @documents_presenter = Organisations::DocumentsPresenter.new(organisation)
+    documents_presenter = presenter_from_organisation_hash(organisation_with_promotional_features)
 
     stub_search_api_latest_content_requests("prime-ministers-office-10-downing-street")
 
@@ -244,6 +235,12 @@ describe Organisations::DocumentsPresenter do
       },
     ]
 
-    assert_equal expected, @documents_presenter.promotional_features
+    expect(documents_presenter.promotional_features).to eq(expected)
+  end
+
+  def presenter_from_organisation_hash(content)
+    content_item = ContentItem.new(content)
+    organisation = Organisation.new(content_item)
+    described_class.new(organisation)
   end
 end
