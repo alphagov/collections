@@ -1,6 +1,4 @@
-require "test_helper"
-
-describe Supergroups::PolicyAndEngagement do
+RSpec.describe Supergroups::PolicyAndEngagement do
   include SearchApiHelpers
   include SupergroupHelpers
 
@@ -9,11 +7,11 @@ describe Supergroups::PolicyAndEngagement do
 
   describe "#document_list" do
     it "returns a document list for the policy and engagment supergroup" do
-      MostRecentContent.any_instance
-        .stubs(:fetch)
-        .returns(section_tagged_content_list("case_study"))
+      allow_any_instance_of(MostRecentContent)
+        .to receive(:fetch)
+        .and_return(section_tagged_content_list("case_study"))
 
-      assert_equal expected_result("case_study"), policy_and_engagement_supergroup.document_list(taxon_id)
+      expect(policy_and_engagement_supergroup.document_list(taxon_id)).to eq(expected_result("case_study"))
     end
 
     describe "consultations" do
@@ -34,21 +32,21 @@ describe Supergroups::PolicyAndEngagement do
           case_study
         ]
 
-        MostRecentContent.any_instance
-          .stubs(:fetch)
-          .returns(tagged_content(tagged_document_list))
+        allow_any_instance_of(MostRecentContent)
+          .to receive(:fetch)
+          .and_return(tagged_content(tagged_document_list))
 
-        assert_equal expected_results(expected_order), policy_and_engagement_supergroup.document_list(taxon_id)
+        expect(policy_and_engagement_supergroup.document_list(taxon_id)).to eq(expected_results(expected_order))
       end
 
       describe "#consultation_closing_date" do
         it "gets the closing date of past consultations" do
-          MostRecentContent.any_instance
-            .stubs(:fetch)
-            .returns(section_tagged_content_list("open_consultation", 4))
+          allow_any_instance_of(MostRecentContent)
+            .to receive(:fetch)
+            .and_return(section_tagged_content_list("open_consultation", 4))
 
           expected = Array.new(4) { |index| expected_result("open_consultation", index).first }
-          assert_equal expected, policy_and_engagement_supergroup.document_list(taxon_id)
+          expect(policy_and_engagement_supergroup.document_list(taxon_id)).to eq(expected)
         end
 
         it "gets the closing date of future consultations" do
@@ -62,9 +60,9 @@ describe Supergroups::PolicyAndEngagement do
             organisations: "Tagged Content Organisation",
           )
 
-          MostRecentContent.any_instance
-            .stubs(:fetch)
-            .returns([document])
+          allow_any_instance_of(MostRecentContent)
+            .to receive(:fetch)
+            .and_return([document])
 
           expected = [
             {
@@ -91,7 +89,7 @@ describe Supergroups::PolicyAndEngagement do
           ]
 
           Timecop.freeze("2018-04-18") do
-            assert_equal expected, policy_and_engagement_supergroup.document_list(taxon_id)
+            expect(policy_and_engagement_supergroup.document_list(taxon_id)).to eq(expected)
           end
         end
       end
@@ -102,7 +100,7 @@ describe Supergroups::PolicyAndEngagement do
     it "returns appropriate things" do
       document_types = GovukDocumentTypes.supergroup_document_types("policy_and_engagement")
 
-      assert_includes document_types, "open_consultation"
+      expect(document_types).to include("open_consultation")
     end
   end
 

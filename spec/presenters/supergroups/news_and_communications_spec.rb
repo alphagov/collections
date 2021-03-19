@@ -1,6 +1,4 @@
-require "test_helper"
-
-describe Supergroups::NewsAndCommunications do
+RSpec.describe Supergroups::NewsAndCommunications do
   include SearchApiHelpers
   include SupergroupHelpers
 
@@ -11,9 +9,9 @@ describe Supergroups::NewsAndCommunications do
 
   describe "#document_list" do
     it "returns a document list for the news and communications supergroup" do
-      MostRecentContent.any_instance
-        .stubs(:fetch)
-        .returns(section_tagged_content_list("news_story", 2))
+      allow_any_instance_of(MostRecentContent)
+        .to receive(:fetch)
+        .and_return(section_tagged_content_list("news_story", 2))
 
       expected = [
         {
@@ -38,18 +36,18 @@ describe Supergroups::NewsAndCommunications do
         },
       ]
 
-      assert_equal expected, news_and_communications_supergroup.document_list(taxon_id)
+      expect(news_and_communications_supergroup.document_list(taxon_id)).to eq(expected)
     end
 
     it "does not returns an image for news items" do
       tagged_document_list = %w[news_story correspondance press_release]
 
-      MostRecentContent.any_instance
-        .stubs(:fetch)
-        .returns(tagged_content(tagged_document_list))
+      allow_any_instance_of(MostRecentContent)
+        .to receive(:fetch)
+        .and_return(tagged_content(tagged_document_list))
 
       news_and_communications_supergroup.document_list(taxon_id).each do |content_item|
-        assert_not content_item.key?(:image)
+        expect(content_item.key?(:image)).to be false
       end
     end
   end
@@ -68,9 +66,9 @@ describe Supergroups::NewsAndCommunications do
     end
 
     it "returns promoted content for the news and communications section" do
-      MostRecentContent.any_instance
-        .stubs(:fetch)
-        .returns(section_tagged_content_list("news_story"))
+      allow_any_instance_of(MostRecentContent)
+        .to receive(:fetch)
+        .and_return(section_tagged_content_list("news_story"))
 
       expected = [
         {
@@ -98,30 +96,31 @@ describe Supergroups::NewsAndCommunications do
         },
       ]
 
-      assert_equal expected, news_and_communications_supergroup.promoted_content(taxon_id)
+      expect(news_and_communications_supergroup.promoted_content(taxon_id)).to eq(expected)
     end
 
     it "returns an image for the first news item" do
       tagged_document_list = %w[news_story correspondance press_release]
 
-      MostRecentContent.any_instance
-        .stubs(:fetch)
-        .returns(tagged_content(tagged_document_list))
+      allow_any_instance_of(MostRecentContent)
+        .to receive(:fetch)
+        .and_return(tagged_content(tagged_document_list))
 
       promoted_news = news_and_communications_supergroup.promoted_content(taxon_id)
 
-      assert_equal 1, promoted_news.size
-      assert promoted_news.first.key?(:image)
+      expect(promoted_news.size).to eq(1)
+      expect(promoted_news.first.key?(:image)).to be
     end
 
     it "returns the default whitehall image if no image is present" do
       content_list = section_tagged_content_list("news_story")
       content_list.each { |content| content.image_url = nil }
-      MostRecentContent.any_instance
-      .stubs(:fetch)
-      .returns(content_list)
 
-      assert_equal DEFAULT_IMAGE_URL, news_and_communications_supergroup.promoted_content(taxon_id).first[:image][:url]
+      allow_any_instance_of(MostRecentContent)
+        .to receive(:fetch)
+        .and_return(content_list)
+
+      expect(news_and_communications_supergroup.promoted_content(taxon_id).first[:image][:url]).to eq(DEFAULT_IMAGE_URL)
     end
   end
 
@@ -129,7 +128,7 @@ describe Supergroups::NewsAndCommunications do
     it "returns appropriate things" do
       document_types = GovukDocumentTypes.supergroup_document_types("news_and_communications")
 
-      assert_includes document_types, "speech"
+      expect(document_types).to include("speech")
     end
   end
 end

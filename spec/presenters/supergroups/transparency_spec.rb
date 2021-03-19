@@ -1,6 +1,4 @@
-require "test_helper"
-
-describe Supergroups::Transparency do
+RSpec.describe Supergroups::Transparency do
   include SearchApiHelpers
 
   let(:taxon_id) { "12345" }
@@ -8,9 +6,9 @@ describe Supergroups::Transparency do
 
   describe "#document_list" do
     it "returns a document list for the transparency supergroup" do
-      MostRecentContent.any_instance
-        .stubs(:fetch)
-        .returns(section_tagged_content_list("statistics"))
+      allow_any_instance_of(MostRecentContent)
+        .to receive(:fetch)
+        .and_return(section_tagged_content_list("statistics"))
 
       expected = [
         {
@@ -35,7 +33,7 @@ describe Supergroups::Transparency do
         },
       ]
 
-      assert_equal expected, transparency_supergroup.document_list(taxon_id)
+      expect(transparency_supergroup.document_list(taxon_id)).to eq(expected)
     end
   end
 
@@ -43,7 +41,7 @@ describe Supergroups::Transparency do
     it "returns appropriate things" do
       document_types = GovukDocumentTypes.supergroup_document_types("transparency")
 
-      assert_includes document_types, "transparency"
+      expect(document_types).to include("transparency")
     end
   end
 end

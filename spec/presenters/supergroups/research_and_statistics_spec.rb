@@ -1,6 +1,4 @@
-require "test_helper"
-
-describe Supergroups::ResearchAndStatistics do
+RSpec.describe Supergroups::ResearchAndStatistics do
   include SearchApiHelpers
 
   let(:taxon_id) { "12345" }
@@ -8,9 +6,9 @@ describe Supergroups::ResearchAndStatistics do
 
   describe "#document_list" do
     it "returns a document list for the research_and_statistics supergroup" do
-      MostRecentContent.any_instance
-        .stubs(:fetch)
-        .returns(section_tagged_content_list("statistics"))
+      allow_any_instance_of(MostRecentContent)
+        .to receive(:fetch)
+        .and_return(section_tagged_content_list("statistics"))
 
       expected = [
         {
@@ -35,7 +33,7 @@ describe Supergroups::ResearchAndStatistics do
         },
       ]
 
-      assert_equal expected, research_and_statistics_supergroup.document_list(taxon_id)
+      expect(research_and_statistics_supergroup.document_list(taxon_id)).to eq(expected)
     end
   end
 
@@ -43,7 +41,7 @@ describe Supergroups::ResearchAndStatistics do
     it "returns appropriate things" do
       document_types = GovukDocumentTypes.supergroup_document_types("research_and_statistics")
 
-      assert_includes document_types, "statistics"
+      expect(document_types).to include("statistics")
     end
   end
 end
