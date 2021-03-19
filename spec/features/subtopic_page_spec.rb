@@ -1,6 +1,6 @@
-require "integration_test_helper"
+require "integration_spec_helper"
 
-class SubtopicPageTest < ActionDispatch::IntegrationTest
+RSpec.feature "Subtopic pages" do
   include SearchApiHelpers
 
   def oil_and_gas_subtopic_item(subtopic_slug, params = {})
@@ -38,7 +38,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
     )
   end
 
-  it "renders a curated subtopic" do
+  scenario "renders a curated subtopic" do
     # Given a curated subtopic exists
     stub_content_store_has_item(
       "/topic/oil-and-gas/offshore",
@@ -70,32 +70,32 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
     visit "/topic/oil-and-gas/offshore"
 
     # Then it should have the correct page title
-    assert page.has_title?("Oil and Gas: Offshore - detailed information - GOV.UK")
+    expect(page).to have_title("Oil and Gas: Offshore - detailed information - GOV.UK")
 
     # Then I should see the subtopic metadata
     within ".page-header" do
       within ".gem-c-title" do
-        assert page.has_css?(".gem-c-title__text", text: "Offshore: detailed information")
-        assert page.has_css?(".gem-c-title__context-link[href='/topic/oil-and-gas']", text: "Oil and Gas")
+        expect(page).to have_selector(".gem-c-title__text", text: "Offshore: detailed information")
+        expect(page).to have_selector(".gem-c-title__context-link[href='/topic/oil-and-gas']", text: "Oil and Gas")
       end
 
       within ".gem-c-metadata" do
         # The orgs are fixed in the search_api test helpers
-        assert page.has_text?("Department of Energy & Climate Change")
-        assert page.has_text?("Foreign & Commonwealth Office")
+        expect(page).to have_content("Department of Energy & Climate Change")
+        expect(page).to have_content("Foreign & Commonwealth Office")
       end
     end
 
     # And I should see the curated content for the subtopic
-    assert page.has_link?("Oil rig staffing", href: "/oil-rig-staffing")
-    assert page.has_link?("Oil rig safety requirements", href: "/oil-rig-safety-requirements")
-    assert page.has_link?("Undersea piping restrictions", href: "/undersea-piping-restrictions")
+    expect(page).to have_link("Oil rig staffing", href: "/oil-rig-staffing")
+    expect(page).to have_link("Oil rig safety requirements", href: "/oil-rig-safety-requirements")
+    expect(page).to have_link("Undersea piping restrictions", href: "/undersea-piping-restrictions")
 
-    assert_not page.has_link?("North sea shipping lanes")
+    expect(page).not_to have_link("North sea shipping")
 
     within ".gem-c-breadcrumbs" do
-      assert page.has_link?("Home", href: "/")
-      assert page.has_link?("Oil and Gas", href: "/topic/oil-and-gas")
+      expect(page).to have_link("Home", href: "/")
+      expect(page).to have_link("Oil and Gas", href: "/topic/oil-and-gas")
     end
   end
 
@@ -110,27 +110,27 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
     # Then I should see the subtopic metadata
     within ".page-header" do
       within ".gem-c-title" do
-        assert page.has_css?(".gem-c-title__text", text: "Offshore")
-        assert page.has_css?(".gem-c-title__context-link[href='/topic/oil-and-gas']", text: "Oil and Gas")
+        expect(page).to have_selector(".gem-c-title__text", text: "Offshore")
+        expect(page).to have_selector(".gem-c-title__context-link[href='/topic/oil-and-gas']", text: "Oil and Gas")
       end
 
       within ".gem-c-metadata" do
-        assert page.has_text?("Department of Energy & Climate Change")
-        assert page.has_text?("Foreign & Commonwealth Office")
+        expect(page).to have_content("Department of Energy & Climate Change")
+        expect(page).to have_content("Foreign & Commonwealth Office")
       end
     end
 
     # And I should see all content for the subtopic
-    assert page.has_link?("Oil rig staffing", href: "/oil-rig-staffing")
-    assert page.has_link?("Oil rig safety requirements", href: "/oil-rig-safety-requirements")
-    assert page.has_link?("North sea shipping lanes", href: "/north-sea-shipping-lanes")
-    assert page.has_link?("Undersea piping restrictions", href: "/undersea-piping-restrictions")
+    expect(page).to have_link("Oil rig staffing", href: "/oil-rig-staffing")
+    expect(page).to have_link("Oil rig safety requirements", href: "/oil-rig-safety-requirements")
+    expect(page).to have_link("North sea shipping lanes", href: "/north-sea-shipping-lanes")
+    expect(page).to have_link("Undersea piping restrictions", href: "/undersea-piping-restrictions")
 
-    assert page.has_css?(".gem-c-breadcrumbs")
+    expect(page).to have_selector(".gem-c-breadcrumbs")
   end
 
   describe "latest page for a subtopic" do
-    setup do
+    before do
       stub_content_store_has_item("/topic/oil-and-gas/offshore", oil_and_gas_subtopic_item("offshore"))
       stub_topic_organisations("oil-and-gas/offshore", "content-id-for-offshore")
     end
@@ -154,14 +154,14 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
       # Then I should see the subtopic metadata
       within ".page-header" do
         within ".gem-c-title" do
-          assert page.has_css?(".gem-c-title__text", text: "Latest documents")
-          assert page.has_css?(".gem-c-title__context-link[href='/topic/oil-and-gas/offshore']", text: "Offshore")
+          expect(page).to have_selector(".gem-c-title__text", text: "Latest documents")
+          expect(page).to have_selector(".gem-c-title__context-link[href='/topic/oil-and-gas/offshore']", text: "Offshore")
         end
 
         within ".gem-c-metadata" do
           # The orgs are fixed in the search_api test helpers
-          assert page.has_text?("Department of Energy & Climate Change")
-          assert page.has_text?("Foreign & Commonwealth Office")
+          expect(page).to have_content("Department of Energy & Climate Change")
+          expect(page).to have_content("Foreign & Commonwealth Office")
         end
       end
 
@@ -173,7 +173,7 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
         "Oil and gas fields and field development",
         "Oil and gas geoscientific data",
       ]
-      assert_equal expected_titles, titles
+      expect(titles).to eq(expected_titles)
     end
 
     it "paginates the results" do
@@ -189,34 +189,34 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
       # Then I should see the first 50 documents
       within ".gem-c-document-list" do
-        assert page.has_content?("Document 1")
-        assert page.has_content?("Document 50")
-        assert_not page.has_content?("Document 51")
+        expect(page).to have_content("Document 1")
+        expect(page).to have_content("Document 50")
+        expect(page).not_to have_content("Document 51")
       end
 
       # When I go to the next page
-      assert page.has_css?(".gem-c-pagination__link")
+      expect(page).to have_selector(".gem-c-pagination__link")
       next_href = page.find(".gem-c-pagination__link[rel='next']")["href"]
       visit next_href
 
       # Then I should see the remaining documents
       within ".gem-c-document-list" do
-        assert page.has_content?("Document 51")
-        assert page.has_content?("Document 55")
-        assert_not page.has_content?("Document 1")
-        assert_not page.has_content?("Document 50")
+        expect(page).to have_content("Document 51")
+        expect(page).to have_content("Document 55")
+        expect(page).not_to have_content("Document 1")
+        expect(page).not_to have_content("Document 50")
       end
 
       # When I go back to the first page
-      assert page.has_css?(".gem-c-pagination__link")
+      expect(page).to have_selector(".gem-c-pagination__link")
       prev_href = page.find(".gem-c-pagination__link[rel='prev']")["href"]
       visit prev_href
 
       # Then I should see the first 50 documents again
       within ".gem-c-document-list" do
-        assert page.has_content?("Document 1")
-        assert page.has_content?("Document 50")
-        assert_not page.has_content?("Document 51")
+        expect(page).to have_content("Document 1")
+        expect(page).to have_content("Document 50")
+        expect(page).not_to have_content("Document 51")
       end
     end
   end
@@ -250,82 +250,42 @@ class SubtopicPageTest < ActionDispatch::IntegrationTest
 
     visit "/topic/oil-and-gas/offshore"
 
-    assert page.has_selector?('.browse-container[data-module="gem-track-click"]')
+    expect(page).to have_selector('.browse-container[data-module="gem-track-click"]')
 
     oil_rig_safety_requirements = page.find(
       "a",
       text: "Oil rig safety requirements",
     )
 
-    assert_equal(
-      "navSubtopicContentItemLinkClicked",
-      oil_rig_safety_requirements["data-track-category"],
-      "Expected a tracking category to be set in the data attributes",
-    )
+    expect(oil_rig_safety_requirements["data-track-category"]).to eq("navSubtopicContentItemLinkClicked")
 
-    assert_equal(
-      "1.1",
-      oil_rig_safety_requirements["data-track-action"],
-      "Expected the link position to be set in the data attributes",
-    )
+    expect(oil_rig_safety_requirements["data-track-action"]).to eq("1.1")
 
-    assert_equal(
-      "/oil-rig-safety-requirements",
-      oil_rig_safety_requirements["data-track-label"],
-      "Expected the content item base path to be set in the data attributes",
-    )
+    expect(oil_rig_safety_requirements["data-track-label"]).to eq("/oil-rig-safety-requirements")
 
-    assert oil_rig_safety_requirements["data-track-options"].present?
+    expect(oil_rig_safety_requirements["data-track-options"]).to be_present
 
     data_options = JSON.parse(oil_rig_safety_requirements["data-track-options"])
-    assert_equal(
-      "1",
-      data_options["dimension28"],
-      "Expected the total number of content items within the section to be present in the tracking options",
-    )
+    expect(data_options["dimension28"]).to eq("1")
 
-    assert_equal(
-      "Oil rig safety requirements",
-      data_options["dimension29"],
-      "Expected the subtopic title to be present in the tracking options",
-    )
+    expect(data_options["dimension29"]).to eq("Oil rig safety requirements")
 
     undersea_piping_restrictions = page.find(
       "a",
       text: "Undersea piping restrictions",
     )
 
-    assert_equal(
-      "navSubtopicContentItemLinkClicked",
-      undersea_piping_restrictions["data-track-category"],
-      "Expected a tracking category to be set in the data attributes",
-    )
+    expect(undersea_piping_restrictions["data-track-category"]).to eq("navSubtopicContentItemLinkClicked")
 
-    assert_equal(
-      "2.1",
-      undersea_piping_restrictions["data-track-action"],
-      "Expected the link position to be set in the data attributes",
-    )
+    expect(undersea_piping_restrictions["data-track-action"]).to eq("2.1")
 
-    assert_equal(
-      "/undersea-piping-restrictions",
-      undersea_piping_restrictions["data-track-label"],
-      "Expected the content item base path to be set in the data attributes",
-    )
+    expect(undersea_piping_restrictions["data-track-label"]).to eq("/undersea-piping-restrictions")
 
-    assert undersea_piping_restrictions["data-track-options"].present?
+    expect(undersea_piping_restrictions["data-track-options"]).to be_present
 
     data_options = JSON.parse(undersea_piping_restrictions["data-track-options"])
-    assert_equal(
-      "1",
-      data_options["dimension28"],
-      "Expected the total number of content items within the section to be present in the tracking options",
-    )
+    expect(data_options["dimension28"]).to eq("1")
 
-    assert_equal(
-      "Undersea piping restrictions",
-      data_options["dimension29"],
-      "Expected the subtopic title to be present in the tracking options",
-    )
+    expect(data_options["dimension29"]).to eq("Undersea piping restrictions")
   end
 end
