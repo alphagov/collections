@@ -1,16 +1,14 @@
-require "test_helper"
-
-describe Supergroups::Transparency do
+RSpec.describe Supergroups::ResearchAndStatistics do
   include SearchApiHelpers
 
   let(:taxon_id) { "12345" }
-  let(:transparency_supergroup) { Supergroups::Transparency.new }
+  let(:research_and_statistics_supergroup) { Supergroups::ResearchAndStatistics.new }
 
   describe "#document_list" do
-    it "returns a document list for the transparency supergroup" do
-      MostRecentContent.any_instance
-        .stubs(:fetch)
-        .returns(section_tagged_content_list("statistics"))
+    it "returns a document list for the research_and_statistics supergroup" do
+      allow_any_instance_of(MostRecentContent)
+        .to receive(:fetch)
+        .and_return(section_tagged_content_list("statistics"))
 
       expected = [
         {
@@ -19,7 +17,7 @@ describe Supergroups::Transparency do
             path: "/government/tagged/content",
             data_attributes: {
               module: "gem-track-click",
-              track_category: "transparencyDocumentListClicked",
+              track_category: "researchAndStatisticsDocumentListClicked",
               track_action: 1,
               track_label: "/government/tagged/content",
               track_options: {
@@ -35,15 +33,15 @@ describe Supergroups::Transparency do
         },
       ]
 
-      assert_equal expected, transparency_supergroup.document_list(taxon_id)
+      expect(research_and_statistics_supergroup.document_list(taxon_id)).to eq(expected)
     end
   end
 
   describe "document types" do
     it "returns appropriate things" do
-      document_types = GovukDocumentTypes.supergroup_document_types("transparency")
+      document_types = GovukDocumentTypes.supergroup_document_types("research_and_statistics")
 
-      assert_includes document_types, "transparency"
+      expect(document_types).to include("statistics")
     end
   end
 end

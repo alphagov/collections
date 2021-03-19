@@ -1,6 +1,4 @@
-require "test_helper"
-
-describe Supergroups::GuidanceAndRegulation do
+RSpec.describe Supergroups::GuidanceAndRegulation do
   include SearchApiHelpers
 
   let(:taxon_id) { "12345" }
@@ -8,9 +6,9 @@ describe Supergroups::GuidanceAndRegulation do
 
   describe "#document_list" do
     it "returns a document list for the guidance and regulation supergroup" do
-      MostPopularContent.any_instance
-        .stubs(:fetch)
-        .returns(section_tagged_content_list("guidance", 1))
+      allow_any_instance_of(MostPopularContent)
+        .to receive(:fetch)
+        .and_return(section_tagged_content_list("guidance", 1))
 
       expected = [
         {
@@ -35,13 +33,13 @@ describe Supergroups::GuidanceAndRegulation do
         },
       ]
 
-      assert_equal expected, guidance_and_regulation_supergroup.document_list(taxon_id)
+      expect(guidance_and_regulation_supergroup.document_list(taxon_id)).to eq(expected)
     end
 
     it "return a document list for guides" do
-      MostPopularContent.any_instance
-        .stubs(:fetch)
-        .returns(section_tagged_content_list("guide", 1))
+      allow_any_instance_of(MostPopularContent)
+        .to receive(:fetch)
+        .and_return(section_tagged_content_list("guide", 1))
 
       expected = [
         {
@@ -68,8 +66,8 @@ describe Supergroups::GuidanceAndRegulation do
 
       actual = guidance_and_regulation_supergroup.document_list(taxon_id)
 
-      assert_equal expected, actual
-      assert_equal 1, actual.count
+      expect(actual).to eq(expected)
+      expect(actual.count).to eq(1)
     end
   end
 
@@ -77,7 +75,7 @@ describe Supergroups::GuidanceAndRegulation do
     it "returns appropriate things" do
       document_types = GovukDocumentTypes.supergroup_document_types("guidance_and_regulation")
 
-      assert_includes document_types, "guidance"
+      expect(document_types).to include("guidance")
     end
   end
 end

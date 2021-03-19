@@ -1,6 +1,4 @@
-require "test_helper"
-
-describe Supergroups::Services do
+RSpec.describe Supergroups::Services do
   include SearchApiHelpers
 
   let(:taxon_id) { "12345" }
@@ -8,9 +6,9 @@ describe Supergroups::Services do
 
   describe "#document_list" do
     it "returns a document list for the services supergroup" do
-      MostPopularContent.any_instance
-        .stubs(:fetch)
-        .returns(section_tagged_content_list("form", 1))
+      allow_any_instance_of(MostPopularContent)
+        .to receive(:fetch)
+        .and_return(section_tagged_content_list("form", 1))
 
       expected = [
         {
@@ -31,7 +29,7 @@ describe Supergroups::Services do
         },
       ]
 
-      assert_equal expected, service_supergroup.document_list(taxon_id)
+      expect(service_supergroup.document_list(taxon_id)).to eq(expected)
     end
   end
 
@@ -39,7 +37,7 @@ describe Supergroups::Services do
     it "returns appropriate things" do
       document_types = GovukDocumentTypes.supergroup_document_types("services")
 
-      assert_includes document_types, "transaction"
+      expect(document_types).to include("transaction")
     end
   end
 end
