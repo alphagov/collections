@@ -1,7 +1,7 @@
-require "integration_test_helper"
+require "integration_spec_helper"
 
-class WorldWideTaxonBrowsingTest < ActionDispatch::IntegrationTest
-  it "renders a leaf page for world content" do
+RSpec.feature "Worldwide taxon browsing" do
+  scenario "renders a leaf page for world content" do
     given_there_is_a_world_wide_country_taxon_without_children
     when_i_visit_that_taxon
     then_i_see_the_taxon_page
@@ -10,7 +10,7 @@ class WorldWideTaxonBrowsingTest < ActionDispatch::IntegrationTest
     and_the_page_is_tracked_as_a_leaf_node_taxon
   end
 
-  it "renders an accordion page for world content" do
+  scenario "renders an accordion page for world content" do
     given_there_is_a_world_wide_country_taxon_with_children
     when_i_visit_that_taxon
     then_i_see_the_taxon_page
@@ -65,36 +65,36 @@ class WorldWideTaxonBrowsingTest < ActionDispatch::IntegrationTest
   end
 
   def then_i_see_the_taxon_page
-    assert page.has_selector?("title", text: "Japan", visible: false)
+    expect(page).to have_selector("title", text: "Japan", visible: false)
   end
 
   def and_i_can_see_the_content_tagged_to_the_taxon
     tagged_content.each do |content|
-      assert page.has_link?(content["title"])
+      expect(page).to have_link(content["title"])
     end
   end
 
   def and_i_can_see_the_email_signup_link
-    assert page.has_link?("Get emails for this topic")
+    expect(page).to have_link("Get emails for this topic")
   end
 
   def and_i_can_see_links_to_the_child_taxons_in_an_accordion
     child_taxons = @content_item.dig("links", "child_taxons")
     child_taxons.each do |child_taxon|
-      assert page.has_content?(child_taxon["title"])
+      expect(page).to have_content(child_taxon["title"])
     end
   end
 
   def and_the_page_is_tracked_as_an_accordion
-    assert_navigation_page_type_tracking("accordion")
+    expect_navigation_page_type_tracking("accordion")
   end
 
   def and_the_page_is_tracked_as_a_leaf_node_taxon
-    assert_navigation_page_type_tracking("leaf")
+    expect_navigation_page_type_tracking("leaf")
   end
 
-  def assert_navigation_page_type_tracking(expected_page_type)
-    assert page.has_selector?("meta[name='govuk:navigation-page-type'][content='#{expected_page_type}']", visible: false)
+  def expect_navigation_page_type_tracking(expected_page_type)
+    expect(page).to have_selector("meta[name='govuk:navigation-page-type'][content='#{expected_page_type}']", visible: false)
   end
 
 private
