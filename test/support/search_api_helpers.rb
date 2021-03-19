@@ -32,9 +32,10 @@ module SearchApiHelpers
   end
 
   def stub_document_types_for_supergroup(supergroup)
-    GovukDocumentTypes.stubs(:supergroup_document_types)
+    allow(GovukDocumentTypes)
+      .to receive(:supergroup_document_types)
       .with(supergroup)
-      .returns(supergroup)
+      .and_return(supergroup)
   end
 
   def stub_minister_announcements(role)

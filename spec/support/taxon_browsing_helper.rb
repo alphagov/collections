@@ -18,7 +18,7 @@ module TaxonBrowsingHelper
   end
 
   def then_there_should_be_an_error
-    assert_equal 500, page.status_code
+    expect(page.status_code).to eq(500)
   end
 
   def given_there_is_a_taxon_with_children
@@ -114,30 +114,30 @@ module TaxonBrowsingHelper
   end
 
   def then_i_can_see_the_title_section
-    assert page.has_selector?("title", text: "Taxon title", visible: false)
+    expect(page).to have_selector("title", text: "Taxon title", visible: false)
 
     within ".gem-c-breadcrumbs" do
-      assert page.has_link?("Home", href: "/")
+      expect(page).to have_link("Home", href: "/")
     end
   end
 
   def and_i_can_see_the_email_signup_link
     link_text = "Get emails about this topic"
-    assert page.has_link?(link_text, href: "/email-signup/?link=#{current_path}")
-    assert page.has_css?("a[data-track-category='emailAlertLinkClicked']", text: link_text)
-    assert page.has_css?("a[data-track-action=\"#{current_path}\"]", text: link_text)
-    assert page.has_css?("a[data-track-label=\"\"]", text: link_text)
+    expect(page).to have_link(link_text, href: "/email-signup/?link=#{current_path}")
+    expect(page).to have_selector("a[data-track-category='emailAlertLinkClicked']", text: link_text)
+    expect(page).to have_selector("a[data-track-action=\"#{current_path}\"]", text: link_text)
+    expect(page).to have_selector("a[data-track-label=\"\"]", text: link_text)
   end
 
   def and_i_cannot_see_an_email_signup_link
-    assert_not page.has_link?(
+    expect(page).not_to have_link(
       "Get emails about this topic",
       href: "/email-signup/?link=#{current_path}",
     )
   end
 
   def and_i_can_see_the_guidance_and_regulation_section
-    assert page.has_selector?(".gem-c-heading", text: "Guidance")
+    expect(page).to have_selector(".gem-c-heading", text: "Guidance")
 
     tagged_content_for_guidance_and_regulation.each do |item|
       if item["content_store_document_type"] == "guide"
@@ -152,11 +152,11 @@ module TaxonBrowsingHelper
       url: "/search/guidance-and-regulation?" + finder_query_string,
     }
 
-    assert page.has_link?(expected_link[:text], href: expected_link[:url])
+    expect(page).to have_link(expected_link[:text], href: expected_link[:url])
   end
 
   def and_i_can_see_the_services_section
-    assert page.has_selector?(".gem-c-heading", text: "Services")
+    expect(page).to have_selector(".gem-c-heading", text: "Services")
     tagged_content_for_services.each do |item|
       mainstream_content_list_item_test(item)
     end
@@ -165,11 +165,11 @@ module TaxonBrowsingHelper
       text: "See more services in this topic",
       url: "/search/services?" + finder_query_string,
     }
-    assert page.has_link?(expected_link[:text], href: expected_link[:url])
+    expect(page).to have_link(expected_link[:text], href: expected_link[:url])
   end
 
   def and_i_can_see_the_news_and_communications_section
-    assert page.has_selector?(".gem-c-heading", text: "News")
+    expect(page).to have_selector(".gem-c-heading", text: "News")
 
     tagged_content_for_news_and_communications.each do |item|
       all_other_sections_list_item_test(item)
@@ -180,23 +180,23 @@ module TaxonBrowsingHelper
       url: "/search/news-and-communications?" + finder_query_string,
     }
 
-    assert page.has_link?(expected_link[:text], href: expected_link[:url])
+    expect(page).to have_link(expected_link[:text], href: expected_link[:url])
   end
 
   def then_i_can_see_the_short_news_and_communications_section
-    assert page.has_selector?(".gem-c-heading", text: "News")
-    assert page.has_selector?(".taxon-page__featured-item")
+    expect(page).to have_selector(".gem-c-heading", text: "News")
+    expect(page).to have_selector(".taxon-page__featured-item")
 
     expected_link = {
       text: "See more news and communications in this topic",
       url: "/search/news-and-communications?" + finder_query_string,
     }
 
-    assert page.has_link?(expected_link[:text], href: expected_link[:url])
+    expect(page).to have_link(expected_link[:text], href: expected_link[:url])
   end
 
   def and_i_can_see_the_policy_papers_and_consulations_section
-    assert page.has_selector?(".gem-c-heading", text: "Policy")
+    expect(page).to have_selector(".gem-c-heading", text: "Policy")
 
     tagged_content_for_policy_and_engagement.each do |item|
       all_other_sections_list_item_test(item)
@@ -207,11 +207,11 @@ module TaxonBrowsingHelper
       url: "/search/policy-papers-and-consultations?" + finder_query_string,
     }
 
-    assert page.has_link?(expected_link[:text], href: expected_link[:url])
+    expect(page).to have_link(expected_link[:text], href: expected_link[:url])
   end
 
   def and_i_can_see_the_transparency_and_foi_releases_section
-    assert page.has_selector?(".gem-c-heading", text: "Transparency")
+    expect(page).to have_selector(".gem-c-heading", text: "Transparency")
 
     tagged_content_for_transparency.each do |item|
       all_other_sections_list_item_test(item)
@@ -222,11 +222,11 @@ module TaxonBrowsingHelper
       url: "/search/transparency-and-freedom-of-information-releases?" + finder_query_string,
     }
 
-    assert page.has_link?(expected_link[:text], href: expected_link[:url])
+    expect(page).to have_link(expected_link[:text], href: expected_link[:url])
   end
 
   def and_i_can_see_the_research_and_statistics_section
-    assert page.has_selector?(".gem-c-heading", text: "Research")
+    expect(page).to have_selector(".gem-c-heading", text: "Research")
 
     tagged_content_for_research_and_statistics.each do |item|
       all_other_sections_list_item_test(item)
@@ -237,59 +237,59 @@ module TaxonBrowsingHelper
       url: "/search/research-and-statistics?" + finder_query_string,
     }
 
-    assert page.has_link?(expected_link[:text], href: expected_link[:url])
+    expect(page).to have_link(expected_link[:text], href: expected_link[:url])
   end
 
   def mainstream_content_list_item_test(item)
-    assert page.has_selector?('.gem-c-document-list__item-title[href="' + item["link"] + '"]', text: item["title"])
-    assert page.has_selector?(".gem-c-document-list__item-description", text: item["description"])
-    assert page.has_no_content?(expected_organisations(item))
+    expect(page).to have_selector('.gem-c-document-list__item-title[href="' + item["link"] + '"]', text: item["title"])
+    expect(page).to have_selector(".gem-c-document-list__item-description", text: item["description"])
+    expect(page).not_to have_content(expected_organisations(item))
   end
 
   def all_other_sections_list_item_test(item)
-    assert page.has_selector?('.gem-c-document-list__item-title[href="' + item["link"] + '"]', text: item["title"])
-    assert page.has_selector?(".gem-c-document-list__attribute time", text: item["public_updated_at"])
-    assert page.has_selector?(".gem-c-document-list__attribute", text: item["content_store_document_type"].humanize)
-    assert page.has_content?(expected_organisations(item))
+    expect(page).to have_selector('.gem-c-document-list__item-title[href="' + item["link"] + '"]', text: item["title"])
+    expect(page).to have_selector(".gem-c-document-list__attribute time", text: item["public_updated_at"])
+    expect(page).to have_selector(".gem-c-document-list__attribute", text: item["content_store_document_type"].humanize)
+    expect(page).to have_content(expected_organisations(item))
   end
 
   def and_i_can_see_the_organisations_section
-    assert page.has_content?("Organisations")
+    expect(page).to have_content("Organisations")
 
     tagged_org_with_logo = tagged_organisation_with_logo["value"]["link"]
-    assert page.has_css?(".gem-c-organisation-logo a[href='#{tagged_org_with_logo}']")
+    expect(page).to have_selector(".gem-c-organisation-logo a[href='#{tagged_org_with_logo}']")
 
-    assert page.has_link?(
+    expect(page).to have_link(
       tagged_organisation["value"]["title"],
       href: tagged_organisation["value"]["link"],
     )
   end
 
   def and_i_can_see_the_in_page_nav
-    assert page.has_selector?(".gem-c-contents-list__list")
-    assert page.has_selector?(".gem-c-contents-list__link", text: "Services")
-    assert page.has_selector?(".gem-c-contents-list__link", text: "Guidance and regulation")
-    assert page.has_selector?(".gem-c-contents-list__link", text: "News and communications")
-    assert page.has_selector?(".gem-c-contents-list__link", text: "Research and statistics")
-    assert page.has_selector?(".gem-c-contents-list__link", text: "Policy papers and consultations")
-    assert page.has_selector?(".gem-c-contents-list__link", text: "Transparency and freedom of information releases")
-    assert page.has_selector?(".gem-c-contents-list__link", text: "Organisations")
-    assert page.has_selector?(".gem-c-contents-list__link", text: "Explore sub-topics")
+    expect(page).to have_selector(".gem-c-contents-list__list")
+    expect(page).to have_selector(".gem-c-contents-list__link", text: "Services")
+    expect(page).to have_selector(".gem-c-contents-list__link", text: "Guidance and regulation")
+    expect(page).to have_selector(".gem-c-contents-list__link", text: "News and communications")
+    expect(page).to have_selector(".gem-c-contents-list__link", text: "Research and statistics")
+    expect(page).to have_selector(".gem-c-contents-list__link", text: "Policy papers and consultations")
+    expect(page).to have_selector(".gem-c-contents-list__link", text: "Transparency and freedom of information releases")
+    expect(page).to have_selector(".gem-c-contents-list__link", text: "Organisations")
+    expect(page).to have_selector(".gem-c-contents-list__link", text: "Explore sub-topics")
   end
 
   def and_i_can_see_the_sub_topic_side_nav
-    assert page.has_selector?(".taxon-page__sub-topic-sidebar")
+    expect(page).to have_selector(".taxon-page__sub-topic-sidebar")
     within(".taxon-page__sub-topic-sidebar") do
-      assert page.has_selector?("h2", text: "Sub-topics")
+      expect(page).to have_selector("h2", text: "Sub-topics")
       child_taxons = @content_item["links"]["child_taxons"]
 
       child_taxons.each_with_index do |child_taxon, index|
-        assert page.has_link?(child_taxon["title"], href: child_taxon["base_path"])
+        expect(page).to have_link(child_taxon["title"], href: child_taxon["base_path"])
         element = find("a[href='#{child_taxon['base_path']}']")
-        assert_equal "navGridContentClicked", element["data-track-category"]
-        assert_equal (index + 1).to_s, element["data-track-action"]
-        assert_equal child_taxon["base_path"], element["data-track-label"]
-        assert_equal "{}", element["data-track-options"]
+        expect(element["data-track-category"]).to eq("navGridContentClicked")
+        expect(element["data-track-action"]).to eq((index + 1).to_s)
+        expect(element["data-track-label"]).to eq(child_taxon["base_path"])
+        expect(element["data-track-options"]).to eq("{}")
       end
     end
   end
@@ -297,25 +297,17 @@ module TaxonBrowsingHelper
   def then_page_has_meta_robots
     content = page.find('meta[name="robots"]', visible: false)["content"]
 
-    assert_equal(
-      "noindex",
-      content,
-      "The content of the robots meta tag should be 'noindex'",
-    )
+    expect(content).to eq("noindex")
   end
 
   def then_the_page_is_noindexed
     content = page.find('meta[name="robots"]', visible: false)["content"]
 
-    assert_equal(
-      "noindex",
-      content,
-      "The content of the robots meta tag should be 'noindex'",
-    )
+    expect(content).to eq("noindex")
   end
 
   def then_the_page_is_not_noindexed
-    page.assert_no_selector('meta[name="robots"]', visible: false)
+    expect(page).not_to have_selector('meta[name="robots"]', visible: false)
   end
 
   def then_all_links_have_tracking_data
@@ -327,8 +319,8 @@ module TaxonBrowsingHelper
       "policy papers and consultations",
       "transparency and freedom of information releases",
     ].each do |section|
-      assert page.has_css?("a[data-track-category='SeeAllLinkClicked']", text: "See more #{section} in this topic")
-      assert page.has_css?("a[data-track-action=\"/foo\"]", text: "See more #{section} in this topic")
+      expect(page).to have_selector("a[data-track-category='SeeAllLinkClicked']", text: "See more #{section} in this topic")
+      expect(page).to have_selector("a[data-track-action=\"/foo\"]", text: "See more #{section} in this topic")
     end
   end
 

@@ -1,6 +1,6 @@
-require "integration_test_helper"
+require "integration_spec_helper"
 
-class TaxonBrowsingTest < ActionDispatch::IntegrationTest
+RSpec.feature "Taxon Browsing" do
   include TaxonBrowsingHelper
 
   it "renders a taxon page for a live taxon" do
