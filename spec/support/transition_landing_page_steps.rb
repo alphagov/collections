@@ -1,6 +1,5 @@
 require "gds_api/test_helpers/content_item_helpers"
 require "gds_api/test_helpers/search"
-require_relative "../../test/support/search_api_helpers"
 
 module TransitionLandingPageSteps
   include GdsApi::TestHelpers::ContentItemHelpers
@@ -18,28 +17,28 @@ module TransitionLandingPageSteps
   end
 
   def then_i_can_see_the_title_section
-    assert page.has_selector?("title", text: "Brexit", visible: false)
+    expect(page).to have_selector("title", text: "Brexit", visible: false)
   end
 
   def then_i_can_see_the_header_section
-    assert page.has_selector?(".landing-page__header--with-bg-image h1", text: "Brexit:new rules are here")
-    assert page.has_selector?(".gem-c-button", text: "Brexit checker: start now")
+    expect(page).to have_selector(".landing-page__header--with-bg-image h1", text: "Brexit:new rules are here")
+    expect(page).to have_selector(".gem-c-button", text: "Brexit checker: start now")
   end
 
   def then_i_cannot_see_the_get_ready_section
-    assert page.has_no_selector?(".gem-c-chevron-banner__link", text: "Check what you need to do if there is no deal")
+    expect(page).not_to have_selector(".gem-c-chevron-banner__link", text: "Check what you need to do if there is no deal")
   end
 
   def then_i_can_see_the_share_links_section
-    assert page.has_selector?(".landing-page__share .gem-c-share-links")
+    expect(page).to have_selector(".landing-page__share .gem-c-share-links")
   end
 
   def then_i_can_see_the_buckets_section
-    assert page.has_selector?("h2.govuk-heading-l", text: "Changes for businesses and citizens")
+    expect(page).to have_selector("h2.govuk-heading-l", text: "Changes for businesses and citizens")
   end
 
   def and_i_can_see_the_explore_topics_section
-    assert page.has_selector?("h2.govuk-heading-m", text: "All Brexit information")
+    expect(page).to have_selector("h2.govuk-heading-m", text: "All Brexit information")
 
     supergroups = [
       "Services": "services",
@@ -59,10 +58,10 @@ module TransitionLandingPageSteps
   end
 
   def and_ecommerce_tracking_is_setup
-    assert page.has_css?(".landing-page__section[data-analytics-ecommerce]")
-    assert page.has_css?(".landing-page__section[data-ecommerce-start-index='1']")
-    assert page.has_css?(".landing-page__section[data-list-title]")
-    assert page.has_css?(".landing-page__section[data-search-query]")
+    expect(page).to have_selector(".landing-page__section[data-analytics-ecommerce]")
+    expect(page).to have_selector(".landing-page__section[data-ecommerce-start-index='1']")
+    expect(page).to have_selector(".landing-page__section[data-list-title]")
+    expect(page).to have_selector(".landing-page__section[data-search-query]")
   end
 
   def then_all_finder_links_have_tracking_data
@@ -74,19 +73,19 @@ module TransitionLandingPageSteps
       "Policy papers and consultations",
       "Transparency and freedom of information releases",
     ].each do |section|
-      assert page.has_css?("a[data-track-category='SeeAllLinkClicked']", text: section)
-      assert page.has_css?("a[data-track-action=\"#{TRANSITION_TAXON_PATH}\"]", text: section)
+      expect(page).to have_selector("a[data-track-category='SeeAllLinkClicked']", text: section)
+      expect(page).to have_selector("a[data-track-action=\"#{TRANSITION_TAXON_PATH}\"]", text: section)
     end
   end
 
   def then_the_page_is_not_noindexed
-    page.assert_no_selector('meta[name="robots"]', visible: false)
+    expect(page).not_to have_selector('meta[name="robots"]', visible: false)
   end
 
   def and_there_is_metadata
-    assert page.has_css?("meta[property='og:title'][content='#{I18n.t('transition_landing_page.meta_title')}']", visible: false)
-    assert page.has_css?("meta[name='description'][content='#{I18n.t('transition_landing_page.meta_description')}']", visible: false)
-    assert page.has_css?("link[rel='canonical'][href='http://www.example.com/transition']", visible: false)
+    expect(page).to have_selector("meta[property='og:title'][content='#{I18n.t('transition_landing_page.meta_title')}']", visible: false)
+    expect(page).to have_selector("meta[name='description'][content='#{I18n.t('transition_landing_page.meta_description')}']", visible: false)
+    expect(page).to have_selector("link[rel='canonical'][href='http://www.example.com/transition']", visible: false)
   end
 
   def content_item

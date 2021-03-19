@@ -1,7 +1,6 @@
-require "integration_test_helper"
-require_relative "../support/transition_landing_page_steps"
+require "integration_spec_helper"
 
-class TransitionLandingPageTest < ActionDispatch::IntegrationTest
+RSpec.feature "Transition landing page" do
   include TransitionLandingPageSteps
 
   describe "the transition landing page" do
