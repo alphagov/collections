@@ -1,6 +1,4 @@
-require "test_helper"
-
-describe TablePresenter do
+RSpec.describe TablePresenter do
   let(:table_data) do
     {
       headings: %w[
@@ -35,14 +33,14 @@ describe TablePresenter do
             { text: "France" },
           ],
         ]
-      assert_equal(subject.rows, output)
+      expect(output).to eq(subject.rows)
     end
   end
 
   describe "#headings" do
     it "returns a formatted header row" do
       output = [{ text: "Date" }, { text: "Country" }]
-      assert_equal(subject.headings, output)
+      expect(output).to eq(subject.headings)
     end
   end
 
@@ -50,8 +48,8 @@ describe TablePresenter do
     it "returns nil if required keys aren't present" do
       table_data = { foo: [], bar: [] }
       presenter = described_class.new(table_data)
-      assert_nil(presenter.headings)
-      assert_nil(presenter.rows)
+      expect(presenter.headings).to be_nil
+      expect(presenter.rows).to be_nil
     end
 
     it "returns nil if row data is not an array of arrays" do
@@ -60,8 +58,8 @@ describe TablePresenter do
         rows: ["21/09/2020", "Belgium", "23/09/2020", "France"],
       }
       presenter = described_class.new(table_data)
-      assert_nil(presenter.headings)
-      assert_nil(presenter.rows)
+      expect(presenter.headings).to be_nil
+      expect(presenter.rows).to be_nil
     end
   end
 end

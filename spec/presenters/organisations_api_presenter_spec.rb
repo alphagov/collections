@@ -1,6 +1,4 @@
-require "test_helper"
-
-describe OrganisationsApiPresenter do
+RSpec.describe OrganisationsApiPresenter do
   let(:results) do
     [
       {
@@ -96,21 +94,21 @@ describe OrganisationsApiPresenter do
   describe "#present with wrapped results" do
     it "returns a presented result set" do
       paginated_results = presenter_wrapped.present
-      assert_equal "HM Revenue & Customs", paginated_results[:results][0][:title]
-      assert_equal "hm-revenue-customs", paginated_results[:results][0][:details][:slug]
+      expect(paginated_results[:results][0][:title]).to eq("HM Revenue & Customs")
+      expect(paginated_results[:results][0][:details][:slug]).to eq("hm-revenue-customs")
     end
 
     it "sets the appropriate title for closed orgs" do
       paginated_results = presenter_wrapped.present
-      assert_equal "Who Framed Roger Rabbit", paginated_results[:results][1][:title]
+      expect(paginated_results[:results][1][:title]).to eq("Who Framed Roger Rabbit")
     end
   end
 
   describe "#present without wrapped results" do
     it "returns a presented result set" do
       paginated_results = presenter_not_wrapped.present
-      assert_equal "HM Revenue & Customs", paginated_results[:title]
-      assert_equal "hm-revenue-customs", paginated_results[:details][:slug]
+      expect(paginated_results[:title]).to eq("HM Revenue & Customs")
+      expect(paginated_results[:details][:slug]).to eq("hm-revenue-customs")
     end
   end
 end

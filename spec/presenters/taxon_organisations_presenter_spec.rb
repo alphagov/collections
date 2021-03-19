@@ -1,6 +1,4 @@
-require "test_helper"
-
-describe TaxonOrganisationsPresenter do
+RSpec.describe TaxonOrganisationsPresenter do
   include SearchApiHelpers
   include TaxonHelpers
 
@@ -10,26 +8,20 @@ describe TaxonOrganisationsPresenter do
   let(:taxon_organisations_presenter) { TaxonOrganisationsPresenter.new(taxon.organisations) }
 
   it "checks whether organisations should be shown" do
-    TaggedOrganisations.any_instance
-      .stubs(:fetch)
-      .returns([])
+    allow_any_instance_of(TaggedOrganisations).to receive(:fetch).and_return([])
 
-    assert_not taxon_organisations_presenter.show_organisations?
+    expect(taxon_organisations_presenter.show_organisations?).to be false
   end
 
   it "checks whether more organisations should be shown" do
-    TaggedOrganisations.any_instance
-      .stubs(:fetch)
-      .returns(multiple_organisations_with_logo)
+    allow_any_instance_of(TaggedOrganisations).to receive(:fetch).and_return(multiple_organisations_with_logo)
 
-    assert_not taxon_organisations_presenter.show_more_organisations?
+    expect(taxon_organisations_presenter.show_more_organisations?).to be false
   end
 
   describe "#promoted_organisation_list" do
     it "returns a list of organisations without logos" do
-      TaggedOrganisations.any_instance
-        .stubs(:fetch)
-        .returns(tagged_organisation)
+      allow_any_instance_of(TaggedOrganisations).to receive(:fetch).and_return(tagged_organisation)
 
       promoted_without_logos = [
         {
@@ -53,13 +45,11 @@ describe TaxonOrganisationsPresenter do
         "promoted_without_logos": promoted_without_logos,
       }
 
-      assert_equal expected, taxon_organisations_presenter.promoted_organisation_list
+      expect(taxon_organisations_presenter.promoted_organisation_list).to eq(expected)
     end
 
     it "returns a list of organisations with standard logos" do
-      TaggedOrganisations.any_instance
-        .stubs(:fetch)
-        .returns(tagged_organisation_with_logo)
+      allow_any_instance_of(TaggedOrganisations).to receive(:fetch).and_return(tagged_organisation_with_logo)
 
       promoted_with_logos = [
         {
@@ -83,13 +73,11 @@ describe TaxonOrganisationsPresenter do
         "promoted_without_logos": [],
       }
 
-      assert_equal expected, taxon_organisations_presenter.promoted_organisation_list
+      expect(taxon_organisations_presenter.promoted_organisation_list).to eq(expected)
     end
 
     it "returns a list of organisations with custom logos as a plain text list" do
-      TaggedOrganisations.any_instance
-        .stubs(:fetch)
-        .returns(tagged_custom_organisation)
+      allow_any_instance_of(TaggedOrganisations).to receive(:fetch).and_return(tagged_custom_organisation)
 
       promoted_without_logos = [
         {
@@ -113,13 +101,11 @@ describe TaxonOrganisationsPresenter do
         "promoted_without_logos": promoted_without_logos,
       }
 
-      assert_equal expected, taxon_organisations_presenter.promoted_organisation_list
+      expect(taxon_organisations_presenter.promoted_organisation_list).to eq(expected)
     end
 
     it "returns top 5 organisations with crests (if available) as promoted organisations" do
-      TaggedOrganisations.any_instance
-        .stubs(:fetch)
-        .returns(multiple_organisations_with_logo("single-identity"))
+      allow_any_instance_of(TaggedOrganisations).to receive(:fetch).and_return(multiple_organisations_with_logo("single-identity"))
 
       promoted_with_logos = []
 
@@ -145,13 +131,11 @@ describe TaxonOrganisationsPresenter do
         "promoted_without_logos": [],
       }
 
-      assert_equal expected, taxon_organisations_presenter.promoted_organisation_list
+      expect(taxon_organisations_presenter.promoted_organisation_list).to eq(expected)
     end
 
     it "returns top 5 organisations without logos as promoted organisations if organisations with logos do not exist" do
-      TaggedOrganisations.any_instance
-        .stubs(:fetch)
-        .returns(multiple_organisations_with_logo)
+      allow_any_instance_of(TaggedOrganisations).to receive(:fetch).and_return(multiple_organisations_with_logo)
 
       promoted_without_logos = []
 
@@ -177,15 +161,13 @@ describe TaxonOrganisationsPresenter do
         "promoted_without_logos": promoted_without_logos,
       }
 
-      assert_equal expected, taxon_organisations_presenter.promoted_organisation_list
+      expect(taxon_organisations_presenter.promoted_organisation_list).to eq(expected)
     end
 
     it "returns the organisations with and without logos as promoted content if less than 5 organisations have logos" do
       tagged_organisations = multiple_organisations_with_logo("single-identity", 3) + tagged_organisation
 
-      TaggedOrganisations.any_instance
-        .stubs(:fetch)
-        .returns(tagged_organisations)
+      allow_any_instance_of(TaggedOrganisations).to receive(:fetch).and_return(tagged_organisations)
 
       promoted_with_logos = []
 
@@ -228,7 +210,7 @@ describe TaxonOrganisationsPresenter do
         "promoted_without_logos": promoted_without_logos,
       }
 
-      assert_equal expected, taxon_organisations_presenter.promoted_organisation_list
+      expect(taxon_organisations_presenter.promoted_organisation_list).to eq(expected)
     end
   end
 
@@ -236,9 +218,7 @@ describe TaxonOrganisationsPresenter do
     it "shows a list of more organisations with a logo" do
       tagged_organisations = multiple_organisations_with_logo("single-identity") + tagged_organisation_with_logo
 
-      TaggedOrganisations.any_instance
-      .stubs(:fetch)
-      .returns(tagged_organisations)
+      allow_any_instance_of(TaggedOrganisations).to receive(:fetch).and_return(tagged_organisations)
 
       organisations_with_logos = [
         {
@@ -262,15 +242,13 @@ describe TaxonOrganisationsPresenter do
         organisations_without_logos: [],
       }
 
-      assert_equal expected, taxon_organisations_presenter.show_more_organisation_list
+      expect(taxon_organisations_presenter.show_more_organisation_list).to eq(expected)
     end
 
     it "shows a list of more organisations without a logo" do
       tagged_organisations = multiple_organisations_with_logo("single-identity") + tagged_organisation
 
-      TaggedOrganisations.any_instance
-        .stubs(:fetch)
-        .returns(tagged_organisations)
+      allow_any_instance_of(TaggedOrganisations).to receive(:fetch).and_return(tagged_organisations)
 
       organisations_without_logos = [
         {
@@ -294,7 +272,7 @@ describe TaxonOrganisationsPresenter do
         organisations_without_logos: organisations_without_logos,
       }
 
-      assert_equal expected, taxon_organisations_presenter.show_more_organisation_list
+      expect(taxon_organisations_presenter.show_more_organisation_list).to eq(expected)
     end
   end
 
