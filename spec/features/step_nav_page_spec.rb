@@ -16,22 +16,22 @@ class StepNavPageTest < ActionDispatch::IntegrationTest
   end
 
   it "renders breadcrumbs" do
-    assert page.has_css?(".gem-c-breadcrumbs")
+    expect(page.has_css?(".gem-c-breadcrumbs")).to be
   end
 
   it "renders the title" do
-    assert page.has_css?(".gem-c-title")
-    assert page.has_css?(".gem-c-title__text", text: "Learn to drive a car: step by step")
+    expect(page.has_css?(".gem-c-title")).to be
+    expect(page.has_css?(".gem-c-title__text", text: "Learn to drive a car: step by step")).to be
   end
 
   it "renders the step by step navigation component" do
-    assert page.has_selector?(".gem-c-step-nav")
-    assert page.has_selector?(".gem-c-step-nav__title", text: "Check you're allowed to drive")
-    assert page.has_selector?(".gem-c-step-nav__step", count: 7)
+    expect(page.has_selector?(".gem-c-step-nav")).to be
+    expect(page.has_selector?(".gem-c-step-nav__title", text: "Check you're allowed to drive")).to be
+    expect(page.has_selector?(".gem-c-step-nav__step", count: 7)).to be
   end
 
   it "hides step content by default" do
-    assert page.has_selector?(".gem-c-step-nav__panel", visible: false)
+    expect(page.has_selector?(".gem-c-step-nav__panel", visible: false)).to be
   end
 
   it "works for a generated example" do
