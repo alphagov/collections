@@ -71,8 +71,12 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
   it "includes description and autodiscovery meta tags" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
-
-    page.assert_selector("meta[name='description'][content='10 Downing Street is the official residence and the office of the British Prime Minister.']", visible: false)
+    padded_string =
+      "10 Downing Street is the official residence and the office of the British Prime Minister.\
+      The office helps the Prime Minister to establish and deliver the government’s overall strategy and policy priorities,\
+      and to communicate the government’s policies to Parliament, the public and international audiences."
+    string = padded_string.gsub("      ", " ")
+    page.assert_selector("meta[name='description'][content='#{string}']", visible: false)
     assert page.has_css?("link[rel='alternate'][type='application/json'][href$='/api/organisations/prime-ministers-office-10-downing-street']", visible: false)
     assert page.has_css?("link[rel='alternate'][type='application/atom+xml'][href$='/government/organisations/prime-ministers-office-10-downing-street.atom']", visible: false)
   end
@@ -173,11 +177,11 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
   it "shows a large news item only on news organisations" do
     visit "/government/organisations/attorney-generals-office"
-    assert page.has_css?(".gem-c-image-card.gem-c-image-card--large .gem-c-image-card__title", text: "New head of the Serious Fraud Office announced")
+    assert page.has_css?(".gem-c-image-card.gem-c-image-card--large .gem-c-image-card__title", text: "Attorney General seeking feedback on new disclosure guidelines")
 
     visit "/government/organisations/charity-commission"
-    assert page.has_css?(".gem-c-image-card .gem-c-image-card__title", text: "Charity annual return 2018")
-    assert_not page.has_css?(".gem-c-image-card.gem-c-image-card--large .gem-c-image-card__title", text: "Charity annual return 2018")
+    assert page.has_css?(".gem-c-image-card .gem-c-image-card__title", text: "Coronavirus (COVID-19): increased risk of fraud and cybercrime against charities")
+    assert_not page.has_css?(".gem-c-image-card.gem-c-image-card--large .gem-c-image-card__title", text: "Coronavirus (COVID-19): increased risk of fraud and cybercrime against charities")
   end
 
   it "shows the latest documents when it should" do
@@ -231,8 +235,8 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     visit "/government/organisations/attorney-generals-office"
     assert page.has_css?("div#people")
     assert page.has_css?(".gem-c-heading", text: "Our ministers")
-    assert page.has_css?(".gem-c-image-card .gem-c-image-card__title-link", text: "Theresa May MP")
-    assert page.has_css?(".gem-c-image-card .gem-c-image-card__title-link", text: "Stuart Andrew MP")
+    assert page.has_css?(".gem-c-image-card .gem-c-image-card__title-link", text: "The Rt Hon Suella Braverman QC MP")
+    assert page.has_css?(".gem-c-image-card .gem-c-image-card__title-link", text: "The Rt Hon Michael Ellis QC MP")
   end
 
   it "does not show the ministers section for no.10" do
@@ -250,7 +254,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
   it "shows the non-ministers for an organisation" do
     visit "/government/organisations/attorney-generals-office"
     assert page.has_css?(".gem-c-heading", text: "Our management")
-    assert page.has_css?(".gem-c-image-card .gem-c-image-card__title-link", text: "Sir Jeremy Heywood")
+    assert page.has_css?(".gem-c-image-card .gem-c-image-card__title-link", text: "Rowena Collins Rice")
   end
 
   it "show a link to the correct about page on Welsh and English pages" do
@@ -263,9 +267,9 @@ class OrganisationTest < ActionDispatch::IntegrationTest
 
   it "shows translated text on welsh pages" do
     visit "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
-    assert page.has_css?(".gem-c-heading", text: "Ein huwch swyddogion milwrol")
-    assert page.has_css?(".gem-c-image-card__title .gem-c-image-card__title-link[href='/government/people/stuart-peach']")
-    assert page.has_css?(".gem-c-image-card__description", text: "Chief of the Defence Staff")
+    assert page.has_css?(".gem-c-heading", text: "Ein rheolaeth")
+    assert page.has_css?(".gem-c-image-card__title .gem-c-image-card__title-link[href='/government/people/peter-umbleya']")
+    assert page.has_css?(".gem-c-image-card__description", text: "Non-Executive Director")
   end
 
   it "does not display non-ministers for an organisation if data not present" do
