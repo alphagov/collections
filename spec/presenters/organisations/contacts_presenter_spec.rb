@@ -1,15 +1,9 @@
-require "test_helper"
-
-describe Organisations::ContactsPresenter do
+RSpec.describe Organisations::ContactsPresenter do
   include SearchApiHelpers
   include OrganisationHelpers
 
   describe "FOI" do
-    before :each do
-      content_item = ContentItem.new(organisation_with_foi)
-      organisation = Organisation.new(content_item)
-      @contacts_presenter = Organisations::ContactsPresenter.new(organisation)
-    end
+    let(:contacts_presenter) { presenter_from_content_hash(organisation_with_foi) }
 
     it "formats foi contacts correctly" do
       expected = [
@@ -56,16 +50,12 @@ describe Organisations::ContactsPresenter do
         },
       ]
 
-      assert_equal expected, @contacts_presenter.foi_contacts
+      expect(contacts_presenter.foi_contacts).to eq(expected)
     end
   end
 
   describe "contacts" do
-    before :each do
-      content_item = ContentItem.new(organisation_with_contact_details)
-      organisation = Organisation.new(content_item)
-      @contacts_presenter = Organisations::ContactsPresenter.new(organisation)
-    end
+    let(:contacts_presenter) { presenter_from_content_hash(organisation_with_contact_details) }
 
     it "formats contact information correctly" do
       expected = [
@@ -91,14 +81,12 @@ describe Organisations::ContactsPresenter do
         },
       ]
 
-      assert_equal expected, @contacts_presenter.contacts
+      expect(contacts_presenter.contacts).to eq(expected)
     end
 
-    it "does not return empty address information" do
-      content_item = ContentItem.new(organisation_with_empty_contact_details)
-      organisation = Organisation.new(content_item)
-      @empty_contacts_presenter = Organisations::ContactsPresenter.new(organisation)
+    let(:empty_contacts_presenter) { presenter_from_content_hash(organisation_with_empty_contact_details) }
 
+    it "does not return empty address information" do
       expected = [
         {
           locale: "en",
@@ -111,7 +99,13 @@ describe Organisations::ContactsPresenter do
         },
       ]
 
-      assert_equal expected, @empty_contacts_presenter.contacts
+      expect(empty_contacts_presenter.contacts).to eq(expected)
     end
+  end
+
+  def presenter_from_content_hash(content)
+    content_item = ContentItem.new(content)
+    organisation = Organisation.new(content_item)
+    Organisations::ContactsPresenter.new(organisation)
   end
 end

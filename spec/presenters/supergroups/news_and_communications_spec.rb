@@ -47,7 +47,7 @@ RSpec.describe Supergroups::NewsAndCommunications do
         .and_return(tagged_content(tagged_document_list))
 
       news_and_communications_supergroup.document_list(taxon_id).each do |content_item|
-        expect(content_item.key?(:image)).to be false
+        expect(content_item).to_not have_key(:image)
       end
     end
   end
@@ -109,7 +109,7 @@ RSpec.describe Supergroups::NewsAndCommunications do
       promoted_news = news_and_communications_supergroup.promoted_content(taxon_id)
 
       expect(promoted_news.size).to eq(1)
-      expect(promoted_news.first.key?(:image)).to be
+      expect(promoted_news.first).to have_key(:image)
     end
 
     it "returns the default whitehall image if no image is present" do
