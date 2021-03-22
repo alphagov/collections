@@ -280,44 +280,68 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     assert_not page.has_css?(".gem-c-heading", text: "Traffic commissioners")
 
     visit "/government/organisations/office-of-the-secretary-of-state-for-wales"
-    assert_not page.has_css?(".gem-c-heading", text: "Our management")
+    assert_not page.has_css?(".gem-c-heading", text: "Our senior military officials")
     assert_not page.has_css?(".gem-c-heading", text: "Chief professional officers")
     assert_not page.has_css?(".gem-c-heading", text: "Special representatives")
     assert_not page.has_css?(".gem-c-heading", text: "Traffic commissioners")
   end
 
-  it "displays foi information correctly where required" do
-    visit "/government/organisations/prime-ministers-office-10-downing-street"
-    assert_not page.has_content?(/Make an FOI request/i)
-    assert_not page.has_content?(/Freedom of Information (FOI) Act/i)
+  describe "foi information" do
+    before do
+      content_item_charity_commission["details"]["foi_exempt"] = true
+      stub_content_store_has_item("/government/organisations/charity-commission", content_item_charity_commission)
+    end
 
-    visit "/government/organisations/charity-commission"
-    assert page.has_css?("section#freedom-of-information")
-    assert page.has_content?(/This organisation is not covered by the Freedom of Information Act. To see which organisations are included, see the legislation./i)
+    it "promotional organisations do not have FOI info" do
+      visit "/government/organisations/prime-ministers-office-10-downing-street"
+      assert_not page.has_content?(/Make an FOI request/i)
+      assert_not page.has_content?(/Freedom of Information (FOI) Act/i)
+    end
 
-    visit "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
-    assert page.has_content?(/Gwneud cais DRhG/i)
-    assert page.has_css?("section#freedom-of-information")
-    assert page.has_css?(".gem-c-heading", text: "FOI stuff")
-    assert page.has_content?(/Office of the Secretary of State for Wales/i)
-    assert page.has_content?(/Gwydyr House/i)
-    assert page.has_content?(/Whitehall/i)
-    assert page.has_content?(/SW1A 2NP/i)
+    it "organisations that are exempt display exemption information" do
+      visit "/government/organisations/charity-commission"
+      assert page.has_css?("section#freedom-of-information")
+      assert page.has_content?(/This organisation is not covered by the Freedom of Information Act. To see which organisations are included, see the legislation./i)
+    end
 
-    assert page.has_content?(/Office of the Secretary of State for Wales Cardiff/i)
-    assert page.has_content?(/The Welsh Office/i)
-    assert page.has_content?(/walesofficefoi@walesoffice.gsi.gov.uk/i)
-    assert page.has_content?(/foiwales@walesoffice.gsi.gov.uk/i)
-    assert page.has_content?(/welshofficefoi@walesoffice.gsi.gov.uk/i)
-    assert page.has_css?("a[href='/foi_contact_link']", text: "Ffurflen cysylltu DRhG")
+    it "organisations that are not exempt display FOI contact details" do
+      visit "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
+      assert page.has_content?(/Gwneud cais DRhG/i)
+      assert page.has_css?("section#freedom-of-information")
+      assert page.has_css?(".gem-c-heading", text: "FOI requests")
+      assert page.has_content?(/Office of the Secretary of State for Wales/i)
+      assert page.has_content?(/Gwydyr House/i)
+      assert page.has_content?(/Whitehall/i)
+      assert page.has_content?(/SW1A 2NP/i)
+      assert page.has_content?(/walesofficefoi@ukgovwales.gov.uk/i)
+    end
   end
 
-  it "shows high profile groups section" do
-    visit "/government/organisations/attorney-generals-office"
-    assert page.has_css?("section#high-profile-groups")
-    assert page.has_css?(".gem-c-heading", text: "High profile groups within AGO")
-    assert page.has_css?(".app-c-topic-list__link[href='/government/organisations/attorney-generals-office-1']", text: "High Profile Group 1")
-    assert page.has_css?(".app-c-topic-list__link[href='/government/organisations/attorney-generals-office-2']", text: "High Profile Group 2")
+  describe "high profile groups section" do
+    before do
+      data = [
+        {
+          base_path: "/government/organisations/attorney-generals-office-1",
+          title: "High Profile Group 1",
+          details: { organisation_govuk_status: { status: "live" } },
+        },
+        {
+          base_path: "/government/organisations/attorney-generals-office-2",
+          title: "High Profile Group 2",
+          details: { organisation_govuk_status: { status: "live" } },
+        },
+      ]
+      content_item_attorney_general["links"]["ordered_high_profile_groups"] = data
+      stub_content_store_has_item("/government/organisations/attorney-generals-office", content_item_attorney_general)
+    end
+
+    it "displays high profile groups if present" do
+      visit "/government/organisations/attorney-generals-office"
+      assert page.has_css?("section#high-profile-groups")
+      assert page.has_css?(".gem-c-heading", text: "High profile groups within AGO")
+      assert page.has_css?(".app-c-topic-list__link[href='/government/organisations/attorney-generals-office-1']", text: "High Profile Group 1")
+      assert page.has_css?(".app-c-topic-list__link[href='/government/organisations/attorney-generals-office-2']", text: "High Profile Group 2")
+    end
   end
 
   it "does not show section for organisations without high profile groups" do
@@ -330,41 +354,47 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     assert_not page.has_css?(".gem-c-heading", text: "High profile groups within the Prime Minister's Office, 10 Downing Street")
   end
 
-  it "displays corporate information pages" do
-    visit "/government/organisations/attorney-generals-office"
-    assert page.has_css?("div#corporate-info")
-    assert page.has_css?(".gem-c-heading", text: "Corporate information")
-    assert page.has_css?(".app-c-topic-list__link[href='/complaints-procedure']", text: "Complaints procedure")
+  describe "corporate information" do
+    before do
+      content_item_wales_office["details"]["ordered_corporate_information_pages"] = []
+      stub_content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales", content_item_wales_office)
+    end
 
-    assert page.has_css?(".gem-c-heading", text: "Jobs and contracts")
-    assert page.has_css?(".app-c-topic-list__link[href='https://www.civilservicejobs.service.gov.uk/csr']", text: "Jobs")
+    it "shows corporate info if available" do
+      visit "/government/organisations/attorney-generals-office"
+      assert page.has_css?("div#corporate-info")
+      assert page.has_css?(".gem-c-heading", text: "Corporate information")
+      assert page.has_css?(".app-c-topic-list__link[href='/government/organisations/attorney-generals-office/about/complaints-procedure']", text: "Complaints procedure")
+      assert page.has_css?(".gem-c-heading", text: "Jobs and contracts")
+      assert page.has_css?(".app-c-topic-list__link[href='https://www.civilservicejobs.service.gov.uk/csr']", text: "Jobs")
+    end
+
+    it "does not show corporate info pages if data is unavailable" do
+      visit "/government/organisations/office-of-the-secretary-of-state-for-wales"
+      assert_not page.has_css?(".gem-c-heading", text: "Corporate information")
+      assert_not page.has_css?(".gem-c-heading", text: "Jobs and contracts")
+    end
   end
 
-  it "does not show corporate information pages if none available" do
-    visit "/government/organisations/office-of-the-secretary-of-state-for-wales"
-    assert_not page.has_css?(".gem-c-heading", text: "Corporate information")
-    assert_not page.has_css?(".gem-c-heading", text: "Jobs and contracts")
-  end
+  describe "contact information" do
+    it "displays if present" do
+      visit "/government/organisations/attorney-generals-office"
+      assert page.has_css?("section#org-contacts")
+      assert page.has_css?("h2.gem-c-heading", text: "Contact AGO")
+      assert page.has_content?(/102 Petty France/i)
+      assert page.has_content?(/London/i)
+      assert page.has_content?(/SW1H 9EA/i)
+      assert page.has_content?("correspondence@attorneygeneral.gov.uk")
+      assert page.has_content?("Telephone - 020 7271 2492")
+    end
 
-  it "displays contact information" do
-    visit "/government/organisations/attorney-generals-office"
-    assert page.has_css?("section#org-contacts")
-    assert page.has_css?("h2.gem-c-heading", text: "Contact AGO")
-    assert page.has_css?("h3.gem-c-heading", text: "Department for International Trade")
-    assert page.has_content?(/King Charles Street/i)
-    assert page.has_content?(/Whitehall/i)
-    assert page.has_content?(/SW1A 2AH/i)
-    assert page.has_css?("a[href='https://invest.great.gov.uk/int/contact/']", text: "Contact Form: Department for International Trade")
-    assert page.has_content?("enquiries@trade.gov.uk")
-    assert page.has_content?("+44 (0) 20 7215 5000")
-  end
+    it "is absent if data isn't available" do
+      content_item_attorney_general["links"]["ordered_contacts"] = []
+      stub_content_store_has_item("/government/organisations/attorney-generals-office", content_item_attorney_general)
 
-  it "does not show contact information if none available" do
-    visit "/government/organisations/office-of-the-secretary-of-state-for-wales"
-    assert_not page.has_css?("h2.gem-c-heading", text: "Contact WO")
-
-    visit "/government/organisations/charity-commission"
-    assert_not page.has_css?("h2.gem-c-heading", text: "Contact Charity Commission")
+      visit "/government/organisations/attorney-generals-office"
+      assert_not page.has_css?("h2.gem-c-heading", text: "Contact AGO")
+    end
   end
 
   it "shows promotional features on the right pages" do
