@@ -3,22 +3,24 @@ require "integration_test_helper"
 class OrganisationTest < ActionDispatch::IntegrationTest
   include OrganisationHelpers
 
-  before do
-    org_example = GovukSchemas::Example.find("organisation", example_name: "organisation")
+  let(:org_example) { GovukSchemas::Example.find("organisation", example_name: "organisation") }
 
-    @content_item_no10 = GovukSchemas::Example.find("organisation", example_name: "number_10")
+  let(:content_item_no10) { GovukSchemas::Example.find("organisation", example_name: "number_10") }
 
-    @content_item_attorney_general = GovukSchemas::Example.find("organisation", example_name: "attorney_general")
+  let(:content_item_attorney_general) { GovukSchemas::Example.find("organisation", example_name: "attorney_general") }
 
-    @content_item_charity_commission = GovukSchemas::Example.find("organisation", example_name: "charity_commission")
+  let(:content_item_charity_commission) { GovukSchemas::Example.find("organisation", example_name: "charity_commission") }
 
-    @content_item_wales_office = GovukSchemas::Example.find("organisation", example_name: "wales_office")
+  let(:content_item_wales_office) { GovukSchemas::Example.find("organisation", example_name: "wales_office") }
 
-    @content_item_wales_office_cy = @content_item_wales_office.deep_dup.tap do |cy|
+  let(:content_item_wales_office_cy) do
+    content_item_wales_office.deep_dup.tap do |cy|
       cy[:base_path] = "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
     end
+  end
 
-    @content_item_separate_student_loans = org_example.deep_merge(
+  let(:content_item_separate_student_loans) do
+    org_example.deep_merge(
       "base_path" => "/government/organisations/student-loans-company",
       "title" => "Student Loans Company",
       "details" => {
@@ -29,30 +31,30 @@ class OrganisationTest < ActionDispatch::IntegrationTest
         },
       },
     )
+  end
 
-    @content_item_blank = {
+  let(:content_item_blank) do
+    {
       title: "An empty content item to test everything checks before trying to render things",
       base_path: "/government/organisations/civil-service-resourcing",
       details: {
         body: "",
         brand: "",
-        logo: {
-        },
-        organisation_govuk_status: {
-          status: "",
-        },
+        logo: {},
+        organisation_govuk_status: { status: "" },
       },
-      links: {
-      },
+      links: {},
     }
+  end
 
-    stub_content_store_has_item("/government/organisations/prime-ministers-office-10-downing-street", @content_item_no10)
-    stub_content_store_has_item("/government/organisations/attorney-generals-office", @content_item_attorney_general)
-    stub_content_store_has_item("/government/organisations/charity-commission", @content_item_charity_commission)
-    stub_content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales", @content_item_wales_office)
-    stub_content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales.cy", @content_item_wales_office_cy)
-    stub_content_store_has_item("/government/organisations/civil-service-resourcing", @content_item_blank)
-    stub_content_store_has_item("/government/organisations/student-loans-company", @content_item_separate_student_loans)
+  before do
+    stub_content_store_has_item("/government/organisations/prime-ministers-office-10-downing-street", content_item_no10)
+    stub_content_store_has_item("/government/organisations/attorney-generals-office", content_item_attorney_general)
+    stub_content_store_has_item("/government/organisations/charity-commission", content_item_charity_commission)
+    stub_content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales", content_item_wales_office)
+    stub_content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales.cy", content_item_wales_office_cy)
+    stub_content_store_has_item("/government/organisations/civil-service-resourcing", content_item_blank)
+    stub_content_store_has_item("/government/organisations/student-loans-company", content_item_separate_student_loans)
 
     stub_search_api_latest_content_requests("prime-ministers-office-10-downing-street")
     stub_search_api_latest_content_requests("attorney-generals-office")
@@ -70,7 +72,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
   it "includes description and autodiscovery meta tags" do
     visit "/government/organisations/prime-ministers-office-10-downing-street"
 
-    page.assert_selector("meta[name='description'][content='10 Downing Street is the official residence of the British Prime Minister.']", visible: false)
+    page.assert_selector("meta[name='description'][content='10 Downing Street is the official residence and the office of the British Prime Minister.']", visible: false)
     assert page.has_css?("link[rel='alternate'][type='application/json'][href$='/api/organisations/prime-ministers-office-10-downing-street']", visible: false)
     assert page.has_css?("link[rel='alternate'][type='application/atom+xml'][href$='/government/organisations/prime-ministers-office-10-downing-street.atom']", visible: false)
   end
@@ -101,18 +103,22 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     assert page.has_title?("Charity Commission - GOV.UK")
   end
 
-  it "shows the no10 banner element only on no10's page" do
-    visit "/government/organisations/prime-ministers-office-10-downing-street"
-    assert page.has_css?(".organisation__no10-banner", text: "Prime Minister's Office, 10 Downing Street")
+  describe "no10 banner" do
+    it "shows only on no10's page" do
+      visit "/government/organisations/prime-ministers-office-10-downing-street"
+      assert page.has_css?(".organisation__no10-banner", text: "Prime Minister's Office, 10 Downing Street")
+    end
 
-    visit "/government/organisations/attorney-generals-office"
-    assert_not page.has_css?(".organisation__no10-banner")
+    it "doesn't show on other org pages" do
+      visit "/government/organisations/attorney-generals-office"
+      assert_not page.has_css?(".organisation__no10-banner")
 
-    visit "/government/organisations/charity-commission"
-    assert_not page.has_css?(".organisation__no10-banner")
+      visit "/government/organisations/charity-commission"
+      assert_not page.has_css?(".organisation__no10-banner")
 
-    visit "/government/organisations/civil-service-resourcing"
-    assert_not page.has_css?(".organisation__no10-banner")
+      visit "/government/organisations/civil-service-resourcing"
+      assert_not page.has_css?(".organisation__no10-banner")
+    end
   end
 
   it "renders the logo and logo brand correctly" do
@@ -126,18 +132,29 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     assert page.has_css?(".gem-c-organisation-logo.brand--department-for-business-innovation-skills img[alt='The Charity Commission']")
   end
 
-  it "shows featured links correctly if present" do
-    visit "/government/organisations/prime-ministers-office-10-downing-street"
-    assert_not page.has_css?(".app-c-topic-list")
+  describe "featured documents and featured links" do
+    before do
+      content_item_no10["details"]["ordered_featured_documents"] = []
+      content_item_no10["details"]["ordered_featured_links"] = []
+      stub_content_store_has_item("/government/organisations/prime-ministers-office-10-downing-street", content_item_no10)
+    end
 
-    visit "/government/organisations/attorney-generals-office"
-    assert page.has_css?("section#featured-documents")
-    assert page.has_css?(".app-c-topic-list.app-c-topic-list--small .app-c-topic-list__link", text: "Attorney General's guidance to the legal profession")
+    it "does not display them if they are absent from content item" do
+      visit "/government/organisations/prime-ministers-office-10-downing-street"
+      assert_not page.has_css?("section#featured-documents")
+      assert_not page.has_css?(".app-c-topic-list.app-c-topic-list--small")
+    end
 
-    visit "/government/organisations/charity-commission"
-    assert page.has_css?("section#featured-documents")
-    assert page.has_css?(".app-c-topic-list .app-c-topic-list__link", text: "Find a charity")
-    assert_not page.has_css?(".app-c-topic-list.app-c-topic-list--small")
+    it "displays them if they are present" do
+      visit "/government/organisations/attorney-generals-office"
+      assert page.has_css?("section#featured-documents")
+      assert page.has_css?(".app-c-topic-list.app-c-topic-list--small .app-c-topic-list__link", text: "Attorney General's guidance to the legal profession")
+
+      visit "/government/organisations/charity-commission"
+      assert page.has_css?("section#featured-documents")
+      assert page.has_css?(".app-c-topic-list .app-c-topic-list__link", text: "Find a charity")
+      assert_not page.has_css?(".app-c-topic-list.app-c-topic-list--small")
+    end
   end
 
   it "shows the translation nav if required" do
