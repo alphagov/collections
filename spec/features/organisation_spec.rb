@@ -9,7 +9,7 @@ RSpec.describe "Organisation pages" do
     @content_item_no10 = GovukSchemas::Example.find("organisation", example_name: "number_10")
     stub_content_store_has_item("/government/organisations/prime-ministers-office-10-downing-street", @content_item_no10)
     stub_search_api_latest_content_requests("prime-ministers-office-10-downing-street")
-    visit "/government/organisations/prime-ministers-office-10-downing-street"
+    visit "/government/organisations/prime-ministers-office-10-downing-street?skip_slimmer=1"
     padded_string =
       "10 Downing Street is the official residence and the office of the British Prime Minister.\
       The office helps the Prime Minister to establish and deliver the government’s overall strategy and policy priorities,\
