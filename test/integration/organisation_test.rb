@@ -2,7 +2,7 @@ require "integration_test_helper"
 require "govuk_schemas"
 class OrganisationTest < ActionDispatch::IntegrationTest
   include OrganisationHelpers
-  include GovukContentSchemaExamples
+  # include GovukContentSchemaExamples
   let(:org_example) { GovukSchemas::Example.find("organisation", example_name: "organisation") }
 
   let(:content_item_no10) { GovukSchemas::Example.find("organisation", example_name: "number_10") }
@@ -152,7 +152,7 @@ class OrganisationTest < ActionDispatch::IntegrationTest
     it "displays them if they are present" do
       visit "/government/organisations/attorney-generals-office"
       assert page.has_css?("section#featured-documents")
-      assert page.has_css?(".app-c-topic-list.app-c-topic-list--small .app-c-topic-list__link", text: "Attorney General's guidance to the legal profession")
+      assert page.has_css?(".app-c-topic-list", text: "Attorney General's guidance to the legal profession")
 
       visit "/government/organisations/charity-commission"
       assert page.has_css?("section#featured-documents")
