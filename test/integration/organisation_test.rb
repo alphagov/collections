@@ -2,7 +2,7 @@ require "integration_test_helper"
 require "govuk_schemas"
 class OrganisationTest < ActionDispatch::IntegrationTest
   include OrganisationHelpers
-
+  include GovukContentSchemaExamples
   let(:org_example) { GovukSchemas::Example.find("organisation", example_name: "organisation") }
 
   let(:content_item_no10) { GovukSchemas::Example.find("organisation", example_name: "number_10") }
