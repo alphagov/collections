@@ -1,5 +1,5 @@
 require "integration_test_helper"
-
+require "govuk_schemas"
 class OrganisationTest < ActionDispatch::IntegrationTest
   include OrganisationHelpers
 
