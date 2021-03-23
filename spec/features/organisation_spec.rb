@@ -70,6 +70,7 @@ RSpec.describe "Organisation pages" do
   end
 
   it "includes description and autodiscovery meta tags" do
+    stub_content_store_has_item("/government/organisations/prime-ministers-office-10-downing-street", @content_item_no10)
     visit "/government/organisations/prime-ministers-office-10-downing-street"
     padded_string =
       "10 Downing Street is the official residence and the office of the British Prime Minister.\
