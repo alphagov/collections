@@ -1,76 +1,14 @@
 require "integration_spec_helper"
+require "gds_api/test_helpers/content_store"
 
 RSpec.describe "Organisation pages" do
   include OrganisationHelpers
-
-  let(:org_example) { GovukSchemas::Example.find("organisation", example_name: "organisation") }
-
-  @content_item_no10 = GovukSchemas::Example.find("organisation", example_name: "number_10")
-
-  let(:content_item_attorney_general) { GovukSchemas::Example.find("organisation", example_name: "attorney_general") }
-
-  let(:content_item_charity_commission) { GovukSchemas::Example.find("organisation", example_name: "charity_commission") }
-
-  let(:content_item_wales_office) { GovukSchemas::Example.find("organisation", example_name: "wales_office") }
-
-  let(:content_item_wales_office_cy) do
-    content_item_wales_office.deep_dup.tap do |cy|
-      cy[:base_path] = "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
-    end
-  end
-
-  let(:content_item_separate_student_loans) do
-    org_example.deep_merge(
-      "base_path" => "/government/organisations/student-loans-company",
-      "title" => "Student Loans Company",
-      "details" => {
-        "organisation_govuk_status" => {
-          "status" => "exempt",
-          "url" => "http://www.slc.co.uk/",
-          "updated_at" => nil,
-        },
-      },
-    )
-  end
-
-  let(:content_item_blank) do
-    {
-      title: "An empty content item to test everything checks before trying to render things",
-      base_path: "/government/organisations/civil-service-resourcing",
-      details: {
-        body: "",
-        brand: "",
-        logo: {},
-        organisation_govuk_status: { status: "" },
-      },
-      links: {},
-    }
-  end
-
-  before do
-    stub_content_store_has_item("/government/organisations/prime-ministers-office-10-downing-street", @content_item_no10)
-    stub_content_store_has_item("/government/organisations/attorney-generals-office", content_item_attorney_general)
-    stub_content_store_has_item("/government/organisations/charity-commission", content_item_charity_commission)
-    stub_content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales", content_item_wales_office)
-    stub_content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales.cy", content_item_wales_office_cy)
-    stub_content_store_has_item("/government/organisations/civil-service-resourcing", content_item_blank)
-    stub_content_store_has_item("/government/organisations/student-loans-company", content_item_separate_student_loans)
-
-    stub_search_api_latest_content_requests("prime-ministers-office-10-downing-street")
-    stub_search_api_latest_content_requests("attorney-generals-office")
-    stub_search_api_latest_content_requests("charity-commission")
-    stub_search_api_latest_content_requests("office-of-the-secretary-of-state-for-wales")
-    stub_search_api_latest_content_requests("civil-service-resourcing")
-    stub_search_api_latest_content_requests("student-loans-company")
-  end
-
-  it "doesn't fail if the content item is missing any data" do
-    visit "/government/organisations/civil-service-resourcing"
-    expect(page).to have_css(".content")
-  end
+  include GdsApi::TestHelpers::ContentStore
 
   it "includes description and autodiscovery meta tags" do
+    @content_item_no10 = GovukSchemas::Example.find("organisation", example_name: "number_10")
     stub_content_store_has_item("/government/organisations/prime-ministers-office-10-downing-street", @content_item_no10)
+    stub_search_api_latest_content_requests("prime-ministers-office-10-downing-street")
     visit "/government/organisations/prime-ministers-office-10-downing-street"
     padded_string =
       "10 Downing Street is the official residence and the office of the British Prime Minister.\
