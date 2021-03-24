@@ -6,7 +6,7 @@ RSpec.describe CoronavirusLocalRestrictionsController do
 
   before do
     stub_content_store_has_item("/find-coronavirus-local-restrictions", {})
-    allow_any_instance_of(CoronavirusLocalRestrictionsController)
+    allow(controller)
     .to receive(:out_of_date?)
     .and_return(false)
   end
