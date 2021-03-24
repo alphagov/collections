@@ -33,7 +33,10 @@ module CoronavirusLocalRestrictionsHelpers
       "name" => name,
       "restrictions" => [current_restriction, future_restriction].compact,
     })
-    LocalRestriction.stubs(:find).with(gss).returns(local_restriction)
+    allow(LocalRestriction)
+    .to receive(:find)
+    .with(gss)
+    .and_return(local_restriction)
   end
 
   def stub_no_local_restriction(
@@ -52,6 +55,9 @@ module CoronavirusLocalRestrictionsHelpers
     ]
     stub_mapit_has_a_postcode_and_areas(postcode, [], areas)
 
-    LocalRestriction.stubs(:find).with(gss).returns(nil)
+    allow(LocalRestriction)
+    .to receive(:find)
+    .with(gss)
+    .and_return(nil)
   end
 end
