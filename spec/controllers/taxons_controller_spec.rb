@@ -1,8 +1,7 @@
-require_relative "../../test/support/coronavirus_helper"
-
 RSpec.describe TaxonsController do
   include SearchApiHelpers
   include TaxonHelpers
+  include CoronavirusContentItemHelper
 
   describe "GET show" do
     before do

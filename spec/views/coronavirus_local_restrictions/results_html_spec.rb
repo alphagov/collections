@@ -1,5 +1,6 @@
 RSpec.describe "coronavirus_local_restrictions/results.html" do
   include CoronavirusLocalRestrictionsHelpers
+  include CoronavirusContentItemHelper
 
   describe "current restrictions" do
     it "rendering tier 4 results for a postcode in tier 4" do

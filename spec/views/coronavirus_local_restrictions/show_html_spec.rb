@@ -1,5 +1,6 @@
 RSpec.describe "coronavirus_local_restrictions/show.html.erb" do
   include CoronavirusLocalRestrictionsHelpers
+  include CoronavirusContentItemHelper
 
   describe "errors" do
     it "rendering error when invalid postcode is entered" do
