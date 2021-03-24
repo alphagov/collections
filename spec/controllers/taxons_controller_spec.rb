@@ -23,6 +23,12 @@ RSpec.describe TaxonsController do
       stub_most_recent_content_for_taxon(taxon["content_id"], tagged_content_for_research_and_statistics, filter_content_store_document_type: "research_and_statistics")
       stub_organisations_for_taxon(taxon["content_id"], tagged_organisations)
     end
+
+    it "when the taxon exists" do
+      get :show, params: { taxon_base_path: taxon["base_path"][1..-1] }
+      expect(response).to have_http_status(:success)
+      expect(response).to render_template(:show)
+    end
   end
 
   context "when rendering a taxon in the alpha phase" do

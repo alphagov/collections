@@ -1,4 +1,4 @@
-require "integration_test_helper"
+require "integration_spec_helper"
 require "govuk-content-schema-test-helpers"
 
 GovukContentSchemaTestHelpers.configure do |config|
@@ -6,7 +6,7 @@ GovukContentSchemaTestHelpers.configure do |config|
   config.project_root = Rails.root
 end
 
-class StepNavPageTest < ActionDispatch::IntegrationTest
+RSpec.feature "Step by step nav pages" do
   before do
     sample = GovukContentSchemaTestHelpers::Examples.new.get("step_by_step_nav", "learn_to_drive_a_car")
     content_item = JSON.parse(sample)
@@ -16,22 +16,22 @@ class StepNavPageTest < ActionDispatch::IntegrationTest
   end
 
   it "renders breadcrumbs" do
-    assert page.has_css?(".gem-c-breadcrumbs")
+    expect(page).to have_selector(".gem-c-breadcrumbs")
   end
 
   it "renders the title" do
-    assert page.has_css?(".gem-c-title")
-    assert page.has_css?(".gem-c-title__text", text: "Learn to drive a car: step by step")
+    expect(page).to have_selector(".gem-c-title")
+    expect(page).to have_selector(".gem-c-title__text", text: "Learn to drive a car: step by step")
   end
 
   it "renders the step by step navigation component" do
-    assert page.has_selector?(".gem-c-step-nav")
-    assert page.has_selector?(".gem-c-step-nav__title", text: "Check you're allowed to drive")
-    assert page.has_selector?(".gem-c-step-nav__step", count: 7)
+    expect(page).to have_selector(".gem-c-step-nav")
+    expect(page).to have_selector(".gem-c-step-nav__title", text: "Check you're allowed to drive")
+    expect(page).to have_selector(".gem-c-step-nav__step", count: 7)
   end
 
   it "hides step content by default" do
-    assert page.has_selector?(".gem-c-step-nav__panel", visible: false)
+    expect(page).to have_selector(".gem-c-step-nav__panel", visible: false)
   end
 
   it "works for a generated example" do
@@ -39,9 +39,8 @@ class StepNavPageTest < ActionDispatch::IntegrationTest
 
     stub_content_store_has_item(content_item["base_path"], content_item)
 
-    get content_item["base_path"]
-    assert_response 200
-    assert_select "title", "#{content_item['title']} - GOV.UK"
+    visit content_item["base_path"]
+    expect(page).to have_title("#{content_item['title']} - GOV.UK")
   end
 
   def step_nav_example
