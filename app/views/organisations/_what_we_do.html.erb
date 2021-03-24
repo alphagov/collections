@@ -15,7 +15,7 @@
     <div class="govuk-grid-column-two-thirds">
       <%= render "govuk_publishing_components/components/govspeak", {
         } do %>
-          <p><%= @organisation.body.html_safe %></p>
+          <%= @organisation.body.html_safe %>
 
           <% unless @organisation.is_court_or_hmcts_tribunal? %>
           <p>

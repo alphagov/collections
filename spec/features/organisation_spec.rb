@@ -9,14 +9,14 @@ RSpec.describe "Organisation pages" do
     @content_item_no10 = GovukSchemas::Example.find("organisation", example_name: "number_10")
     stub_content_store_has_item("/government/organisations/prime-ministers-office-10-downing-street", @content_item_no10)
     stub_search_api_latest_content_requests("prime-ministers-office-10-downing-street")
-    visit "/government/organisations/prime-ministers-office-10-downing-street?skip_slimmer=1"
+    visit "/government/organisations/prime-ministers-office-10-downing-street"
     padded_string =
       "10 Downing Street is the official residence and the office of the British Prime Minister.\
       The office helps the Prime Minister to establish and deliver the government’s overall strategy and policy priorities,\
       and to communicate the government’s policies to Parliament, the public and international audiences."
     string = padded_string.gsub("      ", " ")
     puts page.body
-    expect(page).to have_selector("meta[name='description'][content='#{string}']", visible: false)
+    expect(page).to have_selector("meta[name='description'][content='#{string}']", visible: :hidden)
     expect(page).to have_css("link[rel='alternate'][type='application/json'][href$='/api/organisations/prime-ministers-office-10-downing-street']", visible: false)
     expect(page).to have_css("link[rel='alternate'][type='application/atom+xml'][href$='/government/organisations/prime-ministers-office-10-downing-street.atom']", visible: false)
   end
