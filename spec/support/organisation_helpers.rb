@@ -797,4 +797,10 @@ module OrganisationHelpers
   def organisation_content_schema_example(name)
     GovukSchemas::Example.find("organisation", example_name: name)
   end
+
+  def stub_content_and_search(content_item)
+    slug = content_item["base_path"].split("/").last
+    stub_content_store_has_item(content_item["base_path"], content_item)
+    stub_search_api_latest_content_requests(slug)
+  end
 end

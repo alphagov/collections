@@ -31,33 +31,26 @@ RSpec.describe "Organisation pages" do
 
   let(:content_item_blank) do
     {
-      title: "An empty content item to test everything checks before trying to render things",
-      base_path: "/government/organisations/civil-service-resourcing",
-      details: {
-        body: "",
-        brand: "",
-        logo: {},
-        organisation_govuk_status: { status: "" },
+      "title" => "An empty content item to test everything checks before trying to render things",
+      "base_path" => "/government/organisations/civil-service-resourcing",
+      "details" => {
+        "body" => "",
+        "brand" => "",
+        "logo" => {},
+        "organisation_govuk_status" => { "status" => "" },
       },
-      links: {},
+      "links" => {},
     }
   end
 
   before do
-    stub_content_store_has_item("/government/organisations/prime-ministers-office-10-downing-street", content_item_no10)
-    stub_content_store_has_item("/government/organisations/attorney-generals-office", content_item_attorney_general)
-    stub_content_store_has_item("/government/organisations/charity-commission", content_item_charity_commission)
-    stub_content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales", content_item_wales_office)
+    stub_content_and_search(content_item_no10)
+    stub_content_and_search(content_item_attorney_general)
+    stub_content_and_search(content_item_charity_commission)
+    stub_content_and_search(content_item_wales_office)
+    stub_content_and_search(content_item_blank)
+    stub_content_and_search(content_item_separate_student_loans)
     stub_content_store_has_item("/government/organisations/office-of-the-secretary-of-state-for-wales.cy", content_item_wales_office_cy)
-    stub_content_store_has_item("/government/organisations/civil-service-resourcing", content_item_blank)
-    stub_content_store_has_item("/government/organisations/student-loans-company", content_item_separate_student_loans)
-
-    stub_search_api_latest_content_requests("prime-ministers-office-10-downing-street")
-    stub_search_api_latest_content_requests("attorney-generals-office")
-    stub_search_api_latest_content_requests("charity-commission")
-    stub_search_api_latest_content_requests("office-of-the-secretary-of-state-for-wales")
-    stub_search_api_latest_content_requests("civil-service-resourcing")
-    stub_search_api_latest_content_requests("student-loans-company")
   end
 
   it "doesn't fail if the content item is missing any data" do
