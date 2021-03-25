@@ -3,15 +3,11 @@ require "integration_spec_helper"
 RSpec.describe "Organisation pages" do
   include OrganisationHelpers
 
-  let(:org_example) { GovukSchemas::Example.find("organisation", example_name: "organisation") }
-
-  let(:content_item_no10) { GovukSchemas::Example.find("organisation", example_name: "number_10") }
-
-  let(:content_item_attorney_general) { GovukSchemas::Example.find("organisation", example_name: "attorney_general") }
-
-  let(:content_item_charity_commission) { GovukSchemas::Example.find("organisation", example_name: "charity_commission") }
-
-  let(:content_item_wales_office) { GovukSchemas::Example.find("organisation", example_name: "wales_office") }
+  let(:org_example) { organisation_content_schema_example("organisation") }
+  let(:content_item_no10) { organisation_content_schema_example("number_10") }
+  let(:content_item_attorney_general) { organisation_content_schema_example("attorney_general") }
+  let(:content_item_charity_commission) { organisation_content_schema_example("charity_commission") }
+  let(:content_item_wales_office) { organisation_content_schema_example("wales_office") }
 
   let(:content_item_wales_office_cy) do
     content_item_wales_office.deep_dup.tap do |cy|

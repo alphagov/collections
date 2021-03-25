@@ -793,4 +793,8 @@ module OrganisationHelpers
       },
     }.with_indifferent_access
   end
+
+  def organisation_content_schema_example(name)
+    GovukSchemas::Example.find("organisation", example_name: name)
+  end
 end
