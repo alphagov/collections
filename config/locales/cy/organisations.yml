@@ -336,21 +336,6 @@ cy:
         see_all:
           text: "Gweld yr holl newyddion a chyfathrebiadau"
           path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
-      consultations:
-        title: "Ymgynghoriadau"
-        see_all:
-          text: "Gweld ein holl ymgynghoriadau"
-          path: "/government/consultations?departments[]=%{organisation}"
-      publications:
-        title: "Cyhoeddiadau"
-        see_all:
-          text: "Gweld ein holl cyhoeddiadau"
-          path: "/government/publications?departments[]=%{organisation}"
-      statistics:
-        title: "Hystadegau"
-        see_all:
-          text: "Gweld ein holl hystadegau"
-          path: "/government/statistics?departments[]=%{organisation}"
       services:
         title: "Gwasanaethau"
         see_all:
@@ -418,7 +403,6 @@ cy:
       traffic_commissioners: "Comisiynwyr traffig"
     read_more: "Darllen mwy am yr hyn rydyn ni'n ei wneud"
     see_all_latest_documents:
-    see_all: "Gweld holl"
     separate_website: "gwefan ar wahân"
     subscription:
       email:
