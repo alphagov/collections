@@ -76,9 +76,9 @@ RSpec.describe "Organisation pages" do
       The office helps the Prime Minister to establish and deliver the government’s overall strategy and policy priorities,\
       and to communicate the government’s policies to Parliament, the public and international audiences."
     string = padded_string.gsub("      ", " ")
-    expect(page).to have_selector("meta[name='description'][content='#{string}']", visible: false)
-    expect(page).to have_css("link[rel='alternate'][type='application/json'][href$='/api/organisations/prime-ministers-office-10-downing-street']", visible: false)
-    expect(page).to have_css("link[rel='alternate'][type='application/atom+xml'][href$='/government/organisations/prime-ministers-office-10-downing-street.atom']", visible: false)
+    expect(page).to have_selector("meta[name='description'][content='#{string}']", visible: :hidden)
+    expect(page).to have_css("link[rel='alternate'][type='application/json'][href$='/api/organisations/prime-ministers-office-10-downing-street']", visible: :hidden)
+    expect(page).to have_css("link[rel='alternate'][type='application/atom+xml'][href$='/government/organisations/prime-ministers-office-10-downing-street.atom']", visible: :hidden)
   end
 
   it "displays breadcrumbs" do
