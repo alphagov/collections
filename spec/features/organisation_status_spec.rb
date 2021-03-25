@@ -1,6 +1,6 @@
-require "integration_test_helper"
+require "integration_spec_helper"
 
-class OrganisationStatusTest < ActionDispatch::IntegrationTest
+RSpec.feature "Organisation status" do
   include OrganisationHelpers
 
   before do
@@ -233,110 +233,110 @@ class OrganisationStatusTest < ActionDispatch::IntegrationTest
     stub_search_api_latest_content_requests("fire-service-college")
   end
 
-  it "displays a changed_name organisation page correctly" do
+  scenario "displays a changed_name organisation page correctly" do
     visit "/government/organisations/changed_name"
-    assert page.has_css?(".gem-c-organisation-logo")
-    assert page.has_css?(".gem-c-notice", text: "Changed name organisation is now called Successor")
-    assert page.has_css?(".gem-c-notice a[href='/changed/name/successor']", text: "Successor")
-    assert page.has_css?(".gem-c-govspeak")
-    assert page.has_content?(/This organisation has a status of changed_name./i)
+    expect(page).to have_selector(".gem-c-organisation-logo")
+    expect(page).to have_selector(".gem-c-notice", text: "Changed name organisation is now called Successor")
+    expect(page).to have_selector(".gem-c-notice a[href='/changed/name/successor']", text: "Successor")
+    expect(page).to have_selector(".gem-c-govspeak")
+    expect(page).to have_content(/This organisation has a status of changed_name./i)
   end
 
-  it "displays a closed and devolved organisation page correctly" do
+  scenario "displays a closed and devolved organisation page correctly" do
     visit "/government/organisations/devolved"
-    assert page.has_css?(".gem-c-organisation-logo")
-    assert page.has_css?(".gem-c-notice", text: "Devolved organisation is a body of Devolved Successor")
-    assert page.has_css?(".gem-c-notice a[href='/devolved/successor']", text: "Devolved Successor")
-    assert page.has_css?(".gem-c-govspeak")
-    assert page.has_content?(/This organisation has a status of devolved./i)
+    expect(page).to have_selector(".gem-c-organisation-logo")
+    expect(page).to have_selector(".gem-c-notice", text: "Devolved organisation is a body of Devolved Successor")
+    expect(page).to have_selector(".gem-c-notice a[href='/devolved/successor']", text: "Devolved Successor")
+    expect(page).to have_selector(".gem-c-govspeak")
+    expect(page).to have_content(/This organisation has a status of devolved./i)
   end
 
-  it "displays an exempt organisation page correctly" do
+  scenario "displays an exempt organisation page correctly" do
     visit "/government/organisations/exempt"
-    assert page.has_css?(".gem-c-organisation-logo")
-    assert page.has_css?(".gem-c-notice", text: "Exempt organisation has a separate website")
-    assert page.has_css?(".gem-c-notice a[href='http://www.google.com']", text: "separate website")
-    assert page.has_css?(".gem-c-govspeak")
-    assert page.has_content?(/This organisation has a status of exempt./i)
+    expect(page).to have_selector(".gem-c-organisation-logo")
+    expect(page).to have_selector(".gem-c-notice", text: "Exempt organisation has a separate website")
+    expect(page).to have_selector(".gem-c-notice a[href='http://www.google.com']", text: "separate website")
+    expect(page).to have_selector(".gem-c-govspeak")
+    expect(page).to have_content(/This organisation has a status of exempt./i)
   end
 
-  it "displays an exempt organisation page with no URL correctly" do
+  scenario "displays an exempt organisation page with no URL correctly" do
     visit "/government/organisations/exempt-no-url"
-    assert page.has_css?(".gem-c-organisation-logo")
-    assert page.has_css?(".gem-c-notice__title", text: "Exempt organisation has no website")
-    assert page.has_css?(".gem-c-govspeak")
-    assert page.has_content?(/This organisation has a status of exempt./i)
+    expect(page).to have_selector(".gem-c-organisation-logo")
+    expect(page).to have_selector(".gem-c-notice__title", text: "Exempt organisation has no website")
+    expect(page).to have_selector(".gem-c-govspeak")
+    expect(page).to have_content(/This organisation has a status of exempt./i)
   end
 
-  it "displays a joining organisation page correctly" do
+  scenario "displays a joining organisation page correctly" do
     visit "/government/organisations/joining"
-    assert page.has_css?(".gem-c-organisation-logo")
-    assert page.has_css?(".gem-c-notice", text: "Joining organisation will soon be incorporated into GOV.UK")
-    assert_not page.has_css?(".gem-c-notice a")
-    assert page.has_css?(".gem-c-govspeak")
-    assert page.has_content?(/This organisation has a status of joining./i)
-    assert_not page.has_css?(".gem-c-heading", text: "Documents")
-    assert_not page.has_css?(".gem-c-heading", text: "News and communications")
-    assert_not page.has_css?(".gem-c-document-list__item-title[href='/content-item-1']", text: "Content item 1")
-    assert_not page.has_css?(".gem-c-heading", text: "Transparency")
-    assert_not page.has_css?(".gem-c-heading", text: "Guidance and regulation")
+    expect(page).to have_selector(".gem-c-organisation-logo")
+    expect(page).to have_selector(".gem-c-notice", text: "Joining organisation will soon be incorporated into GOV.UK")
+    expect(page).not_to have_selector(".gem-c-notice a")
+    expect(page).to have_selector(".gem-c-govspeak")
+    expect(page).to have_content(/This organisation has a status of joining./i)
+    expect(page).not_to have_selector(".gem-c-heading", text: "Documents")
+    expect(page).not_to have_selector(".gem-c-heading", text: "News and communications")
+    expect(page).not_to have_selector(".gem-c-document-list__item-title[href='/content-item-1']", text: "Content item 1")
+    expect(page).not_to have_selector(".gem-c-heading", text: "Transparency")
+    expect(page).not_to have_selector(".gem-c-heading", text: "Guidance and regulation")
   end
 
-  it "displays a left_gov organisation page correctly" do
+  scenario "displays a left_gov organisation page correctly" do
     visit "/government/organisations/left_gov"
-    assert page.has_css?(".gem-c-organisation-logo")
-    assert page.has_css?(".gem-c-notice", text: "Left_gov organisation is now independent of the UK government")
-    assert_not page.has_css?(".gem-c-notice a")
-    assert page.has_css?(".gem-c-govspeak")
-    assert page.has_content?(/This organisation has a status of left_gov./i)
+    expect(page).to have_selector(".gem-c-organisation-logo")
+    expect(page).to have_selector(".gem-c-notice", text: "Left_gov organisation is now independent of the UK government")
+    expect(page).not_to have_selector(".gem-c-notice a")
+    expect(page).to have_selector(".gem-c-govspeak")
+    expect(page).to have_content(/This organisation has a status of left_gov./i)
   end
 
-  it "displays a merged organisation page correctly" do
+  scenario "displays a merged organisation page correctly" do
     visit "/government/organisations/merged"
-    assert page.has_css?(".gem-c-organisation-logo")
-    assert page.has_css?(".gem-c-notice", text: "Merged organisation became part of Merged Successor in March 2016")
-    assert page.has_css?(".gem-c-notice a[href='/merged/successor']", text: "Merged Successor")
-    assert page.has_css?(".gem-c-govspeak")
-    assert page.has_content?(/This organisation has a status of merged./i)
+    expect(page).to have_selector(".gem-c-organisation-logo")
+    expect(page).to have_selector(".gem-c-notice", text: "Merged organisation became part of Merged Successor in March 2016")
+    expect(page).to have_selector(".gem-c-notice a[href='/merged/successor']", text: "Merged Successor")
+    expect(page).to have_selector(".gem-c-govspeak")
+    expect(page).to have_content(/This organisation has a status of merged./i)
   end
 
-  it "displays a split organisation page correctly" do
+  scenario "displays a split organisation page correctly" do
     visit "/government/organisations/split"
-    assert page.has_css?(".gem-c-organisation-logo")
-    assert page.has_css?(".gem-c-notice", text: "Split organisation was replaced by Split Successor1, Split Successor2, and Split Successor3")
-    assert page.has_css?(".gem-c-notice a[href='/split/successor1']", text: "Split Successor1")
-    assert page.has_css?(".gem-c-notice a[href='/split/successor2']", text: "Split Successor2")
-    assert page.has_css?(".gem-c-notice a[href='/split/successor3']", text: "Split Successor3")
-    assert page.has_css?(".gem-c-govspeak")
-    assert page.has_content?(/This organisation has a status of split./i)
+    expect(page).to have_selector(".gem-c-organisation-logo")
+    expect(page).to have_selector(".gem-c-notice", text: "Split organisation was replaced by Split Successor1, Split Successor2, and Split Successor3")
+    expect(page).to have_selector(".gem-c-notice a[href='/split/successor1']", text: "Split Successor1")
+    expect(page).to have_selector(".gem-c-notice a[href='/split/successor2']", text: "Split Successor2")
+    expect(page).to have_selector(".gem-c-notice a[href='/split/successor3']", text: "Split Successor3")
+    expect(page).to have_selector(".gem-c-govspeak")
+    expect(page).to have_content(/This organisation has a status of split./i)
   end
 
-  it "displays a no_longer_exists organisation page correctly" do
+  scenario "displays a no_longer_exists organisation page correctly" do
     visit "/government/organisations/no_longer_exists"
-    assert page.has_css?(".gem-c-organisation-logo")
-    assert page.has_css?(".gem-c-notice", text: "No_longer_exists organisation has closed")
-    assert_not page.has_css?(".gem-c-notice a")
-    assert page.has_css?(".gem-c-govspeak")
-    assert page.has_content?(/This organisation has a status of no_longer_exists./i)
+    expect(page).to have_selector(".gem-c-organisation-logo")
+    expect(page).to have_selector(".gem-c-notice", text: "No_longer_exists organisation has closed")
+    expect(page).not_to have_selector(".gem-c-notice a")
+    expect(page).to have_selector(".gem-c-govspeak")
+    expect(page).to have_content(/This organisation has a status of no_longer_exists./i)
   end
 
-  it "displays a replaced organisation page correctly" do
+  scenario "displays a replaced organisation page correctly" do
     visit "/government/organisations/replaced"
-    assert page.has_css?(".gem-c-organisation-logo")
-    assert page.has_css?(".gem-c-notice", text: "Replaced organisation was replaced by Replaced Successor")
-    assert page.has_css?(".gem-c-notice a[href='/replaced/successor']", text: "Replaced Successor")
-    assert page.has_css?(".gem-c-govspeak")
-    assert page.has_content?(/This organisation has a status of replaced./i)
+    expect(page).to have_selector(".gem-c-organisation-logo")
+    expect(page).to have_selector(".gem-c-notice", text: "Replaced organisation was replaced by Replaced Successor")
+    expect(page).to have_selector(".gem-c-notice a[href='/replaced/successor']", text: "Replaced Successor")
+    expect(page).to have_selector(".gem-c-govspeak")
+    expect(page).to have_content(/This organisation has a status of replaced./i)
   end
 
-  it "shows latest documents by type on separate website page" do
+  scenario "shows latest documents by type on separate website page" do
     visit "/government/organisations/fire-service-college"
-    assert page.has_css?(".gem-c-heading", text: "Documents")
-    assert page.has_css?(".gem-c-heading", text: "News and communications")
-    assert page.has_css?(".gem-c-document-list__item-title[href='/content-item-1']", text: "Content item 1")
-    assert page.has_css?(".gem-c-heading", text: "Transparency")
-    assert page.has_css?(".gem-c-heading", text: "Guidance and regulation")
-    assert_not page.has_css?(".gem-c-heading", text: "Services")
-    assert_not page.has_css?(".gem-c-heading", text: "Statistics")
+    expect(page).to have_selector(".gem-c-heading", text: "Documents")
+    expect(page).to have_selector(".gem-c-heading", text: "News and communications")
+    expect(page).to have_selector(".gem-c-document-list__item-title[href='/content-item-1']", text: "Content item 1")
+    expect(page).to have_selector(".gem-c-heading", text: "Transparency")
+    expect(page).to have_selector(".gem-c-heading", text: "Guidance and regulation")
+    expect(page).not_to have_selector(".gem-c-heading", text: "Services")
+    expect(page).not_to have_selector(".gem-c-heading", text: "Statistics")
   end
 end
