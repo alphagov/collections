@@ -1,5 +1,6 @@
 require "gds_api/test_helpers/content_item_helpers"
 require "gds_api/test_helpers/search"
+require_relative "../../spec/support/search_api_helpers"
 
 module CoronavirusLandingPageSteps
   include GdsApi::TestHelpers::ContentItemHelpers

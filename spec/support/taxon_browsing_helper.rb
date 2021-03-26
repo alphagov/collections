@@ -1,3 +1,5 @@
+require_relative "../../spec/support/taxon_helpers"
+require_relative "../../spec/support/search_api_helpers"
 module TaxonBrowsingHelper
   include SearchApiHelpers
   include TaxonHelpers
