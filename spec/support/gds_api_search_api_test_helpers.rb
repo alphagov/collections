@@ -9,7 +9,7 @@ module GdsApi
       def search_results_found_with_missing_keys
         File.read(
           File.expand_path(
-            "../../test/fixtures/services_and_information_missing_keys_fixture.json",
+            "../fixtures/services_and_information_missing_keys_fixture.json",
             __dir__,
           ),
         )

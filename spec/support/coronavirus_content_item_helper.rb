@@ -7,7 +7,7 @@ module CoronavirusContentItemHelper
 
   def load_content_item(file_name)
     json = File.read(
-      Rails.root.join("test/fixtures/content_store/", file_name),
+      Rails.root.join("spec/fixtures/content_store/", file_name),
     )
     JSON.parse(json)
   end
