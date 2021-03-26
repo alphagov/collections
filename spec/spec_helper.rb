@@ -2,9 +2,6 @@ if ENV["USE_SIMPLECOV"]
   require "simplecov"
   require "simplecov-rcov"
   SimpleCov.formatter = SimpleCov::Formatter::RcovFormatter
-  SimpleCov.start "rails" do
-    add_filter "lib/minitest_to_rspec"
-  end
 end
 
 # Duplicated in features/support/env.rb
