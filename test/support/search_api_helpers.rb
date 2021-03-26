@@ -272,28 +272,6 @@ module SearchApiHelpers
     end
   end
 
-  def search_api_has_documents_for_second_level_browse_page(browse_page_content_id, document_slugs, format = "guide", page_size: 1000)
-    results = document_slugs.map.with_index do |slug, i|
-      search_api_document_for_slug(slug, (i + 1).hours.ago, format)
-    end
-
-    results.each_slice(page_size).with_index do |results_page, page|
-      start = page * page_size
-      params = {
-        start: start.to_s,
-        count: page_size.to_s,
-        filter_mainstream_browse_page_content_ids: [browse_page_content_id],
-        fields: %w[title link format],
-      }
-      body = {
-        "results" => results_page,
-        "start" => start,
-        "total" => results.size,
-      }
-      stub_search(params: params, body: body)
-    end
-  end
-
   def section_tagged_content_list(doc_type, count = 1)
     content_list = []
 

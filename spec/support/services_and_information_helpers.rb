@@ -6,13 +6,6 @@ module ServicesAndInformationHelpers
     )
   end
 
-  def stub_education_services_and_information_content_item
-    stub_content_item(
-      "/government/organisations/department-for-education/services-information",
-      "Department for Education",
-    )
-  end
-
   def stub_content_item(base_path, organisation_title)
     stub_content_store_has_item(
       base_path,

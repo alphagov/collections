@@ -384,33 +384,6 @@ module OrganisationHelpers
     }.with_indifferent_access
   end
 
-  def latest_documents_with_acronyms
-    {
-      title: "Attorney General's Office",
-      base_path: "/government/organisations/attorney-generals-office",
-      details: {
-        organisation_govuk_status: {
-          status: "live",
-        },
-        brand: "attorney-generals-office",
-        organisation_featuring_priority: "news",
-        ordered_featured_documents: [
-          {
-            title: "New head of the Serious Fraud Office announced",
-            href: "/government/news/new-head-of-the-serious-fraud-office-announced",
-            image: {
-              url: "https://assets.publishing.service.gov.uk/jeremy.jpg",
-              alt_text: "Attorney General Jeremy Wright QC MP",
-            },
-            summary: "Lisa Osofsky appointed new Director of the Serious Fraud Office ",
-            public_updated_at: "2018-06-04T11:30:03.000+01:00",
-            document_type: "Dfid_research_output",
-          },
-        ],
-      },
-    }.with_indifferent_access
-  end
-
   def organisation_with_high_profile_groups
     {
       title: "Department for Environment, Food & Rural Affairs",
