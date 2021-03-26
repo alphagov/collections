@@ -1,4 +1,4 @@
-$c19-landing-page-header-background: #272828;
+$c19-landing-page-header-background: govuk-colour('blue');
 
 .covid__page {
   .govuk-grid-column-one-third,
@@ -22,7 +22,7 @@ $c19-landing-page-header-background: #272828;
 .covid__page-header {
   margin-bottom: govuk-spacing(8);
   border-top: solid govuk-spacing(2) $covid-yellow;
-  background-color: govuk-colour("black");
+  background-color: $c19-landing-page-header-background;
   color: govuk-colour("white");
 
   .covid__page-header-link {
@@ -59,9 +59,8 @@ $c19-landing-page-header-background: #272828;
   }
 }
 
-.covid__page-header-light {
+.covid__page-header-content-section {
   padding: govuk-spacing(5) 0;
-  background: $c19-landing-page-header-background;
 
   @include govuk-media-query($from: tablet) {
     padding: 45px 0 40px;
