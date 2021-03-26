@@ -40,7 +40,7 @@ $c19-landing-page-header-background: govuk-colour('blue');
 }
 
 .covid__page-header--business {
-  background-color: $covid-grey;
+  background-color: $c19-landing-page-header-background;
 }
 
 .covid__page-header-list {
@@ -50,7 +50,7 @@ $c19-landing-page-header-background: govuk-colour('blue');
 }
 
 .covid__page-header--hub {
-  background-color: $covid-grey;
+  background-color: $c19-landing-page-header-background;
 }
 
 .covid__page-header--landing-page {
@@ -79,9 +79,9 @@ $c19-landing-page-header-background: govuk-colour('blue');
   }
 }
 
-.covid__page-header-light--hub {
+.covid__page-header-content-section--hub {
   padding-bottom: 35px;
-  background: $covid-grey;
+  background: $c19-landing-page-header-background;
 
   @include govuk-media-query($from: tablet) {
     padding-bottom: govuk-spacing(6);
