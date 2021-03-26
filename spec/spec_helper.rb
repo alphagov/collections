@@ -1,3 +1,13 @@
+if ENV["USE_SIMPLECOV"]
+  require "simplecov"
+  require "simplecov-rcov"
+  SimpleCov.formatter = SimpleCov::Formatter::RcovFormatter
+  SimpleCov.start "rails" do
+    add_filter "lib/minitest_to_rspec"
+  end
+end
+
+# Duplicated in features/support/env.rb
 ENV["RAILS_ENV"] ||= "test"
 ENV["GOVUK_WEBSITE_ROOT"] = "http://www.test.gov.uk"
 ENV["GOVUK_APP_DOMAIN"] = "test.gov.uk"
@@ -8,6 +18,10 @@ require "rspec/rails"
 require "gds_api/test_helpers/search"
 require "gds_api/test_helpers/content_store"
 require "webmock/rspec"
+WebMock.disable_net_connect!(
+  allow_localhost: true,
+  allow: ["chromedriver.storage.googleapis.com"],
+)
 
 Dir[Rails.root.join("spec/support/**/*.rb")].sort.each { |f| require f }
 

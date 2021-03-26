@@ -1,12 +1,3 @@
-if ENV["USE_SIMPLECOV"]
-  require "simplecov"
-  require "simplecov-rcov"
-  SimpleCov.formatter = SimpleCov::Formatter::RcovFormatter
-  SimpleCov.start "rails" do
-    add_filter "lib/minitest_to_rspec"
-  end
-end
-
 # Duplicated in features/support/env.rb
 ENV["GOVUK_WEBSITE_ROOT"] = "http://www.test.gov.uk"
 ENV["GOVUK_APP_DOMAIN"] = "test.gov.uk"
@@ -28,12 +19,6 @@ require "gds_api/test_helpers/search"
 Dir[Rails.root.join("test/support/*.rb")].sort.each { |f| require f }
 
 # Most tests use ActiveSupport TestCase behaviour, so we configure this here.
-
-# For integration tests that use capybara, we configure GovukAbTesting
-# accordingly before/after the tests.
-GovukAbTesting.configure do |config|
-  config.acceptance_test_framework = :active_support
-end
 
 class ActiveSupport::TestCase
   include GdsApi::TestHelpers::ContentStore
