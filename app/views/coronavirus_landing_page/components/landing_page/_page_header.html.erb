@@ -1,3 +1,17 @@
+<%
+  # This is currently being added as hardcoded as we need to ensure that the text and styling go out at the same time.
+  # After release, we should update the publishing tools and remove these lines.
+  header["title"] = "Coronavirus restrictions remain in place across the country. In England:"
+  header["link"]["link_text"] = sanitize("Find out the rules on what you can and cannot&nbsp;do")
+  header["link"]["href"] = "/coronavirus-restrictions"
+%>
+<% header["intro"] = capture do %>
+- Only socialise indoors with people you live with or who are in your support&nbsp;bubble
+- Up to 6 people or 2 households can meet&nbsp;outside
+- Work from home if you can and only travel when&nbsp;necessary
+- If you have symptoms get a test and stay at&nbsp;home
+<% end %>
+
 <header class="covid__page-header covid__page-header--landing-page">
   <div class="govuk-width-container covid__page-header-title-wrapper">
     <%= render 'govuk_publishing_components/components/breadcrumbs', {
@@ -17,24 +31,31 @@
       </div>
       <div class="govuk-grid-column-one-third">
         <div class="covid__logo-wrapper">
-          <%= render 'coronavirus_landing_page/components/landing_page/stay-home-logo.svg' %>
+          <%= render 'coronavirus_landing_page/components/landing_page/hand-face-space-fresh-air.svg' %>
         </div>
+      </div>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-column-full covid__page-header-title-section-break">
+        <hr class="govuk-section-break govuk-section-break--visible covid__page-header-title-section-break--white">
       </div>
     </div>
   </div>
 
-  <div class="covid__page-header-light">
+  <div class="covid__page-header-content-section">
     <div class="govuk-width-container">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
           <%= render "govuk_publishing_components/components/heading", {
             text: header["title"],
-            font_size: 24,
+            font_size: 19,
             margin_bottom: 6,
             inverse: true
           } %>
 
-          <%= render_govspeak(header["intro"]) %>
+          <div class="covid__page-header-content">
+            <%= render_govspeak(header["intro"]) %>
+          </div>
         </div>
       </div>
 

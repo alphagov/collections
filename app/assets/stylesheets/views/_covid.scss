@@ -1,4 +1,4 @@
-$c19-landing-page-header-background: #272828;
+$c19-landing-page-header-background: govuk-colour('blue');
 
 .covid__page {
   .govuk-grid-column-one-third,
@@ -22,7 +22,7 @@ $c19-landing-page-header-background: #272828;
 .covid__page-header {
   margin-bottom: govuk-spacing(8);
   border-top: solid govuk-spacing(2) $covid-yellow;
-  background-color: govuk-colour("black");
+  background-color: $c19-landing-page-header-background;
   color: govuk-colour("white");
 
   .covid__page-header-link {
@@ -40,7 +40,7 @@ $c19-landing-page-header-background: #272828;
 }
 
 .covid__page-header--business {
-  background-color: $covid-grey;
+  background-color: $c19-landing-page-header-background;
 }
 
 .covid__page-header-list {
@@ -50,7 +50,7 @@ $c19-landing-page-header-background: #272828;
 }
 
 .covid__page-header--hub {
-  background-color: $covid-grey;
+  background-color: $c19-landing-page-header-background;
 }
 
 .covid__page-header--landing-page {
@@ -59,9 +59,16 @@ $c19-landing-page-header-background: #272828;
   }
 }
 
-.covid__page-header-light {
+.covid__page-header-title-section-break {
+  padding: 0 govuk-spacing(3);
+}
+
+.covid__page-header-title-section-break--white {
+  border-color: govuk-colour('white');
+}
+
+.covid__page-header-content-section {
   padding: govuk-spacing(5) 0;
-  background: $c19-landing-page-header-background;
 
   @include govuk-media-query($from: tablet) {
     padding: 45px 0 40px;
@@ -72,9 +79,9 @@ $c19-landing-page-header-background: #272828;
   }
 }
 
-.covid__page-header-light--hub {
+.covid__page-header-content-section--hub {
   padding-bottom: 35px;
-  background: $covid-grey;
+  background: $c19-landing-page-header-background;
 
   @include govuk-media-query($from: tablet) {
     padding-bottom: govuk-spacing(6);
