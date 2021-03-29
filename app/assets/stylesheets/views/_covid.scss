@@ -92,6 +92,18 @@ $c19-landing-page-header-background: govuk-colour('blue');
   }
 }
 
+.covid__nhs-notice {
+  @include govuk-responsive-margin(4, "bottom");
+  border: solid 5px $covid-grey;
+  padding: govuk-spacing(4) govuk-spacing(4) 0 govuk-spacing(4);
+}
+
+.covid__nhs-notice__logo {
+  max-width: 60px;
+  height: 33px;
+  margin-bottom: govuk-spacing(2);
+}
+
 .covid__announcement-published-text {
   margin-top: govuk-spacing(1);
 

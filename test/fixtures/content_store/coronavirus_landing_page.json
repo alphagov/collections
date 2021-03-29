@@ -55,15 +55,16 @@
       }
     },
     "nhs_banner": {
-      "heading": "Do not leave home if you or someone you live with has either:",
-      "list": [
-        "a high temperature",
-        "a new, continuous cough"
-      ],
-      "call_to_action": {
-        "title": "Check the NHS website if you have symptoms",
-        "href": "https://www.nhs.uk/conditions/coronavirus-covid-19/"
-      }
+      "sections": [
+        {
+          "heading": "If you have no symptoms:",
+          "markdown": "Check if you should get [regular rapid lateral flow tests](/getting-tested-for-coronavirus)."
+        },
+        {
+          "heading": "If you have coronavirus symptoms:",
+          "markdown": "- [get a PCR test](/get-coronavirus-test)\n- stay at home"
+        }
+      ]
     },
     "find_help": {
       "heading": "Find help if you’re struggling because of coronavirus",
