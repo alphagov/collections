@@ -159,7 +159,7 @@ module CoronavirusLandingPageSteps
   end
 
   def then_i_can_see_the_nhs_banner
-    expect(page).to have_selector(".app-c-header-notice__branding--nhs h2", text: "Do not leave home if you or someone you live with has either")
+    expect(page).to have_selector(".covid__nhs-notice", text: "If you have no symptoms")
   end
 
   def then_i_can_see_the_timeline
