@@ -278,5 +278,8 @@ $c19-landing-page-header-background: govuk-colour('blue');
 
 .covid__logos {
   width: 100%;
-  margin-top: govuk-spacing(4);
+
+  @include govuk-media-query($from: tablet) {
+    margin-top: govuk-spacing(4);
+  }
 }
