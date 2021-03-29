@@ -18,24 +18,6 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-one-third">
       <%= render "coronavirus_landing_page/components/landing_page/nhs_notice", { nhs_banner: details.nhs_banner } %>
-      <%= render 'components/header-notice', {
-        nhs_branding: true,
-        title_logo: render("coronavirus_landing_page/components/shared/nhs_logo"),
-        heading: details.nhs_banner["heading"],
-        list: details.nhs_banner["list"],
-        call_to_action: {
-          href: details.nhs_banner["call_to_action"]["href"],
-          title: details.nhs_banner["call_to_action"]["title"],
-          link_data_attributes: {
-            module: "gem-track-click",
-            track_category: "pageElementInteraction",
-            track_action: "callOutBox",
-            track_label: details.nhs_banner["call_to_action"]["href"],
-          },
-          subtext: details.nhs_banner["call_to_action"]["subtext"],
-          description: details.nhs_banner["call_to_action"]["description"],
-        }
-      } %>
 
       <%= render 'coronavirus_landing_page/components/landing_page/find_help',  {
         heading: details.find_help["heading"],
