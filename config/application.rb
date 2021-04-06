@@ -45,12 +45,5 @@ module Collections
     # to use CSS that has same function names as SCSS such as max.
     # https://github.com/alphagov/govuk-frontend/issues/1350
     config.assets.css_compressor = nil
-
-    # As part of the 2020 user discovery into GOV.UK accounts we want
-    # to deploy a live prototype allowing Brexit/Transition checker
-    # users to persisit their results page.  We'll display a different
-    # header on /transition prompting users to return to their
-    # account.
-    config.feature_flag_govuk_accounts = ENV["FEATURE_FLAG_ACCOUNTS"] == "enabled"
   end
 end

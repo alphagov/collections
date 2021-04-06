@@ -18,32 +18,26 @@ RSpec.describe TransitionLandingPageController do
       end
     end
 
-    describe "accounts are enabled" do
-      before do
-        allow(Rails.configuration).to receive(:feature_flag_govuk_accounts).and_return(true)
-      end
+    it "disables the search field" do
+      get :show
+      expect(response.headers["X-Slimmer-Remove-Search"]).to eq("true")
+    end
 
-      it "disables the search field" do
+    it "sets the Vary: GOVUK-Account-Session response header" do
+      get :show
+      expect(response.headers["Vary"]).to include("GOVUK-Account-Session")
+    end
+
+    it "requests the signed-out header" do
+      get :show
+      expect(response.headers["X-Slimmer-Show-Accounts"]).to eq("signed-out")
+    end
+
+    context "the GOVUK-Account-Session header is set" do
+      it "requests the signed-in header" do
+        request.headers["GOVUK-Account-Session"] = "foo"
         get :show
-        expect(response.headers["X-Slimmer-Remove-Search"]).to eq("true")
-      end
-
-      it "sets the Vary: GOVUK-Account-Session response header" do
-        get :show
-        expect(response.headers["Vary"]).to include("GOVUK-Account-Session")
-      end
-
-      it "requests the signed-out header" do
-        get :show
-        expect(response.headers["X-Slimmer-Show-Accounts"]).to eq("signed-out")
-      end
-
-      context "the GOVUK-Account-Session header is set" do
-        it "requests the signed-in header" do
-          request.headers["GOVUK-Account-Session"] = "foo"
-          get :show
-          expect(response.headers["X-Slimmer-Show-Accounts"]).to eq("signed-in")
-        end
+        expect(response.headers["X-Slimmer-Show-Accounts"]).to eq("signed-in")
       end
     end
   end

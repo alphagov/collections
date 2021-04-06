@@ -24,8 +24,6 @@ module AccountConcern
   end
 
   def set_account_variant
-    return unless Rails.configuration.feature_flag_govuk_accounts
-
     response.headers["Vary"] = [response.headers["Vary"], ACCOUNT_SESSION_RESPONSE_HEADER_NAME].compact.join(", ")
 
     set_slimmer_headers(
