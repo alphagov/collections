@@ -28,7 +28,7 @@
     </div>
 
     <% if @what_we_do.has_share_links? %>
-      <div class="govuk-grid-column-one-third">
+      <div class="govuk-grid-column-one-third" <%= "lang=#{@what_we_do.share_links[:locale]}" if @what_we_do.share_links[:locale] %>>
         <%= render "govuk_publishing_components/components/heading", {
           text: t('organisations.follow_us'),
           margin_bottom: 3,
