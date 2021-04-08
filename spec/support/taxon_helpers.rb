@@ -97,7 +97,7 @@ private
 
   def fetch_and_validate_taxon(basename, params = {})
     json = File.read(
-      Rails.root.join("test", "fixtures", "content_store", "#{basename}.json"),
+      Rails.root.join("spec", "fixtures", "content_store", "#{basename}.json"),
     )
     content_item = JSON.parse(json)
 

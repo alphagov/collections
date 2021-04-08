@@ -5,8 +5,8 @@ require ::File.expand_path("../../config/environment", __dir__)
 require "gds_api/test_helpers/search"
 
 require_relative "../../app/services/search_api_fields"
-require_relative "../../test/support/organisations_api_test_helper"
-require_relative "../../test/support/search_api_helpers"
+require_relative "../../spec/support/organisations_api_test_helper"
+require_relative "../../spec/support/search_api_helpers"
 
 Pact.configure do |config|
   config.reports_dir = "spec/reports/pacts"

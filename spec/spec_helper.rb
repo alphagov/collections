@@ -1,3 +1,10 @@
+if ENV["USE_SIMPLECOV"]
+  require "simplecov"
+  require "simplecov-rcov"
+  SimpleCov.formatter = SimpleCov::Formatter::RcovFormatter
+end
+
+# Duplicated in features/support/env.rb
 ENV["RAILS_ENV"] ||= "test"
 ENV["GOVUK_WEBSITE_ROOT"] = "http://www.test.gov.uk"
 ENV["GOVUK_APP_DOMAIN"] = "test.gov.uk"
@@ -8,12 +15,11 @@ require "rspec/rails"
 require "gds_api/test_helpers/search"
 require "gds_api/test_helpers/content_store"
 require "webmock/rspec"
+WebMock.disable_net_connect!(
+  allow_localhost: true,
+  allow: ["chromedriver.storage.googleapis.com"],
+)
 
-# The helpers in the test/support directory are used by minitest specs that are not yet
-# converted to RSpec. We should require those helpers rather than duplicate them in
-# spec/support so that the files don't diverge. Once all the specs using a helper are
-# converted to rspec, we can move the helper file over to spec/support.
-Dir[Rails.root.join("test/support/**/*.rb")].sort.each { |f| require f }
 Dir[Rails.root.join("spec/support/**/*.rb")].sort.each { |f| require f }
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration

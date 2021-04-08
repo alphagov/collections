@@ -1,4 +1,4 @@
-require_relative "../../test/support/search_api_helpers"
+require_relative "../../spec/support/search_api_helpers"
 
 module OrganisationHelpers
   include ::SearchApiHelpers
