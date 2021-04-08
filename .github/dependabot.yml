@@ -24,8 +24,6 @@ updates:
       # Framework gems
       - dependency-name: jasmine-rails
         dependency-type: direct
-      - dependency-name: minitest-spec-rails
-        dependency-type: direct
       - dependency-name: rails
         dependency-type: direct
       - dependency-name: sassc-rails
