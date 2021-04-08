@@ -3,7 +3,6 @@ require_relative "../../spec/support/search_api_helpers"
 module TaxonBrowsingHelper
   include SearchApiHelpers
   include TaxonHelpers
-  include GovukAbTesting::MinitestHelpers
 
   def given_there_is_a_thing_that_is_not_a_taxon
     thing = {
