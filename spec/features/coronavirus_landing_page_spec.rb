@@ -1,8 +1,8 @@
 require "integration_spec_helper"
-require_relative "../support/coronavirus_landing_page_steps"
 
 RSpec.feature "Coronavirus Pages" do
   include CoronavirusLandingPageSteps
+  include CoronavirusContentItemHelper
 
   describe "the landing page" do
     scenario "renders" do

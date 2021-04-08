@@ -57,8 +57,6 @@ private
   end
 
   def out_of_date?
-    false
+    helpers.out_of_date?
   end
-
-  helper_method :out_of_date?
 end

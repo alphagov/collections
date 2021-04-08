@@ -1,4 +1,8 @@
 module ApplicationHelper
+  def out_of_date?
+    false
+  end
+
   def browsing_in_top_level_page?(top_level_page)
     request.path.starts_with?(top_level_page.base_path)
   end

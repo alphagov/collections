@@ -1,6 +1,5 @@
-require_relative "../../test/support/coronavirus_helper"
-
 RSpec.describe CoronavirusLandingPagePresenter do
+  include CoronavirusContentItemHelper
   it "provides getter methods for all component keys" do
     presenter = described_class.new(coronavirus_landing_page_content_item)
     %i[
