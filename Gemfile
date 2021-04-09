@@ -3,6 +3,7 @@ source "https://rubygems.org"
 gem "rails", "6.1.3.1"
 
 gem "dalli"
+gem "faraday"
 gem "gds-api-adapters"
 gem "govspeak"
 gem "govuk_ab_testing"
