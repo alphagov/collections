@@ -24,9 +24,8 @@ class ProxyApp
   end
 
   def call(env)
-    env["HTTP_HOST"] = "localhost:3002"
-    response = @real_provider_app.call(env)
-    response
+    env["HTTP_HOST"] = "localhost"
+    @real_provider_app.call(env)
   end
 end
 
