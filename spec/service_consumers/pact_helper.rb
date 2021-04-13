@@ -44,7 +44,7 @@ Pact.service_provider "Collections Organisation API" do
       pact_uri(ENV["PACT_URI"])
     else
       path = "pacts/provider/#{url_encode(name)}/consumer/#{url_encode(consumer_name)}"
-      version_modifier = "versions/#{url_encode(ENV.fetch('GDS_API_ADAPTERS_PACT_VERSION', 'master'))}"
+      version_modifier = "versions/#{url_encode(ENV.fetch('PACT_CONSUMER_VERSION', 'master'))}"
       pact_uri("#{pact_broker_base_url}/#{path}/#{version_modifier}")
     end
   end
