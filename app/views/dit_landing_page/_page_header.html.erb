@@ -23,16 +23,18 @@
     <div class="govuk-width-container">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds dit-landing-page_header-text-container">
-          <%= render "govuk_publishing_components/components/translation_nav", {
-            translations: @presenter.translation_links
-          } %>
-
+          
           <div class="govuk-!-margin-top-8">
             <%= render "govuk_publishing_components/components/heading", {
               text: sanitize(t("dit_landing_page.page_header")),
               heading_level: 1,
               font_size: "xl",
               margin_bottom: 6,
+            } %>
+
+            <%= render "govuk_publishing_components/components/translation_nav", {
+              translations: @presenter.translation_links,
+              no_margin_top: true,
             } %>
           </div>
           <div class="dit-landing-page__intro">
