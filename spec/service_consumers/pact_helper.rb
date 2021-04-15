@@ -18,18 +18,6 @@ Pact.configure do |config|
   config.include GdsApi::TestHelpers::Search
 end
 
-class ProxyApp
-  def initialize(real_provider_app)
-    @real_provider_app = real_provider_app
-  end
-
-  def call(env)
-    env["HTTP_HOST"] = "localhost:3002"
-    response = @real_provider_app.call(env)
-    response
-  end
-end
-
 def url_encode(str)
   ERB::Util.url_encode(str)
 end
@@ -39,13 +27,12 @@ def pact_broker_base_url
 end
 
 Pact.service_provider "Collections Organisation API" do
-  app { ProxyApp.new(Rails.application) }
   honours_pact_with "GDS API Adapters" do
     if ENV["PACT_URI"]
       pact_uri(ENV["PACT_URI"])
     else
       path = "pacts/provider/#{url_encode(name)}/consumer/#{url_encode(consumer_name)}"
-      version_modifier = "versions/#{url_encode(ENV.fetch('GDS_API_ADAPTERS_PACT_VERSION', 'master'))}"
+      version_modifier = "versions/#{url_encode(ENV.fetch('PACT_CONSUMER_VERSION', 'master'))}"
       pact_uri("#{pact_broker_base_url}/#{path}/#{version_modifier}")
     end
   end
