@@ -71,7 +71,7 @@ GEM
       adamantium (~> 0.2)
       equalizer (~> 0.0.11)
     ast (2.4.1)
-    awesome_print (1.8.0)
+    awesome_print (1.9.2)
     better_errors (2.7.1)
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
@@ -191,11 +191,9 @@ GEM
       sprockets (< 4)
     govuk_schemas (4.3.0)
       json-schema (~> 2.8.0)
-    govuk_test (2.1.2)
+    govuk_test (2.2.0)
       brakeman (~> 4.6)
       capybara
-      climate_control
-      pact
       puma
       selenium-webdriver (>= 3.142)
       webdrivers (>= 4)
