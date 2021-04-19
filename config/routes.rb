@@ -10,6 +10,11 @@ Rails.application.routes.draw do
         GovukHealthcheck::RailsCache,
       )
 
+  get "/healthcheck/live", to: proc { [200, {}, %w[OK]] }
+  get "/healthcheck/ready", to: GovukHealthcheck.rack_response(
+    GovukHealthcheck::RailsCache,
+  )
+
   ["/coronavirus-taxon", "/coronavirus-taxon/*slug"].each do |path|
     get path, to: "taxons_redirection#redirect"
   end
