@@ -2,12 +2,7 @@
 
 Collections serves the GOV.UK navigation pages and organisation pages.
 
-At time of writing, it also serves the priority campaign pages ie:
--  Coronavirus pages
-- Transition landing page ([ gov.uk/transition](https://www.gov.uk/transition) )
-- DIT landing page ( [gov.uk/eubusiness ](https://www.gov.uk/transition ))
-
-See the [Campaign pages](#campaign-pages) section below for more information.
+At time of writing, it also serves the priority campaign pages. See the [Campaign pages](docs/campaign-pages.md) manual for more details.
 
 ## Live examples
 
@@ -34,21 +29,6 @@ The endpoints and known consumers of this application's APIs are documented in [
 - **Topic**: a named group of sub-topics. (A deprecated name for this is "specialist sector".)
 - **Sub-topic**: a group of content within a topic. (A deprecated name for this is
 "specialist sub-sector".)
-
-## Campaign pages
-
-Collections currently renders the following campaign pages:
-
-#### Transition landing page ([ /transition ](https://www.gov.uk/transition))
-All content for the transition landing pages are currently read from yaml files. [Welsh](config/locales/cy/transition_landing_page.yml) and [English](config/locales/en/transition_landing_page.yml) translations are available.
-
-#### DIT landing page ([ /eubusiness ](https://www.gov.uk/eubusiness))
-All content for the DIT landing pages are currently read from yaml files e.g. for [English](config/locales/en/dit_landing_page.yml). See the [content item's available translations](https://www.gov.uk/api/content/eubusiness) for the current list.
-
-#### Coronavirus pages:
-  - Landing page ( [gov.uk/coronavirus](https://www.gov.uk/coronavirus) )
-  - Postcode lookup service( [gov.uk/find-coronavirus-local-restrictions](https://www.gov.uk/find-coronavirus-local-restrictions) )
-  - Hub pages ( [/getting-tested-for-coronavirus](https://www.gov.uk/getting-tested-for-coronavirus), [/worker-support](https://www.gov.uk/coronavirus/worker-support), [/business-support](https://www.gov.uk/coronavirus/business-support) and [/education-and-childcare](https://www.gov.uk/coronavirus/education-and-childcare) )
 
 ## Technical documentation
 
@@ -126,6 +106,7 @@ If you have made a change to the code that consumes the organisations api, you m
 ### Further documentation
 
 - [Taxonomy pages](docs/taxonomy-pages.md)
+- [Campaign pages](docs/campaign-pages.md)
 
 ## License
 
