@@ -66,4 +66,18 @@ module ApplicationHelper
       raw(Govspeak::Document.new(content, sanitize: false).to_html)
     end
   end
+
+  def hide_global_bar?
+    paths_to_hide_global_bar_on = [
+      "^/coronavirus$",
+      "^/coronavirus/.*$",
+      "^/transition(.cy)?$",
+      "^/transition-check/.*$",
+      "^/eubusiness(\\..*)?$",
+    ]
+
+    concatenated_regexes = Regexp.new(paths_to_hide_global_bar_on.join("|"))
+
+    request.path.match(concatenated_regexes).present?
+  end
 end

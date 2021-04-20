@@ -1,3 +1,10 @@
+<%
+  body_classes = %w[]
+  body_classes << content_for(:body_classes) if content_for(:body_classes)
+  body_classes << "full-width" if content_for(:is_full_width_header)
+  body_classes << "hide-global-bar" if hide_global_bar?
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +18,7 @@
   <%= stylesheet_link_tag "print.css", :media => "print", integrity: false %>
 </head>
 
-<body>
+<%= content_tag(:body, class: body_classes) do %>
   <div class="wrapper" id="wrapper">
     <%= yield :back_link %>
     <% unless (content_for(:is_full_width_header) || content_for(:back_link)) %>
@@ -29,5 +36,5 @@
     <%= yield %>
     </main>
   </div>
-</body>
+<% end %>
 </html>
