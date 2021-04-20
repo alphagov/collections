@@ -36,7 +36,9 @@ If you are using GOV.UK Docker, remember to combine it with the commands that fo
 
 ### Running the test suite
 
-Use `bundle exec rake` to run the test suite, excluding JavaScript.
+```
+bundle exec rake
+```
 
 To test a single file:
 
@@ -44,9 +46,11 @@ To test a single file:
 bundle exec rails test test/unit/application_helper_test.rb
 ```
 
-#### Javascript tests
+To run JavaScript tests (only):
 
-Use `bundle exec rake jasmine:ci` to run Jasmine tests
+```
+bundle exec rake jasmine:ci
+```
 
 ### Pact tests
 
