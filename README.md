@@ -35,12 +35,6 @@ The endpoints and known consumers of this application's APIs are documented in [
 - **Sub-topic**: a group of content within a topic. (A deprecated name for this is
 "specialist sub-sector".)
 
-### Browse pages
-
-- **Root browse page**: [gov.uk/browse](https://www.gov.uk/browse)
-- **Top level browse page**: [gov.uk/browse/benefits](https://www.gov.uk/browse/benefits)
-- **Second level browse page**: [gov.uk/browse/benefits/entitlement](https://www.gov.uk/browse/benefits/entitlement)
-
 ### Taxonomy
 The taxonomy is surfaced on taxon pages, which group together tagged content for that level of the taxonomy into [supergroups](https://docs.publishing.service.gov.uk/document-types/content_purpose_supergroup.html) on the page, e.g: Guidance and Regulation for Funding and finance for students [gov.uk/education/funding-and-finance-for-students](https://www.gov.uk/education/funding-and-finance-for-students). Each taxon page also shows a grid of sub-topics at the next level of the taxonomy.
 
