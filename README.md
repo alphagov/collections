@@ -1,6 +1,6 @@
 # Collections
 
-Collections serves the GOV.UK navigation pages and organisation pages.
+Collections serves the GOV.UK navigation pages and organisation pages. Search API is used to make the pages dynamic e.g. the latest changes for Topics, Organisations and Mainstream browse pages.
 
 At time of writing, it also serves the priority campaign pages. See the [Campaign pages](docs/campaign-pages.md) manual for more details.
 
@@ -28,17 +28,7 @@ At time of writing, it also serves the priority campaign pages. See the [Campaig
 
 ## Technical documentation
 
-This is a public facing Ruby on Rails application that retrieves browse content from APIs and presents it. There is no underlying persistence layer, and (with the exception of the [campaign pages](#campaign-pages)) all content is retrieved from external sources.
-
-### Dependencies
-
-- [content-store](https://github.com/alphagov/content-store), provides:
-    - Mainstream browse pages (Root, Top and Second level browse pages)
-    - Topics
-    - Subtopics and their curated lists
-- [search api](https://github.com/alphagov/search-api), provides:
-    - latest changes for Topics
-    - content tagged to a particular Topic, Mainstream browse page or Organisation
+This is a public facing Ruby on Rails application that retrieves browse content from APIs and presents it.
 
 ### Running the application
 
