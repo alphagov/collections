@@ -16,10 +16,6 @@ At time of writing, it also serves the priority campaign pages. See the [Campaig
 - Organisation page: [gov.uk/government/organisations/cabinet-office](https://www.gov.uk/government/organisations/cabinet-office)
 - Step by step page: [gov.uk/learn-to-drive-a-car](https://www.gov.uk/learn-to-drive-a-car)
 
-## APIs
-
-The endpoints and known consumers of this application's APIs are documented in [docs/api](docs/api.md)
-
 ## Nomenclature
 
 ### Topics
@@ -107,6 +103,7 @@ If you have made a change to the code that consumes the organisations api, you m
 
 - [Taxonomy pages](docs/taxonomy-pages.md)
 - [Campaign pages](docs/campaign-pages.md)
+- [API endpoints and consumers](docs/api.md)
 
 ## License
 
