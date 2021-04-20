@@ -39,8 +39,6 @@ This is a public facing Ruby on Rails application that retrieves browse content 
 - [search api](https://github.com/alphagov/search-api), provides:
     - latest changes for Topics
     - content tagged to a particular Topic, Mainstream browse page or Organisation
-- [email-alert-api](https://github.com/alphagov/email-alert-api), provides:
-    - support for subscribing to notifications from a topic
 
 ### Running the application
 
