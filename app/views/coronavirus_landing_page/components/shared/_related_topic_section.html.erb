@@ -1,0 +1,23 @@
+<section class="covid__topic-wrapper">
+  <%= render "govuk_publishing_components/components/heading", {
+    text: related_topic_section["header"],
+    padding: true,
+    border_top: 2,
+    margin_bottom: 6
+  } %>
+
+  <ul class="govuk-list">
+    <% related_topic_section["links"].each do | link | %>
+      <li class="covid__topic-list-item">
+        <%= link_to(
+          link["label"], link["url"], class: 'covid__topic-list-link govuk-link',
+          data: {
+            track_category: "pageElementInteraction",
+            track_action: "RelatedTopics",
+            track_label: link["url"],
+          }
+        ) %>
+      </li>
+    <% end %>
+  </ul>
+</section>
