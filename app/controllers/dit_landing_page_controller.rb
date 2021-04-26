@@ -1,5 +1,6 @@
 class DitLandingPageController < ApplicationController
   around_action :switch_locale
+  slimmer_template :gem_layout_full_width
 
   def show
     @presenter = presenter
