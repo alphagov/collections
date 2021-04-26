@@ -1,7 +1,7 @@
 <div class="pane-inner <%= curated_order ? "curated" : "alphabetical" %>">
   <h2 tabindex="-1" class="js-heading"><%= t("shared.browse.prefix") %> <%= title.sub(t("shared.browse.prefix"), "") %></h2>
   <% unless curated_order %>
-    <h3 class="sort-order"><%= "A to Z" %></h3>
+    <h3 class="sort-order">A to Z</h3>
   <% end %>
   <ul>
     <% second_level_browse_pages.each_with_index do |browse_page, index| %>
@@ -19,8 +19,8 @@
           },
           class: "govuk-link",
         ) do %>
-          <h3><%= browse_page.title %></h3>
-          <p><%= browse_page.description %></p>
+          <h3 class="pane-inner__title"><%= browse_page.title %></h3>
+          <p class="pane-inner__description"><%= browse_page.description %></p>
         <% end %>
       </li>
     <% end %>

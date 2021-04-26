@@ -1,5 +1,12 @@
 // stylelint-disable max-nesting-depth
 .browse {
+  ul,
+  h3,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
   .browse-panes {
     @include govuk-clearfix;
     padding-bottom: govuk-spacing(6);
@@ -99,6 +106,14 @@
       }
     }
 
+    .pane-inner__title {
+      font-size: 16px;
+    }
+
+    .pane-inner__description {
+      font-size: 14px;
+    }
+
     h1,
     h2 {
       @include govuk-font(27, $weight: bold);
@@ -153,7 +168,10 @@
         }
 
         &:focus {
-          color: $govuk-text-colour;
+          &:hover {
+            box-shadow: 0 -2px govuk-colour("light-grey"), 0 $govuk-focus-width $govuk-focus-text-colour;
+            color: $govuk-text-colour;
+          }
 
           p {
             color: $govuk-text-colour;
