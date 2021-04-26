@@ -1,14 +1,14 @@
-$govuk-compatibility-govuktemplate: true;
+$govuk-compatibility-govuktemplate: false;
 $govuk-use-legacy-palette: false;
+
 $covid-grey: #272828;
 $covid-yellow: #fff500;
 $govuk-new-link-styles: true;
 
 // gem components
 @import 'govuk_publishing_components/govuk_frontend_support';
-@import 'govuk_publishing_components/component_support';
+// @import 'govuk_publishing_components/component_support';
 @import 'govuk_publishing_components/components/accordion';
-@import 'govuk_publishing_components/components/action-link'; // also available via static
 @import 'govuk_publishing_components/components/back-link';
 @import 'govuk_publishing_components/components/breadcrumbs';
 @import 'govuk_publishing_components/components/button';
@@ -57,5 +57,3 @@ $govuk-new-link-styles: true;
 @import "views/organisations";
 @import "views/organisation";
 @import "views/covid";
-
-@import "modules/full-page-width";
