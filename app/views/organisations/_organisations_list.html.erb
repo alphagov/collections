@@ -9,7 +9,7 @@
           id: organisation_type
         } %>
         <div class="organisations__department-count-wrapper">
-          <p class="visuallyhidden">There are <span class="js-accessible-department-count"><%= organisations.count %></span> <%= organisation_type.to_s.humanize %></p>
+          <p class="govuk-visually-hidden">There are <span class="js-accessible-department-count"><%= organisations.count %></span> <%= organisation_type.to_s.humanize %></p>
           <span class="js-department-count" aria-hidden="true"><%= organisations.count %></span>
         </div>
       <% end %>

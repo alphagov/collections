@@ -41,7 +41,7 @@ RSpec.feature "Content store organisations" do
 
   scenario "renders an accessible version of organisation count" do
     expect(page.has_css?('.organisations__department-count-wrapper span[aria-hidden="true"]')).to be(true)
-    expect(page.has_css?(".organisations__department-count-wrapper p.visuallyhidden", text: "There are 2 Non ministerial departments")).to be(true)
+    expect(page.has_css?(".organisations__department-count-wrapper p.govuk-visually-hidden", text: "There are 2 Non ministerial departments")).to be(true)
   end
 
   scenario "renders ministerial organisation with crest" do
