@@ -44,9 +44,7 @@ $govuk-new-link-styles: true;
 @import 'govuk_publishing_components/components/translation-nav';
 @import 'govuk_publishing_components/components/warning-text';
 
-@import "helpers/layouts";
 @import "helpers/margins";
-@import "helpers/typography";
 @import "components/*";
 
 @import "views/browse";
