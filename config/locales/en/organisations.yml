@@ -263,10 +263,6 @@ en:
       foi_exemption_html: |
         This organisation is not covered by the Freedom of Information Act.
         To see which organisations are included, see <a href="%{foi_url}" class="govuk-link brand__color">the legislation</a>.
-      foi_release: See all our FOI releases
-      foi_releases:
-        one: FOI release
-        other: FOI releases
       freedom_of_information_act: Freedom of Information (FOI) Act
       freedom_of_information_requests: Freedom of Information requests
       make_an_foi_request: Make an FOI request

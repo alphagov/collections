@@ -368,10 +368,6 @@ cy:
       foi_exemption_html: |
         This organisation is not covered by the Freedom of Information Act.
         To see which organisations are included, see <a href="%{foi_url}" class="brand__color">the legislation</a>.
-      foi_release: Gweld ein holl datganiadau rhyddid gwybodaeth
-      foi_releases:
-        one: Datganiad Rhyddid Gwybodaeth
-        other: Datganiad Rhyddid Gwybodaeth
       freedom_of_information_act: Freedom of Information (FOI) Act
       freedom_of_information_requests: Freedom of Information requests
       make_an_foi_request: Gwneud cais DRhG
