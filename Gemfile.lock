@@ -207,6 +207,7 @@ GEM
       multi_xml (>= 0.5.2)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
+    i18n-coverage (0.2.0)
     ice_nine (0.11.2)
     jasmine (3.6.0)
       jasmine-core (~> 3.6.0)
@@ -519,6 +520,7 @@ DEPENDENCIES
   govuk_publishing_components
   govuk_schemas
   govuk_test
+  i18n-coverage
   jasmine
   jasmine_selenium_runner
   mocha
