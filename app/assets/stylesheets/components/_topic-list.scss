@@ -1,6 +1,8 @@
 .app-c-topic-list__item {
   @include govuk-font(19, $weight: bold);
-  list-style: none;
+}
+
+.app-c-topic-list > li { // Needed to override `.govuk-list > li`
   margin-bottom: govuk-spacing(2);
 }
 
