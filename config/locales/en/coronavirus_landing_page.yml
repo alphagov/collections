@@ -1,14 +1,5 @@
 en:
   coronavirus_landing_page:
-    header_title: "National lockdown: stay at home"
-    header_intro: |
-      You must stay at home. This is the single most important action we can all take to protect the NHS and save lives.
-
-      You must not leave your home unless necessary.
-
-      Stay 2 metres apart from anyone not in your household or bubble.
-    action_link_url: /guidance/national-lockdown-stay-at-home
-    action_link_text: Find out what you can and cannot do
     video_section_heading: "Wash your hands, cover your face, make space"
     video_section_link: "https://www.youtube.com/watch?v=1CUrxdTd1bc&rel=0"
     video_section_transcription_summary: View the video transcript
