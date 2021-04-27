@@ -12,6 +12,9 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <%= render partial: 'coronavirus_landing_page/components/shared/accordion_sections', locals: { accordions: details.sections, heading: details.sections_heading } %>
+
+      <%= render partial: 'coronavirus_landing_page/components/shared/related_topic_section', locals: { related_topic_section: details.related_topic_section } %>
+
       <%= render partial: 'coronavirus_landing_page/components/shared/topic_section', locals: { topic_section: details.topic_section } %>
 
       <%# Have removed email section here until we work out how to line up the notifications %>

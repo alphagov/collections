@@ -128,6 +128,19 @@
       "intro": "Stay up to date with GOV.UK",
       "email_link": "Sign up to get emails when we change any coronavirus information on the GOV.UK website"
     },
+    "related_topic_section": {
+      "header": "Related coronavirus topics",
+      "links": [
+        {
+          "label": "Business support during coronavirus",
+          "url": "/search/all?topical_events%5B%5D=coronavirus-covid-19-uk-government-response&order=updated-newest"
+        },
+        {
+          "label": "Work and financial support",
+          "url": "/search/news-and-communications?topical_events%5B%5D=coronavirus-covid-19-uk-government-response"
+        }
+      ]
+    },
     "topic_section": {
       "text": "Browse information related to coronavirus",
       "links": [

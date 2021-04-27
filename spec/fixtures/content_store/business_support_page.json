@@ -51,10 +51,12 @@
       },
       {
         "text": "COVID-19: Call for rapid sanitising technology for ambulances",
-        "href": "/government/news/covid-19-call-for-rapid-sanitising-technology-for-ambulances"},
+        "href": "/government/news/covid-19-call-for-rapid-sanitising-technology-for-ambulances"
+      },
       {
         "text": "Coronavirus support for employees, benefit claimants and businesses",
-        "href": "/government/news/coronavirus-support-for-employees-benefit-claimants-and-businesses"},
+        "href": "/government/news/coronavirus-support-for-employees-benefit-claimants-and-businesses"
+      },
       {
         "text": "If you're self employed, you'll get up to £2,500 a month in grants, for up to 3 months",
         "href": "/government/news/chancellor-gives-support-to-millions-of-self-employed-individuals"
@@ -364,6 +366,19 @@
         {
           "label": "Northern Ireland",
           "url": "https://www.nidirect.gov.uk/campaigns/coronavirus-covid-19"
+        }
+      ]
+    },
+    "related_topic_section": {
+      "header": "Related coronavirus topics",
+      "links": [
+        {
+          "label": "Work and financial support",
+          "url": "/search/all?topical_events%5B%5D=coronavirus-covid-19-uk-government-response&order=updated-newest"
+        },
+        {
+          "label": "Education, universities and childcare",
+          "url": "/search/news-and-communications?topical_events%5B%5D=coronavirus-covid-19-uk-government-response"
         }
       ]
     },
