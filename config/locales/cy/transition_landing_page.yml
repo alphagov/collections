@@ -1,88 +1,99 @@
+---
 cy:
   transition_landing_page:
+    campaign_links:
+      lead_in: 'Mae’n rhaid i chi gymryd camau nawr os ydych chi’n:'
+      lead_out: <a href="/transition-check/questions" class="govuk-link">Cael y rhestr
+        gyflawn</a> o'r hyn y mae angen i chi ei wneud ar eich cyfer chi, eich busnes
+        a'ch teulu.
+      links:
+      - text: mewnforio nwyddau o’r UE
+        path: "/import-goods-into-uk"
+      - text: allforio nwyddau i’r UE
+        path: "/export-goods"
+      - text: symud nwyddau i mewn neu allan o Ogledd Iwerddon
+        path: "/guidance/moving-goods-into-out-of-or-through-northern-ireland-from-1-january-2021"
+      - text: teithio i’r UE
+        path: "/visit-europe-1-january-2021"
+      - text: byw a gweithio yn yr UE
+        path: "/uk-nationals-living-eu"
+      - text: aros yn y DU os ydych chi’n ddinesydd o’r UE
+        path: "/staying-uk-eu-citizen"
+    comms:
+      links:
+      - link:
+          text: Agreements reached between the United Kingdom of Great Britain and
+            Northern Ireland and the European Union
+          path: "/government/publications/agreements-reached-between-the-united-kingdom-of-great-britain-and-northern-ireland-and-the-european-union"
+          description: This document summarises the Agreements between the United
+            Kingdom and the European Union.
+        metadata:
+          public_updated_at: 2020-12-24
+          document_type: International treaty
+      - link:
+          text: Government publishes updated GB-EU Border Operating Model
+          path: "/government/news/government-publishes-updated-gb-eu-border-operating-model"
+          description: The government has published further detail on how the borders
+            between Great Britain and the EU will work and the actions that traders,
+            hauliers and passengers need to take.
+        metadata:
+          public_updated_at: 2020-10-08
+          document_type: News Story
+      - link:
+          text: "£650 million investment for Northern Ireland"
+          path: "/government/news/major-650-million-investment-for-northern-ireland"
+          description: The Chancellor of the Duchy of Lancaster and the Secretary
+            of State for Northern Ireland have announced a £650m package of investment.
+        metadata:
+          public_updated_at: 2020-08-07
+          document_type: News story
+      - link:
+          text: Major new campaign to prepare UK for end of the transition period
+          path: "/government/news/major-new-campaign-to-prepare-uk-for-end-of-the-transition-period"
+          description: The government has launched a new campaign to help businesses
+            and individuals prepare for the end of the transition period.
+        metadata:
+          public_updated_at: 2020-07-13
+          document_type: Press Release
+    comms_header: Cyhoeddiadau
+    email_mailto_subject: Dechrau%20newydd%20y%20DU:%20Ymlaen%20â%20ni-%20GOV.UK
+    guidance_header: Newidiadau i fusnesau a dinasyddion
+    meta_description: Darganfyddwch sut mae’r rheolau newydd yn effeithio arnoch chi
     meta_title: Brexit
-    meta_description: "Darganfyddwch sut mae’r rheolau newydd yn effeithio arnoch chi"
-    page_header: "Brexit:<br/>mae’r rheolau newydd yma"
-    page_header_explainer: Mae rheolau newydd yn berthnasol ar gyfer theithio a gwneud busnes â Ewrop. Defnyddiwch yr adnodd gwirio Brexit i dderbyn rhestr o gamau personol i chi, eich busnes, a’ch teulu.
-    take_action_start_now: "Adnodd gwirio Brexit: dechreuwch nawr"
-    take_action_start_now_link: "/transition-check/questions"
+    no_cookies:
+      change_settings_text: Newidiwch eich gosodiadau cwcis
+      icon_text: FIDEO
+      or_text: neu
+      to_watch_text: i wylio’r fideo
+      watch_link_text: Gwylio ar YouTube
+    page_header: Brexit:<br/>mae’r rheolau newydd yma
+    page_header_explainer: Mae rheolau newydd yn berthnasol ar gyfer theithio a gwneud
+      busnes â Ewrop. Defnyddiwch yr adnodd gwirio Brexit i dderbyn rhestr o gamau
+      personol i chi, eich busnes, a’ch teulu.
+    sections:
+      aria_string_suffix: ''
+      guidance_and_regulation: Canllawiau a rheoliadau
+      news_and_communications: Newyddion a chyfathrebu
+      policy_and_engagement: Polisi ac ymgynghoriadau
+      research_and_statistics: Ymchwil ag ystadegau
+      services: Gwasanaethau
+      transparency: Tryloywder a datganiadau rhyddid gwybodaeth
+    share_links: Rhannu’r dudalen hon
     take_action_list:
-      red: Gwiriwch
       amber: Newidiwch
       green: Ewch
-    video_section_title: "Cadwch eich busnes i symud"
+      red: Gwiriwch
+    take_action_start_now: 'Adnodd gwirio Brexit: dechreuwch nawr'
+    take_action_start_now_link: "/transition-check/questions"
+    topic_section_header: Yr holl wybodaeth am y cyfnod pontio
+    topic_section_subheading: Pori’r holl wybodaeth sy’n berthnasol i’r cyfnod pontio
     video_section_description: |
       <p>Mae gwneud busnes â Ewrop wedi newid. Mae angen i chi dilyn rheolau newydd ar allforio, mewnforio, tariffau, data a chyflogi.</p>
       <p>Gwyliwch y fideo i ddarganfod beth mae’r rheolau newydd yn ei olygu i’ch busnes. Gallwch hefyd defnyddio’r <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="adnodd gwirio Brexit">adnodd gwirio Brexit</a> i dderbyn rhestr o gamau personol.</p>
     video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
+    video_section_title: Cadwch eich busnes i symud
     video_section_transcription_summary: Gwelwch y trawsgrifiad fideo
     video_section_transcription_text: |
       <p>Busnesau, mae’r DU wedi gadael yr UE ac mae rheolau newydd mewn grym.</p>
       <p>I gadw eich busnes i symud, defnyddiwch yr adnodd gwirio Brexit ar gov.uk/transition i dderbyn camau personol ar gyfer eich busnes.<p>
       <p>Cadwch eich busnes i symud.</p>
-    no_cookies:
-      icon_text: FIDEO
-      change_settings_text: Newidiwch eich gosodiadau cwcis
-      to_watch_text: i wylio’r fideo
-      or_text: neu
-      watch_link_text: Gwylio ar YouTube
-    guidance_header: "Newidiadau i fusnesau a dinasyddion"
-    campaign_links:
-      lead_in: "Mae’n rhaid i chi gymryd camau nawr os ydych chi’n:"
-      links:
-        - text: mewnforio nwyddau o’r UE
-          path: /import-goods-into-uk
-        - text: allforio nwyddau i’r UE
-          path: /export-goods
-        - text: symud nwyddau i mewn neu allan o Ogledd Iwerddon
-          path: /guidance/moving-goods-into-out-of-or-through-northern-ireland-from-1-january-2021
-        - text: teithio i’r UE
-          path: /visit-europe-1-january-2021
-        - text: byw a gweithio yn yr UE
-          path: /uk-nationals-living-eu
-        - text: aros yn y DU os ydych chi’n ddinesydd o’r UE
-          path: /staying-uk-eu-citizen
-      lead_out: <a href="/transition-check/questions" class="govuk-link">Cael y rhestr gyflawn</a> o'r hyn y mae angen i chi ei wneud ar eich cyfer chi, eich busnes a'ch teulu.
-    comms_header: "Cyhoeddiadau"
-    comms:
-      links:
-      - link:
-          text: "Agreements reached between the United Kingdom of Great Britain and Northern Ireland and the European Union"
-          path: "/government/publications/agreements-reached-between-the-united-kingdom-of-great-britain-and-northern-ireland-and-the-european-union"
-          description: This document summarises the Agreements between the United Kingdom and the European Union.
-        metadata:
-          public_updated_at: 2020-12-24
-          document_type: "International treaty"
-      - link:
-          text: "Government publishes updated GB-EU Border Operating Model"
-          path: "/government/news/government-publishes-updated-gb-eu-border-operating-model"
-          description: The government has published further detail on how the borders between Great Britain and the EU will work and the actions that traders, hauliers and passengers need to take.
-        metadata:
-          public_updated_at: 2020-10-08
-          document_type: "News Story"
-      - link:
-          text: "£650 million investment for Northern Ireland"
-          path: "/government/news/major-650-million-investment-for-northern-ireland"
-          description: "The Chancellor of the Duchy of Lancaster and the Secretary of State for Northern Ireland have announced a £650m package of investment."
-        metadata:
-          public_updated_at: 2020-08-07
-          document_type: "News story"
-      - link:
-          text: "Major new campaign to prepare UK for end of the transition period"
-          path: "/government/news/major-new-campaign-to-prepare-uk-for-end-of-the-transition-period"
-          description: "The government has launched a new campaign to help businesses and individuals prepare for the end of the transition period."
-        metadata:
-          public_updated_at: 2020-07-13
-          document_type: "Press Release"
-    topic_section_header: Yr holl wybodaeth am y cyfnod pontio
-    topic_section_subheading: Pori’r holl wybodaeth sy’n berthnasol i’r cyfnod pontio
-    email_mailto_subject: "Dechrau%20newydd%20y%20DU:%20Ymlaen%20â%20ni-%20GOV.UK"
-    share_links: "Rhannu’r dudalen hon"
-    sections:
-      aria_string_suffix: ""
-      services: Gwasanaethau
-      guidance_and_regulation: Canllawiau a rheoliadau
-      news_and_communications: Newyddion a chyfathrebu
-      research_and_statistics: Ymchwil ag ystadegau
-      policy_and_engagement: Polisi ac ymgynghoriadau
-      transparency: Tryloywder a datganiadau rhyddid gwybodaeth

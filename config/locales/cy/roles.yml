@@ -1,12 +1,13 @@
+---
 cy:
   roles:
     heading:
-      zero:
-      one: Rôl
-      two:
       few:
       many:
+      one: Rôl
       other: Rolau
+      two:
+      zero:
     headings:
       current_holder: 'Deiliad y rôl  '
       previous_holders: 'Cyn-ddeiliaid '

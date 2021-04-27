@@ -1,10 +1,11 @@
+---
 sl:
   roles:
     heading:
-      one:
-      two:
       few:
+      one:
       other:
+      two:
     headings:
       current_holder:
       previous_holders:

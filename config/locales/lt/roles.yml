@@ -1,8 +1,9 @@
+---
 lt:
   roles:
     heading:
-      one:
       few:
+      one:
       other:
     headings:
       current_holder:

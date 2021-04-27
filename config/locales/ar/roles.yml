@@ -1,12 +1,13 @@
+---
 ar:
   roles:
     heading:
-      zero:
-      one:
-      two:
       few:
       many:
+      one:
       other:
+      two:
+      zero:
     headings:
       current_holder:
       previous_holders:

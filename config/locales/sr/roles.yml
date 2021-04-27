@@ -1,9 +1,10 @@
+---
 sr:
   roles:
     heading:
-      one:
       few:
       many:
+      one:
       other:
     headings:
       current_holder:

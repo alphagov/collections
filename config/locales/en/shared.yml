@@ -1,6 +1,7 @@
+---
 en:
   shared:
     browse:
-      title: "Browse GOV.UK"
-      prefix: "Browse:"
+      prefix: 'Browse:'
+      title: Browse GOV.UK
     language_name: English

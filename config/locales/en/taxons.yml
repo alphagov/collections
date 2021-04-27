@@ -1,7 +1,8 @@
+---
 en:
   taxons:
-    organisations: "Organisations"
-    explore_sub_topics: "Explore sub-topics"
-    see_all_in_topic: "See more %{type} in this topic"
-    in_page_nav_title: "On this page"
-    in_page_sub_topic_title: "Sub-topics"
+    explore_sub_topics: Explore sub-topics
+    in_page_nav_title: On this page
+    in_page_sub_topic_title: Sub-topics
+    organisations: Organisations
+    see_all_in_topic: See more %{type} in this topic

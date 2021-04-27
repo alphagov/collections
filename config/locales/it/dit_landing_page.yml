@@ -1,40 +1,60 @@
+---
 it:
   dit_landing_page:
-    kbm-logo-alt-text: Restiamo in affari
-    meta_title: Se la tua impresa ha sede nell’UE, scopri come continuare a intrattenere scambi commerciali con il Regno Unito
-    meta_description: Le norme per gli scambi commerciali con il Regno Unito sono cambiate.
-    page_header: Se la tua impresa ha sede nell’UE, scopri come continuare a intrattenere scambi commerciali con il Regno Unito
-    page_header_explainer: |
-      <p>Le norme per gli scambi commerciali con il Regno Unito sono cambiate.</p>
-    ribbon_title: Se la tua azienda ha sede nell’UE, accertati che sia pronta
-    ribbon_text: |
-      Se gestisci un’impresa con sede nell’UE, informati sulle norme da rispettare per continuare a intrattenere scambi commerciali con il Regno Unito.
-    guidance_title: Informazioni utili per la tua azienda
     guidance_links:
-      - title: Importazioni dal Regno&nbsp;Unito
-        text: Scopri le azioni necessarie che tua azienda con sede nell’UE dovrà attuare per importare dal Regno Unito, nonché le relative procedure doganali per importare merci quali prodotti alimentari, bevande e prodotti di origine animale e vegetale.
-        link: Scopri di più sulle procedure d’importazione dal Regno Unito
-        url: "/guidance/eu-business-importing-from-the-uk.it"
-      - title: Esportazioni nel Regno&nbsp;Unito
-        text: Scopri le azioni che le imprese con sede nell’UE devono intraprendere per esportare nel Regno Unito, nonché le norme che riguardano gli autotrasportatori, i controlli, la circolazione transfrontaliera delle merci e l’esportazione di prodotti alimentari, bevande, prodotti di origine animale e vegetale e prodotti connessi all’energia.
-        link: Scopri di più sulle procedure d’esportazione nel Regno Unito
-        url: "/guidance/eu-business-exporting-to-the-uk.it"
-      - title: Tasse e dazi
-        text: Scopri di più sui dazi e sul rimborso transfrontaliero dell’IVA applicabili alle imprese con sede nell’UE.
-        link: Scopri di più su tasse e dazi
-        url: "/guidance/eu-business-taxes-and-tariffs.it"
-      - title: Fornitura di servizi al Regno&nbsp;Unito
-        text: Se sei un’impresa con sede nell’UE, scopri come fornire servizi nel Regno Unito.
-        link: Scopri di più sulla fornitura di servizi nel Regno Unito
-        url: "/guidance/eu-business-services.it"
-      - title: Lavoro nel Regno Unito
-        text: Scopri quali norme si applicano ai cittadini dell’UE che lavorano nel Regno Unito, comprese le norme relative alla guida, ai visti e al riconoscimento delle qualifiche professionali.
-        link: Scopri di più sul lavoro nel Regno Unito
-        url: "/guidance/eu-business-working-in-the-uk.it"
-      - title: Protezione dei dati e diritto d’autore
-        text: Scopri di più sulle modifiche apportate alle norme relative alla proprietà intellettuale, al diritto d’autore e alla condivisione dei dati personali.
-        link: Scopri di più sulla protezione dei dati e sul diritto d’autore
-        url: "/guidance/eu-business-data-protection-and-copyright.it"
-    training_section_title: Webinar per le imprese con sede nell’UE che intrattengono rapporti commerciali con il Regno Unito
-    training_section_description:
-       Scopri di più sulle norme che si applicheranno alla frontiera del Regno Unito <a href="/guidance/webinars-for-eu-based-organisations-that-trade-with-the-uk" class="govuk-link">registrandoti a uno dei prossimi webinar o Industry Day in programma</a>.
+    - title: Importazioni dal Regno&nbsp;Unito
+      text: Scopri le azioni necessarie che tua azienda con sede nell’UE dovrà attuare
+        per importare dal Regno Unito, nonché le relative procedure doganali per importare
+        merci quali prodotti alimentari, bevande e prodotti di origine animale e vegetale.
+      link: Scopri di più sulle procedure d’importazione dal Regno Unito
+      url: "/guidance/eu-business-importing-from-the-uk.it"
+    - title: Esportazioni nel Regno&nbsp;Unito
+      text: Scopri le azioni che le imprese con sede nell’UE devono intraprendere
+        per esportare nel Regno Unito, nonché le norme che riguardano gli autotrasportatori,
+        i controlli, la circolazione transfrontaliera delle merci e l’esportazione
+        di prodotti alimentari, bevande, prodotti di origine animale e vegetale e
+        prodotti connessi all’energia.
+      link: Scopri di più sulle procedure d’esportazione nel Regno Unito
+      url: "/guidance/eu-business-exporting-to-the-uk.it"
+    - title: Tasse e dazi
+      text: Scopri di più sui dazi e sul rimborso transfrontaliero dell’IVA applicabili
+        alle imprese con sede nell’UE.
+      link: Scopri di più su tasse e dazi
+      url: "/guidance/eu-business-taxes-and-tariffs.it"
+    - title: Fornitura di servizi al Regno&nbsp;Unito
+      text: Se sei un’impresa con sede nell’UE, scopri come fornire servizi nel Regno
+        Unito.
+      link: Scopri di più sulla fornitura di servizi nel Regno Unito
+      url: "/guidance/eu-business-services.it"
+    - title: Lavoro nel Regno Unito
+      text: Scopri quali norme si applicano ai cittadini dell’UE che lavorano nel
+        Regno Unito, comprese le norme relative alla guida, ai visti e al riconoscimento
+        delle qualifiche professionali.
+      link: Scopri di più sul lavoro nel Regno Unito
+      url: "/guidance/eu-business-working-in-the-uk.it"
+    - title: Protezione dei dati e diritto d’autore
+      text: Scopri di più sulle modifiche apportate alle norme relative alla proprietà
+        intellettuale, al diritto d’autore e alla condivisione dei dati personali.
+      link: Scopri di più sulla protezione dei dati e sul diritto d’autore
+      url: "/guidance/eu-business-data-protection-and-copyright.it"
+    guidance_title: Informazioni utili per la tua azienda
+    kbm-logo-alt-text: Restiamo in affari
+    meta_description: Le norme per gli scambi commerciali con il Regno Unito sono
+      cambiate.
+    meta_title: Se la tua impresa ha sede nell’UE, scopri come continuare a intrattenere
+      scambi commerciali con il Regno Unito
+    page_header: Se la tua impresa ha sede nell’UE, scopri come continuare a intrattenere
+      scambi commerciali con il Regno Unito
+    page_header_explainer: "<p>Le norme per gli scambi commerciali con il Regno Unito
+      sono cambiate.</p>\n"
+    ribbon_text: 'Se gestisci un’impresa con sede nell’UE, informati sulle norme da
+      rispettare per continuare a intrattenere scambi commerciali con il Regno Unito.
+
+      '
+    ribbon_title: Se la tua azienda ha sede nell’UE, accertati che sia pronta
+    training_section_description: Scopri di più sulle norme che si applicheranno alla
+      frontiera del Regno Unito <a href="/guidance/webinars-for-eu-based-organisations-that-trade-with-the-uk"
+      class="govuk-link">registrandoti a uno dei prossimi webinar o Industry Day in
+      programma</a>.
+    training_section_title: Webinar per le imprese con sede nell’UE che intrattengono
+      rapporti commerciali con il Regno Unito
