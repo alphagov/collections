@@ -1,6 +1,13 @@
 # Taxonomy
 
-The taxonomy is surfaced on taxon pages, which group together tagged content for that level of the taxonomy into [supergroups](https://docs.publishing.service.gov.uk/document-types/content_purpose_supergroup.html) on the page, e.g: Guidance and Regulation for Funding and finance for students [gov.uk/education/funding-and-finance-for-students](https://www.gov.uk/education/funding-and-finance-for-students). Each taxon page also shows a grid of sub-topics at the next level of the taxonomy.
+Content for taxon pages is returned by Search API based on:
+
+- `content_id`s for world taxon pages; and
+- `content_id`s and [supergroups](https://docs.publishing.service.gov.uk/document-types/content_purpose_supergroup.html) for topic taxon pages.
+
+## Topic Taxonomy
+
+A taxon page divides the content tagged to the taxon by its [supergroup](https://docs.publishing.service.gov.uk/document-types/content_purpose_supergroup.html) e.g: Guidance and Regulation for Funding and finance for students [gov.uk/education/funding-and-finance-for-students](https://www.gov.uk/education/funding-and-finance-for-students). Each taxon page also shows a grid of sub-topic taxons at the next level of the taxonomy.
 
 ## Worldwide taxonomy
 
