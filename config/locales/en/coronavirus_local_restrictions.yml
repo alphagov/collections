@@ -1,89 +1,98 @@
+---
 en:
   coronavirus_local_restrictions:
     errors:
-      postcode_not_found:
-        error_message: There is a problem
-        input_error: The postcode could not be found, enter a full postcode
-        error_description: The postcode could not be found, enter a full postcode
       invalid_postcode:
+        error_description: Enter a full postcode, like LS1 1UR
         error_message: There is a problem
         input_error: Enter a full postcode, like LS1 1UR
-        error_description: Enter a full postcode, like LS1 1UR
-    out_of_date_warning: |
-      This service is being updated, at the moment it might not show the latest information for your area
+      postcode_not_found:
+        error_description: The postcode could not be found, enter a full postcode
+        error_message: There is a problem
+        input_error: The postcode could not be found, enter a full postcode
     lookup:
-      input_label: Enter a full postcode
+      body_content: |
+        <p class="govuk-body">There are 4 tiers. There are different rules depending on what tier an area is in.</p>
+        <p class="govuk-body">Enter the postcode where you’re living or spend most of your time to find out what the rules are. If you do not have a postcode, <a class="govuk-link" href="https://www.gov.uk/guidance/full-list-of-local-restriction-tiers-by-area">use the list of areas to find out your tier</a>.</p>
+      button_text: Find
       hint_text: |
         For example, LS1 1UR
 
         We use this to give you more accurate information about the area.
-      button_text: Find
-      title: Find out the coronavirus restrictions in your local area
-      inset_text: |
-        <p class="govuk-body">There are different restrictions in <a class="govuk-link" href="https://www.gov.scot/check-local-covid-level/">Scotland</a>, <a class="govuk-link" href="https://gov.wales/covid-19-alert-levels">Wales</a> and <a class="govuk-link" href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-and-localised-restrictions">Northern Ireland</a>.</p>
-      body_content: |
-        <p class="govuk-body">There are 4 tiers. There are different rules depending on what tier an area is in.</p>
-        <p class="govuk-body">Enter the postcode where you’re living or spend most of your time to find out what the rules are. If you do not have a postcode, <a class="govuk-link" href="https://www.gov.uk/guidance/full-list-of-local-restriction-tiers-by-area">use the list of areas to find out your tier</a>.</p>
+      input_label: Enter a full postcode
+      inset_text: '<p class="govuk-body">There are different restrictions in <a class="govuk-link"
+        href="https://www.gov.scot/check-local-covid-level/">Scotland</a>, <a class="govuk-link"
+        href="https://gov.wales/covid-19-alert-levels">Wales</a> and <a class="govuk-link"
+        href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-and-localised-restrictions">Northern
+        Ireland</a>.</p>
+
+        '
+      meta_description: Use the postcode checker to find out the tier that your local
+        area is in.
       meta_title: Find out the coronavirus restrictions in your local area
-      meta_description: Use the postcode checker to find out the tier that your local area is in.
-    royal_mail_lookup:
-      link_text: Find a postcode on Royal Mail’s postcode finder
-      href: https://www.royalmail.com/find-a-postcode
+      title: Find out the coronavirus restrictions in your local area
+    out_of_date_warning: 'This service is being updated, at the moment it might not
+      show the latest information for your area
+
+      '
     results:
+      changing_levels_title: The tier for this area is changing soon
+      devolved_nations:
+        country_rules: The rules are different in %{country}.
+        heading: There might be restrictions in this area
+        northern_ireland:
+          guidance:
+            label: Find out what the rules are in Northern Ireland
+            link: https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-and-localised-restrictions
+        scotland:
+          guidance:
+            label: Find out what the rules are in Scotland
+            link: https://www.gov.scot/check-local-covid-level/#!/%{postcode}
+        wales:
+          guidance:
+            label: Find out what the rules are in Wales
+            link: https://gov.wales/covid-19-alert-levels
+      future:
+        heading: From %{date}
+        level_four:
+          alert_level: "%{area} will be in Tier 4: Stay at Home."
+        level_one:
+          alert_level: "%{area} will be in Tier 1: Medium alert."
+        level_three:
+          alert_level: "%{area} will be in Tier 3: Very High alert."
+        level_two:
+          alert_level: "%{area} will be in Tier 2: High alert."
+      guidance_label: Find out what the Tier %{level} rules are
+      level_four:
+        changing_alert_level: At the moment %{area} is in Tier 4.
+        guidance_link: "/guidance/tier-4-stay-at-home"
+        heading_pretext: This area is in
+        heading_tier_label: 'Tier 4: Stay at Home'
+      level_one:
+        changing_alert_level: At the moment %{area} is in Tier 1.
+        guidance_link: "/guidance/tier-1-medium-alert"
+        heading_pretext: This area is in
+        heading_tier_label: 'Tier 1: Medium alert'
+      level_three:
+        changing_alert_level: At the moment %{area} is in Tier 3.
+        guidance_link: "/guidance/tier-3-very-high-alert"
+        heading_pretext: This area is in
+        heading_tier_label: 'Tier 3: Very High alert'
+      level_two:
+        changing_alert_level: At the moment %{area} is in Tier 2.
+        guidance_link: "/guidance/tier-2-high-alert"
+        heading_pretext: This area is in
+        heading_tier_label: 'Tier 2: High alert'
+      match: We've matched the postcode
+      no_information:
+        guidance:
+          label: Full list of areas and tiers
+          link: "/guidance/full-list-of-local-restriction-tiers-by-area"
+        heading: There is no information about the restrictions in this area
       travel:
         heading: Find information about somewhere else
         label: Enter another postcode.
         link: "/find-coronavirus-local-restrictions"
-      changing_levels_title: The tier for this area is changing soon
-      guidance_label: Find out what the Tier %{level} rules are
-      match: "We've matched the postcode"
-      level_one:
-        heading_pretext: This area is in
-        heading_tier_label: "Tier 1: Medium alert"
-        changing_alert_level: "At the moment %{area} is in Tier 1."
-        guidance_link: "/guidance/tier-1-medium-alert"
-      level_two:
-        heading_pretext: This area is in
-        heading_tier_label: "Tier 2: High alert"
-        changing_alert_level: "At the moment %{area} is in Tier 2."
-        guidance_link: "/guidance/tier-2-high-alert"
-      level_three:
-        heading_pretext: This area is in
-        heading_tier_label: "Tier 3: Very High alert"
-        changing_alert_level: "At the moment %{area} is in Tier 3."
-        guidance_link: "/guidance/tier-3-very-high-alert"
-      level_four:
-        heading_pretext: This area is in
-        heading_tier_label: "Tier 4: Stay at Home"
-        changing_alert_level: "At the moment %{area} is in Tier 4."
-        guidance_link: "/guidance/tier-4-stay-at-home"
-      devolved_nations:
-        heading: There might be restrictions in this area
-        country_rules: The rules are different in %{country}.
-        scotland:
-          guidance:
-           label: Find out what the rules are in Scotland
-           link: "https://www.gov.scot/check-local-covid-level/#!/%{postcode}"
-        wales:
-          guidance:
-            label: Find out what the rules are in Wales
-            link: "https://gov.wales/covid-19-alert-levels"
-        northern_ireland:
-          guidance:
-            label: Find out what the rules are in Northern Ireland
-            link: "https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-and-localised-restrictions"
-      no_information:
-        heading: There is no information about the restrictions in this area
-        guidance:
-          label: Full list of areas and tiers
-          link: "/guidance/full-list-of-local-restriction-tiers-by-area"
-      future:
-        heading: From %{date}
-        level_one:
-          alert_level: "%{area} will be in Tier 1: Medium alert."
-        level_two:
-          alert_level: "%{area} will be in Tier 2: High alert."
-        level_three:
-          alert_level: "%{area} will be in Tier 3: Very High alert."
-        level_four:
-          alert_level: "%{area} will be in Tier 4: Stay at Home."
+    royal_mail_lookup:
+      href: https://www.royalmail.com/find-a-postcode
+      link_text: Find a postcode on Royal Mail’s postcode finder

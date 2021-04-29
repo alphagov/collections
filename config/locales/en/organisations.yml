@@ -1,13 +1,14 @@
+---
 en:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about"
-    administered_by: "Administered by"
+    administered_by: Administered by
     contact:
-      contact_details: "Contact details"
-      contact_form: "Contact Form: %{title}"
-      contact_organisation: "Contact %{organisation}"
-      email: "Email"
-      telephone: "Telephone"
+      contact_details: Contact details
+      contact_form: 'Contact Form: %{title}'
+      contact_organisation: Contact %{organisation}
+      email: Email
+      telephone: Telephone
     content_item:
       schema_name:
         aaib_report:
@@ -19,6 +20,9 @@ en:
         asylum_support_decision:
           one: Asylum support tribunal decision
           other: Asylum support tribunal decisions
+        authored_article:
+          one: Authored article
+          other: Authored articles
         business_finance_support_scheme:
           one: Business finance support scheme
           other: Business finance support schemes
@@ -52,6 +56,9 @@ en:
         countryside_stewardship_grant:
           one: Countryside Stewardship grant
           other: Countryside Stewardship grants
+        decision:
+          one: Decision
+          other: Decisions
         detailed_guide:
           one: Guidance
           other: Guidance
@@ -85,12 +92,12 @@ en:
         form:
           one: Form
           other: Forms
+        government_response:
+          one: Government response
+          other: Government responses
         guidance:
           one: Guidance
           other: Guidance
-        statutory_guidance:
-          one: Statutory guidance
-          other: Statutory guidance
         impact_assessment:
           one: Impact assessment
           other: Impact assessments
@@ -106,21 +113,15 @@ en:
         international_treaty:
           one: International treaty
           other: International treaties
-        map:
-          one: Map
-          other: Maps
         maib_report:
           one: Marine Accident Investigation Branch report
           other: Marine Accident Investigation Branch reports
+        map:
+          one: Map
+          other: Maps
         medical_safety_alert:
           one: Alerts and recalls for drugs and medical devices
           other: Alerts and recalls for drugs and medical devices
-        notice:
-          one: Notice
-          other: Notices
-        decision:
-          one: Decision
-          other: Decisions
         national_statistics:
           one: National Statistics
           other: National Statistics
@@ -133,6 +134,15 @@ en:
         news_story:
           one: News story
           other: News stories
+        notice:
+          one: Notice
+          other: Notices
+        official_statistics:
+          one: Official Statistics
+          other: Official Statistics
+        official_statistics_announcement:
+          one: Official statistics announcement
+          other: Official statistics announcements
         open_consultation:
           one: Open consultation
           other: Open consultations
@@ -154,9 +164,6 @@ en:
         publication:
           one: Publication
           other: Publications
-        government_response:
-          one: Government response
-          other: Government responses
         raib_report:
           one: Rail Accident Investigation Branch report
           other: Rail Accident Investigation Branch reports
@@ -190,12 +197,9 @@ en:
         statistics_announcement:
           one: Statistics release announcement
           other: Statistics release announcements
-        official_statistics:
-          one: Official Statistics
-          other: Official Statistics
-        official_statistics_announcement:
-          one: Official statistics announcement
-          other: Official statistics announcements
+        statutory_guidance:
+          one: Statutory guidance
+          other: Statutory guidance
         take_part:
           one: Take part
           other: Take part
@@ -220,100 +224,95 @@ en:
         written_statement:
           one: Written statement to Parliament
           other: Written statements to Parliament
-        authored_article:
-          one: Authored article
-          other: Authored articles
-    corporate_information: "Corporate information"
+    corporate_information: Corporate information
     document_types:
-      documents: "Documents"
-      news_and_communications:
-        title: "News and communications"
-        see_all:
-          text: "See all news and communications"
-          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
-      services:
-        title: "Services"
-        see_all:
-          text: "See all services"
-          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+      documents: Documents
       guidance_and_regulation:
-        title: "Guidance and regulation"
         see_all:
-          text: "See all guidance and regulation"
           path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
-      research_and_statistics:
-        title: "Research and statistics"
+          text: See all guidance and regulation
+        title: Guidance and regulation
+      news_and_communications:
         see_all:
-          text: "See all research and statistics"
-          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: See all news and communications
+        title: News and communications
       policy_and_engagement:
-        title: "Policy papers and consultations"
         see_all:
-          text: "See all policy papers and consultations"
           path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
-      transparency:
-        title: "Transparency and freedom of information releases"
+          text: See all policy papers and consultations
+        title: Policy papers and consultations
+      research_and_statistics:
         see_all:
-          text: "See all transparency and freedom of information releases"
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: See all research and statistics
+        title: Research and statistics
+      services:
+        see_all:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: See all services
+        title: Services
+      transparency:
+        see_all:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
-    featured: "Featured"
+          text: See all transparency and freedom of information releases
+        title: Transparency and freedom of information releases
+    featured: Featured
     foi:
-      make_an_foi_request: Make an FOI request
-      freedom_of_information_act: Freedom of Information (FOI) Act
-      freedom_of_information_requests: Freedom of Information requests
-      foi_release: See all our FOI releases
-      foi_releases:
-        one: FOI release
-        other: FOI releases
-      making_foi_requests:
-        step1_html: Read about the Freedom of Information (FOI) Act and <a href="%{how_to_path}" class="govuk-link brand__color">how to make a request</a>.
-        step2_html: Check <a href="%{our_releases_path}" class="govuk-link brand__color">our previous releases</a> to see if we’ve already answered your question.
-        step3_html: Make a new request by contacting us using the details below.
+      contact_form: FOI contact form
       foi_exemption_html: |
         This organisation is not covered by the Freedom of Information Act.
         To see which organisations are included, see <a href="%{foi_url}" class="govuk-link brand__color">the legislation</a>.
-      contact_form: FOI contact form
-    follow_us: "Follow us"
+      freedom_of_information_act: Freedom of Information (FOI) Act
+      freedom_of_information_requests: Freedom of Information requests
+      make_an_foi_request: Make an FOI request
+      making_foi_requests:
+        step1_html: Read about the Freedom of Information (FOI) Act and <a href="%{how_to_path}"
+          class="govuk-link brand__color">how to make a request</a>.
+        step2_html: Check <a href="%{our_releases_path}" class="govuk-link brand__color">our
+          previous releases</a> to see if we’ve already answered your question.
+        step3_html: Make a new request by contacting us using the details below.
+    follow_us: Follow us
     high_profile_groups: High profile groups within %{title}
-    jobs_contracts: "Jobs and contracts"
-    latest_from: "Latest from %{title}"
+    jobs_contracts: Jobs and contracts
+    latest_from: Latest from %{title}
     notices:
+      changed_name: "%{title} is now called <a href='%{link_href}'>%{link_text}</a>"
+      devolved: "%{title} is a body of <a href='%{link_href}'>%{link_text}</a>"
+      joining: "%{title} will soon be incorporated into GOV.UK"
+      left_gov: "%{title} is now independent of the UK government"
+      merged: "%{title} became part of <a href='%{link_href}'>%{link_text}</a> in
+        %{updated}"
+      merged_no_date: "%{title} is now part of <a href='%{link_href}'>%{link_text}</a>"
+      no_longer_exists: "%{title} has closed"
       no_website: "%{title} has no website"
       separate_website: "%{title} has a <a href='%{url}'>separate website</a>"
-      changed_name: "%{title} is now called <a href='%{link_href}'>%{link_text}</a>"
-      joining: "%{title} will soon be incorporated into GOV.UK"
-      devolved: "%{title} is a body of <a href='%{link_href}'>%{link_text}</a>"
-      left_gov: "%{title} is now independent of the UK government"
-      merged_no_date: "%{title} is now part of <a href='%{link_href}'>%{link_text}</a>"
-      merged: "%{title} became part of <a href='%{link_href}'>%{link_text}</a> in %{updated}"
       split: "%{title} was replaced by %{links}"
-      no_longer_exists: "%{title} has closed"
-    part_of: "Part of"
-    separate_website: "separate website"
-    subscription:
-      email: "Get emails"
-      feed: "Subscribe to feed"
+    part_of: Part of
     people:
-      board_members: "Our management"
-      chief_professional_officers: "Chief professional officers"
-      ministers: "Our ministers"
-      military_personnel: "Our senior military officials"
-      special_representatives: "Special representatives"
-      traffic_commissioners: "Traffic commissioners"
-    read_more: "Read more about what we do"
-    see_all_latest_documents: "See all latest documents"
-    separate_website: "separate website"
+      board_members: Our management
+      chief_professional_officers: Chief professional officers
+      military_personnel: Our senior military officials
+      ministers: Our ministers
+      special_representatives: Special representatives
+      traffic_commissioners: Traffic commissioners
+    read_more: Read more about what we do
+    see_all_latest_documents: See all latest documents
+    separate_website: separate website
+    subscription:
+      email: Get emails
+      feed: Subscribe to feed
     type:
-      adhoc_advisory_group: "Ad-hoc advisory group"
-      advisory_ndpb: "Advisory non-departmental public body"
-      civil_service: "Civil service"
-      executive_agency: "Executive agency"
-      executive_ndpb: "Executive non-departmental public body"
-      independent_monitoring_body: "Independent monitoring body"
-      non_ministerial_department: "Non-ministerial department"
-      public_corporation: "Public corporation"
-      tribunal: "Tribunal"
-      other: "Other"
-    view_all: "view all"
-    view_less: "view less"
-    what_we_do: "What %{title} does"
+      adhoc_advisory_group: Ad-hoc advisory group
+      advisory_ndpb: Advisory non-departmental public body
+      civil_service: Civil service
+      executive_agency: Executive agency
+      executive_ndpb: Executive non-departmental public body
+      independent_monitoring_body: Independent monitoring body
+      non_ministerial_department: Non-ministerial department
+      other: Other
+      public_corporation: Public corporation
+      tribunal: Tribunal
+    view_all: view all
+    view_less: view less
+    what_we_do: What %{title} does

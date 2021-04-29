@@ -1,40 +1,61 @@
+---
 de:
   dit_landing_page:
-    kbm-logo-alt-text: Keep Business Moving
-    meta_title: Informationen für Unternehmen mit Sitz in der EU, die Handelsbeziehungen mit dem Vereinigten Königreich unterhalten
-    meta_description: Die Vorschriften für den Handel mit dem Vereinigten Königreich haben sich geändert.
-    page_header: Informationen für Unternehmen mit Sitz in der EU, die Handelsbeziehungen mit dem Vereinigten Königreich unterhalten
-    page_header_explainer:
-      <p>Die Vorschriften für den Handel mit dem Vereinigten Königreich haben sich geändert.</p>
-    ribbon_title: Stellen Sie sicher, dass Ihr Unternehmen gut vorbereitet ist
-    ribbon_text: |
-      Wenn Sie ein Unternehmen mit Sitz in der EU führen, beachten Sie bitte die Vorschriften für den Handel mit dem Vereinigten Königreich.
-    guidance_title: Was Sie wissen müssen
     guidance_links:
-      - title: Einfuhren aus dem Vereinigten Königreich
-        text: Informieren Sie sich, was Sie als Unternehmen mit Sitz in der EU im Zusammenhang mit Einfuhren aus dem Vereinigten Königreich beachten müssen, u.a. hinsichtlich Zollverfahren und Import von Waren wie Lebensmitteln, Getränken, Tier- und Pflanzenprodukten.
-        link: Mehr zu Einfuhren aus dem Vereinigten Königreich
-        url: "/guidance/eu-business-importing-from-the-uk.de"
-      - title: Ausfuhren in das Vereinigte Königreich
-        text: Informationen für Unternehmen mit Sitz in der EU, die in das Vereinigte Königreich exportieren möchten, u. a. zu Vorschriften für Spediteure, Kontrollen, zur grenzüberschreitenden Beförderung von Waren und zum Export von Waren wie Lebensmitteln, Getränken, Tier- und Pflanzenprodukten sowie energieverbrauchsrelevanten Produkten.
-        link: Mehr zu Ausfuhren in das Vereinigte Königreich
-        url: "/guidance/eu-business-exporting-to-the-uk.de"
-      - title: Steuern und Zölle
-        text: Informieren Sie sich über Zölle und Umsatzsteuererstattung für Unternehmen mit Sitz in der EU.
-        link: Mehr zu Steuern und Zöllen
-        url: "/guidance/eu-business-taxes-and-tariffs.de"
-      - title: Bereitstellung von Dienstleistungen im Vereinigten Königreich
-        text: Informationen für Unternehmen mit Sitz in der EU, die Dienstleistungen im Vereinigten Königreich erbringen möchten.
-        link: Mehr zur Bereitstellung von Dienstleistungen im Vereinigten Königreich
-        url: "/guidance/eu-business-services.de"
-      - title: Arbeiten im Vereinigten Königreich
-        text: Informationen für EU-Arbeitnehmer im Vereinigten Königreich zu den geltenden Vorschriften, u.a. zum Autofahren, zu den Visabestimmungen und zur Anerkennung beruflicher Qualifikationen.
-        link: Mehr zum Thema Arbeiten im Vereinigten Königreich
-        url: "/guidance/eu-business-working-in-the-uk.de"
-      - title: Datenschutz und Urheberrecht
-        text: Informieren Sie sich über die Änderungen in den Bereichen geistiges Eigentum, Urheberrechte und Übermittlung personenbezogener Daten.
-        link: Mehr zum Datenschutz und Urheberrecht
-        url: "/guidance/eu-business-data-protection-and-copyright.de"
-    training_section_title: Webinare für EU-Unternehmen mit Geschäftsbeziehungen ins Vereinigte Königreich
-    training_section_description:
-       Erfahren Sie mehr über die Grenzbestimmungen im Vereinigten Königreich. <a href="/guidance/webinars-for-eu-based-organisations-that-trade-with-the-uk" class="govuk-link">Melden Sie sich dazu für ein Webinar oder einen Industrietag an</a>.
+    - title: Einfuhren aus dem Vereinigten Königreich
+      text: Informieren Sie sich, was Sie als Unternehmen mit Sitz in der EU im Zusammenhang
+        mit Einfuhren aus dem Vereinigten Königreich beachten müssen, u.a. hinsichtlich
+        Zollverfahren und Import von Waren wie Lebensmitteln, Getränken, Tier- und
+        Pflanzenprodukten.
+      link: Mehr zu Einfuhren aus dem Vereinigten Königreich
+      url: "/guidance/eu-business-importing-from-the-uk.de"
+    - title: Ausfuhren in das Vereinigte Königreich
+      text: Informationen für Unternehmen mit Sitz in der EU, die in das Vereinigte
+        Königreich exportieren möchten, u. a. zu Vorschriften für Spediteure, Kontrollen,
+        zur grenzüberschreitenden Beförderung von Waren und zum Export von Waren wie
+        Lebensmitteln, Getränken, Tier- und Pflanzenprodukten sowie energieverbrauchsrelevanten
+        Produkten.
+      link: Mehr zu Ausfuhren in das Vereinigte Königreich
+      url: "/guidance/eu-business-exporting-to-the-uk.de"
+    - title: Steuern und Zölle
+      text: Informieren Sie sich über Zölle und Umsatzsteuererstattung für Unternehmen
+        mit Sitz in der EU.
+      link: Mehr zu Steuern und Zöllen
+      url: "/guidance/eu-business-taxes-and-tariffs.de"
+    - title: Bereitstellung von Dienstleistungen im Vereinigten Königreich
+      text: Informationen für Unternehmen mit Sitz in der EU, die Dienstleistungen
+        im Vereinigten Königreich erbringen möchten.
+      link: Mehr zur Bereitstellung von Dienstleistungen im Vereinigten Königreich
+      url: "/guidance/eu-business-services.de"
+    - title: Arbeiten im Vereinigten Königreich
+      text: Informationen für EU-Arbeitnehmer im Vereinigten Königreich zu den geltenden
+        Vorschriften, u.a. zum Autofahren, zu den Visabestimmungen und zur Anerkennung
+        beruflicher Qualifikationen.
+      link: Mehr zum Thema Arbeiten im Vereinigten Königreich
+      url: "/guidance/eu-business-working-in-the-uk.de"
+    - title: Datenschutz und Urheberrecht
+      text: Informieren Sie sich über die Änderungen in den Bereichen geistiges Eigentum,
+        Urheberrechte und Übermittlung personenbezogener Daten.
+      link: Mehr zum Datenschutz und Urheberrecht
+      url: "/guidance/eu-business-data-protection-and-copyright.de"
+    guidance_title: Was Sie wissen müssen
+    kbm-logo-alt-text: Keep Business Moving
+    meta_description: Die Vorschriften für den Handel mit dem Vereinigten Königreich
+      haben sich geändert.
+    meta_title: Informationen für Unternehmen mit Sitz in der EU, die Handelsbeziehungen
+      mit dem Vereinigten Königreich unterhalten
+    page_header: Informationen für Unternehmen mit Sitz in der EU, die Handelsbeziehungen
+      mit dem Vereinigten Königreich unterhalten
+    page_header_explainer: "<p>Die Vorschriften für den Handel mit dem Vereinigten
+      Königreich haben sich geändert.</p>"
+    ribbon_text: 'Wenn Sie ein Unternehmen mit Sitz in der EU führen, beachten Sie
+      bitte die Vorschriften für den Handel mit dem Vereinigten Königreich.
+
+      '
+    ribbon_title: Stellen Sie sicher, dass Ihr Unternehmen gut vorbereitet ist
+    training_section_description: Erfahren Sie mehr über die Grenzbestimmungen im
+      Vereinigten Königreich. <a href="/guidance/webinars-for-eu-based-organisations-that-trade-with-the-uk"
+      class="govuk-link">Melden Sie sich dazu für ein Webinar oder einen Industrietag
+      an</a>.
+    training_section_title: Webinare für EU-Unternehmen mit Geschäftsbeziehungen ins
+      Vereinigte Königreich

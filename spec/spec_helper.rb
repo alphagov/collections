@@ -4,6 +4,13 @@ if ENV["USE_SIMPLECOV"]
   SimpleCov.formatter = SimpleCov::Formatter::RcovFormatter
 end
 
+if ENV["USE_I18N_COVERAGE"]
+  require "i18n/coverage"
+  require "i18n/coverage/printers/file_printer"
+  I18n::Coverage.config.printer = I18n::Coverage::Printers::FilePrinter
+  I18n::Coverage.start
+end
+
 # Duplicated in features/support/env.rb
 ENV["RAILS_ENV"] ||= "test"
 ENV["GOVUK_WEBSITE_ROOT"] = "http://www.test.gov.uk"

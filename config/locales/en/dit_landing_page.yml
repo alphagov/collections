@@ -1,40 +1,50 @@
+---
 en:
   dit_landing_page:
-    kbm-logo-alt-text: Keep Business Moving
-    meta_title: Trade with the UK as a business based in the EU
-    meta_description: The rules for trading with the UK have changed.
-    page_header: Trade with the UK as a business based in the EU
-    page_header_explainer: |
-      <p>The rules for trading with the UK have changed.</p>
-    ribbon_title: Make sure your EU-based business is&nbsp;ready
-    ribbon_text: |
-      If you run an EU-based business, check the rules you need to follow to continue trading with the UK.
-    guidance_title: What your business needs to know
     guidance_links:
-      - title: Import from the UK
-        text: Find out what your EU-based business needs to do to import from the UK, including customs procedures and importing goods such as food, drink, animal, and plant products.
-        link: Learn more about importing from the UK
-        url: "/guidance/eu-business-importing-from-the-uk"
-      - title: Export to the UK
-        text: Find out what your EU-based business needs to do to export to the UK, including rules for hauliers, checks, moving goods across borders and exporting goods such as food, drink, animal, plant, and energy-related products.
-        link: Learn more about exporting to the UK
-        url: "/guidance/eu-business-exporting-to-the-uk"
-      - title: Pay taxes and tariffs
-        text: Find out more about tariffs and reclaiming VAT for your EU-based business.
-        link: Learn more about taxes and tariffs
-        url: "/guidance/eu-business-taxes-and-tariffs"
-      - title: Providing services to the&nbsp;UK
-        text: Find out how to provide services in the UK if you’re an EU-based business.
-        link: Learn more about providing services to the UK
-        url: "/guidance/eu-business-services"
-      - title: Work in the UK
-        text: Find out what rules apply to EU workers in the UK, including rules on driving, visas, and recognising professional qualifications.
-        link: Learn more about working in the UK
-        url: "/guidance/eu-business-working-in-the-uk"
-      - title: Data protection and copyright
-        text: Find out more about changes to rules including intellectual property, copyright, and sharing personal data.
-        link: Learn more about data protection and copyright
-        url: "/guidance/eu-business-data-protection-and-copyright"
+    - title: Import from the UK
+      text: Find out what your EU-based business needs to do to import from the UK,
+        including customs procedures and importing goods such as food, drink, animal,
+        and plant products.
+      link: Learn more about importing from the UK
+      url: "/guidance/eu-business-importing-from-the-uk"
+    - title: Export to the UK
+      text: Find out what your EU-based business needs to do to export to the UK,
+        including rules for hauliers, checks, moving goods across borders and exporting
+        goods such as food, drink, animal, plant, and energy-related products.
+      link: Learn more about exporting to the UK
+      url: "/guidance/eu-business-exporting-to-the-uk"
+    - title: Pay taxes and tariffs
+      text: Find out more about tariffs and reclaiming VAT for your EU-based business.
+      link: Learn more about taxes and tariffs
+      url: "/guidance/eu-business-taxes-and-tariffs"
+    - title: Providing services to the&nbsp;UK
+      text: Find out how to provide services in the UK if you’re an EU-based business.
+      link: Learn more about providing services to the UK
+      url: "/guidance/eu-business-services"
+    - title: Work in the UK
+      text: Find out what rules apply to EU workers in the UK, including rules on
+        driving, visas, and recognising professional qualifications.
+      link: Learn more about working in the UK
+      url: "/guidance/eu-business-working-in-the-uk"
+    - title: Data protection and copyright
+      text: Find out more about changes to rules including intellectual property,
+        copyright, and sharing personal data.
+      link: Learn more about data protection and copyright
+      url: "/guidance/eu-business-data-protection-and-copyright"
+    guidance_title: What your business needs to know
+    kbm-logo-alt-text: Keep Business Moving
+    meta_description: The rules for trading with the UK have changed.
+    meta_title: Trade with the UK as a business based in the EU
+    page_header: Trade with the UK as a business based in the EU
+    page_header_explainer: "<p>The rules for trading with the UK have changed.</p>\n"
+    ribbon_text: 'If you run an EU-based business, check the rules you need to follow
+      to continue trading with the UK.
+
+      '
+    ribbon_title: Make sure your EU-based business is&nbsp;ready
+    training_section_description: 'Learn more about UK border requirements by <a href="/guidance/webinars-for-eu-based-organisations-that-trade-with-the-uk"
+      class="govuk-link">registering for an upcoming webinar or industry day</a>.
+
+      '
     training_section_title: Webinars for EU-based businesses trading with the UK
-    training_section_description: |
-      Learn more about UK border requirements by <a href="/guidance/webinars-for-eu-based-organisations-that-trade-with-the-uk" class="govuk-link">registering for an upcoming webinar or industry day</a>.

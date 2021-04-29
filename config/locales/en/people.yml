@@ -1,9 +1,7 @@
+---
 en:
   people:
-    heading:
-      one: Person
-      other: People
     biography: Biography
-    read_more: More about this person
     previous_roles: Previous roles
     previous_roles_in_government: Previous roles in government
+    read_more: More about this person

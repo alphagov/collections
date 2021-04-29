@@ -1,17 +1,16 @@
+---
 cy:
   roles:
     heading:
-      zero:
-      one: Rôl
-      two:
       few:
       many:
+      one: Rôl
       other: Rolau
+      two:
+      zero:
     headings:
       current_holder: 'Deiliad y rôl  '
       previous_holders: 'Cyn-ddeiliaid '
       responsibilities: Cyfrifoldebau
     ministerial: Rôl Gweinidogol
-    policies_responsible_with_person: dan gyfrifoldeb %{person} fel %{role}
-    previous_holders: Cyn-ddeiliaid y rôl yma
     read_more: Mwy am y rôl yma

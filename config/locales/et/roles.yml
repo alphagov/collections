@@ -1,3 +1,4 @@
+---
 et:
   roles:
     heading:
@@ -8,6 +9,4 @@ et:
       previous_holders: Eelmised ametikoha täitjad
       responsibilities: Vastutusalad
     ministerial: Ministri ülesanne
-    policies_responsible_with_person: 'Pädevus haldusala järgi: %{person}, %{role}'
-    previous_holders: 'Varem sellel ametikohal '
     read_more: Sellest ametikohast lähemalt
