@@ -9,7 +9,6 @@
 
   items ||= []
 %>
-
 <% if items.any? %>
   <ol class="app-c-taxon-list">
     <% items.each do |item| %>
@@ -20,7 +19,6 @@
             class: "app-c-taxon-list__link govuk-link"
           }) %>
         <% if item[:description] && heading_level %></<%= heading_level %>><% end %>
-
         <% if item[:description] %>
           <p class="app-c-taxon-list__description govuk-body">
             <%= item[:description] %>
