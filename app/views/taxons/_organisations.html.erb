@@ -1,5 +1,5 @@
 <% if presented_organisations.show_organisations? %>
-  <div id="organisations" class="taxon-page__section-group taxon-page__section-group--organisation" data-module="toggle">
+  <div id="organisations" class="taxon-page__section-group taxon-page__section-group--organisation" data-module="gem-toggle">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <%= render "govuk_publishing_components/components/heading", {
@@ -15,8 +15,9 @@
         } %>
 
         <% if presented_organisations.show_more_organisations? %>
-            <div class="govuk-link taxon-page__show-more-toggle taxon-page__see-more">
+            <div class="taxon-page__show-more-toggle taxon-page__see-more">
               <a href="#"
+              class="govuk-link"
               data-controls="more-organisations"
               data-expanded="false"
               data-toggled-text="Show fewer organisations">Show more organisations</a>
