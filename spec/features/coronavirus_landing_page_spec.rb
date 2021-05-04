@@ -25,12 +25,6 @@ RSpec.feature "Coronavirus Pages" do
       then_i_can_see_the_accordions_content
     end
 
-    scenario "optionally hides the popular questions link" do
-      given_there_is_a_content_item_with_popular_questions_link_disabled
-      when_i_visit_the_coronavirus_landing_page
-      then_i_cannot_see_the_popular_questions_link
-    end
-
     scenario "shows COVID-19 risk level when risk level is enabled" do
       given_there_is_a_content_item_with_risk_level_element_enabled
       when_i_visit_the_coronavirus_landing_page

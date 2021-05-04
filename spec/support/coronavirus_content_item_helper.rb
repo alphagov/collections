@@ -41,11 +41,6 @@ module CoronavirusContentItemHelper
     end
   end
 
-  def content_item_with_popular_questions_link_disabled
-    content_item = coronavirus_content_item
-    content_item
-  end
-
   def coronavirus_content_item_with_risk_level_element_enabled
     content_item = coronavirus_content_item
     content_item["details"]["risk_level"]["show_risk_level_section"] = true

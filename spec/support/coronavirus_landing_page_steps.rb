@@ -19,10 +19,6 @@ module CoronavirusLandingPageSteps
     stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item)
   end
 
-  def given_there_is_a_content_item_with_popular_questions_link_disabled
-    stub_content_store_has_item(CORONAVIRUS_PATH, content_item_with_popular_questions_link_disabled)
-  end
-
   def given_there_is_a_content_item_with_risk_level_element_enabled
     stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item_with_risk_level_element_enabled)
   end
@@ -106,14 +102,6 @@ module CoronavirusLandingPageSteps
 
   def then_i_can_see_the_page_title(title)
     expect(page).to have_selector(".covid__page-header h1", text: title)
-  end
-
-  def then_i_can_see_the_popular_questions_link
-    expect(page).to have_link("See the types of questions submitted by the public", href: "https://www.gov.uk")
-  end
-
-  def then_i_cannot_see_the_popular_questions_link
-    expect(page).not_to have_link("See the types of questions submitted by the public", href: "https://www.gov.uk")
   end
 
   def then_i_can_see_the_nhs_banner
