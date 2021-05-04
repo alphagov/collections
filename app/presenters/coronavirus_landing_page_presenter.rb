@@ -1,7 +1,5 @@
 class CoronavirusLandingPagePresenter
   COMPONENTS = %w[
-    live_stream
-    live_stream_enabled
     header_section
     announcements_label
     announcements
@@ -25,10 +23,6 @@ class CoronavirusLandingPagePresenter
         content_item["details"][component]
       end
     end
-  end
-
-  def show_live_stream?
-    live_stream_enabled == true
   end
 
   def faq_schema(content_item)
