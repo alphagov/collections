@@ -422,34 +422,6 @@
       "email_link": "Sign up to get emails when we change any coronavirus information on the GOV.UK website",
       "email_url": "/email-signup?topic=/coronavirus-taxon"
     },
-    "live_stream": {
-      "time": "",
-      "date": "19 April",
-      "date_text": "Live streamed",
-      "title": "Press conferences and speeches",
-      "video_url": "https://www.youtube.com/watch?v=Er09g2LdRmw",
-      "no_cookies_message": "Watch the live stream on YouTube",
-      "no_cookies": {
-        "change_settings": "Change your cookie settings",
-        "change_settings_link": "/help/cookies",
-        "to_watch": "to watch video",
-        "or": "or",
-        "watch_link_text": "Watch on YouTube",
-        "icon_text": "Video"
-      },
-      "previous_videos": {
-        "url": "https://www.youtube.com/user/Number10gov/videos",
-        "previous_videos_text": "Watch all press conferences on YouTube",
-        "next_conference_text": "The next live press conference will be shown here"
-      },
-      "ask_a_question_visible" : true,
-      "ask_a_question_text": "Ask a question at the next press conference",
-      "ask_a_question_link": "https://www.gov.uk",
-      "popular_questions_link_visible": true,
-      "see_popular_questions_text": "See the types of questions submitted by the public",
-      "see_popular_questions_link": "https://www.gov.uk",
-      "show_live_stream": true
-    },
     "special_announcement_schema": {
       "category": "https://www.wikidata.org/wiki/Q81068910",
       "disease_prevention_info_url": "https://www.gov.uk/coronavirus",

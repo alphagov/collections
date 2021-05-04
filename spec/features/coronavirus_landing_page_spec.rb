@@ -14,7 +14,6 @@ RSpec.feature "Coronavirus Pages" do
       then_i_can_see_the_nhs_banner
       then_i_can_see_the_timeline
       then_i_can_see_the_accordions
-      then_i_can_see_the_live_stream_section
       and_i_can_see_links_to_search
       and_there_are_metatags
     end
@@ -24,38 +23,6 @@ RSpec.feature "Coronavirus Pages" do
       when_i_visit_the_coronavirus_landing_page
       and_i_click_on_an_accordion
       then_i_can_see_the_accordions_content
-    end
-
-    scenario "displays all livestream information" do
-      given_there_is_a_content_item
-      when_i_visit_the_coronavirus_landing_page
-      then_i_can_see_the_live_stream_section_with_streamed_date
-      then_i_can_see_the_ask_a_question_section
-      then_i_can_see_the_popular_questions_link
-    end
-
-    scenario "can hide the livestream section" do
-      given_there_is_a_content_item_with_livestream_disabled
-      when_i_visit_the_coronavirus_landing_page
-      then_i_cannot_see_the_live_stream_section
-    end
-
-    scenario "optionally shows the time of a livestream" do
-      given_there_is_a_content_item_with_live_stream_time
-      when_i_visit_the_coronavirus_landing_page
-      then_i_can_see_the_live_stream_section_with_date_and_time
-    end
-
-    scenario "optionally hides the ask a question link" do
-      given_there_is_a_content_item_with_ask_a_question_disabled
-      when_i_visit_the_coronavirus_landing_page
-      then_i_cannot_see_the_ask_a_question_section
-    end
-
-    scenario "optionally hides the popular questions link" do
-      given_there_is_a_content_item_with_popular_questions_link_disabled
-      when_i_visit_the_coronavirus_landing_page
-      then_i_cannot_see_the_popular_questions_link
     end
 
     scenario "shows COVID-19 risk level when risk level is enabled" do

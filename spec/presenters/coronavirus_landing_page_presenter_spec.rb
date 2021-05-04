@@ -3,8 +3,6 @@ RSpec.describe CoronavirusLandingPagePresenter do
   it "provides getter methods for all component keys" do
     presenter = described_class.new(coronavirus_landing_page_content_item)
     %i[
-      live_stream
-      live_stream_enabled
       header_section
       announcements_label
       announcements

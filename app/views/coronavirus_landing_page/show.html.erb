@@ -45,7 +45,6 @@
       } %>
       <%= render partial: 'coronavirus_landing_page/components/shared/country_section', locals: { guidance: details.additional_country_guidance } %>
       <%= render partial: 'coronavirus_landing_page/components/shared/announcements_section', locals: { details: details } %>
-      <%= render partial: 'coronavirus_landing_page/components/landing_page/live_stream_section', locals: { live_stream: details.live_stream } %>
       <%= render partial: 'coronavirus_landing_page/components/landing_page/statistics_section', locals: {
         topic_section: details.statistics_section,
         statistics: @statistics,
