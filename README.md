@@ -1,53 +1,11 @@
 # Collections
 
-Collections serves the GOV.UK navigation pages and organisation pages.
+Collections serves the GOV.UK navigation pages and organisation pages. Search API is used to make the pages dynamic e.g. the latest changes for Topics, Organisations and Mainstream browse pages.
 
-At time of writing, it also serves the priority campaign pages ie:
--  Coronavirus pages
-- Transition landing page ([ gov.uk/transition](https://www.gov.uk/transition) )
-- DIT landing page ( [gov.uk/eubusiness ](https://www.gov.uk/transition ))
-
-See the [Campaign pages](#campaign-pages) section below for more information.
-
-## Screenshots
-
-### Browse page
-
-![Browse page](docs/browse-page.jpg)
-
-### Topic page
-
-![Topic page](docs/topic-page.jpg)
-
-### Subtopic page
-
-![Subtopic page](docs/subtopic-page.jpg)
-
-### Services and information page
-
-![Services and information page](docs/services-and-information-page.jpg)
-
-### Taxonomy page
-
-![Taxonomy page](docs/taxonomy-page.png)
-
-### Worldwide taxonomy page
-
-![Worldwide taxonomy page](docs/world-taxonomy-page.png)
-
-### Organisation index page
-
-![Organisation index page](docs/orgs-index-page.png)
-
-### Organisation page
-
-![Organisation page](docs/org-page.png)
-
-### Step by step page
-
-![Step by step page](docs/step-by-step-page.png)
+At time of writing, it also serves the priority campaign pages. See the [Campaign pages](docs/campaign-pages.md) manual for more details.
 
 ## Live examples
+
 - Browse page: [gov.uk/browse](https://www.gov.uk/browse)
 - Topic page: [gov.uk/oil-and-gas](https://www.gov.uk/oil-and-gas)
 - Subtopic page: [gov.uk/oil-and-gas/fields-and-wells](https://www.gov.uk/oil-and-gas/fields-and-wells)
@@ -57,10 +15,6 @@ See the [Campaign pages](#campaign-pages) section below for more information.
 - Organisation index page: [gov.uk/government/organisations](https://www.gov.uk/government/organisations)
 - Organisation page: [gov.uk/government/organisations/cabinet-office](https://www.gov.uk/government/organisations/cabinet-office)
 - Step by step page: [gov.uk/learn-to-drive-a-car](https://www.gov.uk/learn-to-drive-a-car)
-
-## APIs
-
-The endpoints and known consumers of this application's APIs are documented in [docs/api](docs/api.md)
 
 ## Nomenclature
 
@@ -72,65 +26,9 @@ The endpoints and known consumers of this application's APIs are documented in [
 - **Sub-topic**: a group of content within a topic. (A deprecated name for this is
 "specialist sub-sector".)
 
-### Browse pages
-
-- **Root browse page**: [gov.uk/browse](https://www.gov.uk/browse)
-- **Top level browse page**: [gov.uk/browse/benefits](https://www.gov.uk/browse/benefits)
-- **Second level browse page**: [gov.uk/browse/benefits/entitlement](https://www.gov.uk/browse/benefits/entitlement)
-
-### Taxonomy
-The taxonomy is surfaced on taxon pages, which group together tagged content for that level of the taxonomy into [supergroups](https://docs.publishing.service.gov.uk/document-types/content_purpose_supergroup.html) on the page, e.g: Guidance and Regulation for Funding and finance for students [gov.uk/education/funding-and-finance-for-students](https://www.gov.uk/education/funding-and-finance-for-students). Each taxon page also shows a grid of sub-topics at the next level of the taxonomy.
-
-### Worldwide taxonomy
-The worldwide taxonomy is rendered on different types of pages depending on whether the taxon has any children.
-
-For example:
-- **Taxon with children**: a content item of type taxon that has
-  `child_taxons` links. None of those child taxons' links have `child_taxons`,
-  in which case we display an accordion view:
-  [gov.uk/world/afghanistan](https://www.gov.uk/world/afghanistan)
-- **Taxon without children**: a content item of type taxon that doesn't have
-  `child_taxons` links. In this case we display an leaf view:
-  [gov.uk/world/living-in-afghanistan](https://www.gov.uk/world/living-in-afghanistan)
-- **Taxon with associated taxons**: a content item of type taxon that has
-  `associated_taxons` links. In this case the tagged content of the taxon will
-  include content that is directly tagged to it and also content that has been
-  tagged to any of the associated taxons.
-
-## Campaign pages
-
-Collections currently renders the following campaign pages:
-
-#### Transition landing page ([ /transition ](https://www.gov.uk/transition))
-All content for the transition landing pages are currently read from yaml files. [Welsh](config/locales/cy/transition_landing_page.yml) and [English](config/locales/en/transition_landing_page.yml) translations are available.
-
-#### DIT landing page ([ /eubusiness ](https://www.gov.uk/eubusiness))
-All content for the DIT landing pages are currently read from yaml files e.g. for [English](config/locales/en/dit_landing_page.yml). See the [content item's available translations](https://www.gov.uk/api/content/eubusiness) for the current list.
-
-#### Coronavirus pages:
-  - Landing page ( [gov.uk/coronavirus](https://www.gov.uk/coronavirus) )
-  - Postcode lookup service( [gov.uk/find-coronavirus-local-restrictions](https://www.gov.uk/find-coronavirus-local-restrictions) )
-  - Hub pages ( [/getting-tested-for-coronavirus](https://www.gov.uk/getting-tested-for-coronavirus), [/worker-support](https://www.gov.uk/coronavirus/worker-support), [/business-support](https://www.gov.uk/coronavirus/business-support) and [/education-and-childcare](https://www.gov.uk/coronavirus/education-and-childcare) )
-
 ## Technical documentation
 
-This is a public facing Ruby on Rails application that retrieves browse content from APIs and presents it. There is no underlying persistence layer, and (with the exception of the [campaign pages](#campaign-pages)) all content is retrieved from external sources.
-
-### Content for taxon pages
-
-Content for taxon pages is returned by Search API based on content_ids for world taxonomy pages and content_ids and [supergroups](https://docs.publishing.service.gov.uk/document-types/content_purpose_supergroup.html) for all other taxonomy pages.
-
-### Dependencies
-
-- [content-store](https://github.com/alphagov/content-store), provides:
-    - Mainstream browse pages (Root, Top and Second level browse pages)
-    - Topics
-    - Subtopics and their curated lists
-- [search api](https://github.com/alphagov/search-api), provides:
-    - latest changes for Topics
-    - content tagged to a particular Topic, Mainstream browse page or Organisation
-- [email-alert-api](https://github.com/alphagov/email-alert-api), provides:
-    - support for subscribing to notifications from a topic
+This is a public facing Ruby on Rails application that retrieves browse content from APIs and presents it.
 
 ### Running the application
 
@@ -181,13 +79,16 @@ To test a single file:
 Use `bundle exec rake jasmine:ci` to run Jasmine tests
 
 ### Pact tests
-Collections Organisations API has pact tests with [gds-api-adapters](https://github.com/alphagov/gds-api-adapters/blob/19515f01395a2a2cdfa22e1c86f8cb1a4298c492/test/test_helpers/pact_helper.rb).
 
-Use `bundle exec rake pact:verify` to run the pact tests against the master pactfile stored on the pact broker.
+Collections Organisations API has a pact with [GDS API Adapters](https://github.com/alphagov/gds-api-adapters).
 
-If you have made a change to the code that consumes the organisations api, you might want to confirm that collections will still honour its pact. You can do so by running the pact tests against your local gds-api-adapters branch like so:
-- From gds-api-adapters run `bundle exec rake` to regenerate a new pactfile on you local machine.
-- From collections run `bundle exec rake PACT_URI="../gds-api-adapters/spec/pacts/gds_api_adapters-collections_organisation_api.json" pact:verify`
+See the [guidance on Pact testing](https://docs.publishing.service.gov.uk/manual/pact-broker.html) for how to run and modify the tests.
+
+### Further documentation
+
+- [Taxonomy pages](docs/taxonomy-pages.md)
+- [Campaign pages](docs/campaign-pages.md)
+- [API endpoints and consumers](docs/api.md)
 
 ## License
 
