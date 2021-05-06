@@ -35,15 +35,6 @@ en:
           public_updated_at: 2020-03-11
           document_type: Press release
       - link:
-          text: Agreements reached between the United Kingdom of Great Britain and
-            Northern Ireland and the European Union
-          path: "/government/publications/agreements-reached-between-the-united-kingdom-of-great-britain-and-northern-ireland-and-the-european-union"
-          description: This document summarises the Agreements between the United
-            Kingdom and the European Union.
-        metadata:
-          public_updated_at: 2020-12-24
-          document_type: International treaty
-      - link:
           text: Government publishes updated GB-EU Border Operating Model
           path: "/government/news/government-publishes-updated-gb-eu-border-operating-model"
           description: The government has published further detail on how the borders
