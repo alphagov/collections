@@ -16,8 +16,6 @@
 //= require modules/feeds.js
 //= require modules/toggle-attribute
 //= require modules/coronavirus-landing-page
-//= require modules/coronavirus-track-local-restriction-results
-//= require modules/coronavirus-local-restrictions-postcode-form
 //= require modules/track-links
 
 $(document).on('ready', function () {
