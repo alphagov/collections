@@ -28,55 +28,29 @@ At time of writing, it also serves the priority campaign pages. See the [Campaig
 
 ## Technical documentation
 
-This is a public facing Ruby on Rails application that retrieves browse content from APIs and presents it.
+This is a Ruby on Rails app, and should follow [our Rails app conventions](https://docs.publishing.service.gov.uk/manual/conventions-for-rails-applications.html).
 
-### Running the application
+You can use the [GOV.UK Docker environment](https://github.com/alphagov/govuk-docker) or the local `startup.sh` script to run the app. Read the [guidance on local frontend development](https://docs.publishing.service.gov.uk/manual/local-frontend-development.html) to find out more about each approach, before you get started.
 
-- #### With startup scripts
-
-```
-./startup.sh
-```
-
-The app should start on http://localhost:3070
-
-```
-./startup.sh --live
-```
-
-This will run the app and point it at the production GOV.UK `content-store` and `static` instances.
-
-```
-./startup.sh --dummy
-```
-
-This will run the app and point it at the [dummy content store](https://govuk-content-store-examples.herokuapp.com/), which serves the content schema examples and random content.
-
-- #### With govuk-docker
-
-Once you have installed [govuk-docker](https://github.com/alphagov/govuk-docker#installation), do the following
-```
-> cd govuk/govuk-docker
-> git pull origin master
-> make collections
-
-> cd govuk/collections
-> govuk-docker-up
-```
-
-Collections will be running locally at collections.dev.gov.uk.
+If you are using GOV.UK Docker, remember to combine it with the commands that follow. See the [GOV.UK Docker usage instructions](https://github.com/alphagov/govuk-docker#usage) for examples.
 
 ### Running the test suite
 
-Use `bundle exec rake` to run the test suite, excluding JavaScript. Or if you are running in docker, `govuk-docker-run bundle exec rake`
+```
+bundle exec rake
+```
 
 To test a single file:
 
-`govuk-docker-run bundle exec rails test test/unit/application_helper_test.rb`
+```
+bundle exec rails test test/unit/application_helper_test.rb
+```
 
-#### Javascript tests
+To run JavaScript tests (only):
 
-Use `bundle exec rake jasmine:ci` to run Jasmine tests
+```
+bundle exec rake jasmine:ci
+```
 
 ### Pact tests
 
