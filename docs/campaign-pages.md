@@ -13,5 +13,4 @@ All content for the DIT landing pages are currently read from yaml files e.g. fo
 ## Coronavirus pages:
 
   - Landing page ([gov.uk/coronavirus](https://www.gov.uk/coronavirus))
-  - Postcode lookup service([gov.uk/find-coronavirus-local-restrictions](https://www.gov.uk/find-coronavirus-local-restrictions))
   - Hub pages ([/getting-tested-for-coronavirus](https://www.gov.uk/getting-tested-for-coronavirus), [/worker-support](https://www.gov.uk/coronavirus/worker-support), [/business-support](https://www.gov.uk/coronavirus/business-support) and [/education-and-childcare](https://www.gov.uk/coronavirus/education-and-childcare))
