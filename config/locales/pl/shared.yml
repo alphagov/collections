@@ -1,4 +1,8 @@
 ---
 pl:
   shared:
+    browse:
+      prefix:
+      title:
+    language_direction:
     language_name: Polski

@@ -1,5 +1,8 @@
 ---
 ar:
   shared:
+    browse:
+      prefix:
+      title:
     language_direction: rtl
     language_name: العربية

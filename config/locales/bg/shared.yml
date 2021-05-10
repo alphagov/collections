@@ -1,4 +1,8 @@
 ---
 bg:
   shared:
+    browse:
+      prefix:
+      title:
+    language_direction:
     language_name: български
