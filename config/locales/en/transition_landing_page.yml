@@ -3,10 +3,7 @@ en:
   transition_landing_page:
     campaign_links:
       lead_in: 'Check what you need to do differently if you’re:'
-      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
-        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
-        data-track-label="Get the complete list">Get the complete list</a> of what
-        you need to do for you, your business and your family.
+      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="Get the complete list">Get the complete list</a> of what you need to do for you, your business and your family.
       links:
       - text: importing goods from the EU
         path: "/import-goods-into-uk"
@@ -25,37 +22,30 @@ en:
     comms:
       links:
       - link:
-          text: Government focuses on recovery from COVID with new timeline for border
-            control processes on import of goods
+          text: Government focuses on recovery from COVID with new timeline for border control processes on import of goods
           path: "/government/news/government-focuses-on-recovery-from-covid-with-new-timeline-for-border-control-processes-on-import-of-goods"
-          description: A new timetable for introducing import border control processes
-            has been set out by the government to enable UK businesses to focus on
-            their recovery.
+          description: A new timetable for introducing import border control processes has been set out by the government to enable UK businesses to focus on their recovery.
         metadata:
           public_updated_at: 2020-03-11
           document_type: Press release
       - link:
           text: Government publishes updated GB-EU Border Operating Model
           path: "/government/news/government-publishes-updated-gb-eu-border-operating-model"
-          description: The government has published further detail on how the borders
-            between Great Britain and the EU will work and the actions that traders,
-            hauliers and passengers need to take.
+          description: The government has published further detail on how the borders between Great Britain and the EU will work and the actions that traders, hauliers and passengers need to take.
         metadata:
           public_updated_at: 2020-10-08
           document_type: News story
       - link:
           text: "£650 million investment for Northern Ireland"
           path: "/government/news/major-650-million-investment-for-northern-ireland"
-          description: The Chancellor of the Duchy of Lancaster and the Secretary
-            of State for Northern Ireland have announced a £650m package of investment.
+          description: The Chancellor of the Duchy of Lancaster and the Secretary of State for Northern Ireland have announced a £650m package of investment.
         metadata:
           public_updated_at: 2020-08-07
           document_type: News story
     comms_header: Announcements
     email_mailto_subject: UK's%20new%20start:%20let's%20get%20going-%20GOV.UK
     guidance_header: Changes for businesses and citizens
-    meta_description: The Brexit transition period has ended. Check how the new rules
-      affect you.
+    meta_description: The Brexit transition period has ended. Check how the new rules affect you.
     meta_title: Brexit
     no_cookies:
       change_settings_text: Change your cookie settings
@@ -64,9 +54,7 @@ en:
       to_watch_text: to watch the video
       watch_link_text: Watch on YouTube
     page_header: Brexit:<br/>new rules are here
-    page_header_explainer: New rules apply to things like travel and doing business
-      with Europe. Use the Brexit checker to get a personalised list of actions for
-      you, your business and your family.
+    page_header_explainer: New rules apply to things like travel and doing business with Europe. Use the Brexit checker to get a personalised list of actions for you, your business and your family.
     sections:
       aria_string_suffix: related to Brexit
       guidance_and_regulation: Guidance and regulation

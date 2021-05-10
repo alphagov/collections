@@ -3,37 +3,27 @@ nl:
   dit_landing_page:
     guidance_links:
     - title: Invoer vanuit het VK
-      text: Lees meer over wat uw in de EU gevestigde onderneming moet doen om import
-        vanuit het VK te verzekeren, waaronder douane-procedures en het importeren
-        van goederen zoals voeding, drank, dierlijke en plantaardige producten.
+      text: Lees meer over wat uw in de EU gevestigde onderneming moet doen om import vanuit het VK te verzekeren, waaronder douane-procedures en het importeren van goederen zoals voeding, drank, dierlijke en plantaardige producten.
       link: Lees meer over het importeren vanuit het VK
       url: "/guidance/eu-business-importing-from-the-uk.nl"
     - title: Uitvoeren naar het VK
-      text: Lees meer omtrent wat in Europa gevestigde ondernemingen moeten doen om
-        te blijven uitvoeren naar het VK, waaronder regels voor transporteurs, controles,
-        het overbrengen van goederen over de grens en het uitvoeren van goederen waaronder
-        voedsel, drank & dierlijke , plantaardige en energie-gerelateerde goederen.
+      text: Lees meer omtrent wat in Europa gevestigde ondernemingen moeten doen om te blijven uitvoeren naar het VK, waaronder regels voor transporteurs, controles, het overbrengen van goederen over de grens en het uitvoeren van goederen waaronder voedsel, drank & dierlijke , plantaardige en energie-gerelateerde goederen.
       link: Lees meer over het exporteren naar het VK
       url: "/guidance/eu-business-exporting-to-the-uk.nl"
     - title: Belastingen en tarieven betalen
-      text: Lees meer over tarieven en de terugvordering van BTW voor uw in de EU
-        gevestigde onderneming.
+      text: Lees meer over tarieven en de terugvordering van BTW voor uw in de EU gevestigde onderneming.
       link: Lees meer over belastingen en tarieven
       url: "/guidance/eu-business-taxes-and-tariffs.nl"
     - title: Het aanbieden van diensten aan het VK
-      text: Lees meer omtrent het aanbieden van diensten in het VK indien u een in
-        Europa gevestigde onderneming bent.
+      text: Lees meer omtrent het aanbieden van diensten in het VK indien u een in Europa gevestigde onderneming bent.
       link: Lees meer over het verlenen van diensten in het VK
       url: "/guidance/eu-business-services.nl"
     - title: Werken in het VK
-      text: Lees meer omtrent welke regels gelden voor EU werknemers in het VK, waaronder
-        regels rond het besturen van voertuigen, visa, en het erkennen van professionele
-        kwalificaties.
+      text: Lees meer omtrent welke regels gelden voor EU werknemers in het VK, waaronder regels rond het besturen van voertuigen, visa, en het erkennen van professionele kwalificaties.
       link: Lees meer over werken in het VK
       url: "/guidance/eu-business-working-in-the-uk.nl"
     - title: Gegevensbescherming en copyright
-      text: Lees meer over wijzigingen in regelgeving rond intellectuele eigendom,
-        copyright, en het delen van persoonlijke gegevens.
+      text: Lees meer over wijzigingen in regelgeving rond intellectuele eigendom, copyright, en het delen van persoonlijke gegevens.
       link: Lees meer over gegevensbescherming en copyright
       url: "/guidance/eu-business-data-protection-and-copyright.nl"
     guidance_title: Wat uw onderneming moet weten
@@ -42,14 +32,9 @@ nl:
     meta_title: Handel drijven met het VK vanuit een in Europa gevestigde onderneming
     page_header: Handel drijven met het VK vanuit een in Europa gevestigde onderneming
     page_header_explainer: "<p>De regels om handel te drijven met het VK zijn veranderd.</p>\n"
-    ribbon_text: 'Wanneer u een in Europa gevestigde onderneming leidt, moet u de
-      voorwaarden raadplegen die het u toelaten verder handel te drijven met het VK.
+    ribbon_text: 'Wanneer u een in Europa gevestigde onderneming leidt, moet u de voorwaarden raadplegen die het u toelaten verder handel te drijven met het VK.
 
-      '
+'
     ribbon_title: Zorg ervoor dat uw in de EU gevestigde onderneming voorbereid is
-    training_section_description: Lees meer over de Britse grensvereisten door u te
-      <a href="/guidance/webinars-for-eu-based-organisations-that-trade-with-the-uk"
-      class="govuk-link">registreren voor een van de komende webinars of een Industry
-      Day</a>.
-    training_section_title: Webinars voor in de EU gevestigde ondernemingen die handel
-      drijven met het VK
+    training_section_description: Lees meer over de Britse grensvereisten door u te <a href="/guidance/webinars-for-eu-based-organisations-that-trade-with-the-uk" class="govuk-link">registreren voor een van de komende webinars of een Industry Day</a>.
+    training_section_title: Webinars voor in de EU gevestigde ondernemingen die handel drijven met het VK
