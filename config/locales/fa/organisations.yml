@@ -12,218 +12,153 @@ fa:
     content_item:
       schema_name:
         aaib_report:
-          one:
           other:
         announcement:
-          one:
-          other:
+          other: اعلامیه ها
         asylum_support_decision:
-          one:
           other:
         authored_article:
-          one:
-          other:
+          other: مقالات
         business_finance_support_scheme:
-          one:
           other:
         case_study:
-          one:
-          other:
+          other: مطالعه های موردی
         closed_consultation:
-          one:
-          other:
+          other: رایزنی های بسته
         cma_case:
-          one:
           other:
         coming_soon:
-          one:
           other:
         consultation:
-          one:
-          other:
+          other: رایزنی ها
         consultation_outcome:
-          one:
-          other:
+          other: نتایج رایزنی
         corporate_information_page:
-          one:
           other:
         corporate_report:
-          one:
-          other:
+          other: گزارش های سازمانی
         correspondence:
-          one:
-          other:
+          other: مکاتبات
         countryside_stewardship_grant:
-          one:
           other:
         decision:
-          one:
           other:
         detailed_guide:
-          one:
-          other:
+          other: راهنمای تفصیلی
         dfid_research_output:
-          one:
           other:
         document_collection:
-          one:
           other:
         draft_text:
-          one:
-          other:
+          other: متون پیش نویس
         drug_safety_update:
-          one:
           other:
         employment_appeal_tribunal_decision:
-          one:
           other:
         employment_tribunal_decision:
-          one:
           other:
         esi_fund:
-          one:
           other:
         fatality_notice:
-          one:
-          other:
+          other: اطلاعیه تلفات
         foi_release:
-          one:
-          other:
+          other: انتشار آزاد اطلاعات
         form:
-          one:
-          other:
+          other: فرم ها
         government_response:
-          one:
-          other:
+          other: جوابیه های دولت
         guidance:
-          one:
-          other:
+          other: راهنمایی
         impact_assessment:
-          one:
-          other:
+          other: ارزیابی های تاثیرات
         imported:
-          one:
-          other:
+          other: منتقل شده - در انتظار دسته بندی
         independent_report:
-          one:
-          other:
+          other: گزارش های مستقل
         international_development_fund:
-          one:
           other:
         international_treaty:
-          one:
           other:
         maib_report:
-          one:
           other:
         map:
-          one:
-          other:
+          other: نقشه ها
         medical_safety_alert:
-          one:
+          other:
+        national:
           other:
         national_statistics:
-          one:
-          other:
+          other: آمار - آمار ملی
         national_statistics_announcement:
-          one:
           other:
         news_article:
-          one:
-          other:
+          other: مقالات خبری
         news_story:
-          one:
-          other:
+          other: اخبار
         notice:
-          one:
+          other:
+        official:
           other:
         official_statistics:
-          one:
-          other:
+          other: آمار
         official_statistics_announcement:
-          one:
           other:
         open_consultation:
-          one:
-          other:
+          other: رایزنی های باز
         oral_statement:
-          one:
-          other:
+          other: گزارش های شفاهی به پارلمان
         policy:
-          one:
-          other:
+          other: سیاست ها
         policy_paper:
-          one:
-          other:
+          other: مقاله های سیاسی
         press_release:
-          one:
-          other:
+          other: بیانیه ها
         promotional:
-          one:
-          other:
+          other: مطالب تبلیغاتی
         publication:
-          one:
-          other:
+          other: نشریات
         raib_report:
-          one:
           other:
         regulation:
-          one:
           other:
         research:
-          one:
-          other:
+          other: پژوهش و تحلیل
         residential_property_tribunal_decision:
-          one:
           other:
         service_sign_in:
-          one:
           other:
         service_standard_report:
-          one:
           other:
         speaking_notes:
-          one:
-          other:
+          other: موضوعات سخنرانی
         speech:
-          one:
+          other: سخنرانی ها
+        standard:
           other:
         statement_to_parliament:
-          one:
-          other:
+          other: گزارش ها به پارلمان
         statistical_data_set:
-          one:
-          other:
+          other: بسته های داده های آماری
         statistics_announcement:
-          one:
           other:
         statutory_guidance:
-          one:
           other:
         take_part:
-          one:
           other:
         tax_tribunal_decision:
-          one:
           other:
         transcript:
-          one:
-          other:
+          other: رونوشت ها
         transparency:
-          one:
-          other:
+          other: داده های شفاف سازی
         utaac_decision:
-          one:
           other:
         world_location_news_article:
-          one:
-          other:
+          other: مقالات خبری
         world_news_story:
-          one:
           other:
         written_statement:
-          one:
-          other:
+          other: گزارش های کتبی به پارلمان
     corporate_information:
     document_types:
       documents:

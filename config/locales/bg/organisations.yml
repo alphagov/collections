@@ -15,23 +15,23 @@ bg:
           one:
           other:
         announcement:
-          one:
-          other:
+          one: Съобщение
+          other: Съобщения
         asylum_support_decision:
           one:
           other:
         authored_article:
-          one:
-          other:
+          one: Авторска статия
+          other: Авторски статии
         business_finance_support_scheme:
           one:
           other:
         case_study:
-          one:
-          other:
+          one: Казус
+          other: Казуси
         closed_consultation:
-          one:
-          other:
+          one: Затворена консултация
+          other: Затворени консултации
         cma_case:
           one:
           other:
@@ -39,20 +39,20 @@ bg:
           one:
           other:
         consultation:
-          one:
-          other:
+          one: Консултация
+          other: Консултации
         consultation_outcome:
-          one:
-          other:
+          one: Резултат от консултацията
+          other: Резултат от консултациите
         corporate_information_page:
           one:
           other:
         corporate_report:
-          one:
-          other:
+          one: Корпоративен доклад
+          other: Корпоративни доклади
         correspondence:
-          one:
-          other:
+          one: Кореспонденция
+          other: Кореспонденции
         countryside_stewardship_grant:
           one:
           other:
@@ -60,17 +60,17 @@ bg:
           one:
           other:
         detailed_guide:
-          one:
-          other:
+          one: Подробна насока
+          other: Подробни насоки
         dfid_research_output:
           one:
           other:
         document_collection:
-          one:
+          one: Серии
           other:
         draft_text:
-          one:
-          other:
+          one: Чернова
+          other: Чернови
         drug_safety_update:
           one:
           other:
@@ -84,29 +84,29 @@ bg:
           one:
           other:
         fatality_notice:
-          one:
-          other:
+          one: Уведомление за кончина
+          other: Уведомления за кончина
         foi_release:
-          one:
-          other:
+          one: Съобщение във връзка със свободен достъп до информация
+          other: Съобщения във връзка със свободен достъп до информация
         form:
-          one:
-          other:
+          one: Формуляр
+          other: Формуляри
         government_response:
-          one:
-          other:
+          one: Отговор на правителството
+          other: Отговори на правителството
         guidance:
-          one:
-          other:
+          one: Насоки
+          other: Насоки
         impact_assessment:
-          one:
-          other:
+          one: Оценка на влиянието
+          other: Оценки на влиянието
         imported:
-          one:
-          other:
+          one: 'импортирано-очаква тип '
+          other: импортирано-очаква тип
         independent_report:
-          one:
-          other:
+          one: Независим доклад
+          other: Независими доклади
         international_development_fund:
           one:
           other:
@@ -117,53 +117,59 @@ bg:
           one:
           other:
         map:
-          one:
-          other:
+          one: Карта
+          other: Карти
         medical_safety_alert:
           one:
           other:
-        national_statistics:
+        national:
           one:
           other:
+        national_statistics:
+          one: Статистика- национална статистика
+          other: Статистики- национални статистики
         national_statistics_announcement:
           one:
           other:
         news_article:
-          one:
-          other:
+          one: Новинарска статия
+          other: Новинарски статии
         news_story:
-          one:
-          other:
+          one: Новина
+          other: Новини
         notice:
           one:
           other:
-        official_statistics:
+        official:
           one:
           other:
+        official_statistics:
+          one: Статистики
+          other: Статистики
         official_statistics_announcement:
           one:
           other:
         open_consultation:
-          one:
-          other:
+          one: Отворена консултация
+          other: Отворени консултации
         oral_statement:
-          one:
-          other:
+          one: Устно изказване в Парламента
+          other: Устни изказвания в Парламента
         policy:
-          one:
-          other:
+          one: Политика
+          other: Политики
         policy_paper:
-          one:
-          other:
+          one: Документ, залагащ политика
+          other: Документи, залагащи политика
         press_release:
-          one:
-          other:
+          one: Съобщение до медиите
+          other: Съобщения до медиите
         promotional:
-          one:
-          other:
+          one: Промоционален материал
+          other: Промоционален материал
         publication:
-          one:
-          other:
+          one: Публикация
+          other: Публикации
         raib_report:
           one:
           other:
@@ -171,8 +177,8 @@ bg:
           one:
           other:
         research:
-          one:
-          other:
+          one: Проучване и анализ
+          other: Проучване и анализи
         residential_property_tribunal_decision:
           one:
           other:
@@ -183,17 +189,20 @@ bg:
           one:
           other:
         speaking_notes:
-          one:
-          other:
+          one: Устна нота
+          other: Устни ноти
         speech:
+          one: Реч
+          other: Речи
+        standard:
           one:
           other:
         statement_to_parliament:
-          one:
-          other:
+          one: Изявление в парламента
+          other: Изявления в парламента
         statistical_data_set:
-          one:
-          other:
+          one: Набор от статистически данни
+          other: Набори от статистически данни
         statistics_announcement:
           one:
           other:
@@ -207,23 +216,23 @@ bg:
           one:
           other:
         transcript:
-          one:
-          other:
+          one: Препис
+          other: Преписи
         transparency:
-          one:
-          other:
+          one: Информация за прозрачността
+          other: Информация за прозрачността
         utaac_decision:
           one:
           other:
         world_location_news_article:
-          one:
-          other:
+          one: Новинарска статия
+          other: Новинарски статии
         world_news_story:
           one:
           other:
         written_statement:
-          one:
-          other:
+          one: Писмено изявление до парламента
+          other: Писмени изявления до парламента
     corporate_information:
     document_types:
       documents:

@@ -15,23 +15,23 @@ lv:
           one:
           other:
         announcement:
-          one:
-          other:
+          one: Paziņojums
+          other: Paziņojumi
         asylum_support_decision:
           one:
           other:
         authored_article:
-          one:
-          other:
+          one: Autora raksts
+          other: Autora raksti
         business_finance_support_scheme:
           one:
           other:
         case_study:
-          one:
-          other:
+          one: Piemērs
+          other: Piemēri
         closed_consultation:
-          one:
-          other:
+          one: Slēgta tipa konsultācija
+          other: Slēgta tipa konsultācijas
         cma_case:
           one:
           other:
@@ -39,20 +39,20 @@ lv:
           one:
           other:
         consultation:
-          one:
-          other:
+          one: Konsultēšana
+          other: Konsultācijas
         consultation_outcome:
-          one:
-          other:
+          one: Konsultāciju rezultāts
+          other: Konsultāciju rezultāti
         corporate_information_page:
           one:
           other:
         corporate_report:
-          one:
-          other:
+          one: Korporatīvais ziņojums
+          other: Korporatīvie ziņojumi
         correspondence:
-          one:
-          other:
+          one: Sarakste
+          other: Sarakstes
         countryside_stewardship_grant:
           one:
           other:
@@ -60,17 +60,17 @@ lv:
           one:
           other:
         detailed_guide:
-          one:
-          other:
+          one: Detalizētas norādes
+          other: Detalizētas norādes
         dfid_research_output:
           one:
           other:
         document_collection:
-          one:
+          one: Sērija
           other:
         draft_text:
-          one:
-          other:
+          one: Teksta uzmetums
+          other: Teksta uzmetumi
         drug_safety_update:
           one:
           other:
@@ -84,29 +84,29 @@ lv:
           one:
           other:
         fatality_notice:
-          one:
-          other:
+          one: Nāves paziņojums
+          other: Nāves paziņojumi
         foi_release:
-          one:
-          other:
+          one: Informācijas atklātības datu publicēšana
+          other: Informācijas atklātības datu publicēšana
         form:
-          one:
-          other:
+          one: Forma
+          other: Formas
         government_response:
-          one:
-          other:
+          one: Valdības atbilde
+          other: Valdības atbildes
         guidance:
-          one:
-          other:
+          one: Norādes
+          other: Norādes
         impact_assessment:
-          one:
-          other:
+          one: Ietekmes novērtējums
+          other: Ietekmes novērtējumi
         imported:
-          one:
-          other:
+          one: importēts-gaidīšanas režīmā
+          other: importēts-gaidīšanas režīmā
         independent_report:
-          one:
-          other:
+          one: Neatkarīgs ziņojums
+          other: Neatkarīgi ziņojumi
         international_development_fund:
           one:
           other:
@@ -117,53 +117,59 @@ lv:
           one:
           other:
         map:
-          one:
-          other:
+          one: Karte
+          other: Kartes
         medical_safety_alert:
           one:
           other:
-        national_statistics:
+        national:
           one:
           other:
+        national_statistics:
+          one: Statistika - valsts dati
+          other: Statistika - valsts dati
         national_statistics_announcement:
           one:
           other:
         news_article:
-          one:
-          other:
+          one: Raksts
+          other: Raksti
         news_story:
-          one:
-          other:
+          one: Ziņa
+          other: Ziņas
         notice:
           one:
           other:
-        official_statistics:
+        official:
           one:
           other:
+        official_statistics:
+          one: Statistika
+          other: Statistika
         official_statistics_announcement:
           one:
           other:
         open_consultation:
-          one:
-          other:
+          one: Atklāta konsultācija
+          other: Atklātas konsultācijas
         oral_statement:
-          one:
-          other:
+          one: Mutisks paziņojums parlamentam
+          other: Mutiski paziņojumi parlamentam
         policy:
-          one:
-          other:
+          one: Darbības joma
+          other: Darbības jomas
         policy_paper:
-          one:
-          other:
+          one: Politikas dokuments
+          other: Politikas dokumenti
         press_release:
-          one:
-          other:
+          one: Paziņojums presei
+          other: Paziņojumi presei
         promotional:
-          one:
-          other:
+          one: Reklāmas materiāls
+          other: Reklāmas materiāli
         publication:
-          one:
-          other:
+          one: Publikācija
+          other: Publikācijas
         raib_report:
           one:
           other:
@@ -171,8 +177,8 @@ lv:
           one:
           other:
         research:
-          one:
-          other:
+          one: Izpēte un analīze
+          other: Izpēte un analīze
         residential_property_tribunal_decision:
           one:
           other:
@@ -183,17 +189,20 @@ lv:
           one:
           other:
         speaking_notes:
-          one:
-          other:
+          one: Runas piezīmes
+          other: Runas piezīmes
         speech:
+          one: Runa
+          other: Runas
+        standard:
           one:
           other:
         statement_to_parliament:
-          one:
-          other:
+          one: Ziņojums parlamentam
+          other: Ziņojumi parlamentam
         statistical_data_set:
-          one:
-          other:
+          one: Statistiskas datu kopums
+          other: Statistikas datu kopumi
         statistics_announcement:
           one:
           other:
@@ -207,23 +216,23 @@ lv:
           one:
           other:
         transcript:
-          one:
-          other:
+          one: Noraksts
+          other: Noraksti
         transparency:
-          one:
-          other:
+          one: Atklātības dati
+          other: Atklātības dati
         utaac_decision:
           one:
           other:
         world_location_news_article:
-          one:
-          other:
+          one: Raksts
+          other: Raksti
         world_news_story:
           one:
           other:
         written_statement:
-          one:
-          other:
+          one: Rakstisks ziņojums parlamentam
+          other: Rakstiski ziņojumi parlamentam
     corporate_information:
     document_types:
       documents:

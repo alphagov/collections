@@ -12,218 +12,153 @@ th:
     content_item:
       schema_name:
         aaib_report:
-          one:
           other:
         announcement:
-          one:
-          other:
+          other: ข่าวสาร
         asylum_support_decision:
-          one:
           other:
         authored_article:
-          one:
-          other:
+          other: บทความที่เขียน
         business_finance_support_scheme:
-          one:
           other:
         case_study:
-          one:
-          other:
+          other: กรณีศึกษา
         closed_consultation:
-          one:
-          other:
+          other: การศึกษาแบบปิด
         cma_case:
-          one:
           other:
         coming_soon:
-          one:
           other:
         consultation:
-          one:
-          other:
+          other: การปรึกษา
         consultation_outcome:
-          one:
-          other:
+          other: ผลการปรึกษา
         corporate_information_page:
-          one:
           other:
         corporate_report:
-          one:
-          other:
+          other: รายงานบริษัท
         correspondence:
-          one:
-          other:
+          other: จดหมาย
         countryside_stewardship_grant:
-          one:
           other:
         decision:
-          one:
           other:
         detailed_guide:
-          one:
-          other:
+          other: คู่มือโดยละเอียด
         dfid_research_output:
-          one:
           other:
         document_collection:
-          one:
           other:
         draft_text:
-          one:
-          other:
+          other: ร่างข้อความ
         drug_safety_update:
-          one:
           other:
         employment_appeal_tribunal_decision:
-          one:
           other:
         employment_tribunal_decision:
-          one:
           other:
         esi_fund:
-          one:
           other:
         fatality_notice:
-          one:
-          other:
+          other: การแจ้งมรณะกรรม
         foi_release:
-          one:
-          other:
+          other: ข้อมูลที่เปิดเผยได้
         form:
-          one:
-          other:
+          other: แบบฟอร์ม
         government_response:
-          one:
-          other:
+          other: การตอบสนองของรัฐบาล
         guidance:
-          one:
-          other:
+          other: คู่มือ
         impact_assessment:
-          one:
-          other:
+          other: การประเมินผลกระทบ
         imported:
-          one:
-          other:
+          other: ประเภทรอนำเข้า
         independent_report:
-          one:
-          other:
+          other: รายงานอิสระ
         international_development_fund:
-          one:
           other:
         international_treaty:
-          one:
           other:
         maib_report:
-          one:
           other:
         map:
-          one:
-          other:
+          other: แผนที่
         medical_safety_alert:
-          one:
+          other:
+        national:
           other:
         national_statistics:
-          one:
-          other:
+          other: สถิติ-สถิติแห่งชาติ
         national_statistics_announcement:
-          one:
           other:
         news_article:
-          one:
-          other:
+          other: บทความข่าว
         news_story:
-          one:
-          other:
+          other: ข่าว
         notice:
-          one:
+          other:
+        official:
           other:
         official_statistics:
-          one:
-          other:
+          other: สถิติ
         official_statistics_announcement:
-          one:
           other:
         open_consultation:
-          one:
-          other:
+          other: การให้คำปรึกษาเปิด
         oral_statement:
-          one:
-          other:
+          other: แถลงการณ์ด้วยวาจาต่อรัฐสภา
         policy:
-          one:
-          other:
+          other: นโยบาย
         policy_paper:
-          one:
-          other:
+          other: เอกสารนโยบาย
         press_release:
-          one:
-          other:
+          other: ข่าวประชาสัมพันธ์
         promotional:
-          one:
-          other:
+          other: เอกสารเพือการประชาสัมพันธ์
         publication:
-          one:
-          other:
+          other: สิ่งพิมพ์
         raib_report:
-          one:
           other:
         regulation:
-          one:
           other:
         research:
-          one:
-          other:
+          other: บทวิจัยและบทวิเคราะห์
         residential_property_tribunal_decision:
-          one:
           other:
         service_sign_in:
-          one:
           other:
         service_standard_report:
-          one:
           other:
         speaking_notes:
-          one:
-          other:
+          other: ประเด็นการพูด
         speech:
-          one:
+          other: สุนทรพจน์
+        standard:
           other:
         statement_to_parliament:
-          one:
-          other:
+          other: แถลงการณ์ต่อรัฐสภา
         statistical_data_set:
-          one:
-          other:
+          other: ชุดข้อมูลสถิติ
         statistics_announcement:
-          one:
           other:
         statutory_guidance:
-          one:
           other:
         take_part:
-          one:
           other:
         tax_tribunal_decision:
-          one:
           other:
         transcript:
-          one:
-          other:
+          other: สำเนา
         transparency:
-          one:
-          other:
+          other: ข้อมูลโปร่งใส
         utaac_decision:
-          one:
           other:
         world_location_news_article:
-          one:
-          other:
+          other: บทความข่าว
         world_news_story:
-          one:
           other:
         written_statement:
-          one:
-          other:
+          other: 'แถลงการเป็นลายลักษณ์อักษรต่อรัฐสภา '
     corporate_information:
     document_types:
       documents:

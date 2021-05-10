@@ -12,218 +12,153 @@ vi:
     content_item:
       schema_name:
         aaib_report:
-          one:
           other:
         announcement:
-          one:
-          other:
+          other: Các thông báo
         asylum_support_decision:
-          one:
           other:
         authored_article:
-          one:
-          other:
+          other: Các bài viết do tác giả
         business_finance_support_scheme:
-          one:
           other:
         case_study:
-          one:
-          other:
+          other: Các Trường hợp cụ thể
         closed_consultation:
-          one:
-          other:
+          other: Kết thúc các cuộc tham vấn
         cma_case:
-          one:
           other:
         coming_soon:
-          one:
           other:
         consultation:
-          one:
-          other:
+          other: Các cuộc tham vấn
         consultation_outcome:
-          one:
-          other:
+          other: Các Kết quả tham vấn
         corporate_information_page:
-          one:
           other:
         corporate_report:
-          one:
-          other:
+          other: Các báo cáo tổng hợp
         correspondence:
-          one:
-          other:
+          other: Liên hệ
         countryside_stewardship_grant:
-          one:
           other:
         decision:
-          one:
           other:
         detailed_guide:
-          one:
-          other:
+          other: Hướng dẫn chi tiết
         dfid_research_output:
-          one:
           other:
         document_collection:
-          one:
           other:
         draft_text:
-          one:
-          other:
+          other: Các nội dung dự thảo
         drug_safety_update:
-          one:
           other:
         employment_appeal_tribunal_decision:
-          one:
           other:
         employment_tribunal_decision:
-          one:
           other:
         esi_fund:
-          one:
           other:
         fatality_notice:
-          one:
-          other:
+          other: Tin buồn
         foi_release:
-          one:
-          other:
+          other: Thông cáo FOI
         form:
-          one:
-          other:
+          other: Các mẫu đơn
         government_response:
-          one:
-          other:
+          other: các phản hồi của Chính phủ
         guidance:
-          one:
-          other:
+          other: hướng dẫn
         impact_assessment:
-          one:
-          other:
+          other: Đánh giá tác động
         imported:
-          one:
-          other:
+          other: Loại tài liệu đính kèm
         independent_report:
-          one:
-          other:
+          other: Các báo cáo độc lập
         international_development_fund:
-          one:
           other:
         international_treaty:
-          one:
           other:
         maib_report:
-          one:
           other:
         map:
-          one:
-          other:
+          other: Các bản đồ
         medical_safety_alert:
-          one:
+          other:
+        national:
           other:
         national_statistics:
-          one:
-          other:
+          other: Thống kê - Thống kê quốc gia
         national_statistics_announcement:
-          one:
           other:
         news_article:
-          one:
-          other:
+          other: Tin tức
         news_story:
-          one:
-          other:
+          other: Câu chuyện tin tức
         notice:
-          one:
+          other:
+        official:
           other:
         official_statistics:
-          one:
-          other:
+          other: Thống kê
         official_statistics_announcement:
-          one:
           other:
         open_consultation:
-          one:
-          other:
+          other: Tham vấn mở rộng
         oral_statement:
-          one:
-          other:
+          other: Tuyên bố bằng lời nói tới quốc hội
         policy:
-          one:
-          other:
+          other: Các chính sách
         policy_paper:
-          one:
-          other:
+          other: Tài liệu chính sách
         press_release:
-          one:
-          other:
+          other: Thông cáo báo chí
         promotional:
-          one:
-          other:
+          other: Tài liệu truyền thông
         publication:
-          one:
-          other:
+          other: Tài liệu truyền thông
         raib_report:
-          one:
           other:
         regulation:
-          one:
           other:
         research:
-          one:
-          other:
+          other: Nghiên cứu và phân tích
         residential_property_tribunal_decision:
-          one:
           other:
         service_sign_in:
-          one:
           other:
         service_standard_report:
-          one:
           other:
         speaking_notes:
-          one:
-          other:
+          other: Bài phát biểu
         speech:
-          one:
+          other: Các bài phát biểu
+        standard:
           other:
         statement_to_parliament:
-          one:
-          other:
+          other: Tuyên bố tới Quốc hội
         statistical_data_set:
-          one:
-          other:
+          other: Bộ dữ liệu thống kê
         statistics_announcement:
-          one:
           other:
         statutory_guidance:
-          one:
           other:
         take_part:
-          one:
           other:
         tax_tribunal_decision:
-          one:
           other:
         transcript:
-          one:
-          other:
+          other: Kịch bản
         transparency:
-          one:
-          other:
+          other: Dữ liệu kịch bản
         utaac_decision:
-          one:
           other:
         world_location_news_article:
-          one:
-          other:
+          other: Tin tức
         world_news_story:
-          one:
           other:
         written_statement:
-          one:
-          other:
+          other: Các Tuyên bố bằng văn bản tới quốc hội
     corporate_information:
     document_types:
       documents:

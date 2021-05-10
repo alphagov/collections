@@ -15,23 +15,23 @@ tr:
           one:
           other:
         announcement:
-          one:
-          other:
+          one: Duyuru
+          other: Duyurular
         asylum_support_decision:
           one:
           other:
         authored_article:
-          one:
-          other:
+          one: Yazılan makale
+          other: Yazılan makaleler
         business_finance_support_scheme:
           one:
           other:
         case_study:
-          one:
-          other:
+          one: Örnek Olay
+          other: Örnek Olaylar
         closed_consultation:
-          one:
-          other:
+          one: Sona eren çalışmalar
+          other: Sona eren çalışmalar
         cma_case:
           one:
           other:
@@ -39,20 +39,20 @@ tr:
           one:
           other:
         consultation:
-          one:
-          other:
+          one: Danışma
+          other: Yapılan Danışmalar
         consultation_outcome:
-          one:
-          other:
+          one: Danışma sonucu
+          other: Danışma sonuçları
         corporate_information_page:
           one:
           other:
         corporate_report:
-          one:
-          other:
+          one: Kurumsal Rapor
+          other: Kurumsal Raporlar
         correspondence:
-          one:
-          other:
+          one: Yazışma
+          other: Yazışmalar
         countryside_stewardship_grant:
           one:
           other:
@@ -60,17 +60,17 @@ tr:
           one:
           other:
         detailed_guide:
-          one:
-          other:
+          one: Ayrıntılı Kılavuz
+          other: Ayrıntılı Kılavuzlar
         dfid_research_output:
           one:
           other:
         document_collection:
-          one:
+          one: Seriler
           other:
         draft_text:
-          one:
-          other:
+          one: Taslak metin
+          other: Taslak metinler
         drug_safety_update:
           one:
           other:
@@ -84,29 +84,29 @@ tr:
           one:
           other:
         fatality_notice:
-          one:
-          other:
+          one: Ölüm ilanı
+          other: Ölüm ilanları
         foi_release:
-          one:
-          other:
+          one: Bilgi edinme hakkı raporu
+          other: Bilgi edinme hakkı raporları
         form:
-          one:
-          other:
+          one: Form
+          other: Formlar
         government_response:
-          one:
-          other:
+          one: Hükümet cevabı
+          other: Hükümet cevapları
         guidance:
-          one:
-          other:
+          one: Kılavuz
+          other: Kılavuzlar
         impact_assessment:
-          one:
-          other:
+          one: Etki değerlendirmesi
+          other: Etki değerlendirmeleri
         imported:
-          one:
-          other:
+          one: Alındı - Kategorize edilecek
+          other: Alındı - Kategorize edilecek
         independent_report:
-          one:
-          other:
+          one: Bağımsız rapor
+          other: Bağımsız raporlar
         international_development_fund:
           one:
           other:
@@ -117,53 +117,59 @@ tr:
           one:
           other:
         map:
-          one:
-          other:
+          one: Harita
+          other: Haritalar
         medical_safety_alert:
           one:
           other:
-        national_statistics:
+        national:
           one:
           other:
+        national_statistics:
+          one: İstatistikler - ulusal istatistikler
+          other: İstatistikler - ulusal istatistikler
         national_statistics_announcement:
           one:
           other:
         news_article:
-          one:
-          other:
+          one: Makale
+          other: Makaleler
         news_story:
-          one:
-          other:
+          one: Haber
+          other: Haberler
         notice:
           one:
           other:
-        official_statistics:
+        official:
           one:
           other:
+        official_statistics:
+          one: İstatistikler
+          other: İstatistikler
         official_statistics_announcement:
           one:
           other:
         open_consultation:
-          one:
-          other:
+          one: Devam eden çalışma
+          other: Devam eden çalışmalar
         oral_statement:
-          one:
-          other:
+          one: Parlamento'ya sözlü açıklama
+          other: Parlamento'ya sözlü açıklamalar
         policy:
-          one:
-          other:
+          one: Politika
+          other: Politikalar
         policy_paper:
-          one:
-          other:
+          one: Politika belgesi
+          other: Politika belgeleri
         press_release:
-          one:
-          other:
+          one: Basın Bülteni
+          other: Basın Bültenleri
         promotional:
-          one:
-          other:
+          one: Tanıtım Malzemesi
+          other: Tanıtım Malzemeleri
         publication:
-          one:
-          other:
+          one: Yayın
+          other: Yayınlar
         raib_report:
           one:
           other:
@@ -171,8 +177,8 @@ tr:
           one:
           other:
         research:
-          one:
-          other:
+          one: Araştırma ve analiz
+          other: Araştırma ve analizler
         residential_property_tribunal_decision:
           one:
           other:
@@ -183,17 +189,20 @@ tr:
           one:
           other:
         speaking_notes:
-          one:
-          other:
+          one: Konuşma notu
+          other: Konuşma notları
         speech:
+          one: Konuşma
+          other: Konuşmalar
+        standard:
           one:
           other:
         statement_to_parliament:
-          one:
-          other:
+          one: Parlamento'ya yapılan açıklama
+          other: Parlamento'ya yapılan açıklamalar
         statistical_data_set:
-          one:
-          other:
+          one: İstatiksel veri setleri
+          other: İstatiksel veri setleri
         statistics_announcement:
           one:
           other:
@@ -207,23 +216,23 @@ tr:
           one:
           other:
         transcript:
-          one:
-          other:
+          one: Transkriptler
+          other: Transkriptler
         transparency:
-          one:
-          other:
+          one: Veri saydamlığı
+          other: Veri saydamlığı
         utaac_decision:
           one:
           other:
         world_location_news_article:
-          one:
-          other:
+          one: Makale
+          other: Makaleler
         world_news_story:
           one:
           other:
         written_statement:
-          one:
-          other:
+          one: Parlamento'ya yapılan yazılı açıklama
+          other: Parlamento'ya yapılan yazılı açıklamalar
     corporate_information:
     document_types:
       documents:

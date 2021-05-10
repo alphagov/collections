@@ -12,218 +12,301 @@ ro:
     content_item:
       schema_name:
         aaib_report:
+          few:
           one:
           other:
         announcement:
-          one:
-          other:
+          few:
+          one: Știre
+          other: Știri
         asylum_support_decision:
+          few:
           one:
           other:
         authored_article:
-          one:
-          other:
+          few:
+          one: 'Articol '
+          other: 'Articol '
         business_finance_support_scheme:
+          few:
           one:
           other:
         case_study:
-          one:
-          other:
+          few:
+          one: Studiu de caz
+          other: Studii de caz
         closed_consultation:
-          one:
-          other:
+          few:
+          one: Dezbatere
+          other: Dezbateri
         cma_case:
+          few:
           one:
           other:
         coming_soon:
+          few:
           one:
           other:
         consultation:
-          one:
-          other:
+          few:
+          one: Dezbatere
+          other: Dezbateri
         consultation_outcome:
-          one:
-          other:
+          few:
+          one: Concluzia dezbaterii
+          other: Concluziile dezbaterii
         corporate_information_page:
+          few:
           one:
           other:
         corporate_report:
-          one:
-          other:
+          few:
+          one: Raport
+          other: Rapoarte
         correspondence:
-          one:
-          other:
+          few:
+          one: Similaritate
+          other: Similarităţi
         countryside_stewardship_grant:
+          few:
           one:
           other:
         decision:
+          few:
           one:
           other:
         detailed_guide:
-          one:
-          other:
+          few:
+          one: Mai multe detalii
+          other: Mai multe detalii
         dfid_research_output:
+          few:
           one:
           other:
         document_collection:
-          one:
+          few:
+          one: Seria
           other:
         draft_text:
-          one:
-          other:
+          few:
+          one: Versiune preliminară
+          other: Versiuni preliminare
         drug_safety_update:
+          few:
           one:
           other:
         employment_appeal_tribunal_decision:
+          few:
           one:
           other:
         employment_tribunal_decision:
+          few:
           one:
           other:
         esi_fund:
+          few:
           one:
           other:
         fatality_notice:
-          one:
-          other:
+          few:
+          one: Anunț privind decesul
+          other: Anunțuri privind decese
         foi_release:
-          one:
-          other:
+          few:
+          one: 'Acces la informații publice '
+          other: 'Acces la informații publice '
         form:
-          one:
-          other:
+          few:
+          one: Formular
+          other: Formulare
         government_response:
-          one:
-          other:
+          few:
+          one: 'Document de poziție '
+          other: 'Documente de poziție '
         guidance:
-          one:
-          other:
+          few:
+          one: Mai multe detalii
+          other: Mai multe detalii
         impact_assessment:
-          one:
-          other:
+          few:
+          one: 'Evaluarea impactului '
+          other: 'Evaluarea impactului '
         imported:
+          few:
           one:
           other:
         independent_report:
-          one:
-          other:
+          few:
+          one: Raport independent
+          other: Rapoarte independente
         international_development_fund:
+          few:
           one:
           other:
         international_treaty:
+          few:
           one:
           other:
         maib_report:
+          few:
           one:
           other:
         map:
+          few:
+          one: Hartă
+          other: Hărţi
+        medical_safety_alert:
+          few:
           one:
           other:
-        medical_safety_alert:
+        national:
+          few:
           one:
           other:
         national_statistics:
-          one:
-          other:
+          few:
+          one: Statistici - statistici naționale
+          other: Statistici - statistici naționale
         national_statistics_announcement:
+          few:
           one:
           other:
         news_article:
-          one:
-          other:
+          few:
+          one: Știre
+          other: Știri
         news_story:
+          few:
+          one: Știre
+          other: Știri
+        notice:
+          few:
           one:
           other:
-        notice:
+        official:
+          few:
           one:
           other:
         official_statistics:
-          one:
-          other:
+          few:
+          one: Statistici
+          other: Statistici
         official_statistics_announcement:
+          few:
           one:
           other:
         open_consultation:
-          one:
-          other:
+          few:
+          one: Dezbatere
+          other: Dezbateri
         oral_statement:
-          one:
-          other:
+          few:
+          one: 'Declarație verbală în fața Parlamentului '
+          other: 'Declarații verbale în fața Parlamentului '
         policy:
-          one:
-          other:
+          few:
+          one: Obiectiv strategic
+          other: Obiective strategic
         policy_paper:
+          few:
           one:
           other:
         press_release:
-          one:
-          other:
+          few:
+          one: Știre
+          other: Știri
         promotional:
-          one:
-          other:
+          few:
+          one: Material promoțional
+          other: Materiale promoționale
         publication:
-          one:
-          other:
+          few:
+          one: Publicație
+          other: Publicații
         raib_report:
+          few:
           one:
           other:
         regulation:
+          few:
           one:
           other:
         research:
-          one:
-          other:
+          few:
+          one: Analiză și cercetare
+          other: Analiză și cercetare
         residential_property_tribunal_decision:
+          few:
           one:
           other:
         service_sign_in:
+          few:
           one:
           other:
         service_standard_report:
+          few:
           one:
           other:
         speaking_notes:
-          one:
-          other:
+          few:
+          one: 'Note '
+          other: 'Note '
         speech:
+          few:
+          one: Discurs
+          other: Discursuri
+        standard:
+          few:
           one:
           other:
         statement_to_parliament:
-          one:
-          other:
+          few:
+          one: Declarație în Parlament
+          other: Declarații în Parlament
         statistical_data_set:
-          one:
-          other:
+          few:
+          one: Date statistice
+          other: Date statistice
         statistics_announcement:
+          few:
           one:
           other:
         statutory_guidance:
+          few:
           one:
           other:
         take_part:
+          few:
           one:
           other:
         tax_tribunal_decision:
+          few:
           one:
           other:
         transcript:
-          one:
-          other:
+          few:
+          one: Transcriere
+          other: Transcrieri
         transparency:
+          few:
           one:
           other:
         utaac_decision:
+          few:
           one:
           other:
         world_location_news_article:
-          one:
-          other:
+          few:
+          one: Știre
+          other: Știri
         world_news_story:
+          few:
           one:
           other:
         written_statement:
-          one:
-          other:
+          few:
+          one: 'Declarație scrisă către Parlament '
+          other: 'Declarații scrise către Parlament '
     corporate_information:
     document_types:
       documents:

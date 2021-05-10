@@ -15,23 +15,23 @@ el:
           one:
           other:
         announcement:
-          one:
-          other:
+          one: Ανακοίνωση
+          other: Ανακοινώσεις
         asylum_support_decision:
           one:
           other:
         authored_article:
-          one:
-          other:
+          one: Κείμενο συντάκτη
+          other: Κείμενα συντακτών
         business_finance_support_scheme:
           one:
           other:
         case_study:
-          one:
-          other:
+          one: Παράδειγμα
+          other: Παραδείγματα
         closed_consultation:
-          one:
-          other:
+          one: Κλειστή διαβούλευση
+          other: Κλειστές διαβουλεύσεις
         cma_case:
           one:
           other:
@@ -39,20 +39,20 @@ el:
           one:
           other:
         consultation:
-          one:
-          other:
+          one: Διαβούλευση
+          other: Διαβουλεύσεις
         consultation_outcome:
-          one:
-          other:
+          one: Αποτέλεσμα διαβούλευσης
+          other: Αποτελέσματα διαβούλευσης
         corporate_information_page:
           one:
           other:
         corporate_report:
-          one:
-          other:
+          one: Έκθεση Οργανισμού
+          other: Εκθέσεις Οργανισμού
         correspondence:
-          one:
-          other:
+          one: Αλληλογραφία
+          other: Αλληλογραφία
         countryside_stewardship_grant:
           one:
           other:
@@ -60,17 +60,17 @@ el:
           one:
           other:
         detailed_guide:
-          one:
-          other:
+          one: Οδηγίες
+          other: Οδηγίες
         dfid_research_output:
           one:
           other:
         document_collection:
-          one:
+          one: Σειρά
           other:
         draft_text:
-          one:
-          other:
+          one: Προσχέδιο
+          other: Προσχέδια
         drug_safety_update:
           one:
           other:
@@ -84,29 +84,29 @@ el:
           one:
           other:
         fatality_notice:
-          one:
-          other:
+          one: Ανακοίνωση θανάτου
+          other: Ανακοινώσεις θανάτων
         foi_release:
-          one:
-          other:
+          one: Δημοσιοποίηση
+          other: Δημοσιοποίηση
         form:
-          one:
-          other:
+          one: Έντυπο
+          other: Έντυπα
         government_response:
-          one:
-          other:
+          one: Η θέση της Κυβέρνησης
+          other: Οι θέσεις της Κυβέρνησης
         guidance:
-          one:
-          other:
+          one: Οδηγίες
+          other: Οδηγίες
         impact_assessment:
-          one:
-          other:
+          one: Αξιολόγηση αποτελέσματος
+          other: Αξιολογήσεις αποτελέσματος
         imported:
-          one:
-          other:
+          one: " εισηγμένο  - σε αναμονή"
+          other: εισηγμένα - σε αναμονή
         independent_report:
-          one:
-          other:
+          one: Έκθεση ανεξάρτητης αρχής
+          other: Εκθέσεις ανεξάρτητων αρχών
         international_development_fund:
           one:
           other:
@@ -117,53 +117,59 @@ el:
           one:
           other:
         map:
-          one:
-          other:
+          one: Χάρτης
+          other: Χάρτες
         medical_safety_alert:
           one:
           other:
-        national_statistics:
+        national:
           one:
           other:
+        national_statistics:
+          one: Στατιστικά στοιχεία- εθνικά στατιστικά στοιχεία
+          other: Στατιστικά στοιχεία- εθνικά στατιστικά στοιχεία
         national_statistics_announcement:
           one:
           other:
         news_article:
-          one:
-          other:
+          one: Είδηση
+          other: Ειδήσεις
         news_story:
-          one:
-          other:
+          one: Νέα
+          other: Νέα
         notice:
           one:
           other:
-        official_statistics:
+        official:
           one:
           other:
+        official_statistics:
+          one: Στατιστικά στοιχεία
+          other: Στατιστικά στοιχεία
         official_statistics_announcement:
           one:
           other:
         open_consultation:
-          one:
-          other:
+          one: Ανοιχτή διαβούλευση
+          other: Ανοιχτές διαβουλεύσεις
         oral_statement:
-          one:
-          other:
+          one: Δήλωση στη Βουλή
+          other: 'Δηλώσεις στη Βουλή '
         policy:
-          one:
-          other:
+          one: Πολιτική
+          other: Πολιτικές
         policy_paper:
-          one:
-          other:
+          one: Κείμενο πολιτικής
+          other: Κείμενα πολιτικής
         press_release:
-          one:
-          other:
+          one: Δελτίο Τύπου
+          other: Δελτία Τύπου
         promotional:
-          one:
-          other:
+          one: Προωθητικό υλικό
+          other: Προωθητικό υλικό
         publication:
-          one:
-          other:
+          one: Έκδοση
+          other: Εκδόσεις
         raib_report:
           one:
           other:
@@ -171,8 +177,8 @@ el:
           one:
           other:
         research:
-          one:
-          other:
+          one: Έρευνα και ανάλυση
+          other: Έρευνα και ανάλυση
         residential_property_tribunal_decision:
           one:
           other:
@@ -183,17 +189,20 @@ el:
           one:
           other:
         speaking_notes:
-          one:
-          other:
+          one: Βασικά σημεία ομιλίας
+          other: Βασικά σημεία ομιλίας
         speech:
+          one: Ομιλία
+          other: Ομιλίες
+        standard:
           one:
           other:
         statement_to_parliament:
-          one:
-          other:
+          one: Δήλωση στη Βουλή
+          other: 'Δηλώσεις στη Βουλή '
         statistical_data_set:
-          one:
-          other:
+          one: Στατιστικά στοιχεία
+          other: Στατιστικά στοιχεία
         statistics_announcement:
           one:
           other:
@@ -207,23 +216,23 @@ el:
           one:
           other:
         transcript:
-          one:
-          other:
+          one: Απομαγνητοφώνηση
+          other: Απομαγνητοφωνήσεις
         transparency:
-          one:
-          other:
+          one: Στοιχεία διαφάνειας
+          other: Στοιχεία διαφάνειας
         utaac_decision:
           one:
           other:
         world_location_news_article:
-          one:
-          other:
+          one: Είδηση
+          other: Ειδήσεις
         world_news_story:
           one:
           other:
         written_statement:
-          one:
-          other:
+          one: Γραπτή  δήλωση στη Βουλή
+          other: Γραπτές δηλώσεις στη Βουλή
     corporate_information:
     document_types:
       documents:

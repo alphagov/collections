@@ -15,23 +15,23 @@ hu:
           one:
           other:
         announcement:
-          one:
-          other:
+          one: Bejelentés
+          other: Bejelentések
         asylum_support_decision:
           one:
           other:
         authored_article:
-          one:
-          other:
+          one: Publicisztika
+          other: Publicisztikák
         business_finance_support_scheme:
           one:
           other:
         case_study:
-          one:
-          other:
+          one: Esettanulmány
+          other: Esettanulmányok
         closed_consultation:
-          one:
-          other:
+          one: Lezárt konzultáció
+          other: Lezárt konzultációk
         cma_case:
           one:
           other:
@@ -39,20 +39,20 @@ hu:
           one:
           other:
         consultation:
-          one:
-          other:
+          one: Konzultáció
+          other: Konzultációk
         consultation_outcome:
-          one:
-          other:
+          one: Konzultációs eredmény
+          other: Konzultációs eredmények
         corporate_information_page:
           one:
           other:
         corporate_report:
-          one:
-          other:
+          one: Testületi beszámoló
+          other: Testületi beszámolók
         correspondence:
-          one:
-          other:
+          one: Levelezés
+          other: Levelezések
         countryside_stewardship_grant:
           one:
           other:
@@ -60,17 +60,17 @@ hu:
           one:
           other:
         detailed_guide:
-          one:
-          other:
+          one: Részletes útmutató
+          other: Részletes útmutató
         dfid_research_output:
           one:
           other:
         document_collection:
-          one:
+          one: Sorozatok
           other:
         draft_text:
-          one:
-          other:
+          one: Szövegtervezet
+          other: Szövegtervezetek
         drug_safety_update:
           one:
           other:
@@ -84,29 +84,29 @@ hu:
           one:
           other:
         fatality_notice:
-          one:
-          other:
+          one: Halálesettel kapcsolatos értesítés
+          other: Halálesettel kapcsolatos értesítések
         foi_release:
-          one:
-          other:
+          one: Információhoz való joggal kapcsolatos közlemény
+          other: Információhoz való joggal kapcsolatos közlemények
         form:
-          one:
-          other:
+          one: Űrlap
+          other: Űrlapok
         government_response:
-          one:
-          other:
+          one: Kormányválasz
+          other: Kormányválaszok
         guidance:
-          one:
-          other:
+          one: Útmutató
+          other: Útmutató
         impact_assessment:
-          one:
-          other:
+          one: Hatásvizsgálat
+          other: Hatásvizsgálatok
         imported:
-          one:
-          other:
+          one: Importálva
+          other: Importálva
         independent_report:
-          one:
-          other:
+          one: Független beszámoló
+          other: Független beszámolók
         international_development_fund:
           one:
           other:
@@ -117,53 +117,59 @@ hu:
           one:
           other:
         map:
-          one:
-          other:
+          one: Térkép
+          other: Térképek
         medical_safety_alert:
           one:
           other:
-        national_statistics:
+        national:
           one:
           other:
+        national_statistics:
+          one: Statisztikák - nemzeti adatok
+          other: Statisztikák - nemzeti adatok
         national_statistics_announcement:
           one:
           other:
         news_article:
-          one:
-          other:
+          one: Cikk
+          other: Cikkek
         news_story:
-          one:
-          other:
+          one: Hír
+          other: Hírek
         notice:
           one:
           other:
-        official_statistics:
+        official:
           one:
           other:
+        official_statistics:
+          one: Statisztika
+          other: Statisztikák
         official_statistics_announcement:
           one:
           other:
         open_consultation:
-          one:
-          other:
+          one: Nyílt konzultáció
+          other: Nyílt konzultációk
         oral_statement:
-          one:
-          other:
+          one: Parlamenti felszólalás
+          other: Parlamenti felszólalások
         policy:
-          one:
-          other:
+          one: Szakpolitika
+          other: Szakpolitikák
         policy_paper:
-          one:
-          other:
+          one: Szakpolitikai dokumentum
+          other: Szakpolitikai dokumentumok
         press_release:
-          one:
-          other:
+          one: Sajtóközlemény
+          other: Sajtóközlemények
         promotional:
-          one:
-          other:
+          one: Promóciós anyag
+          other: Promóciós anyagok
         publication:
-          one:
-          other:
+          one: Kiadvány
+          other: Kiadványok
         raib_report:
           one:
           other:
@@ -171,8 +177,8 @@ hu:
           one:
           other:
         research:
-          one:
-          other:
+          one: Kutatás és elemzés
+          other: Kutatás és elemzés
         residential_property_tribunal_decision:
           one:
           other:
@@ -183,17 +189,20 @@ hu:
           one:
           other:
         speaking_notes:
-          one:
-          other:
+          one: Feljegyzések
+          other: Feljegyzések
         speech:
+          one: Beszéd
+          other: Beszédek
+        standard:
           one:
           other:
         statement_to_parliament:
-          one:
-          other:
+          one: Parlamenti nyilatkozat
+          other: Parlamenti nyilatkozatok
         statistical_data_set:
-          one:
-          other:
+          one: Statisztikai adatcsoport
+          other: Statisztikai adatcsoportok
         statistics_announcement:
           one:
           other:
@@ -207,23 +216,23 @@ hu:
           one:
           other:
         transcript:
-          one:
-          other:
+          one: Átirat
+          other: Átiratok
         transparency:
-          one:
-          other:
+          one: Átláthatósági adatok
+          other: Átláthatósági adatok
         utaac_decision:
           one:
           other:
         world_location_news_article:
-          one:
-          other:
+          one: Cikk
+          other: Cikkek
         world_news_story:
           one:
           other:
         written_statement:
-          one:
-          other:
+          one: Írásbeli parlamenti nyilatkozat
+          other: Írásbeli parlamenti nyilatkozatok
     corporate_information:
     document_types:
       documents:

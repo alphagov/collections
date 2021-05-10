@@ -15,23 +15,23 @@ he:
           one:
           other:
         announcement:
-          one:
-          other:
+          one: הודעה
+          other: הודעות
         asylum_support_decision:
           one:
           other:
         authored_article:
-          one:
-          other:
+          one: מאמר מאושר
+          other: מאמרים מאושרים
         business_finance_support_scheme:
           one:
           other:
         case_study:
-          one:
-          other:
+          one: מקרה בוחן
+          other: מקרי בוחן
         closed_consultation:
-          one:
-          other:
+          one: דיון סגור
+          other: דיונים סגורים
         cma_case:
           one:
           other:
@@ -39,20 +39,20 @@ he:
           one:
           other:
         consultation:
-          one:
-          other:
+          one: דיון
+          other: דיונים
         consultation_outcome:
-          one:
-          other:
+          one: תוצאות דיון
+          other: תוצאות דיונים
         corporate_information_page:
           one:
           other:
         corporate_report:
-          one:
-          other:
+          one: דו"ח משותף
+          other: דו"חות משותפים
         correspondence:
-          one:
-          other:
+          one: תכתובת
+          other: תכתובות
         countryside_stewardship_grant:
           one:
           other:
@@ -60,17 +60,17 @@ he:
           one:
           other:
         detailed_guide:
-          one:
-          other:
+          one: מדריך מפורט
+          other: מדריך מפורט
         dfid_research_output:
           one:
           other:
         document_collection:
-          one:
+          one: סדרות
           other:
         draft_text:
-          one:
-          other:
+          one: טיוטה
+          other: טיוטות
         drug_safety_update:
           one:
           other:
@@ -84,29 +84,29 @@ he:
           one:
           other:
         fatality_notice:
-          one:
-          other:
+          one: הודעת פטירה
+          other: הודעות פטירה
         foi_release:
-          one:
-          other:
+          one: פרסום חופש מידע
+          other: פרסומי חופש מידע
         form:
-          one:
-          other:
+          one: טופס
+          other: טפסים
         government_response:
-          one:
-          other:
+          one: תגובה ממשלתית
+          other: תגובות ממשלתיות
         guidance:
-          one:
-          other:
+          one: הדרכה
+          other: הדרכה
         impact_assessment:
-          one:
-          other:
+          one: הערכת השפעה
+          other: הערכת השפעות
         imported:
-          one:
-          other:
+          one: יבוא- המתנה לסוג
+          other: יבוא- המתנה לסוג
         independent_report:
-          one:
-          other:
+          one: דו"ח עצמאי
+          other: דו"ות עצמאיים
         international_development_fund:
           one:
           other:
@@ -117,53 +117,59 @@ he:
           one:
           other:
         map:
-          one:
-          other:
+          one: מפה
+          other: מפות
         medical_safety_alert:
           one:
           other:
-        national_statistics:
+        national:
           one:
           other:
+        national_statistics:
+          one: סטטיסטיקות- סטטיסטיקה לאומית
+          other: סטטיסטיקות- סטטסטיקה לאומית
         national_statistics_announcement:
           one:
           other:
         news_article:
-          one:
-          other:
+          one: מאמר חדשות
+          other: מאמרי חדשות
         news_story:
-          one:
-          other:
+          one: חדשות
+          other: חדשות
         notice:
           one:
           other:
-        official_statistics:
+        official:
           one:
           other:
+        official_statistics:
+          one: נתונים
+          other: נתונים
         official_statistics_announcement:
           one:
           other:
         open_consultation:
-          one:
-          other:
+          one: דיון פתוח
+          other: דיון פתוח
         oral_statement:
-          one:
-          other:
+          one: הצהרה בעל פה לפרלמנט
+          other: הצהרות בעל פה לפרלמנט
         policy:
-          one:
-          other:
+          one: מדיניות
+          other: מדיניות
         policy_paper:
-          one:
-          other:
+          one: נייר מדיניות
+          other: ניירות מדיניות
         press_release:
-          one:
-          other:
+          one: הודעה לעיתונות
+          other: הודעות לעיתונות
         promotional:
-          one:
-          other:
+          one: חומר פרסומי
+          other: חומר פרסומי
         publication:
-          one:
-          other:
+          one: פרסום
+          other: פרסומים
         raib_report:
           one:
           other:
@@ -171,8 +177,8 @@ he:
           one:
           other:
         research:
-          one:
-          other:
+          one: מחקר וניתוח
+          other: מחקר וניתוח
         residential_property_tribunal_decision:
           one:
           other:
@@ -183,17 +189,20 @@ he:
           one:
           other:
         speaking_notes:
-          one:
-          other:
+          one: נאומים
+          other: נאומים
         speech:
+          one: נאום
+          other: נאומים
+        standard:
           one:
           other:
         statement_to_parliament:
-          one:
-          other:
+          one: הצהרה לפרלמנט
+          other: הצהרות לפרלמנט
         statistical_data_set:
-          one:
-          other:
+          one: מידע סטטיסטי
+          other: מידע סטטיסטי
         statistics_announcement:
           one:
           other:
@@ -207,23 +216,23 @@ he:
           one:
           other:
         transcript:
-          one:
-          other:
+          one: תמלול
+          other: תמלולים
         transparency:
-          one:
-          other:
+          one: שקיפות מידע
+          other: שקיפות מידע
         utaac_decision:
           one:
           other:
         world_location_news_article:
-          one:
-          other:
+          one: מאמר חדשות
+          other: מאמרי חדשות
         world_news_story:
           one:
           other:
         written_statement:
-          one:
-          other:
+          one: הצהרה בכתב לפרלמנט
+          other: הצהרות בכתב לפרלמנט
     corporate_information:
     document_types:
       documents:

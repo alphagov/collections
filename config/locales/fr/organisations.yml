@@ -15,23 +15,23 @@ fr:
           one:
           other:
         announcement:
-          one:
-          other:
+          one: Annonce
+          other: Annonces
         asylum_support_decision:
           one:
           other:
         authored_article:
-          one:
-          other:
+          one: Article signé
+          other: Articles signés
         business_finance_support_scheme:
           one:
           other:
         case_study:
-          one:
-          other:
+          one: Etude de cas
+          other: Etudes de cas
         closed_consultation:
-          one:
-          other:
+          one: Consultation close
+          other: Consultations closes
         cma_case:
           one:
           other:
@@ -39,20 +39,20 @@ fr:
           one:
           other:
         consultation:
-          one:
-          other:
+          one: Consultation
+          other: Consultations
         consultation_outcome:
-          one:
-          other:
+          one: Résultat de la consultation
+          other: Résultats de la consultation
         corporate_information_page:
           one:
           other:
         corporate_report:
-          one:
-          other:
+          one: Rapport d'activité
+          other: Rapports d'activité
         correspondence:
-          one:
-          other:
+          one: Correspondance
+          other: Correspondances
         countryside_stewardship_grant:
           one:
           other:
@@ -60,17 +60,17 @@ fr:
           one:
           other:
         detailed_guide:
-          one:
-          other:
+          one: Instructions détaillées
+          other: Instructions détaillées
         dfid_research_output:
           one:
           other:
         document_collection:
-          one:
+          one: Série
           other:
         draft_text:
-          one:
-          other:
+          one: Projet de texte
+          other: Projets de textes
         drug_safety_update:
           one:
           other:
@@ -84,29 +84,29 @@ fr:
           one:
           other:
         fatality_notice:
-          one:
-          other:
+          one: Avis de décès
+          other: Avis de décès
         foi_release:
-          one:
-          other:
+          one: Communiqué Freedom of Information
+          other: Communiqués Freedom of Information
         form:
-          one:
-          other:
+          one: Formulaire
+          other: Formulaires
         government_response:
-          one:
-          other:
+          one: Réponse du gouvernement
+          other: Réponses du gouvernement
         guidance:
-          one:
-          other:
+          one: Instructions
+          other: Instructions
         impact_assessment:
-          one:
-          other:
+          one: Evaluation des impacts
+          other: Evaluations des impacts
         imported:
-          one:
-          other:
+          one: Importé
+          other: Importé
         independent_report:
-          one:
-          other:
+          one: Rapport indépendant
+          other: Rapports indépendants
         international_development_fund:
           one:
           other:
@@ -117,53 +117,59 @@ fr:
           one:
           other:
         map:
-          one:
-          other:
+          one: Carte
+          other: Cartes
         medical_safety_alert:
           one:
           other:
-        national_statistics:
+        national:
           one:
           other:
+        national_statistics:
+          one: Statistiques - statistiques nationales
+          other: Statistiques - statistiques nationales
         national_statistics_announcement:
           one:
           other:
         news_article:
-          one:
-          other:
+          one: Actualités
+          other: Actualités
         news_story:
-          one:
-          other:
+          one: Actualités
+          other: Actualités
         notice:
           one:
           other:
-        official_statistics:
+        official:
           one:
           other:
+        official_statistics:
+          one: Statistiques
+          other: Statistiques
         official_statistics_announcement:
           one:
           other:
         open_consultation:
-          one:
-          other:
+          one: Consultation ouverte
+          other: Consultations ouvertes
         oral_statement:
-          one:
-          other:
+          one: Déclaration orale au Parlement
+          other: Déclarations orales au Parlement
         policy:
-          one:
-          other:
+          one: Priorité politique
+          other: Priorités politiques
         policy_paper:
-          one:
-          other:
+          one: Document d'orientation
+          other: Documents d'orientation
         press_release:
-          one:
-          other:
+          one: Communiqué de presse
+          other: Communiqués de presse
         promotional:
-          one:
-          other:
+          one: Matériel promotionnel
+          other: Matériel promotionnel
         publication:
-          one:
-          other:
+          one: Publication
+          other: Publications
         raib_report:
           one:
           other:
@@ -171,8 +177,8 @@ fr:
           one:
           other:
         research:
-          one:
-          other:
+          one: Recherche et analyse
+          other: Recherche et analyse
         residential_property_tribunal_decision:
           one:
           other:
@@ -183,17 +189,20 @@ fr:
           one:
           other:
         speaking_notes:
-          one:
-          other:
+          one: Notes d'allocution
+          other: Notes d'allocution
         speech:
+          one: Discours
+          other: Discours
+        standard:
           one:
           other:
         statement_to_parliament:
-          one:
-          other:
+          one: Déclaration au Parlement
+          other: Déclarations au Parlement
         statistical_data_set:
-          one:
-          other:
+          one: Ensemble de données statistiques
+          other: Ensembles de données statistiques
         statistics_announcement:
           one:
           other:
@@ -207,23 +216,23 @@ fr:
           one:
           other:
         transcript:
-          one:
-          other:
+          one: Transcription
+          other: Transcriptions
         transparency:
-          one:
-          other:
+          one: Transparence des données
+          other: Transparence des données
         utaac_decision:
           one:
           other:
         world_location_news_article:
-          one:
-          other:
+          one: Actualités
+          other: Actualités
         world_news_story:
           one:
           other:
         written_statement:
-          one:
-          other:
+          one: Communiqué
+          other: Communiqués
     corporate_information:
     document_types:
       documents:

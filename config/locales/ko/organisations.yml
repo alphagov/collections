@@ -12,218 +12,153 @@ ko:
     content_item:
       schema_name:
         aaib_report:
-          one:
           other:
         announcement:
-          one:
-          other:
+          other: 공지
         asylum_support_decision:
-          one:
           other:
         authored_article:
-          one:
-          other:
+          other: 기사
         business_finance_support_scheme:
-          one:
           other:
         case_study:
-          one:
-          other:
+          other: 케이스 스터디
         closed_consultation:
-          one:
-          other:
+          other: 비공개 협의
         cma_case:
-          one:
           other:
         coming_soon:
-          one:
           other:
         consultation:
-          one:
-          other:
+          other: 협의
         consultation_outcome:
-          one:
-          other:
+          other: 협의 결과
         corporate_information_page:
-          one:
           other:
         corporate_report:
-          one:
-          other:
+          other: 기업 레포트
         correspondence:
-          one:
-          other:
+          other: 서신
         countryside_stewardship_grant:
-          one:
           other:
         decision:
-          one:
           other:
         detailed_guide:
-          one:
-          other:
+          other: 상세 안내
         dfid_research_output:
-          one:
           other:
         document_collection:
-          one:
           other:
         draft_text:
-          one:
-          other:
+          other: 드래프트 택스트
         drug_safety_update:
-          one:
           other:
         employment_appeal_tribunal_decision:
-          one:
           other:
         employment_tribunal_decision:
-          one:
           other:
         esi_fund:
-          one:
           other:
         fatality_notice:
-          one:
-          other:
+          other: 사상자 공지
         foi_release:
-          one:
-          other:
+          other: FOI 보도자료
         form:
-          one:
-          other:
+          other: 문서
         government_response:
-          one:
-          other:
+          other: 정부 대책
         guidance:
-          one:
-          other:
+          other: 안내
         impact_assessment:
-          one:
-          other:
+          other: 임팩트 평가
         imported:
-          one:
-          other:
+          other: 수입 - 대기
         independent_report:
-          one:
-          other:
+          other: 독립 레포트
         international_development_fund:
-          one:
           other:
         international_treaty:
-          one:
           other:
         maib_report:
-          one:
           other:
         map:
-          one:
-          other:
+          other: 지도
         medical_safety_alert:
-          one:
+          other:
+        national:
           other:
         national_statistics:
-          one:
-          other:
+          other: 통계 - 국가 통계
         national_statistics_announcement:
-          one:
           other:
         news_article:
-          one:
-          other:
+          other: 뉴스
         news_story:
-          one:
-          other:
+          other: 뉴스 스토리
         notice:
-          one:
+          other:
+        official:
           other:
         official_statistics:
-          one:
-          other:
+          other: 통계
         official_statistics_announcement:
-          one:
           other:
         open_consultation:
-          one:
-          other:
+          other: 오픈 컨설테이션
         oral_statement:
-          one:
-          other:
+          other: 의회로 구두 성명
         policy:
-          one:
-          other:
+          other: 정책
         policy_paper:
-          one:
-          other:
+          other: 정책 논문
         press_release:
-          one:
-          other:
+          other: 보도자료
         promotional:
-          one:
-          other:
+          other: 홍보물
         publication:
-          one:
-          other:
+          other: 간행물
         raib_report:
-          one:
           other:
         regulation:
-          one:
           other:
         research:
-          one:
-          other:
+          other: 리써치 및 분석
         residential_property_tribunal_decision:
-          one:
           other:
         service_sign_in:
-          one:
           other:
         service_standard_report:
-          one:
           other:
         speaking_notes:
-          one:
-          other:
+          other: 요점사항
         speech:
-          one:
+          other: 연설문
+        standard:
           other:
         statement_to_parliament:
-          one:
-          other:
+          other: 의회로 성명
         statistical_data_set:
-          one:
-          other:
+          other: 통계 데이터 세트
         statistics_announcement:
-          one:
           other:
         statutory_guidance:
-          one:
           other:
         take_part:
-          one:
           other:
         tax_tribunal_decision:
-          one:
           other:
         transcript:
-          one:
-          other:
+          other: 트랜스크립트
         transparency:
-          one:
-          other:
+          other: 투명성 데이타
         utaac_decision:
-          one:
           other:
         world_location_news_article:
-          one:
-          other:
+          other: 뉴스
         world_news_story:
-          one:
           other:
         written_statement:
-          one:
-          other:
+          other: 의회로 서면 성명
     corporate_information:
     document_types:
       documents:

@@ -15,23 +15,23 @@ hi:
           one:
           other:
         announcement:
-          one:
-          other:
+          one: घोषणा
+          other: घोषणाएं
         asylum_support_decision:
           one:
           other:
         authored_article:
-          one:
-          other:
+          one: मूल आलेख
+          other: मूल आलेख
         business_finance_support_scheme:
           one:
           other:
         case_study:
-          one:
-          other:
+          one: विषय अध्ययन
+          other: विषय अध्ययन
         closed_consultation:
-          one:
-          other:
+          one: बंद कमरे में परामर्श
+          other: बंद कमरे में परामर्श
         cma_case:
           one:
           other:
@@ -39,20 +39,20 @@ hi:
           one:
           other:
         consultation:
-          one:
-          other:
+          one: परामर्श
+          other: परामर्श
         consultation_outcome:
-          one:
-          other:
+          one: परामर्श का नतीजा
+          other: परामर्श के नतीजे
         corporate_information_page:
           one:
           other:
         corporate_report:
-          one:
-          other:
+          one: कॉरपोरेट विवरण
+          other: कॉरपोरेट विवरण
         correspondence:
-          one:
-          other:
+          one: पत्र व्यवहार
+          other: पत्र व्यवहार
         countryside_stewardship_grant:
           one:
           other:
@@ -60,17 +60,17 @@ hi:
           one:
           other:
         detailed_guide:
-          one:
-          other:
+          one: विस्तृत मार्गदर्शन
+          other: विस्तृत मार्गदर्शन
         dfid_research_output:
           one:
           other:
         document_collection:
-          one:
+          one: श्रृंखला
           other:
         draft_text:
-          one:
-          other:
+          one: मसौदा पाठ
+          other: मसौदे के पाठ
         drug_safety_update:
           one:
           other:
@@ -84,29 +84,29 @@ hi:
           one:
           other:
         fatality_notice:
-          one:
-          other:
+          one: विपत्ति की सूचना
+          other: विपत्ति की सूचना
         foi_release:
-          one:
-          other:
+          one: एफओआई की विज्ञप्ति
+          other: एफओआई की विज्ञप्तियां
         form:
-          one:
-          other:
+          one: प्रपत्र
+          other: प्रपत्र
         government_response:
-          one:
-          other:
+          one: सरकारी जवाब
+          other: सरकारी जवाब
         guidance:
-          one:
-          other:
+          one: मार्गदर्शन
+          other: मार्गदर्शन
         impact_assessment:
-          one:
-          other:
+          one: प्रभाव का आंकलन
+          other: प्रभाव का आंकलन
         imported:
-          one:
-          other:
+          one: आयातित - प्रतीक्षा का प्रकार
+          other: आयातित - प्रतीक्षा का प्रकार
         independent_report:
-          one:
-          other:
+          one: स्वतंत्र रिपोर्ट
+          other: स्वतंत्र रिपोर्टें
         international_development_fund:
           one:
           other:
@@ -117,53 +117,59 @@ hi:
           one:
           other:
         map:
-          one:
-          other:
+          one: मानचित्र
+          other: मानचित्रों
         medical_safety_alert:
           one:
           other:
-        national_statistics:
+        national:
           one:
           other:
+        national_statistics:
+          one: सांख्यिकी - राष्ट्रीय सांख्यिकी
+          other: सांख्यिकी - राष्ट्रीय सांख्यिकी
         national_statistics_announcement:
           one:
           other:
         news_article:
-          one:
-          other:
+          one: समाचार लेख
+          other: समाचार लेख
         news_story:
-          one:
-          other:
+          one: समाचार कथा
+          other: समाचार कथाएं
         notice:
           one:
           other:
-        official_statistics:
+        official:
           one:
           other:
+        official_statistics:
+          one: आंकड़े
+          other: आंकड़े
         official_statistics_announcement:
           one:
           other:
         open_consultation:
-          one:
-          other:
+          one: खुला परामर्श
+          other: खुले परामर्श
         oral_statement:
-          one:
-          other:
+          one: संसद में मौखिक बयान
+          other: संसद में मौखिक बयान
         policy:
-          one:
-          other:
+          one: नीति
+          other: नीतियां
         policy_paper:
-          one:
-          other:
+          one: नीति पत्र
+          other: नीति पत्र
         press_release:
-          one:
-          other:
+          one: प्रेस विज्ञप्ति
+          other: प्रेस विज्ञप्तियां
         promotional:
-          one:
-          other:
+          one: प्रचार सामग्री
+          other: प्रचार सामग्री
         publication:
-          one:
-          other:
+          one: प्रकाशन
+          other: प्रकाशन
         raib_report:
           one:
           other:
@@ -171,8 +177,8 @@ hi:
           one:
           other:
         research:
-          one:
-          other:
+          one: अनुसंधान एवं विश्लेषण
+          other: अनुसंधान एवं विश्लेषण
         residential_property_tribunal_decision:
           one:
           other:
@@ -183,17 +189,20 @@ hi:
           one:
           other:
         speaking_notes:
-          one:
-          other:
+          one: " उदबोधन अंश"
+          other: " उदबोधन अंश"
         speech:
+          one: भाषण
+          other: भाषण
+        standard:
           one:
           other:
         statement_to_parliament:
-          one:
-          other:
+          one: संसद में बयान
+          other: संसद में बयान
         statistical_data_set:
-          one:
-          other:
+          one: सांख्यिकीय आंकड़े का समूह
+          other: सांख्यिकीय आंकड़े का समूह
         statistics_announcement:
           one:
           other:
@@ -207,23 +216,23 @@ hi:
           one:
           other:
         transcript:
-          one:
-          other:
+          one: प्रतिलिपि
+          other: प्रतिलिपियां
         transparency:
-          one:
-          other:
+          one: पारदर्शिता आंकड़े
+          other: पारदर्शिता आंकड़े
         utaac_decision:
           one:
           other:
         world_location_news_article:
-          one:
-          other:
+          one: समाचार लेख
+          other: समाचार लेख
         world_news_story:
           one:
           other:
         written_statement:
-          one:
-          other:
+          one: संसद में लिखित बयान
+          other: संसद में लिखित बयान
     corporate_information:
     document_types:
       documents:

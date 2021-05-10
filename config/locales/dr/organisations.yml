@@ -15,23 +15,23 @@ dr:
           one:
           other:
         announcement:
-          one:
-          other:
+          one: اعلان
+          other: اعلانات
         asylum_support_decision:
           one:
           other:
         authored_article:
-          one:
-          other:
+          one: مقاله نوشته شده
+          other: مقاله های نوشته شده
         business_finance_support_scheme:
           one:
           other:
         case_study:
-          one:
-          other:
+          one: بررسی  موردی
+          other: بررسی های موردی
         closed_consultation:
-          one:
-          other:
+          one: مشوره محرم
+          other: مشوره های محرم
         cma_case:
           one:
           other:
@@ -39,20 +39,20 @@ dr:
           one:
           other:
         consultation:
-          one:
-          other:
+          one: مشوره
+          other: مشوره ها
         consultation_outcome:
-          one:
-          other:
+          one: نتیجه مشوره
+          other: نتایج مشوره
         corporate_information_page:
           one:
           other:
         corporate_report:
-          one:
-          other:
+          one: گزارش توحیدی
+          other: گزارشات توحیدی
         correspondence:
-          one:
-          other:
+          one: مطابقت
+          other: مطابقت ها
         countryside_stewardship_grant:
           one:
           other:
@@ -60,17 +60,17 @@ dr:
           one:
           other:
         detailed_guide:
-          one:
-          other:
+          one: " رهنمود مفصل"
+          other: رهنمود های مفصل
         dfid_research_output:
           one:
           other:
         document_collection:
-          one:
+          one: سلسله
           other:
         draft_text:
-          one:
-          other:
+          one: متن مسوده
+          other: متون مسوده
         drug_safety_update:
           one:
           other:
@@ -84,29 +84,29 @@ dr:
           one:
           other:
         fatality_notice:
-          one:
-          other:
+          one: خبر  مرگ و میر
+          other: اخبار مرگ و میر
         foi_release:
-          one:
-          other:
+          one: نشرآزادی بیان
+          other: نشریه های آزادی بیان
         form:
-          one:
-          other:
+          one: فورمه
+          other: فورمه ها
         government_response:
-          one:
-          other:
+          one: جوابدهی دولت
+          other: جوابدهی های دولت
         guidance:
-          one:
-          other:
+          one: رهنمود
+          other: رهنمود
         impact_assessment:
-          one:
-          other:
+          one: بررسی تاثیرات
+          other: بررسی های تاثیرات
         imported:
-          one:
-          other:
+          one: وارد شده- نوع انتظار
+          other: وارد شده - نوع انتظار
         independent_report:
-          one:
-          other:
+          one: گزارش آزاد
+          other: گزارش های آزاد
         international_development_fund:
           one:
           other:
@@ -117,53 +117,59 @@ dr:
           one:
           other:
         map:
-          one:
-          other:
+          one: نقشه
+          other: نقشه ها
         medical_safety_alert:
           one:
           other:
-        national_statistics:
+        national:
           one:
           other:
+        national_statistics:
+          one: احصایه ها - احصایه های ملی
+          other: احصایه ها - احصایه های ملی
         national_statistics_announcement:
           one:
           other:
         news_article:
-          one:
-          other:
+          one: مقاله جدید
+          other: مقاله خبری
         news_story:
-          one:
-          other:
+          one: گزارش خبری
+          other: گزارش های خبری
         notice:
           one:
           other:
-        official_statistics:
+        official:
           one:
           other:
+        official_statistics:
+          one: احصائیه ها
+          other: احصائیه ها
         official_statistics_announcement:
           one:
           other:
         open_consultation:
-          one:
-          other:
+          one: مشاورت باز
+          other: مشاورت های باز
         oral_statement:
-          one:
-          other:
+          one: بیانیه شفایی به پارلمان
+          other: بیانیه های شفایی به پارلمان
         policy:
-          one:
-          other:
+          one: پالیسی
+          other: پالیسی ها
         policy_paper:
-          one:
-          other:
+          one: سند پالیسی
+          other: سندهای پالیسی
         press_release:
-          one:
-          other:
+          one: اعلامیه مطبوعاتی
+          other: اعلامیه های مصبوعاتی
         promotional:
-          one:
-          other:
+          one: مواد تعلیمی
+          other: مواد تعلیمی
         publication:
-          one:
-          other:
+          one: نشر
+          other: نشریات
         raib_report:
           one:
           other:
@@ -171,8 +177,8 @@ dr:
           one:
           other:
         research:
-          one:
-          other:
+          one: تحقیق و تجزیه
+          other: تحقیق و تجزیه
         residential_property_tribunal_decision:
           one:
           other:
@@ -183,17 +189,20 @@ dr:
           one:
           other:
         speaking_notes:
-          one:
-          other:
+          one: یادداشت سخنرانی
+          other: یادداشت سخنرانی
         speech:
+          one: سخنرانی
+          other: سخنرانی ها
+        standard:
           one:
           other:
         statement_to_parliament:
-          one:
-          other:
+          one: بیانیه به پارلمان
+          other: بیانیه ها به پارلمان
         statistical_data_set:
-          one:
-          other:
+          one: ارقام احصائیوی
+          other: ارقام احصائیوی
         statistics_announcement:
           one:
           other:
@@ -207,23 +216,23 @@ dr:
           one:
           other:
         transcript:
-          one:
-          other:
+          one: نسخه
+          other: نسخه ها
         transparency:
-          one:
-          other:
+          one: ارقام شفافیت
+          other: ارقام شفافیت
         utaac_decision:
           one:
           other:
         world_location_news_article:
-          one:
-          other:
+          one: مقاله جدید
+          other: مقاله خبری
         world_news_story:
           one:
           other:
         written_statement:
-          one:
-          other:
+          one: بیانیه تحریری به پارلمان
+          other: بیانیه های تحریری به پارلمان
     corporate_information:
     document_types:
       documents:

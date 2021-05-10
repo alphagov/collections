@@ -15,23 +15,23 @@ et:
           one:
           other:
         announcement:
-          one:
-          other:
+          one: Teadaanne
+          other: Teadaanded
         asylum_support_decision:
           one:
           other:
         authored_article:
-          one:
-          other:
+          one: Avaldatud artikkel
+          other: 'Avaldatud artiklid '
         business_finance_support_scheme:
           one:
           other:
         case_study:
-          one:
-          other:
+          one: Juhtumiuuring
+          other: Juhtumiuuringud
         closed_consultation:
-          one:
-          other:
+          one: Suletud konsultatsioon
+          other: Suletud konsultatsioonid
         cma_case:
           one:
           other:
@@ -39,38 +39,38 @@ et:
           one:
           other:
         consultation:
-          one:
-          other:
+          one: Konsultatsioon
+          other: Konsultatsioonid
         consultation_outcome:
-          one:
-          other:
+          one: Konsultatsiooni tulemus
+          other: Konsultatsioonide tulemused
         corporate_information_page:
           one:
           other:
         corporate_report:
-          one:
-          other:
+          one: Korporatiivne raport
+          other: Korporatiivsed raportid
         correspondence:
-          one:
-          other:
+          one: Kirjavahetus
+          other: Kirjavahetused
         countryside_stewardship_grant:
           one:
           other:
         decision:
-          one:
-          other:
+          one: Otsus
+          other: Otsused
         detailed_guide:
-          one:
-          other:
+          one: Juhend
+          other: Juhendid
         dfid_research_output:
           one:
           other:
         document_collection:
-          one:
-          other:
+          one: 'Kogu '
+          other: Kogud
         draft_text:
-          one:
-          other:
+          one: Eelnõu
+          other: Eelnõud
         drug_safety_update:
           one:
           other:
@@ -84,95 +84,101 @@ et:
           one:
           other:
         fatality_notice:
-          one:
-          other:
+          one: Surmateade
+          other: Surmateated
         foi_release:
-          one:
-          other:
+          one: FOI teavitus
+          other: FOI teavitused
         form:
-          one:
-          other:
+          one: Vorm
+          other: Vormid
         government_response:
-          one:
-          other:
+          one: Valitsuse vastus
+          other: Valitsuse vastused
         guidance:
-          one:
-          other:
+          one: Juhend
+          other: Juhend
         impact_assessment:
-          one:
-          other:
+          one: Mõjuhinnang
+          other: Mõjuhinnangud
         imported:
-          one:
-          other:
+          one: sisse - liik täpsustamisel
+          other: sisse - liik täpsustamisel
         independent_report:
-          one:
-          other:
+          one: Sõltumatu raport
+          other: Sõltumatud raportid
         international_development_fund:
           one:
           other:
         international_treaty:
-          one:
-          other:
+          one: Rahvusvaheline leping
+          other: Rahvusvahelised lepingud
         maib_report:
           one:
           other:
         map:
-          one:
-          other:
+          one: Kaart
+          other: Kaardid
         medical_safety_alert:
           one:
           other:
-        national_statistics:
+        national:
           one:
           other:
+        national_statistics:
+          one: Statistika - rahvuslikud statistikaandmed
+          other: Statistika - rahvuslikud statistikaandmed
         national_statistics_announcement:
           one:
           other:
         news_article:
-          one:
-          other:
+          one: Artikkel
+          other: Artiklid
         news_story:
-          one:
-          other:
+          one: Uudis
+          other: Uudised
         notice:
+          one: Teade
+          other: Teated
+        official:
           one:
           other:
         official_statistics:
-          one:
-          other:
+          one: 'Statistika '
+          other: Statistika
         official_statistics_announcement:
           one:
           other:
         open_consultation:
-          one:
-          other:
+          one: Avatud konsultatsioon
+          other: Avatud konsultatsioonid
         oral_statement:
-          one:
-          other:
+          one: Suuline avaldus parlamedis
+          other: Suulised avaldused parlamendis
         policy:
-          one:
-          other:
+          one: Poliitika
+          other: Poliitikad
         policy_paper:
-          one:
-          other:
+          one: Poliitikadokument
+          other: Poliitikadokumendid
         press_release:
-          one:
-          other:
+          one: Pressiteade
+          other: Pressiteated
         promotional:
-          one:
-          other:
+          one: Turundusmaterjal
+          other: Turundusmaterjal
         publication:
-          one:
-          other:
+          one: Publikatsioon
+          other: Publikatsioonid
         raib_report:
           one:
           other:
         regulation:
-          one:
-          other:
+          one: Seadusandlus
+          other: Seadusandlus
         research:
-          one:
-          other:
+          one: Uuringud ja analüüs
+          other: Uuringud ja analüüs
         residential_property_tribunal_decision:
           one:
           other:
@@ -183,23 +189,26 @@ et:
           one:
           other:
         speaking_notes:
-          one:
-          other:
+          one: 'Kõne tekst '
+          other: 'Kõne tekst '
         speech:
+          one: 'Kõne  '
+          other: Kõned
+        standard:
           one:
           other:
         statement_to_parliament:
-          one:
-          other:
+          one: Avaldus parlamendis
+          other: Avaldused parlamendis
         statistical_data_set:
-          one:
-          other:
+          one: Statistiline andmekogu
+          other: Statistilised andmekogud
         statistics_announcement:
           one:
           other:
         statutory_guidance:
-          one:
-          other:
+          one: Seadusejärgne juhis
+          other: Seadusejärgne juhis
         take_part:
           one:
           other:
@@ -207,23 +216,23 @@ et:
           one:
           other:
         transcript:
-          one:
-          other:
+          one: Protokoll
+          other: Protokollid
         transparency:
-          one:
-          other:
+          one: Läbipaistvusteave
+          other: Läbipaistvusteave
         utaac_decision:
           one:
           other:
         world_location_news_article:
-          one:
-          other:
+          one: Artikkel
+          other: Artiklid
         world_news_story:
           one:
           other:
         written_statement:
-          one:
-          other:
+          one: Kirjalik avaldus parlamendile
+          other: Kirjalikud avaldused parlamendile
     corporate_information:
     document_types:
       documents:

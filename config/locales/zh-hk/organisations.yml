@@ -15,23 +15,23 @@ zh-hk:
           one:
           other:
         announcement:
-          one:
-          other:
+          one: 公告
+          other: 其他公告
         asylum_support_decision:
           one:
           other:
         authored_article:
-          one:
-          other:
+          one: 撰寫文章
+          other: 其他撰寫文章
         business_finance_support_scheme:
           one:
           other:
         case_study:
-          one:
-          other:
+          one: 案例研究
+          other: 其他案例研究
         closed_consultation:
-          one:
-          other:
+          one: 專屬諮詢
+          other: 其他專屬諮詢
         cma_case:
           one:
           other:
@@ -39,20 +39,20 @@ zh-hk:
           one:
           other:
         consultation:
-          one:
-          other:
+          one: 諮詢
+          other: 其他諮詢
         consultation_outcome:
-          one:
-          other:
+          one: 諮詢結果
+          other: 其他諮詢結果
         corporate_information_page:
           one:
           other:
         corporate_report:
-          one:
-          other:
+          one: 政府報告
+          other: 其他政府報告
         correspondence:
-          one:
-          other:
+          one: 通信
+          other: 其他通信
         countryside_stewardship_grant:
           one:
           other:
@@ -60,17 +60,17 @@ zh-hk:
           one:
           other:
         detailed_guide:
-          one:
-          other:
+          one: 詳細指引
+          other: 其他詳細指引
         dfid_research_output:
           one:
           other:
         document_collection:
-          one:
+          one: 系列
           other:
         draft_text:
-          one:
-          other:
+          one: 內容
+          other: 其他內容
         drug_safety_update:
           one:
           other:
@@ -84,29 +84,29 @@ zh-hk:
           one:
           other:
         fatality_notice:
-          one:
-          other:
+          one: 安全事故通知
+          other: 其他安全事故通知
         foi_release:
-          one:
-          other:
+          one: 資訊自由(FOI)資訊發布
+          other: 其他資訊自由(FOI)資訊發布
         form:
-          one:
-          other:
+          one: 表格
+          other: 其他表格
         government_response:
-          one:
-          other:
+          one: 政府回應
+          other: 政府其他回應
         guidance:
-          one:
-          other:
+          one: 指引
+          other: 其他指引
         impact_assessment:
-          one:
-          other:
+          one: 影響評估
+          other: 其他影響評估
         imported:
-          one:
-          other:
+          one: 輸入-等待類型中
+          other: 輸入-等待類型中
         independent_report:
-          one:
-          other:
+          one: 獨立報告
+          other: 其他獨立報告
         international_development_fund:
           one:
           other:
@@ -117,53 +117,59 @@ zh-hk:
           one:
           other:
         map:
-          one:
-          other:
+          one: 地圖
+          other: 其他地圖
         medical_safety_alert:
           one:
           other:
-        national_statistics:
+        national:
           one:
           other:
+        national_statistics:
+          one: 國家統計數據
+          other: 其他國家統計數據
         national_statistics_announcement:
           one:
           other:
         news_article:
-          one:
-          other:
+          one: 新聞
+          other: 其他新聞
         news_story:
-          one:
-          other:
+          one: 新聞
+          other: 其他新聞
         notice:
           one:
           other:
-        official_statistics:
+        official:
           one:
           other:
+        official_statistics:
+          one: 統計資料
+          other: 其他統計資料
         official_statistics_announcement:
           one:
           other:
         open_consultation:
-          one:
-          other:
+          one: 公開諮詢
+          other: 其他公開諮詢
         oral_statement:
-          one:
-          other:
+          one: 提交國會的口頭聲明
+          other: 提交國會的其他口頭聲明
         policy:
-          one:
-          other:
+          one: 政策
+          other: 其他政策
         policy_paper:
-          one:
-          other:
+          one: 政策文件
+          other: 其他政策文件
         press_release:
-          one:
-          other:
+          one: 新聞稿
+          other: 其他新聞稿
         promotional:
-          one:
-          other:
+          one: 宣傳資料
+          other: 其他宣傳資料
         publication:
-          one:
-          other:
+          one: 出版物
+          other: 其他出版物
         raib_report:
           one:
           other:
@@ -171,8 +177,8 @@ zh-hk:
           one:
           other:
         research:
-          one:
-          other:
+          one: 研究與分析
+          other: 其他研究與分析
         residential_property_tribunal_decision:
           one:
           other:
@@ -183,17 +189,20 @@ zh-hk:
           one:
           other:
         speaking_notes:
-          one:
-          other:
+          one: 演講稿
+          other: 其他演講稿
         speech:
+          one: 演講
+          other: 其他演講
+        standard:
           one:
           other:
         statement_to_parliament:
-          one:
-          other:
+          one: 提交國會的聲明
+          other: 提交國會的其他聲明
         statistical_data_set:
-          one:
-          other:
+          one: 統計數據資料
+          other: 其他統計數據資料
         statistics_announcement:
           one:
           other:
@@ -207,23 +216,23 @@ zh-hk:
           one:
           other:
         transcript:
-          one:
-          other:
+          one: 談話副本
+          other: 其他談話副本
         transparency:
-          one:
-          other:
+          one: 透明化數據
+          other: 其他透明化數據
         utaac_decision:
           one:
           other:
         world_location_news_article:
-          one:
-          other:
+          one: 新聞
+          other: 其他新聞
         world_news_story:
           one:
           other:
         written_statement:
-          one:
-          other:
+          one: 提交國會的書面聲明
+          other: 提交國會的其他書面聲明
     corporate_information:
     document_types:
       documents:

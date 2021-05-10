@@ -122,6 +122,9 @@ en:
         medical_safety_alert:
           one: Alerts and recalls for drugs and medical devices
           other: Alerts and recalls for drugs and medical devices
+        national:
+          one: National statistics announcement
+          other: National statistics announcements
         national_statistics:
           one: National Statistics
           other: National Statistics
@@ -137,6 +140,9 @@ en:
         notice:
           one: Notice
           other: Notices
+        official:
+          one: Official statistics announcement
+          other: Official statistics announcements
         official_statistics:
           one: Official Statistics
           other: Official Statistics
@@ -188,6 +194,9 @@ en:
         speech:
           one: Speech
           other: Speeches
+        standard:
+          one: Standard
+          other: Standards
         statement_to_parliament:
           one: Statement to Parliament
           other: Statements to Parliament

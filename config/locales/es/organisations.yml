@@ -15,23 +15,23 @@ es:
           one:
           other:
         announcement:
-          one:
-          other:
+          one: Anuncio
+          other: Anuncios
         asylum_support_decision:
           one:
           other:
         authored_article:
-          one:
-          other:
+          one: Artículo de autor
+          other: Artículos de autor
         business_finance_support_scheme:
           one:
           other:
         case_study:
-          one:
-          other:
+          one: Caso de estudio práctico
+          other: Casos de estudio práctico
         closed_consultation:
-          one:
-          other:
+          one: Consulta cerrada
+          other: Consultas cerradas
         cma_case:
           one:
           other:
@@ -39,20 +39,20 @@ es:
           one:
           other:
         consultation:
-          one:
-          other:
+          one: Consulta
+          other: Consultas
         consultation_outcome:
-          one:
-          other:
+          one: Resultado de la consulta
+          other: Resultados de la consulta
         corporate_information_page:
           one:
           other:
         corporate_report:
-          one:
-          other:
+          one: Informe corporativo
+          other: Informes corporativos
         correspondence:
-          one:
-          other:
+          one: Correspondencia
+          other: Correspondencias
         countryside_stewardship_grant:
           one:
           other:
@@ -60,17 +60,17 @@ es:
           one:
           other:
         detailed_guide:
-          one:
-          other:
+          one: Orientación detallada
+          other: Orientación detallada
         dfid_research_output:
           one:
           other:
         document_collection:
-          one:
+          one: Series
           other:
         draft_text:
-          one:
-          other:
+          one: Borrador
+          other: Borradores
         drug_safety_update:
           one:
           other:
@@ -84,29 +84,29 @@ es:
           one:
           other:
         fatality_notice:
-          one:
-          other:
+          one: Aviso de defunción
+          other: Avisos de defunción
         foi_release:
-          one:
-          other:
+          one: Nota de prensa de Freedom of Information
+          other: Boletines de FOI
         form:
-          one:
-          other:
+          one: Formulario
+          other: Formularios
         government_response:
-          one:
-          other:
+          one: Respuesta gubernamental
+          other: Respuestas gubernamentales
         guidance:
-          one:
-          other:
+          one: Instrucciones
+          other: Instrucciones
         impact_assessment:
-          one:
-          other:
+          one: Evaluación del impacto
+          other: Evaluaciones del impacto
         imported:
-          one:
-          other:
+          one: Importado - esperando prototipo
+          other: Importado - esperando prototipo
         independent_report:
-          one:
-          other:
+          one: Informe independiente
+          other: Informes independientes
         international_development_fund:
           one:
           other:
@@ -117,53 +117,59 @@ es:
           one:
           other:
         map:
-          one:
-          other:
+          one: Mapa
+          other: Mapas
         medical_safety_alert:
           one:
           other:
-        national_statistics:
+        national:
           one:
           other:
+        national_statistics:
+          one: Estadísticas - cifras nacionales
+          other: Estadísticas - cifras nacionales
         national_statistics_announcement:
           one:
           other:
         news_article:
-          one:
-          other:
+          one: Artículo
+          other: Artículos
         news_story:
-          one:
-          other:
+          one: Noticia
+          other: Noticias
         notice:
           one:
           other:
-        official_statistics:
+        official:
           one:
           other:
+        official_statistics:
+          one: Estadísticas
+          other: Estadísticas
         official_statistics_announcement:
           one:
           other:
         open_consultation:
-          one:
-          other:
+          one: Consulta abierta
+          other: Consultas abiertas
         oral_statement:
-          one:
-          other:
+          one: Declaración formulada oralmente
+          other: Declaraciones formuladas oralmente
         policy:
-          one:
-          other:
+          one: Política
+          other: Políticas
         policy_paper:
-          one:
-          other:
+          one: Informe sobre políticas gubernamentales
+          other: Informes sobre políticas gubernamentales
         press_release:
-          one:
-          other:
+          one: Nota de prensa
+          other: Notas de prensa
         promotional:
-          one:
-          other:
+          one: Material de promoción
+          other: Material de promoción
         publication:
-          one:
-          other:
+          one: Publicaciones
+          other: Publicación
         raib_report:
           one:
           other:
@@ -171,8 +177,8 @@ es:
           one:
           other:
         research:
-          one:
-          other:
+          one: Investigación y análisis
+          other: Investigación y análisis
         residential_property_tribunal_decision:
           one:
           other:
@@ -183,17 +189,20 @@ es:
           one:
           other:
         speaking_notes:
-          one:
-          other:
+          one: Speaking notes
+          other: Speaking notes
         speech:
+          one: Discurso
+          other: Discursos
+        standard:
           one:
           other:
         statement_to_parliament:
-          one:
-          other:
+          one: Declaración ante el parlamento
+          other: Declaraciones ante el parlamento
         statistical_data_set:
-          one:
-          other:
+          one: Conjunto de datos estadísticos
+          other: Conjuntos de datos estadísticos
         statistics_announcement:
           one:
           other:
@@ -207,23 +216,23 @@ es:
           one:
           other:
         transcript:
-          one:
-          other:
+          one: Transcripción
+          other: Transcripciones
         transparency:
-          one:
-          other:
+          one: Datos sobre transparencia
+          other: Datos sobre transparencia
         utaac_decision:
           one:
           other:
         world_location_news_article:
-          one:
-          other:
+          one: Artículo
+          other: Artículos
         world_news_story:
           one:
           other:
         written_statement:
-          one:
-          other:
+          one: Declaración escrita
+          other: Declaraciones escritas
     corporate_information:
     document_types:
       documents:

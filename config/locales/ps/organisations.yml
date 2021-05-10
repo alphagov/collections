@@ -15,23 +15,23 @@ ps:
           one:
           other:
         announcement:
-          one:
-          other:
+          one: خبرتیا
+          other: خبرتیاوې
         asylum_support_decision:
           one:
           other:
         authored_article:
-          one:
-          other:
+          one: تالیف شوی مضمون
+          other: تالیف شوي مضامین
         business_finance_support_scheme:
           one:
           other:
         case_study:
-          one:
-          other:
+          one: موردی څیړنه
+          other: مودری څیړنی
         closed_consultation:
-          one:
-          other:
+          one: محرمه مشوره
+          other: محرمه مشوری
         cma_case:
           one:
           other:
@@ -39,20 +39,20 @@ ps:
           one:
           other:
         consultation:
-          one:
-          other:
+          one: مشوره
+          other: مشوری
         consultation_outcome:
-          one:
-          other:
+          one: د مشوری پایله
+          other: د مشورو پایله
         corporate_information_page:
           one:
           other:
         corporate_report:
-          one:
-          other:
+          one: متحد راپور
+          other: متحد راپورونه
         correspondence:
-          one:
-          other:
+          one: ارتباط ساتنه
+          other: ارتباطات ساتنه
         countryside_stewardship_grant:
           one:
           other:
@@ -60,17 +60,17 @@ ps:
           one:
           other:
         detailed_guide:
-          one:
-          other:
+          one: مفصله لارښوونه
+          other: مفصلی لارښوونی
         dfid_research_output:
           one:
           other:
         document_collection:
-          one:
+          one: سلسله
           other:
         draft_text:
-          one:
-          other:
+          one: مسوده
+          other: مسودی
         drug_safety_update:
           one:
           other:
@@ -84,29 +84,29 @@ ps:
           one:
           other:
         fatality_notice:
-          one:
-          other:
+          one: دمړینی خبرتیا
+          other: دمړینی خبرتیاوی
         foi_release:
-          one:
-          other:
+          one: د بیان د آزادی خپرونه
+          other: د بیان د آزادی خپرونی
         form:
-          one:
-          other:
+          one: فارم
+          other: فارمونه
         government_response:
-          one:
-          other:
+          one: د دولت ځواب
+          other: د دولت ځوابونه
         guidance:
-          one:
-          other:
+          one: رهنمایی
+          other: رهنمایی
         impact_assessment:
-          one:
-          other:
+          one: د تاثیراتو څیړنه
+          other: د تاثیراتو څیړنی
         imported:
-          one:
-          other:
+          one: وارد شوی - د انتظار نمونه
+          other: وارد شوی - د انتظار نمونه
         independent_report:
-          one:
-          other:
+          one: آزاد راپور
+          other: آزاد راپورونه
         international_development_fund:
           one:
           other:
@@ -117,53 +117,59 @@ ps:
           one:
           other:
         map:
-          one:
-          other:
+          one: نقشه
+          other: نقشی
         medical_safety_alert:
           one:
           other:
-        national_statistics:
+        national:
           one:
           other:
+        national_statistics:
+          one: شمیرنه - ملی شمیرنې
+          other: شمیرنه - ملی شمیرنې
         national_statistics_announcement:
           one:
           other:
         news_article:
-          one:
-          other:
+          one: خبری مقاله
+          other: خبری مقالی
         news_story:
-          one:
-          other:
+          one: خبری راپور
+          other: خبری راپورونه
         notice:
           one:
           other:
-        official_statistics:
+        official:
           one:
           other:
+        official_statistics:
+          one: شمیرنه
+          other: شمیرنه
         official_statistics_announcement:
           one:
           other:
         open_consultation:
-          one:
-          other:
+          one: آزاده مشوره
+          other: آزادې مشورې
         oral_statement:
-          one:
-          other:
+          one: پارلمان ته شفاهی اعلامیه
+          other: پارلمان ته شفاهی اعلامیی
         policy:
-          one:
-          other:
+          one: پالیسی
+          other: پالیسی ګانی
         policy_paper:
-          one:
-          other:
+          one: د پالیسۍ سند
+          other: د پالیسې سندونه
         press_release:
-          one:
-          other:
+          one: مطبوعاتی خبرپاڼه
+          other: مطبوعاتی خبرپاڼې
         promotional:
-          one:
-          other:
+          one: روزونکې مواد
+          other: روزونکی مواد
         publication:
-          one:
-          other:
+          one: خپرونه
+          other: خپرونې
         raib_report:
           one:
           other:
@@ -171,8 +177,8 @@ ps:
           one:
           other:
         research:
-          one:
-          other:
+          one: څیړنه او تجزیه
+          other: ځیړنه او تجزیه
         residential_property_tribunal_decision:
           one:
           other:
@@ -183,17 +189,20 @@ ps:
           one:
           other:
         speaking_notes:
-          one:
-          other:
+          one: د وینا یادښت
+          other: د وینا یادښتونه
         speech:
+          one: وینا
+          other: ویناوې
+        standard:
           one:
           other:
         statement_to_parliament:
-          one:
-          other:
+          one: پارلمان ته اعلامیه
+          other: پارلمان ته اعلامیې
         statistical_data_set:
-          one:
-          other:
+          one: د شمیرنې اطلاعات
+          other: د شمیرنې اطلاعات
         statistics_announcement:
           one:
           other:
@@ -207,23 +216,23 @@ ps:
           one:
           other:
         transcript:
-          one:
-          other:
+          one: لیکنه
+          other: لیکنې
         transparency:
-          one:
-          other:
+          one: د روڼوالې اطلاعات
+          other: د روڼوالي اطلاعات
         utaac_decision:
           one:
           other:
         world_location_news_article:
-          one:
-          other:
+          one: خبری مقاله
+          other: خبری مقالی
         world_news_story:
           one:
           other:
         written_statement:
-          one:
-          other:
+          one: پارلمان ته لیکلې اعلامیه
+          other: پارلمان ته لیکلې اعلامیې
     corporate_information:
     document_types:
       documents:

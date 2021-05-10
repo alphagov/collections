@@ -15,23 +15,23 @@ ur:
           one:
           other:
         announcement:
-          one:
-          other:
+          one: اعلان
+          other: اعلانات
         asylum_support_decision:
           one:
           other:
         authored_article:
-          one:
-          other:
+          one: تحریر کردہ مضمون
+          other: تحریر کردہ مضامین
         business_finance_support_scheme:
           one:
           other:
         case_study:
-          one:
-          other:
+          one: کیس اسٹڈی
+          other: کیس اسٹڈیز
         closed_consultation:
-          one:
-          other:
+          one: مشاورت ختم
+          other: " مشاورت ختم"
         cma_case:
           one:
           other:
@@ -39,20 +39,20 @@ ur:
           one:
           other:
         consultation:
-          one:
-          other:
+          one: مشاورت
+          other: مشاورت
         consultation_outcome:
-          one:
-          other:
+          one: مشاورت کا نتیجہ
+          other: مشاورت کے نتائج
         corporate_information_page:
           one:
           other:
         corporate_report:
-          one:
-          other:
+          one: کارپوریٹ رپورٹ
+          other: کارپوریٹ رپورٹس
         correspondence:
-          one:
-          other:
+          one: مراسلت
+          other: مراسلات
         countryside_stewardship_grant:
           one:
           other:
@@ -60,17 +60,17 @@ ur:
           one:
           other:
         detailed_guide:
-          one:
-          other:
+          one: مفصل رہنمائی
+          other: مفصل رہنمائی
         dfid_research_output:
           one:
           other:
         document_collection:
-          one:
+          one: سلسلہ
           other:
         draft_text:
-          one:
-          other:
+          one: ڈرافٹ متن
+          other: ڈرافٹ متن
         drug_safety_update:
           one:
           other:
@@ -84,29 +84,29 @@ ur:
           one:
           other:
         fatality_notice:
-          one:
-          other:
+          one: وفات کی اطلاع
+          other: وفات کی اطلاعات
         foi_release:
-          one:
-          other:
+          one: آزادئی معلومات کی اشاعت
+          other: آزادئی معلومات کی اشاعت
         form:
-          one:
-          other:
+          one: فارم
+          other: فارمز
         government_response:
-          one:
-          other:
+          one: حکومتی جوابی اقدام
+          other: حکومتی جوابی اقدامات
         guidance:
-          one:
-          other:
+          one: رہنمائی
+          other: رہنمائی
         impact_assessment:
-          one:
-          other:
+          one: اثرات کا تجزیہ
+          other: اثرات کے تجزیے
         imported:
-          one:
-          other:
+          one: امپورٹڈ- نوع کا انتظار
+          other: امپورٹڈ- نوع کا انتظار
         independent_report:
-          one:
-          other:
+          one: غیر جانبدار رپورٹ
+          other: غیر جانبداررپورٹس
         international_development_fund:
           one:
           other:
@@ -117,53 +117,59 @@ ur:
           one:
           other:
         map:
-          one:
-          other:
+          one: نقشہ
+          other: نقشے
         medical_safety_alert:
           one:
           other:
-        national_statistics:
+        national:
           one:
           other:
+        national_statistics:
+          one: شماریات- قومی اعدادوشمار
+          other: شماریات- قومی اعدادوشمار
         national_statistics_announcement:
           one:
           other:
         news_article:
-          one:
-          other:
+          one: نیوزآرٹیکل
+          other: نیوزآرٹیکلز
         news_story:
-          one:
-          other:
+          one: نیوز اسٹوری
+          other: نیوزاسٹوریز
         notice:
           one:
           other:
-        official_statistics:
+        official:
           one:
           other:
+        official_statistics:
+          one: اعدادوشمار
+          other: اعدادو شمار
         official_statistics_announcement:
           one:
           other:
         open_consultation:
-          one:
-          other:
+          one: جاری مشاورت
+          other: جاری مشاورت
         oral_statement:
-          one:
-          other:
+          one: پارلیمنٹ میں زبانی بیان
+          other: پارلیمنٹ میں زبانی بیانات
         policy:
-          one:
-          other:
+          one: پالیسی
+          other: پالیسیاں
         policy_paper:
-          one:
-          other:
+          one: پالیسی پیپر
+          other: پالیسی پیپرز
         press_release:
-          one:
-          other:
+          one: پریس ریلیز
+          other: پریس ریلیزز
         promotional:
-          one:
-          other:
+          one: تشہیری مواد
+          other: تشہیری مواد
         publication:
-          one:
-          other:
+          one: مطبوعہ
+          other: مطبوعات
         raib_report:
           one:
           other:
@@ -171,8 +177,8 @@ ur:
           one:
           other:
         research:
-          one:
-          other:
+          one: تحقیق وتجزیہ
+          other: تحقیق وتجزیہ
         residential_property_tribunal_decision:
           one:
           other:
@@ -183,17 +189,20 @@ ur:
           one:
           other:
         speaking_notes:
-          one:
-          other:
+          one: تقریری نوٹ
+          other: تقریری نوٹ
         speech:
+          one: تقریر
+          other: تقاریر
+        standard:
           one:
           other:
         statement_to_parliament:
-          one:
-          other:
+          one: پارلیمنٹ میں بیان
+          other: پارلیمنٹ میں بیانات
         statistical_data_set:
-          one:
-          other:
+          one: شماریاتی ڈیٹا سیٹ
+          other: " شماریاتی ڈیٹا سیٹس"
         statistics_announcement:
           one:
           other:
@@ -207,23 +216,23 @@ ur:
           one:
           other:
         transcript:
-          one:
-          other:
+          one: ٹرانسکرپٹ
+          other: ٹرانسکرپٹس
         transparency:
-          one:
-          other:
+          one: ٹرانسپیرنسی ڈیٹا
+          other: ٹرانسپیرنسی ڈیٹا
         utaac_decision:
           one:
           other:
         world_location_news_article:
-          one:
-          other:
+          one: نیوزآرٹیکل
+          other: نیوزآرٹیکلز
         world_news_story:
           one:
           other:
         written_statement:
-          one:
-          other:
+          one: پارلیمنٹ میں تحریری بیان
+          other: پارلیمنٹ میں تحریری بیانات
     corporate_information:
     document_types:
       documents:

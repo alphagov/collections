@@ -122,6 +122,9 @@ kk:
         medical_safety_alert:
           one:
           other:
+        national:
+          one:
+          other:
         national_statistics:
           one:
           other:
@@ -135,6 +138,9 @@ kk:
           one:
           other:
         notice:
+          one:
+          other:
+        official:
           one:
           other:
         official_statistics:
@@ -186,6 +192,9 @@ kk:
           one:
           other:
         speech:
+          one:
+          other:
+        standard:
           one:
           other:
         statement_to_parliament:

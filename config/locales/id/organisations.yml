@@ -12,218 +12,153 @@ id:
     content_item:
       schema_name:
         aaib_report:
-          one:
           other:
         announcement:
-          one:
-          other:
+          other: Pengumuman-pengumuman
         asylum_support_decision:
-          one:
           other:
         authored_article:
-          one:
-          other:
+          other: Artikel-artikel yang ditulis
         business_finance_support_scheme:
-          one:
           other:
         case_study:
-          one:
-          other:
+          other: Studi-studi kasus
         closed_consultation:
-          one:
-          other:
+          other: Konsultasi-konsultasi tertutup
         cma_case:
-          one:
           other:
         coming_soon:
-          one:
           other:
         consultation:
-          one:
-          other:
+          other: Konsultasi-konsultasi
         consultation_outcome:
-          one:
-          other:
+          other: Hasil-hasil konsultasi
         corporate_information_page:
-          one:
           other:
         corporate_report:
-          one:
-          other:
+          other: Laporan-laporan korporat
         correspondence:
-          one:
-          other:
+          other: Koresponden-koresponden
         countryside_stewardship_grant:
-          one:
           other:
         decision:
-          one:
           other:
         detailed_guide:
-          one:
-          other:
+          other: Panduan lebih lanjut
         dfid_research_output:
-          one:
           other:
         document_collection:
-          one:
           other:
         draft_text:
-          one:
-          other:
+          other: Rancangan tulisan
         drug_safety_update:
-          one:
           other:
         employment_appeal_tribunal_decision:
-          one:
           other:
         employment_tribunal_decision:
-          one:
           other:
         esi_fund:
-          one:
           other:
         fatality_notice:
-          one:
-          other:
+          other: Pemberitahuan-pemberitahuan kematian
         foi_release:
-          one:
-          other:
+          other: Rilis FOI
         form:
-          one:
-          other:
+          other: Formulir-formulir
         government_response:
-          one:
-          other:
+          other: Respon-respon Pemerintah
         guidance:
-          one:
-          other:
+          other: Panduan
         impact_assessment:
-          one:
-          other:
+          other: Penilaian-penilaian dampak
         imported:
-          one:
-          other:
+          other: Diimpor-menunggu tipe
         independent_report:
-          one:
-          other:
+          other: Laporan-laporan independen
         international_development_fund:
-          one:
           other:
         international_treaty:
-          one:
           other:
         maib_report:
-          one:
           other:
         map:
-          one:
-          other:
+          other: Peta-peta
         medical_safety_alert:
-          one:
+          other:
+        national:
           other:
         national_statistics:
-          one:
-          other:
+          other: Statistik-statistik nasional
         national_statistics_announcement:
-          one:
           other:
         news_article:
-          one:
-          other:
+          other: Artikel-artikel berita
         news_story:
-          one:
-          other:
+          other: Berita-berita
         notice:
-          one:
+          other:
+        official:
           other:
         official_statistics:
-          one:
-          other:
+          other: Statistik-statistik
         official_statistics_announcement:
-          one:
           other:
         open_consultation:
-          one:
-          other:
+          other: Konsultasi-konsultasi terbuka
         oral_statement:
-          one:
-          other:
+          other: Pernyataan-pernyataan langsung kepada parlemen
         policy:
-          one:
-          other:
+          other: Kebijakan-kebijakan
         policy_paper:
-          one:
-          other:
+          other: Laporan-laporan kebijakan
         press_release:
-          one:
-          other:
+          other: Rilis pers
         promotional:
-          one:
-          other:
+          other: Materi promosi
         publication:
-          one:
-          other:
+          other: Publikasi-publikasi
         raib_report:
-          one:
           other:
         regulation:
-          one:
           other:
         research:
-          one:
-          other:
+          other: Riset dan analisis
         residential_property_tribunal_decision:
-          one:
           other:
         service_sign_in:
-          one:
           other:
         service_standard_report:
-          one:
           other:
         speaking_notes:
-          one:
-          other:
+          other: Naskah Pembicara
         speech:
-          one:
+          other: Pidato-pidato
+        standard:
           other:
         statement_to_parliament:
-          one:
-          other:
+          other: Pernyataan-pernyaatan kepada Parlemen
         statistical_data_set:
-          one:
-          other:
+          other: Set data statistik
         statistics_announcement:
-          one:
           other:
         statutory_guidance:
-          one:
           other:
         take_part:
-          one:
           other:
         tax_tribunal_decision:
-          one:
           other:
         transcript:
-          one:
-          other:
+          other: Transkrip-transkrip
         transparency:
-          one:
-          other:
+          other: Transparansi data
         utaac_decision:
-          one:
           other:
         world_location_news_article:
-          one:
-          other:
+          other: Artikel-artikel berita
         world_news_story:
-          one:
           other:
         written_statement:
-          one:
-          other:
+          other: Pernyataan-pernyatan tertulis kepada parlemen
     corporate_information:
     document_types:
       documents:

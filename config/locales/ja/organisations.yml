@@ -12,218 +12,153 @@ ja:
     content_item:
       schema_name:
         aaib_report:
-          one:
           other:
         announcement:
-          one:
-          other:
+          other: ニュース
         asylum_support_decision:
-          one:
           other:
         authored_article:
-          one:
           other:
         business_finance_support_scheme:
-          one:
           other:
         case_study:
-          one:
-          other:
+          other: ケーススタディ
         closed_consultation:
-          one:
-          other:
+          other: 非公開協議
         cma_case:
-          one:
           other:
         coming_soon:
-          one:
           other:
         consultation:
-          one:
-          other:
+          other: 協議
         consultation_outcome:
-          one:
-          other:
+          other: 協議結果
         corporate_information_page:
-          one:
           other:
         corporate_report:
-          one:
-          other:
+          other: 事業報告
         correspondence:
-          one:
-          other:
+          other: 通信文書
         countryside_stewardship_grant:
-          one:
           other:
         decision:
-          one:
           other:
         detailed_guide:
-          one:
-          other:
+          other: 詳細説明
         dfid_research_output:
-          one:
           other:
         document_collection:
-          one:
           other:
         draft_text:
-          one:
-          other:
+          other: 草稿
         drug_safety_update:
-          one:
           other:
         employment_appeal_tribunal_decision:
-          one:
           other:
         employment_tribunal_decision:
-          one:
           other:
         esi_fund:
-          one:
           other:
         fatality_notice:
-          one:
-          other:
+          other: 死亡告示
         foi_release:
-          one:
-          other:
+          other: 情報公開に関するニュース
         form:
-          one:
-          other:
+          other: フォーム
         government_response:
-          one:
-          other:
+          other: レスポンス
         guidance:
-          one:
-          other:
+          other: ガイダンス
         impact_assessment:
-          one:
-          other:
+          other: 影響評価
         imported:
-          one:
-          other:
+          other: 確認中
         independent_report:
-          one:
-          other:
+          other: 第三者機関によるレポート
         international_development_fund:
-          one:
           other:
         international_treaty:
-          one:
           other:
         maib_report:
-          one:
           other:
         map:
-          one:
-          other:
+          other: 地図
         medical_safety_alert:
-          one:
+          other:
+        national:
           other:
         national_statistics:
-          one:
-          other:
+          other: 国家統計
         national_statistics_announcement:
-          one:
           other:
         news_article:
-          one:
-          other:
+          other: ニュース
         news_story:
-          one:
-          other:
+          other: ニュース
         notice:
-          one:
+          other:
+        official:
           other:
         official_statistics:
-          one:
-          other:
+          other: 統計
         official_statistics_announcement:
-          one:
           other:
         open_consultation:
-          one:
-          other:
+          other: 公開協議
         oral_statement:
-          one:
-          other:
+          other: 議会に対する口頭陳述
         policy:
-          one:
-          other:
+          other: 政策
         policy_paper:
-          one:
-          other:
+          other: 政策文書
         press_release:
-          one:
-          other:
+          other: 新聞発表
         promotional:
-          one:
-          other:
+          other: 宣伝資料
         publication:
-          one:
-          other:
+          other: 出版物
         raib_report:
-          one:
           other:
         regulation:
-          one:
           other:
         research:
-          one:
-          other:
+          other: 調査と分析
         residential_property_tribunal_decision:
-          one:
           other:
         service_sign_in:
-          one:
           other:
         service_standard_report:
-          one:
           other:
         speaking_notes:
-          one:
-          other:
+          other: キーポイント
         speech:
-          one:
+          other: スピーチ
+        standard:
           other:
         statement_to_parliament:
-          one:
-          other:
+          other: 閣僚声明
         statistical_data_set:
-          one:
-          other:
+          other: 統計データセット
         statistics_announcement:
-          one:
           other:
         statutory_guidance:
-          one:
           other:
         take_part:
-          one:
           other:
         tax_tribunal_decision:
-          one:
           other:
         transcript:
-          one:
-          other:
+          other: スピーチ全文
         transparency:
-          one:
-          other:
+          other: 透明性データ
         utaac_decision:
-          one:
           other:
         world_location_news_article:
-          one:
-          other:
+          other: ニュース
         world_news_story:
-          one:
           other:
         written_statement:
-          one:
-          other:
+          other: 閣僚声明文
     corporate_information:
     document_types:
       documents:

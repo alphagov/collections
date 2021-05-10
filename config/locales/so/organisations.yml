@@ -15,23 +15,23 @@ so:
           one:
           other:
         announcement:
-          one:
-          other:
+          one: Ogeysiis
+          other: Ogeysiisyo
         asylum_support_decision:
           one:
           other:
         authored_article:
-          one:
-          other:
+          one: Maqaal la qorey
+          other: Maqaallo la qorey
         business_finance_support_scheme:
           one:
           other:
         case_study:
-          one:
-          other:
+          one: Daraasad xaalad gaar ah
+          other: Daraasado xaalado gaar ah
         closed_consultation:
-          one:
-          other:
+          one: Wada-tashi albaabadu u xiran yihiin
+          other: Wadatashiyo albaabadu u xiran yihiin
         cma_case:
           one:
           other:
@@ -39,20 +39,20 @@ so:
           one:
           other:
         consultation:
-          one:
-          other:
+          one: Wadatashi
+          other: Wadatashiyo
         consultation_outcome:
-          one:
-          other:
+          one: Natiijo ka dhalatey wadatashi
+          other: Natiijooyin ka dhashey wadatashiyo
         corporate_information_page:
           one:
           other:
         corporate_report:
-          one:
-          other:
+          one: Warbixin sharikaad
+          other: Warbixinno sharikaad
         correspondence:
-          one:
-          other:
+          one: Waraaq is-dhaafsi
+          other: Waraaqo is-dhaafsi
         countryside_stewardship_grant:
           one:
           other:
@@ -60,17 +60,17 @@ so:
           one:
           other:
         detailed_guide:
-          one:
-          other:
+          one: Hagid faahfaahsan
+          other: Hagid faahfaahsan
         dfid_research_output:
           one:
           other:
         document_collection:
-          one:
+          one: Taxane
           other:
         draft_text:
-          one:
-          other:
+          one: Qoraal qabyo ah
+          other: Qoraallo qabyo ah
         drug_safety_update:
           one:
           other:
@@ -84,29 +84,29 @@ so:
           one:
           other:
         fatality_notice:
-          one:
-          other:
+          one: Ogeysiis geeri
+          other: Ogeysiisyo geeri
         foi_release:
-          one:
-          other:
+          one: Soo saarista FOI
+          other: Soo saarista FOI-yo
         form:
-          one:
-          other:
+          one: Foom
+          other: Foomam
         government_response:
-          one:
-          other:
+          one: Jawaab dowladeed
+          other: Jawaabo dowladeed
         guidance:
-          one:
-          other:
+          one: Hagid
+          other: Hagid
         impact_assessment:
-          one:
-          other:
+          one: Daraasad saameyn ku saabsan
+          other: Daraasado saameyn ku saabsan
         imported:
-          one:
-          other:
+          one: La soo waaridey - nooca sugitaanka
+          other: La soo waaridey - nooca sugitaanka
         independent_report:
-          one:
-          other:
+          one: Warbixin madax bannaan
+          other: Warbixinno madax bannaan
         international_development_fund:
           one:
           other:
@@ -117,53 +117,59 @@ so:
           one:
           other:
         map:
-          one:
-          other:
+          one: Khariidad
+          other: Khariidado
         medical_safety_alert:
           one:
           other:
-        national_statistics:
+        national:
           one:
           other:
+        national_statistics:
+          one: Istaatistik - istaatistik qaran
+          other: Istaatistik - istaatistik qaran
         national_statistics_announcement:
           one:
           other:
         news_article:
-          one:
-          other:
+          one: Maqaal wareed
+          other: Maqaallo wareed
         news_story:
-          one:
-          other:
+          one: Sheeko wareed
+          other: Sheekooyin wareed
         notice:
           one:
           other:
-        official_statistics:
+        official:
           one:
           other:
+        official_statistics:
+          one: Istaatistik
+          other: Istaatistik
         official_statistics_announcement:
           one:
           other:
         open_consultation:
-          one:
-          other:
+          one: Wada-tashi furan
+          other: Wada-tashiyo furan
         oral_statement:
-          one:
-          other:
+          one: Hadal loo jeediyo baarlamaanka
+          other: hadallo loo jeediyo baarlamaanka
         policy:
-          one:
-          other:
+          one: Siyaasad
+          other: Siyaasado
         policy_paper:
-          one:
-          other:
+          one: Waraaq qeexaysa siyaasadda
+          other: Waraaqo qeexaya siyaasadda
         press_release:
-          one:
-          other:
+          one: War-saxaafadeed
+          other: War-saxaafadeedyo
         promotional:
-          one:
-          other:
+          one: Agab xayeysiin ah
+          other: Agab xayeysiin ah
         publication:
-          one:
-          other:
+          one: Daabacaad
+          other: Daabacaado
         raib_report:
           one:
           other:
@@ -171,8 +177,8 @@ so:
           one:
           other:
         research:
-          one:
-          other:
+          one: Cilmi-baaris iyo lafaguris
+          other: Cilmi-baaris iyo lafaguris
         residential_property_tribunal_decision:
           one:
           other:
@@ -183,17 +189,20 @@ so:
           one:
           other:
         speaking_notes:
-          one:
-          other:
+          one: Qoraallo hadal jeedin
+          other: Qoraallo hadal jeedin
         speech:
+          one: Hadal
+          other: Hadallo
+        standard:
           one:
           other:
         statement_to_parliament:
-          one:
-          other:
+          one: Hadal loo jeediyo baarlamaanka
+          other: hadallo loo jeediyo baarlamaanka
         statistical_data_set:
-          one:
-          other:
+          one: Xirmo xog istaatistik ah
+          other: Xirmooyin xog istaatistik ah
         statistics_announcement:
           one:
           other:
@@ -207,23 +216,23 @@ so:
           one:
           other:
         transcript:
-          one:
-          other:
+          one: Qoraal la soo guuriyey
+          other: Qoraallo la soo guuriyey
         transparency:
-          one:
-          other:
+          one: Xog daahfurnaan
+          other: Xog daahfurnaan
         utaac_decision:
           one:
           other:
         world_location_news_article:
-          one:
-          other:
+          one: Maqaal wareed
+          other: Maqaallo wareed
         world_news_story:
           one:
           other:
         written_statement:
-          one:
-          other:
+          one: Hadal qoran oo loo gudbiyo baarlamaanka
+          other: Hadallo qoran oo loo gudbiyo baarlamaanka
     corporate_information:
     document_types:
       documents:
