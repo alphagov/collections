@@ -4,5 +4,5 @@ en:
     browse:
       prefix: 'Browse:'
       title: Browse GOV.UK
-    language_direction: rtl
+    language_direction: ltr
     language_name: English
