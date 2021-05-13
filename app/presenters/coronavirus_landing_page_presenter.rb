@@ -12,7 +12,6 @@ class CoronavirusLandingPagePresenter
     topic_section
     statistics_section
     notifications
-    find_help
     page_header
     timeline
   ].freeze

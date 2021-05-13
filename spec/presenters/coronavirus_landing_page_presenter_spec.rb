@@ -15,7 +15,6 @@ RSpec.describe CoronavirusLandingPagePresenter do
       topic_section
       statistics_section
       notifications
-      find_help
       page_header
       timeline
     ].each do |method|
