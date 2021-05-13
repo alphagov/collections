@@ -321,4 +321,4 @@ en:
       tribunal: Tribunal
     view_all: view all
     view_less: view less
-    what_we_do: What we do
+    what_we_do: What %{title} does
