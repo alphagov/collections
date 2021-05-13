@@ -1,0 +1,322 @@
+---
+pt:
+  organisations:
+    about_page_path:
+    administered_by:
+    contact:
+      contact_details:
+      contact_form:
+      contact_organisation:
+      email:
+      telephone:
+    content_item:
+      schema_name:
+        aaib_report:
+          one:
+          other:
+        announcement:
+          one: Anúncio
+          other: Anúncios
+        asylum_support_decision:
+          one:
+          other:
+        authored_article:
+          one: Artigo
+          other: Artigos
+        business_finance_support_scheme:
+          one:
+          other:
+        case_study:
+          one: Estudo de caso
+          other: Estudos de caso
+        closed_consultation:
+          one: Consulta fechada
+          other: Consultas fechadas
+        cma_case:
+          one:
+          other:
+        coming_soon:
+          one:
+          other:
+        consultation:
+          one: Consulta
+          other: Consultas
+        consultation_outcome:
+          one: Resultado de consulta
+          other: Resultados de consultas
+        corporate_information_page:
+          one:
+          other:
+        corporate_report:
+          one: Relatório Corporativo
+          other: Relatórios Corporativos
+        correspondence:
+          one: Correspondência
+          other: Correspondências
+        countryside_stewardship_grant:
+          one:
+          other:
+        decision:
+          one:
+          other:
+        detailed_guide:
+          one: Guia detalhado
+          other: Guias detalhados
+        dfid_research_output:
+          one:
+          other:
+        document_collection:
+          one: Séries
+          other:
+        draft_text:
+          one: Texto preliminar
+          other: Textos preliminares
+        drug_safety_update:
+          one:
+          other:
+        employment_appeal_tribunal_decision:
+          one:
+          other:
+        employment_tribunal_decision:
+          one:
+          other:
+        esi_fund:
+          one:
+          other:
+        fatality_notice:
+          one: Aviso de Falecimento
+          other: Avisos de Falecimento
+        foi_release:
+          one: Comunicado sobre pedido de acesso a informação
+          other: Comunicados sobre pedidos de acesso a informação
+        form:
+          one: Formulário
+          other: Formulários
+        government_response:
+          one: Resposta governamental
+          other: Respostas governamentais
+        guidance:
+          one: Instrução
+          other: Instruções
+        impact_assessment:
+          one: Relatório de Impacto
+          other: Relatórios de Impacto
+        imported:
+          one: importado - esperando tipo
+          other: importados - esperando tipo
+        independent_report:
+          one: Relatório independente
+          other: Relatórios independentes
+        international_development_fund:
+          one:
+          other:
+        international_treaty:
+          one:
+          other:
+        maib_report:
+          one:
+          other:
+        map:
+          one: Mapa
+          other: Mapas
+        medical_safety_alert:
+          one:
+          other:
+        national:
+          one:
+          other:
+        national_statistics:
+          one: Estatística - estatística nacional
+          other: Estatísticas - estatísticas nacionais
+        national_statistics_announcement:
+          one:
+          other:
+        news_article:
+          one: Notícia - Artigo
+          other: Notícias - Artigos
+        news_story:
+          one: Notícia
+          other: Notícias
+        notice:
+          one:
+          other:
+        official:
+          one:
+          other:
+        official_statistics:
+          one: Estatística
+          other: Estatísticas
+        official_statistics_announcement:
+          one:
+          other:
+        open_consultation:
+          one: Consulta aberta
+          other: Consultas abertas
+        oral_statement:
+          one: Declaração verbal ao Parlamento
+          other: Declarações verbais ao Parlamento
+        policy:
+          one: Política
+          other: Políticas
+        policy_paper:
+          one: Relatório sobre políticas
+          other: Relatórios sobre políticas
+        press_release:
+          one: Comunicado de Imprensa
+          other: Comunicados de Imprensa
+        promotional:
+          one: Material promocional
+          other: Materiais promocionais
+        publication:
+          one: Publicação
+          other: Publicações
+        raib_report:
+          one:
+          other:
+        regulation:
+          one:
+          other:
+        research:
+          one: Pesquisa e análise
+          other: Pesquisas e análises
+        residential_property_tribunal_decision:
+          one:
+          other:
+        service_sign_in:
+          one:
+          other:
+        service_standard_report:
+          one:
+          other:
+        speaking_notes:
+          one: Notas de discurso
+          other: Notas de discursos
+        speech:
+          one: Discurso
+          other: Discursos
+        standard:
+          one:
+          other:
+        statement_to_parliament:
+          one: Declaração ao Parlamento
+          other: Declarações ao Parlamento
+        statistical_data_set:
+          one: Conjunto de dados estastísticos
+          other: Conjuntos de dados estatísticos
+        statistics_announcement:
+          one:
+          other:
+        statutory_guidance:
+          one:
+          other:
+        take_part:
+          one:
+          other:
+        tax_tribunal_decision:
+          one:
+          other:
+        transcript:
+          one: Transcrição
+          other: Transcrições
+        transparency:
+          one: Dado de Transparência
+          other: Dados de Transparência
+        utaac_decision:
+          one:
+          other:
+        world_location_news_article:
+          one: Notícia - Artigo
+          other: Notícias - Artigos
+        world_news_story:
+          one:
+          other:
+        written_statement:
+          one: Declaração escrita ao Parlamento
+          other: Declarações escritas ao Parlamento
+    corporate_information:
+    document_types:
+      documents:
+      guidance_and_regulation:
+        see_all:
+          path:
+          text:
+        title:
+      news_and_communications:
+        see_all:
+          path:
+          text:
+        title:
+      policy_and_engagement:
+        see_all:
+          path:
+          text:
+        title:
+      research_and_statistics:
+        see_all:
+          path:
+          text:
+        title:
+      services:
+        see_all:
+          path:
+          text:
+        title:
+      transparency:
+        see_all:
+          path:
+          text:
+        title:
+    featured:
+    foi:
+      contact_form:
+      foi_exemption_html:
+      freedom_of_information_act:
+      freedom_of_information_requests:
+      make_an_foi_request:
+      making_foi_requests:
+        step1_html:
+        step2_html:
+        step3_html:
+    follow_us:
+    high_profile_groups:
+    jobs_contracts:
+    latest_from:
+    notices:
+      changed_name:
+      devolved:
+      joining:
+      left_gov:
+      merged:
+      merged_no_date:
+      no_longer_exists:
+      no_website:
+      separate_website:
+      split:
+    part_of:
+    people:
+      board_members:
+      chief_professional_officers:
+      military_personnel:
+      ministers:
+      special_representatives:
+      traffic_commissioners:
+    read_more:
+    see_all_latest_documents:
+    separate_website:
+    subscription:
+      email:
+      feed:
+    type:
+      adhoc_advisory_group:
+      advisory_ndpb:
+      civil_service:
+      executive_agency:
+      executive_ndpb:
+      independent_monitoring_body:
+      non_ministerial_department:
+      other:
+      public_corporation:
+      tribunal:
+    view_all:
+    view_less:
+    what_we_do:

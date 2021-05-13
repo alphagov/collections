@@ -3,37 +3,27 @@ es:
   dit_landing_page:
     guidance_links:
     - title: Importar desde el Reino Unido
-      text: Descubra lo que su empresa con sede en la UE debe hacer para importar
-        desde el Reino Unido, incluidos los procedimientos aduaneros y la importación
-        de bienes como alimentos, bebidas, productos animales y vegetales.
+      text: Descubra lo que su empresa con sede en la UE debe hacer para importar desde el Reino Unido, incluidos los procedimientos aduaneros y la importación de bienes como alimentos, bebidas, productos animales y vegetales.
       link: Conozca más sobre cómo importar desde el Reino Unido
       url: "/guidance/eu-business-importing-from-the-uk.es"
     - title: Exportar al Reino Unido
-      text: Conozca qué debe hacer su empresa con sede en la UE para exportar al Reino
-        Unido, incluidas las normas para transportistas, controles, movimiento de
-        mercancías a través de fronteras; y exportación de mercancías como alimentos,
-        bebidas, animales, plantas y productos relacionados con la energía.
+      text: Conozca qué debe hacer su empresa con sede en la UE para exportar al Reino Unido, incluidas las normas para transportistas, controles, movimiento de mercancías a través de fronteras; y exportación de mercancías como alimentos, bebidas, animales, plantas y productos relacionados con la energía.
       link: Conozca más sobre cómo exportar al Reino Unido
       url: "/guidance/eu-business-exporting-to-the-uk.es"
     - title: Pagar impuestos y aranceles
-      text: Obtenga más información sobre los aranceles y solicitar devoluciones del
-        IVA para su empresa con sede en la UE.
+      text: Obtenga más información sobre los aranceles y solicitar devoluciones del IVA para su empresa con sede en la UE.
       link: Conozca más sobre impuestos y aranceles
       url: "/guidance/eu-business-taxes-and-tariffs.es"
     - title: Prestación de servicios en el Reino Unido
-      text: Conozca cómo prestar servicios en el Reino Unido si es una empresa con
-        sede en la UE.
+      text: Conozca cómo prestar servicios en el Reino Unido si es una empresa con sede en la UE.
       link: Conozca más sobre la prestación de servicios en el Reino Unido
       url: "/guidance/eu-business-services.es"
     - title: Trabajar en el Reino Unido
-      text: Conozca qué requisitos se aplican a los trabajadores de la UE en el Reino
-        Unido, incluidos los requisitos sobre conducción, visados y reconocimientos
-        de acreditaciones profesionales.
+      text: Conozca qué requisitos se aplican a los trabajadores de la UE en el Reino Unido, incluidos los requisitos sobre conducción, visados y reconocimientos de acreditaciones profesionales.
       link: Conozca más sobre trabajar en el Reino Unido
       url: "/guidance/eu-business-working-in-the-uk.es"
     - title: Protección de datos y derechos de autor
-      text: Obtenga más información sobre los cambios en las reglas, incluida la propiedad
-        intelectual, los derechos de autor y el intercambio de datos personales.
+      text: Obtenga más información sobre los cambios en las reglas, incluida la propiedad intelectual, los derechos de autor y el intercambio de datos personales.
       link: Conozca más sobre la protección de datos y derechos de autor
       url: "/guidance/eu-business-data-protection-and-copyright.es"
     guidance_title: Lo que su empresa necesita saber
@@ -42,15 +32,11 @@ es:
     meta_title: Comerciar con el Reino Unido como empresa con sede en la UE
     page_header: Comerciar con el Reino Unido como empresa con sede en la UE
     page_header_explainer: "<p>Las reglas para comerciar con el Reino Unido han cambiado.</p>\n"
-    ribbon_text: 'Si su empresa tiene sede en la UE, verifique las reglas que debe
-      seguir para continuar comerciando con el Reino Unido.
+    ribbon_text: 'Si su empresa tiene sede en la UE, verifique las reglas que debe seguir para continuar comerciando con el Reino Unido.
 
-      '
+'
     ribbon_title: Asegúrese de que su empresa con sede en la UE esté preparada
-    training_section_description: 'Conozca más sobre los requisitos fronterizos del
-      Reino Unido <a href="/guidance/webinars-for-eu-based-organisations-that-trade-with-the-uk"
-      class="govuk-link">registrándose en las próximas jornadas informativas.</a>.
+    training_section_description: 'Conozca más sobre los requisitos fronterizos del Reino Unido <a href="/guidance/webinars-for-eu-based-organisations-that-trade-with-the-uk" class="govuk-link">registrándose en las próximas jornadas informativas.</a>.
 
-      '
-    training_section_title: Jornadas informativas para empresas con sede en la UE
-      que operan con el Reino Unido
+'
+    training_section_title: Jornadas informativas para empresas con sede en la UE que operan con el Reino Unido

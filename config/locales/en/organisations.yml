@@ -122,6 +122,9 @@ en:
         medical_safety_alert:
           one: Alerts and recalls for drugs and medical devices
           other: Alerts and recalls for drugs and medical devices
+        national:
+          one: National statistics announcement
+          other: National statistics announcements
         national_statistics:
           one: National Statistics
           other: National Statistics
@@ -137,6 +140,9 @@ en:
         notice:
           one: Notice
           other: Notices
+        official:
+          one: Official statistics announcement
+          other: Official statistics announcements
         official_statistics:
           one: Official Statistics
           other: Official Statistics
@@ -188,6 +194,9 @@ en:
         speech:
           one: Speech
           other: Speeches
+        standard:
+          one: Standard
+          other: Standards
         statement_to_parliament:
           one: Statement to Parliament
           other: Statements to Parliament
@@ -267,10 +276,8 @@ en:
       freedom_of_information_requests: Freedom of Information requests
       make_an_foi_request: Make an FOI request
       making_foi_requests:
-        step1_html: Read about the Freedom of Information (FOI) Act and <a href="%{how_to_path}"
-          class="govuk-link brand__color">how to make a request</a>.
-        step2_html: Check <a href="%{our_releases_path}" class="govuk-link brand__color">our
-          previous releases</a> to see if we’ve already answered your question.
+        step1_html: Read about the Freedom of Information (FOI) Act and <a href="%{how_to_path}" class="govuk-link brand__color">how to make a request</a>.
+        step2_html: Check <a href="%{our_releases_path}" class="govuk-link brand__color">our previous releases</a> to see if we’ve already answered your question.
         step3_html: Make a new request by contacting us using the details below.
     follow_us: Follow us
     high_profile_groups: High profile groups within %{title}
@@ -281,8 +288,7 @@ en:
       devolved: "%{title} is a body of <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} will soon be incorporated into GOV.UK"
       left_gov: "%{title} is now independent of the UK government"
-      merged: "%{title} became part of <a href='%{link_href}'>%{link_text}</a> in
-        %{updated}"
+      merged: "%{title} became part of <a href='%{link_href}'>%{link_text}</a> in %{updated}"
       merged_no_date: "%{title} is now part of <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} has closed"
       no_website: "%{title} has no website"

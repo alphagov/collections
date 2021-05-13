@@ -1,0 +1,322 @@
+---
+hy:
+  organisations:
+    about_page_path:
+    administered_by:
+    contact:
+      contact_details:
+      contact_form:
+      contact_organisation:
+      email:
+      telephone:
+    content_item:
+      schema_name:
+        aaib_report:
+          one:
+          other:
+        announcement:
+          one: Հայտարարություն
+          other: Հայտարարություններ
+        asylum_support_decision:
+          one:
+          other:
+        authored_article:
+          one: Հեղինակային հոդված
+          other: Հեղինակային հոդվածներ
+        business_finance_support_scheme:
+          one:
+          other:
+        case_study:
+          one: Թեմատիկ ուսումնասիրություն
+          other: Թեմատիկ ուսումնասիրություններ
+        closed_consultation:
+          one: Փակ խորհրդատվություն
+          other: Փակ խորհրդատվություններ
+        cma_case:
+          one:
+          other:
+        coming_soon:
+          one:
+          other:
+        consultation:
+          one: Խորհրդատվություն
+          other: Խորհրդատվություններ
+        consultation_outcome:
+          one: Խորհրդատվության արդյունք
+          other: Խորհրդատվության արդյունքներ
+        corporate_information_page:
+          one:
+          other:
+        corporate_report:
+          one: Կորպորատիվ հաշվետվություն
+          other: Կորպորատիվ հաշվետվություններ
+        correspondence:
+          one: Նամակագրություն
+          other: Նամակագրություններ
+        countryside_stewardship_grant:
+          one:
+          other:
+        decision:
+          one:
+          other:
+        detailed_guide:
+          one: Մանրամասն ուղեցույց
+          other: Մանրամասն ուղեցույցեր
+        dfid_research_output:
+          one:
+          other:
+        document_collection:
+          one: Մի շարք
+          other:
+        draft_text:
+          one: Սևագիր տեքստ
+          other: Սևագիր տեքստեր
+        drug_safety_update:
+          one:
+          other:
+        employment_appeal_tribunal_decision:
+          one:
+          other:
+        employment_tribunal_decision:
+          one:
+          other:
+        esi_fund:
+          one:
+          other:
+        fatality_notice:
+          one: Մահվան ծանուցում
+          other: Մահվան ծանուցումներ
+        foi_release:
+          one: Ազատ տեղեկատվության հաղորդագրություն
+          other: Ազատ տեղեկատվության հաղորդագրություններ
+        form:
+          one: Ձևաթուղթ
+          other: Ձևաթղթեր
+        government_response:
+          one: Կառավարության արձագանք
+          other: Կառավարության արձագանքներ
+        guidance:
+          one: Ուղեցույց
+          other: Ուղեցույցեր
+        impact_assessment:
+          one: Ազդեցության գնահատում
+          other: Ազդեցության գնահատումներ
+        imported:
+          one: Ներկրված - սպասման տեսակ
+          other: Ներկրված - սպասման տեսակներ
+        independent_report:
+          one: Անկախ հաշվետվություն
+          other: Անկախ հաշվետվություններ
+        international_development_fund:
+          one:
+          other:
+        international_treaty:
+          one:
+          other:
+        maib_report:
+          one:
+          other:
+        map:
+          one: Քարտեզ
+          other: Քարտեզներ
+        medical_safety_alert:
+          one:
+          other:
+        national:
+          one:
+          other:
+        national_statistics:
+          one: Վիճակագրություն-ազգային վիճակագրություն
+          other: Վիճակագրություն-ազգային վիճակագրություններ
+        national_statistics_announcement:
+          one:
+          other:
+        news_article:
+          one: Տեղեկատվական հոդված
+          other: Տեղեկատվական հոդվածներ
+        news_story:
+          one: Լուր
+          other: Լուրեր
+        notice:
+          one:
+          other:
+        official:
+          one:
+          other:
+        official_statistics:
+          one: Վիճակագրություն
+          other: Վիճակագրություն
+        official_statistics_announcement:
+          one:
+          other:
+        open_consultation:
+          one: Բաց խորհրդատվություն
+          other: Բաց խորհրդատվություններ
+        oral_statement:
+          one: Բանավոր դիմում խորհրդարան
+          other: Բանավոր դիմումներ խորհրդարան
+        policy:
+          one: Քաղաքականություն
+          other: Քաղաքականություններ
+        policy_paper:
+          one: Ծրագրային փաստաթուղթ
+          other: Ծրագրային փաստաթղթեր
+        press_release:
+          one: Մամլո հաղորդագրություն
+          other: Մամլո հաղորդագրություններ
+        promotional:
+          one: Քարոզչական նյութ
+          other: Քարոզչական նյութներ
+        publication:
+          one: Հրապարակում
+          other: Հրապարակումներ
+        raib_report:
+          one:
+          other:
+        regulation:
+          one:
+          other:
+        research:
+          one: Հետազոտություն և վերլուծություն
+          other: Հետազոտություններ և վերլուծություններ
+        residential_property_tribunal_decision:
+          one:
+          other:
+        service_sign_in:
+          one:
+          other:
+        service_standard_report:
+          one:
+          other:
+        speaking_notes:
+          one: Խոսքի գրառում
+          other: Խոսքի գրառումներ
+        speech:
+          one: Ելույթ
+          other: Ելույթներ
+        standard:
+          one:
+          other:
+        statement_to_parliament:
+          one: Դիմում խորհրդարան
+          other: Դիմումներ խորհրդարան
+        statistical_data_set:
+          one: Վիճակագրական տվյալ
+          other: Վիճակագրական տվյալներ
+        statistics_announcement:
+          one:
+          other:
+        statutory_guidance:
+          one:
+          other:
+        take_part:
+          one:
+          other:
+        tax_tribunal_decision:
+          one:
+          other:
+        transcript:
+          one: Վերծանում
+          other: Վերծանումներ
+        transparency:
+          one: Բաց տեղեկատվություն
+          other: Բաց տեղեկատվություններ
+        utaac_decision:
+          one:
+          other:
+        world_location_news_article:
+          one: Տեղեկատվական հոդված
+          other: Տեղեկատվական հոդվածներ
+        world_news_story:
+          one:
+          other:
+        written_statement:
+          one: Գրավոր դիմում խորհրդարան
+          other: Գրավոր դիմումներ խորհրդարան
+    corporate_information:
+    document_types:
+      documents:
+      guidance_and_regulation:
+        see_all:
+          path:
+          text:
+        title:
+      news_and_communications:
+        see_all:
+          path:
+          text:
+        title:
+      policy_and_engagement:
+        see_all:
+          path:
+          text:
+        title:
+      research_and_statistics:
+        see_all:
+          path:
+          text:
+        title:
+      services:
+        see_all:
+          path:
+          text:
+        title:
+      transparency:
+        see_all:
+          path:
+          text:
+        title:
+    featured:
+    foi:
+      contact_form:
+      foi_exemption_html:
+      freedom_of_information_act:
+      freedom_of_information_requests:
+      make_an_foi_request:
+      making_foi_requests:
+        step1_html:
+        step2_html:
+        step3_html:
+    follow_us:
+    high_profile_groups:
+    jobs_contracts:
+    latest_from:
+    notices:
+      changed_name:
+      devolved:
+      joining:
+      left_gov:
+      merged:
+      merged_no_date:
+      no_longer_exists:
+      no_website:
+      separate_website:
+      split:
+    part_of:
+    people:
+      board_members:
+      chief_professional_officers:
+      military_personnel:
+      ministers:
+      special_representatives:
+      traffic_commissioners:
+    read_more:
+    see_all_latest_documents:
+    separate_website:
+    subscription:
+      email:
+      feed:
+    type:
+      adhoc_advisory_group:
+      advisory_ndpb:
+      civil_service:
+      executive_agency:
+      executive_ndpb:
+      independent_monitoring_body:
+      non_ministerial_department:
+      other:
+      public_corporation:
+      tribunal:
+    view_all:
+    view_less:
+    what_we_do:

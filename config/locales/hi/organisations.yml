@@ -1,0 +1,322 @@
+---
+hi:
+  organisations:
+    about_page_path:
+    administered_by:
+    contact:
+      contact_details:
+      contact_form:
+      contact_organisation:
+      email:
+      telephone:
+    content_item:
+      schema_name:
+        aaib_report:
+          one:
+          other:
+        announcement:
+          one: घोषणा
+          other: घोषणाएं
+        asylum_support_decision:
+          one:
+          other:
+        authored_article:
+          one: मूल आलेख
+          other: मूल आलेख
+        business_finance_support_scheme:
+          one:
+          other:
+        case_study:
+          one: विषय अध्ययन
+          other: विषय अध्ययन
+        closed_consultation:
+          one: बंद कमरे में परामर्श
+          other: बंद कमरे में परामर्श
+        cma_case:
+          one:
+          other:
+        coming_soon:
+          one:
+          other:
+        consultation:
+          one: परामर्श
+          other: परामर्श
+        consultation_outcome:
+          one: परामर्श का नतीजा
+          other: परामर्श के नतीजे
+        corporate_information_page:
+          one:
+          other:
+        corporate_report:
+          one: कॉरपोरेट विवरण
+          other: कॉरपोरेट विवरण
+        correspondence:
+          one: पत्र व्यवहार
+          other: पत्र व्यवहार
+        countryside_stewardship_grant:
+          one:
+          other:
+        decision:
+          one:
+          other:
+        detailed_guide:
+          one: विस्तृत मार्गदर्शन
+          other: विस्तृत मार्गदर्शन
+        dfid_research_output:
+          one:
+          other:
+        document_collection:
+          one: श्रृंखला
+          other:
+        draft_text:
+          one: मसौदा पाठ
+          other: मसौदे के पाठ
+        drug_safety_update:
+          one:
+          other:
+        employment_appeal_tribunal_decision:
+          one:
+          other:
+        employment_tribunal_decision:
+          one:
+          other:
+        esi_fund:
+          one:
+          other:
+        fatality_notice:
+          one: विपत्ति की सूचना
+          other: विपत्ति की सूचना
+        foi_release:
+          one: एफओआई की विज्ञप्ति
+          other: एफओआई की विज्ञप्तियां
+        form:
+          one: प्रपत्र
+          other: प्रपत्र
+        government_response:
+          one: सरकारी जवाब
+          other: सरकारी जवाब
+        guidance:
+          one: मार्गदर्शन
+          other: मार्गदर्शन
+        impact_assessment:
+          one: प्रभाव का आंकलन
+          other: प्रभाव का आंकलन
+        imported:
+          one: आयातित - प्रतीक्षा का प्रकार
+          other: आयातित - प्रतीक्षा का प्रकार
+        independent_report:
+          one: स्वतंत्र रिपोर्ट
+          other: स्वतंत्र रिपोर्टें
+        international_development_fund:
+          one:
+          other:
+        international_treaty:
+          one:
+          other:
+        maib_report:
+          one:
+          other:
+        map:
+          one: मानचित्र
+          other: मानचित्रों
+        medical_safety_alert:
+          one:
+          other:
+        national:
+          one:
+          other:
+        national_statistics:
+          one: सांख्यिकी - राष्ट्रीय सांख्यिकी
+          other: सांख्यिकी - राष्ट्रीय सांख्यिकी
+        national_statistics_announcement:
+          one:
+          other:
+        news_article:
+          one: समाचार लेख
+          other: समाचार लेख
+        news_story:
+          one: समाचार कथा
+          other: समाचार कथाएं
+        notice:
+          one:
+          other:
+        official:
+          one:
+          other:
+        official_statistics:
+          one: आंकड़े
+          other: आंकड़े
+        official_statistics_announcement:
+          one:
+          other:
+        open_consultation:
+          one: खुला परामर्श
+          other: खुले परामर्श
+        oral_statement:
+          one: संसद में मौखिक बयान
+          other: संसद में मौखिक बयान
+        policy:
+          one: नीति
+          other: नीतियां
+        policy_paper:
+          one: नीति पत्र
+          other: नीति पत्र
+        press_release:
+          one: प्रेस विज्ञप्ति
+          other: प्रेस विज्ञप्तियां
+        promotional:
+          one: प्रचार सामग्री
+          other: प्रचार सामग्री
+        publication:
+          one: प्रकाशन
+          other: प्रकाशन
+        raib_report:
+          one:
+          other:
+        regulation:
+          one:
+          other:
+        research:
+          one: अनुसंधान एवं विश्लेषण
+          other: अनुसंधान एवं विश्लेषण
+        residential_property_tribunal_decision:
+          one:
+          other:
+        service_sign_in:
+          one:
+          other:
+        service_standard_report:
+          one:
+          other:
+        speaking_notes:
+          one: " उदबोधन अंश"
+          other: " उदबोधन अंश"
+        speech:
+          one: भाषण
+          other: भाषण
+        standard:
+          one:
+          other:
+        statement_to_parliament:
+          one: संसद में बयान
+          other: संसद में बयान
+        statistical_data_set:
+          one: सांख्यिकीय आंकड़े का समूह
+          other: सांख्यिकीय आंकड़े का समूह
+        statistics_announcement:
+          one:
+          other:
+        statutory_guidance:
+          one:
+          other:
+        take_part:
+          one:
+          other:
+        tax_tribunal_decision:
+          one:
+          other:
+        transcript:
+          one: प्रतिलिपि
+          other: प्रतिलिपियां
+        transparency:
+          one: पारदर्शिता आंकड़े
+          other: पारदर्शिता आंकड़े
+        utaac_decision:
+          one:
+          other:
+        world_location_news_article:
+          one: समाचार लेख
+          other: समाचार लेख
+        world_news_story:
+          one:
+          other:
+        written_statement:
+          one: संसद में लिखित बयान
+          other: संसद में लिखित बयान
+    corporate_information:
+    document_types:
+      documents:
+      guidance_and_regulation:
+        see_all:
+          path:
+          text:
+        title:
+      news_and_communications:
+        see_all:
+          path:
+          text:
+        title:
+      policy_and_engagement:
+        see_all:
+          path:
+          text:
+        title:
+      research_and_statistics:
+        see_all:
+          path:
+          text:
+        title:
+      services:
+        see_all:
+          path:
+          text:
+        title:
+      transparency:
+        see_all:
+          path:
+          text:
+        title:
+    featured:
+    foi:
+      contact_form:
+      foi_exemption_html:
+      freedom_of_information_act:
+      freedom_of_information_requests:
+      make_an_foi_request:
+      making_foi_requests:
+        step1_html:
+        step2_html:
+        step3_html:
+    follow_us:
+    high_profile_groups:
+    jobs_contracts:
+    latest_from:
+    notices:
+      changed_name:
+      devolved:
+      joining:
+      left_gov:
+      merged:
+      merged_no_date:
+      no_longer_exists:
+      no_website:
+      separate_website:
+      split:
+    part_of:
+    people:
+      board_members:
+      chief_professional_officers:
+      military_personnel:
+      ministers:
+      special_representatives:
+      traffic_commissioners:
+    read_more:
+    see_all_latest_documents:
+    separate_website:
+    subscription:
+      email:
+      feed:
+    type:
+      adhoc_advisory_group:
+      advisory_ndpb:
+      civil_service:
+      executive_agency:
+      executive_ndpb:
+      independent_monitoring_body:
+      non_ministerial_department:
+      other:
+      public_corporation:
+      tribunal:
+    view_all:
+    view_less:
+    what_we_do:

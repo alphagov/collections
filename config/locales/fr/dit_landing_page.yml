@@ -3,57 +3,38 @@ fr:
   dit_landing_page:
     guidance_links:
     - title: Importer du Royaume-Uni
-      text: Découvrez ce que les entreprises basées dans l'UE doivent faire pour importer
-        des produits du Royaume-Uni, notamment les procédures douanières et l'importation
-        de biens tels que les denrées alimentaires, les boissons, les produits d’origine
-        animale et végétaux.
+      text: Découvrez ce que les entreprises basées dans l'UE doivent faire pour importer des produits du Royaume-Uni, notamment les procédures douanières et l'importation de biens tels que les denrées alimentaires, les boissons, les produits d’origine animale et végétaux.
       link: En savoir plus sur les importations en provenance du Royaume-Uni
       url: "/guidance/eu-business-importing-from-the-uk.fr"
     - title: Exporter au Royaume-Uni
-      text: Découvrez ce que votre entreprise basée dans l'UE doit faire pour exporter
-        au Royaume-Uni, notamment les règles applicables aux transporteurs, aux contrôles,
-        au passage des frontières et à l'exportation de produits tels que les denrées
-        alimentaires, les boissons, les animaux, les plantes et les produits liés
-        à l'énergie.
+      text: Découvrez ce que votre entreprise basée dans l'UE doit faire pour exporter au Royaume-Uni, notamment les règles applicables aux transporteurs, aux contrôles, au passage des frontières et à l'exportation de produits tels que les denrées alimentaires, les boissons, les animaux, les plantes et les produits liés à l'énergie.
       link: En savoir plus pour exporter vers le Royaume-Uni
       url: "/guidance/eu-business-exporting-to-the-uk.fr"
     - title: Payer des taxes et des droits de douane
-      text: En savoir plus sur les droits de douane et la récupération de la TVA pour
-        votre entreprise basée dans l'UE.
+      text: En savoir plus sur les droits de douane et la récupération de la TVA pour votre entreprise basée dans l'UE.
       link: En savoir plus sur les taxes et les droits de douane
       url: "/guidance/eu-business-taxes-and-tariffs.fr"
     - title: Fournir des services au Royaume-Uni
-      text: Découvrez comment fournir des services au Royaume-Uni si vous êtes une
-        entreprise établie dans l'UE.
+      text: Découvrez comment fournir des services au Royaume-Uni si vous êtes une entreprise établie dans l'UE.
       link: En savoir plus sur la prestation de services au Royaume-Uni
       url: "/guidance/eu-business-services.fr"
     - title: Travailler au Royaume-Uni
-      text: Découvrez les règles applicables aux travailleurs de l'UE au Royaume-Uni,
-        notamment en matière de conduite, de visas et de reconnaissance des qualifications
-        professionnelles.
+      text: Découvrez les règles applicables aux travailleurs de l'UE au Royaume-Uni, notamment en matière de conduite, de visas et de reconnaissance des qualifications professionnelles.
       link: En savoir plus pour travailler au Royaume-Uni
       url: "/guidance/eu-business-working-in-the-uk.fr"
     - title: Protection des données et droit d'auteur
-      text: En savoir plus sur les modifications apportées aux règles, notamment en
-        matière de propriété intellectuelle, de droits d'auteur et de partage des
-        données personnelles.
+      text: En savoir plus sur les modifications apportées aux règles, notamment en matière de propriété intellectuelle, de droits d'auteur et de partage des données personnelles.
       link: En savoir plus sur la protection des données et le droit d'auteur
       url: "/guidance/eu-business-data-protection-and-copyright.fr"
     guidance_title: Ce que votre entreprise doit savoir
     kbm-logo-alt-text: Continuons à travailler ensemble
-    meta_description: Les règles relatives aux échanges commerciaux avec le Royaume-Uni
-      ont changé.
+    meta_description: Les règles relatives aux échanges commerciaux avec le Royaume-Uni ont changé.
     meta_title: Travailler avec le Royaume-Uni en tant qu'entreprise basée dans l'UE
     page_header: Travailler avec le Royaume-Uni en tant qu'entreprise basée dans l'UE
-    page_header_explainer: "<p>Les règles relatives aux échanges commerciaux avec
-      le Royaume-Uni ont changé.</p>\n"
-    ribbon_text: 'Si vous dirigez une entreprise basée dans l''UE, vérifiez les règles
-      que vous devez suivre pour continuer à commercer avec le Royaume-Uni.
+    page_header_explainer: "<p>Les règles relatives aux échanges commerciaux avec le Royaume-Uni ont changé.</p>\n"
+    ribbon_text: 'Si vous dirigez une entreprise basée dans l''UE, vérifiez les règles que vous devez suivre pour continuer à commercer avec le Royaume-Uni.
 
-      '
+'
     ribbon_title: Assurez-vous que votre entreprise basée dans l'UE soit prête
-    training_section_description: Pour en savoir plus sur les exigences aux frontières
-      du Royaume-Uni, <a href="/guidance/webinars-for-eu-based-organisations-that-trade-with-the-uk"
-      class="govuk-link">inscrivez-vous à un prochain webinaire ou à une journée sectorielle</a>.
-    training_section_title: Webinaires pour les entreprises basées dans l'UE qui travaillent
-      avec le Royaume-Uni
+    training_section_description: Pour en savoir plus sur les exigences aux frontières du Royaume-Uni, <a href="/guidance/webinars-for-eu-based-organisations-that-trade-with-the-uk" class="govuk-link">inscrivez-vous à un prochain webinaire ou à une journée sectorielle</a>.
+    training_section_title: Webinaires pour les entreprises basées dans l'UE qui travaillent avec le Royaume-Uni

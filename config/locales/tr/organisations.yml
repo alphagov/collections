@@ -1,0 +1,322 @@
+---
+tr:
+  organisations:
+    about_page_path:
+    administered_by:
+    contact:
+      contact_details:
+      contact_form:
+      contact_organisation:
+      email:
+      telephone:
+    content_item:
+      schema_name:
+        aaib_report:
+          one:
+          other:
+        announcement:
+          one: Duyuru
+          other: Duyurular
+        asylum_support_decision:
+          one:
+          other:
+        authored_article:
+          one: Yazılan makale
+          other: Yazılan makaleler
+        business_finance_support_scheme:
+          one:
+          other:
+        case_study:
+          one: Örnek Olay
+          other: Örnek Olaylar
+        closed_consultation:
+          one: Sona eren çalışmalar
+          other: Sona eren çalışmalar
+        cma_case:
+          one:
+          other:
+        coming_soon:
+          one:
+          other:
+        consultation:
+          one: Danışma
+          other: Yapılan Danışmalar
+        consultation_outcome:
+          one: Danışma sonucu
+          other: Danışma sonuçları
+        corporate_information_page:
+          one:
+          other:
+        corporate_report:
+          one: Kurumsal Rapor
+          other: Kurumsal Raporlar
+        correspondence:
+          one: Yazışma
+          other: Yazışmalar
+        countryside_stewardship_grant:
+          one:
+          other:
+        decision:
+          one:
+          other:
+        detailed_guide:
+          one: Ayrıntılı Kılavuz
+          other: Ayrıntılı Kılavuzlar
+        dfid_research_output:
+          one:
+          other:
+        document_collection:
+          one: Seriler
+          other:
+        draft_text:
+          one: Taslak metin
+          other: Taslak metinler
+        drug_safety_update:
+          one:
+          other:
+        employment_appeal_tribunal_decision:
+          one:
+          other:
+        employment_tribunal_decision:
+          one:
+          other:
+        esi_fund:
+          one:
+          other:
+        fatality_notice:
+          one: Ölüm ilanı
+          other: Ölüm ilanları
+        foi_release:
+          one: Bilgi edinme hakkı raporu
+          other: Bilgi edinme hakkı raporları
+        form:
+          one: Form
+          other: Formlar
+        government_response:
+          one: Hükümet cevabı
+          other: Hükümet cevapları
+        guidance:
+          one: Kılavuz
+          other: Kılavuzlar
+        impact_assessment:
+          one: Etki değerlendirmesi
+          other: Etki değerlendirmeleri
+        imported:
+          one: Alındı - Kategorize edilecek
+          other: Alındı - Kategorize edilecek
+        independent_report:
+          one: Bağımsız rapor
+          other: Bağımsız raporlar
+        international_development_fund:
+          one:
+          other:
+        international_treaty:
+          one:
+          other:
+        maib_report:
+          one:
+          other:
+        map:
+          one: Harita
+          other: Haritalar
+        medical_safety_alert:
+          one:
+          other:
+        national:
+          one:
+          other:
+        national_statistics:
+          one: İstatistikler - ulusal istatistikler
+          other: İstatistikler - ulusal istatistikler
+        national_statistics_announcement:
+          one:
+          other:
+        news_article:
+          one: Makale
+          other: Makaleler
+        news_story:
+          one: Haber
+          other: Haberler
+        notice:
+          one:
+          other:
+        official:
+          one:
+          other:
+        official_statistics:
+          one: İstatistikler
+          other: İstatistikler
+        official_statistics_announcement:
+          one:
+          other:
+        open_consultation:
+          one: Devam eden çalışma
+          other: Devam eden çalışmalar
+        oral_statement:
+          one: Parlamento'ya sözlü açıklama
+          other: Parlamento'ya sözlü açıklamalar
+        policy:
+          one: Politika
+          other: Politikalar
+        policy_paper:
+          one: Politika belgesi
+          other: Politika belgeleri
+        press_release:
+          one: Basın Bülteni
+          other: Basın Bültenleri
+        promotional:
+          one: Tanıtım Malzemesi
+          other: Tanıtım Malzemeleri
+        publication:
+          one: Yayın
+          other: Yayınlar
+        raib_report:
+          one:
+          other:
+        regulation:
+          one:
+          other:
+        research:
+          one: Araştırma ve analiz
+          other: Araştırma ve analizler
+        residential_property_tribunal_decision:
+          one:
+          other:
+        service_sign_in:
+          one:
+          other:
+        service_standard_report:
+          one:
+          other:
+        speaking_notes:
+          one: Konuşma notu
+          other: Konuşma notları
+        speech:
+          one: Konuşma
+          other: Konuşmalar
+        standard:
+          one:
+          other:
+        statement_to_parliament:
+          one: Parlamento'ya yapılan açıklama
+          other: Parlamento'ya yapılan açıklamalar
+        statistical_data_set:
+          one: İstatiksel veri setleri
+          other: İstatiksel veri setleri
+        statistics_announcement:
+          one:
+          other:
+        statutory_guidance:
+          one:
+          other:
+        take_part:
+          one:
+          other:
+        tax_tribunal_decision:
+          one:
+          other:
+        transcript:
+          one: Transkriptler
+          other: Transkriptler
+        transparency:
+          one: Veri saydamlığı
+          other: Veri saydamlığı
+        utaac_decision:
+          one:
+          other:
+        world_location_news_article:
+          one: Makale
+          other: Makaleler
+        world_news_story:
+          one:
+          other:
+        written_statement:
+          one: Parlamento'ya yapılan yazılı açıklama
+          other: Parlamento'ya yapılan yazılı açıklamalar
+    corporate_information:
+    document_types:
+      documents:
+      guidance_and_regulation:
+        see_all:
+          path:
+          text:
+        title:
+      news_and_communications:
+        see_all:
+          path:
+          text:
+        title:
+      policy_and_engagement:
+        see_all:
+          path:
+          text:
+        title:
+      research_and_statistics:
+        see_all:
+          path:
+          text:
+        title:
+      services:
+        see_all:
+          path:
+          text:
+        title:
+      transparency:
+        see_all:
+          path:
+          text:
+        title:
+    featured:
+    foi:
+      contact_form:
+      foi_exemption_html:
+      freedom_of_information_act:
+      freedom_of_information_requests:
+      make_an_foi_request:
+      making_foi_requests:
+        step1_html:
+        step2_html:
+        step3_html:
+    follow_us:
+    high_profile_groups:
+    jobs_contracts:
+    latest_from:
+    notices:
+      changed_name:
+      devolved:
+      joining:
+      left_gov:
+      merged:
+      merged_no_date:
+      no_longer_exists:
+      no_website:
+      separate_website:
+      split:
+    part_of:
+    people:
+      board_members:
+      chief_professional_officers:
+      military_personnel:
+      ministers:
+      special_representatives:
+      traffic_commissioners:
+    read_more:
+    see_all_latest_documents:
+    separate_website:
+    subscription:
+      email:
+      feed:
+    type:
+      adhoc_advisory_group:
+      advisory_ndpb:
+      civil_service:
+      executive_agency:
+      executive_ndpb:
+      independent_monitoring_body:
+      non_ministerial_department:
+      other:
+      public_corporation:
+      tribunal:
+    view_all:
+    view_less:
+    what_we_do:

@@ -1,0 +1,322 @@
+---
+ta:
+  organisations:
+    about_page_path:
+    administered_by:
+    contact:
+      contact_details:
+      contact_form:
+      contact_organisation:
+      email:
+      telephone:
+    content_item:
+      schema_name:
+        aaib_report:
+          one:
+          other:
+        announcement:
+          one: அறிவிப்பு
+          other: அறிவிப்புகள்
+        asylum_support_decision:
+          one:
+          other:
+        authored_article:
+          one: " எழுதப்பட்ட   கட்டுரை"
+          other: எழுதப்பட்ட கட்டுரைகள்
+        business_finance_support_scheme:
+          one:
+          other:
+        case_study:
+          one: சம்பவ ஆய்வுக் கற்கை
+          other: சம்பவ ஆய்வுக் கற்கைகள்
+        closed_consultation:
+          one: வரையறுக்கப்பட்ட நிலையிலான கலந்தாலோசனை
+          other: வரையறுக்கப்பட்ட நிலையிலான  கலந்தாலோசனைகள்
+        cma_case:
+          one:
+          other:
+        coming_soon:
+          one:
+          other:
+        consultation:
+          one: கலந்தாலோசனை
+          other: கலந்தாலோசனைகள்
+        consultation_outcome:
+          one: கலந்தாலோசனையின் முடிவு
+          other: கலந்தாலோசனைப்முடிவுகள்
+        corporate_information_page:
+          one:
+          other:
+        corporate_report:
+          one: கூட்டாண்மை அறிக்கை
+          other: கூட்டாண்மை அறிக்கைகள்
+        correspondence:
+          one: தொடர்பு
+          other: தொடர்புகள்
+        countryside_stewardship_grant:
+          one:
+          other:
+        decision:
+          one:
+          other:
+        detailed_guide:
+          one: விளக்கமான வழிகாட்டல்
+          other: விளக்கமான வழிகாட்டல்
+        dfid_research_output:
+          one:
+          other:
+        document_collection:
+          one: தொடர்
+          other:
+        draft_text:
+          one: வரைபு உரை
+          other: வரைபு உரைகள்
+        drug_safety_update:
+          one:
+          other:
+        employment_appeal_tribunal_decision:
+          one:
+          other:
+        employment_tribunal_decision:
+          one:
+          other:
+        esi_fund:
+          one:
+          other:
+        fatality_notice:
+          one: இடர் அறிவித்தல்
+          other: இடர் அறிவித்தல்கள்
+        foi_release:
+          one: தகவலின் சுதந்திரமான  வெளியிடுதல்
+          other: தகவல்களின் சுதந்திரமான  வெளியிடுதல்கள்
+        form:
+          one: படிவம்
+          other: படிவங்கள்
+        government_response:
+          one: அரசாங்க பதிலிறுப்பு
+          other: அரசாங்க பதிலிறுப்புகள்
+        guidance:
+          one: வழிகாட்டல்
+          other: வழிகாட்டல்
+        impact_assessment:
+          one: தாக்க மதிப்பீடு
+          other: தாக்க மதிப்பீடுகள்
+        imported:
+          one: இறக்குமதி செய்யப்பட்ட - எதிர்பார்க்கும் வகை
+          other: இறக்குமதி செய்யப்பட்ட - எதிர்பார்க்கும் வகை
+        independent_report:
+          one: சுயாதீன அறிக்கை
+          other: சுயாதீன அறிக்கைகள்
+        international_development_fund:
+          one:
+          other:
+        international_treaty:
+          one:
+          other:
+        maib_report:
+          one:
+          other:
+        map:
+          one: வரைபடம்
+          other: வரைபடங்கள்
+        medical_safety_alert:
+          one:
+          other:
+        national:
+          one:
+          other:
+        national_statistics:
+          one: புள்ளிவிபரம் - தேசிய புள்ளிவிபரம்
+          other: புள்ளிவிபரம் - தேசிய புள்ளிவிபரம்
+        national_statistics_announcement:
+          one:
+          other:
+        news_article:
+          one: செய்திக் கட்டுரை
+          other: செய்திக் கட்டுரைகள்
+        news_story:
+          one: செய்திக் கதை
+          other: செய்திக் கதைகள்
+        notice:
+          one:
+          other:
+        official:
+          one:
+          other:
+        official_statistics:
+          one: புள்ளிவிபரம்
+          other: புள்ளிவிபரம்
+        official_statistics_announcement:
+          one:
+          other:
+        open_consultation:
+          one: திறந்த கலந்தாலோசனை
+          other: திறந்த கலந்தாலோசனைகள்
+        oral_statement:
+          one: பாராளுமன்றத்துக்கு வாய் மூலமான அறிக்கை
+          other: பாராளுமன்றத்துக்கு வாய் மூலமான அறிக்கைகள்
+        policy:
+          one: கொள்கை
+          other: கொள்கைகள்
+        policy_paper:
+          one: கொள்கைப் பத்திரம்
+          other: கொள்கைப் பத்திரங்கள்
+        press_release:
+          one: செய்தி வெளியீடு
+          other: செய்தி வெளியீடுகள்
+        promotional:
+          one: விளம்பர ஊக்குவிப்பு பொருள்
+          other: விளம்பர ஊக்குவிப்பு பொருள்
+        publication:
+          one: பிரசுரம்
+          other: பிரசுரங்கள்
+        raib_report:
+          one:
+          other:
+        regulation:
+          one:
+          other:
+        research:
+          one: ஆராய்ச்சி மற்றும் பகுப்பாய்தல்
+          other: ஆராய்ச்சி மற்றும் பகுப்பாய்தல்
+        residential_property_tribunal_decision:
+          one:
+          other:
+        service_sign_in:
+          one:
+          other:
+        service_standard_report:
+          one:
+          other:
+        speaking_notes:
+          one: உரைக் குறிப்புகள்
+          other: உரைக் குறிப்புகள்
+        speech:
+          one: உரை
+          other: உரைகள்
+        standard:
+          one:
+          other:
+        statement_to_parliament:
+          one: பாராளுமன்றத்துக்கான அறிக்கை
+          other: பாராளுமன்றத்துக்கான அறிக்கைகள்
+        statistical_data_set:
+          one: புள்ளிவிபர தரவுத் தொகுதி
+          other: புள்ளிவிபர தரவுத் தொகுதிகள்
+        statistics_announcement:
+          one:
+          other:
+        statutory_guidance:
+          one:
+          other:
+        take_part:
+          one:
+          other:
+        tax_tribunal_decision:
+          one:
+          other:
+        transcript:
+          one: உரை வடிவம்
+          other: உரை வடிவங்கள்
+        transparency:
+          one: வெளிப்படையான தரவு
+          other: வெளிப்படையான தரவு
+        utaac_decision:
+          one:
+          other:
+        world_location_news_article:
+          one: செய்திக் கட்டுரை
+          other: செய்திக் கட்டுரைகள்
+        world_news_story:
+          one:
+          other:
+        written_statement:
+          one: பாராளுமன்றத்துக்கான எழுத்து மூலமான அறிக்கை
+          other: பாராளுமன்றத்துக்கான எழுத்து மூலமான அறிக்கைகள்
+    corporate_information:
+    document_types:
+      documents:
+      guidance_and_regulation:
+        see_all:
+          path:
+          text:
+        title:
+      news_and_communications:
+        see_all:
+          path:
+          text:
+        title:
+      policy_and_engagement:
+        see_all:
+          path:
+          text:
+        title:
+      research_and_statistics:
+        see_all:
+          path:
+          text:
+        title:
+      services:
+        see_all:
+          path:
+          text:
+        title:
+      transparency:
+        see_all:
+          path:
+          text:
+        title:
+    featured:
+    foi:
+      contact_form:
+      foi_exemption_html:
+      freedom_of_information_act:
+      freedom_of_information_requests:
+      make_an_foi_request:
+      making_foi_requests:
+        step1_html:
+        step2_html:
+        step3_html:
+    follow_us:
+    high_profile_groups:
+    jobs_contracts:
+    latest_from:
+    notices:
+      changed_name:
+      devolved:
+      joining:
+      left_gov:
+      merged:
+      merged_no_date:
+      no_longer_exists:
+      no_website:
+      separate_website:
+      split:
+    part_of:
+    people:
+      board_members:
+      chief_professional_officers:
+      military_personnel:
+      ministers:
+      special_representatives:
+      traffic_commissioners:
+    read_more:
+    see_all_latest_documents:
+    separate_website:
+    subscription:
+      email:
+      feed:
+    type:
+      adhoc_advisory_group:
+      advisory_ndpb:
+      civil_service:
+      executive_agency:
+      executive_ndpb:
+      independent_monitoring_body:
+      non_ministerial_department:
+      other:
+      public_corporation:
+      tribunal:
+    view_all:
+    view_less:
+    what_we_do:
