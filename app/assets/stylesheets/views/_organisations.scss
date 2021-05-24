@@ -12,6 +12,16 @@
     padding-bottom: govuk-spacing(3);
     margin-bottom: govuk-spacing(3);
     border-bottom: 1px solid govuk-colour("mid-grey");
+
+    h3 {
+      margin: 0;
+    }
+  }
+
+  .organisations-list__section.js-hidden,
+  .organisation-list__works-with.js-hidden,
+  .organisations-list__item.js-hidden {
+    display: none;
   }
 
   .organisation-list__item-title {
@@ -27,8 +37,7 @@
   .organisation-list__item-works-with {
     @include govuk-font(16);
     display: block;
-    margin-top: govuk-spacing(3);
-    margin-right: govuk-spacing(4);
+    margin: govuk-spacing(3) govuk-spacing(4) 0 0;
 
     @include govuk-media-query($from: tablet) {
       display: inline-block;
@@ -76,8 +85,4 @@
 
 .filter-organisations-list__form--active {
   display: block;
-}
-
-.js-hidden {
-  display: none;
 }
