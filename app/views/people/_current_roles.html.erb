@@ -1,7 +1,7 @@
 <% if person.currently_in_a_role? %>
   <section id="current-roles" <%= direction_rtl_class(prefix: true) %> <%= dir_attribute %> <%= lang_attribute %>>
     <% person.current_roles.each do |role| %>
-      <section class="role_appointment role govuk-!-padding-bottom-8">
+      <div class="role_appointment role govuk-!-padding-bottom-8">
         <%= render "govuk_publishing_components/components/heading", {
           text: role["title"],
           margin_bottom: 2,
@@ -26,7 +26,7 @@
             .to_sentence
             .html_safe %>
         </p>
-      </section>
+      </div>
     <% end %>
   </section>
 <% end %>
