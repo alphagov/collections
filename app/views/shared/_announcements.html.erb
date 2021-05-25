@@ -1,5 +1,5 @@
 <% if announcements.items.present? %>
-  <section id="announcements" <%= direction_rtl_class(prefix: true) %> <%= dir_attribute %>>
+  <div id="announcements" <%= direction_rtl_class(prefix: true) %> <%= dir_attribute %>>
     <%= render "govuk_publishing_components/components/heading", {
         text: t("organisations.content_item.schema_name.announcement.other"),
         lang: t_fallback("organisations.content_item.schema_name.announcement.other"),
@@ -19,5 +19,5 @@
     <div class="read-more">
       <%= link_to "View all announcements", announcements.links[:link_to_news_and_communications], class: "govuk-link", lang: "en" %>
     </div>
-  </section>
+  </div>
 <% end %>

@@ -1,5 +1,5 @@
 <% if person.has_previous_roles? %>
-  <section class="previous-roles govuk-!-padding-bottom-9 <%= direction_rtl_class %>" <%= dir_attribute %> <%= lang_attribute %>>
+  <div class="previous-roles govuk-!-padding-bottom-9 <%= direction_rtl_class %>" <%= dir_attribute %> <%= lang_attribute %>>
     <%= render "govuk_publishing_components/components/heading", {
       text: t("people.previous_roles_in_government"),
       lang: t_fallback("people.previous_roles_in_government"),
@@ -10,5 +10,5 @@
     <%= render "govuk_publishing_components/components/document_list", {
       items: person.previous_roles_items
     } %>
-  </section>
+  </div>
 <% end %>
