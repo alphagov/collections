@@ -11,7 +11,7 @@ class CoronavirusLandingPageController < ApplicationController
     end
 
     @content_item = content_item.to_hash
-    breadcrumbs = [{ title: "Home", url: "/", is_page_parent: true }]
+    breadcrumbs = [{ title: t("shared.breadcrumbs_home"), url: "/", is_page_parent: true }]
     title = {
       text: presenter.page_header,
     }
@@ -29,11 +29,11 @@ class CoronavirusLandingPageController < ApplicationController
     set_expiry 5.minutes
 
     @content_item = content_item.to_hash
-    breadcrumbs = [{ title: "Home", url: "/" }]
+    breadcrumbs = [{ title: t("shared.breadcrumbs_home"), url: "/" }]
     title = {
       text: @content_item.dig("details", "page_title") || @content_item["title"],
       context: {
-        text: "Coronavirus (COVID-19)",
+        text: t("coronavirus_landing_page.title"),
         href: "/coronavirus",
       },
     }

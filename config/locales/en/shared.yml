@@ -1,6 +1,7 @@
 ---
 en:
   shared:
+    breadcrumbs_home: Home
     browse:
       prefix: 'Browse:'
       title: Browse GOV.UK

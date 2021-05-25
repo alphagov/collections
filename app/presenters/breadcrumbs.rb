@@ -9,7 +9,7 @@ class Breadcrumbs
       { title: parent.fetch("title"), url: parent.fetch("base_path") }
     end
 
-    ordered_parents << { title: "Home", url: "/" }
+    ordered_parents << { title: I18n.t("shared.breadcrumbs_home"), url: "/" }
 
     ordered_parents.reverse
   end
