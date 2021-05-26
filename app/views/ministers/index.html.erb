@@ -1,9 +1,9 @@
-<% content_for :title, "Ministers - GOV.UK" %>
+<% content_for :title, t("ministers.govuk_title") %>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <%= render "govuk_publishing_components/components/title", {
-      title: "Ministers",
+      title: t("ministers.title"),
     } %>
   </div>
 </div>
@@ -11,7 +11,7 @@
 <section class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <%= render "govuk_publishing_components/components/heading", {
-      text: "Cabinet ministers",
+      text: t("ministers.cabinet"),
       id: "cabinet-ministers",
       margin_bottom: 4,
       padding: true,
@@ -22,7 +22,7 @@
 <section class="govuk-grid-row govuk-!-padding-top-9">
   <div class="govuk-grid-column-full">
     <%= render "govuk_publishing_components/components/heading", {
-      text: "Also attends Cabinet",
+      text: t("ministers.also_attends"),
       id: "also-attends-cabinet-ministers",
       margin_bottom: 4,
       padding: true,
@@ -33,7 +33,7 @@
 <section class="govuk-grid-row govuk-!-padding-top-9">
   <div class="govuk-grid-column-full">
     <%= render "govuk_publishing_components/components/heading", {
-      text: "Ministers by department",
+      text: t("ministers.by_department"),
       id: "ministers-by-department",
       margin_bottom: 4,
       padding: true,
@@ -44,7 +44,7 @@
 <section class="govuk-grid-row govuk-!-padding-top-9">
   <div class="govuk-grid-column-full">
     <%= render "govuk_publishing_components/components/heading", {
-      text: "Whips",
+      text: t("ministers.whips"),
       id: "whips",
       margin_bottom: 4,
       padding: true,
