@@ -10,7 +10,7 @@ class ChangedDocumentsPaginationPresenter
     if previous_page?
       component_params[:previous_page] = {
         url: previous_page_path,
-        title: "Previous",
+        title: I18n.t("latest_changes.previous"),
         label: "#{previous_page_number} of #{total_pages}",
       }
     end
@@ -18,7 +18,7 @@ class ChangedDocumentsPaginationPresenter
     if next_page?
       component_params[:next_page] = {
         url: next_page_path,
-        title: "Next",
+        title: I18n.t("latest_changes.next"),
         label: "#{next_page_number} of #{total_pages}",
       }
     end

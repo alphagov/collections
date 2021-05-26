@@ -1,7 +1,7 @@
 <% content_for :title, "#{subtopic.title}: latest documents" %>
 <% content_for :page_title do %>
   <%= render "govuk_publishing_components/components/title", {
-        title: "Latest documents",
+        title: t("latest_changes.title"),
         context: { text: subtopic.title, href: subtopic.base_path }
       } %>
 <% end %>
