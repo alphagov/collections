@@ -61,12 +61,10 @@ module Organisations
     def works_with_statement(organisation)
       if organisation["works_with"].present? && organisation["works_with"].any?
         works_with_count = child_organisations_count(organisation)
-        works_with_text = "Works with #{works_with_count}"
-
         if works_with_count == 1
-          works_with_text << " public body"
+          I18n.t("organisations.works_with_statement.one", works_with_count: works_with_count)
         elsif works_with_count > 1
-          works_with_text << " agencies and public bodies"
+          I18n.t("organisations.works_with_statement.multiple", works_with_count: works_with_count)
         end
       end
     end

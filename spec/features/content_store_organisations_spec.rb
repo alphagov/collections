@@ -11,11 +11,11 @@ RSpec.feature "Content store organisations" do
   end
 
   scenario "renders webpage title" do
-    expect(page.has_title?("Departments, agencies and public bodies - GOV.UK")).to be(true)
+    expect(page.has_title?(I18n.t("organisations.index_title", title: organisations_content_hash[:title]))).to be(true)
   end
 
   scenario "renders page title" do
-    expect(page.has_css?(".gem-c-title__text", text: "Departments, agencies and public bodies")).to be(true)
+    expect(page.has_css?(".gem-c-title__text", text: organisations_content_hash[:title])).to be(true)
   end
 
   scenario "has autodiscovery links to the API" do
@@ -24,7 +24,7 @@ RSpec.feature "Content store organisations" do
 
   scenario "renders organisation filter" do
     expect(page.has_css?(".filter-organisations-list__form")).to be(true)
-    expect(page.has_css?("label", text: "Search for a department, agency or public body")).to be(true)
+    expect(page.has_css?("label", text: I18n.t("organisations.search_for_department"))).to be(true)
   end
 
   scenario "renders an organisation_type heading" do

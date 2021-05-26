@@ -75,7 +75,7 @@ RSpec.describe "Organisation pages" do
 
     within ".gem-c-breadcrumbs" do
       expect(page).to have_link("Home", href: "/")
-      expect(page).to have_link("Organisations", href: "/government/organisations")
+      expect(page).to have_link(I18n.t("organisations.breadcrumbs.organisations"), href: "/government/organisations")
     end
 
     visit "/government/organisations/attorney-generals-office"
