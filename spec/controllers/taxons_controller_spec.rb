@@ -44,4 +44,18 @@ RSpec.describe TaxonsController do
       expect(response).to have_http_status(:not_found)
     end
   end
+
+  context "when the taxon has a url_override field" do
+    before do
+      stub_content_store_has_item(
+        taxon["base_path"],
+        taxon.merge("details" => { "url_override" => "/guidance/foo" }),
+      )
+    end
+
+    it "redirects to the url_override" do
+      get :show, params: { taxon_base_path: taxon["base_path"][1..-1] }
+      expect(response).to have_http_status(:temporary_redirect)
+    end
+  end
 end

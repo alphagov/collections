@@ -341,6 +341,7 @@ module TaxonBrowsingHelper
         "title" => "Taxon title",
         "phase" => "live",
         "links" => {},
+        "details" => {},
       )
     end
   end
