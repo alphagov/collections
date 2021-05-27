@@ -1,16 +1,16 @@
 <% if role.supports_historical_accounts? %>
   <section id="past-role-holders" class="govuk-!-padding-bottom-9">
     <%= render "govuk_publishing_components/components/heading", {
-      text: "Previous holders of this role",
+      text: t("roles.previous_holders"),
     } %>
     <p class="govuk-body" lang="en">
-      Find out more about previous holders of this role in our <%= link_to "past #{role.title.pluralize}", role.past_holders_url, class: "govuk-link" %> section.
+      <%= t("roles.find_out_more_html", link: link_to(t("roles.past") + " #{role.title.pluralize}", role.past_holders_url, class: "govuk-link")) %>
     </p>
   </section>
 <% elsif role.past_holders.present? %>
   <section id="past-role-holders" class="govuk-!-padding-bottom-9">
     <%= render "govuk_publishing_components/components/heading", {
-      text: "Previous holders of this role",
+      text: t("roles.previous_holders"),
     } %>
     <%= render "components/taxon-list", {
       items: role.past_holders.map do |rh|
