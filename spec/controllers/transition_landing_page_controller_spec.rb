@@ -4,7 +4,7 @@ RSpec.describe TransitionLandingPageController do
   describe "GET show" do
     before do
       brexit_taxon = taxon
-      brexit_taxon["base_path"] = "/transition"
+      brexit_taxon["base_path"] = "/brexit"
       stub_content_store_has_item(brexit_taxon["base_path"], brexit_taxon)
       stub_content_store_has_item(brexit_taxon["base_path"] + ".cy", brexit_taxon)
     end

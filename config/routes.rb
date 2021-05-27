@@ -79,6 +79,7 @@ Rails.application.routes.draw do
   end
 
   get "/world/*taxon_base_path", to: "world_wide_taxons#show"
+  get "/brexit(.:locale)", to: "transition_landing_page#show"
   get "/transition(.:locale)", to: "transition_landing_page#show"
 
   # We get requests for URLs like

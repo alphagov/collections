@@ -6,7 +6,7 @@ module TransitionLandingPageSteps
   include SearchApiHelpers
 
   TRANSITION_TAXON_CONTENT_ID = "d6c2de5d-ef90-45d1-82d4-5f2438369eea".freeze
-  TRANSITION_TAXON_PATH = "/transition".freeze
+  TRANSITION_TAXON_PATH = "/brexit".freeze
 
   def given_there_is_a_transition_taxon
     stub_content_store_has_item(TRANSITION_TAXON_PATH, content_item)
@@ -85,7 +85,7 @@ module TransitionLandingPageSteps
   def and_there_is_metadata
     expect(page).to have_selector("meta[property='og:title'][content='#{I18n.t('transition_landing_page.meta_title')}']", visible: false)
     expect(page).to have_selector("meta[name='description'][content='#{I18n.t('transition_landing_page.meta_description')}']", visible: false)
-    expect(page).to have_selector("link[rel='canonical'][href='http://www.example.com/transition']", visible: false)
+    expect(page).to have_selector("link[rel='canonical'][href='http://www.example.com/brexit']", visible: false)
   end
 
   def content_item
