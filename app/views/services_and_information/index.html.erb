@@ -1,9 +1,9 @@
-<% content_for :title, "Services and information - #{organisation['title']}" %>
+<% content_for :title, t("services_and_information.organisation_title", title: organisation["title"]) %>
 <% content_for :page_class, "topics-page" %>
 
 <header class="page-header group">
   <%= render "govuk_publishing_components/components/title", {
-        title: "Services and information",
+        title: t("services_and_information.title"),
         context: { text: organisation["title"], href: organisation["base_path"] }
       } %>
 </header>
