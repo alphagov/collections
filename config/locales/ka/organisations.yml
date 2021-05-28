@@ -3,6 +3,9 @@ ka:
   organisations:
     about_page_path:
     administered_by:
+    breadcrumbs:
+      courts_and_tribunals:
+      organisations:
     contact:
       contact_details:
       contact_form:
@@ -192,6 +195,7 @@ ka:
           path:
           text:
         title:
+    errors_or_omissions_html:
     featured:
     foi:
       contact_form:
@@ -204,7 +208,9 @@ ka:
         step2_html:
         step3_html:
     follow_us:
+    hidden_share_link:
     high_profile_groups:
+    index_title:
     jobs_contracts:
     latest_from:
     notices:
@@ -227,8 +233,10 @@ ka:
       special_representatives:
       traffic_commissioners:
     read_more:
+    search_for_department:
     see_all_latest_documents:
     separate_website:
+    services_and_information:
     subscription:
       email:
       feed:
@@ -246,3 +254,6 @@ ka:
     view_all:
     view_less:
     what_we_do:
+    works_with_statement:
+      multiple:
+      one:

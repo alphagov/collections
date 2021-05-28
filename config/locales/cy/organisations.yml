@@ -3,6 +3,9 @@ cy:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.cy"
     administered_by: Gweinyddir gan
+    breadcrumbs:
+      courts_and_tribunals:
+      organisations:
     contact:
       contact_details: Contact details
       contact_form: 'Ffurflen cysylltu: %{title}'
@@ -562,6 +565,7 @@ cy:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Gweld yr holl ddatganiadau tryloywder a rhyddid gwybodaeth
         title: Datganiadau tryloywder a rhyddid gwybodaeth
+    errors_or_omissions_html:
     featured: Sylw
     foi:
       contact_form: Ffurflen cysylltu DRhG
@@ -576,7 +580,9 @@ cy:
         step2_html: Ymchwiliwch <a href="%{our_releases_path}" class="brand__color">ein datganiadau blaenorol</a> i weld os ydym eisioes wedi ateb eich cwestiwn.
         step3_html: Gwnewch cais newydd drwy gysylltu a ni ar.
     follow_us: Dilynwch ni
+    hidden_share_link:
     high_profile_groups: High profile groups within %{title}
+    index_title:
     jobs_contracts: Swyddi a chontractau
     latest_from: Gweithgaredd diweddaraf gan %{title}
     notices:
@@ -599,8 +605,10 @@ cy:
       special_representatives: Cynrychiolwyr arbennig
       traffic_commissioners: Comisiynwyr traffig
     read_more: Darllen mwy am yr hyn rydyn ni'n ei wneud
+    search_for_department:
     see_all_latest_documents:
     separate_website: gwefan ar wahân
+    services_and_information:
     subscription:
       email:
       feed:
@@ -618,3 +626,6 @@ cy:
     view_all: gwelir holl
     view_less: gwelir llai
     what_we_do: Yr hyn rydym ni'n ei wneud
+    works_with_statement:
+      multiple:
+      one:

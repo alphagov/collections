@@ -1,6 +1,7 @@
 ---
 lt:
   roles:
+    find_out_more_html:
     heading:
       few:
       one:
@@ -10,4 +11,6 @@ lt:
       previous_holders:
       responsibilities:
     ministerial:
+    past:
+    previous_holders:
     read_more:

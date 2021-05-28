@@ -1,6 +1,7 @@
 ---
 kk:
   roles:
+    find_out_more_html:
     heading:
       one:
       other:
@@ -9,4 +10,6 @@ kk:
       previous_holders:
       responsibilities:
     ministerial:
+    past:
+    previous_holders:
     read_more:
