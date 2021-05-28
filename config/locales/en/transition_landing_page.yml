@@ -42,7 +42,9 @@ en:
         metadata:
           public_updated_at: 2020-08-07
           document_type: News story
+      read_transcript: Read the transcript for this video
     comms_header: Announcements
+    data_list_title: 'Brexit landing page: %{header}'
     email_mailto_subject: UK's%20new%20start:%20let's%20get%20going-%20GOV.UK
     guidance_header: Changes for businesses and citizens
     meta_description: The Brexit transition period has ended. Check how the new rules affect you.

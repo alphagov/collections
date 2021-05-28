@@ -32,7 +32,7 @@
 
           <% if comms_video[:transcript] %>
             <%= render "govuk_publishing_components/components/details", {
-              title: "Read the transcript for this video"
+              title: t("transition_landing_page.comms.read_transcript")
             } do %>
               <%= comms_video[:transcript] %>
             <% end %>
