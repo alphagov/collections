@@ -1,4 +1,4 @@
-<% title_with_suffix = "#{topic.title}: detailed information" %>
+<% title_with_suffix = t("shared.topics.title", title: topic.title) %>
 <% content_for :title, title_with_suffix %>
 <%= render 'shared/tag_meta', tag: topic %>
 <% content_for :meta_tags do %>
