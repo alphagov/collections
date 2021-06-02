@@ -1,9 +1,10 @@
 class TransitionLandingPageController < ApplicationController
-  include AccountConcern
+  include GovukPersonalisation::AccountConcern
   include Slimmer::Headers
 
   skip_before_action :set_expiry
   before_action -> { set_expiry(1.minute) }
+  before_action -> { set_slimmer_headers(remove_search: true, show_accounts: logged_in? ? "signed-in" : "signed-out") }
 
   around_action :switch_locale
   def show
