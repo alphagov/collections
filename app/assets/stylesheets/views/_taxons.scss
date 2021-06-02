@@ -134,6 +134,12 @@
   }
 }
 
+.taxon-page__more-organisations {
+  &.js-hidden {
+    display: none;
+  }
+}
+
 .taxon-page__sub-topic-sidebar a {
   display: block;
   text-decoration: none;
