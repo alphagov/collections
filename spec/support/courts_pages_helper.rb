@@ -26,7 +26,7 @@ module CourtPagesHelper
   end
 
   def i_see_the_courts_breadcrumb
-    expect(page).to have_selector(".gem-c-breadcrumbs", text: "Courts and Tribunals")
+    expect(page).to have_selector(".gem-c-breadcrumbs", text: I18n.t("organisations.breadcrumbs.courts_and_tribunals"))
   end
 
   def the_correct_title

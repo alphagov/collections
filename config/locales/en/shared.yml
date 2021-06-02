@@ -1,8 +1,12 @@
 ---
 en:
   shared:
+    breadcrumbs_home: Home
     browse:
       prefix: 'Browse:'
       title: Browse GOV.UK
+    get_emails: Get emails for this topic
     language_direction: ltr
     language_name: English
+    topics:
+      title: "%{title}: detailed information"

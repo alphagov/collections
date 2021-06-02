@@ -10,7 +10,7 @@
 <% end %>
 <% content_for :page_title do %>
   <%
-    title_params = { title: "#{subtopic.title}: detailed information" }
+    title_params = { title: t("shared.topics.title", title: subtopic.title) }
     if subtopic.parent
       title_params[:context] = {
         text: subtopic.parent.title,

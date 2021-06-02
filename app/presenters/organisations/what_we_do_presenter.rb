@@ -18,7 +18,7 @@ module Organisations
         links << {
           href: link["href"],
           text: link["title"],
-          hidden_text: link_has_cta ? "" : "Follow on",
+          hidden_text: link_has_cta ? "" : I18n.t("organisations.hidden_share_link"),
           icon: link["service_type"],
         }
       end

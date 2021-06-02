@@ -12,12 +12,12 @@
     <div class="govuk-grid-column-one-third add-title-margin govuk-!-margin-bottom-3">
       <%= render "govuk_publishing_components/components/subscription_links", {
         email_signup_link: "/email-signup?link=/topic/#{params[:topic_slug]}/#{params[:subtopic_slug]}",
-        email_signup_link_text: "Get emails for this topic",
+        email_signup_link_text: t("shared.get_emails"),
       } %>
 
       <% if local_assigns[:link_to_latest_feed] %>
         <div class="topics-page__latest">
-          <%= link_to 'See latest changes to this content', latest_changes_path(topic_slug: params[:topic_slug], subtopic_slug: params[:subtopic_slug]), class: "govuk-link topics-page__latest-link" %>
+          <%= link_to t("subtopics.get_latest"), latest_changes_path(topic_slug: params[:topic_slug], subtopic_slug: params[:subtopic_slug]), class: "govuk-link topics-page__latest-link" %>
         </div>
       <% end %>
     </div>

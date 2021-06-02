@@ -18,7 +18,7 @@
   <div class="taxon-page__email-link-wrapper">
     <div class="full-page-width-wrapper">
       <%= render partial: "components/signup-link", locals: {
-        link_text: "Get emails about this topic",
+        link_text: t("shared.get_emails"),
         link_href: "/email-signup/?link=#{presented_taxon.base_path}",
         data: {
           "module": "gem-track-click",

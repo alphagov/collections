@@ -1,6 +1,7 @@
 ---
 en:
   roles:
+    find_out_more_html: Find out more about previous holders of this role in our %{link} section.
     heading:
       one: Role
       other: Roles
@@ -9,4 +10,6 @@ en:
       previous_holders: Previous holders
       responsibilities: Responsibilities
     ministerial: Ministerial role
+    past: past
+    previous_holders: Previous holders of this role
     read_more: More about this role

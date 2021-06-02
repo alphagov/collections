@@ -16,12 +16,12 @@
 
 <% content_for :breadcrumbs do %>
   <% beta_banner_message = capture do %>
-    <%= "This is a test version of the layout of this page." %>
+    <%= t("world_wide_taxons.test_banner") %>
     <a id=taxonomy-survey
         href='https://www.smartsurvey.co.uk/s/betasurvey2017?c=#{current_path_without_query_string}'
         target='_blank'
         rel='noopener noreferrer'>
-      Take the survey to help us improve it
+      <%- t("world_wide_taxons.take_the_survey") %>
     </a>
   <% end %>
   <%= render "govuk_publishing_components/components/phase_banner", {

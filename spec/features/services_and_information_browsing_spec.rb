@@ -12,10 +12,12 @@ RSpec.feature "Services and information browsing" do
   scenario "is possible to visit the services and information index page" do
     visit "/government/organisations/hm-revenue-customs/services-information"
 
-    expect(page).to have_title("Services and information - HM Revenue & Customs - GOV.UK")
+    expect(page).to have_title(
+      I18n.t("services_and_information.organisation_title", title: "HM Revenue & Customs") + " - GOV.UK",
+    )
 
     within "header.page-header" do
-      expect(page).to have_content("Services and information")
+      expect(page).to have_content(I18n.t("services_and_information.title"))
     end
 
     within ".govuk-grid-row:nth-child(1) h2" do

@@ -1,6 +1,7 @@
 ---
 et:
   roles:
+    find_out_more_html:
     heading:
       one: Ülesanne
       other: Ülesanded
@@ -9,4 +10,6 @@ et:
       previous_holders: Eelmised ametikoha täitjad
       responsibilities: Vastutusalad
     ministerial: Ministri ülesanne
+    past:
+    previous_holders:
     read_more: Sellest ametikohast lähemalt

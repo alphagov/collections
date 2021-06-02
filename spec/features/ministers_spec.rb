@@ -11,25 +11,25 @@ RSpec.feature "Minister pages" do
   end
 
   scenario "renders webpage title" do
-    expect(page).to have_title("Ministers - GOV.UK")
+    expect(page).to have_title(I18n.t("ministers.govuk_title"))
   end
 
   scenario "renders page title" do
-    expect(page).to have_selector(".gem-c-title__text", text: "Ministers")
+    expect(page).to have_selector(".gem-c-title__text", text: I18n.t("ministers.title"))
   end
 
   scenario "renders section headers" do
-    expect(page).to have_selector(".gem-c-heading", text: "Cabinet ministers")
-    expect(page).to have_selector(".gem-c-heading", text: "Also attends Cabinet")
-    expect(page).to have_selector(".gem-c-heading", text: "Ministers by department")
-    expect(page).to have_selector(".gem-c-heading", text: "Whips")
+    expect(page).to have_selector(".gem-c-heading", text: I18n.t("ministers.cabinet"))
+    expect(page).to have_selector(".gem-c-heading", text: I18n.t("ministers.also_attends"))
+    expect(page).to have_selector(".gem-c-heading", text: I18n.t("ministers.by_department"))
+    expect(page).to have_selector(".gem-c-heading", text: I18n.t("ministers.whips"))
   end
 
 private
 
   def ministers_content_hash
     @content_hash = {
-      title: "Ministers",
+      title: I18n.t("ministers.title"),
       details: {},
     }
   end

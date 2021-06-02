@@ -1,8 +1,12 @@
 ---
 bg:
   shared:
+    breadcrumbs_home:
     browse:
       prefix:
       title:
+    get_emails:
     language_direction:
     language_name: български
+    topics:
+      title:

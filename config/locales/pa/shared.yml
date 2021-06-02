@@ -1,8 +1,12 @@
 ---
 pa:
   shared:
+    breadcrumbs_home:
     browse:
       prefix:
       title:
+    get_emails:
     language_direction: rtl
     language_name: ਪੰਜਾਬੀ
+    topics:
+      title:

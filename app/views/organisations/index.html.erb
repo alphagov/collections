@@ -1,4 +1,4 @@
-<% content_for :title, "#{@presented_organisations.title} - GOV.UK" %>
+<% content_for :title, t("organisations.index_title", title: @presented_organisations.title) %>
 
 <% content_for :meta_tags do %>
   <%= auto_discovery_link_tag(:json, api_organisations_url, title: @presented_organisations.title) %>
@@ -13,7 +13,7 @@
     <form class="filter-organisations-list__form" data-filter="form" role="search" aria-label="Departments, agencies and public bodies">
       <%= render "govuk_publishing_components/components/input", {
         label: {
-          text: "Search for a department, agency or public body"
+          text: t("organisations.search_for_department")
         },
         name: "search-box",
         id: "filter-organisations-list",
@@ -29,4 +29,4 @@
   } %>
 </div>
 
-<p>Errors or omissions? <a class="govuk-link" href="/contact/govuk">Tell us here</a>. For official lists of non–departmental public bodies <a class="govuk-link" href="/government/collections/public-bodies">see public bodies</a>.</p>
+<%= t("organisations.errors_or_omissions_html") %>

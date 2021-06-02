@@ -1,8 +1,12 @@
 ---
 sv:
   shared:
+    breadcrumbs_home:
     browse:
       prefix:
       title:
+    get_emails:
     language_direction:
     language_name: Svensk
+    topics:
+      title:

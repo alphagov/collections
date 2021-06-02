@@ -123,7 +123,7 @@ module TaxonBrowsingHelper
   end
 
   def and_i_can_see_the_email_signup_link
-    link_text = "Get emails about this topic"
+    link_text = I18n.t("shared.get_emails")
     expect(page).to have_link(link_text, href: "/email-signup/?link=#{current_path}")
     expect(page).to have_selector("a[data-track-category='emailAlertLinkClicked']", text: link_text)
     expect(page).to have_selector("a[data-track-action=\"#{current_path}\"]", text: link_text)

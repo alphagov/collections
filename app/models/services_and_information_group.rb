@@ -20,7 +20,7 @@ class ServicesAndInformationGroup
     if more_documents?
       {
         path: subsector_link,
-        text: "See more",
+        text: I18n.t("services_and_information.see_more_link"),
       }
     end
   end

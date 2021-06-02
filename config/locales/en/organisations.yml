@@ -3,6 +3,9 @@ en:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: Administered by
+    breadcrumbs:
+      courts_and_tribunals: Courts and Tribunals
+      organisations: Organisations
     contact:
       contact_details: Contact details
       contact_form: 'Contact Form: %{title}'
@@ -266,6 +269,7 @@ en:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: See all transparency and freedom of information releases
         title: Transparency and freedom of information releases
+    errors_or_omissions_html: <p>Errors or omissions? <a class="govuk-link" href="/contact/govuk">Tell us here</a>. For official lists of non–departmental public bodies <a class="govuk-link" href="/government/collections/public-bodies">see public bodies</a>.</p>
     featured: Featured
     foi:
       contact_form: FOI contact form
@@ -280,7 +284,9 @@ en:
         step2_html: Check <a href="%{our_releases_path}" class="govuk-link brand__color">our previous releases</a> to see if we’ve already answered your question.
         step3_html: Make a new request by contacting us using the details below.
     follow_us: Follow us
+    hidden_share_link: Follow on
     high_profile_groups: High profile groups within %{title}
+    index_title: "%{title} - GOV.UK"
     jobs_contracts: Jobs and contracts
     latest_from: Latest from %{title}
     notices:
@@ -303,8 +309,10 @@ en:
       special_representatives: Special representatives
       traffic_commissioners: Traffic commissioners
     read_more: Read more about what we do
+    search_for_department: Search for a department, agency or public body
     see_all_latest_documents: See all latest documents
     separate_website: separate website
+    services_and_information: All %{acronym} services and information
     subscription:
       email: Get emails
       feed: Subscribe to feed
@@ -322,3 +330,6 @@ en:
     view_all: view all
     view_less: view less
     what_we_do: What %{title} does
+    works_with_statement:
+      multiple: Works with %{works_with_count} agencies and public bodies
+      one: Works with %{works_with_count} public body

@@ -37,7 +37,7 @@ private
   def hardcoded_breadcrumbs
     [
       {
-        title: "Home",
+        title: t("shared.breadcrumbs_home"),
         url: "/",
       },
       {

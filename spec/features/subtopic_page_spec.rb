@@ -149,7 +149,7 @@ RSpec.feature "Subtopic pages" do
 
       # When I view the latest page for a subtopic
       visit "/topic/oil-and-gas/offshore"
-      click_on "See latest changes to this content"
+      click_on I18n.t("subtopics.get_latest")
 
       # Then I should see the subtopic metadata
       within ".page-header" do
@@ -185,7 +185,7 @@ RSpec.feature "Subtopic pages" do
 
       # When I view the latest page for a subtopic
       visit "/topic/oil-and-gas/offshore"
-      click_on "See latest changes to this content"
+      click_on I18n.t("subtopics.get_latest")
 
       # Then I should see the first 50 documents
       within ".gem-c-document-list" do

@@ -7,7 +7,9 @@ az:
       links:
     comms:
       links:
+      read_transcript:
     comms_header:
+    data_list_title:
     email_mailto_subject:
     guidance_header:
     meta_description:
