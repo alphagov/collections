@@ -2,7 +2,7 @@
 
 Collections currently renders the following campaign pages:
 
-## Transition landing page ([/transition](https://www.gov.uk/transition))
+## Brexit landing page ([/brexit](https://www.gov.uk/brexit))
 
 All content for the transition landing pages are currently read from yaml files. [Welsh](config/locales/cy/transition_landing_page.yml) and [English](config/locales/en/transition_landing_page.yml) translations are available.
 
