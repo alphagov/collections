@@ -6,7 +6,7 @@ RSpec.describe TransitionLandingPageController do
       brexit_taxon = taxon
       brexit_taxon["base_path"] = "/brexit"
       stub_content_store_has_item(brexit_taxon["base_path"], brexit_taxon)
-      stub_content_store_has_item(brexit_taxon["base_path"] + ".cy", brexit_taxon)
+      stub_content_store_has_item("#{brexit_taxon['base_path']}.cy", brexit_taxon)
     end
 
     %w[cy en].each do |locale|

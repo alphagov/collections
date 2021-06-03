@@ -13,7 +13,7 @@ RSpec.describe EmailHelper do
   it "should return a valid atom url" do
     controller.request = ActionDispatch::TestRequest.create("PATH_INFO" => "/world/blefuscu")
 
-    expected_atom_url = Plek.new.website_root + "/world/blefuscu.atom"
+    expected_atom_url = "#{Plek.new.website_root}/world/blefuscu.atom"
     expect(helper.whitehall_atom_url).to eq(expected_atom_url)
   end
 

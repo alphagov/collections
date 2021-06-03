@@ -151,7 +151,7 @@ module TaxonBrowsingHelper
 
     expected_link = {
       text: "See more guidance and regulation in this topic",
-      url: "/search/guidance-and-regulation?" + finder_query_string,
+      url: "/search/guidance-and-regulation?#{finder_query_string}",
     }
 
     expect(page).to have_link(expected_link[:text], href: expected_link[:url])
@@ -165,7 +165,7 @@ module TaxonBrowsingHelper
 
     expected_link = {
       text: "See more services in this topic",
-      url: "/search/services?" + finder_query_string,
+      url: "/search/services?#{finder_query_string}",
     }
     expect(page).to have_link(expected_link[:text], href: expected_link[:url])
   end
@@ -179,7 +179,7 @@ module TaxonBrowsingHelper
 
     expected_link = {
       text: "See more news and communications in this topic",
-      url: "/search/news-and-communications?" + finder_query_string,
+      url: "/search/news-and-communications?#{finder_query_string}",
     }
 
     expect(page).to have_link(expected_link[:text], href: expected_link[:url])
@@ -191,7 +191,7 @@ module TaxonBrowsingHelper
 
     expected_link = {
       text: "See more news and communications in this topic",
-      url: "/search/news-and-communications?" + finder_query_string,
+      url: "/search/news-and-communications?#{finder_query_string}",
     }
 
     expect(page).to have_link(expected_link[:text], href: expected_link[:url])
@@ -206,7 +206,7 @@ module TaxonBrowsingHelper
 
     expected_link = {
       text: "See more policy papers and consultations in this topic",
-      url: "/search/policy-papers-and-consultations?" + finder_query_string,
+      url: "/search/policy-papers-and-consultations?#{finder_query_string}",
     }
 
     expect(page).to have_link(expected_link[:text], href: expected_link[:url])
@@ -221,7 +221,7 @@ module TaxonBrowsingHelper
 
     expected_link = {
       text: "See more transparency and freedom of information releases in this topic",
-      url: "/search/transparency-and-freedom-of-information-releases?" + finder_query_string,
+      url: "/search/transparency-and-freedom-of-information-releases?#{finder_query_string}",
     }
 
     expect(page).to have_link(expected_link[:text], href: expected_link[:url])
@@ -236,20 +236,20 @@ module TaxonBrowsingHelper
 
     expected_link = {
       text: "See more research and statistics in this topic",
-      url: "/search/research-and-statistics?" + finder_query_string,
+      url: "/search/research-and-statistics?#{finder_query_string}",
     }
 
     expect(page).to have_link(expected_link[:text], href: expected_link[:url])
   end
 
   def mainstream_content_list_item_test(item)
-    expect(page).to have_selector('.gem-c-document-list__item-title[href="' + item["link"] + '"]', text: item["title"])
+    expect(page).to have_selector(".gem-c-document-list__item-title[href=\"#{item['link']}\"]", text: item["title"])
     expect(page).to have_selector(".gem-c-document-list__item-description", text: item["description"])
     expect(page).not_to have_content(expected_organisations(item))
   end
 
   def all_other_sections_list_item_test(item)
-    expect(page).to have_selector('.gem-c-document-list__item-title[href="' + item["link"] + '"]', text: item["title"])
+    expect(page).to have_selector(".gem-c-document-list__item-title[href=\"#{item['link']}\"]", text: item["title"])
     expect(page).to have_selector(".gem-c-document-list__attribute time", text: item["public_updated_at"])
     expect(page).to have_selector(".gem-c-document-list__attribute", text: item["content_store_document_type"].humanize)
     expect(page).to have_content(expected_organisations(item))

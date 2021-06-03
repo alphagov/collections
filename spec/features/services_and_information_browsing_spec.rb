@@ -13,7 +13,7 @@ RSpec.feature "Services and information browsing" do
     visit "/government/organisations/hm-revenue-customs/services-information"
 
     expect(page).to have_title(
-      I18n.t("services_and_information.organisation_title", title: "HM Revenue & Customs") + " - GOV.UK",
+      "#{I18n.t('services_and_information.organisation_title', title: 'HM Revenue & Customs')} - GOV.UK",
     )
 
     within "header.page-header" do

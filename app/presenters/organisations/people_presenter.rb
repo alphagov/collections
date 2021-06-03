@@ -17,7 +17,7 @@ module Organisations
       all_people = @org.all_people.map do |person_type, people|
         {
           type: person_type,
-          title: I18n.t("organisations.people." + person_type.to_s),
+          title: I18n.t("organisations.people.#{person_type.to_s}"),
           lang: t_fallback("organisations.people.#{person_type}"),
           people: people.map { |person| formatted_person_data(person, person_type) },
         }
@@ -55,7 +55,7 @@ module Organisations
       return %w[board_member_role chief_scientific_advisor_role] if type == :board_members
 
       # for example: board_members -> board_member_role
-      type.to_s.delete_suffix("s") + "_role"
+      "#{type.to_s.delete_suffix('s')}_role"
     end
 
     def current_roles(person, type)

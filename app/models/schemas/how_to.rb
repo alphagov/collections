@@ -79,7 +79,7 @@ private
   end
 
   def step_url(step_slug)
-    Plek.new.website_root + base_path + "#" + step_slug
+    "#{Plek.new.website_root}#{base_path}##{step_slug}"
   end
 
   def step_image_url(step)

@@ -1,6 +1,6 @@
 module EmailHelper
   def whitehall_atom_url
-    equivalent_whitehall_url + ".atom"
+    "#{equivalent_whitehall_url}.atom"
   end
 
   def email_alert_frontend_signup_url(taxon)
