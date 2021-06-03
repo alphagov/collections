@@ -104,7 +104,7 @@ RSpec.describe ApplicationController, type: :controller do
 
   it "returns an appropriate response for unrecognised/invalid request formats" do
     with_test_routing do
-      get :test, format: 'atom\\'
+      get :test, format: "atom\\"
       expect(response).to have_http_status(:not_acceptable)
     end
   end
