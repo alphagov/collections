@@ -86,16 +86,12 @@ class Role
   end
 
   def past_holders_url
-    case slug
-    when "prime-minister"
-      "/government/history/past-prime-ministers"
-    when "chancellor-of-the-exchequer"
-      "/government/history/past-chancellors"
-    when "secretary-of-state-for-foreign-commonwealth-and-development-affairs"
-      "/government/history/past-foreign-secretaries"
-    when "foreign-secretary"
-      "/government/history/past-foreign-secretaries"
-    end
+    {
+      "prime-minister" => "/government/history/past-prime-ministers",
+      "chancellor-of-the-exchequer" => "/government/history/past-chancellors",
+      "secretary-of-state-for-foreign-commonwealth-and-development-affairs" => "/government/history/past-foreign-secretaries",
+      "foreign-secretary" => "/government/history/past-foreign-secretaries",
+    }[slug]
   end
 
 private
