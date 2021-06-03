@@ -29,10 +29,8 @@ module CoronavirusContentItemHelper
     stub_request(:get, /coronavirus.data.gov.uk/).to_return(status: 200, body: body.to_json)
   end
 
-  def random_landing_page
-    GovukSchemas::RandomExample.for_schema(frontend_schema: "coronavirus_landing_page") do |item|
-      yield(item)
-    end
+  def random_landing_page(&block)
+    GovukSchemas::RandomExample.for_schema(frontend_schema: "coronavirus_landing_page", &block)
   end
 
   def coronavirus_content_item
