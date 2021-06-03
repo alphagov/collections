@@ -2,8 +2,6 @@ RSpec.describe Supergroups::NewsAndCommunications do
   include SearchApiHelpers
   include SupergroupHelpers
 
-  DEFAULT_IMAGE_URL = "https://assets.publishing.service.gov.uk/media/5e59279b86650c53b2cefbfe/placeholder.jpg".freeze
-
   let(:taxon_id) { "12345" }
   let(:news_and_communications_supergroup) { Supergroups::NewsAndCommunications.new }
 
@@ -120,7 +118,8 @@ RSpec.describe Supergroups::NewsAndCommunications do
         .to receive(:fetch)
         .and_return(content_list)
 
-      expect(news_and_communications_supergroup.promoted_content(taxon_id).first[:image][:url]).to eq(DEFAULT_IMAGE_URL)
+      default_image_url = "https://assets.publishing.service.gov.uk/media/5e59279b86650c53b2cefbfe/placeholder.jpg"
+      expect(news_and_communications_supergroup.promoted_content(taxon_id).first[:image][:url]).to eq(default_image_url)
     end
   end
 

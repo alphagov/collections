@@ -1,12 +1,4 @@
 RSpec.describe WorldTaxonomySorter do
-  class FakeTaxon
-    attr_reader :title
-
-    def initialize(title)
-      @title = title
-    end
-  end
-
   before do
     child_taxon_titles = [
       "Birth, death and marriage abroad",
@@ -21,7 +13,7 @@ RSpec.describe WorldTaxonomySorter do
       "Trade and invest",
       "Travelling to",
     ]
-    @child_taxons = child_taxon_titles.map { |title| FakeTaxon.new(title) }
+    @child_taxons = child_taxon_titles.map { |title| OpenStruct.new(title: title) }
 
     @expected_ordered_taxon_titles = [
       "Emergency help for British nationals",
@@ -48,8 +40,8 @@ RSpec.describe WorldTaxonomySorter do
     it "appends any child taxons which did not match to a title in the specified sorting order" do
       child_taxons = @child_taxons.concat(
         [
-          FakeTaxon.new("Another taxon"),
-          FakeTaxon.new("And another taxon"),
+          OpenStruct.new(title: "Another taxon"),
+          OpenStruct.new(title: "And another taxon"),
         ],
       )
 
