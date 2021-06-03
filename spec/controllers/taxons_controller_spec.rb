@@ -24,7 +24,7 @@ RSpec.describe TaxonsController do
     end
 
     it "when the taxon exists" do
-      get :show, params: { taxon_base_path: taxon["base_path"][1..-1] }
+      get :show, params: { taxon_base_path: taxon["base_path"][1..] }
       expect(response).to have_http_status(:success)
       expect(response).to render_template(:show)
     end
@@ -39,7 +39,7 @@ RSpec.describe TaxonsController do
     end
 
     it do
-      get :show, params: { taxon_base_path: taxon["base_path"][1..-1] }
+      get :show, params: { taxon_base_path: taxon["base_path"][1..] }
 
       expect(response).to have_http_status(:not_found)
     end
@@ -54,7 +54,7 @@ RSpec.describe TaxonsController do
     end
 
     it "redirects to the url_override" do
-      get :show, params: { taxon_base_path: taxon["base_path"][1..-1] }
+      get :show, params: { taxon_base_path: taxon["base_path"][1..] }
       expect(response).to have_http_status(:temporary_redirect)
     end
   end
