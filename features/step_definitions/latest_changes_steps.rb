@@ -7,7 +7,7 @@ When(/^I view the latest changes page for that subtopic$/) do
   visit "/topic/oil-and-gas/fields-and-wells/latest"
 end
 
-Then(/^I see a date\-ordered list of content with change notes$/) do
+Then(/^I see a date-ordered list of content with change notes$/) do
   results = subtopic_slugs.map.with_index do |slug, i|
     search_api_document_for_slug(slug, (i + 1).hours.ago)
   end
