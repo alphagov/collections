@@ -103,9 +103,10 @@ module TaxonBrowsingHelper
   end
 
   def stub_search_api_response(dummy_content, content_type:, query_type:, **_unused_config)
-    if query_type == "most_recent"
+    case query_type
+    when "most_recent"
       stub_most_recent_content_for_taxon(content_id, dummy_content, filter_content_store_document_type: content_type)
-    elsif query_type == "most_popular"
+    when "most_popular"
       stub_most_popular_content_for_taxon(content_id, dummy_content, filter_content_store_document_type: content_type)
     end
   end

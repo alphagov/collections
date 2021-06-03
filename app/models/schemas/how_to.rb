@@ -18,9 +18,10 @@ class Schemas::HowTo
       contents = step["contents"].map.with_index(1) do |content, item_index|
         direction_index = item_index
 
-        if content["type"] == "paragraph"
+        case content["type"]
+        when "paragraph"
           how_to_direction(content, direction_index)
-        elsif content["type"] == "list"
+        when "list"
           content["contents"].map do |c|
             how_to_direction(c, direction_index).tap do
               direction_index += 1
