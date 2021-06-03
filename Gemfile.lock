@@ -184,7 +184,7 @@ GEM
     govuk_document_types (1.0.1)
     govuk_personalisation (0.3.0)
       rails (~> 6)
-    govuk_publishing_components (24.12.0)
+    govuk_publishing_components (24.13.0)
       govuk_app_config
       kramdown
       plek
@@ -259,7 +259,7 @@ GEM
     multipart-post (2.1.1)
     netrc (0.11.0)
     nio4r (2.5.7)
-    nokogiri (1.11.6)
+    nokogiri (1.11.7)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
     nokogumbo (2.0.5)
