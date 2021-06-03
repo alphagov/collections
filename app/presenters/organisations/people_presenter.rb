@@ -17,7 +17,7 @@ module Organisations
       all_people = @org.all_people.map do |person_type, people|
         {
           type: person_type,
-          title: I18n.t("organisations.people.#{person_type.to_s}"),
+          title: I18n.t("organisations.people.#{person_type}"),
           lang: t_fallback("organisations.people.#{person_type}"),
           people: people.map { |person| formatted_person_data(person, person_type) },
         }
