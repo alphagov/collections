@@ -7,8 +7,6 @@ RSpec.feature "Mainstream browsing" do
     # Shuffle the examples to ensure tests don't become order dependent
     schemas = GovukSchemas::Example.find_all("mainstream_browse_page").shuffle
 
-    # Add all examples to the content store and search_api to allow pages to
-    # request their parents and links.
     schemas.each do |content_item|
       stub_content_store_has_item(content_item["base_path"], content_item)
 
@@ -24,9 +22,7 @@ RSpec.feature "Mainstream browsing" do
         ],
         page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       )
-    end
 
-    schemas.each do |content_item|
       visit content_item["base_path"]
 
       expect(page.status_code).to eq(200)
