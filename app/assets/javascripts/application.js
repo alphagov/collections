@@ -9,6 +9,7 @@
 //= require govuk_publishing_components/components/step-by-step-nav
 //= require govuk_publishing_components/components/error-summary
 //= require govuk_publishing_components/analytics/explicit-cross-domain-links
+//= require govuk_publishing_components/analytics/scroll-tracker
 
 //= require support
 //= require browse-columns
