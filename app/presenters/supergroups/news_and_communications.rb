@@ -24,7 +24,7 @@ module Supergroups
 
     def promoted_content(taxon_id)
       items = tagged_content(taxon_id).shift(promoted_content_count)
-      format_document_data(items, "FeaturedLinkClicked", true)
+      format_document_data(items, data_category: "FeaturedLinkClicked", with_image_url: true)
     end
 
   private

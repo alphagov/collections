@@ -8,7 +8,7 @@ module OrganisationHelpers
     stub_search_api_latest_documents_request(organisation_slug)
   end
 
-  def stub_latest_content_from_supergroups_request(organisation_slug, empty = false)
+  def stub_latest_content_from_supergroups_request(organisation_slug, empty: false)
     Search::Supergroups::SUPERGROUP_TYPES.each do |group|
       url = build_search_api_query_url(
         {
@@ -49,7 +49,7 @@ module OrganisationHelpers
   end
 
   def stub_empty_search_api_requests(organisation_slug)
-    stub_latest_content_from_supergroups_request(organisation_slug, true)
+    stub_latest_content_from_supergroups_request(organisation_slug, empty: true)
 
     url = build_search_api_query_url(
       filter_organisations: organisation_slug,

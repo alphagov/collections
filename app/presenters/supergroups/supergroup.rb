@@ -78,7 +78,7 @@ module Supergroups
       }
     end
 
-    def format_document_data(documents, data_category = "", with_image_url = false)
+    def format_document_data(documents, data_category: "", with_image_url: false)
       documents.each.with_index(1).map do |document, index|
         data = {
           link: {
