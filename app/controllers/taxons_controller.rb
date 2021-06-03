@@ -4,7 +4,7 @@ class TaxonsController < ApplicationController
   def show
     setup_content_item_and_navigation_helpers(taxon)
 
-    redirect_to(url_override, status: :temporary_redirect) and return if url_override
+    redirect_to(url_override, status: :temporary_redirect) and return if url_override.present?
 
     render locals: {
       presented_taxon: presented_taxon,
