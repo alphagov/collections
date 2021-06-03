@@ -1,5 +1,6 @@
 class TaxonPresenter
   attr_reader :taxon
+
   delegate(
     :content_id,
     :title,

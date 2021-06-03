@@ -3,6 +3,7 @@ require "govspeak"
 
 class TransitionLandingPagePresenter
   attr_reader :taxon, :comms
+
   delegate(
     :title,
     :base_path,

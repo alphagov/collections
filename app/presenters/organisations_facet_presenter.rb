@@ -1,5 +1,6 @@
 class OrganisationsFacetPresenter
   attr_reader :title, :web_url
+
   include ActionView::Helpers::UrlHelper
 
   def initialize(facet_information)

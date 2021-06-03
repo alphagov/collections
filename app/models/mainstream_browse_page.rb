@@ -1,5 +1,6 @@
 class MainstreamBrowsePage
   attr_reader :content_item
+
   delegate(
     :content_id,
     :base_path,

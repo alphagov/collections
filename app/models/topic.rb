@@ -1,5 +1,6 @@
 class Topic
   attr_reader :content_item
+
   delegate(
     :base_path,
     :title,
