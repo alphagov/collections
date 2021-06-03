@@ -341,18 +341,13 @@ module TaxonBrowsingHelper
         "title" => "Taxon title",
         "phase" => "live",
         "links" => {},
+        "details" => {},
       )
     end
   end
 
   def tagged_content
     generate_search_results(5)
-  end
-
-  def taxon
-    GovukSchemas::Example.find("taxon", example_name: "taxon").tap do |content_item|
-      content_item["phase"] = "live"
-    end
   end
 
   def tagged_organisations
