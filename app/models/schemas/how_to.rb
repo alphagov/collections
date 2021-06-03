@@ -95,14 +95,10 @@ private
   end
 
   def image_urls
-    @image_urls ||= begin
-      (1..12).each_with_object({}) { |index, image_urls|
-        image_urls[index.to_s] = view_context.image_url("step-#{index}.png")
-      }.merge(
-        "or" => view_context.image_url("step-or.png"),
-        "and" => view_context.image_url("step-and.png"),
-        "placeholder" => view_context.image_url("govuk_publishing_components/govuk-schema-placeholder-1x1.png"),
-      )
-    end
+    @image_urls ||= (1..12).each_with_object({}) { |index, image_urls| image_urls[index.to_s] = view_context.image_url("step-#{index}.png") }.merge(
+      "or" => view_context.image_url("step-or.png"),
+      "and" => view_context.image_url("step-and.png"),
+      "placeholder" => view_context.image_url("govuk_publishing_components/govuk-schema-placeholder-1x1.png"),
+    )
   end
 end

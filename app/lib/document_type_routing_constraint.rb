@@ -11,9 +11,7 @@ class DocumentTypeRoutingConstraint
 private
 
   def request_document_type
-    @request.env[:__document_type] ||= begin
-      document_type_inspector.document_type || set_error(document_type_inspector.error) || :no_match
-    end
+    @request.env[:__document_type] ||= document_type_inspector.document_type || set_error(document_type_inspector.error) || :no_match
   end
 
   def set_error(err)
