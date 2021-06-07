@@ -1,15 +1,15 @@
 <div class="pane-inner <%= curated_order ? "curated" : "alphabetical" %>">
   <h2 tabindex="-1" class="js-heading"><%= t("shared.browse.prefix") %> <%= title.sub(t("shared.browse.prefix"), "") %></h2>
   <% unless curated_order %>
-    <h3 class="sort-order">A to Z</h3>
+    <h3 class="sort-order"><%= t("second_level_browse.a_to_z") %></h3>
   <% end %>
   <ul>
     <% second_level_browse_pages.each_with_index do |browse_page, index| %>
-      <li class='<%= browsing_in_second_level_page?(browse_page) ? 'active' : nil %>'>
+      <li class='<%= browsing_in_second_level_page?(browse_page) ? "active" : nil %>'>
         <%= link_to(
           browse_page.base_path,
           data: {
-            track_category: 'secondLevelBrowseLinkClicked',
+            track_category: "secondLevelBrowseLinkClicked",
             track_action: "#{index + 1}",
             track_label: browse_page.base_path,
             track_options: {
