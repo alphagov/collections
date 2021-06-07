@@ -16,7 +16,11 @@ Rails.application.routes.draw do
 
   get "/coronavirus", to: "coronavirus_landing_page#show", as: :coronavirus_landing_page
   get "/coronavirus/:hub_slug", to: "coronavirus_landing_page#hub"
+
+  # Brexit
+  get "/brexit(.:locale)", to: "transition_landing_page#show"
   get "/eubusiness(.:locale)", to: "dit_landing_page#show"
+
   get "/browse.json" => redirect("/api/content/browse")
 
   resources :browse, only: %i[index show], param: :top_level_slug do
@@ -79,8 +83,6 @@ Rails.application.routes.draw do
   end
 
   get "/world/*taxon_base_path", to: "world_wide_taxons#show"
-  get "/brexit(.:locale)", to: "transition_landing_page#show"
-  get "/transition(.:locale)", to: "transition_landing_page#show"
 
   # We get requests for URLs like
   # https://www.gov.uk/topic%2Flegal-aid-for-providers%2Fmake-application%2Flatest
