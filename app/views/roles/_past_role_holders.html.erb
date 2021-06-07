@@ -13,11 +13,12 @@
       text: t("roles.previous_holders"),
     } %>
     <%= render "components/taxon-list", {
+      heading_level: 3,
       items: role.past_holders.map do |rh|
         {
           text: rh['title'],
           path: rh['base_path'],
-          description: "#{rh['details']['start_year']} to #{rh['details']['end_year']}"
+          description: "#{rh['details']['start_year']} to #{rh['details']['end_year']}",
         }
       end
     } %>
