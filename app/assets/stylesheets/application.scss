@@ -2,6 +2,7 @@ $govuk-compatibility-govuktemplate: true;
 $govuk-use-legacy-palette: false;
 $covid-grey: #272828;
 $covid-yellow: #fff500;
+$govuk-new-link-styles: true;
 
 // gem components
 @import 'govuk_publishing_components/govuk_frontend_support';

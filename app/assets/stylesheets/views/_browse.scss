@@ -31,6 +31,20 @@
           width: 35%;
           margin-right: 40%;
         }
+
+        a {
+          text-decoration: none;
+
+          h3 {
+            @include govuk-link-decoration;
+          }
+
+          &:hover {
+            h3 {
+              @include govuk-link-hover-decoration;
+            }
+          }
+        }
       }
     }
 
@@ -116,18 +130,16 @@
       ul li {
         list-style: none;
         position: relative;
-        margin-top: 4px;
       }
 
       ul a {
         position: relative;
         display: block;
         @include govuk-font(19);
-        text-decoration: none;
-        padding: 12px 25px 8px 0;
+        padding: govuk-spacing(3) govuk-spacing(5) govuk-spacing(4) 0;
 
         @include govuk-media-query($from: tablet) {
-          padding: 12px govuk-spacing(6) 8px govuk-spacing(3);
+          padding: govuk-spacing(3) govuk-spacing(6) govuk-spacing(4) govuk-spacing(3);
           @include govuk-font(16);
         }
 

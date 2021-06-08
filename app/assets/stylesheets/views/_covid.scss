@@ -234,15 +234,6 @@ $c19-landing-page-header-background: govuk-colour('blue');
 
 .covid__topic-list-link {
   @include govuk-font(19, $weight: bold);
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-
-    &:focus {
-      text-decoration: none;
-    }
-  }
 }
 
 .covid__page-guidance {
