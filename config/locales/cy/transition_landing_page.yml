@@ -20,6 +20,13 @@ cy:
     comms:
       links:
       - link:
+          text: "Summary: The UK’s new relationship with the EU"
+          path: "/government/publications/summary-the-uks-new-relationship-with-the-eu"
+          description: This explainer gives an overview of what has changed, and what remains the same. For businesses and citizens across the UK, there are actions you may need to take.
+        metadata:
+          public_updated_at: 2021-06-08
+          document_type: Policy paper
+      - link:
           text: Agreements reached between the United Kingdom of Great Britain and Northern Ireland and the European Union
           path: "/government/publications/agreements-reached-between-the-united-kingdom-of-great-britain-and-northern-ireland-and-the-european-union"
           description: This document summarises the Agreements between the United Kingdom and the European Union.

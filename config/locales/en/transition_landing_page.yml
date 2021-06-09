@@ -22,6 +22,13 @@ en:
     comms:
       links:
       - link:
+          text: "Summary: The UK’s new relationship with the EU"
+          path: "/government/publications/summary-the-uks-new-relationship-with-the-eu"
+          description: This explainer gives an overview of what has changed, and what remains the same. For businesses and citizens across the UK, there are actions you may need to take.
+        metadata:
+          public_updated_at: 2021-06-08
+          document_type: Policy paper
+      - link:
           text: Government focuses on recovery from COVID with new timeline for border control processes on import of goods
           path: "/government/news/government-focuses-on-recovery-from-covid-with-new-timeline-for-border-control-processes-on-import-of-goods"
           description: A new timetable for introducing import border control processes has been set out by the government to enable UK businesses to focus on their recovery.
