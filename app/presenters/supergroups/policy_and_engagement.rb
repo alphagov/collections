@@ -50,7 +50,7 @@ module Supergroups
       consultations + other_document_types
     end
 
-    def format_document_data(documents, data_category = "")
+    def format_document_data(documents, data_category: "")
       documents.each.with_index(1).map do |document, index|
         data = {
           link: {

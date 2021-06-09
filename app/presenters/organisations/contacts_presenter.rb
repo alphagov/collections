@@ -55,7 +55,7 @@ module Organisations
     end
 
     def contact_line(line)
-      return line + "<br/>" if line.present?
+      return "#{line}<br/>" if line.present?
 
       ""
     end

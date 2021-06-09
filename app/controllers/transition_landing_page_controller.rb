@@ -21,10 +21,8 @@ private
 
   def taxon
     base_path = request.path
-    @taxon ||= begin
-      Rails.cache.fetch("collections_content_items#{base_path}", expires_in: 10.minutes) do
-        Taxon.find(base_path)
-      end
+    @taxon ||= Rails.cache.fetch("collections_content_items#{base_path}", expires_in: 10.minutes) do
+      Taxon.find(base_path)
     end
   end
 

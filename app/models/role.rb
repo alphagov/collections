@@ -86,15 +86,12 @@ class Role
   end
 
   def past_holders_url
-    if slug == "prime-minister"
-      "/government/history/past-prime-ministers"
-    elsif slug == "chancellor-of-the-exchequer"
-      "/government/history/past-chancellors"
-    elsif slug == "secretary-of-state-for-foreign-commonwealth-and-development-affairs"
-      "/government/history/past-foreign-secretaries"
-    elsif slug == "foreign-secretary"
-      "/government/history/past-foreign-secretaries"
-    end
+    {
+      "prime-minister" => "/government/history/past-prime-ministers",
+      "chancellor-of-the-exchequer" => "/government/history/past-chancellors",
+      "secretary-of-state-for-foreign-commonwealth-and-development-affairs" => "/government/history/past-foreign-secretaries",
+      "foreign-secretary" => "/government/history/past-foreign-secretaries",
+    }[slug]
   end
 
 private

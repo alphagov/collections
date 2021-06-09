@@ -1,7 +1,7 @@
 class AnnouncementsPresenter
   attr_reader :slug, :slug_prefix, :filter_key
 
-  def initialize(slug, slug_prefix: nil, filter_key:)
+  def initialize(slug, filter_key:, slug_prefix: nil)
     @slug = slug
     @slug_prefix = slug_prefix || filter_key
     @filter_key = filter_key

@@ -3,6 +3,7 @@ class WorldWideTaxonPresenter
   LEAF = :leaf
 
   attr_reader :taxon
+
   delegate(
     :content_id,
     :title,

@@ -13,7 +13,7 @@ module CoronavirusLandingPageSteps
   CORONAVIRUS_TAXON_PATH = "/coronavirus-taxon".freeze
   BUSINESS_TAXON_PATH = CORONAVIRUS_TAXON_PATH + "/businesses-and-self-employed-people".freeze
   BUSINESS_SUBTAXON_PATH = CORONAVIRUS_TAXON_PATH + "/business-sub-taxon".freeze
-  OTHER_SUBTAXON_PATH = CORONAVIRUS_TAXON_PATH + "/no-hub-page"
+  OTHER_SUBTAXON_PATH = "#{CORONAVIRUS_TAXON_PATH}/no-hub-page".freeze
 
   def given_there_is_a_content_item
     stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item)

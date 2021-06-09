@@ -1,7 +1,7 @@
 module SearchApiHelpers
   include SearchApiFields
 
-  def stub_search(params: nil, body:)
+  def stub_search(body:, params: nil)
     if params
       stub_any_search
         .with(

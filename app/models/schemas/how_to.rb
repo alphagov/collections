@@ -18,9 +18,10 @@ class Schemas::HowTo
       contents = step["contents"].map.with_index(1) do |content, item_index|
         direction_index = item_index
 
-        if content["type"] == "paragraph"
+        case content["type"]
+        when "paragraph"
           how_to_direction(content, direction_index)
-        elsif content["type"] == "list"
+        when "list"
           content["contents"].map do |c|
             how_to_direction(c, direction_index).tap do
               direction_index += 1
@@ -78,7 +79,7 @@ private
   end
 
   def step_url(step_slug)
-    Plek.new.website_root + base_path + "#" + step_slug
+    "#{Plek.new.website_root}#{base_path}##{step_slug}"
   end
 
   def step_image_url(step)
@@ -94,14 +95,10 @@ private
   end
 
   def image_urls
-    @image_urls ||= begin
-      (1..12).each_with_object({}) { |index, image_urls|
-        image_urls[index.to_s] = view_context.image_url("step-#{index}.png")
-      }.merge(
-        "or" => view_context.image_url("step-or.png"),
-        "and" => view_context.image_url("step-and.png"),
-        "placeholder" => view_context.image_url("govuk_publishing_components/govuk-schema-placeholder-1x1.png"),
-      )
-    end
+    @image_urls ||= (1..12).each_with_object({}) { |index, image_urls| image_urls[index.to_s] = view_context.image_url("step-#{index}.png") }.merge(
+      "or" => view_context.image_url("step-or.png"),
+      "and" => view_context.image_url("step-and.png"),
+      "placeholder" => view_context.image_url("govuk_publishing_components/govuk-schema-placeholder-1x1.png"),
+    )
   end
 end
