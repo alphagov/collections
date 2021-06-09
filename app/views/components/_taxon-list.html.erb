@@ -10,7 +10,7 @@
   items ||= []
 %>
 <% if items.any? %>
-  <ol class="govuk-list app-c-taxon-list">
+  <ol class="govuk-list govuk-list--spaced app-c-taxon-list">
     <% items.each do |item| %>
       <li class="app-c-taxon-list__item">
         <% if item[:description] && heading_level %>
