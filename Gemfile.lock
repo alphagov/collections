@@ -95,7 +95,7 @@ GEM
     concord (0.1.6)
       adamantium (~> 0.2.0)
       equalizer (~> 0.0.9)
-    concurrent-ruby (1.1.8)
+    concurrent-ruby (1.1.9)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     crass (1.0.6)
@@ -184,7 +184,7 @@ GEM
     govuk_document_types (1.0.1)
     govuk_personalisation (0.3.0)
       rails (~> 6)
-    govuk_publishing_components (24.13.2)
+    govuk_publishing_components (24.13.3)
       govuk_app_config
       kramdown
       plek
@@ -230,7 +230,7 @@ GEM
     logstasher (2.1.5)
       activesupport (>= 5.2)
       request_store
-    loofah (2.9.1)
+    loofah (2.10.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
