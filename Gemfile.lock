@@ -182,7 +182,7 @@ GEM
       statsd-ruby (~> 1.5.0)
       unicorn (>= 5.4, < 5.9)
     govuk_document_types (1.0.1)
-    govuk_personalisation (0.3.0)
+    govuk_personalisation (0.4.0)
       rails (~> 6)
     govuk_publishing_components (24.13.3)
       govuk_app_config
