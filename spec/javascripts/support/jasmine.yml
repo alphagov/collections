@@ -13,6 +13,7 @@
 src_files:
   - "spec/javascripts/vendor/jquery-1.12.4.js"
   - "spec/javascripts/vendor/jasmine-jquery.js"
+  - "assets/test-dependencies.js"
   - "assets/application.js"
 
 # stylesheets
