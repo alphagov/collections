@@ -1,4 +1,4 @@
-class TransitionLandingPageController < ApplicationController
+class BrexitLandingPageController < ApplicationController
   include GovukPersonalisation::AccountConcern
   include Slimmer::Headers
 
@@ -27,7 +27,7 @@ private
   end
 
   def presented_taxon
-    TransitionLandingPagePresenter.new(taxon)
+    BrexitLandingPagePresenter.new(taxon)
   end
 
   def presentable_section_items

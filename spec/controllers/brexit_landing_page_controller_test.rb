@@ -1,4 +1,4 @@
-RSpec.describe TransitionLandingPageController do
+RSpec.describe BrexitLandingPageController do
   include TaxonHelpers
 
   describe "GET show" do

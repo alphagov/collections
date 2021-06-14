@@ -1,4 +1,4 @@
-RSpec.describe TransitionLandingPagePresenter do
+RSpec.describe BrexitLandingPagePresenter do
   let(:taxon) { Taxon.new(ContentItem.new("content_id" => "content_id", "base_path" => "/base_path")) }
 
   subject { described_class.new(taxon) }
@@ -81,7 +81,7 @@ RSpec.describe TransitionLandingPagePresenter do
     it "strips the locale extension from the base path if present" do
       I18n.with_locale(:cy) do
         taxon = Taxon.new(ContentItem.new("base_path" => "/base_path.cy"))
-        subject = TransitionLandingPagePresenter.new(taxon)
+        subject = BrexitLandingPagePresenter.new(taxon)
         expect(subject.email_path).to eq("/base_path")
       end
     end

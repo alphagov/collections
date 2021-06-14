@@ -1,7 +1,7 @@
 require "yaml"
 require "govspeak"
 
-class TransitionLandingPagePresenter
+class BrexitLandingPagePresenter
   attr_reader :taxon, :comms
 
   delegate(
