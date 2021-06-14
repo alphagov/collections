@@ -3,26 +3,26 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-half">
         <%= render "govuk_publishing_components/components/heading", {
-          text: t("transition_landing_page.video_section_title"),
+          text: t("brexit_landing_page.video_section_title"),
           heading_level: 2,
           font_size: "l",
           margin_bottom: 6,
         } %>
         <%= render "govuk_publishing_components/components/govspeak", {
         } do %>
-          <%= t("transition_landing_page.video_section_description").html_safe() %>
+          <%= t("brexit_landing_page.video_section_description").html_safe() %>
         <% end %>
       </div>
       <div class="govuk-grid-column-one-half">
         <%= render partial: 'shared/youtube_player', locals: {
-          no_cookies_icon_text: t("transition_landing_page.no_cookies.icon_text"),
-          no_cookies_change_settings_text: t("transition_landing_page.no_cookies.change_settings_text"),
-          no_cookies_to_watch_text: t("transition_landing_page.no_cookies.to_watch_text"),
-          no_cookies_or_text: t("transition_landing_page.no_cookies.or_text"),
-          no_cookies_watch_link_text: t("transition_landing_page.no_cookies.watch_link_text"),
-          youtube_video_url: t("transition_landing_page.video_section_link"),
-          transcription_summary: t("transition_landing_page.video_section_transcription_summary"),
-          transcription_text: t("transition_landing_page.video_section_transcription_text"),
+          no_cookies_icon_text: t("brexit_landing_page.no_cookies.icon_text"),
+          no_cookies_change_settings_text: t("brexit_landing_page.no_cookies.change_settings_text"),
+          no_cookies_to_watch_text: t("brexit_landing_page.no_cookies.to_watch_text"),
+          no_cookies_or_text: t("brexit_landing_page.no_cookies.or_text"),
+          no_cookies_watch_link_text: t("brexit_landing_page.no_cookies.watch_link_text"),
+          youtube_video_url: t("brexit_landing_page.video_section_link"),
+          transcription_summary: t("brexit_landing_page.video_section_transcription_summary"),
+          transcription_text: t("brexit_landing_page.video_section_transcription_text"),
           inverse: true
         } %>
       </div>

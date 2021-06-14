@@ -1,9 +1,9 @@
-<% guidance_header = t("transition_landing_page.guidance_header") %>
+<% guidance_header = t("brexit_landing_page.guidance_header") %>
 
 <div class="landing-page__section"
   data-analytics-ecommerce
   data-ecommerce-start-index="1"
-  data-list-title="<%= t("transition_landing_page.data_list_title", header: guidance_header) %>"
+  data-list-title="<%= t("brexit_landing_page.data_list_title", header: guidance_header) %>"
   data-search-query>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
@@ -16,7 +16,7 @@
     </div>
   </div>
 
-  <% campaign_links = I18n.t("transition_landing_page.campaign_links") %>
+  <% campaign_links = I18n.t("brexit_landing_page.campaign_links") %>
   <%
     links = campaign_links[:links].map do |link|
       link_to(link[:text], link[:path], class: "govuk-link", data: {

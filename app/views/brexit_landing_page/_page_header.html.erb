@@ -1,16 +1,16 @@
 <% content_for :is_full_width_header, true %>
-<% content_for :title, t("transition_landing_page.meta_title") %>
+<% content_for :title, t("brexit_landing_page.meta_title") %>
 <% content_for :meta_tags do %>
   <% page_url = File.join(request.base_url, request.path) %>
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="GOV.UK">
   <meta property="og:url" content="<%= page_url %>">
-  <meta property="og:title" content="<%= t("transition_landing_page.meta_title") %>">
-  <meta property="og:description" content="<%= t("transition_landing_page.meta_description") %>">
+  <meta property="og:title" content="<%= t("brexit_landing_page.meta_title") %>">
+  <meta property="og:description" content="<%= t("brexit_landing_page.meta_description") %>">
   <meta property="og:image" content="<%= image_url("transition-period.png") %>" />
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="<%= image_url("transition-period.png") %>">
-  <meta name="description" content="<%= t("transition_landing_page.meta_description") %>">
+  <meta name="description" content="<%= t("brexit_landing_page.meta_description") %>">
 
   <%= render "govuk_publishing_components/components/meta_tags", {
     content_item: {
@@ -28,7 +28,7 @@
         <div class="govuk-grid-column-two-thirds landing-page_header-text-container">
           <div class="govuk-!-margin-top-7">
             <%= render "govuk_publishing_components/components/heading", {
-              text: sanitize(t("transition_landing_page.page_header")),
+              text: sanitize(t("brexit_landing_page.page_header")),
               heading_level: 1,
               font_size: "xl",
               margin_bottom: 4,
@@ -43,13 +43,13 @@
           <div class="landing-page__intro">
             <%= render "govuk_publishing_components/components/govspeak", {
             } do %>
-              <%= tag.p t("transition_landing_page.page_header_explainer") %>
+              <%= tag.p t("brexit_landing_page.page_header_explainer") %>
             <% end %>
           </div>
 
           <%
-            button_text = t("transition_landing_page.take_action_start_now")
-            button_href = t("transition_landing_page.take_action_start_now_link")
+            button_text = t("brexit_landing_page.take_action_start_now")
+            button_href = t("brexit_landing_page.take_action_start_now_link")
           %>
           <%= render "govuk_publishing_components/components/button", {
             text: button_text,

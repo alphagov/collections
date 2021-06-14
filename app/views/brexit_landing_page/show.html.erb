@@ -26,7 +26,7 @@
 
     <div class="landing-page__share">
       <%= render "govuk_publishing_components/components/share_links", {
-        title: t("transition_landing_page.share_links"),
+        title: t("brexit_landing_page.share_links"),
         columns: true,
         links: [
           {
@@ -40,7 +40,7 @@
             icon: "twitter"
           },
           {
-            href: "mailto:?body=https://www.gov.uk#{CGI.escape(request.fullpath)}/&subject=#{t('transition_landing_page.email_mailto_subject')}",
+            href: "mailto:?body=https://www.gov.uk#{CGI.escape(request.fullpath)}/&subject=#{t('brexit_landing_page.email_mailto_subject')}",
             text: "Email",
             icon: "email"
           },
@@ -50,7 +50,7 @@
             icon: "whatsapp"
           },
           {
-            href: "http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.gov.uk#{CGI.escape(request.fullpath)}&title=#{t('transition_landing_page.email_mailto_subject')}",
+            href: "http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.gov.uk#{CGI.escape(request.fullpath)}&title=#{t('brexit_landing_page.email_mailto_subject')}",
             text: "LinkedIn",
             icon: "linkedin"
           },

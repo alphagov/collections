@@ -22,12 +22,12 @@ class BrexitLandingPagePresenter
     )
                                                         .sections
     brexit_sections.map do |section|
-      supergroup_title = I18n.t(section[:name], scope: %i[transition_landing_page sections])
+      supergroup_title = I18n.t(section[:name], scope: %i[brexit_landing_page sections])
       {
         text: supergroup_title,
         path: section[:see_more_link][:url],
         data_attributes: section[:see_more_link][:data],
-        aria_label: "#{supergroup_title} #{I18n.t('transition_landing_page.sections.aria_string_suffix')}",
+        aria_label: "#{supergroup_title} #{I18n.t('brexit_landing_page.sections.aria_string_suffix')}",
       }
     end
   end
@@ -54,7 +54,7 @@ class BrexitLandingPagePresenter
 private
 
   def fetch_comms
-    comms = I18n.t("transition_landing_page.comms")
+    comms = I18n.t("brexit_landing_page.comms")
     comms[:links].map do |link_item|
       data_attributes = {
         track_category: "transition-landing-page",
