@@ -1,19 +1,18 @@
 require "gds_api/test_helpers/content_item_helpers"
 require "gds_api/test_helpers/search"
 
-module TransitionLandingPageSteps
+module BrexitLandingPageSteps
   include GdsApi::TestHelpers::ContentItemHelpers
-  include SearchApiHelpers
 
-  TRANSITION_TAXON_CONTENT_ID = "d6c2de5d-ef90-45d1-82d4-5f2438369eea".freeze
-  TRANSITION_TAXON_PATH = "/brexit".freeze
+  BREXIT_TAXON_CONTENT_ID = "d6c2de5d-ef90-45d1-82d4-5f2438369eea".freeze
+  BREXIT_TAXON_PATH = "/brexit".freeze
 
-  def given_there_is_a_transition_taxon
-    stub_content_store_has_item(TRANSITION_TAXON_PATH, content_item)
+  def given_there_is_a_brexit_taxon
+    stub_content_store_has_item(BREXIT_TAXON_PATH, content_item)
   end
 
-  def when_i_visit_the_transition_landing_page
-    visit TRANSITION_TAXON_PATH
+  def when_i_visit_the_brexit_landing_page
+    visit BREXIT_TAXON_PATH
   end
 
   def then_i_can_see_the_title_section
@@ -52,7 +51,7 @@ module TransitionLandingPageSteps
     supergroups.each do |_|
       assert page.has_link?(
         "Services",
-        href: "/search/services?parent=#{CGI.escape(TRANSITION_TAXON_PATH)}&topic=#{TRANSITION_TAXON_CONTENT_ID}",
+        href: "/search/services?parent=#{CGI.escape(BREXIT_TAXON_PATH)}&topic=#{BREXIT_TAXON_CONTENT_ID}",
       )
     end
   end
@@ -74,7 +73,7 @@ module TransitionLandingPageSteps
       "Transparency and freedom of information releases",
     ].each do |section|
       expect(page).to have_selector("a[data-track-category='SeeAllLinkClicked']", text: section)
-      expect(page).to have_selector("a[data-track-action=\"#{TRANSITION_TAXON_PATH}\"]", text: section)
+      expect(page).to have_selector("a[data-track-action=\"#{BREXIT_TAXON_PATH}\"]", text: section)
     end
   end
 
@@ -83,17 +82,17 @@ module TransitionLandingPageSteps
   end
 
   def and_there_is_metadata
-    expect(page).to have_selector("meta[property='og:title'][content='#{I18n.t('transition_landing_page.meta_title')}']", visible: false)
-    expect(page).to have_selector("meta[name='description'][content='#{I18n.t('transition_landing_page.meta_description')}']", visible: false)
+    expect(page).to have_selector("meta[property='og:title'][content='#{I18n.t('brexit_landing_page.meta_title')}']", visible: false)
+    expect(page).to have_selector("meta[name='description'][content='#{I18n.t('brexit_landing_page.meta_description')}']", visible: false)
     expect(page).to have_selector("link[rel='canonical'][href='http://www.example.com/brexit']", visible: false)
   end
 
   def content_item
     GovukSchemas::RandomExample.for_schema(frontend_schema: "taxon") do |item|
       item.merge(
-        "base_path" => TRANSITION_TAXON_PATH,
-        "content_id" => TRANSITION_TAXON_CONTENT_ID,
-        "title" => "Transition",
+        "base_path" => BREXIT_TAXON_PATH,
+        "content_id" => BREXIT_TAXON_CONTENT_ID,
+        "title" => "Brexit",
         "phase" => "live",
         "links" => {},
       )
