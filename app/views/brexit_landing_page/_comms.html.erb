@@ -1,0 +1,45 @@
+<%
+  comms_links = comms[:links]
+  comms_video = comms[:video]
+
+  grid_class = "govuk-grid-row" if comms_links
+  links_grid_class = comms_video ? "govuk-grid-column-one-half" : "govuk-grid-column-two-thirds"
+  video_grid_class = "govuk-grid-column-one-half" if comms_links
+%>
+
+<div class="landing-page__section landing-page__section--border-top">
+  <%= render "govuk_publishing_components/components/heading", {
+    text: t('brexit_landing_page.comms_header'),
+    heading_level: 2,
+    font_size: "l",
+    margin_bottom: 6,
+  } %>
+  <div class="<%= grid_class %>" lang="en">
+
+    <% if comms_links %>
+      <div class="<%= links_grid_class %> landing-page__comms-links" data-module="gem-track-click">
+        <%= render "govuk_publishing_components/components/document_list", {
+          items: comms_links
+        } %>
+      </div>
+    <% end %>
+
+    <% if comms_video %>
+      <div class="<%= video_grid_class %> landing-page__comms-video">
+        <%= render "govuk_publishing_components/components/govspeak", {
+        } do %>
+          <p><a href="<%= comms_video[:href] %>"><%= comms_video[:title] %></a></p>
+
+          <% if comms_video[:transcript] %>
+            <%= render "govuk_publishing_components/components/details", {
+              title: t("brexit_landing_page.comms.read_transcript")
+            } do %>
+              <%= comms_video[:transcript] %>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+
+  </div>
+</div>

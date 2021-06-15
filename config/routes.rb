@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get "/coronavirus/:hub_slug", to: "coronavirus_landing_page#hub"
 
   # Brexit
-  get "/brexit(.:locale)", to: "transition_landing_page#show"
+  get "/brexit(.:locale)", to: "brexit_landing_page#show"
   get "/eubusiness(.:locale)", to: "dit_landing_page#show"
 
   get "/browse.json" => redirect("/api/content/browse")
