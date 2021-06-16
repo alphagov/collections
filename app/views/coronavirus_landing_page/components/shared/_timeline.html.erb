@@ -2,8 +2,36 @@
   <%= render "govuk_publishing_components/components/heading", {
     text: timeline["heading"],
     padding: true,
-    margin_bottom: 4
+    margin_bottom: 2
   } %>
+
+  <form method="get" target="" class="js-change-location">
+    <%= render "govuk_publishing_components/components/radio", {
+      name: "timeline_nation",
+      heading: "Choose location",
+      items: @timeline_nations_items
+    } %>
+    <%= render "govuk_publishing_components/components/button", {
+      text: "View",
+      margin_bottom: 6
+    } %>
+  </form>
+
+  <div id="nation-england" class="<%= 'covid-timeline__item--hidden' unless !%w[northern-ireland scotland wales].include?(params[:timeline_nation]) %>">
+    <p class="govuk-body">Demonstration: things about <strong class="govuk-tag govuk-tag--blue">England</strong></p>
+  </div>
+
+  <div id="nation-northern-ireland" class="<%= 'covid-timeline__item--hidden' unless params[:timeline_nation] == "northern-ireland" %>">
+    <p class="govuk-body">Demonstration: things about <strong class="govuk-tag govuk-tag--blue">Northern Ireland</strong></p>
+  </div>
+
+  <div id="nation-scotland" class="<%= 'covid-timeline__item--hidden' unless params[:timeline_nation] == "scotland" %>">
+    <p class="govuk-body">Demonstration: things about <strong class="govuk-tag govuk-tag--blue">Scotland</strong></p>
+  </div>
+
+  <div id="nation-wales" class="<%= 'covid-timeline__item--hidden' unless params[:timeline_nation] == "wales" %>">
+    <p class="govuk-body">Demonstration: things about <strong class="govuk-tag govuk-tag--blue">Wales</strong></p>
+  </div>
 
   <% if timeline["summary"] %>
     <%= render_govspeak(timeline["summary"]) %>

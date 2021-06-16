@@ -270,6 +270,10 @@ $c19-landing-page-header-background: govuk-colour('blue');
   margin-bottom: govuk-spacing(1);
 }
 
+.covid-timeline__item--hidden {
+  display: none;
+}
+
 .covid__logo-wrapper {
   margin-bottom: govuk-spacing(6);
   text-align: center;
