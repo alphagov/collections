@@ -4,18 +4,6 @@
   margin-bottom: govuk-spacing(2);
 }
 
-.app-c-topic-list__link--no-underline {
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-
-  &:hover:focus {
-    text-decoration: none;
-  }
-}
-
 .app-c-topic-list--small {
   .app-c-topic-list__item {
     margin-bottom: govuk-spacing(1);
