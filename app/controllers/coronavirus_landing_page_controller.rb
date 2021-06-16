@@ -5,6 +5,7 @@ class CoronavirusLandingPageController < ApplicationController
 
   def show
     @statistics = FetchCoronavirusStatisticsService.call
+    @timeline_nations_items = timeline_nations_items
     if @statistics
       set_expiry 5.minutes
     else
@@ -64,5 +65,21 @@ private
 
   def hub_presenter
     @hub_presenter ||= CoronavirusHubPresenter.new(@content_item)
+  end
+
+  def timeline_nations_items
+    values = %w[england scotland northern_ireland wales]
+    selected = values.include?(params[:timeline_nation]) ? params[:timeline_nation] : "england"
+
+    items = []
+    values.each do |value|
+      items << {
+        value: value,
+        text: value.titleize,
+        checked: selected == value,
+      }
+    end
+
+    items
   end
 end
