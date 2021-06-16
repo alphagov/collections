@@ -82,6 +82,20 @@
           margin-left: -13%;
           width: 25%;
         }
+
+        a {
+          text-decoration: none;
+
+          h3 {
+            @include govuk-link-decoration;
+          }
+
+          &:hover {
+            h3 {
+              @include govuk-link-hover-decoration;
+            }
+          }
+        }
       }
 
       .subsection-pane {
@@ -308,7 +322,7 @@
       }
 
       ul li a {
-        @include govuk-font(19, $weight: bold);
+        @include govuk-font(16, $weight: bold);
         display: block;
         padding: govuk-spacing(2) govuk-spacing(6) govuk-spacing(2) 0;
       }
