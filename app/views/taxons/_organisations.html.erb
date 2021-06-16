@@ -23,7 +23,7 @@
               data-toggled-text="<%= t("taxons.show_fewer_orgs") %>"><%= t("taxons.show_more_orgs") %></a>
             </div>
 
-          <div id="more-organisations" class="js-hidden">
+          <div id="more-organisations" class="js-hidden taxon-page__more-organisations">
             <%= render partial: 'organisation_logos_and_list', locals: {
                   organisations_with_logos: presented_organisations.show_more_organisation_list[:organisations_with_logos],
                   organisations_without_logos: presented_organisations.show_more_organisation_list[:organisations_without_logos]

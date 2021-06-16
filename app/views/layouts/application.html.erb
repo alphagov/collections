@@ -11,7 +11,7 @@
   <%= stylesheet_link_tag "print.css", :media => "print", integrity: false %>
 </head>
 
-<body <% if content_for(:is_full_width_header) %>class="full-width"<% end %>>
+<body>
   <div class="wrapper" id="wrapper">
     <%= yield :back_link %>
     <% unless (content_for(:is_full_width_header) || content_for(:back_link)) %>
@@ -28,14 +28,6 @@
     <% end %>
     <%= yield %>
     </main>
-
-    <% if content_for(:is_full_width_header) %>
-      <div class="govuk-width-container">
-        <%= render 'govuk_publishing_components/components/feedback' %>
-      </div>
-    <% else %>
-      <%= render 'govuk_publishing_components/components/feedback' %>
-    <% end %>
   </div>
 </body>
 </html>

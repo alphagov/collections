@@ -2,6 +2,8 @@ class TaxonsController < ApplicationController
   rescue_from Taxon::InAlphaPhase, with: :error_404
 
   def show
+    slimmer_template :gem_layout_full_width
+
     setup_content_item_and_navigation_helpers(taxon)
 
     redirect_to(url_override, status: :temporary_redirect) and return if url_override.present?

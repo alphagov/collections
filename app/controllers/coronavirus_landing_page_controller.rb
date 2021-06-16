@@ -1,6 +1,8 @@
 require "active_model"
 
 class CoronavirusLandingPageController < ApplicationController
+  slimmer_template :gem_layout_full_width
+
   def show
     @statistics = FetchCoronavirusStatisticsService.call
     if @statistics
