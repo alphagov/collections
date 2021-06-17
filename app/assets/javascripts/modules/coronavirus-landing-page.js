@@ -14,6 +14,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     // Ensure that the "Open/Close all" element exists when attaching the event listeners for tracking
     $(document).ready(function () {
       $this.addAccordionOpenAllTracking($element)
+      $this.addTimelineCountrySelector()
     })
   }
 
@@ -40,6 +41,19 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
       GOVUK.analytics.trackEvent('pageElementInteraction', action, options)
     })
+  }
+
+  CoronavirusLandingPage.prototype.addTimelineCountrySelector = function () {
+    var timelineRadios = document.querySelector('.js-change-location')
+    if (timelineRadios) {
+      timelineRadios.addEventListener('change', function (e) {
+        var sections = document.querySelectorAll('.js-covid-timeline')
+        for (var i = 0; i < sections.length; i++) {
+          sections[i].style.display = 'none'
+        }
+        document.getElementById('nation-' + e.target.value).style.display = 'block'
+      })
+    }
   }
 
   Modules.CoronavirusLandingPage = CoronavirusLandingPage

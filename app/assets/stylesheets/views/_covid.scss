@@ -274,6 +274,12 @@ $c19-landing-page-header-background: govuk-colour('blue');
   display: none;
 }
 
+.covid-timeline__button-wrapper {
+  .js-enabled & {
+    display: none;
+  }
+}
+
 .covid__logo-wrapper {
   margin-bottom: govuk-spacing(6);
   text-align: center;

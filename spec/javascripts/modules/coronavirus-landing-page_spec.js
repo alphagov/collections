@@ -89,6 +89,53 @@ describe('Coronavirus landing page', function () {
       )
     })
   })
+
+  describe('nation selector controls', function () {
+    var nationPickerHtml
+
+    beforeEach(function () {
+      nationPickerHtml =
+        '<div>' +
+          '<form method="get" target="" class="js-change-location">' +
+            '<div class="gem-c-radio govuk-radios__item">' +
+              '<input type="radio" name="timeline_nation" id="radio-0" value="england" class="govuk-radios__input" checked="">' +
+              '<label for="radio-0" class="gem-c-label govuk-label govuk-radios__label">England</label>' +
+            '</div>' +
+            '<div class="gem-c-radio govuk-radios__item">' +
+              '<input type="radio" name="timeline_nation" id="radio-1" value="northern_ireland" class="govuk-radios__input">' +
+              '<label for="radio-1" class="gem-c-label govuk-label govuk-radios__label">Northern Ireland</label>' +
+            '</div>' +
+          '</form>' +
+          '<div id="nation-england" class="js-covid-timeline">England</div>' +
+          '<div id="nation-northern_ireland" class="js-covid-timeline">Northern Ireland</div>' +
+        '</div>'
+      coronavirusLandingPage = new GOVUK.Modules.CoronavirusLandingPage()
+      $element = $(nationPickerHtml)
+      $('body').append($element)
+      coronavirusLandingPage.start($element)
+    })
+
+    afterEach(function () {
+      $element.remove()
+    })
+
+    it('show and hide appropriate sections of the page when the radio buttons change', function () {
+      var radio0 = $element.find('#radio-0')
+      var radio1 = $element.find('#radio-1')
+      var section0 = $element.find('#nation-england')
+      var section1 = $element.find('#nation-northern_ireland')
+
+      window.GOVUK.triggerEvent(radio0[0], 'change')
+
+      expect(section0).toBeVisible()
+      expect(section1).toBeHidden()
+
+      window.GOVUK.triggerEvent(radio1[0], 'change')
+
+      expect(section0).toBeHidden()
+      expect(section1).toBeVisible()
+    })
+  })
 })
 
 function parseCookie (cookie) {
