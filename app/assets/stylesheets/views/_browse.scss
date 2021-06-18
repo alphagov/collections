@@ -114,10 +114,6 @@
         border-left: 1px solid $govuk-border-colour;
         min-height: 950px;
       }
-
-      @include govuk-media-query($from: desktop) {
-        min-height: 700px;
-      }
     }
 
     .pane-inner__title {
