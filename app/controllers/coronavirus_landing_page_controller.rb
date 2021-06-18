@@ -71,10 +71,16 @@ private
 
     items = []
     values.each do |value|
+      text = value.gsub("_", " ").titleize
       items << {
         value: value,
-        text: value.gsub("_", " ").titleize,
+        text: text,
         checked: selected == value,
+        data_attributes: {
+          track_category: "pageElementInteraction",
+          track_action: "TimelineNation",
+          track_label: text,
+        },
       }
     end
 
