@@ -37,20 +37,26 @@
     <% end %>
   <% end %>
 
-  <div id="nation-england" class="js-covid-timeline <%= 'covid-timeline__wrapper--hidden' unless !%w[northern-ireland scotland wales].include?(params[:nation]) %>">
-    <p class="govuk-body">Demonstration: things about <strong class="govuk-tag govuk-tag--blue">England</strong></p>
-  </div>
+  <div aria-live="polite">
+    <div id="nation-england" class="js-covid-timeline <%= 'covid-timeline__wrapper--hidden' unless !%w[northern-ireland scotland wales].include?(params[:nation]) %>">
+      <h3 class="govuk-heading-m govuk-visually-hidden">Changes in England</h3>
+      <p class="govuk-body">Demonstration: things about <strong class="govuk-tag govuk-tag--blue">England</strong></p>
+    </div>
 
-  <div id="nation-northern_ireland" class="js-covid-timeline <%= 'covid-timeline__wrapper--hidden' unless params[:nation] == "northern-ireland" %>">
-    <p class="govuk-body">Demonstration: things about <strong class="govuk-tag govuk-tag--blue">Northern Ireland</strong></p>
-  </div>
+    <div id="nation-northern_ireland" class="js-covid-timeline <%= 'covid-timeline__wrapper--hidden' unless params[:nation] == "northern-ireland" %>">
+      <h3 class="govuk-heading-m govuk-visually-hidden">Changes in Northern Ireland</h3>
+      <p class="govuk-body">Demonstration: things about <strong class="govuk-tag govuk-tag--blue">Northern Ireland</strong></p>
+    </div>
 
-  <div id="nation-scotland" class="js-covid-timeline <%= 'covid-timeline__wrapper--hidden' unless params[:nation] == "scotland" %>">
-    <p class="govuk-body">Demonstration: things about <strong class="govuk-tag govuk-tag--blue">Scotland</strong></p>
-  </div>
+    <div id="nation-scotland" class="js-covid-timeline <%= 'covid-timeline__wrapper--hidden' unless params[:nation] == "scotland" %>">
+      <h3 class="govuk-heading-m govuk-visually-hidden">Changes in Scotland</h3>
+      <p class="govuk-body">Demonstration: things about <strong class="govuk-tag govuk-tag--blue">Scotland</strong></p>
+    </div>
 
-  <div id="nation-wales" class="js-covid-timeline <%= 'covid-timeline__wrapper--hidden' unless params[:nation] == "wales" %>">
-    <p class="govuk-body">Demonstration: things about <strong class="govuk-tag govuk-tag--blue">Wales</strong></p>
+    <div id="nation-wales" class="js-covid-timeline <%= 'covid-timeline__wrapper--hidden' unless params[:nation] == "wales" %>">
+      <h3 class="govuk-heading-m govuk-visually-hidden">Changes in Wales</h3>
+      <p class="govuk-body">Demonstration: things about <strong class="govuk-tag govuk-tag--blue">Wales</strong></p>
+    </div>
   </div>
 
   <% if details.timeline["summary"] %>
