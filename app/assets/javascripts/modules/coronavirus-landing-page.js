@@ -46,6 +46,9 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
   CoronavirusLandingPage.prototype.addTimelineCountrySelector = function () {
     var timelineRadios = document.querySelector('.js-change-location')
     if (timelineRadios) {
+      timelineRadios.addEventListener('submit', function (e) {
+        e.preventDefault()
+      })
       timelineRadios.addEventListener('change', function (e) {
         var sections = document.querySelectorAll('.js-covid-timeline')
         for (var i = 0; i < sections.length; i++) {
