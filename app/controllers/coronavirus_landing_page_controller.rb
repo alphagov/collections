@@ -11,7 +11,12 @@ class CoronavirusLandingPageController < ApplicationController
       set_expiry 30.seconds
     end
 
-    @content_item = content_item.to_hash
+    @content_item = if params[:timeline_nation] && !Rails.env.production?
+                      timeline_nation_content_item.to_hash
+                    else
+                      content_item.to_hash
+                    end
+
     breadcrumbs = [{ title: t("shared.breadcrumbs_home"), url: "/", is_page_parent: true }]
     title = {
       text: presenter.page_header,
@@ -48,6 +53,10 @@ class CoronavirusLandingPageController < ApplicationController
   end
 
 private
+
+  def timeline_nation_content_item
+    @timeline_nation_content_item || CoronavirusTimelineNationsContentItem.load
+  end
 
   def content_item
     @content_item ||= ContentItem.find!(request.path)

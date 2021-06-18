@@ -25,5 +25,14 @@ RSpec.describe CoronavirusLandingPageController do
         expect(response.headers["Cache-Control"]).to eq("max-age=#{30.seconds}, public")
       end
     end
+
+    context "when testing national_applicability" do
+      it "loads the production content item in production environments" do
+        allow(Rails.env).to receive(:production?).and_return(true)
+        expect(CoronavirusTimelineNationsContentItem).to_not receive(:load)
+
+        get :show, params: { timeline_nation: "foo" }
+      end
+    end
   end
 end
