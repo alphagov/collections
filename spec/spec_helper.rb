@@ -26,6 +26,7 @@ WebMock.disable_net_connect!(
   allow_localhost: true,
   allow: ["chromedriver.storage.googleapis.com"],
 )
+Capybara.automatic_label_click = true
 
 Dir[Rails.root.join("spec/support/**/*.rb")].sort.each { |f| require f }
 
