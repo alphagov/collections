@@ -1,4 +1,6 @@
 module CoronavirusTimelineNationsHelper
+  UK_COUNTRY_LIST = %w[england northern_ireland scotland wales].freeze
+
   def show_timeline_nations?(timeline_list)
     timeline_list.any? { |item| item["national_applicability"] }
   end
@@ -8,14 +10,11 @@ module CoronavirusTimelineNationsHelper
   end
 
   def uk_wide?(national_applicability)
-    uk_country_list = %w[england wales northern_ireland scotland]
-    uk_country_list.sort == national_applicability.uniq.sort
+    UK_COUNTRY_LIST.sort == national_applicability.uniq.sort
   end
 
   def display_country(selected_country = "england")
-    uk_country_list = %w[england wales northern_ireland scotland]
-
-    return "england" unless uk_country_list.include?(selected_country)
+    return "england" unless UK_COUNTRY_LIST.include?(selected_country)
 
     selected_country
   end

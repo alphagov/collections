@@ -75,7 +75,7 @@ private
   end
 
   def timeline_nations_items
-    values = %w[england scotland northern_ireland wales]
+    values = CoronavirusTimelineNationsHelper::UK_COUNTRY_LIST
     selected = values.include?(params[:timeline_nation]) ? params[:timeline_nation] : "england"
 
     items = []

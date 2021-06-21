@@ -21,7 +21,7 @@
     </form>
 
     <div aria-live="polite">
-      <% ["england", "wales", "northern_ireland", "scotland"].each do |nation| %>
+      <% CoronavirusTimelineNationsHelper::UK_COUNTRY_LIST.each do |nation| %>
         <div id="nation-<%= nation %>" class="js-covid-timeline <%= 'covid-timeline__item--hidden' unless display_country(params[:timeline_nation]) == nation %>">
           <h3 class="govuk-heading-m">Changes in <%= nation.titleize %></h3>
           <% timeline_for_nation(timeline["list"], nation).each do | item | %>
