@@ -6,7 +6,12 @@
   } %>
 
   <% if show_timeline_nations?(timeline["list"]) %>
-    <form method="get" class="js-change-location" data-module="gem-track-click">
+    <%= form_tag coronavirus_landing_page_path,
+        method: :get,
+        class: "js-change-location",
+        data: {
+          module: "gem-track-click",
+        } do |f| %>
       <%= render "govuk_publishing_components/components/radio", {
         name: "timeline_nation",
         heading: "Choose location",
@@ -18,7 +23,7 @@
           margin_bottom: 6
         } %>
       </div>
-    </form>
+    <% end %>
 
     <div aria-live="polite">
       <% CoronavirusTimelineNationsHelper::UK_COUNTRY_LIST.each do |nation| %>
