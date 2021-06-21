@@ -21,105 +21,32 @@
     </form>
 
     <div aria-live="polite">
-      <div id="nation-england" class="js-covid-timeline <%= 'covid-timeline__item--hidden' unless !%w[northern-ireland scotland wales].include?(params[:timeline_nation]) %>">
-        <h3 class="govuk-heading-m">Changes in England</h3>
-        <% timeline_for_nation(timeline["list"], "england").each do | item | %>
-        <% text = capture do %>
-          <%= item["heading"] %>
-          <% if uk_wide?(item["national_applicability"]) %>
-            <strong class="govuk-tag govuk-tag--blue">UK Wide</strong>
-          <% else %>
-            <% item["national_applicability"].each do |nation| %>
-              <strong class="govuk-tag govuk-tag--blue"><%= nation.humanize.upcase %></strong>
-            <% end %>
-          <% end %>
-        <% end %>
-          <div class="covid-timeline__item">
-            <%= render "govuk_publishing_components/components/heading", {
-              text: text,
-              heading_level: 3,
-              font_size: "s",
-              margin_bottom: 1,
-            } %>
-            <%= render_govspeak(item["paragraph"]) %>
-          </div>
-        <% end %>
-      </div>
-
-      <div id="nation-northern_ireland" class="js-covid-timeline <%= 'covid-timeline__item--hidden' unless params[:timeline_nation] == "northern-ireland" %>">
-        <h3 class="govuk-heading-m">Changes in Northern Ireland</h3>
-        <% timeline_for_nation(timeline["list"], "northern_ireland").each do | item | %>
-          <% text = capture do %>
-            <%= item["heading"] %>
-            <% if uk_wide?(item["national_applicability"]) %>
-              <strong class="govuk-tag govuk-tag--blue">UK Wide</strong>
-            <% else %>
-              <% item["national_applicability"].each do |nation| %>
-                <strong class="govuk-tag govuk-tag--blue"><%= nation.humanize.upcase %></strong>
+      <% ["england", "wales", "northern_ireland", "scotland"].each do |nation| %>
+        <div id="nation-<%= nation %>" class="js-covid-timeline <%= 'covid-timeline__item--hidden' unless display_country(params[:timeline_nation]) == nation %>">
+          <h3 class="govuk-heading-m">Changes in <%= nation.titleize %></h3>
+          <% timeline_for_nation(timeline["list"], nation).each do | item | %>
+            <% text = capture do %>
+              <%= item["heading"] %>
+              <% if uk_wide?(item["national_applicability"]) %>
+                <strong class="govuk-tag govuk-tag--blue">UK Wide</strong>
+              <% else %>
+                <% item["national_applicability"].each do |nation_tag| %>
+                  <strong class="govuk-tag govuk-tag--blue"><%= nation_tag.titleize %></strong>
+                <% end %>
               <% end %>
             <% end %>
+            <div class="covid-timeline__item">
+              <%= render "govuk_publishing_components/components/heading", {
+                text: text,
+                heading_level: 3,
+                font_size: "s",
+                margin_bottom: 1,
+              } %>
+              <%= render_govspeak(item["paragraph"]) %>
+            </div>
           <% end %>
-          <div class="covid-timeline__item">
-            <%= render "govuk_publishing_components/components/heading", {
-              text: text,
-              heading_level: 3,
-              font_size: "s",
-              margin_bottom: 1,
-            } %>
-            <%= render_govspeak(item["paragraph"]) %>
-          </div>
-        <% end %>
-      </div>
-
-      <div id="nation-scotland" class="js-covid-timeline <%= 'covid-timeline__item--hidden' unless params[:timeline_nation] == "scotland" %>">
-        <h3 class="govuk-heading-m">Changes in Scotland</h3>
-        <% timeline_for_nation(timeline["list"], "scotland").each do | item | %>
-          <% text = capture do %>
-            <%= item["heading"] %>
-            <% if uk_wide?(item["national_applicability"]) %>
-              <strong class="govuk-tag govuk-tag--blue">UK Wide</strong>
-            <% else %>
-              <% item["national_applicability"].each do |nation| %>
-                <strong class="govuk-tag govuk-tag--blue"><%= nation.humanize.upcase %></strong>
-              <% end %>
-            <% end %>
-          <% end %>
-          <div class="covid-timeline__item">
-            <%= render "govuk_publishing_components/components/heading", {
-              text: text,
-              heading_level: 3,
-              font_size: "s",
-              margin_bottom: 1,
-            } %>
-            <%= render_govspeak(item["paragraph"]) %>
-          </div>
-        <% end %>
-      </div>
-
-      <div id="nation-wales" class="js-covid-timeline <%= 'covid-timeline__item--hidden' unless params[:timeline_nation] == "wales" %>">
-        <h3 class="govuk-heading-m">Changes in Wales</h3>
-        <% timeline_for_nation(timeline["list"], "wales").each do | item | %>
-          <% text = capture do %>
-            <%= item["heading"] %>
-            <% if uk_wide?(item["national_applicability"]) %>
-              <strong class="govuk-tag govuk-tag--blue">UK Wide</strong>
-            <% else %>
-              <% item["national_applicability"].each do |nation| %>
-                <strong class="govuk-tag govuk-tag--blue"><%= nation.humanize.upcase %></strong>
-              <% end %>
-            <% end %>
-          <% end %>
-          <div class="covid-timeline__item">
-            <%= render "govuk_publishing_components/components/heading", {
-              text: text,
-              heading_level: 3,
-              font_size: "s",
-              margin_bottom: 1,
-            } %>
-            <%= render_govspeak(item["paragraph"]) %>
-          </div>
-        <% end %>
-      </div>
+        </div>
+      <% end %>
     </div>
 
   <% else %>
