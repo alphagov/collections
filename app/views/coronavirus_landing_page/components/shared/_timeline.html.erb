@@ -5,55 +5,58 @@
     margin_bottom: 2
   } %>
 
-  <form method="get" class="js-change-location" data-module="gem-track-click">
-    <%= render "govuk_publishing_components/components/radio", {
-      name: "timeline_nation",
-      heading: "Choose location",
-      items: @timeline_nations_items
-    } %>
-    <div class="covid-timeline__button-wrapper">
-      <%= render "govuk_publishing_components/components/button", {
-        text: "View",
-        margin_bottom: 6
+  <% if show_timeline_nations?(timeline["list"]) %>
+    <form method="get" class="js-change-location" data-module="gem-track-click">
+      <%= render "govuk_publishing_components/components/radio", {
+        name: "timeline_nation",
+        heading: "Choose location",
+        items: @timeline_nations_items
       } %>
-    </div>
-  </form>
+      <div class="covid-timeline__button-wrapper">
+        <%= render "govuk_publishing_components/components/button", {
+          text: "View",
+          margin_bottom: 6
+        } %>
+      </div>
+    </form>
 
-  <div aria-live="polite">
-    <div id="nation-england" class="js-covid-timeline <%= 'covid-timeline__item--hidden' unless !%w[northern-ireland scotland wales].include?(params[:timeline_nation]) %>">
-      <h3 class="govuk-heading-m">Changes in England</h3>
-      <p class="govuk-body">Demonstration: things about <strong class="govuk-tag govuk-tag--blue">England</strong></p>
+    <div aria-live="polite">
+      <div id="nation-england" class="js-covid-timeline <%= 'covid-timeline__item--hidden' unless !%w[northern-ireland scotland wales].include?(params[:timeline_nation]) %>">
+        <h3 class="govuk-heading-m">Changes in England</h3>
+        <p class="govuk-body">Demonstration: things about <strong class="govuk-tag govuk-tag--blue">England</strong></p>
+      </div>
+
+      <div id="nation-northern_ireland" class="js-covid-timeline <%= 'covid-timeline__item--hidden' unless params[:timeline_nation] == "northern-ireland" %>">
+        <h3 class="govuk-heading-m">Changes in Northern Ireland</h3>
+        <p class="govuk-body">Demonstration: things about <strong class="govuk-tag govuk-tag--blue">Northern Ireland</strong></p>
+      </div>
+
+      <div id="nation-scotland" class="js-covid-timeline <%= 'covid-timeline__item--hidden' unless params[:timeline_nation] == "scotland" %>">
+        <h3 class="govuk-heading-m">Changes in Scotland</h3>
+        <p class="govuk-body">Demonstration: things about <strong class="govuk-tag govuk-tag--blue">Scotland</strong></p>
+      </div>
+
+      <div id="nation-wales" class="js-covid-timeline <%= 'covid-timeline__item--hidden' unless params[:timeline_nation] == "wales" %>">
+        <h3 class="govuk-heading-m">Changes in Wales</h3>
+        <p class="govuk-body">Demonstration: things about <strong class="govuk-tag govuk-tag--blue">Wales</strong></p>
+      </div>
     </div>
 
-    <div id="nation-northern_ireland" class="js-covid-timeline <%= 'covid-timeline__item--hidden' unless params[:timeline_nation] == "northern-ireland" %>">
-      <h3 class="govuk-heading-m">Changes in Northern Ireland</h3>
-      <p class="govuk-body">Demonstration: things about <strong class="govuk-tag govuk-tag--blue">Northern Ireland</strong></p>
-    </div>
+  <% else %>
+    <% if timeline["summary"] %>
+      <%= render_govspeak(timeline["summary"]) %>
+    <% end %>
 
-    <div id="nation-scotland" class="js-covid-timeline <%= 'covid-timeline__item--hidden' unless params[:timeline_nation] == "scotland" %>">
-      <h3 class="govuk-heading-m">Changes in Scotland</h3>
-      <p class="govuk-body">Demonstration: things about <strong class="govuk-tag govuk-tag--blue">Scotland</strong></p>
-    </div>
-
-    <div id="nation-wales" class="js-covid-timeline <%= 'covid-timeline__item--hidden' unless params[:timeline_nation] == "wales" %>">
-      <h3 class="govuk-heading-m">Changes in Wales</h3>
-      <p class="govuk-body">Demonstration: things about <strong class="govuk-tag govuk-tag--blue">Wales</strong></p>
-    </div>
-  </div>
-
-  <% if timeline["summary"] %>
-    <%= render_govspeak(timeline["summary"]) %>
-  <% end %>
-
-  <% timeline["list"].each do | item | %>
-    <div class="covid-timeline__item">
-      <%= render "govuk_publishing_components/components/heading", {
-        text: item["heading"],
-        heading_level: 3,
-        font_size: "s",
-        margin_bottom: 1,
-      } %>
-      <%= render_govspeak(item["paragraph"]) %>
-    </div>
+    <% timeline["list"].each do | item | %>
+      <div class="covid-timeline__item">
+        <%= render "govuk_publishing_components/components/heading", {
+          text: item["heading"],
+          heading_level: 3,
+          font_size: "s",
+          margin_bottom: 1,
+        } %>
+        <%= render_govspeak(item["paragraph"]) %>
+      </div>
+    <% end %>
   <% end %>
 </div>
