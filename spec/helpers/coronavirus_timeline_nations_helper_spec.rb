@@ -49,4 +49,21 @@ RSpec.describe CoronavirusTimelineNationsHelper do
       expect(helper.timeline_for_nation(timeline_list, "wales").first).to match(hash_including("heading" => "England and Wales applicability"))
     end
   end
+
+  describe "#uk_wide?" do
+    it "returns true if the national_applicability applies to all uk nations" do
+      national_applicability = %w[england northern_ireland scotland wales]
+      expect(helper.uk_wide?(national_applicability)).to be true
+    end
+
+    it "returns true if the national_applicability applies to all uk nations regardless of order" do
+      national_applicability = %w[scotland wales england northern_ireland]
+      expect(helper.uk_wide?(national_applicability)).to be true
+    end
+
+    it "returns false if national_applicability does not apply to all countries" do
+      national_applicability = %w[england northern_ireland]
+      expect(helper.uk_wide?(national_applicability)).to be false
+    end
+  end
 end
