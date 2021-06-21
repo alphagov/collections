@@ -80,7 +80,7 @@ private
 
     items = []
     values.each do |value|
-      text = value.gsub("_", " ").titleize
+      text = value.titleize
       items << {
         value: value,
         text: text,
