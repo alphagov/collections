@@ -11,4 +11,12 @@ module CoronavirusTimelineNationsHelper
     uk_country_list = %w[england wales northern_ireland scotland]
     uk_country_list.sort == national_applicability.uniq.sort
   end
+
+  def display_country(selected_country = "england")
+    uk_country_list = %w[england wales northern_ireland scotland]
+
+    return "england" unless uk_country_list.include?(selected_country)
+
+    selected_country
+  end
 end
