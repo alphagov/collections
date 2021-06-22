@@ -24,7 +24,7 @@ $green: #00703c;
 }
 
 .landing-page__take-action-traffic-lights {
-  margin-top: govuk-spacing(6);
+  margin-bottom: govuk-spacing(6);
   text-align: center;
 
   @include govuk-media-query($from: tablet) {
@@ -60,8 +60,9 @@ $green: #00703c;
 }
 
 .landing-page__section {
-  margin-top: govuk-spacing(4);
-  @include govuk-responsive-padding(6, "top");
+  border-top: $govuk-border-width solid govuk-colour('black');
+  margin-bottom: govuk-spacing(6);
+  padding-top: govuk-spacing(6);
 }
 
 .landing-page__section--border-top {

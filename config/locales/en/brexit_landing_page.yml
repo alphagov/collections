@@ -76,6 +76,8 @@ en:
       amber: Change
       green: Go
       red: Check
+    take_action_heading: Check how Brexit affects you
+    take_action_explainer: Use the Brexit checker to get a personalised list of actions for you, your business and your family.
     take_action_start_now: 'Brexit checker: start now'
     take_action_start_now_link: "/transition-check/questions"
     topic_section_header: All Brexit information
