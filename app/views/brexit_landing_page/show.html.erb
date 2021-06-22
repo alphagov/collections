@@ -13,10 +13,6 @@
 <div class="govuk-width-container">
   <%= render partial: 'take_action_section' %>
 
-  <div class="landing-page__buckets">
-    <%= render partial: 'buckets' %>
-  </div>
-
   <% if show_comms %>
     <%= render partial: 'comms', locals: { comms: presented_taxon.comms } %>
   <% end %>

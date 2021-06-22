@@ -1,22 +1,6 @@
 ---
 cy:
   brexit_landing_page:
-    campaign_links:
-      lead_in: 'Mae’n rhaid i chi gymryd camau nawr os ydych chi’n:'
-      lead_out: <a href="/transition-check/questions" class="govuk-link">Cael y rhestr gyflawn</a> o'r hyn y mae angen i chi ei wneud ar eich cyfer chi, eich busnes a'ch teulu.
-      links:
-      - text: mewnforio nwyddau o’r UE
-        path: "/import-goods-into-uk"
-      - text: allforio nwyddau i’r UE
-        path: "/export-goods"
-      - text: symud nwyddau i mewn neu allan o Ogledd Iwerddon
-        path: "/guidance/moving-goods-into-out-of-or-through-northern-ireland-from-1-january-2021"
-      - text: teithio i’r UE
-        path: "/visit-europe-1-january-2021"
-      - text: byw a gweithio yn yr UE
-        path: "/uk-nationals-living-eu"
-      - text: aros yn y DU os ydych chi’n ddinesydd o’r UE
-        path: "/staying-uk-eu-citizen"
     comms:
       links:
       - link:
@@ -56,9 +40,7 @@ cy:
           document_type: Press Release
       read_transcript:
     comms_header: Cyhoeddiadau
-    data_list_title:
-    email_mailto_subject: "Dechrau newydd y DU: Ymlaen â ni- GOV.UK"
-    guidance_header: Newidiadau i fusnesau a dinasyddion
+    email_mailto_subject: Dechrau newydd y DU: Ymlaen â ni- GOV.UK
     meta_description: Darganfyddwch sut mae’r rheolau newydd yn effeithio arnoch chi
     meta_title: Brexit
     page_header: Brexit
