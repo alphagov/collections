@@ -67,7 +67,7 @@ cy:
       or_text: neu
       to_watch_text: i wylio’r fideo
       watch_link_text: Gwylio ar YouTube
-    page_header: Brexit:<br/>mae’r rheolau newydd yma
+    page_header: Brexit
     page_header_explainer: Mae rheolau newydd yn berthnasol ar gyfer theithio a gwneud busnes â Ewrop. Defnyddiwch yr adnodd gwirio Brexit i dderbyn rhestr o gamau personol i chi, eich busnes, a’ch teulu.
     sections:
       aria_string_suffix: ''

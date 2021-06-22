@@ -21,51 +21,44 @@
   <link rel="canonical" href="<%= page_url %>">
 <% end %>
 
-<header class="landing-page__header--with-bg-image">
-  <div class="landing-page__header-text-block">
-    <div class="govuk-width-container">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds landing-page_header-text-container">
-          <div class="govuk-!-margin-top-7">
-            <%= render "govuk_publishing_components/components/heading", {
-              text: sanitize(t("brexit_landing_page.page_header")),
-              heading_level: 1,
-              font_size: "xl",
-              margin_bottom: 4,
-            } %>
+<div class="govuk-width-container">
+  <header class="landing-page__header">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds govuk-!-margin-top-8">
+        <%= render "govuk_publishing_components/components/heading", {
+          text: sanitize(t("brexit_landing_page.page_header")),
+          heading_level: 1,
+          font_size: "xl",
+          margin_bottom: 8,
+        } %>
 
-            <%= render "govuk_publishing_components/components/translation_nav", {
-              translations: presented_taxon.translation_links,
-              no_margin_top: true,
-            } %>
-          </div>
+        <%= render "govuk_publishing_components/components/translation_nav", {
+          translations: presented_taxon.translation_links,
+          no_margin_top: true,
+        } %>
 
-          <div class="landing-page__intro">
-            <%= render "govuk_publishing_components/components/govspeak", {
-            } do %>
-              <%= tag.p t("brexit_landing_page.page_header_explainer") %>
-            <% end %>
-          </div>
+        <%= render "govuk_publishing_components/components/lead_paragraph", {
+          text: t("brexit_landing_page.page_header_explainer")
+        } %>
 
-          <%
-            button_text = t("brexit_landing_page.take_action_start_now")
-            button_href = t("brexit_landing_page.take_action_start_now_link")
-          %>
-          <%= render "govuk_publishing_components/components/button", {
-            text: button_text,
-            href: button_href,
-            start: true,
-            data_attributes: {
-              "module": "gem-track-click",
-              "track-action": button_href,
-              "track-category": "transition-landing-page",
-              "track-label": button_text
-            }
-          } %>
+        <%
+          button_text = t("brexit_landing_page.take_action_start_now")
+          button_href = t("brexit_landing_page.take_action_start_now_link")
+        %>
+        <%= render "govuk_publishing_components/components/button", {
+          text: button_text,
+          href: button_href,
+          start: true,
+          data_attributes: {
+            "module": "gem-track-click",
+            "track-action": button_href,
+            "track-category": "transition-landing-page",
+            "track-label": button_text
+          }
+        } %>
 
-          <%= render partial: 'brexit_landing_page/take-action-traffic-lights' %>
-        </div>
+        <%= render partial: 'brexit_landing_page/take-action-traffic-lights' %>
       </div>
     </div>
-  </div>
-</header>
+  </header>
+</div>

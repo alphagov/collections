@@ -20,7 +20,7 @@ module BrexitLandingPageSteps
   end
 
   def then_i_can_see_the_header_section
-    expect(page).to have_selector(".landing-page__header--with-bg-image h1", text: "Brexit:new rules are here")
+    expect(page).to have_selector(".landing-page__header h1", text: "Brexit")
     expect(page).to have_selector(".gem-c-button", text: "Brexit checker: start now")
   end
 

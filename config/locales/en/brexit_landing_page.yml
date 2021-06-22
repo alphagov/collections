@@ -60,8 +60,8 @@ en:
       or_text: or
       to_watch_text: to watch the video
       watch_link_text: Watch on YouTube
-    page_header: Brexit:<br/>new rules are here
-    page_header_explainer: New rules apply to things like travel and doing business with Europe. Use the Brexit checker to get a personalised list of actions for you, your business and your family.
+    page_header: Brexit
+    page_header_explainer: Find out how new Brexit rules apply to things like travel and doing business with Europe.
     sections:
       aria_string_suffix: related to Brexit
       guidance_and_regulation: Guidance and regulation
