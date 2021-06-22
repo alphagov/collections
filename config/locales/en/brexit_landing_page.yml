@@ -28,5 +28,10 @@ en:
     take_action_explainer: Use the Brexit checker to get a personalised list of actions for you, your business and your family.
     take_action_start_now: 'Brexit checker: start now'
     take_action_start_now_link: "/transition-check/questions"
+    trade_deal_heading: The UK and EU trade deal
+    trade_deal_link:
+      text: "Summary: The UK’s new relationship with the EU"
+      path: "/government/publications/summary-the-uks-new-relationship-with-the-eu"
+    trade_deal_explainer: This summary of the UK-EU trade deal gives an overview of what has changed, and what remains the same after Brexit.
     topic_section_header: All Brexit information
     topic_section_subheading: Browse all information related to Brexit
