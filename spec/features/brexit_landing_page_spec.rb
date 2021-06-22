@@ -9,7 +9,6 @@ RSpec.feature "Brexit landing page" do
       when_i_visit_the_brexit_landing_page
       then_i_can_see_the_title_section
       then_i_can_see_the_header_section
-      then_i_can_see_the_share_links_section
       and_i_can_see_the_explore_topics_section
       and_there_is_metadata
     end

@@ -1,7 +1,6 @@
 ---
 en:
   brexit_landing_page:
-    email_mailto_subject: UK's new start: let's get going- GOV.UK
     meta_description: Find out how new Brexit rules apply to things like travel and doing business with Europe. Use the Brexit checker to get a personalised list of actions.
     meta_title: Brexit
     page_header: Brexit
@@ -21,7 +20,6 @@ en:
       research_and_statistics: Research and statistics
       services: Services
       transparency: Transparency and freedom of information releases
-    share_links: Share this page
     take_action_list:
       amber: Change
       green: Go

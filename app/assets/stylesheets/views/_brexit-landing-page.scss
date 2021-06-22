@@ -55,10 +55,6 @@ $green: #00703c;
   vertical-align: middle;
 }
 
-.landing-page__share {
-  @include govuk-responsive-margin(8, "top");
-}
-
 .landing-page__section {
   border-top: $govuk-border-width solid govuk-colour('black');
   margin-bottom: govuk-spacing(6);

@@ -20,40 +20,4 @@
       email_path: presented_taxon.email_path,
     }
   ) %>
-
-  <div class="landing-page__section landing-page__section--border-top">
-    <div class="landing-page__share">
-      <%= render "govuk_publishing_components/components/share_links", {
-        title: t("brexit_landing_page.share_links"),
-        columns: true,
-        links: [
-          {
-            href: "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.gov.uk#{CGI.escape(request.fullpath)}",
-            text: "Facebook",
-            icon: "facebook"
-          },
-          {
-            href: "https://twitter.com/share?url=https%3A%2F%2Fwww.gov.uk#{CGI.escape(request.fullpath)}",
-            text: "Twitter",
-            icon: "twitter"
-          },
-          {
-            href: "mailto:?body=https://www.gov.uk#{CGI.escape(request.fullpath)}/&subject=#{CGI.escape(t('brexit_landing_page.email_mailto_subject'))}",
-            text: "Email",
-            icon: "email"
-          },
-          {
-            href: "https://api.whatsapp.com/send?text=https://www.gov.uk#{CGI.escape(request.fullpath)}",
-            text: "WhatsApp",
-            icon: "whatsapp"
-          },
-          {
-            href: "http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.gov.uk#{CGI.escape(request.fullpath)}&title=#{CGI.escape(t('brexit_landing_page.email_mailto_subject'))}",
-            text: "LinkedIn",
-            icon: "linkedin"
-          },
-        ]
-      } %>
-    </div>
-  </div>
 </div>

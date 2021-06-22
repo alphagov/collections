@@ -1,7 +1,6 @@
 ---
 cy:
   brexit_landing_page:
-    email_mailto_subject: Dechrau newydd y DU: Ymlaen â ni- GOV.UK
     meta_description: Darganfyddwch sut mae’r rheolau newydd yn effeithio arnoch chi
     meta_title: Brexit
     page_header: Brexit
@@ -14,7 +13,6 @@ cy:
       research_and_statistics: Ymchwil ag ystadegau
       services: Gwasanaethau
       transparency: Tryloywder a datganiadau rhyddid gwybodaeth
-    share_links: Rhannu’r dudalen hon
     take_action_list:
       amber: Newidiwch
       green: Ewch

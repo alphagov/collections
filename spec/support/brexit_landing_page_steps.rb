@@ -28,10 +28,6 @@ module BrexitLandingPageSteps
     expect(page).not_to have_selector(".gem-c-chevron-banner__link", text: "Check what you need to do if there is no deal")
   end
 
-  def then_i_can_see_the_share_links_section
-    expect(page).to have_selector(".landing-page__share .gem-c-share-links")
-  end
-
   def and_i_can_see_the_explore_topics_section
     expect(page).to have_selector("h2", text: "All Brexit information")
 
