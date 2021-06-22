@@ -41,6 +41,22 @@
           text: t("brexit_landing_page.page_header_explainer")
         } %>
 
+        <%= render "govuk_publishing_components/components/action_link", {
+          text: t("brexit_landing_page.page_header_links.guidance_for_businesses.text"),
+          href: t("brexit_landing_page.page_header_links.guidance_for_businesses.path"),
+          dark_icon: true,
+          margin_bottom: 4,
+          font_size: "m",
+        } %>
+
+        <%= render "govuk_publishing_components/components/action_link", {
+          text: t("brexit_landing_page.page_header_links.guidance_for_individuals_and_families.text"),
+          href: t("brexit_landing_page.page_header_links.guidance_for_individuals_and_families.path"),
+          dark_icon: true,
+          margin_bottom: 4,
+          font_size: "m",
+        } %>
+
         <%
           button_text = t("brexit_landing_page.take_action_start_now")
           button_href = t("brexit_landing_page.take_action_start_now_link")

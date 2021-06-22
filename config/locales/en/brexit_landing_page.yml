@@ -62,6 +62,13 @@ en:
       watch_link_text: Watch on YouTube
     page_header: Brexit
     page_header_explainer: Find out how new Brexit rules apply to things like travel and doing business with Europe.
+    page_header_links:
+      guidance_for_businesses:
+        text: Guidance for businesses
+        path: "/guidance/brexit-guidance-for-businesses"
+      guidance_for_individuals_and_families:
+        text: "Guidance for individuals and families"
+        path: "/guidance/brexit-guidance-for-individuals-and-families"
     sections:
       aria_string_suffix: related to Brexit
       guidance_and_regulation: Guidance and regulation

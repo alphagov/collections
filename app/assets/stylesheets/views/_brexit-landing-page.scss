@@ -13,6 +13,14 @@ $green: #00703c;
   .gem-c-translation-nav {
     width: 35%;
   }
+
+  .gem-c-action-link__link {
+    margin-bottom: 0;
+
+    @include govuk-media-query($from: tablet) {
+      margin-bottom: govuk-spacing(2);
+    }
+  }
 }
 
 .landing-page__take-action-traffic-lights {
