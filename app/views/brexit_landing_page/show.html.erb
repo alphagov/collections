@@ -1,16 +1,14 @@
 <% content_for :page_class, "taxon-page taxon-page--grid" %>
 <% content_for :meta_tags %>
 
-<%=
-  render(
-      partial: 'page_header',
-      locals: {
-        presented_taxon: presented_taxon
-      }
-  )
-%>
-
 <div class="govuk-width-container">
+  <%= render(
+    partial: 'page_header',
+    locals: {
+      presented_taxon: presented_taxon
+    }
+  ) %>
+
   <%= render partial: 'take_action_section' %>
 
   <%= render partial: 'trade_deal_section' %>

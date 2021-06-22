@@ -21,42 +21,40 @@
   <link rel="canonical" href="<%= page_url %>">
 <% end %>
 
-<div class="govuk-width-container">
-  <header class="landing-page__header">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds govuk-!-margin-top-8">
-        <%= render "govuk_publishing_components/components/heading", {
-          text: sanitize(t("brexit_landing_page.page_header")),
-          heading_level: 1,
-          font_size: "xl",
-          margin_bottom: 8,
-        } %>
+<header class="landing-page__header">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-!-margin-top-8">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: sanitize(t("brexit_landing_page.page_header")),
+        heading_level: 1,
+        font_size: "xl",
+        margin_bottom: 8,
+      } %>
 
-        <%= render "govuk_publishing_components/components/translation_nav", {
-          translations: presented_taxon.translation_links,
-          no_margin_top: true,
-        } %>
+      <%= render "govuk_publishing_components/components/translation_nav", {
+        translations: presented_taxon.translation_links,
+        no_margin_top: true,
+      } %>
 
-        <%= render "govuk_publishing_components/components/lead_paragraph", {
-          text: t("brexit_landing_page.page_header_explainer")
-        } %>
+      <%= render "govuk_publishing_components/components/lead_paragraph", {
+        text: t("brexit_landing_page.page_header_explainer")
+      } %>
 
-        <%= render "govuk_publishing_components/components/action_link", {
-          text: t("brexit_landing_page.page_header_links.guidance_for_businesses.text"),
-          href: t("brexit_landing_page.page_header_links.guidance_for_businesses.path"),
-          dark_icon: true,
-          margin_bottom: 4,
-          font_size: "m",
-        } %>
+      <%= render "govuk_publishing_components/components/action_link", {
+        text: t("brexit_landing_page.page_header_links.guidance_for_businesses.text"),
+        href: t("brexit_landing_page.page_header_links.guidance_for_businesses.path"),
+        dark_icon: true,
+        margin_bottom: 4,
+        font_size: "m",
+      } %>
 
-        <%= render "govuk_publishing_components/components/action_link", {
-          text: t("brexit_landing_page.page_header_links.guidance_for_individuals_and_families.text"),
-          href: t("brexit_landing_page.page_header_links.guidance_for_individuals_and_families.path"),
-          dark_icon: true,
-          margin_bottom: 4,
-          font_size: "m",
-        } %>
-      </div>
+      <%= render "govuk_publishing_components/components/action_link", {
+        text: t("brexit_landing_page.page_header_links.guidance_for_individuals_and_families.text"),
+        href: t("brexit_landing_page.page_header_links.guidance_for_individuals_and_families.path"),
+        dark_icon: true,
+        margin_bottom: 4,
+        font_size: "m",
+      } %>
     </div>
-  </header>
-</div>
+  </div>
+</header>
