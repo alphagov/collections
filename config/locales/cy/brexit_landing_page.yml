@@ -61,12 +61,6 @@ cy:
     guidance_header: Newidiadau i fusnesau a dinasyddion
     meta_description: Darganfyddwch sut mae’r rheolau newydd yn effeithio arnoch chi
     meta_title: Brexit
-    no_cookies:
-      change_settings_text: Newidiwch eich gosodiadau cwcis
-      icon_text: FIDEO
-      or_text: neu
-      to_watch_text: i wylio’r fideo
-      watch_link_text: Gwylio ar YouTube
     page_header: Brexit
     page_header_explainer: Mae rheolau newydd yn berthnasol ar gyfer theithio a gwneud busnes â Ewrop. Defnyddiwch yr adnodd gwirio Brexit i dderbyn rhestr o gamau personol i chi, eich busnes, a’ch teulu.
     sections:
@@ -86,13 +80,3 @@ cy:
     take_action_start_now_link: "/transition-check/questions"
     topic_section_header: Yr holl wybodaeth am y cyfnod pontio
     topic_section_subheading: Pori’r holl wybodaeth sy’n berthnasol i’r cyfnod pontio
-    video_section_description: |
-      <p>Mae gwneud busnes â Ewrop wedi newid. Mae angen i chi dilyn rheolau newydd ar allforio, mewnforio, tariffau, data a chyflogi.</p>
-      <p>Gwyliwch y fideo i ddarganfod beth mae’r rheolau newydd yn ei olygu i’ch busnes. Gallwch hefyd defnyddio’r <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="adnodd gwirio Brexit">adnodd gwirio Brexit</a> i dderbyn rhestr o gamau personol.</p>
-    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
-    video_section_title: Cadwch eich busnes i symud
-    video_section_transcription_summary: Gwelwch y trawsgrifiad fideo
-    video_section_transcription_text: |
-      <p>Busnesau, mae’r DU wedi gadael yr UE ac mae rheolau newydd mewn grym.</p>
-      <p>I gadw eich busnes i symud, defnyddiwch yr adnodd gwirio Brexit ar gov.uk/transition i dderbyn camau personol ar gyfer eich busnes.<p>
-      <p>Cadwch eich busnes i symud.</p>

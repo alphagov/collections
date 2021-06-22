@@ -68,39 +68,6 @@ $green: #00703c;
   border-top: govuk-spacing(2) solid $dark-blue;
 }
 
-.landing-page__section--border-bottom-red {
-  border-bottom: govuk-spacing(2) solid $red;
-}
-
-.landing-page__section--blue {
-  @include govuk-responsive-padding(8, "top");
-  @include govuk-responsive-padding(8, "bottom");
-  background-color: $dark-blue;
-  margin-top: 0;
-
-  h2,
-  p {
-    color: govuk-colour("white");
-  }
-
-  a {
-    color: govuk-colour("white");
-
-    &:link,
-    &:visited {
-      color: govuk-colour("white");
-    }
-
-    &:hover {
-      color: $gem-hover-dark-background;
-    }
-
-    &:focus {
-      color: $govuk-focus-text-colour;
-    }
-  }
-}
-
 .landing-page__section--light-grey {
   @include govuk-responsive-padding(8, "top");
   @include govuk-responsive-padding(8, "bottom");
