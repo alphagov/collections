@@ -65,10 +65,6 @@ $green: #00703c;
   padding-top: govuk-spacing(6);
 }
 
-.landing-page__section--border-top {
-  border-top: govuk-spacing(2) solid $dark-blue;
-}
-
 .landing-page__section--light-grey {
   @include govuk-responsive-padding(8, "top");
   @include govuk-responsive-padding(8, "bottom");
@@ -117,11 +113,4 @@ $green: #00703c;
 
 .landing-page__finders {
   margin-bottom: 0;
-}
-
-.landing-page__comms-video {
-  @include govuk-media-query($from: "tablet") {
-    position: relative;
-    top: -15px;
-  }
 }

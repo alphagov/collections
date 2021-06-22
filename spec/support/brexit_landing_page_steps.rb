@@ -32,10 +32,6 @@ module BrexitLandingPageSteps
     expect(page).to have_selector(".landing-page__share .gem-c-share-links")
   end
 
-  def then_i_can_see_the_buckets_section
-    expect(page).to have_selector("h2.govuk-heading-l", text: "Changes for businesses and citizens")
-  end
-
   def and_i_can_see_the_explore_topics_section
     expect(page).to have_selector("h2.govuk-heading-m", text: "All Brexit information")
 
@@ -54,13 +50,6 @@ module BrexitLandingPageSteps
         href: "/search/services?parent=#{CGI.escape(BREXIT_TAXON_PATH)}&topic=#{BREXIT_TAXON_CONTENT_ID}",
       )
     end
-  end
-
-  def and_ecommerce_tracking_is_setup
-    expect(page).to have_selector(".landing-page__section[data-analytics-ecommerce]")
-    expect(page).to have_selector(".landing-page__section[data-ecommerce-start-index='1']")
-    expect(page).to have_selector(".landing-page__section[data-list-title]")
-    expect(page).to have_selector(".landing-page__section[data-search-query]")
   end
 
   def then_all_finder_links_have_tracking_data

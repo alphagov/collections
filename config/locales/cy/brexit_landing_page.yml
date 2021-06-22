@@ -1,45 +1,6 @@
 ---
 cy:
   brexit_landing_page:
-    comms:
-      links:
-      - link:
-          text: "Summary: The UK’s new relationship with the EU"
-          path: "/government/publications/summary-the-uks-new-relationship-with-the-eu"
-          description: This explainer gives an overview of what has changed, and what remains the same. For businesses and citizens across the UK, there are actions you may need to take.
-        metadata:
-          public_updated_at: 2021-06-08
-          document_type: Policy paper
-      - link:
-          text: Agreements reached between the United Kingdom of Great Britain and Northern Ireland and the European Union
-          path: "/government/publications/agreements-reached-between-the-united-kingdom-of-great-britain-and-northern-ireland-and-the-european-union"
-          description: This document summarises the Agreements between the United Kingdom and the European Union.
-        metadata:
-          public_updated_at: 2020-12-24
-          document_type: International treaty
-      - link:
-          text: Government publishes updated GB-EU Border Operating Model
-          path: "/government/news/government-publishes-updated-gb-eu-border-operating-model"
-          description: The government has published further detail on how the borders between Great Britain and the EU will work and the actions that traders, hauliers and passengers need to take.
-        metadata:
-          public_updated_at: 2020-10-08
-          document_type: News Story
-      - link:
-          text: "£650 million investment for Northern Ireland"
-          path: "/government/news/major-650-million-investment-for-northern-ireland"
-          description: The Chancellor of the Duchy of Lancaster and the Secretary of State for Northern Ireland have announced a £650m package of investment.
-        metadata:
-          public_updated_at: 2020-08-07
-          document_type: News story
-      - link:
-          text: Major new campaign to prepare UK for end of the transition period
-          path: "/government/news/major-new-campaign-to-prepare-uk-for-end-of-the-transition-period"
-          description: The government has launched a new campaign to help businesses and individuals prepare for the end of the transition period.
-        metadata:
-          public_updated_at: 2020-07-13
-          document_type: Press Release
-      read_transcript:
-    comms_header: Cyhoeddiadau
     email_mailto_subject: Dechrau newydd y DU: Ymlaen â ni- GOV.UK
     meta_description: Darganfyddwch sut mae’r rheolau newydd yn effeithio arnoch chi
     meta_title: Brexit

@@ -13,10 +13,6 @@
 <div class="govuk-width-container">
   <%= render partial: 'take_action_section' %>
 
-  <% if show_comms %>
-    <%= render partial: 'comms', locals: { comms: presented_taxon.comms } %>
-  <% end %>
-
   <div class="landing-page__section landing-page__section--border-top">
     <%= render partial: 'brexit_finders', locals: { supergroups: presented_taxon.supergroup_sections, email_path: presented_taxon.email_path } %>
 
