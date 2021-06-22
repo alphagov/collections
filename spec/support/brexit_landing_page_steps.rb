@@ -33,7 +33,7 @@ module BrexitLandingPageSteps
   end
 
   def and_i_can_see_the_explore_topics_section
-    expect(page).to have_selector("h2.govuk-heading-m", text: "All Brexit information")
+    expect(page).to have_selector("h2", text: "All Brexit information")
 
     supergroups = [
       "Services": "services",

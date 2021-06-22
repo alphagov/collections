@@ -13,9 +13,15 @@
 <div class="govuk-width-container">
   <%= render partial: 'take_action_section' %>
 
-  <div class="landing-page__section landing-page__section--border-top">
-    <%= render partial: 'brexit_finders', locals: { supergroups: presented_taxon.supergroup_sections, email_path: presented_taxon.email_path } %>
+  <%= render(
+    partial: 'brexit_finders_section',
+    locals: {
+      supergroups: presented_taxon.supergroup_sections,
+      email_path: presented_taxon.email_path,
+    }
+  ) %>
 
+  <div class="landing-page__section landing-page__section--border-top">
     <div class="landing-page__share">
       <%= render "govuk_publishing_components/components/share_links", {
         title: t("brexit_landing_page.share_links"),
