@@ -67,6 +67,22 @@ RSpec.describe CoronavirusTimelineNationsHelper do
     end
   end
 
+  describe "#timeline_nation_tags" do
+    it "returns UK Wide if the national_applicability applies to all uk nations" do
+      national_applicability = %w[england northern_ireland scotland wales]
+      expect(helper.timeline_nation_tags(national_applicability)).to include("UK Wide")
+    end
+
+    it "only includes national_applicability countries" do
+      national_applicability = %w[england wales]
+      expect(helper.timeline_nation_tags(national_applicability)).to include("England")
+      expect(helper.timeline_nation_tags(national_applicability)).to include("Wales")
+      expect(helper.timeline_nation_tags(national_applicability)).to_not include("Scotland")
+      expect(helper.timeline_nation_tags(national_applicability)).to_not include("Northern Ireland")
+      expect(helper.timeline_nation_tags(national_applicability)).to_not include("UK Wide")
+    end
+  end
+
   describe "#display_country" do
     it "should return england by default" do
       expect(helper.display_country).to eq("england")

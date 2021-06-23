@@ -35,13 +35,7 @@
           <% timeline_for_nation(timeline["list"], nation).each do | item | %>
             <% text = capture do %>
               <%= item["heading"] %>
-              <% if uk_wide?(item["national_applicability"]) %>
-                <strong class="govuk-tag govuk-tag--blue">UK Wide</strong>
-              <% else %>
-                <% item["national_applicability"].each do |nation_tag| %>
-                  <strong class="govuk-tag govuk-tag--blue"><%= nation_tag.titleize %></strong>
-                <% end %>
-              <% end %>
+              <%= timeline_nation_tags(item["national_applicability"]).html_safe %>
             <% end %>
             <div class="covid-timeline__item">
               <%= render "govuk_publishing_components/components/heading", {
