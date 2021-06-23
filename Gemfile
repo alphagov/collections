@@ -41,6 +41,7 @@ group :development, :test do
   gem "pact", require: false
   gem "pact_broker-client"
   gem "pry-byebug"
+  gem "rails_translation_manager"
   gem "rspec-rails"
   gem "rubocop-govuk"
   gem "timecop"
