@@ -27,11 +27,51 @@ RSpec.describe CoronavirusLandingPageController do
     end
 
     context "when testing national_applicability" do
-      it "loads the production content item in production environments" do
+      render_views
+
+      before do
         allow(Rails.env).to receive(:production?).and_return(true)
+      end
+
+      it "loads the production content item in production environments" do
         expect(CoronavirusTimelineNationsContentItem).to_not receive(:load)
 
         get :show, params: { timeline_nation: "foo" }
+      end
+
+      it "shows no content text when there are no timeline entries for a nation" do
+        stub_content_store_has_item("/coronavirus", coronavirus_content_item_with_timeline_national_applicability_without_wales)
+        get :show, params: { timeline_nation: "wales" }
+
+        expect(response.body).to have_content("There haven't been any recent updates for Wales.")
+      end
+
+      it "shows timeline for England" do
+        stub_content_store_has_item("/coronavirus", coronavirus_content_item_with_timeline_national_applicability)
+        get :show, params: { timeline_nation: "england" }
+
+        expect(response.body).to have_content("In England")
+      end
+
+      it "shows timeline for Northern Ireland" do
+        stub_content_store_has_item("/coronavirus", coronavirus_content_item_with_timeline_national_applicability)
+        get :show, params: { timeline_nation: "northern_ireland" }
+
+        expect(response.body).to have_content("In Northern Ireland")
+      end
+
+      it "shows timeline for Scotland" do
+        stub_content_store_has_item("/coronavirus", coronavirus_content_item_with_timeline_national_applicability)
+        get :show, params: { timeline_nation: "scotland" }
+
+        expect(response.body).to have_content("In Scotland")
+      end
+
+      it "shows timeline for Wales" do
+        stub_content_store_has_item("/coronavirus", coronavirus_content_item_with_timeline_national_applicability)
+        get :show, params: { timeline_nation: "wales" }
+
+        expect(response.body).to have_content("In Wales")
       end
     end
   end

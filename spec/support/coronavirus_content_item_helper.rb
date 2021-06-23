@@ -49,6 +49,10 @@ module CoronavirusContentItemHelper
     load_content_item("coronavirus_landing_page_with_timeline_nations.json")
   end
 
+  def coronavirus_content_item_with_timeline_national_applicability_without_wales
+    load_content_item("coronavirus_landing_page_with_timeline_nations_without_wales.json")
+  end
+
   def business_content_item
     random_landing_page do |item|
       item.merge(business_content_item_fixture)
