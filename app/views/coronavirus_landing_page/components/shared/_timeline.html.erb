@@ -15,7 +15,7 @@
       <%= render "govuk_publishing_components/components/radio", {
         name: "timeline_nation",
         heading: "Choose location",
-        items: @timeline_nations_items
+        items: timeline_nations_items(@selected_country)
       } %>
       <div class="covid-timeline__button-wrapper">
         <%= render "govuk_publishing_components/components/button", {
@@ -27,7 +27,7 @@
 
     <div aria-live="polite">
       <% CoronavirusTimelineNationsHelper::UK_COUNTRY_LIST.each do |nation| %>
-        <div id="nation-<%= nation %>" class="js-covid-timeline <%= 'covid-timeline__item--hidden' unless display_country(params[:timeline_nation]) == nation %>">
+        <div id="nation-<%= nation %>" class="js-covid-timeline <%= 'covid-timeline__item--hidden' unless display_country(@selected_country) == nation %>">
           <h3 class="govuk-heading-m">Changes in <%= nation.titleize %></h3>
           <% if timeline_for_nation(timeline["list"], nation).empty? %>
             <p class="govuk-body">There haven't been any recent updates for <%= nation.titleize %>.</p>

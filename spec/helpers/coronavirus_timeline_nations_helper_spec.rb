@@ -80,4 +80,113 @@ RSpec.describe CoronavirusTimelineNationsHelper do
       expect(helper.display_country("wales")).to eq("wales")
     end
   end
+
+  describe "#timeline_nations_items" do
+    let(:expected) do
+      [
+        {
+          checked: true,
+          data_attributes:
+            {
+              track_action: "TimelineNation",
+              track_category: "pageElementInteraction",
+              track_label: "England",
+            },
+          text: "England",
+          value: "england",
+        },
+        {
+          checked: false,
+          data_attributes:
+            {
+              track_action: "TimelineNation",
+              track_category: "pageElementInteraction",
+              track_label: "Northern Ireland",
+            },
+          text: "Northern Ireland",
+          value: "northern_ireland",
+        },
+        {
+          checked: false,
+          data_attributes:
+            {
+              track_action: "TimelineNation",
+              track_category: "pageElementInteraction",
+              track_label: "Scotland",
+            },
+          text: "Scotland",
+          value: "scotland",
+        },
+        {
+          checked: false,
+          data_attributes:
+            {
+              track_action: "TimelineNation",
+              track_category: "pageElementInteraction",
+              track_label: "Wales",
+            },
+          text: "Wales",
+          value: "wales",
+        },
+      ]
+    end
+
+    it "sets england to selected by default" do
+      expect(helper.timeline_nations_items).to eq(expected)
+    end
+
+    it "sets england to selected if selected country is not in the uk" do
+      expect(helper.timeline_nations_items("foo")).to eq(expected)
+    end
+
+    it "sets selected county to selected if selected country is in the uk" do
+      expected = [
+        {
+          checked: false,
+          data_attributes:
+            {
+              track_action: "TimelineNation",
+              track_category: "pageElementInteraction",
+              track_label: "England",
+            },
+          text: "England",
+          value: "england",
+        },
+        {
+          checked: false,
+          data_attributes:
+            {
+              track_action: "TimelineNation",
+              track_category: "pageElementInteraction",
+              track_label: "Northern Ireland",
+            },
+          text: "Northern Ireland",
+          value: "northern_ireland",
+        },
+        {
+          checked: false,
+          data_attributes:
+            {
+              track_action: "TimelineNation",
+              track_category: "pageElementInteraction",
+              track_label: "Scotland",
+            },
+          text: "Scotland",
+          value: "scotland",
+        },
+        {
+          checked: true,
+          data_attributes:
+            {
+              track_action: "TimelineNation",
+              track_category: "pageElementInteraction",
+              track_label: "Wales",
+            },
+          text: "Wales",
+          value: "wales",
+        },
+      ]
+      expect(helper.timeline_nations_items("wales")).to eq(expected)
+    end
+  end
 end

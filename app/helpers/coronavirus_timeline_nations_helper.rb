@@ -18,4 +18,21 @@ module CoronavirusTimelineNationsHelper
 
     selected_country
   end
+
+  def timeline_nations_items(selected_country = nil)
+    selected_country = "england" unless UK_COUNTRY_LIST.include?(selected_country)
+
+    UK_COUNTRY_LIST.map do |value|
+      {
+        value: value,
+        text: value.titleize,
+        checked: selected_country == value,
+        data_attributes: {
+          track_category: "pageElementInteraction",
+          track_action: "TimelineNation",
+          track_label: value.titleize,
+        },
+      }
+    end
+  end
 end
