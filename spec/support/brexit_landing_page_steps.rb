@@ -57,8 +57,8 @@ module BrexitLandingPageSteps
       "Policy papers and consultations",
       "Transparency and freedom of information releases",
     ].each do |section|
-      expect(page).to have_selector("a[data-track-category='SeeAllLinkClicked']", text: section)
-      expect(page).to have_selector("a[data-track-action=\"#{BREXIT_TAXON_PATH}\"]", text: section)
+      expect(page).to have_selector("a[data-track-category='brexit-landing-page']", text: section)
+      expect(page).to have_selector("a[data-track-action=\"#{section}\"]", text: section)
     end
   end
 

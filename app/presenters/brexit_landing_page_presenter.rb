@@ -25,7 +25,12 @@ class BrexitLandingPagePresenter
       {
         text: supergroup_title,
         path: section[:see_more_link][:url],
-        data_attributes: section[:see_more_link][:data],
+        data_attributes: {
+          track_category: "brexit-landing-page",
+          track_action: supergroup_title,
+          track_label: "All Brexit information",
+          module: "gem-track-click",
+        },
         aria_label: "#{supergroup_title} #{I18n.t('brexit_landing_page.sections.aria_string_suffix')}",
       }
     end
