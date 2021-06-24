@@ -12,7 +12,13 @@
         text: link_to(
                 t("brexit_landing_page.trade_deal_link.text"),
                 t("brexit_landing_page.trade_deal_link.path"),
-                class: "govuk-link"
+                class: "govuk-link",
+                data: {
+                  "module": "gem-track-click",
+                  "track-category": "brexit-landing-page",
+                  "track-action": t("brexit_landing_page.trade_deal_link.path"),
+                  "track-label": t("brexit_landing_page.trade_deal_link.text")
+                }
               )
       } %>
 
