@@ -21,7 +21,7 @@
     </div>
 
     <div class="govuk-grid-column-two-thirds">
-      <%= render partial: 'coronavirus_landing_page/components/shared/timeline', locals: { timeline: details.timeline } %>
+      <%= render partial: 'coronavirus_landing_page/components/shared/timeline', locals: { details: details } %>
       <%= render partial: 'coronavirus_landing_page/components/shared/accordion_sections', locals: {
         accordions: details.sections,
         heading: details.sections_heading,

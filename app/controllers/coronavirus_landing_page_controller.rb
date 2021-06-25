@@ -76,7 +76,7 @@ private
   end
 
   def selected_country
-    if CoronavirusTimelineNationsHelper::UK_COUNTRY_LIST.include?(params[:timeline_nation])
+    if CoronavirusLandingPagePresenter::UK_COUNTRY_LIST.include?(params[:timeline_nation])
       params[:timeline_nation]
     else
       "england"

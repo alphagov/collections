@@ -1,11 +1,11 @@
 <div class="covid-timeline" data-module="track-links" data-track-category="pageElementInteraction" data-track-action="Timeline">
   <%= render "govuk_publishing_components/components/heading", {
-    text: timeline["heading"],
+    text: details.timeline["heading"],
     padding: true,
     margin_bottom: 2
   } %>
 
-  <% if show_timeline_nations?(timeline["list"]) %>
+  <% if details.show_timeline_nations? %>
     <%= form_tag coronavirus_landing_page_path,
         method: :get,
         class: "js-change-location",
@@ -15,7 +15,7 @@
       <%= render "govuk_publishing_components/components/radio", {
         name: "timeline_nation",
         heading: "Choose location",
-        items: timeline_nations_items(@selected_country)
+        items: details.timeline_nations_items(@selected_country)
       } %>
       <div class="covid-timeline__button-wrapper">
         <%= render "govuk_publishing_components/components/button", {
@@ -26,16 +26,16 @@
     <% end %>
 
     <div aria-live="polite">
-      <% CoronavirusTimelineNationsHelper::UK_COUNTRY_LIST.each do |nation| %>
+      <% CoronavirusLandingPagePresenter::UK_COUNTRY_LIST.each do |nation| %>
         <div id="nation-<%= nation %>" class="js-covid-timeline <%= 'covid-timeline__item--hidden' unless @selected_country == nation %>">
           <h3 class="govuk-heading-m">Changes in <%= nation.titleize %></h3>
-          <% if timeline_for_nation(timeline["list"], nation).empty? %>
+          <% if details.timeline_for_nation(nation).empty? %>
             <p class="govuk-body">There haven't been any recent updates for <%= nation.titleize %>.</p>
           <% end %>
-          <% timeline_for_nation(timeline["list"], nation).each do | item | %>
+          <% details.timeline_for_nation(nation).each do | item | %>
             <% text = capture do %>
               <%= item["heading"] %>
-              <%= timeline_nation_tags(item["national_applicability"]).html_safe %>
+              <%= item["tags"].html_safe %>
             <% end %>
             <div class="covid-timeline__item">
               <%= render "govuk_publishing_components/components/heading", {
@@ -52,11 +52,11 @@
     </div>
 
   <% else %>
-    <% if timeline["summary"] %>
-      <%= render_govspeak(timeline["summary"]) %>
+    <% if details.timeline["summary"] %>
+      <%= render_govspeak(details.timeline["summary"]) %>
     <% end %>
 
-    <% timeline["list"].each do | item | %>
+    <% details.timeline["list"].each do | item | %>
       <div class="covid-timeline__item">
         <%= render "govuk_publishing_components/components/heading", {
           text: item["heading"],
