@@ -48,6 +48,23 @@ class CoronavirusLandingPagePresenter
     end
   end
 
+  def timeline_nations_items(selected_country = nil)
+    selected_country = "england" unless UK_COUNTRY_LIST.include?(selected_country)
+
+    UK_COUNTRY_LIST.map do |value|
+      {
+        value: value,
+        text: value.titleize,
+        checked: selected_country == value,
+        data_attributes: {
+          track_category: "pageElementInteraction",
+          track_action: "TimelineNation",
+          track_label: value.titleize,
+        },
+      }
+    end
+  end
+
 private
 
   def build_faq_main_entity(content_item)
