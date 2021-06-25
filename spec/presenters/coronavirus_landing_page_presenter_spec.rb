@@ -190,13 +190,13 @@ RSpec.describe CoronavirusLandingPagePresenter do
     end
 
     it "sets england to selected if selected country is not in the uk" do
-      presenter = described_class.new(coronavirus_content_item_with_timeline_national_applicability)
+      presenter = described_class.new(coronavirus_content_item_with_timeline_national_applicability, "foo")
 
-      expect(presenter.timeline_nations_items("foo")).to eq(expected)
+      expect(presenter.timeline_nations_items).to eq(expected)
     end
 
     it "sets selected county to selected if selected country is in the uk" do
-      presenter = described_class.new(coronavirus_content_item_with_timeline_national_applicability)
+      presenter = described_class.new(coronavirus_content_item_with_timeline_national_applicability, "wales")
 
       expected = [
         {
@@ -244,7 +244,7 @@ RSpec.describe CoronavirusLandingPagePresenter do
           value: "wales",
         },
       ]
-      expect(presenter.timeline_nations_items("wales")).to eq(expected)
+      expect(presenter.timeline_nations_items).to eq(expected)
     end
   end
 end

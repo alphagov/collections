@@ -64,7 +64,7 @@ private
   end
 
   def presenter
-    @presenter ||= CoronavirusLandingPagePresenter.new(@content_item)
+    @presenter ||= CoronavirusLandingPagePresenter.new(@content_item, @selected_country)
   end
 
   def special_announcement
