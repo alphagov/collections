@@ -58,6 +58,10 @@ class CoronavirusLandingPagePresenter
     end
   end
 
+  def timeline_for_nation(nation)
+    timeline["list"].select { |item| item["national_applicability"].include?(nation) }
+  end
+
 private
 
   def build_faq_main_entity(content_item)
