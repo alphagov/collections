@@ -175,4 +175,24 @@ RSpec.describe CoronavirusLandingPagePresenter do
       expect(presenter.timeline_for_nation("wales").last).to match(hash_including("heading" => "In England and Wales"))
     end
   end
+
+  describe "#timeline_nation_tags" do
+    it "returns UK Wide if the national_applicability applies to all uk nations" do
+      presenter = described_class.new(coronavirus_content_item_with_timeline_national_applicability)
+      national_applicability = %w[england northern_ireland scotland wales]
+
+      expect(presenter.timeline_nation_tags(national_applicability)).to include("UK Wide")
+    end
+
+    it "only includes national_applicability countries" do
+      presenter = described_class.new(coronavirus_content_item_with_timeline_national_applicability)
+      national_applicability = %w[england wales]
+
+      expect(presenter.timeline_nation_tags(national_applicability)).to include("England")
+      expect(presenter.timeline_nation_tags(national_applicability)).to include("Wales")
+      expect(presenter.timeline_nation_tags(national_applicability)).to_not include("Scotland")
+      expect(presenter.timeline_nation_tags(national_applicability)).to_not include("Northern Ireland")
+      expect(presenter.timeline_nation_tags(national_applicability)).to_not include("UK Wide")
+    end
+  end
 end
