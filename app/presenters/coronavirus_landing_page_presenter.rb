@@ -16,6 +16,8 @@ class CoronavirusLandingPagePresenter
     timeline
   ].freeze
 
+  UK_COUNTRY_LIST = %w[england northern_ireland scotland wales].freeze
+
   def initialize(content_item)
     COMPONENTS.each do |component|
       define_singleton_method component do
@@ -40,6 +42,18 @@ class CoronavirusLandingPagePresenter
 
   def timeline_for_nation(nation)
     timeline["list"].select { |item| item["national_applicability"].include?(nation) }
+  end
+
+  def timeline_nation_tags(national_applicability)
+    if uk_wide?(national_applicability)
+      "<strong class='govuk-tag govuk-tag--blue'>UK Wide</strong>"
+    else
+      nation_tags = national_applicability.map do |nation|
+        "<strong class='govuk-tag govuk-tag--blue'>#{nation.titleize}</strong>"
+      end
+
+      nation_tags.join(" ")
+    end
   end
 
 private
@@ -77,5 +91,9 @@ private
       question_and_answers.push question_and_answer_schema(question, answers_text)
     end
     question_and_answers
+  end
+
+  def uk_wide?(national_applicability)
+    UK_COUNTRY_LIST.sort == national_applicability.uniq.sort
   end
 end
