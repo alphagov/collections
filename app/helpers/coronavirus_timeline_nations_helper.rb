@@ -9,12 +9,6 @@ module CoronavirusTimelineNationsHelper
     timeline_list.select { |item| item["national_applicability"].include?(nation) }
   end
 
-  def display_country(selected_country = "england")
-    return "england" unless UK_COUNTRY_LIST.include?(selected_country)
-
-    selected_country
-  end
-
   def timeline_nations_items(selected_country = nil)
     selected_country = "england" unless UK_COUNTRY_LIST.include?(selected_country)
 

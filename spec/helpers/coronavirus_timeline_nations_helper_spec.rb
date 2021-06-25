@@ -83,20 +83,6 @@ RSpec.describe CoronavirusTimelineNationsHelper do
     end
   end
 
-  describe "#display_country" do
-    it "should return england by default" do
-      expect(helper.display_country).to eq("england")
-    end
-
-    it "should return england if selected country is not in the uk" do
-      expect(helper.display_country("foo")).to eq("england")
-    end
-
-    it "should return selected county if country is in the uk" do
-      expect(helper.display_country("wales")).to eq("wales")
-    end
-  end
-
   describe "#timeline_nations_items" do
     let(:expected) do
       [

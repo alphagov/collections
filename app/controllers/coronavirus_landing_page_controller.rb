@@ -2,7 +2,8 @@ require "active_model"
 
 class CoronavirusLandingPageController < ApplicationController
   def show
-    @selected_country = params[:timeline_nation]
+    @selected_country = selected_country
+
     @statistics = FetchCoronavirusStatisticsService.call
     if @statistics
       set_expiry 5.minutes
@@ -11,7 +12,7 @@ class CoronavirusLandingPageController < ApplicationController
       set_expiry 30.seconds
     end
 
-    @content_item = if @selected_country && Rails.env.development?
+    @content_item = if params[:timeline_nation] && Rails.env.development?
                       timeline_nation_content_item.to_hash
                     else
                       content_item.to_hash
@@ -72,5 +73,13 @@ private
 
   def hub_presenter
     @hub_presenter ||= CoronavirusHubPresenter.new(@content_item)
+  end
+
+  def selected_country
+    if CoronavirusTimelineNationsHelper::UK_COUNTRY_LIST.include?(params[:timeline_nation])
+      params[:timeline_nation]
+    else
+      "england"
+    end
   end
 end
