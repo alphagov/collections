@@ -29,10 +29,6 @@ RSpec.describe CoronavirusLandingPageController do
     context "when testing national_applicability" do
       render_views
 
-      before do
-        allow(Rails.env).to receive(:production?).and_return(true)
-      end
-
       it "loads the production content item in production environments" do
         allow(ContentItem).to receive(:find!).and_return(coronavirus_content_item)
 
@@ -43,7 +39,7 @@ RSpec.describe CoronavirusLandingPageController do
       end
 
       it "loads the fixture file in other environments" do
-        allow(Rails.env).to receive(:production?).and_return(false)
+        allow(Rails.env).to receive(:development?).and_return(true)
         allow(CoronavirusTimelineNationsContentItem).to receive(:load).and_return(coronavirus_content_item_with_timeline_national_applicability)
 
         expect(CoronavirusTimelineNationsContentItem).to receive(:load)

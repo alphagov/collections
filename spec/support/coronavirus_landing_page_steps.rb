@@ -56,7 +56,6 @@ module CoronavirusLandingPageSteps
   end
 
   def when_i_visit_a_coronavirus_landing_page_with_timeline_nation_applicability
-    allow(Rails.env).to receive(:production?).and_return(true)
     visit "/coronavirus?timeline_nation=foo"
   end
 

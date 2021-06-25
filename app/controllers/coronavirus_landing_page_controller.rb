@@ -11,7 +11,7 @@ class CoronavirusLandingPageController < ApplicationController
       set_expiry 30.seconds
     end
 
-    @content_item = if @selected_country && !Rails.env.production?
+    @content_item = if @selected_country && Rails.env.development?
                       timeline_nation_content_item.to_hash
                     else
                       content_item.to_hash
