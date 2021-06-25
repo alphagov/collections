@@ -59,18 +59,10 @@ class CoronavirusLandingPagePresenter
   end
 
   def timeline_for_nation(nation)
-    timeline["list"].select { |item| item["national_applicability"].include?(nation) }
-  end
+    entries = timeline["list"].select { |item| item["national_applicability"].include?(nation) }
 
-  def timeline_nation_tags(national_applicability)
-    if uk_wide?(national_applicability)
-      "<strong class='govuk-tag govuk-tag--blue'>UK Wide</strong>".html_safe
-    else
-      nation_tags = national_applicability.map do |nation|
-        "<strong class='govuk-tag govuk-tag--blue'>#{nation.titleize}</strong>"
-      end
-
-      nation_tags.join(" ").html_safe
+    entries.map do |entry|
+      entry.merge!("tags" => timeline_nation_tags(entry["national_applicability"]))
     end
   end
 
@@ -109,6 +101,18 @@ private
       question_and_answers.push question_and_answer_schema(question, answers_text)
     end
     question_and_answers
+  end
+
+  def timeline_nation_tags(national_applicability)
+    if uk_wide?(national_applicability)
+      "<strong class='govuk-tag govuk-tag--blue'>UK Wide</strong>".html_safe
+    else
+      nation_tags = national_applicability.map do |nation|
+        "<strong class='govuk-tag govuk-tag--blue'>#{nation.titleize}</strong>"
+      end
+
+      nation_tags.join(" ").html_safe
+    end
   end
 
   def uk_wide?(national_applicability)

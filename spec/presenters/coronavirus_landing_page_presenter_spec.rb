@@ -174,25 +174,31 @@ RSpec.describe CoronavirusLandingPagePresenter do
       expect(presenter.timeline_for_nation("wales").second).to match(hash_including("heading" => "In Wales"))
       expect(presenter.timeline_for_nation("wales").last).to match(hash_including("heading" => "In England and Wales"))
     end
-  end
 
-  describe "#timeline_nation_tags" do
-    it "returns UK Wide if the national_applicability applies to all uk nations" do
+    it "returns the country tags for each timeline entry" do
       presenter = described_class.new(coronavirus_content_item_with_timeline_national_applicability)
-      national_applicability = %w[england northern_ireland scotland wales]
 
-      expect(presenter.timeline_nation_tags(national_applicability)).to include("UK Wide")
-    end
-
-    it "only includes national_applicability countries" do
-      presenter = described_class.new(coronavirus_content_item_with_timeline_national_applicability)
-      national_applicability = %w[england wales]
-
-      expect(presenter.timeline_nation_tags(national_applicability)).to include("England")
-      expect(presenter.timeline_nation_tags(national_applicability)).to include("Wales")
-      expect(presenter.timeline_nation_tags(national_applicability)).to_not include("Scotland")
-      expect(presenter.timeline_nation_tags(national_applicability)).to_not include("Northern Ireland")
-      expect(presenter.timeline_nation_tags(national_applicability)).to_not include("UK Wide")
+      expected = [
+        {
+          "heading" => "International travel",
+          "national_applicability" => %w[england northern_ireland scotland wales],
+          "paragraph" => "You should not travel to red or amber list countries or territories.\r\n[Check what you need to do to travel internationally](https://www.gov.uk/travel-abroad).\r\n",
+          "tags" => "<strong class='govuk-tag govuk-tag--blue'>UK Wide</strong>",
+        },
+        {
+          "heading" => "In Wales",
+          "national_applicability" => %w[wales],
+          "paragraph" => "From 7 June, you can choose 2 other households to meet indoors, becoming an extended household. Up to 30 people can meet outside, including in gardens and pubs. [Read the rules for Wales on GOV.WALES](https://gov.wales/current-restrictions).",
+          "tags" => "<strong class='govuk-tag govuk-tag--blue'>Wales</strong>",
+        },
+        {
+          "heading" => "In England and Wales",
+          "national_applicability" => %w[england wales],
+          "paragraph" => "May the Force be with you.",
+          "tags" => "<strong class='govuk-tag govuk-tag--blue'>England</strong> <strong class='govuk-tag govuk-tag--blue'>Wales</strong>",
+        },
+      ]
+      expect(presenter.timeline_for_nation("wales")).to eq(expected)
     end
   end
 end
