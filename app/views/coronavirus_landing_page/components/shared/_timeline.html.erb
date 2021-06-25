@@ -26,13 +26,13 @@
     <% end %>
 
     <div aria-live="polite">
-      <% CoronavirusLandingPagePresenter::UK_COUNTRY_LIST.each do |nation| %>
+      <% details.timelines_for_nation.each do |nation, timeline| %>
         <div id="nation-<%= nation %>" class="js-covid-timeline <%= 'covid-timeline__item--hidden' unless @selected_country == nation %>">
           <h3 class="govuk-heading-m">Changes in <%= nation.titleize %></h3>
-          <% if details.timeline_for_nation(nation).empty? %>
+          <% if timeline.empty? %>
             <p class="govuk-body">There haven't been any recent updates for <%= nation.titleize %>.</p>
           <% end %>
-          <% details.timeline_for_nation(nation).each do | item | %>
+          <% timeline.each do | item | %>
             <% text = capture do %>
               <%= item["heading"] %>
               <%= item["tags"].html_safe %>
