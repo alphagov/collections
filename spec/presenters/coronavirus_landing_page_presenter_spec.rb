@@ -33,4 +33,12 @@ RSpec.describe CoronavirusLandingPagePresenter do
       expect("Answer").to eq(question[:acceptedAnswer][:@type])
     end
   end
+
+  describe "#show_timeline_nations?" do
+    it "should return true if any timeline entry has national applicability" do
+      presenter = described_class.new(coronavirus_content_item_with_timeline_national_applicability)
+
+      expect(presenter.show_timeline_nations?).to be true
+    end
+  end
 end
