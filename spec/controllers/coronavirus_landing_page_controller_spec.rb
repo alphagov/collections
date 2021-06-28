@@ -84,8 +84,8 @@ RSpec.describe CoronavirusLandingPageController do
         stub_content_store_has_item("/coronavirus", coronavirus_content_item_with_timeline_national_applicability_without_wales)
         get :show, params: { nation: "wales" }
 
-        expect(response.body).to have_content("There are no recent updates for Wales.")
-        expect(response.body).to have_content("Check the latest guidance on gov.wales")
+        expect(response.body).to have_content(I18n.t("coronavirus_landing_page.show.timeline.no_updates.body", nation: "Wales"))
+        expect(response.body).to match(I18n.t("coronavirus_landing_page.show.timeline.no_updates.wales.additional_country_guidance_html"))
       end
     end
   end

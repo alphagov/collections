@@ -6,6 +6,10 @@ module CoronavirusLandingPageSteps
   include GdsApi::TestHelpers::ContentItemHelpers
   include SearchApiHelpers
 
+  def self.included(mod)
+    mod.include(ActionView::Helpers::SanitizeHelper)
+  end
+
   CORONAVIRUS_PATH = "/coronavirus".freeze
   BUSINESS_PATH = "/coronavirus/business-support".freeze
   EDUCATION_PATH = "/coronavirus/education".freeze
@@ -138,13 +142,13 @@ module CoronavirusLandingPageSteps
   end
 
   def then_i_can_see_the_timeline_for_england
-    expect(page).to have_content("Showing updates for England")
+    expect(page).to have_content(strip_tags(I18n.t("coronavirus_landing_page.show.timeline.controls.status_html", nation: "England")))
     expect(page).to have_selector("#nation-england:not(.covid-timeline__wrapper--hidden)")
     expect(page).to have_selector(".covid-timeline__wrapper--hidden", count: 3, visible: false)
   end
 
   def then_i_can_see_the_timeline_for_wales
-    expect(page).to have_content("Showing updates for Wales")
+    expect(page).to have_content(strip_tags(I18n.t("coronavirus_landing_page.show.timeline.controls.status_html", nation: "Wales")))
     expect(page).to have_selector("#nation-wales:not(.covid-timeline__wrapper--hidden)")
     expect(page).to have_selector(".covid-timeline__wrapper--hidden", count: 3, visible: false)
   end
