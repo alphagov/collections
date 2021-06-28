@@ -65,6 +65,10 @@ class CoronavirusLandingPagePresenter
     end
   end
 
+  def devolved_nations
+    UK_COUNTRY_LIST - %w[england]
+  end
+
 private
 
   def build_faq_main_entity(content_item)

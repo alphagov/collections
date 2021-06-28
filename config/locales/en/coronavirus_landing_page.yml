@@ -2,3 +2,15 @@
 en:
   coronavirus_landing_page:
     title: Coronavirus (COVID-19)
+    show:
+      timeline:
+        no_updates:
+          northern_ireland:
+            link: https://www.nidirect.gov.uk
+            link_text: nidirect
+          scotland:
+            link: https://www.gov.scot
+            link_text: gov.scot
+          wales:
+            link: https://gov.wales
+            link_text: gov.wales

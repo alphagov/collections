@@ -31,12 +31,8 @@
           <% if timeline.empty? %>
             <h3 class="govuk-heading-m">No updates</h3>
             <p class="govuk-body">There are no recent updates for <%= nation.titleize %>.</p>
-            <% if nation == "northern_ireland" %>
-              <p class="govuk-body">Check the latest guidance on <a href="https://www.nidirect.gov.uk">nidirect</a></p>
-            <% elsif nation == "scotland" %>
-              <p class="govuk-body">Check the latest guidance on <a href="https://www.gov.scot">gov.scot</a></p>
-            <% elsif nation == "wales" %>
-              <p class="govuk-body">Check the latest guidance on <a href="https://gov.wales">gov.wales</a></p>
+            <% if details.devolved_nations.include?(nation) %>
+              <p class="govuk-body">Check the latest guidance on <a href=<%=t("coronavirus_landing_page.show.timeline.no_updates.#{nation}.link")%>><%=t("coronavirus_landing_page.show.timeline.no_updates.#{nation}.link_text")%></a></p>
             <% end %>
           <% else %>
             <h3 class="govuk-heading-m">Changes in <%= nation.titleize %></h3>
