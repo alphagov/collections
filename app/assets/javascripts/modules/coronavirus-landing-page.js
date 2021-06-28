@@ -52,9 +52,13 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       timelineRadios.addEventListener('change', function (e) {
         var sections = document.querySelectorAll('.js-covid-timeline')
         for (var i = 0; i < sections.length; i++) {
-          sections[i].style.display = 'none'
+          var show = sections[i].id === 'nation-' + e.target.value
+          if (show) {
+            sections[i].classList.remove('covid-timeline__wrapper--hidden')
+          } else {
+            sections[i].classList.add('covid-timeline__wrapper--hidden')
+          }
         }
-        document.getElementById('nation-' + e.target.value).style.display = 'block'
       })
     }
   }
