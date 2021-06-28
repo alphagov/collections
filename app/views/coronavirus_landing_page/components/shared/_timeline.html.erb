@@ -14,7 +14,7 @@
         } do |f| %>
       <%= render "govuk_publishing_components/components/radio", {
         name: "timeline_nation",
-        heading: "Choose location",
+        heading: t("coronavirus_landing_page.show.timeline.radio.heading"),
         items: details.timeline_nations_items
       } %>
       <div class="covid-timeline__button-wrapper">
@@ -29,13 +29,16 @@
       <% details.timelines_for_nation.each do |nation, timeline| %>
         <div id="nation-<%= nation %>" class="js-covid-timeline <%= 'covid-timeline__wrapper--hidden' unless @selected_country == nation %>">
           <% if timeline.empty? %>
-            <h3 class="govuk-heading-m">No updates</h3>
-            <p class="govuk-body">There are no recent updates for <%= nation.titleize %>.</p>
+            <h3 class="govuk-heading-m"><%=t("coronavirus_landing_page.show.timeline.no_updates.heading")%></h3>
+            <p class="govuk-body"><%=t("coronavirus_landing_page.show.timeline.no_updates.body", nation: nation.titleize)%></p>
             <% if details.devolved_nations.include?(nation) %>
-              <p class="govuk-body">Check the latest guidance on <a href=<%=t("coronavirus_landing_page.show.timeline.no_updates.#{nation}.link")%>><%=t("coronavirus_landing_page.show.timeline.no_updates.#{nation}.link_text")%></a></p>
+              <p class="govuk-body">
+                <%=t("coronavirus_landing_page.show.timeline.no_updates.additional_country_guidance.body")%>
+                <a href=<%=t("coronavirus_landing_page.show.timeline.no_updates.additional_country_guidance.#{nation}.link")%>><%=t("coronavirus_landing_page.show.timeline.no_updates.additional_country_guidance.#{nation}.link_text")%></a>
+              </p>
             <% end %>
           <% else %>
-            <h3 class="govuk-heading-m">Changes in <%= nation.titleize %></h3>
+            <h3 class="govuk-heading-m"><%=t("coronavirus_landing_page.show.timeline.updates.heading", nation: nation.titleize)%></h3>
           <% end %>
           <% timeline.each do | item | %>
             <% text = capture do %>
