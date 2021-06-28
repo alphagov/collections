@@ -59,44 +59,32 @@ RSpec.describe CoronavirusLandingPageController do
         stub_content_store_has_item("/coronavirus", coronavirus_content_item_with_timeline_national_applicability)
         get :show, params: { timeline_nation: "england" }
 
-        expect(response.body).to have_selector(".js-covid-timeline", text: "In England")
-
-        expect(response.body).to have_selector(".js-covid-timeline", text: "In Northern Ireland", visible: false)
-        expect(response.body).to have_selector(".js-covid-timeline", text: "In Scotland", visible: false)
-        expect(response.body).to have_selector(".js-covid-timeline", text: "In Wales", visible: false)
+        expect(response.body).to have_selector("#nation-england:not(.covid-timeline__wrapper--hidden)")
+        expect(response.body).to have_selector(".covid-timeline__wrapper--hidden", count: 3)
       end
 
       it "shows timeline for Northern Ireland" do
         stub_content_store_has_item("/coronavirus", coronavirus_content_item_with_timeline_national_applicability)
         get :show, params: { timeline_nation: "northern_ireland" }
 
-        expect(response.body).to have_selector(".js-covid-timeline", text: "In Northern Ireland")
-
-        expect(response.body).to have_selector(".js-covid-timeline", text: "In England", visible: false)
-        expect(response.body).to have_selector(".js-covid-timeline", text: "In Scotland", visible: false)
-        expect(response.body).to have_selector(".js-covid-timeline", text: "In Wales", visible: false)
+        expect(response.body).to have_selector("#nation-northern_ireland:not(.covid-timeline__wrapper--hidden)")
+        expect(response.body).to have_selector(".covid-timeline__wrapper--hidden", count: 3)
       end
 
       it "shows timeline for Scotland" do
         stub_content_store_has_item("/coronavirus", coronavirus_content_item_with_timeline_national_applicability)
         get :show, params: { timeline_nation: "scotland" }
 
-        expect(response.body).to have_selector(".js-covid-timeline", text: "In Scotland")
-
-        expect(response.body).to have_selector(".js-covid-timeline", text: "In England", visible: false)
-        expect(response.body).to have_selector(".js-covid-timeline", text: "In Northern Ireland", visible: false)
-        expect(response.body).to have_selector(".js-covid-timeline", text: "In Wales", visible: false)
+        expect(response.body).to have_selector("#nation-scotland:not(.covid-timeline__wrapper--hidden)")
+        expect(response.body).to have_selector(".covid-timeline__wrapper--hidden", count: 3)
       end
 
       it "shows timeline for Wales" do
         stub_content_store_has_item("/coronavirus", coronavirus_content_item_with_timeline_national_applicability)
         get :show, params: { timeline_nation: "wales" }
 
-        expect(response.body).to have_selector(".js-covid-timeline", text: "In Wales")
-
-        expect(response.body).to have_selector(".js-covid-timeline", text: "In England", visible: false)
-        expect(response.body).to have_selector(".js-covid-timeline", text: "In Northern Ireland", visible: false)
-        expect(response.body).to have_selector(".js-covid-timeline", text: "In Scotland", visible: false)
+        expect(response.body).to have_selector("#nation-wales:not(.covid-timeline__wrapper--hidden)")
+        expect(response.body).to have_selector(".covid-timeline__wrapper--hidden", count: 3)
       end
     end
   end
