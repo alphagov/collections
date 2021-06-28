@@ -56,7 +56,7 @@ module CoronavirusLandingPageSteps
   end
 
   def when_i_visit_a_coronavirus_landing_page_with_timeline_nation_applicability
-    visit "/coronavirus?timeline_nation=foo"
+    visit "/coronavirus?nation=foo"
   end
 
   def when_i_visit_the_business_hub_page

@@ -98,11 +98,11 @@ describe('Coronavirus landing page', function () {
         '<div>' +
           '<form method="get" target="" class="js-change-location">' +
             '<div class="gem-c-radio govuk-radios__item">' +
-              '<input type="radio" name="timeline_nation" id="radio-0" value="england" class="govuk-radios__input" checked="">' +
+              '<input type="radio" name="nation" id="radio-0" value="england" class="govuk-radios__input" checked="">' +
               '<label for="radio-0" class="gem-c-label govuk-label govuk-radios__label">England</label>' +
             '</div>' +
             '<div class="gem-c-radio govuk-radios__item">' +
-              '<input type="radio" name="timeline_nation" id="radio-1" value="northern_ireland" class="govuk-radios__input">' +
+              '<input type="radio" name="nation" id="radio-1" value="northern_ireland" class="govuk-radios__input">' +
               '<label for="radio-1" class="gem-c-label govuk-label govuk-radios__label">Northern Ireland</label>' +
             '</div>' +
           '</form>' +

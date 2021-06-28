@@ -12,7 +12,7 @@ class CoronavirusLandingPageController < ApplicationController
       set_expiry 30.seconds
     end
 
-    @content_item = if params[:timeline_nation] && Rails.env.development?
+    @content_item = if params[:nation] && Rails.env.development?
                       timeline_nation_content_item.to_hash
                     else
                       content_item.to_hash
@@ -76,8 +76,8 @@ private
   end
 
   def selected_country
-    if CoronavirusLandingPagePresenter::UK_COUNTRY_LIST.include?(params[:timeline_nation])
-      params[:timeline_nation]
+    if CoronavirusLandingPagePresenter::UK_COUNTRY_LIST.include?(params[:nation])
+      params[:nation]
     else
       "england"
     end
