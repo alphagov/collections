@@ -141,13 +141,13 @@ module CoronavirusLandingPageSteps
   end
 
   def then_i_can_see_the_timeline_for_england
-    expect(page).to have_selector(".js-covid-timeline .govuk-heading-m", text: "Changes in England")
-    expect(page).to have_selector(".js-covid-timeline .govuk-heading-m", text: "Changes in Wales", visible: false)
+    expect(page).to have_selector("#nation-england:not(.covid-timeline__wrapper--hidden)")
+    expect(page).to have_selector(".covid-timeline__wrapper--hidden", count: 3, visible: false)
   end
 
   def then_i_can_see_the_timeline_for_wales
-    expect(page).to have_selector(".js-covid-timeline .govuk-heading-m", text: "Changes in Wales")
-    expect(page).to have_selector(".js-covid-timeline .govuk-heading-m", text: "Changes in England", visible: false)
+    expect(page).to have_selector("#nation-wales:not(.covid-timeline__wrapper--hidden)")
+    expect(page).to have_selector(".covid-timeline__wrapper--hidden", count: 3, visible: false)
   end
 
   def then_i_can_see_the_accordions
