@@ -2,7 +2,7 @@ require "active_model"
 
 class CoronavirusLandingPageController < ApplicationController
   def show
-    @selected_country = selected_country
+    @selected_nation = selected_nation
 
     @statistics = FetchCoronavirusStatisticsService.call
     if @statistics
@@ -75,8 +75,8 @@ private
     @hub_presenter ||= CoronavirusHubPresenter.new(@content_item)
   end
 
-  def selected_country
-    if CoronavirusLandingPagePresenter::UK_COUNTRY_LIST.include?(params[:nation])
+  def selected_nation
+    if CoronavirusLandingPagePresenter::UK_NATIONS.include?(params[:nation])
       params[:nation]
     else
       "england"

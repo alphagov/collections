@@ -16,16 +16,16 @@ class CoronavirusLandingPagePresenter
     timeline
   ].freeze
 
-  UK_COUNTRY_LIST = %w[england northern_ireland scotland wales].freeze
+  UK_NATIONS = %w[england northern_ireland scotland wales].freeze
 
-  def initialize(content_item, selected_country = nil)
+  def initialize(content_item, selected_nation = nil)
     COMPONENTS.each do |component|
       define_singleton_method component do
         content_item["details"][component]
       end
     end
 
-    @selected_country = selected_country
+    @selected_nation = selected_nation
   end
 
   def faq_schema(content_item)
@@ -43,19 +43,19 @@ class CoronavirusLandingPagePresenter
   end
 
   def timelines_for_nation
-    UK_COUNTRY_LIST.map do |nation|
+    UK_NATIONS.map do |nation|
       [nation, timeline_for_nation(nation)]
     end
   end
 
   def timeline_nations_items
-    selected_country = UK_COUNTRY_LIST.include?(@selected_country) ? @selected_country : "england"
+    selected_nation = UK_NATIONS.include?(@selected_nation) ? @selected_nation : "england"
 
-    UK_COUNTRY_LIST.map do |value|
+    UK_NATIONS.map do |value|
       {
         value: value,
         text: value.titleize,
-        checked: selected_country == value,
+        checked: selected_nation == value,
         data_attributes: {
           track_category: "pageElementInteraction",
           track_action: "TimelineNation",
@@ -66,7 +66,7 @@ class CoronavirusLandingPagePresenter
   end
 
   def devolved_nations
-    UK_COUNTRY_LIST - %w[england]
+    UK_NATIONS - %w[england]
   end
 
 private
@@ -127,6 +127,6 @@ private
   end
 
   def uk_wide?(national_applicability)
-    UK_COUNTRY_LIST.sort == national_applicability.uniq.sort
+    UK_NATIONS.sort == national_applicability.uniq.sort
   end
 end
