@@ -84,6 +84,7 @@ module CoronavirusLandingPageSteps
   end
 
   def when_i_click_on_wales
+    find("span", text: I18n.t("coronavirus_landing_page.show.timeline.controls.change")).click
     choose "Wales"
   end
 
