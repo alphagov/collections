@@ -49,7 +49,7 @@
               </p>
             <% end %>
           <% else %>
-            <h3 class="govuk-heading-m"><%=t("coronavirus_landing_page.show.timeline.updates.heading", nation: nation.titleize)%></h3>
+            <h3 class="govuk-heading-m govuk-visually-hidden"><%=t("coronavirus_landing_page.show.timeline.updates.heading", nation: nation.titleize)%></h3>
           <% end %>
           <% timeline.each do | item | %>
             <% text = capture do %>
