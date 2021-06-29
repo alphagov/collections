@@ -96,6 +96,7 @@ describe('Coronavirus landing page', function () {
     beforeEach(function () {
       nationPickerHtml =
         '<div>' +
+          '<p>Showing updates for <span class="js-current-nation">England</span></p>' +
           '<form method="get" target="" class="js-change-location">' +
             '<div class="gem-c-radio govuk-radios__item">' +
               '<input type="radio" name="nation" id="radio-0" value="england" class="govuk-radios__input" checked="">' +
@@ -120,6 +121,7 @@ describe('Coronavirus landing page', function () {
     })
 
     it('show and hide appropriate sections of the page when the radio buttons change', function () {
+      var status = $element.find('.js-current-nation')
       var radio0 = $element.find('#radio-0')
       var radio1 = $element.find('#radio-1')
       var section0 = $element.find('#nation-england')
@@ -129,11 +131,13 @@ describe('Coronavirus landing page', function () {
 
       expect(section0).toBeVisible()
       expect(section1).toBeHidden()
+      expect(status.text()).toBe('england')
 
       window.GOVUK.triggerEvent(radio1[0], 'change')
 
       expect(section0).toBeHidden()
       expect(section1).toBeVisible()
+      expect(status.text()).toBe('northern ireland')
     })
   })
 })

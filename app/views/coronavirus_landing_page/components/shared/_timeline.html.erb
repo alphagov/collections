@@ -7,22 +7,33 @@
 
   <% if details.show_timeline_nations? %>
     <%= form_tag coronavirus_landing_page_path,
-        method: :get,
-        class: "js-change-location",
-        data: {
-          module: "gem-track-click",
-        } do |f| %>
-      <%= render "govuk_publishing_components/components/radio", {
-        name: "nation",
-        heading: t("coronavirus_landing_page.show.timeline.radio.heading"),
-        items: details.timeline_nations_items
-      } %>
-      <div class="covid-timeline__button-wrapper">
-        <%= render "govuk_publishing_components/components/button", {
-          text: "View",
-          margin_bottom: 6
-        } %>
-      </div>
+      method: :get,
+      class: "js-change-location" do |f| %>
+
+      <p class="govuk-body"><%=t("coronavirus_landing_page.show.timeline.controls.status") %>
+        <span class="js-current-nation covid-timeline__nation"><%= @selected_nation.titleize %></span>.
+      </p>
+
+      <%= render "govuk_publishing_components/components/details", {
+        title: t("coronavirus_landing_page.show.timeline.controls.change"),
+        data_attributes: {
+          track_category: "pageElementInteraction",
+          track_action: "openorclosed",
+          module: "govuk-details",
+        }
+      } do %>
+        <div data-module="gem-track-click">
+          <%= render "govuk_publishing_components/components/radio", {
+            name: "nation",
+            items: details.timeline_nations_items
+          } %>
+          <div class="covid-timeline__button-wrapper">
+            <%= render "govuk_publishing_components/components/button", {
+              text: "View",
+            } %>
+          </div>
+        </div>
+      <% end %>
     <% end %>
 
     <div aria-live="polite">
@@ -30,7 +41,7 @@
         <div id="nation-<%= nation %>" class="js-covid-timeline <%= 'covid-timeline__wrapper--hidden' unless @selected_nation == nation %>">
           <% if timeline.empty? %>
             <h3 class="govuk-heading-m"><%=t("coronavirus_landing_page.show.timeline.no_updates.heading")%></h3>
-            <p class="govuk-body"><%=t("coronavirus_landing_page.show.timeline.no_updates.body", nation: nation.titleize)%></p>
+            <p class="govuk-body"><%=t("coronavirus_landing_page.show.timeline.no_updates.body", nation: nation.titleize) %></p>
             <% if details.devolved_nations.include?(nation) %>
               <p class="govuk-body">
                 <%=t("coronavirus_landing_page.show.timeline.no_updates.additional_country_guidance.body")%>

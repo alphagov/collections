@@ -4,8 +4,9 @@ en:
     title: Coronavirus (COVID-19)
     show:
       timeline:
-        radio:
-          heading: Choose location
+        controls:
+          status: Showing updates for
+          change: Change to another nation
         updates:
           heading: Changes in %{nation}
         no_updates:
