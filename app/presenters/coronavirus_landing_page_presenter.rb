@@ -116,10 +116,10 @@ private
 
   def timeline_nation_tags(national_applicability)
     if uk_wide?(national_applicability)
-      "<strong class='govuk-tag govuk-tag--blue'>UK Wide</strong>"
+      "<strong class='govuk-tag govuk-tag--blue covid-timeline__tag'>UK Wide</strong>"
     else
       nation_tags = national_applicability.map do |nation|
-        "<strong class='govuk-tag govuk-tag--blue'>#{nation.titleize}</strong>"
+        "<strong class='govuk-tag govuk-tag--blue covid-timeline__tag'>#{nation.titleize}</strong>"
       end
 
       nation_tags.join(" ")
