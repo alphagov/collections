@@ -29,9 +29,12 @@ en:
     take_action_start_now: 'Brexit checker: start now'
     take_action_start_now_link: "/transition-check/questions"
     trade_deal_heading: The UK and EU trade deal
-    trade_deal_link:
-      text: "Summary: The UK’s new relationship with the EU"
+    trade_deal_links:
+    - text: "Summary: The UK’s new relationship with the EU"
       path: "/government/publications/summary-the-uks-new-relationship-with-the-eu"
-    trade_deal_explainer: This summary of the UK-EU trade deal gives an overview of what has changed, and what remains the same after Brexit.
+      explainer: This summary of the UK-EU trade deal gives an overview of what has changed, and what remains the same after Brexit.
+    - text: "The Northern Ireland Protocol"
+      path: "/government/publications/the-northern-ireland-protocol"
+      explainer: Details of the agreement reached by the Withdrawal Agreement Joint Committee for the movement of goods into, out of, or through Northern Ireland.
     topic_section_header: All Brexit information
     topic_section_subheading: Browse all information related to Brexit
