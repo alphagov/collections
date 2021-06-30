@@ -6,35 +6,50 @@
   } %>
 
   <%= form_tag coronavirus_landing_page_path,
-        method: :get,
-        class: "js-change-location",
-        data: {
-          module: "gem-track-click",
-        } do |f| %>
-    <%= render "govuk_publishing_components/components/radio", {
-      name: "nation",
-      heading: "Choose location",
-      margin_bottom: 0,
-      items: details.timeline_nations_items(params[:nation])
-    } %>
-    <%= render "govuk_publishing_components/components/button", {
-      text: "View"
-    } %>
+    method: :get,
+    class: "js-change-location" do |f| %>
+
+    <% if params[:nation] %>
+      <p class="govuk-body">Showing updates for
+        <span class="js-current-nation covid-timeline__nation"><%= params[:nation].titleize %></span>.
+      </p>
+    <% end %>
+
+    <%= render "govuk_publishing_components/components/details", {
+      title: "Change to another nation",
+      data_attributes: {
+        track_category: "pageElementInteraction",
+        track_action: "TimelineNation",
+        module: "govuk-details",
+      }
+    } do %>
+      <%= render "govuk_publishing_components/components/radio", {
+        name: "nation",
+        heading: "Choose location",
+        margin_bottom: 0,
+        items: details.timeline_nations_items(params[:nation])
+      } %>
+      <div class="covid-timeline__button-wrapper">
+        <%= render "govuk_publishing_components/components/button", {
+          text: "View"
+        } %>
+      </div>
+    <% end %>
   <% end %>
 
-  <div id="nation-england" class="<%= 'covid-timeline__wrapper--hidden' unless !%w[northern-ireland scotland wales].include?(params[:nation]) %>">
+  <div id="nation-england" class="js-covid-timeline <%= 'covid-timeline__wrapper--hidden' unless !%w[northern-ireland scotland wales].include?(params[:nation]) %>">
     <p class="govuk-body">Demonstration: things about <strong class="govuk-tag govuk-tag--blue">England</strong></p>
   </div>
 
-  <div id="nation-northern_ireland" class="<%= 'covid-timeline__wrapper--hidden' unless params[:nation] == "northern-ireland" %>">
+  <div id="nation-northern_ireland" class="js-covid-timeline <%= 'covid-timeline__wrapper--hidden' unless params[:nation] == "northern-ireland" %>">
     <p class="govuk-body">Demonstration: things about <strong class="govuk-tag govuk-tag--blue">Northern Ireland</strong></p>
   </div>
 
-  <div id="nation-scotland" class="<%= 'covid-timeline__wrapper--hidden' unless params[:nation] == "scotland" %>">
+  <div id="nation-scotland" class="js-covid-timeline <%= 'covid-timeline__wrapper--hidden' unless params[:nation] == "scotland" %>">
     <p class="govuk-body">Demonstration: things about <strong class="govuk-tag govuk-tag--blue">Scotland</strong></p>
   </div>
 
-  <div id="nation-wales" class="<%= 'covid-timeline__wrapper--hidden' unless params[:nation] == "wales" %>">
+  <div id="nation-wales" class="js-covid-timeline <%= 'covid-timeline__wrapper--hidden' unless params[:nation] == "wales" %>">
     <p class="govuk-body">Demonstration: things about <strong class="govuk-tag govuk-tag--blue">Wales</strong></p>
   </div>
 
