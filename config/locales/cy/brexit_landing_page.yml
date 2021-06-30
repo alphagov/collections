@@ -57,7 +57,7 @@ cy:
       read_transcript:
     comms_header: Cyhoeddiadau
     data_list_title:
-    email_mailto_subject: Dechrau%20newydd%20y%20DU:%20Ymlaen%20â%20ni-%20GOV.UK
+    email_mailto_subject: "Dechrau newydd y DU: Ymlaen â ni- GOV.UK"
     guidance_header: Newidiadau i fusnesau a dinasyddion
     meta_description: Darganfyddwch sut mae’r rheolau newydd yn effeithio arnoch chi
     meta_title: Brexit

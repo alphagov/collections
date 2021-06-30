@@ -40,7 +40,7 @@
             icon: "twitter"
           },
           {
-            href: "mailto:?body=https://www.gov.uk#{CGI.escape(request.fullpath)}/&subject=#{t('brexit_landing_page.email_mailto_subject')}",
+            href: "mailto:?body=https://www.gov.uk#{CGI.escape(request.fullpath)}/&subject=#{CGI.escape(t('brexit_landing_page.email_mailto_subject'))}",
             text: "Email",
             icon: "email"
           },
@@ -50,7 +50,7 @@
             icon: "whatsapp"
           },
           {
-            href: "http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.gov.uk#{CGI.escape(request.fullpath)}&title=#{t('brexit_landing_page.email_mailto_subject')}",
+            href: "http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.gov.uk#{CGI.escape(request.fullpath)}&title=#{CGI.escape(t('brexit_landing_page.email_mailto_subject'))}",
             text: "LinkedIn",
             icon: "linkedin"
           },
