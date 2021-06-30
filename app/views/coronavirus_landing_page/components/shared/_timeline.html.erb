@@ -39,81 +39,26 @@
     <% end %>
 
     <div aria-live="polite">
-      <div id="nation-england" class="js-covid-timeline <%= 'covid-timeline__wrapper--hidden' unless !%w[northern-ireland scotland wales].include?(params[:nation]) %>">
-        <h3 class="govuk-heading-m govuk-visually-hidden">Changes in England</h3>
-        <% details.timeline_for_nation("england").each do | item | %>
-          <% text = capture do %>
-            <%= item["heading"] %>
-            <% item["tags"] %>
+      <% details.timelines_for_nation.each do |nation, timeline| %>
+        <div id="nation-<%= nation %>" class="js-covid-timeline <%= 'covid-timeline__wrapper--hidden' unless params[:nation] == nation %>">
+          <h3 class="govuk-heading-m govuk-visually-hidden">Changes in <%= nation.titleize %></h3>
+          <% timeline.each do | item | %>
+            <% text = capture do %>
+              <%= item["heading"] %>
+              <%= item["tags"] %>
+            <% end %>
+            <div class="covid-timeline__item">
+              <%= render "govuk_publishing_components/components/heading", {
+                text: text,
+                heading_level: 3,
+                font_size: "s",
+                margin_bottom: 1,
+              } %>
+              <%= render_govspeak(item["paragraph"]) %>
+            </div>
           <% end %>
-          <div class="covid-timeline__item">
-            <%= render "govuk_publishing_components/components/heading", {
-              text: text,
-              heading_level: 3,
-              font_size: "s",
-              margin_bottom: 1,
-            } %>
-            <%= render_govspeak(item["paragraph"]) %>
-          </div>
-        <% end %>
-      </div>
-
-      <div id="nation-northern_ireland" class="js-covid-timeline <%= 'covid-timeline__wrapper--hidden' unless params[:nation] == "northern-ireland" %>">
-        <h3 class="govuk-heading-m govuk-visually-hidden">Changes in Northern Ireland</h3>
-        <% details.timeline_for_nation("northern_ireland").each do | item | %>
-          <% text = capture do %>
-            <%= item["heading"] %>
-            <% item["tags"] %>
-          <% end %>
-          <div class="covid-timeline__item">
-            <%= render "govuk_publishing_components/components/heading", {
-              text: text,
-              heading_level: 3,
-              font_size: "s",
-              margin_bottom: 1,
-            } %>
-            <%= render_govspeak(item["paragraph"]) %>
-          </div>
-        <% end %>
-      </div>
-
-      <div id="nation-scotland" class="js-covid-timeline <%= 'covid-timeline__wrapper--hidden' unless params[:nation] == "scotland" %>">
-        <h3 class="govuk-heading-m govuk-visually-hidden">Changes in Scotland</h3>
-        <% details.timeline_for_nation("scotland").each do | item | %>
-          <% text = capture do %>
-            <%= item["heading"] %>
-            <% item["tags"] %>
-          <% end %>
-          <div class="covid-timeline__item">
-            <%= render "govuk_publishing_components/components/heading", {
-              text: text,
-              heading_level: 3,
-              font_size: "s",
-              margin_bottom: 1,
-            } %>
-            <%= render_govspeak(item["paragraph"]) %>
-          </div>
-        <% end %>
-      </div>
-
-      <div id="nation-wales" class="js-covid-timeline <%= 'covid-timeline__wrapper--hidden' unless params[:nation] == "wales" %>">
-        <h3 class="govuk-heading-m govuk-visually-hidden">Changes in Wales</h3>
-        <% details.timeline_for_nation("wales").each do | item | %>
-          <% text = capture do %>
-            <%= item["heading"] %>
-            <% item["tags"] %>
-          <% end %>
-          <div class="covid-timeline__item">
-            <%= render "govuk_publishing_components/components/heading", {
-              text: text,
-              heading_level: 3,
-              font_size: "s",
-              margin_bottom: 1,
-            } %>
-            <%= render_govspeak(item["paragraph"]) %>
-          </div>
-        <% end %>
-      </div>
+        </div>
+      <% end %>
     </div>
   <% else %>
     <% if details.timeline["summary"] %>
