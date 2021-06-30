@@ -10,11 +10,9 @@
       method: :get,
       class: "js-change-location" do |f| %>
 
-      <% if params[:nation] %>
-        <p class="govuk-body">Showing updates for
-          <span class="js-current-nation covid-timeline__nation"><%= params[:nation].titleize %></span>.
-        </p>
-      <% end %>
+      <p class="govuk-body">Showing updates for
+        <span class="js-current-nation covid-timeline__nation"><%= details.selected_nation.titleize %></span>.
+      </p>
 
       <%= render "govuk_publishing_components/components/details", {
         title: "Change to another nation",
@@ -28,7 +26,7 @@
           name: "nation",
           heading: "Choose location",
           margin_bottom: 0,
-          items: details.timeline_nations_items(params[:nation])
+          items: details.timeline_nations_items
         } %>
         <div class="covid-timeline__button-wrapper">
           <%= render "govuk_publishing_components/components/button", {
@@ -40,7 +38,7 @@
 
     <div aria-live="polite">
       <% details.timelines_for_nation.each do |nation, timeline| %>
-        <div id="nation-<%= nation %>" class="js-covid-timeline <%= 'covid-timeline__wrapper--hidden' unless params[:nation] == nation %>">
+        <div id="nation-<%= nation %>" class="js-covid-timeline <%= 'covid-timeline__wrapper--hidden' unless details.selected_nation == nation %>">
           <h3 class="govuk-heading-m govuk-visually-hidden">Changes in <%= nation.titleize %></h3>
           <% timeline.each do | item | %>
             <% text = capture do %>

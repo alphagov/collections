@@ -18,12 +18,16 @@ class CoronavirusLandingPagePresenter
 
   UK_NATIONS = %w[england northern_ireland scotland wales].freeze
 
-  def initialize(content_item)
+  attr_reader :selected_nation
+
+  def initialize(content_item, selected_nation = nil)
     COMPONENTS.each do |component|
       define_singleton_method component do
         content_item["details"][component]
       end
     end
+
+    @selected_nation = UK_NATIONS.include?(selected_nation) ? selected_nation : "england"
   end
 
   def faq_schema(content_item)
@@ -40,9 +44,7 @@ class CoronavirusLandingPagePresenter
     timeline["list"].any? { |item| item["national_applicability"] }
   end
 
-  def timeline_nations_items(nation = nil)
-    selected_nation = UK_NATIONS.include?(nation) ? nation : "england"
-
+  def timeline_nations_items
     UK_NATIONS.map do |value|
       {
         value: value,
