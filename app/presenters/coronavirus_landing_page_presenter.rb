@@ -58,11 +58,9 @@ class CoronavirusLandingPagePresenter
     end
   end
 
-  def timeline_for_nation(nation)
-    entries = timeline["list"].select { |item| item["national_applicability"].include?(nation) }
-
-    entries.map do |entry|
-      entry.merge!("tags" => timeline_nation_tags(entry["national_applicability"]))
+  def timelines_for_nation
+    UK_NATIONS.map do |nation|
+      [nation, timeline_for_nation(nation)]
     end
   end
 
@@ -101,6 +99,14 @@ private
       question_and_answers.push question_and_answer_schema(question, answers_text)
     end
     question_and_answers
+  end
+
+  def timeline_for_nation(nation)
+    entries = timeline["list"].select { |item| item["national_applicability"].include?(nation) }
+
+    entries.map do |entry|
+      entry.merge!("tags" => timeline_nation_tags(entry["national_applicability"]))
+    end
   end
 
   def timeline_nation_tags(national_applicability)
