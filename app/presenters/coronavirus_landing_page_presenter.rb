@@ -16,6 +16,8 @@ class CoronavirusLandingPagePresenter
     timeline
   ].freeze
 
+  UK_NATIONS = %w[england northern_ireland scotland wales].freeze
+
   def initialize(content_item)
     COMPONENTS.each do |component|
       define_singleton_method component do
@@ -32,6 +34,24 @@ class CoronavirusLandingPagePresenter
       "description": content_item["description"],
       "mainEntity": build_faq_main_entity(content_item),
     }
+  end
+
+  def timeline_nations_items(nation = nil)
+    selected_nation = UK_NATIONS.include?(nation) ? nation : "england"
+
+    UK_NATIONS.map do |value|
+      {
+        value: value,
+        text: value.titleize,
+        checked: selected_nation == value,
+        data_attributes: {
+          module: "gem-track-click",
+          track_category: "pageElementInteraction",
+          track_action: "TimelineNation",
+          track_label: value.titleize,
+        },
+      }
+    end
   end
 
 private

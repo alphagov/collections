@@ -1,6 +1,6 @@
 <div class="covid-timeline" data-module="track-links" data-track-category="pageElementInteraction" data-track-action="Timeline">
   <%= render "govuk_publishing_components/components/heading", {
-    text: timeline["heading"],
+    text: details.timeline["heading"],
     padding: true,
     margin_bottom: 2
   } %>
@@ -15,7 +15,7 @@
       name: "nation",
       heading: "Choose location",
       margin_bottom: 0,
-      items: @timeline_nations_items
+      items: details.timeline_nations_items(params[:nation])
     } %>
     <%= render "govuk_publishing_components/components/button", {
       text: "View"
@@ -38,11 +38,11 @@
     <p class="govuk-body">Demonstration: things about <strong class="govuk-tag govuk-tag--blue">Wales</strong></p>
   </div>
 
-  <% if timeline["summary"] %>
-    <%= render_govspeak(timeline["summary"]) %>
+  <% if details.timeline["summary"] %>
+    <%= render_govspeak(details.timeline["summary"]) %>
   <% end %>
 
-  <% timeline["list"].each do | item | %>
+  <% details.timeline["list"].each do | item | %>
     <div class="covid-timeline__item">
       <%= render "govuk_publishing_components/components/heading", {
         text: item["heading"],

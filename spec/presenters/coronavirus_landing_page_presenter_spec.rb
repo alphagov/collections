@@ -33,4 +33,127 @@ RSpec.describe CoronavirusLandingPagePresenter do
       expect("Answer").to eq(question[:acceptedAnswer][:@type])
     end
   end
+
+  describe "#timeline_nations_items" do
+    let(:expected) do
+      [
+        {
+          checked: true,
+          data_attributes:
+            {
+              module: "gem-track-click",
+              track_action: "TimelineNation",
+              track_category: "pageElementInteraction",
+              track_label: "England",
+            },
+          text: "England",
+          value: "england",
+        },
+        {
+          checked: false,
+          data_attributes:
+            {
+              module: "gem-track-click",
+              track_action: "TimelineNation",
+              track_category: "pageElementInteraction",
+              track_label: "Northern Ireland",
+            },
+          text: "Northern Ireland",
+          value: "northern_ireland",
+        },
+        {
+          checked: false,
+          data_attributes:
+            {
+              module: "gem-track-click",
+              track_action: "TimelineNation",
+              track_category: "pageElementInteraction",
+              track_label: "Scotland",
+            },
+          text: "Scotland",
+          value: "scotland",
+        },
+        {
+          checked: false,
+          data_attributes:
+            {
+              module: "gem-track-click",
+              track_action: "TimelineNation",
+              track_category: "pageElementInteraction",
+              track_label: "Wales",
+            },
+          text: "Wales",
+          value: "wales",
+        },
+      ]
+    end
+
+    it "sets england to selected by default" do
+      presenter = described_class.new(coronavirus_landing_page_content_item)
+
+      expect(presenter.timeline_nations_items).to eq(expected)
+    end
+
+    it "sets england to selected if selected country is not in the uk" do
+      presenter = described_class.new(coronavirus_landing_page_content_item)
+
+      expect(presenter.timeline_nations_items("foo")).to eq(expected)
+    end
+
+    it "sets selected county to selected if selected country is in the uk" do
+      presenter = described_class.new(coronavirus_landing_page_content_item)
+
+      expected = [
+        {
+          checked: false,
+          data_attributes:
+            {
+              module: "gem-track-click",
+              track_action: "TimelineNation",
+              track_category: "pageElementInteraction",
+              track_label: "England",
+            },
+          text: "England",
+          value: "england",
+        },
+        {
+          checked: false,
+          data_attributes:
+            {
+              module: "gem-track-click",
+              track_action: "TimelineNation",
+              track_category: "pageElementInteraction",
+              track_label: "Northern Ireland",
+            },
+          text: "Northern Ireland",
+          value: "northern_ireland",
+        },
+        {
+          checked: false,
+          data_attributes:
+            {
+              module: "gem-track-click",
+              track_action: "TimelineNation",
+              track_category: "pageElementInteraction",
+              track_label: "Scotland",
+            },
+          text: "Scotland",
+          value: "scotland",
+        },
+        {
+          checked: true,
+          data_attributes:
+            {
+              module: "gem-track-click",
+              track_action: "TimelineNation",
+              track_category: "pageElementInteraction",
+              track_label: "Wales",
+            },
+          text: "Wales",
+          value: "wales",
+        },
+      ]
+      expect(presenter.timeline_nations_items("wales")).to eq(expected)
+    end
+  end
 end
