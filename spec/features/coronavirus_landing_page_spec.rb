@@ -43,6 +43,25 @@ RSpec.feature "Coronavirus Pages" do
       then_the_special_announcement_schema_is_rendered
       and_the_faqpage_schema_is_rendered
     end
+
+    describe "selecting timeline for country" do
+      scenario "with javascript", js: true do
+        given_there_is_a_content_item_with_timeline_national_applicability
+        when_i_visit_the_coronavirus_landing_page
+        then_i_can_see_the_timeline_for_england
+        when_i_click_on_wales
+        then_i_can_see_the_timeline_for_wales
+      end
+
+      scenario "without javascript" do
+        given_there_is_a_content_item_with_timeline_national_applicability
+        when_i_visit_the_coronavirus_landing_page
+        then_i_can_see_the_timeline_for_england
+        when_i_click_on_wales
+        and_i_submit_my_nation
+        then_i_can_see_the_timeline_for_wales
+      end
+    end
   end
 
   describe "the business support hub page" do
