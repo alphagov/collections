@@ -1,0 +1,705 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/coronavirus",
+  "content_id": "774cee22-d896-44c1-a611-e3109cce8eae",
+  "document_type": "coronavirus_landing_page",
+  "first_published_at": "2020-03-20T14:29:42.000+00:00",
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2020-12-23T15:27:18.000+00:00",
+  "publishing_app": "collections-publisher",
+  "publishing_scheduled_at": null,
+  "rendering_app": "collections",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "coronavirus_landing_page",
+  "title": "Coronavirus (COVID-19): guidance and support",
+  "updated_at": "2021-06-17T16:01:28.008Z",
+  "withdrawn_notice": {},
+  "publishing_request_id": "10052-1623943398.697-10.13.2.197-1941",
+  "links": {
+    "suggested_ordered_related_items": [
+      {
+        "content_id": "49ee9965-ec01-4aee-9a5b-5c47677bdf9e",
+        "title": "(COVID-19) Coronavirus restrictions: what you can and cannot do",
+        "locale": "en",
+        "api_path": "/api/content/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do",
+        "base_path": "/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do",
+        "document_type": "detailed_guide",
+        "public_updated_at": "2021-06-17T16:01:26Z",
+        "schema_name": "detailed_guide",
+        "withdrawn": false,
+        "links": {},
+        "api_url": "https://www.gov.uk/api/content/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do",
+        "web_url": "https://www.gov.uk/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do"
+      },
+      {
+        "content_id": "a1b629f2-7a91-442d-9471-d2f433e9c2c7",
+        "title": "Red, amber and green list rules for entering England",
+        "locale": "en",
+        "api_path": "/api/content/guidance/red-amber-and-green-list-rules-for-entering-england",
+        "base_path": "/guidance/red-amber-and-green-list-rules-for-entering-england",
+        "document_type": "detailed_guide",
+        "public_updated_at": "2021-06-08T03:00:14Z",
+        "schema_name": "detailed_guide",
+        "withdrawn": false,
+        "links": {},
+        "api_url": "https://www.gov.uk/api/content/guidance/red-amber-and-green-list-rules-for-entering-england",
+        "web_url": "https://www.gov.uk/guidance/red-amber-and-green-list-rules-for-entering-england"
+      },
+      {
+        "content_id": "0d98c535-560f-4caa-88c9-9ce2893c0a9b",
+        "title": "Report a COVID-19 rapid lateral flow test result",
+        "locale": "en",
+        "api_path": "/api/content/report-covid19-result",
+        "base_path": "/report-covid19-result",
+        "document_type": "transaction",
+        "public_updated_at": "2021-01-27T12:32:56Z",
+        "schema_name": "transaction",
+        "withdrawn": false,
+        "links": {},
+        "api_url": "https://www.gov.uk/api/content/report-covid19-result",
+        "web_url": "https://www.gov.uk/report-covid19-result"
+      },
+      {
+        "content_id": "a72b941c-a74e-44a0-b0c3-e00b005f2fe4",
+        "title": "Quarantine and testing if you've been in an amber list country",
+        "locale": "en",
+        "api_path": "/api/content/guidance/how-to-quarantine-when-you-arrive-in-england",
+        "base_path": "/guidance/how-to-quarantine-when-you-arrive-in-england",
+        "document_type": "detailed_guide",
+        "public_updated_at": "2021-05-17T03:00:15Z",
+        "schema_name": "detailed_guide",
+        "withdrawn": false,
+        "links": {},
+        "api_url": "https://www.gov.uk/api/content/guidance/how-to-quarantine-when-you-arrive-in-england",
+        "web_url": "https://www.gov.uk/guidance/how-to-quarantine-when-you-arrive-in-england"
+      },
+      {
+        "content_id": "f4f2c99e-6d0a-4f2f-b3d0-ff2d00e33887",
+        "title": "Personal tax account: sign in or set up",
+        "locale": "en",
+        "api_path": "/api/content/personal-tax-account",
+        "base_path": "/personal-tax-account",
+        "document_type": "transaction",
+        "public_updated_at": "2017-10-12T10:04:48Z",
+        "schema_name": "transaction",
+        "withdrawn": false,
+        "links": {},
+        "api_url": "https://www.gov.uk/api/content/personal-tax-account",
+        "web_url": "https://www.gov.uk/personal-tax-account"
+      }
+    ],
+    "taxons": [
+      {
+        "content_id": "5c37c642-d4dc-43ff-a7af-3fb30e18c642",
+        "title": "Rules and restrictions during coronavirus",
+        "locale": "en",
+        "api_path": "/api/content/coronavirus-taxon/rules-and-restrictions",
+        "base_path": "/coronavirus-taxon/rules-and-restrictions",
+        "document_type": "taxon",
+        "public_updated_at": "2020-11-19T09:44:53Z",
+        "schema_name": "taxon",
+        "withdrawn": false,
+        "description": "",
+        "details": {
+          "internal_name": "Rules and restrictions during coronavirus",
+          "notes_for_editors": "",
+          "visible_to_departmental_editors": false
+        },
+        "phase": "live",
+        "links": {
+          "parent_taxons": [
+            {
+              "content_id": "5b7b9532-a775-4bd2-a3aa-6ce380184b6c",
+              "title": "Coronavirus (COVID-19)",
+              "locale": "en",
+              "api_path": "/api/content/coronavirus-taxon",
+              "base_path": "/coronavirus-taxon",
+              "document_type": "taxon",
+              "public_updated_at": "2020-05-19T06:54:07Z",
+              "schema_name": "taxon",
+              "withdrawn": false,
+              "description": "",
+              "details": {
+                "internal_name": "Coronavirus (COVID-19)",
+                "notes_for_editors": "",
+                "visible_to_departmental_editors": true
+              },
+              "phase": "live",
+              "links": {
+                "root_taxon": [
+                  {
+                    "content_id": "f3bbdec2-0e62-4520-a7fd-6ffd5d36e03a",
+                    "title": "GOV.UK homepage",
+                    "locale": "en",
+                    "api_path": "/api/content/",
+                    "base_path": "/",
+                    "document_type": "homepage",
+                    "public_updated_at": "2019-06-21T11:52:37Z",
+                    "schema_name": "homepage",
+                    "withdrawn": false,
+                    "links": {},
+                    "api_url": "https://www.gov.uk/api/content/",
+                    "web_url": "https://www.gov.uk/"
+                  }
+                ]
+              },
+              "api_url": "https://www.gov.uk/api/content/coronavirus-taxon",
+              "web_url": "https://www.gov.uk/coronavirus-taxon"
+            }
+          ]
+        },
+        "api_url": "https://www.gov.uk/api/content/coronavirus-taxon/rules-and-restrictions",
+        "web_url": "https://www.gov.uk/coronavirus-taxon/rules-and-restrictions"
+      }
+    ],
+    "available_translations": [
+      {
+        "title": "Coronavirus (COVID-19): guidance and support",
+        "public_updated_at": "2020-12-23T15:27:18Z",
+        "document_type": "coronavirus_landing_page",
+        "schema_name": "coronavirus_landing_page",
+        "base_path": "/coronavirus",
+        "api_path": "/api/content/coronavirus",
+        "withdrawn": false,
+        "content_id": "774cee22-d896-44c1-a611-e3109cce8eae",
+        "locale": "en",
+        "api_url": "https://www.gov.uk/api/content/coronavirus",
+        "web_url": "https://www.gov.uk/coronavirus",
+        "links": {}
+      }
+    ]
+  },
+  "description": "Find information on coronavirus, including guidance, support, announcements and statistics.",
+  "details": {
+    "guidance": "DO NOT USE THIS",
+    "sections": [
+      {
+        "title": "The rules and roadmap",
+        "sub_sections": [
+          {
+            "list": [
+              {
+                "url": "/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae",
+                "label": "Find out what the rules are",
+                "description": "Coronavirus restrictions remain in place. Find out what you can and cannot do.",
+                "featured_link": true
+              }
+            ],
+            "title": null
+          },
+          {
+            "list": [
+              {
+                "url": "/government/publications/guidance-on-shielding-and-protecting-extremely-vulnerable-persons-from-covid-19?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae",
+                "label": "How to protect yourself if you're clinically extremely vulnerable: for people who were shielding"
+              }
+            ],
+            "title": null
+          },
+          {
+            "list": [
+              {
+                "url": "/government/publications/covid-19-response-spring-2021/covid-19-response-spring-2021-summary?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae",
+                "label": "Read the roadmap: what is changing and when"
+              }
+            ],
+            "title": "The roadmap out of lockdown in England"
+          },
+          {
+            "list": [
+              {
+                "url": "/guidance/meeting-friends-and-family-covid-19?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae",
+                "label": "Meeting friends and family: what you can do to make it safer"
+              }
+            ],
+            "title": "How to meet friends and family safely"
+          }
+        ]
+      },
+      {
+        "title": "Testing and self-isolating",
+        "sub_sections": [
+          {
+            "list": [
+              {
+                "url": "https://www.nhs.uk/conditions/coronavirus-covid-19/testing/get-tested-for-coronavirus/",
+                "label": "Find out which coronavirus test you should get on NHS.UK",
+                "description": "Find out about the different types of coronavirus (COVID-19) test and how to get tested.",
+                "featured_link": true
+              }
+            ],
+            "title": null
+          },
+          {
+            "list": [
+              {
+                "url": "/get-coronavirus-test?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae",
+                "label": "Get a COVID-19 test if you have symptoms"
+              },
+              {
+                "url": "/order-coronavirus-rapid-lateral-flow-tests?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae",
+                "label": "Order rapid lateral flow tests if you do not have symptoms"
+              },
+              {
+                "url": "/guidance/surge-testing-for-new-coronavirus-covid-19-variants?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae",
+                "label": "Surge testing for people without symptoms: how to get a test, and locations in England"
+              },
+              {
+                "url": "https://www.nhs.uk/conditions/coronavirus-covid-19/testing/regular-rapid-coronavirus-tests-if-you-do-not-have-symptoms",
+                "label": "Find out about regular rapid lateral flow tests if you do not have symptoms on NHS.UK"
+              },
+              {
+                "url": "/report-covid19-result?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae",
+                "label": "Report a test result from a lateral flow test kit"
+              },
+              {
+                "url": "https://test-for-coronavirus.service.gov.uk/register/validate-code",
+                "label": "Book a test if you have a verification code"
+              }
+            ],
+            "title": "Getting tested"
+          },
+          {
+            "list": [
+              {
+                "url": "/test-and-trace-support-payment?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae",
+                "label": "Self-isolating: check if you can get a £500 Test and Trace Support Payment"
+              },
+              {
+                "url": "/government/publications/covid-19-stay-at-home-guidance?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae",
+                "label": "Self-isolating: when someone in your household has COVID-19 symptoms or has had a positive test result"
+              },
+              {
+                "url": "/guidance/nhs-test-and-trace-how-it-works?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae",
+                "label": "NHS test and trace: what to do if you are contacted"
+              }
+            ],
+            "title": "Self-isolation"
+          }
+        ]
+      },
+      {
+        "title": "International travel",
+        "sub_sections": [
+          {
+            "list": [
+              {
+                "url": "https://www.gov.uk/travel-abroad",
+                "label": "Travel abroad: step by step",
+                "description": "Check what you need to do to travel internationally",
+                "featured_link": true
+              }
+            ],
+            "title": null
+          },
+          {
+            "list": [
+              {
+                "url": "https://www.gov.uk/guidance/red-amber-and-green-list-rules-for-entering-england?step-by-step-nav=8c0c7b83-5e0b-4bed-9121-1c394e2f96f3",
+                "label": "Check if a country is on the red, amber or green list"
+              },
+              {
+                "url": "/uk-border-control?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae",
+                "label": "Entering or returning to the UK"
+              },
+              {
+                "url": "https://www.gov.uk/provide-journey-contact-details-before-travel-uk",
+                "label": "Fill in your passenger locator form"
+              }
+            ],
+            "title": null
+          }
+        ]
+      },
+      {
+        "title": "Vaccination",
+        "sub_sections": [
+          {
+            "list": [
+              {
+                "url": "https://www.nhs.uk/conditions/coronavirus-covid-19/coronavirus-vaccination/",
+                "label": "COVID-19 vaccination information on NHS.UK",
+                "description": "Find out who can get the vaccine, how to book or manage your appointment, information on vaccine safety, and vaccines in England, Wales, Scotland and Northern Ireland.",
+                "featured_link": true
+              }
+            ],
+            "title": null
+          },
+          {
+            "list": [
+              {
+                "url": "https://www.england.nhs.uk/london/our-work/covid-19-vaccine-communication-materials/",
+                "label": "Vaccination information in other languages, including Punjabi, Arabic and Bengali on NHS England"
+              }
+            ],
+            "title": null
+          }
+        ]
+      },
+      {
+        "title": "Self-employment and businesses",
+        "sub_sections": [
+          {
+            "list": [
+              {
+                "url": "/coronavirus/business-support?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae",
+                "label": "Getting financial help and keeping your business safe",
+                "description": "Get coronavirus (COVID-19) support for your business or if you’re self-employed, and find out how to keep your business and your employees safe.",
+                "featured_link": true
+              }
+            ],
+            "title": null
+          },
+          {
+            "list": [
+              {
+                "url": "/guidance/claim-a-grant-through-the-coronavirus-covid-19-self-employment-income-support-scheme?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae",
+                "label": "Check if you can claim a  Self-Employment Income Support Scheme (SEISS) grant"
+              },
+              {
+                "url": "/guidance/check-if-your-business-is-eligible-for-a-coronavirus-grant-due-to-national-restrictions-for-closed-businesses?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae",
+                "label": "Your business has had to close: check if you can get a grant"
+              },
+              {
+                "url": "/business-coronavirus-support-finder?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae",
+                "label": "Financial support for businesses and self-employed people"
+              },
+              {
+                "url": "/get-workplace-coronavirus-tests?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae",
+                "label": "Register to order rapid lateral flow tests for your employees"
+              },
+              {
+                "url": "/guidance/working-safely-during-coronavirus-covid-19?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae",
+                "label": "How to make your workplace COVID-secure"
+              }
+            ],
+            "title": "Popular content"
+          }
+        ]
+      },
+      {
+        "title": "Work and support",
+        "sub_sections": [
+          {
+            "list": [
+              {
+                "url": "/coronavirus/worker-support?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae",
+                "label": "Getting financial help and staying safe at work",
+                "description": "Get coronavirus (COVID-19) support if you’re working less or not working, need other support - and find out how to stay safe at work.",
+                "featured_link": true
+              }
+            ],
+            "title": null
+          },
+          {
+            "list": [
+              {
+                "url": "/find-coronavirus-support?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae",
+                "label": "Find coronavirus support if, for example, you need to get food, or want to take care of your mental health"
+              },
+              {
+                "url": "/tax-relief-for-employees/working-at-home?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae",
+                "label": "Claim tax relief for working from home"
+              },
+              {
+                "url": "/guidance/check-if-you-could-be-covered-by-the-coronavirus-job-retention-scheme?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae",
+                "label": "Furlough: check if your employer can put you on temporary paid leave"
+              },
+              {
+                "url": "/test-and-trace-support-payment?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae",
+                "label": "Apply for a Test and Trace Support Payment"
+              },
+              {
+                "url": "https://www.citizensadvice.org.uk/work/coronavirus-if-youre-worried-about-working",
+                "label": "Citizens Advice: advice if you’re worried about working"
+              }
+            ],
+            "title": "Popular content"
+          }
+        ]
+      },
+      {
+        "title": "Schools, universities, education and childcare",
+        "sub_sections": [
+          {
+            "list": [
+              {
+                "url": "/coronavirus/education-and-childcare?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae",
+                "label": "Guidance for teachers, school leaders, carers, parents and students",
+                "description": "Coronavirus (COVID-19) information about schools, nurseries, colleges and universities.",
+                "featured_link": true
+              }
+            ],
+            "title": null
+          },
+          {
+            "list": [
+              {
+                "url": "/order-coronavirus-rapid-lateral-flow-tests?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae",
+                "label": "Order rapid lateral flow tests if you’re a parent or carer"
+              },
+              {
+                "url": "/government/publications/what-parents-and-carers-need-to-know-about-early-years-providers-schools-and-colleges-during-the-coronavirus-covid-19-outbreak?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae",
+                "label": "Parents and carers: what you need to know"
+              }
+            ],
+            "title": null
+          }
+        ]
+      }
+    ],
+    "timeline": {
+      "list": [
+        {
+          "heading": "International travel",
+          "national_applicability": ["england", "northern_ireland", "scotland"],
+          "paragraph": "You should not travel to red or amber list countries or territories.\r\n[Check what you need to do to travel internationally](https://www.gov.uk/travel-abroad).\r\n"
+        },
+        {
+          "heading": "In England",
+          "national_applicability": ["england"],
+          "paragraph": "From 21 June, there’s a 4-week pause at Step 3 of the roadmap. After 2 weeks, the government will review the data to see if the risks have reduced. It's expected that England will move to Step 4 on 19 July.\r\n\r\nStep 3 restrictions remain in place - follow the [guidance on what you can and cannot do](/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do). \r\n\r\nThe Delta COVID-19 variant is spreading in England. [See where it's spreading fastest and find out what you should do](/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do).\r\n"
+        },
+        {
+          "heading": "In Scotland",
+          "national_applicability": ["scotland"],
+          "paragraph": "From 5 June, many areas are changing COVID-19 protection levels. Find out [your area's level in Scotland on GOV.SCOT](https://www.gov.scot/publications/coronavirus-covid-19-protection-levels/)."
+        },
+        {
+          "heading": "In Northern Ireland",
+          "national_applicability": ["northern_ireland"],
+          "paragraph": "You can now socialise indoors in a group of up to 6 people from no more than 2 households, including for overnight stays. Up to 15 people from no more than 3 households can meet in a private garden. Shops, hairdressers and visitor attractions can reopen as well as indoor areas of pubs and restaurants. Read the [guidance on current restrictions on nidirect](https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you). \r\n"
+        }
+      ],
+      "heading": "Recent and upcoming changes",
+      "summary": "Restrictions are easing across the UK."
+    },
+    "nhs_banner": {
+      "sections": [
+        {
+          "heading": "If you have no symptoms:",
+          "markdown": "[Get regular rapid lateral flow tests](https://www.nhs.uk/conditions/coronavirus-covid-19/testing/regular-rapid-coronavirus-tests-if-you-do-not-have-symptoms/).\n"
+        },
+        {
+          "heading": "If you have coronavirus symptoms:",
+          "markdown": "- [get a PCR test](/get-coronavirus-test)\n- stay at home\n"
+        }
+      ]
+    },
+    "risk_level": {
+      "link": {
+        "href": "/risk-level",
+        "text": "Read more about COVID-19 alert levels"
+      },
+      "heading": "COVID-19 alert level",
+      "bold_text": "Level X of 5",
+      "paragraph": "Level X of 5 – there is something happening",
+      "show_risk_level_section": false
+    },
+    "page_header": "Coronavirus (COVID&#8209;19)",
+    "stay_at_home": "DO NOT USE THIS",
+    "announcements": [
+      {
+        "href": "/government/news/everyone-working-in-care-homes-to-be-fully-vaccinated-under-new-law-to-protect-residents",
+        "text": "Everyone working in care homes to be fully vaccinated against COVID-19",
+        "published_text": "Published 16 June 2021"
+      },
+      {
+        "href": "https://www.england.nhs.uk/2021/06/21-and-22-year-olds-to-be-offered-covid-19-jab-from-today/",
+        "text": "People aged 21 and 22 can book their first COVID-19 vaccine (NHS England website)",
+        "published_text": "Published 16 June 2021"
+      },
+      {
+        "href": "/government/speeches/pm-statement-at-coronavirus-press-conference-14-june-2021",
+        "text": "Prime Minister's statement at coronavirus press conference on 14 June 2021",
+        "published_text": "Published 14 June 2021"
+      },
+      {
+        "href": "/government/news/confirmed-cases-of-covid-19-variants-identified-in-uk",
+        "text": "Public Health England (PHE) releases updates on the number of confirmed new cases of variants",
+        "published_text": "Published 11 June 2021"
+      }
+    ],
+    "notifications": {
+      "intro": "Stay up to date with GOV.UK",
+      "email_url": "/email-signup?topic=/coronavirus-taxon",
+      "email_link": "Sign up to get emails when we change any coronavirus information on the GOV.UK website"
+    },
+    "topic_section": {
+      "links": [
+        {
+          "url": "/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&content_purpose_supergroup%5B%5D=guidance_and_regulation&order=updated-newest",
+          "label": "Guidance"
+        },
+        {
+          "url": "/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&content_purpose_supergroup%5B%5D=news_and_communications&order=updated-newest",
+          "label": "News"
+        },
+        {
+          "url": "https://www.legislation.gov.uk/coronavirus",
+          "label": "Legislation (legislation.gov.uk)"
+        },
+        {
+          "url": "https://www.youtube.com/user/Number10gov/videos",
+          "label": "Press conferences (YouTube)"
+        },
+        {
+          "url": "/government/collections/slides-and-datasets-to-accompany-coronavirus-press-conferences#transcripts",
+          "label": "Press conference statements"
+        }
+      ],
+      "header": "All coronavirus information on GOV.UK"
+    },
+    "explainer_text": null,
+    "header_section": {
+      "link": {
+        "href": "/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do",
+        "link_text": "Find out the rules on what you can and",
+        "link_nowrap_text": "cannot do"
+      },
+      "intro": "- You can meet indoors in a group of up to 6 people or a group of any size from 2 households \n- You can meet outside in a group of up to 30 people\n- Work from home if you can and travel safely\n- If you have symptoms get a test and stay at&nbsp;home\n",
+      "title": "Coronavirus restrictions remain in place across the country, including for people who have been vaccinated. In England:"
+    },
+    "explainer_title": null,
+    "sections_heading": "Guidance and support",
+    "statistics_section": {
+      "links": [
+        {
+          "url": "https://coronavirus.data.gov.uk/",
+          "label": "Daily summary of coronavirus testing, cases and vaccinations"
+        },
+        {
+          "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases",
+          "label": "Data and trends from the Office for National Statistics (ONS)"
+        },
+        {
+          "url": "/guidance/coronavirus-covid-19-statistics-and-analysis",
+          "label": "All data and analysis on coronavirus"
+        },
+        {
+          "url": "/government/collections/coronavirus-cases-by-local-authority-epidemiological-data",
+          "label": "Coronavirus cases by local authority"
+        }
+      ],
+      "header": "UK statistics",
+      "new_positive_tests": {
+        "title": "Daily new cases",
+        "guidance_link": {
+          "url": "https://coronavirus.data.gov.uk/details/cases",
+          "label": "Cases data from the coronavirus data dashboard"
+        },
+        "statistic_meaning": "people tested positive with COVID-19"
+      },
+      "hospital_admissions": {
+        "title": "Daily hospital admissions",
+        "guidance_link": {
+          "url": "https://coronavirus.data.gov.uk/details/healthcare",
+          "label": "Healthcare data from the coronavirus data dashboard"
+        },
+        "statistic_meaning": "new patients have been admitted to hospital"
+      },
+      "cumulative_vaccinations": {
+        "title": "Total vaccinations",
+        "guidance_link": {
+          "url": "https://coronavirus.data.gov.uk/details/vaccinations",
+          "label": "Vaccination data from the coronavirus data dashboard"
+        },
+        "statistic_meaning": "people have received their first dose"
+      }
+    },
+    "announcements_label": "Announcements",
+    "hidden_search_terms": [
+      "The rules and roadmap",
+      "Find out what the rules are",
+      "How to protect yourself if you're clinically extremely vulnerable: for people who were shielding",
+      "The roadmap out of lockdown in England",
+      "Read the roadmap: what is changing and when",
+      "How to meet friends and family safely",
+      "Meeting friends and family: what you can do to make it safer",
+      "Testing and self-isolating",
+      "Find out which coronavirus test you should get on NHS.UK",
+      "Getting tested",
+      "Get a COVID-19 test if you have symptoms",
+      "Order rapid lateral flow tests if you do not have symptoms",
+      "Surge testing for people without symptoms: how to get a test, and locations in England",
+      "Find out about regular rapid lateral flow tests if you do not have symptoms on NHS.UK",
+      "Report a test result from a lateral flow test kit",
+      "Book a test if you have a verification code",
+      "Self-isolation",
+      "Self-isolating: check if you can get a £500 Test and Trace Support Payment",
+      "Self-isolating: when someone in your household has COVID-19 symptoms or has had a positive test result",
+      "NHS test and trace: what to do if you are contacted",
+      "International travel",
+      "Travel abroad: step by step",
+      "Check if a country is on the red, amber or green list",
+      "Entering or returning to the UK",
+      "Fill in your passenger locator form",
+      "Vaccination",
+      "COVID-19 vaccination information on NHS.UK",
+      "Vaccination information in other languages, including Punjabi, Arabic and Bengali on NHS England",
+      "Self-employment and businesses",
+      "Getting financial help and keeping your business safe",
+      "Popular content",
+      "Check if you can claim a  Self-Employment Income Support Scheme (SEISS) grant",
+      "Your business has had to close: check if you can get a grant",
+      "Financial support for businesses and self-employed people",
+      "Register to order rapid lateral flow tests for your employees",
+      "How to make your workplace COVID-secure",
+      "Work and support",
+      "Getting financial help and staying safe at work",
+      "Find coronavirus support if, for example, you need to get food, or want to take care of your mental health",
+      "Claim tax relief for working from home",
+      "Furlough: check if your employer can put you on temporary paid leave",
+      "Apply for a Test and Trace Support Payment",
+      "Citizens Advice: advice if you’re worried about working",
+      "Schools, universities, education and childcare",
+      "Guidance for teachers, school leaders, carers, parents and students",
+      "Order rapid lateral flow tests if you’re a parent or carer",
+      "Parents and carers: what you need to know",
+      "International travel",
+      "You should not travel to red or amber list countries or territories. Check what you need to do to travel internationally.",
+      "In England",
+      "From 21 June, there’s a 4-week pause at Step 3 of the roadmap. After 2 weeks, the government will review the data to see if the risks have reduced. It’s expected that England will move to Step 4 on 19 July. Step 3 restrictions remain in place - follow the guidance on what you can and cannot do. The Delta COVID-19 variant is spreading in England. See where it’s spreading fastest and find out what you should do.",
+      "In Scotland",
+      "From 5 June, many areas are changing COVID-19 protection levels. Find out your area’s level in Scotland on GOV.SCOT.",
+      "In Wales",
+      "From 7 June, you can choose 2 other households to meet indoors, becoming an extended household. Up to 30 people can meet outside, including in gardens and pubs. Read the rules for Wales on GOV.WALES.",
+      "In Northern Ireland",
+      "You can now socialise indoors in a group of up to 6 people from no more than 2 households, including for overnight stays. Up to 15 people from no more than 3 households can meet in a private garden. Shops, hairdressers and visitor attractions can reopen as well as indoor areas of pubs and restaurants. Read the guidance on current restrictions on nidirect."
+    ],
+    "see_all_announcements_link": {
+      "href": "/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&content_purpose_supergroup%5B%5D=news_and_communications&order=updated-newest",
+      "text": "See all announcements"
+    },
+    "additional_country_guidance": {
+      "text": "See specific guidance for",
+      "intro": "See [all coronavirus guidance on GOV.UK](/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&content_purpose_supergroup%5B%5D=guidance_and_regulation&order=updated-newest)\n",
+      "links": [
+        {
+          "url": "https://www.gov.scot/coronavirus-covid-19/",
+          "label": "Scotland"
+        },
+        {
+          "url": "https://gov.wales/coronavirus",
+          "label": "Wales"
+        },
+        {
+          "url": "https://www.nidirect.gov.uk/campaigns/coronavirus-covid-19",
+          "label": "Northern Ireland"
+        }
+      ]
+    },
+    "special_announcement_schema": {
+      "category": "https://www.wikidata.org/wiki/Q81068910",
+      "travel_bans_url": "https://www.gov.uk/guidance/travel-advice-novel-coronavirus",
+      "getting_tested_info_url": "https://www.gov.uk/apply-coronavirus-test",
+      "school_closures_info_url": "https://www.gov.uk/check-school-closure",
+      "quarantine_guidelines_url": "https://www.gov.uk/government/publications/coronavirus-outbreak-faqs-what-you-can-and-cant-do/coronavirus-outbreak-faqs-what-you-can-and-cant-do",
+      "disease_prevention_info_url": "https://www.nhs.uk/conditions/coronavirus-covid-19/",
+      "disease_spread_statistics_url": "https://www.gov.uk/government/publications/covid-19-track-coronavirus-cases",
+      "news_updates_and_guidelines_url": "https://www.gov.uk/coronavirus",
+      "public_transport_closures_info_url": "https://www.gov.uk/guidance/coronavirus-covid-19-uk-transport-and-travel-advice"
+    }
+  }
+}

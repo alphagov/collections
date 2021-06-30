@@ -79,6 +79,14 @@ RSpec.describe CoronavirusLandingPageController do
         expect(response.body).to have_selector("#nation-wales:not(.covid-timeline__wrapper--hidden)")
         expect(response.body).to have_selector(".covid-timeline__wrapper--hidden", count: 3)
       end
+
+      it "shows no content text when there are no timeline entries for a nation" do
+        stub_content_store_has_item("/coronavirus", coronavirus_content_item_with_timeline_national_applicability_without_wales)
+        get :show, params: { nation: "wales" }
+
+        expect(response.body).to have_content("There are no recent updates for Wales.")
+        expect(response.body).to have_content("Check the latest guidance on gov.wales")
+      end
     end
   end
 end
