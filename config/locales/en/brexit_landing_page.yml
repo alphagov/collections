@@ -59,7 +59,7 @@ en:
       read_transcript: Read the transcript for this video
     comms_header: Announcements
     data_list_title: 'Brexit landing page: %{header}'
-    email_mailto_subject: UK's%20new%20start:%20let's%20get%20going-%20GOV.UK
+    email_mailto_subject: "UK's new start: let's get going- GOV.UK"
     guidance_header: Changes for businesses and citizens
     meta_description: Find out how new Brexit rules apply to things like travel and doing business with Europe. Use the Brexit checker to get a personalised list of actions.
     meta_title: Brexit
