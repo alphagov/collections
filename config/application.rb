@@ -19,11 +19,13 @@ module Collections
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
-    config.time_zone = "London"
 
-    # Application configuration can go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded after loading
-    # the framework and any gems in your application.
+    # Configuration for the application, engines, and railties goes here.
+    #
+    # These settings can be overridden in specific environments using the files
+    # in config/environments, which are processed later.
+    #
+    config.time_zone = "London"
 
     config.i18n.default_locale = :en
     config.i18n.load_path += Dir[Rails.root.join("config/locales/**/*.yml")]
@@ -35,7 +37,7 @@ module Collections
     # when router is proxying to this app but asset proxying isn't set up.
     config.asset_host = ENV["ASSET_HOST"]
 
-    # Override Rails 4 default which restricts framing to SAMEORIGIN.
+    # Override Rails 6 default which restricts framing to SAMEORIGIN.
     config.action_dispatch.default_headers = {
       "X-Frame-Options" => "ALLOWALL",
     }
