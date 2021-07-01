@@ -27,13 +27,6 @@ en:
           public_updated_at: 2021-06-08
           document_type: Policy paper
       - link:
-          text: Apply for a grant to help small and medium-sized businesses new to importing or exporting
-          path: "/guidance/grants-to-help-small-and-medium-sized-businesses-new-to-importing-or-exporting"
-          description: The SME Brexit Support Fund could give you up to £2,000 to help with training or professional advice.
-        metadata:
-          public_updated_at: 2021-02-11
-          document_type: Guidance
-      - link:
           text: Government focuses on recovery from COVID with new timeline for border control processes on import of goods
           path: "/government/news/government-focuses-on-recovery-from-covid-with-new-timeline-for-border-control-processes-on-import-of-goods"
           description: A new timetable for introducing import border control processes has been set out by the government to enable UK businesses to focus on their recovery.
