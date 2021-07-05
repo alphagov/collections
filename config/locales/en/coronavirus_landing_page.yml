@@ -7,7 +7,7 @@ en:
         button:
           text: View
         controls:
-          status: Showing updates for
+          status_html: "Showing updates for <span class='js-current-nation covid-timeline__nation'>%{nation}</span>."
           change: Change to another nation
         radio:
           heading: Choose location

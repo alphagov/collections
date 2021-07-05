@@ -11,8 +11,7 @@
       class: "js-change-location" do |f| %>
 
       <p class="govuk-body">
-        <%=t("coronavirus_landing_page.show.timeline.controls.status") %>
-        <span class="js-current-nation covid-timeline__nation"><%= details.selected_nation.titleize %></span>.
+        <%=t("coronavirus_landing_page.show.timeline.controls.status_html", nation: details.selected_nation.titleize) %>
       </p>
 
       <%= render "govuk_publishing_components/components/details", {
