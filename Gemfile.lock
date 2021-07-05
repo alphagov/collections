@@ -253,7 +253,7 @@ GEM
     middleware (0.1.0)
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2021.0225)
+    mime-types-data (3.2021.0704)
     mini_mime (1.1.0)
     mini_portile2 (2.5.3)
     minitest (5.14.4)
@@ -455,7 +455,7 @@ GEM
     simplecov-html (0.12.2)
     simplecov-rcov (0.2.3)
       simplecov (>= 0.4.1)
-    slimmer (15.5.1)
+    slimmer (15.6.1)
       activesupport
       json
       nokogiri (~> 1.7)
