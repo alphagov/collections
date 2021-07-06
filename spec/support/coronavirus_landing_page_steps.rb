@@ -84,7 +84,6 @@ module CoronavirusLandingPageSteps
   end
 
   def when_i_click_on_wales
-    find("span", text: "Change to another nation").click
     choose "Wales"
   end
 
