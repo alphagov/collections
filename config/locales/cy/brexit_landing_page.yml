@@ -4,7 +4,14 @@ cy:
     meta_description: Darganfyddwch sut mae’r rheolau newydd yn effeithio arnoch chi
     meta_title: Brexit
     page_header: Brexit
-    page_header_explainer: Mae rheolau newydd yn berthnasol ar gyfer theithio a gwneud busnes â Ewrop. Defnyddiwch yr adnodd gwirio Brexit i dderbyn rhestr o gamau personol i chi, eich busnes, a’ch teulu.
+    page_header_explainer: Canfod sut mae rheolau newydd Brexit yn berthnasol i bethau megis teithio a gwneud busnes gydag Ewrop.
+    page_header_links:
+      guidance_for_businesses:
+        text: Canllawiau i fusnesau
+        path: "/guidance/brexit-guidance-for-businesses.cy"
+      guidance_for_individuals_and_families:
+        text: "Canllawiau i unigolion a theuluoedd"
+        path: "/guidance/brexit-guidance-for-individuals-and-families.cy"
     sections:
       aria_string_suffix: ''
       guidance_and_regulation: Canllawiau a rheoliadau
@@ -17,7 +24,17 @@ cy:
       amber: Newidiwch
       green: Ewch
       red: Gwiriwch
-    take_action_start_now: 'Adnodd gwirio Brexit: dechreuwch nawr'
+    take_action_heading: Gwiriwch sut mae Brexit yn effeithio arnoch chi
+    take_action_explainer: Defnyddiwch gwiriwr Brexit i gael rhestr bersonol o gamau gweithredu i chi, eich busnes a’ch teulu.
+    take_action_start_now: 'Gwiriwr Brexit: dechreuwch nawr'
     take_action_start_now_link: "/transition-check/questions"
+    trade_deal_heading: Cytundeb masnach y DU a’r UE
+    trade_deal_links:
+    - text: "Crynodeb: Perthynas newydd y DU â’r UE"
+      path: "/government/publications/summary-the-uks-new-relationship-with-the-eu"
+      explainer: Mae’r crynodeb hwn o gytundeb masnach y DU a’r UE yn rhoi golwg gyffredinol o’r hyn sydd wedi newid, a’r hyn sy’n aros yr un fath ar ôl Brexit.
+    - text: "Protocol Gogledd Iwerddon"
+      path: "/government/publications/the-northern-ireland-protocol"
+      explainer: Manylion y cytundeb a wnaed gan Gyd-bwyllgor y Cytundeb Ymadael ar gyfer symud nwyddau i Ogledd Iwerddon, allan ohoni neu drwyddi.
     topic_section_header: Yr holl wybodaeth am y cyfnod pontio
     topic_section_subheading: Pori’r holl wybodaeth sy’n berthnasol i’r cyfnod pontio
