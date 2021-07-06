@@ -13,12 +13,13 @@
       <%= render "govuk_publishing_components/components/radio", {
         name: "nation",
         heading: t("coronavirus_landing_page.show.timeline.radio.heading"),
-        margin_bottom: 0,
+        margin_bottom: 7,
         items: details.timeline_nations_items
       } %>
       <div class="covid-timeline__button-wrapper">
         <%= render "govuk_publishing_components/components/button", {
-          text: t("coronavirus_landing_page.show.timeline.button.text")
+          text: t("coronavirus_landing_page.show.timeline.button.text"),
+          margin_bottom: 7
         } %>
       </div>
     <% end %>
