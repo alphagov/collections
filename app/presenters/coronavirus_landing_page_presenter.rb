@@ -16,12 +16,18 @@ class CoronavirusLandingPagePresenter
     timeline
   ].freeze
 
-  def initialize(content_item)
+  UK_NATIONS = %w[england northern_ireland scotland wales].freeze
+
+  attr_reader :selected_nation
+
+  def initialize(content_item, selected_nation = nil)
     COMPONENTS.each do |component|
       define_singleton_method component do
         content_item["details"][component]
       end
     end
+
+    @selected_nation = UK_NATIONS.include?(selected_nation) ? selected_nation : "england"
   end
 
   def faq_schema(content_item)
@@ -32,6 +38,32 @@ class CoronavirusLandingPagePresenter
       "description": content_item["description"],
       "mainEntity": build_faq_main_entity(content_item),
     }
+  end
+
+  def show_timeline_nations?
+    timeline["list"].any? { |item| item["national_applicability"] }
+  end
+
+  def timeline_nations_items
+    UK_NATIONS.map do |value|
+      {
+        value: value,
+        text: value.titleize,
+        checked: selected_nation == value,
+        data_attributes: {
+          module: "gem-track-click",
+          track_category: "pageElementInteraction",
+          track_action: "TimelineNation",
+          track_label: value.titleize,
+        },
+      }
+    end
+  end
+
+  def timelines_for_nation
+    UK_NATIONS.map do |nation|
+      [nation, timeline_for_nation(nation)]
+    end
   end
 
 private
@@ -69,5 +101,29 @@ private
       question_and_answers.push question_and_answer_schema(question, answers_text)
     end
     question_and_answers
+  end
+
+  def timeline_for_nation(nation)
+    entries = timeline["list"].select { |item| item["national_applicability"].include?(nation) }
+
+    entries.map do |entry|
+      entry.merge!("tags" => timeline_nation_tags(entry["national_applicability"]))
+    end
+  end
+
+  def timeline_nation_tags(national_applicability)
+    if uk_wide?(national_applicability)
+      "<strong class='govuk-tag govuk-tag--blue covid-timeline__tag'>UK Wide</strong>".html_safe
+    else
+      nation_tags = national_applicability.map do |nation|
+        "<strong class='govuk-tag govuk-tag--blue covid-timeline__tag'>#{nation.titleize}</strong>"
+      end
+
+      nation_tags.join(" ").html_safe
+    end
+  end
+
+  def uk_wide?(national_applicability)
+    UK_NATIONS.sort == national_applicability.uniq.sort
   end
 end

@@ -261,6 +261,27 @@ $c19-landing-page-header-background: govuk-colour("blue");
   margin-bottom: govuk-spacing(1);
 }
 
+.covid-timeline__nation {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.covid-timeline__wrapper--hidden {
+  display: none;
+}
+
+.covid-timeline__tag {
+  margin-left: govuk-spacing(1);
+}
+
+.covid-timeline__button-wrapper {
+  margin-top: govuk-spacing(4);
+
+  .js-enabled & {
+    display: none;
+  }
+}
+
 .covid__logo-wrapper {
   margin-bottom: govuk-spacing(6);
   text-align: center;

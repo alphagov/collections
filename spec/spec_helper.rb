@@ -27,6 +27,8 @@ WebMock.disable_net_connect!(
   allow: ["chromedriver.storage.googleapis.com"],
 )
 
+Capybara.automatic_label_click = true
+
 Dir[Rails.root.join("spec/support/**/*.rb")].sort.each { |f| require f }
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration

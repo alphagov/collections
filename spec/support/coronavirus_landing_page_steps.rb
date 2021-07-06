@@ -6,6 +6,10 @@ module CoronavirusLandingPageSteps
   include GdsApi::TestHelpers::ContentItemHelpers
   include SearchApiHelpers
 
+  def self.included(mod)
+    mod.include(ActionView::Helpers::SanitizeHelper)
+  end
+
   CORONAVIRUS_PATH = "/coronavirus".freeze
   BUSINESS_PATH = "/coronavirus/business-support".freeze
   EDUCATION_PATH = "/coronavirus/education".freeze
@@ -25,6 +29,10 @@ module CoronavirusLandingPageSteps
 
   def given_there_is_a_content_item_with_risk_level_element_not_enabled
     stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item_with_risk_level_element_not_enabled)
+  end
+
+  def given_there_is_a_content_item_with_timeline_national_applicability
+    stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item_with_timeline_national_applicability)
   end
 
   def given_there_is_a_business_content_item
@@ -75,6 +83,15 @@ module CoronavirusLandingPageSteps
     visit OTHER_SUBTAXON_PATH
   end
 
+  def when_i_click_on_wales
+    find("span", text: "Change to another nation").click
+    choose "Wales"
+  end
+
+  def and_i_submit_my_nation
+    click_on "View"
+  end
+
   def then_i_am_redirected_to_the_landing_page
     expect(page.current_path).to eq "/coronavirus"
   end
@@ -122,6 +139,18 @@ module CoronavirusLandingPageSteps
 
     expect(page).to have_selector(".covid-timeline .gem-c-heading", text: "24 July")
     expect(page).to have_selector(".covid-timeline__item .gem-c-govspeak", text: "Face coverings are mandatory in shops")
+  end
+
+  def then_i_can_see_the_timeline_for_england
+    expect(page).to have_content(strip_tags(I18n.t("coronavirus_landing_page.show.timeline.controls.status_html", nation: "England")))
+    expect(page).to have_selector("#nation-england:not(.covid-timeline__wrapper--hidden)")
+    expect(page).to have_selector(".covid-timeline__wrapper--hidden", count: 3, visible: false)
+  end
+
+  def then_i_can_see_the_timeline_for_wales
+    expect(page).to have_content(strip_tags(I18n.t("coronavirus_landing_page.show.timeline.controls.status_html", nation: "Wales")))
+    expect(page).to have_selector("#nation-wales:not(.covid-timeline__wrapper--hidden)")
+    expect(page).to have_selector(".covid-timeline__wrapper--hidden", count: 3, visible: false)
   end
 
   def then_i_can_see_the_accordions

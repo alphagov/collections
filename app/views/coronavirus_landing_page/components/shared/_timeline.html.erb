@@ -1,23 +1,88 @@
 <div class="covid-timeline" data-module="track-links" data-track-category="pageElementInteraction" data-track-action="Timeline">
   <%= render "govuk_publishing_components/components/heading", {
-    text: timeline["heading"],
+    text: details.timeline["heading"],
     padding: true,
-    margin_bottom: 4
+    margin_bottom: 2
   } %>
 
-  <% if timeline["summary"] %>
-    <%= render_govspeak(timeline["summary"]) %>
-  <% end %>
+  <% if details.show_timeline_nations? %>
+    <%= form_tag coronavirus_landing_page_path,
+      method: :get,
+      class: "js-change-location" do |f| %>
 
-  <% timeline["list"].each do | item | %>
-    <div class="covid-timeline__item">
-      <%= render "govuk_publishing_components/components/heading", {
-        text: item["heading"],
-        heading_level: 3,
-        font_size: "s",
-        margin_bottom: 1,
-      } %>
-      <%= render_govspeak(item["paragraph"]) %>
+      <p class="govuk-body">
+        <%=t("coronavirus_landing_page.show.timeline.controls.status_html", nation: details.selected_nation.titleize) %>
+      </p>
+
+      <%= render "govuk_publishing_components/components/details", {
+        title: t("coronavirus_landing_page.show.timeline.controls.change"),
+        data_attributes: {
+          track_category: "pageElementInteraction",
+          track_action: "TimelineNation",
+          module: "govuk-details",
+        }
+      } do %>
+        <%= render "govuk_publishing_components/components/radio", {
+          name: "nation",
+          heading: t("coronavirus_landing_page.show.timeline.radio.heading"),
+          margin_bottom: 0,
+          items: details.timeline_nations_items
+        } %>
+        <div class="covid-timeline__button-wrapper">
+          <%= render "govuk_publishing_components/components/button", {
+            text: t("coronavirus_landing_page.show.timeline.button.text")
+          } %>
+        </div>
+      <% end %>
+    <% end %>
+
+    <div aria-live="polite">
+      <% details.timelines_for_nation.each do |nation, timeline| %>
+        <div id="nation-<%= nation %>" class="js-covid-timeline <%= 'covid-timeline__wrapper--hidden' unless details.selected_nation == nation %>">
+          <% if timeline.empty? %>
+            <h3 class="govuk-heading-m"><%=t("coronavirus_landing_page.show.timeline.no_updates.heading")%></h3>
+            <p class="govuk-body"><%=t("coronavirus_landing_page.show.timeline.no_updates.body", nation: nation.titleize)%></p>
+            <% if I18n.exists?("coronavirus_landing_page.show.timeline.no_updates.#{nation}.additional_country_guidance_html") %>
+              <p class="govuk-body">
+                <%=t("coronavirus_landing_page.show.timeline.no_updates.#{nation}.additional_country_guidance_html") %>
+              </p>
+            <% end %>
+          <% else %>
+            <h3 class="govuk-heading-m govuk-visually-hidden"><%=t("coronavirus_landing_page.show.timeline.updates.heading", nation: nation.titleize)%></h3>
+          <% end %>
+          <% timeline.each do | item | %>
+            <% text = capture do %>
+              <%= item["heading"] %>
+              <%= item["tags"] %>
+            <% end %>
+            <div class="covid-timeline__item">
+              <%= render "govuk_publishing_components/components/heading", {
+                text: text,
+                heading_level: 3,
+                font_size: "s",
+                margin_bottom: 1,
+              } %>
+              <%= render_govspeak(item["paragraph"]) %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
     </div>
+  <% else %>
+    <% if details.timeline["summary"] %>
+      <%= render_govspeak(details.timeline["summary"]) %>
+    <% end %>
+
+    <% details.timeline["list"].each do | item | %>
+      <div class="covid-timeline__item">
+        <%= render "govuk_publishing_components/components/heading", {
+          text: item["heading"],
+          heading_level: 3,
+          font_size: "s",
+          margin_bottom: 1,
+        } %>
+        <%= render_govspeak(item["paragraph"]) %>
+      </div>
+    <% end %>
   <% end %>
 </div>
