@@ -76,7 +76,7 @@ RSpec.feature "Subtopic pages" do
     within ".page-header" do
       within ".gem-c-title" do
         expect(page).to have_selector(".gem-c-title__text", text: "Offshore: detailed information")
-        expect(page).to have_selector(".gem-c-title__context-link[href='/topic/oil-and-gas']", text: "Oil and Gas")
+        expect(page).to have_selector(".gem-c-title__context", text: "Oil and Gas")
       end
 
       within ".gem-c-metadata" do
@@ -111,7 +111,7 @@ RSpec.feature "Subtopic pages" do
     within ".page-header" do
       within ".gem-c-title" do
         expect(page).to have_selector(".gem-c-title__text", text: "Offshore")
-        expect(page).to have_selector(".gem-c-title__context-link[href='/topic/oil-and-gas']", text: "Oil and Gas")
+        expect(page).to have_selector(".gem-c-title__context", text: "Oil and Gas")
       end
 
       within ".gem-c-metadata" do
@@ -155,7 +155,7 @@ RSpec.feature "Subtopic pages" do
       within ".page-header" do
         within ".gem-c-title" do
           expect(page).to have_selector(".gem-c-title__text", text: "Latest documents")
-          expect(page).to have_selector(".gem-c-title__context-link[href='/topic/oil-and-gas/offshore']", text: "Offshore")
+          expect(page).to have_selector(".gem-c-title__context", text: "Offshore")
         end
 
         within ".gem-c-metadata" do
