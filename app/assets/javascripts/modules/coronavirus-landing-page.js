@@ -51,9 +51,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       })
       timelineRadios.addEventListener('change', function (e) {
         var sections = document.querySelectorAll('.js-covid-timeline')
-        var currentNation = document.querySelector('.js-current-nation')
         var nation = e.target.value
-        currentNation.innerHTML = nation.replace('_', ' ')
 
         for (var i = 0; i < sections.length; i++) {
           var show = sections[i].id === 'nation-' + nation

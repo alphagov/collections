@@ -10,30 +10,18 @@
       method: :get,
       class: "js-change-location" do |f| %>
 
-      <p class="govuk-body">
-        <%=t("coronavirus_landing_page.show.timeline.controls.status_html", nation: details.selected_nation.titleize) %>
-      </p>
-
-      <%= render "govuk_publishing_components/components/details", {
-        title: t("coronavirus_landing_page.show.timeline.controls.change"),
-        data_attributes: {
-          track_category: "pageElementInteraction",
-          track_action: "TimelineNation",
-          module: "govuk-details",
-        }
-      } do %>
-        <%= render "govuk_publishing_components/components/radio", {
-          name: "nation",
-          heading: t("coronavirus_landing_page.show.timeline.radio.heading"),
-          margin_bottom: 0,
-          items: details.timeline_nations_items
+      <%= render "govuk_publishing_components/components/radio", {
+        name: "nation",
+        heading: t("coronavirus_landing_page.show.timeline.radio.heading"),
+        margin_bottom: 7,
+        items: details.timeline_nations_items
+      } %>
+      <div class="covid-timeline__button-wrapper">
+        <%= render "govuk_publishing_components/components/button", {
+          text: t("coronavirus_landing_page.show.timeline.button.text"),
+          margin_bottom: 7
         } %>
-        <div class="covid-timeline__button-wrapper">
-          <%= render "govuk_publishing_components/components/button", {
-            text: t("coronavirus_landing_page.show.timeline.button.text")
-          } %>
-        </div>
-      <% end %>
+      </div>
     <% end %>
 
     <div aria-live="polite">
