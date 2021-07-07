@@ -27,10 +27,6 @@ module CoronavirusLandingPageSteps
     stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item_with_risk_level_element_not_enabled)
   end
 
-  def given_there_is_a_content_item_with_timeline_national_applicability
-    stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item_with_timeline_national_applicability)
-  end
-
   def given_there_is_a_business_content_item
     stub_content_store_has_item(BUSINESS_PATH, business_content_item)
   end
