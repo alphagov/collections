@@ -29,25 +29,6 @@ RSpec.describe CoronavirusLandingPageController do
     context "when testing national_applicability" do
       render_views
 
-      it "loads the production content item in production environments" do
-        allow(ContentItem).to receive(:find!).and_return(coronavirus_content_item)
-
-        expect(CoronavirusTimelineNationsContentItem).to_not receive(:load)
-        expect(ContentItem).to receive(:find!)
-
-        get :show, params: { nation: "foo" }
-      end
-
-      it "loads the fixture file in other environments" do
-        allow(Rails.env).to receive(:development?).and_return(true)
-        allow(CoronavirusTimelineNationsContentItem).to receive(:load).and_return(coronavirus_content_item_with_timeline_national_applicability)
-
-        expect(CoronavirusTimelineNationsContentItem).to receive(:load)
-        expect(ContentItem).to_not receive(:find!)
-
-        get :show, params: { nation: "foo" }
-      end
-
       it "shows timeline for England" do
         stub_content_store_has_item("/coronavirus", coronavirus_content_item_with_timeline_national_applicability)
         get :show, params: { nation: "england" }
