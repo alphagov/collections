@@ -157,14 +157,6 @@ RSpec.describe CoronavirusLandingPagePresenter do
     end
   end
 
-  describe "#show_timeline_nations?" do
-    it "should return true if any timeline entry has national applicability" do
-      presenter = described_class.new(coronavirus_content_item_with_timeline_national_applicability)
-
-      expect(presenter.show_timeline_nations?).to be true
-    end
-  end
-
   describe "#timelines_for_nation" do
     it "returns the timeline broken down by nation with country tags for each entry" do
       presenter = described_class.new(coronavirus_content_item_with_timeline_national_applicability)

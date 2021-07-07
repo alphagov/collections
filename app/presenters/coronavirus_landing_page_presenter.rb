@@ -40,10 +40,6 @@ class CoronavirusLandingPagePresenter
     }
   end
 
-  def show_timeline_nations?
-    timeline["list"].any? { |item| item["national_applicability"] }
-  end
-
   def timeline_nations_items
     UK_NATIONS.map do |value|
       {
