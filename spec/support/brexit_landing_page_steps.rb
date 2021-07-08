@@ -20,7 +20,7 @@ module BrexitLandingPageSteps
   end
 
   def then_i_can_see_the_header_section
-    expect(page).to have_selector(".landing-page__header--with-bg-image h1", text: "Brexit:new rules are here")
+    expect(page).to have_selector(".landing-page__header h1", text: "Brexit")
     expect(page).to have_selector(".gem-c-button", text: "Brexit checker: start now")
   end
 
@@ -28,16 +28,8 @@ module BrexitLandingPageSteps
     expect(page).not_to have_selector(".gem-c-chevron-banner__link", text: "Check what you need to do if there is no deal")
   end
 
-  def then_i_can_see_the_share_links_section
-    expect(page).to have_selector(".landing-page__share .gem-c-share-links")
-  end
-
-  def then_i_can_see_the_buckets_section
-    expect(page).to have_selector("h2.govuk-heading-l", text: "Changes for businesses and citizens")
-  end
-
   def and_i_can_see_the_explore_topics_section
-    expect(page).to have_selector("h2.govuk-heading-m", text: "All Brexit information")
+    expect(page).to have_selector("h2", text: "All Brexit information")
 
     supergroups = [
       "Services": "services",
@@ -56,13 +48,6 @@ module BrexitLandingPageSteps
     end
   end
 
-  def and_ecommerce_tracking_is_setup
-    expect(page).to have_selector(".landing-page__section[data-analytics-ecommerce]")
-    expect(page).to have_selector(".landing-page__section[data-ecommerce-start-index='1']")
-    expect(page).to have_selector(".landing-page__section[data-list-title]")
-    expect(page).to have_selector(".landing-page__section[data-search-query]")
-  end
-
   def then_all_finder_links_have_tracking_data
     [
       "Services",
@@ -72,8 +57,8 @@ module BrexitLandingPageSteps
       "Policy papers and consultations",
       "Transparency and freedom of information releases",
     ].each do |section|
-      expect(page).to have_selector("a[data-track-category='SeeAllLinkClicked']", text: section)
-      expect(page).to have_selector("a[data-track-action=\"#{BREXIT_TAXON_PATH}\"]", text: section)
+      expect(page).to have_selector("a[data-track-category='brexit-landing-page']", text: section)
+      expect(page).to have_selector("a[data-track-action=\"#{section}\"]", text: section)
     end
   end
 

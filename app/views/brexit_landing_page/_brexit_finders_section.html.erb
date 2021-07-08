@@ -1,0 +1,21 @@
+<section class="landing-page__section">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: t("brexit_landing_page.topic_section_header"),
+        heading_level: 2,
+        font_size: "l",
+        margin_bottom: 3,
+      } %>
+    </div>
+    <div class="govuk-body govuk-grid-column-two-thirds">
+      <%= render "govuk_publishing_components/components/lead_paragraph", {
+        text: t("brexit_landing_page.topic_section_subheading")
+      } %>
+
+      <%= render "components/topic-list", {
+        items: supergroups
+      } %>
+    </div>
+  </div>
+</section>

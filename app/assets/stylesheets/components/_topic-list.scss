@@ -1,5 +1,5 @@
 .app-c-topic-list__item {
-  @include govuk-font(19, $weight: bold);
+  @include govuk-font(19, $weight: bold, $line-height: 1.7);
 }
 
 .app-c-topic-list > li { // Needed to override `.govuk-list > li`

@@ -1,81 +1,31 @@
 
 $red: #ff003b;
-$dark-blue: #1e1348;
-$dark-blue-shadow: #020659;
-$transparent: rgba(0, 0, 0, 0);
-$header-breakpoint: 960px;
-$green: #00703c;
-
-.large-paragraph {
-  @include govuk-font($size: 19);
-  margin: govuk-spacing(6) 0 govuk-spacing(1);
-
-  @include govuk-media-query($from: tablet) {
-    margin: 0;
-  }
-}
 
 .landing-page__header {
-  padding-bottom: govuk-spacing(6);
-  padding-top: govuk-spacing(3);
+  border-top: 10px solid $red;
   margin-bottom: govuk-spacing(6);
-  background-color: govuk-colour("white");
-  color: $dark-blue;
-}
-
-.landing-page__header--with-bg-image {
-  background-color: govuk-colour("white");
-  border-top: govuk-spacing(2) solid $red;
-
-  @include govuk-media-query($from: $header-breakpoint) {
-    background-image: image-url('transition-2021-header-background.jpg');
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-
-  // HIDE BACKGROUND IMAGE ON IE
-
-  // IE 6, 7, 8
-  @media \0screen\,screen\9 { // stylelint-disable-line media-query-list-comma-space-after
-    background-image: none;
-  }
-
-  // IE 9
-  @media screen and (min-width:0\0) and (min-resolution: .001dpcm) { // stylelint-disable-line media-feature-colon-space-after
-    background-image: none;
-  }
-}
-
-.landing-page_header-text-container {
-  background-color: govuk-colour("white");
-  box-shadow: 15px 0 0 0 govuk-colour("white"), 4px 0 0 0 govuk-colour("white"), 3px 0 0 0 govuk-colour("white"), 1px 0 0 0 govuk-colour("white");
-  padding-bottom: govuk-spacing(4);
-
-  @include govuk-media-query($from: tablet) {
-    padding-bottom: govuk-spacing(9);
-  }
-
-  .gem-c-button {
-    padding-left: govuk-spacing(3);
-    padding-right: govuk-spacing(3);
-  }
 
   .gem-c-translation-nav {
-    width: 50%;
+    width: 35%;
+  }
+
+  .gem-c-action-link__link {
+    margin-bottom: 0;
+
+    @include govuk-media-query($from: tablet) {
+      margin-bottom: govuk-spacing(2);
+    }
   }
 }
 
-.landing-page__header-text-block {
-  @include govuk-media-query($from: $header-breakpoint) {
-    background: govuk-colour("white");
-    background: -webkit-linear-gradient(90deg, govuk-colour("white") 50%, $transparent 50%);
-    background: linear-gradient(90deg, govuk-colour("white") 50%, $transparent 50%);
-  }
+.landing-page__section {
+  border-top: $govuk-border-width solid govuk-colour('black');
+  margin-bottom: govuk-spacing(6);
+  padding-top: govuk-spacing(6);
 }
 
 .landing-page__take-action-traffic-lights {
-  margin-top: govuk-spacing(6);
+  margin-bottom: govuk-spacing(6);
   text-align: center;
 
   @include govuk-media-query($from: tablet) {
@@ -104,137 +54,4 @@ $green: #00703c;
 .landing-page__take-action-traffic-lists-text {
   @include govuk-font($size: 24, $weight: bold, $line-height: 1.1);
   vertical-align: middle;
-}
-
-.landing-page__intro {
-  margin-bottom: govuk-spacing(6);
-  padding-right: govuk-spacing(4);
-
-  p {
-    @include govuk-font($size: 24);
-  }
-}
-
-.landing-page__page_title {
-  @include govuk-font($size: 48, $weight: bold);
-  color: $dark-blue;
-  margin-top: govuk-spacing(7);
-  margin-bottom: govuk-spacing(4);
-}
-
-.landing-page__translation {
-  @include govuk-media-query($from: tablet) {
-    float: right;
-  }
-}
-
-.landing-page__contents {
-  margin: govuk-spacing(6) 0 govuk-spacing(9) 0;
-}
-
-.landing-page__share {
-  @include govuk-responsive-margin(8, "top");
-}
-
-.landing-page__section {
-  margin-top: govuk-spacing(4);
-  @include govuk-responsive-padding(6, "top");
-}
-
-.landing-page__section--border-top {
-  border-top: govuk-spacing(2) solid $dark-blue;
-}
-
-.landing-page__section--border-bottom-red {
-  border-bottom: govuk-spacing(2) solid $red;
-}
-
-.landing-page__section--blue {
-  @include govuk-responsive-padding(8, "top");
-  @include govuk-responsive-padding(8, "bottom");
-  background-color: $dark-blue;
-  margin-top: 0;
-
-  h2,
-  p {
-    color: govuk-colour("white");
-  }
-
-  a {
-    color: govuk-colour("white");
-
-    &:link,
-    &:visited {
-      color: govuk-colour("white");
-    }
-
-    &:hover {
-      color: $gem-hover-dark-background;
-    }
-
-    &:focus {
-      color: $govuk-focus-text-colour;
-    }
-  }
-}
-
-.landing-page__section--light-grey {
-  @include govuk-responsive-padding(8, "top");
-  @include govuk-responsive-padding(8, "bottom");
-  background-color: govuk-colour('light-grey');
-  margin-top: 0;
-}
-
-.landing-page__guidance_subheader {
-  @include govuk-font(19);
-  margin-bottom: govuk-spacing(7);
-}
-
-.landing-page__section-list-wrapper {
-  margin-bottom: govuk-spacing(6);
-
-  &:before {
-    border-top: 1px solid govuk-colour("mid-grey");
-    content: "";
-    display: block;
-    margin-right: govuk-spacing(3);
-    margin-left: govuk-spacing(3);
-    @include govuk-responsive-margin(6, "bottom");
-  }
-}
-
-.landing-page__section-list {
-  @include govuk-font(19);
-  margin-bottom: govuk-spacing(3);
-  margin-left: govuk-spacing(5);
-}
-
-.landing-page__section-see-all {
-  @include govuk-font(19);
-  margin-top: govuk-spacing(4);
-}
-
-.landing-page__section em {
-  font-weight: bold;
-  font-style: normal;
-}
-
-.landing-page__buckets {
-  margin-bottom: govuk-spacing(6);
-}
-
-.landing-page__divide {
-  border-top: 1px solid govuk-colour("white");
-  padding-top: govuk-spacing(4);
-}
-
-.landing-page__finders {
-  margin-bottom: 0;
-}
-
-.landing-page__comms-video {
-  @include govuk-media-query($from: "tablet") {
-    position: relative;
-    top: -15px;
-  }
 }

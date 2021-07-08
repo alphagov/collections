@@ -1,5 +1,7 @@
 $red: #ff003b;
 $dark-grey: #282828;
+$header-breakpoint: 960px;
+$transparent: rgba(0, 0, 0, 0);
 
 .dit-landing-page__kbm-logo {
   height: 50px;
@@ -91,6 +93,22 @@ $dark-grey: #282828;
   .govuk-link {
     @include govuk-font($size: 19, $weight: bold);
   }
+}
+
+.dit-landing-page__section {
+  margin-top: govuk-spacing(4);
+  @include govuk-responsive-padding(6, "top");
+}
+
+.dit-landing-page__section--light-grey {
+  @include govuk-responsive-padding(8, "top");
+  @include govuk-responsive-padding(8, "bottom");
+  background-color: govuk-colour('light-grey');
+  margin-top: 0;
+}
+
+.dit-landing-page__section--border-bottom-red {
+  border-bottom: govuk-spacing(2) solid $red;
 }
 
 .dit-landing-page__section--dark-grey {

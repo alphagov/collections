@@ -2,7 +2,7 @@ require "yaml"
 require "govspeak"
 
 class BrexitLandingPagePresenter
-  attr_reader :taxon, :comms
+  attr_reader :taxon
 
   delegate(
     :title,
@@ -12,7 +12,6 @@ class BrexitLandingPagePresenter
 
   def initialize(taxon)
     @taxon = taxon
-    @comms = fetch_comms
   end
 
   def supergroup_sections
@@ -26,7 +25,12 @@ class BrexitLandingPagePresenter
       {
         text: supergroup_title,
         path: section[:see_more_link][:url],
-        data_attributes: section[:see_more_link][:data],
+        data_attributes: {
+          track_category: "brexit-landing-page",
+          track_action: supergroup_title,
+          track_label: "All Brexit information",
+          module: "gem-track-click",
+        },
         aria_label: "#{supergroup_title} #{I18n.t('brexit_landing_page.sections.aria_string_suffix')}",
       }
     end
@@ -52,22 +56,6 @@ class BrexitLandingPagePresenter
   end
 
 private
-
-  def fetch_comms
-    comms = I18n.t("brexit_landing_page.comms")
-    comms[:links].map do |link_item|
-      data_attributes = {
-        track_category: "transition-landing-page",
-        track_action: link_item[:link][:path],
-        track_label: "News",
-      }
-
-      link_item[:link][:data_attributes] = data_attributes
-    end
-    comms[:video][:transcript] = convert_to_govspeak(comms[:video][:transcript]) if comms[:video]
-
-    comms
-  end
 
   def convert_to_govspeak(markdown)
     Govspeak::Document.new(markdown).to_html.html_safe unless markdown.nil?

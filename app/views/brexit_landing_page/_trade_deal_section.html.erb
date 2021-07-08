@@ -1,0 +1,33 @@
+<section class="landing-page__section">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: t("brexit_landing_page.trade_deal_heading"),
+        heading_level: 2,
+        font_size: "l",
+        margin_bottom: 6,
+      } %>
+
+      <% t("brexit_landing_page.trade_deal_links").each do |item| %>
+        <%= render "govuk_publishing_components/components/lead_paragraph", {
+          text: link_to(
+                  item[:text],
+                  item[:path],
+                  class: "govuk-link",
+                  data: {
+                    "module": "gem-track-click",
+                    "track-category": "brexit-landing-page",
+                    "track-action": item[:path],
+                    "track-label": t("brexit_landing_page.trade_deal_heading")
+                  }
+                ),
+          margin_bottom: 4,
+        } %>
+
+        <%= render "govuk_publishing_components/components/lead_paragraph", {
+          text: item[:explainer]
+        } %>
+      <% end %>
+    </div>
+  </div>
+</section>
