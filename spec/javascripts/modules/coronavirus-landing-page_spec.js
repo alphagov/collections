@@ -91,10 +91,8 @@ describe('Coronavirus landing page', function () {
   })
 
   describe('nation selector controls', function () {
-    var nationPickerHtml
-
     beforeEach(function () {
-      nationPickerHtml =
+      var nationPickerHtml =
         '<div>' +
           '<form method="get" target="" class="js-change-location">' +
             '<div class="gem-c-radio govuk-radios__item">' +
@@ -112,7 +110,6 @@ describe('Coronavirus landing page', function () {
       coronavirusLandingPage = new GOVUK.Modules.CoronavirusLandingPage()
       $element = $(nationPickerHtml)
       $('body').append($element)
-      coronavirusLandingPage.start($element)
     })
 
     afterEach(function () {
@@ -120,20 +117,26 @@ describe('Coronavirus landing page', function () {
     })
 
     it('show and hide appropriate sections of the page when the radio buttons change', function () {
-      var radio0 = $element.find('#radio-0')
-      var radio1 = $element.find('#radio-1')
-      var section0 = $element.find('#nation-england')
-      var section1 = $element.find('#nation-northern_ireland')
+      coronavirusLandingPage.start($element)
 
-      window.GOVUK.triggerEvent(radio0[0], 'change')
+      var englandRadio = $element.find('#radio-0')
+      var northernIrelandRadio = $element.find('#radio-1')
+      var englandSection = $element.find('#nation-england')
+      var northernIrelandSection = $element.find('#nation-northern_ireland')
 
-      expect(section0).toBeVisible()
-      expect(section1).toBeHidden()
+      expect(englandSection).toBeVisible()
+      expect(northernIrelandSection).toBeHidden()
 
-      window.GOVUK.triggerEvent(radio1[0], 'change')
+      northernIrelandRadio.prop('checked', true)
+      window.GOVUK.triggerEvent(northernIrelandRadio[0], 'change')
+      expect(englandSection).toBeHidden()
+      expect(northernIrelandSection).toBeVisible()
 
-      expect(section0).toBeHidden()
-      expect(section1).toBeVisible()
+      englandRadio.prop('checked', true)
+      window.GOVUK.triggerEvent(englandRadio[0], 'change')
+
+      expect(englandSection).toBeVisible()
+      expect(northernIrelandSection).toBeHidden()
     })
   })
 })
