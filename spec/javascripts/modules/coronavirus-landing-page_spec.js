@@ -138,6 +138,36 @@ describe('Coronavirus landing page', function () {
       expect(englandSection).toBeVisible()
       expect(northernIrelandSection).toBeHidden()
     })
+
+    it('can initialise to a non England country when they are initially selected', function () {
+      var northernIrelandRadio = $element.find('#radio-1')
+      var englandSection = $element.find('#nation-england')
+      var northernIrelandSection = $element.find('#nation-northern_ireland')
+
+      northernIrelandRadio.prop('checked', true)
+
+      coronavirusLandingPage.start($element)
+
+      expect(englandSection).toBeHidden()
+      expect(northernIrelandSection).toBeVisible()
+    })
+
+    it('can cope with a browser, such as Chrome, that restores form fields late', function () {
+      var northernIrelandRadio = $element.find('#radio-1')
+      var englandSection = $element.find('#nation-england')
+      var northernIrelandSection = $element.find('#nation-northern_ireland')
+
+      coronavirusLandingPage.start($element)
+
+      expect(englandSection).toBeVisible()
+      expect(northernIrelandSection).toBeHidden()
+
+      northernIrelandRadio.prop('checked', true)
+      window.GOVUK.triggerEvent(window, 'pageshow')
+
+      expect(englandSection).toBeHidden()
+      expect(northernIrelandSection).toBeVisible()
+    })
   })
 })
 
