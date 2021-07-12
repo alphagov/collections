@@ -7,6 +7,7 @@ GovukContentSchemaTestHelpers.configure do |config|
 end
 
 RSpec.feature "Step by step nav pages" do
+  include GovukAbTesting::RspecHelpers
   before do
     sample = GovukContentSchemaTestHelpers::Examples.new.get("step_by_step_nav", "learn_to_drive_a_car")
     content_item = JSON.parse(sample)
@@ -41,6 +42,46 @@ RSpec.feature "Step by step nav pages" do
 
     visit content_item["base_path"]
     expect(page).to have_title("#{content_item['title']} - GOV.UK")
+  end
+
+  context "SaB A/B test: user is in segment A" do
+    it "does not show the banner" do
+      with_variant StartABusinessSegment: "A" do
+        setup_for_sab_ab_test("true")
+        expect(page).to_not have_selector(".gem-c-intervention")
+      end
+    end
+  end
+
+  context "SaB A/B test: user is in segment B" do
+    it "show the banner in a sab page" do
+      with_variant StartABusinessSegment: "B" do
+        setup_for_sab_ab_test("true")
+        expect(page).to have_selector(".gem-c-intervention")
+      end
+    end
+  end
+
+  context "SaB A/B test: user is in segment C" do
+    it "does not show the banner" do
+      with_variant StartABusinessSegment: "C" do
+        setup_for_sab_ab_test("true")
+        expect(page).to_not have_selector(".gem-c-intervention")
+      end
+    end
+  end
+
+  def setup_for_sab_ab_test(is_sab_page_header_value)
+    content_item = step_nav_example
+    stub_content_store_has_item(content_item["base_path"], content_item)
+
+    headers = {
+      "HTTP_GOVUK_ABTEST_ISSTARTABUSINESSPAGE" => is_sab_page_header_value,
+    }
+    page.driver.options[:headers] ||= {}
+    page.driver.options[:headers].merge!(headers)
+
+    visit content_item["base_path"]
   end
 
   def step_nav_example
