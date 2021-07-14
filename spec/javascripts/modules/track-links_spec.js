@@ -34,6 +34,10 @@ describe('Track links', function () {
     element.innerHTML = html
     element = element.firstElementChild
 
+    element.addEventListener('click', function (e) {
+      e.preventDefault()
+    })
+
     var tracker = new GOVUK.Modules.TrackLinks()
     tracker.start([element])
   })
@@ -43,7 +47,8 @@ describe('Track links', function () {
   })
 
   it('track events sends href as label', function () {
-    element.querySelector('a[href="/government/news/chancellor-outlines-winter-economy-plan"]').dispatchEvent(new Event('click'))
+    var link = element.querySelector('a[href="/government/news/chancellor-outlines-winter-economy-plan"]')
+    window.GOVUK.triggerEvent(link, 'click')
 
     expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith(
       'pageElementInteraction', 'Timeline', {
@@ -54,7 +59,8 @@ describe('Track links', function () {
   })
 
   it('track events sends external href', function () {
-    element.querySelector('a[href="https://covid19.nhs.uk/"]').dispatchEvent(new Event('click'))
+    var link = element.querySelector('a[href="https://covid19.nhs.uk/"]')
+    window.GOVUK.triggerEvent(link, 'click')
 
     expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith(
       'pageElementInteraction', 'Timeline', {
