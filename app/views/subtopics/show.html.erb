@@ -13,8 +13,7 @@
     title_params = { title: t("shared.topics.title", title: subtopic.title) }
     if subtopic.parent
       title_params[:context] = {
-        text: subtopic.parent.title,
-        href: subtopic.parent.base_path
+        text: subtopic.parent.title
       }
     end
   %>
