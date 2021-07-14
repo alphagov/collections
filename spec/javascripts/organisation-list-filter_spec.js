@@ -65,6 +65,11 @@ describe('organisation-list-filter.js', function () {
     GOVUK.filter.init()
   })
 
+  afterAll(function () {
+    $('#organisations_search_results').remove()
+    $('form[data-filter="form"]').remove()
+  })
+
   afterEach(function (done) {
     setTimeout(function () {
       $('[data-filter="form"] input').val('')
