@@ -61,8 +61,8 @@ module ApplicationHelper
     end
   end
 
-  def render_govspeak(content)
-    render "govuk_publishing_components/components/govspeak" do
+  def render_govspeak(content, inverse: false)
+    render "govuk_publishing_components/components/govspeak", inverse: inverse do
       raw(Govspeak::Document.new(content, sanitize: false).to_html)
     end
   end
