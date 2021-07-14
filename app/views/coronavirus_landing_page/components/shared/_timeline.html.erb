@@ -41,7 +41,9 @@
           <% timeline.each do | item | %>
             <% text = capture do %>
               <%= item["heading"] %>
-              <%= item["tags"] %>
+              <span class="covid-timeline__tag-wrapper">
+                <%= item["tags"] %>
+              </span>
             <% end %>
             <div class="covid-timeline__item">
               <%= render "govuk_publishing_components/components/heading", {
