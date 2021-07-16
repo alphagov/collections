@@ -14,12 +14,19 @@
           inverse: true,
           margin_top: 4
         } %>
+
+        <% changes_2021_07_19 = header["changes_2021_07_19"] %>
+        <% if changes_2021_07_19 %>
+          <%= render 'coronavirus_landing_page/components/landing_page/air-test-face-app-wash.svg' %>
+        <% end %>
       </div>
-      <div class="govuk-grid-column-one-third">
-        <div class="covid__logo-wrapper">
-          <%= render 'coronavirus_landing_page/components/landing_page/hand-face-space-fresh-air.svg' %>
+      <% unless changes_2021_07_19 %>
+        <div class="govuk-grid-column-one-third">
+          <div class="covid__logo-wrapper">
+            <%= render 'coronavirus_landing_page/components/landing_page/hand-face-space-fresh-air.svg' %>
+          </div>
         </div>
-      </div>
+      <% end %>
     </div>
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-column-full covid__page-header-title-section-break">

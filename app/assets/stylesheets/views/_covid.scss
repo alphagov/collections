@@ -303,6 +303,16 @@ $c19-landing-page-header-background: govuk-colour("blue");
   }
 }
 
+.covid__logos-post-19-july {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: govuk-spacing(4);
+
+  @include govuk-media-query($from: tablet) {
+    margin-bottom: govuk-spacing(7);
+  }
+}
+
 .covid-statistics__statistic-wrapper {
   margin-bottom: govuk-spacing(5);
 }
