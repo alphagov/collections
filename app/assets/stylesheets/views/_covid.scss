@@ -286,23 +286,6 @@ $c19-landing-page-header-background: govuk-colour("blue");
   }
 }
 
-.covid__logo-wrapper {
-  margin-bottom: govuk-spacing(6);
-  text-align: center;
-
-  @include govuk-media-query($from: tablet) {
-    text-align: left;
-  }
-}
-
-.covid__logos {
-  width: 100%;
-
-  @include govuk-media-query($from: tablet) {
-    margin-top: govuk-spacing(4);
-  }
-}
-
 .covid-statistics__statistic-wrapper {
   margin-bottom: govuk-spacing(5);
 }
