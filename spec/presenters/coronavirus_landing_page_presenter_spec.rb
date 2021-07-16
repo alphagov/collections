@@ -157,36 +157,28 @@ RSpec.describe CoronavirusLandingPagePresenter do
     end
   end
 
-  describe "#show_timeline_nations?" do
-    it "should return true if any timeline entry has national applicability" do
-      presenter = described_class.new(coronavirus_content_item_with_timeline_national_applicability)
-
-      expect(presenter.show_timeline_nations?).to be true
-    end
-  end
-
   describe "#timelines_for_nation" do
     it "returns the timeline broken down by nation with country tags for each entry" do
-      presenter = described_class.new(coronavirus_content_item_with_timeline_national_applicability)
+      presenter = described_class.new(coronavirus_landing_page_content_item)
 
       expected = [
         [
           "england",
           [
             {
-              "heading" => "International travel",
+              "heading" => "18 September",
               "national_applicability" => %w[england northern_ireland scotland wales],
-              "paragraph" => "You should not travel to red or amber list countries or territories.\r\n[Check what you need to do to travel internationally](https://www.gov.uk/travel-abroad).\r\n",
+              "paragraph" => "If you live, work or travel in the North East, you need to [follow different covid rules](/guidance/north-east-of-england-local-restrictions)\n",
               "tags" => "<strong class='govuk-tag govuk-tag--blue covid-timeline__tag'>UK Wide</strong>",
             },
             {
-              "heading" => "In England",
+              "heading" => "15 September",
               "national_applicability" => %w[england],
-              "paragraph" => "From 21 June, there’s a 4-week pause at Step 3 of the roadmap. After 2 weeks, the government will review the data to see if the risks have reduced. It's expected that England will move to Step 4 on 19 July.\r\n\r\nStep 3 restrictions remain in place - follow the [guidance on what you can and cannot do](/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do). \r\n\r\nThe Delta COVID-19 variant is spreading in England. [See where it's spreading fastest and find out what you should do](/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do).\r\n",
+              "paragraph" => "If you live, work or visit Bolton, you need to [follow different covid rules](/guidance/bolton-local-restrictions)\n",
               "tags" => "<strong class='govuk-tag govuk-tag--blue covid-timeline__tag'>England</strong>",
             },
             {
-              "heading" => "In England and Wales",
+              "heading" => "10 July",
               "national_applicability" => %w[england wales],
               "paragraph" => "May the Force be with you.",
               "tags" => "<strong class='govuk-tag govuk-tag--blue covid-timeline__tag'>England</strong> <strong class='govuk-tag govuk-tag--blue covid-timeline__tag'>Wales</strong>",
@@ -197,13 +189,13 @@ RSpec.describe CoronavirusLandingPagePresenter do
           "northern_ireland",
           [
             {
-              "heading" => "International travel",
+              "heading" => "18 September",
               "national_applicability" => %w[england northern_ireland scotland wales],
-              "paragraph" => "You should not travel to red or amber list countries or territories.\r\n[Check what you need to do to travel internationally](https://www.gov.uk/travel-abroad).\r\n",
+              "paragraph" => "If you live, work or travel in the North East, you need to [follow different covid rules](/guidance/north-east-of-england-local-restrictions)\n",
               "tags" => "<strong class='govuk-tag govuk-tag--blue covid-timeline__tag'>UK Wide</strong>",
             },
             {
-              "heading" => "In Northern Ireland",
+              "heading" => "15 July",
               "national_applicability" => %w[northern_ireland],
               "paragraph" => "You can now socialise indoors in a group of up to 6 people from no more than 2 households, including for overnight stays. Up to 15 people from no more than 3 households can meet in a private garden. Shops, hairdressers and visitor attractions can reopen as well as indoor areas of pubs and restaurants. Read the [guidance on current restrictions on nidirect](https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you). \r\n",
               "tags" => "<strong class='govuk-tag govuk-tag--blue covid-timeline__tag'>Northern Ireland</strong>",
@@ -214,15 +206,15 @@ RSpec.describe CoronavirusLandingPagePresenter do
           "scotland",
           [
             {
-              "heading" => "International travel",
+              "heading" => "18 September",
               "national_applicability" => %w[england northern_ireland scotland wales],
-              "paragraph" => "You should not travel to red or amber list countries or territories.\r\n[Check what you need to do to travel internationally](https://www.gov.uk/travel-abroad).\r\n",
+              "paragraph" => "If you live, work or travel in the North East, you need to [follow different covid rules](/guidance/north-east-of-england-local-restrictions)\n",
               "tags" => "<strong class='govuk-tag govuk-tag--blue covid-timeline__tag'>UK Wide</strong>",
             },
             {
-              "heading" => "In Scotland",
+              "heading" => "14 September",
               "national_applicability" => %w[scotland],
-              "paragraph" => "From 5 June, many areas are changing COVID-19 protection levels. Find out [your area's level in Scotland on GOV.SCOT](https://www.gov.scot/publications/coronavirus-covid-19-protection-levels/).",
+              "paragraph" => "People must not meet in groups larger than 6 in England. There are [exceptions to this 'rule of 6'](/government/publications/coronavirus-covid-19-meeting-with-others-safely-social-distancing/coronavirus-covid-19-meeting-with-others-safely-social-distancing#seeing-friends-and-family)\n",
               "tags" => "<strong class='govuk-tag govuk-tag--blue covid-timeline__tag'>Scotland</strong>",
             },
           ],
@@ -231,19 +223,19 @@ RSpec.describe CoronavirusLandingPagePresenter do
           "wales",
           [
             {
-              "heading" => "International travel",
+              "heading" => "18 September",
               "national_applicability" => %w[england northern_ireland scotland wales],
-              "paragraph" => "You should not travel to red or amber list countries or territories.\r\n[Check what you need to do to travel internationally](https://www.gov.uk/travel-abroad).\r\n",
+              "paragraph" => "If you live, work or travel in the North East, you need to [follow different covid rules](/guidance/north-east-of-england-local-restrictions)\n",
               "tags" => "<strong class='govuk-tag govuk-tag--blue covid-timeline__tag'>UK Wide</strong>",
             },
             {
-              "heading" => "In Wales",
+              "heading" => "24 July",
               "national_applicability" => %w[wales],
-              "paragraph" => "From 7 June, you can choose 2 other households to meet indoors, becoming an extended household. Up to 30 people can meet outside, including in gardens and pubs. [Read the rules for Wales on GOV.WALES](https://gov.wales/current-restrictions).",
+              "paragraph" => "[Face coverings are mandatory in shops](/government/publications/face-coverings-when-to-wear-one-and-how-to-make-your-own/face-coverings-when-to-wear-one-and-how-to-make-your-own)\n",
               "tags" => "<strong class='govuk-tag govuk-tag--blue covid-timeline__tag'>Wales</strong>",
             },
             {
-              "heading" => "In England and Wales",
+              "heading" => "10 July",
               "national_applicability" => %w[england wales],
               "paragraph" => "May the Force be with you.",
               "tags" => "<strong class='govuk-tag govuk-tag--blue covid-timeline__tag'>England</strong> <strong class='govuk-tag govuk-tag--blue covid-timeline__tag'>Wales</strong>",

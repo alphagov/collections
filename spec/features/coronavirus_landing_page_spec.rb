@@ -46,7 +46,7 @@ RSpec.feature "Coronavirus Pages" do
 
     describe "selecting timeline for country" do
       scenario "with javascript", js: true do
-        given_there_is_a_content_item_with_timeline_national_applicability
+        given_there_is_a_content_item
         when_i_visit_the_coronavirus_landing_page
         then_i_can_see_the_timeline_for_england
         when_i_click_on_wales
@@ -54,7 +54,7 @@ RSpec.feature "Coronavirus Pages" do
       end
 
       scenario "without javascript" do
-        given_there_is_a_content_item_with_timeline_national_applicability
+        given_there_is_a_content_item
         when_i_visit_the_coronavirus_landing_page
         then_i_can_see_the_timeline_for_england
         when_i_click_on_wales
