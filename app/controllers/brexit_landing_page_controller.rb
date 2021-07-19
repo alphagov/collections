@@ -1,7 +1,6 @@
 class BrexitLandingPageController < ApplicationController
   include GovukPersonalisation::AccountConcern
   include Slimmer::Headers
-  slimmer_template :gem_layout_full_width
 
   skip_before_action :set_expiry
   before_action -> { set_expiry(1.minute) }
@@ -18,6 +17,10 @@ class BrexitLandingPageController < ApplicationController
   end
 
 private
+
+  def set_slimmer_template
+    set_gem_layout_full_width
+  end
 
   def taxon
     base_path = request.path

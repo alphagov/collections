@@ -7,6 +7,7 @@
   <%= stylesheet_link_tag "application" %>
   <%= csrf_meta_tags %>
   <%= yield :meta_tags %>
+  <%= explore_menu_variant.analytics_meta_tag.html_safe if explore_menu_testable? %>
   <%= render 'govuk_publishing_components/components/meta_tags', content_item: @content_item %>
   <%= stylesheet_link_tag "print.css", :media => "print", integrity: false %>
 </head>
