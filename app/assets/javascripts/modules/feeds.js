@@ -7,7 +7,10 @@
 
   window.GOVUK.feeds = {
     init: function () {
-      $('.js-feed').on('click', window.GOVUK.feeds.toggle)
+      var jsFeed = document.getElementById('js-feed')
+      if (jsFeed) {
+        jsFeed.addEventListener('click', window.GOVUK.feeds.toggle)
+      }
     },
     toggle: function (e) {
       e.preventDefault()
