@@ -16,7 +16,7 @@
       e.preventDefault()
       var panel = $(e.target).siblings('.js-feed-panel')
       panel.toggle()
-      panel.find('input').select()
+      panel.querySelector('input')
     }
   }
 
