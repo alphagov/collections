@@ -14,7 +14,11 @@
     },
     toggle: function (e) {
       e.preventDefault()
-      var panel = $(e.target).siblings('.js-feed-panel')
+
+      var panel = Array.prototype.filter.call(e.target.parentNode.children, function (child) {
+        return child !== e.target
+      }).querySelectorAll('js-feed-panel')
+
       panel.toggle()
       panel.querySelector('input')
     }
