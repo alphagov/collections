@@ -7,9 +7,15 @@
 
   window.GOVUK.feeds = {
     init: function () {
+      if (window.GOVUK.analytics && window.GOVUK.analytics.trackEvent) {
+        window.GOVUK.analytics.trackEvent('feed', 'initialize', {})
+      }
       $('.js-feed').on('click', window.GOVUK.feeds.toggle)
     },
     toggle: function (e) {
+      if (window.GOVUK.analytics && window.GOVUK.analytics.trackEvent) {
+        window.GOVUK.analytics.trackEvent('feed', 'toggle', {})
+      }
       e.preventDefault()
       var panel = $(e.target).siblings('.js-feed-panel')
       panel.toggle()
