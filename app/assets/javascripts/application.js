@@ -38,8 +38,3 @@
 //= require modules/toggle-attribute
 //= require modules/coronavirus-landing-page
 //= require modules/track-links
-
-$(document).on('ready', function () {
-  var toggleAttribute = new GOVUK.Modules.ToggleAttribute()
-  toggleAttribute.start($('[data-module=toggle-attribute]'))
-})
