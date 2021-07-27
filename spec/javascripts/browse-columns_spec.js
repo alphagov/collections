@@ -6,7 +6,8 @@ describe('browse-columns.js', function () {
   })
 
   it('should cache objects', function () {
-    var bc = new GOVUK.BrowseColumns({ $el: $('<div>') })
+    var bc = new window.GOVUK.Modules.BrowseColumns()
+    bc.start($('<div>'))
 
     expect(bc.sectionCache('prefix', 'object-name')).toBe(undefined)
 
@@ -16,7 +17,9 @@ describe('browse-columns.js', function () {
   })
 
   it('should set page title with the GOV.UK suffix', function () {
-    GOVUK.BrowseColumns.prototype.setTitle('new-title')
+    var bc = new window.GOVUK.Modules.BrowseColumns()
+    bc.start($('<div>'))
+    bc.setTitle('new-title')
 
     expect($('title').text()).toBe('new-title - GOV.UK')
   })
@@ -26,7 +29,8 @@ describe('browse-columns.js', function () {
     spyOn(jQuery, 'ajax').and.returnValue(promiseObj)
     spyOn(jQuery, 'Deferred').and.returnValue(promiseObj)
 
-    var bc = new GOVUK.BrowseColumns({ $el: $('<div>') })
+    var bc = new window.GOVUK.Modules.BrowseColumns()
+    bc.start($('<div>'))
     spyOn(bc, 'sectionCache')
 
     bc.getSectionData({ slug: 'section' })
@@ -44,7 +48,8 @@ describe('browse-columns.js', function () {
     spyOn(jQuery, 'ajax').and.returnValue(promiseObj)
     spyOn(jQuery, 'Deferred').and.returnValue(promiseObj)
 
-    var bc = new GOVUK.BrowseColumns({ $el: $('<div>') })
+    var bc = new window.GOVUK.Modules.BrowseColumns()
+    bc.start($('<div>'))
     bc.sectionCache('section', 'section', 'data')
 
     bc.getSectionData({ slug: 'section' })
@@ -60,7 +65,8 @@ describe('browse-columns.js', function () {
     spyOn(jQuery, 'ajax').and.returnValue(promiseObj)
     spyOn(jQuery, 'Deferred').and.returnValue(promiseObj)
 
-    var bc = new GOVUK.BrowseColumns({ $el: $('<div>') })
+    var bc = new window.GOVUK.Modules.BrowseColumns()
+    bc.start($('<div>'))
     spyOn(bc, 'sectionCache')
 
     bc.getSectionData({ subsection: true, slug: 'section/subsection' })
@@ -78,7 +84,8 @@ describe('browse-columns.js', function () {
     spyOn(jQuery, 'ajax').and.returnValue(promiseObj)
     spyOn(jQuery, 'Deferred').and.returnValue(promiseObj)
 
-    var bc = new GOVUK.BrowseColumns({ $el: $('<div>') })
+    var bc = new window.GOVUK.Modules.BrowseColumns()
+    bc.start($('<div>'))
     bc.sectionCache('section', 'section/subsection', 'data')
 
     bc.getSectionData({ slug: 'section/subsection' })
@@ -90,6 +97,9 @@ describe('browse-columns.js', function () {
   })
 
   it('should parse a pathname', function () {
+    var bc = new window.GOVUK.Modules.BrowseColumns()
+    bc.start($('<div>'))
+
     var paths = [
       {
         path: '/browse',
@@ -109,7 +119,7 @@ describe('browse-columns.js', function () {
       }
     ]
     for (var i = 0, pathLength = paths.length; i < pathLength; i++) {
-      expect(GOVUK.BrowseColumns.prototype.parsePathname(paths[i].path)).toEqual(paths[i].output)
+      expect(bc.parsePathname(paths[i].path)).toEqual(paths[i].output)
     }
   })
 
@@ -123,7 +133,9 @@ describe('browse-columns.js', function () {
         breadcrumbs: '<div class="gem-c-breadcrumbs"><script type="application/ld+json">{"something":"other"}</script><ol><li>one</li><li>two</li></ol></div>'
       }
     }
-    GOVUK.BrowseColumns.prototype.updateBreadcrumbs.call(context, cachedData)
+    var bc = new window.GOVUK.Modules.BrowseColumns()
+    bc.start($('<div>'))
+    bc.updateBreadcrumbs.call(context, cachedData)
     expect(context.$breadcrumbs.find('li').length).toEqual(2)
   })
 
@@ -134,7 +146,8 @@ describe('browse-columns.js', function () {
       path: 'foo'
     }
 
-    var bc = new GOVUK.BrowseColumns({ $el: $('<div>') })
+    var bc = new window.GOVUK.Modules.BrowseColumns()
+    bc.start($('<div>'))
     bc.trackPageview(state)
 
     expect(GOVUK.analytics.trackPageview).toHaveBeenCalledTimes(2)

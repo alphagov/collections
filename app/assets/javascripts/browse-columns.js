@@ -1,47 +1,49 @@
-(function () {
+window.GOVUK = window.GOVUK || {}
+window.GOVUK.Modules = window.GOVUK.Modules || {};
+
+(function (Modules) {
   'use strict'
-  window.GOVUK = window.GOVUK || {}
-  var $ = window.jQuery
 
-  function BrowseColumns (options) {
-    if (options.$el.length === 0) return
-    if (!GOVUK.support.history()) return
-    if ($(window).width() < 640) return // don't ajax navigation on mobile
+  Modules.BrowseColumns = function () {
+    this.start = function (element) {
+      this.$module = element
+      if (this.$module === 0) return
+      if (!GOVUK.support.history()) return
+      if ($(window).width() < 640) return // don't ajax navigation on mobile
 
-    this.$el = options.$el
-    this.$root = this.$el.find('#root')
-    this.$section = this.$el.find('#section')
-    this.$subsection = this.$el.find('#subsection')
-    this.$breadcrumbs = $('.gem-c-breadcrumbs')
-    this.animateSpeed = 330
+      this.$root = this.$module.find('#root')
+      this.$section = this.$module.find('#section')
+      this.$subsection = this.$module.find('#subsection')
+      this.$breadcrumbs = $('.gem-c-breadcrumbs')
+      this.animateSpeed = 330
 
-    if (this.$section.length === 0) {
-      this.$section = $('<div id="section" class="section-pane pane with-sort" />')
-      this.$el.prepend(this.$section)
-      this.$el.addClass('section')
+      if (this.$section.length === 0) {
+        this.$section = $('<div id="section" class="section-pane pane with-sort" />')
+        this.$module.prepend(this.$section)
+        this.$module.addClass('section')
+      }
+
+      if (this.$subsection.length === 0) {
+        this.$subsection = $('<div id="subsection" class="subsection-pane pane" />').hide()
+        this.$module.prepend(this.$subsection)
+      } else {
+        this.$subsection.show()
+      }
+
+      this.displayState = this.$module.data('state')
+      if (typeof this.displayState === 'undefined') {
+        this.displayState = 'root'
+      }
+      this._cache = {}
+
+      this.lastState = this.parsePathname(window.location.pathname)
+
+      this.$module.on('click', 'a', this.navigate.bind(this))
+
+      $(window).on('popstate', this.popState.bind(this))
     }
 
-    if (this.$subsection.length === 0) {
-      this.$subsection = $('<div id="subsection" class="subsection-pane pane" />').hide()
-      this.$el.prepend(this.$subsection)
-    } else {
-      this.$subsection.show()
-    }
-
-    this.displayState = this.$el.data('state')
-    if (typeof this.displayState === 'undefined') {
-      this.displayState = 'root'
-    }
-    this._cache = {}
-
-    this.lastState = this.parsePathname(window.location.pathname)
-
-    this.$el.on('click', 'a', this.navigate.bind(this))
-
-    $(window).on('popstate', this.popState.bind(this))
-  }
-  BrowseColumns.prototype = {
-    popState: function (e) {
+    this.popState = function (e) {
       var state = e.originalEvent.state
       var loadPromise
       if (!state) { // state will be null if there was no state set
@@ -62,8 +64,9 @@
       loadPromise.then(function () {
         this.trackPageview(state)
       }.bind(this))
-    },
-    restoreSubsection: function (state) {
+    }
+
+    this.restoreSubsection = function (state) {
       // are we displaying the correct section for the subsection?
       if (this.lastState.section !== state.section) {
         // load the section then load the subsection after
@@ -76,26 +79,30 @@
       } else {
         return this.loadSectionFromState(state, true)
       }
-    },
-    sectionCache: function (prefix, slug, data) {
+    }
+
+    this.sectionCache = function (prefix, slug, data) {
       if (typeof data === 'undefined') {
         return this._cache[prefix + slug]
       } else {
         this._cache[prefix + slug] = data
       }
-    },
-    isDesktop: function () {
+    }
+
+    this.isDesktop = function () {
       return $(window).width() > 768
-    },
-    showRoot: function () {
+    }
+
+    this.showRoot = function () {
       this.$section.html('')
       this.displayState = 'root'
       this.$root.find('.js-heading').focus()
 
       var out = new $.Deferred()
       return out.resolve()
-    },
-    showSection: function (state) {
+    }
+
+    this.showSection = function (state) {
       this.setContentIDMetaTag(state.sectionData.content_id)
       this.setNavigationPageTypeMetaTag(state.sectionData.navigation_page_type)
       state.title = this.getTitle(state.slug)
@@ -119,13 +126,14 @@
       return animationDone.then(function () {
         this.$section.find('.js-heading').focus()
       }.bind(this))
-    },
-    animateSubsectionToSectionDesktop: function () {
+    }
+
+    this.animateSubsectionToSectionDesktop = function () {
       var out = new $.Deferred()
       function afterAnimate () {
         this.displayState = 'section'
 
-        this.$el.removeClass('subsection').addClass('section')
+        this.$module.removeClass('subsection').addClass('section')
         this.$section.attr('style', '')
         this.$section.find('.pane-inner').attr('style', '')
         this.$section.addClass('with-sort')
@@ -162,15 +170,17 @@
       }
       this.$section.animate(sectionProperties, this.animateSpeed, afterAnimate.bind(this))
       return out
-    },
-    animateRootToSectionDesktop: function () {
+    }
+
+    this.animateRootToSectionDesktop = function () {
       var out = new $.Deferred()
       this.displayState = 'section'
-      this.$el.removeClass('subsection').addClass('section')
+      this.$module.removeClass('subsection').addClass('section')
 
       return out.resolve()
-    },
-    showSubsection: function (state) {
+    }
+
+    this.showSubsection = function (state) {
       this.setContentIDMetaTag(state.sectionData.content_id)
       this.setNavigationPageTypeMetaTag(state.sectionData.navigation_page_type)
       state.title = this.getTitle(state.slug)
@@ -191,8 +201,9 @@
       return animationDone.then(function () {
         this.$subsection.find('.js-heading').focus()
       }.bind(this))
-    },
-    animateSectionToSubsectionDesktop: function () {
+    }
+
+    this.animateSectionToSubsectionDesktop = function () {
       var out = new $.Deferred()
       // animate to the right position and update the data
       this.$root.css({ position: 'absolute', width: this.$root.width() })
@@ -216,7 +227,7 @@
         }
       }
       this.$section.animate(sectionProperties, this.animateSpeed, function () {
-        this.$el.removeClass('section').addClass('subsection')
+        this.$module.removeClass('section').addClass('subsection')
         this.$subsection.show()
         this.$section.removeClass('with-sort')
         this.displayState = 'subsection'
@@ -228,38 +239,44 @@
         out.resolve()
       }.bind(this))
       return out
-    },
-    getTitle: function (slug) {
-      var $link = this.$el.find('a[href$="/browse/' + slug + '"]:first')
+    }
+
+    this.getTitle = function (slug) {
+      var $link = this.$module.find('a[href$="/browse/' + slug + '"]:first')
       var $heading = $link.find('h3')
       if ($heading.length > 0) {
         return $heading.text()
       } else {
         return $link.text()
       }
-    },
-    setTitle: function (title) {
+    }
+
+    this.setTitle = function (title) {
       $('title').text(title + ' - GOV.UK')
-    },
-    setContentIDMetaTag: function (contentId) {
+    }
+
+    this.setContentIDMetaTag = function (contentId) {
       $('meta[name="govuk:content-id"]').attr('content', contentId)
-    },
-    setNavigationPageTypeMetaTag: function (navigationPageType) {
+    }
+
+    this.setNavigationPageTypeMetaTag = function (navigationPageType) {
       $('meta[name="govuk:navigation-page-type"]').attr('content', navigationPageType)
-    },
-    addLoading: function ($el) {
-      this.$el.attr('aria-busy', 'true')
+    }
+
+    this.addLoading = function ($el) {
+      this.$module.attr('aria-busy', 'true')
       $el.addClass('loading')
-    },
-    removeLoading: function () {
-      this.$el.attr('aria-busy', 'false')
-      this.$el.find('a.loading').removeClass('loading')
-    },
+    }
+
+    this.removeLoading = function () {
+      this.$module.attr('aria-busy', 'false')
+      this.$module.find('a.loading').removeClass('loading')
+    }
 
     // getSectionData: returns a promise which will contain the data
     // Returns data from the cache if it is there or puts the data in the cache
     // if it is not.
-    getSectionData: function (state) {
+    this.getSectionData = function (state) {
       var cacheForSlug = this.sectionCache('section', state.slug)
       var out = new $.Deferred()
       var url = '/browse/' + state.slug + '.json'
@@ -278,12 +295,14 @@
         }.bind(this))
       }
       return out
-    },
-    highlightSection: function (section, slug) {
-      this.$el.find('#' + section + ' .active').removeClass('active')
-      this.$el.find('a[href$="' + slug + '"]').parent().addClass('active')
-    },
-    parsePathname: function (pathname) {
+    }
+
+    this.highlightSection = function (section, slug) {
+      this.$module.find('#' + section + ' .active').removeClass('active')
+      this.$module.find('a[href$="' + slug + '"]').parent().addClass('active')
+    }
+
+    this.parsePathname = function (pathname) {
       var out = {
         path: pathname,
         slug: pathname.replace(/\/browse\/?/, '')
@@ -296,16 +315,18 @@
         out.section = out.slug
       }
       return out
-    },
-    scrollToBrowse: function () {
+    }
+
+    this.scrollToBrowse = function () {
       var $body = $('body')
-      var elTop = this.$el.offset().top
+      var elTop = this.$module.offset().top
 
       if ($body.scrollTop() > elTop) {
         $('body').animate({ scrollTop: elTop }, this.animateSpeed)
       }
-    },
-    loadSectionFromState: function (state, poppingState) {
+    }
+
+    this.loadSectionFromState = function (state, poppingState) {
       var donePromise = this.getSectionData(state)
       if (state.subsection) {
         var sectionPromise = donePromise
@@ -331,8 +352,9 @@
             this.trackPageview(state)
           }
         }.bind(this))
-    },
-    navigate: function (e) {
+    }
+
+    this.navigate = function (e) {
       if (e.currentTarget.pathname.match(/^\/browse\/[^/]+(\/[^/]+)?$/)) {
         var $target = $(e.currentTarget)
         e.preventDefault()
@@ -347,15 +369,17 @@
         this.addLoading($target)
         this.loadSectionFromState(state)
       }
-    },
-    updateBreadcrumbs: function (state) {
+    }
+
+    this.updateBreadcrumbs = function (state) {
       // Calling `.last()` is necessary because the breadcrumbs component has 2
       // elements, the breadcrumbs and the schema.org data.
       // https://govuk-publishing-components.herokuapp.com/component-guide/breadcrumbs
       var $newBreadcrumbs = $(state.sectionData.breadcrumbs).last()
       this.$breadcrumbs.html($newBreadcrumbs.html())
-    },
-    trackPageview: function (state) {
+    }
+
+    this.trackPageview = function (state) {
       var sectionTitle = this.$section.find('h1').text()
       sectionTitle = sectionTitle ? sectionTitle.toLowerCase() : 'browse'
       var navigationPageType = 'none'
@@ -368,8 +392,9 @@
 
       this.firePageview(state, sectionTitle, navigationPageType)
       this.firePageview(state, sectionTitle, navigationPageType, 'govuk')
-    },
-    firePageview: function (state, sectionTitle, navigationPageType, tracker) {
+    }
+
+    this.firePageview = function (state, sectionTitle, navigationPageType, tracker) {
       if (GOVUK.analytics && GOVUK.analytics.trackPageview) {
         var options = {
           dimension1: sectionTitle,
@@ -388,8 +413,4 @@
       }
     }
   }
-
-  GOVUK.BrowseColumns = BrowseColumns
-
-  $(function () { GOVUK.browseColumns = new BrowseColumns({ $el: $('.browse-panes') }) })
-}())
+})(window.GOVUK.Modules)
