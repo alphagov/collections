@@ -166,7 +166,7 @@ RSpec.feature "Subtopic pages" do
       end
 
       # And I should see the latest documents for the subtopic in date order
-      titles = page.all(".gem-c-document-list__item-link").map(&:text)
+      titles = page.all(".gem-c-document-list__item-title").map(&:text)
       expected_titles = [
         "Oil and gas uk field data",
         "Oil and gas wells",
