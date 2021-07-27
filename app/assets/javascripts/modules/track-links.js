@@ -4,27 +4,26 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 (function (Modules) {
   'use strict'
 
-  Modules.TrackLinks = function () {
-    this.start = function (element) {
-      var category = element[0].getAttribute('data-track-category')
-      var action = element[0].getAttribute('data-track-action')
-      var links = element[0].getElementsByTagName('a')
+  Modules.TrackLinks = function (element) {
+    this.category = element.getAttribute('data-track-category')
+    this.action = element.getAttribute('data-track-action')
+    this.links = element.getElementsByTagName('a')
+  }
 
-      if (!category) return
+  Modules.TrackLinks.prototype.init = function () {
+    if (!this.category) return
 
-      for (var i = 0; i < links.length; i++) {
-        var link = links[i]
-        link.addEventListener('click', function (e) {
-          var options = {
-            transport: 'beacon',
-            label: e.target.getAttribute('href')
-          }
+    for (var i = 0; i < this.links.length; i++) {
+      var link = this.links[i]
+      link.addEventListener('click', function (e) {
+        var options = {
+          transport: 'beacon',
+          label: e.target.getAttribute('href')
+        }
+        if (!this.action) this.action = e.target.innerText
 
-          if (!action) action = e.target.innerText
-
-          GOVUK.analytics.trackEvent(category, action, options)
-        })
-      }
+        GOVUK.analytics.trackEvent(this.category, this.action, options)
+      }.bind(this))
     }
   }
 })(window.GOVUK.Modules)
