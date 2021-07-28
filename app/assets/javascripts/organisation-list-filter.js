@@ -2,7 +2,6 @@
 /* eslint-disable no-var */
 
 (function () {
-  'use strict'
   window.GOVUK = window.GOVUK || {}
 
   var filterTimeout = null
@@ -10,19 +9,25 @@
   window.GOVUK.filter = {
     init: function () {
       // Form should only appear if the JS is working
-      $('[data-filter="form"]').addClass('filter-organisations-list__form--active')
+      var element = document.querySelector('[data-filter="form"]')
 
-      this.results = document.createElement('div')
-      this.results.classList.add('filter-organisations-list__results', 'govuk-heading-m', 'js-search-results')
-      this.results.setAttribute('aria-live', 'polite')
-      this.results.innerHTML = window.GOVUK.filter.countInitialDepartments() + ' results found'
+      if (element) {
+        element.classList.add('filter-organisations-list__form--active')
 
-      $('#organisations_search_results').prepend(this.results)
+        this.results = document.createElement('div')
+        this.results.classList.add('filter-organisations-list__results', 'govuk-heading-m', 'js-search-results')
+        this.results.setAttribute('aria-live', 'polite')
+        this.results.innerHTML = window.GOVUK.filter.countInitialDepartments() + ' results found'
 
-      // We don't want the form to submit/refresh the page on enter key
-      $('[data-filter="form"]').on('submit', function () { return false })
+        var orgResults = document.querySelector('#organisations_search_results')
+        orgResults.insertBefore(this.results, orgResults.firstChild)
 
-      $('[data-filter="form"] input').on('keyup', window.GOVUK.filter.filterViaTimeout)
+        // We don't want the form to submit/refresh the page on enter key
+
+        // FIXME
+        element.onsubmit = function () { return false }
+        element.onkeyup = window.GOVUK.filter.filterViaTimeout
+      }
     },
 
     filterViaTimeout: function (e) {
@@ -34,14 +39,16 @@
     },
 
     filterList: function (e) {
-      var itemsToFilter = $('[data-filter="item"]')
-      var listsToFilter = $('[data-filter="list"]')
-      var searchTerm = $(e.target).val()
+      var itemsToFilter = document.querySelectorAll('[data-filter="item"]')
+      var listsToFilter = document.querySelectorAll('[data-filter="list"]')
+      var searchTerm = e.target.value
 
-      itemsToFilter.not(function () {
-        var currentOrganisation = $(this)
-        return window.GOVUK.filter.matchSearchTerm(currentOrganisation, searchTerm)
-      }).addClass('js-hidden')
+      for (var i = 0; i <= itemsToFilter.length - 1; i++) {
+        var currentOrganisation = itemsToFilter[i]
+        if (!window.GOVUK.filter.matchSearchTerm(currentOrganisation, searchTerm)) {
+          currentOrganisation.classList.add('js-hidden')
+        }
+      }
 
       window.GOVUK.filter.updateDepartmentCount(listsToFilter)
     },
@@ -55,17 +62,17 @@
       }
 
       var organisationText = ''
-      var organisationAcronym = organisation.attr('data-filter-acronym') || ''
+      var organisationAcronym = organisation.getAttribute('data-filter-acronym') || ''
 
-      organisation.removeClass('js-hidden')
+      organisation.classList.remove('js-hidden')
 
-      if (organisation.find('.gem-c-organisation-logo__name').length > 0) {
+      if (organisation.querySelectorAll('.gem-c-organisation-logo__name').length > 0) {
         organisationText = normaliseWhitespace(
-          organisation.find('.gem-c-organisation-logo__name').text()
+          organisation.querySelector('.gem-c-organisation-logo__name').textContent
         )
       } else {
         organisationText = normaliseWhitespace(
-          organisation.find('.organisation-list__item-title').text()
+          organisation.querySelector('.organisation-list__item-title').textContent
         )
       }
 
@@ -85,23 +92,36 @@
     updateDepartmentCount: function (listsToFilter) {
       var totalMatchingOrgs = 0
 
-      listsToFilter.each(function () {
-        var departmentSection = $(this).closest('[data-filter="block"]')
-        departmentSection.removeClass('js-hidden')
+      for (var i = 0; i < listsToFilter.length; i++) {
+        var departmentSection = listsToFilter[i].closest('[data-filter="block"]')
+        departmentSection.classList.remove('js-hidden')
 
-        var matchingOrgCount = $(this).find('[data-filter="item"]:visible').length
-        var departmentCount = departmentSection.find('.js-department-count')
-        var accessibleDepartmentCount = departmentSection.find('.js-accessible-department-count')
+        var matchingOrgs = listsToFilter[i].querySelectorAll('[data-filter="item"]')
+        var matchingOrgCount = 0
+        for (var j = 0; j < matchingOrgs.length; j++) {
+          if (!matchingOrgs[j].classList.contains('js-hidden')) {
+            matchingOrgCount++
+          }
+        }
+        var departmentCount = departmentSection.querySelectorAll('.js-department-count')
+        var accessibleDepartmentCount = departmentSection.querySelectorAll('.js-accessible-department-count')
 
-        departmentSection.toggleClass('js-hidden', matchingOrgCount === 0)
+        if (matchingOrgCount === 0) {
+          departmentSection.classList.toggle('js-hidden')
+        }
 
         if (matchingOrgCount > 0) {
-          departmentCount.text(matchingOrgCount)
-          accessibleDepartmentCount.text(matchingOrgCount)
+          for (var l = 0; l < departmentCount.length; l++) {
+            departmentCount[l].textContent = matchingOrgCount
+          }
+
+          for (var k = 0; k < accessibleDepartmentCount.length; k++) {
+            accessibleDepartmentCount[k].textContent = matchingOrgCount
+          }
         }
 
         totalMatchingOrgs += matchingOrgCount
-      })
+      }
 
       var text = ' results found'
       if (totalMatchingOrgs === 1) {
