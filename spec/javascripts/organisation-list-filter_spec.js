@@ -59,28 +59,30 @@ describe('organisation-list-filter.js', function () {
     '</div>'
 
   beforeAll(function () {
-    $(document.body).append(stubStyling)
-    $(document.body).append(form)
-    $(document.body).append(organisations)
-    GOVUK.filter.init()
+    var wrapper = $('<div>').addClass('wrapper')
+    wrapper.append(stubStyling)
+    wrapper.append(form)
+    wrapper.append(organisations)
+    $(document.body).append(wrapper)
+
+    new GOVUK.Modules.FilterOrganisations(wrapper[0]).init()
   })
 
   afterAll(function () {
-    $('#organisations_search_results').remove()
-    $('form[data-filter="form"]').remove()
+    $('.wrapper').remove()
   })
 
   afterEach(function (done) {
     setTimeout(function () {
       $('[data-filter="form"] input').val('')
-      $('[data-filter="form"] input').trigger('keyup')
+      window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
       done()
     }, 1)
   })
 
   it('hide items that do not match the search term', function (done) {
     $('[data-filter="form"] input').val('Advisory cou')
-    $('[data-filter="form"] input').trigger('keyup')
+    window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
 
     setTimeout(function () {
       expect($('.org-logo-1')).toHaveClass('js-hidden')
@@ -93,7 +95,7 @@ describe('organisation-list-filter.js', function () {
 
   it('show items that do match the search term', function (done) {
     $('[data-filter="form"] input').val('Advisory cou')
-    $('[data-filter="form"] input').trigger('keyup')
+    window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
 
     setTimeout(function () {
       expect($('.org-no-logo-2')).not.toHaveClass('js-hidden')
@@ -104,7 +106,7 @@ describe('organisation-list-filter.js', function () {
 
   it('show items that do have acronyms that match the search term', function (done) {
     $('[data-filter="form"] input').val('mfw')
-    $('[data-filter="form"] input').trigger('keyup')
+    window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
 
     setTimeout(function () {
       expect($('.org-logo-3')).not.toHaveClass('js-hidden')
@@ -115,7 +117,7 @@ describe('organisation-list-filter.js', function () {
 
   it('show items that do have acronyms and/or name that match the search term', function (done) {
     $('[data-filter="form"] input').val('co')
-    $('[data-filter="form"] input').trigger('keyup')
+    window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
 
     setTimeout(function () {
       expect($('.org-logo-2')).not.toHaveClass('js-hidden')
@@ -128,7 +130,7 @@ describe('organisation-list-filter.js', function () {
 
   it('hides items that do not have acronyms and/or name that match the search term', function (done) {
     $('[data-filter="form"] input').val('co')
-    $('[data-filter="form"] input').trigger('keyup')
+    window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
 
     setTimeout(function () {
       expect($('.org-logo-1')).toHaveClass('js-hidden')
@@ -140,7 +142,7 @@ describe('organisation-list-filter.js', function () {
 
   it('hide department counts and names if they have no matching organisations', function (done) {
     $('[data-filter="form"] input').val('Advisory cou')
-    $('[data-filter="form"] input').trigger('keyup')
+    window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
 
     setTimeout(function () {
       expect($('.count-for-logos').parent()).toHaveClass('js-hidden')
@@ -151,7 +153,7 @@ describe('organisation-list-filter.js', function () {
 
   it('update the department count', function (done) {
     $('[data-filter="form"] input').val('Advisory cou')
-    $('[data-filter="form"] input').trigger('keyup')
+    window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
 
     setTimeout(function () {
       expect($('.count-for-no-logos')).not.toHaveClass('js-hidden')
@@ -164,7 +166,7 @@ describe('organisation-list-filter.js', function () {
 
   it('shows a message if there are no matching organisations', function (done) {
     $('[data-filter="form"] input').val('Nothing will match this')
-    $('[data-filter="form"] input').trigger('keyup')
+    window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
 
     setTimeout(function () {
       expect($('.js-search-results')).toHaveText('0 results found')
@@ -174,7 +176,7 @@ describe('organisation-list-filter.js', function () {
 
   it('copes when organisation name contains line breaks and multiple spaces', function (done) {
     $('[data-filter="form"] input').val('ministry of funny walks')
-    $('[data-filter="form"] input').trigger('keyup')
+    window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
 
     setTimeout(function () {
       expect($('.js-search-results')).toHaveText('1 result found')
