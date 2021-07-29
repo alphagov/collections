@@ -11,9 +11,9 @@ describe('A toggle attribute module', function () {
     '</div>'
 
   beforeEach(function () {
-    toggle = new GOVUK.Modules.ToggleAttribute()
     $element = $(html)
-    toggle.start($element)
+    toggle = new GOVUK.Modules.ToggleAttribute($element[0])
+    toggle.init()
     clickon = $element.find('#clickon')
   })
 
