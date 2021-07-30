@@ -11,10 +11,8 @@
 //= require govuk_publishing_components/lib/current-location
 //= require govuk_publishing_components/lib/initial-focus
 //= require govuk_publishing_components/lib/primary-links
-//= require govuk_publishing_components/lib/select
 //= require govuk_publishing_components/lib/toggle-input-class-on-focus
 //= require govuk_publishing_components/lib/toggle
-//= require govuk_publishing_components/lib/track-click
 //= require govuk_publishing_components/lib/trigger-event
 
 //= require govuk_publishing_components/lib/govspeak/barchart-enhancement
@@ -29,7 +27,7 @@
 //= require govuk_publishing_components/components/radio
 //= require govuk_publishing_components/components/step-by-step-nav
 //= require govuk_publishing_components/components/error-summary
-//= require govuk_publishing_components/analytics/explicit-cross-domain-links
+//= require govuk_publishing_components/analytics
 
 //= require support
 //= require browse-columns
