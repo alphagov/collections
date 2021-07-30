@@ -307,7 +307,7 @@ RSpec.describe "Organisation pages" do
   end
 
   describe "high profile groups section" do
-    data = [
+    visible_high_profile_groups = [
       {
         base_path: "/government/organisations/attorney-generals-office-1",
         title: "High Profile Group 1",
@@ -319,9 +319,21 @@ RSpec.describe "Organisation pages" do
         details: { organisation_govuk_status: { status: "live" } },
       },
     ]
+
+    non_visible_high_profile_groups = [
+      {
+        base_path: "/government/organisations/charity-commission-1",
+        title: "High Profile Group 1",
+        details: { organisation_govuk_status: { status: "replaced" } },
+      },
+    ]
+
     before do
-      content_item_attorney_general["links"]["ordered_high_profile_groups"] = data
+      content_item_attorney_general["links"]["ordered_high_profile_groups"] = visible_high_profile_groups
       stub_content_store_has_item("/government/organisations/attorney-generals-office", content_item_attorney_general)
+
+      content_item_charity_commission["links"]["ordered_high_profile_groups"] = non_visible_high_profile_groups
+      stub_content_store_has_item("/government/organisations/charity-commission", content_item_charity_commission)
     end
 
     it "displays high profile groups if present" do
@@ -331,16 +343,21 @@ RSpec.describe "Organisation pages" do
       expect(page).to have_css(".app-c-topic-list__link[href='/government/organisations/attorney-generals-office-1']", text: "High Profile Group 1")
       expect(page).to have_css(".app-c-topic-list__link[href='/government/organisations/attorney-generals-office-2']", text: "High Profile Group 2")
     end
-  end
 
-  it "does not show section for organisations without high profile groups" do
-    visit "/government/organisations/office-of-the-secretary-of-state-for-wales"
-    expect(page).not_to have_css(".gem-c-heading", text: "High profile groups within the Office of the Secretary of State for Wales")
-  end
+    it "does not show section for organisations without high profile groups" do
+      visit "/government/organisations/office-of-the-secretary-of-state-for-wales"
+      expect(page).not_to have_css(".gem-c-heading", text: "High profile groups within the Office of the Secretary of State for Wales")
+    end
 
-  it "does not show high profile groups for promotional orgs" do
-    visit "/government/organisations/prime-ministers-office-10-downing-street"
-    expect(page).not_to have_css(".gem-c-heading", text: "High profile groups within the Prime Minister's Office, 10 Downing Street")
+    it "does not show high profile groups for promotional orgs" do
+      visit "/government/organisations/prime-ministers-office-10-downing-street"
+      expect(page).not_to have_css(".gem-c-heading", text: "High profile groups within the Prime Minister's Office, 10 Downing Street")
+    end
+
+    it "does not show high profile groups if groups are non-live, exempt or transitioning" do
+      visit "/government/organisations/charity-commission"
+      expect(page).not_to have_css(".gem-c-heading", text: "High profile groups within Charity Commission")
+    end
   end
 
   describe "corporate information" do
