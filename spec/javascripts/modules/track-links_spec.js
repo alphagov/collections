@@ -38,8 +38,8 @@ describe('Track links', function () {
       e.preventDefault()
     })
 
-    var tracker = new GOVUK.Modules.TrackLinks()
-    tracker.start([element])
+    var tracker = new GOVUK.Modules.TrackLinks(element)
+    tracker.init()
   })
 
   afterEach(function () {
