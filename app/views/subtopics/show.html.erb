@@ -12,9 +12,7 @@
   <%
     title_params = { title: t("shared.topics.title", title: subtopic.title) }
     if subtopic.parent
-      title_params[:context] = {
-        text: subtopic.parent.title
-      }
+      title_params[:context] = subtopic.parent.title
     end
   %>
   <%= render "govuk_publishing_components/components/title", title_params %>
