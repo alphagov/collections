@@ -5,6 +5,7 @@ class BrexitLandingPageController < ApplicationController
   skip_before_action :set_expiry
   before_action -> { set_expiry(1.minute) }
   before_action -> { set_slimmer_headers(remove_search: true, show_accounts: logged_in? ? "signed-in" : "signed-out") }
+  after_action :set_slimmer_template
 
   around_action :switch_locale
   def show
@@ -19,7 +20,7 @@ class BrexitLandingPageController < ApplicationController
 private
 
   def set_slimmer_template
-    set_gem_layout_full_width
+    slimmer_template "gem_layout_full_width"
   end
 
   def taxon
