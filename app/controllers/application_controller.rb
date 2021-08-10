@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
 
   after_action :set_slimmer_template
 
-  helper_method :explore_menu_variant, :explore_menu_testable?
+  helper_method :explore_menu_variant, :explore_menu_variant_b?
 
   rescue_from GdsApi::ContentStore::ItemNotFound, with: :error_404
   rescue_from GdsApi::HTTPForbidden, with: :error_403
