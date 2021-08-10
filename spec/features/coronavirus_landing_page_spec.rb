@@ -119,11 +119,25 @@ RSpec.feature "Coronavirus Pages" do
     before { stub_coronavirus_statistics }
 
     scenario "AB testing of Explore navigational super menu" do
+      with_variant ExploreMenuAbTestable: "A" do
+        given_there_is_a_content_item
+        when_i_visit_the_coronavirus_landing_page
+
+        expect(page).to have_css('meta[content="ExploreMenuAbTestable:A"]', visible: false)
+      end
+
       with_variant ExploreMenuAbTestable: "B" do
         given_there_is_a_content_item
         when_i_visit_the_coronavirus_landing_page
 
         expect(page).to have_css('meta[content="ExploreMenuAbTestable:B"]', visible: false)
+      end
+
+      with_variant ExploreMenuAbTestable: "Z" do
+        given_there_is_a_content_item
+        when_i_visit_the_coronavirus_landing_page
+
+        expect(page).to have_css('meta[content="ExploreMenuAbTestable:Z"]', visible: false)
       end
     end
   end
