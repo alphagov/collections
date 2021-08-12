@@ -1,5 +1,5 @@
 class BrexitLandingPageController < ApplicationController
-  include GovukPersonalisation::AccountConcern
+  include GovukPersonalisation::ControllerConcern
   include Slimmer::Headers
 
   skip_before_action :set_expiry
