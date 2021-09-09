@@ -69,7 +69,7 @@ module Organisations
           href: promotional_feature_link(item["href"]),
           image_src: item["image"]["url"],
           image_alt: item["image"]["alt_text"],
-          extra_links: item["links"].map do |link|
+          extra_details: item["links"].map do |link|
             {
               text: link["title"],
               href: link["href"],
