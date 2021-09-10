@@ -7,6 +7,10 @@ class FetchCoronavirusStatisticsService
                           :hospital_admissions_date,
                           :new_positive_tests,
                           :new_positive_tests_date,
+                          :percent_of_first_vaccine,
+                          :percent_of_first_vaccine_date,
+                          :percent_of_second_vaccine,
+                          :percent_of_second_vaccine_date,
                           keyword_init: true)
 
   def self.call
@@ -57,6 +61,8 @@ private
           "cumulativeVaccinations" => "cumPeopleVaccinatedFirstDoseByPublishDate",
           "hospitalAdmissions" => "newAdmissions",
           "newPositiveTests" => "newCasesByPublishDate",
+          "percentageFirstVaccine" => "cumVaccinationFirstDoseUptakeByPublishDatePercentage",
+          "percentageSecondVaccine" => "cumVaccinationSecondDoseUptakeByPublishDatePercentage",
         }.to_json,
       })
     end
@@ -81,6 +87,16 @@ private
     if (latest_tests = data.find { |d| d["newPositiveTests"] })
       parsed[:new_positive_tests] = latest_tests["newPositiveTests"]
       parsed[:new_positive_tests_date] = Date.parse(latest_tests["date"])
+    end
+
+    if (latest_first_dose_percentage = data.find { |d| d["percentageFirstVaccine"] })
+      parsed[:percent_of_first_vaccine] = latest_first_dose_percentage["percentageFirstVaccine"]
+      parsed[:percent_of_first_vaccine_date] = Date.parse(latest_tests["date"])
+    end
+
+    if (latest_second_dose_percentage = data.find { |d| d["percentageSecondVaccine"] })
+      parsed[:percent_of_second_vaccine] = latest_second_dose_percentage["percentageSecondVaccine"]
+      parsed[:percent_of_second_vaccine_date] = Date.parse(latest_tests["date"])
     end
 
     parsed
