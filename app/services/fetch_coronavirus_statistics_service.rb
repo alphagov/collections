@@ -13,6 +13,8 @@ class FetchCoronavirusStatisticsService
                           :percent_of_second_vaccine_date,
                           :total_current_week_cases,
                           :total_current_week_admissions,
+                          :cases_percentage_change,
+                          :admissions_percentage_change,
                           keyword_init: true)
 
   def self.call
@@ -101,14 +103,28 @@ private
       parsed[:percent_of_second_vaccine_date] = Date.parse(latest_tests["date"])
     end
 
-    last_7_days_cases = data.first(7).map { |day_cases| day_cases["newPositiveTests"] }
-    if last_7_days_cases.compact.size == 7
-      parsed[:total_current_week_cases] = last_7_days_cases.inject(:+)
+    current_week_cases = data.first(7).map { |day_cases| day_cases["newPositiveTests"] }
+    if current_week_cases.compact.size == 7
+      parsed[:total_current_week_cases] = current_week_cases.inject(:+)
     end
 
-    last_7_days_admissions = data.first(7).map { |day_cases| day_cases["hospitalAdmissions"] }
-    if last_7_days_admissions.compact.size == 7
-      parsed[:total_current_week_admissions] = last_7_days_admissions.inject(:+)
+    current_week_admissions = data.first(7).map { |day_cases| day_cases["hospitalAdmissions"] }
+    if current_week_admissions && current_week_admissions.compact.size == 7
+      parsed[:total_current_week_admissions] = current_week_admissions.inject(:+)
+    end
+
+    if data.size >= 13
+      previous_week_cases = data[7..13].map { |day_cases| day_cases["newPositiveTests"] }
+      if parsed[:total_current_week_cases] && previous_week_cases && previous_week_cases.compact.size == 7
+        total_previous_week_cases = previous_week_cases.inject(:+)
+        parsed[:cases_percentage_change] = ((parsed[:total_current_week_cases] - total_previous_week_cases) / total_previous_week_cases) * 100
+      end
+
+      previous_week_admissions = data[7..13].map { |day_cases| day_cases["hospitalAdmissions"] }
+      if parsed[:total_current_week_admissions] && previous_week_admissions && previous_week_admissions.compact.size == 7
+        total_previous_week_admissions = previous_week_admissions.inject(:+)
+        parsed[:admissions_percentage_change] = ((parsed[:total_current_week_admissions] - total_previous_week_admissions) / total_previous_week_admissions) * 100
+      end
     end
 
     parsed
