@@ -39,7 +39,7 @@
   <% if statistics && statistics.percent_of_first_vaccine %>
     <%= render "coronavirus_landing_page/components/landing_page/statistic", {
       title: "People vaccinated, percent of total population - 1st dose",
-      statistic: number_with_delimiter(statistics.percent_of_first_vaccine),
+      statistic: number_to_percentage(statistics.percent_of_first_vaccine, precision: 1),
       statistic_meaning: "people have received their first dose",
       last_updated_date: statistics.percent_of_first_vaccine_date,
       guidance_link: "",
@@ -49,7 +49,7 @@
   <% if statistics && statistics.percent_of_second_vaccine %>
     <%= render "coronavirus_landing_page/components/landing_page/statistic", {
       title: "People vaccinated, percent of total population - 2nd dose",
-      statistic: number_with_delimiter(statistics.percent_of_second_vaccine),
+      statistic: number_to_percentage(statistics.percent_of_second_vaccine, precision: 1),
       statistic_meaning: "people have received their second dose",
       last_updated_date: statistics.percent_of_second_vaccine_date,
       guidance_link: "",
