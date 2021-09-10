@@ -56,6 +56,16 @@
     } %>
   <% end %>
 
+  <% if statistics && statistics.total_current_week_cases %>
+    <%= render "coronavirus_landing_page/components/landing_page/statistic", {
+      title: "People testing positive - Last 7 days",
+      statistic: number_with_delimiter(statistics.total_current_week_cases),
+      statistic_meaning: "people tested positive with COVID-19 in the last 7 days",
+      last_updated_date: statistics.new_positive_tests_date,
+      guidance_link: "",
+    } %>
+  <% end %>
+
   <ul class="govuk-list">
     <% topic_section["links"].each do | link | %>
       <li class="covid__topic-list-item">
