@@ -61,10 +61,12 @@ When(/^I click on a top level browse page$/) do
 end
 
 Then(/^I see the list of second level browse pages$/) do
+  require "byebug"; byebug # DEBUG @kevindew
   expect(page).to have_selector("a", text: "Judges"), "Subsection link should be visible"
 end
 
 Then(/^I see the curated list of second level browse pages$/) do
+  # require "byebug"; byebug # DEBUG @kevindew
   expect(page).to have_selector("div.curated li:nth-child(1)", text: "Judges"), "Judges should appear first"
   expect(page).to have_selector("div.curated li:nth-child(2)", text: "Courts"), "Courts should appear second"
 end

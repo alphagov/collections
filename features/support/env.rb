@@ -19,4 +19,4 @@ GovukTest.configure
 
 ActionController::Base.allow_rescue = false
 
-Capybara.javascript_driver = :headless_chrome
+Capybara.javascript_driver = :selenium_chrome
