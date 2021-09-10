@@ -4,11 +4,11 @@ RSpec.describe FetchCoronavirusStatisticsService do
       body = {
         data: [
           { "date" => "2021-03-18", "cumulativeVaccinations" => nil, "hospitalAdmissions" => nil, "newPositiveTests" => 6303 },
-          { "date" => "2021-03-17", "cumulativeVaccinations" => 25_735_472, "hospitalAdmissions" => nil, "newPositiveests" => 5758 },
-          { "date" => "2021-03-16", "cumulativeVaccinations" => 25_273_226, "hospitalAdmissions" => nil, "newPositiveests" => 5294 },
-          { "date" => "2021-03-15", "cumulativeVaccinations" => 24_839_906, "hospitalAdmissions" => nil, "newPositiveests" => 5089 },
-          { "date" => "2021-03-14", "cumulativeVaccinations" => 24_453_221, "hospitalAdmissions" => 426, "newPositiveests" => 4618 },
-          { "date" => "2021-03-13", "cumulativeVaccinations" => 24_196_211, "hospitalAdmissions" => 460, "newPositiveests" => 5534 },
+          { "date" => "2021-03-17", "cumulativeVaccinations" => 25_735_472, "hospitalAdmissions" => nil, "newPositiveTests" => 5758 },
+          { "date" => "2021-03-16", "cumulativeVaccinations" => 25_273_226, "hospitalAdmissions" => nil, "newPositiveTests" => 5294 },
+          { "date" => "2021-03-15", "cumulativeVaccinations" => 24_839_906, "hospitalAdmissions" => nil, "newPositiveTests" => 5089 },
+          { "date" => "2021-03-14", "cumulativeVaccinations" => 24_453_221, "hospitalAdmissions" => 426, "newPositiveTests" => 4618 },
+          { "date" => "2021-03-13", "cumulativeVaccinations" => 24_196_211, "hospitalAdmissions" => 460, "newPositiveTests" => 5534 },
         ],
       }
 
@@ -51,6 +51,27 @@ RSpec.describe FetchCoronavirusStatisticsService do
           hospital_admissions_date: nil,
           new_positive_tests: 6303,
           new_positive_tests_date: Date.new(2021, 3, 18),
+        )
+      end
+
+      it "gets total number of cases for the last week (7 days)" do
+        body = {
+          data: [
+            { "date" => "2021-03-18", "cumulativeVaccinations" => nil, "hospitalAdmissions" => nil, "newPositiveTests" => 6303 },
+            { "date" => "2021-03-17", "cumulativeVaccinations" => 25_735_472, "hospitalAdmissions" => nil, "newPositiveTests" => 5758 },
+            { "date" => "2021-03-16", "cumulativeVaccinations" => 25_273_226, "hospitalAdmissions" => nil, "newPositiveTests" => 5294 },
+            { "date" => "2021-03-15", "cumulativeVaccinations" => 24_839_906, "hospitalAdmissions" => nil, "newPositiveTests" => 5089 },
+            { "date" => "2021-03-14", "cumulativeVaccinations" => 24_453_221, "hospitalAdmissions" => 426, "newPositiveTests" => 4618 },
+            { "date" => "2021-03-13", "cumulativeVaccinations" => 24_196_211, "hospitalAdmissions" => 460, "newPositiveTests" => 5534 },
+            { "date" => "2021-03-12", "cumulativeVaccinations" => 24_196_211, "hospitalAdmissions" => 460, "newPositiveTests" => 1234 },
+          ],
+        }
+
+        stub_request(:get, /coronavirus.data.gov.uk/)
+          .to_return(status: 200, body: body.to_json)
+
+        expect(described_class.call).to have_attributes(
+          total_current_week_cases: 33_830,
         )
       end
     end

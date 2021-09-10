@@ -11,6 +11,7 @@ class FetchCoronavirusStatisticsService
                           :percent_of_first_vaccine_date,
                           :percent_of_second_vaccine,
                           :percent_of_second_vaccine_date,
+                          :total_current_week_cases,
                           keyword_init: true)
 
   def self.call
@@ -97,6 +98,11 @@ private
     if (latest_second_dose_percentage = data.find { |d| d["percentageSecondVaccine"] })
       parsed[:percent_of_second_vaccine] = latest_second_dose_percentage["percentageSecondVaccine"]
       parsed[:percent_of_second_vaccine_date] = Date.parse(latest_tests["date"])
+    end
+
+    last_7_days_cases = data.first(7).map { |day_cases| day_cases["newPositiveTests"] }
+    if last_7_days_cases.compact.size == 7
+      parsed[:total_current_week_cases] = last_7_days_cases.inject(:+)
     end
 
     parsed
