@@ -15,6 +15,8 @@ class FetchCoronavirusStatisticsService
                           :total_current_week_admissions,
                           :cases_percentage_change,
                           :admissions_percentage_change,
+                          :total_cases_change,
+                          :total_admissions_change,
                           keyword_init: true)
 
   def self.call
@@ -117,13 +119,15 @@ private
       previous_week_cases = data[7..13].map { |day_cases| day_cases["newPositiveTests"] }
       if parsed[:total_current_week_cases] && previous_week_cases && previous_week_cases.compact.size == 7
         total_previous_week_cases = previous_week_cases.inject(:+)
-        parsed[:cases_percentage_change] = ((parsed[:total_current_week_cases] - total_previous_week_cases) / total_previous_week_cases) * 100
+        parsed[:total_cases_change] = parsed[:total_current_week_cases] - total_previous_week_cases
+        parsed[:cases_percentage_change] = ((parsed[:total_current_week_cases] - total_previous_week_cases) / total_previous_week_cases.to_f) * 100
       end
 
       previous_week_admissions = data[7..13].map { |day_cases| day_cases["hospitalAdmissions"] }
       if parsed[:total_current_week_admissions] && previous_week_admissions && previous_week_admissions.compact.size == 7
         total_previous_week_admissions = previous_week_admissions.inject(:+)
-        parsed[:admissions_percentage_change] = ((parsed[:total_current_week_admissions] - total_previous_week_admissions) / total_previous_week_admissions) * 100
+        parsed[:total_admissions_change] = parsed[:total_current_week_admissions] - total_previous_week_admissions
+        parsed[:admissions_percentage_change] = ((parsed[:total_current_week_admissions] - total_previous_week_admissions) / total_previous_week_admissions.to_f) * 100
       end
     end
 
