@@ -66,6 +66,16 @@
     } %>
   <% end %>
 
+  <% if statistics && statistics.total_cases_change %>
+    <%= render "coronavirus_landing_page/components/landing_page/statistic", {
+      title: "People testing positive - Last 7 days Total change",
+      statistic: number_with_delimiter(statistics.total_cases_change),
+      statistic_meaning: "total change in people testing positive with COVID-19 in the last 7 days",
+      last_updated_date: statistics.new_positive_tests_date,
+      guidance_link: "",
+    } %>
+  <% end %>
+
   <% if statistics && statistics.cases_percentage_change %>
     <%= render "coronavirus_landing_page/components/landing_page/statistic", {
       title: "People testing positive - Last 7 days Percentage change",
@@ -82,6 +92,16 @@
       statistic: number_with_delimiter(statistics.total_current_week_admissions),
       statistic_meaning: "new patients have been admitted to hospital in the last 7 days",
       last_updated_date: statistics.hospital_admissions_date,
+      guidance_link: "",
+    } %>
+  <% end %>
+
+  <% if statistics && statistics.total_admissions_change %>
+    <%= render "coronavirus_landing_page/components/landing_page/statistic", {
+      title: "People admitted to hospital - Last 7 days Total change",
+      statistic: number_with_delimiter(statistics.total_admissions_change),
+      statistic_meaning: "total change in new patients have been admitted to hospital in the last 7 days",
+      last_updated_date: statistics.new_positive_tests_date,
       guidance_link: "",
     } %>
   <% end %>
