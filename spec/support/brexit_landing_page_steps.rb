@@ -83,4 +83,17 @@ module BrexitLandingPageSteps
       )
     end
   end
+
+  def and_the_faqpage_schema_is_rendered
+    faq_schema = find_schema("FAQPage")
+    expect(faq_schema["name"]).to eq("Brexit")
+    expect(faq_schema["description"]).to include("Find out how new Brexit rules apply to things like travel and doing business with Europe.")
+  end
+
+  def find_schema(schema_name)
+    schema_sections = page.find_all("script[type='application/ld+json']", visible: false)
+    schemas = schema_sections.map { |section| JSON.parse(section.text(:all)) }
+
+    schemas.detect { |schema| schema["@type"] == schema_name }
+  end
 end

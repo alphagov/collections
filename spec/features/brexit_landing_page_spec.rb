@@ -11,6 +11,7 @@ RSpec.feature "Brexit landing page" do
       then_i_can_see_the_header_section
       and_i_can_see_the_explore_topics_section
       and_there_is_metadata
+      and_the_faqpage_schema_is_rendered
     end
 
     it "has tracking on all links" do
