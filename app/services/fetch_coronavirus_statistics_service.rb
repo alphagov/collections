@@ -105,25 +105,29 @@ private
       parsed[:percent_of_second_vaccine_date] = Date.parse(latest_tests["date"])
     end
 
-    current_week_cases = data.first(7).map { |day_cases| day_cases["newPositiveTests"] }
+    cases_data = data.select { |d| d["newPositiveTests"].present? }
+
+    current_week_cases = cases_data.first(7).map { |day_cases| day_cases["newPositiveTests"] }
     if current_week_cases.compact.size == 7
       parsed[:total_current_week_cases] = current_week_cases.inject(:+)
     end
 
-    current_week_admissions = data.first(7).map { |day_cases| day_cases["hospitalAdmissions"] }
+    admissions_data = data.select { |d| d["hospitalAdmissions"].present? }
+
+    current_week_admissions = admissions_data.first(7).map { |day_cases| day_cases["hospitalAdmissions"] }
     if current_week_admissions && current_week_admissions.compact.size == 7
       parsed[:total_current_week_admissions] = current_week_admissions.inject(:+)
     end
 
     if data.size >= 13
-      previous_week_cases = data[7..13].map { |day_cases| day_cases["newPositiveTests"] }
+      previous_week_cases = cases_data[7..13].map { |day_cases| day_cases["newPositiveTests"] }
       if parsed[:total_current_week_cases] && previous_week_cases && previous_week_cases.compact.size == 7
         total_previous_week_cases = previous_week_cases.inject(:+)
         parsed[:total_cases_change] = parsed[:total_current_week_cases] - total_previous_week_cases
         parsed[:cases_percentage_change] = ((parsed[:total_current_week_cases] - total_previous_week_cases) / total_previous_week_cases.to_f) * 100
       end
 
-      previous_week_admissions = data[7..13].map { |day_cases| day_cases["hospitalAdmissions"] }
+      previous_week_admissions = admissions_data[7..13].map { |day_cases| day_cases["hospitalAdmissions"] }
       if parsed[:total_current_week_admissions] && previous_week_admissions && previous_week_admissions.compact.size == 7
         total_previous_week_admissions = previous_week_admissions.inject(:+)
         parsed[:total_admissions_change] = parsed[:total_current_week_admissions] - total_previous_week_admissions
