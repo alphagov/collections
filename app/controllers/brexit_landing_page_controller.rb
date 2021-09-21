@@ -20,7 +20,7 @@ class BrexitLandingPageController < ApplicationController
 private
 
   def set_slimmer_template
-    slimmer_template "gem_layout_full_width"
+    slimmer_template "gem_layout_full_width_old_header"
   end
 
   def taxon
