@@ -6,10 +6,6 @@ Collections currently renders the following campaign pages:
 
 All content for the transition landing pages are currently read from yaml files. [Welsh](config/locales/cy/brexit_landing_page.yml) and [English](config/locales/en/brexit_landing_page.yml) translations are available.
 
-## DIT landing page ([/eubusiness](https://www.gov.uk/eubusiness))
-
-All content for the DIT landing pages are currently read from yaml files e.g. for [English](config/locales/en/dit_landing_page.yml). See the [content item's available translations](https://www.gov.uk/api/content/eubusiness) for the current list.
-
 ## Coronavirus pages:
 
   - Landing page ([gov.uk/coronavirus](https://www.gov.uk/coronavirus))
