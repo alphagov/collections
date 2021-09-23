@@ -84,11 +84,11 @@ module Organisations
         heading_text: person["title"],
         lang: person["locale"],
         heading_level: 0,
-        extra_links_no_indent: true,
+        extra_details_no_indent: true,
       }
 
       if is_person_ministerial?(type)
-        data[:extra_links] = roles.map { |role| formatted_role_link(role) }
+        data[:extra_details] = roles.map { |role| formatted_role_link(role) }
       else
         data[:description] = roles.map { |role| role["title"] }.join(", ")
       end

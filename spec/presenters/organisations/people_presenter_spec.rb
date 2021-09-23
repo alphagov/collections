@@ -17,8 +17,8 @@ RSpec.describe Organisations::PeoplePresenter do
           heading_text: "Oliver Dowden CBE MP",
           lang: "en",
           heading_level: 0,
-          extra_links_no_indent: true,
-          extra_links: [
+          extra_details_no_indent: true,
+          extra_details: [
             {
               text: "Parliamentary Secretary (Minister for Implementation)",
               href: "/government/ministers/parliamentary-secretary",
@@ -43,8 +43,8 @@ RSpec.describe Organisations::PeoplePresenter do
           heading_text: "The Rt Hon Theresa May MP",
           lang: "en",
           heading_level: 0,
-          extra_links_no_indent: true,
-          extra_links: [
+          extra_details_no_indent: true,
+          extra_details: [
             {
               text: "Prime Minister",
               href: "/government/ministers/prime-minister",
@@ -72,8 +72,8 @@ RSpec.describe Organisations::PeoplePresenter do
           heading_text: "Stuart Andrew MP",
           lang: "en",
           heading_level: 0,
-          extra_links_no_indent: true,
-          extra_links: [
+          extra_details_no_indent: true,
+          extra_details: [
             {
               text: "Parliamentary Under Secretary of State",
               href: "/government/ministers/parliamentary-under-secretary-of-state--94",
@@ -137,7 +137,7 @@ RSpec.describe Organisations::PeoplePresenter do
 
     it "displays role as descriptions rather than links" do
       expect(people_presenter.all_people.third[:people][0][:description]).to eq("Cabinet Secretary")
-      expect(people_presenter.all_people.third[:people][0][:extra_links]).to be_nil
+      expect(people_presenter.all_people.third[:people][0][:extra_details]).to be_nil
     end
 
     it "handles non-ministers with multiple roles" do
@@ -157,7 +157,7 @@ RSpec.describe Organisations::PeoplePresenter do
         heading_text: "Sir Jeremy Heywood",
         lang: "en",
         heading_level: 0,
-        extra_links_no_indent: true,
+        extra_details_no_indent: true,
         image_src: "/photo/jeremy-heywood",
       }
 
@@ -169,7 +169,7 @@ RSpec.describe Organisations::PeoplePresenter do
         heading_text: "John Manzoni",
         lang: "en",
         heading_level: 0,
-        extra_links_no_indent: true,
+        extra_details_no_indent: true,
       }
 
       expect(non_important_board_members.all_people.third[:people][0]).to eq(expected_important)
