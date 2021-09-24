@@ -61,6 +61,34 @@ RSpec.describe Organisations::PeoplePresenter do
       expect(people_presenter.all_people.first[:people][2]).to eq(expected[:people])
     end
 
+    it "orders minister roles by seniority" do
+      expected = {
+        title: "Our ministers",
+        people: {
+          brand: "attorney-generals-office",
+          href: "/government/people/victoria-atkins",
+          image_src: "/photo/victoria-atkins",
+          description: nil,
+          metadata: nil,
+          heading_text: "Victoria Atkins MP",
+          lang: "en",
+          heading_level: 0,
+          extra_links_no_indent: true,
+          extra_links: [
+            {
+              text: "Minister of State",
+              href: "/government/ministers/minister-of-state--61",
+            },
+            {
+              text: "Minister for Afghan Resettlement",
+              href: "/government/ministers/minister-for-afghan-resettlement",
+            },
+          ],
+        },
+      }
+      expect(people_presenter.all_people.first[:people][3]).to eq(expected[:people])
+    end
+
     it "returns minister without image if no image available" do
       expected = {
         title: "Our ministers",

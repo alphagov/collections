@@ -64,6 +64,7 @@ module Organisations
         .map { |ra| ra["links"]["role"].first }
         .select { |role| allowed_role_content_ids.include?(role["content_id"]) }
         .select { |role| expected_document_type(type).include?(role["document_type"]) }
+        .sort_by { |role| role["details"]["seniority"] }
     end
 
     def formatted_role_link(role)
@@ -75,7 +76,6 @@ module Organisations
 
     def formatted_person_data(person, type)
       roles = current_roles(person, type)
-
       data = {
         brand: @org.brand,
         href: person["base_path"],
