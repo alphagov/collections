@@ -79,7 +79,7 @@ module OrganisationHelpers
     }
   end
 
-  def current_role_appointment(title:, base_path: nil, payment_type: nil, document_type: nil, content_id: nil)
+  def current_role_appointment(title:, base_path: nil, payment_type: nil, document_type: nil, content_id: nil, seniority: nil)
     {
       details: {
         current: true,
@@ -91,7 +91,7 @@ module OrganisationHelpers
             title: title,
             base_path: base_path,
             document_type: document_type,
-            details: { role_payment_type: payment_type },
+            details: { role_payment_type: payment_type, seniority: seniority },
           }.compact,
         ],
       },
@@ -131,6 +131,8 @@ module OrganisationHelpers
           { content_id: "61a62a60-df26-4454-81da-0594f0d74d76" },
           { content_id: "849f0fdc-6393-49fa-9661-9afdfb40615c" },
           { content_id: "3f4bbf6c-741e-4207-9135-63d1c8f39c28" },
+          { content_id: "ac6e554d-f7d2-4c15-8a0c-91eedc1e3c31" },
+          { content_id: "6d8eb1a6-41f2-4381-9c06-de697c0ff2c5" },
         ],
         ordered_ministers: [
           {
@@ -193,6 +195,35 @@ module OrganisationHelpers
                   title: "Minister for the Civil Service",
                   base_path: "/government/ministers/minister-for-the-civil-service",
                   document_type: "ministerial_role",
+                ),
+              ],
+            },
+          },
+          {
+            title: "Victoria Atkins MP",
+            locale: "en",
+            base_path: "/government/people/victoria-atkins",
+            details: {
+              image: {
+                url: "/photo/victoria-atkins",
+                alt_text: "Victoria Atkins MP",
+              },
+            },
+            links: {
+              role_appointments: [
+                current_role_appointment(
+                  content_id: "6d8eb1a6-41f2-4381-9c06-de697c0ff2c5",
+                  title: "Minister for Afghan Resettlement",
+                  base_path: "/government/ministers/minister-for-afghan-resettlement",
+                  document_type: "ministerial_role",
+                  seniority: 100,
+                ),
+                current_role_appointment(
+                  content_id: "ac6e554d-f7d2-4c15-8a0c-91eedc1e3c31",
+                  title: "Minister of State",
+                  base_path: "/government/ministers/minister-of-state--61",
+                  document_type: "ministerial_role",
+                  seniority: 99,
                 ),
               ],
             },
