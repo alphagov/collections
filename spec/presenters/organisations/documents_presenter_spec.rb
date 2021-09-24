@@ -111,7 +111,7 @@ RSpec.describe Organisations::DocumentsPresenter do
             href: "https://www.gov.uk/government/policies/1-1",
             image_src: "https://assets.publishing.service.gov.uk/government/uploads/1-1.jpg",
             image_alt: "Image 1-1",
-            extra_links: [
+            extra_details: [
               {
                 text: "Single departmental plans",
                 href: "https://www.gov.uk/government/collections/1-1",
@@ -137,7 +137,7 @@ RSpec.describe Organisations::DocumentsPresenter do
             href: "https://www.gov.uk/government/policies/2-1",
             image_src: "https://assets.publishing.service.gov.uk/government/uploads/2-1.jpg",
             image_alt: "Image 2-1",
-            extra_links: [
+            extra_details: [
               {
                 text: "Single departmental plans",
                 href: "https://www.gov.uk/government/collections/2-1",
@@ -155,7 +155,7 @@ RSpec.describe Organisations::DocumentsPresenter do
             href: "https://www.gov.uk/government/policies/2-2",
             image_src: "https://assets.publishing.service.gov.uk/government/uploads/2-2.jpg",
             image_alt: "Image 2-2",
-            extra_links: [
+            extra_details: [
               {
                 text: "Single departmental plans",
                 href: "https://www.gov.uk/government/collections/2-2",
@@ -181,7 +181,7 @@ RSpec.describe Organisations::DocumentsPresenter do
             href: "https://www.gov.uk/government/policies/3-1",
             image_src: "https://assets.publishing.service.gov.uk/government/uploads/3-1.jpg",
             image_alt: "Image 3-1",
-            extra_links: [
+            extra_details: [
               {
                 text: "Single departmental plans",
                 href: "https://www.gov.uk/government/collections/3-1",
@@ -199,7 +199,7 @@ RSpec.describe Organisations::DocumentsPresenter do
             href: "https://www.gov.uk/government/policies/3-3",
             image_src: "https://assets.publishing.service.gov.uk/government/uploads/3-2.jpg",
             image_alt: "Image 3-2",
-            extra_links: [
+            extra_details: [
               {
                 text: "Single departmental plans",
                 href: "https://www.gov.uk/government/collections/3-2",
@@ -218,7 +218,7 @@ RSpec.describe Organisations::DocumentsPresenter do
             image_src: "https://assets.publishing.service.gov.uk/government/uploads/3-3.jpg",
             image_alt: "Image 3-3",
             heading_text: "An unexpected title",
-            extra_links: [
+            extra_details: [
               {
                 text: "Single departmental plans",
                 href: "https://www.gov.uk/government/collections/3-3",
