@@ -26,7 +26,9 @@ describe('organisation-list-filter.js', function () {
         '<div data-filter="count" class="count-for-logos">' +
           '<h2>Ministerial Departments</h2>' +
           '<p>There are <span class="js-accessible-department-count">2</span> Ministerial Departments</p>' +
-          '<span class="js-department-count">2</span>' +
+          '<div class="gem-c-big-number">' +
+            '<span class="gem-c-big-number__value" data-department-count="true">2</span>' +
+          '</div>' +
         '</div>' +
         '<ol data-filter="list">' +
           '<li data-filter="item" class="org-logo-1">' +
@@ -45,7 +47,9 @@ describe('organisation-list-filter.js', function () {
         '<div data-filter="count" class="count-for-no-logos">' +
           '<h2>Non Ministerial Departments</h2>' +
           '<p>There are <span class="js-accessible-department-count">2</span> Non Ministerial Departments</p>' +
-          '<span class="js-department-count">2</span>' +
+          '<div class="gem-c-big-number">' +
+            '<span class="gem-c-big-number__value" data-department-count="true">2</span>' +
+          '</div>' +
         '</div>' +
         '<ol data-filter="list">' +
           '<li data-filter="item" class="org-no-logo-1">' +
@@ -158,7 +162,7 @@ describe('organisation-list-filter.js', function () {
     setTimeout(function () {
       expect($('.count-for-no-logos')).not.toHaveClass('js-hidden')
       expect($('.count-for-no-logos .js-accessible-department-count')).toHaveText(1)
-      expect($('.count-for-no-logos .js-department-count')).toHaveText(1)
+      expect($('.count-for-no-logos [data-department-count="true"]')).toHaveText(1)
       expect($('.js-search-results')).toHaveText('1 result found')
       done()
     }, timeout)
