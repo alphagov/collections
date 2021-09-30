@@ -6,9 +6,10 @@
       margin_bottom: 1
     } %>
 
-  <p class="covid-statistics__statistic-value govuk-body">
-    <%= statistic %>
-  </p>
+  
+  <%= render "govuk_publishing_components/components/big_number", {
+    number: statistic,
+  } %>
   <p class="govuk-body"><%= statistic_meaning %></p>
 
   <p class="govuk-body-s">

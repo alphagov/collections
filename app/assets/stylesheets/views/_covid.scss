@@ -289,8 +289,3 @@ $c19-landing-page-header-background: govuk-colour("blue");
 .covid-statistics__statistic-wrapper {
   margin-bottom: govuk-spacing(5);
 }
-
-.covid-statistics__statistic-value {
-  @include govuk-font(80, $weight: bold);
-  margin-bottom: 0;
-}
