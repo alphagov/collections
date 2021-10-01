@@ -1,5 +1,5 @@
 <header class="covid__page-header covid__page-header--landing-page">
-  <div class="govuk-width-container covid__page-header-title-wrapper">
+  <div class="govuk-width-container">
     <%= render 'govuk_publishing_components/components/breadcrumbs', {
       breadcrumbs: breadcrumbs,
       collapse_on_mobile: true,
@@ -16,26 +16,20 @@
         } %>
       </div>
     </div>
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-column-full covid__page-header-title-section-break">
-        <hr class="govuk-section-break govuk-section-break--visible covid__page-header-title-section-break--white">
-      </div>
-    </div>
   </div>
 
-  <div class="covid__page-header-content-section">
+  <div class="covid__page-header-content-section covid__page-guidance">
     <div class="govuk-width-container">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
           <%= render "govuk_publishing_components/components/heading", {
             text: header["title"],
             font_size: 19,
-            margin_bottom: 6,
-            inverse: true
+            margin_bottom: 6
           } %>
 
           <div class="covid__page-header-content">
-            <%= render_govspeak(header["intro"], inverse: true) %>
+            <%= render_govspeak(header["intro"]) %>
           </div>
         </div>
       </div>
@@ -72,8 +66,7 @@
             } %>
           <% else %>
             <%= render 'govuk_publishing_components/components/action_link', {
-              light_text: true,
-              transparent_icon: true,
+              blue_arrow: true,
               href: header["link"]["href"],
               text: header["link"]["link_text"],
               subtext: header["link"]["subtext"],
