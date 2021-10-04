@@ -31,10 +31,6 @@ Capybara.automatic_label_click = true
 
 Dir[Rails.root.join("spec/support/**/*.rb")].sort.each { |f| require f }
 
-GovukAbTesting.configure do |config|
-  config.acceptance_test_framework = :capybara
-end
-
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.include GdsApi::TestHelpers::Search

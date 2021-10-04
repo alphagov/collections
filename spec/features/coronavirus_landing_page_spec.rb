@@ -3,7 +3,6 @@ require "integration_spec_helper"
 RSpec.feature "Coronavirus Pages" do
   include CoronavirusLandingPageSteps
   include CoronavirusContentItemHelper
-  include GovukAbTesting::RspecHelpers
 
   describe "the landing page" do
     before { stub_coronavirus_statistics }
@@ -112,33 +111,6 @@ RSpec.feature "Coronavirus Pages" do
       and_another_coronavirus_subtaxon
       when_i_visit_a_coronavirus_subtaxon_without_a_hub_page
       then_i_am_redirected_to_the_landing_page
-    end
-  end
-
-  context "for AB tests" do
-    before { stub_coronavirus_statistics }
-
-    scenario "AB testing of Explore navigational super menu" do
-      with_variant ExploreMenuAbTestable: "A" do
-        given_there_is_a_content_item
-        when_i_visit_the_coronavirus_landing_page
-
-        expect(page).to have_css('meta[content="ExploreMenuAbTestable:A"]', visible: false)
-      end
-
-      with_variant ExploreMenuAbTestable: "B" do
-        given_there_is_a_content_item
-        when_i_visit_the_coronavirus_landing_page
-
-        expect(page).to have_css('meta[content="ExploreMenuAbTestable:B"]', visible: false)
-      end
-
-      with_variant ExploreMenuAbTestable: "Z" do
-        given_there_is_a_content_item
-        when_i_visit_the_coronavirus_landing_page
-
-        expect(page).to have_css('meta[content="ExploreMenuAbTestable:Z"]', visible: false)
-      end
     end
   end
 end

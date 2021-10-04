@@ -1,5 +1,6 @@
 class TaxonsController < ApplicationController
   rescue_from Taxon::InAlphaPhase, with: :error_404
+  slimmer_template "gem_layout_full_width"
 
   def show
     setup_content_item_and_navigation_helpers(taxon)
@@ -13,10 +14,6 @@ class TaxonsController < ApplicationController
   end
 
 private
-
-  def set_slimmer_template
-    set_gem_layout_full_width
-  end
 
   def taxon
     @taxon ||= Taxon.find(request.path)
