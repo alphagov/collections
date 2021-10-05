@@ -36,50 +36,20 @@
 
       <div class="govuk-grid-row covid__action-link-wrapper">
         <div class="govuk-grid-column-two-thirds">
-          <% if header["link2"] && header["link3"] %>
-            <%= render 'govuk_publishing_components/components/action_link', {
-              light_text: true,
-              small_icon: true,
-              href: header["link2"]["href"],
-              text: header["link2"]["link_text"],
-              nowrap_text: header["link2"]["link_nowrap_text"],
-              margin_bottom: 2,
-              data: {
-                module: "gem-track-click",
-                track_category: "pageElementInteraction",
-                track_action: "Announcements",
-                track_label: header["link2"]["href"]
-              }
-            } %>
-            <%= render 'govuk_publishing_components/components/action_link', {
-              light_text: true,
-              small_icon: true,
-              href: header["link3"]["href"],
-              text: header["link3"]["link_text"],
-              nowrap_text: header["link3"]["link_nowrap_text"],
-              data: {
-                module: "gem-track-click",
-                track_category: "pageElementInteraction",
-                track_action: "Announcements",
-                track_label: header["link3"]["href"]
-              }
-            } %>
-          <% else %>
-            <%= render 'govuk_publishing_components/components/action_link', {
-              blue_arrow: true,
-              href: header["link"]["href"],
-              text: header["link"]["link_text"],
-              subtext: header["link"]["subtext"],
-              mobile_subtext: true,
-              nowrap_text: header["link"]["link_nowrap_text"],
-              data: {
-                module: "gem-track-click",
-                track_category: "pageElementInteraction",
-                track_action: "Announcements",
-                track_label: header["link"]["href"]
-              }
-            } %>
-          <% end %>
+          <%= render 'govuk_publishing_components/components/action_link', {
+            blue_arrow: true,
+            href: header["link"]["href"],
+            text: header["link"]["link_text"],
+            subtext: header["link"]["subtext"],
+            mobile_subtext: true,
+            nowrap_text: header["link"]["link_nowrap_text"],
+            data: {
+              module: "gem-track-click",
+              track_category: "pageElementInteraction",
+              track_action: "Announcements",
+              track_label: header["link"]["href"]
+            }
+          } %>
         </div>
       </div>
     </div>
