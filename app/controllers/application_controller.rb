@@ -1,17 +1,12 @@
 class ApplicationController < ActionController::Base
   include Slimmer::Template
-  include AbTests::ExploreMenuAbTestable
-  include AbTests::SlimmerTemplateSelectable
 
   protect_from_forgery with: :exception
 
   before_action :set_expiry
   before_action :restrict_request_formats
-  before_action :set_explore_menu_response
 
-  after_action :set_slimmer_template
-
-  helper_method :explore_menu_variant, :explore_menu_variant_b?
+  slimmer_template "gem_layout"
 
   rescue_from GdsApi::ContentStore::ItemNotFound, with: :error_404
   rescue_from GdsApi::HTTPForbidden, with: :error_403
@@ -44,10 +39,6 @@ class ApplicationController < ActionController::Base
   end
 
 private
-
-  def set_slimmer_template
-    set_gem_layout
-  end
 
   def switch_locale(&action)
     locale = params[:locale] || I18n.default_locale
