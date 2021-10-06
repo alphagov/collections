@@ -14,7 +14,7 @@
     </div>
   <% end %>
   <%
-    accordion_contents << {
+    additional_contents = {
       heading: {
         text: section["title"],
       },
@@ -32,6 +32,10 @@
         track_dimension_index: 26
       }
     }
+
+    additional_contents[:summary] = { text: section["sub_heading"] } if section["sub_heading"]
+
+    accordion_contents << additional_contents
   %>
 <% end %>
 <%= render "govuk_publishing_components/components/heading", {

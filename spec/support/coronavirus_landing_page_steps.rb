@@ -103,6 +103,10 @@ module CoronavirusLandingPageSteps
     expect(page).not_to have_content("Find out when schools are expected to reopen in Scotland, Wales and Northern Ireland")
   end
 
+  def then_i_can_see_sub_headings_of_accordions
+    expect(page).to have_content("accordion sub heading")
+  end
+
   def then_i_can_see_the_business_page
     expect(page).to have_title("Coronavirus (COVID-19): Business support")
     then_i_can_see_the_page_title("Business support")
