@@ -25,7 +25,7 @@ RSpec.feature "Person page" do
   end
 
   def stub_person_page_content_item(base_path, name)
-    content_item = GovukSchemas::RandomExample.for_schema(frontend_schema: "person").merge(
+    content_item.merge!(
       "title" => name,
       "base_path" => base_path,
     )
@@ -43,5 +43,9 @@ RSpec.feature "Person page" do
         reject_content_purpose_supergroup: "other",
       })
       .to_return(body: { results: [] }.to_json)
+  end
+
+  def content_item
+    @content_item ||= GovukSchemas::RandomExample.for_schema(frontend_schema: "person")
   end
 end
