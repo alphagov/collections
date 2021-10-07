@@ -193,6 +193,12 @@ $c19-landing-page-header-background: govuk-colour("blue");
   color: govuk-colour("white");
 }
 
+.covid__section {
+  padding-top: govuk-spacing(6);
+  padding-bottom: govuk-spacing(9);
+  border-top: solid 2px govuk-colour("black");
+}
+
 .covid__topic-wrapper {
   padding-top: govuk-spacing(6);
 

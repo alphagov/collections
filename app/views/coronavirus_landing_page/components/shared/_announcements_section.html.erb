@@ -1,26 +1,28 @@
-<section class="covid__topic-wrapper">
-  <%= render "govuk_publishing_components/components/heading", {
-    text: details.announcements_label,
-    padding: true,
-    border_top: 2,
-    margin_bottom: 6,
-  } %>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: details.announcements_label,
+      margin_bottom: 6,
+    } %>
+  </div>
 
-  <%= render partial: 'coronavirus_landing_page/components/shared/announcements', locals: { announcements: details.announcements } %>
+  <div class="govuk-grid-column-two-thirds">
+    <%= render partial: 'coronavirus_landing_page/components/shared/announcements', locals: { announcements: details.announcements } %>
 
-  <% if details.see_all_announcements_link.present? %>
-    <p class="govuk-body">
-      <a
-        href="<%= details.see_all_announcements_link["href"] %>"
-        class="govuk-link"
-        data-module="gem-track-click"
-        data-track-category="pageElementInteraction"
-        data-track-action="Announcements"
-        data-track-label="<%= details.see_all_announcements_link["href"] %>"
-      >
-        <%= details.see_all_announcements_link["text"] %>
-      </a>
-    </p>
-  <% end %>
-  <%= render partial: 'coronavirus_landing_page/components/landing_page/risk_level_section', locals: { data: details.risk_level } if details.risk_level %>
-</section>
+    <% if details.see_all_announcements_link.present? %>
+      <p class="govuk-body">
+        <a
+          href="<%= details.see_all_announcements_link["href"] %>"
+          class="govuk-link"
+          data-module="gem-track-click"
+          data-track-category="pageElementInteraction"
+          data-track-action="Announcements"
+          data-track-label="<%= details.see_all_announcements_link["href"] %>"
+        >
+          <%= details.see_all_announcements_link["text"] %>
+        </a>
+      </p>
+    <% end %>
+    <%= render partial: 'coronavirus_landing_page/components/landing_page/risk_level_section', locals: { data: details.risk_level } if details.risk_level %>
+  </div>
+</div>
