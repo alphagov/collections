@@ -11,7 +11,7 @@
     <% related_topic_section["links"].each do | link | %>
       <li class="covid__topic-list-item">
         <%= link_to(
-          link["label"], link["url"], class: 'covid__topic-list-link govuk-link govuk-link--no-underline',
+          link["label"], link["url"], class: 'covid__topic-list-link govuk-link',
           data: {
             track_category: "pageElementInteraction",
             track_action: "RelatedTopics",
