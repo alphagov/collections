@@ -199,6 +199,11 @@ $c19-landing-page-header-background: govuk-colour("blue");
   border-top: solid 2px govuk-colour("black");
 }
 
+.covid__section--nhs {
+  padding-top: 0;
+  border: 0;
+}
+
 .covid__topic-wrapper {
   padding-top: govuk-spacing(6);
 
@@ -218,7 +223,7 @@ $c19-landing-page-header-background: govuk-colour("blue");
 }
 
 .covid__page-guidance {
-  padding: govuk-spacing(8) 0 govuk-spacing(7) 0;
+  padding: govuk-spacing(8) 0 govuk-spacing(8) 0;
   background-color: govuk-colour("light-grey");
   color: govuk-colour("black");
 }
@@ -228,10 +233,6 @@ $c19-landing-page-header-background: govuk-colour("blue");
     margin-top: govuk-spacing(2);
     margin-bottom: govuk-spacing(2);
   }
-}
-
-.covid-timeline {
-  padding-bottom: govuk-spacing(5);
 }
 
 .covid-timeline__item {

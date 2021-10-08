@@ -67,23 +67,23 @@ module CoronavirusLandingPageSteps
   end
 
   def then_i_can_see_the_nhs_banner
-    expect(page).to have_selector(".covid__nhs-notice", text: "If you have no symptoms")
+    expect(page).to have_selector(".covid__section--nhs", text: "If you have no symptoms")
   end
 
   def then_i_can_see_the_timeline
     expect(page).to have_selector("h2", text: "Recent and upcoming changes")
 
-    expect(page).to have_selector(".covid-timeline .gem-c-heading", text: "18 September")
-    expect(page).to have_selector(".covid-timeline__item .gem-c-govspeak", text: "If you live, work or travel in the North East, you need to follow different covid rules")
+    expect(page).to have_selector("#nation-england .gem-c-heading", text: "18 September")
+    expect(page).to have_selector("#nation-england .gem-c-govspeak", text: "If you live, work or travel in the North East, you need to follow different covid rules")
 
-    expect(page).to have_selector(".covid-timeline .gem-c-heading", text: "15 September")
-    expect(page).to have_selector(".covid-timeline__item .gem-c-govspeak", text: "If you live, work or visit Bolton, you need to follow different covid rules")
+    expect(page).to have_selector("#nation-england .gem-c-heading", text: "15 September")
+    expect(page).to have_selector("#nation-england .gem-c-govspeak", text: "If you live, work or visit Bolton, you need to follow different covid rules")
 
-    expect(page).to have_selector(".covid-timeline .gem-c-heading", text: "14 September")
-    expect(page).to have_selector(".covid-timeline__item .gem-c-govspeak", text: "People must not meet in groups larger than 6 in England. There are exceptions to this ‘rule of 6’")
+    expect(page).to have_selector("#nation-scotland .gem-c-heading", text: "14 September")
+    expect(page).to have_selector("#nation-scotland .gem-c-govspeak", text: "People must not meet in groups larger than 6 in England. There are exceptions to this ‘rule of 6’")
 
-    expect(page).to have_selector(".covid-timeline .gem-c-heading", text: "24 July")
-    expect(page).to have_selector(".covid-timeline__item .gem-c-govspeak", text: "Face coverings are mandatory in shops")
+    expect(page).to have_selector("#nation-wales .gem-c-heading", text: "24 July")
+    expect(page).to have_selector("#nation-wales .gem-c-govspeak", text: "Face coverings are mandatory in shops")
   end
 
   def then_i_can_see_the_timeline_for_england

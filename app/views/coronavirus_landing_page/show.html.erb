@@ -25,7 +25,8 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-third">
         <%= render "govuk_publishing_components/components/heading", {
-          text: details.sections_heading
+          text: details.sections_heading,
+          font_size: "m"
         } %>
       </div>
 
@@ -53,7 +54,8 @@
       <div class="govuk-grid-column-one-third">
         <%= render "govuk_publishing_components/components/heading", {
           text: details.topic_section["header"],
-          margin_bottom: 6
+          margin_bottom: 6,
+          font_size: "m"
         } %>
       </div>
 
