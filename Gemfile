@@ -10,7 +10,7 @@ gem "govuk_ab_testing"
 gem "govuk_app_config"
 gem "govuk_document_types"
 gem "govuk_personalisation"
-gem "govuk_publishing_components"
+gem "govuk_publishing_components", '27.5.0', git: 'https://github.com/alphagov/govuk_publishing_components.git', branch: 'fix-auditing'
 gem "plek"
 gem "rinku", require: "rails_rinku"
 gem "sassc-rails"
