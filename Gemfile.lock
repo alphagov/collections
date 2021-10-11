@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/alphagov/govuk_publishing_components.git
-  revision: ff92dd7fa6a1f8c9b8d782d28e19dc881629f0b6
+  revision: 8156f058857644e3a05615b56bb73118b372aa61
   branch: fix-auditing
   specs:
     govuk_publishing_components (27.5.0)
