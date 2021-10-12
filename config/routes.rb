@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     GovukHealthcheck::RailsCache,
   )
 
-  ["/coronavirus-taxon", "/coronavirus-taxon/*slug"].each do |path|
+  ["/coronavirus-taxon"].each do |path|
     get path, to: "taxons_redirection#redirect"
   end
 
