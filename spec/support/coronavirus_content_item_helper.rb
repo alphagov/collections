@@ -63,13 +63,6 @@ module CoronavirusContentItemHelper
     end
   end
 
-  def business_taxon_content_item
-    random_taxon_page do |item|
-      item["content_id"] = TaxonsRedirectionController::HUB_PAGE_FROM_CONTENT_ID.key("/coronavirus/business-support")
-      item
-    end
-  end
-
   def business_subtaxon_content_item
     stubbed_business_taxon = business_taxon_content_item.tap do |item|
       item["links"] = {}

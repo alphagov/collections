@@ -98,20 +98,6 @@ RSpec.feature "Coronavirus Pages" do
       then_i_am_redirected_to_the_landing_page
     end
 
-    scenario "redirects taxons to appropriate hub pages" do
-      given_there_is_a_business_content_item
-      and_a_coronavirus_business_taxon
-      when_i_visit_the_coronavirus_business_taxon
-      then_i_am_redirected_to_the_business_hub_page
-    end
-
-    scenario "redirects subtaxons to appropriate hub pages" do
-      given_there_is_a_business_content_item
-      and_a_coronavirus_business_subtaxon
-      when_i_visit_the_coronavirus_business_subtaxon
-      then_i_am_redirected_to_the_business_hub_page
-    end
-
     scenario "redirects subtaxons to the landing page if there is no overriding rule" do
       given_there_is_a_content_item
       and_another_coronavirus_subtaxon
