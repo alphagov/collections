@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/alphagov/govuk_publishing_components.git
-  revision: a518b3d94f623a02089dc3b0ec5a1ccaeacc5247
-  branch: fix-auditing
+  revision: aa93bd4946e01d1630c293f461d21e6488a3f3d3
+  branch: improve-auditing
   specs:
-    govuk_publishing_components (27.5.0)
+    govuk_publishing_components (27.6.0)
       govuk_app_config
       govuk_personalisation (>= 0.7.0)
       kramdown
