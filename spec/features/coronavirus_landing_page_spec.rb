@@ -70,27 +70,6 @@ RSpec.feature "Coronavirus Pages" do
     end
   end
 
-  describe "the business support hub page" do
-    scenario "renders" do
-      given_there_is_a_business_content_item
-      when_i_visit_the_business_hub_page
-      then_i_can_see_the_business_page
-      then_i_cannot_see_the_education_header_section
-      then_i_can_see_the_business_accordions
-      and_i_can_see_business_links_to_search
-    end
-  end
-
-  describe "the education hub page" do
-    scenario "renders" do
-      given_there_is_an_education_content_item
-      when_i_visit_the_education_hub_page
-      then_i_can_see_the_page_title("Education and Childcare")
-      then_i_can_see_the_education_header_section
-      then_i_can_see_the_education_accordions
-    end
-  end
-
   describe "redirects from the taxon" do
     scenario "redirects /coronavirus-taxon to the landing page" do
       given_there_is_a_content_item

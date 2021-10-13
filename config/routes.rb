@@ -15,7 +15,6 @@ Rails.application.routes.draw do
   end
 
   get "/coronavirus", to: "coronavirus_landing_page#show", as: :coronavirus_landing_page
-  get "/coronavirus/:hub_slug", to: "coronavirus_landing_page#hub"
 
   # Brexit
   get "/brexit(.:locale)", to: "brexit_landing_page#show"

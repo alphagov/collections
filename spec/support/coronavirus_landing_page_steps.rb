@@ -7,12 +7,7 @@ module CoronavirusLandingPageSteps
   include SearchApiHelpers
 
   CORONAVIRUS_PATH = "/coronavirus".freeze
-  BUSINESS_PATH = "/coronavirus/business-support".freeze
-  EDUCATION_PATH = "/coronavirus/education".freeze
-
   CORONAVIRUS_TAXON_PATH = "/coronavirus-taxon".freeze
-  BUSINESS_TAXON_PATH = CORONAVIRUS_TAXON_PATH + "/businesses-and-self-employed-people".freeze
-  BUSINESS_SUBTAXON_PATH = CORONAVIRUS_TAXON_PATH + "/business-sub-taxon".freeze
   OTHER_SUBTAXON_PATH = "#{CORONAVIRUS_TAXON_PATH}/no-hub-page".freeze
 
   def given_there_is_a_content_item
@@ -27,18 +22,6 @@ module CoronavirusLandingPageSteps
     stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item_with_risk_level_element_not_enabled)
   end
 
-  def given_there_is_a_business_content_item
-    stub_content_store_has_item(BUSINESS_PATH, business_content_item)
-  end
-
-  def given_there_is_an_education_content_item
-    stub_content_store_has_item(EDUCATION_PATH, education_content_item)
-  end
-
-  def and_a_coronavirus_business_subtaxon
-    stub_content_store_has_item(BUSINESS_SUBTAXON_PATH, business_subtaxon_content_item)
-  end
-
   def and_another_coronavirus_subtaxon
     stub_content_store_has_item(OTHER_SUBTAXON_PATH, other_subtaxon_item)
   end
@@ -47,24 +30,12 @@ module CoronavirusLandingPageSteps
     visit CORONAVIRUS_PATH
   end
 
-  def when_i_visit_the_business_hub_page
-    visit BUSINESS_PATH
-  end
-
-  def when_i_visit_the_education_hub_page
-    visit EDUCATION_PATH
-  end
-
   def when_i_visit_the_coronavirus_taxon_page
     visit CORONAVIRUS_TAXON_PATH
   end
 
   def when_i_visit_the_coronavirus_business_taxon
     visit BUSINESS_TAXON_PATH
-  end
-
-  def when_i_visit_the_coronavirus_business_subtaxon
-    visit BUSINESS_SUBTAXON_PATH
   end
 
   def when_i_visit_a_coronavirus_subtaxon_without_a_hub_page
@@ -83,29 +54,12 @@ module CoronavirusLandingPageSteps
     expect(page.current_path).to eq "/coronavirus"
   end
 
-  def then_i_am_redirected_to_the_business_hub_page
-    expect(page.current_path).to eq "/coronavirus/business-support"
-  end
-
   def then_i_can_see_the_header_section
     expect(page).to have_selector(".covid__page-header h1", text: "Coronavirus (COVID-19)")
   end
 
-  def then_i_can_see_the_education_header_section
-    expect(page).to have_content("Find out when schools are expected to reopen in Scotland, Wales and Northern Ireland")
-  end
-
-  def then_i_cannot_see_the_education_header_section
-    expect(page).not_to have_content("Find out when schools are expected to reopen in Scotland, Wales and Northern Ireland")
-  end
-
   def then_i_can_see_sub_headings_of_accordions
     expect(page).to have_content("accordion sub heading")
-  end
-
-  def then_i_can_see_the_business_page
-    expect(page).to have_title("Coronavirus (COVID-19): Business support")
-    then_i_can_see_the_page_title("Business support")
   end
 
   def then_i_can_see_the_page_title(title)

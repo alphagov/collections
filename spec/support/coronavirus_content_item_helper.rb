@@ -12,14 +12,6 @@ module CoronavirusContentItemHelper
     JSON.parse(json)
   end
 
-  def business_content_item_fixture
-    load_content_item("business_support_page.json")
-  end
-
-  def education_content_item_fixture
-    load_content_item("coronavirus_education_page.json")
-  end
-
   def stub_coronavirus_statistics
     body = { data: [{ "date" => "2021-03-18",
                       "cumulativeVaccinations" => 25_000_000,
@@ -45,12 +37,6 @@ module CoronavirusContentItemHelper
     content_item
   end
 
-  def business_content_item
-    random_landing_page do |item|
-      item.merge(business_content_item_fixture)
-    end
-  end
-
   def coronavirus_content_item_with_timeline_national_applicability_without_wales
     load_content_item("coronavirus_landing_page_with_timeline_nations_without_wales.json")
   end
@@ -63,17 +49,6 @@ module CoronavirusContentItemHelper
     end
   end
 
-  def business_subtaxon_content_item
-    stubbed_business_taxon = business_taxon_content_item.tap do |item|
-      item["links"] = {}
-    end
-
-    random_taxon_page do |item|
-      item["links"]["parent_taxons"] = [stubbed_business_taxon]
-      item
-    end
-  end
-
   def other_subtaxon_item
     random_linked_taxon = random_taxon_page do |item|
       item["links"] = {}
@@ -82,29 +57,6 @@ module CoronavirusContentItemHelper
     random_taxon_page do |item|
       item["links"]["parent_taxons"] = [random_linked_taxon]
       item
-    end
-  end
-
-  def education_content_item
-    random_landing_page do |item|
-      item.merge(education_content_item_fixture)
-    end
-  end
-
-  def coronavirus_root_taxon_content_item
-    GovukSchemas::Example.find("taxon", example_name: "taxon").tap do |item|
-      item["base_path"] = "/coronavirus-taxon"
-    end
-  end
-
-  def coronavirus_taxon_one
-    GovukSchemas::Example.find("taxon", example_name: "taxon").tap do |item|
-      item["links"]["parent_taxons"] = [coronavirus_root_taxon_content_item]
-      item["links"]["ordered_related_items"] =
-        [
-          GovukSchemas::Example.find("guide", example_name: "guide"),
-          GovukSchemas::Example.find("news_article", example_name: "news_article"),
-        ]
     end
   end
 end

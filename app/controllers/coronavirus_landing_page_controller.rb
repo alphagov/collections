@@ -28,27 +28,6 @@ class CoronavirusLandingPageController < ApplicationController
            }
   end
 
-  def hub
-    set_expiry 5.minutes
-
-    @content_item = content_item.to_hash
-    breadcrumbs = [{ title: t("shared.breadcrumbs_home"), url: "/" }]
-    title = {
-      text: @content_item.dig("details", "page_title") || @content_item["title"],
-      context: {
-        text: t("coronavirus_landing_page.title"),
-        href: "/coronavirus",
-      },
-    }
-
-    render "hub",
-           locals: {
-             breadcrumbs: breadcrumbs,
-             title: title,
-             details: hub_presenter,
-           }
-  end
-
 private
 
   def set_slimmer_template
@@ -65,9 +44,5 @@ private
 
   def special_announcement
     @special_announcement ||= SpecialAnnouncementPresenter.new(@content_item)
-  end
-
-  def hub_presenter
-    @hub_presenter ||= CoronavirusHubPresenter.new(@content_item)
   end
 end
