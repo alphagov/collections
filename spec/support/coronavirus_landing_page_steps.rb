@@ -35,10 +35,6 @@ module CoronavirusLandingPageSteps
     stub_content_store_has_item(EDUCATION_PATH, education_content_item)
   end
 
-  def and_a_coronavirus_business_taxon
-    stub_content_store_has_item(BUSINESS_TAXON_PATH, business_taxon_content_item)
-  end
-
   def and_a_coronavirus_business_subtaxon
     stub_content_store_has_item(BUSINESS_SUBTAXON_PATH, business_subtaxon_content_item)
   end
