@@ -28,7 +28,12 @@
             margin_bottom: 6
           } %>
 
-          <div class="covid__page-header-content">
+          <div
+            class="covid__page-header-content"
+            data-module="gem-track-click"
+            data-track-category="pageElementInteraction"
+            data-track-action="Header"
+            data-track-links-only>
             <%= render_govspeak(header["intro"]) %>
           </div>
         </div>
@@ -46,7 +51,7 @@
             data: {
               module: "gem-track-click",
               track_category: "pageElementInteraction",
-              track_action: "Announcements",
+              track_action: "Header",
               track_label: header["link"]["href"]
             }
           } %>
