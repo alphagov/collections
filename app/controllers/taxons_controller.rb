@@ -34,7 +34,7 @@ private
     @presentable_section_items << { href: "#organisations", text: t("taxons.organisations") }
 
     if presented_taxon.show_subtopic_grid?
-      @presentable_section_items << { href: "#sub-topics", text: t("taxons.explore_sub_topics") }
+      @presentable_section_items.prepend({ href: "#sub-topics", text: t("taxons.explore_sub_topics") })
     end
 
     @presentable_section_items
