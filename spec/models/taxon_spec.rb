@@ -47,6 +47,37 @@ RSpec.describe Taxon do
         expect(["Student sponsorship", "Student loans"]).to include(child.title)
       end
     end
+
+    it "presents the override url" do
+      taxon_with_url_override = build_taxon(student_taxon_with_url_override)
+
+      expect(taxon_with_url_override.preferred_url).to eq("/override_url")
+    end
+
+    it "presents the base path if there isn't an override url" do
+      taxon_without_url_override = build_taxon(student_finance_taxon_without_url_override)
+
+      expect(taxon_without_url_override.preferred_url).to eq(taxon_without_url_override.base_path)
+    end
+  end
+
+  def build_taxon(content_hash)
+    content_item = ContentItem.new(content_hash)
+    Taxon.new(content_item)
+  end
+
+  def student_taxon_with_url_override
+    student_finance_taxon({
+      "details" => {
+        "url_override" => "/override_url",
+      },
+    })
+  end
+
+  def student_finance_taxon_without_url_override
+    student_finance_taxon.tap do |taxon|
+      taxon["details"].delete("url_override")
+    end
   end
 
   context "with a child in the alpha phase" do

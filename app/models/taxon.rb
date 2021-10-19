@@ -9,6 +9,7 @@ class Taxon
     :linked_items,
     :to_hash,
     :phase,
+    :details,
     to: :content_item,
   )
 
@@ -80,5 +81,9 @@ class Taxon
 
   def translations
     linked_items("available_translations")
+  end
+
+  def preferred_url
+    details["url_override"].presence || base_path
   end
 end
