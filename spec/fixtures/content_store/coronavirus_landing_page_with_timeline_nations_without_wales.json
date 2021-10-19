@@ -599,7 +599,7 @@
         },
         "statistic_meaning": "new patients have been admitted to hospital"
       },
-      "cumulative_vaccinations": {
+      "cumulative_first_dose_vaccinations": {
         "title": "Total vaccinations",
         "guidance_link": {
           "url": "https://coronavirus.data.gov.uk/details/vaccinations",

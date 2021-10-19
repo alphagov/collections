@@ -341,7 +341,7 @@
     },
     "statistics_section": {
       "header": "Statistics",
-      "cumulative_vaccinations": {
+      "cumulative_first_dose_vaccinations": {
         "title": "Total vaccinations",
         "statistic_meaning": "people have received their first dose",
         "guidance_link": {

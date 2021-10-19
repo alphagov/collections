@@ -1,7 +1,7 @@
 class FetchCoronavirusStatisticsService
   CACHE_KEY = "coronavirus_statistics".freeze
 
-  Statistics = Struct.new(:cumulative_vaccinations,
+  Statistics = Struct.new(:cumulative_first_dose_vaccinations,
                           :cumulative_vaccinations_date,
                           :hospital_admissions,
                           :hospital_admissions_date,
@@ -54,7 +54,7 @@ private
         filters: "areaName=United Kingdom;areaType=overview",
         structure: {
           "date" => "date",
-          "cumulativeVaccinations" => "cumPeopleVaccinatedFirstDoseByPublishDate",
+          "cumulativeFirstDoseVaccinations" => "cumPeopleVaccinatedFirstDoseByPublishDate",
           "hospitalAdmissions" => "newAdmissions",
           "newPositiveTests" => "newCasesByPublishDate",
         }.to_json,
@@ -69,8 +69,8 @@ private
     parsed = {}
 
     if (latest_vaccinations = data.find { |d| d["cumulativeVaccinations"] })
-      parsed[:cumulative_vaccinations] = latest_vaccinations["cumulativeVaccinations"]
       parsed[:cumulative_vaccinations_date] = Date.parse(latest_vaccinations["date"])
+      parsed[:cumulative_first_dose_vaccinations] = latest_vaccinations["cumulativeFirstDoseVaccinations"]
     end
 
     if (latest_admissions = data.find { |d| d["hospitalAdmissions"] })
