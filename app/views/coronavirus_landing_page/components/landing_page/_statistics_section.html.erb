@@ -29,6 +29,8 @@
         <p><%= topic_section.dig("cumulative_vaccinations", "title") %></p>
         <p>1st dose</p>
         <p><%= number_with_delimiter(statistics.cumulative_first_dose_vaccinations) %></p>
+        <p>2nd dose</p>
+        <p><%= number_with_delimiter(statistics.cumulative_second_dose_vaccinations) %></p>
         <p>All vaccination data <%=topic_section.dig("cumulative_vaccinations", "guidance_link") %> </p>
         <p>Latest data provided on <%= statistics.cumulative_vaccinations_date %></p>
       <% end %>

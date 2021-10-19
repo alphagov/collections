@@ -3,12 +3,48 @@ RSpec.describe FetchCoronavirusStatisticsService do
     it "returns a Statistics object" do
       body = {
         data: [
-          { "date" => "2021-03-18", "cumulativeFirstDoseVaccinations" => nil, "hospitalAdmissions" => nil, "newPositiveTests" => 6303 },
-          { "date" => "2021-03-17", "cumulativeFirstDoseVaccinations" => 25_735_472, "hospitalAdmissions" => nil, "newPositiveests" => 5758 },
-          { "date" => "2021-03-16", "cumulativeFirstDoseVaccinations" => 25_273_226, "hospitalAdmissions" => nil, "newPositiveests" => 5294 },
-          { "date" => "2021-03-15", "cumulativeFirstDoseVaccinations" => 24_839_906, "hospitalAdmissions" => nil, "newPositiveests" => 5089 },
-          { "date" => "2021-03-14", "cumulativeFirstDoseVaccinations" => 24_453_221, "hospitalAdmissions" => 426, "newPositiveests" => 4618 },
-          { "date" => "2021-03-13", "cumulativeFirstDoseVaccinations" => 24_196_211, "hospitalAdmissions" => 460, "newPositiveests" => 5534 },
+          {
+            "date" => "2021-03-18",
+            "cumulativeFirstDoseVaccinations" => nil,
+            "cumulativeSecondDoseVaccinations" => nil,
+            "hospitalAdmissions" => nil,
+            "newPositiveTests" => 6303,
+          },
+          {
+            "date" => "2021-03-17",
+            "cumulativeFirstDoseVaccinations" => 25_735_472,
+            "cumulativeSecondDoseVaccinations" => 20_735_472,
+            "hospitalAdmissions" => nil,
+            "newPositiveests" => 5758,
+          },
+          {
+            "date" => "2021-03-16",
+            "cumulativeFirstDoseVaccinations" => 25_273_226,
+            "cumulativeSecondDoseVaccinations" => 20_273_226,
+            "hospitalAdmissions" => nil,
+            "newPositiveests" => 5294,
+          },
+          {
+            "date" => "2021-03-15",
+            "cumulativeFirstDoseVaccinations" => 24_839_906,
+            "cumulativeSecondDoseVaccinations" => 19_839_906,
+            "hospitalAdmissions" => nil,
+            "newPositiveests" => 5089,
+          },
+          {
+            "date" => "2021-03-14",
+            "cumulativeFirstDoseVaccinations" => 24_453_221,
+            "cumulativeSecondDoseVaccinations" => 19_453_221,
+            "hospitalAdmissions" => 426,
+            "newPositiveests" => 4618,
+          },
+          {
+            "date" => "2021-03-13",
+            "cumulativeFirstDoseVaccinations" => 24_196_211,
+            "cumulativeSecondDoseVaccinations" => 19_196_211,
+            "hospitalAdmissions" => 460,
+            "newPositiveests" => 5534,
+          },
         ],
       }
 
@@ -20,6 +56,7 @@ RSpec.describe FetchCoronavirusStatisticsService do
       expect(statistics).to have_attributes(
         cumulative_vaccinations_date: Date.new(2021, 3, 17),
         cumulative_first_dose_vaccinations: 25_735_472,
+        cumulative_second_dose_vaccinations: 20_735_472,
         hospital_admissions: 426,
         hospital_admissions_date: Date.new(2021, 3, 14),
         new_positive_tests: 6303,
@@ -38,6 +75,7 @@ RSpec.describe FetchCoronavirusStatisticsService do
       it "sets only the fields that have data" do
         body = { data: [{ "date" => "2021-03-18",
                           "cumulativeFirstDoseVaccinations" => nil,
+                          "cumulativeSecondDoseVaccinations" => nil,
                           "hospitalAdmissions" => nil,
                           "newPositiveTests" => 6303 }] }
 
@@ -47,11 +85,27 @@ RSpec.describe FetchCoronavirusStatisticsService do
         expect(described_class.call).to have_attributes(
           cumulative_vaccinations_date: nil,
           cumulative_first_dose_vaccinations: nil,
+          cumulative_second_dose_vaccinations: nil,
           hospital_admissions: nil,
           hospital_admissions_date: nil,
           new_positive_tests: 6303,
           new_positive_tests_date: Date.new(2021, 3, 18),
         )
+      end
+
+      it "sets only fields where all related fields have data" do
+        body = { data: [{ "date" => "2021-03-18",
+                          "cumulativeFirstDoseVaccinations" => 25_735_472,
+                          "cumulativeSecondDoseVaccinations" => nil,
+                          "hospitalAdmissions" => nil,
+                          "newPositiveTests" => 6303 }] }
+
+        stub_request(:get, /coronavirus.data.gov.uk/)
+          .to_return(status: 200, body: body.to_json)
+
+        expect(described_class.call).to_not include(:cumulative_vaccinations_date)
+        expect(described_class.call).to_not include(:cumulative_first_dose_vaccinations)
+        expect(described_class.call).to_not include(:cumulative_second_dose_vaccinations)
       end
     end
 
@@ -87,6 +141,7 @@ RSpec.describe FetchCoronavirusStatisticsService do
         stale_stats = {
           cumulative_vaccinations_date: Date.new(2021, 3, 17),
           cumulative_first_dose_vaccinations: 25_735_472,
+          cumulative_second_dose_vaccinations: 20_735_472,
           hospital_admissions: 426,
           hospital_admissions_date: Date.new(2021, 3, 14),
           new_positive_tests: 6303,
