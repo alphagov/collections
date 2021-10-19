@@ -4,35 +4,26 @@
   tracking = true if tracking_category.present? && tracking_action.present?
 %>
 
-<section class="covid__topic-wrapper">
-  <%= render "govuk_publishing_components/components/heading", {
-    text: topic_section["header"],
-    padding: true,
-    border_top: 2,
-    margin_bottom: 6
-  } %>
+<ul class="govuk-list">
+  <% topic_section["links"].each do | link | %>
+    <li class="covid__topic-list-item">
+      <%
+        data = if tracking
+          {
+            module: "gem-track-click",
+            track_category: tracking_category,
+            track_action: tracking_action,
+            track_label: link["url"],
+          }
+        end
+      %>
 
-  <ul class="govuk-list">
-    <% topic_section["links"].each do | link | %>
-      <li class="covid__topic-list-item">
-        <%
-          data = if tracking
-            {
-              module: "gem-track-click",
-              track_category: tracking_category,
-              track_action: tracking_action,
-              track_label: link["url"],
-            }
-          end
-        %>
-
-        <%= link_to( 
-          link["label"].html_safe,
-          link["url"],
-          class: 'covid__topic-list-link govuk-link govuk-link--no-underline',
-          data: data,
-        ) %>
-      </li>
-    <% end %>
-  </ul>
-</section>
+      <%= link_to(
+        link["label"].html_safe,
+        link["url"],
+        class: 'covid__topic-list-link govuk-link',
+        data: data,
+      ) %>
+    </li>
+  <% end %>
+</ul>

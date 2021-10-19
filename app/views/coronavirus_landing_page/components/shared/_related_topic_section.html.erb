@@ -3,14 +3,15 @@
     text: related_topic_section["header"],
     padding: true,
     border_top: 2,
-    margin_bottom: 6
+    margin_bottom: 6,
+    font_size: "m"
   } %>
 
   <ul class="govuk-list">
     <% related_topic_section["links"].each do | link | %>
       <li class="covid__topic-list-item">
         <%= link_to(
-          link["label"], link["url"], class: 'covid__topic-list-link govuk-link govuk-link--no-underline',
+          link["label"], link["url"], class: 'covid__topic-list-link govuk-link',
           data: {
             track_category: "pageElementInteraction",
             track_action: "RelatedTopics",

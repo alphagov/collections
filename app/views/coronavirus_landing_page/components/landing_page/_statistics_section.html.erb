@@ -1,56 +1,59 @@
-<section class="covid__topic-wrapper">
-  <%= render "govuk_publishing_components/components/heading", {
-    text: topic_section["header"],
-    padding: true,
-    border_top: 2,
-    margin_bottom: 6
-  } %>
-
-  <% if statistics && statistics.cumulative_vaccinations %>
-    <%= render "coronavirus_landing_page/components/landing_page/statistic", {
-      title: topic_section.dig("cumulative_vaccinations", "title"),
-      statistic: "#{number_with_precision(statistics.cumulative_vaccinations / 1_000_000.0, precision: 1)} million",
-      statistic_meaning: topic_section.dig("cumulative_vaccinations", "statistic_meaning"),
-      last_updated_date: statistics.cumulative_vaccinations_date,
-      guidance_link: topic_section.dig("cumulative_vaccinations", "guidance_link"),
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: topic_section["header"],
+      margin_bottom: 6,
+      font_size: "m"
     } %>
-  <% end %>
+  </div>
 
-  <% if statistics && statistics.hospital_admissions %>
-    <%= render "coronavirus_landing_page/components/landing_page/statistic", {
-      title: topic_section.dig("hospital_admissions", "title"),
-      statistic: number_with_delimiter(statistics.hospital_admissions),
-      statistic_meaning: topic_section.dig("hospital_admissions", "statistic_meaning"),
-      last_updated_date: statistics.hospital_admissions_date,
-      guidance_link: topic_section.dig("hospital_admissions", "guidance_link"),
-    } %>
-  <% end %>
-
-  <% if statistics && statistics.new_positive_tests %>
-    <%= render "coronavirus_landing_page/components/landing_page/statistic", {
-      title: topic_section.dig("new_positive_tests", "title"),
-      statistic: number_with_delimiter(statistics.new_positive_tests),
-      statistic_meaning: topic_section.dig("new_positive_tests", "statistic_meaning"),
-      last_updated_date: statistics.new_positive_tests_date,
-      guidance_link: topic_section.dig("new_positive_tests", "guidance_link"),
-    } %>
-  <% end %>
-
-  <ul class="govuk-list">
-    <% topic_section["links"].each do | link | %>
-      <li class="covid__topic-list-item">
-        <%= link_to(
-          link["label"].html_safe,
-          link["url"],
-          class: 'covid__topic-list-link govuk-link govuk-link--no-underline',
-          data: {
-            module: "gem-track-click",
-            track_category: "pageElementInteraction",
-            track_action: "Statistics",
-            track_label: link["url"],
-          },
-        ) %>
-      </li>
+  <div class="govuk-grid-column-two-thirds">
+    <% if statistics && statistics.cumulative_vaccinations %>
+      <%= render "coronavirus_landing_page/components/landing_page/statistic", {
+        title: topic_section.dig("cumulative_vaccinations", "title"),
+        statistic: "#{number_with_precision(statistics.cumulative_vaccinations / 1_000_000.0, precision: 1)} million",
+        statistic_meaning: topic_section.dig("cumulative_vaccinations", "statistic_meaning"),
+        last_updated_date: statistics.cumulative_vaccinations_date,
+        guidance_link: topic_section.dig("cumulative_vaccinations", "guidance_link"),
+      } %>
     <% end %>
-  </ul>
-</section>
+
+    <% if statistics && statistics.hospital_admissions %>
+      <%= render "coronavirus_landing_page/components/landing_page/statistic", {
+        title: topic_section.dig("hospital_admissions", "title"),
+        statistic: number_with_delimiter(statistics.hospital_admissions),
+        statistic_meaning: topic_section.dig("hospital_admissions", "statistic_meaning"),
+        last_updated_date: statistics.hospital_admissions_date,
+        guidance_link: topic_section.dig("hospital_admissions", "guidance_link"),
+      } %>
+    <% end %>
+
+    <% if statistics && statistics.new_positive_tests %>
+      <%= render "coronavirus_landing_page/components/landing_page/statistic", {
+        title: topic_section.dig("new_positive_tests", "title"),
+        statistic: number_with_delimiter(statistics.new_positive_tests),
+        statistic_meaning: topic_section.dig("new_positive_tests", "statistic_meaning"),
+        last_updated_date: statistics.new_positive_tests_date,
+        guidance_link: topic_section.dig("new_positive_tests", "guidance_link"),
+      } %>
+    <% end %>
+
+    <ul class="govuk-list">
+      <% topic_section["links"].each do | link | %>
+        <li class="covid__topic-list-item">
+          <%= link_to(
+            link["label"].html_safe,
+            link["url"],
+            class: 'covid__topic-list-link govuk-link',
+            data: {
+              module: "gem-track-click",
+              track_category: "pageElementInteraction",
+              track_action: "Statistics",
+              track_label: link["url"],
+            },
+          ) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

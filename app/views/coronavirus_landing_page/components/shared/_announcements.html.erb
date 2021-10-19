@@ -4,7 +4,7 @@
       <% if announcement["href"].present? %>
         <a
           href="<%= announcement["href"] %>"
-          class="govuk-link govuk-link--no-underline covid__topic-list-link"
+          class="govuk-link covid__topic-list-link"
           data-module="gem-track-click"
           data-track-category="pageElementInteraction"
           data-track-action="Announcements"
@@ -16,7 +16,7 @@
         <%= announcement["text"] %>
       <% end %>
       <% if announcement["published_text"].present? %>
-        <p class="govuk-body covid__announcement-published-text">
+        <p class="govuk-body govuk-body-s covid__announcement-published-text">
           <%= announcement["published_text"] %>
         </p>
       <% end %>

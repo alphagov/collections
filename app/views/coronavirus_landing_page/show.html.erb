@@ -15,44 +15,79 @@
 } %>
 
 <div class="govuk-width-container covid__page" data-module="coronavirus-landing-page">
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-third">
-      <%= render "coronavirus_landing_page/components/landing_page/nhs_notice", { nhs_banner: details.nhs_banner } %>
+  <section class="covid__section covid__section--first">
+    <%= render partial: 'coronavirus_landing_page/components/landing_page/timeline', locals: { details: details } %>
+  </section>
 
-    </div>
+  <section class="covid__section"
+           aria-label="notice"
+           role="region"
+           data-module="track-links"
+           data-track-category="pageElementInteraction"
+           data-track-action="callOutBox">
+           <%= render "coronavirus_landing_page/components/landing_page/nhs_notice", { nhs_banner: details.nhs_banner } %>
+  </section>
 
-    <div class="govuk-grid-column-two-thirds">
-      <%= render partial: 'coronavirus_landing_page/components/shared/timeline', locals: { details: details } %>
-      <%= render partial: 'coronavirus_landing_page/components/shared/accordion_sections', locals: {
-        accordions: details.sections,
-        heading: details.sections_heading,
-        heading_padding: true,
-        border_top: 2,
-      } %>
-      <%= render partial: 'coronavirus_landing_page/components/shared/country_section', locals: { guidance: details.additional_country_guidance } %>
-      <%= render partial: 'coronavirus_landing_page/components/shared/announcements_section', locals: { details: details } %>
-      <%= render partial: 'coronavirus_landing_page/components/landing_page/statistics_section', locals: {
-        topic_section: details.statistics_section,
-        statistics: @statistics,
-      } %>
-      <%= render partial: 'coronavirus_landing_page/components/shared/topic_section', locals: {
-        topic_section: details.topic_section,
-        tracking_category: "pageElementInteraction",
-        tracking_action: "CoronavirusInformation",
-      } %>
-      <%= content_tag :section, class: "covid__topic-wrapper" do
-        render partial: 'components/signup-link', locals: {
-          link_text: details.notifications["email_link"],
-          link_href: details.notifications["email_url"],
-          heading: details.notifications["intro"],
-          data: {
-            "module": "gem-track-click",
-            "track-category": "emailAlertLinkClicked",
-            "track-action": "/coronavirus",
-          },
-          background: true
-        }
-      end if details.notifications %>
+  <section class="covid__section">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <%= render "govuk_publishing_components/components/heading", {
+          text: details.sections_heading,
+          font_size: "m"
+        } %>
+      </div>
+
+      <div class="govuk-grid-column-two-thirds">
+        <%= render partial: 'coronavirus_landing_page/components/shared/accordion_sections', locals: {
+          accordions: details.sections
+        } %>
+        <%= render partial: 'coronavirus_landing_page/components/shared/country_section', locals: { guidance: details.additional_country_guidance } %>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <section class="covid__section">
+    <%= render partial: 'coronavirus_landing_page/components/landing_page/statistics_section', locals: {
+      topic_section: details.statistics_section,
+      statistics: @statistics,
+    } %>
+  </section>
+
+  <section class="covid__section">
+    <%= render partial: 'coronavirus_landing_page/components/landing_page/announcements_section', locals: { details: details } %>
+  </section>
+
+  <section class="covid__section">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <%= render "govuk_publishing_components/components/heading", {
+          text: details.topic_section["header"],
+          margin_bottom: 6,
+          font_size: "m"
+        } %>
+      </div>
+
+      <div class="govuk-grid-column-two-thirds">
+        <%= render partial: 'coronavirus_landing_page/components/shared/topic_section', locals: {
+          topic_section: details.topic_section,
+          tracking_category: "pageElementInteraction",
+          tracking_action: "CoronavirusInformation",
+        } %>
+      </div>
+    </div>
+  </section>
+
+  <%= content_tag :section, class: "covid__topic-wrapper" do
+    render partial: 'components/signup-link', locals: {
+      link_text: details.notifications["email_link"],
+      link_href: details.notifications["email_url"],
+      heading: details.notifications["intro"],
+      data: {
+        "module": "gem-track-click",
+        "track-category": "emailAlertLinkClicked",
+        "track-action": "/coronavirus",
+      },
+      background: true
+    }
+  end if details.notifications %>
 </div>

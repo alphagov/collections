@@ -1,0 +1,68 @@
+<div data-module="track-links" data-track-category="pageElementInteraction" data-track-action="Timeline">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: details.timeline["heading"],
+        margin_bottom: 4,
+        font_size: "m"
+      } %>
+
+      <%= form_tag coronavirus_landing_page_path,
+        method: :get,
+        class: "js-change-location" do |f| %>
+
+        <%= render "govuk_publishing_components/components/radio", {
+          name: "nation",
+          heading: t("coronavirus_landing_page.show.timeline.radio.heading"),
+          heading_size: "s",
+          margin_bottom: 7,
+          small: true,
+          items: details.timeline_nations_items
+        } %>
+        <div class="covid-timeline__button-wrapper">
+          <%= render "govuk_publishing_components/components/button", {
+            text: t("coronavirus_landing_page.show.timeline.button.text"),
+            margin_bottom: 7
+          } %>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <div aria-live="polite">
+        <% details.timelines_for_nation.each do |nation, timeline| %>
+          <div id="nation-<%= nation %>" class="js-covid-timeline <%= 'covid-timeline__wrapper--hidden' unless details.selected_nation == nation %>">
+            <% if timeline.empty? %>
+              <h3 class="govuk-heading-m"><%=t("coronavirus_landing_page.show.timeline.no_updates.heading")%></h3>
+              <p class="govuk-body"><%=t("coronavirus_landing_page.show.timeline.no_updates.body", nation: nation.titleize)%></p>
+              <% if I18n.exists?("coronavirus_landing_page.show.timeline.no_updates.#{nation}.additional_country_guidance_html") %>
+                <p class="govuk-body">
+                  <%=t("coronavirus_landing_page.show.timeline.no_updates.#{nation}.additional_country_guidance_html") %>
+                </p>
+              <% end %>
+            <% else %>
+              <h3 class="govuk-heading-m govuk-visually-hidden"><%=t("coronavirus_landing_page.show.timeline.updates.heading", nation: nation.titleize)%></h3>
+            <% end %>
+            <% timeline.each do | item | %>
+              <% text = capture do %>
+                <%= item["heading"] %>
+                <span class="covid-timeline__tag-wrapper">
+                  <%= item["tags"] %>
+                </span>
+              <% end %>
+              <div class="covid-timeline__item">
+                <%= render "govuk_publishing_components/components/heading", {
+                  text: text,
+                  heading_level: 3,
+                  font_size: "s",
+                  margin_bottom: 2,
+                } %>
+                <%= render_govspeak(item["paragraph"]) %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
