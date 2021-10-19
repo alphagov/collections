@@ -9,6 +9,7 @@ class FetchCoronavirusStatisticsService
                           :hospital_admissions,
                           :hospital_admissions_date,
                           :new_positive_tests,
+                          :current_week_positive_tests,
                           :new_positive_tests_date,
                           keyword_init: true)
 
@@ -113,12 +114,36 @@ private
 
   def latest_tests(data)
     latest_tests = data.find { |d| d["newPositiveTests"] }
-
     return {} unless latest_tests
 
+    daily_tests = daily_tests(latest_tests)
+    weekly_tests = weekly_tests(latest_tests, data)
+
+    return {} unless daily_tests && weekly_tests
+
+    daily_tests.merge!(weekly_tests)
+  end
+
+  def daily_tests(latest_tests)
     {
       new_positive_tests: latest_tests["newPositiveTests"],
       new_positive_tests_date: Date.parse(latest_tests["date"]),
+    }
+  end
+
+  def weekly_tests(latest_tests, data)
+    day_tests = []
+    data.each do |day_cases|
+      day_tests << day_cases["newPositiveTests"] if latest_tests["date"] >= day_cases["date"]
+    end
+
+    current_week_tests = day_tests.first(7).compact
+    return {} unless current_week_tests.size == 7
+
+    total_current_week_tests = current_week_tests.inject(:+)
+
+    {
+      current_week_positive_tests: total_current_week_tests,
     }
   end
 end

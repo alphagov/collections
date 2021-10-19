@@ -10,7 +10,7 @@ RSpec.describe FetchCoronavirusStatisticsService do
             "percentageFirstVaccine" => nil,
             "percentageSecondVaccine" => nil,
             "hospitalAdmissions" => nil,
-            "newPositiveTests" => 6303,
+            "newPositiveTests" => nil,
           },
           {
             "date" => "2021-03-17",
@@ -19,7 +19,7 @@ RSpec.describe FetchCoronavirusStatisticsService do
             "percentageFirstVaccine" => 86,
             "percentageSecondVaccine" => 54,
             "hospitalAdmissions" => nil,
-            "newPositiveests" => 5758,
+            "newPositiveTests" => 5758,
           },
           {
             "date" => "2021-03-16",
@@ -28,7 +28,7 @@ RSpec.describe FetchCoronavirusStatisticsService do
             "percentageFirstVaccine" => 80,
             "percentageSecondVaccine" => 50,
             "hospitalAdmissions" => nil,
-            "newPositiveests" => 5294,
+            "newPositiveTests" => 5294,
           },
           {
             "date" => "2021-03-15",
@@ -37,7 +37,7 @@ RSpec.describe FetchCoronavirusStatisticsService do
             "percentageFirstVaccine" => 74,
             "percentageSecondVaccine" => 44,
             "hospitalAdmissions" => nil,
-            "newPositiveests" => 5089,
+            "newPositiveTests" => 5089,
           },
           {
             "date" => "2021-03-14",
@@ -46,7 +46,7 @@ RSpec.describe FetchCoronavirusStatisticsService do
             "percentageFirstVaccine" => 69,
             "percentageSecondVaccine" => 39,
             "hospitalAdmissions" => 426,
-            "newPositiveests" => 4618,
+            "newPositiveTests" => 4618,
           },
           {
             "date" => "2021-03-13",
@@ -55,7 +55,25 @@ RSpec.describe FetchCoronavirusStatisticsService do
             "percentageFirstVaccine" => 62,
             "percentageSecondVaccine" => 32,
             "hospitalAdmissions" => 460,
-            "newPositiveests" => 5534,
+            "newPositiveTests" => 5534,
+          },
+          {
+            "date" => "2021-03-12",
+            "cumulativeFirstDoseVaccinations" => 20_196_211,
+            "cumulativeSecondDoseVaccinations" => 15_196_211,
+            "percentageFirstVaccine" => 52,
+            "percentageSecondVaccine" => 22,
+            "hospitalAdmissions" => 300,
+            "newPositiveTests" => 6534,
+          },
+          {
+            "date" => "2021-03-11",
+            "cumulativeFirstDoseVaccinations" => 18_196_211,
+            "cumulativeSecondDoseVaccinations" => 9_196_211,
+            "percentageFirstVaccine" => 62,
+            "percentageSecondVaccine" => 32,
+            "hospitalAdmissions" => 500,
+            "newPositiveTests" => 5034,
           },
         ],
       }
@@ -73,8 +91,9 @@ RSpec.describe FetchCoronavirusStatisticsService do
         percentage_second_vaccine: 54,
         hospital_admissions: 426,
         hospital_admissions_date: Date.new(2021, 3, 14),
-        new_positive_tests: 6303,
-        new_positive_tests_date: Date.new(2021, 3, 18),
+        current_week_positive_tests: 37_861,
+        new_positive_tests: 5758,
+        new_positive_tests_date: Date.new(2021, 3, 17),
       )
     end
 
@@ -107,6 +126,7 @@ RSpec.describe FetchCoronavirusStatisticsService do
           hospital_admissions: nil,
           hospital_admissions_date: nil,
           new_positive_tests: 6303,
+          current_week_positive_tests: nil,
           new_positive_tests_date: Date.new(2021, 3, 18),
         )
       end
@@ -169,6 +189,7 @@ RSpec.describe FetchCoronavirusStatisticsService do
           hospital_admissions: 426,
           hospital_admissions_date: Date.new(2021, 3, 14),
           new_positive_tests: 6303,
+          current_week_positive_tests: 40_345,
           new_positive_tests_date: Date.new(2021, 3, 18),
         }
 

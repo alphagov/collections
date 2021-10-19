@@ -13,6 +13,8 @@
         <p><%= topic_section.dig("new_positive_tests", "title") %></p>
         <p>Daily</p>
         <p><%= number_with_delimiter(statistics.new_positive_tests) %></p>
+        <p>Last 7 days</p>
+        <p><%= number_with_delimiter(statistics.current_week_positive_tests) %></p>
         <p>All case data <%=topic_section.dig("new_positive_tests", "guidance_link") %> </p>
         <p>Latest data provided on <%= statistics.new_positive_tests_date %></p>
       <% end %>
