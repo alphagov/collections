@@ -68,21 +68,43 @@ private
     data = JSON.parse(response.body).fetch("data")
     parsed = {}
 
-    if (latest_vaccinations = data.find { |d| d["cumulativeVaccinations"] })
-      parsed[:cumulative_vaccinations_date] = Date.parse(latest_vaccinations["date"])
-      parsed[:cumulative_first_dose_vaccinations] = latest_vaccinations["cumulativeFirstDoseVaccinations"]
-    end
-
-    if (latest_admissions = data.find { |d| d["hospitalAdmissions"] })
-      parsed[:hospital_admissions] = latest_admissions["hospitalAdmissions"]
-      parsed[:hospital_admissions_date] = Date.parse(latest_admissions["date"])
-    end
-
-    if (latest_tests = data.find { |d| d["newPositiveTests"] })
-      parsed[:new_positive_tests] = latest_tests["newPositiveTests"]
-      parsed[:new_positive_tests_date] = Date.parse(latest_tests["date"])
-    end
+    parsed.merge!(latest_vaccinations(data))
+    parsed.merge!(latest_admissions(data))
+    parsed.merge!(latest_tests(data))
 
     parsed
+  end
+
+  def latest_vaccinations(data)
+    latest_vaccinations = data.find { |d| d["cumulativeFirstDoseVaccinations"] }
+
+    return {} unless latest_vaccinations
+
+    {
+      cumulative_first_dose_vaccinations: latest_vaccinations["cumulativeFirstDoseVaccinations"],
+      cumulative_vaccinations_date: Date.parse(latest_vaccinations["date"]),
+    }
+  end
+
+  def latest_admissions(data)
+    latest_admissions = data.find { |d| d["hospitalAdmissions"] }
+
+    return {} unless latest_admissions
+
+    {
+      hospital_admissions: latest_admissions["hospitalAdmissions"],
+      hospital_admissions_date: Date.parse(latest_admissions["date"]),
+    }
+  end
+
+  def latest_tests(data)
+    latest_tests = data.find { |d| d["newPositiveTests"] }
+
+    return {} unless latest_tests
+
+    {
+      new_positive_tests: latest_tests["newPositiveTests"],
+      new_positive_tests_date: Date.parse(latest_tests["date"]),
+    }
   end
 end
