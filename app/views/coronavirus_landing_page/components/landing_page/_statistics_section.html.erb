@@ -8,34 +8,30 @@
   </div>
 
   <div class="govuk-grid-column-two-thirds">
-    <% if statistics && statistics.cumulative_first_dose_vaccinations %>
-      <%= render "coronavirus_landing_page/components/landing_page/statistic", {
-        title: topic_section.dig("cumulative_vaccinations", "title"),
-        statistic_meaning: topic_section.dig("cumulative_vaccinations", "statistic_meaning"),
-        last_updated_date: statistics.cumulative_vaccinations_date,
-        guidance_link: topic_section.dig("cumulative_vaccinations", "guidance_link"),
-        statistic: "#{number_with_precision(statistics.cumulative_first_dose_vaccinations / 1_000_000.0, precision: 1)} million",
-      } %>
-    <% end %>
+    <% if statistics %>
+      <% if statistics.new_positive_tests %>
+        <p><%= topic_section.dig("new_positive_tests", "title") %></p>
+        <p>Daily</p>
+        <p><%= number_with_delimiter(statistics.new_positive_tests) %></p>
+        <p>All case data <%=topic_section.dig("new_positive_tests", "guidance_link") %> </p>
+        <p>Latest data provided on <%= statistics.new_positive_tests_date %></p>
+      <% end %>
 
-    <% if statistics && statistics.hospital_admissions %>
-      <%= render "coronavirus_landing_page/components/landing_page/statistic", {
-        title: topic_section.dig("hospital_admissions", "title"),
-        statistic: number_with_delimiter(statistics.hospital_admissions),
-        statistic_meaning: topic_section.dig("hospital_admissions", "statistic_meaning"),
-        last_updated_date: statistics.hospital_admissions_date,
-        guidance_link: topic_section.dig("hospital_admissions", "guidance_link"),
-      } %>
-    <% end %>
+      <% if statistics.hospital_admissions %>
+        <p><%= topic_section.dig("hospital_admissions", "title") %></p>
+        <p>Daily</p>
+        <p><%= number_with_delimiter(statistics.hospital_admissions) %></p>
+        <p>All healthcare data <%=topic_section.dig("hospital_admissions", "guidance_link") %> </p>
+        <p>Latest data provided on <%= statistics.hospital_admissions_date %></p>
+      <% end %>
 
-    <% if statistics && statistics.new_positive_tests %>
-      <%= render "coronavirus_landing_page/components/landing_page/statistic", {
-        title: topic_section.dig("new_positive_tests", "title"),
-        statistic: number_with_delimiter(statistics.new_positive_tests),
-        statistic_meaning: topic_section.dig("new_positive_tests", "statistic_meaning"),
-        last_updated_date: statistics.new_positive_tests_date,
-        guidance_link: topic_section.dig("new_positive_tests", "guidance_link"),
-      } %>
+      <% if statistics.cumulative_first_dose_vaccinations %>
+        <p><%= topic_section.dig("cumulative_vaccinations", "title") %></p>
+        <p>1st dose</p>
+        <p><%= number_with_delimiter(statistics.cumulative_first_dose_vaccinations) %></p>
+        <p>All vaccination data <%=topic_section.dig("cumulative_vaccinations", "guidance_link") %> </p>
+        <p>Latest data provided on <%= statistics.cumulative_vaccinations_date %></p>
+      <% end %>
     <% end %>
 
     <ul class="govuk-list">
