@@ -8,6 +8,7 @@ RSpec.describe FetchCoronavirusStatisticsService do
             "cumulativeFirstDoseVaccinations" => nil,
             "cumulativeSecondDoseVaccinations" => nil,
             "percentageFirstVaccine" => nil,
+            "percentageSecondVaccine" => nil,
             "hospitalAdmissions" => nil,
             "newPositiveTests" => 6303,
           },
@@ -16,6 +17,7 @@ RSpec.describe FetchCoronavirusStatisticsService do
             "cumulativeFirstDoseVaccinations" => 25_735_472,
             "cumulativeSecondDoseVaccinations" => 20_735_472,
             "percentageFirstVaccine" => 86,
+            "percentageSecondVaccine" => 54,
             "hospitalAdmissions" => nil,
             "newPositiveests" => 5758,
           },
@@ -24,6 +26,7 @@ RSpec.describe FetchCoronavirusStatisticsService do
             "cumulativeFirstDoseVaccinations" => 25_273_226,
             "cumulativeSecondDoseVaccinations" => 20_273_226,
             "percentageFirstVaccine" => 80,
+            "percentageSecondVaccine" => 50,
             "hospitalAdmissions" => nil,
             "newPositiveests" => 5294,
           },
@@ -32,6 +35,7 @@ RSpec.describe FetchCoronavirusStatisticsService do
             "cumulativeFirstDoseVaccinations" => 24_839_906,
             "cumulativeSecondDoseVaccinations" => 19_839_906,
             "percentageFirstVaccine" => 74,
+            "percentageSecondVaccine" => 44,
             "hospitalAdmissions" => nil,
             "newPositiveests" => 5089,
           },
@@ -40,6 +44,7 @@ RSpec.describe FetchCoronavirusStatisticsService do
             "cumulativeFirstDoseVaccinations" => 24_453_221,
             "cumulativeSecondDoseVaccinations" => 19_453_221,
             "percentageFirstVaccine" => 69,
+            "percentageSecondVaccine" => 39,
             "hospitalAdmissions" => 426,
             "newPositiveests" => 4618,
           },
@@ -48,6 +53,7 @@ RSpec.describe FetchCoronavirusStatisticsService do
             "cumulativeFirstDoseVaccinations" => 24_196_211,
             "cumulativeSecondDoseVaccinations" => 19_196_211,
             "percentageFirstVaccine" => 62,
+            "percentageSecondVaccine" => 32,
             "hospitalAdmissions" => 460,
             "newPositiveests" => 5534,
           },
@@ -64,6 +70,7 @@ RSpec.describe FetchCoronavirusStatisticsService do
         cumulative_first_dose_vaccinations: 25_735_472,
         cumulative_second_dose_vaccinations: 20_735_472,
         percentage_first_vaccine: 86,
+        percentage_second_vaccine: 54,
         hospital_admissions: 426,
         hospital_admissions_date: Date.new(2021, 3, 14),
         new_positive_tests: 6303,
@@ -84,6 +91,7 @@ RSpec.describe FetchCoronavirusStatisticsService do
                           "cumulativeFirstDoseVaccinations" => nil,
                           "cumulativeSecondDoseVaccinations" => nil,
                           "percentageFirstVaccine" => nil,
+                          "percentageSecondVaccine" => nil,
                           "hospitalAdmissions" => nil,
                           "newPositiveTests" => 6303 }] }
 
@@ -95,6 +103,7 @@ RSpec.describe FetchCoronavirusStatisticsService do
           cumulative_first_dose_vaccinations: nil,
           cumulative_second_dose_vaccinations: nil,
           percentage_first_vaccine: nil,
+          percentage_second_vaccine: nil,
           hospital_admissions: nil,
           hospital_admissions_date: nil,
           new_positive_tests: 6303,
@@ -107,6 +116,7 @@ RSpec.describe FetchCoronavirusStatisticsService do
                           "cumulativeFirstDoseVaccinations" => 25_735_472,
                           "cumulativeSecondDoseVaccinations" => nil,
                           "percentageFirstVaccine" => nil,
+                          "percentageSecondVaccine": nil,
                           "hospitalAdmissions" => nil,
                           "newPositiveTests" => 6303 }] }
 
@@ -117,6 +127,7 @@ RSpec.describe FetchCoronavirusStatisticsService do
         expect(described_class.call).to_not include(:cumulative_first_dose_vaccinations)
         expect(described_class.call).to_not include(:cumulative_second_dose_vaccinations)
         expect(described_class.call).to_not include(:percentage_first_vaccine)
+        expect(described_class.call).to_not include(:percentage_second_vaccine)
       end
     end
 
@@ -154,6 +165,7 @@ RSpec.describe FetchCoronavirusStatisticsService do
           cumulative_first_dose_vaccinations: 25_735_472,
           cumulative_second_dose_vaccinations: 20_735_472,
           percentage_first_vaccine: 86,
+          percentage_second_vaccine: 54,
           hospital_admissions: 426,
           hospital_admissions_date: Date.new(2021, 3, 14),
           new_positive_tests: 6303,
