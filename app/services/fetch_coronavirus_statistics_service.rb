@@ -3,6 +3,7 @@ class FetchCoronavirusStatisticsService
 
   Statistics = Struct.new(:cumulative_first_dose_vaccinations,
                           :cumulative_second_dose_vaccinations,
+                          :percentage_first_vaccine,
                           :cumulative_vaccinations_date,
                           :hospital_admissions,
                           :hospital_admissions_date,
@@ -57,6 +58,7 @@ private
           "date" => "date",
           "cumulativeFirstDoseVaccinations" => "cumPeopleVaccinatedFirstDoseByPublishDate",
           "cumulativeSecondDoseVaccinations" => "cumPeopleVaccinatedSecondDoseByPublishDate",
+          "percentageFirstVaccine" => "cumVaccinationFirstDoseUptakeByPublishDatePercentage",
           "hospitalAdmissions" => "newAdmissions",
           "newPositiveTests" => "newCasesByPublishDate",
         }.to_json,
@@ -79,7 +81,9 @@ private
 
   def latest_vaccinations(data)
     latest_vaccinations = data.find do |d|
-      d["cumulativeFirstDoseVaccinations"] && d["cumulativeSecondDoseVaccinations"]
+      d["cumulativeFirstDoseVaccinations"] &&
+        d["cumulativeSecondDoseVaccinations"] &&
+        d["percentageFirstVaccine"]
     end
 
     return {} unless latest_vaccinations
@@ -87,6 +91,7 @@ private
     {
       cumulative_first_dose_vaccinations: latest_vaccinations["cumulativeFirstDoseVaccinations"],
       cumulative_second_dose_vaccinations: latest_vaccinations["cumulativeSecondDoseVaccinations"],
+      percentage_first_vaccine: latest_vaccinations["percentageFirstVaccine"],
       cumulative_vaccinations_date: Date.parse(latest_vaccinations["date"]),
     }
   end

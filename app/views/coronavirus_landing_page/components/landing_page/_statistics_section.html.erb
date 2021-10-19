@@ -28,6 +28,7 @@
       <% if statistics.cumulative_first_dose_vaccinations %>
         <p><%= topic_section.dig("cumulative_vaccinations", "title") %></p>
         <p>1st dose</p>
+        <p><%= number_to_percentage(statistics.percentage_first_vaccine, precision: 1) %></p>
         <p><%= number_with_delimiter(statistics.cumulative_first_dose_vaccinations) %></p>
         <p>2nd dose</p>
         <p><%= number_with_delimiter(statistics.cumulative_second_dose_vaccinations) %></p>
