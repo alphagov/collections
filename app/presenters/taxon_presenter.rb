@@ -34,7 +34,7 @@ class TaxonPresenter
       module: "gem-track-click",
       track_category: "navGridContentClicked",
       track_action: (index + 1).to_s,
-      track_label: child_taxons[index].base_path,
+      track_label: child_taxons[index].preferred_url,
       track_options: {},
     }
   end
