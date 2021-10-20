@@ -40,6 +40,9 @@ module TaxonBrowsingHelper
       "title" => "Child Two",
       "phase" => "live",
       "locale" => "en",
+      "details" => {
+        "url_override" => "/preferred_url",
+      },
     }
 
     stub_content_store_has_item(child_one_base_path, child_one)
@@ -279,18 +282,20 @@ module TaxonBrowsingHelper
     expect(page).to have_selector(".gem-c-contents-list__link", text: "Explore sub-topics")
   end
 
-  def and_i_can_see_the_sub_topic_side_nav
-    expect(page).to have_selector(".taxon-page__sub-topic-sidebar")
-    within(".taxon-page__sub-topic-sidebar") do
-      expect(page).to have_selector("h2", text: "Sub-topics")
+  def and_i_can_see_the_sub_topic_nav
+    expect(page).to have_selector("#sub-topics")
+    within("#sub-topics") do
+      expect(page).to have_selector("h2", text: "Explore sub-topics")
       child_taxons = @content_item["links"]["child_taxons"]
 
       child_taxons.each_with_index do |child_taxon, index|
-        expect(page).to have_link(child_taxon["title"], href: child_taxon["base_path"])
-        element = find("a[href='#{child_taxon['base_path']}']")
+        taxon = Taxon.new(ContentItem.new(child_taxon))
+
+        expect(page).to have_link(taxon.title, href: taxon.preferred_url)
+        element = find("a[href='#{taxon.preferred_url}']")
         expect(element["data-track-category"]).to eq("navGridContentClicked")
         expect(element["data-track-action"]).to eq((index + 1).to_s)
-        expect(element["data-track-label"]).to eq(child_taxon["base_path"])
+        expect(element["data-track-label"]).to eq(taxon.preferred_url)
         expect(element["data-track-options"]).to eq("{}")
       end
     end

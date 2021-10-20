@@ -49,6 +49,7 @@ RSpec.feature "Taxon Browsing" do
     and_the_taxon_has_tagged_content
     when_i_visit_that_taxon
     and_i_can_see_the_in_page_nav
+    and_i_can_see_the_sub_topic_nav
   end
 
   it "has tracking on all links" do
