@@ -30,7 +30,7 @@ module CoronavirusContentItemHelper
           "cumulativeSecondDoseVaccinations" => 20_735_472,
           "percentageFirstVaccine" => 86,
           "percentageSecondVaccine" => 54,
-          "hospitalAdmissions" => nil,
+          "hospitalAdmissions" => 900,
           "newPositiveTests" => 5758,
         },
         {
@@ -39,7 +39,7 @@ module CoronavirusContentItemHelper
           "cumulativeSecondDoseVaccinations" => 20_273_226,
           "percentageFirstVaccine" => 80,
           "percentageSecondVaccine" => 50,
-          "hospitalAdmissions" => nil,
+          "hospitalAdmissions" => 854,
           "newPositiveTests" => 5294,
         },
         {
@@ -48,7 +48,7 @@ module CoronavirusContentItemHelper
           "cumulativeSecondDoseVaccinations" => 19_839_906,
           "percentageFirstVaccine" => 74,
           "percentageSecondVaccine" => 44,
-          "hospitalAdmissions" => nil,
+          "hospitalAdmissions" => 809,
           "newPositiveTests" => 5089,
         },
         {

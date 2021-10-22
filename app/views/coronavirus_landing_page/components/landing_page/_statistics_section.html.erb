@@ -25,6 +25,10 @@
         <p><%= topic_section.dig("hospital_admissions", "title") %></p>
         <p>Daily</p>
         <p><%= number_with_delimiter(statistics.hospital_admissions) %></p>
+        <p>Last 7 days</p>
+        <p><%= number_with_delimiter(statistics.current_week_hospital_admissions) %></p>
+        <p><%= number_with_delimiter(statistics.current_week_hospital_admissions_change_number) %></p>
+        <p><%= number_to_percentage(statistics.current_week_hospital_admissions_change_percentage, precision: 1) %>
         <p>All healthcare data <%=topic_section.dig("hospital_admissions", "guidance_link") %> </p>
         <p>Latest data provided on <%= statistics.hospital_admissions_date %></p>
       <% end %>

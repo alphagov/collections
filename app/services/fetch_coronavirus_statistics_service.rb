@@ -7,6 +7,9 @@ class FetchCoronavirusStatisticsService
                           :percentage_second_vaccine,
                           :cumulative_vaccinations_date,
                           :hospital_admissions,
+                          :current_week_hospital_admissions,
+                          :current_week_hospital_admissions_change_number,
+                          :current_week_hospital_admissions_change_percentage,
                           :hospital_admissions_date,
                           :new_positive_tests,
                           :current_week_positive_tests,
@@ -105,13 +108,53 @@ private
 
   def latest_admissions(data)
     latest_admissions = data.find { |d| d["hospitalAdmissions"] }
-
     return {} unless latest_admissions
 
+    daily_admissions = daily_admissions(latest_admissions)
+    weekly_admissions = weekly_admissions(latest_admissions, data)
+
+    return {} unless daily_admissions && weekly_admissions
+
+    daily_admissions.merge!(weekly_admissions)
+  end
+
+  def daily_admissions(latest_admissions)
     {
       hospital_admissions: latest_admissions["hospitalAdmissions"],
       hospital_admissions_date: Date.parse(latest_admissions["date"]),
     }
+  end
+
+  def weekly_admissions(latest_admissions, data)
+    day_hospital_admissions = []
+    data.each do |day_admissions|
+      day_hospital_admissions << day_admissions["hospitalAdmissions"] if latest_admissions["date"] >= day_admissions["date"]
+    end
+
+    total_current_week_admissions = current_week_admissions(day_hospital_admissions)
+    total_previous_week_admissions = previous_week_admissions(day_hospital_admissions)
+
+    return {} unless total_current_week_admissions && total_previous_week_admissions
+
+    {
+      current_week_hospital_admissions: total_current_week_admissions,
+      current_week_hospital_admissions_change_number: total_current_week_admissions - total_previous_week_admissions,
+      current_week_hospital_admissions_change_percentage: percentage_change(total_current_week_admissions, total_previous_week_admissions),
+    }
+  end
+
+  def current_week_admissions(day_admissions)
+    current_week_admissions = day_admissions.first(7).compact
+    return unless current_week_admissions.size == 7
+
+    current_week_admissions.inject(:+)
+  end
+
+  def previous_week_admissions(day_admissions)
+    previous_week_admissions = day_admissions[7..13].compact
+    return unless previous_week_admissions.size == 7
+
+    previous_week_admissions.inject(:+)
   end
 
   def latest_tests(data)
