@@ -15,6 +15,8 @@
         <p><%= number_with_delimiter(statistics.new_positive_tests) %></p>
         <p>Last 7 days</p>
         <p><%= number_with_delimiter(statistics.current_week_positive_tests) %></p>
+        <p><%= number_with_delimiter(statistics.current_week_positive_tests_change_number) %></p>
+        <p><%= number_to_percentage(statistics.current_week_positive_tests_change_percentage, precision: 1) %>
         <p>All case data <%=topic_section.dig("new_positive_tests", "guidance_link") %> </p>
         <p>Latest data provided on <%= statistics.new_positive_tests_date %></p>
       <% end %>

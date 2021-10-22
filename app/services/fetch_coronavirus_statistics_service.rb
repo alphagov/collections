@@ -10,6 +10,8 @@ class FetchCoronavirusStatisticsService
                           :hospital_admissions_date,
                           :new_positive_tests,
                           :current_week_positive_tests,
+                          :current_week_positive_tests_change_number,
+                          :current_week_positive_tests_change_percentage,
                           :new_positive_tests_date,
                           keyword_init: true)
 
@@ -137,13 +139,33 @@ private
       day_tests << day_cases["newPositiveTests"] if latest_tests["date"] >= day_cases["date"]
     end
 
-    current_week_tests = day_tests.first(7).compact
-    return {} unless current_week_tests.size == 7
+    total_current_week_tests = current_week_positive_tests(day_tests)
+    total_previous_week_tests = previous_week_positive_tests(day_tests)
 
-    total_current_week_tests = current_week_tests.inject(:+)
+    return {} unless total_current_week_tests && total_previous_week_tests
 
     {
       current_week_positive_tests: total_current_week_tests,
+      current_week_positive_tests_change_number: total_current_week_tests - total_previous_week_tests,
+      current_week_positive_tests_change_percentage: percentage_change(total_current_week_tests, total_previous_week_tests),
     }
+  end
+
+  def current_week_positive_tests(day_tests)
+    current_week_tests = day_tests.first(7).compact
+    return unless current_week_tests.size == 7
+
+    current_week_tests.inject(:+)
+  end
+
+  def previous_week_positive_tests(day_tests)
+    previous_week_cases = day_tests[7..13].compact
+    return unless previous_week_cases.size == 7
+
+    previous_week_cases.inject(:+)
+  end
+
+  def percentage_change(current_total, previous_total)
+    (((current_total - previous_total) / previous_total.to_f) * 100).round(1)
   end
 end

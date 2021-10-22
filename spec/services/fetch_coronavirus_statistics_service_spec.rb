@@ -1,85 +1,9 @@
 RSpec.describe FetchCoronavirusStatisticsService do
+  include CoronavirusContentItemHelper
+
   describe ".call" do
     it "returns a Statistics object" do
-      body = {
-        data: [
-          {
-            "date" => "2021-03-18",
-            "cumulativeFirstDoseVaccinations" => nil,
-            "cumulativeSecondDoseVaccinations" => nil,
-            "percentageFirstVaccine" => nil,
-            "percentageSecondVaccine" => nil,
-            "hospitalAdmissions" => nil,
-            "newPositiveTests" => nil,
-          },
-          {
-            "date" => "2021-03-17",
-            "cumulativeFirstDoseVaccinations" => 25_735_472,
-            "cumulativeSecondDoseVaccinations" => 20_735_472,
-            "percentageFirstVaccine" => 86,
-            "percentageSecondVaccine" => 54,
-            "hospitalAdmissions" => nil,
-            "newPositiveTests" => 5758,
-          },
-          {
-            "date" => "2021-03-16",
-            "cumulativeFirstDoseVaccinations" => 25_273_226,
-            "cumulativeSecondDoseVaccinations" => 20_273_226,
-            "percentageFirstVaccine" => 80,
-            "percentageSecondVaccine" => 50,
-            "hospitalAdmissions" => nil,
-            "newPositiveTests" => 5294,
-          },
-          {
-            "date" => "2021-03-15",
-            "cumulativeFirstDoseVaccinations" => 24_839_906,
-            "cumulativeSecondDoseVaccinations" => 19_839_906,
-            "percentageFirstVaccine" => 74,
-            "percentageSecondVaccine" => 44,
-            "hospitalAdmissions" => nil,
-            "newPositiveTests" => 5089,
-          },
-          {
-            "date" => "2021-03-14",
-            "cumulativeFirstDoseVaccinations" => 24_453_221,
-            "cumulativeSecondDoseVaccinations" => 19_453_221,
-            "percentageFirstVaccine" => 69,
-            "percentageSecondVaccine" => 39,
-            "hospitalAdmissions" => 426,
-            "newPositiveTests" => 4618,
-          },
-          {
-            "date" => "2021-03-13",
-            "cumulativeFirstDoseVaccinations" => 24_196_211,
-            "cumulativeSecondDoseVaccinations" => 19_196_211,
-            "percentageFirstVaccine" => 62,
-            "percentageSecondVaccine" => 32,
-            "hospitalAdmissions" => 460,
-            "newPositiveTests" => 5534,
-          },
-          {
-            "date" => "2021-03-12",
-            "cumulativeFirstDoseVaccinations" => 20_196_211,
-            "cumulativeSecondDoseVaccinations" => 15_196_211,
-            "percentageFirstVaccine" => 52,
-            "percentageSecondVaccine" => 22,
-            "hospitalAdmissions" => 300,
-            "newPositiveTests" => 6534,
-          },
-          {
-            "date" => "2021-03-11",
-            "cumulativeFirstDoseVaccinations" => 18_196_211,
-            "cumulativeSecondDoseVaccinations" => 9_196_211,
-            "percentageFirstVaccine" => 62,
-            "percentageSecondVaccine" => 32,
-            "hospitalAdmissions" => 500,
-            "newPositiveTests" => 5034,
-          },
-        ],
-      }
-
-      stub_request(:get, /coronavirus.data.gov.uk/)
-        .to_return(status: 200, body: body.to_json)
+      stub_coronavirus_statistics
 
       statistics = described_class.call
       expect(statistics).to be_a(described_class::Statistics)
@@ -92,6 +16,8 @@ RSpec.describe FetchCoronavirusStatisticsService do
         hospital_admissions: 426,
         hospital_admissions_date: Date.new(2021, 3, 14),
         current_week_positive_tests: 37_861,
+        current_week_positive_tests_change_number: 2_651,
+        current_week_positive_tests_change_percentage: 7.5,
         new_positive_tests: 5758,
         new_positive_tests_date: Date.new(2021, 3, 17),
       )
@@ -111,8 +37,8 @@ RSpec.describe FetchCoronavirusStatisticsService do
                           "cumulativeSecondDoseVaccinations" => nil,
                           "percentageFirstVaccine" => nil,
                           "percentageSecondVaccine" => nil,
-                          "hospitalAdmissions" => nil,
-                          "newPositiveTests" => 6303 }] }
+                          "hospitalAdmissions" => 6303,
+                          "newPositiveTests" => nil }] }
 
         stub_request(:get, /coronavirus.data.gov.uk/)
           .to_return(status: 200, body: body.to_json)
@@ -123,11 +49,13 @@ RSpec.describe FetchCoronavirusStatisticsService do
           cumulative_second_dose_vaccinations: nil,
           percentage_first_vaccine: nil,
           percentage_second_vaccine: nil,
-          hospital_admissions: nil,
-          hospital_admissions_date: nil,
-          new_positive_tests: 6303,
+          hospital_admissions: 6303,
+          hospital_admissions_date: Date.new(2021, 3, 18),
+          new_positive_tests: nil,
           current_week_positive_tests: nil,
-          new_positive_tests_date: Date.new(2021, 3, 18),
+          current_week_positive_tests_change_number: nil,
+          current_week_positive_tests_change_percentage: nil,
+          new_positive_tests_date: nil,
         )
       end
 
@@ -137,8 +65,8 @@ RSpec.describe FetchCoronavirusStatisticsService do
                           "cumulativeSecondDoseVaccinations" => nil,
                           "percentageFirstVaccine" => nil,
                           "percentageSecondVaccine": nil,
-                          "hospitalAdmissions" => nil,
-                          "newPositiveTests" => 6303 }] }
+                          "hospitalAdmissions" => 6303,
+                          "newPositiveTests" => nil }] }
 
         stub_request(:get, /coronavirus.data.gov.uk/)
           .to_return(status: 200, body: body.to_json)
@@ -190,6 +118,8 @@ RSpec.describe FetchCoronavirusStatisticsService do
           hospital_admissions_date: Date.new(2021, 3, 14),
           new_positive_tests: 6303,
           current_week_positive_tests: 40_345,
+          current_week_positive_tests_change_number: 3_000,
+          current_week_positive_tests_change_percentage: 10,
           new_positive_tests_date: Date.new(2021, 3, 18),
         }
 
