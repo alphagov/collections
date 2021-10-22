@@ -15,7 +15,7 @@ Shows the details for a single organisation.
 
 ## Consumers
 
-Please [add your application to this list](https://github.com/alphagov/collections/edit/master/docs/api.md) if you're using the API.
+Please [add your application to this list](https://github.com/alphagov/collections/edit/main/docs/api.md) if you're using the API.
 
 `/api/organisations`
 - [Contacts admin](https://github.com/alphagov/contacts-admin/blob/76122b8494dc3639bd8c3df947096657d101dacc/app/tasks/import_organisations.rb#L19)
