@@ -3,10 +3,6 @@
     margin-bottom: govuk-spacing(6) * 2;
   }
 
-  .organisations__department-count-wrapper {
-    @include govuk-font(80, $weight: bold);
-  }
-
   .organisations-list__item {
     list-style-type: none;
     padding-bottom: govuk-spacing(3);

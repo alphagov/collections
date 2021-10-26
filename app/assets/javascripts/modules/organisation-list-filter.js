@@ -97,7 +97,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
         }
       }
 
-      var departmentCount = departmentSection.querySelectorAll('.js-department-count')
+      var departmentCount = departmentSection.querySelectorAll('[data-department-count="true"]')
       var accessibleDepartmentCount = departmentSection.querySelectorAll('.js-accessible-department-count')
 
       if (matchingOrgCount === 0) {
