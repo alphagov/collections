@@ -128,7 +128,7 @@ private
   def weekly_admissions(latest_admissions, data)
     day_hospital_admissions = []
     data.each do |day_admissions|
-      day_hospital_admissions << day_admissions["hospitalAdmissions"] if latest_admissions["date"] >= day_admissions["date"]
+      day_hospital_admissions << day_admissions["hospitalAdmissions"] if on_or_before?(day_admissions["date"], latest_admissions["date"])
     end
 
     total_current_week_admissions = current_week_admissions(day_hospital_admissions)
@@ -179,7 +179,7 @@ private
   def weekly_tests(latest_tests, data)
     day_tests = []
     data.each do |day_cases|
-      day_tests << day_cases["newPositiveTests"] if latest_tests["date"] >= day_cases["date"]
+      day_tests << day_cases["newPositiveTests"] if on_or_before?(day_cases["date"], latest_tests["date"])
     end
 
     total_current_week_tests = current_week_positive_tests(day_tests)
@@ -210,5 +210,9 @@ private
 
   def percentage_change(current_total, previous_total)
     (((current_total - previous_total) / previous_total.to_f) * 100).round(1)
+  end
+
+  def on_or_before?(day_date, latest_date)
+    !Date.parse(day_date).after?(Date.parse(latest_date))
   end
 end
