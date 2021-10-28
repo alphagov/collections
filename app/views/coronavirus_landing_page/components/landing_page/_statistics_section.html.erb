@@ -8,6 +8,19 @@
   </div>
 
   <div class="govuk-grid-column-two-thirds">
+    <% link = topic_section["links"].shift %>
+    <%= link_to(
+      link["label"].html_safe,
+      link["url"],
+      class: 'covid__topic-list-link govuk-link',
+      data: {
+        module: "gem-track-click",
+        track_category: "pageElementInteraction",
+        track_action: "Statistics",
+        track_label: link["url"],
+      },
+    ) %>
+
     <% if statistics %>
       <% if statistics.new_positive_tests %>
         <p><%= topic_section.dig("tests", "title") %></p>
