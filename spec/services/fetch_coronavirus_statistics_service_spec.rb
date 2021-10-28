@@ -35,24 +35,26 @@ RSpec.describe FetchCoronavirusStatisticsService do
 
       it "sets only the fields that have data" do
         body = { data: [{ "date" => "2021-03-18",
-                          "cumulativeFirstDoseVaccinations" => nil,
-                          "cumulativeSecondDoseVaccinations" => nil,
-                          "percentageFirstVaccine" => nil,
-                          "percentageSecondVaccine" => nil,
-                          "hospitalAdmissions" => 6303,
+                          "cumulativeFirstDoseVaccinations" => 21_345_876,
+                          "cumulativeSecondDoseVaccinations" => 20_357_898,
+                          "percentageFirstVaccine" => 80,
+                          "percentageSecondVaccine" => 70,
+                          "hospitalAdmissions" => nil,
                           "newPositiveTests" => nil }] }
 
         stub_request(:get, /coronavirus.data.gov.uk/)
           .to_return(status: 200, body: body.to_json)
 
         expect(described_class.call).to have_attributes(
-          cumulative_vaccinations_date: nil,
-          cumulative_first_dose_vaccinations: nil,
-          cumulative_second_dose_vaccinations: nil,
-          percentage_first_vaccine: nil,
-          percentage_second_vaccine: nil,
-          hospital_admissions: 6303,
-          hospital_admissions_date: Date.new(2021, 3, 18),
+          cumulative_vaccinations_date: Date.new(2021, 3, 18),
+          cumulative_first_dose_vaccinations: 21_345_876,
+          cumulative_second_dose_vaccinations: 20_357_898,
+          percentage_first_vaccine: 80,
+          percentage_second_vaccine: 70,
+          hospital_admissions: nil,
+          current_week_hospital_admissions_change_number: nil,
+          current_week_hospital_admissions_change_percentage: nil,
+          hospital_admissions_date: nil,
           new_positive_tests: nil,
           current_week_positive_tests: nil,
           current_week_positive_tests_change_number: nil,
@@ -73,11 +75,7 @@ RSpec.describe FetchCoronavirusStatisticsService do
         stub_request(:get, /coronavirus.data.gov.uk/)
           .to_return(status: 200, body: body.to_json)
 
-        expect(described_class.call).to_not include(:cumulative_vaccinations_date)
-        expect(described_class.call).to_not include(:cumulative_first_dose_vaccinations)
-        expect(described_class.call).to_not include(:cumulative_second_dose_vaccinations)
-        expect(described_class.call).to_not include(:percentage_first_vaccine)
-        expect(described_class.call).to_not include(:percentage_second_vaccine)
+        expect(described_class.call).to be_nil
       end
     end
 
