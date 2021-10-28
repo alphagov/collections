@@ -10,39 +10,39 @@
   <div class="govuk-grid-column-two-thirds">
     <% if statistics %>
       <% if statistics.new_positive_tests %>
-        <p><%= topic_section.dig("new_positive_tests", "title") %></p>
-        <p>Daily</p>
+        <p><%= topic_section.dig("tests", "title") %></p>
+        <p><%= topic_section.dig("tests", "daily_heading") %></p>
         <p><%= number_with_delimiter(statistics.new_positive_tests) %></p>
-        <p>Last 7 days</p>
+        <p><%= topic_section.dig("tests", "weekly_heading") %></p>
         <p><%= number_with_delimiter(statistics.current_week_positive_tests) %></p>
         <p><%= number_with_delimiter(statistics.current_week_positive_tests_change_number) %></p>
         <p><%= number_to_percentage(statistics.current_week_positive_tests_change_percentage, precision: 1) %>
-        <p>All case data <%=topic_section.dig("new_positive_tests", "guidance_link") %> </p>
-        <p>Latest data provided on <%= statistics.new_positive_tests_date %></p>
+        <p><%=topic_section.dig("tests", "guidance_link") %></p>
+        <p><%=topic_section.dig("updated_date") %> <%= statistics.new_positive_tests_date %></p>
       <% end %>
 
       <% if statistics.hospital_admissions %>
-        <p><%= topic_section.dig("hospital_admissions", "title") %></p>
-        <p>Daily</p>
+        <p><%= topic_section.dig("admissions", "title") %></p>
+        <p><%= topic_section.dig("admissions", "daily_heading") %></p>
         <p><%= number_with_delimiter(statistics.hospital_admissions) %></p>
-        <p>Last 7 days</p>
+        <p><%= topic_section.dig("admissions", "weekly_heading") %></p>
         <p><%= number_with_delimiter(statistics.current_week_hospital_admissions) %></p>
         <p><%= number_with_delimiter(statistics.current_week_hospital_admissions_change_number) %></p>
         <p><%= number_to_percentage(statistics.current_week_hospital_admissions_change_percentage, precision: 1) %>
-        <p>All healthcare data <%=topic_section.dig("hospital_admissions", "guidance_link") %> </p>
-        <p>Latest data provided on <%= statistics.hospital_admissions_date %></p>
+        <p><%=topic_section.dig("admissions", "guidance_link") %> </p>
+        <p><%=topic_section.dig("updated_date") %> <%= statistics.hospital_admissions_date %></p>
       <% end %>
 
       <% if statistics.cumulative_first_dose_vaccinations %>
-        <p><%= topic_section.dig("cumulative_vaccinations", "title") %></p>
-        <p>1st dose</p>
+        <p><%= topic_section.dig("vaccinations", "title") %></p>
+        <p><%= topic_section.dig("vaccinations", "first_dose_heading") %></p>
         <p><%= number_to_percentage(statistics.percentage_first_vaccine, precision: 1) %></p>
         <p><%= number_with_delimiter(statistics.cumulative_first_dose_vaccinations) %></p>
-        <p>2nd dose</p>
+        <p><%= topic_section.dig("vaccinations", "second_dose_heading") %></p>
         <p><%= number_to_percentage(statistics.percentage_second_vaccine, precision: 1) %></p>
         <p><%= number_with_delimiter(statistics.cumulative_second_dose_vaccinations) %></p>
-        <p>All vaccination data <%=topic_section.dig("cumulative_vaccinations", "guidance_link") %> </p>
-        <p>Latest data provided on <%= statistics.cumulative_vaccinations_date %></p>
+        <p><%=topic_section.dig("vaccinations", "guidance_link") %> </p>
+        <p><%=topic_section.dig("updated_date") %> <%= statistics.cumulative_vaccinations_date %></p>
       <% end %>
     <% end %>
 
