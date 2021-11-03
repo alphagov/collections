@@ -35,7 +35,6 @@ group :development, :test do
   gem "binding_of_caller"
   gem "climate_control"
   gem "govuk_test"
-  gem "i18n-tasks"
   gem "jasmine"
   gem "jasmine_selenium_runner"
   gem "pact", require: false
