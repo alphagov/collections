@@ -2,11 +2,11 @@ window.GOVUK = window.GOVUK || {}
 window.GOVUK.Modules = window.GOVUK.Modules || {};
 
 (function (Modules) {
-  function CoronavirusLandingPage () {}
+  function CoronavirusLandingPage ($module) {
+    this.module = $module
+  }
 
-  CoronavirusLandingPage.prototype.start = function ($element) {
-    this.module = $element[0]
-
+  CoronavirusLandingPage.prototype.init = function () {
     // Confirm the user is on the coronavirus landing page
     if (this.checkOnLandingPage()) {
       this.globarBarSeen()
