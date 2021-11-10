@@ -1,4 +1,5 @@
 /* eslint-disable no-var */
+//= require govuk_publishing_components/vendor/polyfills/closest
 
 window.GOVUK = window.GOVUK || {}
 window.GOVUK.Modules = window.GOVUK.Modules || {};

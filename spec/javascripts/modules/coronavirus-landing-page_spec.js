@@ -23,15 +23,15 @@ describe('Coronavirus landing page', function () {
   var $element
 
   beforeEach(function () {
-    coronavirusLandingPage = new GOVUK.Modules.CoronavirusLandingPage()
     $element = $(html)
+    coronavirusLandingPage = new GOVUK.Modules.CoronavirusLandingPage($element[0])
     GOVUK.approveAllCookieTypes()
   })
 
   it('sets global_bar_seen to automatically hide if on /coronavirus', function () {
     GOVUK.cookie('global_bar_seen', JSON.stringify({ count: 0, version: 1 }))
     spyOn(coronavirusLandingPage, 'checkOnLandingPage').and.returnValue(true)
-    coronavirusLandingPage.start($element)
+    coronavirusLandingPage.init()
 
     expect(parseCookie(GOVUK.cookie('global_bar_seen')).count).toBe(999)
   })
@@ -39,7 +39,7 @@ describe('Coronavirus landing page', function () {
   it('only sets global_bar_seen if on /coronavirus', function () {
     GOVUK.cookie('global_bar_seen', JSON.stringify({ count: 0, version: 1 }))
     spyOn(coronavirusLandingPage, 'checkOnLandingPage').and.returnValue(false)
-    coronavirusLandingPage.start($element)
+    coronavirusLandingPage.init()
 
     expect(parseCookie(GOVUK.cookie('global_bar_seen')).count).not.toBe(999)
     expect(parseCookie(GOVUK.cookie('global_bar_seen')).version).toBe(1)
@@ -59,7 +59,7 @@ describe('Coronavirus landing page', function () {
         $(e.target).attr('aria-expanded', expanded ? 'false' : 'true')
       })
 
-      coronavirusLandingPage.start($element)
+      coronavirusLandingPage.init()
     })
 
     it('tracks expanding', function () {
@@ -107,9 +107,9 @@ describe('Coronavirus landing page', function () {
           '<div id="nation-england" class="js-covid-timeline">England</div>' +
           '<div id="nation-northern_ireland" class="js-covid-timeline">Northern Ireland</div>' +
         '</div>'
-      coronavirusLandingPage = new GOVUK.Modules.CoronavirusLandingPage()
       $element = $(nationPickerHtml)
       $('body').append($element)
+      coronavirusLandingPage = new GOVUK.Modules.CoronavirusLandingPage($element[0])
     })
 
     afterEach(function () {
@@ -117,7 +117,7 @@ describe('Coronavirus landing page', function () {
     })
 
     it('show and hide appropriate sections of the page when the radio buttons change', function () {
-      coronavirusLandingPage.start($element)
+      coronavirusLandingPage.init()
 
       var englandRadio = $element.find('#radio-0')
       var northernIrelandRadio = $element.find('#radio-1')
@@ -146,7 +146,7 @@ describe('Coronavirus landing page', function () {
 
       northernIrelandRadio.prop('checked', true)
 
-      coronavirusLandingPage.start($element)
+      coronavirusLandingPage.init()
 
       expect(englandSection).toBeHidden()
       expect(northernIrelandSection).toBeVisible()
@@ -157,7 +157,7 @@ describe('Coronavirus landing page', function () {
       var englandSection = $element.find('#nation-england')
       var northernIrelandSection = $element.find('#nation-northern_ireland')
 
-      coronavirusLandingPage.start($element)
+      coronavirusLandingPage.init()
 
       expect(englandSection).toBeVisible()
       expect(northernIrelandSection).toBeHidden()

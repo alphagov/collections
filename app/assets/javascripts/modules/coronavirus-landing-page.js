@@ -1,21 +1,21 @@
+//= require govuk_publishing_components/vendor/polyfills/closest
+
 window.GOVUK = window.GOVUK || {}
 window.GOVUK.Modules = window.GOVUK.Modules || {};
 
 (function (Modules) {
-  function CoronavirusLandingPage () {}
+  function CoronavirusLandingPage ($module) {
+    this.module = $module
+  }
 
-  CoronavirusLandingPage.prototype.start = function ($element) {
-    var $this = this
+  CoronavirusLandingPage.prototype.init = function () {
     // Confirm the user is on the coronavirus landing page
     if (this.checkOnLandingPage()) {
       this.globarBarSeen()
     }
 
-    // Ensure that the "Open/Close all" element exists when attaching the event listeners for tracking
-    $(document).ready(function () {
-      $this.addAccordionOpenAllTracking($element)
-      $this.addTimelineCountrySelector()
-    })
+    this.addAccordionOpenAllTracking()
+    this.addTimelineCountrySelector()
   }
 
   CoronavirusLandingPage.prototype.checkOnLandingPage = function () {
@@ -32,15 +32,24 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     }
   }
 
-  CoronavirusLandingPage.prototype.addAccordionOpenAllTracking = function ($element) {
-    $element.find('.gem-c-accordion__open-all').on('click', function (e) {
-      var expanded = $(e.target).attr('aria-expanded') === 'true'
-      var label = expanded ? 'Expand all' : 'Collapse all'
-      var action = expanded ? 'accordionOpened' : 'accordionClosed'
-      var options = { transport: 'beacon', label: label }
+  // we want to track the accordion show/hide all control but this is added dynamically
+  // after page load by the accordion component, so we attach the event listener to the
+  // accordion parent element then filter click events to only track that control
+  CoronavirusLandingPage.prototype.addAccordionOpenAllTracking = function () {
+    var accordions = this.module.querySelectorAll('.gem-c-accordion')
+    for (var i = 0; i < accordions.length; i++) {
+      accordions[i].addEventListener('click', function (e) {
+        var clicked = e.target.closest('button')
+        if (clicked && clicked.classList.contains('gem-c-accordion__open-all')) {
+          var expanded = clicked.getAttribute('aria-expanded') === 'true'
+          var label = expanded ? 'Expand all' : 'Collapse all'
+          var action = expanded ? 'accordionOpened' : 'accordionClosed'
+          var options = { transport: 'beacon', label: label }
 
-      GOVUK.analytics.trackEvent('pageElementInteraction', action, options)
-    })
+          GOVUK.analytics.trackEvent('pageElementInteraction', action, options)
+        }
+      })
+    }
   }
 
   CoronavirusLandingPage.prototype.addTimelineCountrySelector = function () {
