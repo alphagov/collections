@@ -498,7 +498,6 @@
       "show_risk_level_section": false
     },
     "page_header": "Coronavirus (COVID&#8209;19)",
-    "stay_at_home": "DO NOT USE THIS",
     "announcements": [
       {
         "href": "/government/news/everyone-working-in-care-homes-to-be-fully-vaccinated-under-new-law-to-protect-residents",
@@ -551,7 +550,6 @@
       ],
       "header": "All coronavirus information on GOV.UK"
     },
-    "explainer_text": null,
     "header_section": {
       "link": {
         "href": "/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do",
@@ -561,7 +559,6 @@
       "intro": "- You can meet indoors in a group of up to 6 people or a group of any size from 2 households \n- You can meet outside in a group of up to 30 people\n- Work from home if you can and travel safely\n- If you have symptoms get a test and stay at&nbsp;home\n",
       "title": "Coronavirus restrictions remain in place across the country, including for people who have been vaccinated. In England:"
     },
-    "explainer_title": null,
     "sections_heading": "Guidance and support",
     "statistics_section": {
       "links": [
