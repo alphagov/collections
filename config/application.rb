@@ -30,6 +30,73 @@ module Collections
     config.i18n.default_locale = :en
     config.i18n.load_path += Dir[Rails.root.join("config/locales/**/*.yml")]
     config.i18n.fallbacks = true
+    config.i18n.available_locales = %i[
+      ar
+      az
+      be
+      bg
+      bn
+      cs
+      cy
+      da
+      de
+      dr
+      el
+      en
+      es
+      es-419
+      et
+      fa
+      fi
+      fr
+      gd
+      gu
+      he
+      hi
+      hr
+      hu
+      hy
+      id
+      is
+      it
+      ja
+      ka
+      kk
+      ko
+      lt
+      lv
+      ms
+      mt
+      nl
+      no
+      pa
+      pa-pk
+      pl
+      ps
+      pt
+      ro
+      ru
+      si
+      sk
+      sl
+      so
+      sq
+      sr
+      sv
+      sw
+      ta
+      th
+      tk
+      tr
+      uk
+      ur
+      uz
+      vi
+      yi
+      zh
+      zh-hk
+      zh-tw
+    ]
 
     config.assets.prefix = "/assets/collections/"
 
