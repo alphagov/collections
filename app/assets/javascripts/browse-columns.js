@@ -9,7 +9,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
   BrowseColumns.prototype.init = function () {
     if (!GOVUK.support.history()) return
-    if (window.screen.width < 640) return // don't ajax navigation on mobile
+    if (window.screen.width < 640) return // don't do JS on mobile
 
     this.$root = this.$module.querySelector('#root')
     this.$section = this.$module.querySelector('#section')
@@ -35,19 +35,15 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     if (!this.$section) {
       this.$section = document.createElement('div')
       this.$section.setAttribute('id', 'section')
-      this.$section.setAttribute('class', 'section-pane pane with-sort')
+      this.$section.setAttribute('class', 'browse__section-pane')
       this.$module.insertBefore(this.$section, this.$module.firstChild)
-      this.$module.classList.add('section')
     }
 
     if (!this.$subsection) {
       this.$subsection = document.createElement('div')
       this.$subsection.setAttribute('id', 'subsection')
-      this.$subsection.setAttribute('class', 'subsection-pane pane')
-      this.$subsection.style.display = 'none'
+      this.$subsection.setAttribute('class', 'browse__subsection-pane')
       this.$module.insertBefore(this.$subsection, this.$module.firstChild)
-    } else {
-      this.$subsection.style.display = 'block'
     }
   }
 
@@ -87,8 +83,6 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
           var data = JSON.parse(e.target.response)
           this.sectionCache(state.slug, data)
           this.handleResponse(data, state)
-        } else {
-          // error FIXME
         }
       }
       var xhr = new XMLHttpRequest()
@@ -113,7 +107,6 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
   BrowseColumns.prototype.handleResponse = function (data, state, poppingState) {
     state.sectionData = data
-    this.scrollToBrowse()
     this.lastState = state
     if (state.subsection) {
       this.showSubsection(state)
@@ -128,7 +121,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
   }
 
   BrowseColumns.prototype.popState = function (e) {
-    var state = e.originalEvent.state
+    var state = e.state
     if (!state) { // state will be null if there was no state set
       state = this.parsePathname(window.location.pathname)
     }
@@ -158,14 +151,24 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     this.loadSectionFromState(state, true)
   }
 
-  BrowseColumns.prototype.isDesktop = function () {
-    return window.screen.width > 768
+  BrowseColumns.prototype.loadSectionFromState = function (state, poppingState) {
+    this.lastState = state
+
+    if (state.subsection) {
+      this.showSubsection(state)
+    } else {
+      this.showSection(state)
+    }
+
+    if (typeof poppingState === 'undefined') {
+      history.pushState(state, '', state.path)
+      this.trackPageview(state)
+    }
   }
 
   BrowseColumns.prototype.showRoot = function () {
     this.$section.innerHTML = ''
     this.displayState = 'root'
-    this.$root.querySelector('.js-heading').focus()
   }
 
   BrowseColumns.prototype.showSection = function (state) {
@@ -178,68 +181,25 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     this.highlightSection('root', state.path)
     this.updateBreadcrumbs(state)
 
-    // var animationDone
     if (this.displayState === 'subsection') {
-      // animate to the right position and update the data
-      this.animateSubsectionToSectionDesktop()
-    } else if (this.displayState === 'root') {
-      this.animateRootToSectionDesktop()
+      this.changeColumnVisibility(1)
+    } else {
+      this.changeColumnVisibility(2)
     }
     this.$section.querySelector('.js-heading').focus()
   }
 
-  BrowseColumns.prototype.animateSubsectionToSectionDesktop = function () {
-    // animate to the right position and update the data
-    var width = parseFloat(getComputedStyle(this.$root, null).width.replace('px', ''))
-    this.$root.style.position = 'absolute'
-    this.$root.style.width = width
-    this.$subsection.style.display = 'none'
-    this.$section.style.marginRight = '63%'
-    var sectionProperties
-
-    if (this.isDesktop()) {
-      var curated = this.$section.querySelector('.pane-inner.curated')
-      if (curated) {
-        curated.style.paddingLeft = '30px'
-      }
-
-      var alphabetical = this.$section.querySelector('.pane-inner.alphabetical')
-      if (alphabetical) {
-        alphabetical.style.paddingLeft = '96px'
-      }
-
-      sectionProperties = {
-        width: '35%',
-        marginLeft: '0%',
-        marginRight: '40%'
-      }
+  BrowseColumns.prototype.changeColumnVisibility = function (columns) {
+    if (columns === 3) {
+      this.$module.classList.remove('browse--two-columns')
+      this.$module.classList.add('browse--three-columns')
+    } else if (columns === 2) {
+      this.$module.classList.add('browse--two-columns')
+      this.$module.classList.remove('browse--three-columns')
     } else {
-      sectionProperties = {
-        width: '30%',
-        marginLeft: '0%',
-        marginRight: '45%'
-      }
+      this.$module.classList.remove('browse--two-columns')
+      this.$module.classList.remove('browse--three-columns')
     }
-    this.setStyles(this.$section, sectionProperties)
-    this.displayState = 'section'
-    this.$module.classList.remove('subsection')
-    this.$module.classList.add('section')
-    this.$section.setAttribute('style', '')
-    this.$section.querySelector('.pane-inner').setAttribute('style', '')
-    this.$section.classList.add('with-sort')
-    this.$root.setAttribute('style', '')
-  }
-
-  BrowseColumns.prototype.setStyles = function (el, properties) {
-    for (var property in properties) {
-      el.style[property] = properties[property]
-    }
-  }
-
-  BrowseColumns.prototype.animateRootToSectionDesktop = function () {
-    this.displayState = 'section'
-    this.$module.classList.remove('subsection')
-    this.$module.classList.add('section')
   }
 
   BrowseColumns.prototype.showSubsection = function (state) {
@@ -252,56 +212,8 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     this.highlightSection('root', '/browse/' + state.section)
     this.updateBreadcrumbs(state)
 
-    if (this.displayState !== 'subsection') {
-      this.animateSectionToSubsectionDesktop()
-    }
+    this.changeColumnVisibility(3)
     this.$subsection.querySelector('.js-heading').focus()
-  }
-
-  BrowseColumns.prototype.animateSectionToSubsectionDesktop = function () {
-    // animate to the right position and update the data
-    var width = parseFloat(getComputedStyle(this.$root, null).width.replace('px', ''))
-    this.$root.style.position = 'absolute'
-    this.$root.style.width = width
-    var sortOrder = this.$section.querySelector('.sort-order')
-    if (sortOrder) {
-      sortOrder.style.display = 'none'
-    }
-
-    var rightPanel = this.$section.querySelector('.pane-inner')
-    if (rightPanel) {
-      rightPanel.style.paddingLeft = 0
-    }
-
-    var sectionProperties
-
-    if (this.isDesktop()) {
-      sectionProperties = {
-        width: '25%',
-        marginLeft: '-13%',
-        marginRight: '63%'
-      }
-    } else {
-      sectionProperties = {
-        width: '30%',
-        marginLeft: '-18%',
-        marginRight: '63%'
-      }
-    }
-
-    this.setStyles(this.$section, sectionProperties)
-    this.$module.classList.remove('section')
-    this.$module.classList.add('subsection')
-    this.$subsection.style.display = 'block'
-    this.$section.classList.remove('with-sort')
-    this.displayState = 'subsection'
-
-    if (sortOrder) {
-      sortOrder.setAttribute('style', '')
-    }
-    this.$section.setAttribute('style', '')
-    this.$section.querySelector('.pane-inner').setAttribute('style', '')
-    this.$root.setAttribute('style', '')
   }
 
   BrowseColumns.prototype.getTitle = function (slug) {
@@ -326,7 +238,10 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
   }
 
   BrowseColumns.prototype.setNavigationPageTypeMetaTag = function (navigationPageType) {
-    document.querySelector('meta[name="govuk:navigation-page-type"]').setAttribute('content', navigationPageType)
+    var meta = document.querySelector('meta[name="govuk:navigation-page-type"]')
+    if (meta) {
+      meta.setAttribute('content', navigationPageType)
+    }
   }
 
   BrowseColumns.prototype.addLoading = function (el) {
@@ -336,16 +251,22 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
   BrowseColumns.prototype.removeLoading = function () {
     this.$module.setAttribute('aria-busy', 'false')
-    this.$module.querySelector('a.loading').classList.remove('loading')
+    var loading = this.$module.querySelector('a.loading')
+    if (loading) {
+      loading.classList.remove('loading')
+    }
   }
 
   BrowseColumns.prototype.highlightSection = function (section, slug) {
     var $section = this.$module.querySelector('#' + section)
-    var selected = $section.querySelector('.active')
+    var selected = $section.querySelector('.browse__link--active')
     if (selected) {
-      selected.classList.remove('active')
+      selected.classList.remove('browse__link--active')
+      selected.classList.add('browse__link--inactive')
     }
-    this.$module.querySelector('a[href$="' + slug + '"]').parentNode.classList.add('active')
+    var link = this.$module.querySelector('a[href$="' + slug + '"]')
+    link.classList.add('browse__link--active')
+    link.classList.remove('browse__link--inactive')
   }
 
   BrowseColumns.prototype.parsePathname = function (pathname) {
@@ -361,16 +282,6 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       out.section = out.slug
     }
     return out
-  }
-
-  BrowseColumns.prototype.scrollToBrowse = function () {
-    var $body = document.body
-    var elTop = this.$module.getBoundingClientRect()
-    elTop = elTop.top
-
-    if ($body.scrollTop > elTop) {
-      // $('body').animate({ scrollTop: elTop }, this.animateSpeed) // FIXME
-    }
   }
 
   BrowseColumns.prototype.updateBreadcrumbs = function (state) {

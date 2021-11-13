@@ -1,8 +1,12 @@
-<div id="root" class="pane root-pane">
+<div id="root" class="browse__root-pane">
   <h2 class="govuk-visually-hidden" tabindex="-1"><%= t("browse.all_categories") %></h2>
-  <ul>
+  <ul class="browse__list">
     <% top_level_browse_pages.each_with_index do |page, index| %>
-      <li class="<%= browsing_in_top_level_page?(page) ? 'active' : '' %>">
+      <%
+        link_classes = %w[browse__link]
+        link_classes << (browsing_in_top_level_page?(page) ? "browse__link--active" : "browse__link--inactive")
+      %>
+      <li>
         <%= link_to(
           page.title,
           page.base_path,
@@ -15,7 +19,7 @@
               dimension29: page.title,
             },
           },
-          class: "govuk-link",
+          class: link_classes,
         ) %>
       </li>
     <% end %>

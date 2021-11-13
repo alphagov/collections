@@ -1,5 +1,4 @@
 <% content_for :title, t("browse.all_categories") %>
-<% content_for :page_class, "browse" %>
 <% content_for :meta_tags do %>
   <%= render "govuk_publishing_components/components/meta_tags", {
     content_item: {
@@ -10,7 +9,7 @@
 
 <h1 class="govuk-visually-hidden"><%= t("shared.browse.title") %></h1>
 
-<div class="browse-panes root" data-module="browse-columns gem-track-click">
+<div class="browse" data-module="browse-columns gem-track-click">
   <%= render 'top_level_browse_pages',
     top_level_browse_pages: page.top_level_browse_pages %>
 </div>

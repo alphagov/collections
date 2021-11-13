@@ -9,16 +9,15 @@
     }
   } %>
 <% end %>
-<% content_for :page_class, "browse" %>
 
 <h1 class="govuk-visually-hidden"><%= t("shared.browse.title") %></h1>
 
-<div class="browse-panes subsection" data-state="subsection" data-module="browse-columns gem-track-click">
-  <div id="subsection" class="subsection-pane pane with-sort">
+<div class="browse browse--three-columns" data-state="subsection" data-module="browse-columns gem-track-click">
+  <div id="subsection" class="browse__subsection-pane">
     <%= render 'links', page: page %>
   </div>
 
-  <div id="section" class="section-pane pane">
+  <div id="section" class="browse__section-pane">
     <%= render 'second_level_browse_pages',
       title: top_level_title,
       second_level_browse_pages: page.second_level_browse_pages,

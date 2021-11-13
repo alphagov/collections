@@ -1,14 +1,14 @@
-<div class="pane-inner <%= page.lists.curated? ? 'curated-list' : 'a-to-z' %>">
-  <h2 tabindex="-1" class="js-heading"><%= t("shared.browse.prefix") %> <%= page.title %></h2>
+<div class="browse__inner <%= page.lists.curated? ? 'browse__inner--curated' : 'browse__inner--alphabetical' %>">
+  <h2 tabindex="-1" class="browse__heading js-heading"><%= t("shared.browse.prefix") %> <%= page.title %></h2>
 
   <% page.lists.each_with_index do |list, section_index| %>
     <% if page.lists.curated? %>
-      <h3 class='list-header'><%= list.title %></h3>
+      <h3 class="browse__list-header"><%= list.title %></h3>
     <% else %>
-      <h3 class="sort-order"><%= list.title %></h3>
+      <h3 class="browse__sort-order"><%= list.title %></h3>
     <% end %>
 
-    <ul>
+    <ul class="browse__list">
       <% list.contents.each_with_index do |list_item, index| %>
         <li>
           <%= link_to(
@@ -23,7 +23,7 @@
                 dimension29: list_item.title,
               },
             },
-            class: "govuk-link",
+            class: "browse__normal-link govuk-link",
           ) %>
         </li>
       <% end %>
@@ -31,12 +31,13 @@
   <% end %>
 
   <% if page.related_topics.any? %>
-    <div class="detailed-guidance">
+    <div class="browse__detailed-guidance">
       <%= render "govuk_publishing_components/components/heading", {
         text: t("second_level_browse.detailed_guidance"),
         heading_level: 2,
+        margin_bottom: 3,
       } %>
-      <ul>
+      <ul class="browse__list">
         <% page.related_topics.each_with_index do |related_topic, index| %>
           <li>
             <%= link_to(
@@ -51,7 +52,7 @@
                   dimension29: related_topic.title,
                 },
               },
-              class: "govuk-link",
+              class: "browse__normal-link govuk-link",
             ) %>
           </li>
         <% end %>
