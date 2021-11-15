@@ -4,7 +4,7 @@
   <h1 class="govuk-visually-hidden"><%= @header.org.title %></h1>
 
   <div class="govuk-grid-row">
-    <div class="<%= @header.logo_wrapper_class %> organisation__margin-bottom">
+    <div class="govuk-grid-column-one-third organisation__margin-bottom">
       <%= render "govuk_publishing_components/components/organisation_logo", {
         organisation: @header.organisation_logo
       } %>
@@ -18,7 +18,7 @@
     </div>
 
     <% if @organisation.is_live? %>
-      <div class="<%= @header.link_wrapper_class %> organisation__margin-bottom">
+      <div class="govuk-grid-column-two-thirds organisation__margin-bottom">
         <%= render "govuk_publishing_components/components/translation_nav", @header.translation_links %>
         <%= render "components/topic-list", @header.ordered_featured_links %>
       </div>

@@ -59,18 +59,6 @@ module Organisations
       end
     end
 
-    def logo_wrapper_class
-      return "govuk-grid-column-two-thirds" if org.is_news_organisation?
-
-      "govuk-grid-column-one-third"
-    end
-
-    def link_wrapper_class
-      return "govuk-grid-column-one-third" if org.is_news_organisation?
-
-      "govuk-grid-column-two-thirds"
-    end
-
     def translation_links
       if org.translations.present? && org.translations.count > 1
         links = []
