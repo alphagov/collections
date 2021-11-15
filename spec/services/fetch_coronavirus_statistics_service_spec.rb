@@ -1,29 +1,27 @@
 RSpec.describe FetchCoronavirusStatisticsService do
+  include CoronavirusContentItemHelper
+
   describe ".call" do
     it "returns a Statistics object" do
-      body = {
-        data: [
-          { "date" => "2021-03-18", "cumulativeVaccinations" => nil, "hospitalAdmissions" => nil, "newPositiveTests" => 6303 },
-          { "date" => "2021-03-17", "cumulativeVaccinations" => 25_735_472, "hospitalAdmissions" => nil, "newPositiveests" => 5758 },
-          { "date" => "2021-03-16", "cumulativeVaccinations" => 25_273_226, "hospitalAdmissions" => nil, "newPositiveests" => 5294 },
-          { "date" => "2021-03-15", "cumulativeVaccinations" => 24_839_906, "hospitalAdmissions" => nil, "newPositiveests" => 5089 },
-          { "date" => "2021-03-14", "cumulativeVaccinations" => 24_453_221, "hospitalAdmissions" => 426, "newPositiveests" => 4618 },
-          { "date" => "2021-03-13", "cumulativeVaccinations" => 24_196_211, "hospitalAdmissions" => 460, "newPositiveests" => 5534 },
-        ],
-      }
-
-      stub_request(:get, /coronavirus.data.gov.uk/)
-        .to_return(status: 200, body: body.to_json)
+      stub_coronavirus_statistics
 
       statistics = described_class.call
       expect(statistics).to be_a(described_class::Statistics)
       expect(statistics).to have_attributes(
-        cumulative_vaccinations: 25_735_472,
         cumulative_vaccinations_date: Date.new(2021, 3, 17),
-        hospital_admissions: 426,
-        hospital_admissions_date: Date.new(2021, 3, 14),
-        new_positive_tests: 6303,
-        new_positive_tests_date: Date.new(2021, 3, 18),
+        cumulative_first_dose_vaccinations: 25_735_472,
+        cumulative_second_dose_vaccinations: 20_735_472,
+        percentage_first_vaccine: 86,
+        percentage_second_vaccine: 54,
+        hospital_admissions: 900,
+        current_week_hospital_admissions_change_number: 749,
+        current_week_hospital_admissions_change_percentage: 21.4,
+        hospital_admissions_date: Date.new(2021, 3, 17),
+        current_week_positive_tests: 37_861,
+        current_week_positive_tests_change_number: 2_651,
+        current_week_positive_tests_change_percentage: 7.5,
+        new_positive_tests: 5758,
+        new_positive_tests_date: Date.new(2021, 3, 17),
       )
     end
 
@@ -37,21 +35,47 @@ RSpec.describe FetchCoronavirusStatisticsService do
 
       it "sets only the fields that have data" do
         body = { data: [{ "date" => "2021-03-18",
-                          "cumulativeVaccinations" => nil,
+                          "cumulativeFirstDoseVaccinations" => 21_345_876,
+                          "cumulativeSecondDoseVaccinations" => 20_357_898,
+                          "percentageFirstVaccine" => 80,
+                          "percentageSecondVaccine" => 70,
                           "hospitalAdmissions" => nil,
-                          "newPositiveTests" => 6303 }] }
+                          "newPositiveTests" => nil }] }
 
         stub_request(:get, /coronavirus.data.gov.uk/)
           .to_return(status: 200, body: body.to_json)
 
         expect(described_class.call).to have_attributes(
-          cumulative_vaccinations: nil,
-          cumulative_vaccinations_date: nil,
+          cumulative_vaccinations_date: Date.new(2021, 3, 18),
+          cumulative_first_dose_vaccinations: 21_345_876,
+          cumulative_second_dose_vaccinations: 20_357_898,
+          percentage_first_vaccine: 80,
+          percentage_second_vaccine: 70,
           hospital_admissions: nil,
+          current_week_hospital_admissions_change_number: nil,
+          current_week_hospital_admissions_change_percentage: nil,
           hospital_admissions_date: nil,
-          new_positive_tests: 6303,
-          new_positive_tests_date: Date.new(2021, 3, 18),
+          new_positive_tests: nil,
+          current_week_positive_tests: nil,
+          current_week_positive_tests_change_number: nil,
+          current_week_positive_tests_change_percentage: nil,
+          new_positive_tests_date: nil,
         )
+      end
+
+      it "sets only fields where all related fields have data" do
+        body = { data: [{ "date" => "2021-03-18",
+                          "cumulativeFirstDoseVaccinations" => 25_735_472,
+                          "cumulativeSecondDoseVaccinations" => nil,
+                          "percentageFirstVaccine" => nil,
+                          "percentageSecondVaccine": nil,
+                          "hospitalAdmissions" => 6303,
+                          "newPositiveTests" => nil }] }
+
+        stub_request(:get, /coronavirus.data.gov.uk/)
+          .to_return(status: 200, body: body.to_json)
+
+        expect(described_class.call).to be_nil
       end
     end
 
@@ -85,11 +109,19 @@ RSpec.describe FetchCoronavirusStatisticsService do
     context "when the cache has stale data and the request to load new data fails" do
       it "returns Statistics with the stale data" do
         stale_stats = {
-          cumulative_vaccinations: 25_735_472,
           cumulative_vaccinations_date: Date.new(2021, 3, 17),
+          cumulative_first_dose_vaccinations: 25_735_472,
+          cumulative_second_dose_vaccinations: 20_735_472,
+          percentage_first_vaccine: 86,
+          percentage_second_vaccine: 54,
           hospital_admissions: 426,
+          current_week_hospital_admissions_change_number: 500,
+          current_week_hospital_admissions_change_percentage: 5,
           hospital_admissions_date: Date.new(2021, 3, 14),
           new_positive_tests: 6303,
+          current_week_positive_tests: 40_345,
+          current_week_positive_tests_change_number: 3_000,
+          current_week_positive_tests_change_percentage: 10,
           new_positive_tests_date: Date.new(2021, 3, 18),
         }
 

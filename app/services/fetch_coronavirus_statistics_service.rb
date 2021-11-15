@@ -1,11 +1,20 @@
 class FetchCoronavirusStatisticsService
   CACHE_KEY = "coronavirus_statistics".freeze
 
-  Statistics = Struct.new(:cumulative_vaccinations,
+  Statistics = Struct.new(:cumulative_first_dose_vaccinations,
+                          :cumulative_second_dose_vaccinations,
+                          :percentage_first_vaccine,
+                          :percentage_second_vaccine,
                           :cumulative_vaccinations_date,
                           :hospital_admissions,
+                          :current_week_hospital_admissions,
+                          :current_week_hospital_admissions_change_number,
+                          :current_week_hospital_admissions_change_percentage,
                           :hospital_admissions_date,
                           :new_positive_tests,
+                          :current_week_positive_tests,
+                          :current_week_positive_tests_change_number,
+                          :current_week_positive_tests_change_percentage,
                           :new_positive_tests_date,
                           keyword_init: true)
 
@@ -54,7 +63,10 @@ private
         filters: "areaName=United Kingdom;areaType=overview",
         structure: {
           "date" => "date",
-          "cumulativeVaccinations" => "cumPeopleVaccinatedFirstDoseByPublishDate",
+          "cumulativeFirstDoseVaccinations" => "cumPeopleVaccinatedFirstDoseByPublishDate",
+          "cumulativeSecondDoseVaccinations" => "cumPeopleVaccinatedSecondDoseByPublishDate",
+          "percentageFirstVaccine" => "cumVaccinationFirstDoseUptakeByPublishDatePercentage",
+          "percentageSecondVaccine" => "cumVaccinationSecondDoseUptakeByPublishDatePercentage",
           "hospitalAdmissions" => "newAdmissions",
           "newPositiveTests" => "newCasesByPublishDate",
         }.to_json,
@@ -68,21 +80,139 @@ private
     data = JSON.parse(response.body).fetch("data")
     parsed = {}
 
-    if (latest_vaccinations = data.find { |d| d["cumulativeVaccinations"] })
-      parsed[:cumulative_vaccinations] = latest_vaccinations["cumulativeVaccinations"]
-      parsed[:cumulative_vaccinations_date] = Date.parse(latest_vaccinations["date"])
-    end
-
-    if (latest_admissions = data.find { |d| d["hospitalAdmissions"] })
-      parsed[:hospital_admissions] = latest_admissions["hospitalAdmissions"]
-      parsed[:hospital_admissions_date] = Date.parse(latest_admissions["date"])
-    end
-
-    if (latest_tests = data.find { |d| d["newPositiveTests"] })
-      parsed[:new_positive_tests] = latest_tests["newPositiveTests"]
-      parsed[:new_positive_tests_date] = Date.parse(latest_tests["date"])
-    end
+    parsed.merge!(latest_vaccinations(data))
+    parsed.merge!(latest_admissions(data))
+    parsed.merge!(latest_tests(data))
 
     parsed
+  end
+
+  def latest_vaccinations(data)
+    latest_vaccinations = data.find do |d|
+      d["cumulativeFirstDoseVaccinations"] &&
+        d["cumulativeSecondDoseVaccinations"] &&
+        d["percentageFirstVaccine"] &&
+        d["percentageSecondVaccine"]
+    end
+
+    return {} unless latest_vaccinations
+
+    {
+      cumulative_first_dose_vaccinations: latest_vaccinations["cumulativeFirstDoseVaccinations"],
+      cumulative_second_dose_vaccinations: latest_vaccinations["cumulativeSecondDoseVaccinations"],
+      percentage_first_vaccine: latest_vaccinations["percentageFirstVaccine"],
+      percentage_second_vaccine: latest_vaccinations["percentageSecondVaccine"],
+      cumulative_vaccinations_date: Date.parse(latest_vaccinations["date"]),
+    }
+  end
+
+  def latest_admissions(data)
+    latest_admissions = data.find { |d| d["hospitalAdmissions"] }
+    return {} unless latest_admissions
+
+    daily_admissions = daily_admissions(latest_admissions)
+    weekly_admissions = weekly_admissions(latest_admissions, data)
+
+    return {} unless daily_admissions && weekly_admissions
+
+    daily_admissions.merge!(weekly_admissions)
+  end
+
+  def daily_admissions(latest_admissions)
+    {
+      hospital_admissions: latest_admissions["hospitalAdmissions"],
+      hospital_admissions_date: Date.parse(latest_admissions["date"]),
+    }
+  end
+
+  def weekly_admissions(latest_admissions, data)
+    day_hospital_admissions = []
+    data.each do |day_admissions|
+      day_hospital_admissions << day_admissions["hospitalAdmissions"] if on_or_before?(day_admissions["date"], latest_admissions["date"])
+    end
+
+    total_current_week_admissions = current_week_admissions(day_hospital_admissions)
+    total_previous_week_admissions = previous_week_admissions(day_hospital_admissions)
+
+    return {} unless total_current_week_admissions && total_previous_week_admissions
+
+    {
+      current_week_hospital_admissions: total_current_week_admissions,
+      current_week_hospital_admissions_change_number: total_current_week_admissions - total_previous_week_admissions,
+      current_week_hospital_admissions_change_percentage: percentage_change(total_current_week_admissions, total_previous_week_admissions),
+    }
+  end
+
+  def current_week_admissions(day_admissions)
+    current_week_admissions = day_admissions.first(7).compact
+    return unless current_week_admissions.size == 7
+
+    current_week_admissions.inject(:+)
+  end
+
+  def previous_week_admissions(day_admissions)
+    previous_week_admissions = day_admissions[7..13].compact
+    return unless previous_week_admissions.size == 7
+
+    previous_week_admissions.inject(:+)
+  end
+
+  def latest_tests(data)
+    latest_tests = data.find { |d| d["newPositiveTests"] }
+    return {} unless latest_tests
+
+    daily_tests = daily_tests(latest_tests)
+    weekly_tests = weekly_tests(latest_tests, data)
+
+    return {} unless daily_tests && weekly_tests
+
+    daily_tests.merge!(weekly_tests)
+  end
+
+  def daily_tests(latest_tests)
+    {
+      new_positive_tests: latest_tests["newPositiveTests"],
+      new_positive_tests_date: Date.parse(latest_tests["date"]),
+    }
+  end
+
+  def weekly_tests(latest_tests, data)
+    day_tests = []
+    data.each do |day_cases|
+      day_tests << day_cases["newPositiveTests"] if on_or_before?(day_cases["date"], latest_tests["date"])
+    end
+
+    total_current_week_tests = current_week_positive_tests(day_tests)
+    total_previous_week_tests = previous_week_positive_tests(day_tests)
+
+    return {} unless total_current_week_tests && total_previous_week_tests
+
+    {
+      current_week_positive_tests: total_current_week_tests,
+      current_week_positive_tests_change_number: total_current_week_tests - total_previous_week_tests,
+      current_week_positive_tests_change_percentage: percentage_change(total_current_week_tests, total_previous_week_tests),
+    }
+  end
+
+  def current_week_positive_tests(day_tests)
+    current_week_tests = day_tests.first(7).compact
+    return unless current_week_tests.size == 7
+
+    current_week_tests.inject(:+)
+  end
+
+  def previous_week_positive_tests(day_tests)
+    previous_week_cases = day_tests[7..13].compact
+    return unless previous_week_cases.size == 7
+
+    previous_week_cases.inject(:+)
+  end
+
+  def percentage_change(current_total, previous_total)
+    (((current_total - previous_total) / previous_total.to_f) * 100).round(1)
+  end
+
+  def on_or_before?(day_date, latest_date)
+    !Date.parse(day_date).after?(Date.parse(latest_date))
   end
 end
