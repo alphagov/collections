@@ -108,14 +108,20 @@ private
   end
 
   def timeline_nation_tags(national_applicability)
+    # this text is inserted to make the tags more accessible, trailing spaces are deliberate
+    leading_text = ", this guidance applies to "
+    leading_text_uk_wide = ", this guidance applies "
+
+    tag_classes = "govuk-tag govuk-tag--blue covid-timeline__tag"
+
     if uk_wide?(national_applicability)
-      "<strong class='govuk-tag govuk-tag--blue covid-timeline__tag'>UK Wide</strong>".html_safe
+      "<span class='govuk-visually-hidden'>#{leading_text_uk_wide}</span><strong class='#{tag_classes}'>UK wide</strong>".html_safe
     else
       nation_tags = national_applicability.map do |nation|
-        "<strong class='govuk-tag govuk-tag--blue covid-timeline__tag'>#{nation.titleize}</strong>"
+        "<strong class='#{tag_classes}'>#{nation.titleize}</strong>"
       end
 
-      nation_tags.join(" ").html_safe
+      nation_tags.join(" <span class='govuk-visually-hidden'>and</span> ").prepend("<span class='govuk-visually-hidden'>#{leading_text}</span>").html_safe
     end
   end
 
