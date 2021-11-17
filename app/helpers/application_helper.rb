@@ -8,7 +8,7 @@ module ApplicationHelper
   end
 
   def browsing_in_second_level_page?(section)
-    request.path.starts_with?(section.base_path)
+    request.path == section.base_path
   end
 
   def current_path_without_query_string
