@@ -148,7 +148,7 @@ $transition-speed: .4s;
 
 .browse__title {
   @include govuk-font(16, $weight: bold);
-  margin: 0;
+  margin: 0 0 govuk-spacing(1) 0;
 }
 
 .browse__inner--alphabetical {
