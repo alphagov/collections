@@ -11,6 +11,7 @@
 <h1 class="govuk-visually-hidden"><%= t("shared.browse.title") %></h1>
 
 <div class="browse <%= 'browse--two-columns' if page.second_level_browse_pages %>" data-state="section" data-module="browse-columns gem-track-click">
+  <div id="subsection" class="browse__subsection-pane"></div>
   <div id="section" class="browse__section-pane">
     <%= render 'second_level_browse_page/second_level_browse_pages',
           title: yield(:title),

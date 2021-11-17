@@ -1,4 +1,6 @@
 // stylelint-disable max-nesting-depth
+$transition-speed: .4s;
+
 .browse {
   @include govuk-clearfix;
   position: relative;
@@ -172,15 +174,29 @@
   margin-top: govuk-spacing(6);
 }
 
+.browse__root-pane,
+.browse__section-pane,
+.browse__subsection-pane {
+  @include govuk-media-query($from: tablet) {
+    float: right;
+    min-height: 3px;
+  }
+}
+
+.browse__root-pane {
+  @include govuk-media-query($from: desktop) {
+    width: 25%;
+  }
+}
+
 .browse__section-pane {
   z-index: 2;
   background: govuk-colour("white");
   position: relative;
+  transition: width $transition-speed, margin-left $transition-speed;
 
   @include govuk-media-query($from: tablet) {
-    float: right;
     width: 35%;
-    margin-right: 40%;
   }
 
   .browse__link {
@@ -204,20 +220,19 @@
   }
 }
 
-.browse__root-pane,
-.browse__section-pane {
-  min-height: 20px;
-}
-
-.browse__section-pane + .browse__root-pane {
-  @include govuk-media-query($from: desktop) {
-    float: right;
-    width: 25%;
-  }
-}
-
 .browse__subsection-pane {
-  display: none;
+  opacity: 0;
+  transition-property: width, opacity, margin-right;
+  transition-delay: 0s, 0s, 0s;
+  transition-duration: $transition-speed, 0s, $transition-speed;
+  height: 0;
+  overflow: hidden;
+
+  @include govuk-media-query($from: tablet) {
+    width: 27%;
+    margin-right: 13%;
+    height: auto;
+  }
 
   .browse__inner--alphabetical {
     @include govuk-media-query($from: tablet) {
@@ -245,7 +260,12 @@
     @include govuk-media-query($from: tablet) {
       display: block;
       width: 25%;
+      margin-right: 0;
     }
+  }
+
+  .browse__subsection-pane {
+    opacity: 0;
   }
 }
 
@@ -256,6 +276,7 @@
     @include govuk-media-query($from: tablet) {
       display: block;
       width: 25%;
+      margin-right: 0;
     }
   }
 
@@ -264,18 +285,13 @@
 
     @include govuk-media-query($from: tablet) {
       display: block;
-      margin-left: -18%;
-      width: 30%;
       margin-right: 0;
+      margin-left: -13%;
+      width: 25%;
 
       .browse__inner {
         padding-left: 0;
       }
-    }
-
-    @include govuk-media-query($from: desktop) {
-      margin-left: -13%;
-      width: 25%;
     }
 
     .browse__sort-order {
@@ -284,10 +300,11 @@
   }
 
   .browse__subsection-pane {
-    display: block;
+    transition-delay: 0s, $transition-speed, 0s;
+    opacity: 1;
+    height: auto;
 
     @include govuk-media-query($from: tablet) {
-      float: right;
       width: 50%;
       margin-right: 13%;
     }
