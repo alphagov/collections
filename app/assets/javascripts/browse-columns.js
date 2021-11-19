@@ -15,7 +15,6 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     this.$section = this.$module.querySelector('#section')
     this.$subsection = this.$module.querySelector('#subsection')
     this.$breadcrumbs = document.querySelector('.gem-c-breadcrumbs')
-    this.animateSpeed = 330
 
     this.createSections()
 
@@ -70,13 +69,13 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     }
   }
 
-  BrowseColumns.prototype.getSectionData = function (state) {
+  BrowseColumns.prototype.getSectionData = function (state, poppingState) {
     var cacheForSlug = this.sectionCache(state.slug)
 
     if (typeof state.sectionData !== 'undefined') {
-      this.handleResponse(state.sectionData, state)
+      this.handleResponse(state.sectionData, state, poppingState)
     } else if (typeof cacheForSlug !== 'undefined') {
-      this.handleResponse(cacheForSlug, state)
+      this.handleResponse(cacheForSlug, state, poppingState)
     } else {
       var done = function (e) {
         if (xhr.readyState === 4 && xhr.status === 200) {
@@ -113,6 +112,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     } else {
       this.showSection(state)
     }
+
     if (typeof poppingState === 'undefined') {
       history.pushState(state, '', state.path)
       this.trackPageview(state)
@@ -124,10 +124,6 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     var state = e.state
     if (!state) { // state will be null if there was no state set
       state = this.parsePathname(window.location.pathname)
-    }
-
-    if (this.lastState.slug === state.slug) {
-      return // nothing has changed
     }
 
     if (state.slug === '') {
@@ -146,14 +142,13 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       // load the section then load the subsection after
       var sectionPathname = window.location.pathname.split('/').slice(0, -1).join('/')
       var sectionState = this.parsePathname(sectionPathname)
+      this.getSectionData(sectionState, true)
       this.loadSectionFromState(sectionState, true)
     }
     this.loadSectionFromState(state, true)
   }
 
   BrowseColumns.prototype.loadSectionFromState = function (state, poppingState) {
-    this.lastState = state
-
     if (state.subsection) {
       this.showSubsection(state)
     } else {
