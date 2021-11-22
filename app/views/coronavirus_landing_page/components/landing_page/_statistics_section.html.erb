@@ -46,8 +46,14 @@
           <%= link_to(
             topic_section.dig("tests", "guidance_link", "label"),
             topic_section.dig("tests", "guidance_link", "url"),
-            class: 'govuk-link')
-          %>
+            class: 'govuk-link',
+            data: {
+              module: "gem-track-click",
+              track_category: "pageElementInteraction",
+              track_action: "Statistics",
+              track_label: topic_section.dig("tests", "guidance_link", "url"),
+            },
+          ) %>
           <br/>
           <span class="covid-statistics__latest">
             <%= topic_section.dig("updated_date") %> <%= statistics.new_positive_tests_date.strftime("%d %B %Y") %>
@@ -82,8 +88,14 @@
           <%= link_to(
             topic_section.dig("admissions", "guidance_link", "label"),
             topic_section.dig("admissions", "guidance_link", "url"),
-            class: 'govuk-link')
-          %>
+            class: 'govuk-link',
+            data: {
+              module: "gem-track-click",
+              track_category: "pageElementInteraction",
+              track_action: "Statistics",
+              track_label: topic_section.dig("admissions", "guidance_link", "url"),
+            },
+          ) %>
           <br/>
           <span class="covid-statistics__latest">
             <%= topic_section.dig("updated_date") %> <%= statistics.hospital_admissions_date.strftime("%d %B %Y") %>
@@ -118,8 +130,14 @@
           <%= link_to(
             topic_section.dig("vaccinations", "guidance_link", "label"),
             topic_section.dig("vaccinations", "guidance_link", "url"),
-            class: 'govuk-link')
-          %>
+            class: 'govuk-link',
+            data: {
+              module: "gem-track-click",
+              track_category: "pageElementInteraction",
+              track_action: "Statistics",
+              track_label: topic_section.dig("vaccinations", "guidance_link", "url"),
+            },
+          ) %>
           <br/>
           <span class="covid-statistics__latest">
             <%= topic_section.dig("updated_date") %> <%= statistics.cumulative_vaccinations_date.strftime("%d %B %Y") %>
