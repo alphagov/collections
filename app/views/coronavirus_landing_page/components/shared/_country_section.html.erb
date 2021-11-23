@@ -1,29 +1,24 @@
 <% guidance ||= nil %>
 
-<% if guidance.present? && guidance["intro"].present? %>
-  <div 
-    class="govuk-body"
-    data-module="track-links"
-    data-track-category="pageElementInteraction"
-    data-track-action="AccordionClick"
-  >
+<div
+  class="govuk-body"
+  data-module="gem-track-click"
+  data-track-category="pageElementInteraction"
+  data-track-action="AccordionClick"
+  data-track-links-only>
+
+  <% if guidance.present? && guidance["intro"].present? %>
     <%= render_govspeak(guidance["intro"]) %>
-  </div>
-<% end %>
-<% if guidance.present? && guidance["links"].present? %>
-  <%
-    guidance_links = guidance["links"].map do | link |
-      link_to(
-        link["label"], link["url"], class: "govuk-link",
-        data: {
-          track_category: "pageElementInteraction",
-          track_action: "AccordionClick",
-          track_label: link["url"],
-        }
-      )
-    end
-  %>
-  <p class="govuk-body">
-    <%= "#{guidance["text"]} #{guidance_links.to_sentence(last_word_connector: " and ")}".html_safe %>
-  </p>
-<% end %>
+  <% end %>
+
+  <% if guidance.present? && guidance["links"].present? %>
+    <%
+      guidance_links = guidance["links"].map do | link |
+        link_to(link["label"], link["url"], class: "govuk-link")
+      end
+    %>
+    <p class="govuk-body">
+      <%= "#{guidance["text"]} #{guidance_links.to_sentence(last_word_connector: " and ")}".html_safe %>
+    </p>
+  <% end %>
+</div>
