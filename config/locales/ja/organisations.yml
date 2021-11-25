@@ -1,6 +1,6 @@
 ja:
   organisations:
-    about_page_path: "/government/organisations/%{organisation}/about"
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     administered_by: 管理者：
     breadcrumbs:
       courts_and_tribunals: 裁判所及び審判所

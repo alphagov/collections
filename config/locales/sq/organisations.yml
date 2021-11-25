@@ -1,5 +1,6 @@
 sq:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -224,7 +225,6 @@ sq:
         written_statement:
           one: Deklaratë me shkrim në Parlament
           other: Deklarata me shkrim në Parlament
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: Administruar nga
     breadcrumbs:
       courts_and_tribunals: Gjykatat dhe Tribunalet

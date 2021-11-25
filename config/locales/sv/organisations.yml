@@ -1,5 +1,6 @@
 sv:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -224,7 +225,6 @@ sv:
         written_statement:
           one: Skriftligt uttalande till parlamentet
           other: Skriftliga uttalanden till parlamentet
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: Förvaltas av
     breadcrumbs:
       courts_and_tribunals: Domstolar och domstolar

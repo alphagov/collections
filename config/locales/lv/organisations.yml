@@ -1,5 +1,6 @@
 lv:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -224,7 +225,6 @@ lv:
         written_statement:
           one: Rakstisks ziņojums parlamentam
           other: Rakstiski ziņojumi parlamentam
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: Administrators
     breadcrumbs:
       courts_and_tribunals: Tiesas un šķīrējtiesas

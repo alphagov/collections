@@ -1,5 +1,6 @@
 sk:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -298,7 +299,6 @@ sk:
           one: Písomné vyhlásenie pre Parlament
           few:
           other: Písomné vyhlásenia pre Parlament
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: Spravuje
     breadcrumbs:
       courts_and_tribunals: Súdy a tribunály

@@ -1,5 +1,6 @@
 gd:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -372,7 +373,6 @@ gd:
           two:
           few:
           other: Ráitis i scríbhinn don Pharlaimint
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: Riartha ag
     breadcrumbs:
       courts_and_tribunals: Cúirteanna agus Binsí

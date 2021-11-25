@@ -1,5 +1,6 @@
 ro:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -301,7 +302,6 @@ ro:
           one: Declarație scrisă către Parlament
           few:
           other: Declarații scrise către Parlament
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: Administrat de
     breadcrumbs:
       courts_and_tribunals: Instanțe și tribunale

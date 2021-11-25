@@ -1,5 +1,6 @@
 pa-pk:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -224,7 +225,6 @@ pa-pk:
         written_statement:
           one: قومی مجلس دے سامنے تحریری بیان
           other: قومی مجلس دے سامنے تحریری بیان
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: جس نیں ایس دا انتظام کیتا
     breadcrumbs:
       courts_and_tribunals: کورٹس تے عدالتاں

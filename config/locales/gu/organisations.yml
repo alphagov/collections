@@ -1,5 +1,6 @@
 gu:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -224,7 +225,6 @@ gu:
         written_statement:
           one: સંસદમાં લેખિત નિવેદન
           other: સંસદમાં લેખિત નિવેદનો
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: દ્વારા સંચાલિત
     breadcrumbs:
       courts_and_tribunals: ન્યાયાલયો અને ટ્રિબ્યુનલ્સ

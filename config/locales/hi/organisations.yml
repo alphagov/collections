@@ -1,5 +1,6 @@
 hi:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -226,7 +227,6 @@ hi:
         written_statement:
           one: संसद में लिखित बयान
           other: संसद में लिखित बयान
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: प्रशासक
     breadcrumbs:
       courts_and_tribunals: न्यायालय और न्यायाधिकरण

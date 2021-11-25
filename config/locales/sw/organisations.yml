@@ -1,5 +1,6 @@
 sw:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -224,7 +225,6 @@ sw:
         written_statement:
           one: Taarifa ya Maandishi kwa Bunge
           other: Taarifa za Maandishi kwa Bunge
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: Imetolewa na
     breadcrumbs:
       courts_and_tribunals: Mahakama na Mabaraza ya Uamuzi

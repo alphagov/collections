@@ -1,5 +1,6 @@
 mt:
   organisations:
+    about_page_path: government/organisations/%{organisation}/about.%{language_code}
     content_item:
       schema_name:
         aaib_report:
@@ -372,7 +373,6 @@ mt:
           few:
           many:
           other: Dikjarazzjonijiet bil-miktub lill-Parlament
-    about_page_path: government/organisations/%{organisation}/about
     administered_by: Amministrat minn
     breadcrumbs:
       courts_and_tribunals: Qorti u Tribunali

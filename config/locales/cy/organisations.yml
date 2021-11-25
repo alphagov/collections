@@ -1,5 +1,6 @@
 cy:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -520,7 +521,6 @@ cy:
           few:
           many:
           other: Datganiadau ysgrifenedig i'r Senedd
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: Gweinyddwyd gan
     breadcrumbs:
       courts_and_tribunals: Llysoedd a Thribiwnlysoedd

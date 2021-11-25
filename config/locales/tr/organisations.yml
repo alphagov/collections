@@ -1,6 +1,6 @@
 tr:
   organisations:
-    about_page_path: "/government/organisations/%{organisation}/about"
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     administered_by: Yöneten
     breadcrumbs:
       courts_and_tribunals: Mahkemeler

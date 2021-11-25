@@ -1,5 +1,6 @@
 be:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -372,7 +373,6 @@ be:
           few:
           many:
           other: Пісьмовыя заявы ў парламенце
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: Кіруецца
     breadcrumbs:
       courts_and_tribunals: Суды і трыбуналы

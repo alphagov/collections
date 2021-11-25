@@ -1,6 +1,6 @@
 ms:
   organisations:
-    about_page_path: "/government/organisations/%{organisation}/about"
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     administered_by: Ditadbir oleh
     breadcrumbs:
       courts_and_tribunals: Mahkamah dan Tribunal

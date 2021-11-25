@@ -1,5 +1,6 @@
 ps:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -224,7 +225,6 @@ ps:
         written_statement:
           one: پارلمان ته لیکلې وینا
           other: پارلمان ته لیکلي ویناوې
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: لخوا اداره کیږي
     breadcrumbs:
       courts_and_tribunals: محکمې او محکمې

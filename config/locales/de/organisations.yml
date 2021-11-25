@@ -1,5 +1,6 @@
 de:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -226,7 +227,6 @@ de:
         written_statement:
           one: Schriftliche Erklärung vor dem Parlament
           other: Schriftliche Erklärungen vor dem Parlament
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: Verwaltet durch
     breadcrumbs:
       courts_and_tribunals: Gerichte und Gerichtshöfe

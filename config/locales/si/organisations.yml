@@ -1,5 +1,6 @@
 si:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -224,7 +225,6 @@ si:
         written_statement:
           one: පාර්ලිමේන්තුව වෙත ලිඛිත ප්රකාශය
           other: පාර්ලිමේන්තුව වෙත ලිඛිත ප්රකාශ
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: විසින් පරිපාලනය කරනු ලබන්නේ
     breadcrumbs:
       courts_and_tribunals: අධිකරණ හා විනිශ්චය මණ්ඩල

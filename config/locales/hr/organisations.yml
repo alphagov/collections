@@ -1,5 +1,6 @@
 hr:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -372,7 +373,6 @@ hr:
           few:
           many:
           other: Pismene izjave Parlamentu
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: Administrira
     breadcrumbs:
       courts_and_tribunals: Sudovi i tribunali

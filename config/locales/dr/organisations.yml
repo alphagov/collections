@@ -1,5 +1,6 @@
 dr:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -224,7 +225,6 @@ dr:
         written_statement:
           one: بیانیهء کتبی به پارلمان
           other: بیانیه هایی کتبی به پارلمان
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: اداره شده توسط
     breadcrumbs:
       courts_and_tribunals: محاکم و دادگاه ها

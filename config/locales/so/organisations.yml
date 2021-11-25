@@ -1,5 +1,6 @@
 so:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -224,7 +225,6 @@ so:
         written_statement:
           one: Bayaan qoran oo loogu talogalay Baarlamaanka
           other: Bayaanada qoran ee loogu talogalay Baarlamaanka
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: Ay maamushay
     breadcrumbs:
       courts_and_tribunals: Maxkamadaha iyo Xukunada

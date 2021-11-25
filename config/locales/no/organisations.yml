@@ -1,5 +1,6 @@
 'no':
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -224,7 +225,6 @@
         written_statement:
           one: Skriftlig uttalelse til Stortinget
           other: Skriftlige uttalelser til Stortinget
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: Administreres av
     breadcrumbs:
       courts_and_tribunals: Domstoler og tribunaler

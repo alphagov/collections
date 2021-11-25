@@ -1,5 +1,6 @@
 tk:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -224,7 +225,6 @@ tk:
         written_statement:
           one: Mejlise ýazmaça beýan
           other: Mejlise ýazmaça beýanlar
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: Dolandyryjy
     breadcrumbs:
       courts_and_tribunals: Kazyýet we Kazylar

@@ -1,5 +1,6 @@
 bn:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -224,7 +225,6 @@ bn:
         written_statement:
           one: সংসদে লিখিত বিবৃতি
           other: সংসদে লিখিত বিবৃতিসমূহ
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: পরিচালনাকারী
     breadcrumbs:
       courts_and_tribunals: আদালত ও ট্রাইব্যুনাল

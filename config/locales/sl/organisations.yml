@@ -1,5 +1,6 @@
 sl:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -372,7 +373,6 @@ sl:
           two:
           few:
           other: Pisne izjave za parlament
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: Upravljanje v rokah
     breadcrumbs:
       courts_and_tribunals: Sodišča

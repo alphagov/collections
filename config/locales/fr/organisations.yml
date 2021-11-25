@@ -1,5 +1,6 @@
 fr:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -224,7 +225,6 @@ fr:
         written_statement:
           one: Déclaration écrite au Parlement
           other: Déclarations écrites au Parlement
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: Administré par
     breadcrumbs:
       courts_and_tribunals: Cours et tribunaux

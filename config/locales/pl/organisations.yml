@@ -1,5 +1,6 @@
 pl:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -372,7 +373,6 @@ pl:
           few:
           many:
           other: Pisemne oświadczenia przed parlamentem
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: Zarządzane przez
     breadcrumbs:
       courts_and_tribunals: Sądy i Trybunały

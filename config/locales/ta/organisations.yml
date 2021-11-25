@@ -1,5 +1,6 @@
 ta:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -224,7 +225,6 @@ ta:
         written_statement:
           one: பாராளுமன்றத்துக்கு எழுத்துப்பூர்வ அறிவிப்பு
           other: பாராளுமன்றத்துக்கு எழுத்துப்பூர்வ அறிவிப்புகள்
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: நிர்வகிப்பவர்
     breadcrumbs:
       courts_and_tribunals: நீதிமன்றங்களும் தீர்ப்பாயங்களும்

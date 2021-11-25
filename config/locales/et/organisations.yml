@@ -1,5 +1,6 @@
 et:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -224,7 +225,6 @@ et:
         written_statement:
           one: Kirjalik avaldus parlamendile
           other: Kirjalikud avaldused parlamendile
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: Haldab
     breadcrumbs:
       courts_and_tribunals: Kohtud

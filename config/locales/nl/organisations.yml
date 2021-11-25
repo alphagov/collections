@@ -1,5 +1,6 @@
 nl:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -225,7 +226,6 @@ nl:
         written_statement:
           one: Schriftelijke verklaring aan het Parlement
           other: Schriftelijke verklaringen aan het Parlement
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: Beheerd door
     breadcrumbs:
       courts_and_tribunals: Hoven en rechtbanken

@@ -1,5 +1,6 @@
 pt:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -224,7 +225,6 @@ pt:
         written_statement:
           one: Declaração escrita ao Parlamento
           other: Declarações escritas ao Parlamento
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: Administrado por
     breadcrumbs:
       courts_and_tribunals: Tribunais

@@ -1,5 +1,6 @@
 hu:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -226,7 +227,6 @@ hu:
         written_statement:
           one: Írásbeli parlamenti nyilatkozat
           other: Írásbeli parlamenti nyilatkozatok
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: 'Adminisztrálta:'
     breadcrumbs:
       courts_and_tribunals: Bíróságok

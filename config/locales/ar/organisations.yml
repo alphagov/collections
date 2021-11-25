@@ -1,5 +1,6 @@
 ar:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -520,7 +521,6 @@ ar:
           few:
           many:
           other: بيانات خطية للبرلمان
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: يُدار بواسطة
     breadcrumbs:
       courts_and_tribunals: المحاكم والهيئات القضائية

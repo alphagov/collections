@@ -1,5 +1,6 @@
 sr:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -372,7 +373,6 @@ sr:
           few:
           many:
           other: Pismene predstavke Parlamentu
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: Upravlja
     breadcrumbs:
       courts_and_tribunals: Sudovi i tribunali

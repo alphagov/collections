@@ -1,5 +1,6 @@
 da:
   organisations:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
     content_item:
       schema_name:
         aaib_report:
@@ -236,7 +237,6 @@ da:
         written_statement:
           one: Mundtlig erklæring til Parlamentet
           other: Mundtlige erklæring til Parlamentet
-    about_page_path: "/government/organisations/%{organisation}/about"
     administered_by: Administreret af
     breadcrumbs:
       courts_and_tribunals: Domstole og domstole
