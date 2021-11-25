@@ -1,5 +1,4 @@
----
 bg:
   world_wide_taxons:
-    take_the_survey:
-    test_banner:
+    take_the_survey: Попълнете анкетата, за да ни помогнете за нейното подобрение
+    test_banner: Това е тестова версия на оформлението на тази страница.

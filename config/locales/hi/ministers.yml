@@ -1,9 +1,8 @@
----
 hi:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: कैबिनेट में भी शामिल
+    by_department: विभाग अनुसार मंत्री
+    cabinet: केबिनेट मंत्री
+    govuk_title: मंत्री - GOV.UK
+    title: मंत्री
+    whips: सचेतक

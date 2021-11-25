@@ -1,333 +1,343 @@
----
 ta:
   organisations:
-    about_page_path:
-    administered_by:
-    breadcrumbs:
-      courts_and_tribunals:
-      organisations:
-    contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
     content_item:
       schema_name:
         aaib_report:
-          one:
-          other:
+          one: வான் விபத்து விசாரணைக் கிளை அறிக்கை
+          other: வான் விபத்து விசாரணைக் கிளை அறிக்கைகள்
         announcement:
           one: அறிவிப்பு
           other: அறிவிப்புகள்
         asylum_support_decision:
-          one:
-          other:
+          one: அடைக்கல உதவி தீர்ப்பாய முடிவு
+          other: அடைக்கல உதவி தீர்ப்பாய முடிவுகள்
         authored_article:
-          one: " எழுதப்பட்ட   கட்டுரை"
-          other: எழுதப்பட்ட கட்டுரைகள்
+          one: எழுதிய கட்டுரை
+          other: எழுதிய கட்டுரைகள்
         business_finance_support_scheme:
-          one:
-          other:
+          one: தொழில் நிதி உதவித் திட்டம்
+          other: தொழில் நிதி உதவித் திட்டங்கள்
         case_study:
-          one: சம்பவ ஆய்வுக் கற்கை
-          other: சம்பவ ஆய்வுக் கற்கைகள்
+          one: நிகழ்வு ஆய்வு
+          other: நிகழ்வு ஆய்வுகள்
         closed_consultation:
-          one: வரையறுக்கப்பட்ட நிலையிலான கலந்தாலோசனை
-          other: வரையறுக்கப்பட்ட நிலையிலான  கலந்தாலோசனைகள்
+          one: மூடிய கலந்தாய்வு
+          other: மூடிய கலந்தாய்வுகள்
         cma_case:
-          one:
-          other:
+          one: போட்டி மற்றும் சந்தைகளில் வலிமை வழக்கு
+          other: போட்டி மற்றும் சந்தைகளில் வலிமை வழக்குகள்
         coming_soon:
-          one:
-          other:
+          one: விரைவில் வருகிறது
+          other: விரைவில் வருகிறது
         consultation:
-          one: கலந்தாலோசனை
-          other: கலந்தாலோசனைகள்
+          one: கலந்தாய்வு
+          other: கலந்தாய்வுகள்
         consultation_outcome:
-          one: கலந்தாலோசனையின் முடிவு
-          other: கலந்தாலோசனைப்முடிவுகள்
+          one: கலந்தாய்வின் விளைவு
+          other: கலந்தாய்வின் விளைவுகள்
         corporate_information_page:
-          one:
-          other:
+          one: தகவல் பக்கம்
+          other: தகவல் பக்கங்கள்
         corporate_report:
-          one: கூட்டாண்மை அறிக்கை
-          other: கூட்டாண்மை அறிக்கைகள்
+          one: குழும அறிக்கை
+          other: குழும அறிக்கைகள்
         correspondence:
-          one: தொடர்பு
-          other: தொடர்புகள்
+          one: கடிதத் தொடர்பு
+          other: கடிதத் தொடர்புகள்
         countryside_stewardship_grant:
-          one:
-          other:
+          one: கிராமப் பொறுப்பாளர் மானியம்
+          other: கிராமப் பொறுப்பாளர் மானியங்கள்
         decision:
-          one:
-          other:
+          one: முடிவு
+          other: முடிவுகள்
         detailed_guide:
-          one: விளக்கமான வழிகாட்டல்
-          other: விளக்கமான வழிகாட்டல்
+          one: வழிகாட்டுதல்
+          other: வழிகாட்டுதல்
         dfid_research_output:
-          one:
-          other:
+          one: மேம்பாட்டு விளைபொருளுக்கான ஆராய்ச்சி
+          other: மேம்பாட்டு விளைபொருள்களுக்கான ஆராய்ச்சி
         document_collection:
-          one: தொடர்
-          other:
+          one: சேகரிப்பு
+          other: சேகரிப்புகள்
         draft_text:
-          one: வரைபு உரை
-          other: வரைபு உரைகள்
+          one: வரைவு உரை
+          other: வரைவு உரைகள்
         drug_safety_update:
-          one:
-          other:
+          one: மருந்து பாதுகாப்பு புதிய தகவல்
+          other: மருந்து பாதுகாப்பு புதிய தகவல்கள்
         employment_appeal_tribunal_decision:
-          one:
-          other:
+          one: பணி மேல்முறையீட்டுத் தீர்ப்பாய முடிவு
+          other: பணி மேல்முறையீட்டுத் தீர்ப்பாய முடிவுகள்
         employment_tribunal_decision:
-          one:
-          other:
+          one: பணித் தீர்ப்பாய முடிவு
+          other: பணித் தீர்ப்பாய முடிவுகள்
         esi_fund:
-          one:
-          other:
+          one: ஐரோப்பிய அமைப்புசார் மற்றும் முதலீட்டு நிதி (ESIF)
+          other: ஐரோப்பிய அமைப்புசார் மற்றும் முதலீட்டு நிதிகள் (ESIF)
         fatality_notice:
-          one: இடர் அறிவித்தல்
-          other: இடர் அறிவித்தல்கள்
+          one: இறப்பு அறிவிப்பு
+          other: இறப்பு அறிவிப்புகள்
         foi_release:
-          one: தகவலின் சுதந்திரமான  வெளியிடுதல்
-          other: தகவல்களின் சுதந்திரமான  வெளியிடுதல்கள்
+          one: தகவல் சுதந்திர வெளியீடு
+          other: தகவல் சுதந்திர வெளியீடுகள்
         form:
           one: படிவம்
           other: படிவங்கள்
         government_response:
-          one: அரசாங்க பதிலிறுப்பு
-          other: அரசாங்க பதிலிறுப்புகள்
+          one: அரசாங்க பதில்
+          other: அரசாங்க பதில்கள்
         guidance:
-          one: வழிகாட்டல்
-          other: வழிகாட்டல்
+          one: வழிகாட்டுதல்
+          other: வழிகாட்டுதல்
         impact_assessment:
           one: தாக்க மதிப்பீடு
           other: தாக்க மதிப்பீடுகள்
         imported:
-          one: இறக்குமதி செய்யப்பட்ட - எதிர்பார்க்கும் வகை
-          other: இறக்குமதி செய்யப்பட்ட - எதிர்பார்க்கும் வகை
+          one: இறக்குமதியானது - எதிர்பார்க்கும் வகை
+          other: இறக்குமதியானது - எதிர்பார்க்கும் வகை
         independent_report:
-          one: சுயாதீன அறிக்கை
-          other: சுயாதீன அறிக்கைகள்
+          one: தற்சார்பு அறிக்கை
+          other: தற்சார்பு அறிக்கைகள்
         international_development_fund:
-          one:
-          other:
+          one: சர்வதேச மேம்பாட்டு நிதியளிப்பு
+          other: சர்வதேச மேம்பாட்டு நிதியளிப்பு
         international_treaty:
-          one:
-          other:
+          one: சர்வதேச உடன்படிக்கை
+          other: சர்வதேச உடன்படிக்கைகள்
         maib_report:
-          one:
-          other:
+          one: கடல் விபத்து விசாரணைக் கிளை அறிக்கை
+          other: கடல் விபத்து விசாரணைக் கிளை அறிக்கைகள்
         map:
           one: வரைபடம்
           other: வரைபடங்கள்
         medical_safety_alert:
-          one:
-          other:
+          one: மருந்துகள் மற்றும் மருத்துவ சாதனங்களுக்கான விழிப்பூட்டல்களும் நினைவுமீட்டல்களும்
+          other: மருந்துகள் மற்றும் மருத்துவ சாதனங்களுக்கான விழிப்பூட்டல்களும் நினைவுமீட்டல்களும்
         national:
-          one:
-          other:
+          one: தேசிய புள்ளியியல் அறிவிப்பு
+          other: தேசிய புள்ளியியல் அறிவிப்புகள்
         national_statistics:
-          one: புள்ளிவிபரம் - தேசிய புள்ளிவிபரம்
-          other: புள்ளிவிபரம் - தேசிய புள்ளிவிபரம்
+          one: தேசிய புள்ளியியல்
+          other: தேசிய புள்ளியியல்
         national_statistics_announcement:
-          one:
-          other:
+          one: தேசிய புள்ளியியல் அறிவிப்பு
+          other: தேசிய புள்ளியியல் அறிவிப்புகள்
         news_article:
           one: செய்திக் கட்டுரை
           other: செய்திக் கட்டுரைகள்
         news_story:
-          one: செய்திக் கதை
-          other: செய்திக் கதைகள்
+          one: செய்தி
+          other: செய்திகள்
         notice:
-          one:
-          other:
+          one: அறிவிப்பு
+          other: அறிவிப்புகள்
         official:
-          one:
-          other:
+          one: அதிகாரப்பூர்வ புள்ளியியல் அறிவிப்பு
+          other: அதிகாரப்பூர்வ புள்ளியியல் அறிவிப்புகள்
         official_statistics:
-          one: புள்ளிவிபரம்
-          other: புள்ளிவிபரம்
+          one: அதிகாரப்பூர்வ புள்ளியியல்
+          other: அதிகாரப்பூர்வ புள்ளியியல்
         official_statistics_announcement:
-          one:
-          other:
+          one: அதிகாரப்பூர்வ புள்ளியியல் அறிவிப்பு
+          other: அதிகாரப்பூர்வ புள்ளியியல் அறிவிப்புகள்
         open_consultation:
           one: திறந்த கலந்தாலோசனை
           other: திறந்த கலந்தாலோசனைகள்
         oral_statement:
-          one: பாராளுமன்றத்துக்கு வாய் மூலமான அறிக்கை
-          other: பாராளுமன்றத்துக்கு வாய் மூலமான அறிக்கைகள்
+          one: பாராளுமன்றத்துக்கு வாய்வழி அறிவிப்பு
+          other: பாராளுமன்றத்துக்கு வாய்வழி அறிவிப்புகள்
         policy:
           one: கொள்கை
           other: கொள்கைகள்
         policy_paper:
-          one: கொள்கைப் பத்திரம்
-          other: கொள்கைப் பத்திரங்கள்
+          one: கொள்கை ஆவணம்
+          other: கொள்கை ஆவணங்கள்
         press_release:
-          one: செய்தி வெளியீடு
-          other: செய்தி வெளியீடுகள்
+          one: செய்திக் குறிப்பு
+          other: செய்திக் குறிப்புகள்
         promotional:
-          one: விளம்பர ஊக்குவிப்பு பொருள்
-          other: விளம்பர ஊக்குவிப்பு பொருள்
+          one: விளம்பரப் பொருள்
+          other: விளம்பரப் பொருள்
         publication:
           one: பிரசுரம்
           other: பிரசுரங்கள்
         raib_report:
-          one:
-          other:
+          one: இரயில் விபத்து விசாரணைக் கிளை அறிக்கை
+          other: இரயில் விபத்து விசாரணைக் கிளை அறிக்கைகள்
         regulation:
-          one:
-          other:
+          one: ஒழுங்குமுறை
+          other: ஒழுங்குமுறைகள்
         research:
-          one: ஆராய்ச்சி மற்றும் பகுப்பாய்தல்
-          other: ஆராய்ச்சி மற்றும் பகுப்பாய்தல்
+          one: ஆராய்ச்சி மற்றும் பகுப்பாய்வு
+          other: ஆராய்ச்சி மற்றும் பகுப்பாய்வு
         residential_property_tribunal_decision:
-          one:
-          other:
+          one: வசிப்பிடச் சொத்துத் தீர்ப்பாய முடிவு
+          other: வசிப்பிடச் சொத்துத் தீர்ப்பாய முடிவுகள்
         service_sign_in:
-          one:
-          other:
+          one: சேவை உள்நுழைவு
+          other: சேவை உள்நுழைவு
         service_standard_report:
-          one:
-          other:
+          one: சேவைத் தர அறிக்கை
+          other: சேவைத் தர அறிக்கைகள்
         speaking_notes:
-          one: உரைக் குறிப்புகள்
-          other: உரைக் குறிப்புகள்
+          one: பேச்சுக் குறிப்பு
+          other: பேச்சுக் குறிப்புகள்
         speech:
-          one: உரை
-          other: உரைகள்
+          one: பேச்சு
+          other: பேச்சுகள்
         standard:
-          one:
-          other:
+          one: தரநிலை
+          other: தரநிலைகள்
         statement_to_parliament:
           one: பாராளுமன்றத்துக்கான அறிக்கை
           other: பாராளுமன்றத்துக்கான அறிக்கைகள்
         statistical_data_set:
-          one: புள்ளிவிபர தரவுத் தொகுதி
-          other: புள்ளிவிபர தரவுத் தொகுதிகள்
+          one: புள்ளியியல் தரவுத் தொகுதி
+          other: புள்ளியியல் தரவுத் தொகுதிகள்
         statistics_announcement:
-          one:
-          other:
+          one: புள்ளியியல் வெளியீட்டு அறிவிப்பு
+          other: புள்ளியியல் வெளியீட்டு அறிவிப்புகள்
         statutory_guidance:
-          one:
-          other:
+          one: சட்டப்பூர்வ வழிகாட்டுதல்
+          other: சட்டப்பூர்வ வழிகாட்டுதல்
         take_part:
-          one:
-          other:
+          one: பங்கெடுத்தல்
+          other: பங்கெடுத்தல்
         tax_tribunal_decision:
-          one:
-          other:
+          one: வரி மற்றும் உயர்நீதிமன்றத் தீர்ப்பாய முடிவு
+          other: வரி மற்றும் உயர்நீதிமன்றத் தீர்ப்பாய முடிவுகள்
         transcript:
-          one: உரை வடிவம்
-          other: உரை வடிவங்கள்
+          one: எழுத்துப்படிவம்
+          other: எழுத்துப்படிவங்கள்
         transparency:
           one: வெளிப்படையான தரவு
           other: வெளிப்படையான தரவு
         utaac_decision:
-          one:
-          other:
+          one: நிர்வாக மேல்முறையீட்டுத் தீர்ப்பாய முடிவு
+          other: நிர்வாக மேல்முறையீட்டுத் தீர்ப்பாய முடிவுகள்
         world_location_news_article:
           one: செய்திக் கட்டுரை
           other: செய்திக் கட்டுரைகள்
         world_news_story:
-          one:
-          other:
+          one: உலகச் செய்தி
+          other: உலகச் செய்திகள்
         written_statement:
-          one: பாராளுமன்றத்துக்கான எழுத்து மூலமான அறிக்கை
-          other: பாராளுமன்றத்துக்கான எழுத்து மூலமான அறிக்கைகள்
-    corporate_information:
+          one: பாராளுமன்றத்துக்கு எழுத்துப்பூர்வ அறிவிப்பு
+          other: பாராளுமன்றத்துக்கு எழுத்துப்பூர்வ அறிவிப்புகள்
+    about_page_path: "/government/organisations/%{organisation}/about"
+    administered_by: நிர்வகிப்பவர்
+    breadcrumbs:
+      courts_and_tribunals: நீதிமன்றங்களும் தீர்ப்பாயங்களும்
+      organisations: நிறுவனங்கள்
+    contact:
+      contact_details: தொடர்பு விபரங்கள்
+      contact_form: 'தொடர்பு படிவம்: %{title}'
+      contact_organisation: தொடர்பு கொள்க %{organisation}
+      email: மின்னஞ்சல்
+      telephone: தொலைபேசி
+    corporate_information: குழுமத் தகவல்கள்
     document_types:
-      documents:
+      documents: ஆவணங்கள்
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: அனைத்து வழிகாட்டுதல்கள் மற்றும் ஒழுங்குமுறையைக் காண்க
+        title: வழிகாட்டுதல் மற்றும் ஒழுங்குமுறை
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: அனைத்து செய்திகள் மற்றும் செய்தித் தொடர்புகளைக் காண்க
+        title: செய்தி மற்றும் செய்தித் தொடர்பு
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: அனைத்து கொள்கை ஆவணங்கள் மற்றும் கலந்தாலோசனைகளையும் காண்க
+        title: கொள்கை ஆவணங்கள் மற்றும் கலந்தாலோசனைகள்
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: அனைத்து ஆராய்ச்சி மற்றும் புள்ளியியலைக் காண்க
+        title: ஆராய்ச்சி மற்றும் புள்ளியியல்
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: அனைத்து சேவைகளையும் காண்க
+        title: சேவைகள்
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: அனைத்து வெளிப்படைத்தன்மை மற்றும் தகவல் சுதந்திர வெளியீடுகளைக் காண்க
+        title: வெளிப்படைத்தன்மை மற்றும் தகவல் சுதந்திர வெளியீடுகள்
+    errors_or_omissions_html: <p>பிழைகள் அல்லது விடுதல்கள்? <a class="govuk-link"
+      href="/contact/govuk">இங்கே எங்களிடம் சொல்லுங்கள்</a>. துறைசாரா பொது நிறுவனங்களின்
+      அதிகாரப்பூர்வ பட்டியலுக்கு <a class="govuk-link" href="/government/collections/public-bodies">பொது
+      நிறுவனங்களைக் காண்க</a>.</p>
+    featured: சிறப்புக் கூறுகளமைந்தது
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: தகவல் சுதந்திரத் தொடர்புப் படிவம்
+      foi_exemption_html: |
+        இந்த நிறுவனம் தகவல் சுதந்திரச் சட்டத்தின்கீழ் வரவில்லை.
+        எந்த நிறுவனங்கள் உள்ளடங்கியுள்ளன என்று காண்பதற்கு <a href="%{foi_url}" class="govuk-link brand__color">சட்டமுறைமையைக் காண்க</a>.
+      freedom_of_information_act: தகவல் சுதந்திரச் (FOI) சட்டம்
+      freedom_of_information_requests: தகவல் சுதந்திரக் கோரிக்கைகள்
+      make_an_foi_request: ஒரு FOI கோரிக்கையை வை
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: தகவல் சுதந்திரச் (FOI) சட்டம் பற்றியும் <a href="%{how_to_path}"
+          class="govuk-link brand__color">எவ்வாறு ஒரு கோரிக்கையை வைப்பது என்பது பற்றியும்
+          வாசிக்கவும்</a>.
+        step2_html: ஏற்கெனவே உங்கள் கேள்விக்கு பதிலளித்துவிட்டோமா என்று <a href="%{our_releases_path}"
+          class="govuk-link brand__color">our previous releases</a> பார்க்கவும்.
+        step3_html: கீழ்க்கண்ட விபரங்களைப் பயன்படுத்தி எங்களைத் தொடர்புகொள்வதற்கு
+          ஒரு புதிய கோரிக்கையை வைக்கவும்.
+    follow_us: எங்களைப் பின்தொடர்க
+    hidden_share_link: பின்தொடர்
+    high_profile_groups: "%{title}-க்குள் பிரசித்தமான குழுக்கள்"
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: வேலைகளும் ஒப்பந்தங்களும்
+    latest_from: "%{title}-லிருந்து சமீபத்தியவை"
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name: "%{title} இப்போது <a href='%{link_href}'>%{link_text}</a>என்றழைக்கப்படுகிறது"
+      devolved: "%{title} என்பது <a href='%{link_href}'>%{link_text}</a>-ன் ஓர் அங்கமாகும்"
+      joining: "%{title} விரைவில் GOV.UK உடன் ஒன்றிணைக்கப்படும்"
+      left_gov: "%{title} இப்போது சுதந்திரமான UK அரசாங்கம் ஆகும்"
+      merged: "%{title} %{updated}-ல் <a href='%{link_href}'>%{link_text}</a>-ன் ஒரு
+        பகுதியாக உள்ளது"
+      merged_no_date: "%{title} இப்போது <a href='%{link_href}'>%{link_text}</a>-ன்
+        அங்கமாகும்"
+      no_longer_exists: "%{title} மூடப்பட்டுள்ளது"
+      no_website: "%{title}-க்கு இணையதளமில்லை"
+      separate_website: "%{title} ஒரு <a href='%{url}'>தனிப்பட்ட இணையதளத்தைக் கொண்டுள்ளது</a>"
+      split: "%{links}-யினால் %{title} மாற்றப்பட்டுள்ளது"
+    part_of: பகுதி
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: எங்கள் மேலாண்மை
+      chief_professional_officers: தலைமை தொழில்சார் அதிகாரிகள்
+      military_personnel: எங்கள் மூத்த இராணுவ அதிகாரிகள்
+      ministers: எங்கள் அமைச்சர்கள்
+      special_representatives: சிறப்புப் பிரதிநிதிகள்
+      traffic_commissioners: போக்குவரத்து ஆணையர்கள்
+    read_more: நாங்கள் செய்வது குறித்து மேலும் வாசிக்க
+    search_for_department: ஒரு துறை, முகமை அல்லது பொது நிறுவனத்தைத் தேடுக
+    see_all_latest_documents: அனைத்து சமீபத்திய ஆவணங்களையும் பார்க்க
+    separate_website: தனிப்பட்ட இணையதளம்
+    services_and_information: அனைத்து %{acronym} சேவைகள் மற்றும் தகவல்கள்
     subscription:
-      email:
-      feed:
+      email: மின்னஞ்சல்களைப் பெறுக
+      feed: செய்தியூட்டத்தில் இணைக
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      adhoc_advisory_group: தற்காலிக ஆலோசனைக் குழு
+      advisory_ndpb: துறைசாரா ஆலோசனை பொதுநிறுவனம்
+      civil_service: குடிமச் சேவை
+      executive_agency: நிர்வாக முகமை
+      executive_ndpb: ஆலோசனை பொதுநிறுவன நிர்வாகி
+      independent_monitoring_body: சுயேட்சையான கண்காணிப்பு நிறுவனம்
+      non_ministerial_department: அமைச்சரவைசாராத் துறை
+      other: பிற
+      public_corporation: பொதுக் குழுமம்
+      tribunal: தீர்ப்பாயம்
+    view_all: அனைத்தையும் காண்க
+    view_less: குறைவாகக் காட்டு
+    what_we_do: "%{title} செய்வது என்ன"
     works_with_statement:
-      multiple:
-      one:
+      multiple: "%{works_with_count} முகமைகளுடனும் பொது நிறுவனங்களுடனும் பணியாற்றுதல்"
+      one: "%{works_with_count} பொது நிறுவனங்களுடன் பணியாற்றுதல்"

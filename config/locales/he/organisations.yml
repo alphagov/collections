@@ -1,34 +1,22 @@
----
 he:
   organisations:
-    about_page_path:
-    administered_by:
-    breadcrumbs:
-      courts_and_tribunals:
-      organisations:
-    contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
     content_item:
       schema_name:
         aaib_report:
-          one:
-          other:
+          one: דו"ח סניף חקירות תאונות אוויר
+          other: דיווחים בענף חקירות תאונות אוויר
         announcement:
           one: הודעה
           other: הודעות
         asylum_support_decision:
-          one:
-          other:
+          one: החלטת בית הדין לתמיכה במקלט
+          other: החלטות בית הדין לתמיכה במקלט
         authored_article:
           one: מאמר מאושר
           other: מאמרים מאושרים
         business_finance_support_scheme:
-          one:
-          other:
+          one: תכנית תמיכה במימון עסקים
+          other: תוכניות תמיכה במימון עסקים
         case_study:
           one: מקרה בוחן
           other: מקרי בוחן
@@ -36,11 +24,11 @@ he:
           one: דיון סגור
           other: דיונים סגורים
         cma_case:
-          one:
-          other:
+          one: תיק רשות התחרות והשווקים
+          other: תיקי רשות התחרות והשווקים
         coming_soon:
-          one:
-          other:
+          one: בקרוב
+          other: בקרוב
         consultation:
           one: דיון
           other: דיונים
@@ -48,8 +36,8 @@ he:
           one: תוצאות דיון
           other: תוצאות דיונים
         corporate_information_page:
-          one:
-          other:
+          one: דף מידע
+          other: דפי מידע
         corporate_report:
           one: דו"ח משותף
           other: דו"חות משותפים
@@ -57,35 +45,35 @@ he:
           one: תכתובת
           other: תכתובות
         countryside_stewardship_grant:
-          one:
-          other:
+          one: מענק החזקה כפרית
+          other: מענקי החזקה כפרית
         decision:
-          one:
-          other:
+          one: החלטה
+          other: החלטות
         detailed_guide:
-          one: מדריך מפורט
-          other: מדריך מפורט
+          one: הדרכה
+          other: הדרכה
         dfid_research_output:
-          one:
-          other:
+          one: מחקר לתפוקת פיתוח
+          other: מחקר לתפוקות פיתוח
         document_collection:
-          one: סדרות
-          other:
+          one: אוסף
+          other: אוספים
         draft_text:
           one: טיוטה
           other: טיוטות
         drug_safety_update:
-          one:
-          other:
+          one: עדכון בטיחות סמים
+          other: עדכונים בטיחות סמים
         employment_appeal_tribunal_decision:
-          one:
-          other:
+          one: החלטת בית הדין לערעורים לעבודה
+          other: החלטות בית הדין לערעורים לעבודה
         employment_tribunal_decision:
-          one:
-          other:
+          one: החלטת בית הדין לעבודה
+          other: החלטות בית הדין לעבודה
         esi_fund:
-          one:
-          other:
+          one: קרן המבנה וההשקעות האירופית (ESIF)
+          other: קרנות מבנה והשקעות אירופיות (ESIF)
         fatality_notice:
           one: הודעת פטירה
           other: הודעות פטירה
@@ -103,7 +91,7 @@ he:
           other: הדרכה
         impact_assessment:
           one: הערכת השפעה
-          other: הערכת השפעות
+          other: הערכות השפעות
         imported:
           one: יבוא- המתנה לסוג
           other: יבוא- המתנה לסוג
@@ -111,29 +99,29 @@ he:
           one: דו"ח עצמאי
           other: דו"ות עצמאיים
         international_development_fund:
-          one:
-          other:
+          one: מימון פיתוח בינלאומי
+          other: מימון פיתוח בינלאומי
         international_treaty:
-          one:
-          other:
+          one: אמנה בינלאומית
+          other: אמנות בינלאומיות
         maib_report:
-          one:
-          other:
+          one: דו"ח ענף חקירות תאונות ימיות
+          other: דיווחים ענף חקירות תאונות ימיות
         map:
           one: מפה
           other: מפות
         medical_safety_alert:
-          one:
-          other:
+          one: אזהרות וביקורות על תרופות ומכשירים רפואיים
+          other: אזהרות וביקורות על תרופות ומכשירים רפואיים
         national:
-          one:
-          other:
+          one: הודעת סטטיסטיקה לאומית
+          other: הודעות סטטיסטיות לאומיות
         national_statistics:
-          one: סטטיסטיקות- סטטיסטיקה לאומית
-          other: סטטיסטיקות- סטטסטיקה לאומית
+          one: סטטיסטיקה לאומית
+          other: סטטסטיקה לאומית
         national_statistics_announcement:
-          one:
-          other:
+          one: הודעת סטטיסטיקה לאומית
+          other: הודעות סטטיסטיות לאומיות
         news_article:
           one: מאמר חדשות
           other: מאמרי חדשות
@@ -141,20 +129,20 @@ he:
           one: חדשות
           other: חדשות
         notice:
-          one:
-          other:
+          one: הודעה
+          other: הודעות
         official:
-          one:
-          other:
+          one: הודעה סטטיסטית רשמית
+          other: הודעות סטטיסטיות רשמיות
         official_statistics:
-          one: נתונים
-          other: נתונים
+          one: סטטיסטיקה רשמית
+          other: סטטיסטיקה רשמית
         official_statistics_announcement:
-          one:
-          other:
+          one: הודעה סטטיסטית רשמית
+          other: הודעות סטטיסטיות רשמיות
         open_consultation:
           one: דיון פתוח
-          other: דיון פתוח
+          other: דיונים  פתוחים
         oral_statement:
           one: הצהרה בעל פה לפרלמנט
           other: הצהרות בעל פה לפרלמנט
@@ -174,23 +162,23 @@ he:
           one: פרסום
           other: פרסומים
         raib_report:
-          one:
-          other:
+          one: דו"ח ענף חקירות תאונות רכבות
+          other: דיווחים ענף חקירות תאונות רכבות
         regulation:
-          one:
-          other:
+          one: תקנה
+          other: תקנות
         research:
           one: מחקר וניתוח
           other: מחקר וניתוח
         residential_property_tribunal_decision:
-          one:
-          other:
+          one: החלטת בית הדין לנכסים למגורים
+          other: החלטות בית הדין לנכסים למגורים
         service_sign_in:
-          one:
-          other:
+          one: כניסה לשירות
+          other: כניסה לשירות
         service_standard_report:
-          one:
-          other:
+          one: דוח שירות סטנדרטי
+          other: דוחות שירות סטנדרטיים
         speaking_notes:
           one: נאומים
           other: נאומים
@@ -198,26 +186,26 @@ he:
           one: נאום
           other: נאומים
         standard:
-          one:
-          other:
+          one: תקן
+          other: תקנים
         statement_to_parliament:
           one: הצהרה לפרלמנט
           other: הצהרות לפרלמנט
         statistical_data_set:
-          one: מידע סטטיסטי
-          other: מידע סטטיסטי
+          one: מערך נתונים סטטיסטיים
+          other: מערכי נתונים סטטיסטיים
         statistics_announcement:
-          one:
-          other:
+          one: הודעת פרסום סטטיסטיקה
+          other: הודעות פרסום סטטיסטיקה
         statutory_guidance:
-          one:
-          other:
+          one: הדרכה סטטוטורית
+          other: הדרכה סטטוטורית
         take_part:
-          one:
-          other:
+          one: קח חלק
+          other: קח חלק
         tax_tribunal_decision:
-          one:
-          other:
+          one: החלטת בית הדין לענייני מיסים והזדמנויות
+          other: החלטות בית הדין לענייני מיסים והזדמנויות
         transcript:
           one: תמלול
           other: תמלולים
@@ -225,109 +213,126 @@ he:
           one: שקיפות מידע
           other: שקיפות מידע
         utaac_decision:
-          one:
-          other:
+          one: החלטת בית הדין לעררים מנהלית
+          other: החלטות בית הדין לעררים מנהלית
         world_location_news_article:
           one: מאמר חדשות
           other: מאמרי חדשות
         world_news_story:
-          one:
-          other:
+          one: חדשות עולמי
+          other: 'חדשות עולמיים '
         written_statement:
           one: הצהרה בכתב לפרלמנט
           other: הצהרות בכתב לפרלמנט
-    corporate_information:
+    about_page_path: "/government/organisations/%{organisation}/about"
+    administered_by: מנוהל על ידי
+    breadcrumbs:
+      courts_and_tribunals: בתי משפט ובתי דין
+      organisations: ארגונים
+    contact:
+      contact_details: פרטי קשר
+      contact_form: 'טופס איש קשר: %{title}'
+      contact_organisation: איש קשר %{organisation}
+      email: דואר אלקטרוני
+      telephone: טלפון
+    corporate_information: מידע תאגידי
     document_types:
-      documents:
+      documents: מסמכים
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: ראה את כל הדרכות והתקנות
+        title: הדרכה ותקנה
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: ראה את כל החדשות והתקשורת
+        title: חדשות ותקשורת
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: ראה את כל מסמכי מדיניות והתייעצויות
+        title: מסמכי מדיניות והתייעצויות
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: ראה את כל המחקרים והסטטיסטיקה
+        title: מחקר וסטטיסטיקה
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: ראה את כל השירותים
+        title: שירותים
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: ראה את כל השקיפות וחופש המידע שפורסם
+        title: שקיפות וחופש פרסומי מידע
+    errors_or_omissions_html: <p>Errors or omissions? <a class="govuk-link" href="/contact/govuk">Tell
+      us here</a>. לרשימות רשמיות של גופים ציבוריים שאינם מחלקתיים <a class="govuk-link"
+      href="/government/collections/public-bodies">ראו גופים ציבורייםs</a>.</p>
+    featured: מוצגים
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: טופס יצירת קשר של חופש מידע
+      foi_exemption_html: |-
+        ארגון זה אינו מכוסה בחוק חופש המידע.
+        כדי לראות אילו ארגונים כלולים, עיין <a href="%{foi_url}" class="govuk-link brand__color">בחקיקה</a>.
+      freedom_of_information_act: 'חוק חופש המידע (FOI) '
+      freedom_of_information_requests: בקשות לחופש המידע
+      make_an_foi_request: תגיש בקשה לחופש מידע
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: קרא על חוק חופש המידע (FOI) <a href="%{how_to_path}" class="govuk-link
+          brand__color">וכיצד להגיש בקשה</a>.
+        step2_html: בדוק <a href="%{our_releases_path}" class="govuk-link brand__color">את
+          המהדורות הקודמות שלנו</a> כדי לראות אם כבר ענינו על שאלתך.
+        step3_html: שלח בקשה חדשה על ידי יצירת קשר באמצעות הפרטים שלהלן.
+    follow_us: עקוב אחרינו
+    hidden_share_link: עקוב ב-
+    high_profile_groups: קבוצות פרופיל גבוהות בתוך %{title}
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: משרות וחוזים
+    latest_from: עדכון אחרון מתוך %{title}
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name: "%{title} נקרא כעת <a href='%{link_href}'>%{link_text}</a>"
+      devolved: "%{title}הוא גוף של <a href='%{link_href}'>%{link_text}</a>"
+      joining: "%{title} ישולבו בקרוב ב- GOV.UKK"
+      left_gov: "%{title} אינו תלוי כעת בממשלת בריטניה"
+      merged: "%{title}  הפך לחלק מ <a href='%{link_href}'>%{link_text}</a> in %{updated}"
+      merged_no_date: "%{title} הוא כעת חלק מ <a href='%{link_href}'>%{link_text}</a>"
+      no_longer_exists: "%{title} נסגר"
+      no_website: "%{title} אין אתר"
+      separate_website: "%{title} יש <a href='%{url}'>אתר נפרד</a>"
+      split: "%{title} הוחלף ב %{links}"
+    part_of: חלק של
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: ההנהלה שלנו
+      chief_professional_officers: קצינים מקצועיים ראשיים
+      military_personnel: בכירי הצבא שלנו
+      ministers: השרים שלנו
+      special_representatives: נציגים מיוחדים
+      traffic_commissioners: מפקחי תנועה
+    read_more: למידע נוסף על מה שאנחנו עושים
+    search_for_department: 'חפש מחלקה, סוכנות או גוף ציבורי '
+    see_all_latest_documents: ראה את כל מסמכים אחרונים
+    separate_website: אתר נפרד
+    services_and_information: כל השירותים והמידע של %{acronym}
     subscription:
-      email:
-      feed:
+      email: קבל הודעות דואר אלקטרוני
+      feed: הירשם להזנה
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      adhoc_advisory_group: קבוצת ייעוץ אד-הוק
+      advisory_ndpb: גוף ציבורי לא מחלקתי מייעץ
+      civil_service: שירות אזרחי
+      executive_agency: סוכנות מנהלים
+      executive_ndpb: 'גוף ציבורי לא מחלקתי '
+      independent_monitoring_body: 'גוף ניטור עצמאי '
+      non_ministerial_department: לא מחלקת שרים
+      other: אחר
+      public_corporation: תאגיד ציבורי
+      tribunal: 'בית דין '
+    view_all: הצג הכל
+    view_less: הצג פחות
+    what_we_do: מה %{title} עושה
     works_with_statement:
-      multiple:
-      one:
+      multiple: עובד עם %{works_with_count} סוכנויות וגופים ציבוריים
+      one: עובד עם %{works_with_count} גוף ציבורי

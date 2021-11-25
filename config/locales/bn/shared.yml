@@ -1,12 +1,11 @@
----
 bn:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: বাসা
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: বাংলা
+      prefix: 'ব্রাউজ করুন:'
+      title: GOV.UK ব্রাউজ করুন
+    get_emails: এই বিষয়ের জন্য ইমেইল নিন
+    language_direction: ltr
+    language_name: ইংরেজি
     topics:
-      title:
+      title: "%{title}: বিস্তারিত তথ্য"

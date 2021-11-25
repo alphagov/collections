@@ -1,6 +1,5 @@
----
 da:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Tjenester og oplysninger - %{title}
+    see_more_link: Se mere
+    title: Tjenesteydelser og information

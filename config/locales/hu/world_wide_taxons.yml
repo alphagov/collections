@@ -1,5 +1,4 @@
----
 hu:
   world_wide_taxons:
-    take_the_survey:
-    test_banner:
+    take_the_survey: Töltse ki a kérdőívet és segítse a fejlődésünket
+    test_banner: Az oldal jelenlegi kinézete tesztverzió.

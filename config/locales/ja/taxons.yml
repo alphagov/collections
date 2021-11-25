@@ -1,8 +1,7 @@
----
 ja:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: サブトピックを見る
+    organisations: 組織
+    see_all_in_topic: このトピックの％{type}の詳細を見る
+    show_fewer_orgs: 表示する組織の数を減らす
+    show_more_orgs: 表示する組織の数を増やす

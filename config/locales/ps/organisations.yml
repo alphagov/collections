@@ -1,333 +1,342 @@
----
 ps:
   organisations:
-    about_page_path:
-    administered_by:
-    breadcrumbs:
-      courts_and_tribunals:
-      organisations:
-    contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
     content_item:
       schema_name:
         aaib_report:
-          one:
-          other:
+          one: د هوایي پیښو د تحقیقاتو د څانګې راپور
+          other: د هوایي پیښو د تحقیقاتو د څانګې راپورونه
         announcement:
-          one: خبرتیا
-          other: خبرتیاوې
+          one: اعلان
+          other: اعلانونه
         asylum_support_decision:
-          one:
-          other:
+          one: د پناه غوښتنې د ملاتړ د محکمې پریکړه
+          other: د پناه غوښتنې د ملاتړ محکمې پریکړې
         authored_article:
-          one: تالیف شوی مضمون
-          other: تالیف شوي مضامین
+          one: لیکل شوې مقاله
+          other: لیکل شوي مقالې
         business_finance_support_scheme:
-          one:
-          other:
+          one: د سوداګرۍ مالي ملاتړ سکیم
+          other: د سوداګرۍ مالي ملاتړ سکیمونه
         case_study:
-          one: موردی څیړنه
-          other: مودری څیړنی
+          one: د قضیې مطالعه
+          other: د قضیې مطالعات
         closed_consultation:
-          one: محرمه مشوره
-          other: محرمه مشوری
+          one: تړلې مشوره
+          other: تړلې مشورې
         cma_case:
-          one:
-          other:
+          one: د سیالۍ او بازارونو ادارې قضیه
+          other: د سیالۍ او بازارونو ادارې قضیې
         coming_soon:
-          one:
-          other:
+          one: ژر راځي
+          other: ژر راځي
         consultation:
           one: مشوره
-          other: مشوری
+          other: مشورې
         consultation_outcome:
-          one: د مشوری پایله
-          other: د مشورو پایله
+          one: د مشورې پایله
+          other: د مشورې پایلې
         corporate_information_page:
-          one:
-          other:
+          one: د معلوماتو پاه
+          other: د معلوماتو پاې
         corporate_report:
-          one: متحد راپور
-          other: متحد راپورونه
+          one: د کارپوریټ راپور
+          other: د شرکت راپورونه
         correspondence:
-          one: ارتباط ساتنه
-          other: ارتباطات ساتنه
+          one: لیکنه
+          other: لیکنې
         countryside_stewardship_grant:
-          one:
-          other:
+          one: د کلیوالي چارو سرپرستي مرسته
+          other: د کلیو د ساتنې بورسونه
         decision:
-          one:
-          other:
+          one: پریکړه
+          other: پریکړې
         detailed_guide:
-          one: مفصله لارښوونه
-          other: مفصلی لارښوونی
+          one: لارښود
+          other: لارښود
         dfid_research_output:
-          one:
-          other:
+          one: د پرمختیایی محصول لپاره څیړنه
+          other: د پراختیا محصولاتو لپاره څیړنې
         document_collection:
-          one: سلسله
-          other:
+          one: ټولګه
+          other: ټولګې
         draft_text:
-          one: مسوده
-          other: مسودی
+          one: مسوده متن
+          other: د متن مسوده
         drug_safety_update:
-          one:
-          other:
+          one: د مخدره توکو خوندیتوب تازه کول
+          other: د مخدره توکو خوندیتوب تازه معلومات
         employment_appeal_tribunal_decision:
-          one:
-          other:
+          one: د کار موندنې اپیل محکمه پریکړه
+          other: د کار موندنې اپیل محکمه پریکړې
         employment_tribunal_decision:
-          one:
-          other:
+          one: د کار موندنې محکمې پریکړه
+          other: د کارموندنې محکمې پریکړې
         esi_fund:
-          one:
-          other:
+          one: د اروپا ساختماني او پانګوونې فنډ (ESIF)
+          other: د اروپا ساختماني او پانګوونې فنډونه (ESIF)
         fatality_notice:
-          one: دمړینی خبرتیا
-          other: دمړینی خبرتیاوی
+          one: د مرګ خبرتیا
+          other: د مرګ خبرتیاوې
         foi_release:
-          one: د بیان د آزادی خپرونه
-          other: د بیان د آزادی خپرونی
+          one: د د معلوماتو د آزادۍ قانون خوشې کول
+          other: د معلوماتو د آزادۍ قانون خوشې کول
         form:
-          one: فارم
-          other: فارمونه
+          one: فورمه
+          other: فورمې
         government_response:
-          one: د دولت ځواب
-          other: د دولت ځوابونه
+          one: د حکومت غبرګون
+          other: د حکومت غبرګونونه
         guidance:
-          one: رهنمایی
-          other: رهنمایی
+          one: لارښود
+          other: لارښود
         impact_assessment:
-          one: د تاثیراتو څیړنه
-          other: د تاثیراتو څیړنی
+          one: د اغیز ارزونه
+          other: د اغیزو ارزونه
         imported:
-          one: وارد شوی - د انتظار نمونه
-          other: وارد شوی - د انتظار نمونه
+          one: وارد شوی - په تمه ډول
+          other: وارد شوی - په تمه ډول
         independent_report:
-          one: آزاد راپور
-          other: آزاد راپورونه
+          one: خپلواک راپور
+          other: خپلواک راپورونه
         international_development_fund:
-          one:
-          other:
+          one: د نړیوالې پراختیا تمویل
+          other: د نړیوالې پراختیا تمویل
         international_treaty:
-          one:
-          other:
+          one: نړیوال تړون
+          other: نړیوال تړونونه
         maib_report:
-          one:
-          other:
+          one: د سمندري پیښو تحقیقاتو څانګې راپور
+          other: د سمندري پیښو تحقیقاتو څانګې راپورونه
         map:
           one: نقشه
-          other: نقشی
+          other: نقشې
         medical_safety_alert:
-          one:
-          other:
+          one: د درملو او طبي وسایلو لپاره خبرتیا او یادونه
+          other: د درملو او طبي وسایلو لپاره خبرتیا او یادونه
         national:
-          one:
-          other:
+          one: د ملي احصایې اعلان
+          other: د ملي احصایې اعلانونه
         national_statistics:
-          one: شمیرنه - ملی شمیرنې
-          other: شمیرنه - ملی شمیرنې
+          one: ملي احصایه
+          other: ملي احصایې
         national_statistics_announcement:
-          one:
-          other:
+          one: د ملي احصایې اعلان
+          other: د ملي احصایې اعلانونه
         news_article:
-          one: خبری مقاله
-          other: خبری مقالی
+          one: د خبر مقاله
+          other: د خبر مقالې
         news_story:
-          one: خبری راپور
-          other: خبری راپورونه
+          one: د خبر کیسه
+          other: د خبرونو کیسې
         notice:
-          one:
-          other:
+          one: خبرتیا
+          other: خبرتیاوې
         official:
-          one:
-          other:
+          one: د رسمي احصایې اعلان
+          other: د رسمي احصایې اعلانونه
         official_statistics:
-          one: شمیرنه
-          other: شمیرنه
+          one: رسمي احصایې
+          other: رسمي احصایې
         official_statistics_announcement:
-          one:
-          other:
+          one: د رسمي احصایې اعلان
+          other: د رسمي احصایې اعلانونه
         open_consultation:
-          one: آزاده مشوره
-          other: آزادې مشورې
+          one: خلاص مشوره
+          other: مشورې خلاص کړئ
         oral_statement:
-          one: پارلمان ته شفاهی اعلامیه
-          other: پارلمان ته شفاهی اعلامیی
+          one: پارلماني غونډې ته وینا
+          other: پارلمان ته د خولې وینا
         policy:
-          one: پالیسی
-          other: پالیسی ګانی
+          one: پالیسي
+          other: پالیسۍ
         policy_paper:
-          one: د پالیسۍ سند
-          other: د پالیسې سندونه
+          one: د پالیسۍ پاڼه
+          other: د پالیسۍ پاڼې
         press_release:
-          one: مطبوعاتی خبرپاڼه
-          other: مطبوعاتی خبرپاڼې
+          one: مطبوعاتي اعلامیه
+          other: مطبوعاتي اعلامیې
         promotional:
-          one: روزونکې مواد
-          other: روزونکی مواد
+          one: تشویقي مواد
+          other: تشویقي مواد
         publication:
           one: خپرونه
           other: خپرونې
         raib_report:
-          one:
-          other:
+          one: د ریل حادثې تحقیقاتو څانګې راپور
+          other: د ریل حادثې تحقیقاتو څانګې راپورونه
         regulation:
-          one:
-          other:
+          one: مقرره
+          other: مقررات
         research:
-          one: څیړنه او تجزیه
-          other: ځیړنه او تجزیه
+          one: څیړنه او تحلیل
+          other: څیړنه او تحلیل
         residential_property_tribunal_decision:
-          one:
-          other:
+          one: د استوګنې ملکیت محکمې پریکړه
+          other: د استوګنې ملکیت محکمې پریکړې
         service_sign_in:
-          one:
-          other:
+          one: د خدمت ننوتل
+          other: د خدمت ننوتل
         service_standard_report:
-          one:
-          other:
+          one: د خدمت معیاري راپور
+          other: د خدمت معیاري راپورونه
         speaking_notes:
-          one: د وینا یادښت
-          other: د وینا یادښتونه
+          one: د وینا نوټونه
+          other: د وینا نوټونه
         speech:
           one: وینا
-          other: ویناوې
+          other: ويناوې
         standard:
-          one:
-          other:
+          one: معیار
+          other: معیارونه
         statement_to_parliament:
-          one: پارلمان ته اعلامیه
-          other: پارلمان ته اعلامیې
+          one: پارلمان ته وینا
+          other: پارلمان ته ویناوې
         statistical_data_set:
-          one: د شمیرنې اطلاعات
-          other: د شمیرنې اطلاعات
+          one: د احصایوي معلوماتو سیټ
+          other: د احصایوي معلوماتو سیټونه
         statistics_announcement:
-          one:
-          other:
+          one: د احصایې خپریدو اعلان
+          other: د احصایې خپریدو اعلانونه
         statutory_guidance:
-          one:
-          other:
+          one: قانوني لارښود
+          other: قانوني لارښود
         take_part:
-          one:
-          other:
+          one: برخه واخلئ
+          other: برخه واخلئ
         tax_tribunal_decision:
-          one:
-          other:
+          one: د مالیې او چانسري محکمې پریکړه
+          other: د مالیې او چانسري محکمې پریکړې
         transcript:
-          one: لیکنه
-          other: لیکنې
+          one: نقل
+          other: نقلونه
         transparency:
-          one: د روڼوالې اطلاعات
-          other: د روڼوالي اطلاعات
+          one: د شفافیت معلومات
+          other: د شفافیت معلومات
         utaac_decision:
-          one:
-          other:
+          one: د اداري استیناف محکمې پریکړه
+          other: د اداري استیناف محکمو پریکړې
         world_location_news_article:
-          one: خبری مقاله
-          other: خبری مقالی
+          one: د خبر مطلب
+          other: د خبرونو مطالب
         world_news_story:
-          one:
-          other:
+          one: د نړۍ خبر
+          other: د نړۍ خبرونه
         written_statement:
-          one: پارلمان ته لیکلې اعلامیه
-          other: پارلمان ته لیکلې اعلامیې
-    corporate_information:
+          one: پارلمان ته لیکلې وینا
+          other: پارلمان ته لیکلي ویناوې
+    about_page_path: "/government/organisations/%{organisation}/about"
+    administered_by: لخوا اداره کیږي
+    breadcrumbs:
+      courts_and_tribunals: محکمې او محکمې
+      organisations: سازمانونه
+    contact:
+      contact_details: د اړیکو نیولو معلومات
+      contact_form: 'د اړیکې فورمه: %{title}'
+      contact_organisation: اړیکه %{organization}
+      email: بریښنالیک
+      telephone: تلیفون
+    corporate_information: د شرکت معلومات
     document_types:
-      documents:
+      documents: اسناد
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: ټولې لارښوونې او مقررات وګورئ
+        title: لارښوونه او مقررات
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: ټول خبرونه او مخابرات وګورئ
+        title: خبرونه او مخابرات
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: د پالیسۍ ټولې پا papersې او مشورې وګورئ
+        title: د پالیسۍ پا papersې او مشورې
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: ټولې څیړنې او احصایې وګورئ
+        title: څیړنې او احصایې
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: ټول خدمات وګورئ
+        title: خدمتونه
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: د معلوماتو خپریدو ټول شفافیت او ازادي وګورئ
+        title: د معلوماتو د خپریدو شفافیت او آزادي
+    errors_or_omissions_html: <p> اشتباه یا تیروتنه؟ <a class="govuk-link" href="/contact/govuk">
+      موږ ته دلته ووایاست </a>. د غیر ډیپارټمنټ عامه ادارو رسمي لیستونو لپاره <a class="govuk-link"
+      href="/government/collections/public-bodies"> عامه ادارې وګورئ </a>. </p>
+    featured: ځانګړی شوی
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: د د معلوماتو د آزادۍ قانون تماس فورمه
+      foi_exemption_html: |
+        دا سازمان د معلوماتو د آزادۍ قانون تر پوښښ لاندې ندی.
+        د دې لپاره چې وګورئ کوم سازمانونه پکې شامل دي ، وګورئ <a href="%{foi_url}" class="govuk-link brand__color">قانون</a>.
+      freedom_of_information_act: د معلوماتو د آزادۍ قانون (FOI)
+      freedom_of_information_requests: د معلوماتو د آزادۍ غوښتنه
+      make_an_foi_request: د د معلوماتو د آزادۍ قانون غوښتنه وکړئ
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: د معلوماتو د آزادۍ قانون (FOI) قانون او <a href="%{how_to_path}"
+          class="govuk-link brand__color">د غوښتنې څرنګوالي</a> په اړه ولولئ.
+        step2_html: <a href="%{our_releases_path}" class="govuk-link brand__color">زموږ
+          پخواني ریلیزونه</a> چیک کړئ ترڅو وګورئ چې ایا موږ دمخه ستاسو پوښتنې ته ځواب
+          ورکړی دی.
+        step3_html: د لاندې توضیحاتو په کارولو سره له موږ سره په اړیکه کې نوې غوښتنه
+          وکړئ.
+    follow_us: مونږ تعقیب کړئ
+    hidden_share_link: تعقیب کړئ
+    high_profile_groups: ه%{title} کې د لوړ پروفایل ډلې
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: دندې او قراردادونه
+    latest_from: له%{title} څخه وروستی
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name: "%{title} اوس <a href='%{link_href}'>%{link_text} </a> نومیږي"
+      devolved: "%{title} د <a href='%{link_href}'>%{link_text} </a> یوه برخه ده"
+      joining: "%{title} به ډیر ژر په GOV.UK کې شامل شي"
+      left_gov: "%{title} اوس د انګلستان حکومت څخه خپلواک دی"
+      merged: "%{title} په%{تازه شوي} کې د <a href='%{link_href}'>%{link_text} </a>
+        برخه شوه"
+      merged_no_date: "%{title} اوس د <a href='%{link_href}'>%{link_text} </a> برخه
+        ده"
+      no_longer_exists: "%{title} وتړل شو"
+      no_website: "%{title} هیڅ ویب پاه نلري"
+      separate_website: "%{title} یو <a href='%{url}'> جلا ویب پا </a>ه لري </a>"
+      split: "%{title} د %{links} لخوا بدل شو"
+    part_of: برخه
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: زموږ مدیریت
+      chief_professional_officers: لوی مسلکي افسران
+      military_personnel: زموږ لوړ پوړي پوځي چارواکي
+      ministers: زموږ وزیران
+      special_representatives: ځانګړي استازي
+      traffic_commissioners: د ترافیک کمیسون
+    read_more: د هغه څه په اړه نور ولولئ چې موږ یې کوو
+    search_for_department: د یوې څانګې ، ادارې یا عامه ادارې لټون وکړئ
+    see_all_latest_documents: ټول وروستي اسناد وګورئ
+    separate_website: جلا ویب پاه
+    services_and_information: ټول %{acronym} خدمتونه او معلومات
     subscription:
-      email:
-      feed:
+      email: بریښنالیکونه ترلاسه کړئ
+      feed: فیډ کې ګډون وکړئ
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      adhoc_advisory_group: د عادلانه مشورتي ګروپ
+      advisory_ndpb: مشورتي غیر څانګې عامه اداره
+      civil_service: ملکي خدمت
+      executive_agency: اجرایوي اداره
+      executive_ndpb: اجرایوي غیر ډیپارټمنټ عامه اداره
+      independent_monitoring_body: د څارنې خپلواکه اداره
+      non_ministerial_department: بې وزله څانګه
+      other: نور
+      public_corporation: عامه شرکت
+      tribunal: محکمه
+    view_all: ټول وګوری
+    view_less: لږ لیدل
+    what_we_do: "%{title} څه کوي"
     works_with_statement:
-      multiple:
-      one:
+      multiple: د %{works_with_count} ادارو او عامه ادارو سره کار کوي
+      one: د %{works_with_count} عامه ادارې سره کار کوي

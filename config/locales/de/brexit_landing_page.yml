@@ -1,40 +1,55 @@
----
 de:
   brexit_landing_page:
     campaign_links:
-      lead_in:
-      lead_out:
-      links:
+      lead_in: 'Prüfen Sie, was Sie anders machen müssen, wenn Sie:'
+      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
+        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
+        data-track-label=“Get the complete list">Die vollständige Liste</a> der Maßnahmen
+        ansehen, die Sie für sich, Ihr Unternehmen und Ihre Familie ergreifen müssen.
     comms:
-      links:
-      read_transcript:
-    comms_header:
-    data_list_title:
-    email_mailto_subject:
-    guidance_header:
-    meta_description:
-    meta_title:
+      read_transcript: Lesen Sie das Transkript zu diesem Video
+    comms_header: Ankündigungen
+    data_list_title: 'Brexit Startseite: %{header}'
+    email_mailto_subject: 'Großbritanniens Neustart: Legen wir los- GOV.UK'
+    guidance_header: Veränderungen für Unternehmen und Bürger
+    meta_description: Finden Sie heraus, wie sich die neuen Brexit-Regeln auf Dinge
+      wie Reisen und Geschäfte mit Europa auswirken. Nutzen Sie den Brexit-Checker,
+      um eine individuelle Liste von Maßnahmen zu erhalten.
+    meta_title: Brexit
     no_cookies:
-      change_settings_text:
-      icon_text:
-      or_text:
-      to_watch_text:
-      watch_link_text:
-    page_header:
-    page_header_explainer:
+      change_settings_text: Cookie-Einstellungen ändern
+      icon_text: VIDEO
+      or_text: oder
+      to_watch_text: um das Video anzusehen
+      watch_link_text: Schauen Sie auf YouTube
+    page_header: Brexit:<br/>Die neuen Regeln sind da
+    page_header_explainer: Die neuen Regeln gelten unter anderem für Reisen und Geschäfte
+      mit Europa. Nutzen Sie den Brexit-Checker, um eine individuelle Liste von Maßnahmen
+      für Sie, Ihr Unternehmen und Ihre Familie zu erhalten.
     sections:
-      aria_string_suffix:
-      guidance_and_regulation:
-      news_and_communications:
-      policy_and_engagement:
-      research_and_statistics:
-      services:
-      transparency:
-    share_links:
-    topic_section_header:
-    topic_section_subheading:
-    video_section_description:
-    video_section_link:
-    video_section_title:
-    video_section_transcription_summary:
-    video_section_transcription_text:
+      aria_string_suffix: im Zusammenhang mit dem Brexit
+      guidance_and_regulation: Leitlinien und Regulierungen
+      news_and_communications: Nachrichten und Mitteilungen
+      policy_and_engagement: Strategiepapiere und Beratungen
+      research_and_statistics: Forschung und Statistik
+      services: Dienstleistungen
+      transparency: Veröffentlichungen zu Transparenz und Informationsfreiheit
+    share_links: Diese Seite teilen
+    take_action_list:
+      amber: Ändern
+      green: Weiter
+      red: Prüfen
+    take_action_start_now: 'Brexit-Checker: Jetzt starten'
+    take_action_start_now_link: "/transition-check/questions"
+    topic_section_header: Alle Informationen zum Brexit
+    topic_section_subheading: Alle Informationen zum Thema Brexit durchsuchen
+    video_section_description: |
+      <p>Der Geschäftsverkehr mit Europa hat sich verändert. Sie müssen neue Regeln für Ausfuhren, Einfuhren, Zölle, Daten und&nbsp;Personaleinstellungen beachten.</p>
+      <p>Erfahren Sie im Video, was die neuen Vorschriften für Ihr Unternehmen bedeuten. Sie können auch den <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">Brexit-Checker verwenden</a>, um eine individuelle Liste von Maßnahmen zu erhalten.</p>
+    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
+    video_section_title: Halten Sie Ihr Unternehmen am Laufen
+    video_section_transcription_summary: Videotranskript anzeigen
+    video_section_transcription_text: |
+      <p>Unternehmen, das Vereinigte Königreich hat die EU verlassen und es gelten nun neue Regeln.</p>
+      <p>Um Ihr Geschäft am Laufen zu halten, nutzen Sie den Brexit-Checker auf gov.uk/transition, um individuelle Maßnahmen für Ihr Unternehmen zu erhalten.</p>
+      <p>Lassen Sie uns die Wirtschaft aufrecht erhalten.</p>

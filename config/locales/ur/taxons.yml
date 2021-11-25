@@ -1,8 +1,7 @@
----
 ur:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: ذیلی موضوعات کو دریافت کریں
+    organisations: تنظیمیں
+    see_all_in_topic: اس موضوع میں مزید %{type} دیکھیں
+    show_fewer_orgs: کم تنظیمیں دکھائیں
+    show_more_orgs: مزید تنظیمیں دکھائیں

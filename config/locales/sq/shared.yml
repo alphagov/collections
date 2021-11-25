@@ -1,12 +1,11 @@
----
 sq:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Home
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
+      prefix: 'Shfleto:'
+      title: Shfleto GOV.UK
+    get_emails: Merrni email për këtë temë
+    language_direction: ltr
     language_name: Shqip
     topics:
-      title:
+      title: "%{title}: informacion i detajuar"

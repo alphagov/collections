@@ -1,5 +1,4 @@
----
 is:
   world_wide_taxons:
-    take_the_survey:
-    test_banner:
+    take_the_survey: Taka könnun til að hjálpa okkur að bæta hana
+    test_banner: Þetta er prufuútgáfa af sniði þessarar síðu.

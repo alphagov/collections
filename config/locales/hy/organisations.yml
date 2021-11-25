@@ -1,97 +1,85 @@
----
 hy:
   organisations:
-    about_page_path:
-    administered_by:
-    breadcrumbs:
-      courts_and_tribunals:
-      organisations:
-    contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
     content_item:
       schema_name:
         aaib_report:
-          one:
-          other:
+          one: Ավիավթարների հետաքննության բաժանմունքի զեկույց
+          other: Ավիավթարների հետաքննության բաժանմունքի զեկույցներ
         announcement:
           one: Հայտարարություն
           other: Հայտարարություններ
         asylum_support_decision:
-          one:
-          other:
+          one: Ապաստարանի աջակցության համար տրիբունալի որոշում
+          other: Ապաստարանի աջակցության համար տրիբունալի որոշումներ
         authored_article:
           one: Հեղինակային հոդված
           other: Հեղինակային հոդվածներ
         business_finance_support_scheme:
-          one:
-          other:
+          one: Բիզնեսի ֆինանսավորման աջակցության պլան
+          other: Բիզնեսի ֆինանսավորման աջակցության պլաններ
         case_study:
-          one: Թեմատիկ ուսումնասիրություն
-          other: Թեմատիկ ուսումնասիրություններ
+          one: Մասնավոր դեպքի ուսումնասիրություն
+          other: Մասնավոր դեպքի ուսումնասիրություններ
         closed_consultation:
-          one: Փակ խորհրդատվություն
-          other: Փակ խորհրդատվություններ
+          one: Փակ խորհրդակցություն
+          other: Փակ խորհրդակցություններ
         cma_case:
-          one:
-          other:
+          one: Մրցակցության և շուկայի կառավարման բաժնի դեպք
+          other: Մրցակցության և շուկայի կառավարման բաժնի դեպքեր
         coming_soon:
-          one:
-          other:
+          one: Շուտով
+          other: Շուտով
         consultation:
-          one: Խորհրդատվություն
-          other: Խորհրդատվություններ
+          one: Խորհրդակցություն
+          other: Խորհրդակցություններ
         consultation_outcome:
-          one: Խորհրդատվության արդյունք
-          other: Խորհրդատվության արդյունքներ
+          one: Խորհրդակցության արդյունք
+          other: Խորհրդակցության արդյունքներ
         corporate_information_page:
-          one:
-          other:
+          one: Տեղեկատվական էջ
+          other: Տեղեկատվական էջեր
         corporate_report:
-          one: Կորպորատիվ հաշվետվություն
-          other: Կորպորատիվ հաշվետվություններ
+          one: Կորպորատիվ զեկույց
+          other: Կորպորատիվ զեկույցներ
         correspondence:
           one: Նամակագրություն
           other: Նամակագրություններ
         countryside_stewardship_grant:
-          one:
-          other:
+          one: Գյուղատնտեսության կառավարման դրամաշնորհ
+          other: Գյուղատնտեսության կառավարման դրամաշնորհներ
         decision:
-          one:
-          other:
+          one: Որոշում
+          other: Որոշումներ
         detailed_guide:
-          one: Մանրամասն ուղեցույց
-          other: Մանրամասն ուղեցույցեր
+          one: Ուղեցույց
+          other: Ուղեցույց
         dfid_research_output:
-          one:
-          other:
+          one: Զարգացման արդյունքի հետազոտություն
+          other: Զարգացման արդյունքների հետազոտություն
         document_collection:
-          one: Մի շարք
-          other:
+          one: Հավաքագրում
+          other: Հավաքագրումներ
         draft_text:
-          one: Սևագիր տեքստ
-          other: Սևագիր տեքստեր
+          one: Նախնական տեքստ
+          other: Նախնական տեքստեր
         drug_safety_update:
-          one:
-          other:
+          one: Դեղերի անվտանգության թարմացում
+          other: Դեղերի անվտանգության թարմացումներ
         employment_appeal_tribunal_decision:
-          one:
-          other:
+          one: Աշխատանքի բողոքարկման համար տրիբունալի որոշում
+          other: Աշխատանքի բողոքարկման համար տրիբունալի որոշումներ
         employment_tribunal_decision:
-          one:
-          other:
+          one: Աշխատանքի համար տրիբունալի որոշում
+          other: Աշխատանքի համար տրիբունալի որոշումներ
         esi_fund:
-          one:
-          other:
+          one: Եվրոպական կառուցվածքային և ներդրումային հիմնադրամ (ESIF)
+          other: Եվրոպական կառուցվածքային և ներդրումային հիմնադրամներ (ESIF)
         fatality_notice:
-          one: Մահվան ծանուցում
-          other: Մահվան ծանուցումներ
+          one: Դժբախտ պատահարի ծանուցում
+          other: Դժբախտ պատահարի ծանուցումներ
         foi_release:
-          one: Ազատ տեղեկատվության հաղորդագրություն
-          other: Ազատ տեղեկատվության հաղորդագրություններ
+          one: Տեղեկատվության ազատության հրապարակում
+          other: Տեղեկատվության ազատության հրապարակումներ
         form:
           one: Ձևաթուղթ
           other: Ձևաթղթեր
@@ -100,234 +88,258 @@ hy:
           other: Կառավարության արձագանքներ
         guidance:
           one: Ուղեցույց
-          other: Ուղեցույցեր
+          other: Ուղեցույց
         impact_assessment:
           one: Ազդեցության գնահատում
           other: Ազդեցության գնահատումներ
         imported:
-          one: Ներկրված - սպասման տեսակ
-          other: Ներկրված - սպասման տեսակներ
+          one: ներմուծված - սպասման տեսակ
+          other: ներմուծված - սպասման տեսակ
         independent_report:
-          one: Անկախ հաշվետվություն
-          other: Անկախ հաշվետվություններ
+          one: Անկախ զեկույց
+          other: Անկախ զեկույցներ
         international_development_fund:
-          one:
-          other:
+          one: Միջազգային զարգացման ֆինանսավորում
+          other: Միջազգային զարգացման ֆինանսավորում
         international_treaty:
-          one:
-          other:
+          one: Միջազգային պայմանագիր
+          other: Միջազգային պայմանագրեր
         maib_report:
-          one:
-          other:
+          one: Ծովային վթարների հետաքննության բաժանմունքի զեկույց
+          other: Ծովային վթարների հետաքննության բաժանմունքի զեկույցներ
         map:
           one: Քարտեզ
           other: Քարտեզներ
         medical_safety_alert:
-          one:
-          other:
+          one: Նախազգուշացումներ և հիշեցումներ դեղերի և բժշկական սարքավորումների համար
+          other: Նախազգուշացումներ և հիշեցումներ դեղերի և բժշկական սարքավորումների
+            համար
         national:
-          one:
-          other:
+          one: Ազգային վիճակագրական հայտարարություն
+          other: Ազգային վիճակագրական հայտարարություններ
         national_statistics:
-          one: Վիճակագրություն-ազգային վիճակագրություն
-          other: Վիճակագրություն-ազգային վիճակագրություններ
+          one: Ազգային վիճակագրություն
+          other: Ազգային վիճակագրություն
         national_statistics_announcement:
-          one:
-          other:
+          one: Ազգային վիճակագրական հայտարարություն
+          other: Ազգային վիճակագրական հայտարարություններ
         news_article:
           one: Տեղեկատվական հոդված
           other: Տեղեկատվական հոդվածներ
         news_story:
-          one: Լուր
-          other: Լուրեր
+          one: Տեղեկատվական նյութ
+          other: Տեղեկատվական նյութեր
         notice:
-          one:
-          other:
+          one: Ծանուցում
+          other: Ծանուցումներ
         official:
-          one:
-          other:
+          one: Պաշտոնական վիճակագրական հայտարարություն
+          other: Պաշտոնական վիճակագրական հայտարարություններ
         official_statistics:
-          one: Վիճակագրություն
-          other: Վիճակագրություն
+          one: Պաշտոնական վիճակագրություն
+          other: Պաշտոնական վիճակագրություն
         official_statistics_announcement:
-          one:
-          other:
+          one: Պաշտոնական վիճակագրական հայտարարություն
+          other: Պաշտոնական վիճակագրական հայտարարություններ
         open_consultation:
-          one: Բաց խորհրդատվություն
-          other: Բաց խորհրդատվություններ
+          one: Բաց խորհրդակցություն
+          other: Բաց խորհրդակցություններ
         oral_statement:
-          one: Բանավոր դիմում խորհրդարան
-          other: Բանավոր դիմումներ խորհրդարան
+          one: Խորհրդարանին ուղղված բանավոր հայտարարություն
+          other: Խորհրդարանին ուղղված բանավոր հայտարարություններ
         policy:
           one: Քաղաքականություն
           other: Քաղաքականություններ
         policy_paper:
-          one: Ծրագրային փաստաթուղթ
-          other: Ծրագրային փաստաթղթեր
+          one: Քաղաքականության փաստաթուղթ
+          other: Քաղաքականության փաստաթղթեր
         press_release:
-          one: Մամլո հաղորդագրություն
-          other: Մամլո հաղորդագրություններ
+          one: Կոմյունիկե
+          other: Կոմյունիկեներ
         promotional:
-          one: Քարոզչական նյութ
-          other: Քարոզչական նյութներ
+          one: Գովազդային նյութ
+          other: Գովազդային նյութ
         publication:
           one: Հրապարակում
           other: Հրապարակումներ
         raib_report:
-          one:
-          other:
+          one: Երկաթուղային վթարների հետաքննության բաժանմունքի զեկույց
+          other: Երկաթուղային վթարների հետաքննության բաժանմունքի զեկույցներ
         regulation:
-          one:
-          other:
+          one: Կանոնադրություն
+          other: Կանոնադրություններ
         research:
           one: Հետազոտություն և վերլուծություն
-          other: Հետազոտություններ և վերլուծություններ
+          other: Հետազոտություն և վերլուծություն
         residential_property_tribunal_decision:
-          one:
-          other:
+          one: Անշարժ գույքի վերաբերյալ տրիբունալի որոշում
+          other: Անշարժ գույքի վերաբերյալ տրիբունալի որոշումներ
         service_sign_in:
-          one:
-          other:
+          one: Ծառայության մուտք
+          other: Ծառայության մուտք
         service_standard_report:
-          one:
-          other:
+          one: Ծառայության ստանդարտ զեկույց
+          other: Ծառայության ստանդարտ զեկույցներ
         speaking_notes:
-          one: Խոսքի գրառում
-          other: Խոսքի գրառումներ
+          one: Հրապարակային խոսքի ամփոփ տեղեկություն
+          other: Հրապարակային խոսքի ամփոփ տեղեկություն
         speech:
-          one: Ելույթ
-          other: Ելույթներ
+          one: Հրապարակային խոսք
+          other: Հրապարակային խոսքեր
         standard:
-          one:
-          other:
+          one: Ստանդարտ
+          other: Ստանդարտներ
         statement_to_parliament:
-          one: Դիմում խորհրդարան
-          other: Դիմումներ խորհրդարան
+          one: Հայտարարություն ուղղված խորհրդարանին
+          other: Հայտարարություններ ուղղված խորհրդարանին
         statistical_data_set:
-          one: Վիճակագրական տվյալ
-          other: Վիճակագրական տվյալներ
+          one: Վիճակագրական տվյալների ամբողջություն
+          other: Վիճակագրական տվյալների ամբողջություններ
         statistics_announcement:
-          one:
-          other:
+          one: Վիճակագրության հրապարակման հայտարարություն
+          other: Վիճակագրության հրապարակման հայտարարություններ
         statutory_guidance:
-          one:
-          other:
+          one: Կանոնադրական ուղեցույց
+          other: Կանոնադրական ուղեցույց
         take_part:
-          one:
-          other:
+          one: Մասնակցություն
+          other: Մասնակցություն
         tax_tribunal_decision:
-          one:
-          other:
+          one: Հարկային և լորդ կանցլերի տրիբունալի որոշում
+          other: Հարկային և լորդ կանցլերի տրիբունալի որոշումներ
         transcript:
-          one: Վերծանում
-          other: Վերծանումներ
+          one: Արձանագրություն
+          other: Արձանագրություններ
         transparency:
-          one: Բաց տեղեկատվություն
-          other: Բաց տեղեկատվություններ
+          one: Թափանցիկության տվյալներ
+          other: Թափանցիկության տվյալներ
         utaac_decision:
-          one:
-          other:
+          one: Վարչական բողոքների համար տրիբունալի որոշում
+          other: Վարչական բողոքների համար տրիբունալի որոշումներ
         world_location_news_article:
           one: Տեղեկատվական հոդված
           other: Տեղեկատվական հոդվածներ
         world_news_story:
-          one:
-          other:
+          one: Համաշխարհային տեղեկատվական նյութ
+          other: Համաշխարհային տեղեկատվական նյութեր
         written_statement:
-          one: Գրավոր դիմում խորհրդարան
-          other: Գրավոր դիմումներ խորհրդարան
-    corporate_information:
+          one: Խորհրդարանին ուղղված գրավոր հայտարարություն
+          other: Խորհրդարանին ուղղված գրավոր հայտարարություններ
+    about_page_path: "/government/organisations/%{organisation}/about"
+    administered_by: Կառավարվում է՝
+    breadcrumbs:
+      courts_and_tribunals: Դատարաններ և Տրիբունալներ
+      organisations: Կազմակերպություններ
+    contact:
+      contact_details: Կոնտակտային տվյալներ
+      contact_form: Կոնտակտային Ձև՝ %{title}
+      contact_organisation: Կոնտակտ %{organisation}
+      email: Էլ․ փոստ
+      telephone: Հեռախոս
+    corporate_information: Կորպորատիվ տեղեկություն
     document_types:
-      documents:
+      documents: Փաստաթղթեր
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Դիտել ամբողջական ուղեցույցը և կանոնակարգը
+        title: Ուղեցույց և կանոնակարգ
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Դիտել բոլոր նորություններն ու հաղորդակցությունները
+        title: Նորություններ և հաղորդակցություններ
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Դիտել քաղաքականության վերաբերյալ բոլոր փաստաթղթերը և խորհրդակցությունները
+        title: Քաղաքականության փաստաթղթեր և խորհրդակցություններ
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Դիտել բոլոր հետազոտությունները և վիճակագրությունը
+        title: Հետազոտություն և վիճակագրություն
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Դիտել բոլոր ծառայությունները
+        title: Ծառայություններ
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Դիտել տեղեկատվության ազատության և թափանցիկության բոլոր հրապարակումներ
+        title: Տեղեկատվության ազատության և թափանցիկության հրապարակումներ
+    errors_or_omissions_html: <p>Կա՞ն սխալներ կամ բացթողումներ։<a class="govuk-link"
+      href="/contact/govuk">Նշեք այստեղ</a>։ Ոչ գերատեսչական հասարակական կազմակերպությունների
+      պաշտոնական ցանկերի համար <a class="govuk-link" href="/government/collections/public-bodies">դիտել
+      հասարակական կազմակերպությունները</a>.</p>
+    featured: Հայտնի
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: Տեղեկատվության ազատության (FOI) կոնտակտային ձև
+      foi_exemption_html: |
+        Այս կազմակերպությունը չի ընգրկվում Տեղեկատվության ազատության մասին օրենքի շրջանակում:
+        Ընդգրկված կազմակերպությունների ցանկը դիտելու համար, այցելեք՝ <a href="%{foi_url}" class="govuk-link brand__color">օրենսդրությունը</a>։
+      freedom_of_information_act: Տեղեկատվության ազատության (FOI) օրենք
+      freedom_of_information_requests: Տեղեկատվության ազատության վերաբերյալ հարցումներ
+      make_an_foi_request: Տեղեկատվության ազատության (FOI) հարցում իրականացնել
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: Կարդալ Տեղեկատվության ազատության (FOI) օրենքի մասին և <a href="%{how_to_path}"
+          class="govuk-link brand__color">հարցում պատրաստելու մասին այստեղ</a>։
+        step2_html: Ստուդշգել <a href="%{our_releases_path}" class="govuk-link brand__color">մեր
+          նախորդ հրապարակումները՝</a> պարզելու, թե արդյոք ձեր հարցի պատասխանը այնտեղ
+          նշված չէ, թե ոչ։
+        step3_html: 'Նոր հայտ ներկայացնելու համար կապվեք մեզ հետ ստորև ներկայացված
+          տվյալների միջոցով:'
+    follow_us: Հետևել մեզ
+    hidden_share_link: Հետևել
+    high_profile_groups: Կարևոր խմբեր %{title}-ի շրջանակում
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: Աշխատանք և պայմանագրեր
+    latest_from: Վերջին տվյալները %{title}-ից
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name: "%{title} այժմ կոչվում է <a href='%{link_href}'>%{link_text}</a>"
+      devolved: "%{title} մաս է կազմում՝ <a href='%{link_href}'>%{link_text}</a>"
+      joining: "%{title} շուտով կներառվի GOV.UK կայքում"
+      left_gov: "%{title} այժմ անկախ է Միացյալ Թագավորության կառավարությունից"
+      merged: "%{title} դարձել է <a href='%{link_href}'>%{link_text}</a> մաս՝ %{updated}"
+      merged_no_date: "%{title} այժմ <a href='%{link_href}'>%{link_text}</a> մաս է
+        կազմում"
+      no_longer_exists: "%{title} փակ է"
+      no_website: "%{title} չունի վեբ կայք"
+      separate_website: "%{title} ունի a <a href='%{url}'>առանձին վեբ կայք</a>"
+      split: "%{title} փոխարինվել է հետևյալով՝ %{links}"
+    part_of: Մաս է՝
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: Մեր կառավարման մարմինը
+      chief_professional_officers: Գլխավոր մասնագիտական ծառայողները
+      military_personnel: Մեր ռազմական բարձրաստիճան պաշտոնյաները
+      ministers: Մեր նախարարները
+      special_representatives: Հատուկ ներկայացուցիչներ
+      traffic_commissioners: Տրանսպորտային հարցերով դատարան
+    read_more: Կարդալ ավելին մեր աշխատանքի մասին
+    search_for_department: Որոնել գերատեսչություն, գործակալություն կամ հասարակական
+      կազմակերպություն
+    see_all_latest_documents: Դիտել ամենավերջին բոլոր փաստաթղթերը
+    separate_website: առանձին վեբ կայք
+    services_and_information: Բոլոր %{acronym} ծառայություններն ու տեղեկությունները
     subscription:
-      email:
-      feed:
+      email: Ստանալ էլ․ հաղորդագրություններ
+      feed: Բաժանորդագրվել նորություւններին
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      adhoc_advisory_group: Հատուկ խորհրդատվական խումբ
+      advisory_ndpb: Խորհրդատվական ոչ գերատեսչական հասարակական կազմակերպություն
+      civil_service: Քաղաքացիական ծառայություն
+      executive_agency: Գործադիր մարմին
+      executive_ndpb: Գործադիր ոչ գերատեսչական հասարակական կազմակերպություն
+      independent_monitoring_body: Մշտադիտարկող անկախ մարմին
+      non_ministerial_department: Ոչ նախարարական գերատեսչություն
+      other: Այլ
+      public_corporation: Հասարակական կորպորացիա
+      tribunal: Տրիբունալ
+    view_all: ցույց տալ  բոլորը
+    view_less: ցույց տալ ավելի շատ
+    what_we_do: Ինչով է %{title} զբաղվում
     works_with_statement:
-      multiple:
-      one:
+      multiple: Աշխատում է %{works_wount_count} գործակալությունների և հասարակական
+        կազմակերպությունների հետ
+      one: Աշխատում է %{works_wount_count} հասարակական կազմակերպության հետ

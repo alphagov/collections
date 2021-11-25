@@ -1,5 +1,4 @@
----
 ko:
   world_wide_taxons:
-    take_the_survey:
-    test_banner:
+    take_the_survey: 개선할 수 있도록 설문조사를 수행하여 주십시오
+    test_banner: 이 페이지의 레이아웃에 대한 시험 버전입니다.

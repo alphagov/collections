@@ -1,407 +1,415 @@
----
 sk:
   organisations:
-    about_page_path:
-    administered_by:
-    breadcrumbs:
-      courts_and_tribunals:
-      organisations:
-    contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
     content_item:
       schema_name:
         aaib_report:
+          one: Správa Oddelenia pre vyšetrovanie leteckých nehôd
           few:
-          one:
-          other:
+          other: Správy Oddelenia pre vyšetrovanie leteckých nehôd
         announcement:
+          one: Oznámenie
           few:
-          one:
-          other:
+          other: Oznámenia
         asylum_support_decision:
+          one: Rozhodnutie tribunálu pre azylovú podporu
           few:
-          one:
-          other:
+          other: Rozhodnutia tribunálu pre azylovú podporu
         authored_article:
+          one: Autorský článok
           few:
-          one:
-          other:
+          other: Autorské články
         business_finance_support_scheme:
+          one: Schéma podpory financovania podnikov
           few:
-          one:
-          other:
+          other: Systémy podpory financovania podnikov
         case_study:
+          one: Prípadová štúdia
           few:
-          one:
-          other:
+          other: Prípadové štúdie
         closed_consultation:
+          one: Uzavretá konzultácia
           few:
-          one:
-          other:
+          other: Uzavreté konzultácie
         cma_case:
+          one: Prípad Úradu pre hospodársku súťaž a trhy
           few:
-          one:
-          other:
+          other: Prípady Úradu pre hospodársku súťaž a trhy
         coming_soon:
+          one: Už čoskoro
           few:
-          one:
-          other:
+          other: Už čoskoro
         consultation:
+          one: Konzultácia
           few:
-          one:
-          other:
+          other: Konzultácie
         consultation_outcome:
+          one: Výsledok konzultácie
           few:
-          one:
-          other:
+          other: Výsledky konzultácie
         corporate_information_page:
+          one: Informačná stránka
           few:
-          one:
-          other:
+          other: Informačné stránky
         corporate_report:
+          one: Podniková správa
           few:
-          one:
-          other:
+          other: Podnikové správy
         correspondence:
+          one: Korešpondencia
           few:
-          one:
-          other:
+          other: Korešpondencie
         countryside_stewardship_grant:
+          one: Grant na správu vidieka
           few:
-          one:
-          other:
+          other: Granty na správu vidieka
         decision:
+          one: Rozhodnutie
           few:
-          one:
-          other:
+          other: Rozhodnutia
         detailed_guide:
+          one: Poradenstvo
           few:
-          one:
-          other:
+          other: Poradenstvo
         dfid_research_output:
+          one: Výstup výskumu pre rozvoj
           few:
-          one:
-          other:
+          other: Výstupy výskumu pre rozvoj
         document_collection:
+          one: Zbierka
           few:
-          one:
-          other:
+          other: Zbierky
         draft_text:
+          one: Návrh textu
           few:
-          one:
-          other:
+          other: Návrhy textov
         drug_safety_update:
+          one: Aktualizácia bezpečnosti liekov
           few:
-          one:
-          other:
+          other: Aktualizácie bezpečnosti liekov
         employment_appeal_tribunal_decision:
+          one: Rozhodnutie odvolacieho pracovného súdu
           few:
-          one:
-          other:
+          other: Rozhodnutia odvolacieho pracovného súdu
         employment_tribunal_decision:
+          one: Rozhodnutie pracovného súdu
           few:
-          one:
-          other:
+          other: Rozhodnutia pracovného súdu
         esi_fund:
+          one: Európsky štrukturálny a investičný fond (EŠIF)
           few:
-          one:
-          other:
+          other: Európske štrukturálne a investičné fondy (EŠIF)
         fatality_notice:
+          one: Oznámenie o úmrtí
           few:
-          one:
-          other:
+          other: Oznámenia o úmrtí
         foi_release:
+          one: Zverejnenie slobody informácií
           few:
-          one:
-          other:
+          other: Zverejnenia slobody informácií
         form:
+          one: Formulár
           few:
-          one:
-          other:
+          other: Formuláre
         government_response:
+          one: Odpoveď vlády
           few:
-          one:
-          other:
+          other: Odpovede vlády
         guidance:
+          one: Poradenstvo
           few:
-          one:
-          other:
+          other: Poradenstvo
         impact_assessment:
+          one: Posúdenie vplyvu
           few:
-          one:
-          other:
+          other: Posúdenia vplyvu
         imported:
+          one: importované - čaká sa na typ
           few:
-          one:
-          other:
+          other: importované - čaká sa na typ
         independent_report:
+          one: Nezávislá správa
           few:
-          one:
-          other:
+          other: Nezávislé správy
         international_development_fund:
+          one: Medzinárodné financovanie rozvoja
           few:
-          one:
-          other:
+          other: Medzinárodné financovanie rozvoja
         international_treaty:
+          one: Medzinárodná zmluva
           few:
-          one:
-          other:
+          other: Medzinárodné zmluvy
         maib_report:
+          one: Správa oddelenia pre vyšetrovanie námorných nehôd
           few:
-          one:
-          other:
+          other: Správy oddelenia pre vyšetrovanie námorných nehôd
         map:
+          one: Mapa
           few:
-          one:
-          other:
+          other: Mapy
         medical_safety_alert:
+          one: Upozornenia a stiahnutia liekov a zdravotníckych pomôcok
           few:
-          one:
-          other:
+          other: Upozornenia a stiahnutia liekov a zdravotníckych pomôcok
         national:
+          one: Oznámenie o národných štatistikách
           few:
-          one:
-          other:
+          other: Oznámenia o národných štatistikách
         national_statistics:
+          one: Národné štatistiky
           few:
-          one:
-          other:
+          other: Národné štatistiky
         national_statistics_announcement:
+          one: Oznámenie o národných štatistikách
           few:
-          one:
-          other:
+          other: Oznámenia o národných štatistikách
         news_article:
+          one: Spravodajský článok
           few:
-          one:
-          other:
+          other: Spravodajské články
         news_story:
+          one: Spravodajský príbeh
           few:
-          one:
-          other:
+          other: Spravodajské príbehy
         notice:
+          one: Oznámenie
           few:
-          one:
-          other:
+          other: Oznámenia
         official:
+          one: Oficiálne štatistické oznámenie
           few:
-          one:
-          other:
+          other: Oficiálne štatistické oznámenia
         official_statistics:
+          one: Oficiálne štatistiky
           few:
-          one:
-          other:
+          other: Oficiálne štatistiky
         official_statistics_announcement:
+          one: Oficiálne štatistické oznámenie
           few:
-          one:
-          other:
+          other: Oficiálne štatistické oznámenia
         open_consultation:
+          one: Otvorená konzultácia
           few:
-          one:
-          other:
+          other: Otvorené konzultácie
         oral_statement:
+          one: Ústne vyhlásenie pred Parlamentom
           few:
-          one:
-          other:
+          other: Ústne vyhlásenia pred Parlamentom
         policy:
+          one: Politika
           few:
-          one:
-          other:
+          other: Politiky
         policy_paper:
+          one: Strategický dokument
           few:
-          one:
-          other:
+          other: Strategické dokumenty
         press_release:
+          one: Tlačová správa
           few:
-          one:
-          other:
+          other: Tlačové správy
         promotional:
+          one: Propagačné materiály
           few:
-          one:
-          other:
+          other: Propagačné materiály
         publication:
+          one: Publikácia
           few:
-          one:
-          other:
+          other: Publikácie
         raib_report:
+          one: Správa Oddelenia pre vyšetrovanie železničných nehôd
           few:
-          one:
-          other:
+          other: Správy Oddelenia pre vyšetrovanie železničných nehôd
         regulation:
+          one: Nariadenie
           few:
-          one:
-          other:
+          other: Nariadenia
         research:
+          one: Výskum a analýza
           few:
-          one:
-          other:
+          other: Výskum a analýza
         residential_property_tribunal_decision:
+          one: Rozhodnutie tribunálu pre obytné nehnuteľnosti
           few:
-          one:
-          other:
+          other: Rozhodnutia tribunálu pre obytné nehnuteľnosti
         service_sign_in:
+          one: Prihlásiť sa do služby
           few:
-          one:
-          other:
+          other: Prihlásiť sa do služby
         service_standard_report:
+          one: Správa o štandardných službách
           few:
-          one:
-          other:
+          other: Správy o štandardných službách
         speaking_notes:
+          one: Poznámky k prejavu
           few:
-          one:
-          other:
+          other: Poznámky k prejavu
         speech:
+          one: Prejav
           few:
-          one:
-          other:
+          other: Prejay
         standard:
+          one: Štandard
           few:
-          one:
-          other:
+          other: Štandardy
         statement_to_parliament:
+          one: Vyhlásenie pre Parlament
           few:
-          one:
-          other:
+          other: Vyhlásenia pre Parlament
         statistical_data_set:
+          one: Súbor štatistických údajov
           few:
-          one:
-          other:
+          other: Súbory štatistických údajov
         statistics_announcement:
+          one: Oznámenie o vydaní štatistík
           few:
-          one:
-          other:
+          other: Oznámenia o vydaní štatistík
         statutory_guidance:
+          one: Zákonné usmernenia
           few:
-          one:
-          other:
+          other: Zákonné usmernenia
         take_part:
+          one: Zúčastniť sa
           few:
-          one:
-          other:
+          other: Zúčastniť sa
         tax_tribunal_decision:
+          one: Rozhodnutie daňového a kancelárskeho súdu
           few:
-          one:
-          other:
+          other: Rozhodnutia daňového a kancelárskeho súdu
         transcript:
+          one: Prepis
           few:
-          one:
-          other:
+          other: Prepisy
         transparency:
+          one: Údaje o transparentnosti
           few:
-          one:
-          other:
+          other: Údaje o transparentnosti
         utaac_decision:
+          one: Rozhodnutie správneho odvolacieho súdu
           few:
-          one:
-          other:
+          other: Rozhodnutia správneho odvolacieho súdu
         world_location_news_article:
+          one: Spravodajský článok
           few:
-          one:
-          other:
+          other: Spravodajské články
         world_news_story:
+          one: Svetové spravodajstvo
           few:
-          one:
-          other:
+          other: Svetové spravodajstvá
         written_statement:
+          one: Písomné vyhlásenie pre Parlament
           few:
-          one:
-          other:
-    corporate_information:
+          other: Písomné vyhlásenia pre Parlament
+    about_page_path: "/government/organisations/%{organisation}/about"
+    administered_by: Spravuje
+    breadcrumbs:
+      courts_and_tribunals: Súdy a tribunály
+      organisations: Organizácie
+    contact:
+      contact_details: Kontaktné údaje
+      contact_form: 'Kontaktný formulár: %{title}'
+      contact_organisation: Kontakt %{organisation}
+      email: E-mail
+      telephone: Telefón
+    corporate_information: Firemné informácie
     document_types:
-      documents:
+      documents: Dokumenty
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Pozrite si všetky usmernenia a nariadenia
+        title: Usmernenia a nariadenia
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Pozrite si všetky správy a komunikáciu
+        title: Novinky a komunikácia
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Pozrite si všetky strategické dokumenty a konzultácie
+        title: Politické dokumenty a konzultácie
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Pozrite si všetky výskumy a štatistiky
+        title: Výskum a štatistiky
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Pozrite si všetky služby
+        title: Služby
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Pozrite si všetky informácie o transparentnosti a slobode informácií
+        title: Transparentnosť a slobodné zverejňovanie informácií
+    errors_or_omissions_html: <p>Chyby alebo opomenutia? <a class="govuk-link" href="/contact/govuk">Oznámte
+      nám ich tu</a>. Oficiálne zoznamy verejných orgánov, <a class="govuk-link" href="/government/collections/public-bodies">ktoré
+      nie sú ministerstvami, nájdete na stránke verejných orgánov</a>.</p>
+    featured: Odporúčané
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: Kontaktný formulár FOI
+      foi_exemption_html: |
+        Na túto organizáciu sa nevzťahuje zákon o slobodnom prístupe k informáciám.
+        Ak chcete zistiť, ktoré organizácie sú zahrnuté, pozrite si <a href="%{foi_url}" class="govuk-link brand__color">právne predpisy</a>.
+      freedom_of_information_act: Zákon o slobodnom prístupe k informáciám (FOI)
+      freedom_of_information_requests: Žiadosti o slobodný prístup k informáciám
+      make_an_foi_request: Podajte žiadosť o informácie FOI
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: Prečítajte si o zákone o slobodnom prístupe k informáciám (FOI)
+          a <a href="%{how_to_path}" class="govuk-link brand__color">o tom, ako podať
+          žiadosť</a>.
+        step2_html: Pozrite si <a href="%{our_releases_path}" class="govuk-link brand__color">naše
+          predchádzajúce vydania</a> a zistite, či sme na vašu otázku už odpovedali.
+        step3_html: Podajte novú žiadosť tak, že nás kontaktujete pomocou nižšie uvedených
+          údajov.
+    follow_us: Sledujte nás
+    hidden_share_link: Sledujte nás na
+    high_profile_groups: Vysokoprofilové skupiny v rámci %{title}
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: Pracovné miesta a zmluvy
+    latest_from: Najnovšie od %{title}
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name: "%{title} sa teraz nazýva <a href='%{link_href}'>%{link_text}</a>"
+      devolved: "%{title} je telo <a href='%{link_href}'>%{link_text}</a>"
+      joining: "%{title} sa čoskoro začlení do GOV.UK."
+      left_gov: "%{title} je teraz nezávislá od vlády Spojeného kráľovstva."
+      merged: "%{title} sa stalo súčasťou  <a href='%{link_href}'>%{link_text}</a>
+        in %{updated}"
+      merged_no_date: "%{title} je teraz súčasťou <a href='%{link_href}'>%{link_text}</a>"
+      no_longer_exists: "%{title} uzavrelo"
+      no_website: "%{title} nemá webové stránky"
+      separate_website: "%{title} má <a href='%{url}'>samostatnú webovú stránku</a>"
+      split: "%{title} bolo nahradené %{links}"
+    part_of: Časť
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: Náš manažment
+      chief_professional_officers: Vedúci odborní pracovníci
+      military_personnel: Naši vysokí vojenskí predstavitelia
+      ministers: Naši ministri
+      special_representatives: Osobitní zástupcovia
+      traffic_commissioners: Dopravní komisári
+    read_more: Prečítajte si viac o tom, čo robíme
+    search_for_department: Vyhľadajte oddelenie, agentúru alebo verejný orgán
+    see_all_latest_documents: Pozrite si všetky najnovšie dokumenty
+    separate_website: samostatná webová stránka
+    services_and_information: Všetky %{acronym} služby a informácie
     subscription:
-      email:
-      feed:
+      email: Dostávať e-maily
+      feed: Prihlásiť sa k odberu
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      adhoc_advisory_group: Ad hoc poradná skupina
+      advisory_ndpb: Poradný verejný orgán mimo rezortu
+      civil_service: Štátna služba
+      executive_agency: Výkonná agentúra
+      executive_ndpb: Výkonný verejný orgán mimo rezortu
+      independent_monitoring_body: Nezávislý monitorovací orgán
+      non_ministerial_department: Oddelenie, ktoré nie je ministerstvom
+      other: Iné
+      public_corporation: Verejnoprávna korporácia
+      tribunal: Súd
+    view_all: zobraziť všetko
+    view_less: zobraziť menej
+    what_we_do: Čo robí %{title}
     works_with_statement:
-      multiple:
-      one:
+      multiple: Spolupracuje s %{works_with_count} agentúrami a verejnými orgánmi
+      one: Pracuje s verejným orgánom %{works_with_count}

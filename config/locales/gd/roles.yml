@@ -1,17 +1,17 @@
----
 gd:
   roles:
-    find_out_more_html:
     heading:
-      few:
-      one:
-      other:
+      one: Ról
       two:
+      few:
+      other: Róil
+    find_out_more_html: Chun níos mó a fhoghlaim faoi na hiar-shealbhóirí, féach ar
+      ár gcuid %{link}.
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: Sealbhóir poist reatha
+      previous_holders: Sealbhóirí roimhe seo
+      responsibilities: Freagrachtaí
+    ministerial: Ról aireachta
+    past: pas
+    previous_holders: Iarchomhaltaí na feidhme seo
+    read_more: Níos mó a fhoghlaim faoin ngné seo

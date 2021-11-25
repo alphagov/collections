@@ -1,5 +1,4 @@
----
 vi:
   world_wide_taxons:
-    take_the_survey:
-    test_banner:
+    take_the_survey: Làm bài khảo sát để giúp chúng tôi cải thiện
+    test_banner: Đây là phiên bản bố cục thử nghiệm của trang này.

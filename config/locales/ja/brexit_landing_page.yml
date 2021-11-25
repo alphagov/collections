@@ -1,40 +1,53 @@
----
 ja:
   brexit_landing_page:
     campaign_links:
-      lead_in:
-      lead_out:
-      links:
+      lead_in: 次の場合は、何を変更する必要があるかをご確認ください：
+      lead_out: ご自分のビジネスや家族のためにする必要のある事柄の<a href="/transition-check/questions" class="govuk-link"
+        data-module="gem-track-click" data-track-action="/transition-check/questions"
+        data-track-category="transition-landing-page" data-track-label="Get the complete
+        list">完全なリスト</a> をご入手ください。
     comms:
-      links:
-      read_transcript:
-    comms_header:
-    data_list_title:
-    email_mailto_subject:
-    guidance_header:
-    meta_description:
-    meta_title:
+      read_transcript: このビデオの原稿を読む
+    comms_header: お知らせ
+    data_list_title: 'Brexitランディングページ: %{header}'
+    email_mailto_subject: '英国の新しい出発: さあ始めましょう - GOV.UK'
+    guidance_header: 企業や市民の変化
+    meta_description: 旅行や欧州とのビジネスなどに適用されるBrexitの新ルールをご紹介します。 Brexitチェッカーを使って、パーソナライズされたアクションリストを入手してください。
+    meta_title: Brexit
     no_cookies:
-      change_settings_text:
-      icon_text:
-      or_text:
-      to_watch_text:
-      watch_link_text:
-    page_header:
-    page_header_explainer:
+      change_settings_text: クッキー設定の変更
+      icon_text: ビデオ
+      or_text: または
+      to_watch_text: ビデオを見る
+      watch_link_text: YouTubeで見る
+    page_header: Brexit:<br/>新しいルールができました
+    page_header_explainer: 旅行や欧州とのビジネスなどにも新しいルールが適用されます。 Brexitチェッカーを使用して、ご自分のビジネス、ご家族のためにパーソナライズされたアクションリストを入手してください。
     sections:
-      aria_string_suffix:
-      guidance_and_regulation:
-      news_and_communications:
-      policy_and_engagement:
-      research_and_statistics:
-      services:
-      transparency:
-    share_links:
-    topic_section_header:
-    topic_section_subheading:
-    video_section_description:
-    video_section_link:
-    video_section_title:
-    video_section_transcription_summary:
-    video_section_transcription_text:
+      aria_string_suffix: Brexit関連
+      guidance_and_regulation: ガイダンスと規制
+      news_and_communications: ニュースとコミュニケーション
+      policy_and_engagement: 政策文書と審議
+      research_and_statistics: 調査と統計
+      services: サービス
+      transparency: 情報開示の透明性と自由
+    share_links: このページを共有
+    take_action_list:
+      amber: 変更
+      green: 移動
+      red: 確認
+    take_action_start_now: Brexitチェッカー：今すぐ開始
+    take_action_start_now_link: "/移行チェック/質問"
+    topic_section_header: すべてのBrexit情報
+    topic_section_subheading: Brexitに関連するすべての情報を閲覧する
+    video_section_description: '<p>ヨーロッパとのビジネスは変化しました。輸出、輸入、関税、データ、雇用に関する新しい規則に従う必要があります。</p>
+      <p>ビデオを見て、新しい規則がビジネスにとって何を意味するかをご確認ください。<a href="/transition-check/questions"
+      class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions"
+      data-track-category="transition-landing-page" data-track-label="use the Brexit
+      checker"></a>して、パーソナライズされたアクションリストを取得する。</p>
+
+'
+    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
+    video_section_title: ビジネスの継続性
+    video_section_transcription_summary: ビデオの原稿を表示する
+    video_section_transcription_text: "<p>企業、英国はEUを離脱し、新しい規制が適用されるようになりました。</p> \n<p>ビジネスを継続するには、gov.uk/transitionのBrexitチェッカーツールを使用して、ビジネスに合わせた個別のアクションを入手して下さい。<
+      /p> \n<p>ビジネスを続けましょう。</p>\n"

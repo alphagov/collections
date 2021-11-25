@@ -1,481 +1,486 @@
----
 hr:
   organisations:
-    about_page_path:
-    administered_by:
-    breadcrumbs:
-      courts_and_tribunals:
-      organisations:
-    contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
     content_item:
       schema_name:
         aaib_report:
+          one: Izvješće podružnice za istraživanje zračnih nesreća
           few:
           many:
-          one:
-          other:
+          other: Izvješća podružnice za istraživanje zračnih nesreća
         announcement:
+          one: Obavijest
           few:
           many:
-          one:
-          other:
+          other: Obavijesti
         asylum_support_decision:
+          one: Odluka tribunala o azilu
           few:
           many:
-          one:
-          other:
+          other: Odluke tribunala o azilu
         authored_article:
+          one: Autorski članak
           few:
           many:
-          one:
-          other:
+          other: Autorski članci
         business_finance_support_scheme:
+          one: Shema potpore poslovnom financiranju
           few:
           many:
-          one:
-          other:
+          other: Sheme potpore poslovnom financiranju
         case_study:
+          one: Studija slučaja
           few:
           many:
-          one:
-          other:
+          other: Studije slučaja
         closed_consultation:
+          one: 'Zatvorena konzultacija '
           few:
           many:
-          one:
-          other:
+          other: 'Zatvorene konzultacije '
         cma_case:
+          one: Slučaj tijela za tržišno natjecanje i tržišta
           few:
           many:
-          one:
-          other:
+          other: Slučajevi tijela za tržišno natjecanje i tržišta
         coming_soon:
+          one: Dolazi uskoro
           few:
           many:
-          one:
-          other:
+          other: Dolazi uskoro
         consultation:
+          one: Konzultacija
           few:
           many:
-          one:
-          other:
+          other: Konzultacije
         consultation_outcome:
+          one: Ishod konzultacija
           few:
           many:
-          one:
-          other:
+          other: Ishodi konzultacija
         corporate_information_page:
+          one: Stranica s informacijama
           few:
           many:
-          one:
-          other:
+          other: Stranice s informacijama
         corporate_report:
+          one: Korporativno izvješće
           few:
           many:
-          one:
-          other:
+          other: Korporativna izvješća
         correspondence:
+          one: Prepiska
           few:
           many:
-          one:
-          other:
+          other: Prepiske
         countryside_stewardship_grant:
+          one: Potpora za upravu na selu
           few:
           many:
-          one:
-          other:
+          other: Potpore za upravu na selu
         decision:
+          one: Odluka
           few:
           many:
-          one:
-          other:
+          other: Odluke
         detailed_guide:
+          one: Upute
           few:
           many:
-          one:
-          other:
+          other: Upute
         dfid_research_output:
+          one: Istraživanje za razvojni rezultat
           few:
           many:
-          one:
-          other:
+          other: Istraživanje za razvojne rezultate
         document_collection:
+          one: Kolekcija
           few:
           many:
-          one:
-          other:
+          other: Kolekcije
         draft_text:
+          one: Nacrt teksta
           few:
           many:
-          one:
-          other:
+          other: Nacrt tekstova
         drug_safety_update:
+          one: Novost o sigurnosti lijekova
           few:
           many:
-          one:
-          other:
+          other: Novosti o sigurnosti lijekova
         employment_appeal_tribunal_decision:
+          one: Odluka žalbenog suda pri zapošljavanju
           few:
           many:
-          one:
-          other:
+          other: Odluke žalbenog suda pri zapošljavanju
         employment_tribunal_decision:
+          one: Odluka suda za zapošljavanje
           few:
           many:
-          one:
-          other:
+          other: Odluke suda za zapošljavanje
         esi_fund:
+          one: Europski strukturni i investicijski fondovi (ESIF)
           few:
           many:
-          one:
-          other:
+          other: Europski strukturni i investicijski fond (ESIF)
         fatality_notice:
+          one: Obavijest o smrtnom slučaju
           few:
           many:
-          one:
-          other:
+          other: Obavijest o smrtnim slučajevima
         foi_release:
+          one: Izdanja slobode informacija
           few:
           many:
-          one:
-          other:
+          other: Izdanje slobode informacija
         form:
+          one: Obrazac
           few:
           many:
-          one:
-          other:
+          other: Obrasci
         government_response:
+          one: Odgovor vlade
           few:
           many:
-          one:
-          other:
+          other: Odgovori vlade
         guidance:
+          one: Upute
           few:
           many:
-          one:
-          other:
+          other: Upute
         impact_assessment:
+          one: Procjena utjecaja
           few:
           many:
-          one:
-          other:
+          other: Procjene utjecaja
         imported:
+          one: uvezeno - čekajući tip
           few:
           many:
-          one:
-          other:
+          other: uvezeno - čekajući tip
         independent_report:
+          one: Nezavisno izvješće
           few:
           many:
-          one:
-          other:
+          other: Nezavisna izvješća
         international_development_fund:
+          one: Financiranje međunarodnog razvoja
           few:
           many:
-          one:
-          other:
+          other: Financiranje međunarodnog razvoja
         international_treaty:
+          one: Međunarodni ugovor
           few:
           many:
-          one:
-          other:
+          other: Međunarodni ugovori
         maib_report:
+          one: Izvješće Podružnice za istraživanje pomorskih nesreća
           few:
           many:
-          one:
-          other:
+          other: Izvješća Podružnice za istraživanje pomorskih nesreća
         map:
+          one: Karta
           few:
           many:
-          one:
-          other:
+          other: Karte
         medical_safety_alert:
+          one: Upozorenja i opozivi za lijekove i medicinska sredstva
           few:
           many:
-          one:
-          other:
+          other: Upozorenja i opozivi za lijekove i medicinska sredstva
         national:
+          one: Najava nacionalne statistike
           few:
           many:
-          one:
-          other:
+          other: Najave nacionalne statistike
         national_statistics:
+          one: Nacionalna statistika
           few:
           many:
-          one:
-          other:
+          other: Nacionalna statistika
         national_statistics_announcement:
+          one: Najava nacionalne statistike
           few:
           many:
-          one:
-          other:
+          other: Najave nacionalne statistike
         news_article:
+          one: Novinski članak
           few:
           many:
-          one:
-          other:
+          other: Novinski članci
         news_story:
+          one: Novosti
           few:
           many:
-          one:
-          other:
+          other: Novosti
         notice:
+          one: Obavijest
           few:
           many:
-          one:
-          other:
+          other: Obavijesti
         official:
+          one: Objava službene statistike
           few:
           many:
-          one:
-          other:
+          other: Objave službene statistike
         official_statistics:
+          one: Službena statistika
           few:
           many:
-          one:
-          other:
+          other: Službena statistika
         official_statistics_announcement:
+          one: Objava službene statistike
           few:
           many:
-          one:
-          other:
+          other: Objave službene statistike
         open_consultation:
+          one: Otvorena konzultacija
           few:
           many:
-          one:
-          other:
+          other: Otvorene konzultacije
         oral_statement:
+          one: Usmene izjave Parlamentu
           few:
           many:
-          one:
-          other:
+          other: Usmena izjava Parlamentu
         policy:
+          one: Pravilo
           few:
           many:
-          one:
-          other:
+          other: Pravila
         policy_paper:
+          one: Dokument o pravilima
           few:
           many:
-          one:
-          other:
+          other: Dokumenti o pravilima
         press_release:
+          one: Saopćenja za javnost
           few:
           many:
-          one:
-          other:
+          other: Saopćenje za javnost
         promotional:
+          one: Promidžbeni materijal
           few:
           many:
-          one:
-          other:
+          other: Promidžbeni materijal
         publication:
+          one: Izdanja
           few:
           many:
-          one:
-          other:
+          other: Izdanje
         raib_report:
+          one: Izvješće podružnice za istraživanje željezničkih nesreća
           few:
           many:
-          one:
-          other:
+          other: Izvješća podružnice za istraživanje željezničkih nesreća
         regulation:
+          one: Regulacija
           few:
           many:
-          one:
-          other:
+          other: Regulacije
         research:
+          one: Istraživanje i analiza
           few:
           many:
-          one:
-          other:
+          other: Istraživanje i analiza
         residential_property_tribunal_decision:
+          one: Odluka suda stambene imovine
           few:
           many:
-          one:
-          other:
+          other: Odluke suda stambene imovine
         service_sign_in:
+          one: Prijava na uslugu
           few:
           many:
-          one:
-          other:
+          other: Prijava na uslugu
         service_standard_report:
+          one: Standardno izvješće usluge
           few:
           many:
-          one:
-          other:
+          other: Standardna izvješća usluge
         speaking_notes:
+          one: Govorne bilješke
           few:
           many:
-          one:
-          other:
+          other: Govorne bilješke
         speech:
+          one: Govor
           few:
           many:
-          one:
-          other:
+          other: Govori
         standard:
+          one: Standard
           few:
           many:
-          one:
-          other:
+          other: Standardi
         statement_to_parliament:
+          one: Izjava Parlamentu
           few:
           many:
-          one:
-          other:
+          other: Izjave Parlamentu
         statistical_data_set:
+          one: Skup statističkih podataka
           few:
           many:
-          one:
-          other:
+          other: Skupovi statističkih podataka
         statistics_announcement:
+          one: Najava objavljivanja statistike
           few:
           many:
-          one:
-          other:
+          other: Najave objavljivanja statistike
         statutory_guidance:
+          one: Zakonske smjernice
           few:
           many:
-          one:
-          other:
+          other: Zakonske smjernice
         take_part:
+          one: Sudjelovati
           few:
           many:
-          one:
-          other:
+          other: Sudjelovati
         tax_tribunal_decision:
+          one: Odluka tribunala i poreznog suda
           few:
           many:
-          one:
-          other:
+          other: Odluke tribunala i poreznog suda
         transcript:
+          one: Prijepis
           few:
           many:
-          one:
-          other:
+          other: Prijepisi
         transparency:
+          one: Podaci o transparentnosti
           few:
           many:
-          one:
-          other:
+          other: Podaci o transparentnosti
         utaac_decision:
+          one: Odluka upravnog žalbenog suda
           few:
           many:
-          one:
-          other:
+          other: Odluke upravnog žalbenog suda
         world_location_news_article:
+          one: Novinski članak
           few:
           many:
-          one:
-          other:
+          other: Novinski članci
         world_news_story:
+          one: Vijest iz svijeta
           few:
           many:
-          one:
-          other:
+          other: Vijesti iz svijeta
         written_statement:
+          one: Pismena izjava Parlamentu
           few:
           many:
-          one:
-          other:
-    corporate_information:
+          other: Pismene izjave Parlamentu
+    about_page_path: "/government/organisations/%{organisation}/about"
+    administered_by: Administrira
+    breadcrumbs:
+      courts_and_tribunals: Sudovi i tribunali
+      organisations: Organizacije
+    contact:
+      contact_details: Kontakt podaci
+      contact_form: 'Obrazac za kontakt: %{title}'
+      contact_organisation: Kontaktirajte %{organization}
+      email: E -pošta
+      telephone: Telefon
+    corporate_information: Korporativne informacije
     document_types:
-      documents:
+      documents: Dokumenti
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Pogledajte sve smjernice i propise
+        title: Upute i propisi
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Pogledajte sve vijesti i komunikacije
+        title: Vijesti i komunikacije
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Pogledajte sve dokumente o pravilima i konzultacije
+        title: Dokumenti o pravilima i konzultacije
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Pogledajte sva istraživanja i statistiku
+        title: Istraživanje i statistika
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Pogledajte sve usluge
+        title: Usluge
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Pogledajte sve objave o transparentnosti i slobodi informacija
+        title: Transparentnost i sloboda objavljivanja informacija
+    errors_or_omissions_html: <p>Pogreške ili propusti? <a class="govuk-link" href="/contact/govuk">Recite
+      nam ovdje</a>. Za službene popise javnih tijela koja nisu odjela <a class="govuk-link"
+      href="/government/collections/public-bodies">pogledajte javna tijela</a>.</p>
+    featured: Istaknuto
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: Kontakt forma za Slobodu Informacija
+      foi_exemption_html: Ova organizacija nije obuhvaćena Zakonom o slobodi pristupa
+        informacijama. Da biste vidjeli koje su organizacije uključene, pogledajte
+        <a href="%{foi_url}" class="govuk-link brand__color">zakonodavstvo</a>.
+      freedom_of_information_act: Zakon o slobodi pristupa informacijama (FOI)
+      freedom_of_information_requests: Zahtjevi za slobodu pristupa informacijama
+      make_an_foi_request: Učinite zahtjev za Slobodu pristupa informacijama
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: Pročitajte Zakon o slobodi informacija (FOI) i <a href="%{how_to_path}"
+          class="govuk-link brand__color">kako podnijeti zahtjev</a>.
+        step2_html: Provjerite <a href="%{our_releases_path}" class="govuk-link brand__color">naša
+          prethodna izdanja</a> da vidite jesmo li već odgovorili na vaše pitanje.
+        step3_html: Učinite novi zahtjev kontaktirajući nas koristeći detalje ispod.
+    follow_us: Prati nas
+    hidden_share_link: Slijedi
+    high_profile_groups: Grupe visokog profila unutar %{title}
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: Poslovi i ugovori
+    latest_from: Najnovije od %{title}
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name: "%{title} sada se naziva <a href='%{link_href}'>%{link_text}</a>"
+      devolved: "%{title} je tijelo od <a href='%{link_href}'>%{link_text}</a>"
+      joining: " %{title} će uskoro biti uključen u GOV.UK"
+      left_gov: "%{title} sada je neovisan o britanskoj vladi"
+      merged: "%{title} postao je dio <a href='%{link_href}'>%{link_text}</a> in %{updated}"
+      merged_no_date: "%{title} sada je dio <a href='%{link_href}'>%{link_text}</a>"
+      no_longer_exists: "%{title} je zatvoren"
+      no_website: "%{title} nema web lokaciju"
+      separate_website: "%{title} ima <ahref='%{url}'>zasebnu web lokaciju</a>"
+      split: "%{title} zamijenjeno je %{links}"
+    part_of: Dio
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: Našeg menadžmenta
+      chief_professional_officers: Glavni stručni časnici
+      military_personnel: Naši visoki vojni dužnosnici
+      ministers: Naši ministri
+      special_representatives: Posebni predstavnici
+      traffic_commissioners: Povjerenici za promet
+    read_more: Pročitajte više o tome što radimo
+    search_for_department: Potražite odjel, agenciju ili javno tijelo
+    see_all_latest_documents: Pogledajte sve najnovije dokumente
+    separate_website: zasebna web stranica
+    services_and_information: Sve %{acronym} usluge i informacije
     subscription:
-      email:
-      feed:
+      email: Dobijte e -poštu
+      feed: Pretplatite se na feed
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      adhoc_advisory_group: Ad-hoc savjetodavna skupina
+      advisory_ndpb: Savjetodavno javno tijelo koje nije odjel
+      civil_service: Državna služba
+      executive_agency: Izvršna agencija
+      executive_ndpb: Izvršno javno tijelo koje nije odjel
+      independent_monitoring_body: Nezavisno tijelo za nadzor
+      non_ministerial_department: Odjel koji nije ministarski
+      other: Ostalo
+      public_corporation: Javna korporacija
+      tribunal: Sud
+    view_all: vidi sve
+    view_less: vidi manje
+    what_we_do: 'Što %{title} radi '
     works_with_statement:
-      multiple:
-      one:
+      multiple: Surađuje s %{works_with_count} agencijama i javnim tijelima
+      one: Radi s %{works_with_count} javnim tijelom

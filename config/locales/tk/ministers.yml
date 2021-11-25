@@ -1,9 +1,8 @@
----
 tk:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Ministrler Kabineti hem gatnaşýar
+    by_department: Pudaklaryň ministrleri
+    cabinet: Kabinet ministrleri
+    govuk_title: Ministrler - GOV.UK
+    title: Ministrler
+    whips: Gözegçiler

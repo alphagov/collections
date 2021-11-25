@@ -1,16 +1,16 @@
----
 lt:
   roles:
-    find_out_more_html:
     heading:
+      one: Funkcija
       few:
-      one:
-      other:
+      other: Vaidmenys
+    find_out_more_html: Daugiau informacijos apie žmones, atliekančius šią funkciją
+      pateikiama mūsų %{link} skyriuje.
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: Dabar funkciją atliekantis asmuo
+      previous_holders: Anksčiau funkciją atlikę asmenys
+      responsibilities: Pareigos
+    ministerial: Funkcija ministerijoje
+    past: praeitis
+    previous_holders: Anksčiau funkciją atlikę asmenys
+    read_more: Daugiau informacijos apie šią funkciją

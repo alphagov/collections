@@ -1,4 +1,3 @@
----
 it:
   shared:
     breadcrumbs_home:
@@ -7,6 +6,6 @@ it:
       title:
     get_emails:
     language_direction:
-    language_name: Italiano
+    language_name:
     topics:
       title:

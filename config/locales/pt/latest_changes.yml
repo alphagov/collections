@@ -1,6 +1,5 @@
----
 pt:
   latest_changes:
-    next:
-    previous:
-    title:
+    next: Seguinte
+    previous: Anterior
+    title: Documentos recentes

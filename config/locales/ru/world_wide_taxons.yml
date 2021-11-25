@@ -1,5 +1,4 @@
----
 ru:
   world_wide_taxons:
-    take_the_survey:
-    test_banner:
+    take_the_survey: Примите участие в опросе, чтобы помочь нам его улучшить
+    test_banner: Это пробная версия раскладки страницы.

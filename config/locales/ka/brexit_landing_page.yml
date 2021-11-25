@@ -1,40 +1,55 @@
----
 ka:
   brexit_landing_page:
     campaign_links:
-      lead_in:
-      lead_out:
-      links:
+      lead_in: 'შეამოწმეთ თუ რა უნდა გააკეთოთ განსხვავებულად, იმ შემთხვევაში თუ თქვენ:'
+      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
+        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
+        data-track-label="Get the complete list">მიიღეთ სრული სია</a> იმის შესახებ,
+        თუ რა უნდა გააკეთოთ თქვენთვის, თქვენი ბიზნესისა და ოჯახისთვის.
     comms:
-      links:
-      read_transcript:
-    comms_header:
-    data_list_title:
-    email_mailto_subject:
-    guidance_header:
-    meta_description:
-    meta_title:
+      read_transcript: წაიკიტხეთ ტრანსქრიფტი ამ ვიდეოსთვის
+    comms_header: განცხადებები
+    data_list_title: 'ბრექსიტის თავფურცელი: %{header}'
+    email_mailto_subject: 'გაერთიანებული სამეფოს ახალი სტარტი: დავიწყოთ- GOV.UK'
+    guidance_header: ცვლილებები ბიზნესებისა და მოქალაქეებისთვის
+    meta_description: გაიგეთ, თუ როგორ მოქმედებს ბრექსითის ახალი წესები ისეთ საკითხებზე,
+      როგორიცაა მოგზაურობა და ევროპაში ბიზნესი. გამოიყენეთ ბრექსითის შემოწმება, რათა
+      მიიღოთ მოქმედებების პერსონალიზირებული სია.
+    meta_title: ბრექსიტი
     no_cookies:
-      change_settings_text:
-      icon_text:
-      or_text:
-      to_watch_text:
-      watch_link_text:
-    page_header:
-    page_header_explainer:
+      change_settings_text: შეცვალეთ თქვენი ქუქი პარამეტრები
+      icon_text: ვიდეო
+      or_text: ან
+      to_watch_text: ვიდეოს ნახვა
+      watch_link_text: YouTube-ზე ნახვა
+    page_header: ბრექსითი:<br/>ახალი წესები არის აქ
+    page_header_explainer: ახალი წესები ეხება ისეთ საკითხებს, როგორიცაა მოგზაურობა
+      და ბიზნესი ევროპაში. გამოიყენეთ ბრექსიტის შემოწმება, რათა მიიღოთ პერსონალიზირებული
+      მოქმედებების სია თქვენთვის, თქვენი ბიზნესისა და ოჯახისთვის.
     sections:
-      aria_string_suffix:
-      guidance_and_regulation:
-      news_and_communications:
-      policy_and_engagement:
-      research_and_statistics:
-      services:
-      transparency:
-    share_links:
-    topic_section_header:
-    topic_section_subheading:
-    video_section_description:
-    video_section_link:
-    video_section_title:
-    video_section_transcription_summary:
-    video_section_transcription_text:
+      aria_string_suffix: უკავშირდება ბრექსითს
+      guidance_and_regulation: მმართველობა და რეგულაცია
+      news_and_communications: სიახლეები და კომუნიკაციები
+      policy_and_engagement: კანონები და კონსულტაციები
+      research_and_statistics: კვლევა და სტატისტიკა
+      services: სერვისები
+      transparency: გამჭირვალობის და ინფორმაციის თავისუფლების გამოცემები
+    share_links: ამ გვერდის გაზიარება
+    take_action_list:
+      amber: შეცვლა
+      green: დაწყება
+      red: შემოწმება
+    take_action_start_now: 'ბრექსითის შემოწმება: ახლა დაწყება'
+    take_action_start_now_link: "/transition-check/questions"
+    topic_section_header: ბრექსითის შესახებ სრული ინფორმაცია
+    topic_section_subheading: იხილეთ ბრექსითთან დაკავშირებული ყველა ინფორმაცია
+    video_section_description: |
+      <p>ევროპასთან ბიზნესი შეიცვალა. თქვენ უნდა დაიცვათ ახალი წესები ექსპორთან, იმპორტთან, ტარიფებთან, მონაცემებთან და &nbsp-თან დაკავშირებით;სამსახურში აყვანა.</p>
+      <p>იხილეთ ვიდეო, რათა გაიგოთ რომელი ახალი წესები ეხება თქვენ ბიზნესს. თქვენ ასევე შეგიძლიათ <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">გამოიყენოთ ბრექსიტის შემოწმება</a> მოქმედებების პერსონალიზირებული სიის მისაღებად.</p>
+    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
+    video_section_title: არ გააჩეროთ თქვენი ბიზნესი
+    video_section_transcription_summary: იხილეთ ვიდეოს ტრანსქრიფტი
+    video_section_transcription_text: |
+      <p>გაერთიანებულმა სამეფომ დატოვა ევროკავშირი და ბიზნესებს ეხება ახალი წესები.</p>
+      <p>იმისათვის, რომ არ გააჩეროთ თქვენი ბიზნესი, გამოიყენეთ ბრექსიტის შემოწმება gov.uk-ზე/გადასვლა თქვენი ბიზნესისთვის პერსონალიზირებული მოქმედებების მისაღებად.</p>
+      <p>არ გააჩეროთ თქვენი ბიზნესი.</p>

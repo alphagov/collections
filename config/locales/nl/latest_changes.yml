@@ -1,6 +1,5 @@
----
 nl:
   latest_changes:
-    next:
-    previous:
-    title:
+    next: Volgende
+    previous: Vorige
+    title: Laatste documenten

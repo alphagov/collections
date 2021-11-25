@@ -1,9 +1,8 @@
----
 cs:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Účastní se také zasedání kabinetu
+    by_department: Ministři podle oddělení
+    cabinet: Ministři vlády
+    govuk_title: Ministři - GOV.UK
+    title: Ministři
+    whips: Parlamentní sekretáři

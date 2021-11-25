@@ -1,8 +1,7 @@
----
 ps:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: فرعي موضوعات وپلټئ
+    organisations: سازمانونه
+    see_all_in_topic: پدې موضوع کې نور %{type} وګورئ
+    show_fewer_orgs: لږ سازمانونه وښایاست
+    show_more_orgs: نور سازمانونه وښایاست

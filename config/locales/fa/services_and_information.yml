@@ -1,6 +1,5 @@
----
 fa:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: خدمات و اطلاعات - %{title}
+    see_more_link: مشاهده بیشتر
+    title: خدمات و اطلاعات

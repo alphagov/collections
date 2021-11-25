@@ -1,6 +1,5 @@
----
 et:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Teenused ja teave - %{title}
+    see_more_link: Vt rohkem
+    title: Teenused ja teave

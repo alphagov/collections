@@ -1,6 +1,5 @@
----
 vi:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Dịch vụ và thông tin - %{title}
+    see_more_link: Xem thêm
+    title: Dịch vụ và thông tin

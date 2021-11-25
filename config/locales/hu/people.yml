@@ -1,7 +1,6 @@
----
 hu:
   people:
-    biography:
-    previous_roles:
-    previous_roles_in_government:
-    read_more:
+    biography: Életrajz
+    previous_roles: Korábbi beosztások
+    previous_roles_in_government: Korábbi állami beosztások
+    read_more: Több erről a személyről

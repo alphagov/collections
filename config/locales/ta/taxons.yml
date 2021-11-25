@@ -1,8 +1,7 @@
----
 ta:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: துணைத் தலைப்புகளை அறிக
+    organisations: நிறுவனங்கள்
+    see_all_in_topic: இந்தத் தலைப்பில் மேலும் %{type}-ஐப் பார்க்க
+    show_fewer_orgs: குறைவான நிறுவனங்களைக் காட்டு
+    show_more_orgs: மேலும் நிறுவனங்களைக் காட்டு

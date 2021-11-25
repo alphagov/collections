@@ -1,9 +1,8 @@
----
 sl:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Tudi obiskuje vlado
+    by_department: Ministri po ministrstvih
+    cabinet: Vladni ministri
+    govuk_title: Ministri − GOV.UK
+    title: Ministri
+    whips: Nadzorniki

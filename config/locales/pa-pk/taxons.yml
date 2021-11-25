@@ -1,8 +1,7 @@
----
 pa-pk:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: نکے مضمون کھول کے ویکھو
+    organisations: ادارے
+    see_all_in_topic: ہور ویکھو {type}% ایس مضمون بارے
+    show_fewer_orgs: گھٹ ادارے وکھاؤ
+    show_more_orgs: چوکھے ادارے وکھاؤ

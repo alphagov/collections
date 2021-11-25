@@ -1,5 +1,4 @@
----
 fi:
   world_wide_taxons:
-    take_the_survey:
-    test_banner:
+    take_the_survey: Osallistu kyselyyn ja auta meitä parantamaan sitä
+    test_banner: Tämä on testiversio tämän sivun asettelusta.

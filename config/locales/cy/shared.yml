@@ -1,12 +1,11 @@
----
 cy:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Hafan
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: Cymraeg
+      prefix: 'Pori:'
+      title: Pori GOV.UK
+    get_emails: I gael e-byst am y pwnc hwn
+    language_direction: ltr
+    language_name: Saesneg
     topics:
-      title:
+      title: "%{title}: gwybodaeth fanwl"

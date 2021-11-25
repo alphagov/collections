@@ -1,17 +1,17 @@
----
 ru:
   roles:
-    find_out_more_html:
     heading:
+      one: Должность
       few:
       many:
-      one:
-      other:
+      other: Должности
+    find_out_more_html: Читайте больше о том, кто ранее занимал данную должность в
+      нашем   %{link} разделе.
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: Кто занимает должность в настоящий момент
+      previous_holders: Кто занимал должность ранее
+      responsibilities: Обязанности
+    ministerial: Должность министра
+    past: в прошлом
+    previous_holders: Кто занимал должность ранее
+    read_more: Больше о должности

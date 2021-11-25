@@ -1,6 +1,5 @@
----
 hr:
   latest_changes:
-    next:
-    previous:
-    title:
+    next: Sljedeći
+    previous: Prethodni
+    title: Najnoviji dokumenti

@@ -1,40 +1,54 @@
----
 th:
   brexit_landing_page:
     campaign_links:
-      lead_in:
-      lead_out:
-      links:
+      lead_in: 'ตรวจสอบสิ่งที่คุณต้องทำต่างออกไปจากนี้ หากคุณ:'
+      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
+        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
+        data-track-label="Get the complete list">รับรายการทั้งหมด</a> ของสิ่งที่คุณต้องทำเพื่อตัวคุณ
+        เพื่อธุรกิจ และเพื่อครอบครัวของคุณ
     comms:
-      links:
-      read_transcript:
-    comms_header:
-    data_list_title:
-    email_mailto_subject:
-    guidance_header:
-    meta_description:
-    meta_title:
+      read_transcript: อ่านการถอดเสียงวิดีโอนี้
+    comms_header: ประกาศ
+    data_list_title: 'หน้าเริ่มต้นของ Brexit: %{header}'
+    email_mailto_subject: UK's%20new%20start:%20let's%20get%20going-%20GOV.UK
+    guidance_header: การเปลี่ยนแปลงสำหรับธุรกิจและพลเมือง
+    meta_description: ค้นหาว่ากฎใหม่ของ Brexit มีผลกับสิ่งต่างๆ เช่น การเดินทางและการทำธุรกิจกับยุโรปอย่างไรบ้าง
+      ใช้ตัวช่วยตรวจสอบ Brexit เพื่อรับรายการการดำเนินการส่วนบุคคล
+    meta_title: Brexit
     no_cookies:
-      change_settings_text:
-      icon_text:
-      or_text:
-      to_watch_text:
-      watch_link_text:
-    page_header:
-    page_header_explainer:
+      change_settings_text: เปลี่ยนการตั้งค่าคุกกี้ของคุณ
+      icon_text: วิดีโอ
+      or_text: หรือ
+      to_watch_text: เพื่อรับชมวิดีโอ
+      watch_link_text: ดูทาง YouTube
+    page_header: Brexit:<br/> กฎใหม่มาถึงแล้ว
+    page_header_explainer: กฎใหม่ของ Brexit มีผลกับสิ่งต่างๆ เช่น การเดินทางและการทำธุรกิจกับยุโรป
+      ใช้ตัวช่วยตรวจสอบ Brexit เพื่อดูรายการการดำเนินการที่เหมาะกับตัวคุณ ธุรกิจของคุณ
+      และครอบครัวของคุณ
     sections:
-      aria_string_suffix:
-      guidance_and_regulation:
-      news_and_communications:
-      policy_and_engagement:
-      research_and_statistics:
-      services:
-      transparency:
-    share_links:
-    topic_section_header:
-    topic_section_subheading:
-    video_section_description:
-    video_section_link:
-    video_section_title:
-    video_section_transcription_summary:
-    video_section_transcription_text:
+      aria_string_suffix: เกี่ยวกับ Brexit
+      guidance_and_regulation: คำแนะนำและระเบียบข้อบังคับ
+      news_and_communications: ข่าวสารและการสื่อสาร
+      policy_and_engagement: เอกสารนโยบายและการให้คำปรึกษา
+      research_and_statistics: งานวิจัยและสถิติ
+      services: บริการ
+      transparency: ความโปร่งใสและเสรีภาพในการเผยแพร่ข้อมูล
+    share_links: แชร์หน้านี้
+    take_action_list:
+      amber: เปลี่ยน
+      green: ไป
+      red: ตรวจสอบ
+    take_action_start_now: 'ตัวช่วยตรวจสอบ Brexit: เริ่มเลย'
+    take_action_start_now_link: "/transition-check/questions"
+    topic_section_header: ข้อมูลทุกอย่างเกี่ยวกับ Brexit
+    topic_section_subheading: เรียกดูข้อมูลทุกอย่างเกี่ยวกับ Brexit
+    video_section_description: |
+      <p>การทำธุรกิจกับยุโรปได้เปลี่ยนไปแล้ว คุณจะต้องปฏิบัติตามกฎระเบียบใหม่เกี่ยวกับการส่งออก การนำเข้า อัตราภาษี ข้อมูล และการจ้างงาน</p>
+      <p>รับชมวิดีโอเพื่อดูว่ากฎระเบียบใหม่มีความหมายกับธุรกิจของคุณอย่างไร และคุณยังสามารถ <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">ใช้ตัวช่วยตรวจสอบ Brexit</a> เพื่อรับรายการการดำเนินการส่วนบุคคล</p>
+    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
+    video_section_title: ให้ธุรกิจของคุณดำเนินต่อไป
+    video_section_transcription_summary: ดูการถอดเสียงวิดีโอ
+    video_section_transcription_text: |
+      <p>ธุรกิจต่างๆ โปรดทราบว่าสหราชอาณาจักรได้ออกจากสหภาพยุโรปแล้ว และมีการบังคับใช้กฎใหม่แล้ว</p>
+      <p>เพื่อให้ธุรกิจของคุณดำเนินต่อไป โปรดใช้เครื่องมือตรวจสอบ Brexit ใน gov.uk/transition เพื่อรับรายการการดำเนินการส่วนบุคคลสำหรับธุรกิจของคุณ</p>
+      <p>ให้ธุรกิจดำเนินต่อไป</p>

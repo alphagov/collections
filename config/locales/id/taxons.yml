@@ -1,8 +1,7 @@
----
 id:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Jelajahi subtopik
+    organisations: Organisasi
+    see_all_in_topic: Lihat %{type} selengkapnya pada topik ini
+    show_fewer_orgs: Lihat lebih sedikit organisasi
+    show_more_orgs: Lihat lebih sedikit organisasi

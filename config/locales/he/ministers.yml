@@ -1,9 +1,8 @@
----
 he:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: משתתף גם בקבינט
+    by_department: שרים למחלקות
+    cabinet: קבינט השרים
+    govuk_title: שרים - GOV.UK
+    title: שרים
+    whips: שוטים

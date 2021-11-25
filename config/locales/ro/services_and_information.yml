@@ -1,6 +1,5 @@
----
 ro:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Servicii și informații - %{title}
+    see_more_link: Vedeți mai multe
+    title: Servicii și informații

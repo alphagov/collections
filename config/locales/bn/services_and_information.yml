@@ -1,6 +1,5 @@
----
 bn:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: পরিষেবা ও তথ্য - %{title}
+    see_more_link: আরও দেখুন
+    title: পরিষেবা ও তথ্য

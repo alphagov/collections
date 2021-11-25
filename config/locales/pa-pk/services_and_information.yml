@@ -1,6 +1,5 @@
----
 pa-pk:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: خدمات تے معلومات- {title}%
+    see_more_link: ہور ویکھو
+    title: معلومات تے خدمات

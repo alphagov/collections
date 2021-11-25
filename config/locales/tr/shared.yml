@@ -1,12 +1,11 @@
----
 tr:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Anasayfa
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: Türkçe
+      prefix: 'Araştır:'
+      title: GOV.UK sitesini araştır
+    get_emails: Bu konuda e-posta al
+    language_direction: ltr
+    language_name: İngilizce
     topics:
-      title:
+      title: "%{title}: ayrıntılı bilgi"

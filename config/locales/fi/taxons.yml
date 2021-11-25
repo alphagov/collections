@@ -1,8 +1,7 @@
----
 fi:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Tutustu alaaiheisiin
+    organisations: Organisaatiot
+    see_all_in_topic: Katso lisää %{type} tästä aiheesta
+    show_fewer_orgs: Näytä vähemmän organisaatioita
+    show_more_orgs: Näytä lisää organisaatioita

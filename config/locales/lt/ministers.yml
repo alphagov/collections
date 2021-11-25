@@ -1,9 +1,8 @@
----
 lt:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Taip pat dalyvauja ministrų kabinete
+    by_department: Ministrai pagal departamentus
+    cabinet: Ministrų kabineto ministrai
+    govuk_title: Ministrai – GOV.UK
+    title: Ministrai
+    whips: Drausmintojai

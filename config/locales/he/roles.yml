@@ -1,15 +1,14 @@
----
 he:
   roles:
-    find_out_more_html:
     heading:
-      one:
-      other:
+      one: תפקיד
+      other: תפקידים
+    find_out_more_html: למידע נוסף על בעלים קודמים לתפקיד זה בקטע %{link} שלנו.
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: בעל תפקיד נוכחי
+      previous_holders: בעלים קודמים
+      responsibilities: אחריות
+    ministerial: תפקיד שר
+    past: עבר
+    previous_holders: בעלים קודמים לתפקיד זה
+    read_more: עוד על התפקיד הזה

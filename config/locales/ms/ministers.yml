@@ -1,9 +1,8 @@
----
 ms:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Turut menghadiri Kabinet
+    by_department: Menteri mengikut jabatan
+    cabinet: Menteri Kabinet
+    govuk_title: Menteri - GOV.UK
+    title: Menteri
+    whips: Ahli Dewan Undangan

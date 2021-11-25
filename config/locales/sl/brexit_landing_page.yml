@@ -1,40 +1,56 @@
----
 sl:
   brexit_landing_page:
     campaign_links:
-      lead_in:
-      lead_out:
-      links:
+      lead_in: 'Preverite, kaj morate storiti drugače, če ste:'
+      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
+        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
+        data-track-label="Get the complete list">Pridobite celoten seznam</a> tega,
+        kar morate storiti zase, za svoje podjetje in družino.
     comms:
-      links:
-      read_transcript:
-    comms_header:
-    data_list_title:
-    email_mailto_subject:
-    guidance_header:
-    meta_description:
-    meta_title:
+      read_transcript: Preberite transkripcijo tega posnetka
+    comms_header: Razglasi
+    data_list_title: Ciljna stran o brexitu %{header}
+    email_mailto_subject: 'Nov začetek Združenega kraljestva: gremo naprej − GOV.UK'
+    guidance_header: Spremembe za podjetja in državljane
+    meta_description: Izvedite, kako se nova pravila, povezana z bexitom nanašajo
+      na zadeve, kot je potovanje in poslovanje z Evropo. S preverjalnikom učinkov
+      brexita dobite prilagojen seznam dejanj.
+    meta_title: Brexit
     no_cookies:
-      change_settings_text:
-      icon_text:
-      or_text:
-      to_watch_text:
-      watch_link_text:
-    page_header:
-    page_header_explainer:
+      change_settings_text: Spremenite nastavitev piškotkov
+      icon_text: VIDEOPOSNETEK
+      or_text: ali
+      to_watch_text: da si ogledate videoposnetek
+      watch_link_text: Oglejte si ga na portalu YouTube
+    page_header: Brexit:<br/>nova pravila so tu
+    page_header_explainer: Nova pravila se nanašajo na zadeve, kot je potovanje in
+      poslovanje z Evropo. S preverjalnikom učinkov brexita dobite prilagojen seznam
+      dejanj za vas, vaše podjetje in družino.
     sections:
-      aria_string_suffix:
-      guidance_and_regulation:
-      news_and_communications:
-      policy_and_engagement:
-      research_and_statistics:
-      services:
-      transparency:
-    share_links:
-    topic_section_header:
-    topic_section_subheading:
-    video_section_description:
-    video_section_link:
-    video_section_title:
-    video_section_transcription_summary:
-    video_section_transcription_text:
+      aria_string_suffix: Povezano z brexitom
+      guidance_and_regulation: Smernice in predpisi
+      news_and_communications: Novice in sporočila
+      policy_and_engagement: Dokumenti o politikah in posvetovanja
+      research_and_statistics: Raziskave in statistika
+      services: Storitve
+      transparency: Objave o transparentnosti in svobodi informacij
+    share_links: Deli to stran
+    take_action_list:
+      amber: Spremeni
+      green: Pojdi
+      red: Preveri
+    take_action_start_now: 'Preverjevalnik učinkov brexita: začnite zdaj'
+    take_action_start_now_link: "/transition-check/questions"
+    topic_section_header: Vse informacije o brexitu
+    topic_section_subheading: Brskajte med vsemi informacijami, povezanimi z brexitom
+    video_section_description: |+
+      <p>Poslovanje z Evropo se je spremenilo. Upoštevati morate nova pravila o izvozu, uvozu, tarifah, podatkih in&nbsp;hiring.</p>
+      <p>​Oglejte si videoposnetek in izvedite, kaj nova pravila pomenijo za vaše podjetje. Uporabite lahko tudi ​<a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">​uporabite preverjevalnik učinkov brexita​</a>​ in pridobite prilagojen seznam dejanj.​</p>​
+
+    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
+    video_section_title: Naj se vaše poslovanje nadaljuje
+    video_section_transcription_summary: Oglejte si transkripcijo videoposnetka
+    video_section_transcription_text: |
+      ​<p>​Podjetja, Združeno kraljestvo je zapustilo EU in zdaj veljajo nova pravila.​</p>​​
+      <p>​Če želite nadaljevati s poslovanjem, uporabite orodje za preverjanje učinkov brexita na gov.uk/transition, da dobite prilagojena dejanja za svoje podjetje.​</p>​
+      <p>Naj se poslovanje nadaljuje.</p>

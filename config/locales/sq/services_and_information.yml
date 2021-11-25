@@ -1,6 +1,5 @@
----
 sq:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Shërbimet dhe informacioni - %{title}
+    see_more_link: Shihni më tepër
+    title: Shërbimet dhe informacioni

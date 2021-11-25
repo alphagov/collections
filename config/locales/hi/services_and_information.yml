@@ -1,6 +1,5 @@
----
 hi:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: सेवाएं और जानकारी - %{title}
+    see_more_link: और देखें
+    title: सेवाएं और जानकारी

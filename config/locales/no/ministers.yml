@@ -1,9 +1,8 @@
----
 'no':
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Går også i kabinettet
+    by_department: Minstre etter avdeling
+    cabinet: Kabinettministrene
+    govuk_title: Ministre - GOV.UK
+    title: Ministre
+    whips: Innpiskere

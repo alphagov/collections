@@ -1,15 +1,15 @@
----
 ka:
   roles:
-    find_out_more_html:
+    find_out_more_html: გაიგეთ მეტი ამ როლის წინა მფლობელების შესახებ ჩვენს %{link}
+      სექციაში.
     heading:
-      one:
-      other:
+      one: როლი
+      other: როლები
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: როლის ამჟამინდელი მფლობელი
+      previous_holders: წინა მფლობელები
+      responsibilities: პასუხისმგებლობები
+    ministerial: მინისტრის როლი
+    past: წინა
+    previous_holders: ამ როლის წინა მფლობელები
+    read_more: მეტი ამ როლის შესახებ

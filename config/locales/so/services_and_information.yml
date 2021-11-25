@@ -1,6 +1,5 @@
----
 so:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Adeegyada iyo macluumaadka - %{title}
+    see_more_link: Fiir waxbadan
+    title: Adeegyada iyo macluumaadka

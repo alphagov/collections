@@ -1,12 +1,11 @@
----
 lt:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Pagrindinis
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
+      prefix: 'Naršyti:'
+      title: Naršyti GOV.UK
+    get_emails: Gauti el. laiškus šia tema
+    language_direction: ltr
     language_name: Lietuvių
     topics:
-      title:
+      title: "%{title}: detali informacija"

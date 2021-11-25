@@ -1,8 +1,7 @@
----
 gd:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Déan iniúchadh ar na fo-théamaí
+    organisations: Eagraíochtaí
+    see_all_in_topic: Féach níos mó %{type} san ábhar seo
+    show_fewer_orgs: Taispeáin líon laghdaithe eagraíochtaí
+    show_more_orgs: Taispeáin níos mó eagraíochtaí

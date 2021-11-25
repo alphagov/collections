@@ -1,12 +1,11 @@
----
 ko:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: 홈
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
+      prefix: '탐색:'
+      title: GOV.UK 탐색하기
+    get_emails: 이 주제에 대한 이메일 받기
+    language_direction: ltr
     language_name: 한국어
     topics:
-      title:
+      title: "%{title}: 상세 정보"

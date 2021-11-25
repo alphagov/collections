@@ -1,12 +1,11 @@
----
 ms:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Utama
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
+      prefix: 'Semak seimbas:'
+      title: Semak seimbas GOV.UK
+    get_emails: Dapatkan e-mel tentang tajuk ini
+    language_direction: ltr
     language_name: Bahasa Melayu
     topics:
-      title:
+      title: "%{title}: maklumat terperinci"

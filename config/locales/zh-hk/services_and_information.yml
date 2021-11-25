@@ -1,6 +1,5 @@
----
 zh-hk:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: 服務及資訊 - %{title}
+    see_more_link: 了解詳情
+    title: 服務及資訊

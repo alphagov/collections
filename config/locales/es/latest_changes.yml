@@ -1,6 +1,5 @@
----
 es:
   latest_changes:
-    next:
-    previous:
-    title:
+    next: Siguiente
+    previous: Anterior
+    title: Documentos más recientes

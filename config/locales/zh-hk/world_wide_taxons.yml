@@ -1,5 +1,4 @@
----
 zh-hk:
   world_wide_taxons:
-    take_the_survey:
-    test_banner:
+    take_the_survey: 填寫調查問卷，協助我們改善這一項
+    test_banner: 此乃本頁面佈局之測試版本

@@ -1,8 +1,7 @@
----
 so:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Hel mawduuc hoosaadyo
+    organisations: Ururada
+    see_all_in_topic: Fiiri waxbadan %{type} oo mawduucana
+    show_fewer_orgs: Muuji ururo kooban
+    show_more_orgs: Muuji ururo badan

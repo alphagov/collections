@@ -1,9 +1,8 @@
----
 sq:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Gjithashtu merr pjesë në Kabinet
+    by_department: Ministrat sipas departamentit
+    cabinet: Ministrat e kabinetit
+    govuk_title: Ministers - GOV.UK
+    title: Ministrat
+    whips: Përfaqësuesit

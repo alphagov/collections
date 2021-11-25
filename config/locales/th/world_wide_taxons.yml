@@ -1,5 +1,4 @@
----
 th:
   world_wide_taxons:
-    take_the_survey:
-    test_banner:
+    take_the_survey: ทำแบบสำรวจเพื่อช่วยเราปรับปรุง
+    test_banner: นี่คือการจัดหน้าเวอร์ชันทดสอบของหน้านี้

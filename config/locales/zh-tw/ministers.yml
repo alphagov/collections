@@ -1,9 +1,8 @@
----
 zh-tw:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: 同時參與內閣
+    by_department: 各部會部長
+    cabinet: 內閣部長
+    govuk_title: 部長－英國政府網站
+    title: 部長
+    whips: 黨鞭

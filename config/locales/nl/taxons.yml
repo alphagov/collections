@@ -1,8 +1,7 @@
----
 nl:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Verken subonderwerpen
+    organisations: Organisaties
+    see_all_in_topic: Zie meer %{type} in dit onderwerp
+    show_fewer_orgs: Toon minder organisaties
+    show_more_orgs: Toon meer organisaties

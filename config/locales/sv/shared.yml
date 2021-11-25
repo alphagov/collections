@@ -1,12 +1,11 @@
----
 sv:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Hem
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: Svensk
+      prefix: 'Bläddra:'
+      title: Bläddra på GOV.UK
+    get_emails: Få e-postmeddelanden om detta ämne
+    language_direction: ltr
+    language_name: Engelska
     topics:
-      title:
+      title: "%{title}: detaljerad information"

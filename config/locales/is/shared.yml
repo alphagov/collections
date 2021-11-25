@@ -1,12 +1,11 @@
----
 is:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Heim
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: Íslensk
+      prefix: 'Vafra:'
+      title: Vafra um GOV.UK
+    get_emails: Fá tölvupósta um þetta efni
+    language_direction: ltr
+    language_name: Íslensku
     topics:
-      title:
+      title: "%{title}: nákvæmar upplýsingar"

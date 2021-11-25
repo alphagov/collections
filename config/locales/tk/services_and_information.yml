@@ -1,6 +1,5 @@
----
 tk:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Hyzmatlar we maglumat - %{title}
+    see_more_link: Goşmaça seret
+    title: Hyzmatlar we maglumat

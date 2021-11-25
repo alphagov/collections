@@ -1,12 +1,11 @@
----
 es-419:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Inicio
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: Español
+      prefix: 'Navega:'
+      title: Navegar en GOV.UK
+    get_emails: Recibir emails sobre este tema
+    language_direction: ltr
+    language_name: Inglés
     topics:
-      title:
+      title: "%{title}: información detallada"

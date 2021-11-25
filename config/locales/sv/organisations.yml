@@ -1,333 +1,341 @@
----
 sv:
   organisations:
-    about_page_path:
-    administered_by:
-    breadcrumbs:
-      courts_and_tribunals:
-      organisations:
-    contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
     content_item:
       schema_name:
         aaib_report:
-          one:
-          other:
+          one: Rapport från Avdelningen för utredning av flygolyckor
+          other: Rapporter från Avdelningen för utredning av flygolyckor
         announcement:
-          one:
-          other:
+          one: Meddelande
+          other: Meddelanden
         asylum_support_decision:
-          one:
-          other:
+          one: Beslut från Asylprövningsdomstolen
+          other: Beslut från Asylprövningsdomstolen
         authored_article:
-          one:
-          other:
+          one: Författad artikel
+          other: Författade artiklar
         business_finance_support_scheme:
-          one:
-          other:
+          one: Stödsystem för företagsfinansiering
+          other: Stödsystem för företagsfinansiering
         case_study:
-          one:
-          other:
+          one: Fallstudie
+          other: Fallstudier
         closed_consultation:
-          one:
-          other:
+          one: Slutet samråd
+          other: Slutna samråd
         cma_case:
-          one:
-          other:
+          one: Konkurrens- och marknadsmyndighetens ärende
+          other: Konkurrens- och marknadsmyndighetens ärenden
         coming_soon:
-          one:
-          other:
+          one: Kommer snart
+          other: Kommer snart
         consultation:
-          one:
-          other:
+          one: Samråd
+          other: Samråd
         consultation_outcome:
-          one:
-          other:
+          one: Resultat av samrådet
+          other: Resultat av samråden
         corporate_information_page:
-          one:
-          other:
+          one: Informationssida
+          other: Informationssidor
         corporate_report:
-          one:
-          other:
+          one: Företagsrapport
+          other: Företagsrapporter
         correspondence:
-          one:
-          other:
+          one: Korrespondens
+          other: Korrespondens
         countryside_stewardship_grant:
-          one:
-          other:
+          one: Bidrag till Förvaltning av landsbygden
+          other: Bidrag till Förvaltning av landsbygden
         decision:
-          one:
-          other:
+          one: Beslut
+          other: Beslut
         detailed_guide:
-          one:
-          other:
+          one: Vägledning
+          other: Vägledning
         dfid_research_output:
-          one:
-          other:
+          one: Utvecklingsforskningsresultat
+          other: Utvecklingsforskningsresultat
         document_collection:
-          one:
-          other:
+          one: Samlingar
+          other: Samlingar
         draft_text:
-          one:
-          other:
+          one: Utkast till text
+          other: Utkast till texter
         drug_safety_update:
-          one:
-          other:
+          one: Uppdatering om läkemedelssäkerhet
+          other: Uppdateringar om läkemedelssäkerhet
         employment_appeal_tribunal_decision:
-          one:
-          other:
+          one: Beslut av arbetsdomstolen om överklagande av anställningsärenden
+          other: Beslut av arbetsdomstolen om överklagande av anställningsärenden
         employment_tribunal_decision:
-          one:
-          other:
+          one: Beslut från arbetsdomstolen
+          other: Beslut från arbetsdomstolen
         esi_fund:
-          one:
-          other:
+          one: Europeiska struktur- och investeringsfonden (ESIF)
+          other: Europeiska struktur- och investeringsfonderna (ESIF)
         fatality_notice:
-          one:
-          other:
+          one: Meddelande om dödsfall
+          other: Meddelanden om dödsfall
         foi_release:
-          one:
-          other:
+          one: FOI-meddelanden
+          other: FOI-meddelanden
         form:
-          one:
-          other:
+          one: Formulär
+          other: Formulär
         government_response:
-          one:
-          other:
+          one: Regeringens svar
+          other: Regeringens svar
         guidance:
-          one:
-          other:
+          one: Vägledning
+          other: Vägledning
         impact_assessment:
-          one:
-          other:
+          one: Konsekvensbedömning
+          other: Konsekvensbedömningar
         imported:
-          one:
-          other:
+          one: importerad - väntar på typ
+          other: importerad - väntar på typ
         independent_report:
-          one:
-          other:
+          one: Oberoende rapport
+          other: Oberoende rapporter
         international_development_fund:
-          one:
-          other:
+          one: Finansiering av internationell utveckling
+          other: Finansiering av internationell utveckling
         international_treaty:
-          one:
-          other:
+          one: Internationellt fördrag
+          other: Internationella fördrag
         maib_report:
-          one:
-          other:
+          one: Rapport från Utredningsavdelningen för sjöolyckor
+          other: Rapporter från Utredningsavdelningen för sjöolyckor
         map:
-          one:
-          other:
+          one: Karta
+          other: Kartor
         medical_safety_alert:
-          one:
-          other:
+          one: Varningar och återkallelser av läkemedel och medicintekniska produkter
+          other: Varningar och återkallelser av läkemedel och medicintekniska produkter
         national:
-          one:
-          other:
+          one: Meddelande om nationell statistik
+          other: Meddelanden om nationell statistik
         national_statistics:
-          one:
-          other:
+          one: Nationell statistik
+          other: Nationell statistik
         national_statistics_announcement:
-          one:
-          other:
+          one: Meddelande om nationell statistik
+          other: Meddelanden om nationell statistik
         news_article:
-          one:
-          other:
+          one: Nyhetsartikel
+          other: Nyhetsartiklar
         news_story:
-          one:
-          other:
+          one: Nyhetsartikel
+          other: Nyhetsartiklar
         notice:
-          one:
-          other:
+          one: Meddelande
+          other: Meddelanden
         official:
-          one:
-          other:
+          one: Meddelande om officiell statistik
+          other: Meddelanden om officiell statistik
         official_statistics:
-          one:
-          other:
+          one: Officiell statistik
+          other: Officiell statistik
         official_statistics_announcement:
-          one:
-          other:
+          one: Meddelande om officiell statistik
+          other: Meddelanden om officiell statistik
         open_consultation:
-          one:
-          other:
+          one: Öppet samråd
+          other: Öppet samråd
         oral_statement:
-          one:
-          other:
+          one: Muntligt uttalande till parlamentet
+          other: Muntliga uttalanden till parlamentet
         policy:
-          one:
-          other:
+          one: Policy
+          other: Policys
         policy_paper:
-          one:
-          other:
+          one: Policydokument
+          other: Policydokument
         press_release:
-          one:
-          other:
+          one: Pressmeddelande
+          other: Pressmeddelanden
         promotional:
-          one:
-          other:
+          one: Material för marknadsföring
+          other: Material för marknadsföring
         publication:
-          one:
-          other:
+          one: Publikation
+          other: Publikationer
         raib_report:
-          one:
-          other:
+          one: Rapport från Utredningsavdelningen för järnvägsolyckor
+          other: Rapporter från Utredningsavdelningen för järnvägsolyckor
         regulation:
-          one:
-          other:
+          one: Förordning
+          other: Förordningar
         research:
-          one:
-          other:
+          one: Forskning och analys
+          other: Forskning och analys
         residential_property_tribunal_decision:
-          one:
-          other:
+          one: Beslut från Domstolarna för bostadsfastigheter
+          other: Beslut från Domstolarna för bostadsfastigheter
         service_sign_in:
-          one:
-          other:
+          one: Logga in på tjänsten
+          other: Logga in på tjänsten
         service_standard_report:
-          one:
-          other:
+          one: Standardrapport för tjänsten
+          other: Standardrapporter för tjänster
         speaking_notes:
-          one:
-          other:
+          one: Anteckningar
+          other: Anteckningar
         speech:
-          one:
-          other:
+          one: Tal
+          other: Tal
         standard:
-          one:
-          other:
+          one: Standard
+          other: Standarder
         statement_to_parliament:
-          one:
-          other:
+          one: Uttalande till parlamentet
+          other: Uttalanden till parlamentet
         statistical_data_set:
-          one:
-          other:
+          one: Statistiska uppgifter
+          other: Statistiska datamängder
         statistics_announcement:
-          one:
-          other:
+          one: Meddelande om offentliggörande av statistik
+          other: Meddelanden om offentliggöranden av statistik
         statutory_guidance:
-          one:
-          other:
+          one: Lagstadgad vägledning
+          other: Lagstadgad vägledning
         take_part:
-          one:
-          other:
+          one: Delta
+          other: Delta
         tax_tribunal_decision:
-          one:
-          other:
+          one: Beslut från skattedomstolen och kanslidomstolen
+          other: Beslut från skattedomstolen och kanslidomstolen
         transcript:
-          one:
-          other:
+          one: Utskrift
+          other: Utskrifter
         transparency:
-          one:
-          other:
+          one: Öppenhetsuppgifter
+          other: Öppenhetsuppgifter
         utaac_decision:
-          one:
-          other:
+          one: Beslut av förvaltningsdomstolen för överklagande
+          other: Administrativa överklagandenämndens beslut
         world_location_news_article:
-          one:
-          other:
+          one: Nyhetsartikel
+          other: Nyhetsartiklar
         world_news_story:
-          one:
-          other:
+          one: Världsnyhet
+          other: Världsnyheter
         written_statement:
-          one:
-          other:
-    corporate_information:
+          one: Skriftligt uttalande till parlamentet
+          other: Skriftliga uttalanden till parlamentet
+    about_page_path: "/government/organisations/%{organisation}/about"
+    administered_by: Förvaltas av
+    breadcrumbs:
+      courts_and_tribunals: Domstolar och domstolar
+      organisations: Organisationer
+    contact:
+      contact_details: Kontaktuppgifter
+      contact_form: 'Kontaktformulär: %{title}'
+      contact_organisation: Kontakt %{organisation}
+      email: E-post
+      telephone: Telefon
+    corporate_information: Information om företaget
     document_types:
-      documents:
+      documents: Dokument
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Se alla riktlinjer och föreskrifter
+        title: Vägledning och föreskrifter
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Se alla nyheter och meddelanden
+        title: Nyheter och kommunikation
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Se alla policydokument och samråd
+        title: Strategidokument och samråd
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Se all forskning och statistik
+        title: Forskning och statistik
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Se alla tjänster
+        title: Tjänster
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Se alla offentliggöranden om öppenhet och informationsfrihet
+        title: Offentliggöranden om öppenhet och informationsfrihet
+    errors_or_omissions_html: <p>Fel eller utelämnanden? <a class="govuk-link" href="/contact/govuk">Berätta
+      för oss här</a>. För officiella förteckningar över offentliga organ utanför
+      ministeriet <a class="govuk-link" href="/government/collections/public-bodies">se
+      offentliga organ</a>.</p>
+    featured: Utvalda
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: Kontaktformulär för FOI
+      foi_exemption_html: |
+        Den här organisationen omfattas inte av lagen om informationsfrihet.
+        För att se vilka organisationer som omfattas, se <a href="%{foi_url}" class="govuk-link brand__color">lagstiftningen</a>.
+      freedom_of_information_act: Lagen om informationsfrihet (FOI)
+      freedom_of_information_requests: Förfrågningar om informationsfrihet
+      make_an_foi_request: Gör en FOI-förfrågan
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: Läs om lagen om informationsfrihet (FOI) och <a href="%{how_to_path}"
+          class="govuk-link brand__color">hur man gör en begäran</a>.
+        step2_html: Kontrollera <a href="%{our_releases_path}" class="govuk-link brand__color">våra
+          tidigare offentliggöranden</a> för att se om vi redan har besvarat din fråga.
+        step3_html: Gör en ny förfrågan genom att kontakta oss med hjälp av uppgifterna
+          nedan.
+    follow_us: Följ oss
+    hidden_share_link: Följ oss på
+    high_profile_groups: Högprofilerade grupper inom %{title}
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: Jobb och kontrakt
+    latest_from: Senaste från %{title}
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name: "%{title} heter nu <a href='%{link_href}'>%{link_text}</a>"
+      devolved: "%{title} är en del av <a href='%{link_href}'>%{link_text}</a>"
+      joining: "%{title} kommer snart att införlivas i GOV.UK"
+      left_gov: "%{title} är nu oberoende av den brittiska regeringen"
+      merged: "%{title} blev en del av <a href='%{link_href}'>%{link_text}</a> i %{updated}"
+      merged_no_date: "%{title} ingår nu i <a href='%{link_href}'>%{link_text}</a>."
+      no_longer_exists: "%{title} har stängt"
+      no_website: "%{title} har ingen webbplats"
+      separate_website: "%{title} har en <a href='%{url}'>separerad webbplats</a>"
+      split: "%{title} har ersatts av %{links}"
+    part_of: Del av
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: Vår förvaltning
+      chief_professional_officers: Chefsansvariga
+      military_personnel: Våra högre militära tjänstemän
+      ministers: Våra ministrar
+      special_representatives: Särskilda representanter
+      traffic_commissioners: Trafikkommissarier
+    read_more: Läs mer om vad vi gör
+    search_for_department: Sök efter en avdelning, ett organ eller ett offentligt
+      organ
+    see_all_latest_documents: Se alla senaste dokument
+    separate_website: separat webbplats
+    services_and_information: Alla %{acronym} tjänster och information
     subscription:
-      email:
-      feed:
+      email: Få e-post
+      feed: Prenumerera på flöde
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      adhoc_advisory_group: Rådgivande ad hoc-grupp
+      advisory_ndpb: Rådgivande offentligt organ som inte är en avdelning
+      civil_service: Offentlig förvaltning
+      executive_agency: Genomförandeorgan
+      executive_ndpb: Exekutivt offentligt organ som inte är en del av ett ministerium
+      independent_monitoring_body: Oberoende övervakningsorgan
+      non_ministerial_department: Icke-ministeriell avdelning
+      other: Annan
+      public_corporation: Offentligt bolag
+      tribunal: Tribunal
+    view_all: Visa alla
+    view_less: visa mindre
+    what_we_do: Vad %{title} gör
     works_with_statement:
-      multiple:
-      one:
+      multiple: Arbetar med %{works_with_count} myndigheter och offentliga organ
+      one: Arbetar med %{works_with_count} offentligt organ

@@ -1,6 +1,5 @@
----
 ru:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Услуги и информация - %{title}
+    see_more_link: Больше на
+    title: Услуги и информация

@@ -1,12 +1,11 @@
----
 ta:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: முகப்புப் பக்கம்
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
+      prefix: 'உலவுக:'
+      title: GOV.UK பக்கத்தில் உலவுக
+    get_emails: இந்தத் தலைப்பில் மின்னஞ்சல்களைப் பெறுக
+    language_direction: ltr
     language_name: தமிழ்
     topics:
-      title:
+      title: "%{title}: விரிவான தகவல்கள்"

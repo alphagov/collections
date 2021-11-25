@@ -1,5 +1,4 @@
----
 el:
   world_wide_taxons:
-    take_the_survey:
-    test_banner:
+    take_the_survey: Πάρτε μέρος στην έρευνα για να μας βοηθήσετε να τη βελτιώσουμε
+    test_banner: Αυτή είναι μια δοκιμαστική έκδοση της διάταξης αυτής της σελίδας.

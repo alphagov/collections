@@ -1,40 +1,55 @@
----
 sw:
   brexit_landing_page:
     campaign_links:
-      lead_in:
-      lead_out:
-      links:
+      lead_in: 'Angalia unachopaswa kubadilisha ikiwa wewe:'
+      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
+        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
+        data-track-label="Get the complete list">Pata orodha kamili</a> ya mambo unayopaswa
+        kwa ajili yako, biashara na familia yako.
     comms:
-      links:
-      read_transcript:
-    comms_header:
-    data_list_title:
-    email_mailto_subject:
-    guidance_header:
-    meta_description:
-    meta_title:
+      read_transcript: Soma maandishi ya video hii
+    comms_header: Matangazo
+    data_list_title: 'Ukurasa wa kutua wa Brexit: %{header}'
+    email_mailto_subject: UK's%20new%20start:%20let's%20get%20going-%20GOV.UK
+    guidance_header: Mabadiliko kwenye biashara na raia
+    meta_description: Pata maelezo kuhusu jinsi kanuni za Brexit zinavyotumika kwenye
+      mambo kama vile usafiri na kufanya biashara na Ulaya. Tumia kiteuzi cha Brexit
+      ili upate orodha ya hatua za kuchukua zinazokufaa.
+    meta_title: Brexit
     no_cookies:
-      change_settings_text:
-      icon_text:
-      or_text:
-      to_watch_text:
-      watch_link_text:
-    page_header:
-    page_header_explainer:
+      change_settings_text: Badilisha mipangilio yako ya vidakuzi
+      icon_text: VIDEO
+      or_text: au
+      to_watch_text: ili utazame video
+      watch_link_text: Tazama kwenye YouTube
+    page_header: Brexit:<br/>kanuni mpya zinapatikana hapa
+    page_header_explainer: Kanuni mpya zinatumika kwenye mambo kama vile usafiri na
+      kufanya biashara na Ulaya. Tumia kiteuzi cha Brexit ili upate orodha ya hatua
+      za kuchukua zinazofaa kwa ajili yako, biashara na familia yako.
     sections:
-      aria_string_suffix:
-      guidance_and_regulation:
-      news_and_communications:
-      policy_and_engagement:
-      research_and_statistics:
-      services:
-      transparency:
-    share_links:
-    topic_section_header:
-    topic_section_subheading:
-    video_section_description:
-    video_section_link:
-    video_section_title:
-    video_section_transcription_summary:
-    video_section_transcription_text:
+      aria_string_suffix: inayohusiana na Brexit
+      guidance_and_regulation: Mwongozo na kanuni
+      news_and_communications: Habari na mawasiliano
+      policy_and_engagement: Hati za sera na mashauriano
+      research_and_statistics: Utafiti na takwimu
+      services: Huduma
+      transparency: Taarifa za uwazi na uhuru wa kupata habari
+    share_links: Shiriki ukurasa huu
+    take_action_list:
+      amber: Badilisha
+      green: Nenda
+      red: Kagua
+    take_action_start_now: 'Kiteuzi cha Brexit: anza sasa'
+    take_action_start_now_link: "/transition-check/questions"
+    topic_section_header: Maelezo yote kuhusu Brexit
+    topic_section_subheading: Vinjari maelezo yote yanayohusiana na Brexit
+    video_section_description: |
+      <p>Kufanya biashara na Ulaya kumebadilika. Unatakiwa kufuata kanuni mpya kuhusu bidhaa za kuuzwa nje ya nchi, bidhaa za kuagiza kutoka nje ya nchi, ushuru, data na&nbsp;ukodishaji.</p>
+      <p>Tazama video ili upate maelezo kuhusu athari za kanuni mpya kwenye biashara yako. Unaweza pia <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">kutumia kiteuzi cha Brexit</a> ili upate orodha ya hatua zinazokufaa.</p>
+    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
+    video_section_title: Endelea kufanya biashara yako
+    video_section_transcription_summary: Angalia maandishi ya video
+    video_section_transcription_text: |
+      <p>Biashara, Uingereza imeondoka katika Umoja wa Ulaya na kanuni mpya zinatumika sasa.</p>
+      <p>Ili uendelee kufanya biashara yako, tumia zana ya kiteuzi cha Brexit inayopatikana kwenye gov.uk/transition ili upate hatua za kuchukua zinazofaa biashara yako.</p>
+      <p>Tuendelee kufanya biashara.</p>

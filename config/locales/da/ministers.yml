@@ -1,9 +1,8 @@
----
 da:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Deltager også Kabinet
+    by_department: Ministrene efter afdeling
+    cabinet: Kabinetsministre
+    govuk_title: Ministre - GOV.UK
+    title: Ministere
+    whips: Piske

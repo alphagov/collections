@@ -1,16 +1,16 @@
----
 sk:
   roles:
-    find_out_more_html:
     heading:
+      one: Úloha
       few:
-      one:
-      other:
+      other: Úlohy
+    find_out_more_html: Viac informácií o predchádzajúcich držiteľoch tejto funkcie
+      nájdete v našej sekcii %{link}.
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: Súčasný držiteľ funkcie
+      previous_holders: Predchádzajúci držitelia
+      responsibilities: Zodpovednosti
+    ministerial: Úloha ministra
+    past: minulosť
+    previous_holders: Predchádzajúci držitelia tejto funkcie
+    read_more: Viac o tejto úlohe

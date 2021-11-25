@@ -1,7 +1,6 @@
----
 es-419:
   people:
-    biography:
-    previous_roles:
-    previous_roles_in_government:
-    read_more:
+    biography: Biografía
+    previous_roles: Funciones anteriores
+    previous_roles_in_government: Funciones anteriores en el gobierno
+    read_more: Más información sobre esta persona

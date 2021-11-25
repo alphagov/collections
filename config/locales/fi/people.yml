@@ -1,7 +1,6 @@
----
 fi:
   people:
-    biography:
-    previous_roles:
-    previous_roles_in_government:
-    read_more:
+    biography: Elämäkerta
+    previous_roles: Aiemmat roolit
+    previous_roles_in_government: Aiemmat tehtävät julkishallinnossa
+    read_more: Lisää tästä henkilöstä

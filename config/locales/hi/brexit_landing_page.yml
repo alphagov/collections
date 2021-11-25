@@ -1,40 +1,55 @@
----
 hi:
   brexit_landing_page:
     campaign_links:
-      lead_in:
-      lead_out:
-      links:
+      lead_in: 'जांचें कि आपको क्या अलग तरीके से करना होगा यदि आप हैं:'
+      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
+        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
+        data-track-label="Get the complete list">पूरी सूची प्राप्त करें</a> कि आपको
+        खुद के लिए, अपने व्यवसाय और अपने परिवार के लिए क्या करना होगा।
     comms:
-      links:
-      read_transcript:
-    comms_header:
-    data_list_title:
-    email_mailto_subject:
-    guidance_header:
-    meta_description:
-    meta_title:
+      read_transcript: इस वीडियो के लिए ट्रांस्क्रिप्ट पढ़ें
+    comms_header: घोषणाएं
+    data_list_title: 'ब्रेक्सिट का लैंडिंग पेज: %{header}'
+    email_mailto_subject: 'यूनाइडेट किंगडम की नई शुरुआत: चलिए चलते हैं- GOV.UK'
+    guidance_header: व्यवसायों और नागरिकों के लिए बदलाव
+    meta_description: पता करें कि ब्रेक्सिट के नए नियम यूरोप में यात्रा करने और उसके
+      साथ व्यापार करने जैसी चीज़ों पर कैसे लागू होते हैं। ब्रेक्सिट चेकर का उपयोग
+      करके कार्रवाइयों की पर्सनलाइज़ लिस्ट पाएं।
+    meta_title: ब्रेक्सिट
     no_cookies:
-      change_settings_text:
-      icon_text:
-      or_text:
-      to_watch_text:
-      watch_link_text:
-    page_header:
-    page_header_explainer:
+      change_settings_text: अपनी कुकी सेटिंग बदलें
+      icon_text: वीडियो
+      or_text: या
+      to_watch_text: वीडियो देखने के लिए
+      watch_link_text: यूट्यूब पर देखें
+    page_header: ब्रेक्सिट:<br/>नए नियम यहां हैं
+    page_header_explainer: नए नियम यूरोप में यात्रा करने और व्यापार करने जैसी चीज़ों
+      पर लागू होते हैं। ब्रेक्सिट चेकर का उपयोग करके खुद के, अपने व्यवसाय और अपने
+      परिवार के लिए कार्रवाइयों की पर्सनलाइज़ लिस्ट पाएं।
     sections:
-      aria_string_suffix:
-      guidance_and_regulation:
-      news_and_communications:
-      policy_and_engagement:
-      research_and_statistics:
-      services:
-      transparency:
-    share_links:
-    topic_section_header:
-    topic_section_subheading:
-    video_section_description:
-    video_section_link:
-    video_section_title:
-    video_section_transcription_summary:
-    video_section_transcription_text:
+      aria_string_suffix: ब्रेक्सिट से संबंधित
+      guidance_and_regulation: मार्गदर्शन और विनियमन
+      news_and_communications: खबर और संचार
+      policy_and_engagement: नीति के कागज़ात और सलाह
+      research_and_statistics: अनुसंधान और सांख्यिकी
+      services: सेवाएं
+      transparency: पारदर्शिता और सूचना जारी करने की आज़ादी
+    share_links: यह पेज शेयर करें
+    take_action_list:
+      amber: बदलें
+      green: आगे बढ़ें
+      red: जांचें
+    take_action_start_now: 'ब्रेक्सिट चेकर: अभी शुरू करें'
+    take_action_start_now_link: "/transition-check/questions"
+    topic_section_header: ब्रेक्सिट की सभी जानकारी
+    topic_section_subheading: ब्रेक्सिट से संबंधित सभी जानकारी ब्राउज़ करें
+    video_section_description: |
+      <p>यूरोप में व्यवसाय करना बदल गया है। आपको निर्यात, आयात, टैरिफ, डेटा और नौकरी देने पर नए नियमों का पालन करना होगा।</p>
+      <p>वीडियो में देखकर जाने कि आपके व्यवसाय के लिए नए नियम क्या मायने रखते हैं। आप कार्रवाईयों की वैयक्तिक सूची पाने के लिए <a href=""/transition-check/questions"" class=""govuk-link"" data-module=""gem-track-click"" data-track-action=""/transition-check/questions"" data-track-category=""transition-landing-page"" data-track-label=""use the Brexit checker"">ब्रेक्सिट चेकर का उपयोग</a> भी ​कर सकते हैं।</p>
+    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
+    video_section_title: अपना व्यवसाय चालू रखें
+    video_section_transcription_summary: वीडियो ट्रांस्क्रिप्ट देखें
+    video_section_transcription_text: |
+      <p>व्यवसाय, यूनाइडेट किंगडम ने यूरोपीय संघ छोड़ दिया है और अब नए नियम लागू होते हैं।</p>
+      <p>अपना व्यवसाय को चालू रखने के लिए, gov.uk/transition पर ब्रेक्सिट चेकर टूल का उपयोग करके अपने व्यवसाय के लिए वैयक्तिक कार्रवाईयां पाएं।</p>
+      <p>आइए व्यवसाय चालू रखें।</p>

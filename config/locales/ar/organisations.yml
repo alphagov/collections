@@ -1,629 +1,634 @@
----
 ar:
   organisations:
-    about_page_path:
-    administered_by:
-    breadcrumbs:
-      courts_and_tribunals:
-      organisations:
-    contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
     content_item:
       schema_name:
         aaib_report:
+          zero:
+          one: تقرير شعبة التحقيق في الحوادث الجوية
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: تقارير شعبة التحقيق في الحوادث الجوية
         announcement:
-          few:
-          many:
+          zero:
           one: إعلان
+          two:
+          few:
+          many:
           other: إعلانات
-          two:
-          zero:
         asylum_support_decision:
+          zero:
+          one: قرار محكمة دعم اللجوء
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: قرارات محكمة دعم اللجوء
         authored_article:
+          zero:
+          one: مقال مؤلَّف
+          two:
           few:
           many:
-          one: مقال مرخص
-          other: مقالات مرخصة
-          two:
-          zero:
+          other: مقالات مؤلَّفة
         business_finance_support_scheme:
+          zero:
+          one: مخطط دعم تمويل الأعمال
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: مخططات دعم تمويل الأعمال
         case_study:
+          zero:
+          one: دراسة الحالة
+          two:
           few:
           many:
-          one: دراسة حالة
-          other: دراسات حالة
-          two:
-          zero:
+          other: دراسات الحالة
         closed_consultation:
+          zero:
+          one: استشارة مغلقة
+          two:
           few:
           many:
-          one: مشاورة منتهية
-          other: مشاورات منتهية
-          two:
-          zero:
+          other: استشارات مغلقة
         cma_case:
+          zero:
+          one: قضية لدى هيئة المنافسة والأسواق
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: قضايا لدى هيئة المنافسة والأسواق
         coming_soon:
+          zero:
+          one: قريبًا
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: قريبًا
         consultation:
+          zero:
+          one: استشارة
+          two:
           few:
           many:
-          one: مشاورة
-          other: مشاورات
-          two:
-          zero:
+          other: استشارات
         consultation_outcome:
+          zero:
+          one: نتيجة الاستشارة
+          two:
           few:
           many:
-          one: نتيجة المشاورة
-          other: نتائج المشاورات
-          two:
-          zero:
+          other: نتائج الاستشارة
         corporate_information_page:
+          zero:
+          one: صفحة المعلومات
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: صفحات المعلومات
         corporate_report:
+          zero:
+          one: تقرير الشركة
+          two:
           few:
           many:
-          one: تقرير الوزارة
-          other: تقارير الوزارة
-          two:
-          zero:
+          other: تقارير الشركة
         correspondence:
-          few:
-          many:
+          zero:
           one: مراسلة
+          two:
+          few:
+          many:
           other: مراسلات
-          two:
-          zero:
         countryside_stewardship_grant:
+          zero:
+          one: منحة رعاية المناطق الريفية
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: منح رعاية المناطق الريفية
         decision:
+          zero:
+          one: قرار
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: قرارات
         detailed_guide:
-          few:
-          many:
-          one: توجيه مفصل
-          other: توجيهات مفصل
-          two:
           zero:
-        dfid_research_output:
-          few:
-          many:
-          one:
-          other:
-          two:
-          zero:
-        document_collection:
-          few:
-          many:
-          one: سلسة
-          other:
-          two:
-          zero:
-        draft_text:
-          few:
-          many:
-          one: مسودة النص
-          other: مسودة النصوص
-          two:
-          zero:
-        drug_safety_update:
-          few:
-          many:
-          one:
-          other:
-          two:
-          zero:
-        employment_appeal_tribunal_decision:
-          few:
-          many:
-          one:
-          other:
-          two:
-          zero:
-        employment_tribunal_decision:
-          few:
-          many:
-          one:
-          other:
-          two:
-          zero:
-        esi_fund:
-          few:
-          many:
-          one:
-          other:
-          two:
-          zero:
-        fatality_notice:
-          few:
-          many:
-          one: إشعار وفاة
-          other: إشعارات وفاة
-          two:
-          zero:
-        foi_release:
-          few:
-          many:
-          one: نشرة وفق حرية الحصول على المعلومات
-          other: نشرات وفق حرية الحصول على المعلومات
-          two:
-          zero:
-        form:
-          few:
-          many:
-          one: نموذج
-          other: نماذج
-          two:
-          zero:
-        government_response:
-          few:
-          many:
-          one: رد من الحكومة
-          other: ردود من الحكومة
-          two:
-          zero:
-        guidance:
-          few:
-          many:
           one: توجيه
-          other: توجيهات
           two:
+          few:
+          many:
+          other: توجيه
+        dfid_research_output:
           zero:
+          one: البحث من أجل مخرج التنمية
+          two:
+          few:
+          many:
+          other: البحث من أجل مخرجات التنمية
+        document_collection:
+          zero:
+          one: مجموعة
+          two:
+          few:
+          many:
+          other: مجموعات
+        draft_text:
+          zero:
+          one: مشروع النص
+          two:
+          few:
+          many:
+          other: مشاريع النصوص
+        drug_safety_update:
+          zero:
+          one: تحديث سلامة الدواء
+          two:
+          few:
+          many:
+          other: تحديثات سلامة الدواء
+        employment_appeal_tribunal_decision:
+          zero:
+          one: قرار محكمة استئناف العمل
+          two:
+          few:
+          many:
+          other: قرارات محكمة استئناف العمل
+        employment_tribunal_decision:
+          zero:
+          one: قرار محكمة العمل
+          two:
+          few:
+          many:
+          other: قرارات محكمة العمل
+        esi_fund:
+          zero:
+          one: الصندوق الهيكلي والاستثماري الأوروبي (ESIF)
+          two:
+          few:
+          many:
+          other: الصناديق الهيكلية والاستثمارية الأوروبية (ESIF)
+        fatality_notice:
+          zero:
+          one: إشعار حول الوفيات
+          two:
+          few:
+          many:
+          other: إشعارات حول الوفيات
+        foi_release:
+          zero:
+          one: إصدار  حرية تداول المعلومات
+          two:
+          few:
+          many:
+          other: إصدارات حرية تداول المعلومات
+        form:
+          zero:
+          one: نموذج
+          two:
+          few:
+          many:
+          other: نماذج
+        government_response:
+          zero:
+          one: استجابة الحكومة
+          two:
+          few:
+          many:
+          other: استجابات الحكومة
+        guidance:
+          zero:
+          one: توجيه
+          two:
+          few:
+          many:
+          other: توجيه
         impact_assessment:
+          zero:
+          one: تقييم الأثر
+          two:
           few:
           many:
-          one: تقييم التأثير
-          other: تقييمات التأثير
-          two:
-          zero:
+          other: تقييمات الأثر
         imported:
+          zero:
+          one: مستورد - في انتظار النوع
+          two:
           few:
           many:
-          one: استلم - بانتظار الطباعة
-          other: استلم - بانتظار الطباعة
-          two:
-          zero:
+          other: مستورد - في انتظار النوع
         independent_report:
-          few:
-          many:
+          zero:
           one: تقرير مستقل
+          two:
+          few:
+          many:
           other: تقارير مستقلة
-          two:
-          zero:
         international_development_fund:
+          zero:
+          one: تمويل التنمية الدولية
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: تمويل التنمية الدولية
         international_treaty:
+          zero:
+          one: معاهدة دولية
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: معاهدات دولية
         maib_report:
+          zero:
+          one: تقرير شعبة التحقيق في الحوادث البحرية
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: تقارير شعبة التحقيق في الحوادث البحرية
         map:
-          few:
-          many:
+          zero:
           one: خريطة
+          two:
+          few:
+          many:
           other: خرائط
-          two:
-          zero:
         medical_safety_alert:
+          zero:
+          one: تنبيهات واستدعاءات للأدوية والأجهزة الطبية
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: تنبيهات واستدعاءات للأدوية والأجهزة الطبية
         national:
+          zero:
+          one: إعلان للإحصاءات الوطنية
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: إعلانات للإحصاءات الوطنية
         national_statistics:
+          zero:
+          one: الإحصاءات الوطنية
+          two:
           few:
           many:
-          one: إحصائية - إحصائية محلية
-          other: إحصائيات - إحصائيات محلية
-          two:
-          zero:
+          other: الإحصاءات الوطنية
         national_statistics_announcement:
+          zero:
+          one: إعلان للإحصاءات الوطنية
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: إعلانات للإحصاءات الوطنية
         news_article:
+          zero:
+          one: مقال إخباري
+          two:
           few:
           many:
-          one: مقال إخباري
           other: مقالات إخبارية
-          two:
-          zero:
         news_story:
-          few:
-          many:
+          zero:
           one: قصة إخبارية
+          two:
+          few:
+          many:
           other: قصص إخبارية
-          two:
-          zero:
         notice:
+          zero:
+          one: إشعار
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: إشعارات
         official:
+          zero:
+          one: إعلان للإحصاءات الرسمية
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: إعلانات للإحصاءات الرسمية
         official_statistics:
+          zero:
+          one: الإحصاءات الرسمية
+          two:
           few:
           many:
-          one: إحصائية
-          other: إحصائيات
-          two:
-          zero:
+          other: الإحصاءات الرسمية
         official_statistics_announcement:
+          zero:
+          one: إعلان للإحصاءات الرسمية
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: إعلانات للإحصاءات الرسمية
         open_consultation:
+          zero:
+          one: استشارة مفتوحة
+          two:
           few:
           many:
-          one: مشاورة جارية
-          other: مشاورات جارية
-          two:
-          zero:
+          other: استشارات مفتوحة
         oral_statement:
+          zero:
+          one: بيان شفوي للبرلمان
+          two:
           few:
           many:
-          one: تصريح شفهي للبرلمان
-          other: تصريحات شفهية للبرلمان
-          two:
-          zero:
+          other: بيانات شفوية للبرلمان
         policy:
-          few:
-          many:
+          zero:
           one: سياسة
+          two:
+          few:
+          many:
           other: سياسات
-          two:
-          zero:
         policy_paper:
+          zero:
+          one: ورقة السياسة
+          two:
           few:
           many:
-          one: ورقة عن السياسة
-          other: ورقة عن السياسات
-          two:
-          zero:
+          other: أوراق السياسة
         press_release:
-          few:
-          many:
+          zero:
           one: بيان صحفي
+          two:
+          few:
+          many:
           other: بيانات صحفية
-          two:
-          zero:
         promotional:
-          few:
-          many:
+          zero:
           one: مادة ترويجية
-          other: مواد ترويجية
           two:
-          zero:
+          few:
+          many:
+          other: مادة ترويجية
         publication:
+          zero:
+          one: منشور
+          two:
           few:
           many:
-          one: مطبوعة
-          other: مطبوعات
-          two:
-          zero:
+          other: منشورات
         raib_report:
+          zero:
+          one: تقرير شعبة التحقيق في حوادث السكك الحديدية
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: تقارير شعبة التحقيق في حوادث السكك الحديدية
         regulation:
+          zero:
+          one: لائحة
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: لوائح
         research:
+          zero:
+          one: البحث والتحليل
+          two:
           few:
           many:
-          one: بحث وتحليل
-          other: بحوث وتحليلات
-          two:
-          zero:
+          other: البحث والتحليل
         residential_property_tribunal_decision:
+          zero:
+          one: قرار محكمة الممتلكات السكنية
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: قرارات محكمة الممتلكات السكنية
         service_sign_in:
+          zero:
+          one: تسجيل الدخول إلى الخدمة
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: تسجيل الدخول إلى الخدمة
         service_standard_report:
+          zero:
+          one: تقرير موحد للخدمة
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: تقارير موحدة للخدمة
         speaking_notes:
+          zero:
+          one: ملاحظات تحضيرية للخطاب
+          two:
           few:
           many:
-          one: مذكرات كلامية
-          other: مذكرات كلامية
-          two:
-          zero:
+          other: ملاحظات تحضيرية للخطاب
         speech:
+          zero:
+          one: خطاب
+          two:
           few:
           many:
-          one: كلمة
-          other: كلمات
-          two:
-          zero:
+          other: خطابات
         standard:
+          zero:
+          one: معيار
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: معايير
         statement_to_parliament:
+          zero:
+          one: بيان إلى البرلمان
+          two:
           few:
           many:
-          one: تصريح للبرلمان
-          other: تصريحات للبرلمان
-          two:
-          zero:
+          other: بيانات إلى البرلمان
         statistical_data_set:
-          few:
-          many:
+          zero:
           one: مجموعة بيانات إحصائية
+          two:
+          few:
+          many:
           other: مجموعات بيانات إحصائية
-          two:
-          zero:
         statistics_announcement:
+          zero:
+          one: إعلان إصدار الإحصائيات
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: إعلانات إصدار الإحصائيات
         statutory_guidance:
+          zero:
+          one: التوجيه القانوني
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: التوجيه القانوني
         take_part:
+          zero:
+          one: شارك
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: شارك
         tax_tribunal_decision:
+          zero:
+          one: قرار محكمة الضرائب ودائرة القضاء العليا
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: قرارات محكمة الضرائب ودائرة القضاء العليا
         transcript:
+          zero:
+          one: نص
+          two:
           few:
           many:
-          one: نص منسوخ
-          other: نصوص منسوخة
-          two:
-          zero:
+          other: نصوص
         transparency:
+          zero:
+          one: بيانات الشفافية
+          two:
           few:
           many:
-          one: بيانات تتعلق بالشفافية
-          other: بيانات تتعلق بالشفافية
-          two:
-          zero:
+          other: بيانات الشفافية
         utaac_decision:
+          zero:
+          one: قرار محكمة الاستئناف الإدارية
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: قرارات محكمة الاستئناف الإدارية
         world_location_news_article:
-          few:
-          many:
+          zero:
           one: مقال إخباري
+          two:
+          few:
+          many:
           other: مقالات إخبارية
-          two:
-          zero:
         world_news_story:
+          zero:
+          one: قصة إخبارية عالمية
+          two:
           few:
           many:
-          one:
-          other:
-          two:
-          zero:
+          other: قصص إخبارية عالمية
         written_statement:
+          zero:
+          one: بيان خطي للبرلمان
+          two:
           few:
           many:
-          one: تصريح خطي
-          other: تصريحات خطية
-          two:
-          zero:
-    corporate_information:
+          other: بيانات خطية للبرلمان
+    about_page_path: "/government/organisations/%{organisation}/about"
+    administered_by: يُدار بواسطة
+    breadcrumbs:
+      courts_and_tribunals: المحاكم والهيئات القضائية
+      organisations: المنظمات
+    contact:
+      contact_details: تفاصيل جهة الاتصال
+      contact_form: 'نموذج الاتصال: %{title}'
+      contact_organisation: الاتصال على %{organisation}
+      email: البريد الإلكتروني
+      telephone: الهاتف
+    corporate_information: معلومات الشركة
     document_types:
-      documents:
+      documents: المستندات
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: اطلع على جميع التوجيهات واللوائح
+        title: التوجيه واللائحة
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: اطلع على جميع الأخبار والاتصالات
+        title: الأخبار والاتصالات
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: اطلع على جميع أوراق السياسات والاستشارات
+        title: أوراق السياسات والاستشارات
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: اطلع على جميع الأبحاث والإحصاءات
+        title: الأبحاث والإحصاءات
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: اطلع على جميع الخدمات
+        title: الخدمات
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: اطلع على جميع بيانات الشفافية وحرية تداول المعلومات
+        title: الشفافية وحرية تداول المعلومات
+    errors_or_omissions_html: <p>أخطاء أو حالات إغفال؟ <a class="govuk-link" href="/contact/govuk">أخبرنا
+      هنا</a>. للحصول على القوائم الرسمية للهيئات العامة غير التابعة للإدارات <a class="govuk-link"
+      href="/government/collections/public-bodies">اطلع على الهيئات العامة</a>.</p>
+    featured: متميّز
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: نموذج الاتصال المخصص لحرية تبادل المعلومات
+      foi_exemption_html: |
+        هذه المنظمة غير مشمولة ضمن تغطية قانون حرية تداول المعلومات.
+        لمعرفة المنظمات المشمولة بالتغطية، اطلع على <a href="%{foi_url}" class="govuk-link brand__color">التشريع</a>.
+      freedom_of_information_act: قانون حرية تداول المعلومات
+      freedom_of_information_requests: طلبات حرية تداول المعلومات
+      make_an_foi_request: تقديم طلب بموجب حرية تداول المعلومات
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: اقرأ عن قانون حرية تداول المعلومات <a href="%{how_to_path}" class="govuk-link
+          brand__color">وكيفية تقديم طلب بموجبه</a>.
+        step2_html: تفقَّد <a href="%{our_releases_path}" class="govuk-link brand__color">إصداراتنا
+          السابقة</a> لمعرفة ما إذا كنا قد أجبنا على سؤالك بالفعل.
+        step3_html: قدم طلبًا جديدًا من خلال التواصل معنا باستخدام التفاصيل أدناه.
+    follow_us: تابعنا
+    hidden_share_link: متابعة
+    high_profile_groups: مجموعات بارزة ضمن %{title}
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: الوظائف والعقود
+    latest_from: الأحدث من %{title}
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name: "%{title} يُطلق عليها الآن <a href='%{link_href}'>%{link_text}</a>"
+      devolved: "%{title} هي هيئة تابعة إلى <a href='%{link_href}'>%{link_text}</a>"
+      joining: سيتم دمج %{title} قريبًا في  GOV.UK
+      left_gov: أصبح %{title} الآن مستقلا عن حكومة المملكة المتحدة
+      merged: أصبح %{title} جزءًا من <a href='%{link_href}'>%{link_text}</a> في %{updated}
+      merged_no_date: أصبح %{title} الآن جزءًا من <a href='%{link_href}'>%{link_text}</a>
+      no_longer_exists: تم إغلاق %{title}
+      no_website: ليس لدى %{title} موقع ويب
+      separate_website: لدى %{title} <a href='%{url}'>موقع ويب منفصل</a>
+      split: تم استبدال %{title} ليحل محله %{links}
+    part_of: جزء من
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: إدارتنا
+      chief_professional_officers: كبار الموظفين الفنيين
+      military_personnel: كبار مسؤولينا العسكريين
+      ministers: وزراؤنا
+      special_representatives: الممثلين الخاصون
+      traffic_commissioners: مفتشو المرور
+    read_more: اطلع على المزيد حول ما نقوم به
+    search_for_department: ابحث عن إدارة أو وكالة أو هيئة عامة
+    see_all_latest_documents: اطلع على أحدث المستندات
+    separate_website: موقع ويب منفصل
+    services_and_information: جميع معلومات وخدمات %{acronym}
     subscription:
-      email:
-      feed:
+      email: احصل على رسائل البريد الإلكتروني
+      feed: اشترك في التغذية
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      adhoc_advisory_group: مجموعة استشارية مخصصة
+      advisory_ndpb: هيئة عامة استشارية غير تابعة للإدارات
+      civil_service: الخدمة المدنية
+      executive_agency: وكالة تنفيذية
+      executive_ndpb: هيئة عامة تنفيذية غير تابعة للإدارات
+      independent_monitoring_body: هيئة رقابية مستقلة
+      non_ministerial_department: إدارة غير وزارية
+      other: أخرى
+      public_corporation: مؤسسة عامة
+      tribunal: هيئة قضائية
+    view_all: عرض الكل
+    view_less: عرض أقل
+    what_we_do: ما تقوم به %{title}
     works_with_statement:
-      multiple:
-      one:
+      multiple: تعمل مع %{works_with_count} وكالات وهيئات عامة
+      one: تعمل مع %{works_with_count} هيئة عامة

@@ -1,12 +1,11 @@
----
 es:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Inicio
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
+      prefix: 'Examinar:'
+      title: Navegar por GOV.UK
+    get_emails: Obtenga correos electrónicos para este tema
+    language_direction: ltr
     language_name: Español
     topics:
-      title:
+      title: "%{title}: información detallada"

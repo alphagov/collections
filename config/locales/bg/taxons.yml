@@ -1,8 +1,7 @@
----
 bg:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Разглеждане на подтеми
+    organisations: Организации
+    see_all_in_topic: Вижте повече %{type} на тази тема
+    show_fewer_orgs: Показване на по-малко организации
+    show_more_orgs: Показване на повече организации

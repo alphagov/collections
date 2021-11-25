@@ -1,8 +1,7 @@
----
 tk:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Aşakdaky mowzuklary öwreniň
+    organisations: Guramalar
+    see_all_in_topic: Bu tema %{type}  degişli goşmaça serediň
+    show_fewer_orgs: Azrak guramalary görkez
+    show_more_orgs: Köpräk guramalary görkez

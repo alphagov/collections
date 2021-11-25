@@ -1,6 +1,5 @@
----
 az:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Xidmətlər və məlumatlar - %{title}
+    see_more_link: Daha çoxuna baxın
+    title: Xidmətlər və məlumatlar

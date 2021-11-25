@@ -1,12 +1,11 @@
----
 tk:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Baş sahypa
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: Türkmençe
+      prefix: 'Gözle:'
+      title: Gözle GOV.UK
+    get_emails: Bu mowzuk üçin e-poçta alyň
+    language_direction: ltr
+    language_name: Türkmen
     topics:
-      title:
+      title: "%{title}: Jikme-jik maglumat"

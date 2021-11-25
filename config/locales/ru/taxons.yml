@@ -1,8 +1,7 @@
----
 ru:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Изучите под-темы
+    organisations: Организации
+    see_all_in_topic: Посмотреть юольше %{type} по данной теме
+    show_fewer_orgs: Показать меньше организаций
+    show_more_orgs: Показать больше организаций

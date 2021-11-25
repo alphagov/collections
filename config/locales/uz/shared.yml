@@ -1,12 +1,11 @@
----
 uz:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Бош саҳифага
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: O'zbekcha
+      prefix: 'Браузерда очиш:'
+      title: GOV.UKни браузерда очиш
+    get_emails: Ушбу мавзу бўйича электрон манзилни олиш
+    language_direction: ltr
+    language_name: Инглиз тили
     topics:
-      title:
+      title: "%{title}: батафсил маълумот"

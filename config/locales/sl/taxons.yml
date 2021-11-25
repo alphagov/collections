@@ -1,8 +1,7 @@
----
 sl:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Raziščite podteme
+    organisations: Organizacije
+    see_all_in_topic: Poglejte več %{type} na to temo
+    show_fewer_orgs: Pokaži manj organizacij
+    show_more_orgs: Pokaži več organizacij

@@ -1,8 +1,7 @@
----
 bn:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: উপ-বিষয়গুলো অনুসন্ধান করুন
+    organisations: প্রতিষ্ঠানসমূহ
+    see_all_in_topic: এই বিষয়টিতে আরও %{type} দেখুন
+    show_fewer_orgs: আরও কম প্রতিষ্ঠান দেখান
+    show_more_orgs: আরও বেশি প্রতিষ্ঠান দেখান

@@ -1,5 +1,4 @@
----
 tr:
   world_wide_taxons:
-    take_the_survey:
-    test_banner:
+    take_the_survey: Geliştirmemize yardımcı olmak için ankete katılın
+    test_banner: Bu sayfanın yerleşiminin bir test sürümüdür.

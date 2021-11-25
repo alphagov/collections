@@ -1,5 +1,4 @@
----
 lt:
   world_wide_taxons:
-    take_the_survey:
-    test_banner:
+    take_the_survey: Užpildykite apklausą, kad galėtume tobulėti
+    test_banner: Tai bandomoji šio puslapio išdėstymo versija.

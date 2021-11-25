@@ -1,12 +1,9 @@
----
 it:
   brexit_landing_page:
     campaign_links:
       lead_in:
       lead_out:
-      links:
     comms:
-      links:
       read_transcript:
     comms_header:
     data_list_title:
@@ -31,6 +28,12 @@ it:
       services:
       transparency:
     share_links:
+    take_action_list:
+      amber:
+      green:
+      red:
+    take_action_start_now:
+    take_action_start_now_link:
     topic_section_header:
     topic_section_subheading:
     video_section_description:

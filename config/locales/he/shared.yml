@@ -1,12 +1,11 @@
----
 he:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: דף הבית
     browse:
-      prefix:
-      title:
-    get_emails:
+      prefix: 'עיון: '
+      title: עיון GOV.UK
+    get_emails: קבל הודעות דואר אלקטרוני לנושא זה
     language_direction: rtl
     language_name: עברית
     topics:
-      title:
+      title: "%{title}: מידע מפורט"

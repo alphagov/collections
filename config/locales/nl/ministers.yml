@@ -1,9 +1,8 @@
----
 nl:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Woont ook het kabinet bij
+    by_department: Ministers per departement
+    cabinet: Kabinetsministers
+    govuk_title: Ministers - GOV.UK
+    title: Ministers
+    whips: Whips

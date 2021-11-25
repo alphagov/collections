@@ -1,481 +1,493 @@
----
 gd:
   organisations:
-    about_page_path:
-    administered_by:
-    breadcrumbs:
-      courts_and_tribunals:
-      organisations:
-    contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
     content_item:
       schema_name:
         aaib_report:
-          few:
-          one:
-          other:
+          one: Tuarascáil ar Chosc Aeir de chuid Cigireacht Aer-Chruinnithe
           two:
+          few:
+          other: Tuarascálacha an Bhrainse um Imscrúdú ar Thimpistí Aeir
         announcement:
-          few:
-          one:
-          other:
+          one: Fógra
           two:
+          few:
+          other: Fógra
         asylum_support_decision:
-          few:
-          one:
-          other:
+          one: Tuarascáil ón mbinse athbhreithnithe ar thearmann
           two:
+          few:
+          other: Cinneadh na cúirte tacaíochta tearmainn
         authored_article:
-          few:
-          one:
-          other:
+          one: Ailt scríofa
           two:
+          few:
+          other: Téacsanna scríofa
         business_finance_support_scheme:
-          few:
-          one:
-          other:
+          one: Scéim tacaíochta maoinithe gnó
           two:
+          few:
+          other: Meicníochtaí tacaíochta do mhaoiniú gnó
         case_study:
-          few:
-          one:
-          other:
+          one: Cás-staidéir
           two:
+          few:
+          other: Tuarascálacha staidéir
         closed_consultation:
-          few:
-          one:
-          other:
+          one: Nós imeachta comhairliúcháin dúnta
           two:
+          few:
+          other: Téigh i gcomhairle go príobháideach
         cma_case:
-          few:
-          one:
-          other:
+          one: Iomaíocht agus margaí
           two:
+          few:
+          other: Gnóthaí an Údaráis Iomaíochta agus Margaí
         coming_soon:
-          few:
-          one:
-          other:
+          one: Ag oscailt go luath
           two:
+          few:
+          other: Ag oscailt go luath
         consultation:
-          few:
-          one:
-          other:
+          one: Comhairliúchán
           two:
+          few:
+          other: Téigh i gcomhairle
         consultation_outcome:
-          few:
-          one:
-          other:
+          one: Torthaí comhairliúcháin
           two:
+          few:
+          other: Torthaí comhairliúcháin
         corporate_information_page:
-          few:
-          one:
-          other:
+          one: Leathanach faisnéise
           two:
+          few:
+          other: Leathanaigh faisnéise
         corporate_report:
-          few:
-          one:
-          other:
+          one: Tuarascáil cuideachta
           two:
+          few:
+          other: Tuarascálacha cuideachta
         correspondence:
-          few:
-          one:
-          other:
+          one: Comhfhreagras
           two:
+          few:
+          other: Comhfhreagras
         countryside_stewardship_grant:
-          few:
-          one:
-          other:
+          one: Deontas Maoirseachta Tuaithe
           two:
+          few:
+          other: Deontais Maoirseachta Tuaithe
         decision:
-          few:
-          one:
-          other:
+          one: Cinneadh
           two:
+          few:
+          other: Cinntí
         detailed_guide:
-          few:
-          one:
-          other:
+          one: Treoshuíomh
           two:
+          few:
+          other: Treoshuíomh
         dfid_research_output:
-          few:
-          one:
-          other:
+          one: Torthaí taighde le haghaidh forbartha
           two:
+          few:
+          other: Torthaí taighde le haghaidh forbartha
         document_collection:
-          few:
-          one:
-          other:
+          one: Bailiúchán
           two:
+          few:
+          other: Bailiúcháin
         draft_text:
-          few:
-          one:
-          other:
+          one: Tionscadail téacs
           two:
+          few:
+          other: Dréacht-téacsanna
         drug_safety_update:
-          few:
-          one:
-          other:
+          one: Sábháilteacht drugaí a nuashonrú
           two:
+          few:
+          other: Sábháilteacht drugaí a nuashonrú
         employment_appeal_tribunal_decision:
-          few:
-          one:
-          other:
+          one: Cinneadh an bhinse achomhairc fostaíochta
           two:
+          few:
+          other: Cinntí an Bhinse Achomhairc Fostaíochta
         employment_tribunal_decision:
-          few:
-          one:
-          other:
+          one: Cinneadh na cúirte saothair
           two:
+          few:
+          other: Cinntí na cúirte saothair
         esi_fund:
-          few:
-          one:
-          other:
+          one: An Ciste Eorpach Struchtúrtha agus Infheistíochta (ESIF)
           two:
+          few:
+          other: Cistí Struchtúracha agus Infheistíochta na hEorpa (ESIF)
         fatality_notice:
-          few:
-          one:
-          other:
+          one: Obituary
           two:
+          few:
+          other: Obituary
         foi_release:
-          few:
-          one:
-          other:
+          one: Preasráiteas FAITH
           two:
+          few:
+          other: Scaoileadh Shaoráil Faisnéise
         form:
-          few:
-          one:
-          other:
+          one: Foirm
           two:
+          few:
+          other: Foirmeacha
         government_response:
-          few:
-          one:
-          other:
+          one: Freagra an Rialtais
           two:
+          few:
+          other: Freagraí an Rialtais
         guidance:
-          few:
-          one:
-          other:
+          one: Treoshuíomh
           two:
+          few:
+          other: Treoshuímh
         impact_assessment:
-          few:
-          one:
-          other:
+          one: Anailís tionchair
           two:
+          few:
+          other: Anailísí tionchair
         imported:
-          few:
-          one:
-          other:
+          one: allmhairithe - cineál ar feitheamh
           two:
+          few:
+          other: allmhairithe - cineál ar feitheamh
         independent_report:
-          few:
-          one:
-          other:
+          one: Tuarascáil neamhspleách
           two:
+          few:
+          other: Tuarascálacha neamhspleácha
         international_development_fund:
-          few:
-          one:
-          other:
+          one: Forbairt idirnáisiúnta a mhaoiniú
           two:
+          few:
+          other: Forbairt idirnáisiúnta a mhaoiniú
         international_treaty:
-          few:
-          one:
-          other:
+          one: Conradh idirnáisiúnta
           two:
+          few:
+          other: Conarthaí idirnáisiúnta
         maib_report:
-          few:
-          one:
-          other:
+          one: Tuarascáil ón mBrainse um Imscrúdú ar Thimpistí Mara
           two:
+          few:
+          other: Tuarascálacha an Bhrainse um Imscrúdú ar Thimpistí Mara
         map:
-          few:
-          one:
-          other:
+          one: Roghchlár
           two:
+          few:
+          other: Cártaí
         medical_safety_alert:
-          few:
-          one:
-          other:
+          one: Foláirimh agus meabhrúcháin ar dhrugaí agus ar fheistí leighis
           two:
+          few:
+          other: Foláirimh agus meabhrúcháin ar dhrugaí agus ar fheistí leighis
         national:
-          few:
-          one:
-          other:
+          one: Fógra staitisticí náisiúnta
           two:
+          few:
+          other: Fógraí staitisticí náisiúnta
         national_statistics:
-          few:
-          one:
-          other:
+          one: Staitisticí náisiúnta
           two:
+          few:
+          other: Staitisticí náisiúnta
         national_statistics_announcement:
-          few:
-          one:
-          other:
+          one: Fógra staitisticí náisiúnta
           two:
+          few:
+          other: Fógraí staitisticí náisiúnta
         news_article:
-          few:
-          one:
-          other:
+          one: Airteagal Nuachta
           two:
+          few:
+          other: Airteagal Nuachta
         news_story:
-          few:
-          one:
-          other:
+          one: Airteagal Nuachta
           two:
+          few:
+          other: Nua
         notice:
-          few:
-          one:
-          other:
+          one: Tuairim
           two:
+          few:
+          other: Tuairim
         official:
-          few:
-          one:
-          other:
+          one: Fógra staitisticí oifigiúla
           two:
+          few:
+          other: Fógraí staitisticí oifigiúla
         official_statistics:
-          few:
-          one:
-          other:
+          one: Staitisticí oifigiúla
           two:
+          few:
+          other: Staitisticí oifigiúla
         official_statistics_announcement:
-          few:
-          one:
-          other:
+          one: Fógra staitisticí oifigiúla
           two:
+          few:
+          other: Fógraí staitisticí oifigiúla
         open_consultation:
-          few:
-          one:
-          other:
+          one: Comhairliúcháin oscailte
           two:
+          few:
+          other: Comhairliúcháin oscailte
         oral_statement:
-          few:
-          one:
-          other:
+          one: Ráiteas ó bhéal don Pharlaimint
           two:
+          few:
+          other: Ráitis ó bhéal sa Pharlaimint
         policy:
-          few:
-          one:
-          other:
+          one: Polaitíocht
           two:
+          few:
+          other: Polasaithe
         policy_paper:
-          few:
-          one:
-          other:
+          one: Doiciméad beartais
           two:
+          few:
+          other: Doiciméid bheartais
         press_release:
-          few:
-          one:
-          other:
+          one: Preaseisiúint
           two:
+          few:
+          other: Preaseisiúintí
         promotional:
-          few:
-          one:
-          other:
+          one: Ábhar cur chun cinn
           two:
+          few:
+          other: Ábhar cur chun cinn
         publication:
-          few:
-          one:
-          other:
+          one: Foilsiú
           two:
+          few:
+          other: Foilseacháin
         raib_report:
-          few:
-          one:
-          other:
+          one: Tuarascáil an Bhrainse um Imscrúdú ar Thimpistí Iarnróid
           two:
+          few:
+          other: Tuarascálacha Brainse um Imscrúdú ar Thimpistí Iarnróid
         regulation:
-          few:
-          one:
-          other:
+          one: Rialacha
           two:
+          few:
+          other: Rialacháin
         research:
-          few:
-          one:
-          other:
+          one: Taighde agus anailís
           two:
+          few:
+          other: Taighde agus anailís
         residential_property_tribunal_decision:
-          few:
-          one:
-          other:
+          one: Rialú cúirte maoine cónaithe
           two:
+          few:
+          other: Cinntí cúirte eastáit réadaigh chónaithe
         service_sign_in:
-          few:
-          one:
-          other:
+          one: Ceangal seirbhíse
           two:
+          few:
+          other: Ceangal seirbhíse
         service_standard_report:
-          few:
-          one:
-          other:
+          one: Tuarascáil chaighdeánach seirbhíse
           two:
+          few:
+          other: Tuarascálacha caighdeánacha seirbhíse
         speaking_notes:
-          few:
-          one:
-          other:
+          one: Nótaí Labhairt
           two:
+          few:
+          other: Nótaí Labhairt
         speech:
-          few:
-          one:
-          other:
+          one: Óráid
           two:
+          few:
+          other: Óráid
         standard:
-          few:
-          one:
-          other:
+          one: Caighdeán
           two:
+          few:
+          other: Caighdeáin
         statement_to_parliament:
-          few:
-          one:
-          other:
+          one: Dearbhú don Pharlaimint
           two:
+          few:
+          other: Ráitis sa Pharlaimint
         statistical_data_set:
-          few:
-          one:
-          other:
+          one: Tacar sonraí staidrimh
           two:
+          few:
+          other: Tacair sonraí staidrimh
         statistics_announcement:
-          few:
-          one:
-          other:
+          one: Fógra maidir le scaoileadh staidrimh
           two:
+          few:
+          other: Fógraí scaipthe staidrimh
         statutory_guidance:
-          few:
-          one:
-          other:
+          one: Treoir reachtúil
           two:
+          few:
+          other: Treoir reachtúil
         take_part:
-          few:
-          one:
-          other:
+          one: Chun páirt a ghlacadh
           two:
+          few:
+          other: Chun páirt a ghlacadh
         tax_tribunal_decision:
-          few:
-          one:
-          other:
+          one: Cinneadh na cúirte cánach agus na seansaireachta
           two:
+          few:
+          other: Cinntí na cúirte cánach agus na seansaireachta
         transcript:
-          few:
-          one:
-          other:
+          one: Tras-scríobh
           two:
+          few:
+          other: Athscríbhinní
         transparency:
-          few:
-          one:
-          other:
+          one: Sonraí trédhearcachta
           two:
+          few:
+          other: Sonraí trédhearcachta
         utaac_decision:
-          few:
-          one:
-          other:
+          one: Cinneadh an Bhinse Achomhairc Riaracháin
           two:
+          few:
+          other: Cinntí na cúirte achomhairc riaracháin
         world_location_news_article:
-          few:
-          one:
-          other:
+          one: Airteagal Nuachta
           two:
+          few:
+          other: Airteagal Nuachta
         world_news_story:
-          few:
-          one:
-          other:
+          one: Alt nuachta domhanda
           two:
+          few:
+          other: Nuacht domhanda
         written_statement:
-          few:
-          one:
-          other:
+          one: Dearbhú i scríbhinn don Pharlaimint
           two:
-    corporate_information:
+          few:
+          other: Ráitis i scríbhinn don Pharlaimint
+    about_page_path: "/government/organisations/%{organisation}/about"
+    administered_by: Riartha ag
+    breadcrumbs:
+      courts_and_tribunals: Cúirteanna agus Binsí
+      organisations: Eagraíochtaí
+    contact:
+      contact_details: Sonraí teagmhála
+      contact_form: 'Foirm teagmhála: %{title}'
+      contact_organisation: Déan teagmháil le%{organisation}
+      email: R-phost
+      telephone: Teileafón
+    corporate_information: Faisnéis cuideachta
     document_types:
-      documents:
+      documents: Doiciméid
       guidance_and_regulation:
         see_all:
-          path:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
           text:
         title:
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Féach gach gníomh agus cumarsáid
+        title: Nuacht agus cumarsáid
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Féach gach eolas faoi dhoiciméid bheartais agus chomhairliúchán
+        title: Doiciméid bheartais agus comhairliúchán
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Féach gach gníomhaíocht taighde agus staitisticí
+        title: Taighde agus staitisticí
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Féach na seirbhísí go léir
+        title: Seirbhísí
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Féach gach rud faoi thrédhearcacht agus saoirse faisnéise
+        title: Preaseisiúintí maidir le trédhearcacht agus saoirse faisnéise
+    errors_or_omissions_html: <p>Earráidí nó easnaimh? <a class="govuk-link" href="/contact/govuk">Labhair
+      linn anseo</a>. Le haghaidh fógraí oifigiúla ó chomhlachtaí poiblí neamhrannacha
+      <a class="govuk-link" href="/government/collections/public-bodies">féach comhlachtaí
+      poiblí</a>.</p>
+    featured: Réadmhaoin
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: Bileog teagmhála SF
+      foi_exemption_html: |
+        Níl an t-aonán seo clúdaithe ag an dlí um shaoráil faisnéise.
+        Chun a fháil amach cé na heagraíochtaí a bhfuil tionchar orthu, féach ar an <a href="%{foi_url}" class="govuk-link brand__color">reachtaíocht</a>.
+      freedom_of_information_act: An tAcht um Shaoráil Faisnéise (FOI)
+      freedom_of_information_requests: Faisnéis faoi shaoirse faisnéise
+      make_an_foi_request: Déan gearán maidir le saoirse faisnéise
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: Faigh amach faoin dlí um Shaoráil Faisnéise (FOI) agus <a href="%{how_to_path}"
+          class="govuk-link brand__color">conas iarratas a dhéanamh</a>.
+        step2_html: Amharc ar <a href="%{our_releases_path}" class="govuk-link brand__color">ár
+          n-eisiúintí roimhe seo</a> agus féach an bhfuil do cheist freagartha againn
+          cheana féin.
+        step3_html: Déan iarratas bréige trí theagmháil a dhéanamh linn trí na sonraí
+          teagmhála thíos a úsáid.
+    follow_us: Lean orainn
+    hidden_share_link: Lean ar aghaidh
+    high_profile_groups: Grúpaí ardleibhéil laistigh de %{title}
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: Poist agus conarthaí
+    latest_from: An nuacht is déanaí ó %{title}
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name: "%{title} tugtar anois <a href='%{link_href}'>%{link_text}</a>"
+      devolved: "%{title} is orgán de <a href='%{link_href}'>%{link_text}</a>"
+      joining: "%{title} déanfar é a chomhtháthú go luath le GOV.UK"
+      left_gov: "%{title} faoi ​​láthair tá sé neamhspleách ó rialtas na RA"
+      merged: "%{title} mar chuid de <a href = <a href='%{link_href}'>%{link_text}</a>
+        ga %{updated}"
+      merged_no_date: "%{title} faoi ​​láthair mar chuid de <a href='%{link_href}'>%{link_text}</a>"
+      no_longer_exists: "%{title} dúnta"
+      no_website: "%{title} níl suíomh Gréasáin a thuilleadh"
+      separate_website: "%{title} tá suíomh Gréasáin ar <a href='%{url}'>leithligh
+        aige</a>"
+      split: curtha in ionad %{links}
+    part_of: Chuid
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: Ár mbainistíocht
+      chief_professional_officers: Cinn misin ghairmiúla
+      military_personnel: Ár míleata ard-rangú
+      ministers: Ár n-airí
+      special_representatives: Comhairleoirí speisialta
+      traffic_commissioners: Coimisinéirí iompair
+    read_more: Faigh tuilleadh eolais faoinár gcuid gníomhaíochtaí
+    search_for_department: Cuardaigh ceann dár seirbhísí, gníomhaireacht nó comhlacht
+      poiblí
+    see_all_latest_documents: Féach gach téacs le déanaí
+    separate_website: suíomh Gréasáin ar leithligh
+    services_and_information: Gach faisnéis agus seirbhís ó %{acronym}
     subscription:
-      email:
-      feed:
+      email: Faigh r-phost
+      feed: Liostáil le fotha
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      adhoc_advisory_group: Grúpa oibre ad hoc
+      advisory_ndpb: Comhlacht comhairliúcháin poiblí neamh-aireachta
+      civil_service: Státseirbhís
+      executive_agency: Gníomhaireacht feidhmiúcháin
+      executive_ndpb: Comhlacht maoirseachta neamhspleách
+      independent_monitoring_body: Comhlacht bainistíochta neamhspleách
+      non_ministerial_department: Roinn neamh-aireachta
+      other: Eile
+      public_corporation: Cuideachta phoiblí
+      tribunal: Cúirt
+    view_all: Taispeáin gach rud
+    view_less: féach níos lú
+    what_we_do: Cad atá á dhéanamh ag %{title}
     works_with_statement:
-      multiple:
-      one:
+      multiple: Oibríonn sé le heagraíochtaí %{works_with_count} agus le comhlachtaí
+        poiblí
+      one: Oibríonn sé le comhlacht poiblí %{works_with_count}

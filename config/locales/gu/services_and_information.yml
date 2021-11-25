@@ -1,6 +1,5 @@
----
 gu:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: 'સેવાઓ અને માહિતી - %{title} '
+    see_more_link: વધુ જુઓ
+    title: સેવાઓ અને માહિતી

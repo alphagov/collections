@@ -1,8 +1,7 @@
----
 hi:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: उप-विषयों को और जानें
+    organisations: संस्थाएं
+    see_all_in_topic: इस विषय में और %{type} देखें
+    show_fewer_orgs: कम संस्थाएं दिखाएं
+    show_more_orgs: और संस्थाएं दिखाएं

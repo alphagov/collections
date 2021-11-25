@@ -1,15 +1,15 @@
----
 th:
   roles:
-    find_out_more_html:
+    find_out_more_html: ดูข้อมูลเพิ่มเติมเกี่ยวกับผู้ที่เคยดำรงตำแหน่งนี้ในส่วน %{link}
+      ของเรา
     heading:
-      one:
-      other:
+      one: บทบาท
+      other: บทบาท
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: ผู้ดำรงตำแหน่งปัจจุบัน
+      previous_holders: ผู้ดำรงตำแหน่งก่อนหน้านี้
+      responsibilities: ความรับผิดชอบ
+    ministerial: บทบาทหน้าที่รัฐมนตรี
+    past: อดีต
+    previous_holders: ผู้ดำรงตำแหน่งนี้ก่อนหน้านี้
+    read_more: ข้อมูลเพิ่มเติมเกี่ยวกับบทบาทหน้าที่นี้

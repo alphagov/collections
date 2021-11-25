@@ -1,8 +1,7 @@
----
 hu:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Fedezze fel az altémákat
+    organisations: Szervezetek
+    see_all_in_topic: Tekintse meg több %{type}-t ebben a témakörben
+    show_fewer_orgs: Kevesebb szervezet mutatása
+    show_more_orgs: Több szervezet mutatása

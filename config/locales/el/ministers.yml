@@ -1,9 +1,8 @@
----
 el:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Συμμετέχει επίσης στο Υπουργικό Συμβούλιο
+    by_department: Υπουργοί ανά τμήμα
+    cabinet: Υπουργοί υπουργικού συμβουλίου
+    govuk_title: Υπουργοί - GOV.UK
+    title: Υπουργοί
+    whips: Μαστίγια

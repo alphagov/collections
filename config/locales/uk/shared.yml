@@ -1,12 +1,11 @@
----
 uk:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: На головну
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: Українська
+      prefix: 'Перейти:'
+      title: Перейти на GOV.UK
+    get_emails: Отримувати електронні листи на цю тему
+    language_direction: ltr
+    language_name: Англійська
     topics:
-      title:
+      title: "%{title}: детальна інформація"

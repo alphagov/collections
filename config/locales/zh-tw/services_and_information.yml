@@ -1,6 +1,5 @@
----
 zh-tw:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: 服務和資訊－%{title}
+    see_more_link: 查看更多
+    title: 服務和資訊

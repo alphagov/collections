@@ -1,9 +1,8 @@
----
 ro:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Participă și la întrunire
+    by_department: Miniștri în funcție de minister
+    cabinet: Miniștrii cabinetului
+    govuk_title: Miniștri - GOV.UK
+    title: Miniștri
+    whips: Whips

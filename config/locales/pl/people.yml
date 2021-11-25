@@ -1,7 +1,6 @@
----
 pl:
   people:
-    biography:
-    previous_roles:
-    previous_roles_in_government:
-    read_more:
+    biography: Biografia
+    previous_roles: Poprzednie funkcje
+    previous_roles_in_government: Poprzednie funkcje w rządzie
+    read_more: Więcej o tej osobie

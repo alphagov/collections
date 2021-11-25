@@ -1,12 +1,11 @@
----
 az:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Əsas səhifə
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: Azərbaycanca
+      prefix: Nəzərdən keçirin
+      title: GOV.UK-i nəzərdən keçirin
+    get_emails: Bu mövzu üzrə e-məktublar alın
+    language_direction: ltr
+    language_name: İngiliscə
     topics:
-      title:
+      title: "%{title}: ətraflı məlumat"

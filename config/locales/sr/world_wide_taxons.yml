@@ -1,5 +1,4 @@
----
 sr:
   world_wide_taxons:
-    take_the_survey:
-    test_banner:
+    take_the_survey: Popunite ovu anketu da biste nam pomogli da poboljšamo uslugu
+    test_banner: Ovo je probna verzija rasporeda na ovoj stranici.

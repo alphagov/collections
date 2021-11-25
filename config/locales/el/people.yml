@@ -1,7 +1,6 @@
----
 el:
   people:
-    biography:
-    previous_roles:
-    previous_roles_in_government:
-    read_more:
+    biography: Βιογραφία
+    previous_roles: Προηγούμενοι ρόλοι
+    previous_roles_in_government: Προηγούμενοι ρόλοι στην κυβέρνηση
+    read_more: Περισσότερα για αυτό το άτομο

@@ -1,15 +1,15 @@
----
 id:
   roles:
-    find_out_more_html:
+    find_out_more_html: Cari tahu selengkapnya tentang pemegang sebelumnya dari peran
+      ini pada bagian %{link} kami.
     heading:
-      one:
-      other:
+      one: Peran
+      other: Peran
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: Pemegang peran saat ini
+      previous_holders: Pemegang sebelumnya
+      responsibilities: Tanggung jawab
+    ministerial: Peran kementerian
+    past: sebelumnya
+    previous_holders: Pemegang sebelumnya dari peran ini
+    read_more: Selengkapnya tentang peran ini

@@ -1,12 +1,11 @@
----
 'no':
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Hjem
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: Norsk
+      prefix: 'Bla gjennom:'
+      title: Bla gjennom GOV.UK
+    get_emails: Få e-post for dette emnet
+    language_direction: ltr
+    language_name: Engelsk
     topics:
-      title:
+      title: "%{title}: detaljert informasjon"

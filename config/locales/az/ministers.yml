@@ -1,9 +1,8 @@
----
 az:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Həmçinin Nazirlər Kabinetinin
+    by_department: departamenti iştirak edir
+    cabinet: Nazirlər kabineti
+    govuk_title: Nazirlər - GOV.UK
+    title: Nazirlər
+    whips: Təşkilatçı üzvlər

@@ -1,8 +1,7 @@
----
 sv:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Utforska underämnen
+    organisations: Organisationer
+    see_all_in_topic: Se fler %{type} i detta ämne
+    show_fewer_orgs: Visa färre organisationer
+    show_more_orgs: Visa fler organisationer

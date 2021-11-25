@@ -1,12 +1,11 @@
----
 zh-tw:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: 首頁
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: 中文
+      prefix: 瀏覽：
+      title: 瀏覽英國政府網站
+    get_emails: 獲取此主題的電子郵件
+    language_direction: ltr
+    language_name: 英文
     topics:
-      title:
+      title: "%{title}：詳細資訊"

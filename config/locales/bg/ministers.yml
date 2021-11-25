@@ -1,9 +1,8 @@
----
 bg:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Участва и в работата на кабинета
+    by_department: Министри по министерства
+    cabinet: Министри от кабинета
+    govuk_title: Министри - GOV.UK
+    title: Министри
+    whips: Спешни съобщения

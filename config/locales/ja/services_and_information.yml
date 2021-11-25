@@ -1,6 +1,5 @@
----
 ja:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: サービスと情報 - ％{title}
+    see_more_link: さらに表示
+    title: サービスと情報

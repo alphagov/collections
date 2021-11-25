@@ -1,333 +1,343 @@
----
 kk:
   organisations:
-    about_page_path:
-    administered_by:
-    breadcrumbs:
-      courts_and_tribunals:
-      organisations:
-    contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
     content_item:
       schema_name:
         aaib_report:
-          one:
-          other:
+          one: Әуе апаттарын тергеу бөлімінің есебі
+          other: Әуе апаттарын тергеу бөлімінің есептері
         announcement:
-          one:
-          other:
+          one: Хабарландыру
+          other: Хабарландырулар
         asylum_support_decision:
-          one:
-          other:
+          one: Баспана бойынша қолдау трибуналының шешімі
+          other: Баспана бойынша қолдау трибуналының шешімдері
         authored_article:
-          one:
-          other:
+          one: Мақала авторы
+          other: Мақала авторлары
         business_finance_support_scheme:
-          one:
-          other:
+          one: Кәсіпкерлікті қаржыландыру схемасы
+          other: Кәсіпкерлікті қаржыландыру схемалары
         case_study:
-          one:
-          other:
+          one: Тақырыптық зерттеу
+          other: Тақырыптық зерттеулер
         closed_consultation:
-          one:
-          other:
+          one: Жабық кеңес
+          other: Жабық кеңестер
         cma_case:
-          one:
-          other:
+          one: Бәсекелестік және нарықтар бойынша басқарма ісі
+          other: Бәсекелестік және нарықтар бойынша басқарма істері
         coming_soon:
-          one:
-          other:
+          one: Жақын арада
+          other: Жақын арада
         consultation:
-          one:
-          other:
+          one: Кеңес
+          other: Кеңестер
         consultation_outcome:
-          one:
-          other:
+          one: Кеңес нәтижесі
+          other: Кеңес нәтижелері
         corporate_information_page:
-          one:
-          other:
+          one: Ақпараттық бет
+          other: Ақпараттық беттер
         corporate_report:
-          one:
-          other:
+          one: Корпоративтік есеп
+          other: Корпоративтік есептер
         correspondence:
-          one:
-          other:
+          one: Хат алмасу
+          other: Хат алмасулар
         countryside_stewardship_grant:
-          one:
-          other:
+          one: Countryside Stewardship гранты
+          other: Countryside Stewardship гранттары
         decision:
-          one:
-          other:
+          one: Шешім
+          other: Шешімдер
         detailed_guide:
-          one:
-          other:
+          one: Нұсқаулық
+          other: Нұсқаулық
         dfid_research_output:
-          one:
-          other:
+          one: Өнімділік бойынша зерттеулер
+          other: Өнімділік бойынша зерттеулер
         document_collection:
-          one:
-          other:
+          one: Топтама
+          other: Топтамалар
         draft_text:
-          one:
-          other:
+          one: Жоба мәтіні
+          other: Жоба мәтіндері
         drug_safety_update:
-          one:
-          other:
+          one: Дәрілік заттардың қауіпсіздігін жаңарту
+          other: Дәрілік заттардың қауіпсіздігін жаңартулар
         employment_appeal_tribunal_decision:
-          one:
-          other:
+          one: Жұмыспен қамту жөніндегі апелляциялық сот шешімі
+          other: Жұмыспен қамту жөніндегі апелляциялық сот шешімдері
         employment_tribunal_decision:
-          one:
-          other:
+          one: Жұмыспен қамту жөніндегі сот шешімі
+          other: Жұмыспен қамту жөніндегі сот шешімдері
         esi_fund:
-          one:
-          other:
+          one: Еуропалық құрылымдық және инвестициялық қор (ESIF)
+          other: Еуропалық құрылымдық және инвестициялық қорлар (ESIF)
         fatality_notice:
-          one:
-          other:
+          one: Өлім туралы хабарлама
+          other: Өлім туралы хабарламалар
         foi_release:
-          one:
-          other:
+          one: FOI шығарылымы
+          other: FOI шығарылымдары
         form:
-          one:
-          other:
+          one: Форма
+          other: Формалар
         government_response:
-          one:
-          other:
+          one: Мемлекет жауабы
+          other: Мемлекет жауаптары
         guidance:
-          one:
-          other:
+          one: Нұсқаулық
+          other: Нұсқаулық
         impact_assessment:
-          one:
-          other:
+          one: Ықпалын бағалау
+          other: Ықпалын бағалаулар
         imported:
-          one:
-          other:
+          one: импортталған - күтілетін түрі
+          other: импортталған - күтілетін түрі
         independent_report:
-          one:
-          other:
+          one: Тәуелсіз есеп
+          other: Тәуелсіз есептер
         international_development_fund:
-          one:
-          other:
+          one: Халықаралық даму қоры
+          other: Халықаралық даму қоры
         international_treaty:
-          one:
-          other:
+          one: Халықаралық келісім
+          other: Халықаралық келісімдер
         maib_report:
-          one:
-          other:
+          one: Теңіз апаттарын тергеу бөлімінің есебі
+          other: Теңіз апаттарын тергеу бөлімінің есептері
         map:
-          one:
-          other:
+          one: Карта
+          other: Карталар
         medical_safety_alert:
-          one:
-          other:
+          one: Дәрі-дәрмектер мен медициналық құрылғылар бойынша пікірлер мен ескертулер
+          other: Дәрі-дәрмектер мен медициналық құрылғылар бойынша пікірлер мен ескертулер
         national:
-          one:
-          other:
+          one: Ұлттық статистика хабарландыруы
+          other: Ұлттық статистика хабарландырулары
         national_statistics:
-          one:
-          other:
+          one: Ұлттық статистика
+          other: Ұлттық статистика
         national_statistics_announcement:
-          one:
-          other:
+          one: Ұлттық статистика хабарландыруы
+          other: Ұлттық статистика хабарландырулары
         news_article:
-          one:
-          other:
+          one: Жаңалықтар мақаласы
+          other: Жаңалықтар мақалалары
         news_story:
-          one:
-          other:
+          one: Жаңалықтар оқиғасы
+          other: Жаңалықтар оқиғалары
         notice:
-          one:
-          other:
+          one: Ескертпе
+          other: Ескертпелер
         official:
-          one:
-          other:
+          one: Ресми статистика хабарландыруы
+          other: Ресми статистика хабарландырулары
         official_statistics:
-          one:
-          other:
+          one: Ресми статистика
+          other: Ресми статистика
         official_statistics_announcement:
-          one:
-          other:
+          one: Ресми статистика хабарландыруы
+          other: Ресми статистика хабарландырулары
         open_consultation:
-          one:
-          other:
+          one: Ашық кеңес
+          other: Ашық кеңестер
         oral_statement:
-          one:
-          other:
+          one: Парламентке ауызша мәлімдеме
+          other: Парламентке ауызша мәлімдемелер
         policy:
-          one:
-          other:
+          one: Саясат
+          other: Саясаттар
         policy_paper:
-          one:
-          other:
+          one: Саяси құжат
+          other: Саяси құжаттар
         press_release:
-          one:
-          other:
+          one: Пресс-релиз
+          other: Пресс-релиздер
         promotional:
-          one:
-          other:
+          one: Жарнамалық материал
+          other: Жарнамалық материал
         publication:
-          one:
-          other:
+          one: Жарияланым
+          other: Жарияланымдар
         raib_report:
-          one:
-          other:
+          one: Теміржол апаттарын тергеу бөлімінің есебі
+          other: Теміржол апаттарын тергеу бөлімінің есептері
         regulation:
-          one:
-          other:
+          one: Ереже
+          other: Ережелер
         research:
-          one:
-          other:
+          one: Зерттеу және талдау
+          other: Зерттеу және талдау
         residential_property_tribunal_decision:
-          one:
-          other:
+          one: Тұрғын үйге қатысты сот шешімі
+          other: Тұрғын үйге қатысты сот шешімдері
         service_sign_in:
-          one:
-          other:
+          one: Қызметке кіру
+          other: Қызметке кіру
         service_standard_report:
-          one:
-          other:
+          one: Қызметтің стандартты есебі
+          other: Қызметтің стандартты есептері
         speaking_notes:
-          one:
-          other:
+          one: Сөйлеу жазбалары
+          other: Сөйлеу жазбалары
         speech:
-          one:
-          other:
+          one: Сөйлеу
+          other: Сөйлеулер
         standard:
-          one:
-          other:
+          one: Стандарт
+          other: Стандарттар
         statement_to_parliament:
-          one:
-          other:
+          one: Парламент мәлімдемесі
+          other: Парламент мәлімдемелері
         statistical_data_set:
-          one:
-          other:
+          one: Статистикалық деректер жиыны
+          other: Статистикалық деректер жиындары
         statistics_announcement:
-          one:
-          other:
+          one: Статистикалық шығарылым хабарландыруы
+          other: Статистикалық шығарылым хабарландырулары
         statutory_guidance:
-          one:
-          other:
+          one: Заң нұсқаулығы
+          other: Заң нұсқаулығы
         take_part:
-          one:
-          other:
+          one: Қатысу
+          other: Қатысу
         tax_tribunal_decision:
-          one:
-          other:
+          one: Салық және сот кеңесінің сот шешімі
+          other: Салық және сот кеңесінің сот шешімдері
         transcript:
-          one:
-          other:
+          one: Стенограмма
+          other: Стенограммалар
         transparency:
-          one:
-          other:
+          one: Ашықтық деректері
+          other: Ашықтық деректері
         utaac_decision:
-          one:
-          other:
+          one: Әкімшілік аппеляциялық сот шешімі
+          other: Әкімшілік аппеляциялық сот шешімдері
         world_location_news_article:
-          one:
-          other:
+          one: Жаңалықтар мақаласы
+          other: Жаңалықтар мақалалары
         world_news_story:
-          one:
-          other:
+          one: Әлемдегі жаңалықтар оқиғасы
+          other: Әлемдегі жаңалықтар оқиғалары
         written_statement:
-          one:
-          other:
-    corporate_information:
+          one: Парламентке жазбаша мәлімдеме
+          other: Парламентке жазбаша мәлімдемелер
+    about_page_path: "/government/organisations/%{organisation}/about"
+    administered_by: Басқаратын
+    breadcrumbs:
+      courts_and_tribunals: Соттар мен сот орындары
+      organisations: Ұйымдар
+    contact:
+      contact_details: Байланысу мәліметтері
+      contact_form: 'Байланысу формасы: %{title}'
+      contact_organisation: Байланысу %{organisation}
+      email: Электрондық пошта
+      telephone: Телефон
+    corporate_information: Корпоративтік ақпарат
     document_types:
-      documents:
+      documents: Құжаттар
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Барлық нұсқаулық пен ережені қараңыз
+        title: Нұсқаулық пен ереже
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Барлық жаңалықтар мен байланыстарды қараңыз
+        title: Жаңалықтар мен байланыстар
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Барлық саяси құжаттар мен кеңестерді қараңыз
+        title: Саяси құжаттар мен кеңестер
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Барлық зерттеу және статистиканы қараңыз
+        title: Зерттеу және статистика
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Барлық қызметтер
+        title: Қызметтер
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Барлық ақпарат шығарылымдарының ашықтығы мен еркіндігін қараңыз
+        title: Ақпарат шығарылымының ашықтығы мен еркіндігі
+    errors_or_omissions_html: <p>Қателер немесе қалып кеткендер бар ма? <a class="govuk-link"
+      href="/contact/govuk">Осы жерде айтыңыз</a>. Ведомстволық емес мемлекеттік органдардың
+      ресми тізімдерін алу үшін<a class="govuk-link" href="/government/collections/public-bodies">мемлекеттік
+      органдарды қараңыз</a>.</p>
+    featured: Таңдаулы
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: FOI байланысу формасы
+      foi_exemption_html: |
+        Бұл ұйым «Ақпарат еркіндігі туралы» заңмен ескерілмеген.
+        Қандай ұйымдардың қамтылғанын қарау үшін, <a href="%{foi_url}" class="govuk-link brand__color">заңнама</a> бөлімін қараңыз.
+      freedom_of_information_act: Ақпарат еркіндігі (FOI) қаулысы
+      freedom_of_information_requests: Ақпарат еркіндігі сұраулары
+      make_an_foi_request: FOI сұрауын жасау
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: Ақпарат еркіндігі (FOI) қаулысы және <a href="%{how_to_path}"
+          class="govuk-link brand__color">сұрау жасау жолы</a> туралы оқыңыз.
+        step2_html: Сіздің сұрақ жауап бар-жоғын білу үшін <a href="%{our_releases_path}"
+          class="govuk-link brand__color">біздің алдыңғы шығарылымдарды</a> қарап
+          шығыңыз.
+        step3_html: Төмендегі мәліметтерді пайдалана отырып байланысу арқылы жаңа
+          сұрау жасаңыз.
+    follow_us: Бізге жазылыңыз
+    hidden_share_link: Жазылыңыз
+    high_profile_groups: "%{title} ішіндегі жоғары профильді топтар"
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: Жұмыстар мен келісімшарттар
+    latest_from: "%{title} соңғылары"
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name: "%{title} қазір <a href='%{link_href}'>%{link_text}</a> деп аталады"
+      devolved: "%{title} <a href='%{link_href}'>%{link_text}</a> органы"
+      joining: "%{title} жақында GOV.UK өзара қарым-қатынас жасайды"
+      left_gov: "%{title} қазір Ұлыбритания мемлекетінен дербес"
+      merged: "%{title} <a href='%{link_href}'>%{link_text}</a> %{updated} ішінде
+        бөлігі болды"
+      merged_no_date: "%{title} қазір <a href='%{link_href}'>%{link_text}</a> бөлігі"
+      no_longer_exists: "%{title} жабылды"
+      no_website: "%{title} веб-сайты жоқ"
+      separate_website: "%{title} <a href='%{url}'>бөлек веб-сайты</a> бар"
+      split: "%{title} %{links} алмастырылды"
+    part_of: Бөлігі
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: Біздің басқарма
+      chief_professional_officers: Бас кәсіби кеңесшілер
+      military_personnel: Біздің бас әскери шенеуніктер
+      ministers: Біздің министрлер
+      special_representatives: Арнайы өкілдер
+      traffic_commissioners: Жол қозғалысы комиссарлары
+    read_more: Біздің не істейтініміз туралы толығырақ оқыңыз
+    search_for_department: Бөлімді, агенттікті немесе мемлекеттік органды іздеңіз
+    see_all_latest_documents: Барлық соңғы құжаттарды қараңыз
+    separate_website: бөлек веб-сайт
+    services_and_information: Барлық %{acronym} қызметтер мен ақпарат
     subscription:
-      email:
-      feed:
+      email: Электрондық хаттарды алу
+      feed: Арнаға жазылу
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      adhoc_advisory_group: Арнайы кеңес тобы
+      advisory_ndpb: Кеңестік ведомстволық емес мемлекеттік орган
+      civil_service: Мемлекеттік қызмет
+      executive_agency: Атқарушы агенттік
+      executive_ndpb: Атқарушылық ведомстволық емес мемлекеттік орган
+      independent_monitoring_body: Тәуелсіз бақылау органы
+      non_ministerial_department: Министрлік емес бөлім
+      other: Басқа
+      public_corporation: Ашық акционерлік қоғамы
+      tribunal: Сот орны
+    view_all: барлығын қарау
+    view_less: азырақ қарау
+    what_we_do: "%{title} немен айналысады"
     works_with_statement:
-      multiple:
-      one:
+      multiple: "%{works_with_count} агенттіктері мен мемлекеттік органдармен жұмыс
+        істейді"
+      one: "%{works_with_count} мемлекеттік органмен жұмыс істейді"

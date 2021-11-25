@@ -1,12 +1,11 @@
----
 hy:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Գլխավոր
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: Հայերեն
+      prefix: Դիտել՝
+      title: Դիտել GOV.UK կայքը
+    get_emails: Ստանալ էլ․ նամակներ այս թեմայի վերաբերյալ
+    language_direction: ltr
+    language_name: Հայերենն
     topics:
-      title:
+      title: "%{title}: մանրամասն տեղեկություն"

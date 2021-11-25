@@ -1,12 +1,11 @@
----
 nl:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Home
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
+      prefix: 'Bladeren:'
+      title: Bladeren op GOV.UK
+    get_emails: Ontvang e-mails over dit onderwerp
+    language_direction: ltr
     language_name: Nederlands
     topics:
-      title:
+      title: "%{title}: gedetailleerde informatie"

@@ -1,40 +1,55 @@
----
 lv:
   brexit_landing_page:
     campaign_links:
-      lead_in:
-      lead_out:
-      links:
+      lead_in: 'Pārbaudiet, kas jādara citādāk, ja esat:'
+      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
+        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
+        data-track-label="Get the complete list">Saņemiet pilnu sarakstu</a> ar uzdevumiem,
+        kas jāpaveic jums, jūsu uzņēmumam un jūsu ģimenei.
     comms:
-      links:
-      read_transcript:
-    comms_header:
-    data_list_title:
-    email_mailto_subject:
-    guidance_header:
-    meta_description:
-    meta_title:
+      read_transcript: Lasīt šī video norakstu
+    comms_header: Paziņojumi
+    data_list_title: 'Brexit mērķlapa: %{header}'
+    email_mailto_subject: 'Apvienotās Karalistes jaunais sākums: aiziet - GOV.UK'
+    guidance_header: Izmaiņas uzņēmumiem un pilsoņiem
+    meta_description: Uzziniet, kā jaunie noteikumi attiecas uz tādām jomām kā ceļošana
+      un uzņēmējdarbība Eiropā. Izmantojiet Brexit kontrolsarakstu, lai saņemtu personalizētu
+      sarakstu ar veicamajiem uzdevumiem.
+    meta_title: Brexit
     no_cookies:
-      change_settings_text:
-      icon_text:
-      or_text:
-      to_watch_text:
-      watch_link_text:
-    page_header:
-    page_header_explainer:
+      change_settings_text: Mainīt sīkfailu iestatījumus
+      icon_text: VIDEO
+      or_text: vai
+      to_watch_text: lai skatītos video
+      watch_link_text: Skatīties vietnē YouTube
+    page_header: Brexit:<br/>jaunie noteikumi ir klāt
+    page_header_explainer: Jaunie noteikumi attiecas uz tādām jomām kā ceļošana un
+      uzņēmējdarbība Eiropā. Izmantojiet Brexit kontrolsarakstu, lai saņemtu personalizētu
+      sarakstu ar jums, jūsu uzņēmumam un jūsu ģiemenei veicamajiem uzdevumiem.
     sections:
-      aria_string_suffix:
-      guidance_and_regulation:
-      news_and_communications:
-      policy_and_engagement:
-      research_and_statistics:
-      services:
-      transparency:
-    share_links:
-    topic_section_header:
-    topic_section_subheading:
-    video_section_description:
-    video_section_link:
-    video_section_title:
-    video_section_transcription_summary:
-    video_section_transcription_text:
+      aria_string_suffix: saistībā ar Brexit
+      guidance_and_regulation: Vadlīnijas un regulējums
+      news_and_communications: Ziņas un saziņa
+      policy_and_engagement: Politikas dokumenti un konsultācijas
+      research_and_statistics: Izpēte un analīze
+      services: Pakalpojumi
+      transparency: Caurredzamība un informācijas atklātības datu publicēšana
+    share_links: Kopīgot šo lapu
+    take_action_list:
+      amber: Mainīt
+      green: Aiziet
+      red: Pārbaudīt
+    take_action_start_now: 'Brexit kontrolsaraksts: sākt tūlīt'
+    take_action_start_now_link: "/transition-check/questions"
+    topic_section_header: Visa informācija par Brexit
+    topic_section_subheading: Pārlūkot visu informāciju saistībā ar Brexit
+    video_section_description: |
+      <p>Uzņēmējdarbība Eiropā ir mainījusies. Ir jāievēro jauni eksporta, importa, tarifu, datu un darbā pieņemšanas noteikumi.</p>
+      <p>Noskatieties video, lai uzzinātu, kā jaunie noteikumi ietekmēs jūsu uzņēmumu. Varat arī <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">izmantot Brexit kontrolsarakstu</a>, lai iegūtu personalizētu sarakstu ar veicamajiem uzdevumiem.</p>
+    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
+    video_section_title: Parūpējieties, lai jūsu uzņēmums varētu turpināt darbu
+    video_section_transcription_summary: Skatīt video norakstu
+    video_section_transcription_text: |
+      <p>Uzņēmēji! Apvienotā Karaliste ir izstājusies no ES, un ir stājušies spēkā jauni noteikumi.</p>
+      <p>Lai jūsu uzņēmumi varētu turpināt darbu, izmantojiet Brexit kontrolsarakstu vietnē gov.uk/transition un saņemtu personalizētu sarakstu ar jūsu uzņēmumam veicamajām darbībām.</p>
+      <p>Rūpēsimies, lai uzņēmumi varētu turpināt darbu.</p>

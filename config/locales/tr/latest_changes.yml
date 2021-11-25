@@ -1,6 +1,5 @@
----
 tr:
   latest_changes:
-    next:
-    previous:
-    title:
+    next: Sonraki
+    previous: Önceki
+    title: En yeni belgeler

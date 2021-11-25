@@ -1,6 +1,5 @@
----
 ka:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: სერვისები და ინფორმაცია - %{title}
+    see_more_link: მეტის ნახვა
+    title: სერვისები და ინფორმაცია

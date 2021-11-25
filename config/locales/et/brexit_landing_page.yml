@@ -1,40 +1,55 @@
----
 et:
   brexit_landing_page:
     campaign_links:
-      lead_in:
-      lead_out:
-      links:
+      lead_in: 'Kontrollige, mida peate teisiti tegema, kui:'
+      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
+        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
+        data-track-label="Get the complete list">Hangi täielik loend</a>, mida pead
+        tegema enda, oma ettevõtte ja pere jaoks.
     comms:
-      links:
-      read_transcript:
-    comms_header:
-    data_list_title:
-    email_mailto_subject:
-    guidance_header:
-    meta_description:
-    meta_title:
+      read_transcript: Loe selle video transkriptsiooni
+    comms_header: Teadaanded
+    data_list_title: 'Brexiti sihtleht: %{header}'
+    email_mailto_subject: 'Ühendkuningriigi uus algus: alustame - GOV.UK'
+    guidance_header: Muudatused ettevõtetele ja kodanikele
+    meta_description: Uurige, kuidas kehtivad uued Brexiti reeglid sellistele asjadele
+      nagu reisimine ja Euroopaga äri ajamine. Kasutage Brexiti kontrollitööriista,
+      et saada isikupärastatud toimingute loend.
+    meta_title: Brexit
     no_cookies:
-      change_settings_text:
-      icon_text:
-      or_text:
-      to_watch_text:
-      watch_link_text:
-    page_header:
-    page_header_explainer:
+      change_settings_text: Muuda oma küpsiste seadeid
+      icon_text: VIDEO
+      or_text: või
+      to_watch_text: videot vaatama
+      watch_link_text: Vaadake YouTube'is
+    page_header: Brexit:<br/>uued reeglid on siin
+    page_header_explainer: Uued reeglid kehtivad sellistele asjadele nagu reisimine
+      ja Euroopaga äri ajamine. Kasutage Brexiti kontrollitööriista, et saada isikupärastatud
+      toimingute loend endale, oma ettevõttele ja oma perele.
     sections:
-      aria_string_suffix:
-      guidance_and_regulation:
-      news_and_communications:
-      policy_and_engagement:
-      research_and_statistics:
-      services:
-      transparency:
-    share_links:
-    topic_section_header:
-    topic_section_subheading:
-    video_section_description:
-    video_section_link:
-    video_section_title:
-    video_section_transcription_summary:
-    video_section_transcription_text:
+      aria_string_suffix: seotud Brexitiga
+      guidance_and_regulation: Juhised ja määrused
+      news_and_communications: Uudised ja teabevahetus
+      policy_and_engagement: Eeskirjade dokumendid ja konsultatsioonid
+      research_and_statistics: Uuringud ja statistika
+      services: Teenused
+      transparency: Teabe avaldamise läbipaistvus ja vabadus
+    share_links: Jaga seda lehte
+    take_action_list:
+      amber: Muuda
+      green: Mine
+      red: Kontrolli
+    take_action_start_now: 'Brexiti kontrollitööriist: alusta kohe'
+    take_action_start_now_link: "/transition-check/questions"
+    topic_section_header: Kogu Brexiti teave
+    topic_section_subheading: Sirvi kogu Brexitiga seotud teavet
+    video_section_description: |
+      <p>Euroopaga äri ajamine on muutunud. Peate järgima ekspordi, impordi, tariifide, andmete ja töölevõtmise uusi eeskirju.</p>
+      <p>Vaadake videost, mida uued reeglid teie ettevõtte jaoks tähendavad. Samuti saate <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">kasutada Brexiti kontrollitööriista</a>, et saada isikupärastatud toimingute loend.</p>
+    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
+    video_section_title: Ettevõtte tegevuse jätkamine
+    video_section_transcription_summary: Kuva video transkriptsioon
+    video_section_transcription_text: |
+      <p>Ettevõtted, Ühendkuningriik on EL-ist lahkunud ja nüüd kehtivad uued reeglid.</p>
+      <p>Ettevõtte tegevuse jätkamiseks kasutage veebisaidil gov.uk/transition olevat Brexiti kontrollitööriista, et saada oma ettevõtte jaoks isikupärastatud toimingud.</p>
+      <p>Jätkame ettevõtte toimimist.</p>

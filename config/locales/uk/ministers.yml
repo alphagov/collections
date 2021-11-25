@@ -1,9 +1,8 @@
----
 uk:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Також відвідує кабінет міністрів
+    by_department: Міністри за відомствами
+    cabinet: Кабінет міністрів
+    govuk_title: Міністри - GOV.UK
+    title: Міністри
+    whips: Порядок денний

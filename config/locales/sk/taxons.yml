@@ -1,8 +1,7 @@
----
 sk:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Preskúmajte podtémy
+    organisations: Organizácie
+    see_all_in_topic: Viac %{type} v tejto téme
+    show_fewer_orgs: Zobraziť menej organizácií
+    show_more_orgs: Zobraziť viac organizácií

@@ -1,40 +1,55 @@
----
 sr:
   brexit_landing_page:
     campaign_links:
-      lead_in:
-      lead_out:
-      links:
+      lead_in: 'Proverite šta treba da uradite drugačije u sledećim slučajevima:'
+      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
+        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
+        data-track-label="Get the complete list">Preuzmite celu listu</a> stvari koje
+        treba da obavite vi, vaše preduzeće i vaša porodica.
     comms:
-      links:
-      read_transcript:
-    comms_header:
-    data_list_title:
-    email_mailto_subject:
-    guidance_header:
-    meta_description:
-    meta_title:
+      read_transcript: Pročitajte transkript ovog video zapisa
+    comms_header: Najave
+    data_list_title: 'Odredišna stranica za Bregzit: %{header}'
+    email_mailto_subject: UK's%20new%20start:%20let's%20get%20going-%20GOV.UK
+    guidance_header: Izmene za preduzeća i građane
+    meta_description: Saznajte na koji se način nova pravila o Bregzitu odnose na
+      stvari kao što su putovanja i poslovanje sa Evropom. Koristite kontrolnu listu
+      za Bregzit da biste dobili personalizovanu listu postupaka.
+    meta_title: Bregzit
     no_cookies:
-      change_settings_text:
-      icon_text:
-      or_text:
-      to_watch_text:
-      watch_link_text:
-    page_header:
-    page_header_explainer:
+      change_settings_text: Proverite podešavanja kolačića
+      icon_text: VIDEO
+      or_text: ili
+      to_watch_text: da biste pogledali video
+      watch_link_text: Gledajte u usluzi YouTube
+    page_header: Bregzit:<br/>nova pravila se nalaze ovde
+    page_header_explainer: Nova pravila važe za stvari kao što su putovanja i poslovanje
+      sa Evropom. Kontrolnu listu za Bregzit da biste dobili personalizovanu listu
+      postupaka za sebe, svoje preduzeće i porodicu.
     sections:
-      aria_string_suffix:
-      guidance_and_regulation:
-      news_and_communications:
-      policy_and_engagement:
-      research_and_statistics:
-      services:
-      transparency:
-    share_links:
-    topic_section_header:
-    topic_section_subheading:
-    video_section_description:
-    video_section_link:
-    video_section_title:
-    video_section_transcription_summary:
-    video_section_transcription_text:
+      aria_string_suffix: odnosi se na Bregzit
+      guidance_and_regulation: Uputstva i propisi
+      news_and_communications: Vesti i komunikacija
+      policy_and_engagement: Predlozi politike i konsultacije
+      research_and_statistics: Istraživanje i statistika
+      services: Usluge
+      transparency: Saopštenja o transparentnosti i slobodi informisanja
+    share_links: Podeli ovu stranicu
+    take_action_list:
+      amber: Promena
+      green: Kreni
+      red: Proveri
+    take_action_start_now: 'Kontrolna lista za Bregzit: počnite odmah'
+    take_action_start_now_link: "/transition-check/questions"
+    topic_section_header: Sve informacije o Brezgitu
+    topic_section_subheading: Pregledajte sve informacije koje se odnose na Bregzit
+    video_section_description: |
+      <p>Poslovanje sa Evropom se promenilo. Morate se pridržavati novih pravila o izvozu, uvozu, tarifama, podacima i&nbsp;zapošljavanju.</p>
+      <p>Pogledajte video da biste saznali šta nova pravila znače za vaše preduzeće. Možete i da<a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">koristite kontrolnu listu za Bregzit</a> da biste dobili personalizovanu listu postupaka.</p>
+    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
+    video_section_title: Kako da nastavite sa poslovanjem
+    video_section_transcription_summary: Pogledajte transkript video zapisa
+    video_section_transcription_text: |
+      <p>Poštovana preduzeća, Ujedinjeno Kraljevstvo je izašlo iz Evropske unije i sada važe nova pravila.</p>
+      <p>Da bi vaše preduzeće nastavilo sa poslovanjem, koristite alatku Kontrolna lista za Bregzit na adresi gov.uk/transition da biste dobili personalizovanu listu postupaka za svoje preduzeće.</p>
+      <p>Hajde da nastavimo sa poslovanjem.</p>

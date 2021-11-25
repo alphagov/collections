@@ -1,15 +1,14 @@
----
 zh-tw:
   roles:
-    find_out_more_html:
     heading:
-      one:
-      other:
+      one: 角色
+      other: 角色
+    find_out_more_html: 在我們的 %{link} 部分了解更多有關此角色過去的負責人的資訊。
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: 目前角色負責人
+      previous_holders: 先前負責人
+      responsibilities: 職責
+    ministerial: 部長角色
+    past: 過去
+    previous_holders: 此角色的先前負責人
+    read_more: 了解更多此角色

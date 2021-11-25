@@ -1,9 +1,8 @@
----
 ps:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: په کابینه کې هم ګډون کوي
+    by_department: د څانګې لخوا وزیران
+    cabinet: د کابینې وزیران
+    govuk_title: وزیران - GOV.UK
+    title: وزیران
+    whips: څپې

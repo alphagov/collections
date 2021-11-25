@@ -1,40 +1,50 @@
----
 zh-hk:
   brexit_landing_page:
     campaign_links:
-      lead_in:
-      lead_out:
-      links:
+      lead_in: 假如您是以下情況，請檢查您需要的特別事項：
+      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
+        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
+        data-track-label="Get the complete list">獲取您、您的公司和家人所需事項之完整列表。</a>
     comms:
-      links:
-      read_transcript:
-    comms_header:
-    data_list_title:
-    email_mailto_subject:
-    guidance_header:
-    meta_description:
-    meta_title:
+      read_transcript: 閱讀本影片之文字記錄
+    comms_header: 公告
+    data_list_title: 英國脫歐入口頁面： %{header}
+    email_mailto_subject: UK's%20new%20start:%20let's%20get%20going-%20GOV.UK
+    guidance_header: 商務及公民之改變事項
+    meta_description: 了解英國脫歐對諸如前往歐洲旅行及經商等事項的適用。使用英國脫歐檢查工具，獲得個人專屬之行動事項列表。
+    meta_title: 英國脫歐
     no_cookies:
-      change_settings_text:
-      icon_text:
-      or_text:
-      to_watch_text:
-      watch_link_text:
-    page_header:
-    page_header_explainer:
+      change_settings_text: 更改您的 cookie 設定
+      icon_text: 影片
+      or_text: 或
+      to_watch_text: 前往觀看影片
+      watch_link_text: 在 YouTube 觀看
+    page_header: 英國脫歐：<br/>新規則就在此處
+    page_header_explainer: 適用於諸如前往歐洲旅行及經商等事項的新規則。使用英國脫歐檢查工具，為您自己、您的公司及家人獲得個人專屬之行動事項列表。
     sections:
-      aria_string_suffix:
-      guidance_and_regulation:
-      news_and_communications:
-      policy_and_engagement:
-      research_and_statistics:
-      services:
-      transparency:
-    share_links:
-    topic_section_header:
-    topic_section_subheading:
-    video_section_description:
-    video_section_link:
-    video_section_title:
-    video_section_transcription_summary:
-    video_section_transcription_text:
+      aria_string_suffix: 與英國脫歐相關
+      guidance_and_regulation: 指引及規定
+      news_and_communications: 新聞及通訊
+      policy_and_engagement: 政策文稿及諮詢
+      research_and_statistics: 研究及統計
+      services: 服務
+      transparency: 資訊發佈透明度及自由
+    share_links: 轉發這一頁面
+    take_action_list:
+      amber: 變更
+      green: 前往
+      red: 檢查
+    take_action_start_now: 英國脫歐檢查：立即開始
+    take_action_start_now_link: "/transition-check/questions"
+    topic_section_header: 所有英國脫歐資訊
+    topic_section_subheading: 瀏覽全部與英國脫歐之相關資訊
+    video_section_description: |
+      <p>與歐洲做生意的規則已經改變。您需要遵循出口、入口、關稅、數據資料及僱傭之新規則。</p>
+      <p>觀看影片了解新規則對您的業務意味著什麼。您亦可 <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">使用英國脫歐檢查工具</a> 獲取您的個人專屬行動事項列表。</p>
+    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
+    video_section_title: 讓您的業務保持前進勢頭
+    video_section_transcription_summary: 查閱影片字幕
+    video_section_transcription_text: |
+      <p>關於營商方面，英國已脫離歐盟，現已適用新規則。</p>
+      <p>為使您的業務保持前進勢頭，請前往 gov.uk/transition 使用英國脫歐檢查工具獲取專為您的業務而設的個人專屬行動事項列表。</p>
+      <p>讓我們保持業務的前進勢頭。</p>

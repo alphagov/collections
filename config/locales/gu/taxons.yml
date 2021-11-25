@@ -1,8 +1,7 @@
----
 gu:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: પેટા-વિષયોની શોધખોળ કરો
+    organisations: સંસ્થાઓ
+    see_all_in_topic: આ વિષયમાં વધુ %{type} જુઓ
+    show_fewer_orgs: ઓછી સંસ્થાઓ બતાવો
+    show_more_orgs: વધુ સંસ્થાઓ બતાવો

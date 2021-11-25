@@ -1,6 +1,5 @@
----
 el:
   latest_changes:
-    next:
-    previous:
-    title:
+    next: Επόμενο
+    previous: Προηγούμενο
+    title: Τελευταία έγγραφα

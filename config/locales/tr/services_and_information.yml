@@ -1,6 +1,5 @@
----
 tr:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Hizmetler ve bilgiler - %{title}
+    see_more_link: Daha fazla bak
+    title: Hizmetler ve bilgiler

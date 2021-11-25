@@ -1,7 +1,6 @@
----
 zh-hk:
   people:
-    biography:
-    previous_roles:
-    previous_roles_in_government:
-    read_more:
+    biography: 人員簡介
+    previous_roles: 上一職位
+    previous_roles_in_government: 上一政府職位
+    read_more: 該人士之詳情

@@ -1,8 +1,7 @@
----
 ko:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: 하위 주제 탐색하기
+    organisations: 조직
+    see_all_in_topic: 이 주제에서 %{type} 더 보기
+    show_fewer_orgs: 적은 조직 보기
+    show_more_orgs: 많은 조직 보기

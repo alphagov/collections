@@ -1,46 +1,34 @@
----
 fr:
   organisations:
-    about_page_path:
-    administered_by:
-    breadcrumbs:
-      courts_and_tribunals:
-      organisations:
-    contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
     content_item:
       schema_name:
         aaib_report:
-          one:
-          other:
+          one: Rapport de la Division des enquêtes sur les accidents aériens
+          other: Rapports de la Division des enquêtes sur les accidents aériens
         announcement:
           one: Annonce
           other: Annonces
         asylum_support_decision:
-          one:
-          other:
+          one: Décision du tribunal d'aide à l'asile
+          other: Décisions du tribunal d'aide à l'asile
         authored_article:
           one: Article signé
           other: Articles signés
         business_finance_support_scheme:
-          one:
-          other:
+          one: Programme d'aide au financement des entreprises
+          other: Programmes d'aide au financement des entreprises
         case_study:
           one: Etude de cas
           other: Etudes de cas
         closed_consultation:
-          one: Consultation close
-          other: Consultations closes
+          one: Consultation fermée
+          other: Consultations fermées
         cma_case:
-          one:
-          other:
+          one: Affaire relative à l'autorité de la concurrence et des marchés
+          other: Affaires relatives à l'autorité de la concurrence et des marchés
         coming_soon:
-          one:
-          other:
+          one: À venir
+          other: À venir
         consultation:
           one: Consultation
           other: Consultations
@@ -48,50 +36,50 @@ fr:
           one: Résultat de la consultation
           other: Résultats de la consultation
         corporate_information_page:
-          one:
-          other:
+          one: Page d'information
+          other: Pages d'information
         corporate_report:
-          one: Rapport d'activité
-          other: Rapports d'activité
+          one: Rapport de l'entreprise
+          other: Rapports de l'entreprise
         correspondence:
           one: Correspondance
           other: Correspondances
         countryside_stewardship_grant:
-          one:
-          other:
+          one: Subvention pour la gestion des zones rurales
+          other: Subventions pour la gestion des zones rurales
         decision:
-          one:
-          other:
+          one: Décision
+          other: Décisions
         detailed_guide:
-          one: Instructions détaillées
-          other: Instructions détaillées
+          one: Orientations
+          other: Orientations
         dfid_research_output:
-          one:
-          other:
+          one: Résultat de la recherche pour le développement
+          other: Résultats de la recherche pour le développement
         document_collection:
-          one: Série
-          other:
+          one: Collection
+          other: Collections
         draft_text:
           one: Projet de texte
-          other: Projets de textes
+          other: Projets de texte
         drug_safety_update:
-          one:
-          other:
+          one: Mise à jour de la sécurité des médicaments
+          other: Mises à jour de la sécurité des médicaments
         employment_appeal_tribunal_decision:
-          one:
-          other:
+          one: Décision du tribunal d'appel du travail
+          other: Décisions du tribunal d'appel du travail
         employment_tribunal_decision:
-          one:
-          other:
+          one: Décision du tribunal du travail
+          other: Décisions du tribunal du travail
         esi_fund:
-          one:
-          other:
+          one: Fonds européens structurels d'investissement (FESI)
+          other: Fonds européens structurels d'investissement (FESI)
         fatality_notice:
           one: Avis de décès
           other: Avis de décès
         foi_release:
-          one: Communiqué Freedom of Information
-          other: Communiqués Freedom of Information
+          one: Communiqué d'accès à l'information
+          other: Communiqués d'accès à l'information
         form:
           one: Formulaire
           other: Formulaires
@@ -99,59 +87,59 @@ fr:
           one: Réponse du gouvernement
           other: Réponses du gouvernement
         guidance:
-          one: Instructions
-          other: Instructions
+          one: Orientation
+          other: Orientation
         impact_assessment:
-          one: Evaluation des impacts
-          other: Evaluations des impacts
+          one: Évaluation de l'impact
+          other: Évaluation de l'impact
         imported:
-          one: Importé
-          other: Importé
+          one: importé - en attente du type
+          other: importé - en attente du type
         independent_report:
           one: Rapport indépendant
           other: Rapports indépendants
         international_development_fund:
-          one:
-          other:
+          one: Financement du développement international
+          other: Financement du développement international
         international_treaty:
-          one:
-          other:
+          one: Traité international
+          other: Traités internationaux
         maib_report:
-          one:
-          other:
+          one: Rapport de la division des enquêtes sur les accidents maritimes
+          other: Rapports de la division des enquêtes sur les accidents maritimes
         map:
           one: Carte
           other: Cartes
         medical_safety_alert:
-          one:
-          other:
+          one: Alertes et rappels de médicaments et de dispositifs médicaux
+          other: Alertes et rappels de médicaments et de dispositifs médicaux
         national:
-          one:
-          other:
+          one: Annonce des statistiques nationales
+          other: Annonces des statistiques nationales
         national_statistics:
-          one: Statistiques - statistiques nationales
-          other: Statistiques - statistiques nationales
+          one: Statistiques nationales
+          other: Statistiques nationales
         national_statistics_announcement:
-          one:
-          other:
+          one: Annonce des statistiques nationales
+          other: Annonces des statistiques nationales
         news_article:
-          one: Actualités
-          other: Actualités
+          one: Article d'actualité
+          other: Articles d'actualité
         news_story:
-          one: Actualités
+          one: Actualité
           other: Actualités
         notice:
-          one:
-          other:
+          one: Notification
+          other: Notifications
         official:
-          one:
-          other:
+          one: Annonce des statistiques officielles
+          other: Annonces des statistiques officielles
         official_statistics:
-          one: Statistiques
-          other: Statistiques
+          one: Statistiques officielles
+          other: Statistiques officielles
         official_statistics_announcement:
-          one:
-          other:
+          one: Annonce des statistiques officielles
+          other: Annonces des statistiques officielles
         open_consultation:
           one: Consultation ouverte
           other: Consultations ouvertes
@@ -159,11 +147,11 @@ fr:
           one: Déclaration orale au Parlement
           other: Déclarations orales au Parlement
         policy:
-          one: Priorité politique
-          other: Priorités politiques
+          one: Politique générale
+          other: Politiques générales
         policy_paper:
-          one: Document d'orientation
-          other: Documents d'orientation
+          one: Document de politique générale
+          other: Documents de politique générale
         press_release:
           one: Communiqué de presse
           other: Communiqués de presse
@@ -174,23 +162,23 @@ fr:
           one: Publication
           other: Publications
         raib_report:
-          one:
-          other:
+          one: Rapport de la Division des enquêtes sur les accidents ferroviaires
+          other: Rapports de la Division des enquêtes sur les accidents ferroviaires
         regulation:
-          one:
-          other:
+          one: Règlement
+          other: Règlements
         research:
           one: Recherche et analyse
           other: Recherche et analyse
         residential_property_tribunal_decision:
-          one:
-          other:
+          one: Décision du tribunal chargé du logement résidentiel
+          other: Décisions du tribunal chargé du logement résidentiel
         service_sign_in:
-          one:
-          other:
+          one: Connexion au service
+          other: Connexion au service
         service_standard_report:
-          one:
-          other:
+          one: Rapport sur les normes de service
+          other: Rapports sur les normes de service
         speaking_notes:
           one: Notes d'allocution
           other: Notes d'allocution
@@ -198,26 +186,26 @@ fr:
           one: Discours
           other: Discours
         standard:
-          one:
-          other:
+          one: norme
+          other: normes
         statement_to_parliament:
-          one: Déclaration au Parlement
-          other: Déclarations au Parlement
+          one: Déclaration au parlement
+          other: Déclarations au parlement
         statistical_data_set:
           one: Ensemble de données statistiques
           other: Ensembles de données statistiques
         statistics_announcement:
-          one:
-          other:
+          one: Annonce de la publication de statistiques
+          other: Annonces de la publication de statistiques
         statutory_guidance:
-          one:
-          other:
+          one: Orientation statutaire
+          other: Orientation statutaire
         take_part:
-          one:
-          other:
+          one: Participer
+          other: Participer
         tax_tribunal_decision:
-          one:
-          other:
+          one: Décision du tribunal chargé des impôts et de la chancellerie
+          other: Décisions du tribunal chargé des impôts et de la chancellerie
         transcript:
           one: Transcription
           other: Transcriptions
@@ -225,109 +213,130 @@ fr:
           one: Transparence des données
           other: Transparence des données
         utaac_decision:
-          one:
-          other:
+          one: Décision du tribunal administratif d'appel
+          other: Décisions du tribunal administratif d'appel
         world_location_news_article:
-          one: Actualités
-          other: Actualités
+          one: Article d'actualité
+          other: Articles d'actualité
         world_news_story:
-          one:
-          other:
+          one: Actualité du monde
+          other: Actualités du monde
         written_statement:
-          one: Communiqué
-          other: Communiqués
-    corporate_information:
+          one: Déclaration écrite au Parlement
+          other: Déclarations écrites au Parlement
+    about_page_path: "/government/organisations/%{organisation}/about"
+    administered_by: Administré par
+    breadcrumbs:
+      courts_and_tribunals: Cours et tribunaux
+      organisations: Organisations
+    contact:
+      contact_details: Détails du contact
+      contact_form: 'Formulaire de contact: %{title}'
+      contact_organisation: Contacter %{organisation}
+      email: Courriel
+      telephone: Téléphone
+    corporate_information: Information sur l'entreprise
     document_types:
-      documents:
+      documents: Documents
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Afficher toutes les orientations et règlements
+        title: Orientation et règlement
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Afficher toutes les actualités et communications
+        title: Actualités et communications
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Afficher tous les documents de politique générale et de consultations
+        title: Documents de politique générale et de consultations
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Afficher toutes les recherches et statistiques
+        title: Recherches et statistiques
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Afficher tous les services
+        title: Services
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Afficher tous les communiqués sur la transparence et l'accès à l'information
+        title: Transparence et accès à l'information
+    errors_or_omissions_html: <p>Erreurs ou omissions ? <a class="govuk-link" href="/contact/govuk">Dites-nous
+      ici</a>. Pour les listes officielles des organismes publics non ministériels
+      <a class="govuk-link" href="/government/collections/public-bodies">voir les
+      organismes publics</a>.</p>
+    featured: Mis en exergue
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: Formulaire de contact sur l'accès à l'information
+      foi_exemption_html: " Cette organisation n'est pas soumise à la loi sur l'accès
+        à l'information. \nPour déterminer les organisations concernées, voir <a href=\"%{foi_url}\"
+        class=\"govuk-link brand__color\">la législation</a>.\r\n"
+      freedom_of_information_act: Loi sur l'accès à l'information (FOI)
+      freedom_of_information_requests: Demandes d'accès à l'information
+      make_an_foi_request: Faire une demande d'accès à l'information
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: Découvrez la loi sur l'accès à l'information (FOIA) et <a href="%{how_to_path}"
+          class="govuk-link brand__color">comment faire une demande</a>.
+        step2_html: Consultez <a href="%{our_releases_path}" class="govuk-link brand__color">nos
+          versions précédentes</a> pour voir si nous avons déjà répondu à votre question.
+        step3_html: Faites une nouvelle demande en nous contactant aux coordonnées
+          ci-dessous.
+    follow_us: Suivez-nous
+    hidden_share_link: Suivre sur
+    high_profile_groups: Groupes au profil élevé dans %{title}
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: Emplois et contrats
+    latest_from: Dernières nouvelles de %{title}
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name: "%{title} s'appelle désormais <a href='%{link_href}'>%{link_text}</a>"
+      devolved: "%{title} est un organisme de <a href='%{link_href}'>%{link_text}</a>"
+      joining: "%{title} sera bientôt intégré à GOV.UK"
+      left_gov: "%{title} est à présent indépendant du gouvernement britannique"
+      merged: "%{title} est devenu une partie de <a href='%{link_href}'>%{link_text}</a>
+        dans %{updated}"
+      merged_no_date: "%{title} fait maintenant partie de <a href='%{link_href}'>%{link_text}</a>"
+      no_longer_exists: "%{title} a fermé"
+      no_website: "%{title} n'a aucun site Web"
+      separate_website: "%{title} dispose d'un <a href='%{url}'>site web séparé</a>"
+      split: "%{title} a été remplacé par %{links}"
+    part_of: Fait partie de
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: Notre direction
+      chief_professional_officers: Directeurs professionnels
+      military_personnel: Nos hauts gradés militaires
+      ministers: Nos ministres
+      special_representatives: Représentants spéciaux
+      traffic_commissioners: Commissaires à la circulation
+    read_more: Plus d'informations sur nos activités
+    search_for_department: Recherche d'un ministère, d'un organisme ou d'un organisme
+      public
+    see_all_latest_documents: Afficher tous les documents récents
+    separate_website: site web séparé
+    services_and_information: Tous les %{acronym} services et informations
     subscription:
-      email:
-      feed:
+      email: Obtenir des courriels
+      feed: S'abonner au flux
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      adhoc_advisory_group: Groupe de consultation ad hoc
+      advisory_ndpb: Organisme public consultatif non ministériel
+      civil_service: Service civil
+      executive_agency: Agence exécutive
+      executive_ndpb: Organisme public exécutif non ministériel
+      independent_monitoring_body: Organe de contrôle indépendant
+      non_ministerial_department: Département non ministériel
+      other: Autre
+      public_corporation: Société publique
+      tribunal: Tribunal
+    view_all: tout afficher
+    view_less: afficher moins
+    what_we_do: Que fait %{title}
     works_with_statement:
-      multiple:
-      one:
+      multiple: Travaille avec %{works_with_count} agences et organismes publics
+      one: Travaille avec %{works_with_count} organisme public

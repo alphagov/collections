@@ -1,17 +1,17 @@
----
 be:
   roles:
-    find_out_more_html:
     heading:
+      one: Роля
       few:
       many:
-      one:
-      other:
+      other: Ролі
+    find_out_more_html: Даведайцеся больш пра папярэдніх кандыдатаў на гэту пасаду
+      ў нашым %{link} падзеле.
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: Дзейны выканавец пасады
+      previous_holders: Папярэдні выканавец пасады
+      responsibilities: Абавязкi
+    ministerial: Мiнiстэрская пасада
+    past: папярэднi
+    previous_holders: Папярэдні выканавец гэтай пасады
+    read_more: Больш аб гэтай пасадзе

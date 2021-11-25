@@ -1,6 +1,5 @@
----
 fi:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Palvelut ja tiedot - %{title}
+    see_more_link: Katso lisää
+    title: Palvelut ja tiedot

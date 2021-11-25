@@ -1,9 +1,8 @@
----
 ur:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: کیبنٹ میں بھی شرکت کرتا ہے
+    by_department: محکمے کے وزراء
+    cabinet: کیبنٹ کے وزراء
+    govuk_title: وزراء - GOV.UK
+    title: وزراء
+    whips: Whips

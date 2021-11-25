@@ -1,12 +1,11 @@
----
 so:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Guriga
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: Soomaaliga
+      prefix: 'Raadi:'
+      title: Raadi GOV.UK
+    get_emails: Hel iimaylada mawduucan
+    language_direction: ltr
+    language_name: Ingiriisida
     topics:
-      title:
+      title: "%{title}: macluumaad faahfaahsan"

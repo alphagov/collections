@@ -1,12 +1,11 @@
----
 sr:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Početak
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: Srpski
+      prefix: 'Potražite:'
+      title: Potražite na GOV.UK
+    get_emails: Želim da dobijam e-poruke o ovim temama
+    language_direction: ltr
+    language_name: engleski
     topics:
-      title:
+      title: "%{title}: detaljne informacije"

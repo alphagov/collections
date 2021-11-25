@@ -1,5 +1,4 @@
----
 sv:
   world_wide_taxons:
-    take_the_survey:
-    test_banner:
+    take_the_survey: Svara på enkäten för att hjälpa oss att förbättra den
+    test_banner: Detta är en testversion av layouten på den här sidan.

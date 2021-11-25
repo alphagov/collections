@@ -1,6 +1,5 @@
----
 th:
   latest_changes:
-    next:
-    previous:
-    title:
+    next: ถัดไป
+    previous: ก่อนหน้า
+    title: เอกสารล่าสุด

@@ -1,9 +1,8 @@
----
 mt:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Jattendi wkoll il-Kabinett
+    by_department: Ministri skont id-dipartiment
+    cabinet: Ministri fil-Kabinett
+    govuk_title: Ministri - GOV.UK
+    title: Ministri
+    whips: Kritiċi

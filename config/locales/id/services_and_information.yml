@@ -1,6 +1,5 @@
----
 id:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Layanan dan informasi - %{title}
+    see_more_link: Lihat selengkapnya
+    title: Layanan dan informasi

@@ -1,5 +1,4 @@
----
 sk:
   world_wide_taxons:
-    take_the_survey:
-    test_banner:
+    take_the_survey: Vyplňte prieskum a pomôžte nám ho zlepšiť
+    test_banner: Toto je testovacia verzia rozloženia tejto stránky.

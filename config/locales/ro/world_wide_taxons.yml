@@ -1,5 +1,4 @@
----
 ro:
   world_wide_taxons:
-    take_the_survey:
-    test_banner:
+    take_the_survey: Completați chestionarul pentru a ne ajuta să ne îmbunătățim
+    test_banner: Aceasta este o versiune test a aspectului acestei pagini.

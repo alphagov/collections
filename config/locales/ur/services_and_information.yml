@@ -1,6 +1,5 @@
----
 ur:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: سروسز اور معلومات - %{title}
+    see_more_link: مزید دیکھیں
+    title: سروسز اور معلومات

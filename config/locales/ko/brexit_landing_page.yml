@@ -1,40 +1,53 @@
----
 ko:
   brexit_landing_page:
     campaign_links:
-      lead_in:
-      lead_out:
-      links:
+      lead_in: 다음에 속한다면 다르게 수행해야 하는 일이 무엇인지 확인해 보십시오：
+      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
+        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
+        data-track-label="Get the complete list">완전한 목록을 확인하십시오</a> 귀하와 귀하의 비즈니스,
+        그리고 가족을 위한 목록입니다.
     comms:
-      links:
-      read_transcript:
-    comms_header:
-    data_list_title:
-    email_mailto_subject:
-    guidance_header:
-    meta_description:
-    meta_title:
+      read_transcript: 이 영상의 녹취록 읽기
+    comms_header: 발표
+    data_list_title: '브렉시트 랜딩 페이지: %{header}'
+    email_mailto_subject: 'Uk의 새로운 시작: 이제 나아갑시다 - GOV.UK'
+    guidance_header: 비즈니스 및 시민에 대한 변화
+    meta_description: 새로운 브렉시트 규정이 여행 또는 유럽 내 비즈니스 운영 등에 어떻게 적용되는지 확인해 보십시오. 브렉시트
+      확인기를 사용하여 개인화된 조치 목록을 얻으십시오.
+    meta_title: 브렉시트
     no_cookies:
-      change_settings_text:
-      icon_text:
-      or_text:
-      to_watch_text:
-      watch_link_text:
-    page_header:
-    page_header_explainer:
+      change_settings_text: 쿠키 설정 변경하기
+      icon_text: VIDEO
+      or_text: 또는
+      to_watch_text: 영상을 보려면
+      watch_link_text: YouTube에서 보기
+    page_header: 브렉시트:<br/>새로운 규정이 여기 있습니다
+    page_header_explainer: 새로운 규정이 여행 또는 유럽 내 비즈니스 운영 등에 적용됩니다. 브렉시트 확인기를 사용하여 귀하와
+      귀하의 비즈니스, 그리고 가족을 위한 개인화된 조치 목록을 얻으십시오.
     sections:
-      aria_string_suffix:
-      guidance_and_regulation:
-      news_and_communications:
-      policy_and_engagement:
-      research_and_statistics:
-      services:
-      transparency:
-    share_links:
-    topic_section_header:
-    topic_section_subheading:
-    video_section_description:
-    video_section_link:
-    video_section_title:
-    video_section_transcription_summary:
-    video_section_transcription_text:
+      aria_string_suffix: 브렉시트 관련
+      guidance_and_regulation: 지침 및 규제
+      news_and_communications: 뉴스 및 커뮤니케이션
+      policy_and_engagement: 정책 문서 및 상담
+      research_and_statistics: 조사 및 통계
+      services: 서비스
+      transparency: 정보 공개의 투명성 및 자유
+    share_links: 이 페이지 공유하기
+    take_action_list:
+      amber: 변경하기
+      green: 이동하기
+      red: 확인하기
+    take_action_start_now: '브렉시트 확인기: 지금 시작하기'
+    take_action_start_now_link: "/transition-check/questions"
+    topic_section_header: 모든 브렉시트 정보
+    topic_section_subheading: 브렉시트에 관련된 모든 정보 탐색하기
+    video_section_description: |
+      <p>유럽에서의 비즈니스 운영이 변경되었습니다. 수출, 수입, 관세, 데이터 및 채용에 대한 새로운 규정을 따라야 합니다.</p>
+      <p>영상을 보고 귀하의 비즈니스에 새로운 규정이 의미하는 바를 탐색해 보십시오. 또한 <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">브렉시트 확인기를 사용하여</a> 개인화된 조치 목록을 얻을 수 있습니다.</p>
+    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
+    video_section_title: 비즈니스를 계속 나아가게 하기
+    video_section_transcription_summary: 영상 녹취록 보기
+    video_section_transcription_text: |
+      <P>비즈니스, 영국은 유럽연합을 탈퇴했고 이제 새로운 규칙들이 적용됩니다.</p>
+      <p>귀하의 비즈니스가 계속해서 나아가도록, gov.uk/transition의 브렉시트 확인기를 사용하여 비즈니스에 대한 개인화된 조치를 취하십시오.</p>
+      <p>비즈니스를 계속 나아가게 하십시오.</p>

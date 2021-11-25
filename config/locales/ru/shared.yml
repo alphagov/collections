@@ -1,12 +1,11 @@
----
 ru:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Домой
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: Русский
+      prefix: 'Посетите:'
+      title: Посетите GOV.UK
+    get_emails: Получите электронное сообщение на эту тему
+    language_direction: ltr
+    language_name: Английский язык
     topics:
-      title:
+      title: "%{title}: полная информация"

@@ -1,6 +1,5 @@
----
 el:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Υπηρεσίες και πληροφορίες - %{title}
+    see_more_link: Δείτε περισσότερα
+    title: Υπηρεσίες και πληροφορίες

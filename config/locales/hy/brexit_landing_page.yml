@@ -1,40 +1,55 @@
----
 hy:
   brexit_landing_page:
     campaign_links:
-      lead_in:
-      lead_out:
-      links:
+      lead_in: Իմացեք, թե ինչ պետք է անեք այլ կերպ, եթե․
+      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
+        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
+        data-track-label="Get the complete list">Ստացեք ձեր, ձեր բիզնեսի և ընտանիքի
+        համար անելիքների</a> ամբողջական ցանկը։
     comms:
-      links:
-      read_transcript:
-    comms_header:
-    data_list_title:
-    email_mailto_subject:
-    guidance_header:
-    meta_description:
-    meta_title:
+      read_transcript: Կարդացեք այս տեսանյութի տեքստը
+    comms_header: Հայտարարություններ
+    data_list_title: Brexit-ի լենդինգ էջ՝ %{header}
+    email_mailto_subject: ՄԹ-ի նոր մեկնարկը՝ եկեք այցելենք GOV.UK կայք
+    guidance_header: Փոփոխություններ բիզնեսի և քաղաքացիների համար
+    meta_description: 'Պարզել, թե ինչպես են Brexit-ի նոր կանոնները կիրառվում Եվրոպայի
+      հետ բիզնես վարելու և ճանապարհորդության ժամանակ: Գործողությունների անհատականացված
+      ցանկ ստանալու համար օգտվեք Brexit-ի ստուգման գործիքից:'
+    meta_title: Brexit
     no_cookies:
-      change_settings_text:
-      icon_text:
-      or_text:
-      to_watch_text:
-      watch_link_text:
-    page_header:
-    page_header_explainer:
+      change_settings_text: Փոխեք ձեր քուքի ֆայլերի կարգավորումները
+      icon_text: ՏԵՍԱՆՅՈՒԹ
+      or_text: կամ
+      to_watch_text: դիտել տեսանյութը
+      watch_link_text: Դիտել YouTube էջում
+    page_header: Brexit՝<br/>նոր կանոնները կարող եք դիտել այստեղ
+    page_header_explainer: 'Նոր կանոնները կիրառվում Եվրոպայի հետ բիզնես վարելու և
+      ճանապարհորդության ժամանակ: Ձեր, ձեր բիզնեսի և ընտանիքի համար գործողությունների
+      անհատականացված ցանկ ստանալու համար օգտվեք Brexit-ի ստուգման գործիքից։'
     sections:
-      aria_string_suffix:
-      guidance_and_regulation:
-      news_and_communications:
-      policy_and_engagement:
-      research_and_statistics:
-      services:
-      transparency:
-    share_links:
-    topic_section_header:
-    topic_section_subheading:
-    video_section_description:
-    video_section_link:
-    video_section_title:
-    video_section_transcription_summary:
-    video_section_transcription_text:
+      aria_string_suffix: Brexit-ին առնչվող
+      guidance_and_regulation: Ուղղորդում և կանոնակարգ
+      news_and_communications: Նորություններ և հաղորդակցություններ
+      policy_and_engagement: Քաղաքականության փաստաթղթեր և խորհրդակցություններ
+      research_and_statistics: Հետազոտություն և վիճակագրություն
+      services: Ծառայություններ
+      transparency: Տեղեկատվության ազատության և թափանցիկության հրապարակումներ
+    share_links: Կիսվել այս էջով
+    take_action_list:
+      amber: Փոխել
+      green: Առաջ
+      red: Ստուգել
+    take_action_start_now: Brexit-ի ստուգման գործի՝ սկսել հիմա
+    take_action_start_now_link: "/transition-check/questions"
+    topic_section_header: Brexit-ի մասին ամբողջական տեղեկություն
+    topic_section_subheading: Դիտել Brexit-ի հետ կապված ամբողջական տեղեկությունը
+    video_section_description: |
+      <p>Եվրոպայի հետ բիզնես վարելու կարգը փոխվել է: Դուք պետք է հետևեք արտահանման, ներմուծման, սակագների, տվյալների և&nbsp;վարձակալության նոր կանոններին:</p>
+      <p>Դիտեք տեսանյութը, որպեսզի իմանաք ձեր բիզնեսի համար նոր կանոնների կիրառման մանրամասները: Կարող եք նաև <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">օգտվել Brexit-ի ստուգման գործիքից</a>՝ գործողությունների անհատականացված ցուցակ ստանալու համար:</p>
+    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
+    video_section_title: Պահեք ձեր բիզնեսը շարժման մեջ
+    video_section_transcription_summary: Դիտել տեսանյութի տեքստը
+    video_section_transcription_text: |
+      <p>Բիզնեսի ներկայացուցիչներ, ՄԹ-ն դուրս է եկել ԵՄ-ի կազմից, և այժմ նոր կանոններ են գործում:</p>
+      <p>Ձեր բիզնեսը շարժման մեջ պահելու համար օգտվեք Brexit-ի ստուգման գործիքից gov.uk/transition հղումով, որպեսզի ձեր բիզնեսի համար անհատականացված գործողություններ ստանաք:</p>
+      <p>Պահեք բիզնեսը շարժման մեջ:</p>

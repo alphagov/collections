@@ -1,7 +1,6 @@
----
 hy:
   people:
-    biography:
-    previous_roles:
-    previous_roles_in_government:
-    read_more:
+    biography: Կենսագրություն
+    previous_roles: Նախկին պաշտոններ
+    previous_roles_in_government: Նախկին պաշտոններ կառավարությունում
+    read_more: Ավելի շատ տեղեկություն այս անձի մասին

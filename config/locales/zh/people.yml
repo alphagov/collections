@@ -1,7 +1,6 @@
----
 zh:
   people:
-    biography:
-    previous_roles:
-    previous_roles_in_government:
-    read_more:
+    biography: 自我介绍
+    previous_roles: 以前的职位
+    previous_roles_in_government: 以前的政府职位
+    read_more: 更多关于这个人的信息

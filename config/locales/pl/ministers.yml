@@ -1,9 +1,8 @@
----
 pl:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Uczestniczy również w posiedzeniach Gabinetu
+    by_department: Ministrowie według wydziałów
+    cabinet: Ministrowie gabinetu
+    govuk_title: Ministrowie - GOV.UK
+    title: Ministrowie
+    whips: Whips

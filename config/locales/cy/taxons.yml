@@ -1,8 +1,7 @@
----
 cy:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Archwilio'r is-bynciau
+    organisations: Sefydliadau
+    see_all_in_topic: Gweld mwy %{type} yn y pwnc hwn
+    show_fewer_orgs: Dangos llai o sefydliadau
+    show_more_orgs: Dangos mwy o sefydliadau

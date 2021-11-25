@@ -1,40 +1,28 @@
----
 it:
   organisations:
-    about_page_path:
-    administered_by:
-    breadcrumbs:
-      courts_and_tribunals:
-      organisations:
-    contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
     content_item:
       schema_name:
         aaib_report:
           one:
           other:
         announcement:
-          one: Annuncio
-          other: Annunci
+          one:
+          other:
         asylum_support_decision:
           one:
           other:
         authored_article:
-          one: Articolo autorizzato
-          other: Articoli autorizzati
+          one:
+          other:
         business_finance_support_scheme:
           one:
           other:
         case_study:
-          one: Caso studio
-          other: Casi studio
+          one:
+          other:
         closed_consultation:
-          one: Consultazione chiusa
-          other: Consultazioni chiuse
+          one:
+          other:
         cma_case:
           one:
           other:
@@ -42,20 +30,20 @@ it:
           one:
           other:
         consultation:
-          one: Consultazione
-          other: Consultazioni
+          one:
+          other:
         consultation_outcome:
-          one: Esito delle consultazioni
-          other: Esiti delle consultazioni
+          one:
+          other:
         corporate_information_page:
           one:
           other:
         corporate_report:
-          one: Relazione aziendale
-          other: Relazioni aziendali
+          one:
+          other:
         correspondence:
-          one: Corrispondenza
-          other: Corrispondenza
+          one:
+          other:
         countryside_stewardship_grant:
           one:
           other:
@@ -63,17 +51,17 @@ it:
           one:
           other:
         detailed_guide:
-          one: Indicazione dettagliata
-          other: Indicazioni dettagliate
+          one:
+          other:
         dfid_research_output:
           one:
           other:
         document_collection:
-          one: Serie
+          one:
           other:
         draft_text:
-          one: Bozza
-          other: Bozze
+          one:
+          other:
         drug_safety_update:
           one:
           other:
@@ -87,29 +75,29 @@ it:
           one:
           other:
         fatality_notice:
-          one: Messaggio di errore
-          other: Messaggi di errore
+          one:
+          other:
         foi_release:
-          one: Comunicato FOI (accesso agli atti)
-          other: Comunicati FOI (accesso agli atti)
+          one:
+          other:
         form:
-          one: Formulario
-          other: Formulari
+          one:
+          other:
         government_response:
-          one: Risposta governativa
-          other: Risposte governative
+          one:
+          other:
         guidance:
-          one: Indicazione
-          other: Indicazione
+          one:
+          other:
         impact_assessment:
-          one: Valutazione impatto
-          other: Valutazioni impatto
+          one:
+          other:
         imported:
-          one: importato - in attesa
-          other: importato - in attesa
+          one:
+          other:
         independent_report:
-          one: Relazione indipendente
-          other: Relazioni indipendenti
+          one:
+          other:
         international_development_fund:
           one:
           other:
@@ -120,8 +108,8 @@ it:
           one:
           other:
         map:
-          one: Mappa
-          other: Mappe
+          one:
+          other:
         medical_safety_alert:
           one:
           other:
@@ -129,17 +117,17 @@ it:
           one:
           other:
         national_statistics:
-          one: Statistica - statistica nazionale
-          other: Statistica - statistica nazionale
+          one:
+          other:
         national_statistics_announcement:
           one:
           other:
         news_article:
-          one: Articolo
-          other: Articoli
+          one:
+          other:
         news_story:
-          one: Notizia
-          other: Notizie
+          one:
+          other:
         notice:
           one:
           other:
@@ -147,32 +135,32 @@ it:
           one:
           other:
         official_statistics:
-          one: Statistica
-          other: Statistiche
+          one:
+          other:
         official_statistics_announcement:
           one:
           other:
         open_consultation:
-          one: Consultazione aperta
-          other: Consultazioni aperte
+          one:
+          other:
         oral_statement:
-          one: Dichiarazione in parlamento
-          other: Dichiarazioni in parlamento
+          one:
+          other:
         policy:
-          one: Politica
-          other: Politiche
+          one:
+          other:
         policy_paper:
-          one: Politica
-          other: Politiche
+          one:
+          other:
         press_release:
-          one: Comunicato stampa
-          other: Comunicati stampa
+          one:
+          other:
         promotional:
-          one: Materiale promozionale
-          other: Materiale promozionale
+          one:
+          other:
         publication:
-          one: Pubblicazione
-          other: Pubblicazioni
+          one:
+          other:
         raib_report:
           one:
           other:
@@ -180,8 +168,8 @@ it:
           one:
           other:
         research:
-          one: Ricerca ed analisi
-          other: Ricerca ed analisi
+          one:
+          other:
         residential_property_tribunal_decision:
           one:
           other:
@@ -192,20 +180,20 @@ it:
           one:
           other:
         speaking_notes:
-          one: Appunti
-          other: Appunti
+          one:
+          other:
         speech:
-          one: Discorso
-          other: Discorsi
+          one:
+          other:
         standard:
           one:
           other:
         statement_to_parliament:
-          one: Dichiarazione in parlamento
-          other: Dichiarazioni in parlamento
+          one:
+          other:
         statistical_data_set:
-          one: Dati statistici
-          other: Dati stitistici
+          one:
+          other:
         statistics_announcement:
           one:
           other:
@@ -219,23 +207,34 @@ it:
           one:
           other:
         transcript:
-          one: Trascrizione
-          other: Trascrizioni
+          one:
+          other:
         transparency:
-          one: Dati sulla trasparenza
-          other: Dati sulla trasparenza
+          one:
+          other:
         utaac_decision:
           one:
           other:
         world_location_news_article:
-          one: Articolo
-          other: Articoli
+          one:
+          other:
         world_news_story:
           one:
           other:
         written_statement:
-          one: Dichiarazione scritta al parlamento
-          other: Dichiarazioni scritte al parlamento
+          one:
+          other:
+    about_page_path:
+    administered_by:
+    breadcrumbs:
+      courts_and_tribunals:
+      organisations:
+    contact:
+      contact_details:
+      contact_form:
+      contact_organisation:
+      email:
+      telephone:
     corporate_information:
     document_types:
       documents:

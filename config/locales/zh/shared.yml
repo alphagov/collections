@@ -1,12 +1,11 @@
----
 zh:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: 主页
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: 中文
+      prefix: 浏览：
+      title: 浏览GOV.UK
+    get_emails: 获取关于本主题的电子邮件
+    language_direction: ltr
+    language_name: 英语
     topics:
-      title:
+      title: "%{title}：详细信息"

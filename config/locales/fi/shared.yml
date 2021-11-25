@@ -1,12 +1,11 @@
----
 fi:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Kotisivu
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: Suomi
+      prefix: 'Selaa:'
+      title: Selaa GOV.UK
+    get_emails: Hanki sähköpostit tähän aiheeseen
+    language_direction: ltr
+    language_name: Englanti
     topics:
-      title:
+      title: "%{title}: yksityiskohtaisia tietoja"

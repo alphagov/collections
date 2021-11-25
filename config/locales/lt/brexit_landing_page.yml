@@ -1,40 +1,55 @@
----
 lt:
   brexit_landing_page:
     campaign_links:
-      lead_in:
-      lead_out:
-      links:
+      lead_in: 'Pažiūrėkite, ką turite daryti kitaip, jei jūs:'
+      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
+        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
+        data-track-label="Get the complete list">Gaukite išsamią informaciją,</a>
+        ką turite padaryti dėl savęs, savo verslo ar šeimos.
     comms:
-      links:
-      read_transcript:
-    comms_header:
-    data_list_title:
-    email_mailto_subject:
-    guidance_header:
-    meta_description:
-    meta_title:
+      read_transcript: Peržiūrėkite šio vaizdo įrašo tekstą
+    comms_header: Pranešimas
+    data_list_title: "„Brexitu“  nukreipimo puslapis: %{header}"
+    email_mailto_subject: 'Nauja JK pradžia: imkimės veiksmų – GOV.UK'
+    guidance_header: Pokyčiai verslui ir piliečiams
+    meta_description: Sužinokite, kaip naujos „Brexito“ taisyklės taikomos kelionėms
+      Europoje ir verslo vykdymui su Europa. Užpildykite „Brexito“ klausimyną ir gaukite
+      suasmenintą veiksmų sąrašą.
+    meta_title: "„Brexitas“"
     no_cookies:
-      change_settings_text:
-      icon_text:
-      or_text:
-      to_watch_text:
-      watch_link_text:
-    page_header:
-    page_header_explainer:
+      change_settings_text: Pakeiskite slapukų nustatymus
+      icon_text: VAIZDO ĮRAŠAS
+      or_text: arba
+      to_watch_text: žiūrėti vaizdo įrašą
+      watch_link_text: 'Žiūrėti per „YouTube“ '
+    page_header: Breksitas:<br/>naujos taisyklės pateikiamos čia
+    page_header_explainer: Sužinokite, kaip naujos „Brexito“ taisyklės taikomos kelionėms
+      Europoje ir verslo vykdymui su Europa. Užpildykite „Brexito“ klausimyną ir gaukite
+      suasmenintą veiksmų sąrašą sau, savo verslui ir šeimai.
     sections:
-      aria_string_suffix:
-      guidance_and_regulation:
-      news_and_communications:
-      policy_and_engagement:
-      research_and_statistics:
-      services:
-      transparency:
-    share_links:
-    topic_section_header:
-    topic_section_subheading:
-    video_section_description:
-    video_section_link:
-    video_section_title:
-    video_section_transcription_summary:
-    video_section_transcription_text:
+      aria_string_suffix: 'susiję su „Brexitu“ '
+      guidance_and_regulation: Nurodymai ir taisyklės
+      news_and_communications: Naujienos ir pranešimai
+      policy_and_engagement: Strategijos dokumentai ir konsultacijos
+      research_and_statistics: Tyrimai ir statistika
+      services: Paslaugos
+      transparency: Pranešimai apie skaidrumą ir informacijos laisvę
+    share_links: Bendrinti šį puslapį
+    take_action_list:
+      amber: Keisti
+      green: Eiti
+      red: Tikrinti
+    take_action_start_now: "„Brexito“ klausimynas: pradėti dabar"
+    take_action_start_now_link: "/transition-check/questions"
+    topic_section_header: 'Visai informaciją apie „Brexitą“ '
+    topic_section_subheading: 'Naršykite visą su „Brexitu“ susijusią informaciją '
+    video_section_description: |
+      <p>Verslo vykdymas su Europa pasikeitė. Turite paisyti naujų taisyklių, taikomų eksportui, importui, tarifams ir&nbsp;darbuotojų samdymui.</p>
+      <p>Peržiūrėkite vaizdo įrašą ir sužinokite, kokią įtaką naujosios taisyklės turi jūsų verslui. Taip pat galite <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">pasitelkti „Brexito“ klausimyną,</a> kad gautumėte suasmenintą veiksmų sąrašą.</p>
+    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
+    video_section_title: Neleiskite savo verslui sustoti
+    video_section_transcription_summary: Peržiūrėkite vaizdo įrašo tekstą
+    video_section_transcription_text: |-
+      <p>JK išėjus iš ES, verslui taikomos naujos taisyklės.</p>
+      <p>Neleiskite savo verslui sustoti ir užpildykite Brexito“ klausimyną, pateiktą gov.uk/transition, kad gautumėte suasmenintą veiksmų sąrašą savo verslui.</p>
+      <p>Neleiskite verslui sustoti.</p>

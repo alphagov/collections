@@ -1,12 +1,11 @@
----
 ur:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: ہوم
     browse:
-      prefix:
-      title:
-    get_emails:
+      prefix: 'براؤز کریں:'
+      title: GOV.UK کو براؤز کریں
+    get_emails: اس موضوع کے لیے ای میلز حاصل کریں
     language_direction: rtl
-    language_name: اردو
+    language_name: انگریزی
     topics:
-      title:
+      title: "%{title}: تفصیلی معلومات"

@@ -1,15 +1,14 @@
----
 zh:
   roles:
-    find_out_more_html:
+    find_out_more_html: 在 %{link} 小节中了解更多关于此职位的前任担任者的信息。
     heading:
-      one:
-      other:
+      one: 职责
+      other: 职责
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: 当前职位担任者
+      previous_holders: 以前的担任者
+      responsibilities: 责任
+    ministerial: 部长级职位
+    past: 过去
+    previous_holders: 本职位的前任担任者
+    read_more: 关于本职位的更多信息

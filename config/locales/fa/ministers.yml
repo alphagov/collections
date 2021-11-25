@@ -1,9 +1,8 @@
----
 fa:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: کابینه نیز حضور پیدا می‌کند
+    by_department: وزرا بر اساس دپارتمان
+    cabinet: وزرای کابینه
+    govuk_title: وزرا - GOV.UK
+    title: وزرا
+    whips: لابی‌ها

@@ -1,7 +1,6 @@
----
 sr:
   people:
-    biography:
-    previous_roles:
-    previous_roles_in_government:
-    read_more:
+    biography: Biografija
+    previous_roles: Prethodne funkcije
+    previous_roles_in_government: Prethodne funkcije u Parlamentu
+    read_more: Više o ovoj osobi

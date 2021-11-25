@@ -1,15 +1,14 @@
----
 pa:
   roles:
-    find_out_more_html:
     heading:
-      one:
-      other:
+      one: ਭੂਮਿਕਾ
+      other: ਭੂਮਿਕਾਵਾਂ
+    find_out_more_html: ਸਾਡੇ %{link} ਭਾਗ ਵਿੱਚ ਇਸ ਭੂਮਿਕਾ ਦੇ ਪਿਛਲੇ ਧਾਰਕਾਂ ਬਾਰੇ ਹੋਰ ਜਾਣੋ।
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: ਮੌਜੂਦਾ ਰੋਲ ਧਾਰਕ
+      previous_holders: ਪਿਛਲੇ ਧਾਰਕ
+      responsibilities: ਜ਼ਿੰਮੇਵਾਰੀਆਂ
+    ministerial: ਮੰਤਰੀ ਦੀ ਭੂਮਿਕਾ
+    past: ਬੀਤੇ
+    previous_holders: ਇਸ ਭੂਮਿਕਾ ਦੇ ਪਿਛਲੇ ਧਾਰਕ
+    read_more: ਇਸ ਭੂਮਿਕਾ ਬਾਰੇ ਹੋਰ

@@ -1,12 +1,11 @@
----
 fa:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: صفحه اصلی
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction: rtl
-    language_name: فارسی
+      prefix: 'مرور:'
+      title: GOV.UK را مرور کنید
+    get_emails: دریافت ایمیل برای این موضوع
+    language_direction: ltr
+    language_name: انگلیسی
     topics:
-      title:
+      title: "%{title}: اطلاعات جزئی"

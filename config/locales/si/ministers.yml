@@ -1,9 +1,8 @@
----
 si:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: කැබිනට් මණ්ඩලයට ද සහභාගී වේ
+    by_department: අමාත්‍යවරු දෙපාර්තුමේන්තු අනුව
+    cabinet: කැබිනට් අමාත්යවරු
+    govuk_title: අමාත්යවරු - GOV.UK
+    title: අමාත්‍යවරු
+    whips: කස

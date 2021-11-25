@@ -1,8 +1,7 @@
----
 lv:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Izpētīt apakštēmas
+    organisations: Organizācijas
+    see_all_in_topic: Skatīt vairāk %{type} šajā tēmā
+    show_fewer_orgs: Skatīt mazāk organizāciju
+    show_more_orgs: Skatīt vairāk organizāciju

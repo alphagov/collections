@@ -1,15 +1,15 @@
----
 bn:
   roles:
-    find_out_more_html:
     heading:
-      one:
-      other:
+      one: ভূমিকা
+      other: ভূমিকা
+    find_out_more_html: পূর্বে এই দায়িত্ব পালনকারী ব্যক্তি সম্পর্কে %{link} অংশ থেকে
+      আরও দেখুন।
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: বর্তমান ভূমিকা পালনকারী
+      previous_holders: পূর্ববর্তী পালনকারী
+      responsibilities: দায়দায়িত্ব
+    ministerial: মন্ত্রীর ভূমিকা
+    past: পূর্ববর্তী
+    previous_holders: পূর্বে এই ভূমিকা পালনকারী
+    read_more: এই ভূমিকা সম্পর্কে আরও

@@ -1,5 +1,4 @@
----
 sl:
   world_wide_taxons:
-    take_the_survey:
-    test_banner:
+    take_the_survey: Sodelujte v anketi in nam pomagajte izboljšati
+    test_banner: To je testna verzija postavitve te strani.

@@ -1,9 +1,8 @@
----
 ta:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: அமைச்சரவையிலும் கலந்துகொள்கிறார்
+    by_department: துறைவாரியாக அமைச்சர்கள்
+    cabinet: மத்திய அமைச்சர்கள்
+    govuk_title: அமைச்சர்கள் - GOV.UK
+    title: அமைச்சர்கள்
+    whips: கொறடாக்கள்

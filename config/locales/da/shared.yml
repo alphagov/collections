@@ -1,12 +1,11 @@
----
 da:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Hjem
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: Dansk
+      prefix: 'Gennemse:'
+      title: Gennemse GOV.UK
+    get_emails: Få e-mails til dette emne
+    language_direction: ltr
+    language_name: Engelsk
     topics:
-      title:
+      title: "%{title}: detaljerede oplysninger"

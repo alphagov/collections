@@ -1,15 +1,15 @@
----
 et:
   roles:
-    find_out_more_html:
     heading:
-      one: Ülesanne
-      other: Ülesanded
+      one: Roll
+      other: Rollid
+    find_out_more_html: Lisateavet selle rolli varasemate hoidjate kohta leiate meie
+      jaotisest %{link}.
     headings:
-      current_holder: Praegu sellel ametikohal
-      previous_holders: Eelmised ametikoha täitjad
-      responsibilities: Vastutusalad
-    ministerial: Ministri ülesanne
-    past:
-    previous_holders:
-    read_more: Sellest ametikohast lähemalt
+      current_holder: Praegune rollihoidja
+      previous_holders: Eelmised hoidjad
+      responsibilities: Kohustused
+    ministerial: Ministri roll
+    past: minevik
+    previous_holders: Selle rolli varasemad hoidjad
+    read_more: Rohkem selle rolli kohta

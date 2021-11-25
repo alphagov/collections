@@ -1,10 +1,9 @@
----
 it:
   roles:
-    find_out_more_html:
     heading:
       one:
       other:
+    find_out_more_html:
     headings:
       current_holder:
       previous_holders:

@@ -1,9 +1,8 @@
----
 th:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: เข้าร่วมประชุมคณะรัฐมนตรีด้วย
+    by_department: รายชื่อรัฐมนตรีแบ่งตามกระทรวง
+    cabinet: รัฐมนตรีในคณะรัฐมนตรี
+    govuk_title: รัฐมนตรี - GOV.UK
+    title: รัฐมนตรี
+    whips: วิป

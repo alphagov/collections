@@ -1,6 +1,5 @@
----
 uk:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Послуги та інформація - %{title}
+    see_more_link: Дізнатися більше
+    title: Послуги та інформація

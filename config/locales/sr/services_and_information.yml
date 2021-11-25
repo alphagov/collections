@@ -1,6 +1,5 @@
----
 sr:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Usluge i informacije – %{title}
+    see_more_link: Pogledajte više
+    title: Usluge i informacije

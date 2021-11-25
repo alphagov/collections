@@ -1,17 +1,17 @@
----
 sl:
   roles:
-    find_out_more_html:
     heading:
-      few:
-      one:
-      other:
+      one: Vloga
       two:
+      few:
+      other: Vloge
+    find_out_more_html: Izvedite več o prejšnjih nosilcih te vloge v našem razdelku
+      %{link}.
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: Trenutni nosilec vloge
+      previous_holders: Predhodni nosilci
+      responsibilities: Odgovornosti
+    ministerial: Vloga ministra
+    past: pretekli
+    previous_holders: Prejšnji nosilci te vloge
+    read_more: Več o teh vlogi

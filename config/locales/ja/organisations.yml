@@ -1,259 +1,337 @@
----
 ja:
   organisations:
-    about_page_path:
-    administered_by:
+    about_page_path: "/government/organisations/%{organisation}/about"
+    administered_by: 管理者：
     breadcrumbs:
-      courts_and_tribunals:
-      organisations:
+      courts_and_tribunals: 裁判所及び審判所
+      organisations: 組織
     contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
+      contact_details: 連絡先の詳細
+      contact_form: お問い合わせフォーム：%{title}
+      contact_organisation: "%{organisation}に連絡し​​てください"
+      email: Eメール
+      telephone: 電話
     content_item:
       schema_name:
         aaib_report:
-          other:
+          one: 航空事故調査局報告書
+          other: 航空事故調査局報告書
         announcement:
-          other: ニュース
+          one: お知らせ
+          other: お知らせ
         asylum_support_decision:
-          other:
+          one: 難民支援審判所（Asylum support tribunal）の決定
+          other: 難民支援審判所（Asylum support tribunal）の決定
         authored_article:
-          other:
+          one: 執筆記事
+          other: 執筆記事
         business_finance_support_scheme:
-          other:
+          one: 企業金融支援制度
+          other: 企業金融支援制度
         case_study:
+          one: ケーススタディ
           other: ケーススタディ
         closed_consultation:
-          other: 非公開協議
+          one: 非公開の審議
+          other: 非公開の審議
         cma_case:
-          other:
+          one: 競争・市場当局の事例
+          other: 競争・市場当局の事例
         coming_soon:
-          other:
+          one: 近日公開
+          other: 近日公開
         consultation:
-          other: 協議
+          one: 審議
+          other: 審議
         consultation_outcome:
-          other: 協議結果
+          one: 審議結果
+          other: 審議結果
         corporate_information_page:
-          other:
+          one: 情報ページ
+          other: 情報ページ
         corporate_report:
-          other: 事業報告
+          one: 企業報告書
+          other: 企業報告書
         correspondence:
-          other: 通信文書
+          one: 対応
+          other: 対応
         countryside_stewardship_grant:
-          other:
+          one: カントリーサイドスチュワードシップ助成金
+          other: カントリーサイドスチュワードシップ助成金
         decision:
-          other:
+          one: 決定事項
+          other: 決定事項
         detailed_guide:
-          other: 詳細説明
+          one: ガイダンス
+          other: ガイダンス
         dfid_research_output:
-          other:
+          one: 開発成果の研究
+          other: 開発成果の研究
         document_collection:
-          other:
+          one: コレクション
+          other: コレクション
         draft_text:
-          other: 草稿
+          one: 下書きテキスト
+          other: 下書きテキスト
         drug_safety_update:
-          other:
+          one: 医薬品の安全性に関する最新情報
+          other: 医薬品の安全性に関する最新情報
         employment_appeal_tribunal_decision:
-          other:
+          one: 雇用上訴審判所（Employment appeal tribunal）の決定
+          other: 雇用上訴審判所（Employment appeal tribunal）の決定
         employment_tribunal_decision:
-          other:
+          one: 雇用審判所（Employment tribunal decision）の決定
+          other: 雇用審判所（Employment tribunal decision）の決定
         esi_fund:
-          other:
+          one: 欧州構造投資基金 (ESIF)
+          other: 欧州構造投資基金 (ESIF)
         fatality_notice:
-          other: 死亡告示
+          one: 死亡通知
+          other: 死亡通知
         foi_release:
-          other: 情報公開に関するニュース
+          one: 情報公開公表
+          other: 情報公開公表
         form:
+          one: フォーム
           other: フォーム
         government_response:
-          other: レスポンス
+          one: 政府の対応
+          other: 政府の対応
         guidance:
+          one: ガイダンス
           other: ガイダンス
         impact_assessment:
+          one: 影響評価
           other: 影響評価
         imported:
-          other: 確認中
+          one: インポート済み - 待機中の種別
+          other: インポート済み - 待機中の種別
         independent_report:
-          other: 第三者機関によるレポート
+          one: 第三者機関による報告書
+          other: 第三者機関による報告書
         international_development_fund:
-          other:
+          one: 国際開発資金
+          other: 国際開発資金
         international_treaty:
-          other:
+          one: 国際条約
+          other: 国際条約
         maib_report:
-          other:
+          one: 海難調査支部報告書
+          other: 海難調査支部報告書
         map:
+          one: 地図
           other: 地図
         medical_safety_alert:
-          other:
+          one: 医薬品・医療機器の注意喚起及び回収
+          other: 医薬品・医療機器の注意喚起及び回収
         national:
-          other:
+          one: 全国統計発表
+          other: 全国統計発表
         national_statistics:
+          one: 国家統計
           other: 国家統計
         national_statistics_announcement:
-          other:
+          one: 全国統計発表
+          other: 全国統計発表
         news_article:
-          other: ニュース
+          one: ニュース記事
+          other: ニュース記事
         news_story:
-          other: ニュース
+          one: ニュースストーリー
+          other: ニュースストーリー
         notice:
-          other:
+          one: お知らせ
+          other: お知らせ
         official:
-          other:
+          one: 公式統計発表
+          other: 公式統計発表
         official_statistics:
-          other: 統計
+          one: 公式統計
+          other: 公式統計
         official_statistics_announcement:
-          other:
+          one: 公式統計発表
+          other: 公式統計発表
         open_consultation:
-          other: 公開協議
+          one: 公開審議
+          other: 公開審議
         oral_statement:
-          other: 議会に対する口頭陳述
+          one: 議会への口頭声明
+          other: 議会への口頭声明
         policy:
-          other: 政策
+          one: 方針
+          other: 方針
         policy_paper:
-          other: 政策文書
+          one: 方針書
+          other: 方針書
         press_release:
-          other: 新聞発表
+          one: プレスリリース
+          other: プレスリリース
         promotional:
-          other: 宣伝資料
+          one: 販促資料
+          other: 販促資料
         publication:
+          one: 出版物
           other: 出版物
         raib_report:
-          other:
+          one: 鉄道事故調査委員会報告書
+          other: 鉄道事故調査委員会報告書
         regulation:
-          other:
+          one: 規制
+          other: 規則
         research:
+          one: 調査と分析
           other: 調査と分析
         residential_property_tribunal_decision:
-          other:
+          one: 居住用財産審判所（Residential property tribunal）の決定
+          other: 居住用財産審判所（Residential property tribunal）の決定
         service_sign_in:
-          other:
+          one: サービスサインイン
+          other: サービスサインイン
         service_standard_report:
-          other:
+          one: サービス標準報告書
+          other: サービス標準報告書
         speaking_notes:
-          other: キーポイント
+          one: 発言ノート
+          other: 発言ノート
         speech:
+          one: スピーチ
           other: スピーチ
         standard:
-          other:
+          one: 標準
+          other: 標準
         statement_to_parliament:
-          other: 閣僚声明
+          one: 議会への声明
+          other: 議会への声明
         statistical_data_set:
+          one: 統計データセット
           other: 統計データセット
         statistics_announcement:
-          other:
+          one: 統計リリース発表
+          other: 統計リリース発表
         statutory_guidance:
-          other:
+          one: 法定ガイダンス
+          other: 法定ガイダンス
         take_part:
-          other:
+          one: 参加する
+          other: 参加する
         tax_tribunal_decision:
-          other:
+          one: 租税及び衡平審判所（Tax and Chancery tribunal）の決定
+          other: 租税及び衡平審判所（Tax and Chancery tribunal）の決定
         transcript:
-          other: スピーチ全文
+          one: 謄本
+          other: 謄本
         transparency:
+          one: 透明性データ
           other: 透明性データ
         utaac_decision:
-          other:
+          one: 行政控訴審判所（Administrative appeals tribunal decision）の決定
+          other: 行政控訴審判所（Administrative appeals tribunal decision）の決定
         world_location_news_article:
-          other: ニュース
+          one: ニュース記事
+          other: ニュース記事
         world_news_story:
-          other:
+          one: 世界のニュース記事
+          other: 世界のニュース記事
         written_statement:
-          other: 閣僚声明文
-    corporate_information:
+          one: 議会への書面による声明
+          other: 議会への書面による声明
+    corporate_information: 各種情報
     document_types:
-      documents:
+      documents: ドキュメント
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: すべてのガイダンスと規制を見る
+        title: ガイダンスと規制
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: すべてのニュースと通信を見る
+        title: すべてのニュースと通信
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: すべての政策文書と審議を見る
+        title: 政策文書と審議
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/ search / research-and-statistics？organisations [] =％{organisation}＆parent
+            =％{organisation}"
+          text: すべての調査と統計を見る
+        title: 調査と統計
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/ search / services？organisations [] =％{organisation}＆parent =％{organisation}"
+          text: すべてのサービスを見る
+        title: サービス
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: すべての情報公開の透明性と自由を見る
+        title: 情報公開の透明性と自由
+    errors_or_omissions_html: <p>誤字脱字がありますか。 <a class="govuk-link" href="/contact/govuk">こちら教えてください</a>。非省庁公共団体の公式リストについては、<a
+      class="govuk-link" href="/government/collections/public-bodies">公共団体をご覧ください</a>。</p>
+    featured: 特徴
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: FOI（情報の自由）お問い合わせフォーム
+      foi_exemption_html: 'この組織は情報公開法の対象外です。含まれている組織を確認するには、<ahref = "％{foi_url}"
+        class = "govuk-linkbrand__color">法律</a>をご覧ください。
+
+'
+      freedom_of_information_act: 情報自由（FOI）法
+      freedom_of_information_requests: 情報の自由の要求
+      make_an_foi_request: FOIの要求を行う
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: 情報自由（FOI）法と<ahref = "％{how_to_path}" class = "govuk-linkbrand__color">要求方法</a>についてお読みください。
+        step2_html: <a href="%{our_releases_path}" class="govuk-linkbrand__color">以前のリリース</a>をチェックして、すでに質問に回答しているかどうかをご確認ください。
+        step3_html: 新しい要求をするには、以下の詳細を使ってご連絡ください。
+    follow_us: フォローする
+    hidden_share_link: 次でフォローする
+    high_profile_groups: "％{title}内の注目度の高いグループ"
+    index_title: "％{title} - GOV.UK"
+    jobs_contracts: 仕事と契約
+    latest_from: "％{title}からの最新情報"
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name: "％{title}は、<a href='%{link_href}'>％{link_text} </a>と呼ばれるようになりました"
+      devolved: "％{title}は、<a href='%{link_href}'>％{link_text} </a>の主体です"
+      joining: "％{title}は、まもなくGOV.UKに組み込まれます"
+      left_gov: "％{title}は、現在英国政府から独立しています"
+      merged: "％{title}は、％{updated}に<a href='%{link_href}'>％{link_text} </a>の一部になりました"
+      merged_no_date: "％{title}は<a href='%{link_href}'>％{link_text} </a>の一部になりました"
+      no_longer_exists: "％{title}は、終了しました"
+      no_website: "％{title}には、ウェブサイトがありません"
+      separate_website: "％{title}には、<ahref='％{url}'>別のウェブサイト</a>があります"
+      split: "％{title}は、％{links}に置き換えられました"
+    part_of: 次の一部
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: 管理
+      chief_professional_officers: 主任専門官
+      military_personnel: 軍事高官
+      ministers: 大臣
+      special_representatives: 特別代表
+      traffic_commissioners: 運輸長官
+    read_more: 具体的な取り組みについて
+    search_for_department: 部署、機関または公的機関の検索
+    see_all_latest_documents: 最新のドキュメントをすべて表示
+    separate_website: 別のウェブサイト
+    services_and_information: すべての%{acronym}サービスと情報
     subscription:
-      email:
-      feed:
+      email: メールを受け取る
+      feed: フィードを購読する
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      adhoc_advisory_group: 特別顧問団
+      advisory_ndpb: 諮問公共機関 (非部門)
+      civil_service: 公務員
+      executive_agency: 執行機関
+      executive_ndpb: 行政機関 (非部門)
+      independent_monitoring_body: 独立監視機関
+      non_ministerial_department: 非閣僚部門
+      other: その他
+      public_corporation: 公共団体
+      tribunal: 審判所
+    view_all: すべて表示
+    view_less: 一部を表示
+    what_we_do: "%{title}が行うこと"
     works_with_statement:
-      multiple:
-      one:
+      multiple: "%{works_with_count}機関および公共団体と連携"
+      one: "%{works_with_count}公共団体と連携"

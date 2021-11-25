@@ -1,6 +1,5 @@
----
 ar:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: الخدمات والمعلومات - %{title}
+    see_more_link: اطلع على المزيد
+    title: الخدمات والمعلومات

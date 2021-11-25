@@ -1,259 +1,334 @@
----
 zh:
   organisations:
-    about_page_path:
-    administered_by:
+    about_page_path: "/government/organisations/%{organisation}/about"
+    administered_by: 管理者
     breadcrumbs:
-      courts_and_tribunals:
-      organisations:
+      courts_and_tribunals: 法院和法庭
+      organisations: 组织机构
     contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
+      contact_details: 联系方式
+      contact_form: 联系表单：%{title}
+      contact_organisation: 联系人 %{organisation}
+      email: 电子邮箱
+      telephone: 电话
     content_item:
       schema_name:
         aaib_report:
-          other:
+          one: 航空事故调查局报告
+          other: 航空事故调查局报告
         announcement:
+          one: 公告
           other: 公告
         asylum_support_decision:
-          other:
+          one: 庇护支持法庭裁决
+          other: 庇护支持法庭裁决
         authored_article:
-          other: 撰写的文章
+          one: 撰写文章
+          other: 撰写文章
         business_finance_support_scheme:
-          other:
+          one: 商业财务支持计划
+          other: 商业财务支持计划
         case_study:
-          other: 实例研究
+          one: 案例研究
+          other: 案例研究
         closed_consultation:
-          other: 已办结的咨询
+          one: 封闭咨询
+          other: 封闭咨询
         cma_case:
-          other:
+          one: 竞争和市场管理局案例
+          other: 竞争和市场管理局案例
         coming_soon:
-          other:
+          one: 即将推出
+          other: 即将推出
         consultation:
+          one: 咨询
           other: 咨询
         consultation_outcome:
+          one: 咨询结果
           other: 咨询结果
         corporate_information_page:
-          other:
+          one: 信息页
+          other: 信息页
         corporate_report:
-          other: 政府报告
+          one: 公司报告
+          other: 公司报告
         correspondence:
-          other: 交流
+          one: 通信
+          other: 通信
         countryside_stewardship_grant:
-          other:
+          one: 乡村管理计划拨款
+          other: 乡村管理计划拨款
         decision:
-          other:
+          one: 决策
+          other: 决策
         detailed_guide:
-          other: 详细指导
+          one: 指南
+          other: 指南
         dfid_research_output:
-          other:
+          one: 发展产出研究
+          other: 发展产出研究
         document_collection:
-          other:
+          one: 待整理
+          other: 待整理
         draft_text:
-          other: 草拟稿件
+          one: 草拟文本
+          other: 草拟文本
         drug_safety_update:
-          other:
+          one: 药物安全更新
+          other: 药物安全更新
         employment_appeal_tribunal_decision:
-          other:
+          one: 劳资上诉法庭判决
+          other: 劳资上诉法庭判决
         employment_tribunal_decision:
-          other:
+          one: 劳资法庭判决
+          other: 劳资法庭判决
         esi_fund:
-          other:
+          one: 欧洲结构与投资基金(ESIF)
+          other: 欧洲结构与投资基金(ESIF)
         fatality_notice:
-          other: 死亡通告
+          one: 死亡通知
+          other: 死亡通知
         foi_release:
-          other: 资讯自由(FOI)信息发布
+          one: FOI 发布
+          other: FOI 发布
         form:
+          one: 表格
           other: 表格
         government_response:
-          other: 政府反应
+          one: 政府回应
+          other: 政府回应
         guidance:
-          other: 指导
+          one: 指南
+          other: 指南
         impact_assessment:
+          one: 影响评估
           other: 影响评估
         imported:
-          other: 导入 - 正在等待的类型
+          one: 进口-等待型
+          other: 进口-等待型
         independent_report:
+          one: 独立报告
           other: 独立报告
         international_development_fund:
-          other:
+          one: 国际发展资金
+          other: 国际发展资金
         international_treaty:
-          other:
+          one: 国际条约
+          other: 国际条约
         maib_report:
-          other:
+          one: 海事事故调查局报告
+          other: 海事事故调查局报告
         map:
+          one: 地图
           other: 地图
         medical_safety_alert:
-          other:
+          one: 药品和医疗设备的警报和召回
+          other: 药品和医疗设备的警报和召回
         national:
-          other:
+          one: 国家统计局公告
+          other: 国家统计局公告
         national_statistics:
-          other: 统计数据 - 国家数据
+          one: 国家统计局
+          other: 国家统计局
         national_statistics_announcement:
-          other:
+          one: 国家统计局公告
+          other: 国家统计局公告
         news_article:
-          other: 新闻文章
-        news_story:
+          one: 新闻报道
           other: 新闻报道
+        news_story:
+          one: 新闻故事
+          other: 新闻故事
         notice:
-          other:
+          one: 通知
+          other: 通知
         official:
-          other:
+          one: 官方统计公告
+          other: 官方统计公告
         official_statistics:
-          other: 统计数据
+          one: 官方统计
+          other: 官方统计
         official_statistics_announcement:
-          other:
+          one: 官方统计公告
+          other: 官方统计公告
         open_consultation:
-          other: 公开咨询
+          one: 公开协商
+          other: 公开协商
         oral_statement:
-          other: 对议会的口头声明
+          one: 议会口头声明
+          other: 议会口头声明
         policy:
-          other: 政策
+          one: 策略
+          other: 策略
         policy_paper:
+          one: 政策文件
           other: 政策文件
         press_release:
+          one: 新闻稿
           other: 新闻稿
         promotional:
-          other: 宣传材料
+          one: 宣传资料
+          other: 宣传资料
         publication:
-          other: 发布的报告
+          one: 公布
+          other: 公布
         raib_report:
-          other:
+          one: 铁路事故调查局报告
+          other: 铁路事故调查局报告
         regulation:
-          other:
+          one: 条例
+          other: 条例
         research:
-          other: 研究及分析
+          one: 研究和分析
+          other: 研究和分析
         residential_property_tribunal_decision:
-          other:
+          one: 住宅物业法庭判决
+          other: 住宅物业法庭判决
         service_sign_in:
-          other:
+          one: 服务登记
+          other: 服务登记
         service_standard_report:
-          other:
+          one: 服务标准报告
+          other: 服务标准报告
         speaking_notes:
-          other: 演讲稿
+          one: 发言讲稿
+          other: 发言讲稿
         speech:
+          one: 演讲
           other: 演讲
         standard:
-          other:
+          one: 标准
+          other: 标准
         statement_to_parliament:
-          other: 对议会的声明
+          one: 议会声明
+          other: 议会声明
         statistical_data_set:
+          one: 统计数据集
           other: 统计数据集
         statistics_announcement:
-          other:
+          one: 统计数据发布公告
+          other: 统计数据发布公告
         statutory_guidance:
-          other:
+          one: 法定指南
+          other: 法定指南
         take_part:
-          other:
+          one: 参加
+          other: 参加
         tax_tribunal_decision:
-          other:
+          one: 税务和衡平法法庭裁决
+          other: 税务和衡平法法庭裁决
         transcript:
-          other: 副本
+          one: 文字记录
+          other: 文字记录
         transparency:
-          other: 透明化数据
+          one: 透明度数据
+          other: 透明度数据
         utaac_decision:
-          other:
+          one: 行政上诉法庭裁决
+          other: 行政上诉法庭裁决
         world_location_news_article:
-          other: 新闻文章
+          one: 新闻报道
+          other: 新闻报道
         world_news_story:
-          other:
+          one: 世界新闻故事
+          other: 世界新闻故事
         written_statement:
-          other: 对议会的书面声明
-    corporate_information:
+          one: 议会口头声明
+          other: 议会口头声明
+    corporate_information: 公司信息
     document_types:
-      documents:
+      documents: 文件
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: 查看全部指南和条例
+        title: 指南和条例
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: 查看全部新闻和通讯
+        title: 新闻和通讯
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: 查看全部政策文件和咨询
+        title: 政策文件和咨询
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: 查看全部研究和统计数据
+        title: 研究和统计数据
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: 查看全部服务
+        title: 服务
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: 查看信息发布的全部透明度和自由
+        title: 信息发布的透明度和自由
+    errors_or_omissions_html: <p>错误或遗漏？<a class="govuk-link" href="/contact/govuk">Tell
+      us here</a>.如要查看非部门公共机构的正式名单 <a class="govuk-link" href="/government/collections/public-bodies">查看公共机构</a>。</p>
+    featured: 特征
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: FOI联系表单
+      foi_exemption_html: "本组织不受《信息自由法》的保护。  \n要查看哪些组织受到保护，请参见 <a href=\"%{foi_url}\"
+        class=\"govuk-link brand__color\">法规</a>。\n"
+      freedom_of_information_act: "《信息自由法》(FOI)"
+      freedom_of_information_requests: 信息自由请求
+      make_an_foi_request: 提出《信息自由法》申请
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: 阅读有关《信息自由法》和 <a href="%{how_to_path}" class="govuk-link brand__color">如何提出请求</a>。
+        step2_html: 查看 <a href="%{our_releases_path}" class="govuk-link brand__color">我们以前的发布</a>，看看我们是否已经回答了您的问题。
+        step3_html: 请使用下面的详细信息与我们联系，提出新的申请。
+    follow_us: 关注我们
+    hidden_share_link: 关注
+    high_profile_groups: "%{title} 内是高调组"
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: 工作和联系人
+    latest_from: "%{title} 的最新消息"
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name: "%{title} 现在称为 <a href='%{link_href}'>%{link_text}</a>"
+      devolved: "%{title} 是 <a href='%{link_href}'>%{link_text}</a> 的实体"
+      joining: "%{title} 将很快被纳入 GOV.UK"
+      left_gov: "%{title} 现在独立于英国政府"
+      merged: 在 %{updated}，%{title} 成为 <a href='%{link_href}'>%{link_text}</a> 的一部分
+      merged_no_date: "%{title} 现在是 <a href='%{link_href}'>%{link_text}</a> 的一部分"
+      no_longer_exists: "%{title} 已关闭"
+      no_website: "%{title} 无网站"
+      separate_website: "%{title} 拥有 <a href='%{url}'>独立网站</a>"
+      split: "%{title} 已由 %{links} 替换"
+    part_of: 一部分
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: 我们的管理
+      chief_professional_officers: 首席专业官员
+      military_personnel: 我们的高级军事官员
+      ministers: 我们的部长
+      special_representatives: 特别代表
+      traffic_commissioners: 交通委员
+    read_more: 阅读更多关于我们所做的事情
+    search_for_department: 搜索一个部门、机构或公共机构
+    see_all_latest_documents: 查看所有最新文档
+    separate_website: 独立网站
+    services_and_information: 全部 %{acronym} 服务和信息
     subscription:
-      email:
-      feed:
+      email: 获取电子邮件
+      feed: 订阅推送
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      adhoc_advisory_group: 特别咨询小组
+      advisory_ndpb: 咨询非部门公共机构
+      civil_service: 行政部门
+      executive_agency: 执行机构
+      executive_ndpb: 执行非部门公共机构
+      independent_monitoring_body: 独立监测机构
+      non_ministerial_department: 非部长级部门
+      other: 其它
+      public_corporation: 公营公司
+      tribunal: 法庭
+    view_all: 查看全部
+    view_less: 查看更少
+    what_we_do: "%{title} 做什么"
     works_with_statement:
-      multiple:
-      one:
+      multiple: 与 %{works_with_count} 机构和公共机构合作
+      one: 与 %{works_with_count} 公共机构合作

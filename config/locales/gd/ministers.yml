@@ -1,9 +1,8 @@
----
 gd:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: I láthair ag an gComh-Aireachta freisin
+    by_department: Airí de réir roinne
+    cabinet: Airí Comh-Aireachta
+    govuk_title: Airí - GOV.UK
+    title: Airí
+    whips: Aoire

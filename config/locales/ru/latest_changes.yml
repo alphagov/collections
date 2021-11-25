@@ -1,6 +1,5 @@
----
 ru:
   latest_changes:
-    next:
-    previous:
-    title:
+    next: Следующий
+    previous: Предыдущий
+    title: Актуальные документы

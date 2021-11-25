@@ -1,40 +1,54 @@
----
 ro:
   brexit_landing_page:
     campaign_links:
-      lead_in:
-      lead_out:
-      links:
+      lead_in: 'Verificați ce trebuie să faceți diferit dacă:'
+      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
+        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
+        data-track-label="Get the complete list">Descărcați lista completă</a> a lucrurilor
+        pe care trebuie să le faceți pentru dvs., compania și familia dvs.
     comms:
-      links:
-      read_transcript:
-    comms_header:
-    data_list_title:
-    email_mailto_subject:
-    guidance_header:
-    meta_description:
-    meta_title:
+      read_transcript: Citiți transcrierea acestui videoclip
+    comms_header: Anunțuri
+    data_list_title: 'Pagina de destinație pentru Brexit: %{header}'
+    email_mailto_subject: 'UK''s new start: let''s get going- GOV.UK'
+    guidance_header: Schimbări pentru companii și cetățeni
+    meta_description: Aflați cum se aplică reglementările Brexit la călătorii și afaceri
+      cu Europa. Folosiți verificatorul Brexit pentru a primi o listă de acțiuni personalizate.
+    meta_title: Brexit
     no_cookies:
-      change_settings_text:
-      icon_text:
-      or_text:
-      to_watch_text:
-      watch_link_text:
-    page_header:
-    page_header_explainer:
+      change_settings_text: Modificați setările pentru cookie-uri
+      icon_text: VIDEO
+      or_text: sau
+      to_watch_text: pentru a viziona videoclipul
+      watch_link_text: Vizionați pe YouTube
+    page_header: Brexit:<br/>au sosit noile reglementări
+    page_header_explainer: Noile reglementări se aplică la călătorii și afaceri cu
+      Europa. Folosiți verificatorul Brexit pentru a primi o listă de acțiuni personalizate
+      pentru dvs., compania și familia dvs.
     sections:
-      aria_string_suffix:
-      guidance_and_regulation:
-      news_and_communications:
-      policy_and_engagement:
-      research_and_statistics:
-      services:
-      transparency:
-    share_links:
-    topic_section_header:
-    topic_section_subheading:
-    video_section_description:
-    video_section_link:
-    video_section_title:
-    video_section_transcription_summary:
-    video_section_transcription_text:
+      aria_string_suffix: cu privire la Brexit
+      guidance_and_regulation: Îndrumări și reglementări
+      news_and_communications: Știri și comunicări
+      policy_and_engagement: Documente de politică și consultații
+      research_and_statistics: Cercetare și statistică
+      services: Servicii
+      transparency: Transparența și libertatea comunicării de informații
+    share_links: Distribuiți această pagină
+    take_action_list:
+      amber: Modificați
+      green: Accesați
+      red: Verificați
+    take_action_start_now: 'Verificator Brexit: începeți acum'
+    take_action_start_now_link: "/transition-check/questions"
+    topic_section_header: Toate informațiile despre Brexit
+    topic_section_subheading: Navigați prin toate informațiile legate de Brexit
+    video_section_description: |
+      <p>Relațiile comerciale cu Europa s-au modificat. Trebuie să respectați reguli noi cu privire la exporturi, importuri, tarife, date și&nbsp;angajări.</p>
+      <p>Vizionați videoclipul pentru a afla ce înseamnă noile reguli pentru compania dvs. Puteți și să <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">folosiți verificatorul Brexit</a> pentru a primi o listă de acțiuni personalizate.</p>
+    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
+    video_section_title: Să menținem afacerile în mișcare
+    video_section_transcription_summary: Citiți transcrierea videoclipului
+    video_section_transcription_text: |
+      <p>Către companii: Marea Britanie a părăsit UE și acum au intrat în vigoare noi reglementări.</p>
+      <p>Pentru a nu opri activitatea companiei dvs., folosiți instrumentul de verificare Brexit de pe gov.uk/transition pentru a primi acțiuni personalizate pentru compania dvs.</p>
+      <p>Haideți să menținem companiile în mișcare.</p>

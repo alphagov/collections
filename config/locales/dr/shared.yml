@@ -1,12 +1,11 @@
----
 dr:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: صفحهء اصلی
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction: rtl
-    language_name: دری
+      prefix: 'جستجو:'
+      title: GOV.UK را جستجو نمایید
+    get_emails: مرتبط با این مقاله ایمل دریافت نمایید
+    language_direction: ltr
+    language_name: انگلیسی
     topics:
-      title:
+      title: "%{title}: معلومات مفصل"

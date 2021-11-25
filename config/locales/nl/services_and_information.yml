@@ -1,6 +1,5 @@
----
 nl:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Diensten en informatie - %{title}
+    see_more_link: Zie meer
+    title: Diensten en informatie

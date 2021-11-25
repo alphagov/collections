@@ -1,12 +1,11 @@
----
 ar:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: الصفحة الرئيسية
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction: rtl
-    language_name: العربية
+      prefix: 'تصفَّح:'
+      title: تصفَّح GOV.UK
+    get_emails: احصل على رسائل بريد إلكتروني عن هذا الموضوع
+    language_direction: ltr
+    language_name: الإنجليزية
     topics:
-      title:
+      title: "%{title}: معلومات تفصيلية"

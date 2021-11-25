@@ -1,15 +1,15 @@
----
 es-419:
   roles:
-    find_out_more_html:
     heading:
-      one:
-      other:
+      one: Rol
+      other: Roles
+    find_out_more_html: Para saber más sobre los anteriores titulares de esta función,
+      consulte nuestra %{link} sección.
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: Titular actual de la función
+      previous_holders: Titulares anteriores
+      responsibilities: Responsabilidades
+    ministerial: Función ministerial
+    past: pasado
+    previous_holders: Anteriores titulares de esta función
+    read_more: Más información sobre esta función

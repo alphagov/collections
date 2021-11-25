@@ -1,6 +1,5 @@
----
 bg:
   latest_changes:
-    next:
-    previous:
-    title:
+    next: Следваща
+    previous: Предишна
+    title: Най-нови документи

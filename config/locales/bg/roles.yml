@@ -1,15 +1,15 @@
----
 bg:
   roles:
-    find_out_more_html:
     heading:
-      one:
-      other:
+      one: Длъжност
+      other: Длъжности
+    find_out_more_html: Научете повече за предишните изпълняващи тази длъжност в нашия
+      раздел %{link}.
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: Сегашен изпълняващ длъжността
+      previous_holders: Предишни изпълняващи
+      responsibilities: Отговорности
+    ministerial: Министерска длъжност
+    past: преди
+    previous_holders: Предишни изпълняващи длъжността
+    read_more: Повече за тази длъжност

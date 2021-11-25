@@ -1,40 +1,56 @@
----
 uz:
   brexit_landing_page:
     campaign_links:
-      lead_in:
-      lead_out:
-      links:
+      lead_in: 'Сизга нима қилиш зарурлигини текшириш, агар сиз:'
+      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
+        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
+        data-track-label="Get the complete list">Сизга ўзингиз, бизнесингиз ва оилангиз
+        учун қилиш зарур бўлганларнинг</a> тўлиқ рўйхатини олиш.
     comms:
-      links:
-      read_transcript:
-    comms_header:
-    data_list_title:
-    email_mailto_subject:
-    guidance_header:
-    meta_description:
-    meta_title:
+      read_transcript: Ушбу видео расшифровкасини ўқиш
+    comms_header: Эълонлар
+    data_list_title: 'Брексит ҳақида мақсадли саҳифа: %{header}'
+    email_mailto_subject: UK's%20new%20start:%20let's%20get%20going-%20GOV.UK
+    guidance_header: Бизнес ва фуқаролар учун ўзгаришлар
+    meta_description: Брекситнинг янги қоидалари қай тарзда Европага саёҳат ва у билан
+      бизнесни юритиш каби шундай саволларга нисбатан қўлланилишини билиб олинг. Ҳаракатларнинг
+      шахсий рўйхатини олиш учун Брексит бўйича текширишлар дастуридан фойдаланинг.
+    meta_title: Брексит
     no_cookies:
-      change_settings_text:
-      icon_text:
-      or_text:
-      to_watch_text:
-      watch_link_text:
-    page_header:
-    page_header_explainer:
+      change_settings_text: cookie файллар созламаларини ўзгартиринг
+      icon_text: ВИДЕО
+      or_text: ёки
+      to_watch_text: видеони кўриш
+      watch_link_text: YouTubeда кўриш
+    page_header: Брексит:<br/>янги қоидалар шу ерда
+    page_header_explainer: Янги қоидалари Европага саёҳат ва у билан бизнесни юритиш
+      каби шундай масалаларга нисбатан қўлланилади. Ўзингиз, бизнесингиз ва оилангиз
+      учун ҳаракатларнинг шахсий рўйхатини олиш учун Брексит бўйича текширишлар дастуридан
+      фойдаланинг.
     sections:
-      aria_string_suffix:
-      guidance_and_regulation:
-      news_and_communications:
-      policy_and_engagement:
-      research_and_statistics:
-      services:
-      transparency:
-    share_links:
-    topic_section_header:
-    topic_section_subheading:
-    video_section_description:
-    video_section_link:
-    video_section_title:
-    video_section_transcription_summary:
-    video_section_transcription_text:
+      aria_string_suffix: Брексит билан боғлиқ
+      guidance_and_regulation: Қўлланма ва низом
+      news_and_communications: Янгиликлар ва хабарлар
+      policy_and_engagement: Сиёсат ва маслаҳат масалалари бўйича ҳужжат
+      research_and_statistics: Тадқиқотлар ва статистик маълумотлар
+      services: Хизматлар
+      transparency: Шаффофлик ва маълумотларни ошкор қилиш эркинлиги
+    share_links: Саҳифа билан бўлишиш
+    take_action_list:
+      amber: Ўзгартириш
+      green: Ўтиш
+      red: Текшириш
+    take_action_start_now: 'Брексит бўйича текширишлар дастури: бошлаш'
+    take_action_start_now_link: "/transition-check/questions"
+    topic_section_header: Брексит ҳақида барча маълумотлар
+    topic_section_subheading: Брексит билан боғлиқ бўлган барча маълумотларни кўриш
+    video_section_description: |
+      <p>Европада бизнесни амалга ошириш ҳақидаги маълумотлар. Сизга экспорт, импорт, тарифлаш, маълумотлар ва &nbsp;hiring нисбатан янги қоидаларга риоя қилиш зарур.</p>
+      <p>Янги қоидалар бизнесингиз учун айнан нимани англатишини билиб олиш учун видеони кўринг. Сиз, шунингдек,<a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">ҳаракатларнинг шахсий рўйхатини олиш учун</a> Брексит бўйича текширишлар дастуридан фойдаланинг.</p>
+    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
+    video_section_title: Ўз бизнесингизни ишлашига мажбур қилинг
+    video_section_transcription_summary: Видео расшифровкасини кўриш
+    video_section_transcription_text: |
+      <p>Компаниялар, Буюк Британия ЕИни тарк этди, ва энди янги қоидалар қўлланилади.</p>
+      <p>Сизнинг бизнесингиз ўз фаолиятини давом эттириши учун, ўз бизнесингиз учун ҳаракатларнинг шахсий режасини олиш учун gov.uk/transition сайтидаги Брексит бўйича текширишлар дастуридан фойдаланинг.</p>
+      <p>Бизнесингизни ишлашга мажбур қилинг.</p>

@@ -1,8 +1,7 @@
----
 es:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Explore los subtemas
+    organisations: Organizaciones
+    see_all_in_topic: Consulte más %{type} en este tema
+    show_fewer_orgs: Mostrar menos organizaciones
+    show_more_orgs: Mostrar más organizaciones

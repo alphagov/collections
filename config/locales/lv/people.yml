@@ -1,7 +1,6 @@
----
 lv:
   people:
-    biography:
-    previous_roles:
-    previous_roles_in_government:
-    read_more:
+    biography: Biogrāfija
+    previous_roles: Iepriekšējie amati
+    previous_roles_in_government: Iepriekšējie amati valdībā
+    read_more: Vairāk par šo personu

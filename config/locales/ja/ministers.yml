@@ -1,9 +1,8 @@
----
 ja:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: 閣議にも出席
+    by_department: 各省庁の大臣
+    cabinet: 閣僚
+    govuk_title: 大臣 - GOV.UK
+    title: 大臣
+    whips: 院内幹事

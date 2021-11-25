@@ -1,40 +1,55 @@
----
 dr:
   brexit_landing_page:
     campaign_links:
-      lead_in:
-      lead_out:
-      links:
+      lead_in: 'بیبینید که شما چه چیزی را باید به شکل متفاوت انجام دهید:'
+      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
+        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
+        data-track-label="Get the complete list">لست کامل را دریافت نمایید</a> آنچه
+        را که شما ضرورت دارید برای خودتان، کسب و کار تان و فامیل تان انجام دهید.
     comms:
-      links:
-      read_transcript:
-    comms_header:
-    data_list_title:
-    email_mailto_subject:
-    guidance_header:
-    meta_description:
-    meta_title:
+      read_transcript: متن این ویدیو را بخوانید
+    comms_header: اعلانات
+    data_list_title: 'صفحهء فرودی برکست: {header}%'
+    email_mailto_subject: 'آغاز جدید بریتانیا: بیآیید ادامه بدهیم - GOV.UK'
+    guidance_header: تغییرات برای کسب و کار ها و شهروندان
+    meta_description: |-
+      دریابید که قوانین جدید برکست در مواردی همچون سفر به و تجارت با اروپا چگونه اعمال میشود.
+      جهت بدست آوردن یک لست خصوصی از اقدامات، از بررسی کنندهء برکست استفاده نمایید.
+    meta_title: برکست
     no_cookies:
-      change_settings_text:
-      icon_text:
-      or_text:
-      to_watch_text:
-      watch_link_text:
-    page_header:
-    page_header_explainer:
+      change_settings_text: تنظیمات کوکی خودرا تغییر دهید
+      icon_text: ویدیو
+      or_text: و یا
+      to_watch_text: برای تماشایی ویدیو
+      watch_link_text: در یوتیوب تماشا نمایید
+    page_header: 'برکست: <br/>قوانینی جدیدی اینجا است'
+    page_header_explainer: "قوانینی جدیدی در مواردی همچون سفر و تجارت با اروپا اعمال
+      میشود. \nجهت دریافت فهرستی خصوصی اقدامات برای خودتان، کسب و کار و فامیل خود
+      از بررسی کنندهء برکست استفاده نمایید."
     sections:
-      aria_string_suffix:
-      guidance_and_regulation:
-      news_and_communications:
-      policy_and_engagement:
-      research_and_statistics:
-      services:
-      transparency:
-    share_links:
-    topic_section_header:
-    topic_section_subheading:
-    video_section_description:
-    video_section_link:
-    video_section_title:
-    video_section_transcription_summary:
-    video_section_transcription_text:
+      aria_string_suffix: مرتبط با برکست
+      guidance_and_regulation: راهنمایی و قانون
+      news_and_communications: اخبار و ارتباطات
+      policy_and_engagement: سیاست و مشاوره ها
+      research_and_statistics: تحقیق و احصایه
+      services: خدمات
+      transparency: شفافیت و آزادی انتشار اطلاعات
+    share_links: این صفحه را به اشتراک بگذارید
+    take_action_list:
+      amber: تبدیل
+      green: برو
+      red: بررسی
+    take_action_start_now: 'بررسی کنندهء برکست: حالا شروع نمایید'
+    take_action_start_now_link: "/transition-check/questions"
+    topic_section_header: تمام معلومات برکست
+    topic_section_subheading: تمام اطلاعات مربوط به برکست را جستجو نمایید
+    video_section_description: |-
+      <p>شیوه تجارت با اروپا تغییر کرده است.شما نیاز دارید تا قوانین جدید  در ارتباط به صادرات، واردات، تعرفه ها، داده ها و&nbsp;hiring راتعقیب نمایید.</p>
+      <p>ویدیو را تماشا نمایید تا بدانید که قوانین جدید برای کسب و کار شما یعنی چه.شما همچنان میتوانید<a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker"> از بررسی کنندهء برکست استفاده نمایید</a>تا لست خصوصی اقدامات را بدست بیآورید.</p>
+    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
+    video_section_title: کسب و کار خودرا فعال نگهدارید
+    video_section_transcription_summary: متن ویدیوی را مشاهده نمایید
+    video_section_transcription_text: "<p>کسب و کار ها، بریتانیا اروپا را ترک نموده
+      است و در حال حاضر قوانین جدید اعمال میشود.<p></p>برای فعال نگهداشتن کسب و کار
+      تان، از برسی کنندهء برکست در gov.uk/transition استفاده نمایید تا لست خصوصی اقدامات
+      را برای کسب و کار خویش بدست بیآورید.<p></p>بیآیید کسب و کار را فعال نگهداریم.</p>\n"

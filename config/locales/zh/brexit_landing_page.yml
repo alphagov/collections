@@ -1,40 +1,50 @@
----
 zh:
   brexit_landing_page:
     campaign_links:
-      lead_in:
-      lead_out:
-      links:
+      lead_in: 如果您符合以下情况，请检查您需要做哪些不同的事情：
+      lead_out: '<a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
+        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
+        data-track-label="Get the complete list">获取关于您需要为自己、自己的公司和家庭做的事情的完整清单。</a>  '
     comms:
-      links:
-      read_transcript:
-    comms_header:
-    data_list_title:
-    email_mailto_subject:
-    guidance_header:
-    meta_description:
-    meta_title:
+      read_transcript: 阅读本视频的文本
+    comms_header: 公告
+    data_list_title: 英国脱欧登录页：%{header}
+    email_mailto_subject: UK's%20new%20start:%20let's%20get%20going-%20GOV.UK
+    guidance_header: 企业和公民的变更
+    meta_description: '了解英国脱欧新规则如何适用于在欧洲旅游和做生意等事情。使用“英国脱欧”检查程序来获取个性化的行动清单。  '
+    meta_title: 英国脱欧
     no_cookies:
-      change_settings_text:
-      icon_text:
-      or_text:
-      to_watch_text:
-      watch_link_text:
-    page_header:
-    page_header_explainer:
+      change_settings_text: 更改您的cookie设置
+      icon_text: 视频
+      or_text: 或
+      to_watch_text: 观看视频
+      watch_link_text: 在YouTube上观看
+    page_header: 英国脱欧：<br/>点击这里获取新规则
+    page_header_explainer: '新规则适用于在欧洲旅游和做生意等事情。使用英国脱欧检查程序，为您、您的企业和家人获得一份个性化的行动清单。  '
     sections:
-      aria_string_suffix:
-      guidance_and_regulation:
-      news_and_communications:
-      policy_and_engagement:
-      research_and_statistics:
-      services:
-      transparency:
-    share_links:
-    topic_section_header:
-    topic_section_subheading:
-    video_section_description:
-    video_section_link:
-    video_section_title:
-    video_section_transcription_summary:
-    video_section_transcription_text:
+      aria_string_suffix: 与英国脱欧有关
+      guidance_and_regulation: 指南和条例
+      news_and_communications: 新闻和通讯
+      policy_and_engagement: 政策文件和咨询
+      research_and_statistics: 研究和统计数据
+      services: 服务
+      transparency: 信息发布的透明度和自由
+    share_links: 分享本页面
+    take_action_list:
+      amber: 更改
+      green: 继续
+      red: 检查
+    take_action_start_now: 英国脱欧检查程序：现在开始
+    take_action_start_now_link: "/transition-check/questions"
+    topic_section_header: 全部英国脱欧信息
+    topic_section_subheading: 浏览所有与英国脱欧相关的信息
+    video_section_description: |
+      <p>与欧洲做生意的规定已经发生了变化。您需要遵守出口、进口、关税、数据和招聘方面的新规则。</p>
+      <p>观看视频，了解新规则对您的企业意味着什么。您还可以 <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">使用英国脱欧检查程序</a> 获取个性化的操作列表。</p>
+    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
+    video_section_title: 让您的事业继续发展
+    video_section_transcription_summary: 查看视频文字记录
+    video_section_transcription_text: |
+      <p>企业，英国已经退出欧盟，新的规则现在适用。</p>
+      <p>为了让您的企业继续发展，请使用 gov.uk/transition 上的英国脱欧检查工具，为您的企业采取个性化行动。</p>
+      <p>让我们继续开展业务。</p>

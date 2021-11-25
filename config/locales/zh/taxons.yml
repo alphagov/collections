@@ -1,8 +1,7 @@
----
 zh:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: 探索子主题
+    organisations: 组织机构
+    see_all_in_topic: 查看本主题的更多 %{type}
+    show_fewer_orgs: 显示更少组织机构
+    show_more_orgs: 显示更多组织机构

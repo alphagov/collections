@@ -1,12 +1,11 @@
----
 bg:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Начална страница
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: български
+      prefix: 'Преглед:'
+      title: Прегледайте GOV.UK
+    get_emails: Получаване на имейли за тази тема
+    language_direction: ltr
+    language_name: English
     topics:
-      title:
+      title: "%{title}: подробна информация"

@@ -1,9 +1,8 @@
----
 lv:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Darbojas arī Kabinetā
+    by_department: Ministri pēc departamenta
+    cabinet: Kabineta ministri
+    govuk_title: Ministri - GOV.UK
+    title: Ministri
+    whips: Parlamentārie uzraugi
