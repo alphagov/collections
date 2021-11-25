@@ -51,7 +51,6 @@ module Organisations
           count: 3,
           order: "-public_timestamp",
           filter_organisations: @org.slug,
-          reject_content_purpose_supergroup: "other",
           fields: %w[title link content_store_document_type public_timestamp],
         },
         metric_key: "organisations.search.request_time",
