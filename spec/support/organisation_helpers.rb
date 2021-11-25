@@ -53,7 +53,6 @@ module OrganisationHelpers
 
     url = build_search_api_query_url(
       filter_organisations: organisation_slug,
-      reject_content_purpose_supergroup: "other",
       count: 3,
     )
 
@@ -61,12 +60,12 @@ module OrganisationHelpers
   end
 
   def stub_search_api_latest_documents_request(organisation_slug)
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=3&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp&reject_content_purpose_supergroup=other")
+    stub_request(:get, Plek.new.find("search") + "/search.json?count=3&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp")
       .to_return(body: { results: [search_response] }.to_json)
   end
 
   def stub_search_api_latest_content_with_acronym(organisation_slug)
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=3&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp&reject_content_purpose_supergroup=other")
+    stub_request(:get, Plek.new.find("search") + "/search.json?count=3&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp")
       .to_return(body: { results: [search_response] }.to_json)
   end
 
