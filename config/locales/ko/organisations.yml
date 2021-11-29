@@ -290,16 +290,16 @@ ko:
     jobs_contracts: 직업 및 계약
     latest_from: "%{title}의 최근 내용"
     notices:
-      changed_name: "%{title} 은(는)의  이제 <a href='%{link_href}'>%{link_text}</a>라고 불립니다"
-      devolved: "%{title} 은(는) <a href='%{link_href}'>%{link_text}</a>의 기관입니다"
+      changed_name_html: "%{title} 은(는)의  이제 <a href='%{link_href}'>%{link_text}</a>라고 불립니다"
+      devolved_html: "%{title} 은(는) <a href='%{link_href}'>%{link_text}</a>의 기관입니다"
       joining: "%{title} 은(는) 곧 GOV.UK로 통합됩니다"
       left_gov: "%{title} 은(는) 현재 UK 정부로부터 독립되어 있습니다"
-      merged: "%{title} 은(는) <a href='%{link_href}'>%{link_text}</a>의 일부가 %{updated}에 되었습니다"
-      merged_no_date: "%{title} 은(는) 이제<a href='%{link_href}'>%{link_text}</a>의 일부입니다"
+      merged_html: "%{title} 은(는) <a href='%{link_href}'>%{link_text}</a>의 일부가 %{updated}에 되었습니다"
+      merged_no_date_html: "%{title} 은(는) 이제<a href='%{link_href}'>%{link_text}</a>의 일부입니다"
       no_longer_exists: "%{title} 은(는) 종결되었습니다"
       no_website: "%{title} 은(는) 웹사이트가 없습니다"
-      separate_website: "%{title} 은(는) <a href='%{url}'>독립적인 웹사이트</a>를 가지고 있습니다"
-      split: "%{title} 은 %{links}로 교체되었습니다"
+      separate_website_html: "%{title} 은(는) <a href='%{url}'>독립적인 웹사이트</a>를 가지고 있습니다"
+      split_html: "%{title} 은 %{links}로 교체되었습니다"
     part_of: 다음의 일부
     people:
       board_members: 우리 관리자

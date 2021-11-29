@@ -293,16 +293,16 @@ dr:
     jobs_contracts: وظایف و قرار داد ها
     latest_from: جدید ترین از{title}%
     notices:
-      changed_name: "%{title}اکنون نامیده میشود<a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title}یک مجموعهء از<a href='%{link_href}'>%{link_text}</a>"
+      changed_name_html: "%{title}اکنون نامیده میشود<a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title}یک مجموعهء از<a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title}به زودی گنجانیده میشود در GOV.UK"
       left_gov: "%{title}اکنون مستقل از حکومت بریتانیا است"
-      merged: "%{title}بخشی از این شد<a href='%{link_href}'>%{link_text}</a>در%{updated}"
-      merged_no_date: "%{title}اکنون بخشی از<a href='%{link_href}'>%{link_text}</a>"
+      merged_html: "%{title}بخشی از این شد<a href='%{link_href}'>%{link_text}</a>در%{updated}"
+      merged_no_date_html: "%{title}اکنون بخشی از<a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} بسته شده است"
       no_website: "%{title}اکنون ویبسایت ندارد"
-      separate_website: "%{title} دارای یک<a href='%{url}'>ویبسایت جداگانه است</a>"
-      split: "%{title}جایگزین شد با%{links}"
+      separate_website_html: "%{title} دارای یک<a href='%{url}'>ویبسایت جداگانه است</a>"
+      split_html: "%{title}جایگزین شد با%{links}"
     part_of: بخشی از
     people:
       board_members: مدیریت ما

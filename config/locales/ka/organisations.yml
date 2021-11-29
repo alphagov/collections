@@ -288,16 +288,16 @@ ka:
     jobs_contracts: ვაკანსიები და კონტრაქტები
     latest_from: ბოლო %{title}-დან
     notices:
-      changed_name: "%{title} ახლა ეწოდება <a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title} არის ორგანო <a href='%{link_href}'>%{link_text}</a>"
+      changed_name_html: "%{title} ახლა ეწოდება <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} არის ორგანო <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} მალე იქნება ჩართული GOV.UK-ზე"
       left_gov: "%{title} არის გაერთიანებული სამეფოსგან დამოუკიდებლად"
-      merged: "%{title} გახდა ნაწილი <a href='%{link_href}'>%{link_text}</a> in %{updated}"
-      merged_no_date: "%{title} გახდა ნაწილი <a href='%{link_href}'>%{link_text}</a>"
+      merged_html: "%{title} გახდა ნაწილი <a href='%{link_href}'>%{link_text}</a> in %{updated}"
+      merged_no_date_html: "%{title} გახდა ნაწილი <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} დაიხურა"
       no_website: "%{title} არ აქვს ვებ-გვერდი"
-      separate_website: "%{title} აქვს <a href='%{url}'>ცალკე ვებგვერდი</a>"
-      split: "%{title} ჩანაცვლდა %{links}"
+      separate_website_html: "%{title} აქვს <a href='%{url}'>ცალკე ვებგვერდი</a>"
+      split_html: "%{title} ჩანაცვლდა %{links}"
     part_of: ნაწილი
     people:
       board_members: ჩვენი მენეჯმენტის

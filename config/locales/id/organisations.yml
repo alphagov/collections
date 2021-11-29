@@ -290,16 +290,16 @@ id:
     jobs_contracts: Pekerjaan dan kontrak
     latest_from: Terbaru dari %{title}
     notices:
-      changed_name: "%{title} sekarang disebut <a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title} adalah badan dari <a href='%{link_href}'>%{link_text}</a>"
+      changed_name_html: "%{title} sekarang disebut <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} adalah badan dari <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} akan segera disertakan ke dalam GOV.UK"
       left_gov: "%{title} sekarang terpisah dari pemerintah Inggris Raya"
-      merged: "%{title} menjadi bagian dari <a href='%{link_href}'>%{link_text}</a> pada %{updated}"
-      merged_no_date: "%{title} sekarang bagian dari <a href='%{link_href}'>%{link_text}</a>"
+      merged_html: "%{title} menjadi bagian dari <a href='%{link_href}'>%{link_text}</a> pada %{updated}"
+      merged_no_date_html: "%{title} sekarang bagian dari <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} telah ditutup"
       no_website: "%{title} tidak memiliki situs web"
-      separate_website: "%{title} memiliki <a href='%{url}'>situs web terpisah</a>"
-      split: "%{title} diganti dengan %{links}"
+      separate_website_html: "%{title} memiliki <a href='%{url}'>situs web terpisah</a>"
+      split_html: "%{title} diganti dengan %{links}"
     part_of: Bagian dari
     people:
       board_members: Manajemen kami

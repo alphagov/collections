@@ -586,16 +586,16 @@ ar:
     jobs_contracts: الوظائف والعقود
     latest_from: الأحدث من %{title}
     notices:
-      changed_name: "%{title} يُطلق عليها الآن <a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title} هي هيئة تابعة إلى <a href='%{link_href}'>%{link_text}</a>"
+      changed_name_html: "%{title} يُطلق عليها الآن <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} هي هيئة تابعة إلى <a href='%{link_href}'>%{link_text}</a>"
       joining: سيتم دمج %{title} قريبًا في  GOV.UK
       left_gov: أصبح %{title} الآن مستقلا عن حكومة المملكة المتحدة
-      merged: أصبح %{title} جزءًا من <a href='%{link_href}'>%{link_text}</a> في %{updated}
-      merged_no_date: أصبح %{title} الآن جزءًا من <a href='%{link_href}'>%{link_text}</a>
+      merged_html: أصبح %{title} جزءًا من <a href='%{link_href}'>%{link_text}</a> في %{updated}
+      merged_no_date_html: أصبح %{title} الآن جزءًا من <a href='%{link_href}'>%{link_text}</a>
       no_longer_exists: تم إغلاق %{title}
       no_website: ليس لدى %{title} موقع ويب
-      separate_website: لدى %{title} <a href='%{url}'>موقع ويب منفصل</a>
-      split: تم استبدال %{title} ليحل محله %{links}
+      separate_website_html: لدى %{title} <a href='%{url}'>موقع ويب منفصل</a>
+      split_html: تم استبدال %{title} ليحل محله %{links}
     part_of: جزء من
     people:
       board_members: إدارتنا

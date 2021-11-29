@@ -290,16 +290,16 @@ vi:
     jobs_contracts: Việc làm và hợp đồng
     latest_from: Mới nhất từ %{title}
     notices:
-      changed_name: "%{title} nay được gọi là <a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title} là một cơ quan của <a href='%{link_href}'>%{link_text}</a>"
+      changed_name_html: "%{title} nay được gọi là <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} là một cơ quan của <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} sẽ sớm được kết hợp vào GOV.UK"
       left_gov: "%{title} nay đã độc lập với chính phủ Vương quốc Anh"
-      merged: "%{title} đã trở thành một phần của <a href='%{link_href}'>%{link_text}</a> trong %{updated}"
-      merged_no_date: "%{title} nay là một phần của <a href='%{link_href}'>%{link_text}</a>"
+      merged_html: "%{title} đã trở thành một phần của <a href='%{link_href}'>%{link_text}</a> trong %{updated}"
+      merged_no_date_html: "%{title} nay là một phần của <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} đã đóng"
       no_website: "%{title} không có trang web"
-      separate_website: "%{title} có <a href='%{url}'>trang web riêng</a>"
-      split: "%{title} đã được thay thế bằng %{links}"
+      separate_website_html: "%{title} có <a href='%{url}'>trang web riêng</a>"
+      split_html: "%{title} đã được thay thế bằng %{links}"
     part_of: Một phần của
     people:
       board_members: Cách quản lý của chúng tôi

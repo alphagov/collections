@@ -288,16 +288,16 @@ it:
     jobs_contracts:
     latest_from:
     notices:
-      changed_name:
-      devolved:
+      changed_name_html:
+      devolved_html:
       joining:
       left_gov:
-      merged:
-      merged_no_date:
+      merged_html:
+      merged_no_date_html:
       no_longer_exists:
       no_website:
-      separate_website:
-      split:
+      separate_website_html:
+      split_html:
     part_of:
     people:
       board_members:

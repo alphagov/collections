@@ -290,16 +290,16 @@ hu:
     jobs_contracts: Állások és szerződések
     latest_from: 'A legfrissebb a következőtől: %{title}'
     notices:
-      changed_name: "%{title} új neve: <a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title} a(z) <a href='%{link_href}'>%{link_text}</a> egyik hivatala"
+      changed_name_html: "%{title} új neve: <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} a(z) <a href='%{link_href}'>%{link_text}</a> egyik hivatala"
       joining: "%{title} hamarosan eggyé válik a GOV.UK-val"
       left_gov: "%{title} már független az Egyesült Királyság kormányától"
-      merged: "%{title} a(z) <a href='%{link_href}'>%{link_text}</a> in %{updated} részévé vált"
-      merged_no_date: "%{title} a(z) <a href='%{link_href}'>%{link_text}</a> része"
+      merged_html: "%{title} a(z) <a href='%{link_href}'>%{link_text}</a> in %{updated} részévé vált"
+      merged_no_date_html: "%{title} a(z) <a href='%{link_href}'>%{link_text}</a> része"
       no_longer_exists: "%{title} bezárt"
       no_website: "%{title} nem rendelkezik weboldallal"
-      separate_website: "%{title} <a href='%{url}'>külön weboldallal</a> rendelkezik"
-      split: "%{title}-t a következő helyettesíti: %{links}"
+      separate_website_html: "%{title} <a href='%{url}'>külön weboldallal</a> rendelkezik"
+      split_html: "%{title}-t a következő helyettesíti: %{links}"
     part_of: 'Része a következőnek:'
     people:
       board_members: A vezetőségünk

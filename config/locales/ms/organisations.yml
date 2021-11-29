@@ -290,16 +290,16 @@ ms:
     jobs_contracts: Pekerjaan dan kontrak
     latest_from: Terkini daripada %{title}
     notices:
-      changed_name: "%{title} kini dipanggil <a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title} adalah badan dalam <a href='%{link_href}'>%{link_text}</a>"
+      changed_name_html: "%{title} kini dipanggil <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} adalah badan dalam <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} akan dimasukkan ke dalam GOV.UK tidak lama lagi"
       left_gov: "%{title} kini bukan sebahagian daripada kerajaan UK"
-      merged: "%{title} menjadi sebahagian daripada <a href='%{link_href}'>%{link_text}</a> dalam %{updated}"
-      merged_no_date: "%{title} kini sebahagian daripada <a href='%{link_href}'>%{link_text}</a>"
+      merged_html: "%{title} menjadi sebahagian daripada <a href='%{link_href}'>%{link_text}</a> dalam %{updated}"
+      merged_no_date_html: "%{title} kini sebahagian daripada <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} telah ditutup"
       no_website: "%{title} tiada laman web"
-      separate_website: "%{title} mempunyai <a href='%{url}'>laman web sendiri</a>"
-      split: "%{title} telah diganti dengan %{links}"
+      separate_website_html: "%{title} mempunyai <a href='%{url}'>laman web sendiri</a>"
+      split_html: "%{title} telah diganti dengan %{links}"
     part_of: Sebahagian daripada
     people:
       board_members: Pengurusan kami

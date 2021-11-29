@@ -438,16 +438,16 @@ gd:
     jobs_contracts: Poist agus conarthaí
     latest_from: An nuacht is déanaí ó %{title}
     notices:
-      changed_name: "%{title} tugtar anois <a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title} is orgán de <a href='%{link_href}'>%{link_text}</a>"
+      changed_name_html: "%{title} tugtar anois <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} is orgán de <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} déanfar é a chomhtháthú go luath le GOV.UK"
       left_gov: "%{title} faoi ​​láthair tá sé neamhspleách ó rialtas na RA"
-      merged: "%{title} mar chuid de <a href = <a href='%{link_href}'>%{link_text}</a> ga %{updated}"
-      merged_no_date: "%{title} faoi ​​láthair mar chuid de <a href='%{link_href}'>%{link_text}</a>"
+      merged_html: "%{title} mar chuid de <a href = <a href='%{link_href}'>%{link_text}</a> ga %{updated}"
+      merged_no_date_html: "%{title} faoi ​​láthair mar chuid de <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} dúnta"
       no_website: "%{title} níl suíomh Gréasáin a thuilleadh"
-      separate_website: "%{title} tá suíomh Gréasáin ar <a href='%{url}'>leithligh aige</a>"
-      split: curtha in ionad %{links}
+      separate_website_html: "%{title} tá suíomh Gréasáin ar <a href='%{url}'>leithligh aige</a>"
+      split_html: curtha in ionad %{links}
     part_of: Chuid
     people:
       board_members: Ár mbainistíocht

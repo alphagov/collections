@@ -290,16 +290,16 @@ el:
     jobs_contracts: Θέσεις εργασίας και συμβάσεις
     latest_from: Τελευταία από %{title}
     notices:
-      changed_name: "%{title} ονομάζεται τώρα <a href='%{link_href}'>%{link_text}</a>"
-      devolved: Το %{title} είναι ένα σώμα του <a href='%{link_href}'>%{link_text}</a>
+      changed_name_html: "%{title} ονομάζεται τώρα <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: Το %{title} είναι ένα σώμα του <a href='%{link_href}'>%{link_text}</a>
       joining: Το %{title} σύντομα θα ενσωματωθεί στο GOV.UK
       left_gov: Το %{title} είναι πλέον ανεξάρτητο από την κυβέρνηση του Ηνωμένου Βασιλείου
-      merged: Το %{title} έγινε μέρος του <a href='%{link_href}'>%{link_text}</a> in %{updated}
-      merged_no_date: Το %{title} είναι πλέον μέρος του <a href='%{link_href}'>%{link_text}</a>
+      merged_html: Το %{title} έγινε μέρος του <a href='%{link_href}'>%{link_text}</a> in %{updated}
+      merged_no_date_html: Το %{title} είναι πλέον μέρος του <a href='%{link_href}'>%{link_text}</a>
       no_longer_exists: Το %{title} έχει κλείσει
       no_website: Το %{title} δεν έχει ιστότοπο
-      separate_website: Το %{title} έχει <a href='%{url}'>ξεχωριστό ιστότοπο</a>
-      split: Το %{title} αντικαταστάθηκε από %{links}
+      separate_website_html: Το %{title} έχει <a href='%{url}'>ξεχωριστό ιστότοπο</a>
+      split_html: Το %{title} αντικαταστάθηκε από %{links}
     part_of: Μέρος του
     people:
       board_members: Η διοίκησή μας

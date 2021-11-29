@@ -290,16 +290,16 @@ lv:
     jobs_contracts: Darbi un līgumi
     latest_from: Jaunumi no %{title}
     notices:
-      changed_name: "%{title} tagad saucas <a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title} ir <a href='%{link_href}'>%{link_text}</a> iestāde"
+      changed_name_html: "%{title} tagad saucas <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} ir <a href='%{link_href}'>%{link_text}</a> iestāde"
       joining: "%{title} drīzumā tiks iekļauts GOV.UK"
       left_gov: "%{title} tagad vairs neatrodas Apvienotās Karalistes pakļautībā"
-      merged: "%{title} kļuva par <a href='%{link_href}'>%{link_text}</a> daļu %{updated}"
-      merged_no_date: "%{title} tagad ir <a href='%{link_href}'>%{link_text}</a> daļa"
+      merged_html: "%{title} kļuva par <a href='%{link_href}'>%{link_text}</a> daļu %{updated}"
+      merged_no_date_html: "%{title} tagad ir <a href='%{link_href}'>%{link_text}</a> daļa"
       no_longer_exists: "%{title} ir slēgts"
       no_website: "%{title} neuztur tīmekļa vietni"
-      separate_website: "%{title} uztur <a href='%{url}'>atsevišķu tīmekļa vietni</a>"
-      split: "%{title} tika aizstāts ar %{links}"
+      separate_website_html: "%{title} uztur <a href='%{url}'>atsevišķu tīmekļa vietni</a>"
+      split_html: "%{title} tika aizstāts ar %{links}"
     part_of: Daļa no
     people:
       board_members: Mūsu pārvaldība

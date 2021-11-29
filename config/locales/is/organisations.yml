@@ -290,16 +290,16 @@ is:
     jobs_contracts: Störf og samningar
     latest_from: Nýjasta frá %{title}
     notices:
-      changed_name: "%{title} er nú kallað <a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title} er hluti af <a href='%{link_href}'>%{link_text}</a>"
+      changed_name_html: "%{title} er nú kallað <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} er hluti af <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} verðu bráðum fellt inn í GOV.UK"
       left_gov: "%{title} er aðskilið frá breska ríkinu"
-      merged: "%{title} varð hluti af<a href='%{link_href}'>%{link_text}</a> in %{updated}"
-      merged_no_date: "%{title} er nú hluti af <a href='%{link_href}'>%{link_text}</a>"
+      merged_html: "%{title} varð hluti af<a href='%{link_href}'>%{link_text}</a> in %{updated}"
+      merged_no_date_html: "%{title} er nú hluti af <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} var lokað"
       no_website: "%{title} hefur enga heimsíðu"
-      separate_website: "%{title} hefur <a href='%{url}'>aðskilda</a>"
-      split: "%{title} var skipt út fyrir %{links}"
+      separate_website_html: "%{title} hefur <a href='%{url}'>aðskilda</a>"
+      split_html: "%{title} var skipt út fyrir %{links}"
     part_of: Hluti af
     people:
       board_members: Stjórnin okkar

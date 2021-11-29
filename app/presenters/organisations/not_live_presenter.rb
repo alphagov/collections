@@ -27,11 +27,11 @@ module Organisations
     end
 
     def separate_website_notice
-      I18n.t("organisations.notices.separate_website", title: @org.title, url: @org.separate_website_url).html_safe
+      I18n.t("organisations.notices.separate_website_html", title: @org.title, url: @org.separate_website_url).html_safe
     end
 
     def changed_name_notice
-      I18n.t("organisations.notices.changed_name", title: @org.title, link_href: notice_successor_link, link_text: notice_successor_title).html_safe
+      I18n.t("organisations.notices.changed_name_html", title: @org.title, link_href: notice_successor_link, link_text: notice_successor_title).html_safe
     end
 
     def joining_notice
@@ -39,7 +39,7 @@ module Organisations
     end
 
     def devolved_notice
-      I18n.t("organisations.notices.devolved", title: @org.title, link_href: notice_successor_link, link_text: notice_successor_title).html_safe
+      I18n.t("organisations.notices.devolved_html", title: @org.title, link_href: notice_successor_link, link_text: notice_successor_title).html_safe
     end
 
     def left_gov_notice
@@ -48,9 +48,9 @@ module Organisations
 
     def merged_notice
       if status_updated_at
-        I18n.t("organisations.notices.merged", title: @org.title, link_href: notice_successor_link, link_text: notice_successor_title, updated: notice_successor_updated).html_safe
+        I18n.t("organisations.notices.merged_html", title: @org.title, link_href: notice_successor_link, link_text: notice_successor_title, updated: notice_successor_updated).html_safe
       else
-        I18n.t("organisations.notices.merged_no_date", title: @org.title, link_href: notice_successor_link, link_text: notice_successor_title).html_safe
+        I18n.t("organisations.notices.merged_no_date_html", title: @org.title, link_href: notice_successor_link, link_text: notice_successor_title).html_safe
       end
     end
 
@@ -59,7 +59,7 @@ module Organisations
         link_to(successor["title"], successor["base_path"])
       end
 
-      I18n.t("organisations.notices.split", title: @org.title, links: successors.to_sentence).html_safe
+      I18n.t("organisations.notices.split_html", title: @org.title, links: successors.to_sentence).html_safe
     end
 
     def no_longer_exists_notice

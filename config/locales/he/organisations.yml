@@ -290,16 +290,16 @@ he:
     jobs_contracts: משרות וחוזים
     latest_from: עדכון אחרון מתוך %{title}
     notices:
-      changed_name: "%{title} נקרא כעת <a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title}הוא גוף של <a href='%{link_href}'>%{link_text}</a>"
+      changed_name_html: "%{title} נקרא כעת <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title}הוא גוף של <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} ישולבו בקרוב ב- GOV.UKK"
       left_gov: "%{title} אינו תלוי כעת בממשלת בריטניה"
-      merged: "%{title}  הפך לחלק מ <a href='%{link_href}'>%{link_text}</a> in %{updated}"
-      merged_no_date: "%{title} הוא כעת חלק מ <a href='%{link_href}'>%{link_text}</a>"
+      merged_html: "%{title}  הפך לחלק מ <a href='%{link_href}'>%{link_text}</a> in %{updated}"
+      merged_no_date_html: "%{title} הוא כעת חלק מ <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} נסגר"
       no_website: "%{title} אין אתר"
-      separate_website: "%{title} יש <a href='%{url}'>אתר נפרד</a>"
-      split: "%{title} הוחלף ב %{links}"
+      separate_website_html: "%{title} יש <a href='%{url}'>אתר נפרד</a>"
+      split_html: "%{title} הוחלף ב %{links}"
     part_of: חלק של
     people:
       board_members: ההנהלה שלנו

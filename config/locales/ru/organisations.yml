@@ -436,16 +436,16 @@ ru:
     jobs_contracts: Вакансии и контракты
     latest_from: Свежие новости  %{title}
     notices:
-      changed_name: "%{title} теперь называется <a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title} орган <a href='%{link_href}'>%{link_text}</a>"
+      changed_name_html: "%{title} теперь называется <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} орган <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} вскоре будет включен в GOV.UK"
       left_gov: "%{title} теперь независим от правительства Соединенного Королевства"
-      merged: "%{title} стал частью <a href='%{link_href}'>%{link_text}</a> in %{updated}"
-      merged_no_date: "%{title} теперь часть <a href='%{link_href}'>%{link_text}</a>"
+      merged_html: "%{title} стал частью <a href='%{link_href}'>%{link_text}</a> in %{updated}"
+      merged_no_date_html: "%{title} теперь часть <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} закрылся"
       no_website: "%{title} не имеет Веб-сайта"
-      separate_website: "%{title} имеет <a href='%{url}'>отдельный Веб-сайт</a>"
-      split: "%{title} был заменен %{links}"
+      separate_website_html: "%{title} имеет <a href='%{url}'>отдельный Веб-сайт</a>"
+      split_html: "%{title} был заменен %{links}"
     part_of: Часть
     people:
       board_members: Наше руководство

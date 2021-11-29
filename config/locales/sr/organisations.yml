@@ -438,16 +438,16 @@ sr:
     jobs_contracts: Poslovi i ugovori
     latest_from: Najnovije iz organizacije %{title}
     notices:
-      changed_name: "%{title} se sada zove <a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title} je telo u okviru <a href='%{link_href}'>%{link_text}</a>"
+      changed_name_html: "%{title} se sada zove <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} je telo u okviru <a href='%{link_href}'>%{link_text}</a>"
       joining: Organizacija %{title} će uskoro biti pripojena lokaciji GOV.UK
       left_gov: Organizacija %{title} je sada nezavisna od vlade UK
-      merged: Organizacija %{title} je postala deo <a href='%{link_href}'>%{link_text}</a> u okviru %{updated}
-      merged_no_date: "%{title} je sada deo <a href='%{link_href}'>%{link_text}</a>"
+      merged_html: Organizacija %{title} je postala deo <a href='%{link_href}'>%{link_text}</a> u okviru %{updated}
+      merged_no_date_html: "%{title} je sada deo <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: Organizacija %{title} je zatvorena
       no_website: Organizacija %{title} nema veb-sajt
-      separate_website: Organizacija %{title} ima <a href='%{url}'>zaseban veb-sajt</a>
-      split: Organizaciju %{title} zamenjuje %{links}
+      separate_website_html: Organizacija %{title} ima <a href='%{url}'>zaseban veb-sajt</a>
+      split_html: Organizaciju %{title} zamenjuje %{links}
     part_of: Deo
     people:
       board_members: Naše rukovodstvo

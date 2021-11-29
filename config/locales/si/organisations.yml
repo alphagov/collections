@@ -290,16 +290,16 @@ si:
     jobs_contracts: රැකියා සහ කොන්ත්රාත්තු
     latest_from: "%{title} වෙතින් නවතම"
     notices:
-      changed_name: "%{title} දැන් හඳුන්වනු ලැබේ <a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title} අයාතනයක් <a href='%{link_href}'>%{link_text}</a>"
+      changed_name_html: "%{title} දැන් හඳුන්වනු ලැබේ <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} අයාතනයක් <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} ළඟදීම GOV.UK වෙත ඒකාබද්ධ කෙරෙනු ඇත"
       left_gov: "%{title} දැන් එක්සත් රාජධානීය රජයෙන් ස්වාධීනයි"
-      merged: "%{title} කොටසක් වී ඇත <a href='%{link_href}'>%{link_text}</a> තුළ %{updated}"
-      merged_no_date: "%{title} දැන් කොටසක් වේ <a href='%{link_href}'>%{link_text}</a>"
+      merged_html: "%{title} කොටසක් වී ඇත <a href='%{link_href}'>%{link_text}</a> තුළ %{updated}"
+      merged_no_date_html: "%{title} දැන් කොටසක් වේ <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} වසා දමා ඇත"
       no_website: "%{title} වෙබ් අඩවියක් නොමැත"
-      separate_website: "%{title} ට <a href='%{url}'>වෙනම වෙබ් අඩවියක්</a> ඇත"
-      split: "%{title} %{links} මඟින් ආදේශ කර ඇත"
+      separate_website_html: "%{title} ට <a href='%{url}'>වෙනම වෙබ් අඩවියක්</a> ඇත"
+      split_html: "%{title} %{links} මඟින් ආදේශ කර ඇත"
     part_of: කොටසක්
     people:
       board_members: අපේ කළමනාකරණය

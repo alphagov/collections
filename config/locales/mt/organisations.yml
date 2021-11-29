@@ -436,16 +436,16 @@ mt:
     jobs_contracts: Impjiegi u kuntratti
     latest_from: L-iktar riċenti minn %{title}
     notices:
-      changed_name: "%{title} issa jismu<a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title}huwa korp ta' <a href='%{link_href}'>%{link_text}</a>"
+      changed_name_html: "%{title} issa jismu<a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title}huwa korp ta' <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title}netrukus bus įtrauktas į GOV.UK"
       left_gov: "%{title}dabar yra nepriklausoma nuo JK vyriausybės"
-      merged: "%{title}tapo dalimi<a href='%{link_href}'>%{link_text}</a>"
-      merged_no_date: "%{title}dabar yra dalis <a href='%{link_href}'>%{link_text}</a>"
+      merged_html: "%{title}tapo dalimi<a href='%{link_href}'>%{link_text}</a>"
+      merged_no_date_html: "%{title}dabar yra dalis <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title}užsidarė"
       no_website: "%{title}neturi svetainės"
-      separate_website: "%{title} turi <a href='%{url}'>websajt separata</a>"
-      split: "%{title} nbidel b'%{links}"
+      separate_website_html: "%{title} turi <a href='%{url}'>websajt separata</a>"
+      split_html: "%{title} nbidel b'%{links}"
     part_of: Parti minn
     people:
       board_members: Il-maniġment tagħna

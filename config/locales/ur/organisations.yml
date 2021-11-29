@@ -290,16 +290,16 @@ ur:
     jobs_contracts: نوکریاں اور معاہدے
     latest_from: "%{title} سے تازہ ترین"
     notices:
-      changed_name: "%{title} کو اب <a href='%{link_href}'>%{link_text}</a> کہا جاتا ہے"
-      devolved: "%{title} <a href='%{link_href}'>%{link_text}</a> کی باڈی ہے"
+      changed_name_html: "%{title} کو اب <a href='%{link_href}'>%{link_text}</a> کہا جاتا ہے"
+      devolved_html: "%{title} <a href='%{link_href}'>%{link_text}</a> کی باڈی ہے"
       joining: "%{title} کو جلد GOV.UK میں شامل کر دیا جائے گا"
       left_gov: "%{title} اب UK حکومت سے آزاد ہے"
-      merged: "%{title} %{updated} میں <a href='%{link_href}'>%{link_text}</a> کا حصہ بنا"
-      merged_no_date: "%{title} اب <a href='%{link_href}'>%{link_text}</a> کا حصہ ہے"
+      merged_html: "%{title} %{updated} میں <a href='%{link_href}'>%{link_text}</a> کا حصہ بنا"
+      merged_no_date_html: "%{title} اب <a href='%{link_href}'>%{link_text}</a> کا حصہ ہے"
       no_longer_exists: "%{title} بند ہو گیا ہے"
       no_website: "%{title} کو کوئی ویب سائٹ نہیں"
-      separate_website: "%{title} کی <a href='%{url}'>علیحدہ ویب سائٹ</a> ہے"
-      split: "%{title} کو %{links} سے تبدیل کیا گیا تھا"
+      separate_website_html: "%{title} کی <a href='%{url}'>علیحدہ ویب سائٹ</a> ہے"
+      split_html: "%{title} کو %{links} سے تبدیل کیا گیا تھا"
     part_of: حصہ از
     people:
       board_members: ہماری انتظامیہ

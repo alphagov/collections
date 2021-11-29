@@ -288,16 +288,16 @@ sq:
     jobs_contracts: Punë dhe kontrata
     latest_from: I fundit nga %{title}
     notices:
-      changed_name: "%{title} quhet tani <a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title} është trup i <a href='%{link_href}'>%{link_text}</a>"
+      changed_name_html: "%{title} quhet tani <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} është trup i <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} së shpejti do të përfshihet në GOV.UK"
       left_gov: "%{title} tani është e pavarur nga qeveria e MB"
-      merged: "%{title} u bë pjesë e <a href='%{link_href}'>%{link_text}</a> in %{updated}"
-      merged_no_date: "%{title} është tani pjesë e <a href='%{link_href}'>%{link_text}</a>"
+      merged_html: "%{title} u bë pjesë e <a href='%{link_href}'>%{link_text}</a> in %{updated}"
+      merged_no_date_html: "%{title} është tani pjesë e <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} është mbyllur"
       no_website: "%{title} nuk ka faqe në internet"
-      separate_website: "%{title} ka një <a href='%{url}'>uebfaqe të veçantë</a>"
-      split: "%{title} u zëvendësua me %{links}"
+      separate_website_html: "%{title} ka një <a href='%{url}'>uebfaqe të veçantë</a>"
+      split_html: "%{title} u zëvendësua me %{links}"
     part_of: Pjesë e
     people:
       board_members: Menaxhimit tonë

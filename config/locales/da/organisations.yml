@@ -302,16 +302,16 @@ da:
     jobs_contracts: Job og kontrakter
     latest_from: Seneste fra %{title}
     notices:
-      changed_name: "%{title} hedder nu <a href='%{link_href}'>%{link_text} </a>"
-      devolved: "%{title} er en brødtekst af <a href='%{link_href}'>%{link_text} </a>"
+      changed_name_html: "%{title} hedder nu <a href='%{link_href}'>%{link_text} </a>"
+      devolved_html: "%{title} er en brødtekst af <a href='%{link_href}'>%{link_text} </a>"
       joining: "%{title} vil snart blive indarbejdet i GOV.UK"
       left_gov: "%{title} er nu uafhængig af den britiske regering"
-      merged: "%{title} blev en del af <a href='%{link_href}'>%{link_text} </a> i%{updated}"
-      merged_no_date: "%{title} er en brødtekst af <a href='%{link_href}'>%{link_text} </a>"
+      merged_html: "%{title} blev en del af <a href='%{link_href}'>%{link_text} </a> i%{updated}"
+      merged_no_date_html: "%{title} er en brødtekst af <a href='%{link_href}'>%{link_text} </a>"
       no_longer_exists: "%{title} er lukket"
       no_website: "%{title} har ingen hjemmeside"
-      separate_website: "%{title} har et <a href='%{url}'>separat websted</a>"
-      split: "%{title} blev erstattet af %{links}"
+      separate_website_html: "%{title} har et <a href='%{url}'>separat websted</a>"
+      split_html: "%{title} blev erstattet af %{links}"
     part_of: del af
     people:
       board_members: Vores ledelse

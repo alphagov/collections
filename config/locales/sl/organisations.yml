@@ -438,16 +438,16 @@ sl:
     jobs_contracts: Delovna mesta in pogodbe
     latest_from: Najnovejše od %{title}
     notices:
-      changed_name: "%{title} se zdaj imenuje <a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title} je telo <a href='%{link_href}'>%{link_text}</a>"
+      changed_name_html: "%{title} se zdaj imenuje <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} je telo <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} bo kmalu vključen v GOV.UK"
       left_gov: "%{title} je zdaj neodvisen od vlade Združenega kraljestva"
-      merged: "%{title} je postal del ​<a href='%{link_href}'>​%{link_text}​</a>​ v %{updated}"
-      merged_no_date: "%{title} je zdaj del <a href='%{link_href}'>%{link_text}</a>"
+      merged_html: "%{title} je postal del ​<a href='%{link_href}'>​%{link_text}​</a>​ v %{updated}"
+      merged_no_date_html: "%{title} je zdaj del <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} se je zaprl"
       no_website: "%{title} nima spletne strani"
-      separate_website: "%{title} ima ​<a href='%{url}'>​ločeno spletno stran​</a>​"
-      split: "%{title} je nadomestil %{links}"
+      separate_website_html: "%{title} ima ​<a href='%{url}'>​ločeno spletno stran​</a>​"
+      split_html: "%{title} je nadomestil %{links}"
     part_of: Del
     people:
       board_members: Naše vodstvo

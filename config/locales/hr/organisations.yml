@@ -436,16 +436,16 @@ hr:
     jobs_contracts: Poslovi i ugovori
     latest_from: Najnovije od %{title}
     notices:
-      changed_name: "%{title} sada se naziva <a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title} je tijelo od <a href='%{link_href}'>%{link_text}</a>"
+      changed_name_html: "%{title} sada se naziva <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} je tijelo od <a href='%{link_href}'>%{link_text}</a>"
       joining: " %{title} će uskoro biti uključen u GOV.UK"
       left_gov: "%{title} sada je neovisan o britanskoj vladi"
-      merged: "%{title} postao je dio <a href='%{link_href}'>%{link_text}</a> in %{updated}"
-      merged_no_date: "%{title} sada je dio <a href='%{link_href}'>%{link_text}</a>"
+      merged_html: "%{title} postao je dio <a href='%{link_href}'>%{link_text}</a> in %{updated}"
+      merged_no_date_html: "%{title} sada je dio <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} je zatvoren"
       no_website: "%{title} nema web lokaciju"
-      separate_website: "%{title} ima <ahref='%{url}'>zasebnu web lokaciju</a>"
-      split: "%{title} zamijenjeno je %{links}"
+      separate_website_html: "%{title} ima <ahref='%{url}'>zasebnu web lokaciju</a>"
+      split_html: "%{title} zamijenjeno je %{links}"
     part_of: Dio
     people:
       board_members: Našeg menadžmenta

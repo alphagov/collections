@@ -364,16 +364,16 @@ cs:
     jobs_contracts: Pracovní místa a smlouvy
     latest_from: Nejnovější z %{title}
     notices:
-      changed_name: "%{title} se nyní nazývá <a href='%{link_href}'>%{link_text}</a>."
-      devolved: "%{title} je tělo <a href='%{link_href}'>%{link_text}</a>"
+      changed_name_html: "%{title} se nyní nazývá <a href='%{link_href}'>%{link_text}</a>."
+      devolved_html: "%{title} je tělo <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} bude brzy začleněn do GOV.UK"
       left_gov: "%{title} je nyní nezávislý na vládě Spojeného království"
-      merged: "%{title} se stal součástí <a href='%{link_href}'>%{link_text}</a> v %{aktualizováno}"
-      merged_no_date: "%{title} je nyní součástí <a href='%{link_href}'>%{link_text}</a>."
+      merged_html: "%{title} se stal součástí <a href='%{link_href}'>%{link_text}</a> v %{aktualizováno}"
+      merged_no_date_html: "%{title} je nyní součástí <a href='%{link_href}'>%{link_text}</a>."
       no_longer_exists: "%{title} byl uzavřen"
       no_website: "%{title} nemá žádné webové stránky"
-      separate_website: "%{title} má <a href='%{url}'>samostatnou webovou stránku</a>"
-      split: "%{title} bylo nahrazeno %{links}"
+      separate_website_html: "%{title} má <a href='%{url}'>samostatnou webovou stránku</a>"
+      split_html: "%{title} bylo nahrazeno %{links}"
     part_of: Část
     people:
       board_members: Naše vedení

@@ -288,16 +288,16 @@ zh:
     jobs_contracts: 工作和联系人
     latest_from: "%{title} 的最新消息"
     notices:
-      changed_name: "%{title} 现在称为 <a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title} 是 <a href='%{link_href}'>%{link_text}</a> 的实体"
+      changed_name_html: "%{title} 现在称为 <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} 是 <a href='%{link_href}'>%{link_text}</a> 的实体"
       joining: "%{title} 将很快被纳入 GOV.UK"
       left_gov: "%{title} 现在独立于英国政府"
-      merged: 在 %{updated}，%{title} 成为 <a href='%{link_href}'>%{link_text}</a> 的一部分
-      merged_no_date: "%{title} 现在是 <a href='%{link_href}'>%{link_text}</a> 的一部分"
+      merged_html: 在 %{updated}，%{title} 成为 <a href='%{link_href}'>%{link_text}</a> 的一部分
+      merged_no_date_html: "%{title} 现在是 <a href='%{link_href}'>%{link_text}</a> 的一部分"
       no_longer_exists: "%{title} 已关闭"
       no_website: "%{title} 无网站"
-      separate_website: "%{title} 拥有 <a href='%{url}'>独立网站</a>"
-      split: "%{title} 已由 %{links} 替换"
+      separate_website_html: "%{title} 拥有 <a href='%{url}'>独立网站</a>"
+      split_html: "%{title} 已由 %{links} 替换"
     part_of: 一部分
     people:
       board_members: 我们的管理

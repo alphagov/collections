@@ -292,16 +292,16 @@ pa-pk:
     jobs_contracts: نوکریاں تے ٹھیکے
     latest_from: تازہ ترین فارم {title}%
     notices:
-      changed_name: "%{title} ہن اینوں کہیا جاندا اے <a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title} ایندا حصہ اے <a href='%{link_href}'>%{link_text}</a>"
+      changed_name_html: "%{title} ہن اینوں کہیا جاندا اے <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} ایندا حصہ اے <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} جلد ای ایندے وچ شامل ہو جائے گا GOV.UK"
       left_gov: "%{title}ایہ ہن UK دی حکومت توں آزاد اے"
-      merged: "%{title} ایندا حصہ بن گیا اے <a href='%{link_href}'>%{link_text}</a> وچ %{updated}"
-      merged_no_date: "%{title}ہن ایندا حصہ اے<a href='%{link_href}'>%{link_text}</a>"
+      merged_html: "%{title} ایندا حصہ بن گیا اے <a href='%{link_href}'>%{link_text}</a> وچ %{updated}"
+      merged_no_date_html: "%{title}ہن ایندا حصہ اے<a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} بند ہو گیا اے"
       no_website: "%{title} ایندی کوئی ویب سائٹ نئیں"
-      separate_website: "%{title} اک ہے وے <a href='%{url}'>الگ ویب سائٹ</a>"
-      split: "%{title} جندے نال اینوں بدلیا گیا %{links}"
+      separate_website_html: "%{title} اک ہے وے <a href='%{url}'>الگ ویب سائٹ</a>"
+      split_html: "%{title} جندے نال اینوں بدلیا گیا %{links}"
     part_of: اک حصہ
     people:
       board_members: ساڈی انتظامیہ

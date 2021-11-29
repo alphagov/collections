@@ -364,16 +364,16 @@ lt:
     jobs_contracts: Darbai ir sutartys
     latest_from: Naujienos iš %{title}
     notices:
-      changed_name: "%{title} dabar vadinamas <a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title} yra <a href='%{link_href}'>%{link_text}</a> organas"
+      changed_name_html: "%{title} dabar vadinamas <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} yra <a href='%{link_href}'>%{link_text}</a> organas"
       joining: "%{title} greitai bus įtraukta į GOV.UK"
       left_gov: "%{title} dabar nebepriklauso nuo JK vyriausybės"
-      merged: "%{title} tapo <a href='%{link_href}'>%{link_text}</a> in %{updated} dalimi"
-      merged_no_date: "%{title} dabar yra<a href='%{link_href}'>%{link_text}</a> dalis"
+      merged_html: "%{title} tapo <a href='%{link_href}'>%{link_text}</a> in %{updated} dalimi"
+      merged_no_date_html: "%{title} dabar yra<a href='%{link_href}'>%{link_text}</a> dalis"
       no_longer_exists: "%{title} užsidarė"
       no_website: "%{title} neturi interneto svetainės"
-      separate_website: "%{title} turi <a href='%{url}'>atskirą interneto svetainę</a>"
-      split: "%{title} pakeitė %{links}"
+      separate_website_html: "%{title} turi <a href='%{url}'>atskirą interneto svetainę</a>"
+      split_html: "%{title} pakeitė %{links}"
     part_of: Dalis
     people:
       board_members: Mūsų vadovybė

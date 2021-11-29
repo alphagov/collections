@@ -290,16 +290,16 @@ so:
     jobs_contracts: Shaqooyinka iyo qandaraasyada
     latest_from: Kasocda %{title}
     notices:
-      changed_name: "%{title} imika waxa loo yaqaan <a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title} waa haayad ka mida <a href='%{link_href}'>%{link_text}</a>"
+      changed_name_html: "%{title} imika waxa loo yaqaan <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} waa haayad ka mida <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} waxa si dhakhso ah loogu dari doonaa GOV.UK"
       left_gov: "%{title} waa ka madaxbanaan yahay hada dawlada Ingiriiska"
-      merged: "%{title} ka qeyb noqday <a href='%{link_href}'>%{link_text}</a> in %{updated}"
-      merged_no_date: "%{title} waa ka qeyb hada <a href='%{link_href}'>%{link_text}</a>"
+      merged_html: "%{title} ka qeyb noqday <a href='%{link_href}'>%{link_text}</a> in %{updated}"
+      merged_no_date_html: "%{title} waa ka qeyb hada <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} wuxuu xidhay"
       no_website: "%{title} ma leh wabsaayd"
-      separate_website: "%{title} wuxuu leeyahay <a href='%{url}'>separate website</a>"
-      split: "%{title} waxa badelay %{links}"
+      separate_website_html: "%{title} wuxuu leeyahay <a href='%{url}'>separate website</a>"
+      split_html: "%{title} waxa badelay %{links}"
     part_of: Ka qeyba
     people:
       board_members: Maamulkeena

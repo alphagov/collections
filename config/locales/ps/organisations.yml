@@ -290,16 +290,16 @@ ps:
     jobs_contracts: دندې او قراردادونه
     latest_from: له%{title} څخه وروستی
     notices:
-      changed_name: "%{title} اوس <a href='%{link_href}'>%{link_text} </a> نومیږي"
-      devolved: "%{title} د <a href='%{link_href}'>%{link_text} </a> یوه برخه ده"
+      changed_name_html: "%{title} اوس <a href='%{link_href}'>%{link_text} </a> نومیږي"
+      devolved_html: "%{title} د <a href='%{link_href}'>%{link_text} </a> یوه برخه ده"
       joining: "%{title} به ډیر ژر په GOV.UK کې شامل شي"
       left_gov: "%{title} اوس د انګلستان حکومت څخه خپلواک دی"
-      merged: "%{title} په%{تازه شوي} کې د <a href='%{link_href}'>%{link_text} </a> برخه شوه"
-      merged_no_date: "%{title} اوس د <a href='%{link_href}'>%{link_text} </a> برخه ده"
+      merged_html: "%{title} په%{تازه شوي} کې د <a href='%{link_href}'>%{link_text} </a> برخه شوه"
+      merged_no_date_html: "%{title} اوس د <a href='%{link_href}'>%{link_text} </a> برخه ده"
       no_longer_exists: "%{title} وتړل شو"
       no_website: "%{title} هیڅ ویب پاه نلري"
-      separate_website: "%{title} یو <a href='%{url}'> جلا ویب پا </a>ه لري </a>"
-      split: "%{title} د %{links} لخوا بدل شو"
+      separate_website_html: "%{title} یو <a href='%{url}'> جلا ویب پا </a>ه لري </a>"
+      split_html: "%{title} د %{links} لخوا بدل شو"
     part_of: برخه
     people:
       board_members: زموږ مدیریت

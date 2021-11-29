@@ -290,16 +290,16 @@ kk:
     jobs_contracts: Жұмыстар мен келісімшарттар
     latest_from: "%{title} соңғылары"
     notices:
-      changed_name: "%{title} қазір <a href='%{link_href}'>%{link_text}</a> деп аталады"
-      devolved: "%{title} <a href='%{link_href}'>%{link_text}</a> органы"
+      changed_name_html: "%{title} қазір <a href='%{link_href}'>%{link_text}</a> деп аталады"
+      devolved_html: "%{title} <a href='%{link_href}'>%{link_text}</a> органы"
       joining: "%{title} жақында GOV.UK өзара қарым-қатынас жасайды"
       left_gov: "%{title} қазір Ұлыбритания мемлекетінен дербес"
-      merged: "%{title} <a href='%{link_href}'>%{link_text}</a> %{updated} ішінде бөлігі болды"
-      merged_no_date: "%{title} қазір <a href='%{link_href}'>%{link_text}</a> бөлігі"
+      merged_html: "%{title} <a href='%{link_href}'>%{link_text}</a> %{updated} ішінде бөлігі болды"
+      merged_no_date_html: "%{title} қазір <a href='%{link_href}'>%{link_text}</a> бөлігі"
       no_longer_exists: "%{title} жабылды"
       no_website: "%{title} веб-сайты жоқ"
-      separate_website: "%{title} <a href='%{url}'>бөлек веб-сайты</a> бар"
-      split: "%{title} %{links} алмастырылды"
+      separate_website_html: "%{title} <a href='%{url}'>бөлек веб-сайты</a> бар"
+      split_html: "%{title} %{links} алмастырылды"
     part_of: Бөлігі
     people:
       board_members: Біздің басқарма

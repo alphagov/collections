@@ -290,16 +290,16 @@ nl:
     jobs_contracts: Banen en contracten
     latest_from: Laatste van %{title}
     notices:
-      changed_name: "%{title} heet nu <a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title} is een lichaam van <a href='%{link_href}'>%{link_text}</a>"
+      changed_name_html: "%{title} heet nu <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} is een lichaam van <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} zal binnenkort worden opgenomen in GOV.UK"
       left_gov: "%{title} is nu onafhankelijk van de Britse regering"
-      merged: "%{title} werd onderdeel van <a href='%{link_href}'>%{link_text}</a> in %{updated}"
-      merged_no_date: "%{title} is nu onderdeel van <a href='%{link_href}'>%{link_text}</a>"
+      merged_html: "%{title} werd onderdeel van <a href='%{link_href}'>%{link_text}</a> in %{updated}"
+      merged_no_date_html: "%{title} is nu onderdeel van <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} is gesloten"
       no_website: "%{title} heeft geen website"
-      separate_website: "%{title} heeft een <a href='%{url}'>afzonderlijke website</a>"
-      split: "%{title} is vervangen door %{links}"
+      separate_website_html: "%{title} heeft een <a href='%{url}'>afzonderlijke website</a>"
+      split_html: "%{title} is vervangen door %{links}"
     part_of: Onderdeel van
     people:
       board_members: Onze directie

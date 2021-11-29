@@ -290,16 +290,16 @@ sw:
     jobs_contracts: Kazi na mikataba
     latest_from: Habari mpya kutoka %{title}
     notices:
-      changed_name: Sasa %{title} linajulikana kama <a href='%{link_href}'>%{link_text}</a>
-      devolved: "%{title} ni shirika la <a href='%{link_href}'>%{link_text}</a>"
+      changed_name_html: Sasa %{title} linajulikana kama <a href='%{link_href}'>%{link_text}</a>
+      devolved_html: "%{title} ni shirika la <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} litajumuishwa hivi karibuni kwenye GOV.UK"
       left_gov: Sasa %{title} limejitenga na serikali ya Uingereza
-      merged: "%{title} lilijiunga na <a href='%{link_href}'>%{link_text}</a> mnamo %{updated}"
-      merged_no_date: Sasa %{title} ni sehemu ya <a href='%{link_href}'>%{link_text}</a>
+      merged_html: "%{title} lilijiunga na <a href='%{link_href}'>%{link_text}</a> mnamo %{updated}"
+      merged_no_date_html: Sasa %{title} ni sehemu ya <a href='%{link_href}'>%{link_text}</a>
       no_longer_exists: "%{title} limefungwa"
       no_website: "%{title} halina tovuti"
-      separate_website: "%{title} lina <a href='%{url}'>tovuti tofauti</a>"
-      split: "%{title} lilibadilishwa na %{links}"
+      separate_website_html: "%{title} lina <a href='%{url}'>tovuti tofauti</a>"
+      split_html: "%{title} lilibadilishwa na %{links}"
     part_of: Sehemu ya
     people:
       board_members: Usimamizi wetu

@@ -290,16 +290,16 @@ uz:
     jobs_contracts: Иш ва контрактлар
     latest_from: Дан охиргилар %{title}
     notices:
-      changed_name: "%{title} энди деб номланади <a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title} бу орган <a href='%{link_href}'>%{link_text}</a>"
+      changed_name_html: "%{title} энди деб номланади <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} бу орган <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} яқин кунларда GOV.UKга киритилган бўлади"
       left_gov: "%{title} энди Буюк британи ҳуқукуматига боғлиқ эмас"
-      merged: "%{title} қисми бўлиб қолди <a href='%{link_href}'>%{link_text}</a> in %{updated}"
-      merged_no_date: "%{title} энди қисми ҳисобланади <a href='%{link_href}'>%{link_text}</a>"
+      merged_html: "%{title} қисми бўлиб қолди <a href='%{link_href}'>%{link_text}</a> in %{updated}"
+      merged_no_date_html: "%{title} энди қисми ҳисобланади <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} ёпиқ"
       no_website: "%{title} веб-сайт йўқ"
-      separate_website: "%{title} алоҳида веб-сайтга <a href='%{url}'>эга эмас</a>"
-      split: "%{links} %{title} бўлган"
+      separate_website_html: "%{title} алоҳида веб-сайтга <a href='%{url}'>эга эмас</a>"
+      split_html: "%{links} %{title} бўлган"
     part_of: Қисм
     people:
       board_members: Бизнинг қўлланма

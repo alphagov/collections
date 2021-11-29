@@ -290,16 +290,16 @@ tk:
     jobs_contracts: Işler we şertnamalar
     latest_from: Iň täze forma %{title}
     notices:
-      changed_name: "%{title} indi şeýle diýilýär <a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title} göwresi <a href='%{link_href}'>%{link_text}</a>"
+      changed_name_html: "%{title} indi şeýle diýilýär <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} göwresi <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} ýakyn wagtda GOV.UK-a goşular"
       left_gov: "% {title} indi BK hökümetinden garaşsyz"
-      merged: "%{title} bir bölegi boldy <a href='%{link_href}'>%{link_text}</a>%{}"
-      merged_no_date: "%{title} indi bir bölegi <a href='%{link_href}'>%{link_text}</a>"
+      merged_html: "%{title} bir bölegi boldy <a href='%{link_href}'>%{link_text}</a>%{}"
+      merged_no_date_html: "%{title} indi bir bölegi <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} ýapyldy"
       no_website: "%{title} internet sahypasy ýok"
-      separate_website: "%{title} <a href='% {url'> aýratyn internet sahypasy </a> bar"
-      split: "%{title} bilen çalşylan %{links}"
+      separate_website_html: "%{title} <a href='% {url'> aýratyn internet sahypasy </a> bar"
+      split_html: "%{title} bilen çalşylan %{links}"
     part_of: Bir bölegi
     people:
       board_members: Biziň menejmentimiz

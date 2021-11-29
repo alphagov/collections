@@ -586,16 +586,16 @@ cy:
     jobs_contracts: Swyddi a chontractau
     latest_from: Y diweddaraf gan %{title}
     notices:
-      changed_name: Mae %{title} bellach yn cael ei alw'n <a href='%{link_href}'>%{link_text}</a>
-      devolved: Mae %{title} yn gorff o <a href='%{link_href}'>%{link_text}</a>
+      changed_name_html: Mae %{title} bellach yn cael ei alw'n <a href='%{link_href}'>%{link_text}</a>
+      devolved_html: Mae %{title} yn gorff o <a href='%{link_href}'>%{link_text}</a>
       joining: Bydd %{title} yn cael ei ymgorffori i GOV.UK yn fuan
       left_gov: Mae %{title} bellach yn annibynnol o lywodraeth y DU
-      merged: Daeth %{title} yn rhan o <a href='%{link_href}'>%{link_text}</a> yn %{updated}
-      merged_no_date: Mae %{title} bellach yn rhan o <a href='%{link_href}'>%{link_text}</a>
+      merged_html: Daeth %{title} yn rhan o <a href='%{link_href}'>%{link_text}</a> yn %{updated}
+      merged_no_date_html: Mae %{title} bellach yn rhan o <a href='%{link_href}'>%{link_text}</a>
       no_longer_exists: Mae %{title} wedi cau
       no_website: Does gan %{title} ddim gwefan
-      separate_website: Mae gan %{title} <a href='%{url}'>wefan ar wahân</a>
-      split: Disodlwyd %{title} gan %{links}
+      separate_website_html: Mae gan %{title} <a href='%{url}'>wefan ar wahân</a>
+      split_html: Disodlwyd %{title} gan %{links}
     part_of: Rhan o
     people:
       board_members: Ein rheolwyr

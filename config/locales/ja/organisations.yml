@@ -290,16 +290,16 @@ ja:
     jobs_contracts: 仕事と契約
     latest_from: "％{title}からの最新情報"
     notices:
-      changed_name: "％{title}は、<a href='%{link_href}'>％{link_text} </a>と呼ばれるようになりました"
-      devolved: "％{title}は、<a href='%{link_href}'>％{link_text} </a>の主体です"
+      changed_name_html: "％{title}は、<a href='%{link_href}'>％{link_text} </a>と呼ばれるようになりました"
+      devolved_html: "％{title}は、<a href='%{link_href}'>％{link_text} </a>の主体です"
       joining: "％{title}は、まもなくGOV.UKに組み込まれます"
       left_gov: "％{title}は、現在英国政府から独立しています"
-      merged: "％{title}は、％{updated}に<a href='%{link_href}'>％{link_text} </a>の一部になりました"
-      merged_no_date: "％{title}は<a href='%{link_href}'>％{link_text} </a>の一部になりました"
+      merged_html: "％{title}は、％{updated}に<a href='%{link_href}'>％{link_text} </a>の一部になりました"
+      merged_no_date_html: "％{title}は<a href='%{link_href}'>％{link_text} </a>の一部になりました"
       no_longer_exists: "％{title}は、終了しました"
       no_website: "％{title}には、ウェブサイトがありません"
-      separate_website: "％{title}には、<ahref='％{url}'>別のウェブサイト</a>があります"
-      split: "％{title}は、％{links}に置き換えられました"
+      separate_website_html: "％{title}には、<ahref='％{url}'>別のウェブサイト</a>があります"
+      split_html: "％{title}は、％{links}に置き換えられました"
     part_of: 次の一部
     people:
       board_members: 管理

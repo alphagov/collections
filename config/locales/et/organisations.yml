@@ -290,16 +290,16 @@ et:
     jobs_contracts: Töökohad ja lepingud
     latest_from: Viimane jaotises %{title}
     notices:
-      changed_name: Jaotist %{title} nimetatakse nüüd <a href='%{link_href}'>%{link_text}</a>
-      devolved: Jaotis %{title} on <a href='%{link_href}'>%{link_text}</a> sisu
+      changed_name_html: Jaotist %{title} nimetatakse nüüd <a href='%{link_href}'>%{link_text}</a>
+      devolved_html: Jaotis %{title} on <a href='%{link_href}'>%{link_text}</a> sisu
       joining: "%{title} lisatakse peagi saidile GOV.UK"
       left_gov: "%{title} on nüüd Ühendkuningriigi valitsusest sõltumatu"
-      merged: "%{title} sai <a href='%{link_href}'>%{link_text}</a> in %{updated} osaks"
-      merged_no_date: "%{title} on nüüd <a href='%{link_href}'>%{link_text}</a> osa"
+      merged_html: "%{title} sai <a href='%{link_href}'>%{link_text}</a> in %{updated} osaks"
+      merged_no_date_html: "%{title} on nüüd <a href='%{link_href}'>%{link_text}</a> osa"
       no_longer_exists: "%{title} on suletud"
       no_website: "%{title} pole veebisaiti"
-      separate_website: "%{title} on <a href='%{url}'>separate website</a>"
-      split: "%{title} asendati linkidega %{links}"
+      separate_website_html: "%{title} on <a href='%{url}'>separate website</a>"
+      split_html: "%{title} asendati linkidega %{links}"
     part_of: Osa
     people:
       board_members: Meie juhtkond

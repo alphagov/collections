@@ -290,16 +290,16 @@ tr:
     jobs_contracts: İşler ve sözleşmeler
     latest_from: "%{title} kaynaklı en güncel olanlar"
     notices:
-      changed_name: "%{title} artık <a href='%{link_href}'>%{link_text}</a> olarak adlandırılıyor"
-      devolved: "%{title} bir <a href='%{link_href}'>%{link_text}</a> kurumudur"
+      changed_name_html: "%{title} artık <a href='%{link_href}'>%{link_text}</a> olarak adlandırılıyor"
+      devolved_html: "%{title} bir <a href='%{link_href}'>%{link_text}</a> kurumudur"
       joining: "%{title} yakında GOV.UK sitesine eklenecek"
       left_gov: "%{title} artık İngiltere devletinden bağımsızdır"
-      merged: "%{title} <a href='%{link_href}'>%{link_text}</a> %{updated} parçası oldu"
-      merged_no_date: "%{title} artık <a href='%{link_href}'>%{link_text}</a> bünyesinde"
+      merged_html: "%{title} <a href='%{link_href}'>%{link_text}</a> %{updated} parçası oldu"
+      merged_no_date_html: "%{title} artık <a href='%{link_href}'>%{link_text}</a> bünyesinde"
       no_longer_exists: "%{title} kapandı"
       no_website: "%{title} kendisine ait bir web sitesine sahip değil"
-      separate_website: "%{title} <a href='%{url}'>ayrı bir web sitesine</a> sahip"
-      split: "%{title}, %{links} ile değiştirildi"
+      separate_website_html: "%{title} <a href='%{url}'>ayrı bir web sitesine</a> sahip"
+      split_html: "%{title}, %{links} ile değiştirildi"
     part_of: Şunun kısmı
     people:
       board_members: Yönetimimiz

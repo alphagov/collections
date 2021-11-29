@@ -290,16 +290,16 @@ fi:
     jobs_contracts: Työt ja sopimukset
     latest_from: Latest from %{title}
     notices:
-      changed_name: "%{title} on nyt nimeltään <a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title} on elin <a href='%{link_href}'>%{link_text}</a>"
+      changed_name_html: "%{title} on nyt nimeltään <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} on elin <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} sisällytetään pian GOV.UK-sivustoon"
       left_gov: "%{title} on nyt riippumaton Ison -Britannian hallituksesta"
-      merged: "%{title} tuli osa <a href='%{link_href}'>%{link_text}</a> osoitteessa %{updated}"
-      merged_no_date: "%{title} on nyt osa <a href='%{link_href}'>%{link_text}</a>"
+      merged_html: "%{title} tuli osa <a href='%{link_href}'>%{link_text}</a> osoitteessa %{updated}"
+      merged_no_date_html: "%{title} on nyt osa <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} on suljettu"
       no_website: Käyttäjällä %{title} ei ole verkkosivustoa
-      separate_website: "%{title} ole <a href='%{url}'>erillinen verkkosivusto</a>"
-      split: "%{title} korvattiin %{links}"
+      separate_website_html: "%{title} ole <a href='%{url}'>erillinen verkkosivusto</a>"
+      split_html: "%{title} korvattiin %{links}"
     part_of: Osa
     people:
       board_members: Hallintomme

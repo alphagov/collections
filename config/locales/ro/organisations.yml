@@ -364,16 +364,16 @@ ro:
     jobs_contracts: Locuri de muncă și contracte
     latest_from: Cele mai recente informații de la %{title}
     notices:
-      changed_name: "%{title} se numește acum <a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title} este un organism al <a href='%{link_href}'>%{link_text}</a>"
+      changed_name_html: "%{title} se numește acum <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} este un organism al <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} va fi încorporat în curând în GOV.UK"
       left_gov: "%{title} este acum independent de guvernul Marii Britanii"
-      merged: "%{title} a devenit o parte a <a href='%{link_href}'>%{link_text}</a> în %{updated}"
-      merged_no_date: "%{title} face acum parte din <a href='%{link_href}'>%{link_text}</a>"
+      merged_html: "%{title} a devenit o parte a <a href='%{link_href}'>%{link_text}</a> în %{updated}"
+      merged_no_date_html: "%{title} face acum parte din <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} s-a închis"
       no_website: "%{title} nu are website"
-      separate_website: "%{title} are un <a href='%{url}'>website separat</a>"
-      split: "%{title} a fost înlocuit de %{links}"
+      separate_website_html: "%{title} are un <a href='%{url}'>website separat</a>"
+      split_html: "%{title} a fost înlocuit de %{links}"
     part_of: Parte din
     people:
       board_members: Managementul nostru
