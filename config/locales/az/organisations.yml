@@ -1,3 +1,4 @@
+---
 az:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
@@ -266,13 +267,9 @@ az:
       transparency:
         see_all:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
-          text: Şəffaflıq və məlumat əldə etmə azadlığı üzrə bütün buraxılışları nəzərdən
-            keçirin
+          text: Şəffaflıq və məlumat əldə etmə azadlığı üzrə bütün buraxılışları nəzərdən keçirin
         title: Şəffaflıq və məlumat əldə etmə azadlığı buraxılışları
-    errors_or_omissions_html: <p>Xətalar və ya səhlənkarlıqlar? <a class="govuk-link"
-      href="/contact/govuk">Bizə burada bildirin</a>. Yarımüstəqil qeyri-hökumət təşkilatlarının
-      rəsmi siyahıları üçün <a class="govuk-link" href="/government/collections/public-bodies">dövlət
-      qurumlarını nəzərdən keçirin</a>.</p>
+    errors_or_omissions_html: <p>Xətalar və ya səhlənkarlıqlar? <a class="govuk-link" href="/contact/govuk">Bizə burada bildirin</a>. Yarımüstəqil qeyri-hökumət təşkilatlarının rəsmi siyahıları üçün <a class="govuk-link" href="/government/collections/public-bodies">dövlət qurumlarını nəzərdən keçirin</a>.</p>
     featured: Seçilmiş
     foi:
       contact_form: Məlumat əldə etmə azadlığı üzrə əlaqə forması
@@ -283,13 +280,9 @@ az:
       freedom_of_information_requests: Məlumat əldə etmə azadlığı üzrə müraciətlər
       make_an_foi_request: Məlumat əldə etmə azadlığı (FOI) üzrə müraciət edin
       making_foi_requests:
-        step1_html: Məlumat əldə etmə azadlığı (FOI) qanunu və <a href="%{how_to_path}"
-          class="govuk-link brand__color">müraciət etmə qaydası barədə oxuyun</a>.
-        step2_html: Suallarınıza artıq cavab vermiş <a href="%{our_releases_path}"
-          class="govuk-link brand__color">əvvəlki buraxılışlarımız</a> olub-olmadığımızı
-          yoxlayın.
-        step3_html: Aşağıdakı məlumatlardan istifadə etməklə bizimlə əlaqə saxlayaraq
-          yeni müraciət edin.
+        step1_html: Məlumat əldə etmə azadlığı (FOI) qanunu və <a href="%{how_to_path}" class="govuk-link brand__color">müraciət etmə qaydası barədə oxuyun</a>.
+        step2_html: Suallarınıza artıq cavab vermiş <a href="%{our_releases_path}" class="govuk-link brand__color">əvvəlki buraxılışlarımız</a> olub-olmadığımızı yoxlayın.
+        step3_html: Aşağıdakı məlumatlardan istifadə etməklə bizimlə əlaqə saxlayaraq yeni müraciət edin.
     follow_us: Bizi təqib edin
     hidden_share_link: Bizi burada təqib edin
     high_profile_groups: "%{title} üzrə məşhur qruplar"
@@ -301,10 +294,8 @@ az:
       devolved: "%{title} <a href='%{link_href}'>%{link_text}</a>-nin əsas hissəsidir"
       joining: "%{title} tezliklə GOV.UK ilə birləşdiriləcək"
       left_gov: "%{title} indi BK hökumətindən asılı deyildir"
-      merged: "%{title} indi %{updated} üzrə <a href='%{link_href}'>%{link_text}</a>-nin
-        bir hissəsidir"
-      merged_no_date: "%{title} indi <a href='%{link_href}'>%{link_text}</a>-nın bir
-        hissəsidir"
+      merged: "%{title} indi %{updated} üzrə <a href='%{link_href}'>%{link_text}</a>-nin bir hissəsidir"
+      merged_no_date: "%{title} indi <a href='%{link_href}'>%{link_text}</a>-nın bir hissəsidir"
       no_longer_exists: "%{title} bağlanıb"
       no_website: "%{title}-ın vebsaytı yoxdur"
       separate_website: "%{title}-ın ayrıca <a href='%{url}'>vebsaytı vardır</a>"

@@ -1,31 +1,10 @@
+---
 bn:
   brexit_landing_page:
-    campaign_links:
-      lead_in: 'আপনাকে কোন বিষয়টি ভিন্নভাবে করতে হবে তা দেখুন, যদি আপনি:'
-      lead_out: আপনার নিজের, আপনার ব্যবসা ও পরিবারের জন্য আপনার কী করতে হবে তার <a
-        href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
-        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
-        data-track-label="Get the complete list">পূর্ণাঙ্গ তালিকাটি নিন</a>।
-    comms:
-      read_transcript: এই ভিডিওর জন্য ট্রান্সক্রিপ্টটি পড়ুন
-    comms_header: ঘোষণা
-    data_list_title: 'ব্রেক্সিট ল্যান্ডিং পেজ: %{header}'
-    email_mailto_subject: যুক্তরাজ্যের নতুন যাত্রা, চলুন এগিয়ে নেই- GOV.UK
-    guidance_header: ব্যবসাপ্রতিষ্ঠান ও নাগরিকদের জন্য পরিবর্তনসমূহ
-    meta_description: ভ্রমণ ও ইউরোপের সাথে ব্যবসা করার মতো বিষয়গুলোতে ব্রেক্সিটের
-      নতুন নিয়মকানুন কিভাবে প্রযোজ্য হয় তা খুঁজে দেখুন। পদক্ষেপগুলোর একটি ব্যক্তিগতকৃত
-      তালিকা পেতে ব্রেক্সিট চেকার ব্যবহার করুন।
+    meta_description: ভ্রমণ ও ইউরোপের সাথে ব্যবসা করার মতো বিষয়গুলোতে ব্রেক্সিটের নতুন নিয়মকানুন কিভাবে প্রযোজ্য হয় তা খুঁজে দেখুন। পদক্ষেপগুলোর একটি ব্যক্তিগতকৃত তালিকা পেতে ব্রেক্সিট চেকার ব্যবহার করুন।
     meta_title: ব্রেক্সিট
-    no_cookies:
-      change_settings_text: আপনার কুকি সেটিংস পরিবর্তন করুন
-      icon_text: ভিডিও
-      or_text: অথবা
-      to_watch_text: ভিডিওটি দেখতে
-      watch_link_text: ইউটিউবের দেখুন
     page_header: ব্রেক্সিট:<br/>নতুন নিয়মকানুন এখানে
-    page_header_explainer: ভ্রমণ ও ইউরোপের সাথে ব্যবসা করার মতো বিষয়গুলোতে নতুন নিয়মকানুন
-      প্রযোজ্য হয়। আপনার নিজের, আপনার ব্যবসা ও পরিবারের জন্য পদক্ষেপগুলোর একটি ব্যক্তিগতকৃত
-      তালিকা পেতে ব্রেক্সিট চেকার ব্যবহার করুন।
+    page_header_explainer: ভ্রমণ ও ইউরোপের সাথে ব্যবসা করার মতো বিষয়গুলোতে নতুন নিয়মকানুন প্রযোজ্য হয়। আপনার নিজের, আপনার ব্যবসা ও পরিবারের জন্য পদক্ষেপগুলোর একটি ব্যক্তিগতকৃত তালিকা পেতে ব্রেক্সিট চেকার ব্যবহার করুন।
     sections:
       aria_string_suffix: ব্রেক্সিট সম্পর্কিত
       guidance_and_regulation: নির্দেশনা ও বিধিবিধান
@@ -34,28 +13,5 @@ bn:
       research_and_statistics: গবেষণা ও পরিসংখ্যান
       services: পরিষেবা
       transparency: স্বচ্ছতা ও তথ্যের স্বাধীনতা বিষয়ক প্রকাশনা
-    share_links: এই পেজটি শেয়ার করুন
-    take_action_list:
-      amber: পরিবর্তন
-      green: যান
-      red: পরীক্ষা করুন
-    take_action_start_now: 'ব্রেক্সিট চেকার: এখনও শুরু করুন'
-    take_action_start_now_link: "/transition-check/questions"
     topic_section_header: ব্রেক্সিটের সকল তথ্য
     topic_section_subheading: ব্রেক্সিট সম্পর্কিত সকল তথ্য ব্রাউজ করুন
-    video_section_description: '<p>ইউরোপ সাথে ব্যবসা করার বিষয়টি পরিবর্তন হয়ে গেছে।
-      আপনাকে রপ্তানি, আমদানি, ট্যারিফ, ডেটা ও নিয়োগ সম্পর্কিত নতুন নিয়মকানুন অনুসরণ
-      করতে হবে।</p><p>নতুন নিয়মগুলো আপনার ব্যবসার উপর কিভাবে প্রভাব ফেলতে তা জানতে
-      ভিডিওটি দেখুন। ব্যক্তিগতকৃত পদক্ষেপগুলোর তালিকা পেতে, আপনি <a href="/transition-check/questions"
-      class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions"
-      data-track-category="transition-landing-page" data-track-label="use the Brexit
-      checker">ব্রেক্সিট চেকারও ব্যবহার করতে পারেন</a>।</p>
-
-'
-    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
-    video_section_title: আপনার ব্যবসা সচল রাখুন
-    video_section_transcription_summary: ভিডিও ট্রান্সক্রিপ্টটি দেখুন
-    video_section_transcription_text: "<p>ব্যবসা প্রতিষ্ঠানগুলোকে জানানো যাচ্ছে যে
-      যুক্তরাজ্য ইইউ ত্যাগ করেছেন এবং এখন নতুন নিয়মকানুন প্রয়োগ হচ্ছে।</p><p>আপনার
-      ব্যবসা সচল রাখতে, আপনার ব্যবসার জন্য ব্যক্তিগতকৃত পদক্ষেপ পেতে, gov.uk/transition-এ
-      ব্রেক্সিট চেকার টুল ব্যবহার করুন।</p><p>চলুন, ব্যবসাকে সচল রাখি।</p>\n"

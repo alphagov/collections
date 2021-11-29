@@ -1,31 +1,10 @@
+---
 'no':
   brexit_landing_page:
-    campaign_links:
-      lead_in: 'Sjekk hva du trenger å gjøre annerledes hvis du er:'
-      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
-        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
-        data-track-label="Få hele listen">Få den komplette listen</a> over hva du
-        trenger å gjøre for deg selv, for bedriften og for familien din.
-    comms:
-      read_transcript: Les transkripsjonen av denne videoen
-    comms_header: Kunngjøringer
-    data_list_title: 'Brexit-destinasjonsside: %{header}'
-    email_mailto_subject: 'Storbritannias nye start: la oss sette i gang- GOV.UK'
-    guidance_header: Endringer for bedrifter og innbyggere
-    meta_description: Finn ut hvordan nye Brexit-regler gjelder for ting som å reise
-      og gjøre forretninger med Europa. Bruk Brexit-sjekken for å få en personlig
-      tilpasset liste over handlinger.
+    meta_description: Finn ut hvordan nye Brexit-regler gjelder for ting som å reise og gjøre forretninger med Europa. Bruk Brexit-sjekken for å få en personlig tilpasset liste over handlinger.
     meta_title: Brexit
-    no_cookies:
-      change_settings_text: Endre informasjonskapselinnstillingene
-      icon_text: VIDEO
-      or_text: eller
-      to_watch_text: for å se videoen
-      watch_link_text: Se på YouTube
     page_header: Brexit:<br/>de nye reglene er her
-    page_header_explainer: Nye regler gjelder for ting som å reise og gjøre forretninger
-      med Europa. Bruk Brexit-sjekken for å få en personlig tilpasset liste over handlinger
-      som gjelder deg, din bedrift og din familie.
+    page_header_explainer: Nye regler gjelder for ting som å reise og gjøre forretninger med Europa. Bruk Brexit-sjekken for å få en personlig tilpasset liste over handlinger som gjelder deg, din bedrift og din familie.
     sections:
       aria_string_suffix: knyttet til Brexit
       guidance_and_regulation: Veiledning og regulering
@@ -34,22 +13,5 @@
       research_and_statistics: Forskning og statistikk
       services: Tjenester
       transparency: Åpenhet og informasjonsfrihet
-    share_links: Del denne siden
-    take_action_list:
-      amber: Endring
-      green: Gå
-      red: Kryss av
-    take_action_start_now: 'Brexit-sjekken: start nå'
-    take_action_start_now_link: "/transition-check/questions"
     topic_section_header: All informasjon om Brexit
     topic_section_subheading: Bla gjennom all informasjon relatert til Brexit
-    video_section_description: |
-      <p>Det å gjøre forretninger med Europa har endret seg. Du må følge nye regler for eksport, import, toll, data og ansettelser.</p>
-      <p>Se videoen for å finne ut hva de nye reglene betyr for virksomheten din. Du kan også You can also <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">bruk Brexit-sjekken</a> for å få en personlig tilpasset liste over handlinger.</p>
-    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
-    video_section_title: Hold virksomheten din i gang
-    video_section_transcription_summary: Se transkripsjonen til videoen
-    video_section_transcription_text: |
-      <p> Forretninger, Storbritannia har forlatt EU og nye regler gjelder nå.</p>
-      <p> For å holde virksomheten din i gang, bruk Brexit -kontrollverktøyet på gov.uk/transition for å få tilpassede handlinger for virksomheten din.</p>
-      <p> La oss holde virksomheten i bevegelse.</p>

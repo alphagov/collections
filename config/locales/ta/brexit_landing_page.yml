@@ -1,33 +1,10 @@
+---
 ta:
   brexit_landing_page:
-    campaign_links:
-      lead_in: 'பின்வருமாறு இருக்கையில், வேறுவிதமாக நீங்கள் செய்யவேண்டியது என்ன என்று
-        பாருங்கள்:'
-      lead_out: உங்களுக்கும் உங்கள் தொழிலுக்கும் உங்கள் குடும்பத்துக்கும் நீங்கள்
-        செய்யவேண்டியவை குறித்த <a href="/transition-check/questions" class="govuk-link"
-        data-module="gem-track-click" data-track-action="/transition-check/questions"
-        data-track-category="transition-landing-page" data-track-label="Get the complete
-        list">முழுமையான பட்டியலைப் பெறுங்கள்</a>.
-    comms:
-      read_transcript: இந்தக் காணொளியின் எழுத்துப்படிவத்தைப் படிக்க
-    comms_header: அறிவிப்புகள்
-    data_list_title: 'பிரெக்சிட் முகப்புப் பக்கம்: %{header}'
-    email_mailto_subject: UK's%20new%20start:%20let's%20get%20going-%20GOV.UK
-    guidance_header: வணிகங்கள் மற்றும் குடிமக்களுக்கான மாற்றங்கள்
-    meta_description: ஐரோப்பாவில் பயணம் மற்றும் தொழில் செய்தல் போன்ற விசயங்களில் எவ்வாறு
-      புதிய பிரெக்சிட் விதிகள் பொருந்துகின்றன என்று பாருங்கள். நடவடிக்கைகளின் தனிப்பட்ட
-      பட்டியலைப் பெறுவதற்கு பிரெக்சிட் செக்கரைப் பயன்படுத்தவும்.
+    meta_description: ஐரோப்பாவில் பயணம் மற்றும் தொழில் செய்தல் போன்ற விசயங்களில் எவ்வாறு புதிய பிரெக்சிட் விதிகள் பொருந்துகின்றன என்று பாருங்கள். நடவடிக்கைகளின் தனிப்பட்ட பட்டியலைப் பெறுவதற்கு பிரெக்சிட் செக்கரைப் பயன்படுத்தவும்.
     meta_title: பிரெக்சிட்
-    no_cookies:
-      change_settings_text: உங்கள் குக்கீ அமைப்புகளை மாற்றவும்
-      icon_text: காணொளி
-      or_text: அல்லது
-      to_watch_text: காணொளியைக் காண்பதற்கு
-      watch_link_text: யுடியூபில் காண்க
     page_header: பிரெக்சிட்:<br/>புதிய விதிகள் இதோ
-    page_header_explainer: ஐரோப்பாவில் பயணம் மற்றும் தொழில் செய்தல் போன்ற விசயங்களில்
-      பொருந்தக்கூடிய புதிய விதிகள். உங்களுக்கும் உங்கள் தொழிலுக்கும் உங்கள் குடும்பத்துக்குமான
-      தனிப்பட்ட நடவடிக்கைகளின் பட்டியலைப் பெற பிரெக்சிட் செக்கரைப் பயன்படுத்துங்கள்.
+    page_header_explainer: ஐரோப்பாவில் பயணம் மற்றும் தொழில் செய்தல் போன்ற விசயங்களில் பொருந்தக்கூடிய புதிய விதிகள். உங்களுக்கும் உங்கள் தொழிலுக்கும் உங்கள் குடும்பத்துக்குமான தனிப்பட்ட நடவடிக்கைகளின் பட்டியலைப் பெற பிரெக்சிட் செக்கரைப் பயன்படுத்துங்கள்.
     sections:
       aria_string_suffix: பிரெக்சிட்டுடன் தொடர்புடையது
       guidance_and_regulation: வழிகாட்டுதல் மற்றும் ஒழுங்குமுறை
@@ -36,22 +13,5 @@ ta:
       research_and_statistics: ஆராய்ச்சி மற்றும் புள்ளியியல்
       services: சேவைகள்
       transparency: வெளிப்படைத்தன்மை மற்றும் தகவல் சுதந்திர வெளியீடுகள்
-    share_links: இந்தப் பக்கத்தைப் பகிர்க
-    take_action_list:
-      amber: மாற்றம்
-      green: செல்க
-      red: சரிபார்
-    take_action_start_now: 'பிரெக்சிட் செக்கர்: இப்போது தொடங்கு'
-    take_action_start_now_link: "/transition-check/questions"
     topic_section_header: அனைத்து பிரெக்சிட் தகவல்கள்
     topic_section_subheading: பிரெக்சிட் தொடர்பான அனைத்துத் தகவல்களையும் தேடிப் பார்த்தல்
-    video_section_description: |
-      <p>ஐரோப்பாவுடனான வர்த்தம் மாறியுள்ளது. ஏற்றுமதிகள், இறக்குமதிகள், கட்டணங்கள், தரவு மற்றும் பணியமர்த்தல் மீது புதிய விதிகளை நீங்கள் பின்பற்ற வேண்டும்.</p>
-      <p>Watch the video to find out what the new rules mean for your business. நடவடிக்கைகளின் தனிப்பட்ட பட்டியலைப் பெறுவதற்கு நீங்கள் <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">பிரெக்சிட் செக்கரைப் பயன்படுத்தலாம்.</a></p>
-    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
-    video_section_title: உங்கள் தொழில் தொடர்ந்து நடக்கட்டும்
-    video_section_transcription_summary: காணொளி எழுத்து வடிவத்தைக் காண்க
-    video_section_transcription_text: |
-      <p>தொழில்கள், ஐரோப்பிய ஒன்றியத்திலிருந்து யுகே வெளியேறியுள்ளது. இப்போது புதிய விதிகள் பொருந்தும்.</p>
-      <p>உங்கள் வணிகத்தைத் தொடர்ந்து நடத்துவதற்கு, gov.uk/transition பக்கத்திலுள்ள பிரெக்சிட் செக்கரைப் பயன்படுத்தி உங்கள் தொழிலுக்கான தனிப்பட்ட நடவடிக்கைகளைப் பெறுங்கள்.</p>
-      <p>வாருங்கள், தொடர்ந்து தொழிலை நடத்துவோம்.</p>

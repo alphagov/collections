@@ -1,32 +1,10 @@
+---
 da:
   brexit_landing_page:
-    campaign_links:
-      lead_in: Tjek hvad du skal gøre
-      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
-        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
-        data-track-label="Get the complete list">Få den komplette liste</a> af, hvad
-        du skal gøre for dig, din virksomhed og din familie.
-    comms:
-      read_transcript: Læs udskriften for denne video
-    comms_header: Meddelelser
-    data_list_title: 'Brexit-destinationsside: %{header}'
-    email_mailto_subject: 'Det Forenede Kongeriges nye start: Lad os komme i gang
-      - GOV.UK'
-    guidance_header: Ændringer for virksomheder og borgere
-    meta_description: Find ud af, hvordan nye Brexit-regler gælder for ting som rejser
-      og forretning med Europa. Brug Brexit-checkeren til at få en personlig liste
-      over handlinger.
+    meta_description: Find ud af, hvordan nye Brexit-regler gælder for ting som rejser og forretning med Europa. Brug Brexit-checkeren til at få en personlig liste over handlinger.
     meta_title: Brexit
-    no_cookies:
-      change_settings_text: ændre dine cookie-indstillinger
-      icon_text: VIDEO
-      or_text: eller
-      to_watch_text: for at se videoen
-      watch_link_text: Se på YouTube
     page_header: Brexit:<br/>nye regler er her
-    page_header_explainer: Der gælder nye regler for ting som rejser og forretning
-      med Europa. Brug Brexit-checkeren til at få en personlig liste over handlinger
-      for dig, din virksomhed og din familie.
+    page_header_explainer: Der gælder nye regler for ting som rejser og forretning med Europa. Brug Brexit-checkeren til at få en personlig liste over handlinger for dig, din virksomhed og din familie.
     sections:
       aria_string_suffix: relateret til brexit
       guidance_and_regulation: Vejledning og regulering
@@ -35,22 +13,5 @@ da:
       research_and_statistics: Forskning og statistik
       services: Tjenester
       transparency: Gennemsigtighed og informationsfrihed frigives
-    share_links: Del denne side
-    take_action_list:
-      amber: Ændre
-      green: Gå
-      red: Kontrollere
-    take_action_start_now: 'Brexit-checker: Start nu'
-    take_action_start_now_link: "/transition-check/questions"
     topic_section_header: Alle Brexit-oplysninger
     topic_section_subheading: Gennemse alle oplysninger relateret til Brexit
-    video_section_description: |
-      <p>Doing forretning med Europa har ændret sig. Du er nødt til at følge nye regler om eksport, import, told, data og &nbsp;hiring.</p>
-      <p>Afring videoen for at finde ud af, hvad de nye regler betyder for din virksomhed. Du kan også <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">brug Brexit-checkeren</a> for at få en personlig liste over handlinger.</p>
-    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
-    video_section_title: Hold din forretning i gang
-    video_section_transcription_summary: Se videotransskriptionen
-    video_section_transcription_text: |
-      <p>Virksomheder har Det Forenede Kongerige forladt EU, og der gælder nu nye regler.</p>
-      <p>Hvis du vil holde din virksomhed i gang, skal du bruge Brexit-kontrolværktøjet på gov.uk/transition til at få personlige handlinger til din virksomhed.</p>
-      <p>Let's holde forretning moving.</p>

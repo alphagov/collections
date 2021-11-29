@@ -1,10 +1,10 @@
+---
 lv:
   roles:
+    find_out_more_html: Uzziniet vairāk par iepriekšējiem šī amata pienākumu pildītājiem mūsu sadaļā %{link}.
     heading:
       one: Loma
       other: Lomas
-    find_out_more_html: Uzziniet vairāk par iepriekšējiem šī amata pienākumu pildītājiem
-      mūsu sadaļā %{link}.
     headings:
       current_holder: Pašreizējais amata pienākumu pildītājs
       previous_holders: Iepriekšējais pienākumu pildītājs

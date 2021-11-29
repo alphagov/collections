@@ -1,10 +1,10 @@
+---
 nl:
   roles:
+    find_out_more_html: Meer informatie over eerdere dragers van deze functie vindt u in onze %{link} sectie.
     heading:
       one: Rol
       other: Rollen
-    find_out_more_html: Meer informatie over eerdere dragers van deze functie vindt
-      u in onze %{link} sectie.
     headings:
       current_holder: Huidige rolhouder
       previous_holders: Eerdere houders

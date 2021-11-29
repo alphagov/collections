@@ -1,6 +1,17 @@
+---
 ps:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: لخوا اداره کیږي
+    breadcrumbs:
+      courts_and_tribunals: محکمې او محکمې
+      organisations: سازمانونه
+    contact:
+      contact_details: د اړیکو نیولو معلومات
+      contact_form: 'د اړیکې فورمه: %{title}'
+      contact_organisation: اړیکه %{organization}
+      email: بریښنالیک
+      telephone: تلیفون
     content_item:
       schema_name:
         aaib_report:
@@ -225,16 +236,6 @@ ps:
         written_statement:
           one: پارلمان ته لیکلې وینا
           other: پارلمان ته لیکلي ویناوې
-    administered_by: لخوا اداره کیږي
-    breadcrumbs:
-      courts_and_tribunals: محکمې او محکمې
-      organisations: سازمانونه
-    contact:
-      contact_details: د اړیکو نیولو معلومات
-      contact_form: 'د اړیکې فورمه: %{title}'
-      contact_organisation: اړیکه %{organization}
-      email: بریښنالیک
-      telephone: تلیفون
     corporate_information: د شرکت معلومات
     document_types:
       documents: اسناد
@@ -268,9 +269,7 @@ ps:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: د معلوماتو خپریدو ټول شفافیت او ازادي وګورئ
         title: د معلوماتو د خپریدو شفافیت او آزادي
-    errors_or_omissions_html: <p> اشتباه یا تیروتنه؟ <a class="govuk-link" href="/contact/govuk">
-      موږ ته دلته ووایاست </a>. د غیر ډیپارټمنټ عامه ادارو رسمي لیستونو لپاره <a class="govuk-link"
-      href="/government/collections/public-bodies"> عامه ادارې وګورئ </a>. </p>
+    errors_or_omissions_html: <p> اشتباه یا تیروتنه؟ <a class="govuk-link" href="/contact/govuk"> موږ ته دلته ووایاست </a>. د غیر ډیپارټمنټ عامه ادارو رسمي لیستونو لپاره <a class="govuk-link" href="/government/collections/public-bodies"> عامه ادارې وګورئ </a>. </p>
     featured: ځانګړی شوی
     foi:
       contact_form: د د معلوماتو د آزادۍ قانون تماس فورمه
@@ -281,13 +280,9 @@ ps:
       freedom_of_information_requests: د معلوماتو د آزادۍ غوښتنه
       make_an_foi_request: د د معلوماتو د آزادۍ قانون غوښتنه وکړئ
       making_foi_requests:
-        step1_html: د معلوماتو د آزادۍ قانون (FOI) قانون او <a href="%{how_to_path}"
-          class="govuk-link brand__color">د غوښتنې څرنګوالي</a> په اړه ولولئ.
-        step2_html: <a href="%{our_releases_path}" class="govuk-link brand__color">زموږ
-          پخواني ریلیزونه</a> چیک کړئ ترڅو وګورئ چې ایا موږ دمخه ستاسو پوښتنې ته ځواب
-          ورکړی دی.
-        step3_html: د لاندې توضیحاتو په کارولو سره له موږ سره په اړیکه کې نوې غوښتنه
-          وکړئ.
+        step1_html: د معلوماتو د آزادۍ قانون (FOI) قانون او <a href="%{how_to_path}" class="govuk-link brand__color">د غوښتنې څرنګوالي</a> په اړه ولولئ.
+        step2_html: <a href="%{our_releases_path}" class="govuk-link brand__color">زموږ پخواني ریلیزونه</a> چیک کړئ ترڅو وګورئ چې ایا موږ دمخه ستاسو پوښتنې ته ځواب ورکړی دی.
+        step3_html: د لاندې توضیحاتو په کارولو سره له موږ سره په اړیکه کې نوې غوښتنه وکړئ.
     follow_us: مونږ تعقیب کړئ
     hidden_share_link: تعقیب کړئ
     high_profile_groups: ه%{title} کې د لوړ پروفایل ډلې
@@ -299,10 +294,8 @@ ps:
       devolved: "%{title} د <a href='%{link_href}'>%{link_text} </a> یوه برخه ده"
       joining: "%{title} به ډیر ژر په GOV.UK کې شامل شي"
       left_gov: "%{title} اوس د انګلستان حکومت څخه خپلواک دی"
-      merged: "%{title} په%{تازه شوي} کې د <a href='%{link_href}'>%{link_text} </a>
-        برخه شوه"
-      merged_no_date: "%{title} اوس د <a href='%{link_href}'>%{link_text} </a> برخه
-        ده"
+      merged: "%{title} په%{تازه شوي} کې د <a href='%{link_href}'>%{link_text} </a> برخه شوه"
+      merged_no_date: "%{title} اوس د <a href='%{link_href}'>%{link_text} </a> برخه ده"
       no_longer_exists: "%{title} وتړل شو"
       no_website: "%{title} هیڅ ویب پاه نلري"
       separate_website: "%{title} یو <a href='%{url}'> جلا ویب پا </a>ه لري </a>"

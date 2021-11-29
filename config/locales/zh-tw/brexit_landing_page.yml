@@ -1,24 +1,8 @@
+---
 zh-tw:
   brexit_landing_page:
-    campaign_links:
-      lead_in: 確認假如你需要採取不同行動：
-      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
-        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
-        data-track-label="Get the complete list">獲取完整列表</a> 為你、你的事業和家人採取行動。
-    comms:
-      read_transcript: 閱讀此影片文獻
-    comms_header: 公告
-    data_list_title: 英國脫歐首頁：%{header}
-    email_mailto_subject: UK's%20new%20start:%20let's%20get%20going-%20GOV.UK
-    guidance_header: 事業和公民的改變
     meta_description: 了解新的英國脫歐規範如何適用於旅行歐洲及生意往來等事務。使用英國脫歐確認器獲取個人化的操作列表。
     meta_title: 脫歐
-    no_cookies:
-      change_settings_text: 更改你的cookie設定
-      icon_text: 影片
-      or_text: 或
-      to_watch_text: 觀看影片
-      watch_link_text: 在YouTube頻道觀看
     page_header: 脫歐：<br/>新規範
     page_header_explainer: 適用於旅行歐洲及業務往來等新規範使用英國脫歐確認器為你、你的公司和家人獲取個人化的操作列表。
     sections:
@@ -29,22 +13,5 @@ zh-tw:
       research_and_statistics: 研究和統計
       services: 服務
       transparency: 透明度與資訊自由的發布
-    share_links: 分享此頁面
-    take_action_list:
-      amber: 變更
-      green: 前往
-      red: 確認
-    take_action_start_now: 英國脫歐確認器：現在開始
-    take_action_start_now_link: "/transition-check/questions"
     topic_section_header: 所有英國脫歐資訊
     topic_section_subheading: 瀏覽與英國脫歐相關的所有資訊
-    video_section_description: |
-      <p>與歐洲業務往來已經改變。你需要遵守有關出口、進口、關稅、數據和&nbsp；招聘的新規範。</p>
-      <p>觀看影片以了解新規範會對你的業務有何影響。你還可以 <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">使用英國脫歐確認器</a> 獲取個人化的操作列表。</p>
-    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
-    video_section_title: 確保你的業務進展
-    video_section_transcription_summary: 觀看影片文獻
-    video_section_transcription_text: |
-      <p>業務，英國已脫離歐盟，現在適用新規範。</p>
-      <p>為了讓你的業務持續發展，請使用 gov.uk/transition 上的英國脫歐確認器為你的業務獲取個人化操作。</p>
-      <p>確保你的業務進展。</p>

@@ -1,6 +1,17 @@
+---
 bn:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: পরিচালনাকারী
+    breadcrumbs:
+      courts_and_tribunals: আদালত ও ট্রাইব্যুনাল
+      organisations: প্রতিষ্ঠানসমূহ
+    contact:
+      contact_details: যোগাযোগের বিস্তারিত তথ্য
+      contact_form: 'যোগাযোগের ফর্ম: %{title}'
+      contact_organisation: যোগাযোগ %{organisation}
+      email: ইমেইল
+      telephone: টেলিফোন
     content_item:
       schema_name:
         aaib_report:
@@ -225,16 +236,6 @@ bn:
         written_statement:
           one: সংসদে লিখিত বিবৃতি
           other: সংসদে লিখিত বিবৃতিসমূহ
-    administered_by: পরিচালনাকারী
-    breadcrumbs:
-      courts_and_tribunals: আদালত ও ট্রাইব্যুনাল
-      organisations: প্রতিষ্ঠানসমূহ
-    contact:
-      contact_details: যোগাযোগের বিস্তারিত তথ্য
-      contact_form: 'যোগাযোগের ফর্ম: %{title}'
-      contact_organisation: যোগাযোগ %{organisation}
-      email: ইমেইল
-      telephone: টেলিফোন
     corporate_information: কর্পোরেট তথ্য
     document_types:
       documents: নথিপত্র
@@ -268,10 +269,7 @@ bn:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: সকল স্বচ্ছতা ও তথ্যের স্বাধীনতা বিষয়ক প্রকাশনা দেখুন
         title: স্বচ্ছতা ও তথ্যের স্বাধীনতা বিষয়ক প্রকাশনা
-    errors_or_omissions_html: <p>ত্রুটি বা বর্জন? <a class="govuk-link" href="/contact/govuk">আমাদেরকে
-      এখানে বলুন</a>। নন-ডিপার্টমেন্টাল সরকারি প্রতিষ্ঠানগুলোর দাপ্তরিক তালিকার জন্য
-      <a class="govuk-link" href="/government/collections/public-bodies">সরকারি প্রতিষ্ঠানসমূহ
-      দেখুন</a>।</p>
+    errors_or_omissions_html: <p>ত্রুটি বা বর্জন? <a class="govuk-link" href="/contact/govuk">আমাদেরকে এখানে বলুন</a>। নন-ডিপার্টমেন্টাল সরকারি প্রতিষ্ঠানগুলোর দাপ্তরিক তালিকার জন্য <a class="govuk-link" href="/government/collections/public-bodies">সরকারি প্রতিষ্ঠানসমূহ দেখুন</a>।</p>
     featured: ফিচারকৃত
     foi:
       contact_form: FOI যোগাযোগের ফর্ম
@@ -282,12 +280,9 @@ bn:
       freedom_of_information_requests: তথ্যের স্বাধীনতার অনুরোধসমূহ
       make_an_foi_request: একটি FOI-এর অনুরোধ করুন
       making_foi_requests:
-        step1_html: তথ্যের স্বাধীনতা (FOI) বিষয়ক আইন এবং <a href="%{how_to_path}"
-          class="govuk-link brand__color">কিভাবে একটি অনুরোধ করতে হয়</a> তা পড়ুন।
-        step2_html: আমরা ইতোমধ্যে আপনার প্রশ্নের উত্তর দিয়েছি কি না তা দেখতে <a href="%{our_releases_path}"
-          class="govuk-link brand__color">আমাদের পূর্ববর্তী প্রকাশনাগুলো</a> দেখুন।
-        step3_html: নিচের বিস্তারিত তথ্য ব্যবহার করে আমাদের সাথে যোগাযোগ করার মাধ্যমে
-          একটি নতুন অনুরোধ করুন।
+        step1_html: তথ্যের স্বাধীনতা (FOI) বিষয়ক আইন এবং <a href="%{how_to_path}" class="govuk-link brand__color">কিভাবে একটি অনুরোধ করতে হয়</a> তা পড়ুন।
+        step2_html: আমরা ইতোমধ্যে আপনার প্রশ্নের উত্তর দিয়েছি কি না তা দেখতে <a href="%{our_releases_path}" class="govuk-link brand__color">আমাদের পূর্ববর্তী প্রকাশনাগুলো</a> দেখুন।
+        step3_html: নিচের বিস্তারিত তথ্য ব্যবহার করে আমাদের সাথে যোগাযোগ করার মাধ্যমে একটি নতুন অনুরোধ করুন।
     follow_us: আমাদেরকে অনুসরণ করুন
     hidden_share_link: এখানে অনুসরণ করুন
     high_profile_groups: "%{title}-এর মধ্যে উচ্চ প্রোফাইল গ্রুপ"
@@ -299,8 +294,7 @@ bn:
       devolved: "%{title} হলো <a href='%{link_href}'>%{link_text}</a>-এর বডি"
       joining: "%{title} শীঘ্রই GOV.UK-এ একত্রীভূত হবে"
       left_gov: "%{title} এখন যুক্তরাজ্য সরকার থেকে স্বাধীন"
-      merged: "%{updated}-এ %{title} <a href='%{link_href}'>%{link_text}</a>-এর অংশ
-        হয়েছে"
+      merged: "%{updated}-এ %{title} <a href='%{link_href}'>%{link_text}</a>-এর অংশ হয়েছে"
       merged_no_date: "%{title} এখন <a href='%{link_href}'>%{link_text}</a>-এর অংশ"
       no_longer_exists: "%{title} বন্ধ হয়ে গেছে"
       no_website: "%{title}-এর কোনো ওয়েবসাইট নেই"

@@ -1,6 +1,17 @@
+---
 hu:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: 'Adminisztrálta:'
+    breadcrumbs:
+      courts_and_tribunals: Bíróságok
+      organisations: Szervezetek
+    contact:
+      contact_details: Elérhetőségek
+      contact_form: 'Kapcsolatfelvételi űrlap: %{title}'
+      contact_organisation: Kapcsolattartó %{organisation}
+      email: E-mail
+      telephone: Telefonszám
     content_item:
       schema_name:
         aaib_report:
@@ -112,10 +123,8 @@ hu:
           one: Térkép
           other: Térképek
         medical_safety_alert:
-          one: Gyógyszerekre és orvostechnikai eszközökre vonatkozó figyelmeztetések
-            és visszahívások
-          other: Gyógyszerekre és orvostechnikai eszközökre vonatkozó figyelmeztetések
-            és visszahívások
+          one: Gyógyszerekre és orvostechnikai eszközökre vonatkozó figyelmeztetések és visszahívások
+          other: Gyógyszerekre és orvostechnikai eszközökre vonatkozó figyelmeztetések és visszahívások
         national:
           one: Nemzeti statisztikai bejelentés
           other: Nemzeti statisztikai bejelentések
@@ -227,16 +236,6 @@ hu:
         written_statement:
           one: Írásbeli parlamenti nyilatkozat
           other: Írásbeli parlamenti nyilatkozatok
-    administered_by: 'Adminisztrálta:'
-    breadcrumbs:
-      courts_and_tribunals: Bíróságok
-      organisations: Szervezetek
-    contact:
-      contact_details: Elérhetőségek
-      contact_form: 'Kapcsolatfelvételi űrlap: %{title}'
-      contact_organisation: Kapcsolattartó %{organisation}
-      email: E-mail
-      telephone: Telefonszám
     corporate_information: Vállalati adatok
     document_types:
       documents: Dokumentumok
@@ -268,13 +267,9 @@ hu:
       transparency:
         see_all:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
-          text: Tekintsen meg minden átláthatósággal és az információközlés szabadságával
-            kapcsolatos információt
+          text: Tekintsen meg minden átláthatósággal és az információközlés szabadságával kapcsolatos információt
         title: Átláthatóság és az információközlés szabadsága
-    errors_or_omissions_html: <p>Hibák vagy hiányosságok? <a class="govuk-link" href="/contact/govuk">Mondja
-      el nekünk</a>. A nem minisztériumként működő hivatalos szervek hivatalos listájáért
-      tekintse meg a <a class="govuk-link" href="/government/collections/public-bodies">hivatalos
-      szerveket</a>.</p>
+    errors_or_omissions_html: <p>Hibák vagy hiányosságok? <a class="govuk-link" href="/contact/govuk">Mondja el nekünk</a>. A nem minisztériumként működő hivatalos szervek hivatalos listájáért tekintse meg a <a class="govuk-link" href="/government/collections/public-bodies">hivatalos szerveket</a>.</p>
     featured: Kiemelt
     foi:
       contact_form: Információszabadság - kapcsolatfelvételi űrlap
@@ -285,13 +280,9 @@ hu:
       freedom_of_information_requests: Információszabadsággal kapcsolatos kérelmek
       make_an_foi_request: Információszabadsággal kapcsolatos kérelem küldése
       making_foi_requests:
-        step1_html: Tudjon meg többet az Információszabadság (FOI) Törvényéről és
-          arról, hogy <a href="%{how_to_path}" class="govuk-link brand__color">miként
-          tud kérelmet beadni</a>.
-        step2_html: Nézze meg <a href="%{our_releases_path}" class="govuk-link brand__color">korábbi
-          kiadásainkat</a>, hátha megválaszoltuk már a kérdését.
-        step3_html: 'Küldjön be egy új kérelmet: vegye fel velünk a kapcsolatot az
-          alábbiak egyikén keresztül.'
+        step1_html: Tudjon meg többet az Információszabadság (FOI) Törvényéről és arról, hogy <a href="%{how_to_path}" class="govuk-link brand__color">miként tud kérelmet beadni</a>.
+        step2_html: Nézze meg <a href="%{our_releases_path}" class="govuk-link brand__color">korábbi kiadásainkat</a>, hátha megválaszoltuk már a kérdését.
+        step3_html: 'Küldjön be egy új kérelmet: vegye fel velünk a kapcsolatot az alábbiak egyikén keresztül.'
     follow_us: Kövessen minket
     hidden_share_link: Kövessen minket a következőn
     high_profile_groups: 'Magas rangú csoportok a következőn belül: %{title}'
@@ -303,8 +294,7 @@ hu:
       devolved: "%{title} a(z) <a href='%{link_href}'>%{link_text}</a> egyik hivatala"
       joining: "%{title} hamarosan eggyé válik a GOV.UK-val"
       left_gov: "%{title} már független az Egyesült Királyság kormányától"
-      merged: "%{title} a(z) <a href='%{link_href}'>%{link_text}</a> in %{updated}
-        részévé vált"
+      merged: "%{title} a(z) <a href='%{link_href}'>%{link_text}</a> in %{updated} részévé vált"
       merged_no_date: "%{title} a(z) <a href='%{link_href}'>%{link_text}</a> része"
       no_longer_exists: "%{title} bezárt"
       no_website: "%{title} nem rendelkezik weboldallal"
@@ -319,8 +309,7 @@ hu:
       special_representatives: Speciális képviselőink
       traffic_commissioners: Közlekedésügyi főmegbízott
     read_more: Tudjon meg többet arról, hogy mit csinálunk
-    search_for_department: Keressen rá egy minisztériumra, ügynökségre vagy hivatalos
-      szervre
+    search_for_department: Keressen rá egy minisztériumra, ügynökségre vagy hivatalos szervre
     see_all_latest_documents: Tekintse meg a legfrissebb dokumentumokat
     separate_website: külön weboldal
     services_and_information: Minden %{acronym} szolgálatás és információ
@@ -342,6 +331,5 @@ hu:
     view_less: kevesebb megtekintése
     what_we_do: 'Mit csinál a következő: %{title}'
     works_with_statement:
-      multiple: 'Együtt dolgozik a következőkkel: %{works_with_count} ügynökségekkel
-        és hivatalos szervekkel'
+      multiple: 'Együtt dolgozik a következőkkel: %{works_with_count} ügynökségekkel és hivatalos szervekkel'
       one: 'Együtt dolgozik a következőkkel: %{works_with_count} hivatalos szerv'

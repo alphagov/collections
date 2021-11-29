@@ -1,10 +1,10 @@
+---
 uz:
   roles:
+    find_out_more_html: Ушбу рольни олган олдинги эгалар ҳақида кўпроқ бизнинг бўлимдан %{link} билиб олинг.
     heading:
       one: Роль
       other: Роллар
-    find_out_more_html: Ушбу рольни олган олдинги эгалар ҳақида кўпроқ бизнинг бўлимдан
-      %{link} билиб олинг.
     headings:
       current_holder: Рольни олган жорий эга
       previous_holders: Олдинги эга

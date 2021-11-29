@@ -1,12 +1,12 @@
+---
 pl:
   roles:
+    find_out_more_html: Dowiedz się więcej o poprzednich osobach pełniących tę funkcję w sekcji %{link}.
     heading:
-      one: Funkcja
       few:
       many:
+      one: Funkcja
       other: Funkcje
-    find_out_more_html: Dowiedz się więcej o poprzednich osobach pełniących tę funkcję
-      w sekcji %{link}.
     headings:
       current_holder: Obecna osoba sprawująca funkcję
       previous_holders: Poprzednia osoba sprawująca funkcję

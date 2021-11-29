@@ -1,6 +1,17 @@
+---
 gu:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: દ્વારા સંચાલિત
+    breadcrumbs:
+      courts_and_tribunals: ન્યાયાલયો અને ટ્રિબ્યુનલ્સ
+      organisations: સંસ્થાઓ
+    contact:
+      contact_details: સંપર્ક વિગતો
+      contact_form: સંપર્ક પત્રક:%{title}
+      contact_organisation: સંપર્ક%{organisation}
+      email: ઈમેલ
+      telephone: ટેલિફોન
     content_item:
       schema_name:
         aaib_report:
@@ -225,16 +236,6 @@ gu:
         written_statement:
           one: સંસદમાં લેખિત નિવેદન
           other: સંસદમાં લેખિત નિવેદનો
-    administered_by: દ્વારા સંચાલિત
-    breadcrumbs:
-      courts_and_tribunals: ન્યાયાલયો અને ટ્રિબ્યુનલ્સ
-      organisations: સંસ્થાઓ
-    contact:
-      contact_details: સંપર્ક વિગતો
-      contact_form: સંપર્ક પત્રક:%{title}
-      contact_organisation: સંપર્ક%{organisation}
-      email: ઈમેલ
-      telephone: ટેલિફોન
     corporate_information: કોર્પોરેટ માહિતી
     document_types:
       documents: દસ્તાવેજો
@@ -268,24 +269,17 @@ gu:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: તમામ પારદર્શિતા-અને-માહિતી જારી કરવાની સ્વતંત્રતા જુઓ
         title: પારદર્શિતા-અને-માહિતી જારી કરવાની સ્વતંત્રતા
-    errors_or_omissions_html: <p>ભૂલો અથવા બાદબાકી?<a class="govuk-link" href="/contact/govuk">અમને
-      અહીં જણાવો</a>.બિન-વિભાગીય જાહેર સંસ્થાઓની અધિકૃત યાદીઓ માટે<a class="govuk-link"
-      href="/government/collections/public-bodies">જાહેર સંસ્થાઓ જુઓ</a>.</p>
+    errors_or_omissions_html: <p>ભૂલો અથવા બાદબાકી?<a class="govuk-link" href="/contact/govuk">અમને અહીં જણાવો</a>.બિન-વિભાગીય જાહેર સંસ્થાઓની અધિકૃત યાદીઓ માટે<a class="govuk-link" href="/government/collections/public-bodies">જાહેર સંસ્થાઓ જુઓ</a>.</p>
     featured: ફીચર્ડ
     foi:
       contact_form: માહિતીની સ્વતંત્રતા સંપર્ક પત્રક
-      foi_exemption_html: "આ સંસ્થાને માહિતીની સ્વતંત્રતા અધિનિયમ દ્વારા આવરી લેવામાં
-        આવેલ નથી. \nકઈ સંસ્થાઓને સામેલ કરવામાં આવેલ છે, તે જોવા માટે<a href=\"%{foi_url}\"
-        class=\"govuk-link brand__color\">કાયદો</a>જુઓ.\n"
+      foi_exemption_html: "આ સંસ્થાને માહિતીની સ્વતંત્રતા અધિનિયમ દ્વારા આવરી લેવામાં આવેલ નથી. \nકઈ સંસ્થાઓને સામેલ કરવામાં આવેલ છે, તે જોવા માટે<a href=\"%{foi_url}\" class=\"govuk-link brand__color\">કાયદો</a>જુઓ.\n"
       freedom_of_information_act: માહિતીની સ્વતંત્રતા (FOI) અધિનિયમ
       freedom_of_information_requests: માહિતીની સ્વતંત્રતા અરજીઓ
       make_an_foi_request: માહિતીની સ્વતંત્રતાની વિનંતી કરો
       making_foi_requests:
-        step1_html: માહિતીની સ્વતંત્રતા (FOI) અધિનિયમ અંગે અને <a href="%{how_to_path}"
-          class="govuk-link brand__color">અરજી કેવી રીતે કરવી</a> તે અંગે વાંચો.
-        step2_html: <a href="%{our_releases_path}" class="govuk-link brand__color">અમારા
-          અગાઉના પ્રકાશનો</a> તપાસો અને જુઓ કે અમે તમારા પ્રશ્નનો જવાબ પહેલાથી જ આપી
-          દીધો છે કે કેમ.
+        step1_html: માહિતીની સ્વતંત્રતા (FOI) અધિનિયમ અંગે અને <a href="%{how_to_path}" class="govuk-link brand__color">અરજી કેવી રીતે કરવી</a> તે અંગે વાંચો.
+        step2_html: <a href="%{our_releases_path}" class="govuk-link brand__color">અમારા અગાઉના પ્રકાશનો</a> તપાસો અને જુઓ કે અમે તમારા પ્રશ્નનો જવાબ પહેલાથી જ આપી દીધો છે કે કેમ.
         step3_html: નીચેની વિગતોનો ઉપયોગ કરીને અમારો સંપર્ક કરો અને નવી અરજી કરો.
     follow_us: અમને ફોલો કરો
     hidden_share_link: પર ફોલો કરો
@@ -298,10 +292,8 @@ gu:
       devolved: "%{title} એ a href='%{link_href}'>%{link_text}</a>ની એક સંસ્થા છે"
       joining: "%{title}ને ટૂંક સમયમાં GOV.UKમાં સમાવિષ્ટ કરવામાં આવશે"
       left_gov: "%{title} હવે UK સરકારથી સ્વતંત્ર છે"
-      merged: "%{title} <a href='%{link_href}'>%{link_text}</a> in %{updated} નો ભાગ
-        બની"
-      merged_no_date: "%{title} હવે <a href='%{link_href}'>%{link_text}</a> નો એક
-        ભાગ છે"
+      merged: "%{title} <a href='%{link_href}'>%{link_text}</a> in %{updated} નો ભાગ બની"
+      merged_no_date: "%{title} હવે <a href='%{link_href}'>%{link_text}</a> નો એક ભાગ છે"
       no_longer_exists: "%{title} બંધ થયેલ છે"
       no_website: "%{title} ની કોઈ વેબસાઇટ નથી"
       separate_website: "%{title} ની એક <a href='%{url}'>અલગ વેબસાઇટ</a>છે"

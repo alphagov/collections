@@ -1,32 +1,10 @@
+---
 es-419:
   brexit_landing_page:
-    campaign_links:
-      lead_in: 'Comprueba lo que necesita hacer de forma diferente si eres:'
-      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
-        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
-        data-track-label="Get the complete list">Obtenga la lista completa</a> de
-        lo que debe hacer por usted, su negocio y su familia.
-    comms:
-      read_transcript: Lea la transcripción de este vídeo
-    comms_header: Anuncios
-    data_list_title: 'Página de inicio del Brexit: %{header}'
-    email_mailto_subject: 'El nuevo comienzo del Reino Unido: pongámonos en marcha-
-      GOV.UK'
-    guidance_header: Cambios para empresas y ciudadanos
-    meta_description: Descubra cómo se aplican las nuevas normas del Brexit a aspectos
-      como viajes y negocios con Europa. Utilice el consultor del Brexit para obtener
-      una lista personalizada de medidas.
+    meta_description: Descubra cómo se aplican las nuevas normas del Brexit a aspectos como viajes y negocios con Europa. Utilice el consultor del Brexit para obtener una lista personalizada de medidas.
     meta_title: Brexit
-    no_cookies:
-      change_settings_text: Cambiar la configuración de cookies
-      icon_text: VIDEO
-      or_text: o
-      to_watch_text: ver el video
-      watch_link_text: Ver en YouTube
     page_header: Brexit:<br/>nuevas reglas están aquí
-    page_header_explainer: Las nuevas normas se aplican a aspectos como viajes y negocios
-      con Europa. Utilice el consultor del Brexit para obtener una lista personalizada
-      de medidas para usted, su empresa y su familia.
+    page_header_explainer: Las nuevas normas se aplican a aspectos como viajes y negocios con Europa. Utilice el consultor del Brexit para obtener una lista personalizada de medidas para usted, su empresa y su familia.
     sections:
       aria_string_suffix: relacionado con el Brexit
       guidance_and_regulation: Guía y regulación
@@ -35,22 +13,5 @@ es-419:
       research_and_statistics: Investigación y estadísticas
       services: Servicios
       transparency: Transparencia y libertad de información
-    share_links: Compartir esta página
-    take_action_list:
-      amber: Cambiar
-      green: Ir a
-      red: Consulte
-    take_action_start_now: 'Consultor del Brexit: empiece ahora'
-    take_action_start_now_link: "/transition-check/questions"
     topic_section_header: Toda la información sobre el Brexit
     topic_section_subheading: Buscar toda la información relacionada con el Brexit
-    video_section_description: |
-      <p>Hacer negocios con Europa ha cambiado. Tiene que seguir las nuevas normas sobre exportaciones, importaciones, aranceles, datos y&nbsp;contratación.</p>
-      <p>Mira el vídeo para saber qué implican las nuevas normativas para tu empresa. También puede <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">utilizar el consultor del Brexit</a> para obtener una lista personalizada de medidas.</p>
-    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
-    video_section_title: Mantenga su negocio en marcha
-    video_section_transcription_summary: Ver la transcripción del vídeo
-    video_section_transcription_text: |
-      <p>Empresas, el Reino Unido ha abandonado la UE y ahora se aplican nuevas normas.</p>
-      <p>Para mantener su negocio en movimiento, utilice la herramienta de comprobación del Brexit en gov.uk/transition para obtener acciones personalizadas para su negocio.</p>
-      <p>Mantengamos el negocio en movimiento.</p>

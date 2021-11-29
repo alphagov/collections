@@ -1,10 +1,10 @@
+---
 sq:
   roles:
+    find_out_more_html: Mësoni më shumë për mbajtësit e mëparshëm të këtij roli në seksionin tonë %{link}.
     heading:
       one: Roli
       other: Rolet
-    find_out_more_html: Mësoni më shumë për mbajtësit e mëparshëm të këtij roli në
-      seksionin tonë %{link}.
     headings:
       current_holder: Mbajtësi i rolit aktual
       previous_holders: Mbajtësit e mëparshëm

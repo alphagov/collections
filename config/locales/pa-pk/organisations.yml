@@ -1,6 +1,17 @@
+---
 pa-pk:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: جس نیں ایس دا انتظام کیتا
+    breadcrumbs:
+      courts_and_tribunals: کورٹس تے عدالتاں
+      organisations: تنظیماں
+    contact:
+      contact_details: رابطے دی تفصیالات
+      contact_form: 'رابطے دا فارم: {title}%'
+      contact_organisation: 'رابطہ:  %{organisation}'
+      email: ای میل
+      telephone: ٹیلی فون
     content_item:
       schema_name:
         aaib_report:
@@ -225,16 +236,6 @@ pa-pk:
         written_statement:
           one: قومی مجلس دے سامنے تحریری بیان
           other: قومی مجلس دے سامنے تحریری بیان
-    administered_by: جس نیں ایس دا انتظام کیتا
-    breadcrumbs:
-      courts_and_tribunals: کورٹس تے عدالتاں
-      organisations: تنظیماں
-    contact:
-      contact_details: رابطے دی تفصیالات
-      contact_form: 'رابطے دا فارم: {title}%'
-      contact_organisation: 'رابطہ:  %{organisation}'
-      email: ای میل
-      telephone: ٹیلی فون
     corporate_information: کاروبار بارے معلومات
     document_types:
       documents: دستاویزات
@@ -268,29 +269,22 @@ pa-pk:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: خبراں دی آزادی تے شفافیت بارے جاری کیتا گیا سب کُج ویکھو
         title: خبراں دی آزادی تے شفافیت بارے جاری کیتا گیا
-    errors_or_omissions_html: <p>غلطی یا کوتاہی <a class="govuk-link" href="/contact/govuk">سانوں
-      ایتھے دسو</a>. غیر عوامی اداریاں دی سرکاری فہرست<a class="govuk-link" href="/government/collections/public-bodies">عوامی
-      اداریاں بارے ویکھو</a>.</p>
+    errors_or_omissions_html: <p>غلطی یا کوتاہی <a class="govuk-link" href="/contact/govuk">سانوں ایتھے دسو</a>. غیر عوامی اداریاں دی سرکاری فہرست<a class="govuk-link" href="/government/collections/public-bodies">عوامی اداریاں بارے ویکھو</a>.</p>
     featured: نُمایاں کیتا گیا
     foi:
       contact_form: 'رابطے دا FOI فارم '
-      foi_exemption_html: 'ایہ ادارہ معلومات دی آزادی دے قانون دے تحت نہیں ہوندا۔
-        ایہ ویکھن لئی کہ کہیڑے ادارے ایندے وچ شامل نیں ایہ ویکھو <a href="%{foi_url}"
-        class="govuk-link brand__color">قانونی سازی</a>.
+      foi_exemption_html: 'ایہ ادارہ معلومات دی آزادی دے قانون دے تحت نہیں ہوندا۔ ایہ ویکھن لئی کہ کہیڑے ادارے ایندے وچ شامل نیں ایہ ویکھو <a href="%{foi_url}" class="govuk-link brand__color">قانونی سازی</a>.
 
 '
       freedom_of_information_act: معلومات دی آزادی  (FOI)  دا قانون
       freedom_of_information_requests: معلومات دی آزادی دیاں درخواستاں
       make_an_foi_request: اک FOI دی درخواست دیوؤ
       making_foi_requests:
-        step1_html: معلومات دی آزادی  (FOI)  دے قانون بارے ہور جانن لئی ایہ ویکھو
-          <a href="%{how_to_path}" class="govuk-link brand__color">اک درخواست کیس
-          طراں کیتی جا سکتی ہے</a>.
+        step1_html: معلومات دی آزادی  (FOI)  دے قانون بارے ہور جانن لئی ایہ ویکھو <a href="%{how_to_path}" class="govuk-link brand__color">اک درخواست کیس طراں کیتی جا سکتی ہے</a>.
         step2_html: |-
           </a> ساڈے پچھلے جاری کیتے ہوئے  <a href="%{our_releases_path}" class="govuk-link brand__color">ویکھو
           ایہ ویکھو کہ اساں تہاڈے سوال دا پہلاں ای جواب دے دتا اے۔
-        step3_html: تھلے دتی گئی تفصیلات نوں استعما ل کر کے ساڈےنال رابطہ کر کے ایک
-          نویں درخواست دیوؤ
+        step3_html: تھلے دتی گئی تفصیلات نوں استعما ل کر کے ساڈےنال رابطہ کر کے ایک نویں درخواست دیوؤ
     follow_us: ساڈے پچھے آؤ
     hidden_share_link: ساڈے پچھے اوندے جاو
     high_profile_groups: ایندے وچ وڈے ناں والے گروہ {title}%
@@ -302,8 +296,7 @@ pa-pk:
       devolved: "%{title} ایندا حصہ اے <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} جلد ای ایندے وچ شامل ہو جائے گا GOV.UK"
       left_gov: "%{title}ایہ ہن UK دی حکومت توں آزاد اے"
-      merged: "%{title} ایندا حصہ بن گیا اے <a href='%{link_href}'>%{link_text}</a>
-        وچ %{updated}"
+      merged: "%{title} ایندا حصہ بن گیا اے <a href='%{link_href}'>%{link_text}</a> وچ %{updated}"
       merged_no_date: "%{title}ہن ایندا حصہ اے<a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} بند ہو گیا اے"
       no_website: "%{title} ایندی کوئی ویب سائٹ نئیں"

@@ -1,31 +1,10 @@
+---
 vi:
   brexit_landing_page:
-    campaign_links:
-      lead_in: 'Kiểm tra những gì bạn cần làm khác đi nếu bạn:'
-      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
-        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
-        data-track-label="Get the complete list">Nhận danh sách đầy đủ</a> về những
-        việc bạn cần làm cho bạn, cho doanh nghiệp và gia đình của bạn.
-    comms:
-      read_transcript: Đọc bản ghi nội dung của video này
-    comms_header: Thông báo
-    data_list_title: 'Trang đích Brexit: %{header}'
-    email_mailto_subject: UK's%20new%20start:%20let's%20get%20going-%20GOV.UK
-    guidance_header: Những thay đổi đối với doanh nghiệp và công dân
-    meta_description: Tìm hiểu cách áp dụng các quy tắc Brexit mới cho những ngành
-      như du lịch và hợp tác kinh doanh với Châu Âu. Sử dụng công cụ kiểm tra Brexit
-      để nhận danh sách các hành động được cá nhân hóa.
+    meta_description: Tìm hiểu cách áp dụng các quy tắc Brexit mới cho những ngành như du lịch và hợp tác kinh doanh với Châu Âu. Sử dụng công cụ kiểm tra Brexit để nhận danh sách các hành động được cá nhân hóa.
     meta_title: Brexit
-    no_cookies:
-      change_settings_text: Thay đổi cài đặt cookie của bạn
-      icon_text: VIDEO
-      or_text: hoặc
-      to_watch_text: để xem video
-      watch_link_text: Xem trên YouTube
     page_header: Brexit:<br/>đây là các quy tắc mới
-    page_header_explainer: Các quy tắc mới áp dụng cho những ngành như du lịch và
-      hợp tác kinh doanh với Châu Âu. Sử dụng công cụ kiểm tra Brexit để nhận danh
-      sách các hành động được cá nhân hóa cho bạn, doanh nghiệp và gia đình của bạn.
+    page_header_explainer: Các quy tắc mới áp dụng cho những ngành như du lịch và hợp tác kinh doanh với Châu Âu. Sử dụng công cụ kiểm tra Brexit để nhận danh sách các hành động được cá nhân hóa cho bạn, doanh nghiệp và gia đình của bạn.
     sections:
       aria_string_suffix: liên quan đến Brexit
       guidance_and_regulation: Hướng dẫn và quy định
@@ -34,22 +13,5 @@ vi:
       research_and_statistics: Nghiên cứu và thống kê
       services: Dịch vụ
       transparency: Công bố theo luật về tính minh bạch và tự do thông tin
-    share_links: Chia sẻ trang này
-    take_action_list:
-      amber: Thay đổi
-      green: Bắt đầu
-      red: Kiểm tra
-    take_action_start_now: 'Công cụ kiểm tra Brexit: bắt đầu ngay'
-    take_action_start_now_link: "/transition-check/questions"
     topic_section_header: Tất cả thông tin về Brexit
     topic_section_subheading: Duyệt tìm tất cả thông tin liên quan đến Brexit
-    video_section_description: |
-      <p>Cách triển khai việc hợp tác kinh doanh với Châu Âu đã thay đổi. Bạn cần tuân thủ các quy tắc mới về xuất khẩu, nhập khẩu, thuế quan, dữ liệu và&nbsp;tuyển dụng.</p>
-      <p>Xem video để tìm hiểu ý nghĩa của các quy tắc mới đối với doanh nghiệp của bạn. Bạn cũng có thể <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">sử dụng công cụ kiểm tra Brexit</a> để nhận danh sách các hành động được cá nhân hóa.</p>
-    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
-    video_section_title: Duy trì hoạt động cho doanh nghiệp của bạn
-    video_section_transcription_summary: Xem bản ghi nội dung video
-    video_section_transcription_text: |
-      <p>Kính thưa các doanh nghiệp, Vương quốc Anh đã rời khỏi Liên minh Châu Âu và các quy tắc mới nay sẽ được áp dụng.</p>
-      <p>Để doanh nghiệp của bạn tiếp tục hoạt động, hãy sử dụng công cụ kiểm tra Brexit trên trang gov.uk/transition để thực hiện các hành động được cá nhân hóa cho doanh nghiệp của bạn.</p>
-      <p>Hãy duy trì hoạt động cho doanh nghiệp của bạn.</p>

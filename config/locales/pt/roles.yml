@@ -1,10 +1,10 @@
+---
 pt:
   roles:
+    find_out_more_html: Saiba mais sobre os detentores anteriores deste cargo na nossa secção %{link}.
     heading:
       one: Cargo
       other: Cargos
-    find_out_more_html: Saiba mais sobre os detentores anteriores deste cargo na nossa
-      secção %{link}.
     headings:
       current_holder: Titular atual do cargo
       previous_holders: Titulares anteriores

@@ -1,5 +1,17 @@
+---
 it:
   organisations:
+    about_page_path:
+    administered_by:
+    breadcrumbs:
+      courts_and_tribunals:
+      organisations:
+    contact:
+      contact_details:
+      contact_form:
+      contact_organisation:
+      email:
+      telephone:
     content_item:
       schema_name:
         aaib_report:
@@ -224,17 +236,6 @@ it:
         written_statement:
           one:
           other:
-    about_page_path:
-    administered_by:
-    breadcrumbs:
-      courts_and_tribunals:
-      organisations:
-    contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
     corporate_information:
     document_types:
       documents:

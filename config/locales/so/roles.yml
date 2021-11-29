@@ -1,9 +1,10 @@
+---
 so:
   roles:
+    find_out_more_html: Waxbadan ka ogow qabtayaasha hore ee doorkan %{link} qeybteena.
     heading:
       one: Doorka
       other: Doorarka
-    find_out_more_html: Waxbadan ka ogow qabtayaasha hore ee doorkan %{link} qeybteena.
     headings:
       current_holder: Cida hada haysta doorka
       previous_holders: Cidii horey u haysay

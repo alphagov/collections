@@ -1,31 +1,10 @@
+---
 ru:
   brexit_landing_page:
-    campaign_links:
-      lead_in: 'Проверьте, что вам нужно сделать по-другому, если вы:'
-      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
-        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
-        data-track-label="Get the complete list">Получите полный список</a> о том,
-        что вам нужно сделать для вас, вашего бизнеса и своей семьи.
-    comms:
-      read_transcript: Прочитайте транскрипт для этого видео
-    comms_header: Объявления
-    data_list_title: 'Целевая страница Брексит: %{header}'
-    email_mailto_subject: 'Новый старт для Соединённого Королевства: поехали! - GOV.UK'
-    guidance_header: Изменения для бизнеса и жителей
-    meta_description: Узнайте, как новые Брексит правила применяются к таким вещам
-      как путешествия и ведение бизнеса в Европе. При помощи Брексит чекера получите
-      индивидуальные список действий.
+    meta_description: Узнайте, как новые Брексит правила применяются к таким вещам как путешествия и ведение бизнеса в Европе. При помощи Брексит чекера получите индивидуальные список действий.
     meta_title: Брексит
-    no_cookies:
-      change_settings_text: Измените свои настройки параметров файлов cookie
-      icon_text: ВИДЕО
-      or_text: или
-      to_watch_text: смотреть видео
-      watch_link_text: Смотрите на YouTube
     page_header: Брексит:<br/>новые правила здесь
-    page_header_explainer: 'Новые правила применяются к таким вещам как путешествия
-      и ведение бизнеса в Европе. При помощи Брексит чекера получите индивидуальные
-      список действий для себя, своего бизнеса и своей семьи. '
+    page_header_explainer: 'Новые правила применяются к таким вещам как путешествия и ведение бизнеса в Европе. При помощи Брексит чекера получите индивидуальные список действий для себя, своего бизнеса и своей семьи. '
     sections:
       aria_string_suffix: связанный с Брексит
       guidance_and_regulation: Руководство и инструкции
@@ -33,24 +12,6 @@ ru:
       policy_and_engagement: Директивные документы и консультации
       research_and_statistics: Исследования и статистика
       services: Услуги
-      transparency: Новые редакции закона о свободе распространения и прозрачности
-        информации
-    share_links: Поделиться этой страницей
-    take_action_list:
-      amber: Измените
-      green: Перейти
-      red: Проверить
-    take_action_start_now: 'Брексит чекер: начните сейчас'
-    take_action_start_now_link: "/transition-check/questions"
+      transparency: Новые редакции закона о свободе распространения и прозрачности информации
     topic_section_header: Вся информация по Брексит
     topic_section_subheading: Скачать всю информацию, связанную с Брексит
-    video_section_description: |
-      <p>Ведение бизнеса с Европой изменилось. Вам нужно следовать новым правилам по экспорту, импорту, ставкам, данным и &nbsp;найму.</p>
-      <p>Смотрите видео, чтобы узнать, чо значат новые правида для вашего бизнеса. Вы также можете <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">использовать Брексит чекер</a> для получения индивидуального списка действий.</p>
-    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
-    video_section_title: Поддержите свой бизнес в рабочем состоянии
-    video_section_transcription_summary: Посмотрите транскрипт видео
-    video_section_transcription_text: |
-      <p>Бизнес, Соединенное Королевство покинуло ЕС и теперь применяются новые пра вила.</p>
-      <p>Для того, чтобы поддерживать свой бизнес в рабочем состоянии используйте инструмент Брексит чекер на gov.uk/transition to get personalised actions for your business.</p>
-      <p>Давайте поддерживать бизнес в рабочем состоянии.</p>

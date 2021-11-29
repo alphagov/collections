@@ -1,33 +1,10 @@
+---
 ps:
   brexit_landing_page:
-    campaign_links:
-      lead_in: 'وګورئ هغه څه چې تاسو ورته اړتیا لرئ په مختلف ډول ترسره کړئ که تاسو
-        یاست:'
-      lead_out: <a href = "/transition-check/questions" class = "govuk-link" data-module
-        = "gem-track-click" data-track-action = "/transition-check/questions" data-track-category
-        = "Transition-Landing-page" data-track-label = "Get the complete list">بشپړ
-        لیست ترلاسه کړئ</a> هغه څه چې تاسو ورته اړتیا لرئ ستاسو ، خپلې سوداګرۍ او
-        خپلې کورنۍ لپاره.
-    comms:
-      read_transcript: د دې ویډیو لپاره لیکنه ولولئ
-    comms_header: اعلانونه
-    data_list_title: د بریکسیت لینډینګ پا pageه:%{header}
-    email_mailto_subject: 'د انګلستان نوی پیل: راځئ چې لاړ شو- GOV.UK'
-    guidance_header: د سوداګرۍ او اتباعو لپاره بدلونونه
-    meta_description: ومومئ چې څنګه د بریکسیت نوي مقررات په شیانو لکه د سفر او اروپا
-      سره سوداګرۍ کولو باندې پلي کیږي. د کړنو شخصي لیست ترلاسه کولو لپاره د بریکسیت
-      چیکر وکاروئ.
+    meta_description: ومومئ چې څنګه د بریکسیت نوي مقررات په شیانو لکه د سفر او اروپا سره سوداګرۍ کولو باندې پلي کیږي. د کړنو شخصي لیست ترلاسه کولو لپاره د بریکسیت چیکر وکاروئ.
     meta_title: بریکسیټ
-    no_cookies:
-      change_settings_text: خپل د کوکي تنظیمات بدل کړئ
-      icon_text: ویډیو
-      or_text: یا
-      to_watch_text: د ویډیو لیدو لپاره
-      watch_link_text: په یوټیوب کې وګورئ
     page_header: 'بریکسیټ: <br/> نوي مقررات دلته دي'
-    page_header_explainer: نوي مقررات د شیانو لکه د سفر او اروپا سره سوداګرۍ کولو
-      باندې پلي کیږي. د تاسو ، ستاسو سوداګرۍ او کورنۍ لپاره د کړنو شخصي لیست ترلاسه
-      کولو لپاره د بریکسیت چیکر وکاروئ.
+    page_header_explainer: نوي مقررات د شیانو لکه د سفر او اروپا سره سوداګرۍ کولو باندې پلي کیږي. د تاسو ، ستاسو سوداګرۍ او کورنۍ لپاره د کړنو شخصي لیست ترلاسه کولو لپاره د بریکسیت چیکر وکاروئ.
     sections:
       aria_string_suffix: د بریکسټ پورې اړوند
       guidance_and_regulation: لارښوونه او مقررات
@@ -36,22 +13,5 @@ ps:
       research_and_statistics: څیړنې او احصایې
       services: خدمتونه
       transparency: د معلوماتو د خپریدو شفافیت او آزادي
-    share_links: دا پاه شریکه کړئ
-    take_action_list:
-      amber: بدلون
-      green: لاړ شه
-      red: چک
-    take_action_start_now: 'د بریکسیت چک کوونکی: همدا اوس پیل کړئ'
-    take_action_start_now_link: "/transition-check/questions"
     topic_section_header: د بریکسټ ټول معلومات
     topic_section_subheading: د بریکسیت پورې اړوند ټول معلومات براوز کړئ
-    video_section_description: |
-      <p>له اروپا سره سوداګرۍ کول بدل شوي. تاسو اړتیا لرئ چې د صادراتو، وارداتو، تعرفو، معلوماتو او & nbsp h استخدام په اړه نوي مقررات تعقیب کړئ.</p>
-      <p>ویډیو وګورئ ترڅو ومومئ چې نوي مقررات ستاسو د سوداګرۍ لپاره څه معنی لري. تاسو کولی شئ <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">د بریکسیت چیکر وکاروئ</a> د کړنو شخصي لیست ترلاسه کولو لپاره.</p>
-    video_section_link: https://www.youtube.com/watch؟v=AesZZsO9mm4
-    video_section_title: خپلې سوداګرۍ ته دوام ورکړئ
-    video_section_transcription_summary: د ویډیو نقل وګورئ
-    video_section_transcription_text: |
-      <p>سوداګرۍ ، انګلستان له اروپایی اتحادیې وتلی او نوي مقررات اوس پلي کیږي.</p>
-      <p>د خپلې سوداګرۍ پرمخ وړلو لپاره ، د خپلې سوداګرۍ لپاره شخصي کړنې ترلاسه کولو لپاره gov.uk/transition کې د بریکسیت چیکر وسیله وکاروئ.</p>
-      <p>راځئ چې سوداګرۍ ته دوام ورکړو.</p>

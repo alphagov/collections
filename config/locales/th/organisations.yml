@@ -1,3 +1,4 @@
+---
 th:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
@@ -268,9 +269,7 @@ th:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: ดูข่าวประชาสัมพันธ์เกี่ยวกับความโปร่งใสและเสรีภาพด้านข้อมูลข่าวสารทั้งหมด
         title: ความโปร่งใสและเสรีภาพในการเผยแพร่ข้อมูล
-    errors_or_omissions_html: <p>ข้อผิดพลาดหรือการละเว้น? <a class="govuk-link" href="/contact/govuk">บอกเราที่นี่</a>
-      สำหรับรายชื่ออย่างเป็นทางการขององค์กรอิสระ (non–departmental public bodies –
-      NDPB) <a class="govuk-link" href="/government/collections/public-bodies">ดูองค์กรอิสระ</a></p>
+    errors_or_omissions_html: <p>ข้อผิดพลาดหรือการละเว้น? <a class="govuk-link" href="/contact/govuk">บอกเราที่นี่</a> สำหรับรายชื่ออย่างเป็นทางการขององค์กรอิสระ (non–departmental public bodies – NDPB) <a class="govuk-link" href="/government/collections/public-bodies">ดูองค์กรอิสระ</a></p>
     featured: รายการเด่น
     foi:
       contact_form: แบบฟอร์มติดต่อ FOI
@@ -281,10 +280,8 @@ th:
       freedom_of_information_requests: เสรีภาพในการขอข้อมูล
       make_an_foi_request: การยื่นคำร้อง FOI
       making_foi_requests:
-        step1_html: อ่านเกี่ยวกับกฎหมาย Freedom of Information (FOI) และ <a href="%{how_to_path}"
-          class="govuk-link brand__color">วิธียื่นคำร้อง</a>
-        step2_html: ดู<a href="%{our_releases_path}" class="govuk-link brand__color">ฉบับก่อนหน้าของเรา</a>
-          เพื่อดูว่าเราได้ตอบคำถามของคุณแล้วหรือยัง
+        step1_html: อ่านเกี่ยวกับกฎหมาย Freedom of Information (FOI) และ <a href="%{how_to_path}" class="govuk-link brand__color">วิธียื่นคำร้อง</a>
+        step2_html: ดู<a href="%{our_releases_path}" class="govuk-link brand__color">ฉบับก่อนหน้าของเรา</a> เพื่อดูว่าเราได้ตอบคำถามของคุณแล้วหรือยัง
         step3_html: สร้างคำขอใหม่โดยติดต่อเราด้วยรายละเอียดด้านล่างนี้
     follow_us: ติดตามเรา
     hidden_share_link: ติดตามใน
@@ -297,10 +294,8 @@ th:
       devolved: "%{title} เป็นเนื้อความของ <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} จะถูกรวมเข้ากับ GOV.UK เร็วๆ นี้"
       left_gov: "%{title} เป็นอิสระจากรัฐบาลสหราชอาณาจักรแล้ว"
-      merged: "%{title} กลายเป็นส่วนหนึ่งของ <a href='%{link_href}'>%{link_text}</a>
-        ใน %{updated}"
-      merged_no_date: "%{title} เป็นส่วนหนึ่งของ <a href='%{link_href}'>%{link_text}</a>
-        แล้ว"
+      merged: "%{title} กลายเป็นส่วนหนึ่งของ <a href='%{link_href}'>%{link_text}</a> ใน %{updated}"
+      merged_no_date: "%{title} เป็นส่วนหนึ่งของ <a href='%{link_href}'>%{link_text}</a> แล้ว"
       no_longer_exists: "%{title} ปิดตัวแล้ว"
       no_website: "%{title} ไม่มีเว็บไซต์"
       separate_website: "%{title} มี <a href='%{url}'>เว็บไซต์แยกต่างหาก</a>"

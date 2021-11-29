@@ -1,6 +1,17 @@
+---
 kk:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Басқаратын
+    breadcrumbs:
+      courts_and_tribunals: Соттар мен сот орындары
+      organisations: Ұйымдар
+    contact:
+      contact_details: Байланысу мәліметтері
+      contact_form: 'Байланысу формасы: %{title}'
+      contact_organisation: Байланысу %{organisation}
+      email: Электрондық пошта
+      telephone: Телефон
     content_item:
       schema_name:
         aaib_report:
@@ -225,16 +236,6 @@ kk:
         written_statement:
           one: Парламентке жазбаша мәлімдеме
           other: Парламентке жазбаша мәлімдемелер
-    administered_by: Басқаратын
-    breadcrumbs:
-      courts_and_tribunals: Соттар мен сот орындары
-      organisations: Ұйымдар
-    contact:
-      contact_details: Байланысу мәліметтері
-      contact_form: 'Байланысу формасы: %{title}'
-      contact_organisation: Байланысу %{organisation}
-      email: Электрондық пошта
-      telephone: Телефон
     corporate_information: Корпоративтік ақпарат
     document_types:
       documents: Құжаттар
@@ -268,10 +269,7 @@ kk:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Барлық ақпарат шығарылымдарының ашықтығы мен еркіндігін қараңыз
         title: Ақпарат шығарылымының ашықтығы мен еркіндігі
-    errors_or_omissions_html: <p>Қателер немесе қалып кеткендер бар ма? <a class="govuk-link"
-      href="/contact/govuk">Осы жерде айтыңыз</a>. Ведомстволық емес мемлекеттік органдардың
-      ресми тізімдерін алу үшін<a class="govuk-link" href="/government/collections/public-bodies">мемлекеттік
-      органдарды қараңыз</a>.</p>
+    errors_or_omissions_html: <p>Қателер немесе қалып кеткендер бар ма? <a class="govuk-link" href="/contact/govuk">Осы жерде айтыңыз</a>. Ведомстволық емес мемлекеттік органдардың ресми тізімдерін алу үшін<a class="govuk-link" href="/government/collections/public-bodies">мемлекеттік органдарды қараңыз</a>.</p>
     featured: Таңдаулы
     foi:
       contact_form: FOI байланысу формасы
@@ -282,13 +280,9 @@ kk:
       freedom_of_information_requests: Ақпарат еркіндігі сұраулары
       make_an_foi_request: FOI сұрауын жасау
       making_foi_requests:
-        step1_html: Ақпарат еркіндігі (FOI) қаулысы және <a href="%{how_to_path}"
-          class="govuk-link brand__color">сұрау жасау жолы</a> туралы оқыңыз.
-        step2_html: Сіздің сұрақ жауап бар-жоғын білу үшін <a href="%{our_releases_path}"
-          class="govuk-link brand__color">біздің алдыңғы шығарылымдарды</a> қарап
-          шығыңыз.
-        step3_html: Төмендегі мәліметтерді пайдалана отырып байланысу арқылы жаңа
-          сұрау жасаңыз.
+        step1_html: Ақпарат еркіндігі (FOI) қаулысы және <a href="%{how_to_path}" class="govuk-link brand__color">сұрау жасау жолы</a> туралы оқыңыз.
+        step2_html: Сіздің сұрақ жауап бар-жоғын білу үшін <a href="%{our_releases_path}" class="govuk-link brand__color">біздің алдыңғы шығарылымдарды</a> қарап шығыңыз.
+        step3_html: Төмендегі мәліметтерді пайдалана отырып байланысу арқылы жаңа сұрау жасаңыз.
     follow_us: Бізге жазылыңыз
     hidden_share_link: Жазылыңыз
     high_profile_groups: "%{title} ішіндегі жоғары профильді топтар"
@@ -300,8 +294,7 @@ kk:
       devolved: "%{title} <a href='%{link_href}'>%{link_text}</a> органы"
       joining: "%{title} жақында GOV.UK өзара қарым-қатынас жасайды"
       left_gov: "%{title} қазір Ұлыбритания мемлекетінен дербес"
-      merged: "%{title} <a href='%{link_href}'>%{link_text}</a> %{updated} ішінде
-        бөлігі болды"
+      merged: "%{title} <a href='%{link_href}'>%{link_text}</a> %{updated} ішінде бөлігі болды"
       merged_no_date: "%{title} қазір <a href='%{link_href}'>%{link_text}</a> бөлігі"
       no_longer_exists: "%{title} жабылды"
       no_website: "%{title} веб-сайты жоқ"
@@ -338,6 +331,5 @@ kk:
     view_less: азырақ қарау
     what_we_do: "%{title} немен айналысады"
     works_with_statement:
-      multiple: "%{works_with_count} агенттіктері мен мемлекеттік органдармен жұмыс
-        істейді"
+      multiple: "%{works_with_count} агенттіктері мен мемлекеттік органдармен жұмыс істейді"
       one: "%{works_with_count} мемлекеттік органмен жұмыс істейді"

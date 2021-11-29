@@ -1,6 +1,17 @@
+---
 de:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Verwaltet durch
+    breadcrumbs:
+      courts_and_tribunals: Gerichte und Gerichtshöfe
+      organisations: Organisationen
+    contact:
+      contact_details: Kontaktdaten
+      contact_form: 'Kontaktformular: %{title}'
+      contact_organisation: Kontakt %{organisation}
+      email: Email
+      telephone: Telefon
     content_item:
       schema_name:
         aaib_report:
@@ -112,10 +123,8 @@ de:
           one: Karte
           other: Karten
         medical_safety_alert:
-          one: Warnmeldungen und Rückrufaktionen für Arzneimittel und medizinische
-            Geräte
-          other: Warnmeldungen und Rückrufaktionen für Arzneimittel und medizinische
-            Geräte
+          one: Warnmeldungen und Rückrufaktionen für Arzneimittel und medizinische Geräte
+          other: Warnmeldungen und Rückrufaktionen für Arzneimittel und medizinische Geräte
         national:
           one: Veröffentlichung der Nationalen Statistik
           other: Veröffentlichungen der Nationalen Statistik
@@ -227,16 +236,6 @@ de:
         written_statement:
           one: Schriftliche Erklärung vor dem Parlament
           other: Schriftliche Erklärungen vor dem Parlament
-    administered_by: Verwaltet durch
-    breadcrumbs:
-      courts_and_tribunals: Gerichte und Gerichtshöfe
-      organisations: Organisationen
-    contact:
-      contact_details: Kontaktdaten
-      contact_form: 'Kontaktformular: %{title}'
-      contact_organisation: Kontakt %{organisation}
-      email: Email
-      telephone: Telefon
     corporate_information: Unternehmensinformationen
     document_types:
       documents: Dokumente
@@ -270,10 +269,7 @@ de:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Alle Veröffentlichungen zur Transparenz und Informationsfreiheit anzeigen
         title: Veröffentlichungen zu Transparenz und Informationsfreiheit
-    errors_or_omissions_html: <p>Fehler oder Auslassungen? <a class="govuk-link" href="/contact/govuk">Berichten
-      Sie uns hier</a>. Offizielle Listen von nichtbehördlichen öffentlichen Einrichtungen
-      finden Sie unter <a class="govuk-link" href="/government/collections/public-bodies">Öffentliche
-      Einrichtungen</a>.</p>
+    errors_or_omissions_html: <p>Fehler oder Auslassungen? <a class="govuk-link" href="/contact/govuk">Berichten Sie uns hier</a>. Offizielle Listen von nichtbehördlichen öffentlichen Einrichtungen finden Sie unter <a class="govuk-link" href="/government/collections/public-bodies">Öffentliche Einrichtungen</a>.</p>
     featured: Vorgestellt
     foi:
       contact_form: Informationsfreiheit-Kontaktformular
@@ -284,13 +280,9 @@ de:
       freedom_of_information_requests: Anfragen zur Informationsfreiheit
       make_an_foi_request: Anfrage zur Informationsfreiheit stellen
       making_foi_requests:
-        step1_html: Lesen Sie mehr über das Informationsfreiheitgesetz und <a href="%{how_to_path}"
-          class="govuk-link brand__color">wie Sie einen Antrag stellen</a>.
-        step2_html: Sehen Sie in unseren <a href="%{our_releases_path}" class="govuk-link
-          brand__color">früheren Veröffentlichungen</a> nach, ob wir Ihre Frage bereits
-          beantwortet haben.
-        step3_html: Richten Sie eine neue Anfrage an uns, indem Sie die nachstehenden
-          Angaben verwenden.
+        step1_html: Lesen Sie mehr über das Informationsfreiheitgesetz und <a href="%{how_to_path}" class="govuk-link brand__color">wie Sie einen Antrag stellen</a>.
+        step2_html: Sehen Sie in unseren <a href="%{our_releases_path}" class="govuk-link brand__color">früheren Veröffentlichungen</a> nach, ob wir Ihre Frage bereits beantwortet haben.
+        step3_html: Richten Sie eine neue Anfrage an uns, indem Sie die nachstehenden Angaben verwenden.
     follow_us: Folgen Sie uns
     hidden_share_link: Folgen auf
     high_profile_groups: Hochrangige Gruppen im Rahmen von %{title}
@@ -302,8 +294,7 @@ de:
       devolved: "%{title} ist eine Körperschaft von <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} wird demnächst auf GOV.UK integriert werden"
       left_gov: "%{title} ist jetzt unabhängig von der britischen Regierung"
-      merged: "%{title} wurde Teil von <a href='%{link_href}'>%{link_text}</a> in
-        %{updated}"
+      merged: "%{title} wurde Teil von <a href='%{link_href}'>%{link_text}</a> in %{updated}"
       merged_no_date: "%{title} ist jetzt Teil von <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} wurde geschlossen"
       no_website: "%{title} hat keine Webseite"

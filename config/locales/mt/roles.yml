@@ -1,12 +1,12 @@
+---
 mt:
   roles:
+    find_out_more_html: Kun af iktar dwar detenturi preċedenti ta' dan ir-rwol fis-sezzjoni tagħna %{link}.
     heading:
-      one: Rwol
       few:
       many:
+      one: Rwol
       other: Rwolijiet
-    find_out_more_html: Kun af iktar dwar detenturi preċedenti ta' dan ir-rwol fis-sezzjoni
-      tagħna %{link}.
     headings:
       current_holder: Detentur tar-rwol attwali
       previous_holders: Detenturi preċedenti

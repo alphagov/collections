@@ -1,31 +1,10 @@
+---
 tr:
   brexit_landing_page:
-    campaign_links:
-      lead_in: 'Şunu yapıyorsanız neyi farklı yapmanız gerektiğini kontrol edin:'
-      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
-        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
-        data-track-label="Get the complete list">İşletmeniz ve aileniz için yapmanız
-        gerekenlerin</a> tam bir listesi.
-    comms:
-      read_transcript: Bu videonun transkriptini okuyun
-    comms_header: Duyurular
-    data_list_title: 'Brexit hedef sayfası: %{header}'
-    email_mailto_subject: UK's%20new%20start:%20let's%20get%20going-%20GOV.UK
-    guidance_header: İşletmeler ve vatandaşlar için değişiklikler
-    meta_description: Yeni Brexit kurallarının Avrupa’ya seyahat etmek ve Avrupa’yla
-      iş yapmak gibi konularda nasıl geçerli olduğunu öğrenin. Kişiselleştirilmiş
-      bir işlem listesini almak için Brexit kontrol aracını kullanın.
+    meta_description: Yeni Brexit kurallarının Avrupa’ya seyahat etmek ve Avrupa’yla iş yapmak gibi konularda nasıl geçerli olduğunu öğrenin. Kişiselleştirilmiş bir işlem listesini almak için Brexit kontrol aracını kullanın.
     meta_title: Brexit
-    no_cookies:
-      change_settings_text: Çerez ayarlarınızı değiştirin
-      icon_text: VİDEO
-      or_text: veya
-      to_watch_text: videoyu izlemek için
-      watch_link_text: YouTube’da İzle
     page_header: Brexit:<br/>işte yeni kurallar
-    page_header_explainer: Avrupa’ya seyahat etmek ve Avrupa’yla iş yapmak gibi konularda
-      yeni kurallar geçerli. Siz, işletmeniz ve aileniz için kişiselleştirilmiş bir
-      işlem listesini almak için Brexit kontrol aracını kullanın.
+    page_header_explainer: Avrupa’ya seyahat etmek ve Avrupa’yla iş yapmak gibi konularda yeni kurallar geçerli. Siz, işletmeniz ve aileniz için kişiselleştirilmiş bir işlem listesini almak için Brexit kontrol aracını kullanın.
     sections:
       aria_string_suffix: Brexit ile ilgili
       guidance_and_regulation: Kılavuz ve düzenleme
@@ -34,22 +13,5 @@ tr:
       research_and_statistics: Arama ve istatistikler
       services: Hizmetler
       transparency: Bilgi edinme açıklamalarının şeffaflığı ve özgürlüğü
-    share_links: Bu sayfayı paylaş
-    take_action_list:
-      amber: Değiştir
-      green: Git
-      red: Kontrol et
-    take_action_start_now: 'Brexit kontrol aracı: hemen başlat'
-    take_action_start_now_link: "/transition-check/questions"
     topic_section_header: Tüm Brexit bilgileri
     topic_section_subheading: Brexit’le ilgili tüm bilgileri araştır
-    video_section_description: |
-      <p>Avrupa’yla iş yapma şekli değişti. İhracat, ithalat, gümrük tarifeleri, veriler ve&nbsp;işe alınmla ilgili yeni kurallara uymanız gerekiyor.</p>
-      <p>Yeni kuralların işletmeniz için ne anlama geldiğini öğrenmek için videoyu izleyin. Ayrıca kişiselleştirilmiş bir işlem listesini almak için <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="Brexit checker">Brexit kontrol aracını</a> kullanabilirsiniz.</p>
-    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
-    video_section_title: İşletmenizi devam ettirin
-    video_section_transcription_summary: Video transkriptini görüntüle
-    video_section_transcription_text: |
-      <p>Değerli işletmeler, İngiltere AB’den ayrıldı ve artık yeni kurallar geçerli.</p>
-      <p>İşletmenizi devam ettirmek için, işletminize uyarlanmış işlemlere ulaşmak üzere gov.uk/transition üzerindeki Brexit kontrol aracını kullanın.</p>
-      <p>İşleri devam ettirelim.</p>

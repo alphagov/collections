@@ -1,31 +1,10 @@
+---
 mt:
   brexit_landing_page:
-    campaign_links:
-      lead_in: 'Iċċekkja xi trid tagħmel differenti jekk inti:'
-      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
-        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
-        data-track-label="Get the complete list">Gaukite visą sąrašą</a> ką reikia
-        padaryti dėl jūsų, jūsų verslo ir jūsų.
-    comms:
-      read_transcript: Aqra t-transkript ta' dan il-vidjow
-    comms_header: Avviżi
-    data_list_title: 'Brexit landing page: %{header}'
-    email_mailto_subject: 'Il-bidu ġdid tar-RU: ejja ħa mmorru - GOV.UK'
-    guidance_header: Tibdiliet għan-negozji u ċ-ċittadini
-    meta_description: Skopri kif ir-regoli ġodda tal-Brexit ser japplikaw għal affarijiet
-      bħal ivvjaġġar u kif tagħmel negozju fl-Ewropa. Uża l-Brexit checker biex tieħu
-      lista personalizzata tal-affarijiet.
+    meta_description: Skopri kif ir-regoli ġodda tal-Brexit ser japplikaw għal affarijiet bħal ivvjaġġar u kif tagħmel negozju fl-Ewropa. Uża l-Brexit checker biex tieħu lista personalizzata tal-affarijiet.
     meta_title: Brexit
-    no_cookies:
-      change_settings_text: Biddel is-settings tiegħek tal-cookies
-      icon_text: VIDJOW
-      or_text: jew
-      to_watch_text: ara l-vidjow
-      watch_link_text: Ara fuq YouTube
     page_header: Bexit:<br/>liġijiet ġodda hawn qegħdin
-    page_header_explainer: Regoli ġodda japplikaw għal affarijiet bħal ivvjaġġar u
-      kif tagħmel negozju mal-Ewropa. Uża l-Brexit checker biex tieħu lista personalizzata
-      ta' azzjonijiet għalik, għan-negozju tiegħek u għall-familja.
+    page_header_explainer: Regoli ġodda japplikaw għal affarijiet bħal ivvjaġġar u kif tagħmel negozju mal-Ewropa. Uża l-Brexit checker biex tieħu lista personalizzata ta' azzjonijiet għalik, għan-negozju tiegħek u għall-familja.
     sections:
       aria_string_suffix: relatati mal-Brexit
       guidance_and_regulation: Gwida u regolamenti
@@ -34,22 +13,5 @@ mt:
       research_and_statistics: Riċerka u statistiċi
       services: Servizzi
       transparency: Rilaxxi dwar trasparenza u l-libertà tal-informazzjoni
-    share_links: Aqsam din il-paġna ma' ħaddieħor
-    take_action_list:
-      amber: Ibdel
-      green: Mur
-      red: Iċċekkja
-    take_action_start_now: 'Brexit checker: ibda issa'
-    take_action_start_now_link: "/transition-check/questions"
     topic_section_header: L-Informazzjoni kollha dwar Brexit
     topic_section_subheading: Qalleb fl-informazzjoni kollha relatata mal-Brexit
-    video_section_description: |
-      <p>Kif tagħmel negozju mal-Ewropa nbidel. Jeħtieġ li ssegwi regoli ġodda dwar esportazzjonijiet, importazzjonijiet, tariffi, dejta u&nbsp;hiring.</p>
-      <p>Ara l-vidjow biex tiskopri dawn ir-regoli ġodda xi jfissru għan-negozju tiegħek. Tista' wkoll <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">naudokite „Brexit“ tikrintuvą</a> kad gautumėte suasmenintą veiksmų sąrašą.</p>
-    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
-    video_section_title: Ibqa' mexxi n-negozju tiegħek 'il quddiem
-    video_section_transcription_summary: Ara t-transkript tal-vidjow
-    video_section_transcription_text: |
-      <p>Negozji, ir-RU telqet mill-UE u regoli ġodda japplikaw.</p>
-      <p>Biex tibqa' tmexxi n-negozju tiegħek,,uża l-għodda tal- Brexit checker fuq gov.uk/transition biex tirċievi azzjonijiet personalizzati għan-negozju tiegħek.</p>
-      <p>Ejja nkomplu mmexxu n-negozju.</p>

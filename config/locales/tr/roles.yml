@@ -1,7 +1,7 @@
+---
 tr:
   roles:
-    find_out_more_html: "%{link} bölümümüzde bu makamın önceki sahipleri hakkında
-      daha fazla bilgi al."
+    find_out_more_html: "%{link} bölümümüzde bu makamın önceki sahipleri hakkında daha fazla bilgi al."
     heading:
       one: Makam
       other: Makamlar

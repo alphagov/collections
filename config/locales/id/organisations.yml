@@ -1,3 +1,4 @@
+---
 id:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
@@ -268,10 +269,7 @@ id:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Lihat semua transparansi dan kebebasan rilis informasi
         title: Transparansi dan kebebasan rilis informasi
-    errors_or_omissions_html: <p>Kesalahan atau pengabaian? <a class="govuk-link"
-      href="/contact/govuk">Beri tahu kami di sini</a>. Untuk daftar pejabat dari
-      lembaga publik non-pemerintah <a class="govuk-link" href="/government/collections/public-bodies">lihat
-      lembaga publik</a>.</p>
+    errors_or_omissions_html: <p>Kesalahan atau pengabaian? <a class="govuk-link" href="/contact/govuk">Beri tahu kami di sini</a>. Untuk daftar pejabat dari lembaga publik non-pemerintah <a class="govuk-link" href="/government/collections/public-bodies">lihat lembaga publik</a>.</p>
     featured: Unggulan
     foi:
       contact_form: Formulir kontak Kebebasan Informasi
@@ -282,13 +280,9 @@ id:
       freedom_of_information_requests: Permintaan Kebebasan Informasi
       make_an_foi_request: Buat permintaan FOI
       making_foi_requests:
-        step1_html: Baca tentang UU Kebebasan Informasi (FOI) dan <a href="%{how_to_path}"
-          class="govuk-link brand__color">cara membuat permintaan</a>.
-        step2_html: Periksa <a href="%{our_releases_path}" class="govuk-link brand__color">rilis
-          kami sebelumnya</a> untuk melihat apakah kami sudah menjawab pertanyaan
-          Anda.
-        step3_html: Buat permintaan baru dengan menghubungi kami menggunakan detail
-          di bawah ini.
+        step1_html: Baca tentang UU Kebebasan Informasi (FOI) dan <a href="%{how_to_path}" class="govuk-link brand__color">cara membuat permintaan</a>.
+        step2_html: Periksa <a href="%{our_releases_path}" class="govuk-link brand__color">rilis kami sebelumnya</a> untuk melihat apakah kami sudah menjawab pertanyaan Anda.
+        step3_html: Buat permintaan baru dengan menghubungi kami menggunakan detail di bawah ini.
     follow_us: Ikuti kami
     hidden_share_link: Ikuti di
     high_profile_groups: Grup profil tinggi di %{title}
@@ -300,8 +294,7 @@ id:
       devolved: "%{title} adalah badan dari <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} akan segera disertakan ke dalam GOV.UK"
       left_gov: "%{title} sekarang terpisah dari pemerintah Inggris Raya"
-      merged: "%{title} menjadi bagian dari <a href='%{link_href}'>%{link_text}</a>
-        pada %{updated}"
+      merged: "%{title} menjadi bagian dari <a href='%{link_href}'>%{link_text}</a> pada %{updated}"
       merged_no_date: "%{title} sekarang bagian dari <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} telah ditutup"
       no_website: "%{title} tidak memiliki situs web"

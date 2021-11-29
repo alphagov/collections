@@ -1,7 +1,7 @@
+---
 az:
   roles:
-    find_out_more_html: "%{link} bölməmizdə bu vəzifənin əvvəlki sahibləri haqqında
-      daha çox məlumat əldə edin."
+    find_out_more_html: "%{link} bölməmizdə bu vəzifənin əvvəlki sahibləri haqqında daha çox məlumat əldə edin."
     heading:
       one: Vəzifə
       other: Vəzifələr

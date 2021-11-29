@@ -1,31 +1,10 @@
+---
 cy:
   brexit_landing_page:
-    campaign_links:
-      lead_in: 'Gwiriwch beth mae angen i chi wneud yn wahanol os ydych chi''n:'
-      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
-        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
-        data-track-label="Get the complete list">Mynnwch y rhestr lawn</a> o beth
-        mae angen i chi wneud drosoch chi, eich busnes a'ch teulu.
-    comms:
-      read_transcript: Darllenwch y trawsgrifiad ar gyfer y fideo hwn
-    comms_header: Cyhoeddiadau
-    data_list_title: 'Tudalen lanio Brexit: %{header}'
-    email_mailto_subject: 'Dechrau newydd y DU: awn amdani- GOV.UK'
-    guidance_header: Newidiadau i fusnesau a dinasyddion
-    meta_description: Dysgwch sut mae rheolau Brexit newydd yn berthnasol i bethau
-      fel teithio a gwneud busnes gydag Ewrop. Defnyddiwch y gwirydd Brexit i gael
-      rhestr o gamau gweithredu personol i chi.
+    meta_description: Dysgwch sut mae rheolau Brexit newydd yn berthnasol i bethau fel teithio a gwneud busnes gydag Ewrop. Defnyddiwch y gwirydd Brexit i gael rhestr o gamau gweithredu personol i chi.
     meta_title: Brexit
-    no_cookies:
-      change_settings_text: Newid eich gosodiadau cwcis
-      icon_text: FIDEO
-      or_text: neu
-      to_watch_text: i wylio'r fideo
-      watch_link_text: Gwylio ar YouTube
     page_header: Brexit:<br/>mae rheolau newydd yma
-    page_header_explainer: Mae rheolau newydd yn berthnasol i bethau fel teithio a
-      gwneud busnes gydag Ewrop. Defnyddiwch y gwirydd Brexit i gael rhestr o gamau
-      gweithredu personol i chi, i'ch busnes ac i'ch teulu.
+    page_header_explainer: Mae rheolau newydd yn berthnasol i bethau fel teithio a gwneud busnes gydag Ewrop. Defnyddiwch y gwirydd Brexit i gael rhestr o gamau gweithredu personol i chi, i'ch busnes ac i'ch teulu.
     sections:
       aria_string_suffix: cysylltiedig â Brexit
       guidance_and_regulation: Canllawiau a rheoliadau
@@ -34,22 +13,5 @@ cy:
       research_and_statistics: Ymchwil ac ystadegau
       services: Gwasanaethau
       transparency: Gwybodaeth a ryddhawyd o dan FOI a thryloywder
-    share_links: Rhannu'r dudalen hon
-    take_action_list:
-      amber: Newid
-      green: Mynd
-      red: Gwirio
-    take_action_start_now: 'Gwirydd Brexit: dechrau nawr'
-    take_action_start_now_link: "/transition-check/questions"
     topic_section_header: Yr holl wybodaeth am Brexit
     topic_section_subheading: Pori'r holl wybodaeth cysylltiedig â Brexit
-    video_section_description: |
-      <p>Mae gwneud busnes gydag Ewrop wedi newid. Mae angen i chi ddilyn rheolau newydd o ran allforio, mewnforio, tariffau, data a&nbsp;recriwtio.</p>
-      <p>Gwyliwch y fideo i ddysgu beth mae'r rheolau newydd yn ei olygu i'ch busnes chi. Gallwch hefyd <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">ddefnyddio'r gwirydd Brexit</a> i gael rhestr o gamau gweithredu personol i chi.</p>
-    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
-    video_section_title: Cadwch eich busnes i symud
-    video_section_transcription_summary: Gweld trawsgrifiad y fideo
-    video_section_transcription_text: |
-      <p>Fusnesau, mae'r DU wedi gadael yr UE ac mae rheolau newydd bellach yn weithredol.</p>
-      <p>I gadw'ch busnes i symud, defnyddiwch y gwirydd Brexit ar gov.uk/transition i gael camau gweithredu personol ar gyfer eich busnes chi.</p>
-      <p>Gadewch i ni gadw busnesau i symud.</p>

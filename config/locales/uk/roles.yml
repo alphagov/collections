@@ -1,11 +1,12 @@
+---
 uk:
   roles:
+    find_out_more_html: Дізнайтесь більше про попередників у нашому розділі %{link}.
     heading:
-      one: Функція
       few:
       many:
+      one: Функція
       other: Функції
-    find_out_more_html: Дізнайтесь більше про попередників у нашому розділі %{link}.
     headings:
       current_holder: Поточний виконавець функції
       previous_holders: Попередні виконавці

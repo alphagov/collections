@@ -1,31 +1,10 @@
+---
 ar:
   brexit_landing_page:
-    campaign_links:
-      lead_in: 'تحقق مما ترغب في القيام به بشكل مختلف إذا كنت:'
-      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
-        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
-        data-track-label="Get the complete list">اطلع على القائمة الكاملة</a> لما
-        تحتاج القيام به من أجل نفسك وعملك وعائلتك.
-    comms:
-      read_transcript: اقرأ نص هذا الفيديو
-    comms_header: إعلانات
-    data_list_title: 'صفحة البرِيكْسِت المنتقل إليها: %{header}'
-    email_mailto_subject: 'بداية جديدة للمملكة المتحدة: هيا بنا نبدأ- GOV.UK'
-    guidance_header: تغييرات للشركات والمواطنين
-    meta_description: استكشف كيفية تطبيق قواعد البرِيكْسِت الجديدة على أشياء مثل السفر
-      ومزاولة الأعمال التجارية مع أوروبا.  استخدم أداة التحقق الخاصة ببرِيكْسِت للحصول
-      على قائمة إجراءات مخصصة.
+    meta_description: استكشف كيفية تطبيق قواعد البرِيكْسِت الجديدة على أشياء مثل السفر ومزاولة الأعمال التجارية مع أوروبا.  استخدم أداة التحقق الخاصة ببرِيكْسِت للحصول على قائمة إجراءات مخصصة.
     meta_title: برِيكْسِت
-    no_cookies:
-      change_settings_text: قم بتغيير إعدادات ملفات تعريف الارتباط الخاصة بك
-      icon_text: فيديو
-      or_text: أو
-      to_watch_text: لمشاهدة الفيديو
-      watch_link_text: شاهده على YouTube
     page_header: قواعد برِيكْسِت:<br/>الجديدة أصبحت متاحة
-    page_header_explainer: تطبق القواعد الجديدة على أشياء مثل السفر ومزاولة الأعمال
-      التجارية مع أوروبا. استخدم أداة التحقق الخاصة ببرِيكْسِت للحصول على قائمة إجراءات
-      مخصصة لك ولعملك ولعائلتك.
+    page_header_explainer: تطبق القواعد الجديدة على أشياء مثل السفر ومزاولة الأعمال التجارية مع أوروبا. استخدم أداة التحقق الخاصة ببرِيكْسِت للحصول على قائمة إجراءات مخصصة لك ولعملك ولعائلتك.
     sections:
       aria_string_suffix: بخصوص بريكست
       guidance_and_regulation: التوجيه واللائحة
@@ -34,22 +13,5 @@ ar:
       research_and_statistics: الأبحاث والإحصاءات
       services: الخدمات
       transparency: الشفافية وحرية تداول المعلومات
-    share_links: شارك هذه الصفحة
-    take_action_list:
-      amber: تغيير
-      green: انتقال
-      red: التحقق
-    take_action_start_now: " أداة التحقق الخاصة ببرِيكْسِت: ابدأ الآن"
-    take_action_start_now_link: "/transition-check/questions"
     topic_section_header: جميع معلومات برِيكْسِت
     topic_section_subheading: تصفح جميع المعلومات المتعلقة ببرِيكْسِت
-    video_section_description: |
-      <p>لقد طرأت تغيرات على مزاولة الأعمال التجارية مع أوروبا. يتعين عليك اتباع قواعد جديدة بشأن الصادرات والواردات والتعريفات والبيانات &nbsp;والتوظيف.</p>
-      <p>شاهد هذا الفيديو لمعرفة ما تعنيه القواعد الجديدة بالنسبة لعملك. يمكنك أيضًا <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">استخدام أداة التحقق الخاصة ببرِيكْسِت</a> للاطلاع على قائمة مخصصة من الإجراءات.</p>
-    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
-    video_section_title: حافظ على تقدُّم عملك
-    video_section_transcription_summary: اعرض نص الفيديو
-    video_section_transcription_text: |
-      <p>نحيط علم المؤسسات بأن المملكة المتحدة قد خرجت من الاتحاد الأوروبي وتُطبَّق الآن قواعد جديدة.</p>
-      <p>للحفاظ على تقدم عملك، استخدم أداة التحقق الخاصة ببرِيكْسِت على gov.uk/transition للحصول على قائمة مخصصة لعملك.</p>
-      <p>هيا نحافظ على تقدم الأعمال.</p>

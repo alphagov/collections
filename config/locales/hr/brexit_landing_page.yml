@@ -1,31 +1,10 @@
+---
 hr:
   brexit_landing_page:
-    campaign_links:
-      lead_in: 'Provjerite što trebate učiniti drugačije ako:'
-      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
-        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
-        data-track-label="Get the complete list">Nabavite potpuni popis</a> onoga
-        što trebate učiniti za sebe, svoju tvrtku i svoju obitelj.
-    comms:
-      read_transcript: Pročitajte prijepis za ovaj video
-    comms_header: Obavijesti
-    data_list_title: 'Odredišna stranica za Brexit: %{header}'
-    email_mailto_subject: 'Novi početak Velike Britanije: krenimo- GOV.UK'
-    guidance_header: Promjene za poduzeća i građane
-    meta_description: Saznajte kako se nova pravila Brexita primjenjuju na stvari
-      poput putovanja i poslovanja s Europom. Upotrijebite alat za provjeru Brexita
-      da biste dobili personalizirani popis radnji.
+    meta_description: Saznajte kako se nova pravila Brexita primjenjuju na stvari poput putovanja i poslovanja s Europom. Upotrijebite alat za provjeru Brexita da biste dobili personalizirani popis radnji.
     meta_title: Brexit
-    no_cookies:
-      change_settings_text: Promijenite postavke kolačića
-      icon_text: VIDEO
-      or_text: ili
-      to_watch_text: pogledati video
-      watch_link_text: Gledajte na YouTube-u
     page_header: Brexit:<br/>nova su pravila ovdje
-    page_header_explainer: Nova pravila primjenjuju se na stvari poput putovanja i
-      poslovanja s Europom. Upotrijebite alat za provjeru Brexita da biste dobili
-      prilagođeni popis radnji za vas, vaše poslovanje i svoju obitelj.
+    page_header_explainer: Nova pravila primjenjuju se na stvari poput putovanja i poslovanja s Europom. Upotrijebite alat za provjeru Brexita da biste dobili prilagođeni popis radnji za vas, vaše poslovanje i svoju obitelj.
     sections:
       aria_string_suffix: vezano za Brexit
       guidance_and_regulation: Upute i propisi
@@ -34,22 +13,5 @@ hr:
       research_and_statistics: Istraživanje i statistika
       services: Usluge
       transparency: Transparentnost i sloboda objavljivanja informacija
-    share_links: Podijelite ovu stranicu
-    take_action_list:
-      amber: Promijeniti
-      green: Idi
-      red: Provjeriti
-    take_action_start_now: 'Provjera Brexita: počnite sada'
-    take_action_start_now_link: "/transition-check/questions"
     topic_section_header: Sve informacije o Brexitu
     topic_section_subheading: Pregledajte sve informacije vezane za Brexit
-    video_section_description: |
-      <p>Poslovanje s Europom se promijenilo. Morate se pridržavati novih pravila o izvozu, uvozu, tarifama, podacima i & nbsp; zapošljavanju.</p>
-      <p>Pogledajte video da biste saznali što nova pravila znače za vaše poslovanje. Također možete <a href = "/transition-check/questions" class ="govuk-link" data-module="gem-track-click" data-track-action="/transition- check/questions" data-track-category="transition-landing-page" data-track-label=" upotrijebite alat za provjeru Brexita">upotrijebite alat za provjeru Brexita</a> da biste dobili prilagođeni popis radnji.</p>
-    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
-    video_section_title: Nastavite svoje poslovanje
-    video_section_transcription_summary: Pogledajte video zapis
-    video_section_transcription_text: |-
-      <p>Tvrtke, UK je napustilo EU i sada se primjenjuju nova pravila.</p>
-      <p>Da biste nastavili poslovati, upotrijebite alat za provjeru Brexita na gov.uk/transition kako biste dobili prilagođene radnje za svoje poslovanje.</p>
-      <p>Nastavimo poslovanje.</p>

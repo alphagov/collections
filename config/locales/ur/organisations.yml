@@ -1,6 +1,17 @@
+---
 ur:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: منتظم کردہ از
+    breadcrumbs:
+      courts_and_tribunals: عدالتیں اور ٹریبیونلز
+      organisations: تنظیمیں
+    contact:
+      contact_details: رابطے کی تفصیلات
+      contact_form: 'رابطے کا فارم: %{title}'
+      contact_organisation: رابطہ %{organisation}
+      email: ای میل
+      telephone: ٹیلیفون
     content_item:
       schema_name:
         aaib_report:
@@ -225,16 +236,6 @@ ur:
         written_statement:
           one: پالیمان کے لیے تحریری بیان
           other: پالیمان کے لیے تحریری بیانات
-    administered_by: منتظم کردہ از
-    breadcrumbs:
-      courts_and_tribunals: عدالتیں اور ٹریبیونلز
-      organisations: تنظیمیں
-    contact:
-      contact_details: رابطے کی تفصیلات
-      contact_form: 'رابطے کا فارم: %{title}'
-      contact_organisation: رابطہ %{organisation}
-      email: ای میل
-      telephone: ٹیلیفون
     corporate_information: کارپوریٹ معلومات
     document_types:
       documents: دستاویزات
@@ -268,9 +269,7 @@ ur:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: معلومات کے اجراء کی تمام شفافیت اور آزادی دیکھیں
         title: معلومات کے اجراء کی شفافیت اور آزادی
-    errors_or_omissions_html: <p>نقائص یا چوک؟ <a class="govuk-link" href="/contact/govuk">ہمیں
-      یہاں پر آگاہ کریں</a>۔ غیر محکماتی عوامی دھڑوں کے لیے <a class="govuk-link"
-      href="/government/collections/public-bodies">عوامی دھڑے دیکھیں</a>۔</p>
+    errors_or_omissions_html: <p>نقائص یا چوک؟ <a class="govuk-link" href="/contact/govuk">ہمیں یہاں پر آگاہ کریں</a>۔ غیر محکماتی عوامی دھڑوں کے لیے <a class="govuk-link" href="/government/collections/public-bodies">عوامی دھڑے دیکھیں</a>۔</p>
     featured: فیچرڈ
     foi:
       contact_form: FOI رابطے کا فارم
@@ -281,11 +280,8 @@ ur:
       freedom_of_information_requests: فریڈم آف انفارمیشن کی درخواستیں
       make_an_foi_request: FOI درخواست کریں
       making_foi_requests:
-        step1_html: فریڈم آف انفارمیشن (FOI) ایکٹ اور <a href="%{how_to_path}" class="govuk-link
-          brand__color">درخواست کرنے کے طریقے کے بارے میں پڑھیں۔
-        step2_html: یہ دیکھنے کے لیے <a href="%{our_releases_path}" class="govuk-link
-          brand__color">ہماری پچھلی ریلیز</a> کی پڑتال کریں آیا ہم پہلے ہی آپ کے سوال
-          کا جواب دے چکے ہیں۔
+        step1_html: فریڈم آف انفارمیشن (FOI) ایکٹ اور <a href="%{how_to_path}" class="govuk-link brand__color">درخواست کرنے کے طریقے کے بارے میں پڑھیں۔
+        step2_html: یہ دیکھنے کے لیے <a href="%{our_releases_path}" class="govuk-link brand__color">ہماری پچھلی ریلیز</a> کی پڑتال کریں آیا ہم پہلے ہی آپ کے سوال کا جواب دے چکے ہیں۔
         step3_html: درج ذیل تفصیلات کا استعمال کرتے ہوئے ایک نئی درخواست کریں۔
     follow_us: ہمیں فالو کریں
     hidden_share_link: یہاں فالو کریں
@@ -294,15 +290,12 @@ ur:
     jobs_contracts: نوکریاں اور معاہدے
     latest_from: "%{title} سے تازہ ترین"
     notices:
-      changed_name: "%{title} کو اب <a href='%{link_href}'>%{link_text}</a> کہا جاتا
-        ہے"
+      changed_name: "%{title} کو اب <a href='%{link_href}'>%{link_text}</a> کہا جاتا ہے"
       devolved: "%{title} <a href='%{link_href}'>%{link_text}</a> کی باڈی ہے"
       joining: "%{title} کو جلد GOV.UK میں شامل کر دیا جائے گا"
       left_gov: "%{title} اب UK حکومت سے آزاد ہے"
-      merged: "%{title} %{updated} میں <a href='%{link_href}'>%{link_text}</a> کا
-        حصہ بنا"
-      merged_no_date: "%{title} اب <a href='%{link_href}'>%{link_text}</a> کا حصہ
-        ہے"
+      merged: "%{title} %{updated} میں <a href='%{link_href}'>%{link_text}</a> کا حصہ بنا"
+      merged_no_date: "%{title} اب <a href='%{link_href}'>%{link_text}</a> کا حصہ ہے"
       no_longer_exists: "%{title} بند ہو گیا ہے"
       no_website: "%{title} کو کوئی ویب سائٹ نہیں"
       separate_website: "%{title} کی <a href='%{url}'>علیحدہ ویب سائٹ</a> ہے"

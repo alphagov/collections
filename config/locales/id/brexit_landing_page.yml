@@ -1,31 +1,10 @@
+---
 id:
   brexit_landing_page:
-    campaign_links:
-      lead_in: 'Periksa apa yang Anda harus lakukan jika Anda:'
-      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
-        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
-        data-track-label="Dapatkan daftar lengkap">Dapatkan daftar lengkap</a> dari
-        apa yang harus Anda, bisnis, atau keluarga Anda lakukan.
-    comms:
-      read_transcript: Baca transkrip video ini
-    comms_header: Pengumuman
-    data_list_title: 'Halaman landing Brexit: %{header}'
-    email_mailto_subject: 'Awal baru Inggris Raya: mari kita mulai - GOV.UK'
-    guidance_header: Perubahan untuk bisnis dan warganegara
-    meta_description: Cari tahu bagaimana aturan Brexit berlaku bagi berbagai hal
-      seperti perjalanan dan berbisnis dengan Eropa. Gunakan Brexit checker untuk
-      mendapat daftar tindakan terpersonalisasi.
+    meta_description: Cari tahu bagaimana aturan Brexit berlaku bagi berbagai hal seperti perjalanan dan berbisnis dengan Eropa. Gunakan Brexit checker untuk mendapat daftar tindakan terpersonalisasi.
     meta_title: Brexit
-    no_cookies:
-      change_settings_text: Ubah pengaturan cookie Anda
-      icon_text: VIDEO
-      or_text: atau
-      to_watch_text: untuk menonton video
-      watch_link_text: Tonton di YouTube
     page_header: Brexit:<br/>aturan baru sudah hadir
-    page_header_explainer: Aturan baru berlaku bagi berbagai hal seperti perjalanan
-      dan berbisnis dengan Eropa. Gunakan Brexit checker untuk mendapat daftar tindakan
-      terpersonalisasi untuk Anda, bisnis Anda, dan keluarga Anda.
+    page_header_explainer: Aturan baru berlaku bagi berbagai hal seperti perjalanan dan berbisnis dengan Eropa. Gunakan Brexit checker untuk mendapat daftar tindakan terpersonalisasi untuk Anda, bisnis Anda, dan keluarga Anda.
     sections:
       aria_string_suffix: terkait Brexit
       guidance_and_regulation: Panduan dan regulasi
@@ -34,22 +13,5 @@ id:
       research_and_statistics: Riset dan statistik
       services: Layanan
       transparency: Transparansi dan kebebasan rilis informasi
-    share_links: Bagikan halaman ini
-    take_action_list:
-      amber: Ubah
-      green: Lakukan
-      red: Periksa
-    take_action_start_now: 'Brexit checker: mulai sekarang'
-    take_action_start_now_link: "/transition-check/questions"
     topic_section_header: Semua informasi tentang Brexit
     topic_section_subheading: Lihat semua informasi terkait Brexit
-    video_section_description: |
-      <p>Berbisnis dengan Eropa sudah berubah. Anda harus mengikuti aturan baru tentang ekspor, impor, tarif, data, dan&nbsp;ketenagakerjaan.</p>
-      <p>Tonton video untuk mencari tahu apa makna aturan baru ini bagi bisnis Anda. Anda juga dapat <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="menggunakan Brexit checker">menggunakan Brexit checker</a> untuk mendapat daftar tindakan terpersonalisasi.</p>
-    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
-    video_section_title: Terus gerakkan bisnis Anda
-    video_section_transcription_summary: Lihat transkrip video
-    video_section_transcription_text: |
-      <p>Bisnis, Inggris Raya keluar dari UE, dan aturan baru sekarang berlaku.</p>
-      <p>Supaya bisnis Anda tetap bergerak, gunakan alat Brexit checker di gov.uk/transition untuk mendapat tindakan terpersonalisasi untuk bisnis Anda.</p>
-      <p>Ayo tetap gerakkan bisnis.</p>

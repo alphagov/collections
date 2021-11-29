@@ -1,31 +1,10 @@
+---
 gu:
   brexit_landing_page:
-    campaign_links:
-      lead_in: 'જુઓ, તમને આ અલગ રીતે કરવું પડશે, જો તમે:'
-      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
-        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
-        data-track-label="Get the complete list">સંપૂર્ણ યાદી મેળવો</a> કે, તમારે
-        પોતાના માટે, તમારા વ્યવસાય માટે અને તમારા પરિવાર માટે શું કરવું પડશે.
-    comms:
-      read_transcript: યા વિડીયોની ટ્રાન્સસ્ક્રિપ્ટ વાંચો
-    comms_header: જાહેરાતો
-    data_list_title: બ્રેક્ઝિટ લેન્ડિંગ પેજ:%{header}
-    email_mailto_subject: 'UKની નવી શરૂઆત: ચાલો શરૂ કરીએ - GOV.UK'
-    guidance_header: વ્યવસાયો અને નાગરિકો માટે ફેરફાર
-    meta_description: જાણો, યુરોપ સાથે વ્યવસાય અને મુસાફરી જેવી બાબતોમાં બ્રેક્ઝિટના
-      નવા નિયમો કેવી રીતે લાગુ થાય છે.ક્રિયાઓની વ્યક્તિગત સૂચિ મેળવવા માટે બ્રેક્ઝિટ
-      ચેકરનો ઉપયોગ કરો.
+    meta_description: જાણો, યુરોપ સાથે વ્યવસાય અને મુસાફરી જેવી બાબતોમાં બ્રેક્ઝિટના નવા નિયમો કેવી રીતે લાગુ થાય છે.ક્રિયાઓની વ્યક્તિગત સૂચિ મેળવવા માટે બ્રેક્ઝિટ ચેકરનો ઉપયોગ કરો.
     meta_title: બ્રેક્ઝિટ
-    no_cookies:
-      change_settings_text: તમારું કૂકી સેટિંગ્સ બદલો
-      icon_text: વિડીયો
-      or_text: અથવા
-      to_watch_text: વિડીયો જોવા માટે
-      watch_link_text: યૂટ્યુબ પર જુઓ
     page_header: બ્રેક્ઝિટ:<br/>નવા નિયમો અહીં છે
-    page_header_explainer: નવા નિયમો યુરોપ સાથે વ્યવસાય અને મુસાફરી જેવી બાબતોમાં
-      લાગુ થાય છે.તમારા માટે, તમારા વ્યવસાય માટે અને તમારા પરિવાર માટે ક્રિયાઓની વ્યક્તિગત
-      સૂચિ મેળવવા માટે બ્રેક્ઝિટ ચેકરનો ઉપયોગ કરો.
+    page_header_explainer: નવા નિયમો યુરોપ સાથે વ્યવસાય અને મુસાફરી જેવી બાબતોમાં લાગુ થાય છે.તમારા માટે, તમારા વ્યવસાય માટે અને તમારા પરિવાર માટે ક્રિયાઓની વ્યક્તિગત સૂચિ મેળવવા માટે બ્રેક્ઝિટ ચેકરનો ઉપયોગ કરો.
     sections:
       aria_string_suffix: 'બ્રેક્ઝિટ સંબંધિત '
       guidance_and_regulation: માર્ગદર્શન અને નિયમન
@@ -34,22 +13,5 @@ gu:
       research_and_statistics: સંશોધન અને આંકડાઓ
       services: સેવાઓ
       transparency: માહિતી પ્રકાશનોની પારદર્શિતા અને સ્વતંત્રતા
-    share_links: આ પેજ શેર કરો
-    take_action_list:
-      amber: બદલો
-      green: જાઓ
-      red: ચકાસો
-    take_action_start_now: 'બ્રેક્ઝિટ ચેકર: હવે શરૂ કરો'
-    take_action_start_now_link: "/transition-check/questions"
     topic_section_header: તમામ બ્રેક્ઝિટ જાણકારી
     topic_section_subheading: બ્રેક્ઝિટને લગતી બધી માહિતી બ્રાઉઝ કરો
-    video_section_description: |
-      <p>યુરોપ સાથે વ્યવસાય કરવા અંગે ફેરફારો થયા છે.નિકાસ, આયાત, ટેરિફ, ડેટા.</p> અંગે તમારે નવા નિયમોનું પાલન કરવું પડશે.
-      <p>તમારા વ્યવસાય માટે નવા નિયમોનો અર્થ જાણવા માટે આ વિડીયો જુઓ.તમે ક્રિયાઓની વ્યક્તિગત સૂચિ મેળવવા માટે <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">બ્રેક્ઝિટ ચેકરનો ઉપયોગ </a> પણ કરી શકો છો.</p>
-    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
-    video_section_title: તમારો વ્યવસાય ચાલુ રાખો
-    video_section_transcription_summary: વિડીયો ટ્રાન્સસ્ક્રિપ્ટ જુઓ
-    video_section_transcription_text: "<p>વ્યવસાયો, UK એ EU છોડી દીધું છે અને હવે
-      નવા નિયમો લાગુ થયા છે.</p> \n<p>તમારો વ્યવસાય ચાલુ રાખવા માટે, gov.uk/transition
-      પર બ્રેક્ઝિટ ચેકર ટૂલનો ઉપયોગ કરો અને તમારા વ્યવસાય માટે વ્યક્તિગત ક્રિયાઓ મેળવો.</p>
-      \              \n<p>ચાલો, આપણે વ્યવસાયો ચાલુ રાખીએ.</p>\n"

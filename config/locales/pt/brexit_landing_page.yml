@@ -1,31 +1,10 @@
+---
 pt:
   brexit_landing_page:
-    campaign_links:
-      lead_in: 'Verifique o que precisa de fazer de forma diferente se:'
-      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
-        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
-        data-track-label="Get the complete list">Obtenha a lista completa</a> daquilo
-        que precisa para ajudar-se a si mesmo/a, a sua empresa e à sua família.
-    comms:
-      read_transcript: Leia a transcrição deste vídeo
-    comms_header: Anúncios
-    data_list_title: 'Página inicial do Brexit: %{header}'
-    email_mailto_subject: 'O novo início do Reino Unido: vamos a isso - GOV.UK'
-    guidance_header: Mudanças para empresas e cidadãos
-    meta_description: Descubra como as novas regras do Brexit se aplicam a ações como
-      viajar e fazer negócios com a Europa. Utilize o verificador Brexit para obter
-      uma lista personalizada de ações.
+    meta_description: Descubra como as novas regras do Brexit se aplicam a ações como viajar e fazer negócios com a Europa. Utilize o verificador Brexit para obter uma lista personalizada de ações.
     meta_title: Brexit
-    no_cookies:
-      change_settings_text: Alterar as suas definições de cookies
-      icon_text: VÍDEO
-      or_text: ou
-      to_watch_text: ver o vídeo
-      watch_link_text: Ver no YouTube
     page_header: Brexit:<br/>as novas regras estão aqui
-    page_header_explainer: As novas regars aplicam-se a ações como viajar e fazer
-      negócios com a Europa. Utilize o verificador Brexit para obter uma lista personalizada
-      de ações para si, para a sua empresa e para a sua família.
+    page_header_explainer: As novas regars aplicam-se a ações como viajar e fazer negócios com a Europa. Utilize o verificador Brexit para obter uma lista personalizada de ações para si, para a sua empresa e para a sua família.
     sections:
       aria_string_suffix: relacionado com o Brexit.
       guidance_and_regulation: Orientação e regulamentação
@@ -34,22 +13,5 @@ pt:
       research_and_statistics: Investigação e estatísticas
       services: Serviços
       transparency: Comunicados de transparência e liberdade de informação
-    share_links: Partilhar esta página
-    take_action_list:
-      amber: Alterar
-      green: Ver
-      red: Verificar
-    take_action_start_now: 'Verificador Brexit: iniciar agora'
-    take_action_start_now_link: "/transition-check/questions"
     topic_section_header: Toda a informação sobre o Brexit
     topic_section_subheading: Pesquisar toda a informação relacionada com o Brexit
-    video_section_description: |
-      <p>A forma de negociar com a Europa mudou. É necessário seguir as novas regras sobre exportações, importações, tarifas, dados e contratações.</p>
-      <p>Veja o vídeo para descobrir o significado das novas regras para a sua empresa. Pode também <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">utilizar o verificador Brexit</a> para obter uma lista personalizada de ações.</p>
-    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
-    video_section_title: Mantenha a atividade da sua empresa
-    video_section_transcription_summary: Veja a transcrição do vídeo
-    video_section_transcription_text: |
-      <p>Empresas, o Reino Unido saiu da UE e agora aplicam-se novas regras.</p>
-      <p>Para manter atividade da sua empresa, utilize a ferramenta verificador Brexit em gov.uk/transition para obter ações personalizadas para a sua empresa.</p>
-      <p>Vamos manter a atividade da sua empresa.</p>

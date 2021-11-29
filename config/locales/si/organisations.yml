@@ -1,6 +1,17 @@
+---
 si:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: විසින් පරිපාලනය කරනු ලබන්නේ
+    breadcrumbs:
+      courts_and_tribunals: අධිකරණ හා විනිශ්චය මණ්ඩල
+      organisations: සංවිධාන
+    contact:
+      contact_details: විමසීම් විස්තර
+      contact_form: 'සබඳතා ආකෘතිය: %{title}'
+      contact_organisation: "%{organisation} සම්බන්ධ කර ගන්න"
+      email: විද්‍යුත් තැපෑල
+      telephone: දුරකථනය
     content_item:
       schema_name:
         aaib_report:
@@ -225,16 +236,6 @@ si:
         written_statement:
           one: පාර්ලිමේන්තුව වෙත ලිඛිත ප්රකාශය
           other: පාර්ලිමේන්තුව වෙත ලිඛිත ප්රකාශ
-    administered_by: විසින් පරිපාලනය කරනු ලබන්නේ
-    breadcrumbs:
-      courts_and_tribunals: අධිකරණ හා විනිශ්චය මණ්ඩල
-      organisations: සංවිධාන
-    contact:
-      contact_details: විමසීම් විස්තර
-      contact_form: 'සබඳතා ආකෘතිය: %{title}'
-      contact_organisation: "%{organisation} සම්බන්ධ කර ගන්න"
-      email: විද්‍යුත් තැපෑල
-      telephone: දුරකථනය
     corporate_information: ආයතනික තොරතුරු
     document_types:
       documents: ලේඛන
@@ -268,9 +269,7 @@ si:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: විනිවිදභාවය සහ තොරතුරු නිදහස පිළිබඳ සියලු නිකුත් කිරීම් බලන්න
         title: විනිවිදභාවය සහ තොරතුරු නිදහස පිළිබඳ නිකුත් කිරීම්
-    errors_or_omissions_html: <p>වැරදි හෝ අතපසු වීම්? <a class="govuk-link" href="/contact/govuk">Tell
-      us here</a>. දෙපාර්තුමේන්තු නොවන රාජ්‍ය ආයතනවල නිල ලැයිස්තු සඳහා <a class="govuk-link"
-      href="/government/collections/public-bodies">පොදු ආයතන බලන්න</a>.</p>
+    errors_or_omissions_html: <p>වැරදි හෝ අතපසු වීම්? <a class="govuk-link" href="/contact/govuk">Tell us here</a>. දෙපාර්තුමේන්තු නොවන රාජ්‍ය ආයතනවල නිල ලැයිස්තු සඳහා <a class="govuk-link" href="/government/collections/public-bodies">පොදු ආයතන බලන්න</a>.</p>
     featured: විශේෂාංග සහිත
     foi:
       contact_form: FOI සම්බන්ධතා ආකෘතිය
@@ -281,11 +280,8 @@ si:
       freedom_of_information_requests: තොරතුරු ඉල්ලීම් කිරීමේ නිදහස
       make_an_foi_request: FOI ඉල්ලීමක් කරන්න
       making_foi_requests:
-        step1_html: තොරතුරු දැනගැනීමේ නිදහස (FOI) පිළිබඳ පනත <a href="%{how_to_path}"
-          class="govuk-link brand__color">ඉල්ලීමක් කරන්නේ කෙසේ ද</a> යන්න පිළිබඳව
-          කියවන්න.
-        step2_html: අපි ඔබේ ප්‍රශ්න වලට දැනටමත් පිළිතුරු දී ඇති ද යන්න බැලීමට <a href="%{our_releases_path}"
-          class="govuk-link brand__color">our previous releases</a> පරීක්ෂා කරන්න.
+        step1_html: තොරතුරු දැනගැනීමේ නිදහස (FOI) පිළිබඳ පනත <a href="%{how_to_path}" class="govuk-link brand__color">ඉල්ලීමක් කරන්නේ කෙසේ ද</a> යන්න පිළිබඳව කියවන්න.
+        step2_html: අපි ඔබේ ප්‍රශ්න වලට දැනටමත් පිළිතුරු දී ඇති ද යන්න බැලීමට <a href="%{our_releases_path}" class="govuk-link brand__color">our previous releases</a> පරීක්ෂා කරන්න.
         step3_html: පහත විස්තර භාවිතා කර අප හා සම්බන්ධ වී නව ඉල්ලීමක් කරන්න.
     follow_us: අපව අනුගමනය කරන්න
     hidden_share_link: හි අනුගමනය කරන්න

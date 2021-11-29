@@ -1,6 +1,17 @@
+---
 es-419:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Administrado por
+    breadcrumbs:
+      courts_and_tribunals: Juzgados y Tribunales
+      organisations: Organizaciones
+    contact:
+      contact_details: Datos de contacto
+      contact_form: 'Formulario de contacto: %{title}'
+      contact_organisation: Contactar con %{organisation}
+      email: Email
+      telephone: Teléfono
     content_item:
       schema_name:
         aaib_report:
@@ -225,16 +236,6 @@ es-419:
         written_statement:
           one: Declaración escrita ante el Parlamento
           other: Declaraciones escritas ante el Parlamento
-    administered_by: Administrado por
-    breadcrumbs:
-      courts_and_tribunals: Juzgados y Tribunales
-      organisations: Organizaciones
-    contact:
-      contact_details: Datos de contacto
-      contact_form: 'Formulario de contacto: %{title}'
-      contact_organisation: Contactar con %{organisation}
-      email: Email
-      telephone: Teléfono
     corporate_information: Información corporativa
     document_types:
       documents: Documentos
@@ -268,10 +269,7 @@ es-419:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Ver todos los artículos sobre transparencia y libertad de información
         title: Transparencia y libertad de información
-    errors_or_omissions_html: <p>¿Errores u omisiones?<a class="govuk-link" href="/contact/govuk">Díganoslo
-      aquí</a>. Para las listas oficiales de organismos públicos no departamentales
-      <a class="govuk-link" href="/government/collections/public-bodies">ver organismos
-      públicos</a>.</p>
+    errors_or_omissions_html: <p>¿Errores u omisiones?<a class="govuk-link" href="/contact/govuk">Díganoslo aquí</a>. Para las listas oficiales de organismos públicos no departamentales <a class="govuk-link" href="/government/collections/public-bodies">ver organismos públicos</a>.</p>
     featured: Destacado
     foi:
       contact_form: Formulario de contacto FOI
@@ -282,12 +280,9 @@ es-419:
       freedom_of_information_requests: Solicitudes de libertad de información
       make_an_foi_request: Presentar una solicitud de FOI
       making_foi_requests:
-        step1_html: Lea sobre la Ley de Libertad de Información (FOI) y <a href="%{how_to_path}"
-          class="govuk-link brand__color">cómo hacer una solicitud</a>.
-        step2_html: Consulta <a href="%{our_releases_path}" class="govuk-link brand__color">nuestras
-          publicaciones anteriores</a> para ver si ya hemos respondido a tu pregunta.
-        step3_html: Realice una nueva solicitud poniéndose en contacto con nosotros
-          a través de los datos a continuación.
+        step1_html: Lea sobre la Ley de Libertad de Información (FOI) y <a href="%{how_to_path}" class="govuk-link brand__color">cómo hacer una solicitud</a>.
+        step2_html: Consulta <a href="%{our_releases_path}" class="govuk-link brand__color">nuestras publicaciones anteriores</a> para ver si ya hemos respondido a tu pregunta.
+        step3_html: Realice una nueva solicitud poniéndose en contacto con nosotros a través de los datos a continuación.
     follow_us: Síguenos
     hidden_share_link: Síguenos en
     high_profile_groups: Grupos de alto perfil dentro de %{title}
@@ -299,8 +294,7 @@ es-419:
       devolved: "%{title} es un cuerpo de <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} se incorporará pronto a GOV.UK"
       left_gov: "%{title} es ahora independiente del gobierno del Reino Unido"
-      merged: "%{title} pasó a formar parte de <a href='%{link_href}'>%{link_text}</a>
-        en %{updated}"
+      merged: "%{title} pasó a formar parte de <a href='%{link_href}'>%{link_text}</a> en %{updated}"
       merged_no_date: "%{title} es ahora parte de <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} ha cerrado"
       no_website: "%{title} has no website"

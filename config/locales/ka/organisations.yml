@@ -1,3 +1,4 @@
+---
 ka:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
@@ -268,26 +269,18 @@ ka:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: იხილეთ ინფორმაციის გამჭვირვალობა და თავისუფლება
         title: ინფორმაციის გამჭვირვალობა და თავისუფლება
-    errors_or_omissions_html: <p>შეცდომები და გამოტოვებული ადგილები? <a class="govuk-link"
-      href="/contact/govuk">მოგვწერეთ აქ</a>. არასამთავრობო უწყებრივი ორგანოების ოფიციალური
-      სიებისათვის <a class="govuk-link" href="/government/collections/public-bodies">საჯარო
-      ორგანოების ნახვა</a>.</p>
+    errors_or_omissions_html: <p>შეცდომები და გამოტოვებული ადგილები? <a class="govuk-link" href="/contact/govuk">მოგვწერეთ აქ</a>. არასამთავრობო უწყებრივი ორგანოების ოფიციალური სიებისათვის <a class="govuk-link" href="/government/collections/public-bodies">საჯარო ორგანოების ნახვა</a>.</p>
     featured: რჩეული
     foi:
       contact_form: ინფორმაციის თავისუფლების საკონტაქტო ფორმა
-      foi_exemption_html: "ინფორმაციის თავისუფლების აქტი არ მოიცავს ამ ორგანიზაციას.
-        \nიმის სანახავად, თუ რომელ ორგანიზაციებს მოიცავს ეს კანონი, იხილეთ,<a href=\"%{foi_url}\"
-        class=\"govuk-link brand__color\">კანონმდებლობა</a>.\n"
+      foi_exemption_html: "ინფორმაციის თავისუფლების აქტი არ მოიცავს ამ ორგანიზაციას. \nიმის სანახავად, თუ რომელ ორგანიზაციებს მოიცავს ეს კანონი, იხილეთ,<a href=\"%{foi_url}\" class=\"govuk-link brand__color\">კანონმდებლობა</a>.\n"
       freedom_of_information_act: ინფორმაციის თავისუფლების (FOI) აქტი
       freedom_of_information_requests: ინფორმაციის თავისუფლების მოთხოვნები
       make_an_foi_request: გააკეთეთ ინფორმაციის თავისუფლების მოთხოვნა
       making_foi_requests:
-        step1_html: წაიკითხეთ ინფორმაციის თავისუფლების (FOI) აქტის შესახებ და <a href="%{how_to_path}"
-          class="govuk-link brand__color">როგორ გავაკეთოთ მოთხოვნა</a>.
-        step2_html: შეამოწმეთ <a href="%{our_releases_path}" class="govuk-link brand__color">ჩვენი
-          წინა გამოცემები</a> იმის სანახავად, გიპასუხეთ თუ არა უკვე თქვენს კითხვაზე.
-        step3_html: გააკეთეთ ახალი მოთხოვნა ჩვენთან დაკავშირებით ქვემოთ მოცემული დეტალების
-          მეშვეობით.
+        step1_html: წაიკითხეთ ინფორმაციის თავისუფლების (FOI) აქტის შესახებ და <a href="%{how_to_path}" class="govuk-link brand__color">როგორ გავაკეთოთ მოთხოვნა</a>.
+        step2_html: შეამოწმეთ <a href="%{our_releases_path}" class="govuk-link brand__color">ჩვენი წინა გამოცემები</a> იმის სანახავად, გიპასუხეთ თუ არა უკვე თქვენს კითხვაზე.
+        step3_html: გააკეთეთ ახალი მოთხოვნა ჩვენთან დაკავშირებით ქვემოთ მოცემული დეტალების მეშვეობით.
     follow_us: გამოგვყევით
     hidden_share_link: გამოგვყევით
     high_profile_groups: მაღალი პროფილის ჯგუფები %{title}-ს ფარგლებში

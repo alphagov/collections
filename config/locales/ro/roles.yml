@@ -1,11 +1,11 @@
+---
 ro:
   roles:
+    find_out_more_html: Află mai multe despre deținătorii acestei funcții în secțiunea noastră %{link}.
     heading:
-      one: Rol
       few:
+      one: Rol
       other: Roluri
-    find_out_more_html: Află mai multe despre deținătorii acestei funcții în secțiunea
-      noastră %{link}.
     headings:
       current_holder: Deținătorul curent al funcției
       previous_holders: Deținători anteriori

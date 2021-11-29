@@ -1,14 +1,14 @@
+---
 cy:
   roles:
+    find_out_more_html: Dysgwch fwy am ddeiliaid blaenorol y rôl hon yn ein hadran %{link}.
     heading:
-      zero:
-      one: Rôl
-      two:
       few:
       many:
+      one: Rôl
       other: Rolau
-    find_out_more_html: Dysgwch fwy am ddeiliaid blaenorol y rôl hon yn ein hadran
-      %{link}.
+      two:
+      zero:
     headings:
       current_holder: Deiliad presennol y rôl
       previous_holders: Deiliaid blaenorol

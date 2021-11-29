@@ -1,3 +1,4 @@
+---
 fa:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
@@ -268,10 +269,7 @@ fa:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: مشاهده تمام موارد منتشر شده مربوط به شفافیت و آزادی اطلاعات
         title: موارد منتشر شده مربوط به شفافیت و آزادی اطلاعات
-    errors_or_omissions_html: <p>موارد خطا یا حذف وجود دارد؟ <a class="govuk-link"
-      href="/contact/govuk">از اینجا به ما بگویید</a>. برای اطلاع از لیست رسمی نهادهای
-      عمومی غیر وزارتی <a class="govuk-link" href="/government/collections/public-bodies">نهادهای
-      عمومی را مشاهده کنید</a>.</p>
+    errors_or_omissions_html: <p>موارد خطا یا حذف وجود دارد؟ <a class="govuk-link" href="/contact/govuk">از اینجا به ما بگویید</a>. برای اطلاع از لیست رسمی نهادهای عمومی غیر وزارتی <a class="govuk-link" href="/government/collections/public-bodies">نهادهای عمومی را مشاهده کنید</a>.</p>
     featured: برجسته
     foi:
       contact_form: فرم تماس آزادی اطلاعات
@@ -282,13 +280,9 @@ fa:
       freedom_of_information_requests: درخواست‌های آزادی اطلاعات
       make_an_foi_request: ثبت یک درخواست آزادی اطلاعات
       making_foi_requests:
-        step1_html: درباره قانون آزادی اطلاعات (FOI) و <a href="%{how_to_path}" class="govuk-link
-          brand__color">نحوه ثبت درخواست، اطلاعات بیشتری کسب کنید</a>.
-        step2_html: برای اینکه ببینید آیا قبلاً به سؤال شما پاسخ داده‌ایم یا خیر،
-          <a href="%{our_releases_path}" class="govuk-link brand__color">موارد منتشر
-          شده قبلی</a> ما را بررسی کنید.
-        step3_html: از طریق تماس با ما با استفاده از جزئیات زیر، یک درخواست جدید ثبت
-          کنید.
+        step1_html: درباره قانون آزادی اطلاعات (FOI) و <a href="%{how_to_path}" class="govuk-link brand__color">نحوه ثبت درخواست، اطلاعات بیشتری کسب کنید</a>.
+        step2_html: برای اینکه ببینید آیا قبلاً به سؤال شما پاسخ داده‌ایم یا خیر، <a href="%{our_releases_path}" class="govuk-link brand__color">موارد منتشر شده قبلی</a> ما را بررسی کنید.
+        step3_html: از طریق تماس با ما با استفاده از جزئیات زیر، یک درخواست جدید ثبت کنید.
     follow_us: ما را دنبال کنید
     hidden_share_link: دنبال کردن در
     high_profile_groups: گروه‌های مشهور در %{title}
@@ -300,10 +294,8 @@ fa:
       devolved: "%{title} نهادی است از <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} به زودی در GOV.UK ادغام خواهد شد"
       left_gov: "%{title} اکنون از دولت انگلستان مستقل است"
-      merged: "%{title} بخشی از <a href='%{link_href}'>%{link_text}</a> در %{updated}
-        شده است"
-      merged_no_date: "%{title} اکنون بخشی از <a href='%{link_href}'>%{link_text}</a>
-        است"
+      merged: "%{title} بخشی از <a href='%{link_href}'>%{link_text}</a> در %{updated} شده است"
+      merged_no_date: "%{title} اکنون بخشی از <a href='%{link_href}'>%{link_text}</a> است"
       no_longer_exists: "%{title} بسته شده است"
       no_website: "%{title} هیچ وب‌سایتی ندارد"
       separate_website: "%{title} دارای یک <a href='%{url}'>وب‌سایت مجزا است</a>"

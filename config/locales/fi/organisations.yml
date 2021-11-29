@@ -1,6 +1,17 @@
+---
 fi:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Hallinnoija
+    breadcrumbs:
+      courts_and_tribunals: Tuomioistuimet
+      organisations: Organisaatiot
+    contact:
+      contact_details: Yhteystiedot
+      contact_form: 'Yhteydenottolomake: %{title}'
+      contact_organisation: 'Ota yhteyttä: %{organisation}'
+      email: Sähköposti
+      telephone: Puhelin
     content_item:
       schema_name:
         aaib_report:
@@ -225,16 +236,6 @@ fi:
         written_statement:
           one: Kirjallinen lausuma parlamentille
           other: Kirjallinen lausumat parlamentille
-    administered_by: Hallinnoija
-    breadcrumbs:
-      courts_and_tribunals: Tuomioistuimet
-      organisations: Organisaatiot
-    contact:
-      contact_details: Yhteystiedot
-      contact_form: 'Yhteydenottolomake: %{title}'
-      contact_organisation: 'Ota yhteyttä: %{organisation}'
-      email: Sähköposti
-      telephone: Puhelin
     corporate_information: Yritystiedot
     document_types:
       documents: Asiakirjat
@@ -268,10 +269,7 @@ fi:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Katso kaikki avoimuus ja tiedon vapaus
         title: Avoimuus ja tiedonvälityksen vapaus
-    errors_or_omissions_html: <p>Virheitä tai puutteita? <a class="govuk-link" href="/contact/govuk">Kerro
-      meille täällä</a>. Muiden kuin ministeriöiden julkisten elinten virallisia luetteloita
-      varten <a class="govuk-link" href="/government/collections/public-bodies">katso
-      julkisyhteisöt</a>.</p>
+    errors_or_omissions_html: <p>Virheitä tai puutteita? <a class="govuk-link" href="/contact/govuk">Kerro meille täällä</a>. Muiden kuin ministeriöiden julkisten elinten virallisia luetteloita varten <a class="govuk-link" href="/government/collections/public-bodies">katso julkisyhteisöt</a>.</p>
     featured: Suositeltava
     foi:
       contact_form: Tiedonvälityksen vapaus yhteydenottolomake
@@ -282,10 +280,8 @@ fi:
       freedom_of_information_requests: Tiedonvapauspyynnöt
       make_an_foi_request: Tee Tiedonvälityksen vapaus pyyntö
       making_foi_requests:
-        step1_html: Lue lisää tiedonvälityksen vapautta koskevasta laista (FOI) ja
-          <a href="%{how_to_path}" class="govuk-link brand__color">miten tehdä pyyntö</a>.
-        step2_html: Tarkista <a href="%{our_releases_path}" class="govuk-link brand__color">aiemmat
-          julkaisumme</a> nähdäksesi, olemmeko jo vastanneet kysymykseesi.
+        step1_html: Lue lisää tiedonvälityksen vapautta koskevasta laista (FOI) ja <a href="%{how_to_path}" class="govuk-link brand__color">miten tehdä pyyntö</a>.
+        step2_html: Tarkista <a href="%{our_releases_path}" class="govuk-link brand__color">aiemmat julkaisumme</a> nähdäksesi, olemmeko jo vastanneet kysymykseesi.
         step3_html: Tee uusi pyyntö ottamalla meihin yhteyttä alla olevilla tiedoilla.
     follow_us: Seuraa meitä
     hidden_share_link: Seurata
@@ -298,8 +294,7 @@ fi:
       devolved: "%{title} on elin <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} sisällytetään pian GOV.UK-sivustoon"
       left_gov: "%{title} on nyt riippumaton Ison -Britannian hallituksesta"
-      merged: "%{title} tuli osa <a href='%{link_href}'>%{link_text}</a> osoitteessa
-        %{updated}"
+      merged: "%{title} tuli osa <a href='%{link_href}'>%{link_text}</a> osoitteessa %{updated}"
       merged_no_date: "%{title} on nyt osa <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} on suljettu"
       no_website: Käyttäjällä %{title} ei ole verkkosivustoa

@@ -1,10 +1,10 @@
+---
 ur:
   roles:
+    find_out_more_html: ہمارے %{link} سیکشن میں اس کردار کے گزشتہ ہولڈرز کے بارے میں مزید جانیں۔
     heading:
       one: کردار
       other: کردار
-    find_out_more_html: ہمارے %{link} سیکشن میں اس کردار کے گزشتہ ہولڈرز کے بارے میں
-      مزید جانیں۔
     headings:
       current_holder: حالیہ کردار کا ہولڈر
       previous_holders: گزشتہ ہولڈرز

@@ -1,6 +1,17 @@
+---
 he:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: מנוהל על ידי
+    breadcrumbs:
+      courts_and_tribunals: בתי משפט ובתי דין
+      organisations: ארגונים
+    contact:
+      contact_details: פרטי קשר
+      contact_form: 'טופס איש קשר: %{title}'
+      contact_organisation: איש קשר %{organisation}
+      email: דואר אלקטרוני
+      telephone: טלפון
     content_item:
       schema_name:
         aaib_report:
@@ -225,16 +236,6 @@ he:
         written_statement:
           one: הצהרה בכתב לפרלמנט
           other: הצהרות בכתב לפרלמנט
-    administered_by: מנוהל על ידי
-    breadcrumbs:
-      courts_and_tribunals: בתי משפט ובתי דין
-      organisations: ארגונים
-    contact:
-      contact_details: פרטי קשר
-      contact_form: 'טופס איש קשר: %{title}'
-      contact_organisation: איש קשר %{organisation}
-      email: דואר אלקטרוני
-      telephone: טלפון
     corporate_information: מידע תאגידי
     document_types:
       documents: מסמכים
@@ -268,9 +269,7 @@ he:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: ראה את כל השקיפות וחופש המידע שפורסם
         title: שקיפות וחופש פרסומי מידע
-    errors_or_omissions_html: <p>Errors or omissions? <a class="govuk-link" href="/contact/govuk">Tell
-      us here</a>. לרשימות רשמיות של גופים ציבוריים שאינם מחלקתיים <a class="govuk-link"
-      href="/government/collections/public-bodies">ראו גופים ציבורייםs</a>.</p>
+    errors_or_omissions_html: <p>Errors or omissions? <a class="govuk-link" href="/contact/govuk">Tell us here</a>. לרשימות רשמיות של גופים ציבוריים שאינם מחלקתיים <a class="govuk-link" href="/government/collections/public-bodies">ראו גופים ציבורייםs</a>.</p>
     featured: מוצגים
     foi:
       contact_form: טופס יצירת קשר של חופש מידע
@@ -281,10 +280,8 @@ he:
       freedom_of_information_requests: בקשות לחופש המידע
       make_an_foi_request: תגיש בקשה לחופש מידע
       making_foi_requests:
-        step1_html: קרא על חוק חופש המידע (FOI) <a href="%{how_to_path}" class="govuk-link
-          brand__color">וכיצד להגיש בקשה</a>.
-        step2_html: בדוק <a href="%{our_releases_path}" class="govuk-link brand__color">את
-          המהדורות הקודמות שלנו</a> כדי לראות אם כבר ענינו על שאלתך.
+        step1_html: קרא על חוק חופש המידע (FOI) <a href="%{how_to_path}" class="govuk-link brand__color">וכיצד להגיש בקשה</a>.
+        step2_html: בדוק <a href="%{our_releases_path}" class="govuk-link brand__color">את המהדורות הקודמות שלנו</a> כדי לראות אם כבר ענינו על שאלתך.
         step3_html: שלח בקשה חדשה על ידי יצירת קשר באמצעות הפרטים שלהלן.
     follow_us: עקוב אחרינו
     hidden_share_link: עקוב ב-

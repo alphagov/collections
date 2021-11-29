@@ -1,6 +1,17 @@
+---
 dr:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: اداره شده توسط
+    breadcrumbs:
+      courts_and_tribunals: محاکم و دادگاه ها
+      organisations: سازمان ها
+    contact:
+      contact_details: جزییات تماس
+      contact_form: 'فورم تماس: {title}%'
+      contact_organisation: تماس با{organisation}%
+      email: ایمل
+      telephone: تلیفون
     content_item:
       schema_name:
         aaib_report:
@@ -225,16 +236,6 @@ dr:
         written_statement:
           one: بیانیهء کتبی به پارلمان
           other: بیانیه هایی کتبی به پارلمان
-    administered_by: اداره شده توسط
-    breadcrumbs:
-      courts_and_tribunals: محاکم و دادگاه ها
-      organisations: سازمان ها
-    contact:
-      contact_details: جزییات تماس
-      contact_form: 'فورم تماس: {title}%'
-      contact_organisation: تماس با{organisation}%
-      email: ایمل
-      telephone: تلیفون
     corporate_information: اطلاعات شرکت
     document_types:
       documents: اسناد
@@ -282,12 +283,9 @@ dr:
       freedom_of_information_requests: درخواست هایی آزادی اطلاعات
       make_an_foi_request: یک درخواست آزادی اطلاعات ارسال نمایید
       making_foi_requests:
-        step1_html: در مورد قانون آزادی اطلاعات بخوانید <a href="%{how_to_path}" class="govuk-link
-          brand__color">چگونه یک درخواست آماده نمایید</a>.
-        step2_html: بررسی نمایید<a href="%{our_releases_path}" class="govuk-link brand__color">نسخه
-          هایی قبلی را</a> تا دریابید که آیا قبلاً به سوال شما پاسخ داده ایم
-        step3_html: با استفاده از جزییات ذیل با ما به تماس شده و درخواست جدید ارسال
-          نمایید.
+        step1_html: در مورد قانون آزادی اطلاعات بخوانید <a href="%{how_to_path}" class="govuk-link brand__color">چگونه یک درخواست آماده نمایید</a>.
+        step2_html: بررسی نمایید<a href="%{our_releases_path}" class="govuk-link brand__color">نسخه هایی قبلی را</a> تا دریابید که آیا قبلاً به سوال شما پاسخ داده ایم
+        step3_html: با استفاده از جزییات ذیل با ما به تماس شده و درخواست جدید ارسال نمایید.
     follow_us: ما را دنبال نمایید
     hidden_share_link: دنبال نمایید
     high_profile_groups: گروه هایی مشهور{title}%

@@ -1,6 +1,17 @@
+---
 et:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Haldab
+    breadcrumbs:
+      courts_and_tribunals: Kohtud
+      organisations: Organisatsioonid
+    contact:
+      contact_details: Kontaktandmed
+      contact_form: 'Kontaktivorm: %{title}'
+      contact_organisation: Kontakt %{organization}
+      email: E-post
+      telephone: Telefon
     content_item:
       schema_name:
         aaib_report:
@@ -225,16 +236,6 @@ et:
         written_statement:
           one: Kirjalik avaldus parlamendile
           other: Kirjalikud avaldused parlamendile
-    administered_by: Haldab
-    breadcrumbs:
-      courts_and_tribunals: Kohtud
-      organisations: Organisatsioonid
-    contact:
-      contact_details: Kontaktandmed
-      contact_form: 'Kontaktivorm: %{title}'
-      contact_organisation: Kontakt %{organization}
-      email: E-post
-      telephone: Telefon
     corporate_information: Ettevõtte teave
     document_types:
       documents: Dokumendid
@@ -268,9 +269,7 @@ et:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Vaata kogu teabe avaldamise läbipaistvust ja vabadust
         title: Teabe avaldamise läbipaistvus ja vabadus
-    errors_or_omissions_html: <p> Vead või väljajätmised? <a class="govuk-link" href="/contact/govuk">Rääkige
-      meile siin</a>. Osakonnaväliste avalike asutuste ametlikud loendid <a class="govuk-link"
-      href="/government/collections/public-bodies">vaata avalikke asutusi</a>.</p>
+    errors_or_omissions_html: <p> Vead või väljajätmised? <a class="govuk-link" href="/contact/govuk">Rääkige meile siin</a>. Osakonnaväliste avalike asutuste ametlikud loendid <a class="govuk-link" href="/government/collections/public-bodies">vaata avalikke asutusi</a>.</p>
     featured: Soovitatavad
     foi:
       contact_form: FOI kontaktivorm
@@ -281,12 +280,9 @@ et:
       freedom_of_information_requests: Teabevabaduse taotlused
       make_an_foi_request: Esita FOI taotluse
       making_foi_requests:
-        step1_html: Lugege teabevabaduse seaduse (FOI) ja <a href="%{how_to_path}"
-          class="govuk-link brand__color">taotluse esitamise kohta</a>.
-        step2_html: Vt <a href="%{our_releases_path}" class="govuk-link brand__color">our
-          previous releases</a>, et näha, kas oleme teie küsimusele vastanud.
-        step3_html: Esitage uus taotlus, võttes meiega ühendust, kasutades allolevaid
-          üksikasju.
+        step1_html: Lugege teabevabaduse seaduse (FOI) ja <a href="%{how_to_path}" class="govuk-link brand__color">taotluse esitamise kohta</a>.
+        step2_html: Vt <a href="%{our_releases_path}" class="govuk-link brand__color">our previous releases</a>, et näha, kas oleme teie küsimusele vastanud.
+        step3_html: Esitage uus taotlus, võttes meiega ühendust, kasutades allolevaid üksikasju.
     follow_us: Jälgige meid
     hidden_share_link: Järgige
     high_profile_groups: Kõrge profiiliga rühmad jaotises %{title}
@@ -298,8 +294,7 @@ et:
       devolved: Jaotis %{title} on <a href='%{link_href}'>%{link_text}</a> sisu
       joining: "%{title} lisatakse peagi saidile GOV.UK"
       left_gov: "%{title} on nüüd Ühendkuningriigi valitsusest sõltumatu"
-      merged: "%{title} sai <a href='%{link_href}'>%{link_text}</a> in %{updated}
-        osaks"
+      merged: "%{title} sai <a href='%{link_href}'>%{link_text}</a> in %{updated} osaks"
       merged_no_date: "%{title} on nüüd <a href='%{link_href}'>%{link_text}</a> osa"
       no_longer_exists: "%{title} on suletud"
       no_website: "%{title} pole veebisaiti"

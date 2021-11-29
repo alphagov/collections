@@ -1,3 +1,4 @@
+---
 ko:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
@@ -268,9 +269,7 @@ ko:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: 모든 정보 공개의 투명성 및 자유 보기
         title: 정보 공개의 투명성 및 자유
-    errors_or_omissions_html: <p>오류 또는 생략된 내용이 있습니까? <a class="govuk-link" href="/contact/govuk">여기에
-      말씀해 주십시오</a>. 비부처 공공기관의 공식 목록은 <a class="govuk-link" href="/government/collections/public-bodies">공공기관을
-      참조하십시오</a>.</p>
+    errors_or_omissions_html: <p>오류 또는 생략된 내용이 있습니까? <a class="govuk-link" href="/contact/govuk">여기에 말씀해 주십시오</a>. 비부처 공공기관의 공식 목록은 <a class="govuk-link" href="/government/collections/public-bodies">공공기관을 참조하십시오</a>.</p>
     featured: 특집
     foi:
       contact_form: FOI 콘택트 폼
@@ -281,10 +280,8 @@ ko:
       freedom_of_information_requests: 정보의 자유 요청
       make_an_foi_request: FOI 요청하기
       making_foi_requests:
-        step1_html: 정보의 자유(FOI) 법과 <a href="%{how_to_path}" class="govuk-link brand__color">요청하는
-          법</a>에 대해 참조하십시오.
-        step2_html: <a href="%{our_releases_path}" class="govuk-link brand__color">저희의
-          지난 공개물</a> 을 보고 저희가 이미 귀하의 질문에 답하였는지 확인하십시오.
+        step1_html: 정보의 자유(FOI) 법과 <a href="%{how_to_path}" class="govuk-link brand__color">요청하는 법</a>에 대해 참조하십시오.
+        step2_html: <a href="%{our_releases_path}" class="govuk-link brand__color">저희의 지난 공개물</a> 을 보고 저희가 이미 귀하의 질문에 답하였는지 확인하십시오.
         step3_html: 아래의 상세 정보를 사용해 저희에게 연락하여 요청하십시오.
     follow_us: 팔로우하기
     hidden_share_link: 다음에서 팔로우 하기
@@ -293,13 +290,11 @@ ko:
     jobs_contracts: 직업 및 계약
     latest_from: "%{title}의 최근 내용"
     notices:
-      changed_name: "%{title} 은(는)의  이제 <a href='%{link_href}'>%{link_text}</a>라고
-        불립니다"
+      changed_name: "%{title} 은(는)의  이제 <a href='%{link_href}'>%{link_text}</a>라고 불립니다"
       devolved: "%{title} 은(는) <a href='%{link_href}'>%{link_text}</a>의 기관입니다"
       joining: "%{title} 은(는) 곧 GOV.UK로 통합됩니다"
       left_gov: "%{title} 은(는) 현재 UK 정부로부터 독립되어 있습니다"
-      merged: "%{title} 은(는) <a href='%{link_href}'>%{link_text}</a>의 일부가 %{updated}에
-        되었습니다"
+      merged: "%{title} 은(는) <a href='%{link_href}'>%{link_text}</a>의 일부가 %{updated}에 되었습니다"
       merged_no_date: "%{title} 은(는) 이제<a href='%{link_href}'>%{link_text}</a>의 일부입니다"
       no_longer_exists: "%{title} 은(는) 종결되었습니다"
       no_website: "%{title} 은(는) 웹사이트가 없습니다"

@@ -1,10 +1,10 @@
+---
 hy:
   roles:
+    find_out_more_html: 'Իմանալ ավելին այս պաշտոնում նախկին ծառայողների մասին մեր %{link} բաժնում:'
     heading:
       one: Պաշտոն
       other: Պաշտոններ
-    find_out_more_html: 'Իմանալ ավելին այս պաշտոնում նախկին ծառայողների մասին մեր
-      %{link} բաժնում:'
     headings:
       current_holder: Պաշտոնի ներկայիս ծառայող
       previous_holders: Նախկին ծառայողներ

@@ -1,10 +1,10 @@
+---
 de:
   roles:
+    find_out_more_html: Weitere Informationen über frühere Inhaber dieser Funktion finden Sie in unserem Abschnitt %{link}.
     heading:
       one: Funktion
       other: Funktionen
-    find_out_more_html: Weitere Informationen über frühere Inhaber dieser Funktion
-      finden Sie in unserem Abschnitt %{link}.
     headings:
       current_holder: Derzeitiger Funktionsinhaber
       previous_holders: Frühere Funktionsinhaber

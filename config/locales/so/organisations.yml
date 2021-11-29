@@ -1,6 +1,17 @@
+---
 so:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Ay maamushay
+    breadcrumbs:
+      courts_and_tribunals: Maxkamadaha iyo Xukunada
+      organisations: Ururada
+    contact:
+      contact_details: Faahfaahinta xidhiidhka
+      contact_form: Foomka xidhiidhka %{title}
+      contact_organisation: Xidhiidh %{organisation}
+      email: Iimayl
+      telephone: Tilifoon
     content_item:
       schema_name:
         aaib_report:
@@ -225,16 +236,6 @@ so:
         written_statement:
           one: Bayaan qoran oo loogu talogalay Baarlamaanka
           other: Bayaanada qoran ee loogu talogalay Baarlamaanka
-    administered_by: Ay maamushay
-    breadcrumbs:
-      courts_and_tribunals: Maxkamadaha iyo Xukunada
-      organisations: Ururada
-    contact:
-      contact_details: Faahfaahinta xidhiidhka
-      contact_form: Foomka xidhiidhka %{title}
-      contact_organisation: Xidhiidh %{organisation}
-      email: Iimayl
-      telephone: Tilifoon
     corporate_information: Macluumaadka shirkada
     document_types:
       documents: Dukumentiyada
@@ -268,9 +269,7 @@ so:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Fiiri dhamaan daah furnaanta iyo xoriyada baahinta macluumaadka
         title: Daah furnaanta iyo xoriyada baahinta macluumaadka
-    errors_or_omissions_html: <p>Qaladaadka ama katagista? <a class="govuk-link" href="/contact/govuk">Noogu
-      sheg halkan</a>. Liiska rasmiga ah ee haayada dadweynaha <a class="govuk-link"
-      href="/government/collections/public-bodies">fiiri haayadaha dadweynaha</a>.</p>
+    errors_or_omissions_html: <p>Qaladaadka ama katagista? <a class="govuk-link" href="/contact/govuk">Noogu sheg halkan</a>. Liiska rasmiga ah ee haayada dadweynaha <a class="govuk-link" href="/government/collections/public-bodies">fiiri haayadaha dadweynaha</a>.</p>
     featured: Muuqday
     foi:
       contact_form: Foomka xidhiidhka FOI
@@ -281,11 +280,8 @@ so:
       freedom_of_information_requests: Codsiyada Xoriyada Macluumaadka
       make_an_foi_request: Samee codsi FOI
       making_foi_requests:
-        step1_html: Akhri waxbadan oo khuseeya Xeerka Xoriyada Macluumaadka (FOI)
-          <a href="%{how_to_path}" class="govuk-link brand__color">sida loo sameeyo
-          codsi</a>.
-        step2_html: Hubi <a href="%{our_releases_path}" class="govuk-link brand__color">warbixinahayagii
-          hore</a> si aad u aragtid inaan mar hore ka jawaabnay su'aashaada.
+        step1_html: Akhri waxbadan oo khuseeya Xeerka Xoriyada Macluumaadka (FOI) <a href="%{how_to_path}" class="govuk-link brand__color">sida loo sameeyo codsi</a>.
+        step2_html: Hubi <a href="%{our_releases_path}" class="govuk-link brand__color">warbixinahayagii hore</a> si aad u aragtid inaan mar hore ka jawaabnay su'aashaada.
         step3_html: Samee codsi cusub adoo nagalasoo xidhiidhaya faahfaahinta hoose.
     follow_us: Nagala soco
     hidden_share_link: Nagalasoco
@@ -298,8 +294,7 @@ so:
       devolved: "%{title} waa haayad ka mida <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} waxa si dhakhso ah loogu dari doonaa GOV.UK"
       left_gov: "%{title} waa ka madaxbanaan yahay hada dawlada Ingiriiska"
-      merged: "%{title} ka qeyb noqday <a href='%{link_href}'>%{link_text}</a> in
-        %{updated}"
+      merged: "%{title} ka qeyb noqday <a href='%{link_href}'>%{link_text}</a> in %{updated}"
       merged_no_date: "%{title} waa ka qeyb hada <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} wuxuu xidhay"
       no_website: "%{title} ma leh wabsaayd"

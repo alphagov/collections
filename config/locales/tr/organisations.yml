@@ -1,3 +1,4 @@
+---
 tr:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
@@ -268,10 +269,7 @@ tr:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Tüm bilgi edinme şeffaflığı ve özgürlüğü açıklamalarına bakın
         title: Bilgi edinme açıklamalarının şeffaflığı ve özgürlüğü
-    errors_or_omissions_html: <p>Hatalar veya eksiklikler mi var? <a class="govuk-link"
-      href="/contact/govuk">Buradan bize söyleyin</a>. Müdürlük dışı kamu kurumlarının
-      resmi listeleri için <a class="govuk-link" href="/government/collections/public-bodies">kamu
-      kurumlarına bakın</a>.</p>
+    errors_or_omissions_html: <p>Hatalar veya eksiklikler mi var? <a class="govuk-link" href="/contact/govuk">Buradan bize söyleyin</a>. Müdürlük dışı kamu kurumlarının resmi listeleri için <a class="govuk-link" href="/government/collections/public-bodies">kamu kurumlarına bakın</a>.</p>
     featured: Öne çıkan
     foi:
       contact_form: Bilgi Edinme Özgürlüğü irtibat formu
@@ -282,12 +280,9 @@ tr:
       freedom_of_information_requests: Bilgi Edinme Özgürlüğü talepleri
       make_an_foi_request: Bir Bilgi Edinme Özgürlüğü talebinde bulunun
       making_foi_requests:
-        step1_html: Bilgi Edinme Özgürlüğü (FOI) Kanunu ve <a href="%{how_to_path}"
-          class="govuk-link brand__color">nasıl talep yapılacağı</a> hakkında okuyun.
-        step2_html: Sorunuza zaten cevap verip vermediğimizi görmek için <a href="%{our_releases_path}"
-          class="govuk-link brand__color">önceki açıklamalarımıza</a> bakın.
-        step3_html: Aşağıdaki bilgileri kullanarak bizimle irtibata geçerek yeni bir
-          talep yapın.
+        step1_html: Bilgi Edinme Özgürlüğü (FOI) Kanunu ve <a href="%{how_to_path}" class="govuk-link brand__color">nasıl talep yapılacağı</a> hakkında okuyun.
+        step2_html: Sorunuza zaten cevap verip vermediğimizi görmek için <a href="%{our_releases_path}" class="govuk-link brand__color">önceki açıklamalarımıza</a> bakın.
+        step3_html: Aşağıdaki bilgileri kullanarak bizimle irtibata geçerek yeni bir talep yapın.
     follow_us: Bizi takip edin
     hidden_share_link: Bizi şuradan takip edin
     high_profile_groups: "%{title} içerisindeki yüksek profilli gruplar"
@@ -295,13 +290,11 @@ tr:
     jobs_contracts: İşler ve sözleşmeler
     latest_from: "%{title} kaynaklı en güncel olanlar"
     notices:
-      changed_name: "%{title} artık <a href='%{link_href}'>%{link_text}</a> olarak
-        adlandırılıyor"
+      changed_name: "%{title} artık <a href='%{link_href}'>%{link_text}</a> olarak adlandırılıyor"
       devolved: "%{title} bir <a href='%{link_href}'>%{link_text}</a> kurumudur"
       joining: "%{title} yakında GOV.UK sitesine eklenecek"
       left_gov: "%{title} artık İngiltere devletinden bağımsızdır"
-      merged: "%{title} <a href='%{link_href}'>%{link_text}</a> %{updated} parçası
-        oldu"
+      merged: "%{title} <a href='%{link_href}'>%{link_text}</a> %{updated} parçası oldu"
       merged_no_date: "%{title} artık <a href='%{link_href}'>%{link_text}</a> bünyesinde"
       no_longer_exists: "%{title} kapandı"
       no_website: "%{title} kendisine ait bir web sitesine sahip değil"

@@ -1,6 +1,17 @@
+---
 is:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Stjórnað af
+    breadcrumbs:
+      courts_and_tribunals: Réttir og dómstólar
+      organisations: Samtök
+    contact:
+      contact_details: Upplýsingar til að hafa samband
+      contact_form: 'Eyðublað til að hafa samband: %{title}'
+      contact_organisation: Hafa samband við %{organisation}
+      email: Tölvupóstur
+      telephone: Sími
     content_item:
       schema_name:
         aaib_report:
@@ -225,16 +236,6 @@ is:
         written_statement:
           one: Skrifleg yfirlýsing til Þingsins
           other: Skriflegar yfirlýsingar til Þingsins
-    administered_by: Stjórnað af
-    breadcrumbs:
-      courts_and_tribunals: Réttir og dómstólar
-      organisations: Samtök
-    contact:
-      contact_details: Upplýsingar til að hafa samband
-      contact_form: 'Eyðublað til að hafa samband: %{title}'
-      contact_organisation: Hafa samband við %{organisation}
-      email: Tölvupóstur
-      telephone: Sími
     corporate_information: Upplýsingar um fyrirtæki
     document_types:
       documents: Skjöl
@@ -268,10 +269,7 @@ is:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Sjá alla útgáfu vegna gagnsæis og upplýsingafrelsi
         title: Útgáfa vegna gagnsæis og upplýsingafrelsi
-    errors_or_omissions_html: <p>Villur eða yfirsjónir? <a class="govuk-link" href="/contact/govuk">Segðu
-      okkur hér</a>. Fyrir opinbera lista yfir opinberar stofnar sem tilheyra ekki
-      ráðuneytum <a class="govuk-link" href="/government/collections/public-bodies">sjá
-      opinberar stofnanir</a>.</p>
+    errors_or_omissions_html: <p>Villur eða yfirsjónir? <a class="govuk-link" href="/contact/govuk">Segðu okkur hér</a>. Fyrir opinbera lista yfir opinberar stofnar sem tilheyra ekki ráðuneytum <a class="govuk-link" href="/government/collections/public-bodies">sjá opinberar stofnanir</a>.</p>
     featured: Valið
     foi:
       contact_form: FOI eyðublað til að hafa samband
@@ -282,13 +280,9 @@ is:
       freedom_of_information_requests: Freedom of Information fyrirspurnir
       make_an_foi_request: Leggja fram FOI fyrirspurn
       making_foi_requests:
-        step1_html: Lestu um Freedom of Information (FOI) Act og <a href="%{how_to_path}"
-          class="govuk-link brand__color">hvernig á að leggja fram fyrirspurn</a>.
-        step2_html: Kíktu á <a href="%{our_releases_path}" class="govuk-link brand__color">fyrri
-          útgáfur okkar</a> til að sjá hvort við höfum nú þegar svarað spurningunni
-          þinni.
-        step3_html: Leggja fram nýja fyrirspurn með því að hafa samband við okkur
-          með upplýsingunum hér fyrir neðan.
+        step1_html: Lestu um Freedom of Information (FOI) Act og <a href="%{how_to_path}" class="govuk-link brand__color">hvernig á að leggja fram fyrirspurn</a>.
+        step2_html: Kíktu á <a href="%{our_releases_path}" class="govuk-link brand__color">fyrri útgáfur okkar</a> til að sjá hvort við höfum nú þegar svarað spurningunni þinni.
+        step3_html: Leggja fram nýja fyrirspurn með því að hafa samband við okkur með upplýsingunum hér fyrir neðan.
     follow_us: Fylgdu okkur
     hidden_share_link: Fylgja á
     high_profile_groups: Áberandi hópar innan %{title}

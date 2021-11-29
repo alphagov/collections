@@ -1,9 +1,10 @@
+---
 pa:
   roles:
+    find_out_more_html: ਸਾਡੇ %{link} ਭਾਗ ਵਿੱਚ ਇਸ ਭੂਮਿਕਾ ਦੇ ਪਿਛਲੇ ਧਾਰਕਾਂ ਬਾਰੇ ਹੋਰ ਜਾਣੋ।
     heading:
       one: ਭੂਮਿਕਾ
       other: ਭੂਮਿਕਾਵਾਂ
-    find_out_more_html: ਸਾਡੇ %{link} ਭਾਗ ਵਿੱਚ ਇਸ ਭੂਮਿਕਾ ਦੇ ਪਿਛਲੇ ਧਾਰਕਾਂ ਬਾਰੇ ਹੋਰ ਜਾਣੋ।
     headings:
       current_holder: ਮੌਜੂਦਾ ਰੋਲ ਧਾਰਕ
       previous_holders: ਪਿਛਲੇ ਧਾਰਕ

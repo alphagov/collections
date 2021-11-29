@@ -1,9 +1,10 @@
+---
 is:
   roles:
+    find_out_more_html: Kynntu þér hver gegndi þessari stöðu áður í %{link} hlutanum.
     heading:
       one: Hlutverk
       other: Hlutverk
-    find_out_more_html: Kynntu þér hver gegndi þessari stöðu áður í %{link} hlutanum.
     headings:
       current_holder: Gegnir stöðunni núna
       previous_holders: Gegndu stöðunni áður

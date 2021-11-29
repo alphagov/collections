@@ -1,12 +1,12 @@
+---
 sr:
   roles:
+    find_out_more_html: Saznajte više o prethodnim nosiocima ove funkcije u našem odeljku %{link}.
     heading:
-      one: Uloga
       few:
       many:
+      one: Uloga
       other: Uloge
-    find_out_more_html: Saznajte više o prethodnim nosiocima ove funkcije u našem
-      odeljku %{link}.
     headings:
       current_holder: Aktuelni nosioci funkcije
       previous_holders: Prethodni nosioci

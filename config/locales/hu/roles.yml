@@ -1,10 +1,10 @@
+---
 hu:
   roles:
+    find_out_more_html: Tudjon meg többet a jelen pozíciót korábban betöltő emberekről a(z) %{link} szekciónkból.
     heading:
       one: Beosztás
       other: Beosztások
-    find_out_more_html: Tudjon meg többet a jelen pozíciót korábban betöltő emberekről
-      a(z) %{link} szekciónkból.
     headings:
       current_holder: A pozíciót jelenleg betölti
       previous_holders: A pozíciót korábban betöltők

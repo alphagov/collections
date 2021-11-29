@@ -1,6 +1,17 @@
+---
 pa:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: ਦੁਆਰਾ ਪ੍ਰਬੰਧਿਤ
+    breadcrumbs:
+      courts_and_tribunals: ਅਦਾਲਤਾਂ ਅਤੇ ਟ੍ਰਿਬਿਊਨਲ
+      organisations: ਸੰਗਠਨ
+    contact:
+      contact_details: ਸੰਪਰਕ ਵੇਰਵੇ
+      contact_form: 'ਸੰਪਰਕ ਫਾਰਮ: %{title}'
+      contact_organisation: "%{organisation} ਨਾਲ ਸੰਪਰਕ ਕਰੋ"
+      email: ਈ - ਮੇਲ
+      telephone: ਟੈਲੀਫੋਨ
     content_item:
       schema_name:
         aaib_report:
@@ -225,16 +236,6 @@ pa:
         written_statement:
           one: ਸੰਸਦ ਨੂੰ ਲਿਖਤੀ ਬਿਆਨ
           other: ਸੰਸਦ ਨੂੰ ਲਿਖਤੀ ਬਿਆਨ ਦਿੱਤੇ
-    administered_by: ਦੁਆਰਾ ਪ੍ਰਬੰਧਿਤ
-    breadcrumbs:
-      courts_and_tribunals: ਅਦਾਲਤਾਂ ਅਤੇ ਟ੍ਰਿਬਿਊਨਲ
-      organisations: ਸੰਗਠਨ
-    contact:
-      contact_details: ਸੰਪਰਕ ਵੇਰਵੇ
-      contact_form: 'ਸੰਪਰਕ ਫਾਰਮ: %{title}'
-      contact_organisation: "%{organisation} ਨਾਲ ਸੰਪਰਕ ਕਰੋ"
-      email: ਈ - ਮੇਲ
-      telephone: ਟੈਲੀਫੋਨ
     corporate_information: ਕਾਰਪੋਰੇਟ ਜਾਣਕਾਰੀ
     document_types:
       documents: ਦਸਤਾਵੇਜ਼
@@ -268,9 +269,7 @@ pa:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: ਸਾਰੀ ਪਾਰਦਰਸ਼ਤਾ ਅਤੇ ਜਾਣਕਾਰੀ ਜਾਰੀ ਕਰਨ ਦੀ ਆਜ਼ਾਦੀ ਵੇਖੋ
         title: ਪਾਰਦਰਸ਼ਤਾ ਅਤੇ ਜਾਣਕਾਰੀ ਜਾਰੀ ਕਰਨ ਦੀ ਆਜ਼ਾਦੀ
-    errors_or_omissions_html: <p>Errors or omissions? <a class="govuk-link" href="/contact/govuk">ਸਾਨੂੰ
-      ਇੱਥੇ ਦੱਸੋ</a>.ਗੈਰ -ਵਿਭਾਗੀ ਜਨਤਕ ਸੰਸਥਾਵਾਂ ਦੀਆਂ ਅਧਿਕਾਰਤ ਸੂਚੀਆਂ ਲਈ <a class="govuk-link"
-      href="/government/collections/public-bodies">ਜਨਤਕ ਸੰਸਥਾਵਾਂ ਵੇਖੋ</a>.</p>
+    errors_or_omissions_html: <p>Errors or omissions? <a class="govuk-link" href="/contact/govuk">ਸਾਨੂੰ ਇੱਥੇ ਦੱਸੋ</a>.ਗੈਰ -ਵਿਭਾਗੀ ਜਨਤਕ ਸੰਸਥਾਵਾਂ ਦੀਆਂ ਅਧਿਕਾਰਤ ਸੂਚੀਆਂ ਲਈ <a class="govuk-link" href="/government/collections/public-bodies">ਜਨਤਕ ਸੰਸਥਾਵਾਂ ਵੇਖੋ</a>.</p>
     featured: ਫੀਚਰਡ
     foi:
       contact_form: FOI ਸੰਪਰਕ ਫਾਰਮ
@@ -281,13 +280,9 @@ pa:
       freedom_of_information_requests: ਸੂਚਨਾ ਦੀ ਸੁਤੰਤਰਤਾ ਬੇਨਤੀਆਂ
       make_an_foi_request: ਇੱਕ FOI ਬੇਨਤੀ ਕਰੋ
       making_foi_requests:
-        step1_html: ਸੂਚਨਾ ਦੀ ਸੁਤੰਤਰਤਾ (FOI) ਐਕਟ ਅਤੇ <a href="%{how_to_path}" class="govuk-link
-          brand__color"> ਬੇਨਤੀ ਕਿਵੇਂ ਕਰੀਏ </a> ਬਾਰੇ ਪੜ੍ਹੋ।
-        step2_html: ਇਹ ਦੇਖਣ ਲਈ <a href="%{our_releases_path}" class="govuk-link brand__color">
-          ਸਾਡੀਆਂ ਪਿਛਲੀਆਂ ਰੀਲੀਜ਼ਾਂ </a> ਦੀ ਜਾਂਚ ਕਰੋ ਕਿ ਕੀ ਅਸੀਂ ਪਹਿਲਾਂ ਹੀ ਤੁਹਾਡੇ ਪ੍ਰਸ਼ਨ
-          ਦਾ ਉੱਤਰ ਦੇ ਚੁੱਕੇ ਹਾਂ।
-        step3_html: ਹੇਠਾਂ ਦਿੱਤੇ ਵੇਰਵਿਆਂ ਦੀ ਵਰਤੋਂ ਕਰਦਿਆਂ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰਕੇ ਇੱਕ ਨਵੀਂ
-          ਬੇਨਤੀ ਕਰੋ।
+        step1_html: ਸੂਚਨਾ ਦੀ ਸੁਤੰਤਰਤਾ (FOI) ਐਕਟ ਅਤੇ <a href="%{how_to_path}" class="govuk-link brand__color"> ਬੇਨਤੀ ਕਿਵੇਂ ਕਰੀਏ </a> ਬਾਰੇ ਪੜ੍ਹੋ।
+        step2_html: ਇਹ ਦੇਖਣ ਲਈ <a href="%{our_releases_path}" class="govuk-link brand__color"> ਸਾਡੀਆਂ ਪਿਛਲੀਆਂ ਰੀਲੀਜ਼ਾਂ </a> ਦੀ ਜਾਂਚ ਕਰੋ ਕਿ ਕੀ ਅਸੀਂ ਪਹਿਲਾਂ ਹੀ ਤੁਹਾਡੇ ਪ੍ਰਸ਼ਨ ਦਾ ਉੱਤਰ ਦੇ ਚੁੱਕੇ ਹਾਂ।
+        step3_html: ਹੇਠਾਂ ਦਿੱਤੇ ਵੇਰਵਿਆਂ ਦੀ ਵਰਤੋਂ ਕਰਦਿਆਂ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰਕੇ ਇੱਕ ਨਵੀਂ ਬੇਨਤੀ ਕਰੋ।
     follow_us: ਸਾਨੂੰ ਫਾਲੋ ਕਰੋ
     hidden_share_link: ਤੇ ਫਾਲੋ ਕਰੋ
     high_profile_groups: "%{title} ਦੇ ਅੰਦਰ ਉੱਚ ਪ੍ਰੋਫਾਈਲ ਸਮੂਹ"
@@ -295,15 +290,12 @@ pa:
     jobs_contracts: ਨੌਕਰੀਆਂ ਅਤੇ ਇਕਰਾਰਨਾਮੇ
     latest_from: "%{Title} ਤੋਂ ਨਵੀਨਤਮ"
     notices:
-      changed_name: "%{title} ਨੂੰ ਹੁਣ <a href='%{link_href}'>%{link_text} </a> ਕਿਹਾ
-        ਜਾਂਦਾ ਹੈ"
+      changed_name: "%{title} ਨੂੰ ਹੁਣ <a href='%{link_href}'>%{link_text} </a> ਕਿਹਾ ਜਾਂਦਾ ਹੈ"
       devolved: "%{title} <a href='%{link_href}'>%{link_text} </a> ਦਾ ਇੱਕ ਅੰਗ ਹੈ"
       joining: "%{title} ਨੂੰ ਛੇਤੀ ਹੀ GOV.UK ਵਿੱਚ ਸ਼ਾਮਲ ਕੀਤਾ ਜਾਵੇਗਾ"
       left_gov: "%{title} ਹੁਣ ਯੂਕੇ ਸਰਕਾਰ ਤੋਂ ਸੁਤੰਤਰ ਹੈ"
-      merged: "%{title}%{update} <a href='%{link_href}'>%{link_text} </a> ਦਾ ਹਿੱਸਾ
-        ਬਣ ਗਿਆ"
-      merged_no_date: "%{title} ਹੁਣ <a href='%{link_href}'>%{link_text} </a> ਦਾ ਹਿੱਸਾ
-        ਹੈ"
+      merged: "%{title}%{update} <a href='%{link_href}'>%{link_text} </a> ਦਾ ਹਿੱਸਾ ਬਣ ਗਿਆ"
+      merged_no_date: "%{title} ਹੁਣ <a href='%{link_href}'>%{link_text} </a> ਦਾ ਹਿੱਸਾ ਹੈ"
       no_longer_exists: "%{title} ਬੰਦ ਹੋ ਗਿਆ ਹੈ"
       no_website: "%{title} ਦੀ ਕੋਈ ਵੈਬਸਾਈਟ ਨਹੀਂ ਹੈ"
       separate_website: "%{title} ਦੀ ਇੱਕ <a href='%{url}'> ਵੱਖਰੀ ਵੈਬਸਾਈਟ </a> ਹੈ"

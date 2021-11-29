@@ -1,6 +1,17 @@
+---
 es:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Administrado por
+    breadcrumbs:
+      courts_and_tribunals: Juzgados y Tribunales
+      organisations: Organizaciones
+    contact:
+      contact_details: Datos de contacto
+      contact_form: 'Formulario de contacto: %{title}'
+      contact_organisation: Póngase en contacto con %{organization}
+      email: Correo electrónico
+      telephone: Teléfono
     content_item:
       schema_name:
         aaib_report:
@@ -225,16 +236,6 @@ es:
         written_statement:
           one: Declaración escrita
           other: Declaraciones escritas
-    administered_by: Administrado por
-    breadcrumbs:
-      courts_and_tribunals: Juzgados y Tribunales
-      organisations: Organizaciones
-    contact:
-      contact_details: Datos de contacto
-      contact_form: 'Formulario de contacto: %{title}'
-      contact_organisation: Póngase en contacto con %{organization}
-      email: Correo electrónico
-      telephone: Teléfono
     corporate_information: Información corporativa
     document_types:
       documents: Documentos
@@ -268,25 +269,18 @@ es:
           path: "/search/transparency-and-freedency-of-information-releases?organizations[]=%{organization}&parent=%{organization}"
           text: Ver todos los comunicados de transparencia y libertad de información
         title: Transparencia y libertad de información
-    errors_or_omissions_html: <p>¿Errores u omisiones? <a class="govuk-link" href="/contact/govuk">Díganoslo
-      aquí</a>. Para un listado oficial de los organismos públicos no departamentales
-      <a class="govuk-link" href="/government/collections/public-bodies">public bodies</a>.</p>
+    errors_or_omissions_html: <p>¿Errores u omisiones? <a class="govuk-link" href="/contact/govuk">Díganoslo aquí</a>. Para un listado oficial de los organismos públicos no departamentales <a class="govuk-link" href="/government/collections/public-bodies">public bodies</a>.</p>
     featured: Destacados
     foi:
       contact_form: Formulario de contacto según la Ley de Libertad de Información
-      foi_exemption_html: "Esta organización no está cubierta por la Ley de Libertad
-        de Información. \nPara ver qué organizaciones están incluidas, consulte <a
-        href=\"%{foi_url}\" class=\"govuk-link brand__color\">la legislación</a>.\n"
+      foi_exemption_html: "Esta organización no está cubierta por la Ley de Libertad de Información. \nPara ver qué organizaciones están incluidas, consulte <a href=\"%{foi_url}\" class=\"govuk-link brand__color\">la legislación</a>.\n"
       freedom_of_information_act: Ley de Libertad de Información (FOI)
       freedom_of_information_requests: Solicitudes según la Ley de Libertad de Información
       make_an_foi_request: Haga una solicitud según la Ley de Libertad de Información
       making_foi_requests:
-        step1_html: Lea acerca de la Ley de libertad de información (FOI) y <a href="%{how_to_path}"
-          class="govuk-link brand__color">cómo realizar una solicitud</a>.
-        step2_html: Consulte <a href="%{our_releases_path}" class="govuk-link brand__color">nuestras
-          versiones anteriores</a> para ver si ya hemos respondido a su pregunta.
-        step3_html: Haga una nueva solicitud poniéndose en contacto con nosotros utilizando
-          los datos que aparecen a continuación.
+        step1_html: Lea acerca de la Ley de libertad de información (FOI) y <a href="%{how_to_path}" class="govuk-link brand__color">cómo realizar una solicitud</a>.
+        step2_html: Consulte <a href="%{our_releases_path}" class="govuk-link brand__color">nuestras versiones anteriores</a> para ver si ya hemos respondido a su pregunta.
+        step3_html: Haga una nueva solicitud poniéndose en contacto con nosotros utilizando los datos que aparecen a continuación.
     follow_us: Síganos
     hidden_share_link: Seguir
     high_profile_groups: Grupos de perfiles altos dentro de %{title}
@@ -298,8 +292,7 @@ es:
       devolved: "%{title} es un cuerpo de <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} pronto se incorporará a GOV.UK"
       left_gov: "%{title} es ahora independiente del gobierno del Reino Unido"
-      merged: "%{title} pasó a formar parte de <a href='%{link_href}'>%{link_text}</a>
-        en %{updated}"
+      merged: "%{title} pasó a formar parte de <a href='%{link_href}'>%{link_text}</a> en %{updated}"
       merged_no_date: "%{title} ahora forma parte de <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} se ha cerrado"
       no_website: "%{title} no tiene sitio web"

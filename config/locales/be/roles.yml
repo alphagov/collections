@@ -1,12 +1,12 @@
+---
 be:
   roles:
+    find_out_more_html: Даведайцеся больш пра папярэдніх кандыдатаў на гэту пасаду ў нашым %{link} падзеле.
     heading:
-      one: Роля
       few:
       many:
+      one: Роля
       other: Ролі
-    find_out_more_html: Даведайцеся больш пра папярэдніх кандыдатаў на гэту пасаду
-      ў нашым %{link} падзеле.
     headings:
       current_holder: Дзейны выканавец пасады
       previous_holders: Папярэдні выканавец пасады

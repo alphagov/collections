@@ -1,9 +1,10 @@
+---
 zh-hk:
   roles:
+    find_out_more_html: 請前往我們的 %{link} 部份了解上一位擔任這一職位之人士。
     heading:
       one: 職責
       other: 其他職責
-    find_out_more_html: 請前往我們的 %{link} 部份了解上一位擔任這一職位之人士。
     headings:
       current_holder: 現任職務
       previous_holders: 上一持有人

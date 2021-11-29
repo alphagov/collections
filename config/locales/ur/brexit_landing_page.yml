@@ -1,32 +1,10 @@
+---
 ur:
   brexit_landing_page:
-    campaign_links:
-      lead_in: 'اگر آپ مندرجہ بالا ہیں تو پڑتال کریں کہ آپ کو کیا مختلف طور پر کرنے
-        کی ضرورت ہے:'
-      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
-        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
-        data-track-label="Get the complete list">اس بات کی مکمل فہرست</a> حاصل کریں
-        کہ آپ کو اپنے، اپنے بزنس اور اپنے اہل خانہ کے لیے کن چیزوں کی ضرورت ہے۔
-    comms:
-      read_transcript: اس ویڈیو کی ٹرانسکرپٹ کو پڑھیں
-    comms_header: اعلانات
-    data_list_title: 'Brexit کا لینڈنگ کا صفحہ: %{header}'
-    email_mailto_subject: UK's%20new%20start:%20let's%20get%20going-%20GOV.UK
-    guidance_header: بزنسز اور شہریوں کے لیے تبدیلیاں
-    meta_description: جانیں کہ سفر اور یورپ کے ساتھ کاروبار جیسی چیزوں کا Brexit کے
-      نئے اصولوں کا اطلاق کیسے ہوتا ہے۔ کارروائیوں کی شخصی کردہ فہرست حاصل کرنھے کے
-      لیے Brexit چیکر کا استعمال کریں۔
+    meta_description: جانیں کہ سفر اور یورپ کے ساتھ کاروبار جیسی چیزوں کا Brexit کے نئے اصولوں کا اطلاق کیسے ہوتا ہے۔ کارروائیوں کی شخصی کردہ فہرست حاصل کرنھے کے لیے Brexit چیکر کا استعمال کریں۔
     meta_title: Brexit
-    no_cookies:
-      change_settings_text: اپنی کوکی کی ترتیبات تبدیل کریں
-      icon_text: ویڈیو
-      or_text: یا
-      to_watch_text: ویڈیو دیکھنے کے لیے
-      watch_link_text: YouTube پر دیکھیں
     page_header: Brexit:<br/>نئے اصول یہاں پر ہیں
-    page_header_explainer: سفر اور یورپ کے ساتھ کاروبار پر نئے اصولوں کا اطلاق ہوتا
-      ہے۔ اپنے، اپنے بزنس اور اپنے اہل خانہ کے لیے کارروائیوں کی شخصی کردہ فہرست حاصل
-      کرنے کے لیے Brexit چیکر کا استعمال کریں۔
+    page_header_explainer: سفر اور یورپ کے ساتھ کاروبار پر نئے اصولوں کا اطلاق ہوتا ہے۔ اپنے، اپنے بزنس اور اپنے اہل خانہ کے لیے کارروائیوں کی شخصی کردہ فہرست حاصل کرنے کے لیے Brexit چیکر کا استعمال کریں۔
     sections:
       aria_string_suffix: Brexit سے متعلق
       guidance_and_regulation: رہنمائی اور ضابطہ
@@ -35,22 +13,5 @@ ur:
       research_and_statistics: تحقیق اور شماریات
       services: سروسز
       transparency: معلومات کے اجراء کی شفافیت اور آزادی
-    share_links: اس صفحے کو شیئر کریں
-    take_action_list:
-      amber: تبدیل کریں
-      green: جائیں
-      red: پڑتال کریں
-    take_action_start_now: 'Brexit چیکر: ابھی شروع کریں'
-    take_action_start_now_link: "/transition-check/questions"
     topic_section_header: Brexit کی تمام معلومات
     topic_section_subheading: Brexit سے متعلق تمام معلومات کو براؤز کریں
-    video_section_description: |
-      <p>یورپ کے ساتھ بزنس کرنے کا طریقہ تبدیل ہو گیا ہے۔ آپ کو برآمدات، درآمدات، محصولات، ڈیٹا اور &nbsp;خدمات فراہم کرنے پر نئے اصولوں پر عمل درآمد کی ضرورت ہے۔</p>
-      <p>یہ جاننے کے لیے ویڈیو دیکھیں کہ نئے اصول آپ کے بزنس کے لیے کیا اہمیت رکھتے ہیں۔ آپ شخصی کردہ کارروائیوں کی فہرست حاصل کرنے کے لیے Brexit چیکر</a> <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker"> بھی استعمال کر سکتے ہیں۔</p>
-    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
-    video_section_title: اپنے بزنس کو جاری رکھیں
-    video_section_transcription_summary: ویڈیو کی ٹرانسکرپٹ دیکھیں
-    video_section_transcription_text: |
-      <p>بزنسز، UK نے اب EU کو چھوڑ دیا ہے اور اب نئے اصولوں کا اطلاق ہوتا ہے۔</p>
-      <p>اپنا بزنس جاری رکھنے کے لیے، اپنے بزنس کے لیے شخصی کردہ کارروائیاں حاصل کرنے کے لیے gov.uk/transition پر Brexit چیکر ٹول کا استعمال کریں۔</p>
-      <p>چلیے بزنس کو جاری رکھتے ہیں۔</p>

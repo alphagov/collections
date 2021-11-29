@@ -1,10 +1,10 @@
+---
 bn:
   roles:
+    find_out_more_html: পূর্বে এই দায়িত্ব পালনকারী ব্যক্তি সম্পর্কে %{link} অংশ থেকে আরও দেখুন।
     heading:
       one: ভূমিকা
       other: ভূমিকা
-    find_out_more_html: পূর্বে এই দায়িত্ব পালনকারী ব্যক্তি সম্পর্কে %{link} অংশ থেকে
-      আরও দেখুন।
     headings:
       current_holder: বর্তমান ভূমিকা পালনকারী
       previous_holders: পূর্ববর্তী পালনকারী

@@ -1,6 +1,17 @@
+---
 zh-hk:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: 管理者
+    breadcrumbs:
+      courts_and_tribunals: 法院及裁判法庭
+      organisations: 組織
+    contact:
+      contact_details: 聯絡資訊
+      contact_form: 聯絡表格： %{title}
+      contact_organisation: 聯絡 %{organisation}
+      email: 電子郵件
+      telephone: 電話
     content_item:
       schema_name:
         aaib_report:
@@ -225,16 +236,6 @@ zh-hk:
         written_statement:
           one: 提交國會的書面聲明
           other: 提交國會的其他書面聲明
-    administered_by: 管理者
-    breadcrumbs:
-      courts_and_tribunals: 法院及裁判法庭
-      organisations: 組織
-    contact:
-      contact_details: 聯絡資訊
-      contact_form: 聯絡表格： %{title}
-      contact_organisation: 聯絡 %{organisation}
-      email: 電子郵件
-      telephone: 電話
     corporate_information: 公司資訊
     document_types:
       documents: 文件
@@ -268,21 +269,17 @@ zh-hk:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: 查閱全部資訊發佈透明度及自由
         title: 資訊發佈透明度及自由
-    errors_or_omissions_html: <p>有出錯或是遺漏？<a class="govuk-link" href="/contact/govuk">請在此處告知我們</a>。如要了解非部門公共機構名單，請
-      <a class="govuk-link" href="/government/collections/public-bodies">參閱公共機構</a>。</p>
+    errors_or_omissions_html: <p>有出錯或是遺漏？<a class="govuk-link" href="/contact/govuk">請在此處告知我們</a>。如要了解非部門公共機構名單，請 <a class="govuk-link" href="/government/collections/public-bodies">參閱公共機構</a>。</p>
     featured: 特載內容
     foi:
       contact_form: FOI 聯絡表
-      foi_exemption_html: 此組織不受資訊自由法案規限。如要查閱其中包含哪些組織，請參閱 <a href="%{foi_url}" class="govuk-link
-        brand__color">立法</a>。
+      foi_exemption_html: 此組織不受資訊自由法案規限。如要查閱其中包含哪些組織，請參閱 <a href="%{foi_url}" class="govuk-link brand__color">立法</a>。
       freedom_of_information_act: 資訊自由 (FOI) 法案
       freedom_of_information_requests: 資訊自由申請
       make_an_foi_request: 提出 FOI 申請
       making_foi_requests:
-        step1_html: 了解資訊自由 (FOI) 法案之詳情及 <a href="%{how_to_path}" class="govuk-link
-          brand__color">提出申請的方式</a>。
-        step2_html: 查閱 <a href="%{our_releases_path}" class="govuk-link brand__color">我們的最近發佈</a>
-          以查看我們是否已對您的問題予以回應。
+        step1_html: 了解資訊自由 (FOI) 法案之詳情及 <a href="%{how_to_path}" class="govuk-link brand__color">提出申請的方式</a>。
+        step2_html: 查閱 <a href="%{our_releases_path}" class="govuk-link brand__color">我們的最近發佈</a> 以查看我們是否已對您的問題予以回應。
         step3_html: 請透過下列聯絡方式聯絡我們提出新申請。
     follow_us: 關注我們
     hidden_share_link: 關注

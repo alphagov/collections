@@ -1,6 +1,17 @@
+---
 zh-tw:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: 監管方
+    breadcrumbs:
+      courts_and_tribunals: 法庭與審裁處
+      organisations: 組織
+    contact:
+      contact_details: 聯繫細節
+      contact_form: 聯繫表：%{title}
+      contact_organisation: 聯繫 %{organisation}
+      email: 電子郵件
+      telephone: 電話
     content_item:
       schema_name:
         aaib_report:
@@ -225,16 +236,6 @@ zh-tw:
         written_statement:
           one: 對議會的書面聲明
           other: 對議會的書面聲明
-    administered_by: 監管方
-    breadcrumbs:
-      courts_and_tribunals: 法庭與審裁處
-      organisations: 組織
-    contact:
-      contact_details: 聯繫細節
-      contact_form: 聯繫表：%{title}
-      contact_organisation: 聯繫 %{organisation}
-      email: 電子郵件
-      telephone: 電話
     corporate_information: 公司資訊
     document_types:
       documents: 文檔
@@ -268,8 +269,7 @@ zh-tw:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: 查看透明度與資訊自由的發布
         title: 透明度與資訊自由的發布
-    errors_or_omissions_html: <p>錯誤或遺漏？<a class="govuk-link" href="/contact/govuk">從這裡通知我們</a>.有關非政府部門公共機構的官方列表
-      <a class="govuk-link" href="/government/collections/public-bodies">查看公共機構</a>。</p>
+    errors_or_omissions_html: <p>錯誤或遺漏？<a class="govuk-link" href="/contact/govuk">從這裡通知我們</a>.有關非政府部門公共機構的官方列表 <a class="govuk-link" href="/government/collections/public-bodies">查看公共機構</a>。</p>
     featured: 特色
     foi:
       contact_form: 資訊自由聯繫表
@@ -281,8 +281,7 @@ zh-tw:
       make_an_foi_request: 提出資訊自由請求
       making_foi_requests:
         step1_html: 查閱關於資訊自由（FOI）法以及 <a href="%{how_to_path}" class="govuk-link brand__color">如何提出請求</a>。
-        step2_html: 查看 <a href="%{our_releases_path}" class="govuk-link brand__color">我們過去發布</a>
-          是否已回答過你的問題。
+        step2_html: 查看 <a href="%{our_releases_path}" class="govuk-link brand__color">我們過去發布</a> 是否已回答過你的問題。
         step3_html: 通過使用以下細節與我們聯繫，提出新的請求。
     follow_us: 追蹤我們
     hidden_share_link: 追蹤

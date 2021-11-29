@@ -1,6 +1,17 @@
+---
 hy:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Կառավարվում է՝
+    breadcrumbs:
+      courts_and_tribunals: Դատարաններ և Տրիբունալներ
+      organisations: Կազմակերպություններ
+    contact:
+      contact_details: Կոնտակտային տվյալներ
+      contact_form: Կոնտակտային Ձև՝ %{title}
+      contact_organisation: Կոնտակտ %{organisation}
+      email: Էլ․ փոստ
+      telephone: Հեռախոս
     content_item:
       schema_name:
         aaib_report:
@@ -113,8 +124,7 @@ hy:
           other: Քարտեզներ
         medical_safety_alert:
           one: Նախազգուշացումներ և հիշեցումներ դեղերի և բժշկական սարքավորումների համար
-          other: Նախազգուշացումներ և հիշեցումներ դեղերի և բժշկական սարքավորումների
-            համար
+          other: Նախազգուշացումներ և հիշեցումներ դեղերի և բժշկական սարքավորումների համար
         national:
           one: Ազգային վիճակագրական հայտարարություն
           other: Ազգային վիճակագրական հայտարարություններ
@@ -226,16 +236,6 @@ hy:
         written_statement:
           one: Խորհրդարանին ուղղված գրավոր հայտարարություն
           other: Խորհրդարանին ուղղված գրավոր հայտարարություններ
-    administered_by: Կառավարվում է՝
-    breadcrumbs:
-      courts_and_tribunals: Դատարաններ և Տրիբունալներ
-      organisations: Կազմակերպություններ
-    contact:
-      contact_details: Կոնտակտային տվյալներ
-      contact_form: Կոնտակտային Ձև՝ %{title}
-      contact_organisation: Կոնտակտ %{organisation}
-      email: Էլ․ փոստ
-      telephone: Հեռախոս
     corporate_information: Կորպորատիվ տեղեկություն
     document_types:
       documents: Փաստաթղթեր
@@ -269,10 +269,7 @@ hy:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Դիտել տեղեկատվության ազատության և թափանցիկության բոլոր հրապարակումներ
         title: Տեղեկատվության ազատության և թափանցիկության հրապարակումներ
-    errors_or_omissions_html: <p>Կա՞ն սխալներ կամ բացթողումներ։<a class="govuk-link"
-      href="/contact/govuk">Նշեք այստեղ</a>։ Ոչ գերատեսչական հասարակական կազմակերպությունների
-      պաշտոնական ցանկերի համար <a class="govuk-link" href="/government/collections/public-bodies">դիտել
-      հասարակական կազմակերպությունները</a>.</p>
+    errors_or_omissions_html: <p>Կա՞ն սխալներ կամ բացթողումներ։<a class="govuk-link" href="/contact/govuk">Նշեք այստեղ</a>։ Ոչ գերատեսչական հասարակական կազմակերպությունների պաշտոնական ցանկերի համար <a class="govuk-link" href="/government/collections/public-bodies">դիտել հասարակական կազմակերպությունները</a>.</p>
     featured: Հայտնի
     foi:
       contact_form: Տեղեկատվության ազատության (FOI) կոնտակտային ձև
@@ -283,13 +280,9 @@ hy:
       freedom_of_information_requests: Տեղեկատվության ազատության վերաբերյալ հարցումներ
       make_an_foi_request: Տեղեկատվության ազատության (FOI) հարցում իրականացնել
       making_foi_requests:
-        step1_html: Կարդալ Տեղեկատվության ազատության (FOI) օրենքի մասին և <a href="%{how_to_path}"
-          class="govuk-link brand__color">հարցում պատրաստելու մասին այստեղ</a>։
-        step2_html: Ստուդշգել <a href="%{our_releases_path}" class="govuk-link brand__color">մեր
-          նախորդ հրապարակումները՝</a> պարզելու, թե արդյոք ձեր հարցի պատասխանը այնտեղ
-          նշված չէ, թե ոչ։
-        step3_html: 'Նոր հայտ ներկայացնելու համար կապվեք մեզ հետ ստորև ներկայացված
-          տվյալների միջոցով:'
+        step1_html: Կարդալ Տեղեկատվության ազատության (FOI) օրենքի մասին և <a href="%{how_to_path}" class="govuk-link brand__color">հարցում պատրաստելու մասին այստեղ</a>։
+        step2_html: Ստուդշգել <a href="%{our_releases_path}" class="govuk-link brand__color">մեր նախորդ հրապարակումները՝</a> պարզելու, թե արդյոք ձեր հարցի պատասխանը այնտեղ նշված չէ, թե ոչ։
+        step3_html: 'Նոր հայտ ներկայացնելու համար կապվեք մեզ հետ ստորև ներկայացված տվյալների միջոցով:'
     follow_us: Հետևել մեզ
     hidden_share_link: Հետևել
     high_profile_groups: Կարևոր խմբեր %{title}-ի շրջանակում
@@ -302,8 +295,7 @@ hy:
       joining: "%{title} շուտով կներառվի GOV.UK կայքում"
       left_gov: "%{title} այժմ անկախ է Միացյալ Թագավորության կառավարությունից"
       merged: "%{title} դարձել է <a href='%{link_href}'>%{link_text}</a> մաս՝ %{updated}"
-      merged_no_date: "%{title} այժմ <a href='%{link_href}'>%{link_text}</a> մաս է
-        կազմում"
+      merged_no_date: "%{title} այժմ <a href='%{link_href}'>%{link_text}</a> մաս է կազմում"
       no_longer_exists: "%{title} փակ է"
       no_website: "%{title} չունի վեբ կայք"
       separate_website: "%{title} ունի a <a href='%{url}'>առանձին վեբ կայք</a>"
@@ -317,8 +309,7 @@ hy:
       special_representatives: Հատուկ ներկայացուցիչներ
       traffic_commissioners: Տրանսպորտային հարցերով դատարան
     read_more: Կարդալ ավելին մեր աշխատանքի մասին
-    search_for_department: Որոնել գերատեսչություն, գործակալություն կամ հասարակական
-      կազմակերպություն
+    search_for_department: Որոնել գերատեսչություն, գործակալություն կամ հասարակական կազմակերպություն
     see_all_latest_documents: Դիտել ամենավերջին բոլոր փաստաթղթերը
     separate_website: առանձին վեբ կայք
     services_and_information: Բոլոր %{acronym} ծառայություններն ու տեղեկությունները
@@ -340,6 +331,5 @@ hy:
     view_less: ցույց տալ ավելի շատ
     what_we_do: Ինչով է %{title} զբաղվում
     works_with_statement:
-      multiple: Աշխատում է %{works_wount_count} գործակալությունների և հասարակական
-        կազմակերպությունների հետ
+      multiple: Աշխատում է %{works_wount_count} գործակալությունների և հասարակական կազմակերպությունների հետ
       one: Աշխատում է %{works_wount_count} հասարակական կազմակերպության հետ

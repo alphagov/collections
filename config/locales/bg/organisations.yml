@@ -1,6 +1,17 @@
+---
 bg:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Администриране от
+    breadcrumbs:
+      courts_and_tribunals: Съдилища и арбитражи
+      organisations: Организации
+    contact:
+      contact_details: Данни за контакти
+      contact_form: 'Формуляр за контакт: %{title}'
+      contact_organisation: Контакт %{organisation}
+      email: Имейл
+      telephone: Телефон
     content_item:
       schema_name:
         aaib_report:
@@ -225,16 +236,6 @@ bg:
         written_statement:
           one: Писмено изявление в Парламента
           other: Писмени изявления в Парламента
-    administered_by: Администриране от
-    breadcrumbs:
-      courts_and_tribunals: Съдилища и арбитражи
-      organisations: Организации
-    contact:
-      contact_details: Данни за контакти
-      contact_form: 'Формуляр за контакт: %{title}'
-      contact_organisation: Контакт %{organisation}
-      email: Имейл
-      telephone: Телефон
     corporate_information: Фирмена информация
     document_types:
       documents: Документи
@@ -268,10 +269,7 @@ bg:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Вижте всички издания за прозрачността и свободата на информация
         title: Издания за прозрачността и свободата на информация
-    errors_or_omissions_html: <p>Грешки или пропуски? <a class="govuk-link" href="/contact/govuk">Разкажете
-      ни тук</a>. За официални списъци на публични органи, които не са министерства,
-      <a class="govuk-link" href="/government/collections/public-bodies">вижте публични
-      органи</a>.</p>
+    errors_or_omissions_html: <p>Грешки или пропуски? <a class="govuk-link" href="/contact/govuk">Разкажете ни тук</a>. За официални списъци на публични органи, които не са министерства, <a class="govuk-link" href="/government/collections/public-bodies">вижте публични органи</a>.</p>
     featured: Избрани
     foi:
       contact_form: Формуляр за контакт за свобода на информацията
@@ -282,12 +280,9 @@ bg:
       freedom_of_information_requests: Запитвания за свобода на информацията
       make_an_foi_request: Направете запитване за свобода на информацията
       making_foi_requests:
-        step1_html: Прочетете за Закона за свобода на информацията (ЗСИ) и <a href="%{how_to_path}"
-          class="govuk-link brand__color">как да подадете запитване</a>.
-        step2_html: Проверете <a href="%{our_releases_path}" class="govuk-link brand__color">предишните
-          ни издания,</a> за да видите дали вече сме отговорили на въпроса ви.
-        step3_html: Направете ново запитване, като се свържете с нас, използвайки
-          долупосочените данни.
+        step1_html: Прочетете за Закона за свобода на информацията (ЗСИ) и <a href="%{how_to_path}" class="govuk-link brand__color">как да подадете запитване</a>.
+        step2_html: Проверете <a href="%{our_releases_path}" class="govuk-link brand__color">предишните ни издания,</a> за да видите дали вече сме отговорили на въпроса ви.
+        step3_html: Направете ново запитване, като се свържете с нас, използвайки долупосочените данни.
     follow_us: Следвайте ни
     hidden_share_link: Следвайте
     high_profile_groups: Високопоставени групи в %{title}

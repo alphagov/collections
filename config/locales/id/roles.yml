@@ -1,7 +1,7 @@
+---
 id:
   roles:
-    find_out_more_html: Cari tahu selengkapnya tentang pemegang sebelumnya dari peran
-      ini pada bagian %{link} kami.
+    find_out_more_html: Cari tahu selengkapnya tentang pemegang sebelumnya dari peran ini pada bagian %{link} kami.
     heading:
       one: Peran
       other: Peran

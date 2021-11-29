@@ -1,12 +1,12 @@
+---
 hr:
   roles:
+    find_out_more_html: Saznajte više o prethodnim nositeljima ove uloge u našem %{link} odjeljku .
     heading:
-      one: Uloga
       few:
       many:
+      one: Uloga
       other: Uloge
-    find_out_more_html: Saznajte više o prethodnim nositeljima ove uloge u našem %{link}
-      odjeljku .
     headings:
       current_holder: Trenutni nosilac uloge
       previous_holders: Prethodni nositelji

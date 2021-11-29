@@ -1,3 +1,4 @@
+---
 vi:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
@@ -266,13 +267,9 @@ vi:
       transparency:
         see_all:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
-          text: Xem tất cả các công bố theo luật về tính minh bạch và tự do thông
-            tin
+          text: Xem tất cả các công bố theo luật về tính minh bạch và tự do thông tin
         title: Công bố theo luật về tính minh bạch và tự do thông tin
-    errors_or_omissions_html: <p>Có lỗi hoặc thiếu sót? <a class="govuk-link" href="/contact/govuk">Hãy
-      cho chúng tôi biết tại đây</a>. Để biết danh sách chính thức của các cơ quan
-      công quyền không thuộc ban/bộ, <a class="govuk-link" href="/government/collections/public-bodies">xem
-      các cơ quan công quyền</a>.</p>
+    errors_or_omissions_html: <p>Có lỗi hoặc thiếu sót? <a class="govuk-link" href="/contact/govuk">Hãy cho chúng tôi biết tại đây</a>. Để biết danh sách chính thức của các cơ quan công quyền không thuộc ban/bộ, <a class="govuk-link" href="/government/collections/public-bodies">xem các cơ quan công quyền</a>.</p>
     featured: Đặc biệt
     foi:
       contact_form: Biểu mẫu liên hệ FOI
@@ -283,13 +280,9 @@ vi:
       freedom_of_information_requests: Yêu cầu quyền Tự do Thông tin
       make_an_foi_request: Yêu cầu FOI
       making_foi_requests:
-        step1_html: Đọc về Đạo luật Tự do Thông tin (FOI) và <a href="%{how_to_path}"
-          class="govuk-link brand__color">cách đưa ra yêu cầu</a>.
-        step2_html: Kiểm tra <a href="%{our_releases_path}" class="govuk-link brand__color">các
-          công bố trước đây của chúng tôi</a> để xem liệu chúng tôi đã trả lời câu
-          hỏi của bạn chưa.
-        step3_html: Đưa ra yêu cầu mới bằng cách liên hệ với chúng tôi theo chi tiết
-          bên dưới.
+        step1_html: Đọc về Đạo luật Tự do Thông tin (FOI) và <a href="%{how_to_path}" class="govuk-link brand__color">cách đưa ra yêu cầu</a>.
+        step2_html: Kiểm tra <a href="%{our_releases_path}" class="govuk-link brand__color">các công bố trước đây của chúng tôi</a> để xem liệu chúng tôi đã trả lời câu hỏi của bạn chưa.
+        step3_html: Đưa ra yêu cầu mới bằng cách liên hệ với chúng tôi theo chi tiết bên dưới.
     follow_us: Theo dõi chúng tôi
     hidden_share_link: Theo dõi trên
     high_profile_groups: Nhóm cấu hình cao trong %{title}
@@ -301,8 +294,7 @@ vi:
       devolved: "%{title} là một cơ quan của <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} sẽ sớm được kết hợp vào GOV.UK"
       left_gov: "%{title} nay đã độc lập với chính phủ Vương quốc Anh"
-      merged: "%{title} đã trở thành một phần của <a href='%{link_href}'>%{link_text}</a>
-        trong %{updated}"
+      merged: "%{title} đã trở thành một phần của <a href='%{link_href}'>%{link_text}</a> trong %{updated}"
       merged_no_date: "%{title} nay là một phần của <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} đã đóng"
       no_website: "%{title} không có trang web"

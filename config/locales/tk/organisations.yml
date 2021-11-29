@@ -1,6 +1,17 @@
+---
 tk:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Dolandyryjy
+    breadcrumbs:
+      courts_and_tribunals: Kazyýet we Kazylar
+      organisations: Guramalar
+    contact:
+      contact_details: Habarlaşmak üçin maglumatlar
+      contact_form: 'Habarlaşmak üçin forma: %{title}'
+      contact_organisation: Habarlaşmak %{organisation}
+      email: E-poçta
+      telephone: Telefon
     content_item:
       schema_name:
         aaib_report:
@@ -225,16 +236,6 @@ tk:
         written_statement:
           one: Mejlise ýazmaça beýan
           other: Mejlise ýazmaça beýanlar
-    administered_by: Dolandyryjy
-    breadcrumbs:
-      courts_and_tribunals: Kazyýet we Kazylar
-      organisations: Guramalar
-    contact:
-      contact_details: Habarlaşmak üçin maglumatlar
-      contact_form: 'Habarlaşmak üçin forma: %{title}'
-      contact_organisation: Habarlaşmak %{organisation}
-      email: E-poçta
-      telephone: Telefon
     corporate_information: Korporatiw maglumatlar
     document_types:
       documents: Resminamalar
@@ -268,10 +269,7 @@ tk:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Maglumatlaryň aç-açanlygy we erkinlige derediň
         title: Maglumatlaryň aç-açanlygy we erkinligi
-    errors_or_omissions_html: <p>Ýalňyşlyklar ýa-da galdyryp gitmeler? <a class="govuk-link"
-      href="/contact/govuk">Bize şu ýerde aýdyň</a>. Bölüm däl jemgyýetçilik guramalarynyň
-      resmi sanawlary üçin <a class="govuk-link" href="/government/collections/public-bodies">jemgyýetçilik
-      guramalaryna serediň</a>.</p>
+    errors_or_omissions_html: <p>Ýalňyşlyklar ýa-da galdyryp gitmeler? <a class="govuk-link" href="/contact/govuk">Bize şu ýerde aýdyň</a>. Bölüm däl jemgyýetçilik guramalarynyň resmi sanawlary üçin <a class="govuk-link" href="/government/collections/public-bodies">jemgyýetçilik guramalaryna serediň</a>.</p>
     featured: Aýratynlyk
     foi:
       contact_form: FOI habarlaşmak üçin forma
@@ -282,11 +280,8 @@ tk:
       freedom_of_information_requests: Maglumat azatlygy talaplary
       make_an_foi_request: FOI talap etmek
       making_foi_requests:
-        step1_html: Maglumat azatlygy kanuny (FOI) we <a href="%atialhow_to_pathsection"
-          class="govuk-link brand__color">haýyş nädip etmeli</a> hakda okaň.
-        step2_html: Soragyňyza eýýäm jogap berdikmi ýa-da ýok anyklamak üçin <a href="%
-          {our_releases_pathsection" class="govuk-link brand__color">öňki neşirlerimizi</a>
-          barlaň.
+        step1_html: Maglumat azatlygy kanuny (FOI) we <a href="%atialhow_to_pathsection" class="govuk-link brand__color">haýyş nädip etmeli</a> hakda okaň.
+        step2_html: Soragyňyza eýýäm jogap berdikmi ýa-da ýok anyklamak üçin <a href="% {our_releases_pathsection" class="govuk-link brand__color">öňki neşirlerimizi</a> barlaň.
         step3_html: Aşakdaky maglumatlary ulanmak arkaly bizden haýyş edip bilersiňiz.
     follow_us: Bizi yzarlaň
     hidden_share_link: Yzarlaň
@@ -303,8 +298,7 @@ tk:
       merged_no_date: "%{title} indi bir bölegi <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} ýapyldy"
       no_website: "%{title} internet sahypasy ýok"
-      separate_website: "%{title} <a href='% {url'> aýratyn internet sahypasy </a>
-        bar"
+      separate_website: "%{title} <a href='% {url'> aýratyn internet sahypasy </a> bar"
       split: "%{title} bilen çalşylan %{links}"
     part_of: Bir bölegi
     people:
@@ -337,6 +331,5 @@ tk:
     view_less: birazyny görmek
     what_we_do: "%{title} näme edýär"
     works_with_statement:
-      multiple: "%{works_with_count} agentlikler we jemgyýetçilik guramalary bilen
-        işleşýär"
+      multiple: "%{works_with_count} agentlikler we jemgyýetçilik guramalary bilen işleşýär"
       one: "%{works_with_count} jemgyýetçilik bölümleri bilen işleşýär"

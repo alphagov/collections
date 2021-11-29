@@ -1,6 +1,17 @@
+---
 uz:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Бошқаруви остида
+    breadcrumbs:
+      courts_and_tribunals: Судлар ва трибуналлар
+      organisations: Ташкилотлар
+    contact:
+      contact_details: Батафсил маълумотлар
+      contact_form: Қайта алоқа шакли %{title}
+      contact_organisation: Контакт маълумотлар %{organisation}
+      email: Электрон почта
+      telephone: Телефон
     content_item:
       schema_name:
         aaib_report:
@@ -112,10 +123,8 @@ uz:
           one: Карта
           other: Карталар
         medical_safety_alert:
-          one: Дори препаратлари ва тиббиёт қурилмалари ҳақидаги огоҳлантиришлар ва
-            мулоҳазалар
-          other: Дори препаратлари ва тиббиёт қурилмалари ҳақидаги огоҳлантиришлар
-            ва мулоҳазалар
+          one: Дори препаратлари ва тиббиёт қурилмалари ҳақидаги огоҳлантиришлар ва мулоҳазалар
+          other: Дори препаратлари ва тиббиёт қурилмалари ҳақидаги огоҳлантиришлар ва мулоҳазалар
         national:
           one: Давлат статистик маълумотлар эълони
           other: Давлат статистик маълумотлар эълонлари
@@ -227,16 +236,6 @@ uz:
         written_statement:
           one: Парламентга ёзма баёнот
           other: Парламентга ёзма баёнотлар
-    administered_by: Бошқаруви остида
-    breadcrumbs:
-      courts_and_tribunals: Судлар ва трибуналлар
-      organisations: Ташкилотлар
-    contact:
-      contact_details: Батафсил маълумотлар
-      contact_form: Қайта алоқа шакли %{title}
-      contact_organisation: Контакт маълумотлар %{organisation}
-      email: Электрон почта
-      telephone: Телефон
     corporate_information: Корпоратив маълумотлар
     document_types:
       documents: Ҳужжатлар
@@ -268,13 +267,9 @@ uz:
       transparency:
         see_all:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
-          text: Шаффофлик ва маълумотларни ошкор қилиш эркинлиги ҳақидаги барча маълумотларни
-            кўриш
+          text: Шаффофлик ва маълумотларни ошкор қилиш эркинлиги ҳақидаги барча маълумотларни кўриш
         title: Шаффофлик ва маълумотларни ошкор қилиш эркинлиги
-    errors_or_omissions_html: <p>Хатоликлар ёки камчиликлар? <a class="govuk-link"
-      href="/contact/govuk">Шу ерда сўзлаб беринг</a>. Ноидоравий давлат органларнинг
-      расмий рўйхати <a class="govuk-link" href="/government/collections/public-bodies">давлат
-      органлари рўйхатида тақдим этилган</a>.</p>
+    errors_or_omissions_html: <p>Хатоликлар ёки камчиликлар? <a class="govuk-link" href="/contact/govuk">Шу ерда сўзлаб беринг</a>. Ноидоравий давлат органларнинг расмий рўйхати <a class="govuk-link" href="/government/collections/public-bodies">давлат органлари рўйхатида тақдим этилган</a>.</p>
     featured: Тавсия қилинган
     foi:
       contact_form: Маълумотларга эркин кириш ахборотлари бўйича қайта алоқа шакли
@@ -285,14 +280,9 @@ uz:
       freedom_of_information_requests: Маълумотларга эркин киришга сўровлар
       make_an_foi_request: Маълумотларга эркин киришга сўровларни киритиш
       making_foi_requests:
-        step1_html: Маълумотларга эркин кириш тўғрисидаги Қонун (FOI) ва <a href="%{how_to_path}"
-          class="govuk-link brand__color">сўровларни узатиш усуллари билан танишиб
-          олинг</a>.
-        step2_html: Биз сизнинг сўровингизга жавоб берганлигимизни текшириш учун <a
-          href="%{our_releases_path}" class="govuk-link brand__color"> бизнинг олдинги
-          нашрларимизни</a> кўринг.
-        step3_html: Қуйида тақдим этилган батафсил маълумотлар бўйича биз билан боғланиб,
-          янги сўровни киритинг.
+        step1_html: Маълумотларга эркин кириш тўғрисидаги Қонун (FOI) ва <a href="%{how_to_path}" class="govuk-link brand__color">сўровларни узатиш усуллари билан танишиб олинг</a>.
+        step2_html: Биз сизнинг сўровингизга жавоб берганлигимизни текшириш учун <a href="%{our_releases_path}" class="govuk-link brand__color"> бизнинг олдинги нашрларимизни</a> кўринг.
+        step3_html: Қуйида тақдим этилган батафсил маълумотлар бўйича биз билан боғланиб, янги сўровни киритинг.
     follow_us: Бизни кузатиб боринг
     hidden_share_link: Кузатиб боринг
     high_profile_groups: Доирасида кўп поғонали гуруҳлар %{title}
@@ -304,8 +294,7 @@ uz:
       devolved: "%{title} бу орган <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} яқин кунларда GOV.UKга киритилган бўлади"
       left_gov: "%{title} энди Буюк британи ҳуқукуматига боғлиқ эмас"
-      merged: "%{title} қисми бўлиб қолди <a href='%{link_href}'>%{link_text}</a>
-        in %{updated}"
+      merged: "%{title} қисми бўлиб қолди <a href='%{link_href}'>%{link_text}</a> in %{updated}"
       merged_no_date: "%{title} энди қисми ҳисобланади <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} ёпиқ"
       no_website: "%{title} веб-сайт йўқ"

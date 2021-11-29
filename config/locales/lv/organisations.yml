@@ -1,6 +1,17 @@
+---
 lv:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Administrators
+    breadcrumbs:
+      courts_and_tribunals: Tiesas un šķīrējtiesas
+      organisations: Organizācijas
+    contact:
+      contact_details: Kontaktinformācija
+      contact_form: 'Saziņas veidlapa: %{title}'
+      contact_organisation: Sazināties ar %{organisation}
+      email: E-pasts
+      telephone: Tālrunis
     content_item:
       schema_name:
         aaib_report:
@@ -225,16 +236,6 @@ lv:
         written_statement:
           one: Rakstisks ziņojums parlamentam
           other: Rakstiski ziņojumi parlamentam
-    administered_by: Administrators
-    breadcrumbs:
-      courts_and_tribunals: Tiesas un šķīrējtiesas
-      organisations: Organizācijas
-    contact:
-      contact_details: Kontaktinformācija
-      contact_form: 'Saziņas veidlapa: %{title}'
-      contact_organisation: Sazināties ar %{organisation}
-      email: E-pasts
-      telephone: Tālrunis
     corporate_information: Korporatīvā informācija
     document_types:
       documents: Dokumenti
@@ -268,10 +269,7 @@ lv:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Skatīt visas caurredzamības un informācijas atklātības publikācijas
         title: Caurredzamība un informācijas atklātības publikācijas
-    errors_or_omissions_html: <p>Kļūdas vai izlaista informācija? <a class="govuk-link"
-      href="/contact/govuk">Pastāstiet mums šeit</a>. Oficiālos nevalstisko sabiedrisko
-      organizāciju sarakstus <a class="govuk-link" href="/government/collections/public-bodies">skatiet
-      sabiedrisko organizāciju sadaļā</a>.</p>
+    errors_or_omissions_html: <p>Kļūdas vai izlaista informācija? <a class="govuk-link" href="/contact/govuk">Pastāstiet mums šeit</a>. Oficiālos nevalstisko sabiedrisko organizāciju sarakstus <a class="govuk-link" href="/government/collections/public-bodies">skatiet sabiedrisko organizāciju sadaļā</a>.</p>
     featured: Ieteikts
     foi:
       contact_form: Informācijas atklātības saziņas veidlapa
@@ -282,13 +280,9 @@ lv:
       freedom_of_information_requests: Informācijas atklātības pieprasījumi
       make_an_foi_request: Izveidot informācijas atklātības pieprasījumu
       making_foi_requests:
-        step1_html: Izlasiet par Informācijas atklātības likumu un <a href="%{how_to_path}"
-          class="govuk-link brand__color">pieprasījumu veidošanu</a>.
-        step2_html: Pārskatiet <a href="%{our_releases_path}" class="govuk-link brand__color">mūsu
-          iepriekšējās publikācijas</a>, lai pārbaudītu, vai jūsu jautājums jau nav
-          atbildēts.
-        step3_html: Lai izveidotu jaunu pieprasījumu, sazinieties ar mums, izmantojot
-          tālāk sniegto informāciju.
+        step1_html: Izlasiet par Informācijas atklātības likumu un <a href="%{how_to_path}" class="govuk-link brand__color">pieprasījumu veidošanu</a>.
+        step2_html: Pārskatiet <a href="%{our_releases_path}" class="govuk-link brand__color">mūsu iepriekšējās publikācijas</a>, lai pārbaudītu, vai jūsu jautājums jau nav atbildēts.
+        step3_html: Lai izveidotu jaunu pieprasījumu, sazinieties ar mums, izmantojot tālāk sniegto informāciju.
     follow_us: Sekojiet mums
     hidden_share_link: Sekot
     high_profile_groups: Augsta profila grupas %{title}

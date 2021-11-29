@@ -1,10 +1,10 @@
+---
 et:
   roles:
+    find_out_more_html: Lisateavet selle rolli varasemate hoidjate kohta leiate meie jaotisest %{link}.
     heading:
       one: Roll
       other: Rollid
-    find_out_more_html: Lisateavet selle rolli varasemate hoidjate kohta leiate meie
-      jaotisest %{link}.
     headings:
       current_holder: Praegune rollihoidja
       previous_holders: Eelmised hoidjad

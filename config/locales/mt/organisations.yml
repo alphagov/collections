@@ -1,378 +1,7 @@
+---
 mt:
   organisations:
     about_page_path: government/organisations/%{organisation}/about.%{language_code}
-    content_item:
-      schema_name:
-        aaib_report:
-          one: Rapport tal-Fergħa dwar l-Investigazzjoni ta' Aċċidenti tal-Ajru
-          few:
-          many:
-          other: Rapporti tal-Fergħa dwar l-Investigazzjoni ta' Aċċidenti tal-Ajru
-        announcement:
-          one: Avviż
-          few:
-          many:
-          other: Avviż
-        asylum_support_decision:
-          one: Deċiżjoni tat-tribunal dwar l-għajnuna għall-ażil
-          few:
-          many:
-          other: Deċiżjonijiet tat-tribunal dwar l-għajnuna għall-ażil
-        authored_article:
-          one: Artiklu miktub
-          few:
-          many:
-          other: Artikli miktuba
-        business_finance_support_scheme:
-          one: Skema ta' għajnuna għall-finanzjament tan-negozju
-          few:
-          many:
-          other: Skemi ta' għajnuna għall-finanzjament tan-negozju
-        case_study:
-          one: Studju ta' każ
-          few:
-          many:
-          other: Studju ta' każijiet
-        closed_consultation:
-          one: Konsultazzjoni magħluqa
-          few:
-          many:
-          other: Konsultazzjonijiet magħluqa
-        cma_case:
-          one: Każ tal-Awtorità dwar il-Kompetizzjoni u s-Swieq
-          few:
-          many:
-          other: Każijiet dwar il-Kompetizzjoni u s-Swieq
-        coming_soon:
-          one: Ser jasal dalwaqt
-          few:
-          many:
-          other: Ser jasal dalwaqt
-        consultation:
-          one: Konsultazzjoni
-          few:
-          many:
-          other: Konsultazzjonijiet
-        consultation_outcome:
-          one: Ir-riżultat tal-Konsultazzjoni
-          few:
-          many:
-          other: Ir-riżultati tal-Konsultazzjoni
-        corporate_information_page:
-          one: Paġna tal-Informazzjoni
-          few:
-          many:
-          other: Paġni tal-informazzjoni
-        corporate_report:
-          one: Rapport korporattiv
-          few:
-          many:
-          other: Rapporti korporattivi
-        correspondence:
-          one: Korrespondenza
-          few:
-          many:
-          other: Korrespondenzi
-        countryside_stewardship_grant:
-          one: Għotja ta' flus għall-Amministrazzjoni tal-Kampanja
-          few:
-          many:
-          other: Għotjiet ta' flus għall-Amministrazzjoni tal-Kampanja
-        decision:
-          one: Deċiżjoni
-          few:
-          many:
-          other: Deċiżjonijiet
-        detailed_guide:
-          one: Gwida
-          few:
-          many:
-          other: Gwida
-        dfid_research_output:
-          one: Output tar-Riċerka għall-Iżvilupp
-          few:
-          many:
-          other: Outputs tar-Riċerka għall-Iżvilupp
-        document_collection:
-          one: Kollezzjoni
-          few:
-          many:
-          other: Kollezzjonijiet
-        draft_text:
-          one: Abbozz tat-test
-          few:
-          many:
-          other: Abbozz tat-tests
-        drug_safety_update:
-          one: Aġġornament dwar is-Sigurtà tad-Droga
-          few:
-          many:
-          other: Aġġornamenti dwar is-Sigurtà tad-Droga
-        employment_appeal_tribunal_decision:
-          one: Id-deċiżjoni ta' appell lit-tribunal dwar l-Impjiegi
-          few:
-          many:
-          other: Deċiżjonijiet  ta' appell lit-tribunal dwar l-Impjiegi
-        employment_tribunal_decision:
-          one: Deċiżjoni tat-tribunal għall-Impjiegi
-          few:
-          many:
-          other: Deċiżjonijiet tat-tribunal għall-Impjiegi
-        esi_fund:
-          one: Fond Strutturali u ta' Investiment Ewropej (ESIF)
-          few:
-          many:
-          other: Fondi Struttirali u ta' Investiment Ewropej (ESIF)
-        fatality_notice:
-          one: Avviż ta' Fatalità
-          few:
-          many:
-          other: Avviżi ta' Fatalità
-        foi_release:
-          one: Rilaxx tal-Libertà tal-Informazzjoni
-          few:
-          many:
-          other: Rilaxxi tal-Libertà tal-Informazzjoni
-        form:
-          one: Formola
-          few:
-          many:
-          other: Formoli
-        government_response:
-          one: Risposta tal-Gvern
-          few:
-          many:
-          other: Risposti tal-Gvern
-        guidance:
-          one: Gwida
-          few:
-          many:
-          other: Gwida
-        impact_assessment:
-          one: Assessjar dwar l-Impatt
-          few:
-          many:
-          other: Assessjar dwar l-Impatt
-        imported:
-          one: impurtat - stennija tat-tip
-          few:
-          many:
-          other: impurtat - stennija tat-tip
-        independent_report:
-          one: Rapport indipendenti
-          few:
-          many:
-          other: Rapporti indipendenti
-        international_development_fund:
-          one: Finanzjament internazzjonali għall-iżvilupp
-          few:
-          many:
-          other: Finanzjament internazzjonali għall-iżvilupp
-        international_treaty:
-          one: Trattat internazzjonali
-          few:
-          many:
-          other: Trattati internazzjonali
-        maib_report:
-          one: Rapport tal-Fergħa dwar l-Investigazzjoni ta' Aċċidenti fil-Baħar
-          few:
-          many:
-          other: Rapporti tal-Fergħa dwar l-Investigazzjoni ta' Aċċidenti tal-Ajru
-        map:
-          one: Mappa
-          few:
-          many:
-          other: Mapep
-        medical_safety_alert:
-          one: Twissijiet u sejħiet lura għal mediċini u tagħmir mediku
-          few:
-          many:
-          other: Twissijiet u sejħiet lura għal mediċini u tagħmir mediku
-        national:
-          one: Avviż nazzjonali tal-istatistika
-          few:
-          many:
-          other: Avviżi nazzjonali tal-istatistika
-        national_statistics:
-          one: Statistiċi Nazzjonali
-          few:
-          many:
-          other: Statistiċi Nazzjonali
-        national_statistics_announcement:
-          one: Avviż nazzjonali tal-istatistika
-          few:
-          many:
-          other: Avviżi nazzjonali tal-istatistika
-        news_article:
-          one: Artiklu bl-aħbarijiet
-          few:
-          many:
-          other: Artikli bl-aħbarijiet
-        news_story:
-          one: Storja bl-aħbarijiet
-          few:
-          many:
-          other: Stejjer bl-aħbarijiet
-        notice:
-          one: Avviż
-          few:
-          many:
-          other: Avviżi
-        official:
-          one: Avviż dwar statistiċi uffiċjali
-          few:
-          many:
-          other: Avviżi dwar statistiċi uffiċjali
-        official_statistics:
-          one: Statistiċi Uffiċjali
-          few:
-          many:
-          other: Statistiċi Uffiċjali
-        official_statistics_announcement:
-          one: Avviż dwar statistiċi uffiċjali
-          few:
-          many:
-          other: Avviżi dwar statistiċi uffiċjali
-        open_consultation:
-          one: Konsultazzjoni miftuħa
-          few:
-          many:
-          other: Konsultazzjonijiet miftuħa
-        oral_statement:
-          one: Dikjarazzjoni verbali lill-Parlament
-          few:
-          many:
-          other: Dikjarazzjonijiet verbali lill-Parlament
-        policy:
-          one: Politika
-          few:
-          many:
-          other: Politiki
-        policy_paper:
-          one: Dokument tal-Politika
-          few:
-          many:
-          other: Dokumenti tal-Politika
-        press_release:
-          one: Stqarrija għall-istampa
-          few:
-          many:
-          other: Stqarrijiet għall-istampa
-        promotional:
-          one: Materjal promozzjonali
-          few:
-          many:
-          other: Materjal promozzjonali
-        publication:
-          one: Publikazzjoni
-          few:
-          many:
-          other: Publikazzjonijiet
-        raib_report:
-          one: Rapport tal-Fergħa dwar Investigazzjoni ta' Aċċident bil-Ferrovija
-          few:
-          many:
-          other: Rapporti tal-Fergħa dwar l-Investigazzjoni ta' Aċċidenti bil-Ferrovija
-        regulation:
-          one: Regolament
-          few:
-          many:
-          other: Regolamenti
-        research:
-          one: Riċerka u analiżi
-          few:
-          many:
-          other: Riċerka u analiżi
-        residential_property_tribunal_decision:
-          one: Deċiżjoni tat-tribunal dwar propjetà residenzjali
-          few:
-          many:
-          other: Deċiżjonijiet tat-tribunal dwar propjetà residenzjali
-        service_sign_in:
-          one: Sign in tas-servizzz
-          few:
-          many:
-          other: Sign in tas-servizzz
-        service_standard_report:
-          one: Rapport Standard tas-Servizz
-          few:
-          many:
-          other: Rapporti Standard tas-Servizz
-        speaking_notes:
-          one: Noti biex titkellem
-          few:
-          many:
-          other: Noti biex titkellem
-        speech:
-          one: Diskors
-          few:
-          many:
-          other: Diskorsi
-        standard:
-          one: Standard
-          few:
-          many:
-          other: Standards
-        statement_to_parliament:
-          one: Diskors lill-Parlament
-          few:
-          many:
-          other: Diskorsi lill-Parlament
-        statistical_data_set:
-          one: Sett tad-dejta bl-istatistiċi
-          few:
-          many:
-          other: Settijiet tad-dejta bl-istatistiċi
-        statistics_announcement:
-          one: Avviż dwar rilaxx ta' statistiċi
-          few:
-          many:
-          other: Avviżi dwar rilaxx ta' statistiċi
-        statutory_guidance:
-          one: Gwida statutorja
-          few:
-          many:
-          other: Gwida statutorja
-        take_part:
-          one: Ħu sehem
-          few:
-          many:
-          other: Ħu sehem
-        tax_tribunal_decision:
-          one: Deċiżjoni tat-tribunal dwar Taxxa u Kanċellerija
-          few:
-          many:
-          other: Deċiżjonijiet tat-tribunal dwar Taxxa u Kanċellerija
-        transcript:
-          one: Transcript
-          few:
-          many:
-          other: Transcripts
-        transparency:
-          one: Dejta dwar it-trasparenza
-          few:
-          many:
-          other: Dejta dwar it-trasparenza
-        utaac_decision:
-          one: Deċiżjoni tat-tribunal dwar appelli amministrattivi
-          few:
-          many:
-          other: Deċiżjonijiet tat-tribunal dwar appelli amministrattivi
-        world_location_news_article:
-          one: Artiklu bl-aħbarijiet
-          few:
-          many:
-          other: Artikli bl-aħbarijiet
-        world_news_story:
-          one: Storja bl-aħbarijiet fid-dinja
-          few:
-          many:
-          other: Stejjer bl-aħbarijiet fid-dinja
-        written_statement:
-          one: Dikjarazzjoni bil-miktub lill-Parlament
-          few:
-          many:
-          other: Dikjarazzjonijiet bil-miktub lill-Parlament
     administered_by: Amministrat minn
     breadcrumbs:
       courts_and_tribunals: Qorti u Tribunali
@@ -383,6 +12,378 @@ mt:
       contact_organisation: Kuntatt %{organisation}
       email: Imejl
       telephone: Telefown
+    content_item:
+      schema_name:
+        aaib_report:
+          few:
+          many:
+          one: Rapport tal-Fergħa dwar l-Investigazzjoni ta' Aċċidenti tal-Ajru
+          other: Rapporti tal-Fergħa dwar l-Investigazzjoni ta' Aċċidenti tal-Ajru
+        announcement:
+          few:
+          many:
+          one: Avviż
+          other: Avviż
+        asylum_support_decision:
+          few:
+          many:
+          one: Deċiżjoni tat-tribunal dwar l-għajnuna għall-ażil
+          other: Deċiżjonijiet tat-tribunal dwar l-għajnuna għall-ażil
+        authored_article:
+          few:
+          many:
+          one: Artiklu miktub
+          other: Artikli miktuba
+        business_finance_support_scheme:
+          few:
+          many:
+          one: Skema ta' għajnuna għall-finanzjament tan-negozju
+          other: Skemi ta' għajnuna għall-finanzjament tan-negozju
+        case_study:
+          few:
+          many:
+          one: Studju ta' każ
+          other: Studju ta' każijiet
+        closed_consultation:
+          few:
+          many:
+          one: Konsultazzjoni magħluqa
+          other: Konsultazzjonijiet magħluqa
+        cma_case:
+          few:
+          many:
+          one: Każ tal-Awtorità dwar il-Kompetizzjoni u s-Swieq
+          other: Każijiet dwar il-Kompetizzjoni u s-Swieq
+        coming_soon:
+          few:
+          many:
+          one: Ser jasal dalwaqt
+          other: Ser jasal dalwaqt
+        consultation:
+          few:
+          many:
+          one: Konsultazzjoni
+          other: Konsultazzjonijiet
+        consultation_outcome:
+          few:
+          many:
+          one: Ir-riżultat tal-Konsultazzjoni
+          other: Ir-riżultati tal-Konsultazzjoni
+        corporate_information_page:
+          few:
+          many:
+          one: Paġna tal-Informazzjoni
+          other: Paġni tal-informazzjoni
+        corporate_report:
+          few:
+          many:
+          one: Rapport korporattiv
+          other: Rapporti korporattivi
+        correspondence:
+          few:
+          many:
+          one: Korrespondenza
+          other: Korrespondenzi
+        countryside_stewardship_grant:
+          few:
+          many:
+          one: Għotja ta' flus għall-Amministrazzjoni tal-Kampanja
+          other: Għotjiet ta' flus għall-Amministrazzjoni tal-Kampanja
+        decision:
+          few:
+          many:
+          one: Deċiżjoni
+          other: Deċiżjonijiet
+        detailed_guide:
+          few:
+          many:
+          one: Gwida
+          other: Gwida
+        dfid_research_output:
+          few:
+          many:
+          one: Output tar-Riċerka għall-Iżvilupp
+          other: Outputs tar-Riċerka għall-Iżvilupp
+        document_collection:
+          few:
+          many:
+          one: Kollezzjoni
+          other: Kollezzjonijiet
+        draft_text:
+          few:
+          many:
+          one: Abbozz tat-test
+          other: Abbozz tat-tests
+        drug_safety_update:
+          few:
+          many:
+          one: Aġġornament dwar is-Sigurtà tad-Droga
+          other: Aġġornamenti dwar is-Sigurtà tad-Droga
+        employment_appeal_tribunal_decision:
+          few:
+          many:
+          one: Id-deċiżjoni ta' appell lit-tribunal dwar l-Impjiegi
+          other: Deċiżjonijiet  ta' appell lit-tribunal dwar l-Impjiegi
+        employment_tribunal_decision:
+          few:
+          many:
+          one: Deċiżjoni tat-tribunal għall-Impjiegi
+          other: Deċiżjonijiet tat-tribunal għall-Impjiegi
+        esi_fund:
+          few:
+          many:
+          one: Fond Strutturali u ta' Investiment Ewropej (ESIF)
+          other: Fondi Struttirali u ta' Investiment Ewropej (ESIF)
+        fatality_notice:
+          few:
+          many:
+          one: Avviż ta' Fatalità
+          other: Avviżi ta' Fatalità
+        foi_release:
+          few:
+          many:
+          one: Rilaxx tal-Libertà tal-Informazzjoni
+          other: Rilaxxi tal-Libertà tal-Informazzjoni
+        form:
+          few:
+          many:
+          one: Formola
+          other: Formoli
+        government_response:
+          few:
+          many:
+          one: Risposta tal-Gvern
+          other: Risposti tal-Gvern
+        guidance:
+          few:
+          many:
+          one: Gwida
+          other: Gwida
+        impact_assessment:
+          few:
+          many:
+          one: Assessjar dwar l-Impatt
+          other: Assessjar dwar l-Impatt
+        imported:
+          few:
+          many:
+          one: impurtat - stennija tat-tip
+          other: impurtat - stennija tat-tip
+        independent_report:
+          few:
+          many:
+          one: Rapport indipendenti
+          other: Rapporti indipendenti
+        international_development_fund:
+          few:
+          many:
+          one: Finanzjament internazzjonali għall-iżvilupp
+          other: Finanzjament internazzjonali għall-iżvilupp
+        international_treaty:
+          few:
+          many:
+          one: Trattat internazzjonali
+          other: Trattati internazzjonali
+        maib_report:
+          few:
+          many:
+          one: Rapport tal-Fergħa dwar l-Investigazzjoni ta' Aċċidenti fil-Baħar
+          other: Rapporti tal-Fergħa dwar l-Investigazzjoni ta' Aċċidenti tal-Ajru
+        map:
+          few:
+          many:
+          one: Mappa
+          other: Mapep
+        medical_safety_alert:
+          few:
+          many:
+          one: Twissijiet u sejħiet lura għal mediċini u tagħmir mediku
+          other: Twissijiet u sejħiet lura għal mediċini u tagħmir mediku
+        national:
+          few:
+          many:
+          one: Avviż nazzjonali tal-istatistika
+          other: Avviżi nazzjonali tal-istatistika
+        national_statistics:
+          few:
+          many:
+          one: Statistiċi Nazzjonali
+          other: Statistiċi Nazzjonali
+        national_statistics_announcement:
+          few:
+          many:
+          one: Avviż nazzjonali tal-istatistika
+          other: Avviżi nazzjonali tal-istatistika
+        news_article:
+          few:
+          many:
+          one: Artiklu bl-aħbarijiet
+          other: Artikli bl-aħbarijiet
+        news_story:
+          few:
+          many:
+          one: Storja bl-aħbarijiet
+          other: Stejjer bl-aħbarijiet
+        notice:
+          few:
+          many:
+          one: Avviż
+          other: Avviżi
+        official:
+          few:
+          many:
+          one: Avviż dwar statistiċi uffiċjali
+          other: Avviżi dwar statistiċi uffiċjali
+        official_statistics:
+          few:
+          many:
+          one: Statistiċi Uffiċjali
+          other: Statistiċi Uffiċjali
+        official_statistics_announcement:
+          few:
+          many:
+          one: Avviż dwar statistiċi uffiċjali
+          other: Avviżi dwar statistiċi uffiċjali
+        open_consultation:
+          few:
+          many:
+          one: Konsultazzjoni miftuħa
+          other: Konsultazzjonijiet miftuħa
+        oral_statement:
+          few:
+          many:
+          one: Dikjarazzjoni verbali lill-Parlament
+          other: Dikjarazzjonijiet verbali lill-Parlament
+        policy:
+          few:
+          many:
+          one: Politika
+          other: Politiki
+        policy_paper:
+          few:
+          many:
+          one: Dokument tal-Politika
+          other: Dokumenti tal-Politika
+        press_release:
+          few:
+          many:
+          one: Stqarrija għall-istampa
+          other: Stqarrijiet għall-istampa
+        promotional:
+          few:
+          many:
+          one: Materjal promozzjonali
+          other: Materjal promozzjonali
+        publication:
+          few:
+          many:
+          one: Publikazzjoni
+          other: Publikazzjonijiet
+        raib_report:
+          few:
+          many:
+          one: Rapport tal-Fergħa dwar Investigazzjoni ta' Aċċident bil-Ferrovija
+          other: Rapporti tal-Fergħa dwar l-Investigazzjoni ta' Aċċidenti bil-Ferrovija
+        regulation:
+          few:
+          many:
+          one: Regolament
+          other: Regolamenti
+        research:
+          few:
+          many:
+          one: Riċerka u analiżi
+          other: Riċerka u analiżi
+        residential_property_tribunal_decision:
+          few:
+          many:
+          one: Deċiżjoni tat-tribunal dwar propjetà residenzjali
+          other: Deċiżjonijiet tat-tribunal dwar propjetà residenzjali
+        service_sign_in:
+          few:
+          many:
+          one: Sign in tas-servizzz
+          other: Sign in tas-servizzz
+        service_standard_report:
+          few:
+          many:
+          one: Rapport Standard tas-Servizz
+          other: Rapporti Standard tas-Servizz
+        speaking_notes:
+          few:
+          many:
+          one: Noti biex titkellem
+          other: Noti biex titkellem
+        speech:
+          few:
+          many:
+          one: Diskors
+          other: Diskorsi
+        standard:
+          few:
+          many:
+          one: Standard
+          other: Standards
+        statement_to_parliament:
+          few:
+          many:
+          one: Diskors lill-Parlament
+          other: Diskorsi lill-Parlament
+        statistical_data_set:
+          few:
+          many:
+          one: Sett tad-dejta bl-istatistiċi
+          other: Settijiet tad-dejta bl-istatistiċi
+        statistics_announcement:
+          few:
+          many:
+          one: Avviż dwar rilaxx ta' statistiċi
+          other: Avviżi dwar rilaxx ta' statistiċi
+        statutory_guidance:
+          few:
+          many:
+          one: Gwida statutorja
+          other: Gwida statutorja
+        take_part:
+          few:
+          many:
+          one: Ħu sehem
+          other: Ħu sehem
+        tax_tribunal_decision:
+          few:
+          many:
+          one: Deċiżjoni tat-tribunal dwar Taxxa u Kanċellerija
+          other: Deċiżjonijiet tat-tribunal dwar Taxxa u Kanċellerija
+        transcript:
+          few:
+          many:
+          one: Transcript
+          other: Transcripts
+        transparency:
+          few:
+          many:
+          one: Dejta dwar it-trasparenza
+          other: Dejta dwar it-trasparenza
+        utaac_decision:
+          few:
+          many:
+          one: Deċiżjoni tat-tribunal dwar appelli amministrattivi
+          other: Deċiżjonijiet tat-tribunal dwar appelli amministrattivi
+        world_location_news_article:
+          few:
+          many:
+          one: Artiklu bl-aħbarijiet
+          other: Artikli bl-aħbarijiet
+        world_news_story:
+          few:
+          many:
+          one: Storja bl-aħbarijiet fid-dinja
+          other: Stejjer bl-aħbarijiet fid-dinja
+        written_statement:
+          few:
+          many:
+          one: Dikjarazzjoni bil-miktub lill-Parlament
+          other: Dikjarazzjonijiet bil-miktub lill-Parlament
     corporate_information: Informazzjoni korporattiva
     document_types:
       documents: Dokumenti
@@ -416,26 +417,18 @@ mt:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Ara r-rilaxxi kollha dwar trasparency u l-libertà tal-informazzjoni
         title: Rilaxxi dwar trasparenza u l-libertà tal-informazzjoni
-    errors_or_omissions_html: <p>Żbalji jew ommissjonijiet? <a class="govuk-link"
-      href="/contact/govuk">Għidilna hawn</a>. Għal listi uffiċjali ta'  korpi pubbliċi
-      mingħajr dipartiment <a class="govuk-link" href="/government/collections/public-bodies">pamatyti
-      viešąsias įstaigas</a>.</p>
+    errors_or_omissions_html: <p>Żbalji jew ommissjonijiet? <a class="govuk-link" href="/contact/govuk">Għidilna hawn</a>. Għal listi uffiċjali ta'  korpi pubbliċi mingħajr dipartiment <a class="govuk-link" href="/government/collections/public-bodies">pamatyti viešąsias įstaigas</a>.</p>
     featured: Dehru
     foi:
       contact_form: Formola ta' Kuntatt għall-Libertà tal-Informazzjoni
-      foi_exemption_html: "Din l-organizazzjoni mhijiex koperta mill-Att dwar il-Libertà
-        tal-Informazzjoni. \nBiex tara liema organizazzjonijiet huma inklużi ara <a
-        href=\"%{foi_url}\" class=\"govuk-link brand__color\">teisės aktų</a>.\n"
+      foi_exemption_html: "Din l-organizazzjoni mhijiex koperta mill-Att dwar il-Libertà tal-Informazzjoni. \nBiex tara liema organizazzjonijiet huma inklużi ara <a href=\"%{foi_url}\" class=\"govuk-link brand__color\">teisės aktų</a>.\n"
       freedom_of_information_act: Att dwar il-Libertà għall-informazzjoni (FOI)
       freedom_of_information_requests: Talbiet għall-libertà għall-informazzjoni
       make_an_foi_request: Agħmel talba għall-libertà għall-informazzjoni
       making_foi_requests:
-        step1_html: Aqra dwar l-Att għall-libertà għall-informazzjoni (ACT) u <a href="%{how_to_path}"
-          class="govuk-link brand__color">agħmel talba</a>.
-        step2_html: Iċċekkja <a href="%{our_releases_path}" class="govuk-link brand__color">l-istqarrijiet
-          għall-istampa tagħna</a> biex tara jekk diġa weġibniex il-mistoqsijiet tiegħek.
-        step3_html: Agħmel talba ġdida billi tikkuntattjana permezz tad-dettalji ta'
-          hawn taħt.
+        step1_html: Aqra dwar l-Att għall-libertà għall-informazzjoni (ACT) u <a href="%{how_to_path}" class="govuk-link brand__color">agħmel talba</a>.
+        step2_html: Iċċekkja <a href="%{our_releases_path}" class="govuk-link brand__color">l-istqarrijiet għall-istampa tagħna</a> biex tara jekk diġa weġibniex il-mistoqsijiet tiegħek.
+        step3_html: Agħmel talba ġdida billi tikkuntattjana permezz tad-dettalji ta' hawn taħt.
     follow_us: Segwina
     hidden_share_link: Segwi fuq
     high_profile_groups: Gruppi ta' profil għoli fost %{title}

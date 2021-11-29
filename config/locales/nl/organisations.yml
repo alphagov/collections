@@ -1,6 +1,17 @@
+---
 nl:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Beheerd door
+    breadcrumbs:
+      courts_and_tribunals: Hoven en rechtbanken
+      organisations: Organisaties
+    contact:
+      contact_details: Contactgegevens
+      contact_form: 'Contactformulier: %{title}'
+      contact_organisation: Contact %{organisation}
+      email: E-mail
+      telephone: Telefoon
     content_item:
       schema_name:
         aaib_report:
@@ -113,8 +124,7 @@ nl:
           other: Kaarten
         medical_safety_alert:
           one: Waarschuwingen en terugroepingen voor geneesmiddelen en medische hulpmiddelen
-          other: Waarschuwingen en terugroepingen voor geneesmiddelen en medische
-            hulpmiddelen
+          other: Waarschuwingen en terugroepingen voor geneesmiddelen en medische hulpmiddelen
         national:
           one: Aankondiging nationale statistieken
           other: Aankondigingen nationale statistieken
@@ -226,16 +236,6 @@ nl:
         written_statement:
           one: Schriftelijke verklaring aan het Parlement
           other: Schriftelijke verklaringen aan het Parlement
-    administered_by: Beheerd door
-    breadcrumbs:
-      courts_and_tribunals: Hoven en rechtbanken
-      organisations: Organisaties
-    contact:
-      contact_details: Contactgegevens
-      contact_form: 'Contactformulier: %{title}'
-      contact_organisation: Contact %{organisation}
-      email: E-mail
-      telephone: Telefoon
     corporate_information: Bedrijfsgegevens
     document_types:
       documents: Documenten
@@ -269,26 +269,20 @@ nl:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Bekijk alle transparantie en vrijheid van informatieberichten
         title: Transparantie en vrijheid van informatie
-    errors_or_omissions_html: <p>Fouten of omissies? <a class="govuk-link" href="/contact/govuk">Vel
-      ons hier</a>. Voor de officiële lijsten van niet-overheidsinstellingen <a class="govuk-link"
-      href="/overheid/collecties/publieke-organisaties">zie publieke-organisaties</a>.</p>
+    errors_or_omissions_html: <p>Fouten of omissies? <a class="govuk-link" href="/contact/govuk">Vel ons hier</a>. Voor de officiële lijsten van niet-overheidsinstellingen <a class="govuk-link" href="/overheid/collecties/publieke-organisaties">zie publieke-organisaties</a>.</p>
     featured: Aanbevolen
     foi:
       contact_form: Vrijheid van informatie contact formulier
       foi_exemption_html: |
         Deze organisatie valt niet onder de Freedom of Information Act.
         Om te zien welke organisaties zijn opgenomen, zie <a href="%{ Vrijheid van informatie_url} class=""govuk-link brand__color"">de wetgeving</a>.
-      freedom_of_information_act: Wet op de vrijheid van informatie ( Vrijheid van
-        informatie)
+      freedom_of_information_act: Wet op de vrijheid van informatie ( Vrijheid van informatie)
       freedom_of_information_requests: Vrijheid van informatie aanvragen
       make_an_foi_request: Doe een  Vrijheid van informatie-verzoek
       making_foi_requests:
-        step1_html: Lees meer over de Wet Openbaarheid van Bestuur en <a href="%{how_to_path}"
-          class="govuk-link brand__color">hoe u een verzoek kunt doen</a>.
-        step2_html: Bekijk <a href="%{onze_releases_path}" class="govuk-link brand__color">onze
-          eerdere berichten</a> om te zien of wij uw vraag al hebben beantwoord.
-        step3_html: Doe een nieuw verzoek door contact met ons op te nemen via onderstaande
-          gegevens.
+        step1_html: Lees meer over de Wet Openbaarheid van Bestuur en <a href="%{how_to_path}" class="govuk-link brand__color">hoe u een verzoek kunt doen</a>.
+        step2_html: Bekijk <a href="%{onze_releases_path}" class="govuk-link brand__color">onze eerdere berichten</a> om te zien of wij uw vraag al hebben beantwoord.
+        step3_html: Doe een nieuw verzoek door contact met ons op te nemen via onderstaande gegevens.
     follow_us: Volg ons
     hidden_share_link: Volgen op
     high_profile_groups: High profile groepen binnen %{title}
@@ -300,8 +294,7 @@ nl:
       devolved: "%{title} is een lichaam van <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} zal binnenkort worden opgenomen in GOV.UK"
       left_gov: "%{title} is nu onafhankelijk van de Britse regering"
-      merged: "%{title} werd onderdeel van <a href='%{link_href}'>%{link_text}</a>
-        in %{updated}"
+      merged: "%{title} werd onderdeel van <a href='%{link_href}'>%{link_text}</a> in %{updated}"
       merged_no_date: "%{title} is nu onderdeel van <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} is gesloten"
       no_website: "%{title} heeft geen website"

@@ -1,31 +1,10 @@
+---
 pa-pk:
   brexit_landing_page:
-    campaign_links:
-      lead_in: 'ایہ ویکھو کہ تہانوں کیہ وکھرا کرن دی لوڑ اے اگر تُسی:'
-      lead_out: '<a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
-        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
-        data-track-label=" Get the complete list">اک مکمل فہرست حاصل کرو</a> کہ تہانوں
-        اپنے لئی،اپنے کاروبار لئی تے اپنے خاندان لئی کیہ کرن دی لوڑ اے۔ '
-    comms:
-      read_transcript: ایس ویڈیو  بارے لکھائی نوں پڑھو
-    comms_header: اعلانات
-    data_list_title: 'بریگزٹ لینڈنگ پیج: {header}%'
-    email_mailto_subject: 'برطانیہ دا نواں آغاز: آو اگے چلئے-  GOV.UK'
-    guidance_header: کاروبار تے شہریاں لئی تبدیلیاں
-    meta_description: " اوچیزاں جیوں کہ سفر تے یورپ میں کاروبار لئی بریگزٹ  دے نویں
-      قانون کس طراں لاگو ہوندے نیئں۔ Brexit چیکر نوں استعمال کر کے اپنی ذاتی فہرست
-      حاصل کرو۔"
+    meta_description: " اوچیزاں جیوں کہ سفر تے یورپ میں کاروبار لئی بریگزٹ  دے نویں قانون کس طراں لاگو ہوندے نیئں۔ Brexit چیکر نوں استعمال کر کے اپنی ذاتی فہرست حاصل کرو۔"
     meta_title: 'بریگزٹ '
-    no_cookies:
-      change_settings_text: اپنی کوکیز دی ترتیب نوں بدلو
-      icon_text: ویڈیو
-      or_text: یا
-      to_watch_text: ویڈیو ویکھو
-      watch_link_text: یو ٹیوب تے ویکھو
     page_header: نویں قانون تہانوں ایتھے ملن گےBrexit:<br/>
-    page_header_explainer: یورپ وچ کاروبار کرن تے سفر کرن جئی چیزاں تے نویں قانون
-      لاگو ہون گے۔ Brexit checker نوں استعمال کر کے اپنی ذات لئی اپنے خانادان تے اپنے
-      کاروبار دے کماں لئی اک فہرست حاصل کرو۔
+    page_header_explainer: یورپ وچ کاروبار کرن تے سفر کرن جئی چیزاں تے نویں قانون لاگو ہون گے۔ Brexit checker نوں استعمال کر کے اپنی ذات لئی اپنے خانادان تے اپنے کاروبار دے کماں لئی اک فہرست حاصل کرو۔
     sections:
       aria_string_suffix: ایہ Brexitدے بارے
       guidance_and_regulation: رہنمائی تے قانون
@@ -34,22 +13,5 @@ pa-pk:
       research_and_statistics: کھوج تے اعداوشمار
       services: خدمات
       transparency: شفافیت تے معلومات جاری کرن دی آزادی
-    share_links: ایس صفحے نوں اپس وچ ونڈو
-    take_action_list:
-      amber: تبدیل کرو
-      green: جاؤ
-      red: ویکھو
-    take_action_start_now: 'Brexit چیکر: شروع کرو'
-    take_action_start_now_link: "/transition-check/questions"
     topic_section_header: Brexit  بارے ساری معلومات
     topic_section_subheading: Brexit بارے ساری معلومات ویکھو
-    video_section_description: |
-      <p>یورپ نال کاروبار کرنا ہون بدل گیا اے ہون تہانوں درآمدات، برآمدات بارے نویں ققانین نوں مننا ہوئے گا  and&nbsp;ہایرنگ.</p>
-      <p>ویڈیو ویکھ کہ ایہ جانو کہ نویں قانون تہاڈے کاروبار لئی کیہ مطلب رکھ دے نیں . تُسی ایہ وی کر سکدے او <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="Brexit checker">استعمال کریں Brexit checker</a> مکاں دی اک ذاتی فہرست حاصل کرو.</p>
-    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
-    video_section_title: اپنے کاروبار نوں چلا کے رکھو۔
-    video_section_transcription_summary: ویڈیو دی تحریر نوں ویکھو
-    video_section_transcription_text: |
-      <p>کاروبار، UK نیں EU چھڈ دتا اےتے ہُن نویں قانون لاگو ہن گے.</p>
-      <p>اپنے کاروبار نوں چلان لئی gov.uk تے Brexit checker دا آلہ استعمال کرو/ایس بدلاؤ نوں ذاتی بنان لئی تہاڈے کاروبار لئی عمل.</p>
-      <p>آؤ کاروبار نوں چلدا رکھیئے.</p>

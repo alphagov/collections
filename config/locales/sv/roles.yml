@@ -1,10 +1,10 @@
+---
 sv:
   roles:
+    find_out_more_html: Läs mer om tidigare innehavare av denna roll i vårt avsnitt %{link}.
     heading:
       one: Roll
       other: Roller
-    find_out_more_html: Läs mer om tidigare innehavare av denna roll i vårt avsnitt
-      %{link}.
     headings:
       current_holder: Nuvarande innehavare av rollen
       previous_holders: Tidigare innehavare

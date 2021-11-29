@@ -1,32 +1,10 @@
+---
 fi:
   brexit_landing_page:
-    campaign_links:
-      lead_in: 'Tarkista, mitä sinun on tehtävä toisin, jos olet:'
-      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
-        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
-        data-track-label="Get the complete list">Hanki täydellinen luettelo siitä</a>
-        mitä sinun on tehtävä itsesi, yrityksesi ja perheesi hyväksi.
-    comms:
-      read_transcript: Lue tämän videon transkriptio
-    comms_header: Ilmoitukset
-    data_list_title: 'Brexitin aloitussivu: %{header}'
-    email_mailto_subject: 'Yhdistyneen kuningaskunnan uusi alku: lähdetään liikkeelle-
-      GOV.UK'
-    guidance_header: Muutokset yrityksille ja kansalaisille
-    meta_description: Selvitä, miten uudet brexit-säännöt koskevat esimerkiksi matkustamista
-      ja kaupankäyntiä Euroopan kanssa. Käytä Brexit-tarkistinta saadaksesi henkilökohtaisen
-      luettelon toimista.
+    meta_description: Selvitä, miten uudet brexit-säännöt koskevat esimerkiksi matkustamista ja kaupankäyntiä Euroopan kanssa. Käytä Brexit-tarkistinta saadaksesi henkilökohtaisen luettelon toimista.
     meta_title: Brexit
-    no_cookies:
-      change_settings_text: Muuta evästeasetuksia
-      icon_text: VIDEO
-      or_text: tai
-      to_watch_text: katsomaan videota
-      watch_link_text: Katso YouTubesta
     page_header: 'Brexit: <br/>uudet säännöt ovat täällä'
-    page_header_explainer: Uusia sääntöjä sovelletaan esimerkiksi matkustamiseen ja
-      kaupankäyntiin Euroopan kanssa. Käytä Brexit-tarkistinta saadaksesi henkilökohtaisen
-      luettelon sinua, yritystäsi ja perhettäsi koskevista toimista.
+    page_header_explainer: Uusia sääntöjä sovelletaan esimerkiksi matkustamiseen ja kaupankäyntiin Euroopan kanssa. Käytä Brexit-tarkistinta saadaksesi henkilökohtaisen luettelon sinua, yritystäsi ja perhettäsi koskevista toimista.
     sections:
       aria_string_suffix: Brexitiin liittyen
       guidance_and_regulation: Ohjeet ja sääntely
@@ -35,22 +13,5 @@ fi:
       research_and_statistics: Tutkimus ja tilastot
       services: Palvelut
       transparency: Avoimuus ja tiedonvälityksen vapaus
-    share_links: Jaa tämä sivu
-    take_action_list:
-      amber: Muuttaa
-      green: Mennä
-      red: Tarkistaa
-    take_action_start_now: 'Brexit-tarkistinta: aloita nyt'
-    take_action_start_now_link: "/transition-check/questions"
     topic_section_header: Kaikki Brexitin tiedot
     topic_section_subheading: Selaa kaikkea Brexitiin liittyvää tietoa
-    video_section_description: |
-      <p>Kaupankäynti Euroopan kanssa on muuttunut. Sinun on noudatettava uusia sääntöjä viennistä, tuonnista, tulleista, tiedoista ja &nbsp;palkkaamisesta.</p>
-      <p>Katso video ja katso, mitä uudet säännöt merkitsevät yrityksellesi. Voit myös <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">ei brexitin tarkistajaa</a> saadaksesi henkilökohtaisen luettelon toimista.</p>
-    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
-    video_section_title: Pidä yrityksesi liikkeessä
-    video_section_transcription_summary: Katso videon transkriptio
-    video_section_transcription_text: |
-      <p>Yritykset, Yhdistynyt kuningaskunta on lähtenyt EU: ja uusia sääntöjä sovelletaan nyt.</p>
-       <p>Jotta yrityksesi olisi liikkeessä, käytä brexit-gov.uk/transition työkalua saadaksesi henkilökohtaisia toimintoja yrityksellesi.</p>
-       <p>Pidetään liiketoiminnan liikkeessä.</p>

@@ -1,6 +1,17 @@
+---
 sw:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Imetolewa na
+    breadcrumbs:
+      courts_and_tribunals: Mahakama na Mabaraza ya Uamuzi
+      organisations: Mashirika
+    contact:
+      contact_details: Anwani za mawasiliano
+      contact_form: 'Fomu ya Mawasiliano: %{title}'
+      contact_organisation: Anwani %{organisation}
+      email: Barua pepe
+      telephone: Nambari ya simu
     content_item:
       schema_name:
         aaib_report:
@@ -225,16 +236,6 @@ sw:
         written_statement:
           one: Taarifa ya Maandishi kwa Bunge
           other: Taarifa za Maandishi kwa Bunge
-    administered_by: Imetolewa na
-    breadcrumbs:
-      courts_and_tribunals: Mahakama na Mabaraza ya Uamuzi
-      organisations: Mashirika
-    contact:
-      contact_details: Anwani za mawasiliano
-      contact_form: 'Fomu ya Mawasiliano: %{title}'
-      contact_organisation: Anwani %{organisation}
-      email: Barua pepe
-      telephone: Nambari ya simu
     corporate_information: Maelezo ya shirika
     document_types:
       documents: Hati
@@ -268,10 +269,7 @@ sw:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Angalia taarifa zote za uwazi na uhuru wa kupata habari
         title: Taarifa za uwazi na uhuru wa kupata habari
-    errors_or_omissions_html: <p>Je, kuna hitilafu au kutojumuishwa kwa maelezo yoyote?
-      <a class="govuk-link" href="/contact/govuk">Tufahamishe hapa</a>. Ili upate
-      orodha rasmi ya mashirika ya serikali yasiyo ya kiidara <a class="govuk-link"
-      href="/government/collections/public-bodies">angalia mashirika ya serikali</a>.</p>
+    errors_or_omissions_html: <p>Je, kuna hitilafu au kutojumuishwa kwa maelezo yoyote? <a class="govuk-link" href="/contact/govuk">Tufahamishe hapa</a>. Ili upate orodha rasmi ya mashirika ya serikali yasiyo ya kiidara <a class="govuk-link" href="/government/collections/public-bodies">angalia mashirika ya serikali</a>.</p>
     featured: Yanayoangaziwa
     foi:
       contact_form: Fomu ya mawasiliano ya FOI
@@ -282,12 +280,9 @@ sw:
       freedom_of_information_requests: Uhuru wa kutuma maombi ya kupata habari
       make_an_foi_request: Tuma ombi la FOI
       making_foi_requests:
-        step1_html: Soma maelezo kuhusu Sheria ya Uhuru wa Kupata Habar (FOI) na <a
-          href="%{how_to_path}" class="govuk-link brand__color">jinsi ya kutuma maombi</a>.
-        step2_html: Angalia <a href="%{our_releases_path}" class="govuk-link brand__color">taarifa
-          zetu za awali</a> ili uone iwapo tayari tumejibu swali lako.
-        step3_html: Tuma ombi jipya kwa kuwasiliana nasi ukitumia maelezo yaliyo hapa
-          chini.
+        step1_html: Soma maelezo kuhusu Sheria ya Uhuru wa Kupata Habar (FOI) na <a href="%{how_to_path}" class="govuk-link brand__color">jinsi ya kutuma maombi</a>.
+        step2_html: Angalia <a href="%{our_releases_path}" class="govuk-link brand__color">taarifa zetu za awali</a> ili uone iwapo tayari tumejibu swali lako.
+        step3_html: Tuma ombi jipya kwa kuwasiliana nasi ukitumia maelezo yaliyo hapa chini.
     follow_us: Tufuatilie
     hidden_share_link: Tufuatilie kwenye
     high_profile_groups: Makundi ya hadhi ya juu ndani ya %{title}
@@ -299,8 +294,7 @@ sw:
       devolved: "%{title} ni shirika la <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} litajumuishwa hivi karibuni kwenye GOV.UK"
       left_gov: Sasa %{title} limejitenga na serikali ya Uingereza
-      merged: "%{title} lilijiunga na <a href='%{link_href}'>%{link_text}</a> mnamo
-        %{updated}"
+      merged: "%{title} lilijiunga na <a href='%{link_href}'>%{link_text}</a> mnamo %{updated}"
       merged_no_date: Sasa %{title} ni sehemu ya <a href='%{link_href}'>%{link_text}</a>
       no_longer_exists: "%{title} limefungwa"
       no_website: "%{title} halina tovuti"

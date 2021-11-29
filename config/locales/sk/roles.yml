@@ -1,11 +1,11 @@
+---
 sk:
   roles:
+    find_out_more_html: Viac informácií o predchádzajúcich držiteľoch tejto funkcie nájdete v našej sekcii %{link}.
     heading:
-      one: Úloha
       few:
+      one: Úloha
       other: Úlohy
-    find_out_more_html: Viac informácií o predchádzajúcich držiteľoch tejto funkcie
-      nájdete v našej sekcii %{link}.
     headings:
       current_holder: Súčasný držiteľ funkcie
       previous_holders: Predchádzajúci držitelia

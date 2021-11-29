@@ -1,6 +1,17 @@
+---
 hi:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: प्रशासक
+    breadcrumbs:
+      courts_and_tribunals: न्यायालय और न्यायाधिकरण
+      organisations: संस्थाएं
+    contact:
+      contact_details: संपर्क के विवरण
+      contact_form: 'संपर्क प्रपत्र: %{title}'
+      contact_organisation: संपर्क करें %{organisation}
+      email: ईमेल
+      telephone: टेलीफ़ोन
     content_item:
       schema_name:
         aaib_report:
@@ -73,10 +84,8 @@ hi:
           one: रोजगार न्यायाधिकरण का फैसला
           other: रोजगार न्यायाधिकरण के फैसले
         esi_fund:
-          one: यूरोपीय संरचनात्मक और निवेश कोष (European Structural and Investment
-            Fund, ESIF)
-          other: यूरोपीय संरचनात्मक और निवेश कोष (European Structural and Investment
-            Fund, ESIF)
+          one: यूरोपीय संरचनात्मक और निवेश कोष (European Structural and Investment Fund, ESIF)
+          other: यूरोपीय संरचनात्मक और निवेश कोष (European Structural and Investment Fund, ESIF)
         fatality_notice:
           one: विपत्ति की सूचना
           other: विपत्ति की सूचना
@@ -227,16 +236,6 @@ hi:
         written_statement:
           one: संसद में लिखित बयान
           other: संसद में लिखित बयान
-    administered_by: प्रशासक
-    breadcrumbs:
-      courts_and_tribunals: न्यायालय और न्यायाधिकरण
-      organisations: संस्थाएं
-    contact:
-      contact_details: संपर्क के विवरण
-      contact_form: 'संपर्क प्रपत्र: %{title}'
-      contact_organisation: संपर्क करें %{organisation}
-      email: ईमेल
-      telephone: टेलीफ़ोन
     corporate_information: कारपोरेट सूचना
     document_types:
       documents: दस्तावेज़
@@ -270,26 +269,18 @@ hi:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: सभी पारदर्शिता और सूचना जारी करने की आज़ादी देखें
         title: पारदर्शिता और सूचना जारी करने की आज़ादी
-    errors_or_omissions_html: <p>त्रुटियां या चूक? <a class="govuk-link" href="/contact/govuk">हमें
-      यहां बताएं</a>। For official lists of non–departmental public bodies <a class="govuk-link"
-      href="/government/collections/public-bodies">सार्वजनिक निकाय देखें</a>।</p>
+    errors_or_omissions_html: <p>त्रुटियां या चूक? <a class="govuk-link" href="/contact/govuk">हमें यहां बताएं</a>। For official lists of non–departmental public bodies <a class="govuk-link" href="/government/collections/public-bodies">सार्वजनिक निकाय देखें</a>।</p>
     featured: फीचर्ड
     foi:
       contact_form: एफओआई संपर्क प्रपत्र
-      foi_exemption_html: यह संगठन सूचना की आज़ादी अधिनियम द्वारा कवर नहीं किया गया
-        है। शामिल संगठनों की जानकारी देखने के लिए, <a href="%{foi_url}" class="govuk-link
-        brand__color">कानून</a>देखें।
+      foi_exemption_html: यह संगठन सूचना की आज़ादी अधिनियम द्वारा कवर नहीं किया गया है। शामिल संगठनों की जानकारी देखने के लिए, <a href="%{foi_url}" class="govuk-link brand__color">कानून</a>देखें।
       freedom_of_information_act: सूचना की आज़ादी (Freedom of Information, FOI)अधिनियम
       freedom_of_information_requests: सूचना की आज़ादी के अनुरोध
       make_an_foi_request: एफओआई अनुरोध करें
       making_foi_requests:
-        step1_html: सूचना की आज़ादी (एफओआई) अधिनियम और <a href="%{how_to_path}" class="govuk-link
-          brand__color">अनुरोध कैसे करें</a>के बारे में पढ़ें।
-        step2_html: <a href="%{our_releases_path}" class="govuk-link brand__color">हमारी
-          पिछली विज्ञप्तियां</a> जांचकर देखें कि क्या हमने पहले ही आपके सवाल का जवाब
-          दे दिया है।
-        step3_html: नीचे दिए गए विवरणों का प्रयोग करके हमसे संपर्क करें और नया अनुरोध
-          दें।
+        step1_html: सूचना की आज़ादी (एफओआई) अधिनियम और <a href="%{how_to_path}" class="govuk-link brand__color">अनुरोध कैसे करें</a>के बारे में पढ़ें।
+        step2_html: <a href="%{our_releases_path}" class="govuk-link brand__color">हमारी पिछली विज्ञप्तियां</a> जांचकर देखें कि क्या हमने पहले ही आपके सवाल का जवाब दे दिया है।
+        step3_html: नीचे दिए गए विवरणों का प्रयोग करके हमसे संपर्क करें और नया अनुरोध दें।
     follow_us: हमें फॉलो करें
     hidden_share_link: इस पर फॉलो करें
     high_profile_groups: "%{title} के अंदर हाई प्रोफाइल समूह"
@@ -297,13 +288,11 @@ hi:
     jobs_contracts: नौकरी एवं अनुबंध
     latest_from: "%{title} से नवीनतम"
     notices:
-      changed_name: "%{title} को अब <a href='%{link_href}'>%{link_text}</a> कहा जाता
-        है"
+      changed_name: "%{title} को अब <a href='%{link_href}'>%{link_text}</a> कहा जाता है"
       devolved: "%{title} <a href='%{link_href}'>%{link_text}</a> का निकाय है"
       joining: "%{title} जल्द ही GOV.UK में शामिल हो जाएगा"
       left_gov: "%{title} अब यूनाइडेट किंगडम सरकार से स्वतंत्र है"
-      merged: "%{title} %{updated} में <a href='%{link_href}'>%{link_text}</a> का
-        हिस्सा बन गया"
+      merged: "%{title} %{updated} में <a href='%{link_href}'>%{link_text}</a> का हिस्सा बन गया"
       merged_no_date: "%{title} <a href='%{link_href}'>%{link_text}</a>का हिस्सा है"
       no_longer_exists: "%{title} बंद हो गया है"
       no_website: "%{title} की कोई वेबसाइट नहीं है"
@@ -340,6 +329,5 @@ hi:
     view_less: कम देखें
     what_we_do: "%{title} क्या करता है"
     works_with_statement:
-      multiple: "%{works_with_count} एजेंसियों और सार्वजनिक निकायों के साथ काम करता
-        है"
+      multiple: "%{works_with_count} एजेंसियों और सार्वजनिक निकायों के साथ काम करता है"
       one: "%{works_with_count} सार्वजनिक निकाय के साथ काम करता है"

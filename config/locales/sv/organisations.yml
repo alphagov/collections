@@ -1,6 +1,17 @@
+---
 sv:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Förvaltas av
+    breadcrumbs:
+      courts_and_tribunals: Domstolar och domstolar
+      organisations: Organisationer
+    contact:
+      contact_details: Kontaktuppgifter
+      contact_form: 'Kontaktformulär: %{title}'
+      contact_organisation: Kontakt %{organisation}
+      email: E-post
+      telephone: Telefon
     content_item:
       schema_name:
         aaib_report:
@@ -225,16 +236,6 @@ sv:
         written_statement:
           one: Skriftligt uttalande till parlamentet
           other: Skriftliga uttalanden till parlamentet
-    administered_by: Förvaltas av
-    breadcrumbs:
-      courts_and_tribunals: Domstolar och domstolar
-      organisations: Organisationer
-    contact:
-      contact_details: Kontaktuppgifter
-      contact_form: 'Kontaktformulär: %{title}'
-      contact_organisation: Kontakt %{organisation}
-      email: E-post
-      telephone: Telefon
     corporate_information: Information om företaget
     document_types:
       documents: Dokument
@@ -268,10 +269,7 @@ sv:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Se alla offentliggöranden om öppenhet och informationsfrihet
         title: Offentliggöranden om öppenhet och informationsfrihet
-    errors_or_omissions_html: <p>Fel eller utelämnanden? <a class="govuk-link" href="/contact/govuk">Berätta
-      för oss här</a>. För officiella förteckningar över offentliga organ utanför
-      ministeriet <a class="govuk-link" href="/government/collections/public-bodies">se
-      offentliga organ</a>.</p>
+    errors_or_omissions_html: <p>Fel eller utelämnanden? <a class="govuk-link" href="/contact/govuk">Berätta för oss här</a>. För officiella förteckningar över offentliga organ utanför ministeriet <a class="govuk-link" href="/government/collections/public-bodies">se offentliga organ</a>.</p>
     featured: Utvalda
     foi:
       contact_form: Kontaktformulär för FOI
@@ -282,12 +280,9 @@ sv:
       freedom_of_information_requests: Förfrågningar om informationsfrihet
       make_an_foi_request: Gör en FOI-förfrågan
       making_foi_requests:
-        step1_html: Läs om lagen om informationsfrihet (FOI) och <a href="%{how_to_path}"
-          class="govuk-link brand__color">hur man gör en begäran</a>.
-        step2_html: Kontrollera <a href="%{our_releases_path}" class="govuk-link brand__color">våra
-          tidigare offentliggöranden</a> för att se om vi redan har besvarat din fråga.
-        step3_html: Gör en ny förfrågan genom att kontakta oss med hjälp av uppgifterna
-          nedan.
+        step1_html: Läs om lagen om informationsfrihet (FOI) och <a href="%{how_to_path}" class="govuk-link brand__color">hur man gör en begäran</a>.
+        step2_html: Kontrollera <a href="%{our_releases_path}" class="govuk-link brand__color">våra tidigare offentliggöranden</a> för att se om vi redan har besvarat din fråga.
+        step3_html: Gör en ny förfrågan genom att kontakta oss med hjälp av uppgifterna nedan.
     follow_us: Följ oss
     hidden_share_link: Följ oss på
     high_profile_groups: Högprofilerade grupper inom %{title}
@@ -314,8 +309,7 @@ sv:
       special_representatives: Särskilda representanter
       traffic_commissioners: Trafikkommissarier
     read_more: Läs mer om vad vi gör
-    search_for_department: Sök efter en avdelning, ett organ eller ett offentligt
-      organ
+    search_for_department: Sök efter en avdelning, ett organ eller ett offentligt organ
     see_all_latest_documents: Se alla senaste dokument
     separate_website: separat webbplats
     services_and_information: Alla %{acronym} tjänster och information

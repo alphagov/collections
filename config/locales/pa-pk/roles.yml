@@ -1,10 +1,10 @@
+---
 pa-pk:
   roles:
+    find_out_more_html: ایس کردار والے بندے بارے ساڈے ایس لنک تے اوندے پچھلے کردار نوں جانوں %{link} section.سیکشن
     heading:
       one: اک کردار
       other: کردار
-    find_out_more_html: ایس کردار والے بندے بارے ساڈے ایس لنک تے اوندے پچھلے کردار
-      نوں جانوں %{link} section.سیکشن
     headings:
       current_holder: موجودہ کردار کرن والا
       previous_holders: پچھلے کردار کرن والے

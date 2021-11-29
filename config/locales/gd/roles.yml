@@ -1,12 +1,12 @@
+---
 gd:
   roles:
+    find_out_more_html: Chun níos mó a fhoghlaim faoi na hiar-shealbhóirí, féach ar ár gcuid %{link}.
     heading:
-      one: Ról
-      two:
       few:
+      one: Ról
       other: Róil
-    find_out_more_html: Chun níos mó a fhoghlaim faoi na hiar-shealbhóirí, féach ar
-      ár gcuid %{link}.
+      two:
     headings:
       current_holder: Sealbhóir poist reatha
       previous_holders: Sealbhóirí roimhe seo

@@ -1,10 +1,10 @@
+---
 sw:
   roles:
+    find_out_more_html: Pata maelezo zaidi kuhusu watu walioshikilia nafasi hii hapo awali katika sehemu yetu ya %{link}.
     heading:
       one: Nafasi
       other: Nafasi
-    find_out_more_html: Pata maelezo zaidi kuhusu watu walioshikilia nafasi hii hapo
-      awali katika sehemu yetu ya %{link}.
     headings:
       current_holder: Anayeshikilia nafasi kwa sasa
       previous_holders: Walioshikilia nafasi hapo awali

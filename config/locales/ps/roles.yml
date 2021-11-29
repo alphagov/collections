@@ -1,10 +1,10 @@
+---
 ps:
   roles:
+    find_out_more_html: زموږ د %{link} برخې کې د دې رول پخوانیو لرونکو په اړه نور معلومات ترلاسه کړئ.
     heading:
       one: رول
       other: رولونه
-    find_out_more_html: زموږ د %{link} برخې کې د دې رول پخوانیو لرونکو په اړه نور
-      معلومات ترلاسه کړئ.
     headings:
       current_holder: اوسنی رول لرونکی
       previous_holders: پخوانۍ لرونکي

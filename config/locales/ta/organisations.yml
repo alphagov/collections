@@ -1,6 +1,17 @@
+---
 ta:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: நிர்வகிப்பவர்
+    breadcrumbs:
+      courts_and_tribunals: நீதிமன்றங்களும் தீர்ப்பாயங்களும்
+      organisations: நிறுவனங்கள்
+    contact:
+      contact_details: தொடர்பு விபரங்கள்
+      contact_form: 'தொடர்பு படிவம்: %{title}'
+      contact_organisation: தொடர்பு கொள்க %{organisation}
+      email: மின்னஞ்சல்
+      telephone: தொலைபேசி
     content_item:
       schema_name:
         aaib_report:
@@ -225,16 +236,6 @@ ta:
         written_statement:
           one: பாராளுமன்றத்துக்கு எழுத்துப்பூர்வ அறிவிப்பு
           other: பாராளுமன்றத்துக்கு எழுத்துப்பூர்வ அறிவிப்புகள்
-    administered_by: நிர்வகிப்பவர்
-    breadcrumbs:
-      courts_and_tribunals: நீதிமன்றங்களும் தீர்ப்பாயங்களும்
-      organisations: நிறுவனங்கள்
-    contact:
-      contact_details: தொடர்பு விபரங்கள்
-      contact_form: 'தொடர்பு படிவம்: %{title}'
-      contact_organisation: தொடர்பு கொள்க %{organisation}
-      email: மின்னஞ்சல்
-      telephone: தொலைபேசி
     corporate_information: குழுமத் தகவல்கள்
     document_types:
       documents: ஆவணங்கள்
@@ -268,10 +269,7 @@ ta:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: அனைத்து வெளிப்படைத்தன்மை மற்றும் தகவல் சுதந்திர வெளியீடுகளைக் காண்க
         title: வெளிப்படைத்தன்மை மற்றும் தகவல் சுதந்திர வெளியீடுகள்
-    errors_or_omissions_html: <p>பிழைகள் அல்லது விடுதல்கள்? <a class="govuk-link"
-      href="/contact/govuk">இங்கே எங்களிடம் சொல்லுங்கள்</a>. துறைசாரா பொது நிறுவனங்களின்
-      அதிகாரப்பூர்வ பட்டியலுக்கு <a class="govuk-link" href="/government/collections/public-bodies">பொது
-      நிறுவனங்களைக் காண்க</a>.</p>
+    errors_or_omissions_html: <p>பிழைகள் அல்லது விடுதல்கள்? <a class="govuk-link" href="/contact/govuk">இங்கே எங்களிடம் சொல்லுங்கள்</a>. துறைசாரா பொது நிறுவனங்களின் அதிகாரப்பூர்வ பட்டியலுக்கு <a class="govuk-link" href="/government/collections/public-bodies">பொது நிறுவனங்களைக் காண்க</a>.</p>
     featured: சிறப்புக் கூறுகளமைந்தது
     foi:
       contact_form: தகவல் சுதந்திரத் தொடர்புப் படிவம்
@@ -282,13 +280,9 @@ ta:
       freedom_of_information_requests: தகவல் சுதந்திரக் கோரிக்கைகள்
       make_an_foi_request: ஒரு FOI கோரிக்கையை வை
       making_foi_requests:
-        step1_html: தகவல் சுதந்திரச் (FOI) சட்டம் பற்றியும் <a href="%{how_to_path}"
-          class="govuk-link brand__color">எவ்வாறு ஒரு கோரிக்கையை வைப்பது என்பது பற்றியும்
-          வாசிக்கவும்</a>.
-        step2_html: ஏற்கெனவே உங்கள் கேள்விக்கு பதிலளித்துவிட்டோமா என்று <a href="%{our_releases_path}"
-          class="govuk-link brand__color">our previous releases</a> பார்க்கவும்.
-        step3_html: கீழ்க்கண்ட விபரங்களைப் பயன்படுத்தி எங்களைத் தொடர்புகொள்வதற்கு
-          ஒரு புதிய கோரிக்கையை வைக்கவும்.
+        step1_html: தகவல் சுதந்திரச் (FOI) சட்டம் பற்றியும் <a href="%{how_to_path}" class="govuk-link brand__color">எவ்வாறு ஒரு கோரிக்கையை வைப்பது என்பது பற்றியும் வாசிக்கவும்</a>.
+        step2_html: ஏற்கெனவே உங்கள் கேள்விக்கு பதிலளித்துவிட்டோமா என்று <a href="%{our_releases_path}" class="govuk-link brand__color">our previous releases</a> பார்க்கவும்.
+        step3_html: கீழ்க்கண்ட விபரங்களைப் பயன்படுத்தி எங்களைத் தொடர்புகொள்வதற்கு ஒரு புதிய கோரிக்கையை வைக்கவும்.
     follow_us: எங்களைப் பின்தொடர்க
     hidden_share_link: பின்தொடர்
     high_profile_groups: "%{title}-க்குள் பிரசித்தமான குழுக்கள்"
@@ -300,10 +294,8 @@ ta:
       devolved: "%{title} என்பது <a href='%{link_href}'>%{link_text}</a>-ன் ஓர் அங்கமாகும்"
       joining: "%{title} விரைவில் GOV.UK உடன் ஒன்றிணைக்கப்படும்"
       left_gov: "%{title} இப்போது சுதந்திரமான UK அரசாங்கம் ஆகும்"
-      merged: "%{title} %{updated}-ல் <a href='%{link_href}'>%{link_text}</a>-ன் ஒரு
-        பகுதியாக உள்ளது"
-      merged_no_date: "%{title} இப்போது <a href='%{link_href}'>%{link_text}</a>-ன்
-        அங்கமாகும்"
+      merged: "%{title} %{updated}-ல் <a href='%{link_href}'>%{link_text}</a>-ன் ஒரு பகுதியாக உள்ளது"
+      merged_no_date: "%{title} இப்போது <a href='%{link_href}'>%{link_text}</a>-ன் அங்கமாகும்"
       no_longer_exists: "%{title} மூடப்பட்டுள்ளது"
       no_website: "%{title}-க்கு இணையதளமில்லை"
       separate_website: "%{title} ஒரு <a href='%{url}'>தனிப்பட்ட இணையதளத்தைக் கொண்டுள்ளது</a>"

@@ -1,6 +1,17 @@
+---
 da:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Administreret af
+    breadcrumbs:
+      courts_and_tribunals: Domstole og domstole
+      organisations: Organisationer
+    contact:
+      contact_details: Kontaktoplysninger
+      contact_form: Kontaktformular %{title}
+      contact_organisation: Kontakt %{organisation}
+      email: E-mail
+      telephone: Telefon
     content_item:
       schema_name:
         aaib_report:
@@ -237,16 +248,6 @@ da:
         written_statement:
           one: Mundtlig erklæring til Parlamentet
           other: Mundtlige erklæring til Parlamentet
-    administered_by: Administreret af
-    breadcrumbs:
-      courts_and_tribunals: Domstole og domstole
-      organisations: Organisationer
-    contact:
-      contact_details: Kontaktoplysninger
-      contact_form: Kontaktformular %{title}
-      contact_organisation: Kontakt %{organisation}
-      email: E-mail
-      telephone: Telefon
     corporate_information: Virksomhedsoplysninger
     document_types:
       documents: Dokumenter
@@ -280,10 +281,7 @@ da:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Se al gennemsigtighed og informationsfrihed
         title: Gennemsigtighed og informationsfrihed frigives
-    errors_or_omissions_html: <p>Fejl eller udeladelser? <a class="govuk-link" href="/contact/govuk">Tell
-      os her</a>. For officielle lister over ikke-departementale offentlige organer
-      <a class="govuk-link" href="/government/collections/public-bodies">se offentlige
-      organer</a>.</p>
+    errors_or_omissions_html: <p>Fejl eller udeladelser? <a class="govuk-link" href="/contact/govuk">Tell os her</a>. For officielle lister over ikke-departementale offentlige organer <a class="govuk-link" href="/government/collections/public-bodies">se offentlige organer</a>.</p>
     featured: Fremhævede
     foi:
       contact_form: kontaktformular for informationsfrihed
@@ -294,12 +292,9 @@ da:
       freedom_of_information_requests: Anmodninger om informationsfrihed
       make_an_foi_request: Lav en anmodning om informationsfrihed
       making_foi_requests:
-        step1_html: Læs om loven om informationsfrihed (FOI) og <a href="%{how_to_path}"
-          class="govuk-link brand__color">how at fremsætte en anmodning</a>.
-        step2_html: Tjek <a href="%{our_releases_path}" class="govuk-link brand__color">our
-          tidligere udgivelser</a> for at se, om vi allerede har besvaret dit spørgsmål.
-        step3_html: Lav en ny anmodning ved at kontakte os ved hjælp af nedenstående
-          oplysninger.
+        step1_html: Læs om loven om informationsfrihed (FOI) og <a href="%{how_to_path}" class="govuk-link brand__color">how at fremsætte en anmodning</a>.
+        step2_html: Tjek <a href="%{our_releases_path}" class="govuk-link brand__color">our tidligere udgivelser</a> for at se, om vi allerede har besvaret dit spørgsmål.
+        step3_html: Lav en ny anmodning ved at kontakte os ved hjælp af nedenstående oplysninger.
     follow_us: Følg os
     hidden_share_link: Følg på
     high_profile_groups: Højt profilerede grupper inden for %{title}
@@ -312,8 +307,7 @@ da:
       joining: "%{title} vil snart blive indarbejdet i GOV.UK"
       left_gov: "%{title} er nu uafhængig af den britiske regering"
       merged: "%{title} blev en del af <a href='%{link_href}'>%{link_text} </a> i%{updated}"
-      merged_no_date: "%{title} er en brødtekst af <a href='%{link_href}'>%{link_text}
-        </a>"
+      merged_no_date: "%{title} er en brødtekst af <a href='%{link_href}'>%{link_text} </a>"
       no_longer_exists: "%{title} er lukket"
       no_website: "%{title} har ingen hjemmeside"
       separate_website: "%{title} har et <a href='%{url}'>separat websted</a>"

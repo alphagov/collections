@@ -1,307 +1,7 @@
+---
 ro:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
-    content_item:
-      schema_name:
-        aaib_report:
-          one: Raportul agenției pentru investigații privind accidentele aviatice
-          few:
-          other: Rapoartele agenției pentru investigații privind accidentele aviatice
-        announcement:
-          one: Anunț
-          few:
-          other: Anunțuri
-        asylum_support_decision:
-          one: Decizia tribunalului cu privire la sprijinul pentru azil
-          few:
-          other: Deciziile tribunalului cu privire la sprijinul pentru azil
-        authored_article:
-          one: Articol publicat
-          few:
-          other: Articole publicate
-        business_finance_support_scheme:
-          one: Schema de sprijin pentru finanțarea întreprinderilor
-          few:
-          other: Scheme de sprijin pentru finanțarea întreprinderilor
-        case_study:
-          one: Studiu de caz
-          few:
-          other: Studii de caz
-        closed_consultation:
-          one: Consultație închisă
-          few:
-          other: Consultații închise
-        cma_case:
-          one: Caz Autoritatea pentru concurență și piețe
-          few:
-          other: Cazuri Autoritatea pentru concurență și piețe
-        coming_soon:
-          one: În curând
-          few:
-          other: În curând
-        consultation:
-          one: Consultație
-          few:
-          other: Consultații
-        consultation_outcome:
-          one: Rezultatul consultației
-          few:
-          other: Rezultatele consultației
-        corporate_information_page:
-          one: Pagina de informații
-          few:
-          other: Pagini de informații
-        corporate_report:
-          one: Raport de companie
-          few:
-          other: Rapoarte de companie
-        correspondence:
-          one: Corespondență
-          few:
-          other: Corespondențe
-        countryside_stewardship_grant:
-          one: Finanțare pentru gestionarea zonelor rurale
-          few:
-          other: Finanțări pentru gestionarea zonelor rurale
-        decision:
-          one: Decizie
-          few:
-          other: Decizii
-        detailed_guide:
-          one: Orientări
-          few:
-          other: Orientări
-        dfid_research_output:
-          one: Cercetare pentru rezultatul dezvoltării
-          few:
-          other: Cercetare pentru rezultatele dezvoltării
-        document_collection:
-          one: Colecție
-          few:
-          other: Colecții
-        draft_text:
-          one: Proiect de text
-          few:
-          other: Proiecte de text
-        drug_safety_update:
-          one: Actualizare cu privire la siguranța medicamentelor
-          few:
-          other: Actualizări cu privire la siguranța medicamentelor
-        employment_appeal_tribunal_decision:
-          one: Decizie a tribunalului de recurs cu privire la dreptul muncii
-          few:
-          other: Decizii ale tribunalului de recurs cu privire la dreptul muncii
-        employment_tribunal_decision:
-          one: Decizie a tribunalului pentru dreptul muncii
-          few:
-          other: Decizii ale tribunalului pentru dreptul muncii
-        esi_fund:
-          one: Fondul European Structural și de Investiții (ESIF)
-          few:
-          other: Fonduri Europene Structurale și de Investiții (ESIF)
-        fatality_notice:
-          one: Notificare accident mortal
-          few:
-          other: Notificări accident mortal
-        foi_release:
-          one: Document eliberat privind libertatea informației
-          few:
-          other: Documente eliberate privind libertatea informației
-        form:
-          one: Formular
-          few:
-          other: Formulare
-        government_response:
-          one: Răspunsul guvernului
-          few:
-          other: Răspunsurile guvernului
-        guidance:
-          one: Orientări
-          few:
-          other: Orientări
-        impact_assessment:
-          one: Evaluarea impactului
-          few:
-          other: Evaluările impactului
-        imported:
-          one: importat - se așteaptă tipul
-          few:
-          other: importat - se așteaptă tipul
-        independent_report:
-          one: Raport independent
-          few:
-          other: Rapoarte independente
-        international_development_fund:
-          one: Finanțare dezvoltare internațională
-          few:
-          other: Finanțare dezvoltare internațională
-        international_treaty:
-          one: Tratat internațional
-          few:
-          other: Tratate internaționale
-        maib_report:
-          one: Raportul agenției pentru investigații privind accidentele maritime
-          few:
-          other: Rapoartele agenției pentru investigații privind accidentele maritime
-        map:
-          one: Hartă
-          few:
-          other: Hărți
-        medical_safety_alert:
-          one: Alerte și retragerea produselor pentru medicamente și dispozitive medicale
-          few:
-          other: Alerte și retragerea produselor pentru medicamente și dispozitive
-            medicale
-        national:
-          one: Anunț de statistică națională
-          few:
-          other: Anunțuri de statistică națională
-        national_statistics:
-          one: Statistică națională
-          few:
-          other: Statistică națională
-        national_statistics_announcement:
-          one: Anunț de statistică națională
-          few:
-          other: Anunțuri de statistică națională
-        news_article:
-          one: Articol de știri
-          few:
-          other: Articole de știri
-        news_story:
-          one: Reportaj de știri
-          few:
-          other: Reportaje de știri
-        notice:
-          one: Notificare
-          few:
-          other: Notificări
-        official:
-          one: Anunț oficial de statistică
-          few:
-          other: Anunțuri oficiale de statistică
-        official_statistics:
-          one: Statistică oficială
-          few:
-          other: Statistică oficială
-        official_statistics_announcement:
-          one: Anunț oficial de statistică
-          few:
-          other: Anunțuri oficiale de statistică
-        open_consultation:
-          one: Consultație deschisă
-          few:
-          other: Consultație deschise
-        oral_statement:
-          one: Expunere orală către Parlament
-          few:
-          other: Expuneri orale către Parlament
-        policy:
-          one: Politică
-          few:
-          other: Politici
-        policy_paper:
-          one: Document de politică
-          few:
-          other: Documente de politică
-        press_release:
-          one: Comunicat de presă
-          few:
-          other: Comunicate de presă
-        promotional:
-          one: Material promoțional
-          few:
-          other: Material promoțional
-        publication:
-          one: Publicație
-          few:
-          other: Publicații
-        raib_report:
-          one: Raportul agenției pentru investigații privind accidentele pe căile
-            ferate
-          few:
-          other: Rapoartele agenției pentru investigații privind accidentele pe căile
-            ferate
-        regulation:
-          one: Reglementare
-          few:
-          other: Reglementări
-        research:
-          one: Cercetare și analiză
-          few:
-          other: Cercetare și analiză
-        residential_property_tribunal_decision:
-          one: Decizia tribunalului pentru proprietatea rezidențială
-          few:
-          other: Deciziile tribunalului pentru proprietatea rezidențială
-        service_sign_in:
-          one: Conectare la serviciu
-          few:
-          other: Conectare la serviciu
-        service_standard_report:
-          one: Raport standard pentru serviciu
-          few:
-          other: Rapoarte standard pentru serviciu
-        speaking_notes:
-          one: Note de discuție
-          few:
-          other: Note de discuție
-        speech:
-          one: Discurs
-          few:
-          other: Discursuri
-        standard:
-          one: Standard
-          few:
-          other: Standarde
-        statement_to_parliament:
-          one: Declarație către Parlament
-          few:
-          other: Declarații către Parlament
-        statistical_data_set:
-          one: Set de date statistice
-          few:
-          other: Seturi de date statistice
-        statistics_announcement:
-          one: Anunț eliberare documente statistice
-          few:
-          other: Anunțuri eliberare documente statistice
-        statutory_guidance:
-          one: Orientări privind dispozițiile legale
-          few:
-          other: Orientări privind dispozițiile legale
-        take_part:
-          one: Participă
-          few:
-          other: Participă
-        tax_tribunal_decision:
-          one: Decizia tribunalului pentru Tax and Chancery
-          few:
-          other: Deciziile tribunalului pentru Tax and Chancery
-        transcript:
-          one: Transcriere
-          few:
-          other: Transcrieri
-        transparency:
-          one: Date privind transparența
-          few:
-          other: Date privind transparența
-        utaac_decision:
-          one: Decizie a tribunalului de recurs cu privire dreptul administrativ
-          few:
-          other: Decizii ale tribunalului de recurs cu privire la dreptul administrativ
-        world_location_news_article:
-          one: Articol de știri
-          few:
-          other: Articole de știri
-        world_news_story:
-          one: Reportaj de știri global
-          few:
-          other: Reportaje de știri globale
-        written_statement:
-          one: Declarație scrisă către Parlament
-          few:
-          other: Declarații scrise către Parlament
     administered_by: Administrat de
     breadcrumbs:
       courts_and_tribunals: Instanțe și tribunale
@@ -312,6 +12,304 @@ ro:
       contact_organisation: Contact %{organisation}
       email: E-mail
       telephone: Telefon
+    content_item:
+      schema_name:
+        aaib_report:
+          few:
+          one: Raportul agenției pentru investigații privind accidentele aviatice
+          other: Rapoartele agenției pentru investigații privind accidentele aviatice
+        announcement:
+          few:
+          one: Anunț
+          other: Anunțuri
+        asylum_support_decision:
+          few:
+          one: Decizia tribunalului cu privire la sprijinul pentru azil
+          other: Deciziile tribunalului cu privire la sprijinul pentru azil
+        authored_article:
+          few:
+          one: Articol publicat
+          other: Articole publicate
+        business_finance_support_scheme:
+          few:
+          one: Schema de sprijin pentru finanțarea întreprinderilor
+          other: Scheme de sprijin pentru finanțarea întreprinderilor
+        case_study:
+          few:
+          one: Studiu de caz
+          other: Studii de caz
+        closed_consultation:
+          few:
+          one: Consultație închisă
+          other: Consultații închise
+        cma_case:
+          few:
+          one: Caz Autoritatea pentru concurență și piețe
+          other: Cazuri Autoritatea pentru concurență și piețe
+        coming_soon:
+          few:
+          one: În curând
+          other: În curând
+        consultation:
+          few:
+          one: Consultație
+          other: Consultații
+        consultation_outcome:
+          few:
+          one: Rezultatul consultației
+          other: Rezultatele consultației
+        corporate_information_page:
+          few:
+          one: Pagina de informații
+          other: Pagini de informații
+        corporate_report:
+          few:
+          one: Raport de companie
+          other: Rapoarte de companie
+        correspondence:
+          few:
+          one: Corespondență
+          other: Corespondențe
+        countryside_stewardship_grant:
+          few:
+          one: Finanțare pentru gestionarea zonelor rurale
+          other: Finanțări pentru gestionarea zonelor rurale
+        decision:
+          few:
+          one: Decizie
+          other: Decizii
+        detailed_guide:
+          few:
+          one: Orientări
+          other: Orientări
+        dfid_research_output:
+          few:
+          one: Cercetare pentru rezultatul dezvoltării
+          other: Cercetare pentru rezultatele dezvoltării
+        document_collection:
+          few:
+          one: Colecție
+          other: Colecții
+        draft_text:
+          few:
+          one: Proiect de text
+          other: Proiecte de text
+        drug_safety_update:
+          few:
+          one: Actualizare cu privire la siguranța medicamentelor
+          other: Actualizări cu privire la siguranța medicamentelor
+        employment_appeal_tribunal_decision:
+          few:
+          one: Decizie a tribunalului de recurs cu privire la dreptul muncii
+          other: Decizii ale tribunalului de recurs cu privire la dreptul muncii
+        employment_tribunal_decision:
+          few:
+          one: Decizie a tribunalului pentru dreptul muncii
+          other: Decizii ale tribunalului pentru dreptul muncii
+        esi_fund:
+          few:
+          one: Fondul European Structural și de Investiții (ESIF)
+          other: Fonduri Europene Structurale și de Investiții (ESIF)
+        fatality_notice:
+          few:
+          one: Notificare accident mortal
+          other: Notificări accident mortal
+        foi_release:
+          few:
+          one: Document eliberat privind libertatea informației
+          other: Documente eliberate privind libertatea informației
+        form:
+          few:
+          one: Formular
+          other: Formulare
+        government_response:
+          few:
+          one: Răspunsul guvernului
+          other: Răspunsurile guvernului
+        guidance:
+          few:
+          one: Orientări
+          other: Orientări
+        impact_assessment:
+          few:
+          one: Evaluarea impactului
+          other: Evaluările impactului
+        imported:
+          few:
+          one: importat - se așteaptă tipul
+          other: importat - se așteaptă tipul
+        independent_report:
+          few:
+          one: Raport independent
+          other: Rapoarte independente
+        international_development_fund:
+          few:
+          one: Finanțare dezvoltare internațională
+          other: Finanțare dezvoltare internațională
+        international_treaty:
+          few:
+          one: Tratat internațional
+          other: Tratate internaționale
+        maib_report:
+          few:
+          one: Raportul agenției pentru investigații privind accidentele maritime
+          other: Rapoartele agenției pentru investigații privind accidentele maritime
+        map:
+          few:
+          one: Hartă
+          other: Hărți
+        medical_safety_alert:
+          few:
+          one: Alerte și retragerea produselor pentru medicamente și dispozitive medicale
+          other: Alerte și retragerea produselor pentru medicamente și dispozitive medicale
+        national:
+          few:
+          one: Anunț de statistică națională
+          other: Anunțuri de statistică națională
+        national_statistics:
+          few:
+          one: Statistică națională
+          other: Statistică națională
+        national_statistics_announcement:
+          few:
+          one: Anunț de statistică națională
+          other: Anunțuri de statistică națională
+        news_article:
+          few:
+          one: Articol de știri
+          other: Articole de știri
+        news_story:
+          few:
+          one: Reportaj de știri
+          other: Reportaje de știri
+        notice:
+          few:
+          one: Notificare
+          other: Notificări
+        official:
+          few:
+          one: Anunț oficial de statistică
+          other: Anunțuri oficiale de statistică
+        official_statistics:
+          few:
+          one: Statistică oficială
+          other: Statistică oficială
+        official_statistics_announcement:
+          few:
+          one: Anunț oficial de statistică
+          other: Anunțuri oficiale de statistică
+        open_consultation:
+          few:
+          one: Consultație deschisă
+          other: Consultație deschise
+        oral_statement:
+          few:
+          one: Expunere orală către Parlament
+          other: Expuneri orale către Parlament
+        policy:
+          few:
+          one: Politică
+          other: Politici
+        policy_paper:
+          few:
+          one: Document de politică
+          other: Documente de politică
+        press_release:
+          few:
+          one: Comunicat de presă
+          other: Comunicate de presă
+        promotional:
+          few:
+          one: Material promoțional
+          other: Material promoțional
+        publication:
+          few:
+          one: Publicație
+          other: Publicații
+        raib_report:
+          few:
+          one: Raportul agenției pentru investigații privind accidentele pe căile ferate
+          other: Rapoartele agenției pentru investigații privind accidentele pe căile ferate
+        regulation:
+          few:
+          one: Reglementare
+          other: Reglementări
+        research:
+          few:
+          one: Cercetare și analiză
+          other: Cercetare și analiză
+        residential_property_tribunal_decision:
+          few:
+          one: Decizia tribunalului pentru proprietatea rezidențială
+          other: Deciziile tribunalului pentru proprietatea rezidențială
+        service_sign_in:
+          few:
+          one: Conectare la serviciu
+          other: Conectare la serviciu
+        service_standard_report:
+          few:
+          one: Raport standard pentru serviciu
+          other: Rapoarte standard pentru serviciu
+        speaking_notes:
+          few:
+          one: Note de discuție
+          other: Note de discuție
+        speech:
+          few:
+          one: Discurs
+          other: Discursuri
+        standard:
+          few:
+          one: Standard
+          other: Standarde
+        statement_to_parliament:
+          few:
+          one: Declarație către Parlament
+          other: Declarații către Parlament
+        statistical_data_set:
+          few:
+          one: Set de date statistice
+          other: Seturi de date statistice
+        statistics_announcement:
+          few:
+          one: Anunț eliberare documente statistice
+          other: Anunțuri eliberare documente statistice
+        statutory_guidance:
+          few:
+          one: Orientări privind dispozițiile legale
+          other: Orientări privind dispozițiile legale
+        take_part:
+          few:
+          one: Participă
+          other: Participă
+        tax_tribunal_decision:
+          few:
+          one: Decizia tribunalului pentru Tax and Chancery
+          other: Deciziile tribunalului pentru Tax and Chancery
+        transcript:
+          few:
+          one: Transcriere
+          other: Transcrieri
+        transparency:
+          few:
+          one: Date privind transparența
+          other: Date privind transparența
+        utaac_decision:
+          few:
+          one: Decizie a tribunalului de recurs cu privire dreptul administrativ
+          other: Decizii ale tribunalului de recurs cu privire la dreptul administrativ
+        world_location_news_article:
+          few:
+          one: Articol de știri
+          other: Articole de știri
+        world_news_story:
+          few:
+          one: Reportaj de știri global
+          other: Reportaje de știri globale
+        written_statement:
+          few:
+          one: Declarație scrisă către Parlament
+          other: Declarații scrise către Parlament
     corporate_information: Informații despre corporație
     document_types:
       documents: Documente
@@ -343,13 +341,9 @@ ro:
       transparency:
         see_all:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
-          text: Vedeți toate comunicările de informațiile cu privire la transparență
-            și libertate
+          text: Vedeți toate comunicările de informațiile cu privire la transparență și libertate
         title: Transparența și libertatea comunicării de informații
-    errors_or_omissions_html: <p>Erori sau omisiuni? <a class="govuk-link" href="/contact/govuk">Spuneți-ne
-      aici</a>. Pentru liste oficiale ale organismelor publice neministeriale, <a
-      class="govuk-link" href="/government/collections/public-bodies">consultați organismele
-      publice</a>.</p>
+    errors_or_omissions_html: <p>Erori sau omisiuni? <a class="govuk-link" href="/contact/govuk">Spuneți-ne aici</a>. Pentru liste oficiale ale organismelor publice neministeriale, <a class="govuk-link" href="/government/collections/public-bodies">consultați organismele publice</a>.</p>
     featured: Prezentat
     foi:
       contact_form: Formular de contact pentru libertatea informației
@@ -360,14 +354,9 @@ ro:
       freedom_of_information_requests: Solicitări privind libertatea informației
       make_an_foi_request: Faceți o solicitare privind libertatea informației
       making_foi_requests:
-        step1_html: Citiți despre legea Freedom of Information (Libertatea informației)
-          și <a href="%{how_to_path}" class="govuk-link brand__color">despre cum puteți
-          face o solicitare</a>.
-        step2_html: Verificați <a href="%{our_releases_path}" class="govuk-link brand__color">comunicările
-          noastre anterioare</a> pentru a vedea dacă am răspuns deja la întrebarea
-          dvs.
-        step3_html: Faceți o nouă solicitare contactându-ne folosind detaliile de
-          mai jos.
+        step1_html: Citiți despre legea Freedom of Information (Libertatea informației) și <a href="%{how_to_path}" class="govuk-link brand__color">despre cum puteți face o solicitare</a>.
+        step2_html: Verificați <a href="%{our_releases_path}" class="govuk-link brand__color">comunicările noastre anterioare</a> pentru a vedea dacă am răspuns deja la întrebarea dvs.
+        step3_html: Faceți o nouă solicitare contactându-ne folosind detaliile de mai jos.
     follow_us: Urmăriți-ne
     hidden_share_link: Urmăriți-ne pe
     high_profile_groups: Grupuri cu profil înalt în %{title}
@@ -379,8 +368,7 @@ ro:
       devolved: "%{title} este un organism al <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} va fi încorporat în curând în GOV.UK"
       left_gov: "%{title} este acum independent de guvernul Marii Britanii"
-      merged: "%{title} a devenit o parte a <a href='%{link_href}'>%{link_text}</a>
-        în %{updated}"
+      merged: "%{title} a devenit o parte a <a href='%{link_href}'>%{link_text}</a> în %{updated}"
       merged_no_date: "%{title} face acum parte din <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} s-a închis"
       no_website: "%{title} nu are website"

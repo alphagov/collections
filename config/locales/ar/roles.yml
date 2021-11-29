@@ -1,14 +1,14 @@
+---
 ar:
   roles:
+    find_out_more_html: تعرَّف على المزيد حول المكلفين بهذا الدور السابقين في قسم %{link} لدينا.
     heading:
-      zero:
-      one: دور
-      two:
       few:
       many:
+      one: دور
       other: أدوار
-    find_out_more_html: تعرَّف على المزيد حول المكلفين بهذا الدور السابقين في قسم
-      %{link} لدينا.
+      two:
+      zero:
     headings:
       current_holder: المكلف حاليًا بالدور
       previous_holders: المكلفين السابقين

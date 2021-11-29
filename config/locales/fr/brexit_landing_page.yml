@@ -1,32 +1,10 @@
+---
 fr:
   brexit_landing_page:
-    campaign_links:
-      lead_in: 'Vérifiez ce que vous devez faire autrement si vous êtes:'
-      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
-        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
-        data-track-label="Get the complete list">Obtenez la liste complète</a> de
-        ce que vous devez faire pour vous, votre entreprise et votre famille.
-    comms:
-      read_transcript: Lisez la transcription de cette vidéo
-    comms_header: Annonces
-    data_list_title: 'Page de renvoi du Brexit: %{header}'
-    email_mailto_subject: 'Nouveau départ pour le Royaume-Uni: allons-y - GOV.UK'
-    guidance_header: Des nouveautés pour les entreprises et les citoyens
-    meta_description: Découvrez de quelle façon les nouvelles règles du Brexit sont
-      mises en œuvre, notamment en matière de voyages et d'affaires avec l'Europe.
-      Utilisez le vérificateur de Brexit pour obtenir une liste personnalisée d'actions.
+    meta_description: Découvrez de quelle façon les nouvelles règles du Brexit sont mises en œuvre, notamment en matière de voyages et d'affaires avec l'Europe. Utilisez le vérificateur de Brexit pour obtenir une liste personnalisée d'actions.
     meta_title: Brexit
-    no_cookies:
-      change_settings_text: Modifier vos paramètres de cookies
-      icon_text: VIDÉO
-      or_text: ou
-      to_watch_text: pour voir la vidéo
-      watch_link_text: Voir sur YouTube
     page_header: Brexit:<br/>de nouvelles règles sont appliquées
-    page_header_explainer: De nouvelles règles s'appliquent notamment aux voyages
-      et aux affaires avec l'Europe. Servez-vous du Vérificateur de Brexit pour obtenir
-      une liste personnalisée d'actions à suivre pour vous, votre entreprise et votre
-      famille.
+    page_header_explainer: De nouvelles règles s'appliquent notamment aux voyages et aux affaires avec l'Europe. Servez-vous du Vérificateur de Brexit pour obtenir une liste personnalisée d'actions à suivre pour vous, votre entreprise et votre famille.
     sections:
       aria_string_suffix: en rapport avec le Brexit
       guidance_and_regulation: Orientation et règlement
@@ -35,23 +13,5 @@ fr:
       research_and_statistics: Recherches et statistiques
       services: Services
       transparency: Transparence et accès à l'information
-    share_links: Partagez cette page
-    take_action_list:
-      amber: Modifier
-      green: Aller
-      red: Vérifier
-    take_action_start_now: 'Vérificateur de Brexit: commencez maintenant'
-    take_action_start_now_link: "/transition-check/questions"
     topic_section_header: Toutes les informations sur le Brexit
     topic_section_subheading: Consultez toutes les informations relatives au Brexit
-    video_section_description: |-
-      <p>Faire des affaires au sein de l'Europe a changé. Vous devez respecter de nouvelles règles sur les exportations, les importations, les droits de douane, les données et&nbsp;l'embauche.</p>
-      <p>Regardez la vidéo pour comprendre quelles sont les conséquences de ces nouvelles règles pour votre entreprise. Vous pouvez également <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">utiliser le vérificateur de Brexit</a> pour avoir une liste d'actions personnalisées.</p>
-    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
-    video_section_title: Faites avancer vos affaires
-    video_section_transcription_summary: Voir la transcription de la vidéo
-    video_section_transcription_text: "<p>Entreprises, le Royaume-Uni a quitté l'UE
-      et de nouvelles règles s'appliquent désormais.</p>\r\n<p>Pour faire avancer
-      votre entreprise, utilisez l'outil de vérification du Brexit sur gov.uk/transition
-      pour obtenir des actions personnalisées pour votre entreprise.</p>\r\n<p>Continuons
-      à faire avancer les affaires.</p>\r\n"

@@ -1,12 +1,12 @@
+---
 sl:
   roles:
+    find_out_more_html: Izvedite več o prejšnjih nosilcih te vloge v našem razdelku %{link}.
     heading:
-      one: Vloga
-      two:
       few:
+      one: Vloga
       other: Vloge
-    find_out_more_html: Izvedite več o prejšnjih nosilcih te vloge v našem razdelku
-      %{link}.
+      two:
     headings:
       current_holder: Trenutni nosilec vloge
       previous_holders: Predhodni nosilci

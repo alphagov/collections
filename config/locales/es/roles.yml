@@ -1,10 +1,10 @@
+---
 es:
   roles:
+    find_out_more_html: Obtenga más información sobre los titulares anteriores de este puesto en nuestra sección %{link}.
     heading:
       one: Función
       other: Funciones
-    find_out_more_html: Obtenga más información sobre los titulares anteriores de
-      este puesto en nuestra sección %{link}.
     headings:
       current_holder: Titular actual de la función
       previous_holders: Titulares anteriores

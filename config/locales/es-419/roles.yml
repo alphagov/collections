@@ -1,10 +1,10 @@
+---
 es-419:
   roles:
+    find_out_more_html: Para saber más sobre los anteriores titulares de esta función, consulte nuestra %{link} sección.
     heading:
       one: Rol
       other: Roles
-    find_out_more_html: Para saber más sobre los anteriores titulares de esta función,
-      consulte nuestra %{link} sección.
     headings:
       current_holder: Titular actual de la función
       previous_holders: Titulares anteriores

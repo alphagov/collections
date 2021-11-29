@@ -1,6 +1,17 @@
+---
 sq:
   organisations:
     about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Administruar nga
+    breadcrumbs:
+      courts_and_tribunals: Gjykatat dhe Tribunalet
+      organisations: Organizatat
+    contact:
+      contact_details: Detajet e kontaktit
+      contact_form: 'Formular Kontakti: %{title}'
+      contact_organisation: Kontakto %{organisation}
+      email: Email
+      telephone: Telefon
     content_item:
       schema_name:
         aaib_report:
@@ -225,16 +236,6 @@ sq:
         written_statement:
           one: Deklaratë me shkrim në Parlament
           other: Deklarata me shkrim në Parlament
-    administered_by: Administruar nga
-    breadcrumbs:
-      courts_and_tribunals: Gjykatat dhe Tribunalet
-      organisations: Organizatat
-    contact:
-      contact_details: Detajet e kontaktit
-      contact_form: 'Formular Kontakti: %{title}'
-      contact_organisation: Kontakto %{organisation}
-      email: Email
-      telephone: Telefon
     corporate_information: Informacioni i korporatës
     document_types:
       documents: Dokumente
@@ -268,26 +269,18 @@ sq:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Shihni të gjithë transparencën dhe lirinë e publikimit të informacionit
         title: Transparenca dhe liria e publikimit të informacionit
-    errors_or_omissions_html: <p>Gabime apo heqje? <a class="govuk-link" href="/contact/govuk">Na
-      tregoni këtu</a>. Për listat zyrtare të organeve publike jo departamentale <a
-      class="govuk-link" href="/government/collections/public-bodies">shihni organet
-      publike</a>.</p>
+    errors_or_omissions_html: <p>Gabime apo heqje? <a class="govuk-link" href="/contact/govuk">Na tregoni këtu</a>. Për listat zyrtare të organeve publike jo departamentale <a class="govuk-link" href="/government/collections/public-bodies">shihni organet publike</a>.</p>
     featured: Paraqitur
     foi:
       contact_form: Formulari i kontaktit për FOI
-      foi_exemption_html: "Kjo organizatë nuk mbulohet nga Ligji për Lirinë e Informimit.\r\nPër
-        të parë se cilat organizata janë të përfshira, shihni <a href=\"%{foi_url}\"
-        class=\"govuk-link brand__color\">legjislacionin</a>.\r\n"
+      foi_exemption_html: "Kjo organizatë nuk mbulohet nga Ligji për Lirinë e Informimit.\r\nPër të parë se cilat organizata janë të përfshira, shihni <a href=\"%{foi_url}\" class=\"govuk-link brand__color\">legjislacionin</a>.\r\n"
       freedom_of_information_act: Akti për Lirinë e Informimit (LII)
       freedom_of_information_requests: Kërkesat për lirinë e informacionit
       make_an_foi_request: Bëni një kërkesë për FOI
       making_foi_requests:
-        step1_html: Lexoni për Aktin e Lirisë së Informacionit (FOI) dhe <a href="%{how_to_path}"
-          class="govuk-link brand__color">si të bëni një kërkesë</a>.
-        step2_html: Kontrolloni <a href="%{our_releases_path}" class="govuk-link brand__color">publikimet
-          tona të mëparshme</a> për të parë nëse i jemi përgjigjur pyetjes tuaj.
-        step3_html: Bëni një kërkesë të re duke na kontaktuar duke përdorur detajet
-          më poshtë.
+        step1_html: Lexoni për Aktin e Lirisë së Informacionit (FOI) dhe <a href="%{how_to_path}" class="govuk-link brand__color">si të bëni një kërkesë</a>.
+        step2_html: Kontrolloni <a href="%{our_releases_path}" class="govuk-link brand__color">publikimet tona të mëparshme</a> për të parë nëse i jemi përgjigjur pyetjes tuaj.
+        step3_html: Bëni një kërkesë të re duke na kontaktuar duke përdorur detajet më poshtë.
     follow_us: Na ndiqni
     hidden_share_link: Na ndiqni
     high_profile_groups: Grupe të profilit të lartë brenda %{title}

@@ -1,10 +1,10 @@
+---
 da:
   roles:
+    find_out_more_html: Få mere at vide om tidligere indehavere af denne rolle i afsnittet %{link}.
     heading:
       one: Rolle
       other: Roller
-    find_out_more_html: Få mere at vide om tidligere indehavere af denne rolle i afsnittet
-      %{link}.
     headings:
       current_holder: Nuværende rolleindehaver
       previous_holders: Tidligere indehavere

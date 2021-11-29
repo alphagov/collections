@@ -1,10 +1,10 @@
+---
 gu:
   roles:
+    find_out_more_html: આપણાં %{link} વિભાગમાં આ ભૂમિકા અગાઉ જેણે ભજવેલ હોય, તેમના વિશે વધુ શોધી કાઢો.
     heading:
       one: ભૂમિકા
       other: ભૂમિકાઓ
-    find_out_more_html: આપણાં %{link} વિભાગમાં આ ભૂમિકા અગાઉ જેણે ભજવેલ હોય, તેમના
-      વિશે વધુ શોધી કાઢો.
     headings:
       current_holder: વર્તમાન ભૂમિકા ધારક
       previous_holders: પાછલા ધારકો

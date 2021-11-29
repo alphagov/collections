@@ -1,31 +1,10 @@
+---
 pa:
   brexit_landing_page:
-    campaign_links:
-      lead_in: 'ਜਾਂਚ ਕਰੋ ਕਿ ਤੁਹਾਨੂੰ ਵੱਖਰੇ ਢੰਗ ਨਾਲ ਕੀ ਕਰਨ ਦੀ ਜ਼ਰੂਰਤ ਹੈ ਜੇ ਤੁਸੀਂ:'
-      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
-        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
-        data-track-label="Get the complete list"> ਆਪਣੀ, ਆਪਣੇ ਕਾਰੋਬਾਰ ਅਤੇ ਆਪਣੇ ਪਰਿਵਾਰ
-        ਲਈ ਤੁਹਾਨੂੰ ਕੀ ਕਰਨ ਦੀ ਜ਼ਰੂਰਤ ਹੈ, ਦੀ ਪੂਰੀ ਸੂਚੀ ਪ੍ਰਾਪਤ ਕਰੋ।</a>
-    comms:
-      read_transcript: ਇਸ ਵੀਡੀਓ ਲਈ ਪ੍ਰਤੀਲਿਪੀ ਪੜ੍ਹੋ
-    comms_header: ਘੋਸ਼ਣਾਵਾਂ
-    data_list_title: 'ਬ੍ਰੈਕਸਿਟ ਲੈਂਡਿੰਗ ਪੰਨਾ: %{header}'
-    email_mailto_subject: 'ਯੂਕੇ ਦੀ ਨਵੀਂ ਸ਼ੁਰੂਆਤ: ਚਲੋ ਚੱਲਦੇ ਹਾਂ- GOV.UK'
-    guidance_header: ਕਾਰੋਬਾਰਾਂ ਅਤੇ ਨਾਗਰਿਕਾਂ ਲਈ ਬਦਲਾਅ
-    meta_description: ਇਹ ਪਤਾ ਲਗਾਓ ਕਿ ਨਵੇਂ ਬ੍ਰੈਕਸਿਟ ਨਿਯਮ ਯੂਰਪ ਦੇ ਨਾਲ ਯਾਤਰਾ ਅਤੇ ਵਪਾਰ
-      ਕਰਨ ਵਰਗੀਆਂ ਚੀਜ਼ਾਂ ਤੇ ਕਿਵੇਂ ਲਾਗੂ ਹੁੰਦੇ ਹਨ। ਕਾਰਵਾਈਆਂ ਦੀ ਵਿਅਕਤੀਗਤ ਸੂਚੀ ਪ੍ਰਾਪਤ ਕਰਨ
-      ਲਈ ਬ੍ਰੈਕਸਿਟ ਜਾਂਚਕਰਤਾ ਦੀ ਵਰਤੋਂ ਕਰੋ।
+    meta_description: ਇਹ ਪਤਾ ਲਗਾਓ ਕਿ ਨਵੇਂ ਬ੍ਰੈਕਸਿਟ ਨਿਯਮ ਯੂਰਪ ਦੇ ਨਾਲ ਯਾਤਰਾ ਅਤੇ ਵਪਾਰ ਕਰਨ ਵਰਗੀਆਂ ਚੀਜ਼ਾਂ ਤੇ ਕਿਵੇਂ ਲਾਗੂ ਹੁੰਦੇ ਹਨ। ਕਾਰਵਾਈਆਂ ਦੀ ਵਿਅਕਤੀਗਤ ਸੂਚੀ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਬ੍ਰੈਕਸਿਟ ਜਾਂਚਕਰਤਾ ਦੀ ਵਰਤੋਂ ਕਰੋ।
     meta_title: ਬ੍ਰੈਕਸਿਟ
-    no_cookies:
-      change_settings_text: ਆਪਣੀਆਂ ਕੂਕੀ ਸੈਟਿੰਗਜ਼ ਬਦਲੋ
-      icon_text: ਵੀਡੀਓ
-      or_text: ਜਾਂ
-      to_watch_text: ਵੀਡੀਓ ਦੇਖਣ ਲਈ
-      watch_link_text: YouTube 'ਤੇ ਦੇਖੋ
     page_header: 'ਬ੍ਰੈਕਸਿਟ: <br/>ਨਵੇਂ ਨਿਯਮ ਇੱਥੇ ਹਨ'
-    page_header_explainer: ਯੂਰਪ ਦੇ ਨਾਲ ਯਾਤਰਾ ਅਤੇ ਵਪਾਰ ਕਰਨ ਵਰਗੀਆਂ ਚੀਜ਼ਾਂ 'ਤੇ ਨਵੇਂ ਨਿਯਮ
-      ਲਾਗੂ ਹੁੰਦੇ ਹਨ। ਤੁਹਾਡੇ, ਤੁਹਾਡੇ ਕਾਰੋਬਾਰ ਅਤੇ ਤੁਹਾਡੇ ਪਰਿਵਾਰ ਲਈ ਕਾਰਜਾਂ ਦੀ ਵਿਅਕਤੀਗਤ
-      ਸੂਚੀ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਬ੍ਰੈਕਸਿਟ ਜਾਂਚਕਰਤਾ ਦੀ ਵਰਤੋਂ ਕਰੋ।
+    page_header_explainer: ਯੂਰਪ ਦੇ ਨਾਲ ਯਾਤਰਾ ਅਤੇ ਵਪਾਰ ਕਰਨ ਵਰਗੀਆਂ ਚੀਜ਼ਾਂ 'ਤੇ ਨਵੇਂ ਨਿਯਮ ਲਾਗੂ ਹੁੰਦੇ ਹਨ। ਤੁਹਾਡੇ, ਤੁਹਾਡੇ ਕਾਰੋਬਾਰ ਅਤੇ ਤੁਹਾਡੇ ਪਰਿਵਾਰ ਲਈ ਕਾਰਜਾਂ ਦੀ ਵਿਅਕਤੀਗਤ ਸੂਚੀ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਬ੍ਰੈਕਸਿਟ ਜਾਂਚਕਰਤਾ ਦੀ ਵਰਤੋਂ ਕਰੋ।
     sections:
       aria_string_suffix: ਬ੍ਰੇਕਸਿਟ ਨਾਲ ਸਬੰਧਤ
       guidance_and_regulation: ਸੇਧ ਅਤੇ ਨਿਯਮ
@@ -34,22 +13,5 @@ pa:
       research_and_statistics: ਖੋਜ ਅਤੇ ਅੰਕੜੇ
       services: ਸੇਵਾਵਾਂ
       transparency: ਪਾਰਦਰਸ਼ਤਾ ਅਤੇ ਸੂਚਨਾ ਜਾਰੀ ਕਰਨ ਦੀ ਆਜ਼ਾਦੀ
-    share_links: ਇਸ ਪੇਜ ਨੂੰ ਸ਼ੇਅਰ ਕਰੋ
-    take_action_list:
-      amber: ਬਦਲੋ
-      green: ਜਾਣਾ
-      red: ਚੈਕ
-    take_action_start_now: 'ਬ੍ਰੈਕਸਿਟ ਜਾਂਚਕਰਤਾ: ਹੁਣੇ ਅਰੰਭ ਕਰੋ'
-    take_action_start_now_link: "/transition-check/questions"
     topic_section_header: ਸਾਰੀ ਬ੍ਰੈਕਸਿਟ ਜਾਣਕਾਰੀ
     topic_section_subheading: ਬ੍ਰੈਕਸਿਟ ਨਾਲ ਜੁੜੀ ਸਾਰੀ ਜਾਣਕਾਰੀ ਬ੍ਰਾਉਜ਼ ਕਰੋ
-    video_section_description: |
-      <p>ਯੂਰਪ ਦੇ ਨਾਲ ਵਪਾਰ ਕਰਨਾ ਬਦਲ ਗਿਆ ਹੈ। ਤੁਹਾਨੂੰ ਨਿਰਯਾਤ, ਆਯਾਤ, ਟੈਰਿਫ, ਡੇਟਾ ਅਤੇ&nbsp; ਭਰਤੀ ਦੇ ਨਵੇਂ ਨਿਯਮਾਂ ਦੀ ਪਾਲਣਾ ਕਰਨ ਦੀ ਜ਼ਰੂਰਤ ਹੈ।</p>
-      <p>ਇਹ ਪਤਾ ਲਗਾਉਣ ਲਈ ਵੀਡੀਓ ਵੇਖੋ ਕਿ ਨਵੇਂ ਨਿਯਮਾਂ ਦਾ ਤੁਹਾਡੇ ਕਾਰੋਬਾਰ ਲਈ ਕੀ ਅਰਥ ਹੈ। ਤੁਸੀਂ <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker"> ਕਾਰਜਾਂ ਦੀ ਵਿਅਕਤੀਗਤ ਸੂਚੀ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਬ੍ਰੈਕਸਿਟ ਜਾਂਚਕਰਤਾ ਦੀ ਵਰਤੋਂ ਕਰੋ।</a></p>
-    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
-    video_section_title: ਆਪਣੇ ਕਾਰੋਬਾਰ ਨੂੰ ਜਾਰੀ ਰੱਖੋ
-    video_section_transcription_summary: ਵੀਡੀਓ ਟ੍ਰਾਂਸਕ੍ਰਿਪਟ ਵੇਖੋ
-    video_section_transcription_text: "<p> ਕਾਰੋਬਾਰ, ਯੂਕੇ ਨੇ ਯੂਰਪੀਅਨ ਯੂਨੀਅਨ ਨੂੰ ਛੱਡ
-      ਦਿੱਤਾ ਹੈ ਅਤੇ ਨਵੇਂ ਨਿਯਮ ਹੁਣ ਲਾਗੂ ਹੁੰਦੇ ਹਨ।</p>\n<p> ਆਪਣੇ ਕਾਰੋਬਾਰ ਨੂੰ ਜਾਰੀ ਰੱਖਣ
-      ਲਈ, gov.uk/transition 'ਤੇ ਬ੍ਰੇਕਜ਼ਿਟ ਜਾਂਚਕਰਤਾ ਟੂਲ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਆਪਣੇ ਕਾਰੋਬਾਰ
-      ਲਈ ਵਿਅਕਤੀਗਤ ਕਾਰਵਾਈਆਂ ਪ੍ਰਾਪਤ ਕਰੋ। </p>\n<p> ਆਓ ਕਾਰੋਬਾਰ ਨੂੰ ਜਾਰੀ ਰੱਖੀਏ।</p>\r\n"

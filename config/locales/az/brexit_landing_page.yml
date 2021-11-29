@@ -1,31 +1,10 @@
+---
 az:
   brexit_landing_page:
-    campaign_links:
-      lead_in: 'Nələri fərqli şəkildə etməli olduğunuzu yoxlayın:'
-      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
-        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
-        data-track-label="Get the complete list">Özünüz, işiniz və ailənizlə əlaqəli
-        etməli olduqlarınızın tam siyahısını</a> əldə edin.
-    comms:
-      read_transcript: Bu video üçün mətni oxuyun
-    comms_header: Elanlar
-    data_list_title: 'Brexit üçün istinad səhifəsi: %{header}'
-    email_mailto_subject: 'BK-ın yeni həyata başlaması: vaxt itirmədən başlayaq- GOV.UK'
-    guidance_header: Bizneslər və vətəndaşlar üçün dəyişikliklər
-    meta_description: Brexit qaydalarının səyahət və Avropa ilə olan biznes fəaliyyətləri
-      kimi şeylərə necə tətbiq edildiyini öyrənin. Fəaliyyətlər üzrə fərdi siyahı
-      əldə etmək üçün Brexit yoxlayıcısından istifadə edin.
+    meta_description: Brexit qaydalarının səyahət və Avropa ilə olan biznes fəaliyyətləri kimi şeylərə necə tətbiq edildiyini öyrənin. Fəaliyyətlər üzrə fərdi siyahı əldə etmək üçün Brexit yoxlayıcısından istifadə edin.
     meta_title: Brexit
-    no_cookies:
-      change_settings_text: Kuki parametrlərinizi dəyişdirin
-      icon_text: VİDEO
-      or_text: və ya
-      to_watch_text: Videonu izləmək üçün
-      watch_link_text: YouTube-da izləyin
     page_header: Brexit:<br/>yeni qaydalar buradadır
-    page_header_explainer: Səyahət və Avropa ilə olan biznes fəaliyyətləri kimi şeylərə
-      tətbiq edilən yeni qaydalar. Fəaliyyətlər üzrə özünüz, işiniz və ailəniz üçün
-      fərdi siyahı əldə etməkdən ötrü Brexit yoxlayıcısından istifadə edin.
+    page_header_explainer: Səyahət və Avropa ilə olan biznes fəaliyyətləri kimi şeylərə tətbiq edilən yeni qaydalar. Fəaliyyətlər üzrə özünüz, işiniz və ailəniz üçün fərdi siyahı əldə etməkdən ötrü Brexit yoxlayıcısından istifadə edin.
     sections:
       aria_string_suffix: Brexitlə əlaqəli
       guidance_and_regulation: Göztəriş və qaydalar
@@ -34,22 +13,5 @@ az:
       research_and_statistics: Araşdırma və statistika
       services: Xidmətlər
       transparency: Şəffaflıq və məlumat əldə etmə azadlığı buraxılışları
-    share_links: Bu səhifəni paylaşın
-    take_action_list:
-      amber: Dəyiş
-      green: Başlayın
-      red: Yoxlayın
-    take_action_start_now: 'Brexit yoxlayıcısı: indi başlayın'
-    take_action_start_now_link: "/transition-check/questions"
     topic_section_header: Brexit üzrə bütün məlumat
     topic_section_subheading: Brexitlə əlaqəli bütün məlumatı nəzərdən keçirin
-    video_section_description: |
-      <p>Avropa ilə biznes fəaliyyətinin həyata keçirilmə qaydası dəyişdi. İxracat, idxalat, tariflər və&nbsp;işəgötürmə ilə bağlı yeni qaydalara əməl etməlisiniz.</p>
-      <p>Biznesiniz üçün yeni qaydalarla nələrin nəzərdə tutulduğunu öyrənmək üçün videonu izləyin. Fəaliyyətlər üzrə fərdi siyahı əldə etmək üçün də <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker">Brexit yoxlayıcısından</a> istifadə edə bilərsiniz.</p>
-    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
-    video_section_title: Biznesinizi dəstəkləyin
-    video_section_transcription_summary: Videonun mətnini nəzərdən keçirin
-    video_section_transcription_text: |
-      <p>Bizneslər, BK AB-ni tərk etdi və indi yeni qaydalar tətbiq edilir.</p>
-      <p>Biznesinizi dəstəkləmək üçün, biznesiniz üçün fərdi göstərişlər əldə etmək üçün gov.uk/transition-də Brexit yoxlayıcısı alətindən istifadə edin.</p>
-      <p>Gəlin biznesi dəstəkləyək.</p>
