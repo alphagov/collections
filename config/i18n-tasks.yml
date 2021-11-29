@@ -1,4 +1,8 @@
 data:
+  read:
+    - config/locales/%{locale}/*.yml
+  write:
+    - ['{:}.*', 'config/locales/%{locale}/\1.yml']
   yaml:
     write:
       line_width: -1
