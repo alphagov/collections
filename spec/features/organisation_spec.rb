@@ -256,7 +256,7 @@ RSpec.describe "Organisation pages" do
 
   it "shows translated text on welsh pages" do
     visit "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
-    expect(page).to have_css(".gem-c-heading", text: "Ein rheolaeth")
+    expect(page).to have_css(".gem-c-heading", text: "Ein rheolwyr")
     expect(page).to have_css(".gem-c-image-card__title .gem-c-image-card__title-link[href='/government/people/peter-umbleya']")
     expect(page).to have_css(".gem-c-image-card__description", text: "Non-Executive Director")
   end
@@ -295,7 +295,7 @@ RSpec.describe "Organisation pages" do
 
     it "organisations that are not exempt display FOI contact details" do
       visit "/government/organisations/office-of-the-secretary-of-state-for-wales.cy"
-      expect(page).to have_content(/Gwneud cais DRhG/i)
+      expect(page).to have_content(/Gwneud cais Rhyddid Gwybodaeth/i)
       expect(page).to have_css("section#freedom-of-information")
       expect(page).to have_css(".gem-c-heading", text: "FOI requests")
       expect(page).to have_content(/Office of the Secretary of State for Wales/i)
