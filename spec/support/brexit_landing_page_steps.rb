@@ -66,9 +66,9 @@ module BrexitLandingPageSteps
   end
 
   def and_there_is_metadata
-    expect(page).to have_selector("meta[property='og:title'][content='#{I18n.t('brexit_landing_page.meta_title')}']", visible: false)
+    expect(page).to have_selector("meta[property='og:title'][content*='#{I18n.t('brexit_landing_page.meta_title')}']", visible: false)
     expect(page).to have_selector("meta[name='description'][content='#{I18n.t('brexit_landing_page.meta_description')}']", visible: false)
-    expect(page).to have_selector("link[rel='canonical'][href='http://www.example.com/brexit']", visible: false)
+    expect(page).to have_selector("link[rel='canonical'][href='http://www.test.gov.uk/brexit']", visible: false)
   end
 
   def content_item
@@ -83,10 +83,10 @@ module BrexitLandingPageSteps
     end
   end
 
-  def and_the_faqpage_schema_is_rendered
-    faq_schema = find_schema("FAQPage")
-    expect(faq_schema["name"]).to eq("Brexit")
-    expect(faq_schema["description"]).to include("Find out how new Brexit rules apply to things like travel and doing business with Europe.")
+  def and_a_schema_is_rendered
+    page_schema = find_schema("Article")
+    expect(page_schema["name"]).to eq("Brexit")
+    expect(page_schema["description"]).to include(I18n.t("brexit_landing_page.meta_description"))
   end
 
   def find_schema(schema_name)
