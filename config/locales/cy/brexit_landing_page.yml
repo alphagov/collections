@@ -20,14 +20,6 @@ cy:
       research_and_statistics: Ymchwil ag ystadegau
       services: Gwasanaethau
       transparency: Tryloywder a datganiadau rhyddid gwybodaeth
-    take_action_list:
-      amber: Newidiwch
-      green: Ewch
-      red: Gwiriwch
-    take_action_heading: Gwiriwch sut mae Brexit yn effeithio arnoch chi
-    take_action_explainer: Defnyddiwch gwiriwr Brexit i gael rhestr bersonol o gamau gweithredu i chi, eich busnes a’ch teulu.
-    take_action_start_now: 'Gwiriwr Brexit: dechreuwch nawr'
-    take_action_start_now_link: "/transition-check/questions"
     trade_deal_heading: Cytundeb masnach y DU a’r UE
     trade_deal_links:
     - text: "Crynodeb: Perthynas newydd y DU â’r UE"
