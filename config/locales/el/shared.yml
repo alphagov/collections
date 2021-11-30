@@ -7,6 +7,6 @@ el:
       title: Περιήγηση στο GOV.UK
     get_emails: Λάβετε email για αυτό το θέμα
     language_direction: ltr
-    language_name: Αγγλικά
+    language_name: Ελληνικά
     topics:
       title: "%{title}: αναλυτικές πληροφορίες"

@@ -7,6 +7,6 @@ bg:
       title: Прегледайте GOV.UK
     get_emails: Получаване на имейли за тази тема
     language_direction: ltr
-    language_name: English
+    language_name: Bulgarian
     topics:
       title: "%{title}: подробна информация"

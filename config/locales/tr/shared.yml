@@ -7,6 +7,6 @@ tr:
       title: GOV.UK sitesini araştır
     get_emails: Bu konuda e-posta al
     language_direction: ltr
-    language_name: İngilizce
+    language_name: Türkçe
     topics:
       title: "%{title}: ayrıntılı bilgi"

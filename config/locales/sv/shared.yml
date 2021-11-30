@@ -7,6 +7,6 @@ sv:
       title: Bläddra på GOV.UK
     get_emails: Få e-postmeddelanden om detta ämne
     language_direction: ltr
-    language_name: Engelska
+    language_name: Svensk
     topics:
       title: "%{title}: detaljerad information"

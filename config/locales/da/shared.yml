@@ -7,6 +7,6 @@ da:
       title: Gennemse GOV.UK
     get_emails: Få e-mails til dette emne
     language_direction: ltr
-    language_name: Engelsk
+    language_name: Dansk
     topics:
       title: "%{title}: detaljerede oplysninger"

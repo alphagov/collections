@@ -7,6 +7,6 @@
       title: Bla gjennom GOV.UK
     get_emails: Få e-post for dette emnet
     language_direction: ltr
-    language_name: Engelsk
+    language_name: norsk
     topics:
       title: "%{title}: detaljert informasjon"

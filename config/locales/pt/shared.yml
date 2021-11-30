@@ -7,6 +7,6 @@ pt:
       title: Pesquisar GOV.UK
     get_emails: Receba e-mails para este tópico
     language_direction: ltr
-    language_name: Inglês
+    language_name: Português
     topics:
       title: "%{title}: informação detalhada"

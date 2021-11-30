@@ -7,6 +7,6 @@ ar:
       title: تصفَّح GOV.UK
     get_emails: احصل على رسائل بريد إلكتروني عن هذا الموضوع
     language_direction: rtl
-    language_name: الإنجليزية
+    language_name: العربيَّة
     topics:
       title: "%{title}: معلومات تفصيلية"

@@ -7,6 +7,6 @@ hy:
       title: Դիտել GOV.UK կայքը
     get_emails: Ստանալ էլ․ նամակներ այս թեմայի վերաբերյալ
     language_direction: ltr
-    language_name: Հայերենն
+    language_name: Հայերեն
     topics:
       title: "%{title}: մանրամասն տեղեկություն"

@@ -7,6 +7,6 @@ et:
       title: Sirvi saiti GOV.UK
     get_emails: Hangi selle teema kohta e-kirju
     language_direction: ltr
-    language_name: Inglise
+    language_name: Eesti
     topics:
       title: "%{title}: üksikasjalik teave"

@@ -7,6 +7,6 @@ bn:
       title: GOV.UK ব্রাউজ করুন
     get_emails: এই বিষয়ের জন্য ইমেইল নিন
     language_direction: ltr
-    language_name: ইংরেজি
+    language_name: বাংলা
     topics:
       title: "%{title}: বিস্তারিত তথ্য"

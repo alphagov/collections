@@ -7,6 +7,6 @@ ps:
       title: GOV.UK ولولئ
     get_emails: د دې موضوع لپاره بریښنالیکونه ترلاسه کړئ
     language_direction: rtl
-    language_name: انګلیسي
+    language_name: جرمني
     topics:
       title: "%{title}: مفصل معلومات"

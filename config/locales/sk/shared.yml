@@ -7,6 +7,6 @@ sk:
       title: Prehľadávať GOV.UK
     get_emails: Získavanie e-mailov pre túto tému
     language_direction: ltr
-    language_name: Angličtina
+    language_name: Slovensky
     topics:
       title: "%{title}: podrobné informácie"

@@ -7,6 +7,6 @@ ru:
       title: Посетите GOV.UK
     get_emails: Получите электронное сообщение на эту тему
     language_direction: ltr
-    language_name: Английский язык
+    language_name: Русский
     topics:
       title: "%{title}: полная информация"

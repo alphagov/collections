@@ -7,6 +7,6 @@ uk:
       title: Перейти на GOV.UK
     get_emails: Отримувати електронні листи на цю тему
     language_direction: ltr
-    language_name: Англійська
+    language_name: Українська
     topics:
       title: "%{title}: детальна інформація"

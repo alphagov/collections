@@ -7,6 +7,6 @@ ka:
       title: GOV.UK-ს ნახვა
     get_emails: ამ თემის შესახებ ელ.წერილების მიღება
     language_direction: ltr
-    language_name: ინგლისური
+    language_name: ქართული
     topics:
       title: "%{title}: დეტალური ინფორმაცია"

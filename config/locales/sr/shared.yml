@@ -7,6 +7,6 @@ sr:
       title: Potražite na GOV.UK
     get_emails: Želim da dobijam e-poruke o ovim temama
     language_direction: ltr
-    language_name: engleski
+    language_name: srpski
     topics:
       title: "%{title}: detaljne informacije"

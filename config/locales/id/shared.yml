@@ -7,6 +7,6 @@ id:
       title: Jelajahi GOV.UK
     get_emails: Dapatkan email untuk topik ini
     language_direction: ltr
-    language_name: Bahasa Inggris
+    language_name: Bahasa Indonesia
     topics:
       title: "%{title}: informasi terperinci"

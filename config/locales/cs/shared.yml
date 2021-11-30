@@ -7,6 +7,6 @@ cs:
       title: Procházet GOV.UK
     get_emails: Získávání e-mailů pro toto téma
     language_direction: ltr
-    language_name: Česky
+    language_name: Čeština
     topics:
       title: "%{title}: podrobné informace"

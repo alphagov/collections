@@ -7,6 +7,6 @@ is:
       title: Vafra um GOV.UK
     get_emails: Fá tölvupósta um þetta efni
     language_direction: ltr
-    language_name: Íslensku
+    language_name: Íslenska
     topics:
       title: "%{title}: nákvæmar upplýsingar"

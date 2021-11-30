@@ -7,6 +7,6 @@ es-419:
       title: Navegar en GOV.UK
     get_emails: Recibir emails sobre este tema
     language_direction: ltr
-    language_name: Inglés
+    language_name: Español de América Latina
     topics:
       title: "%{title}: información detallada"

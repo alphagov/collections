@@ -7,6 +7,6 @@ vi:
       title: Duyệt qua GOV.UK
     get_emails: Nhận email về chủ đề này
     language_direction: ltr
-    language_name: 'Việt Nam '
+    language_name: Tiếng Việt
     topics:
       title: "%{title}: thông tin chi tiết"

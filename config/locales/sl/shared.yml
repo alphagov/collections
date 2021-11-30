@@ -7,6 +7,6 @@ sl:
       title: Brskaj po GOV.UK
     get_emails: Prejemajte e-sporočila na to temo
     language_direction: ltr
-    language_name: Angleščina
+    language_name: Slovenščina
     topics:
       title: "%{title}: podrobne informacije"

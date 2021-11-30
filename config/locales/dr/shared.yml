@@ -7,6 +7,6 @@ dr:
       title: GOV.UK را جستجو نمایید
     get_emails: مرتبط با این مقاله ایمل دریافت نمایید
     language_direction: rtl
-    language_name: انگلیسی
+    language_name: دری
     topics:
       title: "%{title}: معلومات مفصل"

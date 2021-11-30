@@ -7,6 +7,6 @@ cy:
       title: Pori GOV.UK
     get_emails: I gael e-byst am y pwnc hwn
     language_direction: ltr
-    language_name: Saesneg
+    language_name: Cymraeg
     topics:
       title: "%{title}: gwybodaeth fanwl"

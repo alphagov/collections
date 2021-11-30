@@ -7,6 +7,6 @@ ro:
       title: Răsfoiți GOV.UK
     get_emails: Primiți e-mailuri pentru acest subiect
     language_direction: ltr
-    language_name: Engleză
+    language_name: Română
     topics:
       title: "%{title}: informații detaliate"
