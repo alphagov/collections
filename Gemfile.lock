@@ -562,7 +562,6 @@ DEPENDENCIES
   govuk_ab_testing
   govuk_app_config
   govuk_document_types
-  govuk_personalisation
   govuk_publishing_components
   govuk_schemas
   govuk_test
