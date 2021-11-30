@@ -3,7 +3,7 @@ da:
   brexit_landing_page:
     meta_description: Find ud af, hvordan nye Brexit-regler gælder for ting som rejser og forretning med Europa. Brug Brexit-checkeren til at få en personlig liste over handlinger.
     meta_title: Brexit
-    page_header: Brexit:<br/>nye regler er her
+    page_header: Brexit
     page_header_explainer: Der gælder nye regler for ting som rejser og forretning med Europa. Brug Brexit-checkeren til at få en personlig liste over handlinger for dig, din virksomhed og din familie.
     sections:
       aria_string_suffix: relateret til brexit

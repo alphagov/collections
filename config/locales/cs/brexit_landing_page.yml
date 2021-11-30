@@ -3,7 +3,7 @@ cs:
   brexit_landing_page:
     meta_description: Zjistěte, jak se nová pravidla brexitu týkají například cestování a obchodování s Evropou. Pomocí nástroje pro kontrolu brexitu získáte individuální seznam opatření.
     meta_title: Brexit
-    page_header: Brexit:<br/>nová pravidla jsou zde
+    page_header: Brexit
     page_header_explainer: Nová pravidla se týkají například cestování a obchodování s Evropou. Pomocí nástroje pro kontrolu brexitu získáte osobní seznam opatření pro vás, vaši firmu a vaši rodinu.
     sections:
       aria_string_suffix: související s brexitem

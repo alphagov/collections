@@ -3,7 +3,7 @@ hr:
   brexit_landing_page:
     meta_description: Saznajte kako se nova pravila Brexita primjenjuju na stvari poput putovanja i poslovanja s Europom. Upotrijebite alat za provjeru Brexita da biste dobili personalizirani popis radnji.
     meta_title: Brexit
-    page_header: Brexit:<br/>nova su pravila ovdje
+    page_header: Brexit
     page_header_explainer: Nova pravila primjenjuju se na stvari poput putovanja i poslovanja s Europom. Upotrijebite alat za provjeru Brexita da biste dobili prilagođeni popis radnji za vas, vaše poslovanje i svoju obitelj.
     sections:
       aria_string_suffix: vezano za Brexit

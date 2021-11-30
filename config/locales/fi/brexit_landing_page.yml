@@ -3,7 +3,7 @@ fi:
   brexit_landing_page:
     meta_description: Selvitä, miten uudet brexit-säännöt koskevat esimerkiksi matkustamista ja kaupankäyntiä Euroopan kanssa. Käytä Brexit-tarkistinta saadaksesi henkilökohtaisen luettelon toimista.
     meta_title: Brexit
-    page_header: 'Brexit: <br/>uudet säännöt ovat täällä'
+    page_header: Brexit
     page_header_explainer: Uusia sääntöjä sovelletaan esimerkiksi matkustamiseen ja kaupankäyntiin Euroopan kanssa. Käytä Brexit-tarkistinta saadaksesi henkilökohtaisen luettelon sinua, yritystäsi ja perhettäsi koskevista toimista.
     sections:
       aria_string_suffix: Brexitiin liittyen

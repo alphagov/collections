@@ -3,7 +3,7 @@ fr:
   brexit_landing_page:
     meta_description: Découvrez de quelle façon les nouvelles règles du Brexit sont mises en œuvre, notamment en matière de voyages et d'affaires avec l'Europe. Utilisez le vérificateur de Brexit pour obtenir une liste personnalisée d'actions.
     meta_title: Brexit
-    page_header: Brexit:<br/>de nouvelles règles sont appliquées
+    page_header: Brexit
     page_header_explainer: De nouvelles règles s'appliquent notamment aux voyages et aux affaires avec l'Europe. Servez-vous du Vérificateur de Brexit pour obtenir une liste personnalisée d'actions à suivre pour vous, votre entreprise et votre famille.
     sections:
       aria_string_suffix: en rapport avec le Brexit

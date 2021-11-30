@@ -3,7 +3,7 @@ et:
   brexit_landing_page:
     meta_description: Uurige, kuidas kehtivad uued Brexiti reeglid sellistele asjadele nagu reisimine ja Euroopaga äri ajamine. Kasutage Brexiti kontrollitööriista, et saada isikupärastatud toimingute loend.
     meta_title: Brexit
-    page_header: Brexit:<br/>uued reeglid on siin
+    page_header: Brexit
     page_header_explainer: Uued reeglid kehtivad sellistele asjadele nagu reisimine ja Euroopaga äri ajamine. Kasutage Brexiti kontrollitööriista, et saada isikupärastatud toimingute loend endale, oma ettevõttele ja oma perele.
     sections:
       aria_string_suffix: seotud Brexitiga

@@ -3,7 +3,7 @@ cy:
   brexit_landing_page:
     meta_description: Dysgwch sut mae rheolau Brexit newydd yn berthnasol i bethau fel teithio a gwneud busnes gydag Ewrop. Defnyddiwch y gwirydd Brexit i gael rhestr o gamau gweithredu personol i chi.
     meta_title: Brexit
-    page_header: Brexit:<br/>mae rheolau newydd yma
+    page_header: Brexit
     page_header_explainer: Mae rheolau newydd yn berthnasol i bethau fel teithio a gwneud busnes gydag Ewrop. Defnyddiwch y gwirydd Brexit i gael rhestr o gamau gweithredu personol i chi, i'ch busnes ac i'ch teulu.
     sections:
       aria_string_suffix: cysylltiedig â Brexit

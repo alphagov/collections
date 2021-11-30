@@ -3,7 +3,7 @@ hu:
   brexit_landing_page:
     meta_description: Tudja meg, hogy hogyan hatnak a Brexit szabályai az európai utazásokra és az európai vállalkozásokkal való együttműködésre. Használja a Brexit-ellenőrzőlistát, ha személyre szabottan szeretné kézhez kapni a tevékenységek listáját.
     meta_title: Brexit
-    page_header: Brexit:<br/>itt vannak az új szabályok
+    page_header: Brexit
     page_header_explainer: Új szabályok vonatkoznak olyan dolgokra, mint az európai utazások és európai vállalatokkal való együttműködés. Használja a Brexit-ellenőrzőlistát, ha személyre szabottan szeretné kézhez kapni a tevékenységek listáját.
     sections:
       aria_string_suffix: Brexittel kapcsolatos

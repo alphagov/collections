@@ -3,7 +3,7 @@ tr:
   brexit_landing_page:
     meta_description: Yeni Brexit kurallarının Avrupa’ya seyahat etmek ve Avrupa’yla iş yapmak gibi konularda nasıl geçerli olduğunu öğrenin. Kişiselleştirilmiş bir işlem listesini almak için Brexit kontrol aracını kullanın.
     meta_title: Brexit
-    page_header: Brexit:<br/>işte yeni kurallar
+    page_header: Brexit
     page_header_explainer: Avrupa’ya seyahat etmek ve Avrupa’yla iş yapmak gibi konularda yeni kurallar geçerli. Siz, işletmeniz ve aileniz için kişiselleştirilmiş bir işlem listesini almak için Brexit kontrol aracını kullanın.
     sections:
       aria_string_suffix: Brexit ile ilgili

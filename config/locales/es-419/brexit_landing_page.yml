@@ -3,7 +3,7 @@ es-419:
   brexit_landing_page:
     meta_description: Descubra cómo se aplican las nuevas normas del Brexit a aspectos como viajes y negocios con Europa. Utilice el consultor del Brexit para obtener una lista personalizada de medidas.
     meta_title: Brexit
-    page_header: Brexit:<br/>nuevas reglas están aquí
+    page_header: Brexit
     page_header_explainer: Las nuevas normas se aplican a aspectos como viajes y negocios con Europa. Utilice el consultor del Brexit para obtener una lista personalizada de medidas para usted, su empresa y su familia.
     sections:
       aria_string_suffix: relacionado con el Brexit

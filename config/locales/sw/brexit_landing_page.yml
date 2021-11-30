@@ -3,7 +3,7 @@ sw:
   brexit_landing_page:
     meta_description: Pata maelezo kuhusu jinsi kanuni za Brexit zinavyotumika kwenye mambo kama vile usafiri na kufanya biashara na Ulaya. Tumia kiteuzi cha Brexit ili upate orodha ya hatua za kuchukua zinazokufaa.
     meta_title: Brexit
-    page_header: Brexit:<br/>kanuni mpya zinapatikana hapa
+    page_header: Brexit
     page_header_explainer: Kanuni mpya zinatumika kwenye mambo kama vile usafiri na kufanya biashara na Ulaya. Tumia kiteuzi cha Brexit ili upate orodha ya hatua za kuchukua zinazofaa kwa ajili yako, biashara na familia yako.
     sections:
       aria_string_suffix: inayohusiana na Brexit

@@ -3,7 +3,7 @@ pl:
   brexit_landing_page:
     meta_description: Dowiedz się, jak nowe przepisy dotyczące Brexitu wpływają na takie kwestie jak podróżowanie i prowadzenie interesów z Europą. Skorzystaj z narzędzia Brexit checker, aby otrzymać spersonalizowaną listę zadań.
     meta_title: Brexit
-    page_header: Brexit:<br/>nowe zasady już są
+    page_header: Brexit
     page_header_explainer: Nowe zasady dotyczą takich kwestii jak podróżowanie i prowadzenie interesów z Europą. Skorzystaj z narzędzia Brexit checker, aby uzyskać spersonalizowaną listę zadań dla siebie, swojej firmy i rodziny.
     sections:
       aria_string_suffix: dotyczące Brexitu

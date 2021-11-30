@@ -3,7 +3,7 @@ it:
   brexit_landing_page:
     meta_description: Scopri come si applicano le nuove regole Brexit a cose come viaggiare e fare affari con l'Europa. Usa il controllore della Brexit per ottenere un elenco personalizzato di azioni.
     meta_title: Brexit
-    page_header: Brexit:<br/>le nuove regole sono qui
+    page_header: Brexit
     page_header_explainer: Nuove regole si applicano a cose come viaggiare e fare affari con l'Europa. Usa il controllore della Brexit per ottenere un elenco personalizzato di azioni per te, la tua azienda e la tua famiglia.
     sections:
       aria_string_suffix: relativo alla Brexit

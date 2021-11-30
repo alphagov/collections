@@ -3,7 +3,7 @@ sl:
   brexit_landing_page:
     meta_description: Izvedite, kako se nova pravila, povezana z bexitom nanašajo na zadeve, kot je potovanje in poslovanje z Evropo. S preverjalnikom učinkov brexita dobite prilagojen seznam dejanj.
     meta_title: Brexit
-    page_header: Brexit:<br/>nova pravila so tu
+    page_header: Brexit
     page_header_explainer: Nova pravila se nanašajo na zadeve, kot je potovanje in poslovanje z Evropo. S preverjalnikom učinkov brexita dobite prilagojen seznam dejanj za vas, vaše podjetje in družino.
     sections:
       aria_string_suffix: Povezano z brexitom

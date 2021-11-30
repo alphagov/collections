@@ -3,7 +3,7 @@ es:
   brexit_landing_page:
     meta_description: Descubra cómo se aplican las nuevas normas del Brexit a temas como viajar y hacer negocios con Europa. Utilice el comprobador del Brexit para obtener una lista personalizada de acciones.
     meta_title: Brexit
-    page_header: Brexit:<br/>las nuevas reglas están aquí
+    page_header: Brexit
     page_header_explainer: Se aplican nuevas normas a cosas como viajar y hacer negocios con Europa. Utilice el comprobador del Brexit para obtener una lista personalizada de acciones para usted, su empresa y su familia.
     sections:
       aria_string_suffix: relacionado con el Brexit

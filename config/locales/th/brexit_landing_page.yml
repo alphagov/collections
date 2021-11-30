@@ -3,7 +3,7 @@ th:
   brexit_landing_page:
     meta_description: ค้นหาว่ากฎใหม่ของ Brexit มีผลกับสิ่งต่างๆ เช่น การเดินทางและการทำธุรกิจกับยุโรปอย่างไรบ้าง ใช้ตัวช่วยตรวจสอบ Brexit เพื่อรับรายการการดำเนินการส่วนบุคคล
     meta_title: Brexit
-    page_header: Brexit:<br/> กฎใหม่มาถึงแล้ว
+    page_header: Brexit
     page_header_explainer: กฎใหม่ของ Brexit มีผลกับสิ่งต่างๆ เช่น การเดินทางและการทำธุรกิจกับยุโรป ใช้ตัวช่วยตรวจสอบ Brexit เพื่อดูรายการการดำเนินการที่เหมาะกับตัวคุณ ธุรกิจของคุณ และครอบครัวของคุณ
     sections:
       aria_string_suffix: เกี่ยวกับ Brexit

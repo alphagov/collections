@@ -3,7 +3,7 @@ is:
   brexit_landing_page:
     meta_description: Kynntu þér hvernig nýju Brexit reglurnar gilda um hluti eins og ferðalög og viðskipti við Evrópu. Notaðu Brexit athugarann til að fá persónulegan aðgerðalista
     meta_title: Brexit
-    page_header: Brexit:<br/>nýjar reglur hér
+    page_header: Brexit
     page_header_explainer: Nýjar reglur eiga við hluti eins og ferðalög og viðskipti við Evrópu. Notaðu Brexit athugarann til að fá persónulegan aðgerðalista fyrir þig, fyrirtækið þitt og fjölskylduna þína.
     sections:
       aria_string_suffix: tengt Brexit

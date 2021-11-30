@@ -3,7 +3,7 @@ sv:
   brexit_landing_page:
     meta_description: Ta reda på hur de nya brexitreglerna gäller för bland annat resor och affärer med Europa. Använd Brexit-kontrollen för att få en personlig lista över åtgärder.
     meta_title: Brexit
-    page_header: Brexit:<br/>De nya reglerna är här
+    page_header: Brexit
     page_header_explainer: Nya regler gäller bland annat för resor och för att göra affärer med Europa. Använd Brexit-checkern för att få en personlig lista över åtgärder för dig, ditt företag och din familj.
     sections:
       aria_string_suffix: relaterat till Brexit

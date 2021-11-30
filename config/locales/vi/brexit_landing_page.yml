@@ -3,7 +3,7 @@ vi:
   brexit_landing_page:
     meta_description: Tìm hiểu cách áp dụng các quy tắc Brexit mới cho những ngành như du lịch và hợp tác kinh doanh với Châu Âu. Sử dụng công cụ kiểm tra Brexit để nhận danh sách các hành động được cá nhân hóa.
     meta_title: Brexit
-    page_header: Brexit:<br/>đây là các quy tắc mới
+    page_header: Brexit
     page_header_explainer: Các quy tắc mới áp dụng cho những ngành như du lịch và hợp tác kinh doanh với Châu Âu. Sử dụng công cụ kiểm tra Brexit để nhận danh sách các hành động được cá nhân hóa cho bạn, doanh nghiệp và gia đình của bạn.
     sections:
       aria_string_suffix: liên quan đến Brexit

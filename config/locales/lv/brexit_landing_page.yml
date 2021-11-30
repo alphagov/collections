@@ -3,7 +3,7 @@ lv:
   brexit_landing_page:
     meta_description: Uzziniet, kā jaunie noteikumi attiecas uz tādām jomām kā ceļošana un uzņēmējdarbība Eiropā. Izmantojiet Brexit kontrolsarakstu, lai saņemtu personalizētu sarakstu ar veicamajiem uzdevumiem.
     meta_title: Brexit
-    page_header: Brexit:<br/>jaunie noteikumi ir klāt
+    page_header: Brexit
     page_header_explainer: Jaunie noteikumi attiecas uz tādām jomām kā ceļošana un uzņēmējdarbība Eiropā. Izmantojiet Brexit kontrolsarakstu, lai saņemtu personalizētu sarakstu ar jums, jūsu uzņēmumam un jūsu ģiemenei veicamajiem uzdevumiem.
     sections:
       aria_string_suffix: saistībā ar Brexit

@@ -3,7 +3,7 @@ nl:
   brexit_landing_page:
     meta_description: Ontdek hoe de nieuwe Brexit-regels van toepassing zijn op zaken als reizen en zakendoen met Europa. Gebruik de Brexit-checker voor een gepersonaliseerde lijst van acties.
     meta_title: Brexit
-    page_header: Brexit:<br/>nieuwe regels zijn er
+    page_header: Brexit
     page_header_explainer: Er gelden nieuwe regels voor zaken als reizen en zakendoen met Europa. Gebruik de Brexit-checker voor een gepersonaliseerde lijst van acties voor u, uw bedrijf en uw gezin.
     sections:
       aria_string_suffix: in verband met Brexit

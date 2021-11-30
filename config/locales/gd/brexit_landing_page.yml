@@ -3,7 +3,7 @@ gd:
   brexit_landing_page:
     meta_description: Faigh amach conas a bhaineann rialacha nua Brexit le rudaí mar thaisteal agus gnó a dhéanamh leis an Eoraip. Úsáid Uirlis Seiceálaí Brexit chun liosta pearsantaithe gníomhartha a fháil.
     meta_title: Brexit
-    page_header: Brexit:<br/>tá rialacha an-nua i bhfeidhm
+    page_header: Brexit
     page_header_explainer: Chinn an Coimisiún Eorpach níos mó agus níos mó rialacha a ghlacadh maidir le taisteal agus trádáil leis an Eoraip. Bain tairbhe as seiceálaí Brexit chun bileog gníomhaíochta pearsantaithe a fháil duit féin, do do ghnó agus do theaghlach.
     sections:
       aria_string_suffix: Bainteach le Brexit
