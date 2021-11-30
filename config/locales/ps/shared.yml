@@ -6,7 +6,7 @@ ps:
       prefix: 'لټون:'
       title: GOV.UK ولولئ
     get_emails: د دې موضوع لپاره بریښنالیکونه ترلاسه کړئ
-    language_direction: ltr
+    language_direction: rtl
     language_name: انګلیسي
     topics:
       title: "%{title}: مفصل معلومات"

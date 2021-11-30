@@ -6,7 +6,7 @@ dr:
       prefix: 'جستجو:'
       title: GOV.UK را جستجو نمایید
     get_emails: مرتبط با این مقاله ایمل دریافت نمایید
-    language_direction: ltr
+    language_direction: rtl
     language_name: انگلیسی
     topics:
       title: "%{title}: معلومات مفصل"

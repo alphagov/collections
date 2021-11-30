@@ -6,7 +6,7 @@ fa:
       prefix: 'مرور:'
       title: GOV.UK را مرور کنید
     get_emails: دریافت ایمیل برای این موضوع
-    language_direction: ltr
+    language_direction: rtl
     language_name: انگلیسی
     topics:
       title: "%{title}: اطلاعات جزئی"

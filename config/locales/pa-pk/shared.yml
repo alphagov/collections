@@ -6,7 +6,7 @@ pa-pk:
       prefix: 'کھولو:'
       title: کھولو GOV.UK
     get_emails: ایس مضمون تے ای میل حاصل کرو
-    language_direction: ltr
+    language_direction: rtl
     language_name: انگریزی
     topics:
       title: "%{title}: تفصیلی معلومات"
