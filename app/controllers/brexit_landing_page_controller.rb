@@ -1,12 +1,10 @@
 class BrexitLandingPageController < ApplicationController
-  include GovukPersonalisation::ControllerConcern
   include Slimmer::Headers
 
   skip_before_action :set_expiry
   before_action -> { set_expiry(1.minute) }
-  before_action -> { set_slimmer_headers(remove_search: true, show_accounts: logged_in? ? "signed-in" : "signed-out") }
 
-  slimmer_template "gem_layout_full_width_old_header"
+  slimmer_template "gem_layout_full_width_explore_header"
 
   around_action :switch_locale
   def show
