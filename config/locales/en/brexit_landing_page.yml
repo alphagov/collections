@@ -1,7 +1,7 @@
 ---
 en:
   brexit_landing_page:
-    meta_description: Find out how new Brexit rules apply to things like travel and doing business with Europe. Use the Brexit checker to get a personalised list of actions.
+    meta_description: Find out how new Brexit rules apply to things like travel and doing business with Europe.
     meta_title: Brexit
     page_header: Brexit
     page_header_explainer: Find out how new Brexit rules apply to things like travel and doing business with Europe.
@@ -20,14 +20,6 @@ en:
       research_and_statistics: Research and statistics
       services: Services
       transparency: Transparency and freedom of information releases
-    take_action_list:
-      amber: Change
-      green: Go
-      red: Check
-    take_action_heading: Check how Brexit affects you
-    take_action_explainer: Use the Brexit checker to get a personalised list of actions for you, your business and your family.
-    take_action_start_now: 'Brexit checker: start now'
-    take_action_start_now_link: "/transition-check/questions"
     trade_deal_heading: The UK and EU trade deal
     trade_deal_links:
     - text: "Summary: The UK’s new relationship with the EU"

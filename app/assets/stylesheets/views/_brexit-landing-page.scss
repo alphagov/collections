@@ -15,35 +15,3 @@ $red: #ff003b;
   margin-bottom: govuk-spacing(6);
   padding-top: govuk-spacing(6);
 }
-
-.landing-page__take-action-traffic-lights {
-  margin-bottom: govuk-spacing(6);
-  text-align: center;
-
-  @include govuk-media-query($from: tablet) {
-    text-align: left;
-  }
-}
-
-.landing-page__take-action-traffic-lights > li {
-  margin-bottom: govuk-spacing(1);
-  white-space: nowrap;
-  display: inline;
-  margin-right: govuk-spacing(3);
-}
-
-.landing-page__take-action-traffic-lists-icon {
-  vertical-align: middle;
-  margin-top: -5px;
-  width: 22px;
-  margin-right: 5px;
-
-  @include govuk-media-query($from: tablet) {
-    width: 28px;
-  }
-}
-
-.landing-page__take-action-traffic-lists-text {
-  @include govuk-font($size: 24, $weight: bold, $line-height: 1.1);
-  vertical-align: middle;
-}
