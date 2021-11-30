@@ -5,6 +5,13 @@ ps:
     meta_title: بریکسیټ
     page_header: بریکسیټ
     page_header_explainer: نوي مقررات د شیانو لکه د سفر او اروپا سره سوداګرۍ کولو باندې پلي کیږي. د تاسو ، ستاسو سوداګرۍ او کورنۍ لپاره د کړنو شخصي لیست ترلاسه کولو لپاره د بریکسیت چیکر وکاروئ.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: د بریکسټ پورې اړوند
       guidance_and_regulation: لارښوونه او مقررات
@@ -15,3 +22,5 @@ ps:
       transparency: د معلوماتو د خپریدو شفافیت او آزادي
     topic_section_header: د بریکسټ ټول معلومات
     topic_section_subheading: د بریکسیت پورې اړوند ټول معلومات براوز کړئ
+    trade_deal_heading:
+    trade_deal_links:

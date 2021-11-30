@@ -5,6 +5,13 @@ zh-tw:
     meta_title: 脫歐
     page_header: 脫歐
     page_header_explainer: 適用於旅行歐洲及業務往來等新規範使用英國脫歐確認器為你、你的公司和家人獲取個人化的操作列表。
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: 關於英國脫歐
       guidance_and_regulation: 指導和監管
@@ -15,3 +22,5 @@ zh-tw:
       transparency: 透明度與資訊自由的發布
     topic_section_header: 所有英國脫歐資訊
     topic_section_subheading: 瀏覽與英國脫歐相關的所有資訊
+    trade_deal_heading:
+    trade_deal_links:

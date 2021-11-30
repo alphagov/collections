@@ -317,15 +317,21 @@ fa:
       email: دریافت ایمیل‌ها
       feed: اشتراک در فید
     type:
+      ":":
       adhoc_advisory_group: گروه مشاوره اختصاصی
       advisory_ndpb: نهاد عمومی مشورتی غیر دپارتمانی
       civil_service: خدمات شهروندی
+      court:
+      devolved_administration:
       executive_agency: آژانس اجرایی
       executive_ndpb: نهاد عمومی اجرایی غیر دپارتمانی
+      executive_office:
       independent_monitoring_body: نهاد ناظر مستقل
+      ministerial_department:
       non_ministerial_department: دپارتمان غیر وزارتی
       other: سایر
       public_corporation: شرکت عمومی
+      sub_organisation:
       tribunal: دادگاه
     view_all: مشاهده همه
     view_less: مشاهده کمتر

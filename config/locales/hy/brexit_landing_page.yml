@@ -5,6 +5,13 @@ hy:
     meta_title: Brexit
     page_header: Brexit
     page_header_explainer: 'Նոր կանոնները կիրառվում Եվրոպայի հետ բիզնես վարելու և ճանապարհորդության ժամանակ: Ձեր, ձեր բիզնեսի և ընտանիքի համար գործողությունների անհատականացված ցանկ ստանալու համար օգտվեք Brexit-ի ստուգման գործիքից։'
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: Brexit-ին առնչվող
       guidance_and_regulation: Ուղղորդում և կանոնակարգ
@@ -15,3 +22,5 @@ hy:
       transparency: Տեղեկատվության ազատության և թափանցիկության հրապարակումներ
     topic_section_header: Brexit-ի մասին ամբողջական տեղեկություն
     topic_section_subheading: Դիտել Brexit-ի հետ կապված ամբողջական տեղեկությունը
+    trade_deal_heading:
+    trade_deal_links:

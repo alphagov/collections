@@ -315,15 +315,21 @@ hi:
       email: ईमेल प्राप्त करें
       feed: फीड के लिए सब्स्क्राइब करें
     type:
+      ":":
       adhoc_advisory_group: विशेष सलाहकार समूह
       advisory_ndpb: सलाहकार गैर-विभागीय सार्वजनिक निकाय
       civil_service: सिविल सेवा
+      court:
+      devolved_administration:
       executive_agency: कार्यकारी एजेंसी
       executive_ndpb: कार्यकारी गैर-विभागीय सार्वजनिक निकाय
+      executive_office:
       independent_monitoring_body: स्वतंत्र जांच निकाय
+      ministerial_department:
       non_ministerial_department: गैर-मंत्रालयी विभाग
       other: अन्य
       public_corporation: सार्वजनिक निगम
+      sub_organisation:
       tribunal: न्यायाधिकरण
     view_all: सभी देखें
     view_less: कम देखें

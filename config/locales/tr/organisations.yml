@@ -317,15 +317,21 @@ tr:
       email: E-postalar al
       feed: Yayına abone ol
     type:
+      ":":
       adhoc_advisory_group: Geçici danışma grubu
       advisory_ndpb: Danışma nitelikli müdürlük dışı kamu kuruluşu
       civil_service: Kamu görevi
+      court:
+      devolved_administration:
       executive_agency: Yürütme ajansı
       executive_ndpb: Yürütme nitelikli müdürlük dışı kamu kuruluşu
+      executive_office:
       independent_monitoring_body: Bağımsız izleme kuruluşu
+      ministerial_department:
       non_ministerial_department: Bakanlık dışı müdürlük
       other: Diğer
       public_corporation: Kamu kurumu
+      sub_organisation:
       tribunal: Mahkeme
     view_all: hepsini gör
     view_less: daha az gör

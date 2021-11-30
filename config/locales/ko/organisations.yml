@@ -317,15 +317,21 @@ ko:
       email: 이메일 받기
       feed: 피드로 구독하기
     type:
+      ":":
       adhoc_advisory_group: 임시 자문단
       advisory_ndpb: 자문 비부처 공공기관
       civil_service: 시민 서비스
+      court:
+      devolved_administration:
       executive_agency: 집행 기관
       executive_ndpb: 집행 비부처 공공기관
+      executive_office:
       independent_monitoring_body: 독립적인 모니터링 기관
+      ministerial_department:
       non_ministerial_department: 비부처
       other: 기타
       public_corporation: 공공 기관
+      sub_organisation:
       tribunal: 법원
     view_all: 모두 보기
     view_less: 적게 보기

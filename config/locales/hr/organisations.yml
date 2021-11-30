@@ -463,15 +463,21 @@ hr:
       email: Dobijte e -poštu
       feed: Pretplatite se na feed
     type:
+      ":":
       adhoc_advisory_group: Ad-hoc savjetodavna skupina
       advisory_ndpb: Savjetodavno javno tijelo koje nije odjel
       civil_service: Državna služba
+      court:
+      devolved_administration:
       executive_agency: Izvršna agencija
       executive_ndpb: Izvršno javno tijelo koje nije odjel
+      executive_office:
       independent_monitoring_body: Nezavisno tijelo za nadzor
+      ministerial_department:
       non_ministerial_department: Odjel koji nije ministarski
       other: Ostalo
       public_corporation: Javna korporacija
+      sub_organisation:
       tribunal: Sud
     view_all: vidi sve
     view_less: vidi manje

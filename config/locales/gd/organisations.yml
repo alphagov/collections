@@ -465,15 +465,21 @@ gd:
       email: Faigh r-phost
       feed: Liostáil le fotha
     type:
+      ":":
       adhoc_advisory_group: Grúpa oibre ad hoc
       advisory_ndpb: Comhlacht comhairliúcháin poiblí neamh-aireachta
       civil_service: Státseirbhís
+      court:
+      devolved_administration:
       executive_agency: Gníomhaireacht feidhmiúcháin
       executive_ndpb: Comhlacht maoirseachta neamhspleách
+      executive_office:
       independent_monitoring_body: Comhlacht bainistíochta neamhspleách
+      ministerial_department:
       non_ministerial_department: Roinn neamh-aireachta
       other: Eile
       public_corporation: Cuideachta phoiblí
+      sub_organisation:
       tribunal: Cúirt
     view_all: Taispeáin gach rud
     view_less: féach níos lú

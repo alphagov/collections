@@ -315,15 +315,21 @@ zh:
       email: 获取电子邮件
       feed: 订阅推送
     type:
+      ":":
       adhoc_advisory_group: 特别咨询小组
       advisory_ndpb: 咨询非部门公共机构
       civil_service: 行政部门
+      court:
+      devolved_administration:
       executive_agency: 执行机构
       executive_ndpb: 执行非部门公共机构
+      executive_office:
       independent_monitoring_body: 独立监测机构
+      ministerial_department:
       non_ministerial_department: 非部长级部门
       other: 其它
       public_corporation: 公营公司
+      sub_organisation:
       tribunal: 法庭
     view_all: 查看全部
     view_less: 查看更少

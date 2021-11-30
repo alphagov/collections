@@ -465,15 +465,21 @@ be:
       email: Атрымваць электронныя лісты
       feed: Падпісацца на канал
     type:
+      ":":
       adhoc_advisory_group: Адмысловая кансультацыйная група
       advisory_ndpb: Кансультацыйны пазаведамасны дзяржаўны орган
       civil_service: Дзяржаўная служба
+      court:
+      devolved_administration:
       executive_agency: Выканаўчае агенцтва
       executive_ndpb: Выканаўчы пазаведамасны дзяржаўны орган
+      executive_office:
       independent_monitoring_body: Незалежны орган маніторынгу
+      ministerial_department:
       non_ministerial_department: Немiнiстэрскi дэпартамент
       other: Іншае
       public_corporation: Дзяржаўная карпарацыя
+      sub_organisation:
       tribunal: Трыбунал
     view_all: паказаць усё
     view_less: глядзець менш

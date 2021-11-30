@@ -317,15 +317,21 @@ he:
       email: קבל הודעות דואר אלקטרוני
       feed: הירשם להזנה
     type:
+      ":":
       adhoc_advisory_group: קבוצת ייעוץ אד-הוק
       advisory_ndpb: גוף ציבורי לא מחלקתי מייעץ
       civil_service: שירות אזרחי
+      court:
+      devolved_administration:
       executive_agency: סוכנות מנהלים
       executive_ndpb: 'גוף ציבורי לא מחלקתי '
+      executive_office:
       independent_monitoring_body: 'גוף ניטור עצמאי '
+      ministerial_department:
       non_ministerial_department: לא מחלקת שרים
       other: אחר
       public_corporation: תאגיד ציבורי
+      sub_organisation:
       tribunal: 'בית דין '
     view_all: הצג הכל
     view_less: הצג פחות

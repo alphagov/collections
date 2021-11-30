@@ -5,6 +5,13 @@ zh:
     meta_title: 英国脱欧
     page_header: 英国脱欧
     page_header_explainer: '新规则适用于在欧洲旅游和做生意等事情。使用英国脱欧检查程序，为您、您的企业和家人获得一份个性化的行动清单。  '
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: 与英国脱欧有关
       guidance_and_regulation: 指南和条例
@@ -15,3 +22,5 @@ zh:
       transparency: 信息发布的透明度和自由
     topic_section_header: 全部英国脱欧信息
     topic_section_subheading: 浏览所有与英国脱欧相关的信息
+    trade_deal_heading:
+    trade_deal_links:

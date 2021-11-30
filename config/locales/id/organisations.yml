@@ -317,15 +317,21 @@ id:
       email: Dapatkan email
       feed: Berlangganan feed
     type:
+      ":":
       adhoc_advisory_group: Grup penasihat ad-hoc
       advisory_ndpb: Badan penasihat publik non-departemen
       civil_service: Layanan sipil
+      court:
+      devolved_administration:
       executive_agency: Lembaga eksekutif
       executive_ndpb: Badan publik eksekutif non-departemen
+      executive_office:
       independent_monitoring_body: Badan pengawasan independen
+      ministerial_department:
       non_ministerial_department: Departemen non-kementerian
       other: Lainnya
       public_corporation: Korporasi publik
+      sub_organisation:
       tribunal: Persidangan
     view_all: lihat semua
     view_less: lihat lebih sedikit

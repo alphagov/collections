@@ -5,6 +5,13 @@ ja:
     meta_title: Brexit
     page_header: Brexit
     page_header_explainer: 旅行や欧州とのビジネスなどにも新しいルールが適用されます。 Brexitチェッカーを使用して、ご自分のビジネス、ご家族のためにパーソナライズされたアクションリストを入手してください。
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: Brexit関連
       guidance_and_regulation: ガイダンスと規制
@@ -15,3 +22,5 @@ ja:
       transparency: 情報開示の透明性と自由
     topic_section_header: すべてのBrexit情報
     topic_section_subheading: Brexitに関連するすべての情報を閲覧する
+    trade_deal_heading:
+    trade_deal_links:

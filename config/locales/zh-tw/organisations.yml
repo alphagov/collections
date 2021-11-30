@@ -317,15 +317,21 @@ zh-tw:
       email: 取得電子郵件
       feed: 訂閱提要
     type:
+      ":":
       adhoc_advisory_group: 特設諮詢小組
       advisory_ndpb: 諮詢非部門公共機構
       civil_service: 行政機構
+      court:
+      devolved_administration:
       executive_agency: 行政機構
       executive_ndpb: 行政非部門公共機構
+      executive_office:
       independent_monitoring_body: 獨立監察機構
+      ministerial_department:
       non_ministerial_department: 非內閣部會
       other: 其他
       public_corporation: 公營企業
+      sub_organisation:
       tribunal: 審裁處
     view_all: 查看全部
     view_less: 查看部分

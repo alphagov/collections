@@ -5,6 +5,13 @@ ka:
     meta_title: ბრექსიტი
     page_header: ბრექსითი
     page_header_explainer: ახალი წესები ეხება ისეთ საკითხებს, როგორიცაა მოგზაურობა და ბიზნესი ევროპაში. გამოიყენეთ ბრექსიტის შემოწმება, რათა მიიღოთ პერსონალიზირებული მოქმედებების სია თქვენთვის, თქვენი ბიზნესისა და ოჯახისთვის.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: უკავშირდება ბრექსითს
       guidance_and_regulation: მმართველობა და რეგულაცია
@@ -15,3 +22,5 @@ ka:
       transparency: გამჭირვალობის და ინფორმაციის თავისუფლების გამოცემები
     topic_section_header: ბრექსითის შესახებ სრული ინფორმაცია
     topic_section_subheading: იხილეთ ბრექსითთან დაკავშირებული ყველა ინფორმაცია
+    trade_deal_heading:
+    trade_deal_links:

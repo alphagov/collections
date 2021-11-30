@@ -391,15 +391,21 @@ ro:
       email: Primiți e-mailuri
       feed: Abonați-vă la flux
     type:
+      ":":
       adhoc_advisory_group: Grup consultativ ad-hoc
       advisory_ndpb: Organism public consultativ neministerial
       civil_service: Funcții publice
+      court:
+      devolved_administration:
       executive_agency: Agenție executivă
       executive_ndpb: Organism public executiv neministerial
+      executive_office:
       independent_monitoring_body: Organism independent de monitorizare
+      ministerial_department:
       non_ministerial_department: Departament neministerial
       other: Altele
       public_corporation: Corporație publică
+      sub_organisation:
       tribunal: Tribunal
     view_all: vizualizați pe toate
     view_less: vizualizați mai puțin

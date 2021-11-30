@@ -317,15 +317,21 @@ bn:
       email: ইমেইল পান
       feed: ফিডে সাবস্ক্রাইব করুন
     type:
+      ":":
       adhoc_advisory_group: অ্যাড-হক পরামর্শক গোষ্ঠী
       advisory_ndpb: পরামর্শক বিভাগ-বহির্ভূত সরকারি সংস্থা
       civil_service: সিভিল সার্ভিস
+      court:
+      devolved_administration:
       executive_agency: নির্বাহী সংস্থা
       executive_ndpb: নির্বাহী বিভাগ-বহির্ভূত সরকারি সংস্থা
+      executive_office:
       independent_monitoring_body: স্বতন্ত্র নিরীক্ষণ সংস্থা
+      ministerial_department:
       non_ministerial_department: মন্ত্রণালয়-বহির্ভূত বিভাগ
       other: অন্যান্য
       public_corporation: পাবলিক কর্পোরেশন
+      sub_organisation:
       tribunal: ট্রাইব্যুনাল
     view_all: সবগুলো দেখান
     view_less: কম দেখান

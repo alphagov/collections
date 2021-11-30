@@ -5,6 +5,13 @@ pa:
     meta_title: ਬ੍ਰੈਕਸਿਟ
     page_header: ਬ੍ਰੈਕਸਿਟ
     page_header_explainer: ਯੂਰਪ ਦੇ ਨਾਲ ਯਾਤਰਾ ਅਤੇ ਵਪਾਰ ਕਰਨ ਵਰਗੀਆਂ ਚੀਜ਼ਾਂ 'ਤੇ ਨਵੇਂ ਨਿਯਮ ਲਾਗੂ ਹੁੰਦੇ ਹਨ। ਤੁਹਾਡੇ, ਤੁਹਾਡੇ ਕਾਰੋਬਾਰ ਅਤੇ ਤੁਹਾਡੇ ਪਰਿਵਾਰ ਲਈ ਕਾਰਜਾਂ ਦੀ ਵਿਅਕਤੀਗਤ ਸੂਚੀ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਬ੍ਰੈਕਸਿਟ ਜਾਂਚਕਰਤਾ ਦੀ ਵਰਤੋਂ ਕਰੋ।
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: ਬ੍ਰੇਕਸਿਟ ਨਾਲ ਸਬੰਧਤ
       guidance_and_regulation: ਸੇਧ ਅਤੇ ਨਿਯਮ
@@ -15,3 +22,5 @@ pa:
       transparency: ਪਾਰਦਰਸ਼ਤਾ ਅਤੇ ਸੂਚਨਾ ਜਾਰੀ ਕਰਨ ਦੀ ਆਜ਼ਾਦੀ
     topic_section_header: ਸਾਰੀ ਬ੍ਰੈਕਸਿਟ ਜਾਣਕਾਰੀ
     topic_section_subheading: ਬ੍ਰੈਕਸਿਟ ਨਾਲ ਜੁੜੀ ਸਾਰੀ ਜਾਣਕਾਰੀ ਬ੍ਰਾਉਜ਼ ਕਰੋ
+    trade_deal_heading:
+    trade_deal_links:

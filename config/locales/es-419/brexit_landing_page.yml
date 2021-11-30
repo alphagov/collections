@@ -5,6 +5,13 @@ es-419:
     meta_title: Brexit
     page_header: Brexit
     page_header_explainer: Las nuevas normas se aplican a aspectos como viajes y negocios con Europa. Utilice el consultor del Brexit para obtener una lista personalizada de medidas para usted, su empresa y su familia.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: relacionado con el Brexit
       guidance_and_regulation: Guía y regulación
@@ -15,3 +22,5 @@ es-419:
       transparency: Transparencia y libertad de información
     topic_section_header: Toda la información sobre el Brexit
     topic_section_subheading: Buscar toda la información relacionada con el Brexit
+    trade_deal_heading:
+    trade_deal_links:

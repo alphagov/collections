@@ -315,15 +315,21 @@ ka:
       email: მიიღეთ წერილები
       feed: გამოიწერეთ
     type:
+      ":":
       adhoc_advisory_group: დროებითი საკონსულტაციო ჯგუფი
       advisory_ndpb: საკონსულტაციო არასამთავრობო უწყებრივი ორგანო
       civil_service: საჯარო სამსახური
+      court:
+      devolved_administration:
       executive_agency: აღმასრულებელი სააგენტო
       executive_ndpb: აღმასრულებელი არასამთავრობო უწყებრივი საზოგადოებრივი ორგანო
+      executive_office:
       independent_monitoring_body: დამოუკიდებელი მონიტორინგის ორგანო
+      ministerial_department:
       non_ministerial_department: არასამთავრობო მინისტრის განყოფილება
       other: სხვა
       public_corporation: საზოგადოებრივი კორპორაცია
+      sub_organisation:
       tribunal: ტრიბუნალი
     view_all: ყველას ნახვა
     view_less: ნაკლების ნახვა

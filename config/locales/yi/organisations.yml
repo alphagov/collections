@@ -241,15 +241,21 @@ yi:
       email:
       feed:
     type:
+      ":":
       adhoc_advisory_group:
       advisory_ndpb:
       civil_service:
+      court:
+      devolved_administration:
       executive_agency:
       executive_ndpb:
+      executive_office:
       independent_monitoring_body:
+      ministerial_department:
       non_ministerial_department:
       other:
       public_corporation:
+      sub_organisation:
       tribunal:
     view_all:
     view_less:

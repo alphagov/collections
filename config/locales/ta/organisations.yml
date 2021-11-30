@@ -317,15 +317,21 @@ ta:
       email: மின்னஞ்சல்களைப் பெறுக
       feed: செய்தியூட்டத்தில் இணைக
     type:
+      ":":
       adhoc_advisory_group: தற்காலிக ஆலோசனைக் குழு
       advisory_ndpb: துறைசாரா ஆலோசனை பொதுநிறுவனம்
       civil_service: குடிமச் சேவை
+      court:
+      devolved_administration:
       executive_agency: நிர்வாக முகமை
       executive_ndpb: ஆலோசனை பொதுநிறுவன நிர்வாகி
+      executive_office:
       independent_monitoring_body: சுயேட்சையான கண்காணிப்பு நிறுவனம்
+      ministerial_department:
       non_ministerial_department: அமைச்சரவைசாராத் துறை
       other: பிற
       public_corporation: பொதுக் குழுமம்
+      sub_organisation:
       tribunal: தீர்ப்பாயம்
     view_all: அனைத்தையும் காண்க
     view_less: குறைவாகக் காட்டு

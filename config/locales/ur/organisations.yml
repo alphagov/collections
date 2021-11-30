@@ -317,15 +317,21 @@ ur:
       email: ای میلز حاصل کریں
       feed: فیڈ پر سبسکرائب کریں
     type:
+      ":":
       adhoc_advisory_group: ایڈہاک مشاورتی گروپ
       advisory_ndpb: مشاورتی غیر محکماتی عوامی دھڑا
       civil_service: سروس سروس
+      court:
+      devolved_administration:
       executive_agency: ایگزیکٹیو ایجنسی
       executive_ndpb: ایگزیکٹیو غیر محکماتی عوامی دھڑا
+      executive_office:
       independent_monitoring_body: خود مختار نگران باڈی
+      ministerial_department:
       non_ministerial_department: غیر وزارتی محکمہ
       other: دیگر
       public_corporation: عوامی کارپوریشن
+      sub_organisation:
       tribunal: ٹریبیونل
     view_all: تمام کو دیکھیں
     view_less: کم دیکھیں

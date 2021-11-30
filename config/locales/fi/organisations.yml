@@ -317,15 +317,21 @@ fi:
       email: Hanki sähköpostit
       feed: Tilaa syöte
     type:
+      ":":
       adhoc_advisory_group: Ad-hoc-neuvoa-antava ryhmä
       advisory_ndpb: Neuvoa-antava ei-osastoinen julkinen elin
       civil_service: Siviilipalvelus
+      court:
+      devolved_administration:
       executive_agency: Toimeenpanovirasto
       executive_ndpb: Julkinen toimeenpaneva elin, joka ei ole ministeriön alainen
+      executive_office:
       independent_monitoring_body: Riippumaton valvontaelin
+      ministerial_department:
       non_ministerial_department: Muu kuin ministeriön yksikkö
       other: Muut
       public_corporation: Julkinen osakeyhtiö
+      sub_organisation:
       tribunal: Tuomioistuin
     view_all: näytä kaikki
     view_less: nähdä vähemmän

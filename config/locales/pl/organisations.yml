@@ -465,15 +465,21 @@ pl:
       email: Otrzymuj wiadomości e-mail
       feed: Subskrybuj kanał
     type:
+      ":":
       adhoc_advisory_group: Doraźna grupa doradcza
       advisory_ndpb: Pozaministerialny publiczny organ doradczy
       civil_service: Służba cywilna
+      court:
+      devolved_administration:
       executive_agency: Agencja wykonawcza
       executive_ndpb: Pozaministerialny publiczny organ wykonawczy
+      executive_office:
       independent_monitoring_body: Niezależny organ monitorujący
+      ministerial_department:
       non_ministerial_department: Departament pozaministerialny
       other: Inne
       public_corporation: Korporacja publiczna
+      sub_organisation:
       tribunal: Trybunał
     view_all: Zobacz wszystko
     view_less: Zobacz mniej

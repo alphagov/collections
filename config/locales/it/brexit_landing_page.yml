@@ -5,6 +5,13 @@ it:
     meta_title: Brexit
     page_header: Brexit
     page_header_explainer: Nuove regole si applicano a cose come viaggiare e fare affari con l'Europa. Usa il controllore della Brexit per ottenere un elenco personalizzato di azioni per te, la tua azienda e la tua famiglia.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: relativo alla Brexit
       guidance_and_regulation: Guida e regolamentazione
@@ -15,3 +22,5 @@ it:
       transparency: Trasparenza e libertà di diffusione delle informazioni
     topic_section_header: Tutte le informazioni sulla Brexit
     topic_section_subheading: Sfoglia tutte le informazioni relative alla Brexit
+    trade_deal_heading:
+    trade_deal_links:

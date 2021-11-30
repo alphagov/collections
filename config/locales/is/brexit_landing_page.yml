@@ -5,6 +5,13 @@ is:
     meta_title: Brexit
     page_header: Brexit
     page_header_explainer: Nýjar reglur eiga við hluti eins og ferðalög og viðskipti við Evrópu. Notaðu Brexit athugarann til að fá persónulegan aðgerðalista fyrir þig, fyrirtækið þitt og fjölskylduna þína.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: tengt Brexit
       guidance_and_regulation: Leiðsögn og reglugerðir
@@ -15,3 +22,5 @@ is:
       transparency: Útgáfa vegna gagnsæis og upplýsingafrelsi
     topic_section_header: Allar Brexit upplýsingar
     topic_section_subheading: Farðu yfir allar upplýsingar tengdar Brexit
+    trade_deal_heading:
+    trade_deal_links:

@@ -5,6 +5,13 @@ ur:
     meta_title: Brexit
     page_header: Brexit
     page_header_explainer: سفر اور یورپ کے ساتھ کاروبار پر نئے اصولوں کا اطلاق ہوتا ہے۔ اپنے، اپنے بزنس اور اپنے اہل خانہ کے لیے کارروائیوں کی شخصی کردہ فہرست حاصل کرنے کے لیے Brexit چیکر کا استعمال کریں۔
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: Brexit سے متعلق
       guidance_and_regulation: رہنمائی اور ضابطہ
@@ -15,3 +22,5 @@ ur:
       transparency: معلومات کے اجراء کی شفافیت اور آزادی
     topic_section_header: Brexit کی تمام معلومات
     topic_section_subheading: Brexit سے متعلق تمام معلومات کو براؤز کریں
+    trade_deal_heading:
+    trade_deal_links:

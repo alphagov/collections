@@ -5,6 +5,13 @@ gd:
     meta_title: Brexit
     page_header: Brexit
     page_header_explainer: Chinn an Coimisiún Eorpach níos mó agus níos mó rialacha a ghlacadh maidir le taisteal agus trádáil leis an Eoraip. Bain tairbhe as seiceálaí Brexit chun bileog gníomhaíochta pearsantaithe a fháil duit féin, do do ghnó agus do theaghlach.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: Bainteach le Brexit
       guidance_and_regulation: Moltaí agus rialacháin
@@ -15,3 +22,5 @@ gd:
       transparency: Preaseisiúintí maidir le trédhearcacht agus saoirse faisnéise
     topic_section_header: Na sonraí go léir ar Brexit
     topic_section_subheading: Téigh tríd an bhfaisnéis uile a bhaineann le Brexit
+    trade_deal_heading:
+    trade_deal_links:

@@ -5,6 +5,13 @@ yi:
     meta_title:
     page_header:
     page_header_explainer:
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix:
       guidance_and_regulation:
@@ -15,3 +22,5 @@ yi:
       transparency:
     topic_section_header:
     topic_section_subheading:
+    trade_deal_heading:
+    trade_deal_links:

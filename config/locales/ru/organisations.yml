@@ -463,15 +463,21 @@ ru:
       email: Получите электронные адреса
       feed: Подписывайте на веб-канал
     type:
+      ":":
       adhoc_advisory_group: Специальная консультативная группа
       advisory_ndpb: Консультативная полуавтономная негосударственная организация
       civil_service: Государственные услуги
+      court:
+      devolved_administration:
       executive_agency: Орган исполнительной власти
       executive_ndpb: Полуавтономная негосударственная организация исполнительной власти
+      executive_office:
       independent_monitoring_body: Независимый контрольный орган
+      ministerial_department:
       non_ministerial_department: Неминистерский государственный департамент
       other: Другое
       public_corporation: Государственная корпорация
+      sub_organisation:
       tribunal: Арбитраж
     view_all: Посмотреть все
     view_less: Посмотреть меньше

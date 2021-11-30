@@ -5,6 +5,13 @@ tk:
     meta_title: Brexit
     page_header: Brexit
     page_header_explainer: Täze düzgünler syýahat etmek we Ýewropada iş gurmak boýunça amallary öz içine alýar. Özüňiz, işiňiz we maşgalaňyz üçin şahsylaşdyrylan amallaryň sanawyny almak üçin Brexit barlaýjysyny ulanyň.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: Brexit bilen baglanyşykly
       guidance_and_regulation: Gollanma we düzgünnama
@@ -15,3 +22,5 @@ tk:
       transparency: Maglumatlaryň aç-açanlygy we erkinligi
     topic_section_header: Ähli Brexit maglumatlary
     topic_section_subheading: Brexit bilen baglanyşykly ähli maglumatlary gözlemek
+    trade_deal_heading:
+    trade_deal_links:

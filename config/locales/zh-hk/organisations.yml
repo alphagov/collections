@@ -315,15 +315,21 @@ zh-hk:
       email: 獲取電郵地址
       feed: 訂閱內容
     type:
+      ":":
       adhoc_advisory_group: 特設諮詢小組
       advisory_ndpb: 非部門公共機構顧問
       civil_service: 公務員制度
+      court:
+      devolved_administration:
       executive_agency: 執行機構
       executive_ndpb: 非部門公共執行機構
+      executive_office:
       independent_monitoring_body: 獨立監督機構
+      ministerial_department:
       non_ministerial_department: 非內閣部門
       other: 其他
       public_corporation: 公共機構
+      sub_organisation:
       tribunal: 法庭
     view_all: 查閱全部內容
     view_less: 查閱較少內容

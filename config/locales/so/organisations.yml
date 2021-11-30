@@ -317,15 +317,21 @@ so:
       email: Hel iimaylada
       feed: Ku xidhnow warka
     type:
+      ":":
       adhoc_advisory_group: Kooxda latalinta kadiska ah
       advisory_ndpb: Haayada dadweynaha ee latalinta
       civil_service: Adeega dadweynaha
+      court:
+      devolved_administration:
       executive_agency: Waakalada sare
       executive_ndpb: Haayada dadweynaha ee sare
+      executive_office:
       independent_monitoring_body: Haayad kormeer oo madaxbanaan
+      ministerial_department:
       non_ministerial_department: Waaxda ka madaxabanaan wasiirada
       other: Midkale
       public_corporation: Sirkada dadweynaha
+      sub_organisation:
       tribunal: Maxkamad
     view_all: fiiri dhamaan
     view_less: Fiiri inyar

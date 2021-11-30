@@ -5,6 +5,13 @@ cy:
     meta_title: Brexit
     page_header: Brexit
     page_header_explainer: Mae rheolau newydd yn berthnasol i bethau fel teithio a gwneud busnes gydag Ewrop. Defnyddiwch y gwirydd Brexit i gael rhestr o gamau gweithredu personol i chi, i'ch busnes ac i'ch teulu.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: cysylltiedig â Brexit
       guidance_and_regulation: Canllawiau a rheoliadau
@@ -15,3 +22,5 @@ cy:
       transparency: Gwybodaeth a ryddhawyd o dan FOI a thryloywder
     topic_section_header: Yr holl wybodaeth am Brexit
     topic_section_subheading: Pori'r holl wybodaeth cysylltiedig â Brexit
+    trade_deal_heading:
+    trade_deal_links:

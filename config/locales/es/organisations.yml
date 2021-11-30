@@ -315,15 +315,21 @@ es:
       email: Reciba correos electrónicos
       feed: Suscríbase a la fuente
     type:
+      ":":
       adhoc_advisory_group: Grupo consultivo ad hoc
       advisory_ndpb: Órgano público consultivo no departamental
       civil_service: Servicio civil
+      court:
+      devolved_administration:
       executive_agency: Organismo ejecutivo
       executive_ndpb: Órgano público ejecutivo no departamental
+      executive_office:
       independent_monitoring_body: Cuerpo de supervisión independiente
+      ministerial_department:
       non_ministerial_department: Departamento no ministerial
       other: Otros
       public_corporation: Corporación pública
+      sub_organisation:
       tribunal: Tribunal
     view_all: ver todo
     view_less: ver menos

@@ -5,6 +5,13 @@ uk:
     meta_title: Brexit
     page_header: Brexit
     page_header_explainer: Нові правила застосовуються до таких речей, як подорожі та ведення бізнесу з Європою. Скористайтеся засобом перевірки Brexit, щоб отримати персоналізований список дій для себе, вашого бізнесу та вашої родини.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: пов'язані з Brexit
       guidance_and_regulation: Керівництво та регламент
@@ -15,3 +22,5 @@ uk:
       transparency: Прозорість та свобода інформації
     topic_section_header: Вся інформація про Brexit
     topic_section_subheading: Переглянути всю інформацію, пов'язану з Brexit
+    trade_deal_heading:
+    trade_deal_links:

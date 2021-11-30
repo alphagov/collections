@@ -5,6 +5,13 @@ sv:
     meta_title: Brexit
     page_header: Brexit
     page_header_explainer: Nya regler gäller bland annat för resor och för att göra affärer med Europa. Använd Brexit-checkern för att få en personlig lista över åtgärder för dig, ditt företag och din familj.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: relaterat till Brexit
       guidance_and_regulation: Vägledning och reglering
@@ -15,3 +22,5 @@ sv:
       transparency: Offentliggörande av information om öppenhet och informationsfrihet
     topic_section_header: All information om brexit
     topic_section_subheading: Bläddra bland all information om Brexit
+    trade_deal_heading:
+    trade_deal_links:

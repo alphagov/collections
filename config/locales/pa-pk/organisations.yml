@@ -319,15 +319,21 @@ pa-pk:
       email: ای میل حاصل کرو
       feed: جواب لین لئی سبسکرائب کرو
     type:
+      ":":
       adhoc_advisory_group: ایڈہاک ایڈوائزری گروپ
       advisory_ndpb: ایدوائزری نان-ڈیپارٹمنٹل پبلک باڈی
       civil_service: سول سروس
+      court:
+      devolved_administration:
       executive_agency: ایگزیکٹو ایجنسی
       executive_ndpb: ایگزیکٹو  نان-ڈیپارٹمنٹل پبلک باڈی
+      executive_office:
       independent_monitoring_body: خود مختار نگران ادارہ
+      ministerial_department:
       non_ministerial_department: بغیر وزیر دا محکمہ
       other: ہور دوجے
       public_corporation: عوامی تعاون
+      sub_organisation:
       tribunal: عدالت
     view_all: ساریاں نوں ویکھو
     view_less: گھٹ ویکھو

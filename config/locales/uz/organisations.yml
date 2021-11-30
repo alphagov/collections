@@ -317,15 +317,21 @@ uz:
       email: Электрон манзилларни олиш
       feed: Лентага обуна бўлиш
     type:
+      ":":
       adhoc_advisory_group: Махсус маслаҳат гуруҳи
       advisory_ndpb: Маслаҳат ярим автоном нодавлат ташкилот
       civil_service: Фуқаролик хизмати
+      court:
+      devolved_administration:
       executive_agency: Ижро органи
       executive_ndpb: Ижро ярим автоном нодавлат ташкилоти
+      executive_office:
       independent_monitoring_body: Назоратнинг мустақил органи
+      ministerial_department:
       non_ministerial_department: Новазирлик департаменти
       other: Бошқалар
       public_corporation: Давлат корпорацияси
+      sub_organisation:
       tribunal: Трибунал
     view_all: Барчасини кўриш
     view_less: Камроқ кўриш

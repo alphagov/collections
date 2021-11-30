@@ -5,6 +5,13 @@ lt:
     meta_title: "„Brexitas“"
     page_header: "„Brexitas“"
     page_header_explainer: Sužinokite, kaip naujos „Brexito“ taisyklės taikomos kelionėms Europoje ir verslo vykdymui su Europa. Užpildykite „Brexito“ klausimyną ir gaukite suasmenintą veiksmų sąrašą sau, savo verslui ir šeimai.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: 'susiję su „Brexitu“ '
       guidance_and_regulation: Nurodymai ir taisyklės
@@ -15,3 +22,5 @@ lt:
       transparency: Pranešimai apie skaidrumą ir informacijos laisvę
     topic_section_header: 'Visai informaciją apie „Brexitą“ '
     topic_section_subheading: 'Naršykite visą su „Brexitu“ susijusią informaciją '
+    trade_deal_heading:
+    trade_deal_links:

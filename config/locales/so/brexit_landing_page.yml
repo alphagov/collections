@@ -5,6 +5,13 @@ so:
     meta_title: Ka bixitaanka Ingiriiska
     page_header: Ka bixitaanka Ingiriiska
     page_header_explainer: Shuruucda cusub waxay qabanayaan waxyaabaha sida socdaalka iyo ka ganacsiga Yurub. Isticmaal hubiya ka bixitaanka Ingiriiska si aad u heshid liiska talaabooyinka naftaada, ganacsigaaga iyo qoyskaaga.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: la xidhiidha ka bixitaanka Ingiriiska
       guidance_and_regulation: Tilaamta iyo sharciga
@@ -15,3 +22,5 @@ so:
       transparency: Daah furnaanta iyo xoriyada baahinta macluumaadka
     topic_section_header: Dhamaan macluumaadka ka bixitaanka Ingiriiska
     topic_section_subheading: Raadi dhamaa macluumaadka la xiriira ka bixitaanka Ingiriiska
+    trade_deal_heading:
+    trade_deal_links:

@@ -5,6 +5,13 @@ bn:
     meta_title: ব্রেক্সিট
     page_header: ব্রেক্সিট
     page_header_explainer: ভ্রমণ ও ইউরোপের সাথে ব্যবসা করার মতো বিষয়গুলোতে নতুন নিয়মকানুন প্রযোজ্য হয়। আপনার নিজের, আপনার ব্যবসা ও পরিবারের জন্য পদক্ষেপগুলোর একটি ব্যক্তিগতকৃত তালিকা পেতে ব্রেক্সিট চেকার ব্যবহার করুন।
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: ব্রেক্সিট সম্পর্কিত
       guidance_and_regulation: নির্দেশনা ও বিধিবিধান
@@ -15,3 +22,5 @@ bn:
       transparency: স্বচ্ছতা ও তথ্যের স্বাধীনতা বিষয়ক প্রকাশনা
     topic_section_header: ব্রেক্সিটের সকল তথ্য
     topic_section_subheading: ব্রেক্সিট সম্পর্কিত সকল তথ্য ব্রাউজ করুন
+    trade_deal_heading:
+    trade_deal_links:

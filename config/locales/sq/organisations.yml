@@ -315,15 +315,21 @@ sq:
       email: Merr emaile
       feed: Abonohu për njoftime
     type:
+      ":":
       adhoc_advisory_group: Grupi këshillues ad-hoc
       advisory_ndpb: Organ publik këshillimor jo departamentik
       civil_service: Shërbimi civil
+      court:
+      devolved_administration:
       executive_agency: Agjenci ekzekutive
       executive_ndpb: Organ publik ekzekutiv jo departamentik
+      executive_office:
       independent_monitoring_body: Organ i pavarur monitorues
+      ministerial_department:
       non_ministerial_department: Departamenti jo ministror
       other: Tjetër
       public_corporation: Korporatë publike
+      sub_organisation:
       tribunal: Tribunali
     view_all: shih të gjitha
     view_less: shit më pak

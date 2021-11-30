@@ -317,15 +317,21 @@ pa:
       email: ਈਮੇਲਾਂ ਪ੍ਰਾਪਤ ਕਰੋ
       feed: ਫੀਡ ਦੇ ਗਾਹਕ ਬਣੋ
     type:
+      ":":
       adhoc_advisory_group: ਐਡਹਾਕ ਸਲਾਹਕਾਰ ਸਮੂਹ
       advisory_ndpb: ਸਲਾਹਕਾਰ ਗੈਰ-ਵਿਭਾਗੀ ਜਨਤਕ ਸੰਸਥਾ
       civil_service: ਸਿਵਲ ਸੇਵਾ
+      court:
+      devolved_administration:
       executive_agency: ਕਾਰਜਕਾਰੀ ਏਜੰਸੀ
       executive_ndpb: ਕਾਰਜਕਾਰੀ ਗੈਰ-ਵਿਭਾਗੀ ਜਨਤਕ ਸੰਸਥਾ
+      executive_office:
       independent_monitoring_body: ਸੁਤੰਤਰ ਨਿਗਰਾਨੀ ਸੰਸਥਾ
+      ministerial_department:
       non_ministerial_department: ਗੈਰ-ਮੰਤਰੀ ਵਿਭਾਗ
       other: ਹੋਰ
       public_corporation: ਜਨਤਕ ਨਿਗਮ
+      sub_organisation:
       tribunal: ਟ੍ਰਿਬਿਊਨਲ
     view_all: ਸਭ ਵੇਖੋ
     view_less: ਘੱਟ ਵੇਖੋ

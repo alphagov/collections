@@ -5,6 +5,13 @@ cs:
     meta_title: Brexit
     page_header: Brexit
     page_header_explainer: Nová pravidla se týkají například cestování a obchodování s Evropou. Pomocí nástroje pro kontrolu brexitu získáte osobní seznam opatření pro vás, vaši firmu a vaši rodinu.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: související s brexitem
       guidance_and_regulation: Pokyny a nařízení
@@ -15,3 +22,5 @@ cs:
       transparency: Transparentnost a svoboda informací
     topic_section_header: Všechny informace o brexitu
     topic_section_subheading: Procházet všechny informace týkající se Brexitu
+    trade_deal_heading:
+    trade_deal_links:

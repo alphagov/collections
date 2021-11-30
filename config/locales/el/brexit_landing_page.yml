@@ -5,6 +5,13 @@ el:
     meta_title: Brexit
     page_header: Brexit
     page_header_explainer: Ισχύουν νέοι κανόνες για πράγματα όπως τα ταξίδια και οι συναλλαγές με την Ευρώπη. Χρησιμοποιήστε τον Έλεγχο Brexit για να λάβετε μια εξατομικευμένη λίστα ενεργειών για εσάς, την επιχείρησή σας και την οικογένειά σας.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: σχετίζονται με το Brexit
       guidance_and_regulation: Οδηγίες και κανονισμοί
@@ -15,3 +22,5 @@ el:
       transparency: Εκδόσεις για τη διαφάνεια και ελευθερία πληροφόρησης
     topic_section_header: Όλες οι πληροφορίες για το Brexit
     topic_section_subheading: Περιηγηθείτε σε όλες τις πληροφορίες που σχετίζονται με το Brexit
+    trade_deal_heading:
+    trade_deal_links:

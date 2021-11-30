@@ -317,15 +317,21 @@ si:
       email: විද්‍යුත් තැපෑල් ලබා ගන්න
       feed: පෝෂණය කිරීමට දායක වන්න
     type:
+      ":":
       adhoc_advisory_group: තත්කාර්ය උපදේශක කණ්ඩායම
       advisory_ndpb: උපදේශක දෙපාර්තමේන්තු නොවන මහජන ආයතනය
       civil_service: සිවිල් සේවය
+      court:
+      devolved_administration:
       executive_agency: විධායක නියෝජතායතනය
       executive_ndpb: විධායක දෙපාර්තමේන්තු නොවන මහජන ආයතනය
+      executive_office:
       independent_monitoring_body: ස්වාධීන අධීක්ෂණ ආයතනය
+      ministerial_department:
       non_ministerial_department: අමාත්යාංශ නොවන දෙපාර්තමේන්තුව
       other: වෙනත්
       public_corporation: රාජ්ය සංස්ථාව
+      sub_organisation:
       tribunal: විනිශ්චය මණ්ඩලය
     view_all: සියලු බලන්න
     view_less: අඩුවෙන් බලන්න

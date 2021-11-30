@@ -317,15 +317,21 @@ tk:
       email: E-poçtalary alyň
       feed: Goldamak üçin agza boluň
     type:
+      ":":
       adhoc_advisory_group: Aýratyn maslahat beriji topar
       advisory_ndpb: Maslahat beriji bölüm däl jemgyýetçilik guramasy
       civil_service: Döwlet gullugy
+      court:
+      devolved_administration:
       executive_agency: Ýerine ýetiriji edara
       executive_ndpb: Bölüm däl ýerine ýetiriji gurama
+      executive_office:
       independent_monitoring_body: Garaşsyz gözegçilik edarasy
+      ministerial_department:
       non_ministerial_department: Ministrlik däl bölüm
       other: Beýleki
       public_corporation: Jemgyýetçilik korporasiýasy
+      sub_organisation:
       tribunal: Kazyýet
     view_all: ählisini görmek
     view_less: birazyny görmek

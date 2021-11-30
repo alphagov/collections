@@ -613,15 +613,21 @@ cy:
       email: I gael e-byst
       feed: Tanysgrifio i'r ffrwd
     type:
+      ":":
       adhoc_advisory_group: Grŵp cynghori ad-hoc
       advisory_ndpb: Corff cynghori cyhoeddus anadrannol
       civil_service: Gwasanaeth sifil
+      court:
+      devolved_administration:
       executive_agency: Asiantaeth weithredol
       executive_ndpb: Corff cyhoeddus anadrannol gweithredol
+      executive_office:
       independent_monitoring_body: Corff monitro annibynnol
+      ministerial_department:
       non_ministerial_department: Adran anweinidogol
       other: Arall
       public_corporation: Corfforaeth gyhoeddus
+      sub_organisation:
       tribunal: Tribiwnlys
     view_all: gweld popeth
     view_less: gweld llai

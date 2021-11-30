@@ -391,15 +391,21 @@ sk:
       email: Dostávať e-maily
       feed: Prihlásiť sa k odberu
     type:
+      ":":
       adhoc_advisory_group: Ad hoc poradná skupina
       advisory_ndpb: Poradný verejný orgán mimo rezortu
       civil_service: Štátna služba
+      court:
+      devolved_administration:
       executive_agency: Výkonná agentúra
       executive_ndpb: Výkonný verejný orgán mimo rezortu
+      executive_office:
       independent_monitoring_body: Nezávislý monitorovací orgán
+      ministerial_department:
       non_ministerial_department: Oddelenie, ktoré nie je ministerstvom
       other: Iné
       public_corporation: Verejnoprávna korporácia
+      sub_organisation:
       tribunal: Súd
     view_all: zobraziť všetko
     view_less: zobraziť menej

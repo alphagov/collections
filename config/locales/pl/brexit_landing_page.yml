@@ -5,6 +5,13 @@ pl:
     meta_title: Brexit
     page_header: Brexit
     page_header_explainer: Nowe zasady dotyczą takich kwestii jak podróżowanie i prowadzenie interesów z Europą. Skorzystaj z narzędzia Brexit checker, aby uzyskać spersonalizowaną listę zadań dla siebie, swojej firmy i rodziny.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: dotyczące Brexitu
       guidance_and_regulation: Wytyczne i rozporządzenia
@@ -15,3 +22,5 @@ pl:
       transparency: Przejrzystość i wolność informacji
     topic_section_header: Wszystkie informacje o Brexicie
     topic_section_subheading: Przeglądaj wszystkie informacje o Brexicie
+    trade_deal_heading:
+    trade_deal_links:

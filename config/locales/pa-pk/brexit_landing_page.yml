@@ -5,6 +5,13 @@ pa-pk:
     meta_title: Brexit
     page_header: Brexit
     page_header_explainer: یورپ وچ کاروبار کرن تے سفر کرن جئی چیزاں تے نویں قانون لاگو ہون گے۔ Brexit checker نوں استعمال کر کے اپنی ذات لئی اپنے خانادان تے اپنے کاروبار دے کماں لئی اک فہرست حاصل کرو۔
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: ایہ Brexitدے بارے
       guidance_and_regulation: رہنمائی تے قانون
@@ -15,3 +22,5 @@ pa-pk:
       transparency: شفافیت تے معلومات جاری کرن دی آزادی
     topic_section_header: Brexit  بارے ساری معلومات
     topic_section_subheading: Brexit بارے ساری معلومات ویکھو
+    trade_deal_heading:
+    trade_deal_links:

@@ -5,6 +5,13 @@ lv:
     meta_title: Brexit
     page_header: Brexit
     page_header_explainer: Jaunie noteikumi attiecas uz tādām jomām kā ceļošana un uzņēmējdarbība Eiropā. Izmantojiet Brexit kontrolsarakstu, lai saņemtu personalizētu sarakstu ar jums, jūsu uzņēmumam un jūsu ģiemenei veicamajiem uzdevumiem.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: saistībā ar Brexit
       guidance_and_regulation: Vadlīnijas un regulējums
@@ -15,3 +22,5 @@ lv:
       transparency: Caurredzamība un informācijas atklātības datu publicēšana
     topic_section_header: Visa informācija par Brexit
     topic_section_subheading: Pārlūkot visu informāciju saistībā ar Brexit
+    trade_deal_heading:
+    trade_deal_links:

@@ -391,15 +391,21 @@ lt:
       email: Gauti el. laiškus
       feed: Prenumeruoti srautą
     type:
+      ":":
       adhoc_advisory_group: Ad-hoc konsultacinė grupė
       advisory_ndpb: Konsultacinė ne departamentinė viešoji įstaiga
       civil_service: Valstybės tarnyba
+      court:
+      devolved_administration:
       executive_agency: Vykdomoji agentūra
       executive_ndpb: Vykdomoji ne departamentinė viešoji įstaiga
+      executive_office:
       independent_monitoring_body: Nepriklausoma priežiūros institucija
+      ministerial_department:
       non_ministerial_department: Ne ministerijai priklausantis departamentas
       other: Kita
       public_corporation: Viešoji korporacija
+      sub_organisation:
       tribunal: Tribunolas
     view_all: žiūrėti viską
     view_less: žiūrėti mažiau

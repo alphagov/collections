@@ -317,15 +317,21 @@ th:
       email: รับอีเมล
       feed: สมัครรับข้อมูลฟีดข่าว
     type:
+      ":":
       adhoc_advisory_group: กลุ่มที่ปรึกษาเฉพาะกิจ
       advisory_ndpb: องค์กรอิสระที่ให้คำปรึกษา (Advisory non-departmental public body)
       civil_service: ราชการ
+      court:
+      devolved_administration:
       executive_agency: หน่วยงานบริหารพิเศษ (Executive agency)
       executive_ndpb: องค์กรอิสระบริหารพิเศษ (Executive non-departmental public body)
+      executive_office:
       independent_monitoring_body: หน่วยงานตรวจการอิสระ
+      ministerial_department:
       non_ministerial_department: หน่วยงานราชการที่ไม่ขึ้นกับกระทรวง
       other: อื่น ๆ
       public_corporation: องค์การมหาชน
+      sub_organisation:
       tribunal: ทางศาล
     view_all: ดูทั้งหมด
     view_less: ดูน้อยลง

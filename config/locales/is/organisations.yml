@@ -317,15 +317,21 @@ is:
       email: Fá tölvupósta
       feed: Gerast áskrifandi að straumi
     type:
+      ":":
       adhoc_advisory_group: Sérstakir ráðgjafahópar
       advisory_ndpb: Ráðgefandi opinber stofnun sem heyrir ekki undir ráðuneyti
       civil_service: Opinber þjónusta
+      court:
+      devolved_administration:
       executive_agency: Framkvæmdaumboð
       executive_ndpb: Framkvæmandi opinber stofnun sem heyrir ekki undir ráðuneyti
+      executive_office:
       independent_monitoring_body: Sjálfstæð eftirlitsstofnun
+      ministerial_department:
       non_ministerial_department: Deild sem hefur ekki ráðherra
       other: Annað
       public_corporation: Opinbert fyrirtæki
+      sub_organisation:
       tribunal: Dómstóll
     view_all: sjá allt
     view_less: sjá minna

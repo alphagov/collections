@@ -320,15 +320,21 @@ dr:
       email: ایمل ها دریافت نمایید
       feed: برای حمایت سبسکرایب نمایید
     type:
+      ":":
       adhoc_advisory_group: گروه مشاورهء موقت
       advisory_ndpb: نهاد عمومی مشورتی غیردیپارتمنت
       civil_service: خدمات شهری
+      court:
+      devolved_administration:
       executive_agency: نماینده گی اجرایی
       executive_ndpb: نهاد عمومی اجرایی غیر دیپارتمنت
+      executive_office:
       independent_monitoring_body: نهاد نظارت مستقل
+      ministerial_department:
       non_ministerial_department: دیپارتمنت غیر وزیری
       other: موارد دیگر
       public_corporation: شرکت سهامی عامه
+      sub_organisation:
       tribunal: دادگاه
     view_all: مشاهدهء همه موارد
     view_less: مشاهدهء مواردی کمتر

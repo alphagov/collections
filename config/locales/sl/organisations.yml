@@ -465,15 +465,21 @@ sl:
       email: Prejemajte e-sporočila
       feed: Naročite se na novice
     type:
+      ":":
       adhoc_advisory_group: Ad-hoc svetovalna skupina
       advisory_ndpb: Svetovalna nevladna javna organizacija
       civil_service: Civilna služba
+      court:
+      devolved_administration:
       executive_agency: Izvajalska agencija
       executive_ndpb: Izvajalska nevladna javna organizacija
+      executive_office:
       independent_monitoring_body: Neodvisni organ za spremljanje
+      ministerial_department:
       non_ministerial_department: Neministrski oddelek
       other: Drugo
       public_corporation: Javna družba
+      sub_organisation:
       tribunal: Sodišče
     view_all: Prikaži vse
     view_less: Prikaži manj

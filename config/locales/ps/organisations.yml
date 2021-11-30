@@ -317,15 +317,21 @@ ps:
       email: بریښنالیکونه ترلاسه کړئ
       feed: فیډ کې ګډون وکړئ
     type:
+      ":":
       adhoc_advisory_group: د عادلانه مشورتي ګروپ
       advisory_ndpb: مشورتي غیر څانګې عامه اداره
       civil_service: ملکي خدمت
+      court:
+      devolved_administration:
       executive_agency: اجرایوي اداره
       executive_ndpb: اجرایوي غیر ډیپارټمنټ عامه اداره
+      executive_office:
       independent_monitoring_body: د څارنې خپلواکه اداره
+      ministerial_department:
       non_ministerial_department: بې وزله څانګه
       other: نور
       public_corporation: عامه شرکت
+      sub_organisation:
       tribunal: محکمه
     view_all: ټول وګوری
     view_less: لږ لیدل

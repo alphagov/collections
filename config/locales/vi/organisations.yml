@@ -317,15 +317,21 @@ vi:
       email: Nhận email
       feed: Đăng ký nguồn cấp dữ liệu
     type:
+      ":":
       adhoc_advisory_group: Nhóm cố vấn đặc biệt
       advisory_ndpb: Cơ quan công quyền tham vấn không thuộc ban/bộ
       civil_service: Dịch vụ dân sự
+      court:
+      devolved_administration:
       executive_agency: Cơ quan điều hành
       executive_ndpb: Cơ quan công quyền không thuộc ban/bộ
+      executive_office:
       independent_monitoring_body: Cơ quan giám sát độc lập
+      ministerial_department:
       non_ministerial_department: Bộ phận không thuộc bộ
       other: Khác
       public_corporation: Công ty đại chúng
+      sub_organisation:
       tribunal: Tòa án
     view_all: xem tất cả
     view_less: rút gọn

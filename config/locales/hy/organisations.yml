@@ -317,15 +317,21 @@ hy:
       email: Ստանալ էլ․ հաղորդագրություններ
       feed: Բաժանորդագրվել նորություւններին
     type:
+      ":":
       adhoc_advisory_group: Հատուկ խորհրդատվական խումբ
       advisory_ndpb: Խորհրդատվական ոչ գերատեսչական հասարակական կազմակերպություն
       civil_service: Քաղաքացիական ծառայություն
+      court:
+      devolved_administration:
       executive_agency: Գործադիր մարմին
       executive_ndpb: Գործադիր ոչ գերատեսչական հասարակական կազմակերպություն
+      executive_office:
       independent_monitoring_body: Մշտադիտարկող անկախ մարմին
+      ministerial_department:
       non_ministerial_department: Ոչ նախարարական գերատեսչություն
       other: Այլ
       public_corporation: Հասարակական կորպորացիա
+      sub_organisation:
       tribunal: Տրիբունալ
     view_all: ցույց տալ  բոլորը
     view_less: ցույց տալ ավելի շատ

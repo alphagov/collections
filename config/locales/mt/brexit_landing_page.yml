@@ -5,6 +5,13 @@ mt:
     meta_title: Brexit
     page_header: Brexit
     page_header_explainer: Regoli ġodda japplikaw għal affarijiet bħal ivvjaġġar u kif tagħmel negozju mal-Ewropa. Uża l-Brexit checker biex tieħu lista personalizzata ta' azzjonijiet għalik, għan-negozju tiegħek u għall-familja.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: relatati mal-Brexit
       guidance_and_regulation: Gwida u regolamenti
@@ -15,3 +22,5 @@ mt:
       transparency: Rilaxxi dwar trasparenza u l-libertà tal-informazzjoni
     topic_section_header: L-Informazzjoni kollha dwar Brexit
     topic_section_subheading: Qalleb fl-informazzjoni kollha relatata mal-Brexit
+    trade_deal_heading:
+    trade_deal_links:

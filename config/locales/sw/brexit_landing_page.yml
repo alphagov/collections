@@ -5,6 +5,13 @@ sw:
     meta_title: Brexit
     page_header: Brexit
     page_header_explainer: Kanuni mpya zinatumika kwenye mambo kama vile usafiri na kufanya biashara na Ulaya. Tumia kiteuzi cha Brexit ili upate orodha ya hatua za kuchukua zinazofaa kwa ajili yako, biashara na familia yako.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: inayohusiana na Brexit
       guidance_and_regulation: Mwongozo na kanuni
@@ -15,3 +22,5 @@ sw:
       transparency: Taarifa za uwazi na uhuru wa kupata habari
     topic_section_header: Maelezo yote kuhusu Brexit
     topic_section_subheading: Vinjari maelezo yote yanayohusiana na Brexit
+    trade_deal_heading:
+    trade_deal_links:

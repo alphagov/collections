@@ -5,6 +5,13 @@ ro:
     meta_title: Brexit
     page_header: Brexit
     page_header_explainer: Noile reglementări se aplică la călătorii și afaceri cu Europa. Folosiți verificatorul Brexit pentru a primi o listă de acțiuni personalizate pentru dvs., compania și familia dvs.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: cu privire la Brexit
       guidance_and_regulation: Îndrumări și reglementări
@@ -15,3 +22,5 @@ ro:
       transparency: Transparența și libertatea comunicării de informații
     topic_section_header: Toate informațiile despre Brexit
     topic_section_subheading: Navigați prin toate informațiile legate de Brexit
+    trade_deal_heading:
+    trade_deal_links:

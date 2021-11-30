@@ -317,15 +317,21 @@ ja:
       email: メールを受け取る
       feed: フィードを購読する
     type:
+      ":":
       adhoc_advisory_group: 特別顧問団
       advisory_ndpb: 諮問公共機関 (非部門)
       civil_service: 公務員
+      court:
+      devolved_administration:
       executive_agency: 執行機関
       executive_ndpb: 行政機関 (非部門)
+      executive_office:
       independent_monitoring_body: 独立監視機関
+      ministerial_department:
       non_ministerial_department: 非閣僚部門
       other: その他
       public_corporation: 公共団体
+      sub_organisation:
       tribunal: 審判所
     view_all: すべて表示
     view_less: 一部を表示

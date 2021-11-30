@@ -317,6 +317,7 @@ en:
       email: Get emails
       feed: Subscribe to feed
     type:
+      ":":
       adhoc_advisory_group: Ad-hoc advisory group
       advisory_ndpb: Advisory non-departmental public body
       civil_service: Civil service

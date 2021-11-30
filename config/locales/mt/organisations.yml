@@ -463,15 +463,21 @@ mt:
       email: Irċievi l-imejls
       feed: Abbona għall-feed
     type:
+      ":":
       adhoc_advisory_group: Grupp konsultattiv ad-hoc
       advisory_ndpb: Korp pubbliku konsultattiv mingħajr dipartiment
       civil_service: Servizz ċivili
+      court:
+      devolved_administration:
       executive_agency: Aġenzija eżekuttiva
       executive_ndpb: Korp pubbliku eżekuttiv mingħajr dipartiment
+      executive_office:
       independent_monitoring_body: Korp ta' monitoraġġ indipendenti
+      ministerial_department:
       non_ministerial_department: Dipartiment mhux ministerjali
       other: Oħrajn
       public_corporation: Korporazzjoni Pubblika
+      sub_organisation:
       tribunal: Tribunal
     view_all: ara kollox
     view_less: ara inqas

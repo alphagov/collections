@@ -317,15 +317,21 @@ it:
       email: Ricevi e-mail
       feed: Iscriviti al feed
     type:
+      ":":
       adhoc_advisory_group: Gruppo di consulenza ad-hoc
       advisory_ndpb: Ente pubblico di consulenza non dipartimentale
       civil_service: Servizio civile
+      court:
+      devolved_administration:
       executive_agency: Agenzia esecutiva
       executive_ndpb: Ente pubblico esecutivo non dipartimentale
+      executive_office:
       independent_monitoring_body: Ente di monitoraggio indipendente
+      ministerial_department:
       non_ministerial_department: Dipartimento non ministeriale
       other: Altro
       public_corporation: Azienda pubblica
+      sub_organisation:
       tribunal: Tribunale
     view_all: visualizza tutto
     view_less: visualizza meno

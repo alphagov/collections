@@ -5,6 +5,13 @@ ru:
     meta_title: Брексит
     page_header: Брексит
     page_header_explainer: 'Новые правила применяются к таким вещам как путешествия и ведение бизнеса в Европе. При помощи Брексит чекера получите индивидуальные список действий для себя, своего бизнеса и своей семьи. '
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: связанный с Брексит
       guidance_and_regulation: Руководство и инструкции
@@ -15,3 +22,5 @@ ru:
       transparency: Новые редакции закона о свободе распространения и прозрачности информации
     topic_section_header: Вся информация по Брексит
     topic_section_subheading: Скачать всю информацию, связанную с Брексит
+    trade_deal_heading:
+    trade_deal_links:

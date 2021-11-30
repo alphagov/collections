@@ -613,15 +613,21 @@ ar:
       email: احصل على رسائل البريد الإلكتروني
       feed: اشترك في التغذية
     type:
+      ":":
       adhoc_advisory_group: مجموعة استشارية مخصصة
       advisory_ndpb: هيئة عامة استشارية غير تابعة للإدارات
       civil_service: الخدمة المدنية
+      court:
+      devolved_administration:
       executive_agency: وكالة تنفيذية
       executive_ndpb: هيئة عامة تنفيذية غير تابعة للإدارات
+      executive_office:
       independent_monitoring_body: هيئة رقابية مستقلة
+      ministerial_department:
       non_ministerial_department: إدارة غير وزارية
       other: أخرى
       public_corporation: مؤسسة عامة
+      sub_organisation:
       tribunal: هيئة قضائية
     view_all: عرض الكل
     view_less: عرض أقل

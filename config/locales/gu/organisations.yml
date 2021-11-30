@@ -315,15 +315,21 @@ gu:
       email: ઈમેલ્સ મેળવો
       feed: ફીડ માટે સબ્સ્ક્રાઈબ કરો
     type:
+      ":":
       adhoc_advisory_group: એડ-હોક સલાહકાર જૂથ
       advisory_ndpb: સલાહકાર, બિન-વિભાગીય જાહેર સંસ્થા
       civil_service: નાગરિક સેવા
+      court:
+      devolved_administration:
       executive_agency: એક્ઝિક્યુટિવ એજન્સી
       executive_ndpb: એક્ઝિક્યુટિવ બિન-વિભાગીય જાહેર સંસ્થા
+      executive_office:
       independent_monitoring_body: સ્વતંત્ર દેખરેખ સંસ્થા
+      ministerial_department:
       non_ministerial_department: બિન-મંત્રી વિભાગ
       other: અન્ય
       public_corporation: પબ્લિક કોર્પોરેશન
+      sub_organisation:
       tribunal: ટ્રિબ્યુનલ
     view_all: બધા જુઓ
     view_less: ઓછા જુઓ

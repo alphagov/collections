@@ -5,6 +5,13 @@ hi:
     meta_title: ब्रेक्सिट
     page_header: ब्रेक्सिट
     page_header_explainer: नए नियम यूरोप में यात्रा करने और व्यापार करने जैसी चीज़ों पर लागू होते हैं। ब्रेक्सिट चेकर का उपयोग करके खुद के, अपने व्यवसाय और अपने परिवार के लिए कार्रवाइयों की पर्सनलाइज़ लिस्ट पाएं।
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: ब्रेक्सिट से संबंधित
       guidance_and_regulation: मार्गदर्शन और विनियमन
@@ -15,3 +22,5 @@ hi:
       transparency: पारदर्शिता और सूचना जारी करने की आज़ादी
     topic_section_header: ब्रेक्सिट की सभी जानकारी
     topic_section_subheading: ब्रेक्सिट से संबंधित सभी जानकारी ब्राउज़ करें
+    trade_deal_heading:
+    trade_deal_links:

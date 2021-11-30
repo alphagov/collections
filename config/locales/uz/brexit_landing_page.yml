@@ -5,6 +5,13 @@ uz:
     meta_title: Брексит
     page_header: Брексит
     page_header_explainer: Янги қоидалари Европага саёҳат ва у билан бизнесни юритиш каби шундай масалаларга нисбатан қўлланилади. Ўзингиз, бизнесингиз ва оилангиз учун ҳаракатларнинг шахсий рўйхатини олиш учун Брексит бўйича текширишлар дастуридан фойдаланинг.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: Брексит билан боғлиқ
       guidance_and_regulation: Қўлланма ва низом
@@ -15,3 +22,5 @@ uz:
       transparency: Шаффофлик ва маълумотларни ошкор қилиш эркинлиги
     topic_section_header: Брексит ҳақида барча маълумотлар
     topic_section_subheading: Брексит билан боғлиқ бўлган барча маълумотларни кўриш
+    trade_deal_heading:
+    trade_deal_links:

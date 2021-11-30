@@ -5,6 +5,13 @@ he:
     meta_title: ברקזיט
     page_header: ברקזיט
     page_header_explainer: 'כללים חדשים חלים על דברים כמו נסיעות ועשיית עסקים עם אירופה. השתמש בבודק הברקזיט כדי לקבל רשימה אישית של פעולות עבורך, לעסק ולמשפחתך.  '
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: קשור לברקזיט
       guidance_and_regulation: הדרכה ותקנה
@@ -15,3 +22,5 @@ he:
       transparency: שקיפות וחופש פרסומי מידע
     topic_section_header: כל המידע על הברקזיט
     topic_section_subheading: צפה בכל המידע הקשור לברקזיט
+    trade_deal_heading:
+    trade_deal_links:

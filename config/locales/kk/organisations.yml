@@ -317,15 +317,21 @@ kk:
       email: Электрондық хаттарды алу
       feed: Арнаға жазылу
     type:
+      ":":
       adhoc_advisory_group: Арнайы кеңес тобы
       advisory_ndpb: Кеңестік ведомстволық емес мемлекеттік орган
       civil_service: Мемлекеттік қызмет
+      court:
+      devolved_administration:
       executive_agency: Атқарушы агенттік
       executive_ndpb: Атқарушылық ведомстволық емес мемлекеттік орган
+      executive_office:
       independent_monitoring_body: Тәуелсіз бақылау органы
+      ministerial_department:
       non_ministerial_department: Министрлік емес бөлім
       other: Басқа
       public_corporation: Ашық акционерлік қоғамы
+      sub_organisation:
       tribunal: Сот орны
     view_all: барлығын қарау
     view_less: азырақ қарау

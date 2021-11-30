@@ -465,15 +465,21 @@ sr:
       email: Želim da dobijam e-poruke
       feed: Pretplatite se na fid
     type:
+      ":":
       adhoc_advisory_group: Namenske grupe za savetovanje
       advisory_ndpb: Neresorno javno telo za savetovanje
       civil_service: Civilna služba
+      court:
+      devolved_administration:
       executive_agency: Izvršna agencija
       executive_ndpb: Izvršno neresorno javno telo
+      executive_office:
       independent_monitoring_body: Nezavisno nadzorno telo
+      ministerial_department:
       non_ministerial_department: Odeljenje bez feljtona
       other: Drugo
       public_corporation: Javno preduzeće
+      sub_organisation:
       tribunal: Tribunal
     view_all: prikaži sve
     view_less: prikaži manje

@@ -5,6 +5,13 @@ sq:
     meta_title: Brexit
     page_header: Brexit
     page_header_explainer: Rregullat e reja zbatohen për gjëra të tilla si udhëtimi dhe të bërit biznes me Evropën. Përdorni kontrolluesin e Brexit për të marrë një listë të personalizuar veprimesh për ju, biznesin tuaj dhe familjen tuaj.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: lidhur me Brexit
       guidance_and_regulation: Udhëzim dhe rregullore
@@ -15,3 +22,5 @@ sq:
       transparency: Transparenca dhe liria e publikimit të informacionit
     topic_section_header: Të gjitha informacionet për Brexit
     topic_section_subheading: Shfletoni të gjitha informacionet në lidhje me Brexit
+    trade_deal_heading:
+    trade_deal_links:

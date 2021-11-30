@@ -5,6 +5,13 @@ si:
     meta_title: බ්රෙක්සිට්
     page_header: බ්රෙක්සිට්
     page_header_explainer: යුරෝපයේ සංචාරය කිරීම සහ එය සමඟ ව්යාපාර කිරීම වැනි දේවල් සඳහා නව නීති අදාළ වේ. ඔබට, ඔබේ ව්‍යාපාරය සහ ඔබේ පවුලට පුද්ගලාරෝපිත ක්රියා ලැයිස්තුවක් ලබා ගැනීම සඳහා බ්රෙක්සිට් පරීක්ෂකය භාවිතා කරන්න.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: බ්රෙක්සිට් හා සම්බන්ධිත
       guidance_and_regulation: මඟපෙන්වීම සහ නියාමනය
@@ -15,3 +22,5 @@ si:
       transparency: විනිවිදභාවය සහ තොරතුරු නිදහස පිළිබඳ නිකුත් කිරීම්
     topic_section_header: සියලු බ්රෙක්සිට් තොරතුරු
     topic_section_subheading: බ්රෙක්සිට් හා සම්බන්ධ සියලු තොරතුරු පිරික්සන්න
+    trade_deal_heading:
+    trade_deal_links:

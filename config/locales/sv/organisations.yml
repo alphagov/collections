@@ -317,15 +317,21 @@ sv:
       email: Få e-post
       feed: Prenumerera på flöde
     type:
+      ":":
       adhoc_advisory_group: Rådgivande ad hoc-grupp
       advisory_ndpb: Rådgivande offentligt organ som inte är en avdelning
       civil_service: Offentlig förvaltning
+      court:
+      devolved_administration:
       executive_agency: Genomförandeorgan
       executive_ndpb: Exekutivt offentligt organ som inte är en del av ett ministerium
+      executive_office:
       independent_monitoring_body: Oberoende övervakningsorgan
+      ministerial_department:
       non_ministerial_department: Icke-ministeriell avdelning
       other: Annan
       public_corporation: Offentligt bolag
+      sub_organisation:
       tribunal: Tribunal
     view_all: Visa alla
     view_less: visa mindre

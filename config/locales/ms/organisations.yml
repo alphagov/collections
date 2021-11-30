@@ -317,15 +317,21 @@ ms:
       email: Dapatkan e-mel
       feed: Langgani siaran maklumat
     type:
+      ":":
       adhoc_advisory_group: Kumpulan penasihat ad hoc
       advisory_ndpb: Penasihat badan awam bukan jabatan
       civil_service: Perkhidmatan awam
+      court:
+      devolved_administration:
       executive_agency: Agensi eksekutif
       executive_ndpb: Eksekutif badan awam bukan jabatan
+      executive_office:
       independent_monitoring_body: Badan pemantauan bebas
+      ministerial_department:
       non_ministerial_department: Jabatan bukan kementerian
       other: Lain-lain
       public_corporation: Perbadanan awam
+      sub_organisation:
       tribunal: Tribunal
     view_all: lihat semua
     view_less: lihat sedikit

@@ -317,15 +317,21 @@ et:
       email: Hangi e-kirju
       feed: Telli voog
     type:
+      ":":
       adhoc_advisory_group: Ajutine nõuanderühm
       advisory_ndpb: Nõuandev osakondadeväline avalik asutus
       civil_service: Tsiviilteenistus
+      court:
+      devolved_administration:
       executive_agency: Täitevasutus
       executive_ndpb: Osakondadeväline avalik-õiguslik asutus
+      executive_office:
       independent_monitoring_body: Sõltumatu järelevalveasutus
+      ministerial_department:
       non_ministerial_department: Ministeeriumiväline osakond
       other: Muu
       public_corporation: Avalik ettevõte
+      sub_organisation:
       tribunal: Kohus
     view_all: vaata kõiki
     view_less: vaata vähem

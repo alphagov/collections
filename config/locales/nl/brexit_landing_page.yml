@@ -5,6 +5,13 @@ nl:
     meta_title: Brexit
     page_header: Brexit
     page_header_explainer: Er gelden nieuwe regels voor zaken als reizen en zakendoen met Europa. Gebruik de Brexit-checker voor een gepersonaliseerde lijst van acties voor u, uw bedrijf en uw gezin.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: in verband met Brexit
       guidance_and_regulation: Richtlijnen en regelgeving
@@ -15,3 +22,5 @@ nl:
       transparency: Transparantie en vrijheid van informatie
     topic_section_header: Alle informatie over Brexit
     topic_section_subheading: Blader door alle informatie met betrekking tot Brexit
+    trade_deal_heading:
+    trade_deal_links:

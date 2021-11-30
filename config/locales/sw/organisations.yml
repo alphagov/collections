@@ -317,15 +317,21 @@ sw:
       email: Pata barua pepe
       feed: Jisajili ili upokee mipasho
     type:
+      ":":
       adhoc_advisory_group: Kikundi cha ushauri kisicho rasmi
       advisory_ndpb: Shirika la serikali la ushauri lisilo la kiidara
       civil_service: Huduma ya umma
+      court:
+      devolved_administration:
       executive_agency: Shirika kuu
       executive_ndpb: Shirika kuu la serikali lisilo la kiidara
+      executive_office:
       independent_monitoring_body: Shirika huru la uchunguzi
+      ministerial_department:
       non_ministerial_department: Idara isiyo na waziri
       other: Nyingine
       public_corporation: Shirika la umma
+      sub_organisation:
       tribunal: Mahakama
     view_all: angalia zote
     view_less: angalia chache

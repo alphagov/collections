@@ -317,15 +317,21 @@ az:
       email: E-məktublar alın
       feed: Veb-kanala abunə olun
     type:
+      ":":
       adhoc_advisory_group: Xüsusi məsləhətçilər qrupu
       advisory_ndpb: Müstəqil və məsləhətçi qeyri-hökumət təşkilatı
       civil_service: Dövlət xidməti
+      court:
+      devolved_administration:
       executive_agency: İcra hakimiyyəti orqanı
       executive_ndpb: İcraçı qeyri-hökumət təşkilatı
+      executive_office:
       independent_monitoring_body: Müstəqil monitorinq təşkilatı
+      ministerial_department:
       non_ministerial_department: Nazirliklə əlaqəli olmayan departament
       other: Digər
       public_corporation: Dövlət korporasiyası
+      sub_organisation:
       tribunal: Məhkəmə kollegiyası
     view_all: hamısını nəzərdən keçirin
     view_less: daha azına baxın

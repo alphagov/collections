@@ -329,15 +329,21 @@ da:
       email: Få e-mails
       feed: Abonner på feed
     type:
+      ":":
       adhoc_advisory_group: Ad hoc-rådgivende gruppe
       advisory_ndpb: Rådgivende ikke-departementalt offentligt organ
       civil_service: Offentligt arbejde
+      court:
+      devolved_administration:
       executive_agency: Forvaltningsorgan
       executive_ndpb: Rådgivende ikke-departementalt offentligt organ
+      executive_office:
       independent_monitoring_body: Uafhængigt kontrolorgan
+      ministerial_department:
       non_ministerial_department: Ikke-ministeriel afdeling
       other: Anden
       public_corporation: Offentligt selskab
+      sub_organisation:
       tribunal: Tribunal
     view_all: se alle
     view_less: se mindre

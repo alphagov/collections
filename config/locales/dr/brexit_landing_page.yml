@@ -7,6 +7,13 @@ dr:
     meta_title: برکست
     page_header: برکست
     page_header_explainer: "قوانینی جدیدی در مواردی همچون سفر و تجارت با اروپا اعمال میشود. \nجهت دریافت فهرستی خصوصی اقدامات برای خودتان، کسب و کار و فامیل خود از بررسی کنندهء برکست استفاده نمایید."
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
       aria_string_suffix: مرتبط با برکست
       guidance_and_regulation: راهنمایی و قانون
@@ -17,3 +24,5 @@ dr:
       transparency: شفافیت و آزادی انتشار اطلاعات
     topic_section_header: تمام معلومات برکست
     topic_section_subheading: تمام اطلاعات مربوط به برکست را جستجو نمایید
+    trade_deal_heading:
+    trade_deal_links:
