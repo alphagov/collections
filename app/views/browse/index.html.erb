@@ -10,6 +10,8 @@
 <h1 class="govuk-visually-hidden"><%= t("shared.browse.title") %></h1>
 
 <div class="browse" data-module="browse-columns gem-track-click">
+  <div id="subsection" class="browse__subsection-pane"></div>
+  <div id="section" class="browse__section-pane"></div>
   <%= render 'top_level_browse_pages',
     top_level_browse_pages: page.top_level_browse_pages %>
 </div>

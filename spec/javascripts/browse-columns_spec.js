@@ -2,13 +2,17 @@ describe('browse-columns.js', function () {
   var el
   var fixture =
     '<div class="gem-c-breadcrumbs"></div>' +
-    '<div id="root" class="pane root-pane">' +
-      '<h2 class="govuk-visually-hidden" tabindex="-1">All categories</h2>' +
-      '<ul>' +
-        '<li>' +
-          '<a data-track-category="firstLevelBrowseLinkClicked" data-track-action="1" data-track-label="/browse/benefits" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Benefits&quot;}" class="govuk-link" href="/browse/benefits">Benefits</a>' +
-        '</li>' +
-      '</ul>' +
+    '<div id="browse">' +
+      '<div id="subsection" class="browse__subsection-pane"></div>' +
+      '<div id="section" class="browse__section-pane"></div>' +
+      '<div id="root" class="pane root-pane">' +
+        '<h2 class="govuk-visually-hidden" tabindex="-1">All categories</h2>' +
+        '<ul>' +
+          '<li>' +
+            '<a data-track-category="firstLevelBrowseLinkClicked" data-track-action="1" data-track-label="/browse/benefits" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Benefits&quot;}" class="govuk-link" href="/browse/benefits">Benefits</a>' +
+          '</li>' +
+        '</ul>' +
+      '</div>' +
     '</div>'
 
   var metatags = ['govuk:content-id', 'govuk:navigation-page-type']
@@ -73,7 +77,7 @@ describe('browse-columns.js', function () {
   })
 
   it('should cache objects', function () {
-    var bc = new window.GOVUK.Modules.BrowseColumns(document.createElement('div'))
+    var bc = new window.GOVUK.Modules.BrowseColumns(el)
     bc.init()
 
     expect(bc.sectionCache('object-name')).toBe(undefined)
@@ -83,7 +87,7 @@ describe('browse-columns.js', function () {
   })
 
   it('should set page title with the GOV.UK suffix', function () {
-    var bc = new window.GOVUK.Modules.BrowseColumns(document.createElement('div'))
+    var bc = new window.GOVUK.Modules.BrowseColumns(el)
     bc.init()
     bc.setTitle('new-title')
 
@@ -170,7 +174,7 @@ describe('browse-columns.js', function () {
   })
 
   it('should parse a pathname', function () {
-    var bc = new window.GOVUK.Modules.BrowseColumns(document.createElement('div'))
+    var bc = new window.GOVUK.Modules.BrowseColumns(el)
     bc.init()
 
     var paths = [
@@ -206,7 +210,7 @@ describe('browse-columns.js', function () {
         breadcrumbs: '<div class="gem-c-breadcrumbs"><script type="application/ld+json">{"something":"other"}</script><ol><li>one</li><li>two</li></ol></div>'
       }
     }
-    var bc = new window.GOVUK.Modules.BrowseColumns(document.createElement('div'))
+    var bc = new window.GOVUK.Modules.BrowseColumns(el)
     bc.init()
     bc.updateBreadcrumbs.call(context, cachedData)
     expect($(context.$breadcrumbs).find('li').length).toEqual(2)
@@ -219,7 +223,7 @@ describe('browse-columns.js', function () {
       path: 'foo'
     }
 
-    var bc = new window.GOVUK.Modules.BrowseColumns(document.createElement('div'))
+    var bc = new window.GOVUK.Modules.BrowseColumns(el)
     bc.init()
     bc.trackPageview(state)
 

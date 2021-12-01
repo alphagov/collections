@@ -16,8 +16,6 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     this.$subsection = this.$module.querySelector('#subsection')
     this.$breadcrumbs = document.querySelector('.gem-c-breadcrumbs')
 
-    this.createSections()
-
     this.displayState = this.$module.getAttribute('data-state')
     if (typeof this.displayState === 'undefined') {
       this.displayState = 'root'
@@ -28,22 +26,6 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
     this.$module.addEventListener('click', this.navigate.bind(this))
     window.addEventListener('popstate', this.popState.bind(this))
-  }
-
-  BrowseColumns.prototype.createSections = function () {
-    if (!this.$section) {
-      this.$section = document.createElement('div')
-      this.$section.setAttribute('id', 'section')
-      this.$section.setAttribute('class', 'browse__section-pane')
-      this.$module.insertBefore(this.$section, this.$module.firstChild)
-    }
-
-    if (!this.$subsection) {
-      this.$subsection = document.createElement('div')
-      this.$subsection.setAttribute('id', 'subsection')
-      this.$subsection.setAttribute('class', 'browse__subsection-pane')
-      this.$module.insertBefore(this.$subsection, this.$module.firstChild)
-    }
   }
 
   BrowseColumns.prototype.navigate = function (event) {
