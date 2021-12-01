@@ -3,8 +3,10 @@ class FetchCoronavirusStatisticsService
 
   Statistics = Struct.new(:cumulative_first_dose_vaccinations,
                           :cumulative_second_dose_vaccinations,
+                          :cumulative_third_dose_vaccinations,
                           :percentage_first_vaccine,
                           :percentage_second_vaccine,
+                          :percentage_third_vaccine,
                           :cumulative_vaccinations_date,
                           :hospital_admissions,
                           :current_week_hospital_admissions,
@@ -65,8 +67,10 @@ private
           "date" => "date",
           "cumulativeFirstDoseVaccinations" => "cumPeopleVaccinatedFirstDoseByPublishDate",
           "cumulativeSecondDoseVaccinations" => "cumPeopleVaccinatedSecondDoseByPublishDate",
+          "cumulativeThirdDoseVaccinations" => "cumPeopleVaccinatedThirdInjectionByPublishDate",
           "percentageFirstVaccine" => "cumVaccinationFirstDoseUptakeByPublishDatePercentage",
           "percentageSecondVaccine" => "cumVaccinationSecondDoseUptakeByPublishDatePercentage",
+          "percentageThirdVaccine" => "cumVaccinationThirdInjectionUptakeByPublishDatePercentage",
           "hospitalAdmissions" => "newAdmissions",
           "newPositiveTests" => "newCasesByPublishDate",
         }.to_json,
@@ -91,8 +95,10 @@ private
     latest_vaccinations = data.find do |d|
       d["cumulativeFirstDoseVaccinations"] &&
         d["cumulativeSecondDoseVaccinations"] &&
+        d["cumulativeThirdDoseVaccinations"] &&
         d["percentageFirstVaccine"] &&
-        d["percentageSecondVaccine"]
+        d["percentageSecondVaccine"] &&
+        d["percentageThirdVaccine"]
     end
 
     return {} unless latest_vaccinations
@@ -100,8 +106,10 @@ private
     {
       cumulative_first_dose_vaccinations: latest_vaccinations["cumulativeFirstDoseVaccinations"],
       cumulative_second_dose_vaccinations: latest_vaccinations["cumulativeSecondDoseVaccinations"],
+      cumulative_third_dose_vaccinations: latest_vaccinations["cumulativeThirdDoseVaccinations"],
       percentage_first_vaccine: latest_vaccinations["percentageFirstVaccine"],
       percentage_second_vaccine: latest_vaccinations["percentageSecondVaccine"],
+      percentage_third_vaccine: latest_vaccinations["percentageThirdVaccine"],
       cumulative_vaccinations_date: Date.parse(latest_vaccinations["date"]),
     }
   end
