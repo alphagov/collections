@@ -1,12 +1,12 @@
 ---
 ka:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: სახლი
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
+      prefix: 'ნახვა:'
+      title: GOV.UK-ს ნახვა
+    get_emails: ამ თემის შესახებ ელ.წერილების მიღება
+    language_direction: ltr
     language_name: ქართული
     topics:
-      title:
+      title: "%{title}: დეტალური ინფორმაცია"

@@ -1,8 +1,8 @@
 ---
 hy:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Ուսումնասիրել ենթաթեմաները
+    organisations: Կազմակերպություններ
+    see_all_in_topic: Դիտել ավելին %{type} այս թեմայի վերաբերյալ
+    show_fewer_orgs: Ցույց տալ ավելի քիչ կազմակերպություններ
+    show_more_orgs: Ցույց տալ ավելի շատ կազմակերպություններ

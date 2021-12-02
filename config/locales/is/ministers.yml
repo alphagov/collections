@@ -1,9 +1,9 @@
 ---
 is:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Sækir líka ríkisstjórnarfundi
+    by_department: Ráðherrar eftir deildum
+    cabinet: Ráðherrar í ríkisstjórn
+    govuk_title: Ráðherrar - GOV.UK
+    title: Ráðherrar
+    whips: Þingflokksformenn

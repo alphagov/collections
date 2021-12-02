@@ -1,12 +1,12 @@
 ---
 pl:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Strona główna
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
+      prefix: 'Przeglądaj:'
+      title: Przeglądaj GOV.UK
+    get_emails: Otrzymuj wiadomości e-mailna ten temat
+    language_direction: ltr
     language_name: Polski
     topics:
-      title:
+      title: "%{title}: szczegółowe informacje"

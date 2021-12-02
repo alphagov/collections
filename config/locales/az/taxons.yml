@@ -1,8 +1,8 @@
 ---
 az:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Alt mövzunu tədqiq edin
+    organisations: Təşkilatlar
+    see_all_in_topic: Bu mövzu üzrə daha çox %{type} baxın
+    show_fewer_orgs: Daha az təşkilat göstər
+    show_more_orgs: Daha çox təşkilat göstər

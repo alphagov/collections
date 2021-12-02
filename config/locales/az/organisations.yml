@@ -1,259 +1,341 @@
 ---
 az:
   organisations:
-    about_page_path:
-    administered_by:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: İdarə edənlər
     breadcrumbs:
-      courts_and_tribunals:
-      organisations:
+      courts_and_tribunals: Məhkəmə və məhkəmə kollegiyaları
+      organisations: Təşkilatlar
     contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
+      contact_details: Əlaqə məlumatları
+      contact_form: 'Əlaqə saxlamaq üçün forma: %{title}'
+      contact_organisation: Əlaqə saxlanan %{organisation}
+      email: E-poçt
+      telephone: Telefon
     content_item:
       schema_name:
         aaib_report:
-          other:
+          one: Təyyarə qəzalarının araşdırılması üzrə şöbə hesabatı
+          other: Təyyarə qəzalarının araşdırılması üzrə şöbə hesabatları
         announcement:
+          one: Elan
           other: Elanlar
         asylum_support_decision:
-          other:
+          one: Sığınacaq dəstəyi üzrə məhkəmə kollegiyası qərarı
+          other: Sığınacaq dəstəyi üzrə məhkəmə kollegiyası qərarları
         authored_article:
-          other:
+          one: Müəlliflik edilmiş məqalə
+          other: Müəlliflik edilmiş məqalələr
         business_finance_support_scheme:
-          other:
+          one: Biznesin maliyələşdirilməsinə dəstək sxemi
+          other: Biznesin maliyələşdirilməsinə dəstək sxemləri
         case_study:
-          other: Öyrənilib
+          one: Nümunə üzrə araşdırma
+          other: Nümunə üzrə araşdırmalar
         closed_consultation:
-          other: Bağlı məslətləşmələr
+          one: Qapalı məsləhətləşmə
+          other: Qapalı məsləhətləşmələr
         cma_case:
-          other:
+          one: Rəqabət və Bazar üzrə səlahiyyət məsələsi
+          other: Rəqabət və Bazar üzrə səlahiyyət məsələləri
         coming_soon:
-          other:
+          one: Tezliklə
+          other: Tezliklə
         consultation:
-          other: məsləhətləşmələr
+          one: Məsləhətləşmə
+          other: Məsləhətləşmələr
         consultation_outcome:
-          other: məsləhətləşmənin nəticələri
+          one: Məsləhətləşmə nəticəsi
+          other: Məsləhətləşmə nəticələri
         corporate_information_page:
-          other:
+          one: Məlumat səhifəsi
+          other: Məlumat səhifələri
         corporate_report:
-          other: birgə məruzələr
+          one: Şirkətin fəaliyyəti üzrə hesabat
+          other: Şirkətin fəaliyyəti üzrə hesabatlar
         correspondence:
+          one: Yazışma
           other: Yazışmalar
         countryside_stewardship_grant:
-          other:
+          one: Kənddə idarəetmə üçün maliyyə təşviqi
+          other: Kənddə idarəetmə üçün maliyyə təşviqləri
         decision:
-          other:
+          one: Qərar
+          other: Qərarlar
         detailed_guide:
-          other: ətraflı məlumat
+          one: Göstəriş
+          other: Göstəriş
         dfid_research_output:
-          other:
+          one: İnkişafın nəticəsi üçün araşdırma
+          other: İnkişafın nəticələri üçün araşdırma
         document_collection:
-          other:
+          one: Yığım
+          other: Yığımlar
         draft_text:
-          other: hazırlanmış mətn
+          one: Hazırlanan mətn
+          other: Hazırlanan mətnlər
         drug_safety_update:
-          other:
+          one: Dərman təhlükəsizliyi üzrə yeniləmə
+          other: Dərman təhlükəsizliyi üzrə yeniləmələr
         employment_appeal_tribunal_decision:
-          other:
+          one: İş şikayətləri üzrə məhkəmə kollegiyası qərarı
+          other: İş şikayətləri üzrə məhkəmə kollegiyası qərarları
         employment_tribunal_decision:
-          other:
+          one: İşlə əlaqəli məhkəmə kollegiyası qərarı
+          other: İşlə əlaqəli məhkəmə kollegiyası qərarları
         esi_fund:
-          other:
+          one: Avropa struktur və investisiya fondu (ESIF)
+          other: Avropa struktur və investisiya fondları (ESIF)
         fatality_notice:
-          other: səhvlə bağlı qeydlər
+          one: Ölüm hadisəsi bildirişi
+          other: Ölüm hadisəsi bildirişləri
         foi_release:
-          other: Məlumat azadlığı ilə bağlı açıqlamalar
+          one: Məlumat əldə etmə azadlığı buraxılışı
+          other: Məlumat əldə etmə azadlığı buraxılışları
         form:
+          one: Forma
           other: Formalar
         government_response:
-          other:
+          one: Hökumətin reaksiyası
+          other: Hökumətin reaksiyaları
         guidance:
-          other: İnstruksiya
+          one: Göstəriş
+          other: Göstəriş
         impact_assessment:
-          other: Dəyərləndirmə
+          one: Təsirin dəyərləndirilməsi
+          other: Təsirin dəyərləndirilmələri
         imported:
-          other:
+          one: idxal edilmiş - gözlənilən növ
+          other: idxal edilmiş - gözlənilən növ
         independent_report:
-          other: Müstəqil məruzələr
+          one: Müstəqil hesabat
+          other: Müstəqil hesabatlar
         international_development_fund:
-          other:
+          one: İnkişaf üçün beynəlxalq fondlar
+          other: İnkişaf üçün beynəlxalq fondlar
         international_treaty:
-          other:
+          one: Beynəlxalq saziş
+          other: Beynəlxalq sazişlər
         maib_report:
-          other:
+          one: Dəniz qəzalarının araşdırılması üzrə şöbə hesabatı
+          other: Dəniz qəzalarının araşdırılması üzrə şöbə hesabatları
         map:
-          other: xəritələr
+          one: Xəritə
+          other: Xəritələr
         medical_safety_alert:
-          other:
+          one: Dərman və tibbi avadanlıq üçün xəbərdarlıq bildirişləri və geri çağırmalar
+          other: Dərman və tibbi avadanlıq üçün xəbərdarlıq bildirişləri və geri çağırmalar
         national:
-          other:
+          one: Milli statistika elanı
+          other: Milli statistika elanları
         national_statistics:
-          other: Statistika - milli statistika
+          one: Milli statistika
+          other: Milli statistika
         national_statistics_announcement:
-          other:
+          one: Milli statistika elanı
+          other: Milli statistika elanları
         news_article:
-          other: məqalələr
+          one: Xəbərləri əks etdirən məqalə
+          other: Xəbərləri əks etdirən məqalələr
         news_story:
-          other: Xəbərlər
+          one: Xəbərləri əks etdirən material
+          other: Xəbərləri əks etdirən materiallar
         notice:
-          other:
+          one: Bildiriş
+          other: Bildirişlər
         official:
-          other:
+          one: Rəsmi statistika elanı
+          other: Rəsmi statistika elanları
         official_statistics:
-          other: statistika
+          one: Rəsmi statistika
+          other: Rəsmi statistika
         official_statistics_announcement:
-          other:
+          one: Rəsmi statistika elanı
+          other: Rəsmi statistika elanları
         open_consultation:
-          other: açıq məsləhətləşmələr
+          one: Açıq məsləhətləşmə
+          other: Açıq məsləhətləşmələr
         oral_statement:
-          other: Parlamentə açıq bəyanatlar
+          one: Parlamentə şifahi müraciət
+          other: Parlamentə şifahi müraciətlər
         policy:
-          other: Siyasət
+          one: Siyasət
+          other: Siyasətlər
         policy_paper:
-          other: Siyasi sənədlər
+          one: Siyasət sənədi
+          other: Siyasət sənədləri
         press_release:
-          other: mətbuat üçün açıqlama
+          one: Press-reliz
+          other: Press-relizlər
         promotional:
-          other: Təşviqedici materiallar
+          one: Reklam materialı
+          other: Reklam materialı
         publication:
+          one: Nəşr
           other: Nəşrlər
         raib_report:
-          other:
+          one: Dəmir yolu qəzalarının araşdırılması üzrə şöbə hesabatı
+          other: Dəmir yolu qəzalarının araşdırılması üzrə şöbə hesabatları
         regulation:
-          other:
+          one: Tənzimləmə
+          other: Tənzimləmələr
         research:
-          other: Tətqiqat və analiz
+          one: Araşdırma və təhlil
+          other: Araşdırma və təhlil
         residential_property_tribunal_decision:
-          other:
+          one: Yaşayış üçün istifadə edilən mülk üzrə məhkəmə kollegiyası qərarı
+          other: Yaşayış üçün istifadə edilən mülk üzrə məhkəmə kollegiyası qərarları
         service_sign_in:
-          other:
+          one: Xidmət üçün sistemə daxil olma
+          other: Xidmət üçün sistemə daxil olma
         service_standard_report:
-          other:
+          one: Xidmət standartı üzrə hesabat
+          other: Xidmət standartı üzrə hesabatlar
         speaking_notes:
-          other: Çıxış üçün  qeydləri
+          one: Şifahi qeydlər
+          other: Şifahi qeydlər
         speech:
-          other: Çıxışlar
+          one: Nitq
+          other: Nitqlər
         standard:
-          other:
+          one: Standart
+          other: Standartlar
         statement_to_parliament:
-          other: Parlamentə bəyanatlar
+          one: Parlamentə müraciət
+          other: Parlamentə müraciətlər
         statistical_data_set:
-          other: statistik məlumatlar bazaları
+          one: Statistik məlumat paketi
+          other: Statistik məlumat paketləri
         statistics_announcement:
-          other:
+          one: Statistik məlumat elanı
+          other: Statistik məlumat elanları
         statutory_guidance:
-          other:
+          one: Normativ göstərişlər
+          other: Normativ göstərişlər
         take_part:
-          other:
+          one: İştirak edin
+          other: İştirak edin
         tax_tribunal_decision:
-          other:
+          one: Vergi və dəftərxana üzrə məhkəmə kollegiyası qərarı
+          other: Vergi və dəftərxana üzrə məhkəmə kollegiyası qərarları
         transcript:
-          other: Transkripsiyalar
+          one: Çıxarış
+          other: Çıxarışlar
         transparency:
-          other: Şəffaf məlumat
+          one: Məlumatla bağlı şəffaflıq
+          other: Məlumatla bağlı şəffaflıq
         utaac_decision:
-          other:
+          one: İnzibati şikayətlər üzrə məhkəmə kollegiyası qərarı
+          other: İnzibati şikayətlər üzrə məhkəmə kollegiyası qərarları
         world_location_news_article:
-          other: məqalələr
+          one: Xəbərləri əks etdirən məqalə
+          other: Xəbərləri əks etdirən məqalələr
         world_news_story:
-          other:
+          one: Dünya üzrə xəbərləri əks etdirən material
+          other: Dünya üzrə xəbərləri əks etdirən materiallar
         written_statement:
-          other: Parlamentə yazılı müraciət
-    corporate_information:
+          one: Parlamentə yazılı müraciət
+          other: Parlamentə yazılı müraciətlər
+    corporate_information: Korporativ məlumat
     document_types:
-      documents:
+      documents: Sənədlər
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Bütün göztəriş və qaydaları nəzərdən keçirin
+        title: Göztəriş və qaydalar
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Bütün yeniliklər və məlumatları nəzərdən keçirin
+        title: Yeniliklər və məlumatlar
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Bütün siyasət sənədləri və məsləhətləşmələri nəzərdən keçirin
+        title: Siyasət sənədləri və məsləhətləşmələr
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Bütün araşdırma və statistikaları nəzərdən keçirin
+        title: Araşdırma və statistika
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Bütün xidmətləri nəzərdən keçirin
+        title: Xidmətlər
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Şəffaflıq və məlumat əldə etmə azadlığı üzrə bütün buraxılışları nəzərdən keçirin
+        title: Şəffaflıq və məlumat əldə etmə azadlığı buraxılışları
+    errors_or_omissions_html: <p>Xətalar və ya səhlənkarlıqlar? <a class="govuk-link" href="/contact/govuk">Bizə burada bildirin</a>. Yarımüstəqil qeyri-hökumət təşkilatlarının rəsmi siyahıları üçün <a class="govuk-link" href="/government/collections/public-bodies">dövlət qurumlarını nəzərdən keçirin</a>.</p>
+    featured: Seçilmiş
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: Məlumat əldə etmə azadlığı üzrə əlaqə forması
+      foi_exemption_html: |
+        Bu təşkilat Məlumat əldə etmə azadlığı qanununu tətbiq etmir.
+        Hansı təşkilatların əhatə olunduğunu burada görmək olar: <a href="%{foi_url}" class="govuk-link brand__color">qanunvericilik</a>.
+      freedom_of_information_act: Məlumat əldə etmə azadlığı (FOI) qanunu
+      freedom_of_information_requests: Məlumat əldə etmə azadlığı üzrə müraciətlər
+      make_an_foi_request: Məlumat əldə etmə azadlığı (FOI) üzrə müraciət edin
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: Məlumat əldə etmə azadlığı (FOI) qanunu və <a href="%{how_to_path}" class="govuk-link brand__color">müraciət etmə qaydası barədə oxuyun</a>.
+        step2_html: Suallarınıza artıq cavab vermiş <a href="%{our_releases_path}" class="govuk-link brand__color">əvvəlki buraxılışlarımız</a> olub-olmadığımızı yoxlayın.
+        step3_html: Aşağıdakı məlumatlardan istifadə etməklə bizimlə əlaqə saxlayaraq yeni müraciət edin.
+    follow_us: Bizi təqib edin
+    hidden_share_link: Bizi burada təqib edin
+    high_profile_groups: "%{title} üzrə məşhur qruplar"
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: İşlər və müqavilələr
+    latest_from: "%{title} üzrə ən son məlumat"
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name_html: "%{title} indi <a href='%{link_href}'>%{link_text}</a> adlandırılır"
+      devolved_html: "%{title} <a href='%{link_href}'>%{link_text}</a>-nin əsas hissəsidir"
+      joining: "%{title} tezliklə GOV.UK ilə birləşdiriləcək"
+      left_gov: "%{title} indi BK hökumətindən asılı deyildir"
+      merged_html: "%{title} indi %{updated} üzrə <a href='%{link_href}'>%{link_text}</a>-nin bir hissəsidir"
+      merged_no_date_html: "%{title} indi <a href='%{link_href}'>%{link_text}</a>-nın bir hissəsidir"
+      no_longer_exists: "%{title} bağlanıb"
+      no_website: "%{title}-ın vebsaytı yoxdur"
+      separate_website_html: "%{title}-ın ayrıca <a href='%{url}'>vebsaytı vardır</a>"
+      split_html: "%{title} %{links} ilə əvəzlənmişdir"
+    part_of: Hissə
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: Rəhbərliyimiz
+      chief_professional_officers: Baş mütəxəssislər
+      military_personnel: Baş hərbi nümayəndələrimiz
+      ministers: Nazirlərimiz
+      special_representatives: Xüzuzi nümayəndələr
+      traffic_commissioners: Nəqliyyat komissarları
+    read_more: Fəaliyyətimiz barədə daha çox oxuyun
+    search_for_department: Departament, agentlik və ya dövlət orqanı axtarın
+    see_all_latest_documents: Ən son ortaya çıxan sənədlərə baxın
+    separate_website: ayrıca vebsayt
+    services_and_information: Bütün %{acronym} xidmətləri və məlumatları
     subscription:
-      email:
-      feed:
+      email: E-məktublar alın
+      feed: Veb-kanala abunə olun
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      ":":
+      adhoc_advisory_group: Xüsusi məsləhətçilər qrupu
+      advisory_ndpb: Müstəqil və məsləhətçi qeyri-hökumət təşkilatı
+      civil_service: Dövlət xidməti
+      court:
+      devolved_administration:
+      executive_agency: İcra hakimiyyəti orqanı
+      executive_ndpb: İcraçı qeyri-hökumət təşkilatı
+      executive_office:
+      independent_monitoring_body: Müstəqil monitorinq təşkilatı
+      ministerial_department:
+      non_ministerial_department: Nazirliklə əlaqəli olmayan departament
+      other: Digər
+      public_corporation: Dövlət korporasiyası
+      sub_organisation:
+      tribunal: Məhkəmə kollegiyası
+    view_all: hamısını nəzərdən keçirin
+    view_less: daha azına baxın
+    what_we_do: "%{title} nə edir"
     works_with_statement:
-      multiple:
-      one:
+      multiple: "%{works_with_count} agentliklər və dövlət orqanları ilə olan işlər"
+      one: "%{works_with_count} dövlət orqanı ilə olan işlər"

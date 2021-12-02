@@ -1,12 +1,12 @@
 ---
 hr:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Početna stranica
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
+      prefix: 'Pretraži:'
+      title: Pregledajte GOV.UK
+    get_emails: Primajte e -poruke o ovoj temi
+    language_direction: ltr
     language_name: Hrvatski
     topics:
-      title:
+      title: "%{title}: detaljne informacije"

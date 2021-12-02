@@ -1,12 +1,12 @@
 ---
 sk:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Domov
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: Slovenčina
+      prefix: 'Prehľadávať:'
+      title: Prehľadávať GOV.UK
+    get_emails: Získavanie e-mailov pre túto tému
+    language_direction: ltr
+    language_name: Slovensky
     topics:
-      title:
+      title: "%{title}: podrobné informácie"

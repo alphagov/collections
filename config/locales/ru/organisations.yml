@@ -1,24 +1,24 @@
 ---
 ru:
   organisations:
-    about_page_path:
-    administered_by:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Управляется
     breadcrumbs:
-      courts_and_tribunals:
-      organisations:
+      courts_and_tribunals: Суды и арбитражные суды
+      organisations: Организации
     contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
+      contact_details: Контактная информация
+      contact_form: 'Форма обратной связи: %{title}'
+      contact_organisation: Свяжитесь с %{organisation}
+      email: Электронная почта
+      telephone: Телефон
     content_item:
       schema_name:
         aaib_report:
           few:
           many:
-          one:
-          other:
+          one: Отчет Отдела по Расследованию Авиационных Происшествий
+          other: Отчеты Отдела по Расследованию Авиационных Происшествий
         announcement:
           few:
           many:
@@ -27,8 +27,8 @@ ru:
         asylum_support_decision:
           few:
           many:
-          one:
-          other:
+          one: Решение суда по вопросам предоставления убежища
+          other: Решения суда по вопросам предоставления убежища
         authored_article:
           few:
           many:
@@ -37,13 +37,13 @@ ru:
         business_finance_support_scheme:
           few:
           many:
-          one:
-          other:
+          one: План поддержки финансирования бизнеса
+          other: Планы поддержки финансирования бизнеса
         case_study:
           few:
           many:
-          one: Ситуационный анализ
-          other: Ситуационные анализы
+          one: Причинный анализ
+          other: Причинные анализы
         closed_consultation:
           few:
           many:
@@ -52,13 +52,13 @@ ru:
         cma_case:
           few:
           many:
-          one:
-          other:
+          one: Дело Управления по Защите Конкуренции и Рынкам
+          other: Дела Управления по Защите Конкуренции и Рынкам
         coming_soon:
           few:
           many:
-          one:
-          other:
+          one: Скоро на Экранах
+          other: Скоро на Экранах
         consultation:
           few:
           many:
@@ -72,8 +72,8 @@ ru:
         corporate_information_page:
           few:
           many:
-          one:
-          other:
+          one: Информационная страница
+          other: Информационные страницы
         corporate_report:
           few:
           many:
@@ -87,28 +87,28 @@ ru:
         countryside_stewardship_grant:
           few:
           many:
-          one:
-          other:
+          one: Грант Управлений Сельской местности
+          other: Гранты Управлений Сельской местности
         decision:
           few:
           many:
-          one:
-          other:
+          one: Решение
+          other: Решения
         detailed_guide:
           few:
           many:
-          one: Подробное руководство
-          other: Подробное руководство
+          one: Руководство
+          other: Руководство
         dfid_research_output:
           few:
           many:
-          one:
-          other:
+          one: Результат Исследования по развитию
+          other: Результаты Исследования по развитию
         document_collection:
           few:
           many:
-          one: Серии
-          other:
+          one: Коллекция
+          other: Коллекции
         draft_text:
           few:
           many:
@@ -117,23 +117,23 @@ ru:
         drug_safety_update:
           few:
           many:
-          one:
-          other:
+          one: Обновлённые данные по Безопасности Лекарственного Средства
+          other: Обновлённые данные по Безопасности Лекарственного Средства
         employment_appeal_tribunal_decision:
           few:
           many:
-          one:
-          other:
+          one: Решение Апелляционного Суда по Трудовым Делам
+          other: Решения Апелляционного Суда по Трудовым Делам
         employment_tribunal_decision:
           few:
           many:
-          one:
-          other:
+          one: Решение органа по рассмотрению индивидуальных трудовых споров
+          other: Решения органа по рассмотрению индивидуальных трудовых споров
         esi_fund:
           few:
           many:
-          one:
-          other:
+          one: Европейский Структурный и Инвестиционный Фонд (ЕСИФ)
+          other: Европейские Структурные и Инвестиционные Фонды (ЕСИФ)
         fatality_notice:
           few:
           many:
@@ -142,8 +142,8 @@ ru:
         foi_release:
           few:
           many:
-          one: 'Свобода распространения информации '
-          other: 'Свобода распространения информации '
+          one: Новая редакция Закона о Свободе Распространения Информации
+          other: Новые редакции Закона о Свободе Распространения Информации
         form:
           few:
           many:
@@ -177,18 +177,18 @@ ru:
         international_development_fund:
           few:
           many:
-          one:
-          other:
+          one: Международное финансирование развития
+          other: Международное финансирование развития
         international_treaty:
           few:
           many:
-          one:
-          other:
+          one: Международное соглашение
+          other: Международные соглашения
         maib_report:
           few:
           many:
-          one:
-          other:
+          one: Отчет Отдела по Расследованию Несчастных Случаев на Море
+          other: Отчеты Отдела по Расследованию Несчастных Случаев на Море
         map:
           few:
           many:
@@ -197,23 +197,23 @@ ru:
         medical_safety_alert:
           few:
           many:
-          one:
-          other:
+          one: Уведомления и отзывы о лекарственных препаратах и медицинских устройствах
+          other: Уведомления и отзывы о лекарственных препаратах и медицинских устройствах
         national:
           few:
           many:
-          one:
-          other:
+          one: Объявление национального статистического комитета
+          other: Объявления национального статистического комитета
         national_statistics:
           few:
           many:
-          one: Статистика - национальная статистика
-          other: Статистика - национальная статистика
+          one: Национальная статистика
+          other: Национальная статистика
         national_statistics_announcement:
           few:
           many:
-          one:
-          other:
+          one: Объявление национального статистического комитета
+          other: Объявления национального статистического комитета
         news_article:
           few:
           many:
@@ -222,28 +222,28 @@ ru:
         news_story:
           few:
           many:
-          one: Новостная заметка
-          other: Новостные заметки
+          one: Новостной сюжет
+          other: Новостные сюжеты
         notice:
           few:
           many:
-          one:
-          other:
+          one: Заметка
+          other: Заметки
         official:
           few:
           many:
-          one:
-          other:
+          one: Доклад по официальным статистическим данным
+          other: Доклады по официальным статистическим данным
         official_statistics:
           few:
           many:
-          one: Статистика
-          other: Статистика
+          one: Официальная Статистика
+          other: Официальная Статистика
         official_statistics_announcement:
           few:
           many:
-          one:
-          other:
+          one: Доклад по официальным статистическим данным
+          other: Доклады по официальным статистическим данным
         open_consultation:
           few:
           many:
@@ -282,13 +282,13 @@ ru:
         raib_report:
           few:
           many:
-          one:
-          other:
+          one: Отчет Отдела по Расследованию Несчастных Случаев на Железнодорожном Транспорте
+          other: Отчеты Отдела по Расследованию Несчастных Случаев на Железнодорожном Транспорте
         regulation:
           few:
           many:
-          one:
-          other:
+          one: Требование
+          other: Требования
         research:
           few:
           many:
@@ -297,18 +297,18 @@ ru:
         residential_property_tribunal_decision:
           few:
           many:
-          one:
-          other:
+          one: Решение арбитражного суда по жилищной собственности
+          other: Решения арбитражного суда по жилищной собственности
         service_sign_in:
           few:
           many:
-          one:
-          other:
+          one: Сервис по регистрации
+          other: Сервис по регистрации
         service_standard_report:
           few:
           many:
-          one:
-          other:
+          one: Отчет оп Стандарту Обслуживания
+          other: Отчеты оп Стандарту Обслуживания
         speaking_notes:
           few:
           many:
@@ -322,8 +322,8 @@ ru:
         standard:
           few:
           many:
-          one:
-          other:
+          one: Стандарт
+          other: Стандарты
         statement_to_parliament:
           few:
           many:
@@ -332,33 +332,33 @@ ru:
         statistical_data_set:
           few:
           many:
-          one: Статистика
-          other: Статистические данные
+          one: Совокупность статистических данных
+          other: Совокупность статистических данных
         statistics_announcement:
           few:
           many:
-          one:
-          other:
+          one: Объявление о публикации статистических данных
+          other: Объявления о публикации статистических данных
         statutory_guidance:
           few:
           many:
-          one:
-          other:
+          one: Официальные рекомендации
+          other: Официальные рекомендации
         take_part:
           few:
           many:
-          one:
-          other:
+          one: Принять участие
+          other: Принять участие
         tax_tribunal_decision:
           few:
           many:
-          one:
-          other:
+          one: Решение суда по Налоговым и Канцелярским вопросам
+          other: Решения суда по Налоговым и Канцелярским вопросам
         transcript:
           few:
           many:
-          one: Текст
-          other: Тексты
+          one: Транскрипт
+          other: Транскрипты
         transparency:
           few:
           many:
@@ -367,8 +367,8 @@ ru:
         utaac_decision:
           few:
           many:
-          one:
-          other:
+          one: Решение суда по апелляции на решение административного органа
+          other: Решения суда по апелляции на решение административного органа
         world_location_news_article:
           few:
           many:
@@ -377,105 +377,111 @@ ru:
         world_news_story:
           few:
           many:
-          one:
-          other:
+          one: Международные новости
+          other: Международные новости
         written_statement:
           few:
           many:
           one: Письменное заявление парламенту
           other: Письменные заявления парламенту
-    corporate_information:
+    corporate_information: Корпоративная информация
     document_types:
-      documents:
+      documents: Документы
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Посмотрите все руководства и инструкции
+        title: Руководство и инструкции
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Посмотрите все новости и информацию
+        title: Новости и информация
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Посмотрите все директивные документы и консультации
+        title: Директивные документы и консультации
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Посмотрите все исследования и статистику
+        title: Исследования и статистика
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Посмотрите все услуги
+        title: Услуги
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Посмотрите все новые редакции закона о свободе распространения и прозрачности информации
+        title: Новые редакции закона о свободе распространения и прозрачности информации
+    errors_or_omissions_html: <p>Ошибки? <a class="govuk-link" href="/contact/govuk">Расскажите нам здесь</a>. Официальный список автономных неправительственных организаций <a class="govuk-link" href="/government/collections/public-bodies">посмотрите государственные органы</a>.</p>
+    featured: Подборка
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: Форма обратной связи по свободе распространения информации
+      foi_exemption_html: "Данная организация не регулируется Актом о Свободе Информации. \nДля просмотра включенных организаций <a href=\"%{foi_url}\" class=\"govuk-link brand__color\">закон</a>.\n"
+      freedom_of_information_act: Закон о Свободе Информации (ЗСИ)
+      freedom_of_information_requests: Запрос в рамках Закона о Свободе информации
+      make_an_foi_request: Сделать запрос в рамках Закона о Свободе информации
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: Прочитайте о Законе о Свободе информации (ЗСИ) и <a href="%{how_to_path}" class="govuk-link brand__color">как сделать запрос</a>.
+        step2_html: Проверьте <a href="%{our_releases_path}" class="govuk-link brand__color">наши предыдущие выпуски</a> чтобы узнать ответили ли мы на ваш вопрос ранее.
+        step3_html: Сделайте новый запрос связавшись с нами, используя информацию ниже.
+    follow_us: Следите за нами
+    hidden_share_link: Подпишитесь на
+    high_profile_groups: Авторитетные группы в %{title}
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: Вакансии и контракты
+    latest_from: Свежие новости  %{title}
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name_html: "%{title} теперь называется <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} орган <a href='%{link_href}'>%{link_text}</a>"
+      joining: "%{title} вскоре будет включен в GOV.UK"
+      left_gov: "%{title} теперь независим от правительства Соединенного Королевства"
+      merged_html: "%{title} стал частью <a href='%{link_href}'>%{link_text}</a> in %{updated}"
+      merged_no_date_html: "%{title} теперь часть <a href='%{link_href}'>%{link_text}</a>"
+      no_longer_exists: "%{title} закрылся"
+      no_website: "%{title} не имеет Веб-сайта"
+      separate_website_html: "%{title} имеет <a href='%{url}'>отдельный Веб-сайт</a>"
+      split_html: "%{title} был заменен %{links}"
+    part_of: Часть
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: Наше руководство
+      chief_professional_officers: Главные специалисты
+      military_personnel: Старшие представители вооружённых сил
+      ministers: Наши министры
+      special_representatives: Специальные представители
+      traffic_commissioners: Транспортный суд
+    read_more: Читайте больше о том, что мы делаем
+    search_for_department: Поиск отдела, агентства или государственного органа
+    see_all_latest_documents: Посмотрите все актуальные документы
+    separate_website: отдельный Веб-сайт
+    services_and_information: Все услуги и информация
     subscription:
-      email:
-      feed:
+      email: Получите электронные адреса
+      feed: Подписывайте на веб-канал
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      ":":
+      adhoc_advisory_group: Специальная консультативная группа
+      advisory_ndpb: Консультативная полуавтономная негосударственная организация
+      civil_service: Государственные услуги
+      court:
+      devolved_administration:
+      executive_agency: Орган исполнительной власти
+      executive_ndpb: Полуавтономная негосударственная организация исполнительной власти
+      executive_office:
+      independent_monitoring_body: Независимый контрольный орган
+      ministerial_department:
+      non_ministerial_department: Неминистерский государственный департамент
+      other: Другое
+      public_corporation: Государственная корпорация
+      sub_organisation:
+      tribunal: Арбитраж
+    view_all: Посмотреть все
+    view_less: Посмотреть меньше
+    what_we_do: Что %{title}
     works_with_statement:
-      multiple:
-      one:
+      multiple: Работа с %{works_with_count} агенствами и государственными органами
+      one: Работа с  %{works_with_count} государственным органом

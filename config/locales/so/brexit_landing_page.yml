@@ -1,40 +1,26 @@
 ---
 so:
   brexit_landing_page:
-    campaign_links:
-      lead_in:
-      lead_out:
-      links:
-    comms:
-      links:
-      read_transcript:
-    comms_header:
-    data_list_title:
-    email_mailto_subject:
-    guidance_header:
-    meta_description:
-    meta_title:
-    no_cookies:
-      change_settings_text:
-      icon_text:
-      or_text:
-      to_watch_text:
-      watch_link_text:
-    page_header:
-    page_header_explainer:
+    meta_description: Raadi sida shuruucda cusub ee ka bixitaanka Inigiriisku u qabanayaan waxyaabaha sida socdaalka iyo ka ganacsiga Yurub. Isticmaal hubiya ka bixitaanka Ingiriiska si aad u heshid liiska talaabooyinka.
+    meta_title: Ka bixitaanka Ingiriiska
+    page_header: Ka bixitaanka Ingiriiska
+    page_header_explainer: Shuruucda cusub waxay qabanayaan waxyaabaha sida socdaalka iyo ka ganacsiga Yurub. Isticmaal hubiya ka bixitaanka Ingiriiska si aad u heshid liiska talaabooyinka naftaada, ganacsigaaga iyo qoyskaaga.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
-      aria_string_suffix:
-      guidance_and_regulation:
-      news_and_communications:
-      policy_and_engagement:
-      research_and_statistics:
-      services:
-      transparency:
-    share_links:
-    topic_section_header:
-    topic_section_subheading:
-    video_section_description:
-    video_section_link:
-    video_section_title:
-    video_section_transcription_summary:
-    video_section_transcription_text:
+      aria_string_suffix: la xidhiidha ka bixitaanka Ingiriiska
+      guidance_and_regulation: Tilaamta iyo sharciga
+      news_and_communications: Warka iyo xidhiidhka
+      policy_and_engagement: Warqadaha siyaasada iyo latalinta
+      research_and_statistics: Cilmi-baadhista iyo tirokoobka
+      services: Adeegyada
+      transparency: Daah furnaanta iyo xoriyada baahinta macluumaadka
+    topic_section_header: Dhamaan macluumaadka ka bixitaanka Ingiriiska
+    topic_section_subheading: Raadi dhamaa macluumaadka la xiriira ka bixitaanka Ingiriiska
+    trade_deal_heading:
+    trade_deal_links:

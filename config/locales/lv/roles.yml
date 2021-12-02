@@ -1,15 +1,15 @@
 ---
 lv:
   roles:
-    find_out_more_html:
+    find_out_more_html: Uzziniet vairāk par iepriekšējiem šī amata pienākumu pildītājiem mūsu sadaļā %{link}.
     heading:
-      one:
-      other:
+      one: Loma
+      other: Lomas
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: Pašreizējais amata pienākumu pildītājs
+      previous_holders: Iepriekšējais pienākumu pildītājs
+      responsibilities: Pienākumi
+    ministerial: Ministra amats
+    past: iepriekš
+    previous_holders: Iepriekšējie šī amata pienākuma pildītāji
+    read_more: Vairāk par šo amatu

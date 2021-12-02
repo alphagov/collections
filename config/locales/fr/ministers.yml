@@ -1,9 +1,9 @@
 ---
 fr:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Participe également au Cabinet
+    by_department: Ministres par département
+    cabinet: Ministres du Cabinet
+    govuk_title: Ministres - GOV.UK
+    title: Ministres
+    whips: Whips

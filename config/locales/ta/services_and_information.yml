@@ -1,6 +1,6 @@
 ---
 ta:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: சேவைகள் மற்றும் தகவல்கள் - %{title}
+    see_more_link: மேலும் காண்க
+    title: சேவைகள் மற்றும் தகவல்கள்

@@ -1,8 +1,8 @@
 ---
 ka:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: სუბ-თემების ნახვა
+    organisations: ორგანიზაციები
+    see_all_in_topic: იხილეთ მეტი %{type} ამ თემაში
+    show_fewer_orgs: ნაკლები ორგანიზაციების ჩვენება
+    show_more_orgs: მეტი ორგანიზაციებს ჩვენება

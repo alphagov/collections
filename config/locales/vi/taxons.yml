@@ -1,8 +1,8 @@
 ---
 vi:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Khám phá các chủ đề phụ
+    organisations: Tổ chức
+    see_all_in_topic: Xem thêm %{type} trong chủ đề này
+    show_fewer_orgs: Hiển thị ít tổ chức hơn
+    show_more_orgs: Hiển thị nhiều tổ chức hơn

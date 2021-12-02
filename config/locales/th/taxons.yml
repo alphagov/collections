@@ -1,8 +1,8 @@
 ---
 th:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: สำรวจหัวข้อย่อย
+    organisations: องค์กร
+    see_all_in_topic: ดู %{type} เพิ่มเติมในหัวข้อนี้
+    show_fewer_orgs: แสดงองค์กรน้อยลง
+    show_more_orgs: แสดงองค์กรมากขึ้น

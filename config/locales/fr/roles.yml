@@ -1,15 +1,15 @@
 ---
 fr:
   roles:
-    find_out_more_html:
+    find_out_more_html: Pour plus d'informations sur les titulaires précédents de ce poste, consultez notre section %{link}.
     heading:
-      one:
-      other:
+      one: Rôle
+      other: Rôles
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: Titulaire actuel du poste
+      previous_holders: Titulaires précédents
+      responsibilities: Responsabilités
+    ministerial: Rôle ministériel
+    past: passé
+    previous_holders: Titulaires précédents de ce rôle
+    read_more: Plus d'informations sur ce rôle

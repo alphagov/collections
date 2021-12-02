@@ -1,46 +1,46 @@
 ---
 el:
   organisations:
-    about_page_path:
-    administered_by:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Διοικείται από
     breadcrumbs:
-      courts_and_tribunals:
-      organisations:
+      courts_and_tribunals: Δικαστήρια και Διαιτητικά όργανα
+      organisations: Οργανισμοί
     contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
+      contact_details: Στοιχεία επικοινωνίας
+      contact_form: 'Φόρμα Επικοινωνίας: %{title}'
+      contact_organisation: Επικοινωνία %{organisation}
+      email: Email
+      telephone: Τηλέφωνο
     content_item:
       schema_name:
         aaib_report:
-          one:
-          other:
+          one: Έκθεση του Τμήματος Έρευνας Αεροπορικών Ατυχημάτων
+          other: Εκθέσεις του Τμήματος Έρευνας Αεροπορικών Ατυχημάτων
         announcement:
           one: Ανακοίνωση
           other: Ανακοινώσεις
         asylum_support_decision:
-          one:
-          other:
+          one: Δικαστική απόφαση υποστήριξης ασύλου
+          other: Δικαστικές αποφάσεις υποστήριξης ασύλου
         authored_article:
-          one: Κείμενο συντάκτη
-          other: Κείμενα συντακτών
+          one: Σύνταξη άρθρου
+          other: Σύνταξη άρθρων
         business_finance_support_scheme:
-          one:
-          other:
+          one: Πρόγραμμα στήριξης χρηματοδότησης επιχειρήσεων
+          other: Προγράμματα στήριξης χρηματοδότησης επιχειρήσεων
         case_study:
-          one: Παράδειγμα
-          other: Παραδείγματα
+          one: Μελέτη περίπτωσης
+          other: Μελέτες περιπτώσεων
         closed_consultation:
           one: Κλειστή διαβούλευση
           other: Κλειστές διαβουλεύσεις
         cma_case:
-          one:
-          other:
+          one: Υπόθεση Αρχής Ανταγωνισμού και Αγορών
+          other: Υποθέσεις Αρχής Ανταγωνισμού και Αγορών
         coming_soon:
-          one:
-          other:
+          one: Έρχεται σύντομα
+          other: Έρχεται σύντομα
         consultation:
           one: Διαβούλευση
           other: Διαβουλεύσεις
@@ -48,286 +48,294 @@ el:
           one: Αποτέλεσμα διαβούλευσης
           other: Αποτελέσματα διαβούλευσης
         corporate_information_page:
-          one:
-          other:
+          one: Σελίδα πληροφοριών
+          other: Σελίδες πληροφοριών
         corporate_report:
-          one: Έκθεση Οργανισμού
-          other: Εκθέσεις Οργανισμού
+          one: Εταιρική έκθεση
+          other: Εταιρικές εκθέσεις
         correspondence:
           one: Αλληλογραφία
-          other: Αλληλογραφία
+          other: Αλληλογραφίες
         countryside_stewardship_grant:
-          one:
-          other:
+          one: Οικονομικό κίνητρο Countryside Stewardship grant
+          other: Οικονομικά κίνητρα Countryside Stewardship grants
         decision:
-          one:
-          other:
+          one: Απόφαση
+          other: Αποφάσεις
         detailed_guide:
-          one: Οδηγίες
-          other: Οδηγίες
+          one: Οδηγία
+          other: Οδηγία
         dfid_research_output:
-          one:
-          other:
+          one: Έρευνα για αναπτυξιακό αποτέλεσμα
+          other: Έρευνα για αναπτυξιακά αποτελέσματα
         document_collection:
-          one: Σειρά
-          other:
+          one: Συλλογή
+          other: Συλλογές
         draft_text:
-          one: Προσχέδιο
-          other: Προσχέδια
+          one: Σχέδιο κειμένου
+          other: Σχέδια κειμένων
         drug_safety_update:
-          one:
-          other:
+          one: Ενημέρωση για την ασφάλεια των φαρμάκων
+          other: Ενημερώσεις για την ασφάλεια των φαρμάκων
         employment_appeal_tribunal_decision:
-          one:
-          other:
+          one: Δικαστική απόφαση προσφυγής για την απασχόληση
+          other: Δικαστικές αποφάσεις προσφυγής για την απασχόληση
         employment_tribunal_decision:
-          one:
-          other:
+          one: Απόφαση δικαστηρίου για την απασχόληση
+          other: Αποφάσεις δικαστηρίου για την απασχόληση
         esi_fund:
-          one:
-          other:
+          one: Ευρωπαϊκό Διαρθρωτικό και Επενδυτικό Ταμείο (ESIF)
+          other: Ευρωπαϊκά Διαρθρωτικά και Επενδυτικά Ταμεία (ESIF)
         fatality_notice:
           one: Ανακοίνωση θανάτου
-          other: Ανακοινώσεις θανάτων
+          other: Ανακοινώσεις θανάτου
         foi_release:
-          one: Δημοσιοποίηση
-          other: Δημοσιοποίηση
+          one: Κυκλοφορία ελευθερία της πληροφόρησης
+          other: Κυκλοφορίες ελευθερία της πληροφόρησης
         form:
-          one: Έντυπο
-          other: Έντυπα
+          one: Φόρμα
+          other: Φόρμες
         government_response:
-          one: Η θέση της Κυβέρνησης
-          other: Οι θέσεις της Κυβέρνησης
+          one: Κυβερνητική απάντηση
+          other: Κυβερνητικές απαντήσεις
         guidance:
-          one: Οδηγίες
-          other: Οδηγίες
+          one: Οδηγία
+          other: Οδηγία
         impact_assessment:
-          one: Αξιολόγηση αποτελέσματος
-          other: Αξιολογήσεις αποτελέσματος
+          one: Εκτίμηση επίπτωσης
+          other: Εκτιμήσεις επιπτώσεων
         imported:
-          one: " εισηγμένο  - σε αναμονή"
-          other: εισηγμένα - σε αναμονή
+          one: εισήχθη - σε αναμονή για τύπο
+          other: εισήχθη - σε αναμονή για τύπο
         independent_report:
-          one: Έκθεση ανεξάρτητης αρχής
-          other: Εκθέσεις ανεξάρτητων αρχών
+          one: Ανεξάρτητη έκθεση
+          other: Ανεξάρτητες εκθέσεις
         international_development_fund:
-          one:
-          other:
+          one: Διεθνής χρηματοδότηση ανάπτυξης
+          other: Διεθνής χρηματοδότηση ανάπτυξης
         international_treaty:
-          one:
-          other:
+          one: Διεθνής συνθήκη
+          other: Διεθνείς συνθήκες
         maib_report:
-          one:
-          other:
+          one: Έκθεση του τμήματος διερεύνησης θαλάσσιων ατυχημάτων
+          other: Εκθέσεις του τμήματος διερεύνησης θαλάσσιων ατυχημάτων
         map:
           one: Χάρτης
           other: Χάρτες
         medical_safety_alert:
-          one:
-          other:
+          one: Ειδοποιήσεις και ανακλήσεις για φάρμακα και ιατρικές συσκευές
+          other: Ειδοποιήσεις και ανακλήσεις για φάρμακα και ιατρικές συσκευές
         national:
-          one:
-          other:
+          one: Ανακοίνωση εθνικής στατιστικής υπηρεσίας
+          other: Ανακοινώσεις εθνικής στατιστικής υπηρεσίας
         national_statistics:
-          one: Στατιστικά στοιχεία- εθνικά στατιστικά στοιχεία
-          other: Στατιστικά στοιχεία- εθνικά στατιστικά στοιχεία
+          one: Εθνική Στατιστική Υπηρεσία
+          other: Εθνική Στατιστική Υπηρεσία
         national_statistics_announcement:
-          one:
-          other:
+          one: Ανακοίνωση εθνικής στατιστικής υπηρεσίας
+          other: Ανακοινώσεις εθνικής στατιστικής υπηρεσίας
         news_article:
-          one: Είδηση
-          other: Ειδήσεις
+          one: Άρθρο ειδήσεων
+          other: Άρθρα ειδήσεων
         news_story:
-          one: Νέα
-          other: Νέα
+          one: Ιστορία ειδήσεων
+          other: Ιστορίες ειδήσεων
         notice:
-          one:
-          other:
+          one: Σημείωση
+          other: Σημειώσεις
         official:
-          one:
-          other:
+          one: Επίσημη ανακοίνωση στατιστικών
+          other: Επίσημες ανακοινώσεις στατιστικών
         official_statistics:
-          one: Στατιστικά στοιχεία
-          other: Στατιστικά στοιχεία
+          one: Επίσημη Στατιστικά Στοιχεία
+          other: Επίσημη Στατιστικά Στοιχεία
         official_statistics_announcement:
-          one:
-          other:
+          one: Επίσημη ανακοίνωση στατιστικών
+          other: Επίσημες ανακοινώσεις στατιστικών
         open_consultation:
           one: Ανοιχτή διαβούλευση
           other: Ανοιχτές διαβουλεύσεις
         oral_statement:
-          one: Δήλωση στη Βουλή
-          other: 'Δηλώσεις στη Βουλή '
+          one: Προφορική δήλωση στη Βουλή
+          other: Προφορικές δηλώσεις στη Βουλή
         policy:
           one: Πολιτική
           other: Πολιτικές
         policy_paper:
-          one: Κείμενο πολιτικής
-          other: Κείμενα πολιτικής
+          one: Έγγραφο πολιτικής
+          other: Έγγραφα πολιτικής
         press_release:
-          one: Δελτίο Τύπου
-          other: Δελτία Τύπου
+          one: Δελτίο τύπου
+          other: Δελτία τύπου
         promotional:
           one: Προωθητικό υλικό
           other: Προωθητικό υλικό
         publication:
-          one: Έκδοση
-          other: Εκδόσεις
+          one: Δημοσίευση
+          other: Δημοσιεύσεις
         raib_report:
-          one:
-          other:
+          one: Έκθεση Τμήματος Διερεύνησης Σιδηροδρομικών Ατυχημάτων
+          other: Εκθέσεις Τμήματος Διερεύνησης Σιδηροδρομικών Ατυχημάτων
         regulation:
-          one:
-          other:
+          one: Κανονισμός λειτουργίας
+          other: Κανονισμοί λειτουργίας
         research:
           one: Έρευνα και ανάλυση
           other: Έρευνα και ανάλυση
         residential_property_tribunal_decision:
-          one:
-          other:
+          one: Απόφαση δικαστηρίου διαφορών ιδιοκτησίας
+          other: Αποφάσεις δικαστηρίου διαφορών ιδιοκτησίας
         service_sign_in:
-          one:
-          other:
+          one: Σύνδεση υπηρεσίας
+          other: Σύνδεση υπηρεσίας
         service_standard_report:
-          one:
-          other:
+          one: Τυπική έκθεση υπηρεσίας
+          other: Τυπικές εκθέσεις υπηρεσίας
         speaking_notes:
-          one: Βασικά σημεία ομιλίας
-          other: Βασικά σημεία ομιλίας
+          one: Σημειώσεις ομιλίας
+          other: Σημειώσεις ομιλίας
         speech:
           one: Ομιλία
           other: Ομιλίες
         standard:
-          one:
-          other:
+          one: Πρότυπο
+          other: Πρότυπα
         statement_to_parliament:
           one: Δήλωση στη Βουλή
-          other: 'Δηλώσεις στη Βουλή '
+          other: Δηλώσεις στη Βουλή
         statistical_data_set:
-          one: Στατιστικά στοιχεία
-          other: Στατιστικά στοιχεία
+          one: Σύνολο στατιστικών δεδομένων
+          other: Σύνολα στατιστικών δεδομένων
         statistics_announcement:
-          one:
-          other:
+          one: Ανακοίνωση έκδοσης στατιστικών
+          other: Ανακοινώσεις έκδοσης στατιστικών
         statutory_guidance:
-          one:
-          other:
+          one: Νομικές οδηγίες
+          other: Νομικές οδηγίες
         take_part:
-          one:
-          other:
+          one: Συμμετοχή
+          other: Συμμετοχή
         tax_tribunal_decision:
-          one:
-          other:
+          one: Απόφαση του δικαστηρίου επιμελητηρίου Tax and Chancery
+          other: Αποφάσεις του δικαστηρίου επιμελητηρίου Tax and Chancery
         transcript:
-          one: Απομαγνητοφώνηση
-          other: Απομαγνητοφωνήσεις
+          one: Αντίγραφο
+          other: Αντίγραφα
         transparency:
-          one: Στοιχεία διαφάνειας
-          other: Στοιχεία διαφάνειας
+          one: Δεδομένα διαφάνειας
+          other: Δεδομένα διαφάνειας
         utaac_decision:
-          one:
-          other:
+          one: Απόφαση του δικαστηρίου διοικητικών προσφυγών
+          other: Αποφάσεις του δικαστηρίου διοικητικών προσφυγών
         world_location_news_article:
-          one: Είδηση
-          other: Ειδήσεις
+          one: Άρθρο ειδήσεων
+          other: Άρθρα ειδήσεων
         world_news_story:
-          one:
-          other:
+          one: Ιστορία παγκόσμιων ειδήσεων
+          other: Ιστορίες παγκόσμιων ειδήσεων
         written_statement:
-          one: Γραπτή  δήλωση στη Βουλή
+          one: Γραπτή δήλωση στη Βουλή
           other: Γραπτές δηλώσεις στη Βουλή
-    corporate_information:
+    corporate_information: Εταιρικές πληροφορίες
     document_types:
-      documents:
+      documents: Έγγραφα
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Δείτε όλες τις οδηγίες και τους κανονισμούς
+        title: Οδηγίες και κανονισμοί
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Δείτε όλες τις ειδήσεις και τις επικοινωνίες
+        title: Ειδήσεις και επικοινωνία
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Δείτε όλα τα έγγραφα πολιτικής και τις διαβουλεύσεις
+        title: Έγγραφα πολιτικής και διαβουλεύσεις
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Δείτε όλες τις έρευνες και στατιστικά στοιχεία
+        title: Έρευνα και στατιστικά
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Δείτε όλες τις υπηρεσίες
+        title: Υπηρεσίες
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Δείτε όλες τις εκδόσεις για την διαφάνεια και ελευθερία πληροφόρησης
+        title: Εκδόσεις για τη διαφάνεια και ελευθερία πληροφόρησης
+    errors_or_omissions_html: <p>Λάθη ή παραλείψεις; <a class="govuk-link" href="/contact/govuk">Πείτε μας εδώ</a>. Για επίσημους καταλόγους μη υπηρεσιακών δημόσιων φορέων <a class="govuk-link" href="/government/collections/public-bodies">δείτε τους δημόσιους οργανισμούς</a> .</p>
+    featured: Προτεινόμενα
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: Φόρμα επικοινωνίας ελευθερία της πληροφόρησης
+      foi_exemption_html: |
+        Αυτός ο οργανισμός δεν καλύπτεται από τον νόμο για την ελευθερία της πληροφόρησης.
+        Για να δείτε ποιες οργανώσεις περιλαμβάνονται, ανατρέξτε <a href="%{foi_url}" class="govuk-link brand__color">στη νομοθεσία</a>.
+      freedom_of_information_act: Νόμος για την ελευθερία της πληροφόρησης (FOI)
+      freedom_of_information_requests: Αιτήματα ελευθερίας πληροφόρησης
+      make_an_foi_request: Κάντε ένα αίτημα ελευθερία της πληροφόρησης
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: Διαβάστε σχετικά με τον νόμο για την ελευθερία της πληροφόρησης (FOI) και τον <a href="%{how_to_path}" class="govuk-link brand__color">τρόπο υποβολής αιτήματος</a> .
+        step2_html: Δείτε <a href="%{our_releases_path}" class="govuk-link brand__color">τις προηγούμενες εκδόσεις μας</a> για να δείτε αν έχουμε ήδη απαντήσει στην ερώτησή σας.
+        step3_html: Κάντε ένα νέο αίτημα επικοινωνώντας μαζί μας χρησιμοποιώντας τα παρακάτω στοιχεία.
+    follow_us: Ακολουθήστε μας
+    hidden_share_link: Ακολουθήστε στο
+    high_profile_groups: Ομάδες υψηλού προφίλ εντός %{title}
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: Θέσεις εργασίας και συμβάσεις
+    latest_from: Τελευταία από %{title}
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name_html: "%{title} ονομάζεται τώρα <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: Το %{title} είναι ένα σώμα του <a href='%{link_href}'>%{link_text}</a>
+      joining: Το %{title} σύντομα θα ενσωματωθεί στο GOV.UK
+      left_gov: Το %{title} είναι πλέον ανεξάρτητο από την κυβέρνηση του Ηνωμένου Βασιλείου
+      merged_html: Το %{title} έγινε μέρος του <a href='%{link_href}'>%{link_text}</a> in %{updated}
+      merged_no_date_html: Το %{title} είναι πλέον μέρος του <a href='%{link_href}'>%{link_text}</a>
+      no_longer_exists: Το %{title} έχει κλείσει
+      no_website: Το %{title} δεν έχει ιστότοπο
+      separate_website_html: Το %{title} έχει <a href='%{url}'>ξεχωριστό ιστότοπο</a>
+      split_html: Το %{title} αντικαταστάθηκε από %{links}
+    part_of: Μέρος του
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: Η διοίκησή μας
+      chief_professional_officers: Ανώτερα επαγγελματικά στελέχη
+      military_personnel: Τα ανώτερα στρατιωτικά στελέχη μας
+      ministers: Οι υπουργοί μας
+      special_representatives: Ειδικοί εκπρόσωποι
+      traffic_commissioners: Επίτροποι κυκλοφορίας
+    read_more: Διαβάστε περισσότερα για το τι κάνουμε
+    search_for_department: Αναζητήστε ένα τμήμα, οργανισμό ή δημόσιο φορέα
+    see_all_latest_documents: Δείτε όλα τα τελευταία έγγραφα
+    separate_website: ξεχωριστός ιστότοπος
+    services_and_information: Όλες οι υπηρεσίες και οι πληροφορίες %{acronym}
     subscription:
-      email:
-      feed:
+      email: Λάβετε email
+      feed: Εγγραφείτε στη ροή
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      ":":
+      adhoc_advisory_group: Ad-hoc συμβουλευτική ομάδα
+      advisory_ndpb: Συμβουλευτικός μη υπηρεσιακός δημόσιος φορέας
+      civil_service: Δημόσια υπηρεσία
+      court:
+      devolved_administration:
+      executive_agency: Εκτελεστικός οργανισμός
+      executive_ndpb: Εκτελεστικός μη υπηρεσιακός δημόσιος φορέας
+      executive_office:
+      independent_monitoring_body: Ανεξάρτητο όργανο παρακολούθησης
+      ministerial_department:
+      non_ministerial_department: Μη υπουργικό τμήμα
+      other: Άλλο
+      public_corporation: Δημόσια επιχείρηση
+      sub_organisation:
+      tribunal: Δικαστήριο
+    view_all: εμφάνιση όλων
+    view_less: εμφάνιση λιγότερων
+    what_we_do: Τι κάνει το %{title}
     works_with_statement:
-      multiple:
-      one:
+      multiple: Λειτουργεί με %{works_with_count} φορείς και δημόσιους οργανισμούς
+      one: Λειτουργεί με %{works_with_count} δημόσιο φορέα

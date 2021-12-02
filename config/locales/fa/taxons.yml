@@ -1,8 +1,8 @@
 ---
 fa:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: کاوش موضوعات فرعی
+    organisations: سازمان‌ها
+    see_all_in_topic: "%{type} مورد بیشتر در این موضوع مشاهده کنید"
+    show_fewer_orgs: نمایش سازمان‌های کمتر
+    show_more_orgs: نمایش سازمان‌های بیشتر

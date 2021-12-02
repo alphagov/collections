@@ -1,9 +1,9 @@
 ---
 zh:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: 出席的内阁
+    by_department: 部门部长
+    cabinet: 内阁成员
+    govuk_title: 部长 - GOV.UK
+    title: 部长
+    whips: 政党纪律委员

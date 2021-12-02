@@ -1,259 +1,341 @@
 ---
 ko:
   organisations:
-    about_page_path:
-    administered_by:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: 관리자
     breadcrumbs:
-      courts_and_tribunals:
-      organisations:
+      courts_and_tribunals: 상급법원 및 법원
+      organisations: 조직
     contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
+      contact_details: 상세 콘택트
+      contact_form: '연락 양식: %{title}'
+      contact_organisation: 콘택트 %{organisation}
+      email: 이메일
+      telephone: 전화번호
     content_item:
       schema_name:
         aaib_report:
-          other:
+          one: 영국 항공사고조사위원회 보고서
+          other: 영국 항공사고조사위원회 보고서
         announcement:
-          other: 공지
+          one: 발표
+          other: 발표
         asylum_support_decision:
-          other:
+          one: 망명 지원 법원 판결
+          other: 망명 지원 법원 판결
         authored_article:
-          other: 기사
+          one: 저작물
+          other: 저작물
         business_finance_support_scheme:
-          other:
+          one: 비즈니스 재무 지원 계획
+          other: 비즈니스 재무 지원 계획
         case_study:
-          other: 케이스 스터디
+          one: 사례 연구
+          other: 사례 연구
         closed_consultation:
-          other: 비공개 협의
+          one: 종결된 상담
+          other: 종결된 상담
         cma_case:
-          other:
+          one: 경쟁 및 시장 감독 사례
+          other: 경쟁 및 시장 감독 사례
         coming_soon:
-          other:
+          one: 곧 공개됩니다
+          other: 곧 공개됩니다
         consultation:
-          other: 협의
+          one: 상담
+          other: 상담
         consultation_outcome:
-          other: 협의 결과
+          one: 상담 결과
+          other: 상담 결과
         corporate_information_page:
-          other:
+          one: 정보 페이지
+          other: 정보 페이지
         corporate_report:
-          other: 기업 레포트
+          one: 기업 보고서
+          other: 기업 보고서
         correspondence:
-          other: 서신
+          one: 통신
+          other: 통신
         countryside_stewardship_grant:
-          other:
+          one: 농촌환경관리 보조금
+          other: 농촌환경관리 보조금
         decision:
-          other:
+          one: 판결
+          other: 판결
         detailed_guide:
-          other: 상세 안내
+          one: 지침
+          other: 지침
         dfid_research_output:
-          other:
+          one: 발전 결과에 대한 연구
+          other: 발전 결과에 대한 연구
         document_collection:
-          other:
+          one: 컬렉션
+          other: 컬렉션
         draft_text:
-          other: 드래프트 택스트
+          one: 초안 텍스트
+          other: 초안 텍스트
         drug_safety_update:
-          other:
+          one: 의약품 안전 업데이트
+          other: 의약품 안전 업데이트
         employment_appeal_tribunal_decision:
-          other:
+          one: 고용 항소 법원 판결
+          other: 고용 항소 법원 판결
         employment_tribunal_decision:
-          other:
+          one: 고용 법원 판결
+          other: 고용 법원 결정
         esi_fund:
-          other:
+          one: 유럽구조투자기금(ESIF)
+          other: 유럽구조투자기금(ESIF)
         fatality_notice:
+          one: 사상자 공지
           other: 사상자 공지
         foi_release:
-          other: FOI 보도자료
+          one: FOI 발표
+          other: FOI 발표
         form:
-          other: 문서
+          one: 양식
+          other: 양식
         government_response:
-          other: 정부 대책
+          one: 정부 대응
+          other: 정부 대응
         guidance:
-          other: 안내
+          one: 지침
+          other: 지침
         impact_assessment:
-          other: 임팩트 평가
+          one: 영향 평가
+          other: 영향 평가
         imported:
-          other: 수입 - 대기
+          one: 수입 - 대기 유형
+          other: 수입 - 대기 유형
         independent_report:
-          other: 독립 레포트
+          one: 독립적 보고서
+          other: 독립적 보고서
         international_development_fund:
-          other:
+          one: 국제 개발 자금
+          other: 국제 개발 자금
         international_treaty:
-          other:
+          one: 국제 조약
+          other: 국제 조약
         maib_report:
-          other:
+          one: 영국 해상사고조사위원회 보고서
+          other: 영국 해상사고조사위원회 보고서
         map:
+          one: 지도
           other: 지도
         medical_safety_alert:
-          other:
+          one: 의약품 및 의료기기에 대한 경고 및 리콜
+          other: 의약품 및 의료기기에 대한 경고 및 리콜
         national:
-          other:
+          one: 국내 통계 발표
+          other: 국내 통계 발표
         national_statistics:
-          other: 통계 - 국가 통계
+          one: 국내 통계
+          other: 국내 통계
         national_statistics_announcement:
-          other:
+          one: 국내 통계 발표
+          other: 국내 통계 발표
         news_article:
-          other: 뉴스
+          one: 뉴스 기사
+          other: 뉴스 기사
         news_story:
+          one: 뉴스 스토리
           other: 뉴스 스토리
         notice:
-          other:
+          one: 공지
+          other: 공지
         official:
-          other:
+          one: 공식 통계 발표
+          other: 공식 통계 발표
         official_statistics:
-          other: 통계
+          one: 공식 통계
+          other: 공식 통계
         official_statistics_announcement:
-          other:
+          one: 공식 통계 발표
+          other: 공식 통계 발표
         open_consultation:
-          other: 오픈 컨설테이션
+          one: 공개 상담
+          other: 공개 상담
         oral_statement:
+          one: 의회로 구두 성명
           other: 의회로 구두 성명
         policy:
+          one: 정책
           other: 정책
         policy_paper:
-          other: 정책 논문
+          one: 정책 문서
+          other: 정책 문서
         press_release:
+          one: 보도자료
           other: 보도자료
         promotional:
-          other: 홍보물
+          one: 홍보 자료
+          other: 홍보 자료
         publication:
-          other: 간행물
+          one: 발행물
+          other: 발행물
         raib_report:
-          other:
+          one: 영국 철도사고조사위원회 보고서
+          other: 영국 철도사고조사위원회 보고서
         regulation:
-          other:
+          one: 규제
+          other: 규제
         research:
-          other: 리써치 및 분석
+          one: 조사 및 분석
+          other: 조사 및 분석
         residential_property_tribunal_decision:
-          other:
+          one: 주거재산법원 판결
+          other: 주거재산법원 판결
         service_sign_in:
-          other:
+          one: 서비스 로그인
+          other: 서비스 로그인
         service_standard_report:
-          other:
+          one: 서비스 표준 보고서
+          other: 서비스 표준 보고서
         speaking_notes:
-          other: 요점사항
+          one: 연설문 메모
+          other: 연설문 메모
         speech:
+          one: 연설문
           other: 연설문
         standard:
-          other:
+          one: 표준
+          other: 표준
         statement_to_parliament:
+          one: 의회로 성명
           other: 의회로 성명
         statistical_data_set:
+          one: 통계 데이터 세트
           other: 통계 데이터 세트
         statistics_announcement:
-          other:
+          one: 통계 공개 발표
+          other: 통계 공개 발표
         statutory_guidance:
-          other:
+          one: 법정지도
+          other: 법정지도
         take_part:
-          other:
+          one: 참여하기
+          other: 참여하기
         tax_tribunal_decision:
-          other:
+          one: 조세 및 형평법 법원 판결
+          other: 조세 및 형평법 법원 판결
         transcript:
-          other: 트랜스크립트
+          one: 녹취록
+          other: 녹취록
         transparency:
-          other: 투명성 데이타
+          one: 투명성 데이터
+          other: 투명성 데이터
         utaac_decision:
-          other:
+          one: 행정 항소심판 법원 판결
+          other: 행정 항소심판 법원 판결
         world_location_news_article:
-          other: 뉴스
+          one: 뉴스 기사
+          other: 뉴스 기사
         world_news_story:
-          other:
+          one: 세계 뉴스 스토리
+          other: 세계 뉴스 스토리
         written_statement:
+          one: 의회로 서면 성명
           other: 의회로 서면 성명
-    corporate_information:
+    corporate_information: 기업 정보
     document_types:
-      documents:
+      documents: 문서
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: 모든 지침 및 규제 보기
+        title: 지침 및 규제
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: 모든 뉴스 및 커뮤니케이션 보기
+        title: 뉴스 및 커뮤니케이션
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: 모든 정책 문서 및 상담 보기
+        title: 정책 문서 및 상담
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: 모든 조사 및 통계 보기
+        title: 조사 및 통계
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: 모든 서비스 보기
+        title: 서비스
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: 모든 정보 공개의 투명성 및 자유 보기
+        title: 정보 공개의 투명성 및 자유
+    errors_or_omissions_html: <p>오류 또는 생략된 내용이 있습니까? <a class="govuk-link" href="/contact/govuk">여기에 말씀해 주십시오</a>. 비부처 공공기관의 공식 목록은 <a class="govuk-link" href="/government/collections/public-bodies">공공기관을 참조하십시오</a>.</p>
+    featured: 특집
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: FOI 콘택트 폼
+      foi_exemption_html: |
+        이 조직은 정보자유법의 적용을 받지 않습니다.
+        어떤 조직이 포함되어 있는지 확인하려면 <a href="%{foi_url}" class="govuk-link brand__color">해당 법안</a>을 참조하십시오.
+      freedom_of_information_act: 정보의 자유(FOI) 법
+      freedom_of_information_requests: 정보의 자유 요청
+      make_an_foi_request: FOI 요청하기
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: 정보의 자유(FOI) 법과 <a href="%{how_to_path}" class="govuk-link brand__color">요청하는 법</a>에 대해 참조하십시오.
+        step2_html: <a href="%{our_releases_path}" class="govuk-link brand__color">저희의 지난 공개물</a> 을 보고 저희가 이미 귀하의 질문에 답하였는지 확인하십시오.
+        step3_html: 아래의 상세 정보를 사용해 저희에게 연락하여 요청하십시오.
+    follow_us: 팔로우하기
+    hidden_share_link: 다음에서 팔로우 하기
+    high_profile_groups: "%{title} 내 상위 프로필 그룹"
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: 직업 및 계약
+    latest_from: "%{title}의 최근 내용"
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name_html: "%{title} 은(는)의  이제 <a href='%{link_href}'>%{link_text}</a>라고 불립니다"
+      devolved_html: "%{title} 은(는) <a href='%{link_href}'>%{link_text}</a>의 기관입니다"
+      joining: "%{title} 은(는) 곧 GOV.UK로 통합됩니다"
+      left_gov: "%{title} 은(는) 현재 UK 정부로부터 독립되어 있습니다"
+      merged_html: "%{title} 은(는) <a href='%{link_href}'>%{link_text}</a>의 일부가 %{updated}에 되었습니다"
+      merged_no_date_html: "%{title} 은(는) 이제<a href='%{link_href}'>%{link_text}</a>의 일부입니다"
+      no_longer_exists: "%{title} 은(는) 종결되었습니다"
+      no_website: "%{title} 은(는) 웹사이트가 없습니다"
+      separate_website_html: "%{title} 은(는) <a href='%{url}'>독립적인 웹사이트</a>를 가지고 있습니다"
+      split_html: "%{title} 은 %{links}로 교체되었습니다"
+    part_of: 다음의 일부
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: 우리 관리자
+      chief_professional_officers: 최고 전문 관리자
+      military_personnel: 우리 군 고위 장성
+      ministers: 우리 장관
+      special_representatives: 특별 대표
+      traffic_commissioners: 교통 위원
+    read_more: 저희가 하는 일에 대해 더 읽어보기
+    search_for_department: 부서, 에이전시 또는 공공기관 검색하기
+    see_all_latest_documents: 모든 최신 문서 보기
+    separate_website: 개별 웹사이트
+    services_and_information: 모든 %{acronym} 서비스 및 정보
     subscription:
-      email:
-      feed:
+      email: 이메일 받기
+      feed: 피드로 구독하기
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      ":":
+      adhoc_advisory_group: 임시 자문단
+      advisory_ndpb: 자문 비부처 공공기관
+      civil_service: 시민 서비스
+      court:
+      devolved_administration:
+      executive_agency: 집행 기관
+      executive_ndpb: 집행 비부처 공공기관
+      executive_office:
+      independent_monitoring_body: 독립적인 모니터링 기관
+      ministerial_department:
+      non_ministerial_department: 비부처
+      other: 기타
+      public_corporation: 공공 기관
+      sub_organisation:
+      tribunal: 법원
+    view_all: 모두 보기
+    view_less: 적게 보기
+    what_we_do: "%{title}이(가) 하는 일"
     works_with_statement:
-      multiple:
-      one:
+      multiple: 에이전시 및 공공 기관 %{works_with_count}곳과 협업하기
+      one: 공공 기관 %{works_with_count}곳과 협업하기

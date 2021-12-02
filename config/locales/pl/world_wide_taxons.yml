@@ -1,5 +1,5 @@
 ---
 pl:
   world_wide_taxons:
-    take_the_survey:
-    test_banner:
+    take_the_survey: Wypełnij ankietę, aby pomóc nam ją ulepszyć
+    test_banner: To jest wersja testowa tej strony.

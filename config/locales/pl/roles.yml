@@ -1,17 +1,17 @@
 ---
 pl:
   roles:
-    find_out_more_html:
+    find_out_more_html: Dowiedz się więcej o poprzednich osobach pełniących tę funkcję w sekcji %{link}.
     heading:
       few:
       many:
-      one:
-      other:
+      one: Funkcja
+      other: Funkcje
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: Obecna osoba sprawująca funkcję
+      previous_holders: Poprzednia osoba sprawująca funkcję
+      responsibilities: Obowiązki
+    ministerial: Funkcja ministerialna
+    past: przeszłość
+    previous_holders: Poprzednie osoby sprawujące funkcję
+    read_more: Więcej o tej funkcji

@@ -1,333 +1,341 @@
 ---
 sw:
   organisations:
-    about_page_path:
-    administered_by:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Imetolewa na
     breadcrumbs:
-      courts_and_tribunals:
-      organisations:
+      courts_and_tribunals: Mahakama na Mabaraza ya Uamuzi
+      organisations: Mashirika
     contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
+      contact_details: Anwani za mawasiliano
+      contact_form: 'Fomu ya Mawasiliano: %{title}'
+      contact_organisation: Anwani %{organisation}
+      email: Barua pepe
+      telephone: Nambari ya simu
     content_item:
       schema_name:
         aaib_report:
-          one:
-          other:
+          one: Ripoti ya Kitengo cha Uchunguzi wa Ajali za Ndege
+          other: Ripoti za Kitengo cha Uchunguzi wa Ajali za Ndege
         announcement:
-          one:
-          other:
+          one: Tangazo
+          other: Matangazo
         asylum_support_decision:
-          one:
-          other:
+          one: Uamuzi wa mahakama ya masuala ya msaada kwa wakimbizi wa kisiasa
+          other: Maamuzi ya mahakama ya masuala ya msaada kwa wakimbizi wa kisiasa
         authored_article:
-          one:
-          other:
+          one: Makala ya maelezo ya mwandishi
+          other: Makala ya maelezo ya mwandishi
         business_finance_support_scheme:
-          one:
-          other:
+          one: Mpango wa msaada wa fedha za biashara
+          other: Mipango ya msaada wa fedha za biashara
         case_study:
-          one:
-          other:
+          one: Uchunguzi kifani
+          other: Uchunguzi kifani
         closed_consultation:
-          one:
-          other:
+          one: Mashauriano ya watu wachache
+          other: Mashauriano ya watu wachache
         cma_case:
-          one:
-          other:
+          one: Kesi ya Mamlaka ya Masoko na Ushindani
+          other: Kesi za Mamlaka ya Masoko na Ushindani
         coming_soon:
-          one:
-          other:
+          one: Tunakuletea Hivi Karibuni
+          other: Tunakuletea Hivi Karibuni
         consultation:
-          one:
-          other:
+          one: Mashauriano
+          other: Mashauriano
         consultation_outcome:
-          one:
-          other:
+          one: Matokeo ya mashauriano
+          other: Matokeo ya mashauriano
         corporate_information_page:
-          one:
-          other:
+          one: Ukurasa wa maelezo
+          other: Kurasa za maelezo
         corporate_report:
-          one:
-          other:
+          one: Ripoti ya shirika
+          other: Ripoti za shirika
         correspondence:
-          one:
-          other:
+          one: Mawasiliano
+          other: Mawasiliano
         countryside_stewardship_grant:
-          one:
-          other:
+          one: Ruzuku ya Usimamizi wa Mashambani
+          other: Ruzuku za Usimamizi wa Mashambani
         decision:
-          one:
-          other:
+          one: Uamuzi
+          other: Maamuzi
         detailed_guide:
-          one:
-          other:
+          one: Mwongozo
+          other: Mwongozo
         dfid_research_output:
-          one:
-          other:
+          one: Utafiti wa Matokeo ya Maendeleo
+          other: Utafiti wa Matokeo ya Maendeleo
         document_collection:
-          one:
-          other:
+          one: Mkusanyiko
+          other: Mikusanyiko
         draft_text:
-          one:
-          other:
+          one: Maandishi ya rasimu
+          other: Maandishi ya rasimu
         drug_safety_update:
-          one:
-          other:
+          one: Taarifa ya Usalama wa Dawa
+          other: Taarifa za Usalama wa Dawa
         employment_appeal_tribunal_decision:
-          one:
-          other:
+          one: Uamuzi wa mahakama ya kusikiliza rufaa za mahakama za kesi za kazi
+          other: Maamuzi ya mahakama ya kusikiliza rufaa za mahakama za kesi za kazi
         employment_tribunal_decision:
-          one:
-          other:
+          one: Uamuzi wa mahakama ya kusikiliza rufaa za mahakama za kesi za kazi
+          other: Maamuzi ya mahakama ya kusikiliza rufaa za mahakama za kesi za kazi
         esi_fund:
-          one:
-          other:
+          one: Fedha za Muundo na Uwekezaji za Ulaya (ESIF)
+          other: Fedha za Muundo na Uwekezaji za Ulaya (ESIF)
         fatality_notice:
-          one:
-          other:
+          one: Notisi ya idadi ya vifo
+          other: Notisi za idadi ya vifo
         foi_release:
-          one:
-          other:
+          one: Taarifa ya FOI
+          other: Taarifa za FOI
         form:
-          one:
-          other:
+          one: Fomu
+          other: Fomu
         government_response:
-          one:
-          other:
+          one: Hatua iliyochukuliwa na serikali
+          other: Hatua zilizochukuliwa na serikali
         guidance:
-          one:
-          other:
+          one: Mwongozo
+          other: Mwongozo
         impact_assessment:
-          one:
-          other:
+          one: Utathmini wa athari
+          other: Tathmini za athari
         imported:
-          one:
-          other:
+          one: zilizoagizwa kutoka nje - aina ya hali ya kusbiri
+          other: zilizoagizwa kutoka nje - aina ya hali ya kusbiri
         independent_report:
-          one:
-          other:
+          one: Ripoti huru
+          other: Ripoti huru
         international_development_fund:
-          one:
-          other:
+          one: Ufadhili wa maendeleo ya kimataifa
+          other: Ufadhili wa maendeleo ya kimataifa
         international_treaty:
-          one:
-          other:
+          one: Mkataba wa kimataifa
+          other: Mikataba ya kimataifa
         maib_report:
-          one:
-          other:
+          one: Ripoti ya Kitengo cha Uchunguzi wa Ajali za Baharini
+          other: Ripoti za Kitengo cha Uchunguzi wa Ajali za Baharini
         map:
-          one:
-          other:
+          one: Ramani
+          other: Ramani
         medical_safety_alert:
-          one:
-          other:
+          one: Taarifa na kuondolewa kwa dawa na vifaa vya matibabu sokoni
+          other: Taarifa na kuondolewa kwa dawa na vifaa vya matibabu sokoni
         national:
-          one:
-          other:
+          one: Tangazo la takwimu za kitaifa
+          other: Matangazo ya takwimu za kitaifa
         national_statistics:
-          one:
-          other:
+          one: Takwimu za Kitaifa
+          other: Takwimu za Kitaifa
         national_statistics_announcement:
-          one:
-          other:
+          one: Tangazo la takwimu za kitaifa
+          other: Matangazo ya takwimu za kitaifa
         news_article:
-          one:
-          other:
+          one: Makala ya habari
+          other: Makala ya habari
         news_story:
-          one:
-          other:
+          one: Taarifa ya habari
+          other: Taarifa za habari
         notice:
-          one:
-          other:
+          one: Notisi
+          other: Notisi
         official:
-          one:
-          other:
+          one: Tangazo la takwimu rasmi
+          other: Matangazo ya takwimu rasmi
         official_statistics:
-          one:
-          other:
+          one: Takwimu Rasmi
+          other: Takwimu Rasmi
         official_statistics_announcement:
-          one:
-          other:
+          one: Tangazo la takwimu rasmi
+          other: Matangazo ya takwimu rasmi
         open_consultation:
-          one:
-          other:
+          one: Mashauriano ya watu wengi
+          other: Mashauriano ya watu wengi
         oral_statement:
-          one:
-          other:
+          one: Taarifa ya Matamshi kwa Bunge
+          other: Taarifa za Matamshi kwa Bunge
         policy:
-          one:
-          other:
+          one: Sera
+          other: Sera
         policy_paper:
-          one:
-          other:
+          one: Hati ya sera
+          other: Hati za sera
         press_release:
-          one:
-          other:
+          one: Taarifa kwa vyombo vya habari
+          other: Taarifa kwa vyombo vya habari
         promotional:
-          one:
-          other:
+          one: Nyenzo ya matangazo
+          other: Nyenzo ya matangazo
         publication:
-          one:
-          other:
+          one: Chapisho
+          other: Machapisho
         raib_report:
-          one:
-          other:
+          one: Ripoti ya Kitengo cha Uchunguzi wa Ajali za Treni
+          other: Ripoti za Kitengo cha Uchunguzi wa Ajali za Treni
         regulation:
-          one:
-          other:
+          one: Kanuni
+          other: Kanuni
         research:
-          one:
-          other:
+          one: Utafiti na uchanganuzi
+          other: Utafiti na uchanganuzi
         residential_property_tribunal_decision:
-          one:
-          other:
+          one: Uamuzi wa mahakama ya kesi za mali ya makazi
+          other: Maamuzi ya mahakama ya kesi za mali ya makazi
         service_sign_in:
-          one:
-          other:
+          one: Kuingia kwenye huduma
+          other: Kuingia kwenye huduma
         service_standard_report:
-          one:
-          other:
+          one: Ripoti ya Kawaida ya Huduma
+          other: Ripoti za Kawaida za Huduma
         speaking_notes:
-          one:
-          other:
+          one: Madokezo ya kutamka
+          other: Madokezo ya kutamka
         speech:
-          one:
-          other:
+          one: Hotuba
+          other: Hotuba
         standard:
-          one:
-          other:
+          one: Kiwango
+          other: Viwango
         statement_to_parliament:
-          one:
-          other:
+          one: Taarifa kwa Bunge
+          other: Taarifa kwa Bunge
         statistical_data_set:
-          one:
-          other:
+          one: Kikundi cha data ya takwimu
+          other: Vikundi vya data ya takwimu
         statistics_announcement:
-          one:
-          other:
+          one: Tangazo la kutolewa kwa takwimu
+          other: Matangazo ya kutolewa kwa takwimu
         statutory_guidance:
-          one:
-          other:
+          one: Mwongozo wa kisheria
+          other: Mwongozo wa kisheria
         take_part:
-          one:
-          other:
+          one: Shiriki
+          other: Shiriki
         tax_tribunal_decision:
-          one:
-          other:
+          one: Uamuzi wa mahakama ya Ushuru na Mahakama Kuu
+          other: Maamuzi ya mahakama ya Ushuru na Mahakama Kuu
         transcript:
-          one:
-          other:
+          one: Maandishi
+          other: Maandishi
         transparency:
-          one:
-          other:
+          one: Data ya uwazi
+          other: Data ya uwazi
         utaac_decision:
-          one:
-          other:
+          one: Uamuzi wa mahakama ya rufaa za kesi za usimamizi
+          other: Maamuzi ya mahakama ya rufaa za kesi za usimamizi
         world_location_news_article:
-          one:
-          other:
+          one: Makala ya habari
+          other: Makala ya habari
         world_news_story:
-          one:
-          other:
+          one: Taarifa ya habari za kimataifa
+          other: Taarifa za habari za kimataifa
         written_statement:
-          one:
-          other:
-    corporate_information:
+          one: Taarifa ya Maandishi kwa Bunge
+          other: Taarifa za Maandishi kwa Bunge
+    corporate_information: Maelezo ya shirika
     document_types:
-      documents:
+      documents: Hati
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Angalia mwongozo na kanuni zote
+        title: Mwongozo na kanuni
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Angalia habari na mawasiliano yote
+        title: Habari na mawasiliano
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Angalia hati zote za sera na mashauriano
+        title: Hati za sera na mashauriano
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Angalia tafiti na takwimu zote
+        title: Utafiti na takwimu
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Angalia huduma zote
+        title: Huduma
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Angalia taarifa zote za uwazi na uhuru wa kupata habari
+        title: Taarifa za uwazi na uhuru wa kupata habari
+    errors_or_omissions_html: <p>Je, kuna hitilafu au kutojumuishwa kwa maelezo yoyote? <a class="govuk-link" href="/contact/govuk">Tufahamishe hapa</a>. Ili upate orodha rasmi ya mashirika ya serikali yasiyo ya kiidara <a class="govuk-link" href="/government/collections/public-bodies">angalia mashirika ya serikali</a>.</p>
+    featured: Yanayoangaziwa
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: Fomu ya mawasiliano ya FOI
+      foi_exemption_html: |
+        Shirika hili halidhibitiwi na Sheria ya Uhuru wa Kupata Habari (Freedom of Information Act).
+        Ili uone mashirika yanayojumuishwa, angalia <a href="%{foi_url}" class="govuk-link brand__color">sheria</a>.
+      freedom_of_information_act: Sheria ya Uhuru wa Kupata Habari (FOI)
+      freedom_of_information_requests: Uhuru wa kutuma maombi ya kupata habari
+      make_an_foi_request: Tuma ombi la FOI
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: Soma maelezo kuhusu Sheria ya Uhuru wa Kupata Habar (FOI) na <a href="%{how_to_path}" class="govuk-link brand__color">jinsi ya kutuma maombi</a>.
+        step2_html: Angalia <a href="%{our_releases_path}" class="govuk-link brand__color">taarifa zetu za awali</a> ili uone iwapo tayari tumejibu swali lako.
+        step3_html: Tuma ombi jipya kwa kuwasiliana nasi ukitumia maelezo yaliyo hapa chini.
+    follow_us: Tufuatilie
+    hidden_share_link: Tufuatilie kwenye
+    high_profile_groups: Makundi ya hadhi ya juu ndani ya %{title}
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: Kazi na mikataba
+    latest_from: Habari mpya kutoka %{title}
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name_html: Sasa %{title} linajulikana kama <a href='%{link_href}'>%{link_text}</a>
+      devolved_html: "%{title} ni shirika la <a href='%{link_href}'>%{link_text}</a>"
+      joining: "%{title} litajumuishwa hivi karibuni kwenye GOV.UK"
+      left_gov: Sasa %{title} limejitenga na serikali ya Uingereza
+      merged_html: "%{title} lilijiunga na <a href='%{link_href}'>%{link_text}</a> mnamo %{updated}"
+      merged_no_date_html: Sasa %{title} ni sehemu ya <a href='%{link_href}'>%{link_text}</a>
+      no_longer_exists: "%{title} limefungwa"
+      no_website: "%{title} halina tovuti"
+      separate_website_html: "%{title} lina <a href='%{url}'>tovuti tofauti</a>"
+      split_html: "%{title} lilibadilishwa na %{links}"
+    part_of: Sehemu ya
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: Usimamizi wetu
+      chief_professional_officers: Maofisa wakuu wataalamu
+      military_personnel: Maofisa wetu wakuu wa jeshi
+      ministers: Mawaziri wetu
+      special_representatives: Wawakilishi maalum
+      traffic_commissioners: Wakuu wa trafiki
+    read_more: Pata maelezo zaidi kuhusu kazi yetu
+    search_for_department: Tafuta idara, shirika au shirika la serikali
+    see_all_latest_documents: Angalia hati zote mpya
+    separate_website: tovuti tofauti
+    services_and_information: Huduma na habari zote za %{acronym}
     subscription:
-      email:
-      feed:
+      email: Pata barua pepe
+      feed: Jisajili ili upokee mipasho
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      ":":
+      adhoc_advisory_group: Kikundi cha ushauri kisicho rasmi
+      advisory_ndpb: Shirika la serikali la ushauri lisilo la kiidara
+      civil_service: Huduma ya umma
+      court:
+      devolved_administration:
+      executive_agency: Shirika kuu
+      executive_ndpb: Shirika kuu la serikali lisilo la kiidara
+      executive_office:
+      independent_monitoring_body: Shirika huru la uchunguzi
+      ministerial_department:
+      non_ministerial_department: Idara isiyo na waziri
+      other: Nyingine
+      public_corporation: Shirika la umma
+      sub_organisation:
+      tribunal: Mahakama
+    view_all: angalia zote
+    view_less: angalia chache
+    what_we_do: Kazi ya %{title}
     works_with_statement:
-      multiple:
-      one:
+      multiple: Hushirikiana na mashirika na mashirika %{works_with_count} ya serikali
+      one: Hushirikiana na mashirika %{works_with_count} ya serikali

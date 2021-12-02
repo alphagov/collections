@@ -1,333 +1,341 @@
 ---
 'no':
   organisations:
-    about_page_path:
-    administered_by:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Administreres av
     breadcrumbs:
-      courts_and_tribunals:
-      organisations:
+      courts_and_tribunals: Domstoler og tribunaler
+      organisations: Organisasjoner
     contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
+      contact_details: Kontaktinformasjon
+      contact_form: 'Kontaktskjema: %{title}'
+      contact_organisation: Kontakt %{organization}
+      email: E-post
+      telephone: Telefon
     content_item:
       schema_name:
         aaib_report:
-          one:
-          other:
+          one: Rapport fra Avdeling for etterforskning av flyulykker
+          other: Rapporter fra Avdeling for etterforskning av flyulykker
         announcement:
-          one:
-          other:
+          one: Kunngjøring
+          other: Kunngjøringer
         asylum_support_decision:
-          one:
-          other:
+          one: Avgjørelse fra asylstøttenemnda
+          other: Avgjørelser fra asylstøttenemnda
         authored_article:
-          one:
-          other:
+          one: Forfatterartikkel
+          other: Forfatterartikler
         business_finance_support_scheme:
-          one:
-          other:
+          one: Skjema for forretningsfinansieringsstøtteordning
+          other: Skjema for forretningsfinansieringsstøtteordning
         case_study:
-          one:
-          other:
+          one: Casestudie
+          other: Casestudier
         closed_consultation:
-          one:
-          other:
+          one: Lukket konsultasjon
+          other: Lukkede konsultasjoner
         cma_case:
-          one:
-          other:
+          one: Sak fra konkurranse- og markedstilsynet
+          other: Saker fra konkurranse- og markedstilsynet
         coming_soon:
-          one:
-          other:
+          one: Kommer snart
+          other: Kommer snart
         consultation:
-          one:
-          other:
+          one: Konsultasjon
+          other: Konsultasjoner
         consultation_outcome:
-          one:
-          other:
+          one: Resultat av konsultasjon
+          other: Resultat av konsultasjon
         corporate_information_page:
-          one:
-          other:
+          one: Informasjonsside
+          other: Informasjonssider
         corporate_report:
-          one:
-          other:
+          one: Bedriftsrapport
+          other: Bedriftsrapporter
         correspondence:
-          one:
-          other:
+          one: Korrespondanse
+          other: Korrespondanser
         countryside_stewardship_grant:
-          one:
-          other:
+          one: Countryside Stewardship-stipend
+          other: Countryside Stewardship-stipend
         decision:
-          one:
-          other:
+          one: Beslutning
+          other: Beslutninger
         detailed_guide:
-          one:
-          other:
+          one: Veiledning
+          other: Veiledning
         dfid_research_output:
-          one:
-          other:
+          one: Resultater av forskning for utvikling
+          other: Resultater av forskning for utvikling
         document_collection:
-          one:
-          other:
+          one: Samling
+          other: Samlinger
         draft_text:
-          one:
-          other:
+          one: Utkast til tekst
+          other: Utkast til tekster
         drug_safety_update:
-          one:
-          other:
+          one: Oppdatering av legemiddelsikkerhet
+          other: Oppdatering av legemiddelsikkerhet
         employment_appeal_tribunal_decision:
-          one:
-          other:
+          one: Ansettelsesnemndas avgjørelse
+          other: Ansettelsesnemndas avgjørelser
         employment_tribunal_decision:
-          one:
-          other:
+          one: Arbeidsrettsavgjørelse
+          other: Arbeidsrettsavgjørelser
         esi_fund:
-          one:
-          other:
+          one: Det europeiske struktur- og investeringsfondet (ESIF)
+          other: Europeiske struktur- og investeringsfond (ESIF)
         fatality_notice:
-          one:
-          other:
+          one: Melding om dødsfall
+          other: Meldinger om dødsfall
         foi_release:
-          one:
-          other:
+          one: Informasjonsfrihetstillatelse
+          other: Informasjonsfrihetstillatelser
         form:
-          one:
-          other:
+          one: Skjema
+          other: Skjemaer
         government_response:
-          one:
-          other:
+          one: Myndighetenes svar
+          other: Myndighetenes svar
         guidance:
-          one:
-          other:
+          one: Veiledning
+          other: Veiledning
         impact_assessment:
-          one:
-          other:
+          one: Konsekvensutredning
+          other: Konsekvensanalyser
         imported:
-          one:
-          other:
+          one: importert - venter på type
+          other: importert - venter på type
         independent_report:
-          one:
-          other:
+          one: Uavhengig rapport
+          other: Uavhengige rapporter
         international_development_fund:
-          one:
-          other:
+          one: Internasjonal utviklingsfinansiering
+          other: Internasjonal utviklingsfinansiering
         international_treaty:
-          one:
-          other:
+          one: Internasjonal traktat
+          other: Internasjonale traktater
         maib_report:
-          one:
-          other:
+          one: Rapport fra avdeling for etterforskning av marine ulykker
+          other: Rapporter fra avdeling for etterforskning av marine ulykker
         map:
-          one:
-          other:
+          one: Kart
+          other: Kart
         medical_safety_alert:
-          one:
-          other:
+          one: Varsler og tilbakekallinger for medisiner og medisinsk utstyr
+          other: Varsler og tilbakekallinger for medisiner og medisinsk utstyr
         national:
-          one:
-          other:
+          one: Nasjonal statistikkmelding
+          other: Nasjonale statistikkmeldinger
         national_statistics:
-          one:
-          other:
+          one: Nasjonal statistikk
+          other: Nasjonal statistikk
         national_statistics_announcement:
-          one:
-          other:
+          one: Nasjonal statistikkmelding
+          other: Nasjonale statistikkmeldinger
         news_article:
-          one:
-          other:
+          one: Nyhetsartikkel
+          other: Nyhetsartikler
         news_story:
-          one:
-          other:
+          one: Nyhetssak
+          other: Nyhetssaker
         notice:
-          one:
-          other:
+          one: Merknad
+          other: Merknader
         official:
-          one:
-          other:
+          one: Offisiell statistikkunngjøring
+          other: Offisielle statistikkkunngjøringer
         official_statistics:
-          one:
-          other:
+          one: Offisiell statistikk
+          other: Offisiell statistikk
         official_statistics_announcement:
-          one:
-          other:
+          one: Offisiell statistikkunngjøring
+          other: Offisielle statistikkkunngjøringer
         open_consultation:
-          one:
-          other:
+          one: Åpen konsultasjon
+          other: Åpne konsultasjoner
         oral_statement:
-          one:
-          other:
+          one: Muntlig uttalelse til Stortinget
+          other: Muntlige uttalelser til Stortinget
         policy:
-          one:
-          other:
+          one: Retningslinjer
+          other: Retningslinjer
         policy_paper:
-          one:
-          other:
+          one: Skriv om retningslinjer
+          other: Skriv om retningslinjer
         press_release:
-          one:
-          other:
+          one: Pressemelding
+          other: Pressemeldinger
         promotional:
-          one:
-          other:
+          one: Reklamemateriell
+          other: Reklamemateriell
         publication:
-          one:
-          other:
+          one: Utgivelse
+          other: Publikasjoner
         raib_report:
-          one:
-          other:
+          one: Rapport fra avdeling for gransking av jernbaneulykker
+          other: Rapporter fra avdeling for gransking av jernbaneulykker
         regulation:
-          one:
-          other:
+          one: Forskrift
+          other: Forskrift
         research:
-          one:
-          other:
+          one: Forskning og analyse
+          other: Forskning og analyse
         residential_property_tribunal_decision:
-          one:
-          other:
+          one: Beslutning fra boligeiendomsnemnda
+          other: Beslutninger fra boligeiendomsnemnda
         service_sign_in:
-          one:
-          other:
+          one: Tjenestepålogging
+          other: Tjenestepålogging
         service_standard_report:
-          one:
-          other:
+          one: Tjenestestandardrapport
+          other: Tjenestestandardrapporter
         speaking_notes:
-          one:
-          other:
+          one: Foredragsnotater
+          other: Foredragsnotater
         speech:
-          one:
-          other:
+          one: Tale
+          other: Taler
         standard:
-          one:
-          other:
+          one: Standard
+          other: Standarder
         statement_to_parliament:
-          one:
-          other:
+          one: Uttalelse til Stortinget
+          other: Uttalelse til Stortinget
         statistical_data_set:
-          one:
-          other:
+          one: Statistisk datasett
+          other: Statistiske datasett
         statistics_announcement:
-          one:
-          other:
+          one: Kunngjøring om utgivelse av statistikk
+          other: Kunngjøringer om utgivelse av statistikk
         statutory_guidance:
-          one:
-          other:
+          one: Lovpålagt veiledning
+          other: Lovpålagt veiledning
         take_part:
-          one:
-          other:
+          one: Delta
+          other: Delta
         tax_tribunal_decision:
-          one:
-          other:
+          one: Skatte- og kanslerettsavgjørelse
+          other: Skatte- og kanslerettsavgjørelser
         transcript:
-          one:
-          other:
+          one: Transkripsjon
+          other: Transkripsjoner
         transparency:
-          one:
-          other:
+          one: Synlighetsdata
+          other: Synlighetsdata
         utaac_decision:
-          one:
-          other:
+          one: Administrativ ankenemndavgjørelse
+          other: Administrative ankenemndavgjørelser
         world_location_news_article:
-          one:
-          other:
+          one: Nyhetsartikkel
+          other: Nyhetsartikler
         world_news_story:
-          one:
-          other:
+          one: Verdensnyhet
+          other: Verdensnyheter
         written_statement:
-          one:
-          other:
-    corporate_information:
+          one: Skriftlig uttalelse til Stortinget
+          other: Skriftlige uttalelser til Stortinget
+    corporate_information: Bedriftsinformasjon
     document_types:
-      documents:
+      documents: Dokumenter
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Se alle veiledninger og forskrifter
+        title: Veiledning og regulering
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Se alle nyheter og kommunikasjon
+        title: Nyheter og kommunikasjon
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Se alle retningslinjer og konsultasjoner
+        title: Retningslinjer og konsultasjoner
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Se all forskning og statistikk
+        title: Forskning og statistikk
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Se alle tjenester
+        title: Tjenester
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Se alle skriv om åpenhet og informasjonsfrihet
+        title: Skriv om åpenhet og informasjonsfrihet
+    errors_or_omissions_html: <p>Errors or omissions? <a class="govuk-link" href="/contact/govuk">Fortell oss her</a>. For official lists of non–departmental public bodies <a class="govuk-link" href="/government/collections/public-bodies">se offentlige organer</a>.</p>
+    featured: Utvalgt
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: Kontaktskjema for åpenhet og informasjonsfrihet (FOI)
+      foi_exemption_html: |
+        Denne organisasjonen er ikke omfattet av loven om informasjonsfrihet.
+        For å se hvilke organisasjoner som er inkludert, se <a href="%{foi_url}" class="govuk-link brand__color">lovverket</a>.
+      freedom_of_information_act: Lov om informasjonsfrihet (FOI)
+      freedom_of_information_requests: Forespørsler om informasjonsfrihet
+      make_an_foi_request: Send en forespørsel om informasjonsfrihet
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: Les om loven om informasjonsfrihet (FOI) og <a href="%{how_to_path}" class="govuk-link brand__color">hvordan du sender en forespørsel</a>.
+        step2_html: Sjekk <a href="%{our_releases_path}" class="govuk-link brand__color">våre tidligere utgivelser</a> for å se om vi allerede har svart på spørsmålet ditt.
+        step3_html: Send en ny forespørsel ved å kontakte oss ved hjelp av detaljene nedenfor.
+    follow_us: Følg oss
+    hidden_share_link: Følg på
+    high_profile_groups: Høyprofilerte grupper innen %{title}
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: Jobber og kontrakter
+    latest_from: Siste fra %{title}
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name_html: "%{title} kalles nå <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} er en del av <a href='%{link_href}'>%{link_text}</a>"
+      joining: "%{title} blir snart innlemmet i GOV.UK"
+      left_gov: "%{title} er nå uavhengig av den britiske regjeringen"
+      merged_html: "%{title} ble en del av <a href='%{link_href}'>%{link_text}</a> in %{updated}"
+      merged_no_date_html: "%{title} er nå en del av <a href='%{link_href}'>%{link_text}</a>"
+      no_longer_exists: "%{title} er stengt"
+      no_website: "%{title} har ingen nettside"
+      separate_website_html: "%{title} har en <a href='%{url}'>eget nettsted</a>"
+      split_html: "%{title} ble erstattet av %{links}"
+    part_of: Del av
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: Vår ledelse
+      chief_professional_officers: Profesjonelle sjefstjenestemenn
+      military_personnel: Våre senior militære tjenestemenn
+      ministers: Ministrene våre
+      special_representatives: Spesialrepresentanter
+      traffic_commissioners: Trafikkommisjonærer
+    read_more: Les mer om hva vi gjør
+    search_for_department: Søk etter en avdeling, etat eller et offentlig organ
+    see_all_latest_documents: Se alle de siste dokumentene
+    separate_website: eget nettsted
+    services_and_information: Alle %{akronym}-tjenester og informasjon
     subscription:
-      email:
-      feed:
+      email: Få e-post
+      feed: Abonner på feed
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      ":":
+      adhoc_advisory_group: Ad-hoc rådgivende gruppe
+      advisory_ndpb: Rådgivende ikke-offentlig avdelingskontor
+      civil_service: Statsforvaltning
+      court:
+      devolved_administration:
+      executive_agency: Utøvende byrå
+      executive_ndpb: Utøvende ikke-offentlig avdeling
+      executive_office:
+      independent_monitoring_body: Uavhengig overvåkingsorgan
+      ministerial_department:
+      non_ministerial_department: Ikke-ministeriell avdeling
+      other: Annen
+      public_corporation: Offentlig selskap
+      sub_organisation:
+      tribunal: Nemnd
+    view_all: se alt
+    view_less: se mindre
+    what_we_do: Hva %{title} gjør
     works_with_statement:
-      multiple:
-      one:
+      multiple: Jobber med %{works_with_count} byråer og offentlige instanser
+      one: Jobber med %{works_with_count} offentlig instans

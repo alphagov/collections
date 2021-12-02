@@ -1,8 +1,8 @@
 ---
 ar:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: استكشف الموضوعات الفرعية
+    organisations: المنظمات
+    see_all_in_topic: اطلع على المزيد %{type} في هذا الموضوع
+    show_fewer_orgs: عرض عدد أقل من المنظمات
+    show_more_orgs: عرض المزيد من المنظمات

@@ -1,8 +1,8 @@
 ---
 sq:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Eksploroni nën-temat
+    organisations: Organizatat
+    see_all_in_topic: Shihni më shumë %{type} në këtë temë
+    show_fewer_orgs: Shfaq më pak organizata
+    show_more_orgs: Shfaq më shumë organizata

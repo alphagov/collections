@@ -1,15 +1,15 @@
 ---
 tk:
   roles:
-    find_out_more_html:
+    find_out_more_html: Bu wezipäniň öňki eýeleri barada has giňişleýin maglumaty %{link} bölümimizden tapyň.
     heading:
-      one:
-      other:
+      one: Wezipe
+      other: RollarWezipeler
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: Wezipäniň häzirki eýesi
+      previous_holders: Öňki eýesi
+      responsibilities: Jogapkärçilik
+    ministerial: Ministrlik wezipesi
+    past: geçen
+    previous_holders: Wezipäniň öňki eýeleri
+    read_more: Bu wezipe hakda has giňişleýin

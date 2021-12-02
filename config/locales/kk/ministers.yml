@@ -1,9 +1,9 @@
 ---
 kk:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Сондай-ақ, кабинетке барады
+    by_department: Бөлімдер бойынша министрлер
+    cabinet: Кабинет министрлері
+    govuk_title: Министрлер - GOV.UK
+    title: Министрлер
+    whips: Қамшылар

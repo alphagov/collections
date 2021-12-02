@@ -1,40 +1,26 @@
 ---
 de:
   brexit_landing_page:
-    campaign_links:
-      lead_in:
-      lead_out:
-      links:
-    comms:
-      links:
-      read_transcript:
-    comms_header:
-    data_list_title:
-    email_mailto_subject:
-    guidance_header:
-    meta_description:
-    meta_title:
-    no_cookies:
-      change_settings_text:
-      icon_text:
-      or_text:
-      to_watch_text:
-      watch_link_text:
-    page_header:
-    page_header_explainer:
+    meta_description: Finden Sie heraus, wie sich die neuen Brexit-Regeln auf Dinge wie Reisen und Geschäfte mit Europa auswirken. Nutzen Sie den Brexit-Checker, um eine individuelle Liste von Maßnahmen zu erhalten.
+    meta_title: Brexit
+    page_header: Brexit
+    page_header_explainer: Die neuen Regeln gelten unter anderem für Reisen und Geschäfte mit Europa. Nutzen Sie den Brexit-Checker, um eine individuelle Liste von Maßnahmen für Sie, Ihr Unternehmen und Ihre Familie zu erhalten.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
-      aria_string_suffix:
-      guidance_and_regulation:
-      news_and_communications:
-      policy_and_engagement:
-      research_and_statistics:
-      services:
-      transparency:
-    share_links:
-    topic_section_header:
-    topic_section_subheading:
-    video_section_description:
-    video_section_link:
-    video_section_title:
-    video_section_transcription_summary:
-    video_section_transcription_text:
+      aria_string_suffix: im Zusammenhang mit dem Brexit
+      guidance_and_regulation: Leitlinien und Regulierungen
+      news_and_communications: Nachrichten und Mitteilungen
+      policy_and_engagement: Strategiepapiere und Beratungen
+      research_and_statistics: Forschung und Statistik
+      services: Dienstleistungen
+      transparency: Veröffentlichungen zu Transparenz und Informationsfreiheit
+    topic_section_header: Alle Informationen zum Brexit
+    topic_section_subheading: Alle Informationen zum Thema Brexit durchsuchen
+    trade_deal_heading:
+    trade_deal_links:

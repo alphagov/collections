@@ -1,8 +1,8 @@
 ---
 el:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Εξερευνήστε υπο-θέματα
+    organisations: Οργανισμοί
+    see_all_in_topic: Δείτε περισσότερα %{type} σε αυτό το θέμα
+    show_fewer_orgs: Εμφάνιση λιγότερων οργανισμών
+    show_more_orgs: Εμφάνιση περισσότερων οργανισμών

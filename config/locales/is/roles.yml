@@ -1,15 +1,15 @@
 ---
 is:
   roles:
-    find_out_more_html:
+    find_out_more_html: Kynntu þér hver gegndi þessari stöðu áður í %{link} hlutanum.
     heading:
-      one:
-      other:
+      one: Hlutverk
+      other: Hlutverk
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: Gegnir stöðunni núna
+      previous_holders: Gegndu stöðunni áður
+      responsibilities: Ábyrgð
+    ministerial: Ráðherrastóll
+    past: fyrri
+    previous_holders: Gegndu þessari stöðu áður
+    read_more: Meira um þessa stöðu

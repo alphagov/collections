@@ -1,46 +1,46 @@
 ---
 sq:
   organisations:
-    about_page_path:
-    administered_by:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Administruar nga
     breadcrumbs:
-      courts_and_tribunals:
-      organisations:
+      courts_and_tribunals: Gjykatat dhe Tribunalet
+      organisations: Organizatat
     contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
+      contact_details: Detajet e kontaktit
+      contact_form: 'Formular Kontakti: %{title}'
+      contact_organisation: Kontakto %{organisation}
+      email: Email
+      telephone: Telefon
     content_item:
       schema_name:
         aaib_report:
-          one:
-          other:
+          one: Raporti i Degës së Hetimit të Aksidenteve Ajrore
+          other: Raportet e Degës së Hetimit të Aksidenteve Ajrore
         announcement:
-          one: Lajmerim
-          other: Lajmerime
+          one: Lajmërim
+          other: Lajmërime
         asylum_support_decision:
-          one:
-          other:
+          one: Vendimi i gjykatës për mbështetjen e azilit
+          other: Vendimet e gjykatës për mbështetjen e azilit
         authored_article:
-          one: Artikull autori
-          other: Artikuj autoresh
+          one: Artikull me autor
+          other: Artikuj me autor
         business_finance_support_scheme:
-          one:
-          other:
+          one: Skema e mbështetjes së financimit të biznesit
+          other: Skemat e mbështetjes së financimit të biznesit
         case_study:
           one: Rast studimi
           other: Raste studimi
         closed_consultation:
           one: Konsultim i mbyllur
-          other: Konsultime te mbyllur
+          other: Konsultime të mbyllura
         cma_case:
-          one:
-          other:
+          one: Rasti i Autoritetit të Konkurrencës dhe Tregjeve
+          other: Raste të Autoritetit të Konkurrencës dhe Tregjeve
         coming_soon:
-          one:
-          other:
+          one: Vjen së shpejti
+          other: Vjen së shpejti
         consultation:
           one: Konsultim
           other: Konsultime
@@ -48,124 +48,124 @@ sq:
           one: Rezultati i konsultimit
           other: Rezultatet e konsultimit
         corporate_information_page:
-          one:
-          other:
+          one: Faqja e informacionit
+          other: Faqet e informacionit
         corporate_report:
-          one: Raport i organizates
-          other: Raporte te organizates
+          one: Raport i organizatës
+          other: Raporte te organizatës
         correspondence:
-          one: Korrespondence
+          one: Korrespondencë
           other: Korrespondencat
         countryside_stewardship_grant:
-          one:
-          other:
+          one: Granti i administrimit të fshatit
+          other: Grantet e administrimit të fshatit
         decision:
-          one:
-          other:
+          one: Vendimi
+          other: Vendimet
         detailed_guide:
-          one: Udhezim i detajuar
-          other: Udhezim i detajuar
+          one: Udhëzim
+          other: Udhëzim
         dfid_research_output:
-          one:
-          other:
+          one: Kërkimi për Rezultatin e Zhvillimit
+          other: Kërkimi për Rezultatet e Zhvillimit
         document_collection:
-          one: Seri
-          other:
+          one: Koleksion
+          other: Koleksionet
         draft_text:
           one: Draft tekst
-          other: draft tekste
+          other: Draft tekste
         drug_safety_update:
-          one:
-          other:
+          one: Përditësimi i Sigurisë së Barnave
+          other: Përditësime të Sigurisë së Barnave
         employment_appeal_tribunal_decision:
-          one:
-          other:
+          one: Vendimi i gjykatës së apelit të punës
+          other: Vendimet e gjykatës së apelit të punës
         employment_tribunal_decision:
-          one:
-          other:
+          one: Vendimi i gjykatës së punësimit
+          other: Vendimet e gjykatës së punësimit
         esi_fund:
-          one:
-          other:
+          one: Fondi Evropian për Strukturimin dhe Investimet (ESIF)
+          other: Fondet Evropiane Strukturore dhe Investuese (ESIF)
         fatality_notice:
-          one: njoftim fataliteti
-          other: njoftime fataliteti
+          one: Njoftim fataliteti
+          other: Njoftime fataliteti
         foi_release:
-          one: Njoftim mbi Lirine e Informacionit
-          other: Njoftime mbi Lirine e Informacionit
+          one: Njoftim mbi Lirinë e Informacionit
+          other: Njoftime mbi Lirinë e Informacionit
         form:
-          one: Forme
-          other: Forma
+          one: Formular
+          other: Formularë
         government_response:
           one: Reagim qeveritar
           other: Reagime qeveritare
         guidance:
-          one: Udhezime
-          other: Udhezime
+          one: Udhëzime
+          other: Udhëzime
         impact_assessment:
-          one: Vleresim i ndikimit
-          other: Vleresime te ndikimit
+          one: Vlerësim i ndikimit
+          other: Vlerësime te ndikimit
         imported:
           one: Importuar - tipi pritje
           other: Importuar - tipi pritje
         independent_report:
           one: Raport i pavarur
-          other: Raporte te pavarur
+          other: Raporte të pavarur
         international_development_fund:
-          one:
-          other:
+          one: Financimi i zhvillimit ndërkombëtar
+          other: Financime të zhvillimit ndërkombëtar
         international_treaty:
-          one:
-          other:
+          one: Traktat ndërkombëtar
+          other: Traktate ndërkombëtare
         maib_report:
-          one:
-          other:
+          one: Raporti i Degës së Hetimit të Aksidenteve Detare
+          other: Raportet e Degës së Hetimit të Aksidenteve Detare
         map:
-          one: Harte
+          one: Hartë
           other: Harta
         medical_safety_alert:
-          one:
-          other:
+          one: Njoftime dhe kujtesa për ilaçe dhe pajisje mjekësore
+          other: Njoftime dhe kujtesa për ilaçe dhe pajisje mjekësore
         national:
-          one:
-          other:
+          one: Njoftimi i statistikave kombëtare
+          other: Njoftimet e statistikave kombëtare
         national_statistics:
-          one: Statistika - statistika kombetare
-          other: Statistika - statistika kombetare
+          one: Statistikat Kombëtare
+          other: Statistikat Kombëtare
         national_statistics_announcement:
-          one:
-          other:
+          one: Njoftimi i statistikave kombëtare
+          other: Njoftime të statistikave kombëtare
         news_article:
-          one: Artikull lajm
-          other: Artikuj lajme
+          one: Artikull lajmesh
+          other: Artikuj lajmesh
         news_story:
           one: Ngjarje
           other: Ngjarje
         notice:
-          one:
-          other:
+          one: Njoftim
+          other: Njoftime
         official:
-          one:
-          other:
+          one: Njoftimi i statistikave zyrtare
+          other: Njoftimet e statistikave zyrtare
         official_statistics:
-          one: Statistika
-          other: Statistika
+          one: Statistikat Zyrtare
+          other: Statistikat Zyrtare
         official_statistics_announcement:
-          one:
-          other:
+          one: Njoftimi i statistikave zyrtare
+          other: Njoftime të statistikave zyrtare
         open_consultation:
           one: Konsultim i hapur
-          other: Konsultime te hapur
+          other: Konsultime te hapura
         oral_statement:
-          one: Deklarate per Parliamentin
-          other: Deklarata per Parlamentin
+          one: Deklarata gojore në Parlament
+          other: Deklarata gojore në Parlament
         policy:
-          one: Politike
+          one: Politikë
           other: Politika
         policy_paper:
-          one: dokument politikash
-          other: dokumente politikash
+          one: Dokument politikash
+          other: Dokumente politikash
         press_release:
-          one: Njoftim shtyp
+          one: Njoftimi shtypi
           other: Njoftime shtypi
         promotional:
           one: Material promovues
@@ -174,23 +174,23 @@ sq:
           one: Publikim
           other: Publikime
         raib_report:
-          one:
-          other:
+          one: Raporti i Degës së Hetimit të Aksidenteve Hekurudhor
+          other: Raportet e Degës së Hetimit të Aksidenteve Hekurudhor
         regulation:
-          one:
-          other:
+          one: Rregullore
+          other: Rregulloret
         research:
-          one: kerkime dhe analiza
-          other: kerkime dhe analiza
+          one: Kërkime dhe analiza
+          other: Kërkime dhe analiza
         residential_property_tribunal_decision:
-          one:
-          other:
+          one: Vendimi i gjykatës së pronës së banimit
+          other: Vendimet e gjykatës së pronës së banimit
         service_sign_in:
-          one:
-          other:
+          one: Hyrje në shërbim
+          other: Hyrje në shërbim
         service_standard_report:
-          one:
-          other:
+          one: Raporti Standard i Shërbimit
+          other: Raportet Standarde të Shërbimit
         speaking_notes:
           one: Pika fjalimi
           other: Pika fjalimi
@@ -198,136 +198,142 @@ sq:
           one: Fjalim
           other: Fjalime
         standard:
-          one:
-          other:
+          one: Standardi
+          other: Standarde
         statement_to_parliament:
-          one: Deklarate per Parliamentin
-          other: Deklarata per Parlamentin
+          one: Deklaratë në Parlament
+          other: Deklarata në Parlament
         statistical_data_set:
-          one: Grup te dhenash statistikore
-          other: Grupe te dhenash stasistikore
+          one: Grupi i të dhënave statistikore
+          other: Grupe të të dhënave statistikore
         statistics_announcement:
-          one:
-          other:
+          one: Njoftimi për publikimin e statistikave
+          other: Njoftime për publikimin e statistikave
         statutory_guidance:
-          one:
-          other:
+          one: Udhëzim ligjor
+          other: Udhëzim ligjor
         take_part:
-          one:
-          other:
+          one: Merr pjesë
+          other: Merr pjesë
         tax_tribunal_decision:
-          one:
-          other:
+          one: Vendimi i gjykatës së taksave dhe kancelarive
+          other: Vendime të gjykatës së taksave dhe kancelarive
         transcript:
           one: Transkript
           other: Transkripte
         transparency:
-          one: Te dhena per transparencen
-          other: Te dhena per transparencen
+          one: Të dhëna për transparencën
+          other: Të dhëna për transparencën
         utaac_decision:
-          one:
-          other:
+          one: Vendimi i gjykatës së apelit administrativ
+          other: Vendime të gjykatës së apelit administrativ
         world_location_news_article:
-          one: Artikull lajm
-          other: Artikuj lajme
+          one: Artikull lajmesh
+          other: Artikuj lajmesh
         world_news_story:
-          one:
-          other:
+          one: Historia e lajmeve botërore
+          other: Histori të lajmeve botërore
         written_statement:
-          one: Deklarate me shkrim per Parlamentin
-          other: Deklarata me shkrim per Parlamentin
-    corporate_information:
+          one: Deklaratë me shkrim në Parlament
+          other: Deklarata me shkrim në Parlament
+    corporate_information: Informacioni i korporatës
     document_types:
-      documents:
+      documents: Dokumente
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Shihni të gjitha udhëzimet dhe rregulloret
+        title: Udhëzimi dhe rregullorja
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Shikoni të gjitha lajmet dhe komunikimet
+        title: Lajmet dhe komunikimet
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Shihni të gjitha dokumentet dhe konsultimet e politikave
+        title: Dokumentet e politikave dhe konsultimet
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Shihni të gjitha kërkimet dhe statistikat
+        title: Kërkimet dhe statistikat
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Shihni të gjitha shërbimet
+        title: Shërbimet
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Shihni të gjithë transparencën dhe lirinë e publikimit të informacionit
+        title: Transparenca dhe liria e publikimit të informacionit
+    errors_or_omissions_html: <p>Gabime apo heqje? <a class="govuk-link" href="/contact/govuk">Na tregoni këtu</a>. Për listat zyrtare të organeve publike jo departamentale <a class="govuk-link" href="/government/collections/public-bodies">shihni organet publike</a>.</p>
+    featured: Paraqitur
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: Formulari i kontaktit për FOI
+      foi_exemption_html: "Kjo organizatë nuk mbulohet nga Ligji për Lirinë e Informimit.\r\nPër të parë se cilat organizata janë të përfshira, shihni <a href=\"%{foi_url}\" class=\"govuk-link brand__color\">legjislacionin</a>.\r\n"
+      freedom_of_information_act: Akti për Lirinë e Informimit (LII)
+      freedom_of_information_requests: Kërkesat për lirinë e informacionit
+      make_an_foi_request: Bëni një kërkesë për FOI
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: Lexoni për Aktin e Lirisë së Informacionit (FOI) dhe <a href="%{how_to_path}" class="govuk-link brand__color">si të bëni një kërkesë</a>.
+        step2_html: Kontrolloni <a href="%{our_releases_path}" class="govuk-link brand__color">publikimet tona të mëparshme</a> për të parë nëse i jemi përgjigjur pyetjes tuaj.
+        step3_html: Bëni një kërkesë të re duke na kontaktuar duke përdorur detajet më poshtë.
+    follow_us: Na ndiqni
+    hidden_share_link: Na ndiqni
+    high_profile_groups: Grupe të profilit të lartë brenda %{title}
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: Punë dhe kontrata
+    latest_from: I fundit nga %{title}
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name_html: "%{title} quhet tani <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} është trup i <a href='%{link_href}'>%{link_text}</a>"
+      joining: "%{title} së shpejti do të përfshihet në GOV.UK"
+      left_gov: "%{title} tani është e pavarur nga qeveria e MB"
+      merged_html: "%{title} u bë pjesë e <a href='%{link_href}'>%{link_text}</a> in %{updated}"
+      merged_no_date_html: "%{title} është tani pjesë e <a href='%{link_href}'>%{link_text}</a>"
+      no_longer_exists: "%{title} është mbyllur"
+      no_website: "%{title} nuk ka faqe në internet"
+      separate_website_html: "%{title} ka një <a href='%{url}'>uebfaqe të veçantë</a>"
+      split_html: "%{title} u zëvendësua me %{links}"
+    part_of: Pjesë e
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: Menaxhimit tonë
+      chief_professional_officers: Oficerët kryesorë profesionistë
+      military_personnel: Zyrtarët tanë të lartë ushtarakë
+      ministers: Ministrat tanë
+      special_representatives: Përfaqësues specialë
+      traffic_commissioners: Komisionerët e trafikut
+    read_more: Lexoni më shumë për atë që bëjmë
+    search_for_department: Kërkoni për një departament, agjenci ose organ publik
+    see_all_latest_documents: Shihni të gjitha dokumentet më të fundit
+    separate_website: uebfaqe e veçantë
+    services_and_information: Të gjitha %{acronym} shërbimet dhe informacionin
     subscription:
-      email:
-      feed:
+      email: Merr emaile
+      feed: Abonohu për njoftime
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      ":":
+      adhoc_advisory_group: Grupi këshillues ad-hoc
+      advisory_ndpb: Organ publik këshillimor jo departamentik
+      civil_service: Shërbimi civil
+      court:
+      devolved_administration:
+      executive_agency: Agjenci ekzekutive
+      executive_ndpb: Organ publik ekzekutiv jo departamentik
+      executive_office:
+      independent_monitoring_body: Organ i pavarur monitorues
+      ministerial_department:
+      non_ministerial_department: Departamenti jo ministror
+      other: Tjetër
+      public_corporation: Korporatë publike
+      sub_organisation:
+      tribunal: Tribunali
+    view_all: shih të gjitha
+    view_less: shit më pak
+    what_we_do: Çfarë %{title} bën
     works_with_statement:
-      multiple:
-      one:
+      multiple: Punon me %{works_with_count} agjensitë dhe organe publike
+      one: Punon me %{works_with_count} organ publik

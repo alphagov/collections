@@ -1,6 +1,6 @@
 ---
 th:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: บริการและข้อมูล - %{title}
+    see_more_link: ดูเพิ่มเติม
+    title: บริการและข้อมูล

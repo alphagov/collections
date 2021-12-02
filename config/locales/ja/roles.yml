@@ -1,15 +1,15 @@
 ---
 ja:
   roles:
-    find_out_more_html:
+    find_out_more_html: この役割の前所有者については、%{link}セクションをご覧ください
     heading:
-      one:
-      other:
+      one: 役割
+      other: 役割
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: 現在の役割保有者
+      previous_holders: 以前の保有者
+      responsibilities: 責任
+    ministerial: 大臣の役割
+    past: 以前の役割
+    previous_holders: この役割の前保有者
+    read_more: この役割の詳細

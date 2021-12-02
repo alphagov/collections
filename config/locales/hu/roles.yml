@@ -1,15 +1,15 @@
 ---
 hu:
   roles:
-    find_out_more_html:
+    find_out_more_html: Tudjon meg többet a jelen pozíciót korábban betöltő emberekről a(z) %{link} szekciónkból.
     heading:
-      one:
-      other:
+      one: Beosztás
+      other: Beosztások
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: A pozíciót jelenleg betölti
+      previous_holders: A pozíciót korábban betöltők
+      responsibilities: Felelősségi körök
+    ministerial: Miniszteri pozíció
+    past: múlt
+    previous_holders: A pozíciót korábban betöltő személyek
+    read_more: Tudjon meg többet erről a pozícióról

@@ -1,15 +1,15 @@
 ---
 fa:
   roles:
-    find_out_more_html:
+    find_out_more_html: در بخش %{link} ما، درباره افراد قبلی که این نقش را بر عهده داشته‌اند، اطلاعات بیشتری کسب کنید.
     heading:
-      one:
-      other:
+      one: نقش
+      other: نقش‌ها
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: دارنده فعلی نقش
+      previous_holders: دارندگان قبلی
+      responsibilities: مسئولیت‌ها
+    ministerial: نقش وزارتی
+    past: گذشته
+    previous_holders: دارندگان قبلی این نقش
+    read_more: اطلاعات بیشتر درباره این نقش

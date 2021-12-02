@@ -1,15 +1,15 @@
 ---
 kk:
   roles:
-    find_out_more_html:
+    find_out_more_html: Біздің %{link} бөлімдегі осы рөлдің алдыңғы иегерлері туралы қосымша ақпарат алыңыз.
     heading:
-      one:
-      other:
+      one: Рөл
+      other: Рөлдер
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: Ағымдағы рөл иегері
+      previous_holders: Алдыңғы иегерлер
+      responsibilities: Жауапкершіліктер
+    ministerial: Министрлік рөл
+    past: өткен
+    previous_holders: Осы рөлдің алдыңғы иегерлері
+    read_more: Осы рөл туралы қосымша ақпарат

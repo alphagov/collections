@@ -1,6 +1,6 @@
 ---
 si:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: සේවා සහ තොරතුරු -%{title}
+    see_more_link: තව බලන්න
+    title: සේවා සහ තොරතුරු

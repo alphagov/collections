@@ -1,4 +1,13 @@
 data:
+  read:
+    - config/locales/%{locale}/*.yml
+  write:
+    - ['{:}.*', 'config/locales/%{locale}/\1.yml']
   yaml:
     write:
       line_width: -1
+ignore_unused:
+  - "organisations.content_item.schema_name.*"
+  - "brexit_landing_page.sections.*"
+  - "roles.heading.*"
+  - "organisations.type.*"

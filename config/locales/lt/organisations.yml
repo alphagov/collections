@@ -1,39 +1,39 @@
 ---
 lt:
   organisations:
-    about_page_path:
-    administered_by:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Administruoja
     breadcrumbs:
-      courts_and_tribunals:
-      organisations:
+      courts_and_tribunals: Teismai ir tribunolai
+      organisations: Organizacijos
     contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
+      contact_details: Kontaktinė informacija
+      contact_form: 'Kontaktų forma: %{title}'
+      contact_organisation: Susisiekti su %{organisation}
+      email: El. paštas
+      telephone: Telefonas
     content_item:
       schema_name:
         aaib_report:
           few:
-          one:
-          other:
+          one: Orlaivių avarijų tyrimo skyriaus ataskaita
+          other: Orlaivių avarijų tyrimo skyriaus ataskaitos
         announcement:
           few:
           one: Pranešimas
           other: Pranešimai
         asylum_support_decision:
           few:
-          one:
-          other:
+          one: Tribunolo sprendimas dėl prieglobsčio
+          other: Tribunolo sprendimai dėl prieglobsčio
         authored_article:
           few:
           one: Autoriaus straipsnis
           other: Autorių straipsniai
         business_finance_support_scheme:
           few:
-          one:
-          other:
+          one: Verslo finansų paramos planas
+          other: Verslo finansų paramos planai
         case_study:
           few:
           one: Atvejo analizė
@@ -44,12 +44,12 @@ lt:
           other: Pasibaigusios konsultacijos
         cma_case:
           few:
-          one:
-          other:
+          one: Konkurencijos ir rinkos institucijos byla
+          other: Konkurencijos ir rinkos institucijos bylos
         coming_soon:
           few:
-          one:
-          other:
+          one: Jau greitai
+          other: Jau greitai
         consultation:
           few:
           one: Konsultacija
@@ -60,8 +60,8 @@ lt:
           other: Konsultacijos rezultatai
         corporate_information_page:
           few:
-          one:
-          other:
+          one: Informacinis puslapis
+          other: Informaciniai puslapiai
         corporate_report:
           few:
           one: Bendra ataskaita
@@ -72,44 +72,44 @@ lt:
           other: Korespondencija
         countryside_stewardship_grant:
           few:
-          one:
-          other:
+          one: Kaimo priežiūros dotacija
+          other: Kaimo priežiūros dotacijos
         decision:
           few:
-          one:
-          other:
+          one: Sprendimas
+          other: Sprendimai
         detailed_guide:
           few:
           one: Detalesnė informacija
           other: Detalesnė informacija
         dfid_research_output:
           few:
-          one:
-          other:
+          one: Plėtros rezultato tyrimas
+          other: Plėtros rezultatų tyrimas
         document_collection:
           few:
           one: Serijos
-          other:
+          other: Serijos
         draft_text:
           few:
           one: Pirminis teksto variantas
           other: Pirminiai teksto variantai
         drug_safety_update:
           few:
-          one:
-          other:
+          one: Nauja informacija apie vaistų saugumą
+          other: Nauja informacija apie vaistų saugumą
         employment_appeal_tribunal_decision:
           few:
-          one:
-          other:
+          one: Darbo bylų apeliacijų tribunolo sprendimas
+          other: Darbo bylų apeliacijų tribunolo sprendimai
         employment_tribunal_decision:
           few:
-          one:
-          other:
+          one: Darbo teisės tribunolo sprendimas
+          other: Darbo teisės tribunolo sprendimai
         esi_fund:
           few:
-          one:
-          other:
+          one: Europos struktūrinis ir investicijų fondas
+          other: Europos struktūriniai ir investicijų fondai
         fatality_notice:
           few:
           one: Pranešimas apie nelaimę
@@ -144,16 +144,16 @@ lt:
           other: Nepriklausomos ataskaitos
         international_development_fund:
           few:
-          one:
-          other:
+          one: Tarptautinis plėtros finansavimas
+          other: Tarptautinis plėtros finansavimas
         international_treaty:
           few:
-          one:
-          other:
+          one: Tarptautinė sutartis
+          other: Tarptautinės sutartys
         maib_report:
           few:
-          one:
-          other:
+          one: Jūrų laivų avarijų tyrimo skyriaus ataskaita
+          other: Jūrų laivų avarijų tyrimo skyriaus ataskaitos
         map:
           few:
           one: Žemėlapis
@@ -161,19 +161,19 @@ lt:
         medical_safety_alert:
           few:
           one:
-          other:
+          other: Įspėjimai dėl vaistų ir medicininių prietaisų, jų atšaukimas
         national:
           few:
-          one:
-          other:
+          one: Nacionalinės statistikos pranešimas
+          other: Nacionalinės statistikos pranešimas
         national_statistics:
           few:
-          one: 'Statistika - nacionalinė statistika '
-          other: 'Statistika - nacionalinė statistika '
+          one: Statistika - nacionalinė statistika
+          other: Statistika - nacionalinė statistika
         national_statistics_announcement:
           few:
-          one:
-          other:
+          one: Nacionalinės statistikos pranešimas
+          other: Nacionalinės statistikos pranešimas
         news_article:
           few:
           one: Straipsnis
@@ -184,24 +184,24 @@ lt:
           other: Naujienos
         notice:
           few:
-          one:
-          other:
+          one: Pranešimas
+          other: Pranešimai
         official:
           few:
-          one:
-          other:
+          one: Oficialios statistikos pranešimas
+          other: Oficialios statistikos pranešimai
         official_statistics:
           few:
           one: Statistika
           other: Statistika
         official_statistics_announcement:
           few:
-          one:
-          other:
+          one: Oficialios statistikos pranešimas
+          other: Oficialios statistikos pranešimasi
         open_consultation:
           few:
           one: Atvira konsultacija
-          other: 'Atviros konsultacijos '
+          other: Atviros konsultacijos
         oral_statement:
           few:
           one: Žodinis kreipimasis į parlamentą
@@ -228,28 +228,28 @@ lt:
           other: Leidiniai
         raib_report:
           few:
-          one:
-          other:
+          one: Traukinių avarijų tyrimo skyriaus ataskaita
+          other: Traukinių avarijų tyrimo skyriaus ataskaitos
         regulation:
           few:
-          one:
-          other:
+          one: Reglamentas
+          other: Reglamentai
         research:
           few:
           one: Tyrimas ir analizė
           other: Tyrimai ir analizės
         residential_property_tribunal_decision:
           few:
-          one:
-          other:
+          one: Gyvenamosios nuosavybės tribunolo sprendimas
+          other: Gyvenamosios nuosavybės tribunolo sprendimai
         service_sign_in:
           few:
-          one:
-          other:
+          one: Prisijungti prie paslaugos
+          other: Prisijungti prie paslaugos
         service_standard_report:
           few:
-          one:
-          other:
+          one: Standartinė paslaugos ataskaita
+          other: Standartinės paslaugų ataskaitos
         speaking_notes:
           few:
           one: Kalbos santrauka
@@ -260,8 +260,8 @@ lt:
           other: Kalbos
         standard:
           few:
-          one:
-          other:
+          one: Standartas
+          other: Standartai
         statement_to_parliament:
           few:
           one: Kreipimasis į parlamentą
@@ -272,20 +272,20 @@ lt:
           other: Statistiniai duomenys
         statistics_announcement:
           few:
-          one:
-          other:
+          one: Statistinių duomenų pranešimas
+          other: Statistinių duomenų pranešimai
         statutory_guidance:
           few:
-          one:
-          other:
+          one: Įstatyminė informacija
+          other: Įstatyminė informacija
         take_part:
           few:
-          one:
-          other:
+          one: Dalyvauti
+          other: Dalyvauti
         tax_tribunal_decision:
           few:
-          one:
-          other:
+          one: Mokesčių ir kanceliarijos tribunolo sprendimas
+          other: Mokesčių ir kanceliarijos tribunolo sprendimai
         transcript:
           few:
           one: Kalbos tekstas
@@ -296,112 +296,120 @@ lt:
           other: Skaidrumo informacija
         utaac_decision:
           few:
-          one:
-          other:
+          one: Administracinių bylų apeliacijų tribunolo sprendimas
+          other: Administracinių bylų apeliacijų tribunolo sprendimai
         world_location_news_article:
           few:
           one: Straipsnis
           other: Straipsniai
         world_news_story:
           few:
-          one:
-          other:
+          one: Pasaulio naujienos
+          other: Pasaulio naujienos
         written_statement:
           few:
           one: Rašytinis kreipimasis į parlamentą
           other: Rašytiniai kreipimaisi į parlamentą
-    corporate_information:
+    corporate_information: Įmonės informacija
     document_types:
-      documents:
+      documents: Dokumentai
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Peržiūrėti visus nurodymus ir taisykles
+        title: Nurodymai ir taisyklės
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Peržiūrėti visas naujienas ir pranešimus
+        title: Naujienos ir pranešimai
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Peržiūrėti visus strategijos dokumentus ir konsultacijas
+        title: Strategijos dokumentai ir konsultacijos
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Peržiūrėti visus tyrimus ir statistiką
+        title: Tyrimai ir statistika
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Peržiūrėti visas paslaugas
+        title: Paslaugos
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Peržiūrėti visus pranešimus apie skaidrumą ir informacijos laisvę
+        title: Pranešimai apie skaidrumą ir informacijos laisvę
+    errors_or_omissions_html: <p>Radote klaidų ar pastebėjote, kad pateikta ne visa informacija? <a class="govuk-link" href="/contact/govuk">Nurodykite mums čia</a>. Oficialus ne departamentinių viešųjų įstaigų sąrašas <a class="govuk-link" href="/government/collections/public-bodies">see public bodies</a>.</p>
+    featured: Rodomas
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: Kontaktinės forma dėl informacijos laisvės
+      foi_exemption_html: |
+        Šiai organizacijai netaikomas Informacijos laisvės įstatymas.
+        Organizacijų, kurioms taikomas įstatymas, sąrašas pateiktas <a href="%{foi_url}" class="govuk-link brand__color">the legislation</a
+      freedom_of_information_act: Informacijos laisvės įstatymas
+      freedom_of_information_requests: Informacijos laisvės prašymai
+      make_an_foi_request: Pateikti informacijos laisvės prašymą
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: Perskaitykite informaciją apie Informacijos laisvės įstatymą ir <a href="%{how_to_path}" class="govuk-link brand__color">sužinokite, kaip pateikti prašymą</a>.
+        step2_html: Peržiūrėkite <a href="%{our_releases_path}" class="govuk-link brand__color">mūsų ankstesnius pranešimus,</a> nes juose jau galime būti atsakę į jūsų klausimą.
+        step3_html: Pateikite naują prašymą susisiekdami su mumis toliau nurodytais kontaktais.
+    follow_us: Sekite mus
+    hidden_share_link: Sekite toliau
+    high_profile_groups: Aukšto profilio grupės %{title}
+    index_title: "%{title} – GOV.UK"
+    jobs_contracts: Darbai ir sutartys
+    latest_from: Naujienos iš %{title}
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name_html: "%{title} dabar vadinamas <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} yra <a href='%{link_href}'>%{link_text}</a> organas"
+      joining: "%{title} greitai bus įtraukta į GOV.UK"
+      left_gov: "%{title} dabar nebepriklauso nuo JK vyriausybės"
+      merged_html: "%{title} tapo <a href='%{link_href}'>%{link_text}</a> in %{updated} dalimi"
+      merged_no_date_html: "%{title} dabar yra<a href='%{link_href}'>%{link_text}</a> dalis"
+      no_longer_exists: "%{title} užsidarė"
+      no_website: "%{title} neturi interneto svetainės"
+      separate_website_html: "%{title} turi <a href='%{url}'>atskirą interneto svetainę</a>"
+      split_html: "%{title} pakeitė %{links}"
+    part_of: Dalis
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: Mūsų vadovybė
+      chief_professional_officers: Vyriausieji pareigūnai
+      military_personnel: Mūsų vyresnieji kariuomenės pareigūnai
+      ministers: Mūsų ministrai
+      special_representatives: Specialūs atstovai
+      traffic_commissioners: Už eismą atsakingi komisijos nariai
+    read_more: Daugiau informacijos apie tai, kuo užsiimame
+    search_for_department: Ieškokite departamento, agentūros ar viešosios įstaigos
+    see_all_latest_documents: Peržiūrėti naujausius dokumentus
+    separate_website: atskira interneto svetainė
+    services_and_information: Visos %{acronym} paslaugos ir informacija
     subscription:
-      email:
-      feed:
+      email: Gauti el. laiškus
+      feed: Prenumeruoti srautą
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      ":":
+      adhoc_advisory_group: Ad-hoc konsultacinė grupė
+      advisory_ndpb: Konsultacinė ne departamentinė viešoji įstaiga
+      civil_service: Valstybės tarnyba
+      court:
+      devolved_administration:
+      executive_agency: Vykdomoji agentūra
+      executive_ndpb: Vykdomoji ne departamentinė viešoji įstaiga
+      executive_office:
+      independent_monitoring_body: Nepriklausoma priežiūros institucija
+      ministerial_department:
+      non_ministerial_department: Ne ministerijai priklausantis departamentas
+      other: Kita
+      public_corporation: Viešoji korporacija
+      sub_organisation:
+      tribunal: Tribunolas
+    view_all: žiūrėti viską
+    view_less: žiūrėti mažiau
+    what_we_do: Kuo užsiima %{title}
     works_with_statement:
-      multiple:
-      one:
+      multiple: Dirba su %{works_with_count} agentūromis ir viešosiomis įstaigomis
+      one: Dirba su %{works_with_count} viešąja įstaiga

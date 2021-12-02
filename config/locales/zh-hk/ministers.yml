@@ -1,9 +1,9 @@
 ---
 zh-hk:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: 同時出席內閣會議
+    by_department: 各部門大臣
+    cabinet: 內閣大臣
+    govuk_title: 各大臣 - GOV.UK
+    title: 大臣
+    whips: 黨鞭

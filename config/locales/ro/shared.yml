@@ -1,12 +1,12 @@
 ---
 ro:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Pagina principală
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
+      prefix: 'Răsfoiți:'
+      title: Răsfoiți GOV.UK
+    get_emails: Primiți e-mailuri pentru acest subiect
+    language_direction: ltr
     language_name: Română
     topics:
-      title:
+      title: "%{title}: informații detaliate"

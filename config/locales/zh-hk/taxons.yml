@@ -1,8 +1,8 @@
 ---
 zh-hk:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: 了解各附屬主題
+    organisations: 組織
+    see_all_in_topic: 在這一主題下了解 %{type} 之詳情
+    show_fewer_orgs: 顯示較少組織機構
+    show_more_orgs: 顯示較多組織機構

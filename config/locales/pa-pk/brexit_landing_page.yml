@@ -1,40 +1,26 @@
 ---
 pa-pk:
   brexit_landing_page:
-    campaign_links:
-      lead_in:
-      lead_out:
-      links:
-    comms:
-      links:
-      read_transcript:
-    comms_header:
-    data_list_title:
-    email_mailto_subject:
-    guidance_header:
-    meta_description:
-    meta_title:
-    no_cookies:
-      change_settings_text:
-      icon_text:
-      or_text:
-      to_watch_text:
-      watch_link_text:
-    page_header:
-    page_header_explainer:
+    meta_description: " اوچیزاں جیوں کہ سفر تے یورپ میں کاروبار لئی بریگزٹ  دے نویں قانون کس طراں لاگو ہوندے نیئں۔ Brexit چیکر نوں استعمال کر کے اپنی ذاتی فہرست حاصل کرو۔"
+    meta_title: Brexit
+    page_header: Brexit
+    page_header_explainer: یورپ وچ کاروبار کرن تے سفر کرن جئی چیزاں تے نویں قانون لاگو ہون گے۔ Brexit checker نوں استعمال کر کے اپنی ذات لئی اپنے خانادان تے اپنے کاروبار دے کماں لئی اک فہرست حاصل کرو۔
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
-      aria_string_suffix:
-      guidance_and_regulation:
-      news_and_communications:
-      policy_and_engagement:
-      research_and_statistics:
-      services:
-      transparency:
-    share_links:
-    topic_section_header:
-    topic_section_subheading:
-    video_section_description:
-    video_section_link:
-    video_section_title:
-    video_section_transcription_summary:
-    video_section_transcription_text:
+      aria_string_suffix: ایہ Brexitدے بارے
+      guidance_and_regulation: رہنمائی تے قانون
+      news_and_communications: خبراں تے اطلاعات
+      policy_and_engagement: حکمت ِعملی دے کاغذات تے مشاورت
+      research_and_statistics: کھوج تے اعداوشمار
+      services: خدمات
+      transparency: شفافیت تے معلومات جاری کرن دی آزادی
+    topic_section_header: Brexit  بارے ساری معلومات
+    topic_section_subheading: Brexit بارے ساری معلومات ویکھو
+    trade_deal_heading:
+    trade_deal_links:

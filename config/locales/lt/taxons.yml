@@ -1,8 +1,8 @@
 ---
 lt:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Peržiūrėkite potemes
+    organisations: Organizacijos
+    see_all_in_topic: Daugiau %{type} šia tema
+    show_fewer_orgs: Rodyti mažiau organizacijų
+    show_more_orgs: Rodyti daugiau organizacijų

@@ -1,15 +1,15 @@
 ---
 ms:
   roles:
-    find_out_more_html:
+    find_out_more_html: Ketahui lebih lanjut tentang pemegang jawatan ini sebelum ini dalam seksyen %{link} kami.
     heading:
-      one:
-      other:
+      one: Peranan
+      other: Peranan
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: Pemegang jawatan ketika ini
+      previous_holders: Pemegang jawatan sebelum ini
+      responsibilities: Tanggungjawab
+    ministerial: Peranan menteri
+    past: lalu
+    previous_holders: Pemegang jawatan ini sebelum ini
+    read_more: Lebih lanjut tentang peranan ini

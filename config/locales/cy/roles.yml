@@ -1,7 +1,7 @@
 ---
 cy:
   roles:
-    find_out_more_html:
+    find_out_more_html: Dysgwch fwy am ddeiliaid blaenorol y rôl hon yn ein hadran %{link}.
     heading:
       few:
       many:
@@ -10,10 +10,10 @@ cy:
       two:
       zero:
     headings:
-      current_holder: 'Deiliad y rôl  '
-      previous_holders: 'Cyn-ddeiliaid '
+      current_holder: Deiliad presennol y rôl
+      previous_holders: Deiliaid blaenorol
       responsibilities: Cyfrifoldebau
-    ministerial: Rôl Gweinidogol
-    past:
-    previous_holders:
-    read_more: Mwy am y rôl yma
+    ministerial: Rôl weinidogol
+    past: gorffennol
+    previous_holders: Deiliaid blaenorol y rôl hon
+    read_more: Mwy am y rôl hon

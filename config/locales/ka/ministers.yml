@@ -1,9 +1,9 @@
 ---
 ka:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: ასევე ესწრება კაბინეტს
+    by_department: მინისტრები დეპარტამენტების მიხედვით
+    cabinet: კაბინეტის მინისტრები
+    govuk_title: მინისტრები - GOV.UK
+    title: მინისტრები
+    whips: ვიპები

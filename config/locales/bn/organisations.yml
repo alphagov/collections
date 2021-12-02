@@ -1,333 +1,341 @@
 ---
 bn:
   organisations:
-    about_page_path:
-    administered_by:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: পরিচালনাকারী
     breadcrumbs:
-      courts_and_tribunals:
-      organisations:
+      courts_and_tribunals: আদালত ও ট্রাইব্যুনাল
+      organisations: প্রতিষ্ঠানসমূহ
     contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
+      contact_details: যোগাযোগের বিস্তারিত তথ্য
+      contact_form: 'যোগাযোগের ফর্ম: %{title}'
+      contact_organisation: যোগাযোগ %{organisation}
+      email: ইমেইল
+      telephone: টেলিফোন
     content_item:
       schema_name:
         aaib_report:
-          one:
-          other:
+          one: বিমান দুর্ঘটনা তদন্ত শাখা প্রতিবেদন
+          other: বিমান দুর্ঘটনা তদন্ত শাখা প্রতিবেদনসমূহ
         announcement:
           one: ঘোষণা
-          other: ঘোষণাসমূহ
+          other: ঘোষণা
         asylum_support_decision:
-          one:
-          other:
+          one: রাজনৈতিক আশ্রয় সহায়তা ট্রাইব্যুনালের সিদ্ধান্ত
+          other: রাজনৈতিক আশ্রয় সহায়তা ট্রাইব্যুনালের সিদ্ধান্তসমূহ
         authored_article:
-          one: রচনা নিবন্ধ
-          other: রচনা নিবন্ধসমূহ
+          one: লেখকের উৎস সহ নিবন্ধ
+          other: লেখকের উৎস সহ নিবন্ধসমূহ
         business_finance_support_scheme:
-          one:
-          other:
+          one: ব্যবসায়িক অর্থায়ন সহায়তা স্কিম
+          other: ব্যবসায়িক অর্থায়ন সহায়তা স্কিমসমূহ
         case_study:
           one: কেস স্টাডি
           other: কেস স্টাডিসমূহ
         closed_consultation:
-          one: সমাপ্ত শলাপরামর্শ
-          other: সমাপ্ত শলাপরামর্শসমূহ
+          one: ক্লোজড কনসাল্টেশন
+          other: ক্লোজড কনসাল্টেশন
         cma_case:
-          one:
-          other:
+          one: প্রতিযোগিতা এবং বাজার কর্তৃপক্ষ কেস
+          other: প্রতিযোগিতা এবং বাজার কর্তৃপক্ষ কেসসমূহ
         coming_soon:
-          one:
-          other:
+          one: শীঘ্রই আসছে
+          other: শীঘ্রই আসছে
         consultation:
-          one: শলাপরামর্শ
-          other: শলাপরামর্শসমূহ
+          one: পরামর্শ
+          other: পরামর্শ
         consultation_outcome:
-          one: শলাপরামর্শের ফলাফল
-          other: শলাপরামর্শের ফলাফলসমূহ
+          one: পরামর্শের ফলাফল
+          other: পরামর্শের ফলাফল
         corporate_information_page:
-          one:
-          other:
+          one: তথ্য পেইজ
+          other: তথ্য পেইজসমূহ
         corporate_report:
           one: কর্পোরেট রিপোর্ট
           other: কর্পোরেট রিপোর্টসমূহ
         correspondence:
-          one: চিঠিপত্র
-          other: চিঠিপত্রসমূহ
+          one: যোগাযোগ
+          other: যোগাযোগ
         countryside_stewardship_grant:
-          one:
-          other:
+          one: কান্ট্রিসাইড স্টুয়ার্ডশিপ গ্রান্ট
+          other: কান্ট্রিসাইড স্টুয়ার্ডশিপ গ্রান্টস
         decision:
           one: সিদ্ধান্ত
           other: সিদ্ধান্তসমূহ
         detailed_guide:
-          one: নির্দেশনা
-          other: নির্দেশনা
+          one: পরিচালনা
+          other: পরিচালনা
         dfid_research_output:
-          one:
-          other:
+          one: উন্নয়নমূলক ফলাফলের জন্য গবেষণা
+          other: উন্নয়নমূলক ফলাফলের জন্য গবেষণা
         document_collection:
           one: সংগ্রহ
           other: সংগ্রহসমূহ
         draft_text:
-          one: খসড়া পাঠ্য
-          other: খসড়া পাঠ্যসমূহ
+          one: খসড়া টেক্সট
+          other: খসড়া টেক্সটসমূহ
         drug_safety_update:
-          one:
-          other:
+          one: ঔষধের নিরাপত্তা সম্পর্কিত আপডেট
+          other: ঔষধের নিরাপত্তা সম্পর্কিত আপডেট
         employment_appeal_tribunal_decision:
-          one:
-          other:
+          one: চাকরির আপীল ট্রাইব্যুনালের সিদ্ধান্ত
+          other: চাকরির আপীল ট্রাইব্যুনালের সিদ্ধান্তসমূহ
         employment_tribunal_decision:
-          one:
-          other:
+          one: চাকরির ট্রাইব্যুনালের সিদ্ধান্ত
+          other: চাকরির ট্রাইব্যুনালের সিদ্ধান্তসমূহ
         esi_fund:
-          one:
-          other:
+          one: ইউরোপিয়ান স্ট্রাকচারাল অ্যান্ড ইনভেস্টমেন্ট ফান্ড (ESIF)
+          other: ইউরোপিয়ান স্ট্রাকচারাল অ্যান্ড ইনভেস্টমেন্ট ফান্ডসমূহ (ESIF)
         fatality_notice:
-          one:
-          other:
+          one: বিপর্যয় সম্পর্কিত বিজ্ঞপ্তি
+          other: বিপর্যয় সম্পর্কিত বিজ্ঞপ্তিসমূহ
         foi_release:
-          one: এফওআই বিজ্ঞপ্তি
-          other: এফওআই বিজ্ঞপ্তিসমূহ
+          one: FOI ছাড়পত্র
+          other: FOI ছাড়পত্রসমূহ
         form:
-          one: ফরম
-          other: ফরমসমূহ
+          one: ফর্ম
+          other: ফর্মসমূহ
         government_response:
-          one: সরকারী প্রতিক্রিয়া
-          other: সরকারী প্রতিক্রিয়াসমূহ
+          one: সরকারের সাড়া
+          other: সরকারের সাড়া
         guidance:
-          one: নির্দেশনা
-          other: নির্দেশনা
+          one: পরিচালনা
+          other: পরিচালনা
         impact_assessment:
           one: প্রভাব মূল্যায়ন
-          other: প্রভাব মূল্যায়নসমূহ
+          other: প্রভাব মূল্যায়ন
         imported:
-          one: আমদানিকৃত- প্রত্যাশিত প্রকার
-          other: আমদানিকৃত- প্রত্যাশিত প্রকার
+          one: ইমপোর্ট করা - প্রকারের জন্য অপেক্ষমাণ
+          other: ইমপোর্ট করা - প্রকারের জন্য অপেক্ষমাণ
         independent_report:
           one: স্বতন্ত্র রিপোর্ট
           other: স্বতন্ত্র রিপোর্টসমূহ
         international_development_fund:
-          one:
-          other:
+          one: আন্তর্জাতিক উন্নয়ন অর্থায়ন
+          other: আন্তর্জাতিক উন্নয়ন অর্থায়ন
         international_treaty:
-          one: আন্তর্জাতিক চুক্তি
-          other: আন্তর্জাতিক চুক্তিসমূহ
+          one: ইন্টারন্যাশনাল চুক্তি
+          other: ইন্টারন্যাশনাল চুক্তিসমূহ
         maib_report:
-          one:
-          other:
+          one: সামুদ্রিক দুর্ঘটনা তদন্ত শাখা প্রতিবেদন
+          other: সামুদ্রিক দুর্ঘটনা তদন্ত শাখা প্রতিবেদনসমূহ
         map:
           one: মানচিত্র
           other: মানচিত্রসমূহ
         medical_safety_alert:
-          one:
-          other:
+          one: ঔষধপত্র ও মেডিক্যাল ডিভাইস সম্পর্কে অ্যালার্ট ও রিকল
+          other: ঔষধপত্র ও মেডিক্যাল ডিভাইস সম্পর্কে অ্যালার্ট ও রিকল
         national:
-          one:
-          other:
+          one: জাতীয় পরিসংখ্যানের ঘোষণা
+          other: জাতীয় পরিসংখ্যানের ঘোষণাসমূহ
         national_statistics:
           one: জাতীয় পরিসংখ্যান
           other: জাতীয় পরিসংখ্যান
         national_statistics_announcement:
-          one:
-          other:
+          one: জাতীয় পরিসংখ্যানের ঘোষণা
+          other: জাতীয় পরিসংখ্যানের ঘোষণাসমূহ
         news_article:
-          one: সংবাদ প্রবন্ধ
-          other: সংবাদ প্রবন্ধসমূহ
+          one: সংবাদের নিবন্ধ
+          other: সংবাদের নিবন্ধসমূহ
         news_story:
-          one: সংবাদের কাহিনী
-          other: সংবাদের কাহিনীসমূহ
+          one: সংবাদের বিষয়
+          other: সংবাদের বিষয়াবলী
         notice:
-          one: প্রজ্ঞাপন
-          other: প্রজ্ঞাপনসমূহ
+          one: বিজ্ঞপ্তি
+          other: বিজ্ঞপ্তিসমূহ
         official:
-          one:
-          other:
+          one: দাপ্তরিক পরিসংখ্যানের ঘোষণা
+          other: দাপ্তরিক পরিসংখ্যানের ঘোষণাসমূহ
         official_statistics:
           one: দাপ্তরিক পরিসংখ্যান
           other: দাপ্তরিক পরিসংখ্যান
         official_statistics_announcement:
-          one:
-          other:
+          one: দাপ্তরিক পরিসংখ্যানের ঘোষণা
+          other: দাপ্তরিক পরিসংখ্যানের ঘোষণাসমূহ
         open_consultation:
-          one: উন্মুক্ত শলাপরামর্শ
-          other: উন্মুক্ত শলাপরামর্শসমূহ
+          one: উম্মুক্ত পরামর্শ
+          other: উম্মুক্ত পরামর্শসমূহ
         oral_statement:
           one: সংসদে মৌখিক বিবৃতি
           other: সংসদে মৌখিক বিবৃতিসমূহ
         policy:
-          one:
-          other:
+          one: নীতিমালা
+          other: নীতিমালা
         policy_paper:
-          one: নীতিমালা সংক্রান্ত পত্র
-          other: নীতিমালা সংক্রান্ত পত্রসমূহ
+          one: পলিসি পেপার
+          other: পলিসি পেপারসমূহ
         press_release:
-          one: সংবাদ বিজ্ঞপ্তি
-          other: সংবাদ বিজ্ঞপ্তিসমূহ
+          one: প্রেস বিজ্ঞপ্তি
+          other: প্রেস বিজ্ঞপ্তিসমূহ
         promotional:
-          one: প্রচারমূলক উপাদান
-          other: প্রচারমূলক উপাদান
+          one: প্রোমোশন সম্পর্কিত উপকরণ
+          other: প্রোমোশন সম্পর্কিত উপকরণ
         publication:
           one: প্রকাশনা
           other: প্রকাশনাসমূহ
         raib_report:
-          one:
-          other:
+          one: রেল দুর্ঘটনা তদন্ত শাখা প্রতিবেদন
+          other: রেল দুর্ঘটনা তদন্ত শাখা প্রতিবেদনসমূহ
         regulation:
-          one: নিয়ম
-          other: নিয়মাবলী
+          one: বিধিবিধান
+          other: বিধিবিধান
         research:
           one: গবেষণা ও বিশ্লেষণ
           other: গবেষণা ও বিশ্লেষণ
         residential_property_tribunal_decision:
-          one:
-          other:
+          one: আবাসিক সম্পত্তির ট্রাইব্যুনালের সিদ্ধান্ত
+          other: আবাসিক সম্পত্তির ট্রাইব্যুনালের সিদ্ধান্তসমূহ
         service_sign_in:
-          one:
-          other:
+          one: পরিষেবায় সাইন ইন
+          other: পরিষেবায় সাইন ইন
         service_standard_report:
-          one:
-          other:
+          one: পরিষেবার স্ট্যান্ডার্ডের প্রতিবেদন
+          other: পরিষেবার স্ট্যান্ডার্ডের প্রতিবেদনসমূহ
         speaking_notes:
-          one: কথ্য নোটসমূহ
-          other: কথ্য নোটসমূহ
+          one: বক্তার টীকা
+          other: বক্তার টীকা
         speech:
-          one: ভাষণ
-          other: ভাষণসমূহ
+          one: বক্তব্য
+          other: বক্তব্যসমূহ
         standard:
-          one:
-          other:
+          one: স্ট্যান্ডার্ড
+          other: স্ট্যান্ডার্ডসমূহ
         statement_to_parliament:
           one: সংসদে বিবৃতি
           other: সংসদে বিবৃতিসমূহ
         statistical_data_set:
-          one: পরিসংখ্যানমূলক ডেটা সেট
-          other: পরিসংখ্যানমূলক ডেটা সেটসমূহ
+          one: পরিসংখ্যানগত তথ্য সংকলন
+          other: পরিসংখ্যানগত তথ্য সংকলন
         statistics_announcement:
-          one:
-          other:
+          one: পরিসংখ্যান প্রকাশের ঘোষণা
+          other: পরিসংখ্যান প্রকাশের ঘোষণাসমূহ
         statutory_guidance:
-          one: সংবিধিবদ্ধ নির্দেশনা
-          other: সংবিধিবদ্ধ নির্দেশনা
+          one: বিধিবদ্ধ নির্দেশনা
+          other: বিধিবদ্ধ নির্দেশনা
         take_part:
-          one:
-          other:
+          one: অংশ নিন
+          other: অংশ নিন
         tax_tribunal_decision:
-          one:
-          other:
+          one: ট্যাক্স ও চ্যান্সেরি ট্রাইব্যুনালের সিদ্ধান্ত
+          other: ট্যাক্স ও চ্যান্সেরি ট্রাইব্যুনালের সিদ্ধান্তসমূহ
         transcript:
-          one: প্রতিলিপি
-          other: প্রতিলিপিসমূহ
+          one: ট্রানস্ক্রিপ্ট
+          other: ট্রানস্ক্রিপ্টসমূহ
         transparency:
-          one: স্বচ্ছতামূলক ডেটা
-          other: স্বচ্ছতামূলক ডেটা
+          one: স্বচ্ছতার তথ্য
+          other: স্বচ্ছতার তথ্য
         utaac_decision:
-          one:
-          other:
+          one: প্রশাসনিক আপীল ট্রাইব্যুনালের সিদ্ধান্ত
+          other: প্রশাসনিক আপীল ট্রাইব্যুনালের সিদ্ধান্তসমূহ
         world_location_news_article:
-          one:
-          other:
+          one: সংবাদের নিবন্ধ
+          other: সংবাদের নিবন্ধসমূহ
         world_news_story:
-          one:
-          other:
+          one: বিশ্ব সংবাদের বিষয়বস্তু
+          other: বিশ্ব সংবাদের বিষয়বস্তুসমূহ
         written_statement:
           one: সংসদে লিখিত বিবৃতি
           other: সংসদে লিখিত বিবৃতিসমূহ
-    corporate_information:
+    corporate_information: কর্পোরেট তথ্য
     document_types:
-      documents:
+      documents: নথিপত্র
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: সকল নির্দেশনা ও বিধিবিধান দেখুন
+        title: নির্দেশনা ও বিধিবিধান
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: সকল সংবাদ ও যোগাযোগ দেখুন
+        title: সংবাদ ও যোগাযোগ
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: সকল পলিসি পেপার ও পরামর্শ দেখুন
+        title: পলিসি পেপার ও পরামর্শ
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: সকল গবেষণা ও পরিসংখ্যান দেখুন
+        title: গবেষণা ও পরিসংখ্যান
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: সকল পরিষেবা দেখুন
+        title: পরিষেবা
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: সকল স্বচ্ছতা ও তথ্যের স্বাধীনতা বিষয়ক প্রকাশনা দেখুন
+        title: স্বচ্ছতা ও তথ্যের স্বাধীনতা বিষয়ক প্রকাশনা
+    errors_or_omissions_html: <p>ত্রুটি বা বর্জন? <a class="govuk-link" href="/contact/govuk">আমাদেরকে এখানে বলুন</a>। নন-ডিপার্টমেন্টাল সরকারি প্রতিষ্ঠানগুলোর দাপ্তরিক তালিকার জন্য <a class="govuk-link" href="/government/collections/public-bodies">সরকারি প্রতিষ্ঠানসমূহ দেখুন</a>।</p>
+    featured: ফিচারকৃত
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: FOI যোগাযোগের ফর্ম
+      foi_exemption_html: |
+        এই প্রতিষ্ঠানটি তথ্যের স্বাধীনতা বিষয়ক আইন (Freedom of Information Act)-এর আওতাভুক্ত নয়।
+        কোন কোন প্রতিষ্ঠান অন্তর্ভুক্ত, তা দেখতে <a href="%{foi_url}" class="govuk-link brand__color">আইন দেখুন</a>।
+      freedom_of_information_act: তথ্যের স্বাধীনতা (FOI) বিষয়ক আইন
+      freedom_of_information_requests: তথ্যের স্বাধীনতার অনুরোধসমূহ
+      make_an_foi_request: একটি FOI-এর অনুরোধ করুন
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: তথ্যের স্বাধীনতা (FOI) বিষয়ক আইন এবং <a href="%{how_to_path}" class="govuk-link brand__color">কিভাবে একটি অনুরোধ করতে হয়</a> তা পড়ুন।
+        step2_html: আমরা ইতোমধ্যে আপনার প্রশ্নের উত্তর দিয়েছি কি না তা দেখতে <a href="%{our_releases_path}" class="govuk-link brand__color">আমাদের পূর্ববর্তী প্রকাশনাগুলো</a> দেখুন।
+        step3_html: নিচের বিস্তারিত তথ্য ব্যবহার করে আমাদের সাথে যোগাযোগ করার মাধ্যমে একটি নতুন অনুরোধ করুন।
+    follow_us: আমাদেরকে অনুসরণ করুন
+    hidden_share_link: এখানে অনুসরণ করুন
+    high_profile_groups: "%{title}-এর মধ্যে উচ্চ প্রোফাইল গ্রুপ"
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: চাকরী ও চুক্তিসমূহ
+    latest_from: "%{title} থেকে সর্বশেষ"
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name_html: "%{title}-কে এখন <a href='%{link_href}'>%{link_text}</a> বলা হয়"
+      devolved_html: "%{title} হলো <a href='%{link_href}'>%{link_text}</a>-এর বডি"
+      joining: "%{title} শীঘ্রই GOV.UK-এ একত্রীভূত হবে"
+      left_gov: "%{title} এখন যুক্তরাজ্য সরকার থেকে স্বাধীন"
+      merged_html: "%{updated}-এ %{title} <a href='%{link_href}'>%{link_text}</a>-এর অংশ হয়েছে"
+      merged_no_date_html: "%{title} এখন <a href='%{link_href}'>%{link_text}</a>-এর অংশ"
+      no_longer_exists: "%{title} বন্ধ হয়ে গেছে"
+      no_website: "%{title}-এর কোনো ওয়েবসাইট নেই"
+      separate_website_html: "%{title}-এর একটি <a href='%{url}'>আলাদা ওয়েবসাইট আছে</a>"
+      split_html: "%{title} %{links} দ্বারা প্রতিস্থাপিত হয়েছে"
+    part_of: এর অংশ
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: আমাদের ব্যবস্থাপনা
+      chief_professional_officers: প্রধান পেশাদার কর্মকর্তাবৃন্দ
+      military_personnel: আমাদের জ্যেষ্ঠ সামরিক কর্মকর্তাবৃন্দ
+      ministers: আমাদের মন্ত্রীগণ
+      special_representatives: বিশেষ প্রতিনিধি
+      traffic_commissioners: ট্রাফিক কমিশনার
+    read_more: আমরা কী করি সে বিষয়ে আরও পড়ুন
+    search_for_department: কোনো বিভাগ, সংস্থা বা সরকারি প্রতিষ্ঠান অনুসন্ধান করুন
+    see_all_latest_documents: সর্বশেষ সকল নথি দেখুন
+    separate_website: আলাদা ওয়েবসাইট
+    services_and_information: সকল %{acronym} পরিষেবা ও তথ্য
     subscription:
-      email:
-      feed:
+      email: ইমেইল পান
+      feed: ফিডে সাবস্ক্রাইব করুন
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      ":":
+      adhoc_advisory_group: অ্যাড-হক পরামর্শক গোষ্ঠী
+      advisory_ndpb: পরামর্শক বিভাগ-বহির্ভূত সরকারি সংস্থা
+      civil_service: সিভিল সার্ভিস
+      court:
+      devolved_administration:
+      executive_agency: নির্বাহী সংস্থা
+      executive_ndpb: নির্বাহী বিভাগ-বহির্ভূত সরকারি সংস্থা
+      executive_office:
+      independent_monitoring_body: স্বতন্ত্র নিরীক্ষণ সংস্থা
+      ministerial_department:
+      non_ministerial_department: মন্ত্রণালয়-বহির্ভূত বিভাগ
+      other: অন্যান্য
+      public_corporation: পাবলিক কর্পোরেশন
+      sub_organisation:
+      tribunal: ট্রাইব্যুনাল
+    view_all: সবগুলো দেখান
+    view_less: কম দেখান
+    what_we_do: "%{title} কী করে"
     works_with_statement:
-      multiple:
-      one:
+      multiple: "%{works_with_count} টি এজেন্সি ও সরকারি সংস্থার সাথে কাজ করে"
+      one: "%{works_with_count} টি সরকারি সংস্থার সাথে কাজ করে"

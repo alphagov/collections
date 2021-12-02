@@ -1,333 +1,353 @@
 ---
 da:
   organisations:
-    about_page_path:
-    administered_by:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Administreret af
     breadcrumbs:
-      courts_and_tribunals:
-      organisations:
+      courts_and_tribunals: Domstole og domstole
+      organisations: Organisationer
     contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
+      contact_details: Kontaktoplysninger
+      contact_form: Kontaktformular %{title}
+      contact_organisation: Kontakt %{organisation}
+      email: E-mail
+      telephone: Telefon
     content_item:
       schema_name:
         aaib_report:
-          one:
-          other:
+          one: Rapport fra afdelingen for undersøgelse af flyulykker
+          other: Rapporter fra afdelingen for undersøgelse af flyulykker
         announcement:
-          one:
-          other:
+          one: Meddelelse
+          other: Meddelelser
         asylum_support_decision:
-          one:
-          other:
+          one: Afgørelse fra asylstøttedomstolen
+          other: Afgørelser fra asylstøttedomstolen
         authored_article:
-          one:
-          other:
+          one: Forfattet artikel
+          other: Forfatterartikler
         business_finance_support_scheme:
-          one:
-          other:
+          one: Forretningsfinansieringsstøtteordning
+          other: Forretningsfinansieringsstøtteordninger
         case_study:
-          one:
-          other:
+          one: Casestudie
+          other: Casestudie
         closed_consultation:
-          one:
-          other:
+          one: Lukket konsultation
+          other: Lukkede konsultationer
         cma_case:
-          one:
-          other:
+          one: Konkurrence- og markedsmyndighedens sag
+          other: Konkurrence- og markedsmyndighedens sager
         coming_soon:
-          one:
-          other:
+          one: Kommer snart
+          other: Kommer snart
         consultation:
-          one:
-          other:
+          one: Konsultation
+          other: Konsultationer
         consultation_outcome:
-          one:
-          other:
+          one: Resultatet af høringen
+          other: Resultater af høringen
         corporate_information_page:
-          one:
-          other:
+          one: Informationsside
+          other: Informationssider
         corporate_report:
-          one:
-          other:
+          one: Virksomhedsrapport
+          other: Virksomhedsrapporter
         correspondence:
-          one:
-          other:
+          one: Korrespondance
+          other: Korrespondancer
         countryside_stewardship_grant:
-          one:
-          other:
+          one: Countryside Stewardship tilskud
+          other: Countryside Stewardship -tilskud
         decision:
-          one:
-          other:
+          one: Beslutning
+          other: Beslutninger
         detailed_guide:
-          one:
-          other:
+          one: Vejledning
+          other: Vejledning
         dfid_research_output:
-          one:
-          other:
+          one: Forskning til udvikling af output
+          other: Forskning til udvikling af outputs
         document_collection:
-          one:
-          other:
+          one: Indsamling
+          other: Indsamlinger
         draft_text:
-          one:
-          other:
+          one: Udkast til tekst
+          other: Udkast til tekster
         drug_safety_update:
-          one:
-          other:
+          one: Opdatering om lægemiddelsikkerhed
+          other: Opdateringer om lægemiddelsikkerhed
         employment_appeal_tribunal_decision:
-          one:
-          other:
+          one: |-
+            Afgørelse om forvaltningsappelsager
+            Nyhedsartikel
+          other: |-
+            Afgørelser om administrative klager
+            Nyhedsartikel
         employment_tribunal_decision:
-          one:
-          other:
+          one: |-
+            Afgørelse om forvaltningsappelsag
+            Nyhedsartikel
+          other: |-
+            Afgørelse om forvaltningsappelsager
+            Nyhedsartikel
         esi_fund:
-          one:
-          other:
+          one: Den Europæiske Struktur- og Investeringsfond (ESIF)
+          other: De europæiske struktur- og investeringsfonde (ESIF)
         fatality_notice:
-          one:
-          other:
+          one: Meddelelse om dødsfald
+          other: Meddelelser om dødsfald
         foi_release:
-          one:
-          other:
+          one: FOI frigivelse
+          other: FOI frigivelser
         form:
-          one:
-          other:
+          one: Formular
+          other: Formularer
         government_response:
-          one:
-          other:
+          one: Regeringens reaktion
+          other: Regeringens reaktioner
         guidance:
-          one:
-          other:
+          one: Vejledning
+          other: Vejledning
         impact_assessment:
-          one:
-          other:
+          one: Konsekvensanalyse
+          other: Konsekvensanalyser
         imported:
-          one:
-          other:
+          one: importeret - afventer type
+          other: importeret - afventer type
         independent_report:
-          one:
-          other:
+          one: Uafhængig rapport
+          other: Uafhængige rapporter
         international_development_fund:
-          one:
-          other:
+          one: International udviklingsfinansiering
+          other: International udviklingsfinansiering
         international_treaty:
-          one:
-          other:
+          one: International traktat
+          other: Internationale traktater
         maib_report:
-          one:
-          other:
+          one: Rapport fra afdelingen for undersøgelse af flyulykker
+          other: Rapporter fra afdelingen for undersøgelse af flyulykker
         map:
-          one:
-          other:
+          one: Kort
+          other: Kort
         medical_safety_alert:
-          one:
-          other:
+          one: Advarsler og tilbagekaldelser af lægemidler og medicinsk udstyr
+          other: Advarsler og tilbagekaldelser af lægemidler og medicinsk udstyr
         national:
-          one:
-          other:
+          one: Nationale statistikmeddelelse
+          other: Nationale statistikmeddelelser
         national_statistics:
-          one:
-          other:
+          one: Nationale statistikker
+          other: Nationale statistikker
         national_statistics_announcement:
-          one:
-          other:
+          one: Nationale statistikmeddelelse
+          other: Nationale statistikmeddelelser
         news_article:
-          one:
-          other:
+          one: Nyhedsartikel
+          other: Nyhedsartikler
         news_story:
-          one:
-          other:
+          one: Nyhedshistorie
+          other: Nyhedshistorier
         notice:
-          one:
-          other:
+          one: Meddelelse
+          other: Meddelelser
         official:
-          one:
-          other:
+          one: Officielle statistikmeddelelse
+          other: Officielle statistikmeddelelser
         official_statistics:
-          one:
-          other:
+          one: Officielle statistikker
+          other: Officielle statistikker
         official_statistics_announcement:
-          one:
-          other:
+          one: Officielle statistikmeddelelse
+          other: Officielle statistikmeddelelser
         open_consultation:
-          one:
-          other:
+          one: Åben konsultation
+          other: Åbne konsultationer
         oral_statement:
-          one:
-          other:
+          one: Mundtlig erklæring til Parlamentet
+          other: Mundtlige erklæring til Parlamentet
         policy:
-          one:
-          other:
+          one: Politik
+          other: Politikker
         policy_paper:
-          one:
-          other:
+          one: Politikdokument
+          other: Politikdokumenter
         press_release:
-          one:
-          other:
+          one: Pressemeddelelse
+          other: Pressemeddelelser
         promotional:
-          one:
-          other:
+          one: Reklamemateriale
+          other: Reklamemateriale
         publication:
-          one:
-          other:
+          one: Publikation
+          other: Publikationer
         raib_report:
-          one:
-          other:
+          one: rapport fra undersøgelsesafdelingen for jernbaneulykker
+          other: rapporter fra undersøgelsesafdelingen for jernbaneulykker
         regulation:
-          one:
-          other:
+          one: Forordning
+          other: Forordninger
         research:
-          one:
-          other:
+          one: Forskning og analyse
+          other: Forskning og analyse
         residential_property_tribunal_decision:
-          one:
-          other:
+          one: Afgørelse fra domstolene om boligejendomme
+          other: Afgørelser fra domstolene om boligejendomme
         service_sign_in:
-          one:
-          other:
+          one: Tjeneste logge ind
+          other: Tjeneste logge ind
         service_standard_report:
-          one:
-          other:
+          one: Servicestandardrapport
+          other: Servicestandardrapport
         speaking_notes:
-          one:
-          other:
+          one: Talende noter
+          other: Talende noter
         speech:
-          one:
-          other:
+          one: tale
+          other: taler
         standard:
-          one:
-          other:
+          one: Standard
+          other: Standarder
         statement_to_parliament:
-          one:
-          other:
+          one: Erklæring til Parlamentet
+          other: Erklæringer til Parlamentet
         statistical_data_set:
-          one:
-          other:
+          one: Statistisk datasæt
+          other: Statistiske datasæt
         statistics_announcement:
-          one:
-          other:
+          one: Meddelelse om frigivelse af statistik
+          other: Meddelelser om frigivelse af statistik
         statutory_guidance:
-          one:
-          other:
+          one: Lovpligtig vejledning
+          other: Lovpligtig vejledning
         take_part:
-          one:
-          other:
+          one: Deltage
+          other: Deltage
         tax_tribunal_decision:
-          one:
-          other:
+          one: Afgørelse fra skatte- og kancellidomstolen
+          other: Afgørelser fra skatte- og kancellidomstolen
         transcript:
-          one:
-          other:
+          one: Udskrift
+          other: Udskrifter
         transparency:
-          one:
-          other:
+          one: Data om gennemsigtighed
+          other: Data om gennemsigtighed
         utaac_decision:
-          one:
-          other:
+          one: |-
+            Afgørelse om forvaltningsappelsager
+            Nyhedsartikel
+          other: |-
+            Afgørelser om forvaltningsappelsager
+            Nyhedsartikel
         world_location_news_article:
-          one:
-          other:
+          one: Nyhedsartikel
+          other: Nyhedsartikler
         world_news_story:
-          one:
-          other:
+          one: Verdensomspændende nyhedshistorie
+          other: Verdensomspændende nyhedshistorier
         written_statement:
-          one:
-          other:
-    corporate_information:
+          one: Mundtlig erklæring til Parlamentet
+          other: Mundtlige erklæring til Parlamentet
+    corporate_information: Virksomhedsoplysninger
     document_types:
-      documents:
+      documents: Dokumenter
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Se alle retningslinjer og regler
+        title: Vejledning og regulering
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Se alle nyheder og kommunikation
+        title: nyheder og kommunikation
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Se alle politikpapirer og konsultationer
+        title: Policy-papirer og konsultationer
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Se al forskning og statistik
+        title: Forskning og statistik
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Se alle tjenester
+        title: Tjenester
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Se al gennemsigtighed og informationsfrihed
+        title: Gennemsigtighed og informationsfrihed frigives
+    errors_or_omissions_html: <p>Fejl eller udeladelser? <a class="govuk-link" href="/contact/govuk">Tell os her</a>. For officielle lister over ikke-departementale offentlige organer <a class="govuk-link" href="/government/collections/public-bodies">se offentlige organer</a>.</p>
+    featured: Fremhævede
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: kontaktformular for informationsfrihed
+      foi_exemption_html: |
+        Denne organisation er ikke omfattet af loven om informationsfrihed.
+        Du kan se, hvilke organisationer der er omfattet, ved at se <a href="%{foi_url}" class="govuk-link brand__color">lovgivningen</a>.
+      freedom_of_information_act: Lov om informationsfrihed (FOI)
+      freedom_of_information_requests: Anmodninger om informationsfrihed
+      make_an_foi_request: Lav en anmodning om informationsfrihed
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: Læs om loven om informationsfrihed (FOI) og <a href="%{how_to_path}" class="govuk-link brand__color">how at fremsætte en anmodning</a>.
+        step2_html: Tjek <a href="%{our_releases_path}" class="govuk-link brand__color">our tidligere udgivelser</a> for at se, om vi allerede har besvaret dit spørgsmål.
+        step3_html: Lav en ny anmodning ved at kontakte os ved hjælp af nedenstående oplysninger.
+    follow_us: Følg os
+    hidden_share_link: Følg på
+    high_profile_groups: Højt profilerede grupper inden for %{title}
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: Job og kontrakter
+    latest_from: Seneste fra %{title}
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name_html: "%{title} hedder nu <a href='%{link_href}'>%{link_text} </a>"
+      devolved_html: "%{title} er en brødtekst af <a href='%{link_href}'>%{link_text} </a>"
+      joining: "%{title} vil snart blive indarbejdet i GOV.UK"
+      left_gov: "%{title} er nu uafhængig af den britiske regering"
+      merged_html: "%{title} blev en del af <a href='%{link_href}'>%{link_text} </a> i%{updated}"
+      merged_no_date_html: "%{title} er en brødtekst af <a href='%{link_href}'>%{link_text} </a>"
+      no_longer_exists: "%{title} er lukket"
+      no_website: "%{title} har ingen hjemmeside"
+      separate_website_html: "%{title} har et <a href='%{url}'>separat websted</a>"
+      split_html: "%{title} blev erstattet af %{links}"
+    part_of: del af
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: Vores ledelse
+      chief_professional_officers: Ledende professionelle officerer
+      military_personnel: Vores højtstående militære embedsmænd
+      ministers: Vores ministre
+      special_representatives: Særlige repræsentanter
+      traffic_commissioners: Trafikkommissærer
+    read_more: Læs mere om, hvad vi laver
+    search_for_department: Søge efter en afdeling, et bureau eller et offentligt organ
+    see_all_latest_documents: Se alle de seneste dokumenter
+    separate_website: separat websted
+    services_and_information: All %{acronym} tjenester og information
     subscription:
-      email:
-      feed:
+      email: Få e-mails
+      feed: Abonner på feed
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      ":":
+      adhoc_advisory_group: Ad hoc-rådgivende gruppe
+      advisory_ndpb: Rådgivende ikke-departementalt offentligt organ
+      civil_service: Offentligt arbejde
+      court:
+      devolved_administration:
+      executive_agency: Forvaltningsorgan
+      executive_ndpb: Rådgivende ikke-departementalt offentligt organ
+      executive_office:
+      independent_monitoring_body: Uafhængigt kontrolorgan
+      ministerial_department:
+      non_ministerial_department: Ikke-ministeriel afdeling
+      other: Anden
+      public_corporation: Offentligt selskab
+      sub_organisation:
+      tribunal: Tribunal
+    view_all: se alle
+    view_less: se mindre
+    what_we_do: Hvad %{title} gør
     works_with_statement:
-      multiple:
-      one:
+      multiple: Arbejder med %{works_with_count} agenturer og offentlige organer
+      one: Arbejder med det offentlige organ %{works_with_count}

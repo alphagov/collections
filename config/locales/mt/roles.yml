@@ -1,17 +1,17 @@
 ---
 mt:
   roles:
-    find_out_more_html:
+    find_out_more_html: Kun af iktar dwar detenturi preċedenti ta' dan ir-rwol fis-sezzjoni tagħna %{link}.
     heading:
       few:
       many:
-      one:
-      other:
+      one: Rwol
+      other: Rwolijiet
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: Detentur tar-rwol attwali
+      previous_holders: Detenturi preċedenti
+      responsibilities: Responsabbiltajiet
+    ministerial: Rwol ministerjali
+    past: passat
+    previous_holders: Detenturi preċedenti ta' dan ir-rwol
+    read_more: Iktar dwar dan ir-rwol

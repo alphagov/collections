@@ -1,97 +1,97 @@
 ---
 bg:
   organisations:
-    about_page_path:
-    administered_by:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Администриране от
     breadcrumbs:
-      courts_and_tribunals:
-      organisations:
+      courts_and_tribunals: Съдилища и арбитражи
+      organisations: Организации
     contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
+      contact_details: Данни за контакти
+      contact_form: 'Формуляр за контакт: %{title}'
+      contact_organisation: Контакт %{organisation}
+      email: Имейл
+      telephone: Телефон
     content_item:
       schema_name:
         aaib_report:
-          one:
-          other:
+          one: Доклад на Отдела за разследване на авиационни произшествия
+          other: Доклади на Отдела за разследване на авиационни произшествия
         announcement:
           one: Съобщение
           other: Съобщения
         asylum_support_decision:
-          one:
-          other:
+          one: Решение на съда за подкрепа в областта на убежището
+          other: Решения на съда за подкрепа в областта на убежището
         authored_article:
           one: Авторска статия
-          other: Авторски статии
+          other: Авторска статии
         business_finance_support_scheme:
-          one:
-          other:
+          one: Схема за подпомагане на бизнес финансирането
+          other: Схеми за подпомагане на бизнес финансирането
         case_study:
           one: Казус
           other: Казуси
         closed_consultation:
-          one: Затворена консултация
-          other: Затворени консултации
+          one: Закрита консултация
+          other: Закрити консултации
         cma_case:
-          one:
-          other:
+          one: Дело на Органа за защита на конкуренцията и пазарите
+          other: Дела на Органа за защита на конкуренцията и пазарите
         coming_soon:
-          one:
-          other:
+          one: Очаквайте скоро
+          other: Очаквайте скоро
         consultation:
           one: Консултация
           other: Консултации
         consultation_outcome:
           one: Резултат от консултацията
-          other: Резултат от консултациите
+          other: Резултати от консултацията
         corporate_information_page:
-          one:
-          other:
+          one: Информационна страница
+          other: Информационни страници
         corporate_report:
-          one: Корпоративен доклад
-          other: Корпоративни доклади
+          one: Фирмен доклад
+          other: Фирмени доклади
         correspondence:
           one: Кореспонденция
           other: Кореспонденции
         countryside_stewardship_grant:
-          one:
-          other:
+          one: Безвъзмездна финансова помощ за управление на селските райони
+          other: Безвъзмездни финансови помощи за управление на селските райони
         decision:
-          one:
-          other:
+          one: Решение
+          other: Решения
         detailed_guide:
-          one: Подробна насока
-          other: Подробни насоки
+          one: Насока
+          other: Насока
         dfid_research_output:
-          one:
-          other:
+          one: Научни изследвания за развитие
+          other: Научни изследвания за развития
         document_collection:
-          one: Серии
-          other:
+          one: Събиране
+          other: Събирания
         draft_text:
-          one: Чернова
-          other: Чернови
+          one: Проектотекст
+          other: Проектотекстове
         drug_safety_update:
-          one:
-          other:
+          one: Актуализация на безопасността на лекарствата
+          other: Актуализации на безопасността на лекарствата
         employment_appeal_tribunal_decision:
-          one:
-          other:
+          one: Решение на апелативния съд по трудови спорове
+          other: Решения на апелативния съд по трудови спорове
         employment_tribunal_decision:
-          one:
-          other:
+          one: Решение на съда по трудови спорове
+          other: Решения на съда по трудови спорове
         esi_fund:
-          one:
-          other:
+          one: Европейски структурен и инвестиционен фонд (ESIF)
+          other: Европейски структурни и инвестиционни фондове (ESIF)
         fatality_notice:
-          one: Уведомление за кончина
-          other: Уведомления за кончина
+          one: Известие за смъртен случай
+          other: Известия за смъртни случаи
         foi_release:
-          one: Съобщение във връзка със свободен достъп до информация
-          other: Съобщения във връзка със свободен достъп до информация
+          one: Свобода на информацията издание
+          other: Свобода на информацията издания
         form:
           one: Формуляр
           other: Формуляри
@@ -99,235 +99,243 @@ bg:
           one: Отговор на правителството
           other: Отговори на правителството
         guidance:
-          one: Насоки
-          other: Насоки
+          one: Насока
+          other: Насока
         impact_assessment:
-          one: Оценка на влиянието
-          other: Оценки на влиянието
+          one: Оценка на въздействието
+          other: Оценки на въздействието
         imported:
-          one: 'импортирано-очаква тип '
-          other: импортирано-очаква тип
+          one: импортиран - очакващ тип
+          other: импортиран - очакващ тип
         independent_report:
           one: Независим доклад
           other: Независими доклади
         international_development_fund:
-          one:
-          other:
+          one: Финансиране за международно развитие
+          other: Финансиране за международно развитие
         international_treaty:
-          one:
-          other:
+          one: Международен договор
+          other: Международни договори
         maib_report:
-          one:
-          other:
+          one: Доклад на Отдела за разследване на морски произшествия
+          other: Доклади на Отдела за разследване на морски произшествия
         map:
           one: Карта
           other: Карти
         medical_safety_alert:
-          one:
-          other:
+          one: Предупреждения и изтегляния на лекарства и медицински изделия
+          other: Предупреждения и изтегляния на лекарства и медицински изделия
         national:
-          one:
-          other:
+          one: Съобщение от националната статистика
+          other: Съобщения от националните статистики
         national_statistics:
-          one: Статистика- национална статистика
-          other: Статистики- национални статистики
+          one: Национална статистика
+          other: Национална статистика
         national_statistics_announcement:
-          one:
-          other:
+          one: Съобщение от националната статистика
+          other: Съобщения от националните статистики
         news_article:
-          one: Новинарска статия
-          other: Новинарски статии
+          one: Информационна статия
+          other: Информационни статии
         news_story:
-          one: Новина
-          other: Новини
+          one: Репортаж
+          other: Репортажи
         notice:
-          one:
-          other:
+          one: Известие
+          other: Известия
         official:
-          one:
-          other:
+          one: Съобщение от официалната статистика
+          other: Съобщения от официалните статистики
         official_statistics:
-          one: Статистики
-          other: Статистики
+          one: Официална статистика
+          other: Официална статистика
         official_statistics_announcement:
-          one:
-          other:
+          one: Съобщение от официалната статистика
+          other: Съобщения от официалните статистики
         open_consultation:
-          one: Отворена консултация
-          other: Отворени консултации
+          one: Открита консултация
+          other: Открити консултации
         oral_statement:
-          one: Устно изказване в Парламента
-          other: Устни изказвания в Парламента
+          one: Устно изявление в Парламента
+          other: Устни изявления в Парламента
         policy:
           one: Политика
           other: Политики
         policy_paper:
-          one: Документ, залагащ политика
-          other: Документи, залагащи политика
+          one: Политически документ
+          other: Политически документи
         press_release:
-          one: Съобщение до медиите
-          other: Съобщения до медиите
+          one: Съобщение за пресата
+          other: Съобщения за пресата
         promotional:
-          one: Промоционален материал
-          other: Промоционален материал
+          one: Рекламен материал
+          other: Рекламен материал
         publication:
           one: Публикация
           other: Публикации
         raib_report:
-          one:
-          other:
+          one: Доклад на Отдела за разследване на железопътни произшествия
+          other: Доклади на Отдела за разследване на железопътни произшествия
         regulation:
-          one:
-          other:
+          one: Наредба
+          other: Наредби
         research:
           one: Проучване и анализ
-          other: Проучване и анализи
+          other: Проучване и анализ
         residential_property_tribunal_decision:
-          one:
-          other:
+          one: Съдебно решение за жилищни имоти
+          other: Съдебни решения за жилищни имоти
         service_sign_in:
-          one:
-          other:
+          one: Влизане в услугата
+          other: Влизане в услугата
         service_standard_report:
-          one:
-          other:
+          one: Стандартен доклад за услугите
+          other: Стандартни доклади за услугите
         speaking_notes:
-          one: Устна нота
-          other: Устни ноти
+          one: Бележки за изказвания
+          other: Бележки за изказвания
         speech:
           one: Реч
           other: Речи
         standard:
-          one:
-          other:
+          one: Стандарт
+          other: Стандарти
         statement_to_parliament:
-          one: Изявление в парламента
-          other: Изявления в парламента
+          one: Изявление пред Парламента
+          other: Изявления пред Парламента
         statistical_data_set:
           one: Набор от статистически данни
           other: Набори от статистически данни
         statistics_announcement:
-          one:
-          other:
+          one: Съобщение за издадена статистика
+          other: Съобщения за издадена статистика
         statutory_guidance:
-          one:
-          other:
+          one: Законови указания
+          other: Законови указания
         take_part:
-          one:
-          other:
+          one: Вземете участие
+          other: Вземете участие
         tax_tribunal_decision:
-          one:
-          other:
+          one: Решение на данъчния и канцеларския съд
+          other: Решения на данъчния и канцеларския съд
         transcript:
-          one: Препис
-          other: Преписи
+          one: Текст
+          other: Текстове
         transparency:
-          one: Информация за прозрачността
-          other: Информация за прозрачността
+          one: Данни за прозрачност
+          other: Данни за прозрачност
         utaac_decision:
-          one:
-          other:
+          one: Решение на административния апелативен съд
+          other: Решения на апелативния съд по трудови спорове
         world_location_news_article:
-          one: Новинарска статия
-          other: Новинарски статии
+          one: Информационна статия
+          other: Информационни статии
         world_news_story:
-          one:
-          other:
+          one: Световна новина
+          other: Световни новини
         written_statement:
-          one: Писмено изявление до парламента
-          other: Писмени изявления до парламента
-    corporate_information:
+          one: Писмено изявление в Парламента
+          other: Писмени изявления в Парламента
+    corporate_information: Фирмена информация
     document_types:
-      documents:
+      documents: Документи
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Вижте всички насоки и разпоредби
+        title: Насоки и разпоредби
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Вижте всички новини и съобщения
+        title: Новини и съобщения
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Вижте всички политически документи и консултации
+        title: Политически документи и консултации
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Вижте всички проучвания и статистики
+        title: Проучвания и статистика
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Вижте всички услуги
+        title: Услуги
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Вижте всички издания за прозрачността и свободата на информация
+        title: Издания за прозрачността и свободата на информация
+    errors_or_omissions_html: <p>Грешки или пропуски? <a class="govuk-link" href="/contact/govuk">Разкажете ни тук</a>. За официални списъци на публични органи, които не са министерства, <a class="govuk-link" href="/government/collections/public-bodies">вижте публични органи</a>.</p>
+    featured: Избрани
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: Формуляр за контакт за свобода на информацията
+      foi_exemption_html: |
+        Тази организация не попада в обхвата на Закона за свобода на информацията.
+        За да видите включените организации са включени, разгледайте <a href="%{foi_url}" class="govuk-link brand__color">законодателството</a>.
+      freedom_of_information_act: Закон за свобода на информацията (ЗСИ)
+      freedom_of_information_requests: Запитвания за свобода на информацията
+      make_an_foi_request: Направете запитване за свобода на информацията
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: Прочетете за Закона за свобода на информацията (ЗСИ) и <a href="%{how_to_path}" class="govuk-link brand__color">как да подадете запитване</a>.
+        step2_html: Проверете <a href="%{our_releases_path}" class="govuk-link brand__color">предишните ни издания,</a> за да видите дали вече сме отговорили на въпроса ви.
+        step3_html: Направете ново запитване, като се свържете с нас, използвайки долупосочените данни.
+    follow_us: Следвайте ни
+    hidden_share_link: Следвайте
+    high_profile_groups: Високопоставени групи в %{title}
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: Работни места и договори
+    latest_from: Най-новите от %{title}
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name_html: "%{title} вече се нарича <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} е орган на <a href='%{link_href}'>%{link_text}</a>"
+      joining: "%{title} скоро ще бъде включено в GOV.UK"
+      left_gov: "%{title} вече е независимо от правителството на Обединеното кралство"
+      merged_html: "%{title} стана част от <a href='%{link_href}'>%{link_text}</a> in %{updated}"
+      merged_no_date_html: "%{title} вече е част от <a href='%{link_href}'>%{link_text}</a>"
+      no_longer_exists: "%{title} е закрито"
+      no_website: "%{title} няма уебсайт"
+      separate_website_html: "%{title} има <a href='%{url}'>отделен уебсайт</a>"
+      split_html: "%{title} е заменено от %{links}"
+    part_of: Част от
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: Нашето ръководство
+      chief_professional_officers: Главни професионални служители
+      military_personnel: Нашите висши военни служители
+      ministers: Нашите министри
+      special_representatives: Специални представители
+      traffic_commissioners: Комисари по транспорта
+    read_more: Прочетете повече за нашите дейности
+    search_for_department: Търсене на министерство, агенция или публичен орган
+    see_all_latest_documents: Вижте всички най-нови документи
+    separate_website: отделен уебсайт
+    services_and_information: Всички услуги и пълната информация на %{acronym}
     subscription:
-      email:
-      feed:
+      email: Получаване на имейли
+      feed: Абонирайте се за канал
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      ":":
+      adhoc_advisory_group: Специална консултативна група
+      advisory_ndpb: Консултативен публичен орган, който не е министерство
+      civil_service: Държавна администрация
+      court:
+      devolved_administration:
+      executive_agency: Изпълнителна агенция
+      executive_ndpb: Изпълнителен публичен орган, който не е министерство
+      executive_office:
+      independent_monitoring_body: Независим надзорен орган
+      ministerial_department:
+      non_ministerial_department: Отдел, който не е министерство
+      other: Други
+      public_corporation: Публична компания
+      sub_organisation:
+      tribunal: Арбитраж
+    view_all: покажи всички
+    view_less: покажи по-малко
+    what_we_do: Какви действия извършва %{title}
     works_with_statement:
-      multiple:
-      one:
+      multiple: Работи с %{works_with_count} агенции и публични органи
+      one: Работи с %{works_with_count} публични органи

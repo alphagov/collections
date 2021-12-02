@@ -1,12 +1,12 @@
 ---
 lv:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Sākums
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
+      prefix: 'Pārlūkot:'
+      title: Pārlūkot GOV.UK
+    get_emails: Saņemt e-pasta ziņojumus par šo tēmu
+    language_direction: ltr
     language_name: Latviešu
     topics:
-      title:
+      title: "%{title}: detalizēta informācija"

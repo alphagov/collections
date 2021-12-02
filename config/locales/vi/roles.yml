@@ -1,15 +1,15 @@
 ---
 vi:
   roles:
-    find_out_more_html:
+    find_out_more_html: Tìm hiểu thêm về những người nắm giữ vai trò này trước đây trong phần %{link} của chúng tôi.
     heading:
-      one:
-      other:
+      one: Vai trò
+      other: Vai trò
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: Người nắm giữ vai trò hiện tại
+      previous_holders: Người nắm giữ vai trò trước đây
+      responsibilities: Trách nhiệm
+    ministerial: Vai trò bộ trưởng
+    past: quá khứ
+    previous_holders: Những người nắm giữ vai trò này trước đây
+    read_more: Thông tin thêm về vai trò này

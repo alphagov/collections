@@ -1,9 +1,9 @@
 ---
 ar:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: يحضر أيضًا بمجلس الوزراء
+    by_department: الوزراء حسب الإدارة
+    cabinet: وزراء المجلس
+    govuk_title: الوزراء - GOV.UK
+    title: الوزراء
+    whips: ممثلي الكتل البرلمانية

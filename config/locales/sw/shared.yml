@@ -1,12 +1,12 @@
 ---
 sw:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Ukurasa wa kwanza
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
+      prefix: 'Vinjari:'
+      title: Vinjari tovuti ya GOV.UK
+    get_emails: Pata barua pepe za mada hii
+    language_direction: ltr
     language_name: Kiswahili
     topics:
-      title:
+      title: "%{title}: maelezo ya kina"

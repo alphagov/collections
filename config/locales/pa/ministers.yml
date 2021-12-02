@@ -1,9 +1,9 @@
 ---
 pa:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: ਕੈਬਨਿਟ ਵਿੱਚ ਵੀ ਸ਼ਾਮਲ ਹੁੰਦਾ ਹੈ
+    by_department: ਵਿਭਾਗ ਦੁਆਰਾ ਮੰਤਰੀ
+    cabinet: ਕੈਬਨਿਟ ਮੰਤਰੀ
+    govuk_title: ਮੰਤਰੀ - GOV.UK
+    title: ਮੰਤਰੀ
+    whips: ਕੋਰੜੇ

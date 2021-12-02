@@ -1,9 +1,9 @@
 ---
 bn:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: এছাড়াও, ক্যাবিনেটে উপস্থিত হয়
+    by_department: বিভাগ অনুযায়ী মন্ত্রীগণ
+    cabinet: মন্ত্রিপরিষদের সদস্য
+    govuk_title: মন্ত্রীগণ - GOV.UK
+    title: মন্ত্রীগণ
+    whips: হুইপগণ

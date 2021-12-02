@@ -290,16 +290,16 @@ en:
     jobs_contracts: Jobs and contracts
     latest_from: Latest from %{title}
     notices:
-      changed_name: "%{title} is now called <a href='%{link_href}'>%{link_text}</a>"
-      devolved: "%{title} is a body of <a href='%{link_href}'>%{link_text}</a>"
+      changed_name_html: "%{title} is now called <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} is a body of <a href='%{link_href}'>%{link_text}</a>"
       joining: "%{title} will soon be incorporated into GOV.UK"
       left_gov: "%{title} is now independent of the UK government"
-      merged: "%{title} became part of <a href='%{link_href}'>%{link_text}</a> in %{updated}"
-      merged_no_date: "%{title} is now part of <a href='%{link_href}'>%{link_text}</a>"
+      merged_html: "%{title} became part of <a href='%{link_href}'>%{link_text}</a> in %{updated}"
+      merged_no_date_html: "%{title} is now part of <a href='%{link_href}'>%{link_text}</a>"
       no_longer_exists: "%{title} has closed"
       no_website: "%{title} has no website"
-      separate_website: "%{title} has a <a href='%{url}'>separate website</a>"
-      split: "%{title} was replaced by %{links}"
+      separate_website_html: "%{title} has a <a href='%{url}'>separate website</a>"
+      split_html: "%{title} was replaced by %{links}"
     part_of: Part of
     people:
       board_members: Our management
@@ -317,6 +317,7 @@ en:
       email: Get emails
       feed: Subscribe to feed
     type:
+      ":":
       adhoc_advisory_group: Ad-hoc advisory group
       advisory_ndpb: Advisory non-departmental public body
       civil_service: Civil service
@@ -330,8 +331,8 @@ en:
       non_ministerial_department: Non-ministerial department
       other: Other
       public_corporation: Public corporation
-      tribunal: Tribunal
       sub_organisation: Sub organisation
+      tribunal: Tribunal
     view_all: view all
     view_less: view less
     what_we_do: What %{title} does

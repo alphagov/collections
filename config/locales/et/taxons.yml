@@ -1,8 +1,8 @@
 ---
 et:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Uuri alamteemasid
+    organisations: Organisatsioonid
+    see_all_in_topic: Vt selles teemas rohkem %{type}
+    show_fewer_orgs: Kuva vähem organisatsioone
+    show_more_orgs: Kuva rohkem organisatsioone

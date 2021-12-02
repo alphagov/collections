@@ -1,259 +1,339 @@
 ---
 ka:
   organisations:
-    about_page_path:
-    administered_by:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: ადმინისტრირებულია
     breadcrumbs:
-      courts_and_tribunals:
-      organisations:
+      courts_and_tribunals: სასამართლოებისა და ტრიბუნალების მიერ
+      organisations: ორგანიზაციები
     contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
+      contact_details: საკონტაქტო დეტალები
+      contact_form: 'საკონტაქტო ფორმა: %{title}'
+      contact_organisation: დაუკავშირდით %{organisation}
+      email: ელ.ფოსტა
+      telephone: ტელეფონი
     content_item:
       schema_name:
         aaib_report:
-          other:
+          one: ავიაკატასტროფების გამოძიების ფილიალის ანგარიში
+          other: ავიაკატასტროფების გამოძიების ფილიალის ანგარიშები
         announcement:
-          other:
+          one: განცხადება
+          other: განცხადებები
         asylum_support_decision:
-          other:
+          one: თავშესაფრის მხარდაჭერის ტრიბუნალის გადაწყვეტილება
+          other: თავშესაფრის მხარდამჭერი სასამართლო გადაწყვეტილებები
         authored_article:
-          other:
+          one: ავტორიზებული სტატია
+          other: ავტორიზებული სტატიები
         business_finance_support_scheme:
-          other:
+          one: ბიზნესის დაფინანსების მხარდაჭერის სქემა
+          other: ბიზნესის დაფინანსების მხარდაჭერის სქემები
         case_study:
-          other:
+          one: შემთხვევის კვლევა
+          other: შემთხვევის კვლევები
         closed_consultation:
-          other:
+          one: დახურული კონსულტაცია
+          other: დახურული კონსულტაციები
         cma_case:
-          other:
+          one: კონკურენციისა და ბაზრების უფლებამოსილების საქმე
+          other: კონკურენციისა და ბაზრების უფლებამოსილების საქმეები
         coming_soon:
-          other:
+          one: მალე
+          other: მალე
         consultation:
-          other:
+          one: კონსულტაცია
+          other: კონსულტაციები
         consultation_outcome:
-          other:
+          one: კონსულტაციის შედეგი
+          other: კონსულტაციის შედეგები
         corporate_information_page:
-          other:
+          one: საინფორმაციო გვერდი
+          other: საინფორმაციო გვერდები
         corporate_report:
-          other:
+          one: კორპორატიული ანგარიში
+          other: კორპორატიული ანგარიშები
         correspondence:
-          other:
+          one: მიმოწერა
+          other: მიმოწერები
         countryside_stewardship_grant:
-          other:
+          one: სოფლის მეურნეობის გრანტი
+          other: სოფლის მეურნეობის გრანტები
         decision:
-          other:
+          one: გადაწყვეტილება
+          other: გადაწყვეტილებები
         detailed_guide:
-          other:
+          one: ხელმძღვანელობა
+          other: ხელმძღვანელობა
         dfid_research_output:
-          other:
+          one: კვლევა განვითარების შედეგისათვის
+          other: კვლევა განვითარების შედეგებისათვის
         document_collection:
-          other:
+          one: კოლექცია
+          other: კოლექციები
         draft_text:
-          other:
+          one: სამუშაო ტექსტი
+          other: სამუშაო ტექსტები
         drug_safety_update:
-          other:
+          one: ნარკოტიკების უსაფრთხოების განახლება
+          other: ნარკოტიკების უსაფრთხოების განახლებები
         employment_appeal_tribunal_decision:
-          other:
+          one: დასაქმების სააპელაციო სასამართლოს გადაწყვეტილება
+          other: დასაქმების სააპელაციო სასამართლო გადაწყვეტილებები
         employment_tribunal_decision:
-          other:
+          one: დასაქმების ტრიბუნალის გადაწყვეტილება
+          other: დასაქმების ტრიბუნალის გადაწყვეტილებები
         esi_fund:
-          other:
+          one: ევროპის სტრუქტურული და საინვესტიციო ფონდი (ESIF)
+          other: ევროპული სტრუქტურული და საინვესტიციო ფონდები (ESIF)
         fatality_notice:
-          other:
+          one: ფატალურობის შეტყობინება
+          other: ფატალურობის შეტყობინებები
         foi_release:
-          other:
+          one: ინფორმაციის თავისუფლების გამოცემა
+          other: ინფორმაციის თავისუფლების გამოცემები
         form:
-          other:
+          one: ფორმა
+          other: ფორმები
         government_response:
-          other:
+          one: მთავრობის პასუხი
+          other: მთავრობის პასუხები
         guidance:
-          other:
+          one: ხელმძღვანელობა
+          other: ხელმძღვანელობა
         impact_assessment:
-          other:
+          one: ზემოქმედების შეფასება
+          other: ზემოქმედების შეფასებები
         imported:
-          other:
+          one: იმპორტირებული - ლოდინის ტიპს
+          other: იმპორტირებული - ლოდინის ტიპს
         independent_report:
-          other:
+          one: დამოუკიდებელი ანგარიში
+          other: დამოუკიდებელი ანგარიშები
         international_development_fund:
-          other:
+          one: საერთაშორისო განვითარების დაფინანსება
+          other: საერთაშორისო განვითარების დაფინანსება
         international_treaty:
-          other:
+          one: საერთაშორისო ხელშეკრულება
+          other: საერთაშორისო ხელშეკრულებები
         maib_report:
-          other:
+          one: საზღვაო შემთხვევების გამოძიების ფილიალის ანგარიში
+          other: საზღვაო შემთხვევების გამოძიების ფილიალის ანგარიშები
         map:
-          other:
+          one: რუკა
+          other: რუკები
         medical_safety_alert:
-          other:
+          one: გაფრთხილებები და შეტყობინებები წამლებისა და სამედიცინო მოწყობილობებისთვის
+          other: გაფრთხილებები და შეტყობინებები წამლებისა და სამედიცინო მოწყობილობებისთვის
         national:
-          other:
+          one: ეროვნული სტატისტიკის განცხადება
+          other: ეროვნული სტატისტიკის განცხადებები
         national_statistics:
-          other:
+          one: ეროვნული სტატისტიკა
+          other: ეროვნული სტატისტიკა
         national_statistics_announcement:
-          other:
+          one: ეროვნული სტატისტიკის განცხადება
+          other: ეროვნული სტატისტიკის განცხადებები
         news_article:
-          other:
+          one: ახალი ამბების სტატია
+          other: ახალი ამბების სტატიები
         news_story:
-          other:
+          one: ახალი ამბები
+          other: ახალი ამბები
         notice:
-          other:
+          one: შენიშვნა
+          other: შენიშვნები
         official:
-          other:
+          one: ოფიციალური სტატისტიკის განცხადება
+          other: ოფიციალური სტატისტიკის განცხადებები
         official_statistics:
-          other:
+          one: ოფიციალური სტატისტიკა
+          other: ოფიციალური სტატისტიკა
         official_statistics_announcement:
-          other:
+          one: ოფიციალური სტატისტიკის განცხადება
+          other: ოფიციალური სტატისტიკის განცხადებები
         open_consultation:
-          other:
+          one: ღია კონსულტაცია
+          other: ღია კონსულტაციები
         oral_statement:
-          other:
+          one: ზეპირი განცხადება პარლამენტში
+          other: ზეპირი განცხადებები პარლამენტში
         policy:
-          other:
+          one: კანონი
+          other: კანონები
         policy_paper:
-          other:
+          one: საკანონომდებლო დოკუმენტი
+          other: საკანონომდებლო დოკუმენტები
         press_release:
-          other:
+          one: პრეს რელიზი
+          other: პრეს რელიზები
         promotional:
-          other:
+          one: პრომო მასალა
+          other: პრომო მასალა
         publication:
-          other:
+          one: პუბლიკაცია
+          other: პუბლიკაციები
         raib_report:
-          other:
+          one: სარკინიგზო ავარიების გამოძიების ფილიალის ანგარიში
+          other: სარკინიგზო ავარიების გამოძიების ფილიალის ანგარიშები
         regulation:
-          other:
+          one: რეგულირება
+          other: რეგულირებები
         research:
-          other:
+          one: კვლევა და ანალიზი
+          other: კვლევა და ანალიზი
         residential_property_tribunal_decision:
-          other:
+          one: საცხოვრებელი ქონების ტრიბუნალის გადაწყვეტილება
+          other: საცხოვრებელი ქონების ტრიბუნალის გადაწყვეტილებები
         service_sign_in:
-          other:
+          one: სერვისში შესვლა
+          other: სერვისში შესვლა
         service_standard_report:
-          other:
+          one: სერვისის სტანდარტული ანგარიში
+          other: სერვისის სტანდარტული ანგარიშები
         speaking_notes:
-          other:
+          one: საუბრის შენიშვნები
+          other: საუბრის შენიშვნები
         speech:
-          other:
+          one: სიტყვით გამოსვლა
+          other: სიტყვით გამოსვლები
         standard:
-          other:
+          one: სტანდარტი
+          other: სტანდარტები
         statement_to_parliament:
-          other:
+          one: განცხადება პარლამენტში
+          other: განცხადებები პარლამენტში
         statistical_data_set:
-          other:
+          one: სტატისტიკური მონაცემების ნაკრები
+          other: სტატისტიკური მონაცემების ნაკრებები
         statistics_announcement:
-          other:
+          one: სტატისტიკის გამოქვეყნების განცხადება
+          other: სტატისტიკის გამოქვეყნების განცხადებები
         statutory_guidance:
-          other:
+          one: კანონიერი ხელმძღვანელობა
+          other: კანონიერი ხელმძღვანელობა
         take_part:
-          other:
+          one: მონაწილეობის მიღება
+          other: მონაწილეობის მიღება
         tax_tribunal_decision:
-          other:
+          one: საგადასახადო და კანცელარიის ტრიბუნალის გადაწყვეტილება
+          other: საგადასახადო და კანცელარიის სასამართლო გადაწყვეტილებები
         transcript:
-          other:
+          one: ტრანსქრიპტი
+          other: ტრანსქრიპტები
         transparency:
-          other:
+          one: გამჭვირვალობის მონაცემები
+          other: გამჭვირვალობის მონაცემები
         utaac_decision:
-          other:
+          one: ადმინისტრაციული სააპელაციო სასამართლოს გადაწყვეტილება
+          other: ადმინისტრაციული სააპელაციო სასამართლოს გადაწყვეტილებები
         world_location_news_article:
-          other:
+          one: ახალი ამბების სტატია
+          other: ახალი ამბების სტატიები
         world_news_story:
-          other:
+          one: მსოფლიო ამბავი
+          other: მსოფლიო ამბები
         written_statement:
-          other:
-    corporate_information:
+          one: წერილობითი განცხადება პარლამენტში
+          other: წერილობითი განცხადებები პარლამენტში
+    corporate_information: კორპორატიული ინფორმაცია
     document_types:
-      documents:
+      documents: დოკუმენტები
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: იხილეთ ყველა მითითება და წესი
+        title: ხელმძღვანელობა და რეგულირება
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: იხილეთ ყველა სიახლე და კომუნიკაცია
+        title: ახალი ამბები და კომუნიკაციები
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: იხილეთ ყველა საკანონომდებლო დოკუმენტი და კონსულტაციები
+        title: საკანონომდებლო დოკუმენტები და კონსულტაციები
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: იხილეთ ყველა კვლევა და სტატისტიკა
+        title: კვლევა და სტატისტიკა
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: იხილეთ ყველა სერვისი
+        title: სერვისები
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: იხილეთ ინფორმაციის გამჭვირვალობა და თავისუფლება
+        title: ინფორმაციის გამჭვირვალობა და თავისუფლება
+    errors_or_omissions_html: <p>შეცდომები და გამოტოვებული ადგილები? <a class="govuk-link" href="/contact/govuk">მოგვწერეთ აქ</a>. არასამთავრობო უწყებრივი ორგანოების ოფიციალური სიებისათვის <a class="govuk-link" href="/government/collections/public-bodies">საჯარო ორგანოების ნახვა</a>.</p>
+    featured: რჩეული
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: ინფორმაციის თავისუფლების საკონტაქტო ფორმა
+      foi_exemption_html: "ინფორმაციის თავისუფლების აქტი არ მოიცავს ამ ორგანიზაციას. \nიმის სანახავად, თუ რომელ ორგანიზაციებს მოიცავს ეს კანონი, იხილეთ,<a href=\"%{foi_url}\" class=\"govuk-link brand__color\">კანონმდებლობა</a>.\n"
+      freedom_of_information_act: ინფორმაციის თავისუფლების (FOI) აქტი
+      freedom_of_information_requests: ინფორმაციის თავისუფლების მოთხოვნები
+      make_an_foi_request: გააკეთეთ ინფორმაციის თავისუფლების მოთხოვნა
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: წაიკითხეთ ინფორმაციის თავისუფლების (FOI) აქტის შესახებ და <a href="%{how_to_path}" class="govuk-link brand__color">როგორ გავაკეთოთ მოთხოვნა</a>.
+        step2_html: შეამოწმეთ <a href="%{our_releases_path}" class="govuk-link brand__color">ჩვენი წინა გამოცემები</a> იმის სანახავად, გიპასუხეთ თუ არა უკვე თქვენს კითხვაზე.
+        step3_html: გააკეთეთ ახალი მოთხოვნა ჩვენთან დაკავშირებით ქვემოთ მოცემული დეტალების მეშვეობით.
+    follow_us: გამოგვყევით
+    hidden_share_link: გამოგვყევით
+    high_profile_groups: მაღალი პროფილის ჯგუფები %{title}-ს ფარგლებში
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: ვაკანსიები და კონტრაქტები
+    latest_from: ბოლო %{title}-დან
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name_html: "%{title} ახლა ეწოდება <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} არის ორგანო <a href='%{link_href}'>%{link_text}</a>"
+      joining: "%{title} მალე იქნება ჩართული GOV.UK-ზე"
+      left_gov: "%{title} არის გაერთიანებული სამეფოსგან დამოუკიდებლად"
+      merged_html: "%{title} გახდა ნაწილი <a href='%{link_href}'>%{link_text}</a> in %{updated}"
+      merged_no_date_html: "%{title} გახდა ნაწილი <a href='%{link_href}'>%{link_text}</a>"
+      no_longer_exists: "%{title} დაიხურა"
+      no_website: "%{title} არ აქვს ვებ-გვერდი"
+      separate_website_html: "%{title} აქვს <a href='%{url}'>ცალკე ვებგვერდი</a>"
+      split_html: "%{title} ჩანაცვლდა %{links}"
+    part_of: ნაწილი
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: ჩვენი მენეჯმენტის
+      chief_professional_officers: პროფესიონალი მთავარი  ოფიცრები
+      military_personnel: ჩვენი სამხედრო მაღალჩინოსნები
+      ministers: ჩვენი მინისტრები
+      special_representatives: სპეციალური წარმომადგენლები
+      traffic_commissioners: საგზაო კომისრები
+    read_more: წაიკითხეთ მეტი იმის შესახებ, თუ რას ვაკეთებთ
+    search_for_department: იპოვეთ განყოფილება, სააგენტო ან საზოგადოებრივი ორგანო
+    see_all_latest_documents: იხილეთ ყველა უახლესი დოკუმენტი
+    separate_website: ცალკე ვებგვერდი
+    services_and_information: ყველა %{acronym} სერვისი და ინფორმაცია
     subscription:
-      email:
-      feed:
+      email: მიიღეთ წერილები
+      feed: გამოიწერეთ
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      ":":
+      adhoc_advisory_group: დროებითი საკონსულტაციო ჯგუფი
+      advisory_ndpb: საკონსულტაციო არასამთავრობო უწყებრივი ორგანო
+      civil_service: საჯარო სამსახური
+      court:
+      devolved_administration:
+      executive_agency: აღმასრულებელი სააგენტო
+      executive_ndpb: აღმასრულებელი არასამთავრობო უწყებრივი საზოგადოებრივი ორგანო
+      executive_office:
+      independent_monitoring_body: დამოუკიდებელი მონიტორინგის ორგანო
+      ministerial_department:
+      non_ministerial_department: არასამთავრობო მინისტრის განყოფილება
+      other: სხვა
+      public_corporation: საზოგადოებრივი კორპორაცია
+      sub_organisation:
+      tribunal: ტრიბუნალი
+    view_all: ყველას ნახვა
+    view_less: ნაკლების ნახვა
+    what_we_do: რას აკეთებს %{title}
     works_with_statement:
-      multiple:
-      one:
+      multiple: მუშაობს %{works_with_count} სააგენტოებთან და საჯარო ორგანოებთან
+      one: მუშაობს %{works_with_count} საჯარო ორგანოსთან

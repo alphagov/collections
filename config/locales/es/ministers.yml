@@ -1,9 +1,9 @@
 ---
 es:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: También asiste al Gabinete
+    by_department: Ministros por departamento
+    cabinet: Ministros del Gabinete
+    govuk_title: Ministros - GOV.UK
+    title: Ministros
+    whips: Jefes de grupos parlamentarios

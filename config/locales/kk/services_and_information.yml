@@ -1,6 +1,6 @@
 ---
 kk:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Қызметтер мен ақпарат - %{title}
+    see_more_link: Қосымша қарау
+    title: Қызметтер мен ақпарат

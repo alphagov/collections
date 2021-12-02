@@ -1,9 +1,9 @@
 ---
 vi:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Cũng tham dự Nội các
+    by_department: Các bộ trưởng theo ban/bộ
+    cabinet: Bộ trưởng Nội các
+    govuk_title: Bộ trưởng - GOV.UK
+    title: Các bộ trưởng
+    whips: Các nghị viên kỷ luật

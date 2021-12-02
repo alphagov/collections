@@ -1,9 +1,9 @@
 ---
 fi:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Osallistuu myös kabinettiin
+    by_department: Minsters osastojen mukaan
+    cabinet: Valtioneuvoston ministerit
+    govuk_title: Ministerit - GOV.UK
+    title: Ministerit
+    whips: Piiskat

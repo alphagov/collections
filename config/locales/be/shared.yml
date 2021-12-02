@@ -1,12 +1,12 @@
 ---
 be:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Галоўная
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
+      prefix: 'Агляд:'
+      title: Агляд GOV.UK
+    get_emails: Атрымваць электронныя лісты па гэтай тэме
+    language_direction: ltr
     language_name: Беларуская
     topics:
-      title:
+      title: "%{title}: дэталёвая інфармацыя"

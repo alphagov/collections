@@ -1,16 +1,16 @@
 ---
 ro:
   roles:
-    find_out_more_html:
+    find_out_more_html: Află mai multe despre deținătorii acestei funcții în secțiunea noastră %{link}.
     heading:
       few:
-      one:
-      other:
+      one: Rol
+      other: Roluri
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: Deținătorul curent al funcției
+      previous_holders: Deținători anteriori
+      responsibilities: Responsabilități
+    ministerial: Funcție ministerială
+    past: trecut
+    previous_holders: Deținători anteriori ai acestei funcții
+    read_more: Mai multe despre această funcție

@@ -1,9 +1,9 @@
 ---
 pa-pk:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: کابینہ وچ وی حاضری
+    by_department: محکمے دے مطابق وزیر
+    cabinet: کابینہ دے وزیر
+    govuk_title: 'وزیر-  GOV.UK '
+    title: 'وزیر-  '
+    whips: چابک

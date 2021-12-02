@@ -1,8 +1,8 @@
 ---
 he:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: סייר נושאי משנה
+    organisations: ארגונים
+    see_all_in_topic: ראה עוד %{type} בנושא זה
+    show_fewer_orgs: הצג פחות ארגונים
+    show_more_orgs: הצג עוד ארגונים

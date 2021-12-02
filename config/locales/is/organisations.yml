@@ -1,333 +1,341 @@
 ---
 is:
   organisations:
-    about_page_path:
-    administered_by:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Stjórnað af
     breadcrumbs:
-      courts_and_tribunals:
-      organisations:
+      courts_and_tribunals: Réttir og dómstólar
+      organisations: Samtök
     contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
+      contact_details: Upplýsingar til að hafa samband
+      contact_form: 'Eyðublað til að hafa samband: %{title}'
+      contact_organisation: Hafa samband við %{organisation}
+      email: Tölvupóstur
+      telephone: Sími
     content_item:
       schema_name:
         aaib_report:
-          one:
-          other:
+          one: Skýrsla Flugslysanefndar
+          other: Skýrslur Flugslysanefndar
         announcement:
-          one:
-          other:
+          one: Tilkynning
+          other: Tilkynningar
         asylum_support_decision:
-          one:
-          other:
+          one: Úrskurður dómstóls um hælisstuðning
+          other: Úrskurðir dómstóls um hælisstuðning
         authored_article:
-          one:
-          other:
+          one: Samin grein
+          other: Samdar greinar
         business_finance_support_scheme:
-          one:
-          other:
+          one: Ráðagerð um fjárhagslegan stuðning við fyrirtæki
+          other: Ráðagerðir um fjárhagslegan stuðning við fyrirtæki
         case_study:
-          one:
-          other:
+          one: Ferilsathugun
+          other: Ferilsathuganir
         closed_consultation:
-          one:
-          other:
+          one: Lokuð ráðgjöf
+          other: Lokaðar ráðgjafir
         cma_case:
-          one:
-          other:
+          one: Mál Samkeppnis- og Markaðsstofu
+          other: Mál Samkeppnis- og Markaðsstofu
         coming_soon:
-          one:
-          other:
+          one: Væntanlegt
+          other: Væntanlegt
         consultation:
-          one:
-          other:
+          one: Ráðgjöf
+          other: Ráðgjafir
         consultation_outcome:
-          one:
-          other:
+          one: Útkoma ráðgjafar
+          other: Útkomur ráðgjafar
         corporate_information_page:
-          one:
-          other:
+          one: Upplýsingasíða
+          other: Upplýsingasíður
         corporate_report:
-          one:
-          other:
+          one: Skýrsla fyrirtækis
+          other: Skýrslur fyrirtækja
         correspondence:
-          one:
-          other:
+          one: Samskipti
+          other: Samskipti
         countryside_stewardship_grant:
-          one:
-          other:
+          one: Styrkur til umsýslu sveitar
+          other: Styrkir til umsýslu sveitar
         decision:
-          one:
-          other:
+          one: Ákvörðun
+          other: Ákvarðanir
         detailed_guide:
-          one:
-          other:
+          one: Leiðsögn
+          other: Leiðsögn
         dfid_research_output:
-          one:
-          other:
+          one: Útkoma úr Rannsóknum fyrir Uppbyggingu
+          other: Útkomur úr Rannsóknum fyrir Uppbyggingu
         document_collection:
-          one:
-          other:
+          one: Safn
+          other: Söfn
         draft_text:
-          one:
-          other:
+          one: Textadrög
+          other: Textadrög
         drug_safety_update:
-          one:
-          other:
+          one: Uppfærsla varðandi lyfjaöryggi
+          other: Uppfærslur varðandi lyfjaöryggi
         employment_appeal_tribunal_decision:
-          one:
-          other:
+          one: Úrskurður áfrýjunardómstóls um atvinnu
+          other: Úrskurðir áfrýjunardómstóls um atvinnu
         employment_tribunal_decision:
-          one:
-          other:
+          one: Úrskurður dómstóls um atvinnu
+          other: Úrskurðir dómstóls um atvinnu
         esi_fund:
-          one:
-          other:
+          one: Evrópskur Uppbyggingar- og Fjárfestingarsjóður (ESIF)
+          other: Evrópskir Uppbyggingar- og Fjárfestingarsjóðir (ESIF)
         fatality_notice:
-          one:
-          other:
+          one: Tilkynning um dauðsfall
+          other: Tilkynningar um dauðsfall
         foi_release:
-          one:
-          other:
+          one: FOI útgáfa
+          other: FOI útgáfur
         form:
-          one:
-          other:
+          one: Eyðublað
+          other: Eyðublöð
         government_response:
-          one:
-          other:
+          one: Viðbrögð stjórnvalda
+          other: Viðbrögð stjórnvalda
         guidance:
-          one:
-          other:
+          one: Leiðbeiningar
+          other: Leiðbeiningar
         impact_assessment:
-          one:
-          other:
+          one: Áhrifamat
+          other: Áhrifamöt
         imported:
-          one:
-          other:
+          one: hlaðið inn - bíð eftir gerð
+          other: hlaðið inn - bíð eftir gerð
         independent_report:
-          one:
-          other:
+          one: Óháð skýrsla
+          other: Óháðar skýrslur
         international_development_fund:
-          one:
-          other:
+          one: Fjármögnun alþjóðlegrar uppbyggingar
+          other: Fjármögnun alþjóðlegrar uppbyggingar
         international_treaty:
-          one:
-          other:
+          one: Alþjóðasamningur
+          other: Alþjóðasamningar
         maib_report:
-          one:
-          other:
+          one: Skýrsla Sjóslysanefndar
+          other: Skýrslur Sjóslysanefndar
         map:
-          one:
-          other:
+          one: Kort
+          other: Kort
         medical_safety_alert:
-          one:
-          other:
+          one: Viðvaranir og innköllun lyfja og lækningatækja
+          other: Viðvaranir og innköllun lyfja og lækningatækja
         national:
-          one:
-          other:
+          one: Tilkynning Hagstofu
+          other: Tilkynningar Hagstofur
         national_statistics:
-          one:
-          other:
+          one: Hagstofa
+          other: Hagstofa
         national_statistics_announcement:
-          one:
-          other:
+          one: Tilkynning Hagstofu
+          other: Tilkynningar Hagstofur
         news_article:
-          one:
-          other:
+          one: Fréttagrein
+          other: Fréttagreinar
         news_story:
-          one:
-          other:
+          one: Frétt
+          other: Fréttir
         notice:
-          one:
-          other:
+          one: Tilkynning
+          other: Tilkynningar
         official:
-          one:
-          other:
+          one: Tilkynning um opinbera tölfræði
+          other: Tilkynningar um opinbera tölfræði
         official_statistics:
-          one:
-          other:
+          one: Opinber tölfræði
+          other: Opinber tölfræði
         official_statistics_announcement:
-          one:
-          other:
+          one: Tilkynning um opinbera tölfræði
+          other: Tilkynningar um opinbera tölfræði
         open_consultation:
-          one:
-          other:
+          one: Opin ráðgjöf
+          other: Opnar ráðgjafir
         oral_statement:
-          one:
-          other:
+          one: Munnleg yfirlýsing til Þingsins
+          other: Munnlegar yfirlýsingar til Þingsins
         policy:
-          one:
-          other:
+          one: Stefna
+          other: Stefnur
         policy_paper:
-          one:
-          other:
+          one: Stefnu ritgerð
+          other: Stefnu ritgerðir
         press_release:
-          one:
-          other:
+          one: Fréttatilkynning
+          other: Fréttatilkynningar
         promotional:
-          one:
-          other:
+          one: Kynningarefni
+          other: Kynningarefni
         publication:
-          one:
-          other:
+          one: Útgáfa
+          other: Útgáfa
         raib_report:
-          one:
-          other:
+          one: Skýrsla Lestaslysanefndar
+          other: Skýrslur Lestaslysanefndar
         regulation:
-          one:
-          other:
+          one: Reglugerð
+          other: Reglugerðir
         research:
-          one:
-          other:
+          one: Rannsóknir og greining
+          other: Rannsóknir og greining
         residential_property_tribunal_decision:
-          one:
-          other:
+          one: Úrskurður dómstóls íbúðarhúsnæði
+          other: Úrskurðir dómstóls íbúðarhúsnæði
         service_sign_in:
-          one:
-          other:
+          one: Þjónustu innskráning
+          other: Þjónustu innskráning
         service_standard_report:
-          one:
-          other:
+          one: Skýrsla um Þjónustustaðal
+          other: Skýrslur um Þjónustustaðal
         speaking_notes:
-          one:
-          other:
+          one: Ræðupunktar
+          other: Ræðupunktar
         speech:
-          one:
-          other:
+          one: Ræða
+          other: Ræður
         standard:
-          one:
-          other:
+          one: Staðall
+          other: Staðlar
         statement_to_parliament:
-          one:
-          other:
+          one: Yfirlýsing til Þingsins
+          other: Yfirlýsingar til Þingsins
         statistical_data_set:
-          one:
-          other:
+          one: Tölfræðilegt gagnasett
+          other: Tölfræðileg gagnasett
         statistics_announcement:
-          one:
-          other:
+          one: Tilkynning um útgáfu tölfræðigagna
+          other: Tilkynningar um útgáfu tölfræðigagna
         statutory_guidance:
-          one:
-          other:
+          one: Lagalegar leiðbeiningar
+          other: Lagalegar leiðbeiningar
         take_part:
-          one:
-          other:
+          one: Taka þátt
+          other: Taka þátt
         tax_tribunal_decision:
-          one:
-          other:
+          one: Úrskurður dómstóls Skatta og Kansellísins
+          other: Úrskurðir dómstóls Skatta og Kansellísins
         transcript:
-          one:
-          other:
+          one: Handrit
+          other: Handrit
         transparency:
-          one:
-          other:
+          one: Gögn um gagnsæi
+          other: Gögn um gagnsæi
         utaac_decision:
-          one:
-          other:
+          one: Úrskurður stjórnsýslulegs áfrýjunardómstóls
+          other: Úrskurðir stjórnsýslulegs áfrýjunardómstóls
         world_location_news_article:
-          one:
-          other:
+          one: Fréttagrein
+          other: Fréttagreinar
         world_news_story:
-          one:
-          other:
+          one: Heimsfrétt
+          other: Heimsfréttir
         written_statement:
-          one:
-          other:
-    corporate_information:
+          one: Skrifleg yfirlýsing til Þingsins
+          other: Skriflegar yfirlýsingar til Þingsins
+    corporate_information: Upplýsingar um fyrirtæki
     document_types:
-      documents:
+      documents: Skjöl
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Sjá alla leiðsögn og reglugerðir
+        title: Leiðsögn og reglugerðir
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Sjá allar fréttir og tilkynningar
+        title: Fréttir og tilkynningar
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Sjá allar stefnu ritgerðir og ráðgjafir
+        title: Stefnu ritgerðir og ráðgjafir
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Sjá allar rannsóknir og tölfræði
+        title: Rannsóknir og tölfræði
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Sjá alla þjónustu
+        title: Þjónusta
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Sjá alla útgáfu vegna gagnsæis og upplýsingafrelsi
+        title: Útgáfa vegna gagnsæis og upplýsingafrelsi
+    errors_or_omissions_html: <p>Villur eða yfirsjónir? <a class="govuk-link" href="/contact/govuk">Segðu okkur hér</a>. Fyrir opinbera lista yfir opinberar stofnar sem tilheyra ekki ráðuneytum <a class="govuk-link" href="/government/collections/public-bodies">sjá opinberar stofnanir</a>.</p>
+    featured: Valið
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: FOI eyðublað til að hafa samband
+      foi_exemption_html: |
+        Þessi samtök heyra ekki undir Freedom of Information Act.
+        Til að sjá hvað samtök eru meðtalin, sjá <a href="%{foi_url}" class="govuk-link brand__color">löggjöfina</a>.
+      freedom_of_information_act: Freedom of Information (FOI) Act
+      freedom_of_information_requests: Freedom of Information fyrirspurnir
+      make_an_foi_request: Leggja fram FOI fyrirspurn
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: Lestu um Freedom of Information (FOI) Act og <a href="%{how_to_path}" class="govuk-link brand__color">hvernig á að leggja fram fyrirspurn</a>.
+        step2_html: Kíktu á <a href="%{our_releases_path}" class="govuk-link brand__color">fyrri útgáfur okkar</a> til að sjá hvort við höfum nú þegar svarað spurningunni þinni.
+        step3_html: Leggja fram nýja fyrirspurn með því að hafa samband við okkur með upplýsingunum hér fyrir neðan.
+    follow_us: Fylgdu okkur
+    hidden_share_link: Fylgja á
+    high_profile_groups: Áberandi hópar innan %{title}
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: Störf og samningar
+    latest_from: Nýjasta frá %{title}
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name_html: "%{title} er nú kallað <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} er hluti af <a href='%{link_href}'>%{link_text}</a>"
+      joining: "%{title} verðu bráðum fellt inn í GOV.UK"
+      left_gov: "%{title} er aðskilið frá breska ríkinu"
+      merged_html: "%{title} varð hluti af<a href='%{link_href}'>%{link_text}</a> in %{updated}"
+      merged_no_date_html: "%{title} er nú hluti af <a href='%{link_href}'>%{link_text}</a>"
+      no_longer_exists: "%{title} var lokað"
+      no_website: "%{title} hefur enga heimsíðu"
+      separate_website_html: "%{title} hefur <a href='%{url}'>aðskilda</a>"
+      split_html: "%{title} var skipt út fyrir %{links}"
+    part_of: Hluti af
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: Stjórnin okkar
+      chief_professional_officers: Helstu atvinnuherforingjar
+      military_personnel: Okkar æðstu herforingjar
+      ministers: Okkar ráðherrar
+      special_representatives: Sérstakir fulltrúar
+      traffic_commissioners: Umferðar umboðsmenn
+    read_more: Lestu meira um hvað við gerum
+    search_for_department: Leitaðu að deild, umboði eða opinberri stofnun
+    see_all_latest_documents: Sjá öll nýustu skjöl
+    separate_website: aðskilin vefsíða
+    services_and_information: Öll %{acronym} þjónusta og upplýsingar
     subscription:
-      email:
-      feed:
+      email: Fá tölvupósta
+      feed: Gerast áskrifandi að straumi
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      ":":
+      adhoc_advisory_group: Sérstakir ráðgjafahópar
+      advisory_ndpb: Ráðgefandi opinber stofnun sem heyrir ekki undir ráðuneyti
+      civil_service: Opinber þjónusta
+      court:
+      devolved_administration:
+      executive_agency: Framkvæmdaumboð
+      executive_ndpb: Framkvæmandi opinber stofnun sem heyrir ekki undir ráðuneyti
+      executive_office:
+      independent_monitoring_body: Sjálfstæð eftirlitsstofnun
+      ministerial_department:
+      non_ministerial_department: Deild sem hefur ekki ráðherra
+      other: Annað
+      public_corporation: Opinbert fyrirtæki
+      sub_organisation:
+      tribunal: Dómstóll
+    view_all: sjá allt
+    view_less: sjá minna
+    what_we_do: Hvað %{title} gerir
     works_with_statement:
-      multiple:
-      one:
+      multiple: Starfar með %{works_with_count} umboðum og opinberum stofnunum
+      one: Starfar með %{works_with_count} opinberum stofnunum

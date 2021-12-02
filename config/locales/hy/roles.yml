@@ -1,15 +1,15 @@
 ---
 hy:
   roles:
-    find_out_more_html:
+    find_out_more_html: 'Իմանալ ավելին այս պաշտոնում նախկին ծառայողների մասին մեր %{link} բաժնում:'
     heading:
-      one:
-      other:
+      one: Պաշտոն
+      other: Պաշտոններ
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: Պաշտոնի ներկայիս ծառայող
+      previous_holders: Նախկին ծառայողներ
+      responsibilities: Պարտականություններ
+    ministerial: Նախարարական պաշտոն
+    past: նախկին
+    previous_holders: Այս պաշտոնի նախկին ծառայողներ
+    read_more: Ավելին այս պաշտոնի մասին

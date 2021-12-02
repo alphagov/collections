@@ -1,6 +1,6 @@
 ---
 hy:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Ծառայություններ և տեղեկություն - %{title}
+    see_more_link: Դիտել ավելին
+    title: Ծառայություններ և տեղեկություն

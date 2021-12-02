@@ -1,12 +1,12 @@
 ---
 pa-pk:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: گھار
     browse:
-      prefix:
-      title:
-    get_emails:
+      prefix: 'کھولو:'
+      title: کھولو GOV.UK
+    get_emails: ایس مضمون تے ای میل حاصل کرو
     language_direction: rtl
-    language_name: پن٘جابی
+    language_name: پنجابی شاہ مُکھی
     topics:
-      title:
+      title: "%{title}: تفصیلی معلومات"

@@ -1,12 +1,12 @@
 ---
 hu:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Kezdőlap
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
+      prefix: 'Böngészés:'
+      title: GOV.UK böngészése
+    get_emails: Fogadjon e-maileket ebben a témában
+    language_direction: ltr
     language_name: Magyar
     topics:
-      title:
+      title: "%{title}: részletes információ"

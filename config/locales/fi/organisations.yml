@@ -1,333 +1,341 @@
 ---
 fi:
   organisations:
-    about_page_path:
-    administered_by:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Hallinnoija
     breadcrumbs:
-      courts_and_tribunals:
-      organisations:
+      courts_and_tribunals: Tuomioistuimet
+      organisations: Organisaatiot
     contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
+      contact_details: Yhteystiedot
+      contact_form: 'Yhteydenottolomake: %{title}'
+      contact_organisation: 'Ota yhteyttä: %{organisation}'
+      email: Sähköposti
+      telephone: Puhelin
     content_item:
       schema_name:
         aaib_report:
-          one:
-          other:
+          one: Lento -onnettomuuksien tutkintaosaston raportti
+          other: Lento -onnettomuuksien tutkintayksikön raportit
         announcement:
-          one:
-          other:
+          one: Ilmoitus
+          other: Ilmoitukset
         asylum_support_decision:
-          one:
-          other:
+          one: Turvapaikkatuomioistuimen päätös
+          other: Turvapaikkatuomioistuimen päätöksiä
         authored_article:
-          one:
-          other:
+          one: Kirjoitettu artikkeli
+          other: Kirjoitettuja artikkeleita
         business_finance_support_scheme:
-          one:
-          other:
+          one: Yritysrahoituksen tukijärjestelmä
+          other: Yritysrahoituksen tukijärjestelmät
         case_study:
-          one:
-          other:
+          one: Tapaustutkimus
+          other: Tapaustutkimuksia
         closed_consultation:
-          one:
-          other:
+          one: Suljettu kuuleminen
+          other: Suljetut neuvottelut
         cma_case:
-          one:
-          other:
+          one: Kilpailu- ja markkinaviranomaisen tapaus
+          other: Kilpailu- ja markkinaviranomaisen tapaukset
         coming_soon:
-          one:
-          other:
+          one: Tulossa pian
+          other: Tulossa pian
         consultation:
-          one:
-          other:
+          one: Konsultaatio
+          other: Konsultaatiot
         consultation_outcome:
-          one:
-          other:
+          one: Konsultoinnin tulos
+          other: Konsultoinnin tulokset
         corporate_information_page:
-          one:
-          other:
+          one: Tietosivu
+          other: Tietosivut
         corporate_report:
-          one:
-          other:
+          one: Yrityksen raportti
+          other: Yritysraportit
         correspondence:
-          one:
-          other:
+          one: Kirjeenvaihto
+          other: Kirjeenvaihto
         countryside_stewardship_grant:
-          one:
-          other:
+          one: Maaseudun apuraha
+          other: Maaseudun apurahat
         decision:
-          one:
-          other:
+          one: Päätös
+          other: Päätökset
         detailed_guide:
-          one:
-          other:
+          one: Ohjaus
+          other: Ohjaus
         dfid_research_output:
-          one:
-          other:
+          one: Tutkimus kehitystä varten Tuotos
+          other: Tutkimus kehitysyhteistyötä varten Tuotokset
         document_collection:
-          one:
-          other:
+          one: Kokoelma
+          other: Kokoelmat
         draft_text:
-          one:
-          other:
+          one: Luonnos
+          other: Luonnos tekstejä
         drug_safety_update:
-          one:
-          other:
+          one: Lääketurvallisuuden päivitys
+          other: Lääketurvallisuuden päivitykset
         employment_appeal_tribunal_decision:
-          one:
-          other:
+          one: Työllisyysasioiden muutoksenhakutuomioistuimen päätös
+          other: Työllisyysasioiden muutoksenhakutuomioistuimen päätökset
         employment_tribunal_decision:
-          one:
-          other:
+          one: Työtuomioistuimen päätös
+          other: Työtuomioistuimen päätökset
         esi_fund:
-          one:
-          other:
+          one: Euroopan rakenne- ja investointirahasto (ESIF)
+          other: Euroopan rakenne- ja investointirahastot (ESIF)
         fatality_notice:
-          one:
-          other:
+          one: Kuolemantapauksia koskeva ilmoitus
+          other: Kuolemantapauksia koskevat ilmoitukset
         foi_release:
-          one:
-          other:
+          one: Tiedonvälityksen vapaus julkaisu
+          other: Tiedonvälityksen vapaus julkaisut
         form:
-          one:
-          other:
+          one: Lomake
+          other: Lomakkeet
         government_response:
-          one:
-          other:
+          one: Hallituksen vastaus
+          other: Hallituksen vastaukset
         guidance:
-          one:
-          other:
+          one: Ohjaus
+          other: Ohjaus
         impact_assessment:
-          one:
-          other:
+          one: Vaikutuksen arviointi
+          other: Vaikutustenarvioinnit
         imported:
-          one:
-          other:
+          one: tuotu - odottava tyyppi
+          other: tuotu - odottava tyyppi
         independent_report:
-          one:
-          other:
+          one: Riippumaton raportti
+          other: Riippumattomat raportit
         international_development_fund:
-          one:
-          other:
+          one: Kansainvälinen kehitysrahoitus
+          other: Kansainvälinen kehitysrahoitus
         international_treaty:
-          one:
-          other:
+          one: Kansainvälinen sopimus
+          other: Kansainväliset sopimukset
         maib_report:
-          one:
-          other:
+          one: Merionnettomuuksien tutkintaosaston raportti
+          other: Merionnettomuuksien tutkintaosaston raportit
         map:
-          one:
-          other:
+          one: Kartta
+          other: Kartat
         medical_safety_alert:
-          one:
-          other:
+          one: Lääkkeitä ja lääkinnällisiä laitteita koskevat varoitukset ja takaisinvedot
+          other: Lääkkeitä ja lääkinnällisiä laitteita koskevat varoitukset ja takaisinvedot
         national:
-          one:
-          other:
+          one: Kansallinen tilastoilmoitus
+          other: Kansalliset tilastoilmoitukset
         national_statistics:
-          one:
-          other:
+          one: Kansalliset tilastot
+          other: Kansalliset tilastot
         national_statistics_announcement:
-          one:
-          other:
+          one: Kansallinen tilastoilmoitus
+          other: Kansalliset tilastoilmoitukset
         news_article:
-          one:
-          other:
+          one: Uutisartikkeli
+          other: Uutisartikkelit
         news_story:
-          one:
-          other:
+          one: Uutistarina
+          other: Uutisia
         notice:
-          one:
-          other:
+          one: Ilmoitus
+          other: Ilmoitukset
         official:
-          one:
-          other:
+          one: Virallinen tilastoilmoitus
+          other: Viralliset tilastotiedot
         official_statistics:
-          one:
-          other:
+          one: Viralliset tilastot
+          other: Viralliset tilastot
         official_statistics_announcement:
-          one:
-          other:
+          one: Virallinen tilastoilmoitus
+          other: Viralliset tilastotiedot
         open_consultation:
-          one:
-          other:
+          one: Avoin kuuleminen
+          other: Avoimet kuulemiset
         oral_statement:
-          one:
-          other:
+          one: Suullinen lausuma parlamentille
+          other: Suulliset lausumat parlamentille
         policy:
-          one:
-          other:
+          one: Käytäntö
+          other: Käytännöt
         policy_paper:
-          one:
-          other:
+          one: Toimintapoliittinen asiakirja
+          other: Toimintapoliittiset asiakirjat
         press_release:
-          one:
-          other:
+          one: Lehdistötiedote
+          other: Lehdistötiedotteet
         promotional:
-          one:
-          other:
+          one: Myynninedistämismateriaali
+          other: Myynninedistämismateriaali
         publication:
-          one:
-          other:
+          one: Julkaisu
+          other: Julkaisut
         raib_report:
-          one:
-          other:
+          one: Rautatie onnettomuus tutkintaosaston raportti
+          other: Rautatie onnettomuus tutkintaosaston raportit
         regulation:
-          one:
-          other:
+          one: Asetus
+          other: Asetukset
         research:
-          one:
-          other:
+          one: Tutkimus ja analyysi
+          other: Tutkimus ja analyysi
         residential_property_tribunal_decision:
-          one:
-          other:
+          one: Asunto -omaisuuden tuomioistuimen päätös
+          other: Asunto -omaisuuden tuomioistuimen päätökset
         service_sign_in:
-          one:
-          other:
+          one: Palveluun kirjautuminen
+          other: Palveluun kirjautuminen
         service_standard_report:
-          one:
-          other:
+          one: Palvelustandardiraportti
+          other: Palvelustandardiraportit
         speaking_notes:
-          one:
-          other:
+          one: Puhuvat muistiinpanot
+          other: Puhuvat muistiinpanot
         speech:
-          one:
-          other:
+          one: Puhe
+          other: Puheet
         standard:
-          one:
-          other:
+          one: Standardi
+          other: Standardit
         statement_to_parliament:
-          one:
-          other:
+          one: Lausuma parlamentille
+          other: Lausumat parlamentille
         statistical_data_set:
-          one:
-          other:
+          one: Tilastollinen tietojoukko
+          other: Tilastolliset tietojoukot
         statistics_announcement:
-          one:
-          other:
+          one: Tilastojen julkaisuilmoitus
+          other: Tilastojen julkaisuilmoitukset
         statutory_guidance:
-          one:
-          other:
+          one: Lakisääteiset ohjeet
+          other: Lakisääteiset ohjeet
         take_part:
-          one:
-          other:
+          one: Osallistu
+          other: Osallistu
         tax_tribunal_decision:
-          one:
-          other:
+          one: Vero- ja oikeuskanslerinoikeuden päätös
+          other: Vero- ja oikeuskanslerinoikeuden päätökset
         transcript:
-          one:
-          other:
+          one: Transkriptio
+          other: Transkriptiot
         transparency:
-          one:
-          other:
+          one: Avoimuustiedot
+          other: Avoimuustiedot
         utaac_decision:
-          one:
-          other:
+          one: Hallinnollisen muutoksenhakutuomioistuimen päätös
+          other: Hallinnollisen muutoksenhakutuomioistuimen päätökset
         world_location_news_article:
-          one:
-          other:
+          one: Uutisartikkeli
+          other: Uutisartikkelit
         world_news_story:
-          one:
-          other:
+          one: Maailman uutinen
+          other: Maailman uutisia
         written_statement:
-          one:
-          other:
-    corporate_information:
+          one: Kirjallinen lausuma parlamentille
+          other: Kirjallinen lausumat parlamentille
+    corporate_information: Yritystiedot
     document_types:
-      documents:
+      documents: Asiakirjat
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Katso kaikki ohjeet ja sääntely
+        title: Ohjeet ja sääntely
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Katso kaikki uutiset ja viestintä
+        title: Uutiset ja viestintä
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Katso kaikki toimintapoliittiset asiakirjat ja kuulemiset
+        title: Toimintapoliittiset asiakirjat ja kuulemiset
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Katso kaikki tutkimukset ja tilastot
+        title: Tutkimus ja tilastot
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Katso kaikki palvelut
+        title: Palvelut
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Katso kaikki avoimuus ja tiedon vapaus
+        title: Avoimuus ja tiedonvälityksen vapaus
+    errors_or_omissions_html: <p>Virheitä tai puutteita? <a class="govuk-link" href="/contact/govuk">Kerro meille täällä</a>. Muiden kuin ministeriöiden julkisten elinten virallisia luetteloita varten <a class="govuk-link" href="/government/collections/public-bodies">katso julkisyhteisöt</a>.</p>
+    featured: Suositeltava
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: Tiedonvälityksen vapaus yhteydenottolomake
+      foi_exemption_html: |
+        Tämä organisaatio ei kuulu tiedonvälityksen vapautta koskevan lain soveltamisalaan.
+        Jos haluat nähdä, mitkä organisaatiot ovat mukana, katso <a href="%{foi_url}" class="govuk-link brand__color">lainsäädäntö</a>.
+      freedom_of_information_act: Tiedonvälityksen vapaus (FOI) koskeva laki
+      freedom_of_information_requests: Tiedonvapauspyynnöt
+      make_an_foi_request: Tee Tiedonvälityksen vapaus pyyntö
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: Lue lisää tiedonvälityksen vapautta koskevasta laista (FOI) ja <a href="%{how_to_path}" class="govuk-link brand__color">miten tehdä pyyntö</a>.
+        step2_html: Tarkista <a href="%{our_releases_path}" class="govuk-link brand__color">aiemmat julkaisumme</a> nähdäksesi, olemmeko jo vastanneet kysymykseesi.
+        step3_html: Tee uusi pyyntö ottamalla meihin yhteyttä alla olevilla tiedoilla.
+    follow_us: Seuraa meitä
+    hidden_share_link: Seurata
+    high_profile_groups: Korkean profiilin ryhmät %{title}
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: Työt ja sopimukset
+    latest_from: Latest from %{title}
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name_html: "%{title} on nyt nimeltään <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} on elin <a href='%{link_href}'>%{link_text}</a>"
+      joining: "%{title} sisällytetään pian GOV.UK-sivustoon"
+      left_gov: "%{title} on nyt riippumaton Ison -Britannian hallituksesta"
+      merged_html: "%{title} tuli osa <a href='%{link_href}'>%{link_text}</a> osoitteessa %{updated}"
+      merged_no_date_html: "%{title} on nyt osa <a href='%{link_href}'>%{link_text}</a>"
+      no_longer_exists: "%{title} on suljettu"
+      no_website: Käyttäjällä %{title} ei ole verkkosivustoa
+      separate_website_html: "%{title} ole <a href='%{url}'>erillinen verkkosivusto</a>"
+      split_html: "%{title} korvattiin %{links}"
+    part_of: Osa
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: Hallintomme
+      chief_professional_officers: Asiantuntijapäälliköt
+      military_personnel: Korkeat sotilasvirkamiehemme
+      ministers: Meidän ministerimme
+      special_representatives: Erityisedustajat
+      traffic_commissioners: Liikennevaltuutetut
+    read_more: Lue lisää siitä, mitä teemme
+    search_for_department: Hae osastoa, virastoa tai julkista elintä
+    see_all_latest_documents: Katso kaikki uusimmat asiakirjat
+    separate_website: erillinen sivusto
+    services_and_information: Kaikki %{acronym} palvelut ja tiedot
     subscription:
-      email:
-      feed:
+      email: Hanki sähköpostit
+      feed: Tilaa syöte
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      ":":
+      adhoc_advisory_group: Ad-hoc-neuvoa-antava ryhmä
+      advisory_ndpb: Neuvoa-antava ei-osastoinen julkinen elin
+      civil_service: Siviilipalvelus
+      court:
+      devolved_administration:
+      executive_agency: Toimeenpanovirasto
+      executive_ndpb: Julkinen toimeenpaneva elin, joka ei ole ministeriön alainen
+      executive_office:
+      independent_monitoring_body: Riippumaton valvontaelin
+      ministerial_department:
+      non_ministerial_department: Muu kuin ministeriön yksikkö
+      other: Muut
+      public_corporation: Julkinen osakeyhtiö
+      sub_organisation:
+      tribunal: Tuomioistuin
+    view_all: näytä kaikki
+    view_less: nähdä vähemmän
+    what_we_do: Mitä %{title} tekee
     works_with_statement:
-      multiple:
-      one:
+      multiple: Toimii %{works_with_count} virastojen ja julkisten elinten kanssa
+      one: Toimii %{works_with_count} julkisen elimen kanssa

@@ -1,12 +1,12 @@
 ---
 vi:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Trang chủ
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
+      prefix: 'Duyệt tìm:'
+      title: Duyệt qua GOV.UK
+    get_emails: Nhận email về chủ đề này
+    language_direction: ltr
     language_name: Tiếng Việt
     topics:
-      title:
+      title: "%{title}: thông tin chi tiết"

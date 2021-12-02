@@ -1,6 +1,6 @@
 ---
 cs:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Služby a informace - %{title}
+    see_more_link: Viz více
+    title: Služby a informace

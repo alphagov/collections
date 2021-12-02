@@ -1,6 +1,6 @@
 ---
 gd:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Seirbhísí agus faisnéis - %{title}
+    see_more_link: Féach níos mó
+    title: Seirbhísí agus faisnéis

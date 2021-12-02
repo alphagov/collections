@@ -1,15 +1,15 @@
 ---
 sv:
   roles:
-    find_out_more_html:
+    find_out_more_html: Läs mer om tidigare innehavare av denna roll i vårt avsnitt %{link}.
     heading:
-      one:
-      other:
+      one: Roll
+      other: Roller
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: Nuvarande innehavare av rollen
+      previous_holders: Tidigare innehavare
+      responsibilities: Ansvarsområden
+    ministerial: Ministerroll
+    past: tidigare
+    previous_holders: Tidigare innehavare av denna roll
+    read_more: Mer om denna roll

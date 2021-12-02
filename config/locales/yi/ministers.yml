@@ -1,9 +1,9 @@
 ---
 yi:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
+    also_attends:
+    by_department:
+    cabinet:
     govuk_title:
     title:
     whips:

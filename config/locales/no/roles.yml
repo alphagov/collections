@@ -1,15 +1,15 @@
 ---
 'no':
   roles:
-    find_out_more_html:
+    find_out_more_html: Finn ut mer om tidligere innehavere av denne rollen i %{link}-delen vår.
     heading:
-      one:
-      other:
+      one: Rolle
+      other: Roller
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: Nåværende rolleinnehaver
+      previous_holders: Tidligere innehavere
+      responsibilities: Ansvar
+    ministerial: Ministerrolle
+    past: fortid
+    previous_holders: Tidligere innehavere av denne rollen
+    read_more: Mer om denne rollen

@@ -1,12 +1,12 @@
 ---
 it:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Home
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: Italiano
+      prefix: 'Visita:'
+      title: Visita GOV.UK
+    get_emails: Ricevi e-mail su questo argomento
+    language_direction: ltr
+    language_name: Inglese
     topics:
-      title:
+      title: "%{title}: informazioni dettagliate"

@@ -1,12 +1,12 @@
 ---
 mt:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Skrin Prinċipali
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
+      prefix: 'Fittex:'
+      title: Fittex fuq GOV.UK
+    get_emails: Irċievi imejls dwar dan is-suġġett
+    language_direction: ltr
     language_name: Malti
     topics:
-      title:
+      title: "%{title}: informazzjoni dettaljata"

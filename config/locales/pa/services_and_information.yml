@@ -1,6 +1,6 @@
 ---
 pa:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: ਸੇਵਾਵਾਂ ਅਤੇ ਜਾਣਕਾਰੀ - %{title}
+    see_more_link: ਹੋਰ ਵੇਖੋ
+    title: ਸੇਵਾਵਾਂ ਅਤੇ ਜਾਣਕਾਰੀ

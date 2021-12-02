@@ -1,17 +1,17 @@
 ---
 hr:
   roles:
-    find_out_more_html:
+    find_out_more_html: Saznajte više o prethodnim nositeljima ove uloge u našem %{link} odjeljku .
     heading:
       few:
       many:
-      one:
-      other:
+      one: Uloga
+      other: Uloge
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: Trenutni nosilac uloge
+      previous_holders: Prethodni nositelji
+      responsibilities: Odgovornosti
+    ministerial: Ministarska uloga
+    past: prošli
+    previous_holders: Dosadašnji nositelji ove uloge
+    read_more: Više o ovoj ulozi

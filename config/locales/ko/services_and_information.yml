@@ -1,6 +1,6 @@
 ---
 ko:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: 서비스 및 정보 - %{title}
+    see_more_link: 더 보기
+    title: 서비스 및 정보

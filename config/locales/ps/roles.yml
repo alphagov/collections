@@ -1,15 +1,15 @@
 ---
 ps:
   roles:
-    find_out_more_html:
+    find_out_more_html: زموږ د %{link} برخې کې د دې رول پخوانیو لرونکو په اړه نور معلومات ترلاسه کړئ.
     heading:
-      one:
-      other:
+      one: رول
+      other: رولونه
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: اوسنی رول لرونکی
+      previous_holders: پخوانۍ لرونکي
+      responsibilities: مسؤلیتونه
+    ministerial: د وزیر رول
+    past: تېر
+    previous_holders: د دې رول پخواني لرونکي
+    read_more: د دې رول په اړه نور

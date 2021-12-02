@@ -1,34 +1,34 @@
 ---
 zh-hk:
   organisations:
-    about_page_path:
-    administered_by:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: 管理者
     breadcrumbs:
-      courts_and_tribunals:
-      organisations:
+      courts_and_tribunals: 法院及裁判法庭
+      organisations: 組織
     contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
+      contact_details: 聯絡資訊
+      contact_form: 聯絡表格： %{title}
+      contact_organisation: 聯絡 %{organisation}
+      email: 電子郵件
+      telephone: 電話
     content_item:
       schema_name:
         aaib_report:
-          one:
-          other:
+          one: 空中意外事故調查報告
+          other: 其他空中意外事故調查報告
         announcement:
           one: 公告
           other: 其他公告
         asylum_support_decision:
-          one:
-          other:
+          one: 庇護支援裁判決定
+          other: 其他庇護支援裁判決定
         authored_article:
           one: 撰寫文章
           other: 其他撰寫文章
         business_finance_support_scheme:
-          one:
-          other:
+          one: 商業融資支援計劃
+          other: 其他商業融資支援計劃
         case_study:
           one: 案例研究
           other: 其他案例研究
@@ -36,11 +36,11 @@ zh-hk:
           one: 專屬諮詢
           other: 其他專屬諮詢
         cma_case:
-          one:
-          other:
+          one: 競爭及市場管理案例
+          other: 其他競爭及市場管理案例
         coming_soon:
-          one:
-          other:
+          one: 即將推出之項目
+          other: 其他即將推出之項目
         consultation:
           one: 諮詢
           other: 其他諮詢
@@ -48,8 +48,8 @@ zh-hk:
           one: 諮詢結果
           other: 其他諮詢結果
         corporate_information_page:
-          one:
-          other:
+          one: 資訊頁面
+          other: 其他資訊頁面
         corporate_report:
           one: 政府報告
           other: 其他政府報告
@@ -57,35 +57,35 @@ zh-hk:
           one: 通信
           other: 其他通信
         countryside_stewardship_grant:
-          one:
-          other:
+          one: 鄉村管理補助金
+          other: 其他鄉村管理補助金
         decision:
-          one:
-          other:
+          one: 決定
+          other: 其他決定
         detailed_guide:
           one: 詳細指引
           other: 其他詳細指引
         dfid_research_output:
-          one:
-          other:
+          one: 發展成果之研究
+          other: 其他發展成果之研究
         document_collection:
           one: 系列
-          other:
+          other: 其他系列
         draft_text:
           one: 內容
           other: 其他內容
         drug_safety_update:
-          one:
-          other:
+          one: 藥物安全更新
+          other: 其他藥物安全更新
         employment_appeal_tribunal_decision:
-          one:
-          other:
+          one: 僱傭上訴法庭裁決
+          other: 其他僱傭上訴法庭裁決
         employment_tribunal_decision:
-          one:
-          other:
+          one: 僱傭法庭裁決
+          other: 其他僱傭法庭裁決
         esi_fund:
-          one:
-          other:
+          one: 歐洲結構與投資基金 (ESIF)
+          other: 其他歐洲結構與投資基金 (ESIF)
         fatality_notice:
           one: 安全事故通知
           other: 其他安全事故通知
@@ -111,29 +111,29 @@ zh-hk:
           one: 獨立報告
           other: 其他獨立報告
         international_development_fund:
-          one:
-          other:
+          one: 國際發展籌資
+          other: 國際發展籌資
         international_treaty:
-          one:
-          other:
+          one: 國際條約
+          other: 其他國際條約
         maib_report:
-          one:
-          other:
+          one: 海洋事故調查處報告
+          other: 其他海洋事故調查處報告
         map:
           one: 地圖
           other: 其他地圖
         medical_safety_alert:
-          one:
-          other:
+          one: 藥品及醫療器械警示及召回
+          other: 其他藥品及醫療器械警示及召回
         national:
-          one:
-          other:
+          one: 國家統計數據公告
+          other: 其他國家統計數據公告
         national_statistics:
           one: 國家統計數據
           other: 其他國家統計數據
         national_statistics_announcement:
-          one:
-          other:
+          one: 國家統計數據公告
+          other: 其他國家統計數據公告
         news_article:
           one: 新聞
           other: 其他新聞
@@ -141,17 +141,17 @@ zh-hk:
           one: 新聞
           other: 其他新聞
         notice:
-          one:
-          other:
+          one: 通知
+          other: 其他通知
         official:
-          one:
-          other:
+          one: 官方統計數據公告
+          other: 其他官方統計數據公告
         official_statistics:
           one: 統計資料
           other: 其他統計資料
         official_statistics_announcement:
-          one:
-          other:
+          one: 官方統計數據公告
+          other: 其他官方統計數據公告
         open_consultation:
           one: 公開諮詢
           other: 其他公開諮詢
@@ -174,23 +174,23 @@ zh-hk:
           one: 出版物
           other: 其他出版物
         raib_report:
-          one:
-          other:
+          one: 鐵路意外調查處公告
+          other: 其他鐵路意外調查處公告
         regulation:
-          one:
-          other:
+          one: 規定
+          other: 其他規定
         research:
           one: 研究與分析
           other: 其他研究與分析
         residential_property_tribunal_decision:
-          one:
-          other:
+          one: 住宅物業法庭裁決
+          other: 其他住宅物業法庭裁決
         service_sign_in:
-          one:
-          other:
+          one: 服務登入
+          other: 服務登入
         service_standard_report:
-          one:
-          other:
+          one: 服務標準報告
+          other: 其他服務標準報告
         speaking_notes:
           one: 演講稿
           other: 其他演講稿
@@ -198,8 +198,8 @@ zh-hk:
           one: 演講
           other: 其他演講
         standard:
-          one:
-          other:
+          one: 標準
+          other: 其他標準
         statement_to_parliament:
           one: 提交國會的聲明
           other: 提交國會的其他聲明
@@ -207,17 +207,17 @@ zh-hk:
           one: 統計數據資料
           other: 其他統計數據資料
         statistics_announcement:
-          one:
-          other:
+          one: 統計數據資料發佈公告
+          other: 其他統計數據資料發佈公告
         statutory_guidance:
-          one:
-          other:
+          one: 法定指引
+          other: 法定指引
         take_part:
-          one:
-          other:
+          one: 參加活動
+          other: 參加活動
         tax_tribunal_decision:
-          one:
-          other:
+          one: 稅務及大法官法庭裁決
+          other: 其他稅務及大法官法庭裁決
         transcript:
           one: 談話副本
           other: 其他談話副本
@@ -225,109 +225,115 @@ zh-hk:
           one: 透明化數據
           other: 其他透明化數據
         utaac_decision:
-          one:
-          other:
+          one: 行政上訴法庭裁決
+          other: 其他行政上訴法庭裁決
         world_location_news_article:
           one: 新聞
           other: 其他新聞
         world_news_story:
-          one:
-          other:
+          one: 世界新聞故事
+          other: 其他世界新聞故事
         written_statement:
           one: 提交國會的書面聲明
           other: 提交國會的其他書面聲明
-    corporate_information:
+    corporate_information: 公司資訊
     document_types:
-      documents:
+      documents: 文件
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: 查看所有指引及規則
+        title: 指引及規則
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: 查看所有新聞及通訊
+        title: 新聞及通訊
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: 查閱所有政策文書及諮詢
+        title: 政策文書及諮詢
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: 查閱所有研究及統計
+        title: 研究及統計
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: 查閱所有服務
+        title: 服務
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: 查閱全部資訊發佈透明度及自由
+        title: 資訊發佈透明度及自由
+    errors_or_omissions_html: <p>有出錯或是遺漏？<a class="govuk-link" href="/contact/govuk">請在此處告知我們</a>。如要了解非部門公共機構名單，請 <a class="govuk-link" href="/government/collections/public-bodies">參閱公共機構</a>。</p>
+    featured: 特載內容
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: FOI 聯絡表
+      foi_exemption_html: 此組織不受資訊自由法案規限。如要查閱其中包含哪些組織，請參閱 <a href="%{foi_url}" class="govuk-link brand__color">立法</a>。
+      freedom_of_information_act: 資訊自由 (FOI) 法案
+      freedom_of_information_requests: 資訊自由申請
+      make_an_foi_request: 提出 FOI 申請
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: 了解資訊自由 (FOI) 法案之詳情及 <a href="%{how_to_path}" class="govuk-link brand__color">提出申請的方式</a>。
+        step2_html: 查閱 <a href="%{our_releases_path}" class="govuk-link brand__color">我們的最近發佈</a> 以查看我們是否已對您的問題予以回應。
+        step3_html: 請透過下列聯絡方式聯絡我們提出新申請。
+    follow_us: 關注我們
+    hidden_share_link: 關注
+    high_profile_groups: "%{title} 以內的高知名度群組"
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: 職位及聯絡方式
+    latest_from: 來自 %{title} 的最新內容
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name_html: "%{title} 現時稱為 <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} 為 <a href='%{link_href}'>%{link_text}</a> 之下屬機構"
+      joining: "%{title} 即將被納入 GOV.UK"
+      left_gov: "%{title} 現獨立於英國政府"
+      merged_html: "%{title} 已在 %{updated} 成為 <a href='%{link_href}'>%{link_text}</a> 一部份"
+      merged_no_date_html: "%{title} 現已成為 <a href='%{link_href}'>%{link_text}</a> 一部份"
+      no_longer_exists: "%{title} 已關閉"
+      no_website: "%{title} 無網站"
+      separate_website_html: "%{title} 有一 <a href='%{url}'>獨立網站</a>"
+      split_html: "%{title} 已由 %{links} 替代"
+    part_of: 部份
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: 我們的管理
+      chief_professional_officers: 主要專業官員
+      military_personnel: 我們的高級軍事官員
+      ministers: 我們的大臣
+      special_representatives: 特別代表人員
+      traffic_commissioners: 交通事務委員
+    read_more: 進一步了解我們的事項
+    search_for_department: 搜尋部門、代理或供應機構
+    see_all_latest_documents: 查閱所有最新文件
+    separate_website: 獨立網站
+    services_and_information: "%{acronym} 之全部服務及資訊"
     subscription:
-      email:
-      feed:
+      email: 獲取電郵地址
+      feed: 訂閱內容
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      ":":
+      adhoc_advisory_group: 特設諮詢小組
+      advisory_ndpb: 非部門公共機構顧問
+      civil_service: 公務員制度
+      court:
+      devolved_administration:
+      executive_agency: 執行機構
+      executive_ndpb: 非部門公共執行機構
+      executive_office:
+      independent_monitoring_body: 獨立監督機構
+      ministerial_department:
+      non_ministerial_department: 非內閣部門
+      other: 其他
+      public_corporation: 公共機構
+      sub_organisation:
+      tribunal: 法庭
+    view_all: 查閱全部內容
+    view_less: 查閱較少內容
+    what_we_do: "%{title} 之職責"
     works_with_statement:
-      multiple:
-      one:
+      multiple: 與 %{works_with_count} 代理及公共機構合作
+      one: 與 %{works_with_count} 公共機構合作

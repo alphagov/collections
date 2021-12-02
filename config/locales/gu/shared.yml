@@ -1,12 +1,12 @@
 ---
 gu:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: ઘર (હોમ)
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: ગુજરાતી
+      prefix: 'બ્રાઉઝ:'
+      title: GOV.UK બ્રાઉઝ કરો
+    get_emails: યા વિષય પર ઈમેલ્સ મેળવો
+    language_direction: ltr
+    language_name: જોર્જિયન
     topics:
-      title:
+      title: "%{title}: વિગતવાર માહિતી"

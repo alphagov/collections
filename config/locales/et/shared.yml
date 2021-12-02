@@ -1,12 +1,12 @@
 ---
 et:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Kodu
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
+      prefix: 'Sirvi:'
+      title: Sirvi saiti GOV.UK
+    get_emails: Hangi selle teema kohta e-kirju
+    language_direction: ltr
     language_name: Eesti
     topics:
-      title:
+      title: "%{title}: üksikasjalik teave"

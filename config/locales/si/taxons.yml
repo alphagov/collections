@@ -1,8 +1,8 @@
 ---
 si:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: උප මාතෘකා ගවේෂණය කරන්න
+    organisations: සංවිධාන
+    see_all_in_topic: මෙම මාතෘකාව තුළ තවත් %{type} බලන්න
+    show_fewer_orgs: සංවිධාන අඩුවෙන් පෙන්වන්න
+    show_more_orgs: සංවිධාන වැඩියෙන් පෙන්වන්න

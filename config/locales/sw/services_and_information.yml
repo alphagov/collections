@@ -1,6 +1,6 @@
 ---
 sw:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Huduma na maelezo - %{title}
+    see_more_link: Angalia maelezo zaidi
+    title: Huduma na maelezo

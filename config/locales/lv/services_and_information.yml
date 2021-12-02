@@ -1,6 +1,6 @@
 ---
 lv:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Pakalpojumi un informācija - %{title}
+    see_more_link: Skatīt vairāk
+    title: Pakalpojumi un informācija

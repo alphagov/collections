@@ -1,17 +1,17 @@
 ---
 uk:
   roles:
-    find_out_more_html:
+    find_out_more_html: Дізнайтесь більше про попередників у нашому розділі %{link}.
     heading:
       few:
       many:
-      one:
-      other:
+      one: Функція
+      other: Функції
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: Поточний виконавець функції
+      previous_holders: Попередні виконавці
+      responsibilities: Обов’язки
+    ministerial: Міністерська функція
+    past: минуле
+    previous_holders: Попередники
+    read_more: Детальніше про цю функцію

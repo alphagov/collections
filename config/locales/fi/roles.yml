@@ -1,15 +1,15 @@
 ---
 fi:
   roles:
-    find_out_more_html:
+    find_out_more_html: Lue lisää tämän tehtävän aiemmista haltijoista %{link}osastostamme.
     heading:
-      one:
-      other:
+      one: Rooli
+      other: Roolit
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: Nykyinen roolin haltija
+      previous_holders: Aiemmat haltijat
+      responsibilities: Vastuut
+    ministerial: Ministerin rooli
+    past: ohi
+    previous_holders: Tämän roolin aiemmat haltijat
+    read_more: Lisää tästä roolista

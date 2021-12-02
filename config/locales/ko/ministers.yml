@@ -1,9 +1,9 @@
 ---
 ko:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: 또한 내각이 참여합니다
+    by_department: 부서별 장관
+    cabinet: 내각
+    govuk_title: 장관 - GOV.UK
+    title: 장관
+    whips: 원내대표단

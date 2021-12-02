@@ -1,8 +1,8 @@
 ---
 da:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Udforsk emnet
+    organisations: Organisationer
+    see_all_in_topic: Se mere %{type} i dette emne
+    show_fewer_orgs: Vis færre organisation
+    show_more_orgs: Vis færre organisationer

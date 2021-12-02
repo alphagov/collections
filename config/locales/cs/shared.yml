@@ -1,12 +1,12 @@
 ---
 cs:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Home
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: Česky
+      prefix: 'Procházet:'
+      title: Procházet GOV.UK
+    get_emails: Získávání e-mailů pro toto téma
+    language_direction: ltr
+    language_name: Čeština
     topics:
-      title:
+      title: "%{title}: podrobné informace"

@@ -1,40 +1,26 @@
 ---
 pl:
   brexit_landing_page:
-    campaign_links:
-      lead_in:
-      lead_out:
-      links:
-    comms:
-      links:
-      read_transcript:
-    comms_header:
-    data_list_title:
-    email_mailto_subject:
-    guidance_header:
-    meta_description:
-    meta_title:
-    no_cookies:
-      change_settings_text:
-      icon_text:
-      or_text:
-      to_watch_text:
-      watch_link_text:
-    page_header:
-    page_header_explainer:
+    meta_description: Dowiedz się, jak nowe przepisy dotyczące Brexitu wpływają na takie kwestie jak podróżowanie i prowadzenie interesów z Europą. Skorzystaj z narzędzia Brexit checker, aby otrzymać spersonalizowaną listę zadań.
+    meta_title: Brexit
+    page_header: Brexit
+    page_header_explainer: Nowe zasady dotyczą takich kwestii jak podróżowanie i prowadzenie interesów z Europą. Skorzystaj z narzędzia Brexit checker, aby uzyskać spersonalizowaną listę zadań dla siebie, swojej firmy i rodziny.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
-      aria_string_suffix:
-      guidance_and_regulation:
-      news_and_communications:
-      policy_and_engagement:
-      research_and_statistics:
-      services:
-      transparency:
-    share_links:
-    topic_section_header:
-    topic_section_subheading:
-    video_section_description:
-    video_section_link:
-    video_section_title:
-    video_section_transcription_summary:
-    video_section_transcription_text:
+      aria_string_suffix: dotyczące Brexitu
+      guidance_and_regulation: Wytyczne i rozporządzenia
+      news_and_communications: Wiadomości i komunikaty
+      policy_and_engagement: Dokumenty programowe i konsultacje
+      research_and_statistics: Badania i statystyki
+      services: Usługi
+      transparency: Przejrzystość i wolność informacji
+    topic_section_header: Wszystkie informacje o Brexicie
+    topic_section_subheading: Przeglądaj wszystkie informacje o Brexicie
+    trade_deal_heading:
+    trade_deal_links:

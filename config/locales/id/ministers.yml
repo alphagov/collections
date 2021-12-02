@@ -1,9 +1,9 @@
 ---
 id:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Juga menghadiri Kabinet
+    by_department: Menteri berdasarkan departemen
+    cabinet: Menteri kabinet
+    govuk_title: Menteri - GOV.UK
+    title: Menteri
+    whips: Whips

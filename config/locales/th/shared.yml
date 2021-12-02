@@ -1,12 +1,12 @@
 ---
 th:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: หน้าหลัก
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
+      prefix: 'เรียกดู:'
+      title: เรียกดู GOV.UK
+    get_emails: รับอีเมลสำหรับหัวข้อนี้
+    language_direction: ltr
     language_name: ไทย
     topics:
-      title:
+      title: "%{title}: ข้อมูลโดยละเอียด"

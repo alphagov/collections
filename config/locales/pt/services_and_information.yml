@@ -1,6 +1,6 @@
 ---
 pt:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Serviços e informação - %{title}
+    see_more_link: Ver mais
+    title: Serviços e informação

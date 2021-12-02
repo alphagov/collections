@@ -1,40 +1,26 @@
 ---
 gu:
   brexit_landing_page:
-    campaign_links:
-      lead_in:
-      lead_out:
-      links:
-    comms:
-      links:
-      read_transcript:
-    comms_header:
-    data_list_title:
-    email_mailto_subject:
-    guidance_header:
-    meta_description:
-    meta_title:
-    no_cookies:
-      change_settings_text:
-      icon_text:
-      or_text:
-      to_watch_text:
-      watch_link_text:
-    page_header:
-    page_header_explainer:
+    meta_description: જાણો, યુરોપ સાથે વ્યવસાય અને મુસાફરી જેવી બાબતોમાં બ્રેક્ઝિટના નવા નિયમો કેવી રીતે લાગુ થાય છે.ક્રિયાઓની વ્યક્તિગત સૂચિ મેળવવા માટે બ્રેક્ઝિટ ચેકરનો ઉપયોગ કરો.
+    meta_title: બ્રેક્ઝિટ
+    page_header: બ્રેક્ઝિટ
+    page_header_explainer: નવા નિયમો યુરોપ સાથે વ્યવસાય અને મુસાફરી જેવી બાબતોમાં લાગુ થાય છે.તમારા માટે, તમારા વ્યવસાય માટે અને તમારા પરિવાર માટે ક્રિયાઓની વ્યક્તિગત સૂચિ મેળવવા માટે બ્રેક્ઝિટ ચેકરનો ઉપયોગ કરો.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
-      aria_string_suffix:
-      guidance_and_regulation:
-      news_and_communications:
-      policy_and_engagement:
-      research_and_statistics:
-      services:
-      transparency:
-    share_links:
-    topic_section_header:
-    topic_section_subheading:
-    video_section_description:
-    video_section_link:
-    video_section_title:
-    video_section_transcription_summary:
-    video_section_transcription_text:
+      aria_string_suffix: 'બ્રેક્ઝિટ સંબંધિત '
+      guidance_and_regulation: માર્ગદર્શન અને નિયમન
+      news_and_communications: સમાચાર અને સંદેશાવ્યવહાર
+      policy_and_engagement: પોલિસી પેપર્સ અને પરામર્શ
+      research_and_statistics: સંશોધન અને આંકડાઓ
+      services: સેવાઓ
+      transparency: માહિતી પ્રકાશનોની પારદર્શિતા અને સ્વતંત્રતા
+    topic_section_header: તમામ બ્રેક્ઝિટ જાણકારી
+    topic_section_subheading: બ્રેક્ઝિટને લગતી બધી માહિતી બ્રાઉઝ કરો
+    trade_deal_heading:
+    trade_deal_links:

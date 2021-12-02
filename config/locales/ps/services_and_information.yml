@@ -1,6 +1,6 @@
 ---
 ps:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: خدمات او معلومات - %{title}
+    see_more_link: نور وګوره
+    title: خدمات او معلومات

@@ -1,15 +1,15 @@
 ---
 zh-hk:
   roles:
-    find_out_more_html:
+    find_out_more_html: 請前往我們的 %{link} 部份了解上一位擔任這一職位之人士。
     heading:
-      one:
-      other:
+      one: 職責
+      other: 其他職責
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: 現任職務
+      previous_holders: 上一持有人
+      responsibilities: 責任
+    ministerial: 部長級職位
+    past: 過往
+    previous_holders: 該職位之上一擔任人
+    read_more: 關於這一職位之詳情

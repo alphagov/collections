@@ -1,8 +1,8 @@
 ---
 cs:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Prozkoumejte dílčí témata
+    organisations: Organizace
+    see_all_in_topic: Viz další %{type} v tomto tématu
+    show_fewer_orgs: Zobrazit méně organizací
+    show_more_orgs: Zobrazit další organizace

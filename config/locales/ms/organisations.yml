@@ -1,259 +1,341 @@
 ---
 ms:
   organisations:
-    about_page_path:
-    administered_by:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Ditadbir oleh
     breadcrumbs:
-      courts_and_tribunals:
-      organisations:
+      courts_and_tribunals: Mahkamah dan Tribunal
+      organisations: Organisasi
     contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
+      contact_details: Butiran hubungan
+      contact_form: 'Borang Hubungan: %{title}'
+      contact_organisation: Hubungi %{organisation}
+      email: E-mel
+      telephone: Telefon
     content_item:
       schema_name:
         aaib_report:
-          other:
+          one: Laporan Cawangan Penyiasatan Kemalangan Udara
+          other: Laporan Cawangan Penyiasatan Kemalangan Udara
         announcement:
-          other:
+          one: Pengumuman
+          other: Pengumuman
         asylum_support_decision:
-          other:
+          one: Suaka menyokong keputusan tribunal
+          other: Suaka menyokong keputusan tribunal
         authored_article:
-          other:
+          one: Artikel ditulis penulis
+          other: Artikel ditulis penulis
         business_finance_support_scheme:
-          other:
+          one: Skim sokongan kewangan perniagaan
+          other: Skim sokongan kewangan perniagaan
         case_study:
-          other:
+          one: Kajian kes
+          other: Kajian kes
         closed_consultation:
-          other:
+          one: Rundingan tertutup
+          other: Rundingan tertutup
         cma_case:
-          other:
+          one: Kes Persaingan dan Pihak Berkuasa Pasaran
+          other: Kes Persaingan dan Pihak Berkuasa Pasaran
         coming_soon:
-          other:
+          one: Akan Datang
+          other: Akan Datang
         consultation:
-          other:
+          one: Rundingan
+          other: Rundingan
         consultation_outcome:
-          other:
+          one: Hasil rundingan
+          other: Hasil rundingan
         corporate_information_page:
-          other:
+          one: Halaman maklumat
+          other: Halaman maklumat
         corporate_report:
-          other:
+          one: Laporan korporat
+          other: Laporan korporat
         correspondence:
-          other:
+          one: Perwakilan
+          other: Perwakilan
         countryside_stewardship_grant:
-          other:
+          one: Geran Pengawasan Desa
+          other: Geran Pengawasan Desa
         decision:
-          other:
+          one: Keputusan
+          other: Keputusan
         detailed_guide:
-          other:
+          one: Panduan
+          other: Panduan
         dfid_research_output:
-          other:
+          one: Output Penyelidikan untuk Pembangunan
+          other: Output Penyelidikan untuk Pembangunan
         document_collection:
-          other:
+          one: Koleksi
+          other: Koleksi
         draft_text:
-          other:
+          one: Teks draf
+          other: Teks draf
         drug_safety_update:
-          other:
+          one: Kemas Kini Keselamatan Ubat-ubatan
+          other: Kemas Kini Keselamatan Ubat-ubatan
         employment_appeal_tribunal_decision:
-          other:
+          one: Keputusan tribunal rayuan pekerjaan
+          other: Keputusan tribunal rayuan pekerjaan
         employment_tribunal_decision:
-          other:
+          one: Keputusan tribunal pekerjaan
+          other: Keputusan tribunal pekerjaan
         esi_fund:
-          other:
+          one: Dana Struktur dan Pelaburan Eropah (ESIF)
+          other: Dana Struktur dan Pelaburan Eropah (ESIF)
         fatality_notice:
-          other:
+          one: Notis kematian
+          other: Notis kematian
         foi_release:
-          other:
+          one: Hebahan Kebebasan Maklumat (FOI)
+          other: Hebahan Kebebasan Maklumat (FOI)
         form:
-          other:
+          one: Borang
+          other: Borang
         government_response:
-          other:
+          one: Respons kerajaan
+          other: Respons kerajaan
         guidance:
-          other:
+          one: Panduan
+          other: Panduan
         impact_assessment:
-          other:
+          one: Penilaian impak
+          other: Penilaian impak
         imported:
-          other:
+          one: diimport - menunggu jenis
+          other: diimport - menunggu jenis
         independent_report:
-          other:
+          one: Laporan bebas
+          other: Laporan bebas
         international_development_fund:
-          other:
+          one: Pembiayaan pembangunan antarabangsa
+          other: Pembiayaan pembangunan antarabangsa
         international_treaty:
-          other:
+          one: Perjanjian antarabangsa
+          other: Perjanjian antarabangsa
         maib_report:
-          other:
+          one: Laporan Cawangan Penyiasatan Kemalangan Marin
+          other: Laporan Cawangan Penyiasatan Kemalangan Marin
         map:
-          other:
+          one: Peta
+          other: Peta
         medical_safety_alert:
-          other:
+          one: Amaran dan penarikan balik untuk ubat-ubatan dan peranti perubatan
+          other: Amaran dan penarikan balik untuk ubat-ubatan dan peranti perubatan
         national:
-          other:
+          one: Pengumuman statistik nasional
+          other: Pengumuman statistik nasional
         national_statistics:
-          other:
+          one: Statistik Nasional
+          other: Statistik Nasional
         national_statistics_announcement:
-          other:
+          one: Pengumuman statistik nasional
+          other: Pengumuman statistik nasional
         news_article:
-          other:
+          one: Artikel berita
+          other: Artikel berita
         news_story:
-          other:
+          one: Berita
+          other: Berita
         notice:
-          other:
+          one: Notis
+          other: Notis
         official:
-          other:
+          one: Pengumuman statistik rasmi
+          other: Pengumuman statistik rasmi
         official_statistics:
-          other:
+          one: Statistik Rasmi
+          other: Statistik Rasmi
         official_statistics_announcement:
-          other:
+          one: Pengumuman statistik rasmi
+          other: Pengumuman statistik rasmi
         open_consultation:
-          other:
+          one: Rundingan terbuka
+          other: Rundingan terbuka
         oral_statement:
-          other:
+          one: Kenyataan lisan kepada Parlimen
+          other: Kenyataan lisan kepada Parlimen
         policy:
-          other:
+          one: Dasar
+          other: Dasar
         policy_paper:
-          other:
+          one: Kertas dasar
+          other: Kertas dasar
         press_release:
-          other:
+          one: Siaran akhbar
+          other: Siaran akhbar
         promotional:
-          other:
+          one: Bahan promosi
+          other: Bahan promosi
         publication:
-          other:
+          one: Penerbitan
+          other: Penerbitan
         raib_report:
-          other:
+          one: Laporan Cawangan Penyiasatan Kemalangan Kereta Api
+          other: Laporan Cawangan Penyiasatan Kemalangan Kereta Api
         regulation:
-          other:
+          one: Peraturan
+          other: Peraturan
         research:
-          other:
+          one: Penyelidikan dan analisis
+          other: Penyelidikan dan analisis
         residential_property_tribunal_decision:
-          other:
+          one: Keputusan tribunal harta tanah kediaman
+          other: Keputusan tribunal harta tanah kediaman
         service_sign_in:
-          other:
+          one: Daftar masuk perkhidmatan
+          other: Daftar masuk perkhidmatan
         service_standard_report:
-          other:
+          one: Laporan Standard Perkhidmatan
+          other: Laporan Standard Perkhidmatan
         speaking_notes:
-          other:
+          one: Nota perbincangan
+          other: Nota perbincangan
         speech:
-          other:
+          one: Ucapan
+          other: Ucapan
         standard:
-          other:
+          one: Standard
+          other: Standard
         statement_to_parliament:
-          other:
+          one: Kenyataan kepada Parlimen
+          other: Kenyataan kepada Parlimen
         statistical_data_set:
-          other:
+          one: Set data statistik
+          other: Set data statistik
         statistics_announcement:
-          other:
+          one: Pengumuman hebahan statistik
+          other: Pengumuman hebahan statistik
         statutory_guidance:
-          other:
+          one: Panduan berkanun
+          other: Panduan berkanun
         take_part:
-          other:
+          one: Ambil bahagian
+          other: Ambil bahagian
         tax_tribunal_decision:
-          other:
+          one: Keputusan tribunal Cukai dan Canseri
+          other: Keputusan tribunal Cukai dan Canseri
         transcript:
-          other:
+          one: Transkrip
+          other: Transkrip
         transparency:
-          other:
+          one: Data ketelusan
+          other: Data ketelusan
         utaac_decision:
-          other:
+          one: Keputusan tribunal rayuan pentadbiran
+          other: Keputusan tribunal rayuan pentadbiran
         world_location_news_article:
-          other:
+          one: Artikel berita
+          other: Artikel berita
         world_news_story:
-          other:
+          one: Berita Dunia
+          other: Berita Dunia
         written_statement:
-          other:
-    corporate_information:
+          one: Kenyataan bertulis kepada Parlimen
+          other: Kenyataan bertulis kepada Parlimen
+    corporate_information: Maklumat korporat
     document_types:
-      documents:
+      documents: Dokumen
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Lihat semua panduan dan peraturan
+        title: Panduan dan peraturan
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Lihat semua berita dan komunikasi
+        title: Berita dan komunikasi
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Lihat semua kertas dan perundingan dasar
+        title: Kertas dan perundingan dasar
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Lihat semua penyelidikan dan statistik
+        title: Penyelidikan dan statistik
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Lihat semua perkhidmatan
+        title: Perkhidmatan
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Lihat semua hebahan ketelusan dan kebebasan maklumat
+        title: Hebahan ketelusan dan kebebasan maklumat
+    errors_or_omissions_html: <p>Kesilapan atau butiran tidak dimasukkan? <a class="govuk-link" href="/contact/govuk">Beritahu kami di sini</a>. Untuk senarai rasmi badan awam bukan jabatan <a class="govuk-link" href="/government/collections/public-bodies">lihat badan awam</a>.</p>
+    featured: Paparan
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: Borang hubungan Kebebasan Maklumat (FOI)
+      foi_exemption_html: |
+        Organisasi ini tidak dilindungi oleh Akta Kebebasan Maklumat.
+        Untuk mengetahui organisasi mana yang termasuk, lihat <a href="%{foi_url}" class="govuk-link brand__color">perundangan</a>.
+      freedom_of_information_act: Akta Kebebasan Maklumat (FOI)
+      freedom_of_information_requests: Permohonan Kebebasan Maklumat
+      make_an_foi_request: Membuat permohonan Kebebasan Maklumat (FOI)
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: Baca tentang Akta Kebebasan Maklumat (FOI) dan <a href="%{how_to_path}" class="govuk-link brand__color">cara membuat permohonan</a>.
+        step2_html: Semak <a href="%{our_releases_path}" class="govuk-link brand__color">hebahan terdahulu kami</a> untuk melihat sama ada kami telah menjawab soalan anda.
+        step3_html: Buat permohonan baharu dengan menghubungi kami menggunakan butiran di bawah.
+    follow_us: Ikuti kami
+    hidden_share_link: Ikuti di
+    high_profile_groups: Kumpulan berprofil tinggi dalam %{title}
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: Pekerjaan dan kontrak
+    latest_from: Terkini daripada %{title}
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name_html: "%{title} kini dipanggil <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} adalah badan dalam <a href='%{link_href}'>%{link_text}</a>"
+      joining: "%{title} akan dimasukkan ke dalam GOV.UK tidak lama lagi"
+      left_gov: "%{title} kini bukan sebahagian daripada kerajaan UK"
+      merged_html: "%{title} menjadi sebahagian daripada <a href='%{link_href}'>%{link_text}</a> dalam %{updated}"
+      merged_no_date_html: "%{title} kini sebahagian daripada <a href='%{link_href}'>%{link_text}</a>"
+      no_longer_exists: "%{title} telah ditutup"
+      no_website: "%{title} tiada laman web"
+      separate_website_html: "%{title} mempunyai <a href='%{url}'>laman web sendiri</a>"
+      split_html: "%{title} telah diganti dengan %{links}"
+    part_of: Sebahagian daripada
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: Pengurusan kami
+      chief_professional_officers: Ketua pegawai profesional
+      military_personnel: Pegawai tinggi tentera kami
+      ministers: Menteri-menteri kami
+      special_representatives: Wakil khas
+      traffic_commissioners: Pesuruhjaya trafik
+    read_more: Baca lebih lanjut tentang apa yang kami lakukan
+    search_for_department: Cari jabatan, agensi atau badan awam
+    see_all_latest_documents: Lihat semua dokumen terkini
+    separate_website: laman web berasingan
+    services_and_information: Semua %{acronym} perkhidmatan dan maklumat
     subscription:
-      email:
-      feed:
+      email: Dapatkan e-mel
+      feed: Langgani siaran maklumat
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      ":":
+      adhoc_advisory_group: Kumpulan penasihat ad hoc
+      advisory_ndpb: Penasihat badan awam bukan jabatan
+      civil_service: Perkhidmatan awam
+      court:
+      devolved_administration:
+      executive_agency: Agensi eksekutif
+      executive_ndpb: Eksekutif badan awam bukan jabatan
+      executive_office:
+      independent_monitoring_body: Badan pemantauan bebas
+      ministerial_department:
+      non_ministerial_department: Jabatan bukan kementerian
+      other: Lain-lain
+      public_corporation: Perbadanan awam
+      sub_organisation:
+      tribunal: Tribunal
+    view_all: lihat semua
+    view_less: lihat sedikit
+    what_we_do: Apakah yang %{title} lakukan
     works_with_statement:
-      multiple:
-      one:
+      multiple: Bekerjasama dengan %{works_with_count} agensi dan badan awam
+      one: Bekerjasama dengan %{works_with_count} badan awam

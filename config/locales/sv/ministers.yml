@@ -1,9 +1,9 @@
 ---
 sv:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Deltar även i kabinettet
+    by_department: Ministrar per avdelning
+    cabinet: Kabinettets ministrar
+    govuk_title: Ministrar - GOV.UK
+    title: Ministrar
+    whips: Whips

@@ -1,6 +1,6 @@
 ---
 cy:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Gwasanaethau a gwybodaeth - %{title}
+    see_more_link: Gweld mwy
+    title: Gwasanaethau a gwybodaeth

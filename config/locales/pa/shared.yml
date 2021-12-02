@@ -1,12 +1,12 @@
 ---
 pa:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: ਘਰ
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction: rtl
-    language_name: ਪੰਜਾਬੀ
+      prefix: 'ਬਰਾਊਜ਼ ਕਰੋ:'
+      title: GOV.UK ਬ੍ਰਾਉਜ਼ ਕਰੋ
+    get_emails: ਇਸ ਵਿਸ਼ੇ ਲਈ ਈਮੇਲ ਪ੍ਰਾਪਤ ਕਰੋ
+    language_direction: ltr
+    language_name: ਪੰਜਾਬੀ ਗੁਰਮੁਖੀ
     topics:
-      title:
+      title: "%{title}: ਵਿਸਤ੍ਰਿਤ ਜਾਣਕਾਰੀ"

@@ -1,24 +1,24 @@
 ---
 uk:
   organisations:
-    about_page_path:
-    administered_by:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Адмініструється
     breadcrumbs:
-      courts_and_tribunals:
-      organisations:
+      courts_and_tribunals: Суди та арбітражні суди
+      organisations: Організації
     contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
+      contact_details: Контактні дані
+      contact_form: 'Форма зв''язку: %{title}'
+      contact_organisation: Зв’язатися з %{organization}
+      email: Електронна пошта
+      telephone: Телефон
     content_item:
       schema_name:
         aaib_report:
           few:
           many:
-          one:
-          other:
+          one: Звіт відділу розслідування авіакатастроф
+          other: Звіти відділу розслідування авіакатастроф
         announcement:
           few:
           many:
@@ -27,58 +27,58 @@ uk:
         asylum_support_decision:
           few:
           many:
-          one:
-          other:
+          one: Рішення трибуналу про надання притулку
+          other: Рішення трибуналу про надання притулку
         authored_article:
           few:
           many:
-          one: Стаття
-          other: Статті
+          one: Авторська стаття
+          other: Авторські статті
         business_finance_support_scheme:
           few:
           many:
-          one:
-          other:
+          one: Схема підтримки фінансування бізнесу
+          other: Схеми підтримки фінансування бізнесу
         case_study:
           few:
           many:
-          one: Тематичне дослідження
-          other: Тематичні дослідження
+          one: Аналіз ситуації
+          other: Аналізи ситуації
         closed_consultation:
           few:
           many:
-          one: Закрите обговорення
-          other: Закриті обговорення
+          one: Закрита консультація
+          other: Закриті консультації
         cma_case:
           few:
           many:
-          one:
-          other:
+          one: Справа Управління із захисту конкуренції та ринків
+          other: Справи Управління із захисту конкуренції та ринків
         coming_soon:
           few:
           many:
-          one:
-          other:
+          one: Незабаром
+          other: Незабаром
         consultation:
           few:
           many:
-          one: Обговорення
-          other: Обговорення
+          one: Консультація
+          other: Консультації
         consultation_outcome:
           few:
           many:
-          one: Результат обговорення
-          other: Результати обговорення
+          one: Результат консультації
+          other: Результати консультації
         corporate_information_page:
           few:
           many:
-          one:
-          other:
+          one: Інформаційна сторінка
+          other: Інформаційні сторінки
         corporate_report:
           few:
           many:
-          one: Корпоративний звіт
-          other: Корпоративні звіти
+          one: Звіт про діяльність корпорації
+          other: Звіти про діяльність корпорації
         correspondence:
           few:
           many:
@@ -87,63 +87,63 @@ uk:
         countryside_stewardship_grant:
           few:
           many:
-          one:
-          other:
+          one: Субсидія в рамках управління в сільській місцевості
+          other: Субсидії в рамках управління в сільській місцевості
         decision:
           few:
           many:
-          one:
-          other:
+          one: Рішення
+          other: Рішення
         detailed_guide:
           few:
           many:
-          one: Детальні інструкції
-          other: Детальні інструкції
+          one: Керівництво
+          other: Керівництво
         dfid_research_output:
           few:
           many:
-          one:
-          other:
+          one: Дослідження результату розвитку
+          other: Дослідження результатів розвитку
         document_collection:
           few:
           many:
-          one: Серія
-          other:
+          one: Збір
+          other: Збір
         draft_text:
           few:
           many:
-          one: Проект документу
-          other: Проекти документів
+          one: Проєкт тексту
+          other: Проєкт текстів
         drug_safety_update:
           few:
           many:
-          one:
-          other:
+          one: Оновлення даних про безпечність лікарського засобу
+          other: Оновлення даних про безпечність лікарського засобу
         employment_appeal_tribunal_decision:
           few:
           many:
-          one:
-          other:
+          one: Рішення арбітражного суду по апеляції щодо працевлаштування
+          other: Рішення арбітражного суду по апеляції щодо працевлаштування
         employment_tribunal_decision:
           few:
           many:
-          one:
-          other:
+          one: Рішення арбітражного суду щодо працевлаштування
+          other: Рішення арбітражного суду щодо працевлаштування
         esi_fund:
           few:
           many:
-          one:
-          other:
+          one: Європейський структурний і інвестиційний фонд Європейського союзу
+          other: Європейські структурні і інвестиційні фонди Європейського союзу
         fatality_notice:
           few:
           many:
-          one: Повідомлення про смерть
-          other: Повідомлення про смерть
+          one: Повідомлення про нещасний випадок зі смертельним наслідком
+          other: Повідомлення про нещасний випадок зі смертельним наслідком
         foi_release:
           few:
           many:
-          one: Відповідь на інформаційний запит
-          other: 'Відповіді на інформаційні запити '
+          one: Випуск закону про свободу інформації
+          other: Випуски закону про свободу інформації
         form:
           few:
           many:
@@ -152,13 +152,13 @@ uk:
         government_response:
           few:
           many:
-          one: Реакція уряду
-          other: Реакція уряду
+          one: Відповідь уряду
+          other: Відповіді уряду
         guidance:
           few:
           many:
-          one: Інструкції
-          other: Інструкції
+          one: Керівництво
+          other: Керівництво
         impact_assessment:
           few:
           many:
@@ -167,8 +167,8 @@ uk:
         imported:
           few:
           many:
-          one: імпортовано - в очікуванні
-          other: імпортовано - в очікуванні
+          one: імпортовано - тип в очікуванні
+          other: імпортовано - тип в очікуванні
         independent_report:
           few:
           many:
@@ -177,83 +177,83 @@ uk:
         international_development_fund:
           few:
           many:
-          one:
-          other:
+          one: Міжнародний фонд розвитку
+          other: Міжнародний фонд розвитку
         international_treaty:
           few:
           many:
-          one:
-          other:
+          one: Міжнародний договір
+          other: Міжнародні договори
         maib_report:
           few:
           many:
-          one:
-          other:
+          one: Звіт відділу розслідування морських катастроф
+          other: Звіти відділу розслідування морських катастроф
         map:
           few:
           many:
-          one: Мапа
-          other: Мапи
+          one: Карта
+          other: Карти
         medical_safety_alert:
           few:
           many:
-          one:
-          other:
+          one: Оповіщення та відкликання лікарських засобів та виробів медичного призначення
+          other: Оповіщення та відкликання лікарських засобів та виробів медичного призначення
         national:
           few:
           many:
-          one:
-          other:
+          one: Оголошення даних державної статистики
+          other: Оголошення даних державної статистики
         national_statistics:
           few:
           many:
-          one: Статистика - національна статистика
-          other: Статистика - національна статистика
+          one: Національна статистика
+          other: Національна статистика
         national_statistics_announcement:
           few:
           many:
-          one:
-          other:
+          one: Оголошення даних державної статистики
+          other: Оголошення даних державної статистики
         news_article:
           few:
           many:
-          one: Стаття
-          other: Статті
+          one: Новини
+          other: Новини
         news_story:
           few:
           many:
-          one: Новина
-          other: Новини
+          one: Сюжет новин
+          other: Сюжети новин
         notice:
           few:
           many:
-          one:
-          other:
+          one: Повідомлення
+          other: Повідомлення
         official:
           few:
           many:
-          one:
-          other:
+          one: Оголошення даних офіційної статистики
+          other: Оголошення даних офіційної статистики
         official_statistics:
           few:
           many:
-          one: Статистика
-          other: Статистика
+          one: Офіційна статистика
+          other: Офіційна статистика
         official_statistics_announcement:
           few:
           many:
-          one:
-          other:
+          one: Оголошення даних офіційної статистики
+          other: Оголошення даних офіційної статистики
         open_consultation:
           few:
           many:
-          one: Відкрите обговорення
-          other: Відкриті обговорення
+          one: Відкрита консультація
+          other: Відкриті консультації
         oral_statement:
           few:
           many:
-          one: Усна заява у парламенті
-          other: Усні заяви у парламенті
+          one: Усна заява до Парламенту
+          other: Усні заяви до Парламенту
         policy:
           few:
           many:
@@ -267,13 +267,13 @@ uk:
         press_release:
           few:
           many:
-          one: Прес-реліз
-          other: Прес-релізи
+          one: Пресреліз
+          other: Пресрелізи
         promotional:
           few:
           many:
-          one: Інформаційний матеріал
-          other: Інформаційний матеріал
+          one: Рекламний матеріал
+          other: Рекламний матеріал
         publication:
           few:
           many:
@@ -282,13 +282,13 @@ uk:
         raib_report:
           few:
           many:
-          one:
-          other:
+          one: Звіт відділу розслідування залізнодорожніх катастроф
+          other: Звіти відділу розслідування залізнодорожніх катастроф
         regulation:
           few:
           many:
-          one:
-          other:
+          one: Норма
+          other: Норми
         research:
           few:
           many:
@@ -297,38 +297,38 @@ uk:
         residential_property_tribunal_decision:
           few:
           many:
-          one:
-          other:
+          one: Рішення арбітражного суду щодо житлової нерухомості
+          other: Рішення арбітражного суду щодо житлової нерухомості
         service_sign_in:
           few:
           many:
-          one:
-          other:
+          one: Знак обслуговування в
+          other: Знак обслуговування в
         service_standard_report:
           few:
           many:
-          one:
-          other:
+          one: Стандартний звіт з обслуговування
+          other: Стандартні звіти з обслуговування
         speaking_notes:
           few:
           many:
-          one: Тези для промови
-          other: Тези для промови
+          one: Тези виступу
+          other: Тези виступу
         speech:
           few:
           many:
-          one: Промова
-          other: Промови
+          one: Виступ
+          other: Виступи
         standard:
           few:
           many:
-          one:
-          other:
+          one: Стандарт
+          other: Стандарти
         statement_to_parliament:
           few:
           many:
-          one: Заява у парламенті
-          other: Заяви у парламенті
+          one: Заява до Парламенту
+          other: Заяви до Парламенту
         statistical_data_set:
           few:
           many:
@@ -337,145 +337,153 @@ uk:
         statistics_announcement:
           few:
           many:
-          one:
-          other:
+          one: Оголошення про випуск статистичних даних
+          other: Оголошення про випуск статистичних даних
         statutory_guidance:
           few:
           many:
-          one:
-          other:
+          one: Нормативне керівництво
+          other: Нормативне керівництво
         take_part:
           few:
           many:
-          one:
-          other:
+          one: Взяти участь
+          other: Взяти участь
         tax_tribunal_decision:
           few:
           many:
-          one:
-          other:
+          one: Рішення арбітражного суду щодо податків та канцелярії
+          other: Рішення арбітражного суду щодо податків та канцелярії
         transcript:
           few:
           many:
-          one: Транскрипт
-          other: Транскрипти
+          one: Стенограма
+          other: Стенограми
         transparency:
           few:
           many:
-          one: Прозорість інформації
-          other: Прозорість інформації
+          one: Дані прозорості
+          other: Дані прозорості
         utaac_decision:
           few:
           many:
-          one:
-          other:
+          one: Рішення арбітражного суду по адміністративній апеляції
+          other: Рішення арбітражного суду по адміністративній апеляції
         world_location_news_article:
           few:
           many:
-          one: Стаття
-          other: Статті
+          one: Новини
+          other: Новини
         world_news_story:
           few:
           many:
-          one:
-          other:
+          one: Сюжет міжнародних новин
+          other: Сюжети міжнародних новин
         written_statement:
           few:
           many:
-          one: Письмова заява у парламенті
-          other: Письмові заяви у парламенті
-    corporate_information:
+          one: Письмова заява до Парламенту
+          other: Письмові заяви до Парламенту
+    corporate_information: Корпоративна інформація
     document_types:
-      documents:
+      documents: Документи
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Переглянути всі вказівки та правила
+        title: Керівництво та регламент
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Переглянути всі новини та повідомлення
+        title: Новини та комунікації
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Переглянути всі програмні документи та консультанції
+        title: Програмні документи та консультації
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Переглянути всі дослідження та статистику
+        title: Дослідження та статистика
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Переглянути всі послуги
+        title: Послуги
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Переглянути всі дані прозорості та свободи інформації
+        title: Прозорість та свобода інформації
+    errors_or_omissions_html: <p>Помилки або упущення? <a class="govuk-link" href="/contact/govuk">Tell us here</a>. Для отримання офіційних списків невідомчих державних органів <a class="govuk-link" href="/government/collections/public-bodies">зверніться до державних органів</a>.</p>
+    featured: Рекомендовано
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: Форма зв'язку щодо свободи інформації
+      foi_exemption_html: |
+        На цю організацію не поширюється дія Закону про свободу інформації.
+        Щоб дізнатися, які організації включені, перегляньте<a href="%{foi_url}" class="govuk-link brand__color">законодавство</a>.
+      freedom_of_information_act: Закон про свободу інформації (FOI).
+      freedom_of_information_requests: Запит по Закону про свободу інформації (FOI).
+      make_an_foi_request: Надіслати запит по Закону про свободу інформації
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: Читайте про Закон про свободу інформації (FOI) та<a href="%{how_to_path}" class="govuk-link brand__color">як надіслати запит</a>.
+        step2_html: Перевірте, щоб <a href="%{our_releases_path}" class="govuk-link brand__color">our previous releases</a> дізнатися, чи ми вже відповіли на ваше запитання.
+        step3_html: Надішліть новий запит, зв’язавшись з нами, використовуючи дані нижче.
+    follow_us: Слідкуйте за нами
+    hidden_share_link: Слідкуйте на
+    high_profile_groups: Ключові групи в %{title}
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: Вакансії та контракти
+    latest_from: Актуальні новини з %{title}
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name_html: "%{title} тепер називається <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} відноситься до <a href='%{link_href}'>%{link_text}</a>"
+      joining: "%{title} незабаром буде включено до складу GOV.UK"
+      left_gov: "%{title} зараз незалежний від уряду Великої Британії"
+      merged_html: "%{title} став частиною <a href='%{link_href}'>%{link_text}</a> у %{updated}"
+      merged_no_date_html: "%{title} тепер є частиною <a href='%{link_href}'>%{link_text}</a>"
+      no_longer_exists: "%{title} закрито"
+      no_website: "%{title} не має вебсайту"
+      separate_website_html: "%{title} має <a href='%{url}'>окремий вебсайт</a>"
+      split_html: "%{title} замінено на %{links}"
+    part_of: Частина
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: Наше керівництво
+      chief_professional_officers: Головні професійні службовці
+      military_personnel: Наші вищі військові службовці
+      ministers: Наші міністри
+      special_representatives: Спеціальні представники
+      traffic_commissioners: Уповноважені із дорожнього руху
+    read_more: Докладніше про те, що ми робимо
+    search_for_department: Знайдіть відділ, агентство чи державний орган
+    see_all_latest_documents: Переглянути всі останні документи
+    separate_website: окремий вебсайт
+    services_and_information: Усі послуги та інформація %{acronym}
     subscription:
-      email:
-      feed:
+      email: Отримувати електронні листи
+      feed: Підпишіться на канал
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      ":":
+      adhoc_advisory_group: Спеціальна консультативна група
+      advisory_ndpb: Консультативний позавідомчий державний орган
+      civil_service: Державна служба
+      court:
+      devolved_administration:
+      executive_agency: Виконавчий орган
+      executive_ndpb: Виконавчий невідомчий державний орган
+      executive_office:
+      independent_monitoring_body: Незалежний орган контролю
+      ministerial_department:
+      non_ministerial_department: Неміністерський відділ
+      other: Інше
+      public_corporation: Державна корпорація
+      sub_organisation:
+      tribunal: Арбітражний суд
+    view_all: дивитись все
+    view_less: дивитись менше
+    what_we_do: Що робить %{title}
     works_with_statement:
-      multiple:
-      one:
+      multiple: Працює з %{works_with_count} агентствами та державними органами
+      one: Працює з %{works_with_count} державним органом

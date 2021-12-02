@@ -1,8 +1,8 @@
 ---
 uz:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Кичик мавзуларни ўрганиш
+    organisations: Ташкилотлар
+    see_all_in_topic: Ушбу мавзу бўйича %{type} кўпроқ билиб олиш
+    show_fewer_orgs: Ташкилотларни камроқ кўрсатиш
+    show_more_orgs: Ташкилотларни кўпроқ кўрсатиш

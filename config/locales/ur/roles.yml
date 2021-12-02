@@ -1,15 +1,15 @@
 ---
 ur:
   roles:
-    find_out_more_html:
+    find_out_more_html: ہمارے %{link} سیکشن میں اس کردار کے گزشتہ ہولڈرز کے بارے میں مزید جانیں۔
     heading:
-      one:
-      other:
+      one: کردار
+      other: کردار
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: حالیہ کردار کا ہولڈر
+      previous_holders: گزشتہ ہولڈرز
+      responsibilities: ذمہ داریاں
+    ministerial: وزارتی کردارا
+    past: ماضی
+    previous_holders: اس کردار کے گزشتہ ہولڈرز
+    read_more: اس کردار کے بارے میں مزید

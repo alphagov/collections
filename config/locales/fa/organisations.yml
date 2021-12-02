@@ -1,259 +1,341 @@
 ---
 fa:
   organisations:
-    about_page_path:
-    administered_by:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: با مدیریت
     breadcrumbs:
-      courts_and_tribunals:
-      organisations:
+      courts_and_tribunals: دادگاه‌ها و محکمه‌ها
+      organisations: سازمان‌ها
     contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
+      contact_details: جزئیات اطلاعات تماس
+      contact_form: 'فرم تماس: %{title}'
+      contact_organisation: تماس با %{organisation}
+      email: ایمیل
+      telephone: تلفن
     content_item:
       schema_name:
         aaib_report:
-          other:
+          one: گزارش شعبه تحقیقات حوادث هوایی
+          other: گزارشات شعبه تحقیقات حوادث هوایی
         announcement:
-          other: اعلامیه ها
+          one: اطلاعیه
+          other: اطلاعیه‌ها
         asylum_support_decision:
-          other:
+          one: حکم دادگاه حمایت از پناهجویان
+          other: احکام دادگاه حمایت از پناهجویان
         authored_article:
-          other: مقالات
+          one: مقاله تألیف شده
+          other: مقالات تألیف شده
         business_finance_support_scheme:
-          other:
+          one: طرح حمایت مالی از کسب‌و‌کار
+          other: طرح‌های حمایت مالی از کسب‌و‌کار
         case_study:
-          other: مطالعه های موردی
+          one: مطالعه موردی
+          other: مطالعات موردی
         closed_consultation:
-          other: رایزنی های بسته
+          one: مشاوره بسته
+          other: مشاوره‌های بسته
         cma_case:
-          other:
+          one: پرونده نهاد ناظر بر رقابت و بازارها
+          other: پرونده‌های نهاد ناظر بر رقابت و بازارها
         coming_soon:
-          other:
+          one: به زودی
+          other: به زودی
         consultation:
-          other: رایزنی ها
+          one: مشاوره
+          other: مشاوره‌ها
         consultation_outcome:
-          other: نتایج رایزنی
+          one: نتیجه مشاوره
+          other: نتایج مشاوره
         corporate_information_page:
-          other:
+          one: صفحه اطلاعاتی
+          other: صفحات اطلاعاتی
         corporate_report:
-          other: گزارش های سازمانی
+          one: گزارش شرکتی
+          other: گزارشات شرکتی
         correspondence:
+          one: مکاتبه
           other: مکاتبات
         countryside_stewardship_grant:
-          other:
+          one: کمک‌هزینه حفاظت از مناطق خارج از شهر
+          other: کمک‌هزینه‌های حفاظت از مناطق خارج از شهر
         decision:
-          other:
+          one: تصمیم
+          other: تصمیمات
         detailed_guide:
-          other: راهنمای تفصیلی
+          one: راهنمایی
+          other: راهنمایی
         dfid_research_output:
-          other:
+          one: نتیجه تحقیق برای توسعه
+          other: نتایج تحقیق برای توسعه
         document_collection:
-          other:
+          one: مجموعه
+          other: مجموعه‌ها
         draft_text:
-          other: متون پیش نویس
+          one: متن پیش‌نویس
+          other: متون پیش‌نویس
         drug_safety_update:
-          other:
+          one: بروزرسانی ایمنی دارو
+          other: بروزرسانی‌های ایمنی دارو
         employment_appeal_tribunal_decision:
-          other:
+          one: حکم دادگاه تجدید نظر کار
+          other: احکام دادگاه تجدید نظر کار
         employment_tribunal_decision:
-          other:
+          one: حکم دادگاه کار
+          other: احکام دادگاه کار
         esi_fund:
-          other:
+          one: صندوق ساختاری سرمایه گذاری اروپا (ESIF)
+          other: صندوق‌های ساختاری سرمایه گذاری اروپا (ESIF)
         fatality_notice:
-          other: اطلاعیه تلفات
+          one: اطلاعیه مرگ‌و‌میر
+          other: اطلاعیه‌های مرگ‌و‌میر
         foi_release:
-          other: انتشار آزاد اطلاعات
+          one: موارد انتشار آزادی اطلاعات
+          other: موارد انتشار آزادی اطلاعات
         form:
-          other: فرم ها
+          one: فرم
+          other: فرم‌ها
         government_response:
-          other: جوابیه های دولت
+          one: پاسخ دولتی
+          other: پاسخ‌های دولتی
         guidance:
+          one: راهنمایی
           other: راهنمایی
         impact_assessment:
-          other: ارزیابی های تاثیرات
+          one: ارزیابی تأثیر
+          other: ارزیابی‌های تأثیر
         imported:
-          other: منتقل شده - در انتظار دسته بندی
+          one: وارد شده - در انتظار نوع
+          other: وارد شده - در انتظار نوع
         independent_report:
-          other: گزارش های مستقل
+          one: گزارش مستقل
+          other: گزارشات مستقل
         international_development_fund:
-          other:
+          one: منابع مالی توسعه بین‌المللی
+          other: منابع مالی توسعه بین‌المللی
         international_treaty:
-          other:
+          one: معاهده بین‌المللی
+          other: معاهدات بین‌المللی
         maib_report:
-          other:
+          one: گزارش شعبه تحقیقات حوادث دریایی
+          other: گزارشات شعبه تحقیقات حوادث دریایی
         map:
-          other: نقشه ها
+          one: نقشه
+          other: نقشه‌ها
         medical_safety_alert:
-          other:
+          one: هشدارها و یادآوری‌ها برای داروها و دستگاه‌های پزشکی
+          other: هشدارها و یادآوری‌ها برای داروها و دستگاه‌های پزشکی
         national:
-          other:
+          one: اطلاعیه آمار ملی
+          other: اطلاعیه‌های آمار ملی
         national_statistics:
-          other: آمار - آمار ملی
+          one: آمار ملی
+          other: آمار ملی
         national_statistics_announcement:
-          other:
+          one: اطلاعیه آمار ملی
+          other: اطلاعیه‌های آمار ملی
         news_article:
+          one: مقاله خبری
           other: مقالات خبری
         news_story:
-          other: اخبار
+          one: گزارش خبری
+          other: گزارشات خبری
         notice:
-          other:
+          one: اطلاعیه
+          other: اطلاعیه‌ها
         official:
-          other:
+          one: اطلاعیه آمار رسمی
+          other: اطلاعیه‌های آمار رسمی
         official_statistics:
-          other: آمار
+          one: آمار رسمی
+          other: آمار رسمی
         official_statistics_announcement:
-          other:
+          one: اطلاعیه آمار رسمی
+          other: اطلاعیه‌های آمار رسمی
         open_consultation:
-          other: رایزنی های باز
+          one: مشاوره باز
+          other: مشاوره‌های باز
         oral_statement:
-          other: گزارش های شفاهی به پارلمان
+          one: بیانیه شفاهی به پارلمان
+          other: بیانیه‌های شفاهی به پارلمان
         policy:
+          one: سیاست
           other: سیاست ها
         policy_paper:
-          other: مقاله های سیاسی
+          one: سند سیاست
+          other: اسناد سیاست
         press_release:
-          other: بیانیه ها
+          one: بیانیه مطبوعاتی
+          other: بیانیه‌های مطبوعاتی
         promotional:
-          other: مطالب تبلیغاتی
+          one: محتوای تبلیغاتی
+          other: محتوای تبلیغاتی
         publication:
-          other: نشریات
+          one: مورد منتشر شده
+          other: موارد منتشر شده
         raib_report:
-          other:
+          one: گزارش شعبه تحقیقات حوادث ریلی
+          other: گزارشات شعبه تحقیقات حوادث ریلی
         regulation:
-          other:
+          one: قانون
+          other: قوانین
         research:
-          other: پژوهش و تحلیل
+          one: تحقیق و تحلیل
+          other: تحقیق و تحلیل
         residential_property_tribunal_decision:
-          other:
+          one: حکم دادگاه املاک مسکونی
+          other: احکام دادگاه املاک مسکونی
         service_sign_in:
-          other:
+          one: ورود به سرویس
+          other: ورود به سرویس
         service_standard_report:
-          other:
+          one: گزارش استاندارد خدمات
+          other: گزارش‌های استاندارد خدمات
         speaking_notes:
-          other: موضوعات سخنرانی
+          one: نکات گفتاری
+          other: نکات گفتاری
         speech:
-          other: سخنرانی ها
+          one: سخنرانی
+          other: سخنرانی‌ها
         standard:
-          other:
+          one: استاندارد
+          other: استانداردها
         statement_to_parliament:
-          other: گزارش ها به پارلمان
+          one: بیانیه به پارلمان
+          other: بیانیه‌ها به پارلمان
         statistical_data_set:
-          other: بسته های داده های آماری
+          one: مجموعه داده آماری
+          other: مجموعه داده‌های آماری
         statistics_announcement:
-          other:
+          one: اطلاعیه انتشار آمار
+          other: اطلاعیه‌های انتشار آمار
         statutory_guidance:
-          other:
+          one: راهنمای قانونی
+          other: راهنمای قانونی
         take_part:
-          other:
+          one: مشارکت
+          other: مشارکت
         tax_tribunal_decision:
-          other:
+          one: حکم دادگاه مالیات و دارایی
+          other: احکام دادگاه مالیات و دارایی
         transcript:
-          other: رونوشت ها
+          one: متن
+          other: متون
         transparency:
-          other: داده های شفاف سازی
+          one: داده‌های شفافیت
+          other: داده‌های شفافیت
         utaac_decision:
-          other:
+          one: حکم دادگاه تجدید نظر اداری
+          other: احکام دادگاه تجدید نظر اداری
         world_location_news_article:
+          one: مقاله خبری
           other: مقالات خبری
         world_news_story:
-          other:
+          one: گزارش خبری جهانی
+          other: گزارشات خبری جهانی
         written_statement:
-          other: گزارش های کتبی به پارلمان
-    corporate_information:
+          one: بیانیه کتبی به پارلمان
+          other: بیانیه‌های کتبی به پارلمان
+    corporate_information: اطلاعات شرکت
     document_types:
-      documents:
+      documents: اسناد
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: مشاهده تمام راهنما و مقررات
+        title: راهنما و مقررات
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: مشاهده تمام اخبار و ارتباطات
+        title: اخبار و ارتباطات
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: مشاهده تمام اسناد سیاست و مشاوره‌ها
+        title: اسناد سیاست و مشاوره‌ها
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: مشاهده تمام تحقیقات و آمارها
+        title: تحقیقات و آمارها
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: مشاهده تمام خدمات
+        title: خدمات
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: مشاهده تمام موارد منتشر شده مربوط به شفافیت و آزادی اطلاعات
+        title: موارد منتشر شده مربوط به شفافیت و آزادی اطلاعات
+    errors_or_omissions_html: <p>موارد خطا یا حذف وجود دارد؟ <a class="govuk-link" href="/contact/govuk">از اینجا به ما بگویید</a>. برای اطلاع از لیست رسمی نهادهای عمومی غیر وزارتی <a class="govuk-link" href="/government/collections/public-bodies">نهادهای عمومی را مشاهده کنید</a>.</p>
+    featured: برجسته
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: فرم تماس آزادی اطلاعات
+      foi_exemption_html: |
+        این سازمان تحت پوشش قانون آزادی اطلاعات قرار ندارد.
+        برای مشاهده اینکه کدام سازمان‌ها تحت پوشش هستند، <a href="%{foi_url}" class="govuk-link brand__color">مقررات</a> را مشاهده کنید.
+      freedom_of_information_act: قانون آزادی اطلاعات (FOI)
+      freedom_of_information_requests: درخواست‌های آزادی اطلاعات
+      make_an_foi_request: ثبت یک درخواست آزادی اطلاعات
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: درباره قانون آزادی اطلاعات (FOI) و <a href="%{how_to_path}" class="govuk-link brand__color">نحوه ثبت درخواست، اطلاعات بیشتری کسب کنید</a>.
+        step2_html: برای اینکه ببینید آیا قبلاً به سؤال شما پاسخ داده‌ایم یا خیر، <a href="%{our_releases_path}" class="govuk-link brand__color">موارد منتشر شده قبلی</a> ما را بررسی کنید.
+        step3_html: از طریق تماس با ما با استفاده از جزئیات زیر، یک درخواست جدید ثبت کنید.
+    follow_us: ما را دنبال کنید
+    hidden_share_link: دنبال کردن در
+    high_profile_groups: گروه‌های مشهور در %{title}
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: شغل‌ها و قراردادها
+    latest_from: جدیدترین‌ها از %{title}
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name_html: "%{title} اکنون نامیده می‌شود <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} نهادی است از <a href='%{link_href}'>%{link_text}</a>"
+      joining: "%{title} به زودی در GOV.UK ادغام خواهد شد"
+      left_gov: "%{title} اکنون از دولت انگلستان مستقل است"
+      merged_html: "%{title} بخشی از <a href='%{link_href}'>%{link_text}</a> در %{updated} شده است"
+      merged_no_date_html: "%{title} اکنون بخشی از <a href='%{link_href}'>%{link_text}</a> است"
+      no_longer_exists: "%{title} بسته شده است"
+      no_website: "%{title} هیچ وب‌سایتی ندارد"
+      separate_website_html: "%{title} دارای یک <a href='%{url}'>وب‌سایت مجزا است</a>"
+      split_html: "%{title} جایگزین شد با %{links}"
+    part_of: بخشی از
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: مدیریت ما
+      chief_professional_officers: مسئولان حرفه‌ای ارشد
+      military_personnel: 'مقامات ارشد نظامی ما '
+      ministers: وزرای ما
+      special_representatives: نمایندگان ویژه ما
+      traffic_commissioners: اعضای کمیسیون ترافیک
+    read_more: درباره فعالیت‌های ما اطلاعات بیشتری کسب کنید
+    search_for_department: یک دپارتمان، آژانس یا نهاد عمومی را جستجو کنید
+    see_all_latest_documents: مشاهده تمام آخرین اسناد
+    separate_website: وب‌سایت مجزا
+    services_and_information: تمام خدمات و اطلاعات %{acronym}
     subscription:
-      email:
-      feed:
+      email: دریافت ایمیل‌ها
+      feed: اشتراک در فید
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      ":":
+      adhoc_advisory_group: گروه مشاوره اختصاصی
+      advisory_ndpb: نهاد عمومی مشورتی غیر دپارتمانی
+      civil_service: خدمات شهروندی
+      court:
+      devolved_administration:
+      executive_agency: آژانس اجرایی
+      executive_ndpb: نهاد عمومی اجرایی غیر دپارتمانی
+      executive_office:
+      independent_monitoring_body: نهاد ناظر مستقل
+      ministerial_department:
+      non_ministerial_department: دپارتمان غیر وزارتی
+      other: سایر
+      public_corporation: شرکت عمومی
+      sub_organisation:
+      tribunal: دادگاه
+    view_all: مشاهده همه
+    view_less: مشاهده کمتر
+    what_we_do: "%{title} چه کاری انجام می‌دهد"
     works_with_statement:
-      multiple:
-      one:
+      multiple: با آژانس‌ها و نهادهای عمومی %{works_with_count} همکاری می‌کند
+      one: با نهاد عمومی %{works_with_count} همکاری می‌کند

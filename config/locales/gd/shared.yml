@@ -1,12 +1,12 @@
 ---
 gd:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Baile
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
+      prefix: 'Brabhsáil:'
+      title: Brabhsáil GOV.UK
+    get_emails: Faigh ríomhphoist don ábhar seo
+    language_direction: ltr
     language_name: Gaeilge
     topics:
-      title:
+      title: "%{title}: faisnéis mhionsonraithe"

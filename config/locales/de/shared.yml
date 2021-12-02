@@ -1,12 +1,12 @@
 ---
 de:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Startseite
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
+      prefix: 'Aufrufen:'
+      title: GOV.UK aufrufen
+    get_emails: Emails zu diesem Thema erhalten
+    language_direction: ltr
     language_name: Deutsch
     topics:
-      title:
+      title: "%{title}: ausführliche Informationen"

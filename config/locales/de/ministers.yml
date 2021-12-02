@@ -1,9 +1,9 @@
 ---
 de:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Nimmt auch am Kabinett teil
+    by_department: Minister nach Dienststellen
+    cabinet: Minister des Kabinetts
+    govuk_title: Minister - GOV.UK
+    title: Minister
+    whips: Fraktionsvorsitzende

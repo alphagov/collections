@@ -1,8 +1,8 @@
 ---
 'no':
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Utforsk delemner
+    organisations: Organisasjoner
+    see_all_in_topic: Se mer %{type} innen dette emnet
+    show_fewer_orgs: Vis færre organisasjoner
+    show_more_orgs: Vis flere organisasjoner

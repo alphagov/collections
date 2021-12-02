@@ -1,6 +1,6 @@
 ---
 mt:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Servizzi u informazzjoni - %{title}
+    see_more_link: Ara iktar %{type} dwar dan is-suġġett
+    title: Servizzi u informazzjoni

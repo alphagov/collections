@@ -1,15 +1,15 @@
 ---
 tr:
   roles:
-    find_out_more_html:
+    find_out_more_html: "%{link} bölümümüzde bu makamın önceki sahipleri hakkında daha fazla bilgi al."
     heading:
-      one:
-      other:
+      one: Makam
+      other: Makamlar
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: Mevcut makam sahibi
+      previous_holders: Önceki makam sahipleri
+      responsibilities: Sorumluluklar
+    ministerial: Bakanlık görevi
+    past: geçmiş
+    previous_holders: Bu makamın önceki sahipleri
+    read_more: Bu makam hakkında daha fazla bilgi

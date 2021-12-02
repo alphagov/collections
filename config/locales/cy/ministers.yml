@@ -1,9 +1,9 @@
 ---
 cy:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Hefyd yn mynychu'r Cabinet
+    by_department: Gweinidogion yn ôl adran
+    cabinet: Gweinidogion y Cabinet
+    govuk_title: Gweinidogion - GOV.UK
+    title: Gweinidogion
+    whips: Chwipiau

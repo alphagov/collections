@@ -1,333 +1,343 @@
 ---
 pa-pk:
   organisations:
-    about_page_path:
-    administered_by:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: جس نیں ایس دا انتظام کیتا
     breadcrumbs:
-      courts_and_tribunals:
-      organisations:
+      courts_and_tribunals: کورٹس تے عدالتاں
+      organisations: تنظیماں
     contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
+      contact_details: رابطے دی تفصیالات
+      contact_form: 'رابطے دا فارم: {title}%'
+      contact_organisation: 'رابطہ:  %{organisation}'
+      email: ای میل
+      telephone: ٹیلی فون
     content_item:
       schema_name:
         aaib_report:
-          one:
-          other:
+          one: ہوائی حادثیاں دی برانچ دی رپورٹ
+          other: ہوائی حادثیاں دی برانچ دیاں رپورٹاں
         announcement:
-          one: اعلان
-          other: اعلانات
+          one: خبر
+          other: خبراں
         asylum_support_decision:
-          one:
-          other:
+          one: پناہ لئی مدد دا عدالتی فیصلہ
+          other: پناہ لئی مدد دا عدالتی فیصلے
         authored_article:
-          one: تصنیف شدہ مضمون
-          other: تصنیف شدہ مضامین
+          one: لکھاری دا مضمون
+          other: لکھاری دے مضمون
         business_finance_support_scheme:
-          one:
-          other:
+          one: بزنس فنانس دی مدد لئی منصوبہ
+          other: بزنس فنانس دی مدد لئی منصوبے
         case_study:
-          one: کیس سٹڈی
-          other: کیس سٹڈیز
+          one: مقدمے دی پڑھائی
+          other: مقدمے دیاں پڑھائیاں
         closed_consultation:
-          one: بند مشورہ
-          other: بند مشورے
+          one: مشورہ ختم ہوئے
+          other: مشورے ختم ہوئے
         cma_case:
-          one:
-          other:
+          one: مقابلے تے منڈی دے اختیار دا مقدمہ
+          other: مقابلے تے منڈی دے اختیار دے مقدمے
         coming_soon:
-          one:
-          other:
+          one: چھیتی آ رہیا
+          other: چھیتی آ رہیا
         consultation:
-          one: مشورہ
-          other: مشورے
+          one: 'صلاح '
+          other: صلاحاواں
         consultation_outcome:
-          one: مشورے دا نتیجہ
-          other: مشورے دے نتیجے
+          one: صلاح دا نتیجہ
+          other: صالاحاواں دے نتیجے
         corporate_information_page:
-          one:
-          other:
+          one: خبر دا ورقہ
+          other: خبر دے ورقے
         corporate_report:
-          one: کاروباری روپوٹ
-          other: کاروباری روپوٹاں
+          one: کاروبار دی خبر
+          other: کاروبار دی خبراں
         correspondence:
-          one: خط و کتابت
-          other: خط و کتابت
+          one: خط پتر
+          other: بوہتے خط پتر
         countryside_stewardship_grant:
-          one:
-          other:
+          one: پنڈ دے اختیار دی مدد
+          other: پنڈ دے اختیار دی امداد
         decision:
           one: فیصلہ
           other: فیصلے
         detailed_guide:
-          one: گائڈنس
-          other: گائڈنس
+          one: رہنمائی
+          other: رہنمائی
         dfid_research_output:
-          one:
-          other:
+          one: ترقی لئی  کیتی ہوئی کھوج دا نتیجہ
+          other: ترقی لئی کیتی ہوئی کھوج دے نتیجے
         document_collection:
-          one: مجموعہ
-          other: مجموعے
+          one: اکٹھ
+          other: اکٹھ
         draft_text:
-          one: متن دا مسودہ
-          other: متن دے مسودے
+          one: لکھائی کرو
+          other: لکھائیاں کرو
         drug_safety_update:
-          one:
-          other:
+          one: نشے توں بچن دی نوی خبر
+          other: نشے توں بچن دیاں نویاں خبراں
         employment_appeal_tribunal_decision:
-          one:
-          other:
+          one: نوکری دی درخواست دا عدالتی فیصلہ
+          other: نوکری دی درخواست دے عدالتی فیصلے
         employment_tribunal_decision:
-          one:
-          other:
+          one: نوکری دا عدالتی فیصلہ
+          other: نوکری دے عدالتی فیصلے
         esi_fund:
-          one:
-          other:
+          one: یورپیئن سٹرکچرل تے انوسٹمنٹ فنڈ (ESIF)
+          other: یورپیئن سٹرکچرل تے انوسٹمنٹ فنڈز (ESIF)
         fatality_notice:
-          one:
-          other:
+          one: موت دی خبر
+          other: موت دیاں خبراں
         foi_release:
-          one: FOI اجراء
-          other: FOI اجراء
+          one: " FOI ریلز"
+          other: FOI ریلزز
         form:
-          one: فارم
-          other: فارم
+          one: صفحہ
+          other: صفحے
         government_response:
-          one: سرکاری جواب
-          other: سرکاری جواب
+          one: حکومت دا جواب
+          other: حکومت دے جواب
         guidance:
-          one: گائڈنس
-          other: گائڈنس
+          one: رہنمائی
+          other: رہنمائی
         impact_assessment:
-          one: اثر دا اندازہ
-          other: اثر دے اندازے
+          one: جانچ دا اثر
+          other: جانچ دیے اثر
         imported:
-          one: درآمد شدہ- منتظر قسم
-          other: درآمد شدہ- منتظر قسم
+          one: درآمد کیتا ہویا-اُڈیک دی قِسم
+          other: درآمد کیتا ہویا-اُڈیک دی قِسم
         independent_report:
-          one: آزاد رپورٹ
-          other: آزاد رپورٹاں
+          one: خود مُختار رپورٹ
+          other: خود مُختار رپورٹاں
         international_development_fund:
-          one:
-          other:
+          one: بین الاقوامی ترقی دی فنڈنگ
+          other: بین الاقوامی ترقی دی فنڈنگ
         international_treaty:
-          one: بین الاقوامی معاہدہ
-          other: بین الاقوامی معاہدے
+          one: بین الاقوامی علاقہ
+          other: بین الاقوامی علاقے
         maib_report:
-          one:
-          other:
+          one: سمندری حادثےدی تفتیش کرن والی برانچ دی رپورٹ
+          other: سمندری حادثےدی تفتیش کرن والی برانچ دیاں رپورٹاں
         map:
           one: نقشہ
           other: نقشے
         medical_safety_alert:
-          one:
-          other:
+          one: ادویات تے طبی آلات بارے خبردار کرنا تے واپس بُلانا
+          other: ادویات تے طبی آلات بارے خبردار کرنا تے واپس بُلانا
         national:
-          one:
-          other:
+          one: قومی حساب کتاب بارے اعلان کرنا
+          other: قومی حساب کتاب بارے اعلانات کرنا
         national_statistics:
-          one: قومی شماریات
-          other: قومی شماریات
+          one: قومی حساب کتاب
+          other: قومی حساب کتاب
         national_statistics_announcement:
-          one:
-          other:
+          one: قومی حساب کتاب بارے اعلان کرنا
+          other: قومی حساب کتاب بارے اعلانات کرنا
         news_article:
-          one: خبر دا مضمون
-          other: خبر دے مضمون
+          one: خبراں دا مضمون
+          other: خبراں دے مضمون
         news_story:
           one: خبر دی کہانی
-          other: خبر دی کہانیاں
+          other: خبر دیاں کہانیاں
         notice:
-          one: نوٹس
-          other: نوٹس
+          one: 'خبر '
+          other: خبراں
         official:
-          one:
-          other:
+          one: سرکاری  اعداد و شمار بارے اعلان
+          other: سرکاری اعداد و شمار بارے اعلانات
         official_statistics:
-          one: دفتری شماریات
-          other: دفتری شماریات
+          one: سرکاری اعداد وشمار
+          other: سرکاری اعداد وشمار
         official_statistics_announcement:
-          one:
-          other:
+          one: سرکاری  اعداد و شمار بارے اعلان
+          other: سرکاری اعداد و شمار بارے اعلانات
         open_consultation:
-          one: آزاد مشورہ
-          other: آزاد مشورے
+          one: کُھلا صلاح مشورہ
+          other: کُھلے صلاح مشورے
         oral_statement:
-          one: پارلیمنٹ نوں زبانی بیان
-          other: پارلیمنٹ نوں زبانی بیانات
+          one: قومی مجلس دے سامنے زبانی بیان
+          other: قومی مجلس دے سامنے زبانی بیانات
         policy:
-          one:
-          other:
+          one: حکمتِ عملی
+          other: حکمتِ عملی
         policy_paper:
-          one: پالیسی دا کاغذ
-          other: پالیسی دے کاغذات
+          one: حکمتِ عملی دا کاغذ
+          other: حکمتِ عملی دے کاغذات
         press_release:
-          one: پریس ریلیز
-          other: پریس ریلیزاں
+          one: اخباری بیان
+          other: اخباری بیانات
         promotional:
-          one: تشہیری مواد
-          other: تشہیری مواد
+          one: اشتہار بازی دا مواد
+          other: اشتہار بازی دا مواد
         publication:
-          one: اشاعت
-          other: اشاعتاں
+          one: تصنیف
+          other: ٹصانیف
         raib_report:
-          one:
-          other:
+          one: ریل دے حادثے دی تفتیش دی برانچ دی رپورٹ
+          other: ریل دے حادثے دی تفتیش دی برانچ دی رپورٹاں
         regulation:
-          one: ضابطہ
-          other: ضابطے
+          one: قانون
+          other: قوانین
         research:
-          one: تحقیق و تجزیہ
-          other: تحقیق و تجزیہ
+          one: کھوج تے تجزیہ
+          other: کھوج تے تجزیہ
         residential_property_tribunal_decision:
-          one:
-          other:
+          one: رہائشی جائداد دی عدالت دا فیصلہ
+          other: رہائشی جائداد دی عدالت دے فیصلے
         service_sign_in:
-          one:
-          other:
+          one: سروس سائن اِن
+          other: سروس سائن اِن
         service_standard_report:
-          one:
-          other:
+          one: سروس سٹینڈرڈ رپورٹ
+          other: سروس سٹینڈرڈ رپورٹس
         speaking_notes:
-          one: بولن دے نوٹس
-          other: بولن دے نوٹس
+          one: گَل بات دے پیغمات
+          other: گَل بات دے پیغمات
         speech:
           one: تقریر
           other: تقریراں
         standard:
-          one:
-          other:
+          one: معیار
+          other: معیارات
         statement_to_parliament:
-          one: پارلیمنٹ نوں بیان
-          other: پارلیمنٹ نوں بیانات
+          one: قومی مجلس دے سامنے بیان
+          other: قومی مجلس دے سامنے بیان
         statistical_data_set:
-          one: شماریاتی ڈیٹا سیٹ
-          other: شماریاتی ڈیٹا سیٹ
+          one: اعدادوشمار دی معلومات دا سیٹ
+          other: اعدادوشمار دی معلومات دے سیٹ
         statistics_announcement:
-          one:
-          other:
+          one: اعداوشمار جاری کرن بارے اعلان
+          other: اعداوشمار جاری کرن بارے اعلانات
         statutory_guidance:
           one: قانونی رہنمائی
           other: قانونی رہنمائی
         take_part:
-          one:
-          other:
+          one: حصہ لینا
+          other: حصہ لینا
         tax_tribunal_decision:
-          one:
-          other:
+          one: ٹیکس تے عدالتِ عالیہ دا فیصلہ
+          other: ٹیکس تے عدالتِ عالیہ دے فیصلے
         transcript:
           one: نقل
-          other: نقلاں
+          other: نقول
         transparency:
-          one: شفافیت دا مواد
-          other: شفافیت دا مواد
+          one: شفافیت دی معلومات
+          other: شفافیت دی معلومات
         utaac_decision:
-          one:
-          other:
+          one: انتظامی درخواستاں بارے عدالتی فیصلہ
+          other: انتظامی درخواستاں بارے عدالتی فیصلے
         world_location_news_article:
-          one:
-          other:
+          one: خبراں دا مضمون
+          other: خبراں دے مضمون
         world_news_story:
-          one:
-          other:
+          one: دُنیا دی خبراں دی کہانی
+          other: دُنیا دی خبراں دی کہانیاں
         written_statement:
-          one: پارلیمنٹ نوں لکھیا ہویا بیان
-          other: پارلیمنٹ نوں لکھے ہوئے بیان
-    corporate_information:
+          one: قومی مجلس دے سامنے تحریری بیان
+          other: قومی مجلس دے سامنے تحریری بیان
+    corporate_information: کاروبار بارے معلومات
     document_types:
-      documents:
+      documents: دستاویزات
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: سارے قانون تے رہنمائی ویکھو
+        title: رہنمائی تے قانون
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: ساریاں خبراں تے اطلاعات ویکھو
+        title: خبراں تے اطلاعات
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: حکمتِ عملی بارے کاغذات تے مشاورت ویکھو
+        title: مشاورت تے حکمتِ عملی
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: ساری کھوج تے اعداد وشمار ویکھو
+        title: اعدادوشمار تے کھوج
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: ساریاں خدمات ویکھو
+        title: خدمات
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: خبراں دی آزادی تے شفافیت بارے جاری کیتا گیا سب کُج ویکھو
+        title: خبراں دی آزادی تے شفافیت بارے جاری کیتا گیا
+    errors_or_omissions_html: <p>غلطی یا کوتاہی <a class="govuk-link" href="/contact/govuk">سانوں ایتھے دسو</a>. غیر عوامی اداریاں دی سرکاری فہرست<a class="govuk-link" href="/government/collections/public-bodies">عوامی اداریاں بارے ویکھو</a>.</p>
+    featured: نُمایاں کیتا گیا
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: 'رابطے دا FOI فارم '
+      foi_exemption_html: 'ایہ ادارہ معلومات دی آزادی دے قانون دے تحت نہیں ہوندا۔ ایہ ویکھن لئی کہ کہیڑے ادارے ایندے وچ شامل نیں ایہ ویکھو <a href="%{foi_url}" class="govuk-link brand__color">قانونی سازی</a>.
+
+'
+      freedom_of_information_act: معلومات دی آزادی  (FOI)  دا قانون
+      freedom_of_information_requests: معلومات دی آزادی دیاں درخواستاں
+      make_an_foi_request: اک FOI دی درخواست دیوؤ
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: معلومات دی آزادی  (FOI)  دے قانون بارے ہور جانن لئی ایہ ویکھو <a href="%{how_to_path}" class="govuk-link brand__color">اک درخواست کیس طراں کیتی جا سکتی ہے</a>.
+        step2_html: |-
+          </a> ساڈے پچھلے جاری کیتے ہوئے  <a href="%{our_releases_path}" class="govuk-link brand__color">ویکھو
+          ایہ ویکھو کہ اساں تہاڈے سوال دا پہلاں ای جواب دے دتا اے۔
+        step3_html: تھلے دتی گئی تفصیلات نوں استعما ل کر کے ساڈےنال رابطہ کر کے ایک نویں درخواست دیوؤ
+    follow_us: ساڈے پچھے آؤ
+    hidden_share_link: ساڈے پچھے اوندے جاو
+    high_profile_groups: ایندے وچ وڈے ناں والے گروہ {title}%
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: نوکریاں تے ٹھیکے
+    latest_from: تازہ ترین فارم {title}%
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name_html: "%{title} ہن اینوں کہیا جاندا اے <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} ایندا حصہ اے <a href='%{link_href}'>%{link_text}</a>"
+      joining: "%{title} جلد ای ایندے وچ شامل ہو جائے گا GOV.UK"
+      left_gov: "%{title}ایہ ہن UK دی حکومت توں آزاد اے"
+      merged_html: "%{title} ایندا حصہ بن گیا اے <a href='%{link_href}'>%{link_text}</a> وچ %{updated}"
+      merged_no_date_html: "%{title}ہن ایندا حصہ اے<a href='%{link_href}'>%{link_text}</a>"
+      no_longer_exists: "%{title} بند ہو گیا اے"
+      no_website: "%{title} ایندی کوئی ویب سائٹ نئیں"
+      separate_website_html: "%{title} اک ہے وے <a href='%{url}'>الگ ویب سائٹ</a>"
+      split_html: "%{title} جندے نال اینوں بدلیا گیا %{links}"
+    part_of: اک حصہ
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: ساڈی انتظامیہ
+      chief_professional_officers: وڈے پیشہ ور آفیسرز
+      military_personnel: ساڈے فوج دے وڈے آفیسرز
+      ministers: ساڈے وزیر
+      special_representatives: خصوصی نمائندے
+      traffic_commissioners: ٹریفک کمیشنرز
+    read_more: اسی کیہ کرنے آں ایس بارے ہور جان لوؤ
+    search_for_department: ایک عوامی جماعت، ایجنسی یا اک محکمے دی کھوج کرو
+    see_all_latest_documents: ساریاں تازہ ترین دستاویزات ویکھو
+    separate_website: وکھری ویب سائٹ
+    services_and_information: ساریاں {acronym}% خدمات تے معلومات
     subscription:
-      email:
-      feed:
+      email: ای میل حاصل کرو
+      feed: جواب لین لئی سبسکرائب کرو
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      ":":
+      adhoc_advisory_group: ایڈہاک ایڈوائزری گروپ
+      advisory_ndpb: ایدوائزری نان-ڈیپارٹمنٹل پبلک باڈی
+      civil_service: سول سروس
+      court:
+      devolved_administration:
+      executive_agency: ایگزیکٹو ایجنسی
+      executive_ndpb: ایگزیکٹو  نان-ڈیپارٹمنٹل پبلک باڈی
+      executive_office:
+      independent_monitoring_body: خود مختار نگران ادارہ
+      ministerial_department:
+      non_ministerial_department: بغیر وزیر دا محکمہ
+      other: ہور دوجے
+      public_corporation: عوامی تعاون
+      sub_organisation:
+      tribunal: عدالت
+    view_all: ساریاں نوں ویکھو
+    view_less: گھٹ ویکھو
+    what_we_do: کیہ {title}% ہویا
     works_with_statement:
-      multiple:
-      one:
+      multiple: دے نال کم کر دے نیں {works_with_count}% ایجنسیاں تے عوامی ادارے
+      one: کم کر دے نیں {works_with_count}%  عوامی ادارے نال

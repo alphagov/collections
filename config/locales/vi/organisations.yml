@@ -1,259 +1,341 @@
 ---
 vi:
   organisations:
-    about_page_path:
-    administered_by:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Quản lý bởi
     breadcrumbs:
-      courts_and_tribunals:
-      organisations:
+      courts_and_tribunals: Tòa án và Tòa án cấp thấp
+      organisations: Tổ chức
     contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
+      contact_details: Chi tiết liên hệ
+      contact_form: 'Biểu mẫu Liên hệ: %{title}'
+      contact_organisation: Liên hệ %{organisation}
+      email: Email
+      telephone: Điện thoại
     content_item:
       schema_name:
         aaib_report:
-          other:
+          one: Báo cáo của Chi nhánh Điều tra Tai nạn Hàng không
+          other: Báo cáo của Chi nhánh Điều tra Tai nạn Hàng không
         announcement:
-          other: Các thông báo
+          one: Thông báo
+          other: Thông báo
         asylum_support_decision:
-          other:
+          one: Quyết định của tòa án hỗ trợ tị nạn
+          other: Quyết định của tòa án hỗ trợ tị nạn
         authored_article:
-          other: Các bài viết do tác giả
+          one: Bài viết có tác giả
+          other: Bài viết có tác giả
         business_finance_support_scheme:
-          other:
+          one: Kế hoạch hỗ trợ tài chính doanh nghiệp
+          other: Kế hoạch hỗ trợ tài chính doanh nghiệp
         case_study:
-          other: Các Trường hợp cụ thể
+          one: Nghiên cứu điển hình
+          other: Nghiên cứu điển hình
         closed_consultation:
-          other: Kết thúc các cuộc tham vấn
+          one: Tham vấn kín
+          other: Tham vấn kín
         cma_case:
-          other:
+          one: Vụ án của Cơ quan Cạnh tranh và Thị trường
+          other: Vụ án của Cơ quan Cạnh tranh và Thị trường
         coming_soon:
-          other:
+          one: Sắp Diễn ra
+          other: Sắp Diễn ra
         consultation:
-          other: Các cuộc tham vấn
+          one: Tham vấn
+          other: Tham vấn
         consultation_outcome:
-          other: Các Kết quả tham vấn
+          one: Kết quả tham vấn
+          other: Kết quả tham vấn
         corporate_information_page:
-          other:
+          one: Trang thông tin
+          other: Trang thông tin
         corporate_report:
-          other: Các báo cáo tổng hợp
+          one: Báo cáo của doanh nghiệp
+          other: Báo cáo của doanh nghiệp
         correspondence:
-          other: Liên hệ
+          one: Thư từ
+          other: Thư từ
         countryside_stewardship_grant:
-          other:
+          one: Trợ cấp Quản lý Vùng nông thôn
+          other: Trợ cấp Quản lý Vùng nông thôn
         decision:
-          other:
+          one: Quyết định
+          other: Quyết định
         detailed_guide:
-          other: Hướng dẫn chi tiết
+          one: Hướng dẫn
+          other: Hướng dẫn
         dfid_research_output:
-          other:
+          one: Đầu ra của Nghiên cứu Phát triển
+          other: Đầu ra của Nghiên cứu Phát triển
         document_collection:
-          other:
+          one: Bộ sưu tập
+          other: Bộ sưu tập
         draft_text:
-          other: Các nội dung dự thảo
+          one: Dự thảo
+          other: Dự thảo
         drug_safety_update:
-          other:
+          one: Cập nhật về Dùng Thuốc An toàn
+          other: Cập nhật về Dùng Thuốc An toàn
         employment_appeal_tribunal_decision:
-          other:
+          one: Quyết định của tòa phúc thẩm việc làm
+          other: Quyết định của tòa phúc thẩm việc làm
         employment_tribunal_decision:
-          other:
+          one: Quyết định của tòa án việc làm
+          other: Quyết định của tòa án việc làm
         esi_fund:
-          other:
+          one: Quỹ Đầu tư và Cấu trúc Châu Âu (ESIF)
+          other: Quỹ Đầu tư và Cấu trúc Châu Âu (ESIF)
         fatality_notice:
-          other: Tin buồn
+          one: Thông báo tử vong
+          other: Thông báo tử vong
         foi_release:
-          other: Thông cáo FOI
+          one: Công bố FOI
+          other: Công bố FOI
         form:
-          other: Các mẫu đơn
+          one: Biểu mẫu
+          other: Biểu mẫu
         government_response:
-          other: các phản hồi của Chính phủ
+          one: Phản hồi của chính phủ
+          other: Phản hồi của chính phủ
         guidance:
-          other: hướng dẫn
+          one: Hướng dẫn
+          other: Hướng dẫn
         impact_assessment:
+          one: Đánh giá tác động
           other: Đánh giá tác động
         imported:
-          other: Loại tài liệu đính kèm
+          one: loại đã nhập - đang chờ
+          other: loại đã nhập - đang chờ
         independent_report:
-          other: Các báo cáo độc lập
+          one: Báo cáo độc lập
+          other: Báo cáo độc lập
         international_development_fund:
-          other:
+          one: Tài trợ phát triển quốc tế
+          other: Tài trợ phát triển quốc tế
         international_treaty:
-          other:
+          one: Hiệp ước quốc tế
+          other: Hiệp ước quốc tế
         maib_report:
-          other:
+          one: Báo cáo của Chi nhánh Điều tra Tai nạn Hàng hải
+          other: Báo cáo của Chi nhánh Điều tra Tai nạn Hàng hải
         map:
-          other: Các bản đồ
+          one: Bản đồ
+          other: Bản đồ
         medical_safety_alert:
-          other:
+          one: Cảnh báo và thu hồi thuốc và thiết bị y tế
+          other: Cảnh báo và thu hồi thuốc và thiết bị y tế
         national:
-          other:
+          one: Thông báo thống kê quốc gia
+          other: Công bố thống kê quốc gia
         national_statistics:
-          other: Thống kê - Thống kê quốc gia
+          one: Thống kê Quốc gia
+          other: Thống kê Quốc gia
         national_statistics_announcement:
-          other:
+          one: Thông báo thống kê quốc gia
+          other: Công bố thống kê quốc gia
         news_article:
-          other: Tin tức
+          one: Bài báo
+          other: Bài viết thời sự
         news_story:
-          other: Câu chuyện tin tức
+          one: Bài phóng sự
+          other: Bài phóng sự
         notice:
-          other:
+          one: Thông báo
+          other: Thông báo
         official:
-          other:
+          one: Thông báo thống kê chính thức
+          other: Thông báo thống kê chính thức
         official_statistics:
-          other: Thống kê
+          one: Thống kê Chính thức
+          other: Thống kê Chính thức
         official_statistics_announcement:
-          other:
+          one: Thông báo thống kê chính thức
+          other: Thông báo thống kê chính thức
         open_consultation:
-          other: Tham vấn mở rộng
+          one: Tham vấn mở
+          other: Tham vấn mở
         oral_statement:
-          other: Tuyên bố bằng lời nói tới quốc hội
+          one: Tuyên bố bằng lời trước Quốc hội
+          other: Tuyên bố bằng lời trước Quốc hội
         policy:
-          other: Các chính sách
+          one: Chính sách
+          other: Chính sách
         policy_paper:
+          one: Tài liệu chính sách
           other: Tài liệu chính sách
         press_release:
+          one: Thông cáo báo chí
           other: Thông cáo báo chí
         promotional:
-          other: Tài liệu truyền thông
+          one: Tài liệu quảng cáo
+          other: Tài liệu quảng cáo
         publication:
-          other: Tài liệu truyền thông
+          one: Ấn phẩm
+          other: Ấn phẩm
         raib_report:
-          other:
+          one: Báo cáo của Chi nhánh Điều tra Tai nạn Đường sắt
+          other: Báo cáo của Chi nhánh Điều tra Tai nạn Đường sắt
         regulation:
-          other:
+          one: Quy định
+          other: Quy định
         research:
+          one: Nghiên cứu và phân tích
           other: Nghiên cứu và phân tích
         residential_property_tribunal_decision:
-          other:
+          one: Quyết định của tòa án bất động sản nhà ở
+          other: Quyết định của tòa án bất động sản nhà ở
         service_sign_in:
-          other:
+          one: Đăng nhập dịch vụ
+          other: Đăng nhập dịch vụ
         service_standard_report:
-          other:
+          one: Báo cáo Tiêu chuẩn Dịch vụ
+          other: Báo cáo Tiêu chuẩn Dịch vụ
         speaking_notes:
-          other: Bài phát biểu
+          one: Ghi chú cho bài nói
+          other: Ghi chú cho bài nói
         speech:
-          other: Các bài phát biểu
+          one: Bài phát biểu
+          other: Bài phát biểu
         standard:
-          other:
+          one: Tiêu chuẩn
+          other: Tiêu chuẩn
         statement_to_parliament:
-          other: Tuyên bố tới Quốc hội
+          one: Tuyên bố trước Quốc hội
+          other: Tuyên bố trước Quốc hội
         statistical_data_set:
+          one: Bộ dữ liệu thống kê
           other: Bộ dữ liệu thống kê
         statistics_announcement:
-          other:
+          one: Thông báo phát hành thống kê
+          other: Thông báo phát hành thống kê
         statutory_guidance:
-          other:
+          one: Hướng dẫn theo luật định
+          other: Hướng dẫn theo luật định
         take_part:
-          other:
+          one: Tham gia
+          other: Tham gia
         tax_tribunal_decision:
-          other:
+          one: Quyết định của Tòa án về Thuế và Pháp lý
+          other: Quyết định của Tòa án về Thuế và Pháp lý
         transcript:
-          other: Kịch bản
+          one: Bản ghi nội dung
+          other: Bản ghi nội dung
         transparency:
-          other: Dữ liệu kịch bản
+          one: Dữ liệu về tính minh bạch
+          other: Dữ liệu về tính minh bạch
         utaac_decision:
-          other:
+          one: Quyết định của tòa phúc thẩm hành chính
+          other: Quyết định của tòa phúc thẩm hành chính
         world_location_news_article:
-          other: Tin tức
+          one: Bài báo
+          other: Bài viết thời sự
         world_news_story:
-          other:
+          one: Bài phóng sự thế giới
+          other: Bài phóng sự thế giới
         written_statement:
-          other: Các Tuyên bố bằng văn bản tới quốc hội
-    corporate_information:
+          one: Tuyên bố bằng văn bản trước Quốc hội
+          other: Tuyên bố bằng văn bản trước Quốc hội
+    corporate_information: Thông tin doanh nghiệp
     document_types:
-      documents:
+      documents: Tài liệu
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Xem tất cả hướng dẫn và quy định
+        title: Hướng dẫn và quy định
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Xem tất cả tin tức và thông tin liên lạc
+        title: Tin tức và thông tin liên lạc
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Xem tất cả các tài liệu chính sách và tham vấn
+        title: Tài liệu chính sách và tham vấn
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Xem tất cả các nghiên cứu và thống kê
+        title: Nghiên cứu và thống kê
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Xem tất cả các dịch vụ
+        title: Dịch vụ
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Xem tất cả các công bố theo luật về tính minh bạch và tự do thông tin
+        title: Công bố theo luật về tính minh bạch và tự do thông tin
+    errors_or_omissions_html: <p>Có lỗi hoặc thiếu sót? <a class="govuk-link" href="/contact/govuk">Hãy cho chúng tôi biết tại đây</a>. Để biết danh sách chính thức của các cơ quan công quyền không thuộc ban/bộ, <a class="govuk-link" href="/government/collections/public-bodies">xem các cơ quan công quyền</a>.</p>
+    featured: Đặc biệt
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: Biểu mẫu liên hệ FOI
+      foi_exemption_html: |
+        Tổ chức này không thuộc phạm vi điều chỉnh của Đạo luật Tự do Thông tin.
+        Để biết những tổ chức được bao gồm, hãy xem <a href="%{foi_url}" class="govuk-link brand__color">đạo luật</a>.
+      freedom_of_information_act: Đạo luật Tự do Thông tin (FOI)
+      freedom_of_information_requests: Yêu cầu quyền Tự do Thông tin
+      make_an_foi_request: Yêu cầu FOI
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: Đọc về Đạo luật Tự do Thông tin (FOI) và <a href="%{how_to_path}" class="govuk-link brand__color">cách đưa ra yêu cầu</a>.
+        step2_html: Kiểm tra <a href="%{our_releases_path}" class="govuk-link brand__color">các công bố trước đây của chúng tôi</a> để xem liệu chúng tôi đã trả lời câu hỏi của bạn chưa.
+        step3_html: Đưa ra yêu cầu mới bằng cách liên hệ với chúng tôi theo chi tiết bên dưới.
+    follow_us: Theo dõi chúng tôi
+    hidden_share_link: Theo dõi trên
+    high_profile_groups: Nhóm cấu hình cao trong %{title}
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: Việc làm và hợp đồng
+    latest_from: Mới nhất từ %{title}
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name_html: "%{title} nay được gọi là <a href='%{link_href}'>%{link_text}</a>"
+      devolved_html: "%{title} là một cơ quan của <a href='%{link_href}'>%{link_text}</a>"
+      joining: "%{title} sẽ sớm được kết hợp vào GOV.UK"
+      left_gov: "%{title} nay đã độc lập với chính phủ Vương quốc Anh"
+      merged_html: "%{title} đã trở thành một phần của <a href='%{link_href}'>%{link_text}</a> trong %{updated}"
+      merged_no_date_html: "%{title} nay là một phần của <a href='%{link_href}'>%{link_text}</a>"
+      no_longer_exists: "%{title} đã đóng"
+      no_website: "%{title} không có trang web"
+      separate_website_html: "%{title} có <a href='%{url}'>trang web riêng</a>"
+      split_html: "%{title} đã được thay thế bằng %{links}"
+    part_of: Một phần của
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: Cách quản lý của chúng tôi
+      chief_professional_officers: Trưởng phòng nghiệp vụ
+      military_personnel: Các quan chức quân sự cấp cao của chúng tôi
+      ministers: Các bộ trưởng của chúng tôi
+      special_representatives: Các đại diện đặc biệt
+      traffic_commissioners: Các ủy viên giao thông
+    read_more: Đọc thêm về nhiệm vụ của chúng tôi
+    search_for_department: Tìm kiếm một ban/bộ, cơ quan hoặc cơ quan công quyền
+    see_all_latest_documents: Xem tất cả các tài liệu mới nhất
+    separate_website: trang web riêng
+    services_and_information: Tất cả các dịch vụ %{acronym} và thông tin
     subscription:
-      email:
-      feed:
+      email: Nhận email
+      feed: Đăng ký nguồn cấp dữ liệu
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      ":":
+      adhoc_advisory_group: Nhóm cố vấn đặc biệt
+      advisory_ndpb: Cơ quan công quyền tham vấn không thuộc ban/bộ
+      civil_service: Dịch vụ dân sự
+      court:
+      devolved_administration:
+      executive_agency: Cơ quan điều hành
+      executive_ndpb: Cơ quan công quyền không thuộc ban/bộ
+      executive_office:
+      independent_monitoring_body: Cơ quan giám sát độc lập
+      ministerial_department:
+      non_ministerial_department: Bộ phận không thuộc bộ
+      other: Khác
+      public_corporation: Công ty đại chúng
+      sub_organisation:
+      tribunal: Tòa án
+    view_all: xem tất cả
+    view_less: rút gọn
+    what_we_do: Nhiệm vụ của %{title}
     works_with_statement:
-      multiple:
-      one:
+      multiple: Làm việc với %{works_with_count} cơ quan và cơ quan công quyền
+      one: Làm việc với %{works_with_count} cơ quan công quyền

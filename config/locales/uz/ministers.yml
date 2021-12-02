@@ -1,9 +1,9 @@
 ---
 uz:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Шунингдек Кабинетга ташриф буюради
+    by_department: Ишлар бўйича Вазирлар
+    cabinet: Вазирлар Маҳкамаси аъзолари
+    govuk_title: Вазирлар - GOV.UK
+    title: Вазирлар
+    whips: Чапаклар

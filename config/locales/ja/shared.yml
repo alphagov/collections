@@ -1,12 +1,12 @@
 ---
 ja:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: ホーム
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: 日本語
+      prefix: 閲覧：
+      title: GOV.UKを閲覧する
+    get_emails: このトピックでメールを取得する
+    language_direction: ltr
+    language_name: 日本
     topics:
-      title:
+      title: "％{title}：詳細情報"

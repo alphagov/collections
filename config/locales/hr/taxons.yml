@@ -1,8 +1,8 @@
 ---
 hr:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: Istražite podteme
+    organisations: Organizacije
+    see_all_in_topic: Pogledajte više %{type} u ovoj temi
+    show_fewer_orgs: Pokažite manje organizacija
+    show_more_orgs: Prikažite više organizacija

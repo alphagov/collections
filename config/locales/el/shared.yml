@@ -1,12 +1,12 @@
 ---
 el:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Αρχική
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: 'Ελληνικά '
+      prefix: 'Περιήγηση:'
+      title: Περιήγηση στο GOV.UK
+    get_emails: Λάβετε email για αυτό το θέμα
+    language_direction: ltr
+    language_name: Ελληνικά
     topics:
-      title:
+      title: "%{title}: αναλυτικές πληροφορίες"

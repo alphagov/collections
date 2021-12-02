@@ -1,32 +1,26 @@
 ---
 cy:
   brexit_landing_page:
-    meta_description: Darganfyddwch sut mae’r rheolau newydd yn effeithio arnoch chi
+    meta_description: Dysgwch sut mae rheolau Brexit newydd yn berthnasol i bethau fel teithio a gwneud busnes gydag Ewrop. Defnyddiwch y gwirydd Brexit i gael rhestr o gamau gweithredu personol i chi.
     meta_title: Brexit
     page_header: Brexit
-    page_header_explainer: Canfod sut mae rheolau newydd Brexit yn berthnasol i bethau megis teithio a gwneud busnes gydag Ewrop.
+    page_header_explainer: Mae rheolau newydd yn berthnasol i bethau fel teithio a gwneud busnes gydag Ewrop. Defnyddiwch y gwirydd Brexit i gael rhestr o gamau gweithredu personol i chi, i'ch busnes ac i'ch teulu.
     page_header_links:
       guidance_for_businesses:
-        text: Canllawiau i fusnesau
-        path: "/guidance/brexit-guidance-for-businesses.cy"
+        path:
+        text:
       guidance_for_individuals_and_families:
-        text: "Canllawiau i unigolion a theuluoedd"
-        path: "/guidance/brexit-guidance-for-individuals-and-families.cy"
+        path:
+        text:
     sections:
-      aria_string_suffix: ''
+      aria_string_suffix: cysylltiedig â Brexit
       guidance_and_regulation: Canllawiau a rheoliadau
       news_and_communications: Newyddion a chyfathrebu
-      policy_and_engagement: Polisi ac ymgynghoriadau
-      research_and_statistics: Ymchwil ag ystadegau
+      policy_and_engagement: Papurau polisi ac ymgynghoriadau
+      research_and_statistics: Ymchwil ac ystadegau
       services: Gwasanaethau
-      transparency: Tryloywder a datganiadau rhyddid gwybodaeth
-    trade_deal_heading: Cytundeb masnach y DU a’r UE
+      transparency: Gwybodaeth a ryddhawyd o dan FOI a thryloywder
+    topic_section_header: Yr holl wybodaeth am Brexit
+    topic_section_subheading: Pori'r holl wybodaeth cysylltiedig â Brexit
+    trade_deal_heading:
     trade_deal_links:
-    - text: "Crynodeb: Perthynas newydd y DU â’r UE"
-      path: "/government/publications/summary-the-uks-new-relationship-with-the-eu"
-      explainer: Mae’r crynodeb hwn o gytundeb masnach y DU a’r UE yn rhoi golwg gyffredinol o’r hyn sydd wedi newid, a’r hyn sy’n aros yr un fath ar ôl Brexit.
-    - text: "Protocol Gogledd Iwerddon"
-      path: "/government/publications/the-northern-ireland-protocol"
-      explainer: Manylion y cytundeb a wnaed gan Gyd-bwyllgor y Cytundeb Ymadael ar gyfer symud nwyddau i Ogledd Iwerddon, allan ohoni neu drwyddi.
-    topic_section_header: Yr holl wybodaeth am y cyfnod pontio
-    topic_section_subheading: Pori’r holl wybodaeth sy’n berthnasol i’r cyfnod pontio

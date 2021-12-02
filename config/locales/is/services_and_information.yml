@@ -1,6 +1,6 @@
 ---
 is:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Þjónusta og upplýsingar - %{title}
+    see_more_link: Sjá meira
+    title: Þjónusta og upplýsingar

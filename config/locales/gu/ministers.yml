@@ -1,9 +1,9 @@
 ---
 gu:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: કેબિનેટમાં પણ હાજરી આપે છે
+    by_department: વિભાગવાર મંત્રીઓ
+    cabinet: કેબિનેટ મંત્રીઓ
+    govuk_title: મંત્રીઓ - GOV.UK
+    title: મંત્રીઓ
+    whips: ઉપસ્થિત રહેવા માટે લેખિત આદેશો

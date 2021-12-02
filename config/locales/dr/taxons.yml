@@ -1,8 +1,8 @@
 ---
 dr:
   taxons:
-    explore_sub_topics:
-    organisations:
-    see_all_in_topic:
-    show_fewer_orgs:
-    show_more_orgs:
+    explore_sub_topics: موضوعات فرعی را جستجو نمایید
+    organisations: سازمان ها
+    see_all_in_topic: "%{type} بیشتری را در این مبحث مشاهده نمایید"
+    show_fewer_orgs: سازمان هایی کمتری را نشان دهید
+    show_more_orgs: سازمان هایی بیشتری را نشان دهید

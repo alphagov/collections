@@ -1,40 +1,26 @@
 ---
 kk:
   brexit_landing_page:
-    campaign_links:
-      lead_in:
-      lead_out:
-      links:
-    comms:
-      links:
-      read_transcript:
-    comms_header:
-    data_list_title:
-    email_mailto_subject:
-    guidance_header:
-    meta_description:
-    meta_title:
-    no_cookies:
-      change_settings_text:
-      icon_text:
-      or_text:
-      to_watch_text:
-      watch_link_text:
-    page_header:
-    page_header_explainer:
+    meta_description: Brexit жаңа ережелері Еуропамен саяхаттау және бизнес жүргізу сияқты нәрселерге қалай қолданылатынын біліңіз. Әрекеттердің жеке тізімін алу үшін Brexit тексеру құралын пайдаланыңыз.
+    meta_title: Brexit
+    page_header: Brexit
+    page_header_explainer: Еуропамен саяхаттау және бизнес жүргізу сияқты нәрселерге қолданылатын жаңа ережелер. Өзіңізге, кәсібіңізге және отбасыңызға арналған жеке әрекеттер тізімін алу үшін Brexit тексеру құралын пайдаланыңыз.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
-      aria_string_suffix:
-      guidance_and_regulation:
-      news_and_communications:
-      policy_and_engagement:
-      research_and_statistics:
-      services:
-      transparency:
-    share_links:
-    topic_section_header:
-    topic_section_subheading:
-    video_section_description:
-    video_section_link:
-    video_section_title:
-    video_section_transcription_summary:
-    video_section_transcription_text:
+      aria_string_suffix: Brexit қатысты
+      guidance_and_regulation: Нұсқаулық пен ереже
+      news_and_communications: Жаңалықтар мен байланыстар
+      policy_and_engagement: Саяси құжаттар мен кеңестер
+      research_and_statistics: Зерттеу және статистика
+      services: Қызметтер
+      transparency: Ақпарат шығарылымының ашықтығы мен еркіндігі
+    topic_section_header: Барлық Brexit ақпараты
+    topic_section_subheading: Brexit қатысты барлық ақпаратты шолу
+    trade_deal_heading:
+    trade_deal_links:

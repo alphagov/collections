@@ -1,9 +1,9 @@
 ---
 ru:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Также присудствует на заседании Кабинета
+    by_department: Министры по отделам
+    cabinet: Кабинет Министров
+    govuk_title: Министры - GOV.UK
+    title: Министры
+    whips: Повестки

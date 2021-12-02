@@ -1,6 +1,6 @@
 ---
 es-419:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Servicios e información - %{title}
+    see_more_link: Ver más
+    title: Servicios e información

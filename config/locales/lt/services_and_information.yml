@@ -1,6 +1,6 @@
 ---
 lt:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: Paslaugos ir informacija – %{title}
+    see_more_link: Daugiau
+    title: Paslaugos ir informacija

@@ -1,40 +1,26 @@
 ---
 es-419:
   brexit_landing_page:
-    campaign_links:
-      lead_in:
-      lead_out:
-      links:
-    comms:
-      links:
-      read_transcript:
-    comms_header:
-    data_list_title:
-    email_mailto_subject:
-    guidance_header:
-    meta_description:
-    meta_title:
-    no_cookies:
-      change_settings_text:
-      icon_text:
-      or_text:
-      to_watch_text:
-      watch_link_text:
-    page_header:
-    page_header_explainer:
+    meta_description: Descubra cómo se aplican las nuevas normas del Brexit a aspectos como viajes y negocios con Europa. Utilice el consultor del Brexit para obtener una lista personalizada de medidas.
+    meta_title: Brexit
+    page_header: Brexit
+    page_header_explainer: Las nuevas normas se aplican a aspectos como viajes y negocios con Europa. Utilice el consultor del Brexit para obtener una lista personalizada de medidas para usted, su empresa y su familia.
+    page_header_links:
+      guidance_for_businesses:
+        path:
+        text:
+      guidance_for_individuals_and_families:
+        path:
+        text:
     sections:
-      aria_string_suffix:
-      guidance_and_regulation:
-      news_and_communications:
-      policy_and_engagement:
-      research_and_statistics:
-      services:
-      transparency:
-    share_links:
-    topic_section_header:
-    topic_section_subheading:
-    video_section_description:
-    video_section_link:
-    video_section_title:
-    video_section_transcription_summary:
-    video_section_transcription_text:
+      aria_string_suffix: relacionado con el Brexit
+      guidance_and_regulation: Guía y regulación
+      news_and_communications: Noticias y comunicados
+      policy_and_engagement: Documentos normativos y consultas
+      research_and_statistics: Investigación y estadísticas
+      services: Servicios
+      transparency: Transparencia y libertad de información
+    topic_section_header: Toda la información sobre el Brexit
+    topic_section_subheading: Buscar toda la información relacionada con el Brexit
+    trade_deal_heading:
+    trade_deal_links:

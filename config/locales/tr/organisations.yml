@@ -1,163 +1,163 @@
 ---
 tr:
   organisations:
-    about_page_path:
-    administered_by:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: Yöneten
     breadcrumbs:
-      courts_and_tribunals:
-      organisations:
+      courts_and_tribunals: Mahkemeler
+      organisations: Kuruluşlar
     contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
+      contact_details: İrtibat ayrıntıları
+      contact_form: 'İrtibat formu: %{title}'
+      contact_organisation: İrtibat %{organisation}
+      email: E-posta
+      telephone: Telefon
     content_item:
       schema_name:
         aaib_report:
-          one:
-          other:
+          one: Hava Kazaları Soruşturma Şube raporu
+          other: Hava Kazaları Soruşturma Şube raporları
         announcement:
           one: Duyuru
           other: Duyurular
         asylum_support_decision:
-          one:
-          other:
+          one: Sığınma desteği mahkeme kararı
+          other: Sığınma desteği mahkeme kararları
         authored_article:
-          one: Yazılan makale
-          other: Yazılan makaleler
+          one: Yazılı makale
+          other: Yazılı makaleler
         business_finance_support_scheme:
-          one:
-          other:
+          one: İşletme finans desteği planı
+          other: İşletme finans desteği planları
         case_study:
-          one: Örnek Olay
-          other: Örnek Olaylar
+          one: Vaka incelemesi
+          other: Vaka incelemeleri
         closed_consultation:
-          one: Sona eren çalışmalar
-          other: Sona eren çalışmalar
+          one: Kapalı danışma
+          other: Kapalı danışmalar
         cma_case:
-          one:
-          other:
+          one: Rekabet ve Piyasalar Kurumu dosyası
+          other: Rekabet ve Piyasalar Kurumu dosyaları
         coming_soon:
-          one:
-          other:
+          one: Çok Yakında
+          other: Çok Yakında
         consultation:
           one: Danışma
-          other: Yapılan Danışmalar
+          other: Danışmalar
         consultation_outcome:
           one: Danışma sonucu
           other: Danışma sonuçları
         corporate_information_page:
-          one:
-          other:
+          one: Bilgi sayfası
+          other: Bilgi sayfaları
         corporate_report:
-          one: Kurumsal Rapor
-          other: Kurumsal Raporlar
+          one: Kurumsal rapor
+          other: Kurumsal raporlar
         correspondence:
           one: Yazışma
           other: Yazışmalar
         countryside_stewardship_grant:
-          one:
-          other:
+          one: Kırsal Koruma harcırahı
+          other: Kırsal Koruma harcırahları
         decision:
-          one:
-          other:
+          one: Karar
+          other: Kararlar
         detailed_guide:
-          one: Ayrıntılı Kılavuz
-          other: Ayrıntılı Kılavuzlar
+          one: Rehberlik
+          other: Rehberlik
         dfid_research_output:
-          one:
-          other:
+          one: Kalkınma Çıktıları Araştırması
+          other: Kalkınma Çıktıları Araştırmaları
         document_collection:
-          one: Seriler
-          other:
+          one: Toplama
+          other: Toplamalar
         draft_text:
           one: Taslak metin
           other: Taslak metinler
         drug_safety_update:
-          one:
-          other:
+          one: Uyuşturucu Güvenliği Bilgilendirmesi
+          other: Uyuşturucu Güvenliği Bilgilendirmeleri
         employment_appeal_tribunal_decision:
-          one:
-          other:
+          one: İstihdam temyiz mahkeme kararı
+          other: İstihdam temyiz mahkeme kararları
         employment_tribunal_decision:
-          one:
-          other:
+          one: İstihdam mahkemesi kararı
+          other: İstihdam mahkemesi kararları
         esi_fund:
-          one:
-          other:
+          one: Avrupa Yapısal ve Kalkınma Fonu (ESIF)
+          other: Avrupa Yapısal ve Kalkınma Fonları (ESIF)
         fatality_notice:
-          one: Ölüm ilanı
-          other: Ölüm ilanları
+          one: Hata bildirimi
+          other: Hata bildirimleri
         foi_release:
-          one: Bilgi edinme hakkı raporu
-          other: Bilgi edinme hakkı raporları
+          one: Bilgi Özgürlüğü duyurusu
+          other: Bilgi Özgürlüğü duyuruları
         form:
           one: Form
           other: Formlar
         government_response:
-          one: Hükümet cevabı
-          other: Hükümet cevapları
+          one: Devletin yanıtı
+          other: Devletin yanıtları
         guidance:
-          one: Kılavuz
-          other: Kılavuzlar
+          one: Rehberlik
+          other: Rehberlik
         impact_assessment:
           one: Etki değerlendirmesi
           other: Etki değerlendirmeleri
         imported:
-          one: Alındı - Kategorize edilecek
-          other: Alındı - Kategorize edilecek
+          one: İçe aktarıldı - tür bekleniyor
+          other: İçe aktarıldı - tür bekleniyor
         independent_report:
           one: Bağımsız rapor
           other: Bağımsız raporlar
         international_development_fund:
-          one:
-          other:
+          one: Uluslararası kalkınma fonu
+          other: Uluslararası kalkınma fonu
         international_treaty:
-          one:
-          other:
+          one: Uluslararası anlaşma
+          other: Uluslararası anlaşmalar
         maib_report:
-          one:
-          other:
+          one: Deniz Kazası Soruşturma Şube raporu
+          other: Deniz Kazası Soruşturma Şube raporları
         map:
           one: Harita
           other: Haritalar
         medical_safety_alert:
-          one:
-          other:
+          one: İlaçlar ve tıbbi cihazlar için uyarılar ve geri çağırmalar
+          other: İlaçlar ve tıbbi cihazlar için uyarılar ve geri çağırmalar
         national:
-          one:
-          other:
+          one: Ulusal İstatistik duyurusu
+          other: Ulusal İstatistik duyuruları
         national_statistics:
-          one: İstatistikler - ulusal istatistikler
-          other: İstatistikler - ulusal istatistikler
+          one: Ulusal İstatistikler
+          other: Ulusal İstatistikler
         national_statistics_announcement:
-          one:
-          other:
+          one: Ulusal İstatistik duyurusu
+          other: Ulusal İstatistik duyuruları
         news_article:
-          one: Makale
-          other: Makaleler
+          one: Haber makalesi
+          other: Haber makaleleri
         news_story:
-          one: Haber
-          other: Haberler
+          one: Haber makalesi
+          other: Haber hikayeleri
         notice:
-          one:
-          other:
+          one: Bildirim
+          other: Bildirimler
         official:
-          one:
-          other:
+          one: Ulusal İstatistik duyurusu
+          other: Ulusal İstatistik duyuruları
         official_statistics:
-          one: İstatistikler
-          other: İstatistikler
+          one: Resmi İstatistikler
+          other: Resmi İstatistikler
         official_statistics_announcement:
-          one:
-          other:
+          one: Ulusal İstatistik duyurusu
+          other: Ulusal İstatistik duyuruları
         open_consultation:
-          one: Devam eden çalışma
-          other: Devam eden çalışmalar
+          one: Açık danışma
+          other: Açık danışmalar
         oral_statement:
-          one: Parlamento'ya sözlü açıklama
-          other: Parlamento'ya sözlü açıklamalar
+          one: Parlamentoya sözlü açıklama
+          other: Parlamentoya sözlü açıklamalar
         policy:
           one: Politika
           other: Politikalar
@@ -165,169 +165,177 @@ tr:
           one: Politika belgesi
           other: Politika belgeleri
         press_release:
-          one: Basın Bülteni
-          other: Basın Bültenleri
+          one: Basın duyurusu
+          other: Basın duyuruları
         promotional:
-          one: Tanıtım Malzemesi
-          other: Tanıtım Malzemeleri
+          one: Promosyon malzemesi
+          other: Promosyon malzemesi
         publication:
           one: Yayın
           other: Yayınlar
         raib_report:
-          one:
-          other:
+          one: Demiryolu Kazası Soruşturma Şube raporu
+          other: Demiryolu Kazası Soruşturma Şube raporları
         regulation:
-          one:
-          other:
+          one: Düzenleme
+          other: Düzenlemeler
         research:
-          one: Araştırma ve analiz
-          other: Araştırma ve analizler
+          one: Arama ve analiz
+          other: Arama ve analiz
         residential_property_tribunal_decision:
-          one:
-          other:
+          one: Meskun mahaldeki emlak mahkeme kararı
+          other: Meskun mahaldeki emlak mahkeme kararları
         service_sign_in:
-          one:
-          other:
+          one: Hizmet oturum aç
+          other: Hizmet oturum aç
         service_standard_report:
-          one:
-          other:
+          one: Hizmet Standardı Raporu
+          other: Hizmet Standardı Raporları
         speaking_notes:
-          one: Konuşma notu
+          one: Konuşma notları
           other: Konuşma notları
         speech:
           one: Konuşma
           other: Konuşmalar
         standard:
-          one:
-          other:
+          one: Standart
+          other: Standartlar
         statement_to_parliament:
-          one: Parlamento'ya yapılan açıklama
-          other: Parlamento'ya yapılan açıklamalar
+          one: Parlamentoya Açıklama
+          other: Parlamentoya Açıklamalar
         statistical_data_set:
-          one: İstatiksel veri setleri
-          other: İstatiksel veri setleri
+          one: İstatistiki veri kümesi
+          other: İstatistiki veri kümeleri
         statistics_announcement:
-          one:
-          other:
+          one: İstatistik açıklama duyurusu
+          other: İstatistik açıklama duyuruları
         statutory_guidance:
-          one:
-          other:
+          one: Mevzuat rehberi
+          other: Mevzuat rehberi
         take_part:
-          one:
-          other:
+          one: Katıl
+          other: Katıl
         tax_tribunal_decision:
-          one:
-          other:
+          one: Vergi ve Temyiz mahkemesi kararı
+          other: Vergi ve Temyiz mahkemesi kararları
         transcript:
-          one: Transkriptler
+          one: Transkript
           other: Transkriptler
         transparency:
-          one: Veri saydamlığı
-          other: Veri saydamlığı
+          one: Şeffaflık verileri
+          other: Şeffaflık verileri
         utaac_decision:
-          one:
-          other:
+          one: İdari temyiz mahkemesi kararı
+          other: İdari temyiz mahkemesi kararları
         world_location_news_article:
-          one: Makale
-          other: Makaleler
+          one: Haber makalesi
+          other: Haber makaleleri
         world_news_story:
-          one:
-          other:
+          one: Dünya geneli haber makalesi
+          other: Dünya geneli haber makaleleri
         written_statement:
-          one: Parlamento'ya yapılan yazılı açıklama
-          other: Parlamento'ya yapılan yazılı açıklamalar
-    corporate_information:
+          one: Parlamentoya yazılı açıklama
+          other: Parlamentoya yazılı açıklamalar
+    corporate_information: Kurumsal bilgiler
     document_types:
-      documents:
+      documents: Belgeler
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Tüm kılavuz ve düzenlemelere bakın
+        title: Kılavuz ve düzenleme
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Tüm haber ve iletilere bakın
+        title: Haber ve iletiler
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Tüm politika belgeleri ve danışmalara bakın
+        title: Politika belgeleri ve danışmalar
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Tüm arama ve istatistiklere bakın
+        title: Arama ve istatistikler
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Tüm hizmetlere bakın
+        title: Hizmetler
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: Tüm bilgi edinme şeffaflığı ve özgürlüğü açıklamalarına bakın
+        title: Bilgi edinme açıklamalarının şeffaflığı ve özgürlüğü
+    errors_or_omissions_html: <p>Hatalar veya eksiklikler mi var? <a class="govuk-link" href="/contact/govuk">Buradan bize söyleyin</a>. Müdürlük dışı kamu kurumlarının resmi listeleri için <a class="govuk-link" href="/government/collections/public-bodies">kamu kurumlarına bakın</a>.</p>
+    featured: Öne çıkan
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: Bilgi Edinme Özgürlüğü irtibat formu
+      foi_exemption_html: |
+        Bu kuruluş Bilgi Edinme Özgürlüğü Kanunu kapsamına girmemektedir.
+        Hangi kuruluşların dahil olduğunu görmek için, <a href="%{foi_url}" class="govuk-link brand__color">yasal mevzuata</a> bakın.
+      freedom_of_information_act: Bilgi Edinme Özgürlüğü (FOI) Kanunu
+      freedom_of_information_requests: Bilgi Edinme Özgürlüğü talepleri
+      make_an_foi_request: Bir Bilgi Edinme Özgürlüğü talebinde bulunun
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: Bilgi Edinme Özgürlüğü (FOI) Kanunu ve <a href="%{how_to_path}" class="govuk-link brand__color">nasıl talep yapılacağı</a> hakkında okuyun.
+        step2_html: Sorunuza zaten cevap verip vermediğimizi görmek için <a href="%{our_releases_path}" class="govuk-link brand__color">önceki açıklamalarımıza</a> bakın.
+        step3_html: Aşağıdaki bilgileri kullanarak bizimle irtibata geçerek yeni bir talep yapın.
+    follow_us: Bizi takip edin
+    hidden_share_link: Bizi şuradan takip edin
+    high_profile_groups: "%{title} içerisindeki yüksek profilli gruplar"
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: İşler ve sözleşmeler
+    latest_from: "%{title} kaynaklı en güncel olanlar"
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name_html: "%{title} artık <a href='%{link_href}'>%{link_text}</a> olarak adlandırılıyor"
+      devolved_html: "%{title} bir <a href='%{link_href}'>%{link_text}</a> kurumudur"
+      joining: "%{title} yakında GOV.UK sitesine eklenecek"
+      left_gov: "%{title} artık İngiltere devletinden bağımsızdır"
+      merged_html: "%{title} <a href='%{link_href}'>%{link_text}</a> %{updated} parçası oldu"
+      merged_no_date_html: "%{title} artık <a href='%{link_href}'>%{link_text}</a> bünyesinde"
+      no_longer_exists: "%{title} kapandı"
+      no_website: "%{title} kendisine ait bir web sitesine sahip değil"
+      separate_website_html: "%{title} <a href='%{url}'>ayrı bir web sitesine</a> sahip"
+      split_html: "%{title}, %{links} ile değiştirildi"
+    part_of: Şunun kısmı
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: Yönetimimiz
+      chief_professional_officers: Başlıca uzman yetkililerimiz
+      military_personnel: Kıdemli askeri yetkililerimiz
+      ministers: Bakanlarımız
+      special_representatives: Özel temsilciler
+      traffic_commissioners: Trafik görevlileri
+    read_more: Neler yaptığımızla ilgili daha fazla okuyun
+    search_for_department: Müdürlük, kurum veya kamu kuruluşu arayın
+    see_all_latest_documents: En güncel tüm belgelere bak
+    separate_website: Ayrı web sitesi
+    services_and_information: Tüm %{acronym} hizmetleri ve bilgisi
     subscription:
-      email:
-      feed:
+      email: E-postalar al
+      feed: Yayına abone ol
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      ":":
+      adhoc_advisory_group: Geçici danışma grubu
+      advisory_ndpb: Danışma nitelikli müdürlük dışı kamu kuruluşu
+      civil_service: Kamu görevi
+      court:
+      devolved_administration:
+      executive_agency: Yürütme ajansı
+      executive_ndpb: Yürütme nitelikli müdürlük dışı kamu kuruluşu
+      executive_office:
+      independent_monitoring_body: Bağımsız izleme kuruluşu
+      ministerial_department:
+      non_ministerial_department: Bakanlık dışı müdürlük
+      other: Diğer
+      public_corporation: Kamu kurumu
+      sub_organisation:
+      tribunal: Mahkeme
+    view_all: hepsini gör
+    view_less: daha az gör
+    what_we_do: "%{title} ne iş yapar"
     works_with_statement:
-      multiple:
-      one:
+      multiple: "%{works_with_count} kurum ve kamu kuruluşuyla birlikte çalışır"
+      one: "%{works_with_count} kamu kuruluşuyla birlikte çalışır"

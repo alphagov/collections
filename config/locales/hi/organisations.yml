@@ -1,34 +1,34 @@
 ---
 hi:
   organisations:
-    about_page_path:
-    administered_by:
+    about_page_path: "/government/organisations/%{organisation}/about.%{language_code}"
+    administered_by: प्रशासक
     breadcrumbs:
-      courts_and_tribunals:
-      organisations:
+      courts_and_tribunals: न्यायालय और न्यायाधिकरण
+      organisations: संस्थाएं
     contact:
-      contact_details:
-      contact_form:
-      contact_organisation:
-      email:
-      telephone:
+      contact_details: संपर्क के विवरण
+      contact_form: 'संपर्क प्रपत्र: %{title}'
+      contact_organisation: संपर्क करें %{organisation}
+      email: ईमेल
+      telephone: टेलीफ़ोन
     content_item:
       schema_name:
         aaib_report:
-          one:
-          other:
+          one: हवाई दुर्घटना जांच शाखा की रिपोर्ट
+          other: हवाई दुर्घटना जांच शाखा की रिपोर्टें
         announcement:
           one: घोषणा
           other: घोषणाएं
         asylum_support_decision:
-          one:
-          other:
+          one: आश्रय स्थल सहायता न्यायाधिकरण का निर्णय
+          other: आश्रय स्थल सहायता न्यायाधिकरण के निर्णय
         authored_article:
           one: मूल आलेख
           other: मूल आलेख
         business_finance_support_scheme:
-          one:
-          other:
+          one: व्यावसायिक वित्त सहायता योजना
+          other: व्यावसायिक वित्त सहायता योजनाएं
         case_study:
           one: विषय अध्ययन
           other: विषय अध्ययन
@@ -36,11 +36,11 @@ hi:
           one: बंद कमरे में परामर्श
           other: बंद कमरे में परामर्श
         cma_case:
-          one:
-          other:
+          one: प्रतिस्पर्धा और बाज़ार प्राधिकरण मामला
+          other: प्रतिस्पर्धा और बाज़ार प्राधिकरण मामले
         coming_soon:
-          one:
-          other:
+          one: जल्द आ रहा है
+          other: जल्द आ रहा है
         consultation:
           one: परामर्श
           other: परामर्श
@@ -48,8 +48,8 @@ hi:
           one: परामर्श का नतीजा
           other: परामर्श के नतीजे
         corporate_information_page:
-          one:
-          other:
+          one: सूचना का पेज
+          other: सूचना के पेज
         corporate_report:
           one: कॉरपोरेट विवरण
           other: कॉरपोरेट विवरण
@@ -57,35 +57,35 @@ hi:
           one: पत्र व्यवहार
           other: पत्र व्यवहार
         countryside_stewardship_grant:
-          one:
-          other:
+          one: देहात प्रबंधन का अनुदान
+          other: देहात प्रबंधन के अनुदान
         decision:
-          one:
-          other:
+          one: फैसला
+          other: फैसले
         detailed_guide:
-          one: विस्तृत मार्गदर्शन
-          other: विस्तृत मार्गदर्शन
+          one: मार्गदर्शन
+          other: मार्गदर्शन
         dfid_research_output:
-          one:
-          other:
+          one: विकास के लिए शोध का परिणाम
+          other: विकास के लिए शोध के परिणाम
         document_collection:
           one: श्रृंखला
-          other:
+          other: श्रृंखलाएं
         draft_text:
           one: मसौदा पाठ
           other: मसौदे के पाठ
         drug_safety_update:
-          one:
-          other:
+          one: दवा सुरक्षा का अपडेट
+          other: दवा सुरक्षा के अपडेट
         employment_appeal_tribunal_decision:
-          one:
-          other:
+          one: रोजगार निवेदन न्यायाधिकरण का फैसला
+          other: रोजगार निवेदन न्यायाधिकरण के फैसले
         employment_tribunal_decision:
-          one:
-          other:
+          one: रोजगार न्यायाधिकरण का फैसला
+          other: रोजगार न्यायाधिकरण के फैसले
         esi_fund:
-          one:
-          other:
+          one: यूरोपीय संरचनात्मक और निवेश कोष (European Structural and Investment Fund, ESIF)
+          other: यूरोपीय संरचनात्मक और निवेश कोष (European Structural and Investment Fund, ESIF)
         fatality_notice:
           one: विपत्ति की सूचना
           other: विपत्ति की सूचना
@@ -111,29 +111,29 @@ hi:
           one: स्वतंत्र रिपोर्ट
           other: स्वतंत्र रिपोर्टें
         international_development_fund:
-          one:
-          other:
+          one: अंतरराष्ट्रीय विकास निधि
+          other: अंतरराष्ट्रीय विकास निधि
         international_treaty:
-          one:
-          other:
+          one: अंतरराष्ट्रीय संधि
+          other: अंतरराष्ट्रीय संधियां
         maib_report:
-          one:
-          other:
+          one: समुद्री दुर्घटना जांच शाखा की रिपोर्ट
+          other: समुद्री दुर्घटना जांच शाखा की रिपोर्टें
         map:
           one: मानचित्र
           other: मानचित्रों
         medical_safety_alert:
-          one:
-          other:
+          one: दवाओं और चिकित्सा उपकरणों के लिए चेतावनियां और रिकॉल
+          other: दवाओं और चिकित्सा उपकरणों के लिए चेतावनियां और रिकॉल
         national:
-          one:
-          other:
+          one: राष्ट्रीय सांख्यिकी की घोषणा
+          other: राष्ट्रीय सांख्यिकी की घोषणाएं
         national_statistics:
-          one: सांख्यिकी - राष्ट्रीय सांख्यिकी
-          other: सांख्यिकी - राष्ट्रीय सांख्यिकी
+          one: राष्ट्रीय सांख्यिकी
+          other: राष्ट्रीय सांख्यिकी
         national_statistics_announcement:
-          one:
-          other:
+          one: राष्ट्रीय सांख्यिकी की घोषणा
+          other: राष्ट्रीय सांख्यिकी की घोषणाएं
         news_article:
           one: समाचार लेख
           other: समाचार लेख
@@ -141,17 +141,17 @@ hi:
           one: समाचार कथा
           other: समाचार कथाएं
         notice:
-          one:
-          other:
+          one: नोटिस
+          other: नोटिस
         official:
-          one:
-          other:
+          one: आधिकारिक सांख्यिकी की घोषणा
+          other: आधिकारिक सांख्यिकी की घोषणाएं
         official_statistics:
-          one: आंकड़े
-          other: आंकड़े
+          one: आधिकारिक सांख्यिकी
+          other: आधिकारिक सांख्यिकी
         official_statistics_announcement:
-          one:
-          other:
+          one: आधिकारिक सांख्यिकी की घोषणा
+          other: आधिकारिक सांख्यिकी की घोषणाएं
         open_consultation:
           one: खुला परामर्श
           other: खुले परामर्श
@@ -174,23 +174,23 @@ hi:
           one: प्रकाशन
           other: प्रकाशन
         raib_report:
-          one:
-          other:
+          one: रेल दुर्घटना जांच शाखा की रिपोर्ट
+          other: रेल दुर्घटना जांच शाखा की रिपोर्टें
         regulation:
-          one:
-          other:
+          one: विनियमन
+          other: विनियमों
         research:
           one: अनुसंधान एवं विश्लेषण
           other: अनुसंधान एवं विश्लेषण
         residential_property_tribunal_decision:
-          one:
-          other:
+          one: आवासीय संपत्ति न्यायाधिकरण का फैसला
+          other: आवासीय संपत्ति न्यायाधिकरण के फैसले
         service_sign_in:
-          one:
-          other:
+          one: सेवा साइन इन
+          other: सेवा साइन इन
         service_standard_report:
-          one:
-          other:
+          one: सेवा मानक की रिपोर्ट
+          other: सेवा मानक की रिपोर्टें
         speaking_notes:
           one: " उदबोधन अंश"
           other: " उदबोधन अंश"
@@ -198,8 +198,8 @@ hi:
           one: भाषण
           other: भाषण
         standard:
-          one:
-          other:
+          one: मानक
+          other: मानकों
         statement_to_parliament:
           one: संसद में बयान
           other: संसद में बयान
@@ -207,17 +207,17 @@ hi:
           one: सांख्यिकीय आंकड़े का समूह
           other: सांख्यिकीय आंकड़े का समूह
         statistics_announcement:
-          one:
-          other:
+          one: सांख्यिकी विज्ञप्ति की घोषणा
+          other: सांख्यिकी विज्ञप्ति की घोषणाएं
         statutory_guidance:
-          one:
-          other:
+          one: वैधानिक मार्गदर्शन
+          other: वैधानिक मार्गदर्शन
         take_part:
-          one:
-          other:
+          one: हिस्सा लें
+          other: हिस्सा लें
         tax_tribunal_decision:
-          one:
-          other:
+          one: कर और कार्यालय न्यायाधिकरण का फैसला
+          other: कर और कार्यालय न्यायाधिकरण के फैसले
         transcript:
           one: प्रतिलिपि
           other: प्रतिलिपियां
@@ -225,109 +225,115 @@ hi:
           one: पारदर्शिता आंकड़े
           other: पारदर्शिता आंकड़े
         utaac_decision:
-          one:
-          other:
+          one: प्रशासनिक निवेदन न्यायाधिकरण का फैसला
+          other: प्रशासनिक निवेदन न्यायाधिकरण के फैसले
         world_location_news_article:
           one: समाचार लेख
           other: समाचार लेख
         world_news_story:
-          one:
-          other:
+          one: विश्व की समाचार कथा
+          other: विश्व की समाचार कथाएं
         written_statement:
           one: संसद में लिखित बयान
           other: संसद में लिखित बयान
-    corporate_information:
+    corporate_information: कारपोरेट सूचना
     document_types:
-      documents:
+      documents: दस्तावेज़
       guidance_and_regulation:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
+          text: सभी मार्गदर्शन और विनियमन देखें
+        title: मार्गदर्शन और विनियमन
       news_and_communications:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
+          text: सभी खबरें और संचार देखें
+        title: खबर और संचार
       policy_and_engagement:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
+          text: सभी नीति के कागज़ात और सलाहें देखें
+        title: नीति के कागज़ात और सलाह
       research_and_statistics:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
+          text: सभी अनुसंधान और सांख्यिकी देखें
+        title: अनुसंधान और सांख्यिकी
       services:
         see_all:
-          path:
-          text:
-        title:
+          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
+          text: सभी सेवाएं देखें
+        title: सेवाएं
       transparency:
         see_all:
-          path:
-          text:
-        title:
-    errors_or_omissions_html:
-    featured:
+          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
+          text: सभी पारदर्शिता और सूचना जारी करने की आज़ादी देखें
+        title: पारदर्शिता और सूचना जारी करने की आज़ादी
+    errors_or_omissions_html: <p>त्रुटियां या चूक? <a class="govuk-link" href="/contact/govuk">हमें यहां बताएं</a>। For official lists of non–departmental public bodies <a class="govuk-link" href="/government/collections/public-bodies">सार्वजनिक निकाय देखें</a>।</p>
+    featured: फीचर्ड
     foi:
-      contact_form:
-      foi_exemption_html:
-      freedom_of_information_act:
-      freedom_of_information_requests:
-      make_an_foi_request:
+      contact_form: एफओआई संपर्क प्रपत्र
+      foi_exemption_html: यह संगठन सूचना की आज़ादी अधिनियम द्वारा कवर नहीं किया गया है। शामिल संगठनों की जानकारी देखने के लिए, <a href="%{foi_url}" class="govuk-link brand__color">कानून</a>देखें।
+      freedom_of_information_act: सूचना की आज़ादी (Freedom of Information, FOI)अधिनियम
+      freedom_of_information_requests: सूचना की आज़ादी के अनुरोध
+      make_an_foi_request: एफओआई अनुरोध करें
       making_foi_requests:
-        step1_html:
-        step2_html:
-        step3_html:
-    follow_us:
-    hidden_share_link:
-    high_profile_groups:
-    index_title:
-    jobs_contracts:
-    latest_from:
+        step1_html: सूचना की आज़ादी (एफओआई) अधिनियम और <a href="%{how_to_path}" class="govuk-link brand__color">अनुरोध कैसे करें</a>के बारे में पढ़ें।
+        step2_html: <a href="%{our_releases_path}" class="govuk-link brand__color">हमारी पिछली विज्ञप्तियां</a> जांचकर देखें कि क्या हमने पहले ही आपके सवाल का जवाब दे दिया है।
+        step3_html: नीचे दिए गए विवरणों का प्रयोग करके हमसे संपर्क करें और नया अनुरोध दें।
+    follow_us: हमें फॉलो करें
+    hidden_share_link: इस पर फॉलो करें
+    high_profile_groups: "%{title} के अंदर हाई प्रोफाइल समूह"
+    index_title: "%{title} - GOV.UK"
+    jobs_contracts: नौकरी एवं अनुबंध
+    latest_from: "%{title} से नवीनतम"
     notices:
-      changed_name:
-      devolved:
-      joining:
-      left_gov:
-      merged:
-      merged_no_date:
-      no_longer_exists:
-      no_website:
-      separate_website:
-      split:
-    part_of:
+      changed_name_html: "%{title} को अब <a href='%{link_href}'>%{link_text}</a> कहा जाता है"
+      devolved_html: "%{title} <a href='%{link_href}'>%{link_text}</a> का निकाय है"
+      joining: "%{title} जल्द ही GOV.UK में शामिल हो जाएगा"
+      left_gov: "%{title} अब यूनाइडेट किंगडम सरकार से स्वतंत्र है"
+      merged_html: "%{title} %{updated} में <a href='%{link_href}'>%{link_text}</a> का हिस्सा बन गया"
+      merged_no_date_html: "%{title} <a href='%{link_href}'>%{link_text}</a>का हिस्सा है"
+      no_longer_exists: "%{title} बंद हो गया है"
+      no_website: "%{title} की कोई वेबसाइट नहीं है"
+      separate_website_html: "%{title} की एक <a href='%{url}'>अलग वेबसाइट है</a>"
+      split_html: "%{title} की जगह %{links} ने ले ली"
+    part_of: का भाग
     people:
-      board_members:
-      chief_professional_officers:
-      military_personnel:
-      ministers:
-      special_representatives:
-      traffic_commissioners:
-    read_more:
-    search_for_department:
-    see_all_latest_documents:
-    separate_website:
-    services_and_information:
+      board_members: हमारा प्रबंधन
+      chief_professional_officers: मुख्य पेशेवर अधिकारी
+      military_personnel: हमारे वरिष्ठ सैन्य अधिकारी
+      ministers: हमारे मंत्री
+      special_representatives: विशेष प्रतिनिधि
+      traffic_commissioners: यातायात आयुक्त
+    read_more: हम काम के बारे में और पढ़ें
+    search_for_department: किसी विभाग, एजेंसी या सार्वजनिक निकाय को खोजें
+    see_all_latest_documents: सभी नवीनतम दस्तावेज़ देखें
+    separate_website: अलग वेबसाइट
+    services_and_information: सभी %{acronym} सेवाएं और जानकारी
     subscription:
-      email:
-      feed:
+      email: ईमेल प्राप्त करें
+      feed: फीड के लिए सब्स्क्राइब करें
     type:
-      adhoc_advisory_group:
-      advisory_ndpb:
-      civil_service:
-      executive_agency:
-      executive_ndpb:
-      independent_monitoring_body:
-      non_ministerial_department:
-      other:
-      public_corporation:
-      tribunal:
-    view_all:
-    view_less:
-    what_we_do:
+      ":":
+      adhoc_advisory_group: विशेष सलाहकार समूह
+      advisory_ndpb: सलाहकार गैर-विभागीय सार्वजनिक निकाय
+      civil_service: सिविल सेवा
+      court:
+      devolved_administration:
+      executive_agency: कार्यकारी एजेंसी
+      executive_ndpb: कार्यकारी गैर-विभागीय सार्वजनिक निकाय
+      executive_office:
+      independent_monitoring_body: स्वतंत्र जांच निकाय
+      ministerial_department:
+      non_ministerial_department: गैर-मंत्रालयी विभाग
+      other: अन्य
+      public_corporation: सार्वजनिक निगम
+      sub_organisation:
+      tribunal: न्यायाधिकरण
+    view_all: सभी देखें
+    view_less: कम देखें
+    what_we_do: "%{title} क्या करता है"
     works_with_statement:
-      multiple:
-      one:
+      multiple: "%{works_with_count} एजेंसियों और सार्वजनिक निकायों के साथ काम करता है"
+      one: "%{works_with_count} सार्वजनिक निकाय के साथ काम करता है"

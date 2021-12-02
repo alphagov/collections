@@ -214,16 +214,16 @@ yi:
     jobs_contracts:
     latest_from:
     notices:
-      changed_name:
-      devolved:
+      changed_name_html:
+      devolved_html:
       joining:
       left_gov:
-      merged:
-      merged_no_date:
+      merged_html:
+      merged_no_date_html:
       no_longer_exists:
       no_website:
-      separate_website:
-      split:
+      separate_website_html:
+      split_html:
     part_of:
     people:
       board_members:
@@ -241,15 +241,21 @@ yi:
       email:
       feed:
     type:
+      ":":
       adhoc_advisory_group:
       advisory_ndpb:
       civil_service:
+      court:
+      devolved_administration:
       executive_agency:
       executive_ndpb:
+      executive_office:
       independent_monitoring_body:
+      ministerial_department:
       non_ministerial_department:
       other:
       public_corporation:
+      sub_organisation:
       tribunal:
     view_all:
     view_less:

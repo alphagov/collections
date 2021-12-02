@@ -1,19 +1,19 @@
 ---
 ar:
   roles:
-    find_out_more_html:
+    find_out_more_html: تعرَّف على المزيد حول المكلفين بهذا الدور السابقين في قسم %{link} لدينا.
     heading:
       few:
       many:
-      one:
-      other:
+      one: دور
+      other: أدوار
       two:
       zero:
     headings:
-      current_holder:
-      previous_holders:
-      responsibilities:
-    ministerial:
-    past:
-    previous_holders:
-    read_more:
+      current_holder: المكلف حاليًا بالدور
+      previous_holders: المكلفين السابقين
+      responsibilities: المسؤوليات
+    ministerial: دور وزاري
+    past: سابق
+    previous_holders: المكلفين السابقين بهذا الدور
+    read_more: المزيد حول هذا الدور

@@ -1,9 +1,9 @@
 ---
 tr:
   ministers:
-    also_attends_title:
-    by_department_title:
-    cabinet_title:
-    govuk_title:
-    title:
-    whips:
+    also_attends: Kabineye de katılıyor
+    by_department: Müdürlüğe göre bakanlar
+    cabinet: Kabinedeki bakanlar
+    govuk_title: Bakanlar - GOV.UK
+    title: Bakanlar
+    whips: Milletvekilleri

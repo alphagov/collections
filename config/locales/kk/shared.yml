@@ -1,12 +1,12 @@
 ---
 kk:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: Басты бет
     browse:
-      prefix:
-      title:
-    get_emails:
-    language_direction:
-    language_name: Qazaq
+      prefix: 'Шолу:'
+      title: GOV.UK шолу
+    get_emails: Осы тақырып бойынша электрондық хаттарды алу
+    language_direction: ltr
+    language_name: Қазақ
     topics:
-      title:
+      title: "%{title}: егжей-тегжейлі ақпарат"

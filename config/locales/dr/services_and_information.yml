@@ -1,6 +1,6 @@
 ---
 dr:
   services_and_information:
-    organisation_title:
-    see_more_link:
-    title:
+    organisation_title: خدمات و معلومات - {title}%
+    see_more_link: بیشتر بیبینید
+    title: خدمات و معلومات
