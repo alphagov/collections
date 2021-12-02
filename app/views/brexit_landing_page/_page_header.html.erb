@@ -1,24 +1,9 @@
 <% content_for :is_full_width_header, true %>
 <% content_for :title, t("brexit_landing_page.meta_title") %>
 <% content_for :meta_tags do %>
-  <% page_url = File.join(request.base_url, request.path) %>
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="GOV.UK">
-  <meta property="og:url" content="<%= page_url %>">
-  <meta property="og:title" content="<%= t("brexit_landing_page.meta_title") %>">
-  <meta property="og:description" content="<%= t("brexit_landing_page.meta_description") %>">
-  <meta property="og:image" content="<%= image_url("transition-period.png") %>" />
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="<%= image_url("transition-period.png") %>">
   <meta name="description" content="<%= t("brexit_landing_page.meta_description") %>">
 
-  <%= render "govuk_publishing_components/components/meta_tags", {
-    content_item: {
-      navigation_page_type: "Taxon Page",
-    }
-  } %>
-
-  <link rel="canonical" href="<%= page_url %>">
+  <%= render 'govuk_publishing_components/components/machine_readable_metadata', content_item: @content_item, schema: :article %>
 <% end %>
 
 <header class="landing-page__header">

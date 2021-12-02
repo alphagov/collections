@@ -10,6 +10,12 @@ class BrexitLandingPageController < ApplicationController
   def show
     setup_content_item_and_navigation_helpers(taxon)
 
+    @content_item.merge!(
+      "navigation_page_type" => "Taxon Page",
+      "title" => t("brexit_landing_page.meta_title"),
+      "description" => t("brexit_landing_page.meta_description"),
+    )
+
     render locals: {
       presented_taxon: presented_taxon,
       presentable_section_items: presentable_section_items,
