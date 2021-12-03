@@ -65,8 +65,8 @@ Then(/^I see the list of second level browse pages$/) do
 end
 
 Then(/^I see the curated list of second level browse pages$/) do
-  expect(page).to have_selector("div.curated li:nth-child(1)", text: "Judges"), "Judges should appear first"
-  expect(page).to have_selector("div.curated li:nth-child(2)", text: "Courts"), "Courts should appear second"
+  expect(page).to have_selector(".browse__inner--curated li:nth-child(1)", text: "Judges"), "Judges should appear first"
+  expect(page).to have_selector(".browse__inner--curated li:nth-child(2)", text: "Courts"), "Courts should appear second"
 end
 
 When(/^I click on a second level browse page$/) do
