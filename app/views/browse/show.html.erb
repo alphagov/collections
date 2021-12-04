@@ -11,6 +11,15 @@
 
 <h1 class="govuk-visually-hidden"><%= t("shared.browse.title") %></h1>
 
+<% if request.url.include?("/browse/benefits") %>
+  <%= render "govuk_publishing_components/components/intervention", {
+    suggestion_text: "Help improve GOV.UK",
+    suggestion_link_text: "Sign up to take part in user research",
+    suggestion_link_url: "https://www.optimalworkshop.com/treejack/",
+    new_tab: true,
+  } %>
+<% end %>
+
 <div class="browse-panes section" data-state="section" data-module="gem-track-click">
   <div id="section" class="section-pane pane with-sort">
     <%= render 'second_level_browse_page/second_level_browse_pages',

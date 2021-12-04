@@ -39,8 +39,66 @@
     this.$el.on('click', 'a', this.navigate.bind(this))
 
     $(window).on('popstate', this.popState.bind(this))
+
+    this.initBanner()
   }
   BrowseColumns.prototype = {
+    initBanner: function() {
+      var main = document.getElementById("content")
+      var banner = document.getElementsByClassName("gem-c-intervention")
+
+      if (banner.length === 0) {
+        /*
+          <section class="gem-c-intervention" role="region" aria-label="Intervention" data-module="intervention">
+            <p class="govuk-body">
+              <span class="gem-c-intervention__textwrapper">Help improve GOV.UK</span>
+                <a class="govuk-link gem-c-intervention__suggestion-link" href="/travel-abroad" target="_blank" rel="noopener noreferrer">Sign up to take part in user research (opens in a new tab)</a>
+            </p>
+          </section>
+        */
+        var bannerHTML = document.createElement("SECTION")
+        bannerHTML.classList.add("gem-c-intervention")
+        bannerHTML.setAttribute("role", "region")
+        bannerHTML.setAttribute("aria-label", "region")
+        bannerHTML.setAttribute("data-module", "intervention")
+        bannerHTML.hidden = true
+
+        var pHTML = document.createElement("P")
+        pHTML.classList.add("govuk-body")
+
+        var spanHTML = document.createElement("SPAN")
+        spanHTML.classList.add("gem-c-intervention__textwrapper")
+        var heplImproveText = document.createTextNode("Help improve GOV.UK")
+        spanHTML.appendChild(heplImproveText)
+
+        var aTagHTML = document.createElement("A")
+        aTagHTML.classList.add("govuk-link")
+        aTagHTML.classList.add("gem-c-intervention__suggestion-link")
+        aTagHTML.setAttribute("href", "https://www.optimalworkshop.com/treejack/")
+        aTagHTML.setAttribute("target", "_blank")
+        aTagHTML.setAttribute("rel", "noopener noreferrer external")
+        var aTagText = document.createTextNode("Sign up to take part in user research (opens in a new tab)")
+        aTagHTML.appendChild(aTagText)
+
+        pHTML.appendChild(spanHTML)
+        pHTML.appendChild(aTagHTML)
+
+
+        bannerHTML.appendChild(pHTML)
+
+        main.insertBefore(bannerHTML, main.childNodes[0])
+      }
+    },
+    banner: function(slug) {
+      var topicSlugs = ["benefits", "benefits/manage-your-benefit"]
+      var banner = document.getElementsByClassName("gem-c-intervention")[0]
+
+      if (topicSlugs.some(function(topicSlug) { return slug == topicSlug })) {
+        banner.hidden = false
+      } else {
+        banner.hidden = true
+      }
+    },
     popState: function (e) {
       var state = e.originalEvent.state
       var loadPromise
@@ -338,6 +396,9 @@
         e.preventDefault()
 
         var state = this.parsePathname(e.currentTarget.pathname)
+
+        this.banner(state.slug)
+
         state.title = $target.text()
 
         if (state.path === window.location.pathname) {

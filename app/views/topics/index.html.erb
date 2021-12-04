@@ -8,7 +8,15 @@
     }
   } %>
 <% end %>
+
 <% content_for :page_class, "topics-page" %>
+
+  <%= render "govuk_publishing_components/components/intervention", {
+    suggestion_text: "Help improve GOV.UK",
+    suggestion_link_text: "Sign up to take part in user research",
+    suggestion_link_url: "/travel-abroad",
+    new_tab: true,
+  } %>
 
 <header class="page-header group">
   <%= render "govuk_publishing_components/components/title", title: title_with_suffix %>

@@ -10,6 +10,14 @@
 
 <h1 class="govuk-visually-hidden"><%= t("shared.browse.title") %></h1>
 
+<%#
+<%= render "govuk_publishing_components/components/intervention", {
+  suggestion_text: "Help improve GOV.UK",
+  suggestion_link_text: "Sign up to take part in user research",
+  suggestion_link_url: "/travel-abroad",
+  new_tab: true,
+} %>
+
 <div class="browse-panes root" data-module="gem-track-click">
   <%= render 'top_level_browse_pages',
     top_level_browse_pages: page.top_level_browse_pages %>
