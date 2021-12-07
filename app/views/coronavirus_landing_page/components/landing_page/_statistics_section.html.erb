@@ -126,6 +126,13 @@
             (<%= number_with_delimiter(statistics.cumulative_second_dose_vaccinations) %> <%= topic_section.dig("vaccinations", "second_dose", "label") %>)
           </span>
         </p>
+        <p class="govuk-body">
+          <span class="covid-statistics__label"><%= topic_section.dig("vaccinations", "third_dose", "heading") %></span>
+          <span class="covid-statistics__data">
+            <%= number_to_percentage(statistics.percentage_third_vaccine, precision: 1) %>
+            (<%= number_with_delimiter(statistics.cumulative_third_dose_vaccinations) %> <%= topic_section.dig("vaccinations", "third_dose", "label") %>)
+          </span>
+        </p>
         <p class="govuk-body covid-statistics__all-link">
           <%= link_to(
             topic_section.dig("vaccinations", "guidance_link", "label"),
