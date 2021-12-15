@@ -1,6 +1,14 @@
 <div class="browse__inner <%= page.lists.curated? ? 'browse__inner--curated' : 'browse__inner--alphabetical' %>">
   <h2 tabindex="-1" class="browse__heading js-heading"><%= t("shared.browse.prefix") %> <%= page.title %></h2>
 
+  <%= render "govuk_publishing_components/components/intervention", {
+    suggestion_text: "Help improve GOV.UK",
+    suggestion_link_text: "Take part in user research",
+    suggestion_link_url: "https://www.optimalworkshop.com/treejack/",
+    new_tab: true,
+    hide: @hide_recruitment_banner,
+  } %>
+
   <% page.lists.each_with_index do |list, section_index| %>
     <% if page.lists.curated? %>
       <h3 class="browse__list-header"><%= list.title %></h3>

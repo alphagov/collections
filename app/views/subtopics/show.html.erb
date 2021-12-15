@@ -18,6 +18,14 @@
   <%= render "govuk_publishing_components/components/title", title_params %>
 <% end %>
 
+<%= render "govuk_publishing_components/components/intervention", {
+  suggestion_text: "Help improve GOV.UK",
+  suggestion_link_text: "Take part in user research",
+  suggestion_link_url: "https://www.optimalworkshop.com/treejack/",
+  new_tab: true,
+  hide: @hide_recruitment_banner,
+} %>
+
 <%= render(
   layout: "subtopic",
   locals: {

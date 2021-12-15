@@ -10,6 +10,14 @@
 <% end %>
 <% content_for :page_class, "topics-page" %>
 
+<%= render "govuk_publishing_components/components/intervention", {
+  suggestion_text: "Help improve GOV.UK",
+  suggestion_link_text: "Take part in user research",
+  suggestion_link_url: "https://www.optimalworkshop.com/treejack/",
+  new_tab: true,
+  hide: @hide_recruitment_banner,
+} %>
+
 <header class="page-header group">
   <%= render "govuk_publishing_components/components/title", title: title_with_suffix %>
 </header>
