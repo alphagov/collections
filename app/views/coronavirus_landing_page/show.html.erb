@@ -79,7 +79,7 @@
   </section>
 
   <%= content_tag :section, class: "covid__topic-wrapper" do
-    render partial: 'components/signup-link', locals: {
+    render 'govuk_publishing_components/components/signup_link', {
       link_text: details.notifications["email_link"],
       link_href: details.notifications["email_url"],
       heading: details.notifications["intro"],
