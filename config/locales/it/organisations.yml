@@ -330,6 +330,7 @@ it:
       non_ministerial_department: Dipartimento non ministeriale
       other: Altro
       public_corporation: Azienda pubblica
+      special_health_authority:
       sub_organisation:
       tribunal: Tribunale
     view_all: visualizza tutto

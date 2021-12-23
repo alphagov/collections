@@ -330,6 +330,7 @@ is:
       non_ministerial_department: Deild sem hefur ekki ráðherra
       other: Annað
       public_corporation: Opinbert fyrirtæki
+      special_health_authority:
       sub_organisation:
       tribunal: Dómstóll
     view_all: sjá allt

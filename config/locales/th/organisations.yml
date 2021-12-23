@@ -256,6 +256,7 @@ th:
       non_ministerial_department: หน่วยงานราชการที่ไม่ขึ้นกับกระทรวง
       other: อื่น ๆ
       public_corporation: องค์การมหาชน
+      special_health_authority:
       sub_organisation:
       tribunal: ทางศาล
     view_all: ดูทั้งหมด

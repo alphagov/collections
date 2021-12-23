@@ -275,7 +275,7 @@ pa-pk:
       contact_form: 'رابطے دا FOI فارم '
       foi_exemption_html: 'ایہ ادارہ معلومات دی آزادی دے قانون دے تحت نہیں ہوندا۔ ایہ ویکھن لئی کہ کہیڑے ادارے ایندے وچ شامل نیں ایہ ویکھو <a href="%{foi_url}" class="govuk-link brand__color">قانونی سازی</a>.
 
-'
+        '
       freedom_of_information_act: معلومات دی آزادی  (FOI)  دا قانون
       freedom_of_information_requests: معلومات دی آزادی دیاں درخواستاں
       make_an_foi_request: اک FOI دی درخواست دیوؤ
@@ -332,6 +332,7 @@ pa-pk:
       non_ministerial_department: بغیر وزیر دا محکمہ
       other: ہور دوجے
       public_corporation: عوامی تعاون
+      special_health_authority:
       sub_organisation:
       tribunal: عدالت
     view_all: ساریاں نوں ویکھو

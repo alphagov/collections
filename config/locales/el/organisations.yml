@@ -330,6 +330,7 @@ el:
       non_ministerial_department: Μη υπουργικό τμήμα
       other: Άλλο
       public_corporation: Δημόσια επιχείρηση
+      special_health_authority:
       sub_organisation:
       tribunal: Δικαστήριο
     view_all: εμφάνιση όλων

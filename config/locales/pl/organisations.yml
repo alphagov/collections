@@ -478,6 +478,7 @@ pl:
       non_ministerial_department: Departament pozaministerialny
       other: Inne
       public_corporation: Korporacja publiczna
+      special_health_authority:
       sub_organisation:
       tribunal: Trybunał
     view_all: Zobacz wszystko

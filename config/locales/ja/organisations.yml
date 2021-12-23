@@ -201,7 +201,7 @@ ja:
       contact_form: FOI（情報の自由）お問い合わせフォーム
       foi_exemption_html: 'この組織は情報公開法の対象外です。含まれている組織を確認するには、<ahref = "％{foi_url}" class = "govuk-linkbrand__color">法律</a>をご覧ください。
 
-'
+        '
       freedom_of_information_act: 情報自由（FOI）法
       freedom_of_information_requests: 情報の自由の要求
       make_an_foi_request: FOIの要求を行う
@@ -256,6 +256,7 @@ ja:
       non_ministerial_department: 非閣僚部門
       other: その他
       public_corporation: 公共団体
+      special_health_authority:
       sub_organisation:
       tribunal: 審判所
     view_all: すべて表示

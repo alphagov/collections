@@ -476,6 +476,7 @@ hr:
       non_ministerial_department: Odjel koji nije ministarski
       other: Ostalo
       public_corporation: Javna korporacija
+      special_health_authority:
       sub_organisation:
       tribunal: Sud
     view_all: vidi sve
