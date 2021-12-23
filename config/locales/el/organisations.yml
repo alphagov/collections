@@ -317,7 +317,6 @@ el:
       email: Λάβετε email
       feed: Εγγραφείτε στη ροή
     type:
-      ":":
       adhoc_advisory_group: Ad-hoc συμβουλευτική ομάδα
       advisory_ndpb: Συμβουλευτικός μη υπηρεσιακός δημόσιος φορέας
       civil_service: Δημόσια υπηρεσία

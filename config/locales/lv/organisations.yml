@@ -317,7 +317,6 @@ lv:
       email: Saņemt e-pasta ziņojumus
       feed: Abonēt plūsmu
     type:
-      ":":
       adhoc_advisory_group: Ad hoc padomdevēju grupa
       advisory_ndpb: Konsultējošā nevalstiskā sabiedriskā organizācija
       civil_service: Civildienests

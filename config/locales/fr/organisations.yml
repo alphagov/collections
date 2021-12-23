@@ -315,7 +315,6 @@ fr:
       email: Obtenir des courriels
       feed: S'abonner au flux
     type:
-      ":":
       adhoc_advisory_group: Groupe de consultation ad hoc
       advisory_ndpb: Organisme public consultatif non ministériel
       civil_service: Service civil

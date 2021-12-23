@@ -317,7 +317,6 @@ ps:
       email: بریښنالیکونه ترلاسه کړئ
       feed: فیډ کې ګډون وکړئ
     type:
-      ":":
       adhoc_advisory_group: د عادلانه مشورتي ګروپ
       advisory_ndpb: مشورتي غیر څانګې عامه اداره
       civil_service: ملکي خدمت

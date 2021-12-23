@@ -317,7 +317,6 @@ ta:
       email: மின்னஞ்சல்களைப் பெறுக
       feed: செய்தியூட்டத்தில் இணைக
     type:
-      ":":
       adhoc_advisory_group: தற்காலிக ஆலோசனைக் குழு
       advisory_ndpb: துறைசாரா ஆலோசனை பொதுநிறுவனம்
       civil_service: குடிமச் சேவை

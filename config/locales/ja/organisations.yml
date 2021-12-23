@@ -317,7 +317,6 @@ ja:
       email: メールを受け取る
       feed: フィードを購読する
     type:
-      ":":
       adhoc_advisory_group: 特別顧問団
       advisory_ndpb: 諮問公共機関 (非部門)
       civil_service: 公務員

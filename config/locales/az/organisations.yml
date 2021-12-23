@@ -317,7 +317,6 @@ az:
       email: E-məktublar alın
       feed: Veb-kanala abunə olun
     type:
-      ":":
       adhoc_advisory_group: Xüsusi məsləhətçilər qrupu
       advisory_ndpb: Müstəqil və məsləhətçi qeyri-hökumət təşkilatı
       civil_service: Dövlət xidməti

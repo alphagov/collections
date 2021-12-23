@@ -317,7 +317,6 @@ fa:
       email: دریافت ایمیل‌ها
       feed: اشتراک در فید
     type:
-      ":":
       adhoc_advisory_group: گروه مشاوره اختصاصی
       advisory_ndpb: نهاد عمومی مشورتی غیر دپارتمانی
       civil_service: خدمات شهروندی

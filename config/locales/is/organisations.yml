@@ -317,7 +317,6 @@ is:
       email: Fá tölvupósta
       feed: Gerast áskrifandi að straumi
     type:
-      ":":
       adhoc_advisory_group: Sérstakir ráðgjafahópar
       advisory_ndpb: Ráðgefandi opinber stofnun sem heyrir ekki undir ráðuneyti
       civil_service: Opinber þjónusta

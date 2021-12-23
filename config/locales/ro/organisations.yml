@@ -391,7 +391,6 @@ ro:
       email: Primiți e-mailuri
       feed: Abonați-vă la flux
     type:
-      ":":
       adhoc_advisory_group: Grup consultativ ad-hoc
       advisory_ndpb: Organism public consultativ neministerial
       civil_service: Funcții publice

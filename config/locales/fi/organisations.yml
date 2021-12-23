@@ -317,7 +317,6 @@ fi:
       email: Hanki sähköpostit
       feed: Tilaa syöte
     type:
-      ":":
       adhoc_advisory_group: Ad-hoc-neuvoa-antava ryhmä
       advisory_ndpb: Neuvoa-antava ei-osastoinen julkinen elin
       civil_service: Siviilipalvelus

@@ -315,7 +315,6 @@ sq:
       email: Merr emaile
       feed: Abonohu për njoftime
     type:
-      ":":
       adhoc_advisory_group: Grupi këshillues ad-hoc
       advisory_ndpb: Organ publik këshillimor jo departamentik
       civil_service: Shërbimi civil

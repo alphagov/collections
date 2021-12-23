@@ -315,7 +315,6 @@ zh-hk:
       email: 獲取電郵地址
       feed: 訂閱內容
     type:
-      ":":
       adhoc_advisory_group: 特設諮詢小組
       advisory_ndpb: 非部門公共機構顧問
       civil_service: 公務員制度
