@@ -315,7 +315,6 @@ zh:
       email: 获取电子邮件
       feed: 订阅推送
     type:
-      ":":
       adhoc_advisory_group: 特别咨询小组
       advisory_ndpb: 咨询非部门公共机构
       civil_service: 行政部门

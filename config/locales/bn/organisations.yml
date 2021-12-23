@@ -317,7 +317,6 @@ bn:
       email: ইমেইল পান
       feed: ফিডে সাবস্ক্রাইব করুন
     type:
-      ":":
       adhoc_advisory_group: অ্যাড-হক পরামর্শক গোষ্ঠী
       advisory_ndpb: পরামর্শক বিভাগ-বহির্ভূত সরকারি সংস্থা
       civil_service: সিভিল সার্ভিস

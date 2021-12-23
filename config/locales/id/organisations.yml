@@ -317,7 +317,6 @@ id:
       email: Dapatkan email
       feed: Berlangganan feed
     type:
-      ":":
       adhoc_advisory_group: Grup penasihat ad-hoc
       advisory_ndpb: Badan penasihat publik non-departemen
       civil_service: Layanan sipil

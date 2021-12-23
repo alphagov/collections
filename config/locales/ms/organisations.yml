@@ -317,7 +317,6 @@ ms:
       email: Dapatkan e-mel
       feed: Langgani siaran maklumat
     type:
-      ":":
       adhoc_advisory_group: Kumpulan penasihat ad hoc
       advisory_ndpb: Penasihat badan awam bukan jabatan
       civil_service: Perkhidmatan awam

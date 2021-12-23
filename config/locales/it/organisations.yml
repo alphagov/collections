@@ -317,7 +317,6 @@ it:
       email: Ricevi e-mail
       feed: Iscriviti al feed
     type:
-      ":":
       adhoc_advisory_group: Gruppo di consulenza ad-hoc
       advisory_ndpb: Ente pubblico di consulenza non dipartimentale
       civil_service: Servizio civile

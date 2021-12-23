@@ -317,7 +317,6 @@ nl:
       email: Ontvang e-mails
       feed: Abonneren op feed
     type:
-      ":":
       adhoc_advisory_group: Ad hoc adviesgroep
       advisory_ndpb: Raadgevend niet-departementaal overheidsorgaan
       civil_service: Ambtenarenapparaat

@@ -613,7 +613,6 @@ cy:
       email: I gael e-byst
       feed: Tanysgrifio i'r ffrwd
     type:
-      ":":
       adhoc_advisory_group: Grŵp cynghori ad-hoc
       advisory_ndpb: Corff cynghori cyhoeddus anadrannol
       civil_service: Gwasanaeth sifil

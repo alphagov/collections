@@ -317,7 +317,6 @@ sv:
       email: Få e-post
       feed: Prenumerera på flöde
     type:
-      ":":
       adhoc_advisory_group: Rådgivande ad hoc-grupp
       advisory_ndpb: Rådgivande offentligt organ som inte är en avdelning
       civil_service: Offentlig förvaltning

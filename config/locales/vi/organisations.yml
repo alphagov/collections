@@ -317,7 +317,6 @@ vi:
       email: Nhận email
       feed: Đăng ký nguồn cấp dữ liệu
     type:
-      ":":
       adhoc_advisory_group: Nhóm cố vấn đặc biệt
       advisory_ndpb: Cơ quan công quyền tham vấn không thuộc ban/bộ
       civil_service: Dịch vụ dân sự

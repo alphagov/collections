@@ -317,7 +317,6 @@ ko:
       email: 이메일 받기
       feed: 피드로 구독하기
     type:
-      ":":
       adhoc_advisory_group: 임시 자문단
       advisory_ndpb: 자문 비부처 공공기관
       civil_service: 시민 서비스

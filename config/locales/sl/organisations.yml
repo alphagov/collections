@@ -465,7 +465,6 @@ sl:
       email: Prejemajte e-sporočila
       feed: Naročite se na novice
     type:
-      ":":
       adhoc_advisory_group: Ad-hoc svetovalna skupina
       advisory_ndpb: Svetovalna nevladna javna organizacija
       civil_service: Civilna služba

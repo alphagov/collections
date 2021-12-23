@@ -391,7 +391,6 @@ lt:
       email: Gauti el. laiškus
       feed: Prenumeruoti srautą
     type:
-      ":":
       adhoc_advisory_group: Ad-hoc konsultacinė grupė
       advisory_ndpb: Konsultacinė ne departamentinė viešoji įstaiga
       civil_service: Valstybės tarnyba

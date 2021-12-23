@@ -317,7 +317,6 @@ es-419:
       email: Recibir emails
       feed: Suscríbase a la fuente
     type:
-      ":":
       adhoc_advisory_group: Grupo consultivo ad hoc
       advisory_ndpb: Organismo público no departamental de carácter consultivo
       civil_service: Adminitración pública

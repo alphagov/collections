@@ -317,7 +317,6 @@ th:
       email: รับอีเมล
       feed: สมัครรับข้อมูลฟีดข่าว
     type:
-      ":":
       adhoc_advisory_group: กลุ่มที่ปรึกษาเฉพาะกิจ
       advisory_ndpb: องค์กรอิสระที่ให้คำปรึกษา (Advisory non-departmental public body)
       civil_service: ราชการ

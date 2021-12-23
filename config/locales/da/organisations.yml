@@ -329,7 +329,6 @@ da:
       email: Få e-mails
       feed: Abonner på feed
     type:
-      ":":
       adhoc_advisory_group: Ad hoc-rådgivende gruppe
       advisory_ndpb: Rådgivende ikke-departementalt offentligt organ
       civil_service: Offentligt arbejde

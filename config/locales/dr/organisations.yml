@@ -320,7 +320,6 @@ dr:
       email: ایمل ها دریافت نمایید
       feed: برای حمایت سبسکرایب نمایید
     type:
-      ":":
       adhoc_advisory_group: گروه مشاورهء موقت
       advisory_ndpb: نهاد عمومی مشورتی غیردیپارتمنت
       civil_service: خدمات شهری

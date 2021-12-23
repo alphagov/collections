@@ -317,7 +317,6 @@ tr:
       email: E-postalar al
       feed: Yayına abone ol
     type:
-      ":":
       adhoc_advisory_group: Geçici danışma grubu
       advisory_ndpb: Danışma nitelikli müdürlük dışı kamu kuruluşu
       civil_service: Kamu görevi

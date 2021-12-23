@@ -317,7 +317,6 @@ hu:
       email: E-mailek fogadása
       feed: Feliratkozás a hírcsatornára
     type:
-      ":":
       adhoc_advisory_group: Ad-hoc tanácsadói csoport
       advisory_ndpb: Nem minisztériumi tanácsadó hivatalos szerv
       civil_service: Közszolgálat

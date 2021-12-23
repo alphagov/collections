@@ -315,7 +315,6 @@ hi:
       email: ईमेल प्राप्त करें
       feed: फीड के लिए सब्स्क्राइब करें
     type:
-      ":":
       adhoc_advisory_group: विशेष सलाहकार समूह
       advisory_ndpb: सलाहकार गैर-विभागीय सार्वजनिक निकाय
       civil_service: सिविल सेवा

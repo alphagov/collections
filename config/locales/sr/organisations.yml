@@ -465,7 +465,6 @@ sr:
       email: Želim da dobijam e-poruke
       feed: Pretplatite se na fid
     type:
-      ":":
       adhoc_advisory_group: Namenske grupe za savetovanje
       advisory_ndpb: Neresorno javno telo za savetovanje
       civil_service: Civilna služba

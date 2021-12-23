@@ -317,7 +317,6 @@ et:
       email: Hangi e-kirju
       feed: Telli voog
     type:
-      ":":
       adhoc_advisory_group: Ajutine nõuanderühm
       advisory_ndpb: Nõuandev osakondadeväline avalik asutus
       civil_service: Tsiviilteenistus

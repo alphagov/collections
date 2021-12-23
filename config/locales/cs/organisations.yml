@@ -391,7 +391,6 @@ cs:
       email: Získat e-maily
       feed: Přihlásit se k odběru
     type:
-      ":":
       adhoc_advisory_group: Ad-hoc poradní skupina
       advisory_ndpb: Poradní neveřejný orgán
       civil_service: Státní služba
