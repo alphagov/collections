@@ -4,21 +4,6 @@
   font_size: "m"
 } %>
 
-<% link = topic_section["links"].shift %>
-<p class="govuk-body govuk-!-margin-bottom-6">
-  <%= link_to(
-    link["label"].html_safe,
-    link["url"],
-    class: 'govuk-link',
-    data: {
-      module: "gem-track-click",
-      track_category: "pageElementInteraction",
-      track_action: "Statistics",
-      track_label: link["url"],
-    },
-  ) %>
-</p>
-
 <% if statistics %>
   <div class="govuk-grid-row">
     <% if statistics.new_positive_tests %>
