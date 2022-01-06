@@ -2,6 +2,7 @@
 <% content_for :title, t("brexit_landing_page.meta_title") %>
 <% content_for :meta_tags do %>
   <meta name="description" content="<%= t("brexit_landing_page.meta_description") %>">
+  <meta name="govuk:scroll-tracker" content="" data-module="auto-scroll-tracker"/>
 
   <%= render 'govuk_publishing_components/components/machine_readable_metadata', content_item: @content_item, schema: :article %>
 <% end %>
