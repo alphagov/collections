@@ -20,21 +20,6 @@
   </div>
 
   <div class="govuk-grid-column-two-thirds">
-    <% nhs_banner["sections"].each do |section| %>
-      <% if section["heading"].present? && section["url"].present? %>
-        <p class="govuk-heading-s">
-          <a class="govuk-link" href="<%= section["url"] %>"><%= section["heading"] %></a>
-        </p>
-      <% else %>
-        <%= render "govuk_publishing_components/components/heading", {
-          text: section["heading"],
-          heading_level: 3,
-          font_size: "s",
-          margin_bottom: 4,
-        } if section["heading"].present? %>
-      <% end %>
-
-      <%= render_govspeak(section["markdown"]) if section["markdown"].present? %>
-    <% end %>
+      <%= render_govspeak(nhs_banner["nhs_sections"]) %>
   </div>
 </div>
