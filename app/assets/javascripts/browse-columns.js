@@ -305,32 +305,11 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
   }
 
   BrowseColumns.prototype.showBanner = function (slug) {
-    var topicSlugs = [
-      'benefits/manage-your-benefit',
-      'benefits/looking-for-work',
-      'benefits/unable-to-work',
-      'benefits/families',
-      'benefits/disability',
-      'benefits/help-for-carers',
-      'benefits/low-income',
-      'benefits/bereavement',
-      'business/business-tax',
-      'business/limited-company',
-      'tax/capital-gains',
-      'tax/court-claims-debt-bankruptcy',
-      'tax/dealing-with-hmrc',
-      'tax/income-tax',
-      'tax/inheritance-tax',
-      'tax/national-insurance',
-      'tax/self-assessment',
-      'tax/vat'
-    ]
+    var topicSlug = 'visas-immigration'
     var banner = document.getElementsByClassName('gem-c-intervention')
 
     if (banner.length > 0) {
-      banner[0].hidden = !topicSlugs.some(function (topicSlug) {
-        return slug === topicSlug
-      })
+      banner[0].hidden = !slug.startsWith(topicSlug)
     }
   }
 
