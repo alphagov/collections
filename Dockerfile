@@ -1,22 +1,34 @@
-FROM ruby:2.7.2
-RUN apt-get update -qq && apt-get upgrade -y
-RUN apt-get install -y build-essential nodejs && apt-get clean
-RUN gem install foreman
 
-ENV GOVUK_APP_NAME collections
-ENV PORT 3070
-ENV RAILS_ENV development
+# TODO: make this default to govuk-ruby once it's being pushed somewhere public
+# (unless we decide to use Bitnami instead)
+ARG base_image=ruby:2.7.2
 
-ENV APP_HOME /app
-RUN mkdir $APP_HOME
+FROM $base_image AS builder
+# This image is only intended to be able to run this app in a production RAILS_ENV
+ENV RAILS_ENV=production
+# TODO: have a separate build image which already contains the build-only deps.
+RUN apt-get update -qy && \
+    apt-get upgrade -y && \
+    apt-get install -y build-essential nodejs && \
+    apt-get clean
 
-WORKDIR $APP_HOME
-ADD Gemfile* $APP_HOME/
-ADD .ruby-version $APP_HOME/
-RUN bundle install
+RUN mkdir /app
+WORKDIR /app
+COPY Gemfile Gemfile.lock .ruby-version /app/
+RUN bundle config set deployment 'true' && \
+    bundle config set without 'development test' && \
+    bundle install --jobs 4 --retry=2
+COPY . /app
 
-ADD . $APP_HOME
+RUN GOVUK_APP_DOMAIN=www.gov.uk \
+    GOVUK_WEBSITE_ROOT=http://www.gov.uk \
+    bundle exec rails assets:precompile
+# QQ:  rake shared_mustache:compile is this app specific?
 
-RUN GOVUK_APP_DOMAIN=www.gov.uk GOVUK_WEBSITE_ROOT=http://www.gov.uk RAILS_ENV=production bundle exec rails assets:precompile
+FROM $base_image
+ENV RAILS_ENV=production GOVUK_APP_NAME=collections
 
-CMD foreman run web
+WORKDIR /app
+COPY --from=builder /usr/local/bundle/ /usr/local/bundle/
+COPY --from=builder /app ./
+CMD bundle exec puma
