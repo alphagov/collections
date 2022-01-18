@@ -27,8 +27,12 @@ RUN GOVUK_APP_DOMAIN=www.gov.uk \
 
 FROM $base_image
 ENV RAILS_ENV=production GOVUK_APP_NAME=collections
-
-WORKDIR /app
+# TODO: include nodejs in the base image (govuk-ruby).
+# TODO: apt-get upgrade in the base image
+RUN apt-get update -qy && \
+    apt-get upgrade -y && \
+    apt-get install -y nodejs
 COPY --from=builder /usr/local/bundle/ /usr/local/bundle/
-COPY --from=builder /app ./
+COPY --from=builder /app /app
+WORKDIR /app
 CMD bundle exec puma
