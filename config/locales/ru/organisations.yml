@@ -482,5 +482,7 @@ ru:
     view_less: Посмотреть меньше
     what_we_do: Что %{title}
     works_with_statement:
+      many:
+      few:
       other: Работа с %{works_with_count} агенствами и государственными органами
       one: Работа с  %{works_with_count} государственным органом

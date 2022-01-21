@@ -482,5 +482,7 @@ mt:
     view_less: ara inqas
     what_we_do: X'jagħmel %{title}
     works_with_statement:
+      many:
+      few:
       other: Jaħdem ma' %{works_with_count} aġenziji u korpi pubbliċi
       one: Jaħdem ma' %{works_with_count} korp pubbliku

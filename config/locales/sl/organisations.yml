@@ -484,5 +484,7 @@ sl:
     view_less: Prikaži manj
     what_we_do: Kaj počne %{title}
     works_with_statement:
+      two:
+      few:
       other: Sodeluje z %{works_with_count} agencijami in javnimi organi
       one: Sodeluje z %{works_with_count} javnimi organi

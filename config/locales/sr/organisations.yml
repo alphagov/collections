@@ -484,5 +484,7 @@ sr:
     view_less: prikaži manje
     what_we_do: Šta radi %{title}
     works_with_statement:
+      many:
+      few:
       other: Sarađuje sa %{works_with_count} agencija i javnih tela
       one: Sarađuje sa %{works_with_count} javnim telom

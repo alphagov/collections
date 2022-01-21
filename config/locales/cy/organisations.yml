@@ -632,5 +632,9 @@ cy:
     view_less: gweld llai
     what_we_do: Beth mae %{title} yn wneud
     works_with_statement:
+      two:
+      zero:
+      many:
+      few:
       other: Gweithio gyda %{works_with_count} o asiantaethau a chyrff cyhoeddus
       one: Gweithio gyda %{works_with_count} o gyrff cyhoeddus

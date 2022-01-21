@@ -484,5 +484,7 @@ uk:
     view_less: дивитись менше
     what_we_do: Що робить %{title}
     works_with_statement:
+      many:
+      few:
       other: Працює з %{works_with_count} агентствами та державними органами
       one: Працює з %{works_with_count} державним органом

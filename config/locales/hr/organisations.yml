@@ -482,5 +482,7 @@ hr:
     view_less: vidi manje
     what_we_do: 'Što %{title} radi '
     works_with_statement:
+      many:
+      few:
       other: Surađuje s %{works_with_count} agencijama i javnim tijelima
       one: Radi s %{works_with_count} javnim tijelom

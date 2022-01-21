@@ -484,5 +484,7 @@ pl:
     view_less: Zobacz mniej
     what_we_do: Co robi %{title}
     works_with_statement:
+      many:
+      few:
       other: Współpracuje z %{works_with_count} agencjami i organami publicznymi
       one: Współpracuje z %{works_with_count} organami publicznymi

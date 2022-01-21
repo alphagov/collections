@@ -410,5 +410,6 @@ ro:
     view_less: vizualizați mai puțin
     what_we_do: Ce face %{title}
     works_with_statement:
+      few:
       other: Lucrează cu %{works_with_count} agenții și organisme publice
       one: Lucrează cu %{works_with_count} organism public
