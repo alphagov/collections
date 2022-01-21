@@ -336,5 +336,5 @@ tr:
     view_less: daha az gör
     what_we_do: "%{title} ne iş yapar"
     works_with_statement:
-      multiple: "%{works_with_count} kurum ve kamu kuruluşuyla birlikte çalışır"
+      other: "%{works_with_count} kurum ve kamu kuruluşuyla birlikte çalışır"
       one: "%{works_with_count} kamu kuruluşuyla birlikte çalışır"

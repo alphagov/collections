@@ -336,5 +336,5 @@ so:
     view_less: Fiiri inyar
     what_we_do: Maxaat %{title} ku
     works_with_statement:
-      multiple: Shaqeeya %{works_with_count} wakaaladaha iyo haayadaha dadweyaha
+      other: Shaqeeya %{works_with_count} wakaaladaha iyo haayadaha dadweyaha
       one: Shaqeeya %{works_with_count} haayadaha dadweynaha

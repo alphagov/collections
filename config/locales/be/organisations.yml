@@ -484,5 +484,5 @@ be:
     view_less: глядзець менш
     what_we_do: Што %{title} робiць
     works_with_statement:
-      multiple: Працуе з %{works_with_count} установамi і дзяржаўнымi органамi
+      other: Працуе з %{works_with_count} установамi і дзяржаўнымi органамi
       one: Працуе з %{works_with_count} дзяржаўнымi органамi

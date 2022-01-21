@@ -336,5 +336,5 @@ it:
     view_less: visualizza meno
     what_we_do: Che cosa fa %{title}
     works_with_statement:
-      multiple: Lavora con %{works_with_count} agenzie ed enti pubblici
+      other: Lavora con %{works_with_count} agenzie ed enti pubblici
       one: Lavora con %{works_with_count} ente pubblico

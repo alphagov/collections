@@ -339,5 +339,5 @@ dr:
     view_less: مشاهدهء مواردی کمتر
     what_we_do: چی{title}%میکند
     works_with_statement:
-      multiple: کار میکند با{works_with_count}%نماینده گی ها و نهاد هایی عامه
+      other: کار میکند با{works_with_count}%نماینده گی ها و نهاد هایی عامه
       one: کار میکند با{works_with_count}%نهاد عامه

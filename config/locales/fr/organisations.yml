@@ -334,5 +334,5 @@ fr:
     view_less: afficher moins
     what_we_do: Que fait %{title}
     works_with_statement:
-      multiple: Travaille avec %{works_with_count} agences et organismes publics
+      other: Travaille avec %{works_with_count} agences et organismes publics
       one: Travaille avec %{works_with_count} organisme public

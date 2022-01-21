@@ -336,5 +336,5 @@ is:
     view_less: sjá minna
     what_we_do: Hvað %{title} gerir
     works_with_statement:
-      multiple: Starfar með %{works_with_count} umboðum og opinberum stofnunum
+      other: Starfar með %{works_with_count} umboðum og opinberum stofnunum
       one: Starfar með %{works_with_count} opinberum stofnunum

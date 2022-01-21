@@ -336,5 +336,5 @@ ms:
     view_less: lihat sedikit
     what_we_do: Apakah yang %{title} lakukan
     works_with_statement:
-      multiple: Bekerjasama dengan %{works_with_count} agensi dan badan awam
+      other: Bekerjasama dengan %{works_with_count} agensi dan badan awam
       one: Bekerjasama dengan %{works_with_count} badan awam

@@ -334,5 +334,5 @@ zh:
     view_less: 查看更少
     what_we_do: "%{title} 做什么"
     works_with_statement:
-      multiple: 与 %{works_with_count} 机构和公共机构合作
+      other: 与 %{works_with_count} 机构和公共机构合作
       one: 与 %{works_with_count} 公共机构合作

@@ -336,5 +336,5 @@ th:
     view_less: ดูน้อยลง
     what_we_do: "%{title} ทำอะไร"
     works_with_statement:
-      multiple: ทำงานร่วมกับหน่วยงานและหน่วยงานราชการ %{works_with_count} แห่ง
+      other: ทำงานร่วมกับหน่วยงานและหน่วยงานราชการ %{works_with_count} แห่ง
       one: ทำงานร่วมกับหน่วยงานราชการ %{works_with_count} แห่ง

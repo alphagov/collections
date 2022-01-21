@@ -336,5 +336,5 @@ pa:
     view_less: ਘੱਟ ਵੇਖੋ
     what_we_do: "%{title} ਕੀ ਕਰਦਾ ਹੈ"
     works_with_statement:
-      multiple: "%{works_with_count} ਏਜੰਸੀਆਂ ਅਤੇ ਜਨਤਕ ਸੰਸਥਾਵਾਂ ਦੇ ਨਾਲ ਕੰਮ ਕਰਦਾ ਹੈ"
+      other: "%{works_with_count} ਏਜੰਸੀਆਂ ਅਤੇ ਜਨਤਕ ਸੰਸਥਾਵਾਂ ਦੇ ਨਾਲ ਕੰਮ ਕਰਦਾ ਹੈ"
       one: "%{works_with_count} ਜਨਤਕ ਸੰਸਥਾ ਦੇ ਨਾਲ ਕੰਮ ਕਰਦਾ ਹੈ"

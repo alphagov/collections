@@ -336,5 +336,5 @@ nl:
     view_less: minder bekijken
     what_we_do: Wat %{title} doet
     works_with_statement:
-      multiple: Werkt samen met %{works_with_count} agentschappen en overheidsinstanties
+      other: Werkt samen met %{works_with_count} agentschappen en overheidsinstanties
       one: Werkt samen met %{works_with_count} overheidsinstantie

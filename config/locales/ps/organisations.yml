@@ -336,5 +336,5 @@ ps:
     view_less: لږ لیدل
     what_we_do: "%{title} څه کوي"
     works_with_statement:
-      multiple: د %{works_with_count} ادارو او عامه ادارو سره کار کوي
+      other: د %{works_with_count} ادارو او عامه ادارو سره کار کوي
       one: د %{works_with_count} عامه ادارې سره کار کوي

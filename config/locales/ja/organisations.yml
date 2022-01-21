@@ -336,5 +336,5 @@ ja:
     view_less: 一部を表示
     what_we_do: "%{title}が行うこと"
     works_with_statement:
-      multiple: "%{works_with_count}機関および公共団体と連携"
+      other: "%{works_with_count}機関および公共団体と連携"
       one: "%{works_with_count}公共団体と連携"

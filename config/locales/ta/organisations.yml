@@ -336,5 +336,5 @@ ta:
     view_less: குறைவாகக் காட்டு
     what_we_do: "%{title} செய்வது என்ன"
     works_with_statement:
-      multiple: "%{works_with_count} முகமைகளுடனும் பொது நிறுவனங்களுடனும் பணியாற்றுதல்"
+      other: "%{works_with_count} முகமைகளுடனும் பொது நிறுவனங்களுடனும் பணியாற்றுதல்"
       one: "%{works_with_count} பொது நிறுவனங்களுடன் பணியாற்றுதல்"

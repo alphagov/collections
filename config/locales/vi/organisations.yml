@@ -336,5 +336,5 @@ vi:
     view_less: rút gọn
     what_we_do: Nhiệm vụ của %{title}
     works_with_statement:
-      multiple: Làm việc với %{works_with_count} cơ quan và cơ quan công quyền
+      other: Làm việc với %{works_with_count} cơ quan và cơ quan công quyền
       one: Làm việc với %{works_with_count} cơ quan công quyền

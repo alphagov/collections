@@ -336,5 +336,5 @@ sw:
     view_less: angalia chache
     what_we_do: Kazi ya %{title}
     works_with_statement:
-      multiple: Hushirikiana na mashirika na mashirika %{works_with_count} ya serikali
+      other: Hushirikiana na mashirika na mashirika %{works_with_count} ya serikali
       one: Hushirikiana na mashirika %{works_with_count} ya serikali

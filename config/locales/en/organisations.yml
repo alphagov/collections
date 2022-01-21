@@ -336,5 +336,5 @@ en:
     view_less: view less
     what_we_do: What %{title} does
     works_with_statement:
-      multiple: Works with %{works_with_count} agencies and public bodies
+      other: Works with %{works_with_count} agencies and public bodies
       one: Works with %{works_with_count} public body

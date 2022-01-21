@@ -334,5 +334,5 @@ gu:
     view_less: ઓછા જુઓ
     what_we_do: "%{title} શું કરે છે"
     works_with_statement:
-      multiple: "%{works_with_count} એજન્સીઓ અને જાહેર સંસ્થાઓ સાથે કામ કરે છે"
+      other: "%{works_with_count} એજન્સીઓ અને જાહેર સંસ્થાઓ સાથે કામ કરે છે"
       one: જાહેર સંસ્થા સાથે %{works_with_count} કામ કરે છે

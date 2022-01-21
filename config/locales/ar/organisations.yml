@@ -632,5 +632,5 @@ ar:
     view_less: عرض أقل
     what_we_do: ما تقوم به %{title}
     works_with_statement:
-      multiple: تعمل مع %{works_with_count} وكالات وهيئات عامة
+      other: تعمل مع %{works_with_count} وكالات وهيئات عامة
       one: تعمل مع %{works_with_count} هيئة عامة

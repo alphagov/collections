@@ -336,5 +336,5 @@ hu:
     view_less: kevesebb megtekintése
     what_we_do: 'Mit csinál a következő: %{title}'
     works_with_statement:
-      multiple: 'Együtt dolgozik a következőkkel: %{works_with_count} ügynökségekkel és hivatalos szervekkel'
+      other: 'Együtt dolgozik a következőkkel: %{works_with_count} ügynökségekkel és hivatalos szervekkel'
       one: 'Együtt dolgozik a következőkkel: %{works_with_count} hivatalos szerv'

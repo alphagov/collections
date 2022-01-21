@@ -336,5 +336,5 @@ fi:
     view_less: nähdä vähemmän
     what_we_do: Mitä %{title} tekee
     works_with_statement:
-      multiple: Toimii %{works_with_count} virastojen ja julkisten elinten kanssa
+      other: Toimii %{works_with_count} virastojen ja julkisten elinten kanssa
       one: Toimii %{works_with_count} julkisen elimen kanssa

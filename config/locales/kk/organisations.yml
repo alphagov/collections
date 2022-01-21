@@ -336,5 +336,5 @@ kk:
     view_less: азырақ қарау
     what_we_do: "%{title} немен айналысады"
     works_with_statement:
-      multiple: "%{works_with_count} агенттіктері мен мемлекеттік органдармен жұмыс істейді"
+      other: "%{works_with_count} агенттіктері мен мемлекеттік органдармен жұмыс істейді"
       one: "%{works_with_count} мемлекеттік органмен жұмыс істейді"

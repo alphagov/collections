@@ -336,5 +336,5 @@ de:
     view_less: weniger anzeigen
     what_we_do: Was %{title} tut
     works_with_statement:
-      multiple: Arbeitet mit %{works_with_count} Agenturen und öffentlichen Einrichtungen
+      other: Arbeitet mit %{works_with_count} Agenturen und öffentlichen Einrichtungen
       one: Arbeitet mit %{works_with_count} öffentlichen Einrichtungen
