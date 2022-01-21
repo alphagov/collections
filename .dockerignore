@@ -1,13 +1,6 @@
 .git
 .gitignore
-asset-manager-tmp
-attachment-cache
-bulk-upload-zip-file-tmp
 CONTRIBUTING.md
 docs
 Jenkinsfile
-log
 README.md
-spec
-test
-tmp

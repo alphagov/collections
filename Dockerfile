@@ -23,7 +23,6 @@ COPY . /app
 RUN GOVUK_APP_DOMAIN=www.gov.uk \
     GOVUK_WEBSITE_ROOT=http://www.gov.uk \
     bundle exec rails assets:precompile
-# QQ:  rake shared_mustache:compile is this app specific?
 
 FROM $base_image
 ENV RAILS_ENV=production GOVUK_APP_NAME=collections
