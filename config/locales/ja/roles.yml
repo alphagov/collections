@@ -3,7 +3,6 @@ ja:
   roles:
     find_out_more_html: この役割の前所有者については、%{link}セクションをご覧ください
     heading:
-      one: 役割
       other: 役割
     headings:
       current_holder: 現在の役割保有者

@@ -15,226 +15,152 @@ zh:
     content_item:
       schema_name:
         aaib_report:
-          one: 航空事故调查局报告
           other: 航空事故调查局报告
         announcement:
-          one: 公告
           other: 公告
         asylum_support_decision:
-          one: 庇护支持法庭裁决
           other: 庇护支持法庭裁决
         authored_article:
-          one: 撰写文章
           other: 撰写文章
         business_finance_support_scheme:
-          one: 商业财务支持计划
           other: 商业财务支持计划
         case_study:
-          one: 案例研究
           other: 案例研究
         closed_consultation:
-          one: 封闭咨询
           other: 封闭咨询
         cma_case:
-          one: 竞争和市场管理局案例
           other: 竞争和市场管理局案例
         coming_soon:
-          one: 即将推出
           other: 即将推出
         consultation:
-          one: 咨询
           other: 咨询
         consultation_outcome:
-          one: 咨询结果
           other: 咨询结果
         corporate_information_page:
-          one: 信息页
           other: 信息页
         corporate_report:
-          one: 公司报告
           other: 公司报告
         correspondence:
-          one: 通信
           other: 通信
         countryside_stewardship_grant:
-          one: 乡村管理计划拨款
           other: 乡村管理计划拨款
         decision:
-          one: 决策
           other: 决策
         detailed_guide:
-          one: 指南
           other: 指南
         dfid_research_output:
-          one: 发展产出研究
           other: 发展产出研究
         document_collection:
-          one: 待整理
           other: 待整理
         draft_text:
-          one: 草拟文本
           other: 草拟文本
         drug_safety_update:
-          one: 药物安全更新
           other: 药物安全更新
         employment_appeal_tribunal_decision:
-          one: 劳资上诉法庭判决
           other: 劳资上诉法庭判决
         employment_tribunal_decision:
-          one: 劳资法庭判决
           other: 劳资法庭判决
         esi_fund:
-          one: 欧洲结构与投资基金(ESIF)
           other: 欧洲结构与投资基金(ESIF)
         fatality_notice:
-          one: 死亡通知
           other: 死亡通知
         foi_release:
-          one: FOI 发布
           other: FOI 发布
         form:
-          one: 表格
           other: 表格
         government_response:
-          one: 政府回应
           other: 政府回应
         guidance:
-          one: 指南
           other: 指南
         impact_assessment:
-          one: 影响评估
           other: 影响评估
         imported:
-          one: 进口-等待型
           other: 进口-等待型
         independent_report:
-          one: 独立报告
           other: 独立报告
         international_development_fund:
-          one: 国际发展资金
           other: 国际发展资金
         international_treaty:
-          one: 国际条约
           other: 国际条约
         maib_report:
-          one: 海事事故调查局报告
           other: 海事事故调查局报告
         map:
-          one: 地图
           other: 地图
         medical_safety_alert:
-          one: 药品和医疗设备的警报和召回
           other: 药品和医疗设备的警报和召回
         national:
-          one: 国家统计局公告
           other: 国家统计局公告
         national_statistics:
-          one: 国家统计局
           other: 国家统计局
         national_statistics_announcement:
-          one: 国家统计局公告
           other: 国家统计局公告
         news_article:
-          one: 新闻报道
           other: 新闻报道
         news_story:
-          one: 新闻故事
           other: 新闻故事
         notice:
-          one: 通知
           other: 通知
         official:
-          one: 官方统计公告
           other: 官方统计公告
         official_statistics:
-          one: 官方统计
           other: 官方统计
         official_statistics_announcement:
-          one: 官方统计公告
           other: 官方统计公告
         open_consultation:
-          one: 公开协商
           other: 公开协商
         oral_statement:
-          one: 议会口头声明
           other: 议会口头声明
         policy:
-          one: 策略
           other: 策略
         policy_paper:
-          one: 政策文件
           other: 政策文件
         press_release:
-          one: 新闻稿
           other: 新闻稿
         promotional:
-          one: 宣传资料
           other: 宣传资料
         publication:
-          one: 公布
           other: 公布
         raib_report:
-          one: 铁路事故调查局报告
           other: 铁路事故调查局报告
         regulation:
-          one: 条例
           other: 条例
         research:
-          one: 研究和分析
           other: 研究和分析
         residential_property_tribunal_decision:
-          one: 住宅物业法庭判决
           other: 住宅物业法庭判决
         service_sign_in:
-          one: 服务登记
           other: 服务登记
         service_standard_report:
-          one: 服务标准报告
           other: 服务标准报告
         speaking_notes:
-          one: 发言讲稿
           other: 发言讲稿
         speech:
-          one: 演讲
           other: 演讲
         standard:
-          one: 标准
           other: 标准
         statement_to_parliament:
-          one: 议会声明
           other: 议会声明
         statistical_data_set:
-          one: 统计数据集
           other: 统计数据集
         statistics_announcement:
-          one: 统计数据发布公告
           other: 统计数据发布公告
         statutory_guidance:
-          one: 法定指南
           other: 法定指南
         take_part:
-          one: 参加
           other: 参加
         tax_tribunal_decision:
-          one: 税务和衡平法法庭裁决
           other: 税务和衡平法法庭裁决
         transcript:
-          one: 文字记录
           other: 文字记录
         transparency:
-          one: 透明度数据
           other: 透明度数据
         utaac_decision:
-          one: 行政上诉法庭裁决
           other: 行政上诉法庭裁决
         world_location_news_article:
-          one: 新闻报道
           other: 新闻报道
         world_news_story:
-          one: 世界新闻故事
           other: 世界新闻故事
         written_statement:
-          one: 议会口头声明
           other: 议会口头声明
     corporate_information: 公司信息
     document_types:
@@ -335,4 +261,3 @@ zh:
     what_we_do: "%{title} 做什么"
     works_with_statement:
       other: 与 %{works_with_count} 机构和公共机构合作
-      one: 与 %{works_with_count} 公共机构合作

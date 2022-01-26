@@ -15,226 +15,152 @@ th:
     content_item:
       schema_name:
         aaib_report:
-          one: รายงานสาขาการสืบสวนอุบัติเหตุทางอากาศ
           other: รายงานสาขาการสืบสวนอุบัติเหตุทางอากาศ
         announcement:
-          one: ประกาศ
           other: ประกาศ
         asylum_support_decision:
-          one: คำตัดสินของศาลเกี่ยวกับการสนับสนุนผู้ลี้ภัย
           other: คำตัดสินของศาลในการสนับสนุนผู้ลี้ภัย
         authored_article:
-          one: บทความที่มีผู้เขียน
           other: บทความที่มีผู้เขียน
         business_finance_support_scheme:
-          one: โครงการสนับสนุนการเงินแก่ธุรกิจ
           other: โครงการสนับสนุนการเงินแก่ธุรกิจ
         case_study:
-          one: กรณีศึกษา
           other: กรณีศึกษา
         closed_consultation:
-          one: การให้คำปรึกษาที่ปิดแล้ว
           other: การให้คำปรึกษาที่ปิดแล้ว
         cma_case:
-          one: กรณีของหน่วยงานที่มีอำนาจดูแลการแข่งขันและตลาด
           other: กรณีของหน่วยงานที่มีอำนาจดูแลการแข่งขันและตลาด
         coming_soon:
-          one: เร็ว ๆ นี้
           other: เร็ว ๆ นี้
         consultation:
-          one: การให้คำปรึกษา
           other: การให้คำปรึกษา
         consultation_outcome:
-          one: ผลลัพธ์จากการให้คำปรึกษา
           other: ผลลัพธ์จากการให้คำปรึกษา
         corporate_information_page:
-          one: หน้าข้อมูล
           other: หน้าข้อมูล
         corporate_report:
-          one: รายงานของบริษัท
           other: รายงานของบริษัท
         correspondence:
-          one: จดหมายโต้ตอบ
           other: จดหมายโต้ตอบ
         countryside_stewardship_grant:
-          one: เงินทุนเพื่อชนบท
           other: เงินทุนเพื่อชนบท
         decision:
-          one: การตัดสินใจ
           other: การตัดสินใจ
         detailed_guide:
-          one: คำแนะนำ
           other: คำแนะนำ
         dfid_research_output:
-          one: การวิจัยเพื่อผลการพัฒนา
           other: การวิจัยเพื่อผลการพัฒนา
         document_collection:
-          one: คอลเล็กชั่น
           other: คอลเล็กชั่น
         draft_text:
-          one: ข้อความร่าง
           other: ข้อความร่าง
         drug_safety_update:
-          one: ข่าวสารความปลอดภัยของยา
           other: ข่าวสารความปลอดภัยของยา
         employment_appeal_tribunal_decision:
-          one: คำพิพากษาของศาลแรงงานขั้นอุทธรณ์
           other: คำพิพากษาของศาลแรงงานขั้นอุทธรณ์
         employment_tribunal_decision:
-          one: คำพิพากษาของศาลแรงงาน
           other: คำพิพากษาของศาลแรงงาน
         esi_fund:
-          one: กองทุนโครงสร้างและการลงทุนแห่งยุโรป (ESIF)
           other: กองทุนโครงสร้างและการลงทุนแห่งยุโรป (ESIF)
         fatality_notice:
-          one: การแจ้งตาย
           other: การแจ้งตาย
         foi_release:
-          one: การออก FOI
           other: การออก FOI
         form:
-          one: แบบฟอร์ม
           other: แบบฟอร์ม
         government_response:
-          one: คำตอบของรัฐบาล
           other: คำตอบของรัฐบาล
         guidance:
-          one: คำแนะนำ
           other: คำแนะนำ
         impact_assessment:
-          one: การประเมินผลกระทบ
           other: การประเมินผลกระทบ
         imported:
-          one: นำเข้าแล้ว - รอการพิมพ์
           other: นำเข้าแล้ว - รอการพิมพ์
         independent_report:
-          one: รายงานอิสระ
           other: รายงานอิสระ
         international_development_fund:
-          one: ทุนพัฒนาระหว่างประเทศ
           other: ทุนพัฒนาระหว่างประเทศ
         international_treaty:
-          one: สนธิสัญญาระหว่างประเทศ
           other: สนธิสัญญาระหว่างประเทศ
         maib_report:
-          one: รายงานสาขาการสืบสวนอุบัติเหตุทางทะเล
-          other: รายงานสาขาการสืบสวนอุบัติเหตุทางอากาศ
+          other: รายงานสาขาการสืบสวนอุบัติเหตุทางทะเล
         map:
-          one: แผนที่
           other: แผนที่
         medical_safety_alert:
-          one: การแจ้งเตือนและการเรียกคืนยาและเครื่องมือแพทย์
           other: การแจ้งเตือนและการเรียกคืนยาและเครื่องมือแพทย์
         national:
-          one: ประกาศสถิติแห่งชาติ
           other: ประกาศสถิติแห่งชาติ
         national_statistics:
-          one: สถิติแห่งชาติ
           other: สถิติแห่งชาติ
         national_statistics_announcement:
-          one: ประกาศสถิติแห่งชาติ
           other: ประกาศสถิติแห่งชาติ
         news_article:
-          one: บทความข่าว
           other: บทความข่าว
         news_story:
-          one: เนื้อหาข่าว
           other: เนื้อหาข่าว
         notice:
-          one: ประกาศ
           other: ประกาศ
         official:
-          one: ประกาศสถิติของราชการ
           other: ประกาศสถิติของราชการ
         official_statistics:
-          one: สถิติของราชการ
           other: สถิติของราชการ
         official_statistics_announcement:
-          one: ประกาศสถิติของราชการ
           other: ประกาศสถิติของราชการ
         open_consultation:
-          one: การให้คำปรึกษาที่เปิดอยู่
           other: การให้คำปรึกษาที่เปิดอยู่
         oral_statement:
-          one: แถลงการณ์ด้วยวาจาต่อรัฐสภา
           other: แถลงการณ์ด้วยวาจาต่อรัฐสภา
         policy:
-          one: นโยบาย
           other: นโยบาย
         policy_paper:
-          one: เอกสารนโยบาย
           other: เอกสารนโยบาย
         press_release:
-          one: ข่าวประชาสัมพันธ์
           other: ข่าวประชาสัมพันธ์
         promotional:
-          one: สื่อวัสดุส่งเสริมการขาย
           other: สื่อวัสดุส่งเสริมการขาย
         publication:
-          one: สิ่งพิมพ์
           other: สิ่งพิมพ์
         raib_report:
-          one: รายงานสาขาการสืบสวนอุบัติเหตุทางรถไฟ
           other: รายงานสาขาการสืบสวนอุบัติเหตุทางรถไฟ
         regulation:
-          one: ระเบียบข้อบังคับ
           other: ระเบียบข้อบังคับ
         research:
-          one: การวิจัยและการวิเคราะห์
           other: การวิจัยและการวิเคราะห์
         residential_property_tribunal_decision:
-          one: คำพิพากษาของศาลเกี่ยวกับที่อยู่อาศัย
           other: คำพิพากษาของศาลเกี่ยวกับที่อยู่อาศัย
         service_sign_in:
-          one: ลงชื่อเข้าใช้บริการ
           other: ลงชื่อเข้าใช้บริการ
         service_standard_report:
-          one: รายงานมาตรฐานบริการ
           other: รายงานมาตรฐานบริการ
         speaking_notes:
-          one: บันทึกสุนทรพจน์
           other: บันทึกสุนทรพจน์
         speech:
-          one: สุนทรพจน์
           other: สุนทรพจน์
         standard:
-          one: มาตรฐาน
           other: มาตรฐาน
         statement_to_parliament:
-          one: แถลงการณ์ต่อรัฐสภา
           other: แถลงการณ์ต่อรัฐสภา
         statistical_data_set:
-          one: ชุดข้อมูลสถิติ
           other: ชุดข้อมูลสถิติ
         statistics_announcement:
-          one: ประกาศออกข้อมูลสถิติ
           other: ประกาศออกข้อมูลสถิติ
         statutory_guidance:
-          one: คำแนะนำทางกฎหมาย
           other: คำแนะนำทางกฎหมาย
         take_part:
-          one: มีส่วนร่วม
           other: มีส่วนร่วม
         tax_tribunal_decision:
-          one: คำพิพากษาของศาลเกี่ยวกับภาษีอากร
           other: คำพิพากษาของศาลเกี่ยวกับภาษีอากร
         transcript:
-          one: การถอดเสียง
           other: การถอดเสียง
         transparency:
-          one: ข้อมูลความโปร่งใส
           other: ข้อมูลความโปร่งใส
         utaac_decision:
-          one: คำพิพากษาของศาลปกครองขั้นอุทธรณ์
-          other: คำพิพากษาของศาลแรงงานขั้นอุทธรณ์
+          other: คำพิพากษาของศาลปกครองขั้นอุทธรณ์
         world_location_news_article:
-          one: บทความข่าว
           other: บทความข่าว
         world_news_story:
-          one: ข่าวสารรอบโลก
           other: ข่าวสารรอบโลก
         written_statement:
-          one: แถลงการณ์เป็นลายลักษณ์อักษรต่อรัฐสภา
           other: แถลงการณ์เป็นลายลักษณ์อักษรต่อรัฐสภา
     corporate_information: ข้อมูลองค์กร
     document_types:
@@ -337,4 +263,3 @@ th:
     what_we_do: "%{title} ทำอะไร"
     works_with_statement:
       other: ทำงานร่วมกับหน่วยงานและหน่วยงานราชการ %{works_with_count} แห่ง
-      one: ทำงานร่วมกับหน่วยงานราชการ %{works_with_count} แห่ง
