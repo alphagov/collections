@@ -336,5 +336,5 @@ az:
     view_less: daha azına baxın
     what_we_do: "%{title} nə edir"
     works_with_statement:
-      multiple: "%{works_with_count} agentliklər və dövlət orqanları ilə olan işlər"
+      other: "%{works_with_count} agentliklər və dövlət orqanları ilə olan işlər"
       one: "%{works_with_count} dövlət orqanı ilə olan işlər"

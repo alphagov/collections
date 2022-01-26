@@ -336,5 +336,5 @@
     view_less: se mindre
     what_we_do: Hva %{title} gjør
     works_with_statement:
-      multiple: Jobber med %{works_with_count} byråer og offentlige instanser
+      other: Jobber med %{works_with_count} byråer og offentlige instanser
       one: Jobber med %{works_with_count} offentlig instans

@@ -336,5 +336,5 @@ fa:
     view_less: مشاهده کمتر
     what_we_do: "%{title} چه کاری انجام می‌دهد"
     works_with_statement:
-      multiple: با آژانس‌ها و نهادهای عمومی %{works_with_count} همکاری می‌کند
+      other: با آژانس‌ها و نهادهای عمومی %{works_with_count} همکاری می‌کند
       one: با نهاد عمومی %{works_with_count} همکاری می‌کند

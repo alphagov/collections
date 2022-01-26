@@ -336,5 +336,5 @@ he:
     view_less: הצג פחות
     what_we_do: מה %{title} עושה
     works_with_statement:
-      multiple: עובד עם %{works_with_count} סוכנויות וגופים ציבוריים
+      other: עובד עם %{works_with_count} סוכנויות וגופים ציבוריים
       one: עובד עם %{works_with_count} גוף ציבורי

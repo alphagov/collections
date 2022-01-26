@@ -336,5 +336,5 @@ et:
     view_less: vaata vähem
     what_we_do: Mida teeb %{title}
     works_with_statement:
-      multiple: Töötab %{works_with_count} agentuuride ja avaliku sektori asutuses
+      other: Töötab %{works_with_count} agentuuride ja avaliku sektori asutuses
       one: Töötab %{works_with_count} riigiasutuses

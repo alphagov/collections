@@ -338,5 +338,5 @@ pa-pk:
     view_less: گھٹ ویکھو
     what_we_do: کیہ {title}% ہویا
     works_with_statement:
-      multiple: دے نال کم کر دے نیں {works_with_count}% ایجنسیاں تے عوامی ادارے
+      other: دے نال کم کر دے نیں {works_with_count}% ایجنسیاں تے عوامی ادارے
       one: کم کر دے نیں {works_with_count}%  عوامی ادارے نال

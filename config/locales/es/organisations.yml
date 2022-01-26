@@ -334,5 +334,5 @@ es:
     view_less: ver menos
     what_we_do: "¿Qué hace %{title}"
     works_with_statement:
-      multiple: Funciona con agencias y organismos públicos de %{works_with_count}
+      other: Funciona con agencias y organismos públicos de %{works_with_count}
       one: Funciona con el cuerpo público %{works_with_count}

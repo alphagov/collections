@@ -15,226 +15,152 @@ ja:
     content_item:
       schema_name:
         aaib_report:
-          one: 航空事故調査局報告書
           other: 航空事故調査局報告書
         announcement:
-          one: お知らせ
           other: お知らせ
         asylum_support_decision:
-          one: 難民支援審判所（Asylum support tribunal）の決定
           other: 難民支援審判所（Asylum support tribunal）の決定
         authored_article:
-          one: 執筆記事
           other: 執筆記事
         business_finance_support_scheme:
-          one: 企業金融支援制度
           other: 企業金融支援制度
         case_study:
-          one: ケーススタディ
           other: ケーススタディ
         closed_consultation:
-          one: 非公開の審議
           other: 非公開の審議
         cma_case:
-          one: 競争・市場当局の事例
           other: 競争・市場当局の事例
         coming_soon:
-          one: 近日公開
           other: 近日公開
         consultation:
-          one: 審議
           other: 審議
         consultation_outcome:
-          one: 審議結果
           other: 審議結果
         corporate_information_page:
-          one: 情報ページ
           other: 情報ページ
         corporate_report:
-          one: 企業報告書
           other: 企業報告書
         correspondence:
-          one: 対応
           other: 対応
         countryside_stewardship_grant:
-          one: カントリーサイドスチュワードシップ助成金
           other: カントリーサイドスチュワードシップ助成金
         decision:
-          one: 決定事項
           other: 決定事項
         detailed_guide:
-          one: ガイダンス
           other: ガイダンス
         dfid_research_output:
-          one: 開発成果の研究
           other: 開発成果の研究
         document_collection:
-          one: コレクション
           other: コレクション
         draft_text:
-          one: 下書きテキスト
           other: 下書きテキスト
         drug_safety_update:
-          one: 医薬品の安全性に関する最新情報
           other: 医薬品の安全性に関する最新情報
         employment_appeal_tribunal_decision:
-          one: 雇用上訴審判所（Employment appeal tribunal）の決定
           other: 雇用上訴審判所（Employment appeal tribunal）の決定
         employment_tribunal_decision:
-          one: 雇用審判所（Employment tribunal decision）の決定
           other: 雇用審判所（Employment tribunal decision）の決定
         esi_fund:
-          one: 欧州構造投資基金 (ESIF)
           other: 欧州構造投資基金 (ESIF)
         fatality_notice:
-          one: 死亡通知
           other: 死亡通知
         foi_release:
-          one: 情報公開公表
           other: 情報公開公表
         form:
-          one: フォーム
           other: フォーム
         government_response:
-          one: 政府の対応
           other: 政府の対応
         guidance:
-          one: ガイダンス
           other: ガイダンス
         impact_assessment:
-          one: 影響評価
           other: 影響評価
         imported:
-          one: インポート済み - 待機中の種別
           other: インポート済み - 待機中の種別
         independent_report:
-          one: 第三者機関による報告書
           other: 第三者機関による報告書
         international_development_fund:
-          one: 国際開発資金
           other: 国際開発資金
         international_treaty:
-          one: 国際条約
           other: 国際条約
         maib_report:
-          one: 海難調査支部報告書
           other: 海難調査支部報告書
         map:
-          one: 地図
           other: 地図
         medical_safety_alert:
-          one: 医薬品・医療機器の注意喚起及び回収
           other: 医薬品・医療機器の注意喚起及び回収
         national:
-          one: 全国統計発表
           other: 全国統計発表
         national_statistics:
-          one: 国家統計
           other: 国家統計
         national_statistics_announcement:
-          one: 全国統計発表
           other: 全国統計発表
         news_article:
-          one: ニュース記事
           other: ニュース記事
         news_story:
-          one: ニュースストーリー
           other: ニュースストーリー
         notice:
-          one: お知らせ
           other: お知らせ
         official:
-          one: 公式統計発表
           other: 公式統計発表
         official_statistics:
-          one: 公式統計
           other: 公式統計
         official_statistics_announcement:
-          one: 公式統計発表
           other: 公式統計発表
         open_consultation:
-          one: 公開審議
           other: 公開審議
         oral_statement:
-          one: 議会への口頭声明
           other: 議会への口頭声明
         policy:
-          one: 方針
           other: 方針
         policy_paper:
-          one: 方針書
           other: 方針書
         press_release:
-          one: プレスリリース
           other: プレスリリース
         promotional:
-          one: 販促資料
           other: 販促資料
         publication:
-          one: 出版物
           other: 出版物
         raib_report:
-          one: 鉄道事故調査委員会報告書
           other: 鉄道事故調査委員会報告書
         regulation:
-          one: 規制
           other: 規則
         research:
-          one: 調査と分析
           other: 調査と分析
         residential_property_tribunal_decision:
-          one: 居住用財産審判所（Residential property tribunal）の決定
           other: 居住用財産審判所（Residential property tribunal）の決定
         service_sign_in:
-          one: サービスサインイン
           other: サービスサインイン
         service_standard_report:
-          one: サービス標準報告書
           other: サービス標準報告書
         speaking_notes:
-          one: 発言ノート
           other: 発言ノート
         speech:
-          one: スピーチ
           other: スピーチ
         standard:
-          one: 標準
           other: 標準
         statement_to_parliament:
-          one: 議会への声明
           other: 議会への声明
         statistical_data_set:
-          one: 統計データセット
           other: 統計データセット
         statistics_announcement:
-          one: 統計リリース発表
           other: 統計リリース発表
         statutory_guidance:
-          one: 法定ガイダンス
           other: 法定ガイダンス
         take_part:
-          one: 参加する
           other: 参加する
         tax_tribunal_decision:
-          one: 租税及び衡平審判所（Tax and Chancery tribunal）の決定
           other: 租税及び衡平審判所（Tax and Chancery tribunal）の決定
         transcript:
-          one: 謄本
           other: 謄本
         transparency:
-          one: 透明性データ
           other: 透明性データ
         utaac_decision:
-          one: 行政控訴審判所（Administrative appeals tribunal decision）の決定
           other: 行政控訴審判所（Administrative appeals tribunal decision）の決定
         world_location_news_article:
-          one: ニュース記事
           other: ニュース記事
         world_news_story:
-          one: 世界のニュース記事
           other: 世界のニュース記事
         written_statement:
-          one: 議会への書面による声明
           other: 議会への書面による声明
     corporate_information: 各種情報
     document_types:
@@ -336,5 +262,4 @@ ja:
     view_less: 一部を表示
     what_we_do: "%{title}が行うこと"
     works_with_statement:
-      multiple: "%{works_with_count}機関および公共団体と連携"
-      one: "%{works_with_count}公共団体と連携"
+      other: "%{works_with_count}機関および公共団体と連携"

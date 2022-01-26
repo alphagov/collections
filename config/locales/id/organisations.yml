@@ -15,226 +15,152 @@ id:
     content_item:
       schema_name:
         aaib_report:
-          one: Laporan Cabang Investigasi Kecelakaan Udara
           other: Laporan Cabang Investigasi Kecelakaan Udara
         announcement:
-          one: Pengumuman
           other: Pengumuman
         asylum_support_decision:
-          one: Keputusan persidangan dukungan suaka
           other: Keputusan persidangan dukungan suaka
         authored_article:
-          one: Artikel bersumber
           other: Artikel bersumber
         business_finance_support_scheme:
-          one: Skema dukungan keuangan bisnis
           other: Skema dukungan keuangan bisnis
         case_study:
-          one: Studi kasus
           other: Studi kasus
         closed_consultation:
-          one: Konsultasi tertutup
           other: Konsultasi tertutup
         cma_case:
-          one: Kasus Otoritas Persaingan dan Pasar
           other: Kasus Otoritas Persaingan dan Pasar
         coming_soon:
-          one: Segera Hadir
           other: Segera Hadir
         consultation:
-          one: Konsultasi
           other: Konsultasi
         consultation_outcome:
-          one: Hasil konsultasi
           other: Hasil konsultasi
         corporate_information_page:
-          one: Halaman informasi
           other: Halaman informasi
         corporate_report:
-          one: Laporan korporat
           other: Laporan korporat
         correspondence:
-          one: Korespondensi
           other: Korespondensi
         countryside_stewardship_grant:
-          one: Hibah Countryside Stewardship
           other: Hibah Countryside Stewardship
         decision:
-          one: Keputusan
           other: Keputusan
         detailed_guide:
-          one: Panduan
           other: Panduan
         dfid_research_output:
-          one: Hasil Riset untuk Pembangunan
           other: Hasil Riset untuk Pembangunan
         document_collection:
-          one: Koleksi
           other: Koleksi
         draft_text:
-          one: Teks rancangan
           other: Teks rancangan
         drug_safety_update:
-          one: Pembaruan Keselamatan Obat
           other: Pembaruan Keselamatan Obat
         employment_appeal_tribunal_decision:
-          one: Keputusan persidangan banding ketenagakerjaan
           other: Keputusan persidangan banding ketenagakerjaan
         employment_tribunal_decision:
-          one: Keputusan persidangan ketenagakerjaan
           other: Keputusan persidangan ketenagakerjaan
         esi_fund:
-          one: Dana Struktur dan Investasi Eropa (ESIF)
           other: Dana Struktur dan Investasi Eropa (ESIF)
         fatality_notice:
-          one: Pemberitahuan fatalitas
           other: Pemberitahuan fatalitas
         foi_release:
-          one: Rilis Kebebasan Informasi
           other: Rilis Kebebasan Informasi
         form:
-          one: Formulir
           other: Formulir
         government_response:
-          one: Respons pemerintah
           other: Respons pemerintah
         guidance:
-          one: Panduan
           other: Panduan
         impact_assessment:
-          one: Penilaian dampak
           other: Penilaian dampak
         imported:
-          one: diimpor- menunggu jenis
           other: diimpor- menunggu jenis
         independent_report:
-          one: Laporan independen
           other: Laporan independen
         international_development_fund:
-          one: Pendanaan pembangunan internasional
           other: Pendanaan pembangunan internasional
         international_treaty:
-          one: Pakta internasional
           other: Pakta internasional
         maib_report:
-          one: Laporan Cabang Investigasi Kecelakaan Maritim
           other: Laporan Cabang Investigasi Kecelakaan Maritim
         map:
-          one: Peta
           other: Peta
         medical_safety_alert:
-          one: Peringatan dan panggilan ulang untuk obat-obatan dan perangkat medis
           other: Peringatan dan panggilan ulang untuk obat-obatan dan perangkat medis
         national:
-          one: Pengumuman statistik nasional
           other: Pengumuman statistik nasional
         national_statistics:
-          one: Statistik Nasional
           other: Statistik Nasional
         national_statistics_announcement:
-          one: Pengumuman statistik nasional
           other: Pengumuman statistik nasional
         news_article:
-          one: Artikel berita
           other: Artikel berita
         news_story:
-          one: Cerita berita
           other: Cerita berita
         notice:
-          one: Pemberitahuan
           other: Pemberitahuan
         official:
-          one: Pengumuman statistik resmi
           other: Pengumuman statistik resmi
         official_statistics:
-          one: Statistik Resmi
           other: Statistik Resmi
         official_statistics_announcement:
-          one: Pengumuman statistik resmi
           other: Pengumuman statistik resmi
         open_consultation:
-          one: Konsultasi terbuka
           other: Konsultasi terbuka
         oral_statement:
-          one: Pernyataan lisan kepada Parlemen
           other: Pernyataan lisan kepada Parlemen
         policy:
-          one: Kebijakan
           other: Kebijakan
         policy_paper:
-          one: Kertas kebijakan
           other: Kertas kebijakan
         press_release:
-          one: Siaran pers
           other: Siaran pers
         promotional:
-          one: Bahan promosi
           other: Bahan promosi
         publication:
-          one: Publikasi
           other: Publikasi
         raib_report:
-          one: Laporan Cabang Investigasi Kecelakaan Kereta
           other: Laporan Cabang Investigasi Kecelakaan Kereta
         regulation:
-          one: Regulasi
           other: Regulasi
         research:
-          one: Riset dan analisis
           other: Riset dan analisis
         residential_property_tribunal_decision:
-          one: Keputusan persidangan properti permukiman
           other: Keputusan persidangan properti permukiman
         service_sign_in:
-          one: Masuk layanan
           other: Masuk layanan
         service_standard_report:
-          one: Laporan Standar Layanan
           other: Laporan Standar Layanan
         speaking_notes:
-          one: Catatan bicara
           other: Catatan bicara
         speech:
-          one: Pidato
           other: Pidato
         standard:
-          one: Standar
           other: Standar
         statement_to_parliament:
-          one: Pernyataan kepada Parlemen
           other: Pernyataan kepada Parlemen
         statistical_data_set:
-          one: Set data statistik
           other: Set data statistik
         statistics_announcement:
-          one: Pengumuman rilis statistik
           other: Pengumuman rilis statistik
         statutory_guidance:
-          one: Panduan perundang-undangan
           other: Panduan perundang-undangan
         take_part:
-          one: Ikut serta
           other: Ikut serta
         tax_tribunal_decision:
-          one: Keputusan persidangan Pajak dan Perbendaharaan
           other: Keputusan persidangan Pajak dan Perbendaharaan
         transcript:
-          one: Transkrip
           other: Transkrip
         transparency:
-          one: Data transparansi
           other: Data transparansi
         utaac_decision:
-          one: Keputusan persidangan banding administratif
           other: Keputusan persidangan banding administratif
         world_location_news_article:
-          one: Artikel berita
           other: Artikel berita
         world_news_story:
-          one: Cerita berita dunia
           other: Cerita berita dunia
         written_statement:
-          one: Pernyataan tertulis kepada Parlemen
           other: Pernyataan tertulis kepada Parlemen
     corporate_information: Informasi korporat
     document_types:
@@ -336,5 +262,4 @@ id:
     view_less: lihat lebih sedikit
     what_we_do: Apa yang dilakukan %{title}
     works_with_statement:
-      multiple: Bekerja bersama %{works_with_count} lembaga dan badan publik
-      one: Bekerja bersama %{works_with_count} badan publik
+      other: Bekerja bersama %{works_with_count} lembaga dan badan publik

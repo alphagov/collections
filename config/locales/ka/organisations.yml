@@ -334,5 +334,5 @@ ka:
     view_less: ნაკლების ნახვა
     what_we_do: რას აკეთებს %{title}
     works_with_statement:
-      multiple: მუშაობს %{works_with_count} სააგენტოებთან და საჯარო ორგანოებთან
+      other: მუშაობს %{works_with_count} სააგენტოებთან და საჯარო ორგანოებთან
       one: მუშაობს %{works_with_count} საჯარო ორგანოსთან

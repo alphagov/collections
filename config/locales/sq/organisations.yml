@@ -334,5 +334,5 @@ sq:
     view_less: shit më pak
     what_we_do: Çfarë %{title} bën
     works_with_statement:
-      multiple: Punon me %{works_with_count} agjensitë dhe organe publike
+      other: Punon me %{works_with_count} agjensitë dhe organe publike
       one: Punon me %{works_with_count} organ publik

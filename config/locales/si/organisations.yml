@@ -336,5 +336,5 @@ si:
     view_less: අඩුවෙන් බලන්න
     what_we_do: "%{title} යනු කුමක්ද"
     works_with_statement:
-      multiple: නියෝජිතායතන සහ පොදු ආයතන %{works_with_count} ක් සමඟ වැඩ කරයි
+      other: නියෝජිතායතන සහ පොදු ආයතන %{works_with_count} ක් සමඟ වැඩ කරයි
       one: පොදු ආයතන %{works_with_count} ක් සමඟ වැඩ කරයි

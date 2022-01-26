@@ -334,5 +334,5 @@ hi:
     view_less: कम देखें
     what_we_do: "%{title} क्या करता है"
     works_with_statement:
-      multiple: "%{works_with_count} एजेंसियों और सार्वजनिक निकायों के साथ काम करता है"
+      other: "%{works_with_count} एजेंसियों और सार्वजनिक निकायों के साथ काम करता है"
       one: "%{works_with_count} सार्वजनिक निकाय के साथ काम करता है"

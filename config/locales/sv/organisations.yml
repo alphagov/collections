@@ -336,5 +336,5 @@ sv:
     view_less: visa mindre
     what_we_do: Vad %{title} gör
     works_with_statement:
-      multiple: Arbetar med %{works_with_count} myndigheter och offentliga organ
+      other: Arbetar med %{works_with_count} myndigheter och offentliga organ
       one: Arbetar med %{works_with_count} offentligt organ

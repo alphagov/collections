@@ -4,7 +4,6 @@ sr:
     find_out_more_html: Saznajte više o prethodnim nosiocima ove funkcije u našem odeljku %{link}.
     heading:
       few:
-      many:
       one: Uloga
       other: Uloge
     headings:

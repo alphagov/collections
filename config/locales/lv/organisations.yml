@@ -336,5 +336,5 @@ lv:
     view_less: Skatīt mazāk organizāciju
     what_we_do: Ko dara %{title}
     works_with_statement:
-      multiple: Sadarbojas ar %{works_with_count} aģentūrām un sabiedriskajām organizācijām
+      other: Sadarbojas ar %{works_with_count} aģentūrām un sabiedriskajām organizācijām
       one: Sadarbojas ar %{works_with_count} sabiedrisko iestādi

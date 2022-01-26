@@ -336,5 +336,5 @@ bg:
     view_less: покажи по-малко
     what_we_do: Какви действия извършва %{title}
     works_with_statement:
-      multiple: Работи с %{works_with_count} агенции и публични органи
+      other: Работи с %{works_with_count} агенции и публични органи
       one: Работи с %{works_with_count} публични органи

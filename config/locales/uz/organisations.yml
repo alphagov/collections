@@ -336,5 +336,5 @@ uz:
     view_less: Камроқ кўриш
     what_we_do: Нима %{title} қилмоқда
     works_with_statement:
-      multiple: Агентликлар ва давлат органлари %{works_with_count} билан ишлайди
+      other: Агентликлар ва давлат органлари %{works_with_count} билан ишлайди
       one: Давлат органлари %{works_with_count} билан ишлайди

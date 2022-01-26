@@ -348,5 +348,5 @@ da:
     view_less: se mindre
     what_we_do: Hvad %{title} gør
     works_with_statement:
-      multiple: Arbejder med %{works_with_count} agenturer og offentlige organer
+      other: Arbejder med %{works_with_count} agenturer og offentlige organer
       one: Arbejder med det offentlige organ %{works_with_count}

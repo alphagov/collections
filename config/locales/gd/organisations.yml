@@ -484,5 +484,7 @@ gd:
     view_less: féach níos lú
     what_we_do: Cad atá á dhéanamh ag %{title}
     works_with_statement:
-      multiple: Oibríonn sé le heagraíochtaí %{works_with_count} agus le comhlachtaí poiblí
+      two:
+      few:
+      other: Oibríonn sé le heagraíochtaí %{works_with_count} agus le comhlachtaí poiblí
       one: Oibríonn sé le comhlacht poiblí %{works_with_count}
