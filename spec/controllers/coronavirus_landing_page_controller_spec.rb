@@ -3,7 +3,11 @@ RSpec.describe CoronavirusLandingPageController do
 
   describe "GET show" do
     before do
-      stub_content_store_has_item("/coronavirus", coronavirus_content_item)
+      stub_content_store_has_item(
+        "/coronavirus",
+        coronavirus_content_item,
+        { max_age: 900, private: false },
+      )
       stub_coronavirus_statistics
     end
 
@@ -14,7 +18,22 @@ RSpec.describe CoronavirusLandingPageController do
 
     it "sets a 5 minute cache header" do
       get :show
-      expect(response.headers["Cache-Control"]).to eq("max-age=#{5.minutes}, public")
+      expect(response.headers["Cache-Control"]).to eq("max-age=900, public")
+    end
+
+    context "When private cache is set" do
+      before do
+        stub_content_store_has_item(
+          "/coronavirus",
+          coronavirus_content_item,
+          { max_age: 900, private: true },
+        )
+      end
+
+      it "can respond with private cache set" do
+        get :show
+        expect(response.headers["Cache-Control"]).to eq("max-age=900, private")
+      end
     end
 
     context "when coronavirus statistics are not available" do
