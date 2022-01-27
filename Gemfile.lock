@@ -249,7 +249,7 @@ GEM
     jasmine_selenium_runner (3.0.0)
       jasmine (~> 3.0)
       selenium-webdriver (~> 3.8)
-    json (2.5.1)
+    json (2.6.1)
     json-schema (2.8.1)
       addressable (>= 2.4)
     kgio (2.11.4)
@@ -479,7 +479,7 @@ GEM
     simplecov-html (0.12.2)
     simplecov-rcov (0.2.3)
       simplecov (>= 0.4.1)
-    slimmer (15.6.1)
+    slimmer (16.0.0)
       activesupport
       json
       nokogiri (~> 1.7)
