@@ -2,7 +2,9 @@ class BrexitLandingPageController < ApplicationController
   include Slimmer::Headers
 
   skip_before_action :set_expiry
-  before_action -> { set_expiry(1.minute) }
+  before_action do
+    set_expiry content_item.max_age, public_cache: content_item.public_cache
+  end
 
   slimmer_template "gem_layout_full_width_explore_header"
 
