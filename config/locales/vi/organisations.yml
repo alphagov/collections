@@ -256,6 +256,7 @@ vi:
       non_ministerial_department: Bộ phận không thuộc bộ
       other: Khác
       public_corporation: Công ty đại chúng
+      special_health_authority:
       sub_organisation:
       tribunal: Tòa án
     view_all: xem tất cả

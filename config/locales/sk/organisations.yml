@@ -404,6 +404,7 @@ sk:
       non_ministerial_department: Oddelenie, ktoré nie je ministerstvom
       other: Iné
       public_corporation: Verejnoprávna korporácia
+      special_health_authority:
       sub_organisation:
       tribunal: Súd
     view_all: zobraziť všetko

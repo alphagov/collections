@@ -330,6 +330,7 @@ bg:
       non_ministerial_department: Отдел, който не е министерство
       other: Други
       public_corporation: Публична компания
+      special_health_authority:
       sub_organisation:
       tribunal: Арбитраж
     view_all: покажи всички

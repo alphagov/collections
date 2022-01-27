@@ -330,6 +330,7 @@ bn:
       non_ministerial_department: মন্ত্রণালয়-বহির্ভূত বিভাগ
       other: অন্যান্য
       public_corporation: পাবলিক কর্পোরেশন
+      special_health_authority:
       sub_organisation:
       tribunal: ট্রাইব্যুনাল
     view_all: সবগুলো দেখান

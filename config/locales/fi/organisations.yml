@@ -330,6 +330,7 @@ fi:
       non_ministerial_department: Muu kuin ministeriön yksikkö
       other: Muut
       public_corporation: Julkinen osakeyhtiö
+      special_health_authority:
       sub_organisation:
       tribunal: Tuomioistuin
     view_all: näytä kaikki

@@ -571,7 +571,7 @@ cy:
       contact_form: Ffurflen gysylltu FOI
       foi_exemption_html: 'Nid yw''r sefydliad hwn yn dod o dan y Ddeddf Rhyddid Gwybodaeth. I weld pa sefydliadau sydd wedi''u cynnwys, gweler <a href="%{foi_url}" class="govuk-link brand__color">y ddeddfwriaeth</a>.
 
-'
+        '
       freedom_of_information_act: Deddf Rhyddid Gwybodaeth
       freedom_of_information_requests: Ceisiadau Rhyddid Gwybodaeth
       make_an_foi_request: Gwneud cais Rhyddid Gwybodaeth
@@ -626,6 +626,7 @@ cy:
       non_ministerial_department: Adran anweinidogol
       other: Arall
       public_corporation: Corfforaeth gyhoeddus
+      special_health_authority:
       sub_organisation:
       tribunal: Tribiwnlys
     view_all: gweld popeth

@@ -330,6 +330,7 @@ et:
       non_ministerial_department: Ministeeriumiväline osakond
       other: Muu
       public_corporation: Avalik ettevõte
+      special_health_authority:
       sub_organisation:
       tribunal: Kohus
     view_all: vaata kõiki

@@ -330,6 +330,7 @@ tr:
       non_ministerial_department: Bakanlık dışı müdürlük
       other: Diğer
       public_corporation: Kamu kurumu
+      special_health_authority:
       sub_organisation:
       tribunal: Mahkeme
     view_all: hepsini gör

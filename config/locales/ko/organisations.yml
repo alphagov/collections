@@ -256,6 +256,7 @@ ko:
       non_ministerial_department: 비부처
       other: 기타
       public_corporation: 공공 기관
+      special_health_authority:
       sub_organisation:
       tribunal: 법원
     view_all: 모두 보기
