@@ -28,7 +28,7 @@ RSpec.describe OrganisationsController do
     it "set correct expiry headers" do
       get :show, params: { organisation_name: "ministry-of-magic" }
 
-      expect(response.headers["Cache-Control"]).to eq("max-age=300, public")
+      expect(response.headers["Cache-Control"]).to eq("max-age=900, public")
     end
   end
 end
