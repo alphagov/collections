@@ -289,7 +289,8 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     if (GOVUK.analytics && GOVUK.analytics.trackPageview) {
       var options = {
         dimension1: sectionTitle,
-        dimension32: navigationPageType
+        dimension32: navigationPageType,
+        location: window.location.href
       }
 
       if (typeof tracker !== 'undefined') {
@@ -298,7 +299,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
       GOVUK.analytics.trackPageview(
         state.path,
-        null,
+        document.title,
         options
       )
     }

@@ -226,23 +226,26 @@ describe('browse-columns.js', function () {
     var bc = new window.GOVUK.Modules.BrowseColumns(el)
     bc.init()
     bc.trackPageview(state)
+    var title = document.title
 
     expect(GOVUK.analytics.trackPageview).toHaveBeenCalledTimes(2)
     expect(GOVUK.analytics.trackPageview).toHaveBeenCalledWith(
       'foo',
-      null,
+      title,
       {
         dimension1: 'browse',
-        dimension32: 'none'
+        dimension32: 'none',
+        location: String(window.location)
       }
     )
     expect(GOVUK.analytics.trackPageview).toHaveBeenCalledWith(
       'foo',
-      null,
+      title,
       {
         dimension1: 'browse',
         dimension32: 'none',
-        trackerName: 'govuk'
+        trackerName: 'govuk',
+        location: String(window.location)
       }
     )
   })
