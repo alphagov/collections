@@ -1,11 +1,8 @@
 class SecondLevelBrowsePageController < ApplicationController
-  include RecruitmentBannerHelpers
   enable_request_formats show: [:json]
 
   def show
     setup_content_item_and_navigation_helpers(page)
-
-    @hide_recruitment_banner = hide_banner?(request.path)
 
     respond_to do |f|
       f.html do

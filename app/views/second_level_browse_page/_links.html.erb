@@ -1,21 +1,6 @@
 <div class="browse__inner <%= page.lists.curated? ? 'browse__inner--curated' : 'browse__inner--alphabetical' %>">
   <h2 tabindex="-1" class="browse__heading js-heading"><%= t("shared.browse.prefix") %> <%= page.title %></h2>
 
-  <%= render "govuk_publishing_components/components/intervention", {
-    suggestion_text: "Help improve GOV.UK",
-    suggestion_link_text: "Take part in user research",
-    suggestion_link_url: "https://gdsuserresearch.optimalworkshop.com/treejack/35gap0ij",
-    new_tab: true,
-    hide: @hide_recruitment_banner,
-    suggestion_data_attributes: {
-      "track-category": "interventionBanner",
-      "track-action": "interventionClicked",
-      "track-dimension": "Take part in user research",
-      "track-dimension-index": "29",
-      "track-label": "https://gdsuserresearch.optimalworkshop.com/treejack/35gap0ij",
-    },
-  } %>
-
   <% page.lists.each_with_index do |list, section_index| %>
     <% if page.lists.curated? %>
       <h3 class="browse__list-header"><%= list.title %></h3>

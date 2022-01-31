@@ -1,6 +1,4 @@
 class SubtopicsController < ApplicationController
-  include RecruitmentBannerHelpers
-
   def show
     subtopic = Topic.find(request.path)
     setup_content_item_and_navigation_helpers(subtopic)
