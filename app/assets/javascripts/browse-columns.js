@@ -48,7 +48,6 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
       this.addLoading(clicked)
       this.getSectionData(state)
-      this.showBanner(state.slug)
     }
   }
 
@@ -191,7 +190,6 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     this.updateBreadcrumbs(state)
 
     this.changeColumnVisibility(3)
-    this.showBanner(state.slug)
     this.$subsection.querySelector('.js-heading').focus()
   }
 
@@ -302,15 +300,6 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
         document.title,
         options
       )
-    }
-  }
-
-  BrowseColumns.prototype.showBanner = function (slug) {
-    var topicSlug = 'visas-immigration'
-    var banner = document.getElementsByClassName('gem-c-intervention')
-
-    if (banner.length > 0) {
-      banner[0].hidden = !slug.startsWith(topicSlug)
     }
   }
 
