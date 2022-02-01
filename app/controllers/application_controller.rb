@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   include Slimmer::Template
+  helper_method :content_item_h
 
   protect_from_forgery with: :exception
 
@@ -39,6 +40,14 @@ class ApplicationController < ActionController::Base
   end
 
 private
+
+  def content_item
+    @content_item ||= ContentItem.find!(request.path)
+  end
+
+  def content_item_h
+    @content_item_h ||= content_item.to_hash
+  end
 
   def switch_locale(&action)
     locale = params[:locale] || I18n.default_locale
@@ -81,9 +90,9 @@ private
     render status: status_code, plain: "#{status_code} error"
   end
 
-  def set_expiry(duration = 30.minutes)
+  def set_expiry(duration = 30.minutes, public_cache: true)
     unless Rails.env.development?
-      expires_in(duration, public: true)
+      expires_in(duration, public: public_cache)
     end
   end
 
