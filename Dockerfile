@@ -1,7 +1,6 @@
-
 # TODO: make this default to govuk-ruby once it's being pushed somewhere public
 # (unless we decide to use Bitnami instead)
-ARG base_image=ruby:2.7.2
+ARG base_image=ruby:2.7.5-slim-buster
 
 FROM $base_image AS builder
 # This image is only intended to be able to run this app in a production RAILS_ENV
