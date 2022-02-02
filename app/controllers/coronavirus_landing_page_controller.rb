@@ -6,13 +6,11 @@ class CoronavirusLandingPageController < ApplicationController
   def show
     @statistics = FetchCoronavirusStatisticsService.call
     if @statistics
-      set_expiry 5.minutes
+      set_expiry content_item.max_age, public_cache: content_item.public_cache
     else
       logger.warn "Serving /coronavirus without statistics"
       set_expiry 30.seconds
     end
-
-    @content_item = content_item.to_hash
 
     breadcrumbs = [{ title: t("shared.breadcrumbs_home"), url: "/", is_page_parent: true }]
     title = {
@@ -39,10 +37,10 @@ private
   end
 
   def presenter
-    @presenter ||= CoronavirusLandingPagePresenter.new(@content_item, params[:nation])
+    @presenter ||= CoronavirusLandingPagePresenter.new(content_item.to_hash, params[:nation])
   end
 
   def special_announcement
-    @special_announcement ||= SpecialAnnouncementPresenter.new(@content_item)
+    @special_announcement ||= SpecialAnnouncementPresenter.new(content_item.to_hash)
   end
 end

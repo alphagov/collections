@@ -7,7 +7,7 @@
   <%= stylesheet_link_tag "application" %>
   <%= csrf_meta_tags %>
   <%= yield :meta_tags %>
-  <%= render 'govuk_publishing_components/components/meta_tags', content_item: @content_item %>
+  <%= render 'govuk_publishing_components/components/meta_tags', content_item: content_item_h %>
   <%= stylesheet_link_tag "print.css", :media => "print", integrity: false %>
 </head>
 
@@ -21,8 +21,8 @@
         <%= render 'breadcrumbs' %>
       <% end %>
     <% end %>
-    <% if @content_item %>
-      <main id="content" role="main" class="content <%= yield :page_class %>" <%= "lang=#{@content_item["locale"]}" unless !@content_item["locale"] || @content_item["locale"].eql?("en") %>>
+    <% if content_item_h %>
+      <main id="content" role="main" class="content <%= yield :page_class %>" <%= "lang=#{content_item_h["locale"]}" unless !content_item_h["locale"] || content_item_h["locale"].eql?("en") %>>
     <% else %>
       <main id="content" role="main" class="content <%= yield :page_class %>" <%= "lang=#{params["locale"]}" if params["locale"] %>>
     <% end %>

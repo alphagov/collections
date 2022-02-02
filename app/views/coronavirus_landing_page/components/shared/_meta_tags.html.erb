@@ -3,15 +3,15 @@
 %>
 
 <% content_for :is_full_width_header, true %>
-<% content_for :title, @content_item["title"] %>
+<% content_for :title, content_item_h["title"] %>
 <% content_for :meta_tags do %>
   <% page_url = File.join(request.base_url, request.path) %>
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="GOV.UK">
   <meta property="og:url" content="<%= page_url %>">
-  <meta property="og:title" content="<%= @content_item["title"] %>">
-  <meta property="og:description" content="<%= @content_item["description"] %>">
-  <meta name="description" content="<%= @content_item["description"] %>">
+  <meta property="og:title" content="<%= content_item_h["title"] %>">
+  <meta property="og:description" content="<%= content_item_h["description"] %>">
+  <meta name="description" content="<%= content_item_h["description"] %>">
   <meta name="govuk:scroll-tracker" content="" data-module="auto-scroll-tracker"/>
 
   <%= render "govuk_publishing_components/components/meta_tags", {
