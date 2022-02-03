@@ -4,6 +4,8 @@ class SecondLevelBrowsePageController < ApplicationController
 
   def show
     setup_content_item_and_navigation_helpers(page)
+    @dimension26 = count_link_sections(page)
+    @dimension27 = count_total_links(page)
 
     @show_recruitment_banner = show_banner?(request.path)
 
@@ -40,5 +42,22 @@ private
     @page ||= MainstreamBrowsePage.find(
       "/browse/#{params[:top_level_slug]}/#{params[:second_level_slug]}",
     )
+  end
+
+  def count_link_sections(page)
+    page.lists.count + page.related_topics.count
+  end
+
+  def count_total_links(page)
+    link_count = 0
+    page.lists.each do |list|
+      link_count += list.contents.count
+    end
+
+    if page.related_topics.any?
+      link_count += page.related_topics.count
+    end
+
+    link_count
   end
 end

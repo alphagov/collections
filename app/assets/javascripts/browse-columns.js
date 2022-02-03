@@ -9,7 +9,11 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
   BrowseColumns.prototype.init = function () {
     if (!GOVUK.support.history()) return
-    if (window.screen.width < 640) return // don't do JS on mobile
+    if (this.isMobile()) {
+      this.$mobile = true
+      this.$module.addEventListener('click', this.navigate.bind(this))
+      return // don't do JS on mobile, apart from tracking events
+    }
 
     this.$root = this.$module.querySelector('#root')
     this.$section = this.$module.querySelector('#section')
@@ -17,15 +21,28 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     this.$breadcrumbs = document.querySelector('.gem-c-breadcrumbs')
 
     this.displayState = this.$module.getAttribute('data-state')
-    if (typeof this.displayState === 'undefined') {
+    if (!this.displayState) {
       this.displayState = 'root'
+      this.rightMostColumn = this.$root
+    } else {
+      if (this.displayState === 'section') {
+        this.rightMostColumn = this.$section
+      } else if (this.displayState === 'subsection') {
+        this.rightMostColumn = this.$subsection
+      }
     }
+    this.$module.dimension26 = this.countLinkSections()
+    this.$module.dimension27 = this.countTotalLinks()
 
     this._cache = {}
     this.lastState = this.parsePathname(window.location.pathname)
 
     this.$module.addEventListener('click', this.navigate.bind(this))
     window.addEventListener('popstate', this.popState.bind(this))
+  }
+
+  BrowseColumns.prototype.isMobile = function () {
+    return window.screen.width < 640
   }
 
   BrowseColumns.prototype.navigate = function (event) {
@@ -36,19 +53,62 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       return
     }
 
-    if (clicked.pathname.match(/^\/browse\/[^/]+(\/[^/]+)?$/)) {
-      event.preventDefault()
+    this.fireClickEvent(clicked)
 
-      var state = this.parsePathname(clicked.pathname)
-      state.title = clicked.textContent
+    if (!this.$mobile) {
+      if (clicked.pathname.match(/^\/browse\/[^/]+(\/[^/]+)?$/)) {
+        event.preventDefault()
+        var state = this.parsePathname(clicked.pathname)
+        state.title = clicked.textContent
 
-      if (state.path === window.location.pathname) {
-        return
+        if (state.path === window.location.pathname) {
+          return
+        }
+
+        this.addLoading(clicked)
+        this.getSectionData(state)
       }
-
-      this.addLoading(clicked)
-      this.getSectionData(state)
     }
+  }
+
+  BrowseColumns.prototype.fireClickEvent = function (link) {
+    var category = link.getAttribute('data-track-category')
+    var action = link.getAttribute('data-track-action')
+    var options = JSON.parse(link.getAttribute('data-track-options'))
+
+    if (!this.$mobile) {
+      if (this.displayState === 'root') {
+        options.dimension32 = 'Browse Index'
+        this.rightMostColumn = this.$root
+      } else if (this.displayState === 'section') {
+        options.dimension32 = 'First Level Browse'
+        this.rightMostColumn = this.$section
+      } else if (this.displayState === 'subsection') {
+        this.rightMostColumn = this.$subsection
+        options.dimension32 = 'Second Level Browse'
+      }
+      this.$module.dimension26 = this.countLinkSections()
+      this.$module.dimension27 = this.countTotalLinks()
+      options.dimension26 = this.$module.dimension26
+      options.dimension27 = this.$module.dimension27
+    }
+    options.label = link.getAttribute('data-track-label')
+    options.location = document.location.href
+    options.title = document.title.replace('Browse:', '').trim()
+
+    if (window.GOVUK.analytics && window.GOVUK.analytics.trackEvent) {
+      GOVUK.analytics.trackEvent(category, action, options)
+    }
+  }
+
+  // count the number of lists of links in the right-most visible column
+  BrowseColumns.prototype.countLinkSections = function () {
+    return this.rightMostColumn.querySelectorAll('.browse__list').length
+  }
+
+  // count the total number of links in the right most visible column
+  BrowseColumns.prototype.countTotalLinks = function () {
+    return this.rightMostColumn.querySelectorAll('a').length
   }
 
   BrowseColumns.prototype.getSectionData = function (state, poppingState) {
@@ -90,8 +150,10 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     state.sectionData = data
     this.lastState = state
     if (state.subsection) {
+      this.displayState = 'subsection'
       this.showSubsection(state)
     } else {
+      this.displayState = 'section'
       this.showSection(state)
     }
 
@@ -158,12 +220,9 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     this.highlightSection('root', state.path)
     this.updateBreadcrumbs(state)
 
-    if (this.displayState === 'subsection') {
-      this.changeColumnVisibility(1)
-    } else {
-      this.changeColumnVisibility(2)
-    }
+    this.changeColumnVisibility(1)
     this.$section.querySelector('.js-heading').focus()
+    this.rightMostColumn = this.$section
   }
 
   BrowseColumns.prototype.changeColumnVisibility = function (columns) {
@@ -191,6 +250,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
     this.changeColumnVisibility(3)
     this.$subsection.querySelector('.js-heading').focus()
+    this.rightMostColumn = this.$subsection
   }
 
   BrowseColumns.prototype.getTitle = function (slug) {
@@ -269,8 +329,8 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
   }
 
   BrowseColumns.prototype.trackPageview = function (state) {
-    var sectionTitle = this.$section.querySelector('h1')
-    sectionTitle = sectionTitle ? sectionTitle.textContent.toLowerCase() : 'browse'
+    var sectionTitle = this.$section.querySelector('h2')
+    sectionTitle = sectionTitle ? sectionTitle.textContent.toLowerCase().replace('browse:', '').trim() : 'browse'
     var navigationPageType = 'none'
 
     if (this.displayState === 'section') {
@@ -287,6 +347,8 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     if (GOVUK.analytics && GOVUK.analytics.trackPageview) {
       var options = {
         dimension1: sectionTitle,
+        dimension26: this.countLinkSections(),
+        dimension27: this.countTotalLinks(),
         dimension32: navigationPageType,
         location: window.location.href
       }

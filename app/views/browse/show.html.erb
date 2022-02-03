@@ -4,13 +4,14 @@
   <%= render "govuk_publishing_components/components/meta_tags", {
     content_item: {
       navigation_page_type: "First Level Browse",
+      section: yield(:title).downcase.sub!('browse: ', ''),
     }
   } %>
 <% end %>
 
 <h1 class="govuk-visually-hidden"><%= t("shared.browse.title") %></h1>
 
-<div class="browse <%= 'browse--two-columns' if page.second_level_browse_pages %>" data-state="section" data-module="browse-columns gem-track-click">
+<div class="browse <%= 'browse--two-columns' if page.second_level_browse_pages %>" data-state="section" data-module="browse-columns">
   <div id="subsection" class="browse__subsection-pane"></div>
   <div id="section" class="browse__section-pane">
     <%= render 'second_level_browse_page/second_level_browse_pages',
