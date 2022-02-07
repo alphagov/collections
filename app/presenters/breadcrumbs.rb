@@ -6,7 +6,7 @@ class Breadcrumbs
 
   def breadcrumbs
     ordered_parents = all_parents.map do |parent|
-      { title: parent.fetch("title"), url: parent.fetch("base_path") }
+      { title: parent.fetch("title"), url: parent.fetch("base_path").gsub("topic", "browsetopics") }
     end
 
     ordered_parents << { title: I18n.t("shared.breadcrumbs_home"), url: "/" }
