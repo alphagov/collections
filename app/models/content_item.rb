@@ -15,7 +15,7 @@ class ContentItem
     @content_item_data = content_item_data
   end
 
-  %i[base_path title description content_id document_type locale cache_control].each do |field|
+  %i[title description content_id document_type locale cache_control].each do |field|
     define_method field do
       @content_item_data[field.to_s]
     end
@@ -32,6 +32,10 @@ class ContentItem
   def public_cache
     public_cache = @content_item_data.dig("cache_control", "public")
     public_cache.nil? ? true : public_cache
+  end
+
+  def base_path
+    @content_item_data["base_path"].gsub("topic", "browsetopics")
   end
 
   def linked_items(field)

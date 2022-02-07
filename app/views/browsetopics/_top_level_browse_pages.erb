@@ -1,0 +1,27 @@
+<div id="root" class="browse__root-pane">
+  <h2 class="govuk-visually-hidden" tabindex="-1"><%= t("browse.all_categories") %></h2>
+  <ul class="browse__list">
+    <% top_level_browse_pages.each_with_index do |page, index| %>
+      <%
+        link_classes = %w[browse__link]
+        link_classes << (browsing_in_top_level_page?(page) ? "browse__link--active" : "browse__link--inactive")
+      %>
+      <li>
+        <%= link_to(
+          page.title,
+          page.base_path,
+          data: {
+            track_category: 'firstLevelBrowseLinkClicked',
+            track_action: "#{index + 1}",
+            track_label: page.base_path,
+            track_options: {
+              dimension28: top_level_browse_pages.count.to_s,
+              dimension29: page.title,
+            },
+          },
+          class: link_classes,
+        ) %>
+      </li>
+    <% end %>
+  </ul>
+</div>

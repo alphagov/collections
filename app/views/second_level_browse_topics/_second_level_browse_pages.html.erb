@@ -1,0 +1,32 @@
+<div class="browse__inner <%= curated_order ? "browse__inner--curated" : "browse__inner--alphabetical" %>">
+  <h2 tabindex="-1" class="browse__heading js-heading"><%= t("shared.browse.prefix") %> <%= title.sub(t("shared.browse.prefix"), "") %></h2>
+  <% unless curated_order %>
+    <h3 class="browse__sort-order"><%= t("second_level_browse.a_to_z") %></h3>
+  <% end %>
+  <ul class="browse__list">
+    <% second_level_browse_pages.each_with_index do |browse_page, index| %>
+      <%
+        link_classes = %w[browse__link]
+        link_classes << (browsing_in_second_level_page?(browse_page) ? "browse__link--active" : "browse__link--inactive")
+      %>
+      <li>
+        <%= link_to(
+          "#{browse_page.base_path.gsub('/topic', '')}",
+          data: {
+            track_category: "secondLevelBrowseLinkClicked",
+            track_action: "#{index + 1}",
+            track_label: browse_page.base_path,
+            track_options: {
+              dimension28: second_level_browse_pages.count.to_s,
+              dimension29: browse_page.title,
+            },
+          },
+          class: link_classes,
+        ) do %>
+          <h3 class="browse__title"><%= browse_page.title %></h3>
+          <p class="browse__description"> description attribute needs adding to the topic schema</p>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>

@@ -69,7 +69,8 @@ private
 
   def filter_name
     if @tag_type == "section"
-      :filter_mainstream_browse_page_content_ids
+      # :filter_mainstream_browse_page_content_ids
+      :filter_topic_content_ids
     else
       :filter_topic_content_ids
     end

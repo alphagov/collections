@@ -1,0 +1,30 @@
+<% content_for :title, "#{t("shared.browse.prefix")} #{page.title}" %>
+<% top_level_title = "#{t("shared.browse.prefix")} #{page.active_top_level_browse_page.title}" %>
+<%= render 'shared/tag_meta', tag: page %>
+<% content_for :meta_tags do %>
+  <%= render "govuk_publishing_components/components/meta_tags", {
+    content_item: {
+      navigation_page_type: "Second Level Browse",
+      section: meta_section,
+    }
+  } %>
+<% end %>
+
+<h1 class="govuk-visually-hidden"><%= t("shared.browse.title") %></h1>
+
+<div class="browse browse--three-columns" data-state="subsection" data-module="browse-columns gem-track-click">
+  <div id="subsection" class="browse__subsection-pane">
+    <%= render 'links', page: page %>
+  </div>
+
+  <div id="section" class="browse__section-pane">
+
+    <%= render 'second_level_browse_pages',
+      title: top_level_title,
+      second_level_browse_pages: page.siblings,
+      curated_order: page.second_level_pages_curated? %>
+  </div>
+
+  <%= render 'browsetopics/top_level_browse_pages', top_level_browse_pages: page.top_level_browse_pages %>
+
+</div>
