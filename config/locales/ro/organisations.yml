@@ -407,8 +407,6 @@ ro:
       special_health_authority:
       sub_organisation:
       tribunal: Tribunal
-    view_all: vizualizați pe toate
-    view_less: vizualizați mai puțin
     what_we_do: Ce face %{title}
     works_with_statement:
       few:

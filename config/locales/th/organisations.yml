@@ -259,8 +259,6 @@ th:
       special_health_authority:
       sub_organisation:
       tribunal: ทางศาล
-    view_all: ดูทั้งหมด
-    view_less: ดูน้อยลง
     what_we_do: "%{title} ทำอะไร"
     works_with_statement:
       other: ทำงานร่วมกับหน่วยงานและหน่วยงานราชการ %{works_with_count} แห่ง

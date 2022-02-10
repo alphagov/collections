@@ -5,7 +5,6 @@
 
   .organisations-list__item {
     list-style-type: none;
-    padding-bottom: govuk-spacing(3);
     margin-bottom: govuk-spacing(3);
     border-bottom: 1px solid govuk-colour("mid-grey");
 
@@ -15,56 +14,13 @@
   }
 
   .organisations-list__section.js-hidden,
-  .organisation-list__works-with.js-hidden,
   .organisations-list__item.js-hidden {
     display: none;
-  }
-
-  .organisation-list__item-title {
-    @include govuk-font(19);
-    margin-right: govuk-spacing(2);
   }
 
   .organisation-list__item-context {
     color: govuk-colour("dark-grey");
     white-space: nowrap;
-  }
-
-  .organisation-list__item-works-with {
-    @include govuk-font(16);
-    display: block;
-    margin: govuk-spacing(3) govuk-spacing(4) 0 0;
-
-    @include govuk-media-query($from: tablet) {
-      display: inline-block;
-    }
-  }
-
-  .organisation-list__works-with-toggle {
-    display: none;
-
-    .js-enabled & {
-      @include govuk-font(16);
-      display: inline;
-    }
-  }
-
-  .organisation-list__works-with {
-    background-color: govuk-colour("light-grey");
-    margin-top: govuk-spacing(2);
-    padding: govuk-spacing(2);
-  }
-
-  .organisation-list__works-with-title {
-    @include govuk-font(16, $weight: bold);
-  }
-
-  .organisation-list__works-with-list {
-    margin-bottom: govuk-spacing(3);
-  }
-
-  .organisation-list__works-with-list-item {
-    padding-bottom: 5px;
   }
 
   .organisations-list__without-number {

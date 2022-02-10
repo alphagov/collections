@@ -33,31 +33,38 @@
             },
           } do %>
             <% if @presented_organisations.ministerial_organisation?(organisation_type) %>
-              <%= render "govuk_publishing_components/components/organisation_logo", {
-                organisation: {
-                  name: organisation["logo"]["formatted_title"],
-                  url: organisation["href"],
-                  brand: organisation["brand"],
-                  crest: organisation["logo"]["crest"]
-                },
-                heading_level: 3,
-              } %>
+              <div class="govuk-!-margin-bottom-3">
+                <%= render "govuk_publishing_components/components/organisation_logo", {
+                  organisation: {
+                    name: organisation["logo"]["formatted_title"],
+                    url: organisation["href"],
+                    brand: organisation["brand"],
+                    crest: organisation["logo"]["crest"]
+                  },
+                  heading_level: 3,
+                } %>
+              </div>
             <% else %>
-              <%= link_to(organisation["title"], organisation["href"], class: "govuk-link organisation-list__item-title") %>
+              <div class="govuk-!-margin-bottom-3">
+                <%= link_to(organisation["title"], organisation["href"], class: "organisation-list__item-title govuk-heading-s govuk-!-font-weight-regular govuk-!-display-inline govuk-!-margin-right-2 govuk-link") %>
 
-              <% if organisation["separate_website"] %>
-                <span class="organisation-list__item-context"><%= t('organisations.separate_website') %></span>
-              <% end %>
+                <% if organisation["separate_website"] %>
+                  <span class="organisation-list__item-context"><%= t('organisations.separate_website') %></span>
+                <% end %>
+              </div>
             <% end %>
 
             <% if @presented_organisations.works_with_statement(organisation) %>
-              <div data-module="gem-toggle">
-                <p class="organisation-list__item-works-with"><%= @presented_organisations.works_with_statement(organisation) %></p>
-                <%= render partial: 'expanded_works_with_organisations',
-                  locals: {
-                    works_with_organisations: @presented_organisations.ordered_works_with(organisation),
-                    current_organisation: organisation["title"]
+              <div class="govuk-!-margin-bottom-3">
+                <%= render "govuk_publishing_components/components/details", {
+                  title: @presented_organisations.works_with_statement(organisation)
+                } do %>
+                  <%= render partial: 'expanded_works_with_organisations',
+                    locals: {
+                      works_with_organisations: @presented_organisations.ordered_works_with(organisation),
+                      current_organisation: organisation["title"]
                   } %>
+                <% end %>
               </div>
             <% end %>
           <% end # </li> %>

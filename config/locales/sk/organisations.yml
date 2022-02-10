@@ -407,8 +407,6 @@ sk:
       special_health_authority:
       sub_organisation:
       tribunal: Súd
-    view_all: zobraziť všetko
-    view_less: zobraziť menej
     what_we_do: Čo robí %{title}
     works_with_statement:
       few:

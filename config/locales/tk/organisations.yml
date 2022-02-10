@@ -333,8 +333,6 @@ tk:
       special_health_authority:
       sub_organisation:
       tribunal: Kazyýet
-    view_all: ählisini görmek
-    view_less: birazyny görmek
     what_we_do: "%{title} näme edýär"
     works_with_statement:
       other: "%{works_with_count} agentlikler we jemgyýetçilik guramalary bilen işleşýär"

@@ -331,8 +331,6 @@ ka:
       special_health_authority:
       sub_organisation:
       tribunal: ტრიბუნალი
-    view_all: ყველას ნახვა
-    view_less: ნაკლების ნახვა
     what_we_do: რას აკეთებს %{title}
     works_with_statement:
       other: მუშაობს %{works_with_count} სააგენტოებთან და საჯარო ორგანოებთან

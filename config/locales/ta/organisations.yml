@@ -333,8 +333,6 @@ ta:
       special_health_authority:
       sub_organisation:
       tribunal: தீர்ப்பாயம்
-    view_all: அனைத்தையும் காண்க
-    view_less: குறைவாகக் காட்டு
     what_we_do: "%{title} செய்வது என்ன"
     works_with_statement:
       other: "%{works_with_count} முகமைகளுடனும் பொது நிறுவனங்களுடனும் பணியாற்றுதல்"

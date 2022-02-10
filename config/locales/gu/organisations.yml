@@ -331,8 +331,6 @@ gu:
       special_health_authority:
       sub_organisation:
       tribunal: ટ્રિબ્યુનલ
-    view_all: બધા જુઓ
-    view_less: ઓછા જુઓ
     what_we_do: "%{title} શું કરે છે"
     works_with_statement:
       other: "%{works_with_count} એજન્સીઓ અને જાહેર સંસ્થાઓ સાથે કામ કરે છે"

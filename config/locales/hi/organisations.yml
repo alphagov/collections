@@ -331,8 +331,6 @@ hi:
       special_health_authority:
       sub_organisation:
       tribunal: न्यायाधिकरण
-    view_all: सभी देखें
-    view_less: कम देखें
     what_we_do: "%{title} क्या करता है"
     works_with_statement:
       other: "%{works_with_count} एजेंसियों और सार्वजनिक निकायों के साथ काम करता है"

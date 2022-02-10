@@ -336,8 +336,6 @@ dr:
       special_health_authority:
       sub_organisation:
       tribunal: دادگاه
-    view_all: مشاهدهء همه موارد
-    view_less: مشاهدهء مواردی کمتر
     what_we_do: چی{title}%میکند
     works_with_statement:
       other: کار میکند با{works_with_count}%نماینده گی ها و نهاد هایی عامه

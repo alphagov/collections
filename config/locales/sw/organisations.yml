@@ -333,8 +333,6 @@ sw:
       special_health_authority:
       sub_organisation:
       tribunal: Mahakama
-    view_all: angalia zote
-    view_less: angalia chache
     what_we_do: Kazi ya %{title}
     works_with_statement:
       other: Hushirikiana na mashirika na mashirika %{works_with_count} ya serikali

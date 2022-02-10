@@ -1,17 +1,13 @@
-<a href="#" class="govuk-link organisation-list__works-with-toggle" data-controls="toggle_<%= current_organisation.parameterize %>" data-expanded="false" data-toggled-text="<%= t('organisations.view_less') %>">
-  <%= t('organisations.view_all') %>
-</a>
-
-<div class="organisation-list__works-with js-hidden" id="toggle_<%= current_organisation.parameterize %>">
+<div id="toggle_<%= current_organisation.parameterize %>">
   <% works_with_organisations.each do |type, work_with_organisations| %>
     <%= render "govuk_publishing_components/components/heading", {
       text: t('organisations.type.' + type),
       heading_level: 4,
       font_size: "s",
     } %>
-    <ul class="organisation-list__works-with-list">
+    <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-3">
       <% work_with_organisations.each do |work_with_organisation| %>
-        <li class="organisation-list__works-with-list-item">
+        <li class="govuk-!-margin-bottom-1">
           <%= link_to(work_with_organisation["title"], work_with_organisation["href"], class: "govuk-link") %>
         </li>
       <% end %>

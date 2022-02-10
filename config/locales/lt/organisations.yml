@@ -407,8 +407,6 @@ lt:
       special_health_authority:
       sub_organisation:
       tribunal: Tribunolas
-    view_all: žiūrėti viską
-    view_less: žiūrėti mažiau
     what_we_do: Kuo užsiima %{title}
     works_with_statement:
       few:

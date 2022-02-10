@@ -333,8 +333,6 @@ so:
       special_health_authority:
       sub_organisation:
       tribunal: Maxkamad
-    view_all: fiiri dhamaan
-    view_less: Fiiri inyar
     what_we_do: Maxaat %{title} ku
     works_with_statement:
       other: Shaqeeya %{works_with_count} wakaaladaha iyo haayadaha dadweyaha

@@ -259,8 +259,6 @@ id:
       special_health_authority:
       sub_organisation:
       tribunal: Persidangan
-    view_all: lihat semua
-    view_less: lihat lebih sedikit
     what_we_do: Apa yang dilakukan %{title}
     works_with_statement:
       other: Bekerja bersama %{works_with_count} lembaga dan badan publik
