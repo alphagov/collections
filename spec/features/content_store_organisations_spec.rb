@@ -57,21 +57,19 @@ RSpec.feature "Content store organisations" do
     expect(page.has_content?("Works with 4 agencies and public bodies")).to be(true)
   end
 
-  scenario "renders a view all link with toggle attributes" do
-    expect(page.has_css?("a[data-controls='toggle_attorney-general-s-office']", text: "view all")).to be(true)
-    expect(page.has_css?("a[data-controls='toggle_attorney-general-s-office'][data-expanded='false']")).to be(true)
+  scenario "renders a 'Details' component for 'Attorney General's Office' with 'Works with 4 agencies and public bodies' summary text" do
+    expect(page.has_css?("#attorney-generals-office .govuk-details__summary", text: "Works with 4 agencies and public bodies")).to be(true)
   end
 
   scenario "renders a list of organisations that an organisation works with" do
-    expect(page.has_css?(".organisation-list__works-with#toggle_attorney-general-s-office")).to be(true)
-    expect(page.has_css?("#toggle_attorney-general-s-office h4", text: "Non-ministerial department")).to be(true)
-    expect(page.has_css?("#toggle_attorney-general-s-office h4", text: "Other")).to be(true)
+    expect(page.has_css?("#toggle_attorney-general-s-office", visible: false)).to be(true)
+    expect(page.has_css?("#toggle_attorney-general-s-office h4", text: "Non-ministerial department", visible: false)).to be(true)
+    expect(page.has_css?("#toggle_attorney-general-s-office h4", text: "Other", visible: false)).to be(true)
 
-    expect(page.has_css?("#toggle_attorney-general-s-office a[href='/government/organisations/crown-prosecution-service']", text: "Crown Prosecution Service")).to be(true)
-    expect(page.has_css?("#toggle_attorney-general-s-office a[href='/government/organisations/government-legal-department']", text: "Government Legal Department")).to be(true)
-    expect(page.has_css?("#toggle_attorney-general-s-office a[href='/government/organisations/serious-fraud-office']", text: "Serious Fraud Office")).to be(true)
-
-    expect(page.has_css?("#toggle_attorney-general-s-office a[href='/government/organisations/hm-crown-prosecution-service-inspectorate']", text: "HM Crown Prosecution Service Inspectorate")).to be(true)
+    expect(page.has_css?("#toggle_attorney-general-s-office a[href='/government/organisations/crown-prosecution-service']", text: "Crown Prosecution Service", visible: false)).to be(true)
+    expect(page.has_css?("#toggle_attorney-general-s-office a[href='/government/organisations/government-legal-department']", text: "Government Legal Department", visible: false)).to be(true)
+    expect(page.has_css?("#toggle_attorney-general-s-office a[href='/government/organisations/serious-fraud-office']", text: "Serious Fraud Office", visible: false)).to be(true)
+    expect(page.has_css?("#toggle_attorney-general-s-office a[href='/government/organisations/hm-crown-prosecution-service-inspectorate']", text: "HM Crown Prosecution Service Inspectorate", visible: false)).to be(true)
   end
 
 private
