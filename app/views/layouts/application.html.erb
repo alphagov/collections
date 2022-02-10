@@ -1,3 +1,14 @@
+<%
+  main_classes = %w[content]
+  main_classes << (yield :page_class)
+  lang = params["locale"]
+
+  if content_item_h
+    unless (!content_item_h["locale"] || content_item_h["locale"].eql?("en"))
+      lang = content_item_h["locale"]
+    end
+  end
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,13 +32,16 @@
         <%= render 'breadcrumbs' %>
       <% end %>
     <% end %>
-    <% if content_item_h %>
-      <main id="content" role="main" class="content <%= yield :page_class %>" <%= "lang=#{content_item_h["locale"]}" unless !content_item_h["locale"] || content_item_h["locale"].eql?("en") %>>
-    <% else %>
-      <main id="content" role="main" class="content <%= yield :page_class %>" <%= "lang=#{params["locale"]}" if params["locale"] %>>
+    <%=
+      content_tag(:main,
+        id: "content",
+        role: "main",
+        class: main_classes,
+        lang: lang,
+       ) do
+    %>
+      <%= yield %>
     <% end %>
-    <%= yield %>
-    </main>
   </div>
 </body>
 </html>
