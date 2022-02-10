@@ -481,8 +481,6 @@ uk:
       special_health_authority:
       sub_organisation:
       tribunal: Арбітражний суд
-    view_all: дивитись все
-    view_less: дивитись менше
     what_we_do: Що робить %{title}
     works_with_statement:
       many:

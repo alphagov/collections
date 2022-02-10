@@ -629,8 +629,6 @@ cy:
       special_health_authority:
       sub_organisation:
       tribunal: Tribiwnlys
-    view_all: gweld popeth
-    view_less: gweld llai
     what_we_do: Beth mae %{title} yn wneud
     works_with_statement:
       two:

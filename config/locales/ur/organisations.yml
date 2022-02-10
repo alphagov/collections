@@ -333,8 +333,6 @@ ur:
       special_health_authority:
       sub_organisation:
       tribunal: ٹریبیونل
-    view_all: تمام کو دیکھیں
-    view_less: کم دیکھیں
     what_we_do: "%{title} کیا کرتا ہے"
     works_with_statement:
       other: "%{works_with_count} ایجنسیوں اور عوامی دھڑوں کے ساتھ کام کرتا ہے"

@@ -333,8 +333,6 @@ ps:
       special_health_authority:
       sub_organisation:
       tribunal: محکمه
-    view_all: ټول وګوری
-    view_less: لږ لیدل
     what_we_do: "%{title} څه کوي"
     works_with_statement:
       other: د %{works_with_count} ادارو او عامه ادارو سره کار کوي

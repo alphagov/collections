@@ -335,8 +335,6 @@ pa-pk:
       special_health_authority:
       sub_organisation:
       tribunal: عدالت
-    view_all: ساریاں نوں ویکھو
-    view_less: گھٹ ویکھو
     what_we_do: کیہ {title}% ہویا
     works_with_statement:
       other: دے نال کم کر دے نیں {works_with_count}% ایجنسیاں تے عوامی ادارے

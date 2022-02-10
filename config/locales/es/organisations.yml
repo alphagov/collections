@@ -331,8 +331,6 @@ es:
       special_health_authority:
       sub_organisation:
       tribunal: Tribunal
-    view_all: ver todo
-    view_less: ver menos
     what_we_do: "¿Qué hace %{title}"
     works_with_statement:
       other: Funciona con agencias y organismos públicos de %{works_with_count}

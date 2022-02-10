@@ -407,8 +407,6 @@ cs:
       special_health_authority:
       sub_organisation:
       tribunal: Tribunál
-    view_all: zobrazit všechno
-    view_less: zobrazit méně
     what_we_do: Co %{title} dělá
     works_with_statement:
       few:

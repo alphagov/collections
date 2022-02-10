@@ -257,8 +257,6 @@ zh:
       special_health_authority:
       sub_organisation:
       tribunal: 法庭
-    view_all: 查看全部
-    view_less: 查看更少
     what_we_do: "%{title} 做什么"
     works_with_statement:
       other: 与 %{works_with_count} 机构和公共机构合作

@@ -333,8 +333,6 @@ hy:
       special_health_authority:
       sub_organisation:
       tribunal: Տրիբունալ
-    view_all: ցույց տալ  բոլորը
-    view_less: ցույց տալ ավելի շատ
     what_we_do: Ինչով է %{title} զբաղվում
     works_with_statement:
       other: Աշխատում է %{works_wount_count} գործակալությունների և հասարակական կազմակերպությունների հետ

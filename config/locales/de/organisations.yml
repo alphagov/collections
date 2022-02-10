@@ -333,8 +333,6 @@ de:
       special_health_authority:
       sub_organisation:
       tribunal: Gerichtshof
-    view_all: alle anzeigen
-    view_less: weniger anzeigen
     what_we_do: Was %{title} tut
     works_with_statement:
       other: Arbeitet mit %{works_with_count} Agenturen und öffentlichen Einrichtungen

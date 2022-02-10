@@ -481,8 +481,6 @@ be:
       special_health_authority:
       sub_organisation:
       tribunal: Трыбунал
-    view_all: паказаць усё
-    view_less: глядзець менш
     what_we_do: Што %{title} робiць
     works_with_statement:
       many:

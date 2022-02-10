@@ -333,8 +333,6 @@ el:
       special_health_authority:
       sub_organisation:
       tribunal: Δικαστήριο
-    view_all: εμφάνιση όλων
-    view_less: εμφάνιση λιγότερων
     what_we_do: Τι κάνει το %{title}
     works_with_statement:
       other: Λειτουργεί με %{works_with_count} φορείς και δημόσιους οργανισμούς

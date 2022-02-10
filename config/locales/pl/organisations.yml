@@ -481,8 +481,6 @@ pl:
       special_health_authority:
       sub_organisation:
       tribunal: Trybunał
-    view_all: Zobacz wszystko
-    view_less: Zobacz mniej
     what_we_do: Co robi %{title}
     works_with_statement:
       many:

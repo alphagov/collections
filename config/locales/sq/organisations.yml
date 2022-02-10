@@ -331,8 +331,6 @@ sq:
       special_health_authority:
       sub_organisation:
       tribunal: Tribunali
-    view_all: shih të gjitha
-    view_less: shit më pak
     what_we_do: Çfarë %{title} bën
     works_with_statement:
       other: Punon me %{works_with_count} agjensitë dhe organe publike

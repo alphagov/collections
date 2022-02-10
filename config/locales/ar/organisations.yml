@@ -629,8 +629,6 @@ ar:
       special_health_authority:
       sub_organisation:
       tribunal: هيئة قضائية
-    view_all: عرض الكل
-    view_less: عرض أقل
     what_we_do: ما تقوم به %{title}
     works_with_statement:
       two:

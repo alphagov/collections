@@ -331,8 +331,6 @@ zh-hk:
       special_health_authority:
       sub_organisation:
       tribunal: 法庭
-    view_all: 查閱全部內容
-    view_less: 查閱較少內容
     what_we_do: "%{title} 之職責"
     works_with_statement:
       other: 與 %{works_with_count} 代理及公共機構合作
