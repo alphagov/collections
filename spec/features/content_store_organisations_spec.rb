@@ -50,7 +50,6 @@ RSpec.feature "Content store organisations" do
 
   scenario "renders non-ministerial organisation without crest" do
     expect(page.has_css?('a.organisation-list__item-title[href="/government/organisations/arts-and-humanities-research-council"]', text: "Arts and Humanities Research Council")).to be(true)
-    expect(page.has_css?(".organisation-list__item-context", text: "separate website")).to be(true)
   end
 
   scenario "displays child organisations count" do

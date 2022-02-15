@@ -311,7 +311,6 @@ fi:
     read_more: Lue lisää siitä, mitä teemme
     search_for_department: Hae osastoa, virastoa tai julkista elintä
     see_all_latest_documents: Katso kaikki uusimmat asiakirjat
-    separate_website: erillinen sivusto
     services_and_information: Kaikki %{acronym} palvelut ja tiedot
     subscription:
       email: Hanki sähköpostit

@@ -18,11 +18,6 @@
     display: none;
   }
 
-  .organisation-list__item-context {
-    color: govuk-colour("dark-grey");
-    white-space: nowrap;
-  }
-
   .organisations-list__without-number {
     @include govuk-media-query($from: tablet) {
       float: right;

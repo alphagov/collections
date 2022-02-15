@@ -311,7 +311,6 @@ et:
     read_more: Loe lähemalt, mida me teeme
     search_for_department: Otsi osakonda, asutust või avalikku asutust
     see_all_latest_documents: Vaata kõiki viimaseid dokumente
-    separate_website: eraldi veebisait
     services_and_information: Kõik %{acronym} teenused ja teave
     subscription:
       email: Hangi e-kirju
