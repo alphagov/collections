@@ -47,10 +47,6 @@
             <% else %>
               <div class="govuk-!-margin-bottom-3">
                 <%= link_to(organisation["title"], organisation["href"], class: "organisation-list__item-title govuk-heading-s govuk-!-font-weight-regular govuk-!-display-inline govuk-!-margin-right-2 govuk-link") %>
-
-                <% if organisation["separate_website"] %>
-                  <span class="organisation-list__item-context"><%= t('organisations.separate_website') %></span>
-                <% end %>
               </div>
             <% end %>
 

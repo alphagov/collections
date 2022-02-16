@@ -237,7 +237,6 @@ th:
     read_more: อ่านเพิ่มเติมเกี่ยวกับสิ่งที่เราทำ
     search_for_department: ค้นหากรม หน่วยงาน หรือองค์กรอิสระ
     see_all_latest_documents: ดูเอกสารล่าสุดทั้งหมด
-    separate_website: เว็บไซต์แยก
     services_and_information: บริการและข้อมูลของ %{acronym} ทั้งหมด
     subscription:
       email: รับอีเมล
