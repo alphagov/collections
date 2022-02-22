@@ -98,21 +98,21 @@ module CoronavirusLandingPageSteps
 
   def then_i_can_see_the_accordions
     expect(page).to have_selector("h2", text: "Guidance and support")
-    expect(page).to have_selector(".gem-c-accordion__section-header", text: "How to protect yourself and others")
+    expect(page).to have_selector(".govuk-accordion__section-header", text: "How to protect yourself and others")
   end
 
   def then_i_can_see_the_business_accordions
     expect(page).to have_selector("h2", text: "Guidance and support")
-    expect(page).to have_selector(".gem-c-accordion__section-header", text: "Funding and support")
+    expect(page).to have_selector(".govuk-accordion__section-header", text: "Funding and support")
   end
 
   def then_i_can_see_the_education_accordions
     expect(page).to have_selector("h2", text: "Guidance and support")
-    expect(page).to have_selector(".gem-c-accordion__section-header", text: "School curriculum and teaching")
+    expect(page).to have_selector(".govuk-accordion__section-header", text: "School curriculum and teaching")
   end
 
   def and_i_click_on_an_accordion
-    first(".gem-c-accordion__section").find(".gem-c-accordion__section-button").click
+    first(".govuk-accordion__section").find(".govuk-accordion__section-button").click
   end
 
   def then_i_can_see_the_accordions_content

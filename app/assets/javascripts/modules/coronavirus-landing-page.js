@@ -40,7 +40,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     for (var i = 0; i < accordions.length; i++) {
       accordions[i].addEventListener('click', function (e) {
         var clicked = e.target.closest('button')
-        if (clicked && clicked.classList.contains('gem-c-accordion__open-all')) {
+        if (clicked && clicked.classList.contains('govuk-accordion__open-all')) {
           var expanded = clicked.getAttribute('aria-expanded') === 'true'
           var label = expanded ? 'Expand all' : 'Collapse all'
           var action = expanded ? 'accordionOpened' : 'accordionClosed'
