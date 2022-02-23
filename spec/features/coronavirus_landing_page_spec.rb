@@ -18,13 +18,6 @@ RSpec.feature "Coronavirus Pages" do
       and_there_are_metatags
     end
 
-    scenario "has sections that can be clicked" do
-      given_there_is_a_content_item
-      when_i_visit_the_coronavirus_landing_page
-      and_i_click_on_an_accordion
-      then_i_can_see_the_accordions_content
-    end
-
     scenario "has accordions with sub headings" do
       given_there_is_a_content_item
       when_i_visit_the_coronavirus_landing_page
