@@ -74,6 +74,9 @@ en:
         draft_text:
           one: Draft text
           other: Draft texts
+        drcf_digital_markets_research:
+          one: DRCF digital markets research
+          other: DRCF digital markets research
         drug_safety_update:
           one: Drug Safety Update
           other: Drug Safety Updates
