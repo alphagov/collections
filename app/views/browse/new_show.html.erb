@@ -1,0 +1,69 @@
+<% content_for :title, "#{t("shared.browse.prefix")} #{page.title}" %>
+
+<%= render 'shared/tag_meta', tag: page %>
+
+<% content_for :meta_tags do %>
+  <%= render "govuk_publishing_components/components/meta_tags", {
+    content_item: {
+      navigation_page_type: "First Level Browse",
+    }
+  } %>
+<% end %>
+
+<% content_for :breadcrumbs do %>
+  <div class="topic-page__breadcrumb-wrapper">
+    <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <%= render "govuk_publishing_components/components/breadcrumbs", {
+            breadcrumbs: [
+              {
+                title: "Home",
+                url: "/"
+              },
+            ],
+            collapse_on_mobile: true,
+            inverse: true,
+          } %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<div class="topic-page__header-wrapper">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <%= render "govuk_publishing_components/components/heading", {
+          font_size: "xl",
+          heading_level: 1,
+          inverse: true,
+          margin_bottom: 6,
+          text: page.title,
+        } %>
+        <p class="gem-c-lead-paragraph gem-c-lead-paragraph--inverse">
+          <%= page.description %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full govuk-!-padding-top-9">
+      <%= render "govuk_publishing_components/components/cards", {
+        items: page.second_level_browse_pages.map do |second_level_browse_page|
+          {
+            link: {
+              text: second_level_browse_page.title,
+              path: second_level_browse_page.base_path,
+            },
+            description: second_level_browse_page.description,
+          }
+        end
+      } %>
+    </div>
+  </div>
+</div>
