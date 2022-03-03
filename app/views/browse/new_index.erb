@@ -1,0 +1,67 @@
+<% content_for :title, t("browse.all_categories") %>
+
+<% content_for :meta_tags do %>
+  <%= render "govuk_publishing_components/components/meta_tags", {
+    content_item: {
+      navigation_page_type: "Browse Index",
+    }
+  } %>
+<% end %>
+
+<% content_for :breadcrumbs do %>
+  <div class="topic-page__breadcrumb-wrapper">
+    <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <%= render "govuk_publishing_components/components/breadcrumbs", {
+            breadcrumbs: [
+              {
+                title: "Home",
+                url: "/"
+              },
+            ],
+            collapse_on_mobile: true,
+            inverse: true,
+          } %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<div class="topic-page__header-wrapper">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <%= render "govuk_publishing_components/components/heading", {
+          font_size: "xl",
+          heading_level: 1,
+          inverse: true,
+          margin_bottom: 6,
+          text: t("browse.title"),
+        } %>
+        <p class="gem-c-lead-paragraph gem-c-lead-paragraph--inverse">
+          <%= t("browse.description") %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full govuk-!-padding-top-9">
+      <%= render "govuk_publishing_components/components/cards", {
+        items: page.top_level_browse_pages.map do |top_level_browse_page|
+          {
+            link: {
+              text: top_level_browse_page.title,
+              path: top_level_browse_page.base_path,
+            },
+            description: top_level_browse_page.description,
+          }
+        end
+      } %>
+    </div>
+  </div>
+</div>
