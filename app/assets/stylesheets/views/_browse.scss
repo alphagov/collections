@@ -397,3 +397,11 @@ $topic-page-header-background-colour: #263135;
 .topic-page__description {
   margin-bottom: govuk-spacing(2);
 }
+
+.divider__heading {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #0b0c0c;
+  margin: 0 0 30px;
+  padding: 15px 0 0;
+}
