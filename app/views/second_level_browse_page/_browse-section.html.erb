@@ -1,0 +1,11 @@
+<ul class="govuk-list">
+  <% section.each_with_index do |list_item, index| %>
+    <li>
+      <%= link_to(
+        list_item.title,
+        list_item.base_path,
+        class: "browse__normal-link govuk-link",
+      ) %>
+    </li>
+  <% end %>
+</ul>
