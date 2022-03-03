@@ -1,0 +1,101 @@
+<%
+  contents = []
+  accordion_contents = []
+  more_on_this_topic_contents = []
+%>
+
+<% page.lists.each_with_index do |section, section_index| %>
+
+  <% contents = capture do %>
+    <%# Add a heading above the A-Z the list. Add it here so that we can extract the heading text %>
+    <% if !curated_order %>
+      <%= render "govuk_publishing_components/components/heading", {
+       text: section["title"],
+       font_size: "m"
+      }
+     %>
+    <% end %>
+    <%# Render the contents as a list, regardless of whether they'll be in an accordion or as an A-Z list %>
+    <%= render partial: 'browse-section', locals: { section: section.contents } %>
+  <% end %>
+
+  <%# Generate accordion shaped markup %>
+  <% if curated_order %>
+    <%
+      additional_contents = {
+        heading: {
+          text: section["title"],
+        },
+        content: {
+          html: contents,
+        },
+        data_attributes: {
+        }
+      }
+      accordion_contents << additional_contents
+      %>
+  <% end %>
+<% end %>
+
+<%# Generate markup for More on this topic %>
+<% if page.related_topics.any? %>
+  <% more_on_this_topic_contents = capture do %>
+    <%# Todo: use browse-section partial here - currently the shape of the data is different for the accordion contents %>
+    <ul class="govuk-list">
+      <% page.related_topics.each_with_index do |related_topic, index| %>
+        <li>
+          <%= link_to(
+            related_topic.title,
+            related_topic.base_path,
+            class: "browse__normal-link govuk-link",
+          ) %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+<% end %>
+
+<% if curated_order %>
+  <%# For curated pages, render the markup using an accordion %>
+  <% if page.related_topics.any? %>
+    <%# Insert 'More on this topic markup into the accordion' %>
+    <%
+      additional_contents = {
+        heading: {
+          text: t("second_level_browse.detailed_guidance"),
+        },
+        content: {
+          html: more_on_this_topic_contents,
+        }
+      }
+      accordion_contents << additional_contents
+    %>
+  <% end %>
+  <div data-module="gem-track-click">
+    <div data-module="toggle-attribute">
+      <%= render 'govuk_publishing_components/components/accordion', {
+        heading_level: 3,
+        data_attributes: {
+          module: "govuk-accordion"
+        },
+        items: accordion_contents,
+        margin_bottom: 3
+      } %>
+    </div>
+  </div>
+<% else %>
+  <%# For non-curated pages, render an A-Z list %>
+  <%= contents %>
+
+  <%# Render 'More on this topic' as its own section %>
+  <% if page.related_topics.any? %>
+    <div class="divider__heading">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: 'More on this topic',
+        heading_level: 2,
+        margin_bottom: 3,
+      } %>
+      <%= more_on_this_topic_contents %>
+    </div>
+  <% end %>
+<% end %>

@@ -6,6 +6,7 @@ class SecondLevelBrowsePageController < ApplicationController
     setup_content_item_and_navigation_helpers(page)
     @dimension26 = count_link_sections(page)
     @dimension27 = count_total_links(page)
+    slimmer_template "gem_layout_full_width" if is_variant_b?
 
     if show_banner?(request.path)
       @show_recruitment_banner = true
@@ -29,12 +30,19 @@ class SecondLevelBrowsePageController < ApplicationController
 
 private
 
+  # NOTE: This is just to fake an A/B test - replace with proper A/B test code.
+  # Add a query string with b=true to the URL to force variant B.
+  def is_variant_b?
+    params["b"].present?
+  end
+
   def show_html
-    render :show,
-           locals: {
-             page: page,
-             meta_section: meta_section,
-           }
+    template = is_variant_b? ? :new_show : :show
+
+    render(template, locals: {
+      page: page,
+      meta_section: meta_section,
+    })
   end
 
   def meta_section
