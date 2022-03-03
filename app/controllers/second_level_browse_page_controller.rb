@@ -7,6 +7,7 @@ class SecondLevelBrowsePageController < ApplicationController
     @dimension26 = count_link_sections(page)
     @dimension27 = count_total_links(page)
     @study_url = study_url_for(request.path)
+    slimmer_template "gem_layout_full_width" if is_variant_b?
 
     respond_to do |f|
       f.html do
@@ -25,12 +26,19 @@ class SecondLevelBrowsePageController < ApplicationController
 
 private
 
+  # NOTE: This is just to fake an A/B test - replace with proper A/B test code.
+  # Add a query string with b=true to the URL to force variant B.
+  def is_variant_b?
+    params["b"].present?
+  end
+
   def show_html
-    render :show,
-           locals: {
-             page: page,
-             meta_section: meta_section,
-           }
+    template = is_variant_b? ? :new_show : :show
+
+    render(template, locals: {
+      page: page,
+      meta_section: meta_section,
+    })
   end
 
   def meta_section
