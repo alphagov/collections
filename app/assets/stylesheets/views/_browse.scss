@@ -329,3 +329,68 @@ $transition-speed: .4s;
     }
   }
 }
+
+// This isn't proper BEM - but the convention is to have the view name as the
+// block part of the class name. Because we need to keep `browse` so this can
+// be run as an A/B test, we need to use a different class name for each view.
+.topic-page__breadcrumb-wrapper,
+.topic-page__header-wrapper {
+  background-color: govuk-colour("dark-grey");
+}
+
+.topic-page__breadcrumb-wrapper {
+  // Setting the overflow to auto is required to prevent the breadcrumb
+  // component's margin from collapsing.
+  overflow: auto;
+
+  // We want to show a constrained width blue bar _within_ the grey header.
+  // But:
+  //  * The full width coronavirus banner currently shows the blue bar - but
+  // this is only visible when JavaScript is available.
+  //  * A full width layout template doesn't include the blue bar.
+  //
+  // So we need to add a blue bar manually to this template - but only when
+  // JavaScript is unavailable.
+  //
+  // When the coronavirus banner is turned off, there will be some work to turn
+  // this on for both JS and non-JS visitors in a way that doesn't break any
+  // future banner or the emergency banner.
+  &:before {
+    background-color: $govuk-brand-colour;
+    content: "";
+    display: block;
+    margin: auto;
+    max-width: 960px;
+    height: govuk-spacing(2);
+
+    .js-enabled & {
+      content: none;
+    }
+  }
+}
+
+// The header spacings are a work in progress.
+.topic-page__header-wrapper {
+  padding-bottom: govuk-spacing(7);
+
+  // A tiny white seam sometimes appears, despite there being no gap between
+  // this element and the previous element. This shifts the element up by a
+  // pixel to prevent the seam from appearing and adds padding to reposition the
+  // content.
+  border-top: 1px solid $topic-page-header-background-colour;
+  margin-top: -1px;
+
+  @include govuk-media-query($from: "tablet") {
+    padding-bottom: govuk-spacing(8);
+    padding-top: govuk-spacing(6);
+  }
+}
+
+.topic-page__heading {
+  color: govuk-colour("white");
+  margin-bottom: govuk-spacing(6);
+}
+
+.topic-page__description {
+  margin-bottom: govuk-spacing(2);
+}
