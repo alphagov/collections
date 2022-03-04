@@ -195,7 +195,7 @@ zh:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: 查看信息发布的全部透明度和自由
         title: 信息发布的透明度和自由
-    errors_or_omissions_html: <p>错误或遗漏？<a class="govuk-link" href="/contact/govuk">Tell us here</a>.如要查看非部门公共机构的正式名单 <a class="govuk-link" href="/government/collections/public-bodies">查看公共机构</a>。</p>
+    errors_or_omissions_html: <p class="govuk-body">错误或遗漏？<a class="govuk-link" href="/contact/govuk">Tell us here</a>.如要查看非部门公共机构的正式名单 <a class="govuk-link" href="/government/collections/public-bodies">查看公共机构</a>。</p>
     featured: 特征
     foi:
       contact_form: FOI联系表单

@@ -269,7 +269,7 @@ et:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Vaata kogu teabe avaldamise läbipaistvust ja vabadust
         title: Teabe avaldamise läbipaistvus ja vabadus
-    errors_or_omissions_html: <p> Vead või väljajätmised? <a class="govuk-link" href="/contact/govuk">Rääkige meile siin</a>. Osakonnaväliste avalike asutuste ametlikud loendid <a class="govuk-link" href="/government/collections/public-bodies">vaata avalikke asutusi</a>.</p>
+    errors_or_omissions_html: <p class="govuk-body"> Vead või väljajätmised? <a class="govuk-link" href="/contact/govuk">Rääkige meile siin</a>. Osakonnaväliste avalike asutuste ametlikud loendid <a class="govuk-link" href="/government/collections/public-bodies">vaata avalikke asutusi</a>.</p>
     featured: Soovitatavad
     foi:
       contact_form: FOI kontaktivorm

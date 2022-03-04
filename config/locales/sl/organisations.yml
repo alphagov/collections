@@ -417,7 +417,7 @@ sl:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Poglej vse objave o transparentnosti in svobodi informacij
         title: Objave o transparentnosti in svobodi informacij
-    errors_or_omissions_html: <p>Napake ali izpusti? <a class="govuk-link" href="/contact/govuk">Povejte nam tu</a>. Uradne nevladne javne organizacije najdete <a class="govuk-link" href="/government/collections/public-bodies">na</a>.</p>
+    errors_or_omissions_html: <p class="govuk-body">Napake ali izpusti? <a class="govuk-link" href="/contact/govuk">Povejte nam tu</a>. Uradne nevladne javne organizacije najdete <a class="govuk-link" href="/government/collections/public-bodies">na</a>.</p>
     featured: Vključeno
     foi:
       contact_form: Kontaktni obrazec prostega dostopa do informacij

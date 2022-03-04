@@ -565,7 +565,7 @@ ar:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: اطلع على جميع بيانات الشفافية وحرية تداول المعلومات
         title: الشفافية وحرية تداول المعلومات
-    errors_or_omissions_html: <p>أخطاء أو حالات إغفال؟ <a class="govuk-link" href="/contact/govuk">أخبرنا هنا</a>. للحصول على القوائم الرسمية للهيئات العامة غير التابعة للإدارات <a class="govuk-link" href="/government/collections/public-bodies">اطلع على الهيئات العامة</a>.</p>
+    errors_or_omissions_html: <p class="govuk-body">أخطاء أو حالات إغفال؟ <a class="govuk-link" href="/contact/govuk">أخبرنا هنا</a>. للحصول على القوائم الرسمية للهيئات العامة غير التابعة للإدارات <a class="govuk-link" href="/government/collections/public-bodies">اطلع على الهيئات العامة</a>.</p>
     featured: متميّز
     foi:
       contact_form: نموذج الاتصال المخصص لحرية تبادل المعلومات

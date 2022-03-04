@@ -417,7 +417,7 @@ ru:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Посмотрите все новые редакции закона о свободе распространения и прозрачности информации
         title: Новые редакции закона о свободе распространения и прозрачности информации
-    errors_or_omissions_html: <p>Ошибки? <a class="govuk-link" href="/contact/govuk">Расскажите нам здесь</a>. Официальный список автономных неправительственных организаций <a class="govuk-link" href="/government/collections/public-bodies">посмотрите государственные органы</a>.</p>
+    errors_or_omissions_html: <p class="govuk-body">Ошибки? <a class="govuk-link" href="/contact/govuk">Расскажите нам здесь</a>. Официальный список автономных неправительственных организаций <a class="govuk-link" href="/government/collections/public-bodies">посмотрите государственные органы</a>.</p>
     featured: Подборка
     foi:
       contact_form: Форма обратной связи по свободе распространения информации

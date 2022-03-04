@@ -269,7 +269,7 @@ bn:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: সকল স্বচ্ছতা ও তথ্যের স্বাধীনতা বিষয়ক প্রকাশনা দেখুন
         title: স্বচ্ছতা ও তথ্যের স্বাধীনতা বিষয়ক প্রকাশনা
-    errors_or_omissions_html: <p>ত্রুটি বা বর্জন? <a class="govuk-link" href="/contact/govuk">আমাদেরকে এখানে বলুন</a>। নন-ডিপার্টমেন্টাল সরকারি প্রতিষ্ঠানগুলোর দাপ্তরিক তালিকার জন্য <a class="govuk-link" href="/government/collections/public-bodies">সরকারি প্রতিষ্ঠানসমূহ দেখুন</a>।</p>
+    errors_or_omissions_html: <p class="govuk-body">ত্রুটি বা বর্জন? <a class="govuk-link" href="/contact/govuk">আমাদেরকে এখানে বলুন</a>। নন-ডিপার্টমেন্টাল সরকারি প্রতিষ্ঠানগুলোর দাপ্তরিক তালিকার জন্য <a class="govuk-link" href="/government/collections/public-bodies">সরকারি প্রতিষ্ঠানসমূহ দেখুন</a>।</p>
     featured: ফিচারকৃত
     foi:
       contact_form: FOI যোগাযোগের ফর্ম

@@ -195,7 +195,7 @@ ja:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: すべての情報公開の透明性と自由を見る
         title: 情報公開の透明性と自由
-    errors_or_omissions_html: <p>誤字脱字がありますか。 <a class="govuk-link" href="/contact/govuk">こちら教えてください</a>。非省庁公共団体の公式リストについては、<a class="govuk-link" href="/government/collections/public-bodies">公共団体をご覧ください</a>。</p>
+    errors_or_omissions_html: <p class="govuk-body">誤字脱字がありますか。 <a class="govuk-link" href="/contact/govuk">こちら教えてください</a>。非省庁公共団体の公式リストについては、<a class="govuk-link" href="/government/collections/public-bodies">公共団体をご覧ください</a>。</p>
     featured: 特徴
     foi:
       contact_form: FOI（情報の自由）お問い合わせフォーム

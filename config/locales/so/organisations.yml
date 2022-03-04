@@ -269,7 +269,7 @@ so:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Fiiri dhamaan daah furnaanta iyo xoriyada baahinta macluumaadka
         title: Daah furnaanta iyo xoriyada baahinta macluumaadka
-    errors_or_omissions_html: <p>Qaladaadka ama katagista? <a class="govuk-link" href="/contact/govuk">Noogu sheg halkan</a>. Liiska rasmiga ah ee haayada dadweynaha <a class="govuk-link" href="/government/collections/public-bodies">fiiri haayadaha dadweynaha</a>.</p>
+    errors_or_omissions_html: <p class="govuk-body">Qaladaadka ama katagista? <a class="govuk-link" href="/contact/govuk">Noogu sheg halkan</a>. Liiska rasmiga ah ee haayada dadweynaha <a class="govuk-link" href="/government/collections/public-bodies">fiiri haayadaha dadweynaha</a>.</p>
     featured: Muuqday
     foi:
       contact_form: Foomka xidhiidhka FOI

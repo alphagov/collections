@@ -269,7 +269,7 @@ sw:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Angalia taarifa zote za uwazi na uhuru wa kupata habari
         title: Taarifa za uwazi na uhuru wa kupata habari
-    errors_or_omissions_html: <p>Je, kuna hitilafu au kutojumuishwa kwa maelezo yoyote? <a class="govuk-link" href="/contact/govuk">Tufahamishe hapa</a>. Ili upate orodha rasmi ya mashirika ya serikali yasiyo ya kiidara <a class="govuk-link" href="/government/collections/public-bodies">angalia mashirika ya serikali</a>.</p>
+    errors_or_omissions_html: <p class="govuk-body">Je, kuna hitilafu au kutojumuishwa kwa maelezo yoyote? <a class="govuk-link" href="/contact/govuk">Tufahamishe hapa</a>. Ili upate orodha rasmi ya mashirika ya serikali yasiyo ya kiidara <a class="govuk-link" href="/government/collections/public-bodies">angalia mashirika ya serikali</a>.</p>
     featured: Yanayoangaziwa
     foi:
       contact_form: Fomu ya mawasiliano ya FOI
