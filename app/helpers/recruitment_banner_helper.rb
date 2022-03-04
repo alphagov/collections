@@ -1,7 +1,11 @@
 module RecruitmentBannerHelper
-  TOPICS = ["/browse/business", "/browse/tax"].freeze
+  TOPICS = ["/browse/business", "/browse/tax", "/browse/employing-people"].freeze
 
   def show_banner?(path)
-    path.starts_with?(TOPICS.first) || path.starts_with?(TOPICS.last)
+    TOPICS.each do |topic|
+      return true if path.starts_with?(topic)
+    end
+
+    false
   end
 end
