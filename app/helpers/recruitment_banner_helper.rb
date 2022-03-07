@@ -1,7 +1,16 @@
 module RecruitmentBannerHelper
-  TOPICS = ["/browse/business", "/browse/tax"].freeze
+  STUDY_URLS_FOR_TOPICS = {
+    "/browse/business" => "https://GDSUserResearch.optimalworkshop.com/treejack/lb5eu75l",
+    "/browse/tax" => "https://GDSUserResearch.optimalworkshop.com/treejack/lb5eu75l",
+    "/browse/employing-people" => "https://GDSUserResearch.optimalworkshop.com/treejack/724268fr",
+  }.freeze
 
   def show_banner?(path)
-    path.starts_with?(TOPICS.first) || path.starts_with?(TOPICS.last)
+    STUDY_URLS_FOR_TOPICS.keys.any? { |topic| path.starts_with?(topic) }
+  end
+
+  def study_url_for(topic)
+    parent_topic = topic.rpartition("/").first
+    STUDY_URLS_FOR_TOPICS[parent_topic]
   end
 end

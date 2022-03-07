@@ -5,7 +5,10 @@ class SecondLevelBrowsePageController < ApplicationController
   def show
     setup_content_item_and_navigation_helpers(page)
 
-    @show_recruitment_banner = show_banner?(request.path)
+    if show_banner?(request.path)
+      @show_recruitment_banner = true
+      @study_url = study_url_for(request.path)
+    end
 
     respond_to do |f|
       f.html do
