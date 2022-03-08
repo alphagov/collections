@@ -335,7 +335,9 @@ $transition-speed: .4s;
 // be run as an A/B test, we need to use a different class name for each view.
 .topic-page__breadcrumb-wrapper,
 .topic-page__header-wrapper {
-  background-color: govuk-colour("dark-grey");
+  $topic-page-header-background: #263135;
+
+  background-color: $topic-page-header-background;
 }
 
 .topic-page__breadcrumb-wrapper {
