@@ -330,12 +330,15 @@ $transition-speed: .4s;
   }
 }
 
+// New background colour for the topic pages:
+$topic-page-header-background-colour: #263135;
+
 // This isn't proper BEM - but the convention is to have the view name as the
 // block part of the class name. Because we need to keep `browse` so this can
 // be run as an A/B test, we need to use a different class name for each view.
 .topic-page__breadcrumb-wrapper,
 .topic-page__header-wrapper {
-  background-color: govuk-colour("dark-grey");
+  background-color: $topic-page-header-background-colour;
 }
 
 .topic-page__breadcrumb-wrapper {
