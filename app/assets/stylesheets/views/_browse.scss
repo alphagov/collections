@@ -330,12 +330,24 @@ $transition-speed: .4s;
   }
 }
 
+// This dark grey is the background colour for the topic pages.
+//
+// White text on this background gives a contrast ratio of 13.35 - this meets AA
+// and AAA for body and large text.
+//
+// The focus state's yellow gives a contrast ratio of 9.91 - this meets the AA
+// requirement for active user interface components (AAA requirement is not
+// defined for this).
+//
+// Requirements source: https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
+$topic-page-header-background-colour: #263135;
+
 // This isn't proper BEM - but the convention is to have the view name as the
 // block part of the class name. Because we need to keep `browse` so this can
 // be run as an A/B test, we need to use a different class name for each view.
 .topic-page__breadcrumb-wrapper,
 .topic-page__header-wrapper {
-  background-color: govuk-colour("dark-grey");
+  background-color: $topic-page-header-background-colour;
 }
 
 .topic-page__breadcrumb-wrapper {
