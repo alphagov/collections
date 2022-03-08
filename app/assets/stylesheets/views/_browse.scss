@@ -373,11 +373,20 @@ $transition-speed: .4s;
 
 // The header spacings are a work in progress.
 .topic-page__header-wrapper {
-  padding-bottom: 40px;
-  padding-top: 10px;
+  padding-bottom: govuk-spacing(7);
+  padding-top: 0;
 
   @include govuk-media-query($from: "tablet") {
-    padding-bottom: 50px;
-    padding-top: 30px;
+    padding-bottom: govuk-spacing(8);
+    padding-top: govuk-spacing(6);
   }
+}
+
+.topic-page__heading {
+  color: govuk-colour("white");
+  margin-bottom: govuk-spacing(6);
+}
+
+.topic-page__description {
+  margin-bottom: govuk-spacing(2);
 }
