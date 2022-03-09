@@ -330,14 +330,15 @@ $transition-speed: .4s;
   }
 }
 
+// New background colour for the topic pages:
+$topic-page-header-background-colour: #263135;
+
 // This isn't proper BEM - but the convention is to have the view name as the
 // block part of the class name. Because we need to keep `browse` so this can
 // be run as an A/B test, we need to use a different class name for each view.
 .topic-page__breadcrumb-wrapper,
 .topic-page__header-wrapper {
-  $topic-page-header-background: #263135;
-
-  background-color: $topic-page-header-background;
+  background-color: $topic-page-header-background-colour;
 }
 
 .topic-page__breadcrumb-wrapper {
@@ -374,7 +375,13 @@ $transition-speed: .4s;
 // The header spacings are a work in progress.
 .topic-page__header-wrapper {
   padding-bottom: govuk-spacing(7);
-  padding-top: 0;
+
+  // A tiny white seam sometimes appears, despite there being no gap between
+  // this element and the previous element. This shifts the element up by a
+  // pixel to prevent the seam from appearing and adds padding to reposition the
+  // content.
+  border-top: 1px solid $topic-page-header-background-colour;
+  margin-top: -1px;
 
   @include govuk-media-query($from: "tablet") {
     padding-bottom: govuk-spacing(8);
