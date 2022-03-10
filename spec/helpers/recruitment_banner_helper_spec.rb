@@ -17,7 +17,7 @@ RSpec.describe RecruitmentBannerHelper do
     end
 
     it "returns the additional study link" do
-      expect(study_url_for("/browse/employing-people/blah-blah-blah")).to eq("https://GDSUserResearch.optimalworkshop.com/treejack/724268fr")
+      expect(study_url_for("/browse/employing-people/blah-blah-blah")).to eq("https://gdsuserresearch.optimalworkshop.com/treejack/724268fr-1")
     end
   end
 end
