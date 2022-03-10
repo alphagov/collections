@@ -8,11 +8,13 @@
       section: meta_section,
     }
   } %>
+  <meta name="govuk:dimension26" content="<%= @dimension26 %>">
+  <meta name="govuk:dimension27" content="<%= @dimension27 %>">
 <% end %>
 
 <h1 class="govuk-visually-hidden"><%= t("shared.browse.title") %></h1>
 
-<div class="browse browse--three-columns" data-state="subsection" data-module="browse-columns gem-track-click">
+<div class="browse browse--three-columns" data-state="subsection" data-module="browse-columns">
   <div id="subsection" class="browse__subsection-pane">
     <%= render 'links', page: page %>
   </div>
