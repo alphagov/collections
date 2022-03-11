@@ -39,13 +39,9 @@
   <div class="govuk-width-container">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
-        <%= render "govuk_publishing_components/components/heading", {
-          font_size: "xl",
-          heading_level: 1,
-          inverse: true,
-          margin_bottom: 6,
-          text: page.title,
-        } %>
+        <h1 class="topic-page__heading govuk-heading-xl">
+          <%= page.title %>
+        </h1>
         <p class="gem-c-lead-paragraph gem-c-lead-paragraph--inverse">
           <%= page.description %>
         </p>
