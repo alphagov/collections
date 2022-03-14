@@ -52,13 +52,23 @@
 
 <div class="govuk-width-container">
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full govuk-!-padding-top-9">
+    <div class="govuk-grid-column-full govuk-!-padding-top-9"  data-module="gem-track-click">
       <%= render "govuk_publishing_components/components/cards", {
-        items: page.second_level_browse_pages.map do |second_level_browse_page|
+        items: page.second_level_browse_pages.map.with_index do |second_level_browse_page, index|
           {
             link: {
               text: second_level_browse_page.title,
               path: second_level_browse_page.base_path,
+              data_attributes: {
+                track_category: 'browseClicked',
+                track_action: "topicsLink",
+                track_label: second_level_browse_page.base_path,
+                track_dimension: second_level_browse_page.title,
+                track_options: {
+                  dimension28: index + 1,
+                  dimension29: second_level_browse_page.title,
+                },
+              }
             },
             description: second_level_browse_page.description,
           }
