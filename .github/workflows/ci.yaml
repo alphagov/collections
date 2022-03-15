@@ -13,7 +13,7 @@ on:
 
 jobs:
   build-publish-image-to-ecr:
-    uses: alphagov/govuk-infrastructure/.github/workflows/ci-ecr.yaml@main
+    uses: alphagov/govuk-infrastructure/.github/workflows/ci-ecr.yaml@resusable-workflows
     secrets:
       AWS_GOVUK_ECR_ACCESS_KEY_ID: ${{ secrets.AWS_GOVUK_ECR_ACCESS_KEY_ID }}
       AWS_GOVUK_ECR_SECRET_ACCESS_KEY: ${{ secrets.AWS_GOVUK_ECR_SECRET_ACCESS_KEY }}
