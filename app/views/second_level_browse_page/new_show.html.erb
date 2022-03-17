@@ -59,7 +59,7 @@
     <div class="govuk-grid-column-two-thirds">
       <%= render partial: 'new-browse-content', locals: {
         page: page,
-        curated_order: page.second_level_pages_curated?
+        curated_order: page.lists.curated?
       } %>
     </div>
   </div>
