@@ -343,7 +343,7 @@ sr:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Pogledajte sve iz kategorije Odgovori na zahteve o transparentnosti i pristupu informacijama od javnog značaja
         title: Odgovori na zahteve o transparentnosti i pristupu informacijama od javnog značaja
-    errors_or_omissions_html: <p>Greške ili propusti? <a class="govuk-link" href="/contact/govuk">Obavestite nas ovde</a>. Zvanične liste neresornih javnih tela <a class="govuk-link" href="/government/collections/public-bodies">potražite u kategoriji Javna tela</a>.</p>
+    errors_or_omissions_html: <p class="govuk-body">Greške ili propusti? <a class="govuk-link" href="/contact/govuk">Obavestite nas ovde</a>. Zvanične liste neresornih javnih tela <a class="govuk-link" href="/government/collections/public-bodies">potražite u kategoriji Javna tela</a>.</p>
     featured: Istaknuto
     foi:
       contact_form: Kontakt obrazac za pristup informacijama od javnog značaja

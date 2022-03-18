@@ -269,7 +269,7 @@ it:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Vedi tutte le pubblicazioni su trasparenza e libertà di diffusione delle informazioni
         title: Trasparenza e libertà di diffusione delle informazioni
-    errors_or_omissions_html: "<p>Errori o omissioni? <a class=”govuk-link” href=”/contact/govuk”>Comunicacelo qui</a>. Per gli elenchi ufficiali degli enti pubblici non dipartimentali <a class=”govuk-link” href=”/government/collections/public-bodies”>vedere enti pubblici</a>.</p>"
+    errors_or_omissions_html: "<p class=”govuk-body”>Errori o omissioni? <a class=”govuk-link” href=”/contact/govuk”>Comunicacelo qui</a>. Per gli elenchi ufficiali degli enti pubblici non dipartimentali <a class=”govuk-link” href=”/government/collections/public-bodies”>vedere enti pubblici</a>.</p>"
     featured: In primo piano
     foi:
       contact_form: Modulo di contratto per la libertà d’informazione

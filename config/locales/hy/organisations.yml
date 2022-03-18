@@ -269,7 +269,7 @@ hy:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Դիտել տեղեկատվության ազատության և թափանցիկության բոլոր հրապարակումներ
         title: Տեղեկատվության ազատության և թափանցիկության հրապարակումներ
-    errors_or_omissions_html: <p>Կա՞ն սխալներ կամ բացթողումներ։<a class="govuk-link" href="/contact/govuk">Նշեք այստեղ</a>։ Ոչ գերատեսչական հասարակական կազմակերպությունների պաշտոնական ցանկերի համար <a class="govuk-link" href="/government/collections/public-bodies">դիտել հասարակական կազմակերպությունները</a>.</p>
+    errors_or_omissions_html: <p class="govuk-body">Կա՞ն սխալներ կամ բացթողումներ։<a class="govuk-link" href="/contact/govuk">Նշեք այստեղ</a>։ Ոչ գերատեսչական հասարակական կազմակերպությունների պաշտոնական ցանկերի համար <a class="govuk-link" href="/government/collections/public-bodies">դիտել հասարակական կազմակերպությունները</a>.</p>
     featured: Հայտնի
     foi:
       contact_form: Տեղեկատվության ազատության (FOI) կոնտակտային ձև

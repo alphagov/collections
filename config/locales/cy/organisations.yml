@@ -565,7 +565,7 @@ cy:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Gweld yr holl wybodaeth a ryddhawyd o dan FOI a thryloywder
         title: Gwybodaeth a ryddhawyd o dan FOI a thryloywder
-    errors_or_omissions_html: <p>Gwallau neu hepgoriadau? <a class="govuk-link" href="/contact/govuk">Rhowch wybod i ni yma</a>. I weld rhestrau swyddogol o gyrff cyhoeddus anadrannol <a class="govuk-link" href="/government/collections/public-bodies">gweler cyrff cyhoeddus</a>.</p>
+    errors_or_omissions_html: <p class="govuk-body">Gwallau neu hepgoriadau? <a class="govuk-link" href="/contact/govuk">Rhowch wybod i ni yma</a>. I weld rhestrau swyddogol o gyrff cyhoeddus anadrannol <a class="govuk-link" href="/government/collections/public-bodies">gweler cyrff cyhoeddus</a>.</p>
     featured: Dangosir
     foi:
       contact_form: Ffurflen gysylltu FOI

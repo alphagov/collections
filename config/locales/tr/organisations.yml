@@ -269,7 +269,7 @@ tr:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Tüm bilgi edinme şeffaflığı ve özgürlüğü açıklamalarına bakın
         title: Bilgi edinme açıklamalarının şeffaflığı ve özgürlüğü
-    errors_or_omissions_html: <p>Hatalar veya eksiklikler mi var? <a class="govuk-link" href="/contact/govuk">Buradan bize söyleyin</a>. Müdürlük dışı kamu kurumlarının resmi listeleri için <a class="govuk-link" href="/government/collections/public-bodies">kamu kurumlarına bakın</a>.</p>
+    errors_or_omissions_html: <p class="govuk-body">Hatalar veya eksiklikler mi var? <a class="govuk-link" href="/contact/govuk">Buradan bize söyleyin</a>. Müdürlük dışı kamu kurumlarının resmi listeleri için <a class="govuk-link" href="/government/collections/public-bodies">kamu kurumlarına bakın</a>.</p>
     featured: Öne çıkan
     foi:
       contact_form: Bilgi Edinme Özgürlüğü irtibat formu

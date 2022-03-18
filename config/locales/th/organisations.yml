@@ -195,7 +195,7 @@ th:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: ดูข่าวประชาสัมพันธ์เกี่ยวกับความโปร่งใสและเสรีภาพด้านข้อมูลข่าวสารทั้งหมด
         title: ความโปร่งใสและเสรีภาพในการเผยแพร่ข้อมูล
-    errors_or_omissions_html: <p>ข้อผิดพลาดหรือการละเว้น? <a class="govuk-link" href="/contact/govuk">บอกเราที่นี่</a> สำหรับรายชื่ออย่างเป็นทางการขององค์กรอิสระ (non–departmental public bodies – NDPB) <a class="govuk-link" href="/government/collections/public-bodies">ดูองค์กรอิสระ</a></p>
+    errors_or_omissions_html: <p class="govuk-body">ข้อผิดพลาดหรือการละเว้น? <a class="govuk-link" href="/contact/govuk">บอกเราที่นี่</a> สำหรับรายชื่ออย่างเป็นทางการขององค์กรอิสระ (non–departmental public bodies – NDPB) <a class="govuk-link" href="/government/collections/public-bodies">ดูองค์กรอิสระ</a></p>
     featured: รายการเด่น
     foi:
       contact_form: แบบฟอร์มติดต่อ FOI

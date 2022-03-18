@@ -269,7 +269,7 @@ ps:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: د معلوماتو خپریدو ټول شفافیت او ازادي وګورئ
         title: د معلوماتو د خپریدو شفافیت او آزادي
-    errors_or_omissions_html: <p> اشتباه یا تیروتنه؟ <a class="govuk-link" href="/contact/govuk"> موږ ته دلته ووایاست </a>. د غیر ډیپارټمنټ عامه ادارو رسمي لیستونو لپاره <a class="govuk-link" href="/government/collections/public-bodies"> عامه ادارې وګورئ </a>. </p>
+    errors_or_omissions_html: <p class="govuk-body"> اشتباه یا تیروتنه؟ <a class="govuk-link" href="/contact/govuk"> موږ ته دلته ووایاست </a>. د غیر ډیپارټمنټ عامه ادارو رسمي لیستونو لپاره <a class="govuk-link" href="/government/collections/public-bodies"> عامه ادارې وګورئ </a>. </p>
     featured: ځانګړی شوی
     foi:
       contact_form: د د معلوماتو د آزادۍ قانون تماس فورمه

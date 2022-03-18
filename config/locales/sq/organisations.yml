@@ -269,7 +269,7 @@ sq:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Shihni të gjithë transparencën dhe lirinë e publikimit të informacionit
         title: Transparenca dhe liria e publikimit të informacionit
-    errors_or_omissions_html: <p>Gabime apo heqje? <a class="govuk-link" href="/contact/govuk">Na tregoni këtu</a>. Për listat zyrtare të organeve publike jo departamentale <a class="govuk-link" href="/government/collections/public-bodies">shihni organet publike</a>.</p>
+    errors_or_omissions_html: <p class="govuk-body">Gabime apo heqje? <a class="govuk-link" href="/contact/govuk">Na tregoni këtu</a>. Për listat zyrtare të organeve publike jo departamentale <a class="govuk-link" href="/government/collections/public-bodies">shihni organet publike</a>.</p>
     featured: Paraqitur
     foi:
       contact_form: Formulari i kontaktit për FOI

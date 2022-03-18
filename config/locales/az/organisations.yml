@@ -269,7 +269,7 @@ az:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Şəffaflıq və məlumat əldə etmə azadlığı üzrə bütün buraxılışları nəzərdən keçirin
         title: Şəffaflıq və məlumat əldə etmə azadlığı buraxılışları
-    errors_or_omissions_html: <p>Xətalar və ya səhlənkarlıqlar? <a class="govuk-link" href="/contact/govuk">Bizə burada bildirin</a>. Yarımüstəqil qeyri-hökumət təşkilatlarının rəsmi siyahıları üçün <a class="govuk-link" href="/government/collections/public-bodies">dövlət qurumlarını nəzərdən keçirin</a>.</p>
+    errors_or_omissions_html: <p class="govuk-body">Xətalar və ya səhlənkarlıqlar? <a class="govuk-link" href="/contact/govuk">Bizə burada bildirin</a>. Yarımüstəqil qeyri-hökumət təşkilatlarının rəsmi siyahıları üçün <a class="govuk-link" href="/government/collections/public-bodies">dövlət qurumlarını nəzərdən keçirin</a>.</p>
     featured: Seçilmiş
     foi:
       contact_form: Məlumat əldə etmə azadlığı üzrə əlaqə forması

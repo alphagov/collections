@@ -417,7 +417,7 @@ gd:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Féach gach rud faoi thrédhearcacht agus saoirse faisnéise
         title: Preaseisiúintí maidir le trédhearcacht agus saoirse faisnéise
-    errors_or_omissions_html: <p>Earráidí nó easnaimh? <a class="govuk-link" href="/contact/govuk">Labhair linn anseo</a>. Le haghaidh fógraí oifigiúla ó chomhlachtaí poiblí neamhrannacha <a class="govuk-link" href="/government/collections/public-bodies">féach comhlachtaí poiblí</a>.</p>
+    errors_or_omissions_html: <p class="govuk-body">Earráidí nó easnaimh? <a class="govuk-link" href="/contact/govuk">Labhair linn anseo</a>. Le haghaidh fógraí oifigiúla ó chomhlachtaí poiblí neamhrannacha <a class="govuk-link" href="/government/collections/public-bodies">féach comhlachtaí poiblí</a>.</p>
     featured: Réadmhaoin
     foi:
       contact_form: Bileog teagmhála SF

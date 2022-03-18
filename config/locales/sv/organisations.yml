@@ -269,7 +269,7 @@ sv:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Se alla offentliggöranden om öppenhet och informationsfrihet
         title: Offentliggöranden om öppenhet och informationsfrihet
-    errors_or_omissions_html: <p>Fel eller utelämnanden? <a class="govuk-link" href="/contact/govuk">Berätta för oss här</a>. För officiella förteckningar över offentliga organ utanför ministeriet <a class="govuk-link" href="/government/collections/public-bodies">se offentliga organ</a>.</p>
+    errors_or_omissions_html: <p class="govuk-body">Fel eller utelämnanden? <a class="govuk-link" href="/contact/govuk">Berätta för oss här</a>. För officiella förteckningar över offentliga organ utanför ministeriet <a class="govuk-link" href="/government/collections/public-bodies">se offentliga organ</a>.</p>
     featured: Utvalda
     foi:
       contact_form: Kontaktformulär för FOI

@@ -269,7 +269,7 @@ es:
           path: "/search/transparency-and-freedency-of-information-releases?organizations[]=%{organization}&parent=%{organization}"
           text: Ver todos los comunicados de transparencia y libertad de información
         title: Transparencia y libertad de información
-    errors_or_omissions_html: <p>¿Errores u omisiones? <a class="govuk-link" href="/contact/govuk">Díganoslo aquí</a>. Para un listado oficial de los organismos públicos no departamentales <a class="govuk-link" href="/government/collections/public-bodies">public bodies</a>.</p>
+    errors_or_omissions_html: <p class="govuk-body">¿Errores u omisiones? <a class="govuk-link" href="/contact/govuk">Díganoslo aquí</a>. Para un listado oficial de los organismos públicos no departamentales <a class="govuk-link" href="/government/collections/public-bodies">public bodies</a>.</p>
     featured: Destacados
     foi:
       contact_form: Formulario de contacto según la Ley de Libertad de Información

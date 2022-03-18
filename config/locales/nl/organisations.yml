@@ -269,7 +269,7 @@ nl:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Bekijk alle transparantie en vrijheid van informatieberichten
         title: Transparantie en vrijheid van informatie
-    errors_or_omissions_html: <p>Fouten of omissies? <a class="govuk-link" href="/contact/govuk">Vel ons hier</a>. Voor de officiële lijsten van niet-overheidsinstellingen <a class="govuk-link" href="/overheid/collecties/publieke-organisaties">zie publieke-organisaties</a>.</p>
+    errors_or_omissions_html: <p class="govuk-body">Fouten of omissies? <a class="govuk-link" href="/contact/govuk">Vel ons hier</a>. Voor de officiële lijsten van niet-overheidsinstellingen <a class="govuk-link" href="/overheid/collecties/publieke-organisaties">zie publieke-organisaties</a>.</p>
     featured: Aanbevolen
     foi:
       contact_form: Vrijheid van informatie contact formulier

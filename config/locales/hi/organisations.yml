@@ -269,7 +269,7 @@ hi:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: सभी पारदर्शिता और सूचना जारी करने की आज़ादी देखें
         title: पारदर्शिता और सूचना जारी करने की आज़ादी
-    errors_or_omissions_html: <p>त्रुटियां या चूक? <a class="govuk-link" href="/contact/govuk">हमें यहां बताएं</a>। For official lists of non–departmental public bodies <a class="govuk-link" href="/government/collections/public-bodies">सार्वजनिक निकाय देखें</a>।</p>
+    errors_or_omissions_html: <p class="govuk-body">त्रुटियां या चूक? <a class="govuk-link" href="/contact/govuk">हमें यहां बताएं</a>। For official lists of non–departmental public bodies <a class="govuk-link" href="/government/collections/public-bodies">सार्वजनिक निकाय देखें</a>।</p>
     featured: फीचर्ड
     foi:
       contact_form: एफओआई संपर्क प्रपत्र

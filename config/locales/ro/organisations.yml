@@ -343,7 +343,7 @@ ro:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Vedeți toate comunicările de informațiile cu privire la transparență și libertate
         title: Transparența și libertatea comunicării de informații
-    errors_or_omissions_html: <p>Erori sau omisiuni? <a class="govuk-link" href="/contact/govuk">Spuneți-ne aici</a>. Pentru liste oficiale ale organismelor publice neministeriale, <a class="govuk-link" href="/government/collections/public-bodies">consultați organismele publice</a>.</p>
+    errors_or_omissions_html: <p class="govuk-body">Erori sau omisiuni? <a class="govuk-link" href="/contact/govuk">Spuneți-ne aici</a>. Pentru liste oficiale ale organismelor publice neministeriale, <a class="govuk-link" href="/government/collections/public-bodies">consultați organismele publice</a>.</p>
     featured: Prezentat
     foi:
       contact_form: Formular de contact pentru libertatea informației

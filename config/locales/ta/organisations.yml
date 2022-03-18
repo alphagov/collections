@@ -269,7 +269,7 @@ ta:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: அனைத்து வெளிப்படைத்தன்மை மற்றும் தகவல் சுதந்திர வெளியீடுகளைக் காண்க
         title: வெளிப்படைத்தன்மை மற்றும் தகவல் சுதந்திர வெளியீடுகள்
-    errors_or_omissions_html: <p>பிழைகள் அல்லது விடுதல்கள்? <a class="govuk-link" href="/contact/govuk">இங்கே எங்களிடம் சொல்லுங்கள்</a>. துறைசாரா பொது நிறுவனங்களின் அதிகாரப்பூர்வ பட்டியலுக்கு <a class="govuk-link" href="/government/collections/public-bodies">பொது நிறுவனங்களைக் காண்க</a>.</p>
+    errors_or_omissions_html: <p class="govuk-body">பிழைகள் அல்லது விடுதல்கள்? <a class="govuk-link" href="/contact/govuk">இங்கே எங்களிடம் சொல்லுங்கள்</a>. துறைசாரா பொது நிறுவனங்களின் அதிகாரப்பூர்வ பட்டியலுக்கு <a class="govuk-link" href="/government/collections/public-bodies">பொது நிறுவனங்களைக் காண்க</a>.</p>
     featured: சிறப்புக் கூறுகளமைந்தது
     foi:
       contact_form: தகவல் சுதந்திரத் தொடர்புப் படிவம்

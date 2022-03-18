@@ -195,7 +195,7 @@ id:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Lihat semua transparansi dan kebebasan rilis informasi
         title: Transparansi dan kebebasan rilis informasi
-    errors_or_omissions_html: <p>Kesalahan atau pengabaian? <a class="govuk-link" href="/contact/govuk">Beri tahu kami di sini</a>. Untuk daftar pejabat dari lembaga publik non-pemerintah <a class="govuk-link" href="/government/collections/public-bodies">lihat lembaga publik</a>.</p>
+    errors_or_omissions_html: <p class="govuk-body">Kesalahan atau pengabaian? <a class="govuk-link" href="/contact/govuk">Beri tahu kami di sini</a>. Untuk daftar pejabat dari lembaga publik non-pemerintah <a class="govuk-link" href="/government/collections/public-bodies">lihat lembaga publik</a>.</p>
     featured: Unggulan
     foi:
       contact_form: Formulir kontak Kebebasan Informasi

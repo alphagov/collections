@@ -269,7 +269,7 @@ el:
           path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
           text: Δείτε όλες τις εκδόσεις για την διαφάνεια και ελευθερία πληροφόρησης
         title: Εκδόσεις για τη διαφάνεια και ελευθερία πληροφόρησης
-    errors_or_omissions_html: <p>Λάθη ή παραλείψεις; <a class="govuk-link" href="/contact/govuk">Πείτε μας εδώ</a>. Για επίσημους καταλόγους μη υπηρεσιακών δημόσιων φορέων <a class="govuk-link" href="/government/collections/public-bodies">δείτε τους δημόσιους οργανισμούς</a> .</p>
+    errors_or_omissions_html: <p class="govuk-body">Λάθη ή παραλείψεις; <a class="govuk-link" href="/contact/govuk">Πείτε μας εδώ</a>. Για επίσημους καταλόγους μη υπηρεσιακών δημόσιων φορέων <a class="govuk-link" href="/government/collections/public-bodies">δείτε τους δημόσιους οργανισμούς</a> .</p>
     featured: Προτεινόμενα
     foi:
       contact_form: Φόρμα επικοινωνίας ελευθερία της πληροφόρησης

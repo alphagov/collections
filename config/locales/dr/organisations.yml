@@ -270,7 +270,7 @@ dr:
           text: تمام آزادی و شفافیت انتشار معلومات را مشاهده نمایید
         title: شفافیت و آزادی انتشار معلومات
     errors_or_omissions_html: |-
-      <p>خطا ها و فروگذاری ها؟
+      <p class="govuk-body">خطا ها و فروگذاری ها؟
       <a class="govuk-link" href="/contact/govuk">اینجا بگویید</a>.
       برای لست هایی رسمی نهاد هایی عامهء غیر اداری<a class="govuk-link" href="/government/collections/public-bodies">نهاد هایی عامه را مشاهده نمایید</a>.</p>
     featured: ویژه
