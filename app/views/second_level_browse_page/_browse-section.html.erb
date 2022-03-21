@@ -1,10 +1,10 @@
 <ul class="govuk-list">
   <% section.each_with_index do |list_item, index| %>
-    <li>
+    <li class="govuk-!-margin-bottom-4"=>
       <%= link_to(
         list_item.title,
         list_item.base_path,
-        class: "browse__normal-link govuk-link",
+        class: "govuk-link",
       ) %>
     </li>
   <% end %>
