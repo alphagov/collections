@@ -398,10 +398,11 @@ $topic-page-header-background-colour: #263135;
   margin-bottom: govuk-spacing(2);
 }
 
-.divider__heading {
+.divider {
+  border: 0;
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #0b0c0c;
-  margin: 0 0 30px;
-  padding: 15px 0 0;
+  @include govuk-responsive-margin(8, "top");
+  @include govuk-responsive-margin(5, "bottom");
 }
