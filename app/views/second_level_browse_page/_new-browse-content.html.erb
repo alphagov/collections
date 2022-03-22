@@ -12,7 +12,7 @@
       <%= render "govuk_publishing_components/components/heading", {
        text: section["title"],
        font_size: "m",
-       margin_bottom: 4,
+       margin_bottom: 7,
       }
      %>
     <% end %>
@@ -76,7 +76,7 @@
   <div data-module="gem-track-click">
     <div data-module="toggle-attribute">
       <%= render 'govuk_publishing_components/components/accordion', {
-        heading_level: 3,
+        heading_level: 2,
         data_attributes: {
           module: "govuk-accordion"
         },
@@ -91,12 +91,14 @@
 
   <%# Render 'More on this topic' as its own section %>
   <% if page.related_topics.any? %>
-    <hr class="divider">
-    <%= render "govuk_publishing_components/components/heading", {
-        text: 'More on this topic',
-        heading_level: 2,
-        margin_bottom: 3,
+    <div class="topic-page__more-on-this-topic">
+      <%= render "govuk_publishing_components/components/heading", {
+          text: 'More on this topic',
+          heading_level: 2,
+          font_size: "m",
+          margin_bottom: 3,
       } %>
-      <%= more_on_this_topic_contents %>
-  <% end %>
+    </div>
+    <%= more_on_this_topic_contents %>
+    <% end %>
 <% end %>
