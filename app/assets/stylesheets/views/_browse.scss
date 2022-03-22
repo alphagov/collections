@@ -398,11 +398,11 @@ $topic-page-header-background-colour: #263135;
   margin-bottom: govuk-spacing(2);
 }
 
-.divider {
-  border: 0;
+.topic-page__more-on-this-topic {
+  // To do: this is also used in the frontend repo, should it be turned into a component?
   border-top-style: solid;
   border-top-width: 2px;
-  border-top-color: #0b0c0c;
-  @include govuk-responsive-margin(8, "top");
-  @include govuk-responsive-margin(5, "bottom");
+  border-top-color: $govuk-text-colour;
+  margin-bottom: govuk-spacing(6);
+  padding-top: govuk-spacing(3);
 }
