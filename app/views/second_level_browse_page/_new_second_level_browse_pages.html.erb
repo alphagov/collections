@@ -17,7 +17,7 @@
      %>
     <% end %>
     <%# Render the contents as a list, regardless of whether they'll be in an accordion or as an A-Z list %>
-    <%= render partial: 'browse-section', locals: { section: section.contents } %>
+    <%= render partial: 'new_links', locals: { section: section.contents } %>
   <% end %>
 
   <%# Generate accordion shaped markup %>
