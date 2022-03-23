@@ -403,6 +403,10 @@ $topic-page-header-background-colour: #263135;
   border-top-width: 2px;
   border-top-color: $govuk-text-colour;
   @include govuk-responsive-padding(3, "top");
-  @include govuk-responsive-margin(9, "top");
+  @include govuk-responsive-margin(6, "top");
   @include govuk-responsive-margin(4, "bottom");
+
+  @include govuk-media-query($from: "tablet") {
+    @include govuk-responsive-margin(7, "top");
+  }
 }
