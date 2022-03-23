@@ -399,10 +399,10 @@ $topic-page-header-background-colour: #263135;
 }
 
 .topic-page__more-on-this-topic {
-  // To do: this is also used in the frontend repo, should it be turned into a component?
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: $govuk-text-colour;
-  margin-bottom: govuk-spacing(6);
-  padding-top: govuk-spacing(3);
+  @include govuk-responsive-padding(3, "top");
+  @include govuk-responsive-margin(9, "top");
+  @include govuk-responsive-margin(4, "bottom");
 }
