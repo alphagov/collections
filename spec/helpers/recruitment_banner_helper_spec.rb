@@ -13,11 +13,11 @@ RSpec.describe RecruitmentBannerHelper do
 
   describe "#study_url_for" do
     it "returns common study url" do
-      expect(study_url_for("/browse/tax/blah-blah-blah")).to eq("https://GDSUserResearch.optimalworkshop.com/treejack/lb5eu75l")
+      expect(study_url_for("/browse/tax/blah-blah-blah")).to eq("https://GDSUserResearch.optimalworkshop.com/treejack/724268fr-1-0")
     end
 
     it "returns the additional study link" do
-      expect(study_url_for("/browse/employing-people/blah-blah-blah")).to eq("https://gdsuserresearch.optimalworkshop.com/treejack/724268fr-1")
+      expect(study_url_for("/browse/employing-people/blah-blah-blah")).to eq("https://GDSUserResearch.optimalworkshop.com/treejack/724268fr-1-0")
     end
   end
 end
