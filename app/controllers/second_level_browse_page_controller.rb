@@ -6,11 +6,7 @@ class SecondLevelBrowsePageController < ApplicationController
     setup_content_item_and_navigation_helpers(page)
     @dimension26 = count_link_sections(page)
     @dimension27 = count_total_links(page)
-
-    if show_banner?(request.path)
-      @show_recruitment_banner = true
-      @study_url = study_url_for(request.path)
-    end
+    @study_url = study_url_for(request.path)
 
     respond_to do |f|
       f.html do
