@@ -1,7 +1,7 @@
 <div class="browse__inner <%= page.lists.curated? ? 'browse__inner--curated' : 'browse__inner--alphabetical' %>">
   <h2 tabindex="-1" class="browse__heading js-heading"><%= t("shared.browse.prefix") %> <%= page.title %></h2>
 
-  <% if @show_recruitment_banner %>
+  <% if @study_url %>
     <%= render "govuk_publishing_components/components/intervention", {
         suggestion_text: "Help improve GOV.UK",
         suggestion_link_text: "Take part in user research",
