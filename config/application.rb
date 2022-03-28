@@ -67,6 +67,7 @@ module Collections
       lv
       ms
       mt
+      ne
       nl
       no
       pa
