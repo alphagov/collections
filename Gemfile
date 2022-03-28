@@ -25,7 +25,6 @@ group :test do
   gem "rails-controller-testing"
   gem "simplecov"
   gem "simplecov-rcov"
-  gem "webdrivers"
   gem "webmock", require: false
 end
 
