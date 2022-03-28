@@ -10,15 +10,4 @@
   <% if guidance.present? && guidance["intro"].present? %>
     <%= render_govspeak(guidance["intro"]) %>
   <% end %>
-
-  <% if guidance.present? && guidance["links"].present? %>
-    <%
-      guidance_links = guidance["links"].map do | link |
-        link_to(link["label"], link["url"], class: "govuk-link")
-      end
-    %>
-    <p class="govuk-body">
-      <%= "#{guidance["text"]} #{guidance_links.to_sentence(last_word_connector: " and ")}".html_safe %>
-    </p>
-  <% end %>
 </div>
