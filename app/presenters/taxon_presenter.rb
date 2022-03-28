@@ -38,12 +38,4 @@ class TaxonPresenter
       track_options: {},
     }
   end
-
-  def brexit?
-    content_id == "d6c2de5d-ef90-45d1-82d4-5f2438369eea"
-  end
-
-  def noindex?
-    !brexit?
-  end
 end

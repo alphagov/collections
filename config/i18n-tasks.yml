@@ -8,6 +8,5 @@ data:
       line_width: -1
 ignore_unused:
   - "organisations.content_item.schema_name.*"
-  - "brexit_landing_page.sections.*"
   - "roles.heading.*"
   - "organisations.type.*"
