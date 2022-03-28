@@ -13,7 +13,7 @@ RSpec.feature "Person page" do
   end
 
   scenario "displays the person page" do
-    expect(page).to have_title("Rufus Scrimgeour - GOV.UK")
+    expect(page).to have_content("Rufus Scrimgeour")
   end
 
   scenario "shows schema.org Person structured data" do
