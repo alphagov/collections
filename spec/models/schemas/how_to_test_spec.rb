@@ -12,12 +12,12 @@ RSpec.describe Schemas::HowTo do
         "@context": "http://schema.org",
         "@type": "HowTo",
         "description": "Learn to drive a car in the UK - get a provisional licence, take driving lessons, prepare for your theory test, book your practical test.",
-        "image": "/assets/collections/govuk_publishing_components/govuk-schema-placeholder-1x1-5ceffac04f7f6d4f421bd1d36dbb723ef48c15426d7f77f90be80a83af3c747e.png",
+        "image": "/assets/collections/govuk_publishing_components/govuk-schema-placeholder-1x1-bf9e64d759af6dfd93bede8168f3087a329f405b382aff36747db0db4b7b23e9.png",
         "name": "Learn to drive a car: step by step",
         "step": [
           {
             "@type": "HowToStep",
-            "image": "/assets/collections/step-1-ba1b6be36d611d7a23778cdfc6f66822209f2a26447233fa6ba5ad8d9b715887.png",
+            "image": "/assets/collections/step-1-f0c4380d0551bb7f36f3bbc335f966197e8e8d087f3c259301e71751788fe254.png",
             "name": "Check you're allowed to drive",
             "url": "http://www.test.gov.uk/learn-to-drive-a-car#check-you-re-allowed-to-drive",
             "position": 1,
@@ -49,7 +49,7 @@ RSpec.describe Schemas::HowTo do
           },
           {
             "@type": "HowToStep",
-            "image": "/assets/collections/step-2-5684f7637a48dc3805c8f5fdd2ff4a071ae68e4df780f689e98b1b089b6a2a2f.png",
+            "image": "/assets/collections/step-2-8e5828409d4c6ba90d46423ddd110a69d594c9a95050a853b92a6ee65b4e6438.png",
             "name": "Get a provisional driving licence",
             "url": "http://www.test.gov.uk/learn-to-drive-a-car#get-a-provisional-driving-licence",
             "position": 2,
@@ -64,7 +64,7 @@ RSpec.describe Schemas::HowTo do
           },
           {
             "@type": "HowToStep",
-            "image": "/assets/collections/step-3-38f4e6cd39f0cde6f8d1b5d8b140edc387eb7763c3d12445fef1d6f97fc91567.png",
+            "image": "/assets/collections/step-3-464e7f5d4df65200b5595a01337c5d619f486fe307bbc58bacf279ab31f0c0ca.png",
             "name": "Driving lessons and practice",
             "url": "http://www.test.gov.uk/learn-to-drive-a-car#driving-lessons-and-practice",
             "position": 3,
@@ -102,7 +102,7 @@ RSpec.describe Schemas::HowTo do
           },
           {
             "@type": "HowToStep",
-            "image": "/assets/collections/step-and-74cca23cff1ca95dc07450491bf13915cb46c3d473303e92a9d47e31256824d8.png",
+            "image": "/assets/collections/step-and-da0ea81ae330dafaf6f8beb2fe2f3875d68f718c4094627518ad6d3105205e28.png",
             "name": "Prepare for your theory test",
             "url": "http://www.test.gov.uk/learn-to-drive-a-car#prepare-for-your-theory-test",
             "position": 4,
@@ -129,7 +129,7 @@ RSpec.describe Schemas::HowTo do
           },
           {
             "@type": "HowToStep",
-            "image": "/assets/collections/step-4-820e35a67c583f6ffd218bb2047b909187b7b657cf2c87510bdf4eef1581e362.png",
+            "image": "/assets/collections/step-4-d605649a9cda7e3b6bce802cdf7b564dd1e893da065bede6dd52285cae80a4ea.png",
             "name": "Book and manage your theory test",
             "url": "http://www.test.gov.uk/learn-to-drive-a-car#book-and-manage-your-theory-test",
             "position": 5,
@@ -173,7 +173,7 @@ RSpec.describe Schemas::HowTo do
           },
           {
             "@type": "HowToStep",
-            "image": "/assets/collections/step-5-dbe629ccb75208fa3edc3b581894556f12413d0da257962becc9dbcd085a0ff2.png",
+            "image": "/assets/collections/step-5-e3c06303d977066500539e8b1ed0f04b3357e60b411e399ff22a3a85e9b7dfde.png",
             "name": "Book and manage your driving test",
             "url": "http://www.test.gov.uk/learn-to-drive-a-car#book-and-manage-your-driving-test",
             "position": 6,
@@ -216,7 +216,7 @@ RSpec.describe Schemas::HowTo do
           },
           {
             "@type": "HowToStep",
-            "image": "/assets/collections/step-6-d8851d68f990a07e721356a56182ec9a7a8e14d6948ec1c4c5bb073bf80d0f06.png",
+            "image": "/assets/collections/step-6-0cb0f4e287fa0e07e440cda3d0dd8528064b259e12352158c9ba5fecde5b0001.png",
             "name": "When you pass",
             "url": "http://www.test.gov.uk/learn-to-drive-a-car#when-you-pass",
             "position": 7,
