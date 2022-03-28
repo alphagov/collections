@@ -1,9 +1,7 @@
 <% content_for :is_full_width_header, true %>
 <% content_for :title, presented_taxon.title %>
 <% content_for :meta_tags do %>
-  <% if presented_taxon.noindex? %>
-    <meta name="robots" content="noindex">
-  <% end %>
+  <meta name="robots" content="noindex">
   <meta name="description" content="<%= presented_taxon.description %>">
   <%= render "govuk_publishing_components/components/meta_tags", {
     content_item: {

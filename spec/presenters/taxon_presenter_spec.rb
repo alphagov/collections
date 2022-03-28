@@ -44,25 +44,4 @@ RSpec.describe TaxonPresenter do
       expect(taxon_presenter.show_subtopic_grid?).to be false
     end
   end
-
-  describe "noindex" do
-    let(:content_hash) { funding_and_finance_for_students_taxon }
-    let(:content_item) { ContentItem.new(content_hash) }
-    let(:taxon) { Taxon.new(ContentItem.new(content_hash)) }
-    let(:taxon_presenter) { TaxonPresenter.new(taxon) }
-
-    it "returns true by default" do
-      expect(taxon_presenter.noindex?).to be true
-    end
-
-    context "when it is a brexit taxon" do
-      let(:content_hash) do
-        funding_and_finance_for_students_taxon.merge("content_id" => "d6c2de5d-ef90-45d1-82d4-5f2438369eea")
-      end
-
-      it "returns false" do
-        expect(taxon_presenter.noindex?).to be false
-      end
-    end
-  end
 end
