@@ -91,7 +91,7 @@
 .organisation__no10-banner {
   @include govuk-font(19);
   padding-top: 140px;
-  background-image: image-url('prime-ministers-office-header.jpg');
+  background-image: image-url("prime-ministers-office-header.jpg");
   background-repeat: no-repeat;
   background-position: 50% 0;
   text-align: center;
