@@ -1,10 +1,25 @@
-<ul class="govuk-list">
+<%
+  list_tracking_values = []
+%>
+<ul class="govuk-list" data-module="gem-track-click">
   <% section.each_with_index do |list_item, index| %>
-    <li class="govuk-!-margin-bottom-4"=>
+    <%
+    data_track_options = {
+      "dimension114": 'value',
+      "dimension28": 'value',
+      "dimension29": list_item.title,
+    }
+    list_tracking_values << data_track_options
+    %>
+    <li class="govuk-!-margin-bottom-4">
       <%= link_to(
         list_item.title,
-        list_item.base_path,
+        "#",
         class: "govuk-link",
+        "data-track-category": 'browseClicked',
+        "data-track-action": "contentLink",
+        "data-track-label": list_item.base_path,
+        "data-track-options": list_tracking_values,
       ) %>
     </li>
   <% end %>

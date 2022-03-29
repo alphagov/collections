@@ -40,13 +40,23 @@
 <% if page.related_topics.any? %>
   <% more_on_this_topic_contents = capture do %>
     <%# Todo: use browse-section partial here - currently the shape of the data is different for the accordion contents %>
-    <ul class="govuk-list">
+    <ul class="govuk-list" data-module="gem-track-click">
       <% page.related_topics.each_with_index do |related_topic, index| %>
-      <li class="govuk-!-margin-bottom-4"=>
+      <li class="govuk-!-margin-bottom-4">
           <%= link_to(
             related_topic.title,
             related_topic.base_path,
             class: "govuk-link",
+            data_attributes: {
+              track_category: 'browseClicked',
+              track_action: "contentLink",
+              track_label: related_topic.base_path,
+              track_options: {
+                dimension114: 'value',
+                dimension28: 'value',
+                dimension29: top_level_browse_page.title,
+              },
+            }
           ) %>
         </li>
       <% end %>
