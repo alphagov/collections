@@ -4,20 +4,20 @@
   more_on_this_topic_contents = []
 %>
 
-<% page.lists.each_with_index do |section, section_index| %>
+<% page.lists.each_with_index do |list, list_index| %>
 
   <% contents = capture do %>
     <%# Add a heading above the A-Z the list. Add it here so that we can extract the heading text %>
     <% if !curated_order %>
       <%= render "govuk_publishing_components/components/heading", {
-       text: section["title"],
+       text: list["title"],
        font_size: "m",
        margin_bottom: 7,
       }
      %>
     <% end %>
     <%# Render the contents as a list, regardless of whether they'll be in an accordion or as an A-Z list %>
-    <%= render partial: 'new_links', locals: { section: section.contents } %>
+    <%= render partial: 'new_links', locals: { list: list.contents, list_index: list_index } %>
   <% end %>
 
   <%# Generate accordion shaped markup %>
@@ -25,7 +25,7 @@
     <%
       additional_contents = {
         heading: {
-          text: section["title"],
+          text: list["title"],
         },
         content: {
           html: contents,
@@ -40,13 +40,23 @@
 <% if page.related_topics.any? %>
   <% more_on_this_topic_contents = capture do %>
     <%# Todo: use browse-section partial here - currently the shape of the data is different for the accordion contents %>
-    <ul class="govuk-list">
+    <ul class="govuk-list" data-module="gem-track-click">
       <% page.related_topics.each_with_index do |related_topic, index| %>
-      <li class="govuk-!-margin-bottom-4"=>
+      <li class="govuk-!-margin-bottom-4">
           <%= link_to(
             related_topic.title,
             related_topic.base_path,
             class: "govuk-link",
+            data_attributes: {
+              track_category: 'browseClicked',
+              track_action: "contentLink",
+              track_label: related_topic.base_path,
+              track_options: {
+                dimension114: 'value',
+                dimension28: 'value',
+                dimension29: related_topic.title,
+              },
+            }
           ) %>
         </li>
       <% end %>
