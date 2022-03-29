@@ -30,8 +30,6 @@
         content: {
           html: contents,
         },
-        data_attributes: {
-        }
       }
       accordion_contents << additional_contents
       %>
@@ -76,6 +74,8 @@
   <div data-module="gem-track-click">
     <div data-module="toggle-attribute">
       <%= render 'govuk_publishing_components/components/accordion', {
+        track_show_all_clicks: true,
+        track_sections: true,
         heading_level: 2,
         data_attributes: {
           module: "govuk-accordion"
