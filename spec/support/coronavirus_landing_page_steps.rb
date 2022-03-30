@@ -66,10 +66,6 @@ module CoronavirusLandingPageSteps
     expect(page).to have_selector(".covid__page-header h1", text: title)
   end
 
-  def then_i_can_see_the_nhs_banner
-    expect(page).to have_selector("[data-track-action='callOutBox']", text: "If you have no symptoms")
-  end
-
   def then_i_can_see_the_timeline
     expect(page).to have_selector("h2", text: "Recent and upcoming changes")
 

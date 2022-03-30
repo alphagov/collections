@@ -19,16 +19,6 @@
     <%= render partial: 'coronavirus_landing_page/components/landing_page/timeline', locals: { details: details } %>
   </section>
 
-  <section class="covid__section"
-           aria-label="notice"
-           role="region"
-           data-module="gem-track-click"
-           data-track-category="pageElementInteraction"
-           data-track-action="callOutBox"
-           data-track-links-only>
-           <%= render "coronavirus_landing_page/components/landing_page/nhs_notice", { nhs_banner: details.nhs_banner } %>
-  </section>
-
   <section class="covid__section">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-third">
