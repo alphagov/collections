@@ -66,4 +66,4 @@ See the [guidance on Pact testing](https://docs.publishing.service.gov.uk/manual
 
 ## License
 
-[MIT License](LICENCE.txt)
+[MIT License](LICENSE)
