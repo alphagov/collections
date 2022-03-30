@@ -23,18 +23,6 @@ RSpec.feature "Coronavirus Pages" do
       then_i_can_see_sub_headings_of_accordions
     end
 
-    scenario "shows COVID-19 risk level when risk level is enabled" do
-      given_there_is_a_content_item_with_risk_level_element_enabled
-      when_i_visit_the_coronavirus_landing_page
-      then_i_can_see_the_risk_level
-    end
-
-    scenario "does not show COVID-19 risk level when risk level is not enabled" do
-      given_there_is_a_content_item
-      when_i_visit_the_coronavirus_landing_page
-      then_i_can_not_see_the_risk_level
-    end
-
     scenario "renders machine readable content" do
       given_there_is_a_content_item
       when_i_visit_the_coronavirus_landing_page

@@ -110,14 +110,6 @@ module CoronavirusLandingPageSteps
     expect(page).to have_link("Guidance", href: "/search/all?level_one_taxon=495afdb6-47be-4df1-8b38-91c8adb1eefc&topical_events%5B%5D=coronavirus-covid-19-uk-government-response&order=updated-newest")
   end
 
-  def then_i_can_see_the_risk_level
-    expect(page).to have_selector('[data-module="govspeak"]', text: "COVID-19 alert level")
-  end
-
-  def then_i_can_not_see_the_risk_level
-    expect(page).not_to have_selector('[data-module="govspeak"]', text: "COVID-19 alert level")
-  end
-
   def then_the_special_announcement_schema_is_rendered
     special_announcement_schema = find_schema("SpecialAnnouncement")
     expect(special_announcement_schema["name"]).to eq("Coronavirus (COVID-19): what you need to do")
