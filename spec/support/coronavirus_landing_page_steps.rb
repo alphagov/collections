@@ -66,32 +66,6 @@ module CoronavirusLandingPageSteps
     expect(page).to have_selector(".covid__page-header h1", text: title)
   end
 
-  def then_i_can_see_the_timeline
-    expect(page).to have_selector("h2", text: "Recent and upcoming changes")
-
-    expect(page).to have_selector("#nation-england .gem-c-heading", text: "18 September")
-    expect(page).to have_selector("#nation-england .gem-c-govspeak", text: "If you live, work or travel in the North East, you need to follow different covid rules")
-
-    expect(page).to have_selector("#nation-england .gem-c-heading", text: "15 September")
-    expect(page).to have_selector("#nation-england .gem-c-govspeak", text: "If you live, work or visit Bolton, you need to follow different covid rules")
-
-    expect(page).to have_selector("#nation-scotland .gem-c-heading", text: "14 September")
-    expect(page).to have_selector("#nation-scotland .gem-c-govspeak", text: "People must not meet in groups larger than 6 in England. There are exceptions to this ‘rule of 6’")
-
-    expect(page).to have_selector("#nation-wales .gem-c-heading", text: "24 July")
-    expect(page).to have_selector("#nation-wales .gem-c-govspeak", text: "Face coverings are mandatory in shops")
-  end
-
-  def then_i_can_see_the_timeline_for_england
-    expect(page).to have_selector("#nation-england:not(.covid-timeline__wrapper--hidden)")
-    expect(page).to have_selector(".covid-timeline__wrapper--hidden", count: 3, visible: false)
-  end
-
-  def then_i_can_see_the_timeline_for_wales
-    expect(page).to have_selector("#nation-wales:not(.covid-timeline__wrapper--hidden)")
-    expect(page).to have_selector(".covid-timeline__wrapper--hidden", count: 3, visible: false)
-  end
-
   def then_i_can_see_the_accordions
     expect(page).to have_selector("h2", text: "Guidance and support")
   end
