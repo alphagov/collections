@@ -6,7 +6,7 @@
   <%= render "govuk_publishing_components/components/meta_tags", {
     content_item: {
       # TODO align this naming "level 1" vs "second_level" mismatch
-      navigation_page_type: "Browse level 1 - #{page.second_level_pages_curated? ? "curated" : "uncurated"}",
+      navigation_page_type: "Browse level 1 - #{page.second_level_pages_curated? ? "curated" : "default"}",
       section: "new_browse_page",
     }
   } %>
