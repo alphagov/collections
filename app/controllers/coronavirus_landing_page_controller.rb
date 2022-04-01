@@ -2,14 +2,6 @@ class CoronavirusLandingPageController < ApplicationController
   slimmer_template "gem_layout_full_width"
 
   def show
-    @statistics = FetchCoronavirusStatisticsService.call
-    if @statistics
-      set_expiry content_item.max_age, public_cache: content_item.public_cache
-    else
-      logger.warn "Serving /coronavirus without statistics"
-      set_expiry 30.seconds
-    end
-
     breadcrumbs = [{ title: t("shared.breadcrumbs_home"), url: "/", is_page_parent: true }]
     title = {
       text: presenter.page_header,
