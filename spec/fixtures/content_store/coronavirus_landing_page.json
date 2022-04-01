@@ -29,21 +29,6 @@
         "text": "Read more about what you can and cannot do."
       }
     },
-    "announcements_label": "Announcements",
-    "announcements": [
-      {
-        "text": "You must stay at home apart from essential travel or you may be fined",
-        "href": "/government/publications/full-guidance-on-staying-at-home-and-away-from-others"
-      },
-      {
-        "text": "If you live in the UK and are currently abroad you are strongly advised to return now",
-        "href": "/guidance/travel-advice-novel-coronavirus"
-      },
-      {
-        "text": "All non-essential shops and community spaces are closed",
-        "href": "/government/publications/further-businesses-and-premises-to-close"
-      }
-    ],
     "risk_level": {
       "heading": "COVID-19 alert level",
       "show_risk_level_section": false,
