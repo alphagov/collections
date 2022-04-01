@@ -54,18 +54,6 @@
         "text": "Read more about COVID-19 alert levels"
       }
     },
-    "nhs_banner": {
-      "sections": [
-        {
-          "heading": "If you have no symptoms:",
-          "markdown": "Check if you should get [regular rapid lateral flow tests](/getting-tested-for-coronavirus)."
-        },
-        {
-          "heading": "If you have coronavirus symptoms:",
-          "markdown": "- [get a PCR test](/get-coronavirus-test)\n- stay at home"
-        }
-      ]
-    },
     "sections_heading": "Guidance and support",
     "sections": [
       {

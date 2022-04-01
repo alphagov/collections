@@ -8,7 +8,6 @@ RSpec.describe CoronavirusLandingPagePresenter do
       announcements
       see_all_announcements_link
       risk_level
-      nhs_banner
       sections
       sections_heading
       additional_country_guidance
