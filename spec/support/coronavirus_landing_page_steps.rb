@@ -66,36 +66,6 @@ module CoronavirusLandingPageSteps
     expect(page).to have_selector(".covid__page-header h1", text: title)
   end
 
-  def then_i_can_see_the_nhs_banner
-    expect(page).to have_selector("[data-track-action='callOutBox']", text: "If you have no symptoms")
-  end
-
-  def then_i_can_see_the_timeline
-    expect(page).to have_selector("h2", text: "Recent and upcoming changes")
-
-    expect(page).to have_selector("#nation-england .gem-c-heading", text: "18 September")
-    expect(page).to have_selector("#nation-england .gem-c-govspeak", text: "If you live, work or travel in the North East, you need to follow different covid rules")
-
-    expect(page).to have_selector("#nation-england .gem-c-heading", text: "15 September")
-    expect(page).to have_selector("#nation-england .gem-c-govspeak", text: "If you live, work or visit Bolton, you need to follow different covid rules")
-
-    expect(page).to have_selector("#nation-scotland .gem-c-heading", text: "14 September")
-    expect(page).to have_selector("#nation-scotland .gem-c-govspeak", text: "People must not meet in groups larger than 6 in England. There are exceptions to this ‘rule of 6’")
-
-    expect(page).to have_selector("#nation-wales .gem-c-heading", text: "24 July")
-    expect(page).to have_selector("#nation-wales .gem-c-govspeak", text: "Face coverings are mandatory in shops")
-  end
-
-  def then_i_can_see_the_timeline_for_england
-    expect(page).to have_selector("#nation-england:not(.covid-timeline__wrapper--hidden)")
-    expect(page).to have_selector(".covid-timeline__wrapper--hidden", count: 3, visible: false)
-  end
-
-  def then_i_can_see_the_timeline_for_wales
-    expect(page).to have_selector("#nation-wales:not(.covid-timeline__wrapper--hidden)")
-    expect(page).to have_selector(".covid-timeline__wrapper--hidden", count: 3, visible: false)
-  end
-
   def then_i_can_see_the_accordions
     expect(page).to have_selector("h2", text: "Guidance and support")
   end
@@ -112,14 +82,6 @@ module CoronavirusLandingPageSteps
   def and_i_can_see_business_links_to_search
     expect(page).to have_link("News", href: "/search/news-and-communications?level_one_taxon=495afdb6-47be-4df1-8b38-91c8adb1eefc&topical_events%5B%5D=coronavirus-covid-19-uk-government-response&order=updated-newest")
     expect(page).to have_link("Guidance", href: "/search/all?level_one_taxon=495afdb6-47be-4df1-8b38-91c8adb1eefc&topical_events%5B%5D=coronavirus-covid-19-uk-government-response&order=updated-newest")
-  end
-
-  def then_i_can_see_the_risk_level
-    expect(page).to have_selector('[data-module="govspeak"]', text: "COVID-19 alert level")
-  end
-
-  def then_i_can_not_see_the_risk_level
-    expect(page).not_to have_selector('[data-module="govspeak"]', text: "COVID-19 alert level")
   end
 
   def then_the_special_announcement_schema_is_rendered

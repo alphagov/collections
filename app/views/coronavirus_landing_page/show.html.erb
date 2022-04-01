@@ -16,26 +16,14 @@
 
 <div class="govuk-width-container covid__page" data-module="coronavirus-landing-page">
   <section class="covid__section covid__section--first">
-    <%= render partial: 'coronavirus_landing_page/components/landing_page/timeline', locals: { details: details } %>
-  </section>
-
-  <section class="covid__section"
-           aria-label="notice"
-           role="region"
-           data-module="gem-track-click"
-           data-track-category="pageElementInteraction"
-           data-track-action="callOutBox"
-           data-track-links-only>
-           <%= render "coronavirus_landing_page/components/landing_page/nhs_notice", { nhs_banner: details.nhs_banner } %>
-  </section>
-
-  <section class="covid__section">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-third">
         <%= render "govuk_publishing_components/components/heading", {
           text: details.sections_heading,
+          margin_bottom: 3,
           font_size: "m"
         } %>
+        <%= render partial: 'coronavirus_landing_page/components/shared/country_guidance', locals: { guidance: details.additional_country_guidance } %>
       </div>
 
       <div class="govuk-grid-column-two-thirds">
@@ -45,17 +33,6 @@
         <%= render partial: 'coronavirus_landing_page/components/shared/country_section', locals: { guidance: details.additional_country_guidance } %>
       </div>
     </div>
-  </section>
-
-  <section class="covid__section">
-    <%= render partial: 'coronavirus_landing_page/components/landing_page/statistics_section', locals: {
-      topic_section: details.statistics_section,
-      statistics: @statistics,
-    } %>
-  </section>
-
-  <section class="covid__section">
-    <%= render partial: 'coronavirus_landing_page/components/landing_page/announcements_section', locals: { details: details } %>
   </section>
 
   <section class="covid__section">
