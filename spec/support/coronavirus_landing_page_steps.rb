@@ -42,14 +42,6 @@ module CoronavirusLandingPageSteps
     visit OTHER_SUBTAXON_PATH
   end
 
-  def when_i_click_on_wales
-    choose "Wales"
-  end
-
-  def and_i_submit_my_nation
-    click_on "View"
-  end
-
   def then_i_am_redirected_to_the_landing_page
     expect(page.current_path).to eq "/coronavirus"
   end

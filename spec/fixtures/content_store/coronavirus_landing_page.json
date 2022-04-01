@@ -325,41 +325,6 @@
         }
       ]
     },
-    "timeline": {
-      "list": [
-        {
-          "heading": "18 September",
-          "national_applicability": ["england", "northern_ireland", "scotland", "wales"],
-          "paragraph": "If you live, work or travel in the North East, you need to [follow different covid rules](/guidance/north-east-of-england-local-restrictions)\n"
-        },
-        {
-          "heading": "15 September",
-          "national_applicability": ["england"],
-          "paragraph": "If you live, work or visit Bolton, you need to [follow different covid rules](/guidance/bolton-local-restrictions)\n"
-        },
-        {
-          "heading": "14 September",
-          "national_applicability": ["scotland"],
-          "paragraph": "People must not meet in groups larger than 6 in England. There are [exceptions to this 'rule of 6'](/government/publications/coronavirus-covid-19-meeting-with-others-safely-social-distancing/coronavirus-covid-19-meeting-with-others-safely-social-distancing#seeing-friends-and-family)\n"
-        },
-        {
-          "heading": "24 July",
-          "national_applicability": ["wales"],
-          "paragraph": "[Face coverings are mandatory in shops](/government/publications/face-coverings-when-to-wear-one-and-how-to-make-your-own/face-coverings-when-to-wear-one-and-how-to-make-your-own)\n"
-        },
-        {
-          "heading": "15 July",
-          "national_applicability": ["northern_ireland"],
-          "paragraph": "You can now socialise indoors in a group of up to 6 people from no more than 2 households, including for overnight stays. Up to 15 people from no more than 3 households can meet in a private garden. Shops, hairdressers and visitor attractions can reopen as well as indoor areas of pubs and restaurants. Read the [guidance on current restrictions on nidirect](https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you). \r\n"
-        },
-        {
-          "heading": "10 July",
-          "national_applicability": ["england", "wales"],
-          "paragraph": "May the Force be with you."
-        }
-      ],
-      "heading": "Recent and upcoming changes"
-    },
     "notifications": {
       "intro": "Stay up to date with GOV.UK",
       "email_link": "Sign up to get emails when we change any coronavirus information on the GOV.UK website",
