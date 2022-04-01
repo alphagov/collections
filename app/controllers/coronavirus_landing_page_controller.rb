@@ -27,7 +27,7 @@ private
   end
 
   def presenter
-    @presenter ||= CoronavirusLandingPagePresenter.new(content_item.to_hash, params[:nation])
+    @presenter ||= CoronavirusLandingPagePresenter.new(content_item.to_hash)
   end
 
   def special_announcement
