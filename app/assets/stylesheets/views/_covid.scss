@@ -46,14 +46,6 @@ $c19-landing-page-header-background: govuk-colour("blue");
   }
 }
 
-.covid__announcement-published-text {
-  margin-top: govuk-spacing(1);
-
-  @include govuk-media-query($from: desktop) {
-    margin-bottom: govuk-spacing(6);
-  }
-}
-
 .covid__action-link-wrapper {
   margin-top: govuk-spacing(5);
 
