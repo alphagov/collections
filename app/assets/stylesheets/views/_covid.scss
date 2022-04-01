@@ -124,37 +124,9 @@ $c19-landing-page-header-background: govuk-colour("blue");
   color: govuk-colour("black");
 }
 
-.covid-timeline__item {
-  margin-bottom: govuk-spacing(6);
-}
-
-.covid-timeline__item-heading {
-  margin-bottom: govuk-spacing(1);
-}
-
-.covid-timeline__wrapper--hidden {
-  display: none;
-}
-
-.covid-timeline__tag-wrapper {
-  margin-left: govuk-spacing(1);
-
-  @include govuk-media-query($until: desktop) {
-    display: block;
-    margin: 0;
-    margin-top: govuk-spacing(1);
-  }
-}
-
-.covid-timeline__tag {
-  margin-right: govuk-spacing(1);
-  margin-bottom: govuk-spacing(1);
-}
-
-.covid-timeline__button-wrapper {
-  margin-top: -(govuk-spacing(2));
-
-  .js-enabled & {
-    display: none;
+.covid__alert-notice .covid__alert-notice-body {
+  @include govuk-media-query($from: desktop) {
+    margin-top: govuk-spacing(2);
+    margin-bottom: govuk-spacing(2);
   }
 }
