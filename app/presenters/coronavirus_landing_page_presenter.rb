@@ -10,7 +10,6 @@ class CoronavirusLandingPagePresenter
     sections_heading
     additional_country_guidance
     topic_section
-    statistics_section
     notifications
     page_header
     timeline
