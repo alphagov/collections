@@ -560,51 +560,6 @@
       "title": "Coronavirus restrictions remain in place across the country, including for people who have been vaccinated. In England:"
     },
     "sections_heading": "Guidance and support",
-    "statistics_section": {
-      "links": [
-        {
-          "url": "https://coronavirus.data.gov.uk/",
-          "label": "Daily summary of coronavirus testing, cases and vaccinations"
-        },
-        {
-          "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases",
-          "label": "Data and trends from the Office for National Statistics (ONS)"
-        },
-        {
-          "url": "/guidance/coronavirus-covid-19-statistics-and-analysis",
-          "label": "All data and analysis on coronavirus"
-        },
-        {
-          "url": "/government/collections/coronavirus-cases-by-local-authority-epidemiological-data",
-          "label": "Coronavirus cases by local authority"
-        }
-      ],
-      "header": "UK statistics",
-      "new_positive_tests": {
-        "title": "Daily new cases",
-        "guidance_link": {
-          "url": "https://coronavirus.data.gov.uk/details/cases",
-          "label": "Cases data from the coronavirus data dashboard"
-        },
-        "statistic_meaning": "people tested positive with COVID-19"
-      },
-      "hospital_admissions": {
-        "title": "Daily hospital admissions",
-        "guidance_link": {
-          "url": "https://coronavirus.data.gov.uk/details/healthcare",
-          "label": "Healthcare data from the coronavirus data dashboard"
-        },
-        "statistic_meaning": "new patients have been admitted to hospital"
-      },
-      "cumulative_first_dose_vaccinations": {
-        "title": "Total vaccinations",
-        "guidance_link": {
-          "url": "https://coronavirus.data.gov.uk/details/vaccinations",
-          "label": "Vaccination data from the coronavirus data dashboard"
-        },
-        "statistic_meaning": "people have received their first dose"
-      }
-    },
     "announcements_label": "Announcements",
     "hidden_search_terms": [
       "The rules and roadmap",

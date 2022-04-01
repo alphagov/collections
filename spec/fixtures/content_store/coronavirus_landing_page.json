@@ -339,43 +339,6 @@
         }
       ]
     },
-    "statistics_section": {
-      "header": "Statistics",
-      "cumulative_first_dose_vaccinations": {
-        "title": "Total vaccinations",
-        "statistic_meaning": "people have received their first dose",
-        "guidance_link": {
-          "label": "Vaccination data from the coronavirus data dashboard",
-          "url": "https://coronavirus.data.gov.uk/details/vaccinations"
-        }
-      },
-      "hospital_admissions": {
-        "title": "Daily hospital admissions",
-        "statistic_meaning": "new patients have been admitted to hospital",
-        "guidance_link": {
-          "label": "Healthcare data from the coronavirus data dashboard",
-          "url": "https://coronavirus.data.gov.uk/details/healthcare"
-        }
-      },
-      "new_positive_tests": {
-        "title": "Daily new cases",
-        "statistic_meaning": "people tested positive with COVID-19",
-        "guidance_link": {
-          "label": "Cases data from the coronavirus data dashboard",
-          "url": "https://coronavirus.data.gov.uk/details/cases"
-        }
-      },
-      "links": [
-        {
-          "label": "Track coronavirus cases in the UK",
-          "url": "/government/publications/covid-19-track-coronavirus-cases"
-        },
-        {
-          "label": "Latest number of coronavirus cases in the UK",
-          "url": "/guidance/coronavirus-covid-19-information-for-the-public"
-        }
-      ]
-    },
     "topic_section": {
       "header": "All coronavirus information on GOV.UK",
       "links": [
