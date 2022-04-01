@@ -475,18 +475,6 @@
       "heading": "Recent and upcoming changes",
       "summary": "Restrictions are easing across the UK."
     },
-    "nhs_banner": {
-      "sections": [
-        {
-          "heading": "If you have no symptoms:",
-          "markdown": "[Get regular rapid lateral flow tests](https://www.nhs.uk/conditions/coronavirus-covid-19/testing/regular-rapid-coronavirus-tests-if-you-do-not-have-symptoms/).\n"
-        },
-        {
-          "heading": "If you have coronavirus symptoms:",
-          "markdown": "- [get a PCR test](/get-coronavirus-test)\n- stay at home\n"
-        }
-      ]
-    },
     "risk_level": {
       "link": {
         "href": "/risk-level",
