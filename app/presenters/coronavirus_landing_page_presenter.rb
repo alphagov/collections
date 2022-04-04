@@ -1,9 +1,6 @@
 class CoronavirusLandingPagePresenter
   COMPONENTS = %w[
     header_section
-    announcements_label
-    announcements
-    see_all_announcements_link
     risk_level
     sections
     sections_heading
@@ -34,7 +31,7 @@ class CoronavirusLandingPagePresenter
       "@type": "FAQPage",
       "name": content_item["title"],
       "description": content_item["description"],
-      "mainEntity": build_faq_main_entity(content_item),
+      "mainEntity": build_sections_schema(content_item),
     }
   end
 
@@ -62,12 +59,6 @@ class CoronavirusLandingPagePresenter
 
 private
 
-  def build_faq_main_entity(content_item)
-    question_and_answers = []
-    question_and_answers.push build_announcements_schema(content_item)
-    question_and_answers.concat build_sections_schema(content_item)
-  end
-
   def question_and_answer_schema(question, answer)
     {
       "@type": "Question",
@@ -77,14 +68,6 @@ private
         "text": answer,
       },
     }
-  end
-
-  def build_announcements_schema(content_item)
-    announcement_text = ApplicationController.render partial: "coronavirus_landing_page/components/shared/announcements",
-                                                     locals: {
-                                                       announcements: content_item["details"]["announcements"],
-                                                     }
-    question_and_answer_schema("Announcements", announcement_text)
   end
 
   def build_sections_schema(content_item)

@@ -4,9 +4,6 @@ RSpec.describe CoronavirusLandingPagePresenter do
     presenter = described_class.new(coronavirus_landing_page_content_item)
     %i[
       header_section
-      announcements_label
-      announcements
-      see_all_announcements_link
       risk_level
       sections
       sections_heading

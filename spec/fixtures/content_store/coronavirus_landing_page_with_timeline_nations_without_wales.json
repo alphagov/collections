@@ -486,28 +486,6 @@
       "show_risk_level_section": false
     },
     "page_header": "Coronavirus (COVID&#8209;19)",
-    "announcements": [
-      {
-        "href": "/government/news/everyone-working-in-care-homes-to-be-fully-vaccinated-under-new-law-to-protect-residents",
-        "text": "Everyone working in care homes to be fully vaccinated against COVID-19",
-        "published_text": "Published 16 June 2021"
-      },
-      {
-        "href": "https://www.england.nhs.uk/2021/06/21-and-22-year-olds-to-be-offered-covid-19-jab-from-today/",
-        "text": "People aged 21 and 22 can book their first COVID-19 vaccine (NHS England website)",
-        "published_text": "Published 16 June 2021"
-      },
-      {
-        "href": "/government/speeches/pm-statement-at-coronavirus-press-conference-14-june-2021",
-        "text": "Prime Minister's statement at coronavirus press conference on 14 June 2021",
-        "published_text": "Published 14 June 2021"
-      },
-      {
-        "href": "/government/news/confirmed-cases-of-covid-19-variants-identified-in-uk",
-        "text": "Public Health England (PHE) releases updates on the number of confirmed new cases of variants",
-        "published_text": "Published 11 June 2021"
-      }
-    ],
     "notifications": {
       "intro": "Stay up to date with GOV.UK",
       "email_url": "/email-signup?topic=/coronavirus-taxon",
@@ -548,7 +526,6 @@
       "title": "Coronavirus restrictions remain in place across the country, including for people who have been vaccinated. In England:"
     },
     "sections_heading": "Guidance and support",
-    "announcements_label": "Announcements",
     "hidden_search_terms": [
       "The rules and roadmap",
       "Find out what the rules are",
@@ -608,10 +585,6 @@
       "In Northern Ireland",
       "You can now socialise indoors in a group of up to 6 people from no more than 2 households, including for overnight stays. Up to 15 people from no more than 3 households can meet in a private garden. Shops, hairdressers and visitor attractions can reopen as well as indoor areas of pubs and restaurants. Read the guidance on current restrictions on nidirect."
     ],
-    "see_all_announcements_link": {
-      "href": "/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&content_purpose_supergroup%5B%5D=news_and_communications&order=updated-newest",
-      "text": "See all announcements"
-    },
     "additional_country_guidance": {
       "text": "See specific guidance for",
       "intro": "See [all coronavirus guidance on GOV.UK](/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&content_purpose_supergroup%5B%5D=guidance_and_regulation&order=updated-newest)\n",
