@@ -6,7 +6,7 @@
    header_wrapper_classes << "govuk-!-margin-bottom-#{margin_bottom}" if !margin_bottom.zero?
 
    column_classes = %w()
-   column_classes << two_thirds ? "govuk-grid-column-two-thirds" : "govuk-grid-column-full"
+   column_classes << (two_thirds ? "govuk-grid-column-two-thirds" : "govuk-grid-column-full")
 %>
 
 <div class="<%= header_wrapper_classes.join(' ') %>">
