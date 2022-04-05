@@ -14,20 +14,14 @@
   <%= render "shared/topic_page_breadcrumbs" %>
 <% end %>
 
-<div class="topic-page__header-wrapper">
-  <div class="govuk-width-container">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-        <h1 class="topic-page__heading govuk-heading-xl">
-          <%= t("browse.title") %>
-        </h1>
-        <p class="topic-page__description gem-c-lead-paragraph gem-c-lead-paragraph--inverse">
-          <%= t("browse.description") %>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+<%= render "shared/topic_page_header" do %>
+  <h1 class="topic-page__heading govuk-heading-xl">
+    <%= t("browse.title") %>
+  </h1>
+  <p class="topic-page__description gem-c-lead-paragraph gem-c-lead-paragraph--inverse">
+    <%= t("browse.description") %>
+  </p>  
+<% end %>
 
 <div class="govuk-width-container">
   <div class="govuk-grid-row">
