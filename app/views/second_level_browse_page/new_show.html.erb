@@ -12,28 +12,7 @@
 <% end %>
 
 <% content_for :breadcrumbs do %>
-  <div class="topic-page__breadcrumb-wrapper">
-    <div class="govuk-width-container">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-          <%= render "govuk_publishing_components/components/breadcrumbs", {
-            breadcrumbs: [
-              {
-                title: "Home",
-                url: "/"
-              },
-              {
-                title: page.active_top_level_browse_page.title,
-                url: page.active_top_level_browse_page.base_path
-              }
-            ],
-            collapse_on_mobile: true,
-            inverse: true,
-          } %>
-        </div>
-      </div>
-    </div>
-  </div>
+  <%= render "shared/topic_page_breadcrumbs" %>
 <% end %>
 
 <div class="topic-page__header-wrapper govuk-!-margin-bottom-7">
