@@ -8,21 +8,14 @@ class CoronavirusLandingPagePresenter
     topic_section
     notifications
     page_header
-    timeline
   ].freeze
 
-  UK_NATIONS = %w[england northern_ireland scotland wales].freeze
-
-  attr_reader :selected_nation
-
-  def initialize(content_item, selected_nation = nil)
+  def initialize(content_item)
     COMPONENTS.each do |component|
       define_singleton_method component do
         content_item["details"][component]
       end
     end
-
-    @selected_nation = UK_NATIONS.include?(selected_nation) ? selected_nation : "england"
   end
 
   def faq_schema(content_item)
@@ -33,28 +26,6 @@ class CoronavirusLandingPagePresenter
       "description": content_item["description"],
       "mainEntity": build_sections_schema(content_item),
     }
-  end
-
-  def timeline_nations_items
-    UK_NATIONS.map do |value|
-      {
-        value: value,
-        text: value.titleize,
-        checked: selected_nation == value,
-        data_attributes: {
-          module: "gem-track-click",
-          track_category: "pageElementInteraction",
-          track_action: "TimelineNation",
-          track_label: value.titleize,
-        },
-      }
-    end
-  end
-
-  def timelines_for_nation
-    UK_NATIONS.map do |nation|
-      [nation, timeline_for_nation(nation)]
-    end
   end
 
 private
@@ -78,35 +49,5 @@ private
       question_and_answers.push question_and_answer_schema(question, answers_text)
     end
     question_and_answers
-  end
-
-  def timeline_for_nation(nation)
-    entries = timeline["list"].select { |item| item["national_applicability"].include?(nation) }
-
-    entries.map do |entry|
-      entry.merge!("tags" => timeline_nation_tags(entry["national_applicability"]))
-    end
-  end
-
-  def timeline_nation_tags(national_applicability)
-    # this text is inserted to make the tags more accessible, trailing spaces are deliberate
-    leading_text = ", this guidance applies to "
-    leading_text_uk_wide = ", this guidance applies "
-
-    tag_classes = "govuk-tag govuk-tag--blue covid-timeline__tag"
-
-    if uk_wide?(national_applicability)
-      "<span class='govuk-visually-hidden'>#{leading_text_uk_wide}</span><strong class='#{tag_classes}'>UK wide</strong>".html_safe
-    else
-      nation_tags = national_applicability.map do |nation|
-        "<strong class='#{tag_classes}'>#{nation.titleize}</strong>"
-      end
-
-      nation_tags.join(" <span class='govuk-visually-hidden'>and</span> ").prepend("<span class='govuk-visually-hidden'>#{leading_text}</span>").html_safe
-    end
-  end
-
-  def uk_wide?(national_applicability)
-    UK_NATIONS.sort == national_applicability.uniq.sort
   end
 end

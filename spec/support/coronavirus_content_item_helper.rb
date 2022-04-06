@@ -28,10 +28,6 @@ module CoronavirusContentItemHelper
     content_item
   end
 
-  def coronavirus_content_item_with_timeline_national_applicability_without_wales
-    load_content_item("coronavirus_landing_page_with_timeline_nations_without_wales.json")
-  end
-
   def random_taxon_page
     GovukSchemas::RandomExample.for_schema(frontend_schema: "taxon") do |item|
       yield(item) if block_given?
