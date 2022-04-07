@@ -406,7 +406,7 @@ ro:
       special_health_authority:
       sub_organisation:
       tribunal: Tribunal
-    what_we_do: Ce face %{title}
+    what_we_do:
     works_with_statement:
       few:
       other: Lucrează cu %{works_with_count} agenții și organisme publice

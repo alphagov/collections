@@ -344,7 +344,7 @@ da:
       special_health_authority:
       sub_organisation:
       tribunal: Tribunal
-    what_we_do: Hvad %{title} gør
+    what_we_do:
     works_with_statement:
       other: Arbejder med %{works_with_count} agenturer og offentlige organer
       one: Arbejder med det offentlige organ %{works_with_count}

@@ -330,7 +330,7 @@ ka:
       special_health_authority:
       sub_organisation:
       tribunal: ტრიბუნალი
-    what_we_do: რას აკეთებს %{title}
+    what_we_do:
     works_with_statement:
       other: მუშაობს %{works_with_count} სააგენტოებთან და საჯარო ორგანოებთან
       one: მუშაობს %{works_with_count} საჯარო ორგანოსთან

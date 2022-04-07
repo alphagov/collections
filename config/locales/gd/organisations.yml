@@ -480,7 +480,7 @@ gd:
       special_health_authority:
       sub_organisation:
       tribunal: Cúirt
-    what_we_do: Cad atá á dhéanamh ag %{title}
+    what_we_do:
     works_with_statement:
       two:
       few:

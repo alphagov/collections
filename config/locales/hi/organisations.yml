@@ -330,7 +330,7 @@ hi:
       special_health_authority:
       sub_organisation:
       tribunal: न्यायाधिकरण
-    what_we_do: "%{title} क्या करता है"
+    what_we_do:
     works_with_statement:
       other: "%{works_with_count} एजेंसियों और सार्वजनिक निकायों के साथ काम करता है"
       one: "%{works_with_count} सार्वजनिक निकाय के साथ काम करता है"

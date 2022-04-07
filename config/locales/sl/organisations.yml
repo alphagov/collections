@@ -480,7 +480,7 @@ sl:
       special_health_authority:
       sub_organisation:
       tribunal: Sodišče
-    what_we_do: Kaj počne %{title}
+    what_we_do:
     works_with_statement:
       two:
       few:

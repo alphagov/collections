@@ -406,7 +406,7 @@ lt:
       special_health_authority:
       sub_organisation:
       tribunal: Tribunolas
-    what_we_do: Kuo užsiima %{title}
+    what_we_do:
     works_with_statement:
       few:
       other: Dirba su %{works_with_count} agentūromis ir viešosiomis įstaigomis

@@ -332,7 +332,7 @@ uz:
       special_health_authority:
       sub_organisation:
       tribunal: Трибунал
-    what_we_do: Нима %{title} қилмоқда
+    what_we_do:
     works_with_statement:
       other: Агентликлар ва давлат органлари %{works_with_count} билан ишлайди
       one: Давлат органлари %{works_with_count} билан ишлайди

@@ -258,6 +258,6 @@ ja:
       special_health_authority:
       sub_organisation:
       tribunal: 審判所
-    what_we_do: "%{title}が行うこと"
+    what_we_do:
     works_with_statement:
       other: "%{works_with_count}機関および公共団体と連携"

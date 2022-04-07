@@ -330,7 +330,7 @@ sq:
       special_health_authority:
       sub_organisation:
       tribunal: Tribunali
-    what_we_do: Çfarë %{title} bën
+    what_we_do:
     works_with_statement:
       other: Punon me %{works_with_count} agjensitë dhe organe publike
       one: Punon me %{works_with_count} organ publik

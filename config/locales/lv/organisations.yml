@@ -332,7 +332,7 @@ lv:
       special_health_authority:
       sub_organisation:
       tribunal: Šķīrējtiesa
-    what_we_do: Ko dara %{title}
+    what_we_do:
     works_with_statement:
       other: Sadarbojas ar %{works_with_count} aģentūrām un sabiedriskajām organizācijām
       one: Sadarbojas ar %{works_with_count} sabiedrisko iestādi
