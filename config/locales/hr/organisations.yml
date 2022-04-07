@@ -478,7 +478,7 @@ hr:
       special_health_authority:
       sub_organisation:
       tribunal: Sud
-    what_we_do: 'Što %{title} radi '
+    what_we_do:
     works_with_statement:
       many:
       few:

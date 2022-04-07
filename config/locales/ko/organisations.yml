@@ -258,6 +258,6 @@ ko:
       special_health_authority:
       sub_organisation:
       tribunal: 법원
-    what_we_do: "%{title}이(가) 하는 일"
+    what_we_do:
     works_with_statement:
       other: 에이전시 및 공공 기관 %{works_with_count}곳과 협업하기

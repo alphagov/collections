@@ -258,6 +258,6 @@ th:
       special_health_authority:
       sub_organisation:
       tribunal: ทางศาล
-    what_we_do: "%{title} ทำอะไร"
+    what_we_do:
     works_with_statement:
       other: ทำงานร่วมกับหน่วยงานและหน่วยงานราชการ %{works_with_count} แห่ง

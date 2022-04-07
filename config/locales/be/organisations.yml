@@ -480,7 +480,7 @@ be:
       special_health_authority:
       sub_organisation:
       tribunal: Трыбунал
-    what_we_do: Што %{title} робiць
+    what_we_do:
     works_with_statement:
       many:
       few:

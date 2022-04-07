@@ -258,6 +258,6 @@ ms:
       special_health_authority:
       sub_organisation:
       tribunal: Tribunal
-    what_we_do: Apakah yang %{title} lakukan
+    what_we_do:
     works_with_statement:
       other: Bekerjasama dengan %{works_with_count} agensi dan badan awam

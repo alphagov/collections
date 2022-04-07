@@ -480,7 +480,7 @@ pl:
       special_health_authority:
       sub_organisation:
       tribunal: Trybunał
-    what_we_do: Co robi %{title}
+    what_we_do:
     works_with_statement:
       many:
       few:

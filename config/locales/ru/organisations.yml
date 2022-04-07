@@ -478,7 +478,7 @@ ru:
       special_health_authority:
       sub_organisation:
       tribunal: Арбитраж
-    what_we_do: Что %{title}
+    what_we_do:
     works_with_statement:
       many:
       few:

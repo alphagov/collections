@@ -334,7 +334,7 @@ pa-pk:
       special_health_authority:
       sub_organisation:
       tribunal: عدالت
-    what_we_do: کیہ {title}% ہویا
+    what_we_do:
     works_with_statement:
       other: دے نال کم کر دے نیں {works_with_count}% ایجنسیاں تے عوامی ادارے
       one: کم کر دے نیں {works_with_count}%  عوامی ادارے نال

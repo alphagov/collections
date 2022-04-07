@@ -258,6 +258,6 @@ vi:
       special_health_authority:
       sub_organisation:
       tribunal: Tòa án
-    what_we_do: Nhiệm vụ của %{title}
+    what_we_do:
     works_with_statement:
       other: Làm việc với %{works_with_count} cơ quan và cơ quan công quyền

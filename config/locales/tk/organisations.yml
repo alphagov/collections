@@ -332,7 +332,7 @@ tk:
       special_health_authority:
       sub_organisation:
       tribunal: Kazyýet
-    what_we_do: "%{title} näme edýär"
+    what_we_do:
     works_with_statement:
       other: "%{works_with_count} agentlikler we jemgyýetçilik guramalary bilen işleşýär"
       one: "%{works_with_count} jemgyýetçilik bölümleri bilen işleşýär"

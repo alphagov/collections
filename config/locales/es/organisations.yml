@@ -330,7 +330,7 @@ es:
       special_health_authority:
       sub_organisation:
       tribunal: Tribunal
-    what_we_do: "¿Qué hace %{title}"
+    what_we_do:
     works_with_statement:
       other: Funciona con agencias y organismos públicos de %{works_with_count}
       one: Funciona con el cuerpo público %{works_with_count}
