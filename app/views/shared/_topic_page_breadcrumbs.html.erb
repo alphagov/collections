@@ -9,7 +9,9 @@
   <div class="govuk-width-container">
     <div class="govuk-grid-row">
       <div class="<%= column_classes.join(' ') %>">
-        <%= render "application/breadcrumbs" %>
+        <%= render "application/breadcrumbs", {
+          inverse: true
+        } %>
       </div>
     </div>
   </div>
