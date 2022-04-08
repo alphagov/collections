@@ -4,7 +4,8 @@
 <% content_for :meta_tags do %>
   <%= render "govuk_publishing_components/components/meta_tags", {
     content_item: {
-      navigation_page_type: "Second Level Browse",
+      navigation_page_type: "Browse level 2",
+      navigation_list_type: page.lists.curated? ? "curated" : "default",
       section: meta_section,
     }
   } %>
