@@ -5,31 +5,24 @@
 %>
 
 <ul class="govuk-list">
-  <li class="covid__topic-list-item">
-    <a class="covid__topic-list-link govuk-link" data-module="gem-track-click" data-track-category="pageElementInteraction" data-track-action="CoronavirusInformation" data-track-label="/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&amp;content_purpose_supergroup%5B%5D=guidance_and_regulation&amp;order=updated-newest" href="/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&amp;content_purpose_supergroup%5B%5D=guidance_and_regulation&amp;order=updated-newest">Guidance and regulation about COVID-19</a>
-  </li>
-  <li class="covid__topic-list-item">
-    <a class="covid__topic-list-link govuk-link" data-module="gem-track-click" data-track-category="pageElementInteraction" data-track-action="CoronavirusInformation" data-track-label="/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&amp;content_purpose_supergroup%5B%5D=news_and_communications&amp;order=updated-newest" href="/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&amp;content_purpose_supergroup%5B%5D=news_and_communications&amp;order=updated-newest">News and communications about COVID-19</a>
-  </li>
-  <li class="covid__topic-list-item">
-    <a class="covid__topic-list-link govuk-link" data-module="gem-track-click" data-track-category="pageElementInteraction" data-track-action="CoronavirusInformation" data-track-label="/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&amp;content_purpose_supergroup%5B%5D=research_and_statistics&amp;order=updated-newest" href="/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&amp;content_purpose_supergroup%5B%5D=research_and_statistics&amp;order=updated-newest">Research and statistics about COVID-19</a>
-  </li>
-  <li class="covid__topic-list-item">
-    <a class="covid__topic-list-link govuk-link" data-module="gem-track-click" data-track-category="pageElementInteraction" data-track-action="CoronavirusInformation" data-track-label="/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&amp;content_purpose_supergroup%5B%5D=policy_and_engagement&amp;order=updated-newest" href="/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&amp;content_purpose_supergroup%5B%5D=policy_and_engagement&amp;order=updated-newest">Policy papers and consultations about COVID-19</a>
-  </li>
-  <li class="covid__topic-list-item">
-    <a class="covid__topic-list-link govuk-link" data-module="gem-track-click" data-track-category="pageElementInteraction" data-track-action="CoronavirusInformation" data-track-label="/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&amp;content_purpose_supergroup%5B%5D=transparency&amp;order=updated-newest" href="/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&amp;content_purpose_supergroup%5B%5D=transparency&amp;order=updated-newest">Transparency and freedom of information releases about COVID-19</a>
-  </li>
-  <li class="covid__topic-list-item">
-    <a class="covid__topic-list-link govuk-link" data-module="gem-track-click" data-track-category="pageElementInteraction" data-track-action="CoronavirusInformation" data-track-label="https://coronavirus.data.gov.uk/" href="https://coronavirus.data.gov.uk/">Summary of COVID-19 testing, cases and vaccinations</a>
-  </li>
-  <li class="covid__topic-list-item">
-    <a class="covid__topic-list-link govuk-link" data-module="gem-track-click" data-track-category="pageElementInteraction" data-track-action="CoronavirusInformation" data-track-label="https://www.legislation.gov.uk/coronavirus" href="https://www.legislation.gov.uk/coronavirus">COVID-19 legislation on legislation.gov.uk</a>
-  </li>
-  <li class="covid__topic-list-item">
-    <a class="covid__topic-list-link govuk-link" data-module="gem-track-click" data-track-category="pageElementInteraction" data-track-action="CoronavirusInformation" data-track-label="https://www.youtube.com/user/Number10gov/videos" href="https://www.youtube.com/user/Number10gov/videos">COVID-19 press conferences on YouTube</a>
-  </li>
-  <li class="covid__topic-list-item">
-    <a class="covid__topic-list-link govuk-link" data-module="gem-track-click" data-track-category="pageElementInteraction" data-track-action="CoronavirusInformation" data-track-label="/government/collections/slides-and-datasets-to-accompany-coronavirus-press-conferences" href="/government/collections/slides-and-datasets-to-accompany-coronavirus-press-conferences">Slides, datasets and transcripts from press conferences</a>
-  </li>
+  <% topic_section[:links].each do | link | %>
+    <li class="covid__topic-list-item">
+      <%
+        data = if tracking
+          {
+            module: "gem-track-click",
+            track_category: tracking_category,
+            track_action: tracking_action,
+            track_label: link[:url],
+          }
+        end
+      %>
+      <%= link_to(
+        link[:label].html_safe,
+        link[:url],
+        class: 'covid__topic-list-link govuk-link',
+        data: data,
+      ) %>
+    </li>
+  <% end %>
 </ul>

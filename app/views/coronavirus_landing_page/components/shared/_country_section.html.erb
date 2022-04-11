@@ -1,4 +1,4 @@
-<% guidance ||= nil %>
+<% intro = "See [all COVID-19 guidance on GOV.UK](/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&content_purpose_supergroup%5B%5D=guidance_and_regulation&order=updated-newest)" %>
 
 <div
   class="govuk-body"
@@ -7,7 +7,5 @@
   data-track-action="AccordionClick"
   data-track-links-only>
 
-  <% if guidance.present? && guidance["intro"].present? %>
-    <%= render_govspeak(guidance["intro"]) %>
-  <% end %>
+  <%= render_govspeak(intro) %>
 </div>

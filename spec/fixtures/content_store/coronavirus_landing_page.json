@@ -293,47 +293,6 @@
           }
         ]
       }
-    ],
-    "country_section": {
-      "header": "If you live in Scotland, Wales or Northern Ireland",
-      "text": "Additional guidance is available",
-      "links": [
-        {
-          "label": "Scotland",
-          "url": "https://www.gov.scot/coronavirus-covid-19/"
-        },
-        {
-          "label": "Wales",
-          "url": "https://gov.wales/coronavirus"
-        },
-        {
-          "label": "Northern Ireland",
-          "url": "https://www.nidirect.gov.uk/campaigns/coronavirus-covid-19"
-        }
-      ]
-    },
-    "topic_section": {
-      "header": "All coronavirus information on GOV.UK",
-      "links": [
-        {
-          "label": "Guidance",
-          "url": "/search/all?topical_events%5B%5D=coronavirus-covid-19-uk-government-response&order=updated-newest"
-        },
-        {
-          "label": "News",
-          "url": "/search/news-and-communications?topical_events%5B%5D=coronavirus-covid-19-uk-government-response"
-        }
-      ]
-    },
-    "special_announcement_schema": {
-      "category": "https://www.wikidata.org/wiki/Q81068910",
-      "disease_prevention_info_url": "https://www.gov.uk/coronavirus",
-      "disease_spread_statistics_url": "https://www.gov.uk//government/publications/covid-19-track-coronavirus-cases",
-      "news_updates_and_guidelines_url": "https://www.gov.uk/coronavirus",
-      "public_transport_closures_info_url": "https://www.gov.uk/guidance/coronavirus-covid-19-uk-transport-and-travel-advice",
-      "quarantine_guidelines_url": "https://www.gov.uk/government/publications/coronavirus-outbreak-faqs-what-you-can-and-cant-do/coronavirus-outbreak-faqs-what-you-can-and-cant-do",
-      "school_closures_info_url": "https://www.gov.uk/check-school-closure",
-      "travel_bans_url": "https://www.gov.uk/guidance/travel-advice-novel-coronavirus"
-    }
+    ]
   }
 }

@@ -1,4 +1,5 @@
 <%= render partial: "coronavirus_landing_page/components/shared/meta_tags", locals: {
+  metadata: details.metadata,
   corona_opengraph_images: true
 } %>
 
@@ -10,7 +11,7 @@
 <%= render partial: 'coronavirus_landing_page/components/landing_page/page_header', locals: {
   details: details,
   breadcrumbs: breadcrumbs,
-  title: title,
+  title: details.title,
   header: details.header_section
 } %>
 
@@ -19,7 +20,7 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-third">
         <%= render "govuk_publishing_components/components/heading", {
-          text: details.sections_heading,
+          text: "Guidance and support",
           margin_bottom: 3,
           font_size: "m"
         } %>
@@ -30,7 +31,7 @@
         <%= render partial: 'coronavirus_landing_page/components/shared/accordion_sections', locals: {
           accordions: details.sections
         } %>
-        <%= render partial: 'coronavirus_landing_page/components/shared/country_section', locals: { guidance: details.additional_country_guidance } %>
+        <%= render partial: 'coronavirus_landing_page/components/shared/country_section' %>
       </div>
     </div>
   </section>
@@ -57,9 +58,9 @@
 
   <%= content_tag :section, class: "covid__topic-wrapper" do
     render 'govuk_publishing_components/components/signup_link', {
-      link_text: details.notifications["email_link"],
-      link_href: details.notifications["email_url"],
-      heading: details.notifications["intro"],
+      link_text:  "Sign up to get emails when we change any coronavirus information on the GOV.UK website",
+      link_href: "/email-signup?topic=/coronavirus-taxon",
+      heading: "Stay up to date with GOV.UK",
       data: {
         "module": "gem-track-click",
         "track-category": "emailAlertLinkClicked",
@@ -67,5 +68,5 @@
       },
       background: true
     }
-  end if details.notifications %>
+  end %>
 </div>

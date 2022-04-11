@@ -67,8 +67,8 @@ module CoronavirusLandingPageSteps
   end
 
   def and_i_can_see_links_to_search
-    expect(page).to have_link("News", href: "/search/news-and-communications?topical_events%5B%5D=coronavirus-covid-19-uk-government-response")
-    expect(page).to have_link("Guidance", href: "/search/all?topical_events%5B%5D=coronavirus-covid-19-uk-government-response&order=updated-newest")
+    expect(page).to have_link("News and communications about COVID-19", href: "/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&content_purpose_supergroup%5B%5D=news_and_communications&order=updated-newest")
+    expect(page).to have_link("Guidance and regulation about COVID-19", href: "/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&content_purpose_supergroup%5B%5D=guidance_and_regulation&order=updated-newest")
   end
 
   def and_i_can_see_business_links_to_search
@@ -81,11 +81,11 @@ module CoronavirusLandingPageSteps
     expect(special_announcement_schema["name"]).to eq("Coronavirus (COVID-19): what you need to do")
     expect(special_announcement_schema["diseasePreventionInfo"]).to eq("https://www.gov.uk/coronavirus")
     # proves that the schema handles non-existent properties OK
-    expect(special_announcement_schema["gettingTestedInfo"]).to be nil
+    expect(special_announcement_schema["thisKeyDoesNotExist"]).to be nil
   end
 
   def and_there_are_metatags
-    expect(page).to have_selector("meta[name='description'][content='Find out about the government response to coronavirus (COVID-19) and what you need to do.']", visible: false)
+    expect(page).to have_selector("meta[name='description'][content='Find information on coronavirus, including guidance and support.']", visible: false)
     expect(page).to have_selector("link[rel='canonical'][href='http://www.example.com/coronavirus']", visible: false)
   end
 
