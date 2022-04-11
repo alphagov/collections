@@ -4,20 +4,20 @@
   more_on_this_topic_contents = []
 %>
 
-<% page.lists.each_with_index do |section, section_index| %>
+<% page.lists.each_with_index do |list, list_index| %>
 
   <% contents = capture do %>
     <%# Add a heading above the A-Z the list. Add it here so that we can extract the heading text %>
     <% if !curated_order %>
       <%= render "govuk_publishing_components/components/heading", {
-       text: section["title"],
+       text: list["title"],
        font_size: "m",
        margin_bottom: 7,
       }
      %>
     <% end %>
     <%# Render the contents as a list, regardless of whether they'll be in an accordion or as an A-Z list %>
-    <%= render partial: 'new_links', locals: { section: section.contents } %>
+    <%= render partial: 'new_links', locals: { list: list.contents, list_index: list_index } %>
   <% end %>
 
   <%# Generate accordion shaped markup %>
@@ -25,7 +25,7 @@
     <%
       additional_contents = {
         heading: {
-          text: section["title"],
+          text: list["title"],
         },
         content: {
           html: contents,
