@@ -5,7 +5,6 @@ class CoronavirusLandingPagePresenter
     sections
     sections_heading
     additional_country_guidance
-    notifications
     page_header
   ].freeze
 
