@@ -47,16 +47,16 @@
             related_topic.title,
             related_topic.base_path,
             class: "govuk-link",
-            data_attributes: {
-              track_category: 'browseClicked',
-              track_action: "contentLink",
+            data: {
+              track_category: "browseClicked",
+              track_action: "moreLink",
               track_label: related_topic.base_path,
               track_options: {
-                dimension114: 'value',
-                dimension28: 'value',
+                dimension28: page.related_topics.count.to_s,
                 dimension29: related_topic.title,
+                dimension114: (page.lists.count + 1).to_s + ".#{index + 1}",    
               },
-            }
+            },
           ) %>
         </li>
       <% end %>
