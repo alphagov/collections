@@ -8,7 +8,6 @@ RSpec.describe CoronavirusLandingPagePresenter do
       sections
       sections_heading
       additional_country_guidance
-      topic_section
       notifications
       page_header
     ].each do |method|
