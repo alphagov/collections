@@ -1,0 +1,18 @@
+<%
+  column_two_thirds ||= false
+
+  column_classes = %w()
+  column_classes << (column_two_thirds ? "govuk-grid-column-full" : "govuk-grid-column-two-thirds")
+%>
+
+<div class="topic-page__breadcrumb-wrapper">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="<%= column_classes.join(' ') %>">
+        <%= render "application/breadcrumbs", {
+          inverse: true
+        } %>
+      </div>
+    </div>
+  </div>
+</div>

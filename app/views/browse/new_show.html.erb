@@ -13,65 +13,40 @@
 <% end %>
 
 <% content_for :breadcrumbs do %>
-  <div class="topic-page__breadcrumb-wrapper">
-    <div class="govuk-width-container">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-          <%= render "govuk_publishing_components/components/breadcrumbs", {
-            breadcrumbs: [
-              {
-                title: "Home",
-                url: "/"
-              },
-            ],
-            collapse_on_mobile: true,
-            inverse: true,
-          } %>
-        </div>
-      </div>
-    </div>
-  </div>
+  <%= render "shared/topic_page_breadcrumbs", {
+    column_two_thirds: true
+  } %>
 <% end %>
 
-<div class="topic-page__header-wrapper">
-  <div class="govuk-width-container">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-        <h1 class="topic-page__heading govuk-heading-xl">
-          <%= page.title %>
-        </h1>
-        <p class="gem-c-lead-paragraph gem-c-lead-paragraph--inverse govuk-!-margin-bottom-2">
-          <%= page.description %>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+<%= render "shared/topic_page_header" do %>
+  <h1 class="topic-page__heading govuk-heading-xl">
+    <%= page.title %>
+  </h1>
+  <p class="gem-c-lead-paragraph gem-c-lead-paragraph--inverse govuk-!-margin-bottom-2">
+    <%= page.description %>
+  </p>
+<% end %>
 
-<div class="govuk-width-container">
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full govuk-!-padding-top-9" data-module="gem-track-click">
-      <%= render "govuk_publishing_components/components/cards", {
-        items: page.second_level_browse_pages.map.with_index do |second_level_browse_page, index|
-          {
-            link: {
-              text: second_level_browse_page.title,
-              path: second_level_browse_page.base_path,
-              data_attributes: {
-                track_category: 'browseClicked',
-                track_action: "topicsLink",
-                track_label: second_level_browse_page.base_path,
-                track_dimension: second_level_browse_page.title,
-                track_options: {
-                  dimension28: index + 1,
-                  dimension29: second_level_browse_page.title,
-                },
-              }
+<%= render "shared/topic_page_cards_container" do %>
+  <%= render "govuk_publishing_components/components/cards", {
+    items: page.second_level_browse_pages.map.with_index do |second_level_browse_page, index|
+      {
+        link: {
+          text: second_level_browse_page.title,
+          path: second_level_browse_page.base_path,
+          data_attributes: {
+            track_category: 'browseClicked',
+            track_action: "topicsLink",
+            track_label: second_level_browse_page.base_path,
+            track_dimension: second_level_browse_page.title,
+            track_options: {
+              dimension28: index + 1,
+              dimension29: second_level_browse_page.title,
             },
-            description: second_level_browse_page.description,
           }
-        end
-      } %>
-    </div>
-  </div>
-</div>
+        },
+        description: second_level_browse_page.description,
+      }
+    end
+  } %>
+<% end %>
