@@ -7,7 +7,7 @@
     content_item: {
       navigation_page_type: "Browse level 1",
       navigation_list_type: page.second_level_pages_curated? ? "curated" : "default",
-      section: "new_browse_page",
+      section: yield(:title).downcase.sub!('browse: ', ''),
     }
   } %>
 <% end %>
@@ -35,13 +35,14 @@
           text: second_level_browse_page.title,
           path: second_level_browse_page.base_path,
           data_attributes: {
-            track_category: 'browseClicked',
+            track_category: "browseClicked",
             track_action: "topicsLink",
             track_label: second_level_browse_page.base_path,
             track_dimension: second_level_browse_page.title,
             track_options: {
-              dimension28: index + 1,
+              dimension28: page.second_level_browse_pages.count.to_s,
               dimension29: second_level_browse_page.title,
+              dimension114: index + 1,
             },
           }
         },

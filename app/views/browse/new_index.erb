@@ -5,7 +5,7 @@
     content_item: {
       navigation_page_type: "Browse level 0",
       navigation_list_type: "default",
-      section: "new_browse_page",
+      section: "topics",
     }
   } %>
 <% end %>
@@ -25,20 +25,22 @@
 
 <%= render "shared/topic_page_cards_container" do %>
   <%= render "govuk_publishing_components/components/cards", {
-    items: page.top_level_browse_pages.map do |top_level_browse_page|
+    items: page.top_level_browse_pages.map.with_index do |top_level_browse_page, index|
       {
         link: {
           text: top_level_browse_page.title,
           path: top_level_browse_page.base_path,
           data_attributes: {
-            track_category: 'browseClicked',
+            track_category: "browseClicked",
             track_action: "topicsLink",
             track_label: top_level_browse_page.base_path,
             track_dimension: top_level_browse_page.title,
             track_options: {
+              dimension28: page.top_level_browse_pages.count.to_s,
               dimension29: top_level_browse_page.title,
+              dimension114: index + 1,
             },
-          }
+          },
         },
         description: top_level_browse_page.description,
       }
