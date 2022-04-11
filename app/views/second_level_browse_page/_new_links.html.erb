@@ -16,10 +16,14 @@
         list_item.title,
         "#",
         class: "govuk-link",
-        "data-track-category": 'browseClicked',
-        "data-track-action": "contentLink",
-        "data-track-label": list_item.base_path,
-        "data-track-options": list_tracking_values,
+        data: {
+          "track-category": 'browseClicked',
+          "track-action": "contentLink",
+          "track-label": list_item.base_path,
+          "track-options": list_tracking_values,
+        }.merge(track_count ? {
+          "track-count": "contentLink"
+        } : {})
       ) %>
     </li>
   <% end %>

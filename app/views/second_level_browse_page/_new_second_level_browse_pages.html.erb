@@ -17,7 +17,7 @@
      %>
     <% end %>
     <%# Render the contents as a list, regardless of whether they'll be in an accordion or as an A-Z list %>
-    <%= render partial: 'new_links', locals: { section: section.contents } %>
+    <%= render partial: 'new_links', locals: { section: section.contents, track_count: curated_order } %>
   <% end %>
 
   <%# Generate accordion shaped markup %>
@@ -48,8 +48,8 @@
             related_topic.base_path,
             class: "govuk-link",
             data_attributes: {
+              track_count: "contentLink",
               track_category: 'browseClicked',
-              track_action: "contentLink",
               track_label: related_topic.base_path,
               track_options: {
                 dimension114: 'value',
