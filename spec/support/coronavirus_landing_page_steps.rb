@@ -85,7 +85,7 @@ module CoronavirusLandingPageSteps
   end
 
   def and_there_are_metatags
-    expect(page).to have_selector("meta[name='description'][content='Find out about the government response to coronavirus (COVID-19) and what you need to do.']", visible: false)
+    expect(page).to have_selector("meta[name='description'][content='Find information on coronavirus, including guidance and support.']", visible: false)
     expect(page).to have_selector("link[rel='canonical'][href='http://www.example.com/coronavirus']", visible: false)
   end
 

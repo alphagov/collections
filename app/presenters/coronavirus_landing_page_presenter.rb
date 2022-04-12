@@ -27,6 +27,13 @@ class CoronavirusLandingPagePresenter
     "Coronavirus (COVID-19)"
   end
 
+  def metadata
+    {
+      title: "Coronavirus (COVID-19): guidance and support",
+      description: "Find information on coronavirus, including guidance and support.",
+    }
+  end
+
   def additional_country_guidance
     { links: [
       {
