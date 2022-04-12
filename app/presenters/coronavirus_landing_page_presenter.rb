@@ -3,7 +3,6 @@ class CoronavirusLandingPagePresenter
     header_section
     risk_level
     sections
-    sections_heading
     page_header
   ].freeze
 
