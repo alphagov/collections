@@ -6,7 +6,6 @@ RSpec.describe CoronavirusLandingPagePresenter do
       header_section
       risk_level
       sections
-      page_header
     ].each do |method|
       expect(presenter).to respond_to(method)
     end

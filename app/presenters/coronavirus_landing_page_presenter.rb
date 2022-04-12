@@ -3,7 +3,6 @@ class CoronavirusLandingPagePresenter
     header_section
     risk_level
     sections
-    page_header
   ].freeze
 
   def initialize(content_item)
@@ -22,6 +21,10 @@ class CoronavirusLandingPagePresenter
       "description": content_item["description"],
       "mainEntity": build_sections_schema(content_item),
     }
+  end
+
+  def title
+    "Coronavirus (COVID-19)"
   end
 
   def additional_country_guidance
