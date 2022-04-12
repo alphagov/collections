@@ -312,11 +312,6 @@
         }
       ]
     },
-    "notifications": {
-      "intro": "Stay up to date with GOV.UK",
-      "email_link": "Sign up to get emails when we change any coronavirus information on the GOV.UK website",
-      "email_url": "/email-signup?topic=/coronavirus-taxon"
-    },
     "special_announcement_schema": {
       "category": "https://www.wikidata.org/wiki/Q81068910",
       "disease_prevention_info_url": "https://www.gov.uk/coronavirus",

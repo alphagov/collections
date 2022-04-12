@@ -57,9 +57,9 @@
 
   <%= content_tag :section, class: "covid__topic-wrapper" do
     render 'govuk_publishing_components/components/signup_link', {
-      link_text: details.notifications["email_link"],
-      link_href: details.notifications["email_url"],
-      heading: details.notifications["intro"],
+      link_text:  "Sign up to get emails when we change any coronavirus information on the GOV.UK website",
+      link_href: "/email-signup?topic=/coronavirus-taxon",
+      heading: "Stay up to date with GOV.UK",
       data: {
         "module": "gem-track-click",
         "track-category": "emailAlertLinkClicked",
@@ -67,5 +67,5 @@
       },
       background: true
     }
-  end if details.notifications %>
+  end %>
 </div>
