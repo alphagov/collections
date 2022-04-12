@@ -67,8 +67,8 @@ module CoronavirusLandingPageSteps
   end
 
   def and_i_can_see_links_to_search
-    expect(page).to have_link("News", href: "/search/news-and-communications?topical_events%5B%5D=coronavirus-covid-19-uk-government-response")
-    expect(page).to have_link("Guidance", href: "/search/all?topical_events%5B%5D=coronavirus-covid-19-uk-government-response&order=updated-newest")
+    expect(page).to have_link("News and communications about COVID-19", href: "/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&content_purpose_supergroup%5B%5D=news_and_communications&order=updated-newest")
+    expect(page).to have_link("Guidance and regulation about COVID-19", href: "/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&content_purpose_supergroup%5B%5D=guidance_and_regulation&order=updated-newest")
   end
 
   def and_i_can_see_business_links_to_search
