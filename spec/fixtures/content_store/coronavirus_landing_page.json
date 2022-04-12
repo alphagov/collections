@@ -294,24 +294,6 @@
         ]
       }
     ],
-    "country_section": {
-      "header": "If you live in Scotland, Wales or Northern Ireland",
-      "text": "Additional guidance is available",
-      "links": [
-        {
-          "label": "Scotland",
-          "url": "https://www.gov.scot/coronavirus-covid-19/"
-        },
-        {
-          "label": "Wales",
-          "url": "https://gov.wales/coronavirus"
-        },
-        {
-          "label": "Northern Ireland",
-          "url": "https://www.nidirect.gov.uk/campaigns/coronavirus-covid-19"
-        }
-      ]
-    },
     "special_announcement_schema": {
       "category": "https://www.wikidata.org/wiki/Q81068910",
       "disease_prevention_info_url": "https://www.gov.uk/coronavirus",

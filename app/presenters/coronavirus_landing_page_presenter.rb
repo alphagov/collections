@@ -4,7 +4,6 @@ class CoronavirusLandingPagePresenter
     risk_level
     sections
     sections_heading
-    additional_country_guidance
     page_header
   ].freeze
 
@@ -24,6 +23,23 @@ class CoronavirusLandingPagePresenter
       "description": content_item["description"],
       "mainEntity": build_sections_schema(content_item),
     }
+  end
+
+  def additional_country_guidance
+    { links: [
+      {
+        label: "Guidance for Scotland",
+        url: "https://www.gov.scot/coronavirus-covid-19/",
+      },
+      {
+        label: "Guidance for Wales",
+        url: "https://gov.wales/coronavirus",
+      },
+      {
+        label: "Guidance for Northern Ireland",
+        url: "https://www.nidirect.gov.uk/campaigns/coronavirus-covid-19",
+      },
+    ] }
   end
 
   def topic_section

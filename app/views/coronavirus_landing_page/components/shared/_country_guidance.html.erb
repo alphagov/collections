@@ -7,10 +7,10 @@
   data-track-action="AccordionClick"
   data-track-links-only>
 
-  <% if guidance.present? && guidance["links"].present? %>
+  <% if guidance.present? && guidance[:links].present? %>
       <ul class="govuk-list">
-      <% guidance["links"].map do |link| %>
-        <li><%= link_to(link["label"], link["url"], class: "govuk-link") %></li>
+      <% guidance[:links].each do |link| %>
+        <li><%= link_to(link[:label], link[:url], class: "govuk-link") %></li>
       <% end %>
       </ul>
   <% end %>

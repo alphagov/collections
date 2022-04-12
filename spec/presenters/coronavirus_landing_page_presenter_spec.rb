@@ -7,7 +7,6 @@ RSpec.describe CoronavirusLandingPagePresenter do
       risk_level
       sections
       sections_heading
-      additional_country_guidance
       page_header
     ].each do |method|
       expect(presenter).to respond_to(method)
@@ -29,5 +28,10 @@ RSpec.describe CoronavirusLandingPagePresenter do
   it "returns topic_section links data" do
     presenter = described_class.new(coronavirus_landing_page_content_item)
     expect(presenter.topic_section[:links]).not_to be_empty
+  end
+
+  it "returns additional_country_guidance links data" do
+    presenter = described_class.new(coronavirus_landing_page_content_item)
+    expect(presenter.additional_country_guidance[:links]).not_to be_empty
   end
 end
