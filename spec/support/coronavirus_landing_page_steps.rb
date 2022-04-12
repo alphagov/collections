@@ -79,9 +79,9 @@ module CoronavirusLandingPageSteps
   def then_the_special_announcement_schema_is_rendered
     special_announcement_schema = find_schema("SpecialAnnouncement")
     expect(special_announcement_schema["name"]).to eq("Coronavirus (COVID-19): what you need to do")
-    expect(special_announcement_schema["diseasePreventionInfo"]).to eq("https://www.gov.uk/coronavirus")
+    expect(special_announcement_schema["diseasePreventionInfo"]).to eq("https://www.nhs.uk/conditions/coronavirus-covid-19/")
     # proves that the schema handles non-existent properties OK
-    expect(special_announcement_schema["gettingTestedInfo"]).to be nil
+    expect(special_announcement_schema["thisKeyDoesNotExist"]).to be nil
   end
 
   def and_there_are_metatags
