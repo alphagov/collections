@@ -5,7 +5,7 @@
 %>
 
 <ul class="govuk-list">
-  <% topic_section["links"].each do | link | %>
+  <% topic_section[:links].each do | link | %>
     <li class="covid__topic-list-item">
       <%
         data = if tracking
@@ -13,14 +13,13 @@
             module: "gem-track-click",
             track_category: tracking_category,
             track_action: tracking_action,
-            track_label: link["url"],
+            track_label: link[:url],
           }
         end
       %>
-
       <%= link_to(
-        link["label"].html_safe,
-        link["url"],
+        link[:label].html_safe,
+        link[:url],
         class: 'covid__topic-list-link govuk-link',
         data: data,
       ) %>
