@@ -22,17 +22,7 @@
 
   <%# Generate accordion shaped markup %>
   <% if curated_order %>
-    <%
-      additional_contents = {
-        heading: {
-          text: list["title"],
-        },
-        content: {
-          html: contents,
-        },
-      }
-      accordion_contents << additional_contents
-      %>
+    <% accordion_items(section_title: list["title"], section_contents: contents, accordion_contents: accordion_contents) %>
   <% end %>
 <% end %>
 
@@ -67,19 +57,8 @@
 <% if curated_order %>
   <%# For curated pages, render the markup using an accordion %>
   <% if page.related_topics.any? %>
-    <%# Insert 'More on this topic markup into the accordion' %>
-    <%
-      additional_contents = {
-        heading: {
-          # To do: Add to translations file
-          text: 'More on this topic',
-        },
-        content: {
-          html: more_on_this_topic_contents,
-        }
-      }
-      accordion_contents << additional_contents
-    %>
+    <%# Insert 'More on this topic' markup into the accordion items %>
+    <% accordion_items(section_title: "More on this topic", section_contents: more_on_this_topic_contents, accordion_contents: accordion_contents) %>
   <% end %>
   <div data-module="gem-track-click">
     <div data-module="toggle-attribute">
