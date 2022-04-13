@@ -1,7 +1,6 @@
 class CoronavirusLandingPagePresenter
   COMPONENTS = %w[
     header_section
-    risk_level
     sections
   ].freeze
 

@@ -22,12 +22,6 @@ module CoronavirusContentItemHelper
     end
   end
 
-  def coronavirus_content_item_with_risk_level_element_enabled
-    content_item = coronavirus_content_item
-    content_item["details"]["risk_level"]["show_risk_level_section"] = true
-    content_item
-  end
-
   def random_taxon_page
     GovukSchemas::RandomExample.for_schema(frontend_schema: "taxon") do |item|
       yield(item) if block_given?

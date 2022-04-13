@@ -4,7 +4,6 @@ RSpec.describe CoronavirusLandingPagePresenter do
     presenter = described_class.new(coronavirus_landing_page_content_item)
     %i[
       header_section
-      risk_level
       sections
     ].each do |method|
       expect(presenter).to respond_to(method)

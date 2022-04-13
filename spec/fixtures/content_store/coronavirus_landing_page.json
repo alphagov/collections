@@ -29,16 +29,6 @@
         "text": "Read more about what you can and cannot do."
       }
     },
-    "risk_level": {
-      "heading": "COVID-19 alert level",
-      "show_risk_level_section": false,
-      "paragraph":"Level X of 5 – this is the alert level!",
-      "bold_text": "Level X of 5",
-      "link": {
-        "href": "/risk-level",
-        "text": "Read more about COVID-19 alert levels"
-      }
-    },
     "sections_heading": "Guidance and support",
     "sections": [
       {

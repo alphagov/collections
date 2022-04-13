@@ -14,14 +14,6 @@ module CoronavirusLandingPageSteps
     stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item)
   end
 
-  def given_there_is_a_content_item_with_risk_level_element_enabled
-    stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item_with_risk_level_element_enabled)
-  end
-
-  def given_there_is_a_content_item_with_risk_level_element_not_enabled
-    stub_content_store_has_item(CORONAVIRUS_PATH, coronavirus_content_item_with_risk_level_element_not_enabled)
-  end
-
   def and_another_coronavirus_subtaxon
     stub_content_store_has_item(OTHER_SUBTAXON_PATH, other_subtaxon_item)
   end
