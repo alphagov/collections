@@ -9,8 +9,7 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <%= render "govuk_publishing_components/components/title", {
-          context: title[:context],
-          title: raw(title[:text]),
+          title: raw(title),
           inverse: true,
           margin_top: 4
         } %>

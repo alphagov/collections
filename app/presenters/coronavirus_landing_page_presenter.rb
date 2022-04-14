@@ -1,13 +1,7 @@
 class CoronavirusLandingPagePresenter
   COMPONENTS = %w[
     header_section
-    risk_level
     sections
-    sections_heading
-    additional_country_guidance
-    topic_section
-    notifications
-    page_header
   ].freeze
 
   def initialize(content_item)
@@ -26,6 +20,75 @@ class CoronavirusLandingPagePresenter
       "description": content_item["description"],
       "mainEntity": build_sections_schema(content_item),
     }
+  end
+
+  def title
+    "Coronavirus (COVID-19)"
+  end
+
+  def metadata
+    {
+      title: "Coronavirus (COVID-19): guidance and support",
+      description: "Find information on coronavirus, including guidance and support.",
+    }
+  end
+
+  def additional_country_guidance
+    { links: [
+      {
+        label: "Guidance for Scotland",
+        url: "https://www.gov.scot/coronavirus-covid-19/",
+      },
+      {
+        label: "Guidance for Wales",
+        url: "https://gov.wales/coronavirus",
+      },
+      {
+        label: "Guidance for Northern Ireland",
+        url: "https://www.nidirect.gov.uk/campaigns/coronavirus-covid-19",
+      },
+    ] }
+  end
+
+  def topic_section
+    { links: [
+      {
+        label: "Guidance and regulation about COVID-19",
+        url: "/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&content_purpose_supergroup%5B%5D=guidance_and_regulation&order=updated-newest",
+      },
+      {
+        label: "News and communications about COVID-19",
+        url: "/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&content_purpose_supergroup%5B%5D=news_and_communications&order=updated-newest",
+      },
+      {
+        label: "Research and statistics about COVID-19",
+        url: "/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&content_purpose_supergroup%5B%5D=research_and_statistics&order=updated-newest",
+      },
+      {
+        label: "Policy papers and consultations about COVID-19",
+        url: "/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&content_purpose_supergroup%5B%5D=policy_and_engagement&order=updated-newest",
+      },
+      {
+        label: "Transparency and freedom of information releases about COVID-19",
+        url: "/search/all?level_one_taxon=5b7b9532-a775-4bd2-a3aa-6ce380184b6c&content_purpose_supergroup%5B%5D=transparency&order=updated-newest",
+      },
+      {
+        label: "Summary of COVID-19 testing, cases and vaccinations data",
+        url: "https://coronavirus.data.gov.uk/",
+      },
+      {
+        label: "COVID-19 legislation on legislation.gov.uk",
+        url: "https://www.legislation.gov.uk/coronavirus",
+      },
+      {
+        label: "COVID-19 press conferences on YouTube",
+        url: "https://www.youtube.com/user/Number10gov/videos",
+      },
+      {
+        label: "Slides, datasets and transcripts from press conferences",
+        url: "/government/collections/slides-and-datasets-to-accompany-coronavirus-press-conferences",
+      },
+    ] }
   end
 
 private

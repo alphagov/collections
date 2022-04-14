@@ -3,14 +3,10 @@ class CoronavirusLandingPageController < ApplicationController
 
   def show
     breadcrumbs = [{ title: t("shared.breadcrumbs_home"), url: "/", is_page_parent: true }]
-    title = {
-      text: presenter.page_header,
-    }
 
     render "show",
            locals: {
              breadcrumbs: breadcrumbs,
-             title: title,
              details: presenter,
              special_announcement: special_announcement,
            }

@@ -12,20 +12,18 @@ class SpecialAnnouncementPresenter
 private
 
   def special_announcement_properties
-    schema_specific_links = content_item.dig("details", "special_announcement_schema") || {}
-
     {
       "@type" => "SpecialAnnouncement",
-      "category" => schema_specific_links["category"],
+      "category" => "https://www.wikidata.org/wiki/Q81068910",
       "datePosted" => content_item["public_updated_at"],
-      "diseasePreventionInfo" => schema_specific_links["disease_prevention_info_url"],
-      "diseaseSpreadStatistics" => schema_specific_links["disease_spread_statistics_url"],
-      "gettingTestedInfo" => schema_specific_links["getting_tested_info_url"],
-      "newsUpdatesAndGuidelines" => schema_specific_links["news_updates_and_guidelines_url"],
-      "publicTransportClosuresInfo" => schema_specific_links["public_transport_closures_info_url"],
-      "quarantineGuidelines" => schema_specific_links["quarantine_guidelines_url"],
-      "schoolClosuresInfo" => schema_specific_links["school_closures_info_url"],
-      "travelBans" => schema_specific_links["travel_bans_url"],
+      "diseasePreventionInfo" => "https://www.nhs.uk/conditions/coronavirus-covid-19/",
+      "diseaseSpreadStatistics" => "https://www.gov.uk/government/publications/covid-19-track-coronavirus-cases",
+      "gettingTestedInfo" => "https://www.gov.uk/apply-coronavirus-test",
+      "newsUpdatesAndGuidelines" => "https://www.gov.uk/coronavirus",
+      "publicTransportClosuresInfo" => "https://www.gov.uk/guidance/coronavirus-covid-19-uk-transport-and-travel-advice",
+      "quarantineGuidelines" => "https://www.gov.uk/government/publications/coronavirus-outbreak-faqs-what-you-can-and-cant-do/coronavirus-outbreak-faqs-what-you-can-and-cant-do",
+      "schoolClosuresInfo" => "https://www.gov.uk/check-school-closure",
+      "travelBans" => "https://www.gov.uk/guidance/travel-advice-novel-coronavirus",
     }.compact
   end
 
