@@ -22,7 +22,7 @@
 
   <%# Generate accordion shaped markup %>
   <% if curated_order %>
-    <% accordion_items(section_title: list["title"], section_contents: contents, accordion_contents: accordion_contents) %>
+    <% accordion_items(accordion_contents, { title: list["title"], contents: contents, data_attributes: { "track-count": "accordionSection" } }) %>
   <% end %>
 <% end %>
 
@@ -46,7 +46,7 @@
                 dimension29: related_topic.title,
                 dimension114: (page.lists.count + 1).to_s + ".#{index + 1}",    
               },
-            },
+            }.merge(curated_order ? { track_count: "contentLink" } : {}) ,
           ) %>
         </li>
       <% end %>
@@ -58,7 +58,7 @@
   <%# For curated pages, render the markup using an accordion %>
   <% if page.related_topics.any? %>
     <%# Insert 'More on this topic' markup into the accordion items %>
-    <% accordion_items(section_title: "More on this topic", section_contents: more_on_this_topic_contents, accordion_contents: accordion_contents) %>
+    <% accordion_items(accordion_contents, { title: "More on this topic", contents: more_on_this_topic_contents }) %>
   <% end %>
   <div data-module="gem-track-click">
     <div data-module="toggle-attribute">
@@ -67,7 +67,8 @@
         track_sections: true,
         heading_level: 2,
         data_attributes: {
-          module: "govuk-accordion"
+          module: "govuk-accordion",
+          track_count: "accordionSection"
         },
         items: accordion_contents,
         margin_bottom: 4

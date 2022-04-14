@@ -1,13 +1,15 @@
 module AccordionItemsHelper
-  def accordion_items(section_title:, section_contents:, accordion_contents:)
+  def accordion_items(accordion_contents, section={})
     section_contents = {
       heading: {
-        text: section_title,
+        text: section[:title],
       },
       content: {
-        html: section_contents,
+        html: section[:contents],
       },
+      data_attributes: section[:data_attributes]
     }
+
     accordion_contents << section_contents
   end
 end
