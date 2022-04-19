@@ -1,4 +1,4 @@
-<% content_for :title, "#{t("shared.browse.prefix")} #{page.title}" %>
+<% content_for :title, page.title %>
 <% top_level_page = page.active_top_level_browse_page %>
 <%= render 'shared/tag_meta', tag: page %>
 <% content_for :meta_tags do %>
