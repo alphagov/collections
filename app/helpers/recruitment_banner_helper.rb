@@ -1,5 +1,5 @@
 module RecruitmentBannerHelper
-  STUDY_URL_ONE = "https://surveys.publishing.service.gov.uk/s/GY8Q11".freeze
+  STUDY_URL_ONE = "https://GDSUserResearch.optimalworkshop.com/treejack/724268fr-1-0-0-0".freeze
   STUDY_URLS_FOR_TOPICS = {
     "/browse/business" => STUDY_URL_ONE,
     "/browse/tax" => STUDY_URL_ONE,
