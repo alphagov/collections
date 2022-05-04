@@ -99,20 +99,18 @@
         %>
       <% end %>
 
-      <div data-module="gem-track-click">
-        <div data-module="toggle-attribute">
-          <%= render "govuk_publishing_components/components/accordion", {
-            track_show_all_clicks: true,
-            track_sections: true,
-            heading_level: 2,
-            data_attributes: {
-              module: "govuk-accordion",
-              track_count: "accordionSection"
-            },
-            items: accordion_contents,
-            margin_bottom: 4,
-          } %>
-        </div>
+      <div data-module="toggle-attribute">
+        <%= render "govuk_publishing_components/components/accordion", {
+          track_show_all_clicks: true,
+          track_sections: true,
+          heading_level: 2,
+          data_attributes: {
+            module: "govuk-accordion",
+            track_count: "accordionSection"
+          },
+          items: accordion_contents,
+          margin_bottom: 4,
+        } %>
       </div>
     </div>
   </div>
