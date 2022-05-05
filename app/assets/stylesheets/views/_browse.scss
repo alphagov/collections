@@ -408,14 +408,10 @@ $topic-page-header-background-colour: #263135;
 }
 
 .topic-page__more-on-this-topic {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: $govuk-text-colour;
-  @include govuk-responsive-padding(3, "top");
-  @include govuk-responsive-margin(6, "top");
-  @include govuk-responsive-margin(4, "bottom");
+  margin-top: govuk-spacing(4);
 
   @include govuk-media-query($from: "tablet") {
-    @include govuk-responsive-margin(7, "top");
+    margin-top: govuk-spacing(7);
+    margin-bottom: govuk-spacing(1);
   }
 }
