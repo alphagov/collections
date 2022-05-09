@@ -1,6 +1,5 @@
 class SecondLevelBrowsePageController < ApplicationController
   include RecruitmentBannerHelper
-  include AccordionItemsHelper
 
   enable_request_formats show: [:json]
 
