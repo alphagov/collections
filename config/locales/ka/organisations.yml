@@ -74,6 +74,9 @@ ka:
         draft_text:
           one: სამუშაო ტექსტი
           other: სამუშაო ტექსტები
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: ნარკოტიკების უსაფრთხოების განახლება
           other: ნარკოტიკების უსაფრთხოების განახლებები
@@ -332,5 +335,5 @@ ka:
       tribunal: ტრიბუნალი
     what_we_do:
     works_with_statement:
-      other: მუშაობს %{works_with_count} სააგენტოებთან და საჯარო ორგანოებთან
       one: მუშაობს %{works_with_count} საჯარო ორგანოსთან
+      other: მუშაობს %{works_with_count} სააგენტოებთან და საჯარო ორგანოებთან

@@ -94,6 +94,9 @@ lt:
           few:
           one: Pirminis teksto variantas
           other: Pirminiai teksto variantai
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           few:
           one: Nauja informacija apie vaistų saugumą
@@ -409,5 +412,5 @@ lt:
     what_we_do:
     works_with_statement:
       few:
-      other: Dirba su %{works_with_count} agentūromis ir viešosiomis įstaigomis
       one: Dirba su %{works_with_count} viešąja įstaiga
+      other: Dirba su %{works_with_count} agentūromis ir viešosiomis įstaigomis

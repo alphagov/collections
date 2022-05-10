@@ -74,6 +74,9 @@ pt:
         draft_text:
           one: Texto provisório
           other: Textos provisórios
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Atualização sobre Segurança dos Medicamentos
           other: Atualizações sobre Segurança dos Medicamentos
@@ -334,5 +337,5 @@ pt:
       tribunal: Tribunal
     what_we_do:
     works_with_statement:
-      other: Trabalha com %{works_with_count} agências e organismos públicos
       one: Trabalha com %{works_with_count} organismo público
+      other: Trabalha com %{works_with_count} agências e organismos públicos

@@ -74,6 +74,9 @@ el:
         draft_text:
           one: Σχέδιο κειμένου
           other: Σχέδια κειμένων
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Ενημέρωση για την ασφάλεια των φαρμάκων
           other: Ενημερώσεις για την ασφάλεια των φαρμάκων
@@ -334,5 +337,5 @@ el:
       tribunal: Δικαστήριο
     what_we_do:
     works_with_statement:
-      other: Λειτουργεί με %{works_with_count} φορείς και δημόσιους οργανισμούς
       one: Λειτουργεί με %{works_with_count} δημόσιο φορέα
+      other: Λειτουργεί με %{works_with_count} φορείς και δημόσιους οργανισμούς

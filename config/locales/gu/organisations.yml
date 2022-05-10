@@ -74,6 +74,9 @@ gu:
         draft_text:
           one: ડ્રાફ્ટ ટેક્સ્ટ
           other: ડ્રાફ્ટ ટેક્સ્ટ્સ
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: ડ્રગ સુરક્ષા અપડેટ
           other: ડ્રગ સુરક્ષા અપડેટ્સ
@@ -332,5 +335,5 @@ gu:
       tribunal: ટ્રિબ્યુનલ
     what_we_do:
     works_with_statement:
-      other: "%{works_with_count} એજન્સીઓ અને જાહેર સંસ્થાઓ સાથે કામ કરે છે"
       one: જાહેર સંસ્થા સાથે %{works_with_count} કામ કરે છે
+      other: "%{works_with_count} એજન્સીઓ અને જાહેર સંસ્થાઓ સાથે કામ કરે છે"

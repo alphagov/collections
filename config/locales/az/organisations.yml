@@ -74,6 +74,9 @@ az:
         draft_text:
           one: Hazırlanan mətn
           other: Hazırlanan mətnlər
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Dərman təhlükəsizliyi üzrə yeniləmə
           other: Dərman təhlükəsizliyi üzrə yeniləmələr
@@ -334,5 +337,5 @@ az:
       tribunal: Məhkəmə kollegiyası
     what_we_do:
     works_with_statement:
-      other: "%{works_with_count} agentliklər və dövlət orqanları ilə olan işlər"
       one: "%{works_with_count} dövlət orqanı ilə olan işlər"
+      other: "%{works_with_count} agentliklər və dövlət orqanları ilə olan işlər"

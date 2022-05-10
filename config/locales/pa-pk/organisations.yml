@@ -74,6 +74,9 @@ pa-pk:
         draft_text:
           one: لکھائی کرو
           other: لکھائیاں کرو
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: نشے توں بچن دی نوی خبر
           other: نشے توں بچن دیاں نویاں خبراں
@@ -336,5 +339,5 @@ pa-pk:
       tribunal: عدالت
     what_we_do:
     works_with_statement:
-      other: دے نال کم کر دے نیں {works_with_count}% ایجنسیاں تے عوامی ادارے
       one: کم کر دے نیں {works_with_count}%  عوامی ادارے نال
+      other: دے نال کم کر دے نیں {works_with_count}% ایجنسیاں تے عوامی ادارے

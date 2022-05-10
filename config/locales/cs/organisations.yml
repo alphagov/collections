@@ -94,6 +94,9 @@ cs:
           few:
           one: Návrh textu
           other: Návrhy textů
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           few:
           one: Aktuální informace o bezpečnosti léčiv
@@ -409,5 +412,5 @@ cs:
     what_we_do:
     works_with_statement:
       few:
-      other: Spolupracuje s %{works_with_count} agenturami a veřejnými orgány
       one: Pracuje s veřejnými organizacemi %{works_with_count}
+      other: Spolupracuje s %{works_with_count} agenturami a veřejnými orgány

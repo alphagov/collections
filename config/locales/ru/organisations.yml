@@ -114,6 +114,9 @@ ru:
           many:
           one: Проект текста
           other: Проект текстов
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           few:
           many:
@@ -480,7 +483,7 @@ ru:
       tribunal: Арбитраж
     what_we_do:
     works_with_statement:
-      many:
       few:
-      other: Работа с %{works_with_count} агенствами и государственными органами
+      many:
       one: Работа с  %{works_with_count} государственным органом
+      other: Работа с %{works_with_count} агенствами и государственными органами

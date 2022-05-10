@@ -114,6 +114,9 @@ be:
           many:
           one: Чарнавік
           other: Чарнавікі
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           few:
           many:
@@ -482,7 +485,7 @@ be:
       tribunal: Трыбунал
     what_we_do:
     works_with_statement:
-      many:
       few:
-      other: Працуе з %{works_with_count} установамi і дзяржаўнымi органамi
+      many:
       one: Працуе з %{works_with_count} дзяржаўнымi органамi
+      other: Працуе з %{works_with_count} установамi і дзяржаўнымi органамi

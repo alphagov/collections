@@ -74,6 +74,9 @@ pa:
         draft_text:
           one: ਡਰਾਫਟ ਟੈਕਸਟ
           other: ਡਰਾਫਟ ਟੈਕਸਟ
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: ਡਰੱਗ ਸੇਫਟੀ ਅਪਡੇਟ
           other: ਡਰੱਗ ਸੇਫਟੀ ਅਪਡੇਟਸ
@@ -334,5 +337,5 @@ pa:
       tribunal: ਟ੍ਰਿਬਿਊਨਲ
     what_we_do:
     works_with_statement:
-      other: "%{works_with_count} ਏਜੰਸੀਆਂ ਅਤੇ ਜਨਤਕ ਸੰਸਥਾਵਾਂ ਦੇ ਨਾਲ ਕੰਮ ਕਰਦਾ ਹੈ"
       one: "%{works_with_count} ਜਨਤਕ ਸੰਸਥਾ ਦੇ ਨਾਲ ਕੰਮ ਕਰਦਾ ਹੈ"
+      other: "%{works_with_count} ਏਜੰਸੀਆਂ ਅਤੇ ਜਨਤਕ ਸੰਸਥਾਵਾਂ ਦੇ ਨਾਲ ਕੰਮ ਕਰਦਾ ਹੈ"

@@ -74,6 +74,9 @@ zh-tw:
         draft_text:
           one: 草稿文本
           other: 草稿文本
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: 藥物安全更新
           other: 藥物安全更新
@@ -334,5 +337,5 @@ zh-tw:
       tribunal: 審裁處
     what_we_do:
     works_with_statement:
-      other: 與 %{works_with_count} 個機構和公共機構合作
       one: 與 %{works_with_count} 公共機構合作
+      other: 與 %{works_with_count} 個機構和公共機構合作

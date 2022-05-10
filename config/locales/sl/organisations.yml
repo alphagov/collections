@@ -114,6 +114,9 @@ sl:
           one: Osnutek besedila
           other: Osnutki besedila
           two:
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           few:
           one: Posodobitev o varnosti zdravil
@@ -482,7 +485,7 @@ sl:
       tribunal: Sodišče
     what_we_do:
     works_with_statement:
-      two:
       few:
-      other: Sodeluje z %{works_with_count} agencijami in javnimi organi
       one: Sodeluje z %{works_with_count} javnimi organi
+      other: Sodeluje z %{works_with_count} agencijami in javnimi organi
+      two:

@@ -74,6 +74,9 @@ yi:
         draft_text:
           one:
           other:
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one:
           other:
@@ -332,6 +335,5 @@ yi:
       tribunal:
     what_we_do:
     works_with_statement:
-      other:
       one:
       other:

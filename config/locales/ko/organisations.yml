@@ -54,6 +54,9 @@ ko:
           other: 컬렉션
         draft_text:
           other: 초안 텍스트
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           other: 의약품 안전 업데이트
         employment_appeal_tribunal_decision:
@@ -260,4 +263,5 @@ ko:
       tribunal: 법원
     what_we_do:
     works_with_statement:
+      one:
       other: 에이전시 및 공공 기관 %{works_with_count}곳과 협업하기

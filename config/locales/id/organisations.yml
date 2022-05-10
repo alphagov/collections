@@ -54,6 +54,9 @@ id:
           other: Koleksi
         draft_text:
           other: Teks rancangan
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           other: Pembaruan Keselamatan Obat
         employment_appeal_tribunal_decision:
@@ -260,4 +263,5 @@ id:
       tribunal: Persidangan
     what_we_do:
     works_with_statement:
+      one:
       other: Bekerja bersama %{works_with_count} lembaga dan badan publik

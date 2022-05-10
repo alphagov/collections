@@ -74,6 +74,9 @@ uz:
         draft_text:
           one: Матн лойиҳаси
           other: Матн лойиҳалари
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Дори хавфсизлиги маълумотларини янгилаш
           other: Дори хавфсизлиги маълумотларини янгилашлари
@@ -334,5 +337,5 @@ uz:
       tribunal: Трибунал
     what_we_do:
     works_with_statement:
-      other: Агентликлар ва давлат органлари %{works_with_count} билан ишлайди
       one: Давлат органлари %{works_with_count} билан ишлайди
+      other: Агентликлар ва давлат органлари %{works_with_count} билан ишлайди

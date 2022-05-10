@@ -74,6 +74,9 @@ kk:
         draft_text:
           one: Жоба мәтіні
           other: Жоба мәтіндері
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Дәрілік заттардың қауіпсіздігін жаңарту
           other: Дәрілік заттардың қауіпсіздігін жаңартулар
@@ -334,5 +337,5 @@ kk:
       tribunal: Сот орны
     what_we_do:
     works_with_statement:
-      other: "%{works_with_count} агенттіктері мен мемлекеттік органдармен жұмыс істейді"
       one: "%{works_with_count} мемлекеттік органмен жұмыс істейді"
+      other: "%{works_with_count} агенттіктері мен мемлекеттік органдармен жұмыс істейді"

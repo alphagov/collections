@@ -74,6 +74,9 @@ sq:
         draft_text:
           one: Draft tekst
           other: Draft tekste
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Përditësimi i Sigurisë së Barnave
           other: Përditësime të Sigurisë së Barnave
@@ -332,5 +335,5 @@ sq:
       tribunal: Tribunali
     what_we_do:
     works_with_statement:
-      other: Punon me %{works_with_count} agjensitë dhe organe publike
       one: Punon me %{works_with_count} organ publik
+      other: Punon me %{works_with_count} agjensitë dhe organe publike

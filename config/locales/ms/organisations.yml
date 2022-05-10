@@ -54,6 +54,9 @@ ms:
           other: Koleksi
         draft_text:
           other: Teks draf
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           other: Kemas Kini Keselamatan Ubat-ubatan
         employment_appeal_tribunal_decision:
@@ -260,4 +263,5 @@ ms:
       tribunal: Tribunal
     what_we_do:
     works_with_statement:
+      one:
       other: Bekerjasama dengan %{works_with_count} agensi dan badan awam

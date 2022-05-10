@@ -74,6 +74,9 @@ ps:
         draft_text:
           one: مسوده متن
           other: د متن مسوده
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: د مخدره توکو خوندیتوب تازه کول
           other: د مخدره توکو خوندیتوب تازه معلومات
@@ -334,5 +337,5 @@ ps:
       tribunal: محکمه
     what_we_do:
     works_with_statement:
-      other: د %{works_with_count} ادارو او عامه ادارو سره کار کوي
       one: د %{works_with_count} عامه ادارې سره کار کوي
+      other: د %{works_with_count} ادارو او عامه ادارو سره کار کوي

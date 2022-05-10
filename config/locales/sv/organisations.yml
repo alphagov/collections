@@ -74,6 +74,9 @@ sv:
         draft_text:
           one: Utkast till text
           other: Utkast till texter
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Uppdatering om läkemedelssäkerhet
           other: Uppdateringar om läkemedelssäkerhet
@@ -334,5 +337,5 @@ sv:
       tribunal: Tribunal
     what_we_do:
     works_with_statement:
-      other: Arbetar med %{works_with_count} myndigheter och offentliga organ
       one: Arbetar med %{works_with_count} offentligt organ
+      other: Arbetar med %{works_with_count} myndigheter och offentliga organ

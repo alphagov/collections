@@ -3,6 +3,7 @@ th:
   roles:
     find_out_more_html: ดูข้อมูลเพิ่มเติมเกี่ยวกับผู้ที่เคยดำรงตำแหน่งนี้ในส่วน %{link} ของเรา
     heading:
+      one:
       other: บทบาท
     headings:
       current_holder: ผู้ดำรงตำแหน่งปัจจุบัน

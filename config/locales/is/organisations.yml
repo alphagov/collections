@@ -74,6 +74,9 @@ is:
         draft_text:
           one: Textadrög
           other: Textadrög
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Uppfærsla varðandi lyfjaöryggi
           other: Uppfærslur varðandi lyfjaöryggi
@@ -334,5 +337,5 @@ is:
       tribunal: Dómstóll
     what_we_do:
     works_with_statement:
-      other: Starfar með %{works_with_count} umboðum og opinberum stofnunum
       one: Starfar með %{works_with_count} opinberum stofnunum
+      other: Starfar með %{works_with_count} umboðum og opinberum stofnunum

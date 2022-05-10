@@ -3,6 +3,7 @@ vi:
   roles:
     find_out_more_html: Tìm hiểu thêm về những người nắm giữ vai trò này trước đây trong phần %{link} của chúng tôi.
     heading:
+      one:
       other: Vai trò
     headings:
       current_holder: Người nắm giữ vai trò hiện tại

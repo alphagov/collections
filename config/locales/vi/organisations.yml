@@ -54,6 +54,9 @@ vi:
           other: Bộ sưu tập
         draft_text:
           other: Dự thảo
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           other: Cập nhật về Dùng Thuốc An toàn
         employment_appeal_tribunal_decision:
@@ -260,4 +263,5 @@ vi:
       tribunal: Tòa án
     what_we_do:
     works_with_statement:
+      one:
       other: Làm việc với %{works_with_count} cơ quan và cơ quan công quyền

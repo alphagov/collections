@@ -94,6 +94,9 @@ sr:
           few:
           one: Radna verzija teksta
           other: Radne verzije teksta
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           few:
           one: Obaveštenje o bezbednosti lekova
@@ -409,5 +412,5 @@ sr:
     what_we_do:
     works_with_statement:
       few:
-      other: Sarađuje sa %{works_with_count} agencija i javnih tela
       one: Sarađuje sa %{works_with_count} javnim telom
+      other: Sarađuje sa %{works_with_count} agencija i javnih tela

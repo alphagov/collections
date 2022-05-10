@@ -74,6 +74,9 @@ hu:
         draft_text:
           one: Szövegtervezet
           other: Szövegtervezetek
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Gyógyszerbiztonsági frissítés
           other: Gyógyszerbiztonsági frissítések
@@ -334,5 +337,5 @@ hu:
       tribunal: Bíróság
     what_we_do:
     works_with_statement:
-      other: 'Együtt dolgozik a következőkkel: %{works_with_count} ügynökségekkel és hivatalos szervekkel'
       one: 'Együtt dolgozik a következőkkel: %{works_with_count} hivatalos szerv'
+      other: 'Együtt dolgozik a következőkkel: %{works_with_count} ügynökségekkel és hivatalos szervekkel'

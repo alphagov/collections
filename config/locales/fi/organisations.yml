@@ -74,6 +74,9 @@ fi:
         draft_text:
           one: Luonnos
           other: Luonnos tekstejä
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Lääketurvallisuuden päivitys
           other: Lääketurvallisuuden päivitykset
@@ -334,5 +337,5 @@ fi:
       tribunal: Tuomioistuin
     what_we_do:
     works_with_statement:
-      other: Toimii %{works_with_count} virastojen ja julkisten elinten kanssa
       one: Toimii %{works_with_count} julkisen elimen kanssa
+      other: Toimii %{works_with_count} virastojen ja julkisten elinten kanssa

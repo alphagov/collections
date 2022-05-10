@@ -74,6 +74,9 @@ bn:
         draft_text:
           one: খসড়া টেক্সট
           other: খসড়া টেক্সটসমূহ
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: ঔষধের নিরাপত্তা সম্পর্কিত আপডেট
           other: ঔষধের নিরাপত্তা সম্পর্কিত আপডেট
@@ -334,5 +337,5 @@ bn:
       tribunal: ট্রাইব্যুনাল
     what_we_do:
     works_with_statement:
-      other: "%{works_with_count} টি এজেন্সি ও সরকারি সংস্থার সাথে কাজ করে"
       one: "%{works_with_count} টি সরকারি সংস্থার সাথে কাজ করে"
+      other: "%{works_with_count} টি এজেন্সি ও সরকারি সংস্থার সাথে কাজ করে"

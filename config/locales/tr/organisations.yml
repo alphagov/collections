@@ -74,6 +74,9 @@ tr:
         draft_text:
           one: Taslak metin
           other: Taslak metinler
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Uyuşturucu Güvenliği Bilgilendirmesi
           other: Uyuşturucu Güvenliği Bilgilendirmeleri
@@ -334,5 +337,5 @@ tr:
       tribunal: Mahkeme
     what_we_do:
     works_with_statement:
-      other: "%{works_with_count} kurum ve kamu kuruluşuyla birlikte çalışır"
       one: "%{works_with_count} kamu kuruluşuyla birlikte çalışır"
+      other: "%{works_with_count} kurum ve kamu kuruluşuyla birlikte çalışır"

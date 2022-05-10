@@ -54,6 +54,9 @@ zh:
           other: 待整理
         draft_text:
           other: 草拟文本
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           other: 药物安全更新
         employment_appeal_tribunal_decision:
@@ -258,4 +261,5 @@ zh:
       tribunal: 法庭
     what_we_do:
     works_with_statement:
+      one:
       other: 与 %{works_with_count} 机构和公共机构合作

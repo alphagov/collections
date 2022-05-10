@@ -74,6 +74,9 @@
         draft_text:
           one: Utkast til tekst
           other: Utkast til tekster
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Oppdatering av legemiddelsikkerhet
           other: Oppdatering av legemiddelsikkerhet
@@ -334,5 +337,5 @@
       tribunal: Nemnd
     what_we_do:
     works_with_statement:
-      other: Jobber med %{works_with_count} byråer og offentlige instanser
       one: Jobber med %{works_with_count} offentlig instans
+      other: Jobber med %{works_with_count} byråer og offentlige instanser

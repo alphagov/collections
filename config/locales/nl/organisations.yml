@@ -74,6 +74,9 @@ nl:
         draft_text:
           one: Ontwerpteksten
           other: Ontwerpteksten
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Veiligheid van Geneesmiddelen
           other: Veiligheid van Geneesmiddelen
@@ -334,5 +337,5 @@ nl:
       tribunal: Tribunaal
     what_we_do:
     works_with_statement:
-      other: Werkt samen met %{works_with_count} agentschappen en overheidsinstanties
       one: Werkt samen met %{works_with_count} overheidsinstantie
+      other: Werkt samen met %{works_with_count} agentschappen en overheidsinstanties

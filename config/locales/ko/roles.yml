@@ -3,6 +3,7 @@ ko:
   roles:
     find_out_more_html: 저희의 %{link} 섹션에서 이 역할의 기존 보유자에 대해 더 알아봅니다.
     heading:
+      one:
       other: 역할
     headings:
       current_holder: 현재 역할 보유자

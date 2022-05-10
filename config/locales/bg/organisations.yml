@@ -74,6 +74,9 @@ bg:
         draft_text:
           one: Проектотекст
           other: Проектотекстове
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Актуализация на безопасността на лекарствата
           other: Актуализации на безопасността на лекарствата
@@ -334,5 +337,5 @@ bg:
       tribunal: Арбитраж
     what_we_do:
     works_with_statement:
-      other: Работи с %{works_with_count} агенции и публични органи
       one: Работи с %{works_with_count} публични органи
+      other: Работи с %{works_with_count} агенции и публични органи

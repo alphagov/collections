@@ -10,3 +10,7 @@ ignore_unused:
   - "organisations.content_item.schema_name.*"
   - "roles.heading.*"
   - "organisations.type.*"
+  - "organisations.works_with_statement.*"
+search:
+  exclude:
+    - app/views/coronavirus_landing_page

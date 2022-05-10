@@ -74,6 +74,9 @@ ur:
         draft_text:
           one: ڈرافٹ کا متن
           other: ڈرافٹ کے متن
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: دوا کی حفاظتی اپ ڈیٹ
           other: دوا کی حفاظتی اپ ڈیٹس
@@ -334,5 +337,5 @@ ur:
       tribunal: ٹریبیونل
     what_we_do:
     works_with_statement:
-      other: "%{works_with_count} ایجنسیوں اور عوامی دھڑوں کے ساتھ کام کرتا ہے"
       one: "%{works_with_count} عوامی دھڑے کے ساتھ کام کرتا ہے"
+      other: "%{works_with_count} ایجنسیوں اور عوامی دھڑوں کے ساتھ کام کرتا ہے"

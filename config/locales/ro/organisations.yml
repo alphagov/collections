@@ -94,6 +94,9 @@ ro:
           few:
           one: Proiect de text
           other: Proiecte de text
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           few:
           one: Actualizare cu privire la siguranța medicamentelor
@@ -409,5 +412,5 @@ ro:
     what_we_do:
     works_with_statement:
       few:
-      other: Lucrează cu %{works_with_count} agenții și organisme publice
       one: Lucrează cu %{works_with_count} organism public
+      other: Lucrează cu %{works_with_count} agenții și organisme publice

@@ -3,6 +3,7 @@ zh:
   roles:
     find_out_more_html: 在 %{link} 小节中了解更多关于此职位的前任担任者的信息。
     heading:
+      one:
       other: 职责
     headings:
       current_holder: 当前职位担任者

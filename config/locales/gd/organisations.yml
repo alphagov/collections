@@ -114,6 +114,9 @@ gd:
           one: Tionscadail téacs
           other: Dréacht-téacsanna
           two:
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           few:
           one: Sábháilteacht drugaí a nuashonrú
@@ -482,7 +485,7 @@ gd:
       tribunal: Cúirt
     what_we_do:
     works_with_statement:
-      two:
       few:
-      other: Oibríonn sé le heagraíochtaí %{works_with_count} agus le comhlachtaí poiblí
       one: Oibríonn sé le comhlacht poiblí %{works_with_count}
+      other: Oibríonn sé le heagraíochtaí %{works_with_count} agus le comhlachtaí poiblí
+      two:

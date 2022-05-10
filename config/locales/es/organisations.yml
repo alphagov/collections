@@ -74,6 +74,9 @@ es:
         draft_text:
           one: Borrador
           other: Borradores
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Actualización sobre seguridad de los medicamentos
           other: Actualizaciones sobre seguridad de los medicamentos
@@ -332,5 +335,5 @@ es:
       tribunal: Tribunal
     what_we_do:
     works_with_statement:
-      other: Funciona con agencias y organismos públicos de %{works_with_count}
       one: Funciona con el cuerpo público %{works_with_count}
+      other: Funciona con agencias y organismos públicos de %{works_with_count}

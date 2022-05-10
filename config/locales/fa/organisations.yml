@@ -74,6 +74,9 @@ fa:
         draft_text:
           one: متن پیش‌نویس
           other: متون پیش‌نویس
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: بروزرسانی ایمنی دارو
           other: بروزرسانی‌های ایمنی دارو
@@ -334,5 +337,5 @@ fa:
       tribunal: دادگاه
     what_we_do:
     works_with_statement:
-      other: با آژانس‌ها و نهادهای عمومی %{works_with_count} همکاری می‌کند
       one: با نهاد عمومی %{works_with_count} همکاری می‌کند
+      other: با آژانس‌ها و نهادهای عمومی %{works_with_count} همکاری می‌کند
