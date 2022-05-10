@@ -33,7 +33,18 @@ private
   end
 
   def show_html
-    template = is_variant_b? ? :new_show : :show
+    # The defauly template should be 'show' if there's no A/B variant set
+    template = :show
+
+    # If the A/B test requires the new layout, then we need to see whether the
+    # page is a curated list or a A to Z list and set the correct template:
+    if is_variant_b? && page.lists.curated?
+      template = :new_show_curated
+    end
+
+    if is_variant_b? && !page.lists.curated?
+      template = :new_show_a_to_z
+    end
 
     render(template, locals: {
       page: page,

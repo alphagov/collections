@@ -1,0 +1,119 @@
+<% content_for :title, page.title %>
+<% top_level_page = page.active_top_level_browse_page %>
+<%= render "shared/tag_meta", tag: page %>
+<% content_for :meta_tags do %>
+  <%= render "govuk_publishing_components/components/meta_tags", {
+    content_item: {
+      navigation_page_type: "Browse level 2",
+      navigation_list_type: "curated",
+      section: meta_section,
+    }
+  } %>
+<% end %>
+
+<% content_for :breadcrumbs do %>
+  <%= render "shared/topic_page_breadcrumbs" %>
+<% end %>
+
+<%= render "shared/topic_page_header", {
+  two_thirds: true,
+  margin_bottom: 7
+} do %>
+  <%= render "govuk_publishing_components/components/heading", {
+    font_size: "xl",
+    heading_level: 1,
+    inverse: true,
+    margin_bottom: 6,
+    text: page.title,
+  } %>
+
+  <p class="gem-c-lead-paragraph gem-c-lead-paragraph--inverse govuk-!-margin-bottom-2">
+    <%= page.description %>
+  </p>
+<% end %>
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <%
+        accordion_contents = page.lists.map.with_index do |list, list_index|
+          {
+            heading: {
+              text: list[:title],
+            },
+            content: {
+              html: render(partial: "new_links", locals: {
+                list: list.contents,
+                list_index: list_index,
+               }),
+            },
+            data_attributes: {
+              "track-count": "accordionSection",
+            },
+          }
+        end
+      %>
+
+      <%#
+        Generate markup for More on this topic and push it into the accordion
+        content hash.
+      %>
+      <% if page.related_topics.any? %>
+        <% more_on_this_topic_contents = capture do %>
+          <ul class="govuk-list" data-module="gem-track-click">
+            <% page.related_topics.each_with_index do |related_topic, index| %>
+            <li class="govuk-!-margin-bottom-4">
+                <%= link_to(
+                  related_topic.title,
+                  related_topic.base_path,
+                  class: "govuk-link",
+                  data: {
+                    track_category: "browseClicked",
+                    track_count: "contentLink",
+                    track_action: "moreLink",
+                    track_label: related_topic.base_path,
+                    track_options: {
+                      dimension28: page.related_topics.count.to_s,
+                      dimension29: related_topic.title,
+                      dimension114: "#{page.lists.count + 1}.#{index + 1}",
+                    },
+                  },
+                ) %>
+              </li>
+            <% end %>
+          </ul>
+        <% end %>
+
+        <%
+          accordion_contents << {
+            heading: {
+              text: "More on this topic", # TODO: use a translation key
+            },
+            content: {
+              html: more_on_this_topic_contents,
+            },
+            data_attributes: {
+              "track-count": "accordionSection",
+            },
+          }
+        %>
+      <% end %>
+
+      <div data-module="gem-track-click">
+        <div data-module="toggle-attribute">
+          <%= render "govuk_publishing_components/components/accordion", {
+            track_show_all_clicks: true,
+            track_sections: true,
+            heading_level: 2,
+            data_attributes: {
+              module: "govuk-accordion",
+              track_count: "accordionSection"
+            },
+            items: accordion_contents,
+            margin_bottom: 4,
+          } %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
