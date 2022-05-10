@@ -1,3 +1,5 @@
+<% track_action ||= "contentLink" %>
+
 <ul class="govuk-list" data-module="gem-track-click">
   <% list.each_with_index do |list_item, index| %>
     <li class="govuk-!-margin-bottom-4">
@@ -8,12 +10,12 @@
         data: {
           track_category: "browseClicked",
           track_count: "contentLink",
-          track_action: "contentLink",
+          track_action: track_action,
           track_label: list_item.base_path,
           track_options: {
-            dimension114: "#{list_index + 1}.#{index + 1}",
             dimension28: list.count.to_s,
             dimension29: list_item.title,
+            dimension114: "#{list_index + 1}.#{index + 1}",
           },
         },
       ) %>

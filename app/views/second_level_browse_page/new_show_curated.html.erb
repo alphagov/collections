@@ -60,28 +60,7 @@
       %>
       <% if page.related_topics.any? %>
         <% more_on_this_topic_contents = capture do %>
-          <ul class="govuk-list" data-module="gem-track-click">
-            <% page.related_topics.each_with_index do |related_topic, index| %>
-            <li class="govuk-!-margin-bottom-4">
-                <%= link_to(
-                  related_topic.title,
-                  related_topic.base_path,
-                  class: "govuk-link",
-                  data: {
-                    track_category: "browseClicked",
-                    track_count: "contentLink",
-                    track_action: "moreLink",
-                    track_label: related_topic.base_path,
-                    track_options: {
-                      dimension28: page.related_topics.count.to_s,
-                      dimension29: related_topic.title,
-                      dimension114: "#{page.lists.count + 1}.#{index + 1}",
-                    },
-                  },
-                ) %>
-              </li>
-            <% end %>
-          </ul>
+          <%= render partial: "new_links", locals: { list: page.related_topics, list_index: page.lists.count, track_action: "moreLink" } %>
         <% end %>
 
         <%
