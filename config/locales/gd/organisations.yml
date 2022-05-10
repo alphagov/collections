@@ -114,6 +114,9 @@ gd:
           one: Tionscadail téacs
           other: Dréacht-téacsanna
           two:
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           few:
           one: Sábháilteacht drugaí a nuashonrú

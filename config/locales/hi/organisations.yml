@@ -74,6 +74,9 @@ hi:
         draft_text:
           one: मसौदा पाठ
           other: मसौदे के पाठ
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: दवा सुरक्षा का अपडेट
           other: दवा सुरक्षा के अपडेट

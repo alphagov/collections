@@ -74,6 +74,9 @@ az:
         draft_text:
           one: Hazırlanan mətn
           other: Hazırlanan mətnlər
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Dərman təhlükəsizliyi üzrə yeniləmə
           other: Dərman təhlükəsizliyi üzrə yeniləmələr

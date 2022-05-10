@@ -54,6 +54,9 @@ ja:
           other: コレクション
         draft_text:
           other: 下書きテキスト
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           other: 医薬品の安全性に関する最新情報
         employment_appeal_tribunal_decision:
@@ -260,4 +263,5 @@ ja:
       tribunal: 審判所
     what_we_do:
     works_with_statement:
+      one:
       other: "%{works_with_count}機関および公共団体と連携"

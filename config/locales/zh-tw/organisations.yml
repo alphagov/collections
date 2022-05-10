@@ -74,6 +74,9 @@ zh-tw:
         draft_text:
           one: 草稿文本
           other: 草稿文本
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: 藥物安全更新
           other: 藥物安全更新

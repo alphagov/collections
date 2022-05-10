@@ -74,6 +74,9 @@ ta:
         draft_text:
           one: வரைவு உரை
           other: வரைவு உரைகள்
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: மருந்து பாதுகாப்பு புதிய தகவல்
           other: மருந்து பாதுகாப்பு புதிய தகவல்கள்

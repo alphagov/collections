@@ -94,6 +94,9 @@ ro:
           few:
           one: Proiect de text
           other: Proiecte de text
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           few:
           one: Actualizare cu privire la siguranța medicamentelor

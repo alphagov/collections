@@ -74,6 +74,9 @@ it:
         draft_text:
           one: Bozza di testo
           other: Bozze di testo
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Aggiornamento sulla sicurezza dei farmaci
           other: Aggiornamenti sulla sicurezza dei farmaci

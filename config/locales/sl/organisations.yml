@@ -114,6 +114,9 @@ sl:
           one: Osnutek besedila
           other: Osnutki besedila
           two:
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           few:
           one: Posodobitev o varnosti zdravil

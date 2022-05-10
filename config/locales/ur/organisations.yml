@@ -74,6 +74,9 @@ ur:
         draft_text:
           one: ڈرافٹ کا متن
           other: ڈرافٹ کے متن
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: دوا کی حفاظتی اپ ڈیٹ
           other: دوا کی حفاظتی اپ ڈیٹس

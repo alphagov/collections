@@ -94,6 +94,9 @@ sk:
           few:
           one: Návrh textu
           other: Návrhy textov
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           few:
           one: Aktualizácia bezpečnosti liekov

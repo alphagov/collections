@@ -114,6 +114,9 @@ hr:
           many:
           one: Nacrt teksta
           other: Nacrt tekstova
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           few:
           many:

@@ -74,6 +74,9 @@ bn:
         draft_text:
           one: খসড়া টেক্সট
           other: খসড়া টেক্সটসমূহ
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: ঔষধের নিরাপত্তা সম্পর্কিত আপডেট
           other: ঔষধের নিরাপত্তা সম্পর্কিত আপডেট

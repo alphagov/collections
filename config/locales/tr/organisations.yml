@@ -74,6 +74,9 @@ tr:
         draft_text:
           one: Taslak metin
           other: Taslak metinler
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Uyuşturucu Güvenliği Bilgilendirmesi
           other: Uyuşturucu Güvenliği Bilgilendirmeleri

@@ -74,6 +74,9 @@ uz:
         draft_text:
           one: Матн лойиҳаси
           other: Матн лойиҳалари
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Дори хавфсизлиги маълумотларини янгилаш
           other: Дори хавфсизлиги маълумотларини янгилашлари

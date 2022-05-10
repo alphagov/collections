@@ -74,6 +74,9 @@ es:
         draft_text:
           one: Borrador
           other: Borradores
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Actualización sobre seguridad de los medicamentos
           other: Actualizaciones sobre seguridad de los medicamentos

@@ -114,6 +114,9 @@ mt:
           many:
           one: Abbozz tat-test
           other: Abbozz tat-tests
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           few:
           many:

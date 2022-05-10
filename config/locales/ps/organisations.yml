@@ -74,6 +74,9 @@ ps:
         draft_text:
           one: مسوده متن
           other: د متن مسوده
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: د مخدره توکو خوندیتوب تازه کول
           other: د مخدره توکو خوندیتوب تازه معلومات

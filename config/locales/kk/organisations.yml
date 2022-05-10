@@ -74,6 +74,9 @@ kk:
         draft_text:
           one: Жоба мәтіні
           other: Жоба мәтіндері
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Дәрілік заттардың қауіпсіздігін жаңарту
           other: Дәрілік заттардың қауіпсіздігін жаңартулар

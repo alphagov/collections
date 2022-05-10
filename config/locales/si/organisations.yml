@@ -74,6 +74,9 @@ si:
         draft_text:
           one: කෙටුම්පත් පෙළ
           other: කෙටුම්පත් පෙළ
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: ඖෂධ ආරක්ෂන යාවත්කාලීනය
           other: ඖෂධ ආරක්ෂන යාවත්කාලීන

@@ -74,6 +74,9 @@ de:
         draft_text:
           one: Entwurf
           other: Entwürfe
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Aktualisierung zur Arzneimittelsicherheit
           other: Aktualisierungen zur Arzneimittelsicherheit

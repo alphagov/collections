@@ -74,6 +74,9 @@ he:
         draft_text:
           one: טיוטה
           other: טיוטות
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: עדכון בטיחות סמים
           other: עדכונים בטיחות סמים

@@ -74,6 +74,9 @@ hy:
         draft_text:
           one: Նախնական տեքստ
           other: Նախնական տեքստեր
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Դեղերի անվտանգության թարմացում
           other: Դեղերի անվտանգության թարմացումներ

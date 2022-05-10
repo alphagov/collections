@@ -74,6 +74,9 @@ tk:
         draft_text:
           one: Taslama teksti
           other: Taslama tekstleri
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Derman hopsuzlygynyň täzelenmesi
           other: Derman hopsuzlygynyň täzelenmeleri

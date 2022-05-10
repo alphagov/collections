@@ -74,6 +74,9 @@ sw:
         draft_text:
           one: Maandishi ya rasimu
           other: Maandishi ya rasimu
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Taarifa ya Usalama wa Dawa
           other: Taarifa za Usalama wa Dawa

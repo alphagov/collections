@@ -74,6 +74,9 @@ el:
         draft_text:
           one: Σχέδιο κειμένου
           other: Σχέδια κειμένων
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Ενημέρωση για την ασφάλεια των φαρμάκων
           other: Ενημερώσεις για την ασφάλεια των φαρμάκων

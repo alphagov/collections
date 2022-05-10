@@ -54,6 +54,9 @@ th:
           other: คอลเล็กชั่น
         draft_text:
           other: ข้อความร่าง
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           other: ข่าวสารความปลอดภัยของยา
         employment_appeal_tribunal_decision:
@@ -260,4 +263,5 @@ th:
       tribunal: ทางศาล
     what_we_do:
     works_with_statement:
+      one:
       other: ทำงานร่วมกับหน่วยงานและหน่วยงานราชการ %{works_with_count} แห่ง

@@ -74,6 +74,9 @@ hu:
         draft_text:
           one: Szövegtervezet
           other: Szövegtervezetek
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Gyógyszerbiztonsági frissítés
           other: Gyógyszerbiztonsági frissítések

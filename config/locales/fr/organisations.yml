@@ -74,6 +74,9 @@ fr:
         draft_text:
           one: Projet de texte
           other: Projets de texte
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Mise à jour de la sécurité des médicaments
           other: Mises à jour de la sécurité des médicaments

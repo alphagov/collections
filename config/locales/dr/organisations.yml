@@ -74,6 +74,9 @@ dr:
         draft_text:
           one: پیش نویس متن
           other: پیش نویس متون
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: آپدیت ایمنی دوا
           other: آپدیت هایی ایمنی دوا

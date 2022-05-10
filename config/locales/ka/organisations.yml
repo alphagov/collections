@@ -74,6 +74,9 @@ ka:
         draft_text:
           one: სამუშაო ტექსტი
           other: სამუშაო ტექსტები
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: ნარკოტიკების უსაფრთხოების განახლება
           other: ნარკოტიკების უსაფრთხოების განახლებები

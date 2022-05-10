@@ -74,6 +74,9 @@ sv:
         draft_text:
           one: Utkast till text
           other: Utkast till texter
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Uppdatering om läkemedelssäkerhet
           other: Uppdateringar om läkemedelssäkerhet

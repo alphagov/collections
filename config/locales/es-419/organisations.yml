@@ -74,6 +74,9 @@ es-419:
         draft_text:
           one: Borrador
           other: Borradores
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Informe sobre seguridad de los medicamentos
           other: Novedades sobre seguridad de los medicamentos

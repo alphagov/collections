@@ -74,6 +74,9 @@ zh-hk:
         draft_text:
           one: 內容
           other: 其他內容
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: 藥物安全更新
           other: 其他藥物安全更新

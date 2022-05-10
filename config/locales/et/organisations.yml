@@ -74,6 +74,9 @@ et:
         draft_text:
           one: Teksti mustand
           other: Teksti mustandid
+        drcf_digital_markets_research:
+          one:
+          other:
         drug_safety_update:
           one: Uimastiohutuse ajakohatamine
           other: Uimastiohutuse ajakohastamised
