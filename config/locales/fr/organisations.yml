@@ -332,5 +332,5 @@ fr:
       tribunal: Tribunal
     what_we_do:
     works_with_statement:
-      other: Travaille avec %{works_with_count} agences et organismes publics
       one: Travaille avec %{works_with_count} organisme public
+      other: Travaille avec %{works_with_count} agences et organismes publics

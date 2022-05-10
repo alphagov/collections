@@ -337,5 +337,5 @@ en:
       tribunal: Tribunal
     what_we_do: What we do
     works_with_statement:
-      other: Works with %{works_with_count} agencies and public bodies
       one: Works with %{works_with_count} public body
+      other: Works with %{works_with_count} agencies and public bodies

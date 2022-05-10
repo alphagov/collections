@@ -332,5 +332,5 @@ ka:
       tribunal: ტრიბუნალი
     what_we_do:
     works_with_statement:
-      other: მუშაობს %{works_with_count} სააგენტოებთან და საჯარო ორგანოებთან
       one: მუშაობს %{works_with_count} საჯარო ორგანოსთან
+      other: მუშაობს %{works_with_count} სააგენტოებთან და საჯარო ორგანოებთან

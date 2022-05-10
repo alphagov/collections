@@ -630,9 +630,9 @@ ar:
       tribunal: هيئة قضائية
     what_we_do:
     works_with_statement:
+      few:
+      many:
+      one: تعمل مع %{works_with_count} هيئة عامة
+      other: تعمل مع %{works_with_count} وكالات وهيئات عامة
       two:
       zero:
-      many:
-      few:
-      other: تعمل مع %{works_with_count} وكالات وهيئات عامة
-      one: تعمل مع %{works_with_count} هيئة عامة

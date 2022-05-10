@@ -334,5 +334,5 @@ hy:
       tribunal: Տրիբունալ
     what_we_do:
     works_with_statement:
-      other: Աշխատում է %{works_wount_count} գործակալությունների և հասարակական կազմակերպությունների հետ
       one: Աշխատում է %{works_wount_count} հասարակական կազմակերպության հետ
+      other: Աշխատում է %{works_wount_count} գործակալությունների և հասարակական կազմակերպությունների հետ

@@ -334,5 +334,5 @@ lv:
       tribunal: Šķīrējtiesa
     what_we_do:
     works_with_statement:
-      other: Sadarbojas ar %{works_with_count} aģentūrām un sabiedriskajām organizācijām
       one: Sadarbojas ar %{works_with_count} sabiedrisko iestādi
+      other: Sadarbojas ar %{works_with_count} aģentūrām un sabiedriskajām organizācijām

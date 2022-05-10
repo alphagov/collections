@@ -480,7 +480,7 @@ hr:
       tribunal: Sud
     what_we_do:
     works_with_statement:
-      many:
       few:
-      other: Surađuje s %{works_with_count} agencijama i javnim tijelima
+      many:
       one: Radi s %{works_with_count} javnim tijelom
+      other: Surađuje s %{works_with_count} agencijama i javnim tijelima

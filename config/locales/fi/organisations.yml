@@ -334,5 +334,5 @@ fi:
       tribunal: Tuomioistuin
     what_we_do:
     works_with_statement:
-      other: Toimii %{works_with_count} virastojen ja julkisten elinten kanssa
       one: Toimii %{works_with_count} julkisen elimen kanssa
+      other: Toimii %{works_with_count} virastojen ja julkisten elinten kanssa

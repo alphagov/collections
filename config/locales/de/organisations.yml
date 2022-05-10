@@ -334,5 +334,5 @@ de:
       tribunal: Gerichtshof
     what_we_do:
     works_with_statement:
-      other: Arbeitet mit %{works_with_count} Agenturen und öffentlichen Einrichtungen
       one: Arbeitet mit %{works_with_count} öffentlichen Einrichtungen
+      other: Arbeitet mit %{works_with_count} Agenturen und öffentlichen Einrichtungen

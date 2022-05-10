@@ -482,7 +482,7 @@ uk:
       tribunal: Арбітражний суд
     what_we_do:
     works_with_statement:
-      many:
       few:
-      other: Працює з %{works_with_count} агентствами та державними органами
+      many:
       one: Працює з %{works_with_count} державним органом
+      other: Працює з %{works_with_count} агентствами та державними органами

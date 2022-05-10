@@ -482,7 +482,7 @@ pl:
       tribunal: Trybunał
     what_we_do:
     works_with_statement:
-      many:
       few:
-      other: Współpracuje z %{works_with_count} agencjami i organami publicznymi
+      many:
       one: Współpracuje z %{works_with_count} organami publicznymi
+      other: Współpracuje z %{works_with_count} agencjami i organami publicznymi

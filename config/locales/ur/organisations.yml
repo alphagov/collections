@@ -334,5 +334,5 @@ ur:
       tribunal: ٹریبیونل
     what_we_do:
     works_with_statement:
-      other: "%{works_with_count} ایجنسیوں اور عوامی دھڑوں کے ساتھ کام کرتا ہے"
       one: "%{works_with_count} عوامی دھڑے کے ساتھ کام کرتا ہے"
+      other: "%{works_with_count} ایجنسیوں اور عوامی دھڑوں کے ساتھ کام کرتا ہے"

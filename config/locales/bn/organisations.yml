@@ -334,5 +334,5 @@ bn:
       tribunal: ট্রাইব্যুনাল
     what_we_do:
     works_with_statement:
-      other: "%{works_with_count} টি এজেন্সি ও সরকারি সংস্থার সাথে কাজ করে"
       one: "%{works_with_count} টি সরকারি সংস্থার সাথে কাজ করে"
+      other: "%{works_with_count} টি এজেন্সি ও সরকারি সংস্থার সাথে কাজ করে"

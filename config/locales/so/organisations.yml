@@ -334,5 +334,5 @@ so:
       tribunal: Maxkamad
     what_we_do:
     works_with_statement:
-      other: Shaqeeya %{works_with_count} wakaaladaha iyo haayadaha dadweyaha
       one: Shaqeeya %{works_with_count} haayadaha dadweynaha
+      other: Shaqeeya %{works_with_count} wakaaladaha iyo haayadaha dadweyaha

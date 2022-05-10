@@ -334,5 +334,5 @@ it:
       tribunal: Tribunale
     what_we_do:
     works_with_statement:
-      other: Lavora con %{works_with_count} agenzie ed enti pubblici
       one: Lavora con %{works_with_count} ente pubblico
+      other: Lavora con %{works_with_count} agenzie ed enti pubblici

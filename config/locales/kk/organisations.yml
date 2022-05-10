@@ -334,5 +334,5 @@ kk:
       tribunal: Сот орны
     what_we_do:
     works_with_statement:
-      other: "%{works_with_count} агенттіктері мен мемлекеттік органдармен жұмыс істейді"
       one: "%{works_with_count} мемлекеттік органмен жұмыс істейді"
+      other: "%{works_with_count} агенттіктері мен мемлекеттік органдармен жұмыс істейді"

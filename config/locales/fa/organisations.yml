@@ -334,5 +334,5 @@ fa:
       tribunal: دادگاه
     what_we_do:
     works_with_statement:
-      other: با آژانس‌ها و نهادهای عمومی %{works_with_count} همکاری می‌کند
       one: با نهاد عمومی %{works_with_count} همکاری می‌کند
+      other: با آژانس‌ها و نهادهای عمومی %{works_with_count} همکاری می‌کند

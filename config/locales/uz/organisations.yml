@@ -334,5 +334,5 @@ uz:
       tribunal: Трибунал
     what_we_do:
     works_with_statement:
-      other: Агентликлар ва давлат органлари %{works_with_count} билан ишлайди
       one: Давлат органлари %{works_with_count} билан ишлайди
+      other: Агентликлар ва давлат органлари %{works_with_count} билан ишлайди

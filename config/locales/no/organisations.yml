@@ -334,5 +334,5 @@
       tribunal: Nemnd
     what_we_do:
     works_with_statement:
-      other: Jobber med %{works_with_count} byråer og offentlige instanser
       one: Jobber med %{works_with_count} offentlig instans
+      other: Jobber med %{works_with_count} byråer og offentlige instanser

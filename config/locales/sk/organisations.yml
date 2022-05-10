@@ -409,5 +409,5 @@ sk:
     what_we_do:
     works_with_statement:
       few:
-      other: Spolupracuje s %{works_with_count} agentúrami a verejnými orgánmi
       one: Pracuje s verejným orgánom %{works_with_count}
+      other: Spolupracuje s %{works_with_count} agentúrami a verejnými orgánmi

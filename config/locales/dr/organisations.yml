@@ -337,5 +337,5 @@ dr:
       tribunal: دادگاه
     what_we_do:
     works_with_statement:
-      other: کار میکند با{works_with_count}%نماینده گی ها و نهاد هایی عامه
       one: کار میکند با{works_with_count}%نهاد عامه
+      other: کار میکند با{works_with_count}%نماینده گی ها و نهاد هایی عامه

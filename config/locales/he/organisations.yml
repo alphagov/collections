@@ -334,5 +334,5 @@ he:
       tribunal: 'בית דין '
     what_we_do:
     works_with_statement:
-      other: עובד עם %{works_with_count} סוכנויות וגופים ציבוריים
       one: עובד עם %{works_with_count} גוף ציבורי
+      other: עובד עם %{works_with_count} סוכנויות וגופים ציבוריים

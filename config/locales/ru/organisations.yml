@@ -480,7 +480,7 @@ ru:
       tribunal: Арбитраж
     what_we_do:
     works_with_statement:
-      many:
       few:
-      other: Работа с %{works_with_count} агенствами и государственными органами
+      many:
       one: Работа с  %{works_with_count} государственным органом
+      other: Работа с %{works_with_count} агенствами и государственными органами

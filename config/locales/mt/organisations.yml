@@ -480,7 +480,7 @@ mt:
       tribunal: Tribunal
     what_we_do:
     works_with_statement:
-      many:
       few:
-      other: Jaħdem ma' %{works_with_count} aġenziji u korpi pubbliċi
+      many:
       one: Jaħdem ma' %{works_with_count} korp pubbliku
+      other: Jaħdem ma' %{works_with_count} aġenziji u korpi pubbliċi

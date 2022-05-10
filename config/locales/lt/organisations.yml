@@ -409,5 +409,5 @@ lt:
     what_we_do:
     works_with_statement:
       few:
-      other: Dirba su %{works_with_count} agentūromis ir viešosiomis įstaigomis
       one: Dirba su %{works_with_count} viešąja įstaiga
+      other: Dirba su %{works_with_count} agentūromis ir viešosiomis įstaigomis

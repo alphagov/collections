@@ -334,5 +334,5 @@ sw:
       tribunal: Mahakama
     what_we_do:
     works_with_statement:
-      other: Hushirikiana na mashirika na mashirika %{works_with_count} ya serikali
       one: Hushirikiana na mashirika %{works_with_count} ya serikali
+      other: Hushirikiana na mashirika na mashirika %{works_with_count} ya serikali

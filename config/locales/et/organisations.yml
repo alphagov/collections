@@ -334,5 +334,5 @@ et:
       tribunal: Kohus
     what_we_do:
     works_with_statement:
-      other: Töötab %{works_with_count} agentuuride ja avaliku sektori asutuses
       one: Töötab %{works_with_count} riigiasutuses
+      other: Töötab %{works_with_count} agentuuride ja avaliku sektori asutuses

@@ -409,5 +409,5 @@ sr:
     what_we_do:
     works_with_statement:
       few:
-      other: Sarađuje sa %{works_with_count} agencija i javnih tela
       one: Sarađuje sa %{works_with_count} javnim telom
+      other: Sarađuje sa %{works_with_count} agencija i javnih tela
