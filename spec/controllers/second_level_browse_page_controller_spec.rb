@@ -49,6 +49,60 @@ RSpec.describe SecondLevelBrowsePageController do
     end
   end
 
+  context "AB test preparation: New browse templates" do
+    let :params do
+      {
+        top_level_slug: "benefits",
+        second_level_slug: "entitlement",
+        b: "anything",
+      }
+    end
+
+    subject { get :show, params: params }
+
+    before do
+      stub_content_store_has_item(
+        "/browse/benefits/entitlement",
+        content_id: "entitlement-content-id",
+        title: "Entitlement",
+        base_path: "/browse/benefits/entitlement",
+        links: {
+          top_level_browse_pages: top_level_browse_pages,
+          second_level_browse_pages: second_level_browse_pages,
+          active_top_level_browse_page: [{
+            content_id: "content-id-for-benefits",
+            title: "Benefits",
+            base_path: "/browse/benefits",
+          }],
+          related_topics: [{ title: "A linked topic", base_path: "/browse/linked-topic" }],
+        },
+        details: details,
+      )
+
+      search_api_has_documents_for_browse_page(
+        "entitlement-content-id",
+        %w[entitlement],
+        page_size: 1000,
+      )
+    end
+
+    describe "GET second_level_browse_page for uncurated topic" do
+      let(:details) { {} }
+
+      it "renders the new_show_a_to_z template" do
+        expect(subject).to render_template(:new_show_a_to_z)
+      end
+    end
+
+    describe "GET second_level_browse_page for curated topic" do
+      let(:details) { { groups: [{ name: "something", contents: ["/something"] }] } }
+
+      it "renders the new_show_curated template" do
+        expect(subject).to render_template(:new_show_curated)
+      end
+    end
+  end
+
   def top_level_browse_pages
     [
       {
