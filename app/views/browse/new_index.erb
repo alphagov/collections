@@ -1,0 +1,50 @@
+<% content_for :title, t("browse.title") %>
+
+<% content_for :meta_tags do %>
+  <%= render "govuk_publishing_components/components/meta_tags", {
+    content_item: {
+      navigation_page_type: "Browse level 0",
+      navigation_list_type: "default",
+      section: "topics",
+    }
+  } %>
+<% end %>
+
+<% content_for :breadcrumbs do %>
+  <%= render "shared/topic_page_breadcrumbs" %>
+<% end %>
+
+<%= render "shared/topic_page_header" do %>
+  <h1 class="topic-page__heading govuk-heading-xl">
+    <%= t("browse.title") %>
+  </h1>
+  <p class="topic-page__description gem-c-lead-paragraph gem-c-lead-paragraph--inverse">
+    <%= t("browse.description") %>
+  </p>
+<% end %>
+
+<%= render "shared/topic_page_cards_container" do %>
+  <%= render "govuk_publishing_components/components/cards", {
+    items: page.top_level_browse_pages.map.with_index do |top_level_browse_page, index|
+      {
+        link: {
+          text: top_level_browse_page.title,
+          path: top_level_browse_page.base_path,
+          data_attributes: {
+            track_category: "browseClicked",
+            track_action: "topicsLink",
+            track_label: top_level_browse_page.base_path,
+            track_dimension: top_level_browse_page.title,
+            track_options: {
+              dimension28: page.top_level_browse_pages.count.to_s,
+              dimension29: top_level_browse_page.title,
+              dimension114: index + 1,
+            },
+          }
+        },
+        description: top_level_browse_page.description,
+      }
+    end,
+    sub_heading_level: 2,
+  } %>
+<% end %>
