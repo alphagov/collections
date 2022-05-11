@@ -6,7 +6,7 @@
   accordion_contents = []
   number_of_accordion_sections = accordions.length
 %>
-<% accordions.each do | section | %>
+<% accordions.each_with_index do | section, index | %>
   <% content = capture do %>
     <%# this element captures an override from the accordion that the last item has margin 0 %>
     <div class="covid__accordion-inner">
@@ -29,7 +29,16 @@
         track_action: "accordionClosed",
         track_label: section["title"],
         track_dimension: number_of_accordion_sections,
-        track_dimension_index: 26
+        track_dimension_index: 26,
+        gtm_event_name: "select_content",
+        gtm_attributes: {
+          gtm_ui_type: 'accordion',
+          gtm_ui_text: section["title"],
+          gtm_ui_index: index + 1,
+          gtm_ui_index_total: number_of_accordion_sections,
+          gtm_ui_section: 'n/a',
+          gtm_ui_state: 'n/a',
+        }
       }
     }
 
@@ -42,9 +51,9 @@
   text: heading,
   padding: heading_padding,
   border_top: border_top,
-  font_size: "m"  
+  font_size: "m"
 } if heading %>
-<div data-module="gem-track-click">
+<div data-module="gem-track-click gtm-click-tracking">
   <div data-module="toggle-attribute">
     <%= render 'govuk_publishing_components/components/accordion', {
       heading_level: 3,
