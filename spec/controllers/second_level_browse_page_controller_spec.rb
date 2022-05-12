@@ -1,5 +1,6 @@
 RSpec.describe SecondLevelBrowsePageController do
   include SearchApiHelpers
+  include GovukAbTesting::RspecHelpers
 
   describe "GET second_level_browse_page" do
     describe "for a valid browse page" do
@@ -49,12 +50,12 @@ RSpec.describe SecondLevelBrowsePageController do
     end
   end
 
-  context "AB test preparation: New browse templates" do
+  context "AB test: New browse templates" do
+    render_views
     let :params do
       {
         top_level_slug: "benefits",
         second_level_slug: "entitlement",
-        b: "anything",
       }
     end
 
@@ -89,16 +90,44 @@ RSpec.describe SecondLevelBrowsePageController do
     describe "GET second_level_browse_page for uncurated topic" do
       let(:details) { {} }
 
-      it "renders the new_show_a_to_z template" do
-        expect(subject).to render_template(:new_show_a_to_z)
+      it "with variant B" do
+        with_variant NewBrowse: "B" do
+          expect(subject).to render_template(:new_show_a_to_z)
+        end
+      end
+
+      it "with variant A" do
+        with_variant NewBrowse: "A" do
+          expect(subject).to render_template(:show)
+        end
+      end
+
+      it "with variant Z" do
+        with_variant NewBrowse: "Z" do
+          expect(subject).to render_template(:show)
+        end
       end
     end
 
     describe "GET second_level_browse_page for curated topic" do
       let(:details) { { groups: [{ name: "something", contents: ["/something"] }] } }
 
-      it "renders the new_show_curated template" do
-        expect(subject).to render_template(:new_show_curated)
+      it "with variant B" do
+        with_variant NewBrowse: "B" do
+          expect(subject).to render_template(:new_show_curated)
+        end
+      end
+
+      it "with variant A" do
+        with_variant NewBrowse: "A" do
+          expect(subject).to render_template(:show)
+        end
+      end
+
+      it "with variant Z" do
+        with_variant NewBrowse: "Z" do
+          expect(subject).to render_template(:show)
+        end
       end
     end
   end
