@@ -6,19 +6,12 @@ class BrowseController < ApplicationController
     @dimension26 = 1
     @dimension27 = page.top_level_browse_pages.count || 0
     setup_content_item_and_navigation_helpers(page)
-    slimmer_template "gem_layout_full_width" if is_variant_b?
-
-    template = is_variant_b? ? :new_index : :index
-
-    render(template, locals: {
-      page: page,
-    })
+    index_html(page)
   end
 
   def show
     page = MainstreamBrowsePage.find("/browse/#{params[:top_level_slug]}")
     setup_content_item_and_navigation_helpers(page)
-    slimmer_template "gem_layout_full_width" if is_variant_b?
 
     respond_to do |f|
       f.html do
@@ -38,18 +31,22 @@ class BrowseController < ApplicationController
 
 private
 
-  # NOTE: This is just to fake an A/B test - replace with proper A/B test code.
-  # Add a query string with b=true to the URL to force variant B.
-  def is_variant_b?
-    params["b"].present?
+  def show_html(page)
+    template = :show
+    if new_browse_variant_b?
+      slimmer_template "gem_layout_full_width"
+      template = :new_show
+    end
+    render template, locals: { page: page }
   end
 
-  def show_html(page)
-    template = is_variant_b? ? :new_show : :show
-
-    render(template, locals: {
-      page: page,
-    })
+  def index_html(page)
+    template = :index
+    if new_browse_variant_b?
+      slimmer_template "gem_layout_full_width"
+      template = :new_index
+    end
+    render template, locals: { page: page }
   end
 
   def second_level_browse_pages_partial(page)

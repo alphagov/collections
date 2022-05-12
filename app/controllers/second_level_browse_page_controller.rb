@@ -7,7 +7,6 @@ class SecondLevelBrowsePageController < ApplicationController
     @dimension26 = count_link_sections(page)
     @dimension27 = count_total_links(page)
     @study_url = study_url_for(request.path)
-    slimmer_template "gem_layout_full_width" if is_variant_b?
 
     respond_to do |f|
       f.html do
@@ -26,30 +25,19 @@ class SecondLevelBrowsePageController < ApplicationController
 
 private
 
-  # NOTE: This is just to fake an A/B test - replace with proper A/B test code.
-  # Add a query string with b=true to the URL to force variant B.
-  def is_variant_b?
-    params["b"].present?
-  end
-
   def show_html
-    # The defauly template should be 'show' if there's no A/B variant set
     template = :show
 
-    # If the A/B test requires the new layout, then we need to see whether the
-    # page is a curated list or a A to Z list and set the correct template:
-    if is_variant_b? && page.lists.curated?
-      template = :new_show_curated
+    if new_browse_variant_b?
+      slimmer_template "gem_layout_full_width"
+      template = if page.lists.curated?
+                   :new_show_curated
+                 else
+                   :new_show_a_to_z
+                 end
     end
 
-    if is_variant_b? && !page.lists.curated?
-      template = :new_show_a_to_z
-    end
-
-    render(template, locals: {
-      page: page,
-      meta_section: meta_section,
-    })
+    render(template, locals: { page: page, meta_section: meta_section })
   end
 
   def meta_section

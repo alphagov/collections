@@ -1,4 +1,6 @@
 RSpec.describe BrowseController do
+  include GovukAbTesting::RspecHelpers
+
   describe "GET index" do
     before do
       stub_content_store_has_item(
@@ -45,7 +47,8 @@ RSpec.describe BrowseController do
     end
   end
 
-  context "AB test preparation: New browse templates" do
+  context "AB test: New browse templates" do
+    render_views
     describe "GET index" do
       before do
         stub_content_store_has_item(
@@ -56,10 +59,24 @@ RSpec.describe BrowseController do
         )
       end
 
-      subject { get :index, params: { b: "anything" } }
+      subject { get :index }
 
-      it "renders the new_index template" do
-        expect(subject).to render_template(:new_index)
+      it "with variant B" do
+        with_variant NewBrowse: "B" do
+          expect(subject).to render_template(:new_index)
+        end
+      end
+
+      it "with variant A" do
+        with_variant NewBrowse: "A" do
+          expect(subject).to render_template(:index)
+        end
+      end
+
+      it "with variant Z" do
+        with_variant NewBrowse: "Z" do
+          expect(subject).to render_template(:index)
+        end
       end
     end
 
@@ -68,6 +85,7 @@ RSpec.describe BrowseController do
         stub_content_store_has_item(
           "/browse/benefits",
           base_path: "/browse/benefits",
+          title: "Benefits",
           links: {
             top_level_browse_pages: top_level_browse_pages,
             second_level_browse_pages: second_level_browse_pages,
@@ -75,10 +93,24 @@ RSpec.describe BrowseController do
         )
       end
 
-      subject { get :show, params: { top_level_slug: "benefits", b: "anything" } }
+      subject { get :show, params: { top_level_slug: "benefits" } }
 
-      it "renders the new_show template" do
-        expect(subject).to render_template(:new_show)
+      it "with variant B" do
+        with_variant NewBrowse: "B" do
+          expect(subject).to render_template(:new_show)
+        end
+      end
+
+      it "with variant A" do
+        with_variant NewBrowse: "A" do
+          expect(subject).to render_template(:show)
+        end
+      end
+
+      it "with variant Z" do
+        with_variant NewBrowse: "Z" do
+          expect(subject).to render_template(:show)
+        end
       end
     end
   end
