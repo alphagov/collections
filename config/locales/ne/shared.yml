@@ -6,7 +6,7 @@ ne:
       prefix:
       title:
     get_emails:
-    language_direction:
-    language_name:
+    language_direction: ltr
+    language_name: नेपाली
     topics:
       title:
