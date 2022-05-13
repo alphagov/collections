@@ -7,6 +7,6 @@ fi:
       title: Selaa GOV.UK
     get_emails: Hanki sähköpostit tähän aiheeseen
     language_direction: ltr
-    language_name: Finnish
+    language_name: suomi
     topics:
       title: "%{title}: yksityiskohtaisia tietoja"
