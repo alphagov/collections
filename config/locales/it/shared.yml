@@ -7,6 +7,6 @@ it:
       title: Visita GOV.UK
     get_emails: Ricevi e-mail su questo argomento
     language_direction: ltr
-    language_name: Inglese
+    language_name: Italiano
     topics:
       title: "%{title}: informazioni dettagliate"
