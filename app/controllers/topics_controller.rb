@@ -1,6 +1,4 @@
 class TopicsController < ApplicationController
-  include RecruitmentBannerHelper
-
   def index
     topic = Topic.find(request.path)
     setup_content_item_and_navigation_helpers(topic)

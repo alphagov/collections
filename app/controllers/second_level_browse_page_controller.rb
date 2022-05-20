@@ -1,12 +1,10 @@
 class SecondLevelBrowsePageController < ApplicationController
-  include RecruitmentBannerHelper
   enable_request_formats show: [:json]
 
   def show
     setup_content_item_and_navigation_helpers(page)
     @dimension26 = count_link_sections(page)
     @dimension27 = count_total_links(page)
-    @study_url = study_url_for(request.path)
 
     respond_to do |f|
       f.html do
