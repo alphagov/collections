@@ -1,15 +1,8 @@
 require "integration_spec_helper"
-require "govuk-content-schema-test-helpers"
-
-GovukContentSchemaTestHelpers.configure do |config|
-  config.schema_type = "frontend" # or 'publisher_v2'
-  config.project_root = Rails.root
-end
 
 RSpec.feature "Step by step nav pages" do
   before do
-    sample = GovukContentSchemaTestHelpers::Examples.new.get("step_by_step_nav", "learn_to_drive_a_car")
-    content_item = JSON.parse(sample)
+    content_item = GovukSchemas::Example.find("step_by_step_nav", example_name: "learn_to_drive_a_car")
     stub_content_store_has_item(content_item["base_path"], content_item)
 
     visit content_item["base_path"]
