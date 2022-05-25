@@ -55,10 +55,22 @@
 } if heading %>
 <div data-module="gem-track-click gtm-click-tracking">
   <div data-module="toggle-attribute">
+    <%
+      show_all_attributes = {
+        type: "accordion",
+        index: 0,
+        "index-total": number_of_accordion_sections,
+        section: "n/a"
+      }
+    %>
     <%= render 'govuk_publishing_components/components/accordion', {
       heading_level: 3,
       data_attributes: {
         module: "govuk-accordion"
+      },
+      data_attributes_show_all: {
+        "gtm-event-name": "select_content",
+        "gtm-attributes": show_all_attributes.to_json
       },
       items: accordion_contents,
       margin_bottom: 3
