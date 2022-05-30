@@ -9,6 +9,7 @@ RSpec.feature "Topical Event pages" do
       "description" => "This event is happening soon",
       "details" => {
         "body" => "This is a very important topical event.",
+        "end_date" => "2016-04-28T00:00:00+00:00",
       },
     }
   end
@@ -35,5 +36,23 @@ RSpec.feature "Topical Event pages" do
   it "sets the body text" do
     visit base_path
     expect(page).to have_text(content_item.dig("details", "body"))
+  end
+
+  context "when the event is current" do
+    it "does not show the archived text" do
+      Timecop.freeze("2016-04-18") do
+        visit base_path
+        expect(page).not_to have_text("Archived")
+      end
+    end
+  end
+
+  context "when the event is archived" do
+    it "shows the archived text" do
+      Timecop.freeze("2016-05-18") do
+        visit base_path
+        expect(page).to have_text("Archived")
+      end
+    end
   end
 end

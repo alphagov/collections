@@ -7,6 +7,7 @@ RSpec.describe TopicalEvent do
       "description" => "This event is happening soon",
       "details" => {
         "body" => "This is a very important topical event.",
+        "end_date" => "2016-04-28T00:00:00+00:00",
       },
     }
   end
@@ -23,5 +24,21 @@ RSpec.describe TopicalEvent do
 
   it "show have body text" do
     expect(topical_event.body).to eq("This is a very important topical event.")
+  end
+
+  context "when the event is current" do
+    it "does not mark as archived" do
+      Timecop.freeze("2016-04-18") do
+        expect(topical_event.archived?).to be false
+      end
+    end
+  end
+
+  context "when the event is archived" do
+    it "shows the archived text" do
+      Timecop.freeze("2016-05-18") do
+        expect(topical_event.archived?).to be true
+      end
+    end
   end
 end

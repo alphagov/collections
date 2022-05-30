@@ -8,6 +8,7 @@
   <div class="govuk-grid-column-two-thirds">
     <%= render "govuk_publishing_components/components/title", {
       title: @topical_event.title,
+      context: (I18n.t("topical_events.archived") if @topical_event.archived?)
     } %>
 
     <%= render "govuk_publishing_components/components/lead_paragraph", {
