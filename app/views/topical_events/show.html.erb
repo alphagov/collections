@@ -1,5 +1,9 @@
+<% content_for :title, @topical_event.title %>
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <%= render partial: 'header' %>
+    <%= render "govuk_publishing_components/components/title", {
+      title: @topical_event.title,
+    } %>
   </div>
 </div>
