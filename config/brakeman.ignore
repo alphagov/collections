@@ -3,47 +3,6 @@
     {
       "warning_type": "Cross-Site Scripting",
       "warning_code": 2,
-      "fingerprint": "344ea763c233c1799950725baf2a9cd55fca8ccb96a0e67af99fbaee080b4487",
-      "check_name": "CrossSiteScripting",
-      "message": "Unescaped model attribute",
-      "file": "app/views/roles/_organisations.html.erb",
-      "line": 4,
-      "link": "https://brakemanscanner.org/docs/warning_types/cross_site_scripting",
-      "code": "Role.find!(request.path).organisations.map do\n link_to(organisation[\"title\"], organisation[\"base_path\"])\n end.to_sentence",
-      "render_path": [
-        {
-          "type": "controller",
-          "class": "RolesController",
-          "method": "show",
-          "line": 7,
-          "file": "app/controllers/roles_controller.rb",
-          "rendered": {
-            "name": "roles/show",
-            "file": "app/views/roles/show.html.erb"
-          }
-        },
-        {
-          "type": "template",
-          "name": "roles/show",
-          "line": 6,
-          "file": "app/views/roles/show.html.erb",
-          "rendered": {
-            "name": "roles/_organisations",
-            "file": "app/views/roles/_organisations.html.erb"
-          }
-        }
-      ],
-      "location": {
-        "type": "template",
-        "template": "roles/_organisations"
-      },
-      "user_input": "Role.find!(request.path).organisations",
-      "confidence": "Weak",
-      "note": "We trust the content from the content-store."
-    },
-    {
-      "warning_type": "Cross-Site Scripting",
-      "warning_code": 2,
       "fingerprint": "6839f0707a62a6e7efbfc88e217576c072b74172a2e4bd09babf4481c0c0b657",
       "check_name": "CrossSiteScripting",
       "message": "Unescaped model attribute",
@@ -97,7 +56,7 @@
           "type": "controller",
           "class": "OrganisationsController",
           "method": "court",
-          "line": 37,
+          "line": 39,
           "file": "app/controllers/organisations_controller.rb",
           "rendered": {
             "name": "organisations/court",
@@ -219,7 +178,7 @@
         {
           "type": "template",
           "name": "step_nav/show",
-          "line": 3,
+          "line": 2,
           "file": "app/views/step_nav/show.html.erb",
           "rendered": {
             "name": "step_nav/_structured_data",
@@ -400,6 +359,6 @@
       "note": "This comes from the content store and we trust the data there."
     }
   ],
-  "updated": "2020-07-21 17:06:24 +0100",
-  "brakeman_version": "4.8.2"
+  "updated": "2022-05-30 13:49:58 +0000",
+  "brakeman_version": "5.2.2"
 }
