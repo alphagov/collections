@@ -17,4 +17,8 @@ class TopicalEvent
   def description
     @content_item.content_item_data["description"]
   end
+
+  def body
+    @content_item.content_item_data.dig("details", "body")
+  end
 end

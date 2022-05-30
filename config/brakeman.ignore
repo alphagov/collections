@@ -350,6 +350,37 @@
     },
     {
       "warning_type": "Cross-Site Scripting",
+      "warning_code": 2,
+      "fingerprint": "db6929b90a4cde731a5169a155241f5be0b4e9dd39ca340009d598f6b54b1938",
+      "check_name": "CrossSiteScripting",
+      "message": "Unescaped model attribute",
+      "file": "app/views/topical_events/show.html.erb",
+      "line": 20,
+      "link": "https://brakemanscanner.org/docs/warning_types/cross_site_scripting",
+      "code": "TopicalEvent.find!(request.path).body",
+      "render_path": [
+        {
+          "type": "controller",
+          "class": "TopicalEventsController",
+          "method": "show",
+          "line": 5,
+          "file": "app/controllers/topical_events_controller.rb",
+          "rendered": {
+            "name": "topical_events/show",
+            "file": "app/views/topical_events/show.html.erb"
+          }
+        }
+      ],
+      "location": {
+        "type": "template",
+        "template": "topical_events/show"
+      },
+      "user_input": null,
+      "confidence": "Medium",
+      "note": ""
+    },
+    {
+      "warning_type": "Cross-Site Scripting",
       "warning_code": 84,
       "fingerprint": "fcdb8d748855278e7cb8d9639a2f0a4fd446d022d744162a440d2d967d0a2ae3",
       "check_name": "RenderInline",
@@ -390,6 +421,6 @@
       "note": "This comes from the content store and we trust the data there."
     }
   ],
-  "updated": "2022-05-30 14:29:48 +0000",
+  "updated": "2022-05-30 14:30:31 +0000",
   "brakeman_version": "5.2.2"
 }

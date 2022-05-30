@@ -14,5 +14,10 @@
       text: @topical_event.description,
       margin_bottom: 8,
     } %>
+
+    <%= render "govuk_publishing_components/components/govspeak", {
+      } do %>
+        <%= @topical_event.body&.html_safe %>
+    <% end %>
   </div>
 </div>
