@@ -6,6 +6,7 @@ RSpec.feature "Topical Event pages" do
     {
       "base_path" => base_path,
       "title" => "Something very topical",
+      "description" => "This event is happening soon",
     }
   end
 
@@ -16,5 +17,15 @@ RSpec.feature "Topical Event pages" do
   it "sets the page title" do
     visit base_path
     expect(page).to have_title("#{content_item['title']} - GOV.UK")
+  end
+
+  it "sets the page description" do
+    visit base_path
+    expect(page).to have_text(content_item["description"])
+  end
+
+  it "sets the page meta description" do
+    visit base_path
+    expect(page).to have_selector("meta[name='description'][content='#{content_item['description']}']", visible: :hidden)
   end
 end

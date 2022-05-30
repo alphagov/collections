@@ -4,6 +4,7 @@ RSpec.describe TopicalEvent do
     {
       "base_path" => base_path,
       "title" => "Something very topical",
+      "description" => "This event is happening soon",
     }
   end
   let(:content_item) { ContentItem.new(api_data) }
@@ -11,5 +12,9 @@ RSpec.describe TopicalEvent do
 
   it "should have a title" do
     expect(topical_event.title).to eq("Something very topical")
+  end
+
+  it "should have a description" do
+    expect(topical_event.description).to eq("This event is happening soon")
   end
 end
