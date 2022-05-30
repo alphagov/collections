@@ -4,10 +4,12 @@ RSpec.feature "Topical Event pages" do
   let(:base_path) { "/government/topical-events/something-very-topical" }
   let(:content_item) do
     {
+      "about_page_link_text" => "Read more about this event",
       "base_path" => base_path,
       "title" => "Something very topical",
       "description" => "This event is happening soon",
       "details" => {
+        "about_page_link_text" => "Read more about this event",
         "body" => "This is a very important topical event.",
         "end_date" => "2016-04-28T00:00:00+00:00",
       },
@@ -54,5 +56,10 @@ RSpec.feature "Topical Event pages" do
         expect(page).to have_text("Archived")
       end
     end
+  end
+
+  it "includes a link to the about page" do
+    visit base_path
+    expect(page).to have_link(content_item.dig("details", "about_page_link_text"), href: "#{base_path}/about")
   end
 end

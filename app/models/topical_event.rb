@@ -33,4 +33,12 @@ class TopicalEvent
       false
     end
   end
+
+  def about_page_url
+    "#{@content_item.content_item_data['base_path']}/about"
+  end
+
+  def about_page_link_text
+    @content_item.content_item_data.dig("details", "about_page_link_text")
+  end
 end

@@ -6,6 +6,7 @@ RSpec.describe TopicalEvent do
       "title" => "Something very topical",
       "description" => "This event is happening soon",
       "details" => {
+        "about_page_link_text" => "Read more about this event",
         "body" => "This is a very important topical event.",
         "end_date" => "2016-04-28T00:00:00+00:00",
       },
@@ -40,5 +41,13 @@ RSpec.describe TopicalEvent do
         expect(topical_event.archived?).to be true
       end
     end
+  end
+
+  it "should have about link link" do
+    expect(topical_event.about_page_url).to eq("#{base_path}/about")
+  end
+
+  it "should have about link text" do
+    expect(topical_event.about_page_link_text).to eq("Read more about this event")
   end
 end
