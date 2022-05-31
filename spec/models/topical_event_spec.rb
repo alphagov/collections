@@ -9,6 +9,18 @@ RSpec.describe TopicalEvent do
         "about_page_link_text" => "Read more about this event",
         "body" => "This is a very important topical event.",
         "end_date" => "2016-04-28T00:00:00+00:00",
+        "social_media_links" => [
+          {
+            "href" => "https://www.facebook.com/a-topical-event",
+            "title" => "Facebook",
+            "service_type" => "facebook",
+          },
+          {
+            "href" => "https://www.twitter.com/a-topical-event",
+            "title" => "Twitter",
+            "service_type" => "twitter",
+          },
+        ],
       },
     }
   end
@@ -49,5 +61,20 @@ RSpec.describe TopicalEvent do
 
   it "should have about link text" do
     expect(topical_event.about_page_link_text).to eq("Read more about this event")
+  end
+
+  it "should map the social media links" do
+    expect(topical_event.social_media_links).to eq([
+      {
+        href: "https://www.facebook.com/a-topical-event",
+        text: "Facebook",
+        icon: "facebook",
+      },
+      {
+        href: "https://www.twitter.com/a-topical-event",
+        text: "Twitter",
+        icon: "twitter",
+      },
+    ])
   end
 end

@@ -41,4 +41,14 @@ class TopicalEvent
   def about_page_link_text
     @content_item.content_item_data.dig("details", "about_page_link_text")
   end
+
+  def social_media_links
+    @content_item.content_item_data.dig("details", "social_media_links").map do |social_media_link|
+      {
+        href: social_media_link["href"],
+        text: social_media_link["title"],
+        icon: social_media_link["service_type"],
+      }
+    end
+  end
 end

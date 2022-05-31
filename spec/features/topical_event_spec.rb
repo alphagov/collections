@@ -12,6 +12,18 @@ RSpec.feature "Topical Event pages" do
         "about_page_link_text" => "Read more about this event",
         "body" => "This is a very important topical event.",
         "end_date" => "2016-04-28T00:00:00+00:00",
+        "social_media_links" => [
+          {
+            "href" => "https://www.facebook.com/a-topical-event",
+            "title" => "Facebook",
+            "service_type" => "facebook",
+          },
+          {
+            "href" => "https://www.twitter.com/a-topical-event",
+            "title" => "Twitter",
+            "service_type" => "twitter",
+          },
+        ],
       },
     }
   end
@@ -61,5 +73,11 @@ RSpec.feature "Topical Event pages" do
   it "includes a link to the about page" do
     visit base_path
     expect(page).to have_link(content_item.dig("details", "about_page_link_text"), href: "#{base_path}/about")
+  end
+
+  it "includes links to the social media accounts" do
+    visit base_path
+    expect(page).to have_link("Facebook", href: "https://www.facebook.com/a-topical-event")
+    expect(page).to have_link("Twitter", href: "https://www.twitter.com/a-topical-event")
   end
 end
