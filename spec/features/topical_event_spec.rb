@@ -1,32 +1,8 @@
 require "integration_spec_helper"
 
 RSpec.feature "Topical Event pages" do
-  let(:base_path) { "/government/topical-events/something-very-topical" }
-  let(:content_item) do
-    {
-      "about_page_link_text" => "Read more about this event",
-      "base_path" => base_path,
-      "title" => "Something very topical",
-      "description" => "This event is happening soon",
-      "details" => {
-        "about_page_link_text" => "Read more about this event",
-        "body" => "This is a very important topical event.",
-        "end_date" => "2016-04-28T00:00:00+00:00",
-        "social_media_links" => [
-          {
-            "href" => "https://www.facebook.com/a-topical-event",
-            "title" => "Facebook",
-            "service_type" => "facebook",
-          },
-          {
-            "href" => "https://www.twitter.com/a-topical-event",
-            "title" => "Twitter",
-            "service_type" => "twitter",
-          },
-        ],
-      },
-    }
-  end
+  let(:content_item) { fetch_fixture("topical_event") }
+  let(:base_path) { content_item["base_path"] }
 
   before do
     stub_content_store_has_item(base_path, content_item)
@@ -79,5 +55,14 @@ RSpec.feature "Topical Event pages" do
     visit base_path
     expect(page).to have_link("Facebook", href: "https://www.facebook.com/a-topical-event")
     expect(page).to have_link("Twitter", href: "https://www.twitter.com/a-topical-event")
+  end
+
+private
+
+  def fetch_fixture(filename)
+    json = File.read(
+      Rails.root.join("spec", "fixtures", "content_store", "#{filename}.json"),
+    )
+    JSON.parse(json)
   end
 end

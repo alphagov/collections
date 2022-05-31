@@ -1,30 +1,7 @@
 RSpec.describe TopicalEvent do
-  let(:base_path) { "/government/topical-events/something-very-topical" }
-  let(:api_data) do
-    {
-      "base_path" => base_path,
-      "title" => "Something very topical",
-      "description" => "This event is happening soon",
-      "details" => {
-        "about_page_link_text" => "Read more about this event",
-        "body" => "This is a very important topical event.",
-        "end_date" => "2016-04-28T00:00:00+00:00",
-        "social_media_links" => [
-          {
-            "href" => "https://www.facebook.com/a-topical-event",
-            "title" => "Facebook",
-            "service_type" => "facebook",
-          },
-          {
-            "href" => "https://www.twitter.com/a-topical-event",
-            "title" => "Twitter",
-            "service_type" => "twitter",
-          },
-        ],
-      },
-    }
-  end
+  let(:api_data) { fetch_fixture("topical_event") }
   let(:content_item) { ContentItem.new(api_data) }
+  let(:base_path) { content_item.base_path }
   let(:topical_event) { described_class.new(content_item) }
 
   it "should have a title" do
@@ -76,5 +53,14 @@ RSpec.describe TopicalEvent do
         icon: "twitter",
       },
     ])
+  end
+
+private
+
+  def fetch_fixture(filename)
+    json = File.read(
+      Rails.root.join("spec", "fixtures", "content_store", "#{filename}.json"),
+    )
+    JSON.parse(json)
   end
 end
