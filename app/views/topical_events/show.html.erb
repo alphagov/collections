@@ -33,4 +33,26 @@
       } %>
     <% end %>
   </div>
+
+  <div class="govuk-grid-column-full">
+    <% if @topical_event.ordered_featured_documents %>
+      <%= render "govuk_publishing_components/components/heading", {
+        text: I18n.t("topical_events.featured"),
+        padding: true,
+        font_size: "l",
+        border_top: 2,
+        margin_bottom: 4,
+      } %>
+
+      <% @topical_event.ordered_featured_documents.in_groups_of(3, false) do |row| %>
+        <div class="govuk-grid-row">
+          <% row.each do |document| %>
+            <div class="govuk-grid-column-one-third">
+              <%= render "govuk_publishing_components/components/image_card", document %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>
