@@ -2,6 +2,10 @@
 en:
   topical_events:
     archived: "(Archived)"
+    consultations: "Consultations"
+    documents: "Documents"
+    announcements: "Announcements"
     featured: "Featured"
     headings:
       travel_advice: "Travel Advice"
+    publications: "Publications"

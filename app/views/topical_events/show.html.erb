@@ -58,6 +58,58 @@
         </div>
       <% end %>
     <% end %>
+
+    <% if @topical_event.publications.any? || @topical_event.consultations.any? || @topical_event.announcements.any? %>
+      <%= render "govuk_publishing_components/components/heading", {
+        text: I18n.t("topical_events.documents"),
+        padding: true,
+        font_size: "l",
+        border_top: 2,
+        margin_bottom: 3,
+      } %>
+    <% end %>
+
+    <% if @topical_event.publications.any? %>
+      <%= render "govuk_publishing_components/components/heading", {
+        text: I18n.t("topical_events.publications"),
+        padding: true,
+        font_size: 27,
+        margin_bottom: 3,
+      } %>
+
+      <%= render "govuk_publishing_components/components/document_list", {
+        items: @topical_event.publications,
+        margin_bottom: 6,
+      } %>
+    <% end %>
+
+    <% if @topical_event.consultations.any? %>
+      <%= render "govuk_publishing_components/components/heading", {
+        text: I18n.t("topical_events.consultations"),
+        padding: true,
+        font_size: 27,
+        margin_bottom: 3,
+      } %>
+
+      <%= render "govuk_publishing_components/components/document_list", {
+        items: @topical_event.consultations,
+        margin_bottom: 6,
+      } %>
+    <% end %>
+
+    <% if @topical_event.announcements.any? %>
+      <%= render "govuk_publishing_components/components/heading", {
+        text: I18n.t("topical_events.announcements"),
+        padding: true,
+        font_size: 27,
+        margin_bottom: 3,
+      } %>
+
+      <%= render "govuk_publishing_components/components/document_list", {
+        items: @topical_event.announcements,
+        margin_bottom: 6,
+      } %>
+    <% end %>
   </div>
 
   <div class="govuk-grid-column-two-thirds">
