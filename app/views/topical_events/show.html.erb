@@ -26,5 +26,11 @@
         <%= link_to(@topical_event.about_page_link_text, @topical_event.about_page_url, html_options: { class: "govuk-link" }) %>
       </p>
     <% end %>
+
+    <% if @topical_event.social_media_links %>
+      <%= render "govuk_publishing_components/components/share_links", {
+        links: @topical_event.social_media_links,
+      } %>
+    <% end %>
   </div>
 </div>

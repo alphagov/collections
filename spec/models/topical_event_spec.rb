@@ -1,18 +1,7 @@
 RSpec.describe TopicalEvent do
-  let(:base_path) { "/government/topical-events/something-very-topical" }
-  let(:api_data) do
-    {
-      "base_path" => base_path,
-      "title" => "Something very topical",
-      "description" => "This event is happening soon",
-      "details" => {
-        "about_page_link_text" => "Read more about this event",
-        "body" => "This is a very important topical event.",
-        "end_date" => "2016-04-28T00:00:00+00:00",
-      },
-    }
-  end
+  let(:api_data) { fetch_fixture("topical_event") }
   let(:content_item) { ContentItem.new(api_data) }
+  let(:base_path) { content_item.base_path }
   let(:topical_event) { described_class.new(content_item) }
 
   it "should have a title" do
@@ -49,5 +38,29 @@ RSpec.describe TopicalEvent do
 
   it "should have about link text" do
     expect(topical_event.about_page_link_text).to eq("Read more about this event")
+  end
+
+  it "should map the social media links" do
+    expect(topical_event.social_media_links).to eq([
+      {
+        href: "https://www.facebook.com/a-topical-event",
+        text: "Facebook",
+        icon: "facebook",
+      },
+      {
+        href: "https://www.twitter.com/a-topical-event",
+        text: "Twitter",
+        icon: "twitter",
+      },
+    ])
+  end
+
+private
+
+  def fetch_fixture(filename)
+    json = File.read(
+      Rails.root.join("spec", "fixtures", "content_store", "#{filename}.json"),
+    )
+    JSON.parse(json)
   end
 end

@@ -1,0 +1,22 @@
+{
+  "base_path": "/government/topical-events/something-very-topical",
+  "title": "Something very topical",
+  "description": "This event is happening soon",
+  "details": {
+    "about_page_link_text": "Read more about this event",
+    "body": "This is a very important topical event.",
+    "end_date": "2016-04-28T00:00:00+00:00",
+    "social_media_links": [
+      {
+        "href": "https://www.facebook.com/a-topical-event",
+        "title": "Facebook",
+        "service_type": "facebook"
+      },
+      {
+        "href": "https://www.twitter.com/a-topical-event",
+        "title": "Twitter",
+        "service_type": "twitter"
+      }
+    ]
+  }
+}
