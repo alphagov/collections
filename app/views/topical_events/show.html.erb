@@ -1,0 +1,30 @@
+<% content_for :title, @topical_event.title %>
+
+<% content_for :meta_tags do %>
+  <%= tag("meta", name: "description", content: @topical_event.description) if @topical_event.description %>
+<% end %>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <%= render "govuk_publishing_components/components/title", {
+      title: @topical_event.title,
+      context: (I18n.t("topical_events.archived") if @topical_event.archived?)
+    } %>
+
+    <%= render "govuk_publishing_components/components/lead_paragraph", {
+      text: @topical_event.description,
+      margin_bottom: 8,
+    } %>
+
+    <%= render "govuk_publishing_components/components/govspeak", {
+      } do %>
+        <%= @topical_event.body&.html_safe %>
+    <% end %>
+
+    <% if @topical_event.about_page_link_text %>
+      <p class="govuk-body">
+        <%= link_to(@topical_event.about_page_link_text, @topical_event.about_page_url, html_options: { class: "govuk-link" }) %>
+      </p>
+    <% end %>
+  </div>
+</div>
