@@ -51,4 +51,16 @@ class TopicalEvent
       }
     end
   end
+
+  def ordered_featured_documents
+    @content_item.content_item_data.dig("details", "ordered_featured_documents").map do |document|
+      {
+        href: document["href"],
+        image_src: document.dig("image", "url"),
+        image_alt: document.dig("image", "alt_text"),
+        heading_text: document["title"],
+        description: document["summary"],
+      }
+    end
+  end
 end
