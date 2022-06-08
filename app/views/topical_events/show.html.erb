@@ -16,6 +16,15 @@
       margin_bottom: 8,
     } %>
 
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <% if @topical_event.organisations %>
+      <%= render "govuk_publishing_components/components/metadata", {
+        other: {
+          "Organisations": sanitize(array_of_links_to_organisations(@topical_event.organisations).to_sentence)
+        }
+      } %>
+
     <%= render "govuk_publishing_components/components/govspeak", {
       } do %>
         <%= @topical_event.body&.html_safe %>
