@@ -20,6 +20,16 @@
       <%= image_tag(@topical_event.image_url, alt: @topical_event.image_alt_text) %>
     <% end %>
 
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <% if @topical_event.organisations %>
+      <%= render "govuk_publishing_components/components/metadata", {
+        other: {
+          "Organisations": sanitize(array_of_links_to_organisations(@topical_event.organisations).to_sentence)
+        }
+      } %>
+    <% end %>
+
     <%= render "govuk_publishing_components/components/govspeak", {
       } do %>
         <%= @topical_event.body&.html_safe %>
@@ -117,6 +127,35 @@
           }
         end
       } %>
+    <% end %>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <% if @topical_event.organisations %>
+      <div class="organisations">
+        <%= render "govuk_publishing_components/components/heading", {
+          text: t("topical_events.organisations"),
+          font_size: "l",
+          margin_bottom: 4,
+          padding: true,
+          border_top: 2,
+        } %>
+
+        <div class="govuk-grid-row">
+          <% @topical_event.organisations.each do |organisation| %>
+            <div class="govuk-grid-column-one-quarter govuk-!-padding-bottom-7">
+              <%= render "govuk_publishing_components/components/organisation_logo", {
+                organisation: {
+                  name: organisation[:title],
+                  url: organisation[:base_path],
+                  brand: organisation[:brand],
+                  crest: organisation[:crest],
+                }
+              } %>
+            </div>
+          <% end %>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>

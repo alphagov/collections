@@ -134,6 +134,17 @@ RSpec.describe TopicalEvent do
     end
   end
 
+  it "should map the organisations" do
+    expect(topical_event.organisations).to eq([
+      {
+        base_path: "government/organisations/department-for-topical-affairs",
+        title: "Department of topical affairs",
+        crest: "single-identity",
+        brand: "department-for-topical-affairs",
+      },
+    ])
+  end
+
 private
 
   def fetch_fixture(filename)

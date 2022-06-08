@@ -2,6 +2,20 @@
   "base_path": "/government/topical-events/something-very-topical",
   "title": "Something very topical",
   "description": "This event is happening soon",
+  "links": {
+    "organisations": [
+      {
+        "title": "Department of topical affairs",
+        "base_path": "government/organisations/department-for-topical-affairs",
+        "details": {
+          "logo": {
+            "crest": "single-identity"
+          },
+          "brand": "department-for-topical-affairs"
+        }
+      }
+    ]
+  },
   "details": {
     "about_page_link_text": "Read more about this event",
     "body": "This is a very important topical event.",

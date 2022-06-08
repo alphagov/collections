@@ -114,4 +114,15 @@ class TopicalEvent
   def detailed_guidance
     @detailed_guidance ||= @documents_service.fetch_related_documents_with_format({ filter_format: "detailed_guidance" })
   end
+
+  def organisations
+    @content_item.content_item_data.dig("links", "organisations")&.map do |organisation|
+      {
+        base_path: organisation["base_path"],
+        title: organisation["title"],
+        crest: organisation.dig("details", "logo", "crest"),
+        brand: organisation.dig("details", "brand"),
+      }
+    end
+  end
 end
