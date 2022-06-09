@@ -24,4 +24,10 @@ module OrganisationHelper
       end,
     }
   end
+
+  def array_of_links_to_organisations(organisations)
+    organisations.map do |organisation|
+      link_to organisation[:title], organisation, class: "organisation-link govuk-link"
+    end
+  end
 end

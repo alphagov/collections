@@ -64,12 +64,13 @@ class TopicalEvent
     end
   end
 
-  def organisations
+  def organisations(*args)
     @content_item.content_item_data.dig("links", "organisations").map do |organisation|
       {
        base_path: organisation["base_path"],
        title: organisation["title"],
-       logo: organisation.dig["details", "logo"], 
+       logo: organisation.dig("details", "logo"), 
       }
+    end
   end
 end
