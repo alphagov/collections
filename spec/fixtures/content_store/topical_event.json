@@ -6,6 +6,17 @@
     "about_page_link_text": "Read more about this event",
     "body": "This is a very important topical event.",
     "end_date": "2016-04-28T00:00:00+00:00",
+    "ordered_featured_documents": [
+      {
+        "href": "https://www.gov.uk/somewhere",
+        "image": {
+          "url": "https://www.gov.uk/someimage.png",
+          "alt_text": "Alt text for the image"
+        },
+        "title": "A document related to this event",
+        "summary": "Very interesting document content."
+      }
+    ],
     "social_media_links": [
       {
         "href": "https://www.facebook.com/a-topical-event",

@@ -55,6 +55,18 @@ RSpec.describe TopicalEvent do
     ])
   end
 
+  it "should map the social media links" do
+    expect(topical_event.ordered_featured_documents).to eq([
+      {
+        href: "https://www.gov.uk/somewhere",
+        image_src: "https://www.gov.uk/someimage.png",
+        image_alt: "Alt text for the image",
+        heading_text: "A document related to this event",
+        description: "Very interesting document content.",
+      },
+    ])
+  end
+
 private
 
   def fetch_fixture(filename)

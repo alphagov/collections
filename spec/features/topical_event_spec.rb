@@ -57,6 +57,11 @@ RSpec.feature "Topical Event pages" do
     expect(page).to have_link("Twitter", href: "https://www.twitter.com/a-topical-event")
   end
 
+  it "includes links to the featured documents" do
+    visit base_path
+    expect(page).to have_link("A document related to this event", href: "https://www.gov.uk/somewhere")
+  end
+
 private
 
   def fetch_fixture(filename)
