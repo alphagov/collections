@@ -23,22 +23,13 @@ on:
     branches: [main]
 
 jobs:
-  build-and-publish-image:
-    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
-    name: Build and publish image
-    uses: alphagov/govuk-infrastructure/.github/workflows/ci-ecr.yaml@main
-    with:
-      gitRef: ${{ github.event.inputs.gitRef || github.ref }}
-    secrets:
-      AWS_GOVUK_ECR_ACCESS_KEY_ID: ${{ secrets.AWS_GOVUK_ECR_ACCESS_KEY_ID }}
-      AWS_GOVUK_ECR_SECRET_ACCESS_KEY: ${{ secrets.AWS_GOVUK_ECR_SECRET_ACCESS_KEY }}
   trigger-deploy-to-integration:
     name: Trigger deploy to integration
-    needs: build-and-publish-image
-    uses: alphagov/govuk-infrastructure/.github/workflows/deploy.yaml@main
+    uses: alphagov/govuk-infrastructure/.github/workflows/deploy.yaml@add-deployment-permissions
     with:
-      imageTag: ${{ needs.build-and-publish-image.outputs.imageTag }}
+      imageTag: "sometag"
       manualDeploy: ${{ github.event_name == 'workflow_dispatch' }}
     secrets:
       WEBHOOK_TOKEN: ${{ secrets.ARGO_EVENTS_WEBHOOK_TOKEN }}
       WEBHOOK_URL: ${{ secrets.ARGO_EVENTS_WEBHOOK_URL }}
+      GOVUK_CI_GITHUB_API_TOKEN: ${{ secrets.GOVUK_CI_GITHUB_API_TOKEN }}
