@@ -23,6 +23,11 @@ RSpec.feature "Topical Event pages" do
     expect(page).to have_selector("meta[name='description'][content='#{content_item['description']}']", visible: :hidden)
   end
 
+  it "includes the image and alt text" do
+    visit base_path
+    expect(page).to have_css("img[src='https://www.gov.uk/some-image.png'][alt='Text describing the image']")
+  end
+
   it "sets the body text" do
     visit base_path
     expect(page).to have_text(content_item.dig("details", "body"))

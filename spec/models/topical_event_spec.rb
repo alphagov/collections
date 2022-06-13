@@ -12,6 +12,11 @@ RSpec.describe TopicalEvent do
     expect(topical_event.description).to eq("This event is happening soon")
   end
 
+  it "should return the image URL and alt text" do
+    expect(topical_event.image_url).to eq("https://www.gov.uk/some-image.png")
+    expect(topical_event.image_alt_text).to eq("Text describing the image")
+  end
+
   it "show have body text" do
     expect(topical_event.body).to eq("This is a very important topical event.")
   end

@@ -16,6 +16,10 @@
       margin_bottom: 8,
     } %>
 
+    <% if @topical_event.image_url %>
+      <%= image_tag(@topical_event.image_url, alt: @topical_event.image_alt_text) %>
+    <% end %>
+
     <%= render "govuk_publishing_components/components/govspeak", {
       } do %>
         <%= @topical_event.body&.html_safe %>
