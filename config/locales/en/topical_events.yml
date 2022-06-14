@@ -1,10 +1,10 @@
 ---
 en:
   topical_events:
+    announcements: "Announcements"
     archived: "(Archived)"
     consultations: "Consultations"
     documents: "Documents"
-    announcements: "Announcements"
     featured: "Featured"
     headings:
       travel_advice: "Travel Advice"
