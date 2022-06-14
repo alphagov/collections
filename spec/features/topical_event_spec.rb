@@ -99,14 +99,17 @@ RSpec.feature "Topical Event pages" do
 
       within("#publications") do
         related_publications.each { |title, link| expect(page).to have_link(title, href: link) }
+        expect(page).to have_link("See all publications", href: "/search/all?topical_events%5B%5D=something-very-topical")
       end
 
       within("#consultations") do
         related_consultations.each { |title, link| expect(page).to have_link(title, href: link) }
+        expect(page).to have_link("See all consultations", href: "/search/policy-papers-and-consultations?content_store_document_type%5B%5D=open_consultations&content_store_document_type%5B%5D=closed_consultations&topical_events%5B%5D=something-very-topical")
       end
 
       within("#announcements") do
         related_announcements.each { |title, link| expect(page).to have_link(title, href: link) }
+        expect(page).to have_link("See all announcements", href: "/search/news-and-communications?topical_events%5B%5D=something-very-topical")
       end
     end
 
