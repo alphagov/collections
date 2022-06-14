@@ -43,7 +43,7 @@ class TopicalEvent
   end
 
   def social_media_links
-    @content_item.content_item_data.dig("details", "social_media_links").map do |social_media_link|
+    @content_item.content_item_data.dig("details", "social_media_links")&.map do |social_media_link|
       {
         href: social_media_link["href"],
         text: social_media_link["title"],
@@ -53,7 +53,7 @@ class TopicalEvent
   end
 
   def ordered_featured_documents
-    @content_item.content_item_data.dig("details", "ordered_featured_documents").map do |document|
+    @content_item.content_item_data.dig("details", "ordered_featured_documents")&.map do |document|
       {
         href: document["href"],
         image_src: document.dig("image", "url"),
