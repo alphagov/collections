@@ -51,15 +51,47 @@ RSpec.feature "Topical Event pages" do
     expect(page).to have_link(content_item.dig("details", "about_page_link_text"), href: "#{base_path}/about")
   end
 
-  it "includes links to the social media accounts" do
-    visit base_path
-    expect(page).to have_link("Facebook", href: "https://www.facebook.com/a-topical-event")
-    expect(page).to have_link("Twitter", href: "https://www.twitter.com/a-topical-event")
+  context "when there are social media links" do
+    it "includes links to the social media accounts" do
+      visit base_path
+      expect(page).to have_link("Facebook", href: "https://www.facebook.com/a-topical-event")
+      expect(page).to have_link("Twitter", href: "https://www.twitter.com/a-topical-event")
+    end
   end
 
-  it "includes links to the featured documents" do
-    visit base_path
-    expect(page).to have_link("A document related to this event", href: "https://www.gov.uk/somewhere")
+  context "when there are no social media links" do
+    before do
+      stub_content_store_has_item(base_path, content_item_without_detail(content_item, "social_media_links"))
+    end
+
+    it "does not include links to any social media platforms" do
+      visit base_path
+      expect(page).to_not have_text("Facebook")
+      expect(page).to_not have_text("Twitter")
+    end
+  end
+
+  context "when there are featured documents" do
+    it "includes the featured documents header" do
+      visit base_path
+      expect(page).to have_text(I18n.t("topical_events.featured"))
+    end
+
+    it "includes links to the featured documents" do
+      visit base_path
+      expect(page).to have_link("A document related to this event", href: "https://www.gov.uk/somewhere")
+    end
+  end
+
+  context "when there are no featured documents" do
+    before do
+      stub_content_store_has_item(base_path, content_item_without_detail(content_item, "ordered_featured_documents"))
+    end
+
+    it "does not include the featured documents header" do
+      visit base_path
+      expect(page).to_not have_text(I18n.t("topical_events.featured"))
+    end
   end
 
 private
@@ -69,5 +101,10 @@ private
       Rails.root.join("spec", "fixtures", "content_store", "#{filename}.json"),
     )
     JSON.parse(json)
+  end
+
+  def content_item_without_detail(content_item, key_to_remove)
+    content_item["details"] = content_item["details"].except(key_to_remove)
+    content_item
   end
 end
