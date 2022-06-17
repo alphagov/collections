@@ -18,6 +18,14 @@ class TopicalEvent
     @content_item.content_item_data["description"]
   end
 
+  def image_url
+    @content_item.content_item_data.dig("details", "image", "url")
+  end
+
+  def image_alt_text
+    @content_item.content_item_data.dig("details", "image", "alt_text")
+  end
+
   def body
     @content_item.content_item_data.dig("details", "body")
   end
