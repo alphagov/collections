@@ -23,6 +23,10 @@ module ApplicationHelper
     @page_text_direction ||= I18n.t("shared.language_direction", default: "ltr")
   end
 
+  def page_class(css_class)
+    content_for(:page_class, css_class)
+  end
+
   def dir_attribute
     "dir=#{page_text_direction}" unless page_text_direction == "ltr"
   end

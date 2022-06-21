@@ -1,4 +1,5 @@
 <% content_for :title, @topical_event.title %>
+<% page_class "topical-events-show" %>
 
 <% content_for :meta_tags do %>
   <%= tag("meta", name: "description", content: @topical_event.description) if @topical_event.description %>
@@ -155,6 +156,15 @@
             </div>
           <% end %>
         </div>
+
+        <% if @topical_event.slug == 'first-world-war-centenary' %>
+          <%= render "first_world_war_centenary"%>
+        <% end %>
+
+        <% if @topical_event.slug == '2022-events-platinum-jubilee-commonwealth-games-unboxed' %>
+          <%= render "platinum_jubilee_unboxed" %>
+        <% end %>
+        
       </div>
     <% end %>
   </div>
