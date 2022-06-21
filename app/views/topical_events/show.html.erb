@@ -59,4 +59,26 @@
       <% end %>
     <% end %>
   </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <% if @topical_event.travel_advice.any? %>
+      <%= render "govuk_publishing_components/components/heading", {
+        text: t("topical_events.headings.travel_advice"),
+        font_size: "l",
+        margin_bottom: 4,
+        padding: true,
+        border_top: 2,
+      } %>
+      <%= render "govuk_publishing_components/components/document_list", {
+        items: @topical_event.travel_advice.map do |travel_advice|
+          {
+            link: {
+              text: travel_advice["title"],
+              path: travel_advice["base_path"]
+            }
+          }
+        end
+      } %>
+    <% end %>
+  </div>
 </div>

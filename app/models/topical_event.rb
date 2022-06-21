@@ -30,6 +30,10 @@ class TopicalEvent
     @content_item.content_item_data.dig("details", "body")
   end
 
+  def slug
+    @content_item.content_item_data["base_path"].sub(%r{/government/topical-events/}, "")
+  end
+
   def end_date
     Date.parse(@content_item.content_item_data.dig("details", "end_date")) if @content_item.content_item_data.dig("details", "end_date")
   end
@@ -70,5 +74,12 @@ class TopicalEvent
         description: document["summary"],
       }
     end
+  end
+
+  def travel_advice
+    return [] if slug != "afghanistan-uk-government-response"
+
+    advice = ContentItem.find!("/foreign-travel-advice/afghanistan").to_hash
+    [advice.slice("base_path", "title")]
   end
 end
