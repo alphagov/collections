@@ -13,6 +13,8 @@ RSpec.feature "Person page" do
   end
 
   scenario "displays the person page" do
+    sleep 10
+
     expect(page).to have_content("Rufus Scrimgeour")
   end
 
@@ -25,9 +27,12 @@ RSpec.feature "Person page" do
   end
 
   def stub_person_page_content_item(base_path, name)
+    sleep 10
+
     content_item = GovukSchemas::RandomExample.for_schema(frontend_schema: "person").merge(
       "title" => name,
       "base_path" => base_path,
+      # "lang" => "en",
     )
 
     stub_content_store_has_item(base_path, content_item)
