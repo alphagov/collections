@@ -28,6 +28,9 @@ RSpec.feature "Person page" do
     content_item = GovukSchemas::RandomExample.for_schema(frontend_schema: "person").merge(
       "title" => name,
       "base_path" => base_path,
+      "links" => {
+        "primary_publishing_organisation": nil,
+      },
     )
 
     stub_content_store_has_item(base_path, content_item)
