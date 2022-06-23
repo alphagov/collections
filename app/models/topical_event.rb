@@ -3,6 +3,7 @@ class TopicalEvent
 
   def initialize(content_item)
     @content_item = content_item
+    @documents_service = TopicalEventsDocuments.new(slug)
   end
 
   def self.find!(base_path)
@@ -81,5 +82,28 @@ class TopicalEvent
 
     advice = ContentItem.find!("/foreign-travel-advice/afghanistan").to_hash
     [advice.slice("base_path", "title")]
+  end
+
+  def publications
+    @publications ||= @documents_service.fetch_related_documents_with_format({ filter_format: "publication" })
+  end
+
+  def consultations
+    @consultations ||= @documents_service.fetch_related_documents_with_format({ filter_format: "consultation" })
+  end
+
+  def announcements
+    announcement_document_types = %w[
+      press_release
+      news_article
+      news_story
+      fatality_notice
+      speech
+      written_statement
+      oral_statement
+      authored_article
+      government_response
+    ]
+    @announcements ||= @documents_service.fetch_related_documents_with_format({ filter_content_store_document_type: announcement_document_types })
   end
 end

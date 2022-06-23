@@ -1,11 +1,13 @@
 require "integration_spec_helper"
 
 RSpec.feature "Topical Event pages" do
+  include SearchApiHelpers
   let(:content_item) { fetch_fixture("topical_event") }
   let(:base_path) { content_item["base_path"] }
 
   before do
     stub_content_store_has_item(base_path, content_item)
+    stub_search(body: { results: [] })
   end
 
   it "sets the page title" do
@@ -63,6 +65,61 @@ RSpec.feature "Topical Event pages" do
     it "includes travel advice for Afghanistan" do
       visit base_path
       expect(page).to have_link(titleize_base_path(afghanistan_travel_advice_base_path), href: afghanistan_travel_advice_base_path)
+    end
+  end
+
+  context "documents list" do
+    let(:related_publications) { { "Policy on Topicals" => "/foo/policy_paper", "PM attends summit on topical events" => "/foo/news_story" } }
+    let(:related_consultations) { { "A consultation on Topicals" => "/foo/consultation_one", "Another consultation" => "/foo/consultation_two" } }
+    let(:related_announcements) { { "An announcement on Topicals" => "/foo/announcement_one", "Another announcement" => "/foo/announcement_two" } }
+
+    def search_api_response(titles_and_links_hash)
+      results_array = titles_and_links_hash.to_a.map do |title, link|
+        {
+          'link': link,
+          'title': title,
+          'public_timestamp': "2016-10-07T22:18:32Z",
+          'display_type': "some_display_type",
+        }
+      end
+      { 'results': results_array }
+    end
+
+    it "displays links to all related documents" do
+      stub_search(body: search_api_response(related_announcements))
+      stub_search(body: search_api_response(related_publications), params: { "filter_format" => "publication" })
+      stub_search(body: search_api_response(related_consultations), params: { "filter_format" => "consultation" })
+
+      visit base_path
+
+      expect(page).to have_text("Documents")
+      expect(page).to have_text("Publications")
+      expect(page).to have_text("Consultations")
+      expect(page).to have_text("Announcements")
+
+      within("#publications") do
+        related_publications.each { |title, link| expect(page).to have_link(title, href: link) }
+        expect(page).to have_link("See all publications", href: "/search/all?topical_events%5B%5D=something-very-topical")
+      end
+
+      within("#consultations") do
+        related_consultations.each { |title, link| expect(page).to have_link(title, href: link) }
+        expect(page).to have_link("See all consultations", href: "/search/policy-papers-and-consultations?content_store_document_type%5B%5D=open_consultations&content_store_document_type%5B%5D=closed_consultations&topical_events%5B%5D=something-very-topical")
+      end
+
+      within("#announcements") do
+        related_announcements.each { |title, link| expect(page).to have_link(title, href: link) }
+        expect(page).to have_link("See all announcements", href: "/search/news-and-communications?topical_events%5B%5D=something-very-topical")
+      end
+    end
+
+    it "doesn't display any document headers when there are no related documents" do
+      visit base_path
+
+      expect(page).not_to have_text("Publications")
+      expect(page).not_to have_text("Announcements")
+      expect(page).not_to have_text("Consultations")
+      expect(page).not_to have_text("Documents")
     end
   end
 

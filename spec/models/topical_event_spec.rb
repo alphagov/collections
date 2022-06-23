@@ -1,8 +1,14 @@
 RSpec.describe TopicalEvent do
+  include SearchApiHelpers
+
   let(:api_data) { fetch_fixture("topical_event") }
   let(:content_item) { ContentItem.new(api_data) }
   let(:base_path) { content_item.base_path }
   let(:topical_event) { described_class.new(content_item) }
+
+  before do
+    stub_search(body: { results: [] })
+  end
 
   it "should have a title" do
     expect(topical_event.title).to eq("Something very topical")
@@ -70,6 +76,44 @@ RSpec.describe TopicalEvent do
         description: "Very interesting document content.",
       },
     ])
+  end
+
+  context "document lists" do
+    let(:default_params) do
+      { filter_topical_events: [base_path.sub(%r{/government/topical-events/}, "")],
+        count: 3,
+        order: "-public_timestamp",
+        fields: SearchApiFields::TOPICAL_EVENTS_SEARCH_FIELDS }
+    end
+
+    it "should make correct call to search api for announcements" do
+      announcement_formats = %w[press_release news_article news_story fatality_notice speech written_statement oral_statement authored_article government_response]
+
+      expect(Services.search_api)
+        .to receive(:search)
+        .with(default_params.merge({ filter_content_store_document_type: announcement_formats }))
+        .and_return({ "results" => [] })
+
+      topical_event.announcements
+    end
+
+    it "should make correct call to search api for consultations" do
+      expect(Services.search_api)
+          .to receive(:search)
+          .with(default_params.merge({ filter_format: "consultation" }))
+          .and_return({ "results" => [] })
+
+      topical_event.consultations
+    end
+
+    it "should make correct call to search api for publications" do
+      expect(Services.search_api)
+          .to receive(:search)
+          .with(default_params.merge({ filter_format: "publication" }))
+          .and_return({ "results" => [] })
+
+      topical_event.publications
+    end
   end
 
 private
