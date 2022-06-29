@@ -38,7 +38,7 @@
     <% end %>
   </div>
 
-  <div class="govuk-grid-column-full">
+  <div class="govuk-grid-column-full govuk-!-margin-bottom-7">
     <% if @topical_event.ordered_featured_documents %>
       <%= render "govuk_publishing_components/components/heading", {
         text: I18n.t("topical_events.featured"),
@@ -59,6 +59,20 @@
       <% end %>
     <% end %>
 
+    <%= render "govuk_publishing_components/components/heading", {
+      text: I18n.t("topical_events.latest"),
+      padding: true,
+      font_size: 27,
+      border_top: 2,
+      margin_bottom: 3,
+    } %>
+
+    <%= render "govuk_publishing_components/components/subscription_links", {
+      feed_link_box_value: Plek.new.website_root + topical_event_path(@topical_event.slug, format: "atom")
+    } %>
+  </div>
+
+  <div class="govuk-grid-column-full">
     <% if @topical_event.publications.any? || @topical_event.consultations.any? || @topical_event.announcements.any? %>
       <%= render "govuk_publishing_components/components/heading", {
         text: I18n.t("topical_events.documents"),
