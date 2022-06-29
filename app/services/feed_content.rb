@@ -5,16 +5,16 @@ class FeedContent
     @search_query = search_query
   end
 
-  def results
-    search_response["results"]
+  def results(count = 20)
+    search_response(count)["results"]
   end
 
 private
 
-  def search_response
+  def search_response(count)
     params = search_query.merge(
       start: 0,
-      count: 20,
+      count: count,
       fields: SearchApiFields::FEED_SEARCH_FIELDS,
       reject_content_purpose_supergroup: "other",
       order: "-public_timestamp",
