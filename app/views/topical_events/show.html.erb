@@ -68,6 +68,7 @@
     } %>
 
     <%= render "govuk_publishing_components/components/subscription_links", {
+      email_signup_link: "/email-signup?link=#{topical_event_path(@topical_event.slug)}",
       feed_link_box_value: Plek.new.website_root + topical_event_path(@topical_event.slug, format: "atom")
     } %>
   </div>
