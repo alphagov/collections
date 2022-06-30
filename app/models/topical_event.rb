@@ -110,4 +110,8 @@ class TopicalEvent
     ]
     @announcements ||= @documents_service.fetch_related_documents_with_format({ filter_content_store_document_type: announcement_document_types })
   end
+
+  def detailed_guidance
+    @detailed_guidance ||= @documents_service.fetch_related_documents_with_format({ filter_format: "detailed_guidance" })
+  end
 end
