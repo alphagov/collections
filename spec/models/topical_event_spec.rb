@@ -137,10 +137,18 @@ RSpec.describe TopicalEvent do
   it "should map the organisations" do
     expect(topical_event.organisations).to eq([
       {
+        content_id: "very-topical-id",
         base_path: "government/organisations/department-for-topical-affairs",
         title: "Department of topical affairs",
         crest: "single-identity",
         brand: "department-for-topical-affairs",
+      },
+      {
+        content_id: "emphasised-topical-id",
+        base_path: "government/organisations/department-for-emphasised-topical-affairs",
+        title: "Department of emphasised topical affairs",
+        crest: "single-identity",
+        brand: "department-for-emphasised-topical-affairs",
       },
     ])
   end

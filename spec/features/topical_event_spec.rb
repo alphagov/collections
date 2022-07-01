@@ -178,6 +178,14 @@ RSpec.feature "Topical Event pages" do
     end
   end
 
+  context "when there are emphasised organisations" do
+    it "includes logos for the emphasised organisations but not normal organisations" do
+      visit base_path
+
+      expect(page).to have_css(".gem-c-organisation-logo", count: 1)
+    end
+  end
+
   context "when there are social media links" do
     it "includes links to the social media accounts" do
       visit base_path

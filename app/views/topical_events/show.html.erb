@@ -132,7 +132,7 @@
   </div>
 
   <div class="govuk-grid-column-two-thirds">
-    <% if @topical_event.organisations %>
+    <% if @topical_event.emphasised_organisations && @topical_event.emphasised_organisations.any? %>
       <div class="organisations">
         <%= render "govuk_publishing_components/components/heading", {
           text: t("topical_events.organisations"),
@@ -141,21 +141,22 @@
           padding: true,
           border_top: 2,
         } %>
-
-        <div class="govuk-grid-row">
-          <% @topical_event.organisations.each do |organisation| %>
-            <div class="govuk-grid-column-one-quarter govuk-!-padding-bottom-7">
-              <%= render "govuk_publishing_components/components/organisation_logo", {
-                organisation: {
-                  name: organisation[:title],
-                  url: organisation[:base_path],
-                  brand: organisation[:brand],
-                  crest: organisation[:crest],
-                }
-              } %>
-            </div>
-          <% end %>
-        </div>
+        <% @topical_event.emphasised_organisations.flatten.in_groups_of(4, false) do |row| %>
+          <div class="govuk-grid-row">
+            <% row.each do |organisation|%>
+              <div class="govuk-grid-column-one-quarter govuk-!-padding-bottom-7">
+                <%= render "govuk_publishing_components/components/organisation_logo", {
+                  organisation: {
+                    name: organisation["title"],
+                    url: organisation["base_path"],
+                    crest: organisation.dig("details", "logo", "crest"),
+                    brand: organisation.dig("details", "brand"),
+                  }
+                } %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
 
         <% if @topical_event.slug == 'first-world-war-centenary' %>
           <%= render "first_world_war_centenary"%>
@@ -164,7 +165,7 @@
         <% if @topical_event.slug == '2022-events-platinum-jubilee-commonwealth-games-unboxed' %>
           <%= render "platinum_jubilee_unboxed" %>
         <% end %>
-        
+
       </div>
     <% end %>
   </div>

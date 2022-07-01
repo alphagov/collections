@@ -5,6 +5,7 @@
   "links": {
     "organisations": [
       {
+        "content_id": "very-topical-id",
         "title": "Department of topical affairs",
         "base_path": "government/organisations/department-for-topical-affairs",
         "details": {
@@ -13,6 +14,17 @@
           },
           "brand": "department-for-topical-affairs"
         }
+      },
+      {
+        "content_id": "emphasised-topical-id",
+        "title": "Department of emphasised topical affairs",
+        "base_path": "government/organisations/department-for-emphasised-topical-affairs",
+        "details": {
+          "logo": {
+            "crest": "single-identity"
+          },
+          "brand": "department-for-emphasised-topical-affairs"
+       }
       }
     ]
   },
@@ -24,6 +36,7 @@
       "alt_text": "Text describing the image"
     },
     "end_date": "2016-04-28T00:00:00+00:00",
+    "emphasised_organisations": ["emphasised-topical-id"],
     "ordered_featured_documents": [
       {
         "href": "https://www.gov.uk/somewhere",

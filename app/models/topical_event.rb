@@ -118,11 +118,18 @@ class TopicalEvent
   def organisations
     @content_item.content_item_data.dig("links", "organisations")&.map do |organisation|
       {
+        content_id: organisation["content_id"],
         base_path: organisation["base_path"],
         title: organisation["title"],
         crest: organisation.dig("details", "logo", "crest"),
         brand: organisation.dig("details", "brand"),
       }
+    end
+  end
+
+  def emphasised_organisations
+    @content_item.content_item_data.dig("details", "emphasised_organisations")&.map do |organisation_content_id|
+      @content_item.content_item_data.dig("links", "organisations").select { |organisation| organisation["content_id"] == organisation_content_id }
     end
   end
 end
