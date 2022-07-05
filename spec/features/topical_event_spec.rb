@@ -35,6 +35,11 @@ RSpec.feature "Topical Event pages" do
     expect(page).to have_text(content_item.dig("details", "body"))
   end
 
+  it "includes a link to signup for emails" do
+    visit base_path
+    expect(page).to have_link("Get emails", href: "/email-signup?link=/government/topical-events/something-very-topical")
+  end
+
   context "when the event is current" do
     it "does not show the archived text" do
       Timecop.freeze("2016-04-18") do
