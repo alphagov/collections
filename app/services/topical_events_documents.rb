@@ -5,7 +5,7 @@ class TopicalEventsDocuments
     @slug = slug
   end
 
-  def fetch_related_documents_with_format(filter_format)
+  def fetch_related_documents_with_format(filter_format = {})
     search_response = Services.search_api.search(default_search_options.merge(filter_format))
     format_results(search_response)
   end

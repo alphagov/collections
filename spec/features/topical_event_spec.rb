@@ -116,6 +116,35 @@ RSpec.feature "Topical Event pages" do
     end
   end
 
+  context "latest documents" do
+    let(:latest_documents) { { "Some document" => "/foo/latest_one", "Another document" => "/foo/latest_two" } }
+
+    it "displays the latest documents" do
+      stub_search(body: search_api_response(latest_documents))
+
+      visit base_path
+
+      expect(page).to have_text("Latest")
+
+      within("#latest") do
+        latest_documents.each { |title, link| expect(page).to have_link(title, href: link) }
+        expect(page).to have_link("See all", href: "/search/all?order=updated-newest&topical_events%5B%5D=something-very-topical")
+      end
+    end
+
+    it "displays a message when there are no documents yet" do
+      stub_search(body: search_api_response({}))
+
+      visit base_path
+
+      expect(page).to have_text("Latest")
+
+      within("#latest") do
+        expect(page).to have_text("There are no updates yet.")
+      end
+    end
+  end
+
   it "includes a link to the about page" do
     visit base_path
     expect(page).to have_link(content_item.dig("details", "about_page_link_text"), href: "#{base_path}/about")

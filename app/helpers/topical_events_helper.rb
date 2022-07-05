@@ -6,13 +6,19 @@ module TopicalEventsHelper
 private
 
   def base_path(content_type)
-    { publication: "/search/all?",
+    { latest: "/search/all?",
+      publication: "/search/all?",
       consultation: "/search/policy-papers-and-consultations?",
       announcement: "/search/news-and-communications?" }[content_type]
   end
 
   def query_params(content_type, slug)
     case content_type
+    when :latest
+      {
+        order: "updated-newest",
+        topical_events: [slug],
+      }
     when :publication
       {
         topical_events: [slug],
