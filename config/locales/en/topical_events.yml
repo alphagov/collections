@@ -1,11 +1,12 @@
 ---
 en:
   topical_events:
-    announcements: "Announcements"
     archived: "(Archived)"
-    consultations: "Consultations"
-    documents: "Documents"
-    featured: "Featured"
     headings:
-      travel_advice: "Travel Advice"
-    publications: "Publications"
+      announcements: Announcements
+      consultations: Consultations
+      documents: Documents
+      featured: Featured
+      latest: Latest
+      publications: Publications
+      travel_advice: Travel Advice

@@ -57,7 +57,10 @@ Rails.application.routes.draw do
   get "/government/people/:name(.:locale)", to: "people#show"
   get "/government/ministers(.:locale)", to: "ministers#index"
   get "/government/ministers/:name(.:locale)", to: "roles#show"
-  get "/government/topical-events/:name", to: "topical_events#show"
+
+  get "/government/topical-events/:name",
+      to: "topical_events#show",
+      as: :topical_event
 
   scope :api, defaults: { format: :json } do
     get "/organisations",

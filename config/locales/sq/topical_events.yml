@@ -1,11 +1,12 @@
 ---
 sq:
   topical_events:
-    announcements:
     archived:
-    consultations:
-    documents:
-    featured:
     headings:
+      announcements:
+      consultations:
+      documents:
+      featured:
+      latest:
+      publications:
       travel_advice:
-    publications:
