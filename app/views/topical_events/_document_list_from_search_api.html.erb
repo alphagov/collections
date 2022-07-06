@@ -1,32 +1,41 @@
-<section id="<%= heading.downcase.parameterize %>" class="document-block">
+<% heading ||= nil %>
+
+<% if heading %>
+  <section id="<%= heading.downcase.parameterize %>" class="document-block">
   <%= render "govuk_publishing_components/components/heading", {
     text: heading,
     padding: true,
     font_size: 27,
     margin_bottom: 3,
   } %>
+<% end %>
 
-    <%= render "govuk_publishing_components/components/document_list", {
-      items: documents,
-      margin_bottom: 6,
-    } %>
+  <%= render "govuk_publishing_components/components/document_list", {
+    items: documents,
+    margin_bottom: 6,
+  } %>
 
   <p class="govuk-body">
+    <% see_all_link_text = heading ? "See all #{heading.downcase}" : "See all" %>
+
     <%=
       link_to(
-        "See all #{heading.downcase}",
+        see_all_link_text,
         link_to,
         class: "govuk-link",
         data: {
           track_category: 'navPolicyAreaLinkClicked',
-          track_action: "#{heading}",
+          track_action: see_all_link_text.parameterize.underscore,
           track_label: link_to,
           track_options: {
             dimension28: documents.size.to_s,
-            dimension29: "See all #{heading.downcase}"
+            dimension29: see_all_link_text,
           }
         }
       )
     %>
   </p>
-</section>
+
+<% if heading %>
+  </section>
+<% end %>

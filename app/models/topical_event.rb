@@ -84,6 +84,10 @@ class TopicalEvent
     [advice.slice("base_path", "title")]
   end
 
+  def latest
+    @latest ||= @documents_service.fetch_related_documents_with_format
+  end
+
   def publications
     @publications ||= @documents_service.fetch_related_documents_with_format({ filter_format: "publication" })
   end

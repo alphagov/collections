@@ -59,18 +59,26 @@
       <% end %>
     <% end %>
 
-    <%= render "govuk_publishing_components/components/heading", {
-      text: I18n.t("topical_events.headings.latest"),
-      padding: true,
-      font_size: 27,
-      border_top: 2,
-      margin_bottom: 3,
-    } %>
+    <section id="latest">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: I18n.t("topical_events.headings.latest"),
+        padding: true,
+        font_size: 27,
+        border_top: 2,
+        margin_bottom: 3,
+      } %>
 
-    <%= render "govuk_publishing_components/components/subscription_links", {
-      email_signup_link: "/email-signup?link=#{topical_event_path(@topical_event.slug)}",
-      feed_link_box_value: Plek.new.website_root + topical_event_path(@topical_event.slug, format: "atom")
-    } %>
+      <% if @topical_event.latest.any? %>
+        <%= render(partial: 'document_list_from_search_api', locals: { documents: @topical_event.latest, link_to: search_url(:latest, @topical_event.slug) })  %>
+      <% else %>
+        <p class="govuk-body"><%= I18n.t("topical_events.no_updates") %></p>
+      <% end %>
+
+      <%= render "govuk_publishing_components/components/subscription_links", {
+        email_signup_link: "/email-signup?link=#{topical_event_path(@topical_event.slug)}",
+        feed_link_box_value: Plek.new.website_root + topical_event_path(@topical_event.slug, format: "atom")
+      } %>
+    </section>
   </div>
 
   <div class="govuk-grid-column-full">

@@ -114,6 +114,15 @@ RSpec.describe TopicalEvent do
 
       topical_event.publications
     end
+
+    it "should make the correct call to search api for latest" do
+      expect(Services.search_api)
+        .to receive(:search)
+              .with(default_params)
+              .and_return({ "results" => [] })
+
+      topical_event.latest
+    end
   end
 
 private
