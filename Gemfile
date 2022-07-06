@@ -27,8 +27,11 @@ group :test do
   gem "webmock", require: false
 end
 
-group :development, :test do
+group :development do
   gem "better_errors"
+end
+
+group :development, :test do
   gem "binding_of_caller"
   gem "climate_control"
   gem "govuk_test"
