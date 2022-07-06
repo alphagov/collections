@@ -115,6 +115,15 @@ RSpec.describe TopicalEvent do
       topical_event.publications
     end
 
+    it "should make the correct call to search api for detailed guidance" do
+      expect(Services.search_api)
+        .to receive(:search)
+              .with(default_params.merge({ filter_format: "detailed_guidance" }))
+              .and_return({ "results" => [] })
+
+      topical_event.detailed_guidance
+    end
+
     it "should make the correct call to search api for latest" do
       expect(Services.search_api)
         .to receive(:search)
