@@ -29,7 +29,7 @@ RSpec.feature "World location taxon page" do
   end
 
   scenario "does not contain the feed selector if we are browsing a world location leaf page" do
-    world_usa = world_usa_taxon(base_path: base_path)
+    world_usa = world_usa_taxon(base_path: base_path, phase: "live")
     world_usa.delete("links")
 
     stub_content_store_has_item(base_path, world_usa)
