@@ -18,4 +18,12 @@ class TopicalEventsController < ApplicationController
       end
     end
   end
+
+  def array_of_links_to_organisations(organisations)
+    organisations.map do |organisation|
+      helpers.link_to organisation[:title], organisation[:base_path], class: "organisation-link govuk-link"
+    end
+  end
+
+  helper_method :array_of_links_to_organisations
 end

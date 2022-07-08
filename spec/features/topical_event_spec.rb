@@ -159,6 +159,33 @@ RSpec.feature "Topical Event pages" do
     expect(page).to have_link(content_item.dig("details", "about_page_link_text"), href: "#{base_path}/about")
   end
 
+  context "when there are organisations" do
+    it "includes a link to the organisation" do
+      visit base_path
+      expect(page).to have_link("Department of topical affairs", href: "government/organisations/department-for-topical-affairs")
+    end
+  end
+
+  context "when there are no organisations" do
+    before do
+      stub_content_store_has_item(base_path, content_item_without_link(content_item, "organisations"))
+    end
+
+    it "does not include a link to the organisations" do
+      visit base_path
+
+      expect(page).to_not have_text("Organisations: ")
+    end
+  end
+
+  context "when there are emphasised organisations" do
+    it "includes logos for the emphasised organisations but not normal organisations" do
+      visit base_path
+
+      expect(page).to have_css(".gem-c-organisation-logo", count: 1)
+    end
+  end
+
   context "when there are social media links" do
     it "includes links to the social media accounts" do
       visit base_path
@@ -251,5 +278,10 @@ private
       }
     end
     { 'results': results_array }
+  end
+
+  def content_item_without_link(content_item, key_to_remove)
+    content_item["links"] = content_item["links"].except(key_to_remove)
+    content_item
   end
 end

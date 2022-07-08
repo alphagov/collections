@@ -1,4 +1,5 @@
 <% content_for :title, @topical_event.title %>
+<% page_class "topical-events-show" %>
 
 <% content_for :meta_tags do %>
   <%= tag("meta", name: "description", content: @topical_event.description) if @topical_event.description %>
@@ -18,6 +19,16 @@
 
     <% if @topical_event.image_url %>
       <%= image_tag(@topical_event.image_url, alt: @topical_event.image_alt_text) %>
+    <% end %>
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <% if @topical_event.organisations %>
+      <%= render "govuk_publishing_components/components/metadata", {
+        other: {
+          "Organisations": sanitize(array_of_links_to_organisations(@topical_event.organisations).to_sentence)
+        }
+      } %>
     <% end %>
 
     <%= render "govuk_publishing_components/components/govspeak", {
@@ -117,6 +128,45 @@
           }
         end
       } %>
+    <% end %>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <% if @topical_event.emphasised_organisations && @topical_event.emphasised_organisations.any? %>
+      <div class="organisations">
+        <%= render "govuk_publishing_components/components/heading", {
+          text: t("topical_events.organisations"),
+          font_size: "l",
+          margin_bottom: 4,
+          padding: true,
+          border_top: 2,
+        } %>
+        <% @topical_event.emphasised_organisations.flatten.in_groups_of(4, false) do |row| %>
+          <div class="govuk-grid-row">
+            <% row.each do |organisation|%>
+              <div class="govuk-grid-column-one-quarter govuk-!-padding-bottom-7">
+                <%= render "govuk_publishing_components/components/organisation_logo", {
+                  organisation: {
+                    name: organisation["title"],
+                    url: organisation["base_path"],
+                    crest: organisation.dig("details", "logo", "crest"),
+                    brand: organisation.dig("details", "brand"),
+                  }
+                } %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+
+        <% if @topical_event.slug == 'first-world-war-centenary' %>
+          <%= render "first_world_war_centenary"%>
+        <% end %>
+
+        <% if @topical_event.slug == '2022-events-platinum-jubilee-commonwealth-games-unboxed' %>
+          <%= render "platinum_jubilee_unboxed" %>
+        <% end %>
+
+      </div>
     <% end %>
   </div>
 </div>
