@@ -50,7 +50,7 @@
     <% end %>
   </div>
 
-  <div class="govuk-grid-column-full govuk-!-margin-bottom-7">
+  <div class="govuk-grid-column-full">
     <% if @topical_event.ordered_featured_documents %>
       <section id="featured" class="govuk-!-margin-bottom-6">
         <%= render "govuk_publishing_components/components/heading", {
@@ -72,7 +72,9 @@
         <% end %>
       </section>
     <% end %>
+  </div>
 
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-7">
     <section id="latest">
       <%= render "govuk_publishing_components/components/heading", {
         text: I18n.t("topical_events.headings.latest"),
@@ -95,7 +97,7 @@
     </section>
   </div>
 
-  <section id="documents" class="govuk-grid-column-full">
+  <section id="documents" class="govuk-grid-column-two-thirds">
     <% if @topical_event.publications.any? || @topical_event.consultations.any? || @topical_event.announcements.any? || @topical_event.detailed_guidance.any? %>
       <%= render "govuk_publishing_components/components/heading", {
         text: I18n.t("topical_events.headings.documents"),
