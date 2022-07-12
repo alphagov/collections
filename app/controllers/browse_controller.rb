@@ -33,7 +33,7 @@ private
 
   def show_html(page)
     template = :show
-    if new_browse_variant_b?
+    if true
       slimmer_template "gem_layout_full_width"
       template = :new_show
     end
@@ -42,7 +42,7 @@ private
 
   def index_html(page)
     template = :index
-    if new_browse_variant_b?
+    if true
       slimmer_template "gem_layout_full_width"
       template = :new_index
     end

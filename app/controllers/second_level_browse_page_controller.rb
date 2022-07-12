@@ -26,7 +26,7 @@ private
   def show_html
     template = :show
 
-    if new_browse_variant_b?
+    if true
       slimmer_template "gem_layout_full_width"
       template = if page.lists.curated?
                    :new_show_curated
