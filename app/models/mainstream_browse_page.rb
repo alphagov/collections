@@ -26,11 +26,19 @@ class MainstreamBrowsePage
   end
 
   def active_top_level_browse_page
-    linked_items("active_top_level_browse_page").first
+    linked_items("parent").first
   end
 
   def second_level_browse_pages
-    links = linked_items("second_level_browse_pages")
+    if base_path == "/browse/tax"
+      mainstream_browse_children << specialist_subtopic
+    else
+      mainstream_browse_children
+    end
+  end
+
+  def mainstream_browse_children
+    links = linked_items("children")
 
     if second_level_pages_curated?
       links.sort_by do |link|
@@ -39,6 +47,10 @@ class MainstreamBrowsePage
     else
       links
     end
+  end
+
+  def specialist_subtopic
+    topic = Topic.find("/topic/benefits-credits/tax-credits")
   end
 
   def second_level_pages_curated?

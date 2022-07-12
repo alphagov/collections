@@ -26,6 +26,10 @@ class Topic
     linked_items("parent").first
   end
 
+  def active_top_level_browse_page
+    linked_items("parent").first
+  end
+
   def children
     linked_items("children")
   end
@@ -40,6 +44,10 @@ class Topic
 
   def lists
     @lists ||= ListSet.new("specialist_sector", content_item.content_id, details["groups"])
+  end
+
+  def related_topics
+    []
   end
 
   def changed_documents

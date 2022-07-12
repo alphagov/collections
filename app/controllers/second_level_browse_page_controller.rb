@@ -43,9 +43,14 @@ private
   end
 
   def page
-    @page ||= MainstreamBrowsePage.find(
-      "/browse/#{params[:top_level_slug]}/#{params[:second_level_slug]}",
-    )
+    specialist_subtopic_path = "benefits-credits/tax-credits"
+    if "#{params[:topic_topic_slug]}/#{params[:subtopic_slug]}"== specialist_subtopic_path
+      @page ||= Topic.find("/topic/benefits-credits/tax-credits")
+    else
+      @page ||= MainstreamBrowsePage.find(
+        "/browse/#{params[:top_level_slug]}/#{params[:second_level_slug]}",
+      )
+    end
   end
 
   def count_link_sections(page)
