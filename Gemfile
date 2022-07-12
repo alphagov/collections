@@ -32,8 +32,6 @@ group :development, :test do
   gem "binding_of_caller"
   gem "climate_control"
   gem "govuk_test"
-  gem "jasmine"
-  gem "jasmine_selenium_runner"
   gem "pact", require: false
   gem "pact_broker-client"
   gem "pry-byebug"
