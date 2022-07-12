@@ -1,40 +1,20 @@
 class SecondLevelBrowsePageController < ApplicationController
-  enable_request_formats show: [:json]
-
   def show
     setup_content_item_and_navigation_helpers(page)
     @dimension26 = count_link_sections(page)
     @dimension27 = count_total_links(page)
-
-    respond_to do |f|
-      f.html do
-        show_html
-      end
-      f.json do
-        render json: {
-          content_id: page.content_id,
-          navigation_page_type: "Second Level Browse",
-          breadcrumbs: breadcrumb_content,
-          html: render_partial("_links", page: page),
-        }
-      end
-    end
+    show_html
   end
 
 private
 
   def show_html
-    template = :show
-
-    if new_browse_variant_b?
-      slimmer_template "gem_layout_full_width"
-      template = if page.lists.curated?
-                   :new_show_curated
-                 else
-                   :new_show_a_to_z
-                 end
-    end
-
+    slimmer_template "gem_layout_full_width"
+    template = if page.lists.curated?
+                 :new_show_curated
+               else
+                 :new_show_a_to_z
+               end
     render(template, locals: { page: page, meta_section: meta_section })
   end
 
