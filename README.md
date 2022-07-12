@@ -49,7 +49,7 @@ bundle exec rails test test/unit/application_helper_test.rb
 To run JavaScript tests (only):
 
 ```
-bundle exec rake jasmine:ci
+bundle exec rake jasmine
 ```
 
 ### Pact tests

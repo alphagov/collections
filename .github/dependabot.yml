@@ -24,8 +24,6 @@ updates:
       - dependency-name: slimmer
         dependency-type: direct
       # Framework gems
-      - dependency-name: jasmine-rails
-        dependency-type: direct
       - dependency-name: rails
         dependency-type: direct
       - dependency-name: sassc-rails
@@ -40,6 +38,10 @@ updates:
       - dependency-name: stylelint-config-gds
         dependency-type: direct
       # Framework packages
+      - dependency-name: jasmine-browser-runner
+        dependency-type: direct
+      - dependency-name: jasmine-core
+        dependency-type: direct
       - dependency-name: standardx
         dependency-type: direct
       - dependency-name: stylelint
