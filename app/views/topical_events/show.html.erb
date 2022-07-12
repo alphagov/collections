@@ -12,16 +12,13 @@
       context: (I18n.t("topical_events.archived") if @topical_event.archived?)
     } %>
 
-    <%= render "govuk_publishing_components/components/lead_paragraph", {
-      text: @topical_event.description,
-      margin_bottom: 8,
-    } %>
+    <div class="govuk-!-margin-bottom-8">
+      <%= render "govuk_publishing_components/components/lead_paragraph", {
+        text: @topical_event.description,
+      } %>
 
-    <% if @topical_event.image_url %>
-      <%= image_tag(@topical_event.image_url, alt: @topical_event.image_alt_text) %>
-    <% end %>
-
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    </div>
 
     <% if @topical_event.organisations %>
       <%= render "govuk_publishing_components/components/metadata", {
@@ -29,6 +26,10 @@
           "Organisations": sanitize(array_of_links_to_organisations(@topical_event.organisations).to_sentence)
         }
       } %>
+    <% end %>
+
+    <% if @topical_event.image_url %>
+      <%= image_tag(@topical_event.image_url, alt: @topical_event.image_alt_text) %>
     <% end %>
 
     <%= render "govuk_publishing_components/components/govspeak", {
