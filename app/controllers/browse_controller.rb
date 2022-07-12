@@ -1,6 +1,4 @@
 class BrowseController < ApplicationController
-  enable_request_formats show: [:json]
-
   def index
     page = MainstreamBrowsePage.find("/browse")
     @dimension26 = 1
@@ -12,49 +10,20 @@ class BrowseController < ApplicationController
   def show
     page = MainstreamBrowsePage.find("/browse/#{params[:top_level_slug]}")
     setup_content_item_and_navigation_helpers(page)
-
-    respond_to do |f|
-      f.html do
-        show_html(page)
-      end
-
-      f.json do
-        render(json: {
-          content_id: page.content_id,
-          navigation_page_type: "First Level Browse",
-          breadcrumbs: breadcrumb_content,
-          html: second_level_browse_pages_partial(page),
-        })
-      end
-    end
+    show_html(page)
   end
 
 private
 
   def show_html(page)
-    template = :show
-    if new_browse_variant_b?
-      slimmer_template "gem_layout_full_width"
-      template = :new_show
-    end
+    template = :new_show
+    slimmer_template "gem_layout_full_width"
     render template, locals: { page: page }
   end
 
   def index_html(page)
-    template = :index
-    if new_browse_variant_b?
-      slimmer_template "gem_layout_full_width"
-      template = :new_index
-    end
+    template = :new_index
+    slimmer_template "gem_layout_full_width"
     render template, locals: { page: page }
-  end
-
-  def second_level_browse_pages_partial(page)
-    render_partial(
-      "second_level_browse_page/_second_level_browse_pages",
-      title: page.title,
-      second_level_browse_pages: page.second_level_browse_pages,
-      curated_order: page.second_level_pages_curated?,
-    )
   end
 end
