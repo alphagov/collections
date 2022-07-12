@@ -42,7 +42,7 @@
               text: list[:title],
             },
             content: {
-              html: render(partial: "new_links", locals: {
+              html: render(partial: "links", locals: {
                 list: list.contents,
                 list_index: list_index,
                }),
@@ -63,7 +63,7 @@
       %>
       <% if page.related_topics.any? %>
         <% more_on_this_topic_contents = capture do %>
-          <%= render partial: "new_links", locals: { list: page.related_topics, list_index: page.lists.count, track_action: "moreLink" } %>
+          <%= render partial: "links", locals: { list: page.related_topics, list_index: page.lists.count, track_action: "moreLink" } %>
         <% end %>
 
         <%
