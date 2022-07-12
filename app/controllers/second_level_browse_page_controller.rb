@@ -11,9 +11,9 @@ private
   def show_html
     slimmer_template "gem_layout_full_width"
     template = if page.lists.curated?
-                 :new_show_curated
+                 :show_curated
                else
-                 :new_show_a_to_z
+                 :show_a_to_z
                end
     render(template, locals: { page: page, meta_section: meta_section })
   end

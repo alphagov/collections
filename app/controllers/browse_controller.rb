@@ -16,13 +16,13 @@ class BrowseController < ApplicationController
 private
 
   def show_html(page)
-    template = :new_show
+    template = :show
     slimmer_template "gem_layout_full_width"
     render template, locals: { page: page }
   end
 
   def index_html(page)
-    template = :new_index
+    template = :index
     slimmer_template "gem_layout_full_width"
     render template, locals: { page: page }
   end
