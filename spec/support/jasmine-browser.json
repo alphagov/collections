@@ -1,0 +1,21 @@
+{
+  "srcDir": "public/assets/collections",
+  "srcFiles": [
+    "application-*.js",
+    "test-dependencies-*.js"
+  ],
+  "cssFiles": [
+    "application-*.css"
+  ],
+  "specDir": "spec/javascripts",
+  "specFiles": [
+    "**/*[sS]pec.js"
+  ],
+  "helpers": [
+    "vendor/jquery-1.12.4.js",
+    "vendor/jasmine-jquery.js",
+    "vendor/jasmine-ajax-3.4.0.js",
+    "helpers/*.js"
+  ],
+  "browser": "headlessChrome"
+}
