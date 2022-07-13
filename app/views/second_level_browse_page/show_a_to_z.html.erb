@@ -36,28 +36,12 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-2">
       <% page.lists.each_with_index do |list, list_index| %>
-        <%= render "govuk_publishing_components/components/heading", {
-          font_size: "m",
-          margin_bottom: 7,
-          text: list["title"],
-        } %>
+        <%= render partial: "shared/browse_heading", locals: { title: list.title } %>
 
         <%= render partial: "links", locals: { list: list.contents, list_index: list_index } %>
       <% end %>
 
-      <% if page.related_topics.any? %>
-        <div class="browse__more-on-this-topic">
-          <%= render "govuk_publishing_components/components/heading", {
-              text: t("second_level_browse.more_on_this_topic"),
-              heading_level: 2,
-              font_size: "m",
-              border_top: 2,
-              padding: true,
-          } %>
-        </div>
-
-        <%= render partial: "links", locals: { list: page.related_topics, list_index: page.lists.count, track_action: "moreLink" } %>
-      <% end %>
+      <%= render partial: "shared/browse_related_topics", locals: { page: page } %>
     </div>
   </div>
 </div>
