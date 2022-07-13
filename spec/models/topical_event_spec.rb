@@ -66,14 +66,14 @@ RSpec.describe TopicalEvent do
     ])
   end
 
-  it "should map the social media links" do
+  it "should map the ordered featured documents with truncated description where this exceeds 160 chars" do
     expect(topical_event.ordered_featured_documents).to eq([
       {
         href: "https://www.gov.uk/somewhere",
         image_src: "https://www.gov.uk/someimage.png",
         image_alt: "Alt text for the image",
         heading_text: "A document related to this event",
-        description: "Very interesting document content.",
+        description: "Very interesting document content. However this goes over the 160 character limit so when displayed this should be truncated in order to display the content...",
       },
     ])
   end

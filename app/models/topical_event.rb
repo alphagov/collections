@@ -72,7 +72,7 @@ class TopicalEvent
         image_src: document.dig("image", "url"),
         image_alt: document.dig("image", "alt_text"),
         heading_text: document["title"],
-        description: document["summary"],
+        description: document["summary"].truncate(160, separator: " "),
       }
     end
   end
