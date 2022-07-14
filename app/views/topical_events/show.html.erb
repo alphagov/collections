@@ -40,7 +40,7 @@
 
       <% if @topical_event.about_page_link_text %>
         <p class="govuk-body">
-          <%= link_to(@topical_event.about_page_link_text, @topical_event.about_page_url, html_options: { class: "govuk-link" }) %>
+          <%= link_to(@topical_event.about_page_link_text, @topical_event.about_page_url, class: "govuk-link" ) %>
         </p>
       <% end %>
     </div>
