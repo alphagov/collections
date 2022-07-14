@@ -14,6 +14,7 @@ gem "plek"
 gem "rinku", require: "rails_rinku"
 gem "sassc-rails"
 gem "slimmer"
+gem "sprockets-rails"
 gem "uglifier"
 
 group :test do
