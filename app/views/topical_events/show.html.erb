@@ -32,16 +32,18 @@
       </div>
     <% end %>
 
-    <%= render "govuk_publishing_components/components/govspeak", {
-      } do %>
-        <%= @topical_event.body&.html_safe %>
-    <% end %>
+    <div class="topical-event__body-wrapper">
+      <%= render "govuk_publishing_components/components/govspeak", {
+        } do %>
+          <%= @topical_event.body&.html_safe %>
+      <% end %>
 
-    <% if @topical_event.about_page_link_text %>
-      <p class="govuk-body">
-        <%= link_to(@topical_event.about_page_link_text, @topical_event.about_page_url, html_options: { class: "govuk-link" }) %>
-      </p>
-    <% end %>
+      <% if @topical_event.about_page_link_text %>
+        <p class="govuk-body">
+          <%= link_to(@topical_event.about_page_link_text, @topical_event.about_page_url, html_options: { class: "govuk-link" }) %>
+        </p>
+      <% end %>
+    </div>
 
     <% if @topical_event.social_media_links %>
       <section id="social-media-links" class="topical-events__section-break">
