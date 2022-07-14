@@ -176,7 +176,7 @@ RSpec.feature "Subtopic pages" do
       expect(titles).to eq(expected_titles)
     end
 
-    it "paginates the results" do
+    fit "paginates the results" do
       # Given there is latest content for a subtopic
       search_api_has_latest_documents_for_subtopic(
         "content-id-for-offshore",
@@ -195,8 +195,8 @@ RSpec.feature "Subtopic pages" do
       end
 
       # When I go to the next page
-      expect(page).to have_selector(".gem-c-pagination__link")
-      next_href = page.find(".gem-c-pagination__link[rel='next']")["href"]
+      expect(page).to have_selector(".govuk-pagination")
+      next_href = page.find(".govuk-pagination__link[rel='next']")["href"]
       visit next_href
 
       # Then I should see the remaining documents
@@ -208,8 +208,8 @@ RSpec.feature "Subtopic pages" do
       end
 
       # When I go back to the first page
-      expect(page).to have_selector(".gem-c-pagination__link")
-      prev_href = page.find(".gem-c-pagination__link[rel='prev']")["href"]
+      expect(page).to have_selector(".govuk-pagination")
+      prev_href = page.find(".govuk-pagination__link[rel='prev']")["href"]
       visit prev_href
 
       # Then I should see the first 50 documents again
