@@ -14,10 +14,9 @@
 
     <%= render "govuk_publishing_components/components/lead_paragraph", {
       text: @topical_event.description,
-      margin_bottom: 8,
     } %>
 
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-bottom-8">
 
     <% if @topical_event.organisations %>
       <%= render "govuk_publishing_components/components/metadata", {
