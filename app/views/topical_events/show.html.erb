@@ -43,31 +43,35 @@
     <% end %>
 
     <% if @topical_event.social_media_links %>
+      <section id="social-media-links" class="govuk-!-margin-bottom-7">
       <%= render "govuk_publishing_components/components/share_links", {
         links: @topical_event.social_media_links,
       } %>
+      </section>
     <% end %>
   </div>
 
   <div class="govuk-grid-column-full govuk-!-margin-bottom-7">
     <% if @topical_event.ordered_featured_documents %>
-      <%= render "govuk_publishing_components/components/heading", {
-        text: I18n.t("topical_events.headings.featured"),
-        padding: true,
-        font_size: "l",
-        border_top: 2,
-        margin_bottom: 4,
-      } %>
+      <section id="featured" class="govuk-!-margin-bottom-6">
+        <%= render "govuk_publishing_components/components/heading", {
+          text: I18n.t("topical_events.headings.featured"),
+          padding: true,
+          font_size: "l",
+          border_top: 2,
+          margin_bottom: 4,
+        } %>
 
-      <% @topical_event.ordered_featured_documents.in_groups_of(3, false) do |row| %>
-        <div class="govuk-grid-row">
-          <% row.each do |document| %>
-            <div class="govuk-grid-column-one-third">
-              <%= render "govuk_publishing_components/components/image_card", document %>
-            </div>
-          <% end %>
-        </div>
-      <% end %>
+        <% @topical_event.ordered_featured_documents.in_groups_of(3, false) do |row| %>
+          <div class="govuk-grid-row">
+            <% row.each do |document| %>
+              <div class="govuk-grid-column-one-third">
+                <%= render "govuk_publishing_components/components/image_card", document %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </section>
     <% end %>
 
     <section id="latest">
@@ -92,7 +96,7 @@
     </section>
   </div>
 
-  <div class="govuk-grid-column-full">
+  <section id="documents" class="govuk-grid-column-full">
     <% if @topical_event.publications.any? || @topical_event.consultations.any? || @topical_event.announcements.any? || @topical_event.detailed_guidance.any? %>
       <%= render "govuk_publishing_components/components/heading", {
         text: I18n.t("topical_events.headings.documents"),
@@ -107,10 +111,11 @@
     <%= render(partial: 'document_list_from_search_api', locals: { documents: @topical_event.consultations, heading: I18n.t("topical_events.headings.consultations"), link_to: search_url(:consultation, @topical_event.slug) }) if @topical_event.consultations.any? %>
     <%= render(partial: 'document_list_from_search_api', locals: { documents: @topical_event.announcements, heading: I18n.t("topical_events.headings.announcements"), link_to: search_url(:announcement, @topical_event.slug) }) if @topical_event.announcements.any? %>
     <%= render(partial: 'document_list_from_search_api', locals: { documents: @topical_event.detailed_guidance, heading: I18n.t("topical_events.headings.detailed_guides"), link_to: search_url(:detailed_guidance, @topical_event.slug) }) if @topical_event.detailed_guidance.any? %>
-  </div>
+  </section>
 
   <div class="govuk-grid-column-two-thirds">
     <% if @topical_event.travel_advice.any? %>
+      <section id="travel-advice"
       <%= render "govuk_publishing_components/components/heading", {
         text: t("topical_events.headings.travel_advice"),
         font_size: "l",
@@ -128,6 +133,7 @@
           }
         end
       } %>
+      </section>
     <% end %>
   </div>
 
