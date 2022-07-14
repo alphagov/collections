@@ -16,7 +16,7 @@
       text: @topical_event.description,
     } %>
 
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-bottom-8">
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible topical-events__section-break">
 
     <% if @topical_event.organisations %>
       <%= render "govuk_publishing_components/components/metadata", {
@@ -27,7 +27,9 @@
     <% end %>
 
     <% if @topical_event.image_url %>
+      <div class="topical-events__image">
       <%= image_tag(@topical_event.image_url, alt: @topical_event.image_alt_text) %>
+      </div>
     <% end %>
 
     <%= render "govuk_publishing_components/components/govspeak", {
@@ -42,7 +44,7 @@
     <% end %>
 
     <% if @topical_event.social_media_links %>
-      <section id="social-media-links" class="govuk-!-margin-bottom-7">
+      <section id="social-media-links" class="topical-events__section-break">
       <%= render "govuk_publishing_components/components/share_links", {
         links: @topical_event.social_media_links,
       } %>
@@ -52,7 +54,7 @@
 
   <div class="govuk-grid-column-full">
     <% if @topical_event.ordered_featured_documents %>
-      <section id="featured" class="govuk-!-margin-bottom-6">
+      <section id="featured">
         <%= render "govuk_publishing_components/components/heading", {
           text: I18n.t("topical_events.headings.featured"),
           padding: true,
@@ -74,7 +76,7 @@
     <% end %>
   </div>
 
-  <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-7">
+  <div class="govuk-grid-column-two-thirds topical-events__section-break">
     <section id="latest">
       <%= render "govuk_publishing_components/components/heading", {
         text: I18n.t("topical_events.headings.latest"),

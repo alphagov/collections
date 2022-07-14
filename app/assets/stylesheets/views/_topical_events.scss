@@ -91,4 +91,10 @@
     }
     /* stylelint-enable */
   }
+
+  .topical-events__section-break,
+  .topical-events__social-media-links,
+  .topical-events__image {
+    @include govuk-responsive-margin(8, "bottom");
+  }
 }
