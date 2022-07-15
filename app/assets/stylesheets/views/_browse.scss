@@ -72,6 +72,19 @@ $topic-section-border: 1px solid $govuk-border-colour;
 
 .browse_curated-section--bottom-border {
   border-bottom: $topic-section-border;
+  padding-bottom: 40px;
+  margin-bottom: 15px;
+
+  @include govuk-media-query($from: "tablet") {
+    margin-bottom: 0;
+  }
+}
+
+// We usually avoid using external selectors to style their children.
+// However, `govuk_list > li` overrides any custom spacing class on the `li` due to specificity.
+// We cannot use the Design System overrides here as we want the spacing to stay the same on mobile.
+.browse__list > .browse__list-item {
+  margin-bottom: govuk-spacing(4);
 }
 
 .browse__more-on-this-topic {
