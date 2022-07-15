@@ -1,7 +1,13 @@
 <% page.lists.each_with_index do |list, list_index| %>
-  <%= render partial: "shared/browse_heading", locals: { title: list.title} %>
 
-  <%= render partial: "links", locals: { list: list.contents, list_index: list_index } %>
+  <%# The last section should have a bottom border if there are no related topics on the page. %>
+  <% is_last_section_with_no_related_topics =  list_index == page.lists.count - 1 && !page.related_topics.any? %>
+
+  <div class="browse__curated-section <%= 'browse_curated-section--bottom-border' if is_last_section_with_no_related_topics %>" >
+    <%= render partial: "shared/browse_heading", locals: { title: list.title } %>
+
+    <%= render partial: "links", locals: { list: list.contents, list_index: list_index } %>
+  </div>
 <% end %>
 
 <%= render partial: "shared/browse_related_topics", locals: { page: page } %>

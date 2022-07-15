@@ -62,6 +62,18 @@ $browse-header-background-colour: #263135;
   margin-bottom: govuk-spacing(2);
 }
 
+$topic-section-border: 1px solid $govuk-border-colour;
+
+.browse__curated-section {
+  border-top: $topic-section-border;
+  padding-top: govuk-spacing(3);
+  margin-bottom: govuk-spacing(9);
+}
+
+.browse_curated-section--bottom-border {
+  border-bottom: $topic-section-border;
+}
+
 .browse__more-on-this-topic {
   margin-top: govuk-spacing(4);
 
