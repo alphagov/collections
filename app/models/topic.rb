@@ -49,4 +49,27 @@ class Topic
   def slug
     base_path.sub(%r{\A/topic/}, "")
   end
+
+  def related_topics
+    []
+  end
+
+  # These attributes are required to support the Miller collumns. Once the NewBrowse AB test is complete,
+  # and we render only the new browse templates, these can be removed.
+
+  def second_level_browse_pages
+    children
+  end
+
+  def active_top_level_browse_page
+    parent
+  end
+
+  def second_level_pages_curated?
+    true
+  end
+
+  def top_level_browse_pages
+    []
+  end
 end

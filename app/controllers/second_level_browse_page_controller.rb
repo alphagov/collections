@@ -1,5 +1,6 @@
 class SecondLevelBrowsePageController < ApplicationController
   enable_request_formats show: [:json]
+  include TopicBrowseHelper
 
   def show
     setup_content_item_and_navigation_helpers(page)
@@ -43,9 +44,8 @@ private
   end
 
   def page
-    @page ||= MainstreamBrowsePage.find(
-      "/browse/#{params[:top_level_slug]}/#{params[:second_level_slug]}",
-    )
+    @page ||=
+      level_two_topic_page.presence || second_level_browse_page
   end
 
   def count_link_sections(page)
@@ -63,5 +63,16 @@ private
     end
 
     link_count
+  end
+
+  def second_level_browse_page
+    MainstreamBrowsePage.find(
+      "/browse/#{params[:top_level_slug]}/#{params[:second_level_slug]}",
+    )
+  end
+
+  def level_two_topic_page
+    path = "/topic/#{params[:topic_slug]}/#{params[:subtopic_slug]}"
+    Topic.find(path) if topic_browse_mapping(path).present?
   end
 end
