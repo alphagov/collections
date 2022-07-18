@@ -52,8 +52,8 @@ When(/^I visit the main browse page$/) do
 end
 
 Then(/^I see the list of top level browse pages alphabetically ordered$/) do
-  expect(page).to have_selector("div#root li:nth-child(1)", text: "Benefits"), "Benefits should appear first"
-  expect(page).to have_selector("div#root li:nth-child(2)", text: "Crime and justice"), "Crime and justice should appear second"
+  expect(page).to have_selector("ul.gem-c-cards__list li:nth-child(1)", text: /Benefits/), "Benefits should appear first"
+  expect(page).to have_selector("ul.gem-c-cards__list li:nth-child(2)", text: /Crime and justice/), "Crime and justice should appear second"
 end
 
 When(/^I click on a top level browse page$/) do
@@ -65,8 +65,8 @@ Then(/^I see the list of second level browse pages$/) do
 end
 
 Then(/^I see the curated list of second level browse pages$/) do
-  expect(page).to have_selector(".browse__inner--curated li:nth-child(1)", text: "Judges"), "Judges should appear first"
-  expect(page).to have_selector(".browse__inner--curated li:nth-child(2)", text: "Courts"), "Courts should appear second"
+  expect(page).to have_selector("ul.gem-c-cards__list li:nth-child(1)", text: "Judges"), "Judges should appear first"
+  expect(page).to have_selector("ul.gem-c-cards__list li:nth-child(2)", text: "Courts"), "Courts should appear second"
 end
 
 When(/^I click on a second level browse page$/) do
@@ -74,7 +74,7 @@ When(/^I click on a second level browse page$/) do
 end
 
 Then(/^I should see the second level browse page$/) do
-  expect(page).to have_selector("h2", text: "Judges")
+  expect(page).to have_selector("h1", text: "Judges")
 end
 
 Then(/^the A to Z label should be present$/) do
