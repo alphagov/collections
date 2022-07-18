@@ -13,7 +13,7 @@
   ul_classes << brand_helper.brand_class if brand
 %>
 <% if items.any? %>
-  <%= tag.ul({ class: ul_classes, lang: "en" }) do %>
+  <%= tag.ul(class: ul_classes, lang: "en") do %>
     <% items.each do |item| %>
       <li class="app-c-topic-list__item">
         <%=

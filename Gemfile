@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "rails", "6.1.6.1"
+gem "rails", "7.0.3.1"
 
 gem "dalli"
 gem "faraday"
@@ -14,6 +14,7 @@ gem "plek"
 gem "rinku", require: "rails_rinku"
 gem "sassc-rails"
 gem "slimmer"
+gem "sprockets-rails"
 gem "uglifier"
 
 group :test do
