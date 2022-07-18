@@ -96,6 +96,47 @@ RSpec.describe MainstreamBrowsePage do
         ]
         expect(page.second_level_browse_pages.map(&:content_id)).to eq(expected)
       end
+
+      context "when there is a mapped level two specialist topic" do
+        let(:level_two_topic_url) { "/topic/second/level" }
+        let(:level_one_browse_url) { api_data["base_path"] }
+        let(:test_yaml) do
+          { "mappings" =>
+            [
+              {
+                "browse_path" => level_one_browse_url,
+                "topic_path" => level_two_topic_url,
+              },
+            ] }
+        end
+
+        let(:topic_api_data) do
+          GovukSchemas::RandomExample.for_schema(frontend_schema: "topic").merge(
+            "title" => "Level two specialist topic",
+            "base_path" => level_two_topic_url,
+            "content_id" => "1234",
+            "links" => {},
+          )
+        end
+
+        before do
+          allow(YAML).to receive(:load_file).and_return(test_yaml)
+          stub_content_store_has_item(level_two_topic_url, topic_api_data)
+          api_data["links"]["second_level_browse_pages"] = [
+            second_level_browse_page2,
+            second_level_browse_page1,
+          ]
+        end
+
+        it "adds second level specialist topics to the set of links" do
+          expected = [
+            second_level_browse_page2["content_id"],
+            second_level_browse_page1["content_id"],
+            topic_api_data["content_id"],
+          ]
+          expect(page.second_level_browse_pages.map(&:content_id)).to eq(expected)
+        end
+      end
     end
   end
 

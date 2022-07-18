@@ -1,4 +1,5 @@
 class MainstreamBrowsePage
+  include TopicBrowseHelper
   attr_reader :content_item
 
   delegate(
@@ -30,6 +31,12 @@ class MainstreamBrowsePage
   end
 
   def second_level_browse_pages
+    return level_two_browse if level_two_specialist_topic.blank?
+
+    level_two_browse << level_two_specialist_topic
+  end
+
+  def level_two_browse
     links = linked_items("second_level_browse_pages")
 
     if second_level_pages_curated?
@@ -39,6 +46,13 @@ class MainstreamBrowsePage
     else
       links
     end
+  end
+
+  def level_two_specialist_topic
+    mapping = topic_browse_mapping(base_path)
+    return if mapping.blank?
+
+    Topic.find(mapping["topic_path"])
   end
 
   def second_level_pages_curated?
