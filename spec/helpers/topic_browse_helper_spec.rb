@@ -18,5 +18,10 @@ RSpec.describe TopicBrowseHelper do
       expect(topic_browse_mapping("boo")).to be nil
       expect(topic_browse_mapping("foo")).to eq({ "browse_path" => "foo", "topic_path" => "bar" })
     end
+
+    it "returns the topic mapping for a given topic base path" do
+      expect(topic_browse_mapping("boo")).to be nil
+      expect(topic_browse_mapping("bar")).to eq({ "browse_path" => "foo", "topic_path" => "bar" })
+    end
   end
 end

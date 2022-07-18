@@ -1,6 +1,14 @@
 module TopicBrowseHelper
   def topic_browse_mapping(path)
+    check_browse_paths(path) || check_topic_paths(path)
+  end
+
+  def check_browse_paths(path)
     mappings.find { |m| m["browse_path"] == path }
+  end
+
+  def check_topic_paths(path)
+    mappings.find { |m| m["topic_path"] == path }
   end
 
   def mappings
