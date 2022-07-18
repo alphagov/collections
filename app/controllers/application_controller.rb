@@ -1,16 +1,12 @@
 class ApplicationController < ActionController::Base
   include Slimmer::Template
-  include AbTests::NewBrowseAbTestable
 
-  helper_method :new_browse_variant
-  helper_method :page_under_test?
   helper_method :content_item_h
 
   protect_from_forgery with: :exception
 
   before_action :set_expiry
   before_action :restrict_request_formats
-  before_action :set_new_browse_response_header_if_browse_page
 
   slimmer_template "gem_layout"
 
@@ -72,10 +68,6 @@ private
     return true if format == Mime[:html] || format == Mime::ALL
 
     format && self.class.acceptable_formats.fetch(params[:action].to_sym, []).include?(format.to_sym)
-  end
-
-  def set_new_browse_response_header_if_browse_page
-    set_new_browse_response_header if page_under_test?
   end
 
   def error_403
