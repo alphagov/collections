@@ -18,7 +18,6 @@
   <%= stylesheet_link_tag "application" %>
   <%= csrf_meta_tags %>
   <%= yield :meta_tags %>
-  <%= new_browse_variant.analytics_meta_tag.html_safe if page_under_test? %>
   <%= render 'govuk_publishing_components/components/meta_tags', content_item: content_item_h %>
   <%= stylesheet_link_tag "print.css", :media => "print", integrity: false %>
 </head>
