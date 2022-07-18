@@ -23,6 +23,9 @@ Rails.application.routes.draw do
   end
 
   resources :topics, only: %i[index show], path: :topic, param: :topic_slug do
+    constraints TopicBrowseRoutingConstraint.new do
+      get ":subtopic_slug", on: :member, to: "second_level_browse_page#show"
+    end
     get ":subtopic_slug", on: :member, to: "subtopics#show"
   end
 
