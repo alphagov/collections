@@ -1,4 +1,4 @@
-Given(/^there is an alphabetical browse page set up with links$/) do
+Given(/^there is a browse page set up with links$/) do
   second_level_browse_pages = [{
     content_id: "judges-content-id",
     title: "Judges",
@@ -51,9 +51,9 @@ When(/^I visit the main browse page$/) do
   visit browse_index_path
 end
 
-Then(/^I see the list of top level browse pages alphabetically ordered$/) do
-  expect(page).to have_selector("div#root li:nth-child(1)", text: "Benefits"), "Benefits should appear first"
-  expect(page).to have_selector("div#root li:nth-child(2)", text: "Crime and justice"), "Crime and justice should appear second"
+Then(/^I see the list of top level browse pages$/) do
+  expect(page).to have_link("Benefits", href: "/browse/benefits")
+  expect(page).to have_link("Crime and justice", href: "/browse/crime-and-justice")
 end
 
 When(/^I click on a top level browse page$/) do
@@ -61,12 +61,12 @@ When(/^I click on a top level browse page$/) do
 end
 
 Then(/^I see the list of second level browse pages$/) do
-  expect(page).to have_selector("a", text: "Judges"), "Subsection link should be visible"
+  expect(page).to have_selector("a[href='/browse/crime-and-justice/judges']", text: "Judges")
 end
 
 Then(/^I see the curated list of second level browse pages$/) do
-  expect(page).to have_selector(".browse__inner--curated li:nth-child(1)", text: "Judges"), "Judges should appear first"
-  expect(page).to have_selector(".browse__inner--curated li:nth-child(2)", text: "Courts"), "Courts should appear second"
+  expect(page).to have_link("Judges", href: "/browse/crime-and-justice/judges")
+  expect(page).to have_link("Courts", href: "/browse/crime-and-justice/courts")
 end
 
 When(/^I click on a second level browse page$/) do
@@ -74,7 +74,7 @@ When(/^I click on a second level browse page$/) do
 end
 
 Then(/^I should see the second level browse page$/) do
-  expect(page).to have_selector("h2", text: "Judges")
+  expect(page).to have_selector("h1", text: "Judges")
 end
 
 Then(/^the A to Z label should be present$/) do
