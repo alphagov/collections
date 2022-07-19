@@ -1,4 +1,8 @@
 class SecondLevelBrowsePageController < ApplicationController
+  def new_browse_variant_c?
+    params["c"].present?
+  end
+
   def show
     setup_content_item_and_navigation_helpers(page)
     @dimension26 = count_link_sections(page)
@@ -10,12 +14,17 @@ private
 
   def show_html
     slimmer_template "gem_layout_full_width"
+    items_partial = if new_browse_variant_c?
+                      "show_curated_accordion"
+                    else
+                      "show_curated_list"
+                    end
     template = if page.lists.curated?
                  :show_curated
                else
                  :show_a_to_z
                end
-    render(template, locals: { page: page, meta_section: meta_section })
+    render(template, locals: { page: page, items_partial: items_partial, meta_section: meta_section })
   end
 
   def meta_section
