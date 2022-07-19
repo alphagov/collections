@@ -1,0 +1,66 @@
+<%
+  accordion_contents = page.lists.map.with_index do |list, list_index|
+    {
+      heading: {
+        text: list[:title],
+      },
+      content: {
+        html: render(partial: "links", locals: {
+          list: list.contents,
+          list_index: list_index,
+         }),
+      },
+      data_attributes: {
+        "track-count": "accordionSection",
+        "track-options": {
+          dimension114: list_index + 1,
+        }
+      },
+    }
+  end
+%>
+
+<%#
+  Generate markup for More on this topic and push it into the accordion
+  content hash.
+%>
+<% if page.related_topics.any? %>
+  <% more_on_this_topic_contents = capture do %>
+    <%= render partial: "links", locals: { list: page.related_topics, list_index: page.lists.count, track_action: "moreLink" } %>
+  <% end %>
+
+  <%
+    accordion_contents << {
+      heading: {
+        text: t("second_level_browse.more_on_this_topic"),
+      },
+      content: {
+        html: more_on_this_topic_contents,
+      },
+      data_attributes: {
+        "track-count": "accordionSection",
+        "track-options": {
+          dimension114: page.lists.count + 1,
+        }
+      },
+    }
+  %>
+<% end %>
+
+<div data-module="toggle-attribute">
+  <%
+    custom_dimensions = {
+      dimension114: 0,
+    }
+  %>
+  <%= render "govuk_publishing_components/components/accordion", {
+    track_show_all_clicks: true,
+    track_sections: true,
+    heading_level: 2,
+    data_attributes_show_all: {
+      "track-options": custom_dimensions.to_json,
+    },
+    items: accordion_contents,
+    margin_bottom: 4,
+  } %>
+</div>
