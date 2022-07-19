@@ -90,6 +90,7 @@ RSpec.feature "Mainstream browsing" do
 
       expect(page.status_code).to eq(200)
       expect(page).to have_selector("h1", text: "Level two specialist topic")
+      expect(page).to have_selector("a.govuk-breadcrumbs__link", text: "Level one browse page")
     end
   end
 end
