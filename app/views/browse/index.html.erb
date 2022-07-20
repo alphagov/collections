@@ -11,19 +11,19 @@
 <% end %>
 
 <% content_for :breadcrumbs do %>
-  <%= render "shared/topic_page_breadcrumbs" %>
+  <%= render "shared/browse_breadcrumbs" %>
 <% end %>
 
-<%= render "shared/topic_page_header" do %>
-  <h1 class="topic-page__heading govuk-heading-xl">
+<%= render "shared/browse_header" do %>
+  <h1 class="browse__heading govuk-heading-xl">
     <%= t("browse.title") %>
   </h1>
-  <p class="topic-page__description gem-c-lead-paragraph gem-c-lead-paragraph--inverse">
+  <p class="browse__description gem-c-lead-paragraph gem-c-lead-paragraph--inverse">
     <%= t("browse.description") %>
   </p>
 <% end %>
 
-<%= render "shared/topic_page_cards_container" do %>
+<%= render "shared/browse_cards_container" do %>
   <%= render "govuk_publishing_components/components/cards", {
     items: page.top_level_browse_pages.map.with_index do |top_level_browse_page, index|
       {
