@@ -1,7 +1,7 @@
 module AbTests::LevelTwoBrowseAbTestable
   CUSTOM_DIMENSION = 47
 
-  ALLOWED_VARIANTS = %(A B C).freeze
+  ALLOWED_VARIANTS = %w[A B C].freeze
 
   def level_two_browse_test
     @level_two_browse_test ||= GovukAbTesting::AbTest.new(
