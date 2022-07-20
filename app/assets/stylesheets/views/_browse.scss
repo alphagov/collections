@@ -1,4 +1,4 @@
-// This dark grey is the background colour for the topic pages.
+// This dark grey is the background colour for the browse pages.
 //
 // White text on this background gives a contrast ratio of 13.35 - this meets AA
 // and AAA for body and large text.
@@ -8,17 +8,17 @@
 // defined for this).
 //
 // Requirements source: https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
-$topic-page-header-background-colour: #263135;
+$browse-header-background-colour: #263135;
 
 // This isn't proper BEM - but the convention is to have the view name as the
 // block part of the class name. Because we need to keep `browse` so this can
 // be run as an A/B test, we need to use a different class name for each view.
-.topic-page__breadcrumb-wrapper,
-.topic-page__header-wrapper {
-  background-color: $topic-page-header-background-colour;
+.browse__breadcrumb-wrapper,
+.browse__header-wrapper {
+  background-color: $browse-header-background-colour;
 }
 
-.topic-page__breadcrumb-wrapper {
+.browse__breadcrumb-wrapper {
   // Setting the overflow to auto is required to prevent the breadcrumb
   // component's margin from collapsing.
   overflow: auto;
@@ -37,14 +37,14 @@ $topic-page-header-background-colour: #263135;
 }
 
 // The header spacings are a work in progress.
-.topic-page__header-wrapper {
+.browse__header-wrapper {
   padding-bottom: govuk-spacing(7);
 
   // A tiny white seam sometimes appears, despite there being no gap between
   // this element and the previous element. This shifts the element up by a
   // pixel to prevent the seam from appearing and adds padding to reposition the
   // content.
-  border-top: 1px solid $topic-page-header-background-colour;
+  border-top: 1px solid $browse-header-background-colour;
   margin-top: -1px;
 
   @include govuk-media-query($from: "tablet") {
@@ -53,16 +53,16 @@ $topic-page-header-background-colour: #263135;
   }
 }
 
-.topic-page__heading {
+.browse__heading {
   color: govuk-colour("white");
   margin-bottom: govuk-spacing(6);
 }
 
-.topic-page__description {
+.browse__description {
   margin-bottom: govuk-spacing(2);
 }
 
-.topic-page__more-on-this-topic {
+.browse__more-on-this-topic {
   margin-top: govuk-spacing(4);
 
   @include govuk-media-query($from: "tablet") {
