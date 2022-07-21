@@ -120,7 +120,7 @@
 
   <div class="govuk-grid-column-two-thirds">
     <% if @topical_event.travel_advice.any? %>
-      <section id="travel-advice"
+      <section id="travel-advice">
       <%= render "govuk_publishing_components/components/heading", {
         text: t("topical_events.headings.travel_advice"),
         font_size: "l",
