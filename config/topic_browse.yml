@@ -2,5 +2,5 @@
   # browse_path: /browse/tax (level one browse)
   # topic_path: /topic/benefits-credits/tax-credits (level two specialist topic)
 mappings:
- - browse_path:
-   topic_path:
+ - browse_path: /browse/tax
+   topic_path: /topic/benefits-credits/tax-credits

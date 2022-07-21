@@ -21,7 +21,7 @@ module AbTests::NewBrowseAbTestable
   end
 
   def new_browse_variant_b?
-    page_under_test? && new_browse_variant.variant?("B")
+    true
   end
 
   def page_under_test?
