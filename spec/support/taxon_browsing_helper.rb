@@ -19,7 +19,7 @@ module TaxonBrowsingHelper
   end
 
   def then_there_should_be_an_error
-    expect(page.status_code).to eq(500)
+    expect(page.status_code).to eq(404)
   end
 
   def given_there_is_a_taxon_with_children

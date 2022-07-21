@@ -16,6 +16,8 @@ class Taxon
   class InAlphaPhase < StandardError
   end
 
+  class NotATaxon < StandardError; end
+
   def initialize(content_item)
     @content_item = content_item
   end
@@ -24,7 +26,7 @@ class Taxon
     content_item = ContentItem.find!(base_path)
 
     unless content_item.document_type == "taxon"
-      raise "Tried to render a taxon page for content item that is not a taxon"
+      raise NotATaxon
     end
 
     if content_item.phase == "alpha"

@@ -1,5 +1,6 @@
 class TaxonsController < ApplicationController
   rescue_from Taxon::InAlphaPhase, with: :error_404
+  rescue_from Taxon::NotATaxon, with: :error_404
   slimmer_template "gem_layout_full_width"
 
   def show
