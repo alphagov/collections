@@ -49,7 +49,7 @@ class MainstreamBrowsePage
   end
 
   def level_two_specialist_topic
-    mapping = topic_browse_mapping(base_path)
+    mapping = browse_to_topic_mapping(base_path)
     return if mapping.blank?
 
     Topic.find(mapping["topic_path"])

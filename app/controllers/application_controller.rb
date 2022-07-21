@@ -110,7 +110,7 @@ private
   end
 
   def breadcrumb_content
-    render_partial("_breadcrumbs")
+    render_partial("_breadcrumbs", locals = { request: request })
   end
 
   def render_partial(partial_name, locals = {})

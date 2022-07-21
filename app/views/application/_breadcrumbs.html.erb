@@ -1,7 +1,7 @@
 <% inverse ||= false %>
 
 <%= render 'govuk_publishing_components/components/breadcrumbs', {
-  breadcrumbs: Breadcrumbs.new(@content_item).breadcrumbs,
+  breadcrumbs: Breadcrumbs.new(@content_item, request).breadcrumbs,
   collapse_on_mobile: true,
   inverse: inverse
 } %>

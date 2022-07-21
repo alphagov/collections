@@ -2,8 +2,9 @@
 class Breadcrumbs
   include TopicBrowseHelper
 
-  def initialize(content_item)
+  def initialize(content_item, request)
     @content_item = content_item
+    @request = request
   end
 
   def breadcrumbs
@@ -18,7 +19,7 @@ class Breadcrumbs
 
 private
 
-  attr_reader :content_item
+  attr_reader :content_item, :request
 
   def all_parents
     parents = []
@@ -34,11 +35,11 @@ private
   end
 
   def topic_browse_breadcrumb
-    mapping = check_topic_paths(content_item["base_path"])
-    if mapping
-      page = MainstreamBrowsePage.find(mapping["browse_path"])
-      [{ "title" => page.title, "base_path" => page.base_path }]
-    end
+    mapping = topic_as_browse_mapping(request)
+    return if mapping.blank?
+    
+    page = MainstreamBrowsePage.find(mapping["browse_path"])
+    [{ "title" => page.title, "base_path" => page.base_path }]
   end
 
   def parent_selector

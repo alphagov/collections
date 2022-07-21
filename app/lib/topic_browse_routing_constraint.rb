@@ -2,7 +2,6 @@ class TopicBrowseRoutingConstraint
   include TopicBrowseHelper
 
   def matches?(request)
-    @path = request.path
-    topic_browse_mapping(@path).present?
+    topic_as_browse_mapping(request).present?
   end
 end

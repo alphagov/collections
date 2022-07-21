@@ -1,14 +1,16 @@
 module TopicBrowseHelper
-  def topic_browse_mapping(path)
-    check_browse_paths(path) || check_topic_paths(path)
-  end
 
-  def check_browse_paths(path)
+  def browse_to_topic_mapping(path)
     mappings.find { |m| m["browse_path"] == path }
   end
 
-  def check_topic_paths(path)
-    mappings.find { |m| m["topic_path"] == path }
+  def topic_as_browse_mapping(request)
+    mapping = mappings.find { |m| m["topic_path"] == request.path }
+    return unless mapping
+
+    referer = URI(request.referer)
+    return if (request.path).include?(referer.path)
+    mapping
   end
 
   def mappings

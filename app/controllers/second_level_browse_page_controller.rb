@@ -73,6 +73,6 @@ private
 
   def level_two_topic_page
     path = "/topic/#{params[:topic_slug]}/#{params[:subtopic_slug]}"
-    Topic.find(path) if topic_browse_mapping(path).present?
+    Topic.find(path) if topic_as_browse_mapping(request).present?
   end
 end
