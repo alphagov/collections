@@ -8,6 +8,8 @@
 
   .organisations-list {
     list-style: none;
+    padding: 0;
+
     /* stylelint-disable */
     .organisations-list__item {
       float: left;
@@ -88,5 +90,12 @@
       }
     }
     /* stylelint-enable */
+  }
+
+  .topical-events__section-break,
+  .topical-events__social-media-links,
+  .topical-events__image,
+  .topical-event__body-wrapper {
+    @include govuk-responsive-margin(8, "bottom");
   }
 }

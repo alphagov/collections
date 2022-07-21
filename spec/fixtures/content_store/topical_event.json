@@ -45,7 +45,7 @@
           "alt_text": "Alt text for the image"
         },
         "title": "A document related to this event",
-        "summary": "Very interesting document content."
+        "summary": "Very interesting document content. However this goes over the 160 character limit so when displayed this should be truncated in order to display the content neatly on the page."
       }
     ],
     "social_media_links": [

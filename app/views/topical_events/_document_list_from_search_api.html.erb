@@ -1,18 +1,18 @@
 <% heading ||= nil %>
 
 <% if heading %>
-  <section id="<%= heading.downcase.parameterize %>" class="document-block">
+  <section id="<%= heading.downcase.parameterize %>" class="govuk-!-margin-bottom-7">
   <%= render "govuk_publishing_components/components/heading", {
     text: heading,
     padding: true,
     font_size: 27,
     margin_bottom: 3,
+    heading_level: 3
   } %>
 <% end %>
 
   <%= render "govuk_publishing_components/components/document_list", {
     items: documents,
-    margin_bottom: 6,
   } %>
 
   <p class="govuk-body">
