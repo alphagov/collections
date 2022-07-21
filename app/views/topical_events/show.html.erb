@@ -55,7 +55,7 @@
   </div>
 
   <div class="govuk-grid-column-full">
-    <% if @topical_event.ordered_featured_documents %>
+    <% if @topical_event.ordered_featured_documents&.any? %>
       <section id="featured">
         <%= render "govuk_publishing_components/components/heading", {
           text: I18n.t("topical_events.headings.featured"),
