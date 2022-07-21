@@ -30,12 +30,12 @@
         track_label: section["title"],
         track_dimension: number_of_accordion_sections,
         track_dimension_index: 26,
-        gtm_event_name: "select_content",
-        gtm_attributes: {
+        ga4: {
+          event_name: 'select_content',
           type: 'accordion',
           text: section["title"],
           index: index + 1,
-          'index-total': number_of_accordion_sections,
+          index_total: number_of_accordion_sections,
           section: 'n/a',
           action: 'n/a',
         }
@@ -57,9 +57,10 @@
   <div data-module="toggle-attribute">
     <%
       show_all_attributes = {
+        event_name: "select_content",
         type: "accordion",
         index: 0,
-        "index-total": number_of_accordion_sections,
+        index_total: number_of_accordion_sections,
         section: "n/a"
       }
     %>
@@ -69,8 +70,7 @@
         module: "govuk-accordion"
       },
       data_attributes_show_all: {
-        "gtm-event-name": "select_content",
-        "gtm-attributes": show_all_attributes.to_json
+        "ga4": show_all_attributes.to_json
       },
       items: accordion_contents,
       margin_bottom: 3
