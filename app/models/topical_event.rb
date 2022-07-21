@@ -129,7 +129,7 @@ class TopicalEvent
 
   def emphasised_organisations
     @content_item.content_item_data.dig("details", "emphasised_organisations")&.map do |organisation_content_id|
-      @content_item.content_item_data.dig("links", "organisations").select { |organisation| organisation["content_id"] == organisation_content_id }
+      @content_item.content_item_data.dig("links", "organisations")&.select { |organisation| organisation["content_id"] == organisation_content_id }
     end
   end
 end
