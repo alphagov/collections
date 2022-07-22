@@ -37,6 +37,22 @@ RSpec.describe SecondLevelBrowsePageController do
         get :show, params: params
         expect(response.headers["Cache-Control"]).to eq("max-age=1800, public")
       end
+
+      context "AB test: Second level browse pages showing accordions or lists" do
+        render_views
+
+        it "shows the accordion on variant B" do
+          with_variant LevelTwoBrowse: "B" do
+            params = {
+              top_level_slug: "benefits",
+              second_level_slug: "entitlement",
+            }
+            get :show, params: params
+
+            expect(subject).to render_template(partial: "show_curated_accordion")
+          end
+        end
+      end
     end
 
     it "404 if the section does not exist" do
