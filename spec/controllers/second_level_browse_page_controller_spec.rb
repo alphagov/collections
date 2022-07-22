@@ -48,8 +48,9 @@ RSpec.describe SecondLevelBrowsePageController do
               second_level_slug: "entitlement",
             }
             get :show, params: params
+            allow(subject).to receive(:render).with no_args
 
-            expect(subject).to render_template(partial: "show_curated_accordion")
+            expect(subject).to receive(:render).with({ locals: "show_curated_accordion" })
           end
         end
       end
