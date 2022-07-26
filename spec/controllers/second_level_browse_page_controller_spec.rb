@@ -54,6 +54,95 @@ RSpec.describe SecondLevelBrowsePageController do
       end
     end
 
+    context "AB test: Second level browse pages showing accordions or lists" do
+      render_views
+
+      let :params do
+        {
+          top_level_slug: "benefits",
+          second_level_slug: "entitlement",
+        }
+      end
+
+      subject { get :show, params: params }
+
+      before do
+        stub_content_store_has_item(
+          "/browse/benefits/entitlement",
+          content_id: "entitlement-content-id",
+          title: "Entitlement",
+          base_path: "/browse/benefits/entitlement",
+          links: {
+            top_level_browse_pages: top_level_browse_pages,
+            second_level_browse_pages: second_level_browse_pages,
+            active_top_level_browse_page: [{
+              content_id: "content-id-for-benefits",
+              title: "Benefits",
+              base_path: "/browse/benefits",
+            }],
+            related_topics: [{ title: "A linked topic", base_path: "/browse/linked-topic" }],
+          },
+          details: details,
+        )
+
+        search_api_has_documents_for_browse_page(
+          "entitlement-content-id",
+          %w[entitlement],
+          page_size: 1000,
+        )
+      end
+
+      describe "GET second_level_browse_page for uncurated topic" do
+        let(:details) { {} }
+
+        it "renders correct template and partials for variant B" do
+          with_variant LevelTwoBrowse: "B" do
+            expect(subject).to render_template(:show_a_to_z,
+                                               locals: { curated_partial: "show_curated_accordion" })
+          end
+        end
+
+        it "renders correct template and partials for variant A" do
+          with_variant LevelTwoBrowse: "A" do
+            expect(subject).to render_template(:show_a_to_z,
+                                               locals: { curated_partial: "show_curated_list" })
+          end
+        end
+
+        it "renders correct template and partials for variant Z" do
+          with_variant LevelTwoBrowse: "Z" do
+            expect(subject).to render_template(:show_a_to_z,
+                                               locals: { curated_partial: "show_curated_list" })
+          end
+        end
+      end
+
+      describe "GET second_level_browse_page for curated topic" do
+        let(:details) { { groups: [{ name: "something", contents: ["/something"] }] } }
+
+        it "renders correct template and partials for variant B" do
+          with_variant LevelTwoBrowse: "B" do
+            expect(subject).to render_template(:show_curated,
+                                               locals: { curated_partial: "show_curated_accordion" })
+          end
+        end
+
+        it "renders correct template and partials for variant A" do
+          with_variant LevelTwoBrowse: "A" do
+            expect(subject).to render_template(:show_curated,
+                                               locals: { curated_partial: "show_curated_list" })
+          end
+        end
+
+        it "renders correct template and partials for variant Z" do
+          with_variant LevelTwoBrowse: "Z" do
+            expect(subject).to render_template(:show_curated,
+                                               locals: { curated_partial: "show_curated_list" })
+          end
+        end
+      end
+    end
+
     it "404 if the section does not exist" do
       stub_content_store_does_not_have_item("/browse/crime-and-justice/frume")
       params = {
