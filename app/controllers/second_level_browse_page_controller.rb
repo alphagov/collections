@@ -1,6 +1,10 @@
 class SecondLevelBrowsePageController < ApplicationController
   enable_request_formats show: [:json]
 
+  def new_browse_variant_b?
+    params["b"].present?
+  end
+
   def show
     setup_content_item_and_navigation_helpers(page)
     @dimension26 = count_link_sections(page)
@@ -25,12 +29,17 @@ private
   def show_html
     template = :old_show
     slimmer_template "gem_layout_full_width"
+    curated_partial = if new_browse_variant_b?
+                        "show_curated_accordion"
+                      else
+                        "show_curated_list"
+                      end
     template = if page.lists.curated?
                  :show_curated
                else
                  :show_a_to_z
                end
-    render(template, locals: { page: page, meta_section: meta_section })
+    render(template, locals: { page: page, curated_partial: curated_partial, meta_section: meta_section })
   end
 
   def meta_section
