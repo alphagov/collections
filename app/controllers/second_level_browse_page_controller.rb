@@ -1,7 +1,5 @@
 class SecondLevelBrowsePageController < ApplicationController
-  def new_browse_variant_b?
-    params["b"].present?
-  end
+  helper_method :level_two_browse_variant_b?
 
   def show
     setup_content_item_and_navigation_helpers(page)
@@ -14,7 +12,7 @@ private
 
   def show_html
     slimmer_template "gem_layout_full_width"
-    curated_partial = if new_browse_variant_b?
+    curated_partial = if level_two_browse_variant_b?
                         "show_curated_accordion"
                       else
                         "show_curated_list"
