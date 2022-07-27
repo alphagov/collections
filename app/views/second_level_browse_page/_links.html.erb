@@ -1,8 +1,8 @@
 <% track_action ||= "contentLink" %>
 
-<ul class="govuk-list" data-module="gem-track-click">
+<ul class="govuk-list browse__list" data-module="gem-track-click">
   <% list.each_with_index do |list_item, index| %>
-    <li class="govuk-!-margin-bottom-4">
+    <li class="browse__list-item">
       <%= link_to(
         list_item.title,
         list_item.base_path,

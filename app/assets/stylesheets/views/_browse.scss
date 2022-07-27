@@ -76,6 +76,14 @@ $browse-header-background-colour: #263135;
   border-top: 1px solid $govuk-border-colour;
   padding-top: govuk-spacing(3);
 }
+
+// We usually avoid using external selectors to style their children.
+// However, `govuk_list > li` overrides any custom spacing class on the `li` due to specificity.
+// We cannot use the Design System overrides here as we want the spacing to stay the same on mobile.
+.browse__list > .browse__list-item {
+  margin-bottom: govuk-spacing(5);
+}
+
 .browse__more-on-this-topic {
   margin-top: govuk-spacing(4);
 
