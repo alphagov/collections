@@ -12,16 +12,13 @@ private
 
   def show_html
     slimmer_template "gem_layout_full_width"
-    curated_partial = if level_two_browse_variant_b?
-                        "show_curated_accordion"
-                      else
-                        "show_curated_list"
-                      end
-    template = if page.lists.curated?
-                 :show_curated
-               else
-                 :show_a_to_z
-               end
+
+    if page.lists.curated?
+      template = :show_curated
+      curated_partial = level_two_browse_variant_b? ? "show_curated_accordion" : "show_curated_list"
+    else
+      template = :show_a_to_z
+    end
     render(template, locals: { page: page, curated_partial: curated_partial, meta_section: meta_section })
   end
 

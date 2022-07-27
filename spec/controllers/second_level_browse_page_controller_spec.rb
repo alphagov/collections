@@ -83,21 +83,21 @@ RSpec.describe SecondLevelBrowsePageController do
         it "renders correct template and partials for variant B" do
           with_variant LevelTwoBrowse: "B" do
             expect(subject).to render_template(:show_a_to_z,
-                                               locals: { curated_partial: "show_curated_accordion" })
+                                               locals: { curated_partial: nil })
           end
         end
 
         it "renders correct template and partials for variant A" do
           with_variant LevelTwoBrowse: "A" do
             expect(subject).to render_template(:show_a_to_z,
-                                               locals: { curated_partial: "show_curated_list" })
+                                               locals: { curated_partial: nil })
           end
         end
 
         it "renders correct template and partials for variant Z" do
           with_variant LevelTwoBrowse: "Z" do
             expect(subject).to render_template(:show_a_to_z,
-                                               locals: { curated_partial: "show_curated_list" })
+                                               locals: { curated_partial: nil })
           end
         end
       end
