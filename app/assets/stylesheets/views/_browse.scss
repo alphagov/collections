@@ -62,6 +62,20 @@ $browse-header-background-colour: #263135;
   margin-bottom: govuk-spacing(2);
 }
 
+.browse__section {
+  margin-bottom: govuk-spacing(9);
+
+  @include govuk-media-query($from: "tablet") {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.browse__section--top-border {
+  border-top: 1px solid $govuk-border-colour;
+  padding-top: govuk-spacing(3);
+}
 .browse__more-on-this-topic {
   margin-top: govuk-spacing(4);
 

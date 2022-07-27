@@ -47,20 +47,22 @@
   %>
 <% end %>
 
-<div data-module="toggle-attribute">
-  <%
-    custom_dimensions = {
-      dimension114: 0,
-    }
-  %>
-  <%= render "govuk_publishing_components/components/accordion", {
-    track_show_all_clicks: true,
-    track_sections: true,
-    heading_level: 2,
-    data_attributes_show_all: {
-      "track-options": custom_dimensions.to_json,
-    },
-    items: accordion_contents,
-    margin_bottom: 4,
-  } %>
+<div class="browse__section">
+  <div data-module="toggle-attribute">
+    <%
+      custom_dimensions = {
+        dimension114: 0,
+      }
+    %>
+    <%= render "govuk_publishing_components/components/accordion", {
+      track_show_all_clicks: true,
+      track_sections: true,
+      heading_level: 2,
+      data_attributes_show_all: {
+        "track-options": custom_dimensions.to_json,
+      },
+      items: accordion_contents,
+      margin_bottom: 4,
+    } %>
+  </div>
 </div>

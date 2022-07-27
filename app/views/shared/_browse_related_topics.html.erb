@@ -1,13 +1,15 @@
 <% if page.related_topics.any? %>
-  <div class="browse__more-on-this-topic">
-    <%= render "govuk_publishing_components/components/heading", {
-        text: t("second_level_browse.more_on_this_topic"),
-        heading_level: 2,
-        font_size: "m",
-        border_top: 2,
-        padding: true,
-    } %>
-  </div>
+  <div class="browse__section">
+    <div class="browse__more-on-this-topic">
+      <%= render "govuk_publishing_components/components/heading", {
+          text: t("second_level_browse.more_on_this_topic"),
+          heading_level: 2,
+          font_size: "m",
+          border_top: 2,
+          padding: true,
+      } %>
+    </div>
 
-  <%= render partial: "links", locals: { list: page.related_topics, list_index: page.lists.count, track_action: "moreLink" } %>
+    <%= render partial: "links", locals: { list: page.related_topics, list_index: page.lists.count, track_action: "moreLink" } %>
+  </div>
 <% end %>
