@@ -1,7 +1,13 @@
 <% page.lists.each_with_index do |list, list_index| %>
-  <%= render partial: "shared/browse_heading", locals: { title: list.title} %>
 
-  <%= render partial: "links", locals: { list: list.contents, list_index: list_index } %>
+  <%# The first, or only, section should not have a top border. %>
+  <% is_not_first_section = list_index != 0 %>
+
+  <div class="browse__section <%= 'browse__section--top-border' if is_not_first_section %>" >
+    <%= render partial: "shared/browse_heading", locals: { title: list.title } %>
+
+    <%= render partial: "links", locals: { list: list.contents, list_index: list_index } %>
+  </div>
 <% end %>
 
 <%= render partial: "shared/browse_related_topics", locals: { page: page } %>

@@ -16,7 +16,7 @@
 <% end %>
 
 <%= render "shared/browse_header", {
-  margin_bottom: 7,
+  margin_bottom: 8,
   two_thirds: true,
 } do %>
   <%= render "govuk_publishing_components/components/heading", {
@@ -36,11 +36,12 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-2">
       <% page.lists.each_with_index do |list, list_index| %>
-        <%= render partial: "shared/browse_heading", locals: { title: list.title } %>
+        <div class="browse__section">
+          <%= render partial: "shared/browse_heading", locals: { title: list.title } %>
 
-        <%= render partial: "links", locals: { list: list.contents, list_index: list_index } %>
+          <%= render partial: "links", locals: { list: list.contents, list_index: list_index } %>
+        </div>
       <% end %>
-
       <%= render partial: "shared/browse_related_topics", locals: { page: page } %>
     </div>
   </div>
