@@ -1,4 +1,7 @@
 <%
+  custom_dimensions = {
+    dimension114: (page.lists.count + 1).to_s,
+  }
   accordion_contents = page.lists.map.with_index do |list, list_index|
     {
       heading: {
@@ -13,8 +16,8 @@
       data_attributes: {
         "track-count": "accordionSection",
         "track-options": {
-          dimension114: list_index + 1,
-        }
+          "dimension114": list_index + 1 
+        },
       },
     }
   end
@@ -30,6 +33,9 @@
   <% end %>
 
   <%
+    custom_dimensions = {
+      dimension114: (page.lists.count + 1).to_s,
+    }
     accordion_contents << {
       heading: {
         text: t("second_level_browse.more_on_this_topic"),
@@ -39,9 +45,7 @@
       },
       data_attributes: {
         "track-count": "accordionSection",
-        "track-options": {
-          dimension114: page.lists.count + 1,
-        }
+        "track-options": custom_dimensions.to_json,
       },
     }
   %>
@@ -51,7 +55,7 @@
   <div data-module="toggle-attribute">
     <%
       custom_dimensions = {
-        dimension114: 0,
+        dimension114: "0",
       }
     %>
     <%= render "govuk_publishing_components/components/accordion", {
