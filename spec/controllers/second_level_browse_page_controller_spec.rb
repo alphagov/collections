@@ -29,13 +29,28 @@ RSpec.describe SecondLevelBrowsePageController do
         )
       end
 
-      it "set correct expiry headers" do
-        params = {
+      let :params do
+        {
           top_level_slug: "benefits",
           second_level_slug: "entitlement",
         }
+      end
+
+      it "set correct expiry headers" do
         get :show, params: params
         expect(response.headers["Cache-Control"]).to eq("max-age=1800, public")
+      end
+
+      it "responds to html by default" do
+        get :show, params: params
+        expect(response.content_type).to eq "text/html; charset=utf-8"
+      end
+
+      it "responds to custom formats when provided in the params" do
+        json_params = params
+        json_params[:format] = :json
+        get :show, params: json_params
+        expect(response.content_type).to eq "application/json; charset=utf-8"
       end
     end
 

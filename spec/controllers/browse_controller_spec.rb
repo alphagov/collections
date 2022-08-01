@@ -36,6 +36,16 @@ RSpec.describe BrowseController do
 
         expect(response.headers["Cache-Control"]).to eq("max-age=1800, public")
       end
+
+      it "responds to html by default" do
+        get :show, params: { top_level_slug: "benefits" }
+        expect(response.content_type).to eq "text/html; charset=utf-8"
+      end
+
+      it "responds to custom formats when provided in the params" do
+        get :show, params: { top_level_slug: "benefits", format: :json }
+        expect(response.content_type).to eq "application/json; charset=utf-8"
+      end
     end
 
     it "404 if the browse page does not exist" do

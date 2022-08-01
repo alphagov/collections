@@ -23,7 +23,6 @@ class BrowseController < ApplicationController
           content_id: page.content_id,
           navigation_page_type: "First Level Browse",
           breadcrumbs: breadcrumb_content,
-          html: second_level_browse_pages_partial(page),
         })
       end
     end
@@ -33,19 +32,6 @@ private
 
   def show_html(page)
     template = :show
-    if new_browse_variant_b?
-      slimmer_template "gem_layout_full_width"
-      template = :new_show
-    end
-    render template, locals: { page: page }
-  end
-
-  def index_html(page)
-    template = :index
-    if new_browse_variant_b?
-      slimmer_template "gem_layout_full_width"
-      template = :new_index
-    end
     render template, locals: { page: page }
   end
 

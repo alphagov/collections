@@ -15,7 +15,6 @@ class SecondLevelBrowsePageController < ApplicationController
           content_id: page.content_id,
           navigation_page_type: "Second Level Browse",
           breadcrumbs: breadcrumb_content,
-          html: render_partial("_links", page: page),
         }
       end
     end
@@ -24,17 +23,13 @@ class SecondLevelBrowsePageController < ApplicationController
 private
 
   def show_html
-    template = :show
-
-    if new_browse_variant_b?
-      slimmer_template "gem_layout_full_width"
-      template = if page.lists.curated?
-                   :new_show_curated
-                 else
-                   :new_show_a_to_z
-                 end
-    end
-
+    template = :old_show
+    slimmer_template "gem_layout_full_width"
+    template = if page.lists.curated?
+                 :new_show_curated
+               else
+                 :new_show_a_to_z
+               end
     render(template, locals: { page: page, meta_section: meta_section })
   end
 
