@@ -1,71 +1,24 @@
-<div class="browse__inner <%= page.lists.curated? ? 'browse__inner--curated' : 'browse__inner--alphabetical' %>">
-  <h2 tabindex="-1" class="browse__heading js-heading"><%= t("shared.browse.prefix") %> <%= page.title %></h2>
+<% track_action ||= "contentLink" %>
 
-  <% page.lists.each_with_index do |list, section_index| %>
-    <% if page.lists.curated? %>
-      <h3 class="browse__list-header"><%= list.title %></h3>
-    <% else %>
-      <h3 class="browse__sort-order"><%= list.title %></h3>
-    <% end %>
-
-    <ul class="browse__list">
-      <% list.contents.each_with_index do |list_item, index| %>
-        <li>
-          <%= link_to(
-            list_item.title,
-            list_item.base_path,
-            data: {
-              track_category: 'thirdLevelBrowseLinkClicked',
-              track_action: "#{section_index + 1}.#{index + 1}",
-              track_label: list_item.base_path,
-              track_options: {
-                dimension1: page.active_top_level_browse_page.title.sub(t("shared.browse.prefix"), "").strip().downcase,
-                dimension26: @dimension26,
-                dimension27: @dimension27,
-                dimension28: list.contents.count.to_s,
-                dimension29: list_item.title,
-                dimension32: "Second Level Browse",
-                location: list_item.base_path,
-                title: list_item.title,
-              },
-            },
-            class: "browse__normal-link govuk-link",
-          ) %>
-        </li>
-      <% end %>
-    </ul>
+<ul class="govuk-list browse__list" data-module="gem-track-click">
+  <% list.each_with_index do |list_item, index| %>
+    <li class="browse__list-item">
+      <%= link_to(
+        list_item.title,
+        list_item.base_path,
+        class: "govuk-link",
+        data: {
+          track_category: "browseClicked",
+          track_count: "contentLink",
+          track_action: track_action,
+          track_label: list_item.base_path,
+          track_options: {
+            dimension28: list.count.to_s,
+            dimension29: list_item.title,
+            dimension114: "#{list_index + 1}.#{index + 1}",
+          },
+        },
+      ) %>
+    </li>
   <% end %>
-
-  <% if page.related_topics.any? %>
-    <div class="browse__detailed-guidance">
-      <%= render "govuk_publishing_components/components/heading", {
-        text: t("second_level_browse.detailed_guidance"),
-        heading_level: 2,
-        margin_bottom: 3,
-      } %>
-      <ul class="browse__list">
-        <% page.related_topics.each_with_index do |related_topic, index| %>
-          <li>
-            <%= link_to(
-              related_topic.title,
-              related_topic.base_path,
-              data: {
-                track_category: 'thirdLevelBrowseLinkClicked',
-                track_action: "#{page.lists.count + 1}.#{index + 1}",
-                track_label: related_topic.base_path,
-                track_options: {
-                  dimension1: page.active_top_level_browse_page.title.sub(t("shared.browse.prefix"), "").strip().downcase,
-                  dimension28: page.related_topics.count.to_s,
-                  dimension29: related_topic.title,
-                  location: related_topic.base_path,
-                  title: related_topic.title,
-                },
-              },
-              class: "browse__normal-link govuk-link",
-            ) %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-</div>
+</ul>

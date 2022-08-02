@@ -1,0 +1,44 @@
+<% content_for :title, page.title %>
+<% top_level_page = page.active_top_level_browse_page %>
+<%= render "shared/tag_meta", tag: page %>
+<% content_for :meta_tags do %>
+  <%= render "govuk_publishing_components/components/meta_tags", {
+    content_item: {
+      navigation_page_type: "Browse level 2",
+      navigation_list_type: "curated",
+      section: meta_section,
+    }
+  } %>
+<% end %>
+
+<% content_for :breadcrumbs do %>
+  <%= render "shared/browse_breadcrumbs" %>
+<% end %>
+
+<%# Reduce margin to account for the top padding on the accordion %>
+<% header_margin_bottom = curated_partial == "show_curated_accordion" ? 7 : 8 %>
+
+<%= render "shared/browse_header", {
+  two_thirds: true,
+  margin_bottom: header_margin_bottom
+} do %>
+  <%= render "govuk_publishing_components/components/heading", {
+    font_size: "xl",
+    heading_level: 1,
+    inverse: true,
+    margin_bottom: 6,
+    text: page.title,
+  } %>
+
+  <p class="gem-c-lead-paragraph gem-c-lead-paragraph--inverse govuk-!-margin-bottom-2">
+    <%= page.description %>
+  </p>
+<% end %>
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <%= render partial: curated_partial, locals: { page: page } %>
+    </div>
+  </div>
+</div>

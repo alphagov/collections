@@ -1,16 +1,16 @@
 class ApplicationController < ActionController::Base
+  include AbTests::LevelTwoBrowseAbTestable
   include Slimmer::Template
-  include AbTests::NewBrowseAbTestable
 
-  helper_method :new_browse_variant
+  helper_method :level_two_browse_variant
   helper_method :page_under_test?
   helper_method :content_item_h
 
   protect_from_forgery with: :exception
 
+  before_action :set_level_two_browse_response_header_if_level_two_page
   before_action :set_expiry
   before_action :restrict_request_formats
-  before_action :set_new_browse_response_header_if_browse_page
 
   slimmer_template "gem_layout"
 
@@ -74,10 +74,6 @@ private
     format && self.class.acceptable_formats.fetch(params[:action].to_sym, []).include?(format.to_sym)
   end
 
-  def set_new_browse_response_header_if_browse_page
-    set_new_browse_response_header if page_under_test?
-  end
-
   def error_403
     error 403
   end
@@ -115,5 +111,9 @@ private
 
   def render_partial(partial_name, locals = {})
     render_to_string(partial_name, formats: [:html], layout: false, locals: locals)
+  end
+
+  def set_level_two_browse_response_header_if_level_two_page
+    set_level_two_browse_response_header if page_under_test?
   end
 end

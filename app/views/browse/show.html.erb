@@ -1,25 +1,54 @@
-<% content_for :title, "#{t("shared.browse.prefix")} #{page.title}" %>
+<% content_for :title, page.title %>
+
 <%= render 'shared/tag_meta', tag: page %>
+
 <% content_for :meta_tags do %>
   <%= render "govuk_publishing_components/components/meta_tags", {
     content_item: {
-      navigation_page_type: "First Level Browse",
-      section: yield(:title).downcase.sub!('browse: ', ''),
+      navigation_page_type: "Browse level 1",
+      navigation_list_type: page.second_level_pages_curated? ? "curated" : "default",
+      section: page.title.downcase,
     }
   } %>
 <% end %>
 
-<h1 class="govuk-visually-hidden"><%= t("shared.browse.title") %></h1>
+<% content_for :breadcrumbs do %>
+  <%= render "shared/browse_breadcrumbs", {
+    column_two_thirds: true
+  } %>
+<% end %>
 
-<div class="browse <%= 'browse--two-columns' if page.second_level_browse_pages %>" data-state="section" data-module="browse-columns">
-  <div id="subsection" class="browse__subsection-pane"></div>
-  <div id="section" class="browse__section-pane">
-    <%= render 'second_level_browse_page/second_level_browse_pages',
-          title: yield(:title),
-          second_level_browse_pages: page.second_level_browse_pages,
-          curated_order: page.second_level_pages_curated? %>
-  </div>
+<%= render "shared/browse_header", { margin_bottom: 9 } do %>
+  <h1 class="browse__heading govuk-heading-xl">
+    <%= page.title %>
+  </h1>
+  <p class="gem-c-lead-paragraph gem-c-lead-paragraph--inverse govuk-!-margin-bottom-2">
+    <%= page.description %>
+  </p>
+<% end %>
 
-  <%= render 'browse/top_level_browse_pages',
-        top_level_browse_pages: page.top_level_browse_pages %>
-</div>
+<%= render "shared/browse_cards_container" do %>
+  <%= render "govuk_publishing_components/components/cards", {
+    items: page.second_level_browse_pages.map.with_index do |second_level_browse_page, index|
+      {
+        link: {
+          text: second_level_browse_page.title,
+          path: second_level_browse_page.base_path,
+          data_attributes: {
+            track_category: "browseClicked",
+            track_action: "topicsLink",
+            track_label: second_level_browse_page.base_path,
+            track_dimension: second_level_browse_page.title,
+            track_options: {
+              dimension28: page.second_level_browse_pages.count.to_s,
+              dimension29: second_level_browse_page.title,
+              dimension114: index + 1,
+            },
+          },
+        },
+        description: second_level_browse_page.description,
+      }
+    end,
+    sub_heading_level: 2,
+  } %>
+<% end %>

@@ -1,6 +1,7 @@
 RSpec.describe SecondLevelBrowsePageController do
   include SearchApiHelpers
   include GovukAbTesting::RspecHelpers
+  render_views
 
   describe "GET second_level_browse_page" do
     describe "for a valid browse page" do
@@ -29,13 +30,119 @@ RSpec.describe SecondLevelBrowsePageController do
         )
       end
 
-      it "set correct expiry headers" do
-        params = {
+      let :params do
+        {
           top_level_slug: "benefits",
           second_level_slug: "entitlement",
         }
+      end
+
+      it "set correct expiry headers" do
         get :show, params: params
         expect(response.headers["Cache-Control"]).to eq("max-age=1800, public")
+      end
+
+      it "responds to html by default" do
+        get :show, params: params
+        expect(response.content_type).to eq "text/html; charset=utf-8"
+        expect(response).to render_template(partial: "_links")
+      end
+
+      it "responds to custom formats when provided in the params" do
+        json_params = params
+        json_params[:format] = :json
+        get :show, params: json_params
+        expect(response.content_type).to eq "application/json; charset=utf-8"
+        expect(response).to render_template(partial: "_old_links")
+      end
+    end
+
+    context "AB test: Second level browse pages showing accordions or lists" do
+      render_views
+
+      let :params do
+        {
+          top_level_slug: "benefits",
+          second_level_slug: "entitlement",
+        }
+      end
+
+      subject { get :show, params: params }
+
+      before do
+        stub_content_store_has_item(
+          "/browse/benefits/entitlement",
+          content_id: "entitlement-content-id",
+          title: "Entitlement",
+          base_path: "/browse/benefits/entitlement",
+          links: {
+            top_level_browse_pages: top_level_browse_pages,
+            second_level_browse_pages: second_level_browse_pages,
+            active_top_level_browse_page: [{
+              content_id: "content-id-for-benefits",
+              title: "Benefits",
+              base_path: "/browse/benefits",
+            }],
+            related_topics: [{ title: "A linked topic", base_path: "/browse/linked-topic" }],
+          },
+          details: details,
+        )
+
+        search_api_has_documents_for_browse_page(
+          "entitlement-content-id",
+          %w[entitlement],
+          page_size: 1000,
+        )
+      end
+
+      describe "GET second_level_browse_page for uncurated topic" do
+        let(:details) { {} }
+
+        it "renders correct template and partials for variant B" do
+          with_variant LevelTwoBrowse: "B" do
+            expect(subject).to render_template(:show_a_to_z,
+                                               locals: { curated_partial: nil })
+          end
+        end
+
+        it "renders correct template and partials for variant A" do
+          with_variant LevelTwoBrowse: "A" do
+            expect(subject).to render_template(:show_a_to_z,
+                                               locals: { curated_partial: nil })
+          end
+        end
+
+        it "renders correct template and partials for variant Z" do
+          with_variant LevelTwoBrowse: "Z" do
+            expect(subject).to render_template(:show_a_to_z,
+                                               locals: { curated_partial: nil })
+          end
+        end
+      end
+
+      describe "GET second_level_browse_page for curated topic" do
+        let(:details) { { groups: [{ name: "something", contents: ["/something"] }] } }
+
+        it "renders correct template and partials for variant B" do
+          with_variant LevelTwoBrowse: "B" do
+            expect(subject).to render_template(:show_curated,
+                                               locals: { curated_partial: "show_curated_accordion" })
+          end
+        end
+
+        it "renders correct template and partials for variant A" do
+          with_variant LevelTwoBrowse: "A" do
+            expect(subject).to render_template(:show_curated,
+                                               locals: { curated_partial: "show_curated_list" })
+          end
+        end
+
+        it "renders correct template and partials for variant Z" do
+          with_variant LevelTwoBrowse: "Z" do
+            expect(subject).to render_template(:show_curated,
+                                               locals: { curated_partial: "show_curated_list" })
+          end
+        end
       end
     end
 
@@ -47,88 +154,6 @@ RSpec.describe SecondLevelBrowsePageController do
       }
       get :show, params: params
       expect(response).to have_http_status(:not_found)
-    end
-  end
-
-  context "AB test: New browse templates" do
-    render_views
-    let :params do
-      {
-        top_level_slug: "benefits",
-        second_level_slug: "entitlement",
-      }
-    end
-
-    subject { get :show, params: params }
-
-    before do
-      stub_content_store_has_item(
-        "/browse/benefits/entitlement",
-        content_id: "entitlement-content-id",
-        title: "Entitlement",
-        base_path: "/browse/benefits/entitlement",
-        links: {
-          top_level_browse_pages: top_level_browse_pages,
-          second_level_browse_pages: second_level_browse_pages,
-          active_top_level_browse_page: [{
-            content_id: "content-id-for-benefits",
-            title: "Benefits",
-            base_path: "/browse/benefits",
-          }],
-          related_topics: [{ title: "A linked topic", base_path: "/browse/linked-topic" }],
-        },
-        details: details,
-      )
-
-      search_api_has_documents_for_browse_page(
-        "entitlement-content-id",
-        %w[entitlement],
-        page_size: 1000,
-      )
-    end
-
-    describe "GET second_level_browse_page for uncurated topic" do
-      let(:details) { {} }
-
-      it "with variant B" do
-        with_variant NewBrowse: "B" do
-          expect(subject).to render_template(:new_show_a_to_z)
-        end
-      end
-
-      it "with variant A" do
-        with_variant NewBrowse: "A" do
-          expect(subject).to render_template(:show)
-        end
-      end
-
-      it "with variant Z" do
-        with_variant NewBrowse: "Z" do
-          expect(subject).to render_template(:show)
-        end
-      end
-    end
-
-    describe "GET second_level_browse_page for curated topic" do
-      let(:details) { { groups: [{ name: "something", contents: ["/something"] }] } }
-
-      it "with variant B" do
-        with_variant NewBrowse: "B" do
-          expect(subject).to render_template(:new_show_curated)
-        end
-      end
-
-      it "with variant A" do
-        with_variant NewBrowse: "A" do
-          expect(subject).to render_template(:show)
-        end
-      end
-
-      it "with variant Z" do
-        with_variant NewBrowse: "Z" do
-          expect(subject).to render_template(:show)
-        end
-      end
     end
   end
 
