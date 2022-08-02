@@ -1,6 +1,7 @@
 RSpec.describe SecondLevelBrowsePageController do
   include SearchApiHelpers
   include GovukAbTesting::RspecHelpers
+  render_views
 
   describe "GET second_level_browse_page" do
     describe "for a valid browse page" do
@@ -44,6 +45,7 @@ RSpec.describe SecondLevelBrowsePageController do
       it "responds to html by default" do
         get :show, params: params
         expect(response.content_type).to eq "text/html; charset=utf-8"
+        expect(response).to render_template(partial: "_links")
       end
 
       it "responds to custom formats when provided in the params" do
@@ -51,6 +53,7 @@ RSpec.describe SecondLevelBrowsePageController do
         json_params[:format] = :json
         get :show, params: json_params
         expect(response.content_type).to eq "application/json; charset=utf-8"
+        expect(response).to render_template(partial: "_old_links")
       end
     end
 

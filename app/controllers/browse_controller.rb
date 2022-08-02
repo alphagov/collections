@@ -24,6 +24,7 @@ class BrowseController < ApplicationController
           content_id: page.content_id,
           navigation_page_type: "First Level Browse",
           breadcrumbs: breadcrumb_content,
+          html: second_level_browse_pages_partial(page),
         })
       end
     end

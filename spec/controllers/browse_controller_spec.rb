@@ -1,6 +1,6 @@
 RSpec.describe BrowseController do
   include GovukAbTesting::RspecHelpers
-
+  render_views
   describe "GET index" do
     before do
       stub_content_store_has_item(
@@ -24,6 +24,7 @@ RSpec.describe BrowseController do
         stub_content_store_has_item(
           "/browse/benefits",
           base_path: "/browse/benefits",
+          title: "foo",
           links: {
             top_level_browse_pages: top_level_browse_pages,
             second_level_browse_pages: second_level_browse_pages,
@@ -33,18 +34,19 @@ RSpec.describe BrowseController do
 
       it "sets correct expiry headers" do
         get :show, params: { top_level_slug: "benefits" }
-
         expect(response.headers["Cache-Control"]).to eq("max-age=1800, public")
       end
 
       it "responds to html by default" do
         get :show, params: { top_level_slug: "benefits" }
         expect(response.content_type).to eq "text/html; charset=utf-8"
+        expect(response).to render_template(partial: "_cards")
       end
 
       it "responds to custom formats when provided in the params" do
         get :show, params: { top_level_slug: "benefits", format: :json }
         expect(response.content_type).to eq "application/json; charset=utf-8"
+        expect(response).to render_template(partial: "second_level_browse_page/_second_level_browse_pages")
       end
     end
 

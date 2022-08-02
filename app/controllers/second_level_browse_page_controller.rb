@@ -16,6 +16,7 @@ class SecondLevelBrowsePageController < ApplicationController
           content_id: page.content_id,
           navigation_page_type: "Second Level Browse",
           breadcrumbs: breadcrumb_content,
+          html: render_partial("_old_links", page: page),
         }
       end
     end
