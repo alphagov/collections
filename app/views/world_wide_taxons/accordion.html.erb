@@ -11,7 +11,10 @@
   <div class="govuk-grid-row child-topic-contents">
     <div class="govuk-grid-column-two-thirds">
       <div class="topic-content">
-        <% items = [] %>
+        <%
+          items = []
+          number_of_accordion_sections = presented_taxon.accordion_content.length
+        %>
         <% presented_taxon.accordion_content.each_with_index do |taxon, index| %>
           <% contents = capture do %>
             <%= render 'components/taxon-list', {
@@ -25,6 +28,13 @@
               data_attributes: {
                 "track-count": "accordionSection",
                 id: "section-panel-#{id}-#{index + 1}",
+                ga4: {
+                  event_name: 'select_content',
+                  type: 'accordion',
+                  text: taxon.title,
+                  index: index + 1,
+                  index_total: number_of_accordion_sections,
+                }
               },
               heading: {
                 text: taxon.title,
@@ -38,7 +48,23 @@
             }
           %>
         <% end %>
-        <%= render 'govuk_publishing_components/components/accordion', items: items %>
+        <%
+          show_all_attributes = {
+            event_name: "select_content",
+            type: "accordion",
+            index: 0,
+            index_total: number_of_accordion_sections
+          }
+        %>
+        <%= render 'govuk_publishing_components/components/accordion', {
+          data_attributes: {
+            module: "ga4-event-tracker",
+          },
+          data_attributes_show_all: {
+            "ga4": show_all_attributes.to_json
+          },
+          items: items
+        } %>
       </div>
     </div>
   </div>
