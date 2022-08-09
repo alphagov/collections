@@ -1,30 +1,31 @@
 <header class="covid__page-header covid__page-header--landing-page">
-  <div class="govuk-width-container">
-    <%= render 'govuk_publishing_components/components/breadcrumbs', {
-      breadcrumbs: breadcrumbs,
-      collapse_on_mobile: true,
-      inverse: true
-    } %>
-
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <%= render "govuk_publishing_components/components/title", {
-          title: raw(title),
-          inverse: true,
-          margin_top: 4
-        } %>
-      </div>
-    </div>
-  </div>
+  <%= render "shared/landing_page_header_heading", {
+    breadcrumbs: breadcrumbs,
+    title: raw(title),
+    inverse: true,
+  } %>
 
   <div class="covid__page-header-content-section covid__page-guidance">
-    <div class="govuk-width-container">
+    <%= render "shared/landing_page_header_content", {
+      action_link_blue_arrow: true,
+      action_link_href: header["link"]["href"],
+      action_link_text: header["link"]["link_text"],
+      action_link_subtext: header["link"]["subtext"],
+      action_link_mobile_subtext: true,
+      action_link_nowrap_text: header["link"]["link_nowrap_text"],
+      action_link_data: {
+        module: "gem-track-click",
+        track_category: "pageElementInteraction",
+        track_action: "Header",
+        track_label: header["link"]["href"]
+      },
+    } do %>
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
           <%= render "govuk_publishing_components/components/heading", {
             text: header["title"],
             font_size: 19,
-            margin_bottom: 6
+            margin_bottom: 6,
           } %>
 
           <div
@@ -37,25 +38,6 @@
           </div>
         </div>
       </div>
-
-      <div class="govuk-grid-row covid__action-link-wrapper">
-        <div class="govuk-grid-column-two-thirds">
-          <%= render 'govuk_publishing_components/components/action_link', {
-            blue_arrow: true,
-            href: header["link"]["href"],
-            text: header["link"]["link_text"],
-            subtext: header["link"]["subtext"],
-            mobile_subtext: true,
-            nowrap_text: header["link"]["link_nowrap_text"],
-            data: {
-              module: "gem-track-click",
-              track_category: "pageElementInteraction",
-              track_action: "Header",
-              track_label: header["link"]["href"]
-            }
-          } %>
-        </div>
-      </div>
+    <% end %>
     </div>
-  </div>
 </header>
