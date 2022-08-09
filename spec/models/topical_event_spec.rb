@@ -152,13 +152,4 @@ RSpec.describe TopicalEvent do
       },
     ])
   end
-
-private
-
-  def fetch_fixture(filename)
-    json = File.read(
-      Rails.root.join("spec", "fixtures", "content_store", "#{filename}.json"),
-    )
-    JSON.parse(json)
-  end
 end
