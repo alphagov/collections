@@ -1,0 +1,23 @@
+<%
+  title ||= ""
+  breadcrumbs ||= []
+  inverse ||= false
+%>
+
+<div class="govuk-width-container">
+  <%= render 'govuk_publishing_components/components/breadcrumbs', {
+    breadcrumbs: breadcrumbs,
+    collapse_on_mobile: true,
+    inverse: inverse
+  } %>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <%= render "govuk_publishing_components/components/title", {
+        title: title,
+        inverse: inverse,
+        margin_top: 4
+      } %>
+    </div>
+  </div>
+</div>

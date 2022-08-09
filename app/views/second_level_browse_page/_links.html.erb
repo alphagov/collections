@@ -1,5 +1,8 @@
 <% track_action ||= "contentLink" %>
 
+<!-- the new release of govuk-frontend adds non-responsive override classes, so we could use those
+here instead of browse__list and then this could be used in both browse pages and the cost of living hub -->
+
 <ul class="govuk-list browse__list" data-module="gem-track-click">
   <% list.each_with_index do |list_item, index| %>
     <li class="browse__list-item">
