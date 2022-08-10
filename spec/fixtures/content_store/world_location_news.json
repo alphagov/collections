@@ -27,6 +27,16 @@
         "document_type": "Blog",
         "public_updated_at": null
       }
+    ],
+    "ordered_featured_links": [
+      {
+        "href": "https://www.gov.uk/somewhere",
+        "title": "A link to somewhere"
+      },
+      {
+        "href": "https://www.gov.uk/somewhere2",
+        "title": "A second link to somewhere"
+      }
     ]
   }
 }

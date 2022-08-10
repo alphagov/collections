@@ -65,6 +65,14 @@ RSpec.feature "World Location News pages" do
     end
   end
 
+  context "when there are featured links" do
+    it "includes the featured links" do
+      visit base_path
+      expect(page).to have_link("A link to somewhere", href: "https://www.gov.uk/somewhere")
+      expect(page).to have_link("A second link to somewhere", href: "https://www.gov.uk/somewhere2")
+    end
+  end
+
 private
 
   def content_item_without_detail(content_item, key_to_remove)

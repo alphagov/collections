@@ -18,6 +18,15 @@ class WorldLocationNews
     @content_item.content_item_data["description"]
   end
 
+  def ordered_featured_links
+    @content_item.content_item_data.dig("details", "ordered_featured_links")&.map do |link|
+      {
+        path: link["href"],
+        text: link["title"],
+      }
+    end
+  end
+
   def ordered_featured_documents
     @content_item.content_item_data.dig("details", "ordered_featured_documents")&.map do |document|
       {
