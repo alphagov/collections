@@ -62,4 +62,23 @@ RSpec.describe WorldLocationNews do
       ],
     )
   end
+
+  it "should map the translations" do
+    expect(world_location_news.translations).to eq(
+      [
+        {
+          locale: "en",
+          base_path: "/world/somewhere",
+          text: "English",
+          active: true,
+        },
+        {
+          locale: "cy",
+          base_path: "/world/somewhere.cy",
+          text: "Cymraeg",
+          active: false,
+        },
+      ],
+    )
+  end
 end

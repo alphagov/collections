@@ -73,6 +73,34 @@ RSpec.feature "World Location News pages" do
     end
   end
 
+  context "when there are translations" do
+    it "includes a link to the other languages only" do
+      visit base_path
+
+      expect(page).to have_link("Cymraeg", href: "/world/somewhere.cy")
+
+      expect(page).to have_text("English")
+      expect(page).not_to have_link("English", href: "/world/somewhere")
+    end
+  end
+
+  context "when there are no translations" do
+    before do
+      content_item["links"]["available_translations"] = [
+        {
+          "locale": "en",
+          "base_path": "/world/somewhere",
+        },
+      ]
+      stub_content_store_has_item(base_path, content_item)
+    end
+
+    it "includes does not include the translation navigation" do
+      visit base_path
+      expect(page).not_to have_text("English")
+    end
+  end
+
 private
 
   def content_item_without_detail(content_item, key_to_remove)

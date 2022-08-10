@@ -13,6 +13,13 @@
   </div>
 
   <div class="govuk-grid-column-one-third">
+    <% if @world_location_news.translations.count > 1 %>
+      <%= render "govuk_publishing_components/components/translation_nav", {
+        translations: @world_location_news.translations,
+        no_margin_top: true,
+      } %>
+    <% end %>
+
     <%= render "components/topic-list", {
         items: @world_location_news.ordered_featured_links,
     } %>
