@@ -1,8 +1,203 @@
 ---
-page_title: Help for households
+page_title: Cost of living support
 metadata:
   title: Cost of living support
   description: >-
     Find out what support is available to help with the cost of living. This
     includes income and disability benefits, bills and allowances, childcare,
     housing and transport.
+header:
+  heading: Cost of living support
+  lede: Support is available to help with the cost of living
+  link_text: Check what support you could be eligible for
+  href: https://www.google.co.uk
+body:
+  heading: Available support
+  accordion_content:
+  - heading: Support with your income
+    content:
+      - subheading:
+        links:
+        - link_text: Find out what benefits and financial support you may be able to get
+          href: https://www.gov.uk/check-benefits-financial-support
+        - link_text: Check if you’re getting the minimum wage
+          href: https://www.gov.uk/am-i-getting-minimum-wage
+        - link_text: Claim Marriage Allowance
+          href: https://www.gov.uk/marriage-allowance
+        - link_text: Extra money available for carers
+          href: https://www.gov.uk/carers-allowance
+        - link_text: Get help with savings if you’re on a low income (Help to Save)
+          href: https://www.gov.uk/get-help-savings-low-income
+        - link_text: Claim tax relief on work-related expenses
+          href: https://www.gov.uk/tax-relief-for-employees
+      - inset_text: The Money Helper service provides free, confidential and impartial help tailored to individual needs.
+        link_text: Use the Money Helper service
+        href: https://www.moneyhelper.org.uk/
+      - subheading: Check if you’re eligible for Universal Credit
+        links:
+        - link_text: Universal Credit in England, Scotland and Wales
+          href: https://www.gov.uk/universal-credit/
+        - link_text: Universal Credit in Northern Ireland
+          href: https://www.nidirect.gov.uk/campaigns/universal-credit
+      - subheading: Pension Credit if you’re on a low income
+        links:
+          - link_text: Pension Credit in England, Scotland and Wales
+            href: https://www.gov.uk/pension-credit
+          - link_text: Pension Credit in Northern Ireland
+            href: https://www.nidirect.gov.uk/articles/understanding-pension-credit
+      - subheading: Jobseeker's Allowance (JSA) if you're unemployed
+        links:
+        - link_text: JSA in England, Scotland and Wales
+          href: https://www.gov.uk/jobseekers-allowance
+        - link_text: JSA in Northern Ireland
+          href: https://www.nidirect.gov.uk/articles/jobseekers-allowance
+  - heading: Support if you’re disabled
+    content:
+      - subheading: Check if you’re eligible for Universal Credit
+        links:
+        - link_text: Universal Credit if you’re disabled in England, Scotland and Wales
+          href: https://www.gov.uk/health-conditions-disability-universal-credit
+        - link_text: Universal Credit in Northern Ireland
+          href: https://www.nidirect.gov.uk/campaigns/universal-credit
+      - subheading: Check if you’re eligible for Employment and Support Allowance (ESA)
+        links:
+        - link_text: ‘New style’ ESA in England, Scotland and Wales
+          href: https://www.gov.uk/employment-support-allowance
+        - link_text: ‘New style’ ESA in Northern Ireland
+          href: https://www.nidirect.gov.uk/articles/employment-and-support-allowance
+      - subheading: Check if you’re eligible for Personal Independence Payment (PIP)
+        links:
+        - link_text: PIP in England, Scotland and Wales
+          href: https://www.gov.uk/pip
+        - link_text: PIP in Northern Ireland
+          href: https://www.nidirect.gov.uk/articles/personal-independence-payment-pip
+      - subheading: Support to get or stay in work
+        links:
+        - link_text: Access to Work in England
+          href: https://www.gov.uk/access-to-work
+        - link_text: Access to Work in Northern Ireland
+          href: https://www.nidirect.gov.uk/articles/employment-support-information
+      - subheading: Check if you’re eligible for Adult Disability Payment in Scotland
+        links:
+        - link_text: Adult Disability Payment in Scotland
+          href: https://www.mygov.scot/adult-disability-payment
+      - subheading: Support if your child is disabled
+        links:
+        - link_text: Disability Living Allowance (DLA) for children in England, Wales and Northern Ireland
+          href: https://www.gov.uk/disability-living-allowance-children
+        - link_text: Child Disability Payment in Scotland
+          href: https://www.mygov.scot/child-disability-payment
+  - heading: Help with your bills
+    content:
+    - subheading: UK wide
+      links:
+      - link_text: Cost of Living Payment
+        href: https://www.gov.uk/guidance/cost-of-living-payment
+      - link_text: Energy Bills Support Scheme
+        href: https://www.gov.uk/government/news/energy-bills-support-scheme-explainer
+      - link_text: Disability Cost of Living Payment
+        href: https://www.gov.uk/guidance/cost-of-living-payment
+      - link_text: Winter Fuel Payment and Pensioner Cost of Living Payment
+        href: https://www.gov.uk/winter-fuel-payment
+      - link_text: Cold Weather Payment
+        href: https://www.gov.uk/cold-weather-payment
+      - link_text: Check with your energy supplier to see if you can get the Warm Home Discount
+        href: https://www.ofgem.gov.uk/information-consumers/energy-advice-households/finding-your-energy-supplier-or-network-operator
+      - link_text: Contact your local council to check if you’re eligible for the Household Support Fund
+        href: https://www.gov.uk/find-local-council
+      - link_text: Cheaper phone and broadband
+        href: https://www.ofcom.org.uk/phones-telecoms-and-internet/advice-for-consumers/costs-and-billing/social-tariffs
+      - link_text: Help paying your Water Bill
+        href: https://www.ccwater.org.uk/households/help-with-my-bills/
+    - subheading: Help with your Council Tax or rates
+      links:
+      - link_text: Council Tax rebate in England, Scotland and Wales
+        href: https://www.gov.uk/guidance/council-tax-rebate-factsheet
+      - link_text: Rate Relief in Northern Ireland
+        href: https://www.nidirect.gov.uk/rates-help
+    - subheading: Help with health costs
+      links:
+      - link_text: NHS Low Income Scheme in England and Wales
+        href: https://www.nhs.uk/nhs-services/help-with-health-costs/nhs-low-income-scheme-lis/
+      - link_text: Help with Health Costs in Scotland
+        href: https://www.nhsinform.scot/care-support-and-rights/health-rights/access/help-with-health-costs
+    - subheading: Budgeting loans in you’re claiming benefits
+      links:
+      - link_text: Budgeting loans in England, Scotland and Wales
+        href: https://www.gov.uk/budgeting-help-benefits
+      - link_text: Social Fund Budgeting Loan in Northern Ireland
+        href: https://www.nidirect.gov.uk/articles/social-fund-budgeting-loan
+  - heading: Childcare costs
+    content:
+    - subheading: UK Wide
+      links:
+      - link_text: Check what help you could get with childcare costs
+        href: https://www.gov.uk/childcare-calculator
+      - link_text: Claim Child Benefit
+        href: https://www.gov.uk/child-benefit
+      - link_text: Claim back childcare costs if you get Universal Credit
+        href: https://www.gov.uk/guidance/universal-credit-childcare-costs
+    - subheading: Check if your child can get free school meals
+      links:
+        - link_text: Free school meals in England
+          href: https://www.gov.uk/apply-free-school-meals
+        - link_text: Free school meals in Northern Ireland
+          href: https://www.nidirect.gov.uk/articles/nutrition-and-school-lunches
+        - link_text: Free school meals in Scotland
+          href: https://www.mygov.scot/school-meals
+        - link_text: Free school meals in Wales
+          href: https://gov.wales/find-out-about-free-school-meals
+    - subheading: Get help with school transport costs
+      links:
+      - link_text: Help with school transport costs in England and Wales
+        href: https://www.gov.uk/help-home-school-transport
+      - link_text: Help with school transport costs in Scotland
+        href: https://www.mygov.scot/free-school-transport
+      - link_text: Help with school transport costs in Northern Ireland
+        href: https://www.eani.org.uk/help-available/home-to-school-transport
+    - subheading: Support if your child is disabled
+      links:
+      - link_text: Disability Living Allowance (DLA) for children in England, Wales and Northern Ireland
+        href: https://www.gov.uk/disability-living-allowance-children
+      - link_text: Child Disability Payment in Scotland
+        href: https://www.mygov.scot/child-disability-payment
+    - subheading: Get help with food and milk for your child
+      links:
+      - link_text: Claim Healthy Start vouchers
+        href: https://www.healthystart.nhs.uk/how-to-apply/
+      - link_text: Best Start Foods in Scotland
+        href: https://www.mygov.scot/best-start-grant-best-start-foods
+    - subheading: Get help with maternity costs
+      links:
+      - link_text: Get help with maternity costs in England, Wales and Northern Ireland
+        href: https://www.gov.uk/sure-start-maternity-grant
+      - link_text: Get help with maternity costs (Scotland)
+        href: https://www.mygov.scot/best-start-grant-best-start-foods
+  - heading: Housing support
+    content:
+    - subheading: UK wide
+      links:
+      - link_text: Get help with housing costs if you get Universal Credit
+        href: https://www.gov.uk/housing-and-universal-credit
+      - link_text: Get help with interest payments on mortgages or loans
+        href: https://www.gov.uk/support-for-mortgage-interest
+      - link_text: Contact your council for help with housing costs and Council Tax
+        href: https://www.gov.uk/find-local-council
+    - subheading: Check if you’re eligible for Housing Benefit
+      links:
+      - link_text: Housing Benefit in England, Scotland and Wales
+        href: https://www.gov.uk/housing-benefit
+      - link_text: Housing Benefit in Northern Ireland
+        href: https://www.nihe.gov.uk/Housing-Help/Housing-Benefit/Making-a-claim-for-Housing-Benefit
+    - heading: Transport costs
+      content:
+      - subheading: UK wide
+        links:
+        - link_text: Save a third on rail journeys
+          href: https://www.railcard.co.uk/
+        - link_text: 50% off travel if you’re on Universal Credit
+          href: https://www.nationalrail.co.uk/times_fares/jobcentre-plus-card.aspx
+        - link_text: Apply for an older person’s bus pass
+          href: https://www.gov.uk/apply-for-elderly-person-bus-pass
+        - link_text: Apply for an disabled person’s bus pass
+          href: https://www.gov.uk/apply-for-disabled-bus-pass
