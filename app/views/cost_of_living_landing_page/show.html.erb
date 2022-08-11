@@ -1,5 +1,32 @@
-<% content_for :title, content[:page_title] %>
+<% content_for :title, content["page_title"] %>
+<% content_for :is_full_width_header, true %>
 
-<p>Find me in app/views/cost_of_living_landing_page/show.html.erb</p>
+<header class="cost-of-living-hub__header">
+  <%= render "shared/browse_header", { margin_bottom: 9, padding_top: 0 } do %>
+    <%= render "shared/landing_page_header_heading", {
+      breadcrumbs: breadcrumbs,
+      title: content["header"]["heading"],
+      inverse: true,
+    } %>
 
-<p><%= t("cost_of_living_landing_page.regions.uk_wide") %></p>
+  <%= render "shared/landing_page_header_content", {
+    action_link_white_arrow: true,
+    action_link_href: content["header"]["href"],
+    action_link_text: content["header"]["link_text"],
+    action_link_mobile_subtext: true,
+    action_link_light_text: true,
+    action_link_data: {
+      module: "gem-track-click",
+      track_category: "pageElementInteraction",
+      track_action: "Header",
+      track_label: content["header"]["href"],
+    },
+  } do %>
+    <%= render "govuk_publishing_components/components/lead_paragraph", {
+      text: content["header"]["lede"],
+      inverse: true,
+      margin_bottom: 2,
+    } %>
+  <% end %>
+<% end %>
+</header>

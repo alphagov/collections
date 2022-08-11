@@ -7,16 +7,22 @@
   action_link_mobile_subtext ||= false
   action_link_nowrap_text ||= ""
   action_link_data ||= {}
+  action_link_light_text ||= false
 %>
+
 
 <div class="govuk-width-container">
   <div class="govuk-grid-row">
-    <%= yield %>
+    <div class="govuk-grid-column-two-thirds">
+      <%= yield %>
+    </div>
   </div>
 
   <div class="govuk-grid-row covid__action-link-wrapper">
     <div class="govuk-grid-column-two-thirds">
       <%= render 'govuk_publishing_components/components/action_link', {
+        white_arrow: action_link_white_arrow,
+        light_text: action_link_light_text,
         blue_arrow: action_link_blue_arrow,
         href: action_link_href,
         text: action_link_text,

@@ -22,6 +22,11 @@
   <h1 class="browse__heading govuk-heading-xl">
     <%= page.title %>
   </h1>
+  <%= render "govuk_publishing_components/components/lead_paragraph", {
+    text: page.description,
+    inverse: true,
+    margin_bottom: 2,
+  } %>
   <p class="gem-c-lead-paragraph gem-c-lead-paragraph--inverse govuk-!-margin-bottom-2">
     <%= page.description %>
   </p>

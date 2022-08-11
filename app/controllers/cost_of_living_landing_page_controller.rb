@@ -4,11 +4,13 @@ class CostOfLivingLandingPageController < ApplicationController
   rescue_from GdsApi::ContentStore::ItemNotFound, with: :show
 
   def show
-    @content_item = { "locale" => "en" }
+    @content_item = {
+      "locale" => "en"
+    }
 
     render "show", locals: {
-      breadcrumbs: breadcrumbs,
       content: content,
+      breadcrumbs: breadcrumbs
     }
   end
 

@@ -1,9 +1,10 @@
 ---
+page_title: cost of living
 header:
   heading: Help for households
   lede: Support is available to help with the cost of living
-  action_link_text: Check what support you could be eligible for
-  action_link_href:
+  link_text: Check what support you could be eligible for
+  href: https://www.google.co.uk
 body:
   - heading: Support with your income
     content:

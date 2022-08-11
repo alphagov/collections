@@ -1,9 +1,12 @@
 <%
    two_thirds ||= false
    margin_bottom ||= 0
+   padding_top ||= false
 
    header_wrapper_classes = %w(browse__header-wrapper)
    header_wrapper_classes << "govuk-!-margin-bottom-#{margin_bottom}" if !margin_bottom.zero?
+
+   header_wrapper_classes << "govuk-!-padding-top-#{padding_top}" if padding_top.is_a? Numeric
 
    column_classes = %w()
    column_classes << (two_thirds ? "govuk-grid-column-two-thirds" : "govuk-grid-column-full")
