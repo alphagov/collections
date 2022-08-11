@@ -1,0 +1,9 @@
+<% track_action ||= "contentLink" %>
+
+<ul class="govuk-list browse__list" data-module="gem-track-click">
+  <% list.each_with_index do |list_item, index| %>
+    <li class="browse__list-item">
+      <%= list_item["heading"] %>
+    </li>
+  <% end %>
+</ul>
