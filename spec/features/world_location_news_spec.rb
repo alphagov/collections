@@ -41,6 +41,30 @@ RSpec.feature "World Location News pages" do
     end
   end
 
+  context "when there is a mission statement" do
+    it "includes the mission statement header" do
+      visit base_path
+      expect(page).to have_text(I18n.t("world_location_news.headings.mission"))
+    end
+
+    it "includes the mission statement" do
+      visit base_path
+      expect(page).to have_text("Our mission is to test world location news.")
+    end
+  end
+
+  context "when the mission statement is empty" do
+    before do
+      content_item["details"]["mission_statement"] = ""
+      stub_content_store_has_item(base_path, content_item)
+    end
+
+    it "does not include the mission statement header" do
+      visit base_path
+      expect(page).to_not have_text(I18n.t("world_location_news.headings.mission"))
+    end
+  end
+
 private
 
   def content_item_without_detail(content_item, key_to_remove)

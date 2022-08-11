@@ -33,4 +33,8 @@ class WorldLocationNews
       }
     end
   end
+
+  def mission_statement
+    @content_item.content_item_data.dig("details", "mission_statement")
+  end
 end
