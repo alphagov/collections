@@ -31,9 +31,36 @@
 <% end %>
 </header>
 
-<% accordion_contents = capture do %>
+<% accordion_html = capture do %>
   <%= render "shared/links", { list: content["body"], list_index: content["body"].count } %>
 <% end %>
+
+<%
+  accordion_contents = content["body"].map.with_index do |list, list_index|
+    {
+      heading: {
+        text: list["heading"],
+      },
+      content: {
+        html: render(partial: "shared/links", locals: {
+          list: list["content"],
+          list_index: list_index,
+         }),
+      },
+      data_attributes: {
+        "track-count": "accordionSection",
+        "track-options": {
+          "dimension114": list_index + 1
+        },
+      },
+    }
+  end
+%>
+
+<%= render "govuk_publishing_components/components/accordion", {
+  items: accordion_contents
+} %>
+
 
 <div class="govuk-width-container">
   <div class="govuk-grid-row">
