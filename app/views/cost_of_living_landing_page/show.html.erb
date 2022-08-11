@@ -5,6 +5,28 @@
 <% content_for :title, content[:page_title] %>
 <% content_for :is_full_width_header, true %>
 
+<%
+  accordion_contents = content[:body][:accordion_content].map.with_index do |list, list_index|
+    {
+      heading: {
+        text: list[:heading],
+      },
+      content: {
+        html: render(partial: "links", locals: {
+          list: list[:content],
+          list_index: list_index,
+        }),
+      },
+      data_attributes: {
+        "track-count": "accordionSection",
+        "track-options": {
+          "dimension114": list_index + 1
+        },
+      },
+    }
+  end
+%>
+
 <header class="cost-of-living-hub__header">
   <%= render "shared/browse_header", { margin_bottom: 7, padding_top: 0 } do %>
     <%= render 'govuk_publishing_components/components/breadcrumbs', {
@@ -53,3 +75,22 @@
     </div>
   <% end %>
 </header>
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="browse__section">
+       <%= render "govuk_publishing_components/components/heading", {
+          text: content[:body][:heading],
+          margin_bottom: 6,
+          font_size: "l"
+        } %>
+        <div data-module="toggle-attribute">
+          <%= render "govuk_publishing_components/components/accordion", {
+            items: accordion_contents
+          } %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
