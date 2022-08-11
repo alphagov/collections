@@ -1,8 +1,9 @@
-class TopicalEventsDocuments
+class SearchDocuments
   include SearchApiFields
 
-  def initialize(slug)
+  def initialize(slug, filter_field)
     @slug = slug
+    @filter_field = filter_field
   end
 
   def fetch_related_documents_with_format(filter_format = {})
@@ -13,7 +14,7 @@ class TopicalEventsDocuments
 private
 
   def default_search_options
-    { filter_topical_events: [@slug],
+    { @filter_field.to_sym => [@slug],
       count: 3,
       order: "-public_timestamp",
       fields: TOPICAL_EVENTS_SEARCH_FIELDS }

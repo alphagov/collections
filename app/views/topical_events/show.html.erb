@@ -89,7 +89,7 @@
       } %>
 
       <% if @topical_event.latest.any? %>
-        <%= render(partial: 'document_list_from_search_api', locals: { documents: @topical_event.latest, link_to: search_url(:latest, @topical_event.slug) })  %>
+        <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @topical_event.latest, link_to: search_url(:topical_event, :latest, @topical_event.slug) })  %>
       <% else %>
         <p class="govuk-body"><%= I18n.t("topical_events.no_updates") %></p>
       <% end %>
@@ -112,10 +112,10 @@
       } %>
     <% end %>
 
-    <%= render(partial: 'document_list_from_search_api', locals: { documents: @topical_event.publications, heading: I18n.t("topical_events.headings.publications"), link_to: search_url(:publication, @topical_event.slug) }) if @topical_event.publications.any? %>
-    <%= render(partial: 'document_list_from_search_api', locals: { documents: @topical_event.consultations, heading: I18n.t("topical_events.headings.consultations"), link_to: search_url(:consultation, @topical_event.slug) }) if @topical_event.consultations.any? %>
-    <%= render(partial: 'document_list_from_search_api', locals: { documents: @topical_event.announcements, heading: I18n.t("topical_events.headings.announcements"), link_to: search_url(:announcement, @topical_event.slug) }) if @topical_event.announcements.any? %>
-    <%= render(partial: 'document_list_from_search_api', locals: { documents: @topical_event.detailed_guidance, heading: I18n.t("topical_events.headings.detailed_guides"), link_to: search_url(:detailed_guidance, @topical_event.slug) }) if @topical_event.detailed_guidance.any? %>
+    <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @topical_event.publications, heading: I18n.t("topical_events.headings.publications"), link_to: search_url(:topical_event, :publication, @topical_event.slug) }) if @topical_event.publications.any? %>
+    <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @topical_event.consultations, heading: I18n.t("topical_events.headings.consultations"), link_to: search_url(:topical_event, :consultation, @topical_event.slug) }) if @topical_event.consultations.any? %>
+    <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @topical_event.announcements, heading: I18n.t("topical_events.headings.announcements"), link_to: search_url(:topical_event, :announcement, @topical_event.slug) }) if @topical_event.announcements.any? %>
+    <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @topical_event.detailed_guidance, heading: I18n.t("topical_events.headings.detailed_guides"), link_to: search_url(:topical_event, :detailed_guidance, @topical_event.slug) }) if @topical_event.detailed_guidance.any? %>
   </section>
 
   <div class="govuk-grid-column-two-thirds">
