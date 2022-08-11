@@ -5,9 +5,11 @@ lt:
       announcements: Mūsų skelbimai
       documents: Dokumentai
       featured:
+      latest: Paskutinės
       mission: Mūsų misija
       news: Pasaulio vietos naujienos
       organisations: Organizacijos
       publications: Mūsų publikacijos
       search: Ieškoti pagal šalį ar teritoriją
       statistics: Mūsų statistika
+    no_updates: Atnaujinimų nėra.

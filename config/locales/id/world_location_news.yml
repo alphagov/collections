@@ -5,9 +5,11 @@ id:
       announcements: Pengumuman kami
       documents: Dokumen
       featured:
+      latest: Terbaru
       mission: Misi kami
       news: Berita lokasi dunia
       organisations: Organisasi
       publications: Publikasi kami
       search: Cari menurut negara atau teritori
       statistics: Statistik kami
+    no_updates: Belum ada pembaruan.

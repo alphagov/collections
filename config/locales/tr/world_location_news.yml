@@ -5,9 +5,11 @@ tr:
       announcements: Duyurularımız
       documents: Belgeler
       featured:
+      latest: En güncel
       mission: Misyonumuz
       news: Dünya yeri haberleri
       organisations: Kuruluşlar
       publications: Yayınlarımız
       search: Ülkeye veya bölgeye göre arama yapın
       statistics: İstatistiklerimiz
+    no_updates: Henüz hiç güncelleme yok.

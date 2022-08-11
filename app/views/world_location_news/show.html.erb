@@ -52,6 +52,28 @@
   </div>
 </div>
 
+<% if I18n.locale == :en %>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-7">
+      <section id="latest">
+        <%= render "govuk_publishing_components/components/heading", {
+          text: I18n.t("world_location_news.headings.latest"),
+          padding: true,
+          font_size: 27,
+          border_top: 2,
+          margin_bottom: 3,
+        } %>
+
+        <% if @world_location_news.latest.any? %>
+          <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @world_location_news.latest, link_to: search_url(:world_location_news, :latest, @world_location_news.slug) })  %>
+        <% else %>
+          <p class="govuk-body"><%= I18n.t("world_location_news.no_updates") %></p>
+        <% end %>
+      </section>
+    </div>
+  </div>
+<% end %>
+
 <% if @world_location_news.mission_statement.present? %>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-6">

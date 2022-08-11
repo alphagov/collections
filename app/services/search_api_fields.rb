@@ -24,4 +24,15 @@ module SearchApiFields
                                     content_id
                                     organisations
                                     document_collections].freeze
+
+  WORLD_LOCATION_NEWS_SEARCH_FIELDS = %w[display_type
+                                         title
+                                         link
+                                         public_timestamp
+                                         format
+                                         content_store_document_type
+                                         description
+                                         content_id
+                                         organisations
+                                         document_collections].freeze
 end

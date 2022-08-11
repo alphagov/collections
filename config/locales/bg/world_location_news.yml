@@ -5,9 +5,11 @@ bg:
       announcements: Нашите съобщения
       documents: Документи
       featured:
+      latest: Последни
       mission: Нашата мисия
       news: Новини за местоположенията в света
       organisations: Организации
       publications: Нашите публикации
       search: Търсене по страна или територия
       statistics: Нашата статистика
+    no_updates: Все още няма актуализация.

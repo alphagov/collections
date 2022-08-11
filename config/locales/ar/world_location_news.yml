@@ -5,9 +5,11 @@ ar:
       announcements: إعلاناتنا
       documents: المستندات
       featured:
+      latest: الأحدث
       mission: مهمتنا
       news: أخبار المواقع العالمية
       organisations: المنظمات
       publications: منشوراتنا
       search: البحث حسب البلد أو الإقليم
       statistics: إحصائياتنا
+    no_updates: لا توجد تحديثات بعد.

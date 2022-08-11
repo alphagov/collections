@@ -5,9 +5,11 @@ da:
       announcements: Vores meddelelser
       documents: Dokumenter
       featured:
+      latest: Senest
       mission: Vores mission
       news: Verdens placering nyheder
       organisations: Organisationer
       publications: Vores publikationer
       search: Søg efter land eller område
       statistics: Vores statistikker
+    no_updates: Der er ingen opdateringer endnu.

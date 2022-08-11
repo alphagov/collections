@@ -20,4 +20,18 @@ RSpec.describe DocumentListHelper do
       end
     end
   end
+
+  context "on a world location news page" do
+    it "correctly constructs search urls for different document types" do
+      expected_latest_url = "/search/all?order=updated-newest&world_locations%5B%5D=somewhere"
+
+      expected_results = {
+        latest: expected_latest_url,
+      }
+
+      expected_results.each do |document_type, expected_url|
+        expect(search_url(:world_location_news, document_type, "somewhere")).to eq(expected_url)
+      end
+    end
+  end
 end

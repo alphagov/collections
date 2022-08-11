@@ -5,9 +5,11 @@ ro:
       announcements: Anunțurile noastre
       documents: Documente
       featured:
+      latest: Cele mai recente
       mission: Misiunea noastră
       news: Știri privind locația pe glob
       organisations: Organizații
       publications: Publicațiile noastre
       search: Căutați după țară sau teritoriu
       statistics: Statisticile noastre
+    no_updates: Nu există încă actualizări

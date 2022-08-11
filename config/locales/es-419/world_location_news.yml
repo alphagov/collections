@@ -5,9 +5,11 @@ es-419:
       announcements: Nuestros comunicados
       documents: Documentos
       featured:
+      latest: Más reciente
       mission: Nuestra misión
       news: Noticias sobre ubicaciones del mundo
       organisations: Organizaciones
       publications: Nuestras publicaciones
       search: Búsqueda por país o territorio
       statistics: Nuestras estadísticas
+    no_updates: Aún no hay actualizaciones.

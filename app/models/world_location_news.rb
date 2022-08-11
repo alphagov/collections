@@ -3,11 +3,16 @@ class WorldLocationNews
 
   def initialize(content_item)
     @content_item = content_item
+    @documents_service = SearchDocuments.new(slug, "filter_world_locations")
   end
 
   def self.find!(base_path)
     content_item = ContentItem.find!(base_path)
     new(content_item)
+  end
+
+  def slug
+    @content_item.content_item_data["base_path"].sub(%r{/world/}, "").sub(%r{/news}, "")
   end
 
   def title
@@ -56,5 +61,9 @@ class WorldLocationNews
         active: I18n.locale.to_s == translation["locale"],
       }
     end
+  end
+
+  def latest
+    @latest ||= @documents_service.fetch_related_documents_with_format
   end
 end

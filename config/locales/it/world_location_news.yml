@@ -5,9 +5,11 @@ it:
       announcements: I nostri annunci
       documents: Documenti
       featured:
+      latest: Ultimo
       mission: La nostra missione
       news: Notizie dai luoghi del mondo
       organisations: Organizzazioni
       publications: Le nostre pubblicazioni
       search: Cerca per stato o territorio
       statistics: Le nostre statistiche
+    no_updates: Non ci sono ancora aggiornamenti.

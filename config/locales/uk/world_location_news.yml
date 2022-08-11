@@ -5,9 +5,11 @@ uk:
       announcements: Наші оголошення
       documents: Документи
       featured:
+      latest: Останні
       mission: Наша місія
       news: Новини світових локацій
       organisations: Організації
       publications: Наші публікації
       search: Пошук за країною чи територією
       statistics: Наша статистика
+    no_updates: Оновлення поки немає.

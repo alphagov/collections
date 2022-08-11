@@ -5,9 +5,11 @@ sr:
       announcements: Naša saopštenja
       documents: Dokumenti
       featured:
+      latest: Najnovije
       mission: Naša misija
       news: Vesti sa globalnih lokacija
       organisations: Organizacije
       publications: Naše publikacije
       search: Pretraga po zemlji ili teritoriji
       statistics: Naša statistika
+    no_updates: Još nema novosti.

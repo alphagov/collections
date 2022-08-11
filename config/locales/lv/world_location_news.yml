@@ -5,9 +5,11 @@ lv:
       announcements: Paziņojumi
       documents: Dokumenti
       featured:
+      latest: Jaunākais
       mission: Misija
       news: Pasaules ziņas
       organisations: Organizācijas
       publications: Publikācijas
       search: Meklēt pēc valsts vai teritorijas
       statistics: Statistikas dati
+    no_updates: Pagaidām jaunumu nav

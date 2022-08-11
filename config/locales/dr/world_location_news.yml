@@ -5,9 +5,11 @@ dr:
       announcements: اطلاعیه هایی ما
       documents: اسناد
       featured:
+      latest: جدیدترین ها
       mission: ماموریت ما
       news: اخبار موقعیت های جهان
       organisations: سازمان ها
       publications: انتشارات ما
       search: جستجو به اساس کشور یا قلمرو
       statistics: آمار ما
+    no_updates: کدام آپدیتی تا هنوز موجود نیست

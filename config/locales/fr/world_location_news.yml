@@ -5,9 +5,11 @@ fr:
       announcements: Nos annonces
       documents: Documents
       featured:
+      latest: Récent
       mission: Notre mission
       news: Nouvelles des emplacements dans le monde
       organisations: Organisations
       publications: Nos publications
       search: Recherche par pays ou territoire
       statistics: Nos statistiques
+    no_updates: Aucune mise à jour n'a encore été effectuée.

@@ -3,6 +3,8 @@ module DocumentListHelper
     case page_type
     when :topical_event
       base_path(content_type) + topical_event_query_params(content_type, slug).to_param
+    when :world_location_news
+      base_path(content_type) + world_location_news_query_params(content_type, slug).to_param
     end
   end
 
@@ -36,6 +38,16 @@ private
     else
       {
         topical_events: [slug],
+      }
+    end
+  end
+
+  def world_location_news_query_params(content_type, slug)
+    case content_type
+    when :latest
+      {
+        order: "updated-newest",
+        world_locations: [slug],
       }
     end
   end

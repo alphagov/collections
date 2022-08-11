@@ -5,9 +5,11 @@ hu:
       announcements: Híreink
       documents: Dokumentumok
       featured:
+      latest: Legfrissebb
       mission: Küldetésünk
       news: Hírek a világ különböző helyszíneiről
       organisations: Szervezetek
       publications: Kiadványaink
       search: Keresés ország vagy terület szerint
       statistics: Statisztikáink
+    no_updates: Még nincs frissebb változat.
