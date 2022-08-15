@@ -13,7 +13,7 @@ private
   def base_path(content_type)
     { announcement: "/search/news-and-communications?",
       consultation: "/search/policy-papers-and-consultations?",
-      detailed_guidance: "/search/all?",
+      guidance_and_regulation: "/search/all?",
       latest: "/search/all?",
       publication: "/search/all?",
       statistic: "/search/research-and-statistics?" }[content_type]
@@ -26,7 +26,7 @@ private
         content_store_document_type: %w[open_consultations closed_consultations],
         topical_events: [slug],
       }
-    when :detailed_guidance
+    when :guidance_and_regulation
       {
         content_purpose_supergroup: "guidance_and_regulation",
         topical_events: [slug],

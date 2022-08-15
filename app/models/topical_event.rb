@@ -111,8 +111,8 @@ class TopicalEvent
     @announcements ||= @documents_service.fetch_related_documents_with_format({ filter_content_store_document_type: announcement_document_types })
   end
 
-  def detailed_guidance
-    @detailed_guidance ||= @documents_service.fetch_related_documents_with_format({ filter_format: "detailed_guidance" })
+  def guidance_and_regulation
+    @guidance_and_regulation ||= @documents_service.fetch_related_documents_with_format({ filter_content_purpose_supergroup: "guidance_and_regulation" })
   end
 
   def organisations
