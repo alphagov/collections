@@ -87,7 +87,7 @@ RSpec.describe TopicalEvent do
     end
 
     it "should make correct call to search api for announcements" do
-      announcement_formats = %w[press_release news_article news_story fatality_notice speech written_statement oral_statement authored_article government_response]
+      announcement_formats = GovukDocumentTypes.supergroup_document_types("announcements")
 
       expect(Services.search_api)
         .to receive(:search)
