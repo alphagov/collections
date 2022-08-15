@@ -3,6 +3,7 @@
   "title": "UK and Mock Country",
   "description": "Find out about the relations between the UK and Mock Country",
   "details": {
+    "mission_statement": "Our mission is to test world location news.",
     "ordered_featured_documents": [
       {
         "href": "https://www.gov.uk/somewhere",

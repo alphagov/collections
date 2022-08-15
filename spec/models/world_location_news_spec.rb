@@ -43,4 +43,8 @@ RSpec.describe WorldLocationNews do
       },
     )
   end
+
+  it "should return the mission statement" do
+    expect(world_location_news.mission_statement).to eq("Our mission is to test world location news.")
+  end
 end

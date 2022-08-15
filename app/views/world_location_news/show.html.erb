@@ -35,3 +35,21 @@
     <% end %>
   </div>
 </div>
+
+<% if @world_location_news.mission_statement.present? %>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-6">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: I18n.t("world_location_news.headings.mission"),
+        padding: true,
+        font_size: "l",
+        border_top: 2,
+        margin_bottom: 2,
+      } %>
+
+      <p class="govuk-body">
+        <%= @world_location_news.mission_statement %>
+      </p>
+    </div>
+  </div>
+<% end %>
