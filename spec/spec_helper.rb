@@ -51,3 +51,10 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
 end
+
+def fetch_fixture(filename)
+  json = File.read(
+    Rails.root.join("spec", "fixtures", "content_store", "#{filename}.json"),
+  )
+  JSON.parse(json)
+end

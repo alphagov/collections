@@ -256,13 +256,6 @@ RSpec.feature "Topical Event pages" do
 
 private
 
-  def fetch_fixture(filename)
-    json = File.read(
-      Rails.root.join("spec", "fixtures", "content_store", "#{filename}.json"),
-    )
-    JSON.parse(json)
-  end
-
   def content_item_without_detail(content_item, key_to_remove)
     content_item["details"] = content_item["details"].except(key_to_remove)
     content_item
