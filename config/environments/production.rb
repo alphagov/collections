@@ -81,6 +81,12 @@ Rails.application.configure do
   # require "syslog/logger"
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new "app-name")
 
+  # Configuration to stop Cost of Living landing page showing in production before
+  # campaign goes live
+  if (ENV["BASIC_AUTH_USERNAME"] && ENV["BASIC_AUTH_PASSWORD"] && ENV["HEROKU_APP_NAME"]) || ENV["JENKINS"] || ENV["PUBLISHING_E2E_TESTS_COMMAND"]
+    config.show_cost_of_living_landing_page = true
+  end
+
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new($stdout)
     logger.formatter = config.log_formatter
