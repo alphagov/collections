@@ -47,4 +47,19 @@ RSpec.describe WorldLocationNews do
   it "should return the mission statement" do
     expect(world_location_news.mission_statement).to eq("Our mission is to test world location news.")
   end
+
+  it "should map the ordered featured links" do
+    expect(world_location_news.ordered_featured_links).to eq(
+      [
+        {
+          path: "https://www.gov.uk/somewhere",
+          text: "A link to somewhere",
+        },
+        {
+          path: "https://www.gov.uk/somewhere2",
+          text: "A second link to somewhere",
+        },
+      ],
+    )
+  end
 end
