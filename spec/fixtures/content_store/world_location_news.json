@@ -1,5 +1,31 @@
 {
   "base_path": "/world/mock-country/news",
   "title": "UK and Mock Country",
-  "description": "Find out about the relations between the UK and Mock Country"
+  "description": "Find out about the relations between the UK and Mock Country",
+  "details": {
+    "ordered_featured_documents": [
+      {
+        "href": "https://www.gov.uk/somewhere",
+        "image": {
+          "url": "https://www.gov.uk/someimage.png",
+          "alt_text": "Alt text for the image"
+        },
+        "title": "A document related to this location",
+        "summary": "Very interesting document content. However this goes over the 160 character limit so when displayed this should be truncated in order to display the content neatly on the page.",
+        "document_type": "News",
+        "public_updated_at": "2022-07-28T15:45:46.000+01:00"
+      },
+      {
+        "href": "https://www.gov.uk/somewhere-without-an-update-date",
+        "image": {
+          "url": "https://www.gov.uk/someimage2.png",
+          "alt_text": "Alt text for the second image"
+        },
+        "title": "A document related to this location with no updated date",
+        "summary": "Very interesting document content.",
+        "document_type": "Blog",
+        "public_updated_at": null
+      }
+    ]
+  }
 }

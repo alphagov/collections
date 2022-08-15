@@ -10,4 +10,28 @@
       title: @world_location_news.title,
     } %>
   </div>
+
+  <div class="govuk-grid-column-full">
+    <% if @world_location_news.ordered_featured_documents&.any? %>
+      <section id="featured">
+        <%= render "govuk_publishing_components/components/heading", {
+          text: I18n.t("world_location_news.headings.featured"),
+          padding: true,
+          font_size: "l",
+          border_top: 2,
+          margin_bottom: 4,
+        } %>
+
+        <% @world_location_news.ordered_featured_documents.in_groups_of(3, false) do |row| %>
+          <div class="govuk-grid-row">
+            <% row.each do |document| %>
+              <div class="govuk-grid-column-one-third">
+                <%= render "govuk_publishing_components/components/image_card", document %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </section>
+    <% end %>
+  </div>
 </div>
