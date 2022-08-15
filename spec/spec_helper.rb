@@ -35,6 +35,9 @@ GovukAbTesting.configure do |config|
   config.acceptance_test_framework = :active_support
 end
 
+# Ensure the Cost of Living page is visible for integration tests
+Rails.application.config.show_cost_of_living_landing_page = true
+
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.include GdsApi::TestHelpers::Search

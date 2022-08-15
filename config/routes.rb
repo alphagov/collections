@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   get "/coronavirus", to: "coronavirus_landing_page#show", as: :coronavirus_landing_page
 
-  get "/cost-of-living", to: "cost_of_living_landing_page#show", as: :cost_of_living_landing_page
+  get "/cost-of-living", to: "cost_of_living_landing_page#show", as: :cost_of_living_landing_page if Rails.application.config.respond_to?(:show_cost_of_living_landing_page) && Rails.application.config.show_cost_of_living_landing_page
 
   get "/browse.json" => redirect("/api/content/browse")
 
