@@ -87,11 +87,9 @@ RSpec.describe TopicalEvent do
     end
 
     it "should make correct call to search api for announcements" do
-      announcement_formats = %w[press_release news_article news_story fatality_notice speech written_statement oral_statement authored_article government_response]
-
       expect(Services.search_api)
         .to receive(:search)
-        .with(default_params.merge({ filter_content_store_document_type: announcement_formats }))
+        .with(default_params.merge({ filter_content_purpose_supergroup: "news_and_communications", reject_content_purpose_subgroup: %w[decisions updates_and_alerts] }))
         .and_return({ "results" => [] })
 
       topical_event.announcements

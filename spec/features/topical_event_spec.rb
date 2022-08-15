@@ -80,7 +80,7 @@ RSpec.feature "Topical Event pages" do
     let(:related_guidance_and_regulation) { { "Some guidance" => "/foo/detailed_guidance_one", "Another bit of guidance" => "/foo/detailed_guidance_two" } }
 
     it "displays links to all related documents" do
-      stub_search(body: search_api_response(related_announcements))
+      stub_search(body: search_api_response(related_announcements), params: { "filter_content_purpose_supergroup" => "news_and_communications" })
       stub_search(body: search_api_response(related_publications), params: { "filter_format" => "publication" })
       stub_search(body: search_api_response(related_consultations), params: { "filter_format" => "consultation" })
       stub_search(body: search_api_response(related_guidance_and_regulation), params: { "filter_content_purpose_supergroup" => "guidance_and_regulation" })

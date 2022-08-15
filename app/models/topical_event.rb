@@ -97,18 +97,7 @@ class TopicalEvent
   end
 
   def announcements
-    announcement_document_types = %w[
-      press_release
-      news_article
-      news_story
-      fatality_notice
-      speech
-      written_statement
-      oral_statement
-      authored_article
-      government_response
-    ]
-    @announcements ||= @documents_service.fetch_related_documents_with_format({ filter_content_store_document_type: announcement_document_types })
+    @announcements ||= @documents_service.fetch_related_documents_with_format({ filter_content_purpose_supergroup: "news_and_communications", reject_content_purpose_subgroup: %w[decisions updates_and_alerts] })
   end
 
   def guidance_and_regulation
