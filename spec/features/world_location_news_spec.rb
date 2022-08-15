@@ -182,6 +182,31 @@ RSpec.feature "World Location News pages" do
     end
   end
 
+  context "when requesting the atom feed" do
+    let(:related_documents) { { "An announcement on World Locations" => "/foo/announcement_one", "Another announcement" => "/foo/announcement_two" } }
+
+    before do
+      stub_search(body: search_api_response(related_documents))
+    end
+
+    it "sets the page title" do
+      visit "#{base_path}.atom"
+      expect(page).to have_title("#{content_item['title']} - Activity on GOV.UK")
+    end
+
+    it "should include the correct entries" do
+      visit "#{base_path}.atom"
+
+      entries = Hash.from_xml(page.html).dig("feed", "entry")
+
+      expect(entries.first).to include("title" => "some_display_type: An announcement on World Locations")
+      expect(entries.first["link"]).to include("href" => "http://www.test.gov.uk/foo/announcement_one")
+
+      expect(entries.second).to include("title" => "some_display_type: Another announcement")
+      expect(entries.second["link"]).to include("href" => "http://www.test.gov.uk/foo/announcement_two")
+    end
+  end
+
 private
 
   def content_item_without_detail(content_item, key_to_remove)
