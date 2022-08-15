@@ -15,7 +15,8 @@ private
       consultation: "/search/policy-papers-and-consultations?",
       detailed_guidance: "/search/all?",
       latest: "/search/all?",
-      publication: "/search/all?" }[content_type]
+      publication: "/search/all?",
+      statistic: "/search/research-and-statistics?" }[content_type]
   end
 
   def topical_event_query_params(content_type, slug)
@@ -47,6 +48,16 @@ private
     when :latest
       {
         order: "updated-newest",
+        world_locations: [slug],
+      }
+    when :publication
+      {
+        content_purpose_supergroup: %w[guidance_and_regulation policy_and_engagement transparency],
+        order: "updated-newest",
+        world_locations: [slug],
+      }
+    else
+      {
         world_locations: [slug],
       }
     end
