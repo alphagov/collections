@@ -7,6 +7,6 @@ fr:
       title: Parcourir GOV.UK
     get_emails: Obtenir des courriels pour ce sujet
     language_direction: ltr
-    language_name: français
+    language_name: Français
     topics:
       title: "%{title}: informations détaillées"

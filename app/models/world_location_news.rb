@@ -46,4 +46,15 @@ class WorldLocationNews
   def mission_statement
     @content_item.content_item_data.dig("details", "mission_statement")
   end
+
+  def translations
+    @translations ||= @content_item.content_item_data.dig("links", "available_translations")&.map do |translation|
+      {
+        locale: translation["locale"],
+        base_path: translation["base_path"],
+        text: I18n.t("shared.language_name", locale: translation["locale"]),
+        active: I18n.locale.to_s == translation["locale"],
+      }
+    end
+  end
 end
