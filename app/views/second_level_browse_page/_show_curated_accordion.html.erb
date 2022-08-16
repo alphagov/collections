@@ -2,7 +2,7 @@
   custom_dimensions = {
     dimension114: (page.lists.count + 1).to_s,
   }
-  accordion_contents = page.lists.map.with_index do |list, list_index|
+  accordion_contents = page.lists.map.with_index(1) do |list, list_index|
     {
       heading: {
         text: list[:title],
@@ -16,8 +16,15 @@
       data_attributes: {
         "track-count": "accordionSection",
         "track-options": {
-          "dimension114": list_index + 1 
+          "dimension114": list_index,
         },
+        ga4: {
+          event_name: "select_content",
+          type: "accordion",
+          text: list[:title],
+          index: list_index,
+          index_total: page.lists.count + 1,
+        }
       },
     }
   end
@@ -46,6 +53,13 @@
       data_attributes: {
         "track-count": "accordionSection",
         "track-options": custom_dimensions.to_json,
+        ga4: {
+          event_name: "select_content",
+          type: "accordion",
+          text: t("second_level_browse.more_on_this_topic"),
+          index: accordion_contents.length,
+          index_total: page.lists.count + 1,
+        }
       },
     }
   %>
@@ -58,12 +72,24 @@
         dimension114: "0",
       }
     %>
+    <%
+      show_all_attributes = {
+        event_name: "select_content",
+        type: "accordion",
+        index: 0,
+        index_total: accordion_contents.count + 1,
+      }
+    %>
     <%= render "govuk_publishing_components/components/accordion", {
       track_show_all_clicks: true,
       track_sections: true,
       heading_level: 2,
+      data_attributes: {
+        module: "ga4-event-tracker",
+      },
       data_attributes_show_all: {
         "track-options": custom_dimensions.to_json,
+        "ga4": show_all_attributes.to_json
       },
       items: accordion_contents,
       margin_bottom: 6,
