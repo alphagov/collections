@@ -69,6 +69,10 @@
         <% else %>
           <p class="govuk-body"><%= I18n.t("world_location_news.no_updates") %></p>
         <% end %>
+
+        <%= render "govuk_publishing_components/components/subscription_links", {
+          feed_link_box_value: Plek.new.website_root + world_location_news_path(@world_location_news.slug, format: "atom")
+        } %>
       </section>
     </div>
   </div>

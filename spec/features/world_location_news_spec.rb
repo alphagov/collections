@@ -20,6 +20,11 @@ RSpec.feature "World Location News pages" do
     expect(page).to have_selector("meta[name='description'][content='Find out about the relations between the UK and Mock Country']", visible: :hidden)
   end
 
+  it "includes a link to the atom feed" do
+    visit base_path
+    expect(page).to have_field("Copy and paste this URL into your feed reader", with: "http://www.test.gov.uk/world/mock-country/news.atom")
+  end
+
   context "when there are featured documents" do
     it "includes the featured documents header" do
       visit base_path
