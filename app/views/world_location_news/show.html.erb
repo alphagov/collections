@@ -71,6 +71,7 @@
         <% end %>
 
         <%= render "govuk_publishing_components/components/subscription_links", {
+          email_signup_link: "/email/subscriptions/new?topic_id=#{@world_location_news.slug}",
           feed_link_box_value: Plek.new.website_root + world_location_news_path(@world_location_news.slug, format: "atom")
         } %>
       </section>
