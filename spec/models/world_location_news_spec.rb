@@ -117,4 +117,8 @@ RSpec.describe WorldLocationNews do
       world_location_news.statistics
     end
   end
+
+  it "should include the type" do
+    expect(world_location_news.type).to eq("world_location")
+  end
 end

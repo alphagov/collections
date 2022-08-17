@@ -7,9 +7,11 @@ ko:
       featured:
       latest: 최신
       mission: 대사관 안내
-      news: 월드 로케이션 뉴스
       organisations: 조직 안내
       publications: 출판물
       search: 국가 또는 영토로 검색하기
       statistics: 통계
     no_updates: 관련 내용이 아직 없습니다.
+    types:
+      international_delegation:
+      world_location: 월드 로케이션 뉴스

@@ -7,9 +7,11 @@ uk:
       featured:
       latest: Останні
       mission: Наша місія
-      news: Новини світових локацій
       organisations: Організації
       publications: Наші публікації
       search: Пошук за країною чи територією
       statistics: Наша статистика
     no_updates: Оновлення поки немає.
+    types:
+      international_delegation: Міжнародна делегація
+      world_location: Новини світових локацій

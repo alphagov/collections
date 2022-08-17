@@ -7,9 +7,11 @@ yi:
       featured:
       latest:
       mission:
-      news:
       organisations:
       publications:
       search:
       statistics:
     no_updates:
+    types:
+      international_delegation:
+      world_location:

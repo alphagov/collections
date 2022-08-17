@@ -9,6 +9,7 @@
     <%= render "govuk_publishing_components/components/title", {
       title: @world_location_news.title,
       margin_top: 0,
+      context: I18n.t("world_location_news.types.#{@world_location_news.type}"),
     } %>
   </div>
 

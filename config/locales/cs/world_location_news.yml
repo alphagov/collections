@@ -7,9 +7,11 @@ cs:
       featured:
       latest: Nejnovější
       mission: Naše poslání
-      news: Zprávy o poloze ve světě
       organisations: Organizace
       publications: Naše publikace
       search: Vyhledávání podle země nebo území
       statistics: Naše statistika
     no_updates: Zatím nejsou k dispozici žádné aktualizace.
+    types:
+      international_delegation: Mezinárodní delegace
+      world_location: Zprávy o poloze ve světě

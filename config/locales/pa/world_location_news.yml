@@ -7,9 +7,11 @@ pa:
       featured:
       latest: ਨਵੀਨਤਮ
       mission: ਸਾਡਾ ਮਿਸ਼ਨ
-      news: ਵਿਸ਼ਵ ਸਥਾਨ ਦੀ ਖਬਰ
       organisations: ਸੰਗਠਨ
       publications: ਸਾਡੇ ਪ੍ਰਕਾਸ਼ਨ
       search: ਦੇਸ਼ ਜਾਂ ਖੇਤਰ ਦੁਆਰਾ ਖੋਜ ਕਰੋ
       statistics: ਸਾਡੇ ਅੰਕੜੇ
     no_updates: ਅਜੇ ਕੋਈ ਅਪਡੇਟ ਨਹੀਂ ਹਨ।
+    types:
+      international_delegation: ਅੰਤਰਰਾਸ਼ਟਰੀ ਵਫਦ
+      world_location: ਵਿਸ਼ਵ ਸਥਾਨ ਦੀ ਖਬਰ

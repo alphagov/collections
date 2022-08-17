@@ -7,9 +7,11 @@ bg:
       featured:
       latest: Последни
       mission: Нашата мисия
-      news: Новини за местоположенията в света
       organisations: Организации
       publications: Нашите публикации
       search: Търсене по страна или територия
       statistics: Нашата статистика
     no_updates: Все още няма актуализация.
+    types:
+      international_delegation: Международна делегация
+      world_location: Новини за местоположенията в света

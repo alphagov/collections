@@ -7,9 +7,11 @@ uz:
       featured:
       latest: Энг сўнгги
       mission: Бизнинг вазифалар
-      news: Жаҳон янгиликлари
       organisations: Ташкилотлар
       publications: Бизнинг нашрлар
       search: Мамлакат ёки минтақа бўйича излаш
       statistics: Бизнинг статистика
     no_updates: Янгиланишлар мавжуд эмас.
+    types:
+      international_delegation: Халқаро делегация
+      world_location: Жаҳон янгиликлари

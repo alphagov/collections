@@ -7,9 +7,11 @@ sl:
       featured:
       latest: Najnovejše
       mission: Naša misija
-      news: Novice z lokacij po svetu
       organisations: Organizacije
       publications: Naše publikacije
       search: Išči po državah ali ozemljih
       statistics: Naša statistika
     no_updates: Posodobitve še niso na voljo.
+    types:
+      international_delegation: Mednarodna delegacija
+      world_location: Novice z lokacij po svetu

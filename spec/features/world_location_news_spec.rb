@@ -15,6 +15,11 @@ RSpec.feature "World Location News pages" do
     expect(page).to have_title("UK and Mock Country - GOV.UK")
   end
 
+  it "sets the document type" do
+    visit base_path
+    expect(page).to have_text("World location news")
+  end
+
   it "sets the page meta description" do
     visit base_path
     expect(page).to have_selector("meta[name='description'][content='Find out about the relations between the UK and Mock Country']", visible: :hidden)

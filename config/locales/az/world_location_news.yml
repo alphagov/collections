@@ -7,9 +7,11 @@ az:
       featured:
       latest: Ən son
       mission: Missiyamız
-      news: Dünya üzrə xəbərlər
       organisations: Təşkilatlar
       publications: Nəşrlərimiz
       search: Ölkəyə və ya əraziyə əsasən axtarın
       statistics: Statistikamız
     no_updates: Hələ yenilənmələr yoxdur.
+    types:
+      international_delegation: Beynəlxalq səlahiyyətin ötürülməsi
+      world_location: Dünya üzrə xəbərlər

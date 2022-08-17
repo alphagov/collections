@@ -7,9 +7,11 @@ sw:
       featured:
       latest: Habari mpya
       mission: Dhamira yetu
-      news: Habari za kimataifa
       organisations: Mashirika
       publications: Machapisho yetu
       search: Tafuta kulingana na nchi au eneo
       statistics: Takwimu zetu
     no_updates: Bado hakuna masasisho.
+    types:
+      international_delegation: Ujumbe wa kimataifa
+      world_location: Habari za kimataifa

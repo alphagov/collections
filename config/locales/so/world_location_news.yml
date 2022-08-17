@@ -7,9 +7,11 @@ so:
       featured:
       latest: Ugu dambeeyay
       mission: Hadafkayaga
-      news: Wararka Goobta Dunida
       organisations: Ururada
       publications: Daabacadahayaga
       search: Ku raadi dalka ama dhulka
       statistics: Xog ururinahayaga
     no_updates: Wali wax cusub ma jiraan.
+    types:
+      international_delegation: Wafti caalami ah
+      world_location: Wararka Goobta Dunida

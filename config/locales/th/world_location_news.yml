@@ -7,9 +7,11 @@ th:
       featured:
       latest: ล่าสุด
       mission: ภารกิจของเรา
-      news: ข่าวสถานที่ทั่วโลก
       organisations: องค์กร
       publications: สิ่งพิมพ์ของเรา
       search: ค้นหาด้วยประเทศหรือดินแดน
       statistics: สถิติของเรา
     no_updates: ยังไม่มีการปรับปรุง
+    types:
+      international_delegation:
+      world_location: ข่าวสถานที่ทั่วโลก

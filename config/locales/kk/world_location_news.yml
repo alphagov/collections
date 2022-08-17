@@ -7,9 +7,11 @@ kk:
       featured:
       latest: Ең соңғы
       mission: Біздің миссиямыз
-      news: Әлемдегі орын бойынша жаңалықтар
       organisations: Ұйымдар
       publications: Біздің жарияланымдар
       search: Елі немесе территориясы бойынша іздеу
       statistics: Біздің статистика
     no_updates: Әлі жаңартулар жоқ.
+    types:
+      international_delegation: Халықаралық делегация
+      world_location: Әлемдегі орын бойынша жаңалықтар

@@ -7,9 +7,11 @@ ru:
       featured:
       latest: Последние новости
       mission: Наша цель
-      news: Новости из мест нахождения в мире
       organisations: Организации
       publications: Наши публикации
       search: Поиск по стране или территории
       statistics: Наша статистика
     no_updates: Обновлений нет.
+    types:
+      international_delegation: Международная делегация
+      world_location: Новости из мест нахождения в мире

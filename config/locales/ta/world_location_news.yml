@@ -7,9 +7,11 @@ ta:
       featured:
       latest: சமீபத்தியது
       mission: எங்கள் செயல் இலக்கு
-      news: உலக இருப்பிடச் செய்தி
       organisations: நிறுவனங்கள்
       publications: எங்கள் வெளியீடுகள்
       search: நாடு அல்லது பிரதேசம் வாரியாகத் தேடு
       statistics: எங்கள் புள்ளியியல்
     no_updates: எந்த புதுப்பித்தல்களும் இல்லை.
+    types:
+      international_delegation: சர்வதேச தூதுக்குழு
+      world_location: உலக இருப்பிடச் செய்தி

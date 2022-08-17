@@ -7,9 +7,11 @@
       featured:
       latest: Siste
       mission: Vårt oppdrag
-      news: Nyheter fra ulike verdenshjørner
       organisations: Organisasjoner
       publications: Våre publikasjoner
       search: Søk etter land eller territorium
       statistics: Vår statistikk
     no_updates: Det er ingen oppdateringer ennå.
+    types:
+      international_delegation: Internasjonal delegasjon
+      world_location: Nyheter fra ulike verdenshjørner

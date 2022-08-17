@@ -7,9 +7,11 @@ tr:
       featured:
       latest: En güncel
       mission: Misyonumuz
-      news: Dünya yeri haberleri
       organisations: Kuruluşlar
       publications: Yayınlarımız
       search: Ülkeye veya bölgeye göre arama yapın
       statistics: İstatistiklerimiz
     no_updates: Henüz hiç güncelleme yok.
+    types:
+      international_delegation: Uluslararası delegasyon
+      world_location: Dünya yeri haberleri
