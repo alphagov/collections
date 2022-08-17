@@ -5,9 +5,11 @@ hy:
       announcements: Մեր հայտարարությունները
       documents: Փաստաթղթեր
       featured:
+      latest: Թարմացումներ
       mission: Մեր առաքելությունը
       news: Նորություններ աշխարհից
       organisations: Կազմակերպություններ
       publications: Մեր հրապարակումները
       search: Որոնել ըստ երկրի կամ տարածաշրջանի
       statistics: Մեր վիճակագրությունը
+    no_updates: 'Դեռևս թարմացումներ չկան:'

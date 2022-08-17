@@ -5,9 +5,11 @@ sl:
       announcements: Naši razglasi
       documents: Dokumenti
       featured:
+      latest: Najnovejše
       mission: Naša misija
       news: Novice z lokacij po svetu
       organisations: Organizacije
       publications: Naše publikacije
       search: Išči po državah ali ozemljih
       statistics: Naša statistika
+    no_updates: Posodobitve še niso na voljo.

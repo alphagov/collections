@@ -5,9 +5,11 @@ el:
       announcements: Οι ανακοινώσεις μας
       documents: Έγγραφα
       featured:
+      latest: Πιο πρόσφατα
       mission: Η αποστολή μας
       news: Ειδήσεις παγκόσμιας τοποθεσίας
       organisations: Οργανισμοί
       publications: Οι δημοσιεύσεις μας
       search: Αναζήτηση ανά χώρα ή περιοχή
       statistics: Τα στατιστικά μας
+    no_updates: Δεν υπάρχουν ακόμα ενημερώσεις.

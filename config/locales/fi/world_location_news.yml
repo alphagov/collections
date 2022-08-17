@@ -5,9 +5,11 @@ fi:
       announcements: Ilmoituksemme
       documents: Asiakirjat
       featured:
+      latest: Uusin
       mission: Tehtävämme
       news: Maailman sijaintiuutisia
       organisations: Organisaatiot
       publications: Julkaisumme
       search: Hae maan tai alueen mukaan
       statistics: Tilastomme
+    no_updates: Ei vielä päivityksiä.

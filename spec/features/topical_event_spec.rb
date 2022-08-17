@@ -261,18 +261,6 @@ private
     content_item
   end
 
-  def search_api_response(titles_and_links_hash)
-    results_array = titles_and_links_hash.to_a.map do |title, link|
-      {
-        'link': link,
-        'title': title,
-        'public_timestamp': "2016-10-07T22:18:32Z",
-        'display_type': "some_display_type",
-      }
-    end
-    { 'results': results_array }
-  end
-
   def content_item_without_link(content_item, key_to_remove)
     content_item["links"] = content_item["links"].except(key_to_remove)
     content_item

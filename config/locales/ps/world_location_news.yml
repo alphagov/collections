@@ -5,9 +5,11 @@ ps:
       announcements: زموږ اعلانونه
       documents: اسناد
       featured:
+      latest: وروستی
       mission: زموږ ماموریت
       news: د نړۍ موقعیت خبرونه
       organisations: سازمانونه
       publications: زموږ خپرونې
       search: د هیواد یا سیمې له مخې لټون
       statistics: زموږ احصایه
+    no_updates: تراوسه کوم تازه معلومات نشته.

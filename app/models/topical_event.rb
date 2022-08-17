@@ -3,7 +3,7 @@ class TopicalEvent
 
   def initialize(content_item)
     @content_item = content_item
-    @documents_service = TopicalEventsDocuments.new(slug)
+    @documents_service = SearchDocuments.new(slug, "filter_topical_events")
   end
 
   def self.find!(base_path)

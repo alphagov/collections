@@ -1,11 +1,13 @@
 require "integration_spec_helper"
 
 RSpec.feature "World Location News pages" do
+  include SearchApiHelpers
   let(:content_item) { fetch_fixture("world_location_news") }
   let(:base_path) { content_item["base_path"] }
 
   before do
     stub_content_store_has_item(base_path, content_item)
+    stub_search(body: { results: [] })
   end
 
   it "sets the page title" do
@@ -98,6 +100,42 @@ RSpec.feature "World Location News pages" do
     it "includes does not include the translation navigation" do
       visit base_path
       expect(page).not_to have_text("English")
+    end
+  end
+
+  context "latest documents" do
+    let(:latest_documents) { { "Some document" => "/foo/latest_one", "Another document" => "/foo/latest_two" } }
+
+    it "displays the latest documents" do
+      stub_search(body: search_api_response(latest_documents))
+
+      visit base_path
+
+      expect(page).to have_text("Latest")
+
+      within("#latest") do
+        latest_documents.each { |title, link| expect(page).to have_link(title, href: link) }
+        expect(page).to have_link("See all", href: "/search/all?order=updated-newest&world_locations%5B%5D=mock-country")
+      end
+    end
+
+    it "displays a message when there are no documents yet" do
+      stub_search(body: search_api_response({}))
+
+      visit base_path
+
+      expect(page).to have_text("Latest")
+
+      within("#latest") do
+        expect(page).to have_text("There are no updates yet.")
+      end
+    end
+
+    it "does not include the latest section when the locale is not English" do
+      I18n.with_locale(:cy) do
+        visit base_path
+        expect(page).not_to have_text("Y diweddaraf")
+      end
     end
   end
 

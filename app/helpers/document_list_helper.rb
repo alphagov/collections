@@ -1,6 +1,11 @@
-module TopicalEventsHelper
-  def search_url(content_type, slug)
-    base_path(content_type) + query_params(content_type, slug).to_param
+module DocumentListHelper
+  def search_url(page_type, content_type, slug)
+    case page_type
+    when :topical_event
+      base_path(content_type) + topical_event_query_params(content_type, slug).to_param
+    when :world_location_news
+      base_path(content_type) + world_location_news_query_params(content_type, slug).to_param
+    end
   end
 
 private
@@ -13,7 +18,7 @@ private
       publication: "/search/all?" }[content_type]
   end
 
-  def query_params(content_type, slug)
+  def topical_event_query_params(content_type, slug)
     case content_type
     when :consultation
       {
@@ -33,6 +38,16 @@ private
     else
       {
         topical_events: [slug],
+      }
+    end
+  end
+
+  def world_location_news_query_params(content_type, slug)
+    case content_type
+    when :latest
+      {
+        order: "updated-newest",
+        world_locations: [slug],
       }
     end
   end

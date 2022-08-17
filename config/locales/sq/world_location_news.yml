@@ -5,9 +5,11 @@ sq:
       announcements: Njoftimet tona
       documents: Dokumentet
       featured:
+      latest: Më të fundit
       mission: Misioni ynë
       news: Lajmet për vendndodhjen botërore
       organisations: Organizatat
       publications: Publikimet tona
       search: Kërkoni sipas vendit ose territorit
       statistics: Statistikat tona
+    no_updates: Ende nuk ka përditësime.
