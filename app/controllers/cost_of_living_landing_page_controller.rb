@@ -19,7 +19,7 @@ private
   end
 
   def content
-    @content ||= YAML.load_file(Rails.root.join("config/cost_of_living_landing_page/content_item.yml")).symbolize_keys
+    @content ||= YAML.load_file(Rails.root.join("config/cost_of_living_landing_page/content_item.yml")).deep_symbolize_keys
   end
 
   def breadcrumbs
