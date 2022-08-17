@@ -139,6 +139,49 @@ RSpec.feature "World Location News pages" do
     end
   end
 
+  context "documents list" do
+    let(:related_announcements) { { "An announcement on World Locations" => "/foo/announcement_one", "Another announcement" => "/foo/announcement_two" } }
+    let(:related_publications) { { "Policy on World Locations" => "/foo/policy_paper", "PM attends summit on world locations" => "/foo/news_story" } }
+    let(:related_statistics) { { "Some statistic" => "/foo/statistic_one", "An interesting statistic" => "/foo/statistic_two" } }
+
+    it "displays links to all related documents" do
+      stub_search(body: search_api_response(related_announcements), params: { "filter_content_purpose_supergroup" => "news_and_communications" })
+      stub_search(body: search_api_response(related_publications), params: { "filter_content_purpose_supergroup" => %w[guidance_and_regulation policy_and_engagement transparency] })
+      stub_search(body: search_api_response(related_statistics), params: { "filter_content_purpose_subgroup" => "statistics" })
+
+      visit base_path
+
+      expect(page).to have_text("Documents")
+      expect(page).to have_text("Our announcements")
+      expect(page).to have_text("Our publications")
+      expect(page).to have_text("Our statistics")
+
+      within("#our-announcements") do
+        related_announcements.each { |title, link| expect(page).to have_link(title, href: link) }
+        expect(page).to have_link("See all our announcements", href: "/search/news-and-communications?world_locations%5B%5D=mock-country")
+      end
+
+      within("#our-publications") do
+        related_publications.each { |title, link| expect(page).to have_link(title, href: link) }
+        expect(page).to have_link("See all our publications", href: "/search/all?content_purpose_supergroup%5B%5D=guidance_and_regulation&content_purpose_supergroup%5B%5D=policy_and_engagement&content_purpose_supergroup%5B%5D=transparency&order=updated-newest&world_locations%5B%5D=mock-country")
+      end
+
+      within("#our-statistics") do
+        related_statistics.each { |title, link| expect(page).to have_link(title, href: link) }
+        expect(page).to have_link("See all our statistics", href: "/search/research-and-statistics?world_locations%5B%5D=mock-country")
+      end
+    end
+
+    it "doesn't display any document headers when there are no related documents" do
+      visit base_path
+
+      expect(page).not_to have_text("Documents")
+      expect(page).not_to have_text("Our announcements")
+      expect(page).not_to have_text("Our publications")
+      expect(page).not_to have_text("Our statistics")
+    end
+  end
+
 private
 
   def content_item_without_detail(content_item, key_to_remove)

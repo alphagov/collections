@@ -66,4 +66,16 @@ class WorldLocationNews
   def latest
     @latest ||= @documents_service.fetch_related_documents_with_format
   end
+
+  def announcements
+    @announcements ||= @documents_service.fetch_related_documents_with_format({ filter_content_purpose_supergroup: "news_and_communications" })
+  end
+
+  def publications
+    @publications ||= @documents_service.fetch_related_documents_with_format({ filter_content_purpose_supergroup: %w[guidance_and_regulation policy_and_engagement transparency] })
+  end
+
+  def statistics
+    @statistics ||= @documents_service.fetch_related_documents_with_format({ filter_content_purpose_subgroup: "statistics" })
+  end
 end

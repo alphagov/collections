@@ -81,4 +81,40 @@ RSpec.describe WorldLocationNews do
       ],
     )
   end
+
+  context "document lists" do
+    let(:default_params) do
+      { filter_world_locations: [base_path.sub(%r{/world/}, "").sub(%r{/news}, "")],
+        count: 3,
+        order: "-public_timestamp",
+        fields: SearchApiFields::WORLD_LOCATION_NEWS_SEARCH_FIELDS }
+    end
+
+    it "should make correct call to search api for announcements" do
+      expect(Services.search_api)
+        .to receive(:search)
+        .with(default_params.merge({ filter_content_purpose_supergroup: "news_and_communications" }))
+        .and_return({ "results" => [] })
+
+      world_location_news.announcements
+    end
+
+    it "should make correct call to search api for publications" do
+      expect(Services.search_api)
+          .to receive(:search)
+          .with(default_params.merge({ filter_content_purpose_supergroup: %w[guidance_and_regulation policy_and_engagement transparency] }))
+          .and_return({ "results" => [] })
+
+      world_location_news.publications
+    end
+
+    it "should make correct call to search api for statistics" do
+      expect(Services.search_api)
+          .to receive(:search)
+          .with(default_params.merge({ filter_content_purpose_subgroup: "statistics" }))
+          .and_return({ "results" => [] })
+
+      world_location_news.statistics
+    end
+  end
 end

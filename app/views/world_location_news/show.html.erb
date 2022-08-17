@@ -91,3 +91,21 @@
     </div>
   </div>
 <% end %>
+
+<% if I18n.locale == :en && (@world_location_news.announcements.any? || @world_location_news.publications.any? || @world_location_news.statistics.any?) %>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-7">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: I18n.t("world_location_news.headings.documents"),
+        padding: true,
+        font_size: "l",
+        border_top: 2,
+        margin_bottom: 3,
+      } %>
+
+      <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @world_location_news.announcements, heading: I18n.t("world_location_news.headings.announcements"), link_to: search_url(:world_location_news, :announcement, @world_location_news.slug) }) if @world_location_news.announcements.any? %>
+      <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @world_location_news.publications, heading: I18n.t("world_location_news.headings.publications"), link_to: search_url(:world_location_news, :publication, @world_location_news.slug) }) if @world_location_news.publications.any? %>
+      <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @world_location_news.statistics, heading: I18n.t("world_location_news.headings.statistics"), link_to: search_url(:world_location_news, :statistic, @world_location_news.slug) }) if @world_location_news.statistics.any? %>
+    </div>
+  </div>
+<% end %>
