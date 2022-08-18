@@ -25,6 +25,16 @@ RSpec.feature "World Location News pages" do
     expect(page).to have_selector("meta[name='description'][content='Find out about the relations between the UK and Mock Country']", visible: :hidden)
   end
 
+  it "includes a link to the atom feed" do
+    visit base_path
+    expect(page).to have_field("Copy and paste this URL into your feed reader", with: "http://www.test.gov.uk/world/mock-country/news.atom")
+  end
+
+  it "includes a link to signup for emails" do
+    visit base_path
+    expect(page).to have_link("Get emails", href: "/email/subscriptions/new?topic_id=mock-country")
+  end
+
   context "when there are featured documents" do
     it "includes the featured documents header" do
       visit base_path
@@ -184,6 +194,31 @@ RSpec.feature "World Location News pages" do
       expect(page).not_to have_text("Our announcements")
       expect(page).not_to have_text("Our publications")
       expect(page).not_to have_text("Our statistics")
+    end
+  end
+
+  context "when requesting the atom feed" do
+    let(:related_documents) { { "An announcement on World Locations" => "/foo/announcement_one", "Another announcement" => "/foo/announcement_two" } }
+
+    before do
+      stub_search(body: search_api_response(related_documents))
+    end
+
+    it "sets the page title" do
+      visit "#{base_path}.atom"
+      expect(page).to have_title("#{content_item['title']} - Activity on GOV.UK")
+    end
+
+    it "should include the correct entries" do
+      visit "#{base_path}.atom"
+
+      entries = Hash.from_xml(page.html).dig("feed", "entry")
+
+      expect(entries.first).to include("title" => "some_display_type: An announcement on World Locations")
+      expect(entries.first["link"]).to include("href" => "http://www.test.gov.uk/foo/announcement_one")
+
+      expect(entries.second).to include("title" => "some_display_type: Another announcement")
+      expect(entries.second["link"]).to include("href" => "http://www.test.gov.uk/foo/announcement_two")
     end
   end
 
