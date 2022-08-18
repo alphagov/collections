@@ -7,9 +7,11 @@ fi:
       featured:
       latest: Uusin
       mission: Tehtävämme
-      news: Maailman sijaintiuutisia
       organisations: Organisaatiot
       publications: Julkaisumme
       search: Hae maan tai alueen mukaan
       statistics: Tilastomme
     no_updates: Ei vielä päivityksiä.
+    types:
+      international_delegation: Kansainvälinen valtuuskunta
+      world_location: Maailman sijaintiuutisia

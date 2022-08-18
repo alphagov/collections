@@ -7,9 +7,11 @@ et:
       featured:
       latest: Viimased
       mission: Meie missioon
-      news: Maailma asukoha uudised
       organisations: Organisatsioonid
       publications: Meie publikatsioonid
       search: Otsige riigi või territooriumi järgi
       statistics: Meie statistika
     no_updates: Uuendusi pole veel.
+    types:
+      international_delegation: Rahvusvaheline delegatsioon
+      world_location: Maailma asukoha uudised

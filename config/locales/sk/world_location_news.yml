@@ -7,9 +7,11 @@ sk:
       featured:
       latest: Najnovšie
       mission: Naše poslanie
-      news: Naša misia
       organisations: Organizácie
       publications: Naše publikácie
       search: Vyhľadávanie podľa krajiny alebo územia
       statistics: Naše štatistiky
     no_updates: Zatiaľ nie sú k dispozícii žiadne aktualizácie.
+    types:
+      international_delegation: Medzinárodná delegácia
+      world_location: Naša misia

@@ -78,4 +78,8 @@ class WorldLocationNews
   def statistics
     @statistics ||= @documents_service.fetch_related_documents_with_format({ filter_content_purpose_subgroup: "statistics" })
   end
+
+  def type
+    @content_item.content_item_data.dig("details", "world_location_news_type")
+  end
 end

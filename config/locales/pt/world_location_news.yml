@@ -7,9 +7,11 @@ pt:
       featured:
       latest: Mais recentes
       mission: A nossa missão
-      news: Notícias de localização mundial
       organisations: Organizações
       publications: As nossas publicações
       search: Pesquisa por país ou território
       statistics: As nossas estatísticas
     no_updates: Ainda não há atualizações.
+    types:
+      international_delegation: Delegação internacional
+      world_location: Notícias de localização mundial

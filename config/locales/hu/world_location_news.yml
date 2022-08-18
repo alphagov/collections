@@ -7,9 +7,11 @@ hu:
       featured:
       latest: Legfrissebb
       mission: Küldetésünk
-      news: Hírek a világ különböző helyszíneiről
       organisations: Szervezetek
       publications: Kiadványaink
       search: Keresés ország vagy terület szerint
       statistics: Statisztikáink
     no_updates: Még nincs frissebb változat.
+    types:
+      international_delegation: Nemzetközi delegáció
+      world_location: Hírek a világ különböző helyszíneiről

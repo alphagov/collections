@@ -7,9 +7,11 @@ pl:
       featured:
       latest: Najnowsze
       mission: Nasza misja
-      news: Wiadomości ze świata
       organisations: Organizacje
       publications: Nasze publikacje
       search: Wyszukiwanie według kraju lub terytorium
       statistics: Nasze statystyki
     no_updates: Aktualizacje nie są jeszcze dostępne.
+    types:
+      international_delegation: Delegacja międzynarodowa
+      world_location: Wiadomości ze świata

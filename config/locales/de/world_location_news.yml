@@ -7,9 +7,11 @@ de:
       featured:
       latest: Neueste
       mission: Unsere Aufgabe
-      news: Weltweite Standortnachrichten
       organisations: Organisationen
       publications: Unsere Veröffentlichungen
       search: Nach Land oder Gebiet suchen
       statistics: Unsere Statistiken
     no_updates: Es liegen noch keine Aktualisierungen vor.
+    types:
+      international_delegation: Internationale Delegation
+      world_location: Weltweite Standortnachrichten

@@ -7,9 +7,11 @@ ne:
       featured:
       latest: पछिल्लो
       mission: हाम्रो मिशन
-      news: विश्व स्थान समाचार
       organisations: सङ्गठनहरू
       publications: हाम्रा प्रकाशनहरु
       search: देश वा क्षेत्रको नामले खोज
       statistics: हाम्रो तथ्याङ्क
     no_updates: अहिले सम्म कुनै अद्यावधिक छैन।
+    types:
+      international_delegation: अन्तर्राष्ट्रिय प्रतिनिधिमण्डल
+      world_location: विश्व स्थान समाचार

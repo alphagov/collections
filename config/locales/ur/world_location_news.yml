@@ -7,9 +7,11 @@ ur:
       featured:
       latest: تازہ ترین
       mission: ہمارا مشن
-      news: عالمی مقام کی خبریں
       organisations: تنظیمیں
       publications: ہماری پبلیکیشنز
       search: ملک یا خطے کے لحاظ سے تلاش کریں
       statistics: ہمارے شماریات
     no_updates: ابھی تک کوئی اپ ڈیٹس نہیں ہیں۔
+    types:
+      international_delegation: عالمی وفد
+      world_location: عالمی مقام کی خبریں

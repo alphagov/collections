@@ -7,9 +7,11 @@ hr:
       featured:
       latest: Najnoviji
       mission: Naša misija
-      news: Vijesti o svjetskoj lokaciji
       organisations: Organizacije
       publications: Naša izdanja
       search: Pretražujte prema zemlji ili teritoriju
       statistics: Naša statistika
     no_updates: Još nema ažuriranja.
+    types:
+      international_delegation: Međunarodna delegacija
+      world_location: Vijesti o svjetskoj lokaciji

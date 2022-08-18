@@ -7,9 +7,11 @@ tk:
       featured:
       latest: Iň täze
       mission: Biziň maksadymyz
-      news: Dünýä ýeri habarlary
       organisations: Guramalar
       publications: Biziň neşirlerimiz
       search: Döwlet ýa-da territoriýa boýunça gözlemek
       statistics: Biziň statistikamyz
     no_updates: Heniz täzelenmeler ýok.
+    types:
+      international_delegation: Halkara delegasiýa
+      world_location: Dünýä ýeri habarlary

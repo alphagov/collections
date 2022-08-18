@@ -7,9 +7,11 @@ vi:
       featured:
       latest: Mới nhất
       mission: Sứ mệnh của chúng tôi
-      news: Tin tức về vị trí trên thế giới
       organisations: Tổ chức
       publications: Các ấn phẩm của chúng tôi
       search: Tìm kiếm theo quốc gia hoặc lãnh thổ
       statistics: Thống kê của chúng tôi
     no_updates: Chưa có cập nhật.
+    types:
+      international_delegation:
+      world_location: Tin tức về vị trí trên thế giới

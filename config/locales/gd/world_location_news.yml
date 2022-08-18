@@ -7,9 +7,11 @@ gd:
       featured:
       latest: le déanaí
       mission: Ár misean
-      news: Nuacht domhanda
       organisations: Eagraíochtaí
       publications: Ár bhfoilseacháin
       search: Cuardaigh de réir tíre nó réigiúin
       statistics: Ár staitisticí
     no_updates: Gan nuashonrú fós.
+    types:
+      international_delegation: Toscaireacht idirnáisiúnta
+      world_location: Nuacht domhanda

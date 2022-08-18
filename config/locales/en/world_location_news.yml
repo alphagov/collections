@@ -7,9 +7,11 @@ en:
       featured: Featured
       latest: Latest
       mission: Our mission
-      news: World location news
       organisations: Organisations
       publications: Our publications
       search: Search by country or territory
       statistics: Our statistics
     no_updates: There are no updates yet.
+    types:
+      international_delegation: International delegation
+      world_location: World location news

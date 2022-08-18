@@ -7,9 +7,11 @@ ja:
       featured:
       latest: 最新
       mission: 使命
-      news: 世界各地からのニュース
       organisations: 組織
       publications: 出版物
       search: 国または地域で検索
       statistics: 統計
     no_updates: まだ更新はありません。
+    types:
+      international_delegation:
+      world_location: 世界各地からのニュース

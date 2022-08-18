@@ -7,9 +7,11 @@ zh-tw:
       featured:
       latest: 最新
       mission: 我們的任務
-      news: 世界地點消息
       organisations: 組織
       publications: 我們的出版
       search: 按國家或地區搜索
       statistics: 我們的數據統計
     no_updates: 尚未更新
+    types:
+      international_delegation: 國際代表團
+      world_location: 世界地點消息

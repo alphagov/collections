@@ -7,9 +7,11 @@ ka:
       featured:
       latest: ბოლო
       mission: ჩვენი მისია
-      news: მსოფლიოს ლოკაციების სიახლეები
       organisations: ორგანიზაციები
       publications: ჩვენი პუბლიკაციები
       search: მოძებნეთ ქვეყნის ან ტერიტორიის მიხედვით
       statistics: ჩვენი სტატისტიკა
     no_updates: სიახლეები ჯერ არ ყოფილა.
+    types:
+      international_delegation: საერთაშორისო დელეგაცია
+      world_location: მსოფლიოს ლოკაციების სიახლეები
