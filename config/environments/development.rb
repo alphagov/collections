@@ -61,7 +61,7 @@ Rails.application.configure do
 
   # Configuration to stop Cost of Living landing page showing in production before
   # campaign goes live
-  config.show_cost_of_living_landing_page = true
+  config.unreleased_features = true
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true

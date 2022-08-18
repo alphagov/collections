@@ -36,7 +36,7 @@ GovukAbTesting.configure do |config|
 end
 
 # Ensure the Cost of Living page is visible for integration tests
-Rails.application.config.show_cost_of_living_landing_page = true
+Rails.application.config.unreleased_features = true
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
