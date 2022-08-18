@@ -6,6 +6,10 @@ RSpec.feature "Cost of Living hub page" do
   end
 
   describe "the landing page" do
+    before do
+      allow(Rails.configuration).to receive(:unreleased_features).and_return(true)
+    end
+
     scenario "renders" do
       when_i_visit_the_cost_of_living_landing_page
       then_i_can_see_the_title
