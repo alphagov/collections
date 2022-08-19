@@ -6,7 +6,7 @@
   accordion_contents = []
   number_of_accordion_sections = accordions.length
 %>
-<% accordions.each_with_index do | section, index | %>
+<% accordions.each.with_index(1) do | section, index | %>
   <% content = capture do %>
     <%# this element captures an override from the accordion that the last item has margin 0 %>
     <div class="covid__accordion-inner">
@@ -34,10 +34,8 @@
           event_name: 'select_content',
           type: 'accordion',
           text: section["title"],
-          index: index + 1,
+          index: index,
           index_total: number_of_accordion_sections,
-          section: 'n/a',
-          action: 'n/a',
         }
       }
     }
@@ -53,24 +51,24 @@
   border_top: border_top,
   font_size: "m"
 } if heading %>
-<div data-module="gem-track-click gtm-click-tracking">
-  <div data-module="toggle-attribute">
-    <%
-      show_all_attributes = {
-        event_name: "select_content",
-        type: "accordion",
-        index: 0,
-        index_total: number_of_accordion_sections,
-        section: "n/a"
-      }
-    %>
-    <%= render 'govuk_publishing_components/components/accordion', {
-      heading_level: 3,
-      data_attributes_show_all: {
-        "ga4": show_all_attributes.to_json
-      },
-      items: accordion_contents,
-      margin_bottom: 3
-    } %>
-  </div>
+<div data-module="toggle-attribute">
+  <%
+    show_all_attributes = {
+      event_name: "select_content",
+      type: "accordion",
+      index: 0,
+      index_total: number_of_accordion_sections,
+    }
+  %>
+  <%= render 'govuk_publishing_components/components/accordion', {
+    heading_level: 3,
+    data_attributes: {
+      module: "ga4-event-tracker",
+    },
+    data_attributes_show_all: {
+      "ga4": show_all_attributes.to_json
+    },
+    items: accordion_contents,
+    margin_bottom: 3
+  } %>
 </div>
