@@ -10,6 +10,7 @@ RSpec.feature "Cost of Living hub page" do
       when_i_visit_the_cost_of_living_landing_page
       then_i_can_see_the_title
       then_i_can_see_the_breadcrumbs
+      and_there_are_metatags
     end
 
     def when_i_visit_the_cost_of_living_landing_page
@@ -22,6 +23,17 @@ RSpec.feature "Cost of Living hub page" do
 
     def then_i_can_see_the_breadcrumbs
       expect(page).to have_css(".govuk-breadcrumbs__link", text: "Home")
+    end
+
+    def and_there_are_metatags
+      expect(page).to have_selector(
+        "meta[property='og:title'][content='Cost of living support']",
+        visible: false,
+      )
+      expect(page).to have_selector(
+        "meta[name='description'][content='Find out what support is available to help with the cost of living. This includes income and disability benefits, bills and allowances, childcare, housing and transport.']",
+        visible: false,
+      )
     end
   end
 end
