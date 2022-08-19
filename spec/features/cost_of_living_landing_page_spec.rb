@@ -18,7 +18,7 @@ RSpec.feature "Cost of Living hub page" do
     end
 
     def then_i_can_see_the_title
-      expect(page).to have_title("Help for households")
+      expect(page).to have_title("Cost of living support")
     end
 
     def then_i_can_see_the_breadcrumbs
