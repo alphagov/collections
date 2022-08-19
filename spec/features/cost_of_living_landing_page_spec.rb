@@ -2,7 +2,7 @@ require "integration_spec_helper"
 
 RSpec.feature "Cost of Living hub page" do
   before do
-    stub_content_store_does_not_have_item("/cost-of-living")
+    stub_content_store_has_item("/cost-of-living")
   end
 
   describe "the landing page" do

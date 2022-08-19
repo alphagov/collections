@@ -1,8 +1,6 @@
 class CostOfLivingLandingPageController < ApplicationController
   slimmer_template "gem_layout_full_width"
-
-  rescue_from GdsApi::ContentStore::ItemNotFound, with: :show
-
+  
   def show
     @content_item = { "locale" => "en" }
 
