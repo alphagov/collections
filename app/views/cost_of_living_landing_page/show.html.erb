@@ -87,7 +87,8 @@
         } %>
         <div data-module="toggle-attribute">
           <%= render "govuk_publishing_components/components/accordion", {
-            items: accordion_contents
+            track_show_all_clicks: true,
+            items: accordion_contents,
           } %>
         </div>
       </div>
