@@ -3,11 +3,9 @@ class CostOfLivingLandingPageController < ApplicationController
 
   def show
     if Rails.application.config.unreleased_features
-      @content_item = { "locale" => "en" }
-
       render "show", locals: {
         breadcrumbs: breadcrumbs,
-        content: content,
+        content: content_item,
       }
     else
       render status: :not_found, plain: "Page not found"
@@ -20,8 +18,8 @@ private
     set_gem_layout_full_width
   end
 
-  def content
-    @content ||= YAML.load_file(Rails.root.join("config/cost_of_living_landing_page/content_item.yml")).deep_symbolize_keys
+  def content_item
+    @content_item ||= YAML.load_file(Rails.root.join("config/cost_of_living_landing_page/content_item.yml")).deep_symbolize_keys
   end
 
   def breadcrumbs
