@@ -1,5 +1,3 @@
-<% track_action ||= "contentLink" %>
-
 <ul class="govuk-list browse__list" data-module="gem-track-click">
   <% list.each_with_index do |content_item, index| %>
     <% if content_item[:links] %>
@@ -17,21 +15,17 @@
           <ul class="govuk-list browse__list">
              <% content_item[:links].each_with_index do |link_item, index| %>
               <li class="govuk-list browse__list-item">
+               <% track_data = {
+                   track_category: "contentsClicked",
+                   track_action: accordion_heading,
+                   track_label: link_item[:href].gsub("https://www.gov.uk/", ""),
+                  } if link_item[:href].starts_with?("https://www.gov.uk/")
+               %>
                <%= link_to(
                  link_item[:link_text],
                  link_item[:href],
                  class: "govuk-link",
-                 data: {
-                   # track_category: "browseClicked",
-                   track_count: "contentLink",
-                   track_action: track_action,
-                   # track_label: list_item.base_path,
-                   # track_options: {
-                   #   dimension28: list.count.to_s,
-                   #   dimension29: list_item.title,
-                   #   dimension114: "#{list_index + 1}.#{index + 1}",
-                   # },
-                 },
+                 data: track_data,
                ) %>
              </li>
               <% end %>
