@@ -37,10 +37,17 @@
       <li class="browse__list-item govuk-!-padding-bottom-1">
         <%= render "govuk_publishing_components/components/inset_text" do %>
           <p><%= content_item[:inset_text] %></p>
+          <% track_data = {
+              track_category: "contentsClicked",
+              track_action: accordion_heading,
+              track_label: content_item[:href].gsub("https://www.gov.uk/", ""),
+             } if content_item[:href].starts_with?("https://www.gov.uk/")
+          %>
           <%= link_to(
             content_item[:link_text],
             content_item[:href],
             class: "govuk-link",
+            data: track_data,
           ) %>
         <% end %>
       </li>
