@@ -11,18 +11,8 @@ RSpec.describe CostOfLivingLandingPageController do
     end
 
     it "has a success response" do
-      allow(Rails.configuration).to receive(:unreleased_features).and_return(true)
-
       get :show
       expect(response).to have_http_status(:success)
-    end
-
-    context "feature flag is set to false" do
-      it "returns a not found/404 status" do
-        allow(Rails.configuration).to receive(:unreleased_features).and_return(false)
-
-        expect(get(:show)).to have_http_status(:not_found)
-      end
     end
   end
 end

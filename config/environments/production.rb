@@ -81,13 +81,6 @@ Rails.application.configure do
   # require "syslog/logger"
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new "app-name")
 
-  # Configuration to stop features showing in production before
-  # things go live. For example, Cost of living page.
-  # Relies on env var being set in Puppet.
-  # For Cost of living, it has this set to true: https://github.com/alphagov/govuk-puppet/pull/11781
-  # for integration.
-  config.unreleased_features = ENV["UNRELEASED_FEATURES"].present?
-
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new($stdout)
     logger.formatter = config.log_formatter
