@@ -13,6 +13,7 @@
       },
       content: {
         html: render(partial: "links", locals: {
+          accordion_heading: list[:heading],
           list: list[:content],
           list_index: list_index,
         }),
@@ -87,7 +88,9 @@
         } %>
         <div data-module="toggle-attribute">
           <%= render "govuk_publishing_components/components/accordion", {
-            items: accordion_contents
+            track_show_all_clicks: true,
+            track_sections: true,
+            items: accordion_contents,
           } %>
         </div>
       </div>
