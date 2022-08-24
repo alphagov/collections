@@ -54,7 +54,7 @@ Rails.application.configure do
 
   # Configuration to stop Cost of Living landing page showing in production before
   # campaign goes live
-  config.show_cost_of_living_landing_page = true
+  config.unreleased_features = false
 
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true

@@ -2,10 +2,14 @@ require "integration_spec_helper"
 
 RSpec.feature "Cost of Living hub page" do
   before do
-    stub_content_store_does_not_have_item("/cost-of-living")
+    stub_content_store_has_item("/cost-of-living")
   end
 
   describe "the landing page" do
+    before do
+      allow(Rails.configuration).to receive(:unreleased_features).and_return(true)
+    end
+
     scenario "renders" do
       when_i_visit_the_cost_of_living_landing_page
       then_i_can_see_the_title
