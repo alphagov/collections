@@ -1,4 +1,4 @@
-<ul class="govuk-list browse__list" data-module="gem-track-click">
+<ul role="list" class="govuk-list browse__list" data-module="gem-track-click">
   <% list.each_with_index do |content_item, index| %>
     <% if content_item[:links] %>
       <li class="govuk-list browse__list-item govuk-!-padding-bottom-1">
@@ -12,7 +12,7 @@
           } %>
          <% end %>
          <% if content_item[:links] %>
-          <ul class="govuk-list browse__list">
+          <ul role="list" class="govuk-list browse__list">
              <% content_item[:links].each_with_index do |link_item, index| %>
               <li class="govuk-list browse__list-item">
                <% track_data = {
