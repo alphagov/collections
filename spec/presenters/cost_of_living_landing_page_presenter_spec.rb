@@ -42,14 +42,15 @@ RSpec.describe CostOfLivingLandingPagePresenter do
                track_category: "contentsClicked",
                track_action: "Support with your income",
                track_label: "check-benefits-financial-support",
+               track_count: "contentLink",
              })
     end
 
-    it "returns no tracking attributes for an external link" do
+    it "returns number of links tracking attribute for an external link" do
       expect(presenter.link_clicked_track_data(
                track_action: track_action,
                href: "https://www.moneyhelper.org.uk/",
-             )).to eq({})
+             )).to eq({ track_count: "contentLink" })
     end
   end
 end

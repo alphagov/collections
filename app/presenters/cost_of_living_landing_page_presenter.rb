@@ -15,12 +15,13 @@ class CostOfLivingLandingPagePresenter
   end
 
   def link_clicked_track_data(track_action:, href:)
-    return {} unless internal_link?(href)
+    return { track_count: "contentLink" } unless internal_link?(href)
 
     {
       track_category: "contentsClicked",
       track_action: track_action,
       track_label: slug_for_href(href),
+      track_count: "contentLink",
     }
   end
 
