@@ -16,6 +16,7 @@ RSpec.feature "Cost of Living hub page" do
       then_i_can_see_the_breadcrumbs
       and_there_are_metatags
       and_there_is_link_tracking
+      and_there_is_accordion_section_tracking
     end
 
     def when_i_visit_the_cost_of_living_landing_page
@@ -48,6 +49,12 @@ RSpec.feature "Cost of Living hub page" do
       expect(link["data-track-action"]).to eq("Support with your income")
       expect(link["data-track-label"]).to eq("check-benefits-financial-support")
       expect(link["data-track-count"]).to eq("contentLink")
+    end
+
+    def and_there_is_accordion_section_tracking
+      accordion_section = page.first(".govuk-accordion__section-heading")
+
+      expect(accordion_section["data-track-count"]).to eq("accordionSection")
     end
   end
 end
