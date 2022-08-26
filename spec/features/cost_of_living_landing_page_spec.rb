@@ -15,6 +15,7 @@ RSpec.feature "Cost of Living hub page" do
       then_i_can_see_the_title
       then_i_can_see_the_breadcrumbs
       and_there_are_metatags
+      and_there_is_link_clicked_tracking
     end
 
     def when_i_visit_the_cost_of_living_landing_page
@@ -38,6 +39,14 @@ RSpec.feature "Cost of Living hub page" do
         "meta[name='description'][content='Find out what support is available to help with the cost of living. This includes income and disability benefits, bills and allowances, childcare, housing and transport.']",
         visible: false,
       )
+    end
+
+    def and_there_is_link_clicked_tracking
+      link = page.find("a", text: "Find out what benefits and financial support you may be able to get")
+
+      expect(link["data-track-category"]).to eq("contentsClicked")
+      expect(link["data-track-action"]).to eq("Support with your income")
+      expect(link["data-track-label"]).to eq("check-benefits-financial-support")
     end
   end
 end

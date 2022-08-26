@@ -13,4 +13,24 @@ class CostOfLivingLandingPagePresenter
       end
     end
   end
+
+  def link_clicked_track_data(track_action:, href:)
+    return {} unless internal_link?(href)
+
+    {
+      track_category: "contentsClicked",
+      track_action: track_action,
+      track_label: slug_for_href(href),
+    }
+  end
+
+private
+
+  def internal_link?(link)
+    link.starts_with?("https://www.gov.uk/")
+  end
+
+  def slug_for_href(href)
+    href.gsub("https://www.gov.uk/", "")
+  end
 end
