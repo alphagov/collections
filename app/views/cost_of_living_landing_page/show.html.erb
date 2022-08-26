@@ -29,54 +29,42 @@
   end
 %>
 
-<header class="cost-of-living-hub__header">
-  <%= render "shared/browse_header", { margin_bottom: 7, padding_top: 0 } do %>
-    <%= render 'govuk_publishing_components/components/breadcrumbs', {
-      breadcrumbs: breadcrumbs,
-      collapse_on_mobile: true,
-      inverse: true
-    } %>
+<%= render "shared/browse_breadcrumbs", {
+  breadcrumbs: breadcrumbs,
+  collapse_on_mobile: true,
+  inverse: true
+} %>
 
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <%= render "govuk_publishing_components/components/title", {
-          title: content.header[:heading],
-          inverse: true,
-          margin_top: 4,
-          margin_bottom: 6,
-        } %>
-      </div>
-    </div>
+<%= render "shared/browse_header", { margin_bottom: 7, padding_top: 0 } do %>
 
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <%= render "govuk_publishing_components/components/lead_paragraph", {
-          text: content.header[:lede],
-          inverse: true,
-          margin_bottom: 2,
-        } %>
-      </div>
-    </div>
+  <%= render "govuk_publishing_components/components/title", {
+    title: content.header[:heading],
+    inverse: true,
+    margin_top: 6,
+    margin_bottom: 6,
+  } %>
 
-    <div class="govuk-grid-row covid__action-link-wrapper">
-      <div class="govuk-grid-column-two-thirds">
-        <%= render 'govuk_publishing_components/components/action_link', {
-          white_arrow: true,
-          href: content.header[:href],
-          text: content.header[:link_text],
-          mobile_subtext: true,
-          light_text: true,
-          data: {
-            module: "gem-track-click",
-            track_category: "pageElementInteraction",
-            track_action: "Header",
-            track_label: content.header[:href],
-          }
-        } %>
-      </div>
-    </div>
-  <% end %>
-</header>
+  <%= render "govuk_publishing_components/components/lead_paragraph", {
+    text: content.header[:lede],
+    inverse: true,
+    margin_bottom: 5,
+  } %>
+
+  <%= render 'govuk_publishing_components/components/action_link', {
+    white_arrow: true,
+    href: content.header[:href],
+    text: content.header[:link_text],
+    mobile_subtext: true,
+    light_text: true,
+    data: {
+      module: "gem-track-click",
+      track_category: "pageElementInteraction",
+      track_action: "Header",
+      track_label: content.header[:href],
+    }
+  } %>
+
+<% end %>
 
 <div class="govuk-width-container">
   <div class="govuk-grid-row">
