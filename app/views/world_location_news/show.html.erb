@@ -91,9 +91,7 @@
         margin_bottom: 2,
       } %>
 
-      <p class="govuk-body">
-        <%= @world_location_news.mission_statement %>
-      </p>
+      <%= render_govspeak(@world_location_news.mission_statement) %>
     </div>
   </div>
 <% end %>
