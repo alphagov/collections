@@ -40,6 +40,8 @@ RSpec.feature "Cost of Living hub page" do
         "meta[name='description'][content='Find out what support is available to help with the cost of living. This includes income and disability benefits, bills and allowances, childcare, housing and transport.']",
         visible: false,
       )
+      expect(page).to have_selector("meta[name='govuk:navigation-page-type'][content='Cost of living hub']", visible: false)
+      expect(page).to have_selector("meta[name='govuk:navigation-list-type'][content='curated']", visible: false)
     end
 
     def and_there_is_link_tracking
