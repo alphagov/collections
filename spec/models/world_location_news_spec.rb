@@ -63,8 +63,8 @@ RSpec.describe WorldLocationNews do
     )
   end
 
-  it "should map the translations" do
-    expect(world_location_news.translations).to eq(
+  it "should order the translations" do
+    expect(world_location_news.ordered_translations).to eq(
       [
         {
           locale: "en",

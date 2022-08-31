@@ -43,12 +43,12 @@
   "links": {
     "available_translations": [
       {
-        "locale": "en",
-        "base_path": "/world/somewhere"
-      },
-      {
         "locale": "cy",
         "base_path": "/world/somewhere.cy"
+      },
+      {
+        "locale": "en",
+        "base_path": "/world/somewhere"
       }
     ]
   }
