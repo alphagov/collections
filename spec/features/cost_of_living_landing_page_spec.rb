@@ -15,6 +15,8 @@ RSpec.feature "Cost of Living hub page" do
       then_i_can_see_the_title
       then_i_can_see_the_breadcrumbs
       and_there_are_metatags
+      and_there_is_link_tracking
+      and_there_is_accordion_section_tracking
     end
 
     def when_i_visit_the_cost_of_living_landing_page
@@ -38,6 +40,23 @@ RSpec.feature "Cost of Living hub page" do
         "meta[name='description'][content='Find out what support is available to help with the cost of living. This includes income and disability benefits, bills and allowances, childcare, housing and transport.']",
         visible: false,
       )
+      expect(page).to have_selector("meta[name='govuk:navigation-page-type'][content='Cost of living hub']", visible: false)
+      expect(page).to have_selector("meta[name='govuk:navigation-list-type'][content='curated']", visible: false)
+    end
+
+    def and_there_is_link_tracking
+      link = page.find("a", text: "Find out what benefits and financial support you may be able to get")
+
+      expect(link["data-track-category"]).to eq("contentsClicked")
+      expect(link["data-track-action"]).to eq("Support with your income")
+      expect(link["data-track-label"]).to eq("check-benefits-financial-support")
+      expect(link["data-track-count"]).to eq("contentLink")
+    end
+
+    def and_there_is_accordion_section_tracking
+      accordion_section = page.first(".govuk-accordion__section-heading")
+
+      expect(accordion_section["data-track-count"]).to eq("accordionSection")
     end
   end
 end

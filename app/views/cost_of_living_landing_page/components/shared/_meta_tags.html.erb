@@ -6,6 +6,12 @@
   <meta property="og:title" content="<%= metadata[:title] %>">
   <meta property="og:description" content="<%= metadata[:description] %>">
   <meta name="description" content="<%= metadata[:description] %>">
+  <%= render "govuk_publishing_components/components/meta_tags", {
+    content_item: {
+      navigation_page_type: "Cost of living hub",
+      navigation_list_type: "curated",
+    }
+  } %>
 
   <link rel="canonical" href="<%= page_url %>">
 <% end %>

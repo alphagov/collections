@@ -1,18 +1,19 @@
 <%= render partial: "cost_of_living_landing_page/components/shared/meta_tags", locals: {
-  metadata: content[:metadata]
+  metadata: content.metadata
 } %>
 
-<% content_for :title, content[:page_title] %>
+<% content_for :title, content.page_title %>
 <% content_for :is_full_width_header, true %>
 
 <%
-  accordion_contents = content[:body][:accordion_content].map.with_index do |list, list_index|
+  accordion_contents = content.body[:accordion_content].map.with_index do |list, list_index|
     {
       heading: {
         text: list[:heading],
       },
       content: {
         html: render(partial: "links", locals: {
+          presenter: content,
           accordion_heading: list[:heading],
           list: list[:content],
           list_index: list_index,
@@ -39,7 +40,7 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <%= render "govuk_publishing_components/components/title", {
-          title: content[:header][:heading],
+          title: content.header[:heading],
           inverse: true,
           margin_top: 4,
           margin_bottom: 6,
@@ -50,7 +51,7 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <%= render "govuk_publishing_components/components/lead_paragraph", {
-          text: content[:header][:lede],
+          text: content.header[:lede],
           inverse: true,
           margin_bottom: 2,
         } %>
@@ -61,15 +62,15 @@
       <div class="govuk-grid-column-two-thirds">
         <%= render 'govuk_publishing_components/components/action_link', {
           white_arrow: true,
-          href: content[:header][:href],
-          text: content[:header][:link_text],
+          href: content.header[:href],
+          text: content.header[:link_text],
           mobile_subtext: true,
           light_text: true,
           data: {
             module: "gem-track-click",
             track_category: "pageElementInteraction",
             track_action: "Header",
-            track_label: content[:header][:href],
+            track_label: content.header[:href],
           }
         } %>
       </div>
@@ -82,7 +83,7 @@
     <div class="govuk-grid-column-two-thirds">
       <div class="browse__section">
        <%= render "govuk_publishing_components/components/heading", {
-          text: content[:body][:heading],
+          text: content.body[:heading],
           margin_bottom: 6,
           font_size: "l"
         } %>

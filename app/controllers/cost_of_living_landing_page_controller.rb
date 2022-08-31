@@ -5,7 +5,7 @@ class CostOfLivingLandingPageController < ApplicationController
     if Rails.application.config.unreleased_features
       render "show", locals: {
         breadcrumbs: breadcrumbs,
-        content: content_item,
+        content: presenter,
       }
     else
       render status: :not_found, plain: "Page not found"
@@ -20,6 +20,10 @@ private
 
   def content_item
     @content_item ||= YAML.load_file(Rails.root.join("config/cost_of_living_landing_page/content_item.yml")).deep_symbolize_keys
+  end
+
+  def presenter
+    @presenter ||= CostOfLivingLandingPagePresenter.new(content_item)
   end
 
   def breadcrumbs
