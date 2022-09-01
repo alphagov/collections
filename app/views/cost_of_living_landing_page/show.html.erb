@@ -34,7 +34,11 @@
   } %>
 <% end %>
 
-<%= render "shared/browse_header", { margin_bottom: 7, padding_top: 0 } do %>
+<%= render "shared/browse_header", {
+    two_thirds: true,
+    margin_bottom: 7,
+    padding_top: 0
+  } do %>
 
   <%= render "govuk_publishing_components/components/title", {
     title: content.header[:heading],
