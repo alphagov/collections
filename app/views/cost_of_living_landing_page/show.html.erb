@@ -2,8 +2,7 @@
   metadata: content.metadata
 } %>
 
-<% content_for :title, content.page_title %>
-<% content_for :is_full_width_header, true %>
+<% content_for :title, content[:page_title] %>
 
 <%
   accordion_contents = content.body[:accordion_content].map.with_index do |list, list_index|
@@ -29,11 +28,11 @@
   end
 %>
 
-<%= render "shared/browse_breadcrumbs", {
-  breadcrumbs: breadcrumbs,
-  collapse_on_mobile: true,
-  inverse: true
-} %>
+<% content_for :breadcrumbs do %>
+  <%= render "shared/browse_breadcrumbs", {
+    column_two_thirds: true
+  } %>
+<% end %>
 
 <%= render "shared/browse_header", { margin_bottom: 7, padding_top: 0 } do %>
 
