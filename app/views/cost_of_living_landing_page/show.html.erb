@@ -2,7 +2,7 @@
   metadata: content.metadata
 } %>
 
-<% content_for :title, content[:page_title] %>
+<% content_for :title, content.page_title %>
 
 <%
   accordion_contents = content.body[:accordion_content].map.with_index do |list, list_index|
@@ -40,23 +40,23 @@
   } do %>
 
   <h1 class="browse__heading govuk-heading-xl">
-    <%= content[:header][:heading] %>
+    <%= content.header[:heading] %>
   </h1>
   <p class="gem-c-lead-paragraph gem-c-lead-paragraph--inverse govuk-!-margin-bottom-6">
-    <%= content[:header][:lede] %>
+    <%= content.header[:lede] %>
   </p>
 
   <%= render 'govuk_publishing_components/components/action_link', {
     white_arrow: true,
-    href: content[:header][:href],
-    text: content[:header][:link_text],
+    href: content.header[:href],,
+    text: content.header[:link_text],
     mobile_subtext: true,
     light_text: true,
     data: {
       module: "gem-track-click",
       track_category: "pageElementInteraction",
       track_action: "Header",
-      track_label: content[:header][:href],
+      track_label: content.header[:href],
     }
   } %>
 
