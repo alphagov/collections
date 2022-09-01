@@ -42,7 +42,7 @@ class WorldLocationNews
         description: ActionView::Base.full_sanitizer.sanitize(document["summary"]).truncate(160, separator: " "),
         context: {
           date: document["public_updated_at"]&.to_date,
-          text: document["document_type"],
+          text: I18n.t("shared.schema_name.#{document['document_type']&.parameterize(separator: '_')}", count: 1, default: document["document_type"]),
         },
       }
     end
