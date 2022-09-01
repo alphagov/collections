@@ -8,5 +8,157 @@ vi:
     get_emails: Nhận email về chủ đề này
     language_direction: ltr
     language_name: Tiếng Việt
+    schema_name:
+      aaib_report:
+        other: Báo cáo của Chi nhánh Điều tra Tai nạn Hàng không
+      announcement:
+        other: Thông báo
+      asylum_support_decision:
+        other: Quyết định của tòa án hỗ trợ tị nạn
+      authored_article:
+        other: Bài viết có tác giả
+      business_finance_support_scheme:
+        other: Kế hoạch hỗ trợ tài chính doanh nghiệp
+      case_study:
+        other: Nghiên cứu điển hình
+      closed_consultation:
+        other: Tham vấn kín
+      cma_case:
+        other: Vụ án của Cơ quan Cạnh tranh và Thị trường
+      coming_soon:
+        other: Sắp Diễn ra
+      consultation:
+        other: Tham vấn
+      consultation_outcome:
+        other: Kết quả tham vấn
+      corporate_information_page:
+        other: Trang thông tin
+      corporate_report:
+        other: Báo cáo của doanh nghiệp
+      correspondence:
+        other: Thư từ
+      countryside_stewardship_grant:
+        other: Trợ cấp Quản lý Vùng nông thôn
+      decision:
+        other: Quyết định
+      detailed_guide:
+        other: Hướng dẫn
+      dfid_research_output:
+        other: Đầu ra của Nghiên cứu Phát triển
+      document_collection:
+        other: Bộ sưu tập
+      draft_text:
+        other: Dự thảo
+      drcf_digital_markets_research:
+        one:
+        other:
+      drug_safety_update:
+        other: Cập nhật về Dùng Thuốc An toàn
+      employment_appeal_tribunal_decision:
+        other: Quyết định của tòa phúc thẩm việc làm
+      employment_tribunal_decision:
+        other: Quyết định của tòa án việc làm
+      esi_fund:
+        other: Quỹ Đầu tư và Cấu trúc Châu Âu (ESIF)
+      fatality_notice:
+        other: Thông báo tử vong
+      foi_release:
+        other: Công bố FOI
+      form:
+        other: Biểu mẫu
+      government_response:
+        other: Phản hồi của chính phủ
+      guidance:
+        other: Hướng dẫn
+      impact_assessment:
+        other: Đánh giá tác động
+      imported:
+        other: loại đã nhập - đang chờ
+      independent_report:
+        other: Báo cáo độc lập
+      international_development_fund:
+        other: Tài trợ phát triển quốc tế
+      international_treaty:
+        other: Hiệp ước quốc tế
+      maib_report:
+        other: Báo cáo của Chi nhánh Điều tra Tai nạn Hàng hải
+      map:
+        other: Bản đồ
+      medical_safety_alert:
+        other: Cảnh báo và thu hồi thuốc và thiết bị y tế
+      national:
+        other: Thông báo thống kê quốc gia
+      national_statistics:
+        other: Thống kê Quốc gia
+      national_statistics_announcement:
+        other: Thông báo thống kê quốc gia
+      news_article:
+        other: Bài viết thời sự
+      news_story:
+        other: Bài phóng sự
+      notice:
+        other: Thông báo
+      official:
+        other: Thông báo thống kê chính thức
+      official_statistics:
+        other: Thống kê Chính thức
+      official_statistics_announcement:
+        other: Thông báo thống kê chính thức
+      open_consultation:
+        other: Tham vấn mở
+      oral_statement:
+        other: Tuyên bố bằng lời trước Quốc hội
+      policy:
+        other: Chính sách
+      policy_paper:
+        other: Tài liệu chính sách
+      press_release:
+        other: Thông cáo báo chí
+      promotional:
+        other: Tài liệu quảng cáo
+      publication:
+        other: Ấn phẩm
+      raib_report:
+        other: Báo cáo của Chi nhánh Điều tra Tai nạn Đường sắt
+      regulation:
+        other: Quy định
+      research:
+        other: Nghiên cứu và phân tích
+      residential_property_tribunal_decision:
+        other: Quyết định của tòa án bất động sản nhà ở
+      service_sign_in:
+        other: Đăng nhập dịch vụ
+      service_standard_report:
+        other: Báo cáo Tiêu chuẩn Dịch vụ
+      speaking_notes:
+        other: Ghi chú cho bài nói
+      speech:
+        other: Bài phát biểu
+      standard:
+        other: Tiêu chuẩn
+      statement_to_parliament:
+        other: Tuyên bố trước Quốc hội
+      statistical_data_set:
+        other: Bộ dữ liệu thống kê
+      statistics_announcement:
+        other: Thông báo phát hành thống kê
+      statutory_guidance:
+        other: Hướng dẫn theo luật định
+      take_part:
+        other: Tham gia
+      tax_tribunal_decision:
+        other: Quyết định của Tòa án về Thuế và Pháp lý
+      transcript:
+        other: Bản ghi nội dung
+      transparency:
+        other: Dữ liệu về tính minh bạch
+      utaac_decision:
+        other: Quyết định của tòa phúc thẩm hành chính
+      world_location_news_article:
+        other: Bài viết thời sự
+      world_news_story:
+        other: Bài phóng sự thế giới
+      written_statement:
+        other: Tuyên bố bằng văn bản trước Quốc hội
     topics:
       title: "%{title}: thông tin chi tiết"

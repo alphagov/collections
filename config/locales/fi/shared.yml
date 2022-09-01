@@ -8,5 +8,231 @@ fi:
     get_emails: Hanki sähköpostit tähän aiheeseen
     language_direction: ltr
     language_name: suomi
+    schema_name:
+      aaib_report:
+        one: Lento -onnettomuuksien tutkintaosaston raportti
+        other: Lento -onnettomuuksien tutkintayksikön raportit
+      announcement:
+        one: Ilmoitus
+        other: Ilmoitukset
+      asylum_support_decision:
+        one: Turvapaikkatuomioistuimen päätös
+        other: Turvapaikkatuomioistuimen päätöksiä
+      authored_article:
+        one: Kirjoitettu artikkeli
+        other: Kirjoitettuja artikkeleita
+      business_finance_support_scheme:
+        one: Yritysrahoituksen tukijärjestelmä
+        other: Yritysrahoituksen tukijärjestelmät
+      case_study:
+        one: Tapaustutkimus
+        other: Tapaustutkimuksia
+      closed_consultation:
+        one: Suljettu kuuleminen
+        other: Suljetut neuvottelut
+      cma_case:
+        one: Kilpailu- ja markkinaviranomaisen tapaus
+        other: Kilpailu- ja markkinaviranomaisen tapaukset
+      coming_soon:
+        one: Tulossa pian
+        other: Tulossa pian
+      consultation:
+        one: Konsultaatio
+        other: Konsultaatiot
+      consultation_outcome:
+        one: Konsultoinnin tulos
+        other: Konsultoinnin tulokset
+      corporate_information_page:
+        one: Tietosivu
+        other: Tietosivut
+      corporate_report:
+        one: Yrityksen raportti
+        other: Yritysraportit
+      correspondence:
+        one: Kirjeenvaihto
+        other: Kirjeenvaihto
+      countryside_stewardship_grant:
+        one: Maaseudun apuraha
+        other: Maaseudun apurahat
+      decision:
+        one: Päätös
+        other: Päätökset
+      detailed_guide:
+        one: Ohjaus
+        other: Ohjaus
+      dfid_research_output:
+        one: Tutkimus kehitystä varten Tuotos
+        other: Tutkimus kehitysyhteistyötä varten Tuotokset
+      document_collection:
+        one: Kokoelma
+        other: Kokoelmat
+      draft_text:
+        one: Luonnos
+        other: Luonnos tekstejä
+      drcf_digital_markets_research:
+        one:
+        other:
+      drug_safety_update:
+        one: Lääketurvallisuuden päivitys
+        other: Lääketurvallisuuden päivitykset
+      employment_appeal_tribunal_decision:
+        one: Työllisyysasioiden muutoksenhakutuomioistuimen päätös
+        other: Työllisyysasioiden muutoksenhakutuomioistuimen päätökset
+      employment_tribunal_decision:
+        one: Työtuomioistuimen päätös
+        other: Työtuomioistuimen päätökset
+      esi_fund:
+        one: Euroopan rakenne- ja investointirahasto (ESIF)
+        other: Euroopan rakenne- ja investointirahastot (ESIF)
+      fatality_notice:
+        one: Kuolemantapauksia koskeva ilmoitus
+        other: Kuolemantapauksia koskevat ilmoitukset
+      foi_release:
+        one: Tiedonvälityksen vapaus julkaisu
+        other: Tiedonvälityksen vapaus julkaisut
+      form:
+        one: Lomake
+        other: Lomakkeet
+      government_response:
+        one: Hallituksen vastaus
+        other: Hallituksen vastaukset
+      guidance:
+        one: Ohjaus
+        other: Ohjaus
+      impact_assessment:
+        one: Vaikutuksen arviointi
+        other: Vaikutustenarvioinnit
+      imported:
+        one: tuotu - odottava tyyppi
+        other: tuotu - odottava tyyppi
+      independent_report:
+        one: Riippumaton raportti
+        other: Riippumattomat raportit
+      international_development_fund:
+        one: Kansainvälinen kehitysrahoitus
+        other: Kansainvälinen kehitysrahoitus
+      international_treaty:
+        one: Kansainvälinen sopimus
+        other: Kansainväliset sopimukset
+      maib_report:
+        one: Merionnettomuuksien tutkintaosaston raportti
+        other: Merionnettomuuksien tutkintaosaston raportit
+      map:
+        one: Kartta
+        other: Kartat
+      medical_safety_alert:
+        one: Lääkkeitä ja lääkinnällisiä laitteita koskevat varoitukset ja takaisinvedot
+        other: Lääkkeitä ja lääkinnällisiä laitteita koskevat varoitukset ja takaisinvedot
+      national:
+        one: Kansallinen tilastoilmoitus
+        other: Kansalliset tilastoilmoitukset
+      national_statistics:
+        one: Kansalliset tilastot
+        other: Kansalliset tilastot
+      national_statistics_announcement:
+        one: Kansallinen tilastoilmoitus
+        other: Kansalliset tilastoilmoitukset
+      news_article:
+        one: Uutisartikkeli
+        other: Uutisartikkelit
+      news_story:
+        one: Uutistarina
+        other: Uutisia
+      notice:
+        one: Ilmoitus
+        other: Ilmoitukset
+      official:
+        one: Virallinen tilastoilmoitus
+        other: Viralliset tilastotiedot
+      official_statistics:
+        one: Viralliset tilastot
+        other: Viralliset tilastot
+      official_statistics_announcement:
+        one: Virallinen tilastoilmoitus
+        other: Viralliset tilastotiedot
+      open_consultation:
+        one: Avoin kuuleminen
+        other: Avoimet kuulemiset
+      oral_statement:
+        one: Suullinen lausuma parlamentille
+        other: Suulliset lausumat parlamentille
+      policy:
+        one: Käytäntö
+        other: Käytännöt
+      policy_paper:
+        one: Toimintapoliittinen asiakirja
+        other: Toimintapoliittiset asiakirjat
+      press_release:
+        one: Lehdistötiedote
+        other: Lehdistötiedotteet
+      promotional:
+        one: Myynninedistämismateriaali
+        other: Myynninedistämismateriaali
+      publication:
+        one: Julkaisu
+        other: Julkaisut
+      raib_report:
+        one: Rautatie onnettomuus tutkintaosaston raportti
+        other: Rautatie onnettomuus tutkintaosaston raportit
+      regulation:
+        one: Asetus
+        other: Asetukset
+      research:
+        one: Tutkimus ja analyysi
+        other: Tutkimus ja analyysi
+      residential_property_tribunal_decision:
+        one: Asunto -omaisuuden tuomioistuimen päätös
+        other: Asunto -omaisuuden tuomioistuimen päätökset
+      service_sign_in:
+        one: Palveluun kirjautuminen
+        other: Palveluun kirjautuminen
+      service_standard_report:
+        one: Palvelustandardiraportti
+        other: Palvelustandardiraportit
+      speaking_notes:
+        one: Puhuvat muistiinpanot
+        other: Puhuvat muistiinpanot
+      speech:
+        one: Puhe
+        other: Puheet
+      standard:
+        one: Standardi
+        other: Standardit
+      statement_to_parliament:
+        one: Lausuma parlamentille
+        other: Lausumat parlamentille
+      statistical_data_set:
+        one: Tilastollinen tietojoukko
+        other: Tilastolliset tietojoukot
+      statistics_announcement:
+        one: Tilastojen julkaisuilmoitus
+        other: Tilastojen julkaisuilmoitukset
+      statutory_guidance:
+        one: Lakisääteiset ohjeet
+        other: Lakisääteiset ohjeet
+      take_part:
+        one: Osallistu
+        other: Osallistu
+      tax_tribunal_decision:
+        one: Vero- ja oikeuskanslerinoikeuden päätös
+        other: Vero- ja oikeuskanslerinoikeuden päätökset
+      transcript:
+        one: Transkriptio
+        other: Transkriptiot
+      transparency:
+        one: Avoimuustiedot
+        other: Avoimuustiedot
+      utaac_decision:
+        one: Hallinnollisen muutoksenhakutuomioistuimen päätös
+        other: Hallinnollisen muutoksenhakutuomioistuimen päätökset
+      world_location_news_article:
+        one: Uutisartikkeli
+        other: Uutisartikkelit
+      world_news_story:
+        one: Maailman uutinen
+        other: Maailman uutisia
+      written_statement:
+        one: Kirjallinen lausuma parlamentille
+        other: Kirjallinen lausumat parlamentille
     topics:
       title: "%{title}: yksityiskohtaisia tietoja"
