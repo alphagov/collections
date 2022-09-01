@@ -52,15 +52,15 @@ class WorldLocationNews
     @content_item.content_item_data.dig("details", "mission_statement")
   end
 
-  def translations
-    @translations ||= @content_item.content_item_data.dig("links", "available_translations")&.map do |translation|
+  def ordered_translations
+    @ordered_translations ||= @content_item.content_item_data.dig("links", "available_translations")&.map { |translation|
       {
         locale: translation["locale"],
         base_path: translation["base_path"],
         text: I18n.t("shared.language_name", locale: translation["locale"]),
         active: I18n.locale.to_s == translation["locale"],
       }
-    end
+    }&.sort_by { |t| t[:locale] == I18n.default_locale.to_s ? "" : t[:locale] }
   end
 
   def latest

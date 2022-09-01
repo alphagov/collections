@@ -14,9 +14,9 @@
   </div>
 
   <div class="govuk-grid-column-one-third">
-    <% if @world_location_news.translations.count > 1 %>
+    <% if @world_location_news.ordered_translations.count > 1 %>
       <%= render "govuk_publishing_components/components/translation_nav", {
-        translations: @world_location_news.translations,
+        translations: @world_location_news.ordered_translations,
         no_margin_top: true,
       } %>
     <% end %>
