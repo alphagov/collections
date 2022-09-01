@@ -2,14 +2,10 @@ class CostOfLivingLandingPageController < ApplicationController
   slimmer_template "gem_layout_full_width"
 
   def show
-    if Rails.application.config.unreleased_features
-      render "show", locals: {
-        breadcrumbs: breadcrumbs,
-        content: presenter,
-      }
-    else
-      render status: :not_found, plain: "Page not found"
-    end
+    render "show", locals: {
+      breadcrumbs: breadcrumbs,
+      content: presenter,
+    }
   end
 
 private

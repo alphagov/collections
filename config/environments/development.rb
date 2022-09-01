@@ -59,10 +59,6 @@ Rails.application.configure do
   # Allow requests for all domains e.g. <app>.dev.gov.uk
   config.hosts.clear
 
-  # Configuration to stop Cost of Living landing page showing in production before
-  # campaign goes live
-  config.unreleased_features = true
-
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
 end
