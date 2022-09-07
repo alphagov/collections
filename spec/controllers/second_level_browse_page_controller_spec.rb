@@ -39,7 +39,7 @@ RSpec.describe SecondLevelBrowsePageController do
 
       it "set correct expiry headers" do
         get :show, params: params
-        expect(response.headers["Cache-Control"]).to eq("max-age=1800, public")
+        expect(response.headers["Cache-Control"]).to eq("max-age=300, public")
       end
 
       it "responds to html by default" do

@@ -95,7 +95,7 @@ private
     render status: status_code, plain: "#{status_code} error"
   end
 
-  def set_expiry(duration = 30.minutes, public_cache: true)
+  def set_expiry(duration = 5.minutes, public_cache: true)
     unless Rails.env.development?
       expires_in(duration, public: public_cache)
     end
