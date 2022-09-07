@@ -96,6 +96,7 @@ private
   end
 
   def set_expiry(duration = 5.minutes, public_cache: true)
+    duration = @content_item.max_age if @content_item
     unless Rails.env.development?
       expires_in(duration, public: public_cache)
     end

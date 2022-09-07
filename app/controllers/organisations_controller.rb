@@ -1,8 +1,4 @@
 class OrganisationsController < ApplicationController
-  skip_before_action :set_expiry
-  before_action do
-    set_expiry content_item.max_age, public_cache: content_item.public_cache
-  end
   around_action :switch_locale, only: %i[show court]
 
   def index
