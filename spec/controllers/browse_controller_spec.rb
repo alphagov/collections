@@ -14,7 +14,7 @@ RSpec.describe BrowseController do
     it "set correct expiry headers" do
       get :index
 
-      expect(response.headers["Cache-Control"]).to eq("max-age=1800, public")
+      expect(response.headers["Cache-Control"]).to eq("max-age=300, public")
     end
   end
 
@@ -34,7 +34,7 @@ RSpec.describe BrowseController do
 
       it "sets correct expiry headers" do
         get :show, params: { top_level_slug: "benefits" }
-        expect(response.headers["Cache-Control"]).to eq("max-age=1800, public")
+        expect(response.headers["Cache-Control"]).to eq("max-age=300, public")
       end
 
       it "responds to html by default" do

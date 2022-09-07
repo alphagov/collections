@@ -9,7 +9,7 @@ RSpec.describe ServicesAndInformationController do
 
       get :index, params: { organisation_id: "hm-revenue-customs" }
 
-      expect(response.headers["Cache-Control"]).to eq("max-age=1800, public")
+      expect(response.headers["Cache-Control"]).to eq("max-age=300, public")
     end
   end
 

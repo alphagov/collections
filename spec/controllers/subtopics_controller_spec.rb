@@ -10,7 +10,7 @@ RSpec.describe SubtopicsController do
       it "sets expiry headers for 30 minutes" do
         get :show, params: { topic_slug: "oil-and-gas", subtopic_slug: "wells" }
 
-        expect(response.headers["Cache-Control"]).to eq("max-age=1800, public")
+        expect(response.headers["Cache-Control"]).to eq("max-age=300, public")
       end
     end
 
