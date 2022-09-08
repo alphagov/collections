@@ -6,20 +6,7 @@ class SecondLevelBrowsePageController < ApplicationController
     setup_content_item_and_navigation_helpers(page)
     @dimension26 = count_link_sections(page)
     @dimension27 = count_total_links(page)
-
-    respond_to do |f|
-      f.html do
-        show_html
-      end
-      f.json do
-        render json: {
-          content_id: page.content_id,
-          navigation_page_type: "Second Level Browse",
-          breadcrumbs: breadcrumb_content,
-          html: render_partial("_old_links", page: page),
-        }
-      end
-    end
+    show_html
   end
 
 private

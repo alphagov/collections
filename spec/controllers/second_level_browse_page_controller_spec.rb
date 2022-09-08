@@ -47,14 +47,6 @@ RSpec.describe SecondLevelBrowsePageController do
         expect(response.content_type).to eq "text/html; charset=utf-8"
         expect(response).to render_template(partial: "_links")
       end
-
-      it "responds to custom formats when provided in the params" do
-        json_params = params
-        json_params[:format] = :json
-        get :show, params: json_params
-        expect(response.content_type).to eq "application/json; charset=utf-8"
-        expect(response).to render_template(partial: "_old_links")
-      end
     end
 
     context "AB test: Second level browse pages showing accordions or lists" do

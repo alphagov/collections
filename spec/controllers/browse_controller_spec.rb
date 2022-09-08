@@ -42,12 +42,6 @@ RSpec.describe BrowseController do
         expect(response.content_type).to eq "text/html; charset=utf-8"
         expect(response).to render_template(partial: "_cards")
       end
-
-      it "responds to custom formats when provided in the params" do
-        get :show, params: { top_level_slug: "benefits", format: :json }
-        expect(response.content_type).to eq "application/json; charset=utf-8"
-        expect(response).to render_template(partial: "second_level_browse_page/_second_level_browse_pages")
-      end
     end
 
     it "404 if the browse page does not exist" do
