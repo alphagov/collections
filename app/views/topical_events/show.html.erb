@@ -5,13 +5,29 @@
   <%= tag("meta", name: "description", content: @topical_event.description) if @topical_event.description %>
 <% end %>
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <%= render "govuk_publishing_components/components/title", {
-      title: @topical_event.title,
-      context: (I18n.t("topical_events.archived") if @topical_event.archived?)
-    } %>
+  <% if @topical_event.slug == "her-majesty-queen-elizabeth-ii" %>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
 
+      <%= render "govuk_publishing_components/components/title", {
+        title: "Her Majesty Queen Elizabeth&nbsp;II".html_safe,
+
+      } %>
+    </div>
+  </div>
+  <% else %>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <%= render "govuk_publishing_components/components/title", {
+        title: @topical_event.title,
+        context: (I18n.t("topical_events.archived") if @topical_event.archived?)
+      } %>
+    </div>
+  </div>
+  <% end %>
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
     <%= render "govuk_publishing_components/components/lead_paragraph", {
       text: @topical_event.description,
     } %>
