@@ -12,6 +12,21 @@ it:
       aaib_report:
         one: Rapporto del ramo investigativo sugli incidenti aerei
         other: Rapporti del ramo investigativo sugli incidenti aerei
+      about:
+        one: Informazioni su
+        other: Informazioni su
+      about_our_services:
+        one: Informazioni sui nostri servizi
+        other: Informazioni sui nostri servizi
+      access_and_opening:
+        one: Accesso e apertura
+        other: Accesso e apertura
+      accessible_documents_policy:
+        one: Informativa sui documenti accessibili
+        other: Informative sui documenti accessibili
+      alert:
+        one: Avviso
+        other: Avvisi
       announcement:
         one: Annuncio
         other: Annunci
@@ -21,9 +36,18 @@ it:
       authored_article:
         one: Articolo d’autore
         other: Articoli d’autore
+      blog_post:
+        one: Post sul blog
+        other: Post sul blog
       business_finance_support_scheme:
         one: Schema di sostegno alla finanza aziendale
         other: Schemi di sostegno alla finanza aziendale
+      campaign:
+        one: Campagna
+        other: Campagne
+      careers:
+        one: Opportunità di lavoro
+        other: opportunità di lavoro
       case_study:
         one: Caso di studio
         other: Casi di studio
@@ -36,6 +60,9 @@ it:
       coming_soon:
         one: In arrivo
         other: In arrivo
+      complaints_procedure:
+        one: Procedura di reclamo
+        other: Procedure di reclamo
       consultation:
         one: Consultazione
         other: Consultazioni
@@ -57,6 +84,9 @@ it:
       decision:
         one: Decisione
         other: Decisioni
+      detailed_guidance:
+        one: Guida
+        other: Guida
       detailed_guide:
         one: Guida
         other: Guida
@@ -70,17 +100,26 @@ it:
         one: Bozza di testo
         other: Bozze di testo
       drcf_digital_markets_research:
-        one:
-        other:
+        one: 
+        other: 
       drug_safety_update:
         one: Aggiornamento sulla sicurezza dei farmaci
         other: Aggiornamenti sulla sicurezza dei farmaci
+      edition:
+        one: Edizione
+        other: Edizioni
+      edition_with_appointment:
+        one: Edizione con appuntamento
+        other: Edizioni con appuntamento
       employment_appeal_tribunal_decision:
         one: Decisione del tribunale di appello del lavoro
         other: Decisioni del tribunale di appello del lavoro
       employment_tribunal_decision:
         one: Decisione del tribunale del lavoro
         other: Decisioni del tribunale del lavoro
+      equality_and_diversity:
+        one: Uguaglianza e diversità
+        other: Uguaglianza e diversità
       esi_fund:
         one: Fondo strutturale e di investimento europeo (ESIF)
         other: Fondi strutturali e di investimento europeo (ESIF)
@@ -93,6 +132,9 @@ it:
       form:
         one: Modulo
         other: Moduli
+      generic_edition:
+        one: Edizione generica
+        other: Edizioni generiche
       government_response:
         one: Risposta del governo
         other: Risposte del governo
@@ -117,12 +159,24 @@ it:
       maib_report:
         one: Rapporto del ramo investigativo sugli incidenti marini
         other: Rapporti del ramo investigativo sugli incidenti marini
+      manual:
+        one: Manuale
+        other: Manuali
       map:
         one: Mappa
         other: Mappe
+      media_enquiries:
+        one: Richiesta dei media
+        other: Richieste dei media
       medical_safety_alert:
         one: Avvisi e richiami per farmaci e dispositivi medici
         other: Avvisi e richiami per farmaci e dispositivi medici
+      membership:
+        one: Abbonamento
+        other: Abbonamento
+      modern_slavery_statement:
+        one: 
+        other: 
       national:
         one: Annuncio statistico nazionale
         other: Annunci statistici nazionali
@@ -138,6 +192,9 @@ it:
       news_story:
         one: Storia di notizie
         other: Storie di notizie
+      nhs_content:
+        one: Contenuto del servizio sanitario nazionale
+        other: Contenuto del servizio sanitario nazionale
       notice:
         one: Avviso
         other: Avvisi
@@ -156,6 +213,18 @@ it:
       oral_statement:
         one: Dichiarazione orale al Parlamento
         other: Dichiarazioni orali al Parlamento
+      our_energy_use:
+        one: Il nostro consumo energetico
+        other: Il nostro consumo energetico
+      our_governance:
+        one: La nostra governance
+        other: La nostra governance
+      personal_information_charter:
+        one: Carta delle informazioni personali
+        other: Carte delle informazioni personali
+      petitions_and_campaigns:
+        one: Petizioni e campagne
+        other: Petizioni e campagne
       policy:
         one: Informativa
         other: Informative
@@ -165,15 +234,24 @@ it:
       press_release:
         one: Comunicato stampa
         other: Comunicati stampa
+      procurement:
+        one: Approvvigionamento
+        other: Approvvigionamento
       promotional:
         one: Materiale promozionale
         other: Materiale promozionale
       publication:
         one: Pubblicazione
         other: Pubblicazioni
+      publication_scheme:
+        one: Schema di pubblicazione
+        other: Schemi di pubblicazione
       raib_report:
         one: Rapporto del ramo investigativo sugli incidenti ferroviari
         other: Rapporti del ramo investigativo sugli incidenti ferroviari
+      recruitment:
+        one: Assunzione
+        other: Assunzione
       regulation:
         one: Regolamento
         other: Regolamenti
@@ -183,18 +261,27 @@ it:
       residential_property_tribunal_decision:
         one: Decisione del tribunale sulla proprietà residenziale
         other: Decisioni del tribunale sulla proprietà residenziale
+      service:
+        one: Servizio
+        other: Servizi
       service_sign_in:
         one: Accesso al servizio
         other: Accesso al servizio
       service_standard_report:
         one: Rapporto standard di servizio
         other: Rapporti standard di servizio
+      social_media_use:
+        one: Uso dei social media
+        other: Uso dei social media
       speaking_notes:
         one: Note parlanti
         other: Note parlanti
       speech:
         one: Discorso
         other: Discorsi
+      staff_update:
+        one: Aggiornamento del personale
+        other: Aggiornamenti del personale
       standard:
         one: Standard
         other: Standard
@@ -204,6 +291,9 @@ it:
       statistical_data_set:
         one: Set di dati statistici
         other: Set di dati statistici
+      statistics:
+        one: Statistiche
+        other: Statistiche
       statistics_announcement:
         one: Annuncio di rilascio statistico
         other: Annunci di rilascio statistico
@@ -216,6 +306,9 @@ it:
       tax_tribunal_decision:
         one: Decisione del tribunale tributario e della cancelleria
         other: Decisioni del tribunale tributario e della cancelleria
+      terms_of_reference:
+        one: Termini di riferimento
+        other: Termini di riferimento
       transcript:
         one: Trascrizione
         other: Trascrizioni
@@ -225,6 +318,9 @@ it:
       utaac_decision:
         one: Decisione del tribunale di appello amministrativo
         other: Decisioni del tribunale di appello amministrativo
+      welsh_language_scheme:
+        one: Schema in lingua gallese
+        other: Schemi in lingua gallese
       world_location_news_article:
         one: Articolo di notizie
         other: Articoli di notizie

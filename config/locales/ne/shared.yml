@@ -1,238 +1,334 @@
 ---
 ne:
   shared:
-    breadcrumbs_home:
+    breadcrumbs_home: 
     browse:
-      prefix:
-      title:
-    get_emails:
+      prefix: 
+      title: 
+    get_emails: 
     language_direction: ltr
     language_name: नेपाली
     schema_name:
       aaib_report:
-        one:
-        other:
+        one: 
+        other: 
+      about:
+        one: बारेमा
+        other: बारेमा
+      about_our_services:
+        one: हाम्रा सेवाहरुको बारेमा
+        other: हाम्रा सेवाहरुको बारेमा
+      access_and_opening:
+        one: पहुँच र उद्घाटन
+        other: पहुँच र उद्घाटन
+      accessible_documents_policy:
+        one: सुलभ कागजातहरू नीति
+        other: सुलभ कागजातहरू नीतिहरु
+      alert:
+        one: चेतावनी
+        other: चेतावनीहरू
       announcement:
-        one:
-        other:
+        one: 
+        other: 
       asylum_support_decision:
-        one:
-        other:
+        one: 
+        other: 
       authored_article:
-        one:
-        other:
+        one: 
+        other: 
+      blog_post:
+        one: ब्लग पोस्ट
+        other: ब्लग पोस्टहरू
       business_finance_support_scheme:
-        one:
-        other:
+        one: 
+        other: 
+      campaign:
+        one: अभियान
+        other: अभियानहरु
+      careers:
+        one: पेशाहरू
+        other: पेशाहरू
       case_study:
-        one:
-        other:
+        one: 
+        other: 
       closed_consultation:
-        one:
-        other:
+        one: 
+        other: 
       cma_case:
-        one:
-        other:
+        one: 
+        other: 
       coming_soon:
-        one:
-        other:
+        one: 
+        other: 
+      complaints_procedure:
+        one: उजुरी प्रक्रिया
+        other: उजुरी प्रक्रियाहरु
       consultation:
-        one:
-        other:
+        one: 
+        other: 
       consultation_outcome:
-        one:
-        other:
+        one: 
+        other: 
       corporate_information_page:
-        one:
-        other:
+        one: 
+        other: 
       corporate_report:
-        one:
-        other:
+        one: 
+        other: 
       correspondence:
-        one:
-        other:
+        one: 
+        other: 
       countryside_stewardship_grant:
-        one:
-        other:
+        one: 
+        other: 
       decision:
-        one:
-        other:
+        one: 
+        other: 
+      detailed_guidance:
+        one: मार्गदर्शन
+        other: मार्गदर्शन
       detailed_guide:
-        one:
-        other:
+        one: 
+        other: 
       dfid_research_output:
-        one:
-        other:
+        one: 
+        other: 
       document_collection:
-        one:
-        other:
+        one: 
+        other: 
       draft_text:
-        one:
-        other:
+        one: 
+        other: 
       drcf_digital_markets_research:
-        one:
-        other:
+        one: 
+        other: 
       drug_safety_update:
-        one:
-        other:
+        one: 
+        other: 
+      edition:
+        one: संस्करण
+        other: संस्करणहरु
+      edition_with_appointment:
+        one: नियुक्ति सँग संस्करण
+        other: नियुक्ति सँग संस्करणहरु
       employment_appeal_tribunal_decision:
-        one:
-        other:
+        one: 
+        other: 
       employment_tribunal_decision:
-        one:
-        other:
+        one: 
+        other: 
+      equality_and_diversity:
+        one: समानता र विविधता
+        other: समानता र विविधता
       esi_fund:
-        one:
-        other:
+        one: 
+        other: 
       fatality_notice:
-        one:
-        other:
+        one: 
+        other: 
       foi_release:
-        one:
-        other:
+        one: 
+        other: 
       form:
-        one:
-        other:
+        one: 
+        other: 
+      generic_edition:
+        one: सामान्य संस्करण
+        other: सामान्य संस्करणहरू
       government_response:
-        one:
-        other:
+        one: 
+        other: 
       guidance:
-        one:
-        other:
+        one: 
+        other: 
       impact_assessment:
-        one:
-        other:
+        one: 
+        other: 
       imported:
-        one:
-        other:
+        one: 
+        other: 
       independent_report:
-        one:
-        other:
+        one: 
+        other: 
       international_development_fund:
-        one:
-        other:
+        one: 
+        other: 
       international_treaty:
-        one:
-        other:
+        one: 
+        other: 
       maib_report:
-        one:
-        other:
+        one: 
+        other: 
+      manual:
+        one: नियमावली
+        other: नियमावलीहरू
       map:
-        one:
-        other:
+        one: 
+        other: 
+      media_enquiries:
+        one: मिडिया सोधपुछ
+        other: मिडिया सोधपुछहरू
       medical_safety_alert:
-        one:
-        other:
+        one: 
+        other: 
+      membership:
+        one: सदस्यता
+        other: सदस्यता
+      modern_slavery_statement:
+        one: 
+        other: 
       national:
-        one:
-        other:
+        one: 
+        other: 
       national_statistics:
-        one:
-        other:
+        one: 
+        other: 
       national_statistics_announcement:
-        one:
-        other:
+        one: 
+        other: 
       news_article:
-        one:
-        other:
+        one: 
+        other: 
       news_story:
-        one:
-        other:
+        one: 
+        other: 
+      nhs_content:
+        one: राष्ट्रिय स्वास्थ्य सेवा विषयवस्तु
+        other: राष्ट्रिय स्वास्थ्य सेवा विषयवस्तु
       notice:
-        one:
-        other:
+        one: 
+        other: 
       official:
-        one:
-        other:
+        one: 
+        other: 
       official_statistics:
-        one:
-        other:
+        one: 
+        other: 
       official_statistics_announcement:
-        one:
-        other:
+        one: 
+        other: 
       open_consultation:
-        one:
-        other:
+        one: 
+        other: 
       oral_statement:
-        one:
-        other:
+        one: 
+        other: 
+      our_energy_use:
+        one: हाम्रो ऊर्जाको उपयोग
+        other: हाम्रो ऊर्जाको उपयोग
+      our_governance:
+        one: हाम्रो शासन
+        other: हाम्रो शासन
+      personal_information_charter:
+        one: व्यक्तिगत जानकारी घोषणापत्र
+        other: व्यक्तिगत जानकारी घोषणापत्रहरू
+      petitions_and_campaigns:
+        one: निवेदन र अभियानहरू
+        other: निवेदन र अभियानहरू
       policy:
-        one:
-        other:
+        one: 
+        other: 
       policy_paper:
-        one:
-        other:
+        one: 
+        other: 
       press_release:
-        one:
-        other:
+        one: 
+        other: 
+      procurement:
+        one: खरीद
+        other: खरीद
       promotional:
-        one:
-        other:
+        one: 
+        other: 
       publication:
-        one:
-        other:
+        one: 
+        other: 
+      publication_scheme:
+        one: प्रकाशन योजना
+        other: प्रकाशन योजनाहरु
       raib_report:
-        one:
-        other:
+        one: 
+        other: 
+      recruitment:
+        one: भर्ती
+        other: भर्ती
       regulation:
-        one:
-        other:
+        one: 
+        other: 
       research:
-        one:
-        other:
+        one: 
+        other: 
       residential_property_tribunal_decision:
-        one:
-        other:
+        one: 
+        other: 
+      service:
+        one: सेवा
+        other: सेवाहरु
       service_sign_in:
-        one:
-        other:
+        one: 
+        other: 
       service_standard_report:
-        one:
-        other:
+        one: 
+        other: 
+      social_media_use:
+        one: सामाजिक सञ्जाल उपयोग
+        other: सामाजिक सञ्जाल उपयोग
       speaking_notes:
-        one:
-        other:
+        one: 
+        other: 
       speech:
-        one:
-        other:
+        one: 
+        other: 
+      staff_update:
+        one: कर्मचारी अद्यावधिक
+        other: कर्मचारी अद्यावधिकहरू
       standard:
-        one:
-        other:
+        one: 
+        other: 
       statement_to_parliament:
-        one:
-        other:
+        one: 
+        other: 
       statistical_data_set:
-        one:
-        other:
+        one: 
+        other: 
+      statistics:
+        one: तथ्याङ्क
+        other: तथ्याङ्क
       statistics_announcement:
-        one:
-        other:
+        one: 
+        other: 
       statutory_guidance:
-        one:
-        other:
+        one: 
+        other: 
       take_part:
-        one:
-        other:
+        one: 
+        other: 
       tax_tribunal_decision:
-        one:
-        other:
+        one: 
+        other: 
+      terms_of_reference:
+        one: सन्दर्भ सर्तहरु
+        other: सन्दर्भ सर्तहरु
       transcript:
-        one:
-        other:
+        one: 
+        other: 
       transparency:
-        one:
-        other:
+        one: 
+        other: 
       utaac_decision:
-        one:
-        other:
+        one: 
+        other: 
+      welsh_language_scheme:
+        one: वेल्श भाषा योजना
+        other: वेल्श भाषा योजनाहरु
       world_location_news_article:
-        one:
-        other:
+        one: 
+        other: 
       world_news_story:
-        one:
-        other:
+        one: 
+        other: 
       written_statement:
-        one:
-        other:
+        one: 
+        other: 
     topics:
-      title:
+      title: 

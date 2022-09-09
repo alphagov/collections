@@ -12,6 +12,21 @@ he:
       aaib_report:
         one: דו"ח סניף חקירות תאונות אוויר
         other: דיווחים בענף חקירות תאונות אוויר
+      about:
+        one: אודות
+        other: אודות
+      about_our_services:
+        one: על השירותים שלנו
+        other: על השירותים שלנו
+      access_and_opening:
+        one: 'גישה ופתיחה '
+        other: 'גישה ופתיחה '
+      accessible_documents_policy:
+        one: מדיניות מסמכים נגישים
+        other: מדיניות מסמכים נגישים
+      alert:
+        one: התראה
+        other: התראות
       announcement:
         one: הודעה
         other: הודעות
@@ -21,9 +36,18 @@ he:
       authored_article:
         one: מאמר מאושר
         other: מאמרים מאושרים
+      blog_post:
+        one: רשומת בלוג
+        other: רשומות בלוג
       business_finance_support_scheme:
         one: תכנית תמיכה במימון עסקים
         other: תוכניות תמיכה במימון עסקים
+      campaign:
+        one: קמפיין
+        other: קמפיינים
+      careers:
+        one: קריירות
+        other: קריירות
       case_study:
         one: מקרה בוחן
         other: מקרי בוחן
@@ -36,6 +60,9 @@ he:
       coming_soon:
         one: בקרוב
         other: בקרוב
+      complaints_procedure:
+        one: הליך תלונות
+        other: הליכי תלונות
       consultation:
         one: דיון
         other: דיונים
@@ -57,6 +84,9 @@ he:
       decision:
         one: החלטה
         other: החלטות
+      detailed_guidance:
+        one: הדרכה
+        other: הדרכה
       detailed_guide:
         one: הדרכה
         other: הדרכה
@@ -70,17 +100,26 @@ he:
         one: טיוטה
         other: טיוטות
       drcf_digital_markets_research:
-        one:
-        other:
+        one: 
+        other: 
       drug_safety_update:
         one: עדכון בטיחות סמים
         other: עדכונים בטיחות סמים
+      edition:
+        one: מהדורה
+        other: מהדורות
+      edition_with_appointment:
+        one: מהדורה בתאום מראש
+        other: מהדורות בתיאום מראש
       employment_appeal_tribunal_decision:
         one: החלטת בית הדין לערעורים לעבודה
         other: החלטות בית הדין לערעורים לעבודה
       employment_tribunal_decision:
         one: החלטת בית הדין לעבודה
         other: החלטות בית הדין לעבודה
+      equality_and_diversity:
+        one: שוויון וגיוון
+        other: שוויון וגיוון
       esi_fund:
         one: קרן המבנה וההשקעות האירופית (ESIF)
         other: קרנות מבנה והשקעות אירופיות (ESIF)
@@ -93,6 +132,9 @@ he:
       form:
         one: טופס
         other: טפסים
+      generic_edition:
+        one: מהדורה כללית
+        other: מהדורות כלליות
       government_response:
         one: תגובה ממשלתית
         other: תגובות ממשלתיות
@@ -117,12 +159,24 @@ he:
       maib_report:
         one: דו"ח ענף חקירות תאונות ימיות
         other: דיווחים ענף חקירות תאונות ימיות
+      manual:
+        one: מדריך
+        other: מדריכים
       map:
         one: מפה
         other: מפות
+      media_enquiries:
+        one: בירור תקשורתי
+        other: בירורים בתקשורת
       medical_safety_alert:
         one: אזהרות וביקורות על תרופות ומכשירים רפואיים
         other: אזהרות וביקורות על תרופות ומכשירים רפואיים
+      membership:
+        one: חברות
+        other: חברות
+      modern_slavery_statement:
+        one: 
+        other: 
       national:
         one: הודעת סטטיסטיקה לאומית
         other: הודעות סטטיסטיות לאומיות
@@ -138,6 +192,9 @@ he:
       news_story:
         one: חדשות
         other: חדשות
+      nhs_content:
+        one: 'תוכן שירות הבריאות הלאומי '
+        other: 'תוכן שירות הבריאות הלאומי '
       notice:
         one: הודעה
         other: הודעות
@@ -156,6 +213,18 @@ he:
       oral_statement:
         one: הצהרה בעל פה לפרלמנט
         other: הצהרות בעל פה לפרלמנט
+      our_energy_use:
+        one: השימוש באנרגיה שלנו
+        other: השימוש באנרגיה שלנו
+      our_governance:
+        one: הממשל שלנו
+        other: הממשל שלנו
+      personal_information_charter:
+        one: טבלת מידע אישי
+        other: טבלות מידע אישי
+      petitions_and_campaigns:
+        one: עתירות וקמפיינים
+        other: עתירות וקמפיינים
       policy:
         one: מדיניות
         other: מדיניות
@@ -165,15 +234,24 @@ he:
       press_release:
         one: הודעה לעיתונות
         other: הודעות לעיתונות
+      procurement:
+        one: רכש
+        other: רכש
       promotional:
         one: חומר פרסומי
         other: חומר פרסומי
       publication:
         one: פרסום
         other: פרסומים
+      publication_scheme:
+        one: תכנית פרסום
+        other: תוכניות פרסום
       raib_report:
         one: דו"ח ענף חקירות תאונות רכבות
         other: דיווחים ענף חקירות תאונות רכבות
+      recruitment:
+        one: גיוס
+        other: גיוס
       regulation:
         one: תקנה
         other: תקנות
@@ -183,18 +261,27 @@ he:
       residential_property_tribunal_decision:
         one: החלטת בית הדין לנכסים למגורים
         other: החלטות בית הדין לנכסים למגורים
+      service:
+        one: שירות
+        other: שירותים
       service_sign_in:
         one: כניסה לשירות
         other: כניסה לשירות
       service_standard_report:
         one: דוח שירות סטנדרטי
         other: דוחות שירות סטנדרטיים
+      social_media_use:
+        one: שימוש במדיה חברתית
+        other: שימוש במדיה חברתית
       speaking_notes:
         one: נאומים
         other: נאומים
       speech:
         one: נאום
         other: נאומים
+      staff_update:
+        one: עדכון צוות
+        other: 'עדכוני צוות '
       standard:
         one: תקן
         other: תקנים
@@ -204,6 +291,9 @@ he:
       statistical_data_set:
         one: מערך נתונים סטטיסטיים
         other: מערכי נתונים סטטיסטיים
+      statistics:
+        one: סטטיסטיקה
+        other: סטטיסטיקה
       statistics_announcement:
         one: הודעת פרסום סטטיסטיקה
         other: הודעות פרסום סטטיסטיקה
@@ -216,6 +306,9 @@ he:
       tax_tribunal_decision:
         one: החלטת בית הדין לענייני מיסים והזדמנויות
         other: החלטות בית הדין לענייני מיסים והזדמנויות
+      terms_of_reference:
+        one: תנאי יחוס
+        other: תנאי יחוס
       transcript:
         one: תמלול
         other: תמלולים
@@ -225,6 +318,9 @@ he:
       utaac_decision:
         one: החלטת בית הדין לעררים מנהלית
         other: החלטות בית הדין לעררים מנהלית
+      welsh_language_scheme:
+        one: תוכנית שפה וולשית
+        other: תוכניות שפה וולשית
       world_location_news_article:
         one: מאמר חדשות
         other: מאמרי חדשות

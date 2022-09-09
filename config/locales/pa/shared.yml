@@ -12,6 +12,21 @@ pa:
       aaib_report:
         one: ਹਵਾਈ ਹਾਦਸੇ ਜਾਂਚ ਸ਼ਾਖਾ ਦੀ ਰਿਪੋਰਟ
         other: ਹਵਾਈ ਹਾਦਸੇ ਦੀ ਜਾਂਚ ਸ਼ਾਖਾ ਦੀਆਂ ਰਿਪੋਰਟਾਂ
+      about:
+        one: ਬਾਰੇ
+        other: ਬਾਰੇ
+      about_our_services:
+        one: ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ ਬਾਰੇ
+        other: ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ ਬਾਰੇ
+      access_and_opening:
+        one: ਪਹੁੰਚ ਅਤੇ ਖੋਲ੍ਹਣਾ
+        other: ਪਹੁੰਚ ਅਤੇ ਖੋਲ੍ਹਣਾ
+      accessible_documents_policy:
+        one: ਪਹੁੰਚਯੋਗ ਦਸਤਾਵੇਜ਼ਾਂ ਦੀ ਨੀਤੀ
+        other: ਪਹੁੰਚਯੋਗ ਦਸਤਾਵੇਜ਼ ਨੀਤੀਆਂ
+      alert:
+        one: ਸੁਚੇਤਨਾ
+        other: ਸੁਚੇਤਨਾਵਾਂ
       announcement:
         one: ਘੋਸ਼ਣਾ
         other: ਘੋਸ਼ਣਾਵਾਂ
@@ -21,9 +36,18 @@ pa:
       authored_article:
         one: ਲੇਖਕ ਲੇਖ
         other: ਲੇਖਕ ਲੇਖ
+      blog_post:
+        one: ਬਲੌਗ ਪੋਸਟ
+        other: ਬਲੌਗ ਪੋਸਟਾਂ
       business_finance_support_scheme:
         one: ਵਪਾਰ ਵਿੱਤ ਸਹਾਇਤਾ ਯੋਜਨਾ
         other: ਵਪਾਰ ਵਿੱਤ ਸਹਾਇਤਾ ਯੋਜਨਾਵਾਂ
+      campaign:
+        one: ਮੁਹਿੰਮ
+        other: ਮੁਹਿੰਮਾਂ
+      careers:
+        one: ਕਰੀਅਰ
+        other: ਕਰੀਅਰ
       case_study:
         one: ਕੇਸ ਅਧਿਐਨ
         other: ਕੇਸ ਅਧਿਐਨ
@@ -36,6 +60,9 @@ pa:
       coming_soon:
         one: ਜਲਦ ਆ ਰਿਹਾ ਹੈ
         other: ਜਲਦ ਆ ਰਿਹਾ ਹੈ
+      complaints_procedure:
+        one: ਸ਼ਿਕਾਇਤਾਂ ਦੀ ਵਿਧੀ
+        other: ਸ਼ਿਕਾਇਤਾਂ ਦੀ ਪ੍ਰਕਿਰਿਆ
       consultation:
         one: ਸਲਾਹ ਮਸ਼ਵਰਾ
         other: ਸਲਾਹ ਮਸ਼ਵਰੇ
@@ -57,6 +84,9 @@ pa:
       decision:
         one: ਫੈਸਲਾ
         other: ਫੈਸਲੇ
+      detailed_guidance:
+        one: ਸੇਧ
+        other: ਸੇਧ
       detailed_guide:
         one: ਸੇਧ
         other: ਸੇਧ
@@ -70,17 +100,26 @@ pa:
         one: ਡਰਾਫਟ ਟੈਕਸਟ
         other: ਡਰਾਫਟ ਟੈਕਸਟ
       drcf_digital_markets_research:
-        one:
-        other:
+        one: 
+        other: 
       drug_safety_update:
         one: ਡਰੱਗ ਸੇਫਟੀ ਅਪਡੇਟ
         other: ਡਰੱਗ ਸੇਫਟੀ ਅਪਡੇਟਸ
+      edition:
+        one: ਐਡੀਸ਼ਨ
+        other: ਸੰਸਕਰਣ
+      edition_with_appointment:
+        one: ਨਿਯੁਕਤੀ ਦੇ ਨਾਲ ਸੰਸਕਰਣ
+        other: ਨਿਯੁਕਤੀ ਦੇ ਨਾਲ ਸੰਸਕਰਣ
       employment_appeal_tribunal_decision:
         one: ਰੁਜ਼ਗਾਰ ਅਪੀਲ ਟ੍ਰਿਬਿਊਨਲ ਦਾ ਫੈਸਲਾ
         other: ਰੁਜ਼ਗਾਰ ਅਪੀਲ ਟ੍ਰਿਬਿਊਨਲ ਦੇ ਫੈਸਲੇ
       employment_tribunal_decision:
         one: ਰੁਜ਼ਗਾਰ ਟ੍ਰਿਬਿਊਨਲ ਦਾ ਫੈਸਲਾ
         other: ਰੁਜ਼ਗਾਰ ਟ੍ਰਿਬਿਊਨਲ ਦੇ ਫੈਸਲੇ
+      equality_and_diversity:
+        one: ਸਮਾਨਤਾ ਅਤੇ ਵਿਭਿੰਨਤਾ
+        other: ਸਮਾਨਤਾ ਅਤੇ ਵਿਭਿੰਨਤਾ
       esi_fund:
         one: ਯੂਰਪੀਅਨ ਢਾਂਚਾਗਤ ਅਤੇ ਨਿਵੇਸ਼ ਫੰਡ (ESIF)
         other: ਯੂਰਪੀਅਨ ਢਾਂਚਾਗਤ ਅਤੇ ਨਿਵੇਸ਼ ਫੰਡ (ESIF)
@@ -93,6 +132,9 @@ pa:
       form:
         one: ਫਾਰਮ
         other: ਫਾਰਮ
+      generic_edition:
+        one: ਆਮ ਐਡੀਸ਼ਨ
+        other: ਆਮ ਐਡੀਸ਼ਨ
       government_response:
         one: ਸਰਕਾਰ ਦਾ ਜਵਾਬ
         other: ਸਰਕਾਰ ਦੇ ਜਵਾਬ
@@ -117,12 +159,24 @@ pa:
       maib_report:
         one: ਸਮੁੰਦਰੀ ਹਾਦਸੇ ਦੀ ਜਾਂਚ ਸ਼ਾਖਾ ਦੀ ਰਿਪੋਰਟ
         other: ਸਮੁੰਦਰੀ ਦੁਰਘਟਨਾ ਜਾਂਚ ਸ਼ਾਖਾ ਦੀਆਂ ਰਿਪੋਰਟਾਂ
+      manual:
+        one: ਦਸਤਾਵੇਜ਼
+        other: ਦਸਤਾਵੇਜ਼
       map:
         one: ਨਕਸ਼ਾ
         other: ਨਕਸ਼ੇ
+      media_enquiries:
+        one: ਮੀਡੀਆ ਜਾਂਚ
+        other: ਮੀਡੀਆ ਪੁੱਛਗਿੱਛ
       medical_safety_alert:
         one: ਦਵਾਈਆਂ ਅਤੇ ਮੈਡੀਕਲ ਉਪਕਰਣਾਂ ਲਈ ਚੇਤਾਵਨੀ ਅਤੇ ਰੀਕਾਲ
         other: ਦਵਾਈਆਂ ਅਤੇ ਮੈਡੀਕਲ ਉਪਕਰਣਾਂ ਲਈ ਚੇਤਾਵਨੀ ਅਤੇ ਰੀਕਾਲ
+      membership:
+        one: ਮੈਂਬਰਸ਼ਿਪ
+        other: ਮੈਂਬਰਸ਼ਿਪ
+      modern_slavery_statement:
+        one: 
+        other: 
       national:
         one: ਰਾਸ਼ਟਰੀ ਅੰਕੜੇ ਘੋਸ਼ਣਾ
         other: ਰਾਸ਼ਟਰੀ ਅੰਕੜੇ ਘੋਸ਼ਣਾਵਾਂ
@@ -138,6 +192,9 @@ pa:
       news_story:
         one: ਖ਼ਬਰਾਂ ਦੀ ਕਹਾਣੀ
         other: ਖ਼ਬਰਾਂ ਦੀਆਂ ਕਹਾਣੀਆਂ
+      nhs_content:
+        one: ਨੈਸ਼ਨਲ ਹੈਲਥ ਸਰਵਿਸ ਸਮਗਰੀ
+        other: ਨੈਸ਼ਨਲ ਹੈਲਥ ਸਰਵਿਸ ਸਮਗਰੀ
       notice:
         one: ਨੋਟਿਸ
         other: ਨੋਟਿਸ
@@ -156,6 +213,18 @@ pa:
       oral_statement:
         one: ਸੰਸਦ ਨੂੰ ਜ਼ਬਾਨੀ ਬਿਆਨ
         other: ਸੰਸਦ ਨੂੰ ਜ਼ਬਾਨੀ ਬਿਆਨ
+      our_energy_use:
+        one: ਸਾਡੀ ਊਰਜਾ ਦੀ ਵਰਤੋਂ
+        other: ਸਾਡੀ ਊਰਜਾ ਦੀ ਵਰਤੋਂ
+      our_governance:
+        one: ਸਾਡਾ ਸ਼ਾਸਨ
+        other: ਸਾਡਾ ਸ਼ਾਸਨ
+      personal_information_charter:
+        one: ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਚਾਰਟਰ
+        other: ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਚਾਰਟਰਸ
+      petitions_and_campaigns:
+        one: ਪਟੀਸ਼ਨਾਂ ਅਤੇ ਮੁਹਿੰਮਾਂ
+        other: ਪਟੀਸ਼ਨਾਂ ਅਤੇ ਮੁਹਿੰਮਾਂ
       policy:
         one: ਨੀਤੀ ਨੂੰ
         other: ਨੀਤੀਆਂ
@@ -165,15 +234,24 @@ pa:
       press_release:
         one: ਪੱਤਰਕਾਰਾਂ ਨੂੰ ਦਿੱਤੀ ਗਈ ਅਧਕਾਰਿਤ ਰਿਪੋਰਟ
         other: ਪ੍ਰੈਸ ਰਿਲੀਜ਼
+      procurement:
+        one: ਖਰੀਦ
+        other: ਖਰੀਦ
       promotional:
         one: ਪ੍ਰਚਾਰ ਸਮੱਗਰੀ
         other: ਪ੍ਰਚਾਰ ਸਮੱਗਰੀ
       publication:
         one: ਪ੍ਰਕਾਸ਼ਨ
         other: ਪ੍ਰਕਾਸ਼ਨ
+      publication_scheme:
+        one: ਪ੍ਰਕਾਸ਼ਨ ਸਕੀਮ
+        other: ਪ੍ਰਕਾਸ਼ਨ ਸਕੀਮਾਂ
       raib_report:
         one: ਰੇਲ ਹਾਦਸੇ ਦੀ ਜਾਂਚ ਸ਼ਾਖਾ ਦੀ ਰਿਪੋਰਟ
         other: ਰੇਲ ਹਾਦਸੇ ਦੀ ਜਾਂਚ ਸ਼ਾਖਾ ਦੀਆਂ ਰਿਪੋਰਟਾਂ
+      recruitment:
+        one: ਭਰਤੀ
+        other: ਭਰਤੀ
       regulation:
         one: ਨਿਯਮ
         other: ਨਿਯਮ
@@ -183,18 +261,27 @@ pa:
       residential_property_tribunal_decision:
         one: ਰਿਹਾਇਸ਼ੀ ਸੰਪਤੀ ਟ੍ਰਿਬਿਊਨਲ ਦਾ ਫੈਸਲਾ
         other: ਰਿਹਾਇਸ਼ੀ ਸੰਪਤੀ ਟ੍ਰਿਬਿਊਨਲ ਦੇ ਫੈਸਲੇ
+      service:
+        one: ਸੇਵਾ
+        other: ਸੇਵਾਵਾਂ
       service_sign_in:
         one: ਸੇਵਾ ਸਾਈਨ ਇਨ
         other: ਸੇਵਾ ਸਾਈਨ ਇਨ
       service_standard_report:
         one: ਸੇਵਾ ਮਿਆਰੀ ਰਿਪੋਰਟ
         other: ਸੇਵਾ ਮਿਆਰੀ ਰਿਪੋਰਟਾਂ
+      social_media_use:
+        one: ਸੋਸ਼ਲ ਮੀਡੀਆ ਦੀ ਵਰਤੋਂ
+        other: ਸੋਸ਼ਲ ਮੀਡੀਆ ਦੀ ਵਰਤੋਂ
       speaking_notes:
         one: ਭਾਸ਼ਣ ਨੋਟ
         other: ਭਾਸ਼ਣ ਨੋਟ
       speech:
         one: ਭਾਸ਼ਣ
         other: ਭਾਸ਼ਣ
+      staff_update:
+        one: ਸਟਾਫ ਅਪਡੇਟ
+        other: ਸਟਾਫ ਅਪਡੇਟਸ
       standard:
         one: ਮਿਆਰੀ
         other: ਮਿਆਰ
@@ -204,6 +291,9 @@ pa:
       statistical_data_set:
         one: ਅੰਕੜਾ ਡਾਟਾ ਸੈੱਟ
         other: ਅੰਕੜਾ ਡਾਟਾ ਸੈੱਟ
+      statistics:
+        one: ਅੰਕੜੇ
+        other: ਅੰਕੜੇ
       statistics_announcement:
         one: ਅੰਕੜੇ ਜਾਰੀ ਘੋਸ਼ਣਾ
         other: ਅੰਕੜੇ ਜਾਰੀ ਘੋਸ਼ਣਾਵਾਂ
@@ -216,6 +306,9 @@ pa:
       tax_tribunal_decision:
         one: ਟੈਕਸ ਅਤੇ ਚਾਂਸਰੀ ਟ੍ਰਿਬਿਊਨਲ ਦਾ ਫੈਸਲਾ
         other: ਟੈਕਸ ਅਤੇ ਚਾਂਸਰੀ ਟ੍ਰਿਬਿਊਨਲ ਦੇ ਫੈਸਲੇ
+      terms_of_reference:
+        one: ਸੰਦਰਭ ਦੀਆਂ ਸ਼ਰਤਾਂ
+        other: ਸੰਦਰਭ ਦੀਆਂ ਸ਼ਰਤਾਂ
       transcript:
         one: ਪ੍ਰਤੀਲਿਪੀ
         other: ਪ੍ਰਤੀਲਿਪੀ
@@ -225,6 +318,9 @@ pa:
       utaac_decision:
         one: ਪ੍ਰਬੰਧਕੀ ਅਪੀਲ ਟ੍ਰਿਬਿਊਨਲ ਦਾ ਫੈਸਲਾ
         other: ਪ੍ਰਬੰਧਕੀ ਅਪੀਲ ਟ੍ਰਿਬਿਊਨਲ ਦੇ ਫੈਸਲੇ
+      welsh_language_scheme:
+        one: ਵੈਲਸ਼ ਭਾਸ਼ਾ ਸਕੀਮ
+        other: ਵੈਲਸ਼ ਭਾਸ਼ਾ ਸਕੀਮਾਂ
       world_location_news_article:
         one: ਖਬਰ ਲੇਖ
         other: ਖ਼ਬਰਾਂ ਦੇ ਲੇਖ

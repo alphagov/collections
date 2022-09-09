@@ -12,6 +12,21 @@ si:
       aaib_report:
         one: ගුවන් අනතුරු විමර්ශන ශාඛා වාර්තාව
         other: ගුවන් අනතුරු විමර්ශන ශාඛා වාර්තා
+      about:
+        one: ගැන
+        other: ගැන
+      about_our_services:
+        one: අපගේ සේවාවන් ගැන
+        other: අපගේ සේවාවන් ගැන
+      access_and_opening:
+        one: පිවිසුම සහ විවෘත කිරීම
+        other: පිවිසුම සහ විවෘත කිරීම
+      accessible_documents_policy:
+        one: පිවිසිය හැකි ලේඛන ප්රතිපත්තිය
+        other: පිවිසිය හැකි ලේඛන ප්රතිපත්ති
+      alert:
+        one: ඇඟවීම
+        other: ඇඟවීම්
       announcement:
         one: නිවේදනය
         other: නිවේදන
@@ -21,9 +36,18 @@ si:
       authored_article:
         one: රචනා කළ ලිපිය
         other: රචනා කළ ලිපි
+      blog_post:
+        one: බ්ලොග් පළ කිරීම
+        other: බ්ලොග් පළ කිරීම්
       business_finance_support_scheme:
         one: ව්යාපාර මූල්ය සහාය යෝජනා ක්රමය
         other: ව්යාපාර මූල්ය සහාය යෝජනා ක්රම
+      campaign:
+        one: ව්යාපාරය
+        other: ව්යාපාර
+      careers:
+        one: වෘත්තීන්
+        other: වෘත්තීන්
       case_study:
         one: සිද්ධි අධ්යයනය
         other: සිද්ධි අධ්යයන
@@ -36,6 +60,9 @@ si:
       coming_soon:
         one: ළඟදීම පැමිණේ
         other: ළඟදීම පැමිණේ
+      complaints_procedure:
+        one: පැමිණිලි කිරීමේ ක්රියා පටිපාටිය
+        other: පැමිණිලි කිරීමේ ක්රියා පටිපාටි
       consultation:
         one: උපදේශනය
         other: උපදේශන
@@ -57,6 +84,9 @@ si:
       decision:
         one: තීරණය
         other: තීරණ
+      detailed_guidance:
+        one: මාර්ගෝපදේශය
+        other: මාර්ගෝපදේශය
       detailed_guide:
         one: මාර්ගෝපදේශය
         other: මාර්ගෝපදේශය
@@ -70,17 +100,26 @@ si:
         one: කෙටුම්පත් පෙළ
         other: කෙටුම්පත් පෙළ
       drcf_digital_markets_research:
-        one:
-        other:
+        one: 
+        other: 
       drug_safety_update:
         one: ඖෂධ ආරක්ෂන යාවත්කාලීනය
         other: ඖෂධ ආරක්ෂන යාවත්කාලීන
+      edition:
+        one: සංස්කරණය
+        other: සංස්කරණ
+      edition_with_appointment:
+        one: පත්වීම සමඟ සංස්කරණය
+        other: පත්වීම සමඟ සංස්කරණ
       employment_appeal_tribunal_decision:
         one: රැකියා අභියාචනා විනිශ්චය මණ්ඩල තීරණය
         other: රැකියා අභියාචනා විනිශ්චය මණ්ඩල තීරණ
       employment_tribunal_decision:
         one: රැකියා විනිශ්චය මණ්ඩල තීරණය
         other: රැකියා විනිශ්චය මණ්ඩල තීරණ
+      equality_and_diversity:
+        one: සමානාත්මතාවය සහ විවිධත්වය
+        other: සමානාත්මතාවය සහ විවිධත්වය
       esi_fund:
         one: යුරෝපීය ව්යුහාත්මක සහ ආයෝජන අරමුදල (ESIF)
         other: යුරෝපීය ව්යුහාත්මක සහ ආයෝජන අරමුදල් (ESIF)
@@ -93,6 +132,9 @@ si:
       form:
         one: ආකෘති පත්‍රය
         other: ආකෘති පත්‍ර
+      generic_edition:
+        one: සාමාන්ය සංස්කරණය
+        other: සාමාන්ය සංස්කරණ
       government_response:
         one: රජයේ ප්රතිචාරය
         other: රජයේ ප්රතිචාර
@@ -117,12 +159,24 @@ si:
       maib_report:
         one: නාවික අනතුරු විමර්ශන ශාඛා වාර්තාව
         other: නාවික අනතුරු විමර්ශන ශාඛා වාර්තා
+      manual:
+        one: අත්පොත
+        other: අත්පොති
       map:
         one: සිතියම
         other: සිතියම්
+      media_enquiries:
+        one: මාධ්ය විමසුම
+        other: මාධ්ය විමසුම්
       medical_safety_alert:
         one: ඖෂධ සහ වෛද්ය උපකරණ සඳහා ඇඟවීම් සහ සිහිපත් කිරීම්
         other: ඖෂධ සහ වෛද්ය උපකරණ සඳහා ඇඟවීම් සහ සිහිපත් කිරීම්
+      membership:
+        one: සාමාජිකත්වය
+        other: සාමාජිකත්වය
+      modern_slavery_statement:
+        one: 
+        other: 
       national:
         one: ජාතික සංඛ්යාලේඛන නිවේදනය
         other: ජාතික සංඛ්යාලේඛන නිවේදන
@@ -138,6 +192,9 @@ si:
       news_story:
         one: පුවත් කතාව
         other: පුවත් කතා
+      nhs_content:
+        one: NHS අන්තර්ගතය
+        other: NHS අන්තර්ගතය
       notice:
         one: දැන්වීම
         other: දැන්වීම්
@@ -156,6 +213,18 @@ si:
       oral_statement:
         one: පාර්ලිමේන්තුව වෙත වාචික ප්රකාශයක්
         other: පාර්ලිමේන්තුව වෙත වාචික ප්රකාශ
+      our_energy_use:
+        one: අපේ බලශක්ති භාවිතය
+        other: අපේ බලශක්ති භාවිතය
+      our_governance:
+        one: අපේ පාලනය
+        other: අපේ පාලනය
+      personal_information_charter:
+        one: පෞද්ගලික තොරතුරු ප්රඥප්තිය
+        other: පෞද්ගලික තොරතුරු ප්‍රරඥප්ති
+      petitions_and_campaigns:
+        one: පෙත්සම් සහ ව්යාපාර
+        other: පෙත්සම් සහ ව්යාපාර
       policy:
         one: ප්රතිපත්තිය
         other: ප්රතිපත්ති
@@ -165,15 +234,24 @@ si:
       press_release:
         one: මාධ්ය නිවේදනය
         other: මාධ්ය නිවේදන
+      procurement:
+        one: ප්රසම්පාදනය
+        other: ප්රසම්පාදනය
       promotional:
         one: ප්රවර්ධන ද්රව්ය
         other: ප්රවර්ධන ද්රව්ය
       publication:
         one: ප්රකාශනය
         other: ප්රකාශන
+      publication_scheme:
+        one: ප්රකාශන යෝජනා ක්රමය
+        other: ප්රකාශන යෝජනා ක්රම
       raib_report:
         one: දුම්රිය අනතුරු විමර්ශන ශාඛා වාර්තාව
         other: දුම්රිය අනතුරු විමර්ශන ශාඛා වාර්තා
+      recruitment:
+        one: බඳවාගැනීම
+        other: බඳවාගැනීම
       regulation:
         one: නියාමනය
         other: නියාමන
@@ -183,18 +261,27 @@ si:
       residential_property_tribunal_decision:
         one: නේවාසික දේපළ විනිශ්චය මණ්ඩල තීරණය
         other: නේවාසික දේපළ විනිශ්චය මණ්ඩල තීරණ
+      service:
+        one: සේවාව
+        other: සේවා
       service_sign_in:
         one: සේවා පිවිසුම
         other: සේවා පිවිසුම
       service_standard_report:
         one: සේවා සම්මත වාර්තාව
         other: සේවා සම්මත වාර්තා
+      social_media_use:
+        one: සමාජ මාධ්ය භාවිතය
+        other: සමාජ මාධ්ය භාවිතය
       speaking_notes:
         one: කතා සටහන්
         other: කතා සටහන්
       speech:
         one: කථාව
         other: කථා
+      staff_update:
+        one: කාර්ය මණ්ඩල යාවත්කාලීනය
+        other: කාර්ය මණ්ඩල යාවත්කාලීන
       standard:
         one: ප්‍රමිතිය
         other: ප්‍රමිති
@@ -204,6 +291,9 @@ si:
       statistical_data_set:
         one: සංඛ්යාලේඛන දත්ත කට්ටලය
         other: සංඛ්යාලේඛන දත්ත කට්ටල
+      statistics:
+        one: සංඛ්‍යාලේඛන
+        other: සංඛ්‍යාලේඛන
       statistics_announcement:
         one: සංඛ්යාලේඛන නිකුත් කිරීමේ නිවේදනය
         other: සංඛ්යාලේඛන නිකුත් කිරීමේ නිවේදන
@@ -216,6 +306,9 @@ si:
       tax_tribunal_decision:
         one: බදු සහ චාන්සරි විනිශ්චය මණ්ඩල තීරණය
         other: බදු සහ චාන්සරි විනිශ්චය මණ්ඩල තීරණ
+      terms_of_reference:
+        one: යොමු නියමයන්
+        other: යොමු නියමයන්
       transcript:
         one: ප්‍රතිලේඛනය
         other: ප්‍රතිලේඛන
@@ -225,6 +318,9 @@ si:
       utaac_decision:
         one: පරිපාලන අභියාචනා විනිශ්චය මණ්ඩල තීරණය
         other: පරිපාලන අභියාචනා විනිශ්චය මණ්ඩල තීරණ
+      welsh_language_scheme:
+        one: වෙල්ෂ් භාෂා යෝජනා ක්රමය
+        other: වෙල්ෂ් භාෂා යෝජනා ක්රම
       world_location_news_article:
         one: පුවත් ලිපිය
         other: පුවත් ලිපි

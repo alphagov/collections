@@ -12,6 +12,21 @@
       aaib_report:
         one: Rapport fra Avdeling for etterforskning av flyulykker
         other: Rapporter fra Avdeling for etterforskning av flyulykker
+      about:
+        one: Om
+        other: Om
+      about_our_services:
+        one: Om våre tjenester
+        other: Om våre tjenester
+      access_and_opening:
+        one: Tilgang og åpning
+        other: Tilgang og åpning
+      accessible_documents_policy:
+        one: Retningslinjer for tilgjengelige dokumenter
+        other: Retningslinjer for tilgjengelige dokumenter
+      alert:
+        one: Varsling
+        other: Varsler
       announcement:
         one: Kunngjøring
         other: Kunngjøringer
@@ -21,9 +36,18 @@
       authored_article:
         one: Forfatterartikkel
         other: Forfatterartikler
+      blog_post:
+        one: Blogginnlegg
+        other: Blogginnlegg
       business_finance_support_scheme:
         one: Skjema for forretningsfinansieringsstøtteordning
         other: Skjema for forretningsfinansieringsstøtteordning
+      campaign:
+        one: Kampanje
+        other: Kampanjer
+      careers:
+        one: Karriere
+        other: karrierer
       case_study:
         one: Casestudie
         other: Casestudier
@@ -36,6 +60,9 @@
       coming_soon:
         one: Kommer snart
         other: Kommer snart
+      complaints_procedure:
+        one: Klageprosedyre
+        other: Klageprosedyrer
       consultation:
         one: Konsultasjon
         other: Konsultasjoner
@@ -57,6 +84,9 @@
       decision:
         one: Beslutning
         other: Beslutninger
+      detailed_guidance:
+        one: Veiledning
+        other: Veiledning
       detailed_guide:
         one: Veiledning
         other: Veiledning
@@ -70,17 +100,26 @@
         one: Utkast til tekst
         other: Utkast til tekster
       drcf_digital_markets_research:
-        one:
-        other:
+        one: 
+        other: 
       drug_safety_update:
         one: Oppdatering av legemiddelsikkerhet
         other: Oppdatering av legemiddelsikkerhet
+      edition:
+        one: Utgave
+        other: Utgaver
+      edition_with_appointment:
+        one: Utgave med avtale
+        other: Utgaver med avtale
       employment_appeal_tribunal_decision:
         one: Ansettelsesnemndas avgjørelse
         other: Ansettelsesnemndas avgjørelser
       employment_tribunal_decision:
         one: Arbeidsrettsavgjørelse
         other: Arbeidsrettsavgjørelser
+      equality_and_diversity:
+        one: Likestilling og mangfold
+        other: Likestilling og mangfold
       esi_fund:
         one: Det europeiske struktur- og investeringsfondet (ESIF)
         other: Europeiske struktur- og investeringsfond (ESIF)
@@ -93,6 +132,9 @@
       form:
         one: Skjema
         other: Skjemaer
+      generic_edition:
+        one: Generisk utgave
+        other: Generiske utgaver
       government_response:
         one: Myndighetenes svar
         other: Myndighetenes svar
@@ -117,12 +159,24 @@
       maib_report:
         one: Rapport fra avdeling for etterforskning av marine ulykker
         other: Rapporter fra avdeling for etterforskning av marine ulykker
+      manual:
+        one: Håndbok
+        other: Håndbøker
       map:
         one: Kart
         other: Kart
+      media_enquiries:
+        one: Medieforespørsel
+        other: Medieforespørsler
       medical_safety_alert:
         one: Varsler og tilbakekallinger for medisiner og medisinsk utstyr
         other: Varsler og tilbakekallinger for medisiner og medisinsk utstyr
+      membership:
+        one: Medlemskap
+        other: Medlemskap
+      modern_slavery_statement:
+        one: 
+        other: 
       national:
         one: Nasjonal statistikkmelding
         other: Nasjonale statistikkmeldinger
@@ -138,6 +192,9 @@
       news_story:
         one: Nyhetssak
         other: Nyhetssaker
+      nhs_content:
+        one: Innhold fra det nasjonale helsevesenet
+        other: Innhold fra det nasjonale helsevesenet
       notice:
         one: Merknad
         other: Merknader
@@ -156,6 +213,18 @@
       oral_statement:
         one: Muntlig uttalelse til Stortinget
         other: Muntlige uttalelser til Stortinget
+      our_energy_use:
+        one: Vår energibruk
+        other: Vår energibruk
+      our_governance:
+        one: Vår styring
+        other: Vår styring
+      personal_information_charter:
+        one: Personopplysnings-charter
+        other: Personopplysnings-chartre
+      petitions_and_campaigns:
+        one: Begjæringer og kampanjer
+        other: Begjæringer og kampanjer
       policy:
         one: Retningslinjer
         other: Retningslinjer
@@ -165,15 +234,24 @@
       press_release:
         one: Pressemelding
         other: Pressemeldinger
+      procurement:
+        one: Anskaffelse
+        other: Anskaffelse
       promotional:
         one: Reklamemateriell
         other: Reklamemateriell
       publication:
         one: Utgivelse
         other: Publikasjoner
+      publication_scheme:
+        one: Publiseringsskjema
+        other: Publiseringsskjema
       raib_report:
         one: Rapport fra avdeling for gransking av jernbaneulykker
         other: Rapporter fra avdeling for gransking av jernbaneulykker
+      recruitment:
+        one: Rekruttering
+        other: Rekruttering
       regulation:
         one: Forskrift
         other: Forskrift
@@ -183,18 +261,27 @@
       residential_property_tribunal_decision:
         one: Beslutning fra boligeiendomsnemnda
         other: Beslutninger fra boligeiendomsnemnda
+      service:
+        one: Tjeneste
+        other: Tjenester
       service_sign_in:
         one: Tjenestepålogging
         other: Tjenestepålogging
       service_standard_report:
         one: Tjenestestandardrapport
         other: Tjenestestandardrapporter
+      social_media_use:
+        one: Bruk av sosiale medier
+        other: Bruk av sosiale medier
       speaking_notes:
         one: Foredragsnotater
         other: Foredragsnotater
       speech:
         one: Tale
         other: Taler
+      staff_update:
+        one: Personaloppdatering
+        other: Personaloppdateringer
       standard:
         one: Standard
         other: Standarder
@@ -204,6 +291,9 @@
       statistical_data_set:
         one: Statistisk datasett
         other: Statistiske datasett
+      statistics:
+        one: Statistikk
+        other: Statistikk
       statistics_announcement:
         one: Kunngjøring om utgivelse av statistikk
         other: Kunngjøringer om utgivelse av statistikk
@@ -216,6 +306,9 @@
       tax_tribunal_decision:
         one: Skatte- og kanslerettsavgjørelse
         other: Skatte- og kanslerettsavgjørelser
+      terms_of_reference:
+        one: Henvisningsbetingelser
+        other: Henvisningsbetingelser
       transcript:
         one: Transkripsjon
         other: Transkripsjoner
@@ -225,6 +318,9 @@
       utaac_decision:
         one: Administrativ ankenemndavgjørelse
         other: Administrative ankenemndavgjørelser
+      welsh_language_scheme:
+        one: Walisisk språkskjema
+        other: Walisiske språkskjema
       world_location_news_article:
         one: Nyhetsartikkel
         other: Nyhetsartikler

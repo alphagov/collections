@@ -12,6 +12,21 @@ fi:
       aaib_report:
         one: Lento -onnettomuuksien tutkintaosaston raportti
         other: Lento -onnettomuuksien tutkintayksikön raportit
+      about:
+        one: Tietoja
+        other: Tietoja
+      about_our_services:
+        one: Tietoja palveluistamme
+        other: Tietoja palveluistamme
+      access_and_opening:
+        one: Pääsy ja avaaminen
+        other: Pääsy ja avaaminen
+      accessible_documents_policy:
+        one: Asiakirjojen esteettömyyspolitiikka
+        other: Asiakirjojen saavutettavuuspolitiikka
+      alert:
+        one: Hälytys
+        other: Hälytykset
       announcement:
         one: Ilmoitus
         other: Ilmoitukset
@@ -21,9 +36,18 @@ fi:
       authored_article:
         one: Kirjoitettu artikkeli
         other: Kirjoitettuja artikkeleita
+      blog_post:
+        one: Blogipostaus
+        other: Blogiviestit
       business_finance_support_scheme:
         one: Yritysrahoituksen tukijärjestelmä
         other: Yritysrahoituksen tukijärjestelmät
+      campaign:
+        one: Kampanja
+        other: Kampanjat
+      careers:
+        one: Urat
+        other: urat
       case_study:
         one: Tapaustutkimus
         other: Tapaustutkimuksia
@@ -36,6 +60,9 @@ fi:
       coming_soon:
         one: Tulossa pian
         other: Tulossa pian
+      complaints_procedure:
+        one: Valitusmenettely
+        other: Valitusmenettelyt
       consultation:
         one: Konsultaatio
         other: Konsultaatiot
@@ -57,6 +84,9 @@ fi:
       decision:
         one: Päätös
         other: Päätökset
+      detailed_guidance:
+        one: Ohjaus
+        other: Ohjaus
       detailed_guide:
         one: Ohjaus
         other: Ohjaus
@@ -70,17 +100,26 @@ fi:
         one: Luonnos
         other: Luonnos tekstejä
       drcf_digital_markets_research:
-        one:
-        other:
+        one: 
+        other: 
       drug_safety_update:
         one: Lääketurvallisuuden päivitys
         other: Lääketurvallisuuden päivitykset
+      edition:
+        one: Painos
+        other: Painokset
+      edition_with_appointment:
+        one: Painos ajanvarauksella
+        other: Painokset ajanvarauksella
       employment_appeal_tribunal_decision:
         one: Työllisyysasioiden muutoksenhakutuomioistuimen päätös
         other: Työllisyysasioiden muutoksenhakutuomioistuimen päätökset
       employment_tribunal_decision:
         one: Työtuomioistuimen päätös
         other: Työtuomioistuimen päätökset
+      equality_and_diversity:
+        one: Yhdenvertaisuus ja moninaisuus
+        other: Yhdenvertaisuus ja moninaisuus
       esi_fund:
         one: Euroopan rakenne- ja investointirahasto (ESIF)
         other: Euroopan rakenne- ja investointirahastot (ESIF)
@@ -93,6 +132,9 @@ fi:
       form:
         one: Lomake
         other: Lomakkeet
+      generic_edition:
+        one: Yleinen painos
+        other: Yleiset painokset
       government_response:
         one: Hallituksen vastaus
         other: Hallituksen vastaukset
@@ -117,12 +159,24 @@ fi:
       maib_report:
         one: Merionnettomuuksien tutkintaosaston raportti
         other: Merionnettomuuksien tutkintaosaston raportit
+      manual:
+        one: Manuaalinen
+        other: Manuaalit
       map:
         one: Kartta
         other: Kartat
+      media_enquiries:
+        one: Media tiedustelu
+        other: Tiedustelut mediasta
       medical_safety_alert:
         one: Lääkkeitä ja lääkinnällisiä laitteita koskevat varoitukset ja takaisinvedot
         other: Lääkkeitä ja lääkinnällisiä laitteita koskevat varoitukset ja takaisinvedot
+      membership:
+        one: Jäsenyys
+        other: Jäsenyys
+      modern_slavery_statement:
+        one: 
+        other: 
       national:
         one: Kansallinen tilastoilmoitus
         other: Kansalliset tilastoilmoitukset
@@ -138,6 +192,9 @@ fi:
       news_story:
         one: Uutistarina
         other: Uutisia
+      nhs_content:
+        one: NHS -sisältö
+        other: NHS -sisältö
       notice:
         one: Ilmoitus
         other: Ilmoitukset
@@ -156,6 +213,18 @@ fi:
       oral_statement:
         one: Suullinen lausuma parlamentille
         other: Suulliset lausumat parlamentille
+      our_energy_use:
+        one: Energiankulutuksemme
+        other: Energiankulutuksemme
+      our_governance:
+        one: Hallintomme
+        other: Hallintomme
+      personal_information_charter:
+        one: Henkilötietojen peruskirja
+        other: Henkilötietojen peruskirjat
+      petitions_and_campaigns:
+        one: Vetoomukset ja kampanjat
+        other: Vetoomukset ja kampanjat
       policy:
         one: Käytäntö
         other: Käytännöt
@@ -165,15 +234,24 @@ fi:
       press_release:
         one: Lehdistötiedote
         other: Lehdistötiedotteet
+      procurement:
+        one: Hankinnat
+        other: Hankinnat
       promotional:
         one: Myynninedistämismateriaali
         other: Myynninedistämismateriaali
       publication:
         one: Julkaisu
         other: Julkaisut
+      publication_scheme:
+        one: Julkaisujärjestelmä
+        other: Julkaisujärjestelmät
       raib_report:
         one: Rautatie onnettomuus tutkintaosaston raportti
         other: Rautatie onnettomuus tutkintaosaston raportit
+      recruitment:
+        one: Rekrytointi
+        other: Rekrytointi
       regulation:
         one: Asetus
         other: Asetukset
@@ -183,18 +261,27 @@ fi:
       residential_property_tribunal_decision:
         one: Asunto -omaisuuden tuomioistuimen päätös
         other: Asunto -omaisuuden tuomioistuimen päätökset
+      service:
+        one: Palvelu
+        other: Palvelut
       service_sign_in:
         one: Palveluun kirjautuminen
         other: Palveluun kirjautuminen
       service_standard_report:
         one: Palvelustandardiraportti
         other: Palvelustandardiraportit
+      social_media_use:
+        one: Sosiaalisen median käyttö
+        other: Sosiaalisen median käyttö
       speaking_notes:
         one: Puhuvat muistiinpanot
         other: Puhuvat muistiinpanot
       speech:
         one: Puhe
         other: Puheet
+      staff_update:
+        one: Henkilöstön päivitys
+        other: Henkilöstön päivitykset
       standard:
         one: Standardi
         other: Standardit
@@ -204,6 +291,9 @@ fi:
       statistical_data_set:
         one: Tilastollinen tietojoukko
         other: Tilastolliset tietojoukot
+      statistics:
+        one: Tilastot
+        other: Tilastot
       statistics_announcement:
         one: Tilastojen julkaisuilmoitus
         other: Tilastojen julkaisuilmoitukset
@@ -216,6 +306,9 @@ fi:
       tax_tribunal_decision:
         one: Vero- ja oikeuskanslerinoikeuden päätös
         other: Vero- ja oikeuskanslerinoikeuden päätökset
+      terms_of_reference:
+        one: Toimeksianto
+        other: Toimeksianto
       transcript:
         one: Transkriptio
         other: Transkriptiot
@@ -225,6 +318,9 @@ fi:
       utaac_decision:
         one: Hallinnollisen muutoksenhakutuomioistuimen päätös
         other: Hallinnollisen muutoksenhakutuomioistuimen päätökset
+      welsh_language_scheme:
+        one: Walesin kielen järjestelmä
+        other: Walesin kielen järjestelmät
       world_location_news_article:
         one: Uutisartikkeli
         other: Uutisartikkelit

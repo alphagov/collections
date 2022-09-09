@@ -11,14 +11,30 @@ zh:
     schema_name:
       aaib_report:
         other: 航空事故调查局报告
+      about:
+        other: 约
+      about_our_services:
+        other: 关于我们的服务
+      access_and_opening:
+        other: 访问和打开
+      accessible_documents_policy:
+        other: 可获取的文件政策
+      alert:
+        other: 警告
       announcement:
         other: 公告
       asylum_support_decision:
         other: 庇护支持法庭裁决
       authored_article:
         other: 撰写文章
+      blog_post:
+        other: 博客帖子
       business_finance_support_scheme:
         other: 商业财务支持计划
+      campaign:
+        other: 活动
+      careers:
+        other: 招聘
       case_study:
         other: 案例研究
       closed_consultation:
@@ -27,6 +43,8 @@ zh:
         other: 竞争和市场管理局案例
       coming_soon:
         other: 即将推出
+      complaints_procedure:
+        other: 投诉程序
       consultation:
         other: 咨询
       consultation_outcome:
@@ -41,6 +59,8 @@ zh:
         other: 乡村管理计划拨款
       decision:
         other: 决策
+      detailed_guidance:
+        other: 指南
       detailed_guide:
         other: 指南
       dfid_research_output:
@@ -50,14 +70,20 @@ zh:
       draft_text:
         other: 草拟文本
       drcf_digital_markets_research:
-        one:
-        other:
+        one: 
+        other: 
       drug_safety_update:
         other: 药物安全更新
+      edition:
+        other: 功能版本
+      edition_with_appointment:
+        other: 版本和任命
       employment_appeal_tribunal_decision:
         other: 劳资上诉法庭判决
       employment_tribunal_decision:
         other: 劳资法庭判决
+      equality_and_diversity:
+        other: 平等和多样性
       esi_fund:
         other: 欧洲结构与投资基金(ESIF)
       fatality_notice:
@@ -66,6 +92,8 @@ zh:
         other: FOI 发布
       form:
         other: 表格
+      generic_edition:
+        other: 通用版本
       government_response:
         other: 政府回应
       guidance:
@@ -82,10 +110,18 @@ zh:
         other: 国际条约
       maib_report:
         other: 海事事故调查局报告
+      manual:
+        other: 手册
       map:
         other: 地图
+      media_enquiries:
+        other: 媒体疑问
       medical_safety_alert:
         other: 药品和医疗设备的警报和召回
+      membership:
+        other: 会员身份
+      modern_slavery_statement:
+        other: 
       national:
         other: 国家统计局公告
       national_statistics:
@@ -96,6 +132,8 @@ zh:
         other: 新闻报道
       news_story:
         other: 新闻故事
+      nhs_content:
+        other: NHS内容
       notice:
         other: 通知
       official:
@@ -108,38 +146,60 @@ zh:
         other: 公开协商
       oral_statement:
         other: 议会口头声明
+      our_energy_use:
+        other: 我们的能源使用
+      our_governance:
+        other: 我们的治理
+      personal_information_charter:
+        other: 个人信息宪章
+      petitions_and_campaigns:
+        other: 请愿书和活动
       policy:
         other: 策略
       policy_paper:
         other: 政策文件
       press_release:
         other: 新闻稿
+      procurement:
+        other: 采购
       promotional:
         other: 宣传资料
       publication:
         other: 公布
+      publication_scheme:
+        other: 发布计划
       raib_report:
         other: 铁路事故调查局报告
+      recruitment:
+        other: 招聘
       regulation:
         other: 条例
       research:
         other: 研究和分析
       residential_property_tribunal_decision:
         other: 住宅物业法庭判决
+      service:
+        other: 服务
       service_sign_in:
         other: 服务登记
       service_standard_report:
         other: 服务标准报告
+      social_media_use:
+        other: 社交媒体使用
       speaking_notes:
         other: 发言讲稿
       speech:
         other: 演讲
+      staff_update:
+        other: 员工最新消息
       standard:
         other: 标准
       statement_to_parliament:
         other: 议会声明
       statistical_data_set:
         other: 统计数据集
+      statistics:
+        other: 统计数据
       statistics_announcement:
         other: 统计数据发布公告
       statutory_guidance:
@@ -148,12 +208,16 @@ zh:
         other: 参加
       tax_tribunal_decision:
         other: 税务和衡平法法庭裁决
+      terms_of_reference:
+        other: 职责范围
       transcript:
         other: 文字记录
       transparency:
         other: 透明度数据
       utaac_decision:
         other: 行政上诉法庭裁决
+      welsh_language_scheme:
+        other: 威尔士语言计划
       world_location_news_article:
         other: 新闻报道
       world_news_story:

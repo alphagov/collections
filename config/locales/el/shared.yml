@@ -12,6 +12,21 @@ el:
       aaib_report:
         one: Έκθεση του Τμήματος Έρευνας Αεροπορικών Ατυχημάτων
         other: Εκθέσεις του Τμήματος Έρευνας Αεροπορικών Ατυχημάτων
+      about:
+        one: Σχετικά
+        other: Σχετικά
+      about_our_services:
+        one: Σχετικά με τις υπηρεσίες μας
+        other: Σχετικά με τις υπηρεσίες μας
+      access_and_opening:
+        one: Πρόσβαση και άνοιγμα
+        other: Πρόσβαση και άνοιγμα
+      accessible_documents_policy:
+        one: Πολιτική προσβάσιμων εγγράφων
+        other: Πολιτικές προσβάσιμων εγγράφων
+      alert:
+        one: Ειδοποίηση
+        other: Ειδοποιήσεις
       announcement:
         one: Ανακοίνωση
         other: Ανακοινώσεις
@@ -21,9 +36,18 @@ el:
       authored_article:
         one: Σύνταξη άρθρου
         other: Σύνταξη άρθρων
+      blog_post:
+        one: Ανάρτηση ιστολογίου
+        other: Αναρτήσεις ιστολογίου
       business_finance_support_scheme:
         one: Πρόγραμμα στήριξης χρηματοδότησης επιχειρήσεων
         other: Προγράμματα στήριξης χρηματοδότησης επιχειρήσεων
+      campaign:
+        one: Καμπάνια
+        other: Καμπάνιες
+      careers:
+        one: Σταδιοδρομία
+        other: σταδιοδρομία
       case_study:
         one: Μελέτη περίπτωσης
         other: Μελέτες περιπτώσεων
@@ -36,6 +60,9 @@ el:
       coming_soon:
         one: Έρχεται σύντομα
         other: Έρχεται σύντομα
+      complaints_procedure:
+        one: Διαδικασία καταγγελιών
+        other: Διαδικασίες καταγγελιών
       consultation:
         one: Διαβούλευση
         other: Διαβουλεύσεις
@@ -57,6 +84,9 @@ el:
       decision:
         one: Απόφαση
         other: Αποφάσεις
+      detailed_guidance:
+        one: Οδηγία
+        other: Οδηγία
       detailed_guide:
         one: Οδηγία
         other: Οδηγία
@@ -70,17 +100,26 @@ el:
         one: Σχέδιο κειμένου
         other: Σχέδια κειμένων
       drcf_digital_markets_research:
-        one:
-        other:
+        one: 
+        other: 
       drug_safety_update:
         one: Ενημέρωση για την ασφάλεια των φαρμάκων
         other: Ενημερώσεις για την ασφάλεια των φαρμάκων
+      edition:
+        one: Έκδοση
+        other: Εκδόσεις
+      edition_with_appointment:
+        one: Έκδοση με ραντεβού
+        other: Εκδόσεις με ραντεβού
       employment_appeal_tribunal_decision:
         one: Δικαστική απόφαση προσφυγής για την απασχόληση
         other: Δικαστικές αποφάσεις προσφυγής για την απασχόληση
       employment_tribunal_decision:
         one: Απόφαση δικαστηρίου για την απασχόληση
         other: Αποφάσεις δικαστηρίου για την απασχόληση
+      equality_and_diversity:
+        one: Ισότητα και διαφορετικότητα
+        other: Ισότητα και διαφορετικότητα
       esi_fund:
         one: Ευρωπαϊκό Διαρθρωτικό και Επενδυτικό Ταμείο (ESIF)
         other: Ευρωπαϊκά Διαρθρωτικά και Επενδυτικά Ταμεία (ESIF)
@@ -93,6 +132,9 @@ el:
       form:
         one: Φόρμα
         other: Φόρμες
+      generic_edition:
+        one: Γενική έκδοση
+        other: Γενικές εκδόσεις
       government_response:
         one: Κυβερνητική απάντηση
         other: Κυβερνητικές απαντήσεις
@@ -117,12 +159,24 @@ el:
       maib_report:
         one: Έκθεση του τμήματος διερεύνησης θαλάσσιων ατυχημάτων
         other: Εκθέσεις του τμήματος διερεύνησης θαλάσσιων ατυχημάτων
+      manual:
+        one: Εγχειρίδιο
+        other: Εγχειρίδια
       map:
         one: Χάρτης
         other: Χάρτες
+      media_enquiries:
+        one: Ερώτημα μέσων ενημέρωσης
+        other: Ερωτήματα μέσων ενημέρωσης
       medical_safety_alert:
         one: Ειδοποιήσεις και ανακλήσεις για φάρμακα και ιατρικές συσκευές
         other: Ειδοποιήσεις και ανακλήσεις για φάρμακα και ιατρικές συσκευές
+      membership:
+        one: Ιδιότητα μέλους
+        other: Ιδιότητα μέλους
+      modern_slavery_statement:
+        one: 
+        other: 
       national:
         one: Ανακοίνωση εθνικής στατιστικής υπηρεσίας
         other: Ανακοινώσεις εθνικής στατιστικής υπηρεσίας
@@ -138,6 +192,9 @@ el:
       news_story:
         one: Ιστορία ειδήσεων
         other: Ιστορίες ειδήσεων
+      nhs_content:
+        one: Περιεχόμενο Εθνικό Σύστημα Υγείας
+        other: Περιεχόμενο Εθνικό Σύστημα Υγείας
       notice:
         one: Σημείωση
         other: Σημειώσεις
@@ -156,6 +213,18 @@ el:
       oral_statement:
         one: Προφορική δήλωση στη Βουλή
         other: Προφορικές δηλώσεις στη Βουλή
+      our_energy_use:
+        one: Η ενεργειακή μας χρήση
+        other: Η ενεργειακή μας χρήση
+      our_governance:
+        one: Η διακυβέρνησή μας
+        other: Η διακυβέρνησή μας
+      personal_information_charter:
+        one: Πολιτική απορρήτου
+        other: Πολιτικές απορρήτου
+      petitions_and_campaigns:
+        one: Αιτήσεις και καμπάνιες
+        other: Αιτήσεις και καμπάνιες
       policy:
         one: Πολιτική
         other: Πολιτικές
@@ -165,15 +234,24 @@ el:
       press_release:
         one: Δελτίο τύπου
         other: Δελτία τύπου
+      procurement:
+        one: Προμήθεια
+        other: Προμήθεια
       promotional:
         one: Προωθητικό υλικό
         other: Προωθητικό υλικό
       publication:
         one: Δημοσίευση
         other: Δημοσιεύσεις
+      publication_scheme:
+        one: Σχέδιο δημοσίευσης
+        other: Σχέδια δημοσίευσης
       raib_report:
         one: Έκθεση Τμήματος Διερεύνησης Σιδηροδρομικών Ατυχημάτων
         other: Εκθέσεις Τμήματος Διερεύνησης Σιδηροδρομικών Ατυχημάτων
+      recruitment:
+        one: Πρόσληψη
+        other: Πρόσληψη
       regulation:
         one: Κανονισμός λειτουργίας
         other: Κανονισμοί λειτουργίας
@@ -183,18 +261,27 @@ el:
       residential_property_tribunal_decision:
         one: Απόφαση δικαστηρίου διαφορών ιδιοκτησίας
         other: Αποφάσεις δικαστηρίου διαφορών ιδιοκτησίας
+      service:
+        one: Υπηρεσία
+        other: Υπηρεσίες
       service_sign_in:
         one: Σύνδεση υπηρεσίας
         other: Σύνδεση υπηρεσίας
       service_standard_report:
         one: Τυπική έκθεση υπηρεσίας
         other: Τυπικές εκθέσεις υπηρεσίας
+      social_media_use:
+        one: Χρήση κοινωνικών μέσων
+        other: Χρήση κοινωνικών μέσων
       speaking_notes:
         one: Σημειώσεις ομιλίας
         other: Σημειώσεις ομιλίας
       speech:
         one: Ομιλία
         other: Ομιλίες
+      staff_update:
+        one: Ενημέρωση προσωπικού
+        other: Ενημερώσεις προσωπικού
       standard:
         one: Πρότυπο
         other: Πρότυπα
@@ -204,6 +291,9 @@ el:
       statistical_data_set:
         one: Σύνολο στατιστικών δεδομένων
         other: Σύνολα στατιστικών δεδομένων
+      statistics:
+        one: Στατιστική
+        other: Στατιστική
       statistics_announcement:
         one: Ανακοίνωση έκδοσης στατιστικών
         other: Ανακοινώσεις έκδοσης στατιστικών
@@ -216,6 +306,9 @@ el:
       tax_tribunal_decision:
         one: Απόφαση του δικαστηρίου επιμελητηρίου Tax and Chancery
         other: Αποφάσεις του δικαστηρίου επιμελητηρίου Tax and Chancery
+      terms_of_reference:
+        one: Όροι αναφοράς
+        other: Όροι αναφοράς
       transcript:
         one: Αντίγραφο
         other: Αντίγραφα
@@ -225,6 +318,9 @@ el:
       utaac_decision:
         one: Απόφαση του δικαστηρίου διοικητικών προσφυγών
         other: Αποφάσεις του δικαστηρίου διοικητικών προσφυγών
+      welsh_language_scheme:
+        one: Πρόγραμμα Ουαλικής γλώσσας
+        other: Προγράμματα Ουαλικής γλώσσας
       world_location_news_article:
         one: Άρθρο ειδήσεων
         other: Άρθρα ειδήσεων

@@ -12,6 +12,21 @@ tr:
       aaib_report:
         one: Hava Kazaları Soruşturma Şube raporu
         other: Hava Kazaları Soruşturma Şube raporları
+      about:
+        one: Hakkında
+        other: Hakkında
+      about_our_services:
+        one: Hizmetlerimiz hakkında
+        other: Hizmetlerimiz hakkında
+      access_and_opening:
+        one: Giriş ve açılma
+        other: Giriş ve açılma
+      accessible_documents_policy:
+        one: Erişilebilir belge politikası
+        other: Erişilebilir belge politikaları
+      alert:
+        one: Uyarı
+        other: Uyarılar
       announcement:
         one: Duyuru
         other: Duyurular
@@ -21,9 +36,18 @@ tr:
       authored_article:
         one: Yazılı makale
         other: Yazılı makaleler
+      blog_post:
+        one: Blog gönderisi
+        other: Blog gönderileri
       business_finance_support_scheme:
         one: İşletme finans desteği planı
         other: İşletme finans desteği planları
+      campaign:
+        one: Kampanya
+        other: Kampanyalar
+      careers:
+        one: Kariyerler
+        other: kariyerler
       case_study:
         one: Vaka incelemesi
         other: Vaka incelemeleri
@@ -36,6 +60,9 @@ tr:
       coming_soon:
         one: Çok Yakında
         other: Çok Yakında
+      complaints_procedure:
+        one: Şikayet prosedürü
+        other: Şikayet prosedürleri
       consultation:
         one: Danışma
         other: Danışmalar
@@ -57,6 +84,9 @@ tr:
       decision:
         one: Karar
         other: Kararlar
+      detailed_guidance:
+        one: Rehberlik
+        other: Rehberlik
       detailed_guide:
         one: Rehberlik
         other: Rehberlik
@@ -70,17 +100,26 @@ tr:
         one: Taslak metin
         other: Taslak metinler
       drcf_digital_markets_research:
-        one:
-        other:
+        one: 
+        other: 
       drug_safety_update:
         one: Uyuşturucu Güvenliği Bilgilendirmesi
         other: Uyuşturucu Güvenliği Bilgilendirmeleri
+      edition:
+        one: Düzenleme
+        other: Düzenlemeler
+      edition_with_appointment:
+        one: Atamalı düzenleme
+        other: Atamalı düzenlemeler
       employment_appeal_tribunal_decision:
         one: İstihdam temyiz mahkeme kararı
         other: İstihdam temyiz mahkeme kararları
       employment_tribunal_decision:
         one: İstihdam mahkemesi kararı
         other: İstihdam mahkemesi kararları
+      equality_and_diversity:
+        one: Eşitlik ve çeşitlilik
+        other: Eşitlik ve çeşitlilik
       esi_fund:
         one: Avrupa Yapısal ve Kalkınma Fonu (ESIF)
         other: Avrupa Yapısal ve Kalkınma Fonları (ESIF)
@@ -93,6 +132,9 @@ tr:
       form:
         one: Form
         other: Formlar
+      generic_edition:
+        one: Genel düzenleme
+        other: Genel düzenlemeler
       government_response:
         one: Devletin yanıtı
         other: Devletin yanıtları
@@ -117,12 +159,24 @@ tr:
       maib_report:
         one: Deniz Kazası Soruşturma Şube raporu
         other: Deniz Kazası Soruşturma Şube raporları
+      manual:
+        one: Kılavuz
+        other: Kılavuzlar
       map:
         one: Harita
         other: Haritalar
+      media_enquiries:
+        one: Medya sorgusu
+        other: Medya sorguları
       medical_safety_alert:
         one: İlaçlar ve tıbbi cihazlar için uyarılar ve geri çağırmalar
         other: İlaçlar ve tıbbi cihazlar için uyarılar ve geri çağırmalar
+      membership:
+        one: Üyelik
+        other: Üyelik
+      modern_slavery_statement:
+        one: 
+        other: 
       national:
         one: Ulusal İstatistik duyurusu
         other: Ulusal İstatistik duyuruları
@@ -138,6 +192,9 @@ tr:
       news_story:
         one: Haber makalesi
         other: Haber hikayeleri
+      nhs_content:
+        one: Ulusal Sağlık Hizmeti içeriği
+        other: Ulusal Sağlık Hizmeti içeriği
       notice:
         one: Bildirim
         other: Bildirimler
@@ -156,6 +213,18 @@ tr:
       oral_statement:
         one: Parlamentoya sözlü açıklama
         other: Parlamentoya sözlü açıklamalar
+      our_energy_use:
+        one: Enerji kullanımımız
+        other: Enerji kullanımımız
+      our_governance:
+        one: Yönetimimiz
+        other: Yönetimimiz
+      personal_information_charter:
+        one: Kişisel bilgiler tablosu
+        other: Kişisel bilgiler tabloları
+      petitions_and_campaigns:
+        one: Dilekçeler ve kampanyalar
+        other: Dilekçeler ve kampanyalar
       policy:
         one: Politika
         other: Politikalar
@@ -165,15 +234,24 @@ tr:
       press_release:
         one: Basın duyurusu
         other: Basın duyuruları
+      procurement:
+        one: Tedarik
+        other: Tedarik
       promotional:
         one: Promosyon malzemesi
         other: Promosyon malzemesi
       publication:
         one: Yayın
         other: Yayınlar
+      publication_scheme:
+        one: Yayın şeması
+        other: Yayın şemaları
       raib_report:
         one: Demiryolu Kazası Soruşturma Şube raporu
         other: Demiryolu Kazası Soruşturma Şube raporları
+      recruitment:
+        one: İşe alım
+        other: İşe alım
       regulation:
         one: Düzenleme
         other: Düzenlemeler
@@ -183,18 +261,27 @@ tr:
       residential_property_tribunal_decision:
         one: Meskun mahaldeki emlak mahkeme kararı
         other: Meskun mahaldeki emlak mahkeme kararları
+      service:
+        one: Hizmet
+        other: Hizmetler
       service_sign_in:
         one: Hizmet oturum aç
         other: Hizmet oturum aç
       service_standard_report:
         one: Hizmet Standardı Raporu
         other: Hizmet Standardı Raporları
+      social_media_use:
+        one: Sosyal medya kullanımı
+        other: Sosyal medya kullanımı
       speaking_notes:
         one: Konuşma notları
         other: Konuşma notları
       speech:
         one: Konuşma
         other: Konuşmalar
+      staff_update:
+        one: Personel bilgilendirmesi
+        other: Personel bilgilendirmeleri
       standard:
         one: Standart
         other: Standartlar
@@ -204,6 +291,9 @@ tr:
       statistical_data_set:
         one: İstatistiki veri kümesi
         other: İstatistiki veri kümeleri
+      statistics:
+        one: İstatistikler
+        other: İstatistikler
       statistics_announcement:
         one: İstatistik açıklama duyurusu
         other: İstatistik açıklama duyuruları
@@ -216,6 +306,9 @@ tr:
       tax_tribunal_decision:
         one: Vergi ve Temyiz mahkemesi kararı
         other: Vergi ve Temyiz mahkemesi kararları
+      terms_of_reference:
+        one: Referans hükümleri
+        other: Referans hükümleri
       transcript:
         one: Transkript
         other: Transkriptler
@@ -225,6 +318,9 @@ tr:
       utaac_decision:
         one: İdari temyiz mahkemesi kararı
         other: İdari temyiz mahkemesi kararları
+      welsh_language_scheme:
+        one: Galler dili şeması
+        other: Galler dili şemaları
       world_location_news_article:
         one: Haber makalesi
         other: Haber makaleleri

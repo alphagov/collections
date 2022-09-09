@@ -12,6 +12,21 @@ az:
       aaib_report:
         one: Təyyarə qəzalarının araşdırılması üzrə şöbə hesabatı
         other: Təyyarə qəzalarının araşdırılması üzrə şöbə hesabatları
+      about:
+        one: Haqqında
+        other: Haqqında
+      about_our_services:
+        one: Xidmətlərimiz haqqında
+        other: Xidmətlərimiz haqqında
+      access_and_opening:
+        one: Giriş və iş saatları
+        other: Giriş və iş saatları
+      accessible_documents_policy:
+        one: Əlçatan sənədlər siyasəti
+        other: Əlçatan sənədlər siyasətləri
+      alert:
+        one: Təhlükə siqnalı
+        other: Təhlükə siqnalları
       announcement:
         one: Elan
         other: Elanlar
@@ -21,9 +36,18 @@ az:
       authored_article:
         one: Müəlliflik edilmiş məqalə
         other: Müəlliflik edilmiş məqalələr
+      blog_post:
+        one: Bloq-post
+        other: Bloq-postlar
       business_finance_support_scheme:
         one: Biznesin maliyələşdirilməsinə dəstək sxemi
         other: Biznesin maliyələşdirilməsinə dəstək sxemləri
+      campaign:
+        one: Kampaniya
+        other: Kampaniyalar
+      careers:
+        one: Karyeralar
+        other: karyeralar
       case_study:
         one: Nümunə üzrə araşdırma
         other: Nümunə üzrə araşdırmalar
@@ -36,6 +60,9 @@ az:
       coming_soon:
         one: Tezliklə
         other: Tezliklə
+      complaints_procedure:
+        one: Şikayət etmə proseduru
+        other: Şikayət etmə prosedurları
       consultation:
         one: Məsləhətləşmə
         other: Məsləhətləşmələr
@@ -57,6 +84,9 @@ az:
       decision:
         one: Qərar
         other: Qərarlar
+      detailed_guidance:
+        one: Göstəriş
+        other: Göstəriş
       detailed_guide:
         one: Göstəriş
         other: Göstəriş
@@ -70,17 +100,26 @@ az:
         one: Hazırlanan mətn
         other: Hazırlanan mətnlər
       drcf_digital_markets_research:
-        one:
-        other:
+        one: 
+        other: 
       drug_safety_update:
         one: Dərman təhlükəsizliyi üzrə yeniləmə
         other: Dərman təhlükəsizliyi üzrə yeniləmələr
+      edition:
+        one: Buraxılış
+        other: Buraxılışlar
+      edition_with_appointment:
+        one: Təyinatlı buraxılış
+        other: Təyinatlı buraxılışlar
       employment_appeal_tribunal_decision:
         one: İş şikayətləri üzrə məhkəmə kollegiyası qərarı
         other: İş şikayətləri üzrə məhkəmə kollegiyası qərarları
       employment_tribunal_decision:
         one: İşlə əlaqəli məhkəmə kollegiyası qərarı
         other: İşlə əlaqəli məhkəmə kollegiyası qərarları
+      equality_and_diversity:
+        one: Bərabərlik və fərqlilik
+        other: Bərabərlik və fərqlilik
       esi_fund:
         one: Avropa struktur və investisiya fondu (ESIF)
         other: Avropa struktur və investisiya fondları (ESIF)
@@ -93,6 +132,9 @@ az:
       form:
         one: Forma
         other: Formalar
+      generic_edition:
+        one: Ümumi buraxılış
+        other: Ümumi buraxılışlar
       government_response:
         one: Hökumətin reaksiyası
         other: Hökumətin reaksiyaları
@@ -117,12 +159,24 @@ az:
       maib_report:
         one: Dəniz qəzalarının araşdırılması üzrə şöbə hesabatı
         other: Dəniz qəzalarının araşdırılması üzrə şöbə hesabatları
+      manual:
+        one: Təlimat
+        other: Təlimatlar
       map:
         one: Xəritə
         other: Xəritələr
+      media_enquiries:
+        one: Kütləvi informasiya vasitələri ilə əlaqələr şöbəsi
+        other: Kütləvi informasiya vasitələrilə əlaqələr şöbəsi
       medical_safety_alert:
         one: Dərman və tibbi avadanlıq üçün xəbərdarlıq bildirişləri və geri çağırmalar
         other: Dərman və tibbi avadanlıq üçün xəbərdarlıq bildirişləri və geri çağırmalar
+      membership:
+        one: Üzvlük
+        other: Üzvlük
+      modern_slavery_statement:
+        one: 
+        other: 
       national:
         one: Milli statistika elanı
         other: Milli statistika elanları
@@ -138,6 +192,9 @@ az:
       news_story:
         one: Xəbərləri əks etdirən material
         other: Xəbərləri əks etdirən materiallar
+      nhs_content:
+        one: Milli səhiyyə xidməti məzmunu
+        other: Milli səhiyyə xidməti məzmunu
       notice:
         one: Bildiriş
         other: Bildirişlər
@@ -156,6 +213,18 @@ az:
       oral_statement:
         one: Parlamentə şifahi müraciət
         other: Parlamentə şifahi müraciətlər
+      our_energy_use:
+        one: Enerjidən istifadə etməyimiz
+        other: Enerjidən istifadə etməyimiz
+      our_governance:
+        one: İdarəetməmiz
+        other: İdarəetməmiz
+      personal_information_charter:
+        one: Məxfilik siyasəti
+        other: Məxfilik siyasətləri
+      petitions_and_campaigns:
+        one: Müraciətlər və kampaniyalar
+        other: Müraciətlər və kampaniyalar
       policy:
         one: Siyasət
         other: Siyasətlər
@@ -165,15 +234,24 @@ az:
       press_release:
         one: Press-reliz
         other: Press-relizlər
+      procurement:
+        one: Təchizat
+        other: Təchizat
       promotional:
         one: Reklam materialı
         other: Reklam materialı
       publication:
         one: Nəşr
         other: Nəşrlər
+      publication_scheme:
+        one: Dərcetmə sxemi
+        other: Dərcetmə sxemləri
       raib_report:
         one: Dəmir yolu qəzalarının araşdırılması üzrə şöbə hesabatı
         other: Dəmir yolu qəzalarının araşdırılması üzrə şöbə hesabatları
+      recruitment:
+        one: İşəgötürmə
+        other: İşəgötürmə
       regulation:
         one: Tənzimləmə
         other: Tənzimləmələr
@@ -183,18 +261,27 @@ az:
       residential_property_tribunal_decision:
         one: Yaşayış üçün istifadə edilən mülk üzrə məhkəmə kollegiyası qərarı
         other: Yaşayış üçün istifadə edilən mülk üzrə məhkəmə kollegiyası qərarları
+      service:
+        one: Xidmət
+        other: Xidmətlər
       service_sign_in:
         one: Xidmət üçün sistemə daxil olma
         other: Xidmət üçün sistemə daxil olma
       service_standard_report:
         one: Xidmət standartı üzrə hesabat
         other: Xidmət standartı üzrə hesabatlar
+      social_media_use:
+        one: Sosial imediadan istifadə
+        other: Sosial imediadan istifadə
       speaking_notes:
         one: Şifahi qeydlər
         other: Şifahi qeydlər
       speech:
         one: Nitq
         other: Nitqlər
+      staff_update:
+        one: İşçilərlə bağlı dəyişiklik
+        other: İşçilərlə bağlı dəyişikliklər
       standard:
         one: Standart
         other: Standartlar
@@ -204,6 +291,9 @@ az:
       statistical_data_set:
         one: Statistik məlumat paketi
         other: Statistik məlumat paketləri
+      statistics:
+        one: Statistika
+        other: Statistika
       statistics_announcement:
         one: Statistik məlumat elanı
         other: Statistik məlumat elanları
@@ -216,6 +306,9 @@ az:
       tax_tribunal_decision:
         one: Vergi və dəftərxana üzrə məhkəmə kollegiyası qərarı
         other: Vergi və dəftərxana üzrə məhkəmə kollegiyası qərarları
+      terms_of_reference:
+        one: Başlanğıc şərtlər
+        other: Başlanğıc şərtlər
       transcript:
         one: Çıxarış
         other: Çıxarışlar
@@ -225,6 +318,9 @@ az:
       utaac_decision:
         one: İnzibati şikayətlər üzrə məhkəmə kollegiyası qərarı
         other: İnzibati şikayətlər üzrə məhkəmə kollegiyası qərarları
+      welsh_language_scheme:
+        one: Vall dil sxemi
+        other: Vall dil sxemləri
       world_location_news_article:
         one: Xəbərləri əks etdirən məqalə
         other: Xəbərləri əks etdirən məqalələr

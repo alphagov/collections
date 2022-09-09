@@ -12,6 +12,21 @@ bn:
       aaib_report:
         one: বিমান দুর্ঘটনা তদন্ত শাখা প্রতিবেদন
         other: বিমান দুর্ঘটনা তদন্ত শাখা প্রতিবেদনসমূহ
+      about:
+        one: পরিচিতি
+        other: পরিচিতি
+      about_our_services:
+        one: আমাদের পরিষেবাসমূহ সম্বন্ধে
+        other: আমাদের পরিষেবাসমূহ সম্বন্ধে
+      access_and_opening:
+        one: প্রবেশ ও খোলা
+        other: প্রবেশ ও খোলা
+      accessible_documents_policy:
+        one: প্রবেশযোগ্য নথিপত্র সম্পর্কিত নীতিমালা
+        other: প্রবেশযোগ্য নথিপত্র সম্পর্কিত নীতিমালা
+      alert:
+        one: অ্যালার্ট
+        other: অ্যালার্টসমূহ
       announcement:
         one: ঘোষণা
         other: ঘোষণা
@@ -21,9 +36,18 @@ bn:
       authored_article:
         one: লেখকের উৎস সহ নিবন্ধ
         other: লেখকের উৎস সহ নিবন্ধসমূহ
+      blog_post:
+        one: ব্লগ পোস্ট
+        other: ব্লগ পোস্টসমূহ
       business_finance_support_scheme:
         one: ব্যবসায়িক অর্থায়ন সহায়তা স্কিম
         other: ব্যবসায়িক অর্থায়ন সহায়তা স্কিমসমূহ
+      campaign:
+        one: ক্যাম্পেইন
+        other: ক্যাম্পেইনসমূহ
+      careers:
+        one: পেশাজীবন
+        other: পেশাজীবন
       case_study:
         one: কেস স্টাডি
         other: কেস স্টাডিসমূহ
@@ -36,6 +60,9 @@ bn:
       coming_soon:
         one: শীঘ্রই আসছে
         other: শীঘ্রই আসছে
+      complaints_procedure:
+        one: অভিযোগ দাখিলের প্রক্রিয়া
+        other: অভিযোগ দাখিলের প্রক্রিয়াসমূহ
       consultation:
         one: পরামর্শ
         other: পরামর্শ
@@ -57,6 +84,9 @@ bn:
       decision:
         one: সিদ্ধান্ত
         other: সিদ্ধান্তসমূহ
+      detailed_guidance:
+        one: পরিচালনা
+        other: পরিচালনা
       detailed_guide:
         one: পরিচালনা
         other: পরিচালনা
@@ -70,17 +100,26 @@ bn:
         one: খসড়া টেক্সট
         other: খসড়া টেক্সটসমূহ
       drcf_digital_markets_research:
-        one:
-        other:
+        one: 
+        other: 
       drug_safety_update:
         one: ঔষধের নিরাপত্তা সম্পর্কিত আপডেট
         other: ঔষধের নিরাপত্তা সম্পর্কিত আপডেট
+      edition:
+        one: সংস্করণ
+        other: সংস্করণসমূহ
+      edition_with_appointment:
+        one: অ্যাপয়েন্টমেন্টের সংস্করণ
+        other: অ্যাপয়েন্টমেন্টের সংস্করণসমূহ
       employment_appeal_tribunal_decision:
         one: চাকরির আপীল ট্রাইব্যুনালের সিদ্ধান্ত
         other: চাকরির আপীল ট্রাইব্যুনালের সিদ্ধান্তসমূহ
       employment_tribunal_decision:
         one: চাকরির ট্রাইব্যুনালের সিদ্ধান্ত
         other: চাকরির ট্রাইব্যুনালের সিদ্ধান্তসমূহ
+      equality_and_diversity:
+        one: সমতা এবং বৈচিত্র্য
+        other: সমতা এবং বৈচিত্র্য
       esi_fund:
         one: ইউরোপিয়ান স্ট্রাকচারাল অ্যান্ড ইনভেস্টমেন্ট ফান্ড (ESIF)
         other: ইউরোপিয়ান স্ট্রাকচারাল অ্যান্ড ইনভেস্টমেন্ট ফান্ডসমূহ (ESIF)
@@ -93,6 +132,9 @@ bn:
       form:
         one: ফর্ম
         other: ফর্মসমূহ
+      generic_edition:
+        one: সাধারণ সংস্করণ
+        other: সাধারণ সংস্করণসমূহ
       government_response:
         one: সরকারের সাড়া
         other: সরকারের সাড়া
@@ -117,12 +159,24 @@ bn:
       maib_report:
         one: সামুদ্রিক দুর্ঘটনা তদন্ত শাখা প্রতিবেদন
         other: সামুদ্রিক দুর্ঘটনা তদন্ত শাখা প্রতিবেদনসমূহ
+      manual:
+        one: ম্যানুয়াল
+        other: ম্যানুয়ালসমূহ
       map:
         one: মানচিত্র
         other: মানচিত্রসমূহ
+      media_enquiries:
+        one: মিডিয়ার অনুসন্ধান
+        other: মিডিয়ার অনুসন্ধানসমূহ
       medical_safety_alert:
         one: ঔষধপত্র ও মেডিক্যাল ডিভাইস সম্পর্কে অ্যালার্ট ও রিকল
         other: ঔষধপত্র ও মেডিক্যাল ডিভাইস সম্পর্কে অ্যালার্ট ও রিকল
+      membership:
+        one: সদস্যপদ
+        other: সদস্যপদ
+      modern_slavery_statement:
+        one: 
+        other: 
       national:
         one: জাতীয় পরিসংখ্যানের ঘোষণা
         other: জাতীয় পরিসংখ্যানের ঘোষণাসমূহ
@@ -138,6 +192,9 @@ bn:
       news_story:
         one: সংবাদের বিষয়
         other: সংবাদের বিষয়াবলী
+      nhs_content:
+        one: ন্যাশনাল হেলথ সার্ভিস-এর বিষয়বস্তু
+        other: ন্যাশনাল হেলথ সার্ভিস-এর বিষয়বস্তু
       notice:
         one: বিজ্ঞপ্তি
         other: বিজ্ঞপ্তিসমূহ
@@ -156,6 +213,18 @@ bn:
       oral_statement:
         one: সংসদে মৌখিক বিবৃতি
         other: সংসদে মৌখিক বিবৃতিসমূহ
+      our_energy_use:
+        one: আমাদের বিদ্যুৎ ব্যবহার
+        other: আমাদের বিদ্যুৎ ব্যবহার
+      our_governance:
+        one: আমাদের শাসন
+        other: আমাদের শাসন
+      personal_information_charter:
+        one: ব্যক্তিগত তথ্যের সনদ
+        other: ব্যক্তিগত তথ্যের সনদসমূহ
+      petitions_and_campaigns:
+        one: পিটিশন ও ক্যাম্পেইন
+        other: পিটিশন ও ক্যাম্পেইন
       policy:
         one: নীতিমালা
         other: নীতিমালা
@@ -165,15 +234,24 @@ bn:
       press_release:
         one: প্রেস বিজ্ঞপ্তি
         other: প্রেস বিজ্ঞপ্তিসমূহ
+      procurement:
+        one: ক্রয়
+        other: ক্রয়
       promotional:
         one: প্রোমোশন সম্পর্কিত উপকরণ
         other: প্রোমোশন সম্পর্কিত উপকরণ
       publication:
         one: প্রকাশনা
         other: প্রকাশনাসমূহ
+      publication_scheme:
+        one: প্রকাশনা স্কিম
+        other: প্রকাশনা স্কিমসমূহ
       raib_report:
         one: রেল দুর্ঘটনা তদন্ত শাখা প্রতিবেদন
         other: রেল দুর্ঘটনা তদন্ত শাখা প্রতিবেদনসমূহ
+      recruitment:
+        one: নিয়োগ
+        other: নিয়োগ
       regulation:
         one: বিধিবিধান
         other: বিধিবিধান
@@ -183,18 +261,27 @@ bn:
       residential_property_tribunal_decision:
         one: আবাসিক সম্পত্তির ট্রাইব্যুনালের সিদ্ধান্ত
         other: আবাসিক সম্পত্তির ট্রাইব্যুনালের সিদ্ধান্তসমূহ
+      service:
+        one: পরিষেবা
+        other: পরিষেবা
       service_sign_in:
         one: পরিষেবায় সাইন ইন
         other: পরিষেবায় সাইন ইন
       service_standard_report:
         one: পরিষেবার স্ট্যান্ডার্ডের প্রতিবেদন
         other: পরিষেবার স্ট্যান্ডার্ডের প্রতিবেদনসমূহ
+      social_media_use:
+        one: সামাজিক যোগাযোগ মাধ্যম ব্যবহার
+        other: সামাজিক যোগাযোগ মাধ্যম ব্যবহার
       speaking_notes:
         one: বক্তার টীকা
         other: বক্তার টীকা
       speech:
         one: বক্তব্য
         other: বক্তব্যসমূহ
+      staff_update:
+        one: স্টাফের হালনাগাদ
+        other: স্টাফের হালনাগাদসমূহ
       standard:
         one: স্ট্যান্ডার্ড
         other: স্ট্যান্ডার্ডসমূহ
@@ -204,6 +291,9 @@ bn:
       statistical_data_set:
         one: পরিসংখ্যানগত তথ্য সংকলন
         other: পরিসংখ্যানগত তথ্য সংকলন
+      statistics:
+        one: পরিসংখ্যান
+        other: পরিসংখ্যান
       statistics_announcement:
         one: পরিসংখ্যান প্রকাশের ঘোষণা
         other: পরিসংখ্যান প্রকাশের ঘোষণাসমূহ
@@ -216,6 +306,9 @@ bn:
       tax_tribunal_decision:
         one: ট্যাক্স ও চ্যান্সেরি ট্রাইব্যুনালের সিদ্ধান্ত
         other: ট্যাক্স ও চ্যান্সেরি ট্রাইব্যুনালের সিদ্ধান্তসমূহ
+      terms_of_reference:
+        one: কার্যক্রমের শর্তাবলী
+        other: কার্যক্রমের শর্তাবলী
       transcript:
         one: ট্রানস্ক্রিপ্ট
         other: ট্রানস্ক্রিপ্টসমূহ
@@ -225,6 +318,9 @@ bn:
       utaac_decision:
         one: প্রশাসনিক আপীল ট্রাইব্যুনালের সিদ্ধান্ত
         other: প্রশাসনিক আপীল ট্রাইব্যুনালের সিদ্ধান্তসমূহ
+      welsh_language_scheme:
+        one: ওয়েলশ ভাষার স্কিম
+        other: ওয়েলশ ভাষার স্কিমসমূহ
       world_location_news_article:
         one: সংবাদের নিবন্ধ
         other: সংবাদের নিবন্ধসমূহ

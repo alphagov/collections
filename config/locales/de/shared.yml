@@ -12,6 +12,21 @@ de:
       aaib_report:
         one: Untersuchungsbericht der Abteilung für Flugunfälle
         other: Untersuchungsberichte der Abteilung für Flugunfälle
+      about:
+        one: Über
+        other: Über
+      about_our_services:
+        one: Über unsere Dienstleistungen
+        other: Über unsere Dienstleistungen
+      access_and_opening:
+        one: Zugang und Öffnungszeiten
+        other: Zugang und Öffnungszeiten
+      accessible_documents_policy:
+        one: Richtlinie für zugängliche Dokumente
+        other: Richtlinien für zugängliche Dokumente
+      alert:
+        one: Warnung
+        other: Warnungen
       announcement:
         one: Ankündigung
         other: Ankündigungen
@@ -21,9 +36,18 @@ de:
       authored_article:
         one: Namensartikel
         other: Namensartikel
+      blog_post:
+        one: Blogbeitrag
+        other: Blogbeiträge
       business_finance_support_scheme:
         one: Förderprogramm zur Unternehmensfinanzierung
         other: Förderprogramme zur Unternehmensfinanzierung
+      campaign:
+        one: Kampagne
+        other: Kampagnen
+      careers:
+        one: Karrieren
+        other: karrieren
       case_study:
         one: Fallstudie
         other: Fallstudien
@@ -36,6 +60,9 @@ de:
       coming_soon:
         one: Demnächst verfügbar
         other: Demnächst verfügbar
+      complaints_procedure:
+        one: Beschwerdeverfahren
+        other: Beschwerdeverfahren
       consultation:
         one: Beratung
         other: Beratungen
@@ -57,6 +84,9 @@ de:
       decision:
         one: Entscheidung
         other: Entscheidungen
+      detailed_guidance:
+        one: Detaillierte Hinweise
+        other: Detaillierte Hinweise
       detailed_guide:
         one: Detaillierte Hinweise
         other: Detaillierte Hinweise
@@ -70,17 +100,26 @@ de:
         one: Entwurf
         other: Entwürfe
       drcf_digital_markets_research:
-        one:
-        other:
+        one: 
+        other: 
       drug_safety_update:
         one: Aktualisierung zur Arzneimittelsicherheit
         other: Aktualisierungen zur Arzneimittelsicherheit
+      edition:
+        one: Ausgabe
+        other: Ausgaben
+      edition_with_appointment:
+        one: Ausgabe mit Termin
+        other: Ausgaben mit Termin
       employment_appeal_tribunal_decision:
         one: Berufungsentscheidung des Arbeitsgerichtes
         other: Berufungsentscheidungen des Arbeitsgerichtes
       employment_tribunal_decision:
         one: Entscheidung des Arbeitsgerichtes
         other: Entscheidungen des Arbeitsgerichtes
+      equality_and_diversity:
+        one: Gleichstellung und Vielfalt
+        other: Gleichstellung und Vielfalt
       esi_fund:
         one: Europäischer Struktur- und Investitionsfonds (ESIF)
         other: Europäische Struktur- und Investitionsfonds (ESIF)
@@ -93,6 +132,9 @@ de:
       form:
         one: Formular
         other: Formulare
+      generic_edition:
+        one: Allgemeine Ausgabe
+        other: Allgemeine Ausgaben
       government_response:
         one: Antwort der Regierung
         other: Antworten der Regierung
@@ -117,12 +159,25 @@ de:
       maib_report:
         one: Untersuchungsbericht der Abteilung für Seeunfälle
         other: Untersuchungsberichte der Abteilung für Seeunfälle
+      manual:
+        one: Handbuch
+        other: Handbücher
       map:
         one: Karte
         other: Karten
+      media_enquiries:
+        one: Medienanfrage
+        other: Medienanfragen
       medical_safety_alert:
         one: Warnmeldungen und Rückrufaktionen für Arzneimittel und medizinische Geräte
-        other: Warnmeldungen und Rückrufaktionen für Arzneimittel und medizinische Geräte
+        other: Warnmeldungen und Rückrufaktionen für Arzneimittel und medizinische
+          Geräte
+      membership:
+        one: Mitgliedschaft
+        other: Mitgliedschaft
+      modern_slavery_statement:
+        one: 
+        other: 
       national:
         one: Veröffentlichung der Nationalen Statistik
         other: Veröffentlichungen der Nationalen Statistik
@@ -138,6 +193,9 @@ de:
       news_story:
         one: Meldung
         other: Meldungen
+      nhs_content:
+        one: Inhalt des nationalen Gesundheitsdienstes
+        other: Inhalt des nationalen Gesundheitsdienstes
       notice:
         one: Hinweis
         other: Hinweise
@@ -156,6 +214,18 @@ de:
       oral_statement:
         one: Mündliche Erklärung vor dem Parlament
         other: Mündliche Erklärungen vor dem Parlament
+      our_energy_use:
+        one: Unser Energieverbrauch
+        other: Unser Energieverbrauch
+      our_governance:
+        one: Unsere Verwaltung
+        other: Unsere Verwaltung
+      personal_information_charter:
+        one: Charta der personenbezogenen Daten
+        other: Charter der personenbezogenen Daten
+      petitions_and_campaigns:
+        one: Petitionen und Kampagnen
+        other: Petitionen und Kampagnen
       policy:
         one: Richtlinie
         other: Richtlinien
@@ -165,15 +235,24 @@ de:
       press_release:
         one: Pressemitteilung
         other: Pressemitteilungen
+      procurement:
+        one: Beschaffung
+        other: Beschaffung
       promotional:
         one: Werbematerial
         other: Werbematerial
       publication:
         one: Veröffentlichung
         other: Veröffentlichungen
+      publication_scheme:
+        one: Veröffentlichungsschema
+        other: Veröffentlichungsschemata
       raib_report:
         one: Unfalluntersuchungsbericht der Abteilung für Eisenbahnunfälle
         other: Unfalluntersuchungsberichte der Abteilung für Eisenbahnunfälle
+      recruitment:
+        one: Personalbeschaffung
+        other: Personalbeschaffung
       regulation:
         one: Regulierung
         other: Regulierungen
@@ -183,18 +262,27 @@ de:
       residential_property_tribunal_decision:
         one: Gerichtsentscheidung über Wohneigentum
         other: Gerichtsentscheidungen über Wohneigentum
+      service:
+        one: Dienstleistung
+        other: Dienstleistungen
       service_sign_in:
         one: Dienstanmeldungen
         other: Dienstanmeldungen
       service_standard_report:
         one: Dienststandardbericht
         other: Dienststandardberichte
+      social_media_use:
+        one: Nutzung sozialer Medien
+        other: Nutzung sozialer Medien
       speaking_notes:
         one: Redenotizen
         other: Redenotizen
       speech:
         one: Rede
         other: Reden
+      staff_update:
+        one: Personal Update
+        other: Personal Update
       standard:
         one: Standard
         other: Standards
@@ -204,6 +292,9 @@ de:
       statistical_data_set:
         one: Statistischer Datensatz
         other: Statistische Datensätze
+      statistics:
+        one: Statistiken
+        other: Statistiken
       statistics_announcement:
         one: Veröffentlichung von Statistikinformationen
         other: Veröffentlichungen von Statistikinformationen
@@ -216,6 +307,9 @@ de:
       tax_tribunal_decision:
         one: Gerichtsentscheidung des Steuer- und Kanzleigerichtes
         other: Gerichtsentscheidungen des Steuer- und Kanzleigerichtes
+      terms_of_reference:
+        one: Aufgabenbereich
+        other: Aufgabenbereich
       transcript:
         one: Transkript
         other: Transkripte
@@ -225,6 +319,9 @@ de:
       utaac_decision:
         one: Entscheidung des Verwaltungsberufungsgerichts
         other: Entscheidungen des Verwaltungsberufungsgerichts
+      welsh_language_scheme:
+        one: Walisisches Sprachschema
+        other: Walisische Sprachschemata
       world_location_news_article:
         one: Nachrichtenartikel
         other: Nachrichtenartikel

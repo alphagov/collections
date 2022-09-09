@@ -12,6 +12,21 @@ lv:
       aaib_report:
         one: Aviosatiksmes negadījumu izmeklēšanas nodaļas ziņojums
         other: Aviosatiksmes negadījumu izmeklēšanas nodaļas ziņojumi
+      about:
+        one: Par
+        other: Par
+      about_our_services:
+        one: Par mūsu pakalpojumiem
+        other: Par mūsu pakalpojumiem
+      access_and_opening:
+        one: Piekļuve un atvēršana
+        other: Piekļuve un atvēršana
+      accessible_documents_policy:
+        one: Pieejamo dokumentu politika
+        other: Pieejamo dokumentu politikas
+      alert:
+        one: Brīdinājums
+        other: Brīdinājumi
       announcement:
         one: Paziņojums
         other: Paziņojumi
@@ -21,9 +36,18 @@ lv:
       authored_article:
         one: Autora raksts
         other: Autora raksti
+      blog_post:
+        one: Emuāra ziņa
+        other: Emuāra ziņas
       business_finance_support_scheme:
         one: Biznesa finanšu atbalsta shēma
         other: Biznesa finanšu atbalsta shēmas
+      campaign:
+        one: Kampaņa
+        other: Kampaņas
+      careers:
+        one: Karjera
+        other: karjeras
       case_study:
         one: Piemērs
         other: Piemēri
@@ -36,6 +60,9 @@ lv:
       coming_soon:
         one: Drīzumā
         other: Drīzumā
+      complaints_procedure:
+        one: Sūdzību procedūra
+        other: Sūdzību procedūras
       consultation:
         one: Konsultēšana
         other: Konsultācijas
@@ -57,6 +84,9 @@ lv:
       decision:
         one: Lēmums
         other: Lēmumi
+      detailed_guidance:
+        one: Detalizētas norādes
+        other: Detalizētas norādes
       detailed_guide:
         one: Detalizētas norādes
         other: Detalizētas norādes
@@ -70,17 +100,26 @@ lv:
         one: Teksta uzmetums
         other: Teksta uzmetumi
       drcf_digital_markets_research:
-        one:
-        other:
+        one: 
+        other: 
       drug_safety_update:
         one: Zāļu drošības atjauninājums
         other: Zāļu drošības atjauninājumi
+      edition:
+        one: Izdevums
+        other: Izdevumi
+      edition_with_appointment:
+        one: Izdevums ar tikšanos
+        other: Izdevumi ar tikšanos
       employment_appeal_tribunal_decision:
         one: Darba lietu apelācijas tiesas lēmums
         other: Darba lietu apelācijas tiesas lēmumi
       employment_tribunal_decision:
         one: Darba lietu tiesas lēmums
         other: Darba lietu tiesas lēmumi
+      equality_and_diversity:
+        one: Vienlīdzība un dažādība
+        other: Vienlīdzība un dažādība
       esi_fund:
         one: Eiropas strukturālais un investīciju fonds (ESIF)
         other: Eiropas strukturālie un investīciju fondi (ESIF)
@@ -93,6 +132,9 @@ lv:
       form:
         one: Forma
         other: Formas
+      generic_edition:
+        one: Vispārējs izdevums
+        other: Vispārēji izdevumi
       government_response:
         one: Valdības atbilde
         other: Valdības atbildes
@@ -117,12 +159,24 @@ lv:
       maib_report:
         one: Kuģniecības negadījumu izmeklēšanas nodaļas ziņojums
         other: Kuģniecības negadījumu izmeklēšanas nodaļas ziņojumi
+      manual:
+        one: Rokasgrāmata
+        other: Rokasgrāmatas
       map:
         one: Karte
         other: Kartes
+      media_enquiries:
+        one: Plašsaziņas līdzekļu pieprasījums
+        other: Plašsaziņas līdzekļu pieprasījumi
       medical_safety_alert:
         one: Brīdinājumi un zāļu un medicīnas ierīču atsaukšana
         other: Brīdinājumi un zāļu un medicīnas ierīču atsaukšana
+      membership:
+        one: Dalība
+        other: Dalība
+      modern_slavery_statement:
+        one: 
+        other: 
       national:
         one: Paziņojums par valsts statistiku
         other: Paziņojumi par valsts statistiku
@@ -138,6 +192,9 @@ lv:
       news_story:
         one: Ziņa
         other: Ziņas
+      nhs_content:
+        one: Nacionālā Veselības dienesta saturs
+        other: Nacionālā Veselības dienesta saturs
       notice:
         one: Paziņojums
         other: Paziņojumi
@@ -156,6 +213,18 @@ lv:
       oral_statement:
         one: Mutisks paziņojums parlamentam
         other: Mutiski paziņojumi parlamentam
+      our_energy_use:
+        one: Enerģijas lietojums
+        other: Enerģijas lietojums
+      our_governance:
+        one: Pārvaldība
+        other: Pārvaldība
+      personal_information_charter:
+        one: Personas datu harta
+        other: Personas datu hartas
+      petitions_and_campaigns:
+        one: Petīcijas un kampaņas
+        other: Petīcijas un kampaņas
       policy:
         one: Darbības joma
         other: Darbības jomas
@@ -165,15 +234,24 @@ lv:
       press_release:
         one: Paziņojums presei
         other: Paziņojumi presei
+      procurement:
+        one: Iepirkums
+        other: Iepirkums
       promotional:
         one: Reklāmas materiāls
         other: Reklāmas materiāli
       publication:
         one: Publikācija
         other: Publikācijas
+      publication_scheme:
+        one: Publikācijas shēma
+        other: Publikāciju shēma
       raib_report:
         one: Dzelzceļa negadījumu izmeklēšanas nodaļas ziņojums
         other: Dzelzceļa negadījumu izmeklēšanas nodaļas ziņojumi
+      recruitment:
+        one: Pieņemšana darbā
+        other: Pieņemšana darbā
       regulation:
         one: Regula
         other: Regulas
@@ -183,18 +261,27 @@ lv:
       residential_property_tribunal_decision:
         one: Mājokļu īpašuma lietu tiesas lēmums
         other: Mājokļu īpašuma lietu tiesas lēmumi
+      service:
+        one: Pakalpojums
+        other: Pakalpojumi
       service_sign_in:
         one: Pierakstīšanās pakalpojumā
         other: Pierakstīšanās pakalpojumā
       service_standard_report:
         one: Pakalpojuma standarta ziņojums
         other: Pakalpojuma standarta ziņojumi
+      social_media_use:
+        one: Sociālo mediju lietojums
+        other: Sociālo mediju lietojums
       speaking_notes:
         one: Runas piezīmes
         other: Runas piezīmes
       speech:
         one: Runa
         other: Runas
+      staff_update:
+        one: Personāla atjauninājums
+        other: Personāla atjauninājumi
       standard:
         one: Standarts
         other: Standarti
@@ -204,6 +291,9 @@ lv:
       statistical_data_set:
         one: Statistiskas datu kopums
         other: Statistikas datu kopumi
+      statistics:
+        one: Statistika
+        other: Statistika
       statistics_announcement:
         one: Statistikas publiskošanas paziņojums
         other: Statistikas publiskošanas paziņojumi
@@ -216,6 +306,9 @@ lv:
       tax_tribunal_decision:
         one: Nodokļu un Kanclera tiesas lēmums
         other: Nodokļu un Kanclera tiesas lēmumi
+      terms_of_reference:
+        one: Darba uzdevums
+        other: Darba uzdevumi
       transcript:
         one: Noraksts
         other: Noraksti
@@ -225,6 +318,9 @@ lv:
       utaac_decision:
         one: Administratīvo lietu apelācijas tiesas lēmums
         other: Administratīvo lietu apelācijas tiesas lēmumi
+      welsh_language_scheme:
+        one: Velsiešu valodas shēma
+        other: Velsiešu valodas shēma
       world_location_news_article:
         one: Raksts
         other: Raksti

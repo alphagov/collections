@@ -11,14 +11,30 @@ vi:
     schema_name:
       aaib_report:
         other: Báo cáo của Chi nhánh Điều tra Tai nạn Hàng không
+      about:
+        other: Giới thiệu
+      about_our_services:
+        other: Giới thiệu về các dịch vụ của chúng tôi
+      access_and_opening:
+        other: Làm việc và mở cửa
+      accessible_documents_policy:
+        other: Chính sách tài liệu có thể truy cập
+      alert:
+        other: Cảnh báo
       announcement:
         other: Thông báo
       asylum_support_decision:
         other: Quyết định của tòa án hỗ trợ tị nạn
       authored_article:
         other: Bài viết có tác giả
+      blog_post:
+        other: Bài viết trên blog
       business_finance_support_scheme:
         other: Kế hoạch hỗ trợ tài chính doanh nghiệp
+      campaign:
+        other: Chiến dịch
+      careers:
+        other: nghề nghiệp
       case_study:
         other: Nghiên cứu điển hình
       closed_consultation:
@@ -27,6 +43,8 @@ vi:
         other: Vụ án của Cơ quan Cạnh tranh và Thị trường
       coming_soon:
         other: Sắp Diễn ra
+      complaints_procedure:
+        other: Thủ tục khiếu nại
       consultation:
         other: Tham vấn
       consultation_outcome:
@@ -41,6 +59,8 @@ vi:
         other: Trợ cấp Quản lý Vùng nông thôn
       decision:
         other: Quyết định
+      detailed_guidance:
+        other: Hướng dẫn
       detailed_guide:
         other: Hướng dẫn
       dfid_research_output:
@@ -50,14 +70,20 @@ vi:
       draft_text:
         other: Dự thảo
       drcf_digital_markets_research:
-        one:
-        other:
+        one: 
+        other: 
       drug_safety_update:
         other: Cập nhật về Dùng Thuốc An toàn
+      edition:
+        other: Phiên bản
+      edition_with_appointment:
+        other: Phiên bản có cuộc hẹn
       employment_appeal_tribunal_decision:
         other: Quyết định của tòa phúc thẩm việc làm
       employment_tribunal_decision:
         other: Quyết định của tòa án việc làm
+      equality_and_diversity:
+        other: Bình đẳng và đa dạng
       esi_fund:
         other: Quỹ Đầu tư và Cấu trúc Châu Âu (ESIF)
       fatality_notice:
@@ -66,6 +92,8 @@ vi:
         other: Công bố FOI
       form:
         other: Biểu mẫu
+      generic_edition:
+        other: Phiên bản chung
       government_response:
         other: Phản hồi của chính phủ
       guidance:
@@ -82,10 +110,18 @@ vi:
         other: Hiệp ước quốc tế
       maib_report:
         other: Báo cáo của Chi nhánh Điều tra Tai nạn Hàng hải
+      manual:
+        other: Hướng dẫn sử dụng
       map:
         other: Bản đồ
+      media_enquiries:
+        other: Yêu cầu truyền thông
       medical_safety_alert:
         other: Cảnh báo và thu hồi thuốc và thiết bị y tế
+      membership:
+        other: Tư cách thành viên
+      modern_slavery_statement:
+        other: 
       national:
         other: Thông báo thống kê quốc gia
       national_statistics:
@@ -96,6 +132,8 @@ vi:
         other: Bài viết thời sự
       news_story:
         other: Bài phóng sự
+      nhs_content:
+        other: Nội dung Dịch vụ Y tế Quốc gia
       notice:
         other: Thông báo
       official:
@@ -108,38 +146,60 @@ vi:
         other: Tham vấn mở
       oral_statement:
         other: Tuyên bố bằng lời trước Quốc hội
+      our_energy_use:
+        other: Mức sử dụng năng lượng của chúng tôi
+      our_governance:
+        other: Cách quản trị của chúng tôi
+      personal_information_charter:
+        other: Điều lệ thông tin cá nhân
+      petitions_and_campaigns:
+        other: Kiến nghị và chiến dịch
       policy:
         other: Chính sách
       policy_paper:
         other: Tài liệu chính sách
       press_release:
         other: Thông cáo báo chí
+      procurement:
+        other: Mua sắm
       promotional:
         other: Tài liệu quảng cáo
       publication:
         other: Ấn phẩm
+      publication_scheme:
+        other: Kế hoạch xuất bản
       raib_report:
         other: Báo cáo của Chi nhánh Điều tra Tai nạn Đường sắt
+      recruitment:
+        other: Tuyển dụng
       regulation:
         other: Quy định
       research:
         other: Nghiên cứu và phân tích
       residential_property_tribunal_decision:
         other: Quyết định của tòa án bất động sản nhà ở
+      service:
+        other: Dịch vụ
       service_sign_in:
         other: Đăng nhập dịch vụ
       service_standard_report:
         other: Báo cáo Tiêu chuẩn Dịch vụ
+      social_media_use:
+        other: Sử dụng mạng xã hội
       speaking_notes:
         other: Ghi chú cho bài nói
       speech:
         other: Bài phát biểu
+      staff_update:
+        other: Cập nhật của nhân viên
       standard:
         other: Tiêu chuẩn
       statement_to_parliament:
         other: Tuyên bố trước Quốc hội
       statistical_data_set:
         other: Bộ dữ liệu thống kê
+      statistics:
+        other: Thống kê
       statistics_announcement:
         other: Thông báo phát hành thống kê
       statutory_guidance:
@@ -148,12 +208,16 @@ vi:
         other: Tham gia
       tax_tribunal_decision:
         other: Quyết định của Tòa án về Thuế và Pháp lý
+      terms_of_reference:
+        other: Điều khoản tham chiếu
       transcript:
         other: Bản ghi nội dung
       transparency:
         other: Dữ liệu về tính minh bạch
       utaac_decision:
         other: Quyết định của tòa phúc thẩm hành chính
+      welsh_language_scheme:
+        other: Lược đồ ngôn ngữ xứ Wales
       world_location_news_article:
         other: Bài viết thời sự
       world_news_story:

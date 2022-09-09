@@ -10,377 +10,537 @@ sl:
     language_name: Slovenščina
     schema_name:
       aaib_report:
-        few:
+        few: 
         one: Poročilo podružnice za preiskave letalskih nesreč
         other: Poročila podružnice za preiskovanje letalskih nesreč
-        two:
+        two: 
+      about:
+        few: 
+        one: O
+        other: O
+        two: 
+      about_our_services:
+        few: 
+        one: O naših storitvah
+        other: O naših storitvah
+        two: 
+      access_and_opening:
+        few: 
+        one: Dostop in odpiranje
+        other: Dostop in odpiranje
+        two: 
+      accessible_documents_policy:
+        few: 
+        one: Politika dostopnih dokumentov
+        other: Politike dostopnih dokumentov
+        two: 
+      alert:
+        few: 
+        one: Opozorilo
+        other: Opozorila
+        two: 
       announcement:
-        few:
+        few: 
         one: Razglas
         other: Razglasi
-        two:
+        two: 
       asylum_support_decision:
-        few:
+        few: 
         one: Odločitev sodišča o podpori azilu
         other: Odločitve sodišča o podpori azilu
-        two:
+        two: 
       authored_article:
-        few:
+        few: 
         one: Avtorski članek
         other: Avtorski članki
-        two:
+        two: 
+      blog_post:
+        few: 
+        one: Prispevek na blogu
+        other: Prispevki na blogu
+        two: 
       business_finance_support_scheme:
-        few:
+        few: 
         one: Program podpore za poslovne finance
         other: Programi podpore za poslovne finance
-        two:
+        two: 
+      campaign:
+        few: 
+        one: Kampanja
+        other: Kampanje
+        two: 
+      careers:
+        few: 
+        one: Kariera
+        other: Kariere
+        two: 
       case_study:
-        few:
+        few: 
         one: Študija primera
         other: Študije primera
-        two:
+        two: 
       closed_consultation:
-        few:
+        few: 
         one: Tesno posvetovanje
         other: Tesna posvetovanja
-        two:
+        two: 
       cma_case:
-        few:
+        few: 
         one: Primer organa za konkurenco in trge
         other: Primeri organa za konkurenco in trge
-        two:
+        two: 
       coming_soon:
-        few:
+        few: 
         one: Kmalu na voljo
         other: Kmalu na voljo
-        two:
+        two: 
+      complaints_procedure:
+        few: 
+        one: Pritožbeni postopek
+        other: Pritožbeni postopki
+        two: 
       consultation:
-        few:
+        few: 
         one: Posvetovanje
         other: Posvetovanja
-        two:
+        two: 
       consultation_outcome:
-        few:
+        few: 
         one: Rezultat posvetovanja
         other: Rezultati posvetovanja
-        two:
+        two: 
       corporate_information_page:
-        few:
+        few: 
         one: Stran z informacijami
         other: Strani z informacijami
-        two:
+        two: 
       corporate_report:
-        few:
+        few: 
         one: Poročilo podjetja
         other: Poročila podjetja
-        two:
+        two: 
       correspondence:
-        few:
+        few: 
         one: Korespondenca
         other: Korespondenca
-        two:
+        two: 
       countryside_stewardship_grant:
-        few:
+        few: 
         one: Nepovratna sredstva za ohranjanje podeželja
         other: Nepovratna sredstva za ohranjanje podeželja
-        two:
+        two: 
       decision:
-        few:
+        few: 
         one: Odločitev
         other: Odločitve
-        two:
-      detailed_guide:
-        few:
+        two: 
+      detailed_guidance:
+        few: 
         one: Smernice
         other: Smernice
-        two:
+        two: 
+      detailed_guide:
+        few: 
+        one: Smernice
+        other: Smernice
+        two: 
       dfid_research_output:
-        few:
+        few: 
         one: Raziskave za razvojni rezultat
         other: Raziskave za razvojne rezultate
-        two:
+        two: 
       document_collection:
-        few:
+        few: 
         one: Zbirka
         other: Zbirke
-        two:
+        two: 
       draft_text:
-        few:
+        few: 
         one: Osnutek besedila
         other: Osnutki besedila
-        two:
+        two: 
       drcf_digital_markets_research:
-        one:
-        other:
+        one: 
+        other: 
       drug_safety_update:
-        few:
+        few: 
         one: Posodobitev o varnosti zdravil
         other: Posodobitve o varnosti zdravil
-        two:
+        two: 
+      edition:
+        few: 
+        one: Izdaja
+        other: Izdaje
+        two: 
+      edition_with_appointment:
+        few: 
+        one: Izdaja s srečanjem
+        other: Izdaje s srečanjem
+        two: 
       employment_appeal_tribunal_decision:
-        few:
+        few: 
         one: Odločitev pritožbenega delovnega sodišča
         other: Odločitve pritožbenega delovnega sodišča
-        two:
+        two: 
       employment_tribunal_decision:
-        few:
+        few: 
         one: Odločitev delovnega sodišča
         other: Odločitve delovnega sodišča
-        two:
+        two: 
+      equality_and_diversity:
+        few: 
+        one: Enakopravnost in raznolikost
+        other: Enakopravnost in raznolikost
+        two: 
       esi_fund:
-        few:
+        few: 
         one: Evropski strukturni in investicijski sklad (ESI)
         other: Evropski strukturni in investicijski skladi (ESI)
-        two:
+        two: 
       fatality_notice:
-        few:
+        few: 
         one: Obvestilo o smrti
         other: Obvestila o smrti
-        two:
+        two: 
       foi_release:
-        few:
+        few: 
         one: Izjava o svobodi informacij
         other: Izjave o svobodi informacij
-        two:
+        two: 
       form:
-        few:
+        few: 
         one: Oblika
         other: Oblike
-        two:
+        two: 
+      generic_edition:
+        few: 
+        one: Generična izdaja
+        other: Generične izdaje
+        two: 
       government_response:
-        few:
+        few: 
         one: Odziv vlade
         other: Odzivi vlade
-        two:
+        two: 
       guidance:
-        few:
+        few: 
         one: Smernice
         other: Smernice
-        two:
+        two: 
       impact_assessment:
-        few:
+        few: 
         one: Presoja vpliva
         other: Presoje vpliva
-        two:
+        two: 
       imported:
-        few:
+        few: 
         one: uvoženo − vrsta čakanja
         other: uvoženo − vrsta čakanja
-        two:
+        two: 
       independent_report:
-        few:
+        few: 
         one: neodvisno poročilo
         other: neodvisna poročila
-        two:
+        two: 
       international_development_fund:
-        few:
+        few: 
         one: Financiranje mednarodnega razvoja
         other: Financiranje mednarodnega razvoja
-        two:
+        two: 
       international_treaty:
-        few:
+        few: 
         one: Mednarodni sporazum
         other: Mednarodni sporazumi
-        two:
+        two: 
       maib_report:
-        few:
+        few: 
         one: Poročilo podružnice za preiskave pomorskih nesreč
         other: Poročila podružnice za preiskave pomorskih nesreč
-        two:
+        two: 
+      manual:
+        few: 
+        one: Priročnik
+        other: Priročniki
+        two: 
       map:
-        few:
+        few: 
         one: Zemljevid
         other: Zemljevidi
-        two:
+        two: 
+      media_enquiries:
+        few: 
+        one: Vprašanje medijev
+        other: Vprašanja medijev
+        two: 
       medical_safety_alert:
-        few:
+        few: 
         one: Opozorila glede zdravil in medicinskih pripomočkih in odpoklici le-teh
         other: Opozorila glede zdravil in medicinskih pripomočkih in odpoklici le-teh
-        two:
+        two: 
+      membership:
+        few: 
+        one: Članstvo
+        other: Članstvo
+        two: 
+      modern_slavery_statement:
+        few: 
+        one: 
+        other: 
+        two: 
       national:
-        few:
+        few: 
         one: Objava državne statistike
         other: Objave državne statistike
-        two:
+        two: 
       national_statistics:
-        few:
+        few: 
         one: Državna statistika
         other: Državna statistika
-        two:
+        two: 
       national_statistics_announcement:
-        few:
+        few: 
         one: Objava državne statistike
         other: Objave državne statistike
-        two:
+        two: 
       news_article:
-        few:
+        few: 
         one: Časopisni članek
         other: Časopisni članki
-        two:
+        two: 
       news_story:
-        few:
+        few: 
         one: Časopisna zgodba
         other: Časopisne zgodbe
-        two:
+        two: 
+      nhs_content:
+        few: 
+        one: Vsebina Državne zdravstvene službe
+        other: Vsebina Državne zdravstvene službe
+        two: 
       notice:
-        few:
+        few: 
         one: Obvestilo
         other: Obvestila
-        two:
+        two: 
       official:
-        few:
+        few: 
         one: Objava uradne statistike
         other: Objave uradne statistike
-        two:
+        two: 
       official_statistics:
-        few:
+        few: 
         one: Uradna statistika
         other: Uradna statistika
-        two:
+        two: 
       official_statistics_announcement:
-        few:
+        few: 
         one: Objava uradne statistike
         other: Objave uradne statistike
-        two:
+        two: 
       open_consultation:
-        few:
+        few: 
         one: Odprto posvetovanje
         other: Odprto posvetovanje
-        two:
+        two: 
       oral_statement:
-        few:
+        few: 
         one: Ustna izjava za parlament
         other: Ustne izjave za parlament
-        two:
+        two: 
+      our_energy_use:
+        few: 
+        one: Naša poraba energije
+        other: Naša poraba energije
+        two: 
+      our_governance:
+        few: 
+        one: Naše upravljanje
+        other: Naše upravljanje
+        two: 
+      personal_information_charter:
+        few: 
+        one: Listina o osebnih podatkih
+        other: Listine o osebnih podatkih
+        two: 
+      petitions_and_campaigns:
+        few: 
+        one: Peticije in kampanje
+        other: Peticije in kampanje
+        two: 
       policy:
-        few:
+        few: 
         one: Politika
         other: Politike
-        two:
+        two: 
       policy_paper:
-        few:
+        few: 
         one: Politični dokument
         other: Politični dokumenti
-        two:
+        two: 
       press_release:
-        few:
+        few: 
         one: Sporočilo za javnost
         other: Sporočila za javnost
-        two:
+        two: 
+      procurement:
+        few: 
+        one: Javno naročilo
+        other: Javna naročila
+        two: 
       promotional:
-        few:
+        few: 
         one: Promocijski material
         other: Promocijski material
-        two:
+        two: 
       publication:
-        few:
+        few: 
         one: Publikacija
         other: Publikacije
-        two:
+        two: 
+      publication_scheme:
+        few: 
+        one: Shema publikacij
+        other: Sheme publikacij
+        two: 
       raib_report:
-        few:
+        few: 
         one: Poročilo podružnice za preiskave železniških nesreč
         other: Poročila podružnice za preiskave železniških nesreč
-        two:
+        two: 
+      recruitment:
+        few: 
+        one: Zaposlovanje
+        other: Zaposlovanje
+        two: 
       regulation:
-        few:
+        few: 
         one: Uredba
         other: Uredbe
-        two:
+        two: 
       research:
-        few:
+        few: 
         one: Raziskovanje in analiza
         other: Raziskovanje in analiza
-        two:
+        two: 
       residential_property_tribunal_decision:
-        few:
+        few: 
         one: Odločitev sodišča za stanovanjske nepremičnine
         other: Odločitve sodišča za stanovanjske nepremičnine
-        two:
+        two: 
+      service:
+        few: 
+        one: Storitev
+        other: Storitve
+        two: 
       service_sign_in:
-        few:
+        few: 
         one: Prijava v storitev
         other: Prijava v storitev
-        two:
+        two: 
       service_standard_report:
-        few:
+        few: 
         one: Standardno poročilo o storitvah
         other: Standardna poročila o storitvah
-        two:
+        two: 
+      social_media_use:
+        few: 
+        one: Uporaba družabnih omrežij
+        other: Uporaba družabnih omrežij
+        two: 
       speaking_notes:
-        few:
+        few: 
         one: Točke za govor
         other: Točke za govor
-        two:
+        two: 
       speech:
-        few:
+        few: 
         one: Govor
         other: Govori
-        two:
+        two: 
+      staff_update:
+        few: 
+        one: Posodobitev osebja
+        other: Posodobitve osebja
+        two: 
       standard:
-        few:
+        few: 
         one: Standard
         other: Standardi
-        two:
+        two: 
       statement_to_parliament:
-        few:
+        few: 
         one: Izjava parlamentu
         other: Izjave parlamentu
-        two:
+        two: 
       statistical_data_set:
-        few:
+        few: 
         one: Statistični podatkovni niz
         other: Statistični podatkovni nizi
-        two:
+        two: 
+      statistics:
+        few: 
+        one: Statistika
+        other: Statistika
+        two: 
       statistics_announcement:
-        few:
+        few: 
         one: Statistična objava
         other: Statistične objave
-        two:
+        two: 
       statutory_guidance:
-        few:
+        few: 
         one: Zakonski napotki
         other: Zakonski napotki
-        two:
+        two: 
       take_part:
-        few:
+        few: 
         one: Sodelujte
         other: Sodelujte
-        two:
+        two: 
       tax_tribunal_decision:
-        few:
+        few: 
         one: Odločitev Sodišča za davčne in gospodarske spore
         other: Odločitve Sodišča za davčne in gospodarske spore
-        two:
+        two: 
+      terms_of_reference:
+        few: 
+        one: Obseg pristojnosti
+        other: Obseg pristojnosti
+        two: 
       transcript:
-        few:
+        few: 
         one: Transkripcija
         other: Transkripcije
-        two:
+        two: 
       transparency:
-        few:
+        few: 
         one: Podatki o preglednosti
         other: Podatki o preglednosti
-        two:
+        two: 
       utaac_decision:
-        few:
+        few: 
         one: Odločitev Pritožbenega delovnega sodišča
         other: Odločitve Pritožbenega delovnega sodišča
-        two:
+        two: 
+      welsh_language_scheme:
+        few: 
+        one: Valižanski jezikovni sistem
+        other: Valižanski jezikovni sistemi
+        two: 
       world_location_news_article:
-        few:
+        few: 
         one: Časopisni članek
         other: Časopisni članki
-        two:
+        two: 
       world_news_story:
-        few:
+        few: 
         one: Novica s sveta
         other: Novice s celega sveta
-        two:
+        two: 
       written_statement:
-        few:
+        few: 
         one: Pisna izjava za parlament
         other: Pisne izjave za parlament
-        two:
+        two: 
     topics:
       title: "%{title}: podrobne informacije"

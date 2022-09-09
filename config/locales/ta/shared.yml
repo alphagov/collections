@@ -12,6 +12,21 @@ ta:
       aaib_report:
         one: வான் விபத்து விசாரணைக் கிளை அறிக்கை
         other: வான் விபத்து விசாரணைக் கிளை அறிக்கைகள்
+      about:
+        one: குறித்து
+        other: குறித்து
+      about_our_services:
+        one: எங்கள் சேவைகள் குறித்து
+        other: எங்கள் சேவைகள் குறித்து
+      access_and_opening:
+        one: அணுகுதலும் திறத்தலும்
+        other: அணுகுதலும் திறத்தலும்
+      accessible_documents_policy:
+        one: அணுகக்கூடிய ஆவணங்களுக்கான கொள்கை
+        other: அணுகக்கூடிய ஆவணங்களுக்கான கொள்கைகள்
+      alert:
+        one: விழிப்பூட்டல்
+        other: விழிப்பூட்டல்கள்
       announcement:
         one: அறிவிப்பு
         other: அறிவிப்புகள்
@@ -21,9 +36,18 @@ ta:
       authored_article:
         one: எழுதிய கட்டுரை
         other: எழுதிய கட்டுரைகள்
+      blog_post:
+        one: வலைப்பூப் பதிவு
+        other: வலைப்பூப் பதிவுகள்
       business_finance_support_scheme:
         one: தொழில் நிதி உதவித் திட்டம்
         other: தொழில் நிதி உதவித் திட்டங்கள்
+      campaign:
+        one: பிரச்சாரம்
+        other: பிரச்சாரங்கள்
+      careers:
+        one: வாழ்க்கைத் தொழில்கள்
+        other: வாழ்க்கைத் தொழில்கள்
       case_study:
         one: நிகழ்வு ஆய்வு
         other: நிகழ்வு ஆய்வுகள்
@@ -36,6 +60,9 @@ ta:
       coming_soon:
         one: விரைவில் வருகிறது
         other: விரைவில் வருகிறது
+      complaints_procedure:
+        one: புகார்களுக்கான நடைமுறை
+        other: புகார்களுக்கான நடைமுறைகள்
       consultation:
         one: கலந்தாய்வு
         other: கலந்தாய்வுகள்
@@ -57,6 +84,9 @@ ta:
       decision:
         one: முடிவு
         other: முடிவுகள்
+      detailed_guidance:
+        one: வழிகாட்டுதல்
+        other: வழிகாட்டுதல்
       detailed_guide:
         one: வழிகாட்டுதல்
         other: வழிகாட்டுதல்
@@ -70,17 +100,26 @@ ta:
         one: வரைவு உரை
         other: வரைவு உரைகள்
       drcf_digital_markets_research:
-        one:
-        other:
+        one: 
+        other: 
       drug_safety_update:
         one: மருந்து பாதுகாப்பு புதிய தகவல்
         other: மருந்து பாதுகாப்பு புதிய தகவல்கள்
+      edition:
+        one: பதிப்பு
+        other: பதிப்புகள்
+      edition_with_appointment:
+        one: நியமனத்துடன் பதிப்பு
+        other: நியமனத்துடன் பதிப்புகள்
       employment_appeal_tribunal_decision:
         one: பணி மேல்முறையீட்டுத் தீர்ப்பாய முடிவு
         other: பணி மேல்முறையீட்டுத் தீர்ப்பாய முடிவுகள்
       employment_tribunal_decision:
         one: பணித் தீர்ப்பாய முடிவு
         other: பணித் தீர்ப்பாய முடிவுகள்
+      equality_and_diversity:
+        one: சமத்துவமும் பன்முகமும்
+        other: சமத்துவமும் பன்முகமும்
       esi_fund:
         one: ஐரோப்பிய அமைப்புசார் மற்றும் முதலீட்டு நிதி (ESIF)
         other: ஐரோப்பிய அமைப்புசார் மற்றும் முதலீட்டு நிதிகள் (ESIF)
@@ -93,6 +132,9 @@ ta:
       form:
         one: படிவம்
         other: படிவங்கள்
+      generic_edition:
+        one: பொதுவான பதிப்பு
+        other: பொதுவான பதிப்புகள்
       government_response:
         one: அரசாங்க பதில்
         other: அரசாங்க பதில்கள்
@@ -117,12 +159,24 @@ ta:
       maib_report:
         one: கடல் விபத்து விசாரணைக் கிளை அறிக்கை
         other: கடல் விபத்து விசாரணைக் கிளை அறிக்கைகள்
+      manual:
+        one: கையேடு
+        other: கையேடுகள்
       map:
         one: வரைபடம்
         other: வரைபடங்கள்
+      media_enquiries:
+        one: ஊடக உசாவுகை
+        other: ஊடக உசாவுகைகள்
       medical_safety_alert:
         one: மருந்துகள் மற்றும் மருத்துவ சாதனங்களுக்கான விழிப்பூட்டல்களும் நினைவுமீட்டல்களும்
         other: மருந்துகள் மற்றும் மருத்துவ சாதனங்களுக்கான விழிப்பூட்டல்களும் நினைவுமீட்டல்களும்
+      membership:
+        one: உறுப்பினர் நிலை
+        other: உறுப்பினர் நிலை
+      modern_slavery_statement:
+        one: 
+        other: 
       national:
         one: தேசிய புள்ளியியல் அறிவிப்பு
         other: தேசிய புள்ளியியல் அறிவிப்புகள்
@@ -138,6 +192,9 @@ ta:
       news_story:
         one: செய்தி
         other: செய்திகள்
+      nhs_content:
+        one: NHS உள்ளடக்கம்
+        other: NHS உள்ளடக்கம்
       notice:
         one: அறிவிப்பு
         other: அறிவிப்புகள்
@@ -156,6 +213,18 @@ ta:
       oral_statement:
         one: பாராளுமன்றத்துக்கு வாய்வழி அறிவிப்பு
         other: பாராளுமன்றத்துக்கு வாய்வழி அறிவிப்புகள்
+      our_energy_use:
+        one: எங்கள் ஆற்றல் பயன்பாடு
+        other: எங்கள் ஆற்றல் பயன்பாடு
+      our_governance:
+        one: எங்கள் ஆளுகை
+        other: எங்கள் ஆளுகை
+      personal_information_charter:
+        one: தனிப்பட்ட தகவல் சாசனம்
+        other: தனிப்பட்ட தகவல் சாசனங்கள்
+      petitions_and_campaigns:
+        one: மனுக்களும் பிரச்சாரங்களும்
+        other: மனுக்களும் பிரச்சாரங்களும்
       policy:
         one: கொள்கை
         other: கொள்கைகள்
@@ -165,15 +234,24 @@ ta:
       press_release:
         one: செய்திக் குறிப்பு
         other: செய்திக் குறிப்புகள்
+      procurement:
+        one: வாங்குதல்
+        other: வாங்குதல்
       promotional:
         one: விளம்பரப் பொருள்
         other: விளம்பரப் பொருள்
       publication:
         one: பிரசுரம்
         other: பிரசுரங்கள்
+      publication_scheme:
+        one: பிரசுரத் திட்டம்
+        other: பிரசுரத் திட்டங்கள்
       raib_report:
         one: இரயில் விபத்து விசாரணைக் கிளை அறிக்கை
         other: இரயில் விபத்து விசாரணைக் கிளை அறிக்கைகள்
+      recruitment:
+        one: பணியமர்த்தல்
+        other: பணியமர்த்தல்
       regulation:
         one: ஒழுங்குமுறை
         other: ஒழுங்குமுறைகள்
@@ -183,18 +261,27 @@ ta:
       residential_property_tribunal_decision:
         one: வசிப்பிடச் சொத்துத் தீர்ப்பாய முடிவு
         other: வசிப்பிடச் சொத்துத் தீர்ப்பாய முடிவுகள்
+      service:
+        one: சேவை
+        other: சேவைகள்
       service_sign_in:
         one: சேவை உள்நுழைவு
         other: சேவை உள்நுழைவு
       service_standard_report:
         one: சேவைத் தர அறிக்கை
         other: சேவைத் தர அறிக்கைகள்
+      social_media_use:
+        one: சமூக ஊடகப் பயன்பாடு
+        other: சமூக ஊடகப் பயன்பாடு
       speaking_notes:
         one: பேச்சுக் குறிப்பு
         other: பேச்சுக் குறிப்புகள்
       speech:
         one: பேச்சு
         other: பேச்சுகள்
+      staff_update:
+        one: அலுவலர் புதுப்பித்தல்
+        other: அலுவலர் புதுப்பித்தல்கள்
       standard:
         one: தரநிலை
         other: தரநிலைகள்
@@ -204,6 +291,9 @@ ta:
       statistical_data_set:
         one: புள்ளியியல் தரவுத் தொகுதி
         other: புள்ளியியல் தரவுத் தொகுதிகள்
+      statistics:
+        one: புள்ளியியல்
+        other: புள்ளியியல்
       statistics_announcement:
         one: புள்ளியியல் வெளியீட்டு அறிவிப்பு
         other: புள்ளியியல் வெளியீட்டு அறிவிப்புகள்
@@ -216,6 +306,9 @@ ta:
       tax_tribunal_decision:
         one: வரி மற்றும் உயர்நீதிமன்றத் தீர்ப்பாய முடிவு
         other: வரி மற்றும் உயர்நீதிமன்றத் தீர்ப்பாய முடிவுகள்
+      terms_of_reference:
+        one: உசாத்துணை விதிகள்
+        other: உசாத்துணை விதிகள்
       transcript:
         one: எழுத்துப்படிவம்
         other: எழுத்துப்படிவங்கள்
@@ -225,6 +318,9 @@ ta:
       utaac_decision:
         one: நிர்வாக மேல்முறையீட்டுத் தீர்ப்பாய முடிவு
         other: நிர்வாக மேல்முறையீட்டுத் தீர்ப்பாய முடிவுகள்
+      welsh_language_scheme:
+        one: வெல்ஷ் மொழித் திட்டம்
+        other: வெல்ஷ் மொழித் திட்டங்கள்
       world_location_news_article:
         one: செய்திக் கட்டுரை
         other: செய்திக் கட்டுரைகள்

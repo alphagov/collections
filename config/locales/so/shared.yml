@@ -12,6 +12,21 @@ so:
       aaib_report:
         one: Warbixinta Qeybta Baadhitaanada Shilalka Hawada
         other: Warbixinaha Qeybta Baadhitaanada Shilalka Hawada
+      about:
+        one: Ku sahabsan
+        other: Ku sahabsan
+      about_our_services:
+        one: Ku sahabsan adeegyadeena
+        other: Ku sahabsan adeegyadeena
+      access_and_opening:
+        one: Helida iyo furitaanka
+        other: Helida iyo furitaanka
+      accessible_documents_policy:
+        one: Dukumentiyada siyaasada la heli karo
+        other: Dukumentiyada siyaasadaha la heli karo
+      alert:
+        one: Wargelin
+        other: Wargelino
       announcement:
         one: Ogeysiis
         other: Ogeysiisyo
@@ -21,9 +36,18 @@ so:
       authored_article:
         one: Qodob laqoray
         other: Qodobada laqoray
+      blog_post:
+        one: Qoraalka boga
+        other: Qoraalada boga
       business_finance_support_scheme:
         one: Qorshaha caawimada maaliyada ganacsi
         other: Qorshayaasha caawimada maaliyada ganacsi
+      campaign:
+        one: Xayaysiiska
+        other: Xayaysiisyada
+      careers:
+        one: Xirfadaha
+        other: xirfadaha
       case_study:
         one: Daraasad
         other: Daraasado
@@ -36,6 +60,9 @@ so:
       coming_soon:
         one: Soodhaw
         other: Soodhaw
+      complaints_procedure:
+        one: Nidaamka cabashada
+        other: Nidaamyada cabashoyinka
       consultation:
         one: Latalin
         other: Latalino
@@ -57,6 +84,9 @@ so:
       decision:
         one: Go'aan
         other: Go'aamo
+      detailed_guidance:
+        one: Tilmaam
+        other: Tilmaam
       detailed_guide:
         one: Tilmaam
         other: Tilmaam
@@ -70,17 +100,26 @@ so:
         one: Qabyo qoraal
         other: Qabyo qoraalo
       drcf_digital_markets_research:
-        one:
-        other:
+        one: 
+        other: 
       drug_safety_update:
         one: Warbixinta Badqabka Daroogada
         other: Warbixinaha Badqabka Daroogada
+      edition:
+        one: Qaybta
+        other: Qaybaha
+      edition_with_appointment:
+        one: Qaybta leh balanta
+        other: Qaybtaha leh balamaha
       employment_appeal_tribunal_decision:
         one: Go'aanka rafcaanka maxkamada ee shaqaaleysiinta
         other: Go'aamada rafcaanka maxkamada ee shaqaaleysiinta
       employment_tribunal_decision:
         one: Go'aanka maxkamada ee shaqaaleysiinta
         other: Go'aamada maxkamada ee shaqaaleysiinta
+      equality_and_diversity:
+        one: Sinaanta iyo kala duwanaanshaha
+        other: Sinaanta iyo kala duwanaanshaha
       esi_fund:
         one: Maalgalinta Dhismaha iyo Maalgashiga Yurub (ESIF)
         other: Maalgalinaha Qaabka iyo Maalgashiga Yurub (ESIF)
@@ -93,6 +132,9 @@ so:
       form:
         one: Foomka
         other: Foomamka
+      generic_edition:
+        one: Qaybta aan magaca la isticmaalayn
+        other: Qaybaha aan magaca la isticmaalayn
       government_response:
         one: Jawaabta dawlada
         other: Jawaabaha dawlada
@@ -117,12 +159,24 @@ so:
       maib_report:
         one: Warbixinta Qeybta Baadhitaanada Shilka Bada
         other: Warbixinaha Qeybta Baadhitaanada Shilalka Bada
+      manual:
+        one: Gacanta laga qabanayo
+        other: Gacanta laga qabanayo
       map:
         one: Maab
         other: Maabab
+      media_enquiries:
+        one: Su'aasha saxaafada
+        other: Su'aalaha saxaafada
       medical_safety_alert:
         one: Wargelinaha iyo xasuusiyayaasha daroogooyinka iyo agabka caafimaad
         other: Wargelinaha iyo xasuusiyayaasha daroogooyinka iyo agabka caafimaad
+      membership:
+        one: Xubinimada
+        other: Xubinimada
+      modern_slavery_statement:
+        one: 
+        other: 
       national:
         one: Ogeysiiska tirokoobka qaranka
         other: Ogeysiisyada tirokoobka qaranka
@@ -138,6 +192,9 @@ so:
       news_story:
         one: War
         other: Warar
+      nhs_content:
+        one: Qaybta NHS
+        other: Qaybta NHS
       notice:
         one: Ogeysiis
         other: Ogeysiisyo
@@ -156,6 +213,18 @@ so:
       oral_statement:
         one: Bayaanka loogu talogalay Baarlamaanka
         other: Bayaanada loogu talogalay Baarlamaanka
+      our_energy_use:
+        one: Isticmaalkayaga tamarta
+        other: Isticmaalkayaga tamarta
+      our_governance:
+        one: Maamulkayaga
+        other: Maamulkayaga
+      personal_information_charter:
+        one: Xeerka macluumaadka shaqsiga ah
+        other: Xeerarka macluumaadka shaqsiga ah
+      petitions_and_campaigns:
+        one: Codsiyada dadwaynaha iyo ololaha
+        other: Codsiyada dadwaynaha iyo ololaha
       policy:
         one: Siyaasada
         other: Siyaasadaha
@@ -165,15 +234,24 @@ so:
       press_release:
         one: War-saxaafadeed
         other: War-saxaafadeedyo
+      procurement:
+        one: Shaqaalaysiinta
+        other: Shaqaalaysiinta
       promotional:
         one: Agab xayeysiis
         other: Agab xayeysiis
       publication:
         one: Daabacaad
         other: Daabacaado
+      publication_scheme:
+        one: Jaantuska daabacaada
+        other: Jaantusyada daabacaada
       raib_report:
         one: Warbixinta Qeybta Baadhitaanada Shilka Tareenka
         other: Warbixinaha Qeybta Baadhitaanada Shilalka Tareenka
+      recruitment:
+        one: Shaqaalaysiinta
+        other: Shaqaalaysiinta
       regulation:
         one: Sharci
         other: Shuruuc
@@ -183,18 +261,27 @@ so:
       residential_property_tribunal_decision:
         one: Go'aanka maxkamada ee hantida guriga
         other: Go'aamada maxkamada ee hantida guriga
+      service:
+        one: Adeega
+        other: Adeegyada
       service_sign_in:
         one: Galitaanka adeega
         other: Galitaanka adeega
       service_standard_report:
         one: Warbixinta Adeega
         other: Warbixinaha Adeega
+      social_media_use:
+        one: Isticmaalka baraha bulshada
+        other: Isticmaalka baraha bulshada
       speaking_notes:
         one: Qoraalada khudbadaha
         other: Qoraalada khudbadaha
       speech:
         one: Khudbad
         other: Khudbado
+      staff_update:
+        one: Cusboonaysiinta shaqaalaha
+        other: Cusboonaysiinta Shaqaalaha
       standard:
         one: Heerka
         other: Heerarka
@@ -204,6 +291,9 @@ so:
       statistical_data_set:
         one: Xogta tirokoobka
         other: Xogaha tirokoobka
+      statistics:
+        one: Xisaabaadka
+        other: Xisaabaadka
       statistics_announcement:
         one: Ogeysiiska warbixinta tirokoobka
         other: Ogeysiisyada warbixinta tirokoobka
@@ -216,6 +306,9 @@ so:
       tax_tribunal_decision:
         one: Cashuur iyo go'aanka Qeybta maxkamada
         other: Cashuur iyo go'aamada Qeybta maxkamada
+      terms_of_reference:
+        one: Xeerarka Tixraaca
+        other: Xeerarka Tixraaca
       transcript:
         one: Qoraal
         other: Qoraalo
@@ -225,6 +318,9 @@ so:
       utaac_decision:
         one: Go'aanka rafcaanka maxkamada ee maamulka
         other: Go'aamada rafcaanka maxkamada ee maamulka
+      welsh_language_scheme:
+        one: Jaantuska luuqada Welsh
+        other: Jaantuska luuqada Welsh
       world_location_news_article:
         one: Maqaal war ah
         other: Maqaalo war ah

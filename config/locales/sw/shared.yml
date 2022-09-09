@@ -12,6 +12,21 @@ sw:
       aaib_report:
         one: Ripoti ya Kitengo cha Uchunguzi wa Ajali za Ndege
         other: Ripoti za Kitengo cha Uchunguzi wa Ajali za Ndege
+      about:
+        one: Kuhusu
+        other: Kuhusu
+      about_our_services:
+        one: Kuhusu huduma zetu
+        other: Kuhusu huduma zetu
+      access_and_opening:
+        one: Upatikanaji na kufunguliwa
+        other: Upatikanaji na kufunguliwa
+      accessible_documents_policy:
+        one: Sera ya hati zinazoweza kupatikana
+        other: Sera za hati zinazoweza kupatikana
+      alert:
+        one: Taarifa
+        other: Taarifa
       announcement:
         one: Tangazo
         other: Matangazo
@@ -21,9 +36,18 @@ sw:
       authored_article:
         one: Makala ya maelezo ya mwandishi
         other: Makala ya maelezo ya mwandishi
+      blog_post:
+        one: Chapisho kwenye blogu
+        other: Machapisho kwenye blogu
       business_finance_support_scheme:
         one: Mpango wa msaada wa fedha za biashara
         other: Mipango ya msaada wa fedha za biashara
+      campaign:
+        one: Kampeni
+        other: Kampeni
+      careers:
+        one: Taaluma
+        other: taaluma
       case_study:
         one: Uchunguzi kifani
         other: Uchunguzi kifani
@@ -36,6 +60,9 @@ sw:
       coming_soon:
         one: Tunakuletea Hivi Karibuni
         other: Tunakuletea Hivi Karibuni
+      complaints_procedure:
+        one: Utaratibu wa kuwasilisha malalamiko
+        other: Taratibu za kuwasilisha malalamiko
       consultation:
         one: Mashauriano
         other: Mashauriano
@@ -57,6 +84,9 @@ sw:
       decision:
         one: Uamuzi
         other: Maamuzi
+      detailed_guidance:
+        one: Mwongozo
+        other: Mwongozo
       detailed_guide:
         one: Mwongozo
         other: Mwongozo
@@ -70,17 +100,26 @@ sw:
         one: Maandishi ya rasimu
         other: Maandishi ya rasimu
       drcf_digital_markets_research:
-        one:
-        other:
+        one: 
+        other: 
       drug_safety_update:
         one: Taarifa ya Usalama wa Dawa
         other: Taarifa za Usalama wa Dawa
+      edition:
+        one: Toleo
+        other: Matoleo
+      edition_with_appointment:
+        one: Toleo lenye miadi
+        other: Matoleo yenya miadi
       employment_appeal_tribunal_decision:
         one: Uamuzi wa mahakama ya kusikiliza rufaa za mahakama za kesi za kazi
         other: Maamuzi ya mahakama ya kusikiliza rufaa za mahakama za kesi za kazi
       employment_tribunal_decision:
         one: Uamuzi wa mahakama ya kusikiliza rufaa za mahakama za kesi za kazi
         other: Maamuzi ya mahakama ya kusikiliza rufaa za mahakama za kesi za kazi
+      equality_and_diversity:
+        one: Usawa na utofauti
+        other: Usawa na utofauti
       esi_fund:
         one: Fedha za Muundo na Uwekezaji za Ulaya (ESIF)
         other: Fedha za Muundo na Uwekezaji za Ulaya (ESIF)
@@ -93,6 +132,9 @@ sw:
       form:
         one: Fomu
         other: Fomu
+      generic_edition:
+        one: Toleo la kawaida
+        other: Matoleo ya kawaida
       government_response:
         one: Hatua iliyochukuliwa na serikali
         other: Hatua zilizochukuliwa na serikali
@@ -117,12 +159,24 @@ sw:
       maib_report:
         one: Ripoti ya Kitengo cha Uchunguzi wa Ajali za Baharini
         other: Ripoti za Kitengo cha Uchunguzi wa Ajali za Baharini
+      manual:
+        one: Mwongozo
+        other: Miongozo
       map:
         one: Ramani
         other: Ramani
+      media_enquiries:
+        one: Ombi la maudhui
+        other: Maombi ya maudhui
       medical_safety_alert:
         one: Taarifa na kuondolewa kwa dawa na vifaa vya matibabu sokoni
         other: Taarifa na kuondolewa kwa dawa na vifaa vya matibabu sokoni
+      membership:
+        one: Uanachama
+        other: Uanachama
+      modern_slavery_statement:
+        one: 
+        other: 
       national:
         one: Tangazo la takwimu za kitaifa
         other: Matangazo ya takwimu za kitaifa
@@ -138,6 +192,9 @@ sw:
       news_story:
         one: Taarifa ya habari
         other: Taarifa za habari
+      nhs_content:
+        one: Maudhui ya NHS
+        other: Maudhui ya NHS
       notice:
         one: Notisi
         other: Notisi
@@ -156,6 +213,18 @@ sw:
       oral_statement:
         one: Taarifa ya Matamshi kwa Bunge
         other: Taarifa za Matamshi kwa Bunge
+      our_energy_use:
+        one: Matumizi yetu ya nishati
+        other: Matumizi yetu ya nishati
+      our_governance:
+        one: Uongozi wetu
+        other: Uongozi wetu
+      personal_information_charter:
+        one: Hati ya maelezo ya kibinafsi
+        other: Hati za maelezo ya kibinafsi
+      petitions_and_campaigns:
+        one: Maombi na kampeni
+        other: Maombi na kampeni
       policy:
         one: Sera
         other: Sera
@@ -165,15 +234,24 @@ sw:
       press_release:
         one: Taarifa kwa vyombo vya habari
         other: Taarifa kwa vyombo vya habari
+      procurement:
+        one: Ununuzi
+        other: Ununuzi
       promotional:
         one: Nyenzo ya matangazo
         other: Nyenzo ya matangazo
       publication:
         one: Chapisho
         other: Machapisho
+      publication_scheme:
+        one: Mpango wa uchapishaji
+        other: Mipango ya uchapishaji
       raib_report:
         one: Ripoti ya Kitengo cha Uchunguzi wa Ajali za Treni
         other: Ripoti za Kitengo cha Uchunguzi wa Ajali za Treni
+      recruitment:
+        one: Uandikishaji
+        other: Uandikishaji
       regulation:
         one: Kanuni
         other: Kanuni
@@ -183,18 +261,27 @@ sw:
       residential_property_tribunal_decision:
         one: Uamuzi wa mahakama ya kesi za mali ya makazi
         other: Maamuzi ya mahakama ya kesi za mali ya makazi
+      service:
+        one: Huduma
+        other: Huduma
       service_sign_in:
         one: Kuingia kwenye huduma
         other: Kuingia kwenye huduma
       service_standard_report:
         one: Ripoti ya Kawaida ya Huduma
         other: Ripoti za Kawaida za Huduma
+      social_media_use:
+        one: Matumizi ya mitandao ya kijamii
+        other: Matumizi ya mitandao ya kijamii
       speaking_notes:
         one: Madokezo ya kutamka
         other: Madokezo ya kutamka
       speech:
         one: Hotuba
         other: Hotuba
+      staff_update:
+        one: Taarifa ya wafanyakazi
+        other: Taarifa za wafanyakazi
       standard:
         one: Kiwango
         other: Viwango
@@ -204,6 +291,9 @@ sw:
       statistical_data_set:
         one: Kikundi cha data ya takwimu
         other: Vikundi vya data ya takwimu
+      statistics:
+        one: Takwimu
+        other: Takwimu
       statistics_announcement:
         one: Tangazo la kutolewa kwa takwimu
         other: Matangazo ya kutolewa kwa takwimu
@@ -216,6 +306,9 @@ sw:
       tax_tribunal_decision:
         one: Uamuzi wa mahakama ya Ushuru na Mahakama Kuu
         other: Maamuzi ya mahakama ya Ushuru na Mahakama Kuu
+      terms_of_reference:
+        one: Sheria na masharti
+        other: Sheria na masharti
       transcript:
         one: Maandishi
         other: Maandishi
@@ -225,6 +318,9 @@ sw:
       utaac_decision:
         one: Uamuzi wa mahakama ya rufaa za kesi za usimamizi
         other: Maamuzi ya mahakama ya rufaa za kesi za usimamizi
+      welsh_language_scheme:
+        one: Mpango wa lugha ya Kiwelsh
+        other: Mipango ya lugha ya Kiwelsh
       world_location_news_article:
         one: Makala ya habari
         other: Makala ya habari

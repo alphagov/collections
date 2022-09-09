@@ -12,6 +12,21 @@ ur:
       aaib_report:
         one: فضائی حادثات کی تفتیشی برانچ رپورٹ
         other: فضائی حادثات کی تفتیشی برانچ رپورٹس
+      about:
+        one: بارے میں
+        other: بارے میں
+      about_our_services:
+        one: ہماری سروسز کے بارے میں
+        other: ہماری سروس کے بارے میں
+      access_and_opening:
+        one: رسائی اور کھولنا
+        other: رسائی اور کھولنا
+      accessible_documents_policy:
+        one: رسائی پذیری کی دستاویزات کی پالیسی
+        other: رسائی پذیری کی دستاویزات کی پالیسیاں
+      alert:
+        one: انتباہ
+        other: انتباہات
       announcement:
         one: اعلان
         other: اعلانات
@@ -21,9 +36,18 @@ ur:
       authored_article:
         one: مصنف کے نام کے ساتھ لکھا مضمون
         other: مصنف کے نام کے ساتھ لکھے مضامین
+      blog_post:
+        one: بلاگ پوسٹ
+        other: بلاگ پوسٹس
       business_finance_support_scheme:
         one: بزنس فائنانس معاونتی اسکیم
         other: بزنس فائنانس معاونتی اسکیمیں
+      campaign:
+        one: مہم
+        other: مہمات
+      careers:
+        one: کیریئرز
+        other: کیریئر
       case_study:
         one: کیس اسٹڈی
         other: کیس اسٹڈیز
@@ -36,6 +60,9 @@ ur:
       coming_soon:
         one: جلد آ رہا ہے
         other: جلد آ رہا ہے
+      complaints_procedure:
+        one: شکایات کا طریقہ کار
+        other: شکایات کے طریقہ کار
       consultation:
         one: مشاورت
         other: مشاورتیں
@@ -57,6 +84,9 @@ ur:
       decision:
         one: فیصلہ
         other: فیصلے
+      detailed_guidance:
+        one: رہنمائی
+        other: رہنمائی
       detailed_guide:
         one: رہنمائی
         other: رہنمائی
@@ -70,17 +100,26 @@ ur:
         one: ڈرافٹ کا متن
         other: ڈرافٹ کے متن
       drcf_digital_markets_research:
-        one:
-        other:
+        one: 
+        other: 
       drug_safety_update:
         one: دوا کی حفاظتی اپ ڈیٹ
         other: دوا کی حفاظتی اپ ڈیٹس
+      edition:
+        one: ایڈیشن
+        other: ایڈیشنز
+      edition_with_appointment:
+        one: اپائنٹمنٹ کے ساتھ ایڈیشن
+        other: اپائنٹمنٹ کے ساتھ ایڈیشنز
       employment_appeal_tribunal_decision:
         one: ملازمت کی اپیل کا عدالتی فیصلہ
         other: ملازمت کی اپیل کے عدالتی فیصلے
       employment_tribunal_decision:
         one: ملازمت کی اپیل کا فیصلہ
         other: ملازمت کی اپیل کے فیصلے
+      equality_and_diversity:
+        one: مساوات اور تنوع
+        other: مساوات اور تنوع
       esi_fund:
         one: یورپی بناوٹی اور سرمایہ کاری کا فنڈ (ESIF)
         other: یورپی بناوٹی اور سرمایہ کاری کے فنڈز (ESIF)
@@ -93,6 +132,9 @@ ur:
       form:
         one: فارم
         other: فارمز
+      generic_edition:
+        one: عمومی ایڈیشن
+        other: عمومی ایڈیشنز
       government_response:
         one: حکومت کا جواب
         other: حکومت کے جوابات
@@ -117,12 +159,24 @@ ur:
       maib_report:
         one: میرین حادثے کی تفتیشی برانچ رپورٹ
         other: میرین حادثے کی تفتیشی برانچ رپورٹس
+      manual:
+        one: کتابچہ
+        other: کتابچے
       map:
         one: نقشہ
         other: نقشے
+      media_enquiries:
+        one: میڈیا کا سوال
+        other: میڈیا کے سوالات
       medical_safety_alert:
         one: ادویات اور طبی ڈیوائسز کے لیے انتباہات اور ری کالز
         other: ادویات اور طبی ڈیوائسز کے لیے انتباہات اور ری کالز
+      membership:
+        one: ممبرشپ
+        other: ممبرشپ
+      modern_slavery_statement:
+        one: 
+        other: 
       national:
         one: قومی شماریاتی اعلان
         other: قومی شماریاتی اعلانات
@@ -138,6 +192,9 @@ ur:
       news_story:
         one: خبروں کی کہانی
         other: خبروں کی کہانیاں
+      nhs_content:
+        one: این ایچ ایس مواد۔
+        other: این ایچ ایس مواد۔
       notice:
         one: نوٹس
         other: نوٹسز
@@ -156,6 +213,18 @@ ur:
       oral_statement:
         one: پارلیمان کے لیے زبانی بیان
         other: پارلیمان کے لیے زبانی بیانات
+      our_energy_use:
+        one: ہمارا طاقت کا استعمال
+        other: ہمارا طاقت کا استعمال
+      our_governance:
+        one: ہماری گورننس
+        other: ہماری گورننس
+      personal_information_charter:
+        one: ذاتی معلومات کا چارٹر
+        other: ذاتی معلومات کے چارٹرز
+      petitions_and_campaigns:
+        one: شقیں اور مہمات
+        other: شقیں اور مہمات
       policy:
         one: پالیسی
         other: پالیسیاں
@@ -165,15 +234,24 @@ ur:
       press_release:
         one: پریس ریلیز
         other: پریس ریلیزز
+      procurement:
+        one: حصول
+        other: حصول
       promotional:
         one: تشہیری مواد
         other: تشہیری مواد
       publication:
         one: پبلیکیشن
         other: پبلیکیشنز
+      publication_scheme:
+        one: پبلیکیشن کی اسکیم
+        other: پبلیکیشن کی اسکیمیں
       raib_report:
         one: ریل حادثے کی تفتیشی برانچ رپورٹ
         other: ریل حادثے کی تفتیشی برانچ رپورٹس
+      recruitment:
+        one: بھرتی
+        other: بھرتی
       regulation:
         one: ضابطہ
         other: ضابطے
@@ -183,18 +261,27 @@ ur:
       residential_property_tribunal_decision:
         one: رہائشی پراپرٹی کے لیے عدالتی فیصلہ
         other: رہائشی پراپرٹی کے لیے عدالتی فیصلے
+      service:
+        one: سروس
+        other: سروسز
       service_sign_in:
         one: سروس سائن ان
         other: سروس سائن ان
       service_standard_report:
         one: سروس کے معیار کی رپورٹ
         other: سروس کے معیار کی رپورٹس
+      social_media_use:
+        one: سوشل میڈیا کا استعمال
+        other: سوشل میڈیا کا استعمال
       speaking_notes:
         one: صوتی نوٹس
         other: صوتی نوٹس
       speech:
         one: تقریر
         other: تقاریر
+      staff_update:
+        one: عملے کی اپ ڈیٹ
+        other: عملے کی اپ ڈیٹس
       standard:
         one: معیار
         other: معیارات
@@ -204,6 +291,9 @@ ur:
       statistical_data_set:
         one: شماریاتی ڈیٹا سیٹ
         other: شماریاتی ڈیٹا سیٹس
+      statistics:
+        one: شماریات
+        other: شماریات
       statistics_announcement:
         one: شماریات کے اجراء کا اعلان
         other: شماریات کے اجراء کا اعلانات
@@ -216,6 +306,9 @@ ur:
       tax_tribunal_decision:
         one: ٹیکس اینڈ چانسری عدالتی فیصلہ
         other: ٹیکس اینڈ چانسری عدالتی فیصلے
+      terms_of_reference:
+        one: حوالہ جاتی شرائط
+        other: حوالہ جاتی شرائط
       transcript:
         one: ٹرانسکرپٹ
         other: ٹرانسکرپٹس
@@ -225,6 +318,9 @@ ur:
       utaac_decision:
         one: انتظامی اپیلز کا عدالتی فیصلہ
         other: انتظامی اپیلز کے عدالتی فیصلے
+      welsh_language_scheme:
+        one: ویلش زبان کی اسکیم
+        other: ویلش زبان کی اسکیمز
       world_location_news_article:
         one: خبروں کا مضمون
         other: خبروں کے مضامین

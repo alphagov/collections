@@ -12,6 +12,21 @@ nl:
       aaib_report:
         one: Rapporten Van De Afdeling Onderzoek Van Luchtvaartongevallen
         other: Rapporten Van De Afdeling Onderzoek Van Ongevallen In De Luchtvaart
+      about:
+        one: Over
+        other: Over
+      about_our_services:
+        one: Over onze diensten
+        other: Over onze diensten
+      access_and_opening:
+        one: Toegang en opening
+        other: Toegang en opening
+      accessible_documents_policy:
+        one: Beleid inzake toegankelijke documenten
+        other: Beleid inzake toegankelijke documenten
+      alert:
+        one: Waarschuwing
+        other: Waarschuwingen
       announcement:
         one: Aankondiging
         other: Aankondigingen
@@ -21,9 +36,18 @@ nl:
       authored_article:
         one: Geschreven artikel
         other: Geschreven artikelen
+      blog_post:
+        one: Blog bericht
+        other: Blog berichten
       business_finance_support_scheme:
         one: Zakelijke financiering steunregeling
         other: Ondersteuningsregelingen voor bedrijfsfinanciering
+      campaign:
+        one: Campagne
+        other: Campagnes
+      careers:
+        one: Carrières
+        other: Carrières
       case_study:
         one: Casestudy
         other: Casestudies
@@ -36,6 +60,9 @@ nl:
       coming_soon:
         one: Binnenkort
         other: Binnenkort
+      complaints_procedure:
+        one: Klachtenprocedure
+        other: Klachtenprocedures
       consultation:
         one: Raadpleging
         other: Raadplegingen
@@ -57,6 +84,9 @@ nl:
       decision:
         one: Besluit
         other: Besluiten
+      detailed_guidance:
+        one: Richtlijnen
+        other: Richtlijnen
       detailed_guide:
         one: Richtsnoer
         other: Begeleiding
@@ -70,17 +100,26 @@ nl:
         one: Ontwerpteksten
         other: Ontwerpteksten
       drcf_digital_markets_research:
-        one:
-        other:
+        one: 
+        other: 
       drug_safety_update:
         one: Veiligheid van Geneesmiddelen
         other: Veiligheid van Geneesmiddelen
+      edition:
+        one: Editie
+        other: Edities
+      edition_with_appointment:
+        one: Editie met afspraak
+        other: Edities met afspraak
       employment_appeal_tribunal_decision:
         one: Beslissing van de rechtbank in hoger beroep
         other: Beslissingen van de rechtbank in hoger beroep
       employment_tribunal_decision:
         one: Beslissing van het arbeidstribunaal
         other: Beslissingen van het arbeidstribunaal
+      equality_and_diversity:
+        one: Gelijkheid en diversiteit
+        other: Gelijkheid en diversiteit
       esi_fund:
         one: Europees Structuur- en Investeringsfonds (ESIF)
         other: Europese structuur- en investeringsfondsen (ESIF)
@@ -93,6 +132,9 @@ nl:
       form:
         one: Formulier
         other: Formulieren
+      generic_edition:
+        one: Algemene uitgave
+        other: Algemene uitgave
       government_response:
         one: Overheidsantwoord
         other: Overheidsantwoorden
@@ -117,12 +159,24 @@ nl:
       maib_report:
         one: Marine ongevallen onderzoek branch rapport
         other: Marine ongevallen onderzoek branch rapporten
+      manual:
+        one: Handleiding
+        other: Handleidingen
       map:
         one: Kaart
         other: Kaarten
+      media_enquiries:
+        one: Media aanvraag
+        other: Media aanvragen
       medical_safety_alert:
         one: Waarschuwingen en terugroepingen voor geneesmiddelen en medische hulpmiddelen
         other: Waarschuwingen en terugroepingen voor geneesmiddelen en medische hulpmiddelen
+      membership:
+        one: Lidmaatschap
+        other: Lidmaatschap
+      modern_slavery_statement:
+        one: 
+        other: 
       national:
         one: Aankondiging nationale statistieken
         other: Aankondigingen nationale statistieken
@@ -138,6 +192,9 @@ nl:
       news_story:
         one: Nieuwsbericht
         other: Nieuwsberichten
+      nhs_content:
+        one: NHS-content
+        other: NHS-content
       notice:
         one: Mededeling
         other: Mededelingen
@@ -156,6 +213,18 @@ nl:
       oral_statement:
         one: Mondelinge verklaring voor het Parlement
         other: Mondelinge verklaringen aan het Parlement
+      our_energy_use:
+        one: Ons energieverbruik
+        other: Ons energieverbruik
+      our_governance:
+        one: Ons bestuur
+        other: Ons bestuur
+      personal_information_charter:
+        one: Persoonsgegevens chart
+        other: Persoonsgegevens charts
+      petitions_and_campaigns:
+        one: Petities en campagnes
+        other: Petities en campagnes
       policy:
         one: Beleid
         other: Beleid
@@ -165,15 +234,24 @@ nl:
       press_release:
         one: Persbericht
         other: Persberichten
+      procurement:
+        one: Aanbesteding
+        other: Aanbesteding
       promotional:
         one: Promotiemateriaal
         other: Promotiemateriaal
       publication:
         one: Publicatie
         other: Publicaties
+      publication_scheme:
+        one: Publicatieregeling
+        other: Publicatieregelingen
       raib_report:
         one: Verslag Van De Spoorwegongevallenonderzoeksdienst
         other: Verslagen Van De Spoorwegongevallenonderzoeksdienst
+      recruitment:
+        one: Aanwerving
+        other: Aanwerving
       regulation:
         one: Regelgeving
         other: Regelgeving
@@ -183,18 +261,27 @@ nl:
       residential_property_tribunal_decision:
         one: Beslissing van de rechtbank voor woningen
         other: Beslissingen van de rechtbank voor woningen
+      service:
+        one: Dienst
+        other: Diensten
       service_sign_in:
         one: Dienst aanmelden
         other: Dienst aanmelden
       service_standard_report:
         one: Service Standaardrapport
         other: Service Standaardrapporten
+      social_media_use:
+        one: Gebruik van sociale media
+        other: Gebruik van sociale media
       speaking_notes:
         one: Sprekende notities
         other: Sprekende notities
       speech:
         one: Toespraak
         other: Toespraken
+      staff_update:
+        one: Personeel update
+        other: Personeel updates
       standard:
         one: Standaard
         other: Standaarden
@@ -204,6 +291,9 @@ nl:
       statistical_data_set:
         one: Statistische gegevensverzameling
         other: Statistische gegevensverzamelingen
+      statistics:
+        one: Statistieken
+        other: Statistieken
       statistics_announcement:
         one: Aankondiging van vrijgegeven statistieken
         other: Aankondigingen van vrijgegeven statistieken
@@ -216,6 +306,9 @@ nl:
       tax_tribunal_decision:
         one: Beslissing van het tribunaal voor belastingen en kanselarij
         other: Beslissingen van het tribunaal voor belastingen en kanselarij
+      terms_of_reference:
+        one: Referentievoorwaarden
+        other: Referentievoorwaarden
       transcript:
         one: Transcriptie
         other: Transcripties
@@ -225,6 +318,9 @@ nl:
       utaac_decision:
         one: Beslissing van de rechtbank voor administratief beroep
         other: Beslissingen van de rechtbank voor administratief beroep
+      welsh_language_scheme:
+        one: Regeling voor de Welshe taal
+        other: Regelingen voor de Welshe taal
       world_location_news_article:
         one: Nieuwsartikel
         other: Nieuwsartikelen

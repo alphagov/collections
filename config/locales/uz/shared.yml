@@ -12,6 +12,21 @@ uz:
       aaib_report:
         one: Авиация ҳодисаларини тергов қилиш бўйича бўлим ҳисоботи
         other: Авиация ҳодисаларини тергов қилиш бўйича бўлим ҳисоботлари
+      about:
+        one: Ҳақида
+        other: Ҳақида
+      about_our_services:
+        one: Бизнинг хизматларимиз ҳақида
+        other: Бизнинг хизматларимиз ҳақида
+      access_and_opening:
+        one: Кириш ва очиш
+        other: Кириш ва очиш
+      accessible_documents_policy:
+        one: Ҳужжатларга киришни таъминлаш соҳасидаги сиёсат
+        other: Ҳужжатларга киришни таъминлаш соҳасидаги сиёсатлари
+      alert:
+        one: Огоҳлантириш
+        other: Огоҳлантиришлар
       announcement:
         one: Эълон
         other: Эълонлар
@@ -21,9 +36,18 @@ uz:
       authored_article:
         one: Муаллифлик мақоласи
         other: Муаллифлик мақолалари
+      blog_post:
+        one: Блог хабари
+        other: Блог хабарлари
       business_finance_support_scheme:
         one: Бизнесни молиялаштиришни қўллаб-қувватлаш режаси
         other: Бизнесни молиялаштиришни қўллаб-қувватлаш режалари
+      campaign:
+        one: Кампания
+        other: Кампаниялар
+      careers:
+        one: Каръералар
+        other: каръералар
       case_study:
         one: Ҳолатларнинг таҳлили
         other: Ҳолатларнинг таҳлиллари
@@ -36,6 +60,9 @@ uz:
       coming_soon:
         one: Яқин кунларда
         other: Яқин кунларда
+      complaints_procedure:
+        one: Шикоятларни киритиш тартиб-тамойили
+        other: Шикоятларни киритиш тартиб-тамойиллари
       consultation:
         one: Маслаҳат
         other: Маслаҳатлар
@@ -57,6 +84,9 @@ uz:
       decision:
         one: Қарор
         other: Қарорлар
+      detailed_guidance:
+        one: Қўлланма
+        other: Қўлланма
       detailed_guide:
         one: Қўлланма
         other: Қўлланма
@@ -70,17 +100,26 @@ uz:
         one: Матн лойиҳаси
         other: Матн лойиҳалари
       drcf_digital_markets_research:
-        one:
-        other:
+        one: 
+        other: 
       drug_safety_update:
         one: Дори хавфсизлиги маълумотларини янгилаш
         other: Дори хавфсизлиги маълумотларини янгилашлари
+      edition:
+        one: Таҳрир
+        other: Таҳрирлар
+      edition_with_appointment:
+        one: Тайинлаш билан таҳрир
+        other: Тайинлашлар билан таҳрир
       employment_appeal_tribunal_decision:
         one: Меҳнат ишлари бўйича апелляцион трибуналнинг қарори
         other: Меҳнат ишлари бўйича апелляцион трибуналнинг қарорлари
       employment_tribunal_decision:
         one: Меҳнат ишлари бўйича трибуналнинг қарори
         other: Меҳнат ишлари бўйича трибуналнинг қарорлари
+      equality_and_diversity:
+        one: Тенглик ва турли-туманлик
+        other: Тенглик ва турли-туманлик
       esi_fund:
         one: Европа тузилмавий ва инвестицион фонд (ESIF)
         other: Европа тузилмавий ва инвестицион фондлари (ESIF)
@@ -93,6 +132,9 @@ uz:
       form:
         one: Шакл
         other: Шакллар
+      generic_edition:
+        one: Умумий таҳрир
+        other: Умумий таҳрирлар
       government_response:
         one: Ҳукумат жавоби
         other: Ҳукумат жавоблари
@@ -117,12 +159,26 @@ uz:
       maib_report:
         one: Денгизда бахтсиз ҳодисаларни тергов қилиш бўйича бўлим ҳисоботи
         other: Денгизда бахтсиз ҳодисаларни тергов қилиш бўйича бўлим ҳисоботлари
+      manual:
+        one: Йўриқнома
+        other: Йўриқномалар
       map:
         one: Карта
         other: Карталар
+      media_enquiries:
+        one: ОАВ сўровномаси
+        other: ОАВ сўровномалари
       medical_safety_alert:
-        one: Дори препаратлари ва тиббиёт қурилмалари ҳақидаги огоҳлантиришлар ва мулоҳазалар
-        other: Дори препаратлари ва тиббиёт қурилмалари ҳақидаги огоҳлантиришлар ва мулоҳазалар
+        one: Дори препаратлари ва тиббиёт қурилмалари ҳақидаги огоҳлантиришлар ва
+          мулоҳазалар
+        other: Дори препаратлари ва тиббиёт қурилмалари ҳақидаги огоҳлантиришлар ва
+          мулоҳазалар
+      membership:
+        one: Аъзолик
+        other: Аъзолик
+      modern_slavery_statement:
+        one: 
+        other: 
       national:
         one: Давлат статистик маълумотлар эълони
         other: Давлат статистик маълумотлар эълонлари
@@ -138,6 +194,9 @@ uz:
       news_story:
         one: Янгилик сюжети
         other: Янгилик сюжетлари
+      nhs_content:
+        one: ДССХ таркиби
+        other: ДССХ таркиби
       notice:
         one: Хабарнома
         other: Хабарномалар
@@ -156,6 +215,18 @@ uz:
       oral_statement:
         one: Парламентга оғзаки баёнот
         other: Парламентга оғзаки баёнотлар
+      our_energy_use:
+        one: Бизнинг энергия ишлатишимиз
+        other: Бизнинг энергия ишлатишимиз
+      our_governance:
+        one: Бизнинг бошқарув
+        other: Бизнинг бошқарув
+      personal_information_charter:
+        one: Шахсий маълумот низоми
+        other: Шахсий маълумот низомлари
+      petitions_and_campaigns:
+        one: Петициялар ва кампаниялар
+        other: Петициялар ва кампаниялар
       policy:
         one: Сиёсат
         other: Сиёсатлар
@@ -165,15 +236,24 @@ uz:
       press_release:
         one: Матбуот-релизи
         other: Матбуот-релизлари
+      procurement:
+        one: Харид
+        other: Харид
       promotional:
         one: Реклама материаллари
         other: Реклама материаллари
       publication:
         one: Нашр қилиш
         other: Нашр қилишлар
+      publication_scheme:
+        one: Нашр схемаси
+        other: Нашр схемалари
       raib_report:
         one: Темир йўлда ҳодисаларни тергов қилиш бўлими ҳисоботи
         other: Темир йўлда ҳодисаларни тергов қилиш бўлими ҳисоботлари
+      recruitment:
+        one: Ишга қабул қилиш
+        other: Ишга қабул қилиш
       regulation:
         one: Низом
         other: Низомлар
@@ -183,18 +263,27 @@ uz:
       residential_property_tribunal_decision:
         one: Турар-жой объектига нисбатан трибунал қарори
         other: Турар-жой объектига нисбатан трибунал қарорлари
+      service:
+        one: Хизмат
+        other: Хизматлар
       service_sign_in:
         one: Хизматни рўйхатдан ўтказиш
         other: Хизматни рўйхатдан ўтказиш
       service_standard_report:
         one: Хизмат кўрсатиш стандарти бўйича ҳисобот
         other: Хизмат кўрсатиш стандарти бўйича ҳисоботлар
+      social_media_use:
+        one: Ижтимоий тармоқдан фойдаланиш
+        other: Ижтимоий тармоқдан фойдаланиш
       speaking_notes:
         one: Оғзаки танбеҳлар
         other: Оғзаки танбеҳлар
       speech:
         one: Нутқ
         other: Нутқлар
+      staff_update:
+        one: Ходимлар янгиланиши
+        other: Ходимлар янгиланишлари
       standard:
         one: Стандарт
         other: Стандартлар
@@ -204,6 +293,9 @@ uz:
       statistical_data_set:
         one: Статистик маълумотлар жамланмаси
         other: Статистик маълумотларнинг жамланмалари
+      statistics:
+        one: Статистика
+        other: Статистика
       statistics_announcement:
         one: Статистик маълумотларни чиқариш ҳақида эълон
         other: Статистик маълумотларни чиқариш ҳақида эълонлар
@@ -216,6 +308,9 @@ uz:
       tax_tribunal_decision:
         one: Солиқ масалалари ва адолатлилик трибунали қарори
         other: Солиқ масалалари ва адолатлилик трибунали қарорлари
+      terms_of_reference:
+        one: Ваколат соҳаси
+        other: Ваколат соҳаси
       transcript:
         one: Расшифровка
         other: Расшифровкалар
@@ -225,6 +320,9 @@ uz:
       utaac_decision:
         one: Маъмурий апелляция трибуналининг қарори
         other: Маъмурий апелляция трибуналининг қарорлари
+      welsh_language_scheme:
+        one: Уэльс тили схемаси
+        other: Уэльс тили схемалари
       world_location_news_article:
         one: Янгилик мақоласи
         other: Янгилик мақолалари

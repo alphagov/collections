@@ -11,14 +11,30 @@ ko:
     schema_name:
       aaib_report:
         other: 영국 항공사고조사위원회 보고서
+      about:
+        other: 소개
+      about_our_services:
+        other: 저희 서비스 소개
+      access_and_opening:
+        other: 액세스 및 운영
+      accessible_documents_policy:
+        other: 액세스 가능한 문서 정책
+      alert:
+        other: 알림
       announcement:
         other: 발표
       asylum_support_decision:
         other: 망명 지원 법원 판결
       authored_article:
         other: 저작물
+      blog_post:
+        other: 블로그 포스트
       business_finance_support_scheme:
         other: 비즈니스 재무 지원 계획
+      campaign:
+        other: 캠페인
+      careers:
+        other: 커리어
       case_study:
         other: 사례 연구
       closed_consultation:
@@ -27,6 +43,8 @@ ko:
         other: 경쟁 및 시장 감독 사례
       coming_soon:
         other: 곧 공개됩니다
+      complaints_procedure:
+        other: 불만처리절차
       consultation:
         other: 상담
       consultation_outcome:
@@ -41,6 +59,8 @@ ko:
         other: 농촌환경관리 보조금
       decision:
         other: 판결
+      detailed_guidance:
+        other: 지침
       detailed_guide:
         other: 지침
       dfid_research_output:
@@ -50,14 +70,20 @@ ko:
       draft_text:
         other: 초안 텍스트
       drcf_digital_markets_research:
-        one:
-        other:
+        one: 
+        other: 
       drug_safety_update:
         other: 의약품 안전 업데이트
+      edition:
+        other: 에디션
+      edition_with_appointment:
+        other: 예약판
       employment_appeal_tribunal_decision:
         other: 고용 항소 법원 판결
       employment_tribunal_decision:
         other: 고용 법원 결정
+      equality_and_diversity:
+        other: 평등 및 다양성
       esi_fund:
         other: 유럽구조투자기금(ESIF)
       fatality_notice:
@@ -66,6 +92,8 @@ ko:
         other: FOI 발표
       form:
         other: 양식
+      generic_edition:
+        other: 일반 에디션
       government_response:
         other: 정부 대응
       guidance:
@@ -82,10 +110,18 @@ ko:
         other: 국제 조약
       maib_report:
         other: 영국 해상사고조사위원회 보고서
+      manual:
+        other: 매뉴얼
       map:
         other: 지도
+      media_enquiries:
+        other: 언론 문의
       medical_safety_alert:
         other: 의약품 및 의료기기에 대한 경고 및 리콜
+      membership:
+        other: 멤버십
+      modern_slavery_statement:
+        other: 
       national:
         other: 국내 통계 발표
       national_statistics:
@@ -96,6 +132,8 @@ ko:
         other: 뉴스 기사
       news_story:
         other: 뉴스 스토리
+      nhs_content:
+        other: NHS 콘텐츠
       notice:
         other: 공지
       official:
@@ -108,38 +146,60 @@ ko:
         other: 공개 상담
       oral_statement:
         other: 의회로 구두 성명
+      our_energy_use:
+        other: 저희의 에너지 사용
+      our_governance:
+        other: 저희의 거버넌스
+      personal_information_charter:
+        other: 개인정보 규정
+      petitions_and_campaigns:
+        other: 청원 및 캠페인
       policy:
         other: 정책
       policy_paper:
         other: 정책 문서
       press_release:
         other: 보도자료
+      procurement:
+        other: 조달
       promotional:
         other: 홍보 자료
       publication:
         other: 발행물
+      publication_scheme:
+        other: 발행 계획
       raib_report:
         other: 영국 철도사고조사위원회 보고서
+      recruitment:
+        other: 채용
       regulation:
         other: 규제
       research:
         other: 조사 및 분석
       residential_property_tribunal_decision:
         other: 주거재산법원 판결
+      service:
+        other: 서비스
       service_sign_in:
         other: 서비스 로그인
       service_standard_report:
         other: 서비스 표준 보고서
+      social_media_use:
+        other: 소셜 미디어 사용
       speaking_notes:
         other: 연설문 메모
       speech:
         other: 연설문
+      staff_update:
+        other: 직원 업데이트
       standard:
         other: 표준
       statement_to_parliament:
         other: 의회로 성명
       statistical_data_set:
         other: 통계 데이터 세트
+      statistics:
+        other: 통계
       statistics_announcement:
         other: 통계 공개 발표
       statutory_guidance:
@@ -148,12 +208,16 @@ ko:
         other: 참여하기
       tax_tribunal_decision:
         other: 조세 및 형평법 법원 판결
+      terms_of_reference:
+        other: 참조 조건
       transcript:
         other: 녹취록
       transparency:
         other: 투명성 데이터
       utaac_decision:
         other: 행정 항소심판 법원 판결
+      welsh_language_scheme:
+        other: 웨일스어 계획
       world_location_news_article:
         other: 뉴스 기사
       world_news_story:
