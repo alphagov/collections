@@ -5,6 +5,8 @@ class TopicalEventsController < ApplicationController
     path = topical_event_path(params[:name])
     @topical_event = TopicalEvent.find!(path)
 
+    slimmer_template "gem_layout_no_emergency_banner" if @topical_event.slug == "her-majesty-queen-elizabeth-ii"
+
     respond_to do |format|
       format.html do
         setup_content_item_and_navigation_helpers(@topical_event)
