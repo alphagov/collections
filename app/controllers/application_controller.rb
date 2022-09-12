@@ -95,10 +95,9 @@ private
     render status: status_code, plain: "#{status_code} error"
   end
 
-  def set_expiry(duration = 5.minutes, public_cache: true)
-    duration = @content_item.max_age if @content_item
-    unless Rails.env.development?
-      expires_in(duration, public: public_cache)
+  def set_expiry
+    if !Rails.env.development? && @content_item
+      expires_in(@content_item.max_age, public: @content_item.public_cache)
     end
   end
 

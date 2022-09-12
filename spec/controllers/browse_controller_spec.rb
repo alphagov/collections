@@ -8,6 +8,7 @@ RSpec.describe BrowseController do
         links: {
           top_level_browse_pages: top_level_browse_pages,
         },
+        max_age: 300,
       )
     end
 
