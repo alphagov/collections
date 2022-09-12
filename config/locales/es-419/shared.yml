@@ -8,5 +8,327 @@ es-419:
     get_emails: Recibir emails sobre este tema
     language_direction: ltr
     language_name: Español de América Latina
+    schema_name:
+      aaib_report:
+        one: Informe de la División de Investigación de Accidentes Aéreos
+        other: Informes de la División de Investigación de Accidentes Aéreos
+      about:
+        one: Acerca de
+        other: Acerca de
+      about_our_services:
+        one: Sobre nuestros servicios
+        other: Sobre nuestros servicios
+      access_and_opening:
+        one: Acceso y inicio
+        other: Acceso y inicio
+      accessible_documents_policy:
+        one: Política sobre documentos accesibles
+        other: Políticas sobre documentos accesibles
+      alert:
+        one: Alerta
+        other: Alertas
+      announcement:
+        one: Comunicado
+        other: Anuncios
+      asylum_support_decision:
+        one: Decisión del tribunal de ayuda a refugiados
+        other: Decisiones del tribunal de ayuda a refugiados
+      authored_article:
+        one: Artículo de autoría
+        other: Artículos de autoría
+      blog_post:
+        one: Entrada del blog
+        other: Entradas del blog
+      business_finance_support_scheme:
+        one: Programa de apoyo financiero a empresas
+        other: Programas de apoyo financiero a empresas
+      campaign:
+        one: Campaña
+        other: Campañas
+      careers:
+        one: Profesiones
+        other: profesiones
+      case_study:
+        one: Estudio de caso
+        other: Estudios de caso
+      closed_consultation:
+        one: Consulta restringida
+        other: Consultas restringidas
+      cma_case:
+        one: Asunto de la Autoridad de Competencia y Mercados
+        other: Asuntos de la Autoridad de Competencia y Mercados
+      coming_soon:
+        one: Próximamente
+        other: Próximamente
+      complaints_procedure:
+        one: Procedimiento de reclamos
+        other: Procedimientos de reclamos
+      consultation:
+        one: Consulta
+        other: Consultas
+      consultation_outcome:
+        one: Resultado de la consultoría
+        other: Resultados de las consultorías
+      corporate_information_page:
+        one: Página de información
+        other: Páginas de información
+      corporate_report:
+        one: Informe de la empresa
+        other: Informes de la empresa
+      correspondence:
+        one: Correspondencia
+        other: Correspondencias
+      countryside_stewardship_grant:
+        one: Subvención para la gestión del campo
+        other: Subvenciones para la gestión del campo
+      decision:
+        one: Decisión
+        other: Decisiones
+      detailed_guidance:
+        one: Orientación
+        other: Orientación
+      detailed_guide:
+        one: Orientación
+        other: Orientación
+      dfid_research_output:
+        one: Resultado de la investigación para el desarrollo
+        other: Resultados de la investigación para el desarrollo
+      document_collection:
+        one: Colección
+        other: Colecciones
+      draft_text:
+        one: Borrador
+        other: Borradores
+      drcf_digital_markets_research:
+        one: 
+        other: 
+      drug_safety_update:
+        one: Informe sobre seguridad de los medicamentos
+        other: Novedades sobre seguridad de los medicamentos
+      edition:
+        one: Edición
+        other: Ediciones
+      edition_with_appointment:
+        one: Edición con cita
+        other: Ediciones con cita
+      employment_appeal_tribunal_decision:
+        one: Decisión del tribunal de apelación en materia de empleo
+        other: Decisiones del tribunal de apelación en materia de empleo
+      employment_tribunal_decision:
+        one: Decisión del tribunal laboral
+        other: Decisiones del tribunal laboral
+      equality_and_diversity:
+        one: Igualdad y diversidad
+        other: Igualdad y diversidad
+      esi_fund:
+        one: Fondo Europeo de Estructura e Inversión (ESIF)
+        other: European Structural and Investment Funds (ESIF)
+      fatality_notice:
+        one: Aviso de fallecimiento
+        other: Avisos de fallecimiento
+      foi_release:
+        one: Publicación sobre Libertad de Información (FOI)
+        other: Publicaciones sobre Libertad de Informacion (FOI)
+      form:
+        one: Formulario
+        other: Formularios
+      generic_edition:
+        one: Edición genérica
+        other: Ediciones genéricas
+      government_response:
+        one: Respuesta gubernamental
+        other: Respuestas gubernamentales
+      guidance:
+        one: Orientación
+        other: Orientación
+      impact_assessment:
+        one: Análisis de impacto
+        other: Evaluaciones de impacto
+      imported:
+        one: importado - en espera de tipo
+        other: importado - en espera de tipo
+      independent_report:
+        one: Informe independiente
+        other: Informes independientes
+      international_development_fund:
+        one: Financiación del desarrollo internacional
+        other: Financiación del desarrollo internacional
+      international_treaty:
+        one: Tratado internacional
+        other: Tratados internacionales
+      maib_report:
+        one: Informe de la División de Investigación de Accidentes Marítimos
+        other: Informes de la División de Investigación de Accidentes Marítimos
+      manual:
+        one: Manual
+        other: Manuales
+      map:
+        one: Mapa
+        other: Mapas
+      media_enquiries:
+        one: Consulta de medios de comunicación
+        other: Consultas de prensa
+      medical_safety_alert:
+        one: Alertas y retiros de medicamentos y productos sanitarios
+        other: Alertas y retiros de medicamentos y productos sanitarios
+      membership:
+        one: Afiliación
+        other: Afiliación
+      modern_slavery_statement:
+        one: 
+        other: 
+      national:
+        one: Anuncio de estadísticas nacionales
+        other: Anuncios de estadísticas nacionales
+      national_statistics:
+        one: Estadísticas nacionales
+        other: Estadísticas nacionales
+      national_statistics_announcement:
+        one: Anuncio de estadísticas nacionales
+        other: Anuncios de estadísticas nacionales
+      news_article:
+        one: Artículo de prensa
+        other: Artículos de prensa
+      news_story:
+        one: Reportaje de noticias
+        other: Reportajes de noticias
+      nhs_content:
+        one: Contenido del Servicio Nacional de Salud (del inglés NHS)
+        other: Contenido del Servicio Nacional de Salud (del inglés NHS)
+      notice:
+        one: Aviso
+        other: Avisos
+      official:
+        one: Anuncio de estadísticas oficiales
+        other: Anuncios de estadísticas oficiales
+      official_statistics:
+        one: Estadísticas Oficiales
+        other: Estadísticas Oficiales
+      official_statistics_announcement:
+        one: Anuncio de estadísticas oficiales
+        other: Anuncios de estadísticas oficiales
+      open_consultation:
+        one: Consulta pública
+        other: Consultas públicas
+      oral_statement:
+        one: Declaracion oral ante el Parlamento
+        other: Declaraciones orales ante el Parlamento
+      our_energy_use:
+        one: Uso de la energía
+        other: Uso de la energía
+      our_governance:
+        one: Gestíon pública
+        other: Gestíon pública
+      personal_information_charter:
+        one: Carta de datos personales
+        other: Cartas de datos personales
+      petitions_and_campaigns:
+        one: Peticiones y campañas
+        other: Peticiones y campañas
+      policy:
+        one: Normativa
+        other: Normativas
+      policy_paper:
+        one: Documento normativo
+        other: Documentos normativos
+      press_release:
+        one: Comunicado de prensa
+        other: Comunicados de prensa
+      procurement:
+        one: Adquisiciones
+        other: Adquisiciones
+      promotional:
+        one: Material promocional
+        other: Material promocional
+      publication:
+        one: Publicación
+        other: Publicaciones
+      publication_scheme:
+        one: Esquema de publicación
+        other: Esquemas de publicación
+      raib_report:
+        one: Informe de la División de Investigación de Accidentes Ferroviarios
+        other: Informes de la División de Investigación de Accidentes Ferroviarios
+      recruitment:
+        one: Contratación
+        other: Contratación
+      regulation:
+        one: Regulación
+        other: Regulaciones
+      research:
+        one: Investigación y análisis
+        other: Investigación y análisis
+      residential_property_tribunal_decision:
+        one: Decisión del tribunal de bienes residenciales
+        other: Decisiones del tribunal de bienes residenciales
+      service:
+        one: Servicio
+        other: Servicios
+      service_sign_in:
+        one: Registro del servicio
+        other: Registro del servicio
+      service_standard_report:
+        one: Informe estándar del servicio
+        other: Informes estándar del servicio
+      social_media_use:
+        one: Uso de redes sociales
+        other: Uso de redes sociales
+      speaking_notes:
+        one: Notas de presentación
+        other: Notas de presentación
+      speech:
+        one: Discurso
+        other: Discursos
+      staff_update:
+        one: Actualización del personal
+        other: Actualizaciones del personal
+      standard:
+        one: Estándar
+        other: Estándares
+      statement_to_parliament:
+        one: Declaración al Parlamento
+        other: Declaraciónes al Parlamento
+      statistical_data_set:
+        one: Conjunto de datos estadísticos
+        other: Conjuntos de datos estadísticos
+      statistics:
+        one: Estadísticas
+        other: Estadísticas
+      statistics_announcement:
+        one: Anuncio y difusión de estadísticas
+        other: Anuncios y difusión de estadísticas
+      statutory_guidance:
+        one: Orientaciones reglamentarias
+        other: Orientaciones reglamentarias
+      take_part:
+        one: Participe
+        other: Participe
+      tax_tribunal_decision:
+        one: Decisión del tribunal fiscal y de cancillería
+        other: Decisiones del tribunal fiscal y de cancillería
+      terms_of_reference:
+        one: Términos de referencia
+        other: Términos de referencia
+      transcript:
+        one: Transcripción
+        other: Transcripciones
+      transparency:
+        one: Transparencia de datos
+        other: Transparencia de datos
+      utaac_decision:
+        one: Decisión del tribunal de apelación administrativa
+        other: Decisión del tribunal de apelación administrativa
+      welsh_language_scheme:
+        one: Plan de lengua galesa
+        other: Planes de lengua galesa
+      world_location_news_article:
+        one: Artículo de prensa
+        other: Artículos de prensa
+      world_news_story:
+        one: Noticia del mundo
+        other: Noticias mundiales
+      written_statement:
+        one: Declaración escrita ante el Parlamento
+        other: Declaraciones escritas ante el Parlamento
     topics:
       title: "%{title}: información detallada"

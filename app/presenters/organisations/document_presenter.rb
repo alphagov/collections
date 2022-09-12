@@ -66,7 +66,7 @@ module Organisations
     def document_translation
       return if cleaned_document_type.blank?
 
-      "organisations.content_item.schema_name.#{cleaned_document_type}.one"
+      "shared.schema_name.#{cleaned_document_type}.one"
     end
 
     def public_updated_at

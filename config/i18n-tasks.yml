@@ -7,7 +7,7 @@ data:
     write:
       line_width: -1
 ignore_unused:
-  - "organisations.content_item.schema_name.*"
+  - "shared.schema_name.*"
   - "roles.heading.*"
   - "organisations.type.*"
   - "organisations.works_with_statement.*"

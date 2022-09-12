@@ -8,5 +8,327 @@
     get_emails: Få e-post for dette emnet
     language_direction: ltr
     language_name: norsk
+    schema_name:
+      aaib_report:
+        one: Rapport fra Avdeling for etterforskning av flyulykker
+        other: Rapporter fra Avdeling for etterforskning av flyulykker
+      about:
+        one: Om
+        other: Om
+      about_our_services:
+        one: Om våre tjenester
+        other: Om våre tjenester
+      access_and_opening:
+        one: Tilgang og åpning
+        other: Tilgang og åpning
+      accessible_documents_policy:
+        one: Retningslinjer for tilgjengelige dokumenter
+        other: Retningslinjer for tilgjengelige dokumenter
+      alert:
+        one: Varsling
+        other: Varsler
+      announcement:
+        one: Kunngjøring
+        other: Kunngjøringer
+      asylum_support_decision:
+        one: Avgjørelse fra asylstøttenemnda
+        other: Avgjørelser fra asylstøttenemnda
+      authored_article:
+        one: Forfatterartikkel
+        other: Forfatterartikler
+      blog_post:
+        one: Blogginnlegg
+        other: Blogginnlegg
+      business_finance_support_scheme:
+        one: Skjema for forretningsfinansieringsstøtteordning
+        other: Skjema for forretningsfinansieringsstøtteordning
+      campaign:
+        one: Kampanje
+        other: Kampanjer
+      careers:
+        one: Karriere
+        other: karrierer
+      case_study:
+        one: Casestudie
+        other: Casestudier
+      closed_consultation:
+        one: Lukket konsultasjon
+        other: Lukkede konsultasjoner
+      cma_case:
+        one: Sak fra konkurranse- og markedstilsynet
+        other: Saker fra konkurranse- og markedstilsynet
+      coming_soon:
+        one: Kommer snart
+        other: Kommer snart
+      complaints_procedure:
+        one: Klageprosedyre
+        other: Klageprosedyrer
+      consultation:
+        one: Konsultasjon
+        other: Konsultasjoner
+      consultation_outcome:
+        one: Resultat av konsultasjon
+        other: Resultat av konsultasjon
+      corporate_information_page:
+        one: Informasjonsside
+        other: Informasjonssider
+      corporate_report:
+        one: Bedriftsrapport
+        other: Bedriftsrapporter
+      correspondence:
+        one: Korrespondanse
+        other: Korrespondanser
+      countryside_stewardship_grant:
+        one: Countryside Stewardship-stipend
+        other: Countryside Stewardship-stipend
+      decision:
+        one: Beslutning
+        other: Beslutninger
+      detailed_guidance:
+        one: Veiledning
+        other: Veiledning
+      detailed_guide:
+        one: Veiledning
+        other: Veiledning
+      dfid_research_output:
+        one: Resultater av forskning for utvikling
+        other: Resultater av forskning for utvikling
+      document_collection:
+        one: Samling
+        other: Samlinger
+      draft_text:
+        one: Utkast til tekst
+        other: Utkast til tekster
+      drcf_digital_markets_research:
+        one: 
+        other: 
+      drug_safety_update:
+        one: Oppdatering av legemiddelsikkerhet
+        other: Oppdatering av legemiddelsikkerhet
+      edition:
+        one: Utgave
+        other: Utgaver
+      edition_with_appointment:
+        one: Utgave med avtale
+        other: Utgaver med avtale
+      employment_appeal_tribunal_decision:
+        one: Ansettelsesnemndas avgjørelse
+        other: Ansettelsesnemndas avgjørelser
+      employment_tribunal_decision:
+        one: Arbeidsrettsavgjørelse
+        other: Arbeidsrettsavgjørelser
+      equality_and_diversity:
+        one: Likestilling og mangfold
+        other: Likestilling og mangfold
+      esi_fund:
+        one: Det europeiske struktur- og investeringsfondet (ESIF)
+        other: Europeiske struktur- og investeringsfond (ESIF)
+      fatality_notice:
+        one: Melding om dødsfall
+        other: Meldinger om dødsfall
+      foi_release:
+        one: Informasjonsfrihetstillatelse
+        other: Informasjonsfrihetstillatelser
+      form:
+        one: Skjema
+        other: Skjemaer
+      generic_edition:
+        one: Generisk utgave
+        other: Generiske utgaver
+      government_response:
+        one: Myndighetenes svar
+        other: Myndighetenes svar
+      guidance:
+        one: Veiledning
+        other: Veiledning
+      impact_assessment:
+        one: Konsekvensutredning
+        other: Konsekvensanalyser
+      imported:
+        one: importert - venter på type
+        other: importert - venter på type
+      independent_report:
+        one: Uavhengig rapport
+        other: Uavhengige rapporter
+      international_development_fund:
+        one: Internasjonal utviklingsfinansiering
+        other: Internasjonal utviklingsfinansiering
+      international_treaty:
+        one: Internasjonal traktat
+        other: Internasjonale traktater
+      maib_report:
+        one: Rapport fra avdeling for etterforskning av marine ulykker
+        other: Rapporter fra avdeling for etterforskning av marine ulykker
+      manual:
+        one: Håndbok
+        other: Håndbøker
+      map:
+        one: Kart
+        other: Kart
+      media_enquiries:
+        one: Medieforespørsel
+        other: Medieforespørsler
+      medical_safety_alert:
+        one: Varsler og tilbakekallinger for medisiner og medisinsk utstyr
+        other: Varsler og tilbakekallinger for medisiner og medisinsk utstyr
+      membership:
+        one: Medlemskap
+        other: Medlemskap
+      modern_slavery_statement:
+        one: 
+        other: 
+      national:
+        one: Nasjonal statistikkmelding
+        other: Nasjonale statistikkmeldinger
+      national_statistics:
+        one: Nasjonal statistikk
+        other: Nasjonal statistikk
+      national_statistics_announcement:
+        one: Nasjonal statistikkmelding
+        other: Nasjonale statistikkmeldinger
+      news_article:
+        one: Nyhetsartikkel
+        other: Nyhetsartikler
+      news_story:
+        one: Nyhetssak
+        other: Nyhetssaker
+      nhs_content:
+        one: Innhold fra det nasjonale helsevesenet
+        other: Innhold fra det nasjonale helsevesenet
+      notice:
+        one: Merknad
+        other: Merknader
+      official:
+        one: Offisiell statistikkunngjøring
+        other: Offisielle statistikkkunngjøringer
+      official_statistics:
+        one: Offisiell statistikk
+        other: Offisiell statistikk
+      official_statistics_announcement:
+        one: Offisiell statistikkunngjøring
+        other: Offisielle statistikkkunngjøringer
+      open_consultation:
+        one: Åpen konsultasjon
+        other: Åpne konsultasjoner
+      oral_statement:
+        one: Muntlig uttalelse til Stortinget
+        other: Muntlige uttalelser til Stortinget
+      our_energy_use:
+        one: Vår energibruk
+        other: Vår energibruk
+      our_governance:
+        one: Vår styring
+        other: Vår styring
+      personal_information_charter:
+        one: Personopplysnings-charter
+        other: Personopplysnings-chartre
+      petitions_and_campaigns:
+        one: Begjæringer og kampanjer
+        other: Begjæringer og kampanjer
+      policy:
+        one: Retningslinjer
+        other: Retningslinjer
+      policy_paper:
+        one: Skriv om retningslinjer
+        other: Skriv om retningslinjer
+      press_release:
+        one: Pressemelding
+        other: Pressemeldinger
+      procurement:
+        one: Anskaffelse
+        other: Anskaffelse
+      promotional:
+        one: Reklamemateriell
+        other: Reklamemateriell
+      publication:
+        one: Utgivelse
+        other: Publikasjoner
+      publication_scheme:
+        one: Publiseringsskjema
+        other: Publiseringsskjema
+      raib_report:
+        one: Rapport fra avdeling for gransking av jernbaneulykker
+        other: Rapporter fra avdeling for gransking av jernbaneulykker
+      recruitment:
+        one: Rekruttering
+        other: Rekruttering
+      regulation:
+        one: Forskrift
+        other: Forskrift
+      research:
+        one: Forskning og analyse
+        other: Forskning og analyse
+      residential_property_tribunal_decision:
+        one: Beslutning fra boligeiendomsnemnda
+        other: Beslutninger fra boligeiendomsnemnda
+      service:
+        one: Tjeneste
+        other: Tjenester
+      service_sign_in:
+        one: Tjenestepålogging
+        other: Tjenestepålogging
+      service_standard_report:
+        one: Tjenestestandardrapport
+        other: Tjenestestandardrapporter
+      social_media_use:
+        one: Bruk av sosiale medier
+        other: Bruk av sosiale medier
+      speaking_notes:
+        one: Foredragsnotater
+        other: Foredragsnotater
+      speech:
+        one: Tale
+        other: Taler
+      staff_update:
+        one: Personaloppdatering
+        other: Personaloppdateringer
+      standard:
+        one: Standard
+        other: Standarder
+      statement_to_parliament:
+        one: Uttalelse til Stortinget
+        other: Uttalelse til Stortinget
+      statistical_data_set:
+        one: Statistisk datasett
+        other: Statistiske datasett
+      statistics:
+        one: Statistikk
+        other: Statistikk
+      statistics_announcement:
+        one: Kunngjøring om utgivelse av statistikk
+        other: Kunngjøringer om utgivelse av statistikk
+      statutory_guidance:
+        one: Lovpålagt veiledning
+        other: Lovpålagt veiledning
+      take_part:
+        one: Delta
+        other: Delta
+      tax_tribunal_decision:
+        one: Skatte- og kanslerettsavgjørelse
+        other: Skatte- og kanslerettsavgjørelser
+      terms_of_reference:
+        one: Henvisningsbetingelser
+        other: Henvisningsbetingelser
+      transcript:
+        one: Transkripsjon
+        other: Transkripsjoner
+      transparency:
+        one: Synlighetsdata
+        other: Synlighetsdata
+      utaac_decision:
+        one: Administrativ ankenemndavgjørelse
+        other: Administrative ankenemndavgjørelser
+      welsh_language_scheme:
+        one: Walisisk språkskjema
+        other: Walisiske språkskjema
+      world_location_news_article:
+        one: Nyhetsartikkel
+        other: Nyhetsartikler
+      world_news_story:
+        one: Verdensnyhet
+        other: Verdensnyheter
+      written_statement:
+        one: Skriftlig uttalelse til Stortinget
+        other: Skriftlige uttalelser til Stortinget
     topics:
       title: "%{title}: detaljert informasjon"

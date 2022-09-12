@@ -8,5 +8,339 @@ da:
     get_emails: Få e-mails til dette emne
     language_direction: ltr
     language_name: Dansk
+    schema_name:
+      aaib_report:
+        one: Rapport fra afdelingen for undersøgelse af flyulykker
+        other: Rapporter fra afdelingen for undersøgelse af flyulykker
+      about:
+        one: Om
+        other: Om
+      about_our_services:
+        one: Om vores tjenester
+        other: Om vores tjenester
+      access_and_opening:
+        one: Adgang og åbning
+        other: Adgang og åbning
+      accessible_documents_policy:
+        one: Politik for tilgængelige dokumenter
+        other: Politikker for tilgængelige dokumenter
+      alert:
+        one: Advarsel
+        other: Advarsler
+      announcement:
+        one: Meddelelse
+        other: Meddelelser
+      asylum_support_decision:
+        one: Afgørelse fra asylstøttedomstolen
+        other: Afgørelser fra asylstøttedomstolen
+      authored_article:
+        one: Forfattet artikel
+        other: Forfatterartikler
+      blog_post:
+        one: Blogindlæg
+        other: Blogindlæg
+      business_finance_support_scheme:
+        one: Forretningsfinansieringsstøtteordning
+        other: Forretningsfinansieringsstøtteordninger
+      campaign:
+        one: Kampagne
+        other: Kampagner
+      careers:
+        one: Karrierer
+        other: Karrierer
+      case_study:
+        one: Casestudie
+        other: Casestudie
+      closed_consultation:
+        one: Lukket konsultation
+        other: Lukkede konsultationer
+      cma_case:
+        one: Konkurrence- og markedsmyndighedens sag
+        other: Konkurrence- og markedsmyndighedens sager
+      coming_soon:
+        one: Kommer snart
+        other: Kommer snart
+      complaints_procedure:
+        one: Klageprocedure
+        other: Klageprocedurer
+      consultation:
+        one: Konsultation
+        other: Konsultationer
+      consultation_outcome:
+        one: Resultatet af høringen
+        other: Resultater af høringen
+      corporate_information_page:
+        one: Informationsside
+        other: Informationssider
+      corporate_report:
+        one: Virksomhedsrapport
+        other: Virksomhedsrapporter
+      correspondence:
+        one: Korrespondance
+        other: Korrespondancer
+      countryside_stewardship_grant:
+        one: Countryside Stewardship tilskud
+        other: Countryside Stewardship -tilskud
+      decision:
+        one: Beslutning
+        other: Beslutninger
+      detailed_guidance:
+        one: Vejledning
+        other: Vejledning
+      detailed_guide:
+        one: Vejledning
+        other: Vejledning
+      dfid_research_output:
+        one: Forskning til udvikling af output
+        other: Forskning til udvikling af outputs
+      document_collection:
+        one: Indsamling
+        other: Indsamlinger
+      draft_text:
+        one: Udkast til tekst
+        other: Udkast til tekster
+      drcf_digital_markets_research:
+        one: 
+        other: 
+      drug_safety_update:
+        one: Opdatering om lægemiddelsikkerhed
+        other: Opdateringer om lægemiddelsikkerhed
+      edition:
+        one: Udgave
+        other: Udgaver
+      edition_with_appointment:
+        one: Udgave med udnævnelse
+        other: Udgaver med udnævnelse
+      employment_appeal_tribunal_decision:
+        one: |-
+          Afgørelse om forvaltningsappelsager
+          Nyhedsartikel
+        other: |-
+          Afgørelser om administrative klager
+          Nyhedsartikel
+      employment_tribunal_decision:
+        one: |-
+          Afgørelse om forvaltningsappelsag
+          Nyhedsartikel
+        other: |-
+          Afgørelse om forvaltningsappelsager
+          Nyhedsartikel
+      equality_and_diversity:
+        one: Lighed og mangfoldighed
+        other: Lighed og mangfoldighed
+      esi_fund:
+        one: Den Europæiske Struktur- og Investeringsfond (ESIF)
+        other: De europæiske struktur- og investeringsfonde (ESIF)
+      fatality_notice:
+        one: Meddelelse om dødsfald
+        other: Meddelelser om dødsfald
+      foi_release:
+        one: FOI frigivelse
+        other: FOI frigivelser
+      form:
+        one: Formular
+        other: Formularer
+      generic_edition:
+        one: Generisk udgave
+        other: Generiske udgaver
+      government_response:
+        one: Regeringens reaktion
+        other: Regeringens reaktioner
+      guidance:
+        one: Vejledning
+        other: Vejledning
+      impact_assessment:
+        one: Konsekvensanalyse
+        other: Konsekvensanalyser
+      imported:
+        one: importeret - afventer type
+        other: importeret - afventer type
+      independent_report:
+        one: Uafhængig rapport
+        other: Uafhængige rapporter
+      international_development_fund:
+        one: International udviklingsfinansiering
+        other: International udviklingsfinansiering
+      international_treaty:
+        one: International traktat
+        other: Internationale traktater
+      maib_report:
+        one: Rapport fra afdelingen for undersøgelse af flyulykker
+        other: Rapporter fra afdelingen for undersøgelse af flyulykker
+      manual:
+        one: Manuel
+        other: Manualer
+      map:
+        one: Kort
+        other: Kort
+      media_enquiries:
+        one: Medieforespørgsel
+        other: Medieforespørgsler
+      medical_safety_alert:
+        one: Advarsler og tilbagekaldelser af lægemidler og medicinsk udstyr
+        other: Advarsler og tilbagekaldelser af lægemidler og medicinsk udstyr
+      membership:
+        one: Medlemskab
+        other: Medlemskab
+      modern_slavery_statement:
+        one: 
+        other: 
+      national:
+        one: Nationale statistikmeddelelse
+        other: Nationale statistikmeddelelser
+      national_statistics:
+        one: Nationale statistikker
+        other: Nationale statistikker
+      national_statistics_announcement:
+        one: Nationale statistikmeddelelse
+        other: Nationale statistikmeddelelser
+      news_article:
+        one: Nyhedsartikel
+        other: Nyhedsartikler
+      news_story:
+        one: Nyhedshistorie
+        other: Nyhedshistorier
+      nhs_content:
+        one: indhold af den nationale sundhedstjeneste
+        other: indhold af den nationale sundhedstjeneste
+      notice:
+        one: Meddelelse
+        other: Meddelelser
+      official:
+        one: Officielle statistikmeddelelse
+        other: Officielle statistikmeddelelser
+      official_statistics:
+        one: Officielle statistikker
+        other: Officielle statistikker
+      official_statistics_announcement:
+        one: Officielle statistikmeddelelse
+        other: Officielle statistikmeddelelser
+      open_consultation:
+        one: Åben konsultation
+        other: Åbne konsultationer
+      oral_statement:
+        one: Mundtlig erklæring til Parlamentet
+        other: Mundtlige erklæring til Parlamentet
+      our_energy_use:
+        one: Vores energiforbrug
+        other: Vores energiforbrug
+      our_governance:
+        one: Vores styring
+        other: Vores styring
+      personal_information_charter:
+        one: Personoplysninger charter
+        other: Personoplysninger chartre
+      petitions_and_campaigns:
+        one: Andragender og kampagner
+        other: Andragender og kampagner
+      policy:
+        one: Politik
+        other: Politikker
+      policy_paper:
+        one: Politikdokument
+        other: Politikdokumenter
+      press_release:
+        one: Pressemeddelelse
+        other: Pressemeddelelser
+      procurement:
+        one: Indkøb
+        other: Indkøb
+      promotional:
+        one: Reklamemateriale
+        other: Reklamemateriale
+      publication:
+        one: Publikation
+        other: Publikationer
+      publication_scheme:
+        one: Publikation ordning
+        other: Publikation ordninger
+      raib_report:
+        one: rapport fra undersøgelsesafdelingen for jernbaneulykker
+        other: rapporter fra undersøgelsesafdelingen for jernbaneulykker
+      recruitment:
+        one: Rekruttering
+        other: Rekruttering
+      regulation:
+        one: Forordning
+        other: Forordninger
+      research:
+        one: Forskning og analyse
+        other: Forskning og analyse
+      residential_property_tribunal_decision:
+        one: Afgørelse fra domstolene om boligejendomme
+        other: Afgørelser fra domstolene om boligejendomme
+      service:
+        one: Tjeneste
+        other: Tjenester
+      service_sign_in:
+        one: Tjeneste logge ind
+        other: Tjeneste logge ind
+      service_standard_report:
+        one: Servicestandardrapport
+        other: Servicestandardrapport
+      social_media_use:
+        one: Brug af sociale medier
+        other: Brug af sociale medier
+      speaking_notes:
+        one: Talende noter
+        other: Talende noter
+      speech:
+        one: tale
+        other: taler
+      staff_update:
+        one: Opdatering af personalet
+        other: Opdateringer af personalet
+      standard:
+        one: Standard
+        other: Standarder
+      statement_to_parliament:
+        one: Erklæring til Parlamentet
+        other: Erklæringer til Parlamentet
+      statistical_data_set:
+        one: Statistisk datasæt
+        other: Statistiske datasæt
+      statistics:
+        one: Statistik
+        other: Statistik
+      statistics_announcement:
+        one: Meddelelse om frigivelse af statistik
+        other: Meddelelser om frigivelse af statistik
+      statutory_guidance:
+        one: Lovpligtig vejledning
+        other: Lovpligtig vejledning
+      take_part:
+        one: Deltage
+        other: Deltage
+      tax_tribunal_decision:
+        one: Afgørelse fra skatte- og kancellidomstolen
+        other: Afgørelser fra skatte- og kancellidomstolen
+      terms_of_reference:
+        one: Kommissorium
+        other: Kommissorium
+      transcript:
+        one: Udskrift
+        other: Udskrifter
+      transparency:
+        one: Data om gennemsigtighed
+        other: Data om gennemsigtighed
+      utaac_decision:
+        one: |-
+          Afgørelse om forvaltningsappelsager
+          Nyhedsartikel
+        other: |-
+          Afgørelser om forvaltningsappelsager
+          Nyhedsartikel
+      welsh_language_scheme:
+        one: Ordning for det walisiske sprog
+        other: Ordninger for walisisk sprog
+      world_location_news_article:
+        one: Nyhedsartikel
+        other: Nyhedsartikler
+      world_news_story:
+        one: Verdensomspændende nyhedshistorie
+        other: Verdensomspændende nyhedshistorier
+      written_statement:
+        one: Mundtlig erklæring til Parlamentet
+        other: Mundtlige erklæring til Parlamentet
     topics:
       title: "%{title}: detaljerede oplysninger"

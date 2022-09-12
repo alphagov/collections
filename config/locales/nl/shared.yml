@@ -8,5 +8,327 @@ nl:
     get_emails: Ontvang e-mails over dit onderwerp
     language_direction: ltr
     language_name: Nederlands
+    schema_name:
+      aaib_report:
+        one: Rapporten Van De Afdeling Onderzoek Van Luchtvaartongevallen
+        other: Rapporten Van De Afdeling Onderzoek Van Ongevallen In De Luchtvaart
+      about:
+        one: Over
+        other: Over
+      about_our_services:
+        one: Over onze diensten
+        other: Over onze diensten
+      access_and_opening:
+        one: Toegang en opening
+        other: Toegang en opening
+      accessible_documents_policy:
+        one: Beleid inzake toegankelijke documenten
+        other: Beleid inzake toegankelijke documenten
+      alert:
+        one: Waarschuwing
+        other: Waarschuwingen
+      announcement:
+        one: Aankondiging
+        other: Aankondigingen
+      asylum_support_decision:
+        one: Uitspraak van het asiel-ondersteuningstribunaal
+        other: Uitspraken van het asiel-ondersteuningstribunaal
+      authored_article:
+        one: Geschreven artikel
+        other: Geschreven artikelen
+      blog_post:
+        one: Blog bericht
+        other: Blog berichten
+      business_finance_support_scheme:
+        one: Zakelijke financiering steunregeling
+        other: Ondersteuningsregelingen voor bedrijfsfinanciering
+      campaign:
+        one: Campagne
+        other: Campagnes
+      careers:
+        one: Carrières
+        other: Carrières
+      case_study:
+        one: Casestudy
+        other: Casestudies
+      closed_consultation:
+        one: Gesloten overleg
+        other: Gesloten raadplegingen
+      cma_case:
+        one: Mededingings- en marktautoriteit zaak
+        other: Mededinging en Markten Autoriteit zaken
+      coming_soon:
+        one: Binnenkort
+        other: Binnenkort
+      complaints_procedure:
+        one: Klachtenprocedure
+        other: Klachtenprocedures
+      consultation:
+        one: Raadpleging
+        other: Raadplegingen
+      consultation_outcome:
+        one: Uitkomsten raadpleging
+        other: Overleg uitkomsten
+      corporate_information_page:
+        one: Informatie pagina
+        other: Informatie pagina's
+      corporate_report:
+        one: Ondernemingsverslag
+        other: Bedrijfsverslagen
+      correspondence:
+        one: Correspondentie
+        other: Correspondentie
+      countryside_stewardship_grant:
+        one: Subsidie voor Countryside Stewardship
+        other: Subsidies in het kader van het Countryside Stewardship
+      decision:
+        one: Besluit
+        other: Besluiten
+      detailed_guidance:
+        one: Richtlijnen
+        other: Richtlijnen
+      detailed_guide:
+        one: Richtsnoer
+        other: Begeleiding
+      dfid_research_output:
+        one: Onderzoek voor ontwikkeling output
+        other: Onderzoek voor ontwikkelingsdoeleinden
+      document_collection:
+        one: Verzameling
+        other: Verzamelingen
+      draft_text:
+        one: Ontwerpteksten
+        other: Ontwerpteksten
+      drcf_digital_markets_research:
+        one: 
+        other: 
+      drug_safety_update:
+        one: Veiligheid van Geneesmiddelen
+        other: Veiligheid van Geneesmiddelen
+      edition:
+        one: Editie
+        other: Edities
+      edition_with_appointment:
+        one: Editie met afspraak
+        other: Edities met afspraak
+      employment_appeal_tribunal_decision:
+        one: Beslissing van de rechtbank in hoger beroep
+        other: Beslissingen van de rechtbank in hoger beroep
+      employment_tribunal_decision:
+        one: Beslissing van het arbeidstribunaal
+        other: Beslissingen van het arbeidstribunaal
+      equality_and_diversity:
+        one: Gelijkheid en diversiteit
+        other: Gelijkheid en diversiteit
+      esi_fund:
+        one: Europees Structuur- en Investeringsfonds (ESIF)
+        other: Europese structuur- en investeringsfondsen (ESIF)
+      fatality_notice:
+        one: Kennisgeving van overlijden
+        other: Kennisgevingen van overlijden
+      foi_release:
+        one: Vrijheid van informatie-vrijgave
+        other: Vrijheid van informatie-vrijgaven
+      form:
+        one: Formulier
+        other: Formulieren
+      generic_edition:
+        one: Algemene uitgave
+        other: Algemene uitgave
+      government_response:
+        one: Overheidsantwoord
+        other: Overheidsantwoorden
+      guidance:
+        one: Richtlijn
+        other: Richtlijn
+      impact_assessment:
+        one: Effectbeoordeling
+        other: Effectbeoordelingen
+      imported:
+        one: ingevoerd - in afwachting van type
+        other: ingevoerd - in afwachting van type
+      independent_report:
+        one: Onafhankelijk rapport
+        other: Onafhankelijke rapporten
+      international_development_fund:
+        one: Internationale ontwikkelingsfinanciering
+        other: Internationale ontwikkelingsfinanciering
+      international_treaty:
+        one: Internationaal verdrag
+        other: Internationale verdragen
+      maib_report:
+        one: Marine ongevallen onderzoek branch rapport
+        other: Marine ongevallen onderzoek branch rapporten
+      manual:
+        one: Handleiding
+        other: Handleidingen
+      map:
+        one: Kaart
+        other: Kaarten
+      media_enquiries:
+        one: Media aanvraag
+        other: Media aanvragen
+      medical_safety_alert:
+        one: Waarschuwingen en terugroepingen voor geneesmiddelen en medische hulpmiddelen
+        other: Waarschuwingen en terugroepingen voor geneesmiddelen en medische hulpmiddelen
+      membership:
+        one: Lidmaatschap
+        other: Lidmaatschap
+      modern_slavery_statement:
+        one: 
+        other: 
+      national:
+        one: Aankondiging nationale statistieken
+        other: Aankondigingen nationale statistieken
+      national_statistics:
+        one: Nationale statistieken
+        other: Nationale statistieken
+      national_statistics_announcement:
+        one: Aankondigingen nationale statistieken
+        other: Aankondigingen nationale statistieken
+      news_article:
+        one: Nieuwsartikel
+        other: Nieuwsartikel
+      news_story:
+        one: Nieuwsbericht
+        other: Nieuwsberichten
+      nhs_content:
+        one: NHS-content
+        other: NHS-content
+      notice:
+        one: Mededeling
+        other: Mededelingen
+      official:
+        one: Officiële statistieken aankondiging
+        other: Officiële statistieken aankondigingen
+      official_statistics:
+        one: Officiële statistieken
+        other: Officiële statistieken
+      official_statistics_announcement:
+        one: Aankondiging van officiële statistieken
+        other: Aankondigingen van officiële statistieken
+      open_consultation:
+        one: Open raadpleging
+        other: Open raadplegingen
+      oral_statement:
+        one: Mondelinge verklaring voor het Parlement
+        other: Mondelinge verklaringen aan het Parlement
+      our_energy_use:
+        one: Ons energieverbruik
+        other: Ons energieverbruik
+      our_governance:
+        one: Ons bestuur
+        other: Ons bestuur
+      personal_information_charter:
+        one: Persoonsgegevens chart
+        other: Persoonsgegevens charts
+      petitions_and_campaigns:
+        one: Petities en campagnes
+        other: Petities en campagnes
+      policy:
+        one: Beleid
+        other: Beleid
+      policy_paper:
+        one: Beleidsnota
+        other: Beleidsnota's
+      press_release:
+        one: Persbericht
+        other: Persberichten
+      procurement:
+        one: Aanbesteding
+        other: Aanbesteding
+      promotional:
+        one: Promotiemateriaal
+        other: Promotiemateriaal
+      publication:
+        one: Publicatie
+        other: Publicaties
+      publication_scheme:
+        one: Publicatieregeling
+        other: Publicatieregelingen
+      raib_report:
+        one: Verslag Van De Spoorwegongevallenonderzoeksdienst
+        other: Verslagen Van De Spoorwegongevallenonderzoeksdienst
+      recruitment:
+        one: Aanwerving
+        other: Aanwerving
+      regulation:
+        one: Regelgeving
+        other: Regelgeving
+      research:
+        one: Onderzoek en analyse
+        other: Onderzoek en analyse
+      residential_property_tribunal_decision:
+        one: Beslissing van de rechtbank voor woningen
+        other: Beslissingen van de rechtbank voor woningen
+      service:
+        one: Dienst
+        other: Diensten
+      service_sign_in:
+        one: Dienst aanmelden
+        other: Dienst aanmelden
+      service_standard_report:
+        one: Service Standaardrapport
+        other: Service Standaardrapporten
+      social_media_use:
+        one: Gebruik van sociale media
+        other: Gebruik van sociale media
+      speaking_notes:
+        one: Sprekende notities
+        other: Sprekende notities
+      speech:
+        one: Toespraak
+        other: Toespraken
+      staff_update:
+        one: Personeel update
+        other: Personeel updates
+      standard:
+        one: Standaard
+        other: Standaarden
+      statement_to_parliament:
+        one: Verklaring voor het Parlement
+        other: Verklaringen voor het Parlement
+      statistical_data_set:
+        one: Statistische gegevensverzameling
+        other: Statistische gegevensverzamelingen
+      statistics:
+        one: Statistieken
+        other: Statistieken
+      statistics_announcement:
+        one: Aankondiging van vrijgegeven statistieken
+        other: Aankondigingen van vrijgegeven statistieken
+      statutory_guidance:
+        one: Statutaire richtsnoeren
+        other: Statutaire richtsnoeren
+      take_part:
+        one: Neem deel
+        other: Deelnemen
+      tax_tribunal_decision:
+        one: Beslissing van het tribunaal voor belastingen en kanselarij
+        other: Beslissingen van het tribunaal voor belastingen en kanselarij
+      terms_of_reference:
+        one: Referentievoorwaarden
+        other: Referentievoorwaarden
+      transcript:
+        one: Transcriptie
+        other: Transcripties
+      transparency:
+        one: Transparantiegegevens
+        other: Transparantiegegevens
+      utaac_decision:
+        one: Beslissing van de rechtbank voor administratief beroep
+        other: Beslissingen van de rechtbank voor administratief beroep
+      welsh_language_scheme:
+        one: Regeling voor de Welshe taal
+        other: Regelingen voor de Welshe taal
+      world_location_news_article:
+        one: Nieuwsartikel
+        other: Nieuwsartikelen
+      world_news_story:
+        one: Wereldnieuwsbericht
+        other: Wereldnieuwsberichten
+      written_statement:
+        one: Schriftelijke verklaring aan het Parlement
+        other: Schriftelijke verklaringen aan het Parlement
     topics:
       title: "%{title}: gedetailleerde informatie"

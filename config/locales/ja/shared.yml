@@ -8,5 +8,221 @@ ja:
     get_emails: このトピックでメールを取得する
     language_direction: ltr
     language_name: 日本
+    schema_name:
+      aaib_report:
+        other: 航空事故調査局報告書
+      about:
+        other: 概要
+      about_our_services:
+        other: 本サービスについて
+      access_and_opening:
+        other: アクセスと利用時間
+      accessible_documents_policy:
+        other: 利用可能な文書に関する方針
+      alert:
+        other: 注意
+      announcement:
+        other: お知らせ
+      asylum_support_decision:
+        other: 難民支援審判所（Asylum support tribunal）の決定
+      authored_article:
+        other: 執筆記事
+      blog_post:
+        other: ブログ投稿
+      business_finance_support_scheme:
+        other: 企業金融支援制度
+      campaign:
+        other: キャンペーン
+      careers:
+        other: キャリア
+      case_study:
+        other: ケーススタディ
+      closed_consultation:
+        other: 非公開の審議
+      cma_case:
+        other: 競争・市場当局の事例
+      coming_soon:
+        other: 近日公開
+      complaints_procedure:
+        other: 苦情手続き
+      consultation:
+        other: 審議
+      consultation_outcome:
+        other: 審議結果
+      corporate_information_page:
+        other: 情報ページ
+      corporate_report:
+        other: 企業報告書
+      correspondence:
+        other: 対応
+      countryside_stewardship_grant:
+        other: カントリーサイドスチュワードシップ助成金
+      decision:
+        other: 決定事項
+      detailed_guidance:
+        other: ガイダンス
+      detailed_guide:
+        other: ガイダンス
+      dfid_research_output:
+        other: 開発成果の研究
+      document_collection:
+        other: コレクション
+      draft_text:
+        other: 下書きテキスト
+      drcf_digital_markets_research:
+        one: 
+        other: 
+      drug_safety_update:
+        other: 医薬品の安全性に関する最新情報
+      edition:
+        other: 版
+      edition_with_appointment:
+        other: 予約ありの版
+      employment_appeal_tribunal_decision:
+        other: 雇用上訴審判所（Employment appeal tribunal）の決定
+      employment_tribunal_decision:
+        other: 雇用審判所（Employment tribunal decision）の決定
+      equality_and_diversity:
+        other: 平等と多様性
+      esi_fund:
+        other: 欧州構造投資基金 (ESIF)
+      fatality_notice:
+        other: 死亡通知
+      foi_release:
+        other: 情報公開公表
+      form:
+        other: フォーム
+      generic_edition:
+        other: ジェネリック版
+      government_response:
+        other: 政府の対応
+      guidance:
+        other: ガイダンス
+      impact_assessment:
+        other: 影響評価
+      imported:
+        other: インポート済み - 待機中の種別
+      independent_report:
+        other: 第三者機関による報告書
+      international_development_fund:
+        other: 国際開発資金
+      international_treaty:
+        other: 国際条約
+      maib_report:
+        other: 海難調査支部報告書
+      manual:
+        other: 取扱説明
+      map:
+        other: 地図
+      media_enquiries:
+        other: 報道関係者の問い合わせ
+      medical_safety_alert:
+        other: 医薬品・医療機器の注意喚起及び回収
+      membership:
+        other: メンバーシップ
+      modern_slavery_statement:
+        other: 
+      national:
+        other: 全国統計発表
+      national_statistics:
+        other: 国家統計
+      national_statistics_announcement:
+        other: 全国統計発表
+      news_article:
+        other: ニュース記事
+      news_story:
+        other: ニュースストーリー
+      nhs_content:
+        other: NHSコンテンツ
+      notice:
+        other: お知らせ
+      official:
+        other: 公式統計発表
+      official_statistics:
+        other: 公式統計
+      official_statistics_announcement:
+        other: 公式統計発表
+      open_consultation:
+        other: 公開審議
+      oral_statement:
+        other: 議会への口頭声明
+      our_energy_use:
+        other: エネルギーの使用
+      our_governance:
+        other: ガバナンス
+      personal_information_charter:
+        other: 個人情報憲章
+      petitions_and_campaigns:
+        other: 請願とキャンペーン
+      policy:
+        other: 方針
+      policy_paper:
+        other: 方針書
+      press_release:
+        other: プレスリリース
+      procurement:
+        other: 調達
+      promotional:
+        other: 販促資料
+      publication:
+        other: 出版物
+      publication_scheme:
+        other: 出版体系
+      raib_report:
+        other: 鉄道事故調査委員会報告書
+      recruitment:
+        other: 募集
+      regulation:
+        other: 規則
+      research:
+        other: 調査と分析
+      residential_property_tribunal_decision:
+        other: 居住用財産審判所（Residential property tribunal）の決定
+      service:
+        other: サービス
+      service_sign_in:
+        other: サービスサインイン
+      service_standard_report:
+        other: サービス標準報告書
+      social_media_use:
+        other: ソーシャルメディアの使用
+      speaking_notes:
+        other: 発言ノート
+      speech:
+        other: スピーチ
+      staff_update:
+        other: スタッフの最新情報
+      standard:
+        other: 標準
+      statement_to_parliament:
+        other: 議会への声明
+      statistical_data_set:
+        other: 統計データセット
+      statistics:
+        other: 統計
+      statistics_announcement:
+        other: 統計リリース発表
+      statutory_guidance:
+        other: 法定ガイダンス
+      take_part:
+        other: 参加する
+      tax_tribunal_decision:
+        other: 租税及び衡平審判所（Tax and Chancery tribunal）の決定
+      terms_of_reference:
+        other: 付託条項
+      transcript:
+        other: 謄本
+      transparency:
+        other: 透明性データ
+      utaac_decision:
+        other: 行政控訴審判所（Administrative appeals tribunal decision）の決定
+      welsh_language_scheme:
+        other: ウェールズ語体系
+      world_location_news_article:
+        other: ニュース記事
+      world_news_story:
+        other: 世界のニュース記事
+      written_statement:
+        other: 議会への書面による声明
     topics:
       title: "％{title}：詳細情報"

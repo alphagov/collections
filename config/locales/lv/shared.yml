@@ -8,5 +8,327 @@ lv:
     get_emails: Saņemt e-pasta ziņojumus par šo tēmu
     language_direction: ltr
     language_name: Latviešu
+    schema_name:
+      aaib_report:
+        one: Aviosatiksmes negadījumu izmeklēšanas nodaļas ziņojums
+        other: Aviosatiksmes negadījumu izmeklēšanas nodaļas ziņojumi
+      about:
+        one: Par
+        other: Par
+      about_our_services:
+        one: Par mūsu pakalpojumiem
+        other: Par mūsu pakalpojumiem
+      access_and_opening:
+        one: Piekļuve un atvēršana
+        other: Piekļuve un atvēršana
+      accessible_documents_policy:
+        one: Pieejamo dokumentu politika
+        other: Pieejamo dokumentu politikas
+      alert:
+        one: Brīdinājums
+        other: Brīdinājumi
+      announcement:
+        one: Paziņojums
+        other: Paziņojumi
+      asylum_support_decision:
+        one: Patvēruma atbalsta tiesas lēmums
+        other: Patvēruma atbalsta tiesas lēmumi
+      authored_article:
+        one: Autora raksts
+        other: Autora raksti
+      blog_post:
+        one: Emuāra ziņa
+        other: Emuāra ziņas
+      business_finance_support_scheme:
+        one: Biznesa finanšu atbalsta shēma
+        other: Biznesa finanšu atbalsta shēmas
+      campaign:
+        one: Kampaņa
+        other: Kampaņas
+      careers:
+        one: Karjera
+        other: karjeras
+      case_study:
+        one: Piemērs
+        other: Piemēri
+      closed_consultation:
+        one: Slēgta tipa konsultācija
+        other: Slēgta tipa konsultācijas
+      cma_case:
+        one: Konkurences un tirgus iestādes lieta
+        other: Konkurences un tirgus iestādes lietas
+      coming_soon:
+        one: Drīzumā
+        other: Drīzumā
+      complaints_procedure:
+        one: Sūdzību procedūra
+        other: Sūdzību procedūras
+      consultation:
+        one: Konsultēšana
+        other: Konsultācijas
+      consultation_outcome:
+        one: Konsultāciju rezultāts
+        other: Konsultāciju rezultāti
+      corporate_information_page:
+        one: Informācijas lapa
+        other: Informācijas lapas
+      corporate_report:
+        one: Korporatīvais ziņojums
+        other: Korporatīvie ziņojumi
+      correspondence:
+        one: Sarakste
+        other: Sarakstes
+      countryside_stewardship_grant:
+        one: Lauku vides pārvaldības grants
+        other: Lauku vides pārvaldības granti
+      decision:
+        one: Lēmums
+        other: Lēmumi
+      detailed_guidance:
+        one: Detalizētas norādes
+        other: Detalizētas norādes
+      detailed_guide:
+        one: Detalizētas norādes
+        other: Detalizētas norādes
+      dfid_research_output:
+        one: Pētniecības attīstībai projekts
+        other: Pētniecības attīstībai projekti
+      document_collection:
+        one: Sērija
+        other: Sērijas
+      draft_text:
+        one: Teksta uzmetums
+        other: Teksta uzmetumi
+      drcf_digital_markets_research:
+        one: 
+        other: 
+      drug_safety_update:
+        one: Zāļu drošības atjauninājums
+        other: Zāļu drošības atjauninājumi
+      edition:
+        one: Izdevums
+        other: Izdevumi
+      edition_with_appointment:
+        one: Izdevums ar tikšanos
+        other: Izdevumi ar tikšanos
+      employment_appeal_tribunal_decision:
+        one: Darba lietu apelācijas tiesas lēmums
+        other: Darba lietu apelācijas tiesas lēmumi
+      employment_tribunal_decision:
+        one: Darba lietu tiesas lēmums
+        other: Darba lietu tiesas lēmumi
+      equality_and_diversity:
+        one: Vienlīdzība un dažādība
+        other: Vienlīdzība un dažādība
+      esi_fund:
+        one: Eiropas strukturālais un investīciju fonds (ESIF)
+        other: Eiropas strukturālie un investīciju fondi (ESIF)
+      fatality_notice:
+        one: Nāves paziņojums
+        other: Nāves paziņojumi
+      foi_release:
+        one: Informācijas atklātības datu publicēšana
+        other: Informācijas atklātības datu publicēšana
+      form:
+        one: Forma
+        other: Formas
+      generic_edition:
+        one: Vispārējs izdevums
+        other: Vispārēji izdevumi
+      government_response:
+        one: Valdības atbilde
+        other: Valdības atbildes
+      guidance:
+        one: Norādes
+        other: Norādes
+      impact_assessment:
+        one: Ietekmes novērtējums
+        other: Ietekmes novērtējumi
+      imported:
+        one: importēts-gaidīšanas režīmā
+        other: importēts-gaidīšanas režīmā
+      independent_report:
+        one: Neatkarīgs ziņojums
+        other: Neatkarīgi ziņojumi
+      international_development_fund:
+        one: Starptautiskās attīstības finansējums
+        other: Starptautiskās attīstības finansējums
+      international_treaty:
+        one: Starptautiskais līgums
+        other: Starptautiskie līgumi
+      maib_report:
+        one: Kuģniecības negadījumu izmeklēšanas nodaļas ziņojums
+        other: Kuģniecības negadījumu izmeklēšanas nodaļas ziņojumi
+      manual:
+        one: Rokasgrāmata
+        other: Rokasgrāmatas
+      map:
+        one: Karte
+        other: Kartes
+      media_enquiries:
+        one: Plašsaziņas līdzekļu pieprasījums
+        other: Plašsaziņas līdzekļu pieprasījumi
+      medical_safety_alert:
+        one: Brīdinājumi un zāļu un medicīnas ierīču atsaukšana
+        other: Brīdinājumi un zāļu un medicīnas ierīču atsaukšana
+      membership:
+        one: Dalība
+        other: Dalība
+      modern_slavery_statement:
+        one: 
+        other: 
+      national:
+        one: Paziņojums par valsts statistiku
+        other: Paziņojumi par valsts statistiku
+      national_statistics:
+        one: Statistika - valsts dati
+        other: Statistika - valsts dati
+      national_statistics_announcement:
+        one: Paziņojums par valsts statistiku
+        other: Paziņojumi par valsts statistiku
+      news_article:
+        one: Raksts
+        other: Raksti
+      news_story:
+        one: Ziņa
+        other: Ziņas
+      nhs_content:
+        one: Nacionālā Veselības dienesta saturs
+        other: Nacionālā Veselības dienesta saturs
+      notice:
+        one: Paziņojums
+        other: Paziņojumi
+      official:
+        one: Paziņojums par oficiālo statistiku
+        other: Paziņojumi par oficiālo statistiku
+      official_statistics:
+        one: Statistika
+        other: Statistika
+      official_statistics_announcement:
+        one: Paziņojums par oficiālo statistiku
+        other: Paziņojumi par oficiālo statistiku
+      open_consultation:
+        one: Atklāta konsultācija
+        other: Atklātas konsultācijas
+      oral_statement:
+        one: Mutisks paziņojums parlamentam
+        other: Mutiski paziņojumi parlamentam
+      our_energy_use:
+        one: Enerģijas lietojums
+        other: Enerģijas lietojums
+      our_governance:
+        one: Pārvaldība
+        other: Pārvaldība
+      personal_information_charter:
+        one: Personas datu harta
+        other: Personas datu hartas
+      petitions_and_campaigns:
+        one: Petīcijas un kampaņas
+        other: Petīcijas un kampaņas
+      policy:
+        one: Darbības joma
+        other: Darbības jomas
+      policy_paper:
+        one: Politikas dokuments
+        other: Politikas dokumenti
+      press_release:
+        one: Paziņojums presei
+        other: Paziņojumi presei
+      procurement:
+        one: Iepirkums
+        other: Iepirkums
+      promotional:
+        one: Reklāmas materiāls
+        other: Reklāmas materiāli
+      publication:
+        one: Publikācija
+        other: Publikācijas
+      publication_scheme:
+        one: Publikācijas shēma
+        other: Publikāciju shēma
+      raib_report:
+        one: Dzelzceļa negadījumu izmeklēšanas nodaļas ziņojums
+        other: Dzelzceļa negadījumu izmeklēšanas nodaļas ziņojumi
+      recruitment:
+        one: Pieņemšana darbā
+        other: Pieņemšana darbā
+      regulation:
+        one: Regula
+        other: Regulas
+      research:
+        one: Izpēte un analīze
+        other: Izpēte un analīze
+      residential_property_tribunal_decision:
+        one: Mājokļu īpašuma lietu tiesas lēmums
+        other: Mājokļu īpašuma lietu tiesas lēmumi
+      service:
+        one: Pakalpojums
+        other: Pakalpojumi
+      service_sign_in:
+        one: Pierakstīšanās pakalpojumā
+        other: Pierakstīšanās pakalpojumā
+      service_standard_report:
+        one: Pakalpojuma standarta ziņojums
+        other: Pakalpojuma standarta ziņojumi
+      social_media_use:
+        one: Sociālo mediju lietojums
+        other: Sociālo mediju lietojums
+      speaking_notes:
+        one: Runas piezīmes
+        other: Runas piezīmes
+      speech:
+        one: Runa
+        other: Runas
+      staff_update:
+        one: Personāla atjauninājums
+        other: Personāla atjauninājumi
+      standard:
+        one: Standarts
+        other: Standarti
+      statement_to_parliament:
+        one: Ziņojums parlamentam
+        other: Ziņojumi parlamentam
+      statistical_data_set:
+        one: Statistiskas datu kopums
+        other: Statistikas datu kopumi
+      statistics:
+        one: Statistika
+        other: Statistika
+      statistics_announcement:
+        one: Statistikas publiskošanas paziņojums
+        other: Statistikas publiskošanas paziņojumi
+      statutory_guidance:
+        one: Saistošās vadlīnijas
+        other: Saistošās vadlīnijas
+      take_part:
+        one: Piedalīties
+        other: Piedalīties
+      tax_tribunal_decision:
+        one: Nodokļu un Kanclera tiesas lēmums
+        other: Nodokļu un Kanclera tiesas lēmumi
+      terms_of_reference:
+        one: Darba uzdevums
+        other: Darba uzdevumi
+      transcript:
+        one: Noraksts
+        other: Noraksti
+      transparency:
+        one: Atklātības dati
+        other: Atklātības dati
+      utaac_decision:
+        one: Administratīvo lietu apelācijas tiesas lēmums
+        other: Administratīvo lietu apelācijas tiesas lēmumi
+      welsh_language_scheme:
+        one: Velsiešu valodas shēma
+        other: Velsiešu valodas shēma
+      world_location_news_article:
+        one: Raksts
+        other: Raksti
+      world_news_story:
+        one: Pasaules ziņa
+        other: Pasaules ziņas
+      written_statement:
+        one: Rakstisks ziņojums parlamentam
+        other: Rakstiski ziņojumi parlamentam
     topics:
       title: "%{title}: detalizēta informācija"

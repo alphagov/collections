@@ -8,5 +8,327 @@ pa-pk:
     get_emails: ایس مضمون تے ای میل حاصل کرو
     language_direction: rtl
     language_name: پنجابی شاہ مُکھی
+    schema_name:
+      aaib_report:
+        one: ہوائی حادثیاں دی برانچ دی رپورٹ
+        other: ہوائی حادثیاں دی برانچ دیاں رپورٹاں
+      about:
+        one: دے بارے
+        other: دے بارے
+      about_our_services:
+        one: ساڈیاں خدمات بارے
+        other: ساڈیاں خدمات بارے
+      access_and_opening:
+        one: پہنچ تے کھولنا
+        other: پہنچ تے کھولنا
+      accessible_documents_policy:
+        one: دستاویزات تک پہنچ دی حکمت عملی
+        other: دستاویزات تک پہنچ دی حکمت عملی
+      alert:
+        one: چوکنا کرنا
+        other: چوکنا کرنا
+      announcement:
+        one: خبر
+        other: خبراں
+      asylum_support_decision:
+        one: پناہ لئی مدد دا عدالتی فیصلہ
+        other: پناہ لئی مدد دا عدالتی فیصلے
+      authored_article:
+        one: لکھاری دا مضمون
+        other: لکھاری دے مضمون
+      blog_post:
+        one: بلاگ پوسٹ
+        other: بلاگ پوسٹس
+      business_finance_support_scheme:
+        one: بزنس فنانس دی مدد لئی منصوبہ
+        other: بزنس فنانس دی مدد لئی منصوبے
+      campaign:
+        one: مہم
+        other: مہمات
+      careers:
+        one: پیشے
+        other: پیشے
+      case_study:
+        one: مقدمے دی پڑھائی
+        other: مقدمے دیاں پڑھائیاں
+      closed_consultation:
+        one: مشورہ ختم ہوئے
+        other: مشورے ختم ہوئے
+      cma_case:
+        one: مقابلے تے منڈی دے اختیار دا مقدمہ
+        other: مقابلے تے منڈی دے اختیار دے مقدمے
+      coming_soon:
+        one: چھیتی آ رہیا
+        other: چھیتی آ رہیا
+      complaints_procedure:
+        one: شکایتاں لان دی کاروائی
+        other: شکایتاں لان دی کاروائیاں
+      consultation:
+        one: 'صلاح '
+        other: صلاحاواں
+      consultation_outcome:
+        one: صلاح دا نتیجہ
+        other: صالاحاواں دے نتیجے
+      corporate_information_page:
+        one: خبر دا ورقہ
+        other: خبر دے ورقے
+      corporate_report:
+        one: کاروبار دی خبر
+        other: کاروبار دی خبراں
+      correspondence:
+        one: خط پتر
+        other: بوہتے خط پتر
+      countryside_stewardship_grant:
+        one: پنڈ دے اختیار دی مدد
+        other: پنڈ دے اختیار دی امداد
+      decision:
+        one: فیصلہ
+        other: فیصلے
+      detailed_guidance:
+        one: رہنمائی
+        other: رہنمائی
+      detailed_guide:
+        one: رہنمائی
+        other: رہنمائی
+      dfid_research_output:
+        one: ترقی لئی  کیتی ہوئی کھوج دا نتیجہ
+        other: ترقی لئی کیتی ہوئی کھوج دے نتیجے
+      document_collection:
+        one: اکٹھ
+        other: اکٹھ
+      draft_text:
+        one: لکھائی کرو
+        other: لکھائیاں کرو
+      drcf_digital_markets_research:
+        one: 
+        other: 
+      drug_safety_update:
+        one: نشے توں بچن دی نوی خبر
+        other: نشے توں بچن دیاں نویاں خبراں
+      edition:
+        one: شمارہ
+        other: شمارے
+      edition_with_appointment:
+        one: شمارے دے نال تقرری
+        other: شمارے دے نال تقرری
+      employment_appeal_tribunal_decision:
+        one: نوکری دی درخواست دا عدالتی فیصلہ
+        other: نوکری دی درخواست دے عدالتی فیصلے
+      employment_tribunal_decision:
+        one: نوکری دا عدالتی فیصلہ
+        other: نوکری دے عدالتی فیصلے
+      equality_and_diversity:
+        one: برابری تے فرق
+        other: برابری تے فرق
+      esi_fund:
+        one: یورپیئن سٹرکچرل تے انوسٹمنٹ فنڈ (ESIF)
+        other: یورپیئن سٹرکچرل تے انوسٹمنٹ فنڈز (ESIF)
+      fatality_notice:
+        one: موت دی خبر
+        other: موت دیاں خبراں
+      foi_release:
+        one: " FOI ریلز"
+        other: FOI ریلزز
+      form:
+        one: صفحہ
+        other: صفحے
+      generic_edition:
+        one: نَسلی شمارہ
+        other: نَسلی شمارے
+      government_response:
+        one: حکومت دا جواب
+        other: حکومت دے جواب
+      guidance:
+        one: رہنمائی
+        other: رہنمائی
+      impact_assessment:
+        one: جانچ دا اثر
+        other: جانچ دیے اثر
+      imported:
+        one: درآمد کیتا ہویا-اُڈیک دی قِسم
+        other: درآمد کیتا ہویا-اُڈیک دی قِسم
+      independent_report:
+        one: خود مُختار رپورٹ
+        other: خود مُختار رپورٹاں
+      international_development_fund:
+        one: بین الاقوامی ترقی دی فنڈنگ
+        other: بین الاقوامی ترقی دی فنڈنگ
+      international_treaty:
+        one: بین الاقوامی علاقہ
+        other: بین الاقوامی علاقے
+      maib_report:
+        one: سمندری حادثےدی تفتیش کرن والی برانچ دی رپورٹ
+        other: سمندری حادثےدی تفتیش کرن والی برانچ دیاں رپورٹاں
+      manual:
+        one: ہتھ والا
+        other: ہتھ والے
+      map:
+        one: نقشہ
+        other: نقشے
+      media_enquiries:
+        one: میڈیا دی تفتیش
+        other: میڈیا دی تفتیش
+      medical_safety_alert:
+        one: ادویات تے طبی آلات بارے خبردار کرنا تے واپس بُلانا
+        other: ادویات تے طبی آلات بارے خبردار کرنا تے واپس بُلانا
+      membership:
+        one: ممبری
+        other: ممبری
+      modern_slavery_statement:
+        one: 
+        other: 
+      national:
+        one: قومی حساب کتاب بارے اعلان کرنا
+        other: قومی حساب کتاب بارے اعلانات کرنا
+      national_statistics:
+        one: قومی حساب کتاب
+        other: قومی حساب کتاب
+      national_statistics_announcement:
+        one: قومی حساب کتاب بارے اعلان کرنا
+        other: قومی حساب کتاب بارے اعلانات کرنا
+      news_article:
+        one: خبراں دا مضمون
+        other: خبراں دے مضمون
+      news_story:
+        one: خبر دی کہانی
+        other: خبر دیاں کہانیاں
+      nhs_content:
+        one: نیشنل ہیلتھ سروسز دا مواد
+        other: نیشنل ہیلتھ سروسز دا مواد
+      notice:
+        one: 'خبر '
+        other: خبراں
+      official:
+        one: سرکاری  اعداد و شمار بارے اعلان
+        other: سرکاری اعداد و شمار بارے اعلانات
+      official_statistics:
+        one: سرکاری اعداد وشمار
+        other: سرکاری اعداد وشمار
+      official_statistics_announcement:
+        one: سرکاری  اعداد و شمار بارے اعلان
+        other: سرکاری اعداد و شمار بارے اعلانات
+      open_consultation:
+        one: کُھلا صلاح مشورہ
+        other: کُھلے صلاح مشورے
+      oral_statement:
+        one: قومی مجلس دے سامنے زبانی بیان
+        other: قومی مجلس دے سامنے زبانی بیانات
+      our_energy_use:
+        one: ساڈی قوت دا استعمال
+        other: ساڈی قوت دا استعمال
+      our_governance:
+        one: ساڈی حکومت
+        other: ساڈی حکومت
+      personal_information_charter:
+        one: ذاتی معلومات دا منشور
+        other: ذاتی معلومات دے منشور
+      petitions_and_campaigns:
+        one: عرضیاں تے جدوجہد
+        other: عرضیاں تے جدوجہد
+      policy:
+        one: حکمتِ عملی
+        other: حکمتِ عملی
+      policy_paper:
+        one: حکمتِ عملی دا کاغذ
+        other: حکمتِ عملی دے کاغذات
+      press_release:
+        one: اخباری بیان
+        other: اخباری بیانات
+      procurement:
+        one: مال دی خریداری
+        other: مال دی خریداری
+      promotional:
+        one: اشتہار بازی دا مواد
+        other: اشتہار بازی دا مواد
+      publication:
+        one: تصنیف
+        other: ٹصانیف
+      publication_scheme:
+        one: مطبوعات دا طریقہ
+        other: مطبوعات دے طریقے
+      raib_report:
+        one: ریل دے حادثے دی تفتیش دی برانچ دی رپورٹ
+        other: ریل دے حادثے دی تفتیش دی برانچ دی رپورٹاں
+      recruitment:
+        one: بھرتی
+        other: بھرتی
+      regulation:
+        one: قانون
+        other: قوانین
+      research:
+        one: کھوج تے تجزیہ
+        other: کھوج تے تجزیہ
+      residential_property_tribunal_decision:
+        one: رہائشی جائداد دی عدالت دا فیصلہ
+        other: رہائشی جائداد دی عدالت دے فیصلے
+      service:
+        one: خدمت
+        other: خدمات
+      service_sign_in:
+        one: سروس سائن اِن
+        other: سروس سائن اِن
+      service_standard_report:
+        one: سروس سٹینڈرڈ رپورٹ
+        other: سروس سٹینڈرڈ رپورٹس
+      social_media_use:
+        one: سوشل میڈیا دا استعمال
+        other: سوشل میڈیا دا استعمال
+      speaking_notes:
+        one: گَل بات دے پیغمات
+        other: گَل بات دے پیغمات
+      speech:
+        one: تقریر
+        other: تقریراں
+      staff_update:
+        one: نوکراں دیاں تازہ ترین معلومات
+        other: نوکراں دیاں تازہ ترین معلومات
+      standard:
+        one: معیار
+        other: معیارات
+      statement_to_parliament:
+        one: قومی مجلس دے سامنے بیان
+        other: قومی مجلس دے سامنے بیان
+      statistical_data_set:
+        one: اعدادوشمار دی معلومات دا سیٹ
+        other: اعدادوشمار دی معلومات دے سیٹ
+      statistics:
+        one: اعدادوشمار
+        other: اعدادوشمار
+      statistics_announcement:
+        one: اعداوشمار جاری کرن بارے اعلان
+        other: اعداوشمار جاری کرن بارے اعلانات
+      statutory_guidance:
+        one: قانونی رہنمائی
+        other: قانونی رہنمائی
+      take_part:
+        one: حصہ لینا
+        other: حصہ لینا
+      tax_tribunal_decision:
+        one: ٹیکس تے عدالتِ عالیہ دا فیصلہ
+        other: ٹیکس تے عدالتِ عالیہ دے فیصلے
+      terms_of_reference:
+        one: حوالے دیاں شرطاں
+        other: حوالے دیاں شرطاں
+      transcript:
+        one: نقل
+        other: نقول
+      transparency:
+        one: شفافیت دی معلومات
+        other: شفافیت دی معلومات
+      utaac_decision:
+        one: انتظامی درخواستاں بارے عدالتی فیصلہ
+        other: انتظامی درخواستاں بارے عدالتی فیصلے
+      welsh_language_scheme:
+        one: ویلش زبان دا منصوبہ
+        other: ویلش زبان دے منصوبے
+      world_location_news_article:
+        one: خبراں دا مضمون
+        other: خبراں دے مضمون
+      world_news_story:
+        one: دُنیا دی خبراں دی کہانی
+        other: دُنیا دی خبراں دی کہانیاں
+      written_statement:
+        one: قومی مجلس دے سامنے تحریری بیان
+        other: قومی مجلس دے سامنے تحریری بیان
     topics:
       title: "%{title}: تفصیلی معلومات"

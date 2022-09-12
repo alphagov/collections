@@ -8,5 +8,327 @@ sv:
     get_emails: Få e-postmeddelanden om detta ämne
     language_direction: ltr
     language_name: Svensk
+    schema_name:
+      aaib_report:
+        one: Rapport från Avdelningen för utredning av flygolyckor
+        other: Rapporter från Avdelningen för utredning av flygolyckor
+      about:
+        one: Om
+        other: Om
+      about_our_services:
+        one: Om våra tjänster
+        other: Om våra tjänster
+      access_and_opening:
+        one: Tillträde och öppning
+        other: Tillträde och öppning
+      accessible_documents_policy:
+        one: Policy för tillgängliga dokument
+        other: Policy för tillgängliga dokument
+      alert:
+        one: Varning
+        other: Varningar
+      announcement:
+        one: Meddelande
+        other: Meddelanden
+      asylum_support_decision:
+        one: Beslut från Asylprövningsdomstolen
+        other: Beslut från Asylprövningsdomstolen
+      authored_article:
+        one: Författad artikel
+        other: Författade artiklar
+      blog_post:
+        one: Blogginlägg
+        other: Blogginlägg
+      business_finance_support_scheme:
+        one: Stödsystem för företagsfinansiering
+        other: Stödsystem för företagsfinansiering
+      campaign:
+        one: Kampanj
+        other: Kampanjer
+      careers:
+        one: Karriärer
+        other: Karriärer
+      case_study:
+        one: Fallstudie
+        other: Fallstudier
+      closed_consultation:
+        one: Slutet samråd
+        other: Slutna samråd
+      cma_case:
+        one: Konkurrens- och marknadsmyndighetens ärende
+        other: Konkurrens- och marknadsmyndighetens ärenden
+      coming_soon:
+        one: Kommer snart
+        other: Kommer snart
+      complaints_procedure:
+        one: Klagomålsförfarandet
+        other: Klagomålsförfaranden
+      consultation:
+        one: Samråd
+        other: Samråd
+      consultation_outcome:
+        one: Resultat av samrådet
+        other: Resultat av samråden
+      corporate_information_page:
+        one: Informationssida
+        other: Informationssidor
+      corporate_report:
+        one: Företagsrapport
+        other: Företagsrapporter
+      correspondence:
+        one: Korrespondens
+        other: Korrespondens
+      countryside_stewardship_grant:
+        one: Bidrag till Förvaltning av landsbygden
+        other: Bidrag till Förvaltning av landsbygden
+      decision:
+        one: Beslut
+        other: Beslut
+      detailed_guidance:
+        one: Vägledning
+        other: Vägledning
+      detailed_guide:
+        one: Vägledning
+        other: Vägledning
+      dfid_research_output:
+        one: Utvecklingsforskningsresultat
+        other: Utvecklingsforskningsresultat
+      document_collection:
+        one: Samlingar
+        other: Samlingar
+      draft_text:
+        one: Utkast till text
+        other: Utkast till texter
+      drcf_digital_markets_research:
+        one: 
+        other: 
+      drug_safety_update:
+        one: Uppdatering om läkemedelssäkerhet
+        other: Uppdateringar om läkemedelssäkerhet
+      edition:
+        one: Upplaga
+        other: Upplagor
+      edition_with_appointment:
+        one: Upplaga med tidsbeställning
+        other: Upplagor med tidsbeställning
+      employment_appeal_tribunal_decision:
+        one: Beslut av arbetsdomstolen om överklagande av anställningsärenden
+        other: Beslut av arbetsdomstolen om överklagande av anställningsärenden
+      employment_tribunal_decision:
+        one: Beslut från arbetsdomstolen
+        other: Beslut från arbetsdomstolen
+      equality_and_diversity:
+        one: Jämlikhet och mångfald
+        other: Jämlikhet och mångfald
+      esi_fund:
+        one: Europeiska struktur- och investeringsfonden (ESIF)
+        other: Europeiska struktur- och investeringsfonderna (ESIF)
+      fatality_notice:
+        one: Meddelande om dödsfall
+        other: Meddelanden om dödsfall
+      foi_release:
+        one: FOI-meddelanden
+        other: FOI-meddelanden
+      form:
+        one: Formulär
+        other: Formulär
+      generic_edition:
+        one: Generisk utgåva
+        other: Generiska utgåvor
+      government_response:
+        one: Regeringens svar
+        other: Regeringens svar
+      guidance:
+        one: Vägledning
+        other: Vägledning
+      impact_assessment:
+        one: Konsekvensbedömning
+        other: Konsekvensbedömningar
+      imported:
+        one: importerad - väntar på typ
+        other: importerad - väntar på typ
+      independent_report:
+        one: Oberoende rapport
+        other: Oberoende rapporter
+      international_development_fund:
+        one: Finansiering av internationell utveckling
+        other: Finansiering av internationell utveckling
+      international_treaty:
+        one: Internationellt fördrag
+        other: Internationella fördrag
+      maib_report:
+        one: Rapport från Utredningsavdelningen för sjöolyckor
+        other: Rapporter från Utredningsavdelningen för sjöolyckor
+      manual:
+        one: Handbok
+        other: Manualer
+      map:
+        one: Karta
+        other: Kartor
+      media_enquiries:
+        one: Förfrågan till media
+        other: Förfrågningar från media
+      medical_safety_alert:
+        one: Varningar och återkallelser av läkemedel och medicintekniska produkter
+        other: Varningar och återkallelser av läkemedel och medicintekniska produkter
+      membership:
+        one: Medlemskap
+        other: Medlemskap
+      modern_slavery_statement:
+        one: 
+        other: 
+      national:
+        one: Meddelande om nationell statistik
+        other: Meddelanden om nationell statistik
+      national_statistics:
+        one: Nationell statistik
+        other: Nationell statistik
+      national_statistics_announcement:
+        one: Meddelande om nationell statistik
+        other: Meddelanden om nationell statistik
+      news_article:
+        one: Nyhetsartikel
+        other: Nyhetsartiklar
+      news_story:
+        one: Nyhetsartikel
+        other: Nyhetsartiklar
+      nhs_content:
+        one: NHS-innehåll
+        other: NHS-innehåll
+      notice:
+        one: Meddelande
+        other: Meddelanden
+      official:
+        one: Meddelande om officiell statistik
+        other: Meddelanden om officiell statistik
+      official_statistics:
+        one: Officiell statistik
+        other: Officiell statistik
+      official_statistics_announcement:
+        one: Meddelande om officiell statistik
+        other: Meddelanden om officiell statistik
+      open_consultation:
+        one: Öppet samråd
+        other: Öppet samråd
+      oral_statement:
+        one: Muntligt uttalande till parlamentet
+        other: Muntliga uttalanden till parlamentet
+      our_energy_use:
+        one: Vår energianvändning
+        other: Vår energianvändning
+      our_governance:
+        one: Vår styrning
+        other: Vår styrning
+      personal_information_charter:
+        one: Stadga om personlig information
+        other: Stadgar om personlig information
+      petitions_and_campaigns:
+        one: Framställningar och kampanjer
+        other: Framställningar och kampanjer
+      policy:
+        one: Policy
+        other: Policys
+      policy_paper:
+        one: Policydokument
+        other: Policydokument
+      press_release:
+        one: Pressmeddelande
+        other: Pressmeddelanden
+      procurement:
+        one: Upphandling
+        other: Upphandling
+      promotional:
+        one: Material för marknadsföring
+        other: Material för marknadsföring
+      publication:
+        one: Publikation
+        other: Publikationer
+      publication_scheme:
+        one: System för offentliggörande
+        other: System för offentliggörande
+      raib_report:
+        one: Rapport från Utredningsavdelningen för järnvägsolyckor
+        other: Rapporter från Utredningsavdelningen för järnvägsolyckor
+      recruitment:
+        one: Rekrytering
+        other: Rekrytering
+      regulation:
+        one: Förordning
+        other: Förordningar
+      research:
+        one: Forskning och analys
+        other: Forskning och analys
+      residential_property_tribunal_decision:
+        one: Beslut från Domstolarna för bostadsfastigheter
+        other: Beslut från Domstolarna för bostadsfastigheter
+      service:
+        one: Tjänst
+        other: Tjänster
+      service_sign_in:
+        one: Logga in på tjänsten
+        other: Logga in på tjänsten
+      service_standard_report:
+        one: Standardrapport för tjänsten
+        other: Standardrapporter för tjänster
+      social_media_use:
+        one: Användning av sociala medier
+        other: Användning av sociala medier
+      speaking_notes:
+        one: Anteckningar
+        other: Anteckningar
+      speech:
+        one: Tal
+        other: Tal
+      staff_update:
+        one: Uppdatering av personalen
+        other: Uppdateringar för personalen
+      standard:
+        one: Standard
+        other: Standarder
+      statement_to_parliament:
+        one: Uttalande till parlamentet
+        other: Uttalanden till parlamentet
+      statistical_data_set:
+        one: Statistiska uppgifter
+        other: Statistiska datamängder
+      statistics:
+        one: Statistik
+        other: Statistik
+      statistics_announcement:
+        one: Meddelande om offentliggörande av statistik
+        other: Meddelanden om offentliggöranden av statistik
+      statutory_guidance:
+        one: Lagstadgad vägledning
+        other: Lagstadgad vägledning
+      take_part:
+        one: Delta
+        other: Delta
+      tax_tribunal_decision:
+        one: Beslut från skattedomstolen och kanslidomstolen
+        other: Beslut från skattedomstolen och kanslidomstolen
+      terms_of_reference:
+        one: Referensvillkor
+        other: Referensvillkor
+      transcript:
+        one: Utskrift
+        other: Utskrifter
+      transparency:
+        one: Öppenhetsuppgifter
+        other: Öppenhetsuppgifter
+      utaac_decision:
+        one: Beslut av förvaltningsdomstolen för överklagande
+        other: Administrativa överklagandenämndens beslut
+      welsh_language_scheme:
+        one: System för det walesiska språket
+        other: System för det walesiska språket
+      world_location_news_article:
+        one: Nyhetsartikel
+        other: Nyhetsartiklar
+      world_news_story:
+        one: Världsnyhet
+        other: Världsnyheter
+      written_statement:
+        one: Skriftligt uttalande till parlamentet
+        other: Skriftliga uttalanden till parlamentet
     topics:
       title: "%{title}: detaljerad information"

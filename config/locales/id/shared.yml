@@ -8,5 +8,221 @@ id:
     get_emails: Dapatkan email untuk topik ini
     language_direction: ltr
     language_name: Bahasa Indonesia
+    schema_name:
+      aaib_report:
+        other: Laporan Cabang Investigasi Kecelakaan Udara
+      about:
+        other: Tentang
+      about_our_services:
+        other: Tentang layanan kami
+      access_and_opening:
+        other: Akses dan buka
+      accessible_documents_policy:
+        other: Kebijakan dokumen yang dapat diakses
+      alert:
+        other: Peringatan
+      announcement:
+        other: Pengumuman
+      asylum_support_decision:
+        other: Keputusan persidangan dukungan suaka
+      authored_article:
+        other: Artikel bersumber
+      blog_post:
+        other: Posting blog
+      business_finance_support_scheme:
+        other: Skema dukungan keuangan bisnis
+      campaign:
+        other: Kampanye
+      careers:
+        other: karier
+      case_study:
+        other: Studi kasus
+      closed_consultation:
+        other: Konsultasi tertutup
+      cma_case:
+        other: Kasus Otoritas Persaingan dan Pasar
+      coming_soon:
+        other: Segera Hadir
+      complaints_procedure:
+        other: Prosedur keluhan
+      consultation:
+        other: Konsultasi
+      consultation_outcome:
+        other: Hasil konsultasi
+      corporate_information_page:
+        other: Halaman informasi
+      corporate_report:
+        other: Laporan korporat
+      correspondence:
+        other: Korespondensi
+      countryside_stewardship_grant:
+        other: Hibah Countryside Stewardship
+      decision:
+        other: Keputusan
+      detailed_guidance:
+        other: Panduan
+      detailed_guide:
+        other: Panduan
+      dfid_research_output:
+        other: Hasil Riset untuk Pembangunan
+      document_collection:
+        other: Koleksi
+      draft_text:
+        other: Teks rancangan
+      drcf_digital_markets_research:
+        one: 
+        other: 
+      drug_safety_update:
+        other: Pembaruan Keselamatan Obat
+      edition:
+        other: Edisi
+      edition_with_appointment:
+        other: Edisi dengan penunjukan
+      employment_appeal_tribunal_decision:
+        other: Keputusan persidangan banding ketenagakerjaan
+      employment_tribunal_decision:
+        other: Keputusan persidangan ketenagakerjaan
+      equality_and_diversity:
+        other: Kesetaraan dan keberagaman
+      esi_fund:
+        other: Dana Struktur dan Investasi Eropa (ESIF)
+      fatality_notice:
+        other: Pemberitahuan fatalitas
+      foi_release:
+        other: Rilis Kebebasan Informasi
+      form:
+        other: Formulir
+      generic_edition:
+        other: Edisi generik
+      government_response:
+        other: Respons pemerintah
+      guidance:
+        other: Panduan
+      impact_assessment:
+        other: Penilaian dampak
+      imported:
+        other: diimpor- menunggu jenis
+      independent_report:
+        other: Laporan independen
+      international_development_fund:
+        other: Pendanaan pembangunan internasional
+      international_treaty:
+        other: Pakta internasional
+      maib_report:
+        other: Laporan Cabang Investigasi Kecelakaan Maritim
+      manual:
+        other: Manual
+      map:
+        other: Peta
+      media_enquiries:
+        other: Pertanyaan media
+      medical_safety_alert:
+        other: Peringatan dan panggilan ulang untuk obat-obatan dan perangkat medis
+      membership:
+        other: Keanggotaan
+      modern_slavery_statement:
+        other: 
+      national:
+        other: Pengumuman statistik nasional
+      national_statistics:
+        other: Statistik Nasional
+      national_statistics_announcement:
+        other: Pengumuman statistik nasional
+      news_article:
+        other: Artikel berita
+      news_story:
+        other: Cerita berita
+      nhs_content:
+        other: Konten Layanan Kesehatan Nasional
+      notice:
+        other: Pemberitahuan
+      official:
+        other: Pengumuman statistik resmi
+      official_statistics:
+        other: Statistik Resmi
+      official_statistics_announcement:
+        other: Pengumuman statistik resmi
+      open_consultation:
+        other: Konsultasi terbuka
+      oral_statement:
+        other: Pernyataan lisan kepada Parlemen
+      our_energy_use:
+        other: Penggunaan energi kami
+      our_governance:
+        other: Tata kelola kami
+      personal_information_charter:
+        other: Pakta informasi pribadi
+      petitions_and_campaigns:
+        other: Petisi dan kampanye
+      policy:
+        other: Kebijakan
+      policy_paper:
+        other: Kertas kebijakan
+      press_release:
+        other: Siaran pers
+      procurement:
+        other: Pengadaan
+      promotional:
+        other: Bahan promosi
+      publication:
+        other: Publikasi
+      publication_scheme:
+        other: Skema publikasi
+      raib_report:
+        other: Laporan Cabang Investigasi Kecelakaan Kereta
+      recruitment:
+        other: Perekrutan
+      regulation:
+        other: Regulasi
+      research:
+        other: Riset dan analisis
+      residential_property_tribunal_decision:
+        other: Keputusan persidangan properti permukiman
+      service:
+        other: Layanan
+      service_sign_in:
+        other: Masuk layanan
+      service_standard_report:
+        other: Laporan Standar Layanan
+      social_media_use:
+        other: Penggunaan media sosial
+      speaking_notes:
+        other: Catatan bicara
+      speech:
+        other: Pidato
+      staff_update:
+        other: Pembaruan staf
+      standard:
+        other: Standar
+      statement_to_parliament:
+        other: Pernyataan kepada Parlemen
+      statistical_data_set:
+        other: Set data statistik
+      statistics:
+        other: Statistik
+      statistics_announcement:
+        other: Pengumuman rilis statistik
+      statutory_guidance:
+        other: Panduan perundang-undangan
+      take_part:
+        other: Ikut serta
+      tax_tribunal_decision:
+        other: Keputusan persidangan Pajak dan Perbendaharaan
+      terms_of_reference:
+        other: Syarat referensi
+      transcript:
+        other: Transkrip
+      transparency:
+        other: Data transparansi
+      utaac_decision:
+        other: Keputusan persidangan banding administratif
+      welsh_language_scheme:
+        other: Skema bahasa Wales
+      world_location_news_article:
+        other: Artikel berita
+      world_news_story:
+        other: Cerita berita dunia
+      written_statement:
+        other: Pernyataan tertulis kepada Parlemen
     topics:
       title: "%{title}: informasi terperinci"

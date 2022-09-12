@@ -8,5 +8,329 @@ hi:
     get_emails: इस विषय के लिए ईमेल पाएं
     language_direction: ltr
     language_name: हिंदी
+    schema_name:
+      aaib_report:
+        one: हवाई दुर्घटना जांच शाखा की रिपोर्ट
+        other: हवाई दुर्घटना जांच शाखा की रिपोर्टें
+      about:
+        one: के बारे में
+        other: के बारे में
+      about_our_services:
+        one: हमारी सेवाओं के बारे में
+        other: हमारी सेवाओं के बारे में
+      access_and_opening:
+        one: एक्सेस करना और खोलना
+        other: एक्सेस करना और खोलना
+      accessible_documents_policy:
+        one: सुलभ दस्तावेज नीति
+        other: सुलभ दस्तावेज नीतियां
+      alert:
+        one: चेतावनी
+        other: चेतावनियां
+      announcement:
+        one: घोषणा
+        other: घोषणाएं
+      asylum_support_decision:
+        one: आश्रय स्थल सहायता न्यायाधिकरण का निर्णय
+        other: आश्रय स्थल सहायता न्यायाधिकरण के निर्णय
+      authored_article:
+        one: मूल आलेख
+        other: मूल आलेख
+      blog_post:
+        one: ब्लॉग पोस्ट
+        other: ब्लॉग पोस्ट
+      business_finance_support_scheme:
+        one: व्यावसायिक वित्त सहायता योजना
+        other: व्यावसायिक वित्त सहायता योजनाएं
+      campaign:
+        one: अभियान
+        other: अभियान
+      careers:
+        one: करियर
+        other: करियर
+      case_study:
+        one: विषय अध्ययन
+        other: विषय अध्ययन
+      closed_consultation:
+        one: बंद कमरे में परामर्श
+        other: बंद कमरे में परामर्श
+      cma_case:
+        one: प्रतिस्पर्धा और बाज़ार प्राधिकरण मामला
+        other: प्रतिस्पर्धा और बाज़ार प्राधिकरण मामले
+      coming_soon:
+        one: जल्द आ रहा है
+        other: जल्द आ रहा है
+      complaints_procedure:
+        one: शिकायतों की प्रक्रिया
+        other: शिकायत की प्रक्रियाएं
+      consultation:
+        one: परामर्श
+        other: परामर्श
+      consultation_outcome:
+        one: परामर्श का नतीजा
+        other: परामर्श के नतीजे
+      corporate_information_page:
+        one: सूचना का पेज
+        other: सूचना के पेज
+      corporate_report:
+        one: कॉरपोरेट विवरण
+        other: कॉरपोरेट विवरण
+      correspondence:
+        one: पत्र व्यवहार
+        other: पत्र व्यवहार
+      countryside_stewardship_grant:
+        one: देहात प्रबंधन का अनुदान
+        other: देहात प्रबंधन के अनुदान
+      decision:
+        one: फैसला
+        other: फैसले
+      detailed_guidance:
+        one: मार्गदर्शन
+        other: मार्गदर्शन
+      detailed_guide:
+        one: मार्गदर्शन
+        other: मार्गदर्शन
+      dfid_research_output:
+        one: विकास के लिए शोध का परिणाम
+        other: विकास के लिए शोध के परिणाम
+      document_collection:
+        one: श्रृंखला
+        other: श्रृंखलाएं
+      draft_text:
+        one: मसौदा पाठ
+        other: मसौदे के पाठ
+      drcf_digital_markets_research:
+        one: 
+        other: 
+      drug_safety_update:
+        one: दवा सुरक्षा का अपडेट
+        other: दवा सुरक्षा के अपडेट
+      edition:
+        one: संस्करण
+        other: संस्करण
+      edition_with_appointment:
+        one: नियुक्ति के साथ संस्करण
+        other: नियुक्ति के साथ संस्करण
+      employment_appeal_tribunal_decision:
+        one: रोजगार निवेदन न्यायाधिकरण का फैसला
+        other: रोजगार निवेदन न्यायाधिकरण के फैसले
+      employment_tribunal_decision:
+        one: रोजगार न्यायाधिकरण का फैसला
+        other: रोजगार न्यायाधिकरण के फैसले
+      equality_and_diversity:
+        one: समानता और विविधता
+        other: समानता और विविधता
+      esi_fund:
+        one: यूरोपीय संरचनात्मक और निवेश कोष (European Structural and Investment Fund,
+          ESIF)
+        other: यूरोपीय संरचनात्मक और निवेश कोष (European Structural and Investment
+          Fund, ESIF)
+      fatality_notice:
+        one: विपत्ति की सूचना
+        other: विपत्ति की सूचना
+      foi_release:
+        one: एफओआई की विज्ञप्ति
+        other: एफओआई की विज्ञप्तियां
+      form:
+        one: प्रपत्र
+        other: प्रपत्र
+      generic_edition:
+        one: साधारण संस्करण
+        other: साधारण संस्करण
+      government_response:
+        one: सरकारी जवाब
+        other: सरकारी जवाब
+      guidance:
+        one: मार्गदर्शन
+        other: मार्गदर्शन
+      impact_assessment:
+        one: प्रभाव का आंकलन
+        other: प्रभाव का आंकलन
+      imported:
+        one: आयातित - प्रतीक्षा का प्रकार
+        other: आयातित - प्रतीक्षा का प्रकार
+      independent_report:
+        one: स्वतंत्र रिपोर्ट
+        other: स्वतंत्र रिपोर्टें
+      international_development_fund:
+        one: अंतरराष्ट्रीय विकास निधि
+        other: अंतरराष्ट्रीय विकास निधि
+      international_treaty:
+        one: अंतरराष्ट्रीय संधि
+        other: अंतरराष्ट्रीय संधियां
+      maib_report:
+        one: समुद्री दुर्घटना जांच शाखा की रिपोर्ट
+        other: समुद्री दुर्घटना जांच शाखा की रिपोर्टें
+      manual:
+        one: मैनुअल
+        other: मैनुअल
+      map:
+        one: मानचित्र
+        other: मानचित्रों
+      media_enquiries:
+        one: मीडिया पूछताछ
+        other: मीडिया पूछताछ
+      medical_safety_alert:
+        one: दवाओं और चिकित्सा उपकरणों के लिए चेतावनियां और रिकॉल
+        other: दवाओं और चिकित्सा उपकरणों के लिए चेतावनियां और रिकॉल
+      membership:
+        one: सदस्यता
+        other: सदस्यता
+      modern_slavery_statement:
+        one: 
+        other: 
+      national:
+        one: राष्ट्रीय सांख्यिकी की घोषणा
+        other: राष्ट्रीय सांख्यिकी की घोषणाएं
+      national_statistics:
+        one: राष्ट्रीय सांख्यिकी
+        other: राष्ट्रीय सांख्यिकी
+      national_statistics_announcement:
+        one: राष्ट्रीय सांख्यिकी की घोषणा
+        other: राष्ट्रीय सांख्यिकी की घोषणाएं
+      news_article:
+        one: समाचार लेख
+        other: समाचार लेख
+      news_story:
+        one: समाचार कथा
+        other: समाचार कथाएं
+      nhs_content:
+        one: एनएचएस विषय
+        other: एनएचएस विषय
+      notice:
+        one: नोटिस
+        other: नोटिस
+      official:
+        one: आधिकारिक सांख्यिकी की घोषणा
+        other: आधिकारिक सांख्यिकी की घोषणाएं
+      official_statistics:
+        one: आधिकारिक सांख्यिकी
+        other: आधिकारिक सांख्यिकी
+      official_statistics_announcement:
+        one: आधिकारिक सांख्यिकी की घोषणा
+        other: आधिकारिक सांख्यिकी की घोषणाएं
+      open_consultation:
+        one: खुला परामर्श
+        other: खुले परामर्श
+      oral_statement:
+        one: संसद में मौखिक बयान
+        other: संसद में मौखिक बयान
+      our_energy_use:
+        one: हमारा ऊर्जा का उपयोग
+        other: हमारा ऊर्जा का उपयोग
+      our_governance:
+        one: हमारा शासन
+        other: हमारा शासन
+      personal_information_charter:
+        one: व्यक्तिगत जानकारी का चार्टर
+        other: व्यक्तिगत जानकारी का चार्टर्स
+      petitions_and_campaigns:
+        one: याचिकाएं और अभियान
+        other: याचिकाएं और अभियान
+      policy:
+        one: नीति
+        other: नीतियां
+      policy_paper:
+        one: नीति पत्र
+        other: नीति पत्र
+      press_release:
+        one: प्रेस विज्ञप्ति
+        other: प्रेस विज्ञप्तियां
+      procurement:
+        one: इंतजाम
+        other: इंतजाम
+      promotional:
+        one: प्रचार सामग्री
+        other: प्रचार सामग्री
+      publication:
+        one: प्रकाशन
+        other: प्रकाशन
+      publication_scheme:
+        one: प्रकाशन योजना
+        other: प्रकाशन योजनाएं
+      raib_report:
+        one: रेल दुर्घटना जांच शाखा की रिपोर्ट
+        other: रेल दुर्घटना जांच शाखा की रिपोर्टें
+      recruitment:
+        one: भर्ती
+        other: भर्ती
+      regulation:
+        one: विनियमन
+        other: विनियमों
+      research:
+        one: अनुसंधान एवं विश्लेषण
+        other: अनुसंधान एवं विश्लेषण
+      residential_property_tribunal_decision:
+        one: आवासीय संपत्ति न्यायाधिकरण का फैसला
+        other: आवासीय संपत्ति न्यायाधिकरण के फैसले
+      service:
+        one: सेवा
+        other: सेवाएं
+      service_sign_in:
+        one: सेवा साइन इन
+        other: सेवा साइन इन
+      service_standard_report:
+        one: सेवा मानक की रिपोर्ट
+        other: सेवा मानक की रिपोर्टें
+      social_media_use:
+        one: सोशल मीडिया का प्रयोग
+        other: सोशल मीडिया का प्रयोग
+      speaking_notes:
+        one: " उदबोधन अंश"
+        other: " उदबोधन अंश"
+      speech:
+        one: भाषण
+        other: भाषण
+      staff_update:
+        one: स्टाफ का अपडेट
+        other: स्टाफ के अपडेट
+      standard:
+        one: मानक
+        other: मानकों
+      statement_to_parliament:
+        one: संसद में बयान
+        other: संसद में बयान
+      statistical_data_set:
+        one: सांख्यिकीय आंकड़े का समूह
+        other: सांख्यिकीय आंकड़े का समूह
+      statistics:
+        one: सांख्यिकी
+        other: सांख्यिकी
+      statistics_announcement:
+        one: सांख्यिकी विज्ञप्ति की घोषणा
+        other: सांख्यिकी विज्ञप्ति की घोषणाएं
+      statutory_guidance:
+        one: वैधानिक मार्गदर्शन
+        other: वैधानिक मार्गदर्शन
+      take_part:
+        one: हिस्सा लें
+        other: हिस्सा लें
+      tax_tribunal_decision:
+        one: कर और कार्यालय न्यायाधिकरण का फैसला
+        other: कर और कार्यालय न्यायाधिकरण के फैसले
+      terms_of_reference:
+        one: संदर्भ के नियम
+        other: संदर्भ के नियम
+      transcript:
+        one: प्रतिलिपि
+        other: प्रतिलिपियां
+      transparency:
+        one: पारदर्शिता आंकड़े
+        other: पारदर्शिता आंकड़े
+      utaac_decision:
+        one: प्रशासनिक निवेदन न्यायाधिकरण का फैसला
+        other: प्रशासनिक निवेदन न्यायाधिकरण के फैसले
+      welsh_language_scheme:
+        one: वेल्श भाषा योजना
+        other: वेल्श भाषा योजनाएं
+      world_location_news_article:
+        one: समाचार लेख
+        other: समाचार लेख
+      world_news_story:
+        one: विश्व की समाचार कथा
+        other: विश्व की समाचार कथाएं
+      written_statement:
+        one: संसद में लिखित बयान
+        other: संसद में लिखित बयान
     topics:
       title: "%{title}: विस्तृत जानकारी"
