@@ -74,29 +74,38 @@ RSpec.feature "Topical Event pages" do
   end
 
   context "documents list" do
-    let(:related_publications) { { "Policy on Topicals" => "/foo/policy_paper", "PM attends summit on topical events" => "/foo/news_story" } }
     let(:related_consultations) { { "A consultation on Topicals" => "/foo/consultation_one", "Another consultation" => "/foo/consultation_two" } }
     let(:related_announcements) { { "An announcement on Topicals" => "/foo/announcement_one", "Another announcement" => "/foo/announcement_two" } }
     let(:related_guidance_and_regulation) { { "Some guidance" => "/foo/detailed_guidance_one", "Another bit of guidance" => "/foo/detailed_guidance_two" } }
 
+    context "related publications" do
+      let(:related_publications) { { "Policy on Topicals" => "/foo/policy_paper", "PM attends summit on topical events" => "/foo/news_story" } }
+
+      xit "displays related publications" do
+        stub_search(body: search_api_response(related_publications), params: { "filter_format" => "publication" })
+
+        visit base_path
+
+        expect(page).to have_text("Publications")
+
+        within("#publications") do
+          related_publications.each { |title, link| expect(page).to have_link(title, href: link) }
+          expect(page).to have_link("See all publications", href: "/search/all?topical_events%5B%5D=something-very-topical")
+        end
+      end
+    end
+
     it "displays links to all related documents" do
       stub_search(body: search_api_response(related_announcements), params: { "filter_content_purpose_supergroup" => "news_and_communications" })
-      stub_search(body: search_api_response(related_publications), params: { "filter_format" => "publication" })
       stub_search(body: search_api_response(related_consultations), params: { "filter_format" => "consultation" })
       stub_search(body: search_api_response(related_guidance_and_regulation), params: { "filter_content_purpose_supergroup" => "guidance_and_regulation" })
 
       visit base_path
 
       expect(page).to have_text("Documents")
-      expect(page).to have_text("Publications")
       expect(page).to have_text("Consultations")
       expect(page).to have_text("Announcements")
       expect(page).to have_text("Guidance and regulation")
-
-      within("#publications") do
-        related_publications.each { |title, link| expect(page).to have_link(title, href: link) }
-        expect(page).to have_link("See all publications", href: "/search/all?topical_events%5B%5D=something-very-topical")
-      end
 
       within("#consultations") do
         related_consultations.each { |title, link| expect(page).to have_link(title, href: link) }
