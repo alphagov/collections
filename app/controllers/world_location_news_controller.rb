@@ -3,7 +3,7 @@ class WorldLocationNewsController < ApplicationController
   enable_request_formats show: :atom
 
   def show
-    path = world_location_news_path(params[:name])
+    path = request.path.gsub(".atom", "")
     @world_location_news = WorldLocationNews.find!(path)
 
     respond_to do |format|
