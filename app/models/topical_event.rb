@@ -47,6 +47,11 @@ class TopicalEvent
     end
   end
 
+  def most_popular_from_last_7_days
+    formatted_last_7_days = (Time.zone.now - 7.days).strftime("%Y-%m-%d")
+    { order: "-popularity", filter_public_timestamp: "from:#{formatted_last_7_days}" }
+  end
+
   def about_page_url
     "#{@content_item.content_item_data['base_path']}/about"
   end
@@ -97,11 +102,11 @@ class TopicalEvent
   end
 
   def announcements
-    @announcements ||= @documents_service.fetch_related_documents_with_format({ filter_content_purpose_supergroup: "news_and_communications", reject_content_purpose_subgroup: %w[decisions updates_and_alerts] })
+    @announcements ||= @documents_service.fetch_related_documents_with_format({ filter_content_purpose_supergroup: "news_and_communications", reject_content_purpose_subgroup: %w[decisions updates_and_alerts] }.merge(most_popular_from_last_7_days))
   end
 
   def guidance_and_regulation
-    @guidance_and_regulation ||= @documents_service.fetch_related_documents_with_format({ filter_content_purpose_supergroup: "guidance_and_regulation" })
+    @guidance_and_regulation ||= @documents_service.fetch_related_documents_with_format({ filter_content_purpose_supergroup: "guidance_and_regulation" }.merge(most_popular_from_last_7_days))
   end
 
   def organisations
