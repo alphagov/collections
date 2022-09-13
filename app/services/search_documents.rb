@@ -14,6 +14,8 @@ class SearchDocuments
 private
 
   def default_search_options
+    return popularity_over_last_7_days_search_options if @slug == "her-majesty-queen-elizabeth-ii"
+
     { @filter_field.to_sym => [@slug],
       count: 3,
       order: "-public_timestamp",
@@ -38,5 +40,17 @@ private
         },
       }
     end
+  end
+
+  def popularity_over_last_7_days_search_options
+    { @filter_field.to_sym => [@slug],
+      filter_public_​timestamp: ​"from:#{formatted_7_days_ago}",
+      count: 3,
+      order: "-popularity",
+      fields: TOPICAL_EVENTS_SEARCH_FIELDS }
+  end
+
+  def formatted_7_days_ago
+    (Time.now.utc - 7.days).strftime("%Y-%m-%d 00:00")
   end
 end
