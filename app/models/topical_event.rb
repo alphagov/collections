@@ -101,8 +101,8 @@ class TopicalEvent
     @consultations ||= @documents_service.fetch_related_documents_with_format({ filter_format: "consultation" })
   end
 
-  def announcements
-    @announcements ||= @documents_service.fetch_related_documents_with_format({ filter_content_purpose_supergroup: "news_and_communications", reject_content_purpose_subgroup: %w[decisions updates_and_alerts] }.merge(most_popular_from_last_7_days))
+  def news_and_communications
+    @news_and_communications ||= @documents_service.fetch_related_documents_with_format({ filter_content_purpose_supergroup: "news_and_communications", reject_content_purpose_subgroup: %w[decisions updates_and_alerts] }.merge(most_popular_from_last_7_days))
   end
 
   def guidance_and_regulation
