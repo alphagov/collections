@@ -102,6 +102,8 @@ body:
     content:
     - subheading:
       links:
+      - link_text: "Limits on energy prices: Energy Price Guarantee"
+        href: https://www.gov.uk/government/publications/energy-bills-support/energy-bills-support-factsheet-8-september-2022
       - link_text: Find out about the Cost of Living Payment
         href: https://www.gov.uk/guidance/cost-of-living-payment
       - link_text: Find out about the Energy Bills Support Scheme
