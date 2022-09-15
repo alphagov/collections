@@ -23,6 +23,13 @@
         "track-options": {
           "dimension114": list_index + 1
         },
+        ga4: {
+          event_name: 'select_content',
+          type: 'accordion',
+          text: list[:heading],
+          index: list_index + 1,
+          index_total: content.body[:accordion_content].map.size,
+        }
       },
     }
   end
@@ -71,6 +78,17 @@
           <%= render "govuk_publishing_components/components/accordion", {
             track_show_all_clicks: true,
             track_sections: true,
+            data_attributes: {
+              module: "ga4-event-tracker",
+            },
+            data_attributes_show_all: {
+              "ga4": {
+                event_name: "select_content",
+                type: "accordion",
+                index: 0,
+                index_total: content.body[:accordion_content].map.size
+              }.to_json,
+            },
             items: accordion_contents,
           } %>
         </div>
