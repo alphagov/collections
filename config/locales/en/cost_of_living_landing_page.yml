@@ -2,7 +2,7 @@
 en:
   cost_of_living_landing_page:
     regions:
-      uk_wide: UK wide
       england_scotland_wales: England, Scotland and Wales
       norther_ireland: Northern Ireland
       scotland: Scotland
+      uk_wide: UK wide

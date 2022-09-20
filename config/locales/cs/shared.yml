@@ -10,430 +10,430 @@ cs:
     language_name: Čeština
     schema_name:
       aaib_report:
-        few: 
+        few:
         one: Zpráva Oddělení pro vyšetřování leteckých nehod
         other: Zprávy Oddělení pro vyšetřování leteckých nehod
       about:
-        few: 
+        few:
         one: O stránkách
         other: O stránkách
       about_our_services:
-        few: 
+        few:
         one: O našich službách
         other: O našich službách
       access_and_opening:
-        few: 
+        few:
         one: Přístup a otevírání
         other: Přístup a otevírání
       accessible_documents_policy:
-        few: 
+        few:
         one: Politika přístupnosti dokumentů
         other: Zásady přístupnosti dokumentů
       alert:
-        few: 
+        few:
         one: Upozornění
         other: Upozornění
       announcement:
-        few: 
+        few:
         one: Oznámení
         other: Oznámení
       asylum_support_decision:
-        few: 
+        few:
         one: Rozhodnutí tribunálu pro azylovou podporu
         other: Rozhodnutí tribunálu pro azylovou podporu
       authored_article:
-        few: 
+        few:
         one: Autorský článek
         other: Autorské články
       blog_post:
-        few: 
+        few:
         one: Příspěvek na blogu
         other: Příspěvky na blogu
       business_finance_support_scheme:
-        few: 
+        few:
         one: Režim podpory financování podniků
         other: Režimy podpory financování podniků
       campaign:
-        few: 
+        few:
         one: Kampaň
         other: Kampaně
       careers:
-        few: 
+        few:
         one: Kariéra
         other: kariéra
       case_study:
-        few: 
+        few:
         one: Případová studie
         other: Případové studie
       closed_consultation:
-        few: 
+        few:
         one: Uzavřená konzultace
         other: Uzavřené konzultace
       cma_case:
-        few: 
+        few:
         one: Případ Úřadu pro hospodářskou soutěž a trhy
         other: Případy Úřadu pro hospodářskou soutěž a trhy
       coming_soon:
-        few: 
+        few:
         one: Již brzy
         other: Již brzy
       complaints_procedure:
-        few: 
+        few:
         one: Postup pro podávání stížností
         other: Postupy pro podávání stížností
       consultation:
-        few: 
+        few:
         one: Konzultace
         other: Konzultace
       consultation_outcome:
-        few: 
+        few:
         one: Výsledek konzultace
         other: Výsledky konzultací
       corporate_information_page:
-        few: 
+        few:
         one: Informační stránka
         other: Informační stránky
       corporate_report:
-        few: 
+        few:
         one: Podniková zpráva
         other: Podnikové zprávy
       correspondence:
-        few: 
+        few:
         one: Korespondence
         other: Korespondence
       countryside_stewardship_grant:
-        few: 
+        few:
         one: Grant na správu krajiny
         other: Granty na správu krajiny
       decision:
-        few: 
+        few:
         one: Rozhodnutí
         other: Rozhodnutí
       detailed_guidance:
-        few: 
+        few:
         one: Směrnice
         other: Směrnice
       detailed_guide:
-        few: 
+        few:
         one: Směrnice
         other: Směrnice
       dfid_research_output:
-        few: 
+        few:
         one: Výstup výzkumu pro rozvoj
         other: Výstupy výzkumu pro rozvoj
       document_collection:
-        few: 
+        few:
         one: Sbírka
         other: Sbírky
       draft_text:
-        few: 
+        few:
         one: Návrh textu
         other: Návrhy textů
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
-        few: 
+        few:
         one: Aktuální informace o bezpečnosti léčiv
         other: Aktuální informace o bezpečnosti léčiv
       edition:
-        few: 
+        few:
         one: Vydání
         other: Edice
       edition_with_appointment:
-        few: 
+        few:
         one: Vydání se schůzkou
         other: Vydání se schůzkou
       employment_appeal_tribunal_decision:
-        few: 
+        few:
         one: Rozhodnutí odvolacího pracovního soudu
         other: Rozhodnutí odvolacího pracovního soudu
       employment_tribunal_decision:
-        few: 
+        few:
         one: Rozhodnutí pracovního soudu
         other: Rozhodnutí pracovního soudu
       equality_and_diversity:
-        few: 
+        few:
         one: Rovnost a rozmanitost
         other: Rovnost a rozmanitost
       esi_fund:
-        few: 
+        few:
         one: Evropský strukturální a investiční fond (ESIF)
         other: Evropské strukturální a investiční fondy (ESIF)
       fatality_notice:
-        few: 
+        few:
         one: Oznámení o úmrtí
         other: Oznámení o úmrtí
       foi_release:
-        few: 
+        few:
         one: Zveřejnění informací FOI
         other: Zveřejnění informací FOI
       form:
-        few: 
+        few:
         one: Formulář
         other: Formuláře
       generic_edition:
-        few: 
+        few:
         one: Obecné vydání
         other: Obecné vydání
       government_response:
-        few: 
+        few:
         one: Reakce vlády
         other: Reakce vlády
       guidance:
-        few: 
+        few:
         one: Směrnice
         other: Směrnice
       impact_assessment:
-        few: 
+        few:
         one: Posouzení dopadu
         other: Posouzení dopadů
       imported:
-        few: 
+        few:
         one: importované - čekající na typ
         other: importované - čekající na typ
       independent_report:
-        few: 
+        few:
         one: Nezávislá zpráva
         other: Nezávislé zprávy
       international_development_fund:
-        few: 
+        few:
         one: Financování mezinárodního rozvoje
         other: Financování mezinárodního rozvoje
       international_treaty:
-        few: 
+        few:
         one: Mezinárodní smlouva
         other: Mezinárodní smlouvy
       maib_report:
-        few: 
+        few:
         one: Zpráva oddělení pro vyšetřování námořních nehod
         other: Zprávy oddělení pro vyšetřování námořních nehod
       manual:
-        few: 
+        few:
         one: Manuál
         other: Příručky
       map:
-        few: 
+        few:
         one: Mapa
         other: Mapy
       media_enquiries:
-        few: 
+        few:
         one: Dotaz na média
         other: Dotazy pro média
       medical_safety_alert:
-        few: 
+        few:
         one: Upozornění a stahování léčiv a zdravotnických prostředků z trhu
         other: Upozornění a stahování léčiv a zdravotnických prostředků z trhu
       membership:
-        few: 
+        few:
         one: Členství
         other: Členství
       modern_slavery_statement:
-        few: 
-        one: 
-        other: 
+        few:
+        one:
+        other:
       national:
-        few: 
+        few:
         one: Oznámení národních statistik
         other: Oznámení národních statistik
       national_statistics:
-        few: 
+        few:
         one: Národní statistiky
         other: Národní statistiky
       national_statistics_announcement:
-        few: 
+        few:
         one: Oznámení národních statistik
         other: Oznámení národních statistik
       news_article:
-        few: 
+        few:
         one: Zpravodajský článek
         other: Zpravodajské články
       news_story:
-        few: 
+        few:
         one: Zpravodajský příběh
         other: Zpravodajské příběhy
       nhs_content:
-        few: 
+        few:
         one: Obsah Národní zdravotní služba
         other: Obsah Národní zdravotní služba
       notice:
-        few: 
+        few:
         one: Oznámení
         other: Oznámení
       official:
-        few: 
+        few:
         one: Oficiální statistické oznámení
         other: Oficiální statistická oznámení
       official_statistics:
-        few: 
+        few:
         one: Oficiální statistiky
         other: Oficiální statistiky
       official_statistics_announcement:
-        few: 
+        few:
         one: Oficiální statistické oznámení
         other: Oficiální statistická oznámení
       open_consultation:
-        few: 
+        few:
         one: Otevřená konzultace
         other: Otevřené konzultace
       oral_statement:
-        few: 
+        few:
         one: Ústní prohlášení pro Parlament
         other: Ústní prohlášení pro Parlament
       our_energy_use:
-        few: 
+        few:
         one: Naše spotřeba energie
         other: Naše spotřeba energie
       our_governance:
-        few: 
+        few:
         one: Naše správa
         other: Naše správa
       personal_information_charter:
-        few: 
+        few:
         one: Listina osobních údajů
         other: Listiny osobních údajů
       petitions_and_campaigns:
-        few: 
+        few:
         one: Petice a kampaně
         other: Petice a kampaně
       policy:
-        few: 
+        few:
         one: Politika
         other: Politik
       policy_paper:
-        few: 
+        few:
         one: Politický dokument
         other: Politické dokumenty
       press_release:
-        few: 
+        few:
         one: Tisková zpráva
         other: Tiskové zprávy
       procurement:
-        few: 
+        few:
         one: Zadávání zakázek
         other: Zadávání zakázek
       promotional:
-        few: 
+        few:
         one: Propagační materiály
         other: Propagační materiály
       publication:
-        few: 
+        few:
         one: Publikace
         other: Publikace
       publication_scheme:
-        few: 
+        few:
         one: Publikační schéma
         other: Publikační schémata
       raib_report:
-        few: 
+        few:
         one: Zpráva Oddělení pro vyšetřování železničních nehod
         other: Zprávy Oddělení pro vyšetřování železničních nehod
       recruitment:
-        few: 
+        few:
         one: Přijímání zaměstnanců
         other: Přijímání zaměstnanců
       regulation:
-        few: 
+        few:
         one: Nařízení
         other: nařízení
       research:
-        few: 
+        few:
         one: Výzkum a analýza
         other: Výzkum a analýza
       residential_property_tribunal_decision:
-        few: 
+        few:
         one: Rozhodnutí tribunálu pro obytné nemovitosti
         other: Rozhodnutí tribunálu pro obytné nemovitosti
       service:
-        few: 
+        few:
         one: Služba
         other: Služby
       service_sign_in:
-        few: 
+        few:
         one: Přihlášení do služby
         other: Přihlášení do služby
       service_standard_report:
-        few: 
+        few:
         one: Zpráva o standardu služby
         other: Zprávy o standardu služby
       social_media_use:
-        few: 
+        few:
         one: Používání sociálních médií
         other: Používání sociálních médií
       speaking_notes:
-        few: 
+        few:
         one: Poznámky k mluvení
         other: Poznámky k mluvení
       speech:
-        few: 
+        few:
         one: Projev
         other: Projevy
       staff_update:
-        few: 
+        few:
         one: Aktuální informace o zaměstnancích
         other: Aktuální informace o zaměstnancích
       standard:
-        few: 
+        few:
         one: Standardní
         other: Standardy
       statement_to_parliament:
-        few: 
+        few:
         one: Prohlášení pro Parlament
         other: Prohlášení pro Parlament
       statistical_data_set:
-        few: 
+        few:
         one: Soubor statistických údajů.
         other: Soubory statistických údajů.
       statistics:
-        few: 
+        few:
         one: Statistika
         other: Statistika
       statistics_announcement:
-        few: 
+        few:
         one: Oznámení o zveřejnění statistik
         other: Oznámení o zveřejnění statistik
       statutory_guidance:
-        few: 
+        few:
         one: Zákonné směrnice
         other: Zákonné směrnice
       take_part:
-        few: 
+        few:
         one: Zúčastněte se
         other: Zúčastněte se
       tax_tribunal_decision:
-        few: 
+        few:
         one: Rozhodnutí daňového a ekvitního soudu
         other: Rozhodnutí daňového a ekvitního soudu
       terms_of_reference:
-        few: 
+        few:
         one: Podmínky zadání
         other: Podmínky zadání
       transcript:
-        few: 
+        few:
         one: Přepis
         other: Přepisy
       transparency:
-        few: 
+        few:
         one: Údaje o transparentnosti
         other: Údaje o transparentnosti
       utaac_decision:
-        few: 
+        few:
         one: Rozhodnutí odvolacího správního soudu
         other: Rozhodnutí odvolacího správního soudu
       welsh_language_scheme:
-        few: 
+        few:
         one: Schéma welšského jazyka
         other: Schémata welšského jazyka
       world_location_news_article:
-        few: 
+        few:
         one: Zpravodajský článek
         other: Zpravodajské články
       world_news_story:
-        few: 
+        few:
         one: Zprávy ze světa
         other: Zprávy ze světa
       written_statement:
-        few: 
+        few:
         one: Písemné prohlášení pro Parlament
         other: Písemná prohlášení pro Parlament
     topics:

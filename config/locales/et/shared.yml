@@ -100,8 +100,8 @@ et:
         one: Teksti mustand
         other: Teksti mustandid
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         one: Uimastiohutuse ajakohatamine
         other: Uimastiohutuse ajakohastamised
@@ -175,8 +175,8 @@ et:
         one: Liikmelisus
         other: Liikmelisus
       modern_slavery_statement:
-        one: 
-        other: 
+        one:
+        other:
       national:
         one: Riiklik statistikateade
         other: Riiklikud statistikateated

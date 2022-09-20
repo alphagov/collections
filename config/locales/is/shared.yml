@@ -100,8 +100,8 @@ is:
         one: Textadrög
         other: Textadrög
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         one: Uppfærsla varðandi lyfjaöryggi
         other: Uppfærslur varðandi lyfjaöryggi
@@ -175,8 +175,8 @@ is:
         one: Aðild
         other: Aðild
       modern_slavery_statement:
-        one: 
-        other: 
+        one:
+        other:
       national:
         one: Tilkynning Hagstofu
         other: Tilkynningar Hagstofur

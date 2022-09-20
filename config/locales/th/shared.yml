@@ -70,8 +70,8 @@ th:
       draft_text:
         other: ข้อความร่าง
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         other: ข่าวสารความปลอดภัยของยา
       edition:
@@ -121,7 +121,7 @@ th:
       membership:
         other: สมาชิก
       modern_slavery_statement:
-        other: 
+        other:
       national:
         other: ประกาศสถิติแห่งชาติ
       national_statistics:

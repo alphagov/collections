@@ -100,8 +100,8 @@ az:
         one: Hazırlanan mətn
         other: Hazırlanan mətnlər
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         one: Dərman təhlükəsizliyi üzrə yeniləmə
         other: Dərman təhlükəsizliyi üzrə yeniləmələr
@@ -175,8 +175,8 @@ az:
         one: Üzvlük
         other: Üzvlük
       modern_slavery_statement:
-        one: 
-        other: 
+        one:
+        other:
       national:
         one: Milli statistika elanı
         other: Milli statistika elanları
