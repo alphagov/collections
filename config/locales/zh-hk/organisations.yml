@@ -46,7 +46,6 @@ zh-hk:
           text: 查閱全部資訊發佈透明度及自由
         title: 資訊發佈透明度及自由
     errors_or_omissions_html: <p class="govuk-body">有出錯或是遺漏？<a class="govuk-link" href="/contact/govuk">請在此處告知我們</a>。如要了解非部門公共機構名單，請 <a class="govuk-link" href="/government/collections/public-bodies">參閱公共機構</a>。</p>
-    featured: 特載內容
     foi:
       contact_form: FOI 聯絡表
       foi_exemption_html: 此組織不受資訊自由法案規限。如要查閱其中包含哪些組織，請參閱 <a href="%{foi_url}" class="govuk-link brand__color">立法</a>。

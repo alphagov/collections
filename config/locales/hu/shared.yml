@@ -5,6 +5,7 @@ hu:
     browse:
       prefix: 'Böngészés:'
       title: GOV.UK böngészése
+    featured: Kiemelt
     get_emails: Fogadjon e-maileket ebben a témában
     language_direction: ltr
     language_name: Magyar

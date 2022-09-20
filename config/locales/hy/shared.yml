@@ -5,6 +5,7 @@ hy:
     browse:
       prefix: Դիտել՝
       title: Դիտել GOV.UK կայքը
+    featured: Հայտնի
     get_emails: Ստանալ էլ․ նամակներ այս թեմայի վերաբերյալ
     language_direction: ltr
     language_name: Հայերեն

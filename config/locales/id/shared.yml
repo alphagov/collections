@@ -5,6 +5,7 @@ id:
     browse:
       prefix: 'Jelajahi:'
       title: Jelajahi GOV.UK
+    featured: Unggulan
     get_emails: Dapatkan email untuk topik ini
     language_direction: ltr
     language_name: Bahasa Indonesia

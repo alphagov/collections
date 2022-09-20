@@ -5,6 +5,7 @@ ru:
     browse:
       prefix: 'Посетите:'
       title: Посетите GOV.UK
+    featured: Подборка
     get_emails: Получите электронное сообщение на эту тему
     language_direction: ltr
     language_name: Русский

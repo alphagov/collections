@@ -5,6 +5,7 @@ tk:
     browse:
       prefix: 'Gözle:'
       title: Gözle GOV.UK
+    featured: Aýratynlyk
     get_emails: Bu mowzuk üçin e-poçta alyň
     language_direction: ltr
     language_name: Türkmen

@@ -46,7 +46,6 @@ pa:
           text: ਸਾਰੀ ਪਾਰਦਰਸ਼ਤਾ ਅਤੇ ਜਾਣਕਾਰੀ ਜਾਰੀ ਕਰਨ ਦੀ ਆਜ਼ਾਦੀ ਵੇਖੋ
         title: ਪਾਰਦਰਸ਼ਤਾ ਅਤੇ ਜਾਣਕਾਰੀ ਜਾਰੀ ਕਰਨ ਦੀ ਆਜ਼ਾਦੀ
     errors_or_omissions_html: <p class="govuk-body">Errors or omissions? <a class="govuk-link" href="/contact/govuk">ਸਾਨੂੰ ਇੱਥੇ ਦੱਸੋ</a>.ਗੈਰ -ਵਿਭਾਗੀ ਜਨਤਕ ਸੰਸਥਾਵਾਂ ਦੀਆਂ ਅਧਿਕਾਰਤ ਸੂਚੀਆਂ ਲਈ <a class="govuk-link" href="/government/collections/public-bodies">ਜਨਤਕ ਸੰਸਥਾਵਾਂ ਵੇਖੋ</a>.</p>
-    featured: ਫੀਚਰਡ
     foi:
       contact_form: FOI ਸੰਪਰਕ ਫਾਰਮ
       foi_exemption_html: |-

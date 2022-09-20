@@ -5,6 +5,7 @@ de:
     browse:
       prefix: 'Aufrufen:'
       title: GOV.UK aufrufen
+    featured: Vorgestellt
     get_emails: Emails zu diesem Thema erhalten
     language_direction: ltr
     language_name: Deutsch

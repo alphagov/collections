@@ -5,6 +5,7 @@ et:
     browse:
       prefix: 'Sirvi:'
       title: Sirvi saiti GOV.UK
+    featured: Soovitatavad
     get_emails: Hangi selle teema kohta e-kirju
     language_direction: ltr
     language_name: Eesti

@@ -5,6 +5,7 @@ el:
     browse:
       prefix: 'Περιήγηση:'
       title: Περιήγηση στο GOV.UK
+    featured: Προτεινόμενα
     get_emails: Λάβετε email για αυτό το θέμα
     language_direction: ltr
     language_name: Ελληνικά

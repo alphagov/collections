@@ -46,7 +46,6 @@ da:
           text: Se al gennemsigtighed og informationsfrihed
         title: Gennemsigtighed og informationsfrihed frigives
     errors_or_omissions_html: <p class="govuk-body">Fejl eller udeladelser? <a class="govuk-link" href="/contact/govuk">Tell os her</a>. For officielle lister over ikke-departementale offentlige organer <a class="govuk-link" href="/government/collections/public-bodies">se offentlige organer</a>.</p>
-    featured: Fremhævede
     foi:
       contact_form: kontaktformular for informationsfrihed
       foi_exemption_html: |

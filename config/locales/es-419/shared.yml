@@ -5,6 +5,7 @@ es-419:
     browse:
       prefix: 'Navega:'
       title: Navegar en GOV.UK
+    featured: Destacado
     get_emails: Recibir emails sobre este tema
     language_direction: ltr
     language_name: Español de América Latina

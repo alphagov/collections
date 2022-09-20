@@ -46,7 +46,6 @@ es:
           text: Ver todos los comunicados de transparencia y libertad de información
         title: Transparencia y libertad de información
     errors_or_omissions_html: <p class="govuk-body">¿Errores u omisiones? <a class="govuk-link" href="/contact/govuk">Díganoslo aquí</a>. Para un listado oficial de los organismos públicos no departamentales <a class="govuk-link" href="/government/collections/public-bodies">public bodies</a>.</p>
-    featured: Destacados
     foi:
       contact_form: Formulario de contacto según la Ley de Libertad de Información
       foi_exemption_html: "Esta organización no está cubierta por la Ley de Libertad de Información. \nPara ver qué organizaciones están incluidas, consulte <a href=\"%{foi_url}\" class=\"govuk-link brand__color\">la legislación</a>.\n"

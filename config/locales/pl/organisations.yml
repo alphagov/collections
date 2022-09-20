@@ -46,7 +46,6 @@ pl:
           text: Zobacz wszystkie publikacje na temat przerzystości i wolności informacji
         title: Publikacje na temat przerzystości i wolności informacji
     errors_or_omissions_html: <p class="govuk-body">Błędy lub przeoczenia? <a class="govuk-link" href="/contact/govuk">Powiedz nam tutaj</a>. Aby uzyskać oficjalny wykaz pozaministerialnych organów publicznych <a class="govuk-link" href="/government/collections/public-bodies">zobacz organy publiczne</a>.</p>.
-    featured: Polecane
     foi:
       contact_form: Formularz zgłoszeniowy dot. wolności informacji
       foi_exemption_html: |

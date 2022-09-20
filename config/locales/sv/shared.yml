@@ -5,6 +5,7 @@ sv:
     browse:
       prefix: 'Bläddra:'
       title: Bläddra på GOV.UK
+    featured: Utvalda
     get_emails: Få e-postmeddelanden om detta ämne
     language_direction: ltr
     language_name: Svensk

@@ -5,6 +5,7 @@ ur:
     browse:
       prefix: 'براؤز کریں:'
       title: GOV.UK کو براؤز کریں
+    featured: فیچرڈ
     get_emails: اس موضوع کے لیے ای میلز حاصل کریں
     language_direction: rtl
     language_name: اردو

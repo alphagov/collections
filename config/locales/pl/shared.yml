@@ -5,6 +5,7 @@ pl:
     browse:
       prefix: 'Przeglądaj:'
       title: Przeglądaj GOV.UK
+    featured: Polecane
     get_emails: Otrzymuj wiadomości e-mailna ten temat
     language_direction: ltr
     language_name: Polski

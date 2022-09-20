@@ -5,6 +5,7 @@ be:
     browse:
       prefix: 'Агляд:'
       title: Агляд GOV.UK
+    featured: Падборка
     get_emails: Атрымваць электронныя лісты па гэтай тэме
     language_direction: ltr
     language_name: Беларуская

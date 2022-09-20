@@ -5,6 +5,7 @@ sl:
     browse:
       prefix: 'Brskaj:'
       title: Brskaj po GOV.UK
+    featured: Vključeno
     get_emails: Prejemajte e-sporočila na to temo
     language_direction: ltr
     language_name: Slovenščina

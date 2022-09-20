@@ -5,6 +5,7 @@ en:
     browse:
       prefix: 'Browse:'
       title: Browse GOV.UK
+    featured: Featured
     get_emails: Get emails for this topic
     language_direction: ltr
     language_name: English

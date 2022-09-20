@@ -5,6 +5,7 @@ he:
     browse:
       prefix: 'עיון: '
       title: עיון GOV.UK
+    featured: מוצגים
     get_emails: קבל הודעות דואר אלקטרוני לנושא זה
     language_direction: rtl
     language_name: עברית

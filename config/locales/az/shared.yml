@@ -5,6 +5,7 @@ az:
     browse:
       prefix: Nəzərdən keçirin
       title: GOV.UK-i nəzərdən keçirin
+    featured: Seçilmiş
     get_emails: Bu mövzu üzrə e-məktublar alın
     language_direction: ltr
     language_name: Azeri

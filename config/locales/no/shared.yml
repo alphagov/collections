@@ -5,6 +5,7 @@
     browse:
       prefix: 'Bla gjennom:'
       title: Bla gjennom GOV.UK
+    featured: Utvalgt
     get_emails: Få e-post for dette emnet
     language_direction: ltr
     language_name: norsk

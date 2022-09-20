@@ -5,6 +5,7 @@ fi:
     browse:
       prefix: 'Selaa:'
       title: Selaa GOV.UK
+    featured: Suositeltava
     get_emails: Hanki sähköpostit tähän aiheeseen
     language_direction: ltr
     language_name: suomi

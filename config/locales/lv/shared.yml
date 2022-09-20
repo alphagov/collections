@@ -5,6 +5,7 @@ lv:
     browse:
       prefix: 'Pārlūkot:'
       title: Pārlūkot GOV.UK
+    featured: Ieteikts
     get_emails: Saņemt e-pasta ziņojumus par šo tēmu
     language_direction: ltr
     language_name: Latviešu

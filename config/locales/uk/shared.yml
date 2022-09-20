@@ -5,6 +5,7 @@ uk:
     browse:
       prefix: 'Перейти:'
       title: Перейти на GOV.UK
+    featured: Рекомендовано
     get_emails: Отримувати електронні листи на цю тему
     language_direction: ltr
     language_name: Українська

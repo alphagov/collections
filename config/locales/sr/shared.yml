@@ -5,6 +5,7 @@ sr:
     browse:
       prefix: 'Potražite:'
       title: Potražite na GOV.UK
+    featured: Istaknuto
     get_emails: Želim da dobijam e-poruke o ovim temama
     language_direction: ltr
     language_name: srpski

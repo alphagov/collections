@@ -5,6 +5,7 @@ fr:
     browse:
       prefix: 'Parcourir:'
       title: Parcourir GOV.UK
+    featured: Mis en exergue
     get_emails: Obtenir des courriels pour ce sujet
     language_direction: ltr
     language_name: Français

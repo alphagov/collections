@@ -5,6 +5,7 @@ nl:
     browse:
       prefix: 'Bladeren:'
       title: Bladeren op GOV.UK
+    featured: Aanbevolen
     get_emails: Ontvang e-mails over dit onderwerp
     language_direction: ltr
     language_name: Nederlands

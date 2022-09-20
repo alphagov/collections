@@ -5,6 +5,7 @@ ko:
     browse:
       prefix: '탐색:'
       title: GOV.UK 탐색하기
+    featured: 특집
     get_emails: 이 주제에 대한 이메일 받기
     language_direction: ltr
     language_name: 한국어

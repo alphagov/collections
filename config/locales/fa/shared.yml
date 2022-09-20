@@ -5,6 +5,7 @@ fa:
     browse:
       prefix: 'مرور:'
       title: GOV.UK را مرور کنید
+    featured: برجسته
     get_emails: دریافت ایمیل برای این موضوع
     language_direction: rtl
     language_name: فارسی

@@ -46,7 +46,6 @@ hr:
           text: Pogledajte sve objave o transparentnosti i slobodi informacija
         title: Transparentnost i sloboda objavljivanja informacija
     errors_or_omissions_html: <p class="govuk-body">Pogreške ili propusti? <a class="govuk-link" href="/contact/govuk">Recite nam ovdje</a>. Za službene popise javnih tijela koja nisu odjela <a class="govuk-link" href="/government/collections/public-bodies">pogledajte javna tijela</a>.</p>
-    featured: Istaknuto
     foi:
       contact_form: Kontakt forma za Slobodu Informacija
       foi_exemption_html: Ova organizacija nije obuhvaćena Zakonom o slobodi pristupa informacijama. Da biste vidjeli koje su organizacije uključene, pogledajte <a href="%{foi_url}" class="govuk-link brand__color">zakonodavstvo</a>.

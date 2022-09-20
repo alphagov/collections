@@ -5,6 +5,7 @@ is:
     browse:
       prefix: 'Vafra:'
       title: Vafra um GOV.UK
+    featured: Valið
     get_emails: Fá tölvupósta um þetta efni
     language_direction: ltr
     language_name: Íslenska

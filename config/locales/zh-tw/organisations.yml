@@ -46,7 +46,6 @@ zh-tw:
           text: 查看透明度與資訊自由的發布
         title: 透明度與資訊自由的發布
     errors_or_omissions_html: <p class="govuk-body">錯誤或遺漏？<a class="govuk-link" href="/contact/govuk">從這裡通知我們</a>.有關非政府部門公共機構的官方列表 <a class="govuk-link" href="/government/collections/public-bodies">查看公共機構</a>。</p>
-    featured: 特色
     foi:
       contact_form: 資訊自由聯繫表
       foi_exemption_html: |

@@ -5,6 +5,7 @@ bn:
     browse:
       prefix: 'ব্রাউজ করুন:'
       title: GOV.UK ব্রাউজ করুন
+    featured: ফিচারকৃত
     get_emails: এই বিষয়ের জন্য ইমেইল নিন
     language_direction: ltr
     language_name: বাংলা

@@ -5,6 +5,7 @@ tr:
     browse:
       prefix: 'Araştır:'
       title: GOV.UK sitesini araştır
+    featured: Öne çıkan
     get_emails: Bu konuda e-posta al
     language_direction: ltr
     language_name: Türkçe

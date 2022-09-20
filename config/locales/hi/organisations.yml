@@ -46,7 +46,6 @@ hi:
           text: सभी पारदर्शिता और सूचना जारी करने की आज़ादी देखें
         title: पारदर्शिता और सूचना जारी करने की आज़ादी
     errors_or_omissions_html: <p class="govuk-body">त्रुटियां या चूक? <a class="govuk-link" href="/contact/govuk">हमें यहां बताएं</a>। For official lists of non–departmental public bodies <a class="govuk-link" href="/government/collections/public-bodies">सार्वजनिक निकाय देखें</a>।</p>
-    featured: फीचर्ड
     foi:
       contact_form: एफओआई संपर्क प्रपत्र
       foi_exemption_html: यह संगठन सूचना की आज़ादी अधिनियम द्वारा कवर नहीं किया गया है। शामिल संगठनों की जानकारी देखने के लिए, <a href="%{foi_url}" class="govuk-link brand__color">कानून</a>देखें।

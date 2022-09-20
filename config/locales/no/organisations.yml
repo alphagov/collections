@@ -46,7 +46,6 @@
           text: Se alle skriv om åpenhet og informasjonsfrihet
         title: Skriv om åpenhet og informasjonsfrihet
     errors_or_omissions_html: <p class="govuk-body">Errors or omissions? <a class="govuk-link" href="/contact/govuk">Fortell oss her</a>. For official lists of non–departmental public bodies <a class="govuk-link" href="/government/collections/public-bodies">se offentlige organer</a>.</p>
-    featured: Utvalgt
     foi:
       contact_form: Kontaktskjema for åpenhet og informasjonsfrihet (FOI)
       foi_exemption_html: |

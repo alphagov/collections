@@ -46,7 +46,6 @@ sq:
           text: Shihni të gjithë transparencën dhe lirinë e publikimit të informacionit
         title: Transparenca dhe liria e publikimit të informacionit
     errors_or_omissions_html: <p class="govuk-body">Gabime apo heqje? <a class="govuk-link" href="/contact/govuk">Na tregoni këtu</a>. Për listat zyrtare të organeve publike jo departamentale <a class="govuk-link" href="/government/collections/public-bodies">shihni organet publike</a>.</p>
-    featured: Paraqitur
     foi:
       contact_form: Formulari i kontaktit për FOI
       foi_exemption_html: "Kjo organizatë nuk mbulohet nga Ligji për Lirinë e Informimit.\r\nPër të parë se cilat organizata janë të përfshira, shihni <a href=\"%{foi_url}\" class=\"govuk-link brand__color\">legjislacionin</a>.\r\n"

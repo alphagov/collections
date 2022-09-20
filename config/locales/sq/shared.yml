@@ -5,6 +5,7 @@ sq:
     browse:
       prefix: 'Shfleto:'
       title: Shfleto GOV.UK
+    featured: Paraqitur
     get_emails: Merrni email për këtë temë
     language_direction: ltr
     language_name: Shqip

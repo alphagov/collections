@@ -5,6 +5,7 @@ vi:
     browse:
       prefix: 'Duyệt tìm:'
       title: Duyệt qua GOV.UK
+    featured: Đặc biệt
     get_emails: Nhận email về chủ đề này
     language_direction: ltr
     language_name: Tiếng Việt

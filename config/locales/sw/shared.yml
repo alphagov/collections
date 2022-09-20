@@ -5,6 +5,7 @@ sw:
     browse:
       prefix: 'Vinjari:'
       title: Vinjari tovuti ya GOV.UK
+    featured: Yanayoangaziwa
     get_emails: Pata barua pepe za mada hii
     language_direction: ltr
     language_name: Kiswahili

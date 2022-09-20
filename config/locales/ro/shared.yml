@@ -5,6 +5,7 @@ ro:
     browse:
       prefix: 'Răsfoiți:'
       title: Răsfoiți GOV.UK
+    featured: Prezentat
     get_emails: Primiți e-mailuri pentru acest subiect
     language_direction: ltr
     language_name: Română

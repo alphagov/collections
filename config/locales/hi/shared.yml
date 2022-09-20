@@ -5,6 +5,7 @@ hi:
     browse:
       prefix: 'ब्राउज़ करें:'
       title: GOV.UK ब्राउज़ करें
+    featured: फीचर्ड
     get_emails: इस विषय के लिए ईमेल पाएं
     language_direction: ltr
     language_name: हिंदी

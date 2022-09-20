@@ -5,6 +5,7 @@ pt:
     browse:
       prefix: 'Pesquisar:'
       title: Pesquisar GOV.UK
+    featured: Destaque
     get_emails: Receba e-mails para este tópico
     language_direction: ltr
     language_name: Português

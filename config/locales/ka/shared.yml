@@ -5,6 +5,7 @@ ka:
     browse:
       prefix: 'ნახვა:'
       title: GOV.UK-ს ნახვა
+    featured: რჩეული
     get_emails: ამ თემის შესახებ ელ.წერილების მიღება
     language_direction: ltr
     language_name: ქართული

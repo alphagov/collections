@@ -5,6 +5,7 @@ kk:
     browse:
       prefix: 'Шолу:'
       title: GOV.UK шолу
+    featured: Таңдаулы
     get_emails: Осы тақырып бойынша электрондық хаттарды алу
     language_direction: ltr
     language_name: Қазақ

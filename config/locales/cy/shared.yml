@@ -5,6 +5,7 @@ cy:
     browse:
       prefix: 'Pori:'
       title: Pori GOV.UK
+    featured: Dangosir
     get_emails: I gael e-byst am y pwnc hwn
     language_direction: ltr
     language_name: Cymraeg

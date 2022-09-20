@@ -46,7 +46,6 @@ ur:
           text: معلومات کے اجراء کی تمام شفافیت اور آزادی دیکھیں
         title: معلومات کے اجراء کی شفافیت اور آزادی
     errors_or_omissions_html: <p class="govuk-body">نقائص یا چوک؟ <a class="govuk-link" href="/contact/govuk">ہمیں یہاں پر آگاہ کریں</a>۔ غیر محکماتی عوامی دھڑوں کے لیے <a class="govuk-link" href="/government/collections/public-bodies">عوامی دھڑے دیکھیں</a>۔</p>
-    featured: فیچرڈ
     foi:
       contact_form: FOI رابطے کا فارم
       foi_exemption_html: |

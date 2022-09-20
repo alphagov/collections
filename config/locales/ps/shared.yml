@@ -5,6 +5,7 @@ ps:
     browse:
       prefix: 'لټون:'
       title: GOV.UK ولولئ
+    featured: ځانګړی شوی
     get_emails: د دې موضوع لپاره بریښنالیکونه ترلاسه کړئ
     language_direction: rtl
     language_name: جرمني

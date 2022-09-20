@@ -5,6 +5,7 @@ gd:
     browse:
       prefix: 'Brabhsáil:'
       title: Brabhsáil GOV.UK
+    featured: Réadmhaoin
     get_emails: Faigh ríomhphoist don ábhar seo
     language_direction: ltr
     language_name: Gaeilge

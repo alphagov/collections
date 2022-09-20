@@ -5,6 +5,7 @@ zh-hk:
     browse:
       prefix: 瀏覽：
       title: 瀏覽 GOV.UK
+    featured: 特載內容
     get_emails: 獲取這一主題的電子郵件
     language_direction: ltr
     language_name: 中文

@@ -5,6 +5,7 @@ cs:
     browse:
       prefix: 'Procházet:'
       title: Procházet GOV.UK
+    featured: Doporučené stránky
     get_emails: Získávání e-mailů pro toto téma
     language_direction: ltr
     language_name: Čeština

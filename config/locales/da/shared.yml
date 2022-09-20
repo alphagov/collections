@@ -5,6 +5,7 @@ da:
     browse:
       prefix: 'Gennemse:'
       title: Gennemse GOV.UK
+    featured: Fremhævede
     get_emails: Få e-mails til dette emne
     language_direction: ltr
     language_name: Dansk

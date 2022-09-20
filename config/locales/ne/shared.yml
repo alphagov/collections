@@ -5,6 +5,7 @@ ne:
     browse:
       prefix:
       title:
+    featured:
     get_emails:
     language_direction: ltr
     language_name: नेपाली

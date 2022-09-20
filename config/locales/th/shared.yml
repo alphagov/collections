@@ -5,6 +5,7 @@ th:
     browse:
       prefix: 'เรียกดู:'
       title: เรียกดู GOV.UK
+    featured: รายการเด่น
     get_emails: รับอีเมลสำหรับหัวข้อนี้
     language_direction: ltr
     language_name: ไทย

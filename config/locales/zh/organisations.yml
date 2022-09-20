@@ -46,7 +46,6 @@ zh:
           text: 查看信息发布的全部透明度和自由
         title: 信息发布的透明度和自由
     errors_or_omissions_html: <p class="govuk-body">错误或遗漏？<a class="govuk-link" href="/contact/govuk">Tell us here</a>.如要查看非部门公共机构的正式名单 <a class="govuk-link" href="/government/collections/public-bodies">查看公共机构</a>。</p>
-    featured: 特征
     foi:
       contact_form: FOI联系表单
       foi_exemption_html: "本组织不受《信息自由法》的保护。  \n要查看哪些组织受到保护，请参见 <a href=\"%{foi_url}\" class=\"govuk-link brand__color\">法规</a>。\n"

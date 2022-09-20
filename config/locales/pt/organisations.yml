@@ -46,7 +46,6 @@ pt:
           text: Ver todos os comunicados de transparência e liberdade de informação
         title: Comunicados de transparência e liberdade de informação
     errors_or_omissions_html: <p class="govuk-body">Encontrou erros ou emissões? <a class="govuk-link" href="/contact/govuk">Diga-nos aqui</a>. Para listas oficiais de organismos públicos não departamentais,<a class="govuk-link" href="/government/collections/public-bodies">veja os organismos públicos</a>.</p>
-    featured: Destaque
     foi:
       contact_form: Formulário de contacto da Liberdade de Informação
       foi_exemption_html: |

@@ -5,6 +5,7 @@ ta:
     browse:
       prefix: 'உலவுக:'
       title: GOV.UK பக்கத்தில் உலவுக
+    featured: சிறப்புக் கூறுகளமைந்தது
     get_emails: இந்தத் தலைப்பில் மின்னஞ்சல்களைப் பெறுக
     language_direction: ltr
     language_name: தமிழ்

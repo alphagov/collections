@@ -5,6 +5,7 @@ bg:
     browse:
       prefix: 'Преглед:'
       title: Прегледайте GOV.UK
+    featured: Избрани
     get_emails: Получаване на имейли за тази тема
     language_direction: ltr
     language_name: Bulgarian

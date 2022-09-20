@@ -5,6 +5,7 @@ hr:
     browse:
       prefix: 'Pretraži:'
       title: Pregledajte GOV.UK
+    featured: Istaknuto
     get_emails: Primajte e -poruke o ovoj temi
     language_direction: ltr
     language_name: Hrvatski

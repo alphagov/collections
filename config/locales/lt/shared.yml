@@ -5,6 +5,7 @@ lt:
     browse:
       prefix: 'Naršyti:'
       title: Naršyti GOV.UK
+    featured: Rodomas
     get_emails: Gauti el. laiškus šia tema
     language_direction: ltr
     language_name: Lietuvių

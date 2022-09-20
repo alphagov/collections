@@ -5,6 +5,7 @@ sk:
     browse:
       prefix: 'Prehľadávať:'
       title: Prehľadávať GOV.UK
+    featured: Odporúčané
     get_emails: Získavanie e-mailov pre túto tému
     language_direction: ltr
     language_name: Slovensky

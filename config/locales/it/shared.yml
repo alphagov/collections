@@ -5,6 +5,7 @@ it:
     browse:
       prefix: 'Visita:'
       title: Visita GOV.UK
+    featured: In primo piano
     get_emails: Ricevi e-mail su questo argomento
     language_direction: ltr
     language_name: Italiano

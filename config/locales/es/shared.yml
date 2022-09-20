@@ -5,6 +5,7 @@ es:
     browse:
       prefix: 'Examinar:'
       title: Navegar por GOV.UK
+    featured: Destacados
     get_emails: Obtenga correos electrónicos para este tema
     language_direction: ltr
     language_name: Español

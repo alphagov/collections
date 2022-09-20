@@ -46,7 +46,6 @@ lv:
           text: Skatīt visas caurredzamības un informācijas atklātības publikācijas
         title: Caurredzamība un informācijas atklātības publikācijas
     errors_or_omissions_html: <p class="govuk-body">Kļūdas vai izlaista informācija? <a class="govuk-link" href="/contact/govuk">Pastāstiet mums šeit</a>. Oficiālos nevalstisko sabiedrisko organizāciju sarakstus <a class="govuk-link" href="/government/collections/public-bodies">skatiet sabiedrisko organizāciju sadaļā</a>.</p>
-    featured: Ieteikts
     foi:
       contact_form: Informācijas atklātības saziņas veidlapa
       foi_exemption_html: |
