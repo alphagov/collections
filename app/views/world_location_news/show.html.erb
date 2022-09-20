@@ -4,7 +4,7 @@
   <%= tag("meta", name: "description", content: @world_location_news.description) if @world_location_news.description %>
 <% end %>
 
-<div class="govuk-grid-row">
+<div class="govuk-grid-row" <%= dir_attribute %> <%= lang_attribute %>>
   <div class="govuk-grid-column-two-thirds">
     <%= render "govuk_publishing_components/components/title", {
       title: @world_location_news.title,
@@ -13,7 +13,7 @@
     } %>
   </div>
 
-  <div class="govuk-grid-column-one-third">
+  <div class="govuk-grid-column-one-third <%= direction_rtl_class %>">
     <% if @world_location_news.ordered_translations.count > 1 %>
       <%= render "govuk_publishing_components/components/translation_nav", {
         translations: @world_location_news.ordered_translations,
@@ -28,7 +28,7 @@
 </div>
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
+  <div class="govuk-grid-column-full"  <%= dir_attribute %> <%= lang_attribute %>>
     <% if @world_location_news.ordered_featured_documents&.any? %>
       <section id="featured">
         <%= render "govuk_publishing_components/components/heading", {
@@ -81,7 +81,7 @@
 <% end %>
 
 <% if @world_location_news.mission_statement.present? %>
-  <div class="govuk-grid-row">
+  <div class="govuk-grid-row"  <%= dir_attribute %> <%= lang_attribute %>>
     <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-6">
       <%= render "govuk_publishing_components/components/heading", {
         text: I18n.t("world_location_news.headings.mission"),
