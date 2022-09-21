@@ -10,7 +10,7 @@ header:
   heading: Cost of living support
   lede: This includes income and disability benefits, bills and allowances, childcare, housing and travel.
   link_text: Check what benefits and financial support you can get
-  href: https://www.gov.uk/check-benefits-financial-support
+  href: /check-benefits-financial-support
 body:
   heading:
   accordion_content:
@@ -19,37 +19,37 @@ body:
       - subheading:
         links:
         - link_text: Check what benefits and financial support you can get
-          href: https://www.gov.uk/check-benefits-financial-support
+          href: /check-benefits-financial-support
         - link_text: Check if you’re getting the minimum wage
-          href: https://www.gov.uk/am-i-getting-minimum-wage
+          href: /am-i-getting-minimum-wage
         - link_text: Apply for Marriage Allowance
-          href: https://www.gov.uk/marriage-allowance
+          href: /marriage-allowance
         - link_text: Apply for Carer’s Allowance
-          href: https://www.gov.uk/carers-allowance
+          href: /carers-allowance
         - link_text: Apply for support with savings if you’re on a low income (Help to Save)
-          href: https://www.gov.uk/get-help-savings-low-income
+          href: /get-help-savings-low-income
         - link_text: Claim tax relief on work-related expenses
-          href: https://www.gov.uk/tax-relief-for-employees
+          href: /tax-relief-for-employees
         - link_text: Check how you can deal with your debts
-          href: https://www.gov.uk/options-for-paying-off-your-debts
+          href: /options-for-paying-off-your-debts
         - link_text: Contact the MoneyHelper service for free, confidential and impartial advice
           href: https://www.moneyhelper.org.uk/
       - subheading: Apply for Universal Credit
         links:
         - link_text: Universal Credit in England, Scotland and Wales
-          href: https://www.gov.uk/universal-credit/
+          href: /universal-credit/
         - link_text: Universal Credit in Northern Ireland
           href: https://www.nidirect.gov.uk/campaigns/universal-credit
       - subheading: Apply for Pension Credit if you’re on a low income
         links:
           - link_text: Pension Credit in England, Scotland and Wales
-            href: https://www.gov.uk/pension-credit
+            href: /pension-credit
           - link_text: Pension Credit in Northern Ireland
             href: https://www.nidirect.gov.uk/articles/understanding-pension-credit
       - subheading: Apply for Jobseeker’s Allowance (JSA) if you’re unemployed
         links:
         - link_text: ‘New style’ JSA in England, Scotland and Wales
-          href: https://www.gov.uk/jobseekers-allowance
+          href: /jobseekers-allowance
         - link_text: ‘New style’ JSA in Northern Ireland
           href: https://www.nidirect.gov.uk/articles/jobseekers-allowance
   - heading: Support if you’re disabled
@@ -57,25 +57,25 @@ body:
       - subheading:
         links:
         - link_text: Find out about the Cost of Living Payment
-          href: https://www.gov.uk/guidance/cost-of-living-payment
+          href: /guidance/cost-of-living-payment
       - subheading: Apply for Universal Credit if you’re disabled
         links:
         - link_text: Universal Credit if you’re disabled in England, Scotland or Wales
-          href: https://www.gov.uk/health-conditions-disability-universal-credit
+          href: /health-conditions-disability-universal-credit
         - link_text: Universal Credit in Northern Ireland
           href: https://www.nidirect.gov.uk/campaigns/universal-credit
       - subheading: Apply for Employment and Support Allowance (ESA)
         links:
         - link_text: ‘New style’ ESA in England, Scotland and Wales
-          href: https://www.gov.uk/employment-support-allowance
+          href: /employment-support-allowance
         - link_text: ‘New style’ and ‘Contribution based’ ESA in Northern Ireland
           href: https://www.nidirect.gov.uk/articles/employment-and-support-allowance
       - subheading: Support with living costs if you’re disabled
         links:
         - link_text: Apply for Attendance Allowance if you’re state pension age
-          href: https://www.gov.uk/attendance-allowance
+          href: /attendance-allowance
         - link_text: Apply for Personal Independence Payment (PIP) in England and Wales
-          href: https://www.gov.uk/pip
+          href: /pip
         - link_text: Apply for Personal Independence Payment (PIP) in Northern Ireland
           href: https://www.nidirect.gov.uk/articles/personal-independence-payment-pip
         - link_text: Apply for Adult Disability Payment in Scotland
@@ -83,7 +83,7 @@ body:
       - subheading: Support to get or stay in work
         links:
         - link_text: Apply for Access to Work in England
-          href: https://www.gov.uk/access-to-work
+          href: /access-to-work
         - link_text: Apply for Access to Work in Northern Ireland
           href: https://www.nidirect.gov.uk/articles/employment-support-information
       - subheading: Support with travel costs if you’re disabled
@@ -95,7 +95,7 @@ body:
       - subheading: Support if your child is disabled
         links:
         - link_text: Apply for Disability Living Allowance (DLA) for children in England, Wales and Northern Ireland
-          href: https://www.gov.uk/disability-living-allowance-children
+          href: /disability-living-allowance-children
         - link_text: Apply for Child Disability Payment in Scotland
           href: https://www.mygov.scot/child-disability-payment
   - heading: Support with your bills
@@ -103,17 +103,17 @@ body:
     - subheading:
       links:
       - link_text: "Limits on energy prices: Energy Price Guarantee"
-        href: https://www.gov.uk/government/publications/energy-bills-support/energy-bills-support-factsheet-8-september-2022
+        href: /government/publications/energy-bills-support/energy-bills-support-factsheet-8-september-2022
       - link_text: Find out about the Cost of Living Payment
-        href: https://www.gov.uk/guidance/cost-of-living-payment
+        href: /guidance/cost-of-living-payment
       - link_text: Find out about the Energy Bills Support Scheme
-        href: https://www.gov.uk/government/news/energy-bills-support-scheme-explainer
+        href: /government/news/energy-bills-support-scheme-explainer
       - link_text: Find out about the Winter Fuel Payment and Pensioner Cost of Living Payment
-        href: https://www.gov.uk/winter-fuel-payment
+        href: /winter-fuel-payment
       - link_text: Find out about the Warm Home Discount Scheme
-        href: https://www.gov.uk/the-warm-home-discount-scheme
+        href: /the-warm-home-discount-scheme
       - link_text: Apply for the Cold Weather Payment
-        href: https://www.gov.uk/cold-weather-payment
+        href: /cold-weather-payment
       - link_text: Find out if you can get cheaper phone and broadband
         href: https://www.ofcom.org.uk/phones-telecoms-and-internet/advice-for-consumers/costs-and-billing/social-tariffs
       - link_text: Find out how to reduce your water bill and financial support you may be able to get
@@ -121,7 +121,7 @@ body:
     - subheading: Support with Council Tax
       links:
       - link_text: Apply for a Council Tax rebate in England, Scotland and Wales
-        href: https://www.gov.uk/guidance/council-tax-rebate-factsheet
+        href: /guidance/council-tax-rebate-factsheet
       - link_text: Apply for Rate Relief in Northern Ireland
         href: https://www.nidirect.gov.uk/rates-help
     - subheading: Support with health costs
@@ -133,7 +133,7 @@ body:
     - subheading: Apply for a Budgeting Loan if you’re claiming benefits
       links:
       - link_text: Budgeting Loans in England, Scotland and Wales
-        href: https://www.gov.uk/budgeting-help-benefits
+        href: /budgeting-help-benefits
       - link_text: Social Fund Budgeting Loan in Northern Ireland
         href: https://www.nidirect.gov.uk/articles/social-fund-budgeting-loan
   - heading: Support with childcare costs
@@ -141,21 +141,21 @@ body:
     - subheading:
       links:
       - link_text: Check what help you could get with childcare costs
-        href: https://www.gov.uk/childcare-calculator
+        href: /childcare-calculator
       - link_text: Apply for Child Benefit
-        href: https://www.gov.uk/child-benefit
+        href: /child-benefit
       - link_text: Apply for support with childcare costs for children 11 or under (Tax-Free Childcare)
-        href: https://www.gov.uk/tax-free-childcare
+        href: /tax-free-childcare
       - link_text: Claim back childcare costs if you get Universal Credit
-        href: https://www.gov.uk/guidance/universal-credit-childcare-costs
+        href: /guidance/universal-credit-childcare-costs
     - subheading: Support with childcare for children aged 2 to 4
       links:
         - link_text: Apply for free childcare for children aged 2 in England
-          href: https://www.gov.uk/help-with-childcare-costs/free-childcare-2-year-olds
+          href: /help-with-childcare-costs/free-childcare-2-year-olds
         - link_text: Apply for 15 hours free childcare for children aged 3 to 4 in England
-          href: https://www.gov.uk/help-with-childcare-costs/free-childcare-and-education-for-2-to-4-year-olds
+          href: /help-with-childcare-costs/free-childcare-and-education-for-2-to-4-year-olds
         - link_text: Apply for 30 hours free childcare for children aged 3 to 4 in England
-          href: https://www.gov.uk/30-hours-free-childcare
+          href: /30-hours-free-childcare
         - link_text: Apply for free childcare for children aged 3 to 4 in Scotland
           href: https://www.mygov.scot/childcare-costs-help/funded-early-learning-and-childcare
         - link_text: Apply for free childcare for children aged 3 to 4 in Wales
@@ -171,7 +171,7 @@ body:
     - subheading: Support with school meal costs
       links:
         - link_text: Apply for free school meals in England
-          href: https://www.gov.uk/apply-free-school-meals
+          href: /apply-free-school-meals
         - link_text: Apply for free school meals in Scotland
           href: https://www.mygov.scot/school-meals
         - link_text: Apply for free school meals in Wales
@@ -181,7 +181,7 @@ body:
     - subheading: Support with school transport costs
       links:
       - link_text: Apply for support with school transport costs in England
-        href: https://www.gov.uk/help-home-school-transport
+        href: /help-home-school-transport
       - link_text: Apply for support with school transport costs in Scotland
         href: https://www.mygov.scot/free-school-transport
       - link_text: Apply for support with school transport costs in Northern Ireland
@@ -189,7 +189,7 @@ body:
     - subheading: Support with childcare costs if your child is disabled
       links:
       - link_text: Apply for Disability Living Allowance (DLA) for children in England, Wales and Northern Ireland
-        href: https://www.gov.uk/disability-living-allowance-children
+        href: /disability-living-allowance-children
       - link_text: Apply for Child Disability Payment in Scotland
         href: https://www.mygov.scot/child-disability-payment
     - subheading: Support with food and milk for your child
@@ -201,7 +201,7 @@ body:
     - subheading: Support with maternity costs
       links:
       - link_text: Apply for the Maternity Grant (Sure Start) in England, Wales and Northern Ireland
-        href: https://www.gov.uk/sure-start-maternity-grant
+        href: /sure-start-maternity-grant
       - link_text: Apply for Best Start Grant and Best Start Foods in Scotland
         href: https://www.mygov.scot/best-start-grant-best-start-foods
   - heading: Support with housing costs
@@ -209,17 +209,17 @@ body:
     - subheading:
       links:
       - link_text: Find out about support with housing costs if you get Universal Credit
-        href: https://www.gov.uk/housing-and-universal-credit
+        href: /housing-and-universal-credit
       - link_text: Apply for a Discretionary Housing Payment
-        href: https://www.gov.uk/government/publications/claiming-discretionary-housing-payments/claiming-discretionary-housing-payments
+        href: /government/publications/claiming-discretionary-housing-payments/claiming-discretionary-housing-payments
       - link_text: Apply for support with interest payments on a mortgage or home improvement loan
-        href: https://www.gov.uk/support-for-mortgage-interest
+        href: /support-for-mortgage-interest
       - link_text: Contact your council for help with housing costs and Council Tax
-        href: https://www.gov.uk/find-local-council
+        href: /find-local-council
     - subheading: Check if you’re eligible for Housing Benefit
       links:
       - link_text: Apply for Housing Benefit in England and Wales
-        href: https://www.gov.uk/housing-benefit
+        href: /housing-benefit
       - link_text: Apply for Housing Benefit in Scotland
         href: https://www.mygov.scot/claim-housing-benefit
       - link_text: Apply for Housing Benefit in Northern Ireland
@@ -235,10 +235,10 @@ body:
     - subheading: Help with bus costs
       links:
       - link_text: Apply for an older person’s bus pass in England and Wales
-        href: https://www.gov.uk/apply-for-elderly-person-bus-pass
+        href: /apply-for-elderly-person-bus-pass
       - link_text: Apply for an older or disabled person’s bus pass in Scotland
         href: https://www.transport.gov.scot/concessionary-travel/60plus-or-disabled/
       - link_text: Apply for an older person’s bus pass in Northern Ireland
         href: https://www.nidirect.gov.uk/articles/60-smartpass-and-senior-65-smartpass
       - link_text: Apply for a disabled person’s bus pass in England
-        href: https://www.gov.uk/apply-for-disabled-bus-pass
+        href: /apply-for-disabled-bus-pass
