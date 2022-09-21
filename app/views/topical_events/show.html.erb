@@ -74,7 +74,7 @@
     <% if @topical_event.ordered_featured_documents&.any? %>
       <section id="featured">
         <%= render "govuk_publishing_components/components/heading", {
-          text: I18n.t("topical_events.headings.featured"),
+          text: I18n.t("shared.featured"),
           padding: true,
           font_size: "l",
           border_top: 2,
@@ -127,7 +127,7 @@
         margin_bottom: 3,
       } %>
     <% end %>
-    
+
     <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @topical_event.consultations, heading: I18n.t("topical_events.headings.consultations"), link_to: search_url(:topical_event, :consultation, @topical_event.slug) }) if @topical_event.consultations.any? %>
     <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @topical_event.announcements, heading: I18n.t("topical_events.headings.announcements"), link_to: search_url(:topical_event, :announcement, @topical_event.slug) }) if @topical_event.announcements.any? %>
     <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @topical_event.guidance_and_regulation, heading: I18n.t("topical_events.headings.guidance_and_regulation"), link_to: search_url(:topical_event, :guidance_and_regulation, @topical_event.slug) }) if @topical_event.guidance_and_regulation.any? %>

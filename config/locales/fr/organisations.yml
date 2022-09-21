@@ -46,7 +46,6 @@ fr:
           text: Afficher tous les communiqués sur la transparence et l'accès à l'information
         title: Transparence et accès à l'information
     errors_or_omissions_html: <p class="govuk-body">Erreurs ou omissions ? <a class="govuk-link" href="/contact/govuk">Dites-nous ici</a>. Pour les listes officielles des organismes publics non ministériels <a class="govuk-link" href="/government/collections/public-bodies">voir les organismes publics</a>.</p>
-    featured: Mis en exergue
     foi:
       contact_form: Formulaire de contact sur l'accès à l'information
       foi_exemption_html: " Cette organisation n'est pas soumise à la loi sur l'accès à l'information. \nPour déterminer les organisations concernées, voir <a href=\"%{foi_url}\" class=\"govuk-link brand__color\">la législation</a>.\r\n"

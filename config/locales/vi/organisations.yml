@@ -46,7 +46,6 @@ vi:
           text: Xem tất cả các công bố theo luật về tính minh bạch và tự do thông tin
         title: Công bố theo luật về tính minh bạch và tự do thông tin
     errors_or_omissions_html: <p class="govuk-body">Có lỗi hoặc thiếu sót? <a class="govuk-link" href="/contact/govuk">Hãy cho chúng tôi biết tại đây</a>. Để biết danh sách chính thức của các cơ quan công quyền không thuộc ban/bộ, <a class="govuk-link" href="/government/collections/public-bodies">xem các cơ quan công quyền</a>.</p>
-    featured: Đặc biệt
     foi:
       contact_form: Biểu mẫu liên hệ FOI
       foi_exemption_html: |

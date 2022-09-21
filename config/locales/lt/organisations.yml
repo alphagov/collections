@@ -46,7 +46,6 @@ lt:
           text: Peržiūrėti visus pranešimus apie skaidrumą ir informacijos laisvę
         title: Pranešimai apie skaidrumą ir informacijos laisvę
     errors_or_omissions_html: <p class="govuk-body">Radote klaidų ar pastebėjote, kad pateikta ne visa informacija? <a class="govuk-link" href="/contact/govuk">Nurodykite mums čia</a>. Oficialus ne departamentinių viešųjų įstaigų sąrašas <a class="govuk-link" href="/government/collections/public-bodies">see public bodies</a>.</p>
-    featured: Rodomas
     foi:
       contact_form: Kontaktinės forma dėl informacijos laisvės
       foi_exemption_html: |

@@ -46,7 +46,6 @@ bg:
           text: Вижте всички издания за прозрачността и свободата на информация
         title: Издания за прозрачността и свободата на информация
     errors_or_omissions_html: <p class="govuk-body">Грешки или пропуски? <a class="govuk-link" href="/contact/govuk">Разкажете ни тук</a>. За официални списъци на публични органи, които не са министерства, <a class="govuk-link" href="/government/collections/public-bodies">вижте публични органи</a>.</p>
-    featured: Избрани
     foi:
       contact_form: Формуляр за контакт за свобода на информацията
       foi_exemption_html: |

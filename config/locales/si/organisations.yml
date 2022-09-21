@@ -46,7 +46,6 @@ si:
           text: විනිවිදභාවය සහ තොරතුරු නිදහස පිළිබඳ සියලු නිකුත් කිරීම් බලන්න
         title: විනිවිදභාවය සහ තොරතුරු නිදහස පිළිබඳ නිකුත් කිරීම්
     errors_or_omissions_html: <p>වැරදි හෝ අතපසු වීම්? <a class="govuk-link" href="/contact/govuk">Tell us here</a>. දෙපාර්තුමේන්තු නොවන රාජ්‍ය ආයතනවල නිල ලැයිස්තු සඳහා <a class="govuk-link" href="/government/collections/public-bodies">පොදු ආයතන බලන්න</a>.</p>
-    featured: විශේෂාංග සහිත
     foi:
       contact_form: FOI සම්බන්ධතා ආකෘතිය
       foi_exemption_html: |

@@ -5,6 +5,7 @@ fi:
     browse:
       prefix: 'Selaa:'
       title: Selaa GOV.UK
+    featured: Suositeltava
     get_emails: Hanki sähköpostit tähän aiheeseen
     language_direction: ltr
     language_name: suomi
@@ -100,8 +101,8 @@ fi:
         one: Luonnos
         other: Luonnos tekstejä
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         one: Lääketurvallisuuden päivitys
         other: Lääketurvallisuuden päivitykset
@@ -175,8 +176,8 @@ fi:
         one: Jäsenyys
         other: Jäsenyys
       modern_slavery_statement:
-        one: 
-        other: 
+        one:
+        other:
       national:
         one: Kansallinen tilastoilmoitus
         other: Kansalliset tilastoilmoitukset

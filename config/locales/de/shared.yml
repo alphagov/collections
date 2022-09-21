@@ -5,6 +5,7 @@ de:
     browse:
       prefix: 'Aufrufen:'
       title: GOV.UK aufrufen
+    featured: Vorgestellt
     get_emails: Emails zu diesem Thema erhalten
     language_direction: ltr
     language_name: Deutsch
@@ -100,8 +101,8 @@ de:
         one: Entwurf
         other: Entwürfe
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         one: Aktualisierung zur Arzneimittelsicherheit
         other: Aktualisierungen zur Arzneimittelsicherheit
@@ -170,14 +171,13 @@ de:
         other: Medienanfragen
       medical_safety_alert:
         one: Warnmeldungen und Rückrufaktionen für Arzneimittel und medizinische Geräte
-        other: Warnmeldungen und Rückrufaktionen für Arzneimittel und medizinische
-          Geräte
+        other: Warnmeldungen und Rückrufaktionen für Arzneimittel und medizinische Geräte
       membership:
         one: Mitgliedschaft
         other: Mitgliedschaft
       modern_slavery_statement:
-        one: 
-        other: 
+        one:
+        other:
       national:
         one: Veröffentlichung der Nationalen Statistik
         other: Veröffentlichungen der Nationalen Statistik

@@ -5,6 +5,7 @@ sq:
     browse:
       prefix: 'Shfleto:'
       title: Shfleto GOV.UK
+    featured: Paraqitur
     get_emails: Merrni email për këtë temë
     language_direction: ltr
     language_name: Shqip
@@ -100,8 +101,8 @@ sq:
         one: Draft tekst
         other: Draft tekste
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         one: Përditësimi i Sigurisë së Barnave
         other: Përditësime të Sigurisë së Barnave
@@ -175,8 +176,8 @@ sq:
         one: Anëtarësi
         other: Anëtarësi
       modern_slavery_statement:
-        one: 
-        other: 
+        one:
+        other:
       national:
         one: Njoftimi i statistikave kombëtare
         other: Njoftimet e statistikave kombëtare

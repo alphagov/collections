@@ -5,6 +5,7 @@ zh-hk:
     browse:
       prefix: 瀏覽：
       title: 瀏覽 GOV.UK
+    featured: 特載內容
     get_emails: 獲取這一主題的電子郵件
     language_direction: ltr
     language_name: 中文
@@ -100,8 +101,8 @@ zh-hk:
         one: 內容
         other: 其他內容
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         one: 藥物安全更新
         other: 其他藥物安全更新
@@ -175,8 +176,8 @@ zh-hk:
         one: 會員資格
         other: 會員資格
       modern_slavery_statement:
-        one: 
-        other: 
+        one:
+        other:
       national:
         one: 國家統計數據公告
         other: 其他國家統計數據公告

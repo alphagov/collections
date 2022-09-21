@@ -46,7 +46,6 @@ kk:
           text: Барлық ақпарат шығарылымдарының ашықтығы мен еркіндігін қараңыз
         title: Ақпарат шығарылымының ашықтығы мен еркіндігі
     errors_or_omissions_html: <p class="govuk-body">Қателер немесе қалып кеткендер бар ма? <a class="govuk-link" href="/contact/govuk">Осы жерде айтыңыз</a>. Ведомстволық емес мемлекеттік органдардың ресми тізімдерін алу үшін<a class="govuk-link" href="/government/collections/public-bodies">мемлекеттік органдарды қараңыз</a>.</p>
-    featured: Таңдаулы
     foi:
       contact_form: FOI байланысу формасы
       foi_exemption_html: |

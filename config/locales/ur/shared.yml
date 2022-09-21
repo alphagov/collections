@@ -5,6 +5,7 @@ ur:
     browse:
       prefix: 'براؤز کریں:'
       title: GOV.UK کو براؤز کریں
+    featured: فیچرڈ
     get_emails: اس موضوع کے لیے ای میلز حاصل کریں
     language_direction: rtl
     language_name: اردو
@@ -100,8 +101,8 @@ ur:
         one: ڈرافٹ کا متن
         other: ڈرافٹ کے متن
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         one: دوا کی حفاظتی اپ ڈیٹ
         other: دوا کی حفاظتی اپ ڈیٹس
@@ -175,8 +176,8 @@ ur:
         one: ممبرشپ
         other: ممبرشپ
       modern_slavery_statement:
-        one: 
-        other: 
+        one:
+        other:
       national:
         one: قومی شماریاتی اعلان
         other: قومی شماریاتی اعلانات

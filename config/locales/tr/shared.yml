@@ -5,6 +5,7 @@ tr:
     browse:
       prefix: 'Araştır:'
       title: GOV.UK sitesini araştır
+    featured: Öne çıkan
     get_emails: Bu konuda e-posta al
     language_direction: ltr
     language_name: Türkçe
@@ -100,8 +101,8 @@ tr:
         one: Taslak metin
         other: Taslak metinler
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         one: Uyuşturucu Güvenliği Bilgilendirmesi
         other: Uyuşturucu Güvenliği Bilgilendirmeleri
@@ -175,8 +176,8 @@ tr:
         one: Üyelik
         other: Üyelik
       modern_slavery_statement:
-        one: 
-        other: 
+        one:
+        other:
       national:
         one: Ulusal İstatistik duyurusu
         other: Ulusal İstatistik duyuruları

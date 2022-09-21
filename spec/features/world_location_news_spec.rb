@@ -38,7 +38,7 @@ RSpec.feature "World Location News pages" do
   context "when there are featured documents" do
     it "includes the featured documents header" do
       visit base_path
-      expect(page).to have_text(I18n.t("world_location_news.headings.featured"))
+      expect(page).to have_text(I18n.t("shared.featured"))
     end
 
     it "includes links to the featured documents" do
@@ -54,7 +54,7 @@ RSpec.feature "World Location News pages" do
 
     it "does not include the featured documents header" do
       visit base_path
-      expect(page).to_not have_text(I18n.t("world_location_news.headings.featured"))
+      expect(page).to_not have_text(I18n.t("shared.featured"))
     end
   end
 

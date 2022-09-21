@@ -46,7 +46,6 @@ ko:
           text: 모든 정보 공개의 투명성 및 자유 보기
         title: 정보 공개의 투명성 및 자유
     errors_or_omissions_html: <p class="govuk-body">오류 또는 생략된 내용이 있습니까? <a class="govuk-link" href="/contact/govuk">여기에 말씀해 주십시오</a>. 비부처 공공기관의 공식 목록은 <a class="govuk-link" href="/government/collections/public-bodies">공공기관을 참조하십시오</a>.</p>
-    featured: 특집
     foi:
       contact_form: FOI 콘택트 폼
       foi_exemption_html: |

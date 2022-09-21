@@ -5,435 +5,436 @@ sr:
     browse:
       prefix: 'Potražite:'
       title: Potražite na GOV.UK
+    featured: Istaknuto
     get_emails: Želim da dobijam e-poruke o ovim temama
     language_direction: ltr
     language_name: srpski
     schema_name:
       aaib_report:
-        few: 
+        few:
         one: Izveštaj Agencije istragu vazduhoplovnih nesreća
         other: Izveštaji Agencije istragu vazduhoplovnih nesreća
       about:
-        few: 
+        few:
         one: Informacije
         other: Informacije
       about_our_services:
-        few: 
+        few:
         one: O našim uslugama
         other: O našim uslugama
       access_and_opening:
-        few: 
+        few:
         one: Pristup i radno vreme
         other: Pristup i radno vreme
       accessible_documents_policy:
-        few: 
+        few:
         one: Politika o pristupačnim dokumentima
         other: Politike o pristupačnim dokumentima
       alert:
-        few: 
+        few:
         one: Upozorenje
         other: Upozorenja
       announcement:
-        few: 
+        few:
         one: Najava
         other: Najave
       asylum_support_decision:
-        few: 
+        few:
         one: Odluka tribunala za podršku azilu
         other: Odluke tribunala za podršku azilu
       authored_article:
-        few: 
+        few:
         one: Autorski članak
         other: Autorski članci
       blog_post:
-        few: 
+        few:
         one: Objava na blogu
         other: Objave na blogu
       business_finance_support_scheme:
-        few: 
+        few:
         one: Šema podrške za poslovno finansiranje
         other: Šeme podrške za poslovno finansiranje
       campaign:
-        few: 
+        few:
         one: Kampanja
         other: Kampanje
       careers:
-        few: 
+        few:
         one: Zaposlenje
         other: zaposlenje
       case_study:
-        few: 
+        few:
         one: Studija slučaja
         other: Studije slučaja
       closed_consultation:
-        few: 
+        few:
         one: Zatvorena konsultacija
         other: Zatvorene konsultacije
       cma_case:
-        few: 
+        few:
         one: Predmet Nacionalnog tela za zaštitu konkurencije i tržišta
         other: Predmeti Nacionalnog tela za zaštitu konkurencije i tržišta
       coming_soon:
-        few: 
+        few:
         one: Uskoro
         other: Uskoro
       complaints_procedure:
-        few: 
+        few:
         one: Postupak žalbe
         other: Postupci žalbe
       consultation:
-        few: 
+        few:
         one: Konsultacija
         other: Konsultacije
       consultation_outcome:
-        few: 
+        few:
         one: Ishod konsultacija
         other: Ishodi konsultacija
       corporate_information_page:
-        few: 
+        few:
         one: Stranica sa informacijama
         other: Stranice sa informacijama
       corporate_report:
-        few: 
+        few:
         one: Organizacioni izveštaj
         other: Organizacioni izveštaji
       correspondence:
-        few: 
+        few:
         one: Prepiska
         other: Prepiske
       countryside_stewardship_grant:
-        few: 
+        few:
         one: Grant za upravljanje poljoprivrednim gazdinstvom
         other: Grantovi za upravljanje poljoprivrednim gazdinstvom
       decision:
-        few: 
+        few:
         one: Odluka
         other: Odluke
       detailed_guidance:
-        few: 
+        few:
         one: Detaljno uputstvo
         other: Detaljno uputstvo
       detailed_guide:
-        few: 
+        few:
         one: Detaljno uputstvo
         other: Detaljno uputstvo
       dfid_research_output:
-        few: 
+        few:
         one: Istraživanje za krajnji cilj razvoja
         other: Istraživanje za krajnji ciljeve razvoja
       document_collection:
-        few: 
+        few:
         one: Kolekcija
         other: Kolekcije
       draft_text:
-        few: 
+        few:
         one: Radna verzija teksta
         other: Radne verzije teksta
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
-        few: 
+        few:
         one: Obaveštenje o bezbednosti lekova
         other: Obaveštenja o bezbednosti lekova
       edition:
-        few: 
+        few:
         one: Izdanje
         other: Izdanja
       edition_with_appointment:
-        few: 
+        few:
         one: Izdanje sa terminom
         other: Izdanje sa terminima
       employment_appeal_tribunal_decision:
-        few: 
+        few:
         one: Odluka tribunala za žalbe u vezi sa zaposlenjem
         other: Odluke tribunala za žalbe u vezi sa zaposlenjem
       employment_tribunal_decision:
-        few: 
+        few:
         one: Odluka tribunala za zaposlenje
         other: Odluke tribunala za zaposlenje
       equality_and_diversity:
-        few: 
+        few:
         one: Jednakost i raznolikost
         other: Jednakost i raznolikost
       esi_fund:
-        few: 
+        few:
         one: Evropski strukturni i investicioni fond (ESIF)
         other: Evropski strukturni i investicioni fondovi (ESIF)
       fatality_notice:
-        few: 
+        few:
         one: Obaveštenje o smrtnim slučajevima
         other: Obaveštenja o smrtnim slučajevima
       foi_release:
-        few: 
+        few:
         one: Odgovor na zahtev za pristup informacijama od javnog značaja
         other: Odgovori na zahteve za pristup informacijama od javnog značaja
       form:
-        few: 
+        few:
         one: Formular
         other: Obrasci
       generic_edition:
-        few: 
+        few:
         one: Generičko izdanje
         other: Generička izdanja
       government_response:
-        few: 
+        few:
         one: Odgovor vlade
         other: Odgovori vlade
       guidance:
-        few: 
+        few:
         one: Detaljno uputstvo
         other: Detaljno uputstvo
       impact_assessment:
-        few: 
+        few:
         one: Procena efekta
         other: Procene efekata
       imported:
-        few: 
+        few:
         one: uvezeno – utvrđivanje tipa
         other: uvezeno – utvrđivanje tipa
       independent_report:
-        few: 
+        few:
         one: Nezavisni izveštaj
         other: Nezavisni izveštaji
       international_development_fund:
-        few: 
+        few:
         one: Međunarodni fond za razvoj
         other: Međunarodni fond za razvoj
       international_treaty:
-        few: 
+        few:
         one: Međunarodni sporazum
         other: Međunarodni sporazumi
       maib_report:
-        few: 
+        few:
         one: Izveštaj Agencije istragu pomorskih nesreća
         other: Izveštaji Agencije istragu pomorskih nesreća
       manual:
-        few: 
+        few:
         one: Priručnik
         other: Priručnici
       map:
-        few: 
+        few:
         one: Mapa
         other: Mape
       media_enquiries:
-        few: 
+        few:
         one: Upit za medije
         other: Upiti za medije
       medical_safety_alert:
-        few: 
+        few:
         one: Upozorenja i zahtevi za opoziv za lekove i medicinska sredstva
         other: Upozorenja i zahtevi za opoziv za lekove i medicinska sredstva
       membership:
-        few: 
+        few:
         one: Članstvo
         other: Članstvo
       modern_slavery_statement:
-        few: 
-        one: 
-        other: 
+        few:
+        one:
+        other:
       national:
-        few: 
+        few:
         one: Najava državne statistike
         other: Najave državne statistike
       national_statistics:
-        few: 
+        few:
         one: Državna statistika
         other: Državna statistika
       national_statistics_announcement:
-        few: 
+        few:
         one: Najava državne statistike
         other: Najave državne statistike
       news_article:
-        few: 
+        few:
         one: Članak vesti
         other: Članci vesti
       news_story:
-        few: 
+        few:
         one: Vest
         other: Vesti
       nhs_content:
-        few: 
+        few:
         one: Sadržaj Nacionalne zdravstvene službe
         other: Sadržaj Nacionalne zdravstvene službe
       notice:
-        few: 
+        few:
         one: Obaveštenje
         other: Obaveštenja
       official:
-        few: 
+        few:
         one: Izjava zvanične statistike
         other: Izjave zvanične statistike
       official_statistics:
-        few: 
+        few:
         one: Zvanična statistika
         other: Zvanična statistika
       official_statistics_announcement:
-        few: 
+        few:
         one: Izjava zvanične statistike
         other: Izjave zvanične statistike
       open_consultation:
-        few: 
+        few:
         one: Otvorena konsultacija
         other: Otvorene konsultacije
       oral_statement:
-        few: 
+        few:
         one: Usmeno obraćanje Parlamentu
         other: Usmena obraćanja Parlamentu
       our_energy_use:
-        few: 
+        few:
         one: Potrošnja energije
         other: Potrošnja energije
       our_governance:
-        few: 
+        few:
         one: Upravljanje
         other: Upravljanje
       personal_information_charter:
-        few: 
+        few:
         one: Deklaracija o ličnim podacima
         other: Deklaracije o ličnim podacima
       petitions_and_campaigns:
-        few: 
+        few:
         one: Peticije i kampanje
         other: Peticije i kampanje
       policy:
-        few: 
+        few:
         one: Politika
         other: Politike
       policy_paper:
-        few: 
+        few:
         one: Predlog politike
         other: Predlozi politike
       press_release:
-        few: 
+        few:
         one: Saopštenje za medije
         other: Saopštenja za štampu
       procurement:
-        few: 
+        few:
         one: Nabavka
         other: Nabavka
       promotional:
-        few: 
+        few:
         one: Promotivni materijal
         other: Promotivni materijal
       publication:
-        few: 
+        few:
         one: Publikacija
         other: Publikacije
       publication_scheme:
-        few: 
+        few:
         one: Shema publikacije
         other: Sheme publikacije
       raib_report:
-        few: 
+        few:
         one: Izveštaj Agencije istragu železničkih nesreća
         other: Izveštaji Agencije istragu železničkih nesreća
       recruitment:
-        few: 
+        few:
         one: Angažovanje
         other: Angažovanje
       regulation:
-        few: 
+        few:
         one: Propis
         other: Propisi
       research:
-        few: 
+        few:
         one: Istraživanje i analiza
         other: Istraživanje i analiza
       residential_property_tribunal_decision:
-        few: 
+        few:
         one: Odluka tribunala o imovini rezidenta
         other: Odluke tribunala o imovini rezidenata
       service:
-        few: 
+        few:
         one: Usluga
         other: Usluge
       service_sign_in:
-        few: 
+        few:
         one: Prijava u uslugu
         other: Prijava u uslugu
       service_standard_report:
-        few: 
+        few:
         one: Izveštaj o standardu usluge
         other: Izveštaji o standardu usluge
       social_media_use:
-        few: 
+        few:
         one: Korišćenje društvenih medija
         other: Korišćenje društvenih medija
       speaking_notes:
-        few: 
+        few:
         one: Teze za govor
         other: Teze za govor
       speech:
-        few: 
+        few:
         one: Govor
         other: Govori
       staff_update:
-        few: 
+        few:
         one: Ažuriranje osoblja
         other: Ažuriranja osoblja
       standard:
-        few: 
+        few:
         one: Standard
         other: Standardi
       statement_to_parliament:
-        few: 
+        few:
         one: Obraćanje Parlamentu
         other: Obraćanja Parlamentu
       statistical_data_set:
-        few: 
+        few:
         one: Set statističkih podataka
         other: Setovi statističkih podataka
       statistics:
-        few: 
+        few:
         one: Statistika
         other: Statistika
       statistics_announcement:
-        few: 
+        few:
         one: Saopštenje o objavljenim statističkim podacima
         other: Saopštenja o objavljenim statističkim podacima
       statutory_guidance:
-        few: 
+        few:
         one: Zakonska uputstva
         other: Zakonska uputstva
       take_part:
-        few: 
+        few:
         one: Učešće
         other: Učešće
       tax_tribunal_decision:
-        few: 
+        few:
         one: Odluka tribunala o porezima i državnoj upravi
         other: Odluke tribunala o porezima i državnoj upravi
       terms_of_reference:
-        few: 
+        few:
         one: Projektni zadatak
         other: Projektni zadatak
       transcript:
-        few: 
+        few:
         one: Transkript
         other: Transkripti
       transparency:
-        few: 
+        few:
         one: Podaci o transparentnosti
         other: Podaci o transparentnosti
       utaac_decision:
-        few: 
+        few:
         one: Odluka tribunala za administrativne žalbe
         other: Odluke tribunala za administrativne žalbe
       welsh_language_scheme:
-        few: 
+        few:
         one: Shema na velškom jeziku
         other: Sheme na velškom jeziku
       world_location_news_article:
-        few: 
+        few:
         one: Članak vesti
         other: Članci vesti
       world_news_story:
-        few: 
+        few:
         one: Vest iz sveta
         other: Vesti iz sveta
       written_statement:
-        few: 
+        few:
         one: Pismena predstavka Parlamentu
         other: Pismene predstavke Parlamentu
     topics:

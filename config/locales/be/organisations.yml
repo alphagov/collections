@@ -46,7 +46,6 @@ be:
           text: Глядзець усё аб празрыстасцi і волi інфармацыі
         title: Празрыстасць і воля інфармацыі
     errors_or_omissions_html: <p class="govuk-body">Памылкі або недагляды? <a class="govuk-link" href="/contact/govuk">Раскажыце нам тут</a>. Для афіцыйных спісаў пазаведамасных дзяржаўных органаў <a class="govuk-link" href="/government/collections/public-bodies">глядзi дзяржаўныя органы</a>.</p>
-    featured: Падборка
     foi:
       contact_form: Кантактавая форма FOI
       foi_exemption_html: |

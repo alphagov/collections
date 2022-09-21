@@ -46,7 +46,6 @@ pa-pk:
           text: خبراں دی آزادی تے شفافیت بارے جاری کیتا گیا سب کُج ویکھو
         title: خبراں دی آزادی تے شفافیت بارے جاری کیتا گیا
     errors_or_omissions_html: <p class="govuk-body">غلطی یا کوتاہی <a class="govuk-link" href="/contact/govuk">سانوں ایتھے دسو</a>. غیر عوامی اداریاں دی سرکاری فہرست<a class="govuk-link" href="/government/collections/public-bodies">عوامی اداریاں بارے ویکھو</a>.</p>
-    featured: نُمایاں کیتا گیا
     foi:
       contact_form: 'رابطے دا FOI فارم '
       foi_exemption_html: 'ایہ ادارہ معلومات دی آزادی دے قانون دے تحت نہیں ہوندا۔ ایہ ویکھن لئی کہ کہیڑے ادارے ایندے وچ شامل نیں ایہ ویکھو <a href="%{foi_url}" class="govuk-link brand__color">قانونی سازی</a>.

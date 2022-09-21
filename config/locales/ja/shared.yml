@@ -5,6 +5,7 @@ ja:
     browse:
       prefix: 閲覧：
       title: GOV.UKを閲覧する
+    featured: 特徴
     get_emails: このトピックでメールを取得する
     language_direction: ltr
     language_name: 日本
@@ -70,8 +71,8 @@ ja:
       draft_text:
         other: 下書きテキスト
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         other: 医薬品の安全性に関する最新情報
       edition:
@@ -121,7 +122,7 @@ ja:
       membership:
         other: メンバーシップ
       modern_slavery_statement:
-        other: 
+        other:
       national:
         other: 全国統計発表
       national_statistics:

@@ -5,6 +5,7 @@ zh:
     browse:
       prefix: 浏览：
       title: 浏览GOV.UK
+    featured: 特征
     get_emails: 获取关于本主题的电子邮件
     language_direction: ltr
     language_name: 中文
@@ -70,8 +71,8 @@ zh:
       draft_text:
         other: 草拟文本
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         other: 药物安全更新
       edition:
@@ -121,7 +122,7 @@ zh:
       membership:
         other: 会员身份
       modern_slavery_statement:
-        other: 
+        other:
       national:
         other: 国家统计局公告
       national_statistics:

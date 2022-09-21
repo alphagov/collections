@@ -5,6 +5,7 @@ ko:
     browse:
       prefix: '탐색:'
       title: GOV.UK 탐색하기
+    featured: 특집
     get_emails: 이 주제에 대한 이메일 받기
     language_direction: ltr
     language_name: 한국어
@@ -70,8 +71,8 @@ ko:
       draft_text:
         other: 초안 텍스트
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         other: 의약품 안전 업데이트
       edition:
@@ -121,7 +122,7 @@ ko:
       membership:
         other: 멤버십
       modern_slavery_statement:
-        other: 
+        other:
       national:
         other: 국내 통계 발표
       national_statistics:

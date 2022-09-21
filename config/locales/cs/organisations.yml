@@ -46,7 +46,6 @@ cs:
           text: Podívejte se na všechny zprávy o transparentnosti a svobodě informací
         title: Transparentnost a svoboda informací
     errors_or_omissions_html: <p class="govuk-body">Chyby nebo opomenutí? <a class="govuk-link" href="/contact/govuk">Sdělte nám to zde</a>. Oficiální seznamy neveřejných subjektů <a class="govuk-link" href="/government/collections/public-bodies">viz veřejné subjekty</a>.</p>
-    featured: Doporučené stránky
     foi:
       contact_form: Kontaktní formulář FOI
       foi_exemption_html: |

@@ -46,7 +46,6 @@ is:
           text: Sjá alla útgáfu vegna gagnsæis og upplýsingafrelsi
         title: Útgáfa vegna gagnsæis og upplýsingafrelsi
     errors_or_omissions_html: <p class="govuk-body">Villur eða yfirsjónir? <a class="govuk-link" href="/contact/govuk">Segðu okkur hér</a>. Fyrir opinbera lista yfir opinberar stofnar sem tilheyra ekki ráðuneytum <a class="govuk-link" href="/government/collections/public-bodies">sjá opinberar stofnanir</a>.</p>
-    featured: Valið
     foi:
       contact_form: FOI eyðublað til að hafa samband
       foi_exemption_html: |

@@ -5,6 +5,7 @@ ms:
     browse:
       prefix: 'Semak seimbas:'
       title: Semak seimbas GOV.UK
+    featured: Paparan
     get_emails: Dapatkan e-mel tentang tajuk ini
     language_direction: ltr
     language_name: Bahasa Melayu
@@ -70,8 +71,8 @@ ms:
       draft_text:
         other: Teks draf
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         other: Kemas Kini Keselamatan Ubat-ubatan
       edition:
@@ -121,7 +122,7 @@ ms:
       membership:
         other: Keanggotaan
       modern_slavery_statement:
-        other: 
+        other:
       national:
         other: Pengumuman statistik nasional
       national_statistics:

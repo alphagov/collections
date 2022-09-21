@@ -5,6 +5,7 @@ sv:
     browse:
       prefix: 'Bläddra:'
       title: Bläddra på GOV.UK
+    featured: Utvalda
     get_emails: Få e-postmeddelanden om detta ämne
     language_direction: ltr
     language_name: Svensk
@@ -100,8 +101,8 @@ sv:
         one: Utkast till text
         other: Utkast till texter
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         one: Uppdatering om läkemedelssäkerhet
         other: Uppdateringar om läkemedelssäkerhet
@@ -175,8 +176,8 @@ sv:
         one: Medlemskap
         other: Medlemskap
       modern_slavery_statement:
-        one: 
-        other: 
+        one:
+        other:
       national:
         one: Meddelande om nationell statistik
         other: Meddelanden om nationell statistik

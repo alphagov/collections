@@ -5,6 +5,7 @@ pt:
     browse:
       prefix: 'Pesquisar:'
       title: Pesquisar GOV.UK
+    featured: Destaque
     get_emails: Receba e-mails para este tópico
     language_direction: ltr
     language_name: Português
@@ -100,8 +101,8 @@ pt:
         one: Texto provisório
         other: Textos provisórios
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         one: Atualização sobre Segurança dos Medicamentos
         other: Atualizações sobre Segurança dos Medicamentos
@@ -175,8 +176,8 @@ pt:
         one: Adesão
         other: Adesão
       modern_slavery_statement:
-        one: 
-        other: 
+        one:
+        other:
       national:
         one: Anúncio de estatísticas nacionais
         other: Anúncios de estatísticas nacionais

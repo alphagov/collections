@@ -5,6 +5,7 @@ lv:
     browse:
       prefix: 'Pārlūkot:'
       title: Pārlūkot GOV.UK
+    featured: Ieteikts
     get_emails: Saņemt e-pasta ziņojumus par šo tēmu
     language_direction: ltr
     language_name: Latviešu
@@ -100,8 +101,8 @@ lv:
         one: Teksta uzmetums
         other: Teksta uzmetumi
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         one: Zāļu drošības atjauninājums
         other: Zāļu drošības atjauninājumi
@@ -175,8 +176,8 @@ lv:
         one: Dalība
         other: Dalība
       modern_slavery_statement:
-        one: 
-        other: 
+        one:
+        other:
       national:
         one: Paziņojums par valsts statistiku
         other: Paziņojumi par valsts statistiku

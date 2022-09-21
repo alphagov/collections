@@ -46,7 +46,6 @@ cy:
           text: Gweld yr holl wybodaeth a ryddhawyd o dan FOI a thryloywder
         title: Gwybodaeth a ryddhawyd o dan FOI a thryloywder
     errors_or_omissions_html: <p class="govuk-body">Gwallau neu hepgoriadau? <a class="govuk-link" href="/contact/govuk">Rhowch wybod i ni yma</a>. I weld rhestrau swyddogol o gyrff cyhoeddus anadrannol <a class="govuk-link" href="/government/collections/public-bodies">gweler cyrff cyhoeddus</a>.</p>
-    featured: Dangosir
     foi:
       contact_form: Ffurflen gysylltu FOI
       foi_exemption_html: 'Nid yw''r sefydliad hwn yn dod o dan y Ddeddf Rhyddid Gwybodaeth. I weld pa sefydliadau sydd wedi''u cynnwys, gweler <a href="%{foi_url}" class="govuk-link brand__color">y ddeddfwriaeth</a>.

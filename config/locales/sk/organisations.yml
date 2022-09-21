@@ -46,7 +46,6 @@ sk:
           text: Pozrite si všetky informácie o transparentnosti a slobode informácií
         title: Transparentnosť a slobodné zverejňovanie informácií
     errors_or_omissions_html: <p class="govuk-body">Chyby alebo opomenutia? <a class="govuk-link" href="/contact/govuk">Oznámte nám ich tu</a>. Oficiálne zoznamy verejných orgánov, <a class="govuk-link" href="/government/collections/public-bodies">ktoré nie sú ministerstvami, nájdete na stránke verejných orgánov</a>.</p>
-    featured: Odporúčané
     foi:
       contact_form: Kontaktný formulár FOI
       foi_exemption_html: |

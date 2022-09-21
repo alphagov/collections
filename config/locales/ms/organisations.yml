@@ -46,7 +46,6 @@ ms:
           text: Lihat semua hebahan ketelusan dan kebebasan maklumat
         title: Hebahan ketelusan dan kebebasan maklumat
     errors_or_omissions_html: <p class="govuk-body">Kesilapan atau butiran tidak dimasukkan? <a class="govuk-link" href="/contact/govuk">Beritahu kami di sini</a>. Untuk senarai rasmi badan awam bukan jabatan <a class="govuk-link" href="/government/collections/public-bodies">lihat badan awam</a>.</p>
-    featured: Paparan
     foi:
       contact_form: Borang hubungan Kebebasan Maklumat (FOI)
       foi_exemption_html: |

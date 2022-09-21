@@ -46,7 +46,6 @@ de:
           text: Alle Veröffentlichungen zur Transparenz und Informationsfreiheit anzeigen
         title: Veröffentlichungen zu Transparenz und Informationsfreiheit
     errors_or_omissions_html: <p class="govuk-body">Fehler oder Auslassungen? <a class="govuk-link" href="/contact/govuk">Berichten Sie uns hier</a>. Offizielle Listen von nichtbehördlichen öffentlichen Einrichtungen finden Sie unter <a class="govuk-link" href="/government/collections/public-bodies">Öffentliche Einrichtungen</a>.</p>
-    featured: Vorgestellt
     foi:
       contact_form: Informationsfreiheit-Kontaktformular
       foi_exemption_html: |

@@ -5,6 +5,7 @@
     browse:
       prefix: 'Bla gjennom:'
       title: Bla gjennom GOV.UK
+    featured: Utvalgt
     get_emails: Få e-post for dette emnet
     language_direction: ltr
     language_name: norsk
@@ -100,8 +101,8 @@
         one: Utkast til tekst
         other: Utkast til tekster
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         one: Oppdatering av legemiddelsikkerhet
         other: Oppdatering av legemiddelsikkerhet
@@ -175,8 +176,8 @@
         one: Medlemskap
         other: Medlemskap
       modern_slavery_statement:
-        one: 
-        other: 
+        one:
+        other:
       national:
         one: Nasjonal statistikkmelding
         other: Nasjonale statistikkmeldinger

@@ -5,6 +5,7 @@ hu:
     browse:
       prefix: 'Böngészés:'
       title: GOV.UK böngészése
+    featured: Kiemelt
     get_emails: Fogadjon e-maileket ebben a témában
     language_direction: ltr
     language_name: Magyar
@@ -100,8 +101,8 @@ hu:
         one: Szövegtervezet
         other: Szövegtervezetek
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         one: Gyógyszerbiztonsági frissítés
         other: Gyógyszerbiztonsági frissítések
@@ -169,16 +170,14 @@ hu:
         one: Médiakérdés
         other: Médiakérdések
       medical_safety_alert:
-        one: Gyógyszerekre és orvostechnikai eszközökre vonatkozó figyelmeztetések
-          és visszahívások
-        other: Gyógyszerekre és orvostechnikai eszközökre vonatkozó figyelmeztetések
-          és visszahívások
+        one: Gyógyszerekre és orvostechnikai eszközökre vonatkozó figyelmeztetések és visszahívások
+        other: Gyógyszerekre és orvostechnikai eszközökre vonatkozó figyelmeztetések és visszahívások
       membership:
         one: Tagság
         other: Tagság
       modern_slavery_statement:
-        one: 
-        other: 
+        one:
+        other:
       national:
         one: Nemzeti statisztikai bejelentés
         other: Nemzeti statisztikai bejelentések

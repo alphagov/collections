@@ -5,6 +5,7 @@ id:
     browse:
       prefix: 'Jelajahi:'
       title: Jelajahi GOV.UK
+    featured: Unggulan
     get_emails: Dapatkan email untuk topik ini
     language_direction: ltr
     language_name: Bahasa Indonesia
@@ -70,8 +71,8 @@ id:
       draft_text:
         other: Teks rancangan
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         other: Pembaruan Keselamatan Obat
       edition:
@@ -121,7 +122,7 @@ id:
       membership:
         other: Keanggotaan
       modern_slavery_statement:
-        other: 
+        other:
       national:
         other: Pengumuman statistik nasional
       national_statistics:

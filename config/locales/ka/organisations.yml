@@ -46,7 +46,6 @@ ka:
           text: იხილეთ ინფორმაციის გამჭვირვალობა და თავისუფლება
         title: ინფორმაციის გამჭვირვალობა და თავისუფლება
     errors_or_omissions_html: <p class="govuk-body">შეცდომები და გამოტოვებული ადგილები? <a class="govuk-link" href="/contact/govuk">მოგვწერეთ აქ</a>. არასამთავრობო უწყებრივი ორგანოების ოფიციალური სიებისათვის <a class="govuk-link" href="/government/collections/public-bodies">საჯარო ორგანოების ნახვა</a>.</p>
-    featured: რჩეული
     foi:
       contact_form: ინფორმაციის თავისუფლების საკონტაქტო ფორმა
       foi_exemption_html: "ინფორმაციის თავისუფლების აქტი არ მოიცავს ამ ორგანიზაციას. \nიმის სანახავად, თუ რომელ ორგანიზაციებს მოიცავს ეს კანონი, იხილეთ,<a href=\"%{foi_url}\" class=\"govuk-link brand__color\">კანონმდებლობა</a>.\n"

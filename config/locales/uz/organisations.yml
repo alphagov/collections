@@ -46,7 +46,6 @@ uz:
           text: Шаффофлик ва маълумотларни ошкор қилиш эркинлиги ҳақидаги барча маълумотларни кўриш
         title: Шаффофлик ва маълумотларни ошкор қилиш эркинлиги
     errors_or_omissions_html: <p class="govuk-body">Хатоликлар ёки камчиликлар? <a class="govuk-link" href="/contact/govuk">Шу ерда сўзлаб беринг</a>. Ноидоравий давлат органларнинг расмий рўйхати <a class="govuk-link" href="/government/collections/public-bodies">давлат органлари рўйхатида тақдим этилган</a>.</p>
-    featured: Тавсия қилинган
     foi:
       contact_form: Маълумотларга эркин кириш ахборотлари бўйича қайта алоқа шакли
       foi_exemption_html: |

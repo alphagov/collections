@@ -46,7 +46,6 @@ mt:
           text: Ara r-rilaxxi kollha dwar trasparency u l-libertà tal-informazzjoni
         title: Rilaxxi dwar trasparenza u l-libertà tal-informazzjoni
     errors_or_omissions_html: <p class="govuk-body">Żbalji jew ommissjonijiet? <a class="govuk-link" href="/contact/govuk">Għidilna hawn</a>. Għal listi uffiċjali ta'  korpi pubbliċi mingħajr dipartiment <a class="govuk-link" href="/government/collections/public-bodies">pamatyti viešąsias įstaigas</a>.</p>
-    featured: Dehru
     foi:
       contact_form: Formola ta' Kuntatt għall-Libertà tal-Informazzjoni
       foi_exemption_html: "Din l-organizazzjoni mhijiex koperta mill-Att dwar il-Libertà tal-Informazzjoni. \nBiex tara liema organizazzjonijiet huma inklużi ara <a href=\"%{foi_url}\" class=\"govuk-link brand__color\">teisės aktų</a>.\n"

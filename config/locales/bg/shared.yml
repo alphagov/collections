@@ -5,6 +5,7 @@ bg:
     browse:
       prefix: 'Преглед:'
       title: Прегледайте GOV.UK
+    featured: Избрани
     get_emails: Получаване на имейли за тази тема
     language_direction: ltr
     language_name: Bulgarian
@@ -100,8 +101,8 @@ bg:
         one: Проектотекст
         other: Проектотекстове
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         one: Актуализация на безопасността на лекарствата
         other: Актуализации на безопасността на лекарствата
@@ -175,8 +176,8 @@ bg:
         one: Членство
         other: Членство
       modern_slavery_statement:
-        one: 
-        other: 
+        one:
+        other:
       national:
         one: Съобщение от националната статистика
         other: Съобщения от националните статистики

@@ -5,6 +5,7 @@ es:
     browse:
       prefix: 'Examinar:'
       title: Navegar por GOV.UK
+    featured: Destacados
     get_emails: Obtenga correos electrónicos para este tema
     language_direction: ltr
     language_name: Español
@@ -100,8 +101,8 @@ es:
         one: Borrador
         other: Borradores
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         one: Actualización sobre seguridad de los medicamentos
         other: Actualizaciones sobre seguridad de los medicamentos
@@ -175,8 +176,8 @@ es:
         one: Miembros
         other: Miembros
       modern_slavery_statement:
-        one: 
-        other: 
+        one:
+        other:
       national:
         one: Anuncio de estadísticas nacionales
         other: Anuncios de estadísticas nacionales

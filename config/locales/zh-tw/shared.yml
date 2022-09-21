@@ -5,6 +5,7 @@ zh-tw:
     browse:
       prefix: 瀏覽：
       title: 瀏覽英國政府網站
+    featured: 特色
     get_emails: 獲取此主題的電子郵件
     language_direction: ltr
     language_name: 繁體中文
@@ -100,8 +101,8 @@ zh-tw:
         one: 草稿文本
         other: 草稿文本
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         one: 藥物安全更新
         other: 藥物安全更新
@@ -175,8 +176,8 @@ zh-tw:
         one: 會員資格
         other: 會員資格
       modern_slavery_statement:
-        one: 
-        other: 
+        one:
+        other:
       national:
         one: 國家統計公告
         other: 國家統計公告

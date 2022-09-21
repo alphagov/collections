@@ -46,7 +46,6 @@ he:
           text: ראה את כל השקיפות וחופש המידע שפורסם
         title: שקיפות וחופש פרסומי מידע
     errors_or_omissions_html: <p class="govuk-body">Errors or omissions? <a class="govuk-link" href="/contact/govuk">Tell us here</a>. לרשימות רשמיות של גופים ציבוריים שאינם מחלקתיים <a class="govuk-link" href="/government/collections/public-bodies">ראו גופים ציבורייםs</a>.</p>
-    featured: מוצגים
     foi:
       contact_form: טופס יצירת קשר של חופש מידע
       foi_exemption_html: |-

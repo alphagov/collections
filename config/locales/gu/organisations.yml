@@ -46,7 +46,6 @@ gu:
           text: તમામ પારદર્શિતા-અને-માહિતી જારી કરવાની સ્વતંત્રતા જુઓ
         title: પારદર્શિતા-અને-માહિતી જારી કરવાની સ્વતંત્રતા
     errors_or_omissions_html: <p class="govuk-body">ભૂલો અથવા બાદબાકી?<a class="govuk-link" href="/contact/govuk">અમને અહીં જણાવો</a>.બિન-વિભાગીય જાહેર સંસ્થાઓની અધિકૃત યાદીઓ માટે<a class="govuk-link" href="/government/collections/public-bodies">જાહેર સંસ્થાઓ જુઓ</a>.</p>
-    featured: ફીચર્ડ
     foi:
       contact_form: માહિતીની સ્વતંત્રતા સંપર્ક પત્રક
       foi_exemption_html: "આ સંસ્થાને માહિતીની સ્વતંત્રતા અધિનિયમ દ્વારા આવરી લેવામાં આવેલ નથી. \nકઈ સંસ્થાઓને સામેલ કરવામાં આવેલ છે, તે જોવા માટે<a href=\"%{foi_url}\" class=\"govuk-link brand__color\">કાયદો</a>જુઓ.\n"

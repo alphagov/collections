@@ -5,6 +5,7 @@ nl:
     browse:
       prefix: 'Bladeren:'
       title: Bladeren op GOV.UK
+    featured: Aanbevolen
     get_emails: Ontvang e-mails over dit onderwerp
     language_direction: ltr
     language_name: Nederlands
@@ -100,8 +101,8 @@ nl:
         one: Ontwerpteksten
         other: Ontwerpteksten
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         one: Veiligheid van Geneesmiddelen
         other: Veiligheid van Geneesmiddelen
@@ -175,8 +176,8 @@ nl:
         one: Lidmaatschap
         other: Lidmaatschap
       modern_slavery_statement:
-        one: 
-        other: 
+        one:
+        other:
       national:
         one: Aankondiging nationale statistieken
         other: Aankondigingen nationale statistieken

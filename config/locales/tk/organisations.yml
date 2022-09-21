@@ -46,7 +46,6 @@ tk:
           text: Maglumatlaryň aç-açanlygy we erkinlige derediň
         title: Maglumatlaryň aç-açanlygy we erkinligi
     errors_or_omissions_html: <p class="govuk-body">Ýalňyşlyklar ýa-da galdyryp gitmeler? <a class="govuk-link" href="/contact/govuk">Bize şu ýerde aýdyň</a>. Bölüm däl jemgyýetçilik guramalarynyň resmi sanawlary üçin <a class="govuk-link" href="/government/collections/public-bodies">jemgyýetçilik guramalaryna serediň</a>.</p>
-    featured: Aýratynlyk
     foi:
       contact_form: FOI habarlaşmak üçin forma
       foi_exemption_html: |

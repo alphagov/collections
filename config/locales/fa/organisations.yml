@@ -46,7 +46,6 @@ fa:
           text: مشاهده تمام موارد منتشر شده مربوط به شفافیت و آزادی اطلاعات
         title: موارد منتشر شده مربوط به شفافیت و آزادی اطلاعات
     errors_or_omissions_html: <p class="govuk-body">موارد خطا یا حذف وجود دارد؟ <a class="govuk-link" href="/contact/govuk">از اینجا به ما بگویید</a>. برای اطلاع از لیست رسمی نهادهای عمومی غیر وزارتی <a class="govuk-link" href="/government/collections/public-bodies">نهادهای عمومی را مشاهده کنید</a>.</p>
-    featured: برجسته
     foi:
       contact_form: فرم تماس آزادی اطلاعات
       foi_exemption_html: |

@@ -5,6 +5,7 @@ ps:
     browse:
       prefix: 'لټون:'
       title: GOV.UK ولولئ
+    featured: ځانګړی شوی
     get_emails: د دې موضوع لپاره بریښنالیکونه ترلاسه کړئ
     language_direction: rtl
     language_name: جرمني
@@ -100,8 +101,8 @@ ps:
         one: مسوده متن
         other: د متن مسوده
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         one: د مخدره توکو خوندیتوب تازه کول
         other: د مخدره توکو خوندیتوب تازه معلومات
@@ -175,8 +176,8 @@ ps:
         one: غړیتوب
         other: غړیتوب
       modern_slavery_statement:
-        one: 
-        other: 
+        one:
+        other:
       national:
         one: د ملي احصایې اعلان
         other: د ملي احصایې اعلانونه

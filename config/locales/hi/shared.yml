@@ -5,6 +5,7 @@ hi:
     browse:
       prefix: 'ब्राउज़ करें:'
       title: GOV.UK ब्राउज़ करें
+    featured: फीचर्ड
     get_emails: इस विषय के लिए ईमेल पाएं
     language_direction: ltr
     language_name: हिंदी
@@ -100,8 +101,8 @@ hi:
         one: मसौदा पाठ
         other: मसौदे के पाठ
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         one: दवा सुरक्षा का अपडेट
         other: दवा सुरक्षा के अपडेट
@@ -121,10 +122,8 @@ hi:
         one: समानता और विविधता
         other: समानता और विविधता
       esi_fund:
-        one: यूरोपीय संरचनात्मक और निवेश कोष (European Structural and Investment Fund,
-          ESIF)
-        other: यूरोपीय संरचनात्मक और निवेश कोष (European Structural and Investment
-          Fund, ESIF)
+        one: यूरोपीय संरचनात्मक और निवेश कोष (European Structural and Investment Fund, ESIF)
+        other: यूरोपीय संरचनात्मक और निवेश कोष (European Structural and Investment Fund, ESIF)
       fatality_notice:
         one: विपत्ति की सूचना
         other: विपत्ति की सूचना
@@ -177,8 +176,8 @@ hi:
         one: सदस्यता
         other: सदस्यता
       modern_slavery_statement:
-        one: 
-        other: 
+        one:
+        other:
       national:
         one: राष्ट्रीय सांख्यिकी की घोषणा
         other: राष्ट्रीय सांख्यिकी की घोषणाएं

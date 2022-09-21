@@ -5,6 +5,7 @@ el:
     browse:
       prefix: 'Περιήγηση:'
       title: Περιήγηση στο GOV.UK
+    featured: Προτεινόμενα
     get_emails: Λάβετε email για αυτό το θέμα
     language_direction: ltr
     language_name: Ελληνικά
@@ -100,8 +101,8 @@ el:
         one: Σχέδιο κειμένου
         other: Σχέδια κειμένων
       drcf_digital_markets_research:
-        one: 
-        other: 
+        one:
+        other:
       drug_safety_update:
         one: Ενημέρωση για την ασφάλεια των φαρμάκων
         other: Ενημερώσεις για την ασφάλεια των φαρμάκων
@@ -175,8 +176,8 @@ el:
         one: Ιδιότητα μέλους
         other: Ιδιότητα μέλους
       modern_slavery_statement:
-        one: 
-        other: 
+        one:
+        other:
       national:
         one: Ανακοίνωση εθνικής στατιστικής υπηρεσίας
         other: Ανακοινώσεις εθνικής στατιστικής υπηρεσίας
