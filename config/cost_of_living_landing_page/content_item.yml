@@ -20,6 +20,8 @@ body:
         links:
         - link_text: Check what benefits and financial support you can get
           href: /check-benefits-financial-support
+        - link_text: Find out about the Cost of Living Payment
+          href: /guidance/cost-of-living-payment
         - link_text: Check if you’re getting the minimum wage
           href: /am-i-getting-minimum-wage
         - link_text: Apply for Marriage Allowance
@@ -31,7 +33,7 @@ body:
         - link_text: Claim tax relief on work-related expenses
           href: /tax-relief-for-employees
         - link_text: Check how you can deal with your debts
-          href: /options-for-paying-off-your-debts
+          href: /pay-off-debts
         - link_text: Contact the MoneyHelper service for free, confidential and impartial advice
           href: https://www.moneyhelper.org.uk/
       - subheading: Apply for Universal Credit
@@ -102,8 +104,8 @@ body:
     content:
     - subheading:
       links:
-      - link_text: "Limits on energy prices: Energy Price Guarantee"
-        href: /government/publications/energy-bills-support/energy-bills-support-factsheet-8-september-2022
+      - link_text: Find out how the Energy Price Guarantee limits your energy prices
+        href: /government/publications/energy-bills-support
       - link_text: Find out about the Cost of Living Payment
         href: /guidance/cost-of-living-payment
       - link_text: Find out about the Energy Bills Support Scheme
@@ -124,12 +126,18 @@ body:
         href: /guidance/council-tax-rebate-factsheet
       - link_text: Apply for Rate Relief in Northern Ireland
         href: https://www.nidirect.gov.uk/rates-help
-    - subheading: Support with health costs
+    - subheading: Support with prescriptions and health costs
       links:
       - link_text: Check if you’re eligible for support with prescriptions and health costs
         href: https://services.nhsbsa.nhs.uk/check-for-help-paying-nhs-costs/start
+    - subheading: Support with health costs
+      links:
+      - link_text: Find out about support with health costs in England and Wales
+        href: https://www.nhs.uk/nhs-services/help-with-health-costs
       - link_text: Find out about support with health costs in Scotland
         href: https://www.nhsinform.scot/care-support-and-rights/health-rights/access/help-with-health-costs
+      - link_text: Find out about support with health costs in Northern Ireland
+        href: https://www.nidirect.gov.uk/articles/help-health-costs
     - subheading: Apply for a Budgeting Loan if you’re claiming benefits
       links:
       - link_text: Budgeting Loans in England, Scotland and Wales
