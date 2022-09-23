@@ -28,10 +28,10 @@ class CostOfLivingLandingPagePresenter
 private
 
   def internal_link?(link)
-    link.starts_with?("https://www.gov.uk/")
+    link.starts_with?("/")
   end
 
   def slug_for_href(href)
-    href.gsub("https://www.gov.uk/", "")
+    href.gsub("/", "")
   end
 end

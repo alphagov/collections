@@ -37,7 +37,7 @@ RSpec.describe CostOfLivingLandingPagePresenter do
     it "returns correct tracking attributes for an internal link" do
       expect(presenter.link_clicked_track_data(
                track_action: track_action,
-               href: "https://www.gov.uk/check-benefits-financial-support",
+               href: "/check-benefits-financial-support",
              )).to eq({
                track_category: "contentsClicked",
                track_action: "Support with your income",
