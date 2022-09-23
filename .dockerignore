@@ -1,6 +1,10 @@
 .git
 .gitignore
 CONTRIBUTING.md
-docs
 Jenkinsfile
 README.md
+docs
+log
+spec
+test
+tmp
