@@ -3,12 +3,9 @@ ARG builder_image=ghcr.io/alphagov/govuk-ruby-builder:2.7.6
 
 FROM $builder_image AS builder
 
-RUN mkdir /app
-
 WORKDIR /app
 
 COPY Gemfile* .ruby-version /app/
-
 RUN bundle install
 
 COPY . /app
