@@ -1,0 +1,9 @@
+.colhub__announcement {
+  background-color: govuk-colour("light-grey");
+  padding: govuk-spacing(3) 0;
+  margin-bottom: govuk-spacing(4);
+  @include govuk-media-query($from: desktop) {
+    padding: govuk-spacing(6) 0;
+    margin-bottom: govuk-spacing(7);
+  }
+}
