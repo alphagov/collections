@@ -45,7 +45,7 @@ RSpec.feature "Cost of Living hub page" do
 
       expect(link["data-track-category"]).to eq("contentsClicked")
       expect(link["data-track-action"]).to eq("Support with your income")
-      expect(link["data-track-label"]).to eq("check-benefits-financial-support")
+      expect(link["data-track-label"]).to eq("/check-benefits-financial-support")
       expect(link["data-track-count"]).to eq("contentLink")
     end
 

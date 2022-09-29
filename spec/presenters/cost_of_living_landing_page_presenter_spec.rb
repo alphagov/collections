@@ -32,16 +32,16 @@ RSpec.describe CostOfLivingLandingPagePresenter do
   end
 
   describe "#link_clicked_track_data" do
-    let(:track_action) { "Support with your income" }
+    let(:track_action) { "Support with your bills" }
 
     it "returns correct tracking attributes for an internal link" do
       expect(presenter.link_clicked_track_data(
                track_action: track_action,
-               href: "/check-benefits-financial-support",
+               href: "/guidance/universal-credit-childcare-costs",
              )).to eq({
                track_category: "contentsClicked",
-               track_action: "Support with your income",
-               track_label: "check-benefits-financial-support",
+               track_action: "Support with your bills",
+               track_label: "/guidance/universal-credit-childcare-costs",
                track_count: "contentLink",
              })
     end

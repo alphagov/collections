@@ -20,7 +20,7 @@ class CostOfLivingLandingPagePresenter
     {
       track_category: "contentsClicked",
       track_action: track_action,
-      track_label: slug_for_href(href),
+      track_label: href,
       track_count: "contentLink",
     }
   end
@@ -29,9 +29,5 @@ private
 
   def internal_link?(link)
     link.starts_with?("/")
-  end
-
-  def slug_for_href(href)
-    href.gsub("/", "")
   end
 end
