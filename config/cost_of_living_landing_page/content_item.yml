@@ -8,7 +8,7 @@ metadata:
     housing and travel.
 header:
   heading: Cost of living support
-  lede: This includes income and disability benefits, bills and allowances, childcare, housing and travel.
+  lede: Find out what support is available to help with the cost of living. This includes income and disability benefits, bills and allowances, childcare, housing and travel.
   link_text: Check what benefits and financial support you can get
   href: /check-benefits-financial-support
 body:
@@ -90,7 +90,7 @@ body:
           href: https://www.nidirect.gov.uk/articles/employment-support-information
       - subheading: Support with travel costs if you’re disabled
         links:
-        - link_text: Apply for a disabled person’s railcard
+        - link_text: Apply for a disabled person’s railcard from National Rail
           href: https://www.disabledpersons-railcard.co.uk/?52390
         - link_text: Apply for an older or disabled person’s bus pass in Scotland
           href: https://www.transport.gov.scot/concessionary-travel/60plus-or-disabled/
@@ -116,13 +116,13 @@ body:
         href: /the-warm-home-discount-scheme
       - link_text: Apply for the Cold Weather Payment
         href: /cold-weather-payment
-      - link_text: Find out if you can get cheaper phone and broadband
+      - link_text: Find out if you can get cheaper phone and broadband on the Ofcom website
         href: https://www.ofcom.org.uk/phones-telecoms-and-internet/advice-for-consumers/costs-and-billing/social-tariffs
       - link_text: Find out how to reduce your water bill and financial support you may be able to get
         href: https://www.ccwater.org.uk/households/help-with-my-bills/
     - subheading: Support with Council Tax
       links:
-      - link_text: Apply for a Council Tax rebate in England, Scotland and Wales
+      - link_text: Apply for a Council Tax reduction in England, Scotland and Wales
         href: /guidance/council-tax-rebate-factsheet
       - link_text: Apply for Rate Relief in Northern Ireland
         href: https://www.nidirect.gov.uk/rates-help
@@ -234,9 +234,9 @@ body:
     content:
     - subheading: Help with rail costs
       links:
-      - link_text: Apply for a railcard to save money on rail journeys
+      - link_text: Apply for a railcard from National Rail to save money on rail journeys
         href: https://www.railcard.co.uk/
-      - link_text: Claim 50% off rail journeys if you’re on Universal Credit
+      - link_text: Claim 50% off rail journeys from National Rail if you’re on Universal Credit
         href: https://www.nationalrail.co.uk/times_fares/jobcentre-plus-card.aspx
     - subheading: Help with bus costs
       links:
@@ -248,3 +248,13 @@ body:
         href: https://www.nidirect.gov.uk/articles/60-smartpass-and-senior-65-smartpass
       - link_text: Apply for a disabled person’s bus pass in England
         href: /apply-for-disabled-bus-pass
+  - heading: Support for small businesses
+    content:
+    - subheading:
+      links:
+      - link_text: Find out how the Energy Bill Relief scheme limits the energy prices of your small business
+        href: https://www.gov.uk/guidance/energy-bill-relief-scheme-help-for-businesses-and-other-non-domestic-customers
+      - link_text: Find out about support to improve the energy performance of your business
+        href: https://www.gov.uk/business-finance-support?keywords=energy
+      - link_text: Find out about support with your energy bills on the Citizens Advice website
+        href: https://www.citizensadvice.org.uk/consumer/energy/energy-supply/your-small-businesss-energy-supply/your-small-business-cant-afford-its-energy-bills/
