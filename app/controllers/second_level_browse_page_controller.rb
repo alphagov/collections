@@ -1,6 +1,5 @@
 class SecondLevelBrowsePageController < ApplicationController
   enable_request_formats show: [:json]
-  helper_method :level_two_browse_variant_b?
 
   def show
     setup_content_item_and_navigation_helpers(page)
@@ -12,16 +11,14 @@ class SecondLevelBrowsePageController < ApplicationController
 private
 
   def show_html
-    template = :old_show
     slimmer_template "gem_layout_full_width"
 
-    if page.lists.curated?
-      template = :show_curated
-      curated_partial = level_two_browse_variant_b? ? "show_curated_accordion" : "show_curated_list"
-    else
-      template = :show_a_to_z
-    end
-    render(template, locals: { page: page, curated_partial: curated_partial, meta_section: meta_section })
+    template = if page.lists.curated?
+                 :show_curated
+               else
+                 :show_a_to_z
+               end
+    render(template, locals: { page: page, curated_partial: "show_curated_list", meta_section: meta_section })
   end
 
   def meta_section

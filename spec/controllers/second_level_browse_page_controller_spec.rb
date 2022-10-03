@@ -86,56 +86,6 @@ RSpec.describe SecondLevelBrowsePageController do
           page_size: 1000,
         )
       end
-
-      describe "GET second_level_browse_page for uncurated topic" do
-        let(:details) { {} }
-
-        it "renders correct template and partials for variant B" do
-          with_variant LevelTwoBrowse: "B" do
-            expect(subject).to render_template(:show_a_to_z,
-                                               locals: { curated_partial: nil })
-          end
-        end
-
-        it "renders correct template and partials for variant A" do
-          with_variant LevelTwoBrowse: "A" do
-            expect(subject).to render_template(:show_a_to_z,
-                                               locals: { curated_partial: nil })
-          end
-        end
-
-        it "renders correct template and partials for variant Z" do
-          with_variant LevelTwoBrowse: "Z" do
-            expect(subject).to render_template(:show_a_to_z,
-                                               locals: { curated_partial: nil })
-          end
-        end
-      end
-
-      describe "GET second_level_browse_page for curated topic" do
-        let(:details) { { groups: [{ name: "something", contents: ["/something"] }] } }
-
-        it "renders correct template and partials for variant B" do
-          with_variant LevelTwoBrowse: "B" do
-            expect(subject).to render_template(:show_curated,
-                                               locals: { curated_partial: "show_curated_accordion" })
-          end
-        end
-
-        it "renders correct template and partials for variant A" do
-          with_variant LevelTwoBrowse: "A" do
-            expect(subject).to render_template(:show_curated,
-                                               locals: { curated_partial: "show_curated_list" })
-          end
-        end
-
-        it "renders correct template and partials for variant Z" do
-          with_variant LevelTwoBrowse: "Z" do
-            expect(subject).to render_template(:show_curated,
-                                               locals: { curated_partial: "show_curated_list" })
-          end
-        end
-      end
     end
 
     it "404 if the section does not exist" do

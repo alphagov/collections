@@ -1,14 +1,11 @@
 class ApplicationController < ActionController::Base
-  include AbTests::LevelTwoBrowseAbTestable
   include Slimmer::Template
 
   helper_method :level_two_browse_variant
-  helper_method :page_under_test?
   helper_method :content_item_h
 
   protect_from_forgery with: :exception
 
-  before_action :set_level_two_browse_response_header_if_level_two_page
   before_action :set_expiry
   before_action :restrict_request_formats
 
@@ -111,9 +108,5 @@ private
 
   def render_partial(partial_name, locals = {})
     render_to_string(partial_name, formats: [:html], layout: false, locals: locals)
-  end
-
-  def set_level_two_browse_response_header_if_level_two_page
-    set_level_two_browse_response_header if page_under_test?
   end
 end
