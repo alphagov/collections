@@ -262,8 +262,8 @@ body:
     - subheading:
       links:
       - link_text: Find out how the Energy Bill Relief scheme limits the energy prices of your small business
-        href: https://www.gov.uk/guidance/energy-bill-relief-scheme-help-for-businesses-and-other-non-domestic-customers
+        href: /guidance/energy-bill-relief-scheme-help-for-businesses-and-other-non-domestic-customers
       - link_text: Find out about support to improve the energy performance of your business
-        href: https://www.gov.uk/business-finance-support?keywords=energy
+        href: /business-finance-support?keywords=energy
       - link_text: Find out about support with your energy bills on the Citizens Advice website
         href: https://www.citizensadvice.org.uk/consumer/energy/energy-supply/your-small-businesss-energy-supply/your-small-business-cant-afford-its-energy-bills/
