@@ -68,7 +68,7 @@
 
 <% end %>
 
-<div class="colhub__announcement">
+<div class="colhub__announcement" data-module="gem-track-click">
   <div class="govuk-width-container">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -80,7 +80,15 @@
           <% content.announcements[:body].each do |item| %>
             <p class="govuk-body">
               <%= item[:content] %>
-              <%= link_to item[:link_text], item[:link_text], class: "govuk-link" %>
+              <%= link_to(
+                item[:link_text],
+                item[:href],
+                class: "govuk-link",
+                data: content.link_clicked_track_data(
+                 track_action: item[:link_text],
+                 href: item[:href]
+                )
+              ) %>
             </p>
           <% end %>
       </div>
