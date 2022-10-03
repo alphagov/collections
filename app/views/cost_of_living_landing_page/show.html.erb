@@ -76,12 +76,11 @@
             text: content.announcements[:heading],
             padding: true
           } %>
-          <% content.announcements[:body].each do | body | %>
+
+          <% content.announcements[:body].each do |item| %>
             <p class="govuk-body">
-              <%= body[:content] %>
-              <a class="govuk-link" href="<%= body[:href] %>">
-                <%= body[:link_text] %>
-              </a>
+              <%= item[:content] %>
+              <%= link_to item[:link_text], item[:link_text], class: "govuk-link" %>
             </p>
           <% end %>
       </div>

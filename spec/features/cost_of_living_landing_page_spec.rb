@@ -11,6 +11,7 @@ RSpec.feature "Cost of Living hub page" do
       then_i_can_see_the_title
       then_i_can_see_the_breadcrumbs
       and_there_are_metatags
+      and_there_is_the_announcements_section
       and_there_is_link_tracking
       and_there_is_accordion_section_tracking
     end
@@ -38,6 +39,10 @@ RSpec.feature "Cost of Living hub page" do
       )
       expect(page).to have_selector("meta[name='govuk:navigation-page-type'][content='Cost of living hub']", visible: false)
       expect(page).to have_selector("meta[name='govuk:navigation-list-type'][content='curated']", visible: false)
+    end
+
+    def and_there_is_the_announcements_section
+      expect(page).to have_text("Announcements")
     end
 
     def and_there_is_link_tracking
