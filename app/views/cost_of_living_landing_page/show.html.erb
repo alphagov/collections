@@ -73,18 +73,17 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
           <%= render "govuk_publishing_components/components/heading", {
-            text: "Announcements",
+            text: content.announcements[:heading],
             padding: true
           } %>
-
-          <p class="govuk-body">There will be an automatic limit on how much you will be charged for each unit of gas or electricity from 1 October.
-            <a class="govuk-link" href="/government/publications/energy-bills-support/energy-bills-support-factsheet-8-september-2022">Find out how the Energy Price Guarantee limits your energy prices.</a>
-          </p>
-
-          <p class="govuk-body">
-            You may get calls, emails or messages that pretend to be from a government service or energy bill support scheme. If you get a message asking for your personal details (for example, bank details or passwords) this could be a scam.
-            <a class="govuk-link" href="/report-suspicious-emails-websites-phishing">Report anything you think is suspicious</a>.
-          </p>
+          <% content.announcements[:body].each do | body | %>
+            <p class="govuk-body">
+              <%= body[:content] %>
+              <a class="govuk-link" href="<%= body[:href] %>">
+                <%= body[:link_text] %>
+              </a>
+            </p>
+          <% end %>
       </div>
     </div>
   </div>
