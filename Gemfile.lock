@@ -548,6 +548,7 @@ DEPENDENCIES
   pry-byebug
   rails (= 7.0.4)
   rails-controller-testing
+  rails-i18n
   rails_translation_manager
   rinku
   rspec-rails
