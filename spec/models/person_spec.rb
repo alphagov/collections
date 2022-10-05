@@ -54,6 +54,14 @@ RSpec.describe Person do
     it "combines the titles into a sentence" do
       expect(person.current_roles_title).to eq("Prime Minister and First Lord of the Treasury")
     end
+
+    it "combines the titles into a sentence for translated content" do
+      api_data["locale"] = "ar"
+      api_data["links"]["role_appointments"].first["links"]["role"].first["title"] = "المفوض التجاري لصاحب الجلالة لمنطقة الشرق الأوسط"
+      api_data["links"]["role_appointments"].second["links"]["role"].first["title"] = "القنصل العام لصاحب الجلالة في دبي"
+      # Arabic letter 'و' == 'and'
+      expect(person.current_roles_title).to eq("المفوض التجاري لصاحب الجلالة لمنطقة الشرق الأوسط و القنصل العام لصاحب الجلالة في دبي")
+    end
   end
 
   describe "currently_in_a_role?" do

@@ -23,7 +23,7 @@ class Person
   end
 
   def current_roles_title
-    current_roles.map { |role| role["title"] }.to_sentence
+    current_roles.map { |role| role["title"] }.to_sentence(locale: content_item.locale)
   end
 
   def previous_roles_items
