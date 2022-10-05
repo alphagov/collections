@@ -10,7 +10,7 @@ class FeedEntryPresenter
   end
 
   def url
-    Plek.current.website_root + result["link"]
+    Plek.new.website_root + result["link"]
   end
 
   def atom_url
