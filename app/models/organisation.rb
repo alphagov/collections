@@ -79,7 +79,7 @@ class Organisation
   end
 
   def web_url
-    Plek.current.website_root + base_path
+    Plek.new.website_root + base_path
   end
 
   def slug_with_locale
