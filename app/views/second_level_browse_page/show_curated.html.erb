@@ -15,12 +15,9 @@
   <%= render "shared/browse_breadcrumbs" %>
 <% end %>
 
-<%# Reduce margin to account for the top padding on the accordion %>
-<% header_margin_bottom = curated_partial == "show_curated_accordion" ? 7 : 8 %>
-
 <%= render "shared/browse_header", {
   two_thirds: true,
-  margin_bottom: header_margin_bottom
+  margin_bottom: 8
 } do %>
   <%= render "govuk_publishing_components/components/heading", {
     font_size: "xl",
