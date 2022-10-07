@@ -1,7 +1,7 @@
 <ul role="list" class="govuk-list browse__list" data-module="gem-track-click">
   <% list.each_with_index do |content_item, index| %>
     <% if content_item[:links] %>
-      <li class="govuk-list browse__list-item govuk-!-padding-bottom-1">
+      <li class="govuk-list govuk-!-padding-bottom-1">
          <% if content_item[:subheading] %>
            <%= render "govuk_publishing_components/components/heading", {
             text: content_item[:subheading],
