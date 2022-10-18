@@ -47,7 +47,7 @@ module Organisations
       document_type = I18n.t(document_translation, default: cleaned_document_type.titleize.gsub("_", " "))
 
       # Handle document types with acronyms
-      document_acronyms = %w[Foi Dfid Aaib Cma Esi Hmrc Html Maib Raib Utaac]
+      document_acronyms = %w[Foi Dfid Aaib Cma Esi Hmrc Html Maib Raib Utaac Oim]
       document_acronyms.each do |acronym|
         document_type.gsub!(acronym, acronym.upcase)
       end
