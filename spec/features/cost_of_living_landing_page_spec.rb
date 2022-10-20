@@ -12,6 +12,7 @@ RSpec.feature "Cost of Living hub page" do
       then_i_can_see_the_breadcrumbs
       and_there_are_metatags
       and_there_is_the_announcements_section
+      and_there_is_an_important_info_suffix_on_some_link
       and_there_is_link_tracking
       and_there_is_accordion_section_tracking
     end
@@ -43,6 +44,10 @@ RSpec.feature "Cost of Living hub page" do
 
     def and_there_is_the_announcements_section
       expect(page).to have_text("Announcements")
+    end
+
+    def and_there_is_an_important_info_suffix_on_some_link
+      expect(page).to have_text("opens 14 November 2022")
     end
 
     def and_there_is_link_tracking
