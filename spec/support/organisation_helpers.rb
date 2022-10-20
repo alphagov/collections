@@ -45,7 +45,7 @@ module OrganisationHelpers
 
   def build_search_api_query_url(params = {})
     query = Rack::Utils.build_nested_query default_params.merge(params)
-    "#{Plek.new.find('search')}/search.json?#{query}"
+    "#{Plek.new.find('search-api')}/search.json?#{query}"
   end
 
   def stub_empty_search_api_requests(organisation_slug)
@@ -60,12 +60,12 @@ module OrganisationHelpers
   end
 
   def stub_search_api_latest_documents_request(organisation_slug)
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=3&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp")
+    stub_request(:get, Plek.new.find("search-api") + "/search.json?count=3&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp")
       .to_return(body: { results: [search_response] }.to_json)
   end
 
   def stub_search_api_latest_content_with_acronym(organisation_slug)
-    stub_request(:get, Plek.new.find("search") + "/search.json?count=3&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp")
+    stub_request(:get, Plek.new.find("search-api") + "/search.json?count=3&fields%5B%5D=content_store_document_type&fields%5B%5D=link&fields%5B%5D=public_timestamp&fields%5B%5D=title&filter_organisations=#{organisation_slug}&order=-public_timestamp")
       .to_return(body: { results: [search_response] }.to_json)
   end
 
