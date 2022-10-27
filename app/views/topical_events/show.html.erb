@@ -64,6 +64,7 @@
     <% if @topical_event.social_media_links %>
       <section id="social-media-links" class="topical-events__section-break">
       <%= render "govuk_publishing_components/components/share_links", {
+        track_as_follow: true,
         links: @topical_event.social_media_links,
       } %>
       </section>
