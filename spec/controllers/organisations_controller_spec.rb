@@ -9,8 +9,7 @@ RSpec.describe OrganisationsController do
         links: {},
         details: {
           body: "This organisation has a status of exempt.",
-          logo: {
-          },
+          logo: {},
           organisation_govuk_status: {
             status: "exempt",
             url: "https://ministry-of-magic.gov.uk",
