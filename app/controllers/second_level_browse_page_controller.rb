@@ -1,6 +1,4 @@
 class SecondLevelBrowsePageController < ApplicationController
-  enable_request_formats show: [:json]
-
   def show
     setup_content_item_and_navigation_helpers(page)
     @dimension26 = count_link_sections(page)
