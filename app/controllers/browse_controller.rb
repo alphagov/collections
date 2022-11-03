@@ -1,5 +1,4 @@
 class BrowseController < ApplicationController
-  enable_request_formats show: [:json]
   slimmer_template "gem_layout_full_width"
 
   def index
