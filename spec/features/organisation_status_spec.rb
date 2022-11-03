@@ -9,8 +9,7 @@ RSpec.feature "Organisation status" do
       base_path: "/government/organisations/changed_name",
       details: {
         body: "This organisation has a status of changed_name.",
-        logo: {
-        },
+        logo: {},
         organisation_govuk_status: {
           status: "changed_name",
         },
@@ -30,8 +29,7 @@ RSpec.feature "Organisation status" do
       base_path: "/government/organisations/devolved",
       details: {
         body: "This organisation has a status of devolved.",
-        logo: {
-        },
+        logo: {},
         organisation_govuk_status: {
           status: "devolved",
         },
@@ -52,8 +50,7 @@ RSpec.feature "Organisation status" do
       links: {},
       details: {
         body: "This organisation has a status of exempt.",
-        logo: {
-        },
+        logo: {},
         organisation_govuk_status: {
           status: "exempt",
           url: "",
@@ -67,8 +64,7 @@ RSpec.feature "Organisation status" do
       links: {},
       details: {
         body: "This organisation has a status of exempt.",
-        logo: {
-        },
+        logo: {},
         organisation_govuk_status: {
           status: "exempt",
           url: "http://www.google.com",
@@ -82,8 +78,7 @@ RSpec.feature "Organisation status" do
       links: {},
       details: {
         body: "This organisation has a status of joining.",
-        logo: {
-        },
+        logo: {},
         organisation_govuk_status: {
           status: "joining",
         },
@@ -96,8 +91,7 @@ RSpec.feature "Organisation status" do
       links: {},
       details: {
         body: "This organisation has a status of left_gov.",
-        logo: {
-        },
+        logo: {},
         organisation_govuk_status: {
           status: "left_gov",
         },
@@ -109,8 +103,7 @@ RSpec.feature "Organisation status" do
       base_path: "/government/organisations/merged",
       details: {
         body: "This organisation has a status of merged.",
-        logo: {
-        },
+        logo: {},
         organisation_govuk_status: {
           status: "merged",
           updated_at: "2016-03-31T00:00:00.000+01:00",
@@ -131,8 +124,7 @@ RSpec.feature "Organisation status" do
       base_path: "/government/organisations/split",
       details: {
         body: "This organisation has a status of split.",
-        logo: {
-        },
+        logo: {},
         organisation_govuk_status: {
           status: "split",
         },
@@ -161,8 +153,7 @@ RSpec.feature "Organisation status" do
       links: {},
       details: {
         body: "This organisation has a status of no_longer_exists.",
-        logo: {
-        },
+        logo: {},
         organisation_govuk_status: {
           status: "no_longer_exists",
         },
@@ -174,8 +165,7 @@ RSpec.feature "Organisation status" do
       base_path: "/government/organisations/replaced",
       details: {
         body: "This organisation has a status of replaced.",
-        logo: {
-        },
+        logo: {},
         organisation_govuk_status: {
           status: "replaced",
         },

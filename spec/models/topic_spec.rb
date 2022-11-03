@@ -5,8 +5,7 @@ RSpec.describe Topic do
       "content_id" => "uuid-23",
       "title" => "PAYE",
       "description" => "Pay As You Earn",
-      "details" => {
-      },
+      "details" => {},
       "links" => {
         "parent" => [{
           "title" => "Business tax",

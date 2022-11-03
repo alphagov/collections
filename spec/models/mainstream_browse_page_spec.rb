@@ -5,10 +5,8 @@ RSpec.describe MainstreamBrowsePage do
       "base_path" => "/browse/benefits/child",
       "title" => "Child Benefit",
       "description" => "Information about eligibility, claiming and when Child Benefit stops",
-      "details" => {
-      },
-      "links" => {
-      },
+      "details" => {},
+      "links" => {},
     }
   end
   let(:content_item) { ContentItem.new(api_data) }
