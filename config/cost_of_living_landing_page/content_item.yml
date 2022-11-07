@@ -249,10 +249,12 @@ body:
         href: /sure-start-maternity-grant
       - link_text: Apply for Best Start Grant and Best Start Foods in Scotland
         href: https://www.mygov.scot/best-start-grant-best-start-foods
-  - heading: Support with housing costs
+  - heading: Support with your housing costs
     content:
     - subheading:
       links:
+      - link_text: Check what benefits and financial support you can get
+        href: /check-benefits-financial-support
       - link_text: Find out about support with housing costs if you get Universal Credit
         href: /housing-and-universal-credit
       - link_text: Apply for a Discretionary Housing Payment
