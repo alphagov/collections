@@ -28,6 +28,7 @@ body:
         - link_text: Check what benefits and financial support you can get
           href: /check-benefits-financial-support
         - link_text: Find out about the Cost of Living Payment
+          important_info: paid between 8 and 30 November 2022 for most eligible people
           href: /guidance/cost-of-living-payment
         - link_text: Check if you’re getting the minimum wage
           href: /am-i-getting-minimum-wage
