@@ -51,11 +51,11 @@ RSpec.feature "Cost of Living hub page" do
     end
 
     def and_there_is_link_tracking
-      link = page.find(".govuk-list a.govuk-link", text: "Check what benefits and financial support you can get")
+      link = page.find(".govuk-list a.govuk-link", text: "Find out how the Energy Price Guarantee limits your energy prices")
 
       expect(link["data-track-category"]).to eq("contentsClicked")
-      expect(link["data-track-action"]).to eq("Support with your income")
-      expect(link["data-track-label"]).to eq("/check-benefits-financial-support")
+      expect(link["data-track-action"]).to eq("Support with your bills")
+      expect(link["data-track-label"]).to eq("/government/publications/energy-bills-support/energy-bills-support-factsheet-8-september-2022")
       expect(link["data-track-count"]).to eq("contentLink")
     end
 
