@@ -145,6 +145,10 @@ body:
         href: /cold-weather-payment
       - link_text: Find out how to understand and reduce your energy bills on the Citizens Advice website
         href: https://www.citizensadvice.org.uk/consumer/energy/energy-supply/
+    - subheading: Support with your TV and internet bills
+      links:
+      - link_text: Apply for money off your TV Licence if you're over 75, blind or in residential care
+        href: /free-discount-tv-licence
       - link_text: Find out if you can get cheaper phone and broadband on the Ofcom website
         href: https://www.ofcom.org.uk/phones-telecoms-and-internet/advice-for-consumers/costs-and-billing/social-tariffs
       - link_text: Find out how to reduce your water bill and financial support you may be able to get
