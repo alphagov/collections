@@ -2,8 +2,8 @@ class CostOfLivingLandingPagePresenter
   COMPONENTS = %i[
     page_title
     metadata
-    announcements
     header
+    announcements
     body
   ].freeze
 

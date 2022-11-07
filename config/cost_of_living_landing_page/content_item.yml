@@ -6,6 +6,9 @@ metadata:
     Find out what support is available to help with the cost of living. This
     includes income and disability benefits, bills and allowances, childcare,
     housing and travel.
+header:
+  heading: Cost of living support
+  lede: Find out what support is available to help with the cost of living. This includes income and disability benefits, bills and allowances, childcare, housing and travel.
 announcements:
   heading: Announcements
   body:
@@ -15,11 +18,6 @@ announcements:
   - content: You may get calls, emails or messages that pretend to be from a government service or energy bill support scheme. If you get a message asking for your personal details (for example, bank details or passwords) this could be a scam.
     link_text: Report anything you think is suspicious.
     href: /report-suspicious-emails-websites-phishing
-header:
-  heading: Cost of living support
-  lede: Find out what support is available to help with the cost of living. This includes income and disability benefits, bills and allowances, childcare, housing and travel.
-  link_text: Check what benefits and financial support you can get
-  href: /check-benefits-financial-support
 body:
   heading:
   accordion_content:
