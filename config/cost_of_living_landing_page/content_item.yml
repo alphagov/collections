@@ -271,29 +271,40 @@ body:
         href: https://www.mygov.scot/claim-housing-benefit
       - link_text: Apply for Housing Benefit in Northern Ireland
         href: https://www.nihe.gov.uk/Housing-Help/Housing-Benefit/Making-a-claim-for-Housing-Benefit
-  - heading: Support with travel costs
+  - heading: Support with your travel costs
     content:
-    - subheading: Help with rail costs
+    - subheading:
+    - links:
+      - link_text: Check what benefits and financial support you can get
+        href: /check-benefits-financial-support
+    - subheading: Support with your rail costs
       links:
       - link_text: Apply for a railcard from National Rail to save money on rail journeys
         href: https://www.railcard.co.uk/
       - link_text: Claim 50% off rail journeys from National Rail if you’re on Universal Credit
         href: https://www.nationalrail.co.uk/times_fares/jobcentre-plus-card.aspx
-    - subheading: Help with bus costs
+    - subheading: Support with your bus costs
       links:
       - link_text: Apply for an older person’s bus pass in England and Wales
         href: /apply-for-elderly-person-bus-pass
       - link_text: Apply for an older or disabled person’s bus pass in Scotland
-        href: https://www.transport.gov.scot/concessionary-travel/60plus-or-disabled/
+        href: https://www.mygov.scot/older-persons-bus-pass
       - link_text: Apply for an older person’s bus pass in Northern Ireland
         href: https://www.nidirect.gov.uk/articles/60-smartpass-and-senior-65-smartpass
       - link_text: Apply for a disabled person’s bus pass in England
         href: /apply-for-disabled-bus-pass
-  - heading: Support for small businesses
+      - link_text: Apply for a disabled person’s bus pass in Scotland
+        href: https://www.mygov.scot/disabled-bus-pass
+      - link_text: Apply for a disabled person’s bus pass in Wales
+        href: https://gov.wales/apply-bus-pass
+      - link_text: Apply for a disabled person’s bus pass in Northern Ireland
+        href: https://www.nidirect.gov.uk/information-and-services/bus-and-coach-travel/free-bus-travel-and-concessions
+  - heading: Support for businesses
     content:
     - subheading:
       links:
       - link_text: Find out how the Energy Bill Relief scheme limits the energy prices of your small business
+        important_info: runs between 1 October 2022 and 31 March 2023
         href: /guidance/energy-bill-relief-scheme-help-for-businesses-and-other-non-domestic-customers
       - link_text: Find out about support to improve the energy performance of your business
         href: /business-finance-support?keywords=energy
