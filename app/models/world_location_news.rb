@@ -86,4 +86,8 @@ class WorldLocationNews
   def organisations
     @content_item.content_item_data.dig("links", "organisations")
   end
+
+  def worldwide_organisations
+    @content_item.content_item_data.dig("links", "worldwide_organisations")
+  end
 end

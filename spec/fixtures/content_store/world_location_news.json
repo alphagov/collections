@@ -74,6 +74,14 @@
           "brand": "department-2"
        }
       }
+    ],
+    "worldwide_organisations": [
+      {
+        "content_id": "world-org-1",
+        "title": "UK delegation to nowhere",
+        "base_path": "/world/nowhere",
+        "description": "Information about our delegation"
+      }
     ]
   }
 }

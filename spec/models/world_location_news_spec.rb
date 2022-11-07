@@ -148,4 +148,15 @@ RSpec.describe WorldLocationNews do
       }.deep_stringify_keys,
     ])
   end
+
+  it "should map the worldwide organisations" do
+    expect(world_location_news.worldwide_organisations).to eq([
+      {
+        content_id: "world-org-1",
+        base_path: "/world/nowhere",
+        title: "UK delegation to nowhere",
+        description: "Information about our delegation",
+      }.deep_stringify_keys,
+    ])
+  end
 end
