@@ -67,7 +67,12 @@ body:
       - subheading:
         links:
         - link_text: Find out about the Cost of Living Payment
+          important_info: paid between 8 and 30 November 2022 for most eligible people
           href: /guidance/cost-of-living-payment
+        - link_text: Apply for money off your TV Licence if you're over 75, blind or in residential care
+          href: /free-discount-tv-licence
+        - link_text: Apply for a Disabled Facilities Grant to make improvements to your home in England or Wales
+          href: /disabled-facilities-grants
       - subheading: Apply for Universal Credit if you’re disabled
         links:
         - link_text: Universal Credit if you’re disabled in England, Scotland or Wales
@@ -99,9 +104,15 @@ body:
       - subheading: Support with travel costs if you’re disabled
         links:
         - link_text: Apply for a disabled person’s railcard from National Rail
-          href: https://www.disabledpersons-railcard.co.uk/?52390
-        - link_text: Apply for an older or disabled person’s bus pass in Scotland
-          href: https://www.transport.gov.scot/concessionary-travel/60plus-or-disabled/
+          href: https://www.disabledpersons-railcard.co.uk
+        - link_text: Apply for a disabled person’s bus pass in England
+          href: /apply-for-disabled-bus-pass
+        - link_text: Apply for a disabled person’s bus pass in Scotland
+          href: https://www.mygov.scot/disabled-bus-pass
+        - link_text: Apply for a disabled person’s bus pass in Wales
+          href: https://gov.wales/apply-bus-pass
+        - link_text: Apply for a disabled person’s bus pass in Northern Ireland
+          href: /disability-living-allowance-children
       - subheading: Support if your child is disabled
         links:
         - link_text: Apply for Disability Living Allowance (DLA) for children in England, Wales and Northern Ireland
