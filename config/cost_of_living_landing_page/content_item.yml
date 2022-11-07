@@ -159,7 +159,9 @@ body:
         href: /apply-council-tax-reduction
       - link_text: Apply for Rate Relief in Northern Ireland
         href: https://www.nidirect.gov.uk/rates-help
-    - subheading: Support with prescriptions and health costs
+      - link_text: Contact your council for help with housing costs and Council Tax
+        href: /find-local-council
+    - subheading: Support with your prescriptions and health costs
       links:
       - link_text: Check if you’re eligible for support with prescriptions and health costs
         href: https://services.nhsbsa.nhs.uk/check-for-help-paying-nhs-costs/start
