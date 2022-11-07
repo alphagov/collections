@@ -121,4 +121,31 @@ RSpec.describe WorldLocationNews do
   it "should include the type" do
     expect(world_location_news.type).to eq("world_location")
   end
+
+  it "should map the organisations" do
+    expect(world_location_news.organisations).to eq([
+      {
+        content_id: "org-1",
+        base_path: "government/organisations/department-1",
+        title: "Department 1",
+        details: {
+          logo: {
+            crest: "single-identity",
+          },
+          brand: "department-1",
+        },
+      }.deep_stringify_keys,
+      {
+        content_id: "org-2",
+        base_path: "government/organisations/department-2",
+        title: "Department 2",
+        details: {
+          logo: {
+            crest: "single-identity",
+          },
+          brand: "department-2",
+        },
+      }.deep_stringify_keys,
+    ])
+  end
 end

@@ -197,6 +197,26 @@ RSpec.feature "World Location News pages" do
     end
   end
 
+  context "when there are no organisations" do
+    before do
+      stub_content_store_has_item(base_path, content_item_without_link(content_item, "organisations"))
+    end
+
+    it "does not include a link to the organisations" do
+      visit base_path
+
+      expect(page).to_not have_text("Organisations")
+    end
+  end
+
+  context "when there are organisations" do
+    it "includes logos for the organisations" do
+      visit base_path
+
+      expect(page).to have_css(".gem-c-organisation-logo", count: 2)
+    end
+  end
+
   context "when requesting the atom feed" do
     let(:related_documents) { { "An announcement on World Locations" => "/foo/announcement_one", "Another announcement" => "/foo/announcement_two" } }
 
@@ -226,6 +246,11 @@ private
 
   def content_item_without_detail(content_item, key_to_remove)
     content_item["details"] = content_item["details"].except(key_to_remove)
+    content_item
+  end
+
+  def content_item_without_link(content_item, key_to_remove)
+    content_item["links"] = content_item["links"].except(key_to_remove)
     content_item
   end
 end
