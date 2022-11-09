@@ -1,6 +1,7 @@
 ---
 cy:
   world_location_news:
+    find_out_more: Gweler y proffil llawn a'r holl fanylion cyswllt
     headings:
       announcements: Ein cyhoeddiadau
       documents: Dogfennau

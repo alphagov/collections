@@ -1,6 +1,7 @@
 ---
 fi:
   world_location_news:
+    find_out_more: Katso koko profiili ja kaikki yhteystiedot
     headings:
       announcements: Ilmoituksemme
       documents: Asiakirjat

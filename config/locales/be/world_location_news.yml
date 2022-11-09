@@ -1,6 +1,7 @@
 ---
 be:
   world_location_news:
+    find_out_more: Паглядзець усю інфармацыю і кантактныя дадзеныя
     headings:
       announcements: Нашы аб'явы
       documents: Дакументы
