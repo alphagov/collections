@@ -12,7 +12,7 @@ header:
 announcements:
   heading: Announcements
   body:
-  - content: There will be an automatic limit on how much you will be charged for each unit of gas or electricity from 1 October.
+  - content: There is an automatic limit on how much you will be charged for each unit of gas or electricity from 1 October.
     link_text: Find out how the Energy Price Guarantee limits your energy prices.
     href: /government/publications/energy-bills-support/energy-bills-support-factsheet-8-september-2022
   - content: You may get calls, emails or messages that pretend to be from a government service or energy bill support scheme. If you get a message asking for your personal details (for example, bank details or passwords) this could be a scam.
@@ -28,7 +28,7 @@ body:
         - link_text: Check what benefits and financial support you can get
           href: /check-benefits-financial-support
         - link_text: Find out about the Cost of Living Payment
-          important_info: paid between 8 and 30 November 2022 for most eligible people
+          important_info: including the date of your next payment and how to report if it’s missing
           href: /guidance/cost-of-living-payment
         - link_text: Check if you’re getting the minimum wage
           href: /am-i-getting-minimum-wage
@@ -66,8 +66,10 @@ body:
     content:
       - subheading:
         links:
+        - link_text: Check what benefits and financial support you may be able to get
+          href: /check-benefits-financial-support
         - link_text: Find out about the Cost of Living Payment
-          important_info: paid between 8 and 30 November 2022 for most eligible people
+          important_info: including the date of your next payment and how to report if it’s missing
           href: /guidance/cost-of-living-payment
         - link_text: Apply for money off your TV Licence if you're over 75, blind or in residential care
           href: /free-discount-tv-licence
@@ -112,7 +114,7 @@ body:
         - link_text: Apply for a disabled person’s bus pass in Wales
           href: https://gov.wales/apply-bus-pass
         - link_text: Apply for a disabled person’s bus pass in Northern Ireland
-          href: /disability-living-allowance-children
+          href: https://www.nidirect.gov.uk/information-and-services/bus-and-coach-travel/free-bus-travel-and-concessions
       - subheading: Support if your child is disabled
         links:
         - link_text: Apply for Disability Living Allowance (DLA) for children in England, Wales and Northern Ireland
@@ -125,17 +127,19 @@ body:
       links:
       - link_text: Check what benefits and financial support you can get
         href: /check-benefits-financial-support
+    - subheading: Support with your utility bills
+      links:
       - link_text: Find out how the Energy Price Guarantee limits your energy prices
         href: /government/publications/energy-bills-support/energy-bills-support-factsheet-8-september-2022
       - link_text: Find out about the Cost of Living Payment
-        important_info: paid between 8 and 23 November 2022 for most people
+        important_info: including the date of your next payment and how to report if it’s missing
         href: /guidance/cost-of-living-payment
       - link_text: Find out how the Energy Bills Support Scheme lowers your energy bills
-        important_info: if you're on a prepayment meter, check your contact details are up to date with your supplier
+        important_info: including how to claim if you’ve got a prepayment meter
         href: /government/news/energy-bills-support-scheme-explainer
       - link_text: Find out about and Pensioner Cost of Living Payment for winter 2022 and the Winter Fuel Payment
         href: /winter-fuel-payment
-      - link_text: Find out about the Wales fuel support scheme payment
+      - link_text: Find out about the Wales fuel support scheme
         important_info: ends 31 January 2023
         href: https://gov.wales/wales-fuel-support-scheme-2022-2023
       - link_text: Find out about the Warm Home Discount Scheme
@@ -153,7 +157,7 @@ body:
         href: https://www.ofcom.org.uk/phones-telecoms-and-internet/advice-for-consumers/costs-and-billing/social-tariffs
       - link_text: Find out how to reduce your water bill and financial support you may be able to get
         href: https://www.ccwater.org.uk/households/help-with-my-bills/
-    - subheading: Support with Council Tax
+    - subheading: Support with your Council Tax
       links:
       - link_text: Apply for a Council Tax reduction in England, Scotland and Wales
         href: /apply-council-tax-reduction
@@ -249,6 +253,8 @@ body:
         href: /sure-start-maternity-grant
       - link_text: Apply for Best Start Grant and Best Start Foods in Scotland
         href: https://www.mygov.scot/best-start-grant-best-start-foods
+      - link_text: Find out about the Education Maintenance Allowance in Northern Ireland
+        href: https://www.nidirect.gov.uk/articles/education-maintenance-allowance-explained
   - heading: Support with your housing costs
     content:
     - subheading:
@@ -287,7 +293,7 @@ body:
       links:
       - link_text: Apply for an older person’s bus pass in England and Wales
         href: /apply-for-elderly-person-bus-pass
-      - link_text: Apply for an older or disabled person’s bus pass in Scotland
+      - link_text: Apply for an older person’s bus pass in Scotland
         href: https://www.mygov.scot/older-persons-bus-pass
       - link_text: Apply for an older person’s bus pass in Northern Ireland
         href: https://www.nidirect.gov.uk/articles/60-smartpass-and-senior-65-smartpass
@@ -299,7 +305,7 @@ body:
         href: https://gov.wales/apply-bus-pass
       - link_text: Apply for a disabled person’s bus pass in Northern Ireland
         href: https://www.nidirect.gov.uk/information-and-services/bus-and-coach-travel/free-bus-travel-and-concessions
-  - heading: Support for businesses
+  - heading: Support for your businesses
     content:
     - subheading:
       links:
