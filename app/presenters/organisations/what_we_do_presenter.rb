@@ -27,7 +27,7 @@ module Organisations
         stacked: true,
         track_as_follow: true,
         brand: org.brand,
-        links: links,
+        links:,
       }
     end
   end

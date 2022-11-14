@@ -32,7 +32,7 @@ RSpec.describe MostRecentContent do
         filter_content_store_document_type: document_types,
       }
 
-      stub_search(params: params, body: search_results)
+      stub_search(params:, body: search_results)
 
       results = most_recent_content.fetch
       expect(5).to eq(results.count)

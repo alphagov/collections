@@ -28,7 +28,7 @@ private
   end
 
   def creative_work
-    page = GovukPublishingComponents::Presenters::Page.new({ content_item: content_item })
+    page = GovukPublishingComponents::Presenters::Page.new({ content_item: })
     GovukPublishingComponents::Presenters::CreativeWorkSchema.new(page).structured_data
   end
 end

@@ -26,8 +26,8 @@ module Organisations
       if include_metadata
         {
           metadata: {
-            public_updated_at: public_updated_at,
-            document_type: document_type,
+            public_updated_at:,
+            document_type:,
             locale: {
               public_updated_at: t_fallback(:"date.month_names"),
               document_type: t_fallback(document_translation),

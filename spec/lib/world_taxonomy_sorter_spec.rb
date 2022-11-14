@@ -13,7 +13,7 @@ RSpec.describe WorldTaxonomySorter do
       "Trade and invest",
       "Travelling to",
     ]
-    @child_taxons = child_taxon_titles.map { |title| OpenStruct.new(title: title) }
+    @child_taxons = child_taxon_titles.map { |title| OpenStruct.new(title:) }
 
     @expected_ordered_taxon_titles = [
       "Emergency help for British nationals",

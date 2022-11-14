@@ -3,7 +3,7 @@ class CostOfLivingLandingPageController < ApplicationController
 
   def show
     render "show", locals: {
-      breadcrumbs: breadcrumbs,
+      breadcrumbs:,
       content: presenter,
     }
   end

@@ -22,7 +22,7 @@ RSpec.describe Organisations::ShowPresenter do
   end
 
   def build_show_presenter_for_org(title, type)
-    content_item = ContentItem.new({ title: title,
+    content_item = ContentItem.new({ title:,
                                      details: { organisation_type: type } }.with_indifferent_access)
 
     organisation = Organisation.new(content_item)

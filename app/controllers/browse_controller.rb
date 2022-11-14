@@ -6,7 +6,7 @@ class BrowseController < ApplicationController
     @dimension26 = 1
     @dimension27 = page.top_level_browse_pages.count || 0
     setup_content_item_and_navigation_helpers(page)
-    render :index, locals: { page: page }
+    render :index, locals: { page: }
   end
 
   def show
@@ -20,6 +20,6 @@ private
 
   def show_html(page)
     template = :show
-    render template, locals: { page: page }
+    render template, locals: { page: }
   end
 end

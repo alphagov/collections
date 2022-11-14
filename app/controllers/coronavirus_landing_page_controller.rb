@@ -6,9 +6,9 @@ class CoronavirusLandingPageController < ApplicationController
 
     render "show",
            locals: {
-             breadcrumbs: breadcrumbs,
+             breadcrumbs:,
              details: presenter,
-             special_announcement: special_announcement,
+             special_announcement:,
            }
   end
 

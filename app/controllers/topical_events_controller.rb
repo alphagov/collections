@@ -16,7 +16,7 @@ class TopicalEventsController < ApplicationController
         results = FeedContent.new(filter_topical_events: params[:name]).results(10)
         items = results.map { |result| FeedEntryPresenter.new(result) }
 
-        render "feeds/feed", locals: { items: items, root_url: Plek.new.website_root + path, title: "#{@topical_event.title} - Activity on GOV.UK" }
+        render "feeds/feed", locals: { items:, root_url: Plek.new.website_root + path, title: "#{@topical_event.title} - Activity on GOV.UK" }
       end
     end
   end

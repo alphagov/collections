@@ -9,7 +9,7 @@ module ServicesAndInformationHelpers
   def stub_content_item(base_path, organisation_title)
     stub_content_store_has_item(
       base_path,
-      base_path: base_path,
+      base_path:,
       title: "S&I page title",
       description: "",
       document_type: "services_and_information",
