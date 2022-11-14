@@ -6,20 +6,18 @@ metadata:
     Find out what support is available to help with the cost of living. This
     includes income and disability benefits, bills and allowances, childcare,
     housing and travel.
+header:
+  heading: Cost of living support
+  lede: Find out what support is available to help with the cost of living. This includes income and disability benefits, bills and allowances, childcare, housing and travel.
 announcements:
   heading: Announcements
   body:
-  - content: There will be an automatic limit on how much you will be charged for each unit of gas or electricity from 1 October.
+  - content: There is an automatic limit on how much you will be charged for each unit of gas or electricity from 1 October.
     link_text: Find out how the Energy Price Guarantee limits your energy prices.
     href: /government/publications/energy-bills-support/energy-bills-support-factsheet-8-september-2022
   - content: You may get calls, emails or messages that pretend to be from a government service or energy bill support scheme. If you get a message asking for your personal details (for example, bank details or passwords) this could be a scam.
     link_text: Report anything you think is suspicious.
     href: /report-suspicious-emails-websites-phishing
-header:
-  heading: Cost of living support
-  lede: Find out what support is available to help with the cost of living. This includes income and disability benefits, bills and allowances, childcare, housing and travel.
-  link_text: Check what benefits and financial support you can get
-  href: /check-benefits-financial-support
 body:
   heading:
   accordion_content:
@@ -30,6 +28,7 @@ body:
         - link_text: Check what benefits and financial support you can get
           href: /check-benefits-financial-support
         - link_text: Find out about the Cost of Living Payment
+          important_info: including the date of your next payment and how to report if it’s missing
           href: /guidance/cost-of-living-payment
         - link_text: Check if you’re getting the minimum wage
           href: /am-i-getting-minimum-wage
@@ -43,7 +42,7 @@ body:
           href: /tax-relief-for-employees
         - link_text: Check how you can deal with your debts
           href: /pay-off-debts
-        - link_text: Contact the MoneyHelper service for free, confidential and impartial advice
+        - link_text: Use the MoneyHelper service for free, confidential and impartial advice
           href: https://www.moneyhelper.org.uk/
       - subheading: Apply for Universal Credit
         links:
@@ -67,8 +66,15 @@ body:
     content:
       - subheading:
         links:
+        - link_text: Check what benefits and financial support you may be able to get
+          href: /check-benefits-financial-support
         - link_text: Find out about the Cost of Living Payment
+          important_info: including the date of your next payment and how to report if it’s missing
           href: /guidance/cost-of-living-payment
+        - link_text: Apply for money off your TV Licence if you're over 75, blind or in residential care
+          href: /free-discount-tv-licence
+        - link_text: Apply for a Disabled Facilities Grant to make improvements to your home in England or Wales
+          href: /disabled-facilities-grants
       - subheading: Apply for Universal Credit if you’re disabled
         links:
         - link_text: Universal Credit if you’re disabled in England, Scotland or Wales
@@ -100,9 +106,15 @@ body:
       - subheading: Support with travel costs if you’re disabled
         links:
         - link_text: Apply for a disabled person’s railcard from National Rail
-          href: https://www.disabledpersons-railcard.co.uk/?52390
-        - link_text: Apply for an older or disabled person’s bus pass in Scotland
-          href: https://www.transport.gov.scot/concessionary-travel/60plus-or-disabled/
+          href: https://www.disabledpersons-railcard.co.uk
+        - link_text: Apply for a disabled person’s bus pass in England
+          href: /apply-for-disabled-bus-pass
+        - link_text: Apply for a disabled person’s bus pass in Scotland
+          href: https://www.mygov.scot/disabled-bus-pass
+        - link_text: Apply for a disabled person’s bus pass in Wales
+          href: https://gov.wales/apply-bus-pass
+        - link_text: Apply for a disabled person’s bus pass in Northern Ireland
+          href: https://www.nidirect.gov.uk/information-and-services/bus-and-coach-travel/free-bus-travel-and-concessions
       - subheading: Support if your child is disabled
         links:
         - link_text: Apply for Disability Living Allowance (DLA) for children in England, Wales and Northern Ireland
@@ -113,30 +125,47 @@ body:
     content:
     - subheading:
       links:
+      - link_text: Check what benefits and financial support you can get
+        href: /check-benefits-financial-support
+    - subheading: Support with your utility bills
+      links:
       - link_text: Find out how the Energy Price Guarantee limits your energy prices
         href: /government/publications/energy-bills-support/energy-bills-support-factsheet-8-september-2022
       - link_text: Find out about the Cost of Living Payment
+        important_info: including the date of your next payment and how to report if it’s missing
         href: /guidance/cost-of-living-payment
-      - link_text: Find out about the Energy Bills Support Scheme
+      - link_text: Find out how the Energy Bills Support Scheme lowers your energy bills
+        important_info: including how to claim if you’ve got a prepayment meter
         href: /government/news/energy-bills-support-scheme-explainer
-      - link_text: Find out about the Winter Fuel Payment and Pensioner Cost of Living Payment
+      - link_text: Find out about and Pensioner Cost of Living Payment for winter 2022 and the Winter Fuel Payment
         href: /winter-fuel-payment
+      - link_text: Find out about the Wales fuel support scheme
+        important_info: ends 31 January 2023
+        href: https://gov.wales/wales-fuel-support-scheme-2022-2023
       - link_text: Find out about the Warm Home Discount Scheme
         href: /the-warm-home-discount-scheme
         important_info: opens 14 November 2022
       - link_text: Apply for the Cold Weather Payment
         href: /cold-weather-payment
+      - link_text: Find out how to understand and reduce your energy bills on the Citizens Advice website
+        href: https://www.citizensadvice.org.uk/consumer/energy/energy-supply/
+    - subheading: Support with your TV and internet bills
+      links:
+      - link_text: Apply for money off your TV Licence if you're over 75, blind or in residential care
+        href: /free-discount-tv-licence
       - link_text: Find out if you can get cheaper phone and broadband on the Ofcom website
         href: https://www.ofcom.org.uk/phones-telecoms-and-internet/advice-for-consumers/costs-and-billing/social-tariffs
       - link_text: Find out how to reduce your water bill and financial support you may be able to get
         href: https://www.ccwater.org.uk/households/help-with-my-bills/
-    - subheading: Support with Council Tax
+    - subheading: Support with your Council Tax
       links:
       - link_text: Apply for a Council Tax reduction in England, Scotland and Wales
         href: /apply-council-tax-reduction
       - link_text: Apply for Rate Relief in Northern Ireland
         href: https://www.nidirect.gov.uk/rates-help
-    - subheading: Support with prescriptions and health costs
+      - link_text: Contact your council for help with housing costs and Council Tax
+        href: /find-local-council
+    - subheading: Support with your prescriptions and health costs
       links:
       - link_text: Check if you’re eligible for support with prescriptions and health costs
         href: https://services.nhsbsa.nhs.uk/check-for-help-paying-nhs-costs/start
@@ -152,14 +181,18 @@ body:
         href: /budgeting-help-benefits
       - link_text: Social Fund Budgeting Loan in Northern Ireland
         href: https://www.nidirect.gov.uk/articles/social-fund-budgeting-loan
-  - heading: Support with childcare costs
+  - heading: Support with your childcare costs
     content:
     - subheading:
       links:
+      - link_text: Check what benefits and financial support you can get
+        href: /check-benefits-financial-support
       - link_text: Check what help you could get with childcare costs
         href: /childcare-calculator
       - link_text: Apply for Child Benefit
         href: /child-benefit
+      - link_text: Apply for Maternity Allowance
+        href: /maternity-allowance
       - link_text: Apply for support with childcare costs for children 11 or under (Tax-Free Childcare)
         href: /tax-free-childcare
       - link_text: Claim back childcare costs if you get Universal Credit
@@ -176,7 +209,7 @@ body:
           href: https://www.mygov.scot/childcare-costs-help/funded-early-learning-and-childcare
         - link_text: Apply for free childcare for children aged 3 to 4 in Wales
           href: https://gov.wales/childcare-3-and-4-year-olds
-    - subheading: Support with school costs (for example, equipment and uniforms)
+    - subheading: Support with your school costs (for example, equipment and uniforms)
       links:
         - link_text: Apply for support with school uniform costs in Scotland
           href: https://www.mygov.scot/clothing-grants
@@ -202,7 +235,7 @@ body:
         href: https://www.mygov.scot/free-school-transport
       - link_text: Apply for support with school transport costs in Northern Ireland
         href: https://www.eani.org.uk/help-available/home-to-school-transport
-    - subheading: Support with childcare costs if your child is disabled
+    - subheading: Support with your childcare costs if your child is disabled
       links:
       - link_text: Apply for Disability Living Allowance (DLA) for children in England, Wales and Northern Ireland
         href: /disability-living-allowance-children
@@ -214,16 +247,20 @@ body:
         href: https://www.healthystart.nhs.uk/how-to-apply/
       - link_text: Apply for Best Start Grant and Best Start Foods in Scotland
         href: https://www.mygov.scot/best-start-grant-best-start-foods
-    - subheading: Support with maternity costs
+    - subheading: Support with your maternity costs
       links:
       - link_text: Apply for the Maternity Grant (Sure Start) in England, Wales and Northern Ireland
         href: /sure-start-maternity-grant
       - link_text: Apply for Best Start Grant and Best Start Foods in Scotland
         href: https://www.mygov.scot/best-start-grant-best-start-foods
-  - heading: Support with housing costs
+      - link_text: Find out about the Education Maintenance Allowance in Northern Ireland
+        href: https://www.nidirect.gov.uk/articles/education-maintenance-allowance-explained
+  - heading: Support with your housing costs
     content:
     - subheading:
       links:
+      - link_text: Check what benefits and financial support you can get
+        href: /check-benefits-financial-support
       - link_text: Find out about support with housing costs if you get Universal Credit
         href: /housing-and-universal-credit
       - link_text: Apply for a Discretionary Housing Payment
@@ -240,29 +277,40 @@ body:
         href: https://www.mygov.scot/claim-housing-benefit
       - link_text: Apply for Housing Benefit in Northern Ireland
         href: https://www.nihe.gov.uk/Housing-Help/Housing-Benefit/Making-a-claim-for-Housing-Benefit
-  - heading: Support with travel costs
+  - heading: Support with your travel costs
     content:
-    - subheading: Help with rail costs
+    - subheading:
+    - links:
+      - link_text: Check what benefits and financial support you can get
+        href: /check-benefits-financial-support
+    - subheading: Support with your rail costs
       links:
       - link_text: Apply for a railcard from National Rail to save money on rail journeys
         href: https://www.railcard.co.uk/
       - link_text: Claim 50% off rail journeys from National Rail if you’re on Universal Credit
         href: https://www.nationalrail.co.uk/times_fares/jobcentre-plus-card.aspx
-    - subheading: Help with bus costs
+    - subheading: Support with your bus costs
       links:
       - link_text: Apply for an older person’s bus pass in England and Wales
         href: /apply-for-elderly-person-bus-pass
-      - link_text: Apply for an older or disabled person’s bus pass in Scotland
-        href: https://www.transport.gov.scot/concessionary-travel/60plus-or-disabled/
+      - link_text: Apply for an older person’s bus pass in Scotland
+        href: https://www.mygov.scot/older-persons-bus-pass
       - link_text: Apply for an older person’s bus pass in Northern Ireland
         href: https://www.nidirect.gov.uk/articles/60-smartpass-and-senior-65-smartpass
       - link_text: Apply for a disabled person’s bus pass in England
         href: /apply-for-disabled-bus-pass
-  - heading: Support for small businesses
+      - link_text: Apply for a disabled person’s bus pass in Scotland
+        href: https://www.mygov.scot/disabled-bus-pass
+      - link_text: Apply for a disabled person’s bus pass in Wales
+        href: https://gov.wales/apply-bus-pass
+      - link_text: Apply for a disabled person’s bus pass in Northern Ireland
+        href: https://www.nidirect.gov.uk/information-and-services/bus-and-coach-travel/free-bus-travel-and-concessions
+  - heading: Support for your businesses
     content:
     - subheading:
       links:
       - link_text: Find out how the Energy Bill Relief scheme limits the energy prices of your small business
+        important_info: runs between 1 October 2022 and 31 March 2023
         href: /guidance/energy-bill-relief-scheme-help-for-businesses-and-other-non-domestic-customers
       - link_text: Find out about support to improve the energy performance of your business
         href: /business-finance-support?keywords=energy

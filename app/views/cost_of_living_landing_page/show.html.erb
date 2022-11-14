@@ -52,20 +52,6 @@
     <%= content.header[:lede] %>
   </p>
 
-  <%= render 'govuk_publishing_components/components/action_link', {
-    white_arrow: true,
-    href: content.header[:href],
-    text: content.header[:link_text],
-    mobile_subtext: true,
-    light_text: true,
-    data: {
-      module: "gem-track-click",
-      track_category: "pageElementInteraction",
-      track_action: "Header",
-      track_label: content.header[:href],
-    }
-  } %>
-
 <% end %>
 
 <div class="colhub__announcement" data-module="gem-track-click">
