@@ -66,7 +66,7 @@ body:
     content:
       - subheading:
         links:
-        - link_text: Check what benefits and financial support you may be able to get
+        - link_text: Check what benefits and financial support you can get
           href: /check-benefits-financial-support
         - link_text: Find out about the Cost of Living Payment
           important_info: including the date of your next payment and how to report if it’s missing
@@ -149,14 +149,14 @@ body:
         href: /cold-weather-payment
       - link_text: Find out how to understand and reduce your energy bills on the Citizens Advice website
         href: https://www.citizensadvice.org.uk/consumer/energy/energy-supply/
+      - link_text: Find out how to reduce your water bill and financial support you may be able to get
+        href: https://www.ccwater.org.uk/households/help-with-my-bills/
     - subheading: Support with your TV and internet bills
       links:
       - link_text: Apply for money off your TV Licence if you're over 75, blind or in residential care
         href: /free-discount-tv-licence
       - link_text: Find out if you can get cheaper phone and broadband on the Ofcom website
         href: https://www.ofcom.org.uk/phones-telecoms-and-internet/advice-for-consumers/costs-and-billing/social-tariffs
-      - link_text: Find out how to reduce your water bill and financial support you may be able to get
-        href: https://www.ccwater.org.uk/households/help-with-my-bills/
     - subheading: Support with your Council Tax
       links:
       - link_text: Apply for a Council Tax reduction in England, Scotland and Wales
@@ -197,6 +197,8 @@ body:
         href: /tax-free-childcare
       - link_text: Claim back childcare costs if you get Universal Credit
         href: /guidance/universal-credit-childcare-costs
+      - link_text: Find out about the Scottish Child Payment for children under 16
+        href: https://www.mygov.scot/scottish-child-payment
     - subheading: Support with childcare for children aged 2 to 4
       links:
         - link_text: Apply for free childcare for children aged 2 in England
@@ -217,6 +219,8 @@ body:
           href: https://gov.wales/pupil-development-grant-access
         - link_text: Apply for support with school uniform costs in Northern Ireland
           href: https://www.eani.org.uk/financial-help/free-school-meals-uniform-grants
+        - link_text: Find out about the Education Maintenance Allowance in Northern Ireland
+          href: https://www.nidirect.gov.uk/articles/education-maintenance-allowance-explained
     - subheading: Support with school meal costs
       links:
         - link_text: Apply for free school meals in England
@@ -253,8 +257,6 @@ body:
         href: /sure-start-maternity-grant
       - link_text: Apply for Best Start Grant and Best Start Foods in Scotland
         href: https://www.mygov.scot/best-start-grant-best-start-foods
-      - link_text: Find out about the Education Maintenance Allowance in Northern Ireland
-        href: https://www.nidirect.gov.uk/articles/education-maintenance-allowance-explained
   - heading: Support with your housing costs
     content:
     - subheading:
@@ -305,7 +307,7 @@ body:
         href: https://gov.wales/apply-bus-pass
       - link_text: Apply for a disabled person’s bus pass in Northern Ireland
         href: https://www.nidirect.gov.uk/information-and-services/bus-and-coach-travel/free-bus-travel-and-concessions
-  - heading: Support for your businesses
+  - heading: Support for your business
     content:
     - subheading:
       links:
