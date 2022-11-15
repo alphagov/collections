@@ -187,7 +187,7 @@ GEM
     govuk_personalisation (0.12.0)
       plek (>= 1.9.0)
       rails (>= 6, < 8)
-    govuk_publishing_components (32.0.0)
+    govuk_publishing_components (32.1.0)
       govuk_app_config
       govuk_personalisation (>= 0.7.0)
       kramdown
@@ -303,7 +303,7 @@ GEM
       ast (~> 2.4.1)
     parslet (2.0.0)
     plek (4.1.0)
-    prometheus_exporter (2.0.3)
+    prometheus_exporter (2.0.5)
       webrick
     pry (0.14.1)
       coderay (~> 1.1)
@@ -438,10 +438,10 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    sentry-rails (5.5.0)
+    sentry-rails (5.6.0)
       railties (>= 5.0)
-      sentry-ruby (~> 5.5.0)
-    sentry-ruby (5.5.0)
+      sentry-ruby (~> 5.6.0)
+    sentry-ruby (5.6.0)
       concurrent-ruby (~> 1.0, >= 1.0.2)
     simplecov (0.21.2)
       docile (~> 1.1)
