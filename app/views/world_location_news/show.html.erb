@@ -186,7 +186,7 @@
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-one-third">
-          <% contact.dig("details", "post_addresses").each do |address| %>
+          <% contact.dig("details", "post_addresses")&.each do |address| %>
             <address class="govuk-body world_location_news__address">
               <%= Govspeak::HCardPresenter.new(address.symbolize_keys).render %>
             </address>
@@ -194,7 +194,7 @@
         </div>
 
         <div class="govuk-grid-column-two-thirds">
-          <% contact.dig("details", "email_addresses").each do |email_address| %>
+          <% contact.dig("details", "email_addresses")&.each do |email_address| %>
             <p class="govuk-body">
               Email
               <br>
@@ -202,7 +202,7 @@
             </p>
           <% end %>
 
-          <% contact.dig("details", "phone_numbers").each do |phone_number| %>
+          <% contact.dig("details", "phone_numbers")&.each do |phone_number| %>
             <p class="govuk-body">
               <%= phone_number["title"] %>
               <br>
