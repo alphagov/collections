@@ -137,7 +137,8 @@ body:
       - link_text: Find out how the Energy Bills Support Scheme lowers your energy bills
         important_info: including how to claim if you’ve got a prepayment meter
         href: /government/news/energy-bills-support-scheme-explainer
-      - link_text: Find out about and Pensioner Cost of Living Payment for winter 2022 and the Winter Fuel Payment
+      - link_text: Find out about the Winter Fuel Payment and Pensioner Cost of Living Payment
+        important_info: for winter 2022 to 2023
         href: /winter-fuel-payment
       - link_text: Find out about the Wales fuel support scheme
         important_info: ends 31 January 2023
