@@ -1,4 +1,6 @@
 class BrowseController < ApplicationController
+  include ResearchPanelBannerHelper
+
   slimmer_template "gem_layout_full_width"
 
   def index
@@ -10,6 +12,7 @@ class BrowseController < ApplicationController
   end
 
   def show
+    @sign_up_url = signup_url_for(request.path)
     page = MainstreamBrowsePage.find("/browse/#{params[:top_level_slug]}")
     setup_content_item_and_navigation_helpers(page)
 

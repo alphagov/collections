@@ -1,7 +1,6 @@
 module ResearchPanelBannerHelper
   SIGNUP_URL = "https://signup.take-part-in-research.service.gov.uk/?utm_campaign=GOV.UK&utm_source=govukhp&utm_medium=gov.uk&t=GDS&id=456".freeze
   RECRUITMENT_PAGES = {
-    "/bank-holidays" => SIGNUP_URL,
     "/browse/benefits" => SIGNUP_URL,
     "/browse/births-deaths-marriages/register-offices" => SIGNUP_URL,
     "/browse/disabilities" => SIGNUP_URL,
@@ -12,5 +11,9 @@ module ResearchPanelBannerHelper
   def signup_url_for(path)
     key = RECRUITMENT_PAGES.keys.find { |topic| path.eql?(topic) }
     RECRUITMENT_PAGES[key]
+  end
+
+  def recruitment_pages
+    RECRUITMENT_PAGES.keys
   end
 end
