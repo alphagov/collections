@@ -1,6 +1,7 @@
 ---
 et:
   world_location_news:
+    find_out_more: Vaata kogu profiili ja kõiki kontaktandmeid
     headings:
       announcements: Meie teadaanded
       documents: Dokumendid

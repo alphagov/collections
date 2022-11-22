@@ -1,6 +1,7 @@
 ---
 gd:
   world_location_news:
+    find_out_more: Féach ar phróifíl iomlán agus faisnéis teagmhála
     headings:
       announcements: Ár liostaí
       documents: Doiciméid

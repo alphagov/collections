@@ -1,6 +1,7 @@
 ---
 is:
   world_location_news:
+    find_out_more: Sjá allan prófílinn og allar upplýsingar til að hafa samband
     headings:
       announcements: Okkar tilkynningar
       documents: Skjöl

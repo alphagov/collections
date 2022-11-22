@@ -1,6 +1,7 @@
 ---
 th:
   world_location_news:
+    find_out_more: ดูรายแฟ้มประวัติฉบับเต็มและรายละเอียดการติดต่อทั้งหมด
     headings:
       announcements: ประกาศของเรา
       documents: เอกสาร

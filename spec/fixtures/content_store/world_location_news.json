@@ -50,6 +50,38 @@
         "locale": "en",
         "base_path": "/world/somewhere"
       }
+    ],
+    "organisations": [
+      {
+        "content_id": "org-1",
+        "title": "Department 1",
+        "base_path": "government/organisations/department-1",
+        "details": {
+          "logo": {
+            "crest": "single-identity"
+          },
+          "brand": "department-1"
+        }
+      },
+      {
+        "content_id": "org-2",
+        "title": "Department 2",
+        "base_path": "government/organisations/department-2",
+        "details": {
+          "logo": {
+            "crest": "single-identity"
+          },
+          "brand": "department-2"
+       }
+      }
+    ],
+    "worldwide_organisations": [
+      {
+        "content_id": "world-org-1",
+        "title": "UK delegation to nowhere",
+        "base_path": "/world/nowhere",
+        "description": "Information about our delegation"
+      }
     ]
   }
 }

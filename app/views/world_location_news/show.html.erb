@@ -1,4 +1,5 @@
 <% content_for :title, @world_location_news.title %>
+<% page_class "world-location-news-show" %>
 
 <% content_for :meta_tags do %>
   <%= tag("meta", name: "description", content: @world_location_news.description) if @world_location_news.description %>
@@ -98,7 +99,7 @@
 
 <% if I18n.locale == :en && (@world_location_news.announcements.any? || @world_location_news.publications.any? || @world_location_news.statistics.any?) %>
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-7">
+    <div class="govuk-grid-column-two-thirds">
       <%= render "govuk_publishing_components/components/heading", {
         text: I18n.t("world_location_news.headings.documents"),
         padding: true,
@@ -110,6 +111,106 @@
       <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @world_location_news.announcements, heading: I18n.t("world_location_news.headings.announcements"), link_to: search_url(:world_location_news, :announcement, @world_location_news.slug) }) if @world_location_news.announcements.any? %>
       <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @world_location_news.publications, heading: I18n.t("world_location_news.headings.publications"), link_to: search_url(:world_location_news, :publication, @world_location_news.slug) }) if @world_location_news.publications.any? %>
       <%= render(partial: 'shared/document_list_from_search_api', locals: { documents: @world_location_news.statistics, heading: I18n.t("world_location_news.headings.statistics"), link_to: search_url(:world_location_news, :statistic, @world_location_news.slug) }) if @world_location_news.statistics.any? %>
+    </div>
+  </div>
+<% end %>
+
+<% if @world_location_news.organisations&.any? %>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-7">
+      <section id="organisations">
+        <%= render "govuk_publishing_components/components/heading", {
+          text: I18n.t("world_location_news.headings.organisations"),
+          padding: true,
+          font_size: 27,
+          margin_bottom: 3,
+          heading_level: 2,
+          border_top: 2,
+        } %>
+
+        <% @world_location_news.organisations.flatten.in_groups_of(3, false) do |row| %>
+          <div class="govuk-grid-row">
+            <% row.each do |organisation|%>
+              <div class="govuk-grid-column-one-third govuk-!-padding-bottom-7">
+                <%= render "govuk_publishing_components/components/organisation_logo", {
+                  organisation: {
+                    name: organisation["title"],
+                    url: organisation["base_path"],
+                    crest: organisation.dig("details", "logo", "crest"),
+                    brand: organisation.dig("details", "brand"),
+                  }
+                } %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </section>
+    </div>
+  </div>
+<% end %>
+
+<% if @world_location_news.worldwide_organisations&.any? %>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-7">
+      <% @world_location_news.worldwide_organisations.each do |organisation| %>
+        <%= render "govuk_publishing_components/components/heading", {
+          text: organisation["title"],
+          padding: true,
+          border_top: 1,
+          margin_bottom: 3,
+          heading_level: 3,
+        } %>
+
+        <p class="govuk-body">
+          <%= organisation["description"] %>
+        </p>
+
+        <p class="govuk-body">
+          <%= link_to(I18n.t("world_location_news.find_out_more"), organisation["base_path"]) %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+
+<% @world_location_news.contacts&.each do |contact| %>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-7">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: contact.dig("details", "title"),
+        padding: true,
+        border_top: 1,
+        margin_bottom: 3,
+        heading_level: 3,
+      } %>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <% contact.dig("details", "post_addresses")&.each do |address| %>
+            <address class="govuk-body world_location_news__address">
+              <%= Govspeak::HCardPresenter.new(address.symbolize_keys).render %>
+            </address>
+          <% end %>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <% contact.dig("details", "email_addresses")&.each do |email_address| %>
+            <p class="govuk-body">
+              Email
+              <br>
+              <%= link_to(email_address["email"], "mailto:#{email_address['email']}", class: "govuk-link") %>
+            </p>
+          <% end %>
+
+          <% contact.dig("details", "phone_numbers")&.each do |phone_number| %>
+            <p class="govuk-body">
+              <%= phone_number["title"] %>
+              <br>
+              <span dir="ltr"><%= phone_number["number"] %></span>
+            </p>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 <% end %>
