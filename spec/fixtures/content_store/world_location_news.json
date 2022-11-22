@@ -2,6 +2,8 @@
   "base_path": "/world/mock-country/news",
   "title": "UK and Mock Country",
   "description": "Find out about the relations between the UK and Mock Country",
+  "document_type": "world_location_news",
+  "phase": "live",
   "details": {
     "mission_statement": "Our mission is to test world location news.",
     "ordered_featured_documents": [
