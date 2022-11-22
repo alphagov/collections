@@ -222,6 +222,27 @@ RSpec.feature "World Location News pages" do
     end
   end
 
+  context "for an International Delegation page" do
+    let(:base_path) { "/world/mock-country" }
+
+    before do
+      content_item["base_path"] = base_path
+      content_item["details"]["world_location_news_type"] = "international_delegation"
+      stub_content_store_has_item(base_path, content_item)
+    end
+
+    it "renders the news page" do
+      visit base_path
+      expect(page).to have_title("UK and Mock Country - GOV.UK")
+      expect(page).to have_text("International delegation")
+    end
+
+    it "renders the atom feed" do
+      visit "#{base_path}.atom"
+      expect(page).to have_title("#{content_item['title']} - Activity on GOV.UK")
+    end
+  end
+
 private
 
   def content_item_without_detail(content_item, key_to_remove)
