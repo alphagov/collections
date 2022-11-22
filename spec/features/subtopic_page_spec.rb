@@ -52,11 +52,18 @@ RSpec.feature "Subtopic pages" do
                 "/oil-rig-staffing",
                 "/oil-rig-safety-requirements",
               ],
+              content_ids: %w[
+                oil-rig-staffing-content-id
+                oil-rig-safety-requirements-content-id
+              ],
             },
             {
               name: "Piping",
               contents: [
                 "/undersea-piping-restrictions",
+              ],
+              content_ids: %w[
+                undersea-piping-restrictions-content-id
               ],
             },
           ],
@@ -176,7 +183,7 @@ RSpec.feature "Subtopic pages" do
       expect(titles).to eq(expected_titles)
     end
 
-    fit "paginates the results" do
+    it "paginates the results" do
       # Given there is latest content for a subtopic
       search_api_has_latest_documents_for_subtopic(
         "content-id-for-offshore",
@@ -234,11 +241,17 @@ RSpec.feature "Subtopic pages" do
               contents: [
                 "/oil-rig-safety-requirements",
               ],
+              content_ids: %w[
+                oil-rig-safety-requirements-content-id
+              ],
             },
             {
               name: "Piping",
               contents: [
                 "/undersea-piping-restrictions",
+              ],
+              content_ids: %w[
+                undersea-piping-restrictions-content-id
               ],
             },
           ],

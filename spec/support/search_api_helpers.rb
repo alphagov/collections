@@ -195,6 +195,7 @@ module SearchApiHelpers
       "document_type" => "edition",
       "content_store_document_type" => "guidance",
       "organisations" => [{ "title" => "Tagged Organisation Title" }],
+      "content_id" => "#{slug}-content-id",
     }
   end
 

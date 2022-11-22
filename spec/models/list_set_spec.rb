@@ -10,6 +10,11 @@ RSpec.describe ListSet do
             "/pay-psa",
             "/pay-paye-penalty",
           ],
+          "content_ids" => %w[
+            pay-paye-tax-content-id
+            pay-psa-content-id
+            pay-paye-penalty-content-id
+          ],
         },
         {
           "name" => "Annual PAYE and payroll tasks",
@@ -17,6 +22,11 @@ RSpec.describe ListSet do
             "/payroll-annual-reporting",
             "/get-paye-forms-p45-p60",
             "/employee-tax-codes",
+          ],
+          "content_ids" => %w[
+            payroll-annual-reporting-content-id
+            get-paye-forms-p45-p60-content-id
+            employee-tax-codes-content-id
           ],
         },
       ]
@@ -64,10 +74,14 @@ RSpec.describe ListSet do
         "contents" => [
           "/pay-bear-tax",
         ],
+        "content_ids" => %w[
+          pay-bear-tax-content-id
+        ],
       }
       group_data << {
         "name" => "Empty group",
         "contents" => [],
+        "content_ids" => [],
       }
 
       expect(list_set.count).to eq(2)
@@ -208,6 +222,40 @@ RSpec.describe ListSet do
       results = list_set.first.contents
       expect(results.length).to eq(1)
       expect(results.first.title).to eq("Baz")
+    end
+  end
+
+  describe "for a curated subtopic, when document's slug changed" do
+    let(:group_data) do
+      [
+        {
+          "name" => "Paying HMRC",
+          "contents" => [
+            "/pay-paye-tax-old-base-path",
+          ],
+          "content_ids" => %w[
+            pay-paye-tax-content-id
+          ],
+        },
+      ]
+    end
+
+    before do
+      search_api_has_documents_for_subtopic(
+        "paye-content-id",
+        %w[
+          pay-paye-tax
+        ],
+        page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
+      )
+    end
+
+    let(:list_set) { described_class.new("specialist_sector", "paye-content-id", group_data) }
+
+    it "provides the title and new base_path for group items" do
+      groups = list_set.to_a
+
+      expect(groups.first.contents.first.base_path).to eq("/pay-paye-tax")
     end
   end
 end

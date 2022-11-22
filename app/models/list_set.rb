@@ -48,8 +48,8 @@ private
 
   def curated_list
     curated_data = @group_data.map do |group|
-      contents = group["contents"].map do |base_path|
-        content_tagged_to_tag.find { |content| content.base_path == base_path }
+      contents = group["content_ids"].map do |content_id|
+        content_tagged_to_tag.find { |content| content.content_id == content_id }
       end
 
       ListSet::List.new(group["name"], contents.compact) if contents.any?
@@ -63,7 +63,7 @@ private
       :start => 0,
       :count => SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING,
       filter_name => [@tag_content_id],
-      :fields => %w[title link format],
+      :fields => %w[title link format content_id],
     )
   end
 

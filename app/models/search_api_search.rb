@@ -23,6 +23,7 @@ class SearchApiSearch
         content_store_document_type: result["content_store_document_type"],
         organisations:,
         image_url: result["image_url"],
+        content_id: result["content_id"],
       )
     end
   end
