@@ -51,7 +51,7 @@ module ApplicationHelper
   def t_fallback(key, options = {})
     translation =
       begin
-        I18n.t(key, options.merge(locale: I18n.locale, fallback: false, default: "fallback"))
+        I18n.t(key, **options.merge(locale: I18n.locale, fallback: false, default: "fallback"))
       rescue I18n::InvalidPluralizationData
         nil
       end
