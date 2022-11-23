@@ -93,6 +93,10 @@ Rails.application.routes.draw do
       to: "world_location_news#show",
       as: :world_location_news
 
+  get "/world/:name(.:locale).atom",
+      to: "world_location_news#show",
+      as: :international_delegation_news_feed
+
   get "/world/*taxon_base_path", to: "world_wide_taxons#show"
 
   # We get requests for URLs like
