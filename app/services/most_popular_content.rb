@@ -10,7 +10,7 @@ class MostPopularContent
   end
 
   def self.fetch(content_id:, filter_content_store_document_type:)
-    new(content_id: content_id, filter_content_store_document_type: filter_content_store_document_type).fetch
+    new(content_id:, filter_content_store_document_type:).fetch
   end
 
   def fetch
@@ -27,7 +27,7 @@ private
       fields: SearchApiFields::TAXON_SEARCH_FIELDS,
       filter_part_of_taxonomy_tree: Array(content_id),
       order: "-popularity",
-      filter_content_store_document_type: filter_content_store_document_type,
+      filter_content_store_document_type:,
     }
 
     SearchApiSearch.new(params)

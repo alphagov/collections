@@ -2,14 +2,14 @@ module PaginationHelper
   def paginate(results, wrap_in_results_array)
     if wrap_in_results_array
       {
-        results: results,
-        previous_page_url: previous_page_url,
-        next_page_url: next_page_url,
-        current_page: current_page,
+        results:,
+        previous_page_url:,
+        next_page_url:,
+        current_page:,
         total: total_results,
         pages: number_of_pages,
         page_size: results_per_page,
-        start_index: start_index,
+        start_index:,
         _response_info: response_info,
       }.compact
     else
@@ -73,7 +73,7 @@ private
   def response_info
     {
       status: "ok",
-      links: links,
+      links:,
     }
   end
 end

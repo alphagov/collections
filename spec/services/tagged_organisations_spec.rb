@@ -31,7 +31,7 @@ RSpec.describe TaggedOrganisations do
         },
       }
 
-      stub_search(params: params, body: search_results)
+      stub_search(params:, body: search_results)
 
       organisations = tagged_organisations.fetch
       expect(organisations.count).to eq(1)
@@ -59,7 +59,7 @@ RSpec.describe TaggedOrganisations do
         },
       }
 
-      stub_search(params: params, body: search_results)
+      stub_search(params:, body: search_results)
 
       organisations = tagged_organisations.fetch
       expect(organisations.count).to eq(1)

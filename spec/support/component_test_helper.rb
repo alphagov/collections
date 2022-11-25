@@ -4,6 +4,6 @@ module ComponentTestHelper
   end
 
   def render_component(locals)
-    render partial: "components/#{component_name}", locals: locals
+    render partial: "components/#{component_name}", locals:
   end
 end

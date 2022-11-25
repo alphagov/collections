@@ -20,7 +20,7 @@ class CostOfLivingLandingPagePresenter
 
     {
       track_category: "contentsClicked",
-      track_action: track_action,
+      track_action:,
       track_label: href,
       track_count: "contentLink",
     }

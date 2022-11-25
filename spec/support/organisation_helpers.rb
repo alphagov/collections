@@ -86,11 +86,11 @@ module OrganisationHelpers
       links: {
         role: [
           {
-            content_id: content_id,
-            title: title,
-            base_path: base_path,
-            document_type: document_type,
-            details: { role_payment_type: payment_type, seniority: seniority },
+            content_id:,
+            title:,
+            base_path:,
+            document_type:,
+            details: { role_payment_type: payment_type, seniority: },
           }.compact,
         ],
       },

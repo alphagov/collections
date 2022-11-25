@@ -33,7 +33,7 @@ module Organisations
       contacts.map do |contact|
         {
           locale: contact["locale"].presence,
-          title: foi_title(contact["details"]["title"], foi: foi),
+          title: foi_title(contact["details"]["title"], foi:),
           post_addresses: contact["details"]["post_addresses"]&.map do |post|
             contact_address(post)
           end || [],
@@ -47,7 +47,7 @@ module Organisations
             make_email_link(email["email"])
           end || [],
           links: contact["details"]["contact_form_links"]&.map do |link|
-            make_link(link, foi_title(contact["details"]["title"], foi: foi), foi)
+            make_link(link, foi_title(contact["details"]["title"], foi:), foi)
           end || [],
           description: contact_description(contact["details"]["description"]),
         }
@@ -63,7 +63,7 @@ module Organisations
     def make_link(link, contact_title, foi)
       if link["link"].present?
         link_to(
-          make_link_text(link["description"], contact_title, foi: foi),
+          make_link_text(link["description"], contact_title, foi:),
           link["link"],
           class: "govuk-link brand__color",
         )

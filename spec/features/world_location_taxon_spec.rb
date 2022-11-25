@@ -12,7 +12,7 @@ RSpec.feature "World location taxon page" do
   let(:email_url) { Plek.new.website_root + "/email-signup?link=#{base_path}" }
 
   scenario "contains both the atom and email signup url if we are browsing a world location" do
-    world_usa = world_usa_taxon(base_path: base_path, phase: "live")
+    world_usa = world_usa_taxon(base_path:, phase: "live")
     world_usa_news_events = world_usa_news_events_taxon(base_path: child_taxon_base_path)
 
     stub_content_store_has_item(base_path, world_usa)
@@ -29,7 +29,7 @@ RSpec.feature "World location taxon page" do
   end
 
   scenario "does not contain the feed selector if we are browsing a world location leaf page" do
-    world_usa = world_usa_taxon(base_path: base_path, phase: "live")
+    world_usa = world_usa_taxon(base_path:, phase: "live")
     world_usa.delete("links")
 
     stub_content_store_has_item(base_path, world_usa)

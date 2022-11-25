@@ -51,6 +51,6 @@ RSpec.describe Organisations::DocumentPresenter do
       "public_timestamp" => "2022-11-21T12:00:00.000+01:00",
     }.merge(options)
 
-    described_class.new(params, include_metadata: include_metadata)
+    described_class.new(params, include_metadata:)
   end
 end

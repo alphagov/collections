@@ -173,7 +173,7 @@ RSpec.describe ListSet do
         "total" => 1,
       }
 
-      stub_search(params: params, body: body)
+      stub_search(params:, body:)
 
       documents = list_set.first.contents
 

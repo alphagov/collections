@@ -15,7 +15,7 @@ class WorldLocationNewsController < ApplicationController
         results = FeedContent.new(filter_world_locations: params[:name]).results(10)
         items = results.map { |result| FeedEntryPresenter.new(result) }
 
-        render "feeds/feed", locals: { items: items, root_url: Plek.new.website_root + path, title: "#{@world_location_news.title} - Activity on GOV.UK" }
+        render "feeds/feed", locals: { items:, root_url: Plek.new.website_root + path, title: "#{@world_location_news.title} - Activity on GOV.UK" }
       end
     end
   end

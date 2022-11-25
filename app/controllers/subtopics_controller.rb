@@ -5,7 +5,7 @@ class SubtopicsController < ApplicationController
 
     render :show,
            locals: {
-             subtopic: subtopic,
+             subtopic:,
              meta_section: subtopic.parent.title.downcase,
            }
   end
