@@ -20,7 +20,7 @@ module OrganisationHelper
     {
       brand: (organisation.brand if organisation.is_live?),
       items: search_results.map do |result|
-        Organisations::DocumentPresenter.new(result, include_metadata:).present
+        Organisations::DocumentPresenter.new(result, include_metadata: include_metadata).present
       end,
     }
   end

@@ -36,7 +36,7 @@ RSpec.describe CostOfLivingLandingPagePresenter do
 
     it "returns correct tracking attributes for an internal link" do
       expect(presenter.link_clicked_track_data(
-               track_action:,
+               track_action: track_action,
                href: "/guidance/universal-credit-childcare-costs",
              )).to eq({
                track_category: "contentsClicked",
@@ -48,7 +48,7 @@ RSpec.describe CostOfLivingLandingPagePresenter do
 
     it "returns number of links tracking attribute for an external link" do
       expect(presenter.link_clicked_track_data(
-               track_action:,
+               track_action: track_action,
                href: "https://www.moneyhelper.org.uk/",
              )).to eq({ track_count: "contentLink" })
     end

@@ -56,7 +56,7 @@ describe Search::Supergroups do
 
   def stub_search_api_supergroup_request(group, organisation_slug, results)
     stub_supergroup_request(
-      results:,
+      results: results,
       additional_params: {
         filter_content_purpose_supergroup: group,
         filter_organisations: organisation_slug,

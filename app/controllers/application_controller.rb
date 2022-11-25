@@ -107,6 +107,6 @@ private
   end
 
   def render_partial(partial_name, locals = {})
-    render_to_string(partial_name, formats: [:html], layout: false, locals:)
+    render_to_string(partial_name, formats: [:html], layout: false, locals: locals)
   end
 end

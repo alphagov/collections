@@ -28,7 +28,7 @@ module SearchApiHelpers
       "total" => results.size,
     }
 
-    stub_search(params:, body:)
+    stub_search(params: params, body: body)
   end
 
   def stub_document_types_for_supergroup(supergroup)
@@ -60,7 +60,7 @@ module SearchApiHelpers
       "start" => 0,
       "total" => results.size,
     }
-    stub_search(params:, body:)
+    stub_search(params: params, body: body)
   end
 
   def stub_most_popular_content_for_taxon(content_id, results,
@@ -73,7 +73,7 @@ module SearchApiHelpers
       fields: webmock_match_array(fields),
       filter_part_of_taxonomy_tree: Array(content_id),
       order: "-popularity",
-      filter_content_store_document_type:,
+      filter_content_store_document_type: filter_content_store_document_type,
     }
 
     body = {
@@ -82,7 +82,7 @@ module SearchApiHelpers
       "total" => results.size,
     }
 
-    stub_search(params:, body:)
+    stub_search(params: params, body: body)
   end
 
   def stub_most_recent_content_for_taxon(content_id, results,
@@ -95,7 +95,7 @@ module SearchApiHelpers
       fields: webmock_match_array(fields),
       filter_part_of_taxonomy_tree: [content_id],
       order: "-public_timestamp",
-      filter_content_store_document_type:,
+      filter_content_store_document_type: filter_content_store_document_type,
     }
 
     body = {
@@ -104,7 +104,7 @@ module SearchApiHelpers
       "total" => results.size,
     }
 
-    stub_search(params:, body:)
+    stub_search(params: params, body: body)
   end
 
   def stub_organisations_for_taxon(content_id, organisations)
@@ -123,7 +123,7 @@ module SearchApiHelpers
       },
     }
 
-    stub_search(params:, body:)
+    stub_search(params: params, body: body)
   end
 
   def generate_search_results(count, supergroup = "default")
@@ -158,7 +158,7 @@ module SearchApiHelpers
         facet_organisations: "1000" }
     response = stub_search_has_specialist_sector_organisations(slug)
 
-    stub_search(params:, body: response)
+    stub_search(params: params, body: response)
   end
 
   def stub_services_and_information_links(organisation_id)
@@ -169,7 +169,7 @@ module SearchApiHelpers
     }
     response = stub_search_has_services_and_info_data_for_organisation
 
-    stub_search(params:, body: response)
+    stub_search(params: params, body: response)
   end
 
   def stub_services_and_information_links_with_missing_keys(organisation_id)
@@ -180,7 +180,7 @@ module SearchApiHelpers
     }
     response = stub_search_has_services_and_info_data_with_missing_keys_for_organisation
 
-    stub_search(params:, body: response)
+    stub_search(params: params, body: response)
   end
 
   def search_api_document_for_slug(slug, updated_at = 1.hour.ago, format = "guide")
@@ -227,7 +227,7 @@ module SearchApiHelpers
         "start" => start,
         "total" => results.size,
       }
-      stub_search(params:, body:)
+      stub_search(params: params, body: body)
     end
   end
 
@@ -247,7 +247,7 @@ module SearchApiHelpers
         "start" => start,
         "total" => results.size,
       }
-      stub_search(params:, body:)
+      stub_search(params: params, body: body)
     end
   end
 
@@ -268,7 +268,7 @@ module SearchApiHelpers
         "start" => start,
         "total" => results.size,
       }
-      stub_search(params:, body:)
+      stub_search(params: params, body: body)
     end
   end
 
@@ -310,7 +310,7 @@ module SearchApiHelpers
       "start" => "0",
       "total" => results.size,
     }
-    stub_search(params:, body:)
+    stub_search(params: params, body: body)
   end
 
   # arrays are sorted when webmock turns the parameters hash into a query string.

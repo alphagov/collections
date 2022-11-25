@@ -33,7 +33,7 @@ module Organisations
 
         {
           title: feature["title"],
-          number_of_items:,
+          number_of_items: number_of_items,
           parent_column_class: "column-#{number_of_items}",
           child_column_class: promotions_child_column_class(number_of_items),
           items: items_for_a_promotional_feature(feature),
@@ -99,8 +99,8 @@ module Organisations
           image_src: image_url_by_size(news["image"]["url"], image_size),
           image_alt: news["image"]["alt_text"],
           context: {
-            date:,
-            text:,
+            date: date,
+            text: text,
           },
           heading_text: news["title"],
           description: news["summary"].html_safe,

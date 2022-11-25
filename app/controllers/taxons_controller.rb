@@ -9,8 +9,8 @@ class TaxonsController < ApplicationController
     redirect_to(url_override, status: :temporary_redirect) and return if url_override.present?
 
     render locals: {
-      presented_taxon:,
-      presentable_section_items:,
+      presented_taxon: presented_taxon,
+      presentable_section_items: presentable_section_items,
     }
   end
 

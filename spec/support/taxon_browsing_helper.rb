@@ -94,8 +94,8 @@ module TaxonBrowsingHelper
     content_config.each_value do |config|
       stub_document_types_for_supergroup(config[:content_type])
 
-      dummy_content = generate_dummy_search_content(**config)
-      stub_search_api_response(dummy_content, **config)
+      dummy_content = generate_dummy_search_content(config)
+      stub_search_api_response(dummy_content, config)
     end
 
     stub_organisations_for_taxon(content_id, tagged_organisations)

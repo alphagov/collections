@@ -4,10 +4,10 @@ class LatestChangesController < SubtopicsController
 
     render :index,
            locals: {
-             subtopic:,
-             meta_section:,
-             hardcoded_breadcrumbs:,
-             pagination_presenter:,
+             subtopic: subtopic,
+             meta_section: meta_section,
+             hardcoded_breadcrumbs: hardcoded_breadcrumbs,
+             pagination_presenter: pagination_presenter,
            }
   end
 

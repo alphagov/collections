@@ -238,7 +238,7 @@ RSpec.describe TaxonOrganisationsPresenter do
       ]
 
       expected = {
-        organisations_with_logos:,
+        organisations_with_logos: organisations_with_logos,
         organisations_without_logos: [],
       }
 
@@ -269,7 +269,7 @@ RSpec.describe TaxonOrganisationsPresenter do
 
       expected = {
         organisations_with_logos: [],
-        organisations_without_logos:,
+        organisations_without_logos: organisations_without_logos,
       }
 
       expect(taxon_organisations_presenter.show_more_organisation_list).to eq(expected)

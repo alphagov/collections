@@ -108,7 +108,7 @@ private
     question_and_answers = []
     content_item["details"]["sections"].each do |section|
       question = section["title"]
-      answers_text = ApplicationController.render partial: "coronavirus_landing_page/components/shared/section", locals: { section: }
+      answers_text = ApplicationController.render partial: "coronavirus_landing_page/components/shared/section", locals: { section: section }
       question_and_answers.push question_and_answer_schema(question, answers_text)
     end
     question_and_answers

@@ -39,7 +39,7 @@ RSpec.feature "Step by step nav pages" do
   def step_nav_example
     schema = GovukSchemas::Schema.find(frontend_schema: "step_by_step_nav")
 
-    GovukSchemas::RandomExample.new(schema:).payload.tap do |item|
+    GovukSchemas::RandomExample.new(schema: schema).payload.tap do |item|
       item["base_path"] = "/learn-to-drive-a-car"
     end
   end

@@ -1,4 +1,4 @@
-atom_feed(language: "en-GB", root_url:) do |feed|
+atom_feed(language: "en-GB", root_url: root_url) do |feed|
   feed.title(title)
 
   feed.author do |author|

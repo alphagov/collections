@@ -1,5 +1,3 @@
-ENV["PACT_DO_NOT_TRACK"] = "true"
-
 require "pact/provider/rspec"
 require "webmock/rspec"
 require "gds_api"

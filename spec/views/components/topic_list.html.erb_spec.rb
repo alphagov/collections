@@ -38,12 +38,12 @@ RSpec.describe "topic-list component" do
   end
 
   it "renders a see more link" do
-    render_component(items: [simple_item], see_more_link:)
+    render_component(items: [simple_item], see_more_link: see_more_link)
     expect(rendered).to have_selector(".app-c-topic-list__item a[href='/more'][data-test='test']", text: "More")
   end
 
   it "adds branding correctly" do
-    render_component(items: [simple_item], see_more_link:, brand: "attorney-generals-office")
+    render_component(items: [simple_item], see_more_link: see_more_link, brand: "attorney-generals-office")
     expect(rendered).to have_selector(".app-c-topic-list.brand--attorney-generals-office")
     expect(rendered).to have_selector(".app-c-topic-list .app-c-topic-list__link.brand__color")
     expect(rendered).to have_selector(".brand__color", text: "More")

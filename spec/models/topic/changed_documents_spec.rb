@@ -72,7 +72,7 @@ RSpec.describe Topic::ChangedDocuments do
       body = { "results" => [result],
                "start" => 0,
                "total" => 1 }
-      stub_search(params:, body:)
+      stub_search(params: params, body: body)
 
       subject = described_class.new(subtopic_content_id)
 

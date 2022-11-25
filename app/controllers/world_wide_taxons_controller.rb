@@ -11,7 +11,7 @@ class WorldWideTaxonsController < ApplicationController
 
     render taxon_template,
            locals: {
-             presented_taxon:,
+             presented_taxon: presented_taxon,
            }
   end
 

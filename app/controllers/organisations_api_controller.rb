@@ -28,18 +28,18 @@ private
   RESULTS_PER_PAGE = 20
 
   def presented_organisations(start:)
-    organisations = organisations_from_search(count: RESULTS_PER_PAGE, start:)
+    organisations = organisations_from_search(count: RESULTS_PER_PAGE, start: start)
     OrganisationsApiPresenter.new(
       organisations["results"],
-      current_page:,
+      current_page: current_page,
       results_per_page: RESULTS_PER_PAGE,
       total_results: organisations["total"],
-      current_url_without_parameters:,
+      current_url_without_parameters: current_url_without_parameters,
     ).present
   end
 
   def presented_organisation(slug:)
-    organisation = organisation_from_search(slug:)
+    organisation = organisation_from_search(slug: slug)
 
     raise OrganisationNotFound if organisation["total"].zero?
 
@@ -48,7 +48,7 @@ private
       current_page: 1,
       results_per_page: 1,
       total_results: 1,
-      current_url_without_parameters:,
+      current_url_without_parameters: current_url_without_parameters,
       wrap_in_results_array: false,
     ).present
   end
@@ -57,8 +57,8 @@ private
     params = {
       filter_format: "organisation",
       order: "title",
-      count:,
-      start:,
+      count: count,
+      start: start,
     }
 
     @organisations_from_search ||= Services.cached_search(params, metric_key: "organisations_api.search.request_time")

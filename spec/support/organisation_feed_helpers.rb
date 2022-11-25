@@ -15,7 +15,7 @@ module OrganisationFeedHelpers
       "start" => 0,
       "total" => results.size,
     }
-    stub_search(params:, body:)
+    stub_search(params: params, body: body)
   end
 
   def stub_empty_results
@@ -24,7 +24,7 @@ module OrganisationFeedHelpers
       "start" => 0,
       "total" => 0,
     }
-    stub_search(body:)
+    stub_search(body: body)
   end
 
   def stub_content_for_government_feed
@@ -40,7 +40,7 @@ module OrganisationFeedHelpers
       "start" => 0,
       "total" => results_from_search_api.size,
     }
-    stub_search(params:, body:)
+    stub_search(params: params, body: body)
   end
 
   def results_from_search_api

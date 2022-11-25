@@ -125,7 +125,7 @@ RSpec.describe Role do
         "total" => 1,
       }
 
-      stub_search(body:)
+      stub_search(body: body)
     end
 
     it "should have announcements" do

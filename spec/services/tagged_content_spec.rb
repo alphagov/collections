@@ -20,7 +20,7 @@ RSpec.describe TaggedContent do
         order: "title",
       }
 
-      stub_search(params:, body: search_results)
+      stub_search(params: params, body: search_results)
 
       results = tagged_content.fetch
       expect(1).to eq(results.count)

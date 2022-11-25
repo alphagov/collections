@@ -40,7 +40,7 @@ RSpec.describe DocumentTypeRoutingConstraint do
         error = GdsApi::HTTPNotFound.new(404)
 
         subject = described_class.new("foo")
-        inspector = instance_double("DocumentTypeInspector", document_type: nil, error:)
+        inspector = instance_double("DocumentTypeInspector", document_type: nil, error: error)
 
         allow(subject)
         .to receive(:document_type_inspector)

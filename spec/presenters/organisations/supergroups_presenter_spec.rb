@@ -19,7 +19,7 @@ RSpec.describe Organisations::SupergroupsPresenter do
   def presenter_from_organisation_hash(content, exclude_metadata_for: nil)
     content_item = ContentItem.new(content)
     organisation = Organisation.new(content_item)
-    described_class.new(organisation, exclude_metadata_for:)
+    described_class.new(organisation, exclude_metadata_for: exclude_metadata_for)
   end
 
   describe "#has_groups" do

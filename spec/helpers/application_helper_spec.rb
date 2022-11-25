@@ -45,7 +45,7 @@ RSpec.describe ApplicationHelper do
 
       it "returns the class with prefix when requested" do
         allow(I18n).to receive(:t).and_return "rtl"
-        expect(direction_rtl_class(prefix: true)).to eq("class=direction-rtl")
+        expect(direction_rtl_class({ prefix: true })).to eq("class=direction-rtl")
       end
     end
   end

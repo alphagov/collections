@@ -12,8 +12,8 @@ RSpec.describe SecondLevelBrowsePageController do
           title: "Entitlement",
           base_path: "/browse/benefits/entitlement",
           links: {
-            top_level_browse_pages:,
-            second_level_browse_pages:,
+            top_level_browse_pages: top_level_browse_pages,
+            second_level_browse_pages: second_level_browse_pages,
             active_top_level_browse_page: [{
               content_id: "content-id-for-benefits",
               title: "Benefits",
@@ -59,7 +59,7 @@ RSpec.describe SecondLevelBrowsePageController do
         }
       end
 
-      subject { get :show, params: }
+      subject { get :show, params: params }
 
       before do
         stub_content_store_has_item(
@@ -68,8 +68,8 @@ RSpec.describe SecondLevelBrowsePageController do
           title: "Entitlement",
           base_path: "/browse/benefits/entitlement",
           links: {
-            top_level_browse_pages:,
-            second_level_browse_pages:,
+            top_level_browse_pages: top_level_browse_pages,
+            second_level_browse_pages: second_level_browse_pages,
             active_top_level_browse_page: [{
               content_id: "content-id-for-benefits",
               title: "Benefits",
@@ -77,7 +77,7 @@ RSpec.describe SecondLevelBrowsePageController do
             }],
             related_topics: [{ title: "A linked topic", base_path: "/browse/linked-topic" }],
           },
-          details:,
+          details: details,
         )
 
         search_api_has_documents_for_browse_page(

@@ -5,7 +5,7 @@ class TopicsController < ApplicationController
 
     render :index,
            locals: {
-             topic:,
+             topic: topic,
              navigation_page_type: "Topic Index",
            }
   end
@@ -15,7 +15,7 @@ class TopicsController < ApplicationController
     setup_content_item_and_navigation_helpers(topic)
     render :index,
            locals: {
-             topic:,
+             topic: topic,
              navigation_page_type: "First Level Topic",
            }
   end

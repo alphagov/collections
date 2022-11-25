@@ -63,9 +63,9 @@ module Organisations
       if organisation["works_with"].present? && organisation["works_with"].any?
         works_with_count = child_organisations_count(organisation)
         if works_with_count == 1
-          I18n.t("organisations.works_with_statement.one", works_with_count:)
+          I18n.t("organisations.works_with_statement.one", works_with_count: works_with_count)
         elsif works_with_count > 1
-          I18n.t("organisations.works_with_statement.other", works_with_count:)
+          I18n.t("organisations.works_with_statement.other", works_with_count: works_with_count)
         end
       end
     end

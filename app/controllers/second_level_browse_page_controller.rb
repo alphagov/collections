@@ -16,7 +16,7 @@ private
                else
                  :show_a_to_z
                end
-    render(template, locals: { page:, curated_partial: "show_curated_list", meta_section: })
+    render(template, locals: { page: page, curated_partial: "show_curated_list", meta_section: meta_section })
   end
 
   def meta_section

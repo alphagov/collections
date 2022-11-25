@@ -4,9 +4,9 @@ describe ChangedDocumentsPaginationPresenter do
   def build_presenter_for_subtopic(total: 100, start: 0, page_size: 50, view_context: mock_view_context)
     changed_documents = double(
       "Topic::ChangedDocuments",
-      total:,
-      page_size:,
-      start:,
+      total: total,
+      page_size: page_size,
+      start: start,
     )
     ChangedDocumentsPaginationPresenter.new(changed_documents, view_context)
   end
@@ -87,19 +87,19 @@ describe ChangedDocumentsPaginationPresenter do
     let(:view_context) { double("View context") }
 
     it "returns a path to the next page" do
-      allow(view_context).to receive(:latest_changes_path).with({ start: 50 }).and_return("/a/path")
+      allow(view_context).to receive(:latest_changes_path).with(start: 50).and_return("/a/path")
 
-      presenter = build_presenter_for_subtopic(view_context:)
+      presenter = build_presenter_for_subtopic(view_context: view_context)
 
       expect(presenter.next_page_path).to eq("/a/path")
     end
 
     it 'includes the "count" parameter given a custom per_page value' do
       view_context = double("View context")
-      allow(view_context).to receive(:latest_changes_path).with({ count: 20, start: 20 }).and_return("/a/path")
+      allow(view_context).to receive(:latest_changes_path).with(count: 20, start: 20).and_return("/a/path")
 
       presenter = build_presenter_for_subtopic(
-        view_context:,
+        view_context: view_context,
         page_size: 20,
       )
 
@@ -111,10 +111,10 @@ describe ChangedDocumentsPaginationPresenter do
     let(:view_context) { double("View context") }
 
     it "returns a path to the previous page" do
-      allow(view_context).to receive(:latest_changes_path).with({ start: 50 }).and_return("/a/path")
+      allow(view_context).to receive(:latest_changes_path).with(start: 50).and_return("/a/path")
 
       presenter = build_presenter_for_subtopic(
-        view_context:,
+        view_context: view_context,
         start: 100,
         total: 150,
       )
@@ -123,10 +123,10 @@ describe ChangedDocumentsPaginationPresenter do
     end
 
     it 'includes the "count" parameter given a custom per_page value' do
-      allow(view_context).to receive(:latest_changes_path).with({ count: 20, start: 20 }).and_return("/a/path")
+      allow(view_context).to receive(:latest_changes_path).with(count: 20, start: 20).and_return("/a/path")
 
       presenter = build_presenter_for_subtopic(
-        view_context:,
+        view_context: view_context,
         page_size: 20,
         start: 40,
       )
@@ -138,7 +138,7 @@ describe ChangedDocumentsPaginationPresenter do
       allow(view_context).to receive(:latest_changes_path).with({}).and_return("/a/path")
 
       presenter = build_presenter_for_subtopic(
-        view_context:,
+        view_context: view_context,
         start: 50,
       )
 

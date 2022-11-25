@@ -49,6 +49,6 @@ RSpec.describe SubtopicsController do
 
     body = stub_search_has_specialist_sector_organisations("#{parent_path}/#{path}")
 
-    stub_search(params:, body:)
+    stub_search(params: params, body: body)
   end
 end

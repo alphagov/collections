@@ -54,7 +54,7 @@ module Organisations
           small: org.is_news_organisation?,
           brand: org.brand,
           items: links,
-          see_more_link:,
+          see_more_link: see_more_link,
         }
       end
     end
@@ -81,7 +81,7 @@ module Organisations
             locale: link["locale"],
             base_path: link["base_path"],
             text: I18n.t("shared.language_name", locale: link["locale"]),
-            active:,
+            active: active,
           }
         end
 

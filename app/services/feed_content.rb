@@ -14,7 +14,7 @@ private
   def search_response(count)
     params = search_query.merge(
       start: 0,
-      count:,
+      count: count,
       fields: SearchApiFields::FEED_SEARCH_FIELDS,
       reject_content_purpose_supergroup: "other",
       order: "-public_timestamp",

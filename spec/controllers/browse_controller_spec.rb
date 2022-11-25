@@ -6,7 +6,7 @@ RSpec.describe BrowseController do
       stub_content_store_has_item(
         "/browse",
         links: {
-          top_level_browse_pages:,
+          top_level_browse_pages: top_level_browse_pages,
         },
       )
     end
@@ -26,8 +26,8 @@ RSpec.describe BrowseController do
           base_path: "/browse/benefits",
           title: "foo",
           links: {
-            top_level_browse_pages:,
-            second_level_browse_pages:,
+            top_level_browse_pages: top_level_browse_pages,
+            second_level_browse_pages: second_level_browse_pages,
           },
         )
       end
