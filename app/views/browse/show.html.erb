@@ -18,13 +18,24 @@
   } %>
 <% end %>
 
-<%= render "shared/browse_header", { margin_bottom: 9 } do %>
+<%= render "shared/browse_header", @sign_up_url ? { margin_bottom: 6 } : { margin_bottom: 9 } do %>
   <h1 class="browse__heading govuk-heading-xl">
     <%= page.title %>
   </h1>
   <p class="gem-c-lead-paragraph gem-c-lead-paragraph--inverse govuk-!-margin-bottom-2">
     <%= page.description %>
   </p>
+<% end %>
+
+<% if @sign_up_url %>
+  <div class="govuk-width-container">
+    <%= render "govuk_publishing_components/components/intervention", {
+      suggestion_text: "Help make GOV.UK better",
+      suggestion_link_text: "Take part in user research",
+      suggestion_link_url: @sign_up_url,
+      new_tab: true,
+    } %>
+  </div>
 <% end %>
 
 <%= render "shared/browse_cards_container" do %>

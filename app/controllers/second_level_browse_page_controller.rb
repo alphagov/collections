@@ -1,5 +1,8 @@
 class SecondLevelBrowsePageController < ApplicationController
+  include ResearchPanelBannerHelper
+
   def show
+    @sign_up_url = signup_url_for(request.path)
     setup_content_item_and_navigation_helpers(page)
     @dimension26 = count_link_sections(page)
     @dimension27 = count_total_links(page)

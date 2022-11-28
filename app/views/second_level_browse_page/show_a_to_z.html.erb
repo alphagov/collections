@@ -32,6 +32,17 @@
   </p>
 <% end %>
 
+<% if @sign_up_url %>
+  <div class="govuk-width-container">
+    <%= render "govuk_publishing_components/components/intervention", {
+      suggestion_text: "Help make GOV.UK better",
+      suggestion_link_text: "Take part in user research",
+      suggestion_link_url: @sign_up_url,
+      new_tab: true,
+    } %>
+  </div>
+<% end %>
+
 <div class="govuk-width-container">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-2">
