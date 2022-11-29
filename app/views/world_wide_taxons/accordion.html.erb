@@ -48,21 +48,8 @@
             }
           %>
         <% end %>
-        <%
-          show_all_attributes = {
-            event_name: "select_content",
-            type: "accordion",
-            index: 0,
-            index_total: number_of_accordion_sections
-          }
-        %>
         <%= render 'govuk_publishing_components/components/accordion', {
-          data_attributes: {
-            module: "ga4-event-tracker",
-          },
-          data_attributes_show_all: {
-            "ga4": show_all_attributes.to_json
-          },
+          ga4_tracking: true,
           items: items
         } %>
       </div>

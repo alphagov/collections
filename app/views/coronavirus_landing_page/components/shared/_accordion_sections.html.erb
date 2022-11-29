@@ -53,22 +53,9 @@
 } if heading %>
 <div data-module="gem-track-click">
   <div data-module="toggle-attribute">
-    <%
-      show_all_attributes = {
-        event_name: "select_content",
-        type: "accordion",
-        index: 0,
-        index_total: number_of_accordion_sections,
-      }
-    %>
     <%= render 'govuk_publishing_components/components/accordion', {
       heading_level: 3,
-      data_attributes: {
-        module: "ga4-event-tracker",
-      },
-      data_attributes_show_all: {
-        "ga4": show_all_attributes.to_json
-      },
+      ga4_tracking: true,
       items: accordion_contents,
       margin_bottom: 3
     } %>
