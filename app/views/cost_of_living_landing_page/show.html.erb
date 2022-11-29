@@ -86,22 +86,11 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <div class="browse__section">
-
         <div data-module="toggle-attribute">
           <%= render "govuk_publishing_components/components/accordion", {
             track_show_all_clicks: true,
             track_sections: true,
-            data_attributes: {
-              module: "ga4-event-tracker",
-            },
-            data_attributes_show_all: {
-              "ga4": {
-                event_name: "select_content",
-                type: "accordion",
-                index: 0,
-                index_total: content.body[:accordion_content].map.size
-              }.to_json,
-            },
+            ga4_tracking: true,
             items: accordion_contents,
           } %>
         </div>
