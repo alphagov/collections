@@ -27,14 +27,7 @@
             items << {
               data_attributes: {
                 "track-count": "accordionSection",
-                id: "section-panel-#{id}-#{index + 1}",
-                ga4: {
-                  event_name: 'select_content',
-                  type: 'accordion',
-                  text: taxon.title,
-                  index: index + 1,
-                  index_total: number_of_accordion_sections,
-                }
+                id: "section-panel-#{id}-#{index + 1}"
               },
               heading: {
                 text: taxon.title,
