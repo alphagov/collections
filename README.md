@@ -64,6 +64,6 @@ See the [guidance on Pact testing](https://docs.publishing.service.gov.uk/manual
 - [Campaign pages](docs/campaign-pages.md)
 - [API endpoints and consumers](docs/api.md)
 
-## License
+## Licence
 
-[MIT License](LICENCE.txt)
+[MIT License](LICENCE)
