@@ -1,3 +1,4 @@
+# add random comment
 require "active_model"
 
 class MinistersIndex
