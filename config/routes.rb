@@ -20,6 +20,10 @@ Rails.application.routes.draw do
 
   get "/cost-of-living", to: "cost_of_living_landing_page#show", as: :cost_of_living_landing_page
 
+  unless Rails.env.production?
+    get "/development", to: "development#index"
+  end
+
   get "/browse.json" => redirect("/api/content/browse")
 
   resources :browse, only: %i[index show], param: :top_level_slug do
