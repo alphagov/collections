@@ -2,4 +2,3 @@
 //= link application.js
 //= link test-dependencies.js
 //= link application.css
-//= link print.css
