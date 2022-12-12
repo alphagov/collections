@@ -48,10 +48,6 @@ RSpec.feature "Subtopic pages" do
           groups: [
             {
               name: "Oil rigs",
-              contents: [
-                "/oil-rig-staffing",
-                "/oil-rig-safety-requirements",
-              ],
               content_ids: %w[
                 oil-rig-staffing-content-id
                 oil-rig-safety-requirements-content-id
@@ -59,9 +55,6 @@ RSpec.feature "Subtopic pages" do
             },
             {
               name: "Piping",
-              contents: [
-                "/undersea-piping-restrictions",
-              ],
               content_ids: %w[
                 undersea-piping-restrictions-content-id
               ],
@@ -238,18 +231,12 @@ RSpec.feature "Subtopic pages" do
           groups: [
             {
               name: "Oil rigs",
-              contents: [
-                "/oil-rig-safety-requirements",
-              ],
               content_ids: %w[
                 oil-rig-safety-requirements-content-id
               ],
             },
             {
               name: "Piping",
-              contents: [
-                "/undersea-piping-restrictions",
-              ],
               content_ids: %w[
                 undersea-piping-restrictions-content-id
               ],

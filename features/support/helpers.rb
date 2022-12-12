@@ -39,10 +39,6 @@ module TopicHelper
         groups: [
           {
             name: "Oil rigs",
-            contents: [
-              "/what-is-oil",
-              "/apply-for-an-oil-licence",
-            ],
             content_ids: %w[
               what-is-oil-content-id
               apply-for-an-oil-licence-content-id
@@ -50,9 +46,6 @@ module TopicHelper
           },
           {
             name: "Piping",
-            contents: [
-              "/well-application-form",
-            ],
             content_ids: %w[
               well-application-form-content-id
             ],
