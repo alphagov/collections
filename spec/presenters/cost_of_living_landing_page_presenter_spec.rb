@@ -1,6 +1,7 @@
 RSpec.describe CostOfLivingLandingPagePresenter do
   let(:content_item) do
-    { body:
+    { base_path: "/cost-of-living",
+      body:
       { heading: "Available support",
         accordion_content: [
           { heading: "Support with your income",
@@ -51,6 +52,10 @@ RSpec.describe CostOfLivingLandingPagePresenter do
                track_action:,
                href: "https://www.moneyhelper.org.uk/",
              )).to eq({ track_count: "contentLink" })
+    end
+
+    it "returns the recruitment_survey_url" do
+      expect(presenter.recruitment_survey_url).to eq "https://GDSUserResearch.optimalworkshop.com/treejack/cbd7a696cbf57c683cbb2e95b4a36c8a"
     end
   end
 end

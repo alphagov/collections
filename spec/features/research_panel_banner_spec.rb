@@ -4,7 +4,7 @@ RSpec.feature "Research panel banner" do
   include SearchApiHelpers
   include ResearchPanelBannerHelper
 
-  scenario "browse page is where we want to display research panel banner" do
+  scenario "browse page is where we want to display UR community signup panel banner" do
     pages_of_interest = [
       "/browse/benefits",
       "/browse/births-deaths-marriages/register-offices",
@@ -26,7 +26,7 @@ RSpec.feature "Research panel banner" do
     end
   end
 
-  scenario "browse page is not where we want to display the research panel banner" do
+  scenario "browse page is not where we want to display UR community signup panel banner" do
     schema = GovukSchemas::Example.find("mainstream_browse_page", example_name: "level_2_page")
     stub_content_store_has_item(schema["base_path"], schema)
     search_api_has_documents_for_browse_page(schema["content_id"], [schema["base_path"]], page_size: SearchApiSearch::PAGE_SIZE_TO_GET_EVERYTHING)
@@ -35,5 +35,13 @@ RSpec.feature "Research panel banner" do
 
     expect(page.status_code).to eq(200)
     expect(page).to_not have_selector(".gem-c-intervention")
+  end
+
+  scenario "on the cost of living page" do
+    stub_content_store_has_item("/cost-of-living")
+    visit "/cost-of-living"
+
+    expect(page.status_code).to eq(200)
+    expect(page).to have_selector(".gem-c-intervention")
   end
 end

@@ -46,6 +46,11 @@ RSpec.feature "Cost of Living hub page" do
       expect(page).to have_text("Announcements")
     end
 
+    def and_there_is_a_recruitment_survey_banner
+      expect(page).to have_text("Help improve GOV.UK")
+      expect(page).to have_link("https://GDSUserResearch.optimalworkshop.com/treejack/cbd7a696cbf57c683cbb2e95b4a36c8a")
+    end
+
     def and_there_is_an_important_info_suffix_on_some_link
       expect(page).to have_text("opens 14 November 2022")
     end
