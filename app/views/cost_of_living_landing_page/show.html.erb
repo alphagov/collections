@@ -41,10 +41,11 @@
   <h1 class="browse__heading govuk-heading-xl">
     <%= content.header[:heading] %>
   </h1>
-  <p class="gem-c-lead-paragraph gem-c-lead-paragraph--inverse govuk-!-margin-bottom-6">
-    <%= content.header[:lede] %>
-  </p>
-
+  <%= render "govuk_publishing_components/components/lead_paragraph", {
+    text: content.header[:lede],
+    margin_bottom: 6,
+    inverse: true
+  } %>
 <% end %>
 
 <div class="colhub__announcement" data-module="gem-track-click">
