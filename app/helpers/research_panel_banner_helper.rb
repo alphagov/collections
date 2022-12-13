@@ -8,12 +8,12 @@ module ResearchPanelBannerHelper
     "/browse/driving/driving-licences" => SIGNUP_URL,
   }.freeze
 
-  def signup_url_for(path)
-    key = RECRUITMENT_PAGES.keys.find { |topic| path.eql?(topic) }
-    RECRUITMENT_PAGES[key]
+  def recruitment_survey_url
+    signup_url
   end
 
-  def recruitment_pages
-    RECRUITMENT_PAGES.keys
+  def signup_url
+    key = RECRUITMENT_PAGES.keys.find { |topic| base_path.eql?(topic) }
+    RECRUITMENT_PAGES[key]
   end
 end

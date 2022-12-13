@@ -5,7 +5,15 @@ RSpec.feature "Research panel banner" do
   include ResearchPanelBannerHelper
 
   scenario "browse page is where we want to display research panel banner" do
-    recruitment_pages.each do |base_path|
+    pages_of_interest = [
+      "/browse/benefits",
+      "/browse/births-deaths-marriages/register-offices",
+      "/browse/disabilities",
+      "/browse/disabilities/work",
+      "/browse/driving/driving-licences",
+    ]
+
+    pages_of_interest.each do |base_path|
       schema = GovukSchemas::Example.find("mainstream_browse_page", example_name: "level_2_page")
       schema["base_path"] = base_path
       stub_content_store_has_item(schema["base_path"], schema)
