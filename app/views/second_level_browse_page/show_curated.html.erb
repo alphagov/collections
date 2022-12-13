@@ -26,10 +26,11 @@
     margin_bottom: 6,
     text: page.title,
   } %>
-
-  <p class="gem-c-lead-paragraph gem-c-lead-paragraph--inverse govuk-!-margin-bottom-2">
-    <%= page.description %>
-  </p>
+  <%= render "govuk_publishing_components/components/lead_paragraph", {
+    text: page.description,
+    margin_bottom: 2,
+    inverse: true
+  } %>
 <% end %>
 
 <div class="govuk-width-container">
