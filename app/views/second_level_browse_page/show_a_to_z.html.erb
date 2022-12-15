@@ -32,12 +32,12 @@
   </p>
 <% end %>
 
-<% if @sign_up_url %>
+<% if page.recruitment_survey_url %>
   <div class="govuk-width-container">
     <%= render "govuk_publishing_components/components/intervention", {
       suggestion_text: "Help make GOV.UK better",
       suggestion_link_text: "Take part in user research",
-      suggestion_link_url: @sign_up_url,
+      suggestion_link_url: page.recruitment_survey_url,
       new_tab: true,
     } %>
   </div>

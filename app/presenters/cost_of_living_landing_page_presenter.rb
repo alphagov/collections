@@ -1,5 +1,8 @@
 class CostOfLivingLandingPagePresenter
+  include ResearchPanelBannerHelper
+
   COMPONENTS = %i[
+    base_path
     page_title
     metadata
     header
