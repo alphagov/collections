@@ -11,7 +11,7 @@ zh-hk:
     language_name: 中文
     schema_name:
       aaib_report:
-        other: 其他空中意外事故調查報告
+        other: 空中意外事故調查報告
       about:
         other: 關於
       about_our_services:
@@ -19,210 +19,210 @@ zh-hk:
       access_and_opening:
         other: 訪問及開放
       accessible_documents_policy:
-        other: 其他無障礙文件政策
+        other: 無障礙文件政策
       alert:
-        other: 其他警示
+        other: 警示
       announcement:
-        other: 其他公告
+        other: 公告
       asylum_support_decision:
-        other: 其他庇護支援裁判決定
+        other: 庇護支援裁判決定
       authored_article:
-        other: 其他撰寫文章
+        other: 撰寫文章
       blog_post:
-        other: 其他網誌發佈內容
+        other: 網誌發佈內容
       business_finance_support_scheme:
-        other: 其他商業融資支援計劃
+        other: 商業融資支援計劃
       campaign:
-        other: 其他活動
+        other: 活動
       careers:
         other: 職位
       case_study:
-        other: 其他案例研究
+        other: 案例研究
       closed_consultation:
-        other: 其他專屬諮詢
+        other: 專屬諮詢
       cma_case:
-        other: 其他競爭及市場管理案例
+        other: 競爭及市場管理案例
       coming_soon:
-        other: 其他即將推出之項目
+        other: 即將推出之項目
       complaints_procedure:
-        other: 其他投訴程序
+        other: 投訴程序
       consultation:
-        other: 其他諮詢
+        other: 諮詢
       consultation_outcome:
-        other: 其他諮詢結果
+        other: 諮詢結果
       corporate_information_page:
-        other: 其他資訊頁面
+        other: 資訊頁面
       corporate_report:
-        other: 其他政府報告
+        other: 政府報告
       correspondence:
-        other: 其他通信
+        other: 通信
       countryside_stewardship_grant:
-        other: 其他鄉村管理補助金
+        other: 鄉村管理補助金
       decision:
-        other: 其他決定
+        other: 決定
       detailed_guidance:
-        other: 其他詳細指引
+        other: 詳細指引
       detailed_guide:
-        other: 其他詳細指引
+        other: 詳細指引
       dfid_research_output:
-        other: 其他發展成果之研究
+        other: 發展成果之研究
       document_collection:
-        other: 其他系列
+        other: 系列
       draft_text:
-        other: 其他內容
+        other: 內容
       drcf_digital_markets_research:
         other:
       drug_safety_update:
-        other: 其他藥物安全更新
+        other: 藥物安全更新
       edition:
-        other: 其他修訂
+        other: 修訂
       edition_with_appointment:
-        other: 其他有預約之修訂
+        other: 有預約之修訂
       employment_appeal_tribunal_decision:
-        other: 其他僱傭上訴法庭裁決
+        other: 僱傭上訴法庭裁決
       employment_tribunal_decision:
-        other: 其他僱傭法庭裁決
+        other: 僱傭法庭裁決
       equality_and_diversity:
         other: 平等及多元
       esi_fund:
-        other: 其他歐洲結構與投資基金 (ESIF)
+        other: 歐洲結構與投資基金 (ESIF)
       fatality_notice:
-        other: 其他安全事故通知
+        other: 安全事故通知
       foi_release:
-        other: 其他資訊自由(FOI)資訊發布
+        other: 資訊自由(FOI)資訊發布
       form:
-        other: 其他表格
+        other: 表格
       generic_edition:
-        other: 其他通用版本
+        other: 通用版本
       government_response:
-        other: 政府其他回應
+        other: 政府回應
       guidance:
-        other: 其他指引
+        other: 指引
       impact_assessment:
-        other: 其他影響評估
+        other: 影響評估
       imported:
         other: 輸入-等待類型中
       independent_report:
-        other: 其他獨立報告
+        other: 獨立報告
       international_development_fund:
         other: 國際發展籌資
       international_treaty:
-        other: 其他國際條約
+        other: 國際條約
       maib_report:
-        other: 其他海洋事故調查處報告
+        other: 海洋事故調查處報告
       manual:
-        other: 其他手冊
+        other: 手冊
       map:
-        other: 其他地圖
+        other: 地圖
       media_enquiries:
-        other: 其他媒體查詢
+        other: 媒體查詢
       medical_safety_alert:
-        other: 其他藥品及醫療器械警示及召回
+        other: 藥品及醫療器械警示及召回
       membership:
         other: 會員資格
       modern_slavery_statement:
         other:
       national:
-        other: 其他國家統計數據公告
+        other: 國家統計數據公告
       national_statistics:
-        other: 其他國家統計數據
+        other: 國家統計數據
       national_statistics_announcement:
-        other: 其他國家統計數據公告
+        other: 國家統計數據公告
       news_article:
-        other: 其他新聞
+        other: 新聞
       news_story:
-        other: 其他新聞
+        other: 新聞
       nhs_content:
         other: NHS 內容
       notice:
-        other: 其他通知
+        other: 通知
       official:
-        other: 其他官方統計數據公告
+        other: 官方統計數據公告
       official_statistics:
-        other: 其他統計資料
+        other: 統計資料
       official_statistics_announcement:
-        other: 其他官方統計數據公告
+        other: 官方統計數據公告
       open_consultation:
-        other: 其他公開諮詢
+        other: 公開諮詢
       oral_statement:
-        other: 提交國會的其他口頭聲明
+        other: 提交國會的口頭聲明
       our_energy_use:
         other: 我們的能源使用
       our_governance:
         other: 我們的行政管理
       personal_information_charter:
-        other: 其他個人資訊章程
+        other: 個人資訊章程
       petitions_and_campaigns:
         other: 訴願及活動
       policy:
-        other: 其他政策
+        other: 政策
       policy_paper:
-        other: 其他政策文件
+        other: 政策文件
       press_release:
-        other: 其他新聞稿
+        other: 新聞稿
       procurement:
         other: 採購
       promotional:
-        other: 其他宣傳資料
+        other: 宣傳資料
       publication:
-        other: 其他出版物
+        other: 出版物
       publication_scheme:
-        other: 其他出版計劃
+        other: 出版計劃
       raib_report:
-        other: 其他鐵路意外調查處公告
+        other: 鐵路意外調查處公告
       recruitment:
         other: 招聘
       regulation:
-        other: 其他規定
+        other: 規定
       research:
-        other: 其他研究與分析
+        other: 研究與分析
       residential_property_tribunal_decision:
-        other: 其他住宅物業法庭裁決
+        other: 住宅物業法庭裁決
       service:
-        other: 其他服務
+        other: 服務
       service_sign_in:
         other: 服務登入
       service_standard_report:
-        other: 其他服務標準報告
+        other: 服務標準報告
       social_media_use:
         other: 社交媒體使用
       speaking_notes:
-        other: 其他演講稿
+        other: 演講稿
       speech:
-        other: 其他演講
+        other: 演講
       staff_update:
-        other: 其他員工更新
+        other: 員工更新
       standard:
-        other: 其他標準
+        other: 標準
       statement_to_parliament:
-        other: 提交國會的其他聲明
+        other: 提交國會的聲明
       statistical_data_set:
-        other: 其他統計數據資料
+        other: 統計數據資料
       statistics:
         other: 統計資料
       statistics_announcement:
-        other: 其他統計數據資料發佈公告
+        other: 統計數據資料發佈公告
       statutory_guidance:
         other: 法定指引
       take_part:
         other: 參加活動
       tax_tribunal_decision:
-        other: 其他稅務及大法官法庭裁決
+        other: 稅務及大法官法庭裁決
       terms_of_reference:
         other: 職權範圍
       transcript:
-        other: 其他談話副本
+        other: 談話副本
       transparency:
-        other: 其他透明化數據
+        other: 透明化數據
       utaac_decision:
-        other: 其他行政上訴法庭裁決
+        other: 行政上訴法庭裁決
       welsh_language_scheme:
-        other: 其他威爾士語計劃
+        other: 威爾士語計劃
       world_location_news_article:
-        other: 其他新聞
+        other: 新聞
       world_news_story:
-        other: 其他世界新聞故事
+        other: 世界新聞故事
       written_statement:
-        other: 提交國會的其他書面聲明
+        other: 提交國會的書面聲明
     topics:
       title: "%{title}： 詳細資訊"
