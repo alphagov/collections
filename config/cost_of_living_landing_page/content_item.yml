@@ -31,6 +31,8 @@ body:
         - link_text: Find out about the Cost of Living Payment
           important_info: including the date of your next payment and how to report if it’s missing
           href: /guidance/cost-of-living-payment
+        - link_text: Find out about help you can get from your local council (Household Support Fund)
+          href: /cost-living-help-local-council
         - link_text: Check if you’re getting the minimum wage
           href: /am-i-getting-minimum-wage
         - link_text: Apply for Marriage Allowance
@@ -41,10 +43,6 @@ body:
           href: /get-help-savings-low-income
         - link_text: Claim tax relief on work-related expenses
           href: /tax-relief-for-employees
-        - link_text: Check how you can deal with your debts
-          href: /pay-off-debts
-        - link_text: Use the MoneyHelper service for free, confidential and impartial advice
-          href: https://www.moneyhelper.org.uk/
       - subheading: Apply for Universal Credit
         links:
         - link_text: Universal Credit in England, Scotland and Wales
@@ -63,6 +61,14 @@ body:
           href: /jobseekers-allowance
         - link_text: ‘New style’ JSA in Northern Ireland
           href: https://www.nidirect.gov.uk/articles/jobseekers-allowance
+      - subheading: Support with managing your money
+        links:
+          - link_text: Get support with making a budget on the Citizen's Advice website
+            href: https://www.citizensadvice.org.uk/debt-and-money/budgeting/budgeting/work-out-your-budget/
+          - link_text: Check how you can deal with your debts
+            href: /pay-off-debts
+          - link_text: Use the MoneyHelper service for free, confidential and impartial advice
+            href: https://www.moneyhelper.org.uk/
   - heading: Support if you’re disabled
     content:
       - subheading:
@@ -72,7 +78,7 @@ body:
         - link_text: Find out about the Cost of Living Payment
           important_info: including the date of your next payment and how to report if it’s missing
           href: /guidance/cost-of-living-payment
-        - link_text: Apply for money off your TV Licence if you're over 75, blind or in residential care
+        - link_text: Apply for a free or discounted TV Licence if you're over 75, blind or in residential care
           href: /free-discount-tv-licence
         - link_text: Apply for a Disabled Facilities Grant to make improvements to your home in England or Wales
           href: /disabled-facilities-grants
@@ -100,9 +106,11 @@ body:
           href: https://www.mygov.scot/adult-disability-payment
       - subheading: Support to get or stay in work
         links:
-        - link_text: Apply for Access to Work in England
+        - link_text: Apply for Access to Work in England, Scotland and Wales
+          important_info: support at work if you have a physical or mental health condition or disability
           href: /access-to-work
-        - link_text: Apply for Access to Work in Northern Ireland
+        - link_text: Find advice about starting or staying in work in Northern Ireland
+          important_info: for support if you have a health condition or disability
           href: https://www.nidirect.gov.uk/articles/employment-support-information
       - subheading: Support with travel costs if you’re disabled
         links:
@@ -113,7 +121,7 @@ body:
         - link_text: Apply for a disabled person’s bus pass in Scotland
           href: https://www.mygov.scot/disabled-bus-pass
         - link_text: Apply for a disabled person’s bus pass in Wales
-          href: https://gov.wales/apply-bus-pass
+          href: https://portal.tfw.wales/en/disabled
         - link_text: Apply for a disabled person’s bus pass in Northern Ireland
           href: https://www.nidirect.gov.uk/information-and-services/bus-and-coach-travel/free-bus-travel-and-concessions
       - subheading: Support if your child is disabled
@@ -128,6 +136,8 @@ body:
       links:
       - link_text: Check what benefits and financial support you can get
         href: /check-benefits-financial-support
+      - link_text: Find out about help you can get from your local council (Household Support Fund)
+        href: /cost-living-help-local-council
     - subheading: Support with your utility bills
       links:
       - link_text: Find out how the Energy Price Guarantee limits your energy prices
@@ -155,7 +165,7 @@ body:
         href: https://www.ccwater.org.uk/households/help-with-my-bills/
     - subheading: Support with your TV and internet bills
       links:
-      - link_text: Apply for money off your TV Licence if you're over 75, blind or in residential care
+      - link_text: Apply for a free or discounted TV Licence if you're over 75, blind or in residential care
         href: /free-discount-tv-licence
       - link_text: Find out if you can get cheaper phone and broadband on the Ofcom website
         href: https://www.ofcom.org.uk/phones-telecoms-and-internet/advice-for-consumers/costs-and-billing/social-tariffs
@@ -163,8 +173,10 @@ body:
       links:
       - link_text: Apply for a Council Tax reduction in England, Scotland and Wales
         href: /apply-council-tax-reduction
-      - link_text: Apply for Rate Relief in Northern Ireland
-        href: https://www.nidirect.gov.uk/rates-help
+      - link_text: Find out about support for your rates if you’re on a low income in Northern Ireland
+        href: https://www.nidirect.gov.uk/articles/people-low-income
+      - link_text: Find out about support for your rates if you’re an older person in Northern Ireland
+        href: https://www.nidirect.gov.uk/articles/help-rates-pensioners
       - link_text: Contact your council for help with housing costs and Council Tax
         href: /find-local-council
     - subheading: Support with your prescriptions and health costs
@@ -205,12 +217,12 @@ body:
       links:
         - link_text: Apply for free childcare for children aged 2 in England
           href: /help-with-childcare-costs/free-childcare-2-year-olds
+        - link_text: Apply for free childcare for children aged 2 to 4 in Scotland
+          href: https://www.mygov.scot/childcare-costs-help/funded-early-learning-and-childcare
         - link_text: Apply for 15 hours free childcare for children aged 3 to 4 in England
           href: /help-with-childcare-costs/free-childcare-and-education-for-2-to-4-year-olds
         - link_text: Apply for 30 hours free childcare for children aged 3 to 4 in England
           href: /30-hours-free-childcare
-        - link_text: Apply for free childcare for children aged 3 to 4 in Scotland
-          href: https://www.mygov.scot/childcare-costs-help/funded-early-learning-and-childcare
         - link_text: Apply for free childcare for children aged 3 to 4 in Wales
           href: https://gov.wales/childcare-3-and-4-year-olds
     - subheading: Support with your school costs (for example, equipment and uniforms)
@@ -295,18 +307,24 @@ body:
         href: https://www.nationalrail.co.uk/times_fares/jobcentre-plus-card.aspx
     - subheading: Support with your bus costs
       links:
-      - link_text: Apply for an older person’s bus pass in England and Wales
+      - link_text: Apply for an older person’s bus pass in England
+        important_info: if you're state pension age
         href: /apply-for-elderly-person-bus-pass
+      - link_text: Apply for an older person’s bus pass in Wales
+        important_info: if you’re aged 60 years or over
+        href: https://portal.tfw.wales/en/card-applications/60-and-over/details
       - link_text: Apply for an older person’s bus pass in Scotland
+        important_info: if you’re aged 60 years or over
         href: https://www.mygov.scot/older-persons-bus-pass
       - link_text: Apply for an older person’s bus pass in Northern Ireland
+        important_info: if you’re aged 60 years or over
         href: https://www.nidirect.gov.uk/articles/60-smartpass-and-senior-65-smartpass
       - link_text: Apply for a disabled person’s bus pass in England
         href: /apply-for-disabled-bus-pass
       - link_text: Apply for a disabled person’s bus pass in Scotland
         href: https://www.mygov.scot/disabled-bus-pass
       - link_text: Apply for a disabled person’s bus pass in Wales
-        href: https://gov.wales/apply-bus-pass
+        href: https://portal.tfw.wales/en/disabled
       - link_text: Apply for a disabled person’s bus pass in Northern Ireland
         href: https://www.nidirect.gov.uk/information-and-services/bus-and-coach-travel/free-bus-travel-and-concessions
   - heading: Support for your business
