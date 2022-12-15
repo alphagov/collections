@@ -18,9 +18,11 @@
   <h1 class="browse__heading govuk-heading-xl">
     <%= t("browse.title") %>
   </h1>
-  <p class="browse__description gem-c-lead-paragraph gem-c-lead-paragraph--inverse">
-    <%= t("browse.description") %>
-  </p>
+  <%= render "govuk_publishing_components/components/lead_paragraph", {
+    text: t("browse.description"),
+    margin_bottom: 2,
+    inverse: true
+  } %>
 <% end %>
 
 <%= render "shared/browse_cards_container" do %>

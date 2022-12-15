@@ -22,9 +22,11 @@
   <h1 class="browse__heading govuk-heading-xl">
     <%= page.title %>
   </h1>
-  <p class="gem-c-lead-paragraph gem-c-lead-paragraph--inverse govuk-!-margin-bottom-2">
-    <%= page.description %>
-  </p>
+  <%= render "govuk_publishing_components/components/lead_paragraph", {
+    text: page.description,
+    margin_bottom: 2,
+    inverse: true
+  } %>
 <% end %>
 
 <% if page.recruitment_survey_url %>
