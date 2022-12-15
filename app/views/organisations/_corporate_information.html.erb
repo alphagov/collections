@@ -8,7 +8,7 @@
         lang: t_fallback('organisations.corporate_information')
       } %>
     <% end %>
-  <% if @show.corporate_information[:corporate_information_links][:items].any? %>
+  <% if @show.corporate_information[:corporate_information_links][:items].any? && !@organisation.is_no_10? %>
     <div class="<%= "organisation__section-border-top" if @organisation.is_promotional_org? %>">
       <%= render "components/topic-list", @show.corporate_information[:corporate_information_links] %>
     </div>
@@ -25,9 +25,25 @@
     <%= render "components/topic-list", @show.corporate_information[:job_links] %>
   <% end %>
 
-  <% if @organisation.secondary_corporate_information %>
+  <% if @organisation.secondary_corporate_information && !@organisation.is_no_10? %>
     <p class="organisation__secondary-corporate-information brand--<%= @organisation.brand %>">
       <%= @organisation.secondary_corporate_information.html_safe %>
     </p>
+  <% end %>
+
+  <% if @organisation.is_no_10? && @what_we_do.has_share_links? %>
+      <%= render "govuk_publishing_components/components/heading", {
+        text: t('organisations.follow_us'),
+        margin_bottom: 3,
+        heading_level: 3,
+        font_size: 19,
+        padding: true,
+        border_top: 5,
+        brand: @organisation.brand,        
+        lang: t_fallback('organisations.follow_us')
+      } %>
+      <div lang="en">
+        <%= render "govuk_publishing_components/components/share_links", @what_we_do.share_links %>
+      </div>
   <% end %>
 </div>

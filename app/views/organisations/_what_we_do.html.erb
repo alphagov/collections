@@ -27,7 +27,7 @@
       <% end %>
     </div>
 
-    <% if @what_we_do.has_share_links? %>
+    <% if @what_we_do.has_share_links? && !@organisation.is_no_10? %>
       <div class="govuk-grid-column-one-third">
         <%= render "govuk_publishing_components/components/heading", {
           text: t('organisations.follow_us'),
