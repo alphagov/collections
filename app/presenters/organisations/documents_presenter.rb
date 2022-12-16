@@ -77,6 +77,7 @@ module Organisations
           brand: org.brand,
           heading_level: 3,
           large: @org.is_no_10?,
+          extra_details_no_indent: @org.is_no_10?,
         }
 
         if item["title"].present?
