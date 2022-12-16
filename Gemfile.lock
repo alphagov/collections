@@ -147,7 +147,7 @@ GEM
     execjs (2.8.1)
     expgen (0.1.1)
       parslet
-    faraday (2.7.1)
+    faraday (2.7.2)
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.2)
