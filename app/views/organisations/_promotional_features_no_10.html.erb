@@ -1,0 +1,16 @@
+<% if @documents.has_promotional_features? %>
+<section class="organisation__margin-bottom organisation__section-wrap">
+  <% @documents.promotional_features.each do |feature| %>
+    <div class="">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: feature[:title],
+        heading_level: 2,
+        padding: true,
+        border_top: 5,
+        brand: @organisation.brand
+      } %>
+      <%= render "govuk_publishing_components/components/image_card", feature[:items].first %>
+    </div>
+  <% end %>
+</section>
+<% end %>

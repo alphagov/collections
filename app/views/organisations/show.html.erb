@@ -7,8 +7,11 @@
 <%= render partial: 'featured_news' %>
 <%= render partial: 'latest_documents' %>
 <%= render partial: 'what_we_do' %>
-<% if @organisation.is_promotional_org? %>
+<% if @organisation.is_promotional_org? && !@organisation.is_no_10? %>
   <%= render partial: 'promotional_features' %>
+<% end %>
+<% if @organisation.is_promotional_org? && @organisation.is_no_10? %>
+  <%= render partial: 'promotional_features_no_10' %>
 <% end %>
 <% unless @organisation.is_promotional_org? %>
   <% if @supergroups.has_groups? && !@organisation.is_promotional_org?  %>
