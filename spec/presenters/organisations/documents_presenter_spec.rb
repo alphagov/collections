@@ -123,6 +123,8 @@ RSpec.describe Organisations::DocumentsPresenter do
             ],
             brand: nil,
             heading_level: 3,
+            large: true,
+            extra_details_no_indent: true,
           },
         ],
       },

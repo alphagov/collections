@@ -30,7 +30,6 @@ module Organisations
     def promotional_features
       org.ordered_promotional_features.map do |feature|
         number_of_items = feature["items"].length
-
         {
           title: feature["title"],
           number_of_items:,
@@ -62,6 +61,7 @@ module Organisations
   private
 
     def items_for_a_promotional_feature(feature)
+      number_of_items = feature["items"].length
       feature["items"].map do |item|
         data = {
           description: item["summary"].gsub("\r\n", "<br/>").html_safe,
@@ -76,7 +76,7 @@ module Organisations
           end,
           brand: org.brand,
           heading_level: 3,
-        }
+        }.merge(make_full_width(number_of_items))
 
         if item["title"].present?
           data[:heading_text] = item["title"]
@@ -84,6 +84,15 @@ module Organisations
 
         data
       end
+    end
+
+    def make_full_width(number_of_items)
+      return {} unless number_of_items == 1
+
+      {
+        large: true,
+        extra_details_no_indent: true,
+      }
     end
 
     def featured_news(featured, first_featured: false)
