@@ -15,6 +15,7 @@ RSpec.feature "Cost of Living hub page" do
       and_there_is_an_important_info_suffix_on_some_link
       and_there_is_link_tracking
       and_there_is_accordion_section_tracking
+      and_there_is_non_accordion_section
     end
 
     def when_i_visit_the_cost_of_living_landing_page
@@ -68,6 +69,10 @@ RSpec.feature "Cost of Living hub page" do
       accordion_section = page.first(".govuk-accordion__section-heading")
 
       expect(accordion_section["data-track-count"]).to eq("accordionSection")
+    end
+
+    def and_there_is_non_accordion_section
+      expect(page).to have_text("If you’re finding things difficult")
     end
   end
 end

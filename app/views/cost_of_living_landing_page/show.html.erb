@@ -84,8 +84,6 @@
   </div>
 </div>
 
-
-
 <div class="govuk-width-container">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -97,6 +95,26 @@
             ga4_tracking: true,
             items: accordion_contents,
           } %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="browse__section">
+        <div data-module="toggle-attribute">
+          <% content.body[:non_accordion_content].each_with_index do |list, list_index| %>
+            <h2><%= list[:heading] %></h2>
+            <%= render(partial: "links", locals: {
+                  presenter: content,
+                  accordion_heading: list[:heading],
+                  list: list[:content],
+                  list_index: list_index,
+                } ) %>
+          <% end %>
         </div>
       </div>
     </div>
