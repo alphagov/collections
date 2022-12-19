@@ -103,7 +103,7 @@ RSpec.describe Organisations::DocumentsPresenter do
       {
         title: "One feature",
         number_of_items: 1,
-        parent_column_class: "column-1",
+        parent_column_class: nil,
         child_column_class: nil,
         items: [
           {
@@ -123,6 +123,8 @@ RSpec.describe Organisations::DocumentsPresenter do
             ],
             brand: nil,
             heading_level: 3,
+            large: true,
+            extra_details_no_indent: true,
           },
         ],
       },
