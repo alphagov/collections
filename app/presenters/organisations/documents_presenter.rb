@@ -30,11 +30,10 @@ module Organisations
     def promotional_features
       org.ordered_promotional_features.map do |feature|
         number_of_items = feature["items"].length
-
         {
           title: feature["title"],
           number_of_items:,
-          parent_column_class: "column-#{number_of_items}",
+          parent_column_class: promotions_parent_column_class(number_of_items),
           child_column_class: promotions_child_column_class(number_of_items),
           items: items_for_a_promotional_feature(feature),
         }
@@ -62,12 +61,16 @@ module Organisations
   private
 
     def items_for_a_promotional_feature(feature)
+      number_of_items = feature["items"].length
       feature["items"].map do |item|
         data = {
           description: item["summary"].gsub("\r\n", "<br/>").html_safe,
           href: promotional_feature_link(item["href"]),
           image_src: item["image"]["url"],
           image_alt: item["image"]["alt_text"],
+          # passing in the href just to get the video on the page. This would
+          # be replaced with item["youtube_video_id"]
+          youtube_video_id: item["href"],
           extra_details: item["links"].map do |link|
             {
               text: link["title"],
@@ -76,7 +79,8 @@ module Organisations
           end,
           brand: org.brand,
           heading_level: 3,
-        }
+          extra_details_no_indent: true,
+        }.merge(make_full_width(number_of_items))
 
         if item["title"].present?
           data[:heading_text] = item["title"]
@@ -84,6 +88,12 @@ module Organisations
 
         data
       end
+    end
+
+    def make_full_width(number_of_items)
+      return {} unless number_of_items == 1
+
+      { large: true }
     end
 
     def featured_news(featured, first_featured: false)
@@ -116,6 +126,12 @@ module Organisations
       return "govuk-grid-column-one-half" if number_of_items == 2
 
       "govuk-grid-column-one-third" if number_of_items == 3
+    end
+
+    def promotions_parent_column_class(number_of_items)
+      return if number_of_items == 1
+
+      "column-#{number_of_items}"
     end
 
     def promotional_feature_link(link)
