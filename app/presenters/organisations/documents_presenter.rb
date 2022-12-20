@@ -33,7 +33,6 @@ module Organisations
         {
           title: feature["title"],
           number_of_items:,
-          parent_column_class: "column-#{number_of_items}",
           child_column_class: promotions_child_column_class(number_of_items),
           items: items_for_a_promotional_feature(feature),
         }
