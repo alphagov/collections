@@ -13,13 +13,13 @@
         <div class="govuk-grid-row">
           <% feature[:items].each do |item| %>
             <div class="<%= feature[:child_column_class] %>">
-              <%= render "govuk_publishing_components/components/image_card", item %>
+              <%= render partial: "organisations/promotional_feature_item", locals: { item: item } %>
             </div>
           <% end %>
         </div>
       <% else %>
         <% feature[:items].each do |item| %>
-          <%= render "govuk_publishing_components/components/image_card", item %>
+          <%= render partial: "organisations/promotional_feature_item", locals: { item: item }  %>
         <% end %>
       <% end %>
     </div>

@@ -1,0 +1,7 @@
+<%# checking for the transparency item's href just to get the video on the page, this would be replaced with if item[:youtube_video_id %>
+
+<% if item[:youtube_video_id].include? "/government/policies?keywords=&topics%5B%5D=government-efficiency-transparency-and-accountability&departments%5B%5D=all"%>
+ <%= render partial: "shared/youtube_player", locals: { item: item } %>
+<% else %>
+  <%= render "govuk_publishing_components/components/image_card", item %>
+<% end %>

@@ -68,6 +68,9 @@ module Organisations
           href: promotional_feature_link(item["href"]),
           image_src: item["image"]["url"],
           image_alt: item["image"]["alt_text"],
+          # passing in the href just to get the video on the page. This would
+          # be replaced with item["youtube_video_id"]
+          youtube_video_id: item["href"],
           extra_details: item["links"].map do |link|
             {
               text: link["title"],
