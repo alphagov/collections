@@ -43,11 +43,18 @@ module TopicHelper
               "/what-is-oil",
               "/apply-for-an-oil-licence",
             ],
+            content_ids: %w[
+              what-is-oil-content-id
+              apply-for-an-oil-licence-content-id
+            ],
           },
           {
             name: "Piping",
             contents: [
               "/well-application-form",
+            ],
+            content_ids: %w[
+              well-application-form-content-id
             ],
           },
         ],

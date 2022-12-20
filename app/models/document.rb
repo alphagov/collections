@@ -14,5 +14,6 @@ class Document
     :content_store_document_type,
     :organisations,
     :image_url,
+    :content_id,
   )
 end
