@@ -1,5 +1,5 @@
 <% if @documents.has_promotional_features? %>
-<section class="organisation__margin-bottom organisation__promotions">
+<section class="organisation__margin-bottom organisation__section-wrap">
   <% @documents.promotional_features.each do |feature| %>
     <div class="<%= feature[:parent_column_class] %>">
       <%= render "govuk_publishing_components/components/heading", {
