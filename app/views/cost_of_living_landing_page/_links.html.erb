@@ -1,3 +1,5 @@
+<% dashes_before_important_info ||= nil %>
+
 <ul role="list" class="govuk-list browse__list" data-module="gem-track-click">
   <% list.each_with_index do |content_item, index| %>
     <% if content_item[:links] %>
@@ -20,11 +22,13 @@
                  link_item[:href],
                  class: "govuk-link",
                  data: presenter.link_clicked_track_data(
-                  track_action: accordion_heading,
+                  track_action: list_heading,
                   href: link_item[:href]
                  ),
                ) %>
-               <% if link_item[:important_info] %>- <%= link_item[:important_info] %><% end %>
+               <% if link_item[:important_info] %>
+                 <% if dashes_before_important_info %>- <% end %><%= link_item[:important_info] %>
+               <% end %>
              </li>
               <% end %>
             <% end %>
@@ -40,7 +44,7 @@
             content_item[:href],
             class: "govuk-link",
             data: presenter.link_clicked_track_data(
-              track_action: accordion_heading,
+              track_action: list_heading,
               href: content_item[:href]
              ),
           ) %>

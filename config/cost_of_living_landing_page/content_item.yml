@@ -338,3 +338,21 @@ body:
         href: /business-finance-support?keywords=energy
       - link_text: Find out about support with your energy bills on the Citizens Advice website
         href: https://www.citizensadvice.org.uk/consumer/energy/energy-supply/your-small-businesss-energy-supply/your-small-business-cant-afford-its-energy-bills/
+  non_accordion_content:
+  - heading: If you’re finding things difficult
+    content:
+    - subheading:
+      links:
+      - link_text: Get support with money and mental health from the Mind website
+        href: https://www.mind.org.uk/information-support/tips-for-everyday-living/money-and-mental-health/
+      - link_text: Call the Samaritans on 116 123
+        important_info: to talk to a trained volunteer anonymously for free. Welsh speakers can call 0808 164 0123 between 7pm and 11pm
+        href: https://www.samaritans.org/
+      - link_text: Text ‘SHOUT’ to 85258
+        important_info: to message with a trained volunteer anonymously for free
+        href: https://giveusashout.org/
+      - link_text: Call Refuge on 0808 2000 247
+        important_info: for support with domestic abuse
+        href: https://www.nationaldahelpline.org.uk/
+      - link_text: Get urgent support with mental health on the NHS website
+        href: https://www.nhs.uk/nhs-services/mental-health-services/where-to-get-urgent-help-for-mental-health/
