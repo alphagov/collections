@@ -151,6 +151,7 @@ RSpec.describe Organisations::DocumentsPresenter do
             ],
             brand: nil,
             heading_level: 3,
+            extra_details_no_indent: true,
           },
           {
             description: "Story 2-2",
@@ -169,6 +170,7 @@ RSpec.describe Organisations::DocumentsPresenter do
             ],
             brand: nil,
             heading_level: 3,
+            extra_details_no_indent: true,
           },
         ],
       },
@@ -195,6 +197,7 @@ RSpec.describe Organisations::DocumentsPresenter do
             ],
             brand: nil,
             heading_level: 3,
+            extra_details_no_indent: true,
           },
           {
             description: "Story 3-2",
@@ -213,6 +216,7 @@ RSpec.describe Organisations::DocumentsPresenter do
             ],
             brand: nil,
             heading_level: 3,
+            extra_details_no_indent: true,
           },
           {
             description: "Story 3-3",
@@ -232,6 +236,7 @@ RSpec.describe Organisations::DocumentsPresenter do
             ],
             brand: nil,
             heading_level: 3,
+            extra_details_no_indent: true,
           },
         ],
       },

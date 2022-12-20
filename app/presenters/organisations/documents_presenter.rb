@@ -76,6 +76,7 @@ module Organisations
           end,
           brand: org.brand,
           heading_level: 3,
+          extra_details_no_indent: true,
         }.merge(make_full_width(number_of_items))
 
         if item["title"].present?
@@ -89,10 +90,7 @@ module Organisations
     def make_full_width(number_of_items)
       return {} unless number_of_items == 1
 
-      {
-        large: true,
-        extra_details_no_indent: true,
-      }
+      { large: true }
     end
 
     def featured_news(featured, first_featured: false)
