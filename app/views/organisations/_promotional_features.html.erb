@@ -9,14 +9,19 @@
         border_top: 5,
         brand: @organisation.brand
       } %>
-
-      <div class="<%= "govuk-grid-row" if feature[:number_of_items] > 1 %>">
+      <% if feature[:number_of_items] > 1 %>
+        <div class="govuk-grid-row">
+          <% feature[:items].each do |item| %>
+            <div class="<%= feature[:child_column_class] %>">
+              <%= render "govuk_publishing_components/components/image_card", item %>
+            </div>
+          <% end %>
+        </div>
+      <% else %>
         <% feature[:items].each do |item| %>
-          <div class="<%= feature[:child_column_class] %>">
-            <%= render "govuk_publishing_components/components/image_card", item %>
-          </div>
+          <%= render "govuk_publishing_components/components/image_card", item %>
         <% end %>
-      </div>
+      <% end %>
     </div>
   <% end %>
 </section>
