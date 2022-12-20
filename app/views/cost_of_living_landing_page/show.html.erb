@@ -13,7 +13,7 @@
       content: {
         html: render(partial: "links", locals: {
           presenter: content,
-          accordion_heading: list[:heading],
+          list_heading: list[:heading],
           list: list[:content],
           list_index: list_index,
         }),
@@ -110,7 +110,7 @@
             <h2><%= list[:heading] %></h2>
             <%= render(partial: "links", locals: {
                   presenter: content,
-                  accordion_heading: list[:heading],
+                  list_heading: list[:heading],
                   list: list[:content],
                   list_index: list_index,
                 } ) %>
