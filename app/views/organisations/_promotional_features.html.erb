@@ -1,7 +1,7 @@
 <% if @documents.has_promotional_features? %>
-<section class="organisation__margin-bottom organisation__promotions">
+<section class="organisation__margin-bottom organisation__section-wrap">
   <% @documents.promotional_features.each do |feature| %>
-    <div class="<%= feature[:parent_column_class] %>">
+    <div class="organisation__promotion">
       <%= render "govuk_publishing_components/components/heading", {
         text: feature[:title],
         heading_level: 2,
@@ -9,14 +9,19 @@
         border_top: 5,
         brand: @organisation.brand
       } %>
-
-      <div class="<%= "govuk-grid-row" if feature[:number_of_items] > 1 %>">
+      <% if feature[:number_of_items] > 1 %>
+        <div class="govuk-grid-row">
+          <% feature[:items].each do |item| %>
+            <div class="<%= feature[:child_column_class] %>">
+              <%= render "govuk_publishing_components/components/image_card", item %>
+            </div>
+          <% end %>
+        </div>
+      <% else %>
         <% feature[:items].each do |item| %>
-          <div class="<%= feature[:child_column_class] %>">
-            <%= render "govuk_publishing_components/components/image_card", item %>
-          </div>
+          <%= render "govuk_publishing_components/components/image_card", item %>
         <% end %>
-      </div>
+      <% end %>
     </div>
   <% end %>
 </section>

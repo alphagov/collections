@@ -103,7 +103,6 @@ RSpec.describe Organisations::DocumentsPresenter do
       {
         title: "One feature",
         number_of_items: 1,
-        parent_column_class: "column-1",
         child_column_class: nil,
         items: [
           {
@@ -123,13 +122,14 @@ RSpec.describe Organisations::DocumentsPresenter do
             ],
             brand: nil,
             heading_level: 3,
+            large: true,
+            extra_details_no_indent: true,
           },
         ],
       },
       {
         title: "Two features",
         number_of_items: 2,
-        parent_column_class: "column-2",
         child_column_class: "govuk-grid-column-one-half",
         items: [
           {
@@ -149,6 +149,7 @@ RSpec.describe Organisations::DocumentsPresenter do
             ],
             brand: nil,
             heading_level: 3,
+            extra_details_no_indent: true,
           },
           {
             description: "Story 2-2",
@@ -167,13 +168,13 @@ RSpec.describe Organisations::DocumentsPresenter do
             ],
             brand: nil,
             heading_level: 3,
+            extra_details_no_indent: true,
           },
         ],
       },
       {
         title: "Three features",
         number_of_items: 3,
-        parent_column_class: "column-3",
         child_column_class: "govuk-grid-column-one-third",
         items: [
           {
@@ -193,6 +194,7 @@ RSpec.describe Organisations::DocumentsPresenter do
             ],
             brand: nil,
             heading_level: 3,
+            extra_details_no_indent: true,
           },
           {
             description: "Story 3-2",
@@ -211,6 +213,7 @@ RSpec.describe Organisations::DocumentsPresenter do
             ],
             brand: nil,
             heading_level: 3,
+            extra_details_no_indent: true,
           },
           {
             description: "Story 3-3",
@@ -230,6 +233,7 @@ RSpec.describe Organisations::DocumentsPresenter do
             ],
             brand: nil,
             heading_level: 3,
+            extra_details_no_indent: true,
           },
         ],
       },

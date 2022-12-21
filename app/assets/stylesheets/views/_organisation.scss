@@ -31,33 +31,6 @@
   }
 }
 
-.organisation__promotions {
-  @include govuk-media-query($from: tablet) {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-left: -(govuk-spacing(3));
-    margin-right: -(govuk-spacing(3));
-
-    .column-1 {
-      padding: 0 govuk-spacing(3);
-      width: calc(100% / 3 - 30px);
-    }
-
-    .column-2 {
-      width: 50%;
-    }
-
-    .column-3 {
-      padding: 0 govuk-spacing(3);
-      width: 100%;
-    }
-  }
-}
-
 .organisation__contact-section {
   word-wrap: break-word;
 
