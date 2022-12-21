@@ -1,5 +1,5 @@
 <header class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-two-thirds <%= direction_rtl_class %>" <%= dir_attribute %> <%= lang_attribute %>>
     <%= render "govuk_publishing_components/components/title", {
       context: person.current_roles_title,
       title: person.title
