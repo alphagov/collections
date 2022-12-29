@@ -108,10 +108,6 @@ module Collections
 
     config.assets.prefix = "/assets/collections/"
 
-    # allow overriding the asset host with an enironment variable, useful for
-    # when router is proxying to this app but asset proxying isn't set up.
-    config.asset_host = ENV["ASSET_HOST"]
-
     # Override Rails 6 default which restricts framing to SAMEORIGIN.
     config.action_dispatch.default_headers = {
       "X-Frame-Options" => "ALLOWALL",
