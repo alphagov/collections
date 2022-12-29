@@ -1,6 +1,7 @@
 {
   "name": "collections",
   "repository": "https://github.com/alphagov/collections",
+  "stack": "heroku-22",
   "env": {
     "GOVUK_APP_DOMAIN": {
       "value": "www.gov.uk"
