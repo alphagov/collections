@@ -7,7 +7,7 @@ gem "faraday"
 gem "gds-api-adapters"
 gem "govspeak"
 gem "govuk_ab_testing"
-gem "govuk_app_config"
+gem "govuk_app_config", github: "alphagov/govuk_app_config", branch: "csp-modernisation"
 gem "govuk_document_types"
 gem "govuk_publishing_components"
 gem "mail", "~> 2.7.1"  # TODO: remove once https://github.com/mikel/mail/issues/1489 is fixed.
