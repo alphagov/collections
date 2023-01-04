@@ -11,7 +11,12 @@
 </div>
 
 <% people.each_slice(4) do |row| %>
-  <%= render partial: "row", locals: {
-    row: row,
-  } %>
+  <div class="govuk-grid-row historic-people-index__section-row">
+    <% row.each do | name, info | %>
+      <%= render partial: "shared/historical_person", locals: {
+        name: name,
+        info: info,
+      } %>
+    <%end%>
+  </div>
 <% end %>
