@@ -1,6 +1,4 @@
 class MainstreamBrowsePage
-  include ResearchPanelBannerHelper
-
   attr_reader :content_item
 
   delegate(
