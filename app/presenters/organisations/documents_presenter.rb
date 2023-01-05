@@ -65,8 +65,9 @@ module Organisations
         data = {
           description: item["summary"].gsub("\r\n", "<br/>").html_safe,
           href: promotional_feature_link(item["href"]),
-          image_src: item["image"]["url"],
-          image_alt: item["image"]["alt_text"],
+          image_src: item.dig("image", "url"),
+          image_alt: item.dig("image", "alt_text"),
+          youtube_video_id: item["youtube_video_id"],
           extra_details: item["links"].map do |link|
             {
               text: link["title"],
