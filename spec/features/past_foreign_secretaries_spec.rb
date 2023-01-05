@@ -32,4 +32,16 @@ RSpec.feature "Past Foreign Secretaries pages" do
       expect(page).to have_text("18th century")
     end
   end
+
+  describe "individual foreign secretary show page" do
+    it "sets the page title" do
+      visit "#{base_path}/austen-chamberlain"
+      expect(page).to have_title("History of Sir Austen Chamberlain - GOV.UK")
+    end
+
+    it "sets renders the title on the page" do
+      visit "#{base_path}/austen-chamberlain"
+      expect(page).to have_text("Sir Austen Chamberlain")
+    end
+  end
 end

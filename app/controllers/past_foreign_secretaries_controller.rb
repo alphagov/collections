@@ -288,6 +288,8 @@ class PastForeignSecretariesController < ApplicationController
   end
 
   def show
+    setup_content_item_and_navigation_helpers(PastForeignSecretaries.find!(request.path.split("/")[0...-1].join("/")))
+
     if people_with_individual_pages.include?(params[:id])
       render template: "past_foreign_secretaries/#{params[:id].underscore}"
     else
@@ -299,15 +301,15 @@ private
 
   def people_with_individual_pages
     %w[
-      edward-wood
       austen-chamberlain
-      george-curzon
+      charles-fox
       edward-grey
+      edward-wood
+      george-curzon
+      george-gordon
+      george-gower
       henry-petty-fitzmaurice
       robert-cecil
-      george-gower
-      george-gordon
-      charles-fox
       william-grenville
     ]
   end
