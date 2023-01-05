@@ -1,6 +1,12 @@
 <% content_for :breadcrumbs do %>
-  <%= render "govuk_publishing_components/components/breadcrumbs", {
-    breadcrumbs: @header.breadcrumbs,
-    collapse_on_mobile: true
-  } %>
+  <% if @organisation.is_no_10? %>
+    <%= render "shared/browse_breadcrumbs", {
+      column_two_thirds: true
+    } %>
+  <% else %>
+    <%= render "govuk_publishing_components/components/breadcrumbs", {
+      breadcrumbs: @header.breadcrumbs,
+      collapse_on_mobile: true
+    } %>
+  <% end %>
 <% end %>
