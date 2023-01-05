@@ -28,7 +28,7 @@ module Organisations
     end
 
     def promotional_features
-      org.ordered_promotional_features.map do |feature|
+      temp = org.ordered_promotional_features.map do |feature|
         number_of_items = feature["items"].length
         {
           title: feature["title"],
@@ -37,6 +37,27 @@ module Organisations
           items: items_for_a_promotional_feature(feature),
         }
       end
+
+      temp.unshift({
+        title: "Rishi Sunak's first speech as Prime Minister",
+        number_of_items: 1,
+        child_column_class: promotions_child_column_class(1),
+        items: [
+          {
+            description: "Rishi Sunak gave his first sppech as Prime Minister",
+            youtube_video_id: "sEFAzNc3P3Y",
+            image_alt: "Prime Minister Rishi Sunak’s speech on the steps of Downing Street",
+            extra_details: [{
+              text: "Link to transcript",
+              href: "/transcript-link"
+            }],
+            brand: org.brand,
+            extra_details_no_indent: true,
+          }
+        ]
+      })
+
+      temp
     end
 
     def has_latest_documents?
