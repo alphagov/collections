@@ -110,6 +110,7 @@ RSpec.describe Organisations::DocumentsPresenter do
             href: "https://www.gov.uk/government/policies/1-1",
             image_src: "https://assets.publishing.service.gov.uk/government/uploads/1-1.jpg",
             image_alt: "Image 1-1",
+            youtube_video_id: nil,
             extra_details: [
               {
                 text: "Single departmental plans",
@@ -137,6 +138,7 @@ RSpec.describe Organisations::DocumentsPresenter do
             href: "https://www.gov.uk/government/policies/2-1",
             image_src: "https://assets.publishing.service.gov.uk/government/uploads/2-1.jpg",
             image_alt: "Image 2-1",
+            youtube_video_id: nil,
             extra_details: [
               {
                 text: "Single departmental plans",
@@ -156,6 +158,7 @@ RSpec.describe Organisations::DocumentsPresenter do
             href: "https://www.gov.uk/government/policies/2-2",
             image_src: "https://assets.publishing.service.gov.uk/government/uploads/2-2.jpg",
             image_alt: "Image 2-2",
+            youtube_video_id: nil,
             extra_details: [
               {
                 text: "Single departmental plans",
@@ -182,6 +185,7 @@ RSpec.describe Organisations::DocumentsPresenter do
             href: "https://www.gov.uk/government/policies/3-1",
             image_src: "https://assets.publishing.service.gov.uk/government/uploads/3-1.jpg",
             image_alt: "Image 3-1",
+            youtube_video_id: nil,
             extra_details: [
               {
                 text: "Single departmental plans",
@@ -201,6 +205,7 @@ RSpec.describe Organisations::DocumentsPresenter do
             href: "https://www.gov.uk/government/policies/3-3",
             image_src: "https://assets.publishing.service.gov.uk/government/uploads/3-2.jpg",
             image_alt: "Image 3-2",
+            youtube_video_id: nil,
             extra_details: [
               {
                 text: "Single departmental plans",
@@ -218,8 +223,9 @@ RSpec.describe Organisations::DocumentsPresenter do
           {
             description: "Story 3-3",
             href: "https://www.gov.uk/government/policies/3-3",
-            image_src: "https://assets.publishing.service.gov.uk/government/uploads/3-3.jpg",
-            image_alt: "Image 3-3",
+            image_src: nil,
+            image_alt: nil,
+            youtube_video_id: "fFmDQn9Lbl4",
             heading_text: "An unexpected title",
             extra_details: [
               {
