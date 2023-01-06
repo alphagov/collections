@@ -62,6 +62,7 @@ Rails.application.routes.draw do
       to: "services_and_information#index",
       as: :services_and_information
 
+  get "/government/history/past-chancellors", to: "past_chancellors#index"
   get "/government/people/:name(.:locale)", to: "people#show"
   get "/government/ministers(.:locale)", to: "ministers#index"
   get "/government/ministers/:name(.:locale)", to: "roles#show"
