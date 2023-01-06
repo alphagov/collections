@@ -1,0 +1,17 @@
+<div class="govuk-grid-row historic-people-index__section-row-header">
+  <div class="govuk-grid-column-full">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: heading,
+      padding: true,
+      border_top: 2,
+      font_size: "l"
+    } %>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+  </div>
+</div>
+
+<% people.each_slice(4) do |row| %>
+  <%= render partial: "row", locals: {
+    row: row,
+  } %>
+<% end %>

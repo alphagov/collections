@@ -1,0 +1,8 @@
+<div class="govuk-grid-row historic-people-index__section-row">
+  <% row.each do | name, info | %>
+    <%= render partial: "person", locals: {
+      name: name,
+      info: info,
+    } %>
+  <%end%>
+</div>
