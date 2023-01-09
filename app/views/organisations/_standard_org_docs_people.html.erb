@@ -1,0 +1,15 @@
+<% if @supergroups.has_groups? %>
+    <%= render partial: 'latest_documents_by_supergroup' %>
+<% end %>
+<% if @people.has_people? %>
+    <div id="people">
+        <% @people.all_people.each do |people_data| %>
+        <%= render partial: 'related_people', locals: {
+            people: people_data[:people],
+            title: people_data[:title],
+            lang: people_data[:lang],
+            brand: @organisation.brand
+        } %>
+        <% end %>
+    </div>
+<% end %>

@@ -9,41 +9,14 @@
 <%= render partial: 'what_we_do' %>
 <% if @organisation.is_promotional_org? %>
   <%= render partial: 'promotional_features' %>
-<% end %>
-<% unless @organisation.is_promotional_org? %>
-  <% if @supergroups.has_groups? && !@organisation.is_promotional_org?  %>
-    <%= render partial: 'latest_documents_by_supergroup' %>
-  <% end %>
-  <% if @people.has_people? %>
-    <div id="people">
-      <% @people.all_people.each do |people_data| %>
-        <%= render partial: 'related_people', locals: {
-            people: people_data[:people],
-            title: people_data[:title],
-            lang: people_data[:lang],
-            brand: @organisation.brand
-        } %>
-      <% end %>
-    </div>
-  <% end %>
+<% else %>
+  <%= render partial: 'standard_org_docs_people' %>
 <% end %>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <%= render partial: 'org_contacts', locals: { contacts: @contacts } %>
     <% unless @organisation.is_promotional_org? %>
-      <%= render partial: 'freedom_of_information' %>
-    <% end %>
-    <% if @show.high_profile_groups[:items].present? && !@organisation.is_promotional_org? %>
-      <section class="organisation__margin-bottom" id="high-profile-groups">
-        <%= render "govuk_publishing_components/components/heading", {
-            text: @show.high_profile_groups[:title],
-            brand: @organisation.brand,
-            border_top: 5,
-            padding: true,
-            margin_bottom: 3
-        } %>
-        <%= render "components/topic-list", @show.high_profile_groups %>
-      </section>
+      <%= render partial: 'standard_org_foi_profiles' %>
     <% end %>
   </div>
   <% if @organisation.ordered_corporate_information.present? %>

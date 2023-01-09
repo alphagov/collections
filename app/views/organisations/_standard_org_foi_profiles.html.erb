@@ -1,0 +1,13 @@
+<%= render partial: 'freedom_of_information' %>
+<% if @show.high_profile_groups[:items].present? %>
+    <section class="organisation__margin-bottom" id="high-profile-groups">
+    <%= render "govuk_publishing_components/components/heading", {
+        text: @show.high_profile_groups[:title],
+        brand: @organisation.brand,
+        border_top: 5,
+        padding: true,
+        margin_bottom: 3
+    } %>
+    <%= render "components/topic-list", @show.high_profile_groups %>
+    </section>
+<% end %>
