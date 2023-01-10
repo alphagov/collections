@@ -1,0 +1,21 @@
+<% content_for :title, @content_item["title"] %>
+
+<% page_class "historic-appointments-index historical-past-chancellors govuk-width-container" %>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <%= render "govuk_publishing_components/components/title", {
+      context: "History",
+      title: @content_item["title"],
+    } %>
+  </div>
+</div>
+
+<%= render partial: "century", locals: { heading: "21st century", people: @twentyfirst_century_chancellors } %>
+
+<%= render partial: "century", locals: { heading: "20th century", people: @twentieth_century_chancellors } %>
+
+<%= render partial: "century", locals: { heading: "19th century", people: @nineteenth_century_chancellors } %>
+
+<%= render partial: "century", locals: { heading: "18th century", people: @eighteenth_century_chancellors } %>
+
+<%= render partial: "century", locals: { heading: "16th & 17th centuries", people: @sixteenth_and_seventeenth_century_chancellors } %>
