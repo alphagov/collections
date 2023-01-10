@@ -1,16 +1,14 @@
 <% if @organisation.is_no_10? %>
   <%= render "shared/browse_header", {
-    two_thirds: true
     } do %>
 
     <h1 class="browse__heading govuk-heading-xl">
       10
     </h1>
-    <%= render "govuk_publishing_components/components/lead_paragraph", {
-      text: 'test content',
-      margin_bottom: 6,
-      inverse: true
-    } %>
+    <div class="new-org-header-image-card">
+      <%= render "govuk_publishing_components/components/image_card", @documents.first_featured_news %>
+    </div>
+    
   <% end %>
 <% else %>
   <h1 class="govuk-visually-hidden"><%= @header.org.title %></h1>

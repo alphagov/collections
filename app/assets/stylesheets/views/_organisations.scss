@@ -32,3 +32,73 @@
 .filter-organisations-list__form--active {
   display: block;
 }
+
+.new-org-header-image-card {
+  @include govuk-media-query($from: tablet) {
+    // Push image down for visual overlapping effect
+    top: 50px;
+  }
+  position: relative;
+}
+
+.new-org-header-image-card .gem-c-image-card__text-wrapper {
+  @include govuk-media-query($from: tablet) {
+    // Ensure that there's sufficient grey background behind the text
+    padding-bottom: 70px;
+  }
+
+  @include govuk-media-query($until: tablet) {
+    // Position the image over the white background container and keep it contained within the text area
+    z-index: 2;
+    overflow: visible;
+    position: relative;
+
+    // Create a white background container that is the height of the text and width of the whole viewport
+    &:after {
+      content: "";
+      background-color: #ffffff;
+      z-index: -1;
+      height: 100%;
+      width: auto;
+      position: absolute;
+      left: -15px;
+      right: -15px;
+      // Show the white container behind the image above
+      top: -70px;
+      padding-bottom: 70px;
+    }
+  }
+}
+
+.new-org-header-image-card .gem-c-image-card__image-wrapper {
+  // As the image has a known height, the dark background colour that extends below the text can at this viewport width start to
+  // approach the bottom of the image (depending on the length of the text) and no longer look visually correct. For this reason
+  // extend the container so that the background colour starts below the image.
+  ///
+  /// Remove the fix at wider viewports where text is less likely to extend to the bottom of the image (unless the text was very
+  /// long, which we're purposefully not building for at this point) to create the overhanging effect (if the text was too long,
+  /// at certain viewport widths the image would approach the bottom of the background colour so the overhanging effect wouldn't
+  /// look correct, but the text would still remain legible against the dark background).
+  @media (min-width: 660px) and (max-width: 860px) {
+    margin-bottom: 90px;
+  }
+
+  @include govuk-media-query($until: tablet) {
+    // Position the image over the white background container
+    z-index: 2;
+  }
+}
+
+// Todo: use a custom class
+.browse__header-wrapper {
+  padding-bottom: 0;
+  margin-bottom: 40px;
+  // From here on the image has the overhanging effect so push the content below down to leave space for it
+  @media (min-width: 861px) {
+    margin-bottom: 100px;
+  }
+
+  .gem-c-image-card {
+    margin-bottom: 0;
+  }
+}

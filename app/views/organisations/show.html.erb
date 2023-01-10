@@ -4,25 +4,31 @@
 <%= render 'govuk_publishing_components/components/machine_readable_metadata',
            schema: :organisation,
            content_item: @organisation.content_item.content_item_data %>
-<<<<<<< HEAD
-<%= render partial: 'featured_news' %>
-<%= render partial: 'latest_documents' %>
-<%= render partial: 'what_we_do' %>
-<% if @organisation.is_promotional_org? %>
-  <%= render partial: 'promotional_features' %>
-<% else %>
-  <%= render partial: 'standard_org_docs_people' %>
+<%# Constrain width of content on full width page %>
+<% if @organisation.is_no_10? %>
+  <div class="govuk-width-container">
 <% end %>
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <%= render partial: 'org_contacts', locals: { contacts: @contacts } %>
-    <% unless @organisation.is_promotional_org? %>
-      <%= render partial: 'standard_org_foi_profiles' %>
+  <%= render partial: 'featured_news' %>
+  <%= render partial: 'latest_documents' %>
+  <%= render partial: 'what_we_do' %>
+  <% if @organisation.is_promotional_org? %>
+    <%= render partial: 'promotional_features' %>
+  <% else %>
+    <%= render partial: 'standard_org_docs_people' %>
+  <% end %>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <%= render partial: 'org_contacts', locals: { contacts: @contacts } %>
+      <% unless @organisation.is_promotional_org? %>
+        <%= render partial: 'standard_org_foi_profiles' %>
+      <% end %>
+    </div>
+    <% if @organisation.ordered_corporate_information.present? %>
+      <div class="organisation__corporate-information" id="corporate-info">
+        <%= render partial: 'corporate_information' %>
+      </div>
     <% end %>
   </div>
-  <% if @organisation.ordered_corporate_information.present? %>
-    <div class="organisation__corporate-information" id="corporate-info">
-      <%= render partial: 'corporate_information' %>
-    </div>
-  <% end %>
-</div>
+<% if @organisation.is_no_10? %>
+  </div>
+<% end %>

@@ -10,11 +10,10 @@
       } %>
     </div>
   </div>
-
-  <% if @organisation.is_news_organisation? %>
+  
+  <% if @organisation.is_news_organisation? && !@organisation.is_no_10? %>
     <%= render "govuk_publishing_components/components/image_card", @documents.first_featured_news %>
   <% end %>
-
   <% @documents.remaining_featured_news.in_groups_of(3, false) do |news| %>
     <div class="govuk-grid-row">
       <% news.each do |news_item| %>
