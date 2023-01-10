@@ -62,6 +62,7 @@ module Organisations
     def items_for_a_promotional_feature(feature)
       number_of_items = feature["items"].length
       feature["items"].map do |item|
+        puts item.inspect
         data = {
           description: item["summary"].gsub("\r\n", "<br/>").html_safe,
           href: promotional_feature_link(item["href"]),
