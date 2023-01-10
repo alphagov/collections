@@ -1,7 +1,9 @@
 <% inverse ||= false %>
 
+<% breadcrumbs = @header.breadcrumbs ? @header.breadcrumbs : Breadcrumbs.new(@content_item).breadcrumbs  %>
+
 <%= render 'govuk_publishing_components/components/breadcrumbs', {
-  breadcrumbs: Breadcrumbs.new(@content_item).breadcrumbs,
+  breadcrumbs: breadcrumbs,
   collapse_on_mobile: true,
   inverse: inverse
 } %>
