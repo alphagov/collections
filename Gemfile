@@ -9,7 +9,7 @@ gem "govspeak"
 gem "govuk_ab_testing"
 gem "govuk_app_config"
 gem "govuk_document_types"
-gem "govuk_publishing_components"
+gem "govuk_publishing_components", git: 'https://github.com/alphagov/govuk_publishing_components.git', branch: 'yt-for-image-card-test'
 gem "mail", "~> 2.7.1"  # TODO: remove once https://github.com/mikel/mail/issues/1489 is fixed.
 gem "plek"
 gem "rails-i18n"
