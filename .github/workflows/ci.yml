@@ -63,4 +63,3 @@ jobs:
         env:
           RAILS_ENV: test
         run: bundle exec rails cucumber
-
