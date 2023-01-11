@@ -13,9 +13,9 @@ header:
 announcements:
   heading: Announcements
   body:
-  - content: There is an automatic limit on how much you will be charged for each unit of gas or electricity from 1 October.
-    link_text: Find out how the Energy Price Guarantee limits your energy prices.
-    href: /government/publications/energy-bills-support/energy-bills-support-factsheet-8-september-2022
+  - content: You may get Cost of Living Payments between spring 2023 and spring 2024 if you're a pensioner or you get low-income or disability benefits.
+    link_text: Find out about the Cost of Living Payment.
+    href: /guidance/cost-of-living-payment
   - content: You may get calls, emails or messages that pretend to be from a government service or energy bill support scheme. If you get a message asking for your personal details (for example, bank details or passwords) this could be a scam.
     link_text: Report anything you think is suspicious.
     href: /report-suspicious-emails-websites-phishing
@@ -29,7 +29,7 @@ body:
         - link_text: Check what benefits and financial support you can get
           href: /check-benefits-financial-support
         - link_text: Find out about the Cost of Living Payment
-          important_info: including the date of your next payment and how to report if it’s missing
+          important_info: including future payments and how to report if a payment is missing
           href: /guidance/cost-of-living-payment
         - link_text: Find out about help you can get from your local council (Household Support Fund)
           href: /cost-living-help-local-council
@@ -76,7 +76,7 @@ body:
         - link_text: Check what benefits and financial support you can get
           href: /check-benefits-financial-support
         - link_text: Find out about the Cost of Living Payment
-          important_info: including the date of your next payment and how to report if it’s missing
+          important_info: including future payments and how to report if a payment is missing
           href: /guidance/cost-of-living-payment
         - link_text: Apply for a free or discounted TV Licence if you're over 75, blind or in residential care
           href: /free-discount-tv-licence
@@ -143,7 +143,7 @@ body:
       - link_text: Find out how the Energy Price Guarantee limits your energy prices
         href: /government/publications/energy-bills-support/energy-bills-support-factsheet-8-september-2022
       - link_text: Find out about the Cost of Living Payment
-        important_info: including the date of your next payment and how to report if it’s missing
+        important_info: including future payments and how to report if a payment is missing
         href: /guidance/cost-of-living-payment
       - link_text: Find out how the Energy Bills Support Scheme lowers your energy bills
         important_info: including how to claim if you’ve got a prepayment meter
