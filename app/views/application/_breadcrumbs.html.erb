@@ -1,6 +1,6 @@
 <% inverse ||= false %>
 
-<% breadcrumbs = @header.breadcrumbs ? @header.breadcrumbs : Breadcrumbs.new(@content_item).breadcrumbs  %>
+<% breadcrumbs = defined?(@header.breadcrumbs) ? @header.breadcrumbs : Breadcrumbs.new(@content_item).breadcrumbs  %>
 
 <%= render 'govuk_publishing_components/components/breadcrumbs', {
   breadcrumbs: breadcrumbs,
