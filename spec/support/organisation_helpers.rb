@@ -753,7 +753,10 @@ module OrganisationHelpers
                 title: "An unexpected title",
                 href: "https://www.gov.uk/government/policies/3-3",
                 summary: "Story 3-3",
-                youtube_video_id: "fFmDQn9Lbl4",
+                youtube_video: {
+                  id: "fFmDQn9Lbl4",
+                  alt_text: "YouTube video alt text.",
+                },
                 links: [
                   {
                     title: "Single departmental plans",

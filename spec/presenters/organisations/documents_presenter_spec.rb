@@ -111,6 +111,7 @@ RSpec.describe Organisations::DocumentsPresenter do
             image_src: "https://assets.publishing.service.gov.uk/government/uploads/1-1.jpg",
             image_alt: "Image 1-1",
             youtube_video_id: nil,
+            youtube_video_alt: nil,
             extra_details: [
               {
                 text: "Single departmental plans",
@@ -139,6 +140,7 @@ RSpec.describe Organisations::DocumentsPresenter do
             image_src: "https://assets.publishing.service.gov.uk/government/uploads/2-1.jpg",
             image_alt: "Image 2-1",
             youtube_video_id: nil,
+            youtube_video_alt: nil,
             extra_details: [
               {
                 text: "Single departmental plans",
@@ -159,6 +161,7 @@ RSpec.describe Organisations::DocumentsPresenter do
             image_src: "https://assets.publishing.service.gov.uk/government/uploads/2-2.jpg",
             image_alt: "Image 2-2",
             youtube_video_id: nil,
+            youtube_video_alt: nil,
             extra_details: [
               {
                 text: "Single departmental plans",
@@ -186,6 +189,7 @@ RSpec.describe Organisations::DocumentsPresenter do
             image_src: "https://assets.publishing.service.gov.uk/government/uploads/3-1.jpg",
             image_alt: "Image 3-1",
             youtube_video_id: nil,
+            youtube_video_alt: nil,
             extra_details: [
               {
                 text: "Single departmental plans",
@@ -206,6 +210,7 @@ RSpec.describe Organisations::DocumentsPresenter do
             image_src: "https://assets.publishing.service.gov.uk/government/uploads/3-2.jpg",
             image_alt: "Image 3-2",
             youtube_video_id: nil,
+            youtube_video_alt: nil,
             extra_details: [
               {
                 text: "Single departmental plans",
@@ -226,6 +231,7 @@ RSpec.describe Organisations::DocumentsPresenter do
             image_src: nil,
             image_alt: nil,
             youtube_video_id: "fFmDQn9Lbl4",
+            youtube_video_alt: "YouTube video alt text.",
             heading_text: "An unexpected title",
             extra_details: [
               {
