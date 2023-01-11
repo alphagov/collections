@@ -8,7 +8,7 @@ en:
       organisations: Organisations
     contact:
       contact_details: Contact details
-      contact_form: 'Contact Form: %{title}'
+      contact_form: 'Contact: %{title}'
       contact_organisation: Contact %{organisation}
       email: Email
       telephone: Telephone
