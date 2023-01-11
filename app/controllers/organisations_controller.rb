@@ -46,7 +46,7 @@ private
   def is_no_10?
     @organisation.is_no_10?
   end
-  
+
   def organisation_view
     @organisation.is_live? ? "show" : "separate_website"
   end
