@@ -75,7 +75,7 @@ RSpec.describe Organisations::ContactsPresenter do
             "<a class=\"govuk-link brand__color\" href=\"mailto:enquiries@trade.gov.uk\">enquiries@trade.gov.uk</a>",
           ],
           links: [
-            "<a class=\"govuk-link brand__color\" href=\"/contact\">Contact Form: Department for International Trade</a>",
+            "<a class=\"govuk-link brand__color\" href=\"/contact\">Contact: Department for International Trade</a>",
           ],
           description: nil,
         },
