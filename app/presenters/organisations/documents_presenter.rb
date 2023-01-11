@@ -67,7 +67,8 @@ module Organisations
           href: promotional_feature_link(item["href"]),
           image_src: item.dig("image", "url"),
           image_alt: item.dig("image", "alt_text"),
-          youtube_video_id: item["youtube_video_id"],
+          youtube_video_id: item.dig("youtube_video", "id"),
+          youtube_video_alt: item.dig("youtube_video", "alt_text"),
           extra_details: item["links"].map do |link|
             {
               text: link["title"],
