@@ -96,21 +96,32 @@ RSpec.describe "Organisation pages" do
     expect(page).to have_title("Charity Commission - GOV.UK")
   end
 
-  describe "no10 banner" do
+  describe "no10 header" do
     it "shows only on no10's page" do
       visit "/government/organisations/prime-ministers-office-10-downing-street"
-      expect(page).to have_css(".organisation__no10-banner", text: "Prime Minister's Office, 10 Downing Street")
+      expect(page).to have_css(".organisation__no10-header__banner__content", text: "The Prime Minister's Office, 10 Downing Street")
+    end
+
+    it "contains a picture tag with source and image" do
+      visit "/government/organisations/prime-ministers-office-10-downing-street"
+      expect(page).to have_selector(".organisation__no10-header__banner picture source")
+      expect(page).to have_selector(".organisation__no10-header__banner picture img")
+    end
+
+    it "contains three image cards which don't have an image" do
+      visit "/government/organisations/prime-ministers-office-10-downing-street"
+      expect(all(".organisation__no10-header__cards .gem-c-image-card.gem-c-image-card--no-image").count).to eq(3)
     end
 
     it "doesn't show on other org pages" do
       visit "/government/organisations/attorney-generals-office"
-      expect(page).not_to have_css(".organisation__no10-banner")
+      expect(page).not_to have_css(".organisation__no10-header")
 
       visit "/government/organisations/charity-commission"
-      expect(page).not_to have_css(".organisation__no10-banner")
+      expect(page).not_to have_css(".organisation__no10-header")
 
       visit "/government/organisations/civil-service-resourcing"
-      expect(page).not_to have_css(".organisation__no10-banner")
+      expect(page).not_to have_css(".organisation__no10-header")
     end
   end
 

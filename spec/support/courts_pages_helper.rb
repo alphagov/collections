@@ -34,7 +34,7 @@ module CourtPagesHelper
     expect(page).to have_selector(".gem-c-organisation-logo", text: @title)
 
     # Does not have the No. 10 banner
-    expect(page).not_to have_selector(".organisation__no10-banner")
+    expect(page).not_to have_selector(".organisation__no10-header")
   end
 
   def the_courts_title
