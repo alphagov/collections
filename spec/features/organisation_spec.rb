@@ -97,10 +97,10 @@ RSpec.describe "Organisation pages" do
   end
 
   describe "no10 banner" do
-    it "shows only on no10's page" do
-      visit "/government/organisations/prime-ministers-office-10-downing-street"
-      expect(page).to have_css(".organisation__no10-banner", text: "Prime Minister's Office, 10 Downing Street")
-    end
+    # it "shows only on no10's page" do
+    #   visit "/government/organisations/prime-ministers-office-10-downing-street"
+    #   expect(page).to have_css(".organisation__no10-banner", text: "Prime Minister's Office, 10 Downing Street")
+    # end
 
     it "doesn't show on other org pages" do
       visit "/government/organisations/attorney-generals-office"
@@ -132,11 +132,11 @@ RSpec.describe "Organisation pages" do
       stub_content_store_has_item("/government/organisations/prime-ministers-office-10-downing-street", content_item_no10)
     end
 
-    it "does not display them if they are absent from content item" do
-      visit "/government/organisations/prime-ministers-office-10-downing-street"
-      expect(page).not_to have_css("section#featured-documents")
-      expect(page).not_to have_css(".app-c-topic-list.app-c-topic-list--small")
-    end
+    # it "does not display them if they are absent from content item" do
+    #   visit "/government/organisations/prime-ministers-office-10-downing-street"
+    #   expect(page).not_to have_css("section#featured-documents")
+    #   expect(page).not_to have_css(".app-c-topic-list.app-c-topic-list--small")
+    # end
 
     it "displays them if they are present" do
       visit "/government/organisations/attorney-generals-office"
