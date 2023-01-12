@@ -7,32 +7,29 @@
 name: Run Pact tests
 
 on:
-  pull_request:
-  push:
   workflow_call:
     inputs:
-      # what branch or Git SHA to clone this app with, only applies when
-      # called as a workflow, so current commit applies to push/pull requests
       commitish:
         required: false
         type: string
         default: main
       pact_consumer_version:
-        required: true
+        required: false
         type: string
+        default: branch-main
 
 jobs:
   pact_verify:
     name: Verify pact tests
     runs-on: ubuntu-latest
     env:
-      PACT_CONSUMER_VERSION: ${{ inputs.pact_consumer_version || 'branch-main' }}
+      PACT_CONSUMER_VERSION: ${{ inputs.pact_consumer_version }}
       RAILS_ENV: test
     steps:
       - uses: actions/checkout@v3
         with:
           repository: alphagov/collections
-          ref: ${{ inputs.commitish || github.sha }}
+          ref: ${{ inputs.commitish }}
       - uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
