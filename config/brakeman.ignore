@@ -70,6 +70,9 @@
       },
       "user_input": null,
       "confidence": "High",
+      "cwe_id": [
+        79
+      ],
       "note": ""
     },
     {
@@ -111,7 +114,33 @@
       },
       "user_input": null,
       "confidence": "Medium",
+      "cwe_id": [
+        79
+      ],
       "note": "The body of an organisation is pre-rendered as html in the publishing app.  We need to show it in its raw form."
+    },
+    {
+      "warning_type": "Dynamic Render Path",
+      "warning_code": 15,
+      "fingerprint": "747304befb46c303981c417146f3119a6356e90d97e01b61cef01dde596c3c86",
+      "check_name": "Render",
+      "message": "Render path contains parameter value",
+      "file": "app/controllers/past_foreign_secretaries_controller.rb",
+      "line": 294,
+      "link": "https://brakemanscanner.org/docs/warning_types/dynamic_render_path/",
+      "code": "render(template => \"past_foreign_secretaries/#{params[:id].underscore}\", {})",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "PastForeignSecretariesController",
+        "method": "show"
+      },
+      "user_input": "params[:id].underscore",
+      "confidence": "Medium",
+      "cwe_id": [
+        22
+      ],
+      "note": ""
     },
     {
       "warning_type": "Cross-Site Scripting",
@@ -152,6 +181,9 @@
       },
       "user_input": "(Unresolved Model).new[\"links\"]",
       "confidence": "Weak",
+      "cwe_id": [
+        79
+      ],
       "note": "We trust the data in the content-store."
     },
     {
@@ -193,6 +225,9 @@
       },
       "user_input": null,
       "confidence": "Medium",
+      "cwe_id": [
+        79
+      ],
       "note": "This comes from the content store and we trust the data there."
     },
     {
@@ -223,6 +258,9 @@
       },
       "user_input": "Schemas::HowTo.new(step_by_step, self).structured_data",
       "confidence": "Weak",
+      "cwe_id": [
+        79
+      ],
       "note": "This comes from the content store and we trust the data there"
     },
     {
@@ -264,6 +302,9 @@
       },
       "user_input": "(Unresolved Model).new[\"title\"]",
       "confidence": "Medium",
+      "cwe_id": [
+        79
+      ],
       "note": "This comes from the content store and we trust the data there."
     },
     {
@@ -305,6 +346,9 @@
       },
       "user_input": null,
       "confidence": "Medium",
+      "cwe_id": [
+        79
+      ],
       "note": "This comes from the content store"
     },
     {
@@ -346,6 +390,9 @@
       },
       "user_input": null,
       "confidence": "Medium",
+      "cwe_id": [
+        79
+      ],
       "note": "This comes from the content store"
     },
     {
@@ -418,9 +465,12 @@
       },
       "user_input": "Role.find!(request.path).current_holder[\"title\"]",
       "confidence": "Medium",
+      "cwe_id": [
+        79
+      ],
       "note": "This comes from the content store and we trust the data there."
     }
   ],
-  "updated": "2022-05-30 14:30:31 +0000",
-  "brakeman_version": "5.2.2"
+  "updated": "2023-01-09 11:37:45 +0000",
+  "brakeman_version": "5.3.1"
 }
