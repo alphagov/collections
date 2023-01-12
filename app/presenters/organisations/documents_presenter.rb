@@ -46,7 +46,7 @@ module Organisations
           {
             description: "Rishi Sunak gave his first sppech as Prime Minister",
             youtube_video_id: "sEFAzNc3P3Y",
-            image_alt: "Prime Minister Rishi Sunak’s speech on the steps of Downing Street",
+            youtube_video_alt: "Prime Minister Rishi Sunak’s speech on the steps of Downing Street",
             extra_details: [{
               text: "Link to transcript",
               href: "/transcript-link"
