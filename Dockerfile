@@ -10,6 +10,7 @@ COPY Gemfile* .ruby-version ./
 RUN bundle install
 COPY . .
 RUN rails assets:precompile && rm -fr log
+RUN bootsnap precompile --gemfile .
 
 
 FROM $base_image
@@ -18,6 +19,7 @@ ENV GOVUK_APP_NAME=collections
 
 WORKDIR $APP_HOME
 COPY --from=builder $BUNDLE_PATH $BUNDLE_PATH
+COPY --from=builder $BOOTSNAP_CACHE_DIR $BOOTSNAP_CACHE_DIR
 COPY --from=builder $APP_HOME .
 
 USER app
