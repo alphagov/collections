@@ -1,0 +1,73 @@
+<%= render partial: "cost_of_living_landing_page/components/shared/meta_tags", locals: {
+  metadata: {
+    title: @content_item["title"],
+    description: @content_item["description"],
+  }
+} %>
+
+<% content_for :title, @content_item["title"] %>
+
+<% content_for :breadcrumbs do %>
+  <%= render "shared/browse_breadcrumbs", { column_two_thirds: true } %>
+<% end %>
+
+<%= render "shared/browse_header", { two_thirds: true } do %>
+  <h1 class="browse__heading govuk-heading-xl"><%= @content_item["title"] %></h1>
+  <%= render "govuk_publishing_components/components/lead_paragraph", {
+    text: @content_item.dig("details", "lede"),
+    margin_bottom: 6,
+    inverse: true
+  } %>
+<% end %>
+
+<% if @content_item.dig("details", "announcements_govspeak").present? %>
+  <div class="colhub__announcement" data-module="gem-track-click">
+    <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <%= render "govuk_publishing_components/components/heading", {
+            text: "Announcements",
+            padding: true
+          } %>
+
+          <%= render_govspeak(@content_item.dig("details", "announcements_govspeak")) %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<%
+  accordion_contents = @content_item.dig("details", "accordions").map.with_index do |accordion, index|
+    {
+      heading: { text: accordion["heading"] },
+      content: { html: render_govspeak(accordion["content_govspeak"]) },
+      data_attributes: {
+        "track-count": "accordionSection",
+        "track-options": {
+          "dimension114": index + 1
+        }
+      },
+    }
+  end
+%>
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="browse__section">
+        <div data-module="toggle-attribute">
+          <%= render "govuk_publishing_components/components/accordion", {
+            track_show_all_clicks: true,
+            track_sections: true,
+            ga4_tracking: true,
+            items: accordion_contents,
+          } %>
+          <% if @content_item.dig("details", "footer_govspeak").present? %>
+            <%= render_govspeak(@content_item.dig("details", "footer_govspeak")) %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

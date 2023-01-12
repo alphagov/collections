@@ -67,7 +67,9 @@ module ApplicationHelper
 
   def render_govspeak(content, inverse: false)
     render "govuk_publishing_components/components/govspeak", inverse: inverse do
-      raw(Govspeak::Document.new(content, sanitize: false).to_html)
+      # TODO: check usages of this function whether they actually need sanitize: false
+      # as sanitize false is unsafe
+      raw(Govspeak::Document.new(content, sanitize: true).to_html)
     end
   end
 end

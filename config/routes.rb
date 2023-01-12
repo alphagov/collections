@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get "/coronavirus", to: "coronavirus_landing_page#show", as: :coronavirus_landing_page
 
   get "/cost-of-living", to: "cost_of_living_landing_page#show", as: :cost_of_living_landing_page
+  get "/cost-of-living-contentful", to: "cost_of_living_landing_page#contentful", as: :cost_of_living_landing_page_contentful
 
   unless Rails.env.production?
     get "/development", to: "development#index"
