@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/alphagov/govuk_publishing_components.git
-  revision: b17e0f77f8ae4e05ed6ffd3ee35498911dc8fb4e
+  revision: 58ec172063266d48742f1c91f1b7bc8b28e23d18
   branch: yt-for-image-card-test
   specs:
     govuk_publishing_components (34.3.0)
