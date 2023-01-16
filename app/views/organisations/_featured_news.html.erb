@@ -18,9 +18,13 @@
   <% @documents.remaining_featured_news.in_groups_of(3, false) do |news| %>
     <div class="govuk-grid-row">
       <% news.each do |news_item| %>
-        <div class="govuk-grid-column-one-third">
+        <% classes = %w[] %>
+        <% classes << "govuk-grid-column-one-third" unless news_item[:large] %>
+        <% classes << "govuk-grid-column-full" if news_item[:large] %>
+
+        <%= content_tag(:div, class: classes) do %>
           <%= render "govuk_publishing_components/components/image_card", news_item %>
-        </div>
+        <% end %>
       <% end %>
     </div>
   <% end %>
