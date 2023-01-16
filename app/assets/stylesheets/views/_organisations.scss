@@ -34,6 +34,7 @@
 }
 
 .new-org-header-image-card {
+  display: none;
   @include govuk-media-query($from: tablet) {
     // Push image down for visual overlapping effect
     top: 50px;
@@ -91,6 +92,7 @@
 
 // Todo: use a custom class
 .browse__header-wrapper {
+  background: 0;
   padding-bottom: 0;
   margin-bottom: 40px;
   // From here on the image has the overhanging effect so push the content below down to leave space for it
@@ -100,5 +102,38 @@
 
   .gem-c-image-card {
     margin-bottom: 0;
+  }
+}
+
+.test-overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  img {
+    vertical-align: top;
+    max-width: 100%;
+  }
+
+  &:before {
+    content: "The Prime Minister's Office";
+    font-size: 36px;
+    color: white;
+    position: absolute;
+    z-index: 2;
+    bottom: 20px;
+    left: 20px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%; height:100%;
+    top:0; left:0;
+    right: 0;
+    bottom: 0;
+    background:rgba(0, 0, 0, 1);
+    opacity: 0.6;
+    z-index: 1;
   }
 }

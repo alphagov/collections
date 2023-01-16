@@ -5,9 +5,14 @@
     <h1 class="browse__heading govuk-heading-xl">
       10
     </h1>
-    <div class="new-org-header-image-card">
-      <%= render "govuk_publishing_components/components/image_card", @documents.first_featured_news %>
+    <div class="test-overlay">
+      <img
+      src="../../no10header.png"
+      alt="">
     </div>
+    <%# <div class="new-org-header-image-card">
+      <%= render "govuk_publishing_components/components/image_card", @documents.first_featured_news
+      </div> %>
     
   <% end %>
 <% else %>
