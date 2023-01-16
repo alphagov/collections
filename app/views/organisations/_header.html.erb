@@ -1,20 +1,17 @@
 <% if @organisation.is_no_10? %>
-  <%= render "shared/browse_header", {
-    } do %>
 
-    <h1 class="browse__heading govuk-heading-xl">
-      10
-    </h1>
-    <div class="test-overlay">
-      <img
-      src="../../no10header.png"
-      alt="">
-    </div>
-    <%# <div class="new-org-header-image-card">
-      <%= render "govuk_publishing_components/components/image_card", @documents.first_featured_news
-      </div> %>
-    
-  <% end %>
+  <div class="govuk-width-container">
+      <div class="new-design">
+        <h1 class="govuk-heading-xl">
+        10
+        </h1>
+        <div class="new-design-overlay">
+          <img
+          src="../../no10header.png"
+          alt="">
+        </div>
+      </div>
+  </div>
 <% else %>
   <h1 class="govuk-visually-hidden"><%= @header.org.title %></h1>
 
