@@ -100,7 +100,11 @@
       <div class="browse__section">
         <div data-module="toggle-attribute">
           <% content.body[:non_accordion_content].each_with_index do |list, list_index| %>
-            <h2><%= list[:heading] %></h2>
+            <%= render "govuk_publishing_components/components/heading", {
+              text: list[:heading],
+              font_size: "m",
+              padding: true,
+            } %>
             <%= render(partial: "links", locals: {
                   presenter: content,
                   list_heading: list[:heading],
