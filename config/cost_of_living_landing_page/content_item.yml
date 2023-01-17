@@ -43,6 +43,9 @@ body:
           href: /get-help-savings-low-income
         - link_text: Claim tax relief on work-related expenses
           href: /tax-relief-for-employees
+        - link_text: Check if you’re eligible for the Discretionary Assistance Fund (DAF) in Wales
+          important_info: for support with essential costs or living independently
+          href: https://www.gov.wales/discretionary-assistance-fund-daf
       - subheading: Apply for Universal Credit
         links:
         - link_text: Universal Credit in England, Scotland and Wales
@@ -67,6 +70,8 @@ body:
             href: https://www.citizensadvice.org.uk/debt-and-money/budgeting/budgeting/work-out-your-budget/
           - link_text: Check how you can deal with your debts
             href: /pay-off-debts
+          - link_text: Use the Which Money Health Check tool to find ways to save money
+            href: https://www.which.co.uk/tool/my-money-health-check
           - link_text: Use the MoneyHelper service for free, confidential and impartial advice
             href: https://www.moneyhelper.org.uk/
   - heading: Support if you’re disabled
@@ -285,6 +290,9 @@ body:
         href: /support-for-mortgage-interest
       - link_text: Contact your council for help with housing costs and Council Tax
         href: /find-local-council
+      - link_text: Check if you’re eligible for the Discretionary Assistance Fund (DAF) in Wales
+        important_info: for support with essential costs or living independently
+        href: https://www.gov.wales/discretionary-assistance-fund-daf
     - subheading: Check if you’re eligible for Housing Benefit
       links:
       - link_text: Apply for Housing Benefit in England and Wales
@@ -331,8 +339,8 @@ body:
     content:
     - subheading:
       links:
-      - link_text: Find out how the Energy Bill Relief scheme limits the energy prices of your small business
-        important_info: runs between 1 October 2022 and 31 March 2023
+      - link_text: Find out how the Energy Bill Relief and Energy Bill Discount schemes limit the energy prices of your small business
+        important_info: runs between 1 October 2022 and 31 March 2024
         href: /guidance/energy-bill-relief-scheme-help-for-businesses-and-other-non-domestic-customers
       - link_text: Find out about support to improve the energy performance of your business
         href: /business-finance-support?keywords=energy
@@ -345,6 +353,8 @@ body:
       links:
       - link_text: Get support with money and mental health from the Mind website
         href: https://www.mind.org.uk/information-support/tips-for-everyday-living/money-and-mental-health/
+      - link_text: Find free warm spaces being offered by organisations in your area
+        href: https://www.warmwelcome.uk/
       - link_text: Call the Samaritans on 116 123
         important_info: to talk to a trained volunteer anonymously for free. Welsh speakers can call 0808 164 0123 between 7pm and 11pm
         href: https://www.samaritans.org/
