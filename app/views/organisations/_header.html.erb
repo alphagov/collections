@@ -1,16 +1,59 @@
 <% if @organisation.is_no_10? %>
-
   <div class="govuk-width-container">
-      <div class="new-design">
-        <h1 class="govuk-heading-xl">
+      <div class="new-org-header govuk-!-static-margin-bottom-5">
+        <span class="govuk-heading-xl govuk-!-text-align-centre">
         10
-        </h1>
-        <div class="new-design-overlay">
-          <img
-          src="../../no10header.png"
-          alt="">
+        </span>
+        <div class="new-org-header__banner govuk-!-margin-bottom-6">
+          <picture>
+            <source srcset="<%= image_path('no10header-desktop.png') %>" media="(min-width: 641px)" />
+            <img src="<%= image_path('no10header.png') %>" alt="" />
+          </picture>
+          <div class="new-org-header__banner__heading">
+             <h1 class="govuk-heading-l govuk-!-margin-0">
+                The Prime Minister's Office,<br>
+                10 Downing Street
+              </h1>
+          </div>
+        </div>
+        <div class="new-org-header__cards">
+          <h2 class="govuk-heading-m">
+          Lorem ipsum dolor sit amet
+          </h2>
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+              <%= render "govuk_publishing_components/components/image_card", {
+                brand: "prime-ministers-office-10-downing-street",
+                href: "/not-a-page",
+                heading_text: "Lorem ipsum",
+                heading_level: 3,
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            } %>
+            </div>
+            <div class="govuk-grid-column-one-third">
+              <%= render "govuk_publishing_components/components/image_card", {
+                brand: "prime-ministers-office-10-downing-street",
+                href: "/not-a-page",
+                heading_text: "Lorem ipsum",
+                heading_level: 3,
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            } %>
+            </div>
+            <div class="govuk-grid-column-one-third">
+              <%= render "govuk_publishing_components/components/image_card", {
+                brand: "prime-ministers-office-10-downing-street",
+                href: "/not-a-page",
+                heading_text: "Lorem ipsum",
+                heading_level: 3,
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            } %>
+            </div>
+          </div>
         </div>
       </div>
+
+
+
   </div>
 <% else %>
   <h1 class="govuk-visually-hidden"><%= @header.org.title %></h1>
