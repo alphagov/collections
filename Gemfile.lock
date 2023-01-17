@@ -534,7 +534,6 @@ DEPENDENCIES
   govuk_schemas
   govuk_test
   i18n-coverage
-  mail (~> 2.8.0)
   mocha
   pact
   pact_broker-client
