@@ -114,7 +114,7 @@ module Organisations
           description: news["summary"].html_safe,
           brand: org.brand,
           heading_level: 3,
-        }
+        }.merge(org.is_no_10? ? { large: true } : {})
       end
 
       news_stories
