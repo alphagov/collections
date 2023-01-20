@@ -10,11 +10,10 @@
       <div class="organisation__no10-header__banner govuk-!-margin-bottom-6">
 
           <%# To do: add assets here - if their ratio doesn't match the placeholder assets then you need to test them again and possibly tweak things like margins %>
-          <%= image_tag(
-            image_path('no10header.png'), 
-            srcset: image_path('no10header.png') + " 640w, " + image_path("no10header-desktop.png") + " 960w",
-            sizes: "(min-width: 641px) 960px, 640px"
-          ) %>
+        <%= content_tag(:picture) do %>
+          <%= tag(:source, media: "(min-width: 641px)", srcset: "#{image_path('no10header-desktop.png')}") %>
+          <%= tag(:img, src: "#{image_path('no10header.png')}", alt: "") %>
+        <% end %>
 
         <div class="organisation__no10-header__banner__content">
           <%= render "govuk_publishing_components/components/heading", {
