@@ -1,0 +1,204 @@
+{
+  "base_path": "/government/history/past-prime-ministers",
+  "content_id": "a258e45a-acbe-4d70-ad2c-a2a20761536a",
+  "document_type": "historic_appointments",
+  "title": "Past Prime Ministers",
+  "links": {
+    "historical_accounts": [
+      {
+        "title": "The Rt Hon John Smith",
+        "api_path": "/api/content/government/history/past-prime-ministers/john-smith",
+        "base_path": "/government/history/past-prime-ministers/john-smith",
+        "document_type": "historic_appointment",
+        "schema_name": "historic_appointment",
+        "details": {
+          "political_party": "Jazz Party",
+          "dates_in_office": [
+            {
+              "end_year": 2010,
+              "start_year": 2007
+            }
+          ]
+        },
+        "links": {
+          "person": [
+            {
+              "title": "The Rt Hon John Smith",
+              "api_path": "/api/content/government/people/john-smith",
+              "base_path": "/government/people/john-smith",
+              "document_type": "person",
+              "schema_name": "person",
+              "details": {
+                "body": "Something about John Smith",
+                "image": {
+                  "url": "www.gov.uk/image_of_john_smith.png"
+                }
+              }
+            }
+          ]
+        }  
+      },
+      {
+        "title": "The Rt Hon Bobby B",
+        "api_path": "/api/content/government/history/past-prime-ministers/bobby-b",
+        "base_path": "/government/history/past-prime-ministers/bobby-b",
+        "document_type": "historic_appointment",
+        "schema_name": "historic_appointment",
+        "details": {
+          "political_party": "Funk Party",
+          "dates_in_office": [
+            {
+              "end_year": 2007,
+              "start_year": 1997
+            }
+          ]
+        },
+        "links": {
+          "person": [
+            {
+              "title": "The Rt Hon Bobby B",
+              "api_path": "/api/content/government/people/bobby-b",
+              "base_path": "/government/people/bobby-b",
+              "document_type": "person",
+              "schema_name": "person",
+              "details": {
+                "body": "Something about Bobby B",
+                "image": {
+                  "url": "www.gov.uk/image_of_bobby_b.png"
+                }
+              }
+            }
+          ]
+        }  
+      },
+      {
+        "title": "The Rt Hon Timmy T",
+        "api_path": "/api/content/government/history/past-prime-ministers/timmy-t",
+        "base_path": "/government/history/past-prime-ministers/timmy-t",
+        "document_type": "historic_appointment",
+        "schema_name": "historic_appointment",
+        "details": {
+          "political_party": "Took a break Party",
+          "dates_in_office": [
+            {
+              "end_year": 1997,
+              "start_year": 1993
+            },
+            {
+                "end_year": 2015,
+                "start_year": 2010
+            }
+          ]
+        },
+        "links": {
+          "person": [
+            {
+              "title": "The Rt Hon Timmy T",
+              "api_path": "/api/content/government/people/timmy-t",
+              "base_path": "/government/people/timmy-t",
+              "document_type": "person",
+              "schema_name": "person",
+              "details": {
+                "body": "Something about Timmy T",
+                "image": {
+                  "url": "www.gov.uk/image_of_timmy_t.png"
+                }
+              }
+            }
+          ]
+        }  
+      },
+      {
+        "title": "The Rt Hon Jimmy J",
+        "api_path": "/api/content/government/history/past-prime-ministers/jimmy-j",
+        "base_path": "/government/history/past-prime-ministers/jimmy-j",
+        "document_type": "historic_appointment",
+        "schema_name": "historic_appointment",
+        "details": {
+          "political_party": "The 80's Party",
+          "dates_in_office": [
+            {
+              "end_year": 1985,
+              "start_year": 1981
+            }
+          ]
+        },
+        "links": {
+          "person": [
+            {
+              "title": "The Rt Hon Jimmy J",
+              "api_path": "/api/content/government/people/jimmy-j",
+              "base_path": "/government/people/jimmy-j",
+              "document_type": "person",
+              "schema_name": "person",
+              "details": {
+                "body": "Something about Jimmy J",
+                "image": {
+                  "url": "www.gov.uk/image_of_jimmy_j.png"
+                }
+              }
+            }
+          ]
+        }  
+      },
+      {
+        "title": "The Rt Hon Reginald R",
+        "api_path": "/api/content/government/history/past-prime-ministers/reginald-r",
+        "base_path": "/government/history/past-prime-ministers/reginald-r",
+        "document_type": "historic_appointment",
+        "schema_name": "historic_appointment",
+        "details": {
+          "political_party": "The 18th century Party",
+          "dates_in_office": [
+            {
+              "end_year": 1897,
+              "start_year": 1893
+            }
+          ]
+        },
+        "links": {
+          "person": [
+            {
+              "title": "The Rt Hon Reginald R",
+              "api_path": "/api/content/government/people/reginald-r",
+              "base_path": "/government/people/reginald-r",
+              "document_type": "person",
+              "schema_name": "person",
+              "details": {
+                "body": "Something about Reginald R",
+                "image": {
+                  "url": "www.gov.uk/image_of_reginald-r.png"
+                }
+              }
+            }
+          ]
+        }  
+      }
+    ]
+  },
+  "details": {
+    "appointments_without_historical_accounts": [
+      {
+        "title": "The Rt Hon No Biography MP",
+        "image_url": "www.gov.uk/image_of_no_bio_mp.png",
+        "dates_in_office": [
+          {
+            "end_year": 2022,
+            "start_year": 2022
+          }
+        ]
+      },
+      {
+        "title": "The Rt Hon Older No Biography MP",
+        "image_url": "www.gov.uk/image_of_older_no_bio_mp.png",
+        "dates_in_office": [
+          {
+            "end_year": 2022,
+            "start_year": 2020
+          }
+        ]
+      }
+    ]
+  }
+}
+

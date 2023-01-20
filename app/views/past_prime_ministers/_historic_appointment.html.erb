@@ -1,0 +1,23 @@
+<div class="govuk-grid-column-one-quarter">
+  <% if @past_pms.pms_with_historical_accounts.include?(historic_appointment) %>
+    <% political_party = historic_appointment["details"]["political_party"] %>
+    <%= render "govuk_publishing_components/components/image_card", {
+      href: historic_appointment["base_path"],
+      image_src: historic_appointment["links"]["person"][0]["details"]["image"]["url"],
+      image_loading: "lazy",
+      heading_text: historic_appointment["title"],
+      extra_details: pm_dates_in_office(historic_appointment, political_party),
+      extra_details_no_indent: true,
+      height: "auto"
+    } %>
+  <% else %>
+    <%= render "govuk_publishing_components/components/image_card", {
+      image_src: historic_appointment["image_url"],
+      image_loading: "lazy",
+      heading_text: historic_appointment["title"],
+      extra_details: pm_dates_in_office(historic_appointment),
+      extra_details_no_indent: true,
+      height: "auto"
+    } %>
+  <% end %>
+</div>

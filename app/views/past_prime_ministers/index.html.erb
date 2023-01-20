@@ -1,0 +1,91 @@
+<% content_for :title, @content_item["title"] %>
+<% page_class "historic-appointments-index govuk-width-container" %>
+
+<%= render "govuk_publishing_components/components/breadcrumbs", {
+  collapse_on_mobile: true,
+  breadcrumbs: [
+    {
+      title: "Home",
+      url: "/",
+    },
+    {
+      title: "How government works",
+      url: "/government/how-government-works",
+    },
+    {
+      title: "History of the UK government",
+      url: "/government/history",
+    },
+  ]
+} %>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <%= render "govuk_publishing_components/components/title", {
+      context: "History",
+      title: @content_item["title"],
+    } %>
+  </div>
+</div>
+
+<%# 21st century section %>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: "21st century",
+      padding: true,
+      border_top: 2,
+      font_size: "l"
+    } %>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+  </div>
+</div>
+
+<% @recent_appointments.in_groups_of(4, false) do |people| %>
+  <div class="govuk-grid-row historic-people-index__section-row-header" role="list">
+    <%= render partial: 'historic_appointment', collection: people %>  
+  </div>
+<% end %>
+
+<%# 20th century section %>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: "20th century",
+      padding: true,
+      border_top: 2,
+      font_size: "l",
+    } %>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+  </div>
+</div>
+
+<div role="list">
+  <% @twentieth_century_appointments.in_groups_of(4, false) do |people| %>
+    <div class="govuk-grid-row historic-people-index__section-row-header">
+      <%= render partial: 'historic_appointment', collection: people %>  
+    </div>
+  <% end %>
+</div>
+
+<%# 18th & 19th centuries section %>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: "18th & 19th centuries",
+        padding: true,
+        border_top: 2,
+        font_size: "l",
+        margin_bottom: 2,
+      } %>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+  </div>
+</div>
+
+<div role="list">
+  <% @eighteenth_and_nineteenth_century_appointments.in_groups_of(4, false) do |people| %>
+  <div class="govuk-grid-row historic-people-index__section-row-header">
+    <%= render partial: 'historic_appointment', collection: people %>  
+  </div>
+  <% end %>
+</div>
