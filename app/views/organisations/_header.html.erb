@@ -5,10 +5,13 @@
         10
         </span>
         <div class="new-org-header__banner govuk-!-margin-bottom-6">
-          <picture>
-            <source srcset="<%= image_path('no10header-desktop.png') %>" media="(min-width: 641px)" />
-            <img src="<%= image_path('no10header.png') %>" alt="" />
-          </picture>
+
+          <%= image_tag(
+            image_path('no10header.png'), 
+            srcset: image_path('no10header.png') + " 640w, " + image_path("no10header-desktop.png") + " 960w",
+            sizes: "(min-width: 641px) 960px, 640px"
+          ) %>
+
           <div class="new-org-header__banner__heading">
              <h1 class="govuk-heading-l govuk-!-margin-0">
                 The Prime Minister's Office,<br>
