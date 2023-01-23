@@ -24,6 +24,8 @@ class OrganisationsController < ApplicationController
     @not_live = Organisations::NotLivePresenter.new(@organisation)
     @contacts = Organisations::ContactsPresenter.new(@organisation)
 
+    slimmer_template "gem_layout_full_width" if is_no_10?
+
     render organisation_view, locals: { organisation: @organisation }
   end
 
@@ -40,6 +42,10 @@ class OrganisationsController < ApplicationController
   end
 
 private
+
+  def is_no_10?
+    @organisation.is_no_10?
+  end
 
   def organisation_view
     @organisation.is_live? ? "show" : "separate_website"
