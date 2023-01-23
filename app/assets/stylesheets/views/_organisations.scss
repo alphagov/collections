@@ -60,3 +60,14 @@
   left: govuk-spacing(4);
   padding-right: govuk-spacing(3);
 }
+
+.organisation__no10-header__cards {
+  .gem-c-image-card {
+    margin: 0 0 govuk-spacing(6) 0;
+  }
+
+  .gem-c-image-card__text-wrapper {
+    padding: 0;
+    width: auto;
+  }
+}
