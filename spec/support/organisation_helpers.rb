@@ -376,6 +376,44 @@ module OrganisationHelpers
     }.with_indifferent_access
   end
 
+  def organisation_with_featured_documents_and_is_no_10
+    {
+      title: "Number 10",
+      base_path: "/government/organisations/prime-ministers-office-10-downing-street",
+      details: {
+        organisation_govuk_status: {
+          status: "live",
+        },
+        brand: "prime-ministers-office-10-downing-street",
+        organisation_featuring_priority: "news",
+        ordered_featured_documents: [
+          {
+            title: "New head of the Serious Fraud Office announced",
+            href: "/government/news/new-head-of-the-serious-fraud-office-announced",
+            image: {
+              url: "https://assets.publishing.service.gov.uk/jeremy.jpg",
+              alt_text: "Attorney General Jeremy Wright QC MP",
+            },
+            summary: "Lisa Osofsky appointed new Director of the Serious Fraud Office ",
+            public_updated_at: "2018-06-04T11:30:03.000+01:00",
+            document_type: "Press release",
+          },
+          {
+            title: "New head of a different office announced",
+            href: "/government/news/new-head-of-a-different-office-announced",
+            image: {
+              url: "https://assets.publishing.service.gov.uk/john.jpg",
+              alt_text: "John Someone MP",
+            },
+            summary: "John Someone appointed new Director of the Other Office ",
+            public_updated_at: "2017-06-04T11:30:03.000+01:00",
+            document_type: "Policy paper",
+          },
+        ],
+      },
+    }.with_indifferent_access
+  end
+
   def organisation_with_featured_documents
     {
       title: "Attorney General's Office",
