@@ -5,13 +5,21 @@
            schema: :organisation,
            content_item: @organisation.content_item.content_item_data %>
 <%= render partial: 'featured_news' %>
-<%= render partial: 'latest_documents' %>
-<%= render partial: 'what_we_do' %>
-<% if @organisation.is_promotional_org? %>
+
+<% if @organisation.is_no_10? %>
   <%= render partial: 'promotional_features' %>
+  <%= render partial: 'what_we_do' %>
+  <%= render partial: 'latest_documents' %>
 <% else %>
-  <%= render partial: 'standard_org_docs_people' %>
+  <%= render partial: 'latest_documents' %>
+  <%= render partial: 'what_we_do' %>
+  <% if @organisation.is_promotional_org? %>
+    <%= render partial: 'promotional_features' %>
+  <% else %>
+    <%= render partial: 'standard_org_docs_people' %>
+  <% end %>
 <% end %>
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <%= render partial: 'org_contacts', locals: { contacts: @contacts } %>
