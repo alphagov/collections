@@ -1,5 +1,69 @@
 <% if @organisation.is_no_10? %>
-  <h1 class="organisation__no10-banner organisation__margin-bottom"><%= @header.org.title %></h1>
+  <div class="govuk-width-container">
+    
+    <div class="organisation__no10-header organisation__margin-bottom">
+      
+      <span class="govuk-heading-xl govuk-!-text-align-centre">
+      10
+      </span>
+      
+      <div class="organisation__no10-header__banner govuk-!-margin-bottom-6">
+
+          <%# To do: add assets here - if their ratio doesn't match the placeholder assets then you need to test them again and possibly tweak things like margins %>
+          <%= image_tag(
+            image_path('no10header.png'), 
+            srcset: image_path('no10header.png') + " 640w, " + image_path("no10header-desktop.png") + " 960w",
+            sizes: "(min-width: 641px) 960px, 640px"
+          ) %>
+
+        <div class="organisation__no10-header__banner__content">
+          <%= render "govuk_publishing_components/components/heading", {
+            text: "The Prime Minister's Office,<br> 10 Downing Street".html_safe,
+            heading_level: 1,
+            font_size: "l",
+            margin_bottom: 0,
+            inverse: true
+          } %>
+        </div>
+      </div>
+      <div class="organisation__no10-header__cards">
+        <%= render "govuk_publishing_components/components/heading", {
+          text: "Lorem ipsum dolor sit amet",
+          heading_level: 3,
+          margin_bottom: 5
+        } %>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            <%= render "govuk_publishing_components/components/image_card", {
+              brand: "prime-ministers-office-10-downing-street",
+              href: "/not-a-page",
+              heading_text: "Lorem ipsum",
+              heading_level: 3,
+              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          } %>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <%= render "govuk_publishing_components/components/image_card", {
+              brand: "prime-ministers-office-10-downing-street",
+              href: "/not-a-page",
+              heading_text: "Lorem ipsum",
+              heading_level: 3,
+              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          } %>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <%= render "govuk_publishing_components/components/image_card", {
+              brand: "prime-ministers-office-10-downing-street",
+              href: "/not-a-page",
+              heading_text: "Lorem ipsum",
+              heading_level: 3,
+              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 <% else %>
   <h1 class="govuk-visually-hidden"><%= @header.org.title %></h1>
 
