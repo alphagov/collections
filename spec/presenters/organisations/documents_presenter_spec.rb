@@ -4,12 +4,57 @@ RSpec.describe Organisations::DocumentsPresenter do
 
   describe "documents" do
     let(:documents) { organisation_with_featured_documents["details"]["ordered_featured_documents"] }
+    let(:documents_of_no_10) { organisation_with_featured_documents_and_is_no_10["details"]["ordered_featured_documents"] }
     let(:documents_presenter) { presenter_from_organisation_hash(organisation_with_featured_documents) }
+    let(:documents_presenter_no_10) { presenter_from_organisation_hash(organisation_with_featured_documents_and_is_no_10) }
     let(:no_documents_presenter) { presenter_from_organisation_hash(organisation_with_no_documents) }
 
     before do
       stub_empty_search_api_requests("org-with-no-docs")
       stub_search_api_latest_content_requests("attorney-generals-office")
+    end
+
+    context "page is No. 10 organisation page" do
+      it "formats news stories correctly" do
+        time_stamps = [
+          documents_of_no_10[0]["public_updated_at"],
+          documents_of_no_10[1]["public_updated_at"],
+        ]
+
+        expected = [
+          {
+            href: "/government/news/new-head-of-the-serious-fraud-office-announced",
+            image_src: "https://assets.publishing.service.gov.uk/s465_jeremy.jpg",
+            image_alt: "Attorney General Jeremy Wright QC MP",
+            context: {
+              date: Date.parse(time_stamps[0]),
+              text: "Press release",
+            },
+            heading_text: "New head of the Serious Fraud Office announced",
+            description: "Lisa Osofsky appointed new Director of the Serious Fraud Office ",
+            brand: "prime-ministers-office-10-downing-street",
+            large: true,
+            font_size: "s",
+            heading_level: 3,
+          },
+          {
+            href: "/government/news/new-head-of-a-different-office-announced",
+            image_src: "https://assets.publishing.service.gov.uk/s465_john.jpg",
+            image_alt: "John Someone MP",
+            context: {
+              date: Date.parse(time_stamps[1]),
+              text: "Policy paper",
+            },
+            heading_text: "New head of a different office announced",
+            description: "John Someone appointed new Director of the Other Office ",
+            brand: "prime-ministers-office-10-downing-street",
+            heading_level: 3,
+            large: true,
+            font_size: "s",
+          },
+        ]
+        expect(documents_presenter_no_10.remaining_featured_news).to eq(expected)
+      end
     end
 
     it "formats the main large news story correctly" do
