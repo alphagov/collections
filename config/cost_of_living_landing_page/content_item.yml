@@ -16,7 +16,7 @@ announcements:
   - content: You may get Cost of Living Payments between spring 2023 and spring 2024 if you're a pensioner or you get low-income or disability benefits.
     link_text: Find out about the Cost of Living Payment.
     href: /guidance/cost-of-living-payment
-  - content: You may get calls, emails or messages that pretend to be from a government service or energy bill support scheme. If you get a message asking for your personal details (for example, bank details or passwords) this could be a scam.
+  - content: You may get calls, emails or messages that are pretending to be from a government service or Energy Bills Support Scheme. If you get a message asking for your personal details (for example, bank details or passwords) this could be a scam.
     link_text: Report anything you think is suspicious.
     href: /report-suspicious-emails-websites-phishing
 body:
@@ -152,7 +152,7 @@ body:
         href: /guidance/cost-of-living-payment
       - link_text: Find out how the Energy Bills Support Scheme lowers your energy bills
         important_info: including how to claim if you’ve got a prepayment meter
-        href: /government/news/energy-bills-support-scheme-explainer
+        href: /get-help-energy-bills
       - link_text: Find out about the Winter Fuel Payment and Pensioner Cost of Living Payment
         important_info: for winter 2022 to 2023
         href: /winter-fuel-payment
@@ -341,7 +341,7 @@ body:
       links:
       - link_text: Find out how the Energy Bill Relief and Energy Bill Discount schemes limit the energy prices of your small business
         important_info: runs between 1 October 2022 and 31 March 2024
-        href: /guidance/energy-bill-relief-scheme-help-for-businesses-and-other-non-domestic-customers
+        href: /get-help-energy-bills/help-for-businesses
       - link_text: Find out about support to improve the energy performance of your business
         href: /business-finance-support?keywords=energy
       - link_text: Find out about support with your energy bills on the Citizens Advice website
