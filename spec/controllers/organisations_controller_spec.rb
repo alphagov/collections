@@ -22,6 +22,13 @@ RSpec.describe OrganisationsController do
         "start" => 0,
         "total" => 0,
       })
+
+      no_10_page_content ||= YAML.load_file(Rails.root.join("config/organisations_no_10_page/content_item.yml")).symbolize_keys
+      stub_content_store_has_item(
+        "/government/organisations/prime-ministers-office-10-downing-street",
+        no_10_page_content,
+        { max_age: 900, private: false },
+      )
     end
 
     it "set correct expiry headers" do

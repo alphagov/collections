@@ -23,6 +23,7 @@ class OrganisationsController < ApplicationController
     @people = Organisations::PeoplePresenter.new(@organisation)
     @not_live = Organisations::NotLivePresenter.new(@organisation)
     @contacts = Organisations::ContactsPresenter.new(@organisation)
+    @no_10_page_content = OrganisationsNo10PagePresenter.new
 
     slimmer_template "gem_layout_full_width" if is_no_10?
 

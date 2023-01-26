@@ -1,0 +1,14 @@
+header: 
+  banner: 
+    content: The Prime Minister's Office,<br> 10 Downing Street
+  cards:
+    heading: Some heading text
+    card_1:
+      text: Card 1 text
+      description: Card 1 description card 1 description card 1 description card 1 description card 1 description card 1 description card 1 description
+    card_2:
+      text: Card 2 text
+      description: Card 2 description Card 2 description Card 2 description
+    card_3:
+      text: Card 3 text
+      description: Card 3 description card 3 description card 3 description card 3 description card 3 description

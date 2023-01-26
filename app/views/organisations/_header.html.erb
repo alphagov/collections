@@ -17,7 +17,7 @@
 
         <div class="organisation__no10-header__banner__content">
           <%= render "govuk_publishing_components/components/heading", {
-            text: "The Prime Minister's Office,<br> 10 Downing Street".html_safe,
+            text: @no_10_page_content.header[:banner][:content].html_safe,
             heading_level: 1,
             font_size: "l",
             margin_bottom: 0,
@@ -27,7 +27,7 @@
       </div>
       <div class="organisation__no10-header__cards">
         <%= render "govuk_publishing_components/components/heading", {
-          text: "Lorem ipsum dolor sit amet",
+          text: @no_10_page_content.header[:cards][:heading],
           heading_level: 3,
           margin_bottom: 5
         } %>
@@ -36,27 +36,27 @@
             <%= render "govuk_publishing_components/components/image_card", {
               brand: "prime-ministers-office-10-downing-street",
               href: "/not-a-page",
-              heading_text: "Lorem ipsum",
+              heading_text: @no_10_page_content.header[:cards][:card_1][:text],
               heading_level: 3,
-              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              description: @no_10_page_content.header[:cards][:card_1][:description]
           } %>
           </div>
           <div class="govuk-grid-column-one-third">
             <%= render "govuk_publishing_components/components/image_card", {
               brand: "prime-ministers-office-10-downing-street",
               href: "/not-a-page",
-              heading_text: "Lorem ipsum",
+              heading_text: @no_10_page_content.header[:cards][:card_2][:text],
               heading_level: 3,
-              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              description: @no_10_page_content.header[:cards][:card_2][:description]
           } %>
           </div>
           <div class="govuk-grid-column-one-third">
             <%= render "govuk_publishing_components/components/image_card", {
               brand: "prime-ministers-office-10-downing-street",
               href: "/not-a-page",
-              heading_text: "Lorem ipsum",
+              heading_text: @no_10_page_content.header[:cards][:card_3][:text],
               heading_level: 3,
-              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              description: @no_10_page_content.header[:cards][:card_3][:description]
           } %>
           </div>
         </div>
