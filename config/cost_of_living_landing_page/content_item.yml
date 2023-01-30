@@ -16,7 +16,7 @@ announcements:
   - content: You may get Cost of Living Payments between spring 2023 and spring 2024 if you're a pensioner or you get low-income or disability benefits.
     link_text: Find out about the Cost of Living Payment.
     href: /guidance/cost-of-living-payment
-  - content: You may get calls, emails or messages that pretend to be from a government service or energy bill support scheme. If you get a message asking for your personal details (for example, bank details or passwords) this could be a scam.
+  - content: You may get calls, emails or messages that are pretending to be from a government service or Energy Bills Support Scheme. If you get a message asking for your personal details (for example, bank details or passwords) this could be a scam.
     link_text: Report anything you think is suspicious.
     href: /report-suspicious-emails-websites-phishing
 body:
@@ -85,8 +85,6 @@ body:
           href: /guidance/cost-of-living-payment
         - link_text: Apply for a free or discounted TV Licence if you're over 75, blind or in residential care
           href: /free-discount-tv-licence
-        - link_text: Apply for a Disabled Facilities Grant to make improvements to your home in England or Wales
-          href: /disabled-facilities-grants
       - subheading: Apply for Universal Credit if you’re disabled
         links:
         - link_text: Universal Credit if you’re disabled in England, Scotland or Wales
@@ -109,6 +107,14 @@ body:
           href: https://www.nidirect.gov.uk/articles/personal-independence-payment-pip
         - link_text: Apply for Adult Disability Payment in Scotland
           href: https://www.mygov.scot/adult-disability-payment
+      - subheading: Support with home improvements and equipment if you’re disabled
+        links:
+          - link_text: Apply for a Disabled Facilities Grant to make improvements to your home in England or Wales
+            href: /disabled-facilities-grants
+          - link_text: Find out about support with home improvements and equipment in Scotland
+            href: https://www.mygov.scot/care-equipment-adaptations
+          - link_text: Apply for a Disabled Facilities Grant to make improvements to your home in Northern Ireland
+            href: https://www.nihe.gov.uk/housing-help/grants/types-of-grants-available/disabled-facilities-grant
       - subheading: Support to get or stay in work
         links:
         - link_text: Apply for Access to Work in England, Scotland and Wales
@@ -152,7 +158,7 @@ body:
         href: /guidance/cost-of-living-payment
       - link_text: Find out how the Energy Bills Support Scheme lowers your energy bills
         important_info: including how to claim if you’ve got a prepayment meter
-        href: /government/news/energy-bills-support-scheme-explainer
+        href: /get-help-energy-bills
       - link_text: Find out about the Winter Fuel Payment and Pensioner Cost of Living Payment
         important_info: for winter 2022 to 2023
         href: /winter-fuel-payment
@@ -341,7 +347,7 @@ body:
       links:
       - link_text: Find out how the Energy Bill Relief and Energy Bill Discount schemes limit the energy prices of your small business
         important_info: runs between 1 October 2022 and 31 March 2024
-        href: /guidance/energy-bill-relief-scheme-help-for-businesses-and-other-non-domestic-customers
+        href: /get-help-energy-bills/help-for-businesses
       - link_text: Find out about support to improve the energy performance of your business
         href: /business-finance-support?keywords=energy
       - link_text: Find out about support with your energy bills on the Citizens Advice website
