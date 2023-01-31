@@ -122,7 +122,6 @@ module Organisations
         maritime-and-coastguard-agency
         medicines-and-healthcare-products-regulatory-agency
         natural-england
-        planning-inspectorate
       ]
       return true if orgs_with_services_and_information_link.include?(org.slug)
     end
