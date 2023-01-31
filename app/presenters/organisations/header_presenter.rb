@@ -116,7 +116,6 @@ module Organisations
         driver-and-vehicle-standards-agency
         environment-agency
         high-speed-two-limited
-        highways-england
         hm-revenue-customs
         marine-management-organisation
         maritime-and-coastguard-agency
