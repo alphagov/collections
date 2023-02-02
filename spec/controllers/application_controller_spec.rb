@@ -56,7 +56,7 @@ RSpec.describe ApplicationController, type: :controller do
   it "rejects non-HTML requests by default" do
     with_test_routing do
       %i[json xml atom].each do |format|
-        get :test, format: format
+        get(:test, format:)
 
         expect(response).to have_http_status(:not_acceptable)
       end

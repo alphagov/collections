@@ -38,12 +38,12 @@ RSpec.describe SecondLevelBrowsePageController do
       end
 
       it "set correct expiry headers" do
-        get :show, params: params
+        get(:show, params:)
         expect(response.headers["Cache-Control"]).to eq("max-age=300, public")
       end
 
       it "responds to html by default" do
-        get :show, params: params
+        get(:show, params:)
         expect(response.content_type).to eq "text/html; charset=utf-8"
         expect(response).to render_template(partial: "_links")
       end
@@ -94,7 +94,7 @@ RSpec.describe SecondLevelBrowsePageController do
         top_level_slug: "crime-and-justice",
         second_level_slug: "frume",
       }
-      get :show, params: params
+      get(:show, params:)
       expect(response).to have_http_status(:not_found)
     end
   end
