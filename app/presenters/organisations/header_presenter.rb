@@ -114,7 +114,6 @@ module Organisations
         department-for-education
         department-for-environment-food-rural-affairs
         driver-and-vehicle-standards-agency
-        environment-agency
         high-speed-two-limited
         hm-revenue-customs
         marine-management-organisation
