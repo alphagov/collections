@@ -1,6 +1,15 @@
 <%= render partial: 'meta', locals: { organisation: @organisation } %>
 <%= render partial: 'breadcrumb' %>
 <%= render partial: 'header' %>
+<% if @organisation.is_being_reshuffled? %>
+  <%= render "govuk_publishing_components/components/notice", {
+    title: sanitize(
+      "This organisation is changing.
+      Read the <a href=\"/government/news/making-government-deliver-for-the-british-people\">latest updates on government departments</a>
+      or visit the <a href=\"https://twitter.com/10DowningStreet\">10 Downing Street Twitter feed</a>.
+      ")
+  } %>
+<% end %>
 <%= render 'govuk_publishing_components/components/machine_readable_metadata',
            schema: :organisation,
            content_item: @organisation.content_item.content_item_data %>
