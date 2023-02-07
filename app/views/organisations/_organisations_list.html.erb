@@ -53,7 +53,10 @@
             <% if @presented_organisations.works_with_statement(organisation) %>
               <div class="govuk-!-margin-bottom-3">
                 <%= render "govuk_publishing_components/components/details", {
-                  title: @presented_organisations.works_with_statement(organisation)
+                  title: @presented_organisations.works_with_statement(organisation),
+                  summary_aria_attributes: {
+                    label: "#{organisation["title"]} #{@presented_organisations.works_with_statement(organisation)}"
+                  }
                 } do %>
                   <%= render partial: 'expanded_works_with_organisations',
                     locals: {
