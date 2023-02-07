@@ -430,4 +430,18 @@ RSpec.describe "Organisation pages" do
     org_schema = schemas.detect { |schema| schema["@type"] == "GovernmentOrganization" }
     expect("Student Loans Company").to eq(org_schema["name"])
   end
+
+  it "displays reshuffle banner on subset of org pages" do
+    %w[
+      department-for-digital-culture-media-sport
+      department-for-international-trade
+      department-for-business-energy-and-industrial-strategy
+    ].each do |slug|
+      base_path = "/government/organisations/#{slug}"
+      content_item = content_item_attorney_general.deep_merge("base_path" => base_path)
+      stub_content_and_search(content_item)
+      visit base_path
+      expect(page).to have_css(".govuk-notification-banner", text: "This organisation is changing.")
+    end
+  end
 end

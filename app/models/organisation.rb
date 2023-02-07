@@ -42,6 +42,15 @@ class Organisation
     slug == "prime-ministers-office-10-downing-street"
   end
 
+  # Temporary banner for Feb 2023 reshuffle
+  def is_being_reshuffled?
+    %w[
+      department-for-digital-culture-media-sport
+      department-for-international-trade
+      department-for-business-energy-and-industrial-strategy
+    ].include?(slug)
+  end
+
   def is_promotional_org?
     is_no_10? || organisation_type == "civil_service"
   end
