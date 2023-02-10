@@ -47,3 +47,27 @@ $govuk-include-default-font-face: false;
 @import "views/covid";
 @import "views/colhub";
 @import "views/world_location_news";
+
+.brand--department-for-energy-security-and-net-zero {
+  $desnz: #0da04a;
+
+  .brand__color {
+    color: $desnz;
+
+    &:link,
+    &:visited,
+    &:active {
+      color: $desnz;
+    }
+
+    &:hover,
+    &:focus {
+      color: $govuk-focus-text-colour;
+    }
+  }
+
+  &.brand__border-color,
+  .brand__border-color {
+    border-color: $desnz;
+  }
+}
