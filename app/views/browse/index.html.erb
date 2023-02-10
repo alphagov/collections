@@ -26,6 +26,12 @@
 <% end %>
 
 <%= render "shared/browse_cards_container" do %>
+  <%= render "govuk_publishing_components/components/intervention", {
+    suggestion_text: "You should renew your permit every 6 months.",
+    dismiss_text: "Hide this suggestion",
+    name: "kelvin-banner"
+  } %>
+
   <%= render "govuk_publishing_components/components/cards", {
     items: page.top_level_browse_pages.map.with_index do |top_level_browse_page, index|
       {
