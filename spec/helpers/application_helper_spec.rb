@@ -53,7 +53,7 @@ RSpec.describe ApplicationHelper do
   describe "lang_attribute" do
     it "returns nil for default language" do
       I18n.with_locale(:en) do
-        expect(lang_attribute).to be_nil
+        expect(lang_attribute).to eq("lang=#{I18n.default_locale}")
       end
     end
     it "returns a lang attribute string for non-default language" do
