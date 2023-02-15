@@ -4,7 +4,7 @@
   lang = params["locale"]
 
   if content_item_h
-    unless (!content_item_h["locale"] || content_item_h["locale"].eql?("en"))
+    unless (!content_item_h["locale"])
       lang = content_item_h["locale"]
     end
   end

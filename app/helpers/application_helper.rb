@@ -38,7 +38,7 @@ module ApplicationHelper
   end
 
   def lang_attribute
-    "lang=#{I18n.locale}" unless I18n.locale == I18n.default_locale
+    "lang=#{I18n.locale}"
   end
 
   def t_lang(key, options = {})
