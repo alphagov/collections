@@ -2,6 +2,7 @@
 //= link application.js
 //= link test-dependencies.js
 
+//= link components/_bunting.css
 //= link components/_taxon-list.css
 //= link components/_topic-list.css
 

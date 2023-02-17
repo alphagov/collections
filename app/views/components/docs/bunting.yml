@@ -1,0 +1,5 @@
+name: Bunting
+description: A decorative bunting component
+accessibility_criteria: Bunting is purely decorative and must be hidden from the accessibility tree
+examples:
+  default:
