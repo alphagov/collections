@@ -113,8 +113,6 @@ module Organisations
       orgs_with_services_and_information_link = %w[
         department-for-education
         department-for-environment-food-rural-affairs
-        driver-and-vehicle-standards-agency
-        high-speed-two-limited
         hm-revenue-customs
         marine-management-organisation
         maritime-and-coastguard-agency
