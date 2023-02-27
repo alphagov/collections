@@ -24,6 +24,11 @@ body:
   accordion_content:
   - heading: Support with your income
     content:
+      - subheading: SHOWING JENNY HOW IT'S DONE
+        links:
+          - link_text: JENNY'S FAVOURITE RECIPE SITE
+            href: https://www.ibreatheimhungry.com/
+            important_info: IT'S A KETO THING
       - subheading:
         links:
         - link_text: Check what benefits and financial support you can get
