@@ -1,4 +1,6 @@
 class CostOfLivingLandingPagePresenter
+  include CostOfLivingBannerHelper
+
   COMPONENTS = %i[
     base_path
     page_title
