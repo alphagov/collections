@@ -4,7 +4,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <%= render "govuk_publishing_components/components/title", {
-      context: "Past Prime Ministers",
+      context: I18n.t("past_prime_ministers.context"),
       title: @past_prime_minister.title,
     } %>
 
@@ -43,7 +43,7 @@
     <% end %>
 
     <%=  render "govuk_publishing_components/components/heading", {
-      text: "Biography",
+      text: I18n.t("past_prime_ministers.headings.biography"),
       font_size: "m",
       margin_bottom: 1,
     } %>
@@ -61,7 +61,7 @@
       ga4_tracking: true
     } %>
     <p class="govuk-body">
-      <a class="govuk-link" href="/government/history/past-prime-ministers">View all past prime ministers</a>
+      <a class="govuk-link" href="/government/history/past-prime-ministers"><%= I18n.t("past_prime_ministers.view_all")  %></a>
     </p>
   </div>
 </div>

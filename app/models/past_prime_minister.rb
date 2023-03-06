@@ -38,7 +38,7 @@ class PastPrimeMinister
   def appointment_info_array
     %w[born died dates_in_office political_party major_acts interesting_facts].map do |field|
       text = field == "dates_in_office" ? dates_in_office : @content_item.content_item_data.dig("details", field)
-      { title: field.gsub("_", " ").capitalize, text: }
+      { title: I18n.t("past_prime_ministers.headings.#{field}"), text: }
     end
   end
 
