@@ -5,6 +5,7 @@ class DevelopmentController < ApplicationController
     @schema_names = %w[
       coronavirus_landing_page
       finder
+      historic_appointment
       mainstream_browse_page
       ministerial_role
       organisation

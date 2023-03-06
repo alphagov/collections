@@ -1,0 +1,13 @@
+---
+en:
+  past_prime_ministers:
+    context: Past Prime Ministers
+    view_all: View all past prime ministers
+    headings:
+      born: Born
+      died: Died
+      dates_in_office: Dates in office
+      political_party: Political party
+      major_acts: Major acts
+      interesting_facts: Interesting facts
+      biography: Biography

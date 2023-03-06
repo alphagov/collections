@@ -1,0 +1,67 @@
+<% content_for :title, @past_prime_minister.page_title %>
+<% page_class "govuk-width-container" %>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <%= render "govuk_publishing_components/components/title", {
+      context: I18n.t("past_prime_ministers.context"),
+      title: @past_prime_minister.title,
+    } %>
+
+    <%= render "govuk_publishing_components/components/lead_paragraph", {
+      text: "#{@past_prime_minister.political_party} #{@past_prime_minister.dates_in_office}",
+    } %>
+    <%= render "govuk_publishing_components/components/lead_paragraph", {
+      text: @past_prime_minister.description,
+    } %>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible govuk-!-margin-bottom-4">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <%= image_tag(
+              @past_prime_minister.image_data["url"],
+              alt: @past_prime_minister.image_data["alt_text"],
+              class: "govuk-!-margin-bottom-4 govuk-!-width-full"
+        ) %>
+      </div>
+    </div>
+
+    <% @past_prime_minister.appointment_info_array.each do |info| %>
+      <% if info[:text].present? %>
+        <%= render "govuk_publishing_components/components/heading", {
+          text: info[:title],
+          font_size: "m",
+          margin_bottom: 1,
+        } %>
+        <p class="govuk-body"><%= info[:text] %></p>
+      <% end %>
+    <% end %>
+
+    <%=  render "govuk_publishing_components/components/heading", {
+      text: I18n.t("past_prime_ministers.headings.biography"),
+      font_size: "m",
+      margin_bottom: 1,
+    } %>
+
+    <%=  render "govuk_publishing_components/components/govspeak" do %>
+      <%= @past_prime_minister.biography %>
+    <%  end %>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <p class="govuk-body">
+      <%=  render "govuk_publishing_components/components/related_navigation", {
+      content_item: @past_prime_minister.related_prime_ministers_nav,
+      ga4_tracking: true
+    } %>
+    <p class="govuk-body">
+      <a class="govuk-link" href="/government/history/past-prime-ministers"><%= I18n.t("past_prime_ministers.view_all")  %></a>
+    </p>
+  </div>
+</div>
