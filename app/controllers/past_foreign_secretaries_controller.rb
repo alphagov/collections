@@ -1,6 +1,6 @@
 class PastForeignSecretariesController < ApplicationController
   def index
-    setup_content_item_and_navigation_helpers(PastForeignSecretaries.find!(request.path))
+    setup_content_item_and_navigation_helpers(HistoricAppointmentsIndex.find!(request.path))
 
     @twenty_first_century =
       {
@@ -288,7 +288,7 @@ class PastForeignSecretariesController < ApplicationController
   end
 
   def show
-    setup_content_item_and_navigation_helpers(PastForeignSecretaries.find!(request.path.split("/")[0...-1].join("/")))
+    setup_content_item_and_navigation_helpers(HistoricAppointmentsIndex.find!(request.path.split("/")[0...-1].join("/")))
 
     if people_with_individual_pages.include?(params[:id])
       render template: "past_foreign_secretaries/#{params[:id].underscore}"

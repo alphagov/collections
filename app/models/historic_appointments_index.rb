@@ -1,6 +1,6 @@
 require "active_model"
 
-class PastForeignSecretaries
+class HistoricAppointmentsIndex
   include ActiveModel::Model
 
   attr_reader :content_item
