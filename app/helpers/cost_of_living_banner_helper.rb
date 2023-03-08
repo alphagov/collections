@@ -1,5 +1,5 @@
 module CostOfLivingBannerHelper
-  COST_OF_LIVING_SURVEY_URL = "https://surveys.publishing.service.gov.uk/s/XS2YWV/".freeze
+  COST_OF_LIVING_SURVEY_URL = "https://s.userzoom.com/m/MSBDMTQ3MVM0NCAg".freeze
 
   SURVEY_URL_MAPPINGS = {
     "/cost-of-living" => COST_OF_LIVING_SURVEY_URL,

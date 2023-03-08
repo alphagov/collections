@@ -49,8 +49,8 @@ RSpec.feature "Cost of Living hub page" do
     end
 
     def and_there_is_a_survey_banner
-      expect(page).to have_text("Help improve GOV.UK")
-      expect(page).to have_link(href: "https://surveys.publishing.service.gov.uk/s/XS2YWV/")
+      expect(page).to have_text("Help make GOV.UK better")
+      expect(page).to have_link(href: "https://s.userzoom.com/m/MSBDMTQ3MVM0NCAg")
     end
 
     def and_there_is_an_important_info_suffix_on_some_link

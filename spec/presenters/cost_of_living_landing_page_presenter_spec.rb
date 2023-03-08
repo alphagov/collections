@@ -22,7 +22,7 @@ RSpec.describe CostOfLivingLandingPagePresenter do
   end
 
   it "returns the survey_url" do
-    expect(presenter.survey_url).to eq "https://surveys.publishing.service.gov.uk/s/XS2YWV/"
+    expect(presenter.survey_url).to eq "https://s.userzoom.com/m/MSBDMTQ3MVM0NCAg"
   end
 
   it "provides getter methods for all component keys defined in the YAML" do
