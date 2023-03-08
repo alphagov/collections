@@ -9,3 +9,9 @@
     } %>
   </div>
 </div>
+
+<%= render partial: "shared/featured_historical_figures", locals: { historical_figures_with_image: @presenter.prime_minsters_between(2001, 2099), heading: "21st century"} %>
+
+<%= render partial: "shared/featured_historical_figures", locals: { historical_figures_with_image: @presenter.prime_minsters_between(1901, 2000), heading: "20th century"} %>
+
+<%= render partial: "shared/featured_historical_figures", locals: { historical_figures_with_image: @presenter.prime_minsters_between(1701, 1900), heading: "18th & 19th centuries"} %>

@@ -110,14 +110,41 @@ RSpec.feature "Past Prime Minister pages" do
   end
 
   context "past prime ministers index page" do
+    include PrimeMinistersHelpers
+
     let(:base_path) { "/government/history/past-prime-ministers" }
+    let(:data_for_nineteenth_century_pm) { api_data_for_person_with_historical_account("The Rt Honourable Mrs A", "mrs-a", "/image", [1801], "Labour") }
+    let(:data_for_twentieth_century_pm) { api_data_for_person_with_historical_account("The Rt Honourable Mr B", "mr-b", "/image", [1972], "Labour") }
+    let(:data_for_twenty_first_century_pm) { api_data_for_person_without_historical_account("The Rt Honourable Mrs C", "/image", [2022]) }
+    let(:content_item) { past_pms_content_item([data_for_nineteenth_century_pm, data_for_twentieth_century_pm], [data_for_twenty_first_century_pm]) }
 
     before do
+      stub_content_store_has_item(base_path, content_item)
       visit base_path
     end
 
     it "renders the title of the page" do
       expect(page).to have_text("Past Prime Ministers")
+    end
+
+    it "renders the century headings" do
+      expect(page).to have_text "18th & 19th centuries"
+      expect(page).to have_text "20th century"
+      expect(page).to have_text "21st century"
+    end
+
+    it "renders the correct people in each century" do
+      within('div#historical-people-18th-\&-19th-centuries') do
+        expect(page).to have_text data_for_nineteenth_century_pm["title"]
+      end
+
+      within("div#historical-people-20th-century") do
+        expect(page).to have_text data_for_twentieth_century_pm["title"]
+      end
+
+      within("div#historical-people-21st-century") do
+        expect(page).to have_text data_for_twenty_first_century_pm["title"]
+      end
     end
   end
 end

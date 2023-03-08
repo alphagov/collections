@@ -5,6 +5,8 @@ class PastPrimeMinistersController < ApplicationController
   end
 
   def index
-    @content_item = {}
+    @past_prime_ministers = PastPrimeMinistersIndex.find!(request.path)
+    setup_content_item_and_navigation_helpers(@past_prime_ministers)
+    @presenter = PastPrimeMinistersIndexPresenter.new(@past_prime_ministers.all_prime_ministers)
   end
 end

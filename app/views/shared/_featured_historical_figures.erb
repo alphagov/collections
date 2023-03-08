@@ -10,7 +10,7 @@
   </div>
 </div>
 
-<div class="historic-people-index__section-row-header" role="list">
+<div id=<%="historical-people-#{heading.downcase.gsub(' ', '-')}"%> class="historic-people-index__section-row-header" role="list">
   <% historical_figures_with_image.each_slice(4) do |row| %>
   <div class="govuk-grid-row">
     <% row.each do | _, info| %>

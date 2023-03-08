@@ -36,7 +36,14 @@ RSpec.describe PastPrimeMinistersController do
   end
 
   describe "GET index" do
-    let(:base_path) { "government/history/past-prime-ministers" }
+    include PrimeMinistersHelpers
+
+    let(:base_path) { "/government/history/past-prime-ministers" }
+    let(:content_item) { past_pms_content_item }
+
+    before do
+      stub_content_store_has_item(base_path, content_item)
+    end
 
     it "has a success response" do
       get :index
