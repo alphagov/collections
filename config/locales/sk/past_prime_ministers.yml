@@ -11,3 +11,9 @@ sk:
       major_acts:
       political_party:
     view_all:
+  past_prime_ministers_index:
+    context:
+    headings:
+      18th_and_19th_centuries:
+      20th_century:
+      21st_century:

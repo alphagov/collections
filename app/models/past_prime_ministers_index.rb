@@ -3,6 +3,10 @@ class PastPrimeMinistersIndex < HistoricAppointmentsIndex
     prime_ministers_with_historical_accounts + prime_ministers_without_historical_accounts
   end
 
+  def title
+    @content_item.content_item_data["title"]
+  end
+
 private
 
   def prime_ministers_with_historical_accounts

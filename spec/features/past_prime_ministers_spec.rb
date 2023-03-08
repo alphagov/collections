@@ -123,6 +123,10 @@ RSpec.feature "Past Prime Minister pages" do
       visit base_path
     end
 
+    it "sets the page title" do
+      expect(page).to have_title("Past Prime Ministers")
+    end
+
     it "renders the title of the page" do
       expect(page).to have_text("Past Prime Ministers")
     end
