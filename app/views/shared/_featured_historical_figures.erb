@@ -1,7 +1,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <%= render "govuk_publishing_components/components/heading", {
-      text: "Selection of profiles",
+      text: heading,
       padding: true,
       border_top: 2,
       font_size: "l",
@@ -10,8 +10,8 @@
   </div>
 </div>
 
-<div class="historic-people-index__section-row-header" role="list">
-  <% past_foreign_secretaries_image.each_slice(4) do |row| %>
+<div id=<%="historical-people-#{heading.downcase.gsub(' ', '-')}"%> class="historic-people-index__section-row-header" role="list">
+  <% historical_figures_with_image.each_slice(4) do |row| %>
   <div class="govuk-grid-row">
     <% row.each do | _, info| %>
       <div role="listitem" class="govuk-grid-column-one-quarter">

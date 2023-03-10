@@ -10,7 +10,7 @@
   </div>
 </div>
 
-<%= render partial: "featured_past_foreign_secretaries", locals: { past_foreign_secretaries_image: @selection_of_profiles } %>
+<%= render partial: "shared/featured_historical_figures", locals: { historical_figures_with_image: @selection_of_profiles, heading: "Selection of profiles"} %>
 
 <%= render partial: "shared/historical_figures_by_century", locals: { people: @twenty_first_century, heading: "21st century" } %>
 

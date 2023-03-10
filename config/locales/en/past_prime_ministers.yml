@@ -11,3 +11,9 @@ en:
       major_acts: Major acts
       interesting_facts: Interesting facts
       biography: Biography
+  past_prime_ministers_index:
+    context: History
+    headings:
+      21st_century: 21st century
+      20th_century: 20th century
+      18th_and_19th_centuries: 18th & 19th centuries
