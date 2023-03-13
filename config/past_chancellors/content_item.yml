@@ -1,0 +1,355 @@
+---
+base_path: /government/history/past-foreign-secretaries
+title: Past Chancellors of the Exchequer
+body:
+  centuries:
+    21st_century:
+    - name: Kwasi Kwarteng
+      service:
+      - 2022
+    - name: Nadhim Zahawi
+      service:
+      - 2022
+    - name: Rishi Sunak
+      service:
+      - 2020 to 2022
+    - name: Sajid Javid
+      service:
+      - 2019 to 2020
+    - name: Philip Hammond
+      service:
+      - 2016 to 2019
+    - name: George Osborne
+      service:
+      - 2010 to 2016
+    - name: Alistair Darling
+      service:
+      - 2007 to 2010
+    - name: Gordon Brown
+      service:
+      - 1997 to 2007
+    20th_century:
+    - name: Kenneth Clarke
+      service:
+          - 1993 to 1997
+    - name: Norman Lamont
+      service:
+        - 1990 to 1993
+    - name: John Major
+      service:
+        - 1989 to 1990
+    - name: Nigel Lawson
+      service:
+        - 1983 to 1989
+    - name: Sir Geoffrey Howe
+      service:
+        - 1979 to 1983
+    - name: Denis Healey
+      service:
+        - 1974 to 1979
+    - name: Anthony Barber
+      service:
+        - 1970 to 1974
+    - name: Ian Macleod
+      service:
+        - 1970
+    - name: Roy Jenkins
+      service:
+        - 1967 to 1970
+    - name: James Callaghan
+      service:
+        - 1964 to 1967
+    - name: Reginald Maudling
+      service:
+        - 1962 to 1964
+    - name: Selwyn Lloyd
+      service:
+        - 1960 to 1962
+    - name: Derick Heathcoat-Amory
+      service:
+        - 1958 to 1960
+    - name: Peter Thorneycroft
+      service:
+        - 1957 to 1958
+    - name: Harold Macmillan
+      service:
+        - 1955 to 1957
+    - name: Rab Butler
+      service:
+        - 1951 to 1955
+    - name: Hugh Gaitskell
+      service:
+        - 1950 to 1951
+    - name: Sir Stafford Cripps
+      service:
+        - 1947 to 1950
+    - name: Hugh Dalton
+      service:
+        - 1945 to 1947
+    - name: Sir John Anderson
+      service:
+        - 1943 to 1945
+    - name: Sir Kingsley Wood
+      service:
+        - 1940 to 1943
+    - name: Sir John Simon
+      service:
+        - 1937 to 1940
+    - name: Neville Chamberlain
+      service:
+        - 1931 to 1937
+        - 1923 to 1924
+    - name: Philip Snowden
+      service:
+        - 1929 to 1931
+        - 1924
+    - name: Winston Churchill
+      service:
+        - 1924 to 1929
+    - name: Stanley Baldwin
+      service:
+        - 1922 to 1923
+    - name: Sir Robert Horne
+      service:
+        - 1921 to 1922
+    - name: Austen Chamberlain
+      service:
+        - 1919 to 1921
+        - 1903 to 1905
+    - name: Bonar Law
+      service:
+        - 1916 to 1919
+    - name: Reginald McKenna
+      service:
+        - 1915 to 1916
+    - name: David Lloyd George
+      service:
+        - 1908 to 1915
+    - name: H. H. Asquith
+      service:
+        - 1905 to 1908
+    - name: Charles Ritchie
+      service:
+        - 1902 to 1903
+    19th_century:
+    - name: Sir Michael Hicks Beach, Bt
+      service:
+        - 1895 to 1902
+        - 1885 to 1886
+    - name: Sir William Vernon Harcourt
+      service:
+        - 1892 to 1895, 1886
+    - name: George Goschen
+      service:
+        - 1887 to 1892
+    - name: Lord Randolph Churchill
+      service:
+        - 1886
+    - name: Hugh Childers
+      service:
+        - 1882 to 1885
+    - name: William Gladstone
+      service:
+        - 1880 to 1882, 1873 to 1874, 1859 to 1866, 1852 to 1855
+    - name: Sir Stafford Henry Northcote, Bt
+      service:
+        - 1874 to 1880
+    - name: Robert Lowe
+      service:
+        - 1868 to 1873
+    - name: George Ward Hunt
+      service:
+        - 1868
+    - name: Benjamin Disraeli
+      service:
+        - 1866 to 1868, 1858 to 1859, 1852
+    - name: Sir George Cornewall Lewis, Bt
+      service:
+        - 1855 to 1858
+    - name: Sir Charles Wood
+      service:
+        - 1846 to 1852
+    - name: Henry Goulburn
+      service:
+        - 1841 to 1846, 1828 to 1830
+    - name: Francis Baring
+      service:
+        - 1839 to 1841
+    - name: Thomas Spring Rice
+      service:
+        - 1835 to 1839
+    - name: Sir Robert Peel, Bt
+      service:
+        - 1834 to 1835
+    - name: Thomas Denman, 1st Baron Denman
+      service:
+        - 1834
+    - name: Viscount Althorp
+      service:
+        - 1830 to 1834
+    - name: John Charles Herries
+      service:
+        - 1827 to 1828
+    - name: The Lord Tenterden
+      service:
+        - 1827
+    - name: George Canning
+      service:
+        - 1827
+    - name: Hon. Frederick John Robinson
+      service:
+        - 1823 to 1827
+    - name: Nicholas Vansittart
+      service:
+        - 1812 to 1823
+    - name: Spencer Perceval
+      service:
+        - 1807 to 1812
+    - name: Lord Henry Petty
+      service:
+        - 1806 to 1807
+    - name: Edward Law, 1st Baron Ellenborough
+      service:
+        - 1806
+    - name: William Pitt the Younge
+      service:
+        - 1804 to 1806
+        - 1783 to 1801
+        - 1782 to 1783
+    - name: Henry Addington
+      service:
+        - 1801 to 1804
+    18th_century:
+    - name: Lord John Cavendish
+      service:
+      - 1783
+    - name: Lord North
+      service:
+      - 1767 to 1782
+    - name: Charles Townshend
+      service:
+      - 1766 to 1767
+    - name: William Dowdeswell
+      service:
+      - 1765 to 1766
+    - name: George Grenville
+      service:
+      - 1763 to 1765
+    - name: Sir Francis Dashwood
+      service:
+      - 1762 to 1763
+    - name: Viscount Barrington
+      service:
+      - 1761 to 1762
+    - name: Henry Bilson Legge
+      service:
+      - 1757 to 1761
+      - 1756 to 1757
+      - 1754 to 1755
+    - name: Lord Mansfield
+      service:
+      - 1757
+    - name: Sir George Lyttleton
+      service:
+      - 1755 to 1756
+    - name: Sir William Lee
+      service:
+      - 1754
+    - name: Henry Pelham
+      service:
+      - 1743 to 1754
+    - name: Samuel Sandys
+      service:
+      - 1742 to 1743
+    - name: Sir Robert Walpole
+      service:
+      - 1721 to 1742
+      - 1715 to 1717
+    - name: Sir John Pratt
+      service:
+      - 1721
+    - name: John Aislabie
+      service:
+      - 1718 to 1721
+    - name: Viscount Stanhope
+      service:
+      - 1717 to 1718
+    - name: Sir Richard Onslow
+      service:
+      - 1714 to 1715
+    - name: Sir William Wyndhan
+      service:
+      - 1713 to 1714
+    - name: Robert Benson
+      service:
+      - 1711 to 1713
+    - name: Robert Harley
+      service:
+      - 1710 to 1711
+    - name: Sir John Smith
+      service:
+      - 1708 to 1710
+      - 1699 to 1701
+    - name: Henry Boyle
+      service:
+      - 1701 to 1708
+    16th_and_17th_centuries:
+    - name: Charles Montagu
+      service:
+      - 1694 to 1699
+    - name: Richard Hampden
+      service:
+      - 1690 to 1694
+    - name: Henry Booth
+      service:
+      - 1689 to 1690
+    - name: Sir John Ernle
+      service:
+      - 1676 to 1689
+    - name: Sir John Duncombe
+      service:
+      - 1672 to 1676
+    - name: Lord Ashley
+      service:
+      - 1661 to 1672
+    - name: Sir Edward Hyde
+      service:
+      - 1643 to 1646
+    - name: Sir John Colepepper
+      service:
+      - 1642 to 1643
+    - name: Lord Cottington
+      service:
+      - 1629 to 1642
+    - name: Lord Barrett
+      service:
+      - 1628 to 1629
+    - name: Sir Richard Weston
+      service:
+      - 1621 to 1628
+    - name: Sir Fulke Greville
+      service:
+      - 1614 to 1621
+    - name: Sir Julius Caesar
+      service:
+      - 1606 to 1614
+    - name: Earl of Dunbar
+      service:
+      - 1603 to 1606
+    - name: Sir John Fortescue
+      service:
+      - 1589 to 1603
+    - name: Sir Walter Mildmay
+      service:
+      - 1566 to 1589
+    - name: Sir Richard Sackville
+      service:
+      - 1559 to 1566
+links:
+  parent:
+    - title: History of the UK government
+      base_path: /government/history
+      links:
+        parent:
+          - title: How government works
+            base_path: /government/how-government-works
