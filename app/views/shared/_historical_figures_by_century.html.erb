@@ -12,11 +12,8 @@
 <div id=<%= "historical-people-#{heading.downcase.gsub(' ', '-')}" %>>
   <% people.each_slice(4) do |row| %>
     <div class="govuk-grid-row historic-people-index__section-row">
-      <% row.each do |name, info| %>
-        <%= render partial: "shared/historical_person", locals: {
-          name: name,
-          info: info,
-        } %>
+      <% row.each do |info| %>
+        <%= render partial: "shared/historical_person", locals: { info: } %>
       <% end %>
     </div>
   <% end %>
