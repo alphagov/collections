@@ -4,7 +4,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <%= render "govuk_publishing_components/components/title", {
-      context: I18n.t("past_prime_ministers_index.context"),
+      context: I18n.t("historic_appointments_index.context"),
       title: @past_prime_ministers.title,
     } %>
   </div>
@@ -12,15 +12,15 @@
 
 <%= render partial: "shared/featured_historical_figures", locals: {
   historical_figures_with_image: @presenter.prime_minsters_between(2001, 2099),
-  heading: I18n.t("past_prime_ministers_index.headings.21st_century") }
+  heading: I18n.t("historic_appointments_index.headings.21st_century") }
 %>
 
 <%= render partial: "shared/featured_historical_figures", locals: {
   historical_figures_with_image: @presenter.prime_minsters_between(1901, 2000),
-  heading: I18n.t("past_prime_ministers_index.headings.20th_century") }
+  heading: I18n.t("historic_appointments_index.headings.20th_century") }
 %>
 
 <%= render partial: "shared/featured_historical_figures", locals: {
   historical_figures_with_image: @presenter.prime_minsters_between(1701, 1900),
-  heading: I18n.t("past_prime_ministers_index.headings.18th_and_19th_centuries")
+  heading: I18n.t("historic_appointments_index.headings.18th_and_19th_centuries")
 } %>
