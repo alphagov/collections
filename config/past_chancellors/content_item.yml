@@ -3,7 +3,7 @@ base_path: /government/history/past-foreign-secretaries
 title: Past Chancellors of the Exchequer
 body:
   centuries:
-    twenty_first_century:
+    21st_century:
     - name: Kwasi Kwarteng
       service:
       - 2022
@@ -131,7 +131,7 @@ body:
     - name: Charles Ritchie
       service:
         - 1902 to 1903
-    nineteenth_century:
+    19th_century:
     - name: Sir Michael Hicks Beach, Bt
       service:
         - 1895 to 1902
@@ -219,7 +219,7 @@ body:
     - name: Henry Addington
       service:
         - 1801 to 1804
-    eighteenth_century:
+    18th_century:
     - name: Lord John Cavendish
       service:
       - 1783
@@ -293,7 +293,7 @@ body:
     - name: Henry Boyle
       service:
       - 1701 to 1708
-    sixteenth_and_seventeenth_centuries:
+    16th_and_17th_centuries:
     - name: Charles Montagu
       service:
       - 1694 to 1699

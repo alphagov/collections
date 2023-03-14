@@ -4,9 +4,9 @@ class PastPrimeMinistersIndexPresenter
   end
 
   def prime_minsters_between(start_date, end_date)
-    @sorted_prime_ministers_with_start_dates.filter_map { |data, earliest_start_date|
-      [data["title"], formatted_data(data)] if earliest_start_date.between?(start_date, end_date)
-    }.to_h
+    @sorted_prime_ministers_with_start_dates.filter_map do |data, earliest_start_date|
+      formatted_data(data) if earliest_start_date.between?(start_date, end_date)
+    end
   end
 
   def formatted_data(pm_data)

@@ -3,7 +3,7 @@ base_path: /government/history/past-foreign-secretaries
 title: Past Foreign Secretaries
 body:
   centuries:
-    twenty_first_century:
+    21st_century:
       - name: Elizabeth Truss
         service:
           - 2021 to 2022
@@ -31,7 +31,7 @@ body:
       - name: Jack Straw
         service:
           - 2001 to 2006
-    twentieth_century:
+    20th_century:
       - name: Robin Cook
         service:
           - 1997 to 2001
@@ -134,7 +134,7 @@ body:
         link: "/government/history/past-foreign-secretaries/henry-petty-fitzmaurice"
         service:
           - 1900 to 1905
-    nineteenth_century:
+    19th_century:
       - name: Robert Cecil, Marquess of Salisbury
         link: "/government/history/past-foreign-secretaries/robert-cecil"
         service:
@@ -218,7 +218,7 @@ body:
       - name: Dudley Ryder, Lord Harrowby
         service:
           - 1804
-    eighteenth_century:
+    18th_century:
       - name: William Wyndham Grenville, Lord Grenville
         service:
           - 1791 to 1801

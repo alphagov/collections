@@ -1,15 +1,15 @@
-<% content_for :title, @content_item["title"] %>
+<% content_for :title, @content_item.title %>
 
 <% page_class "historic-appointments-index historical-past-chancellors govuk-width-container" %>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
     <%= render "govuk_publishing_components/components/title", {
       context: "History",
-      title: @content_item["title"],
+      title: @content_item.title,
     } %>
   </div>
 </div>
 
-<% @presenter.centuries_data.each do |heading, people| %>
+<% @content_item.centuries_data.each do |heading, people| %>
   <%= render partial: "shared/historical_figures_by_century", locals: { people:, heading: }  %>
 <% end %>

@@ -9,9 +9,18 @@ class HistoricAppointmentsIndex
     @content_item = content_item
   end
 
+  def title
+    @content_item.content_item_data["title"]
+  end
+
+  def selection_of_profiles
+    @content_item.content_item_data.dig("body", "selection_of_profiles")
+  end
+
   def centuries_data
-    @content_item.dig("body", "centuries")
-                 .transform_keys { |key| I18n.t("historic_appointments_index.headings.#{key}") }
+    @content_item.content_item_data.dig("body", "centuries")
+                 .map { |key, value| [ I18n.t("historic_appointments_index.headings.#{key}"), value.deep_symbolize_keys ] }
+                 .to_h
   end
 
   def self.find!(base_path)
