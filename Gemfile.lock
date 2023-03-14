@@ -1,3 +1,17 @@
+GIT
+  remote: https://github.com/alphagov/govuk_publishing_components.git
+  revision: 698a4dbef2d9e7a9f5c76386584e1435814d4caf
+  branch: use-modules-without-js-bundling
+  specs:
+    govuk_publishing_components (34.10.1)
+      govuk_app_config
+      govuk_personalisation (>= 0.7.0)
+      kramdown
+      plek
+      rails (>= 6)
+      rouge
+      sprockets (>= 3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -189,14 +203,6 @@ GEM
     govuk_personalisation (0.13.0)
       plek (>= 1.9.0)
       rails (>= 6, < 8)
-    govuk_publishing_components (34.8.0)
-      govuk_app_config
-      govuk_personalisation (>= 0.7.0)
-      kramdown
-      plek
-      rails (>= 6)
-      rouge
-      sprockets (>= 3)
     govuk_schemas (4.5.0)
       json-schema (>= 2.8, < 3.1)
     govuk_test (3.0.1)
@@ -377,7 +383,7 @@ GEM
       netrc (~> 0.8)
     rexml (3.2.5)
     rinku (2.0.6)
-    rouge (4.0.1)
+    rouge (4.1.0)
     rspec (3.11.0)
       rspec-core (~> 3.11.0)
       rspec-expectations (~> 3.11.0)
@@ -533,7 +539,7 @@ DEPENDENCIES
   govuk_ab_testing
   govuk_app_config
   govuk_document_types
-  govuk_publishing_components
+  govuk_publishing_components!
   govuk_schemas
   govuk_test
   i18n-coverage
