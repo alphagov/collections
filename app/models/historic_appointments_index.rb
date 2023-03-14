@@ -12,7 +12,6 @@ class HistoricAppointmentsIndex
   def title
     @content_item.content_item_data["title"]
   end
-
   def selection_of_profiles
     @content_item.content_item_data.dig("body", "selection_of_profiles")
   end
