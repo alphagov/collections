@@ -39,5 +39,8 @@
     "standardx": "^7.0.0",
     "stylelint": "^14.16.1",
     "stylelint-config-gds": "^0.2.0"
+  },
+  "dependencies": {
+    "govuk-frontend": "^4.5.0"
   }
 }
