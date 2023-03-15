@@ -20,3 +20,5 @@
 
 # pact reports
 /spec/reports
+.yarn/cache
+.yarn/install-state.gz
