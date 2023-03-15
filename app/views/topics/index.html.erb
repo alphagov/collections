@@ -1,3 +1,5 @@
+<% add_view_stylesheet("topics") %>
+
 <% title_with_suffix = t("shared.topics.title", title: topic.title) %>
 <% content_for :title, title_with_suffix %>
 <%= render 'shared/tag_meta', tag: topic %>

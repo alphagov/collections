@@ -1,5 +1,3 @@
-$covid-grey: #272828;
-$covid-yellow: #fff500;
 $govuk-new-link-styles: true;
 
 // This flag stops the font from being included in this application's
@@ -7,19 +5,5 @@ $govuk-new-link-styles: true;
 // not needed here.
 $govuk-include-default-font-face: false;
 
-// gem components
 @import "govuk_publishing_components/govuk_frontend_support";
-
 @import "helpers/margins";
-@import "components/*";
-
-@import "views/browse";
-@import "views/history_people";
-@import "views/topics";
-@import "views/topical_events";
-@import "views/taxons";
-@import "views/organisations";
-@import "views/organisation";
-@import "views/covid";
-@import "views/colhub";
-@import "views/world_location_news";

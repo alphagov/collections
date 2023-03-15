@@ -1,8 +1,11 @@
+@import "govuk_publishing_components/individual_component_support";
+
 .app-c-topic-list__item {
   @include govuk-font(19, $weight: bold);
 }
 
-.app-c-topic-list > li { // Needed to override `.govuk-list > li`
+.app-c-topic-list > li {
+  // Needed to override `.govuk-list > li`
   margin-bottom: govuk-spacing(2);
 }
 
