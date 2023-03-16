@@ -1,15 +1,15 @@
-class PastForeignSecretariesController < ApplicationController
+class HistoricAppointmentsController < ApplicationController
   def index
-    content_item = YAML.load_file(Rails.root.join("config/past_foreign_secretaries/content_item.yml"))
-    @index_page = HistoricAppointmentsIndex.new(ContentItem.new(content_item))
+    @index_page = HistoricAppointmentsIndex.find!(request.path)
+    @presenter = HistoricAppointmentsIndexPresenter.new(@index_page)
     setup_content_item_and_navigation_helpers(@index_page)
   end
 
   def show
     setup_content_item_and_navigation_helpers(HistoricAppointmentsIndex.find!(request.path))
 
-    if people_with_individual_pages.include?(params[:id])
-      render template: "past_foreign_secretaries/#{params[:id].underscore}"
+    if foreign_secretaries_with_individual_pages.include?(params[:id])
+      render template: "historic_appointments/past_foreign_secretaries/#{params[:id].underscore}"
     else
       render plain: "Not found", status: :not_found
     end
@@ -17,7 +17,7 @@ class PastForeignSecretariesController < ApplicationController
 
 private
 
-  def people_with_individual_pages
+  def foreign_secretaries_with_individual_pages
     %w[
       austen-chamberlain
       charles-fox

@@ -1,6 +1,33 @@
 RSpec.describe PastPrimeMinistersIndexPresenter do
   include PrimeMinistersHelpers
 
+  describe "featured_profile_groups" do
+    it "returns pms for each century" do
+      pm_1 = api_data_for_person_without_historical_account("Person 1", "/person-1", [1801])
+      pm_2 = api_data_for_person_without_historical_account("Person 2", "/person-2", [1901])
+      pm_3 = api_data_for_person_without_historical_account("Person 3", "/person-3", [2001])
+
+      presenter = PastPrimeMinistersIndexPresenter.new([pm_1, pm_2, pm_3])
+      expected_data = {
+        "21st_century" => [pm_3],
+        "20th_century" => [pm_2],
+        "18th_and_19th_centuries" => [pm_1],
+      }
+
+      expect(presenter.featured_profile_groups).to_eq(expected_data)
+    end
+  end
+
+  describe "other_profile_groups" do
+    it "an empty hash" do
+      pm_1 = api_data_for_person_without_historical_account("Person 1", "/person-1", [1801])
+
+      presenter = PastPrimeMinistersIndexPresenter.new([pm_1])
+
+      expect(presenter.featured_profile_groups).to_eq({})
+    end
+  end
+
   describe "prime_ministers_between" do
     let(:nineteenth_century_pm_one) { { name: "The Rt Honourable Mr A", start_dates: [1801, 1803] } }
     let(:nineteenth_century_pm_two) { { name: "The Rt Honourable Mrs B", start_dates: [1902, 1897] } }
