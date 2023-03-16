@@ -6,7 +6,7 @@ class PastForeignSecretariesController < ApplicationController
   end
 
   def show
-    setup_content_item_and_navigation_helpers(HistoricAppointmentsIndex.find!(request.path.split("/")[0...-1].join("/")))
+    setup_content_item_and_navigation_helpers(HistoricAppointmentsIndex.find!(request.path))
 
     if people_with_individual_pages.include?(params[:id])
       render template: "past_foreign_secretaries/#{params[:id].underscore}"

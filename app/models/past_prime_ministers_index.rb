@@ -3,6 +3,11 @@ class PastPrimeMinistersIndex < HistoricAppointmentsIndex
     prime_ministers_with_historical_accounts + prime_ministers_without_historical_accounts
   end
 
+  def self.find!(base_path)
+    content_item = ContentItem.find!(base_path)
+    new(content_item)
+  end
+
 private
 
   def prime_ministers_with_historical_accounts

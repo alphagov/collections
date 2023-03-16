@@ -22,7 +22,9 @@ class HistoricAppointmentsIndex
   end
 
   def self.find!(base_path)
-    content_item = ContentItem.find!(base_path)
-    new(content_item)
+    directory =
+      base_path.include?("past-foreign-secretaries") ? "past_foreign_secretaries" : "past_chancellors"
+    yaml_content = YAML.load_file(Rails.root.join("config/#{directory}/content_item.yml"))
+    new(ContentItem.new(yaml_content))
   end
 end
