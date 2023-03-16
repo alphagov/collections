@@ -1,0 +1,23 @@
+---
+en:
+  historic_appointments_index:
+    context: History
+    headings:
+      16th_and_17th_centuries: 16th & 17th centuries
+      18th_and_19th_centuries: 18th & 19th centuries
+      18th_century: 18th century
+      19th_century: 19th century
+      20th_century: 20th century
+      21st_century: 21st century
+      selection_of_profiles: Selection of profiles
+  past_prime_ministers:
+    context: Past Prime Ministers
+    headings:
+      biography: Biography
+      born: Born
+      dates_in_office: Dates in office
+      died: Died
+      interesting_facts: Interesting facts
+      major_acts: Major acts
+      political_party: Political party
+    view_all: View all past prime ministers
