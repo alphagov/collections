@@ -1,6 +1,4 @@
 class MainstreamBrowsePage
-  include CostOfLivingBannerHelper
-
   attr_reader :content_item
 
   delegate(
