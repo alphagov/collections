@@ -1,6 +1,7 @@
 class PastForeignSecretariesController < ApplicationController
   def index
-    setup_content_item_and_navigation_helpers(HistoricAppointmentsIndex.find!(request.path))
+    @index_page = HistoricAppointmentsIndex.find!(request.path)
+    setup_content_item_and_navigation_helpers(@index_page)
 
     @twenty_first_century =
       {

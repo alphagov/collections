@@ -1,6 +1,7 @@
 class PastChancellorsController < ApplicationController
   def index
-    setup_content_item_and_navigation_helpers(HistoricAppointmentsIndex.find!(request.path))
+    @index_page = HistoricAppointmentsIndex.find!(request.path)
+    setup_content_item_and_navigation_helpers(@index_page)
 
     @twentyfirst_century_chancellors = {
       "Kwasi Kwarteng" => {
