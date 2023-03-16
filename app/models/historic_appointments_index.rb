@@ -17,6 +17,10 @@ class HistoricAppointmentsIndex
     @content_item.content_item_data.dig("body", "centuries")
   end
 
+  def selection_of_profiles
+    @content_item.content_item_data.dig("body", "selection_of_profiles")
+  end
+
   def self.find!(base_path)
     content_item = ContentItem.find!(base_path)
     new(content_item)

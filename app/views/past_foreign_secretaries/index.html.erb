@@ -12,7 +12,7 @@
   </div>
 </div>
 
-<%= render partial: "shared/featured_historical_figures", locals: { historical_figures_with_image: @selection_of_profiles, heading: "Selection of profiles"} %>
+<%= render partial: "shared/featured_historical_figures", locals: { historical_figures_with_image: @index_page.selection_of_profiles, heading: I18n.t("historic_appointments_index.headings.selection_of_profiles")} %>
 
 <% @index_page.centuries_data.each do |heading, people| %>
   <%= render partial: "shared/historical_figures_by_century", locals: { people:, heading: I18n.t("historic_appointments_index.headings.#{heading}") }  %>
