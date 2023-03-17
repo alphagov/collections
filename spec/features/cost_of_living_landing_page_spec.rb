@@ -12,7 +12,6 @@ RSpec.feature "Cost of Living hub page" do
       then_i_can_see_the_breadcrumbs
       and_there_are_metatags
       and_there_is_the_announcements_section
-      and_there_is_a_survey_banner
       and_there_is_an_important_info_suffix_on_some_link
       and_there_is_link_tracking
       and_there_is_accordion_section_tracking
@@ -46,11 +45,6 @@ RSpec.feature "Cost of Living hub page" do
 
     def and_there_is_the_announcements_section
       expect(page).to have_text("Announcements")
-    end
-
-    def and_there_is_a_survey_banner
-      expect(page).to have_text("Help make GOV.UK better")
-      expect(page).to have_link(href: "https://s.userzoom.com/m/MSBDMTQ3MVM0NCAg")
     end
 
     def and_there_is_an_important_info_suffix_on_some_link

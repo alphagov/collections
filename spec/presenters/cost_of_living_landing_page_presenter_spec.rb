@@ -21,10 +21,6 @@ RSpec.describe CostOfLivingLandingPagePresenter do
     described_class.new(content_item)
   end
 
-  it "returns the survey_url" do
-    expect(presenter.survey_url).to eq "https://s.userzoom.com/m/MSBDMTQ3MVM0NCAg"
-  end
-
   it "provides getter methods for all component keys defined in the YAML" do
     # To keep the yaml and presenter in sync. If it fails update COMPONENTS in the presenter
     cost_of_living_hardcoded_content = YAML.load_file(Rails.root.join("config/cost_of_living_landing_page/content_item.yml")).deep_symbolize_keys
