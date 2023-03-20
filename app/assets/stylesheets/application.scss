@@ -1,9 +1,4 @@
-$govuk-new-link-styles: true;
+// The AssetHelper module is configured for this application to load individual stylesheets
+// for components and views on pages where they are needed.
 
-// This flag stops the font from being included in this application's
-// stylesheet - the font is being served by Static across all of GOV.UK, so is
-// not needed here.
-$govuk-include-default-font-face: false;
-
-@import "govuk_publishing_components/govuk_frontend_support";
-@import "helpers/margins";
+// https://github.com/alphagov/govuk_publishing_components/blob/main/docs/set-up-individual-component-css-loading.md

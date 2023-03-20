@@ -37,7 +37,6 @@
   <title><%= yield :title %> - GOV.UK</title>
   <%= javascript_include_tag "test-dependencies" if Rails.env.test? %>
   <%= javascript_include_tag "application" %>
-  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= csrf_meta_tags %>
   <%= yield :meta_tags %>
   <%= render 'govuk_publishing_components/components/meta_tags', content_item: content_item_h %>

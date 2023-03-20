@@ -18,7 +18,3 @@
     @include govuk-font(16, $weight: bold);
   }
 }
-
-.app-c-topic-list--margin-bottom {
-  @include responsive-bottom-margin;
-}

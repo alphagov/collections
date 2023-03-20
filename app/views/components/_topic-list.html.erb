@@ -10,7 +10,7 @@
 
   ul_classes = %w[govuk-list app-c-topic-list]
   ul_classes << "app-c-topic-list--small" if small
-  ul_classes << "app-c-topic-list--margin-bottom" if margin_bottom
+  ul_classes << "govuk-!-margin-bottom-6" if margin_bottom
   ul_classes << brand_helper.brand_class if brand
 %>
 <% if items.any? %>

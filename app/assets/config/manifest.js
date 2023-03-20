@@ -1,7 +1,6 @@
 //= link_tree ../images
 //= link application.js
 //= link test-dependencies.js
-//= link application.css
 
 //= link components/_taxon-list.css
 //= link components/_topic-list.css
