@@ -1,3 +1,5 @@
+@import "govuk_publishing_components/individual_component_support";
+
 .historic-people-index__section-row-header {
   @include govuk-media-query($from: tablet) {
     margin-top: govuk-spacing(2);

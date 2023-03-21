@@ -9,38 +9,44 @@
     end
   end
 %>
+
+<% content_for :body do %>
+  <%= yield :back_link %>
+  <% unless (content_for(:is_full_width_header) || content_for(:back_link)) %>
+    <% if content_for?(:breadcrumbs) %>
+      <%= yield :breadcrumbs %>
+    <% else %>
+      <%= render 'breadcrumbs' %>
+    <% end %>
+  <% end %>
+  <%=
+    content_tag(:main,
+      id: "content",
+      role: "main",
+      class: main_classes,
+      lang: lang,
+      ) do
+  %>
+    <%= yield %>
+  <% end %>
+<% end %>
+
 <!DOCTYPE html>
 <html>
 <head>
   <title><%= yield :title %> - GOV.UK</title>
   <%= javascript_include_tag "test-dependencies" if Rails.env.test? %>
   <%= javascript_include_tag "application" %>
-  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= csrf_meta_tags %>
   <%= yield :meta_tags %>
   <%= render 'govuk_publishing_components/components/meta_tags', content_item: content_item_h %>
+  <%=
+    render_component_stylesheets
+  %>
 </head>
-
 <body>
   <div class="wrapper" id="wrapper">
-    <%= yield :back_link %>
-    <% unless (content_for(:is_full_width_header) || content_for(:back_link)) %>
-      <% if content_for?(:breadcrumbs) %>
-        <%= yield :breadcrumbs %>
-      <% else %>
-        <%= render 'breadcrumbs' %>
-      <% end %>
-    <% end %>
-    <%=
-      content_tag(:main,
-        id: "content",
-        role: "main",
-        class: main_classes,
-        lang: lang,
-       ) do
-    %>
-      <%= yield %>
-    <% end %>
+    <%= yield :body %>
   </div>
 </body>
 </html>
