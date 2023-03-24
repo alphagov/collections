@@ -6,7 +6,6 @@
 //= link components/_topic-list.css
 
 //= link views/_browse.css
-//= link views/_colhub.css
 //= link views/_covid.css
 //= link views/_history_people.css
 //= link views/_organisation.css
