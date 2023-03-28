@@ -60,9 +60,9 @@ Rails.application.routes.draw do
       to: "services_and_information#index",
       as: :services_and_information
 
-  get "/government/history/past-chancellors", to: "past_chancellors#index"
-  get "/government/history/past-foreign-secretaries", to: "past_foreign_secretaries#index"
-  get "/government/history/past-foreign-secretaries/:id", to: "past_foreign_secretaries#show"
+  get "/government/history/past-chancellors", to: "historic_appointments#index"
+  get "/government/history/past-foreign-secretaries", to: "historic_appointments#index"
+  get "/government/history/past-foreign-secretaries/:id", to: "historic_appointments#show"
   get "/government/history/past-prime-ministers", to: "past_prime_ministers#index"
   get "/government/history/past-prime-ministers/:id", to: "past_prime_ministers#show"
 

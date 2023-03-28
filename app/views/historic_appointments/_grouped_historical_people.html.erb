@@ -1,0 +1,34 @@
+<div class="govuk-grid-row historic-people-index__section-row-header">
+  <div class="govuk-grid-column-full">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: heading,
+      padding: true,
+      border_top: 2,
+      font_size: "l"
+    } %>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+  </div>
+</div>
+<div id=<%= "historical-people-#{heading.downcase.gsub(' ', '-')}" %>>
+  <% people.each_slice(4) do |row| %>
+    <div class="govuk-grid-row historic-people-index__section-row">
+      <% row.map(&:deep_symbolize_keys).each do |info| %>
+        <% if include_images %>
+          <div role="listitem" class="govuk-grid-column-one-quarter">
+            <%= render "govuk_publishing_components/components/image_card", {
+              href: info[:href],
+              image_src: image_path(info[:image_src]),
+              image_loading: "lazy",
+              heading_text: info[:heading_text],
+              heading_level: 3,
+              extra_details: info[:service].map { |date| { text: date } },
+              extra_details_no_indent: true
+            } %>
+          </div>
+        <% else %>
+          <%= render partial: "historic_appointments/historical_person_without_image", locals: { info: info } %>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

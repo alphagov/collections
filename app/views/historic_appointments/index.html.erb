@@ -1,0 +1,31 @@
+<% add_view_stylesheet("history_people") %>
+
+<% page_class "govuk-width-container" %>
+
+<% content_for :title, @index_page.title %>
+
+<% page_class "historic-appointments-index govuk-width-container" %>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <%= render "govuk_publishing_components/components/title", {
+      context: "History",
+      title: @index_page.title,
+    } %>
+  </div>
+</div>
+
+<% @presenter.featured_profile_groups.each do |heading, people| %>
+  <%= render partial: "historic_appointments/grouped_historical_people", locals: {
+    people:,
+    heading: I18n.t("historic_appointments_index.headings.#{heading}"),
+    include_images: true,
+  } %>
+<% end %>
+
+<% @presenter.other_profile_groups.each do |heading, people| %>
+  <%= render partial: "historic_appointments/grouped_historical_people", locals: {
+    people:,
+    heading: I18n.t("historic_appointments_index.headings.#{heading}"),
+    include_images: false,
+  }  %>
+<% end %>

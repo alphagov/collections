@@ -1,0 +1,16 @@
+<div role="listitem" class="govuk-grid-column-one-quarter">
+  <% if info[:link].present? %>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="<%= info[:link] %>"><%= info[:name] %></a>
+    </h3>
+  <% else %>
+    <%= render "govuk_publishing_components/components/heading", {
+      text: info[:name],
+      heading_level: 3,
+      font_size: "s",
+    } %>
+  <% end %>
+  <% info[:service].each do |service| %>
+    <p class="govuk-body"><%= service %></p>
+  <% end %>
+</div>
