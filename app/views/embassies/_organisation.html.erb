@@ -1,0 +1,8 @@
+<li>
+  <%= render "govuk_publishing_components/components/heading", {
+    text: ERB::Util.html_escape(organisation.locality),
+    heading_level: 3,
+    margin_bottom: 1
+  } %>
+  <%= link_to(organisation.name, organisation.path, class: "govuk-link") %>
+</li>
