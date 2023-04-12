@@ -1,0 +1,38 @@
+@import "govuk_publishing_components/individual_component_support";
+
+%responsive-bunting-height {
+  height: 48px;
+
+  @include govuk-media-query($from: desktop) {
+    height: 64px;
+  }
+}
+
+.app-bunting {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: visible;
+  border-top: 1px solid govuk-colour("mid-grey", $legacy: "grey-2");
+  @extend %responsive-bunting-height;
+}
+
+.app-bunting__triangles {
+  background-image: image-url("topical-events/bunting-grey-string.svg");
+  background-color: transparent;
+  background-repeat: repeat-x;
+  background-position: center center;
+  width: 100%;
+  @extend %responsive-bunting-height;
+
+  // Ensure the background pattern repeats in IE11
+  background-size: 175px 48px;
+
+  @include govuk-media-query($from: desktop) {
+    background-size: 229px 64px;
+  }
+}
+
+.app-bunting--spacer {
+  @extend %responsive-bunting-height;
+}
