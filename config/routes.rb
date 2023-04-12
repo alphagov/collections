@@ -101,6 +101,10 @@ Rails.application.routes.draw do
     get "/:slug", to: "step_nav#show"
   end
 
+  get "/world/embassies",
+      to: "embassies#index",
+      as: :embassies
+
   get "/world/:name/news(.:locale).atom",
       to: "world_location_news#show",
       as: :world_location_news_feed
