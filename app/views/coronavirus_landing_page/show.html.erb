@@ -1,5 +1,9 @@
 <% add_view_stylesheet("covid") %>
 
+<% content_for :meta_tags do %>
+  <%= @requested_variant.analytics_meta_tag.html_safe %>
+<% end %>
+
 <%= render partial: "coronavirus_landing_page/components/shared/meta_tags", locals: {
   metadata: details.metadata,
   corona_opengraph_images: true
@@ -71,4 +75,11 @@
       background: true
     }
   end %>
+  <% if @requested_variant.variant?("A") %>
+    <br>
+  <% end %>
+  <% if @requested_variant.variant?("B") %>
+    <br>
+    <br>
+  <% end %>
 </div>
