@@ -1,4 +1,6 @@
 class MainstreamBrowsePage
+  include UserResearchBannerHelper
+
   attr_reader :content_item
 
   delegate(
