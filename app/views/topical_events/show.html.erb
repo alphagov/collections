@@ -49,7 +49,7 @@
 
     <% if @topical_event.image_url %>
       <div class="topical-events__image">
-      <%= image_tag(@topical_event.image_url, alt: @topical_event.image_alt_text) %>
+      <%= image_tag(@topical_event.image_url, alt: @topical_event.image_alt_text, srcset: { @topical_event.image_srcset[2][:url] => "2x", @topical_event.image_srcset[0][:url] => "3x",}) %>
       </div>
     <% end %>
 

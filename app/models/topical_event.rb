@@ -27,6 +27,21 @@ class TopicalEvent
     @content_item.content_item_data.dig("details", "image", "alt_text")
   end
 
+  def image_srcset
+    [
+      { url: sized_image_url(960), size: "960w" },
+      { url: sized_image_url(712), size: "712w" },
+      { url: sized_image_url(630), size: "630w" },
+      { url: sized_image_url(465), size: "465w" },
+      { url: sized_image_url(300), size: "300w" },
+      { url: sized_image_url(216), size: "216w" },
+    ]
+  end
+
+  def sized_image_url(width)
+    image_url.gsub("/s300_", "/s#{width}_")
+  end
+
   def body
     @content_item.content_item_data.dig("details", "body")
   end
