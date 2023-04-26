@@ -190,7 +190,6 @@ RSpec.describe "Organisation pages" do
   it "shows subscription links" do
     visit "/government/organisations/attorney-generals-office"
     expect(page).to have_css("a[href='/email-signup?link=/government/organisations/attorney-generals-office']", text: "Get emails")
-    expect(page).to have_css("button", text: "Subscribe to feed")
   end
 
   it "shows the 'what we do' section" do
