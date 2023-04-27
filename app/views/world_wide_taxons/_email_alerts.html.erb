@@ -3,8 +3,6 @@
     <%= render "govuk_publishing_components/components/subscription_links", {
       email_signup_link: email_alert_frontend_signup_url(presented_taxon),
       email_signup_link_text: "#{t("shared.get_emails")} <span class='govuk-visually-hidden'>#{presented_taxon.title}</span>".html_safe,
-      feed_link: whitehall_atom_url,
-      feed_link_box_value: whitehall_atom_url
     } %>
   <% else %>
     <%= render "govuk_publishing_components/components/subscription_links", {
