@@ -1,0 +1,44 @@
+<% add_app_component_stylesheet("topic-list") %>
+<%
+  items ||= []
+  see_more_link ||= false
+  small ||= false
+  margin_bottom ||= false
+
+  brand ||= false
+  brand_helper = GovukPublishingComponents::AppHelpers::BrandHelper.new(brand)
+
+  ul_classes = %w[govuk-list app-c-topic-list]
+  ul_classes << "app-c-topic-list--small" if small
+  ul_classes << "govuk-!-margin-bottom-6" if margin_bottom
+  ul_classes << brand_helper.brand_class if brand
+%>
+<% if items.any? %>
+  <%= tag.ul(class: ul_classes, lang: "en") do %>
+    <% items.each do |item| %>
+      <li class="app-c-topic-list__item">
+        <%=
+          link_to(
+            item[:text],
+            item[:path],
+            data: item[:data_attributes],
+            "aria-label": item[:aria_label],
+            class: "govuk-link govuk-link--no-underline app-c-topic-list__link #{brand_helper.color_class}"
+          )
+        %>
+      </li>
+    <% end %>
+    <% if see_more_link %>
+      <li class="app-c-topic-list__item">
+        <%=
+          link_to(
+            see_more_link[:text],
+            see_more_link[:path],
+            data: see_more_link[:data_attributes],
+            class: "govuk-link app-c-topic-list__link #{brand_helper.color_class}"
+          )
+        %>
+      </li>
+    <% end %>
+  <% end %>
+<% end %>
