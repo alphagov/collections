@@ -17,7 +17,7 @@
         %>
         <% presented_taxon.accordion_content.each_with_index do |taxon, index| %>
           <% contents = capture do %>
-            <%= render 'components/taxon-list', {
+            <%= render 'components/taxon_list', {
                 heading_level: 3,
                 items: taxon_list_params(taxon, data_options_type: :options_for_accordion_content, section_index: index)
              } %>
