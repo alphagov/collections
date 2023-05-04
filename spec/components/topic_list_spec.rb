@@ -1,8 +1,8 @@
-RSpec.describe "topic-list component" do
+RSpec.describe "topic_list component", type: :view do
   include ComponentTestHelper
 
   def component_name
-    "topic-list"
+    "topic_list"
   end
 
   let(:simple_item) do

@@ -1,8 +1,8 @@
-RSpec.describe "taxon-list component" do
+RSpec.describe "taxon_list component", type: :view do
   include ComponentTestHelper
 
   def component_name
-    "taxon-list"
+    "taxon_list"
   end
 
   let(:item1) do

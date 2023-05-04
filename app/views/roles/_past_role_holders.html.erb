@@ -12,7 +12,7 @@
     <%= render "govuk_publishing_components/components/heading", {
       text: t("roles.previous_holders"),
     } %>
-    <%= render "components/taxon-list", {
+    <%= render "components/taxon_list", {
       heading_level: 3,
       items: role.past_holders.map do |rh|
         {
