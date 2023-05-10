@@ -35,14 +35,14 @@ RSpec.describe PastPrimeMinistersIndexPresenter do
   end
 
   describe "prime_ministers_between" do
-    let(:nineteenth_century_pm_one) { { name: "The Rt Honourable Mr A", start_dates: [1801, 1803] } }
-    let(:nineteenth_century_pm_two) { { name: "The Rt Honourable Mrs B", start_dates: [1902, 1897] } }
-    let(:twentieth_century_pm_one) { { name: "The Rt Honourable Mr C", start_dates: [1952] } }
-    let(:twentieth_century_pm_two) { { name: "The Rt Honourable Mrs D", start_dates: [1983, 2005] } }
-    let(:twenty_first_century_pm_one) { { name: "The Rt Honourable Mr E", start_dates: [2002, 2005] } }
+    let(:nineteenth_century_pm_one) { { name: "The Rt Honourable Mrs A", start_dates: [1804, 1797] } }
+    let(:nineteenth_century_pm_two) { { name: "The Rt Honourable Mr B", start_dates: [1810, 1812] } }
+    let(:twentieth_century_pm_one) { { name: "The Rt Honourable Mrs C", start_dates: [1888, 1902] } }
+    let(:twentieth_century_pm_two) { { name: "The Rt Honourable Mr D", start_dates: [1952] } }
+    let(:twenty_first_century_pm_one) { { name: "The Rt Honourable Mr E", start_dates: [1983, 2002] } }
     let(:twenty_first_century_pm_two) { { name: "The Rt Honourable Mrs F", start_dates: [2003] } }
 
-    it "should return ordered prime ministers for a given time period selected by their earliest start date" do
+    it "should return ordered prime ministers for a given time period selected by their latest start date" do
       pms_with_historical_accounts = [nineteenth_century_pm_one, twentieth_century_pm_one, twenty_first_century_pm_one].map do |pm|
         name = pm[:name]
         slug = name.gsub(" ", "_")
@@ -63,7 +63,7 @@ RSpec.describe PastPrimeMinistersIndexPresenter do
       }
 
       date_ranges_to_expected_pms.each do |date_range, expected_pms|
-        actual_pm_names = presenter.prime_minsters_between(date_range.first, date_range.second).keys
+        actual_pm_names = presenter.prime_minsters_between(date_range.first, date_range.second).map { |pm| pm[:heading_text] }
         expected_pm_names = expected_pms.map { |pm| pm[:name] }
         expect(actual_pm_names).to eq expected_pm_names
       end
@@ -86,7 +86,7 @@ RSpec.describe PastPrimeMinistersIndexPresenter do
         image_src:,
         image_alt_text: name,
         heading_text: name,
-        service: ["A political party 1901 to 1902", "A political party 1905 to 1906"],
+        service: ["A political party 1905 to 1906", "A political party 1901 to 1902"],
       }
 
       expect(presenter.formatted_data(pm_with_historical_account)).to eq expected_formatted_data
@@ -98,7 +98,7 @@ RSpec.describe PastPrimeMinistersIndexPresenter do
         image_src:,
         image_alt_text: name,
         heading_text: name,
-        service: ["1901 to 1902", "1905 to 1906"],
+        service: ["1905 to 1906", "1901 to 1902"],
       }
 
       expect(presenter.formatted_data(pm_without_historical_account)).to eq expected_formatted_data
