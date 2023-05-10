@@ -8,13 +8,19 @@ RSpec.describe PastPrimeMinistersIndexPresenter do
       pm_3 = api_data_for_person_without_historical_account("Person 3", "/person-3", [2001])
 
       presenter = PastPrimeMinistersIndexPresenter.new([pm_1, pm_2, pm_3])
-      expected_data = {
-        "21st_century" => [pm_3],
-        "20th_century" => [pm_2],
-        "18th_and_19th_centuries" => [pm_1],
+
+      expected_names_per_century = {
+        "21st_century" => ["Person 3"],
+        "20th_century" => ["Person 2"],
+        "18th_and_19th_centuries" => ["Person 1"],
       }
 
-      expect(presenter.featured_profile_groups).to eq(expected_data)
+      actual_featured_profile_groups = presenter.featured_profile_groups
+
+      expected_names_per_century.each do |century, expected_names|
+        actual_names = actual_featured_profile_groups[century].map { |century_data| century_data[:heading_text] }
+        expect(actual_names).to eq(expected_names)
+      end
     end
   end
 
@@ -24,7 +30,7 @@ RSpec.describe PastPrimeMinistersIndexPresenter do
 
       presenter = PastPrimeMinistersIndexPresenter.new([pm_1])
 
-      expect(presenter.featured_profile_groups).to eq({})
+      expect(presenter.other_profile_groups).to eq({})
     end
   end
 
