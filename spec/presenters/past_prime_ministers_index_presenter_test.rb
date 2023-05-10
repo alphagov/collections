@@ -14,7 +14,7 @@ RSpec.describe PastPrimeMinistersIndexPresenter do
         "18th_and_19th_centuries" => [pm_1],
       }
 
-      expect(presenter.featured_profile_groups).to_eq(expected_data)
+      expect(presenter.featured_profile_groups).to eq(expected_data)
     end
   end
 
@@ -24,7 +24,7 @@ RSpec.describe PastPrimeMinistersIndexPresenter do
 
       presenter = PastPrimeMinistersIndexPresenter.new([pm_1])
 
-      expect(presenter.featured_profile_groups).to_eq({})
+      expect(presenter.featured_profile_groups).to eq({})
     end
   end
 
