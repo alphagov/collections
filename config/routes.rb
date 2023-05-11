@@ -60,6 +60,14 @@ Rails.application.routes.draw do
       to: "services_and_information#index",
       as: :services_and_information
 
+  get "/government/organisations/:organisation_id/chiefs-of-staff" => redirect("/government/organisations/%{organisation_id}")
+  get "/government/organisations/:organisation_id/consultations" => redirect("/government/organisations/%{organisation_id}")
+  get "/government/organisations/:organisation_id/groups" => redirect("/government/organisations/%{organisation_id}")
+  get "/government/organisations/:organisation_id/groups/:id" => redirect("/government/organisations/%{organisation_id}")
+
+  get "/government/organisations/:organisation_id/series(.:locale)" => redirect("/government/publications")
+  get "/government/organisations/:organisation_id/series/:slug(.:locale)" => redirect("/government/collections/%{slug}")
+
   get "/government/history/past-chancellors", to: "historic_appointments#index"
   get "/government/history/past-foreign-secretaries", to: "historic_appointments#index"
   get "/government/history/past-foreign-secretaries/:id", to: "historic_appointments#show"
