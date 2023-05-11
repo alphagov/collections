@@ -1,4 +1,6 @@
 class EmbassiesController < ApplicationController
+  around_action :switch_locale
+
   def index
     embassies_index = EmbassiesIndex.find!("/world/embassies")
     @presented_embassies = EmbassiesIndexPresenter.new(embassies_index)
