@@ -1,4 +1,7 @@
 <% content_for :title, @presented_embassies.title %>
+<% content_for :meta_tags do %>
+  <meta name="description" content="<%= t('embassies.meta_description') %>.">
+<% end %>
 
 <%= render "govuk_publishing_components/components/title", {
   context: t('embassies.context'),
