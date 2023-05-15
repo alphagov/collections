@@ -4,7 +4,7 @@ class EmbassiesIndexPresenter
   end
 
   def title
-    "Find a British embassy, high commission or consulate"
+    I18n.t("embassies.title")
   end
 
   def details

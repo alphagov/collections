@@ -1,0 +1,9 @@
+---
+en:
+  embassies:
+    contact_local_authorities: British nationals should contact the local authorities
+    contact_office_name_in_location: British nationals should contact the %{name} in %{location}
+    context: Worldwide
+    ordering_title: A–Z
+    title: Find a British embassy, high commission or consulate
+    visually_hidden_ordering_hint: Countries ordered from

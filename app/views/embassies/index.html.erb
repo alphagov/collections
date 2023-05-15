@@ -1,7 +1,7 @@
 <% content_for :title, @presented_embassies.title %>
 
 <%= render "govuk_publishing_components/components/title", {
-  context: "Worldwide",
+  context: t('embassies.context'),
   title: @presented_embassies.title,
   } %>
 
@@ -9,7 +9,7 @@
   <div class="govuk-grid-row">
     <aside class="govuk-grid-column-one-quarter">
       <%= render "govuk_publishing_components/components/heading", {
-        text: raw("<span class=\" govuk-visually-hidden\">Countries ordered from </span> A–Z"),
+        text: raw("<span class=\" govuk-visually-hidden\">#{t('embassies.visually_hidden_ordering_hint')} </span> #{t('embassies.ordering_title')}"),
         font_size: "l",
         margin_bottom: 6,
         } %>
@@ -31,14 +31,14 @@
                   <% else %>
                     <li>
                       <p class="govuk-body">
-                        British nationals should contact the <%= embassy.remote_office.name %> in <%= embassy.remote_office.location %>.
+                        <%= t('embassies.contact_office_name_in_location', name: embassy.remote_office.name, location: embassy.remote_office.location) %>.
                       </p>
                       <%= link_to(embassy.remote_office.name, embassy.remote_office.path, class: "govuk-link") %>
                     </li>
                   <% end %>
                 </ul>
               <% else %>
-                <p class="govuk-body">British nationals should contact the local authorities.</p>
+                <p class="govuk-body"><%= t('embassies.contact_local_authorities') %>.</p>
               <% end %>
             </div>
           </li>
