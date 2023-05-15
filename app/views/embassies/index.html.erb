@@ -1,0 +1,53 @@
+<% content_for :title, @presented_embassies.title %>
+<% content_for :meta_tags do %>
+  <meta name="description" content="<%= t('embassies.meta_description') %>.">
+<% end %>
+
+<%= render "govuk_publishing_components/components/title", {
+  context: t('embassies.context'),
+  title: @presented_embassies.title,
+  } %>
+
+<div class="govuk-main-wrapper">
+  <div class="govuk-grid-row">
+    <aside class="govuk-grid-column-one-quarter">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: raw("<span class=\" govuk-visually-hidden\">#{t('embassies.visually_hidden_ordering_hint')} </span> #{t('embassies.ordering_title')}"),
+        font_size: "l",
+        margin_bottom: 6,
+        } %>
+    </aside>
+    <section class="govuk-grid-column-three-quarters">
+      <ol class="govuk-list govuk-list--spaced">
+        <% @presented_embassies.embassies_by_location.each do |embassy| -%>
+          <li class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+              <%= render "govuk_publishing_components/components/heading", {
+                text: embassy.name, margin_bottom: 1
+                } %>
+            </div>
+            <div class="govuk-grid-column-two-thirds">
+              <% if embassy.can_assist_british_nationals? %>
+                <ul class="govuk-list govuk-list--spaced govuk-!-margin-top-0">
+                  <% if embassy.can_assist_in_location? %>
+                    <%= render partial: "organisation", collection: embassy.organisations_with_embassy_offices %>
+                  <% else %>
+                    <li>
+                      <p class="govuk-body">
+                        <%= t('embassies.contact_office_name_in_location', name: embassy.remote_office.name, location: embassy.remote_office.location) %>.
+                      </p>
+                      <%= link_to(embassy.remote_office.name, embassy.remote_office.path, class: "govuk-link") %>
+                    </li>
+                  <% end %>
+                </ul>
+              <% else %>
+                <p class="govuk-body"><%= t('embassies.contact_local_authorities') %>.</p>
+              <% end %>
+            </div>
+          </li>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        <% end %>
+      </ol>
+    </section>
+  </div>
+</div>
