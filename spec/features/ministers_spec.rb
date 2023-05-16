@@ -34,6 +34,13 @@ RSpec.feature "Ministers index page" do
     expect(page).to have_selector(".gem-c-heading", text: I18n.t("ministers.whips"))
   end
 
+  scenario "renders cabinet ministers in the relevant section" do
+    within("#cabinet") do
+      expect(page).to have_text("The Rt Hon")
+      expect(page).to have_text("Rishi Sunak MP")
+    end
+  end
+
   context "during a reshuffle" do
     let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-on") }
 

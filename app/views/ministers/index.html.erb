@@ -1,4 +1,8 @@
+<% add_view_stylesheet("ministers") %>
+
 <% content_for :title, t("ministers.govuk_title") %>
+
+<% page_class "ministers-index" %>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -29,6 +33,24 @@
       padding: true,
     } %>
   </div>
+
+  <ul id="cabinet" class="govuk-list">
+    <% @presented_ministers.cabinet_ministers.each_with_index do |minister, i| %>
+      <% extra_class = (i % 4 == 0) ? " clear-column" : "" %>
+      <li class="govuk-grid-column-one-quarter<%= extra_class %>">
+        <div>
+          <%= render "govuk_publishing_components/components/image_card", {
+            href: minister.person_url,
+            image_src: minister.image_url,
+            image_alt: minister.image_alt,
+            heading_text: minister.name,
+            heading_level: 3,
+            context: { text: minister.honorific }
+          } %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
 </section>
 
 <section class="govuk-grid-row govuk-!-padding-top-9">

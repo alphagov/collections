@@ -9,6 +9,7 @@
 //= link views/_bunting.css
 //= link views/_covid.css
 //= link views/_history_people.css
+//= link views/_ministers.css
 //= link views/_organisation.css
 //= link views/_organisations.css
 //= link views/_taxons.css
