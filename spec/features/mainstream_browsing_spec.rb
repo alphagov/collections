@@ -45,7 +45,7 @@ RSpec.feature "Mainstream browsing" do
     visit "/browse/working/state-pension"
 
     expect(page.status_code).to eq(200)
-    expect(page).to have_link "Take part in user research (opens in a new tab)", href: "https://gdsuserresearch.optimalworkshop.com/treejack/ct80d1d6"
+    expect(page).to have_link "Take part in user research (opens in a new tab)", href: "https://gdsuserresearch.optimalworkshop.com/treejack/f49b8c01521bf45bd0a519fe02f5f913"
   end
 
   scenario "other browse pages don't show the banner" do
@@ -63,6 +63,6 @@ RSpec.feature "Mainstream browsing" do
     visit "/browse/benefits/entitlement-with-list"
 
     expect(page.status_code).to eq(200)
-    expect(page).not_to have_link "Take part in user research (opens in a new tab)", href: "https://gdsuserresearch.optimalworkshop.com/treejack/ct80d1d6"
+    expect(page).not_to have_link "Take part in user research (opens in a new tab)", href: "https://gdsuserresearch.optimalworkshop.com/treejack/f49b8c01521bf45bd0a519fe02f5f913"
   end
 end
