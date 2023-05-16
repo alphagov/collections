@@ -33,4 +33,19 @@ RSpec.feature "Ministers index page" do
     expect(page).to have_selector(".gem-c-heading", text: I18n.t("ministers.by_department"))
     expect(page).to have_selector(".gem-c-heading", text: I18n.t("ministers.whips"))
   end
+
+  context "during a reshuffle" do
+    let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-on") }
+
+    scenario "renders the reshuffle messaging instead of the usual contents" do
+      within(".gem-c-notice") do
+        expect(page).to have_text("Reshuffle in progress")
+      end
+      expect(page).not_to have_selector(".gem-c-lead-paragraph")
+      expect(page).not_to have_selector(".gem-c-heading", text: I18n.t("ministers.cabinet"))
+      expect(page).not_to have_selector(".gem-c-heading", text: I18n.t("ministers.also_attends"))
+      expect(page).not_to have_selector(".gem-c-heading", text: I18n.t("ministers.by_department"))
+      expect(page).not_to have_selector(".gem-c-heading", text: I18n.t("ministers.whips"))
+    end
+  end
 end

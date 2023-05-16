@@ -14,6 +14,12 @@
   </div>
 </div>
 
+<% if @presented_ministers.is_during_reshuffle? %>
+  <%= render "govuk_publishing_components/components/notice", {
+    description_govspeak: sanitize(@presented_ministers.reshuffle_messaging),
+  } %>
+<% else %>
+
 <section class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <%= render "govuk_publishing_components/components/heading", {
@@ -57,3 +63,4 @@
     } %>
   </div>
 </section>
+<% end %>

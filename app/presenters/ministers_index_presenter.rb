@@ -10,4 +10,8 @@ class MinistersIndexPresenter
   def is_during_reshuffle?
     @ministers_index.content_item.details.fetch("reshuffle", nil)
   end
+
+  def reshuffle_messaging
+    @ministers_index.content_item.details.dig("reshuffle", "message")
+  end
 end
