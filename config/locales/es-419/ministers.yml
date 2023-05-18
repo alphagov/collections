@@ -6,4 +6,10 @@ es-419:
     cabinet: Ministros del Gabinete
     govuk_title: Ministros - GOV.UK
     title: Ministros
+    whip_organisations:
+      assistant_whips:
+      baronesses_and_lords_in_waiting:
+      house_of_commons:
+      house_of_lords:
+      junior_lords_of_the_treasury:
     whips: Jefe del grupo parlamentario

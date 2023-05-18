@@ -6,4 +6,10 @@ ko:
     cabinet: 내각
     govuk_title: 장관 - GOV.UK
     title: 장관
+    whip_organisations:
+      assistant_whips:
+      baronesses_and_lords_in_waiting:
+      house_of_commons:
+      house_of_lords:
+      junior_lords_of_the_treasury:
     whips: 원내대표단

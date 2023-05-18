@@ -6,4 +6,10 @@ en:
     cabinet: Cabinet ministers
     govuk_title: Ministers - GOV.UK
     title: Ministers
+    whip_organisations:
+      assistant_whips: Assistant Whips
+      baronesses_and_lords_in_waiting: Baronesses and Lords in Waiting
+      house_of_commons: House of Commons
+      house_of_lords: House of Lords
+      junior_lords_of_the_treasury: Junior Lords of the Treasury
     whips: Whips

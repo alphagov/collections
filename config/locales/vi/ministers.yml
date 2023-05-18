@@ -6,4 +6,10 @@ vi:
     cabinet: Bộ trưởng Nội các
     govuk_title: Bộ trưởng - GOV.UK
     title: Các bộ trưởng
+    whip_organisations:
+      assistant_whips:
+      baronesses_and_lords_in_waiting:
+      house_of_commons:
+      house_of_lords:
+      junior_lords_of_the_treasury:
     whips: Các nghị viên kỷ luật

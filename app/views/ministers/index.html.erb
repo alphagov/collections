@@ -104,5 +104,37 @@
       padding: true,
     } %>
   </div>
+
+  <% @presented_ministers.whips.each do |whip_organisation| %>
+    <%= content_tag :div, id: "whip-#{t("ministers.whip_organisations.#{whip_organisation.name_key}").parameterize}" do %>
+      <div class="govuk-grid-column-one-quarter">
+        <%= render "govuk_publishing_components/components/heading", {
+          font_size: 24,
+          text: t("ministers.whip_organisations.#{whip_organisation.name_key}"),
+          heading_level: 3,
+          margin_bottom: 2,
+        } %>
+      </div>
+
+      <div class="govuk-grid-column-three-quarters govuk-!-padding-bottom-8">
+        <ul class="govuk-list">
+          <% whip_organisation.ministers.each.with_index do |minister, i| %>
+            <% extra_class = (i % 3 == 0) ? " clear-column" : "" %>
+            <li class="govuk-grid-column-one-quarter govuk-grid-column-one-third<%= extra_class %>">
+              <div>
+                <%= render "govuk_publishing_components/components/image_card", {
+                  href: minister.person_url,
+                  heading_text: minister.name,
+                  heading_level: 3,
+                  context: { text: minister.honorific },
+                  description: cabinet_minister_description(minister)
+                } %>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  <% end %>
 </section>
 <% end %>

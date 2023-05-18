@@ -27,9 +27,18 @@ class MinistersIndexPresenter
     end
   end
 
+  def whips
+    ordered_whip_organisations.each do |whip_org|
+      whip_org.ministers = @ministers_index.content_item.content_item_data.dig("links", whip_org.item_key).map do |minister_data|
+        Minister.new(minister_data, whip_only: true)
+      end
+    end
+  end
+
   class Minister
-    def initialize(data)
+    def initialize(data, whip_only: false)
       @data = data
+      @whip_only = whip_only
     end
 
     def person_url
@@ -53,21 +62,24 @@ class MinistersIndexPresenter
     end
 
     def roles
-      current_role_appointments.map { |role_app|
+      roles = current_role_appointments.map { |role_app|
         Role.new(
           title: role_app.dig("links", "role").first.fetch("title"),
           url: role_app.dig("links", "role").first["web_url"],
           seniority: role_app.dig("links", "role").first.fetch("details").fetch("seniority", 1000),
           payment_info: role_app.dig("links", "role").first.dig("details", "role_payment_type"),
+          whip: role_app.dig("links", "role").first.dig("details", "whip_organisation").present?,
         )
       }.sort_by(&:seniority)
+
+      @whip_only ? roles.select(&:whip) : roles
     end
 
     def role_payment_info
       roles.map(&:payment_info).compact.uniq
     end
 
-    Role = Struct.new(:title, :url, :seniority, :payment_info, keyword_init: true)
+    Role = Struct.new(:title, :url, :seniority, :payment_info, :whip, keyword_init: true)
 
   private
 
@@ -77,4 +89,33 @@ class MinistersIndexPresenter
       end
     end
   end
+
+private
+
+  def ordered_whip_organisations
+    [
+      WhipOrganisation.new(
+        item_key: "ordered_house_of_commons_whips",
+        name_key: "house_of_commons",
+      ),
+      WhipOrganisation.new(
+        item_key: "ordered_junior_lords_of_the_treasury_whips",
+        name_key: "junior_lords_of_the_treasury",
+      ),
+      WhipOrganisation.new(
+        item_key: "ordered_assistant_whips",
+        name_key: "assistant_whips",
+      ),
+      WhipOrganisation.new(
+        item_key: "ordered_house_lords_whips",
+        name_key: "house_of_lords",
+      ),
+      WhipOrganisation.new(
+        item_key: "ordered_baronesses_and_lords_in_waiting_whips",
+        name_key: "baronesses_and_lords_in_waiting",
+      ),
+    ]
+  end
+
+  WhipOrganisation = Struct.new(:item_key, :name_key, :ministers, keyword_init: true)
 end

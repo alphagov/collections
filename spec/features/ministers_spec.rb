@@ -64,6 +64,19 @@ RSpec.feature "Ministers index page" do
     expect(john_glen).to have_text("Unpaid")
   end
 
+  scenario "renders whips by whip organisation in the relevant section" do
+    within("#whip-house-of-commons") do
+      expect(page).to have_text("House of Commons")
+    end
+  end
+
+  scenario "the whip section shows only ministers' whip roles" do
+    lord_caine = all("#whip-baronesses-and-lords-in-waiting li")[1]
+    expect(lord_caine).to have_text("Lord Caine")
+    expect(lord_caine).to have_text("Lord in Waiting")
+    expect(lord_caine).to_not have_text("Parliamentary Under Secretary of State")
+  end
+
   context "during a reshuffle" do
     let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-on") }
 
