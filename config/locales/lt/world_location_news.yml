@@ -1,6 +1,7 @@
 ---
 lt:
   world_location_news:
+    email:
     find_out_more: Visa informacija apie mus ir  kontaktai
     headings:
       announcements: Mūsų skelbimai

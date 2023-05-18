@@ -1,6 +1,7 @@
 ---
 'no':
   world_location_news:
+    email:
     find_out_more: Se hele profilen og alle kontaktdetaljer
     headings:
       announcements: Våre kunngjøringer

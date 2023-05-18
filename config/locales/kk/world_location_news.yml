@@ -1,6 +1,7 @@
 ---
 kk:
   world_location_news:
+    email:
     find_out_more: Толық профильді және барлық байланыс мәліметтерін қараңыз
     headings:
       announcements: Біздің хабарландыруларымыз

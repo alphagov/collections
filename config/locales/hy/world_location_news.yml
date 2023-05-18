@@ -1,6 +1,7 @@
 ---
 hy:
   world_location_news:
+    email:
     find_out_more: Դիտել ամբողջական պրոֆիլը և կոնտակտային բոլոր տվյալները
     headings:
       announcements: Մեր հայտարարությունները

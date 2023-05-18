@@ -1,6 +1,7 @@
 ---
 ja:
   world_location_news:
+    email:
     find_out_more: プロフィール全体とすべての連絡先の詳細を見る
     headings:
       announcements: お知らせ

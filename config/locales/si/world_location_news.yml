@@ -1,6 +1,7 @@
 ---
 si:
   world_location_news:
+    email:
     find_out_more: සම්පූර්ණ පැතිකඩ සහ සියලු සබඳතා විස්තර බලන්න
     headings:
       announcements: අපේ නිවේදන

@@ -1,6 +1,7 @@
 ---
 dr:
   world_location_news:
+    email:
     find_out_more: تمام پروفایل و جزیٔیات تماس با ما را مشاهده نماید
     headings:
       announcements: اطلاعیه هایی ما

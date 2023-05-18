@@ -1,6 +1,7 @@
 ---
 ru:
   world_location_news:
+    email:
     find_out_more: Общая информация и контакты
     headings:
       announcements: Наши объявления

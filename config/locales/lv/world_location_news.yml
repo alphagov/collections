@@ -1,6 +1,7 @@
 ---
 lv:
   world_location_news:
+    email:
     find_out_more: Skatīt pilnu profilu un kontaktinformāciju
     headings:
       announcements: Paziņojumi

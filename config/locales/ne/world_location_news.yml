@@ -1,6 +1,7 @@
 ---
 ne:
   world_location_news:
+    email:
     find_out_more: पूर्ण प्रोफाइल र सबै सम्पर्क विवरण हेर्नुहोस्
     headings:
       announcements: हाम्रा घोषणाहरु
