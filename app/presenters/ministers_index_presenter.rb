@@ -27,6 +27,23 @@ class MinistersIndexPresenter
     end
   end
 
+  def by_organisation
+    @ministers_index.content_item.content_item_data.dig("links", "ordered_ministerial_departments").map do |department_data|
+      Department.new(
+        url: department_data.fetch("web_url"),
+        title: department_data.fetch("title"),
+        crest: department_data.dig("details", "logo", "crest"),
+        formatted_title: department_data.dig("details", "logo", "formatted_title"),
+        brand: department_data.dig("details", "brand"),
+        ministers: department_data.dig("links", "ordered_ministers").map do |minister_data|
+          Minister.new(minister_data, org_role_ids: role_ids_for_organisation(department_data))
+        end,
+      )
+    end
+  end
+
+  Department = Struct.new(:url, :title, :crest, :formatted_title, :brand, :roles, :ministers, keyword_init: true)
+
   def whips
     ordered_whip_organisations.each do |whip_org|
       whip_org.ministers = @ministers_index.content_item.content_item_data.dig("links", whip_org.item_key).map do |minister_data|
@@ -36,9 +53,10 @@ class MinistersIndexPresenter
   end
 
   class Minister
-    def initialize(data, whip_only: false)
+    def initialize(data, org_role_ids: nil, whip_only: false)
       @data = data
       @whip_only = whip_only
+      @org_role_ids = org_role_ids
     end
 
     def person_url
@@ -64,6 +82,7 @@ class MinistersIndexPresenter
     def roles
       roles = current_role_appointments.map { |role_app|
         Role.new(
+          id: role_app.dig("links", "role").first.fetch("content_id"),
           title: role_app.dig("links", "role").first.fetch("title"),
           url: role_app.dig("links", "role").first["web_url"],
           seniority: role_app.dig("links", "role").first.fetch("details").fetch("seniority", 1000),
@@ -72,14 +91,16 @@ class MinistersIndexPresenter
         )
       }.sort_by(&:seniority)
 
-      @whip_only ? roles.select(&:whip) : roles
+      roles = roles.select(&:whip) if @whip_only
+      roles = roles.select { |role| @org_role_ids.include?(role.id) } if @org_role_ids
+      roles
     end
 
     def role_payment_info
       roles.map(&:payment_info).compact.uniq
     end
 
-    Role = Struct.new(:title, :url, :seniority, :payment_info, :whip, keyword_init: true)
+    Role = Struct.new(:id, :title, :url, :seniority, :payment_info, :whip, keyword_init: true)
 
   private
 
@@ -118,4 +139,8 @@ private
   end
 
   WhipOrganisation = Struct.new(:item_key, :name_key, :ministers, keyword_init: true)
+
+  def role_ids_for_organisation(org_data)
+    org_data.dig("links", "ordered_roles").map { |role| role["content_id"] }
+  end
 end

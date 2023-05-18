@@ -77,6 +77,27 @@ RSpec.feature "Ministers index page" do
     expect(lord_caine).to_not have_text("Parliamentary Under Secretary of State")
   end
 
+  scenario "renders ministers by department in the relevant section" do
+    cabinet_office = find("#cabinet-office")
+    expect(cabinet_office).to have_text("Cabinet Office")
+    expect(cabinet_office.find("li", match: :first)).to have_text("Rishi Sunak")
+  end
+
+  scenario "the ministers by department section show only ministers' roles within that department" do
+    dbt = find("#department-for-business-and-trade")
+    expect(dbt).to have_text("Business & Trade")
+    kemi_badenoch_dbt = dbt.find("li", match: :first)
+    expect(kemi_badenoch_dbt).to have_text("Kemi Badenoch")
+    expect(kemi_badenoch_dbt).to have_text("Secretary of State for Business and Trade, President of the Board of Trade")
+
+    uef = find("#uk-export-finance")
+    expect(uef).to have_text("UK Export Finance")
+    kemi_badenoch_uef = uef.find("li", match: :first)
+    expect(kemi_badenoch_uef).to have_text("Kemi Badenoch")
+    expect(kemi_badenoch_uef).to have_text("President of the Board of Trade")
+    expect(kemi_badenoch_uef).to_not have_text("Secretary of State for Business and Trade")
+  end
+
   context "during a reshuffle" do
     let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-on") }
 

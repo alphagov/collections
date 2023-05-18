@@ -93,6 +93,40 @@
       padding: true,
     } %>
   </div>
+
+  <% @presented_ministers.by_organisation.each do |organisation| %>
+    <%= content_tag :section, id: organisation.title.parameterize do %>
+      <div class="govuk-grid-column-one-quarter govuk-!-padding-bottom-7">
+        <%= render "govuk_publishing_components/components/organisation_logo", {
+          organisation: {
+            name: organisation.formatted_title.html_safe,
+            url: organisation.url,
+            brand: organisation.brand,
+            crest: organisation.crest,
+          },
+          heading_level: 3,
+        } %>
+      </div>
+      <div class="govuk-grid-column-three-quarters govuk-!-padding-bottom-7">
+        <ul class="govuk-list govuk-grid-row">
+          <% organisation.ministers.each.with_index do |minister, i| %>
+            <% extra_class = (i % 3 == 0) ? " clear-column" : "" %>
+            <li class="govuk-grid-column-one-quarter govuk-grid-column-one-third<%= extra_class %>">
+              <div>
+                <%= render "govuk_publishing_components/components/image_card", {
+                  href: minister.person_url,
+                  heading_text: minister.name,
+                  heading_level: 3,
+                  context: { text: minister.honorific },
+                  description: cabinet_minister_description(minister),
+                } %>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  <% end %>
 </section>
 
 <section class="govuk-grid-row govuk-!-padding-top-9">
