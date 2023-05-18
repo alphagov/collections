@@ -126,4 +126,18 @@ RSpec.describe ApplicationHelper do
       end
     end
   end
+
+  describe "joined_list" do
+    context "when none of the elements contain a comma" do
+      it "joins the elements using a comma separator" do
+        expect(helper.joined_list(["Element 1", "Element 2"])).to eql("Element 1, Element 2")
+      end
+    end
+
+    context "when one of the elements contains a comma" do
+      it "joins the elements using a semicolon separator" do
+        expect(helper.joined_list(["Element 1, 2, and 3", "Element 4"])).to eql("Element 1, 2, and 3; Element 4")
+      end
+    end
+  end
 end

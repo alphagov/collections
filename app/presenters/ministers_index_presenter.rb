@@ -45,5 +45,30 @@ class MinistersIndexPresenter
     def image_alt
       @data.dig("details", "image", "alt_text")
     end
+
+    def roles
+      current_role_appointments.map { |role_app|
+        Role.new(
+          title: role_app.dig("links", "role").first.fetch("title"),
+          url: role_app.dig("links", "role").first["web_url"],
+          seniority: role_app.dig("links", "role").first.fetch("details").fetch("seniority", 1000),
+          payment_info: role_app.dig("links", "role").first.dig("details", "role_payment_type"),
+        )
+      }.sort_by(&:seniority)
+    end
+
+    def role_payment_info
+      roles.map(&:payment_info).compact.uniq
+    end
+
+    Role = Struct.new(:title, :url, :seniority, :payment_info, keyword_init: true)
+
+  private
+
+    def current_role_appointments
+      @data.dig("links", "role_appointments").select do |role_app|
+        role_app.dig("details", "current") && role_app.dig("links", "role").first["web_url"].present?
+      end
+    end
   end
 end

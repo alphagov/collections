@@ -35,10 +35,18 @@ RSpec.feature "Ministers index page" do
   end
 
   scenario "renders cabinet ministers in the relevant section" do
-    within("#cabinet") do
+    within("#cabinet li", match: :first) do
       expect(page).to have_text("The Rt Hon")
       expect(page).to have_text("Rishi Sunak MP")
+      expect(page).to have_text("Prime Minister, First Lord of the Treasury, Minister for the Civil Service, Minister for the Union")
     end
+  end
+
+  scenario "cabinet section shows ministers' role payment type info where required" do
+    greg_hands = all("#cabinet li")[1]
+    expect(greg_hands).to have_text("Greg Hands MP")
+    expect(greg_hands).to have_text("Minister without Portfolio")
+    expect(greg_hands).to have_text("Unpaid")
   end
 
   context "during a reshuffle" do
