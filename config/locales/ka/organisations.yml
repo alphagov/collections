@@ -13,6 +13,7 @@ ka:
       email: ელ.ფოსტა
       telephone: ტელეფონი
     corporate_information: კორპორატიული ინფორმაცია
+    count_prefix:
     document_types:
       documents: დოკუმენტები
       guidance_and_regulation:

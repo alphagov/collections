@@ -13,6 +13,7 @@ kk:
       email: Электрондық пошта
       telephone: Телефон
     corporate_information: Корпоративтік ақпарат
+    count_prefix:
     document_types:
       documents: Құжаттар
       guidance_and_regulation:

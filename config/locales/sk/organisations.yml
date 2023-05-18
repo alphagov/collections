@@ -13,6 +13,7 @@ sk:
       email: E-mail
       telephone: Telefón
     corporate_information: Firemné informácie
+    count_prefix:
     document_types:
       documents: Dokumenty
       guidance_and_regulation:

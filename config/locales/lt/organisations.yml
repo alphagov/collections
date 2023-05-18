@@ -13,6 +13,7 @@ lt:
       email: El. paštas
       telephone: Telefonas
     corporate_information: Įmonės informacija
+    count_prefix:
     document_types:
       documents: Dokumentai
       guidance_and_regulation:

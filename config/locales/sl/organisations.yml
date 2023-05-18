@@ -13,6 +13,7 @@ sl:
       email: E-pošta
       telephone: Telefon
     corporate_information: Informacije o podjetju
+    count_prefix:
     document_types:
       documents: Dokumenti
       guidance_and_regulation:

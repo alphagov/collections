@@ -13,6 +13,7 @@ hy:
       email: Էլ․ փոստ
       telephone: Հեռախոս
     corporate_information: Կորպորատիվ տեղեկություն
+    count_prefix:
     document_types:
       documents: Փաստաթղթեր
       guidance_and_regulation:

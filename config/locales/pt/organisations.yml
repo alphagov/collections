@@ -13,6 +13,7 @@ pt:
       email: E-mail
       telephone: Telefone
     corporate_information: Informações da empresa
+    count_prefix:
     document_types:
       documents: Documentos
       guidance_and_regulation:

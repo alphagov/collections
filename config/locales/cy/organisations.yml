@@ -13,6 +13,7 @@ cy:
       email: E-bost
       telephone: Ffôn
     corporate_information: Gwybodaeth gorfforaethol
+    count_prefix:
     document_types:
       documents: Dogfennau
       guidance_and_regulation:

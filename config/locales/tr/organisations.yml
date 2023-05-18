@@ -13,6 +13,7 @@ tr:
       email: E-posta
       telephone: Telefon
     corporate_information: Kurumsal bilgiler
+    count_prefix:
     document_types:
       documents: Belgeler
       guidance_and_regulation:

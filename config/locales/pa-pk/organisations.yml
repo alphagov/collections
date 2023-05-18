@@ -13,6 +13,7 @@ pa-pk:
       email: ای میل
       telephone: ٹیلی فون
     corporate_information: کاروبار بارے معلومات
+    count_prefix:
     document_types:
       documents: دستاویزات
       guidance_and_regulation:

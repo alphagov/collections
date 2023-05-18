@@ -13,6 +13,7 @@
       email: E-post
       telephone: Telefon
     corporate_information: Bedriftsinformasjon
+    count_prefix:
     document_types:
       documents: Dokumenter
       guidance_and_regulation:

@@ -13,6 +13,7 @@ sq:
       email: Email
       telephone: Telefon
     corporate_information: Informacioni i korporatës
+    count_prefix:
     document_types:
       documents: Dokumente
       guidance_and_regulation:

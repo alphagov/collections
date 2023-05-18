@@ -13,6 +13,7 @@ tk:
       email: E-poçta
       telephone: Telefon
     corporate_information: Korporatiw maglumatlar
+    count_prefix:
     document_types:
       documents: Resminamalar
       guidance_and_regulation:

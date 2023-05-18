@@ -13,6 +13,7 @@ id:
       email: Email
       telephone: Telpon
     corporate_information: Informasi korporat
+    count_prefix:
     document_types:
       documents: Dokumen
       guidance_and_regulation:

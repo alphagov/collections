@@ -13,6 +13,7 @@ gd:
       email: R-phost
       telephone: Teileafón
     corporate_information: Faisnéis cuideachta
+    count_prefix:
     document_types:
       documents: Doiciméid
       guidance_and_regulation:

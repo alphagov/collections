@@ -13,6 +13,7 @@ pl:
       email: E-mail
       telephone: Telefon
     corporate_information: Informacje korporacyjne
+    count_prefix:
     document_types:
       documents: Dokumenty
       guidance_and_regulation:

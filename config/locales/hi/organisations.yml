@@ -13,6 +13,7 @@ hi:
       email: ईमेल
       telephone: टेलीफ़ोन
     corporate_information: कारपोरेट सूचना
+    count_prefix:
     document_types:
       documents: दस्तावेज़
       guidance_and_regulation:

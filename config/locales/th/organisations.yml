@@ -13,6 +13,7 @@ th:
       email: อีเมล
       telephone: โทรศัพท์
     corporate_information: ข้อมูลองค์กร
+    count_prefix:
     document_types:
       documents: เอกสาร
       guidance_and_regulation:

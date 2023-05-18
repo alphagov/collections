@@ -13,6 +13,7 @@ ro:
       email: E-mail
       telephone: Telefon
     corporate_information: Informații despre corporație
+    count_prefix:
     document_types:
       documents: Documente
       guidance_and_regulation:

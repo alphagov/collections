@@ -8,7 +8,7 @@
           heading_level: 2,
           id: organisation_type
         } %>
-        <p class="govuk-visually-hidden">There are <span class="js-accessible-department-count"><%= organisations.count %></span> <%= organisation_type.to_s.humanize %></p>
+        <p class="govuk-visually-hidden"><%= t('organisations.count_prefix') %> <span class="js-accessible-department-count"><%= organisations.count %></span> <%= organisation_type.to_s.humanize %></p>
         <%= render "govuk_publishing_components/components/big_number", {
           number: organisations.count,
           data_attributes: {
