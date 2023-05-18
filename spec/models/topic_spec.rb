@@ -146,7 +146,7 @@ RSpec.describe Topic do
 
       expect(Topic::ChangedDocuments)
       .to receive(:new)
-      .with(content_item.content_id, foo: "bar")
+      .with(content_item.content_id, { foo: "bar" })
       .and_return(:an_instance)
 
       expect(subject.changed_documents).to eq(:an_instance)
