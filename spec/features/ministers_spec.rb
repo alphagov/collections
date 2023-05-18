@@ -49,6 +49,21 @@ RSpec.feature "Ministers index page" do
     expect(greg_hands).to have_text("Unpaid")
   end
 
+  scenario "renders ministers who also attend cabinet in the relevant section" do
+    within("#also-attends-cabinet li", match: :first) do
+      expect(page).to have_text("The Rt Hon")
+      expect(page).to have_text("Simon Hart MP")
+      expect(page).to have_text("Parliamentary Secretary to the Treasury (Chief Whip)")
+    end
+  end
+
+  scenario "also attends cabinet section shows ministers' role payment type info where required" do
+    john_glen = all("#also-attends-cabinet li")[1]
+    expect(john_glen).to have_text("John Glen MP")
+    expect(john_glen).to have_text("Chief Secretary to the Treasury")
+    expect(john_glen).to have_text("Unpaid")
+  end
+
   context "during a reshuffle" do
     let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-on") }
 

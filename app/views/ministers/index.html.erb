@@ -63,6 +63,25 @@
       padding: true,
     } %>
   </div>
+
+  <ul id="also-attends-cabinet" class="govuk-list">
+    <% @presented_ministers.also_attends_cabinet.each_with_index do |minister, i| %>
+    <% extra_class = (i % 4 == 0) ? " clear-column" : "" %>
+    <li class="govuk-grid-column-one-quarter<%= extra_class %>">
+      <div>
+        <%= render "govuk_publishing_components/components/image_card", {
+          href: minister.person_url,
+          image_src: minister.image_url,
+          image_alt: minister.image_alt,
+          heading_text: minister.name,
+          heading_level: 3,
+          context: { text: minister.honorific },
+          description: cabinet_minister_description(minister)
+        } %>
+      </div>
+    </li>
+    <% end %>
+  </ul>
 </section>
 
 <section class="govuk-grid-row govuk-!-padding-top-9">

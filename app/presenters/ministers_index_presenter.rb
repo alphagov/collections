@@ -21,6 +21,12 @@ class MinistersIndexPresenter
     end
   end
 
+  def also_attends_cabinet
+    @ministers_index.content_item.content_item_data.dig("links", "ordered_also_attends_cabinet").map do |minister_data|
+      Minister.new(minister_data)
+    end
+  end
+
   class Minister
     def initialize(data)
       @data = data
