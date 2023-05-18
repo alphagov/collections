@@ -1,8 +1,10 @@
 require "integration_spec_helper"
 
-RSpec.feature "Minister pages" do
+RSpec.feature "Ministers index page" do
+  let(:document) { GovukSchemas::Example.find("ministers_index", example_name: "ministers_index-reshuffle-mode-off") }
+
   before do
-    stub_content_store_has_item("/government/ministers", ministers_content_hash)
+    stub_content_store_has_item("/government/ministers", document)
     visit "/government/ministers"
   end
 
@@ -18,19 +20,17 @@ RSpec.feature "Minister pages" do
     expect(page).to have_selector(".gem-c-title__text", text: I18n.t("ministers.title"))
   end
 
+  scenario "renders the lead paragraph with anchor links" do
+    expect(page).to have_selector(".gem-c-lead-paragraph")
+    within(".gem-c-lead-paragraph") do
+      expect(page).to have_link("Cabinet ministers", href: "#cabinet-ministers", class: "govuk-link")
+    end
+  end
+
   scenario "renders section headers" do
     expect(page).to have_selector(".gem-c-heading", text: I18n.t("ministers.cabinet"))
     expect(page).to have_selector(".gem-c-heading", text: I18n.t("ministers.also_attends"))
     expect(page).to have_selector(".gem-c-heading", text: I18n.t("ministers.by_department"))
     expect(page).to have_selector(".gem-c-heading", text: I18n.t("ministers.whips"))
-  end
-
-private
-
-  def ministers_content_hash
-    @content_hash = {
-      title: I18n.t("ministers.title"),
-      details: {},
-    }
   end
 end

@@ -5,6 +5,12 @@
     <%= render "govuk_publishing_components/components/title", {
       title: t("ministers.title"),
     } %>
+
+    <% unless @presented_ministers.is_during_reshuffle? %>
+      <%= render "govuk_publishing_components/components/lead_paragraph", {
+        text: sanitize(@presented_ministers.lead_paragraph)
+      } %>
+    <% end %>
   </div>
 </div>
 
