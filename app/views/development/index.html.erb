@@ -2,7 +2,7 @@
 
 <html>
 <head>
-  <title>collections development page</title>
+  <title><%= t('development.title') %></title>
   <meta name="robots" content="noindex, nofollow">
   <%= stylesheet_link_tag "application", integrity: false %>
 </head>
@@ -11,7 +11,7 @@
   <main class="govspeak">
     <%= render "govuk_publishing_components/components/title", title: "collections" %>
     <% html = capture do %>
-      <p>Here is a list of the content types that collections renders and an example page.</p>
+      <p><%= t('development.header') %>.</p>
       <table>
         <% @paths.each do |name, path| %>
           <tr>
