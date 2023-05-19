@@ -61,7 +61,7 @@ uk:
     follow_us: Слідкуйте за нами
     hidden_share_link: Слідкуйте на
     high_profile_groups: Ключові групи в %{title}
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Вакансії та контракти
     latest_from: Актуальні новини з %{title}
     notices:

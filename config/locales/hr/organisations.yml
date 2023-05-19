@@ -59,7 +59,7 @@ hr:
     follow_us: Prati nas
     hidden_share_link: Slijedi
     high_profile_groups: Grupe visokog profila unutar %{title}
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Poslovi i ugovori
     latest_from: Najnovije od %{title}
     notices:

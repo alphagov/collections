@@ -61,7 +61,7 @@ id:
     follow_us: Ikuti kami
     hidden_share_link: Ikuti di
     high_profile_groups: Grup profil tinggi di %{title}
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Pekerjaan dan kontrak
     latest_from: Terbaru dari %{title}
     notices:

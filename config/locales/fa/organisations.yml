@@ -61,7 +61,7 @@ fa:
     follow_us: ما را دنبال کنید
     hidden_share_link: دنبال کردن در
     high_profile_groups: گروه‌های مشهور در %{title}
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: شغل‌ها و قراردادها
     latest_from: جدیدترین‌ها از %{title}
     notices:

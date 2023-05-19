@@ -61,7 +61,7 @@ ro:
     follow_us: Urmăriți-ne
     hidden_share_link: Urmăriți-ne pe
     high_profile_groups: Grupuri cu profil înalt în %{title}
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Locuri de muncă și contracte
     latest_from: Cele mai recente informații de la %{title}
     notices:

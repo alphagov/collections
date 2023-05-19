@@ -59,7 +59,7 @@ zh-hk:
     follow_us: 關注我們
     hidden_share_link: 關注
     high_profile_groups: "%{title} 以內的高知名度群組"
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: 職位及聯絡方式
     latest_from: 來自 %{title} 的最新內容
     notices:

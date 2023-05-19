@@ -61,7 +61,7 @@ bg:
     follow_us: Следвайте ни
     hidden_share_link: Следвайте
     high_profile_groups: Високопоставени групи в %{title}
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Работни места и договори
     latest_from: Най-новите от %{title}
     notices:

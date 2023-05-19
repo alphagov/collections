@@ -61,7 +61,7 @@ es-419:
     follow_us: Síguenos
     hidden_share_link: Síguenos en
     high_profile_groups: Grupos de alto perfil dentro de %{title}
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Trabajos y contratos
     latest_from: Lo más reciente de %{title}
     notices:

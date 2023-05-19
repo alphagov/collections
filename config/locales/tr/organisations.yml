@@ -61,7 +61,7 @@ tr:
     follow_us: Bizi takip edin
     hidden_share_link: Bizi şuradan takip edin
     high_profile_groups: "%{title} içerisindeki yüksek profilli gruplar"
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: İşler ve sözleşmeler
     latest_from: "%{title} kaynaklı en güncel olanlar"
     notices:

@@ -61,7 +61,7 @@ el:
     follow_us: Ακολουθήστε μας
     hidden_share_link: Ακολουθήστε στο
     high_profile_groups: Ομάδες υψηλού προφίλ εντός %{title}
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Θέσεις εργασίας και συμβάσεις
     latest_from: Τελευταία από %{title}
     notices:

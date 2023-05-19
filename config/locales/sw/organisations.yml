@@ -61,7 +61,7 @@ sw:
     follow_us: Tufuatilie
     hidden_share_link: Tufuatilie kwenye
     high_profile_groups: Makundi ya hadhi ya juu ndani ya %{title}
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Kazi na mikataba
     latest_from: Habari mpya kutoka %{title}
     notices:

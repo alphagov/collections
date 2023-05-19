@@ -61,7 +61,7 @@ et:
     follow_us: Jälgige meid
     hidden_share_link: Järgige
     high_profile_groups: Kõrge profiiliga rühmad jaotises %{title}
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Töökohad ja lepingud
     latest_from: Viimane jaotises %{title}
     notices:

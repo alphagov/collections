@@ -61,7 +61,7 @@ hu:
     follow_us: Kövessen minket
     hidden_share_link: Kövessen minket a következőn
     high_profile_groups: 'Magas rangú csoportok a következőn belül: %{title}'
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Állások és szerződések
     latest_from: 'A legfrissebb a következőtől: %{title}'
     notices:

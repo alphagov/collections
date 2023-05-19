@@ -61,7 +61,7 @@ ta:
     follow_us: எங்களைப் பின்தொடர்க
     hidden_share_link: பின்தொடர்
     high_profile_groups: "%{title}-க்குள் பிரசித்தமான குழுக்கள்"
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: வேலைகளும் ஒப்பந்தங்களும்
     latest_from: "%{title}-லிருந்து சமீபத்தியவை"
     notices:

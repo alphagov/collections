@@ -64,7 +64,7 @@ dr:
     follow_us: ما را دنبال نمایید
     hidden_share_link: دنبال نمایید
     high_profile_groups: گروه هایی مشهور{title}%
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: وظایف و قرار داد ها
     latest_from: جدید ترین از{title}%
     notices:

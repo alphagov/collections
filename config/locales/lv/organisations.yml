@@ -61,7 +61,7 @@ lv:
     follow_us: Sekojiet mums
     hidden_share_link: Sekot
     high_profile_groups: Augsta profila grupas %{title}
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Darbi un līgumi
     latest_from: Jaunumi no %{title}
     notices:

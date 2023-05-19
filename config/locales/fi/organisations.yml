@@ -61,7 +61,7 @@ fi:
     follow_us: Seuraa meitä
     hidden_share_link: Seurata
     high_profile_groups: Korkean profiilin ryhmät %{title}
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Työt ja sopimukset
     latest_from: Latest from %{title}
     notices:

@@ -61,7 +61,7 @@ sk:
     follow_us: Sledujte nás
     hidden_share_link: Sledujte nás na
     high_profile_groups: Vysokoprofilové skupiny v rámci %{title}
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Pracovné miesta a zmluvy
     latest_from: Najnovšie od %{title}
     notices:

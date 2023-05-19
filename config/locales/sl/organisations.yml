@@ -61,7 +61,7 @@ sl:
     follow_us: Sledite nam
     hidden_share_link: Sledite nam na
     high_profile_groups: Pomembne skupine znotraj %{title}
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Delovna mesta in pogodbe
     latest_from: Najnovejše od %{title}
     notices:

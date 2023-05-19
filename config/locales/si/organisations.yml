@@ -61,7 +61,7 @@ si:
     follow_us: අපව අනුගමනය කරන්න
     hidden_share_link: හි අනුගමනය කරන්න
     high_profile_groups: "%{title} තුළ උසස් පැතිකඩ කණ්ඩායම්"
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: රැකියා සහ කොන්ත්රාත්තු
     latest_from: "%{title} වෙතින් නවතම"
     notices:

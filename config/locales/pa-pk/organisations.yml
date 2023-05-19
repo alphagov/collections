@@ -63,7 +63,7 @@ pa-pk:
     follow_us: ساڈے پچھے آؤ
     hidden_share_link: ساڈے پچھے اوندے جاو
     high_profile_groups: ایندے وچ وڈے ناں والے گروہ {title}%
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: نوکریاں تے ٹھیکے
     latest_from: تازہ ترین فارم {title}%
     notices:

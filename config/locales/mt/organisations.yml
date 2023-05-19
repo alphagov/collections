@@ -59,7 +59,7 @@ mt:
     follow_us: Segwina
     hidden_share_link: Segwi fuq
     high_profile_groups: Gruppi ta' profil għoli fost %{title}
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Impjiegi u kuntratti
     latest_from: L-iktar riċenti minn %{title}
     notices:

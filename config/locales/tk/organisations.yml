@@ -61,7 +61,7 @@ tk:
     follow_us: Bizi yzarlaň
     hidden_share_link: Yzarlaň
     high_profile_groups: Ýokary derejeli toparlar %{title}
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Işler we şertnamalar
     latest_from: Iň täze forma %{title}
     notices:

@@ -59,7 +59,7 @@ ru:
     follow_us: Следите за нами
     hidden_share_link: Подпишитесь на
     high_profile_groups: Авторитетные группы в %{title}
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Вакансии и контракты
     latest_from: Свежие новости  %{title}
     notices:
