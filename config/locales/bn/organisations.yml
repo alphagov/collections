@@ -61,7 +61,7 @@ bn:
     follow_us: আমাদেরকে অনুসরণ করুন
     hidden_share_link: এখানে অনুসরণ করুন
     high_profile_groups: "%{title}-এর মধ্যে উচ্চ প্রোফাইল গ্রুপ"
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: চাকরী ও চুক্তিসমূহ
     latest_from: "%{title} থেকে সর্বশেষ"
     notices:

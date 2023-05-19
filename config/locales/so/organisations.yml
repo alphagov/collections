@@ -61,7 +61,7 @@ so:
     follow_us: Nagala soco
     hidden_share_link: Nagalasoco
     high_profile_groups: Koxaaha heerka sare %{title}
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Shaqooyinka iyo qandaraasyada
     latest_from: Kasocda %{title}
     notices:

@@ -61,7 +61,7 @@ ps:
     follow_us: مونږ تعقیب کړئ
     hidden_share_link: تعقیب کړئ
     high_profile_groups: ه%{title} کې د لوړ پروفایل ډلې
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: دندې او قراردادونه
     latest_from: له%{title} څخه وروستی
     notices:

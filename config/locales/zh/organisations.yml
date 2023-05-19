@@ -59,7 +59,7 @@ zh:
     follow_us: 关注我们
     hidden_share_link: 关注
     high_profile_groups: "%{title} 内是高调组"
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: 工作和联系人
     latest_from: "%{title} 的最新消息"
     notices:

@@ -61,7 +61,7 @@ hy:
     follow_us: Հետևել մեզ
     hidden_share_link: Հետևել
     high_profile_groups: Կարևոր խմբեր %{title}-ի շրջանակում
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Աշխատանք և պայմանագրեր
     latest_from: Վերջին տվյալները %{title}-ից
     notices:

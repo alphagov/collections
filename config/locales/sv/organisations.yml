@@ -61,7 +61,7 @@ sv:
     follow_us: Följ oss
     hidden_share_link: Följ oss på
     high_profile_groups: Högprofilerade grupper inom %{title}
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Jobb och kontrakt
     latest_from: Senaste från %{title}
     notices:

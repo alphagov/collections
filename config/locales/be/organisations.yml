@@ -61,7 +61,7 @@ be:
     follow_us: Сачыце за намі
     hidden_share_link: Сачыце па
     high_profile_groups: Высокапастаўленыя групы ў%{title}
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Праца і кантакты
     latest_from: Апошняе ад %{title}
     notices:

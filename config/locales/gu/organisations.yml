@@ -59,7 +59,7 @@ gu:
     follow_us: અમને ફોલો કરો
     hidden_share_link: પર ફોલો કરો
     high_profile_groups: "%{title} માં રહેલ ઉચ્ચ પ્રોફાઇલ વાળા ગ્રુપ્સ"
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: નોકરીઓ અને કરારો
     latest_from: "%{title} થી નવીનતમ"
     notices:

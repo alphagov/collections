@@ -61,7 +61,7 @@ nl:
     follow_us: Volg ons
     hidden_share_link: Volgen op
     high_profile_groups: High profile groepen binnen %{title}
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Banen en contracten
     latest_from: Laatste van %{title}
     notices:

@@ -61,7 +61,7 @@ ko:
     follow_us: 팔로우하기
     hidden_share_link: 다음에서 팔로우 하기
     high_profile_groups: "%{title} 내 상위 프로필 그룹"
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: 직업 및 계약
     latest_from: "%{title}의 최근 내용"
     notices:

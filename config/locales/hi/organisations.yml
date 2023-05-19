@@ -59,7 +59,7 @@ hi:
     follow_us: हमें फॉलो करें
     hidden_share_link: इस पर फॉलो करें
     high_profile_groups: "%{title} के अंदर हाई प्रोफाइल समूह"
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: नौकरी एवं अनुबंध
     latest_from: "%{title} से नवीनतम"
     notices:

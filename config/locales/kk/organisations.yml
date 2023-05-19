@@ -61,7 +61,7 @@ kk:
     follow_us: Бізге жазылыңыз
     hidden_share_link: Жазылыңыз
     high_profile_groups: "%{title} ішіндегі жоғары профильді топтар"
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Жұмыстар мен келісімшарттар
     latest_from: "%{title} соңғылары"
     notices:

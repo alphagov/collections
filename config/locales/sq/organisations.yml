@@ -59,7 +59,7 @@ sq:
     follow_us: Na ndiqni
     hidden_share_link: Na ndiqni
     high_profile_groups: Grupe të profilit të lartë brenda %{title}
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Punë dhe kontrata
     latest_from: I fundit nga %{title}
     notices:

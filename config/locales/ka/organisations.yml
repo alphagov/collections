@@ -59,7 +59,7 @@ ka:
     follow_us: გამოგვყევით
     hidden_share_link: გამოგვყევით
     high_profile_groups: მაღალი პროფილის ჯგუფები %{title}-ს ფარგლებში
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: ვაკანსიები და კონტრაქტები
     latest_from: ბოლო %{title}-დან
     notices:

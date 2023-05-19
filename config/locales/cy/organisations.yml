@@ -61,7 +61,7 @@ cy:
     follow_us: Dilynwch ni
     hidden_share_link: Dilynwch ni ar
     high_profile_groups: Grwpiau proffil uchel o fewn %{title}
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Swyddi a chontractau
     latest_from: Y diweddaraf gan %{title}
     notices:

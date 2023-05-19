@@ -61,7 +61,7 @@ pa:
     follow_us: ਸਾਨੂੰ ਫਾਲੋ ਕਰੋ
     hidden_share_link: ਤੇ ਫਾਲੋ ਕਰੋ
     high_profile_groups: "%{title} ਦੇ ਅੰਦਰ ਉੱਚ ਪ੍ਰੋਫਾਈਲ ਸਮੂਹ"
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: ਨੌਕਰੀਆਂ ਅਤੇ ਇਕਰਾਰਨਾਮੇ
     latest_from: "%{Title} ਤੋਂ ਨਵੀਨਤਮ"
     notices:

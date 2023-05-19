@@ -61,7 +61,7 @@ az:
     follow_us: Bizi təqib edin
     hidden_share_link: Bizi burada təqib edin
     high_profile_groups: "%{title} üzrə məşhur qruplar"
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: İşlər və müqavilələr
     latest_from: "%{title} üzrə ən son məlumat"
     notices:

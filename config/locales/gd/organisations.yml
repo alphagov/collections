@@ -61,7 +61,7 @@ gd:
     follow_us: Lean orainn
     hidden_share_link: Lean ar aghaidh
     high_profile_groups: Grúpaí ardleibhéil laistigh de %{title}
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Poist agus conarthaí
     latest_from: An nuacht is déanaí ó %{title}
     notices:

@@ -61,7 +61,7 @@ it:
     follow_us: Seguici
     hidden_share_link: Seguici su
     high_profile_groups: Gruppi di alto profilo in %{title}
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Lavori e contratti
     latest_from: Ultime notizie da %{title}
     notices:

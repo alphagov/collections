@@ -61,7 +61,7 @@ vi:
     follow_us: Theo dõi chúng tôi
     hidden_share_link: Theo dõi trên
     high_profile_groups: Nhóm cấu hình cao trong %{title}
-    index_title: "%{title} - GOV.UK"
+    index_title: "%{title}"
     jobs_contracts: Việc làm và hợp đồng
     latest_from: Mới nhất từ %{title}
     notices:
