@@ -1,6 +1,7 @@
 ---
 ro:
   world_location_news:
+    email:
     find_out_more: Vedeți profilul complet și toate detaliile de contact
     headings:
       announcements: Anunțurile noastre

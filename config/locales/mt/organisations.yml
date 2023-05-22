@@ -13,6 +13,7 @@ mt:
       email: Imejl
       telephone: Telefown
     corporate_information: Informazzjoni korporattiva
+    count_prefix:
     document_types:
       documents: Dokumenti
       guidance_and_regulation:

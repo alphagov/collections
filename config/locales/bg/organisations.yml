@@ -13,6 +13,7 @@ bg:
       email: Имейл
       telephone: Телефон
     corporate_information: Фирмена информация
+    count_prefix:
     document_types:
       documents: Документи
       guidance_and_regulation:

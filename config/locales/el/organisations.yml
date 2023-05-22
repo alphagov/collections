@@ -13,6 +13,7 @@ el:
       email: Email
       telephone: Τηλέφωνο
     corporate_information: Εταιρικές πληροφορίες
+    count_prefix:
     document_types:
       documents: Έγγραφα
       guidance_and_regulation:

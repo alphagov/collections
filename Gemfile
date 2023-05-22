@@ -38,6 +38,7 @@ end
 group :development, :test do
   gem "binding_of_caller"
   gem "climate_control"
+  gem "erb_lint"
   gem "govuk_test"
   gem "pact", require: false
   gem "pact_broker-client"

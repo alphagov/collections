@@ -13,6 +13,7 @@ zh-tw:
       email: 電子郵件
       telephone: 電話
     corporate_information: 公司資訊
+    count_prefix:
     document_types:
       documents: 文檔
       guidance_and_regulation:

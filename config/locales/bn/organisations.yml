@@ -13,6 +13,7 @@ bn:
       email: ইমেইল
       telephone: টেলিফোন
     corporate_information: কর্পোরেট তথ্য
+    count_prefix:
     document_types:
       documents: নথিপত্র
       guidance_and_regulation:

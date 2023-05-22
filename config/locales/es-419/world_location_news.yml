@@ -1,6 +1,7 @@
 ---
 es-419:
   world_location_news:
+    email:
     find_out_more: Ver el perfil completo y todos los datos de contacto
     headings:
       announcements: Nuestros comunicados

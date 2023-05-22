@@ -1,6 +1,7 @@
 ---
 bg:
   world_location_news:
+    email:
     find_out_more: Вижте пълния профил и всички данни за контакт
     headings:
       announcements: Нашите съобщения

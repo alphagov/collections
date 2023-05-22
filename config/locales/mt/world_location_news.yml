@@ -1,6 +1,7 @@
 ---
 mt:
   world_location_news:
+    email:
     find_out_more: Ara l-profil kollu u d-dettalji tal-kuntatt
     headings:
       announcements: L-avviżi tagħna

@@ -13,6 +13,7 @@ ru:
       email: Электронная почта
       telephone: Телефон
     corporate_information: Корпоративная информация
+    count_prefix:
     document_types:
       documents: Документы
       guidance_and_regulation:

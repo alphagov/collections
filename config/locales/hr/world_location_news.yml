@@ -1,6 +1,7 @@
 ---
 hr:
   world_location_news:
+    email:
     find_out_more: Pogledajte cijeli profil i sve podatke za kontakt
     headings:
       announcements: Naše obavijesti

@@ -13,6 +13,7 @@ is:
       email: Tölvupóstur
       telephone: Sími
     corporate_information: Upplýsingar um fyrirtæki
+    count_prefix:
     document_types:
       documents: Skjöl
       guidance_and_regulation:

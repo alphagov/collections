@@ -1,6 +1,7 @@
 ---
 sk:
   world_location_news:
+    email:
     find_out_more: Pozrite si celý profil a všetky kontaktné údaje
     headings:
       announcements: Naše oznámenia

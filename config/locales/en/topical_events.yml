@@ -2,6 +2,15 @@
 en:
   topical_events:
     archived: "(Archived)"
+    first_world_war_centenary:
+      arts_council_england: Arts Council England
+      bbc: BBC
+      british_library: British Library
+      commonwealth_war_graves_commission: Commonwealth War Graves Commission
+      heritage_lottery_fund: Heritage Lottery Fund
+      historic_england: Historic England
+      imperial_war_museum: Imperial War Museum
+      war_memorials_trust: War Memorials Trust
     headings:
       announcements: Announcements
       consultations: Consultations
@@ -12,3 +21,7 @@ en:
       travel_advice: Travel advice
     no_updates: There are no updates yet.
     organisations: Who’s involved
+    platinum_jubilee_unboxed:
+      birmingham_2022_commonwealth_games: Birmingham 2022 Commonwealth Games
+      queens_platinum_jubilee: Queen's Platinum Jubilee
+      unboxed_creativity_in_the_uk: 'Unboxed: Creativity in the UK'

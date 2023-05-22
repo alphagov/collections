@@ -1,6 +1,7 @@
 ---
 fr:
   world_location_news:
+    email:
     find_out_more: Afficher le profil complet et toutes les coordonnées
     headings:
       announcements: Nos annonces

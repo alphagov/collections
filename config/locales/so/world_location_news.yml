@@ -1,6 +1,7 @@
 ---
 so:
   world_location_news:
+    email:
     find_out_more: Eeg borofaayl dhamaystiran iyo dhamaan faahfaahinta meesha lagala xidhiidhayo
     headings:
       announcements: Ku dhawaaqisahayaga

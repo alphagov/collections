@@ -13,6 +13,7 @@ be:
       email: Электронная пошта
       telephone: Тэлефонны апарат
     corporate_information: Карпаратыўная іфармацыя
+    count_prefix:
     document_types:
       documents: Дакументы
       guidance_and_regulation:

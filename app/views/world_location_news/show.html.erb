@@ -197,7 +197,7 @@
         <div class="govuk-grid-column-two-thirds">
           <% contact.dig("details", "email_addresses")&.each do |email_address| %>
             <p class="govuk-body">
-              Email
+              <%= t('world_location_news.email') %>
               <br>
               <%= link_to(email_address["email"], "mailto:#{email_address['email']}", class: "govuk-link") %>
             </p>

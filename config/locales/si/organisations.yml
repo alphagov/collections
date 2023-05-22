@@ -13,6 +13,7 @@ si:
       email: විද්‍යුත් තැපෑල
       telephone: දුරකථනය
     corporate_information: ආයතනික තොරතුරු
+    count_prefix:
     document_types:
       documents: ලේඛන
       guidance_and_regulation:

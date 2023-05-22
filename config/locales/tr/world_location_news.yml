@@ -1,6 +1,7 @@
 ---
 tr:
   world_location_news:
+    email:
     find_out_more: Tüm profil ve tüm irtibat bilgilerine bakın
     headings:
       announcements: Duyurularımız

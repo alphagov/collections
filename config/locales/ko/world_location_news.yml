@@ -1,6 +1,7 @@
 ---
 ko:
   world_location_news:
+    email:
     find_out_more: 프로필과 연락처 보기
     headings:
       announcements: 공지사항

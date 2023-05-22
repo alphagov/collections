@@ -1,6 +1,7 @@
 ---
 el:
   world_location_news:
+    email:
     find_out_more: Δείτε το πλήρες προφίλ και όλα τα στοιχεία επικοινωνίας
     headings:
       announcements: Οι ανακοινώσεις μας

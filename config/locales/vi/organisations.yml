@@ -13,6 +13,7 @@ vi:
       email: Email
       telephone: Điện thoại
     corporate_information: Thông tin doanh nghiệp
+    count_prefix:
     document_types:
       documents: Tài liệu
       guidance_and_regulation:

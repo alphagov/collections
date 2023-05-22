@@ -13,6 +13,7 @@ ko:
       email: 이메일
       telephone: 전화번호
     corporate_information: 기업 정보
+    count_prefix:
     document_types:
       documents: 문서
       guidance_and_regulation:

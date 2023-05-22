@@ -1,6 +1,7 @@
 ---
 uz:
   world_location_news:
+    email:
     find_out_more: Тўлиқ профиль ва боғланиш учун маълумотларни кўринг
     headings:
       announcements: Бизнинг эълонлар

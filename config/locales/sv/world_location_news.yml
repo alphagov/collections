@@ -1,6 +1,7 @@
 ---
 sv:
   world_location_news:
+    email:
     find_out_more: Se hela profilen och alla kontaktuppgifter
     headings:
       announcements: Våra tillkännagivanden

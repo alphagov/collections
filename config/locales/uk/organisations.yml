@@ -13,6 +13,7 @@ uk:
       email: Електронна пошта
       telephone: Телефон
     corporate_information: Корпоративна інформація
+    count_prefix:
     document_types:
       documents: Документи
       guidance_and_regulation:

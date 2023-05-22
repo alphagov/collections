@@ -13,6 +13,7 @@ lv:
       email: E-pasts
       telephone: Tālrunis
     corporate_information: Korporatīvā informācija
+    count_prefix:
     document_types:
       documents: Dokumenti
       guidance_and_regulation:

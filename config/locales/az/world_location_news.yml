@@ -1,6 +1,7 @@
 ---
 az:
   world_location_news:
+    email:
     find_out_more: Tam profil və əlaqə məlumatlarımıza baxın
     headings:
       announcements: Elanlarımız

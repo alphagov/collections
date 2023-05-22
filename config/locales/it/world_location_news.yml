@@ -1,6 +1,7 @@
 ---
 it:
   world_location_news:
+    email:
     find_out_more: Vedi il profilo completo e tutti i dettagli di contatto
     headings:
       announcements: I nostri annunci

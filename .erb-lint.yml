@@ -1,0 +1,19 @@
+---
+exclude:
+  - '**/vendor/**/*'
+  - '**/node_modules/**/*'
+EnableDefaultLinters: false
+linters:
+  HardCodedString:
+    enabled: true
+    exclude:
+      - 'app/views/historic_appointments/past_foreign_secretaries/austen_chamberlain.html.erb'
+      - 'app/views/historic_appointments/past_foreign_secretaries/charles_fox.html.erb'
+      - 'app/views/historic_appointments/past_foreign_secretaries/edward_grey.html.erb'
+      - 'app/views/historic_appointments/past_foreign_secretaries/edward_wood.html.erb'
+      - 'app/views/historic_appointments/past_foreign_secretaries/george_curzon.html.erb'
+      - 'app/views/historic_appointments/past_foreign_secretaries/george_gordon.html.erb'
+      - 'app/views/historic_appointments/past_foreign_secretaries/george_gower.html.erb'
+      - 'app/views/historic_appointments/past_foreign_secretaries/henry_petty_fitzmaurice.html.erb'
+      - 'app/views/historic_appointments/past_foreign_secretaries/robert_cecil.html.erb'
+      - 'app/views/historic_appointments/past_foreign_secretaries/william_grenville.html.erb'

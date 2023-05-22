@@ -13,6 +13,7 @@ he:
       email: דואר אלקטרוני
       telephone: טלפון
     corporate_information: מידע תאגידי
+    count_prefix:
     document_types:
       documents: מסמכים
       guidance_and_regulation:

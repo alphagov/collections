@@ -13,6 +13,7 @@ az:
       email: E-poçt
       telephone: Telefon
     corporate_information: Korporativ məlumat
+    count_prefix:
     document_types:
       documents: Sənədlər
       guidance_and_regulation:
