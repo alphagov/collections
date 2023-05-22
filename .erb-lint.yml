@@ -1,4 +1,7 @@
 ---
+exclude:
+  - '**/vendor/**/*'
+  - '**/node_modules/**/*'
 EnableDefaultLinters: false
 linters:
   HardCodedString:

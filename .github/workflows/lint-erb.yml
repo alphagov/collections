@@ -1,0 +1,35 @@
+name: Lint ERB
+
+on:
+  workflow_call:
+    inputs:
+      ref:
+        description: 'The branch, tag or SHA to checkout'
+        required: false
+        type: string
+      publishingApiRef:
+        description: 'The branch, tag or SHA to checkout Publishing API'
+        required: false
+        default: 'main'
+        type: string
+
+jobs:
+  lint-erb:
+    name: Lint ERB
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          repository: alphagov/collections
+          ref: ${{ inputs.ref || github.ref }}
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Run erblint
+        env:
+          RAILS_ENV: test
+        run: bundle exec erblint --lint-all

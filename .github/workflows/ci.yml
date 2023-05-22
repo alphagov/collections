@@ -27,6 +27,10 @@ jobs:
     with:
       files: "'app/assets/javascripts/**/*.js' 'spec/javascripts/**/*.js'"
 
+  lint-erb:
+    name: Lint ERB
+    uses: ./.github/workflows/lint-erb.yml
+
   lint-ruby:
     name: Lint Ruby
     uses: alphagov/govuk-infrastructure/.github/workflows/rubocop.yml@main
