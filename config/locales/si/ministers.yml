@@ -6,4 +6,10 @@ si:
     cabinet: කැබිනට් අමාත්යවරු
     govuk_title: අමාත්යවරු - GOV.UK
     title: අමාත්‍යවරු
+    whip_organisations:
+      assistant_whips:
+      baronesses_and_lords_in_waiting:
+      house_of_commons:
+      house_of_lords:
+      junior_lords_of_the_treasury:
     whips: කස

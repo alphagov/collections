@@ -6,4 +6,10 @@ bg:
     cabinet: Министри от кабинета
     govuk_title: Министри - GOV.UK
     title: Министри
+    whip_organisations:
+      assistant_whips:
+      baronesses_and_lords_in_waiting:
+      house_of_commons:
+      house_of_lords:
+      junior_lords_of_the_treasury:
     whips: Спешни съобщения

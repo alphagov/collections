@@ -70,4 +70,13 @@ module ApplicationHelper
       raw(Govspeak::Document.new(content, sanitize: false).to_html)
     end
   end
+
+  def joined_list(elements)
+    separator = if elements.any? { |word| word.include?(",") }
+                  "; "
+                else
+                  ", "
+                end
+    elements.join(separator)
+  end
 end

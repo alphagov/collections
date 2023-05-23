@@ -6,4 +6,10 @@ zh-tw:
     cabinet: 內閣部長
     govuk_title: 部長－英國政府網站
     title: 部長
+    whip_organisations:
+      assistant_whips:
+      baronesses_and_lords_in_waiting:
+      house_of_commons:
+      house_of_lords:
+      junior_lords_of_the_treasury:
     whips: 黨鞭

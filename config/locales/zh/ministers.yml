@@ -6,4 +6,10 @@ zh:
     cabinet: 内阁成员
     govuk_title: 部长 - GOV.UK
     title: 部长
+    whip_organisations:
+      assistant_whips:
+      baronesses_and_lords_in_waiting:
+      house_of_commons:
+      house_of_lords:
+      junior_lords_of_the_treasury:
     whips: 政党纪律委员
