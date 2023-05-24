@@ -20,7 +20,7 @@
 
 <% if @presented_ministers.is_during_reshuffle? %>
   <%= render "govuk_publishing_components/components/notice", {
-    description_govspeak: sanitize(@presented_ministers.reshuffle_messaging),
+    description: sanitize(@presented_ministers.reshuffle_messaging),
   } %>
 <% else %>
 
