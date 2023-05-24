@@ -184,7 +184,7 @@ RSpec.describe "Organisation pages" do
 
   it "shows a see all link in the latest documents section" do
     visit "/government/organisations/attorney-generals-office"
-    expect(page).to have_css("a[href='/search/all?organisations%5B%5D=attorney-generals-office&order=updated-newest&parent=attorney-generals-office']", text: "See all")
+    expect(page).to have_css("a[href='/search/all?organisations[]=attorney-generals-office&order=updated-newest&parent=attorney-generals-office']", text: "See all")
   end
 
   it "shows subscription links" do
