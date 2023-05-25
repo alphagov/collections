@@ -103,7 +103,8 @@ RSpec.feature "Ministers index page" do
 
     scenario "renders the reshuffle messaging instead of the usual contents" do
       within(".gem-c-notice") do
-        expect(page).to have_text("Reshuffle in progress")
+        expect(page).to have_text("Check latest appointments")
+        expect(page).to have_link("latest appointments", href: "/government/news/ministerial-appointments-february-2023", class: "govuk-link")
       end
       expect(page).not_to have_selector(".gem-c-lead-paragraph")
       expect(page).not_to have_selector(".gem-c-heading", text: I18n.t("ministers.cabinet"))
