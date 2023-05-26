@@ -6,6 +6,7 @@
 
 # Ignore bundler config.
 /.bundle
+/.yarn
 
 # Ignore all logfiles and tempfiles.
 /log/*
