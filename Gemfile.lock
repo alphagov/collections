@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/alphagov/govuk_publishing_components.git
-  revision: 4d217da7e719c9361d908f7845d034e45e57bacb
-  branch: use-modules-without-js-bunlding-deployable
+  revision: 2c35297f5cf23dd7c50353aad62d538137013299
+  branch: use-modules-without-js-bundling-deploy
   specs:
     govuk_publishing_components (34.10.1)
       govuk_app_config
