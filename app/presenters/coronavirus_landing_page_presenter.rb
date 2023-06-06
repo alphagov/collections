@@ -23,13 +23,13 @@ class CoronavirusLandingPagePresenter
   end
 
   def title
-    "Coronavirus (COVID-19)"
+    "COVID-19"
   end
 
   def metadata
     {
-      title: "Coronavirus (COVID-19): guidance and support",
-      description: "Find information on coronavirus, including guidance and support.",
+      title: "COVID-19: guidance and support",
+      description: "Find information on COVID-19, including guidance and support.",
     }
   end
 
