@@ -15,4 +15,3 @@
 //= link views/_taxons.css
 //= link views/_topical_events.css
 //= link views/_topics.css
-//= link views/_world_location_news.css
