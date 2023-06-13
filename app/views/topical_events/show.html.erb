@@ -1,3 +1,14 @@
+<% ga4_link_attributes = {
+    event_name: "navigation",
+    type: "subscribe",
+    index: {
+      index_link: 1
+    },
+    index_total: 1,
+    section: "Content"
+  }.to_json
+%>
+
 <% add_view_stylesheet("topical_events") %>
 
 <% content_for :title, @topical_event.title %>
@@ -116,9 +127,15 @@
         <p class="govuk-body"><%= I18n.t("topical_events.no_updates") %></p>
       <% end %>
 
-      <%= render "govuk_publishing_components/components/subscription_links", {
-        email_signup_link: "/email-signup?link=#{topical_event_path(@topical_event.slug)}",
-      } %>
+      <div 
+        data-module="ga4-link-tracker" 
+        data-ga4-link='{ "event_name": "navigation", "type": "subscribe", "index": { "index_link": 1 }, "index_total": 1, "section": "Content" }'
+        data-ga4-track-links-only
+      >
+        <%= render "govuk_publishing_components/components/subscription_links", {
+          email_signup_link: "/email-signup?link=#{topical_event_path(@topical_event.slug)}"
+        } %>
+      </div>
     </section>
   </div>
 

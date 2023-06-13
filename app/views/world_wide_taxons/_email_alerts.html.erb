@@ -1,13 +1,19 @@
 <% if taxon_is_live?(presented_taxon) %>
-  <% if presented_taxon.renders_as_accordion? %>
-    <%= render "govuk_publishing_components/components/subscription_links", {
-      email_signup_link: email_alert_frontend_signup_url(presented_taxon),
-      email_signup_link_text: "#{t("shared.get_emails")} <span class='govuk-visually-hidden'>#{presented_taxon.title}</span>".html_safe,
-    } %>
-  <% else %>
-    <%= render "govuk_publishing_components/components/subscription_links", {
-      email_signup_link: email_alert_frontend_signup_url(presented_taxon),
-      email_signup_link_text: "#{t("shared.get_emails")} <span class='govuk-visually-hidden'>#{presented_taxon.title}</span>".html_safe,
-    } %>
-  <% end %>
+  <div 
+    data-module="ga4-link-tracker" 
+    data-ga4-link='{ "event_name": "navigation", "type": "subscribe", "index": { "index_link": 1 }, "index_total": 1, "section": "Top" }'
+    data-ga4-track-links-only
+  >
+    <% if presented_taxon.renders_as_accordion? %>
+      <%= render "govuk_publishing_components/components/subscription_links", {
+        email_signup_link: email_alert_frontend_signup_url(presented_taxon),
+        email_signup_link_text: "#{t("shared.get_emails")} <span class='govuk-visually-hidden'>#{presented_taxon.title}</span>".html_safe,
+      } %>
+    <% else %>
+      <%= render "govuk_publishing_components/components/subscription_links", {
+        email_signup_link: email_alert_frontend_signup_url(presented_taxon),
+        email_signup_link_text: "#{t("shared.get_emails")} <span class='govuk-visually-hidden'>#{presented_taxon.title}</span>".html_safe,
+      } %>
+    <% end %>
+  </div>
 <% end %>

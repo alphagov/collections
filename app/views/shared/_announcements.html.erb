@@ -6,10 +6,16 @@
         margin_bottom: 5,
     } %>
 
-    <%= render "govuk_publishing_components/components/subscription_links", {
-        email_signup_link: announcements.links[:email_signup],
-        margin_bottom: 5,
-    } %>
+    <div 
+      data-module="ga4-link-tracker" 
+      data-ga4-link='{ "event_name": "navigation", "type": "subscribe", "index": { "index_link": 1 }, "index_total": 1, "section": "Content" }'
+      data-ga4-track-links-only
+    >
+      <%= render "govuk_publishing_components/components/subscription_links", {
+          email_signup_link: announcements.links[:email_signup],
+          margin_bottom: 5
+      } %>
+    </div>
 
     <%= render "govuk_publishing_components/components/document_list", {
         items: announcements.items

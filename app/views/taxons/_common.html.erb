@@ -14,7 +14,12 @@
 
 <% if taxon_is_live?(presented_taxon) %>
   <div class="taxon-page__email-link-wrapper">
-    <div class="full-page-width-wrapper">
+    <div 
+      class="full-page-width-wrapper" 
+      data-module="ga4-link-tracker"
+      data-ga4-link='{ "event_name": "navigation", "type": "subscribe", "index": { "index_link": 1 }, "index_total": 1, "section": "Top" }'
+      data-ga4-track-links-only
+    >
       <%= render "govuk_publishing_components/components/signup_link", {
         link_text: t("shared.get_emails"),
         link_href: "/email-signup/?link=#{presented_taxon.base_path}",
