@@ -90,8 +90,4 @@ class WorldLocationNews
   def worldwide_organisations
     @content_item.content_item_data.dig("links", "worldwide_organisations")
   end
-
-  def contacts
-    @content_item.content_item_data.dig("links", "ordered_contacts")
-  end
 end

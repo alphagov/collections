@@ -1,7 +1,4 @@
-<% add_view_stylesheet("world_location_news") if @world_location_news.contacts %>
-
 <% content_for :title, @world_location_news.title %>
-<% page_class "world-location-news-show" %>
 
 <% content_for :meta_tags do %>
   <%= tag("meta", name: "description", content: @world_location_news.description) if @world_location_news.description %>
@@ -167,51 +164,9 @@
         </p>
 
         <p class="govuk-body">
-          <%= link_to(I18n.t("world_location_news.find_out_more"), organisation["base_path"]) %>
+          <%= link_to I18n.t("world_location_news.find_out_more"), organisation["base_path"], class: "govuk-link" %>
         </p>
       <% end %>
-    </div>
-  </div>
-<% end %>
-
-<% @world_location_news.contacts&.each do |contact| %>
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-7">
-      <%= render "govuk_publishing_components/components/heading", {
-        text: contact.dig("details", "title"),
-        padding: true,
-        border_top: 1,
-        margin_bottom: 3,
-        heading_level: 3,
-      } %>
-
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <% contact.dig("details", "post_addresses")&.each do |address| %>
-            <address class="govuk-body world_location_news__address">
-              <%= Govspeak::HCardPresenter.new(address.symbolize_keys).render %>
-            </address>
-          <% end %>
-        </div>
-
-        <div class="govuk-grid-column-two-thirds">
-          <% contact.dig("details", "email_addresses")&.each do |email_address| %>
-            <p class="govuk-body">
-              <%= t('world_location_news.email') %>
-              <br>
-              <%= link_to(email_address["email"], "mailto:#{email_address['email']}", class: "govuk-link") %>
-            </p>
-          <% end %>
-
-          <% contact.dig("details", "phone_numbers")&.each do |phone_number| %>
-            <p class="govuk-body">
-              <%= phone_number["title"] %>
-              <br>
-              <span dir="ltr"><%= phone_number["number"] %></span>
-            </p>
-          <% end %>
-        </div>
-      </div>
     </div>
   </div>
 <% end %>
