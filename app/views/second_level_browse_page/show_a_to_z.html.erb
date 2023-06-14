@@ -37,15 +37,19 @@
 
 <div class="govuk-width-container">
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-2">
+    <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-2" data-module="ga4-link-tracker">
+      <%
+        index_section_count = page.lists.count
+        index_section_count += 1 if page.related_topics.any?
+      %>
       <% page.lists.each_with_index do |list, list_index| %>
         <div class="browse__section">
           <%= render partial: "shared/browse_heading", locals: { title: list.title } %>
 
-          <%= render partial: "links", locals: { list: list.contents, list_index: list_index } %>
+          <%= render partial: "links", locals: { list: list.contents, list_index: list_index, index_section_count: index_section_count.to_s } %>
         </div>
       <% end %>
-      <%= render partial: "shared/browse_related_topics", locals: { page: page } %>
+      <%= render partial: "shared/browse_related_topics", locals: { page: page, index_section_count: index_section_count.to_s } %>
     </div>
   </div>
 </div>

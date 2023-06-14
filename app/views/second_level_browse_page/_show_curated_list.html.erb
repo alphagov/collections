@@ -1,3 +1,7 @@
+<%
+  index_section_count = page.lists.count
+  index_section_count += 1 if page.related_topics.any?
+%>
 <% page.lists.each_with_index do |list, list_index| %>
 
   <%# The first, or only, section should not have a top border. %>
@@ -6,8 +10,8 @@
   <div class="browse__section <%= 'browse__section--top-border' if is_not_first_section %>" >
     <%= render partial: "shared/browse_heading", locals: { title: list.title } %>
 
-    <%= render partial: "links", locals: { list: list.contents, list_index: list_index } %>
+    <%= render partial: "links", locals: { list: list.contents, list_index: list_index, index_section_count: index_section_count.to_s } %>
   </div>
 <% end %>
 
-<%= render partial: "shared/browse_related_topics", locals: { page: page } %>
+<%= render partial: "shared/browse_related_topics", locals: { page: page, index_section_count: index_section_count.to_s } %>
