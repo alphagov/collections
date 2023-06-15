@@ -137,7 +137,7 @@ GEM
       rexml (~> 3.0)
       webrick (~> 1.7)
     cucumber-tag-expressions (4.1.0)
-    dalli (3.2.4)
+    dalli (3.2.5)
     date (3.3.3)
     debug_inspector (1.1.0)
     diff-lcs (1.5.0)
