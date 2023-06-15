@@ -11,10 +11,15 @@
       <% end %>
     </div>
 
-    <div class="govuk-grid-column-one-third govuk-!-margin-top-8 govuk-!-margin-bottom-3">
+    <div 
+      class="govuk-grid-column-one-third govuk-!-margin-top-8 govuk-!-margin-bottom-3"
+      data-module="ga4-link-tracker"
+      data-ga4-link='{ "event_name": "navigation", "type": "subscribe", "index": { "index_link": 1 }, "index_total": 1, "section": "Top" }'
+      data-ga4-track-links-only
+    >
       <%= render "govuk_publishing_components/components/subscription_links", {
         email_signup_link: "/email-signup?link=/topic/#{params[:topic_slug]}/#{params[:subtopic_slug]}",
-        email_signup_link_text: t("shared.get_emails"),
+        email_signup_link_text: t("shared.get_emails")
       } %>
 
       <% if local_assigns[:link_to_latest_feed] %>

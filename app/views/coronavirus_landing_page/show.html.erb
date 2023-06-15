@@ -58,7 +58,21 @@
     </div>
   </section>
 
-  <%= content_tag :section, class: "covid__topic-wrapper" do
+  <%= content_tag :section, 
+    class: "covid__topic-wrapper", 
+    data: { 
+      module: "ga4-link-tracker", 
+      ga4_link: {
+        event_name: "navigation",
+        type: "subscribe",
+        index: {
+          index_link: 1
+        },
+        index_total: 1,
+        section: "Footer"
+      },
+      ga4_track_links_only: ""
+    } do
     render 'govuk_publishing_components/components/signup_link', {
       link_text:  "Sign up to get emails when we change any COVID-19 information on the GOV.UK website",
       link_href: "/email-signup?topic=/coronavirus-taxon",
@@ -66,7 +80,7 @@
       data: {
         "module": "gem-track-click",
         "track-category": "emailAlertLinkClicked",
-        "track-action": "/coronavirus",
+        "track-action": "/coronavirus"
       },
       background: true
     }
