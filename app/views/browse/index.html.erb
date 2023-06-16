@@ -27,6 +27,7 @@
   } %>
 <% end %>
 
+<% total_links = page.top_level_browse_pages.count.to_s %>
 <%= render "shared/browse_cards_container" do %>
   <%= render "govuk_publishing_components/components/cards", {
     items: page.top_level_browse_pages.map.with_index do |top_level_browse_page, index|
@@ -40,9 +41,17 @@
             track_label: top_level_browse_page.base_path,
             track_dimension: top_level_browse_page.title,
             track_options: {
-              dimension28: page.top_level_browse_pages.count.to_s,
+              dimension28: total_links,
               dimension29: top_level_browse_page.title,
               dimension114: index + 1,
+            },
+            ga4_link: {
+              event_name: "navigation",
+              type: "browse card",
+              index: {
+                index_link: index + 1,
+              },
+              index_total: total_links,
             },
           }
         },
