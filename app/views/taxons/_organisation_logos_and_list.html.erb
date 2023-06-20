@@ -1,21 +1,38 @@
-<div class="taxon-page__organisations">
+<div class="taxon-page__organisations" data-module="ga4-link-tracker">
   <ul class="govuk-list">
-    <% organisations_with_logos.each do |promoted_organisation| %>
-      <li class="taxon-page__organisation">
-        <%= render 'govuk_publishing_components/components/organisation_logo', {
-            organisation: promoted_organisation
+    <% organisations_with_logos.each_with_index do |promoted_organisation, index| %>
+      <%= content_tag(
+        :li,
+        class: "taxon-page__organisation",
+        data: {
+          ga4_link: {
+            event_name: "navigation",
+            type: "organisation logo",
+            index: {
+              index_link: index_link + index,
+              index_section: index_section,
+              index_section_count: index_section_count
+            },
+            index_total: organisations_with_logos.count,
+            section: "Organisations"
           }
-        %>
-      </li>
+        }) do %>
+          <%= render 'govuk_publishing_components/components/organisation_logo', {
+              organisation: promoted_organisation
+            }
+          %>
+      <% end %>
     <% end %>
   </ul>
 </div>
 
 <% if organisations_without_logos.any? %>
-  <div <%= "data-module=gem-track-click" if track_click?(organisations_without_logos) %>>
+  <div
+    data-module="ga4-link-tracker <%= "gem-track-click" if track_click?(organisations_without_logos) %>"
+    data-ga4-link="{'index':{'index_section':<%= index_section %>,'index_section_count':<%= index_section_count %>}}"
+  >
     <%= render 'govuk_publishing_components/components/document_list',
-      items: organisations_without_logos,
-      margin_bottom: true
+      items: organisations_without_logos
     %>
   </div>
 <% end %>

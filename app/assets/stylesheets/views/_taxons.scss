@@ -23,7 +23,7 @@
 
 .taxon-page__section-group {
   border-top: 2px solid $govuk-brand-colour;
-  margin-top: 60px;
+  margin-top: 45px;
   padding-top: govuk-spacing(3);
 }
 
@@ -62,11 +62,6 @@
   padding-top: govuk-spacing(4);
   padding-left: govuk-spacing(3);
   clear: both;
-}
-
-.taxon-page__see-more {
-  position: relative;
-  top: govuk-spacing(3);
 }
 
 .taxon-page__show-more-toggle {
@@ -127,6 +122,7 @@
 }
 
 .taxon-page__organisations {
+  margin-bottom: 35px;
   list-style-type: none;
 
   .taxon-page__organisation {

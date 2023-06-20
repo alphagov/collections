@@ -3,8 +3,10 @@ class TaxonOrganisationsPresenter
 
   attr_reader :organisations
 
-  def initialize(organisations)
+  def initialize(organisations, index_section, index_section_count)
     @organisations = organisations
+    @index_section = index_section + 1
+    @index_section_count = index_section_count
   end
 
   def show_organisations?
@@ -41,7 +43,6 @@ private
   def organisation_list_with_logos
     organisations_with_logos.map.with_index do |org, index|
       {
-
         name: org.logo_formatted_title,
         url: org.link,
         brand: org.brand,
@@ -74,6 +75,17 @@ private
       track_label: base_path,
       track_options: {
         dimension29: link_text,
+      },
+      ga4_link: {
+        event_name: "navigation",
+        type: "organisation logo",
+        index: {
+          index_link: index,
+          index_section: @index_section,
+          index_section_count: @index_section_count,
+        },
+        index_total: organisations.count,
+        section: "Organisations",
       },
     }
   end

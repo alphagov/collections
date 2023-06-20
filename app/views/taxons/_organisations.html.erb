@@ -1,36 +1,67 @@
 <% if presented_organisations.show_organisations? %>
-  <div id="organisations" class="taxon-page__section-group taxon-page__section-group--organisation" data-module="gem-toggle">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <%= render "govuk_publishing_components/components/heading", {
-              text: t('taxons.organisations'),
-              heading_level: 2,
-              margin_bottom: 3
+  <%= content_tag(
+    :div,
+    id: "organisations",
+    class: "taxon-page__section-group taxon-page__section-group--organisation",
+    data: {
+      module: "gem-toggle",
+    }) do %>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <%= render "govuk_publishing_components/components/heading", {
+            text: t('taxons.organisations'),
+            heading_level: 2,
+            margin_bottom: 3
           } %>
 
+          <%= render partial: 'organisation_logos_and_list', locals: {
+            organisations_with_logos: presented_organisations.promoted_organisation_list[:promoted_with_logos],
+            organisations_without_logos: presented_organisations.promoted_organisation_list[:promoted_without_logos],
+            index_link: 1,
+            index_section: index_section,
+            index_section_count: index_section_count
+          } %>
 
-        <%= render partial: 'organisation_logos_and_list', locals: {
-              organisations_with_logos: presented_organisations.promoted_organisation_list[:promoted_with_logos],
-              organisations_without_logos: presented_organisations.promoted_organisation_list[:promoted_without_logos]
-        } %>
-
-        <% if presented_organisations.show_more_organisations? %>
+          <% if presented_organisations.show_more_organisations? %>
+            <%
+              ga4_attributes = {
+                event_name: "select_content",
+                type: "organisation",
+                index: {
+                  index_section: index_section,
+                  index_section_count: index_section_count
+                },
+                section: "Organisations",
+              }
+            %>
             <div class="taxon-page__show-more-toggle taxon-page__see-more">
               <a href="#"
-              class="govuk-link"
-              data-controls="more-organisations"
-              data-expanded="false"
-              data-toggled-text="<%= t("taxons.show_fewer_orgs") %>"><%= t("taxons.show_more_orgs") %></a>
+                class="govuk-link"
+                data-controls="more-organisations"
+                data-expanded="false"
+                data-ga4-expandable=""
+                data-toggled-text="<%= t("taxons.show_fewer_orgs") %>"
+                data-module="ga4-event-tracker"
+                data-ga4-event="<%= ga4_attributes.to_json %>"
+              >
+                <%= t("taxons.show_more_orgs") %>
+              </a>
             </div>
 
-          <div id="more-organisations" class="js-hidden taxon-page__more-organisations">
-            <%= render partial: 'organisation_logos_and_list', locals: {
-                  organisations_with_logos: presented_organisations.show_more_organisation_list[:organisations_with_logos],
-                  organisations_without_logos: presented_organisations.show_more_organisation_list[:organisations_without_logos]
-            } %>
-          </div>
-        <% end %>
+            <div id="more-organisations" class="js-hidden taxon-page__more-organisations">
+              <%
+                index_link = presented_organisations.promoted_organisation_list[:promoted_with_logos].count + presented_organisations.promoted_organisation_list[:promoted_without_logos].count
+              %>
+              <%= render partial: 'organisation_logos_and_list', locals: {
+                organisations_with_logos: presented_organisations.show_more_organisation_list[:organisations_with_logos],
+                organisations_without_logos: presented_organisations.show_more_organisation_list[:organisations_without_logos],
+                index_link: index_link,
+                index_section: index_section,
+                index_section_count: index_section_count
+              } %>
+            </div>
+          <% end %>
+        </div>
       </div>
-    </div>
-  </div>
+  <% end %>
 <% end %>

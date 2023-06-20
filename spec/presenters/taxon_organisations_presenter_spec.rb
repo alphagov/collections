@@ -5,7 +5,7 @@ RSpec.describe TaxonOrganisationsPresenter do
   let(:content_hash) { funding_and_finance_for_students_taxon }
   let(:content_item) { ContentItem.new(content_hash) }
   let(:taxon) { Taxon.new(ContentItem.new(content_hash)) }
-  let(:taxon_organisations_presenter) { TaxonOrganisationsPresenter.new(taxon.organisations) }
+  let(:taxon_organisations_presenter) { TaxonOrganisationsPresenter.new(taxon.organisations, 5, 7) }
 
   it "checks whether organisations should be shown" do
     allow_any_instance_of(TaggedOrganisations).to receive(:fetch).and_return([])
@@ -34,6 +34,17 @@ RSpec.describe TaxonOrganisationsPresenter do
               track_label: "/government/organisations/department-for-education",
               track_options: {
                 dimension29: "Department for Education",
+              },
+              ga4_link: {
+                event_name: "navigation",
+                type: "organisation logo",
+                index: {
+                  index_link: 1,
+                  index_section: 6,
+                  index_section_count: 7,
+                },
+                index_total: 1,
+                section: "Organisations",
               },
             },
           },
@@ -64,6 +75,17 @@ RSpec.describe TaxonOrganisationsPresenter do
             track_options: {
               dimension29: "Department for Education",
             },
+            ga4_link: {
+              event_name: "navigation",
+              type: "organisation logo",
+              index: {
+                index_link: 1,
+                index_section: 6,
+                index_section_count: 7,
+              },
+              index_total: 1,
+              section: "Organisations",
+            },
           },
         },
       ]
@@ -90,6 +112,17 @@ RSpec.describe TaxonOrganisationsPresenter do
               track_label: "/government/organisations/department-for-education",
               track_options: {
                 dimension29: "Department for Education",
+              },
+              ga4_link: {
+                event_name: "navigation",
+                type: "organisation logo",
+                index: {
+                  index_link: 1,
+                  index_section: 6,
+                  index_section_count: 7,
+                },
+                index_total: 1,
+                section: "Organisations",
               },
             },
           },
@@ -122,6 +155,17 @@ RSpec.describe TaxonOrganisationsPresenter do
             track_options: {
               dimension29: "Department for Education",
             },
+            ga4_link: {
+              event_name: "navigation",
+              type: "organisation logo",
+              index: {
+                index_link: index + 1,
+                index_section: 6,
+                index_section_count: 7,
+              },
+              index_total: 5,
+              section: "Organisations",
+            },
           },
         )
       end
@@ -150,6 +194,17 @@ RSpec.describe TaxonOrganisationsPresenter do
               track_label: "/government/organisations/department-for-education",
               track_options: {
                 dimension29: "Department for Education",
+              },
+              ga4_link: {
+                event_name: "navigation",
+                type: "organisation logo",
+                index: {
+                  index_link: index + 1,
+                  index_section: 6,
+                  index_section_count: 7,
+                },
+                index_total: 5,
+                section: "Organisations",
               },
             },
           },
@@ -184,6 +239,17 @@ RSpec.describe TaxonOrganisationsPresenter do
             track_options: {
               dimension29: "Department for Education",
             },
+            ga4_link: {
+              event_name: "navigation",
+              type: "organisation logo",
+              index: {
+                index_link: index + 1,
+                index_section: 6,
+                index_section_count: 7,
+              },
+              index_total: 4,
+              section: "Organisations",
+            },
           },
         )
       end
@@ -199,6 +265,17 @@ RSpec.describe TaxonOrganisationsPresenter do
               track_label: "/government/organisations/department-for-education",
               track_options: {
                 dimension29: "Department for Education",
+              },
+              ga4_link: {
+                event_name: "navigation",
+                type: "organisation logo",
+                index: {
+                  index_link: 4,
+                  index_section: 6,
+                  index_section_count: 7,
+                },
+                index_total: 4,
+                section: "Organisations",
               },
             },
           },
@@ -233,6 +310,17 @@ RSpec.describe TaxonOrganisationsPresenter do
             track_options: {
               dimension29: "Department for Education",
             },
+            ga4_link: {
+              event_name: "navigation",
+              type: "organisation logo",
+              index: {
+                index_link: 6,
+                index_section: 6,
+                index_section_count: 7,
+              },
+              index_total: 6,
+              section: "Organisations",
+            },
           },
         },
       ]
@@ -261,6 +349,17 @@ RSpec.describe TaxonOrganisationsPresenter do
               track_label: "/government/organisations/department-for-education",
               track_options: {
                 dimension29: "Department for Education",
+              },
+              ga4_link: {
+                event_name: "navigation",
+                type: "organisation logo",
+                index: {
+                  index_link: 6,
+                  index_section: 6,
+                  index_section_count: 7,
+                },
+                index_total: 6,
+                section: "Organisations",
               },
             },
           },

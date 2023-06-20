@@ -22,7 +22,7 @@ class TaxonPresenter
   end
 
   def organisations_section
-    @organisations_section ||= TaxonOrganisationsPresenter.new(organisations)
+    @organisations_section ||= TaxonOrganisationsPresenter.new(organisations, count_sections, page_section_total)
   end
 
   def show_subtopic_grid?
@@ -37,5 +37,16 @@ class TaxonPresenter
       track_label: child_taxons[index].preferred_url,
       track_options: {},
     }
+  end
+
+  def count_sections
+    sections.select { |s| s[:show_section] }.count
+  end
+
+  def page_section_total
+    count = count_sections
+    count += 1 if organisations.any?
+    count += 1 if show_subtopic_grid?
+    count
   end
 end
