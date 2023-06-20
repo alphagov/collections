@@ -35,7 +35,9 @@
         } %>
       </div>
       <div class="govuk-grid-column-two-thirds">
-        <%= render 'components/topic_list', topic_list_params(list.contents, list_index: list_index, category: 'navSubtopicContentItemLinkClicked') %>
+        <%= render 'components/topic_list', 
+          topic_list_params(list.contents, list_index: list_index, category: 'navSubtopicContentItemLinkClicked', list_count: subtopic.lists.count, list_title: list.title)
+        %>
       </div>
     </div>
   <% end -%>
