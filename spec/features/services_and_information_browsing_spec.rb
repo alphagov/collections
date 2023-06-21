@@ -34,7 +34,7 @@ RSpec.feature "Services and information browsing" do
   scenario "includes tracking attributes on all links" do
     visit "/government/organisations/hm-revenue-customs/services-information"
 
-    expect(page).to have_selector('.browse-container[data-module="gem-track-click"]')
+    expect(page).to have_selector('.browse-container[data-module="gem-track-click ga4-link-tracker"]')
 
     within ".govuk-grid-row:first-child .app-c-topic-list" do
       content_item_link = page.first("li a")
@@ -68,6 +68,38 @@ RSpec.feature "Services and information browsing" do
       expect(data_options["dimension28"]).to eq(page.all("li a").count.to_s)
 
       expect(data_options["dimension29"]).to eq(content_item_link.text)
+    end
+  end
+
+  scenario "includes GA4 tracking attributes on all links" do
+    visit "/government/organisations/hm-revenue-customs/services-information"
+
+    expect(page).to have_selector('.browse-container[data-module="gem-track-click ga4-link-tracker"]')
+
+    within ".govuk-grid-row:first-child .app-c-topic-list" do
+      content_item_link = page.first("li a")
+      ga4_data = JSON.parse(content_item_link["data-ga4-link"])
+
+      expect(ga4_data["event_name"]).to eq "navigation"
+      expect(ga4_data["type"]).to eq "document list"
+      expect(ga4_data["index"]["index_link"]).to eq 1
+      expect(ga4_data["index"]["index_section"]).to eq 1
+      expect(ga4_data["index"]["index_section_count"]).to eq 2
+      expect(ga4_data["index_total"]).to eq 5
+      expect(ga4_data["section"]).to eq "Environmental permits"
+    end
+
+    within ".govuk-grid-row:nth-child(2) .app-c-topic-list" do
+      content_item_link = page.first("li a")
+      ga4_data = JSON.parse(content_item_link["data-ga4-link"])
+
+      expect(ga4_data["event_name"]).to eq "navigation"
+      expect(ga4_data["type"]).to eq "document list"
+      expect(ga4_data["index"]["index_link"]).to eq 1
+      expect(ga4_data["index"]["index_section"]).to eq 2
+      expect(ga4_data["index"]["index_section_count"]).to eq 2
+      expect(ga4_data["index_total"]).to eq 5
+      expect(ga4_data["section"]).to eq "Waste"
     end
   end
 end
