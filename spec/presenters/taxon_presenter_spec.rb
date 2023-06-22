@@ -12,6 +12,7 @@ RSpec.describe TaxonPresenter do
     describe "#options_for_child_taxon" do
       describe "root options" do
         before do
+          allow(taxon_presenter).to receive(:page_section_total).and_return(nil)
           stub_content_for_taxon([taxon.content_id], generate_search_results(15))
         end
 

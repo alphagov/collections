@@ -63,7 +63,7 @@
       <%= render partial: 'organisations', locals: { presented_organisations: presented_taxon.organisations_section, index_section: presented_taxon.count_sections + 1, index_section_count: index_section_count } %>
 
       <% if presented_taxon.show_subtopic_grid? %>
-        <div id="sub-topics" class="taxon-page__section-group">
+        <div id="sub-topics" class="taxon-page__section-group" data-module="ga4-link-tracker">
           <%= render "govuk_publishing_components/components/heading", {
             text: t('taxons.explore_sub_topics'),
             heading_level: 2,
