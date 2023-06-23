@@ -1,5 +1,12 @@
 //= link_tree ../images
 //= link application.js
+//= link govuk_publishing_components/builds/gem-accordion-extend
+//= link govuk_publishing_components/builds/gem-details
+//= link govuk_publishing_components/builds/govspeak
+//= link govuk_publishing_components/builds/image-card
+//= link govuk_publishing_components/builds/metadata
+//= link govuk_publishing_components/builds/step-by-step-nav
+
 //= link test-dependencies.js
 
 //= link components/_taxon-list.css

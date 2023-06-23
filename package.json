@@ -5,6 +5,7 @@
   "author": "Government Digital Service",
   "license": "MIT",
   "scripts": {
+    "build": "./build.sh",
     "lint": "yarn run lint:js && yarn run lint:scss",
     "lint:js": "standardx 'app/assets/javascripts/**/*.js' 'spec/javascripts/**/*.js'",
     "lint:scss": "stylelint app/assets/stylesheets/",
@@ -40,5 +41,8 @@
     "stylelint": "^15.8.0",
     "stylelint-config-gds": "^0.3.0"
   },
-  "packageManager": "yarn@3.4.1"
+  "packageManager": "yarn@3.4.1",
+  "dependencies": {
+    "rollup": "^3.25.3"
+  }
 }
