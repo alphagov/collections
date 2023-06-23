@@ -7,6 +7,8 @@ FROM $builder_image AS builder
 
 WORKDIR $APP_HOME
 COPY Gemfile* .ruby-version ./
+COPY . .
+RUN ls && echo "asdasdas"
 RUN bundle install
 COPY . .
 RUN rails assets:precompile && rm -fr log

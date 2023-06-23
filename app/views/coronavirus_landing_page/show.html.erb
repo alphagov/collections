@@ -1,5 +1,13 @@
 <% add_view_stylesheet("covid") %>
 
+<%= javascript_include_tag "govuk_publishing_components/builds/gem-accordion-extend" %>
+<%= javascript_include_tag "govuk_publishing_components/builds/gem-details" %>
+<%= javascript_include_tag "govuk_publishing_components/builds/govspeak" %>
+<%= javascript_include_tag "govuk_publishing_components/builds/image-card" %>
+<%= javascript_include_tag "govuk_publishing_components/builds/metadata" %>
+<%= javascript_include_tag "govuk_publishing_components/builds/step-by-step-nav" %>
+
+
 <%= render partial: "coronavirus_landing_page/components/shared/meta_tags", locals: {
   metadata: details.metadata,
   corona_opengraph_images: true
