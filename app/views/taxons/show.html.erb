@@ -3,10 +3,10 @@
 <% content_for :page_class, "taxon-page taxon-page--grid" %>
 <%=
   render(
-      partial: 'common',
-      locals: {
-          presented_taxon: presented_taxon
-      }
+    partial: 'common',
+    locals: {
+      presented_taxon: presented_taxon
+    }
   )
 %>
 
@@ -14,46 +14,65 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-one-third content-list__sticky">
       <%= render "govuk_publishing_components/components/contents_list", {
-          contents: @presentable_section_items
+        contents: @presentable_section_items
       } %>
     </div>
     <div class="govuk-grid-column-two-thirds">
+      <%
+        index_section_count = presented_taxon.page_section_total
+        index = 0
+      %>
       <% presented_taxon.sections.each do |section| %>
         <% if section[:show_section] %>
+          <%
+            index += 1 # increment index if section should be shown (otherwise could use each_with_index)
+            title = t(section[:id], scope: :content_purpose_supergroup, default: section[:title], locale: :en)
+          %>
           <div id="<%= section[:id] %>" class="taxon-page__section-group">
             <div class="govuk-grid-row">
               <div class="govuk-grid-column-two-thirds">
                 <%= render "govuk_publishing_components/components/heading", {
-                    text: t(section[:id], scope: :content_purpose_supergroup, default: section[:title]),
-                    heading_level: 2,
-                    margin_bottom: 3
+                  text: title,
+                  heading_level: 2,
+                  margin_bottom: 3
                 } %>
               </div>
             </div>
-            <%= render(
-                    partial: section[:partial_template],
-                    locals: { section: section }
-                )
-            %>
+            <%= content_tag(
+              :div,
+              data: {
+                module: "ga4-link-tracker",
+                ga4_track_links_only: "",
+                ga4_set_indexes: "",
+                ga4_link: {
+                  event_name: "navigation",
+                  type: "document list",
+                  index: {
+                    index_section: index,
+                    index_section_count: index_section_count
+                  },
+                  section: title
+                }
+              }) do %>
+              <%= render(partial: section[:partial_template], locals: { section: section }) %>
+            <% end %>
           </div>
         <% end %>
       <% end %>
 
-      <%= render partial: 'organisations', locals: { presented_organisations: presented_taxon.organisations_section} %>
+      <%= render partial: 'organisations', locals: { presented_organisations: presented_taxon.organisations_section, index_section: presented_taxon.count_sections + 1, index_section_count: index_section_count } %>
 
       <% if presented_taxon.show_subtopic_grid? %>
-        <div id="sub-topics" class="taxon-page__section-group">
+        <div id="sub-topics" class="taxon-page__section-group" data-module="ga4-link-tracker">
           <%= render "govuk_publishing_components/components/heading", {
-              text: t('taxons.explore_sub_topics'),
-              heading_level: 2,
-              margin_bottom: 3
+            text: t('taxons.explore_sub_topics'),
+            heading_level: 2,
+            margin_bottom: 3
           } %>
 
           <%= render 'govuk_publishing_components/components/document_list',
-                     items: presented_taxon.child_taxons.each_with_index.map { |child_taxon, index| { link: { text: child_taxon.title, path: child_taxon.preferred_url, data_attributes: presented_taxon.options_for_child_taxon(index: index) }} },
-                     margin_bottom: true
+            items: presented_taxon.child_taxons.each_with_index.map { |child_taxon, index| { link: { text: child_taxon.title, path: child_taxon.preferred_url, data_attributes: presented_taxon.options_for_child_taxon(index: index) }} }
           %>
-
         </div>
       <% end %>
     </div>
