@@ -26,7 +26,7 @@
         <% if section[:show_section] %>
           <%
             index += 1 # increment index if section should be shown (otherwise could use each_with_index)
-            title = t(section[:id], scope: :content_purpose_supergroup, default: section[:title])
+            title = t(section[:id], scope: :content_purpose_supergroup, default: section[:title], locale: :en)
           %>
           <div id="<%= section[:id] %>" class="taxon-page__section-group">
             <div class="govuk-grid-row">

@@ -45,7 +45,7 @@ class TaxonPresenter
           index_section_count: page_section_total.to_s,
         },
         index_total: child_taxons.count,
-        section: I18n.t("taxons.explore_sub_topics"),
+        section: I18n.t("taxons.explore_sub_topics", locale: :en),
       },
     }
   end
