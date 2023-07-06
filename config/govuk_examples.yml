@@ -1,14 +1,21 @@
 ---
 coronavirus_landing_page: /coronavirus
+embassies: /world/embassies
+embassy: /world/organisations/british-embassy-kabul
 finder: /government/organisations
+government_feed: /government/feed
+historic_appointments: /government/history/past-chancellors
 mainstream_browse_page: /browse/driving
 ministerial_role: /government/ministers/secretary-of-state-for-education
 organisation: /government/organisations/companies-house
-past_prime_minister: /government/history/past-prime-ministers/tony-blair
+organisation_feed: /government/organisations/companies-house.atom
+past_prime_ministers: /government/history/past-prime-ministers
 person: /government/people/matthew-hancock
 services_and_information: /government/organisations/hm-revenue-customs/services-information
 step_by_step_nav: /get-tax-free-childcare
 taxon: /transport/driving-and-motorcycle-tests
 topic: /topic/personal-tax/self-assessment
+topic_latest_docs: /topic/personal-tax/self-assessment/latest
 topical_event: /government/topical-events/autumn-statement-2022
 world_location_news: /world/ukraine/news
+world_wide_taxon: /world/ukraine
