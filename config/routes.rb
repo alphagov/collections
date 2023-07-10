@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   )
 
   ["/coronavirus-taxon", "/coronavirus-taxon/*slug"].each do |path|
-    get path, to: "taxons_redirection#redirect"
+    get path => redirect("/coronavirus", status: 307)
   end
 
   get "/coronavirus", to: "coronavirus_landing_page#show", as: :coronavirus_landing_page
