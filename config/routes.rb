@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # content-store (by collections-publisher) - whenever the routes below
   # change, also change the routes claimed by collections-publisher.
 
-  get "/", to: redirect(path: :browse)
+  root to: "development#index"
 
   mount GovukPublishingComponents::Engine, at: "/component-guide"
 
