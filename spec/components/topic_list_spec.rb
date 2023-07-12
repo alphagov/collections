@@ -37,6 +37,85 @@ RSpec.describe "topic_list component", type: :view do
     expect(rendered).to have_selector(".app-c-topic-list__link[data-test='test']")
   end
 
+  it "sets GA4 data attributes correctly" do
+    ga4_data = {
+      index: {
+        index_section: 1,
+        index_section_count: 1,
+      },
+      section: "Simple item",
+    }
+
+    expected = {
+      "event_name": "navigation",
+      "type": "document list",
+      "index": {
+        "index_link": 1,
+        "index_section": 1,
+        "index_section_count": 1,
+      },
+      "index_total": 1,
+      "section": "Simple item",
+    }.to_json
+
+    render_component(items: [simple_item], ga4_data:)
+
+    assert_select ".govuk-link" do |link|
+      expect(link.attr("data-ga4-link").to_s).to eq expected
+    end
+  end
+
+  it "does not set index_section and index_section_count if they aren't passed" do
+    ga4_data = {
+      section: "Simple item",
+    }
+
+    expected = {
+      "event_name": "navigation",
+      "type": "document list",
+      "index": {
+        "index_link": 1,
+      },
+      "index_total": 1,
+      "section": "Simple item",
+    }.to_json
+
+    render_component(items: [simple_item], ga4_data:)
+
+    assert_select ".govuk-link" do |link|
+      expect(link.attr("data-ga4-link").to_s).to eq expected
+    end
+  end
+
+  it "correctly sets the indexes when a see more link is loaded" do
+    ga4_data = {
+      section: "Simple item",
+    }
+
+    render_component(items: [simple_item], see_more_link:, ga4_data:)
+
+    assert_select "[data-ga4-link]" do |links|
+      links.each_with_index do |link, index|
+        expected = {
+          "event_name": "navigation",
+          "type": "document list",
+          "index": {
+            "index_link": index + 1,
+          },
+          "index_total": 2,
+          "section": "Simple item",
+        }.to_json
+
+        expect(link.attr("data-ga4-link").to_s).to eq expected
+      end
+    end
+  end
+
+  it "does not set GA4 data attributes if it doesn't receive GA4 data" do
+    render_component(items: [simple_item])
+    expect(rendered).not_to have_selector("[data-ga4-link]")
+  end
+
   it "renders a see more link" do
     render_component(items: [simple_item], see_more_link:)
     expect(rendered).to have_selector(".app-c-topic-list__item a[href='/more'][data-test='test']", text: "More")

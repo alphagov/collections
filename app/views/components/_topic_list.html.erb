@@ -4,6 +4,7 @@
   see_more_link ||= false
   small ||= false
   margin_bottom ||= false
+  ga4_data ||= {}
 
   brand ||= false
   brand_helper = GovukPublishingComponents::AppHelpers::BrandHelper.new(brand)
@@ -15,13 +16,29 @@
 %>
 <% if items.any? %>
   <%= tag.ul(class: ul_classes, lang: "en") do %>
-    <% items.each do |item| %>
+    <% items.each_with_index do |item, index| %>
       <li class="app-c-topic-list__item">
+        <% 
+          ga4_link_data = ga4_data.empty? ? {} : {
+            ga4_link: {
+              event_name: "navigation",
+              type: "document list",
+              index: {
+                index_link: index + 1,
+                **ga4_data[:index] || {},
+              },
+              # As see_more_link is not included in the items array, we need to account for it here by adding 1 to items.count
+              # if see_more_link has been passed
+              index_total: (see_more_link ? items.count + 1 : items.count),
+              section: ga4_data[:section],
+            }
+          }
+        %>
         <%=
           link_to(
             item[:text],
             item[:path],
-            data: item[:data_attributes],
+            data: {**item[:data_attributes] || {}}.merge(ga4_link_data),
             "aria-label": item[:aria_label],
             class: "govuk-link govuk-link--no-underline app-c-topic-list__link #{brand_helper.color_class}"
           )
@@ -30,11 +47,25 @@
     <% end %>
     <% if see_more_link %>
       <li class="app-c-topic-list__item">
+        <% 
+          ga4_link_data = ga4_data.empty? ? {} : {
+            ga4_link: {
+              event_name: "navigation",
+              type: "document list",
+              index: {
+                index_link: items.count + 1,
+                **ga4_data[:index] || {},
+              },
+              index_total: items.count + 1,
+              section: ga4_data[:section],
+            }
+          }
+        %>
         <%=
           link_to(
             see_more_link[:text],
             see_more_link[:path],
-            data: see_more_link[:data_attributes],
+            data: {**see_more_link[:data_attributes] || {}}.merge(ga4_link_data),
             class: "govuk-link app-c-topic-list__link #{brand_helper.color_class}"
           )
         %>
