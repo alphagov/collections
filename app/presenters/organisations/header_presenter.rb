@@ -115,7 +115,6 @@ module Organisations
         department-for-environment-food-rural-affairs
         hm-revenue-customs
         marine-management-organisation
-        maritime-and-coastguard-agency
         natural-england
       ]
       return true if orgs_with_services_and_information_link.include?(org.slug)
