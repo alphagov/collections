@@ -114,7 +114,6 @@ module Organisations
         department-for-education
         department-for-environment-food-rural-affairs
         hm-revenue-customs
-        marine-management-organisation
         natural-england
       ]
       return true if orgs_with_services_and_information_link.include?(org.slug)
