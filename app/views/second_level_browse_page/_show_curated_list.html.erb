@@ -10,7 +10,7 @@
   <div class="browse__section <%= 'browse__section--top-border' if is_not_first_section %>" >
     <%= render partial: "shared/browse_heading", locals: { title: list.title } %>
 
-    <%= render partial: "links", locals: { list: list.contents, list_index: list_index, index_section_count: index_section_count.to_s } %>
+    <%= render partial: "links", locals: { list: list.contents, list_index: list_index, index_section_count: index_section_count.to_s, section: list.title } %>
   </div>
 <% end %>
 

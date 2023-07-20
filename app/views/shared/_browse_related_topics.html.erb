@@ -10,6 +10,6 @@
       } %>
     </div>
 
-    <%= render partial: "links", locals: { list: page.related_topics, list_index: page.lists.count, track_action: "moreLink", index_section_count: index_section_count } %>
+    <%= render partial: "links", locals: { list: page.related_topics, list_index: page.lists.count, track_action: "moreLink", index_section_count: index_section_count, section: t("second_level_browse.more_on_this_topic", locale: :en) } %>
   </div>
 <% end %>

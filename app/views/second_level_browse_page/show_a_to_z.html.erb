@@ -46,7 +46,7 @@
         <div class="browse__section">
           <%= render partial: "shared/browse_heading", locals: { title: list.title } %>
 
-          <%= render partial: "links", locals: { list: list.contents, list_index: list_index, index_section_count: index_section_count.to_s } %>
+          <%= render partial: "links", locals: { list: list.contents, list_index: list_index, index_section_count: index_section_count.to_s, section: list.title } %>
         </div>
       <% end %>
       <%= render partial: "shared/browse_related_topics", locals: { page: page, index_section_count: index_section_count.to_s } %>
