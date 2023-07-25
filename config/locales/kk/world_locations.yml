@@ -1,0 +1,21 @@
+---
+kk:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Елі немесе территориясы бойынша іздеу
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: Халықаралық делегация
+        other: Халықаралық делегациялар
+      world_location:
+        one: Әлемдегі орын
+        other: Әлемдегі орындар

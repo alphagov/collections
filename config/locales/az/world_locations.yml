@@ -1,0 +1,21 @@
+---
+az:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Ölkəyə və ya əraziyə əsasən axtarın
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: Beynəlxalq səlahiyyətin ötürülməsi
+        other: Beynəlxalq səlahiyyətlərin ötürülməsi
+      world_location:
+        one: Dünya üzrə yeri
+        other: Dünya üzrə yerləri

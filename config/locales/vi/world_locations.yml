@@ -1,0 +1,19 @@
+---
+vi:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Tìm kiếm theo quốc gia hoặc lãnh thổ
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        other: Phái đoàn quốc tế
+      world_location:
+        other: Các vị trí trên thế giới

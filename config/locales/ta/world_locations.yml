@@ -1,0 +1,21 @@
+---
+ta:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: நாடு அல்லது பிரதேசம் வாரியாகத் தேடு
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: சர்வதேச தூதுக்குழு
+        other: சர்வதேச தூதுக்குழுக்கள்
+      world_location:
+        one: உலக இருப்பிடம்
+        other: உலக இருப்பிடங்கள்

@@ -1,0 +1,19 @@
+---
+zh-tw:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: 按國家或地區搜索
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        other: 國際代表團
+      world_location:
+        other: 世界地點

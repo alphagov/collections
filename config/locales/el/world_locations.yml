@@ -1,0 +1,21 @@
+---
+el:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Αναζήτηση ανά χώρα ή περιοχή
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: Διεθνής αντιπροσωπεία
+        other: Διεθνείς αντιπροσωπείες
+      world_location:
+        one: Παγκόσμια τοποθεσία
+        other: Παγκόσμιες τοποθεσίες

@@ -1,0 +1,21 @@
+---
+da:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Søg efter land eller område
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: Internationale delegation
+        other: Internationale delegationer
+      world_location:
+        one: Verden Placering
+        other: Verden Placeringer

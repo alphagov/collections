@@ -1,0 +1,19 @@
+---
+ja:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: 国または地域で検索
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        other: 国際代表団
+      world_location:
+        other: 世界の場所

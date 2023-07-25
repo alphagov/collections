@@ -1,0 +1,21 @@
+---
+pa:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: ਦੇਸ਼ ਜਾਂ ਖੇਤਰ ਦੁਆਰਾ ਖੋਜ ਕਰੋ
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: ਅੰਤਰਰਾਸ਼ਟਰੀ ਵਫਦ
+        other: ਅੰਤਰਰਾਸ਼ਟਰੀ ਵਫਦ
+      world_location:
+        one: ਵਿਸ਼ਵ ਸਥਾਨ
+        other: ਵਿਸ਼ਵ ਸਥਾਨ

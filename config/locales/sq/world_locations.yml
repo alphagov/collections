@@ -1,0 +1,21 @@
+---
+sq:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Kërkoni sipas vendit ose territorit
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: Delegacion ndërkombëtar
+        other: Delegacione ndërkombëtare
+      world_location:
+        one: Vendndodhja globale
+        other: Vendndodhjet globale

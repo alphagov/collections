@@ -1,0 +1,21 @@
+---
+bg:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Търсене по страна или територия
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: Международна делегация
+        other: Международни делегации
+      world_location:
+        one: Местоположение по света
+        other: Местоположения по света

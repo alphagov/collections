@@ -1,0 +1,21 @@
+---
+yi:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search:
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one:
+        other:
+      world_location:
+        one:
+        other:

@@ -1,0 +1,21 @@
+---
+bn:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: দেশ বা অঞ্চল হিসেবে অনুসন্ধান করুন
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: আন্তর্জাতিক প্রতিনিধি
+        other: আন্তর্জাতিক প্রতিনিধিগণ
+      world_location:
+        one: বিশ্বের অবস্থান
+        other: বিশ্বের অবস্থানসমূহ

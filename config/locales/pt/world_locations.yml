@@ -1,0 +1,21 @@
+---
+pt:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Pesquisa por país ou território
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: Delegação internacional
+        other: Delegações internacionais
+      world_location:
+        one: Local mundial
+        other: Locais mundiais

@@ -1,0 +1,21 @@
+---
+tr:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Ülkeye veya bölgeye göre arama yapın
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: Uluslararası delegasyon
+        other: Uluslararası delegasyonlar
+      world_location:
+        one: Dünya geneli konum
+        other: Dünya geneli konumlar

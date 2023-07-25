@@ -1,0 +1,21 @@
+---
+sv:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Sök efter land eller område
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: Internationell delegation
+        other: Internationella delegationer
+      world_location:
+        one: Plats i världen
+        other: Platser i världen

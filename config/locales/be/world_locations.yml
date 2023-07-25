@@ -1,0 +1,25 @@
+---
+be:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Пошук па краіне або тэрыторыі
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        few:
+        many:
+        one: Міжнародная дэлегацыя
+        other: Міжнародныя дэлегацыі
+      world_location:
+        few:
+        many:
+        one: Месцазнаходжанне ў свеце
+        other: Мы ў свеце

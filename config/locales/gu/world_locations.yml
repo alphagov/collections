@@ -1,0 +1,21 @@
+---
+gu:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: દેશ અથવા ટેરિટરીથી શોધો
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: આંતરરાષ્ટ્રીય પ્રતિનિધિમંડળ
+        other: આંતરરાષ્ટ્રીય પ્રતિનિધિમંડળો
+      world_location:
+        one: વર્લ્ડ લોકેશન
+        other: વર્લ્ડ લોકેશન્સ

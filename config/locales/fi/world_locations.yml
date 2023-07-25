@@ -1,0 +1,21 @@
+---
+fi:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Hae maan tai alueen mukaan
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: Kansainvälinen valtuuskunta
+        other: Kansainväliset valtuuskunnat
+      world_location:
+        one: Maailman sijainti
+        other: Maailman sijainnit

@@ -1,0 +1,21 @@
+---
+lv:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Meklēt pēc valsts vai teritorijas
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: Starptautiskā delegācija
+        other: Starptautiskās delegācijas
+      world_location:
+        one: Vieta pasaulē
+        other: Vietas pasaulē

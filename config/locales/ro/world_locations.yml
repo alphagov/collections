@@ -1,0 +1,23 @@
+---
+ro:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Căutați după țară sau teritoriu
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        few:
+        one: Delegare internațională
+        other: Delegări internaționale
+      world_location:
+        few:
+        one: Locație pe glob
+        other: Locații pe glob

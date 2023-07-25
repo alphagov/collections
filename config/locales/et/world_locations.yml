@@ -1,0 +1,21 @@
+---
+et:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Otsige riigi või territooriumi järgi
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: Rahvusvaheline delegatsioon
+        other: Rahvusvahelised delegatsioonid
+      world_location:
+        one: Maailma asukoht
+        other: Maailma asukohad

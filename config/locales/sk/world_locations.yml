@@ -1,0 +1,23 @@
+---
+sk:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Vyhľadávanie podľa krajiny alebo územia
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        few:
+        one: Medzinárodná delegácia
+        other: Medzinárodné delegácie
+      world_location:
+        few:
+        one: Umiestnenie vo svete
+        other: Svetové lokality
