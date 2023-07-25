@@ -46,6 +46,37 @@
       </ol>
     </div>
   </section>
+
+  <section id="<%= I18n.t("world_locations.type.international_delegation", count: 2).parameterize %>">
+    <div class="govuk-grid-column-one-third">
+      <header class="type-heading">
+        <h2 class="world-locations-heading"><%= I18n.t("world_locations.type.international_delegation", count: 2) %></h2>
+        <p class="govuk-visually-hidden"><%= t('world_locations.count_prefix') %>
+          <span class="js-accessible-item-count"><%= @presented_index.international_delegations_count %></span> <%= I18n.t("world_locations.type.international_delegation", count: 2) %>
+        </p>
+        <%= render "govuk_publishing_components/components/big_number", {
+          number: @presented_index.international_delegations_count,
+          aria: {
+            hidden: true,
+          },
+        } %>
+      </header>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <ol class="world-locations-groups">
+        <div class="world-locations-group">
+          <ol class="world-locations-group__list">
+            <% @presented_index.international_delegations.each do |delegation| %>
+              <li class="world_locations-group__item">
+                <%= @presented_index.world_location_link(delegation) %>
+              </li>
+            <% end %>
+          </ol>
+        </div>
+      </ol>
+    </div>
+  </section>
 </div>
 
 <p class="govuk-body govuk-!-static-padding-top-6">

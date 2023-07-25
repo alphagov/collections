@@ -44,4 +44,12 @@ RSpec.feature "World index page" do
       expect(page).to_not have_link("United Kingdom")
     end
   end
+
+  scenario "renders links to international delegations" do
+    international_delegations_section = page.find("section", id: "international-delegations")
+
+    within international_delegations_section do
+      expect(page).to have_link("The UK Permanent Delegation to the OECD (Organisation for Economic Co-operation and Development)", href: "/world/the-uk-permanent-delegation-to-the-oecd-organisation-for-economic-co-operation-and-development")
+    end
+  end
 end

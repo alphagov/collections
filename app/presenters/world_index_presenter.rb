@@ -2,6 +2,7 @@ class WorldIndexPresenter
   include ActionView::Helpers::UrlHelper
 
   delegate :count, to: :world_locations, prefix: true
+  delegate :count, to: :international_delegations, prefix: true
 
   def initialize(world_index)
     @world_index = world_index
@@ -15,6 +16,10 @@ class WorldIndexPresenter
     world_locations
       .group_by { |location| location_group(location) }
       .sort
+  end
+
+  def international_delegations
+    details["international_delegations"]
   end
 
   def world_location_link(world_location)
