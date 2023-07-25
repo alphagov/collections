@@ -1,5 +1,6 @@
 <% content_for :title, @presented_index.title %>
-<% page_class "world-index" %>
+<% page_class "world-locations" %>
+<% add_view_stylesheet("world_index") %>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -9,6 +10,42 @@
 
     <p class="govuk-body"><%= t('world_locations.content.find_out') %></p>
   </div>
+</div>
+
+<div class="govuk-grid-row">
+  <section id="<%= I18n.t("world_locations.type.world_location", count: 2) %>">
+    <div class="govuk-grid-column-one-third">
+      <header class="type-heading">
+        <h2 class="world-locations-heading"><%= I18n.t("world_locations.type.world_location", count: 2) %></h2>
+        <p class="govuk-visually-hidden"><%= t('world_locations.count_prefix') %>
+          <span class="js-accessible-item-count"><%= @presented_index.world_locations_count %></span> <%= I18n.t("world_locations.type.world_location", count: 2) %>
+        </p>
+        <%= render "govuk_publishing_components/components/big_number", {
+          number: @presented_index.world_locations_count,
+          aria: {
+            hidden: true,
+          }
+        } %>
+      </header>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <ol class="world-locations-groups">
+        <% @presented_index.grouped_world_locations.each do |letter, locations| %>
+          <div class="world-locations-group">
+            <h3 class="world-locations-group__letter"><%= letter %></h3>
+            <ol class="world-locations-group__list">
+              <% locations.each do |location| %>
+                <li class="world_locations-group__item">
+                  <%= @presented_index.world_location_link(location) %>
+                </li>
+              <% end %>
+            </ol>
+          </div>
+        <% end %>
+      </ol>
+    </div>
+  </section>
 </div>
 
 <p class="govuk-body govuk-!-static-padding-top-6">

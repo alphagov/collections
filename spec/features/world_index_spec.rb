@@ -27,4 +27,21 @@ RSpec.feature "World index page" do
   scenario "renders a link to all foreign office posts" do
     expect(page).to have_link("list of overseas Foreign, Commonwealth & Development Office posts", href: "/government/publications/list-of-foreign-office-posts")
   end
+
+  scenario "renders links to world locations when they are active" do
+    z_links = page.find(".world-locations-group__letter", text: "Z").sibling("ol")
+
+    within z_links do
+      expect(page).to have_link("Zambia", href: "/world/zambia")
+    end
+  end
+
+  scenario "renders world location names as text when they are inactive" do
+    u_links = page.find(".world-locations-group__letter", text: "U").sibling("ol")
+
+    within u_links do
+      expect(page).to have_content("United Kingdom")
+      expect(page).to_not have_link("United Kingdom")
+    end
+  end
 end

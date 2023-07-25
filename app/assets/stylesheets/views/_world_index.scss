@@ -1,0 +1,33 @@
+@import "govuk_publishing_components/individual_component_support";
+
+.world-locations {
+  .world-locations-heading {
+    @include govuk-font(19);
+  }
+
+  .world-locations-groups {
+    padding: govuk-spacing(5) 0 0 0;
+  }
+
+  .world-locations-group__list {
+    padding: 0;
+  }
+
+  .world-locations-group {
+    margin-bottom: govuk-spacing(6);
+  }
+
+  .world-locations-group__letter {
+    @include govuk-font(80);
+    font-weight: bold;
+    text-indent: -4px;
+    margin: 0;
+  }
+
+  .world_locations-group__item {
+    list-style-type: none;
+    border-bottom: 1px solid govuk-colour("mid-grey");
+    padding: govuk-spacing(1) 0;
+    @include govuk-font(19);
+  }
+}
