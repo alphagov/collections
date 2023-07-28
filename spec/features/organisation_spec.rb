@@ -177,7 +177,7 @@ RSpec.describe "Organisation pages" do
     visit "/government/organisations/attorney-generals-office"
     expect(page).to have_css("section#latest-documents")
     expect(page).to have_css(".gem-c-heading", text: "Latest from the Attorney General's Office")
-    expect(page).to have_css(".gem-c-document-list__item-title[href='/government/news/attorney-general-launches-recruitment-campaign-for-new-chief-inspector']", text: "Attorney General launches recruitment campaign for new Chief Inspector")
+    expect(page).to have_css(".gem-c-document-list__item-title [href='/government/news/attorney-general-launches-recruitment-campaign-for-new-chief-inspector']", text: "Attorney General launches recruitment campaign for new Chief Inspector")
     expect(page).to have_css(".gem-c-document-list__attribute", text: "Press release")
     expect(page).to have_css(".gem-c-document-list__attribute time[datetime='2020-07-26']", text: "26 July 2020")
   end
@@ -206,7 +206,7 @@ RSpec.describe "Organisation pages" do
     visit "/government/organisations/attorney-generals-office"
     expect(page).to have_css(".gem-c-heading", text: "Documents")
     expect(page).to have_css(".gem-c-heading", text: "News and communications")
-    expect(page).to have_css(".gem-c-document-list__item-title[href='/content-item-1']", text: "Content item 1")
+    expect(page).to have_css(".gem-c-document-list__item-title [href='/content-item-1']", text: "Content item 1")
     expect(page).to have_css(".gem-c-heading", text: "Transparency")
     expect(page).to have_css(".gem-c-heading", text: "Guidance and regulation")
     expect(page).not_to have_css(".gem-c-heading", text: "Services")
