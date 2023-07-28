@@ -246,13 +246,13 @@ module TaxonBrowsingHelper
   end
 
   def mainstream_content_list_item_test(item)
-    expect(page).to have_selector(".gem-c-document-list__item-title[href=\"#{item['link']}\"]", text: item["title"])
+    expect(page).to have_selector(".gem-c-document-list__item-title [href=\"#{item['link']}\"]", text: item["title"])
     expect(page).to have_selector(".gem-c-document-list__item-description", text: item["description"])
     expect(page).not_to have_content(expected_organisations(item))
   end
 
   def all_other_sections_list_item_test(item)
-    expect(page).to have_selector(".gem-c-document-list__item-title[href=\"#{item['link']}\"]", text: item["title"])
+    expect(page).to have_selector(".gem-c-document-list__item-title [href=\"#{item['link']}\"]", text: item["title"])
     expect(page).to have_selector(".gem-c-document-list__attribute time", text: item["public_updated_at"])
     expect(page).to have_selector(".gem-c-document-list__attribute", text: item["content_store_document_type"].humanize)
     expect(page).to have_content(expected_organisations(item))

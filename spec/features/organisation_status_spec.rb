@@ -255,7 +255,7 @@ RSpec.feature "Organisation status" do
     expect(page).to have_content(/This organisation has a status of joining./i)
     expect(page).not_to have_selector(".gem-c-heading", text: "Documents")
     expect(page).not_to have_selector(".gem-c-heading", text: "News and communications")
-    expect(page).not_to have_selector(".gem-c-document-list__item-title[href='/content-item-1']", text: "Content item 1")
+    expect(page).not_to have_selector(".gem-c-document-list__item-title [href='/content-item-1']", text: "Content item 1")
     expect(page).not_to have_selector(".gem-c-heading", text: "Transparency")
     expect(page).not_to have_selector(".gem-c-heading", text: "Guidance and regulation")
   end
@@ -311,7 +311,7 @@ RSpec.feature "Organisation status" do
     visit "/government/organisations/fire-service-college"
     expect(page).to have_selector(".gem-c-heading", text: "Documents")
     expect(page).to have_selector(".gem-c-heading", text: "News and communications")
-    expect(page).to have_selector(".gem-c-document-list__item-title[href='/content-item-1']", text: "Content item 1")
+    expect(page).to have_selector(".gem-c-document-list__item-title [href='/content-item-1']", text: "Content item 1")
     expect(page).to have_selector(".gem-c-heading", text: "Transparency")
     expect(page).to have_selector(".gem-c-heading", text: "Guidance and regulation")
     expect(page).not_to have_selector(".gem-c-heading", text: "Services")
