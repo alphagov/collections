@@ -2,7 +2,7 @@
 /* eslint-env jasmine */
 /* eslint-disable no-var */
 
-describe('organisation-list-filter.js', function () {
+describe('list-filter.js', function () {
   'use strict'
 
   var timeout = 210
