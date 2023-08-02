@@ -1,0 +1,23 @@
+<% content_for :title, @presented_index.title %>
+<% page_class "world-index" %>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <%= render "govuk_publishing_components/components/title", {
+      title: @presented_index.title
+    } %>
+
+    <p class="govuk-body"><%= t('world_locations.content.find_out') %></p>
+  </div>
+</div>
+
+<p class="govuk-body govuk-!-static-padding-top-6">
+  <%= t('world_locations.content.complete_list', 
+      href: 
+        link_to(
+        t('world_locations.content.list_link'), 
+        "/government/publications/list-of-foreign-office-posts", 
+        class: "govuk-link")
+    ).html_safe
+  %>
+</p>

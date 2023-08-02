@@ -101,6 +101,8 @@ Rails.application.routes.draw do
     get "/:slug", to: "step_nav#show"
   end
 
+  get "/world", to: "world#index"
+
   get "/world/embassies",
       to: "embassies#index",
       as: :embassies
