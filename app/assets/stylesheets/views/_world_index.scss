@@ -30,4 +30,20 @@
     padding: govuk-spacing(1) 0;
     @include govuk-font(19);
   }
+
+  .filter-list__form {
+    display: none;
+  }
+
+  .filter-list__form--active {
+    display: block;
+  }
+
+  .js-hidden {
+    display: none;
+  }
+
+  .filter-list__results {
+    padding-left: $govuk-gutter-half;
+  }
 }

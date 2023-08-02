@@ -41,6 +41,13 @@ describe('list-filter.js', function () {
             // Double space and line break added on purpose:
             '<div class="gem-c-organisation-logo__name">Ministry of  Funny\nWalks</div>' +
           '</li>' +
+          '<div data-filter="inner-block">' +
+            '<ol>' +
+              '<li data-filter="item" class="org-logo-4" data-filter-terms="Ministry of Inner Blocks MIB">' +
+                '<div class="gem-c-organisation-logo__name">Ministry of Inner Blocks</div>' +
+              '</li>' +
+            '</ol>' +
+          '</div>' +
         '</ol>' +
       '</div>' +
       '<div data-filter="block">' +
@@ -183,6 +190,28 @@ describe('list-filter.js', function () {
     window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
 
     setTimeout(function () {
+      expect($('.js-search-results')).toHaveText('1 result found')
+      done()
+    }, timeout)
+  })
+
+  it('hide inner blocks if they have no matching items', function (done) {
+    $('[data-filter="form"] input').val('Advisory cou')
+    window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
+
+    setTimeout(function () {
+      expect($('[data-filter="inner-block"]').first()).toHaveClass('js-hidden')
+      expect($('.js-search-results')).toHaveText('1 result found')
+      done()
+    }, timeout)
+  })
+
+  it('reveals inner blocks if they have matching items', function (done) {
+    $('[data-filter="form"] input').val('Ministry of Inner Blocks')
+    window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
+
+    setTimeout(function () {
+      expect($('[data-filter="inner-block"]').first()).not.toHaveClass('js-hidden')
       expect($('.js-search-results')).toHaveText('1 result found')
       done()
     }, timeout)

@@ -69,6 +69,21 @@ RSpec.describe WorldIndexPresenter do
     end
   end
 
+  describe "#filter_terms" do
+    let(:location) do
+      {
+        "name": "United Kingdom",
+        "slug": "united-kingdom",
+      }.with_indifferent_access
+    end
+
+    subject { world_index_presenter.filter_terms(location) }
+
+    it "returns the joined name and slug" do
+      expect(subject).to eq "united-kingdom United Kingdom"
+    end
+  end
+
   describe "#international_delegations_count" do
     subject { world_index_presenter.international_delegations_count }
 

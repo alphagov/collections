@@ -77,9 +77,16 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       var matchingItems = block.querySelectorAll('[data-filter="item"]')
       var matchingItemCount = 0
 
+      var innerBlocks = block.querySelectorAll('[data-filter="inner-block"]')
+      for (var r = 0; r < innerBlocks.length; r++) {
+        innerBlocks[r].classList.add('js-hidden')
+      }
+
       for (var j = 0; j < matchingItems.length; j++) {
         if (!matchingItems[j].classList.contains('js-hidden')) {
           matchingItemCount++
+
+          if (matchingItems[j].closest('[data-filter="inner-block"]') !== null) { matchingItems[j].closest('[data-filter="inner-block"]').classList.remove('js-hidden') }
         }
       }
 

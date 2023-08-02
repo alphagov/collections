@@ -29,6 +29,13 @@ class WorldIndexPresenter
     link_to world_location["name"], path, class: "govuk-link"
   end
 
+  def filter_terms(world_location)
+    slug = world_location["slug"]
+    name = world_location["name"]
+
+    [slug, name].compact.join(" ")
+  end
+
 private
 
   def location_group(location)
