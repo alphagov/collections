@@ -7,27 +7,27 @@
   <meta name="govuk:scroll-tracker" content="" data-module="ga4-scroll-tracker"/>
 <% end %>
 
-<div data-module="filter-organisations">
+<div data-module="list-filter">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <%= render "govuk_publishing_components/components/title", {
           title: @presented_organisations.title
       } %>
 
-      <form class="filter-organisations-list__form" data-filter="form" role="search" aria-label="Departments, agencies and public bodies">
+      <form class="filter-list__form" data-filter="form" role="search" aria-label="Departments, agencies and public bodies">
         <%= render "govuk_publishing_components/components/input", {
           label: {
             text: t("organisations.search_for_department")
           },
           name: "search-box",
           id: "filter-organisations-list",
-          controls: "organisations_search_results"
+          controls: "search_results"
         } %>
       </form>
     </div>
   </div>
 
-  <div class="organisations" id="organisations_search_results" role="region" aria-label="List of departments, agencies and public bodies">
+  <div class="organisations" id="search_results" role="region" aria-label="List of departments, agencies and public bodies">
     <%= render partial: 'organisations_list', locals: {
       all_organisations: @presented_organisations.all_organisations
     } %>

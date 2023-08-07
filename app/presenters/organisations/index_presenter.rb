@@ -31,6 +31,13 @@ module Organisations
       @organisations.content_item.title
     end
 
+    def filter_terms(organisation_type, organisation)
+      acronym = organisation["acronym"]
+      title = ministerial_organisation?(organisation_type) ? organisation["logo"]["formatted_title"].squish : organisation["title"]
+
+      [title, acronym].compact.join(" ")
+    end
+
     def all_organisations
       {
         number_10: @organisations.number_10,

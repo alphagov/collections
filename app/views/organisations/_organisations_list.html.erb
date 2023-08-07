@@ -8,11 +8,11 @@
           heading_level: 2,
           id: organisation_type
         } %>
-        <p class="govuk-visually-hidden"><%= t('organisations.count_prefix') %> <span class="js-accessible-department-count"><%= organisations.count %></span> <%= organisation_type.to_s.humanize %></p>
+        <p class="govuk-visually-hidden"><%= t('organisations.count_prefix') %> <span class="js-accessible-item-count"><%= organisations.count %></span> <%= organisation_type.to_s.humanize %></p>
         <%= render "govuk_publishing_components/components/big_number", {
           number: organisations.count,
           data_attributes: {
-            department_count: "true",
+            item_count: "true",
           },
           aria: {
             hidden: true,
@@ -22,14 +22,14 @@
     </div>
 
     <div class="govuk-grid-column-two-thirds <%= "organisations-list__without-number" if @presented_organisations.executive_office?(organisation_type) %>">
-      <ol data-filter="list">
+      <ol>
         <% organisations.each do |organisation| %>
           <%= content_tag :li, {
             class: "organisations-list__item",
             id: organisation['slug'],
             data: {
               filter: "item",
-              "filter-acronym": organisation["acronym"].presence,
+              "filter-terms": "#{@presented_organisations.filter_terms(organisation_type, organisation)}",
             },
           } do %>
             <% if @presented_organisations.ministerial_organisation?(organisation_type) %>
@@ -46,7 +46,7 @@
               </div>
             <% else %>
               <div class="govuk-!-margin-bottom-3">
-                <%= link_to(organisation["title"], organisation["href"], class: "organisation-list__item-title govuk-heading-s govuk-!-font-weight-regular govuk-!-display-inline govuk-!-margin-right-2 govuk-link") %>
+                <%= link_to(organisation["title"], organisation["href"], class: "list__item-title govuk-heading-s govuk-!-font-weight-regular govuk-!-display-inline govuk-!-margin-right-2 govuk-link") %>
               </div>
             <% end %>
 

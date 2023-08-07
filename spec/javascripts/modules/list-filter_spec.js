@@ -20,24 +20,24 @@ describe('list-filter.js', function () {
       '<input type="search" id="filter-organisations-list" />' +
     '</form>'
 
-  var organisations =
-    '<div id="organisations_search_results">' +
+  var items =
+    '<div id="search_results">' +
       '<div data-filter="block">' +
         '<div data-filter="count" class="count-for-logos">' +
           '<h2>Ministerial Departments</h2>' +
-          '<p>There are <span class="js-accessible-department-count">2</span> Ministerial Departments</p>' +
+          '<p>There are <span class="js-accessible-item-count">2</span> Ministerial Departments</p>' +
           '<div class="gem-c-big-number">' +
-            '<span class="gem-c-big-number__value" data-department-count="true">2</span>' +
+            '<span class="gem-c-big-number__value" data-item-count="true">2</span>' +
           '</div>' +
         '</div>' +
-        '<ol data-filter="list">' +
-          '<li data-filter="item" class="org-logo-1">' +
+        '<ol>' +
+          '<li data-filter="item" class="org-logo-1" data-filter-terms="Cabinet Office">' +
             '<div class="gem-c-organisation-logo__name">Cabinet Office</div>' +
           '</li>' +
-          '<li data-filter="item" class="org-logo-2" data-filter-acronym="CO">' +
+          '<li data-filter="item" class="org-logo-2" data-filter-terms="Cabinet Office CO">' +
             '<div class="gem-c-organisation-logo__name">Cabinet Office</div>' +
           '</li>' +
-          '<li data-filter="item" class="org-logo-3" data-filter-acronym="MFW">' +
+          '<li data-filter="item" class="org-logo-3" data-filter-terms="Ministry of  Funny\nWalks MFW">' +
             // Double space and line break added on purpose:
             '<div class="gem-c-organisation-logo__name">Ministry of  Funny\nWalks</div>' +
           '</li>' +
@@ -46,17 +46,17 @@ describe('list-filter.js', function () {
       '<div data-filter="block">' +
         '<div data-filter="count" class="count-for-no-logos">' +
           '<h2>Non Ministerial Departments</h2>' +
-          '<p>There are <span class="js-accessible-department-count">2</span> Non Ministerial Departments</p>' +
+          '<p>There are <span class="js-accessible-item-count">2</span> Non Ministerial Departments</p>' +
           '<div class="gem-c-big-number">' +
-            '<span class="gem-c-big-number__value" data-department-count="true">2</span>' +
+            '<span class="gem-c-big-number__value" data-item-count="true">2</span>' +
           '</div>' +
         '</div>' +
-        '<ol data-filter="list">' +
-          '<li data-filter="item" class="org-no-logo-1">' +
-            '<a class="organisation-list__item-title">Advisory Committee on Releases to the Environment</a>' +
+        '<ol>' +
+          '<li data-filter="item" class="org-no-logo-1" data-filter-terms="Advisory Committee on Releases to the Environment">' +
+            '<a class="list__item-title">Advisory Committee on Releases to the Environment</a>' +
           '</li>' +
-          '<li data-filter="item" class="org-no-logo-2">' +
-            '<a class="organisation-list__item-title">Advisory Council on the Misuse of Drugs</a>' +
+          '<li data-filter="item" class="org-no-logo-2" data-filter-terms="Advisory Council on the Misuse of Drugs">' +
+            '<a class="list__item-title">Advisory Council on the Misuse of Drugs</a>' +
           '</li>' +
         '</ol>' +
       '</div>' +
@@ -66,10 +66,10 @@ describe('list-filter.js', function () {
     var wrapper = $('<div>').addClass('wrapper')
     wrapper.append(stubStyling)
     wrapper.append(form)
-    wrapper.append(organisations)
+    wrapper.append(items)
     $(document.body).append(wrapper)
 
-    new GOVUK.Modules.FilterOrganisations(wrapper[0]).init()
+    new GOVUK.Modules.ListFilter(wrapper[0]).init()
   })
 
   afterAll(function () {
@@ -108,7 +108,7 @@ describe('list-filter.js', function () {
     }, timeout)
   })
 
-  it('show items that do have acronyms that match the search term', function (done) {
+  it('show items that do have additional terms that match the search term', function (done) {
     $('[data-filter="form"] input').val('mfw')
     window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
 
@@ -119,7 +119,7 @@ describe('list-filter.js', function () {
     }, timeout)
   })
 
-  it('show items that do have acronyms and/or name that match the search term', function (done) {
+  it('show items that do have names or additional terms that match the search term', function (done) {
     $('[data-filter="form"] input').val('co')
     window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
 
@@ -132,7 +132,7 @@ describe('list-filter.js', function () {
     }, timeout)
   })
 
-  it('hides items that do not have acronyms and/or name that match the search term', function (done) {
+  it('hides items that do not have names or additional terms that match the search term', function (done) {
     $('[data-filter="form"] input').val('co')
     window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
 
@@ -144,7 +144,7 @@ describe('list-filter.js', function () {
     }, timeout)
   })
 
-  it('hide department counts and names if they have no matching organisations', function (done) {
+  it('hide department counts and names if they have no matching items', function (done) {
     $('[data-filter="form"] input').val('Advisory cou')
     window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
 
@@ -155,20 +155,20 @@ describe('list-filter.js', function () {
     }, timeout)
   })
 
-  it('update the department count', function (done) {
+  it('update the item count', function (done) {
     $('[data-filter="form"] input').val('Advisory cou')
     window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
 
     setTimeout(function () {
       expect($('.count-for-no-logos')).not.toHaveClass('js-hidden')
-      expect($('.count-for-no-logos .js-accessible-department-count')).toHaveText(1)
-      expect($('.count-for-no-logos [data-department-count="true"]')).toHaveText(1)
+      expect($('.count-for-no-logos .js-accessible-item-count')).toHaveText(1)
+      expect($('.count-for-no-logos [data-item-count="true"]')).toHaveText(1)
       expect($('.js-search-results')).toHaveText('1 result found')
       done()
     }, timeout)
   })
 
-  it('shows a message if there are no matching organisations', function (done) {
+  it('shows a message if there are no matching items', function (done) {
     $('[data-filter="form"] input').val('Nothing will match this')
     window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
 
@@ -178,7 +178,7 @@ describe('list-filter.js', function () {
     }, timeout)
   })
 
-  it('copes when organisation name contains line breaks and multiple spaces', function (done) {
+  it('copes when item name contains line breaks and multiple spaces', function (done) {
     $('[data-filter="form"] input').val('ministry of funny walks')
     window.GOVUK.triggerEvent($('[data-filter="form"] input')[0], 'keyup')
 
