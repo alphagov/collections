@@ -1,0 +1,23 @@
+---
+lt:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Ieškoti pagal šalį ar teritoriją
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        few:
+        one: Tarptautinė delegacija
+        other: Tarptautinės delegacijos
+      world_location:
+        few:
+        one: Geografinė vieta
+        other: Geografinės vietos

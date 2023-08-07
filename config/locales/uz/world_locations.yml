@@ -1,0 +1,21 @@
+---
+uz:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Мамлакат ёки минтақа бўйича излаш
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: Халқаро делегация
+        other: Халқаро делегациялар
+      world_location:
+        one: Жаҳондаги жойлашиш жойи
+        other: Жаҳондаги жойлашиш жойлари

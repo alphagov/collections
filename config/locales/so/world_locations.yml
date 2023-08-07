@@ -1,0 +1,21 @@
+---
+so:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Ku raadi dalka ama dhulka
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: Wafti caalami ah
+        other: Wafti caalami ah
+      world_location:
+        one: Goobta Dunida
+        other: Goobaha Dunida

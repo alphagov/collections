@@ -1,0 +1,21 @@
+---
+he:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: חפש לפי מדינה או שטח
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: משלחת בינלאומית
+        other: משלחות בינלאומיות
+      world_location:
+        one: מיקום גלובאלי
+        other: מיקומים גלובאליים

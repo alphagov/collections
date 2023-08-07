@@ -1,0 +1,21 @@
+---
+is:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Leita eftir landi eða landsvæði
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: Alþjóðleg sendinefnd
+        other: Alþjóðlegar sendinefndir
+      world_location:
+        one: Staðsetning í heiminum
+        other: Staðsetningar í heiminum

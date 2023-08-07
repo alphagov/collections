@@ -1,0 +1,29 @@
+---
+cy:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Chwilio yn ôl gwlad neu diriogaeth
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        few:
+        many:
+        one: Dirprwyaeth ryngwladol
+        other: Dirprwyaethau rhyngwladol
+        two:
+        zero:
+      world_location:
+        few:
+        many:
+        one: Lleoliad byd-eang
+        other: Lleoliadau byd-eang
+        two:
+        zero:

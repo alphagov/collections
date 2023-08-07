@@ -1,0 +1,19 @@
+---
+ko:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: 국가 또는 영토로 검색하기
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        other: 국제 대표단
+      world_location:
+        other: 월드 로케이션

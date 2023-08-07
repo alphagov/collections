@@ -1,0 +1,25 @@
+---
+uk:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Пошук за країною чи територією
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        few:
+        many:
+        one: Міжнародна делегація
+        other: Міжнародні делегації
+      world_location:
+        few:
+        many:
+        one: Світова локація
+        other: Світові локації

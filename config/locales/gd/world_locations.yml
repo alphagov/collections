@@ -1,0 +1,25 @@
+---
+gd:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Cuardaigh de réir tíre nó réigiúin
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        few:
+        one: Toscaireacht idirnáisiúnta
+        other: Toscaireacht idirnáisiúnta
+        two:
+      world_location:
+        few:
+        one: Seasamh ar domhan
+        other: Áit ar domhan
+        two:

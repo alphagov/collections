@@ -9,6 +9,6 @@
 //= require govuk_publishing_components/components/step-by-step-nav
 
 //= require support
-//= require modules/organisation-list-filter
+//= require modules/list-filter
 //= require modules/toggle-attribute
 //= require modules/coronavirus-landing-page

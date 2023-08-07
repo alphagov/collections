@@ -1,0 +1,19 @@
+---
+ms:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Cari mengikut negara atau wilayah
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        other: Perwakilan antarabangsa
+      world_location:
+        other: Lokasi dunia

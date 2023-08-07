@@ -1,0 +1,21 @@
+---
+pa-pk:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: مُلک یا علاقے توں لبھو
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: بین الاقوامی وفد
+        other: بین الاقوامی وفود
+      world_location:
+        one: دُنیا دا علاقہ
+        other: دُنیا دے علاقے

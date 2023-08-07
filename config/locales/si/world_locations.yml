@@ -1,0 +1,21 @@
+---
+si:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: රට හෝ භූමිය අනුව සොයන්න
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: ජාත්යන්තර නියෝජිත පිරිස
+        other: ජාත්යන්තර නියෝජිත පිරිස්
+      world_location:
+        one: ලෝක ස්ථානය
+        other: ලෝක ස්ථාන

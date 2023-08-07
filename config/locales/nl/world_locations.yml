@@ -1,0 +1,21 @@
+---
+nl:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Zoeken op land of gebied
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: Internationale delegatie
+        other: Internationale delegaties
+      world_location:
+        one: Wereldlocatie
+        other: Wereldlocaties

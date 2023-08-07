@@ -1,0 +1,25 @@
+---
+mt:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Fittex permezz tal-pajjiż jew territorju
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        few:
+        many:
+        one: Delegazzjoni internazzjonali
+        other: Delegazzjonijiet internazzjonali
+      world_location:
+        few:
+        many:
+        one: Post fid-dinja
+        other: Postijiet fid-dinja

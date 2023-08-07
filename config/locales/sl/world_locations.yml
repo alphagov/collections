@@ -1,0 +1,25 @@
+---
+sl:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Išči po državah ali ozemljih
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        few:
+        one: Mednarodna delegacija
+        other: Mednarodne delegacije
+        two:
+      world_location:
+        few:
+        one: Lokacija na svetu
+        other: Lokacije po svetu
+        two:

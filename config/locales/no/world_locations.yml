@@ -1,0 +1,21 @@
+---
+'no':
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Søk etter land eller territorium
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: Internasjonal delegasjon
+        other: Internasjonale delegasjoner
+      world_location:
+        one: Beliggenhet i verden
+        other: Beliggenheter i verden

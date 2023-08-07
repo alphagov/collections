@@ -1,0 +1,21 @@
+---
+hu:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Keresés ország vagy terület szerint
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: Nemzetközi delegáció
+        other: Nemzetközi delegációk
+      world_location:
+        one: Helyszín a világban
+        other: Helyszínek a világban

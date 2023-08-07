@@ -1,0 +1,21 @@
+---
+ka:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: მოძებნეთ ქვეყნის ან ტერიტორიის მიხედვით
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: საერთაშორისო დელეგაცია
+        other: საერთაშორისო დელეგაციები
+      world_location:
+        one: მსოფლიო მდებარეობა
+        other: მსოფლიო მდებარეობები

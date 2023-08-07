@@ -1,0 +1,21 @@
+---
+tk:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Döwlet ýa-da territoriýa boýunça gözlemek
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: Halkara delegasiýa
+        other: Halkara delegasiýalar
+      world_location:
+        one: Dünýä ýeri
+        other: Dünýä ýerleri

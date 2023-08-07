@@ -1,0 +1,21 @@
+---
+hy:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Որոնել ըստ երկրի կամ տարածաշրջանի
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: Միջազգային պատվիրակություն
+        other: Միջազգային պատվիրակություններ
+      world_location:
+        one: Գտնվելու վայրը
+        other: Գտնվելու վայրերը

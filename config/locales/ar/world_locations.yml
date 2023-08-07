@@ -1,0 +1,29 @@
+---
+ar:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: البحث حسب البلد أو الإقليم
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        few:
+        many:
+        one: وفد دولي
+        other: وفود دولية
+        two:
+        zero:
+      world_location:
+        few:
+        many:
+        one: موقع عالمي
+        other: مواقع عالمية
+        two:
+        zero:

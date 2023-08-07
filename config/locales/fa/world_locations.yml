@@ -1,0 +1,21 @@
+---
+fa:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: جستجو بر اساس کشور یا قلمرو
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: هیأت بین‌المللی
+        other: هیأت‌های بین‌المللی
+      world_location:
+        one: مکان جهانی
+        other: مکان‌های جهانی

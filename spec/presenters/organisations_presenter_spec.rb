@@ -216,6 +216,58 @@ RSpec.describe Organisations::IndexPresenter do
     end
   end
 
+  describe "#filter_terms" do
+    let(:organisations_presenter) { presenter_from_hash(ministerial_departments_hash) }
+
+    context "when ministerial organisation" do
+      let(:test_org_type) { :number_10 }
+
+      context "with no acronym" do
+        let(:test_org) { { logo: { formatted_title: "Prime Minister's Office, 10 Downing Street" } }.with_indifferent_access }
+
+        it "returns the formatted logo title" do
+          expect(organisations_presenter.filter_terms(test_org_type, test_org)).to eq "Prime Minister's Office, 10 Downing Street"
+        end
+      end
+
+      context "with acronym" do
+        let(:test_org) { { acronym: "Number 10", logo: { formatted_title: "Prime Minister's Office, 10 Downing Street" } }.with_indifferent_access }
+
+        it "returns the formatted logo title and acronym" do
+          expect(organisations_presenter.filter_terms(test_org_type, test_org)).to eq "Prime Minister's Office, 10 Downing Street Number 10"
+        end
+      end
+
+      context "when formatted title contains line breaks" do
+        let(:test_org) { { logo: { formatted_title: "Attorney \r\nGeneral's \r\nOffice" } }.with_indifferent_access }
+
+        it "returns the formatted logo title" do
+          expect(organisations_presenter.filter_terms(test_org_type, test_org)).to eq "Attorney General's Office"
+        end
+      end
+    end
+
+    context "when not ministerial organisation" do
+      let(:test_org_type) { :agencies_and_other_public_bodies }
+
+      context "with no acronym" do
+        let(:test_org) { { title: "Air Accidents Investigation Branch" }.with_indifferent_access }
+
+        it "returns the title" do
+          expect(organisations_presenter.filter_terms(test_org_type, test_org)).to eq "Air Accidents Investigation Branch"
+        end
+      end
+
+      context "with acronym" do
+        let(:test_org) { { acronym: "AAIB", title: "Air Accidents Investigation Branch" }.with_indifferent_access }
+
+        it "returns the title and acronym" do
+          expect(organisations_presenter.filter_terms(test_org_type, test_org)).to eq "Air Accidents Investigation Branch AAIB"
+        end
+      end
+    end
+  end
+
   def presenter_from_hash(content)
     content_item = ContentItem.new(content)
     content_store_organisations = ContentStoreOrganisations.new(content_item)

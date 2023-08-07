@@ -1,0 +1,21 @@
+---
+sw:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: Tafuta kulingana na nchi au eneo
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: Ujumbe wa kimataifa
+        other: Ujumbe wa kimataifa
+      world_location:
+        one: Eneo la kimataifa
+        other: Maeneo ya kimataifa

@@ -1,0 +1,21 @@
+---
+hi:
+  world_locations:
+    content:
+      complete_list:
+      find_out:
+      heading:
+      list_link:
+    count_prefix:
+    headings:
+      search: देश या क्षेत्र से खोजें
+    search_description:
+      international_delegation:
+      world_location:
+    type:
+      international_delegation:
+        one: अंतर्राष्ट्रीय प्रतिनिधिमंडल
+        other: अंतर्राष्ट्रीय प्रतिनिधिमंडल
+      world_location:
+        one: वैश्विक स्थान
+        other: वैश्विक स्थान
