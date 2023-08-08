@@ -26,6 +26,10 @@
         <% if section[:show_section] %>
           <%
             index += 1 # increment index if section should be shown (otherwise could use each_with_index)
+            index_total = section[:documents].length
+            # news and communications uses section[:documents_with_promoted]
+            index_total = section[:documents_with_promoted].length if section[:documents_with_promoted]
+            index_total += 1 if section[:see_more_link]
             title = t(section[:id], scope: :content_purpose_supergroup, default: section[:title], locale: :en)
           %>
           <div id="<%= section[:id] %>" class="taxon-page__section-group">
@@ -38,9 +42,8 @@
                 } %>
               </div>
             </div>
-            <%= content_tag(
-              :div,
-              data: {
+            <%
+              ga4_data = {
                 module: "ga4-link-tracker",
                 ga4_track_links_only: "",
                 ga4_set_indexes: "",
@@ -51,10 +54,30 @@
                     index_section: index,
                     index_section_count: index_section_count
                   },
+                  index_total: index_total,
                   section: title
                 }
-              }) do %>
+              }
+            %>
+            <%= content_tag(:div, data: ga4_data) do %>
               <%= render(partial: section[:partial_template], locals: { section: section }) %>
+            <% end %>
+            <% if section[:see_more_link] %>
+              <%= ga4_data[:ga4_link][:index][:index_link] %>
+              <%
+                ga4_data.except!(:ga4_set_indexes)
+                ga4_data[:ga4_link][:type] = 'see all'
+                docs = section[:documents_with_promoted] || section[:documents]
+                ga4_data[:ga4_link][:index][:index_link] = docs.length + 1
+              %>
+              <%= content_tag(:div, data: ga4_data) do %>
+                <%= link_to(
+                  section[:see_more_link][:text],
+                  section[:see_more_link][:url],
+                  data: section[:see_more_link][:data],
+                  class: "govuk-link"
+                )%>
+              <% end %>
             <% end %>
           </div>
         <% end %>
