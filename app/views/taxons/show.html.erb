@@ -27,8 +27,12 @@
           <%
             index += 1 # increment index if section should be shown (otherwise could use each_with_index)
             index_total = section[:documents].length
-            # news and communications uses section[:documents_with_promoted]
-            index_total = section[:documents_with_promoted].length if section[:documents_with_promoted]
+
+            # deals with the news and comms section
+            if section[:documents_with_promoted]
+              index_total = section[:documents_with_promoted].length
+              index_total = 1 if section[:documents].empty?
+            end
             index_total += 1 if section[:see_more_link]
             title = t(section[:id], scope: :content_purpose_supergroup, default: section[:title], locale: :en)
           %>
