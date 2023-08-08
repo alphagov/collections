@@ -23,7 +23,7 @@
       <%= render "govuk_publishing_components/components/signup_link", {
         link_text: t("shared.get_emails"),
         link_href: "/email-signup/?link=#{presented_taxon.base_path}",
-        link_aria_label: 'Sign up for email notifications about corporate information',
+        link_aria_label: t("shared.visually_hidden_get_emails", topic: presented_taxon.title),
         data: {
           "module": "gem-track-click",
           "track-category": "emailAlertLinkClicked",
