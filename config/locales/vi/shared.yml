@@ -227,3 +227,4 @@ vi:
         other: Tuyên bố bằng văn bản trước Quốc hội
     topics:
       title: "%{title}: thông tin chi tiết"
+    visually_hidden_get_emails:

@@ -333,3 +333,4 @@ hu:
         other: Írásbeli parlamenti nyilatkozatok
     topics:
       title: "%{title}: részletes információ"
+    visually_hidden_get_emails:

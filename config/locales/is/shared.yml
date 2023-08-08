@@ -333,3 +333,4 @@ is:
         other: Skriflegar yfirlýsingar til Þingsins
     topics:
       title: "%{title}: nákvæmar upplýsingar"
+    visually_hidden_get_emails:

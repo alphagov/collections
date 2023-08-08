@@ -345,3 +345,4 @@ da:
         other: Mundtlige erklæring til Parlamentet
     topics:
       title: "%{title}: detaljerede oplysninger"
+    visually_hidden_get_emails:

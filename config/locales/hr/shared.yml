@@ -545,3 +545,4 @@ hr:
         other: Pismene izjave Parlamentu
     topics:
       title: "%{title}: detaljne informacije"
+    visually_hidden_get_emails:

@@ -227,3 +227,4 @@ ko:
         other: 의회로 서면 성명
     topics:
       title: "%{title}: 상세 정보"
+    visually_hidden_get_emails:

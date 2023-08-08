@@ -545,3 +545,4 @@ gd:
         two:
     topics:
       title: "%{title}: faisnéis mhionsonraithe"
+    visually_hidden_get_emails:

@@ -333,3 +333,4 @@ fa:
         other: بیانیه‌های کتبی به پارلمان
     topics:
       title: "%{title}: اطلاعات جزئی"
+    visually_hidden_get_emails:
