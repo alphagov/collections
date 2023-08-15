@@ -1,7 +1,6 @@
 <%
   featured_item = section[:promoted_content].first
 %>
-
 <% if section[:documents].empty? %>
   <div class="taxon-page__featured-item taxon-page__featured-item--single">
     <%= render "govuk_publishing_components/components/image_card", {
@@ -25,14 +24,8 @@
 <% end %>
 
 <% if section[:documents].any? %>
-  <div>
-    <%= render 'govuk_publishing_components/components/document_list',
-      items: section[:documents_with_promoted],
-      margin_bottom: 7
-    %>
-<% else %>
-  <div class="taxon-page__featured-see-more">
+  <%= render 'govuk_publishing_components/components/document_list',
+    items: section[:documents_with_promoted],
+    margin_bottom: 7
+  %>
 <% end %>
-  <%= render partial: "taxons/sections/see_more_link", locals: { section: section } %>
-
-</div>

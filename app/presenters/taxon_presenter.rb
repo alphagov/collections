@@ -38,7 +38,7 @@ class TaxonPresenter
       track_options: {},
       ga4_link: {
         event_name: "navigation",
-        type: "document list",
+        type: "subtopic list",
         index: {
           index_link: (index + 1).to_s,
           index_section: page_section_total.to_s,
