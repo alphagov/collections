@@ -7,7 +7,7 @@ $c19-landing-page-header-background: govuk-colour("blue");
 .covid__page {
   .govuk-grid-column-one-third,
   .govuk-grid-column-two-thirds {
-    @media (max-width: 950px) {
+    @media (max-width: 950px) { // stylelint-disable-line media-feature-range-notation
       width: 100%;
     }
   }
