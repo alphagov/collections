@@ -113,7 +113,6 @@ module Organisations
       orgs_with_services_and_information_link = %w[
         department-for-education
         hm-revenue-customs
-        natural-england
       ]
       return true if orgs_with_services_and_information_link.include?(org.slug)
     end
