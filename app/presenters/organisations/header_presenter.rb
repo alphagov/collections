@@ -112,7 +112,6 @@ module Organisations
     def has_services_and_information_link?
       orgs_with_services_and_information_link = %w[
         department-for-education
-        department-for-environment-food-rural-affairs
         hm-revenue-customs
         natural-england
       ]
