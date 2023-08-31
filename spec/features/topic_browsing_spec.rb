@@ -18,7 +18,7 @@ RSpec.feature "Topic browsing" do
     stub_content_store_has_item(
       "/topic",
       base_path: "/topic",
-      title: "Topics",
+      title: "Services and information",
       format: "topic",
       public_updated_at: 10.days.ago.iso8601,
       details: {},
@@ -86,7 +86,7 @@ RSpec.feature "Topic browsing" do
     stub_content_store_has_item(
       "/topic",
       base_path: "/topic",
-      title: "Topics",
+      title: "Services and information",
       format: "topic",
       public_updated_at: 10.days.ago.iso8601,
       details: {},
