@@ -1,0 +1,2 @@
+web: bin/rails server -p 3070
+css: bin/rails dartsass:watch
