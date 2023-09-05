@@ -30,6 +30,7 @@
   <%= render "govuk_publishing_components/components/phase_banner", {
     message: beta_banner_message,
     phase: "beta",
+    ga4_tracking: true,
   } %>
   <%= render "govuk_publishing_components/components/breadcrumbs", {
     breadcrumbs: GovukPublishingComponents::AppHelpers::TaxonBreadcrumbs.new(@content_item).breadcrumbs,
