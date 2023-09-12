@@ -92,13 +92,6 @@ class TopicalEvent
     end
   end
 
-  def travel_advice
-    return [] if slug != "afghanistan-uk-government-response"
-
-    advice = ContentItem.find!("/foreign-travel-advice/afghanistan").to_hash
-    [advice.slice("base_path", "title")]
-  end
-
   def latest
     @latest ||= @documents_service.fetch_related_documents_with_format
   end
