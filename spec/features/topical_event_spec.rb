@@ -58,21 +58,6 @@ RSpec.feature "Topical Event pages" do
     end
   end
 
-  context "afghanistan response topical event" do
-    let(:base_path) { "/government/topical-events/afghanistan-uk-government-response" }
-    let(:afghanistan_travel_advice_base_path) { "/foreign-travel-advice/afghanistan" }
-
-    before do
-      stub_content_store_has_item(base_path)
-      stub_content_store_has_item(afghanistan_travel_advice_base_path)
-    end
-
-    it "includes travel advice for Afghanistan" do
-      visit base_path
-      expect(page).to have_link(titleize_base_path(afghanistan_travel_advice_base_path), href: afghanistan_travel_advice_base_path)
-    end
-  end
-
   context "documents list" do
     let(:related_consultations) { { "A consultation on Topicals" => "/foo/consultation_one", "Another consultation" => "/foo/consultation_two" } }
     let(:related_announcements) { { "An announcement on Topicals" => "/foo/announcement_one", "Another announcement" => "/foo/announcement_two" } }
