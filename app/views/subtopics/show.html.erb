@@ -1,3 +1,4 @@
+<% add_app_component_stylesheet("intervention") %>
 <% content_for :title, subtopic.combined_title %>
 <%= render 'shared/tag_meta', tag: subtopic %>
 <% content_for :meta_tags do %>
@@ -16,6 +17,17 @@
     end
   %>
   <%= render "govuk_publishing_components/components/title", title_params %>
+<% end %>
+
+<% if subtopic.recruitment_survey_url %>
+  <div class="govuk-width-container">
+    <%= render "govuk_publishing_components/components/intervention", {
+      suggestion_text: "Help improve GOV.UK",
+      suggestion_link_text: "Take part in user research",
+      suggestion_link_url: subtopic.recruitment_survey_url,
+      new_tab: true,
+    } %>
+  </div>
 <% end %>
 
 <%= render(
