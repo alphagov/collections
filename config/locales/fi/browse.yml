@@ -2,5 +2,6 @@
 fi:
   browse:
     all_categories: Kaikki kategoriat
+    check_benefits_and_financial_support:
     description:
     title:
