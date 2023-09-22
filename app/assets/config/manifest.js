@@ -4,6 +4,7 @@
 
 //= link components/_taxon-list.css
 //= link components/_topic-list.css
+//= link components/_intervention.css
 
 //= link views/_browse.css
 //= link views/_bunting.css
