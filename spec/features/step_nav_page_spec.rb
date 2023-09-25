@@ -27,10 +27,6 @@ RSpec.feature "Step by step nav pages" do
     expect(page).to have_selector(".gem-c-step-nav__panel", visible: false)
   end
 
-  it "shows the brand user research banner" do
-    expect(page).to have_selector(".gem-c-intervention")
-  end
-
   it "works for a generated example" do
     content_item = step_nav_example
 

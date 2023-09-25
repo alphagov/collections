@@ -1,15 +1,4 @@
-<% add_app_component_stylesheet("intervention") %>
 <% content_for :title, step_by_step.title %>
-<% if step_by_step.recruitment_survey_url %>
-  <div class="govuk-width-container">
-    <%= render "govuk_publishing_components/components/intervention", {
-      suggestion_text: "Help improve GOV.UK",
-      suggestion_link_text: "Take part in user research",
-      suggestion_link_url: step_by_step.recruitment_survey_url,
-      new_tab: true,
-    } %>
-  </div>
-<% end %>
 <%= render 'structured_data', step_by_step: step_by_step %>
 <% content_for :meta_tags do %>
   <meta name="description" content="<%= step_by_step.description %>">
