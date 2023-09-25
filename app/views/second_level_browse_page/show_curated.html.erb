@@ -17,8 +17,8 @@
   <%= render "shared/browse_breadcrumbs" %>
 <% end %>
 
-<%= render "shared/browse_header", { two_thirds: true, margin_bottom: 8 } do %>
-
+<% margin_bottom = page.recruitment_survey_url ? 7 : 8 %>
+<%= render "shared/browse_header", { two_thirds: true, margin_bottom: margin_bottom } do %>
   <%= render "govuk_publishing_components/components/heading", {
     font_size: "xl",
     heading_level: 1,
@@ -31,6 +31,17 @@
     margin_bottom: 2,
     inverse: true
   } %>
+<% end %>
+
+<% if page.recruitment_survey_url %>
+  <div class="govuk-width-container">
+    <%= render "govuk_publishing_components/components/intervention", {
+      suggestion_text: "Help improve a new GOV.UK tool",
+      suggestion_link_text: "Sign up to take part in user research",
+      suggestion_link_url: page.recruitment_survey_url,
+      new_tab: true,
+    } %>
+  </div>
 <% end %>
 
 <div class="govuk-width-container">
