@@ -18,6 +18,17 @@
   <%= render "govuk_publishing_components/components/title", title_params %>
 <% end %>
 
+<% if subtopic.recruitment_survey_url %>
+  <div class="govuk-!-static-margin-top-4">
+    <%= render "govuk_publishing_components/components/intervention", {
+      suggestion_text: "Help improve a new GOV.UK tool",
+      suggestion_link_text: "Sign up to take part in user research",
+      suggestion_link_url: subtopic.recruitment_survey_url,
+      new_tab: true,
+    } %>
+  </div>
+<% end %>
+
 <%= render(
   layout: "subtopic",
   locals: {
