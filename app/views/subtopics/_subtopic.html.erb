@@ -11,17 +11,17 @@
       <% end %>
     </div>
 
-    <div 
-      class="govuk-grid-column-one-third govuk-!-margin-top-8 govuk-!-margin-bottom-3"
-      data-module="ga4-link-tracker"
-      data-ga4-link='{ "event_name": "navigation", "type": "subscribe", "index": { "index_link": 1 }, "index_total": 1, "section": "Top" }'
-      data-ga4-track-links-only
-    >
-      <%= render "govuk_publishing_components/components/subscription_links", {
-        email_signup_link: "/email-signup?link=/topic/#{params[:topic_slug]}/#{params[:subtopic_slug]}",
-        email_signup_link_text: t("shared.get_emails")
-      } %>
-
+    <div class="govuk-grid-column-one-third govuk-!-margin-top-8 govuk-!-margin-bottom-3">
+      <span
+        data-module="ga4-link-tracker"
+        data-ga4-link='{ "event_name": "navigation", "type": "subscribe", "index": { "index_link": 1 }, "index_total": 1, "section": "Top" }'
+        data-ga4-track-links-only
+      >
+        <%= render "govuk_publishing_components/components/subscription_links", {
+          email_signup_link: "/email-signup?link=/topic/#{params[:topic_slug]}/#{params[:subtopic_slug]}",
+          email_signup_link_text: t("shared.get_emails")
+        } %>
+      </span>
       <% if local_assigns[:link_to_latest_feed] %>
         <div class="topics-page__latest">
           <%= link_to t("subtopics.get_latest"), latest_changes_path(topic_slug: params[:topic_slug], subtopic_slug: params[:subtopic_slug]), class: "govuk-link topics-page__latest-link" %>
