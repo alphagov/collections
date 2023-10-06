@@ -110,11 +110,6 @@ module Collections
 
     config.assets.prefix = "/assets/collections/"
 
-    # Override Rails 6 default which restricts framing to SAMEORIGIN.
-    config.action_dispatch.default_headers = {
-      "X-Frame-Options" => "ALLOWALL",
-    }
-
     # Using a sass css compressor causes a scss file to be processed twice
     # (once to build, once to compress) which breaks the usage of "unquote"
     # to use CSS that has same function names as SCSS such as max.
