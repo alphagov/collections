@@ -55,10 +55,8 @@
                 ga4_link: {
                   event_name: "navigation",
                   type: "document list",
-                  index: {
-                    index_section: index,
-                    index_section_count: index_section_count
-                  },
+                  index_section: index,
+                  index_section_count: index_section_count,
                   index_total: index_total,
                   section: title
                 }
@@ -68,12 +66,11 @@
               <%= render(partial: section[:partial_template], locals: { section: section }) %>
             <% end %>
             <% if section[:see_more_link] %>
-              <%= ga4_data[:ga4_link][:index][:index_link] %>
               <%
                 ga4_data.except!(:ga4_set_indexes)
                 ga4_data[:ga4_link][:type] = 'see all'
                 docs = section[:documents_with_promoted] || section[:documents]
-                ga4_data[:ga4_link][:index][:index_link] = docs.length + 1
+                ga4_data[:ga4_link][:index_link] = docs.length + 1
               %>
               <%= content_tag(:div, data: ga4_data) do %>
                 <%= link_to(

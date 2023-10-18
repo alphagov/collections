@@ -20,9 +20,8 @@ module TopicListHelper
   def topic_list_params(list, tracking_attributes: nil, list_index: nil, category: nil, list_count: nil, list_title: nil)
     tracking_attributes ||= topic_list_tracking_attributes(list.count, list_index, category)
     ga4_data = {}
-    ga4_data[:index] = {}
-    ga4_data[:index][:index_section] = list_index + 1 if list_index
-    ga4_data[:index][:index_section_count] = list_count if list_count
+    ga4_data[:index_section] = list_index + 1 if list_index
+    ga4_data[:index_section_count] = list_count if list_count
     ga4_data[:section] = list_title if list_title
 
     {

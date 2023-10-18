@@ -38,11 +38,9 @@ RSpec.describe TaxonOrganisationsPresenter do
               ga4_link: {
                 event_name: "navigation",
                 type: "organisation logo",
-                index: {
-                  index_link: 1,
-                  index_section: 6,
-                  index_section_count: 7,
-                },
+                index_link: 1,
+                index_section: 6,
+                index_section_count: 7,
                 index_total: 1,
                 section: "Organisations",
               },
@@ -78,11 +76,9 @@ RSpec.describe TaxonOrganisationsPresenter do
             ga4_link: {
               event_name: "navigation",
               type: "organisation logo",
-              index: {
-                index_link: 1,
-                index_section: 6,
-                index_section_count: 7,
-              },
+              index_link: 1,
+              index_section: 6,
+              index_section_count: 7,
               index_total: 1,
               section: "Organisations",
             },
@@ -116,11 +112,9 @@ RSpec.describe TaxonOrganisationsPresenter do
               ga4_link: {
                 event_name: "navigation",
                 type: "organisation logo",
-                index: {
-                  index_link: 1,
-                  index_section: 6,
-                  index_section_count: 7,
-                },
+                index_link: 1,
+                index_section: 6,
+                index_section_count: 7,
                 index_total: 1,
                 section: "Organisations",
               },
@@ -158,11 +152,9 @@ RSpec.describe TaxonOrganisationsPresenter do
             ga4_link: {
               event_name: "navigation",
               type: "organisation logo",
-              index: {
-                index_link: index + 1,
-                index_section: 6,
-                index_section_count: 7,
-              },
+              index_link: index + 1,
+              index_section: 6,
+              index_section_count: 7,
               index_total: 5,
               section: "Organisations",
             },
@@ -198,11 +190,9 @@ RSpec.describe TaxonOrganisationsPresenter do
               ga4_link: {
                 event_name: "navigation",
                 type: "organisation logo",
-                index: {
-                  index_link: index + 1,
-                  index_section: 6,
-                  index_section_count: 7,
-                },
+                index_link: index + 1,
+                index_section: 6,
+                index_section_count: 7,
                 index_total: 5,
                 section: "Organisations",
               },
@@ -242,11 +232,9 @@ RSpec.describe TaxonOrganisationsPresenter do
             ga4_link: {
               event_name: "navigation",
               type: "organisation logo",
-              index: {
-                index_link: index + 1,
-                index_section: 6,
-                index_section_count: 7,
-              },
+              index_link: index + 1,
+              index_section: 6,
+              index_section_count: 7,
               index_total: 4,
               section: "Organisations",
             },
@@ -269,11 +257,9 @@ RSpec.describe TaxonOrganisationsPresenter do
               ga4_link: {
                 event_name: "navigation",
                 type: "organisation logo",
-                index: {
-                  index_link: 4,
-                  index_section: 6,
-                  index_section_count: 7,
-                },
+                index_link: 4,
+                index_section: 6,
+                index_section_count: 7,
                 index_total: 4,
                 section: "Organisations",
               },
@@ -313,11 +299,9 @@ RSpec.describe TaxonOrganisationsPresenter do
             ga4_link: {
               event_name: "navigation",
               type: "organisation logo",
-              index: {
-                index_link: 6,
-                index_section: 6,
-                index_section_count: 7,
-              },
+              index_link: 6,
+              index_section: 6,
+              index_section_count: 7,
               index_total: 6,
               section: "Organisations",
             },
@@ -353,11 +337,9 @@ RSpec.describe TaxonOrganisationsPresenter do
               ga4_link: {
                 event_name: "navigation",
                 type: "organisation logo",
-                index: {
-                  index_link: 6,
-                  index_section: 6,
-                  index_section_count: 7,
-                },
+                index_link: 6,
+                index_section: 6,
+                index_section_count: 7,
                 index_total: 6,
                 section: "Organisations",
               },
